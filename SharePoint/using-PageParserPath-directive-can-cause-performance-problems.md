@@ -10,8 +10,6 @@ ms.author: v-six
 
 # Using PageParserPath directive can cause performance problems  
 
-##  Summary  
-
 Consider the following scenario:  
 
 - You have a web application in SharePoint 2007, SharePoint 2010 or SharePoint 2013 environment where you have enabled inline server side code using the PageParserPath directive in the web.config file.  
@@ -36,7 +34,7 @@ Sample PageParserPath directive values which can cause this behavior.
     </SafeMode>  
 ```
 
-### Monitoring   
+## Monitoring   
 
 You can enable logging events into the web servers Application Eventlog using ASP.NET Health Monitoring infrastructure. Edit the web.config file of the site where PageParserPath directive is used. Locate the <system.web> section and add the following lines:  
 
@@ -76,7 +74,7 @@ Event detail code:  0
 
 This indicates that the application pool was restarted.
 
-### Short-term Solution
+## Short-term Solution
 
 As a very short term solution it is possible to increase the default 15 recompilation limit for the Asp.Net engine while a long term solution is implemented.  
 
@@ -88,7 +86,7 @@ In order to increase the recompilation limit the numRecompilesBeforeAppRestart  
 
 See [Compilation Element (ASP.NET Settings Schema)](http://msdn.microsoft.com/library/s10awwz0%28v=vs.90%29.aspx) for details.
 
-### Long-term Solution   
+## Long-term Solution   
 
 Move the server side inline scripts from the pages, page layouts, and master pages into server controls. Deploy these controls using solutions and features and remove the PageParserPath directive.
 
