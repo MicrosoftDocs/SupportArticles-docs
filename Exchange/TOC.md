@@ -6,7 +6,7 @@
 
 ### [Linked mailboxes](recipients/linked-mailboxes.md)
 
-### [Dynamic distribution groups](recipients/dynmaic-distribution-groups.md)
+### [Dynamic distribution groups](recipients/dynamic-distribution-groups.md)
 
 ## [Mail flow](index.md)
 
@@ -16,7 +16,7 @@
 
 ### [Use Telnet to test SMTP communication on Exchange servers](mail-flow/test-smtp-with-telnet.md)
 
-### [](mail-flow/troubleshooting-mailflow.md)
+### [](mail-flow/troubleshooting-mail-flow.md)
 
 ### Subsection
 
