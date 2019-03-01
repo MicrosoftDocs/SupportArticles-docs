@@ -1,5 +1,5 @@
 ---
-title: "AADSTS50107" when trying to sign in to Office 365 with multiple domain federation
+title: AADSTS50107 when trying to sign in to Office 365 with multiple domain federation
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: willchen
