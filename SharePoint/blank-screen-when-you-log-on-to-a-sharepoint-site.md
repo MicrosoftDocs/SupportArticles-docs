@@ -46,11 +46,11 @@ You see a blank screen when you sign in to a SharePoint site other than the Cent
   And you receive the following error message:
 
   ```     
-  Token:  
- **************************  
- Web Application Context: [http://Contoso.com/](http://contoso.com/)  
- Exception calling "SecurityTokenForContext" with "1" argument(s): "The serverwas unable to process the request due to an internal error. For more information about the error, either turn on IncludeExceptionDetailInFaults(either from ServiceBehaviorAttribute or from the< serviceDebug> configuration behavior) on the server in order to send the exception information back to the client, or turn on tracing as per the Microsoft .NET Framework SDK documentation and inspect the server trace logs."         
- ```   
+  Token:
+  **************************  
+  Web Application Context: [http://Contoso.com/](http://contoso.com/)  
+  Exception calling "SecurityTokenForContext" with "1" argument(s): "The serverwas unable to process the request due to an internal error. For more information about the error, either turn on IncludeExceptionDetailInFaults(either from ServiceBehaviorAttribute or from the< serviceDebug> configuration behavior) on the server in order to send the exception information back to the client, or turn on tracing as per the Microsoft .NET Framework SDK documentation and inspect the server trace logs."
+  ```
 
 ## Cause  
 
