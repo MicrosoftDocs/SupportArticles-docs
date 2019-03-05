@@ -1,7 +1,7 @@
 # [Exchange Server Support](index.md)
 
-## [Recipients](index.md)
-
+## [Recipients](recipients/index.md)
+### [Mailboxes](Recipients/mailboxes.md)
 ### [Create user mailboxes](recipients/create-user-mailboxes.md)
 
 ### [Linked mailboxes](recipients/linked-mailboxes.md)
