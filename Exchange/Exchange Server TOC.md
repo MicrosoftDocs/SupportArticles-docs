@@ -1,6 +1,6 @@
 # [Exchange Server Support](index.md)
 
-## [Recipients](index.md)
+## [Recipients](recipients/index.md)
 
 ### [Create user mailboxes](recipients/create-user-mailboxes.md)
 
@@ -8,7 +8,7 @@
 
 ### [Dynamic distribution groups](recipients/dynamic-distribution-groups.md)
 
-## [Mail flow](index.md)
+## [Mail flow](mailflow/index.md)
 
 ### [Message rate limits and throttling](mail-flow/message-rate-limits.md)
 
