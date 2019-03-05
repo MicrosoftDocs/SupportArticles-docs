@@ -18,7 +18,6 @@
 
 ### [](mail-flow/troubleshooting-mail-flow.md)
 
-
 ## Permissions
 
 ## High availability
