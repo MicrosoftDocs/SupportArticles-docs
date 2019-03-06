@@ -10,8 +10,10 @@
 
 
 ## [Install](Install/index.md)
+
 ### [Certain Microsoft SharePoint Server 2013 installation scenarios are not supported] (Certain-SP-Server-2013-scenarios-are-not-supported)
 
 ## [Performance](Performance/index.md)
+
 ### [Using PageParserPath directive can cause performance problems] (PageParserPath-directive-causes-performance-problems.md)
 
