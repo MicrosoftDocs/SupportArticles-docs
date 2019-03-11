@@ -8,11 +8,11 @@
 ### [Anonymous Users cannot open XLSX files from a SharePoint document library](anonymous-users-cannot-open-xlsx-files-from-document-library)
 ### [Blank screen when you log on to a SharePoint site](blank-screen-when-logon-to-site)
 
-## [Install](install/index.md)
+## [Install](Install/index.md)
 
 ### [Certain Microsoft SharePoint Server 2013 installation scenarios are not supported](install/certain-sharepoint-server-2013-installation-scenarios-are-not-supported.md)
 
-## [Performance](performance/index.md)
+## [Performance](Performance/index.md)
 
 ### [Using PageParserPath directive can cause performance problems](performance/using-pageparserpath-directive-can-cause-performance-problems.md)
 
