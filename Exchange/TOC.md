@@ -2,11 +2,11 @@
 
 ## [Recipients](recipients/index.md)
 
-### [Mailboxes](Recipients/mailboxes.md)
+### [Mailboxes](recipients/mailboxes.md)
 
-### [Create user mailboxes](recipients/create-user-mailboxes.md)
+#### [Create user mailboxes](recipients/create-user-mailboxes.md)
 
-### [Linked mailboxes](recipients/linked-mailboxes.md)
+#### [Linked mailboxes](recipients/linked-mailboxes.md)
 
 ### [Dynamic distribution groups](recipients/dynamic-distribution-groups.md)
 
