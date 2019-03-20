@@ -23,6 +23,7 @@
           "**/**.yml"
         ],
         "src": "ExchangeServer",
+        "dest": ".",
         "exclude": [
           "**/obj/**",
           "**/includes/**",
