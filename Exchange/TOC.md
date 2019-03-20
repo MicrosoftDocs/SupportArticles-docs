@@ -2,7 +2,7 @@
 
 ## [Recipients](recipients/index.md)
 
-### [Mailboxes](Recipients/mailboxes.md)
+### [Mailboxes](recipients/mailboxes.md)
 
 ### [Create user mailboxes](recipients/create-user-mailboxes.md)
 
