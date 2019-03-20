@@ -13,7 +13,7 @@ ms.author: v-six
 
 ## Symptom   
 
-An operation in Microsoft SharePoint 2013 or Microsoft SharePoint 2011 fails, and you see the following COMException error message logged in ULS in SharePoint LogViewer:  
+An operation in Microsoft SharePoint 2013 or Microsoft SharePoint 2010 fails, and you see the following COMException error message logged in ULS in SharePoint LogViewer:  
 
 ```
 [System.Runtime.InteropServices.COMException (0x800703FA): Retrieving the COM class factory for component with CLSID {<GUID>} failed due to the following error: 800703fa Illegal operation attempted on a registry key that has been marked for deletion.  
