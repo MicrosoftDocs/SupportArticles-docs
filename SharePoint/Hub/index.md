@@ -21,7 +21,7 @@ description: SharePoint Support
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage bgdAccent1"> 
-                                                        <img src="/office/media/hub-tiles/SharePoint-Server-400x140.svg" alt="A monitor symbol and a server symbol" />
+                                                        <img src="https://docs.microsoft.com/office/media/hub-tiles/SharePoint-Server-400x140.svg" alt="A monitor symbol and a server symbol" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -40,7 +40,7 @@ description: SharePoint Support
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage bgdAccent1"> 
-                                                        <img src="/office/media/hub-tiles/SharePoint-Server-400x140.svg" alt="A monitor symbol and a server symbol" />
+                                                        <img src="https://docs.microsoft.com/office/media/hub-tiles/SharePoint-Server-400x140.svg" alt="A monitor symbol and a server symbol" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -59,7 +59,7 @@ description: SharePoint Support
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage bgdAccent1"> 
-                                                        <img src="/office/media/hub-tiles/SharePoint-Server-400x140.svg" alt="A monitor symbol and a cloud" />
+                                                        <img src="https://docs.microsoft.com/office/media/hub-tiles/SharePoint-Server-400x140.svg" alt="A monitor symbol and a cloud" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -78,7 +78,7 @@ description: SharePoint Support
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage bgdAccent1"> 
-                                                        <img src="/office/media/hub-tiles/SharePoint-Server-400x140.svg" alt="A server symbol and a cloud symbol with a sync symbol in between" />
+                                                        <img src="https://docs.microsoft.com/office/media/hub-tiles/SharePoint-Server-400x140.svg" alt="A server symbol and a cloud symbol with a sync symbol in between" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
