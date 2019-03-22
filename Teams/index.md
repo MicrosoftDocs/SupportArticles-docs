@@ -1,1 +1,3 @@
-# Welcome to OfficeDocs-Support-MicrosoftTeams!
+# Welcome to Microsoft Teams!
+
+This is the Microsoft Teams support overview topic
