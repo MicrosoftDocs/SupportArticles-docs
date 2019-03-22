@@ -1,12 +1,12 @@
 --- 
 layout: HubPage
 hide_bc: true
-title: Exchange
-description: Exchange
+title: Exchange Support
+description: Exchange Support
 ---
 <div id="main" class="v2">
     <div class="container">
-        <h1>Exchange</h1>
+        <h1>Exchange Support</h1>
         <ul class="pivots">
             <li>
                 <a href="#home"></a>
