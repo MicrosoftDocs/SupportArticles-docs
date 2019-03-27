@@ -26,7 +26,7 @@ Office Web Apps doesn't support the following features that are generally offere
 - Copy selection
 - Add comments
 
-**Error with Preview in Browser**
+**Error with preview in a browser**
 
 When users try to preview an IRM protected document by using Office Web Apps, users may receive an error as follows:
 
