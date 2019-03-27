@@ -48,14 +48,14 @@ To create the service applications and the service application proxies by using 
 3. On the Service Applications page, click New, and then click Word Viewing Service.  
 
 4. In the Word Viewing Service Application dialog box, in Name, type Word Viewing Service Application. In Application Pool, select Use existing application pool, and then in the listbox, select SharePoint Web Services Default. In Add to default proxy list, verify Add this service application's proxy to the farm's default proxy list is selected (default), and then click OK.
- 
+
    **NOTE** You can choose to create a new application pool to be used with a service application. When creating a new application pool, you can specify the security account used by the application pool to be a predefined Network Service account, or you can specify a managed account. The account must have read\write privileges for the SPContent database and SPConfig database.  
 
 5. On the Service Applications page, click New, and then click PowerPoint Service Application.  
 
 6. In the PowerPoint Service Application dialog box, in Name, type PowerPoint Service Application. In Application Pool, select Use existing application pool, and then in the listbox, select SharePoint Web Services Default. In Add to default proxy list, verify Add this service application's proxy to the farm's default proxy list is selected (default), and then click OK.
- 
-   **NOTE** You can choose to create a new application pool to be used with a service application. When creating a new application pool, you can specify the security account used by the application pool to be a predefined Network Service account, or you can specify a managed account. The account must have read\write privileges for the SPContent database and SPConfig database.  
+
+   **NOTE** You can choose to create a new application pool to be used with a service application. When creating a new application pool, you can specify the security account used by the application pool to be a predefined Network Service account, or you can specify a managed account. The account must have read\write privileges for the SPContent database and SPConfig database.
 
    To create the service applications and the service application proxies by using Windows PowerShell1, open a new text file in Notepad, and then copy and paste the following script into the file:  
 
