@@ -32,8 +32,8 @@ To make the custom HTML login page stay the correct size and display scroll bars
 ```
 <DIV STYLE="width: 460px; height: 530px; overflow: scroll">
 ```
->![NOTE]
->If you need to dynamically change the style, you can change the token **MSIE 7.0** in the user-agent string.
+> [!NOTE]
+> If you need to dynamically change the style, you can change the token **MSIE 7.0** in the user-agent string.
 
 ## More information
 
