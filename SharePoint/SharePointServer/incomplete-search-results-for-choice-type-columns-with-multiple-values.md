@@ -30,25 +30,25 @@ Here are the steps to reproduce this problem:
 
 3. You add six new list items with the following parameters:  
 
-  1. For Title you enter Item1  
-   For MyChoiceColumn  you select or keep the pre-selected Choice1   
+   1. For Title you enter Item1  
+    For MyChoiceColumn  you select or keep the pre-selected Choice1   
  
-  2. For Title you enter Item2  
-   For MyChoiceColumn  you select Choice2    
+   2. For Title you enter Item2  
+    For MyChoiceColumn  you select Choice2    
 
-  3. For Title you enter Item3  
-   For MyChoiceColumn  you select Choice3    
+   3. For Title you enter Item3  
+    For MyChoiceColumn  you select Choice3    
 
-  4. For Title you enter Item4  
-   For MyChoiceColumn  you select Choice1  and Choice2    
+   4. For Title you enter Item4  
+    For MyChoiceColumn  you select Choice1  and Choice2    
 
-  5. For Title you enter Item5  
-   For MyChoiceColumn  you select Choice1  and Choice3    
+   5. For Title you enter Item5  
+    For MyChoiceColumn  you select Choice1  and Choice3    
 
-  6. For Title you enter Item6  
-   For MyChoiceColumn  you select Choice2  and Choice3  
+   6. For Title you enter Item6  
+    For MyChoiceColumn  you select Choice2  and Choice3  
 
-    ![](https://support.microsoft.com/Library/Images/3032760.jpg)      
+     ![](https://support.microsoft.com/Library/Images/3032760.jpg)      
 
 4. After the next continuous-, incremental- or full-crawl finished, you execute the following three keyword queries from your search center or a search box:  
 
