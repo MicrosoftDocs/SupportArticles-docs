@@ -1,5 +1,5 @@
 ---
-title: Error message when you try to modify or to delete an alternate access mapping in Windows SharePoint Services 3.0: "An update conflict has occurred, and you must re-try this action"
+title: Error message when you try to modify or to delete an alternate access mapping in Windows SharePoint Services 3.0
 description: Describes an issue that occurs after you perform a system recovery in which the configuration database is restored. Provides a resolution.
 author: simonxjx
 manager: willchen
@@ -47,26 +47,27 @@ To resolve this issue, clear the file system cache on all servers in the server 
 
 3. In Windows Explorer, locate and then double-click the following folder: **Drive**:\Documents and Settings\All Users\Application Data\Microsoft\SharePoint\Config\**GUID**
 
-  **Notes**
-    - The **Drive** placeholder specifies the letter of the drive on which Windows is installed. By default, Windows is installed on drive C.    
+    **Notes**
 
-    - The **GUID** placeholder specifies the GUID folder.  
+      - The **Drive** placeholder specifies the letter of the drive on which Windows is installed. By default, Windows is installed on drive C.    
 
-    - The Application Data folder may be hidden. To view the hidden folder, follow these steps:
+      - The **GUID** placeholder specifies the GUID folder.  
 
-      1. On the **Tools** menu, click **Folder Options**.   
+      - The Application Data folder may be hidden. To view the hidden folder, follow these steps:
 
-      2. Click the **View** tab.   
+         1. On the **Tools** menu, click **Folder Options**.   
 
-      3. In the **Advanced settings** list, click **Show hidden files and folders** under **Hidden files and folders**, and then click **OK**.   
+         2. Click the **View** tab.   
 
-    - In Windows Server 2008, the configuration cache is in the following location: **Drive**:\ProgramData\Microsoft\SharePoint\Config\**GUID**     
+         3. In the **Advanced settings** list, click **Show hidden files and folders** under **Hidden files and folders**, and then click **OK**.   
+
+      - In Windows Server 2008, the configuration cache is in the following location: **Drive**:\ProgramData\Microsoft\SharePoint\Config\**GUID**     
 
 4. Back up the Cache.ini file.    
 
 5. Delete all the XML configuration files in the GUID folder. Do this so that you can verify that the GUID folder is replaced by new XML configuration files when the cache is rebuilt.   
 
-  **Note**  When you empty the configuration cache in the GUID folder, make sure that you do not delete the GUID folder and the Cache.ini file that is located in the GUID folder.  
+    **Note**  When you empty the configuration cache in the GUID folder, make sure that you do not delete the GUID folder and the Cache.ini file that is located in the GUID folder.  
 
 6. Double-click the Cache.ini file.    
 
@@ -80,20 +81,20 @@ To resolve this issue, clear the file system cache on all servers in the server 
 
 11. Start the Timer service. To do this, follow these steps:
 
-  1. Click **Start**, point to **Administrative Tools**, and then click **Services**.    
+   1. Click **Start**, point to **Administrative Tools**, and then click **Services**.    
 
-  2. Right-click **Windows SharePoint Services Timer**, and then click **Start**.    
+   2. Right-click **Windows SharePoint Services Timer**, and then click **Start**.    
 
-  3. Close the Services console.      
+   3. Close the Services console.      
 
-    **Note**  The file system cache is re-created after you perform this procedure. Make sure that you perform this procedure on all servers in the server farm.    
+      **Note**  The file system cache is re-created after you perform this procedure. Make sure that you perform this procedure on all servers in the server farm.    
 
-12. Make sure that the Cache.ini file has been updated. For example it should no longer be 1 if the cache has been updated.   
+12. Make sure that the Cache.ini file has been updated. For example it should no longer be 1 if the cache has been updated.   
 
 13. Click **Start**, point to **Programs**, point to **Administrative Tools**, and then click **SharePoint 3.0 Central Administration**.   
 
 14. Click the **Operations** tab, and then click **Timer job status** under **Global Configuration**.
 
 15. In the list of timer jobs, verify that the status of the **Config Refresh** entry is **Succeeded**.
-   
+
 16. On the **File** menu, click **Close**.     

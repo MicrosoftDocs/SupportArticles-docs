@@ -43,28 +43,28 @@ To resolve this issue, follow the steps for the version of ASP.NET that you are 
 
 1. Click Start, click Run, type cmd in the Open  box, and then click OK.   
 2. Switch to the *Drive*:\Windows\Microsoft.Net\Framework\v1.1.4322 folder. In this folder, *Drive* is the drive where Windows is installed. To do this, type the following line at the command prompt, and then press Enter:
-  ```
-  cd **Drive**:\windows\microsoft.net\framework\v1.1.4322
-  ```    
+   ```
+   cd **Drive**:\windows\microsoft.net\framework\v1.1.4322
+   ```    
 3. Add the appropriate permissions to the Network Service group for the Temporary ASP.NET Files folder. To do this, type the following line, and then press Enter:
-  ```
-  aspnet_regiis -ir
-  ```
-  **Note** For more information about the difference between the -ir  command-line option and the -i  command-line option, see [ASP.NET IIS Registration Tool](http://msdn2.microsoft.com/library/k6h9cz8h%28vs.71%29.aspx) on the Microsoft Developer Network (MSDN) website.    
+   ```
+   aspnet_regiis -ir
+   ```
+   **Note** For more information about the difference between the -ir  command-line option and the -i  command-line option, see [ASP.NET IIS Registration Tool](http://msdn2.microsoft.com/library/k6h9cz8h%28vs.71%29.aspx) on the Microsoft Developer Network (MSDN) website.    
 4. Type exit, and then press Enter to close the command prompt.     
 
 ### ASP.NET 2.0  
 
 1. Click Start, click Run, type cmd  in the Open  box, and then click OK.   
 2. Switch to the *Drive*:\WINDOWS\Microsoft.NET\Framework\v2.0.50727 folder. In this folder, *Drive* is the drive where Windows is installed. To do this, type the following line at the command prompt, and then press Enter:
-  ```
+   ```
   cd **Drive**:\WINDOWS\Microsoft.NET\Framework\v2.0.50727
-  ```    
+   ```    
 3. Add the appropriate permissions to the Network Service group for the Temporary ASP.NET Files folder. To do this, type the following line, and then press Enter:
-  ```
+   ```
   aspnet_regiis -ir
-  ```
-  **Note** For more information about the difference between the -ir command-line option and the -i command-line, see [ASP.NET IIS Registration Tool](http://msdn2.microsoft.com/library/k6h9cz8h%28vs.71%29.aspx) on the Microsoft Developer Network (MSDN) website.      
+   ```
+   **Note** For more information about the difference between the -ir command-line option and the -i command-line, see [ASP.NET IIS Registration Tool](http://msdn2.microsoft.com/library/k6h9cz8h%28vs.71%29.aspx) on the Microsoft Developer Network (MSDN) website.      
 
 ##  Workaround  
 

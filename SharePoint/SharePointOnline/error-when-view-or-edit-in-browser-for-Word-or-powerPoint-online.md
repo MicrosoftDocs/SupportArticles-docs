@@ -49,15 +49,15 @@ To create the service applications and the service application proxies by using 
 
 4. In the Word Viewing Service Application dialog box, in Name, type Word Viewing Service Application. In Application Pool, select Use existing application pool, and then in the listbox, select SharePoint Web Services Default. In Add to default proxy list, verify Add this service application's proxy to the farm's default proxy list is selected (default), and then click OK.
  
-  **NOTE** You can choose to create a new application pool to be used with a service application. When creating a new application pool, you can specify the security account used by the application pool to be a predefined Network Service account, or you can specify a managed account. The account must have read\write privileges for the SPContent database and SPConfig database.  
+   **NOTE** You can choose to create a new application pool to be used with a service application. When creating a new application pool, you can specify the security account used by the application pool to be a predefined Network Service account, or you can specify a managed account. The account must have read\write privileges for the SPContent database and SPConfig database.  
 
 5. On the Service Applications page, click New, and then click PowerPoint Service Application.  
 
 6. In the PowerPoint Service Application dialog box, in Name, type PowerPoint Service Application. In Application Pool, select Use existing application pool, and then in the listbox, select SharePoint Web Services Default. In Add to default proxy list, verify Add this service application's proxy to the farm's default proxy list is selected (default), and then click OK.
  
-  **NOTE** You can choose to create a new application pool to be used with a service application. When creating a new application pool, you can specify the security account used by the application pool to be a predefined Network Service account, or you can specify a managed account. The account must have read\write privileges for the SPContent database and SPConfig database.  
+   **NOTE** You can choose to create a new application pool to be used with a service application. When creating a new application pool, you can specify the security account used by the application pool to be a predefined Network Service account, or you can specify a managed account. The account must have read\write privileges for the SPContent database and SPConfig database.  
   To create the service applications and the service application proxies by using Windows PowerShell1, open a new text file in Notepad, and then copy and paste the following script into the file:  
-  ```  
+   ```  
   $appPool = Get-SPServiceApplicationPool -Name "SharePoint Web Services Default"  
 
   New-SPWordViewingServiceApplication -Name "WdView" -ApplicationPool $appPool | New-SPWordViewingServiceApplicationProxy -Name "WdProxy"  
@@ -65,15 +65,15 @@ To create the service applications and the service application proxies by using 
   New-SPPowerPointServiceApplication -Name "PPT" -ApplicationPool $appPool | New-SPPowerPointServiceApplicationProxy -Name "PPTProxy"  
 
   New-SPExcelServiceApplication -Name "Excel" -ApplicationPool $appPool  
-  ```
+   ```
 
 7. Save the file with a.ps1 file name extension to a folder where you run scripts (typically C:\scripts).  
 
 8. From the Windows PowerShell command prompt (that is, PS C:\>), type the following command and press ENTER:  
 
-  ```
+   ```
   C:\<path>\<filename>.ps1
-  ```   
+   ```   
 
 ### Resolution 3: Check Service Account Permissions   
 
@@ -93,9 +93,9 @@ In a Farm Setup, we suggest that the Farm Account be running under a different a
 
 4. To create a different or new service account, the following link provides the detail steps:  
 
-  [Service Accounts Step-by-Step Guide](http://technet.microsoft.com/library/dd548356%28ws.10%29.aspx)  
+   [Service Accounts Step-by-Step Guide](http://technet.microsoft.com/library/dd548356%28ws.10%29.aspx)  
 
-  **Note** It is not a requirement to run the Farm account and Service accounts under different managed accounts. This resolution is provided as a possible troubleshooting technique.   
+   **Note** It is not a requirement to run the Farm account and Service accounts under different managed accounts. This resolution is provided as a possible troubleshooting technique.   
 
 ##  More Information  
 

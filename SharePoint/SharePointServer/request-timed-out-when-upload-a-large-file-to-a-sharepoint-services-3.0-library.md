@@ -69,48 +69,48 @@ To increase the connection time-out setting, follow these steps:
 
 1. Open the Web.config file in Notepad.   
 
-  **NOTE** By default, this file is in the following location:Program Files\Common Files\Microsoft Shared\Web server extensions\12\TEMPLATE\LAYOUTS
+   **NOTE** By default, this file is in the following location:Program Files\Common Files\Microsoft Shared\Web server extensions\12\TEMPLATE\LAYOUTS
 
 2. Add the executionTimeout value that you want. For example, replace the value as follows.  
 
-  **Existing code**   
+   **Existing code**   
 
-  ```  
+   ```  
  <location path="upload.aspx">   
     <system.web>   
       <httpRuntime maxRequestLength="2097151" />   
     </system.web>   
   </location>  
-  ```  
+   ```  
 
-  **Replacement code**  
+   **Replacement code**  
 
-  ```  
+   ```  
  <location path="upload.aspx">   
     <system.web>   
       <httpRuntime executionTimeout="999999" maxRequestLength="2097151" />   
     </system.web>   
   </location>  
-  ```  
+   ```  
 
 3. Click **File**, and then click **Save**.
 
 4. Open the web application Web.config file in Notepad.   
 
-  **Note** By default, this file is in the following folder: Inetpub\wwwroot\wss\VirtualDirectories\VirtualDirectoryFolder    
+   **Note** By default, this file is in the following folder: Inetpub\wwwroot\wss\VirtualDirectories\VirtualDirectoryFolder    
 5. Change the following line in the file.  
 
-  **Existing line**  
+   **Existing line**  
 
-  ```  
+   ```  
   <httpRuntime maxRequestLength="51200" />  
-  ```  
+   ```  
 
-  **Replacement line**
+   **Replacement line**
 
-  ```  
+   ```  
   <httpRuntime executionTimeout="999999" maxRequestLength="51200" />  
-  ```  
+   ```  
 
 6. Click **File**, and then click **Save**.   
 
@@ -127,17 +127,17 @@ To work around this problem, edit the <configuration> section in the Web.config 
 
 1. Open the web application Web.config file in Notepad.   
 
-  **Note** By default, this file is in the following folder: Inetpub\wwwroot\wss\VirtualDirectories\VirtualDirectoryFolder
+   **Note** By default, this file is in the following folder: Inetpub\wwwroot\wss\VirtualDirectories\VirtualDirectoryFolder
 
 2. Increase the value of maxAllowedContentLength in the **requestLimits** node. For example, edit the file as follows to set this value to its maximum size: 
 
-  ```
-  <requestLimits maxAllowedContentLength="52428800"/>
-  ```
+   ```
+   <requestLimits maxAllowedContentLength="52428800"/>
+   ```
 
-  **Note** If your Web.config file does not already have the <requestLimits> node, you must add it in the correct position in the section hierarchy:  
+   **Note** If your Web.config file does not already have the <requestLimits> node, you must add it in the correct position in the section hierarchy:  
 
-  ```
+   ```
   <configuration>  
   <system.webServer>  
   <security>  
@@ -147,9 +147,9 @@ To work around this problem, edit the <configuration> section in the Web.config 
   </security>  
   </system.webServer>  
   </configuration>
-  ```
+   ```
 
-  **Note** We recommend that you set the maxAllowedContentLength value slightly larger than the maximum file upload size that you have configured in SharePoint. If the maxAllowedContentLength value is equal to or smaller than maximum file upload size that is configured in SharePoint, users will not receive the error message that they are exceeding the size limit if they try to upload a file size larger than that specified by the administrator.   
+   **Note** We recommend that you set the maxAllowedContentLength value slightly larger than the maximum file upload size that you have configured in SharePoint. If the maxAllowedContentLength value is equal to or smaller than maximum file upload size that is configured in SharePoint, users will not receive the error message that they are exceeding the size limit if they try to upload a file size larger than that specified by the administrator.   
 
 ##  References  
 
