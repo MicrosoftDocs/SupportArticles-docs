@@ -39,7 +39,7 @@ Interactive browser refresh and scheduled data refresh for Power Query connectio
 - Office Online Server November 2016 release
 - The Release to Manufacturing (RTM) version of SharePoint Server 2016
 
->![NOTE]
->The interactive data refresh won't work with Windows authentication. It requires a Secure Store ID to be configured to use for the refresh.
+> [!NOTE]
+> The interactive data refresh won't work with Windows authentication. It requires a Secure Store ID to be configured to use for the refresh.
 
 Data that is loaded from a Power Query connection needs to be added to the data model. Otherwise, the refresh will fail because PowerPivot is required in this refresh process, and only workbooks with a data model are processed by PowerPivot.
