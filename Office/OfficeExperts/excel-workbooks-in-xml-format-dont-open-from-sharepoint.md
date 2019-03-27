@@ -12,7 +12,7 @@ localization_priority: Normal
 
 ## Symptoms
 
-When you try to open Microsoft Excel workbooks in an .XML format (XML Spreadsheet 2003) from a SharePoint document library, you receive the following error:
+When you try to open Microsoft Excel workbooks in an XML format (XML Spreadsheet 2003) from a SharePoint document library, you receive the following error:
 
 **This action couldn't be performed because Office doesn't recognize the command it was given**.
 
