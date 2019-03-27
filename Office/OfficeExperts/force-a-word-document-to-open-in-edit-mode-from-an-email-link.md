@@ -27,7 +27,7 @@ By default, when you open a Microsoft Word document from a hyperlink in an email
    ![the define e-mail message dialog box](./media/force-a-word-document-to-open-in-edit-mode-from-an-email-link/defineemailmessage.png)
 
    > [!NOTE]
-   > You can use this method for plain hyperlinks. For example, use **ms-word:ofe|u|http://sharepointserver/library/testdocument.docx** instead of **http://sharepointserver/library/testdocument.docx**.
+   > You can use this method for plain hyperlinks. For example, use "ms-word:ofe|u|http://sharepointserver/library/testdocument.docx" instead of "http://sharepointserver/library/testdocument.docx".
 
 1. Save and publish your workflow.
 
