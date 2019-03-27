@@ -20,15 +20,13 @@ Here are the steps to reproduce this problem:
 1. On a SharePoint 2013 site you create a new list with the name MyList of type custom list via the UI by clicking on Site Contents , add an app and Custom List.  
 
 2. You open the newly created MyList and create a new column clicking in the Ribbon on the List  tab and Create Column with the following options:  
-   - For Column name:  you enter MyChoiceColumn
-   
-   - For The type of information in this column is:  you select Choice (menu to choose from)
-   
-   - In the textbox with the heading Type each choice on a seperate line: you enter the following next three items:
-     - Choice1  
-     - Choice2  
-     - Choice3
-   - For Display choices using:  you select Checkboxes (allow multiple selections)  
+   - For Column name:  you enter MyChoiceColumn
+   - For The type of information in this column is:  you select Choice (menu to choose from)
+   - In the textbox with the heading Type each choice on a seperate line, you enter the following next three items:
+      - Choice1  
+      - Choice2  
+      - Choice3
+   - For Display choices using:  you select Checkboxes (allow multiple selections)  
 
 3. You add six new list items with the following parameters:  
 
@@ -55,9 +53,7 @@ Here are the steps to reproduce this problem:
 4. After the next continuous-, incremental- or full-crawl finished, you execute the following three keyword queries from your search center or a search box:  
 
    1. Choice1  
-
    1. Choice2  
-
    1. Choice3
 
 Following items are expected to get returned in the search results:  
