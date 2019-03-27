@@ -76,21 +76,21 @@ To increase the connection time-out setting, follow these steps:
    **Existing code**   
 
    ```  
- <location path="upload.aspx">   
+   <location path="upload.aspx">   
     <system.web>   
       <httpRuntime maxRequestLength="2097151" />   
     </system.web>   
-  </location>  
+   </location>  
    ```  
 
    **Replacement code**  
 
    ```  
- <location path="upload.aspx">   
+   <location path="upload.aspx">   
     <system.web>   
       <httpRuntime executionTimeout="999999" maxRequestLength="2097151" />   
     </system.web>   
-  </location>  
+   </location>  
    ```  
 
 3. Click **File**, and then click **Save**.
@@ -103,13 +103,13 @@ To increase the connection time-out setting, follow these steps:
    **Existing line**  
 
    ```  
-  <httpRuntime maxRequestLength="51200" />  
+   <httpRuntime maxRequestLength="51200" />  
    ```  
 
    **Replacement line**
 
    ```  
-  <httpRuntime executionTimeout="999999" maxRequestLength="51200" />  
+   <httpRuntime executionTimeout="999999" maxRequestLength="51200" />  
    ```  
 
 6. Click **File**, and then click **Save**.   
@@ -138,15 +138,15 @@ To work around this problem, edit the <configuration> section in the Web.config 
    **Note** If your Web.config file does not already have the <requestLimits> node, you must add it in the correct position in the section hierarchy:  
 
    ```
-  <configuration>  
-  <system.webServer>  
-  <security>  
-  <requestFiltering>  
-  <requestLimits maxAllowedContentLength="52428800"/>  
-  </requestFiltering>  
-  </security>  
-  </system.webServer>  
-  </configuration>
+   <configuration>  
+   <system.webServer>  
+   <security>  
+   <requestFiltering>  
+   <requestLimits maxAllowedContentLength="52428800"/>  
+   </requestFiltering>  
+   </security>  
+   </system.webServer>  
+   </configuration>
    ```
 
    **Note** We recommend that you set the maxAllowedContentLength value slightly larger than the maximum file upload size that you have configured in SharePoint. If the maxAllowedContentLength value is equal to or smaller than maximum file upload size that is configured in SharePoint, users will not receive the error message that they are exceeding the size limit if they try to upload a file size larger than that specified by the administrator.   
