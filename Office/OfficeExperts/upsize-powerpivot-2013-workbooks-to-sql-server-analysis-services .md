@@ -91,7 +91,7 @@ The only option to have a PowerPoint workbook larger than 2GB is to upsize or on
 
    ![the deploy results image](./media/upsize-powerpivot-2013-workbooks-to-sql-server-analysis-services/deploy-results.png)
 
-1. At this point, you have a working data source that you can access from new workbooks and other data source consumers. In Excel, you just treat it like any other Analysis Services data source. For more information about how to connect to an SSAS database, see [Connect to a SQL Server Analysis Services Database (Import)](http:\office.microsoft.com\en-us\excel-help\connect-to-or-import-data-from-sql-server-analysis-services-HP010342296.aspx).
+1. At this point, you have a working data source that you can access from new workbooks and other data source consumers. In Excel, you just treat it like any other Analysis Services data source. For more information about how to connect to an SSAS database, see [Connect to a SQL Server Analysis Services Database (Import)](https://support.office.com/en-us/article/connect-to-a-sql-server-analysis-services-database-import-b6dd7f39-bea5-4e98-9aa1-39fc7b24424b).
 1. Set up an automated processing schedule by using the **SQL Server Management Studio** tool because the new SSAS database is not getting refreshed with the latest data and it is a static snapshot of the data at the time you deployed it to the server.  
    1. Make sure that the **SQL Server Agent** service is running on the SSAS server.
    1. Make sure that the account that's running the SQL Server Agent service has permissions to process the new SSAS tabular database. You can create a new role for the database that has "Process" permissions and assign the agent account to it.
