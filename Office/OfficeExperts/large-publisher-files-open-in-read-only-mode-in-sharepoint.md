@@ -20,7 +20,7 @@ Publisher 2013 relies on the **Web Client** local service that has a default lim
 
 ## Workaround
 
-To work around this issue, set the **FileSizeLimitInBytes** registry key to a value more than **50**. To do this, follow these steps：
+To work around this issue, set the **FileSizeLimitInBytes** registry key to a value more than **50**. To do this, follow these steps:
 
 **Important**
 
