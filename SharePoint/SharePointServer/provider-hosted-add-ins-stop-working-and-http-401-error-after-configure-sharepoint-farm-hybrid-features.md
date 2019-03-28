@@ -14,7 +14,8 @@ ms.author: v-six
 ## Symptoms  
 
 Consider the following scenario. You have existing, deployed provider-hosted add-ins (PHA) that are registered as <RegisteredIssuerName> and that contain the original farm **RealmID** value for your SharePoint 2013 or SharePoint 2016 farm, and/or you created a Workflow Manager association in your farm.   
-In this scenario, when you access these PHAs after you configure SharePoint hybrid features in your farm, the PHAs stop functioning. Additionally, you receive an HTTP 401 error message when you are directed to the add-ins.﻿
+
+In this scenario, when you access these PHAs after you configure SharePoint hybrid features in your farm, the PHAs stop functioning. Additionally, you receive an HTTP 401 error message when you are directed to the add-ins.
 
 > [!NOTE]
 > PHAs may include an externally hosted web application, service, database, or SharePoint component.  
