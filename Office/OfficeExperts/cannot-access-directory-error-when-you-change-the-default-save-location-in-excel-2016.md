@@ -24,7 +24,7 @@ For some unknown reasons, some Office 2016 installations can’t create a necess
 
 To work around this issue, add the following directory to the systems that are experiencing this issue:
 
-C:\Users\userid\AppData\Roaming\Microsoft\Excel\URL\
+**C:\Users\userid\AppData\Roaming\Microsoft\Excel\URL\ **
 
 > [!NOTE]
 > You need to change the *userid* to a real user ID when you add this directory.

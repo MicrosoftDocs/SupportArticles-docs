@@ -14,8 +14,8 @@ localization_priority: Normal
 
 When you try to schedule a data refresh on a PowerPivot workbook in Microsoft SharePoint 2016, you may see either of the following errors:
 
-- Sorry, something went wrong.
-- A schedule cannot be enabled for a workbook with no external data sources.
+- **Sorry, something went wrong.**
+- **A schedule cannot be enabled for a workbook with no external data sources.**
 
 The SharePoint Unified Logging Service (ULS) logs may show the following error:
 

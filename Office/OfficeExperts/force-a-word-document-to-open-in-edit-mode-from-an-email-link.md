@@ -57,5 +57,5 @@ Follow the steps in this section carefully. Serious problems might occur if you 
    > [!NOTE]
    > This subkey is for Office 2016 and later versions (including Office 2019). If you are using Office 2013, change 16.0 to 15.0. If you are using Office 2010, change 16.0 to 14.0.
 1. On the **Edit** menu, point to **New**, and then select **Key**.
-1. Enter **ms-word:**, and then press Enter.
+1. Enter **ms-word:**, and then press **Enter**.
 1. Exit Registry Editor.
