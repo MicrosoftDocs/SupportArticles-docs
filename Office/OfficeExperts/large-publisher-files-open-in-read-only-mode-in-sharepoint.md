@@ -28,11 +28,12 @@ Follow the steps in this section carefully. Serious problems might occur if you 
 
 1. Exit all Microsoft Office applications.
 1. Start Registry Editor:
-  - In Windows 10, go to **Start**, enter **regedit** in the **Search box**, and then select **regedit.exe** in the search results.
-  - In Windows 8 or Windows 8.1, move your mouse to the upper-right corner, select **Search**, enter **regedit** in the search box, and then select **regedit.exe** in the search results.
-  - In Windows 7, select **Start**, enter **regedit** in the **Start Search** box, and then select **regedit.exe** in the search results.
+   - In Windows 10, go to **Start**, enter **regedit** in the **Search box**, and then select **regedit.exe** in the search results.
+   - In Windows 8 or Windows 8.1, move your mouse to the upper-right corner, select **Search**, enter **regedit** in the search box, and then select **regedit.exe** in the search results.
+   - In Windows 7, select **Start**, enter **regedit** in the **Start Search** box, and then select **regedit.exe** in the search results.
 1. Locate and select the following registry key:
 
    **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WebClient\Parameters\FileSizeLimitInBytes**
+
 1. Right-click **FileSizeLimitInBytes**, and select **Modify**.
 1. In the **Edit DWORD (32-bit) Value** dialog box, select the **Decimal** option, type a decimal value in the **Value data** box, and then click **OK**. For example, to limit the file size to 200 MB, type 200000000 for **Value data**.
