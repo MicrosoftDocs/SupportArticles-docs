@@ -1,5 +1,5 @@
 ---
-title: "Upgrade Available" status in new SharePoint Server 2016 farm
+title: Upgrade Available status in new SharePoint Server 2016 farm
 description:
 author: simonxjx
 manager: willchen

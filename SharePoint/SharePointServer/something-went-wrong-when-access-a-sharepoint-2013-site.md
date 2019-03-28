@@ -1,5 +1,5 @@
 ---
-title: "Something went wrong" when you access a SharePoint 2013 site
+title: Something went wrong when you access a SharePoint 2013 site
 description: Describes an issue in which you receive a "Sorry, something went wrong" error message when you access a SharePoint 2013 website.
 author: simonxjx
 manager: willchen
@@ -13,7 +13,8 @@ ms.author: v-six
 
 ## Symptoms  
 
-When you try to access a Microsoft SharePoint 2013 website, you receive the following error message:        
+When you try to access a Microsoft SharePoint 2013 website, you receive the following error message:    
+    
 **Sorry, something went wrong**  
 **An unexpected error has occurred.**       
 
