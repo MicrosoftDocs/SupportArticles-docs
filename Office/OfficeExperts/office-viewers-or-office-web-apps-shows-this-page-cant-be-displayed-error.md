@@ -24,7 +24,7 @@ The .NET Framework 4.6 and later versions includes a new Just-In-Time (JIT) comp
 
 To fix this issue, the easiest workaround is to disable the new Just-In-Time (JIT) compiler on the Office Web Apps server or your Office Online Server that uses *https://internalurl/op/generate.aspx* or the Office viewers. To do this, add the **useLegacyJit** registry key, as follows:
 
-**Location**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework or HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework
+**Location**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ .NETFramework or HKEY_CURRENT_USER\SOFTWARE\Microsoft\ .NETFramework
 
 **Value name**: useLegacyJit
 
