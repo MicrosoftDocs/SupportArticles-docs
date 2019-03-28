@@ -30,7 +30,7 @@ Go to **SharePoint Central Administration** > **Security** > **Manage the farm a
 
 ![the system validation dialog box](./media/powerpivot-configuration-tool-shows-the-user-is-not-a-farm-administrator-error/farm-administrators.png)
 
-**Add the user as a site collection administrator in Central Administration**
+**Add the user as a site collection administrator**
 
 Go to **SharePoint Central Administration**, click the gear icon on the upper-right, and then select **Site settings**. Then, go to **Users and Permissions** > **Site collection administrators**, type the user and then click **OK**.
 
