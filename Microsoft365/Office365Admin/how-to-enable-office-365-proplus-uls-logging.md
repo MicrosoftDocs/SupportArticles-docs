@@ -18,6 +18,7 @@ To collect more verbose logging details, set the following registry keys:
 For sign-in or activation issues, add the following registry key:
 
 **[HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Logging]**
+
 **"EnableLogging"=dword:00000001**
 
 For installation or patching issues, run the following commands to add the registry keys:
