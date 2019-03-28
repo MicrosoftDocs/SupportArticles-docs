@@ -21,16 +21,16 @@ To delete the group form from Microsoft Forms, follow these steps:
 1. Sign in to [Microsoft Forms](https://forms.office.com/).
 1. Select **Group Forms** > **Recent group forms**.
 
-   ![the group form dialog box](./media/cannot-delete-a-group-form-from-microsoft-teams/group-form.png)
+   ![the group form dialog box](./media/cannot-delete-a-group-form-from-microsoft-teams/group-form.PNG)
 1. Select the group with the form that you want to delete.
 1. Select the ellipses button in the upper right corner of the form thumbnail.
 
-   ![the ellipses button dialog box](./media/cannot-delete-a-group-form-from-microsoft-teams/ellipses-button.png)
+   ![the ellipses button dialog box](./media/cannot-delete-a-group-form-from-microsoft-teams/ellipses-button.PNG)
 
 1. Select **Delete**.
 
-   ![the delete button dialog box](./media/cannot-delete-a-group-form-from-microsoft-teams/delete-button.png)
+   ![the delete button dialog box](./media/cannot-delete-a-group-form-from-microsoft-teams/delete-button.PNG)
 
 1. Select **Continue**.
 
-   ![the continue button dialog box](./media/cannot-delete-a-group-form-from-microsoft-teams/continue-button.png)
+   ![the continue button dialog box](./media/cannot-delete-a-group-form-from-microsoft-teams/continue-button.PNG)

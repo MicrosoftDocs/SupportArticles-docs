@@ -1,5 +1,5 @@
 ---
-title: You'll need a new app to open this ms-visio when open Visio files in SharePoint
+title: You'll need a new app to open this ms-visio when you open Visio files in SharePoint
 author: AmandaAZ
 ms.author: warrenr
 manager: warrenr
@@ -8,7 +8,7 @@ ms.topic: article
 localization_priority: Normal
 ---
 
-# "You'll need a new app to open this ms-visio" when open Visio files in SharePoint
+# "You'll need a new app to open this ms-visio" when you open Visio files in SharePoint
 
 ## Symptoms
 

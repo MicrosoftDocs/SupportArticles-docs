@@ -25,7 +25,7 @@ This issue occurs because Excel Online doesn't support a text query. To resolve 
 1. Select **Edit Workbook** > **Edit in Excel Online** in the workbook.
 1. In the prompt dialog box, select **Edit a Copy**.
 
-   ![the edit a copy dialog box](./media/compatibility-report-about-text-queries-in-excel-online/edit-a-copy.png)
+   ![the edit a copy dialog box](./media/compatibility-report-about-text-queries-in-excel-online/edit-a-copy.PNG)
 
 1. Type a new file name for this copy, and then click **Save**.
 
@@ -33,15 +33,15 @@ This issue occurs because Excel Online doesn't support a text query. To resolve 
 
 A copied workbook that doesn't contain any unsupported features will be created through this method. It will be saved to the same directory as the original workbook.
 
-![the new copy workbook dialog box](./media/compatibility-report-about-text-queries-in-excel-online/copy.png)
+![the new copy workbook dialog box](./media/compatibility-report-about-text-queries-in-excel-online/copy.PNG)
 
 **Remove the query definition directly**
 
 1. Right-click the table and select **Data Range Properties**.
 1. Clear the **Save query definition** check box in the **External Data Range Properties** dialog box.
 
-   ![the clear option dialog box](./media/compatibility-report-about-text-queries-in-excel-online/clear-option.png)
+   ![the clear option dialog box](./media/compatibility-report-about-text-queries-in-excel-online/clear-option.PNG)
 
 1. On the **Data** tab, select **Properties**, and then clear the **Save query definition** check box in the **External Data Range Properties** dialog box.
 
-   ![the clear option two dialog box](./media/compatibility-report-about-text-queries-in-excel-online/clear-option-two.png)
+   ![the clear option two dialog box](./media/compatibility-report-about-text-queries-in-excel-online/clear-option-two.PNG)
