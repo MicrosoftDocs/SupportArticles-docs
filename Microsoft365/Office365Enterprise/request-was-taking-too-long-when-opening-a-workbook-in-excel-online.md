@@ -32,21 +32,21 @@ A very complex workbook that contains many workbook elements may take a long tim
 
 To view existing styles in a workbook, locate **Home** tab > **Styles** > Down arrow.
 
-![Down arrow in Style group](./media/request-was-taking-too-long-when-opening-a workbook-in-excel-online/down-arrow.png)
+![Down arrow in Style group](./media/request-was-taking-too-long-when-opening-a-workbook-in-excel-online/down-arrow.png)
 
 In a new workbook, your list of styles should resemble the following list.
 
-![An example of style list in a workbook](./media/request-was-taking-too-long-when-opening-a workbook-in-excel-online/style-list.png)
+![An example of style list in a workbook](./media/request-was-taking-too-long-when-opening-a-workbook-in-excel-online/style-list.png)
 
 Here are examples of duplicate or excessive formatting.
 
 **Example 1**: This example has 3,284 duplicate formatting items.
 
-![An example that has 3,284 duplicate formatting items](./media/request-was-taking-too-long-when-opening-a workbook-in-excel-online/example1.png)
+![An example that has 3,284 duplicate formatting items](./media/request-was-taking-too-long-when-opening-a-workbook-in-excel-online/example1.png)
 
 **Example 2**: This example has 11,837 excessive formatting items.
 
-![An example that has 11,837 excessive formatting items](./media/request-was-taking-too-long-when-opening-a workbook-in-excel-online/example2.png)
+![An example that has 11,837 excessive formatting items](./media/request-was-taking-too-long-when-opening-a-workbook-in-excel-online/example2.png)
 
 These excessive cell styles, mixed with the many other elements in this workbook (such as sheet protection, defined names, and VLOOKUP formulas), cause the loading process to exceed the 30-second time-out duration that is set by Excel Online.
 
@@ -58,11 +58,11 @@ To have Excel to clear excess or duplicate formatting, use the Inquire add-in. T
 1. On the Manage menu at the bottom of the page, select **COM Add-ins**, and then select **Go**.
 1. After the **COM Add-ins** window opens, make sure that the check box next to **Inquire** is selected, and then click **OK**.
   
-   ![Selecting Inquire in COM Add-ins window](./media/request-was-taking-too-long-when-opening-a workbook-in-excel-online/inquire-add-in.png)
+   ![Selecting Inquire in COM Add-ins window](./media/request-was-taking-too-long-when-opening-a-workbook-in-excel-online/inquire-add-in.png)
 
 You should now see the Inquire add-in loaded in the workbook ribbon. Open the **Inquire** tab, and then select **Clean Excess Cell Formatting**.
 
-![Selecting Clean Excess Cell Formatting on the Inquire tab](./media/request-was-taking-too-long-when-opening-a workbook-in-excel-online/clean-excess-cell-formatting.png)
+![Selecting Clean Excess Cell Formatting on the Inquire tab](./media/request-was-taking-too-long-when-opening-a-workbook-in-excel-online/clean-excess-cell-formatting.png)
 
 ## More Information
 
