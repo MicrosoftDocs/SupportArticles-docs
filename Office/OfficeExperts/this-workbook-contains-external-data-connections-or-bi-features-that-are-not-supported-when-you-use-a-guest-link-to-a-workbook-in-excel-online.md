@@ -26,8 +26,8 @@ By default, a guest link URL that is provided by SharePoint doesn't include the 
 
 By default, a URL that is accessed by a guest will be formatted like:
 
-https://sharepointserver/:x:/r/_layouts/15/Doc.aspx?sourcedoc=%7B5e748b77-3447-4dce-a676-c1d12c4ef531%7D&action=default
+**https://sharepointserver/:x:/r/_layouts/15/Doc.aspx?sourcedoc=%7B5e748b77-3447-4dce-a676-c1d12c4ef531%7D&action=default**
 
 To use the data refresh or BI function, replace "action=default" with "action=embedview&wdbipreview=true". Then the URL will be like:
 
-https://sharepointserver/:x:/r/_layouts/15/Doc.aspx?sourcedoc=%7B5e748b77-3447-4dce-a676-c1d12c4ef531%7D&action=embedview&wdbipreview=true
+**https://sharepointserver/:x:/r/_layouts/15/Doc.aspx?sourcedoc=%7B5e748b77-3447-4dce-a676-c1d12c4ef531%7D&action=embedview&wdbipreview=true**
