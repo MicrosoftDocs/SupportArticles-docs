@@ -16,7 +16,7 @@ ms.author: v-six
 Consider the following scenario. You have existing, deployed provider-hosted add-ins (PHA) that are registered as <RegisteredIssuerName> and that contain the original farm **RealmID** value for your SharePoint 2013 or SharePoint 2016 farm, and/or you created a Workflow Manager association in your farm.   
 In this scenario, when you access these PHAs after you configure SharePoint hybrid features in your farm, the PHAs stop functioning. Additionally, you receive an HTTP 401 error message when you are directed to the add-ins.﻿
 
-> [NOTE]
+> [!NOTE]
 > PHAs may include an externally hosted web application, service, database, or SharePoint component.  
 This problem does not exist if you configure hybrid features first, and then deploy provider-hosted add-ins and/or Workflow Manager in a SharePoint 2013 or SharePoint 2016 farm.
 
@@ -73,7 +73,7 @@ To repair authentication-related issues that are associated with provider-hosted
 In the scenario where you configure hybrid workloads that require S2S before you implement the provider-hosted add-ins or Workflow Manager, the add-ins will be registered after the SPAuthenticationRealm cmdlet is updated to match the Office 365 tenant context ID. They’ll always work because the RealmID value won’t change again. If hybrid workloads are added or reconfigured, the realm ID remains the same as the Office 365 tenant context ID.   
 To create a server-to-server trust between your SharePoint on-premises environment and Office 365, run the [Set-SPAuthenticationRealm cmdlet](https://technet.microsoft.com/library/jj219756.aspx).
 
-> [IMPORTANT]  
+> [!IMPORTANT]  
 > The topic contains a "Caution" section that warns that any access tokens that are created for a specific realm won’t work after you change the **SPAuthenticationRealm** value.  
 
 To create SharePoint provider-hosted add-ins, see [﻿Get started creating provider-hosted SharePoint Add-ins](https://msdn.microsoft.com/library/office/fp142381.aspx).

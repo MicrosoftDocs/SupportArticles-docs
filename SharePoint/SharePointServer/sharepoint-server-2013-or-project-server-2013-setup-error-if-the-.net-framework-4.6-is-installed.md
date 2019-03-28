@@ -15,10 +15,7 @@ ms.author: v-six
 
 When you run Microsoft SharePoint Foundation 2013 with Service Pack 1 Setup, SharePoint Server 2013 with Service Pack 1 Setup, or Project Server 2013 with Service Pack 1 Setup on a computer that has the Microsoft .NET Framework 4.6, 4.6.1, or 4.6.2 installed, you receive the following error message:
 
-```
-Setup is unable to proceed due to the following error(s):  
-This product requires Microsoft .Net Framework 4.5.  
-```
+**Setup is unable to proceed due to the following error(s): This product requires Microsoft .Net Framework 4.5.**
 
 ## Cause  
 

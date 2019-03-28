@@ -98,7 +98,7 @@ Depending on how outdated the database statistics have become, you may have to c
 DBCC FREEPROCCACHE  
 ```  
 
-> [IMPORTANT]
+> [!IMPORTANT]
 > Running the DBCC FREEPROCCACHE command clears the cache for all query plans in in the SQL instance. This command should be well understood before you execute it during production hours.  
 
 If the [DBCC FREEPROCCACHE](https://msdn.microsoft.com/library/ms174283.aspx) command was not executed after updating the outdated database statistics, queries with inefficient execution plans may still reside in cache and be used. If this is the case, force a recompile on the specified stored procedure by using the stored procedure (see [sp_recompile (Transact-SQL)](https://msdn.microsoft.com/library/ms181647.aspx)). For example, see the following query:   
