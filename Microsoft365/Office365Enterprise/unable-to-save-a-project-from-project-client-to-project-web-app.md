@@ -33,6 +33,6 @@ To resolve this issue, follow these steps:
 1. Open **Control Panel**.
 2. Click **User Accounts** -> **Credentials Manager** -> **Windows Credentials** in the **Manage your credentials** window, and then remove any credentials that are stored in the **Credential Manager** window.
 
-   ![Removing credentials in the Credential Manager window](./media/Unable to save a project from Project client to Project Web App/credentials.png)
+   ![Removing credentials in the Credential Manager window](./media/unable-to-save-a-project-from-project-client-to-project-web-app/credentials.png)
 3. Open the Project client and then connect to PWA.
 4. Save the project again to check the behavior.
