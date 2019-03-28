@@ -17,13 +17,13 @@ When you have a site collection that runs a sandboxed solution in SharePoint Onl
 
 - You receive the following message:
 
-  - **The site collection containing this sandboxed solution has exceeded its daily resource usage quota.**
+   **The site collection containing this sandboxed solution has exceeded its daily resource usage quota.**
 
 - If you're the site collection owner, you receive an email message that contains one of the following messages:
 
-  - **Your site collection is running low on resources to run custom user solutions. If you run out of resources, custom user solutions may not run until the next day. Please follow the link below to your SharePoint Web site to manage and monitor solution usage.**
+   **Your site collection is running low on resources to run custom user solutions. If you run out of resources, custom user solutions may not run until the next day. Please follow the link below to your SharePoint Web site to manage and monitor solution usage.**
 
-  - **Your site collection has run out of resources to run custom user solutions. Custom user solutions will not run until the next day. Please follow the link below to your SharePoint Web site to manage and monitor solution usage.**
+   **Your site collection has run out of resources to run custom user solutions. Custom user solutions will not run until the next day. Please follow the link below to your SharePoint Web site to manage and monitor solution usage.**
 
 ## Solution
 
