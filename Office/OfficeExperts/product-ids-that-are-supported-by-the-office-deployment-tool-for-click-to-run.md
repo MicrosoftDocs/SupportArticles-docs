@@ -41,7 +41,8 @@ The following table lists the Office 365 plan name and the correct product ID to
 |Office 365 Midsize           |O365ProPlusRetail   |
 |Office 365 Business          |O365BusinessRetail  |
 |Office 365 Business Premium  |O365BusinessRetail  |
-|Office Small Business Premium|O365SmallBusPremRetail|
+|Office Small Business Premium|O365SmallBusPremRetail |
+
 In addition to these product IDs, the following non-Office 365 product IDs are supported by this tool:
 
 > [!NOTE]
