@@ -22,7 +22,7 @@
           "**/*.md",
           "**/**.yml"
         ],
-        "src": "Office",
+        "src": "Client",
         "dest": ".",
         "exclude": [
           "**/obj/**",
