@@ -32,3 +32,5 @@ Microsoft Office 365 updates are designed to be very network bandwidth friendly.
    ![Checking Receive Bytes in Network Summary](./media/how-big-was-this-months-office-proplus-update/network-summary.png)
 
 In this example, the Office ProPlus is on the July version of Semi-Annual Channel (16.0.6741.2056) and then updated to the August version (16.0.6741.2063). As you can see, this update is 167,829,264 bytes, or approximately 167 MB of data.
+
+For more information, see [Download sizes for updates to Office 365 ProPlus](https://docs.microsoft.com/officeupdates/download-sizes-office365-proplus-updates).
