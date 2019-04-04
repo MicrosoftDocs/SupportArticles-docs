@@ -5,4 +5,4 @@ title: Skype for Business Support
 description: Skype for Business Support
 ---
 
-[!INCLUDE [support](/common/Office/troubleshoot.md)]
+[!INCLUDE [support](../../common/Office/troubleshoot.md)]

@@ -5,4 +5,4 @@ title: Microsoft Teams Support
 description: Microsoft Teams Support
 ---
 
-[!INCLUDE [support](/common/Office/troubleshoot.md)]
+[!INCLUDE [support](../common/Office/troubleshoot.md)]
