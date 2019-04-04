@@ -1,3 +1,8 @@
-# Welcome to Microsoft Teams!
+--- 
+layout: HubPage
+hide_bc: true
+title: Microsoft Teams Support
+description: Microsoft Teams Support
+---
 
-This is the Microsoft Teams support overview topic
+[!INCLUDE [support](../../common/Office/support.md)]
