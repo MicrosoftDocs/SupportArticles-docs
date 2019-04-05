@@ -15,11 +15,11 @@ ms.author: v-six
 
 Consider the following scenario:  
 
-- a publishing site or a site that has the ‘ViewFormPagesLockDown’ feature enabled    
-- the site is configured for anonymous access   
-- the site contains a document library    
-- the document library contains a file with extension .XLSX (Excel 2007 or higher format)   
-- an anonymous user double-clicks on the .XLSX to open it     
+- A publishing site or a site that has the ‘ViewFormPagesLockDown’ feature enabled    
+- The site is configured for anonymous access   
+- The site contains a document library    
+- The document library contains a file with extension .XLSX (Excel 2007 or higher format)   
+- An anonymous user double-clicks on the .XLSX to open it     
 
 Sharepoint tries to open the file using XL Web Service. The user sees the message "Operation in Progress", and then receive the following error:
 
