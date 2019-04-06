@@ -50,11 +50,7 @@
 
 ## ["SharePoint 2013 workflow HTTP Unauthorized" error occurs in SharePoint Online](../sharepoint-2013-workflow-http-unauthorized-in-sharepoint-online.md)
 
-## [SharePoint Online content isn't displayed in a SharePoint on-premises search](../sharepoint-online-content-is-not-displayed-in-a-sharepoint-on-premises-search.md)
-
 ## [SharePoint Online sites don't automatically update to the 25 terabyte limit](../sharepoint-online-sites-do-not-automatically-update-to-the-25-terabyte-limit.md)
-
-## [SharePoint on-premises content isn’t displayed in SharePoint Online search results](../sharepoint-on-premises-content-is-not-displayed-in-sharepoint-online-search-results.md)
 
 ## ["The webpage cannot be displayed" error message when you try to open an Office document in the client application from inside SharePoint Online](../the-webpage-cannot-be-displayed-when-open-an-office-document-from-inside-sharepoint-online.md)
 
