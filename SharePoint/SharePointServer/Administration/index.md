@@ -1,4 +1,4 @@
-# SharePoint Administration page
+﻿# SharePoint Administration page
 
 ## ["401 unauthorized" error when using OAuth and SAML claims in SharePoint 2013](./401-unauthorized-error-when-using-oauth-and-saml-claims-in-sharepoint-2013.md)
 
@@ -6,7 +6,7 @@
 
 ## [You can’t start the SharePoint Foundation Web Application service](./cannot-start-the-sharepoint-foundation-web-application-service.md)
 
-## [You can’t start the User Profile Synchronization service in SharePoint Server 2013](../cannot-start-the-user-profile-synchronization-service-in-sharepoint-2013.md)
+## [You can’t start the User Profile Synchronization service in SharePoint Server 2013](./cannot-start-the-user-profile-synchronization-service-in-sharepoint-2013.md)
 
 ## [ContractFilter error when querying from the non-Default zone in a SharePoint Server 2013 or 2016 farm](./contractfilter-error-when-querying-from-the-non-default-zone-in-a-sharepoint-server-farm.md)
 
