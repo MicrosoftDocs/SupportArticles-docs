@@ -2,8 +2,6 @@
 
 ## [SharePoint Performance](../performance/index.md)
 
-## [SharePoint Installation](../administration/index.md)
+## [SharePoint Installation](../install/index.md)
 
-## [SharePoint Administrator](../install/index.md)
-
-## [SharePoint Generic issues](../generic/index.md)
+## [SharePoint Administrator](../administration/index.md)
