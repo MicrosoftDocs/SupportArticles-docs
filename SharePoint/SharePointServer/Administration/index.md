@@ -54,7 +54,7 @@
 
 ## [Web part controls don't work after sites are migrated to SharePoint 2016](./web-part-controls-do-not-work-after-sites-are-migrated-to-sharepoint-2016.md)
 
-## [Access denied when you send an emial to a SharePoint group by using SharePoint Server 2013 workflows](./access-denied-when-send-an-emial-to-a-sharepoint-group.md)
+## [Access denied when you send an email to a SharePoint group by using SharePoint Server 2013 workflows](./access-denied-when-send-an-email-to-a-sharepoint-group.md)
 
 ## [Error "Server Error in '/' Application. Access to the path  is denied" when you log on to Windows SharePoint Services 2.0](./access-to-the-path-is-denied-when-log-on-to-sharepoint-services-2.0.md)
 
