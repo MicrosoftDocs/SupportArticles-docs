@@ -1,3 +1,3 @@
 # [SharePoint Hybrid Support](../sharepoint-hybrid.md)
 
-## [SharePoint Generic issues](../generic/index.md)
+## [SharePoint Administration](../administration/index.md)
