@@ -4,4 +4,4 @@
 
 ## [SharePoint Installation](../install/index.md)
 
-## [SharePoint Administrator](../administration/index.md)
+## [SharePoint Administration](../administration/index.md)
