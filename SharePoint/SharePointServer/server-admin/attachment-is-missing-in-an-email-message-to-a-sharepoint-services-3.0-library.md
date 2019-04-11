@@ -11,7 +11,7 @@ ms.author: v-six
 
 # Attachment is missing from an e-mail message that is sent to a Microsoft Windows SharePoint Services 3.0 document library  
 
-##  Symptoms  
+## Symptoms  
 
 Consider the following scenario.
 
@@ -20,7 +20,7 @@ Consider the following scenario.
 
 In this scenario, the e-mail message arrives in the document library. However, the attachment is missing.  
 
-##  Cause  
+## Cause  
 
 This issue occurs when you associate the document library with an e-mail address. When you do this, the SharePoint Directory Management Service may not add the following attributes:  
 
@@ -29,7 +29,7 @@ This issue occurs when you associate the document library with an e-mail address
 
 These two attributes must be added to the contact so that the attachment is sent correctly.  
 
-##  Resolution  
+## Resolution  
 
 To resolve this issue, you must use Active Directory Service Interfaces (ADSI) to manually add the two missing attributes. To do this, follow these steps:  
 
@@ -43,6 +43,6 @@ To resolve this issue, you must use Active Directory Service Interfaces (ADSI) t
 6. Double-click **mAPIRecipient**.
 7. In the **Boolean Attribute Editor** dialog box, click **False**, and then click **OK** two times.     
 
-##  Workaround  
+## Workaround  
 
-In the Exchange Management Console, you can add a new Message Format under the Global Settings, set the domain to the Fully Qualified Domain Name of the SharePoint server, and set it to never use Exchange Rich-Text Format.   
+In the Exchange Management Console, you can add a new Message Format under the Global Settings, set the domain to the Fully Qualified Domain Name of the SharePoint server, and set it to never use Exchange Rich-Text Format.   

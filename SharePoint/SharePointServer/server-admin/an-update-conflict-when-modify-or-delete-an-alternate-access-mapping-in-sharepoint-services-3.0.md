@@ -11,7 +11,7 @@ ms.author: v-six
 
 # Error message when you try to modify or to delete an alternate access mapping in Windows SharePoint Services 3.0: "An update conflict has occurred, and you must re-try this action"  
 
-##  Symptoms  
+## Symptoms  
 
 You perform a system recovery in Microsoft Windows SharePoint Services 3.0 in which the configuration database is restored. Then, you try to modify or to delete an alternate access mapping.   
 
@@ -27,11 +27,11 @@ When you view the Unified Logging Service (ULS) log files, you see an entry that
 **Date ****Time** w3wp.exe (0x1620) 0x1988Windows SharePoint Services Topology 8xqzMedium Updating SPPersistedObject SPAlternateUrlCollection Name=WEBAPPLICATION Parent=SPFarm Name=SharePoint_Config. Version: 16449 Ensure: 0, HashCode: 30474330, Id: 609b3309-241a-4193-8289-1bba6a70be50, Stack: at Microsoft.SharePoint.Administration.SPPersistedObject.Update() at Microsoft.SharePoint.Administration.SPAlternateUrlCollection.Update() at Microsoft.SharePoint.ApplicationPages.IncomingUrlPage.BtnSave_Click(Object sender, EventArgs e) at System.Web.UI.WebControls.Button.OnClick(EventArgs e) at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument) at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument) at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument) at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData) at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) at System.Web.UI.Page.ProcessRequest() at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context) at System.Web.UI.Page.ProcessRequest(HttpContext context) at ASP._admin_editincomingurl_aspx.ProcessRequest(HttpContext context) at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) at System.Web.HttpApplication.ResumeSteps(Exception error) at System.Web.HttpApplication.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData) at System.Web.HttpRuntime.ProcessRequestInternal(HttpWorkerRequest wr) at System.Web.HttpRuntime.ProcessRequestNoDemand(HttpWorkerRequest wr) at System.Web.Hosting.ISAPIRuntime.ProcessRequest(IntPtr ecb, Int32 iWRType) 06/06/2007 14:36:31.51 w3wp.exe (0x1620) 0x1988Windows SharePoint Services Topology 75bdHigh UpdatedConcurrencyException: The object SPAlternateUrlCollection Name=WEBAPPLICATION Parent=SPFarm Name=SharePoint_Config was updated by another user. Determine if these changes will conflict, resolve any differences, and reapply the second change. This error may also indicate a programming error caused by obtaining two copies of the same object in a single thread. Previous update information: User: **DomainName**\**UserName1** Process:w3wp Machine:**ServerName** Time:**Date ****Time** Current update information: User: **DomainName**\**UserName2** Process:w3wp Machine:**ServerName****Date ****Time** w3wp.exe (0x1620) 0x1988Windows SharePoint Services Topology 8xqyHigh ConcurrencyException: Old Version : 16449 New Version : 0  
 ```
 
-##  Cause  
+## Cause  
 
 This issue occurs if the contents of the file system cache on the front-end servers are newer than the contents of the configuration database. After you perform a system recovery, you may have to manually clear the file system cache on the local server.  
 
-##  Resolution  
+## Resolution  
 
 To resolve this issue, clear the file system cache on all servers in the server farm on which the Windows SharePoint Services Timer service is running. To do this, follow these steps:   
 
@@ -89,7 +89,7 @@ To resolve this issue, clear the file system cache on all servers in the server 
 
       **Note**  The file system cache is re-created after you perform this procedure. Make sure that you perform this procedure on all servers in the server farm.    
 
-12. Make sure that the Cache.ini file has been updated. For example it should no longer be 1 if the cache has been updated.   
+12. Make sure that the Cache.ini file has been updated. For example it should no longer be 1 if the cache has been updated.   
 
 13. Click **Start**, point to **Programs**, point to **Administrative Tools**, and then click **SharePoint 3.0 Central Administration**.   
 

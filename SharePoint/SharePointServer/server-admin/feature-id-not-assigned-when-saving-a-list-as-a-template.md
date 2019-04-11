@@ -11,15 +11,15 @@ ms.author: v-six
 
 # Feature id not assigned when saving a list as a template  
 
-##  Symptoms  
+## Symptoms  
 
-After saving a list as a template, the file created in the template gallery does not have a feature ID or product version associated with it. Also, when using the create new list dialog, the list template is not available as an option.  
+After saving a list as a template, the file created in the template gallery does not have a feature ID or product version associated with it. Also, when using the create new list dialog, the list template is not available as an option.  
 
-##  Cause  
+## Cause  
 
 This can be caused by having the 'ParserEnabled' property on the SPWeb set to 'false'.  
 
-##  Resolution  
+## Resolution  
 
 Use PowerShell to enable the 'ParserEnabled' property for the web site:  
 
@@ -29,6 +29,6 @@ $web.ParserEnabled = $true
 $web.Update()  
 ```
 
-##  More Information  
+## More Information  
 
 [Document Property Promotion and Demotion](http://msdn.microsoft.com/library/aa543341.aspx)

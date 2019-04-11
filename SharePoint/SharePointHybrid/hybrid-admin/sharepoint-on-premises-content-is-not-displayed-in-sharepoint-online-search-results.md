@@ -24,7 +24,7 @@ Consider the following scenario,
 
 ## Workaround   
 
-To work around this issue, change your SharePoint on-premises identity provider so that it works with SharePoint Online. To do this, run the following cmdlet on your on-premises SharePoint 2013 farm:
+To work around this issue, change your SharePoint on-premises identity provider so that it works with SharePoint Online. To do this, run the following cmdlet on your on-premises SharePoint 2013 farm:
 
 ```
 $config = Get-SPSecurityTokenServiceConfig  
@@ -35,7 +35,7 @@ $config.Update()
 ```
 ## More information  
 
-In the scenario that's described in the "Symptoms" section, the following exception is logged in the Unified Logging Service (ULS) log: 
+In the scenario that's described in the "Symptoms" section, the following exception is logged in the Unified Logging Service (ULS) log: 
 
 ```
 w3wp.exe (0x48E4) 0x08A4 SharePoint Portal Server User Profiles ae0sx Unexpected Error trying to search   

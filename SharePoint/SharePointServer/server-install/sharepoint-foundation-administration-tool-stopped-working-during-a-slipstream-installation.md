@@ -19,7 +19,7 @@ When you run a a slipstream installation of SharePoint Server 2016, you receive 
 
 ## Cause  
 
-This error occurs because the Microsoft SharePoint Foundation administration tool (Stsadm.exe) tries to access the SharePoint farm during a slipstream installation before the farm is created.  
+This error occurs because the Microsoft SharePoint Foundation administration tool (Stsadm.exe) tries to access the SharePoint farm during a slipstream installation before the farm is created.  
 
 ## Status  
 

@@ -1,5 +1,5 @@
 ﻿# [SharePoint Experts](../sharepoint-experts.md)
- 
+ 
 ## [SharePoint Experts Administration](../experts-admin/index.md)
 
 ### [Configuration for Office Web Apps or Office Online Server authentication with external users](../experts-admin/configuration-for-office-web-apps-or-office-online-server-authentication-with-external-users.md)

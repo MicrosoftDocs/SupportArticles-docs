@@ -33,7 +33,7 @@ This issue occurs because an invalid user context is left in the IIS cache.
 
 To resolve this issue, replace the **Sign Out**  link with the **Sign-in As Different User**  link for all web front end-servers on the SharePoint farm by following these steps:  
 
-1. In the following folder, open the welcome.ascx file in a text editor such as notepad: 
+1. In the following folder, open the welcome.ascx file in a text editor such as notepad: 
 
    ```
    C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\TEMPLATE\CONTROLTEMPLATES
@@ -63,4 +63,4 @@ To resolve this issue, replace the **Sign Out**  link with the **Sign-in As Diff
    />  
    ```  
 
-   **Note** The text and description attributes are changed to mimic the logoff button.     
+   **Note** The text and description attributes are changed to mimic the logoff button.     

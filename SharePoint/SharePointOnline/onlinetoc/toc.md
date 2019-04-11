@@ -1,5 +1,5 @@
 ﻿# [SharePoint Online Support](../sharepoint-online.md)
- 
+ 
 ## [SharePoint Online Administration](../online-admin/index.md)
 
 ### [You can't add external users to a SharePoint Online External Content Type in the SharePoint admin center](../online-admin/cannot-add-external-users-to-a-sharepoint-online-external-content-type.md)

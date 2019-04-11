@@ -32,7 +32,7 @@ Additionally, other areas such as search, claims authentication also do not func
 
 ## Cause  
 
-This problem occurs when an administrator deletes the **local** trust relationship of the farm from the **Security** section of the Central Administration website   
+This problem occurs when an administrator deletes the **local** trust relationship of the farm from the **Security** section of the Central Administration website   
 
 **Note** Specifically, the local trust is located in Central Administration > Security > Manage Trust.  
 

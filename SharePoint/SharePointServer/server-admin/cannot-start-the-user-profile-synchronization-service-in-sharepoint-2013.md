@@ -16,24 +16,24 @@ ms.author: v-six
 You can’t start the User Profile Synchronization service in Microsoft SharePoint Server 2013. The service shows a status of either **Starting** or **Stopped**. Additionally, the following error entry is logged in the ULS log:
 
 ```       
-OWSTIMER.EXE (0x2B80) 0x3370 SharePoint Portal Server User Profiles g144 Unexpected Failed to set the new Service Broker on database <SyncDB> on server <ServerName>. Exception: The operation cannot be performed on database <SyncDB> because it is involved in a database mirroring session or an availability group. Some operations are not allowed on a database that is participating in a database mirroring session or in an availability group.  ALTER DATABASE statement failed.  ALTER DATABASE statement failed.    
-OWSTIMER.EXE (0x2B80) 0x3370 SharePoint Portal Server User Profiles 9sip High UserProfileApplication.SynchronizeMIIS: Failed to configure MIIS post database, will attempt during next rerun. Exception: System.Data.SqlClient.SqlException (0x80131904): The operation cannot be performed on database <SyncDB> because it is involved in a database mirroring session or an availability group. Some operations are not allowed on a database that is participating in a database mirroring session or in an availability group.  ALTER DATABASE statement failed.  ALTER DATABASE statement failed.       
-at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)       
-at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)       
-at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)       
-at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)       
-at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)       
-at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()       
-at Microsoft.Office.Server.Data.SqlSession.ExecuteNonQuery(SqlCommand command)       
+OWSTIMER.EXE (0x2B80) 0x3370 SharePoint Portal Server User Profiles g144 Unexpected Failed to set the new Service Broker on database <SyncDB> on server <ServerName>. Exception: The operation cannot be performed on database <SyncDB> because it is involved in a database mirroring session or an availability group. Some operations are not allowed on a database that is participating in a database mirroring session or in an availability group.  ALTER DATABASE statement failed.  ALTER DATABASE statement failed.    
+OWSTIMER.EXE (0x2B80) 0x3370 SharePoint Portal Server User Profiles 9sip High UserProfileApplication.SynchronizeMIIS: Failed to configure MIIS post database, will attempt during next rerun. Exception: System.Data.SqlClient.SqlException (0x80131904): The operation cannot be performed on database <SyncDB> because it is involved in a database mirroring session or an availability group. Some operations are not allowed on a database that is participating in a database mirroring session or in an availability group.  ALTER DATABASE statement failed.  ALTER DATABASE statement failed.       
+at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)       
+at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)       
+at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)       
+at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)       
+at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)       
+at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()       
+at Microsoft.Office.Server.Data.SqlSession.ExecuteNonQuery(SqlCommand command)       
 at Microsoft.Office.Server.Administration.SynchronizationDatabase.EnableServiceBroker()  
-at Microsoft.Office.Server.Administration.UserProfileApplication.SetupSynchronizationService(ProfileSynchronizationServiceInstance profileSyncInstance)    
-ClientConnectionId:<Id>  Error Number:1468,State:1,Class:16.    
-OWSTIMER.EXE (0x2B80) 0x3370 SharePoint Portal Server User Profiles 9i1u Medium UserProfileApplication.SynchronizeMIIS: End setup for 'User Profile Service Application'.        
+at Microsoft.Office.Server.Administration.UserProfileApplication.SetupSynchronizationService(ProfileSynchronizationServiceInstance profileSyncInstance)    
+ClientConnectionId:<Id>  Error Number:1468,State:1,Class:16.    
+OWSTIMER.EXE (0x2B80) 0x3370 SharePoint Portal Server User Profiles 9i1u Medium UserProfileApplication.SynchronizeMIIS: End setup for 'User Profile Service Application'.        
 ```
 
 ## Cause  
 
-The issue occurs if the synchronization database is involved in a database mirroring session or an availability group.   
+The issue occurs if the synchronization database is involved in a database mirroring session or an availability group.   
 
 ## Resolution  
 

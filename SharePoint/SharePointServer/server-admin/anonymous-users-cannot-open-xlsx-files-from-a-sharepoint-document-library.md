@@ -11,26 +11,26 @@ ms.author: v-six
 
 # Anonymous Users cannot open XLSX files from a SharePoint document library  
 
-##  Symptoms  
+## Symptoms  
 
 Consider the following scenario:  
 
-- A publishing site or a site that has the ‘ViewFormPagesLockDown’ feature enabled    
-- The site is configured for anonymous access   
-- The site contains a document library    
+- A publishing site or a site that has the ‘ViewFormPagesLockDown’ feature enabled    
+- The site is configured for anonymous access   
+- The site contains a document library    
 - The document library contains a file with extension .XLSX (Excel 2007 or higher format)   
 - An anonymous user double-clicks on the .XLSX to open it     
 
 Sharepoint tries to open the file using XL Web Service. The user sees the message "Operation in Progress", and then receive the following error:
 
-**Excel Web Access An error has occured.**  
+**Excel Web Access An error has occured.**  
 **Access Denied**
 
-##  Cause  
+## Cause  
 
 Anonymous users do not have "OpenItems" rights on the Document Library.  
 
-##  Resolution  
+## Resolution  
 
 Three different resolutions can be implemented to resolve this issue.  
 
@@ -41,7 +41,7 @@ Break permission inheritance on the Document Library.
 ### Resolution 2  
 
 > [!NOTE]
-> Disabling the "ViewFormPagesLockDown" feature allows anonymous users to have view source rights to certain files that could potentially contain sensitive info.  
+> Disabling the "ViewFormPagesLockDown" feature allows anonymous users to have view source rights to certain files that could potentially contain sensitive info.  
 
 Disable the "ViewFormPagesLockDown" feature on the site collection using stsadm:  
 
@@ -74,6 +74,6 @@ $web.Dispose();
 $site.Dispose();  
 ```
 
-##  More Information  
+## More Information  
 
 [Plan security for an external anonymous access environment (Office SharePoint Server)](http://technet.microsoft.com/library/cc263468%28office.12%29.aspx)

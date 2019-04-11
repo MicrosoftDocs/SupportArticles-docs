@@ -13,13 +13,13 @@ ms.author: v-six
 
 ## Symptom   
 
-When submitting a query to FAST Search from SharePoint, you recieve the following error each time:   
+When submitting a query to FAST Search from SharePoint, you recieve the following error each time:   
 
 **Property doesn't exist or is used in a manner inconsistent with schema settings**   
 
 ## Cause   
 
-The Index Schema defined in SharePoint Central Administration at the Query SSA's FAST Search Administration section is stored in SQL Server, and deployed to FAST Search through a timer job. It's possible that not all steps of the deployment occur, leading to a newer schema in SharePoint / SQL than the FAST qrserver is using.  
+The Index Schema defined in SharePoint Central Administration at the Query SSA's FAST Search Administration section is stored in SQL Server, and deployed to FAST Search through a timer job. It's possible that not all steps of the deployment occur, leading to a newer schema in SharePoint / SQL than the FAST qrserver is using.  
 
 ## Resolution   
 

@@ -21,7 +21,7 @@ After you migrate the sites on Microsoft SharePoint Server 2013 to SharePoint Se
 
 ## Cause  
 
-These web part controls were replaced by new versions in SharePoint Server 2016.  
+These web part controls were replaced by new versions in SharePoint Server 2016.  
 
 ## Resolution  
 
@@ -31,13 +31,13 @@ To resolve this issue, use one of the following methods.
 
 Delete the web part controls and then reinsert them.  
 
-### Method 2 Mark the web part controls as safe controls  
+### Method 2 Mark the web part controls as safe controls  
 
-To do this, add the following entries in the web.config file for the migrated Web Apps.
+To do this, add the following entries in the web.config file for the migrated Web Apps.
 
 **SpListFilterWebPart**
 
-Add the following entry to the **SafeControls** section:  
+Add the following entry to the **SafeControls** section:  
 
 ```
 <SafeControl Assembly="Microsoft.SharePoint.Portal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.Portal.WebControls" TypeName="SpListFilterWebPart" Safe="True" />   
@@ -45,7 +45,7 @@ Add the following entry to the **SafeControls** section:
 
 **ExcelWebRenderer**
 
-Add the following entry to the **assemblyBinding** section of the web.config file:  
+Add the following entry to the **assemblyBinding** section of the web.config file:  
 
 ```
 < dependentAssembly>   
@@ -57,7 +57,7 @@ Add the following entry to the **assemblyBinding** section of the web.config f
 
 **ReportViewerWebPart**
 
-Add the following entry to the **SafeControls** section:  
+Add the following entry to the **SafeControls** section:  
 
 ```
 <SafeControl Assembly="Microsoft.ReportingServices.SharePoint.UI.WebParts, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" Namespace="Microsoft.ReportingServices.SharePoint.UI.WebParts" TypeName="*" Safe="True" />

@@ -35,7 +35,7 @@ Certificate validation failures can be tracked by enabling the CAPI2 event loggi
 
 Please refer to the "More Information" section for information about how to enable CAPI2 logging.  
 
-##  Resolution  
+## Resolution  
 
 To resolve this issue, perform one of the following workarounds:   
 

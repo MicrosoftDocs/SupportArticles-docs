@@ -26,21 +26,21 @@ You see a blank screen when you sign in to a SharePoint site other than the Cent
 
   ```  
   $farm = [Microsoft.SharePoint.Administration.SPFarm]::Local  
- 	$webServiceCollection = new-object Microsoft.SharePoint.Administration.SPWebServiceCollection($farm)  
- 	foreach ($service in $webServiceCollection)  
- 	{  
- 	   foreach ($webApp in $service.WebApplications)  
- 	   {  
- 	      $firstWebApp = $webApp  
- 	      #Get the context  
- 	      $context = $firstWebApp.GetResponseUri([Microsoft.SharePoint.Administration.SPUrlZone]::Default)  
- 	      Write-Host "Web Application Context:" $context.AbsoluteUri  
- 	      #Call the token generator function  
- 	      $token = [Microsoft.SharePoint.SPSecurityContext]::SecurityTokenForContext($context)  
- 	      Write-Host "Token:" $token.InternalTokenReference  
- 	      Write-Host "**************************"  
- 	   }  
- 	}  
+  $webServiceCollection = new-object Microsoft.SharePoint.Administration.SPWebServiceCollection($farm)  
+  foreach ($service in $webServiceCollection)  
+  {  
+     foreach ($webApp in $service.WebApplications)  
+     {  
+        $firstWebApp = $webApp  
+        #Get the context  
+        $context = $firstWebApp.GetResponseUri([Microsoft.SharePoint.Administration.SPUrlZone]::Default)  
+        Write-Host "Web Application Context:" $context.AbsoluteUri  
+        #Call the token generator function  
+        $token = [Microsoft.SharePoint.SPSecurityContext]::SecurityTokenForContext($context)  
+        Write-Host "Token:" $token.InternalTokenReference  
+        Write-Host "**************************"  
+     }  
+  }  
   ```  
 
   And you receive the following error message:
@@ -63,7 +63,7 @@ To resolve the issue, disable FIPS by following these steps on the computer that
 1. Start the Local Security Policy console (secpol.msc). Go to **Security Settings** > **Local Policies** > **Security Options**.     
 2. Locate the **System cryptography: Use FIPS 140 compliant cryptographic algorithms, including encryption, hashing and signing algorithms** policy.     
 3. If the policy is enabled, right-click the policy, click **Properties**, select **Disabled**, and then click **OK**.     
-4. Open Registry Editor and locate the following registry subkey:  
+4. Open Registry Editor and locate the following registry subkey:  
 
   ```
   HKLM\System\CurrentControlSet\Control\Lsa\FIPSAlgorithmPolicy  
@@ -73,4 +73,4 @@ To resolve the issue, disable FIPS by following these steps on the computer that
 
 ## More Information  
 
-SharePoint Server uses several Windows encryption algorithms for computing hash values that do not comply with Federal Information Processing Standard (FIPS) 140-2, Security Requirements for Cryptographic Modules. These algorithms are not used for security purposes. They are used for internal processing. For example, SharePoint Server uses MD5 to create hash values that are used as unique identifiers. Because SharePoint Server uses these algorithms, the program doesn't support the Windows security policy setting that requires FIPS-compliant algorithms for encryption and hashing.
+SharePoint Server uses several Windows encryption algorithms for computing hash values that do not comply with Federal Information Processing Standard (FIPS) 140-2, Security Requirements for Cryptographic Modules. These algorithms are not used for security purposes. They are used for internal processing. For example, SharePoint Server uses MD5 to create hash values that are used as unique identifiers. Because SharePoint Server uses these algorithms, the program doesn't support the Windows security policy setting that requires FIPS-compliant algorithms for encryption and hashing.
