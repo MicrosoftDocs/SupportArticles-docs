@@ -1,6 +1,6 @@
 # [SharePoint Hybrid Support](../sharepoint-hybrid.md)
 
-## [SharePoint Administration](../hybrid-admin/index.md)
+## [SharePoint Hybrid Administration](../hybrid-admin/index.md)
 
 ### [SharePoint Online content isn't displayed in a SharePoint on-premises search](../hybrid-admin/sharepoint-online-content-is-not-displayed-in-a-sharepoint-on-premises-search.md)
 

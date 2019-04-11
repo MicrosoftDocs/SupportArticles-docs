@@ -1,6 +1,6 @@
 # [SharePoint Server Support](../sharepoint-server.md)
 
-## [SharePoint Administration](../server-admin/index.md)
+## [SharePoint Server Administration](../server-admin/index.md)
 
 ### ["401 unauthorized" error when using OAuth and SAML claims in SharePoint 2013](../server-admin/401-unauthorized-error-when-using-oauth-and-saml-claims-in-sharepoint-2013.md)
 
@@ -82,13 +82,13 @@
 
 ### [System.ArgumentException exception when you sign out of a SharePoint 2013 web application](../server-admin/system.argumentexception-exception-when-sign-out-of-a-sharepoint-2013-web-application.md)
 
-## [SharePoint Performance](../server-performance/index.md)
+## [SharePoint Server Performance](../server-performance/index.md)
 
 ### [Outdated database statistics decrease SharePoint Server performance, cause time-outs, and generate run-time errors](../server-performance/outdated-database-statistics-decrease-sharepoint-server-performance.md)
 
 ### [Using PageParserPath directive can cause performance problems](../server-performance/using-pageparserpath-directive-can-cause-performance-problems.md)
 
-## [SharePoint Installation](../server-install/index.md)
+## [SharePoint Server Installation](../server-install/index.md)
 
 ### [Certain Microsoft SharePoint Server 2013 installation scenarios are not supported](../server-install/certain-sharepoint-server-2013-installation-scenarios-are-not-supported.md)
 
