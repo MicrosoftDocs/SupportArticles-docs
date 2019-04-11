@@ -1,5 +1,5 @@
 ﻿# [SharePoint Experts](./sharepoint-experts.md)
  
-## [SharePoint Administration](../administration/index.md)
+## [SharePoint Administration](../experts-admin/index.md)
 
-## [SharePoint Installation](../install/index.md)
+## [SharePoint Installation](../experts-install/index.md)

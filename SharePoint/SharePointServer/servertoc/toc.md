@@ -1,7 +1,8 @@
 # [SharePoint Server Support](../sharepoint-server.md)
 
-## [SharePoint Performance](../performance/index.md)
+## [SharePoint Administration](../server-admin/index.md)
 
-## [SharePoint Installation](../install/index.md)
+## [SharePoint Performance](../server-performance/index.md)
 
-## [SharePoint Administration](../Administration/index.md)
+## [SharePoint Installation](../server-install/index.md)
+

@@ -1,3 +1,3 @@
 ﻿# [SharePoint Online Support](../sharepoint-online.md)
  
-## [SharePoint Administration](../administration/index.md)
+## [SharePoint Administration](../online-admin/index.md)
