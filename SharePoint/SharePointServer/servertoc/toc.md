@@ -5,4 +5,3 @@
 ## [SharePoint Performance](../server-performance/index.md)
 
 ## [SharePoint Installation](../server-install/index.md)
-
