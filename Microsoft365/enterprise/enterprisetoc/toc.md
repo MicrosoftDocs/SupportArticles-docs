@@ -22,7 +22,7 @@
 
 ## ["Request Was Taking Too Long" when you opening a workbook in Excel Online](../request-was-taking-too-long-when-opening-a-workbook-in-excel-online.md)
 
-## [SharePoint properties of type (lookup - multi select) don't work on Office backstage](../sharepoint-properties-of-type-do-not-work-on-office-backstage-file-info-screen.md)
+## [SharePoint properties of type (lookup multi select) don't work on Office backstage](../sharepoint-properties-of-type-do-not-work-on-office-backstage-file-info-screen.md)
 
 ## [File size limit error when you upload files to Sway](../sway-file-size-limit-error.md)
 
