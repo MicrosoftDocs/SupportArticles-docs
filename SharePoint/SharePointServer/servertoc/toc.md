@@ -6,9 +6,9 @@
 
 ### ["800703fa Illegal operation attempted on a registry key that has been marked for deletion" error in SharePoint](../server-admin/800703fa-Illegal-operation-error-in-sharepoint.md)
 
-### [You can’t start the SharePoint Foundation Web Application service](../server-admin/cannot-start-the-sharepoint-foundation-web-application-service.md)
+### [You can't start the SharePoint Foundation Web Application service](../server-admin/cannot-start-the-sharepoint-foundation-web-application-service.md)
 
-### [You can’t start the User Profile Synchronization service in SharePoint Server 2013](../server-admin/cannot-start-the-user-profile-synchronization-service-in-sharepoint-2013.md)
+### [You can't start the User Profile Synchronization service in SharePoint Server 2013](../server-admin/cannot-start-the-user-profile-synchronization-service-in-sharepoint-2013.md)
 
 ### [ContractFilter error when querying from the non-Default zone in a SharePoint Server 2013 or 2016 farm](../server-admin/contractfilter-error-when-querying-from-the-non-default-zone-in-a-sharepoint-server-farm.md)
 
@@ -90,8 +90,8 @@
 
 ## [SharePoint Installation](../server-install/index.md)
 
-### [Certain Microsoft SharePoint Server 2013 installation scenarios are not supported](../server-installcertain-sharepoint-server-2013-installation-scenarios-are-not-supported.md)
+### [Certain Microsoft SharePoint Server 2013 installation scenarios are not supported](../server-install/certain-sharepoint-server-2013-installation-scenarios-are-not-supported.md)
 
-### [Installing Windows Server AppFabric updates SharePoint 2013 Servers](../server-installinstalling-windows-server-appfabric-updates-sharepoint-2013-servers.md)
+### [Installing Windows Server AppFabric updates SharePoint 2013 Servers](../server-install/installing-windows-server-appfabric-updates-sharepoint-2013-servers.md)
 
-### ["SharePoint Foundation administration tool has stopped working" error during a slipstream installation of SharePoint Server 2016](../server-installsharepoint-foundation-administration-tool-stopped-working-during-a-slipstream-installation.md)
+### ["SharePoint Foundation administration tool has stopped working" error during a slipstream installation of SharePoint Server 2016](../server-install/sharepoint-foundation-administration-tool-stopped-working-during-a-slipstream-installation.md)
