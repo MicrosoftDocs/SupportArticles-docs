@@ -1,6 +1,6 @@
 ﻿# [SharePoint Experts](../sharepoint-experts.md)
  
-## [SharePoint Administration](../experts-admin/index.md)
+## [SharePoint Experts Administration](../experts-admin/index.md)
 
 ### [Configuration for Office Web Apps or Office Online Server authentication with external users](../experts-admin/configuration-for-office-web-apps-or-office-online-server-authentication-with-external-users.md)
 
@@ -72,6 +72,6 @@
 
 ### ["You'll need a new app to open this ms-visio" when you open Visio files in SharePoint](../experts-admin/you-will-need-a-new-app-to-open-this-ms-visio-when-you-open-visio-files-in-sharepoint.md)
 
-## [SharePoint Installation](../experts-install/index.md)
+## [SharePoint Experts Installation](../experts-install/index.md)
 
 ### [Deploy Office Web Apps 2013 or Office Online Server to a security hardened drive](../experts-install/deploy-office-web-apps-2013-or-office-online-server-to-a-security-hardened-drive.md)
