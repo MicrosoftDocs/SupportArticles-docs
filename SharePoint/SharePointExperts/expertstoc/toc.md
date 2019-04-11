@@ -1,4 +1,4 @@
-﻿# [SharePoint Experts](./sharepoint-experts.md)
+﻿# [SharePoint Experts](../sharepoint-experts.md)
  
 ## [SharePoint Administration](../experts-admin/index.md)
 

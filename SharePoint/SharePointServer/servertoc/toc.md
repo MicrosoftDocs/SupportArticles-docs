@@ -90,7 +90,7 @@
 
 ## [SharePoint Installation](../server-install/index.md)
 
-## [Certain Microsoft SharePoint Server 2013 installation scenarios are not supported](../server-installcertain-sharepoint-server-2013-installation-scenarios-are-not-supported.md)
+### [Certain Microsoft SharePoint Server 2013 installation scenarios are not supported](../server-installcertain-sharepoint-server-2013-installation-scenarios-are-not-supported.md)
 
 ### [Installing Windows Server AppFabric updates SharePoint 2013 Servers](../server-installinstalling-windows-server-appfabric-updates-sharepoint-2013-servers.md)
 
