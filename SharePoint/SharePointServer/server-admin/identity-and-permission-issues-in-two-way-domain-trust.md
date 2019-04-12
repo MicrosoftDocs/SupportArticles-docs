@@ -9,7 +9,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# SharePoint identity and permission issues in two-way domain trust if active accounts share SID history  
+# SharePoint identity and permission issues in two-way domain trust
 
 ## Symptoms  
 

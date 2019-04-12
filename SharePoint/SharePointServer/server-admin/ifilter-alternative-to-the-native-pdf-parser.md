@@ -9,7 +9,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# IFilter alternative to the native SharePoint 2013 PDF parser  
+# IFilter alternative to the native PDF parser  
 
 Microsoft SharePoint 2013 Search uses a built-in parser to process PDF files and make them searchable. This built-in PDF parser is coded to handle most PDF files. However, it might be unable to handle some.   
 

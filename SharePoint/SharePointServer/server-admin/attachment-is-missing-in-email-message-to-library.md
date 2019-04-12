@@ -9,7 +9,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# Attachment is missing from an e-mail message that is sent to a Microsoft Windows SharePoint Services 3.0 document library  
+# Attachment is missing from an e-mail message that is sent to a document library  
 
 ## Symptoms  
 

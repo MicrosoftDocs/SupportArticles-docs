@@ -9,7 +9,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# "800703fa Illegal operation attempted on a registry key that has been marked for deletion" error in SharePoint  
+# "800703fa Illegal operation attempted on a registry key" error
 
 ## Symptom   
 

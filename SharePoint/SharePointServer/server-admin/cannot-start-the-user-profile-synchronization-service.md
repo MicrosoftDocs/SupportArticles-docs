@@ -1,4 +1,4 @@
----
+﻿---
 title: You can’t start the User Profile Synchronization service in SharePoint Server 2013
 description: Describes an issue in which the User Profile Synchronization service can't be started in SharePoint Server 2013 if the synchronization database is involved in a database mirroring session or an availability group.
 author: simonxjx
@@ -9,11 +9,11 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# You can’t start the User Profile Synchronization service in SharePoint Server 2013  
+# You can't start the User Profile Synchronization service
 
 ## Symptoms  
 
-You can’t start the User Profile Synchronization service in Microsoft SharePoint Server 2013. The service shows a status of either **Starting** or **Stopped**. Additionally, the following error entry is logged in the ULS log:
+You can't start the User Profile Synchronization service in Microsoft SharePoint Server 2013. The service shows a status of either **Starting** or **Stopped**. Additionally, the following error entry is logged in the ULS log:
 
 ```       
 OWSTIMER.EXE (0x2B80) 0x3370 SharePoint Portal Server User Profiles g144 Unexpected Failed to set the new Service Broker on database <SyncDB> on server <ServerName>. Exception: The operation cannot be performed on database <SyncDB> because it is involved in a database mirroring session or an availability group. Some operations are not allowed on a database that is participating in a database mirroring session or in an availability group.  ALTER DATABASE statement failed.  ALTER DATABASE statement failed.    

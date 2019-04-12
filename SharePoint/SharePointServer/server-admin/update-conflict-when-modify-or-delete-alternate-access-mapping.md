@@ -9,7 +9,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# Error message when you try to modify or to delete an alternate access mapping in Windows SharePoint Services 3.0: "An update conflict has occurred, and you must re-try this action"  
+# "An update conflict has occurred, and you must re-try this action" when change or delete an alternate access mapping
 
 ## Symptoms  
 

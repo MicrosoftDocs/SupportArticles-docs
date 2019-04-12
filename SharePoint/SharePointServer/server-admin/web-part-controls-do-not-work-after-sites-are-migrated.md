@@ -9,7 +9,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# Web part controls don't work after sites are migrated to SharePoint 2016  
+# Web part controls don't work after sites are migrated to SharePoint Server 2016  
 
 ## Symptoms  
 

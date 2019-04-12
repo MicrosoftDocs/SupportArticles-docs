@@ -12,9 +12,9 @@ ms.author: v-six
 
 This page lists some performance issues for SharePoint Server.
 
-[Outdated database statistics decrease SharePoint Server performance, cause time-outs, and generate run-time errors](./outdated-database-statistics-decrease-sharepoint-server-performance.md)
+[Outdated database statistics decrease SharePoint Server performance](./outdated-database-statistics-decrease-performance.md)
 
-[Using PageParserPath directive can cause performance problems](./using-pageparserpath-directive-can-cause-performance-problems.md)
+[Using PageParserPath directive can cause performance problems](./using-pageparserpath-directive-cause-performance-problems.md)
 
 ## Still need help? 
 

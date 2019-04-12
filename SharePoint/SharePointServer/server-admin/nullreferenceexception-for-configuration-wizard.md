@@ -9,7 +9,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# NullReferenceException with SharePoint 2013 Products Configuration Wizard  
+# NullReferenceException with Products Configuration Wizard  
 
 ## Symptoms  
 

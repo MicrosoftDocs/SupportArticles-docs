@@ -9,7 +9,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# System.ArgumentException exception when you sign out of a SharePoint 2013 web application  
+# System.ArgumentException exception when you sign out of a web application  
 
 ## Symptoms  
 
