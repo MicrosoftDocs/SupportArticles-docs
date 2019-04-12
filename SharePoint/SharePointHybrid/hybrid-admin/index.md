@@ -1,4 +1,16 @@
-﻿# SharePoint Administration page
+﻿---
+title: Listing some administration issues for SharePoint Hybrid.
+author: simonxjx
+manager: willchen
+audience: ITPro
+ms.prod: sharepoint-server-itpro
+ms.topic: article
+ms.author: v-six
+---
+
+# Administration page SharePoint Hybrid
+
+This page lists some administration issues for SharePoint Hybrid.
 
 [SharePoint Online content isn't displayed in a SharePoint on-premises search](./sharepoint-online-content-is-not-displayed-in-a-sharepoint-on-premises-search.md)
 

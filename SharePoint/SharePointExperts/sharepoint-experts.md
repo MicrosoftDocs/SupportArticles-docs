@@ -1,6 +1,16 @@
-# Welcome to SharePoint Experts!
+---
+title: Listing some issues for SharePoint experts.
+author: simonxjx
+manager: willchen
+audience: ITPro
+ms.prod: sharepoint-server-itpro
+ms.topic: article
+ms.author: v-six
+---
 
-This is the sharepoint experts overview topic
+# SharePoint Experts Support
+
+This page lists some issues for SharePoint Experts.
 
 ## SharePoint Experts Administration
 

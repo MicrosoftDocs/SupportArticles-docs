@@ -1,4 +1,16 @@
-# SharePoint Administration page
+---
+title: Listing some administration issues for SharePoint Online.
+author: simonxjx
+manager: willchen
+audience: ITPro
+ms.service: sharepoint-online
+ms.topic: article
+ms.author: v-six
+---
+
+# Administration page for SharePoint Online
+
+This page lists some administration issues for SharePoint Online.
 
 [You can't add external users to a SharePoint Online External Content Type in the SharePoint admin center](./cannot-add-external-users-to-a-sharepoint-online-external-content-type.md)
 

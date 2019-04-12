@@ -1,6 +1,16 @@
-# Welcome to SharePoint Online!
+---
+title: Listing some issues for SharePoint Online.
+author: simonxjx
+manager: willchen
+audience: ITPro
+ms.service: sharepoint-online
+ms.topic: article
+ms.author: v-six
+---
 
-This is the sharepoint online support overview topic
+# SharePoint Online Support
+
+This page lists some issues for SharePoint Online.
 
 ## SharePoint Online Administration
 
