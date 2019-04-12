@@ -14,7 +14,7 @@ ms.author: randring
 If you have been following the multiple threads on issues and changes to the PowerPivot for SharePoint 2016 Gallery Snapshots, you may be aware of an issue where gallery snapshots do not function properly (infinite "hourglass") for SSL sites when there are multiple sites bound to the same port. While not limited to port 443 we will use a generic port 443 site as an example here as it is the most common usage.
 
 This issue was discovered back in December 2016 during testing and again in a really well researched blog post by [Brian Laws](https://social.technet.microsoft.com/profile/Brian+H+Laws)
-(<http://info.summit7systems.com/blog/bug-report-powerpivot-for-sharepoint-2016-thumbnails-not-generating>) in February of 2017.
+(<https://info.summit7systems.com/blog/bug-report-powerpivot-for-sharepoint-2016-thumbnails-not-generating>) in February of 2017.
 
 ![Display of the issue in PowerPivot Gallery](media/troubleshooting-powerpivot-sharepoint-gallery-snapshot/issue.png)
 
@@ -104,7 +104,7 @@ During our multiple attempts to narrow this down, we could see the snapshot proc
 
   - You can also Delete/Hide the extra views with PowerShell (sample scripts attached below):
     
-      - [Delete and hide sample scripts](http://download.microsoft.com/download/7/0/D/70DEB092-347A-4AD3-B7BA-2947025889D4/HideAndDeletePowerPivotViews.zip)
+      - [Delete and hide sample scripts](https://download.microsoft.com/download/7/0/D/70DEB092-347A-4AD3-B7BA-2947025889D4/HideAndDeletePowerPivotViews.zip)
   
         > [!NOTE]
         >

@@ -51,6 +51,6 @@ You must run the stsadm shell as the farm account for the previous commands to w
 
 ##  More Information  
 
-[Move Content Databases](http://technet.microsoft.com/library/cc287899.aspx)  
+[Move Content Databases](https://technet.microsoft.com/library/cc287899.aspx)  
 
-[Stsadm Sync Commands](http://technet.microsoft.com/library/cc263196%28v=office.12%29.aspx)
+[Stsadm Sync Commands](https://technet.microsoft.com/library/cc263196%28v=office.12%29.aspx)

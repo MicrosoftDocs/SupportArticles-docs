@@ -31,4 +31,4 @@ $web.Update()
 
 ##  More Information  
 
-[Document Property Promotion and Demotion](http://msdn.microsoft.com/library/aa543341.aspx)
+[Document Property Promotion and Demotion](https://msdn.microsoft.com/library/aa543341.aspx)

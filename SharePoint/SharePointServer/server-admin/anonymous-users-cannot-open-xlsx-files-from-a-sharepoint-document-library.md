@@ -76,4 +76,4 @@ $site.Dispose();
 
 ##  More Information  
 
-[Plan security for an external anonymous access environment (Office SharePoint Server)](http://technet.microsoft.com/library/cc263468%28office.12%29.aspx)
+[Plan security for an external anonymous access environment (Office SharePoint Server)](https://technet.microsoft.com/library/cc263468%28office.12%29.aspx)

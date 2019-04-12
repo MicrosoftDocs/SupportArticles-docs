@@ -63,7 +63,7 @@ To download OneDriveSetup.exe, make sure that you use the link under the OneDriv
 
 ![home page of OneDrive](https://support.microsoft.com/Library/Images/3109966.jpg)  
 
-If you aren't running Windows 10, [uninstall OneDrive.exe by using Control Panel](http://windows.microsoft.com/windows/uninstall-change-program#uninstall-change-program=windows-7).   
+If you aren't running Windows 10, [uninstall OneDrive.exe by using Control Panel](https://windows.microsoft.com/windows/uninstall-change-program#uninstall-change-program=windows-7).   
 
 > [!IMPORTANT]
 > If you install an older build of Office 2016 (OneDrive.exe bundled with an Office 2016 build that's older than 16.0.6001.1033), OneDrive.exe will have to be updated in order to respect the Group Policy setting. To update OneDrive, download the latest version of the OneDrive client setup package (OneDriveSetup.exe) through the OneDrive home page, and then run the following command at a command prompt: OneDriveSetup.exe /silent Note  In this command, the /silent  switch installs the latest build without having any UI displayed.   

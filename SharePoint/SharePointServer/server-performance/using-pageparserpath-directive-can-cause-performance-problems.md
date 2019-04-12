@@ -84,11 +84,11 @@ In order to increase the recompilation limit the numRecompilesBeforeAppRestart  
 <compilation debug="false" numRecompilesBeforeAppRestart="50" />  
 ```
 
-See [Compilation Element (ASP.NET Settings Schema)](http://msdn.microsoft.com/library/s10awwz0%28v=vs.90%29.aspx) for details.
+See [Compilation Element (ASP.NET Settings Schema)](https://msdn.microsoft.com/library/s10awwz0%28v=vs.90%29.aspx) for details.
 
 ## Long-term Solution   
 
 Move the server side inline scripts from the pages, page layouts, and master pages into server controls. Deploy these controls using solutions and features and remove the PageParserPath directive.
 
-- [User Controls and Server Controls in SharePoint](http://blogs.msdn.com/b/kaevans/archive/2011/04/28/user-controls-and-server-controls-in-sharepoint.aspx)  
-- [Developing Custom ASP.NET Server Controls](http://msdn.microsoft.com/library/zt27tfhy%28v=vs.85%29.aspx)
+- [User Controls and Server Controls in SharePoint](https://blogs.msdn.com/b/kaevans/archive/2011/04/28/user-controls-and-server-controls-in-sharepoint.aspx)  
+- [Developing Custom ASP.NET Server Controls](https://msdn.microsoft.com/library/zt27tfhy%28v=vs.85%29.aspx)
