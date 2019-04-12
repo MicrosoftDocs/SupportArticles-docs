@@ -87,3 +87,7 @@ This page lists some issues for SharePoint Experts.
 ## SharePoint Experts Installation
 
 [Deploy Office Web Apps 2013 or Office Online Server to a security hardened drive](experts-install/deploy-office-web-apps-2013-or-office-online-server-to-a-security-hardened-drive.md)
+
+## Still need help? 
+
+Go to [Microsoft Community](https://answers.microsoft.com) or [SharePoint help center](https://support.office.com/sharepoint).
