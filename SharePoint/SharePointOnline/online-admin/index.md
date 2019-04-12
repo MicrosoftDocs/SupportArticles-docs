@@ -44,7 +44,7 @@ This page lists some administration issues for SharePoint Online.
 
 ["Sorry, but we're having trouble signing you in" error when you click the Yammer tile in Office 365](./error-when-you-click-the-yammer-tile-in-office-365.md)
 
-[Excel survey doesn't have full functionality when you click +new in a SharePoint Online library](./excel-survey-does-not-have-full-functionality-when-click-+new.md)
+[Excel survey doesn't have full functionality when you click +new in a SharePoint Online library](./excel-survey-does-not-have-full-functionality-when-click-new.md)
 
 [How to use Office 365 PowerShell to manage Microsoft Planner licenses](./how-to-use-office-365-powershell-to-manage-microsoft-planner-licenses.md)
 
