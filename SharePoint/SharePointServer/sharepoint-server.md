@@ -1,99 +1,113 @@
-# Welcome to SharePoint Server!
+---
+title: Listing some issues for SharePoint Server.
+author: simonxjx
+manager: willchen
+audience: ITPro
+ms.service: sharepoint-powershell
+ms.topic: article
+ms.author: v-six
+---
 
-This is the sharepoint server support overview topic
+# SharePoint Server Support
+
+This page lists some issues for SharePoint Server.
 
 ## SharePoint Server Administration
 
-["401 unauthorized" error when using OAuth and SAML claims in SharePoint 2013](server-admin/401-unauthorized-error-when-using-oauth-and-saml-claims-in-sharepoint-2013.md)
+["401 unauthorized" error when using OAuth and SAML claims](./server-admin/401-unauthorized-error-when-using-oauth-and-saml-claims.md)
 
-["800703fa Illegal operation attempted on a registry key that has been marked for deletion" error in SharePoint](server-admin/800703fa-Illegal-operation-error-in-sharepoint.md)
+["800703fa Illegal operation attempted on a registry key" error](./server-admin/800703fa-Illegal-operation-error.md)
 
-[You can't start the SharePoint Foundation Web Application service](server-admin/cannot-start-the-sharepoint-foundation-web-application-service.md)
+[Access denied when you send an email to a SharePoint group](./server-admin/access-denied-when-send-an-email-to-groups.md)
 
-[You can't start the User Profile Synchronization service in SharePoint Server 2013](server-admin/cannot-start-the-user-profile-synchronization-service-in-sharepoint-2013.md)
+["Server Error in '/' Application. Access to the path  is denied" when you log on to Windows SharePoint Services 2.0](./server-admin/access-to-the-path-is-denied-during-logon.md)
 
-[ContractFilter error when querying from the non-Default zone in a SharePoint Server 2013 or 2016 farm](server-admin/contractfilter-error-when-querying-from-the-non-default-zone-in-a-sharepoint-server-farm.md)
+[Anonymous Users cannot open XLSX files from a document library](./server-admin/anonymous-users-cannot-open-xlsx-files-from-a-document-library.md)
 
-[SharePoint 2013 - Disable WebDAV use on SharePoint](server-admin/disable-webdav-use-in-sharepoint-server-2013.md)
+[Attachment is missing from an e-mail message that is sent to a document library](./server-admin/attachment-is-missing-in-email-message-to-library.md)
 
-[Failure trying to synch site - Event ID 5553](server-admin/event-id-5553-and-failure-trying-to-synch-site.md)
+[Blank screen when you log on to a SharePoint site](./server-admin/blank-screen-when-you-log-on-sites.md)
 
-[Unable to Activate Security Token Service Application - Event ID 8306](server-admin/event-id-8306-and-cannot-activate-security-token-service-application.md)
+[You can't start the SharePoint Foundation Web Application service](./server-admin/cannot-start-an-application-service.md)
 
-[Feature id not assigned when saving a list as a template](server-admin/feature-id-not-assigned-when-saving-a-list-as-a-template.md)
+[You can't start the User Profile Synchronization service](./server-admin/cannot-start-the-user-profile-synchronization-service.md)
 
-[How to change the database server in a SharePoint farm](server-admin/how-to-change-the-database-server-in-a-sharepoint-farm.md)
+[ContractFilter error when querying from the non-default zone in a farm](./server-admin/contractfilter-error-when-querying-from-the-non-default-zone.md)
 
-[How to re-create the local Trusted Root Authority](server-admin/how-to-recreate-the-local-trusted-root-authority.md)
+[Event ID 5553 when during a site sync](./server-admin/event-id-5553-and-failure-during-site-sync.md)
 
-[Hybrid Picker prerequisite check fail in SharePoint 2016 consuming farm](server-admin/hybrid-picker-prerequisite-check-fail-in-sharepoint-2016-consuming-farm.md)
+[Event ID 8306 when you activate Security Token Service Application](./server-admin/event-id-8306-and-cannot-activate-security-token-service-application.md)
 
-[IFilter alternative to the native SharePoint 2013 PDF parser](server-admin/ifilter-alternative-to-the-native-sharepoint-2013-pdf-parser.md)
+[Feature id not assigned when saving a list as a template](./server-admin/feature-id-not-assigned-when-saving-a-list-as-template.md)
 
-[Incomplete search results for choice type columns with multiple values](server-admin/incomplete-search-results-for-choice-type-columns-with-multiple-values.md)
+[How to block OneDrive.exe from being advertised after you install Office 2016](./server-admin/how-to-block-onedrive.exe-from-being-advertised-after-install-office-2016.md)
 
-["Item not crawled" error when you crawl a SharePoint 2016 or 2013 site](server-admin/item-not-crawled-when-crawl-a-sharepoint-2016-or-2013-site.md)
+[How to change the database server in a SharePoint farm](./server-admin/how-to-change-the-database-server-in-farms.md)
 
-[NullReferenceException with SharePoint 2013 Products Configuration Wizard](server-admin/nullreferenceexception-with-sharepoint-2013-configuration-wizard.md)
+[How to disable WebDAV use in SharePoint](./server-admin/how-to-disable-webdav-use.md)
 
-[Organization Browser web part does not render for Windows Claims users](server-admin/organization-browser-web-part-does-not-render-for-windows-claims-users.md)
+[How to re-create the local Trusted Root Authority](./server-admin/how-to-recreate-the-local-trusted-root-authority.md)
 
-[People Picker field embedded in Office documents does not show "Add People" dialog box in SharePoint 2013](server-admin/people-picker-field-embedded-does-not-show-add-people-dialog-box.md)
+[Hybrid Picker prerequisite check fail in a consuming farm](./server-admin/hybrid-picker-prerequisite-check-fail-in-consuming-farm.md)
 
-[The Products Preparation Tool in SharePoint Server 2013 may not progress past "Configuring Application Server Role, Web Server (IIS) Role"](server-admin/products-preparation-tool-in-sharepoint-2013-may-not-progress-past-configuring-application-server-role.md)
+[SharePoint identity and permission issues in two-way domain trust](./server-admin/identity-and-permission-issues-in-two-way-domain-trust.md)
 
-[Property doesn't exist or is used in a manner inconsistent with schema settings](server-admin/property-does-not-exist-or-is-used-in-a-manner-inconsistent-with-schema-settings.md)
+[IFilter alternative to the native PDF parser](./server-admin/ifilter-alternative-to-the-native-pdf-parser.md)
 
-[Provider-hosted add-ins stop working and HTTP 401 error after you configure SharePoint farm hybrid features](server-admin/provider-hosted-add-ins-stop-working-and-http-401-error-after-configure-sharepoint-farm-hybrid-features.md)
+[Incomplete search results for choice type columns with multiple values](./server-admin/incomplete-search-results-for-choice-type-columns-with-multiple-values.md)
 
-[SharePoint identity and permission issues in two-way domain trust if active accounts share SID history](server-admin/sharepoint-identity-and-permission-issues-in-two-way-domain-trust-if-active-accounts-share-sid-history.md)
+["Item not crawled" error when you crawl a site](./server-admin/item-not-crawled-when-crawl-sites.md)
 
-[SharePoint 2013 or Project Server 2013 Setup error if the .NET Framework 4.6 is installed](server-admin/sharepoint-server-2013-or-project-server-2013-setup-error-if-the-.net-framework-4.6-is-installed.md)
+[NullReferenceException with Products Configuration Wizard](./server-admin/nullreferenceexception-for-configuration-wizard.md)
 
-[SharePoint workflow timer job is stuck at "Pausing"](server-admin/sharepoint-workflow-timer-job-is-stuck-at-pausing.md)
+[Organization Browser web part does not render for Windows Claims users](./server-admin/organization-browser-web-part-does-not-render-for-windows-claims-users.md)
 
-[System Center 2016 Operations Manager APM Agent causing heap corruption in SharePoint](server-admin/system-center-2016-operations-manager-apm-agent-causing-heap-corruption.md)
+[People Picker field embedded in Office documents does not show "Add People" dialog box](./server-admin/people-picker-field-embedded-does-not-show-add-people.md)
 
-["Upgrade Available" status in new SharePoint Server 2016 farm](server-admin/upgrade-available-status-in-new-sharepoint-server-2016-farm.md)
+[Products Preparation Tool may not progress past "Configuring Application Server Role, Web Server (IIS) Role"](./server-admin/products-preparation-tool-not-progress-past-configuring-application-server-role.md)
 
-[Web part controls don't work after sites are migrated to SharePoint 2016](server-admin/web-part-controls-do-not-work-after-sites-are-migrated-to-sharepoint-2016.md)
+[Property doesn't exist or is used in a manner inconsistent with schema settings](./server-admin/property-does-not-exist-or-is-used-in-manner-inconsistent-with-schema-settings.md)
 
-[Access denied when you send an email to a SharePoint group by using SharePoint Server 2013 workflows](server-admin/access-denied-when-send-an-email-to-a-sharepoint-group.md)
+[Provider-hosted add-ins stop working and HTTP 401 error after you configure SharePoint farm hybrid features](./server-admin/provider-hosted-add-ins-stop-working-and-http-401-error-after-configure-farm-hybrid-features.md)
 
-[Error "Server Error in '/' Application. Access to the path  is denied" when you log on to Windows SharePoint Services 2.0](server-admin/access-to-the-path-is-denied-when-log-on-to-sharepoint-services-2.0.md)
+["Request timed out" when you try to upload a large file to a SharePoint Services 3.0 document library](./server-admin/request-timed-out-when-upload-large-file-to-library.md)
 
-[Anonymous Users cannot open XLSX files from a SharePoint document library](server-admin/anonymous-users-cannot-open-xlsx-files-from-a-sharepoint-document-library.md)
+[Server Message bar is missing for Office documents opened via a hyperlink](./server-admin/server-message-bar-is-missing-when-open-office-documents-via-link-from-library.md)
 
-[Error message when you try to modify or to delete an alternate access mapping in Windows SharePoint Services 3.0: "An update conflict has occurred, and you must re-try this action"](server-admin/an-update-conflict-when-modify-or-delete-an-alternate-access-mapping-in-sharepoint-services-3.0.md)
+[Setup error if the .NET Framework 4.6 is installed](./server-admin/setup-error-if-.net-framework-4.6-is-installed.md)
 
-[Attachment is missing from an e-mail message that is sent to a Microsoft Windows SharePoint Services 3.0 document library](server-admin/attachment-is-missing-in-an-email-message-to-a-sharepoint-services-3.0-library.md)
+[SharePoint workflow timer job is stuck at "Pausing"](./server-admin/sharepoint-workflow-timer-job-is-stuck-at-pausing.md)
 
-[Blank screen when you log on to a SharePoint site](server-admin/blank-screen-when-you-log-on-to-a-sharepoint-site.md)
+[SharePoint Designer 2013 shows empty wfpub library](./server-admin/shows-empty-wfpub-library.md)
 
-[How to block OneDrive.exe from being advertised after you install Office 2016](server-admin/how-to-block-onedrive.exe-from-being-advertised-after-install-office-2016.md)
+[Site slowness because of SharePoint STS certificate CRL checking](./server-admin/site-slowness-because-of-sharepoint-sts-certificate-crl-checking.md)
 
-[Error "Request timed out" when you try to upload a large file to a document library on a Windows SharePoint Services 3.0 site](server-admin/request-timed-out-when-upload-a-large-file-to-a-sharepoint-services-3.0-library.md)
+["Something went wrong" when you access a site](./server-admin/something-went-wrong-when-access-site.md)
 
-[Office documents opened via a hyperlink from SharePoint document libraries may be missing the Server Message Bar with buttons needed to check out and/or edit files or open/edit workflow tasks](server-admin/server-message-bar-is-missing-when-open-office-documents-via-a-link-from-sharepoint-library.md)
+[System.ArgumentException exception when you sign out of a web application](./server-admin/system.argumentexception-exception-when-sign-out-of-web-application.md)
 
-[SharePoint Designer 2013 shows empty wfpub library](server-admin/sharepoint-designer-2013-shows-empty-wfpub-library.md)
+[System Center 2016 Operations Manager APM Agent causing heap corruption in SharePoint](./server-admin/system-center-2016-operations-manager-apm-agent-causing-heap-corruption.md)
 
-[Site slowness because of SharePoint STS certificate CRL checking](server-admin/site-slowness-because-of-sharepoint-sts-certificate-crl-checking.md)
+["An update conflict has occurred, and you must re-try this action" when change or delete an alternate access mapping](./server-admin/update-conflict-when-modify-or-delete-alternate-access-mapping.md)
 
-["Something went wrong" when you access a SharePoint 2013 site](server-admin/something-went-wrong-when-access-a-sharepoint-2013-site.md)
+["Upgrade Available" status in new SharePoint Server 2016 farm](./server-admin/upgrade-available-status-in-new-farm.md)
 
-[System.ArgumentException exception when you sign out of a SharePoint 2013 web application](server-admin/system.argumentexception-exception-when-sign-out-of-a-sharepoint-2013-web-application.md)
+[Web part controls don't work after sites are migrated to SharePoint Server 2016](./server-admin/web-part-controls-do-not-work-after-sites-are-migrated.md)
 
 ## SharePoint Server Installation
 
-[Certain Microsoft SharePoint Server 2013 installation scenarios are not supported](server-install/certain-sharepoint-server-2013-installation-scenarios-are-not-supported.md)
+["SharePoint Foundation administration tool has stopped working" error during a slipstream installation](./server-install/administration-tool-stopped-working-during-a-slipstream-installation.md)
 
-[Installing Windows Server AppFabric updates SharePoint 2013 Servers](server-install/installing-windows-server-appfabric-updates-sharepoint-2013-servers.md)
+[Certain Microsoft SharePoint Server 2013 installation scenarios are not supported](./server-install/certain-installation-scenarios-are-not-supported.md)
 
-["SharePoint Foundation administration tool has stopped working" error during a slipstream installation of SharePoint Server 2016](server-install/sharepoint-foundation-administration-tool-stopped-working-during-a-slipstream-installation.md)
+[Installing Windows Server AppFabric updates SharePoint 2013 Servers](./server-install/installing-windows-server-appfabric-updates.md)
 
 ## SharePoint Server Performance
 
-[Outdated database statistics decrease SharePoint Server performance, cause time-outs, and generate run-time errors](server-performance/outdated-database-statistics-decrease-sharepoint-server-performance.md)
+[Outdated database statistics decrease SharePoint Server performance](./server-performance/outdated-database-statistics-decrease-performance.md)
 
-[Using PageParserPath directive can cause performance problems](server-performance/using-pageparserpath-directive-can-cause-performance-problems.md)
+[Using PageParserPath directive can cause performance problems](./server-performance/using-pageparserpath-directive-cause-performance-problems.md)
+
+## Still need help? 
+
+Go to [Microsoft Community](https://answers.microsoft.com) or [SharePoint help center](https://support.office.com/sharepoint).
