@@ -4,7 +4,7 @@ description: Describes an issue in which you receive "You do not have an e-mail 
 author: simonxjx
 manager: willchen
 audience: ITPro
-ms.service: sharepoint-powershell
+ms.service: sharepoint-online
 ms.topic: article
 ms.author: v-six
 ---

@@ -4,7 +4,7 @@ description: Fix an issue in which you cannot create new site based on a site te
 author: simonxjx
 manager: willchen
 audience: ITPro
-ms.service: sharepoint-powershell
+ms.service: sharepoint-online
 ms.topic: article
 ms.author: v-six
 ---

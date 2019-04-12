@@ -4,7 +4,7 @@ description: Describes an issue in which Access Denied for a SharePoint Online u
 author: simonxjx
 manager: willchen
 audience: ITPro
-ms.service: sharepoint-powershell
+ms.service: sharepoint-online
 ms.topic: article
 ms.author: v-six
 ---

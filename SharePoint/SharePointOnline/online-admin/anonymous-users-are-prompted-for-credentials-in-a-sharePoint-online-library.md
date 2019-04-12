@@ -4,7 +4,7 @@ description: Anonymous users receives an authentication prompt when they try to 
 author: simonxjx
 manager: willchen
 audience: ITPro
-ms.service: sharepoint-powershell
+ms.service: sharepoint-online
 ms.topic: article
 ms.author: v-six
 ---

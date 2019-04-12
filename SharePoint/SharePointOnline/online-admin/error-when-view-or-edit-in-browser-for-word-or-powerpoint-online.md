@@ -4,7 +4,7 @@ description: When attempting to view a PowerPoint Presentation or a Word documen
 author: simonxjx
 manager: willchen
 audience: ITPro
-ms.service: sharepoint-powershell
+ms.service: sharepoint-online
 ms.topic: article
 ms.author: v-six
 ---

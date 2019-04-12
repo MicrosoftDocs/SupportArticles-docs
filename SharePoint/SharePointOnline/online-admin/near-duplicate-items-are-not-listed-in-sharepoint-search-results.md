@@ -1,10 +1,10 @@
----
+﻿---
 title: Near-duplicate items aren't listed in SharePoint Online or SharePoint Server 2013 on-premises search results
 description: Describes an issue in which near-duplicate items aren't listed in SharePoint Online or SharePoint Server 2013 on-premises search results.
 author: simonxjx
 manager: willchen
 audience: ITPro
-ms.service: sharepoint-powershell
+ms.service: sharepoint-online
 ms.topic: article
 ms.author: v-six
 ---

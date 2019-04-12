@@ -4,7 +4,7 @@ description: Describes an issue when you try to update, remove, or add a Send To
 author: simonxjx
 manager: willchen
 audience: ITPro
-ms.service: sharepoint-powershell
+ms.service: sharepoint-online
 ms.topic: article
 ms.author: v-six
 ---
