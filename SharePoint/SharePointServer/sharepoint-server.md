@@ -74,7 +74,7 @@ This page lists some issues for SharePoint Server.
 
 [Server Message bar is missing for Office documents opened via a hyperlink](./server-admin/server-message-bar-is-missing-when-open-office-documents-via-link-from-library.md)
 
-[SharePoint 2013 or Project Server 2013 Setup error if the .NET Framework 4.6 is installed](./server-admin/setup-error-if-the-.net-framework-4.6-is-installed.md)
+[Setup error if the .NET Framework 4.6 is installed](./server-admin/setup-error-if-.net-framework-4.6-is-installed.md)
 
 [SharePoint workflow timer job is stuck at "Pausing"](./server-admin/sharepoint-workflow-timer-job-is-stuck-at-pausing.md)
 

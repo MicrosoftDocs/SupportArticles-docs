@@ -32,7 +32,7 @@
 ### [Provider-hosted add-ins stop working and HTTP 401 error after you configure SharePoint farm hybrid features](../server-admin/provider-hosted-add-ins-stop-working-and-http-401-error-after-configure-farm-hybrid-features.md)
 ### ["Request timed out" when you try to upload a large file to a SharePoint Services 3.0 document library](../server-admin/request-timed-out-when-upload-large-file-to-library.md)
 ### [Server Message bar is missing for Office documents opened via a hyperlink](../server-admin/server-message-bar-is-missing-when-open-office-documents-via-link-from-library.md)
-### [SharePoint 2013 or Project Server 2013 Setup error if the .NET Framework 4.6 is installed](../server-admin/setup-error-if-the-.net-framework-4.6-is-installed.md)
+### [Setup error if the .NET Framework 4.6 is installed](../server-admin/setup-error-if-.net-framework-4.6-is-installed.md)
 ### [SharePoint workflow timer job is stuck at "Pausing"](../server-admin/sharepoint-workflow-timer-job-is-stuck-at-pausing.md)
 ### [SharePoint Designer 2013 shows empty wfpub library](../server-admin/shows-empty-wfpub-library.md)
 ### [Site slowness because of SharePoint STS certificate CRL checking](../server-admin/site-slowness-because-of-sharepoint-sts-certificate-crl-checking.md)
