@@ -1,10 +1,11 @@
----
+﻿---
 title: Rebuild an Office Web Apps 2013 farm easily
 author: AmandaAZ
 ms.author: brbering
 manager: brbering
 audience: ITPro
 ms.topic: article
+ms.service: sharepoint-online
 localization_priority: Normal
 ---
 # Rebuild an Office Web Apps 2013 farm easily

@@ -5,6 +5,7 @@ ms.author: arhinesm
 manager: arhinesm
 audience: ITPro
 ms.topic: article
+ms.service: sharepoint-online
 localization_priority: Normal
 ---
 

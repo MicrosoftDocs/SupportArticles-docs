@@ -1,10 +1,11 @@
----
+﻿---
 title: A "The virtual path maps to another application, which is not allowed." error when you run a scheduled data refresh
 author: AmandaAZ
 ms.author: zakirh
 manager: zakirh
 audience: ITPro
 ms.topic: article
+ms.service: sharepoint-online
 localization_priority: Normal
 ---
 
