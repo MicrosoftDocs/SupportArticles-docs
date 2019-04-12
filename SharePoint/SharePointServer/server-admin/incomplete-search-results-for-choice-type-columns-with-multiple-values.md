@@ -48,7 +48,7 @@ Here are the steps to reproduce this problem:
    6. For Title you enter Item6  
     For MyChoiceColumn  you select Choice2  and Choice3  
 
-     ![](https://support.microsoft.com/Library/Images/3032760.jpg)      
+     ![Six new list items](https://support.microsoft.com/Library/Images/3032760.jpg)      
 
 4. After the next continuous-, incremental- or full-crawl finished, you execute the following three keyword queries from your search center or a search box:  
 
@@ -87,7 +87,7 @@ The following items, which are expected to get returned, will now correctly get 
 
 ## Similar problems and solutions  
 
-You will face the same behavior when using a multi-value enabled choice type of site column but SharePoint 2013 automatically creates a managed property for your site column as described in the TechNet article Automatically created managed properties in SharePoint Server 2013 ([Automatically created managed properties in SharePoint Server](http://technet.microsoft.com/library/jj613136%28v=office.15%29.aspx)).  
+You will face the same behavior when using a multi-value enabled choice type of site column but SharePoint 2013 automatically creates a managed property for your site column as described in the TechNet article Automatically created managed properties in SharePoint Server 2013 ([Automatically created managed properties in SharePoint Server](https://technet.microsoft.com/library/jj613136%28v=office.15%29.aspx)).  
 
 These are the solution steps for a site column with e.g. the name MyChoiceSiteColumn:   
 
