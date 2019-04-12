@@ -40,14 +40,14 @@ To resolve this problem, follow these steps:
 
    - If your installation media is an ISO or IMG disc image (.iso or .img), mount the disc image, and then copy the files and folders from the disc image to a writable location.     
 
-2. Download the compressed (.zip) file that contains the fix that matches the product you're installing:  
+2. Download the compressed (.zip) file that contains the fix that matches the product you're installing:  
 
    - [SharePoint Foundation 2013 with Service Pack 1 fix](https://download.microsoft.com/download/3/6/2/362c4a9c-4afe-425e-825f-369d34d64f4e/wsssetup_15-0-4709-1000_x64.zip)   
    - [SharePoint Server 2013 with Service Pack 1 fix](https://download.microsoft.com/download/3/6/2/362c4a9c-4afe-425e-825f-369d34d64f4e/svrsetup_15-0-4709-1000_x64.zip)   
    - [Project Server 2013 with Service Pack 1 fix](https://download.microsoft.com/download/3/6/2/362c4a9c-4afe-425e-825f-369d34d64f4e/svrsetup_15-0-4709-1000_x64.zip)     
 
 3. Open the .zip file.   
-4. Copy the following Setup support file, as appropriate, from the .zip file into the "updates" folder in your writable location.   
+4. Copy the following Setup support file, as appropriate, from the .zip file into the "updates" folder in your writable location.   
 
    - SharePoint Foundation 2013 with Service Pack 1: wsssetup.dll   
    - SharePoint Server 2013 with Service Pack 1: svrsetup.dll   

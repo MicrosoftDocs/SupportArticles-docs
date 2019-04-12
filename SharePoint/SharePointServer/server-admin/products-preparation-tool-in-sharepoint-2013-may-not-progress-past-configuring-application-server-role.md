@@ -127,11 +127,11 @@ Software prerequisites that are required for the installation of SharePoint Serv
 - [Microsoft WCF Data Services 5.0 for OData V3](https://www.microsoft.com/download/details.aspx?id=29306)   
 - [Cumulative Update Package 1 for Microsoft AppFabric 1.1 for Windows Server (KB 2671763)](https://support.microsoft.com/help/2671763)     
 
-##  Status  
+## Status  
 
 Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section.  
 
-##  References  
+## References  
 
 [Install SharePoint 2013 Prerequisites Offline or Manually on Windows Server 2012 - A Comprehensive Guide](https://social.technet.microsoft.com/wiki/contents/articles/14582.install-sharepoint-2013-prerequisites-offline-or-manually-on-windows-server-2012-a-comprehensive-guide.aspx)  
 

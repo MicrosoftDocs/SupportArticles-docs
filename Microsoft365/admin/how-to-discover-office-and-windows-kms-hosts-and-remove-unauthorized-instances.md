@@ -27,11 +27,11 @@ nslookup -type=srv _vlmcs._tcp >%temp%\kms.txt
 Review the *kms*.txt file, and it should contain one or more entries similar to the following:
 
 ```
-_vlmcs._tcp.contoso.com                            SRV service location:
-                  priority       = 0
-                  weight         = 0
-                  port           = 1688
-                  svr hostname   = kms-server.contoso.com |
+_vlmcs._tcp.contoso.com                            SRV service location:
+                  priority       = 0
+                  weight         = 0
+                  port           = 1688
+                  svr hostname   = kms-server.contoso.com |
 ```
 
 Running this nslookup command frequently reveals *_vlmcs* SRV entries that are tied to unauthorized Windows or Office KMS hosts.

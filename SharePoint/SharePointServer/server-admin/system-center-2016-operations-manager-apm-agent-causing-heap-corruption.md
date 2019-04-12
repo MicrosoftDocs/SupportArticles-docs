@@ -13,7 +13,7 @@ ms.author: v-six
 
 ## Symptoms  
 
-Heap corruption occurs in the SharePoint IIS worker process (w3wp.exe) in an environment that includes System Center 2016 Operations Manager Application Performance Monitoring (APM) Agent (Microsoft Monitoring Agent version: 8.0.10918.0).
+Heap corruption occurs in the SharePoint IIS worker process (w3wp.exe) in an environment that includes System Center 2016 Operations Manager Application Performance Monitoring (APM) Agent (Microsoft Monitoring Agent version: 8.0.10918.0).
 
 Additionally, the following information is logged in the Windows Server application log:  
 
@@ -22,8 +22,8 @@ Image path: C:\Program Files\Microsoft Monitoring Agent\Agent\APMDOTNETAgent\V8.
 Stack  
 ntdll!RtlReportCriticalFailure+0x62   
 ntdll!RtlpReportHeapFailure+0x26 ntdll!RtlpHeapHandleError+0x12   
-ntdll!RtlpLogHeapFailure+0xa4   
-ntdll!RtlFreeHeap+0x72   
+ntdll!RtlpLogHeapFailure+0xa4   
+ntdll!RtlFreeHeap+0x72   
 ole32!CoTaskMemFree+0x36 mscorwks!DebuggerMethodInfo::SetInstrumentedILMap+0x20 mscorwks!Debugger::SetILInstrumentedCodeMap+0xa1 mscorwks!ProfToEEInterfaceImpl::SetILInstrumentedCodeMap+0x5d mscordbc!CorProfInfo::SetILInstrumentedCodeMap+0x2b MicrosoftInstrumentationEngine_x64!MicrosoftInstrumentationEngine::CMethodInfo::ApplyFinalInstrumentation+0x19c   
 ```
 

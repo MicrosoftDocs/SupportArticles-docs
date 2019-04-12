@@ -11,27 +11,27 @@ ms.author: v-six
 
 # "401 unauthorized" error when using OAuth and SAML claims in SharePoint 2013  
 
-##  Symptoms  
+## Symptoms  
 
 Consider the following scenario:   
 
-- You are using Security Assertions Markup Language (SAML) claim types that use Active Directory Federated Services (AD FS) as an authentication provider in your farm.   
+- You are using Security Assertions Markup Language (SAML) claim types that use Active Directory Federated Services (AD FS) as an authentication provider in your farm.   
 - You are using the Role or GroupSID claim to grant permissions to users on Microsoft SharePoint 2013 sites in the farm.    
 - Your farm version is earlier than version 15.0.4805.1000 (the March 2016 cumulative update).     
 
-In this scenario, users who have the appropriate permissions assigned to them through the Role or GroupSID claim type receive "401 unauthorized" error messages when they use the OAuth  authentication method in cases such as the following:   
+In this scenario, users who have the appropriate permissions assigned to them through the Role or GroupSID claim type receive "401 unauthorized" error messages when they use the OAuth  authentication method in cases such as the following:   
 - Workflow Manager (SharePoint 2013 workflows)   
-- Web Application Companion (WAC - Office Web Apps)   
+- Web Application Companion (WAC - Office Web Apps)   
 - High Trust or Low Trust Provider Hosted Apps   
 - Cross Farm Service Application Publishing/Consuming   
 - Hybrid SharePoint 2013/SharePoint Online scenarios   
 - SharePoint Integration with Exchange and Lync 2013/Skype for Business     
 
-##  Resolution  
+## Resolution  
 
 To resolve this problem, install the [March 2016 Cumulative Update for Microsoft SharePoint Server ](https://support.microsoft.com/help/3114827) on all servers in the farm.   
 
-As part of the fix, a new property, GroupClaimType, is added to the SPTrustedIdentityTokenIssuer object. For OAuth  to be able to work correctly, this property must be set to the correct claim type for authorization for users who are assigned permissions through the Role or GroupSID claim type.
+As part of the fix, a new property, GroupClaimType, is added to the SPTrustedIdentityTokenIssuer object. For OAuth  to be able to work correctly, this property must be set to the correct claim type for authorization for users who are assigned permissions through the Role or GroupSID claim type.
 
 To set the GroupClaimType  property, run the following Windows PowerShell commands:  
 
@@ -49,7 +49,7 @@ $issuer.GroupClaimType = [Microsoft.IdentityModel.Claims.ClaimTypes]::GroupSid
 $issuer.Update()   
 ```
 
-##  More Information  
+## More Information  
 
 Example error message from a failed workflow:  
 
@@ -100,10 +100,10 @@ Claims Windows Sign-In: Sending 401 for request
 Medium Throw UnauthorizedAccessException instead of SPUtilityInternal.Send401 for client.svc request.      
 ```
 
-##  Status  
+## Status  
 
 Microsoft has confirmed that this is a problem in the SharePoint farm versions that are earlier than the March 2016 cumulative update (v. 15.0.4805.1000).  
 
-##  References  
+## References  
 
 [SharePoint Updates](https://technet.microsoft.com/library/4b32dfba-1af6-4077-9a92-7cec8f220f20)

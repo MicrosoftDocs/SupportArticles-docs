@@ -20,7 +20,7 @@ Assume that there's a two-way domain trust between two domains (Domain A and Dom
 
   **The User does not exist or isn't unique.**    
 
-- Users lose their permissions to SharePoint sites, or they can't access SharePoint sites where they have permissions assigned.     
+- Users lose their permissions to SharePoint sites, or they can't access SharePoint sites where they have permissions assigned.     
 - User profile data disappears randomly.       
 
 ## Cause  

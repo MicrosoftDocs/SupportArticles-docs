@@ -15,7 +15,7 @@ ms.author: v-six
 
 You may experience the following issues:   
 
-- When you use the SharePoint Products Configuration Wizard, it fails during task 8 and returns the following error message:  
+- When you use the SharePoint Products Configuration Wizard, it fails during task 8 and returns the following error message:  
 
    ```
    Failed to install the application content files.  
@@ -50,7 +50,7 @@ You may experience the following issues:
 
 ## Cause  
 
-The issues occur because there are comments in the web.config file of the SharePoint Web application.   
+The issues occur because there are comments in the web.config file of the SharePoint Web application.   
 
 ## Resolution  
 

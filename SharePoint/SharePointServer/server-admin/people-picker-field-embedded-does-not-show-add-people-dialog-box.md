@@ -15,11 +15,11 @@ ms.author: v-six
 
 Consider the following scenario:   
 
-- You are using Office files, such as Word documents or InfoPath forms, that have an embedded People Picker field in the Office Information Panel.    
+- You are using Office files, such as Word documents or InfoPath forms, that have an embedded People Picker field in the Office Information Panel.    
 - Clients connect to a Microsoft SharePoint site by using an "https" address.   
 - A proxy server or load balancer exists between clients and the SharePoint 2010 or SharePoint 2013 servers. SSL is terminated at the proxy server or load balancer.     
 
-In this scenario, when the files are opened in the client application, the embedded People Picker fields do not show any visible results. Also, network traces show an "http 500" error for an https request that is sent to the SharePoint site in the following path: 
+In this scenario, when the files are opened in the client application, the embedded People Picker fields do not show any visible results. Also, network traces show an "http 500" error for an https request that is sent to the SharePoint site in the following path: 
 
 ```
 /_vti_bin/spclaimproviderwebservice.https.svc

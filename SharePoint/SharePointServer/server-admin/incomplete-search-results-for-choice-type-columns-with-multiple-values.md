@@ -13,7 +13,7 @@ ms.author: v-six
 
 ## Symptoms
 
-You search for list-items or documents by using a keyword query which represents a choice value that is stored in a choice type column with multiple choices selected and you don't get back the expected search results or even no results at all.  
+You search for list-items or documents by using a keyword query which represents a choice value that is stored in a choice type column with multiple choices selected and you don't get back the expected search results or even no results at all.  
 
 Here are the steps to reproduce this problem:  
 
@@ -69,7 +69,7 @@ But only the following items get returned in the search results:
 
 ## Cause  
 
-The SharePoint 2013 Search schema creates the crawled property ows_MyChoiceColumn, for the multi-value enabled choice type of column, during crawling/indexing the custom list MyList and it will store the contents as a single value string in the full-text index on the file system.  
+The SharePoint 2013 Search schema creates the crawled property ows_MyChoiceColumn, for the multi-value enabled choice type of column, during crawling/indexing the custom list MyList and it will store the contents as a single value string in the full-text index on the file system.  
 
 ## Resolution
 
@@ -92,9 +92,9 @@ You will face the same behavior when using a multi-value enabled choice type of 
 These are the solution steps for a site column with e.g. the name MyChoiceSiteColumn:   
 
 1. Navigate to your Search Service Application administration site and click on Search Schema.  
-2. Search for the managed property by entering MyChoiceSiteColumn and click on the retrieved MyChoiceSiteColumnOWSCHCM property to modify the configuration:  
+2. Search for the managed property by entering MyChoiceSiteColumn and click on the retrieved MyChoiceSiteColumnOWSCHCM property to modify the configuration:  
 
-   You have to enable the options Searchable and Allow multiple values      
+   You have to enable the options Searchable and Allow multiple values      
 
 3. Finally save the new managed property with its configuration by clicking on OK   
 

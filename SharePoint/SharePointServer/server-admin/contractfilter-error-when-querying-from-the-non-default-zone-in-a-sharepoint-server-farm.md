@@ -33,7 +33,7 @@ at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message) Exc
 at [0]:  
 ```  
 
-This issue usually occurs when a published Search service application (SSA) is consumed by another farm (for example, the application is published by Farm A but consumed by Farm B).   
+This issue usually occurs when a published Search service application (SSA) is consumed by another farm (for example, the application is published by Farm A but consumed by Farm B).   
 
 ## Cause  
 
@@ -41,4 +41,4 @@ The servers have incompatible builds. The IsURLMappingCached that's used to conv
 
 ## Resolution  
 
-To fix this issue, make sure that both farms and all servers in the farms have the same build. Make sure that all servers have the same cumulative update installed and that the Psconfig command-line tool can be run successfully.
+To fix this issue, make sure that both farms and all servers in the farms have the same build. Make sure that all servers have the same cumulative update installed and that the Psconfig command-line tool can be run successfully.

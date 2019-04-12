@@ -11,7 +11,7 @@ ms.author: v-six
 
 # How to block OneDrive.exe from being advertised after you install Office 2016  
 
-##  Summary  
+## Summary  
 
 The OneDrive sync client (OneDrive.exe) is included in the installation of Microsoft Office 2016. This article describes how to block OneDrive.exe from being advertised after you install Office 2016.  
 
@@ -23,7 +23,7 @@ This article contains information that applies when you use the OneDrive for Bus
 
 ## More Information   
 
-Use the following workarounds to block OneDrive.exe from being advertised on your computer.   
+Use the following workarounds to block OneDrive.exe from being advertised on your computer.   
 
 ### Method 1: Delete shortcuts for starting OneDrive.exe
 
@@ -103,7 +103,7 @@ if (($leftnavNodeName -eq "OneDrive") -Or ($leftnavNodeName -eq "OneDrive - Pers
 }  
 ```  
 
-If you want to block OneDrive.exe, first make sure that you're using version 16.0.6001.1033 of Office 2016 or a later version. After you install Office 2016, enable the **Prevent the usage of OneDrive for file storage** policy.   
+If you want to block OneDrive.exe, first make sure that you're using version 16.0.6001.1033 of Office 2016 or a later version. After you install Office 2016, enable the **Prevent the usage of OneDrive for file storage** policy.   
 
 If you have to reinstall OneDrive.exe in the future, make sure that you perform the following tasks:  
 

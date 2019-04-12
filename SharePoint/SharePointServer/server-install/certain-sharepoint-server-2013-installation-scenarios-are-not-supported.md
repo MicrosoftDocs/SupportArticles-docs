@@ -11,13 +11,13 @@ ms.author: v-six
 
 # Certain Microsoft SharePoint Server 2013 installation scenarios are not supported  
 
-##  Summary  
+## Summary  
 
 This article describes Microsoft SharePoint Server 2013 installation scenarios that are not supported.   
 
 For information about best practices for using SharePoint 2013 in a virtual configuration, see [Use best practice configurations for the SharePoint 2013 virtual machines and Hyper-V environment](https://technet.microsoft.com/library/ff621103%28v=office.15%29.aspx?f=255&mspperror=-2147217396).  
 
-##  Symptoms  
+## Symptoms  
 
 Consider the following scenario:   
 
@@ -33,7 +33,7 @@ Additionally, if you create a simple Visual Studio workflow solution, for exampl
 
   **Unable to attach. Process 'SPUCWORKERPROCESS.exe' is not running on 'SPDEVSERVER'.**  
 
-##  More Information  
+## More Information  
 
 The following SharePoint Server 2013 installation scenarios are not supported:  
 

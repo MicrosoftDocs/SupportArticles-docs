@@ -11,7 +11,7 @@ ms.author: v-six
 
 # Error "Request timed out" when you try to upload a large file to a document library on a Windows SharePoint Services 3.0 site  
 
-##  Symptoms  
+## Symptoms  
 
 Consider the following scenario:  
 
@@ -27,13 +27,13 @@ In this scenario, you receive an error message that resembles the following:
 
 **Request timed out.**
 
-##  Cause  
+## Cause  
 
 This issue can occur if the file that you try to upload is over 50 megabytes (MB).  
 
-##  Resolution  
+## Resolution  
 
-To resolve this issue, use one or more of the following methods. 
+To resolve this issue, use one or more of the following methods. 
 
 ### Method 1: Increase the maximum upload size  
 
@@ -41,11 +41,11 @@ To increase the maximum upload size, follow these steps:
 
 1. Click **Start**, point to **All Programs**, point to **Administrative Tools**, and then click **SharePoint Central Administration**.    
 
-2. Click **Application Management**.   
+2. Click **Application Management**.   
 
 3. Under **SharePoint Web Application Management**, click **Web application general settings**.
 
-4. On the **Web Application General Settings** page, click the web application that you want to change.  
+4. On the **Web Application General Settings** page, click the web application that you want to change.  
 
 5. Under **Maximum upload size**, type the maximum file size in megabytes that you want, and then click **OK**. You can specify a maximum file size up to 2,047 megabytes.     
 
@@ -67,7 +67,7 @@ To increase the connection time-out setting, follow these steps:
 ### Method 3: Add the executionTimeout value  
 
 
-1. Open the Web.config file in Notepad.   
+1. Open the Web.config file in Notepad.   
 
    **NOTE** By default, this file is in the following location:Program Files\Common Files\Microsoft Shared\Web server extensions\12\TEMPLATE\LAYOUTS
 
@@ -95,7 +95,7 @@ To increase the connection time-out setting, follow these steps:
 
 3. Click **File**, and then click **Save**.
 
-4. Open the web application Web.config file in Notepad.   
+4. Open the web application Web.config file in Notepad.   
 
    **Note** By default, this file is in the following folder: Inetpub\wwwroot\wss\VirtualDirectories\VirtualDirectoryFolder    
 5. Change the following line in the file.  
@@ -116,7 +116,7 @@ To increase the connection time-out setting, follow these steps:
 
 7. Exit Notepad.     
 
-##  More Information  
+## More Information  
 
 On a Windows Server 2008 computer that has only IIS 7.0 installations, you can add the maxAllowedContentLength value to resolve the issue that is described in the "Symptoms" section. However, you cannot upload files that are larger than 28 MB, even though you have configured the large file upload setting when you are running Windows SharePoint Services on a Windows Server 2008 based computer that has IIS 7.0 installed. Typically, you receive an error message that resembles one of the following:  
 
@@ -125,17 +125,17 @@ On a Windows Server 2008 computer that has only IIS 7.0 installations, you can a
 
 To work around this problem, edit the <configuration> section in the Web.config file for the web application. To do this, follow these steps:  
 
-1. Open the web application Web.config file in Notepad.   
+1. Open the web application Web.config file in Notepad.   
 
    **Note** By default, this file is in the following folder: Inetpub\wwwroot\wss\VirtualDirectories\VirtualDirectoryFolder
 
-2. Increase the value of maxAllowedContentLength in the **requestLimits** node. For example, edit the file as follows to set this value to its maximum size: 
+2. Increase the value of maxAllowedContentLength in the **requestLimits** node. For example, edit the file as follows to set this value to its maximum size: 
 
    ```
    <requestLimits maxAllowedContentLength="52428800"/>
    ```
 
-   **Note** If your Web.config file does not already have the <requestLimits> node, you must add it in the correct position in the section hierarchy:  
+   **Note** If your Web.config file does not already have the <requestLimits> node, you must add it in the correct position in the section hierarchy:  
 
    ```
    <configuration>  
@@ -149,9 +149,9 @@ To work around this problem, edit the <configuration> section in the Web.config 
    </configuration>
    ```
 
-   **Note** We recommend that you set the maxAllowedContentLength value slightly larger than the maximum file upload size that you have configured in SharePoint. If the maxAllowedContentLength value is equal to or smaller than maximum file upload size that is configured in SharePoint, users will not receive the error message that they are exceeding the size limit if they try to upload a file size larger than that specified by the administrator.   
+   **Note** We recommend that you set the maxAllowedContentLength value slightly larger than the maximum file upload size that you have configured in SharePoint. If the maxAllowedContentLength value is equal to or smaller than maximum file upload size that is configured in SharePoint, users will not receive the error message that they are exceeding the size limit if they try to upload a file size larger than that specified by the administrator.   
 
-##  References  
+## References  
 
 For more information about the maxAllowedContentLength setting, see the following article in the Microsoft Knowledge Base:  
 

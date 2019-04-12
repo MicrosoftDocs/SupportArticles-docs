@@ -11,7 +11,7 @@ ms.author: v-six
 
 # Unable to Activate Security Token Service Application - Event ID 8306  
 
-##  Symptoms  
+## Symptoms  
 
 In SharePoint Foundation 2010, you may experience one or more of the following symptoms:  
 

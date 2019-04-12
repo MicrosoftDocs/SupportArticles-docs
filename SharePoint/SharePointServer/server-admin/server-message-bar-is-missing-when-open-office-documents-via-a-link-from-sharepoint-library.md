@@ -11,7 +11,7 @@ ms.author: v-six
 
 # Office documents opened via a hyperlink from SharePoint document libraries may be missing the Server Message Bar with buttons needed to check out and/or edit files or open/edit workflow tasks  
 
-##  Symptoms  
+## Symptoms  
 
 Users of Office 2007 or Office 2010 on any client Operating System click a hyperlink that points to an Office document which is located in a SharePoint Server 2010 document library. The hyperlink itself is located in an Outlook email message. Instead of opening the document from the server in the Office client application, the document opens in the Office application from the Temporary Internet Files cache of the local machine. Therefore it is not treated as a server document. The following symptoms are seen by the user:  
 
@@ -41,7 +41,7 @@ This issue does not occur when the server is running Office SharePoint Server 20
 
 NOTE: This only happens when opening the Office document BY CLICKING ON A HYPERLINK in an Outlook email message and the Office document is located in a SharePoint 2010 document library. If the user browses to the SharePoint 2010 document library and opens the file from there, this issue does not occur.   
 
-##  Cause  
+## Cause  
 
 SharePoint 2010 implements a new security feature called 'Permissive or Strict browser file handling'. Each type of file delivered from a web server has an associated MIME type (also called a “content-type”) that describes the nature of the content (e.g. image, text, application, etc). Internet Explorer (IE) has a MIME-sniffing feature that will attempt to determine the content-type for each downloaded resource. For Office files, if the Content-Type sent by the server is not found in the MIME database in the registry of the client machine, IE "sniffs" the MIME content types to see if there is another similar MIME type in the client machine's MIME database and will open the file using the similar MIME type. However, Strict browser file handling is enabled on each web application in SharePoint 2010 by default and this disallows the sniffing of Content-Types, so if no exact match of the Content-Type sent in the server response is found in the client's MIME database in the registry, the file will open from the Temporary Internet Files of the client machine instead of being opened from the server. MIME-sniffing also can lead to security problems for servers hosting untrusted content.
 
@@ -59,7 +59,7 @@ Since this exact content type is not present in the MIME area of the registry of
 
 There may be other causes mentioned below in the More Information section.  
 
-##  Resolution  
+## Resolution  
 
 Use one of the following solutions:  
 
@@ -128,7 +128,7 @@ Update the registry of the Office client computer to install the needed content 
    "Extension"=".one"  
    ```  
 
-2. To install the content types into the registry's MIME database on Office computers automatically, go to the "Here's an easy fix" section.   
+2. To install the content types into the registry's MIME database on Office computers automatically, go to the "Here's an easy fix" section.   
 
 ### Here's an easy fix
 
@@ -137,7 +137,7 @@ To fix this problem automatically, click [Download](https://download.microsoft.c
 - This wizard may be in English only. However, the automatic fix also works for other language versions of Windows.   
 - If you’re not on the computer that has the problem, save the easy fix solution to a flash drive or a CD, and then run it on the computer that has the problem.     
 
-##  More Information  
+## More Information  
 
 SharePoint workflow task buttons may be missing in Office documents for other reasons than those described in this article. Some other reasons may be:  
 

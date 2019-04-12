@@ -13,23 +13,23 @@ ms.author: v-six
 
 ## Symptoms  
 
-When using the Organization Browser Web Part on Windows Claims enabled sites, the web part does not render any information. The same web part renders users with different Claims Authentication types correctly.   
+When using the Organization Browser Web Part on Windows Claims enabled sites, the web part does not render any information. The same web part renders users with different Claims Authentication types correctly.   
 
 ## Cause  
 
-The organization information is pulled from the profile database of the User Profile Service Application (UPSA). The required information is stored in the UserProfile_Full table.  
+The organization information is pulled from the profile database of the User Profile Service Application (UPSA). The required information is stored in the UserProfile_Full table.  
 
 Active Directory users (either added manually or synchronized automatically) are stored in the UPSA Profile Database with NETBIOS\LogonName (*Ex.: CONTOSO\TestUser1*) format.  
 
-When browsing a claims site however, the user context uses the Claims NTName format. (*Ex.: i:0#.w|Contoso\TestUser1*)
+When browsing a claims site however, the user context uses the Claims NTName format. (*Ex.: i:0#.w|Contoso\TestUser1*)
 
-The Organization Browser web part then does a database lookup for the user *'i'0#.w|Contoso\TestUser1'*  which is not available in the database since the user information will be stored with the 'CONTOSO\TestUser1' NTName.  
+The Organization Browser web part then does a database lookup for the user *'i'0#.w|Contoso\TestUser1'*  which is not available in the database since the user information will be stored with the 'CONTOSO\TestUser1' NTName.  
 
 The issue does not happen with any other Claims Authentication type as the Profile Database contains the correct naming format for them.  
 
 ## Resolution  
 
-The Organization Browser Web Part control is rendered on the page by the CreateHierarchyChartControl  javascript function. This function is not aware of the fact that the UPSA Profile Database stores the Windows Claims users with a different naming format. To work around this, the below code snippet must be entered in to the site source right after the Organization Browser web part.  
+The Organization Browser Web Part control is rendered on the page by the CreateHierarchyChartControl  javascript function. This function is not aware of the fact that the UPSA Profile Database stores the Windows Claims users with a different naming format. To work around this, the below code snippet must be entered in to the site source right after the Organization Browser web part.  
 
 ```  
 <script type="text/javascript">  
@@ -80,11 +80,11 @@ Please note that this method will detach the page from the site definition, and 
 1. Open the page in SharePoint Designer for editing.   
 2. Change to code view.   
 3. In the Ribbon, click Advanced Mode    
-4. Locate the </ SharePoint:EmbeddedFormField> tag.   
+4. Locate the </ SharePoint:EmbeddedFormField> tag.   
 5. Paste the above code right after the tag.   
 6. Save your changes.    
 7. Click Yes in the Site Definition Page Warning window.     
 
-##  More Information  
+## More Information  
 
-Please note that it not possible to overwrite the Html View of the Organization Browser web part from the client. If you need to have a non-Silverlight control available, you will need to write a custom web part to achieve this goal with Windows Claims.
+Please note that it not possible to overwrite the Html View of the Organization Browser web part from the client. If you need to have a non-Silverlight control available, you will need to write a custom web part to achieve this goal with Windows Claims.

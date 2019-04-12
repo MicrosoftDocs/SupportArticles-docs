@@ -23,11 +23,11 @@ This issue occurs because of name conflicts with the **Authors** and **OriginalS
 
 ## Status  
 
-This issue is addressed by the Microsoft product team for sites and site templates when the conflicting fields are present.   
+This issue is addressed by the Microsoft product team for sites and site templates when the conflicting fields are present.   
 
 ## Resolution  
 
-To resolve this issue, you can use one of the following methods:
+To resolve this issue, you can use one of the following methods:
 
 ### Method 1 (recommended)  
 
@@ -38,11 +38,11 @@ Remove the invalid columns from the **Content Type** in the site where the sourc
 Update the WSP file by running a CSOM script. Follow these steps:   
 
 1. Download the site template (.wsp file) from the source site.    
-2. Run the following CSOM script.   
+2. Run the following CSOM script.   
 
-  **Note** You must insert values for the** $siteUrl** and **$admin** parameters in the script.
+  **Note** You must insert values for the** $siteUrl** and **$admin** parameters in the script.
 
-  ```   
+  ```   
  [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SharePoint.Client") [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SharePoint.Client.Runtime") **$siteUrl** = "https://contoso.sharepoint.com" **$admin** = "user@domain.com" $contentTypeId = "0x0101009D1CB255DA76424F860D91F20E6C4118" Write-host "Please input password for $admin" $securePass = read-host -AsSecureString [Microsoft.SharePoint.Client.ClientContext] $clientContext = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrl) $clientContext.Credentials = New-Object Microsoft.SharePoint.Client.SharePointOnlineCredentials($admin, $securePass) $contentType = $clientContext.Web.ContentTypes.GetById($contentTypeId) $clientContext.Load($contentType) $clientContext.ExecuteQuery() $contentType.Sealed = $false $contentType.Update($true) $clientContext.ExecuteQuery() $fieldLink = $contentType.FieldLinks.GetById("{746bb255-b0f7-47d5-9a3e-1c8e52468420}") $fieldLink.DeleteObject() $fieldLink = $contentType.FieldLinks.GetById("{8a8804d8-ad51-48ef-9acf-0df7b3cc7ef6}") $fieldLink.DeleteObject() $contentType.Update($true) $clientContext.ExecuteQuery() Write-Host "Done" -ForegroundColor Green   
  ```
 
@@ -58,4 +58,4 @@ Subsite creation from a template is possible but is not a recommended or support
 
 [Site designs](https://aka.ms/spsitedesigns/) are a new scripting construct to apply custom configurations to a site post-creation. Unlike a "save site as template" template, site designs are intended to be more flexible and explicit in the customizations that they apply. Site designs are also re-entrant so that they can better support future upgrade/update scenarios.    
 
-Hub sites and site designs are available worldwide. For more information about site templates, see [Create and use site templates](https://support.office.com/en-us/article/create-and-use-site-templates-60371b0f-00e0-4c49-a844-34759ebdd989) and  [Planning your SharePoint hub sites](https://aka.ms/PlanningSPhubsites).
+Hub sites and site designs are available worldwide. For more information about site templates, see [Create and use site templates](https://support.office.com/en-us/article/create-and-use-site-templates-60371b0f-00e0-4c49-a844-34759ebdd989) and  [Planning your SharePoint hub sites](https://aka.ms/PlanningSPhubsites).
