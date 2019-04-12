@@ -54,8 +54,8 @@ Update the WSP file by running a CSOM script. Follow these steps:
 
 Subsite creation from a template is possible but is not a recommended or supported method for site extensibility. We recommend that you use hub sites and site designs.  
 
-[Hub sites](http://aka.ms/hubsites) enable you to connect/organize sites in a way similar to how subsites are associated to a root site.    
+[Hub sites](https://aka.ms/hubsites) enable you to connect/organize sites in a way similar to how subsites are associated to a root site.    
 
-[Site designs](http://aka.ms/spsitedesigns/) are a new scripting construct to apply custom configurations to a site post-creation. Unlike a "save site as template" template, site designs are intended to be more flexible and explicit in the customizations that they apply. Site designs are also re-entrant so that they can better support future upgrade/update scenarios.    
+[Site designs](https://aka.ms/spsitedesigns/) are a new scripting construct to apply custom configurations to a site post-creation. Unlike a "save site as template" template, site designs are intended to be more flexible and explicit in the customizations that they apply. Site designs are also re-entrant so that they can better support future upgrade/update scenarios.    
 
 Hub sites and site designs are available worldwide. For more information about site templates, see [Create and use site templates](https://support.office.com/en-us/article/create-and-use-site-templates-60371b0f-00e0-4c49-a844-34759ebdd989) and  [Planning your SharePoint hub sites](https://aka.ms/PlanningSPhubsites).

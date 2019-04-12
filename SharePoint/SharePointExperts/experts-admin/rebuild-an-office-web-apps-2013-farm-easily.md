@@ -60,4 +60,4 @@ For example:
 > [!NOTE]
 > You need to replace **WACServer.corp.contoso.com** in previous steps with the correct information from your farm.
 
-For more information about how to configure Office Web Apps, see [Configure Office Web Apps for SharePoint 2013](http://technet.microsoft.com/en-us/library/ff431687).
+For more information about how to configure Office Web Apps, see [Configure Office Web Apps for SharePoint 2013](https://technet.microsoft.com/en-us/library/ff431687).

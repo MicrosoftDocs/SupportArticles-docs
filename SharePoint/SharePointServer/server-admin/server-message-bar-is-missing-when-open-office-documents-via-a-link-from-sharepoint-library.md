@@ -132,7 +132,7 @@ Update the registry of the Office client computer to install the needed content 
 
 ### Here's an easy fix
 
-To fix this problem automatically, click [Download](http://download.microsoft.com/download/6/B/4/6B42815C-DA94-4B64-8E83-4B90DADC676E/MicrosoftEasyFix50832.msi). In the **File Download ** dialog box, click **Run** or **Open**, and then follow the steps in the easy fix wizard.  
+To fix this problem automatically, click [Download](https://download.microsoft.com/download/6/B/4/6B42815C-DA94-4B64-8E83-4B90DADC676E/MicrosoftEasyFix50832.msi). In the **File Download ** dialog box, click **Run** or **Open**, and then follow the steps in the easy fix wizard.  
 
 - This wizard may be in English only. However, the automatic fix also works for other language versions of Windows.   
 - If you’re not on the computer that has the problem, save the easy fix solution to a flash drive or a CD, and then run it on the computer that has the problem.     
@@ -142,7 +142,7 @@ To fix this problem automatically, click [Download](http://download.microsoft.co
 SharePoint workflow task buttons may be missing in Office documents for other reasons than those described in this article. Some other reasons may be:  
 
 - Message Bar is disabled in Trust Center Settings.   
-- You are using a low-value license of Office (Home and Business, Home and Student) or other product from retail channel. See [All about Approval workflows](http://office.microsoft.com/powerpoint-help/manage-the-document-approval-process-using-a-workflow-ha010220203.aspx).   
+- You are using a low-value license of Office (Home and Business, Home and Student) or other product from retail channel. See [All about Approval workflows](https://office.microsoft.com/powerpoint-help/manage-the-document-approval-process-using-a-workflow-ha010220203.aspx).   
 - Workflow for the document you have open has not been started yet.   
 - User does not have Edit Items  permissions. They may also need Manage Lists  permissions depending on the workflow settings.    
 - The Server read-only bar with the [Edit Document ] or [Edit Workbook ] or [Edit Presentation ] button bar may be missing for other reasons when clicking on a hyperlink to a Office 2010 document stored on a SharePoint site for the first time . Subsequent clicks on the link will render the Server read-only bar.     
