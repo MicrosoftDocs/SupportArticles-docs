@@ -4,7 +4,7 @@ description: Describes how to uninstall an Office update programmatically by usi
 author: MaryQiu1987
 manager: ericspli
 audience: ITPro
-ms.service: o365-administration
+ms.service: o365-solutions
 ms.topic: article
 ms.author: ericspli
 localization_priority: Normal 
