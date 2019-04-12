@@ -17,3 +17,7 @@ This page lists some installation issues for SharePoint Server.
 [Installing Windows Server AppFabric updates SharePoint 2013 Servers](./installing-windows-server-appfabric-updates-sharepoint-2013-servers.md)
 
 ["SharePoint Foundation administration tool has stopped working" error during a slipstream installation of SharePoint Server 2016](./sharepoint-foundation-administration-tool-stopped-working-during-a-slipstream-installation.md)
+
+## Still need help? 
+
+Go to [Microsoft Community](https://answers.microsoft.com) or [SharePoint help center](https://support.office.com/sharepoint).

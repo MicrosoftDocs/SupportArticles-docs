@@ -85,3 +85,7 @@ This page lists some administration issues for SharePoint Online.
 [You can't migrate a Yammer network across Office 365 tenants](./you-can't-migrate-a-yammer-network-across-office-365-tenants.md)
 
 ["You do not have an e-mail address" error when you create an alert in SharePoint Online](./you-do-not-have-an-e-mail-address-when-create-an-alert-in-shareooint-online.md)
+
+## Still need help? 
+
+Go to [Microsoft Community](https://answers.microsoft.com) or [SharePoint help center](https://support.office.com/sharepoint).

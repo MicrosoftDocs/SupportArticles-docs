@@ -91,3 +91,7 @@ This page lists some administration issues for SharePoint Server.
 ["Something went wrong" when you access a SharePoint 2013 site](./something-went-wrong-when-access-a-sharepoint-2013-site.md)
 
 [System.ArgumentException exception when you sign out of a SharePoint 2013 web application](./system.argumentexception-exception-when-sign-out-of-a-sharepoint-2013-web-application.md)
+
+## Still need help? 
+
+Go to [Microsoft Community](https://answers.microsoft.com) or [SharePoint help center](https://support.office.com/sharepoint).

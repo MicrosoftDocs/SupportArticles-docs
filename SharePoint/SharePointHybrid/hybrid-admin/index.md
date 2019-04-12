@@ -16,4 +16,6 @@ This page lists some administration issues for SharePoint Hybrid.
 
 [SharePoint on-premises content isn’t displayed in SharePoint Online search results](./sharepoint-on-premises-content-is-not-displayed-in-sharepoint-online-search-results.md)
 
+## Still need help? 
 
+Go to [Microsoft Community](https://answers.microsoft.com) or [SharePoint help center](https://support.office.com/sharepoint).

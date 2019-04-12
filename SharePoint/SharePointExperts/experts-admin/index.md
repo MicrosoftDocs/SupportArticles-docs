@@ -81,3 +81,7 @@ This page lists some administration issues for SharePoint Experts.
 ["We don't know what happened, but something went wrong." error in Excel Web Access Web Parts](./we-dont-know-what-happened-but-something-went-wrong-error-in-excel-web-access-web-parts.md)
 
 ["You'll need a new app to open this ms-visio" when you open Visio files in SharePoint](./you-will-need-a-new-app-to-open-this-ms-visio-when-you-open-visio-files-in-sharepoint.md)
+
+## Still need help? 
+
+Go to [Microsoft Community](https://answers.microsoft.com) or [SharePoint help center](https://support.office.com/sharepoint).
