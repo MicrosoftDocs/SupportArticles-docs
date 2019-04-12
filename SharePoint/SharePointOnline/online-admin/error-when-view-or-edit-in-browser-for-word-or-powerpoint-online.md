@@ -9,7 +9,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# Error message when view or edit in browser for Word or PowerPoint Onlines  
+# Error when view or edit in browser for Word or PowerPoint Onlines  
 
 ## Symptoms  
 

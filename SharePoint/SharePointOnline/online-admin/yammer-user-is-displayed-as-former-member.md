@@ -9,7 +9,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# A Yammer user is displayed as "Former member" when you use Office 365 sign in for Yammer
+# A Yammer user is displayed as "Former member" when you use Office 365 sign in
 
 ## Problem
 

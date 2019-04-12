@@ -9,7 +9,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# "Access denied" error when a user tries to approve a SharePoint Approval Workflow task in SharePoint Server or SharePoint Online
+# "Access denied" error when a user tries to approve an Approval Workflow task
 
 ## Problem
 

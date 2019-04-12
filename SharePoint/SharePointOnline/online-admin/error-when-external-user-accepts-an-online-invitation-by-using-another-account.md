@@ -9,7 +9,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# Error message when an external user accepts a SharePoint Online invitation by using another account
+# Error when an external user accepts a SharePoint Online invitation by using another account
 
 ## Problem
 Consider the following scenario:

@@ -9,7 +9,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# "Not all terms were imported successfully" error when you try to import a term set into SharePoint Online
+# "Not all terms were imported successfully" error when you try to import a term set
 
 ## Problem
 

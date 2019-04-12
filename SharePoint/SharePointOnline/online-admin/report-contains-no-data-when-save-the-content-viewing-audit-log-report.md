@@ -9,7 +9,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# "Report contains no data" error when you try to save the "Content viewing" audit log report in SharePoint Online
+# "Report contains no data" error when you try to save the "Content viewing" audit log report
 
 ## Problem
 

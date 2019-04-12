@@ -9,7 +9,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# You receive messages that a site collection has exceeded its usage quota or that it is running out of resources in SharePoint Online
+# You receive messages that a site collection has exceeded its usage quota or that it is running out of resources
 
 ## Problem
 

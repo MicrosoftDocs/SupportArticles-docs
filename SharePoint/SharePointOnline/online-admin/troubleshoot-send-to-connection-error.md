@@ -9,7 +9,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# "Sorry, something went wrong" error when you try to update, remove, or add a Send To connection in SharePoint Online in Office 365
+# "Sorry, something went wrong" error when you try to update, remove, or add a Send To connection
 
 ## Problem
 

@@ -9,7 +9,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# "The webpage cannot be displayed" error message when you try to open an Office document in the client application from inside SharePoint Online
+# "The webpage cannot be displayed" error message when you try to open an Office document in the client application
 
 ## Problem
 

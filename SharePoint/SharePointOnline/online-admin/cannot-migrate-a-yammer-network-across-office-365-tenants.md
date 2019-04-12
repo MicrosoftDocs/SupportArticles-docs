@@ -9,7 +9,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# You can't migrate a Yammer network across Office 365 tenants
+# Cannot migrate a Yammer network across Office 365 tenants
 
 ## Problem
 
