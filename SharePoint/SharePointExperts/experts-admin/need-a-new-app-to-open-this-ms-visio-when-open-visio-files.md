@@ -9,7 +9,7 @@ ms.service: sharepoint-online
 localization_priority: Normal
 ---
 
-# "You'll need a new app to open this ms-visio" when you open Visio files in SharePoint
+# "You'll need a new app to open this ms-visio" when you open Visio files
 
 ## Symptoms
 

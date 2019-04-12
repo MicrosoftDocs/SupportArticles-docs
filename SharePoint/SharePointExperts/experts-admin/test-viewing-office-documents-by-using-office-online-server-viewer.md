@@ -9,7 +9,7 @@ ms.service: sharepoint-online
 localization_priority: Normal
 ---
 
-# Test viewing Office documents by using Office Web Apps or Office Online Server viewer
+# Test viewing Office documents by using Office Online Server viewer
 
 Microsoft Office Web Apps Server or Office Online Server has a built-in Office file viewer for testing viewing Office files in a browser,independent of any integration such as SharePoint Server, Skype for Business Server, or Exchange Server. This article introduces how to test viewing Office documents by using Office Web Apps or Office Online Server viewer, as follows:
 

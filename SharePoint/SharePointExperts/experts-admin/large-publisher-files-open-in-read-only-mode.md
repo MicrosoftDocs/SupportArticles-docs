@@ -9,7 +9,7 @@ ms.service: sharepoint-online
 localization_priority: Normal
 ---
 
-# Large Publisher files open in read-only mode in SharePoint
+# Large Publisher files open in read-only mode
 
 ## Symptoms
 

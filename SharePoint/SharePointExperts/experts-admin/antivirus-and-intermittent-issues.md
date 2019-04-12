@@ -9,7 +9,7 @@ ms.service: sharepoint-online
 localization_priority: Normal
 ---
 
-# Antivirus and intermittent issues when you view Office documents by using Office Web Apps or Office Online Server
+# Antivirus and intermittent issues when you view Office documents by using Office Online Server
 
 ## Symptoms
 

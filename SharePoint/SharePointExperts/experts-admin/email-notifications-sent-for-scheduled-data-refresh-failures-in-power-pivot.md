@@ -9,7 +9,7 @@ ms.service: sharepoint-online
 localization_priority: Normal
 ---
 
-# Email notifications aren't sent for scheduled data refresh failures in Power Pivot for SharePoint 2016
+# Email notifications aren't sent for scheduled data refresh failures in PowerPivot
 
 You may encounter an issue that email notifications aren't sent for scheduled data refresh failures in PowerPivot workbooks in Power Pivot for SharePoint 2016.
 

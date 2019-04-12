@@ -9,7 +9,7 @@ ms.service: sharepoint-online
 localization_priority: Normal
 ---
 
-# Office Online and Office Web Apps limitations and features with Information Rights Management (IRM)
+# Office Online limitations and features with Information Rights Management (IRM)
 
 Office Online and Office Web Apps offer the read-only capability for SharePoint document libraries with Information Rights Management (IRM) enabled.  Protected documents where the IRM or Azure Information Policy protection is applied from Office applications are not supported by Office Online and Office Web Apps.
 
