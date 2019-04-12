@@ -8,7 +8,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# Welcome to SharePoint Server!
+# SharePoint Server Support
 
 This page lists some issues for SharePoint Server.
 
