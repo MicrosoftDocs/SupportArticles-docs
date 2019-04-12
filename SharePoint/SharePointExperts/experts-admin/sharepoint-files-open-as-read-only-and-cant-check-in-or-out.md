@@ -1,10 +1,11 @@
----
+﻿---
 title: SharePoint files open as read-only and can't check in or out
 author: AmandaAZ
 ms.author: warrenr
 manager: warrenr
 audience: ITPro
 ms.topic: article
+ms.service: sharepoint-online
 localization_priority: Normal
 ---
 # SharePoint files open as read-only and can't check in or out

@@ -5,6 +5,7 @@ ms.author: remcgurk
 manager: remcgurk
 audience: ITPro
 ms.topic: article
+ms.service: sharepoint-online
 localization_priority: Normal
 ---
 
