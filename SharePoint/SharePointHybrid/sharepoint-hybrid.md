@@ -1,6 +1,16 @@
-# Welcome to SharePoint Hybrid!
+---
+title: Listing some issues for SharePoint Hybrid.
+author: simonxjx
+manager: willchen
+audience: ITPro
+ms.prod: sharepoint-server-itpro
+ms.topic: article
+ms.author: v-six
+---
 
-This is the sharepoint hybrid support overview topic
+# SharePoint Hybrid Support
+
+This page lists some issues for SharePoint Hybrid.
 
 ## SharePoint Hybrid Administration
 

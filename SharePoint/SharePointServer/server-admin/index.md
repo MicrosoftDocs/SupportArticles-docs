@@ -1,4 +1,16 @@
-﻿# SharePoint Administration page
+﻿---
+title: Listing some administration issues for SharePoint Server.
+author: simonxjx
+manager: willchen
+audience: ITPro
+ms.service: sharepoint-powershell
+ms.topic: article
+ms.author: v-six
+---
+
+# SharePoint Administration page
+
+This page lists some administration issues for SharePoint Server.
 
 ["401 unauthorized" error when using OAuth and SAML claims in SharePoint 2013](./401-unauthorized-error-when-using-oauth-and-saml-claims-in-sharepoint-2013.md)
 

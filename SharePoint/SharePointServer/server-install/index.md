@@ -1,4 +1,16 @@
+---
+title: Listing some installation issues for SharePoint Server.
+author: simonxjx
+manager: willchen
+audience: ITPro
+ms.service: sharepoint-powershell
+ms.topic: article
+ms.author: v-six
+---
+
 # SharePoint Install page
+
+This page lists some installation issues for SharePoint Server.
 
 [Certain Microsoft SharePoint Server 2013 installation scenarios are not supported](./certain-sharepoint-server-2013-installation-scenarios-are-not-supported.md)
 

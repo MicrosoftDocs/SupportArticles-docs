@@ -1,6 +1,16 @@
+---
+title: Listing some issues for SharePoint Server.
+author: simonxjx
+manager: willchen
+audience: ITPro
+ms.service: sharepoint-powershell
+ms.topic: article
+ms.author: v-six
+---
+
 # Welcome to SharePoint Server!
 
-This is the sharepoint server support overview topic
+This page lists some issues for SharePoint Server.
 
 ## SharePoint Server Administration
 

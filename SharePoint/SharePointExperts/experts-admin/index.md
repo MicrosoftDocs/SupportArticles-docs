@@ -1,4 +1,16 @@
-# SharePoint Administration page
+---
+title: Listing some administration issues for SharePoint Experts.
+author: simonxjx
+manager: willchen
+audience: ITPro
+ms.prod: sharepoint-server-itpro
+ms.topic: article
+ms.author: v-six
+---
+
+# Administration page for SharePoint experts
+
+This page lists some administration issues for SharePoint Experts.
 
 [Configuration for Office Web Apps or Office Online Server authentication with external users](./configuration-for-office-web-apps-or-office-online-server-authentication-with-external-users.md)
 

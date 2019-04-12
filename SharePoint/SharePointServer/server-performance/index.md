@@ -1,4 +1,16 @@
+---
+title: Listing some performance issues for SharePoint Server.
+author: simonxjx
+manager: willchen
+audience: ITPro
+ms.service: sharepoint-powershell
+ms.topic: article
+ms.author: v-six
+---
+
 # SharePoint Performance page
+
+This page lists some performance issues for SharePoint Server.
 
 [Outdated database statistics decrease SharePoint Server performance, cause time-outs, and generate run-time errors](./outdated-database-statistics-decrease-sharepoint-server-performance.md)
 
