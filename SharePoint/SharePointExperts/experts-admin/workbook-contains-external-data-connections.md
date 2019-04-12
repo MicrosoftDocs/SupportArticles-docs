@@ -17,7 +17,7 @@ When you click slicers in a Microsoft SharePoint Online PowerPivot workbook that
 
 **This workbook contains external data connections or BI features that are not supported.**
 
-![the error message dialog box](./media/this-workbook-contains-external-data-connections-when-you-use-a-guest-link-to-a-workbook-in-excel-online/error-message.png)
+![the error message dialog box](./media/workbook-contains-external-data-connections/error-message.png)
 
 ## Cause
 

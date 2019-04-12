@@ -19,11 +19,12 @@ Microsoft Office Web Apps Server or Office Online Server has a built-in Office f
 
 1. Add a workbook to a folder and then share the folder on the WAC server. For example, create a folder named "Test" on the root of Drive C ( C:\Test\Test1.xlsx).
 If this location is on another server and not on the WAC Server, you need to share this folder with the WAC server (the **Computer** Account), as follows:
-   ![the share folder on wac server images](./media/test-viewing-office-documents-by-using-the-office-web-apps-or-office-online-server-viewer/share-folder-to-wac-server.png)
+
+   ![the share folder on wac server images](./media/test-viewing-office-documents-by-using-office-online-server-viewer/share-folder-to-wac-server.png)
    
    After you have selected **Computers**, you need type the WAC server name and then check the name to make sure that the server name can be resolved.
    
-   ![the select users dialog box](./media/test-viewing-office-documents-by-using-the-office-web-apps-or-office-online-server-viewer/select-users.png)
+   ![the select users dialog box](./media/test-viewing-office-documents-by-using-office-online-server-viewer/select-users.png)
 1. You need generate a "http://" URL to that folder.  To do this, open the Internet Explorer browser and browse to "http://<ServerName>/op/generate.aspx".
 
    > [!NOTE]
@@ -31,16 +32,17 @@ If this location is on another server and not on the WAC Server, you need to sha
 1. Enter the UNC location (\\<Servername>\test\test1.xlsx) of the workbook in the generate.aspx page.  In the following example, the UNC location is "\\wacserver\test\test1.xlsx".
 1. Click "Create Link" and then click "Test this link."
 
-   ![the generate aspx page](./media/test-viewing-office-documents-by-using-the-office-web-apps-or-office-online-server-viewer/generate-aspx-page.png)
+   ![the generate aspx page](./media/test-viewing-office-documents-by-using-office-online-server-viewer/generate-aspx-page.png)
 
    If this works, the WAC server can render the workbook.
 
    Alternatively, these steps can be performed by copying an Office document to the "%systemdrive%\Program Files\Microsoft Office Web Apps\OpenFromUrlWeb" directory on the Office Online Server.  Then you can use "http://wacserver/op/filename" in place of the value in step 4.
-   ![the open from url web dialog box](./media/test-viewing-office-documents-by-using-the-office-web-apps-or-office-online-server-viewer/open-from-url-web.png)
+
+   ![the open from url web dialog box](./media/test-viewing-office-documents-by-using-office-online-server-viewer/open-from-url-web.png)
 
 > [!NOTE]
 > To make this testing feature work with Windows Server 2012 R2, [Microsoft .NET Framework 4.5.2](https://www.microsoft.com/en-us/download/details.aspx?id=42643) is needed.
 
 ## More information
 
-The new .NET Framework version 4.6 and later versions include a new Just-In-Time (JIT) compiler. This will cause a "page can't be displayed" error with the generate.aspx. To resolve this issue, reference [Office viewers or Office Web Apps shows the "This page can't be displayed" error](office-viewers-or-office-web-apps-shows-this-page-cant-be-displayed-error.md).
+The new .NET Framework version 4.6 and later versions include a new Just-In-Time (JIT) compiler. This will cause a "page can't be displayed" error with the generate.aspx. To resolve this issue, reference [Office viewers or Office Web Apps shows the "This page can't be displayed" error](office-viewers-or-office-web-apps-shows-this-page-cannot-be-displayed.md).

@@ -33,6 +33,6 @@ When users try to preview an IRM protected document by using Office Web Apps, us
 
 **Sorry, Word Web App can't display this embedded document because it's protected by Information Rights Management (IRM).**
 
-![the error message dialog box](./media/office-online-and-office-web-apps-limitations-and-features-with-information-rights-management/test-wac.png)
+![the error message dialog box](./media/office-online-limitations-and-features-with-information-rights-management/test-wac.png)
 
 To fix this issue, remove the IRM setting and then preview the document again. If the preview is displayed, apply the IRM setting in the document library again.

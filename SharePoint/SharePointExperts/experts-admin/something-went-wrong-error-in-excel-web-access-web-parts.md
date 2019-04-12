@@ -15,7 +15,7 @@ localization_priority: Normal
 
 When you try to view a Microsoft Excel workbook in the Excel Web Access Web Part, you receive the following error:
 
-![the excel services dialog box](./media/we-dont-know-what-happened-but-something-went-wrong-error-in-excel-web-access-web-parts/excel-services.png)
+![the excel services dialog box](./media/something-went-wrong-error-in-excel-web-access-web-parts/excel-services.png)
 
 In the Unified Logging Service (ULS) logs, the following log is displayed:
 
@@ -35,4 +35,4 @@ To resolve this issue, grant the following permissions for the Application Pool 
 - db_rbs_reader
 - db_rbs_writer
 
-![the application pool account permissions dialog box](./media/we-dont-know-what-happened-but-something-went-wrong-error-in-excel-web-access-web-parts/application-pool-account-permissions.png)
+![the application pool account permissions dialog box](./media/something-went-wrong-error-in-excel-web-access-web-parts/application-pool-account-permissions.png)

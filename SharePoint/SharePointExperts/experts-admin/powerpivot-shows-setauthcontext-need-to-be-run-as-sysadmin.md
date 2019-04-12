@@ -26,6 +26,6 @@ To fix this issue, add the PowerPivot System Service account that's running the 
 1. Right-click the instance, and then select **Properties**.
 1. In the **Analysis Server Properties** dialog box, select **Security**, and then select **Add** to add the user.
 
-   ![the analysis server properties dialog box](./media/power-pivot-for-sharepoint-shows-setauthcontext-need-to-be-run-as-sysadmin-error/analysis-server-properties.png)
+   ![the analysis server properties dialog box](./media/powerpivot-shows-setauthcontext-need-to-be-run-as-sysadmin/analysis-server-properties.png)
 
 1. Select **OK** to exit.

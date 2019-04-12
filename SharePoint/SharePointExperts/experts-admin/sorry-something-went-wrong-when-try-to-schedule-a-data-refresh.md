@@ -30,18 +30,18 @@ To fix this issue, add the required permissions with the following steps:
 
 1. In **SharePoint Central Administration**, go to **Application Management** > **Manage service applications**, and then select **User Profile Service Application**. Then click **Administrators**.
 
-   ![the manage service applications page](./media/sorry-something-went-wrong-when-schedule-a-data-refresh/manage-service-applications.png)
+   ![the manage service applications page](./media/sorry-something-went-wrong-when-try-to-schedule-a-data-refresh/manage-service-applications.png)
 
 1. Add the PowerPivot system service account, select the **Full Control** check box, and then click **OK**.
 
-   ![the administrators for user profile service application page](./media/sorry-something-went-wrong-when-schedule-a-data-refresh/administrators-for-user-profile-service-application.png)
+   ![the administrators for user profile service application page](./media/sorry-something-went-wrong-when-try-to-schedule-a-data-refresh/administrators-for-user-profile-service-application.png)
 
 1. Select **Permissions**.
 
-   ![the user profile service application permissions page](./media/sorry-something-went-wrong-when-schedule-a-data-refresh/user-profile-service-application-permissions.png)
+   ![the user profile service application permissions page](./media/sorry-something-went-wrong-when-try-to-schedule-a-data-refresh/user-profile-service-application-permissions.png)
 
 1. Add the PowerPivot System Service account, select the **Full Control** check box, and then click **OK**.
 
-   ![the connection permissions for user profile service application page](./media/sorry-something-went-wrong-when-schedule-a-data-refresh/connection-permissions-for-user-profile-service-application.png)
+   ![the connection permissions for user profile service application page](./media/sorry-something-went-wrong-when-try-to-schedule-a-data-refresh/connection-permissions-for-user-profile-service-application.png)
 
 1. Restart the PowerPivot System Service on all the SharePoint servers that are running this service.

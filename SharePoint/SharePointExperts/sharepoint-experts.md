@@ -36,7 +36,7 @@ This page lists some issues for SharePoint Experts.
 
 [A SharePoint file is downloaded instead of opening the Office application with a direct connection to it](./experts-admin/files-downloaded-instead-of-opening-office-application.md)
 
-[SharePoint files open as read-only and can't check in or out](./experts-admin/files-open-as-read-only-and-cant-check-in-or-out.md)
+[SharePoint files open as read-only and can't check in or out](./experts-admin/files-open-as-read-only-and-cannot-check-in-or-out.md)
 
 [Some Office files open in read-only mode in SharePoint Server 2013](./experts-admin/files-open-in-read-only-mode.md)
 
@@ -50,7 +50,7 @@ This page lists some issues for SharePoint Experts.
 
 [Office Online limitations and features with Information Rights Management (IRM)](./experts-admin/office-online-limitations-and-features-with-information-rights-management.md)
 
-[Office viewers or Office Web Apps shows the "This page can't be displayed" error](./experts-admin/office-viewers-or-office-web-apps-shows-this-page-cant-be-displayed.md)
+[Office viewers or Office Web Apps shows the "This page can't be displayed" error](./experts-admin/office-viewers-or-office-web-apps-shows-this-page-cannot-be-displayed.md)
 
 [Orphaned record for PowerPivot service application database](./experts-admin/orphaned-record-for-powerpivot-service-application-database.md)
 

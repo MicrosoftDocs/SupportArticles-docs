@@ -15,7 +15,7 @@ ms.author: v-six
 
 When you view the Manage User Profiles section of the SharePoint Online admin center in Office 365 for enterprises, you find that uncompiled audiences are present.
 
-![Uncompiled Audiences listed in Manage User Profiles](./media/uncompiled-audiences-are-present-in-sharepoint-online-in-office-365-for-enterprises/uncompiled-audiences-listed-in-manage-user-profiles.jpg)
+![Uncompiled Audiences listed in Manage User Profiles](./media/uncompiled-audiences-are-present-in-office-365-for-enterprises/uncompiled-audiences-listed-in-manage-user-profiles.jpg)
 
 ## Solution
 

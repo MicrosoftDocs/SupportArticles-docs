@@ -17,7 +17,7 @@ When you run a scheduled data refresh on a PowerPivot workbook in Microsoft Shar
 
 **The virtual path '/……xlsx' maps to another application, which is not allowed.**
 
-![the virtual path error dialog box](./media/the-virtual-path-maps-to-another-application-which-is-not-allowed-when-you-run-a-scheduled-data-refresh/virtual-path-error.png)
+![the virtual path error dialog box](./media/virtual-path-maps-to-another-application-not-allowed/virtual-path-error.png)
 
 After this error occurs, the schedule data refresh gets disabled and the schedule settings are deleted. The schedule keeps getting disabled even if the subsequent scheduled refreshes run successfully.
 
