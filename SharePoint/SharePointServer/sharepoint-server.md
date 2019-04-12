@@ -16,7 +16,7 @@ This page lists some issues for SharePoint Server.
 
 ["401 unauthorized" error when using OAuth and SAML claims](./server-admin/401-unauthorized-error-when-using-oauth-and-saml-claims.md)
 ["800703fa Illegal operation attempted on a registry key" error](./server-admin/800703fa-Illegal-operation-error.md)
-[Access denied when you send an email to a SharePoint group](./server-admin/access-denied-when-send-an-email-to-sharepoint-group.md)
+[Access denied when you send an email to a SharePoint group](./server-admin/access-denied-when-send-an-email-to-groups.md)
 ["Server Error in '/' Application. Access to the path  is denied" when you log on to Windows SharePoint Services 2.0](./server-admin/access-to-the-path-is-denied-during-logon.md)
 [Anonymous Users cannot open XLSX files from a document library](./server-admin/anonymous-users-cannot-open-xlsx-files-from-a-document-library.md)
 [Attachment is missing from an e-mail message that is sent to a document library](./server-admin/attachment-is-missing-in-email-message-to-library.md)
