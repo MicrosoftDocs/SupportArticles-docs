@@ -43,7 +43,7 @@ To resolve this issue, grant access to the **Everyone** or **All Users (membersh
 
 8. In the **set metadata store permissions** dialog box, add **Everyone** to the permissions box, and then click Add.
 
-   ![set metadata store permissions](./media/cannot-add-external-users-to-a-sharepoint-online-external-content-type/set-metadata-store-permissions.jpg)
+   ![set metadata store permissions](./media/cannot-add-external-users-to-sharepoint-online-external-content-type/set-metadata-store-permissions.jpg)
 
 9. In the list of available accounts for the metadata store, select the **Everyone** group, and then make sure that the **Execute** check box is selected.
 

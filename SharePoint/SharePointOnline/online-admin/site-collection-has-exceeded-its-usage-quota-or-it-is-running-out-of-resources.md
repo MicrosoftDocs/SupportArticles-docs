@@ -41,13 +41,13 @@ To change the Server Resource Quota for the site collection, follow these steps:
 
 2. In the **Admin** drop-down list, click **SharePoint**.
 
-   ![SharePoint in the Office 365 Admin drop-down list](./media/a-site-collection-has-exceeded-its-usage-quota-or-it-is-running-out-of-resources/sharepoint-in-the-office-365-admin-drop-down-list.jpg)
+   ![SharePoint in the Office 365 Admin drop-down list](./media/site-collection-has-exceeded-its-usage-quota-or-it-is-running-out-of-resources/sharepoint-in-the-office-365-admin-drop-down-list.jpg)
 
 3. In the list of site collections, click to select the check box that's next to the site collection whose resource usage quota you want to change.
 
 4. On the ribbon, click **Server Resource Quota** in the **Manage** group.
 
-   ![Server Resource Quota in the Manage group](./media/a-site-collection-has-exceeded-its-usage-quota-or-it-is-running-out-of-resources/server-resource-quota-in-the-manage-group.jpg)
+   ![Server Resource Quota in the Manage group](./media/site-collection-has-exceeded-its-usage-quota-or-it-is-running-out-of-resources/server-resource-quota-in-the-manage-group.jpg)
 
 5. In the **set server resource quota** dialog box, type the value in megabytes (MB) that you want for the resource usage quota in the resources box, and then click **Save**.
 

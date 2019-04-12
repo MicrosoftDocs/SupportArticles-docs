@@ -1,4 +1,4 @@
----
+﻿---
 title: How to change the database server in a SharePoint farm
 description: Describes the steps to change the database server in a SharePoint farm.
 author: simonxjx
@@ -66,7 +66,7 @@ Get-SPDatabase | Select Name,Server
 
 You should receive a result that's similar to the following example:
 
-![DB output](./media/how-to-change-the-database-server-in-a-sharepoint-farm/db-output.png)
+![DB output](./media/how-to-change-the-database-server-in-farms/db-output.png)
 
 ### Step 3: Point the default database instance for the web applications to the new SQL Server instance  
 
@@ -99,7 +99,7 @@ $webapps = Get-SPWebApplication -IncludeCentralAdministration
 
 You should receive a result that resembles the following example:
 
-![DB instance output](./media/how-to-change-the-database-server-in-a-sharepoint-farm/db-instance-output.png)   
+![DB instance output](./media/how-to-change-the-database-server-in-farms/db-instance-output.png)   
 
 ### Step 4: Change the Distributed Cache cluster configuration  
 
@@ -156,7 +156,7 @@ To do this, follow these steps:
 
    When the service is stopped, you should receive a result that's similar to the following example:  
 
-   ![cache host output](./media/how-to-change-the-database-server-in-a-sharepoint-farm/cache-host-output.png)   
+   ![cache host output](./media/how-to-change-the-database-server-in-farms/cache-host-output.png)   
 
 3. Remove the local server from the Distributed Cache cluster by running the following PowerShell cmdlet:  
 
@@ -172,7 +172,7 @@ To do this, follow these steps:
 
 5. Open Registry Editor, and then verify that the **ConnectionString** value of the HKLM\SOFTWARE\Microsoft\AppFabric\V1.0\Configuration key is updated. Here is an example:  
 
-   ![registry](./media/how-to-change-the-database-server-in-a-sharepoint-farm/registry.png)   
+   ![registry](./media/how-to-change-the-database-server-in-farms/registry.png)   
 
 6. Repeat step 1 to 5 on each of the other servers in the Distributed Cache cluster.      
 
@@ -195,7 +195,7 @@ Get-SPServer
 
 You should receive a result that resembles the following example:   
 
-![server output](./media/how-to-change-the-database-server-in-a-sharepoint-farm/server-output.png)    
+![server output](./media/how-to-change-the-database-server-in-farms/server-output.png)    
 
 ## More Information  
 
