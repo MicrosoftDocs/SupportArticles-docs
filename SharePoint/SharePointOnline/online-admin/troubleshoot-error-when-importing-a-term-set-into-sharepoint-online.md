@@ -4,7 +4,7 @@ description: Describes an issue when you try to import a term set into SharePoin
 author: simonxjx
 manager: willchen
 audience: ITPro
-ms.service: sharepoint-powershell
+ms.service: sharepoint-online
 ms.topic: article
 ms.author: v-six
 ---
