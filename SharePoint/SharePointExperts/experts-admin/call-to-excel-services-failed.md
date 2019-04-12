@@ -27,7 +27,7 @@ To determine whether the workbook currently has a Power Query data connection or
 
 In Excel 2016, the connection may be created by using the **Get & Transform** or **Get Data** feature. This may use the **Microsoft.Mashup.OleDb.1** provider, for example, when combining data from multiple sources.
 
-![the connection properties dialog box](./media/call-to-excel-services-failed-error-when-you-run-a-scheduled-data-refresh-by-using-powerpivot-for-sharepoint-2013/connection-properties.png)
+![the connection properties dialog box](./media/call-to-excel-services-failed/connection-properties.png)
 
 ## More information
 

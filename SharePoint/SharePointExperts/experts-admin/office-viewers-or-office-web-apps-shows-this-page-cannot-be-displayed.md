@@ -15,7 +15,7 @@ localization_priority: Normal
 
 When you use Microsoft .NET Framework 4.6 or later versions with Office Web Apps Server 2013 or Office Online Server, Office viewers don't work or *https://internalurl/op/generate.aspx* page doesn't open in a browser, and you receive the following error:
 
-![the error message dialog box](./media/office-viewers-or-office-web-apps-shows-the-this-page-cant-be-displayed-error/this-page-cant-be-displayed.png)
+![the error message dialog box](./media/office-viewers-or-office-web-apps-shows-this-page-cannot-be-displayed/this-page-cant-be-displayed.png)
 
 ## Cause
 

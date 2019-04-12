@@ -27,7 +27,7 @@ When using pre-authentication, to prevent a second authentication prompt for Sha
 
 To verify it, go to your hosting/discovery page through "http(s)://wacexternalurl/hosting/discovery", and you can see the following:
 
-![the discovery page](./media/configuration-for-office-web-apps-or-office-online-server-authentication-with-external-users/discovery-page.png)
+![the discovery page](./media/configuration-for-office-online-server-authentication-with-external-users/discovery-page.png)
 
 If an authentication page appears, proceed by browsing your SharePoint site.  Leave the SharePoint page open, then browse the hosting/discovery page again. If you have your session cookie configured correctly, the hosting/discovery should open without an authentication prompt.
 

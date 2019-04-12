@@ -23,18 +23,18 @@ When you open a workbook in a browser by using Excel Services, or when a schedul
 1. Expand **SharePoint Web Services** on the left pane.
 1. Select the first **ID** under **SharePoint Web Services**, and then select **Content View** at the bottom of the center pane.
 
-   ![the content view dialog box](./media/excel-services-and-powerpivot-show-retrieving-the-com-class-factory-for-component-failed/content-view.png)
+   ![the content view dialog box](./media/retrieving-com-class-factory-for-component-failed/content-view.png)
 
 1. Select each ID until you see **ExcelService.asmx** (for Excel Services error) or **SSASMidTierService.svc** (for PowerPivot error) on the center pane.
 1. Select **Advanced Settings** on the right pane, note the value in **Application Pool**, and then click **Cancel**.
 
-   ![the advanced settings dialog box](./media/excel-services-and-powerpivot-show-retrieving-the-com-class-factory-for-component-failed/advanced-settings.png)
+   ![the advanced settings dialog box](./media/retrieving-com-class-factory-for-component-failed/advanced-settings.png)
 
 1. Select **Application Pools** on the left pane and select the application pool that you noted in step 5.
 
-   ![the application pools dialog box](./media/excel-services-and-powerpivot-show-retrieving-the-com-class-factory-for-component-failed/application-pools.png)
+   ![the application pools dialog box](./media/retrieving-com-class-factory-for-component-failed/application-pools.png)
 1. Select **Advanced Settings** on the right pane.
 1. Set the value of **Load User Profile** to True, and then click **OK**.
 
-   ![the load user profile dialog box](./media/excel-services-and-powerpivot-show-retrieving-the-com-class-factory-for-component-failed/load-user-profile.png)
+   ![the load user profile dialog box](./media/retrieving-com-class-factory-for-component-failed/load-user-profile.png)
 1. Open a **Command Prompt** and run the **iisreset** command to restart Internet Information Services (IIS).
