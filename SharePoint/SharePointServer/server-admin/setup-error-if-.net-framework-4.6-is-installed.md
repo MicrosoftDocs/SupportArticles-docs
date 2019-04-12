@@ -9,7 +9,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# SharePoint 2013 or Project Server 2013 Setup error if the .NET Framework 4.6 is installed  
+# Setup error if the .NET Framework 4.6 is installed  
 
 ## Symptoms  
 
