@@ -8,7 +8,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# SharePoint Install page
+# Installation page for SharePoint Experts
 
 This page lists some installation issues for SharePoint Experts.
 

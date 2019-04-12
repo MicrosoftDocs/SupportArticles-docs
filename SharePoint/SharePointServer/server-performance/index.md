@@ -8,7 +8,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# SharePoint Performance page
+# Performance page for SharePoint Server
 
 This page lists some performance issues for SharePoint Server.
 

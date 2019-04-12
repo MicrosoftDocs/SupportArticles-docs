@@ -8,7 +8,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# SharePoint Administration page
+# Administration page for SharePoint Server
 
 This page lists some administration issues for SharePoint Server.
 
