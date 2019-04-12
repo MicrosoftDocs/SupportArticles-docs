@@ -24,7 +24,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Installer
 
 "**Debug**"=dword:**00000007**
 
-"Logging"="**voicewarmup**"
+"**Logging**"="**voicewarmup**"
 
 For more information about Windows Installer logging, see [How to enable Windows Installer logging](https://support.microsoft.com/help/223300/how-to-enable-windows-installer-logging).
 
