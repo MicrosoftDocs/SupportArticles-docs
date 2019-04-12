@@ -9,7 +9,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# Failure trying to synch site - Event ID 5553  
+# Event ID 5553 when during a site sync
 
 ## Symptoms  
 

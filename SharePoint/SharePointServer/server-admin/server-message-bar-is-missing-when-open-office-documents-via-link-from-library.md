@@ -1,4 +1,4 @@
----
+﻿---
 title: Office documents opened via a hyperlink from SharePoint document libraries may be missing the Server Message Bar with buttons needed to check out and/or edit files or open/edit workflow tasks
 description:
 author: simonxjx
@@ -9,7 +9,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# Office documents opened via a hyperlink from SharePoint document libraries may be missing the Server Message Bar with buttons needed to check out and/or edit files or open/edit workflow tasks  
+# Server Message bar is missing for Office documents opened via a hyperlink
 
 ## Symptoms  
 

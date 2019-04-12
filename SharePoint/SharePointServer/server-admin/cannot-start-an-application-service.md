@@ -1,4 +1,4 @@
----
+﻿---
 title: You can’t start the SharePoint Foundation Web Application service
 description: Describes an issue in which the SharePoint Foundation Web Application service gets stuck during startup in SharePoint Server 2013 and 2010.
 author: simonxjx
@@ -9,11 +9,11 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# You can’t start the SharePoint Foundation Web Application service  
+# You can't start the SharePoint Foundation Web Application service  
 
 ## Symptoms  
 
-You can’t start the SharePoint Foundation Web Application service in Microsoft SharePoint Server 2013 or Microsoft SharePoint Server 2010. The service gets stuck during startup, and the following error entry is logged in  the ULS logs:
+You can't start the SharePoint Foundation Web Application service in Microsoft SharePoint Server 2013 or Microsoft SharePoint Server 2010. The service gets stuck during startup, and the following error entry is logged in  the ULS logs:
 
 ```       
 Provision of service failed. The process cannot access the file 'C:\inetpub\wwwroot\wss\VirtualDirectories\<web_app_name>\_app_bin\STSSOAP.DLL' because it is being used by another process. If this is a Web service, IIS must be restarted for the change to take effect. To restart IIS, open a command prompt window and type "iisreset /noforce".       

@@ -9,7 +9,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# Access denied when you send an email to a SharePoint group by using SharePoint Server 2013 workflows  
+# Access denied when you send an email to a SharePoint group  
 
 ## Symptoms  
 

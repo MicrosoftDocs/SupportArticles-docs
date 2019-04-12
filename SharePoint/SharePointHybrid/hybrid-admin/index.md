@@ -8,7 +8,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# Administration page SharePoint Hybrid
+# Administration page for SharePoint Hybrid
 
 This page lists some administration issues for SharePoint Hybrid.
 

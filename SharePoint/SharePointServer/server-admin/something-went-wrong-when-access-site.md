@@ -9,7 +9,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# "Something went wrong" when you access a SharePoint 2013 site  
+# "Something went wrong" when you access a site  
 
 ## Symptoms  
 

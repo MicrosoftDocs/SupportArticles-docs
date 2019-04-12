@@ -2,7 +2,7 @@
 
 This page lists some issues for OneDrive for Business.
 
-[401 error when you use Graph API to access OneDrive data with location-based policy enabled](./401-error-when-using-graph-api-to-access-onedrive-data.md)
+[401 error when you use Graph API to access OneDrive data with location-based policy enabled](./401-error-when-using-graph-api-to-access-data.md)
 
 ## Still need help? 
 

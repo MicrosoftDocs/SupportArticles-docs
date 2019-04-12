@@ -8,7 +8,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# Administration page for SharePoint experts
+# Administration page for SharePoint Experts
 
 This page lists some administration issues for SharePoint Experts.
 

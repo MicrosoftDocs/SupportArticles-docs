@@ -9,7 +9,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# ContractFilter error when querying from the non-Default zone in a SharePoint Server 2013 or 2016 farm  
+# ContractFilter error when querying from the non-default zone in a farm  
 
 ## Symptoms  
 

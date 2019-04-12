@@ -9,7 +9,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# Error "Request timed out" when you try to upload a large file to a document library on a Windows SharePoint Services 3.0 site  
+# "Request timed out" when you try to upload a large file to a SharePoint Services 3.0 document library
 
 ## Symptoms  
 

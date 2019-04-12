@@ -1,4 +1,4 @@
----
+﻿---
 title: Unable to Activate Security Token Service Application - Event ID 8306
 description:
 author: simonxjx
@@ -9,7 +9,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# Unable to Activate Security Token Service Application - Event ID 8306  
+# Event ID 8306 when you activate Security Token Service Application
 
 ## Symptoms  
 

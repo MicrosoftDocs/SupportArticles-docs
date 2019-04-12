@@ -9,7 +9,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# "SharePoint Foundation administration tool has stopped working" error during a slipstream installation of SharePoint Server 2016  
+# "SharePoint Foundation administration tool has stopped working" error during a slipstream installation  
 
 ## Symptoms  
 
