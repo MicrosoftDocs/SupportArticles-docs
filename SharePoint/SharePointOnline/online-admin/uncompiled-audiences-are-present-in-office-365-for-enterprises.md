@@ -9,7 +9,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# Uncompiled audiences are present in SharePoint Online in Office 365 for enterprises
+# Uncompiled audiences are present in SharePoint Online
 
 ## Problem
 

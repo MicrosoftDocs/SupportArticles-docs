@@ -9,7 +9,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# "SharePoint 2013 workflow HTTP Unauthorized" error occurs in SharePoint Online
+# "SharePoint 2013 workflow HTTP Unauthorized" error occurs
 
 ## Problem
 

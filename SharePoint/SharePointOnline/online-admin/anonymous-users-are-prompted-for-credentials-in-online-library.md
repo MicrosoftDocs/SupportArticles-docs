@@ -9,7 +9,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# Anonymous users are prompted for credentials in a SharePoint Online library  
+# Anonymous users are prompted for credentials in a library  
 
 ## Symptoms  
 

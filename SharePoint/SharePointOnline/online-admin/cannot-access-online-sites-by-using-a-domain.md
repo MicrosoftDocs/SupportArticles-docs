@@ -9,7 +9,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# You can't access SharePoint Online sites by using a domain that's configured for full redelegation
+# Cannot access SharePoint Online sites by using a domain that's configured for full redelegation
 
 ## Problem
 

@@ -9,7 +9,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# Can't force Modern Authentication when using Connect-SPOService cmdlet in SharePoint Online Management Shell
+# Cannot force Modern Authentication when using Connect-SPOService cmdlet in SharePoint Online Management Shell
 
 ## Problem
 

@@ -9,7 +9,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# Updated results aren't returned when you try to search the new or changed properties of the people categories in SharePoint Online
+# Updated results aren't returned when you try to search the new or changed properties of the people categories
 
 ## Problem
 
