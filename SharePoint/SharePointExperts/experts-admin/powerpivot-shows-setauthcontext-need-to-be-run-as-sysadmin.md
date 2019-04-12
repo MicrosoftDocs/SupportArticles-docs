@@ -9,7 +9,7 @@ ms.service: sharepoint-online
 localization_priority: Normal
 ---
 
-# "SetAuthContext need to be run as sysadmin" error in Power Pivot for SharePoint
+# "SetAuthContext need to be run as sysadmin" error in PowerPivot 
 
 ## Symptoms
 

@@ -9,7 +9,7 @@ ms.service: sharepoint-online
 localization_priority: Normal
 ---
 
-# "Call to Excel Services failed" error when you run a scheduled data refresh by using PowerPivot for SharePoint 2013
+# "Call to Excel Services failed" error when you run a scheduled data refresh by using PowerPivot
 
 ## Symptoms
 

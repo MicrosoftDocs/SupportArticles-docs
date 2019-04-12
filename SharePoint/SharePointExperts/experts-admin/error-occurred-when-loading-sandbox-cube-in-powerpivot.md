@@ -9,7 +9,7 @@ ms.service: sharepoint-online
 localization_priority: Normal
 ---
 
-# "An error occurred when loading the Sandbox cube" error in PowerPivot for SharePoint
+# "An error occurred when loading the Sandbox cube" error in PowerPivot
 
 ## Symptoms
 

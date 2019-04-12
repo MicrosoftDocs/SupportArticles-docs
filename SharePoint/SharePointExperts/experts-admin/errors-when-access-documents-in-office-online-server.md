@@ -9,7 +9,7 @@ ms.service: sharepoint-online
 localization_priority: Normal
 ---
 
-# Errors when you access documents in Office Web Apps 2013 or Office Online Server from SharePoint web applications where Forms Based Authentication is enabled
+# Errors when you access documents in Office Online Server
 
 ## Symptoms
 

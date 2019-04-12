@@ -9,7 +9,7 @@ ms.service: sharepoint-online
 localization_priority: Normal
 ---
 
-# PowerPivot for SharePoint 2016 scheduled data refresh fails with the error "The operation has timed out"
+# PowerPivot scheduled data refresh fails with the error "The operation has timed out"
 
 ## Symptoms
 

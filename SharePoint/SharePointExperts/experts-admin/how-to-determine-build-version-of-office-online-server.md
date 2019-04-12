@@ -9,7 +9,7 @@ ms.service: sharepoint-online
 localization_priority: Normal
 ---
 
-# How to determine the build version of Office Web Apps 2013 or Office Online Server
+# How to determine the build version of Office Online Server
 
 This article introduces two ways to determine the build version of your Office Web Apps 2013 or Office Online Server.
 

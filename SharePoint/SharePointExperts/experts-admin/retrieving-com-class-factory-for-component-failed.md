@@ -9,7 +9,7 @@ ms.service: sharepoint-online
 localization_priority: Normal
 ---
 
-# "Retrieving the COM class factory for component with CLSID {BDEADF26-C265-11D0-BCED-00A0C90AB50F} failed due to the following error: 800703fa" error in Excel Services and PowerPivot
+# "Retrieving the COM class factory for component failed 800703fa" in Excel Services and PowerPivot
 
 ## Symptoms
 
