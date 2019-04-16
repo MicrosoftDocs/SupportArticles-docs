@@ -16,7 +16,7 @@ This page lists some installation issues for SharePoint Server.
 
 [Certain Microsoft SharePoint Server 2013 installation scenarios are not supported](./certain-installation-scenarios-are-not-supported.md)
 
-[Installing Windows Server AppFabric updates SharePoint 2013 Servers](./installing-windows-server-appfabric-updates.md)
+[Installing Windows Server AppFabric updates SharePoint 2013 Servers](./installing-appfabric-updates.md)
 
 ## Still need help? 
 
