@@ -70,7 +70,7 @@ This page lists some issues for SharePoint Experts.
 
 [SharePoint Designer 2013 login Issues in a cloud scenario](./experts-admin/login-issues-in-a-cloud-scenario.md)
 
-["We don't know what happened, but something went wrong." error in Excel Web Access Web Parts](./experts-admin/something-went-wrong-error-in-excel--web-parts.md)
+["We don't know what happened, but something went wrong." error in Excel Web Access Web Parts](./experts-admin/something-went-wrong-error-in-excel-web-parts.md)
 
 ["A schedule cannot be enabled for a workbook" when you try to schedule a data refresh by using PowerPivot](./experts-admin/sorry-something-went-wrong-when-try-to-schedule-a-data-refresh.md)
 
