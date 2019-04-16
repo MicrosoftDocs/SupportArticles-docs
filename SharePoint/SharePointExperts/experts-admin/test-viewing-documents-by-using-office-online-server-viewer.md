@@ -45,4 +45,4 @@ If this location is on another server and not on the WAC Server, you need to sha
 
 ## More information
 
-The new .NET Framework version 4.6 and later versions include a new Just-In-Time (JIT) compiler. This will cause a "page can't be displayed" error with the generate.aspx. To resolve this issue, reference [Office viewers or Office Web Apps shows the "This page can't be displayed" error](office-viewers-or-office-web-apps-shows-this-page-cannot-be-displayed.md).
+The new .NET Framework version 4.6 and later versions include a new Just-In-Time (JIT) compiler. This will cause a "page can't be displayed" error with the generate.aspx. To resolve this issue, reference [Office viewers or Office Web Apps shows the "This page can't be displayed" error](office-viewers-or-web-apps-shows-this-page-cannot-be-displayed.md).

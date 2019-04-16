@@ -40,7 +40,7 @@ This page lists some administration issues for SharePoint Server.
 
 [How to block OneDrive.exe from being advertised after you install Office 2016](./how-to-block-onedrive.exe-from-being-advertised-after-install-office-2016.md)
 
-[How to change the database server in a SharePoint farm](./how-to-change-the-database-server-in-farms.md)
+[How to change the database server in a SharePoint farm](./how-to-change-the-database-in-farms.md)
 
 [How to disable WebDAV use in SharePoint](./how-to-disable-webdav-use.md)
 
@@ -60,9 +60,9 @@ This page lists some administration issues for SharePoint Server.
 
 [Organization Browser web part does not render for Windows Claims users](./organization-browser-web-part-does-not-render-for-windows-claims-users.md)
 
-[People Picker field embedded in Office documents does not show "Add People" dialog box](./people-picker-field-embedded-does-not-show-add-people.md)
+[People Picker field embedded in Office documents does not show "Add People" dialog box](./picker-field-embedded-does-not-show-add-people.md)
 
-[Products Preparation Tool may not progress past "Configuring Application Server Role, Web Server (IIS) Role"](./products-preparation-tool-not-progress-past-configuring-application-server-role.md)
+[Products Preparation Tool may not progress past "Configuring Application Server Role, Web Server (IIS) Role"](./products-preparation-tool-not-progress-past-configuring-application.md)
 
 [Property doesn't exist or is used in a manner inconsistent with schema settings](./property-does-not-exist-or-is-used-in-manner-inconsistent-with-schema-settings.md)
 
@@ -70,15 +70,15 @@ This page lists some administration issues for SharePoint Server.
 
 ["Request timed out" when you try to upload a large file to a SharePoint Services 3.0 document library](./request-timed-out-when-upload-large-file-to-library.md)
 
-[Server Message bar is missing for Office documents opened via a hyperlink](./server-message-bar-is-missing-when-open-office-documents-via-link-from-library.md)
+[Server Message bar is missing for Office documents opened via a hyperlink](./message-bar-is-missing-when-open-office-documents-via-link-from-library.md)
 
 [Setup error if the .NET Framework 4.6 is installed](./setup-error-if-.net-framework-4.6-is-installed.md)
 
-[SharePoint workflow timer job is stuck at "Pausing"](./sharepoint-workflow-timer-job-is-stuck-at-pausing.md)
+[SharePoint workflow timer job is stuck at "Pausing"](./workflow-timer-job-is-stuck-at-pausing.md)
 
 [SharePoint Designer 2013 shows empty wfpub library](./shows-empty-wfpub-library.md)
 
-[Site slowness because of SharePoint STS certificate CRL checking](./site-slowness-because-of-sharepoint-sts-certificate-crl-checking.md)
+[Site slowness because of SharePoint STS certificate CRL checking](./site-slowness-because-of-sts-certificate-crl-checking.md)
 
 ["Something went wrong" when you access a site](./something-went-wrong-when-access-site.md)
 

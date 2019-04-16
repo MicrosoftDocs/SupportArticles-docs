@@ -46,11 +46,11 @@ This page lists some issues for SharePoint Experts.
 
 [Microsoft Forms shows "Sorry, something went wrong"](./experts-admin/microsoft-forms-shows-sorry-something-went-wrong.md)
 
-["You'll need a new app to open this ms-visio" when you open Visio files](./experts-admin/need-a-new-app-to-open-this-ms-visio-when-open-visio-files.md)
+["You'll need a new app to open this ms-visio" when you open Visio files](./experts-admin/need-a-new-app-to-open-this-ms-visio.md)
 
 [Office Online limitations and features with Information Rights Management (IRM)](./experts-admin/office-online-limitations-and-features-with-information-rights-management.md)
 
-[Office viewers or Office Web Apps shows the "This page can't be displayed" error](./experts-admin/office-viewers-or-office-web-apps-shows-this-page-cannot-be-displayed.md)
+[Office viewers or Office Web Apps shows the "This page can't be displayed" error](./experts-admin/office-viewers-or-web-apps-shows-this-page-cannot-be-displayed.md)
 
 [Orphaned record for PowerPivot service application database](./experts-admin/orphaned-record-for-powerpivot-service-application-database.md)
 
@@ -66,15 +66,15 @@ This page lists some issues for SharePoint Experts.
 
 ["Retrieving the COM class factory for component failed 800703fa" in Excel Services and PowerPivot](./experts-admin/retrieving-com-class-factory-for-component-failed.md)
 
-[Schedule data refresh to a data source with non-Windows Authentication](./experts-admin/schedule-data-refresh-to-a-data-source-with-non-windows-authentication.md)
+[Schedule data refresh to a data source with non-Windows Authentication](./experts-admin/schedule-data-refresh-to-a-source-with-non-windows-authentication.md)
 
-[SharePoint Designer 2013 login Issues in a cloud scenario](./experts-admin/sharepoint-designer-2013-login-issues-in-a-cloud-scenario.md)
+[SharePoint Designer 2013 login Issues in a cloud scenario](./experts-admin/login-issues-in-a-cloud-scenario.md)
 
-["We don't know what happened, but something went wrong." error in Excel Web Access Web Parts](./experts-admin/something-went-wrong-error-in-excel-web-access-web-parts.md)
+["We don't know what happened, but something went wrong." error in Excel Web Access Web Parts](./experts-admin/something-went-wrong-error-in-excel-web-parts.md)
 
 ["A schedule cannot be enabled for a workbook" when you try to schedule a data refresh by using PowerPivot](./experts-admin/sorry-something-went-wrong-when-try-to-schedule-a-data-refresh.md)
 
-[Test viewing Office documents by using Office Online Server viewer](./experts-admin/test-viewing-office-documents-by-using-office-online-server-viewer.md)
+[Test viewing Office documents by using Office Online Server viewer](./experts-admin/test-viewing-documents-by-using-office-online-server-viewer.md)
 
 [PowerPivot Gallery Snapshots Fail for SSL Host Header Sites](./experts-admin/troubleshooting-powerpivot-gallery-snapshot.md)
 
