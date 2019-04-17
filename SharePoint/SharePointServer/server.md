@@ -42,7 +42,7 @@ This page lists some issues for SharePoint Server.
 
 [How to block OneDrive.exe from being advertised after you install Office 2016](./server-admin/how-to-block-onedrive.exe-from-being-advertised-after-install-office-2016.md)
 
-[How to change the database server in a SharePoint farm](./server-admin/how-to-change-the-database-server-in-farms.md)
+[How to change the database server in a SharePoint farm](./server-admin/how-to-change-the-database-in-farms.md)
 
 [How to disable WebDAV use in SharePoint](./server-admin/how-to-disable-webdav-use.md)
 
@@ -62,9 +62,9 @@ This page lists some issues for SharePoint Server.
 
 [Organization Browser web part does not render for Windows Claims users](./server-admin/organization-browser-web-part-does-not-render-for-windows-claims-users.md)
 
-[People Picker field embedded in Office documents does not show "Add People" dialog box](./server-admin/people-picker-field-embedded-does-not-show-add-people.md)
+[People Picker field embedded in Office documents does not show "Add People" dialog box](./server-admin/picker-field-embedded-does-not-show-add-people.md)
 
-[Products Preparation Tool may not progress past "Configuring Application Server Role, Web Server (IIS) Role"](./server-admin/products-preparation-tool-not-progress-past-configuring-application-server-role.md)
+[Products Preparation Tool may not progress past "Configuring Application Server Role, Web Server (IIS) Role"](./server-admin/products-preparation-tool-not-progress-past-configuring-application.md)
 
 [Property doesn't exist or is used in a manner inconsistent with schema settings](./server-admin/property-does-not-exist-or-is-used-in-manner-inconsistent-with-schema-settings.md)
 
@@ -72,15 +72,15 @@ This page lists some issues for SharePoint Server.
 
 ["Request timed out" when you try to upload a large file to a SharePoint Services 3.0 document library](./server-admin/request-timed-out-when-upload-large-file-to-library.md)
 
-[Server Message bar is missing for Office documents opened via a hyperlink](./server-admin/server-message-bar-is-missing-when-open-office-documents-via-link-from-library.md)
+[Server Message bar is missing for Office documents opened via a hyperlink](./server-admin/message-bar-is-missing-when-open-office-documents-via-link-from-library.md)
 
 [Setup error if the .NET Framework 4.6 is installed](./server-admin/setup-error-if-.net-framework-4.6-is-installed.md)
 
-[SharePoint workflow timer job is stuck at "Pausing"](./server-admin/sharepoint-workflow-timer-job-is-stuck-at-pausing.md)
+[SharePoint workflow timer job is stuck at "Pausing"](./server-admin/workflow-timer-job-is-stuck-at-pausing.md)
 
 [SharePoint Designer 2013 shows empty wfpub library](./server-admin/shows-empty-wfpub-library.md)
 
-[Site slowness because of SharePoint STS certificate CRL checking](./server-admin/site-slowness-because-of-sharepoint-sts-certificate-crl-checking.md)
+[Site slowness because of SharePoint STS certificate CRL checking](./server-admin/site-slowness-because-of-sts-certificate-crl-checking.md)
 
 ["Something went wrong" when you access a site](./server-admin/something-went-wrong-when-access-site.md)
 
@@ -100,13 +100,13 @@ This page lists some issues for SharePoint Server.
 
 [Certain Microsoft SharePoint Server 2013 installation scenarios are not supported](./server-install/certain-installation-scenarios-are-not-supported.md)
 
-[Installing Windows Server AppFabric updates SharePoint 2013 Servers](./server-install/installing-windows-server-appfabric-updates.md)
+[Installing Windows Server AppFabric updates SharePoint 2013 Servers](./server-install/installing-appfabric-updates.md)
 
 ## SharePoint Server Performance
 
-[Outdated database statistics decrease SharePoint Server performance](./server-performance/outdated-database-statistics-decrease-performance.md)
+[Outdated database statistics decrease SharePoint Server performance](./server-performance/outdated-database-statistics.md)
 
-[Using PageParserPath directive can cause performance problems](./server-performance/using-pageparserpath-directive-cause-performance-problems.md)
+[Using PageParserPath directive can cause performance problems](./server-performance/using-pageparserpath-directive.md)
 
 ## Still need help? 
 
