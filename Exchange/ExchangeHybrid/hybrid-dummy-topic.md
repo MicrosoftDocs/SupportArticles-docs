@@ -50,7 +50,7 @@ You can enable logging events into the web servers Application Eventlog using AS
 </healthMonitoring>  
 ```
 
-Once you edit a page which is in a folder specified in the VirtualPath attribute and its modification date changes, you will see an event similar to this in the Application Event Log:
+Once you edit a page which is in a folder specified in the VirtualPath attribute and its modification date changes, you'll see an event similar to this in the Application Event Log:
 
 Event code:            1003   
 Event message:      Application compilation is starting.   
