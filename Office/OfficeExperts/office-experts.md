@@ -1,4 +1,16 @@
+---
+title: Listing some issues for Office Experts.
+author: simonxjx
+manager: willchen
+audience: ITPro
+ms.prod: office-perpetual-itpro
+ms.topic: article
+ms.author: v-six
+---
+
 # Office Experts
+
+This page lists some issues for Office Experts.
 
 [A custom HTML login page doesn't render correctly in an Office application](./custom-html-login-page-not-render-correctly.md)
 
