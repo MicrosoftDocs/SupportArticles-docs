@@ -88,6 +88,8 @@ This page lists some administration issues for SharePoint Online.
 
 ["Access to Microsoft SharePoint Online is monitored" when browsing to a SharePoint site](./access-to-sharepoint-online-is-monitored.md)
 
+[A Workflow Status error is reported when a SharePoint 2010 workflow stops](./error-reported-in-sharepoint-2010-workflow-status.md)
+
 ## Still need help? 
 
 Go to [Microsoft Community](https://answers.microsoft.com) or [SharePoint help center](https://support.office.com/sharepoint).
