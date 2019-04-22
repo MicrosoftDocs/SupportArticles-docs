@@ -77,3 +77,5 @@
 ### [A Yammer user is displayed as "Former member" when you use Office 365 sign in](../online-admin/yammer-user-is-displayed-as-former-member.md)
 
 ### ["Access to Microsoft SharePoint Online is monitored" when browsing to a SharePoint site](../online-admin/access-to-sharepoint-online-is-monitored.md)
+
+### [A Workflow Status error is reported when a SharePoint 2010 workflow stops](../online-admin/error-reported-in-sharepoint-2010-workflow-status.md)
