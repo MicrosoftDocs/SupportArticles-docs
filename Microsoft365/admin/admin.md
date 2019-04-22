@@ -1,6 +1,18 @@
+---
+title: Listing some issues for Office 365 Admin
+author: simonxjx
+manager: willchen
+audience: ITPro
+ms.service: o365-solutions
+ms.topic: article
+ms.author: v-six
+---
+
 # Office 365 Admin Support
 
 [Activate Office 2010 KMS host through phone activation](./activate-office-2010-kms-host-via-phone-activation.md)
+
+[How to automate the uninstallation of an Office update programmatically](./automate-uninstall-office-update.md)
 
 [How to install a second KMS host for Office in an environment that has an existing KMS host for Windows](./guidance-on-installing-a-second-kms-host-for-office.md)
 
@@ -15,3 +27,7 @@
 [Product IDs that are supported by the Office Deployment Tool for Click-to-Run](./product-ids-that-are-supported-by-the-office-deployment-tool-for-click-to-run.md)
 
 [Reset Office 365 ProPlus activation state](./reset-office-365-proplus-activation-state.md)
+
+[Troubleshooting Data Loss Protection (DLP) policy tips](./troubleshooting-data-loss-protection-policy-tips.md)
+
+[Troubleshooting Office installation failures](./troubleshooting-office-installation-failures.md)

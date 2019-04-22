@@ -4,6 +4,7 @@ author: AmandaAZ
 ms.author: stevhord
 manager: stevhord
 audience: ITPro
+ms.service: o365-solutions
 ms.topic: article
 localization_priority: Normal
 ---

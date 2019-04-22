@@ -75,3 +75,5 @@
 ### ["SharePoint 2013 workflow HTTP Unauthorized" error occurs](../online-admin/workflow-http-unauthorized.md)
 
 ### [A Yammer user is displayed as "Former member" when you use Office 365 sign in](../online-admin/yammer-user-is-displayed-as-former-member.md)
+
+### ["Access to Microsoft SharePoint Online is monitored" when browsing to a SharePoint site](../online-admin/access-to-sharepoint-online-is-monitored.md)
