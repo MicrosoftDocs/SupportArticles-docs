@@ -1,4 +1,17 @@
+---
+title: Listing some issues for Office 365 Enterprise.
+author: simonxjx
+manager: willchen
+audience: ITPro
+ms.service: o365-solutions
+ms.topic: article
+ms.author: v-six
+---
+
+
 # Office 365 Enterprise Support
+
+This page lists some issues for Office 365 Enterprise.
 
 [Excel Online cross forest KCD data refresh is not supported](./excel-online-cross-forest-kcd-data-refresh-is-not-supported.md)
 

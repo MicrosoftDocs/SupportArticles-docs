@@ -86,6 +86,7 @@ This page lists some administration issues for SharePoint Online.
 
 [A Yammer user is displayed as "Former member" when you use Office 365 sign in](./yammer-user-is-displayed-as-former-member.md)
 
+["Access to Microsoft SharePoint Online is monitored" when browsing to a SharePoint site](./access-to-sharepoint-online-is-monitored.md)
 
 ## Still need help? 
 
