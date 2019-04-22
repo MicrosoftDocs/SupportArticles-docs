@@ -1,6 +1,8 @@
 # [Office 365 Admin Support](../admin.md)
 
-../ to automate the uninstallation of an Office update programmatically](./automate-uninstall-office-update.md)
+## [Activate Office 2010 KMS host through phone activation](../activate-office-2010-kms-host-via-phone-activation.md)
+
+## [How to automate the uninstallation of an Office update programmatically](../automate-uninstall-office-update.md)
 
 ## [How to install a second KMS host for Office in an environment that has an existing KMS host for Windows](./guidance-on-installing-a-second-kms-host-for-office.md)
 
