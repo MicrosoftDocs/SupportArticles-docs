@@ -18,15 +18,15 @@ This page lists some issues for SharePoint Online.
 
 ["Access denied" error when a user tries to approve an Approval Workflow task](./online-admin/access-denied-when-approve-workflow-task.md)
 
-[Anonymous users are prompted for credentials in a library](./online-admin/anonymous-users-are-prompted-for-credentials-in-online-library.md)
+[Anonymous users are prompted for credentials in a library](./online-admin/anonymous-users-are-prompted-for-credentials-in-library.md)
 
 ["Call us overprotective" message when an external user tries to sync in OneDrive for Business](./online-admin/call-us-overprotective-when-external-user-tries-to-sync-onedrive-for-business.md)
 
-[Cannot access SharePoint Online sites by using a domain that's configured for full redelegation](./online-admin/cannot-access-online-sites-by-using-a-domain.md)
+[Cannot access SharePoint Online sites by using a domain that's configured for full redelegation](./online-admin/cannot-access-sites-by-using-a-domain.md)
 
-[Cannot add external users to a SharePoint Online External Content Type in the SharePoint admin center](./online-admin/cannot-add-external-users-to-sharepoint-online-external-content-type.md)
+[Cannot add external users to a SharePoint Online External Content Type in the SharePoint admin center](./online-admin/cannot-add-external-users-to-content-type.md)
 
-[Cannot create a new site based on a site template in SharePoint Online](./online-admin/cannot-create-new-site-based-on-site-template.md)
+[Cannot create a new site based on a site template in SharePoint Online](./online-admin/cannot-create-new-site-based-on-template.md)
 
 [Cannot force Modern Authentication when using Connect-SPOService cmdlet in SharePoint Online Management Shell](./online-admin/cannot-force-modern-authentication.md)
 
@@ -34,7 +34,7 @@ This page lists some issues for SharePoint Online.
 
 [Cross-domain iframe requests are blocked in SharePoint Online](./online-admin/cross-domain-iframe-requests-are-blocked.md)
 
-[Default promoted sites appear on the SharePoint Online Sites page after you delete them](./online-admin/default-promoted-sites-appear-sites-page-after-you-delete-them.md)
+[Default promoted sites appear on the SharePoint Online Sites page after you delete them](./online-admin/default-promoted-sites-appear-page-after-you-delete-them.md)
 
 [Documents aren't displayed in web browser when you're using TLS 1.2](./online-admin/documents-not-displayed-in-web-browser-when-using-tls-1.2.md)
 
@@ -42,9 +42,9 @@ This page lists some issues for SharePoint Online.
 
 ["Sorry, but we're having trouble signing you in" error when you click the Yammer tile in Office 365](./online-admin/error-when-click-the-yammer-tile-in-office-365.md)
 
-[Error when an external user accepts a SharePoint Online invitation by using another account](./online-admin/error-when-external-user-accepts-an-online-invitation-by-using-another-account.md)
+[Error when an external user accepts a SharePoint Online invitation by using another account](./online-admin/error-when-external-user-accepts-an-invitation-by-using-another-account.md)
 
-[Error when view or edit in browser for Word or PowerPoint Onlines](./online-admin/error-when-view-or-edit-in-browser-for-word-or-powerpoint-online.md)
+[Error when view or edit in browser for Word or PowerPoint Onlines](./online-admin/error-when-view-or-edit-in-browser.md)
 
 [Excel survey doesn't have full functionality when you click +new in a SharePoint Online library](./online-admin/excel-survey-does-not-have-full-functionality-when-click-new.md)
 
@@ -60,9 +60,9 @@ This page lists some issues for SharePoint Online.
 
 [Office 365 top navigation bar displays either Sites or Newsfeed instead of OneDrive](./online-admin/office-365-top-navigation-bar-displays-either-sites-or-newsfeed.md)
 
-[SharePoint Online sites don't automatically update to the 25 terabyte limit](./online-admin/online-sites-do-not-automatically-update-to-the-25-terabyte-limit.md)
+[SharePoint Online sites don't automatically update to the 25 terabyte limit](./online-admin/sites-do-not-automatically-update-to-the-25-terabyte-limit.md)
 
-["Report contains no data" error when you try to save the "Content viewing" audit log report](./online-admin/report-contains-no-data-when-save-the-content-viewing-audit-log-report.md)
+["Report contains no data" error when you try to save the "Content viewing" audit log report](./online-admin/report-contains-no-data-when-save-the-content-viewing-audit-log.md)
 
 [You receive messages that a site collection has exceeded its usage quota or that it is running out of resources](./online-admin/site-collection-has-exceeded-its-usage-quota-or-it-is-running-out-of-resources.md)
 
@@ -72,7 +72,7 @@ This page lists some issues for SharePoint Online.
 
 ["Not all terms were imported successfully" error when you try to import a term set](./online-admin/troubleshoot-error-when-importing-a-term-set.md)
 
-["External sharing is disabled for the site" error when a delegated partner administrator tries to access a client's SharePoint Online Admin Center](./online-admin/troubleshoot-error-when-tries-to-access-a-client's-admin-center.md)
+["External sharing is disabled for the site" error when a delegated partner administrator tries to access a client's SharePoint Online Admin Center](./online-admin/troubleshoot-error-when-tries-to-access-center.md)
 
 ["My site URL or team site URL from Discovery Service is null or empty" error when you use the SharePoint Hybrid Picker](./online-admin/troubleshoot-error-when-you-use-hybrid-picker.md)
 

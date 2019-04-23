@@ -16,15 +16,15 @@ By default, when you open a Microsoft Word document from a hyperlink in an email
 
 1. In SharePoint Designer, open the **Define E-mail Message** dialog box.
 
-1. Select the hyperlink to the document, and then click the hyperlink edit button ![the hyperlink edit button dialog box](./media/force-a-word-document-to-open-in-edit-mode-from-an-email-link/hyperlinkeditbutton.png).
+1. Select the hyperlink to the document, and then click the hyperlink edit button ![the hyperlink edit button dialog box](./media/force-word-document-to-open-in-edit-mode/hyperlinkeditbutton.png).
 
-   ![the hyperlink dialog box](./media/force-a-word-document-to-open-in-edit-mode-from-an-email-link/hyperlink.png)
+   ![the hyperlink dialog box](./media/force-word-document-to-open-in-edit-mode/hyperlink.png)
 
 1. Add **ms-word:ofe|u|** to the beginning of the hyperlink address, such as the following example:
 
    **ms-word:ofe|u|[%Task Process:Web URL%]/[%Task Process:Item URL%]**
 
-   ![the define e-mail message dialog box](./media/force-a-word-document-to-open-in-edit-mode-from-an-email-link/defineemailmessage.png)
+   ![the define e-mail message dialog box](./media/force-word-document-to-open-in-edit-mode/defineemailmessage.png)
 
    > [!NOTE]
    > You can use this method for plain hyperlinks. For example, use "ms-word:ofe|u|http://sharepointserver/library/testdocument.docx" instead of "http://sharepointserver/library/testdocument.docx".
@@ -39,7 +39,7 @@ After you update the hyperlink by using the previous steps, you may receive the 
 
 Microsoft Office has identified a potential security concern.
 
-![the outlook security notice dialog box](./media/force-a-word-document-to-open-in-edit-mode-from-an-email-link/outlooksecuritynotice.png)
+![the outlook security notice dialog box](./media/force-word-document-to-open-in-edit-mode/outlooksecuritynotice.png)
 
 To suppress this notification, add the **ms-word:** registry key, as follows:
 

@@ -1,4 +1,4 @@
-# [SharePoint Hybrid Support](../sharepoint-hybrid.md)
+# [SharePoint Hybrid Support](../hybrid.md)
 
 ## [SharePoint Hybrid Administration](../hybrid-admin/index.md)
 
