@@ -10,9 +10,9 @@ ms.author: v-six
 
 # Using PageParserPath directive can cause performance problems  
 
-Consider the following scenario:  
+Consider the following scenario:
 
-- You have a web application in SharePoint 2007, SharePoint 2010 or SharePoint 2013 environment where you have enabled inline server side code using the PageParserPath directive in the web.config file.  
+- You have a web application in SharePoint 2007, SharePoint 2010 or SharePoint 2013 environment where you have enabled inline server side code using the PageParserPath directive in the web.config file  
 
 - You edit more than 15 aspx pages in the folders specified in the 'VirtualPath' attribute of the PageParserPath directives.  
 
