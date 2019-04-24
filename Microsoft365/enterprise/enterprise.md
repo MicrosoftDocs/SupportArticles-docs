@@ -8,7 +8,6 @@ ms.topic: article
 ms.author: v-six
 ---
 
-
 # Office 365 Enterprise Support
 
 This page lists some issues for Office 365 Enterprise.

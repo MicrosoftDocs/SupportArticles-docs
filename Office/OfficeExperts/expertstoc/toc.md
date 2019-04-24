@@ -34,4 +34,4 @@
 
 ## [Troubleshooting Office installation failures](../troubleshooting-office-installation-failures.md)
 
-## [Product IDs that are supported by the Office Deployment Tool for Click-to-Run](../product-ids-that-are-supported-by-the-office-deployment-tool-for-click-to-run.md)
+## [Use Office Click-to-Run command lines to automate a Quick and Online repair in Office 2013](../office-click-to-run-command-lines-to-automate-a-repair.md)
