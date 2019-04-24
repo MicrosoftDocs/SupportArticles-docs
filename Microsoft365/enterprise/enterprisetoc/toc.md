@@ -10,15 +10,13 @@
 
 ## [How to refresh data to a SQL Azure Database in Excel Online](../excel-online-refreshing-data-to-a-sql-azure-database.md)
 
-## [Fixes for issues on devices with App-V enabled and Office 365 ProPlus installed](../fixes-for-issues-on-devices-with-app-v-enabled-and-office-365-proplus-installed.md)
+## [Fixes for issues on devices with App-V enabled and Office 365 ProPlus installed](../issues-on-devices-with-app-v-enabled.md)
 
 ## [Forms response columns are out of order](../forms-response-columns-out-of-order.md)
 
-## [How to manage the First Run screens that appear when Office 2013 applications are first started](../manage-the-first-run-screens-appearing-when-office-2013-applications-are-first-launched.md)
-
 ## [No email notifications for responses to Group Forms](../no-email-notifications-for-responses-to-group-forms.md)
 
-## [Office 365 can't open files from the most recently used document list (MRU)](../office-365-cant-open-files-from-the-most-recently-used-document-list.md)
+## [Office 365 can't open files from the most recently used document list (MRU)](../unable-to-open-files-from-the-most-recently-used-document-list.md)
 
 ## ["Request Was Taking Too Long" when you opening a workbook in Excel Online](../request-was-taking-too-long-when-opening-a-workbook-in-excel-online.md)
 

@@ -1,10 +1,10 @@
----
+﻿---
 title: How to install a second KMS host for Office in an environment that has an existing KMS host for Windows
 description: Volume license editions Office 2010 support KMS activation. This article describes the guidance on installing a second KMS host for Office in an environment that has an existing KMS host for Windows.
 author: MaryQiu1987
 manager: ericspli
 audience: ITPro
-ms.service: o365-solutions
+ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: ericspli
 ---
