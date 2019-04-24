@@ -27,8 +27,6 @@ This page lists some issues for Office 365 Enterprise.
 
 [Forms response columns are out of order](./forms-response-columns-out-of-order.md)
 
-[How to manage the First Run screens that appear when Office 2013 applications are first started](./manage-the-first-run-screens-appearing-when-office-2013-applications-are-first-launched.md)
-
 [No email notifications for responses to Group Forms](./no-email-notifications-for-responses-to-group-forms.md)
 
 [Office 365 can't open files from the most recently used document list (MRU)](./unable-to-open-files-from-the-most-recently-used-document-list.md)
