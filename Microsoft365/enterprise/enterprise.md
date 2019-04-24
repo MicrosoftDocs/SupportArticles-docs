@@ -8,7 +8,6 @@ ms.topic: article
 ms.author: v-six
 ---
 
-
 # Office 365 Enterprise Support
 
 This page lists some issues for Office 365 Enterprise.
@@ -26,8 +25,6 @@ This page lists some issues for Office 365 Enterprise.
 [Fixes for issues on devices with App-V enabled and Office 365 ProPlus installed](./issues-on-devices-with-app-v-enabled.md)
 
 [Forms response columns are out of order](./forms-response-columns-out-of-order.md)
-
-[How to manage the First Run screens that appear when Office 2013 applications are first started](./manage-the-first-run-screens-appearing-when-office-2013-applications-are-first-launched.md)
 
 [No email notifications for responses to Group Forms](./no-email-notifications-for-responses-to-group-forms.md)
 
