@@ -170,7 +170,8 @@ To rename the global template file, follow these steps:
    ```
    Word 2003  
    ```   
-   ren %userprofile%\AppData\Roaming\Microsoft\Templates\Normal.dot OldNormal.dot    ``` 
+   ren %userprofile%\AppData\Roaming\Microsoft\Templates\Normal.dot OldNormal.dot    
+   ``` 
 4. At the command prompt, type exit, and then press Enter.    
 5. Start Word.    
  
@@ -196,7 +197,8 @@ To restore the original global template file, follow these steps:
    
    Word 2003  
    ```
-   ren %userprofile%\AppData\Roaming\Microsoft\Templates\OldNormal.dot Normal.dot    ```
+   ren %userprofile%\AppData\Roaming\Microsoft\Templates\OldNormal.dot Normal.dot   
+    ```
 4. Type exit, and then press Enter.    
 5. Start Word.    
  

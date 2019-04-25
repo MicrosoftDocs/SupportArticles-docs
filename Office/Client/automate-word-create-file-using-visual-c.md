@@ -258,8 +258,8 @@ For more information, view the articles in the Microsoft Knowledge Base:
 
 - [How to automate Microsoft Word to perform Mail Merge from Visual C#](https://support.microsoft.com/help/301659)
 
-- [Microsoft Office Development with Visual Studio](https://msdn2.microsoft.com/library/aa188489%28office.10%29.aspx)
+- [Microsoft Office Development with Visual Studio](https://msdn.microsoft.com/library/aa188489%28office.10%29.aspx)
 
-- [Word in the Office](https://msdn2.microsoft.com/library/aa201330%28office.11%29.aspx)
+- [Word in the Office](https://msdn.microsoft.com/library/aa201330%28office.11%29.aspx)
 
-- [One More Word](https://msdn2.microsoft.com/library/aa201332%28office.11%29.aspx)
+- [One More Word](https://msdn.microsoft.com/library/aa201332%28office.11%29.aspx)

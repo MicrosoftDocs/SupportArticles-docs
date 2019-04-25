@@ -26,7 +26,7 @@ Microsoft provides programming examples for illustration only, without warranty 
 
 If you have limited programming experience, you may want to contact a Microsoft Certified Partner or Microsoft Advisory Services.
 
-For more information about the support options that are available and about how to contact Microsoft, visit the following Microsoft Web site: [https://support.microsoft.com/](/https://support.microsoft.com/)
+For more information about the support options that are available and about how to contact Microsoft, visit the following Microsoft Web site: [Microsoft Support](https://support.microsoft.com/)
 
 To implement the custom code to process the message, create a subroutine in Visual Basic for Applications. The name of the subroutine does not matter, but it must accept one argument because the Rules Wizard will pass a mail message (MailItem) or meeting request (MeetingItem) to the subroutine. The argument must by of type MailItem or MeetingItem, otherwise the subroutine will not be available in the Rules Wizard. You cannot create one subroutine to handle both types of items by defining the argument to be of type Object. The following Outlook Visual Basic for Applications code illustrates how to create the subroutines:
 
@@ -44,6 +44,6 @@ You can put the subroutine in any module, including ThisOutlookSession, but if y
 
 Another example of creating a custom script is located at the following third-party Web site:
 
-[http://www.outlookcode.com/article.aspx?id=62](http://www.outlookcode.com/article.aspx?id=62)
+[How to process incoming messages in Microsoft Outlook](http://www.outlookcode.com/article.aspx?id=62)
 
 The third-party products that are discussed in this article are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, regarding the performance or reliability of these products.

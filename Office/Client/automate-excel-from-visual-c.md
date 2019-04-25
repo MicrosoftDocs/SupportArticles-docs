@@ -231,4 +231,4 @@ This article demonstrates how to set the proper project reference to the Excel t
 
 ## References
 
-For more information, See [Microsoft Developer Network (MSDN) Web site](https://msdn2.microsoft.com/library/aa188489.aspx).
+For more information, See [Microsoft Developer Network (MSDN) Web site](https://msdn.microsoft.com/library/aa188489.aspx).
