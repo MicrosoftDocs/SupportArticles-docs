@@ -96,7 +96,7 @@ Try to repair your Office programs. To do this, follow the steps for your instal
    > [!NOTE]
    > You may have to restart your computer after the repair process is complete.
 
-   ![Office repair](./media\excel-opens-blank\office-repair.jpg)
+   ![Office repair](./media/excel-opens-blank/office-repair.jpg)
 
 #### For an Office 2013, Office 2010, or Office 2007 installation
 
@@ -136,7 +136,7 @@ To disable hardware acceleration, follow these steps:
 
    The following screen shot shows this option in Excel.
 
-   ![disable hardware accel ](./media\excel-opens-blank\disable-hardware-acceleration.jpg)   
+   ![disable hardware accel ](./media/excel-opens-blank/disable-hardware-acceleration.jpg)   
 5. Click **OK**.   
 
 > [!NOTE]

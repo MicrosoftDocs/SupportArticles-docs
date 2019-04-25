@@ -30,7 +30,7 @@ To manually fix this issue, follow these steps.
 1. Click the gear icon in the upper-right corner of the Skype for Business client, click **File** menu, and then click **Sign Out**.
 2. Click **Delete my sign-in info**.
 
-   ![Delete my sign-in info](./media/how-to-troubleshoot-being-unable-to-sign-in-to-sfb/delete-sign-in-info.png)
+   ![Delete my sign-in info](./media/unable-to-sign-in-to-sfb/delete-sign-in-info.png)
 3. Locate your local AppData folder:
    - If you're using Skype for Business 2016, the folder is located here:
     **%LOCALAPPDATA%\Microsoft\Office\16.0\Lync**
