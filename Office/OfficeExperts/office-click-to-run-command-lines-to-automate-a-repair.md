@@ -4,7 +4,7 @@ description: The June 2014 release (build 15.0.4623.1003 and later versions) of 
 author: MaryQiu1987
 manager: ericspli
 audience: ITPro
-ms.service: o365-solutions
+ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: ericspli
 ---
