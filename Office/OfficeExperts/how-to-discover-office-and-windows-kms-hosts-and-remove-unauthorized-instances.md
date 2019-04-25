@@ -4,7 +4,7 @@ description: Describes how to discover Office and Windows KMS hosts through DNS,
 author: MaryQiu1987
 manager: ericspli
 audience: ITPro
-ms.service: o365-solutions
+ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: ericspli
 ---

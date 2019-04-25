@@ -4,7 +4,7 @@ description: Describes techniques on how to determine and fix Microsoft Office i
 author: MaryQiu1987
 manager: ericspli
 audience: ITPro
-ms.service: o365-solutions
+ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: ericspli
 localization_priority: Normal 
