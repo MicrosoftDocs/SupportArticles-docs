@@ -5,6 +5,7 @@ ms.author: zakirh
 manager: zakirh
 audience: ITPro
 ms.topic: article
+ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ---
 

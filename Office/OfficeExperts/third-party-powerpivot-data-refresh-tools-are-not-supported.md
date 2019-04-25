@@ -5,6 +5,7 @@ ms.author: randring
 manager: randring
 audience: ITPro
 ms.topic: article
+ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ---
 
