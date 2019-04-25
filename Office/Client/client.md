@@ -10,7 +10,7 @@ ms.author: v-six
 
 # Office Products Troubleshooting
 
-This page lisrts some issues for Office products.
+This page lists some issues for Office products.
 
 [How to troubleshoot being unable to sign in to Skype for Business](./unable-to-sign-in-to-sfb.md)
 
