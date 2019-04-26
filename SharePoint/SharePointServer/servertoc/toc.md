@@ -1,4 +1,4 @@
-# [SharePoint Server Support](../server.md)
+# [SharePoint Server Troubleshoot](../server.md)
 
 ## [SharePoint Server Administration](../server-admin/index.md)
 

@@ -8,7 +8,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# SharePoint Online Support
+# SharePoint Online Troubleshoot
 
 This page lists some issues for SharePoint Online.
 

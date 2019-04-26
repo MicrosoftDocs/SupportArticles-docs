@@ -1,4 +1,4 @@
-# [Office Client Support](../client.md)
+# [Office Client Troubleshoot](../client.md)
 
 ## [Unable to sign in to Skype for Business](../unable-to-sign-in-to-sfb.md)
 

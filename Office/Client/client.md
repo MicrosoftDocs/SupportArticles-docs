@@ -8,7 +8,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# Office Products Troubleshooting
+# Office Products Troubleshoot
 
 This page lists some issues for Office products.
 

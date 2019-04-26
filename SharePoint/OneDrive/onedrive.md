@@ -1,5 +1,5 @@
 ---
-title: Listing some issues for SharePoint Server.
+title: Listing some issues for OneDrive for Business.
 author: simonxjx
 manager: willchen
 audience: ITPro
@@ -8,7 +8,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# Onedrive for Business Support
+# OneDrive for Business Troubleshoot
 
 This page lists some issues for OneDrive for Business.
 
