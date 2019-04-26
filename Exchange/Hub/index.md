@@ -5,4 +5,4 @@ title: Exchange Support
 description: Exchange Support
 ---
 
-[!INCLUDE [support](../../common/Office/troubleshoot.md)]
+[!INCLUDE [support](../../common/Office/includes/troubleshoot.md)]

@@ -5,4 +5,4 @@ title: SharePoint Support
 description: SharePoint Support
 ---
 
-[!INCLUDE [support](../../common/Office/troubleshoot.md)]
+[!INCLUDE [support](../../common/Office/includes/troubleshoot.md)]

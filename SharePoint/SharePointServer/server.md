@@ -8,7 +8,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# SharePoint Server Support
+# SharePoint Server Troubleshoot
 
 This page lists some issues for SharePoint Server.
 
