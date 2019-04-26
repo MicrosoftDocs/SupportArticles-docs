@@ -1,4 +1,4 @@
-# [Office 365 Admin Troubleshoot](../admin.md)
+# [Office 365 Admin Troubleshooting](../admin.md)
 
 ## [How to enable Office 365 ProPlus ULS logging](../how-to-enable-office-365-proplus-uls-logging.md)
 

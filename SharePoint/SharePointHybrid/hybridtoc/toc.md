@@ -1,4 +1,4 @@
-# [SharePoint Hybrid Troubleshoot](../hybrid.md)
+# [SharePoint Hybrid Troubleshooting](../hybrid.md)
 
 ## [SharePoint Hybrid Administration](../hybrid-admin/index.md)
 
