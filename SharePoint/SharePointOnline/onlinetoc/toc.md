@@ -1,4 +1,4 @@
-﻿# [SharePoint Online Support](../online.md)
+﻿# [SharePoint Online Troubleshoot](../online.md)
  
 ## [SharePoint Online Administration](../online-admin/index.md)
 

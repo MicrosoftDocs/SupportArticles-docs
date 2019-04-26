@@ -29,9 +29,7 @@ https://*tenant*.sharepoint.com.us2.case.ms/sitepages/home.aspx
 This issue occurs if a Microsoft Cloud App Security policy applies to the user's session.
 
 > [!NOTE]
-> When you create a session policy, each user session that matches the policy is redirected to session control instead of to the app directly.
-
-> For example, if the app returns a page that uses links whose domains end in *myapp.com*, Conditional Access App Control replaces the links with domains that end in something that resembles *myapp.com.us.cas.ms*. In this case, all the sessions are monitored by Microsoft Cloud App Security.
+> When you create a session policy, each user session that matches the policy is redirected to session control instead of to the app directly. For example, if the app returns a page that uses links whose domains end in *myapp.com*, Conditional Access App Control replaces the links with domains that end in something that resembles *myapp.com.us.cas.ms*. In this case, all the sessions are monitored by Microsoft Cloud App Security.
 
 ## Resolution
 
