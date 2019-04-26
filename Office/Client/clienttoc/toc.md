@@ -37,3 +37,39 @@
 ## [Transfer excel data from ADO Recordset](../transfer-excel-data-from-ado-recordset.md)
 
 ## [Unexpected autodiscover behavior](../unexpected-autodiscover-behavior.md)
+
+## [Automate Access using Visual C#](../automate-access-using-visual-c.md)
+
+## [Automate create presentation using Visual Basic .NET](../automate-create-presentation-using-visual-basic-net.md)
+
+## [Automate Excel from C++](../automate-excel-from-c.md)
+
+## [Automate Excel from HTML Web page](../automate-excel-using-jscript.md)
+
+## [Automate Word using Visual Basic to create files](../automate-word-create-file-using-visual-basic.md)
+
+## [Automate Word create mail merge](../automate-word-create-mail-merge.md)
+
+## [Automate Word for mail merge using Visual C#](../automate-word-mail-merge-using-visual-c.md)
+
+## [Call Excel macros](../call-excel-macros.md)
+
+## [Configure default email client using policy](../configure-email-client-using-policy.md)
+
+## [Create a RealTimeData server for Excel](../create-realtimedata-server-in-excel.md)
+
+## [Display progress bar with user form in Excel](../display-progress-bar-with-user-form-in-excel.md)
+
+## [Macro delete duplicate items in Excel](../macro-delete-duplicate-items-in-excel.md)
+
+## [Office COM add-in using Visual C# .NET](../office-com-add-in-using-visual-c.md)
+
+## [Outlook policy control credential prompts](../outlook-policy-control-credential-prompts.md)
+
+## [Transfer data to Excel workbook using Visual C#](../transfer-data-to-excel-using-visual-c.md)
+
+## [Turn off Visual Basic for application](../turn-off-visual-basic-for-application.md)
+
+## [Use WebBrowser in Visual Basic to open document](../webbrowser-open-office-document-in-visual-basic.md)
+
+## [Use WebBrowser in Visual C# to open document](../webbrowser-open-office-document-in-visual-c.md)

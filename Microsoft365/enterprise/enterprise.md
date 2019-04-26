@@ -41,3 +41,7 @@ This page lists some issues for Office 365 Enterprise.
 [You can't save a project from a Project client to Project Web App](./unable-to-save-a-project-from-project-client-to-project-web-app.md)
 
 [You can't sign in to Office 365 from multiple federated domains](./unable-to-sign-in-to-office-365-with-multiple-domain-federation.md)
+
+## Still need help? 
+
+Go to [Microsoft Community](https://answers.microsoft.com) or [Office help](https://support.office.com).
