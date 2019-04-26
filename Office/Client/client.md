@@ -49,3 +49,43 @@ This page lists some issues for Office products.
 [How to transfer data from an ADO Recordset to Excel with automation](./transfer-excel-data-from-ado-recordset.md)
 
 [Unexpected Autodiscover behavior when you have registry settings under the \Autodiscover key](./unexpected-autodiscover-behavior.md)
+
+[How to automate Microsoft Access by using Visual C#](./automate-access-using-visual-c.md)
+
+[How to automatie create and show a presentation by using Visual Basic .NET 2002 or Visual Basic .NET 2003](./automate-create-presentation-using-visual-basic-net.md)
+
+[How to automate Excel from C++ without using MFC or #import](./automate-excel-from-c.md)
+
+[How to automate Excel from an HTML Web page by using JScript](./automate-excel-using-jscript.md)
+
+[How to Automate Microsoft Word by using Visual Basic to create a new document](./automate-word-create-file-using-visual-basic.md)
+
+[How to automate Word with Visual Basic to create a Mail Merge](./automate-word-create-mail-merge.md)
+
+[How to automate Microsoft Word to perform Mail Merge from Visual C#](./automate-word-mail-merge-using-visual-c.md)
+
+[How to call Microsoft Excel macros that take parameters](./call-excel-macros.md)
+
+[How to configure the default e-mail client using Group Policy](./configure-email-client-using-policy.md)
+
+[How to create a RealTimeData server for Excel](./create-realtimedata-server-in-excel.md)
+
+[How to display a progress bar with a user form in Excel](./display-progress-bar-with-user-form-in-excel.md)
+
+[How to use macro examples to delete duplicate items in a list in Excel](./macro-delete-duplicate-items-in-excel.md)
+
+[How to build an Office COM add-in by using Visual C# .NET](./office-com-add-in-using-visual-c.md)
+
+[How to use Outlook policy to control credential prompts when connecting to an Exchange Server mailbox](./outlook-policy-control-credential-prompts.md)
+
+[How to transfer data to an Excel workbook by using Visual C# 2005 or Visual C# .NET](./transfer-data-to-excel-using-visual-c.md)
+
+[How to turn off Visual Basic for Applications when you deploy Office](./turn-off-visual-basic-for-application.md)
+
+[How to use the WebBrowser control in Visual Basic to open an Office document](./webbrowser-open-office-document-in-visual-basic.md)
+
+[How to use the WebBrowser control to open Office documents in Visual C# 2005 or in Visual C# .NET](./webbrowser-open-office-document-in-visual-c.md)
+
+## Still need help? 
+
+Go to [Microsoft Community](https://answers.microsoft.com) or [Office help](https://support.office.com).
