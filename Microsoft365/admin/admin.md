@@ -19,3 +19,7 @@ ms.author: v-six
 [Troubleshooting Data Loss Protection (DLP) policy tips](./troubleshooting-data-loss-protection-policy-tips.md)
 
 ["Sorry, but we're having trouble signing you in" error when signing in to Office 365](./exchange-online-application-service-principal-disabled.md)
+
+## Still need help? 
+
+Go to [Microsoft Community](https://answers.microsoft.com) or [Office help](https://support.office.com).

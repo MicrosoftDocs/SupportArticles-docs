@@ -49,7 +49,7 @@ Write-Host "Transport service:" -ForegroundColor yellow; Get-TransportService | 
 ```
 
 > [!NOTE]
-> The Pickup directory and the Replay directory that are available on Edge Transport servers and Mailbox servers also have messages rate limits that you can configure. Typically, the Pickup directory and the Replay directory aren't used in everyday mail flow. For more information, see [Configure the Pickup Directory and the Replay Directory](http://technet.microsoft.com/library/c9ca7358-9a08-4f57-89d0-910e4438df8a.aspx). The maximum number of message files per minute that can be processed by the Pickup directory and the Replay directory is 100. Each directory can independently process message files at this rate.
+> The Pickup directory and the Replay directory that are available on Edge Transport servers and Mailbox servers also have messages rate limits that you can configure. Typically, the Pickup directory and the Replay directory aren't used in everyday mail flow. For more information, see [Configure the Pickup Directory and the Replay Directory](https://technet.microsoft.com/library/c9ca7358-9a08-4f57-89d0-910e4438df8a.aspx). The maximum number of message files per minute that can be processed by the Pickup directory and the Replay directory is 100. Each directory can independently process message files at this rate.
 
 ## Message throttling on Send connectors
 <a name="SendConn"> </a>
@@ -100,8 +100,8 @@ For more information, see the following topics:
 
 - [User workload management in Exchange Server](../server-health/workload-management.md)
 
-- [Change User Throttling Settings for Specific Users](http://technet.microsoft.com/library/c5f834d6-189d-485e-9800-5e0066815ecf.aspx)
+- [Change User Throttling Settings for Specific Users](https://technet.microsoft.com/library/c5f834d6-189d-485e-9800-5e0066815ecf.aspx)
 
-- [Change User Throttling Settings for All Users in Your Organization](http://technet.microsoft.com/library/c45cacfc-768d-4605-9bb0-53e30273fe4d.aspx)
+- [Change User Throttling Settings for All Users in Your Organization](https://technet.microsoft.com/library/c45cacfc-768d-4605-9bb0-53e30273fe4d.aspx)
 
 

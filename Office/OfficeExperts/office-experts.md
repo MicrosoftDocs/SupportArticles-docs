@@ -47,3 +47,7 @@ This page lists some issues for Office Experts.
 [Troubleshooting Office installation failures](./troubleshooting-office-installation-failures.md)
 
 [Use Office Click-to-Run command lines to automate a Quick and Online repair in Office 2013](./office-click-to-run-command-lines-to-automate-a-repair.md)
+
+## Still need help? 
+
+Go to [Microsoft Community](https://answers.microsoft.com) or [Office help](https://support.office.com).
