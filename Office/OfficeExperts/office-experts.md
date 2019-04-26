@@ -26,7 +26,7 @@ This page lists some issues for Office Experts.
 
 [PowerPivot does not work with .atomsvc files](./powerpivot-does-not-work-with-atomsvc-files.md)
 
-["The workbook must be checked out before it can be replaced. You can save this file with another name." when you run a scheduled data refresh on a PowerPivot workbook](./workbook-must-be-checked-out-on-a-powerpivot-workbook.md)
+["The workbook must be checked out before it can be replaced. You can save this file with another name." when you run a scheduled data refresh on a PowerPivot workbook](./powerpivot-workbook-checked-out.md)
 
 [Third-party PowerPivot data refresh tools are not supported](./third-party-powerpivot-data-refresh-tools-are-not-supported.md)
 

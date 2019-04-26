@@ -14,7 +14,7 @@
 
 ## [PowerPivot not work with .atomsvc files](../powerpivot-does-not-work-with-atomsvc-files.md)
 
-## ["The workbook must be checked out" error for PowerPivot](../workbook-must-be-checked-out-on-a-powerpivot-workbook.md)
+## ["The workbook must be checked out" error for PowerPivot](../powerpivot-workbook-checked-out.md)
 
 ## [Third-party PowerPivot data refresh tools not supported](../third-party-powerpivot-data-refresh-tools-are-not-supported.md)
 
