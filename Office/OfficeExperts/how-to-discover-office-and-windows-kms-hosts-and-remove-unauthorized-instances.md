@@ -58,8 +58,8 @@ In many cases, Windows KMS hosts may be unintentionally set up by users who mist
 
 For more information, see the following articles:
 
-- [Slmgr.vbs Options](http://technet.microsoft.com/library/ff793433.aspx)
-- [Deploying KMS Activation](http://technet.microsoft.com/library/ff793409.aspx)
+- [Slmgr.vbs Options](https://technet.microsoft.com/library/ff793433.aspx)
+- [Deploying KMS Activation](https://technet.microsoft.com/library/ff793409.aspx)
 
 ## Remove unauthorized Office KMS hosts
 
@@ -86,10 +86,10 @@ Activation ID: bfe7a195-4f8f-4f0b-a622-cf13c7d16864
 Application ID: 59a52881-a989-479d-xxxx-xxxxxxxxxx
 Extended PID: 
 Installation ID: 
-Processor Certificate URL: http://go.microsoft.com/fwlink/p/?LinkID=88342
-Machine Certificate URL: http://go.microsoft.com/fwlink/p/?LinkID=88343
-Use License URL: http://go.microsoft.com/fwlink/p/?LinkID=88345
-Product Key Certificate URL: http://go.microsoft.com/fwlink/p/?LinkID=88344
+Processor Certificate URL: https://go.microsoft.com/fwlink/p/?LinkID=88342
+Machine Certificate URL: https://go.microsoft.com/fwlink/p/?LinkID=88343
+Use License URL: https://go.microsoft.com/fwlink/p/?LinkID=88345
+Product Key Certificate URL: https://go.microsoft.com/fwlink/p/?LinkID=88344
 Partial Product Key: XXXXX
 License Status: Licensed
 Remaining Windows rearm count: 1
@@ -127,10 +127,10 @@ Then, follow these steps to remove an Office KMS host in your environment:
    Application ID: 59a52881-a989-479d-xxxx-xxxxxxxxxx
    Extended PID: 
    Installation ID: 
-   Processor Certificate URL: http://go.microsoft.com/fwlink/?LinkID=88342
-   Machine Certificate URL: http://go.microsoft.com/fwlink/?LinkID=88343
-   Use License URL: http://go.microsoft.com/fwlink/?LinkID=88345
-   Product Key Certificate URL: http://go.microsoft.com/fwlink/?LinkID=88344
+   Processor Certificate URL: https://go.microsoft.com/fwlink/?LinkID=88342
+   Machine Certificate URL: https://go.microsoft.com/fwlink/?LinkID=88343
+   Use License URL: https://go.microsoft.com/fwlink/?LinkID=88345
+   Product Key Certificate URL: https://go.microsoft.com/fwlink/?LinkID=88344
    This license is not in use.
    License Status: Unlicensed
    Remaining Windows rearm count: 1
@@ -141,6 +141,6 @@ Then, follow these steps to remove an Office KMS host in your environment:
 
 For more information, see the following articles:
 
-- [KMS activation of Office 2013](http://technet.microsoft.com/en-us/library/ee624357.aspx)
-- [Troubleshoot volume activation for Office 2013](http://technet.microsoft.com/en-us/library/ee624355.aspx)
+- [KMS activation of Office 2013](https://technet.microsoft.com/en-us/library/ee624357.aspx)
+- [Troubleshoot volume activation for Office 2013](https://technet.microsoft.com/en-us/library/ee624355.aspx)
 - [KMS Activation of Office 2016/2019](https://docs.microsoft.com/deployoffice/vlactivation/activate-office-by-using-kms)

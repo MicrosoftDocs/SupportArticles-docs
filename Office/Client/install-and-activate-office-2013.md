@@ -37,4 +37,4 @@ You should not receive an error message in this scenario. To work around this is
 - Office 2013 Professional Plus keys that MSDN and TechNet provide support Terminal Server.   
 - For more information about how to install and activate Office Professional Plus 2013 on a terminal server, go to the following TechNet blog entry:
 
-   [How to install the MSDN/TechNet copy of Microsoft Office 2013 on a Windows Server that is running Remote Desktop](http://blogs.technet.com/b/odsupport/archive/2012/11/29/how-to-install-the-msdn-technet-copy-of-microsoft-office-2013-on-a-windows-server-running-remote-desktop.aspx )   
+   [How to install the MSDN/TechNet copy of Microsoft Office 2013 on a Windows Server that is running Remote Desktop](https://blogs.technet.com/b/odsupport/archive/2012/11/29/how-to-install-the-msdn-technet-copy-of-microsoft-office-2013-on-a-windows-server-running-remote-desktop.aspx )   

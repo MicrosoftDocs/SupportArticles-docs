@@ -137,7 +137,7 @@ This code represents two interface requests: one for the Range object that the R
 
 For additional information about using arrays to get and set values in ranges with Excel Automation, click the article number below to view the article in the Microsoft Knowledge Base:
 
-[302096 ](http://support.microsoft.com/help/302096) HOWTO: Automate Excel With Visual C# .NET To Fill or Obtain Data In a Range Using Arrays
+[302096 ](https://support.microsoft.com/help/302096) HOWTO: Automate Excel With Visual C# .NET To Fill or Obtain Data In a Range Using Arrays
 
 ### Use Automation to Transfer an ADO Recordset to a Worksheet Range
 

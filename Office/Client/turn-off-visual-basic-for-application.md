@@ -53,21 +53,21 @@ For more information about how to cutomize Office installations and about how to
 
 Office 2016
 
-[(Preview) Office 2016 Administrative Template files (ADMX/ADML) and Office Customization Tool](http://www.microsoft.com/download/details.aspx?id=49030)
+[(Preview) Office 2016 Administrative Template files (ADMX/ADML) and Office Customization Tool](https://www.microsoft.com/download/details.aspx?id=49030)
 
 Office 2013
 
-[Use the OCT to customize Office 2013](http://technet.microsoft.com/library/cc179132%28v=office.15%29.aspx)
+[Use the OCT to customize Office 2013](https://technet.microsoft.com/library/cc179132%28v=office.15%29.aspx)
 
-[Customize Setup before installing Office 2013](http://technet.microsoft.com/library/cc179121.aspx)
+[Customize Setup before installing Office 2013](https://technet.microsoft.com/library/cc179121.aspx)
 
 Office 2010
 
-[Customize Office 2010](http://technet.microsoft.com/library/cc179132%28v=office.14%29.aspx)
+[Customize Office 2010](https://technet.microsoft.com/library/cc179132%28v=office.14%29.aspx)
 
 The 2007 Office system
 
-[Customize the 2007 Office system](http://technet.microsoft.com/library/cc179132%28office.12%29.aspx)
+[Customize the 2007 Office system](https://technet.microsoft.com/library/cc179132%28office.12%29.aspx)
 
 ### Method 2: Custom Maintenance Wizard
 
