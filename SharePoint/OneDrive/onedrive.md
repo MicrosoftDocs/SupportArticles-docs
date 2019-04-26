@@ -8,7 +8,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# OneDrive for Business Troubleshoot
+# OneDrive for Business Troubleshooting
 
 This page lists some issues for OneDrive for Business.
 

@@ -8,7 +8,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# Office Experts Troubleshoot
+# Office Experts Troubleshooting
 
 This page lists some issues for Office Experts.
 

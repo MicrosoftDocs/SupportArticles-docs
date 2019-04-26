@@ -8,7 +8,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# Office 365 Admin Troubleshoot
+# Office 365 Admin Troubleshooting
 
 [How to enable Office 365 ProPlus ULS logging](./how-to-enable-office-365-proplus-uls-logging.md)
 
