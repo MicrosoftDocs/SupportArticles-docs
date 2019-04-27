@@ -23,4 +23,4 @@ This is a current design limitation of Office, and there are no current plans to
 
 If you use Word, you can use the SharePoint properties screen (through **View** tab > **Properties**) or use the properties page from the SharePoint web UI.
 
-![SharePoint properties screen through the View tab](./media/sharepoint-properties-of-type-do-not-work-on-office-backstage-file-info-screen/properties.png)
+![SharePoint properties screen through the View tab](./media/sharepoint-properties-backstage-file-info/properties.png)

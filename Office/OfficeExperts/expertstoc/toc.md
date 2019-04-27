@@ -20,7 +20,7 @@
 
 ## [Upsize PowerPivot 2013 workbooks to SSAS](../upsize-powerpivot-2013-workbooks-to-sql-server-analysis-services.md)
 
-## [Manage the First Run screens for Office 2013](../manage-the-first-run-screens-appearing-when-office-2013-applications-are-first-launched.md)
+## [Manage the First Run screens for Office 2013](../manage-office-2013-first-run-screens.md)
 
 ## [Activate Office 2010 KMS host through phone](../activate-office-2010-kms-host-via-phone-activation.md)
 
@@ -28,7 +28,7 @@
 
 ## [Install a second KMS host for Office](../guidance-on-installing-a-second-kms-host-for-office.md)
 
-## [Discover Office and Windows KMS hosts](../how-to-discover-office-and-windows-kms-hosts-and-remove-unauthorized-instances.md)
+## [Discover Office and Windows KMS hosts](../discover-remove-unauthorized-office-windows-kms-hosts.md)
 
 ## [Check the size of this month's Office ProPlus update](../how-big-was-this-months-office-proplus-update.md)
 

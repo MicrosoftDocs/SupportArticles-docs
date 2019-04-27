@@ -6,7 +6,7 @@
 
 ## ["PivotTable Operation Failed" in Excel Online](../excel-online-pivottable-operation-failed.md)
 
-## [Issue when refresh Project Online data in Excel Online](../excel-online-refresh-fails-to-project-online-when-using-timebyday.md)
+## [Issue when refresh Project Online data in Excel Online](../excel-online-refresh-fails-project-online-using-timebyday.md)
 
 ## [Refresh SQL Azure database data in Excel Online](../excel-online-refreshing-data-to-a-sql-azure-database.md)
 
@@ -16,16 +16,16 @@
 
 ## [No email notification for response to Group Forms](../no-email-notifications-for-responses-to-group-forms.md)
 
-## [Can't open file from recently used document list](../unable-to-open-files-from-the-most-recently-used-document-list.md)
+## [Can't open file from recently used document list](../cant-open-files-most-recently-used-list.md)
 
-## ["Request Was Taking Too Long" in Excel Online](../request-was-taking-too-long-when-opening-a-workbook-in-excel-online.md)
+## ["Request Was Taking Too Long" in Excel Online](../request-too-long-opening-excel-workbook.md)
 
-## [lookup-multi select not work on Office backstage](../sharepoint-properties-of-type-do-not-work-on-office-backstage-file-info-screen.md)
+## [lookup-multi select not work on Office backstage](../sharepoint-properties-backstage-file-info.md)
 
 ## [File size limit error when upload files to Sway](../sway-file-size-limit-error.md)
 
-## [Can't connect to Project Online OData from SSIS](../unable-to-connect-to-project-online-odata-from-ssis.md)
+## [Can't connect to Project Online OData from SSIS](../cant-connect-project-online-odata-from-ssis.md)
 
-## [Can't save a project to Project Online](../unable-to-save-a-project-from-project-client-to-project-web-app.md)
+## [Can't save a project to Project Online](../cant-save-project-client-to-web-app.md)
 
-## [Can't sign in Office 365 from multiple federated domains](../unable-to-sign-in-to-office-365-with-multiple-domain-federation.md)
+## [Can't sign in Office 365 from multiple federated domains](../cant-sign-in-office-365-multiple-domain-federation.md)

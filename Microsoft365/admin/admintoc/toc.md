@@ -8,4 +8,4 @@
 
 ## [Issue when signin Office 365](../exchange-online-application-service-principal-disabled.md)
 
-## [Supported Product IDs for Click-to-Run](../product-ids-that-are-supported-by-the-office-deployment-tool-for-click-to-run.md)
+## [Supported Product IDs for Click-to-Run](../product-ids-supported-office-deployment-click-to-run.md)
