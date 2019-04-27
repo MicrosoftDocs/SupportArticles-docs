@@ -12,7 +12,7 @@ ms.author: v-six
 
 [How to enable Office 365 ProPlus ULS logging](./how-to-enable-office-365-proplus-uls-logging.md)
 
-[Product IDs that are supported by the Office Deployment Tool for Click-to-Run](./product-ids-that-are-supported-by-the-office-deployment-tool-for-click-to-run.md)
+[Product IDs that are supported by the Office Deployment Tool for Click-to-Run](./product-ids-supported-office-deployment-click-to-run.md)
 
 [Reset Office 365 ProPlus activation state](./reset-office-365-proplus-activation-state.md)
 

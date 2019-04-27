@@ -26,13 +26,13 @@ This page lists some issues for Office Experts.
 
 [PowerPivot does not work with .atomsvc files](./powerpivot-does-not-work-with-atomsvc-files.md)
 
-["The workbook must be checked out before it can be replaced. You can save this file with another name." when you run a scheduled data refresh on a PowerPivot workbook](./workbook-must-be-checked-out-on-a-powerpivot-workbook.md)
+["The workbook must be checked out before it can be replaced. You can save this file with another name." when you run a scheduled data refresh on a PowerPivot workbook](./powerpivot-workbook-checked-out.md)
 
 [Third-party PowerPivot data refresh tools are not supported](./third-party-powerpivot-data-refresh-tools-are-not-supported.md)
 
 [Upsize PowerPivot 2013 workbooks to SQL Server Analysis Services (SSAS)](./upsize-powerpivot-2013-workbooks-to-sql-server-analysis-services.md)
 
-[How to manage the First Run screens that appear when Office 2013 applications are first started](./manage-the-first-run-screens-appearing-when-office-2013-applications-are-first-launched.md)
+[How to manage the First Run screens that appear when Office 2013 applications are first started](./manage-office-2013-first-run-screens.md)
 
 [Activate Office 2010 KMS host through phone activation](./activate-office-2010-kms-host-via-phone-activation.md)
 
@@ -42,7 +42,7 @@ This page lists some issues for Office Experts.
 
 [How to check the size of this month's Office ProPlus update](./how-big-was-this-months-office-proplus-update.md)
 
-[How to discover Office and Windows KMS hosts through DNS and remove unauthorized instances](./how-to-discover-office-and-windows-kms-hosts-and-remove-unauthorized-instances.md)
+[How to discover Office and Windows KMS hosts through DNS and remove unauthorized instances](./discover-remove-unauthorized-office-windows-kms-hosts.md)
 
 [Troubleshooting Office installation failures](./troubleshooting-office-installation-failures.md)
 
