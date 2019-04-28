@@ -23,8 +23,7 @@ The following steps demonstrate how to build a simple Automation client. There a
 2. Add code to automate Microsoft Excel.
 3. Run the Automation client.   
  
-You can use the first step, [Create the Automation Client](#Create-the-Automation-Client), to create a new Automation client regardless of the Automation server that you are using. The second step,
- [Add Code to Automate Microsoft Excel](#Add-Code-to-Automate-Microsoft-Excel), is specific to the Automation server. 
+You can use the first step (Create the Automation Client), to create a new Automation client regardless of the Automation server that you are using. The second step (Add Code to Automate Microsoft Excel), is specific to the Automation server. 
 
 ### Create an Automation client
 

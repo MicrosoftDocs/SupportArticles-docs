@@ -118,7 +118,7 @@
 
 ## [Use VB to count occurrences in Excel](../use-vb-count-occurrences-in-excel.md)
 
-## [Use Visual C# to automate running program instance](../use-visual-c#-automate-run-program-instance.md)
+## [Use Visual C# to automate running program instance](../use-visual-c-automate-run-program-instance.md)
 
 ## [Word automation to count page numbers](../use-word-automation-count-page-number.md)
 

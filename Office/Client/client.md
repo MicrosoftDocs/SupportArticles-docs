@@ -116,7 +116,7 @@ This page lists some issues for Office products.
 
 [How to print comments that are inserted by reviewers when you use the Track Markup feature in Visio 2010, in Visio 2007, or in Visio 2003](./print-comment-in-visio.md)
 
-[How to prioritize the use of BITS by Office 2016 clients for downloading updates](./prioritize-bits-for-office-2016.md)
+[How to prioritize the use of BITS by Office 2016 clients for downloading updates](./prioritize-bits-for-office-2016-updates.md)
 
 [How to set Outlook 2016 for Mac to delay trying to renew a Kerberos ticket](./renew-kerberos-ticket-in-outlook-2016-for-mac.md)
 
@@ -130,7 +130,7 @@ This page lists some issues for Office products.
 
 [How to use Visual Basic for Applications to count the occurrences of a character in a selection in Excel](./use-vb-count-occurrences-in-excel.md)
 
-[How to use Visual C# to automate a running instance of an Office program](./use-visual-c#-automate-run-program-instance.md)
+[How to use Visual C# to automate a running instance of an Office program](./use-visual-c-automate-run-program-instance.md)
 
 [How to use Word automation to count the number of pages in each section of a document](./use-word-automation-count-page-number.md)
 

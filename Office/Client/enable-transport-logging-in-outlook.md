@@ -26,7 +26,7 @@ Warning Serious problems might occur if you modify the registry incorrectly by u
 
 ### How to enable logging
  
-To have us enable the mail logging option for you, go to the "[Here's an easy fix](#fixitformealways)" section. If you prefer to enable the mail logging option yourself, go to the "[Let me fix it myself](#letmefixitmyselfalways)" section.
+To have us enable the mail logging option for you, go to the "Here's an easy fix" section. If you prefer to enable the mail logging option yourself, go to the "Let me fix it myself" section.
 
 ### Here's an easy fix
  
