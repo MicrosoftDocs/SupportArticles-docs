@@ -92,6 +92,8 @@ This page lists some administration issues for SharePoint Server.
 
 [Web part controls don't work after sites are migrated to SharePoint Server 2016](./web-part-controls-do-not-work-after-sites-are-migrated.md)
 
+[A Web Part that is configured to refresh automatically on a SharePoint Foundation 2010 Web page never finishes refreshing](./web-part-refresh-in-sharepoint-foundation-2010.md)
+
 ## Still need help? 
 
 Go to [Microsoft Community](https://answers.microsoft.com) or [SharePoint help center](https://support.office.com/sharepoint).
