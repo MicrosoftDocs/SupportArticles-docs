@@ -1,4 +1,4 @@
-# [SharePoint Server Support](../server.md)
+# [SharePoint Server Troubleshooting](../server.md)
 
 ## [SharePoint Server Administration](../server-admin/index.md)
 
@@ -42,6 +42,7 @@
 ### ["An update conflict has occurred, and you must re-try this action" when change or delete an alternate access mapping](../server-admin/update-conflict-when-modify-or-delete-alternate-access-mapping.md)
 ### ["Upgrade Available" status in new SharePoint Server 2016 farm](../server-admin/upgrade-available-status-in-new-farm.md)
 ### [Web part controls don't work after sites are migrated to SharePoint Server 2016](../server-admin/web-part-controls-do-not-work-after-sites-are-migrated.md)
+### [A Web Part that is configured to refresh automatically on a SharePoint Foundation 2010 Web page never finishes refreshing](../server-admin/web-part-refresh-in-sharepoint-foundation-2010.md)
 
 ## [SharePoint Server Performance](../server-performance/index.md)
 

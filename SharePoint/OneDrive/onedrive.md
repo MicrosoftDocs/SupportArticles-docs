@@ -1,5 +1,5 @@
 ---
-title: Listing some issues for SharePoint Server.
+title: Listing some issues for OneDrive for Business.
 author: simonxjx
 manager: willchen
 audience: ITPro
@@ -8,11 +8,13 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# Onedrive for Business Support
+# OneDrive for Business Troubleshooting
 
 This page lists some issues for OneDrive for Business.
 
 [401 error when you use Graph API to access OneDrive data with location-based policy enabled](./401-error-when-using-graph-api-to-access-data.md)
+
+[How to block OneDrive use from within Office 365 ProPlus and Office 2016 applications](./block-onedrive-use-from-office.md)
 
 ## Still need help? 
 

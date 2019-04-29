@@ -8,7 +8,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# SharePoint Experts Support
+# SharePoint Experts Troubleshooting
 
 This page lists some issues for SharePoint Experts.
 

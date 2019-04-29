@@ -8,7 +8,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# SharePoint Server Support
+# SharePoint Server Troubleshooting
 
 This page lists some issues for SharePoint Server.
 
@@ -93,6 +93,8 @@ This page lists some issues for SharePoint Server.
 ["Upgrade Available" status in new SharePoint Server 2016 farm](./server-admin/upgrade-available-status-in-new-farm.md)
 
 [Web part controls don't work after sites are migrated to SharePoint Server 2016](./server-admin/web-part-controls-do-not-work-after-sites-are-migrated.md)
+
+[A Web Part that is configured to refresh automatically on a SharePoint Foundation 2010 Web page never finishes refreshing](./server-admin/web-part-refresh-in-sharepoint-foundation-2010.md)
 
 ## SharePoint Server Installation
 

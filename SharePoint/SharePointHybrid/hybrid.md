@@ -8,7 +8,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# SharePoint Hybrid Support
+# SharePoint Hybrid Troubleshooting
 
 This page lists some issues for SharePoint Hybrid.
 
