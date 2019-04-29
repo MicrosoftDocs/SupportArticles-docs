@@ -94,6 +94,8 @@ This page lists some issues for SharePoint Server.
 
 [Web part controls don't work after sites are migrated to SharePoint Server 2016](./server-admin/web-part-controls-do-not-work-after-sites-are-migrated.md)
 
+[A Web Part that is configured to refresh automatically on a SharePoint Foundation 2010 Web page never finishes refreshing](./server-admin/web-part-refresh-in-sharepoint-foundation-2010.md)
+
 ## SharePoint Server Installation
 
 ["SharePoint Foundation administration tool has stopped working" error during a slipstream installation](./server-install/administration-tool-stopped-working-during-a-slipstream-installation.md)
