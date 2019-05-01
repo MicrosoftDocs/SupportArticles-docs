@@ -4,13 +4,77 @@
       {
         "files": [
           "**/*.md",
-          "**/*.yml"
+          "**/**.yml"
         ],
+        "src": "Hub",
+        "dest": ".",
         "exclude": [
           "**/obj/**",
           "**/includes/**",
-          "_themes/**",
-          "_themes.pdf/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "**/**.yml"
+        ],
+        "src": "ExchangeServer",
+        "dest": ".",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "**/**.yml"
+        ],
+        "src": "ExchangeExperts",
+        "dest": ".",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "**/**.yml"
+        ],
+        "src": "ExchangeOnline",
+        "dest": ".",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "**/**.yml"
+        ],
+        "src": "ExchangeHybrid",
+        "dest": ".",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
           "README.md",
           "LICENSE",
           "LICENSE-CODE",
@@ -22,20 +86,21 @@
       {
         "files": [
           "**/*.png",
-          "**/*.jpg"
+          "**/*.jpg",
+          "**/*.gif",
+          "**/*.pdf",
+          "**/*.svg"
         ],
         "exclude": [
           "**/obj/**",
-          "**/includes/**",
-          "_themes/**",
-          "_themes.pdf/**"
+          "**/includes/**"
         ]
       }
     ],
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "/exchange/support/breadcrumb/toc.json",
+      "breadcrumb_path": "/exchange/troubleshoot/breadcrumb/toc.json",
       "extendBreadcrumb": true,
       "feedback_system": "None"
     },
