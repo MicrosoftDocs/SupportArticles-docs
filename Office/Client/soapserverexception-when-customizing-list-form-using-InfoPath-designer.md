@@ -14,7 +14,6 @@ ms.author: v-six
 ## Symptoms
 When you click on the “customize InfoPath” option in a Sharepoint list, you receive the following error:
 
-> [!ERROR]
 > AP response indicates that an error occurred on the server: Exception of type 'Microsoft.SharePoint.SoapServer.SoapServerException' was thrown. [detail][errorstring xmlns="http://schemas.microsoft.com/sharepoint/soap/"] List does not exist. The page you selected contains a list that does not exist. It may have been deleted by another user. [/errorstring][errorcode xmlns="http://schemas.microsoft.com/sharepoint/soap/"]0x82000006[/errorcode][/detail]
 
 ## Cause
