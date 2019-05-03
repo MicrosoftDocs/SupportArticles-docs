@@ -27,6 +27,7 @@ To resolve this error, follow the steps below:
 
 > [!NOTE]
 > If you see a dialog box that asks “Are you sure you want to change it?”, select **Yes**.
+
 3.	Double click the file (or right-click and select **Open**).
 4.	Browse to the word/_rels folder.
 5.	Open the file document.xml.rels file in Notepad or any text editor.
