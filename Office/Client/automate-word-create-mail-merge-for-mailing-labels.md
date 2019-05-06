@@ -1,5 +1,5 @@
 ---
-title: How to automate Word from Visual Basic to create a mail merge for mailing labels
+title: Automate Word from Visual Basic to create a mail merge for mailing labels
 description: Describes how to automate Word from a Visual Basic application to create and execute a mail merge for mailing labels.
 author: simonxjx
 manager: willchen
