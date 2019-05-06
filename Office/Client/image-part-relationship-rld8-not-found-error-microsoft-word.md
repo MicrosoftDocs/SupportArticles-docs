@@ -2,7 +2,7 @@
 title: “The image part with relationship rID8 was not found” error in Microsoft Word
 description: 
 author: todmccoy
-ms.author: v-todmc
+ms.author: v-todmc, Shuvojit.Ray
 ms.reviewer: Shuvojit.Ray
 manager: joselr
 audience: ITPro
