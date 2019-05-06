@@ -35,7 +35,7 @@ Here is the list of variables that can be used with OfficeClickToRun.exe:
 
 For example, to do a silent Online repair, run the following command from an elevated command prompt:
 
-```
+```powershell
 "C:\Program Files\Microsoft Office 15\ClientX64\OfficeClickToRun.exe" scenario=Repair platform=x86 culture=en-us RepairType=FullRepair DisplayLevel=False
 ```
 

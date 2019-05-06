@@ -23,7 +23,7 @@ This article illustrates JScript code that automates Excel. JScript has no inter
 
 1. Start Notepad.   
 2. Paste the following code into Notepad. 
-    ```
+    ```javascript
     <HTML>
     <BODY>
     Press the button to start Excel and display quarterly data.

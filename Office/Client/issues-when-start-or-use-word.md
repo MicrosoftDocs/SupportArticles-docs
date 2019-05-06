@@ -165,11 +165,11 @@ To rename the global template file, follow these steps:
 
    Word 2016, Word 2013, Word 2010, or Word 2007
   
-   ```
+   ```powershell
    ren %userprofile%\AppData\Roaming\Microsoft\Templates\Normal.dotm OldNormal.dotm  
    ```
    Word 2003  
-   ```   
+   ```powershell   
    ren %userprofile%\AppData\Roaming\Microsoft\Templates\Normal.dot OldNormal.dot    
    ``` 
 4. At the command prompt, type exit, and then press Enter.    
@@ -191,12 +191,12 @@ To restore the original global template file, follow these steps:
 3. At the command prompt, type the following command, as appropriate for the version of Word that you are running, and then press Enter:
 
    Word 2016, Word 2013, Word 2010 and Word 2007
-   ```
+   ```powershell
    ren %userprofile%\AppData\Roaming\Microsoft\Templates\OldNormal.dotm Normal.dotm  
    ``` 
    
    Word 2003  
-   ```
+   ```powershell
    ren %userprofile%\AppData\Roaming\Microsoft\Templates\OldNormal.dot Normal.dot   
     ```
 4. Type exit, and then press Enter.    

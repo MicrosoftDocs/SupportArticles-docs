@@ -19,7 +19,7 @@ Microsoft provides programming examples for illustration only, without warranty 
 
 The following sample macro searches a single list in the range A1:A100 and deletes all duplicate items in the list. This macro requires that you do not have empty cells in the list range. If your list does contain empty cells, sort the data in ascending order so that the empty cells are all at the end of your list. 
 
-    ```
+    ```vb
     Sub DelDups_OneList()
     Dim iListCount As Integer
     Dim iCtr As Integer
@@ -58,7 +58,7 @@ The following sample macro searches a single list in the range A1:A100 and delet
 
 The following sample macro compares one (master) list against another list, and deletes duplicate items in the second list that are also in the master list. The first list is on Sheet1 in the range A1:A10. The second list is on Sheet2 in the range A1:A100. To use the macro, select either sheet, and then run the macro. 
 
-    ```
+    ```vb
     Sub DelDups_TwoLists()
     Dim iListCount As Integer
     Dim iCtr As Integer

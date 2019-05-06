@@ -25,7 +25,7 @@ For illustration purposes, the following sample uses the sample Pubs database in
 
 1. On your Web server, create a virtual directory that is called WordMailMerge.   
 2. Use Notepad to create a file called Default.asp that contains the code given below. Save the file to the WordMailMerge virtual directory.
-    ```
+    ```vbscript
     <%@ Language=VBScript %>
     <HTML>
     <BODY>
@@ -132,7 +132,7 @@ For illustration purposes, the following sample uses the sample Pubs database in
     ```
 
 3. Use Notepad to create a file called Getdata.asp that contains the code given below. Save the file to the WordMailMerge virtual directory.
-    ```
+    ```vbscript
     <%@ Language=VBScript %>
     <%
       Dim oConn,oRS,strConn,sSQLServer

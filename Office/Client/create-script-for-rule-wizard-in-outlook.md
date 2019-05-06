@@ -30,7 +30,7 @@ For more information about the support options that are available and about how 
 
 To implement the custom code to process the message, create a subroutine in Visual Basic for Applications. The name of the subroutine does not matter, but it must accept one argument because the Rules Wizard will pass a mail message (MailItem) or meeting request (MeetingItem) to the subroutine. The argument must by of type MailItem or MeetingItem, otherwise the subroutine will not be available in the Rules Wizard. You cannot create one subroutine to handle both types of items by defining the argument to be of type Object. The following Outlook Visual Basic for Applications code illustrates how to create the subroutines:
 
-```
+```vb
 Sub CustomMailMessageRule(Item As Outlook.MailItem)
    MsgBox "Mail message arrived: " & Item.Subject
 End Sub

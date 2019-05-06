@@ -35,7 +35,7 @@ This article describes two techniques for exporting the data in the DataGrid:
     WebForm1 appears in Design view for you.   
 3. In Solution Explorer, right-click WebForm1.aspx and then click Rename. Change the name of the file to Bottom.aspx.   
 4. On the View menu, click HTML Source to add the following DataGrid between the <form> and </form> tags:
-    ```
+    ```html
     <asp:datagrid id="DataGrid1" runat="server" GridLines="Vertical" CellPadding="3" BackColor="White"
     BorderColor="#999999" BorderWidth="1px" BorderStyle="None" Width="100%" Height="100%" Font-Size="X-Small"
     Font-Names="Verdana">
@@ -56,7 +56,7 @@ This article describes two techniques for exporting the data in the DataGrid:
 6. On the View menu, click Code to display the code behind the Web Form. Add the following code to the Page_Load event handler: 
 
     **Note** You must change User ID \<username> and password=\<strong password> to the correct values before you run this code. Make sure that the user account has the correct permissions to perform this operation on the database.
-    ```
+    ```html
     ' Create a connection and open it.
     Dim objConn As New System.Data.SqlClient.SqlConnection("User ID=<username>;Password=<strong password>;Initial Catalog=Northwind;Data Source=SQLServer;")
     objConn.Open()
@@ -106,7 +106,7 @@ This article describes two techniques for exporting the data in the DataGrid:
 
     Top.htm appears in Design view.   
 8. On the View menu, click HTML Source. Replace the contents of the HTML source window with the following code:
-    ```
+    ```html
     <html>
     <script language="vbscript">
       Sub Button1_onclick        
@@ -149,7 +149,7 @@ This article describes two techniques for exporting the data in the DataGrid:
 
     Frameset.htm opens in Design view.   
 10. On the View menu, click HTML Source. Replace the contents of the HTML source window with the following code:
-    ```
+    ```html
     <html>
     <frameset rows="10%,90%">
     <frame noresize="0" scrolling="no" name="top" src="top.htm">

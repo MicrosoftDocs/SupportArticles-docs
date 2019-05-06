@@ -28,7 +28,7 @@ This step-by-step article describes how to use ASP.NET to build a simple XML Web
    2. Click the **COM** tab, select **Microsoft ActiveX Data Objects 2.7 Library**, click **Select**, and then click **OK**.   
    
 7. Add the following method to Class Service1:
-    ```
+    ```cs
     <WebMethod()> Public Function GetResultsAsAdoXML() As String
         Dim myAdoRs As ADODB.Recordset
         Dim myAdoConnection As New ADODB.Connection()
@@ -86,7 +86,7 @@ For demonstration purposes, the steps describe how to build the test client on t
    3. In the dialog box, click **Add Reference**.   
    
 7. Double-click the Button control on Form1, and then replace the Button1_Click handler with the following code:
-    ```
+    ```vb
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
     
     'Reference to the service.
@@ -167,14 +167,14 @@ For demonstration purposes, the steps describe how to build the test client on t
     
     ```
     **Note** If the XML Web service is on a separate computer, declare the objClient variable as follows: 
-    ```
+    ```vb
      Dim objClient As New <servername>.Service1()
     ```
      Where **servername** is the name of the server on which the XML Web service resides.   
 8. Note If you are using Office 2003, you may have to change the references accordingly.
 
 9. Add the following code to the top of Form1.vb:
-    ```
+    ```vb
     Imports OWC10 = Microsoft.Office.Interop.OWC
     
     ```
@@ -209,7 +209,7 @@ To create a Visual Basic 6.0 test client to consume methods in the MyDataService
    
 5. Add a CommandButton control to Form1 and set the Caption property of the button to Fill Data.   
 6.  Double-click the CommandButton control and replace the Command1_Click handler with the following code:
-    ```
+    ```vb
     Private Sub Command1_Click()
       Dim osoapClient As MSSOAPLib.SoapClient
     

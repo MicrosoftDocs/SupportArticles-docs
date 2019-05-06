@@ -74,7 +74,7 @@ Create an Encoderclass by using the directions for the version of InfoPath that 
 
 Use the following code in InfoPath 2010 or in InfoPath 2007:
 
-```
+```cs
 using System;
 using System.IO;
 using System.Text;
@@ -214,7 +214,7 @@ Create a Decoderclass by using the directions for the version of InfoPath that y
 #### Decoder code
 Use the following code in InfoPath 2010 or in InfoPath 2007:
 
-```
+```cs
 using System;
 using System.IO;
 using System.Text;
@@ -323,13 +323,13 @@ Add a File Attachment control, a Text Box control, and a Button control to the I
 9. Right-click the new Button control, and then click **Button Properties**.    
 10. In the **Button Properties **dialog box, type Attach in the **Label **box, type btnAttach in the **ID** box, and then click **Edit Form Code**.   
 11. Move to the top of the code window, and then add the following line of code: 
-    ```
+    ```cs
     using InfoPathAttachmentEncoding;
     ```
 
 12. Return to "write your code here," and then add the following code:   
 
-    ```
+    ```cs
      //Create an XmlNamespaceManager
      XmlNamespaceManager ns = this.NamespaceManager;
     
@@ -372,7 +372,7 @@ Add a File Attachment control, a Text Box control, and a Button control to the I
 5. Insert the following code: 
 
 
-    ```
+    ```cs
      //Create an XmlNamespaceManager
      XmlNamespaceManager ns = this.NamespaceManager;
     

@@ -39,14 +39,14 @@ To fill a multi-cell range without populating cells one at a time, you can set t
 7. Double-click Button1. The code window for the form appears.   
 8. In the code window, replace the following code:
 
-   ```
+   ```cs
    private void button1_Click(object sender, System.EventArgs e)
    {
    }
    ```
    with:
  
-   ```
+   ```cs
       //Declare these two variables globally so you can access them from both
       //Button1 and Button2.
       Excel.Application objApp;
@@ -136,14 +136,14 @@ To fill a multi-cell range without populating cells one at a time, you can set t
 9. Return to the design view for Form1, and double-click Button2.   
 10. In the code window, replace the following code:
 
-   ```
+   ```cs
    private void button2_Click(object sender, System.EventArgs e)
    {
    }
 
    ```
    with: 
-   ```
+   ```cs
    private void button2_Click(object sender, System.EventArgs e)
       {
          Excel.Sheets objSheets;
@@ -222,7 +222,7 @@ To fill a multi-cell range without populating cells one at a time, you can set t
 
 11. Scroll to the top of the code window. Add the following line to the end of the list of using directives:
 
-    ```
+    ```cs
     using System.Reflection; 
     using Excel =  Microsoft.Office.Interop.Excel;
     ```

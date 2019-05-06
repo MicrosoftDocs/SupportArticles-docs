@@ -29,7 +29,7 @@ You can use any text editor to create the text file data source. For example, yo
 
 When you create the data source, remember to separate the fields (columns) by using a tab character and to separate the records (rows) by using a carriage return. The following is an example of how the text file might appear: 
 
-```
+```AsciiDoc
 Contact_NameAddress City Postal_Code Country
 Maria AndersObere Str. 57 Berlin 12209 Germany 
 Thomas Hardy120 Hanover Sq. London WA1 1DP UK
@@ -45,7 +45,7 @@ Laurence Lebihan 12, rue des Bouchers Marseille 13008 France
 2. Add a CommandButton to Form1.   
 3. Select the Microsoft Word Object Library for the version of Word that you intend to automate, and then click OK.    
 4. Copy the following code to the code window of Form1. 
-    ```
+    ```vb
     Private Sub Command1_Click()
     
     Dim oApp As Word.Application

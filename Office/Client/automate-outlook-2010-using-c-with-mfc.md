@@ -40,7 +40,7 @@ Although you can implement all the following sections, you can also omit one or 
 
 1. In the Solution Explorer window, open the stdafx.h file.   
 2. At the end of the file, add the following line. Make sure that the path is appropriate for your particular operating system and configuration:
-    ```
+    ```c
     #import "C:\\Program Files\\Common Files\\microsoft shared\\OFFICE14\\mso.dll" no_namespace rename("RGB", "MsoRGB") exclude("IAccessible")
     ```
 
@@ -56,17 +56,17 @@ Although you can implement all the following sections, you can also omit one or 
 6. Click the right-arrow button to add **_Application** to the list of **Generated classes**.   
 7. Click **Finish** to generate the class, and then click **OK** to close the Class Wizard.   
 8. Open the newly created header file, **CApplication.h**. Locate this line:
-    ```
+    ```c
     #import "C:\\Program Files\\Microsoft Office\\Office14\\msoutl.olb" no_namespace
     ```
 
 9. Replace the line that you located in step 8 with the following:
-    ```
+    ```c
     #import "C:\\Program Files\\Microsoft Office\\Office14\\msoutl.olb" no_namespace rename("Folder", "OlkFolder") rename("CopyFile", "OlkCopyFile") rename("GetOrganizer", "GetOrganizerAE")
     ```
 
 10. Open the **AutomateOutlookWithMFCDlg.cpp** file, and then add the following to the list of #include statements:
-    ```
+    ```c
     #include "CApplication.h"
     ```
 
@@ -75,12 +75,12 @@ Although you can implement all the following sections, you can also omit one or 
 1. Switch to the dialog box.   
 2. Use the Control Toolbox to add a button to the dialog box.   
 3. To add a handler for the button, double-click the button, and locate this line: 
-    ```
+    ```c
     // TODO: Add your control notification handler code here
     ```
 
 4. Replace the line that you located in step 3 with the following code:
-    ```
+    ```c
     CApplication olApp;
     COleException e;
     if (!olApp.CreateDispatch(_T("Outlook.Application"), &e))
@@ -101,23 +101,23 @@ Although you can implement all the following sections, you can also omit one or 
 5. Click the right-arrow button to add **_Namespace** to the list of **Generated classes**.   
 6. Click **Finish** to generate the class, and then click **OK** to close the Class Wizard.   
 7. Open the newly created header file, **CNamespace.h**. Locate this line:
-    ```
+    ```c
     #import "C:\\Program Files\\Microsoft Office\\Office14\\msoutl.olb" no_namespace
     ```
 
 8. Replace the line that you located in step 7 with the following:
-    ```
+    ```c
     #import "C:\\Program Files\\Microsoft Office\\Office14\\msoutl.olb" no_namespace rename("Folder", "OlkFolder") rename("CopyFile", "OlkCopyFile") rename("GetOrganizer", "GetOrganizerAE")
     ```
 
 9. Switch to the **AutomateOutlookWithMFCDlg.cpp** file, and add the following to the list of #include statements:
-    ```
+    ```c
     #include "CNamespace.h"
     ```
 
 10. In the AutomateOutlookWithMFCDlg::OnBnClickedButton1() function (the button handler code), add this code after the last line:
 
-    ```
+    ```c
     // Logon. Doesn't hurt if you are already running and logged on... 
     CNameSpace olNs(olApp.GetNamespace(_T("MAPI")));
     COleVariant covOptional((long)DISP_E_PARAMNOTFOUND, VT_ERROR);
@@ -133,23 +133,23 @@ Although you can implement all the following sections, you can also omit one or 
 5. Click the right-arrow button to add **_ContactItem** to the list of **Generated classes**.   
 6. Click **Finish** to generate the class, and then click **OK** to close the Class Wizard.   
 7. Open the newly created header file, CContactItem.h. Locate this line:
-    ```
+    ```c
     #import "C:\\Program Files\\Microsoft Office\\Office14\\msoutl.olb" no_namespace
     ```
 
 8. Replace the line that you located in step 7 with the following:
-    ```
+    ```c
     #import "C:\\Program Files\\Microsoft Office\\Office14\\msoutl.olb" no_namespace rename("Folder", "OlkFolder") rename("CopyFile", "OlkCopyFile") rename("GetOrganizer", "GetOrganizerAE")
     ```
 
 9. Switch to the **AutomateOutlookWithMFCDlg.cpp** file, and then add the following to the list of #include statements:
-    ```
+    ```c
     #include "CContactItem.h"
     ```
 
 10. In the AutomateOutlookWithMFCDlg::OnBnClickedButton1() function (the button handler code), add this code after the last line:
 
-    ```
+    ```c
     // Create and open a new contact
     CContactItem olContactItem(olApp.CreateItem(olContactItem));
     
@@ -175,23 +175,23 @@ Although you can implement all the following sections, you can also omit one or 
 5. Click the right-arrow button to add **_AppointmentItem** to the list of **Generated classes**.   
 6. Click **Finish** to generate the class, and then click **OK** to close the Class Wizard.   
 7. Open the newly created header file, **CAppointmentItem.h**. Locate this line:
-    ```
+    ```c
     #import "C:\\Program Files\\Microsoft Office\\Office14\\msoutl.olb" no_namespace
     ```
 
 8. Replace the line that you located in step 7 with the following:
-    ```
+    ```c
     #import "C:\\Program Files\\Microsoft Office\\Office14\\msoutl.olb" no_namespace rename("Folder", "OlkFolder") rename("CopyFile", "OlkCopyFile") rename("GetOrganizer", "GetOrganizerAE")
     ```
 
 9. Switch to the **AutomateOutlookWithMFCDlg.cpp** file, and add the following to the list of #include statements:
-    ```
+    ```c
     #include "CAppointmentItem.h"
     ```
 
 10. In the AutomateOutlookWithMFCDlg::OnBnClickedButton1() function (the button handler code), add this code after the last line:
 
-    ```
+    ```c
     // Create a new appointment
     CAppointmentItem olApptItem(olApp.CreateItem(olAppointmentItem));
     
@@ -224,23 +224,23 @@ Although you can implement all the following sections, you can also omit one or 
 5. Click the right-arrow button to add **_MailItem** to the list of **Generated classes**.   
 6. Click **Finish** to generate the class, and then click **OK** to close the Class Wizard.   
 7. Open the newly created header file, **CMailItem.h**. Locate this line:
-    ```
+    ```c
     #import "C:\\Program Files\\Microsoft Office\\Office14\\msoutl.olb" no_namespace
     ```
 
 8. Replace the line that you located in step 7 with the following:
-    ```
+    ```c
     #import "C:\\Program Files\\Microsoft Office\\Office14\\msoutl.olb" no_namespace rename("Folder", "OlkFolder") rename("CopyFile", "OlkCopyFile") rename("GetOrganizer", "GetOrganizerAE")
     ```
 
 9. Switch to the **AutomateOutlookWithMFCDlg.cpp** file, and add the following to the list of #include statements:
-    ```
+    ```c
     #include "CMailItem.h"
     ```
 
 10. In the AutomateOutlookWithMFCDlg::OnBnClickedButton1() function (the button handler code), add this code after the last line:
 
-    ```
+    ```c
     // Prepare a new mail message
     CMailItem olMailItem(olApp.CreateItem(olMailItem));
     olMailItem.put_To(_T("john.doe@microsoft.com"));
@@ -260,7 +260,7 @@ Although you can implement all the following sections, you can also omit one or 
 ### Step 9: Implement the code to log off
 In the **AutomateOutlookWithMFCDlg.cpp** file, add the following code at the end of the button handler code:
     
-```
+```c
 olNs.Logoff();
 ```
 

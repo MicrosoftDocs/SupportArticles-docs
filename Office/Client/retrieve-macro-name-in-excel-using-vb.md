@@ -30,7 +30,7 @@ The following items describe the recommended hardware, software, network infrast
 3. In Project Explorer, double-click
 **ThisWorkbook** to start the code editor.   
 4. Paste the following code for two simple macros in the code editor:
-    ```
+    ```vb
     Option Explicit
     
     Sub Macro_A()
@@ -68,7 +68,7 @@ Microsoft Excel 12.0 Object Library
 4. Add a button to the form. The button has the default name Command1.   
 5. Add a list box to the form. The list box has the default name List1.   
 6. Define a click event handler procedure for the button. Use the following code for this procedure, to display information about the macros that are defined in C:\Abc.xls: 
-    ```
+    ```vb
     Private Sub Command1_Click()
         ' Declare variables to access the Excel workbook.
         Dim objXLApp As Excel.Application
@@ -148,7 +148,7 @@ For more information about this problem and how to resolve it, click the followi
 
 For more information, see the following Microsoft Developer Network (MSDN) Web site: 
 
-[Microsoft Office Development With Visual Studio](http://msdn2.microsoft.com/library/aa188489%28office.10%29.aspx) 
+[Microsoft Office Development With Visual Studio](https://msdn.microsoft.com/library/aa188489%28office.10%29.aspx) 
 
 For more information, see the following Knowledge Base articles: 
 

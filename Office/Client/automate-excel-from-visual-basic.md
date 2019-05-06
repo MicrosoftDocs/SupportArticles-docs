@@ -40,7 +40,7 @@ To early bind to an Automation server, you need to set a reference to that serve
 4. Add a CommandButton to Form1.   
 5. In the code window for Form1, insert the following code:
 
-   ```
+   ```vb
    Option Explicit
 
    Private Sub Command1_Click()
