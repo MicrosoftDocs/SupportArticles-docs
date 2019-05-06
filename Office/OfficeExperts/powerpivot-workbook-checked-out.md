@@ -1,5 +1,5 @@
 ---
-title: You receive a "The workbook must be checked out before it can be replaced. You can save this file with another name." error when you run a scheduled data refresh on a PowerPivot workbook 
+title: The workbook must be checked out when run data refresh in PowerPivot 
 author: AmandaAZ
 ms.author: zakirh
 manager: zakirh

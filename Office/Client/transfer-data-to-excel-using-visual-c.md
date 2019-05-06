@@ -1,5 +1,5 @@
 ---
-title: How to transfer data to an Excel workbook by using Visual C# 2005 or Visual C# .NET
+title: Transfer data to an Excel workbook by using Visual C# 2005 or Visual C# .NET
 description: Describes some sample steps for how to transfer data to an Excel workbook by using Visual C# 2005 or Visual C# .NET.
 author: simonxjx
 manager: willchen

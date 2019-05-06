@@ -1,5 +1,5 @@
 ---
-title: How to use Word automation to count the number of pages in each section of a document
+title: How to use Word automation to count page number in each section of a document
 description: Describes how you can use automation with Word to determine the number of pages in each section of a document.
 author: simonxjx
 manager: willchen

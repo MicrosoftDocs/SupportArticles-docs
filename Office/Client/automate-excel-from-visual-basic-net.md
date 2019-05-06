@@ -1,5 +1,5 @@
 ---
-title: How to automate Excel from Visual Basic .NET to fill or to obtain data in a range by using arrays
+title: Automate Excel from Visual Basic .NET to fill or obtain data by using arrays
 description: Demonstrates how to automate Microsoft Excel and how to fill a multi-cell range with an array of values. Also illustrates how to retrieve a multi-cell range as an array by using automation.
 author: simonxjx
 manager: willchen

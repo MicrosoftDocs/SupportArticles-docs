@@ -1,5 +1,5 @@
 ---
-title: How to use the WebBrowser control to open Office documents in Visual C# 2005 or in Visual C# .NET
+title: Use WebBrowser control to open documents in Visual C# 2005 or Visual C# .NET
 description: Describes some sample steps for how to use the WebBrowser control to open Office documents in Visual C# 2005 or in Visual C# .NET.
 author: simonxjx
 manager: willchen

@@ -1,5 +1,5 @@
 ---
-title: How to automate Word to perform a client-side Mail Merge using XML from SQL Server
+title: Automate Word to perform a client-side Mail Merge using XML from SQL Server
 description: Demonstrates how to automate Microsoft Word from client-side script to perform a mail merge for labels.
 author: simonxjx
 manager: willchen

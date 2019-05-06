@@ -1,5 +1,5 @@
 ---
-title: How To Use an XML Web Service by Using ASP.NET from an Office VBA Macro in Word or Excel
+title: Use XML Web Service by using ASP.NET from an Office VBA Macro in Word or Excel
 description: 
 author: simonxjx
 manager: willchen
