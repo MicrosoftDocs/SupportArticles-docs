@@ -22,7 +22,7 @@ To remove the Office 365 license, follow these steps:
 
 1. Run the following cscript command:
 
-   ```
+   ```vbs
    C:\program files <x86>\Microsoft office\office15>cscript ospp.vbs /dstatus
    ```
 
@@ -36,13 +36,13 @@ To remove the Office 365 license, follow these steps:
 1. Note the value for **Last 5 characters of installed product key**.
 1. Run the following command:
 
-   ```
+   ```vbs
    C:\program files <x86>\Microsoft office\office15>cscript ospp.vbs /unpkey:"Last 5 of installed product key"
    ```
    
    For example:
 
-   ```
+   ```vbs
    C:\program files <x86>\Microsoft office\office15>cscript ospp.vbs /unpkey:WB222
    ```
 

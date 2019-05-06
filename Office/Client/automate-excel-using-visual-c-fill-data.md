@@ -132,7 +132,7 @@ To fill a multi-cell range without populating cells one at a time, you can set t
 
    For more information about the Windows Forms Designer in Visual C# 2005, visit the following Microsoft Developer Network (MSDN) Web site:
 
-   [Creating a Project (Visual C#)](https://msdn2.microsoft.com/library/ms173077.aspx)   
+   [Creating a Project (Visual C#)](https://msdn.microsoft.com/library/ms173077.aspx)   
 9. Return to the design view for Form1, and double-click Button2.   
 10. In the code window, replace the following code:
 
