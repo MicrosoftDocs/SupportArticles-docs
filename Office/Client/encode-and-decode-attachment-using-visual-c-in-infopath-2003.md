@@ -38,7 +38,7 @@ Microsoft provides programming examples for illustration only, without warranty 
 1. In Solution Explorer, right-click **AttachmentEncoding**, point to **Add**, and then click **Add New Item**.   
 2.  In the **Add New Item** dialog box, click **Class** in the **Template** pane, type InfoPathAttachmentEncoder.cs in the **Name** box, and then click **Open**.   
 3. Replace all the code in the InfoPathAttachmentEncoder.cs file with the following code. 
-    ```
+    ```cs
     using System;
     using System.IO;
     using System.Text;
@@ -164,7 +164,7 @@ Microsoft provides programming examples for illustration only, without warranty 
 2. In the **Add New Item** dialog box, click **Class** in the **Template** pane, type
 InfoPathAttachmentDecoder.cs in the **Name** box, and then click **Open**.   
 3. Replace all the code in the InfoPathAttachmentDecoder.cs file with the following code. 
-    ```
+    ```cs
     using System;
     using System.IO;
     using System.Text;
@@ -265,7 +265,7 @@ InfoPathAttachmentDecoder.cs in the **Name** box, and then click **Open**.
 2. Right-click the new **Button** control, and then click **Button Properties**.   
 3. In the **Button Properties** dialog box, type Attach in the **Label** box, type btnAttach in the **ID** box, and then click **Edit Form Code**.   
 4. Add the following code into the btnAttach_OnClick method. 
-    ```
+    ```cs
     //Get a reference to the attachment node.
     IXMLDOMNode theAttachmentNode = thisXDocument.DOM.selectSingleNode("my:myFields/my:theAttachmentField");
     
@@ -291,7 +291,7 @@ InfoPathAttachmentDecoder.cs in the **Name** box, and then click **Open**.
 3. Right-click the new **Button** control, and then click **Button Properties**.   
 4. In the **Button Properties** dialog box, type Save in the **Label** box, type btnSave in the **ID** box, and then click **Edit Form Code**.   
 5. Add the following code into the btnSave _OnClick method. 
-    ```
+    ```cs
     //Get a reference to the attachment node.
     IXMLDOMNode n = thisXDocument.DOM.selectSingleNode("my:myFields/my:theAttachmentField");
     //Get the text of the node.
@@ -338,7 +338,7 @@ Because this form is under form development, you can use the last method. To do 
 9. Click **Start**, click **Run**, type notepad, and then click **OK**.   
 10. Add the following code to the blank text file. 
 
-    ```
+    ```cs
     oApp = WScript.CreateObject("InfoPath.ExternalApplication");
     strAbsolutePath = "<project_folder_url>\\Manifest.xsf";
     oApp.RegisterSolution(strAbsolutePath,"overwrite"); 

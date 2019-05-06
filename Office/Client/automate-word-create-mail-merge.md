@@ -21,7 +21,7 @@ This article discusses how to automate Word to create a mail merge for an extern
 
 To programmatically set up a data source for a Word mail merge document, you first call the OpenDataSource method of a MailMerge object. The syntax for the OpenDataSource method is as follows: 
 
-```
+```vb
 <MailMergeObject>.OpenDataSource(Name, [Format], [ConfirmConversions], [ReadOnly], [LinkToSource], [AddToRecentFiles], [PasswordDocument], [PasswordTemplate], [Revert],[WritePasswordDocument], [WritePasswordTemplate], [Connection], [SQLStatement], [SQLStatement1], [OpenExclusive], [SubType]) 
 ```
 
@@ -34,12 +34,12 @@ OLEDB is the recommended data access method. To specify OLEDB as the data access
 
 Example
 
-```
+```vb
 <MailMergeObject>.OpenDataSource Name:="C:\MyDB.mdb", _
            SQLStatement:="SELECT * FROM [MyTable]"
 ```
 or
-```
+```vb
 <MailMergeObject>.OpenDataSource Name:="C:\MyDataSource.odc", _
            SQLStatement:="SELECT * FROM [MyTable]"
 ```
@@ -52,7 +52,7 @@ You can use ODBC for your mail merge to access data for which a user data source
 
 Example
 
-```
+```vb
 <MailMergeObject>.OpenDataSource Name:= "", _
      Connection:= "DSN=MySQLServerDSN;DATABASE=pubs;uid=sa;pwd=;", _
      SQLStatement:= "Select au_id, au_lname, au_fname from authors", _
@@ -66,7 +66,7 @@ You can use DDE to access data in Microsoft Access databases or Microsoft Excel 
 
 Example
 
-```
+```vb
 <MailMergeObject>.OpenDataSource Name:="C:\MyDB.mdb", _
            SQLStatement:="SELECT * FROM [MyTable]", _
            SubType:=wdMergeSubTypeWord2000
@@ -88,7 +88,7 @@ To run this sample, follow these steps:
 
     **Note** If it is necessary, modify the path to Northwind.mdb to match your installation for Office XP.
 
-    ```
+    ```vb
     Dim WithEvents oApp As Word.Application
     
     Private Sub Form_Load()

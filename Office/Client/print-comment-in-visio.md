@@ -31,7 +31,7 @@ Microsoft provides programming examples for illustration only, without warranty 
    3. On the **Insert ** menu, click **Module**. 
 
    4. Copy the following code, and then paste the code in the **FileName** - Module**Number** (Code) window: 
-        ```
+        ```vb
         Public Sub GetComments()
         Dim pagMarkup As Visio.Page
         Dim pag As Visio.Page

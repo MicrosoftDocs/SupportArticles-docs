@@ -14,7 +14,7 @@ localization_priority: Normal
 
 This article describes how to uninstall Office updates automatically by using a command line that resembles the following:
 
-```
+```powershell
 %windir%\System32\msiexec.exe /package {Office GUID} /uninstall {Update GUID} /QN
 ```
 
@@ -47,13 +47,13 @@ To determine the GUID of the update, you have to check the properties of the MSP
 
 First, you have to extract the MSP file from the update executable. To do this run the following command to extract the file to the c:\temp directory:
 
-```
+```powershell
 MSP file name /extract:c:\temp
 ```
 
 For example, to extract content from the Office 2013 update [4462201](https://www.microsoft.com/download/details.aspx?id=57979) (mso2013-kb4462201-fullfile-x64-glb.exe), run the following command:
 
-```
+```powershell
 mso2013-kb4462201-fullfile-x64-glb.exe /extract:c:\temp
 ```
 
@@ -63,7 +63,7 @@ Sometimes there are many numbers in the **Revision number** section. Copy and pa
 
 Now, you know the GUID in the Office version and the GUID of the Office update. You can run the following command to remove the update programmatically.
 
-```
+```powershell
 %windir%\System32\msiexec.exe /package {Office GUID} /uninstall {Update GUID} /qn
 ```
 

@@ -24,13 +24,13 @@ Office 365 Pro Plus and Office 2016 use Internet Explorer document mode 7 (aka I
 **Method 1: Use a different document mode for the custom HTML login page**
 
 To make Office use a different document mode for the custom HTML login page, use the following directive in the custom HTML login page:
-```
+```HTML
 <meta http-equiv="x-ua-compatible" content="IE=9" >
 ```
 **Method 2: Stay the correct size and add scroll bars if the page is bigger than the Office Sign In window**
 
 To make the custom HTML login page stay the correct size and display scroll bars, use the code like the following:
-```
+```HTML
 <DIV STYLE="width: 460px; height: 530px; overflow: scroll">
 ```
 > [!NOTE]

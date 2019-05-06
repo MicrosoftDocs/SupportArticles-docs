@@ -63,13 +63,13 @@ System.Runtime.InteropServices.Marshal.BindToMoniker
    3. Double-click button3.   
    
 5. Add the following code to the top of Form1.cs, after the other using statements:
-    ```
+    ```vb
     using Excel = Microsoft.Office.Interop.Excel;
     using Word = Microsoft.Office.Interop.Word;
     ```
 
 6. Add the following code to the event handlers:
-    ```
+    ```vb
     private void button1_Click(object sender, System.EventArgs e)
     {
     

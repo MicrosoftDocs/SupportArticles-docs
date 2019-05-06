@@ -27,7 +27,7 @@ Microsoft provides programming examples for illustration only, without warranty 
 
 The following Visual Basic procedure prompts you for a character (or characters), then searches through the currently selected cell, or range of cells, and displays a message box showing the total number of occurrences of that character or character string. This works for all alphanumeric characters.
 
-```
+```vb
 Dim Count As Integer
 Dim Target As String
 Dim Cell As Object

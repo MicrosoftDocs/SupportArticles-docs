@@ -22,7 +22,7 @@ Even though the custom login page may render correctly from web browsers, the Of
 ## Cause
 
 When the DUO iframe is loaded from the "duo.form.login.template.html" file, the code is like:
-```
+```HTML
 <iframe id="duo_iframe" width="100%" height="350px" frameborder="0">
 ```
 Notice that the src attribute of the Iframe element is missing. This causes that the iFrame loads the URL about:blank (The Iframe src attribute is set later in the Duo-Web-v2.js file).
@@ -34,6 +34,6 @@ Because data is not based on HTTPS, Office can't allow such navigation to occur.
 ## Workaround
 
 To resolve this issue, specify the src attribute for the Iframe element as follows. Then the "about:blank" page will no longer load and this issue will no longer occur.
-```
+```HTML
 <iframe id="duo_iframe" src="images/TempImage.gif” width="100%" height="350px" frameborder="0">
 ```

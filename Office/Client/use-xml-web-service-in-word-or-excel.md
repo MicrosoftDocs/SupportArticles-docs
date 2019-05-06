@@ -24,7 +24,7 @@ In order to successfully communicate with an XML Web service using ASP.NET from 
 1. Start Microsoft Visual Studio .NET. On the File menu, click New and then click Project. In the New Project dialog box, click Visual Basic Projects under Project types, and then click XML Web Service using ASP.NET under Templates. Name the project SQLQuery and click OK. The design form for Service1 appears by default.   
 2. On the View menu, click Code to display the code window for Service1.   
 3. Paste the following code at the top of the code window:
-    ```
+    ```vb
     Imports System.Data.SqlClient
     ```
 
@@ -32,7 +32,7 @@ In order to successfully communicate with an XML Web service using ASP.NET from 
 End Class).
 
     **Note** You must change User ID \<username> and password =\<strong password> to the correct values before you run this code. Make sure that User ID has the appropriate permissions to perform this operation on the database. 
-    ```
+    ```vb
     Private Const strConn = "User ID=<username>;Password=<strong password>;Initial Catalog=pubs;Data Source=localhost"
 
     <WebMethod()> Public Function GetIDs() As String()
@@ -115,7 +115,7 @@ To use the Web service from Word, follow these steps:
 
     **Note** If the **Microsoft SOAP Type Library** is not available in the **References** dialog box, then click **Browse**. In the **Add Reference** dialog box browse to the directory C:\Program Files\Common Files\MSSoap\Binaries and select mssoap1.dll. Click **Open** and then click **OK**.   
 5. Paste the following code in the code module:
-    ```
+    ```vb
     Public Const sServer = "localhost"
     
     Sub GenerateForm(sID As String)
@@ -151,7 +151,7 @@ To use the Web service from Word, follow these steps:
 7. Place a large list box and a command button on the form.   
 8. On the View menu, click Code to change to the code window for the user form.   
 9. Replace the contents of the code window with the following:
-    ```
+    ```vb
     Private Sub CommandButton1_Click()
         ' Generate a FAX based on the ID.
         GenerateForm ListBox1.List(ListBox1.ListIndex)
@@ -197,7 +197,7 @@ To use the Web service from Excel, follow these steps:
 
     **Note** If the **Microsoft SOAP Type Library** is not available in the **References** dialog box, then click **Browse**. In the **Add Reference**dialog box browse to the directory C:\Program Files\Common Files\MSSoap\Binaries and select mssoap1.dll. Click **Open** and then click **OK**.   
 5. Paste the following code in the code module:
-    ```
+    ```vb
     Const sTemplatePath = "C:\Microsoft Office\Templates\1033\Sales Invoice.xlt"
     Public Const sServer = "localhost"
     
@@ -257,7 +257,7 @@ To use the Web service from Excel, follow these steps:
 7. Place a large list box and a command button on the form.   
 8. On the View menu, click Code to change to the code window for the user form.   
 9. Replace the contents of the code window with the following:
-    ```
+    ```vb
     Private Sub CommandButton1_Click()
         ' Generate a FAX based on the ID.
         GenerateForm ListBox1.List(ListBox1.ListIndex)
