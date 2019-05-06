@@ -1,5 +1,5 @@
 ---
-title: How to automate Excel by using Visual C# to fill or to obtain data in a range by using arrays
+title: Automate Excel by using Visual C# to fill or to obtain data by using arrays
 description: Describes some sample steps about how to automate Excel with Visual C# 2005 or Visual C# .NET to fill or to obtain data in a range by using arrays.
 author: simonxjx
 manager: willchen

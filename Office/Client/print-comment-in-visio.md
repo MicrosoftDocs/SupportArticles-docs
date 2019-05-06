@@ -1,5 +1,5 @@
 ---
-title: How to print  comments that are inserted by reviewers when you use the Track Markup feature in Visio 2010, in Visio 2007, or in Visio 2003
+title: How to print comments when use Track Markup feature in Visio
 description: Contains a macro that you can use to print  comments that are added by reviewers when you use the Track Markup feature in in Visio 2010, in Visio 2007, or in Visio 2003.
 author: simonxjx
 manager: willchen

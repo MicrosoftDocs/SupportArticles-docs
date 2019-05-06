@@ -1,5 +1,5 @@
 ---
-title: How to automate Microsoft Word to perform a mail merge using Visual C++ and MFC
+title: How to automate Microsoft Word to perform mail merge using Visual C++ and MFC
 description: 
 author: simonxjx
 manager: willchen

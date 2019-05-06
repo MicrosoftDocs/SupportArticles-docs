@@ -1,5 +1,5 @@
 ---
-title: How to automate Excel from MFC and Visual C++ 2005 or Visual C++ .NET to fill or obtain data in a range using arrays
+title: Automate Excel from MFC and Visual C++ to fill or obtain data using arrays
 description: Describes how to automate Excel from Visual C++ 2005 or Visual C++ .NET to fill and retrieve values in a multi-cell range by using arrays.
 author: simonxjx
 manager: willchen

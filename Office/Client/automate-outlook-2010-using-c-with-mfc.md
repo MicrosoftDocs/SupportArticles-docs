@@ -1,5 +1,5 @@
 ---
-title: How to automate Outlook 2010 by using C++ in Visual Studio 2010 together with MFC
+title: How to automate Outlook 2010 by using C++ in Visual Studio 2010 with MFC
 description: Discusses how to automate Outlook 2010 by using C++ in Visual Studio 2010 together with MFC.
 author: simonxjx
 manager: willchen

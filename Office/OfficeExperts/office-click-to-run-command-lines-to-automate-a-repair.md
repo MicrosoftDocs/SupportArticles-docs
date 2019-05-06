@@ -1,5 +1,5 @@
 ---
-title: Use Office Click-to-Run command lines to automate a Quick and Online repair in Office 2013
+title: Click-to-Run command to automate an online repair in Office 2013
 description: The June 2014 release (build 15.0.4623.1003 and later versions) of Office Click-to-Run from Office 365 allows you to automate both a quick and online repair of Office 2013.
 author: MaryQiu1987
 manager: ericspli

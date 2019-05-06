@@ -1,5 +1,5 @@
 ---
-title: How to encode and decode a file attachment programmatically by using Visual C# in InfoPath 2003
+title: Encode and decode an attachment by using Visual C# in InfoPath 2003
 description: Introduces how to encode and decode a file attachment by using Visual C# in InfoPath 2003. Contains link to information for later versions.
 author: simonxjx
 manager: willchen

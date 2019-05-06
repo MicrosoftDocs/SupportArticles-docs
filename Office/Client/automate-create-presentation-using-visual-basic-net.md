@@ -1,5 +1,5 @@
 ---
-title: How to use automation to create and to show a PowerPoint presentation by using Visual Basic .NET 2002 or Visual Basic .NET 2003
+title: Use automation to create and show a presentation by using Visual Basic .NET
 description: Describes how to use automation to create and to show a Microsoft PowerPoint presentation by using Microsoft Visual Basic .NET 2002 or Visual Basic .NET 2003.
 author: simonxjx
 manager: willchen
