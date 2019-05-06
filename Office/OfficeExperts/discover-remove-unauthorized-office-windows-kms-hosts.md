@@ -120,7 +120,7 @@ Then, follow these steps to remove an Office KMS host in your environment:
 
 1. If the Office KMS host product key is removed, the output resembles the following. The key items are **This license is not in use** and **License Status: Unlicensed**.
 
-   ```
+   ```AsciiDoc
    Name: Microsoft Office 2010, KMSHost edition
    Description: Microsoft Office 2010 KMS, VOLUME_KMS channel
    Activation ID: bfe7a195-4f8f-4f0b-a622-cf13c7d16864

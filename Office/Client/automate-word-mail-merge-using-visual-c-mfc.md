@@ -26,7 +26,7 @@ This article parallels a Microsoft Knowledge Base article that describes the sam
 
     The New Project Information dialog box appears and indicates that the Classes to be created include:
 
-    ```
+    ```vb
     Application: CAutoProjectApp in AutoProject.h and AutoProject.cpp
     Dialog: CAutoProjectDlg in AutoProject.h and AutoProjectDlg.cpp
     ```
@@ -53,7 +53,7 @@ This article parallels a Microsoft Knowledge Base article that describes the sam
 1. Click OK to close the MFC ClassWizard dialog box.
 1. Add the following code to the CAutoProjectApp::InitInstance() function, which loads and enables the COM services library:
 
-    ```
+    ```vb
     BOOL CAutoProjectApp::InitInstance()
       {
          if(!AfxOleInit())  // Your addition starts here
@@ -71,20 +71,20 @@ This article parallels a Microsoft Knowledge Base article that describes the sam
     ```
 1. Add the following line to the #include statements at the top of the AutoProject.cpp program file:
 
-    ```
+    ```vb
       #include <afxdisp.h>
     ```
 
     
 1. Add the include statement for the header file that was created above (either msword8.h, msword9.h or msword.h) in AutoProjectDlg.cpp after the include statement for stdafx.h. An example for Word 97 would be: 
-    ```
+    ```vb
        #include "stdafx.h"
        #include "msword8.h"
     
     ```
 
 1. Add Automation code to the CAutoProjectDlg::OnRun method so that it appears as shown below:
-    ```
+    ```vb
     void CAutoProjectDlg::OnRun()
     {
     _Application oWord;
@@ -275,7 +275,7 @@ This article parallels a Microsoft Knowledge Base article that describes the sam
     ```
 
 1. Insert the following code above in the code that is given in step 3:
-    ```
+    ```vb
     void InsertLines(Selection *pSelection, int NumLines)
     {
     int iCount;
