@@ -3,8 +3,9 @@ title: “The image part with relationship rID8 was not found” error in Micros
 description: 
 author: todmccoy
 ms.author: v-todmc
+ms.reviewer: Shuvojit.Ray
 manager: joselr
-audience: Admin|ITPro|Developer
+audience: ITPro
 ms.topic: article
 ms.prod: office-perpetual-itpro
 localization_priority: Normal 
