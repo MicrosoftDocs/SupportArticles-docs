@@ -1,5 +1,5 @@
 ---
-title: How to retrieve the names of macros from an Excel workbook by using Visual Basic 6.0
+title: Retrieve the names of macros from an Excel workbook by using Visual Basic 6.0
 description: Describes how to retrieve the names of macros from an Excel workbook by using Visual Basic 6.0.
 author: simonxjx
 manager: willchen
