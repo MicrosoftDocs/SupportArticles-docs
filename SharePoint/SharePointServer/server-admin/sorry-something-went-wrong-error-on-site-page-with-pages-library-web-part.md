@@ -19,7 +19,7 @@ You see the following error when selecting **Show Related Resources** within the
 > Sorry, something went wrong<br />
 An unexpected error has occurred.
 
-!["Sorry, something went wrong" error](../../../Office/Client/media/4493897_en_1.jpg)
+![Sorry, something went wrong error](media/4493897_en_1.jpg)
 
 The SharePoint Universal Logging System ( ULS) reports:
 
