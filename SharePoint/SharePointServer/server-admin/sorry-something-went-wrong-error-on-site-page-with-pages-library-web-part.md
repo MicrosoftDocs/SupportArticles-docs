@@ -1,6 +1,6 @@
 ---
-title: “Sorry, something went wrong” error on a Site Page with a Pages library web part added
-description: Describes how to resolve a "Sorry, something went wrong" error on a Site Page with a Pages library web part added .
+title: 'Sorry, something went wrong' error on a Site Page with a Pages library web part added
+description: Describes how to resolve a 'Sorry, something went wrong' error on a Site Page with a Pages library web part added .
 author: todmccoy
 ms.author: v-todmc
 ms.reviewer: 
