@@ -48,7 +48,7 @@ You can use the first step (Create the Automation Client), to create a new Autom
         **Important** If there are many interfaces in the type library that you chose, select only those interfaces that you will use because MFC will generate a separate header file for each selected interface. By minimizing your interface selections, you can avoid unnecessary overhead during file generation and compilation.   
    
 5. To load and enable the COM services library to the CAutoProjectApp::InitInstance function, add the following code:
-    ```
+    ```vb
     if(!AfxOleInit())  // Your addition starts here.
     {
       AfxMessageBox("Cannot initialize COM dll");
@@ -63,7 +63,7 @@ You can use the first step (Create the Automation Client), to create a new Autom
 6. Add an include directive for each header file that is generated from the interfaces in the type library of the Automation server. Add the directives after the include statement for Stdafx.h at the top of AutoProjectDlg.cpp.
 
     For this example, add an include for the CApplication.h header file, which is generated for the _Application interface:
-    ```
+    ```vb
           #include "stdafx.h"
           #include "CApplication.h"
     
@@ -73,7 +73,7 @@ You can use the first step (Create the Automation Client), to create a new Autom
 ### Add code to automate Microsoft Excel
  
 In the IDD_AUTOPROJECT_DIALOG dialog box, right-click Run, and then click Add event handler from the drop-down list box. In the Event Handler Wizard, select the BN_CLICKED message type, and then click Add and Edit. Add the following code to automate Excel in the handler: 
-```
+```vb
 void CAutoProjectDlg::OnBnClickedRun()
 {
    CApplication app;  // app is the Excel _Application object

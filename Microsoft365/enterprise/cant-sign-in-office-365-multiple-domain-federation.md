@@ -36,24 +36,24 @@ This issue occurs when multiple top-level domains are federated to the same AD F
 2. Specify the value for **Immutable ID** (sourceAnchor) -> **User Sign In** (for example, UPN or mail). If multiple top-level domains are federated, select **Yes** when you are prompted to respond to "**Does the Azure AD trust with AD FS support multiple domains?**"
 3. Connect to the Office 365 PowerShell, and then export the list of domains to a .csv file (for example, output.csv). To do this, run the following cmdlets:
 
-   ```
+   ```powershell
    Import-Module MSOnline
    ```
-   ```
+   ```powershell
    Connect-MsolService
    ```
-   ```
+   ```powershell
    Get-MsolDomain | Select-Object Name, RootDomain, Authentication | ConvertTo-Csv -NoTypeInformation | % {$_.Replace('"','')} | Out-File output.csv
    ```
 4. Click **Generate Claims**, and then copy the PowerShell cmdlets from the **Claim Rules** section.
 5. Save the cmdlets as a PowerShell script (for example,updatelclaimrules.ps1), and then run the following command to run the script on the primary AD FS server:
 
-   ```
+   ```powershell
    .\Updateclaims.ps1
    ```
 6. The script makes a backup of the existing Issuance Transform rules as a .txt file in the current working directory.
 
 If you want to restore the issuance rules that you backed up by using the script, run the following cmdlet, and specify the backup file that you created in step 5. In the following example, the backup file is *Backup 2018.12.26_09.21.03*.txt.
-```
+```powershell
 Set-AdfsRelyingPartyTrust -TargetIdentifier "urn:federation:MicrosoftOnline" -IssuanceTransformRulesFile "Backup 2018.12.26_09.21.03.txt"
 ```

@@ -1,5 +1,5 @@
 ---
-title: How to use Visual Basic for Applications to count the occurrences of a character in a selection in Excel
+title: Use Visual Basic for Applications to count character occurrences in Excel
 description: This article describes the use of a Visual Basic for Applications macro to count the number of occurrences of a specific character in a selected range.
 author: simonxjx
 manager: willchen
@@ -27,7 +27,7 @@ Microsoft provides programming examples for illustration only, without warranty 
 
 The following Visual Basic procedure prompts you for a character (or characters), then searches through the currently selected cell, or range of cells, and displays a message box showing the total number of occurrences of that character or character string. This works for all alphanumeric characters.
 
-```
+```vb
 Dim Count As Integer
 Dim Target As String
 Dim Cell As Object

@@ -17,14 +17,14 @@ This article discusses how to use the Microsoft Visual Basic for Applications (V
 
 For example, the column number 30 is converted into the equivalent alphabetical characters "AD". 
 
-##  More Information
+## More Information
 
 Microsoft provides programming examples for illustration only, without warranty either expressed or implied. This includes, but is not limited to, the implied warranties of merchantability or fitness for a particular purpose. This article assumes that you are familiar with the programming language that is being demonstrated and with the tools that are used to create and to debug procedures. Microsoft support engineers can help explain the functionality of a particular procedure, but they will not modify these examples to provide added functionality or construct procedures to meet your specific requirements.
 The ConvertToLetter function works by using the following algorithm: 
 
 1. Divide the column number by 27, and then put the resulting integer in the variable "i".   
 2. Subtract the column number from "i" multiplied by 26, and then put the result in the variable "j".   
-3.  Convert the integer values into their corresponding alphabetical characters, "i" and "j" will range from 0 to 26 respectively.
+3. Convert the integer values into their corresponding alphabetical characters, "i" and "j" will range from 0 to 26 respectively.
 
 For example: The column number is 30. 
 
@@ -45,7 +45,7 @@ For example: The column number is 30.
 
 The following VBA function is just one way to convert column number values into their equivalent alphabetical characters:
 
-```
+```vb
 Function ConvertToLetter(iCol As Integer) As String
    Dim iAlpha As Integer
    Dim iRemainder As Integer

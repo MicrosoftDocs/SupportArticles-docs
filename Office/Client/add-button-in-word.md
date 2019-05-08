@@ -30,7 +30,7 @@ The following steps illustrate how you can create a Word macro that will add a c
 1. Select the reference for **Microsoft Visual Basic for Applications Extensibility**.
 1. Insert a new module, and then add the following code example.
 
-    ```
+    ```vbscript
     Sub Test()
     
     'Add a command button to a new document
@@ -50,6 +50,7 @@ The following steps illustrate how you can create a Word macro that will add a c
     doc.VBProject.VBComponents("ThisDocument").CodeModule.AddFromString sCode
         
     End Sub
+    ```
 1. Run the macro "Test".
 1. Once the macro "Test" finishes running, you will see a new **CommandButton** control on a new document. When you click the **CommandButton** control, the Click event of the control fires.
 

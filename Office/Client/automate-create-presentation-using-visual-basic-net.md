@@ -1,5 +1,5 @@
 ---
-title: How to use automation to create and to show a PowerPoint presentation by using Visual Basic .NET 2002 or Visual Basic .NET 2003
+title: Use automation to create and show a presentation by using Visual Basic .NET
 description: Describes how to use automation to create and to show a Microsoft PowerPoint presentation by using Microsoft Visual Basic .NET 2002 or Visual Basic .NET 2003.
 author: simonxjx
 manager: willchen
@@ -35,7 +35,7 @@ This article describes how to use automation to create and to show a Microsoft P
 **Toolbox** to display the Toolbox and add a button to Form1.   
 4. Double-click **Button1**. The code window for the form appears.   
 5. In the code window, locate the following code
-    ```
+    ```vb
         Private Sub Button1_Click(ByVal sender As System.Object, _
             ByVal e As System.EventArgs) Handles Button1.Click
     
@@ -43,7 +43,7 @@ This article describes how to use automation to create and to show a Microsoft P
     
     ```
      Replace with the following code: 
-    ```
+    ```vb
         Private Sub Button1_Click(ByVal sender As System.Object, _
             ByVal e As System.EventArgs) Handles Button1.Click
     
@@ -151,7 +151,7 @@ This article describes how to use automation to create and to show a Microsoft P
     ```
     **Note** In this code, the sTemplate and sPic constants represent the full path and filename to a PowerPoint template and a picture, respectively. Modify these paths as needed to use a template or picture that is installed on your system.   
 6. Add the following code to the top of Form1.vb:
-    ```
+    ```vb
     Imports Office = Microsoft.Office.Core
     Imports Graph = Microsoft.Office.Interop.Graph
     Imports PowerPoint = Microsoft.Office.Interop.PowerPoint

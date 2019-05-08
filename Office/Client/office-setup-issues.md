@@ -60,7 +60,7 @@ The following information may be contained in the Setup log:
 
 - Listing of files to be copied to the \MSOCACHE folder: Files to Download:
 
-    ```
+    ```AsciiDoc
     File: FILES\WINDOWS\INF\AER_1033.ADM (DW20.ADM_1033)
     File: FILES\PFILES\COMMON\MSSHARED\DW\DW20.EXE (DW20.EXE_0001)
     File: FILES\PFILES\COMMON\MSSHARED\DW\DWDCW20.DLL (DWDCW20.DLL)
@@ -84,13 +84,13 @@ The following information may be contained in the Setup log:
     File: CC561401.CAB (CC561401.CAB)
     ```    
 - Confirmation of Local Install Source settings: 
-    ```
+    ```AsciiDoc
     Using Local Cache Drive of already installed product: C:\.
     Found enough space on drive "C:\" to cache all feature cabinets.
     (CDCACHE=AUTO) - There is enough space to cache some or all of the image. Drive for this download is C:\
     ```    
 - Confirmation of completed task: 
-    ```
+    ```AsciiDoc
     Package was: E:\5614.0_o11pro_CBXS_ENG\PRO11.MSI.
     Setting Package to: C:\MSOCache\All Users\90000409-6000-11D3-8CFE-0150048383C9\PRO11.MSI.
     Done with CD Caching, cached MSI to: C:\MSOCache\All Users\90000409-6000-11D3-8CFE-0150048383C9\PRO11.MSI    
@@ -98,13 +98,13 @@ The following information may be contained in the Setup log:
 
 If you suspect problems with the command-line properties and switches that you are using, these items are also listed in the Setup log file. For example, if you use the following command line to run Setup:
 
-```
+```powershell
 f:\Setup.exe companyname="my company" /qb
 ```
 
 The following text is included in the Setup log:
 
-```
+```AsciiDoc
 Launch Setup 
 9/22/03 1:49:46 PM 
 companyname="my company" /qb
@@ -129,7 +129,7 @@ SETUPEXEPATH=\\server\share\2003_Admin\ /qb
 
 If the log file for Setup.exe ends in text that is similar to the following (return code: 1603), there was a problem with the Windows Installer portion of the installation:
 
-```
+```AsciiDoc
 9/22/03 3:34:27 PM Chained install return code: 1603
 Shutting down chained setup processing.
 Set Verbose logging for subsequent setup.
@@ -146,7 +146,7 @@ In this case, you must review the Windows Installer log files for the Office ins
 The Windows Installer log files are significantly larger than the Setup log file and can appear to be unreadable at first. However, the following guidelines can help you narrow down the issue: 
 
 - If you receive an error message during Setup, search for the error number in the log file. For example, if you receive "Error 1327" during Setup, search for "1327" in the log. You may find text that is similar to the following:
-    ```
+    ```AsciiDoc
     MSI (c) (41:90): Note: 1: 1327 2: C:\
     Error 1327. Invalid Drive: C:\ 
     
@@ -161,7 +161,7 @@ The Windows Installer log files are significantly larger than the Setup log file
   2. Read each line up from the line with the error number. Typically you see a line that failed, with the ultimate result being a Setup error.
 
      For example, a log file was searched for "error 2737". The following text was located at or above the line with the 2737 error:
-     ```
+     ```AsciiDoc
      MSI (c) (B7:A7): Note: 1: 2737 2: CheckCAServer 3: 
      c:\windows\TEMP\MSI82D6.TMP 4: CheckCAServer
      Info 2898. An internal error has occurred. (Tahoma8 Tahoma 1 
@@ -186,7 +186,7 @@ The Windows Installer log files are significantly larger than the Setup log file
   **Info 2743. An internal error has occurred. Contact your Information Technology department for assistance.**
   **Info 2726. An internal error has occurred. Contact your Information Technology department for assistance.**   
 - One thing to search for is the string "Note". In one case where Setup failed with a 2755 error, the actual resolution for the case was derived from the Note several lines above the error:
-   ```
+   ```AsciiDoc
    MSI (s) (EC:BC): Note: 1: 2336 2: 5 3: C:\WINNT\Installer\ 
    MSI (s) (EC:BC): MainEngineThread is returning 1632
     MSI (c) (F8:F4): Note: 1: 2755 2: 1632 3: \\server\share\2003_Admin\PRO11.MSI 
@@ -201,7 +201,7 @@ The Windows Installer log files are significantly larger than the Setup log file
 
    **Note** In log entries that contain "Note", the four-digit number that follows "Note" can be mapped directly to the Windows Installer errors that are listed in the Knowledge Base articles cited earlier in this article.   
 - Another string to search for in the log file is "Return Value 3". If you do not have or remember an error number, but you locate "Return Value 3" in the log file, this is clearly the area where it is best to focus your troubleshooting. When an action is performed during Setup, the action is noted in the log files. When that action is complete, a return value is subsequently noted. If the return value is 1, the action was successful; however, if the action failed, the return value will be 3.
-    ```
+    ```AsciiDoc
     Action start 9:56:45: SetW2kMill_WFP.
     Action ended 9:56:45: SetW2kMill_WFP. Return value 1.
     MSI (c) (B7:A7): Doing action: CheckCAServer
@@ -222,7 +222,7 @@ The Windows Installer log files are significantly larger than the Setup log file
     ```
     In this case, the SetW2kMill_WFP action succeeds, because the return value is 1. However, the next action, CheckCAServer, fails because its return value is 3.   
 - Sometimes when you review a log file, you do not find "Note", "Return Value 3", or an error number. Instead, you may see text that is similar to the following:
-    ```
+    ```AsciiDoc
     MSI (c) (A5:65): Looking for file transform: c:\test.mst
     MSI (c) (A5:65): Note: 1: 2203 2: c:\test.mst 3: -2147287038 
     MSI (c) (A5:65): Couldn't find cached transform c:\test.mst. Looking for it at the source.
@@ -260,7 +260,7 @@ All the techniques that are listed in the "Windows Installer Log Files" section 
 
     After you create the verbose log file, scroll to the end and look at the last one or two lines. These lines tell you what Setup was trying to do when it stopped. For example, you may see text that is similar to the following:
 
-    ```
+    ```AsciiDoc
     ComponentRegister(ComponentId={71CE92CC2CB71D119A12000A9CE1A22A},
     KeyPath=C:\Program Files\Common Files\Microsoft Shared\Web
     Components\11\1033\OWCDCH11.CHM,State=3,,Disk=1,SharedDllRefCount=0)
@@ -274,7 +274,7 @@ All the techniques that are listed in the "Windows Installer Log Files" section 
 
     In another case, you may see text that is similar to the following in your log file:
 
-    ```
+    ```AsciiDoc
     MSI (c) (EB:1F): Doing action: OPCRemove
     Action start 11:42:57: OPCRemove.
     MSI (c) (EB:1F): Creating MSIHANDLE (504) of type 790542 for thread -194273 

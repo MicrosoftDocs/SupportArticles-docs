@@ -1,5 +1,5 @@
 ---
-title: How to transfer data to an Excel workbook by using Visual C# 2005 or Visual C# .NET
+title: Transfer data to an Excel workbook by using Visual C# 2005 or Visual C# .NET
 description: Describes some sample steps for how to transfer data to an Excel workbook by using Visual C# 2005 or Visual C# .NET.
 author: simonxjx
 manager: willchen
@@ -42,7 +42,7 @@ This article provides a discussion and a code sample for each of these technique
 
 With Automation, you can transfer data to a worksheet one cell at a time: 
 
-```
+```c
 // Start a new workbook in Excel.
 m_objExcel = new Excel.Application();
 m_objBooks = (Excel.Workbooks)m_objExcel.Workbooks;
@@ -85,7 +85,7 @@ For additional information, and for an example of Automating Excel with Visual C
 
 You can transfer an array of data to a range of multiple cells at one time:
 
-```
+```c
 // Start a new workbook in Excel.
 m_objExcel = new Excel.Application();
 m_objBooks = (Excel.Workbooks)m_objExcel.Workbooks;
@@ -127,7 +127,7 @@ m_objExcel.Quit();
 
 If you transfer your data by using an array instead of cell by cell, you can realize an enormous performance gain with a large quantity of data. Consider the following lines from the aforementioned code that transfer data to 300 cells in the worksheet:
 
-```
+```c
 objRange = objSheet.get_Range("A2", m_objOpt);
 objRange = objRange.get_Resize(100,3);
 objRange.Value = objData;
@@ -143,7 +143,7 @@ For additional information about using arrays to get and set values in ranges wi
 
 The object models for Excel 2000, Excel 2002 and Excel 2003 provide the CopyFromRecordset method for transferring an ADO recordset to a range on a worksheet. The following code illustrates how to automate Excel to transfer the contents of the Orders table in the Northwind sample database by using the CopyFromRecordset method:
 
-```
+```c
 // Create a Recordset from all the records in the Orders table.
 ADODB.Connection objConn = new ADODB.Connection();
 ADODB._Recordset objRS = null;
@@ -211,7 +211,7 @@ A QueryTable object represents a table that is built from data that is returned 
 
 The following code demonstrates how to automate Excel 2000, Excel 2002, or Excel 2003 to create a new QueryTable in an Excel worksheet by using data from the Northwind sample database: 
 
-```
+```c
 // Start a new workbook in Excel.
 m_objExcel = new Excel.Application();
 m_objBooks = (Excel.Workbooks)m_objExcel.Workbooks;
@@ -240,7 +240,7 @@ m_objExcel.Quit();
 
 You can use the Windows Clipboard to transfer data to a worksheet. To paste data into multiple cells on a worksheet, you can copy a string in which columns are delimited by TAB characters, and rows are delimited by carriage returns. The following code illustrates how Visual C# .NET can use the Windows Clipboard to transfer data to Excel:
 
-```
+```c
 // Copy a string to the Windows clipboard.
 string sData = "FirstName\tLastName\tBirthdate\r\n"  +
 "Bill\tBrown\t2/5/85\r\n"  +
@@ -273,7 +273,7 @@ Excel can open tab- or comma-delimited files and correctly parse the data into c
 
 The following code illustrates how to generate a tab-delimited text file from data that is read with ADO.NET:
 
-```
+```c
 // Connect to the data source.
 System.Data.OleDb.OleDbConnection objConn = new System.Data.OleDb.OleDbConnection( 
 "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + m_strNorthwind + ";");
@@ -337,7 +337,7 @@ objConn.Close();
 
 The aforementioned code uses no Automation. However, if you want, you can use Automation to open the text file and save the file in the Excel workbook format, similar to this:
 
-```
+```c
 // Open the text file in Excel.
 m_objExcel = new Excel.Application();
 m_objBooks = (Excel.Workbooks)m_objExcel.Workbooks;
@@ -362,7 +362,7 @@ You can use the Microsoft Jet OLE DB provider to add records to a table in an ex
 
 The following code adds two new records to a table in Book7.xls. The table in this case is Sheet1:
 
-```
+```c
 // Establish a connection to the data source.
 System.Data.OleDb.OleDbConnection objConn = new System.Data.OleDb.OleDbConnection(
 "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + m_strSampleFolder +
@@ -441,7 +441,7 @@ Excel 2002 and 2003 can open any XML file that is well-formed. You can open XML 
    
 7. In Form1.cs, replace the following code:
 
-    ```
+    ```cs
     private void Form1_Load(object sender, System.EventArgs e)
     {
     
@@ -455,7 +455,7 @@ Excel 2002 and 2003 can open any XML file that is well-formed. You can open XML 
     ```
     with:
 
-    ```
+    ```cs
             // Excel object references.
             private Excel.Application m_objExcel =  null;
             private Excel.Workbooks m_objBooks = null;
@@ -821,7 +821,7 @@ Excel 2002 and 2003 can open any XML file that is well-formed. You can open XML 
     [Creating a Project (Visual C#)](https://msdn.microsoft.com/library/ms173077.aspx)Note If you did not install Office to the default folder (C:\Program Files\Microsoft Office), modify the m_strNorthwind constant in the code sample to match your installation path for Northwind.mdb.   
 8. Add the following to the Using directives in Form1.cs:
 
-    ```
+    ```cs
     using System.Reflection;
     using System.Runtime.InteropServices;
     using Excel = Microsoft.Office.Interop.Excel;

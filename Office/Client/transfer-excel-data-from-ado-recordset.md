@@ -40,7 +40,7 @@ If you do not have the Northwind database installed on your system, you can use 
 3. Click Referencesfrom the Project menu. Add a reference to the Microsoft ActiveX Data Objects 2.1 Library.   
 4. Paste the following code into the code section of Form1:
 
-    ```
+    ```vb
     Private Sub Command1_Click()
         Dim cnt As New ADODB.Connection
         Dim rst As New ADODB.Recordset
@@ -199,7 +199,7 @@ The following limitations apply when assigning an array to an Excel Range object
 
 Note the use of the TransposeDim() function to transpose the array before the array is copied to the Excel worksheet. Instead of creating your own function to transpose the array, you can use Excel's Transpose function by modifying the sample code to assign the array to the cells as shown below: 
 
-```
+```vb
    xlWs.Cells(2, 1).Resize(recCount, fldCount).Value = _
       xlApp.WorksheetFunction.Transpose(recArray)
 ```

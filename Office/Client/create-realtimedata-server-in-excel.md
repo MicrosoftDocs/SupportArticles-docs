@@ -19,13 +19,13 @@ Microsoft Excel provides a new worksheet function, RTD, that allows you to call 
 
 The RTD worksheet function has the following syntax: 
 
-```
+```vb
 =RTD(ProgID,Server,String1,[String2],...)
 ```
 
 The first argument, ProgID, represents the Programmatic Identifier (ProgID) of the RealTimeData server. The Server argument indicates the name of the machine on which the RealTimeData server is run; this argument can be a null string or omitted if the RealTimeData server is to run locally. The remaining arguments simply represent parameters to send to the RealTimeData server; each unique combination of these parameters represents one "topic," which has an associated "topic id." Parameters are case-sensitive. For example, the following illustrates calls to the RTD server that would result in three separate topic ids: 
 
-```
+```vb
 =RTD("ExcelRTD.RTDFunctions",,"AAA", "10")
 
 =RTD("ExcelRTD.RTDFunctions",,"AAA", "5")
@@ -60,7 +60,7 @@ The following sample demonstrates how to create and use a RealTimeData server wi
 3. On the Project menu, click Project1 Properties. Change the Project Name to ExcelRTD, and then click OK.   
 4. Change the Name property of the class module Class1 to RTDFunctions. Add the following code to RTDFunctions:
 
-    ```
+    ```vb
     Option Explicit
     
     Implements IRtdServer  'Interface allows Excel to contact this RealTimeData server
@@ -155,7 +155,7 @@ The following sample demonstrates how to create and use a RealTimeData server wi
 
 5. On the Project menu, click Add Class Module. Change the class module Name property to Topic and change the Instancing property to Private. Add the following code to the Topic class module:
 
-    ```
+    ```vb
     Option Explicit
     
     Private m_TopicID As Long
@@ -209,7 +209,7 @@ The following sample demonstrates how to create and use a RealTimeData server wi
 
 6. On the Project menu, select Add Module. Add the following code to the new module: 
 
-    ```
+    ```vb
     Public Declare Function SetTimer Lib "user32" (ByVal hWnd As Long, _
     ByVal nIDEvent As Long, ByVal uElapse As Long, ByVal lpTimerFunc As Long) As Long
     

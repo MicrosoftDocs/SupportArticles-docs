@@ -1,5 +1,5 @@
 ---
-title: How to automate Excel from Visual Basic .NET to fill or to obtain data in a range by using arrays
+title: Automate Excel from Visual Basic .NET to fill or obtain data by using arrays
 description: Demonstrates how to automate Microsoft Excel and how to fill a multi-cell range with an array of values. Also illustrates how to retrieve a multi-cell range as an array by using automation.
 author: simonxjx
 manager: willchen
@@ -38,21 +38,21 @@ FillWithStrings.
 7. Double-click Button1. The code window for the Form appears.   
 8. Add the following to the top of Form1.vb:
 
-   ```
+   ```vb
    Imports Microsoft.Office.Interop
 
    ```
 
 9. In the code window, replace the following code
 
-   ```
+   ```vb
     Private Sub Button1_Click(ByVal sender As System.Object, _
       ByVal e As System.EventArgs) Handles Button1.Click
    End Sub
    ```
    with: 
 
-   ```
+   ```vb
     'Keep the application object and the workbook object global, so you can  
     'retrieve the data in Button2_Click that was set in Button1_Click.
     Dim objApp As Excel.Application
@@ -130,7 +130,7 @@ FillWithStrings.
 10. Return to the design view for Form1, and then double-click Button2.   
 11. In the code window, replace the following code
 
-    ```
+    ```vb
     Private Sub Button2_Click(ByVal sender As System.Object, _
       ByVal e As System.EventArgs) Handles Button2.Click
 
@@ -139,7 +139,7 @@ FillWithStrings.
  
     with: 
 
-    ```
+    ```vb
     Private Sub Button2_Click(ByVal sender As System.Object, _
       ByVal e As System.EventArgs) Handles Button2.Click
         Dim objSheets As Excel.Sheets

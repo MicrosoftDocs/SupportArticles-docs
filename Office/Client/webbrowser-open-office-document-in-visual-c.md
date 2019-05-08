@@ -1,5 +1,5 @@
 ---
-title: How to use the WebBrowser control to open Office documents in Visual C# 2005 or in Visual C# .NET
+title: Use WebBrowser control to open documents in Visual C# 2005 or Visual C# .NET
 description: Describes some sample steps for how to use the WebBrowser control to open Office documents in Visual C# 2005 or in Visual C# .NET.
 author: simonxjx
 manager: willchen
@@ -32,7 +32,7 @@ To create a Visual C# application that opens Office documents, follow these step
 
     **Note** In Visual C# 2005, if you cannot find the SHDocVw.dll file or the AxSHDocVw.dll file, run the following command at the Visual Studio command prompt: 
 
-    ```
+    ```cs
     aximp %WINDIR%\system32\shdocvw.dll
     ```
     Then, create a common language runtime proxy (SHDocVw.dll) and a Windows Forms proxy (AxSHDocVw.dll) for the Microsoft Web Browser control. To add the DLL files in Visual C# 2005, follow these steps:
@@ -49,26 +49,26 @@ To create a Visual C# application that opens Office documents, follow these step
 
 5. In the code window for Form1, add the following namespace to the list:
 
-    ```
+    ```cs
     using System.Reflection;
     ```
 
 6. Define a private member in class Form1 as follows:
 
-    ```
+    ```cs
     private Object oDocument;
     ```
 
 7. At the end of the InitializeComponent method of class Form1, add the following code to handle the Form1_Load, Form1_Closed, and axWebBrowser1_NavigateComplete2 events:
 
-    ```
+    ```cs
     this.axWebBrowser1.NavigateComplete2 += new AxSHDocVw.DWebBrowserEvents2_NavigateComplete2EventHandler(this.axWebBrowser1_NavigateComplete2);
     this.Load += new System.EventHandler(this.Form1_Load);
     this.Closed += new System.EventHandler(this.Form1_Closed);
     ```
 
 8. Replace the following code
-    ```
+    ```cs
     private void button1_Click(object sender, System.EventArgs e)
     {
     }
@@ -76,7 +76,7 @@ To create a Visual C# application that opens Office documents, follow these step
     ```
     with:
 
-    ```
+    ```cs
     private void button1_Click(object sender, System.EventArgs e)
     {
     
@@ -138,7 +138,7 @@ You should consider the following when you use the WebBrowser control:
 - The WebBrowser control browses to documents asynchronously. When you call WebBrowser1.Navigate, the call returns control to your Visual C# application before the document has been completely loaded. If you plan on automating the contained document, you need to use the NavigateComplete2 event to be notified when the document has finished loading. Use the Document property of the WebBrowser object that is passed in to get a reference to the Office document object, which, in the preceding code, is set to oDocument.   
 - The WebBrowser control does not support menu merging.    
 - In Internet Explorer versions 5.0 and later, you can display docked toolbars by using the following code:
-    ```
+    ```cs
      // This is a toggle option, so call it once to show the 
      // toolbars and once to hide them. This works with Internet Explorer 5
      // but often fails to work properly with earlier versions.
@@ -151,7 +151,7 @@ You should consider the following when you use the WebBrowser control:
 
     The most common problem is with Microsoft Office command bars, which appear disabled. If you have two WebBrowser controls on the same form, both of which are loaded with Word documents, and if you have displayed toolbars by using one of the preceding techniques, only one set of toolbars is active and works correctly. The other is disabled and cannot be used.   
 - To clear the WebBrowser control of its current contents, in the Click event of another command button (or in some other appropriate place in your code), browse to the default blank page by using the following code:
-    ```
+    ```cs
        AxWebBrowser1.Navigate("about:blank");
     ```
 

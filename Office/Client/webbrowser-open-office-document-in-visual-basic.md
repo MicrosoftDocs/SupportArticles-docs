@@ -35,12 +35,12 @@ To create a Visual Basic application that opens Office documents, follow these s
     **Note** In Visual Studio 2005, you do not have to do step 2.   
 3. Using the Toolbox, add a WebBrowser control, an OpenFileDialog control, and a Button control to Form1. This step adds the AxWebBrowser1 member variable, the OpenFileDialog1 member variable, and the Button1 member variable to the Form1 class.   
 4.  Define a private member in the Form1 class as follows.
-    ```
+    ```cs
     Dim oDocument as Object
     ```
 
 5. Paste the following code in the Form1 class.
-    ```
+    ```cs
     Private Sub Button1_Click(ByVal sender As System.Object, _
        ByVal e As System.EventArgs) Handles Button1.Click
     
@@ -106,7 +106,7 @@ You should consider the following when you use the WebBrowser control:
 - The WebBrowser control browses to documents asynchronously. When you call WebBrowser1.Navigate, the call returns control to your Visual Basic application before the document has been completely loaded. If you plan to Automate the contained document, you need to use the NavigateComplete2 event to be notified when the document has finished loading. Use the Document property of the WebBrowser object that is passed in to get a reference to the Office document object, which, in the preceding code, is set to oDocument.   
 - The WebBrowser control does not support menu merging.    
 - The WebBrowser control generally hides any docked toolbars before displaying an Office document. You can use Automation to show a floating toolbar using code such as the following.
-    ```
+    ```cs
     With oDocument.Application.CommandBars("Standard")
        .Position = 4 '[msoBarFloating]
        .Visible = True
@@ -114,7 +114,7 @@ You should consider the following when you use the WebBrowser control:
     
     ```
   Newer versions of Internet Explorer (5.0 and later) also allow you to display docked toolbars using the following code. 
-    ```
+    ```cs
     ' This is a toggle option, so call it once to show the 
     ' toolbars and once to hide them. This works with Internet Explorer 5
     ' but often fails to work properly with earlier versions...
@@ -125,7 +125,7 @@ You should consider the following when you use the WebBrowser control:
 
     The most common problem is with Office command bars, which appear disabled. If you have two WebBrowser controls on the same form, both of which are loaded with Word documents, and you have displayed toolbars by using one of the preceding techniques, only one set of toolbars is active and works correctly. The other is disabled and cannot be used.   
 - To clear the WebBrowser of its current contents, in the Click event of another command button (or in some other appropriate place in your code), browse to the default blank page by using the following code:
-    ```
+    ```cs
        AxWebBrowser1.Navigate("about:blank")
     ```
 

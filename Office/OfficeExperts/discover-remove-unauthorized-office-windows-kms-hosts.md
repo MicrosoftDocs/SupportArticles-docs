@@ -1,5 +1,5 @@
 ---
-title: How to discover Office and Windows KMS hosts through DNS and remove unauthorized instances
+title: How to discover Office and Windows KMS hosts and remove unauthorized instances
 description: Describes how to discover Office and Windows KMS hosts through DNS, and how to remove unauthorized KMS hosts. 
 author: MaryQiu1987
 manager: ericspli
@@ -20,13 +20,13 @@ When you troubleshoot KMS configuration and activation issues, you may find unex
 
 By default, Windows and Office clients discover KMS hosts through DNS and a related *_vlmcs* SRV record. To determine whether a KMS client can locate a KMS host or whether unwanted KMS hosts exist on the network, run a command similar to the following:
 
-```
+```powershell
 nslookup -type=srv _vlmcs._tcp >%temp%\kms.txt
 ```
 
 Review the *kms*.txt file, and it should contain one or more entries similar to the following:
 
-```
+```AsciiDoc
 _vlmcs._tcp.contoso.com                            SRV service location:
                   priority       = 0
                   weight         = 0
@@ -44,13 +44,13 @@ In many cases, Windows KMS hosts may be unintentionally set up by users who mist
 1. Run **cscript slmgr.vbs /ipk xxxxx-xxxxx-xxxxx-xxxxx-xxxxx**, where *xxxxx-xxxxx-xxxxx-xxxxx-xxxxx* is Windows product key (there should be 25 numbers).
 1. To prevent instability in the license service, restart the system or the Software Protection Service. To restart the Software Protection Service, run the following commands:
 
-   ```
+   ```powershell
    net stop sppsvc
    net start sppsvc
    ```
 1. Run the following command to display the license information for the installed and active Windows edition:
 
-   ```
+   ```powershell
    cscript slmgr.vbs /dli
    ```
 
@@ -67,19 +67,19 @@ It's not common to create an Office KMS host unintentionally, because setting up
 
 To determine whether a computer has the Office 2010 KMS Host License Pack installed and has an active Office KMS host, run the following command:
 
-```
+```powershell
 cscript slmgr.vbs /dlv bfe7a195-4f8f-4f0b-a622-cf13c7d16864
 ```
 
 The output of a computer which has the Office 2010 KMS Host License Pack installed resembles the following. In the following example, key items are **Partial Product Key: XXXXX** and **License Status: Licensed**. These items indicate that the Office 2010 KMS host key is successfully installed and activated. To pull all the products installed, including all Office KMS host installations, run the following command:
 
-```
+```powershell
 cscript slmgr.vbs /dlv All >C:\<path>\KMSInfo.txt
 ```
 
 In this command, *path* equals where you want to write the output. In this file, search for Office and find all the instances for the Office KMS host installations. If you only want to pull specific Office KMS information, replace the Activation ID that is mentioned earlier in the command (**bfe7a195-4f8f-4f0b-a622-cf13c7d16864**) with the Activation ID for Office 2013, 2016, or 2019. An example of the output resembles the following:
 
-```
+```AsciiDoc
 Name: Microsoft Office 2010, KMSHost edition
 Description: Microsoft Office 2010 KMS, VOLUME_KMS channel
 Activation ID: bfe7a195-4f8f-4f0b-a622-cf13c7d16864
@@ -95,10 +95,10 @@ License Status: Licensed
 Remaining Windows rearm count: 1
 Trusted time:
 Key Management Service is enabled on this computer
-    Current count: 0
-    Listening on Port: 1688
-    DNS publishing enabled
-    KMS priority: Normal
+Current count: 0
+Listening on Port: 1688
+DNS publishing enabled
+KMS priority: Normal
 ```
 
 Then, follow these steps to remove an Office KMS host in your environment:
@@ -106,7 +106,7 @@ Then, follow these steps to remove an Office KMS host in your environment:
 1. Open an elevated command prompt.
 1. Run the following command to uninstall Office KMS host product key:
 
-   ```
+   ```powershell
    cscript slmgr.vbs /upk bfe7a195-4f8f-4f0b-a622-cf13c7d16864
    ```
    > [!WARNING]
@@ -114,13 +114,13 @@ Then, follow these steps to remove an Office KMS host in your environment:
 
 1. Run the following command again to check the status of the Office KMS host:
 
-   ```
+   ```powershell
    cscript slmgr.vbs /dlv bfe7a195-4f8f-4f0b-a622-cf13c7d16864
    ```
 
 1. If the Office KMS host product key is removed, the output resembles the following. The key items are **This license is not in use** and **License Status: Unlicensed**.
 
-   ```
+   ```AsciiDoc
    Name: Microsoft Office 2010, KMSHost edition
    Description: Microsoft Office 2010 KMS, VOLUME_KMS channel
    Activation ID: bfe7a195-4f8f-4f0b-a622-cf13c7d16864

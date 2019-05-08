@@ -1,5 +1,5 @@
 ---
-title: Could not create SSL/TLS secure channel when connecting to Project Online OData from SSIS
+title: Cannot create SSL/TLS secure channel when for Project Online OData from SSIS
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: willchen
@@ -35,11 +35,11 @@ This issue occurs if Transport Layer Security (TLS) is not enabled.
 
 To resolve this issue, add the **SchUseStrongCrypto** registry entry. To do this, run the appropriate command at a Command Prompt window, depending on your system type (64-bit or 32-bit):
 
-```
+```powershell
 reg add HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /v SchUseStrongCrypto /t REG_DWORD /d 1 /reg:64
 ```
 
-```
+```powershell
 reg add HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /v SchUseStrongCrypto /t REG_DWORD /d 1 /reg:32
 ```
 

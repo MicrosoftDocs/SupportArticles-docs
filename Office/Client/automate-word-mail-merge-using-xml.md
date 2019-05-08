@@ -1,5 +1,5 @@
 ---
-title: How to automate Word to perform a client-side Mail Merge using XML from SQL Server
+title: Automate Word to perform a client-side Mail Merge using XML from SQL Server
 description: Demonstrates how to automate Microsoft Word from client-side script to perform a mail merge for labels.
 author: simonxjx
 manager: willchen
@@ -25,7 +25,7 @@ For illustration purposes, the following sample uses the sample Pubs database in
 
 1. On your Web server, create a virtual directory that is called WordMailMerge.   
 2. Use Notepad to create a file called Default.asp that contains the code given below. Save the file to the WordMailMerge virtual directory.
-    ```
+    ```vbscript
     <%@ Language=VBScript %>
     <HTML>
     <BODY>
@@ -132,7 +132,7 @@ For illustration purposes, the following sample uses the sample Pubs database in
     ```
 
 3. Use Notepad to create a file called Getdata.asp that contains the code given below. Save the file to the WordMailMerge virtual directory.
-    ```
+    ```vbscript
     <%@ Language=VBScript %>
     <%
       Dim oConn,oRS,strConn,sSQLServer
