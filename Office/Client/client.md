@@ -136,6 +136,8 @@ This page lists some issues for Office products.
 
 [How To Use an XML Web Service by Using ASP.NET from an Office VBA Macro in Word or Excel](./use-xml-web-service-in-word-or-excel.md)
 
+[Description of the Office Feature Updates task](./office-feature-updates-task-faq.md)
+
 ## Still need help? 
 
 Go to [Microsoft Community](https://answers.microsoft.com) or [Office help](https://support.office.com).
