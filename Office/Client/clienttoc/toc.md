@@ -123,3 +123,5 @@
 ## [Word automation to count page numbers](../use-word-automation-count-page-number.md)
 
 ## [Use XML Web Service using ASP.NET in Word or Excel](../use-xml-web-service-in-word-or-excel.md)
+
+## [Office Feature Updates task](../office-feature-updates-task-faq.md)
