@@ -40,14 +40,14 @@ This article demonstrates how to set the proper project reference to the Excel t
 5. Double-click Button1. The code window for the form appears.   
 6. In the code window, replace the following code:
 
-   ```
+   ```c
    private void button1_Click(object sender, System.EventArgs e)
    {
    }
    ```
    with: 
 
-   ```
+   ```c
    private void button1_Click(object sender, System.EventArgs e)
    {
    Excel.Application oXL;
@@ -218,7 +218,7 @@ This article demonstrates how to set the proper project reference to the Excel t
 
 7. Scroll to the top of the code window. Add the following line to the end of the list of using directives:
 
-   ```
+   ```c
    using Excel = Microsoft.Office.Interop.Excel;
    using System.Reflection; 
    ```

@@ -41,7 +41,7 @@ This article describes how to activate the Office 2010 KMS host through telephon
 
 1. Use the following command under c:\Windows\system32 to activate Office 2010 KMS host:
 
-   ```
+   ```powershell
    cscript slmgr.vbs /atp XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX bfe7a195-4f8f-4f0b-a622-cf13c7d16864
    ```
 

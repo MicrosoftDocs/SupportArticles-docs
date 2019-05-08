@@ -23,7 +23,7 @@ Using Automation, you can manipulate Microsoft Excel. It is possible to call mac
 2. Place a CommandButton on Form1.    
 3. In the General Declarations section of Form1, enter this code:
 
-    ```
+    ```vb
           Option Explicit
     
     Private Sub Command1_Click()
@@ -47,7 +47,7 @@ Using Automation, you can manipulate Microsoft Excel. It is possible to call mac
     For Excel 97 and later: Press ALT+F11 to start the Visual Basic Editor. Click Module on the Insert menu.    
 6. In Module1, type the following code:
 
-    ```
+    ```vb
     Sub Proc(sParam1 As String, iParam2 As Integer)
             MsgBox sParam1 & " is " & iParam2 & " Years Old"
           End Sub

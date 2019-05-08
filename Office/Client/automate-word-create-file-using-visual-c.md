@@ -51,14 +51,14 @@ To create a new Word document by using Automation from Visual C# 2005 or Visual 
 5. Double-click Button1. The code window for the form appears.   
 6. In the code window, replace the following code:
 
-    ```
+    ```cs
     private void button1_Click(object sender, System.EventArgs e)
     {
     }
     
     ```
    with: 
-    ```
+    ```cs
     private void button1_Click(object sender, System.EventArgs e)
     {
     object oMissing = System.Reflection.Missing.Value;
@@ -206,7 +206,7 @@ To create a new Word document by using Automation from Visual C# 2005 or Visual 
 
 7. Scroll to the top of the code window. Add the following line to the end of the list of using directives:
 
-    ```
+    ```cs
     using Word = Microsoft.Office.Interop.Word;
     using System.Reflection;
     ```
@@ -225,7 +225,7 @@ If you are using Automation to build documents that are all in a common format, 
 
 By using a template, you can fine-tune the placement of tables, paragraphs, and other objects within the document, as well as include formatting on those objects. By using Automation, you can create a new document based on your template with code such as the following: 
 
-```
+```cs
 object oTemplate = "c:\\MyTemplate.dot";
 oDoc = oWord.Documents.Add(ref oTemplate, ref oMissing,
 ref oMissing, ref oMissing);
@@ -233,21 +233,21 @@ ref oMissing, ref oMissing);
 
 In your template, you can define bookmarks so that your Automation client can fill in variable text at a specific location in the document, as follows: 
 
-```
+```cs
 object oBookMark = "MyBookmark";
 oDoc.Bookmarks.Item(ref oBookMark).Range.Text = "Some Text Here";
 ```
  
 Another advantage to using a template is that you can create and store formatting styles that you wish to apply at runtime, as follows: 
 
-```
+```cs
 object oStyleName = "MyStyle";
 oDoc.Bookmarks.Item(ref oBookMark).Range.set_Style(ref oStyleName);
 ```
 
 or
 
-```
+```cs
 object oStyleName = "MyStyle";
 oWord.Selection.set_Style(ref oStyleName);
 ```

@@ -1,5 +1,5 @@
 ---
-title: Unexpected Autodiscover behavior when you have registry settings under the \Autodiscover key
+title: Unexpected Autodiscover behavior if settings under the \Autodiscover key
 description: Explains how to use policy to control the different Autodiscover lookup methods that are used by Outlook.
 author: simonxjx
 manager: willchen

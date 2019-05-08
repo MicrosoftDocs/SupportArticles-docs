@@ -43,14 +43,14 @@ The array is two-dimensional: The first element contains the name of the shape, 
 3. On the View menu, click ToolBox. Add a button to Form1.   
 4. Double-click Button1. The code window opens at the Click event for Button1.   
 5. In the code window, replace the following code
-    ```
+    ```vb
     Private Sub Button1_Click(ByVal sender As System.Object, _
        ByVal e As System.EventArgs) Handles Button1.Click
     End Sub
     
     ```
      with: 
-    ```
+    ```vb
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As
           System.EventArgs) Handles Button1.Click
        fBuildArray()
@@ -61,7 +61,7 @@ The array is two-dimensional: The first element contains the name of the shape, 
 
 6. On the Project menu, click Add Module.    
 7. Replace the contents of Module1 with the following:
-    ```
+    ```vb
     Module Module1
        Public aryValues(5, 2) As String
        Sub fBuildArray()
@@ -156,4 +156,4 @@ The array is two-dimensional: The first element contains the name of the shape, 
 
 For more information, see the following Microsoft Developer Network (MSDN) Web site: 
 
-[Microsoft Office Development with Visual Studio](http://msdn.microsoft.com/library/aa188489%28office.10%29.aspx)
+[Microsoft Office Development with Visual Studio](https://msdn.microsoft.com/library/aa188489%28office.10%29.aspx)

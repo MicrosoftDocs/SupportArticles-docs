@@ -1,5 +1,5 @@
 ﻿---
-title: You receive a "Cannot access directory" error when you change the default save location in Excel 2016
+title: Cannot access directory when change the default save location in Excel 2016
 author: AmandaAZ
 ms.author: warrenr
 manager: warrenr

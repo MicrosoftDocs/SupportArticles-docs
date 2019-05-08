@@ -58,7 +58,7 @@ In the following example, a Visual Basic subroutine populates a large range of c
 
 1. Double-click the user form to open the **Code** window for the user form.   
 2. In the module, type the following code for the **UserForm_Activate** event:
-    ```
+    ```vb
     Private Sub UserForm_Activate()
         ' Set the width of the progress bar to 0.
         UserForm1.LabelProgress.Width = 0
@@ -72,7 +72,7 @@ In the following example, a Visual Basic subroutine populates a large range of c
 3. On the Insert menu, click Module.
 
 4. In the **Code** window for the module, type the following code:
-    ```
+    ```vb
     Sub ShowUserForm()
         UserForm1.Show
     End Sub

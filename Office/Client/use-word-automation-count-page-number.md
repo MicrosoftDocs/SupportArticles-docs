@@ -1,5 +1,5 @@
 ---
-title: How to use Word automation to count the number of pages in each section of a document
+title: How to use Word automation to count page number in each section of a document
 description: Describes how you can use automation with Word to determine the number of pages in each section of a document.
 author: simonxjx
 manager: willchen
@@ -25,7 +25,7 @@ NOTE: The sample code assumes that a section break forces a new page break and t
 
 1. In Visual Basic, create a new Standard EXE project. Form1 is created by default.   
 2. Add a command button to Form1, and add the following code to the button's Click event:
-    ```
+    ```vb
         Dim oApp As Object
         Dim oDoc As Object
         Dim oTbl As Object
@@ -74,18 +74,18 @@ NOTE: The sample code assumes that a section break forces a new page break and t
 
     At the top of AutoProjectDlg.cpp, add one of the following lines:
       - In Word 2002 and in later versions of Word, add the following line: 
-        ```
+        ```vb
         #include "MSWord.h"
         ```
 
     - In Word 2000, add the following line: 
-        ```
+        ```vb
         #include "MSWord9.h"
         ```
 
    
 3. Add the following code to CAutoProjectDlg::OnRun() in AutoProjectDlg.cpp. 
-    ```
+    ```vb
     COleVariant vOpt((long)DISP_E_PARAMNOTFOUND, VT_ERROR);
     
     //Start Word.

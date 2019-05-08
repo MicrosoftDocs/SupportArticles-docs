@@ -25,42 +25,6 @@ By using an ActiveX component to perform the document generation at the client, 
 
 ## More Information
 
-### Download the Sample
- 
-AutoWord.exe contains the Visual Basic ActiveX DLL project, Word document, and Web pages that are described in this article.
-
-The following file is available for download from the Microsoft Download Center:
-
-[Autoword.exe](https://download.microsoft.com/download/word2002/sample/1.0/win98mexp/autoword.exe)
-
-Release Date: April 17, 2001
-
-For additional information about how to download Microsoft Support files, click the following article number to view the article in the Microsoft Knowledge Base: 
-
-[119591](https://support.microsoft.com/help/119591) How to Obtain Microsoft Support Files from Online Services
- 
-Microsoft scanned this file for viruses. Microsoft used the most current virus-detection software that was available on the date that the file was posted. The file is stored on security-enhanced servers that help to prevent any unauthorized changes to the file. 
-
-### Set up the Sample
- 
-After you download Autoword.exe, follow these steps to set up the sample: 
-
-
-1. Create a folder named Invoice in the virtual root directory of your Web server. (The default virtual root directory is C:\Inetpub\Wwwroot.)   
-2. Extract the files in Autoword.exe to the Invoice folder.   
-3. Open Autoword1.htm in a text or HTML editor and replace references to YourWebServer in all URLs with the name of your Web server. Likewise, replace YourSQLServer in the connection string with the name of your SQL Server that contains the Northwind sample database.
-
-    **NOTE** If you do not have an available SQL Server with the Northwind sample database, you can modify the connection string to use the Microsoft Access Northwind sample database instead. A connection to the Access Northwind sample database resembles the following:
-    ```
-    sConn = "provider=microsoft.jet.oledb.4.0; data source=" & _
-            "C:\Program Files\Microsoft Office\Office10\Samples\Northwind.mdb"
-    ```
-
-4. Open Autoword2.htm in a text or HTML editor and replace references to YourWebServer in all URLs with the name of your Web server.    
-5. Start Internet Explorer. You can browse to http://YourWebServer/invoice/AutoWord1.htm and http://YourWebServer/invoice/AutoWord2.htm to test the script. When you first visit either of these pages, you are prompted to download the ActiveX component.   
- 
-The sample Visual Basic ActiveX component and script are described in more detail in the sections that follow. 
-
 ### Visual Basic ActiveX Component
  
 The Visual Basic ActiveX component in this sample interacts with Web page script to generate an order invoice document at the user's request. The Web application may allow the ActiveX component to obtain the order information for a given order ID, or the Web application may choose to package the order information as XML and send it to the ActiveX component for processing. In either case, after the component obtains the order information, it can automate Word to build and display the invoice document for the order.
@@ -73,7 +37,7 @@ The ActiveX component (AutomateWord) contains a single class, the Invoice class,
 
 Invoice.cls
 
-```
+```vb
 Option Explicit
 
 Private Type InvoiceData
@@ -219,12 +183,12 @@ Autoword1.htm demonstrates how you can use the GetData method to let the ActiveX
 
 Autoword1.htm
 
-```
+```html
 <HTML>
 <HEAD>
    <OBJECT ID="AutoWord"
     CLASSID="CLSID:32646EBA-0919-4C2F-94D6-599F46DC34F2"
-    CODEBASE="http://YourWebServer/invoice/package/AutomateWord.CAB#version=1,0,0,0">
+    CODEBASE="https://YourWebServer/invoice/package/AutomateWord.CAB#version=1,0,0,0">
    </OBJECT>
 </HEAD>
 <BODY>
@@ -239,7 +203,7 @@ Function InvoiceButton_OnClick()
       Dim sConn
       sConn = "Provider=sqloledb;Data Source=YourSQLServer;Initial Catalog=Northwind;UID=sa;"
       AutoWord.GetData OrderID.Value, sConn
-      AutoWord.MakeInvoice "http://YourWebServer/invoice/invoice.doc"
+      AutoWord.MakeInvoice "https://YourWebServer/invoice/invoice.doc"
    End Function
 
 </SCRIPT>
@@ -249,8 +213,8 @@ Function InvoiceButton_OnClick()
 The script in Autoword1.htm uses the ActiveX component to display the completed document outside of the browser. You may also choose to save the completed document and display it in the browser; however, doing so requires that the Word document be saved to a disk. The component can save the document as C:\Invoice.doc on the client's local drive. Because the ActiveX component is marked safe for scripting, the client is prompted to confirm the save.
 
 If you want to display the completed document in the browser, change the call to MakeInvoice in Autoword1.htm to the following: 
-```
-      AutoWord.MakeInvoice "http://YourWebServer/invoice/invoice.doc", True
+```html
+      AutoWord.MakeInvoice "https://YourWebServer/invoice/invoice.doc", True
       window.navigate "c:\invoice.doc"
 
 ```
@@ -259,12 +223,12 @@ Autoword2.htm demonstrates how you can use the SendData method to send the order
 
 Autoword2.htm
 
-```
+```html
 <HTML>
 <HEAD>
    <OBJECT ID="AutoWord"
     CLASSID="CLSID:32646EBA-0919-4C2F-94D6-599F46DC34F2"
-    CODEBASE="http://YourWebServer/invoice/package/AutomateWord.CAB#version=1,0,0,0">
+    CODEBASE="https://YourWebServer/invoice/package/AutomateWord.CAB#version=1,0,0,0">
    </OBJECT>
 </HEAD>
 <BODY>
@@ -291,7 +255,7 @@ USA</CustInfo>
 
 Function InvoiceButton_OnClick()
       AutoWord.SendData DataXML.XMLDocument
-      AutoWord.MakeInvoice "http://YourWebServer/invoice/invoice.doc"
+      AutoWord.MakeInvoice "https://YourWebServer/invoice/invoice.doc"
    End Function
 
 </SCRIPT>
@@ -306,10 +270,10 @@ NOTE: The CAB file that is included in Autoword.exe was created with the Package
 For more information on creating Internet component downloads, digital signing, and marking components as safe for scripting and initialization, see the following Microsoft Developer Network (MSDN) Web sites:
  
 Signing and Checking Code with Authenticode 
-[https://msdn.microsoft.com/en-us/library/ms537364.aspx](http://msdn2.microsoft.com/library/ms537364.aspx)
+[https://msdn.microsoft.com/en-us/library/ms537364.aspx](https://msdn.microsoft.com/library/ms537364.aspx)
 
 Safe Initialization and Scripting for ActiveX Controls 
-[https://msdn.microsoft.com/en-us/library/Aa751977.aspx](http://msdn2.microsoft.com/library/aa751977.aspx)
+[https://msdn.microsoft.com/en-us/library/Aa751977.aspx](https://msdn.microsoft.com/library/aa751977.aspx)
 
 ## References
 

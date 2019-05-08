@@ -42,14 +42,14 @@ This article demonstrates how to set the proper project reference to the Word ty
 4. On the View menu, select Toolbox to display the toolbox, and then add a button to Form1.   
 5. Double-click Button1. The code window for the form appears.   
 6. In the code window, replace the following code
-    ```
+    ```vb
       private void button1_Click(object sender, System.EventArgs e)
       {
       }
     
     ```
      with: 
-    ```
+    ```vb
     Word.Application wrdApp;
     Word._Document wrdDoc;
     Object oMissing = System.Reflection.Missing.Value;
@@ -279,7 +279,7 @@ This article demonstrates how to set the proper project reference to the Word ty
 
     For more information about the Windows Forms Designer in Visual C# 2005, visit the following Microsoft Developer Network (MSDN) Web site: [Creating a Project (Visual C#)](https://msdn.microsoft.com/library/ms173077.aspx)Note Microsoft Office Word 2003 has an additional argument for the Open method of the document. If you are using the Word 2003 PIA, remove the comment notation for the additional parameter for the Open method.   
 7. Add the following to the top of Form1.cs:
-    ```
+    ```cs
     using Word = Microsoft.Office.Interop.Word;
     
     ```

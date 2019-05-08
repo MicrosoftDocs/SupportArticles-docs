@@ -122,17 +122,17 @@ Along with the class library project, the wizard generates a setup project that 
    
 5. On the Project menu, click Add Reference. Click System.Windows.Forms.DLL in the components list, click Select, and then click OK.   
 6. Add the following to the list of namespaces in the Connect class:
-    ```
+    ```c
     using System.Reflection;
     ```
 
 7. Add the following member to the Connect class:
-    ```
+    ```c
     private CommandBarButton MyButton;
     ```
 
 8. Implement the code for the members of IDTExtensibility2 in the Connect class, as follows:
-    ```
+    ```c
     public void OnConnection(object application, Extensibility.ext_ConnectMode connectMode, object addInInst, ref System.Array custom) {
        applicationObject = application;
        addInInstance = addInInst;
