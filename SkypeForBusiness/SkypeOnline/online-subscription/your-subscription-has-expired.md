@@ -1,5 +1,5 @@
 ---
-title: "Your subscription has expired" for Skype for Business Online
+title: Your subscription has expired for Skype for Business Online
 description: Describes a subscription expiration issue in Skype for Business Online. Explains how to renew your subscription either by adding the computer to an active account or by entering your product key.
 author: simonxjx
 manager: willchen
