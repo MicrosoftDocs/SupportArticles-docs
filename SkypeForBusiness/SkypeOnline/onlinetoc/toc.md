@@ -4,7 +4,7 @@
 ### [Sharing can't connect in a conference](../online-conferencing/sharing-cannot-connect.md)
 
 ## [Skype for Business Server Configuration](../online-configuration/index.md)
-### DNS configuration issues](../online-configuration/dns-configuration-issue.md)
+### [DNS configuration issues](../online-configuration/dns-configuration-issue.md)
 
 ## [Skype for Business Server Exchange Integration](../online-exchange-integration/index.md)
 ### [UM-enabled mailbox migration fails](../online-exchange-integration/um-enabled-mailbox-migration-fails.md)
