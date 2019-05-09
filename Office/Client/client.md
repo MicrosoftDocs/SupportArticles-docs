@@ -194,7 +194,7 @@ This page lists some issues for Office products.
 
 [You receive a Too many different cell formats" error message in Excel"](./too-many-different-cell-formats-in-excel.md)
 
-[Error when editing an equation in Office](../issue-when-edit-equation-in-office.md)
+[Error when editing an equation in Office](./issue-when-edit-equation-in-office.md)
 
 ## Still need help? 
 

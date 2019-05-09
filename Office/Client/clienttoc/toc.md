@@ -182,4 +182,4 @@
 
 ## [Too many different cell formats in Excel"](../too-many-different-cell-formats-in-excel.md)
 
-## [Error when edit an equation in Office](.../issue-when-edit-equation-in-office.md)
+## [Error when edit an equation in Office](../issue-when-edit-equation-in-office.md)
