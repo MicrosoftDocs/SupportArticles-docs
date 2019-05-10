@@ -196,6 +196,18 @@ This page lists some issues for Office products.
 
 [Error when editing an equation in Office](./issue-when-edit-equation-in-office.md)
 
+[Disabling code-behind prompt for InfoPath forms](./disabling-code-behind-prompt-for-infopath-forms.md)
+
+["Eventing service" error message when changing the status of users to inactive in Microsoft Project](./eventing-service-error-when-changing-user-status-to-inactive-microsoft-project.md)
+
+[Generated .PDB file name does not match InfoPath form name](./generated-pdb-file-name-does-not-match-infopath-name.md)
+
+["The image part with relationship rID8 was not found" error in Microsoft Word](./image-part-relationship-rld8-not-found-error-microsoft-word.md)
+
+[Microsoft Project opens a calendar from a different instance when editing](./project-opens-calendar-from-different-instance-when-editing.md)
+
+[SoapServerException error when customizing list form (SPO and SP-onprem) using InfoPath designer](./soapserverexception-when-customizing-list-form-using-InfoPath-designer.md)
+
 ## Still need help? 
 
 Go to [Microsoft Community](https://answers.microsoft.com) or [Office help](https://support.office.com).
