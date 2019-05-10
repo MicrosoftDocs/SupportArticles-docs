@@ -9,3 +9,7 @@
 ## [Issue when signin Office 365](../exchange-online-application-service-principal-disabled.md)
 
 ## [Supported Product IDs for Click-to-Run](../product-ids-supported-office-deployment-click-to-run.md)
+
+## [License issue when retain Online mailbox](../license-issue-when-retain-online-mailbox.md)
+
+## [Prepare for TLS 1.2](../prepare-tls-1.2-in-office-365.md)
