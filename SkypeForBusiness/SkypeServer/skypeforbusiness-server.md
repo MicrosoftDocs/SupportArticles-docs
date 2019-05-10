@@ -22,7 +22,7 @@ This page lists some issues for Skype for Business Server.
 
 [Skype for Business client stops responding when receiving a toast notification of an IM or an incoming call in Citrix VDI environment](./server-configuration/not-responding-when-receive-toast-notification.md)
 
-## Skype for Business Server Exchange integration
+## Skype for Business Server Exchange Integration
 
 ["MAPI unavailable" error in Skype for Business 2016 client](./server-exchange-integration/mapi-unavailable.md)
 
@@ -43,6 +43,8 @@ This page lists some issues for Skype for Business Server.
 ## Skype for Business Server Sign-in
 
 [How to troubleshoot issues that you may encounter when you use the Lync 2010 mobile client for Google Android](./server-sign-in/issues-in-mobile-client-for-android.md)
+
+[How to troubleshoot being unable to sign in to Skype for Business](./server-sign-in/unable-to-sign-in-to-sfb.md)
 
 ## Still need help? 
 
