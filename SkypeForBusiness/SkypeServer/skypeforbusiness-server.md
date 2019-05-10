@@ -20,6 +20,8 @@ This page lists some issues for Skype for Business Server.
 
 [Lync Server Central Management Store replication failures](./server-configuration/central-management-store-replication-failures.md)
 
+[Skype for Business client stops responding when receiving a toast notification of an IM or an incoming call in Citrix VDI environment](./server-configuration/not-responding-when-receive-toast-notification.md)
+
 ## Skype for Business Server Exchange integration
 
 ["MAPI unavailable" error in Skype for Business 2016 client](./server-exchange-integration/mapi-unavailable.md)
@@ -32,15 +34,11 @@ This page lists some issues for Skype for Business Server.
 
 ["The term 'Get-VM' is not recognized as the name of a cmdlet ..." error during install of Cloud Connector Edition](./server-install-or-uninstall/get-vm-not-recognized-during-install-cloud-connector.md)
 
-## Skype for Business Server Meeting
+## Skype for Business Server Meetings
 
-[Meeting conversation window disappears for Click-to-Run (C2R) clients in Skype for Business 2016](./server-meeting/meeting-conversation-windows-disappers.md)
+[Meeting conversation window disappears for Click-to-Run (C2R) clients in Skype for Business 2016](./server-meetings/meeting-conversation-windows-disappers.md)
 
-[Slow refresh or blurry desktop in Skype Meetings when a user joins the conference on a non-VbSS client](./server-meeting/slow-meeting-refresh-in-non-vbss-client.md)
-
-## Skype for Business Server Miscellaneous
-
-[Skype for Business client stops responding when receiving a toast notification of an IM or an incoming call in Citrix VDI environment](./server-miscellaneous/not-responding-when-receive-toast-notification.md)
+[Slow refresh or blurry desktop in Skype Meetings when a user joins the conference on a non-VbSS client](./server-meetings/slow-meeting-refresh-in-non-vbss-client.md)
 
 ## Skype for Business Server Sign-in
 

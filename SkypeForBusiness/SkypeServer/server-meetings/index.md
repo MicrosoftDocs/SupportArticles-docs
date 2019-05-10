@@ -1,5 +1,5 @@
 ﻿---
-title: Listing some meeting issues for Skype for Business Server.
+title: Listing some meetings issues for Skype for Business Server.
 author: simonxjx
 manager: willchen
 audience: ITPro
@@ -8,9 +8,9 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# Meeting issues for Skype for Business Server
+# Meetings issues for Skype for Business Server
 
-This page lists some meeting issues for Skype for Business Server.
+This page lists some meetings issues for Skype for Business Server.
 
 [Meeting conversation window disappears for Click-to-Run (C2R) clients in Skype for Business 2016](./meeting-conversation-windows-disappers.md)
 

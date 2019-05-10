@@ -5,6 +5,7 @@
 
 ## [Skype for Business Server Configuration](../online-configuration/index.md)
 ### [DNS configuration issues](../online-configuration/dns-configuration-issue.md)
+### [Calls to call queues not redirected to agents](../online-configuration/call-queues-not-redirect-to-agents.md)
 
 ## [Skype for Business Server Exchange Integration](../online-exchange-integration/index.md)
 ### [UM-enabled mailbox migration fails](../online-exchange-integration/um-enabled-mailbox-migration-fails.md)
@@ -14,9 +15,6 @@
 
 ## [Skype for Business Server Meeting Broadcast](../online-meeting-broadcast/index.md)
 ### [Issue when join a meeting broadcast ](../online-meeting-broadcast/issue-when-join-meeting-broadcast.md)
-
-## [Skype for Business Server Miscellaneous](../online-miscellaneous/index.md)
-### [Calls to call queues not redirected to agents](../online-miscellaneous/call-queues-not-redirect-to-agents.md)
 
 ## [Skype for Business Server Phone System](../online-phone-system/index.md)
 ### [Can't manage voice mail or customize a greeting](../online-phone-system/cannot-manage-voice-mail-or-greeting.md)
