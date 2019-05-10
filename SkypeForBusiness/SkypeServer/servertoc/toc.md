@@ -17,8 +17,8 @@
 ### ["Get-VM" is not recognized during install of Cloud Connector Edition](../server-install-or-uninstall/get-vm-not-recognized-during-install-cloud-connector.md)
 
 ## [Skype for Business Server Meetings](../server-meetings/index.md)
-### [Meeting conversation window disappears](../server-meeting/meeting-conversation-windows-disappers.md)
-### [Slow meeting refresh in non-VbSS client](../server-meeting/slow-meeting-refresh-in-non-vbss-client.md)
+### [Meeting conversation window disappears](../server-meetings/meeting-conversation-windows-disappers.md)
+### [Slow meeting refresh in non-VbSS client](../server-meetings/slow-meeting-refresh-in-non-vbss-client.md)
 
 ## [Skype for Business Server Sign-in](../server-sign-in/index.md)
 ### [Issues in mobile client for Google Android](../server-sign-in/issues-in-mobile-client-for-android.md)

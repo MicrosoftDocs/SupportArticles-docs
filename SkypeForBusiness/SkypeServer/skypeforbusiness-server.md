@@ -38,7 +38,7 @@ This page lists some issues for Skype for Business Server.
 
 [Meeting conversation window disappears for Click-to-Run (C2R) clients in Skype for Business 2016](./server-meetings/meeting-conversation-windows-disappers.md)
 
-[Slow refresh or blurry desktop in Skype Meetings when a user joins the conference on a non-VbSS client](./server-meeting/slow-meeting-refresh-in-non-vbss-client.md)
+[Slow refresh or blurry desktop in Skype Meetings when a user joins the conference on a non-VbSS client](./server-meetings/slow-meeting-refresh-in-non-vbss-client.md)
 
 ## Skype for Business Server Sign-in
 
