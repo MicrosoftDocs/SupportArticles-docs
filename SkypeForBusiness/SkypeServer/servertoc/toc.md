@@ -5,6 +5,7 @@
 
 ## [Skype for Business Server Configuration](../server-configuration/index.md)
 ### [Central management store replication failures](../server-configuration/central-management-store-replication-failures.md)
+### [Stops responding when receiving IM toast notification](../server-miscellaneous/not-responding-when-receive-toast-notification.md)
 
 ## [Skype for Business Server Exchange integration](../server-exchange-integration/index.md)
 ### [MAPI unavailable](../server-exchange-integration/mapi-unavailable.md)
@@ -15,12 +16,9 @@
 ## [Skype for Business Server Installation and Uninstallation](../server-install-or-uninstall/index.md)
 ### ["Get-VM" is not recognized during install of Cloud Connector Edition](../server-install-or-uninstall/get-vm-not-recognized-during-install-cloud-connector.md)
 
-## [Skype for Business Server Meeting](../server-meeting/index.md)
+## [Skype for Business Server Meetings](../server-meetings/index.md)
 ### [Meeting conversation window disappears](../server-meeting/meeting-conversation-windows-disappers.md)
 ### [Slow meeting refresh in non-VbSS client](../server-meeting/slow-meeting-refresh-in-non-vbss-client.md)
-
-## [Skype for Business Server Miscellaneous](../server-miscellaneous/index.md)
-### [Stops responding when receiving IM toast notification](../server-miscellaneous/not-responding-when-receive-toast-notification.md)
 
 ## [Skype for Business Server Sign-in](../server-sign-in/index.md)
 ### [Issues in mobile client for Google Android](../server-sign-in/issues-in-mobile-client-for-android.md)

@@ -20,6 +20,8 @@ This page lists some issues for Skype for Business Online.
 
 [Troubleshooting Skype for Business Online DNS configuration issues in Office 365](./online-configuration/dns-configuration-issue.md)
 
+[Calls to call queues are not redirected to agents in Office 365](./online-miscellaneous/call-queues-not-redirect-to-agents.md)
+
 ## Skype for Business Server Exchange Integration
 
 [UM-enabled mailbox migration to Exchange Online fails](./online-exchange-integration/um-enabled-mailbox-migration-fails.md)
@@ -31,10 +33,6 @@ This page lists some issues for Skype for Business Online.
 ## Skype for Business Server Meeting Broadcast
 
 ["This release of Lync cannot be used in a Skype Meeting Broadcast" error when you join a Skype Meeting Broadcast as an "Event team" member](./online-meeting-broadcast/issue-when-join-meeting-broadcast.md)
-
-## Skype for Business Server Miscellaneous
-
-[Calls to call queues are not redirected to agents in Office 365](./online-miscellaneous/call-queues-not-redirect-to-agents.md)
 
 ## Skype for Business Server Phone System
 
