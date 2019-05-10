@@ -183,3 +183,15 @@
 ## [Too many different cell formats in Excel"](../too-many-different-cell-formats-in-excel.md)
 
 ## [Error when edit an equation in Office](../issue-when-edit-equation-in-office.md)
+
+## [Disable code-behind prompt for InfoPath forms](../disabling-code-behind-prompt-for-infopath-forms.md)
+
+## [Issue when change users status to inactive in Project](../eventing-service-error-when-changing-user-status-to-inactive-microsoft-project.md)
+
+## [Generated .PDB file not match InfoPath form name](../generated-pdb-file-name-does-not-match-infopath-name.md)
+
+## ["The image part with relationship rID8 was not found" in Word](../image-part-relationship-rld8-not-found-error-microsoft-word.md)
+
+## [Project opens calendar from a different instance](../project-opens-calendar-from-different-instance-when-editing.md)
+
+## [SoapServerException error when use InfoPath designer](../soapserverexception-when-customizing-list-form-using-InfoPath-designer.md)
