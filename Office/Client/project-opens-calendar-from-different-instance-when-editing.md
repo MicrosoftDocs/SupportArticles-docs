@@ -28,7 +28,8 @@ To resolve this issue, designate one account in the Project client as the defaul
 2.	Select an account and click **Set as Default**.
  
 3.	Select **OK**.
-[!Note] To edit the calendar of a production environment PWA, select the Production account and then select **OK**.
+
+>    [!Note] To edit the calendar of a production environment PWA, select the Production account and then select **OK**.
 
 4.	Close the Project client and open the calendar again.
 
