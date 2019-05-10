@@ -68,7 +68,7 @@ To troubleshoot this problem, follow these steps in the given order.
 Try saving your notebook to another location, such as a local hard drive, a network drive, or removable drive. If you are successful, the following are possible causes of the problem:   
  
 - [Antivirus software conflict](#antivirus-software-conflict)    
-- [Restricted permissions](#restricted-permisssions)    
+- [Restricted permissions](#restricted-permissions)    
 - [File name length](#file-name-length)    
 - [File sharing conflict](#file-sharing-conflict)    
  
