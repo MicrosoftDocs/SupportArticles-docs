@@ -22,3 +22,4 @@
 
 ## [Skype for Business Server Sign-in](../server-sign-in/index.md)
 ### [Issues in mobile client for Google Android](../server-sign-in/issues-in-mobile-client-for-android.md)
+### [Can't to sign in to Skype for Business](./server-sign-in/unable-to-sign-in-to-sfb.md)
