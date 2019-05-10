@@ -190,8 +190,14 @@
 
 ## [Generated .PDB file not match InfoPath form name](../generated-pdb-file-name-does-not-match-infopath-name.md)
 
-## ["The image part with relationship rID8 was not found" in Word](../image-part-relationship-rld8-not-found-error-microsoft-word.md)
+## ["relationship rID8 was not found" in Word](../image-part-relationship-rld8-not-found-error-microsoft-word.md)
 
 ## [Project opens calendar from a different instance](../project-opens-calendar-from-different-instance-when-editing.md)
 
-## [SoapServerException error when use InfoPath designer](../soapserverexception-when-customizing-list-form-using-InfoPath-designer.md)
+## [SoapServerException when use InfoPath designer](../soapserverexception-when-customizing-list-form-using-InfoPath-designer.md)
+
+## [Crashing issues with Excel](../crashing-issues-with-excel.md)
+
+## [Issue when save Excel workbooks](../issue-when-save-excel-workbooks.md)
+
+## [Damaged presentation in PowerPoint 2010](../damaged-presentation-in-powerpoint-2010.md)

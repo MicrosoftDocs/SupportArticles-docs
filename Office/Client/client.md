@@ -208,6 +208,12 @@ This page lists some issues for Office products.
 
 [SoapServerException error when customizing list form (SPO and SP-onprem) using InfoPath designer](./soapserverexception-when-customizing-list-form-using-InfoPath-designer.md)
 
+[How to troubleshoot crashing and not responding issues with Excel](./crashing-issues-with-excel.md)
+
+[How to troubleshoot errors when you save Excel workbooks](./issue-when-save-excel-workbooks.md)
+
+[How to troubleshoot a damaged presentation in PowerPoint 2007 and PowerPoint 2010](./damaged-presentation-in-powerpoint-2010.md)
+
 ## Still need help? 
 
 Go to [Microsoft Community](https://answers.microsoft.com) or [Office help](https://support.office.com).
