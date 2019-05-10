@@ -4,7 +4,7 @@ description: This article fixes an issue in which you cannot sign in to Skype fo
 author: TobyTu
 ms.author: corbinm
 ms.reviewer: 
-ms.services: Skype for Business 
+ms.prod: skype-for-business-itpro
 ms.topic: conceptual
 ms.date: 04/17/2019
 ---
