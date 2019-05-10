@@ -1,5 +1,5 @@
 ---
-title: How to automate Excel from MFC and Visual C++ 2005 or Visual C++ .NET to fill or obtain data in a range using arrays
+title: Automate Excel from MFC and Visual C++ to fill or obtain data using arrays
 description: Describes how to automate Excel from Visual C++ 2005 or Visual C++ .NET to fill and retrieve values in a multi-cell range by using arrays.
 author: simonxjx
 manager: willchen
@@ -41,7 +41,7 @@ To fill a multi-cell range without populating cells one at a time, you can set t
     - Worksheets
    
    In step 6, add the following #include statements directly after the #pragma once directive in Autoprojectdlg.h:
-    ```
+    ```c
     #include "CApplication.h"
     #include "CRange.h"
     #include "CWorkbook.h"
@@ -52,7 +52,7 @@ To fill a multi-cell range without populating cells one at a time, you can set t
     ```
 
 2. Add the following two public member variables to the CAutoProjectDlg class:
-    ```
+    ```c
     CApplication oExcel;
     CWorkbook oBook;
     
@@ -60,7 +60,7 @@ To fill a multi-cell range without populating cells one at a time, you can set t
 
 3. On your dialog box, right-click IDC_CHECK and select Add Variable. Name the variable m_bFillWithStrings and click Finish.   
 4. On your dialog box, double-click Run and replace the following code
-    ```
+    ```c
     void CAutoProjectDlg::OnBnClickedRun()
     {
     // TODO: Add your control notification handler code here
@@ -68,7 +68,7 @@ To fill a multi-cell range without populating cells one at a time, you can set t
     
     ```
     with: 
-    ```
+    ```c
     void CAutoProjectDlg::OnBnClickedRun()
     {
     CWorkbooks oBooks;
@@ -143,7 +143,7 @@ To fill a multi-cell range without populating cells one at a time, you can set t
 
      [https://msdn.microsoft.com/en-us/library/k8d11d4s.aspx](https://msdn.microsoft.com/library/k8d11d4s.aspx)These steps apply to the whole article.   
        5. Return to your dialog box and double-click Get Values. Replace the following code
-    ```
+    ```c
     void CAutoProjectDlg::OnBnClickedGetvalues()
     {
     // TODO: Add your control notification handler code here
@@ -151,7 +151,7 @@ To fill a multi-cell range without populating cells one at a time, you can set t
     
     ```
      with: 
-    ```
+    ```c
     void CAutoProjectDlg::OnBnClickedGetvalues()
     {
     CWorksheets oSheets;

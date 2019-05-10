@@ -23,11 +23,11 @@ For sign-in or activation issues, add the following registry key:
 
 For installation or patching issues, run the following commands to add the registry keys:
 
-```
+```powershell
 reg add HKLM\SOFTWARE\Microsoft\ClickToRun\OverRide /v LogLevel /t REG_DWORD /d 3
 ```
 
-```
+```powershell
 reg add HKLM\SOFTWARE\Microsoft\ClickToRun\OverRide /v PipelineLogging /t REG_DWORD /d 1
 ```
 

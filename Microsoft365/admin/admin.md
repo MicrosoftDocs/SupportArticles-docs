@@ -1,5 +1,5 @@
 ---
-title: Listing some issues for Office 365 Admin
+title: Listing some issues for Office 365 Administration
 author: simonxjx
 manager: willchen
 audience: ITPro
@@ -8,7 +8,9 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# Office 365 Admin Troubleshooting
+# Office 365 Administration Troubleshooting
+
+This page lists some issues for Office 365 Administration.
 
 [How to enable Office 365 ProPlus ULS logging](./how-to-enable-office-365-proplus-uls-logging.md)
 
@@ -19,6 +21,10 @@ ms.author: v-six
 [Troubleshooting Data Loss Protection (DLP) policy tips](./troubleshooting-data-loss-protection-policy-tips.md)
 
 ["Sorry, but we're having trouble signing you in" error when signing in to Office 365](./exchange-online-application-service-principal-disabled.md)
+
+[You receive a "One or more users need an assigned license in order to retain an Exchange Online mailbox or archive" message on the Users page of the Office 365 portal](./license-issue-when-retain-online-mailbox.md)
+
+[Preparing for TLS 1.2 in Office 365](./prepare-tls-1.2-in-office-365.md)
 
 ## Still need help? 
 

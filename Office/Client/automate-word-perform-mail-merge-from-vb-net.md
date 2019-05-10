@@ -39,14 +39,14 @@ This article demonstrates how to set the proper project reference to the Word ty
 4. On the View menu, select Toolbox to display the toolbox, and then add a button to Form1.   
 5. Double-click Button1. The code window for the form appears.   
 6. In the code window, replace the following code. 
-    ```
+    ```vb
         Private Sub Button1_Click(ByVal sender As System.Object, _
            ByVal e As System.EventArgs) Handles Button1.Click
         End Sub
     
     ```
     Use the following code. 
-    ```
+    ```vb
         Dim wrdApp As Word.Application
         Dim wrdDoc As Word._Document
     
@@ -264,7 +264,7 @@ This article demonstrates how to set the proper project reference to the Word ty
     
 7. Add the following to the top of Form1.vb. 
     
-    ```
+    ```vb
     Imports Microsoft.Office.Interop
     
     ```

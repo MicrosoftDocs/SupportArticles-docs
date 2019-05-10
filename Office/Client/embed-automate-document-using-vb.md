@@ -29,7 +29,7 @@ Once the object is embedded, most OLE servers support Automation to let the host
 1. Start Visual Basic and create a new standard project. Form1 is created by default.   
 2. From the control toolbox, add three Command Buttons to Form1. Then add an instance of the OLE Container control. When the OLE Container control is placed on the form, it prompts you for the type of object you want to insert. For this sample, you need to add the object dynamically, so click Cancel to dismiss the dialog without adding an object.   
 3. In the Code window for Form1, add the following code:
-    ```
+    ```vb
     Option Explicit
     
     Dim oBook As Object
@@ -147,7 +147,7 @@ Once the object is embedded, most OLE servers support Automation to let the host
 1. Start Visual Basic and create a new standard project. Form1 is created by default.   
 2. From the control toolbox, add three Command Buttons to Form1. Then add an instance of the OLE Container control. When the OLE Container control is placed on the form, it prompts you for the type of object you want to insert. For this sample, we need to add the object dynamically, so click Cancel to dismiss the dialog without adding an object.   
 3. In the Code window for Form1, add the following code:
-    ```
+    ```vb
     Option Explicit
     
     Dim oDocument As Object
@@ -288,7 +288,7 @@ Once the object is embedded, most OLE servers support Automation to let the host
 
     Visual Basic does not let you control the menu merging process or make changes to the server's menu items when added. However, you can change or modify an Office application's menus through Automation using code similar to the following: 
 
-    ```
+    ```vb
      ' This code disables the Insert|Object item on the merged menu...
        Dim oMenuBar As Object
        Set oMenuBar = oBook.Application.CommandBars("Worksheet Menu Bar")
@@ -301,7 +301,7 @@ Once the object is embedded, most OLE servers support Automation to let the host
     **Note** This bullet point does NOT apply to Microsoft Office Excel 2007 or to Microsoft Office Word 2007. 
   
 - Visual Basic does not currently support assignment of toolbar space. Thus, docked toolbars do not normally appear when the object is activated. However, it might be possible to display a floating tool window with automation:
-    ```
+    ```vb
        OLE1.DoVerb -1 '[vbOLEShow]
        With oBook.Application.CommandBars("Standard")
           .Position = 4 '[msoBarFloating]
@@ -317,6 +317,6 @@ Once the object is embedded, most OLE servers support Automation to let the host
     [243058](https://support.microsoft.com/help/243058) How To Use the WebBrowser Control to Open an Office Document
 
 - The SaveToFile method of the OLE container creates a file that can be opened in the OLE container. However, files that are saved with the OLE container's SaveToFile method cannot be opened directly in the corresponding Office application. If you want to save your embedded document to disk so that document can be opened in the target application, use the application's document SaveAs method: 
-    ```
+    ```vb
     OLE1.object.SaveAs ("C:\MyNewFile.doc")
     ```

@@ -136,6 +136,84 @@ This page lists some issues for Office products.
 
 [How To Use an XML Web Service by Using ASP.NET from an Office VBA Macro in Word or Excel](./use-xml-web-service-in-word-or-excel.md)
 
+[Description of the Office Feature Updates task](./office-feature-updates-task-faq.md)
+
+["An error occurred when sending commands to the program" error in Excel](./error-when-send-commands-in-excel.md)
+
+["Cannot locate the Internet server or proxy server" error message when clicking hyperlink in Office](./cannot-locate-server-when-click-hyperlink.md)
+
+["Can't Verify Subscription" or "No Subscription Found" error messages in Office Mobile](./subscription-issue-in-office-mobile.md)
+
+["Sorry, we can't connect to your account. Please try again later" error when you activate Office from Office 365](./issue-when-activate-office-from-office-365.md)
+
+["We are unable to connect right now" error when users try to activate Office 365 ProPlus](./issue-when-activate-office-365-proplus.md)
+
+[A Microsoft Excel, Word or PowerPoint file does not open because of incorrect file associations](./cannot-open-excel-word-or-powerpoint-file.md)
+
+[A picture or an object may not appear in a Word 2010 or Word 2007 document](./object-not-appear-in-word-2010.md)
+
+[Additional RSS feeds appear in Outlook after a user signs in to Office 365 on a new computer](./additional-rss-feeds-appear-in-outlook.md)
+
+[Connection issues in sign-in after update to Office 2016 build 16.0.7967 on Windows 10](./connection-issue-when-sign-in-office-2016.md)
+
+[Count The Number of Cells With Specific Cell Color By Using VBA](./count-cells-number-with-color-using-vba.md)
+
+[Description of formulas to count the occurrences of text, characters, and words in Excel](./formulas-to-count-occurrences-in-excel.md)
+
+[Description of the AutoRecover functions in Excel](./autorecover-functions-in-excel.md)
+
+[Error 1935 when you try to install Microsoft Office 2010 or 2007](./error-1935-when-install-office-2010.md)
+
+[Error message in Office when a file is blocked by registry policy settings](./file-blocked-in-office.md)
+
+[Frequently asked questions about hyperlinks in Word](./faq-about-hyperlinks-in-word.md)
+
+[Frequently asked questions about the Comments feature in Word](./faq-about-comments-feature-in-word.md)
+
+[How to change the export resolution of a PowerPoint slide](./change-export-resolution-of-powerpoint-slide.md)
+
+[How to merge multiple Word documents into one?](./merge-word-documents.md)
+
+[How to reset user options and registry settings in Word](./reset-options-and-settings-in-word.md)
+
+[How to switch from Semi-Annual Channel to Monthly Channel for the Office 365 suite](./switch-channel-for-office-365.md)
+
+[How to work with toolbars and toolbar buttons: add, create, edit, delete, restore, and more in Word](./toolbars-and-toolbar-buttons-in-word.md)
+
+[Long numbers are displayed incorrectly in Excel](./long-numbers-incorrectly-in-excel.md)
+
+[Microsoft Office cannot verify the license for this product" error when you start an Office app"](./license-issue-when-start-office-application.md)
+
+[Office 365: Outlook and mobile device connectivity troubleshooting resources](./connectivity-troubleshooting-resources-for-office-365.md)
+
+[Owners of an on-premises distribution group that's synced to Office 365 can't manage the distribution group in Exchange Online](./office-365-users-cannot-manage-dg-in-online.md)
+
+[Spell Checker does not recognize misspelled words in Word 2010](./not-recognize-mispespelled-words-in-word.md)
+
+[When you print a Word document that includes a background, the background is not printed](./background-is-not-printed-in-word.md)
+
+[You receive a Too many different cell formats" error message in Excel"](./too-many-different-cell-formats-in-excel.md)
+
+[Error when editing an equation in Office](./issue-when-edit-equation-in-office.md)
+
+[Disabling code-behind prompt for InfoPath forms](./disabling-code-behind-prompt-for-infopath-forms.md)
+
+["Eventing service" error message when changing the status of users to inactive in Microsoft Project](./eventing-service-error-when-changing-user-status-to-inactive-microsoft-project.md)
+
+[Generated .PDB file name does not match InfoPath form name](./generated-pdb-file-name-does-not-match-infopath-name.md)
+
+["The image part with relationship rID8 was not found" error in Microsoft Word](./image-part-relationship-rld8-not-found-error-microsoft-word.md)
+
+[Microsoft Project opens a calendar from a different instance when editing](./project-opens-calendar-from-different-instance-when-editing.md)
+
+[SoapServerException error when customizing list form (SPO and SP-onprem) using InfoPath designer](./soapserverexception-when-customizing-list-form-using-InfoPath-designer.md)
+
+[How to troubleshoot crashing and not responding issues with Excel](./crashing-issues-with-excel.md)
+
+[How to troubleshoot errors when you save Excel workbooks](./issue-when-save-excel-workbooks.md)
+
+[How to troubleshoot a damaged presentation in PowerPoint 2007 and PowerPoint 2010](./damaged-presentation-in-powerpoint-2010.md)
+
 ## Still need help? 
 
 Go to [Microsoft Community](https://answers.microsoft.com) or [Office help](https://support.office.com).

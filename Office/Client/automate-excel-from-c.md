@@ -21,7 +21,7 @@ Follow the steps below to build a simple Visual C++ 6.0 console application that
 
 1. Start Visual C++ 6.0, and create a new Win32 Console Application named XlCpp. Choose a "Hello, World!" application base, and click **Finish**.
 1. Open the generated XlCpp.cpp, and add the following code before the main() function.
-    ```
+    ```c
     #include <ole2.h> // OLE2 Definitions
     
     // AutoWrap() - Automation helper function...
@@ -90,7 +90,7 @@ Follow the steps below to build a simple Visual C++ 6.0 console application that
     }
     ```
 1. Inside the main() function, replace the printf() line with the following code.
-    ```
+    ```c
     // Initialize COM for this thread...
        CoInitialize(NULL);
     
@@ -219,7 +219,7 @@ Follow the steps below to build a simple Visual C++ 6.0 console application that
 
 The AutoWrap() function simplifies most of the low-level details involved with using IDispatch directly. Feel free to use it in your own implementations. One caveat is that if you pass multiple parameters, they need to be passed in reverse-order. For example:
 
-```
+```c
     VARIANT parm[3];
     parm[0].vt = VT_I4; parm[0].lVal = 1;
     parm[1].vt = VT_I4; parm[1].lVal = 2;
