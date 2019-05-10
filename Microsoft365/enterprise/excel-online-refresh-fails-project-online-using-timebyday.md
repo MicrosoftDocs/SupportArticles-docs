@@ -1,5 +1,5 @@
 ---
-title: Excel Online refresh fails to Project Online when using the TimeByDay (Month) PivotTable field
+title: External Data Refresh Failed when refresh Project Online data in Excel Online
 description: You can't refresh Project Online data in Excel Online with an "External Data Refresh Failed" error message. 
 author: MaryQiu1987
 manager: thempel

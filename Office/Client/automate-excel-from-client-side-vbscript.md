@@ -20,7 +20,7 @@ This article illustrates Microsoft Visual Basic, Scripting Edition (VBScript) cl
 ### Sample code
 
 1. Create the following HTML file in any text editor and save the file as c:\excel.htm.
-    ```
+    ```HTML
     <HTML>
     <BODY>
     

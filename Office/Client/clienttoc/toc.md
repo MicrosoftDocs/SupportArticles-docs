@@ -123,3 +123,81 @@
 ## [Word automation to count page numbers](../use-word-automation-count-page-number.md)
 
 ## [Use XML Web Service using ASP.NET in Word or Excel](../use-xml-web-service-in-word-or-excel.md)
+
+## [Office Feature Updates task](../office-feature-updates-task-faq.md)
+
+## [Error when sending commands in Excel](../error-when-send-commands-in-excel.md)
+
+## [Can't locate proxy server when clicking hyperlink](../cannot-locate-server-when-click-hyperlink.md)
+
+## [Can't Verify Subscription in Office Mobile](../subscription-issue-in-office-mobile.md)
+
+## [Issue when activate Office from Office 365](../issue-when-activate-office-from-office-365.md)
+
+## [Issue when activate Office 365 ProPlus](../issue-when-activate-office-365-proplus.md)
+
+## [Can't open Excel, Word or PowerPoint file](../cannot-open-excel-word-or-powerpoint-file.md)
+
+## [Object may not appear in Word 2010](../object-not-appear-in-word-2010.md)
+
+## [Additional RSS feeds appear in Outlook](../additional-rss-feeds-appear-in-outlook.md)
+
+## [Connection issues when sign-in Office 2016](../connection-issue-when-sign-in-office-2016.md)
+
+## [Count cells number with cell color using VBA](../count-cells-number-with-color-using-vba.md)
+
+## [Formulas to count text occurrences in Excel](../formulas-to-count-occurrences-in-excel.md)
+
+## [AutoRecover functions in Excel](../autorecover-functions-in-excel.md)
+
+## [Error 1935 when install Office 2010](../error-1935-when-install-office-2010.md)
+
+## [Error in Office when file is blocked](../file-blocked-in-office.md)
+
+## [Faq about hyperlinks in Word](../faq-about-hyperlinks-in-word.md)
+
+## [Faq about the Comments feature in Word](../faq-about-comments-feature-in-word.md)
+
+## [Change the export resolution of PowerPoint slide](../change-export-resolution-of-powerpoint-slide.md)
+
+## [Merge multiple Word documents into one](../merge-word-documents.md)
+
+## [Reset user options and registry settings in Word](../reset-options-and-settings-in-word.md)
+
+## [Switch from Semi-Annual to Monthly](../switch-channel-for-office-365.md)
+
+## [Work with toolbars in Word](../toolbars-and-toolbar-buttons-in-word.md)
+
+## [Long numbers appear incorrectly in Excel](../long-numbers-incorrectly-in-excel.md)
+
+## [Cannot verify the license for this product](../license-issue-when-start-office-application.md)
+
+## [Connectivity troubleshooting resources](../connectivity-troubleshooting-resources-for-office-365.md)
+
+## [Office 365 can't manage distribution group in Exchange Online](../office-365-users-cannot-manage-dg-in-online.md)
+
+## [Spell Checker not recognize misspelled words in Word 2010](../not-recognize-mispespelled-words-in-word.md)
+
+## [Background is not printed in Word](../background-is-not-printed-in-word.md)
+
+## [Too many different cell formats in Excel"](../too-many-different-cell-formats-in-excel.md)
+
+## [Error when edit an equation in Office](../issue-when-edit-equation-in-office.md)
+
+## [Disable code-behind prompt for InfoPath forms](../disabling-code-behind-prompt-for-infopath-forms.md)
+
+## [Issue when change users status to inactive in Project](../eventing-service-error-when-changing-user-status-to-inactive-microsoft-project.md)
+
+## [Generated .PDB file not match InfoPath form name](../generated-pdb-file-name-does-not-match-infopath-name.md)
+
+## ["relationship rID8 was not found" in Word](../image-part-relationship-rld8-not-found-error-microsoft-word.md)
+
+## [Project opens calendar from a different instance](../project-opens-calendar-from-different-instance-when-editing.md)
+
+## [SoapServerException when use InfoPath designer](../soapserverexception-when-customizing-list-form-using-InfoPath-designer.md)
+
+## [Crashing issues with Excel](../crashing-issues-with-excel.md)
+
+## [Issue when save Excel workbooks](../issue-when-save-excel-workbooks.md)
+
+## [Damaged presentation in PowerPoint 2010](../damaged-presentation-in-powerpoint-2010.md)

@@ -38,12 +38,12 @@ To resolve this issue, follow these steps:
 
 1. Check the current status of the Service Principal for the Exchange Online application. To do this, run the following cmdlet:
 
-   ```
+   ```powershell
    (Get-MsolServicePrincipal -AppPrincipalId 00000002-0000-0ff1-ce00-000000000000).accountenabled
    ```
 
 1. Enable the Service Principal for Exchange Online by running the following cmdlet:
 
-   ```
+   ```powershell
    Get-MsolServicePrincipal -AppPrincipalId 00000002-0000-0ff1-ce00-000000000000 | Set-MsolServicePrincipal -AccountEnabled $true
    ```

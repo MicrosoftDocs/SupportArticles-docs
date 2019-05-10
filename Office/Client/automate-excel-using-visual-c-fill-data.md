@@ -1,5 +1,5 @@
 ---
-title: How to automate Excel by using Visual C# to fill or to obtain data in a range by using arrays
+title: Automate Excel by using Visual C# to fill or to obtain data by using arrays
 description: Describes some sample steps about how to automate Excel with Visual C# 2005 or Visual C# .NET to fill or to obtain data in a range by using arrays.
 author: simonxjx
 manager: willchen
@@ -39,14 +39,14 @@ To fill a multi-cell range without populating cells one at a time, you can set t
 7. Double-click Button1. The code window for the form appears.   
 8. In the code window, replace the following code:
 
-   ```
+   ```cs
    private void button1_Click(object sender, System.EventArgs e)
    {
    }
    ```
    with:
  
-   ```
+   ```cs
       //Declare these two variables globally so you can access them from both
       //Button1 and Button2.
       Excel.Application objApp;
@@ -132,18 +132,18 @@ To fill a multi-cell range without populating cells one at a time, you can set t
 
    For more information about the Windows Forms Designer in Visual C# 2005, visit the following Microsoft Developer Network (MSDN) Web site:
 
-   [Creating a Project (Visual C#)](https://msdn2.microsoft.com/library/ms173077.aspx)   
+   [Creating a Project (Visual C#)](https://msdn.microsoft.com/library/ms173077.aspx)   
 9. Return to the design view for Form1, and double-click Button2.   
 10. In the code window, replace the following code:
 
-   ```
+   ```cs
    private void button2_Click(object sender, System.EventArgs e)
    {
    }
 
    ```
    with: 
-   ```
+   ```cs
    private void button2_Click(object sender, System.EventArgs e)
       {
          Excel.Sheets objSheets;
@@ -222,7 +222,7 @@ To fill a multi-cell range without populating cells one at a time, you can set t
 
 11. Scroll to the top of the code window. Add the following line to the end of the list of using directives:
 
-    ```
+    ```cs
     using System.Reflection; 
     using Excel =  Microsoft.Office.Interop.Excel;
     ```

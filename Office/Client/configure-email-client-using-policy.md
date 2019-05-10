@@ -26,7 +26,7 @@ To configure the default e-mail client using Group Policy, create a custom .adm 
 1. Open a new text file in Notepad.
 1. Copy and paste the following text into the text file:
 
-    ```
+    ```AsciiDoc
     CLASS MACHINE
     CATEGORY !!Default_E-mail_Client
      POLICY !!Default_Client

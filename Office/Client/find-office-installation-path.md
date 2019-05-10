@@ -26,7 +26,7 @@ You can use the Windows Installer to get the path of the installed Office 2000 a
 1. Create a blank console application in Visual C++.   
 2. Create a new file called main.cpp and paste the following code in the code window. 
 
-   ```
+   ```c
    #include <windows.h>
    #include <msi.h>
    #include <ostream.h>
@@ -63,7 +63,7 @@ You can use the Windows Installer to get the path of the installed Office 2000 a
 
 To find the path of an Office XP application, replace the constants above with the following. 
 
-```
+```c
 const char *Word = "{8E46FEFA-D973-6294-B305-E968CEDFFCB9}";
 const char *Excel = "{5572D282-F5E5-11D3-A8E8-0060083FD8D3}";
 const char *PowerPoint = "{FC780C4C-F066-40E0-B720-DA0F779B81A9}";
@@ -73,7 +73,7 @@ const char *Office = "{20280409-6000-11D3-8CFE-0050048383C9}";
 
 To find the path of an Office 2003 application, replace the constants above with the following. 
 
-```
+```c
 const char *Word = "{1EBDE4BC-9A51-4630-B541-2561FA45CCC5}";
 const char *Excel = "{A2B280D4-20FB-4720-99F7-40C09FBCE10A}";
 const char *PowerPoint = "{C86C0B92-63C0-4E35-8605-281275C21F97}";
@@ -82,7 +82,7 @@ const char *Office = "{90110409-6000-11D3-8CFE-0150048383C9}";
 ```
 
 To find the path of a 2007 Office application, replace the constants above with the following. 
-```
+```c
 const char *Word = "{0638C49D-BB8B-4CD1-B191-051E8F325736}";
 const char *Excel = "{0638C49D-BB8B-4CD1-B191-052E8F325736}";
 const char *PowerPoint = "{0638C49D-BB8B-4CD1-B191-053E8F325736}";
@@ -92,7 +92,7 @@ const char *Office = "{0638C49D-BB8B-4CD1-B191-050E8F325736}";
 
 To find the path of a 32-bit Office 2010 application, replace the constants above with the following. 
 
-```
+```c
 const char *Word = "{019C826E-445A-4649-A5B0-0BF08FCC4EEE}"; 
 const char *Excel = "{538F6C89-2AD5-4006-8154-C6670774E980}";
 const char *PowerPoint = "{E72E0D20-0D63-438B-BC71-92AB9F9E8B54}";
@@ -101,7 +101,7 @@ const char *Office = "{398E906A-826B-48DD-9791-549C649CACE5}";
 
 ```
 To find the path of a 64-bit Office 2010 application, replace the constants above with the following. 
-```
+```c
 const char *Word = "{C0AC079D-A84B-4CBD-8DBA-F1BB44146899}"; 
 const char *Excel = "{8B1BF0B4-A1CA-4656-AA46-D11C50BC55A4}";
 const char *PowerPoint = "{EE8D8E0A-D905-401D-9BC3-0D20156D5E30}";

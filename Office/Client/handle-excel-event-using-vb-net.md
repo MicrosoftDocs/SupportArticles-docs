@@ -36,7 +36,7 @@ The following steps demonstrate how to use either way to handle Excel events fro
    3. Click **OK** in the **Add References** dialog box to accept your selections. If you receive a prompt to generate wrappers for the libraries that you selected, click **Yes**.   
    
 3. On the **Project** menu, select **Add Module**. In the list of templates, select **Module**, and then click **Open**. Paste the following code in the new module:
-    ```
+    ```vb
        '==================================================================
        'Demonstrates Using a Delegate for Event Handling
        '==================================================================
@@ -101,7 +101,7 @@ The following steps demonstrate how to use either way to handle Excel events fro
 
 4. Add another module to the project, and then paste the following code in the module: 
 
-    ```
+    ```vb
        '==================================================================
        'Demonstrates Using WithEvents for Event Handling
        '==================================================================
@@ -150,7 +150,7 @@ The following steps demonstrate how to use either way to handle Excel events fro
 
 5. Add the following to the top of both Module1.vb and Module2.vb: 
 
-    ```
+    ```vb
     Imports Microsoft.Office.Interop
     ```
     **Note** The exact name for the Office namespace may differ depending on the version of the Office Primary Interop Assembly (PIA) that is registered in the Global Assembly Cache (GAC) when the reference is added to the solution. If you receive a build error message on this statement, check the name as it appears in Solution Explorer (under References) and then change the name as appropriate.   
@@ -159,7 +159,7 @@ The following steps demonstrate how to use either way to handle Excel events fro
 
 8. On the **View** menu, select **Code** to display the Code window for the form. Add the following code to the Click event handlers for the buttons: 
 
-    ```
+    ```vb
     Private Sub Button1_Click(ByVal sender As System.Object, _
           ByVal e As System.EventArgs) Handles Button1.Click
             UseWithEvents()
