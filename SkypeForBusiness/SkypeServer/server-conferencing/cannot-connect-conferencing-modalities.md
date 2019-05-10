@@ -82,7 +82,7 @@ These fixes apply to the following Click-to-Run installations:
 - Deferred Channel (DC): Office version 16.0.6741.2048 and later versions   
 - All other channels: Office version 16.0.6965.2058 and later versions   
 - Lync 2013 (Skype for Business): Builds 15.0.4833.1001 and later versions   
-To update Lync 2013 (Skype for Business) immediately, see [Update Office 2013 or Office 365](/gp/office-2013-365-update).
+To update Lync 2013 (Skype for Business) immediately, see [Update Office 2013 or Office 365](https://docs.microsoft.com/officeupdates/update-history-office-2013).
 
 To determine whether your Office installation is Click-to-Run or MSI-based, follow these steps:
 

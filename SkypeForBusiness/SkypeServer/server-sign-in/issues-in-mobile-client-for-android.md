@@ -25,7 +25,7 @@ Android smartphone devices that are supported for use with Lync 2010 for Android
 > If you're looking for help with Lync Mobile 2013 for Android phones or tablets, go to the following Microsoft websites: 
 
 - [2806012](https://support.microsoft.com/help/2806012) Users can't sign in to Skype for Business Online by using Lync Mobile 2013   
-- [Lync 2013 for Google Android Online Help](http://office.microsoft.com/redir/ha104024288.aspx)   
+- [Lync 2013 for Google Android Online Help](https://office.microsoft.com/redir/ha104024288.aspx)   
 
 ## Procedure 
 
