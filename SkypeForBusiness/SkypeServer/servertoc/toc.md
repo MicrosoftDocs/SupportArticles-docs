@@ -5,7 +5,7 @@
 
 ## [Skype for Business Server Configuration](../server-configuration/index.md)
 ### [Central management store replication failures](../server-configuration/central-management-store-replication-failures.md)
-### [Stops responding when receiving IM toast notification](../server-miscellaneous/not-responding-when-receive-toast-notification.md)
+### [Stops responding when receiving IM toast notification](../server-configuration/not-responding-when-receive-toast-notification.md)
 
 ## [Skype for Business Server Exchange integration](../server-exchange-integration/index.md)
 ### [MAPI unavailable](../server-exchange-integration/mapi-unavailable.md)

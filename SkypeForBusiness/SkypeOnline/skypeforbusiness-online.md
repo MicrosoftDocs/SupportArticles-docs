@@ -20,7 +20,7 @@ This page lists some issues for Skype for Business Online.
 
 [Troubleshooting Skype for Business Online DNS configuration issues in Office 365](./online-configuration/dns-configuration-issue.md)
 
-[Calls to call queues are not redirected to agents in Office 365](./online-miscellaneous/call-queues-not-redirect-to-agents.md)
+[Calls to call queues are not redirected to agents in Office 365](./online-configuration/call-queues-not-redirect-to-agents.md)
 
 ## Skype for Business Server Exchange Integration
 

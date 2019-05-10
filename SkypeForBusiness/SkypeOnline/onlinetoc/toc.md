@@ -5,7 +5,7 @@
 
 ## [Skype for Business Server Configuration](../online-configuration/index.md)
 ### [DNS configuration issues](../online-configuration/dns-configuration-issue.md)
-### [Calls to call queues not redirected to agents](../online-miscellaneous/call-queues-not-redirect-to-agents.md)
+### [Calls to call queues not redirected to agents](../online-configuration/call-queues-not-redirect-to-agents.md)
 
 ## [Skype for Business Server Exchange Integration](../online-exchange-integration/index.md)
 ### [UM-enabled mailbox migration fails](../online-exchange-integration/um-enabled-mailbox-migration-fails.md)

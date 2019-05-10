@@ -20,7 +20,7 @@ This page lists some issues for Skype for Business Server.
 
 [Lync Server Central Management Store replication failures](./server-configuration/central-management-store-replication-failures.md)
 
-[Skype for Business client stops responding when receiving a toast notification of an IM or an incoming call in Citrix VDI environment](./server-miscellaneous/not-responding-when-receive-toast-notification.md)
+[Skype for Business client stops responding when receiving a toast notification of an IM or an incoming call in Citrix VDI environment](./server-configuration/not-responding-when-receive-toast-notification.md)
 
 ## Skype for Business Server Exchange integration
 
