@@ -21,7 +21,7 @@ Microsoft Skype for Business caches files locally on your computer. This may pre
 
 ## Resolution
 
-To delete cached sign in credentials, follow the Skype for Business troubleshooter scenario in the Support and [Recovery Assistant for Office 365](https://diagnostics.outlook.com/#/) (SaRA) tool. Or, manually clear the cached information.
+To delete cached sign in credentials, follow the Skype for Business troubleshooter scenario in the Support and [Recovery Assistant for Office 365](https://aka.ms/SaRA-SkypeForBusinessSignIn) (SaRA) tool. Or, manually clear the cached information.
 
 To manually fix this issue, follow these steps.
 
