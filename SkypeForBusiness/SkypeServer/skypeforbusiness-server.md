@@ -56,6 +56,10 @@ This page lists some issues for Skype for Business Server.
 
 [Some Lync 2013 for iPhone/iPad features are missing in Skype for Business for iOS](./server-configuration/lync-2013-iphone-features-missing-in-ios-client.md)
 
+[Event IDs 32402, 61045 are logged in Lync Server 2013 Front End servers that are installed in Windows Server 2012 R2](./server-configuration/event-32402-61045-in-front-end.md)
+
+[Lync 2013 and Skype for Business 2016 users are prompted with "You have been added as a delegate for %User%" notice that was previously dismissed](./server-configuration/added-as-delegate-notice.md)
+
 ## Skype for Business Server Exchange Integration
 
 ["MAPI unavailable" error in Skype for Business 2016 client](./server-exchange-integration/mapi-unavailable.md)
@@ -63,6 +67,8 @@ This page lists some issues for Skype for Business Server.
 ## Skype for Business Server IM presence
 
 [The presence information for a user of Lync Server 2010 or of Communications Server may not be displayed in Outlook 2003 SP2, in Outlook 2007, or in Outlook 2010](./server-im-presence/presence-not-show-in-outlook.md)
+
+[Emoticons and emojis converted to text if more than 10 are sent in a single message block in Skype for Business 2015 or 2016 clients](./server-im-presence/emoticons-and emojis-converted-to-text.md)
 
 ## Skype for Business Server Installation and Uninstallation
 
