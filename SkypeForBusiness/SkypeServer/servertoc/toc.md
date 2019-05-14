@@ -23,12 +23,15 @@
 ### [Issue when File Store share in unsupported configuration](../server-configuration/issue-when-file-store-share-unsupported.md)
 ### [Skype for Business 2016 freezes for Malwarebytes](../server-configuration/skype-for-business-2016-freeze-malwarebytes.md)
 ### [Lync 2013 for iPhone/iPad features are missing](../server-configuration/lync-2013-iphone-features-missing-in-ios-client.md)
+### [Event IDs 32402, 61045 logged in Front End](../server-configuration/event-32402-61045-in-front-end.md)
+### [You have been added as a delegate for %User%](../server-configuration/added-as-delegate-notice.md)
 
 ## [Skype for Business Server Exchange integration](../server-exchange-integration/index.md)
 ### [MAPI unavailable](../server-exchange-integration/mapi-unavailable.md)
 
 ## [Skype for Business Server IM presence](../server-im-presence/index.md)
 ### [Presence not show in Outlook](../server-im-presence/presence-not-show-in-outlook.md)
+### [Emoticons and emojis converted to text](../server-im-presence/emoticons-and emojis-converted-to-text.md)
 
 ## [Skype for Business Server Installation and Uninstallation](../server-install-or-uninstall/index.md)
 ### ["Get-VM" is not recognized during install of Cloud Connector Edition](../server-install-or-uninstall/get-vm-not-recognized-during-install-cloud-connector.md)

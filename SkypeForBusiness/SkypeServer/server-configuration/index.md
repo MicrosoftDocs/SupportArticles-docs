@@ -47,6 +47,10 @@ command](./issue-when-attempt-move-or-enable-user-command.md)
 
 [Some Lync 2013 for iPhone/iPad features are missing in Skype for Business for iOS](./lync-2013-iphone-features-missing-in-ios-client.md)
 
+[Event IDs 32402, 61045 are logged in Lync Server 2013 Front End servers that are installed in Windows Server 2012 R2](./event-32402-61045-in-front-end.md)
+
+[Lync 2013 and Skype for Business 2016 users are prompted with "You have been added as a delegate for %User%" notice that was previously dismissed](./added-as-delegate-notice.md)
+
 ## Still need help? 
 
 Go to [Microsoft Community](https://answers.microsoft.com) or [Skype for Business help center](https://support.office.com/skype-for-business).
