@@ -14,6 +14,8 @@ This page lists some Exchange integration issues for Skype for Business Hybrid.
 
 [Info about AllowAdalForNonLyncIndependentOfLync setting in Skype for Business, Lync 2013, and Exchange Online](./allowadalfornonlyncIndependentofLync-setting.md)
 
+[You're repeatedly prompted for Exchange credentials after you sign in to Lync](./repeatedly-prompted-for-credentials.md)
+
 ## Still need help? 
 
 Go to [Microsoft Community](https://answers.microsoft.com) or [Skype for Business help center](https://support.office.com/skype-for-business).
