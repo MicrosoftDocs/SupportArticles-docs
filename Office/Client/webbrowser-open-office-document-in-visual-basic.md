@@ -26,8 +26,13 @@ ActiveX documents are embeddable OLE objects that behave more like ActiveX contr
 While Microsoft Visual Basic .NET and Visual Basic 2005 do not currently support hosting ActiveX documents directly, you may use the WebBrowser control for this purpose. The WebBrowser control (Shdocvw.dll) is a part of Internet Explorer and can only be used on systems that have Internet Explorer installed. 
 
 ### Creating a Visual Basic application that opens Office documents
- 
-To create a Visual Basic application that opens Office documents, follow these steps: 
+
+> [!NOTE]
+> When you use two methods above to create a Visual Basic application that opens Office documents, you must change the code in Visual Studio 2005. By default, Visual Basic adds one form to the project when you create a Windows Forms project. The form is named Form1. The two files that represent the form are named Form1.vb and Form1.designer.vb. You write the code in Form1.vb. The Form1.designer.vb file is where the Windows Forms Designer writes the code that implements all the actions that you performed by dragging and dropping controls from the Toolbox.
+
+After the Visual Basic application is created, Press F5 to run the project. When you click **Browse**, the **Open** dialog box appears and allows you to browse to a Word, Excel, or PowerPoint file. Select any file and click **Open**. The document opens inside the WebBrowser control, and a message box that displays the name of the Office document server appears
+
+#### Method 1
 
 1. In Microsoft Visual Studio 2005 or in Microsoft Visual Studio .NET, create a Windows Application project by using Visual Basic 2005 or Visual Basic .NET. Form1 is created by default.   
 2. On the **Tools** menu, click **Customize ToolBox** to open the **Customize ToolBox** dialog box. On the **COM Components** tab, add a reference to the **Microsoft WebBrowser**. Click **OK** to add the WebBrowser control to the Windows Forms toolbox. The WebBrowser control appears with the text **Explorer** in the toolbox. 
@@ -35,12 +40,12 @@ To create a Visual Basic application that opens Office documents, follow these s
     **Note** In Visual Studio 2005, you do not have to do step 2.   
 3. Using the Toolbox, add a WebBrowser control, an OpenFileDialog control, and a Button control to Form1. This step adds the AxWebBrowser1 member variable, the OpenFileDialog1 member variable, and the Button1 member variable to the Form1 class.   
 4.  Define a private member in the Form1 class as follows.
-    ```cs
+    ```vb
     Dim oDocument as Object
     ```
 
 5. Paste the following code in the Form1 class.
-    ```cs
+    ```vb
     Private Sub Button1_Click(ByVal sender As System.Object, _
        ByVal e As System.EventArgs) Handles Button1.Click
     
@@ -94,10 +99,63 @@ To create a Visual Basic application that opens Office documents, follow these s
         MsgBox("File opened by: " & oDocument.Application.Name)
     
     End Sub
-    
     ```
-    **Note** You must change the code in Visual Studio 2005. By default, Visual Basic adds one form to the project when you create a Windows Forms project. The form is named Form1. The two files that represent the form are named Form1.vb and Form1.designer.vb. You write the code in Form1.vb. The Form1.designer.vb file is where the Windows Forms Designer writes the code that implements all the actions that you performed by dragging and dropping controls from the Toolbox.   
-6. Press F5 to run the project. When you click **Browse**, the **Open** dialog box appears and allows you to browse to a Word, Excel, or PowerPoint file. Select any file and click **Open**. The document opens inside the WebBrowser control, and a message box that displays the name of the Office document server appears.   
+
+#### Method 2
+
+1. In Microsoft Visual Studio 2005 or in Microsoft Visual Studio .NET, create a Windows Application project by using Visual Basic 2005 or Visual Basic .NET. Form1 is created by default.
+2. From the Project menu, select Components to open the Components dialog box. In the Components dialog box, add references to the Microsoft Common Dialog Control and the Microsoft Internet Controls. Click OK to add the items to the toolbox.
+3. Add an instance of the WebBrowser control, CommonDialog control, and a CommandButton to Form1.
+4. Next, add the following code into the Code window for Form1:
+    
+    ```vb
+    Option Explicit
+    
+    Dim oDocument As Object
+    
+    Private Sub Command1_Click()
+       Dim sFileName As String
+       
+     ' Find an Office file...
+       With CommonDialog1
+          .FileName = ""
+          .ShowOpen
+          sFileName = .FileName
+       End With
+       
+     ' If the user didn't cancel, open the file...
+       If Len(sFileName) Then
+          Set oDocument = Nothing
+          WebBrowser1.Navigate sFileName
+       End If
+    End Sub
+    
+    Private Sub Form_Load()
+       Command1.Caption = "Browse"
+       ' For the 2007 Microsoft Office documents, change the .Filter parameter of the 
+       ' With CommonDialog1 statement to:
+       ' .Filter = "Office Documents " & _
+       '      "(*.docx, *.xlsx, *.pptx)|*.docx;*.xlsx;*.pptx"
+       With CommonDialog1
+          .Filter = "Office Documents " & _
+          "(*.doc, *.xls, *.ppt)|*.doc;*.xls;*.ppt"
+          .FilterIndex = 1
+          .Flags = cdlOFNFileMustExist Or cdlOFNHideReadOnly
+       End With
+    End Sub
+    
+    Private Sub Form_Unload(Cancel As Integer)
+       Set oDocument = Nothing
+    End Sub
+    
+    Private Sub WebBrowser1_NavigateComplete2(ByVal pDisp As Object, _
+    URL As Variant)
+       On Error Resume Next
+       Set oDocument = pDisp.Document
+    
+       MsgBox "File opened by: " & oDocument.Application.Name
+    End Sub
+    ```
 
 ### Considerations when you use the WebBrowser control
  
@@ -106,7 +164,7 @@ You should consider the following when you use the WebBrowser control:
 - The WebBrowser control browses to documents asynchronously. When you call WebBrowser1.Navigate, the call returns control to your Visual Basic application before the document has been completely loaded. If you plan to Automate the contained document, you need to use the NavigateComplete2 event to be notified when the document has finished loading. Use the Document property of the WebBrowser object that is passed in to get a reference to the Office document object, which, in the preceding code, is set to oDocument.   
 - The WebBrowser control does not support menu merging.    
 - The WebBrowser control generally hides any docked toolbars before displaying an Office document. You can use Automation to show a floating toolbar using code such as the following.
-    ```cs
+    ```vb
     With oDocument.Application.CommandBars("Standard")
        .Position = 4 '[msoBarFloating]
        .Visible = True
@@ -114,7 +172,7 @@ You should consider the following when you use the WebBrowser control:
     
     ```
   Newer versions of Internet Explorer (5.0 and later) also allow you to display docked toolbars using the following code. 
-    ```cs
+    ```vb
     ' This is a toggle option, so call it once to show the 
     ' toolbars and once to hide them. This works with Internet Explorer 5
     ' but often fails to work properly with earlier versions...
@@ -125,10 +183,9 @@ You should consider the following when you use the WebBrowser control:
 
     The most common problem is with Office command bars, which appear disabled. If you have two WebBrowser controls on the same form, both of which are loaded with Word documents, and you have displayed toolbars by using one of the preceding techniques, only one set of toolbars is active and works correctly. The other is disabled and cannot be used.   
 - To clear the WebBrowser of its current contents, in the Click event of another command button (or in some other appropriate place in your code), browse to the default blank page by using the following code:
-    ```cs
+    ```vb
        AxWebBrowser1.Navigate("about:blank")
     ```
-
 
 ### Considerations when you use the WebBrowser control together with a 2007 Microsoft Office program
 
@@ -145,7 +202,5 @@ For existing applications that require backward compatibility with the WebBrowse
 For more information about how to use the WebBrowser control, click the following article numbers to view the articles in the Microsoft Knowledge Base:
 
 [304562](https://support.microsoft.com/help/304562) Visual Studio 2005 and Visual Studio .NET do not provide an OLE container control for Windows Forms
-
-[243058](https://support.microsoft.com/help/243058) How to use the WebBrowser control to open an Office document
 
 [927009](https://support.microsoft.com/help/927009) A new window opens when you try to view a 2007 Microsoft Office program document in Windows Internet Explorer 7
