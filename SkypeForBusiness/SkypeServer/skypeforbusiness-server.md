@@ -10,9 +10,9 @@ ms.author: v-six
 
 # Skype for Business Server Troubleshooting
 
-This page lists some issues for Skype for Business Server.
+This page lists some issues about Conferencing, Configuration, Exchange Integration, IM and Presence, Installation and Uninstallation, Meetings, and Sign-in for Skype for Business Server.
 
-## Skype for Business Server Conferencing 
+## Conferencing 
 
 [Some clients can't connect to conferencing modalities after you install Security Bulletin MS16-065](./server-conferencing/cannot-connect-conferencing-modalities.md)
 
@@ -20,7 +20,7 @@ This page lists some issues for Skype for Business Server.
 
 [How to enable the Conferencing Add-in for Outlook](./server-conferencing/enable-conferencing-add-in-for-outlook.md)
 
-## Skype for Business Server Configuration
+## Configuration
 
 [Lync Server Central Management Store replication failures](./server-configuration/central-management-store-replication-failures.md)
 
@@ -60,17 +60,17 @@ This page lists some issues for Skype for Business Server.
 
 [Lync 2013 and Skype for Business 2016 users are prompted with "You have been added as a delegate for %User%" notice that was previously dismissed](./server-configuration/added-as-delegate-notice.md)
 
-## Skype for Business Server Exchange Integration
+## Exchange Integration
 
 ["MAPI unavailable" error in Skype for Business 2016 client](./server-exchange-integration/mapi-unavailable.md)
 
-## Skype for Business Server IM presence
+## IM and Presence
 
 [The presence information for a user of Lync Server 2010 or of Communications Server may not be displayed in Outlook 2003 SP2, in Outlook 2007, or in Outlook 2010](./server-im-presence/presence-not-show-in-outlook.md)
 
 [Emoticons and emojis converted to text if more than 10 are sent in a single message block in Skype for Business 2015 or 2016 clients](./server-im-presence/emoticons-and emojis-converted-to-text.md)
 
-## Skype for Business Server Installation and Uninstallation
+## Installation and Uninstallation
 
 ["The term 'Get-VM' is not recognized as the name of a cmdlet ..." error during install of Cloud Connector Edition](./server-install-or-uninstall/get-vm-not-recognized-during-install-cloud-connector.md)
 
@@ -78,7 +78,7 @@ This page lists some issues for Skype for Business Server.
 
 [How to do a clean uninstallation of Skype for Business on Mac](./server-install-or-uninstall/clean-uninstallation.md)
 
-## Skype for Business Server Meetings
+## Meetings
 
 [Meeting conversation window disappears for Click-to-Run (C2R) clients in Skype for Business 2016](./server-meetings/meeting-conversation-windows-disappers.md)
 
@@ -96,7 +96,7 @@ This page lists some issues for Skype for Business Server.
 
 [Video is missing in a Skype for Business 2015 meeting recording after the December 2015 security update 3114351 is installed](./server-meetings/video-missing-in-meeting-recording.md)
 
-## Skype for Business Server Sign-in
+## Sign-in
 
 [How to troubleshoot issues that you may encounter when you use the Lync 2010 mobile client for Google Android](./server-sign-in/issues-in-mobile-client-for-android.md)
 
