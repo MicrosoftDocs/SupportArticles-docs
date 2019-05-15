@@ -1,6 +1,6 @@
 # [SharePoint Server Troubleshooting](../server.md)
 
-## SharePoint Server Administration]
+## SharePoint Server Administration
 
 ### ["401 unauthorized" error when using OAuth and SAML claims](../server-admin/401-unauthorized-error-when-using-oauth-and-saml-claims.md)
 ### ["800703fa Illegal operation attempted on a registry key" error](../server-admin/800703fa-Illegal-operation-error.md)
