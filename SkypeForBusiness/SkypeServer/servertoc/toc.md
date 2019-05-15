@@ -1,11 +1,11 @@
 # [Skype for Business Support](../skypeforbusiness-server.md)
 
-## [Conferencing]
+## Conferencing
 ### [Cannot connect conferencing modalities](../server-conferencing/cannot-connect-conferencing-modalities.md)
 ### [Conferencing feature fails for mandatory user profile](../server-conferencing/conferencing-feature-fails-for-mandatory-user.md)
 ### [Enable the Conferencing Add-in for Outlook](../server-conferencing/enable-conferencing-add-in-for-outlook.md)
 
-## [Configuration]
+## Configuration
 ### [Central management store replication failures](../server-configuration/central-management-store-replication-failures.md)
 ### [Stops responding when receiving IM toast notification](../server-configuration/not-responding-when-receive-toast-notification.md)
 ### [Check the version of Skype for Business 2016](../server-configuration/check-version-of-skype-for-business-2016.md)
@@ -26,19 +26,19 @@
 ### [Event IDs 32402, 61045 logged in Front End](../server-configuration/event-32402-61045-in-front-end.md)
 ### [You have been added as a delegate for %User%](../server-configuration/added-as-delegate-notice.md)
 
-## [Exchange Integration]
+## Exchange Integration
 ### [MAPI unavailable](../server-exchange-integration/mapi-unavailable.md)
 
-## [IM and Presence]
+## IM and Presence
 ### [Presence not show in Outlook](../server-im-presence/presence-not-show-in-outlook.md)
 ### [Emoticons and emojis converted to text](../server-im-presence/emoticons-and emojis-converted-to-text.md)
 
-## [Installation and Uninstallation]
+## Installation and Uninstallation
 ### ["Get-VM" is not recognized during install of Cloud Connector Edition](../server-install-or-uninstall/get-vm-not-recognized-during-install-cloud-connector.md)
 ### [The installation (MSI) of Lync 2010 not complete](../server-install-or-uninstall/lync-2010-msi-installation-not-complete.md)
 ### [Clean uninstallation of Skype for Business on Mac](../server-install-or-uninstall/clean-uninstallation.md)
 
-## [Meetings]
+## Meetings
 ### [Meeting conversation window disappears](../server-meetings/meeting-conversation-windows-disappers.md)
 ### [Slow meeting refresh in non-VbSS client](../server-meetings/slow-meeting-refresh-in-non-vbss-client.md)
 ### [Error 12029: We couldn't connect you to this meeting](../server-meetings/cannot-connect-you-to-this-meeting.md)
@@ -48,7 +48,7 @@
 ### [Meeting invitations not sent from Outlook](../server-meetings/meeting-invitations-not-sent-from-outlook.md)
 ### [Video is missing in meeting recording](../server-meetings/video-missing-in-meeting-recording.md)
 
-## [Sign-in]
+## Sign-in
 ### [Issues in mobile client for Google Android](../server-sign-in/issues-in-mobile-client-for-android.md)
 ### [Can't to sign in to Skype for Business](../server-sign-in/unable-to-sign-in-to-sfb.md)
 ### [Can't sign in mobile client version 5.4](../server-sign-in/cannot-sign-in-mobile-client.md)
