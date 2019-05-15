@@ -1,6 +1,6 @@
 ﻿# [SharePoint Experts Troubleshooting](../experts.md)
  
-## [SharePoint Experts Administration](../experts-admin/index.md)
+## SharePoint Experts Administration
 
 ### [Antivirus and intermittent issues when you view Office documents by using Office Online Server](../experts-admin/antivirus-and-intermittent-issues.md)
 ### ["Call to Excel Services failed" error when you run a scheduled data refresh by using PowerPivot](../experts-admin/call-to-excel-services-failed.md)
@@ -38,6 +38,6 @@
 ### ["The virtual path maps to another application, which is not allowed." error when you run a scheduled data refresh](../experts-admin/virtual-path-maps-to-another-application-not-allowed.md)
 ### ["This workbook contains external data connections or BI features that are not supported." when you use a guest link to a workbook in Excel Online](../experts-admin/workbook-contains-external-data-connections.md)
 
-## [SharePoint Experts Installation](../experts-install/index.md)
+## SharePoint Experts Installation
 
 ### [Deploy Office Web Apps 2013 or Office Online Server to a security hardened drive](../experts-install/deploy-office-online-server-to-security-hardened-drive.md)
