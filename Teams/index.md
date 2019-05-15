@@ -10,13 +10,13 @@ ms.author: v-six
 
 # Teams Troubleshooting
 
-This page lists some issues for Teams.
+This page lists some issues about OneNote Integration and Sign-in for Teams.
 
-## Teams OneNote Integration
+## OneNote Integration
 
 ["One or more of the document libraries on the user or group's OneDrive contains more than 5,000 OneNote items" error when you access a notebook for Microsoft Teams](./teams-onenote-integration/issue-when-access-notebook-in-teams.md)
 
-## Teams Sign-in
+## Sign-in
 
 [Office 365 Student and service accounts can't sign in to Microsoft Teams](./teams-sign-in/office-365-accounts-cannot-sign-in-to-teams.md)
 

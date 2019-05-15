@@ -10,9 +10,9 @@ ms.author: v-six
 
 # Skype for Business Hybrid Troubleshooting
 
-This page lists some issues for Skype for Business Hybrid.
+This page lists some issues about Exchange Integration, Moving to Skype for Business Online, and Phone System for Skype for Business Hybrid.
 
-## Skype for Business Hybrid Exchange Integration
+## Exchange Integration
 
 [Info about AllowAdalForNonLyncIndependentOfLync setting in Skype for Business, Lync 2013, and Exchange Online](./hybrid-exchange-integration/allowadalfornonlyncIndependentofLync-setting.md)
 
@@ -26,7 +26,7 @@ This page lists some issues for Skype for Business Hybrid.
 
 ["Move-CsUser : HostedMigration fault: Error=(507)" error message when you try to move a user to Skype for Business Online in a Lync hybrid deployment](./hybrid-move-to-sfb-online/move-csuser-hostedmigration-fault-507.md)
 
-## Skype for Business Hybrid Phone System
+## Phone System
 
 [Voicemail messages are not delivered in Teams or Skype for Business client](./hybrid-phone-system/voicemails-not-delivered.md)
 
