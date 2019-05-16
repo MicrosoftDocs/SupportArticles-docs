@@ -43,6 +43,7 @@
 ### ["Upgrade Available" status in new SharePoint Server 2016 farm](../server-admin/upgrade-available-status-in-new-farm.md)
 ### [Web part controls don't work after sites are migrated to SharePoint Server 2016](../server-admin/web-part-controls-do-not-work-after-sites-are-migrated.md)
 ### [A Web Part that is configured to refresh automatically on a SharePoint Foundation 2010 Web page never finishes refreshing](../server-admin/web-part-refresh-in-sharepoint-foundation-2010.md)
+### [How to configure Excel Services in SharePoint Server 2010 for Kerberos authentication](../server-admin/configure-excel-services-kerberos.md)
 
 ## SharePoint Server Performance
 
