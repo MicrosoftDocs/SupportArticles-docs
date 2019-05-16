@@ -17,8 +17,8 @@
 ### [LastActive attribute gives wrong user status info](../online-im-presence/lastactive-attribute-gives-wrong-user-status-info-.md)
 
 ## Meeting Broadcast
-### [Issue when join a meeting broadcast ](../online-meeting-broadcast/issue-when-join-meeting-broadcast.md)
-### [Can't join Meeting Broadcast as Event team member on Mac](../online-meeting-broadcast/cannot-join-broadcast-as-event-team-on-mac.md)
+### [Issue when join a meeting broadcast ](../online-meeting-broadcast/issue-join-meeting-broadcast.md)
+### [Can't join Meeting Broadcast as Event team member on Mac](../online-meeting-broadcast/cannot-join-broadcast-as-event-team-mac.md)
 
 ## Phone System
 ### [Can't manage voice mail or customize a greeting](../online-phone-system/cannot-manage-voice-mail-or-greeting.md)
@@ -26,8 +26,8 @@
 ### [Can't transfer numbers from one Office 365 tenant](../online-phone-system/cannot-transfer-numbers-from-office-365-tenant.md)
 
 ## Sign-in
-### [Can't sign in after Public IM Connectivity is enabled](../online-sign-in/cannot-sign-in-when-pic-is-enabled.md)
-### [Issue when sign in to a German Office 365 environment](../online-sign-in/issue-when-sign-in-german-environment.md)
+### [Can't sign in after Public IM Connectivity is enabled](../online-sign-in/cannot-sign-in-pic-is-enabled.md)
+### [Issue when sign in to a German Office 365 environment](../online-sign-in/issue-sign-in-german-environment.md)
 ### [Sign-in issues](../online-sign-in/sign-in-issues.md)
 ### [Can't sign-in with this version of Lync in Lync Mobile 2013](../online-sign-in/cannot-sign-in-lync-mobile-2013.md)
 ### [Can't sign in by using a full redelegation domain](../online-sign-in/cannot-sign-in-using-full-redelegation-domain.md)
