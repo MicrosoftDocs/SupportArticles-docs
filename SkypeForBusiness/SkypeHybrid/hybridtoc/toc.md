@@ -1,4 +1,4 @@
-# [Skype for Business Hybrid Support](../skypeforbusiness-hybrid.md)
+# [Hybrid Deployment Troubleshooting ](../skypeforbusiness-hybrid.md)
  
 ## Exchange Integration
 ### [AllowAdalForNonLyncIndependentOfLync setting](../hybrid-exchange-integration/allowadalfornonlyncIndependentofLync-setting.md)
