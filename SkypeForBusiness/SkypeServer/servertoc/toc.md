@@ -1,7 +1,7 @@
 # [Skype for Business Server Troubleshooting](../skypeforbusiness-server.md)
 
 ## Conferencing
-### [Cannot connect conferencing modalities](../server-conferencing/cannot-connect-conferencing-modalities.md)
+### [Can't connect conferencing modalities](../server-conferencing/cannot-connect-conferencing-modalities.md)
 ### [Conferencing feature fails for mandatory user profile](../server-conferencing/conferencing-feature-fails-for-mandatory-user.md)
 ### [Enable the Conferencing Add-in for Outlook](../server-conferencing/enable-conferencing-add-in-for-outlook.md)
 
@@ -50,7 +50,7 @@
 
 ## Sign-in
 ### [Issues in mobile client for Google Android](../server-sign-in/issues-mobile-client-for-android.md)
-### [Can't to sign in to Skype for Business](../server-sign-in/unable-to-sign-in-to-sfb.md)
+### [Can't sign in Skype for Business](../server-sign-in/unable-to-sign-in-to-sfb.md)
 ### [Can't sign in mobile client version 5.4](../server-sign-in/cannot-sign-in-mobile-client.md)
 ### [Can't verify trusted server for sign-in address](../server-sign-in/cannot-verify-the-server-is-trusted.md)
 ### [Client not start when click meeting link in Chrome](../server-sign-in/client-not-start-click-meeting-link.md)
