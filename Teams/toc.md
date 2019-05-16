@@ -1,4 +1,4 @@
-# [Microsoft Teams Support](index.md)
+# [Teams Troubleshooting](index.md)
 
 ## OneNote Integration
 ### [Issue when access notebook](./teams-onenote-integration/issue-access-notebook.md)
