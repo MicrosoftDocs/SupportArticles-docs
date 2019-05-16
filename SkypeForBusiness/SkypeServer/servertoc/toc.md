@@ -1,4 +1,4 @@
-# [Skype for Business Support](../skypeforbusiness-server.md)
+# [Skype for Business Server Troubleshooting](../skypeforbusiness-server.md)
 
 ## Conferencing
 ### [Cannot connect conferencing modalities](../server-conferencing/cannot-connect-conferencing-modalities.md)
@@ -33,7 +33,7 @@
 ### [Presence not show in Outlook](../server-im-presence/presence-not-show-in-outlook.md)
 ### [Emoticons and emojis converted to text](../server-im-presence/emoticons-and emojis-converted-to-text.md)
 
-## Installation and Uninstallation
+## Install/Uninstall
 ### ["Get-VM" is not recognized during install of Cloud Connector Edition](../server-install-or-uninstall/get-vm-not-recognized-during-install-cloud-connector.md)
 ### [The installation (MSI) of Lync 2010 not complete](../server-install-or-uninstall/lync-2010-msi-installation-not-complete.md)
 ### [Clean uninstallation of Skype for Business on Mac](../server-install-or-uninstall/clean-uninstallation.md)
