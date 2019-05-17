@@ -214,6 +214,8 @@ This page lists some issues for Office products.
 
 [How to troubleshoot a damaged presentation in PowerPoint 2007 and PowerPoint 2010](./damaged-presentation-in-powerpoint-2010.md)
 
+[An Office program is slow or may stop responding (hang) when you open a file from a network location](./office-slow-or-stop-responding.md)
+
 ## Still need help? 
 
 Go to [Microsoft Community](https://answers.microsoft.com) or [Office help](https://support.office.com).
