@@ -65,7 +65,7 @@ Uninstall and reinstall Microsoft .NET Framework components IMPORTANT The .NET F
 To uninstall .NET Framework components from the computer follow these steps: 
  
 1. Create a temporary folder on your desktop.    
-2. Visit the [.NET Framework Cleanup Tool User's Guide](http://blogs.msdn.com/b/astebner/archive/2008/08/28/8904493.aspx) blog and download the [dotnetfx_cleanup_tool.zip](https://mirrors.download3k.com/token/d82bf18323611beff3110e6910e6db1d/dotnetfx_cleanup_tool.zip) file.    
+2. Visit the [.NET Framework Cleanup Tool User's Guide](https://blogs.msdn.com/b/astebner/archive/2008/08/28/8904493.aspx) blog and download the [dotnetfx_cleanup_tool.zip](https://mirrors.download3k.com/token/d82bf18323611beff3110e6910e6db1d/dotnetfx_cleanup_tool.zip) file.    
 3. When prompted, click Open, and then click Extract Now. Extract the files to the folder you created.    
 4. Find cleanup_tool.exe in the folder you created and double-click it.    
 5. In the "Do you want to run the .NET Framework Setup Cleanup Utility?" message, click Yes.    

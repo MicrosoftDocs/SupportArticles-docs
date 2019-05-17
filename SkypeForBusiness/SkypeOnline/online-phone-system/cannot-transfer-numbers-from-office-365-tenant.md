@@ -1,5 +1,5 @@
 ---
-title: Can't transfer numbers from one Office 365 tenant in your organization to another in Skype for Business Online
+title: Can't transfer numbers from one tenant to another in Skype for Business Online
 description: Describes an unsupported local number porting scenario in Skype for Business Online.
 author: simonxjx
 manager: willchen
@@ -9,7 +9,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# Can't transfer numbers from one Office 365 tenant in your organization to another in Skype for Business Online
+# Can't transfer numbers from one tenant to another in Skype for Business Online
 
 ## Summary
 

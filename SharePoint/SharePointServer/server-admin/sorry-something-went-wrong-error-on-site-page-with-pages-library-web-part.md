@@ -1,6 +1,6 @@
 ---
-title: 'Sorry, something went wrong' error on a Site Page with a Pages library web part added
-description: Describes how to resolve a 'Sorry, something went wrong' error on a Site Page with a Pages library web part added .
+title: Sorry, something went wrong error on a Site Page with a Pages library web part added
+description: Describes how to resolve a 'Sorry, something went wrong' error on a Site Page with a Pages library web part added.
 author: todmccoy
 ms.author: v-todmc
 ms.reviewer: 
@@ -16,14 +16,16 @@ localization_priority: Normal
 ## Symptoms
 You see the following error when selecting **Show Related Resources** within the Site Content and Structure page (sitemanager.aspx):
 
-> Sorry, something went wrong<br />
+```text
+Sorry, something went wrong
 An unexpected error has occurred.
+```
 
 ![Sorry, something went wrong error](media/4493897_en_1.jpg)
 
 The SharePoint Universal Logging System ( ULS) reports:
 
-```
+```text
 w3wp.exe (0x192C) 0x14AC SharePoint Foundation General 8nca Medium Application error when access /_layouts/15/sitemanager.aspx, Error=Object reference not set to an instance of an object…(truncated)…
 ```
 
@@ -53,7 +55,8 @@ The steps to reproduce the error are as follows:
 5. Navigate to **Site Settings** > **Content and structure**, then select **Site Pages** in the left panel.
 6. Select the checkbox next to the Site Page created in step 2, then click **Show Related Resources**.
 
-   > [!NOTE] The system will display the related resources for the selected page.
+   > [!NOTE]
+   > The system will display the related resources for the selected page.
 
 7. Navigate back to the Site Page created in step 2.
 8. Place the page in **Edit** mode, then place the **Pages Library web part** in edit mode.

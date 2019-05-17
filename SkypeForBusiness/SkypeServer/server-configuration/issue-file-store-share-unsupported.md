@@ -172,7 +172,7 @@ For step by step information about configuring Lync Server 2013 file storage, se
 
 For step by step information about moving Lync Server 2013 file storage, see the following TechNet blog post:
 
-[Change the file store location for Lync Server 2013 pool](http://social.technet.microsoft.com/wiki/contents/articles/15374.change-the-file-store-location-for-lync-server-2013-pool.aspx)
+[Change the file store location for Lync Server 2013 pool](https://social.technet.microsoft.com/wiki/contents/articles/15374.change-the-file-store-location-for-lync-server-2013-pool.aspx)
 
 For step by step information about moving Lync Server 2010 file storage, see the following TechNet articles:
 
