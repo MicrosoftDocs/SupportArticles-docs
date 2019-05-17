@@ -17,7 +17,7 @@ For Microsoft Exchange Server 2010 deployments that have more than one Client Ac
 
 For more information about how Kerberos authentication worked in earlier versions of Exchange Server and about the changes in Exchange Server 2010 that prevent Kerberos authentication from working with MAPI email clients, see the following blog post on the Exchange Team blog:
 
-[Recommendation: Enabling Kerberos Authentication for MAPI Clients](http://blogs.technet.com/b/exchange/archive/2011/04/15/recommendation-enabling-kerberos-authentication-for-mapi-clients.aspx)  
+[Recommendation: Enabling Kerberos Authentication for MAPI Clients](https://blogs.technet.com/b/exchange/archive/2011/04/15/recommendation-enabling-kerberos-authentication-for-mapi-clients.aspx)  
 
 ## More Information
 
@@ -74,13 +74,13 @@ To determine the SPNs that you would use in this example, we must look at the f
 > [!NOTE]
 > External or Internet-based clients that use Outlook Anywhere won’t use Kerberos authentication. Therefore, you don't have to add the FQDNs that these clients use as SPNs to the ASA credential. 
 
-If your site is larger than a single Active Directory site, you can see more examples in the topic[ Configuring Kerberos Authentication for Load-Balanced Client Access Servers](http://technet.microsoft.com/library/ff808312.aspx) .
+If your site is larger than a single Active Directory site, you can see more examples in the topic[ Configuring Kerberos Authentication for Load-Balanced Client Access Servers](https://technet.microsoft.com/library/ff808312.aspx) .
 
 ### Convert the OAB virtual directory to an application
 
 The offline address book (OAB) virtual directory is not a web application. Therefore, it is not controlled by the Microsoft Exchange Service Host service. As a result, the ASA credential can't decrypt Kerberos authentication requests to the OAB virtual directory. 
 
-To convert the OAB virtual directory to an IIS web application, execute the ConvertOABVDir.ps1 script on each CAS member. The script will also create a new application pool named MSExchangeOabAppPool for the OAB virtual directory. To download the script, go to the [ ConvertOABDir.p​s1](http://gallery.technet.microsoft.com/scriptcenter/525fb1dc-b612-4998-a2d1-55f32a6c35ac) page on the Microsoft Script Center. 
+To convert the OAB virtual directory to an IIS web application, execute the ConvertOABVDir.ps1 script on each CAS member. The script will also create a new application pool named MSExchangeOabAppPool for the OAB virtual directory. To download the script, go to the [ ConvertOABDir.p​s1](https://gallery.technet.microsoft.com/scriptcenter/525fb1dc-b612-4998-a2d1-55f32a6c35ac) page on the Microsoft Script Center. 
 
 ### Deploy the ASA credential to the CAS members
 

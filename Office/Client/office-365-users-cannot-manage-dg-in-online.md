@@ -27,12 +27,12 @@ Distribution groups that are created in Office 365 through directory synchroniza
 
 After changes are made to the group in the on-premises environment, the changes are synced to Office 365 the next time that directory synchronization runs. Or, to see the changes immediately, you can force directory syncronization. For more info about how to force directory synchronization, go to the following Microsoft website:
 
-[Force directory synchronization](http://technet.microsoft.com/library/jj151771.aspx#bkmk_synchronizedirectories)
+[Force directory synchronization](https://technet.microsoft.com/library/jj151771.aspx#bkmk_synchronizedirectories)
 
 We strongly recommend that you use native Exchange tools to manage distribution groups and mail-enabled security groups in your on-premises environment. For more info, go to the following Microsoft websites:
 
-- Exchange 2013: [Manage distribution groups](http://technet.microsoft.com/library/bb124513%28v=exchg.150%29.aspx)   
-- Exchange 2010: [Managing distribution groups](http://technet.microsoft.com/library/bb125256%28v=exchg.141%29.aspx)   
+- Exchange 2013: [Manage distribution groups](https://technet.microsoft.com/library/bb124513%28v=exchg.150%29.aspx)   
+- Exchange 2010: [Managing distribution groups](https://technet.microsoft.com/library/bb125256%28v=exchg.141%29.aspx)   
 
 ## References
 

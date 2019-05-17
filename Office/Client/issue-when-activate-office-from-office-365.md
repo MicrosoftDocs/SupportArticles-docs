@@ -56,7 +56,7 @@ Are you behind a firewall? If you're not sure, ask your administrator. If you're
  
 Each firewall will have a different method for enable access to these URIs. Check your software's documentation for instructions or ask your administrator to do this for you. 
 
-For more information about Office 365 ProPlus URLs and IP addresses, see the following Microsoft article: [Office 365 URLs and IP address ranges](http://technet.microsoft.com/library/hh373144.aspx)
+For more information about Office 365 ProPlus URLs and IP addresses, see the following Microsoft article: [Office 365 URLs and IP address ranges](https://technet.microsoft.com/library/hh373144.aspx)
 
 ### Step 4. Check whether you have the appropriate license   
  
