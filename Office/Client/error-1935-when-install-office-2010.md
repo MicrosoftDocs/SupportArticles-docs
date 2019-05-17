@@ -24,10 +24,10 @@ If the error still appears after restarting the computer, try these other method
 
 Select and download the System Update Readiness tool for your version of Windows:
 
-- [Download for the 32-bit version of Windows 7](http://go.microsoft.com/fwlink/?linkid=181491)    
-- [Download for the 64-bit version of Windows 7](http://go.microsoft.com/fwlink/?linkid=181492)    
-- [Download for the 32-bit version of Windows Vista](http://go.microsoft.com/fwlink/?linkid=181487)    
-- [Download for the 64-bit version of Windows Vista](http://go.microsoft.com/fwlink/?linkid=181490)    
+- [Download for the 32-bit version of Windows 7](https://go.microsoft.com/fwlink/?linkid=181491)    
+- [Download for the 64-bit version of Windows 7](https://go.microsoft.com/fwlink/?linkid=181492)    
+- [Download for the 32-bit version of Windows Vista](https://go.microsoft.com/fwlink/?linkid=181487)    
+- [Download for the 64-bit version of Windows Vista](https://go.microsoft.com/fwlink/?linkid=181490)    
 
 ### Repair or update Microsoft .NET Framework components
 
@@ -54,7 +54,7 @@ If you find Microsoft .NET Framework 4 Client Profile, follow these steps to rep
  
 If you can't find Microsoft .NET Framework 4 Client Profile, download and install it to update the computer. You can download the file from:
 
-[Microsoft .NET Framework 4 (Web Installer)](http://www.microsoft.com/download/en/details.aspx?id=17851)
+[Microsoft .NET Framework 4 (Web Installer)](https://www.microsoft.com/download/en/details.aspx?id=17851)
  
 Try to install Microsoft Office again. If error 1935 continues to occur, follow the steps to uninstall and reinstall .NET Framework from the computer.
 
@@ -78,10 +78,10 @@ To uninstall .NET Framework components from the computer follow these steps:
 9. Restart the computer once the .NET Framework component is removed.    
 10. Download and install the following components, one at a time, based on your operating system:  
   
-    - [.NET Framework 1.1](http://www.microsoft.com/downloads/details.aspx?familyid=262d25e3-f589-4842-8157-034d1e7cf3a3) - For Windows XP only.    
-    - [.NET Framework 1.1 SP1](http://www.microsoft.com/downloads/details.aspx?familyid=a8f5654f-088e-40b2-bbdb-a83353618b38) - For Windows XP only.    
-    - [.NET Framework 3.5 SP1](http://www.microsoft.com/downloads/details.aspx?familyid=ab99342f-5d1a-413d-8319-81da479ab0d7) - For Windows XP, Windows Vista, and Windows 7.
-    - [.NET Framework 4.0](http://www.microsoft.com/download/details.aspx?id=17851) - For Windows XP, Windows Vista, and Windows 7.
+    - [.NET Framework 1.1](https://www.microsoft.com/downloads/details.aspx?familyid=262d25e3-f589-4842-8157-034d1e7cf3a3) - For Windows XP only.    
+    - [.NET Framework 1.1 SP1](https://www.microsoft.com/downloads/details.aspx?familyid=a8f5654f-088e-40b2-bbdb-a83353618b38) - For Windows XP only.    
+    - [.NET Framework 3.5 SP1](https://www.microsoft.com/downloads/details.aspx?familyid=ab99342f-5d1a-413d-8319-81da479ab0d7) - For Windows XP, Windows Vista, and Windows 7.
+    - [.NET Framework 4.0](https://www.microsoft.com/download/details.aspx?id=17851) - For Windows XP, Windows Vista, and Windows 7.
 
 11. Restart the computer, and run Windows Update to install updates.    
    

@@ -113,7 +113,7 @@ Custom event details:
 
 ```AsciiDoc
 Event Xml:
-<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+<Event xmlns="https://schemas.microsoft.com/win/2004/08/events/event">
  <System>
  <Provider Name="ASP.NET 4.0.30319.0" />
  <EventID Qualifiers="32768">1309</EventID>
