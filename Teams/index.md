@@ -1,8 +1,13 @@
---- 
-layout: HubPage
-hide_bc: true
-title: Microsoft Teams Support
-description: Microsoft Teams Support
+---
+title: Listing some issues for Teams.
+author: simonxjx
+manager: willchen
+audience: ITPro
+ms.service: msteams
+ms.topic: article
+ms.author: v-six
 ---
 
-[!INCLUDE [support](../common/Office/includes/troubleshoot.md)]
+# Teams Troubleshooting
+
+Welcome to Teams! Here's a collection of information on how to identify and fix errors that you may run into when you use this product. 
