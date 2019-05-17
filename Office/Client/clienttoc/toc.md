@@ -201,3 +201,5 @@
 ## [Issue when save Excel workbooks](../issue-when-save-excel-workbooks.md)
 
 ## [Damaged presentation in PowerPoint 2010](../damaged-presentation-in-powerpoint-2010.md)
+
+## [Open network file slow or stop responding](../office-slow-or-stop-responding.md)
