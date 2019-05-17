@@ -42,14 +42,14 @@ Are you behind a proxy server? If you're not sure, ask your administrator. If so
 
 Are you behind a firewall? If you're not sure, ask your administrator. If you're behind a firewall, it might have to be configured to enable access to the following: 
  
-- http://officecdn.microsoft.com    
+- https://officecdn.microsoft.com    
 - https://ols.officeapps.live.com/olsc    
 - https://activation.sls.microsoft.com    
 - https://odc.officeapps.live.com    
-- http://crl.microsoft.com/pki/crl/products/MicrosoftProductSecureServer.crl    
-- http://crl.microsoft.com/pki/crl/products/MicrosoftRootAuthority.crl    
-- http://crl.microsoft.com/pki/crl/products/MicrosoftProductSecureCommunicationsPCA.crl    
-- http://www.microsoft.com/pki/crl/products/MicrosoftProductSecureCommunicationsPCA.crl    
+- https://crl.microsoft.com/pki/crl/products/MicrosoftProductSecureServer.crl    
+- https://crl.microsoft.com/pki/crl/products/MicrosoftRootAuthority.crl    
+- https://crl.microsoft.com/pki/crl/products/MicrosoftProductSecureCommunicationsPCA.crl    
+- https://www.microsoft.com/pki/crl/products/MicrosoftProductSecureCommunicationsPCA.crl    
 - go.microsoft.com    
 - office15client.microsoft.com    
 - sls.microsoft.com    
