@@ -1,7 +1,7 @@
 # [Teams Troubleshooting](index.md)
 
 ## OneNote Integration
-### [Issue when access notebook](./teams-onenote-integration/issue-access-notebook.md)
+### [Issue with accessing notebook](./teams-onenote-integration/issue-access-notebook.md)
 
 ## Sign-in
 ### [Can't sign in to Teams](./teams-sign-in/office-365-accounts-cannot-sign-in.md)
