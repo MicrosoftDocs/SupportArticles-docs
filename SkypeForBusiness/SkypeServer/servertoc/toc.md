@@ -1,4 +1,4 @@
-# [Skype for Business Server Troubleshooting](../skypeforbusiness-server.md)
+# [Skype for Business Server Troubleshooting](../server.md)
 
 ## Conferencing
 ### [Can't connect conferencing modalities](../server-conferencing/cannot-connect-conferencing-modalities.md)
