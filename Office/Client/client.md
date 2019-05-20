@@ -216,6 +216,8 @@ This page lists some issues for Office products.
 
 [An Office program is slow or may stop responding (hang) when you open a file from a network location](./office-slow-or-stop-responding.md)
 
+[How to select cells/ranges by using Visual Basic procedures in Excel](./select-cells-rangs-with-visual-basic.md)
+
 ## Still need help? 
 
 Go to [Microsoft Community](https://answers.microsoft.com) or [Office help](https://support.office.com).
