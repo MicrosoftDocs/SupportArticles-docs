@@ -1,7 +1,7 @@
 ---
 title: Microsoft Project opens a calendar from a different instance when editing
 description: "Describes what to do if Microsoft Project opens a calendar from a PWA instance other than the one currently being edited."
-author: v-todmc
+author: todmccoy
 manager: joselr
 ms.date: 2/5/2019
 audience: ITPro
@@ -37,7 +37,8 @@ To resolve this issue, designate one account in the Project client as the defaul
 ### How to check the Site ID
 To check the Site ID, access the following registry location in the local machine (the profile name will be the name of the profile created to connect to the PWA instance):
 
-```
+```text
 HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\MS Project\Profiles\<Profile Name>
 ```
+
 ![To check the site ID, check the profile name in the registry. ](media/project-opens-calendar/95806-2.png)

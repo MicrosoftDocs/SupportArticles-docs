@@ -1,6 +1,6 @@
 ﻿# [SharePoint Online Troubleshooting](../online.md)
  
-## [SharePoint Online Administration](../online-admin/index.md)
+## SharePoint Online Administration
 
 ### ["Access Denied" error for a SharePoint Online user who is synchronized to Office 365](../online-admin/access-denied-for-office-365-users.md)
 

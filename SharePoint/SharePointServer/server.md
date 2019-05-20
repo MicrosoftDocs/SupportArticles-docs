@@ -96,6 +96,8 @@ This page lists some issues for SharePoint Server.
 
 [A Web Part that is configured to refresh automatically on a SharePoint Foundation 2010 Web page never finishes refreshing](./server-admin/web-part-refresh-in-sharepoint-foundation-2010.md)
 
+[How to configure Excel Services in SharePoint Server 2010 for Kerberos authentication](./server-admin/configure-excel-services-kerberos.md)
+
 ## SharePoint Server Installation
 
 ["SharePoint Foundation administration tool has stopped working" error during a slipstream installation](./server-install/administration-tool-stopped-working-during-a-slipstream-installation.md)

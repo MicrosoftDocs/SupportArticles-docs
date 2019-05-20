@@ -1,5 +1,5 @@
 ---
-title: 'Requested registry access is not allowed' error in SharePoint 2013 OOB workflow creation
+title: Requested registry access is not allowed error in SharePoint 2013 OOB workflow creation
 description: Describes a resolution to a 'Requested registry access is not allowed' error when creating a SharePoint 2013 OOB workflow.
 author: todmccoy
 ms.author: v-todmc
@@ -23,8 +23,8 @@ The Unified Logging Service (ULS) will also display the following details (highl
 
 02/06/2019 10:33:12.14 w3wp.exe (Servername:0x0A18) 0x3118 SharePoint Foundation General 8nca Medium Application error when access /_layouts/15/CstWrkflIP.aspx, <mark>Error=Requested registry access is not allowed. at Microsoft.Win32.RegistryKey.OpenSubKey(String name, Boolean writable) at Microsoft.Win32.Registry.GetValue</mark> (String keyName, String valueName, Object defaultValue) at Microsoft.Office.InfoPath.Server.Util.UrlManager.<>c__DisplayClass1.<OpenFileNameMap>b__0() at Microsoft.Office.Server.Security.SecurityContext.RunAsProcess(CodeToRunElevated secureCode) at Microsoft.Office.InfoPath.Server.Util.UrlManager.OpenFileNameMap() at Microsoft.Office.InfoPath.Server.Util.UrlManager..cctor() 4445bd9e-70b9-008f-6bc3-c842222bad98
 
-
-> [!NOTE] See the **More information** section for a more complete display of the error in the ULS.
+> [!NOTE]
+> See the **More information** section for a more complete display of the error in the ULS.
 
 ## Cause
 The application pool account does not have the required permission to create the workflow.
@@ -35,7 +35,7 @@ To resolve this issue, try the following steps:
 1. Add the application pool account of the web application to the groups WSS_WPG and WSS_Admin_WPG.
 2. Apply read access to the following registry keys:
 
-   ```
+   ```text
    HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\Office Server\15.0
    HKLM\SOFTWARE\Microsoft\Shared Tools\Web Server Extensions\15.0\Secure
    ```
