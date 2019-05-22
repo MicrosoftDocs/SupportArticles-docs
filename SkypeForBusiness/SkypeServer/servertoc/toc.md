@@ -31,7 +31,7 @@
 
 ## IM and Presence
 ### [Presence not show in Outlook](../server-im-presence/presence-not-show-outlook.md)
-### [Emoticons and emojis converted to text](../server-im-presence/emoticons-and emojis-converted-to-text.md)
+### [Emoticons and emojis converted to text](../server-im-presence/emoticons-and-emojis-converted-to-text.md)
 
 ## Install/Uninstall
 ### ["Get-VM" is not recognized during install of Cloud Connector Edition](../server-install-or-uninstall/get-vm-not-recognized-during-install-cloud-connector.md)
