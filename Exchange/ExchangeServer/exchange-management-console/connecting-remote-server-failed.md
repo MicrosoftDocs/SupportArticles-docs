@@ -1,6 +1,6 @@
 ---
 title: Connecting to the remote server failed when start Management Shell or Console
-description: "Connecting to the remote server failed with the following error message" error when you start the Exchange Management Shell or the Exchange Management Console.
+description: Connecting to the remote server failed with the following error message when you start the Exchange Management Shell or the Exchange Management Console.
 author: simonxjx
 manager: willchen
 audience: ITPro

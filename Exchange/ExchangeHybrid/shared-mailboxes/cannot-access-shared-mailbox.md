@@ -37,7 +37,7 @@ These issues can occur if the shared mailbox is created by using the Exchange On
 Create a remote mailbox in the on-premises environment, and then move the mailbox to Exchange Online. To do this, follow these steps.
 
 > [!NOTE]
-> For on-premises environments that use Exchange Server 2013 (cumulative update 21 or later versions) or Exchange Server 2016 (cumulative update 10 or later versions), you can skip the following steps and follow the steps under the "[Alternative method](#Alternative-method)" section instead. 
+> For on-premises environments that use Exchange Server 2013 (cumulative update 21 or later versions) or Exchange Server 2016 (cumulative update 10 or later versions), you can skip the following steps and follow the steps under the "Alternative method" section instead. 
 
 1. Convert the shared mailbox to a regular mailbox by using the Exchange admin center in Exchange Online. To do this, follow these steps:  
    1. Open the Exchange admin center in Exchange Online.    
