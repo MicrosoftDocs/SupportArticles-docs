@@ -17,7 +17,7 @@
 ### [WinRM client cannot process the request](../connecting-to-the-service/winrm-cannot-process-request.md)
 
 ## Connectors
-### [Important notice for Office 365](../connectors/notice-for-email-customers.md)
+### [Important notice for Office 365](../connectors/office-365-notice.md)
 ### [550 5.7.64 TenantAttribution](../connectors/relay-access-denied-smtp.md)
 
 ## Delete Calendar Items
