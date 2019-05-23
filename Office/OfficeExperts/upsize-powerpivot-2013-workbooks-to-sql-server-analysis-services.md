@@ -106,7 +106,7 @@ The only option to have a PowerPoint workbook larger than 2GB is to upsize or on
 
       **Command**:
       ```powershell
-      <Process xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+      <Process xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">
       <Type>ProcessDefault</Type>
       <Object> <DatabaseID>TabularProject1</DatabaseID> 
       </Object>

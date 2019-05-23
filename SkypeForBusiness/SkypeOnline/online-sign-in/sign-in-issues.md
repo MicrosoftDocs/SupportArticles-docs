@@ -19,8 +19,8 @@ This guide should be used to help troubleshoot and diagnose Skype for Business O
 
 The "Skype for Business Online Sign-In Guided Walkthroughs" help with identifying and resolving the main causes of sign-in issues. Before you read any further in this article or contact Technical Support, you should consult one of the following guided walkthroughs. To do this, click the appropriate link: 
  
-- [Troubleshooting Skype for Business Online sign-in for users](https://support.microsoft.com/help/10054)    
-- [Troubleshooting Skype for Business Online sign-in for admins]()    
+- [Troubleshooting Skype for Business Online sign-in for users](https://support.microsoft.com/help/10054)
+
  Generally, Skype for Business Online sign-in problems can be broken up into four categories:  
 
 |Category |Issue |Possible causes |

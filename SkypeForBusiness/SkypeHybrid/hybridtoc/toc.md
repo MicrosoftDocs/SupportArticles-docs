@@ -5,9 +5,9 @@
 ### [Repeatedly prompted for Exchange credentials](../hybrid-exchange-integration/repeatedly-prompted-for-credentials.md)
 
 ## Moving to Skype for Business Online
-### [Skype for Business 2016 isn't installed in Office 365](../hybrid-move-to-sfb-online/sfb-is-not-installed-office-365.md)
-### [Cannot move users from different AD domain](../hybrid-move-to-sfb-online/cannot-move-users-from-different-ad-domain.md)
-### [Move-CsUser:HostedMigration fault: Error=(507)](../hybrid-move-to-sfb-online/move-csuser-hostedmigration-fault-507.md)
+### [Skype for Business 2016 isn't installed in Office 365](../hybrid-move-sfb-online/sfb-is-not-installed-office-365.md)
+### [Cannot move users from different AD domain](../hybrid-move-sfb-online/cannot-move-users-from-different-ad-domain.md)
+### [Move-CsUser:HostedMigration fault: Error=(507)](../hybrid-move-sfb-online/move-csuser-hostedmigration-fault-507.md)
 
 ## Phone System
 ### [Voicemail messages are not delivered](../hybrid-phone-system/voicemails-not-delivered.md)
