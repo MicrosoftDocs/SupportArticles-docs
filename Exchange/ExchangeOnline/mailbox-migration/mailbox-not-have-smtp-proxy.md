@@ -95,10 +95,10 @@ If you cannot determine the cause of the issue, open a support case with Microso
 
 ## MORE INFORMATION 
 
-For more info about email address policies and Exchange hybrid deployments, see the "Email address policy" section of the [The cloud on your terms (PART I): deploying hybrid](http://blogs.technet.com/b/exchange/archive/2012/09/20/the-cloud-on-your-terms-part-i-deploying-hybrid.aspx) blog post.
+For more info about email address policies and Exchange hybrid deployments, see the "Email address policy" section of the [The cloud on your terms (PART I): deploying hybrid](https://blogs.technet.com/b/exchange/archive/2012/09/20/the-cloud-on-your-terms-part-i-deploying-hybrid.aspx) blog post.
 
 For more info about how to edit an email address policy, see [Edit an email address policy](https://docs.microsoft.com/exchange/edit-an-email-address-policy-exchange-2013-help).
 
 For more info about the coexistence domain that's added by the Hybrid Configuration wizard, see the "Domains" entry at [Hybrid Configuration wizard](https://docs.microsoft.com/exchange/hybrid-configuration-wizard#bkmk_hybridconfigoptions).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet forums](http://social.technet.microsoft.com/forums/exchange/home?category=exchange2010%2cexchangeserver).
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet forums](https://social.technet.microsoft.com/forums/exchange/home?category=exchange2010%2cexchangeserver).

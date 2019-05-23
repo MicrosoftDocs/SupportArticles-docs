@@ -123,7 +123,7 @@ For more information about how to configure Kerberos constrained delegation to e
     To do this, run the following command from the SharePoint 2010 Management Shell:
 
     ```powershell
-    $w = Get-SPWebApplication -Identity http://portal
+    $w = Get-SPWebApplication -Identity https://portal
     
     $w.GrantAccessToProcessIdentity("vmlab\svcExcel")
     ```

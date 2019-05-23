@@ -30,7 +30,7 @@ You may get the duplicate folder Archive1 in addition to the Archive folder. If 
 3. After Outlook restarts, move all content to the folder that is currently designated as the default archive folder. In this case, it is the Archive1 folder.    
 4. Delete the non-default folder named Archive .  
 5. Close Outlook.    
-6. Log into your Exchange Online mailbox via Outlook on the Web ([http://portal.office.com](http://portal.office.com/)).    
+6. Log into your Exchange Online mailbox via Outlook on the Web ([https://portal.office.com](https://portal.office.com/)).    
 7. In the Office 365 portal, click the **Settings** cog, and under **Your app settings**, click the **Mail** option.  
    - Make a note of where the **Mail** setting link is in this menu since later you will need to navigate back to it in a different language    
      
@@ -57,7 +57,7 @@ You may find your Archive folder in an unexpected location, for example, as a su
 2. Close and restart Outlook.    
 3. After Outlook restarts, backup the content of the folder currently designated as the default archive folder. You can do this by creating a new folder and moving the email from the Archive folder to the new folder, or by exporting the Archive folder contents to an Outlook Data File (.pst).    
 4. Close Outlook.    
-5. Log into your Exchange Online mailbox via Outlook on the Web ([http://portal.office.com](http://portal.office.com/)).    
+5. Log into your Exchange Online mailbox via Outlook on the Web ([https://portal.office.com](https://portal.office.com/)).    
 6. Click the **Mail** tile.    
 7. Navigate to the Archive folder that is in the unexpected location.    
 8. Delete the Archive folder.

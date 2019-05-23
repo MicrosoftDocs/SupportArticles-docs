@@ -106,7 +106,7 @@ You can use the [Get-RemoteMailbox](https://technet.microsoft.com/library/ff6074
 
 To update these attributes, you can use the [Set-RemoteMailbox](https://technet.microsoft.com/library/ff607302%28v=exchg.160%29.aspx) cmdlet.
 
-After the correct values are set for these attributes, [force directory synchronization](http://technet.microsoft.com/library/jj151771.aspx#bkmk_synchronizedirectories) to occur, and then try to set up the user's email account in Outlook.
+After the correct values are set for these attributes, [force directory synchronization](https://technet.microsoft.com/library/jj151771.aspx#bkmk_synchronizedirectories) to occur, and then try to set up the user's email account in Outlook.
 
 ### If you're not using a custom domain
 

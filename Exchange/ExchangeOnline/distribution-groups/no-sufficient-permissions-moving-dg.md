@@ -61,7 +61,7 @@ Here are some more examples of other Windows PowerShell cmdlets that you can use
 ### Method 2: Add yourself to the "ManagedBy" attributeTo add yourself to the ManagedBy attribute, follow these steps:
 
 1. Take one of the following actions, as appropriate for your situation:  
-   - Connect to Exchange Online by using remote PowerShell. For more information about how to do this, see [Connect to Exchange Online using Remote PowerShell](http://technet.microsoft.com/library/jj984289%28v=exchg.160%29.aspx).   
+   - Connect to Exchange Online by using remote PowerShell. For more information about how to do this, see [Connect to Exchange Online using Remote PowerShell](https://technet.microsoft.com/library/jj984289%28v=exchg.160%29.aspx).   
    - On Exchange Server in your on-premises environment, open the Exchange Management Shell.   
    
 2. Run the following command:
@@ -77,7 +77,7 @@ Here are some more examples of other Windows PowerShell cmdlets that you can use
 
     After you do this, you'll be able to change the distribution group.
 
-For more information about the Set-DistributionGroup cmdlet, see [Set-DistributionGroup](http://technet.microsoft.com/library/bb124955%28v=exchg.160%29.aspx).
+For more information about the Set-DistributionGroup cmdlet, see [Set-DistributionGroup](https://technet.microsoft.com/library/bb124955%28v=exchg.160%29.aspx).
 
 ## References 
 
@@ -85,4 +85,4 @@ To learn about managing distribution groups that are synced to Office 365 from t
 
 [2417592](https://support.microsoft.com/help/2417592) Owners of an on-premises distribution group that's synced to Office 365 can't manage the distribution group in Exchange Online
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](http://social.technet.microsoft.com/forums/exchange/home?category=exchange2010%2cexchangeserver).
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](https://social.technet.microsoft.com/forums/exchange/home?category=exchange2010%2cexchangeserver).

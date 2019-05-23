@@ -95,18 +95,18 @@ If you have followed the steps in this article, and you are still receiving the 
  Since it may not be possible to know what caused or led to the permissions problems, we suggest you consider restoring Windows to a previous state.
 
 Restore system files and settings (Windows 7)
- [http://windows.microsoft.com/en-US/windows7/Restore-system-files-and-settings](http://windows.microsoft.com/windows7/restore-system-files-and-settings)
+ [https://windows.microsoft.com/en-US/windows7/Restore-system-files-and-settings](https://windows.microsoft.com/windows7/restore-system-files-and-settings)
 
 How to repair the operating system and how to restore the operating system configuration to an earlier point in time in Windows Vista
 
-[http://support.microsoft.com/kb/936212](https://support.microsoft.com/help/936212)
+[https://support.microsoft.com/kb/936212](https://support.microsoft.com/help/936212)
 
 How to restore Windows XP to a previous state
 
-[http://support.microsoft.com/kb/306084](https://support.microsoft.com/help/306084)
+[https://support.microsoft.com/kb/306084](https://support.microsoft.com/help/306084)
 
 If your Excel files are still not opening, but the error has stopped after following these steps, you may have an additional problem to resolve.
 
 We suggest you also check the content provided in this article:
  
-[http://support.microsoft.com/kb/211494](https://support.microsoft.com/help/211494)
+[https://support.microsoft.com/kb/211494](https://support.microsoft.com/help/211494)

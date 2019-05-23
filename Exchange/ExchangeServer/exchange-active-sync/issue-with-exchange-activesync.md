@@ -15,7 +15,7 @@ ms.author: v-six
 
 Microsoft Exchange ActiveSync lets devices synchronize with your Inbox, your Calendar, and other items that have dedicated Microsoft Exchange Server mailboxes. This article describes common issues that affect third-party devices that synchronize with Exchange by using Exchange ActiveSync. These devices include Android and iOS devices. 
 
-[Exchange ActiveSync Protocol Licensees](https://www.microsoft.com/legal/intellectualproperty/mtl/technologylicensing.aspx) provide the Exchange ActiveSync software that is used on the third-party devices. Microsoft does not write the Exchange ActiveSync code for the licensees’ devices or services. Microsoft licenses patents to Exchange ActiveSync licensees. These patents are Microsoft intellectual property. Additionally, Microsoft provides public access to the [Exchange ActiveSync protocol documentation](https://msdn.microsoft.com/library/cc425499%28v=exchg.80%29.aspx).
+[Exchange ActiveSync Protocol Licensees](https://www.microsoft.com/legal/intellectualproperty/mtl/eas-licensing.aspx) provide the Exchange ActiveSync software that is used on the third-party devices. Microsoft does not write the Exchange ActiveSync code for the licensees’ devices or services. Microsoft licenses patents to Exchange ActiveSync licensees. These patents are Microsoft intellectual property. Additionally, Microsoft provides public access to the [Exchange ActiveSync protocol documentation](https://msdn.microsoft.com/library/cc425499%28v=exchg.80%29.aspx).
 
 > [!NOTE]
 > A protocol is a standard for communication between computers.
@@ -32,7 +32,7 @@ Microsoft may direct customers to contact their mobile device vendor or mobile c
 
 When you evaluate the devices that are to be used in an Exchange Server organization that uses Exchange ActiveSync, you should make sure that you understand the features and capabilities of the devices. Not all devices support the same configuration options, and some devices may not support all features or versions of the Exchange ActiveSync protocol.
 
-A community chart for [Comparison of Exchange ActiveSync clients](https://en.wikipedia.org/wiki/comparison_of_exchange_activesync_clients) is available on Wikipedia. Administrators and Helpdesk personnel should use public information and their own testing to understand device capabilities. To help address this, the Exchange team has created a new [Exchange ActiveSync Logo program](https://blogs.technet.com/b/exchange/archive/2011/04/13/announcing-the-exchange-activesync-logo-program.aspx) for devices that use Exchange ActiveSync.
+A community chart for [Comparison of Exchange ActiveSync clients](https://social.technet.microsoft.com/wiki/contents/articles/1150.exchange-activesync-client-comparison-table.aspx) is available on Wikipedia. Administrators and Helpdesk personnel should use public information and their own testing to understand device capabilities. To help address this, the Exchange team has created a new [Exchange ActiveSync Logo program](https://blogs.technet.com/b/exchange/archive/2011/04/13/announcing-the-exchange-activesync-logo-program.aspx) for devices that use Exchange ActiveSync.
 
 We will update this document as we identify new issues that apply to third-party devices that use the Exchange ActiveSync protocol.
 

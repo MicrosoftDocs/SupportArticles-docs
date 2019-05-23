@@ -77,7 +77,7 @@ To help troubleshoot this issue, follow these steps:
    - The name of the company's service routing domain (for example, mail.contoso.onmicrosoft.com)    
    - The name of the company's federated domain (for example, contoso.com)    
  
-    If these names aren't displayed in the **DomainNames** section, there may be a problem that affects the setup of Exchange federation. Review the [Microsoft Exchange Server Deployment Assistant](http://technet.microsoft.com/exchange/jj657516.aspx) to make sure that your configuration aligns to the recommended steps and that the environment meets all the system requirements. If the two domains are displayed correctly in the **DomainNames** section, note the following sections in the results:
+    If these names aren't displayed in the **DomainNames** section, there may be a problem that affects the setup of Exchange federation. Review the [Microsoft Exchange Server Deployment Assistant](https://technet.microsoft.com/exchange/jj657516.aspx) to make sure that your configuration aligns to the recommended steps and that the environment meets all the system requirements. If the two domains are displayed correctly in the **DomainNames** section, note the following sections in the results:
     - **Name**    
     - **TargetApplicationUri**    
     - **TargetAutodiscoverEpr**    

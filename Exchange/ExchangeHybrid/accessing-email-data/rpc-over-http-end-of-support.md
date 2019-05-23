@@ -104,10 +104,10 @@ No. This change applies only to Outlook for Windows.
 
 No. Customers who use RPC over HTTP to connect Outlook for Windows and on-premises Exchange Server continue to do so. This change affects only customers who use Outlook for Windows to connect to Exchange Online mailboxes in Office 365.
 
-Still need help? Go to [Microsoft Community](http://answers.microsoft.com/). 
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/). 
 
 ## References
 
 For more information about MAPI over HTTP, see the following resources: 
 - Microsoft Exchange Team Blog article: [Outlook Connectivity with MAPI over HTTP](https://blogs.technet.microsoft.com/exchange/2014/05/09/outlook-connectivity-with-mapi-over-http/).    
-- Microsoft TechNet: [MAPI over HTTP](https://technet.microsoft.com/library/dn635177%28v=exchg.150%29.aspx) and [RPC over HTTP](http://technet.microsoft.com/library/bb123741%28v=exchg.150%29.aspx).    
+- Microsoft TechNet: [MAPI over HTTP](https://technet.microsoft.com/library/dn635177%28v=exchg.150%29.aspx) and [RPC over HTTP](https://technet.microsoft.com/library/bb123741%28v=exchg.150%29.aspx).    
