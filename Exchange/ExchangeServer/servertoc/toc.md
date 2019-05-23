@@ -26,7 +26,7 @@
 
 ## OWA
 ### [Incorrect Sent time stamp](../owa/incorrect-sent-time-stamp.md)
-### [Set up Exchange on the web](../owa/set-up-exchange-on-web.md)
+### [Set up Exchange on the web](../owa/set-up-exchange-web-access.md)
 
 ## Shared Mailboxes
 ### [Can't create appointment or all day event](../shared-mailboxes/cannot-create-appointment.md)
