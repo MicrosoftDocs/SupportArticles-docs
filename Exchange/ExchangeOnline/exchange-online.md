@@ -1,3 +1,13 @@
-# Welcome to Exchange Online!
+---
+title: Listing some issues for Exchange Online.
+author: simonxjx
+manager: willchen
+audience: ITPro
+ms.service: exchange-online
+ms.topic: article
+ms.author: v-six
+---
 
-This is the exchange online support overview topic
+# Exchange Online Troubleshooting
+
+Welcome to Exchange Online! Here's a collection of information on how to identify and fix errors that you may run into when you use this product. 
