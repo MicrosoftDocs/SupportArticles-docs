@@ -1,4 +1,4 @@
-# [SharePoint Hybrid Troubleshooting](../hybrid.md)
+# [Hybrid Deployment Troubleshooting](../hybrid.md)
 
 ## SharePoint Hybrid Administration
 
