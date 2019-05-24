@@ -52,6 +52,9 @@
 ## [Crashing issues with Excel](../crashing-issues-with-excel.md)
 ## [Issue when save Excel workbooks](../issue-when-save-excel-workbooks.md)
 ## [Open network file slow or stop responding](../office-slow-or-stop-responding.md)
+## [Another account is already signed in](../another-account-already-signed-in.md)
+## [We can't sign you into your company portal](../something-configured-fails-activating-office.md)
+## ["wkresources" files in Trash](../wkresources-files-moved-to-trash.md)
 
 ## Office Developer
 
