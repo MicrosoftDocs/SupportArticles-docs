@@ -1,7 +1,5 @@
 # [Office Client Troubleshooting](../client.md)
 
-## [Unable to sign in to Skype for Business](../unable-to-sign-in-to-sfb.md)
-
 ## [Add a button in Word](../add-button-in-word.md)
 
 ## [Automate Excel from Visual Basic](../automate-excel-from-visual-basic.md)

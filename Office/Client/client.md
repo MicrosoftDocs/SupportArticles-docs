@@ -12,8 +12,6 @@ ms.author: v-six
 
 This page lists some issues for Office products.
 
-[How to troubleshoot being unable to sign in to Skype for Business](./unable-to-sign-in-to-sfb.md)
-
 [How to add a button to a Word document and assign its Click event at run-time](./add-button-in-word.md)
 
 [How to automate Microsoft Excel from Visual Basic](./automate-excel-from-visual-basic.md)
