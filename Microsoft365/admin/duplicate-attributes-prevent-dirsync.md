@@ -92,7 +92,7 @@ To determine attribute conflicts that are caused by user objects that were creat
    4. Click **View**, click **Tree View**, select the AD DS domain in the **BaseDN**drop-down list, and then click **OK**.
    5. In the navigation pane, locate and then double-click the object that isn't syncing correctly. The Details pane on the right side of the window lists all object attributes. The following example shows the object attributes:
 
-      ![Example of object attributes](./media/duplicate-attributes-prevent-dirsync\object-attributes.png)
+      ![Example of object attributes](./media\duplicate-attributes-prevent-dirsync\object-attributes.png)
 
    6. Record the values of the userPrincipalName attribute and each SMTP address in the multivalue proxyAddresses attribute. You will need these values later.  
      
