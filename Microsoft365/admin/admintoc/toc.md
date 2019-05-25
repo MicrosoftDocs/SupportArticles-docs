@@ -60,7 +60,7 @@
 ### ["Unlicensed Product" error](../office-2010-unlicensed-product-error.md)
 ### [A user with this name already exists](../office-365-user-with-name-already-exists.md)
 ### [50,000 seats RIGHTSMANAGEMENT_ADHOC SKU](../rightsmanagement-adhoc-sku-office-365.md)
-## [Office Feature Updates task](../office-feature-updates-task-faq.md)
+### [Office Feature Updates task](../office-feature-updates-task-faq.md)
 
 ## Security
 ### [Repeatedly prompted for credentials](../access-denied-when-connect-to-office-365.md)
