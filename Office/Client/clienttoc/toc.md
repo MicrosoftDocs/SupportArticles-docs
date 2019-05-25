@@ -21,6 +21,7 @@
 ## Troubleshooting
 ### [Open network file slow or stop responding](../office-slow-or-stop-responding.md)
 ### ["wkresources" files in Trash](../wkresources-files-moved-to-trash.md)
+### [Display issues in Office applications](../office-display-issues.md)
 
 ## Excel
 ### [Convert Excel column numbers](../convert-excel-column-numbers.md)
