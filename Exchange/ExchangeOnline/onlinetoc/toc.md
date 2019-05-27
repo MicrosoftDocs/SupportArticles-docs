@@ -1,7 +1,10 @@
 # [Exchange Online Troubleshooting](../exchange-online.md)
 
 ## Add Users
-### [Proxy address  is already being used](../add-users/proxy-address-being-used.md)
+### [Proxy address is already being used](../add-users/proxy-address-being-used.md)
+
+## Archive mailboxes
+### [Messages aren't moved to archive mailboxes](../archive-mailboxes/message-not-moved-to-archive.md)
 
 ## Auto-Mapping
 ### [Auto-mapping doesn't work](../auto-mapping/auto-mapping-not-work.md)
@@ -11,6 +14,7 @@
 
 ## Configure Mailboxes
 ### [Set automatic replies](../configure-mailboxes/set-automatic-replies.md)
+### [Enable or disable POP3, IMAP, MAPI, OWA or ActiveSync](../configure-mailboxes/pop3-imap-owa-activesync-office-365.md)
 
 ## Connecting To The Service
 ### [Can't connect to Exchange Online](../connecting-to-the-service/cannot-connect-incorrect-service.md)
@@ -27,6 +31,7 @@
 ## Distribution Groups
 ### [You don't have sufficient permissions](../distribution-groups/no-sufficient-permissions-moving-dg.md)
 ### [Prevent users from creating and managing DG](../distribution-groups/prevent-users-create-manage-dg.md)
+### [Can't manage distribution group](../distribution-groups/office-365-users-cannot-manage-online-dg.md)
 
 ## Email Messages
 ### [Access is denied with Windows PowerShell](../email-messages/access-denied-connect-powershell.md)
@@ -48,6 +53,9 @@
 ### [Can't see free/busy information](../move-mailboxes/cannot-see-free-busy-information.md)
 ### [Your mailbox has been temporarily moved](../move-mailboxes/mailbox-moved-exchange-server.md)
 
+## Outlook Connectivity
+### [Connectivity troubleshooting resources](../outlook-connectivity/office-365-connectivity-troubleshooting-resources.md)
+
 ## Outlook Crashes
 ### [issues with Outlook  crash or stop responding](../outlook-crashes/outlook-crash-issue.md)
 
@@ -63,6 +71,9 @@
 
 ## Send Emails
 ### [Changes in message store](../send-emails/smtp-submission-improvements.md)
+
+## Spam and Malware
+### [Set up safe senders and blocked senders](../spam-and-malware/smtp-submission-improvements.md)
 
 ## Shared Mailboxes
 ### [Email not saved in Sent Items](../shared-mailboxes/sent-mail-not-saved-shared-mailbox.md)

@@ -5,6 +5,10 @@
 
 ## Exchange Active Sync
 ### [Issue with Exchange ActiveSync](../exchange-active-sync/issue-with-exchange-activesync.md)
+### [Active Sync URL is in an Invalid format](../exchange-active-sync/active-sync-url-invalid-format.md)
+
+## Exchange Admin Center
+### [On-premises EAC link goes to product comparison](../exchange-admin-center/o365-link-eac-redirect-product-comparison.md)
 
 ## Exchange Management Console
 ### [Connecting to the remote server failed](../exchange-management-console/connecting-remote-server-failed.md)

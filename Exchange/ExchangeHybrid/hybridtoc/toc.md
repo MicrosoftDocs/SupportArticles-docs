@@ -22,6 +22,9 @@
 ## Mobile Clients
 ### [Meeting organizer receives multiple responses](../mobile-clients/meeting-organizer-multiple-responses.md)
 
+## Move Mailboxes
+### [Move mailbox operation fails](../move-mailboxes/hybrid-move-fails.md)
+
 ## Outlook Policy
 ### [Use policy to control PST](../outlook-policy/use-policy-control-pst.md)
 
