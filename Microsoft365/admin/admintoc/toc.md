@@ -47,7 +47,7 @@
 ## Authentication
 ### [Enable Office 365 ProPlus ULS logging](../authentication/how-to-enable-office-365-proplus-uls-logging.md)
 ### [Issue when sign in Office 365](../authentication/exchange-online-application-service-principal-disabled.md)
-### [Your account has been blocked](../authentication/account-blocked-error- when-sign-in.md)
+### [Your account has been blocked](../authentication/account-blocked-error-when-sign-in.md)
 ### [User name or password is incorrect](../authentication/connect-msolservice-office-365-azure.md)
 ### [Federated user is repeatedly prompted for credentials](../authentication/federated-user-repeatedly-prompted-for-credentials.md)
 ### [80048163 when federated user tries to sign in](../authentication/federated-user-fails-signing-in.md)
