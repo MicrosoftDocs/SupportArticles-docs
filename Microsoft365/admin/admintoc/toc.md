@@ -20,7 +20,7 @@
 ## Administration
 ### ["Add domain" option is missing](../administration/add-domain-option-missing.md)
 ### [Can't assign a federated domain](../administration/cannot-assign-federated-domain-to-user.md)
-### [Can't remove mailbox permissions](../administration/acannot-remove-mailbox-permission-office-365.md)
+### [Can't remove mailbox permissions](../administration/cannot-remove-mailbox-permission-office-365.md)
 ### [Domain errors in the Office 365 portal](../administration/domain-errors-in-office-365-portal.md)
 ### [Issue when remove a domain](../administration/error-remove-domain-from-office-365.md)
 ### [Domain has associated subdomains](../administration/fails-removing-domain.md)
