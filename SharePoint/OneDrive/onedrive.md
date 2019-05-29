@@ -10,11 +10,7 @@ ms.author: v-six
 
 # OneDrive for Business Troubleshooting
 
-This page lists some issues for OneDrive for Business.
-
-[401 error when you use Graph API to access OneDrive data with location-based policy enabled](./401-error-when-using-graph-api-to-access-data.md)
-
-[How to block OneDrive use from within Office 365 ProPlus and Office 2016 applications](./block-onedrive-use-from-office.md)
+Welcome to OneDrive for Business! Here's a collection of information on how to identify and fix errors that you may run into when you use this product.
 
 ## Still need help? 
 

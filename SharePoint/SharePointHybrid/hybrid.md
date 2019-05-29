@@ -8,15 +8,9 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# SharePoint Hybrid Troubleshooting
+# Hybrid Deployment Troubleshooting
 
-This page lists some issues for SharePoint Hybrid.
-
-## SharePoint Hybrid Administration
-
-[SharePoint Online content isn't displayed in a SharePoint on-premises search](./hybrid-admin/online-content-not-displayed-in-on-premises-search.md)
-
-[SharePoint on-premises content isn't displayed in SharePoint Online search results](./hybrid-admin/on-premises-content-not-displayed-in-online-search.md)
+Welcome to a Hybrid deployment of an on-premises and a cloud solution! Here’s a collection of information on how to identify and fix errors that you may run into when you use a combination of the two products.
 
 ## Still need help? 
 
