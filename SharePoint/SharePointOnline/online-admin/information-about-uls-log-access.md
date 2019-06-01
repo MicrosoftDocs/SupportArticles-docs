@@ -13,7 +13,7 @@ ms.author: v-six
 
 ## Introduction
 
-This article contains information about accessing Unified Logging System (ULS) logs for SharePoint Online.
+This article contains information about Unified Logging System (ULS) log access in SharePoint Online.
 
 ## More information
 

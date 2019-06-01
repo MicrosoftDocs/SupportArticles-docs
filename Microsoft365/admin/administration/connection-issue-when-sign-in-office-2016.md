@@ -49,11 +49,13 @@ To determine whether you're experiencing this kind of issue, follow these steps:
     0x?aa7????,  0x?aa8????, 0x?aa3????, 0x102, 0x80070102
     ```  
        
-1. Make sure that the time of these errors is related to the time when you actually had an Internet connection. This is not an intermittent network issue because of the loss of a Wi-Fi connection or a wake-up after hibernation and initialization of the network stack.    
+5. Make sure that the time of these errors is related to the time when you actually had an Internet connection. This is not an intermittent network issue because of the loss of a Wi-Fi connection or a wake-up after hibernation and initialization of the network stack.
+
 Then, to determine whether your issue is due to network environment or local firewall/antivirus software, follow these steps:  
- 
+  
 1. Open Edge (not Internet Explorer) and go to [https://login.microsoftonline.com](https://login.microsoftonline.com). Navigation should land on [https://www.office.com](https://www.office.com) or your company's default landing page. If this fails, the issue is in a network environment or local firewall/antivirus software. 
-2. Open Edge (not Internet Explorer) in InPrivate mode and go to [https://login.microsoftonline.com](https://login.microsoftonline.com). After you enter credentials, navigation should land on [https://www.office.com](https://www.office.com) or your company's default landing page. If this fails, the issue is in a network environment or local firewall/antivirus software.    
+  
+1. Open Edge (not Internet Explorer) in InPrivate mode and go to [https://login.microsoftonline.com](https://login.microsoftonline.com). After you enter credentials, navigation should land on [https://www.office.com](https://www.office.com) or your company's default landing page. If this fails, the issue is in a network environment or local firewall/antivirus software.    
  
 To resolve this issue, make sure that your local firewall, antivirus software, and Windows Defender don't block the following AAD WAM plug-in processes that engaged in token acquisition:
 
