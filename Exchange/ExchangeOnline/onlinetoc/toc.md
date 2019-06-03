@@ -24,6 +24,9 @@
 ### [Important notice for Office 365](../connectors/office-365-notice.md)
 ### [550 5.7.64 TenantAttribution](../connectors/relay-access-denied-smtp.md)
 
+## Delegates
+### [Error viewing delegates in Outlook](../delegates/no-delegate-permissions-after-migration.md) 
+
 ## Delete Calendar Items
 ### [Can't remove calendar item or email](../delete-calendar-items/cannot-remove-calendar-item-email.md)
 ### [Message store has reached its maximum size](../delete-calendar-items/delete-item-issue.md)
@@ -37,6 +40,9 @@
 ### [Access is denied with Windows PowerShell](../email-messages/access-denied-connect-powershell.md)
 ### [IMCEAEX non-delivery report](../email-messages/imceaex-non-delivery-send-email.md)
 ### [554 5.2.0 STOREDRV.Deliver.Exception](../email-messages/mapiexceptionnotfound-ndr-send-email.md)
+
+## Exchange Active Sync
+### [Troubleshoot sync issues for mobile devices](../exchange-active-sync/sync-issues-for-mobile-devices.md)
 
 ## Exchange Admin Center
 ### [Can't start the eDiscovery PST Export Tool](../exchange-admin-center/cannot-start-ediscovery-pst-export-tool.md)

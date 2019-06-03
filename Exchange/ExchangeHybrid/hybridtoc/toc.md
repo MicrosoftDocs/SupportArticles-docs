@@ -16,6 +16,9 @@
 ### [550 5.1.1 RESOLVER.ADR.ExRecipNotFound](../email-delivery/resolver-adr-exrecipnotfound-ndr.md)
 ### [Email sent to EXO deferred with ATTR35](../email-delivery/wrong-office-365-region-exo.md)
 
+## Federation
+### [Online attributes aren't written back to on-premises](../federation/attribute-not-written-to-azure-ad.md)
+
 ## Free/Busy
 ### [Free/Busy issues in a hybrid deployment](../free-busy/free-busy-issue-hybrid-deployment.md)
 
@@ -24,6 +27,7 @@
 
 ## Move Mailboxes
 ### [Move mailbox operation fails](../move-mailboxes/hybrid-move-fails.md)
+### [Mailbox Move to the cloud fail with error](../move-mailboxes/mailbox-move-to-cloud-fail-with-error.md)
 
 ## Outlook Policy
 ### [Use policy to control PST](../outlook-policy/use-policy-control-pst.md)
