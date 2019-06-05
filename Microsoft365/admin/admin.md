@@ -13,6 +13,8 @@ ms.author: v-six
 
 Welcome to Office 365 Administration! Here's a collection of information on how to identify and fix errors that you may run into when you use Office 365 Administration.
 
+## Office 365 Admin Online Support
+
 <ul class="panelContent cardsFTitle">
     <li>
         <a href="https://products.office.com/en-us/compare-all-microsoft-office-products?tab=2">
@@ -126,6 +128,61 @@ Welcome to Office 365 Administration! Here's a collection of information on how 
 
 ---
 
+<ul class="panelContent cardsF">
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="https://docs.microsoft.com/en-us/office/media/icons/small-business.svg" alt="Small business" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>For your small business</h3>
+                        <p><a href="/office365/smallbusiness/build-your-small-business/build-your-small-business" target="_blank">Build your small business with Office 365.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="https://docs.microsoft.com/en-us/office/media/icons/on-premises.svg" alt="Enterprise" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>For the Enterprise</h3>
+                        <p><a href="https://docs.microsoft.com/en-us/Office365/Enterprise/">Guidance for IT Professionals who are deploying, configuring, and managing Office 365 in enterprise organizations.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="https://docs.microsoft.com/en-us/office/media/icons/education-tutorial.svg" alt="Training" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>For everyone: Office training center</h3>
+                        <p><a href="https://go.microsoft.com/fwlink/?linkid=124250">Find training for all Office applications.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
+
+---
 ## Still need help? 
 
 Go to [Microsoft Community](https://answers.microsoft.com) or [Office help](https://support.office.com).

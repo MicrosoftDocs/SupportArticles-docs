@@ -9,7 +9,7 @@ layout: LandingPage
 ms.author: v-six
 ---
 
-# Office 365 Enterprise Troubleshooting
+# Office 365 Enterprise
 
 Microsoft Office 365 provides powerful online cloud services that enable collaboration, security and compliance, mobility, and intelligence and analytics. This page provides links to guidance for admins and IT Professionals who are deploying, configuring, and managing Office 365 services in enterprise organizations
 
@@ -140,40 +140,6 @@ Microsoft Office 365 provides powerful online cloud services that enable collabo
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="https://docs.microsoft.com/en-us/office/media/icons/chat.svg" alt="Chat image" data-linktype="external">
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Microsoft online support</h3>
-                        <p><a href="http://www.support.microsoft.com/">Find knowledge base (KB) articles about Office commercial.</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="https://docs.microsoft.com/en-us/office/media/icons/users-people.svg" alt="Users symbol" data-linktype="external">
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Microsoft Community</h3>
-                        <p><a href="https://answers.microsoft.com/en-us">Post questions, follow discussions, share your knowledge.</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
                             <img src="https://docs.microsoft.com/en-us/office/media/icons/users-people.svg" alt="Users symbol" data-linktype="external">
                         </div>
                     </div>
@@ -214,6 +180,40 @@ Microsoft Office 365 provides powerful online cloud services that enable collabo
                     <div class="cardText">
                         <h3>Microsoft 365</h3>
                         <p><a href="https://docs.microsoft.com/microsoft-365">Learn more about Microsoft 365.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="https://docs.microsoft.com/en-us/office/media/icons/users-people.svg" alt="Users symbol" data-linktype="external">
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Microsoft Community</h3>
+                        <p><a href="https://answers.microsoft.com/en-us">Post questions, follow discussions, share your knowledge.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="https://docs.microsoft.com/en-us/office/media/icons/chat.svg" alt="Chat image" data-linktype="external">
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Microsoft online support</h3>
+                        <p><a href="http://www.support.microsoft.com/">Find knowledge base (KB) articles about Office commercial.</a></p>
                     </div>
                 </div>
             </div>
