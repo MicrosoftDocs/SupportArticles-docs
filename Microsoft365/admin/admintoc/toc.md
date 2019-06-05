@@ -8,10 +8,8 @@
 ## Active Directory
 ### [AD FS endpoint connection issues](../active-directory/ad-fs-endpoint-connection-issue.md)
 ### [AD FS sign-in webpage not displayed](../active-directory/ad-fs-sign-in-page-not-display.md)
-### [Azure AD Connect installation issues](../active-directory/azure-ad-connect-installation-issue.md)
 ### [Certificate warning from AD FS](../active-directory/certificate-warning-from-ad-fs.md)
 ### [0x800488EE during connecting](../active-directory/connect-error-0x800488ee.md)
-### [Can't enable the "Device writeback" option](../active-directory/device-writeback-in-azure-ad-connect.md)
 ### [Email address contains an underscore character](../active-directory/email-address-contain-underscore.md)
 ### [Issue when using Azure AD Graph API applications](../active-directory/errors-using-azure-ad-custom-apps.md)
 ### [Issue with Directory Sync Configuration Wizard](../active-directory/exception-with-azure-ad-sync.md)
@@ -71,7 +69,6 @@
 ### [Prepare for TLS 1.2](../security/prepare-tls-1.2-in-office-365.md)
 ### [Issue with connect-MSOLService cmdlet](../security/access-denied-office-365-azure.md)
 ### [BOXServiceAccount is added](../security/boxserviceaccount-is-added-to-role.md)
-### [Remove duplicate mobile device management objects](../security/remove-duplicate-mobile-device-management.md)
 ### [Update or repair federated domain settings](../security/update-federated-domain-office-365.md)
 ### [Data Loss Protection (DLP) policy tips](../security/troubleshooting-data-loss-protection-policy-tips.md)
 
