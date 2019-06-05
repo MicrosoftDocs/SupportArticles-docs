@@ -17,8 +17,16 @@ In Skype for Business Online, the **LastActive** attribute occasionally shows ou
 
 ## Status
 
-Microsoft has researched this problem and will post more information in this article when the information becomes available. 
+This issue is known to occur in rare scenarios in Skype for Business Online.  Due to the highly available architecture of Skype for Business Online, in some rare occasions due to internal failovers that are transparent to users of the service, the **LastActive** state may not be replicated and some user accounts could end up in this state.  This issue impacts a very small percentage of Skype for Business Online users, and typically self-corrects when those users sign-out and sign back into the service.  
 
-## More Information
+## Resolution
+
+To resolve inaccurate **LastActive** data for a given user, have them sign-out and sign back into Skype for Business Online.
+
+## Workarounds
+
+You may want to consider removing the **LastActive** attribute from the aggregation state category in your Skype for Business Online tenant to avoid this issue entirely. See the following article for instructions about how to do that:
+
+[How to remove the LastActive attribute from the aggregation state category in Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, and Skype for Business Online](https://support.microsoft.com/help/2684128)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

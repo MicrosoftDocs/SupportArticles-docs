@@ -11,6 +11,11 @@ ms.author: v-six
 
 # A URL that resides under a SharePoint root site collection is broken after the root site collection is deleted
 
+> [!IMPORTANT]
+> Prior to deleting a root site collection, Admins are made aware of the consequences of deleting the root site collection with the following message.
+> 
+> **If you delete this site, all SharePoint sites in your organization will be inaccessible until you restore the site or create a new site at \<Root URL>.**
+
 ## Problem
 
 Consider the following scenarios in Office 365:
@@ -26,7 +31,7 @@ To resolve these issues, restore the root level site collection from the Recycle
 If the site collection is no longer present in the Recycle Bin, or if you prefer to create a new Site collection at the root site location, follow these steps:
 
 > [!NOTE]
-> The following steps must be performed by a SharePoint Online Global administrator.
+> The following steps must be performed by a SharePoint Online Global administrator and can only be completed from the Classic SharePoint Admin Center.
 
 1. Browse to the SharePoint admin center, for example https://<*domainname*>-admin.sharepoint.com, where <*domainname*> is the name of your domain, such as *https://contoso-admin.sharepoint.com*.
 
