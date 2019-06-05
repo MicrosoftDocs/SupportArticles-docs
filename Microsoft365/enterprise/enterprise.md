@@ -219,8 +219,21 @@ Microsoft Office 365 provides powerful online cloud services that enable collabo
             </div>
         </div>
     </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="https://docs.microsoft.com/en-us/office/media/icons/help.svg" alt="Question mark image" data-linktype="external">
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Office help</h3>
+                        <p><a href="https://support.office.com/">Office information, how-to, and tutorials.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
 </ul>
-
-## Still need help? 
-
-Go to [Microsoft Community](https://answers.microsoft.com) or [Office help](https://support.office.com).

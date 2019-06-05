@@ -185,4 +185,4 @@ Welcome to Office 365 Administration! Here's a collection of information on how 
 ---
 ## Still need help? 
 
-Go to [Microsoft Community](https://answers.microsoft.com) or [Office help](https://support.office.com).
+Go to [Microsoft Community](https://answers.microsoft.com) [Office 365 Tech Community](https://techcommunity.microsoft.com/t5/Office-365/ct-p/Office365) or [Office help](https://support.office.com).
