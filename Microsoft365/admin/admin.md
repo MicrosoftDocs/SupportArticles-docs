@@ -35,7 +35,7 @@ Welcome to Office 365 Administration! Here's a collection of information on how 
         </a>
     </li>
     <li>
-        <a href="setup/setup.md">
+        <a href="/office365/admin/setup/setup.md">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -53,7 +53,7 @@ Welcome to Office 365 Administration! Here's a collection of information on how 
         </a>
     </li>
     <li>
-        <a href="contact-support-for-business-products.md">
+        <a href="/office365/admin/contact-support-for-business-products.md">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -89,7 +89,7 @@ Welcome to Office 365 Administration! Here's a collection of information on how 
         </a>
     </li>
     <li>
-        <a href="security-and-compliance/set-up-multi-factor-authentication.md">
+        <a href="/office365/admin/security-and-compliance/set-up-multi-factor-authentication.md">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
