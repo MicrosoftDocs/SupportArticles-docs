@@ -34,7 +34,7 @@ Microsoft Office 365 provides powerful online cloud services that enable collabo
         </a>
     </li> 
     <li>
-        <a href="/office365/enterprise/migrate-data-to-office-365.md">
+        <a href="/office365/enterprise/migrate-data-to-office-365">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -72,7 +72,7 @@ Microsoft Office 365 provides powerful online cloud services that enable collabo
         </a>
     </li>
     <li>
-        <a href="/office365/enterprise/setup-overview-for-enterprises.md">
+        <a href="/office365/enterprise/setup-overview-for-enterprises">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -91,7 +91,7 @@ Microsoft Office 365 provides powerful online cloud services that enable collabo
         </a>
     </li>
     <li>
-        <a href="/office365/enterprise/hybrid-cloud-overview.md">
+        <a href="/office365/enterprise/hybrid-cloud-overview">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
