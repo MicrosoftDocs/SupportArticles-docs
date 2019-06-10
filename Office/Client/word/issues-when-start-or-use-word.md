@@ -45,7 +45,7 @@ To access a document but leave its final paragraph mark behind, follow these ste
  
 #### Method 2: Start Word by using the /a switch
 
-The /a switch is a troubleshooting tool that is used to determine where a problem may exist in Word. The /aswitch prevents add-ins and global templates from being loaded automatically. The /aswitch also locks the settings files to prevent it from being read or modified. To start Word by using the /aswitch, follow these steps:
+The /a switch is a troubleshooting tool that is used to determine where a problem may exist in Word. The /a switch prevents add-ins and global templates from being loaded automatically. The /a switch also locks the settings files to prevent it from being read or modified. To start Word by using the /a switch, follow these steps:
 
 1. Type **Run** in the **Search** box (in Windows 10, Windows 8.1, or Windows 8) or in the **Start Search** box on the **Start** menu (in earlier versions of Windows), and then press Enter.    
 2. In the **Run **dialog box, type **winword /a**, and then press Enter.    
