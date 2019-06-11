@@ -11,10 +11,7 @@ ms.author: mattphil
 
 # Reset Office 365 ProPlus activation state
 
-It's very common for users to switch devices or for an enterprise company to add or change Microsoft Office 365 tenants. Another scenario is when enterprise organizations roam licenses or credentials to simplify sign in. After an Office 365 user is activated, there are four locations that must be cleared to reset the activation or install to a clean state.  
-
-> [!NOTE]
-> If you move from a sovereign cloud to the global cloud (or vice versa) within the first seven days of the move, the federation provider detection may give inconsistent results and cause Office authentication and activation issues. To overcome this seven-day timeframe, consider to publish a public CNAME entry for "msoid" that matches the value for your new tenant.
+It's very common for users to switch devices or for an enterprise company to add or change Microsoft Office 365 tenants. Another scenario is when enterprise organizations roam licenses or credentials to simplify sign in. After an Office 365 user is activated, there are four locations that must be cleared to reset the activation or install to a clean state.
 
 ## Step 1: Remove Office 365 license for subscription based installs (not Shared Computer Licensing scenarios)
 
