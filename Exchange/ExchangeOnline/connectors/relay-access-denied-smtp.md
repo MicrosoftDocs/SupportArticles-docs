@@ -61,7 +61,7 @@ Get-SendConnector "outbound to office 365").SourceTransportServers | foreach {ge
 2. At this point, you can locate the matching inbound connector in Office 365 and verify that the certificate value matches. In this example, the **TlsSenderCertificateName **value must be set to *.contoso.com.
 
     > [!NOTE]
-    > To relay messages through Office 365, the domain of the sender or the domain of contoso.com must be verified in the Office 365 tenant. Otherwise, you may see an error similar to that described in "Symptoms"  but also an explicit ATT36 error. (For information about the ATT36 error, see [KB 3169958 Important notice for Office 365 email customers who have configured connectors]().)     
+    > To relay messages through Office 365, the domain of the sender or the domain of contoso.com must be verified in the Office 365 tenant. Otherwise, you may see an error similar to that described in "Symptoms"  but also an explicit ATT36 error. (For information about the ATT36 error, see [KB 3169958 Important notice for Office 365 email customers who have configured connectors](https://support.microsoft.com/help/3169958).)     
 ## More information
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](https://social.technet.microsoft.com/forums/exchange/home?category=exchange2010%2cexchangeserver).

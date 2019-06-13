@@ -21,7 +21,7 @@
 ### [Use Outlook policy to control credential prompts](../sign-in/outlook-policy-control-credential-prompts.md)
 
 ## Send/Receive Emails
-### [Can't send email with Metered Connection Warning](../send-receive-emails/hang-create-profile.md)
+### [Can't send email with Metered Connection Warning](../send-receive-emails/metered-connection-warning.md)
 
 ## Search Folders
 ### [Unexpected items in search folders](../search-folders/personmetadata-item-search-folders.md)

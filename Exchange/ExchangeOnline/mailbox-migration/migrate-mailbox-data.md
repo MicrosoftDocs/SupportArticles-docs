@@ -90,7 +90,7 @@ To create a staged migration batch, follow these steps:
     ![A screen shot of the Select the mailboxes page ](https://support.microsoft.com/Library/Images/2799294.jpg)    
 3. Enter the credentials of your on-premises admin account, and then click **Next**. The following screen shot shows an example:
 
-    ![A screen shot of the Enter the Windows user account credential page](https://support.microsoft.com/Library/Images/2799295.jpg)    
+    ![A screen shot of the Enter the Windows user account credential page](https://support.microsoft.com/Library/Images/2799295.jpg)
 4. If the Autodiscover service can't detect the connection settings for the on-premises Exchange server, you're prompted to enter the following information:  
    - The fully qualified domain name (FQDN) of the Exchange server that hosts the mailbox that you're migrating    
    - The FQDN of the proxy server for the Exchange server    

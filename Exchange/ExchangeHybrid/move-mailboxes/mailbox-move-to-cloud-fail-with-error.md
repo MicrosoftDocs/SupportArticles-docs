@@ -55,6 +55,6 @@ For more information about this issue, visit the following Office 365 Community 
 
 [https://go.microsoft.com/fwlink/?linkid=2003907](https://go.microsoft.com/fwlink/?linkid=2003907) 
  
-For more information about flood mitigation in the Forefront TMG, see [Overview of flood mitigation](http://technet.microsoft.com/library/cc995196.aspx). 
+For more information about flood mitigation in the Forefront TMG, see [Overview of flood mitigation](https://technet.microsoft.com/library/cc995196.aspx). 
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](https://social.technet.microsoft.com/forums/exchange/home?category=exchange2010%2cexchangeserver).
