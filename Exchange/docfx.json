@@ -87,10 +87,10 @@
       "breadcrumb_path": "/exchange/troubleshoot/breadcrumb/toc.json",
       "extendBreadcrumb": true,
       "feedback_system": "GitHub",
-      "feedback_github_repo": "MicrosoftDocs/OfficeDocs-Exchange",
-      "feedback_product_url": "https://github.com/MicrosoftDocs/OfficeDocs-Exchange/issues",
+      "feedback_github_repo": "MicrosoftDocs/OfficeDocs-Support",
+      "feedback_product_url": "https://github.com/MicrosoftDocs/OfficeDocs-Support/issues",
       "titleSuffix": "Troubleshooting | Exchange",
-      "searchScope": ["Exchange"] 
+      "searchScope": ["Exchange Support"] 
     },
     "fileMetadata": {},
     "template": [],
