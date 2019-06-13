@@ -17,4 +17,3 @@
 ## [Discover Office and Windows KMS hosts](../discover-remove-unauthorized-office-windows-kms-hosts.md)
 ## [Check the size of this month's Office ProPlus update](../how-big-was-this-months-office-proplus-update.md)
 ## [Office installation failures](../troubleshooting-office-installation-failures.md)
-## [Click-to-Run command repair in Office 2013](../office-click-to-run-command-lines-to-automate-a-repair.md)
