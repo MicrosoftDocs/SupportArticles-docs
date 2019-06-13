@@ -15,7 +15,7 @@ ms.author: v-six
 
 Microsoft Exchange ActiveSync lets devices synchronize with your Inbox, your Calendar, and other items that have dedicated Microsoft Exchange Server mailboxes. This article describes common issues that affect third-party devices that synchronize with Exchange by using Exchange ActiveSync. These devices include Android and iOS devices. 
 
-[Exchange ActiveSync Protocol Licensees](https://www.microsoft.com/legal/intellectualproperty/mtl/eas-licensing.aspx) provide the Exchange ActiveSync software that is used on the third-party devices. Microsoft does not write the Exchange ActiveSync code for the licensees’ devices or services. Microsoft licenses patents to Exchange ActiveSync licensees. These patents are Microsoft intellectual property. Additionally, Microsoft provides public access to the [Exchange ActiveSync protocol documentation](https://msdn.microsoft.com/library/cc425499%28v=exchg.80%29.aspx).
+[Exchange ActiveSync Protocol Licensees](https://www.microsoft.com/en-us/legal/intellectualproperty/mtl/technologylicensing.aspx) provide the Exchange ActiveSync software that is used on the third-party devices. Microsoft does not write the Exchange ActiveSync code for the licensees’ devices or services. Microsoft licenses patents to Exchange ActiveSync licensees. These patents are Microsoft intellectual property. Additionally, Microsoft provides public access to the [Exchange ActiveSync protocol documentation](https://msdn.microsoft.com/library/cc425499%28v=exchg.80%29.aspx).
 
 > [!NOTE]
 > A protocol is a standard for communication between computers.
