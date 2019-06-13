@@ -81,16 +81,25 @@ In this case, you probably have a synchronization issue. Determine whether the d
 
 You may also have a user validation error, if you already have a cloud user object on which the user@domain.mail.onmicrosoft.com email address is stamped. 
 
-To see this error, you have to connect to [Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/connect-to-office-365-powershell) and then run one of the following commands, depending whether you connect to MSOnline (MSOL) service or Azure AD for Windows PowerShell:   (
+To see this error, you have to connect to [Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/connect-to-office-365-powershell) and then run one of the following commands, depending whether you connect to MSOnline (MSOL) service or Azure AD for Windows PowerShell:
 
+```powershell
+(Get-MsolUser -UserPrincipalName <AffectedUserUPN>).Errors.ErrorDetail.ObjectErrors.ErrorRecord.ErrorDescription   
+(Get-AzureADUser -ObjectId <AffectedUserUPN>).Errors.ErrorDetail.ObjectErrors.ErrorRecord.ErrorDescription 
 ```
-Get-MsolUser -UserPrincipalName <AffectedUserUPN>).Errors.ErrorDetail.ObjectErrors.ErrorRecord.ErrorDescription   (Get-AzureADUser -ObjectId <AffectedUserUPN>).Errors.ErrorDetail.ObjectErrors.ErrorRecord.ErrorDescription 
 
 For more information, refer to [You see validation errors for users in the Office 365 portal or in the Azure Active Directory Module for Windows PowerShell](https://support.microsoft.com/help/2741233/you-see-validation-errors-for-users-in-the-office-365-portal-or-in-the).  
-Then, in Office 365 PowerShell, check whether the proxy addresses in Azure AD contain the email address user@domain.mail.onmicrosoft.com. To do this, run one of the following commands:   (Get-MsolUser -UserPrincipalName <AffectedUserUPN>).ProxyAddresses   (Get-AzureADUser -ObjectId <AffectedUserUPN>).ProxyAddresses 
+Then, in Office 365 PowerShell, check whether the proxy addresses in Azure AD contain the email address user@domain.mail.onmicrosoft.com. To do this, run one of the following commands:   
+
+```powershell
+(Get-MsolUser -UserPrincipalName <AffectedUserUPN>).ProxyAddresses   
+(Get-AzureADUser -ObjectId <AffectedUserUPN>).ProxyAddresses 
+```
 
 If you find the user@domain.mail.onmicrosoft.com smtp address for the user in the command result, but you still don't have this email address in Exchange Online PowerShell by using the **Get-MailUser** command, this means that the Directory Synchronization tool brought the address successfully into Azure AD, and you probably have a synchronization issue between Azure AD and Exchange Online. 
+
 Another cause may be if the domain.mail.onmicrosoft.com smtp domain  that is stamped on the on-premises user is incorrect. For example, the domain doesn't exist in your Office 365 tenant or Exchange Online accepted domains. For more information about accepted domains, see [View accepted domains](https://docs.microsoft.com/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains#view-accepted-domains).  
+
 If you cannot determine the cause of the issue, open a support case with Microsoft Support team to investigate further.  
 
 ## MORE INFORMATION 
