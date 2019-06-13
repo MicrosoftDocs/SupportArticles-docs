@@ -70,7 +70,10 @@
       {
         "files": [
           "**/*.png",
-          "**/*.jpg"
+          "**/*.jpg",
+          "**/*.gif",
+          "**/*.svg",
+          "**/*.pdf"
         ],
         "exclude": [
           "**/obj/**",
@@ -86,7 +89,11 @@
     "globalMetadata": {
       "breadcrumb_path": "/outlook/troubleshoot/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "None"
+      "feedback_system": "GitHub",
+      "feedback_github_repo": "MicrosoftDocs/OfficeDocs-Support",
+      "feedback_product_url": "https://outlook.uservoice.com/",
+      "titleSuffix": "Troubleshooting | Outlook",
+      "searchScope": ["Outlook Support"] 
     },
     "fileMetadata": {},
     "template": [],

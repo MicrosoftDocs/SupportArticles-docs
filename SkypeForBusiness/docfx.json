@@ -86,7 +86,11 @@
     "globalMetadata": {
       "breadcrumb_path": "/skypeforbusiness/troubleshoot/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "None"
+      "feedback_system": "GitHub",
+      "feedback_github_repo": "MicrosoftDocs/OfficeDocs-Support",
+      "feedback_product_url": "https://www.skypefeedback.com/",
+      "titleSuffix": "Troubleshooting | Skype for Business",
+      "searchScope": ["Skype for Business Support"] 
     },
     "fileMetadata": {},
     "template": [],
