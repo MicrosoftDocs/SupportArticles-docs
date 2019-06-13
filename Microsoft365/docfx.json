@@ -75,7 +75,8 @@
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/OfficeDocs-support",
       "feedback_product_url": "https://office365.uservoice.com/",
-      "searchScope": "Office 365 Support"
+      "searchScope": "Office 365 Support",
+      "titleSuffix": "Troubleshooting | Office 365"
     },
     "fileMetadata": {},
     "template": [],
