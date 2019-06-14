@@ -102,7 +102,7 @@ To repair authentication-related issues that are associated with provider-hosted
 
    $targetWeb = Get-SPWeb '{2}'
 
-   $Scope = 'Site'
+   $Scope = 'Taxonomy'
 
    $Right = 'FullControl'
 
