@@ -41,6 +41,8 @@
 ### [Can't Verify Subscription in Office Mobile](../administration/subscription-issue-in-office-mobile.md)
 ### [Connection issues when sign in Office 2016](../administration/connection-issue-when-sign-in-office-2016.md)
 ### [Switch from Semi-Annual to Monthly](../administration/switch-channel-for-office-365.md)
+### [This feature has been disabled by your administrator](../administration/office-feature-disabled.md)
+### ["Invalid provider specified" with using Office 2016](../administration/invalid-provider-specified-error.md)
 
 ## Authentication
 ### [Enable Office 365 ProPlus ULS logging](../authentication/how-to-enable-office-365-proplus-uls-logging.md)

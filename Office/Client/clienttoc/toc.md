@@ -60,6 +60,8 @@
 ### [Spell Checker not recognizes misspelled words in Word 2010](../word/not-recognize-mispespelled-words-in-word.md)
 ### [Background is not printed in Word](../word/background-is-not-printed-in-word.md)
 ### ["relationship rID8 was not found" in Word](../word/image-part-relationship-rld8-not-found-error-microsoft-word.md)
+### [Mail merge issue](../word/mail-merge-error-in-word.md)
+
 
 ## [Outlook policy control credential prompts](../outlook-policy-control-credential-prompts.md)
 ## [Enable transport logging in Outlook](../enable-transport-logging-in-outlook.md)
