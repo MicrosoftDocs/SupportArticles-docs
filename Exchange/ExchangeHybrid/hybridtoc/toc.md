@@ -7,7 +7,7 @@
 ### [Can't dismiss calendar reminders](../calendar-reminders/cannot-dismiss-outlook-calendar-reminders.md)
 
 ## Calendar Sharing
-### [Policy not allow granting permissions](../calendar-sharing/policy-permissions-issue-with-sharing.md)
+### [Policy not allow granting permissions](../calendar-sharing/policy-permissions-issue.md)
 
 ## Distribution Groups
 ### [Owners can't manage distribution groups](../distribution-groups/cannot-manage-dg.md)
