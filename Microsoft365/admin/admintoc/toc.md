@@ -14,6 +14,7 @@
 ### [Issue when using Azure AD Graph API applications](../active-directory/errors-using-azure-ad-custom-apps.md)
 ### [Issue with Directory Sync Configuration Wizard](../active-directory/exception-with-azure-ad-sync.md)
 ### [Grant the Everyone claim to external users](../active-directory/grant-everyone-claim-to-external-users.md)
+### [Set up single sign-on](../active-directory/set-up-single-sign-on.md)
 
 ## Administration
 ### ["Add domain" option is missing](../administration/add-domain-option-missing.md)
@@ -41,6 +42,8 @@
 ### [Can't Verify Subscription in Office Mobile](../administration/subscription-issue-in-office-mobile.md)
 ### [Connection issues when sign in Office 2016](../administration/connection-issue-when-sign-in-office-2016.md)
 ### [Switch from Semi-Annual to Monthly](../administration/switch-channel-for-office-365.md)
+### [This feature has been disabled by your administrator](../administration/office-feature-disabled.md)
+### ["Invalid provider specified" with using Office 2016](../administration/invalid-provider-specified-error.md)
 
 ## Authentication
 ### [Enable Office 365 ProPlus ULS logging](../authentication/how-to-enable-office-365-proplus-uls-logging.md)
@@ -52,6 +55,7 @@
 ### [80041317 or 80043431 during sign in](../authentication/office-365-sign-in-error-80041317-80043431.md)
 ### [Sign-in issues with Office modern authentication](../authentication/sign-in-issue-with-modern-auth.md)
 ### [Can't sign in to an Office 2016 for Mac app](../authentication/sign-in-to-office-2016-for-mac-fail.md)
+### [Issue with reset admin password](../authentication/issue-with-reset-admin-password.md)
 
 ## Licensing
 ### [License issue when retain Online mailbox](../licensing/license-issue-when-retain-online-mailbox.md)
