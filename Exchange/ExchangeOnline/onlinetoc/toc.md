@@ -40,7 +40,6 @@
 ## Distribution Groups
 ### [You don't have sufficient permissions](../distribution-groups/no-sufficient-permissions-moving-dg.md)
 ### [Prevent users from creating and managing DG](../distribution-groups/prevent-users-create-manage-dg.md)
-### [Can't manage distribution group](../distribution-groups/office-365-users-cannot-manage-online-dg.md)
 
 ## Email Messages
 ### [Access is denied with Windows PowerShell](../email-messages/access-denied-connect-powershell.md)
