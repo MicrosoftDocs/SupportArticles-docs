@@ -4,7 +4,7 @@ description: Describes a scenario in Exchange Online in Office 365 in which a re
 author: simonxjx
 manager: willchen
 audience: ITPro
-ms.service: office 365
+ms.prod: office 365
 ms.topic: article
 ms.author: v-six
 ---

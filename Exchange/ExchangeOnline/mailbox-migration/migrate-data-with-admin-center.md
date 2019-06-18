@@ -164,8 +164,7 @@ After admins create the migration batch, they can create additional migration ba
 
 Admins can also change the associated endpoint of a migration batch by using controls on the **Migration** tab. If more than one batch is started, admins can select the migration batch that has the highest priority.
 
-![A screen shot of the Associated endpoint page ](https://support.microso
-ft.com/Library/Images/2799307.jpg) 
+![A screen shot of the Associated endpoint page ](https://support.microsoft.com/Library/Images/2799307.jpg) 
 
 ### Migration endpoints
  
