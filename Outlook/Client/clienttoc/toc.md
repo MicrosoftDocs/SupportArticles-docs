@@ -18,13 +18,13 @@
 ## Sign-in
 ### [Continually password prompts](../sign-in/continually-prompts-password-office-365.md)
 ### [Additional RSS feeds appear](../sign-in/additional-rss-feeds-appear.md)
-### [Use Outlook policy to control credential prompts](../sign-in/outlook-policy-control-credential-prompts.md)
+### [Use policy to control credential prompts](../sign-in/policy-control-credential-prompts.md)
 
 ## Send/Receive Emails
 ### [Can't send email with Metered Connection Warning](../send-receive-emails/metered-connection-warning.md)
 
 ## Search Folders
-### [Unexpected items in search folders](../search-folders/personmetadata-item-search-folders.md)
+### [Unexpected mail items](../search-folders/personmetadata-items.md)
 
 ## Transport Logging
 ### [Enable transport logging](../transport-logging/enable-transport-logging.md)

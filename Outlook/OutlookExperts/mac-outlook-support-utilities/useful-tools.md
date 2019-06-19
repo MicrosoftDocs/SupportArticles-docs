@@ -17,7 +17,7 @@ This article describes some useful tools for Microsoft Outlook for Mac.
 
 ## More information
 
-### OutlookSearchRepair
+### Outlook Search Repair
 
 > [!IMPORTANT]
 > This tool doesn’t work on macOS 10.14 and later. See the Note section below for more information.

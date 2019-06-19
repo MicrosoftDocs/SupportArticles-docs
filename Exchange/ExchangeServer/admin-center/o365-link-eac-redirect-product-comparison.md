@@ -13,7 +13,7 @@ ms.author: v-six
 
 ## Problem
 
-When a user clicks the Office 365 link in the Exchange admin center (EAC) in Exchange Server 2016 or Exchange Server 2013, the user isn't routed to the Exchange admin center in Office 365. Instead, they are redirected to [https://go.microsoft.com/fwlink/p/?LinkId=258351](http://go.microsoft.com/fwlink/p/?linkid=258351), which is a page that compares plans and pricing for Office 365 services.
+When a user clicks the Office 365 link in the Exchange admin center (EAC) in Exchange Server 2016 or Exchange Server 2013, the user isn't routed to the Exchange admin center in Office 365. Instead, they are redirected to [https://go.microsoft.com/fwlink/p/?LinkId=258351](https://go.microsoft.com/fwlink/p/?linkid=258351), which is a page that compares plans and pricing for Office 365 services.
 
 ## Cause
 
