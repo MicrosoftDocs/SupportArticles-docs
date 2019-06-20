@@ -10,4 +10,11 @@ ms.author: v-six
 
 # Skype for Business Experts Troubleshooting
 
-Welcome to Skype for Business Experts! Here's a collection of information on how to identify and fix errors that you may run into when you use Skype for Business.
+Welcome to this collection of content that has contributions from various Skype for Business experts in the community.
+
+The experts will be happy to answer any question about their content. Bring them on!
+If you like their contribution, feel free to write an appreciative note to them for sharing their expertise.
+
+## Still need help? 
+
+Go to [Microsoft Community](https://answers.microsoft.com) or [Skype for Business help center](https://support.office.com/skype-for-business).
