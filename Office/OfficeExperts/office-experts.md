@@ -12,7 +12,8 @@ ms.author: v-six
 
 Welcome to this collection of content that has contributions from various Office experts in the community.
 
-The experts will be happy to answer any question about their content. Bring them on!
+The experts will be happy to answer any questions about their content. Bring them on!
+
 If you like their contribution, feel free to write an appreciative note to them for sharing their expertise.
 
 ## Still need help? 
