@@ -10,4 +10,11 @@ ms.author: v-six
 
 # Outlook Experts Troubleshooting
 
-Welcome to Outlook Experts! Here's a collection of information on how to identify and fix errors that you may run into when you use Outlook.
+Welcome to this collection of content that has contributions from various Outlook experts in the community. 
+
+The experts will be happy to answer any question about their content. Bring them on!
+If you like their contribution, feel free to write an appreciative note to them for sharing their expertise.
+
+## Still need help? 
+
+Go to [Microsoft Community](https://answers.microsoft.com) or [Outlook help center](https://support.office.com/outlook).

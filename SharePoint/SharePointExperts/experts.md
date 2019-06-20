@@ -10,7 +10,10 @@ ms.author: v-six
 
 # SharePoint Experts Troubleshooting
 
-Welcome to SharePoint Experts! Here's a collection of information on how to identify and fix errors that you may run into for SharePoint Experts.
+Welcome to this collection of content that has contributions from various SharePoint experts in the community. 
+
+The experts will be happy to answer any question about their content. Bring them on!
+If you like their contribution, feel free to write an appreciative note to them for sharing their expertise.
 
 ## Still need help? 
 
