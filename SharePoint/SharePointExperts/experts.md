@@ -8,7 +8,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# SharePoint Experts Troubleshooting
+# SharePoint Experts
 
 Welcome to this collection of content that has contributions from various SharePoint experts in the community. 
 

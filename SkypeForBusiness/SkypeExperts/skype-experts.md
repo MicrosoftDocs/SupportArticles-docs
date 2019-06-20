@@ -8,7 +8,7 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# Skype for Business Experts Troubleshooting
+# Skype for Business Experts
 
 Welcome to this collection of content that has contributions from various Skype for Business experts in the community.
 
