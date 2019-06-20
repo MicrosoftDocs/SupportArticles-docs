@@ -8,6 +8,6 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# Outlook Troubleshooting
+# Outlook for Windows Troubleshooting
 
 Welcome to Outlook! Here's a collection of information on how to identify and fix errors that you may run into when you use this product.
