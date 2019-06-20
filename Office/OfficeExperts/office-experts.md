@@ -10,8 +10,11 @@ ms.author: v-six
 
 # Office Experts Troubleshooting
 
-Welcome to Office Experts! Here's a collection of information on how to identify and fix errors that you may run into for Office Experts.
+Welcome to this collection of content that has contributions from various Office experts in the community.
+
+The experts will be happy to answer any question about their content. Bring them on!
+If you like their contribution, feel free to write an appreciative note to them for sharing their expertise.
 
 ## Still need help? 
 
-Go to [Microsoft Community](https://answers.microsoft.com) or [Office help](https://support.office.com).
+Go to [Microsoft Community](https://answers.microsoft.com) or [Office help center](https://support.office.com).
