@@ -1,4 +1,4 @@
-# [Outlook Troubleshooting](../client.md)
+# [Outlook for Windows Troubleshooting](../client.md)
 
 ## Archive Folders
 ### [Archive folder automatically added](../archive-folders/archive-folder-automatically-added.md)
