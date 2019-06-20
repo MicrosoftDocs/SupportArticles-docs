@@ -40,7 +40,7 @@ Exchange Online admins must be assigned to the following management roles to set
 1. At the Windows PowerShell prompt, type the following command, and then press Enter:
 
    ```powershell
-   Set-MailboxJunkEmailConfiguration -Identity <user@contoso.com> -BlockedSendersAndDomains "domainA.com",  "user@domainB.com","..." -TrustSendersAndDomains "domainC.com","user@domainD.com","..."
+   Set-MailboxJunkEmailConfiguration -Identity <user@contoso.com> -BlockedSendersAndDomains "domainA.com",  "user@domainB.com","..." -TrustedSendersAndDomains "domainC.com","user@domainD.com","..."
    ```
    > [!NOTE]
    > The *user@contoso.com* placeholder represents the user whose settings are being set up, and the "domainC.com","user@domainD.com","..." placeholder represents a list of domains or individual email addresses that must be added to the list. For example, the following command will block all email messages from "spamA.com" and accept all email messages from "john@spamB.com" for user@contoso.com:
