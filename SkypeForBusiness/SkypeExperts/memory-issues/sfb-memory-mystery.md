@@ -48,7 +48,7 @@ Next, you see a graphic tha's a multi-colored representation of the current memo
 
 Figure 4: Beginning VMMap for recently started Lync.exe
 
-There's a lot of information here, and describing it all would fill up one or more blog posts of its own. If you're really interested, there are several really great books and online articles that can help explain it. (Personally, I recommend "Advanced Windows" by Jeffrey Richter – currently out of print but still excellent in explaining how memory works. You can find used copies of it on Amazon or, possibly, through your favorite book store.)
+There's a lot of information here, and describing it all would fill up one or more blog posts of its own. If you're really interested, there are several really great books and online articles that can help explain it. (Personally, I recommend "Advanced Windows" by Jeffrey Richter – currently out of print but still excellent in explaining how memory works. You can find used copies of it at your favorite book store.)
 
 As you can see, the memory shown in **Task Manager** doesn't align with any category in **VMMap**. **Task Manager** is a more generalized representation; it's accurate, it just doesn't count everything. **VMMap** is much more comprehensive.
 
