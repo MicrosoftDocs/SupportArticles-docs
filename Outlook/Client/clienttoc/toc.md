@@ -1,8 +1,5 @@
 # [Outlook for Windows Troubleshooting](../client.md)
 
-## Archive Folders
-### [Archive folder automatically added](../archive-folders/archive-folder-automatically-added.md)
-
 ## Email Messages
 ### [Create recurring reminder email](../email-messages/create-recurring-email.md)
 
@@ -28,6 +25,3 @@
 
 ## Transport Logging
 ### [Enable transport logging](../transport-logging/enable-transport-logging.md)
-
-## User Profiles
-### [Hangs with creating profiles](../user-profiles/hang-create-profile.md)

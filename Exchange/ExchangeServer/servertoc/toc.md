@@ -1,7 +1,6 @@
 # [Exchange Server Troubleshooting](../exchange-server.md)
 
 ## Active Sync
-### [Active Sync issue](../active-sync/activesync-issue.md)
 ### [Active Sync URL is in an invalid format](../active-sync/url-invalid-format.md)
 
 ## Admin Center
@@ -16,7 +15,7 @@
 ### [451 4.4.0 DNS query failed](../mailbox-configuration/dns-query-failed.md)
 ### [554 5.4.14 Hop count exceeded](../mailbox-configuration/hop-count-exceeded-possible-mail-loop.md)
 ### [Only subset of items are synchronized](../mailbox-configuration/only-subset-items-synchronized.md)
-### [Outlook logon fails](../mailbox-configuration/outlook-logon-fails.md)
+
 ## HTTP Proxy
 ### [Issue with proxying HTTP requests](../http-proxy/400-bad-request.md)
 
