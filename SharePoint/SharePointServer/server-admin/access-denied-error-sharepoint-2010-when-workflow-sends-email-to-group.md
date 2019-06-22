@@ -1,9 +1,8 @@
 ---
 title: “Access Denied” error when a SharePoint 2010 workflow sends an email to a group
 ms.author: v-todmc
-author: v-todmc
+author: simonxjx
 manager: joselr
-ms.date: 2/21/2019
 ms.audience: Admin
 ms.topic: article
 ms.service: sharepoint-2010
