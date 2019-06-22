@@ -6,14 +6,8 @@
 ## Archive mailboxes
 ### [Messages aren't moved to archive mailboxes](../archive-mailboxes/message-not-moved-to-archive.md)
 
-## Auto-Mapping
-### [Auto-mapping doesn't work](../auto-mapping/auto-mapping-not-work.md)
-
 ## Active Sync
 ### [Issues for mobile devices](../active-sync/issues-for-mobile-devices.md)
-
-## Admin Center
-### [Can't start the eDiscovery PST Export Tool](../admin-center/cannot-start-ediscovery-pst-export-tool.md)
 
 ## Configure Contacts
 ### [Update contact information](../configure-contacts/update-contact-information.md)
@@ -56,7 +50,6 @@
 
 ## Move Mailboxes
 ### [Can't see free/busy information](../move-mailboxes/cannot-see-free-busy-information.md)
-### [Your mailbox has been temporarily moved](../move-mailboxes/open-outlook-issue.md)
 
 ## Outlook Connectivity
 ### [Troubleshooting resources](../outlook-connectivity/office-365-troubleshooting-resources.md)
