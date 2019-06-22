@@ -13,17 +13,10 @@
 ### [Owners can't manage distribution groups](../distribution-groups/cannot-manage-dg.md)
 
 ## Email Delivery
-### [550 5.1.1 RESOLVER.ADR.ExRecipNotFound](../email-delivery/resolver-adr-exrecipnotfound-ndr.md)
 ### [Email sent to EXO deferred with ATTR35](../email-delivery/wrong-office-365-region-exo.md)
 
 ## Federation
 ### [Online attributes aren't written back to on-premises](../federation/attribute-not-written-to-azure-ad.md)
-
-## Free/Busy
-### [Free/Busy issues in a hybrid deployment](../free-busy/hybrid-deployment-issue.md)
-
-## Mobile Clients
-### [Meeting organizer receives multiple responses](../mobile-clients/meeting-organizer-multiple-responses.md)
 
 ## Move Mailboxes
 ### [Move mailbox operation fails](../move-mailboxes/hybrid-move-fails.md)
