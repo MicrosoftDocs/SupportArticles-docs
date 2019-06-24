@@ -63,13 +63,6 @@
 ### [Mail merge issue](../word/mail-merge-error.md)
 ### [Recover lost documents](../word/recover-lost-document.md)
 
-## [Outlook policy control credential prompts](../outlook-policy-control-credential-prompts.md)
-## [Enable transport logging in Outlook](../enable-transport-logging-in-outlook.md)
-## [Renew Kerberos ticket in Outlook 2016 for Mac](../renew-kerberos-ticket-in-outlook-2016-for-mac.md)
-## [Additional RSS feeds appear in Outlook](../additional-rss-feeds-appear-in-outlook.md)
-## [Connectivity troubleshooting resources](../connectivity-troubleshooting-resources-for-office-365.md)
-## [Office 365 can't manage distribution group in Exchange Online](../office-365-users-cannot-manage-dg-in-online.md)
-
 ## Office Developer
 ### [Select ranges or cells with Visual Basic](../office-developer/select-cells-rangs-with-visual-basic.md)
 ### [Use VB to count occurrences in Excel](../office-developer/use-vb-count-occurrences-in-excel.md)
