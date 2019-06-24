@@ -49,6 +49,9 @@ If you click the **More **link, additional items that meet your search criteria 
 > [!NOTE]
 > This behavior can also occur in the RSS Feeds folder in your Exchange mailbox.  
 
+> [!NOTE]
+> Only a subset of items may also be synchronized in groups in Outlook 2016 or Outlook for Office 365. 
+
 ## Cause
 
 This behavior occurs because the Cached Exchange mode **Mail to keep offline** setting is configured to a value other than All. For example, the following screen shot shows a profile that's configured to use Cached Exchange Mode and the **Mail to keep offline**setting is set to a default value of **12 months**.
@@ -71,7 +74,10 @@ If your **Mail to keep offline** setting is set to 12 months and you have email 
 - Journal    
 - Notes    
 - Outbox    
-- Shared or delegated (only for Outlook 2013)    
+- Shared or delegated (only for Outlook 2013) 
+
+> [!NOTE]>
+> Groups folders only synchronize a maximum of 1 year. **Mail to keep offline** settings that are lower than 1 year are honored.
   
 ## More Information
 
@@ -153,3 +159,4 @@ The Group Policy template files for Outlook 2016, Outlook 2019 and Outlook for 
 
     [3115009](https://support.microsoft.com/help/3115009) Update lets administrators set additional default Sync Slider windows for new Exchange accounts in Outlook 2016.    
 - Administrators who change the existing GPO values should be aware of the potential to impact network traffic when raising the value of the** SyncWindowSetting**. When GPO changes **SyncWindowSetting** to**any** higher value, Outlook will do a full OST resynchronization when the new value applies. For a single client, this is generally not problematic. Applying a higher value to hundreds or more clients at the same time could adversely affect available network bandwidth. Decreasing the value will have no such impact because Outlook will do a local-only deletion of excess data that's cached in the OST files of all clients to receive the lower **SyncWindowSetting** value.
+- Since Outlook only synchronizes a maximum of 1 year for groups, you are unable to search for older messages. To work around this Outlook limitation, use Outlook on the Web to view and search older messages in groups.
