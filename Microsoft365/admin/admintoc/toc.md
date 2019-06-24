@@ -75,10 +75,3 @@
 ### [BOXServiceAccount is added](../security/boxserviceaccount-is-added-to-role.md)
 ### [Update or repair federated domain settings](../security/update-federated-domain-office-365.md)
 ### [Data Loss Protection (DLP) policy tips](../security/troubleshooting-data-loss-protection-policy-tips.md)
-
-## [Active Sync URL was in an Invalid format](../active-sync-url-invalid-format.md)
-## [Move mailbox operation fails](../hybrid-move-fails.md)
-## [Messages aren't moved to archive mailboxes](../message-not-moved-to-archive.md)
-## [On-premises EAC goes to product comparison](../o365-link-eac-redirect-product-comparison.md)
-## [Enable or disable POP3, IMAP, MAPI, OWA or ActiveSync](../pop3-imap-owa-activesync-office-365.md)
-## [Set up safe senders and blocked senders](../set-up-safe-blocked-senders.md)
