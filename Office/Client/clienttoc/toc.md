@@ -41,8 +41,8 @@
 
 ## PowerPoint
 ### [Office opens blank from SharePoint](../powerpoint/office-opens-blank-from-sharepoint.md)
-### [Change the export resolution of PowerPoint slide](../powerpoint/change-export-resolution-of-powerpoint-slide.md)
-### [Troubleshoot a damaged presentation](../powerpoint/damaged-presentation-in-powerpoint.md)
+### [Change the export resolution of PowerPoint slide](../powerpoint/change-export-slide-resolution.md)
+### [Troubleshoot a damaged presentation](../powerpoint/damaged-presentation.md)
 
 ## Project
 ### [Issue when change user's status to inactive in Project](../project/eventing-service-error-when-changing-user-status-to-inactive-microsoft-project.md)
