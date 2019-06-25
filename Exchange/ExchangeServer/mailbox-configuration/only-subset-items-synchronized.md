@@ -76,7 +76,7 @@ If your **Mail to keep offline** setting is set to 12 months and you have email 
 - Outbox    
 - Shared or delegated (only for Outlook 2013) 
 
-> [!NOTE]>
+> [!NOTE]
 > Groups folders only synchronize a maximum of 1 year. **Mail to keep offline** settings that are lower than 1 year are honored.
   
 ## More Information
