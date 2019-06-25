@@ -12,7 +12,7 @@
 ### [Use custom fonts with Online Server](../administration/use-custom-fonts-with-office-online-server.md)
 ### [Issue with using guest links to Excel Online workbook](../administration/workbook-contains-external-data-connections.md)
 
-## installation
+## Installation
 ### [Deploy Online Server to security hardened drives](../installation/deploy-office-online-server-to-security-hardened-drive.md)
 
 ## [HTML login page not render correctly in Office](../custom-html-login-page-not-render-correctly.md)
