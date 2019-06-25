@@ -1,5 +1,5 @@
 ---
-title: SharePoint app “Import Spreadsheet” fails with error “An unexpected error has occurred. (-2147352567)”
+title: SharePoint app "Import Spreadsheet" fails with error "An unexpected error has occurred. (-2147352567)"
 description: Describes what to do if you receive an unexpected error (-2147352567) when using the Import Spreadsheet app in SharePoint.
 author: todmccoy
 ms.author: v-todmc
@@ -11,7 +11,7 @@ ms.prod: office-perpetual-itpro
 localization_priority: Normal 
 ---
 
-# SharePoint app “Import Spreadsheet” fails with error “An unexpected error has occurred. (-2147352567)”
+# SharePoint app "Import Spreadsheet" fails with error "An unexpected error has occurred. (-2147352567)"
 
 ## Symptoms
 When clicking the Import button using the SharePoint app "Import Spreadsheet" in SharePoint, you receive the following error:
@@ -36,14 +36,16 @@ Delete or modify the following registry value:
 
 2. Type regedit.exe, and then press Enter.
 3. Locate and then click the following subkey:
-```
- [HKEY_CURRENT_USER\Software\Microsoft\Office\Common\Security]
+
+   ```asciidoc   
+   [HKEY_CURRENT_USER\Software\Microsoft\Office\Common\Security]
    ```
 
 4. Click **Edit**, and then click **New String Value**. Enter the following text as the value name, and then press Enter:
-```
-"automationsecurity"=dword:00000003
-```
+
+   ```asciidoc
+   "automationsecurity"=dword:00000003
+   ```
 
 5. On the File menu, click **Exit** to exit Registry Editor.
 
