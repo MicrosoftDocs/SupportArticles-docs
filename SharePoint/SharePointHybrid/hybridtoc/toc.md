@@ -1,7 +1,7 @@
 # [Hybrid Deployment Troubleshooting](../hybrid.md)
 
-## SharePoint Hybrid Administration
+## Search
 
-### [SharePoint Online content isn't displayed in a SharePoint on-premises search](../hybrid-admin/online-content-not-displayed-in-on-premises-search.md)
+### [Online content isn't displayed in on-premises search](../search/online-content-not-displayed-in-on-premises-search.md)
 
-### [SharePoint on-premises content isn't displayed in SharePoint Online search results](../hybrid-admin/on-premises-content-not-displayed-in-online-search.md)
+### [On-premises content isn't displayed in online search results](../search/on-premises-content-not-displayed-in-online-search.md)
