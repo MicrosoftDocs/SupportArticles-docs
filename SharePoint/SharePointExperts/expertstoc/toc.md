@@ -1,28 +1,42 @@
 ﻿# [SharePoint Experts](../experts.md)
- 
-## SharePoint Experts Administration
-### [Antivirus and intermittent issues when you view Office documents by using Office Online Server](../experts-admin/antivirus-and-intermittent-issues.md)
-### ["Call to Excel Services failed" error when you run a scheduled data refresh by using PowerPivot](../experts-admin/call-to-excel-services-failed.md)
-### ["We cannot locate a server to load the workbook Data Model" error in PowerPivot](../experts-admin/cannot-locate-a-server-to-load-workbook-data-model-in-powerpivot.md)
-### ["Edit Document requires a Microsoft SharePoint Foundation compatible application and web browser" when you open documents from SharePoint](../experts-admin/edit-document-requires-compatible-application-and-web-browser.md)
-### [Email notifications aren't sent for scheduled data refresh failures in PowerPivot](../experts-admin/email-notifications-sent-for-scheduled-data-refresh-failures-in-power-pivot.md)
-### ["An error occurred when loading the Sandbox cube" error in PowerPivot](../experts-admin/error-occurred-when-loading-sandbox-cube-in-powerpivot.md)
-### [Excel workbooks in XML format don't open from SharePoint](../experts-admin/excel-workbooks-in-xml-format-not-open.md)
-### [A SharePoint file is downloaded instead of opening the Office application with a direct connection to it](../experts-admin/files-downloaded-instead-of-opening-office-application.md)
-### [SharePoint files open as read-only and can't check in or out](../experts-admin/files-open-as-read-only-and-cannot-check-in-or-out.md)
-### [Some Office files open in read-only mode in SharePoint Server 2013](../experts-admin/files-open-in-read-only-mode.md)
-### [Large Publisher files open in read-only mode](../experts-admin/large-publisher-files-open-in-read-only-mode.md)
-### [Microsoft Forms shows "Sorry, something went wrong"](../experts-admin/microsoft-forms-shows-sorry-something-went-wrong.md)
-### ["You'll need a new app to open this ms-visio" when you open Visio files](../experts-admin/need-a-new-app-to-open-this-ms-visio.md)
-### [Orphaned record for PowerPivot service application database](../experts-admin/orphaned-record-for-powerpivot-service-application-database.md)
-### [PowerPivot Configuration Tool shows "The user is not a farm administrator" error](../experts-admin/powerpivot-configuration-tool-shows-user-not-farm-administrator.md)
-### [PowerPivot Performance Counter errors](../experts-admin/powerpivot-performance-counter-errors.md)
-### [PowerPivot scheduled data refresh fails with the error "The operation has timed out"](../experts-admin/powerpivot-scheduled-data-refresh-fails.md)
-### ["SetAuthContext need to be run as sysadmin" error in PowerPivot](../experts-admin/powerpivot-shows-setauthcontext-need-to-be-run-as-sysadmin.md)
-### ["Retrieving the COM class factory for component failed 800703fa" in Excel Services and PowerPivot](../experts-admin/retrieving-com-class-factory-for-component-failed.md)
-### [Schedule data refresh to a data source with non-Windows Authentication](../experts-admin/schedule-data-refresh-to-a-source-with-non-windows-authentication.md)
-### [SharePoint Designer 2013 login Issues in a cloud scenario](../experts-admin/login-issues-in-a-cloud-scenario.md)
-### ["We don't know what happened, but something went wrong." error in Excel Web Access Web Parts](../experts-admin/something-went-wrong-error-in-excel-web-parts.md)
-### ["A schedule cannot be enabled for a workbook" when you try to schedule a data refresh by using PowerPivot](../experts-admin/sorry-something-went-wrong-when-try-to-schedule-a-data-refresh.md)
-### [PowerPivot Gallery Snapshots Fail for SSL Host Header Sites](../experts-admin/troubleshooting-powerpivot-gallery-snapshot.md)
-### ["The virtual path maps to another application, which is not allowed." error when you run a scheduled data refresh](../experts-admin/virtual-path-maps-to-another-application-not-allowed.md)
+
+## SharePoint Administration
+
+### [Antivirus and intermittent issues with Online Server](../sharepoint-administration/antivirus-and-intermittent-issues.md)
+### ["Call to Excel Services failed" when running scheduled PowerPivot data refresh](../sharepoint-administration/call-to-excel-services-failed.md)
+### ["cannot locate a server" error in PowerPivot](../sharepoint-administration/cannot-locate-a-server-to-load-workbook-data-model-in-powerpivot.md)
+### [Issue when opening SharePoint documents](../sharepoint-administration/edit-document-requires-compatible-application-and-web-browser.md)
+### [Email notifications aren't sent for scheduled PowerPivot data refresh failures](../sharepoint-administration/email-notifications-sent-for-scheduled-data-refresh-failures-in-power-pivot.md)
+### [Issue when loading Sandbox cube in PowerPivot](../sharepoint-administration/error-occurred-when-loading-sandbox-cube-in-powerpivot.md)
+### [Excel workbooks in XML format don't open from SharePoint](../sharepoint-administration/excel-workbooks-in-xml-format-not-open.md)
+### [Some Office files open in read-only mode in SharePoint](../sharepoint-administration/files-open-in-read-only-mode.md)
+### [Large Publisher files open in read-only mode](../sharepoint-administration/large-publisher-files-open-in-read-only-mode.md)
+### [Microsoft Forms shows "Sorry, something went wrong"](../sharepoint-administration/microsoft-forms-shows-sorry-something-went-wrong.md)
+### [Orphaned record for PowerPivot service application database](../sharepoint-administration/orphaned-record-for-powerpivot-service-application-database.md)
+### ["The user is not a farm administrator" error with PowerPivot Configuration Tool](../sharepoint-administration/powerpivot-configuration-tool-shows-user-not-farm-administrator.md)
+### [PowerPivot Performance Counter errors](../sharepoint-administration/powerpivot-performance-counter-errors.md)
+### [PowerPivot scheduled data refresh fails](../sharepoint-administration/powerpivot-scheduled-data-refresh-fails.md)
+### ["SetAuthContext need to be run as sysadmin" error in PowerPivot](../sharepoint-administration/powerpivot-shows-setauthcontext-need-to-be-run-as-sysadmin.md)
+### ["Retrieving the COM class factory for component failed 800703fa" in Excel Services and PowerPivot](../sharepoint-administration/retrieving-com-class-factory-for-component-failed.md)
+### ["A schedule cannot be enabled for a workbook" when scheduling a PowerPivot data refresh](../sharepoint-administration/sorry-something-went-wrong-when-try-to-schedule-a-data-refresh.md)
+### [PowerPivot Gallery Snapshots Fail for SSL Host Header Sites](../sharepoint-administration/troubleshooting-powerpivot-gallery-snapshot.md)
+### ["The virtual path maps to another application" error when running scheduled data refresh](../sharepoint-administration/virtual-path-maps-to-another-application-not-allowed.md)
+### [SharePoint App "Import Spreadsheet" fails](../sharepoint-administration/import-spreadsheet-app-error-an-unexpected-error-has-occurred-2147352567.md)
+
+## Lists and libraries
+
+### [Files are downloaded instead of opening](../lists-and-libraries/files-downloaded-instead-of-opening-office-application.md)
+### [SharePoint files open as read-only](../lists-and-libraries/files-open-as-read-only-and-cannot-check-in-or-out.md)
+### ["You'll need a new app to open this ms-visio" when opening Visio files](../lists-and-libraries/need-a-new-app-to-open-this-ms-visio.md)
+
+## Permissions
+
+### [SharePoint Designer 2013 login Issues in a cloud scenario](../permissions/login-issues-in-a-cloud-scenario.md)
+
+## Security
+
+### [Scheduled data refresh with non-Windows Authentication](../security/schedule-data-refresh-to-a-source-with-non-windows-authentication.md)
+
+## Web Parts
+
+### [Issue with Excel Web Access Web Parts](../web-parts/something-went-wrong-error-in-excel-web-parts.md)
