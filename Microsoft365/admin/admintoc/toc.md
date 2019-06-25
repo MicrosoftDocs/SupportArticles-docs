@@ -44,6 +44,8 @@
 ### [Switch from Semi-Annual to Monthly](../administration/switch-channel-for-office-365.md)
 ### [This feature has been disabled by your administrator](../administration/office-feature-disabled.md)
 ### ["Invalid provider specified" with using Office 2016](../administration/invalid-provider-specified-error.md)
+### [Use Office 365 PowerShell to manage Microsoft Planner licenses](../administration/how-to-use-office-365-powershell-to-manage-microsoft-planner-licenses.md)
+### [Block OneDrive use from Office](../administration/block-onedrive-use-from-office.md)
 
 ## Authentication
 ### [Enable Office 365 ProPlus ULS logging](../authentication/how-to-enable-office-365-proplus-uls-logging.md)

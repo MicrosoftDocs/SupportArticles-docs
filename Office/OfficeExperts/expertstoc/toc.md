@@ -1,5 +1,20 @@
 # [Office Experts](../office-experts.md)
 
+## Administration
+### [Compatibility report in Excel Online](../administration/compatibility-report-about-text-queries-in-excel-online.md)
+### [Online Server authentication configuration](../administration/configuration-for-office-online-server-authentication-with-external-users.md)
+### [Errors when accessing documents in Online Server](../administration/errors-when-access-documents-in-office-online-server.md)
+### [Determine build version of Online Server](../administration/how-to-determine-build-version-of-office-online-server.md)
+### [Office Online limitations and features with IRM](../administration/office-online-limitations-and-features-with-information-rights-management.md)
+### [Issue with Office viewers or Office Web Apps](../administration/office-viewers-or-web-apps-shows-this-page-cannot-be-displayed.md)
+### [Rebuild an Office Web Apps 2013 farm](../administration/rebuild-an-office-web-apps-2013-farm-easily.md)
+### [Test viewing Office documents](../administration/test-viewing-documents-by-using-office-online-server-viewer.md)
+### [Use custom fonts with Online Server](../administration/use-custom-fonts-with-office-online-server.md)
+### [Issue with using guest links to Excel Online workbook](../administration/workbook-contains-external-data-connections.md)
+
+## installation
+### [Deploy Online Server to security hardened drives](../installation/deploy-office-online-server-to-security-hardened-drive.md)
+
 ## [HTML login page not render correctly in Office](../custom-html-login-page-not-render-correctly.md)
 ## ["Cannot access directory" error in Excel 2016](../cannot-access-directory-error-in-excel-2016.md)
 ## [Force Word document open in edit mode from email link](../force-word-document-to-open-in-edit-mode.md)
