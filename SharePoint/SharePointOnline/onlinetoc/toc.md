@@ -36,8 +36,6 @@
 
 ### [Excel survey doesn't have full functionality when you click +new in a SharePoint Online library](../online-admin/excel-survey-does-not-have-full-functionality-when-click-new.md)
 
-### [How to use Office 365 PowerShell to manage Microsoft Planner licenses](../online-admin/how-to-use-office-365-powershell-to-manage-microsoft-planner-licenses.md)
-
 ### [Information about ULS log access for SharePoint Online](../online-admin/information-about-uls-log-access.md)
 
 ### ["You are not allowed to create team sites" error message when you click "new site" on the SharePoint Online "Followed Sites" page](../online-admin/issue-when-you-click-new-site-on-followed-sites-page.md)
