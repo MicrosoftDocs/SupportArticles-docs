@@ -15,3 +15,5 @@
 ## [Can't connect to Project Online OData from SSIS](../cant-connect-project-online-odata-from-ssis.md)
 ## [Can't save a project to Project Online](../cant-save-project-client-to-web-app.md)
 ## [Can't sign in Office 365 from multiple federated domains](../cant-sign-in-office-365-multiple-domain-federation.md)
+## [Project code must be updated on 64-bit systems](../compile-error-editing-vba-macro.md)
+## [Office applications crash or can't start](../office-crash-or-cannot-start.md)
