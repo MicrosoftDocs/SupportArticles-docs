@@ -1,5 +1,9 @@
 # [Office Experts](../office-experts.md)
 
+## Activation
+### [Activate Office 2010 KMS host through phone](../activation/activate-office-2010-kms-host-via-phone-activation.md)
+### [Discover Office and Windows KMS hosts](../activation/discover-remove-unauthorized-office-windows-kms-hosts.md)
+
 ## Administration
 ### [Compatibility report in Excel Online](../administration/compatibility-report-about-text-queries-in-excel-online.md)
 ### [Online Server authentication configuration](../administration/configuration-for-office-online-server-authentication-with-external-users.md)
@@ -11,24 +15,31 @@
 ### [Test viewing Office documents](../administration/test-viewing-documents-by-using-office-online-server-viewer.md)
 ### [Use custom fonts with Online Server](../administration/use-custom-fonts-with-office-online-server.md)
 ### [Issue with using guest links to Excel Online workbook](../administration/workbook-contains-external-data-connections.md)
+### [Manage the First Run screens for Office 2013](../administration/manage-office-2013-first-run-screens.md)
+### [Check the size of this month's Office ProPlus update](../administration/how-big-was-this-months-office-proplus-update.md)
+
+## Authentication
+### [Office not render DUO API multi-factor authentication login page](../authentication/not-render-a-custom-duo-api-multi-factor-authentication-login-page.md)
+
+## Excel
+### ["Cannot access directory" error in Excel 2016](../excel/cannot-access-directory-error-in-excel-2016.md)
 
 ## Installation
 ### [Deploy Online Server to security hardened drives](../installation/deploy-office-online-server-to-security-hardened-drive.md)
+### [Automate the update uninstallation for Office ](../installation/automate-uninstall-office-update.md)
+### [Install a second KMS host for Office](../installation/guidance-on-installing-a-second-kms-host-for-office.md)
+### [Office installation failures](../installation/troubleshooting-office-installation-failures.md)
 
-## [HTML login page not render correctly in Office](../custom-html-login-page-not-render-correctly.md)
-## ["Cannot access directory" error in Excel 2016](../cannot-access-directory-error-in-excel-2016.md)
-## [Force Word document open in edit mode from email link](../force-word-document-to-open-in-edit-mode.md)
-## [InfoPath 2013 crashes when connect Access database](../infopath-2013-crashes-when-connecting-to-access-database.md)
-## [Office not render DUO API multi-factor authentication login page](../not-render-a-custom-duo-api-multi-factor-authentication-login-page.md)
-## [PowerPivot data model not refresh](../powerpivot-data-model-does-not-refresh.md)
-## [PowerPivot not work with .atomsvc files](../powerpivot-does-not-work-with-atomsvc-files.md)
-## ["The workbook must be checked out" error for PowerPivot](../powerpivot-workbook-checked-out.md)
-## [Third-party PowerPivot data refresh tools not supported](../third-party-powerpivot-data-refresh-tools-are-not-supported.md)
-## [Upsize PowerPivot 2013 workbooks to SSAS](../upsize-powerpivot-2013-workbooks-to-sql-server-analysis-services.md)
-## [Manage the First Run screens for Office 2013](../manage-office-2013-first-run-screens.md)
-## [Activate Office 2010 KMS host through phone](../activate-office-2010-kms-host-via-phone-activation.md)
-## [Automate the update uninstallation for Office ](../automate-uninstall-office-update.md)
-## [Install a second KMS host for Office](../guidance-on-installing-a-second-kms-host-for-office.md)
-## [Discover Office and Windows KMS hosts](../discover-remove-unauthorized-office-windows-kms-hosts.md)
-## [Check the size of this month's Office ProPlus update](../how-big-was-this-months-office-proplus-update.md)
-## [Office installation failures](../troubleshooting-office-installation-failures.md)
+## PowerPivot
+### [PowerPivot data model not refresh](../powerpivot/powerpivot-data-model-does-not-refresh.md)
+### [PowerPivot not work with .atomsvc files](../powerpivot/powerpivot-does-not-work-with-atomsvc-files.md)
+### ["The workbook must be checked out" error for PowerPivot](../powerpivot/powerpivot-workbook-checked-out.md)
+### [Third-party PowerPivot data refresh tools not supported](../powerpivot/third-party-powerpivot-data-refresh-tools-are-not-supported.md)
+### [Upsize PowerPivot 2013 workbooks to SSAS](../powerpivot/upsize-powerpivot-2013-workbooks-to-sql-server-analysis-services.md)
+
+## Troubleshooting
+### [HTML login page not render correctly in Office](../troubleshooting/custom-html-login-page-not-render-correctly.md)
+### [InfoPath 2013 crashes when connect Access database](../troubleshooting/infopath-2013-crashes-when-connecting-to-access-database.md)
+
+## Word
+### [Force Word document open in edit mode from email link](../word/force-word-document-to-open-in-edit-mode.md)
