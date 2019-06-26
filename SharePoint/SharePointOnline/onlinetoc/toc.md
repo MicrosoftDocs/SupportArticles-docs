@@ -1,5 +1,15 @@
 ﻿# [SharePoint Online Troubleshooting](../online.md)
 
+
+## Administration
+
+### [Issue with Send To connection](../administration/troubleshoot-send-to-connection-error.md)
+### [Issue with the SharePoint Hybrid Picker](../administration/troubleshoot-error-when-you-use-hybrid-picker.md)
+### [TLS 1.0 and 1.1 deprecation for Office 365](../administration/tls-1.0-and-1.1-deprecation-for-office-365.md)
+### [Automatic EXIF property import unsupported](../administration/automatic-exif-property-import-unsupported.md)
+### [Issue when browsing to a SharePoint site](../administration/access-to-sharepoint-online-is-monitored.md)
+### [A blank page for SharePoint tenant](../administration/a-blank-page-for-sharepoint-tenant.md)
+
 ## Lists and Libraries
 
 ### [Documents aren't displayed in web browser with TLS 1.2](../lists-and-libraries/documents-not-displayed-in-web-browser-when-using-tls-1.2.md)
@@ -28,15 +38,6 @@
 ### ["Access denied" error with an Approval Workflow task](../sharing-and-permissions/access-denied-when-approve-workflow-task.md)
 ### ["Access Denied" error with an online user](../sharing-and-permissions/access-denied-for-office-365-users.md)
 
-## SharePoint Administration
-
-### [Issue with Send To connection](../sharepoint-administration/troubleshoot-send-to-connection-error.md)
-### [Issue with the SharePoint Hybrid Picker](../sharepoint-administration/troubleshoot-error-when-you-use-hybrid-picker.md)
-### [TLS 1.0 and 1.1 deprecation for Office 365](../sharepoint-administration/tls-1.0-and-1.1-deprecation-for-office-365.md)
-### [Automatic EXIF property import unsupported](../sharepoint-administration/automatic-exif-property-import-unsupported.md)
-### [Issue when browsing to a SharePoint site](../sharepoint-administration/access-to-sharepoint-online-is-monitored.md)
-### [A blank page for SharePoint tenant](../sharepoint-administration/a-blank-page-for-sharepoint-tenant.md)
-
 ## Sites
 
 ### [A URL that resides under a root site collection is broken](../sites/url-that-resides-under-root-site-collection-is-broken.md)
@@ -57,7 +58,3 @@
 
 ### [A Workflow Status error is reported](../workflows/error-reported-in-sharepoint-2010-workflow-status.md)
 ### [SharePoint 2013 workflow HTTP Unauthorized](../workflows/workflow-http-unauthorized.md)
-
-## [Can't migrate Yammer network across Office 365 tenants](../online-admin/cannot-migrate-a-yammer-network-across-office-365-tenants.md)
-## [Issue when clicking Yammer tile in Office 365](../online-admin/error-when-click-the-yammer-tile-in-office-365.md)
-## [Yammer users displayed as "Former member"](../online-admin/yammer-user-is-displayed-as-former-member.md)
