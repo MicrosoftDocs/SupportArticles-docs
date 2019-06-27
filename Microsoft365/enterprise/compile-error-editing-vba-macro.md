@@ -4,7 +4,7 @@ description: Describes an issue in which you receive an error message when you e
 author: simonxjx
 manager: willchen
 audience: ITPro
-ms.service: sharepoint-powershell
+ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
 ---
