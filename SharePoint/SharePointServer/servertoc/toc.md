@@ -46,10 +46,6 @@
 
 ### [Outdated database statistics decrease performance](../performance/outdated-database-statistics.md)
 
-## Permissions
-
-### ["Access Denied" when a workflow sends an email](../permissions/access-denied-error-sharepoint-2010-when-workflow-sends-email-to-group.md)
-
 ## Search
 
 ### ["Item not crawled" error with a site](../search/item-not-crawled-when-crawl-sites.md)
@@ -70,6 +66,7 @@
 ### [SharePoint identity and permission issues in two-way domain trust](../sharing-and-permissions/identity-and-permission-issues-in-two-way-domain-trust.md)
 ### [Anonymous users can't open XLSX files from a document library](../sharing-and-permissions/anonymous-users-cannot-open-xlsx-files-from-a-document-library.md)
 ### [Access denied when you send an email to a SharePoint group](../sharing-and-permissions/access-denied-when-send-an-email-to-groups.md)
+### ["Access Denied" when a workflow sends an email](../sharing-and-permissions/access-denied-error-sharepoint-2010-when-workflow-sends-email-to-group.md)
 
 ## Sites
 
