@@ -29,9 +29,9 @@
 ### [SharePoint files open as read-only](../lists-and-libraries/files-open-as-read-only-and-cannot-check-in-or-out.md)
 ### ["You'll need a new app to open this ms-visio" when opening Visio files](../lists-and-libraries/need-a-new-app-to-open-this-ms-visio.md)
 
-## Permissions
+## Sharing and Permissions
 
-### [SharePoint Designer 2013 login Issues in a cloud scenario](../permissions/login-issues-in-a-cloud-scenario.md)
+### [SharePoint Designer 2013 login Issues in a cloud scenario](../sharing-and-permissions/login-issues-in-a-cloud-scenario.md)
 
 ## Security
 
