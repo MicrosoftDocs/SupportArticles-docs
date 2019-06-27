@@ -1,5 +1,14 @@
 # [Office Products Troubleshooting](../client.md)
 
+## Access
+### [Connect to a remote Access database from Active Server pages](../access/connect-access-from-active-server.md)
+### [0x80004005 Microsoft Jet Database Engine cannot open the file](../access/error-80004005-connecting-access-database.md)
+### [Connect an HTML Page to an Access Database](../access/html-page-connects-access-database.md)
+### [Issue when creating a Data Access page](../access/create-data-access-page.md)
+### [OLE DB Provider for Jet and ODBC driver](../access/jet-odbc-driver-available-32-bit-version.md)
+### [.LDB files](../access/ldb-file-description.md)
+### [Runtime error 2147319779 (8002801d) library not registered](../access/library-unregistered-runtime-error.md)
+
 ## Activation/Installation
 ### [Install and activate Office 2013](../activation-installation/install-and-activate-office-2013.md)
 ### [Office setup issues](../activation-installation/office-setup-issues.md)
@@ -8,12 +17,30 @@
 ### [Error 1935 when install Office 2010](../activation-installation/error-1935-when-install-office-2010.md)
 ### [Cannot verify the license for this product](../activation-installation/license-issue-when-start-office-application.md)
 ### [We can't sign you into your company portal](../activation-installation/something-configured-fails-activating-office.md)
+### [PowerPoint for Mac is closed unexpectedly ](../activation-installation/powerpoint-mac-closes-unexpectedly.md)
+### [Can't pass the Welcome Screen in Office for Mac](../activation-installation/office-for-mac-welcome-screen.md)
+### [Issue with changing Office 2010 product key](../activation-installation/office-2010-product-key-change-error.md)
+### [Known issues with Office for Mac](../activation-installation/office-for-mac-issues-macos-10-7.md)
 
 ## Error Messages
 ### [Can't locate proxy server when clicking hyperlink](../error-messages/cannot-locate-server-when-click-hyperlink.md)
 ### [Can't open Excel, Word or PowerPoint file](../error-messages/cannot-open-excel-word-or-powerpoint-file.md)
 ### [Error when edit an equation in Office](../error-messages/issue-when-edit-equation-in-office.md)
 ### [Another account is already signed in](../error-messages/another-account-already-signed-in.md)
+### [View error signatures for Office](../error-messages/view-error-signatures.md)
+### [0x80004005: General Error Unable to Open Registry Key](../error-messages/fails-accessing-page-connected-access-database.md)
+### [The password you supplied is not correct](../error-messages/incorrectly-password-fails-verifying.md)
+### [Issue when opening a file with a long folder name](../error-messages/fails-opening-long-folder-name-files.md)
+### [The document caused a serious error the last time it was opened](../error-messages/error-open-word-excel.md)
+### ["Missing file" error with a web page file](../error-messages/web-page-missing-file-error.md)
+### [Error 25090 with an Office application](../error-messages/error-25090-starting-office-program.md)
+### [Incorrect function with saving to a CD-RW or DVD/CD-RW drive](../error-messages/incorrect-function-saving-office-file.md)
+### [Files necessary to run the Office Customization Tool were not found](../error-messages/fails-running-office-customization-tool.md)
+### [Run-time Error 13: Type Mismatch](../error-messages/run-time-error-13-type-mismatch.md)
+### [Selected a single-byte font to replace a double-byte font with Japanese](../error-messages/single-byte-font-replace-error.md)
+### [Issue with starting Office applications](../error-messages/microsoft-program-cannot-be-opened.md)
+### [Issue with updating a data connection or change PivotTable fields](../error-messages/connection-failed-to-refresh.md)
+### [Mobile viewing PDF files with Office Web Apps](../error-messages/mobile-viewing-pdf-files.md)
 
 ## Excel
 ### [Convert Excel column numbers](../excel/convert-excel-column-numbers.md)
@@ -35,6 +62,18 @@
 ### [Office opens blank from SharePoint](../powerpoint/office-opens-blank-from-sharepoint.md)
 ### [Change the export resolution of PowerPoint slide](../powerpoint/change-export-slide-resolution.md)
 ### [Troubleshoot a damaged presentation](../powerpoint/damaged-presentation.md)
+### [Create a mailto hyperlink in a presentation in PowerPoint for Mac](../powerpoint/create-powerpoint-mailto-hyperlink.md)
+### [Password to modify a presentation is required](../powerpoint/require-password-to-modify-presentation.md)
+### [Can't load an add-in with a low macro security level](../powerpoint/powerpoint-fails-loading-add-in.md)
+### [Shortcuts to control display of grid and guides](../powerpoint/grid-guides-keyboard-shortcuts.md)
+### [Not enough printer memory available to print page](../powerpoint/not-enought-printer-memory-available.md)
+### [Add custom values to animation effect options](../powerpoint/custom-value-animation-effect-option.md)
+### [Hlink.dll Can't Be Loaded](../powerpoint/viewing-presentation-fails.md)
+### [File size of an existing presentation increases](../powerpoint/presentation-file-size-increases.md)
+### [Only the audio plays with a video file](../powerpoint/powerpoint-video-file-only-audio-plays.md)
+### [Cannot edit the footer information in the Header and Footer](../powerpoint/fails-editing-footer-information.md)
+### [PowerPoint for Mac startup error](../powerpoint/fails-starting-powerpoint-mac.md)
+### [PowerPoint stops responding (spinning wheel)](../powerpoint/powerpoint-stops-responding.md)
 
 ## Project
 ### [Issue when change user's status to inactive in Project](../project/eventing-service-error-when-changing-user-status-to-inactive-microsoft-project.md)
