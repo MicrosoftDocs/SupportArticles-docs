@@ -30,6 +30,9 @@
 ### [Install a second KMS host for Office](../installation/guidance-on-installing-a-second-kms-host-for-office.md)
 ### [Office installation failures](../installation/troubleshooting-office-installation-failures.md)
 
+## Office Developer
+### [Use a class (object) from outside of VBA project](../office-developer/set-up-vb-project-using-class.md)
+
 ## PowerPivot
 ### [PowerPivot data model not refresh](../powerpivot/powerpivot-data-model-does-not-refresh.md)
 ### [PowerPivot not work with .atomsvc files](../powerpivot/powerpivot-does-not-work-with-atomsvc-files.md)

@@ -77,3 +77,8 @@
 ### [BOXServiceAccount is added](../security/boxserviceaccount-is-added-to-role.md)
 ### [Update or repair federated domain settings](../security/update-federated-domain-office-365.md)
 ### [Data Loss Protection (DLP) policy tips](../security/troubleshooting-data-loss-protection-policy-tips.md)
+### [Specify trusted sources for Digital Certificates](../security/specify-trusted-sources.md)
+
+## Troubleshooting
+### [Use registry to override default behavior with recovery](../troubleshooting/registry-override-default-behavior.md)
+### [Application cannot be started](../troubleshooting/office-365-application-cannot-be-started.md)

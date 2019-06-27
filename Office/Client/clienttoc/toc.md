@@ -15,14 +15,6 @@
 ### [Error when edit an equation in Office](../error-messages/issue-when-edit-equation-in-office.md)
 ### [Another account is already signed in](../error-messages/another-account-already-signed-in.md)
 
-## Settings
-### [Error in Office when file is blocked](../settings/file-blocked-in-office.md)
-
-## Troubleshooting
-### [Open network file slow or stop responding](../troubleshooting/office-slow-or-stop-responding.md)
-### ["wkresources" files in Trash](../troubleshooting/wkresources-files-moved-to-trash.md)
-### [Display issues in Office applications](../troubleshooting/office-display-issues.md)
-
 ## Excel
 ### [Convert Excel column numbers](../excel/convert-excel-column-numbers.md)
 ### [Excel opening blank](../excel/excel-opens-blank.md)
@@ -48,6 +40,20 @@
 ### [Issue when change user's status to inactive in Project](../project/eventing-service-error-when-changing-user-status-to-inactive-microsoft-project.md)
 ### [Project opens calendar from a different instance](../project/project-opens-calendar-from-different-instance-when-editing.md)
 
+## Settings
+### [Error in Office when file is blocked](../settings/file-blocked-in-office.md)
+### [Task panes in Office](../settings/office-program-task-panes.md)
+### [Use registry to clear the most recently used files list](../settings/clear-most-recently-used-file.md)
+
+## Troubleshooting
+### [Open network file slow or stop responding](../troubleshooting/office-slow-or-stop-responding.md)
+### ["wkresources" files in Trash](../troubleshooting/wkresources-files-moved-to-trash.md)
+### [Display issues in Office applications](../troubleshooting/office-display-issues.md)
+### [Troubleshoot a Visual C++ Runtime Error ](../troubleshooting/troubleshoot-visual-c++-runtime-error.md)
+### [Troubleshoot a VB Compile or Runtime Error](../troubleshooting/troubleshoot-vb-compile-runtime-error.md)
+### [Can't embed Adobe OpenType fonts](../troubleshooting/fails-embedding-adobe-opentype-font.md)
+### [Damaged documents in Word for Mac](../troubleshooting/troubleshoot-damaged-word-document.md)
+
 ## Word
 ### [Damaged documents in Word](../word/damaged-documents-in-word.md)
 ### [Issues when start or use Word](../word/issues-when-start-or-use-word.md)
@@ -63,6 +69,13 @@
 ### ["relationship rID8 was not found" in Word](../word/image-part-relationship-rld8-not-found-error-microsoft-word.md)
 ### [Mail merge issue](../word/mail-merge-error.md)
 ### [Recover lost documents](../word/recover-lost-document.md)
+### [Print a general field](../word/print-general-field.md)
+### [Third-party installed fonts isn't in the font list in Word for Mac](../word/third-party-installed-font-fails-appearing.md)
+### [Scroll bars are missing in Word for Mac](../word/word-scroll-bars-missing.md)
+### [Word for Mac is closed unexpectedly](../word/word-mac-closes-unexpectedly.md)
+### [Toolbars missing in Word for Mac](../word/word-mac-toolbars-missing.md)
+### [Word for Mac crashes with saving](../word/word-for-mac-crashes-or-quits.md)
+### [Custom XML markup is removed](../word/custom-xml-markup-is-removed.md)
 
 ## Office Developer
 ### [Select ranges or cells with Visual Basic](../office-developer/select-cells-rangs-with-visual-basic.md)
