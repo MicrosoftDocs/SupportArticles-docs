@@ -16,8 +16,11 @@
 ### [Can't communicate with external contacts](../online-im-presence/cannot-communicate-with-external-contacts.md)
 ### [LastActive attribute gives wrong user status info](../online-im-presence/lastactive-attribute-gives-wrong-user-status-info-.md)
 
+## Meetings
+### [Can't create meetings on behalf of delegate](../online-meetings/cannot-create-meeting-delegate.md)
+
 ## Meeting Broadcast
-### [Issue when join a meeting broadcast ](../online-meeting-broadcast/issue-join-meeting-broadcast.md)
+### [Issue when join a meeting broadcast](../online-meeting-broadcast/issue-join-meeting-broadcast.md)
 ### [Can't join Meeting Broadcast as Event team member on Mac](../online-meeting-broadcast/cannot-join-broadcast-as-event-team-mac.md)
 
 ## Phone System
