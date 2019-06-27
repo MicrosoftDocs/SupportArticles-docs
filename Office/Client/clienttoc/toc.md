@@ -49,7 +49,7 @@
 ### [Open network file slow or stop responding](../troubleshooting/office-slow-or-stop-responding.md)
 ### ["wkresources" files in Trash](../troubleshooting/wkresources-files-moved-to-trash.md)
 ### [Display issues in Office applications](../troubleshooting/office-display-issues.md)
-### [Troubleshoot a Visual C++ Runtime Error ](../troubleshooting/troubleshoot-visual-c++-runtime-error.md)
+### [Troubleshoot a Visual C++ Runtime Error](../troubleshooting/troubleshoot-visual-c-runtime-error.md)
 ### [Troubleshoot a VB Compile or Runtime Error](../troubleshooting/troubleshoot-vb-compile-runtime-error.md)
 ### [Can't embed Adobe OpenType fonts](../troubleshooting/fails-embedding-adobe-opentype-font.md)
 ### [Damaged documents in Word for Mac](../troubleshooting/troubleshoot-damaged-word-document.md)
