@@ -104,7 +104,7 @@
 ### [Make Paste Options button disappear](../excel/make-paste-options-button-disappear.md)
 ### [Manage multiple windows](../excel/manage-multiple-windows.md)
 ### [Minimize the size of an XML Spreadsheet file](../excel/minimize-xml-spreadsheet-file-size.md)
-### [Misleading labels in the output of Analysis ToolPak t-Test tools](../excel/output-misleading-labelsy.md)
+### [Misleading labels in the output of Analysis ToolPak t-Test tools](../excel/output-misleading-labels.md)
 ### [Operation Must Use an Updateable Query](../excel/fails-accessing-excel-through-odbc.md)
 ### [Programmatically copy all range names](../excel/copy-range-names.md)
 ### [Programmatically print all embedded charts](../excel/print-embedded-charts.md)
