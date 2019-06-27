@@ -3,9 +3,6 @@
 ## Email Messages
 ### [Create recurring reminder email](../email-messages/create-recurring-email.md)
 
-## Extended MAPI Solutions
-### [Permission isn't exposed to OAuth tokens](../extended-mapi-solutions/expose-permissions-issue-with-mapi-oauth-tokens.md)
-
 ## Folders
 ### [Incorrect folder names](../folders/incorrect-folder-names.md)
 
