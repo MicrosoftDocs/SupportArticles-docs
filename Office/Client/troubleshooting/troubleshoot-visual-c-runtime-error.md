@@ -1,5 +1,5 @@
 ---
-title: WD: Troubleshooting a Visual C++ runtime error in Word
+title: Troubleshooting a Visual C++ runtime error in Word
 description: Describes how to locate the COM Add-in causing a Visual C++ runtime error in Word and disable the add-in.
 author: simonxjx
 manager: willchen
