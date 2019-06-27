@@ -11,18 +11,6 @@ ms.author: v-six
 
 # How To Connect an HTML Page to a Microsoft Access Database
 
-### IN THIS TASK
-
-- [SUMMARY](#summary)
-
-  - [Requirements](#requirements)
-  - [Create the Microsoft Access Database](#Create-the-Microsoft-Access-Database)
-  - [Method 1: Create the Data Access Page by Using the Wizard](#Method-1:-Create-the-Data-Access-Page-by-Using-the-Wizard)
-  - [Method 2: Create the Data Access Page by Using an Existing HTML Page](#Method-2:-Create-the-Data-Access-Page-by-Using-an-Existing-HTML-Page)
-  - [Verification](#Verification)
-
-- [REFERENCES](#REFERENCES)
-
 ## Summary
 
 A data access page is an HTML page that has an Office Web Component embedded into it. The Office Web Component stores connection information about a data source. This article describes how to use data access pages to connect an HTML page to tables in a database.
@@ -75,7 +63,7 @@ To create the data access page by using an existing HTML page, follow these step
      <body>
        Looking at Excel Web Components to create a DAP
      </body>
-   </hmtl>
+   </html>
    ```
 
 2. Save the file as MyHTML.htm in your My Documents folder.

@@ -1,5 +1,5 @@
 ---
-title: Error message: Can't verify a password in Excel
+title: Can't verify a password in Excel
 description: You cannot verify a password in Excel with the error saying that the password you supplied is not correct.
 author: simonxjx
 manager: willchen
