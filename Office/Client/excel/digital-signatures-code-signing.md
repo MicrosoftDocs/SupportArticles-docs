@@ -15,16 +15,6 @@ ms.author: v-six
 
 In Microsoft Office Excel 2003 and in later versions of Excel, you can digitally sign a workbook or code sign your macro project. This ensures that you were the last person to make changes to the workbook or macro project.
 
-This article discusses the following topics about digital signatures and code signing:
-
-- [What is a digital certificate?](#What-is-a-digital-certificate?)   
-- [What is a digital signature?](#What-is-a-digital-signature?)   
-- [What happens when I use a digital signature?](#What-happens-when-I-use-a-digital-signature?)   
-- [What Excel files can I digitally sign?](#What-Excel-files-can-I-digitally-sign?)   
-- [How can I obtain a digital signature?](#How-can-I-obtain-a-digital-signature?)   
-- [How do I add a digital signature to a workbook?](#How-do-I-add-a-digital-signature-to-a-workbook?)   
-- [How do I code sign a macro project?](#How-do-I-code-sign-a-macro-project?)   
-
 ## More information
 
 ### What is a digital certificate?
