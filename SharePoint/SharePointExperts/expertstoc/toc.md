@@ -21,7 +21,6 @@
 ### ["A schedule cannot be enabled for a workbook" when scheduling a PowerPivot data refresh](../administration/sorry-something-went-wrong-when-try-to-schedule-a-data-refresh.md)
 ### [PowerPivot Gallery Snapshots Fail for SSL Host Header Sites](../administration/troubleshooting-powerpivot-gallery-snapshot.md)
 ### ["The virtual path maps to another application" error when running scheduled data refresh](../administration/virtual-path-maps-to-another-application-not-allowed.md)
-### [SharePoint App "Import Spreadsheet" fails](../administration/import-spreadsheet-app-error-an-unexpected-error-has-occurred-2147352567.md)
 
 ## Lists and libraries
 

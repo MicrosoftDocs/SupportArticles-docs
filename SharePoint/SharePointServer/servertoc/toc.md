@@ -37,6 +37,7 @@
 ### [IFilter alternative to the native PDF parser](../lists-and-libraries/ifilter-alternative-to-the-native-pdf-parser.md)
 ### [Feature id isn't assigned when saving a list as a template](../lists-and-libraries/feature-id-not-assigned-when-saving-a-list-as-template.md)
 ### [Attachment is missing from an email message](../lists-and-libraries/attachment-is-missing-in-email-message-to-library.md)
+### [SharePoint App "Import Spreadsheet" fails](../lists-and-libraries/import-spreadsheet-app-error-an-unexpected-error-has-occurred-2147352567.md)
 
 ## Migration Tool
 
