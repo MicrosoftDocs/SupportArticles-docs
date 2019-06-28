@@ -1,5 +1,5 @@
 ---
-title: Offboarding mailbox fails with error "Error: MigrationPermanentException: Target user ‎'User‎' already has a primary mailbox."
+title: Offboarding mailbox fails with error "Error MigrationPermanentException Target user ‎'User‎' already has a primary mailbox."
 description: Describes an error message that you receive when you Offboard mailboxes from your on-premises environment to Office 365 in a hybrid deployment. Provides a resolution.
 author: TobyTu
 manager: willchen
@@ -15,7 +15,7 @@ ms.author: rrajan
 
 Assume that you are in a Microsoft Exchange hybrid environment. When you try to offboard Exchange Online mailboxes to the on-premises organization by using the migration batch in Office 365 Exchange Admin Center (EAC), the attempt fails, and you receive an error message that resembles the following:
 
-```/
+```
 ‘Error: MigrationPermanentException: Target user ‎'User‎' already has a primary mailbox.’.
 ```
 
