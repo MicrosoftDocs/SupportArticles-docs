@@ -1,5 +1,5 @@
 ---
-title: Offboarding mailbox fails with error "Error: MigrationPermanentException: Target user ‎'User‎' already has a primary mailbox."
+title: Offboarding mailbox fails with error "Error MigrationPermanentException Target user ‎'User‎' already has a primary mailbox."
 description: Describes an error message that you receive when you Offboard mailboxes from your on-premises environment to Office 365 in a hybrid deployment. Provides a resolution.
 author: TobyTu
 manager: willchen
