@@ -21,6 +21,7 @@
 ## Move Mailboxes
 ### [Move mailbox operation fails](../move-mailboxes/hybrid-move-fails.md)
 ### [Mailbox Move to the cloud fails with error](../move-mailboxes/mailbox-move-to-cloud-fail-with-error.md)
+### [Offboarding mailbox fails with error](../move-mailboxes/offboarding-mailbox-fails-homemdb-homemta.md)
 
 ## Outlook Policy
 ### [Control PST use and creation](../outlook-policy/control-pst-use.md)
