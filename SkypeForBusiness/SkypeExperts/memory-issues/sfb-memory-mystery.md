@@ -12,7 +12,7 @@ ms.author: kenguil
 
 By Kenn Guilstorf, Skype for Business Escalation Engineer
 
-As an escalation engineer, I assist customers with some of the more "persnickety" Skype for Business issues. Lately, I've received quite a few cases that are "performance-based" – basically, complaints that Skype for Business is slow or sluggish, won't allow application sharing. or is simply using too much memory. Many times, an investigation into these cases shows that the user has let Skype for Business run for weeks; and, over time, the memory has crept up until it affects performance. I've even noticed it myself when I let Skype run for a long time. So, what is Skype doing, and why is it holding so much memory? (Here's a little hint: This is completely normal and by design. Nothing is actually wrong – any and every native program runs into this.)
+As an escalation engineer, I assist customers with some of the more "persnickety" Skype for Business issues. Lately, I've received quite a few cases that are "performance-based" – basically, complaints that Skype for Business is slow or sluggish, won't allow application sharing, or is simply using too much memory. Many times, an investigation into these cases shows that the user has let Skype for Business run for weeks; and, over time, the memory has crept up until it affects performance. I've even noticed it myself when I let Skype run for a long time. So, what is Skype doing, and why is it holding so much memory? (Here's a little hint: This is completely normal and by design. Nothing is actually wrong – any and every native program runs into this.)
 
 ## How much memory can it chew through?
 
