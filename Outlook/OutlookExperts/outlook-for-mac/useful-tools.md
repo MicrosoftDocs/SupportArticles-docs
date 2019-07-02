@@ -24,14 +24,14 @@ The Outlook Search Repair tool repairs search results within Outlook.
 > [!IMPORTANT]
 > Due to some changes in macOS Mojave, this tool no longer works in 10.14 and higher. If you are on macOS Mojave (10.14), you can follow the steps below to reindex Spotlight for Outlook for Mac.
 > 
-> 1. Choose Apple menu, then System Preferences, and then Spotlight.
-> 1. Select the Privacy tab.
+> 1. Choose **Apple menu**, then **System Preferences**, and then **Spotlight**.
+> 1. Select the **Privacy** tab.
 > 1. In Finder:
->     1. On the Go menu, select Go to Folder...
->     1. Copy and paste the following location into the "Go to the folder:" dialog box and select Go:
+>     1. On the Go menu, select **Go to Folder...**
+>     1. Copy and paste the following location into the "Go to the folder:" dialog box and select **Go**:
 > 
->         ~/Library/Group Containers/UBF8T346G9.Office/Outlook/Outlook 15 Profiles/
-> 1. Drag the "Main Profile" folder to the Privacy tab. Once added, remove the folder, and Spotlight will re-index the folder.
+>        > ~/Library/Group Containers/UBF8T346G9.Office/Outlook/Outlook 15 Profiles/
+> 1. Drag the "Main Profile" folder to the **Privacy** tab. Once added, remove the folder, and Spotlight will re-index the folder.
 > 
 >     You must perform this step for any additional profile folders you have.
 > 
