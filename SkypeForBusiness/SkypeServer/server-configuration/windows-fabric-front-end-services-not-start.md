@@ -114,9 +114,9 @@ Log Name:      Microsoft-Windows-WindowsFabric/Admin
 
 ## Cause
 
-This issue occurs becausethe current version of Windows Fabric is incompatible with 4K native disks. 
+This issue occurs because the current version of Windows Fabric is incompatible with 4K native disks.
 
-Todetermine the physical and logical sector size of the disk, run the following command from an elevated command prompt: 
+To determine the physical and logical sector size of the disk, run the following command from an elevated command prompt:
 
 ```powershell
 fsutil fsinfo ntfsinfo c:
@@ -126,7 +126,7 @@ If the **Bytes Per Sector** and **Bytes Per Physical Sector** fields are both se
 
 ## More information
 
-Skype for Business Server 2015 uses Windows Fabric 3.0, which is not supported on 4K native disks. You must install Skype for Business Server 2015 on non-4K native disks. 
+Skype for Business Server 2015 uses Windows Fabric 3.0, which is not supported on 4K native disks. You must install Skype for Business Server 2015 on non-4K native disks.
 For more information about 4k sector disks, see the following articles:
 
 - [Advanced format (4K) disk compatibility update](https://msdn.microsoft.com/windows/compatibility/advanced-format-disk-compatibility-update) 
