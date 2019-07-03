@@ -38,7 +38,8 @@ To switch to a different channel by using the Office Deployment Tool (ODT), foll
 
     ```xml
     <Configuration> 
-    <**Updates Channel**="**Monthly**" /> </Configuration>
+    <Updates Channel="Monthly" /> 
+    </Configuration>
     ```
 1. From an elevated command prompt, switch to the folder location where setup.exe resides, and then run the following command:  
 
