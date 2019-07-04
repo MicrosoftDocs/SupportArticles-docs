@@ -29,6 +29,9 @@
 ### [Incorrect Sent time stamp](../owa/incorrect-sent-time-stamp.md)
 ### [Set up Exchange on the web](../owa/set-up-web-access.md)
 
+## Setup
+### [Exchange Server 2019 setup does not run correctly using PowerShell](../setup/ex2019-setup-does-not-run-correctly-started-powershell.md)
+
 ## Shared Mailboxes
 ### [Can't create appointment or all day event](../shared-mailboxes/cannot-create-appointment.md)
 ### [Can't send an email with full access](../shared-mailboxes/cannot-send-email-with-full-access.md)
