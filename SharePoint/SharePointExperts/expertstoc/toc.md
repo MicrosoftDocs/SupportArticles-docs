@@ -21,16 +21,19 @@
 ### ["A schedule cannot be enabled for a workbook" when scheduling a PowerPivot data refresh](../administration/sorry-something-went-wrong-when-try-to-schedule-a-data-refresh.md)
 ### [PowerPivot Gallery Snapshots Fail for SSL Host Header Sites](../administration/troubleshooting-powerpivot-gallery-snapshot.md)
 ### ["The virtual path maps to another application" error when running scheduled data refresh](../administration/virtual-path-maps-to-another-application-not-allowed.md)
+### [Behavior when using Office Online Server with multiple zones](../administration/multiple-alternate-access-mapping-zone.md)
 
 ## Lists and libraries
 
 ### [Files are downloaded instead of opening](../lists-and-libraries/files-downloaded-instead-of-opening-office-application.md)
 ### [SharePoint files open as read-only](../lists-and-libraries/files-open-as-read-only-and-cannot-check-in-or-out.md)
 ### ["You'll need a new app to open this ms-visio" when opening Visio files](../lists-and-libraries/need-a-new-app-to-open-this-ms-visio.md)
+### [PowerPivot data refresh from a list ](../lists-and-libraries/list-refresh-odata-data-feed.md)
 
 ## Sharing and Permissions
 
 ### [SharePoint Designer 2013 login Issues in a cloud scenario](../sharing-and-permissions/login-issues-in-a-cloud-scenario.md)
+### [Additional credential prompts for Office documents](../sharing-and-permissions/credential-prompt-persistent-cookies.md)
 
 ## Security
 
@@ -39,3 +42,5 @@
 ## Web Parts
 
 ### [Issue with Excel Web Access Web Parts](../web-parts/something-went-wrong-error-in-excel-web-parts.md)
+### ["We couldn't find the file you wanted" with Excel Web Access Web Part](../web-parts/excel-web-access-web-part-error.md)
+### [Increasing PowerPoint size limit of embedded media](../web-parts/increase-size-limit-embedded-media.md)

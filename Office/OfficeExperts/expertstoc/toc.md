@@ -17,6 +17,7 @@
 ### [Issue with using guest links to Excel Online workbook](../administration/workbook-contains-external-data-connections.md)
 ### [Manage the First Run screens for Office 2013](../administration/manage-office-2013-first-run-screens.md)
 ### [Check the size of this month's Office ProPlus update](../administration/how-big-was-this-months-office-proplus-update.md)
+### [Office Web Apps 2013 and VMWare](../administration/office-web-apps-and-vmware.md)
 
 ## Authentication
 ### [Office not render DUO API multi-factor authentication login page](../authentication/not-render-a-custom-duo-api-multi-factor-authentication-login-page.md)
