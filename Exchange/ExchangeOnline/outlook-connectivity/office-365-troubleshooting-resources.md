@@ -15,8 +15,6 @@ ms.author: v-six
 
 This article contains links to technical resources and support information for troubleshooting Microsoft Outlook connectivity and mobile device connectivity in Office 365.
 
-[Start the guide to troubleshoot this issue](https://support.microsoft.com/help/troubleshooting-outlook-connectivity-to-office-365-issues).
-
 ## Cannot connect to Exchange Online by using Outlook
 Microsoft Knowledge Base articles
 
