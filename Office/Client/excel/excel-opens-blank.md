@@ -7,6 +7,11 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Excel 2016
+- Excel 2013
+- Excel 2010
+- Excel 2007
 ---
 
 # Troubleshoot Excel opening blank when you double-click a file icon or file name
