@@ -9,64 +9,80 @@ ms.topic: article
 ms.author: v-six
 ---
 
-# Count The Number of Cells With Specific Cell Color By Using VBA
+# Count the number of cells with a specific cell color using VBA
 
-## Symptoms 
+## Summary 
 
-On the Microsoft Excel Formula, we know that in Statisticalcategory there is a function to counts the number of cells within a range that meet the give condition, called COUNTIF. Criteria on that function can be formatted as text or number. But in fact, it could be not only text or number, but also cell colors. Then, how we can get the results with that criteria while COUNTIFfunction can not be the solutions.
+On the Microsoft Excel **Formulas** tab, we know that in the **More Functions** > **Statistical** category there is a function called COUNTIF which counts the number of cells within a range that meet a given condition. Criteria for that function are limited to text or numbers. However, using VBA we can create a function to count the number of cells with other criteria, such as cell color.
 
 ![COUNTIF](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4033122_en_1) 
 
-## Resolution 
+## More information 
 
-Altough without using COUNTIFfunction, we can still get the results with using VBA. With VBA, we can create a UDF (User Defined Function)and save it into Add-Infile so it can be used to every workbook and other computer.
+Using VBA, a User Defined Function (UDF) can be created and saved into an add-in file so that it can be used in other workbooks and transferred to other computers.
 
-## What To Do 
+## How to create a UDF
 
-Here the steps to create the count cell color UDF:
+Here are the steps to create a UDF to count cell color:
 
-1. Open Microsoft Excelthen press Alt+F11to show Visual Basic Editorwindow.    
-2. On Insertmenu, select Module to create a module. Then write the following script:   
+1. Open Microsoft Excel, then press Alt+F11 to show the Visual Basic Editor (VBE) window.    
+2. On the **Insert** menu, select **Module** to create a module. Then type the following script:   
 
     ```vb
     Function CountCcolor(range_data As range, criteria As range) As Long     Dim datax As range     Dim xcolor As Long xcolor = criteria.Interior.ColorIndex For Each datax In range_data     If datax.Interior.ColorIndex = xcolor Then         CountCcolor = CountCcolor + 1     End If Next datax End Function
     ```
    ![On Insert menu, select Module to create a module. Then write the following script](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4033124_en_1)    
-3. Close VBE window and back to Excel.    
-4. To test the UDF, create some example data.    
-5. At cell D3, write the function: =CountCcolor(range_data,criteria)
- in range_data argumen, select cell C2 to C51
- in criteria argumen, select cell F1
+3. Close the VBE window to return to Excel.    
+4. In order to test the UDF, create example data that contains a column of cells in various colors.    
+5. In cell D3, write the function: 
+
+```
+=CountCcolor(range_data,criteria)
+```
+
+* In the "range_data" argument, select cell C2 to C51.
+* In the "criteria" argument, select cell F1.
+
+
   ![At cell D3, write the function: =CountCcolor](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4033125_en_1)
 
-6. Press Enter and in cell F2 the result is 6. It means the number of cells with Blue cell color is 6 cells.
+6. Press **Enter**. The result in cell F2 is 6. This means the number of cells shaded in blue is 6.
 
    ![Press Enter and in cell F2 the result is 6. It means the number of cells with Blue cell color is 6 cells](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4033126_en_1)    
-7. You can also test another color. Change the color in cell F1 with any color you want from the data by using Format Painterto get same color.
+7. You can test by using other colors. Change the color in cell F1 with any color you want from the data by using **Home** > **Fill Color**.
 
    ![You can also test another color. Change the color in cell F1 with any color you want from the data by using Format Painter to get same color](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4033127_en_1)    
-8. You can also pack the UDF, so that function can be used in another workbook and machine. Please following this steps:
+8. You can also zip the UDF so that the function can be used in another workbook or on another computer. To do so, follow these steps:
 
    **Step 1: Save The Workbook**
 
-   1. Fill the name that you want named to at the File Namebox. Here I name it Count Cell Color.    
-   2. For the file type, choose Excel Add-In (.xlam)format.
+    a. Select **File**, and then **Save as**. (Select **Browse** if needed.)
+
+    b. Select **Excel Add-In (.xlam)** as the format and give the file a name, such as CountCcolor.
 
     > [!NOTE]
-    > You can save your Add-In file anywhere you want. But if you want it to be listed on Excel built-in, you should save it into the default location. On my computer with Windows 7 operating system, the default location for any versions of Microsoft Excel is: C:\Users\RADDINI\AppData\Roaming\Microsoft\AddIns    
+    > You can save your Add-In file anywhere you want. But in order for it to be listed as an Add-In within your Excel program, save it to the default location. In Windows 7 the default location for any version of Microsoft Excel is: C:\Users\RADDINI\AppData\Roaming\Microsoft\AddIns
  
     **Step 2: Install the Add-In**
 
-   1. Open Microsoft Excelon computer that you want install the Add-In. Open Add-Insdialog box by clicking Add-In on the Developer tab.    
-   2. On the Add-Indialog box, click Browse button so Browse dialog box is displayed.
+     a. Open Microsoft Excel on the computer where you want to install the Add-In.
+
+    b. Open the Add-Ins dialog box by selecting **Excel Add-Ins** for Excel 2013 and later on the **Developer** tab. (**Add-Ins** on Excel 2010.)
+
+    c. In the **Add-Ins** dialog box, select **Browse**.
    ![On the Add-In dialog box, click Browse button so Browse dialog box is displayed.](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4041376_en_1)
 
-   3. Go to file location that Add-In file is saved. Choose the file and then click Open.    
-   4. On the Add-Insdialog box make sure the add-in checkbox is unchecked. Then click OK.
-   ![On the Add-Ins dialog box make sure the add-in checkbox is unchecked. Then click OK](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4041377_en_1)
+   d. Go to the file location where the Add-In file is saved (such as a USB drive or a cloud-based folder). Choose the file and then select **Open**.
+
+   e. On the Add-Ins dialog box, make sure the add-in checkbox is unchecked. Then select **OK**.
+   ![On the Add-Ins dialog box make sure the add-in checkbox is unchecked. Then select OK.](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4041377_en_1)
 
 
-Now the Count Cell Color UDF has installed and ready to use.  
+The Count Cell Color UDF is installed and ready to use. You will be able to access this function anytime by placing your cursor into any cell in the worksheet and typing:
+
+```
+=CountCcolor(range_data,criteria)
+```
 
 ### Community Solutions Content Disclaimer
 
