@@ -27,3 +27,5 @@ If you use these lists or options, consider the following guidelines:
     - Never put domains that you own onto the Allow and Block lists.
     - Never put common domains, such as microsoft.com and office.com, onto the Allow and Block lists.
     - Do not keep domains on the lists permanently unless you disagree with the verdict of Microsoft.
+
+For more information, see the various methods available to create [safe sender](https://docs.microsoft.com/office365/securitycompliance/create-safe-sender-lists-in-office-365) and [block sender](https://docs.microsoft.com/office365/securitycompliance/create-block-sender-lists-in-office-365) lists and when to use them.
