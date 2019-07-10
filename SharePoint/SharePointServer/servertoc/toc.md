@@ -15,12 +15,16 @@
 ### [800703fa Illegal operation attempted on a registry key](../administration/800703fa-Illegal-operation-error.md)
 ### [Can't start the User Profile Synchronization service](../administration/cannot-start-the-user-profile-synchronization-service.md)
 ### [Configure Excel Services for Kerberos authentication](../administration/configure-excel-services-kerberos.md)
+### [Change the compatibility level of content databases](../administration/compatibility-level-change.md)
+### [Information about SharePoint Server 2019 On-Premises ](../administration/sharepoint-on-premises-2019-information.md)
+### [Remove assembly reference from Sandbox solution](../administration/change-sandbox-solution.md)
 
 ## App
 
 ### [Installing Windows Server AppFabric updates](../app/installing-appfabric-updates.md)
 ### [System.ArgumentException when signing out web application](../app/system.argumentexception-exception-when-sign-out-of-web-application.md)
 ### [Can't start the Web Application service](../app/cannot-start-an-application-service.md)
+### [Access Services reports are not enabled](../App/running-access-reports-error.md)
 
 ## Installation and Setup
 
@@ -52,6 +56,7 @@
 ### ["Item not crawled" error with a site](../search/item-not-crawled-when-crawl-sites.md)
 ### [Incomplete search results for choice type columns with multiple values](../search/incomplete-search-results-for-choice-type-columns-with-multiple-values.md)
 ### [ContractFilter error when querying from the non-default zone in a farm](../search/contractfilter-error-when-querying-from-the-non-default-zone.md)
+### [Crawler has insufficient permissions](../Search/crawler-has-insufficient-permissions.md)
 
 ## Security
 
@@ -68,6 +73,8 @@
 ### [Anonymous users can't open XLSX files from a document library](../sharing-and-permissions/anonymous-users-cannot-open-xlsx-files-from-a-document-library.md)
 ### [Access denied when you send an email to a SharePoint group](../sharing-and-permissions/access-denied-when-send-an-email-to-groups.md)
 ### ["Access Denied" when a workflow sends an email](../sharing-and-permissions/access-denied-error-sharepoint-2010-when-workflow-sends-email-to-group.md)
+### [Issue when connecting to a SharePoint Services Web site](../sharing-and-permissions/web-site-fails-connection.md)
+### [Prompted for credentials when opening documents anonymously](../sharing-and-permissions/receive-credentials-prompting.md)
 
 ## Sites
 
