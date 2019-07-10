@@ -19,12 +19,12 @@
 ### [Information about SharePoint Server 2019 On-Premises ](../administration/sharepoint-on-premises-2019-information.md)
 ### [Remove assembly reference from Sandbox solution](../administration/change-sandbox-solution.md)
 
-## App
+## Apps
 
-### [Installing Windows Server AppFabric updates](../app/installing-appfabric-updates.md)
-### [System.ArgumentException when signing out web application](../app/system.argumentexception-exception-when-sign-out-of-web-application.md)
-### [Can't start the Web Application service](../app/cannot-start-an-application-service.md)
-### [Access Services reports are not enabled](../App/running-access-reports-error.md)
+### [Installing Windows Server AppFabric updates](../apps/installing-appfabric-updates.md)
+### [System.ArgumentException when signing out web application](../apps/system.argumentexception-exception-when-sign-out-of-web-application.md)
+### [Can't start the Web Application service](../apps/cannot-start-an-application-service.md)
+### [Access Services reports are not enabled](../Apps/running-access-reports-error.md)
 
 ## Installation and Setup
 
