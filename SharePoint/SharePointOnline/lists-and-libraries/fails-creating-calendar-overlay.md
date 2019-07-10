@@ -1,6 +1,6 @@
 ---
 title: Unexpected error when creating a calendar overlay
-description: "Sorry, something went wrong" or "An unexpected error has occurred" error when creating a calendar overlay by using a calendar from a SharePoint Online subsite.
+description: Sorry, something went wrong or An unexpected error has occurred when creating a calendar overlay by using a calendar from a SharePoint Online subsite.
 author: simonxjx
 manager: willchen
 audience: ITPro

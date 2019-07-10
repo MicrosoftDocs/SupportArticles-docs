@@ -1,6 +1,6 @@
 ---
 title: Teams group creator is listed as a SharePoint admin
-description: "SomeUser created the site" is mentioned in an activity of a SharePoint web part of a group that you created by Teams.
+description: SomeUser created the site is mentioned in an activity of a SharePoint web part of a group that you created by Teams.
 author: simonxjx
 manager: willchen
 audience: ITPro

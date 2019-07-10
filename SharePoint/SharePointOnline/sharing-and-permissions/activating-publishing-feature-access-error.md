@@ -1,6 +1,6 @@
 ---
 title: Access Denied when you activate or deactivate for Publishing feature
-description: "Access Denied" when you activate or deactivate the SharePoint Server Publishing feature though you have Full Control permissions.
+description: Access Denied when you activate or deactivate the SharePoint Server Publishing feature though you have Full Control permissions.
 author: simonxjx
 manager: willchen
 audience: ITPro
