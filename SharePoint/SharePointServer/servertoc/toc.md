@@ -18,6 +18,8 @@
 ### [Change the compatibility level of content databases](../administration/compatibility-level-change.md)
 ### [Information about SharePoint Server 2019 On-Premises ](../administration/sharepoint-on-premises-2019-information.md)
 ### [Remove assembly reference from Sandbox solution](../administration/change-sandbox-solution.md)
+### [Presence information doesn't show](../../SharePointOnline/administration/presence-information-fails-showing.md)
+### [Troubleshooting SharePoint issues](../../SharePointOnline/administration/troubleshooting-sharepoint-site-issues.md)
 
 ## Apps
 
@@ -25,6 +27,10 @@
 ### [System.ArgumentException when signing out web application](../apps/system.argumentexception-exception-when-sign-out-of-web-application.md)
 ### [Can't start the Web Application service](../apps/cannot-start-an-application-service.md)
 ### [Access Services reports are not enabled](../Apps/running-access-reports-error.md)
+
+## InfoPath
+
+### [Differences of InfoPath Forms Services](../../SharePointOnline/InfoPath/infopath-forms-services.md)
 
 ## Installation and Setup
 
@@ -42,6 +48,10 @@
 ### [Feature id isn't assigned when saving a list as a template](../lists-and-libraries/feature-id-not-assigned-when-saving-a-list-as-template.md)
 ### [Attachment is missing from an email message](../lists-and-libraries/attachment-is-missing-in-email-message-to-library.md)
 ### [SharePoint App "Import Spreadsheet" fails](../lists-and-libraries/import-spreadsheet-app-error-an-unexpected-error-has-occurred-2147352567.md)
+### [The URL <file name> is invalid when uploading a file](../../SharePointOnline/lists-and-libraries/url-invalid-upload-file-to-list.md)
+### [Content Organizer doesn't comply with specified interval](../../SharePointOnline/lists-and-libraries/content-organizer-not-comply-with-interval.md)
+### [Information about dragging files into document libraries](../../SharePointOnline/lists-and-libraries/dragging-files-using-web-browser.md)
+### [Per-location view settings don't work at the folder level](../../SharePointOnline/lists-and-libraries/per-location-view-settings-fail-working.md)
 
 ## Migration Tool
 
@@ -57,6 +67,7 @@
 ### [Incomplete search results for choice type columns with multiple values](../search/incomplete-search-results-for-choice-type-columns-with-multiple-values.md)
 ### [ContractFilter error when querying from the non-default zone in a farm](../search/contractfilter-error-when-querying-from-the-non-default-zone.md)
 ### [Crawler has insufficient permissions](../Search/crawler-has-insufficient-permissions.md)
+### [Document preview and content type icon aren't displayed](../../SharePointOnline/Search/content-type-icon-not-display.md)
 
 ## Security
 
@@ -65,6 +76,7 @@
 ### [Event ID 8306 when activating Security Token Service Application](../security/event-id-8306-and-cannot-activate-security-token-service-application.md)
 ### [Server Error in '/' Application. Access to the path is denied](../security/access-to-the-path-is-denied-during-logon.md)
 ### ["401 unauthorized" when using OAuth and SAML claims](../security/401-unauthorized-error-when-using-oauth-and-saml-claims.md)
+### [Migrated accounts aren't resolved](../../SharePointOnline/Security/migrated-user-name-resolution-fails.md)
 
 ## Sharing and Permissions
 
@@ -75,6 +87,9 @@
 ### ["Access Denied" when a workflow sends an email](../sharing-and-permissions/access-denied-error-sharepoint-2010-when-workflow-sends-email-to-group.md)
 ### [Issue when connecting to a SharePoint Services Web site](../sharing-and-permissions/web-site-fails-connection.md)
 ### [Prompted for credentials when opening documents anonymously](../sharing-and-permissions/receive-credentials-prompting.md)
+### ["Access denied" error with an Approval Workflow task](../../SharePointOnline/sharing-and-permissions/access-denied-when-approve-workflow-task.md)
+### [Required permissions for managing Secure Store Service](../../SharePointOnline/sharing-and-permissions/managing-secure-store-service-app-permissions.md)
+### [Issue with activate or deactivate the Publishing feature](../../SharePointOnline/sharing-and-permissions/activating-publishing-feature-access-error.md)
 
 ## Sites
 
@@ -82,6 +97,9 @@
 ### ["Something went wrong" when accessing a site](../sites/something-went-wrong-when-access-site.md)
 ### [Site slowness because of STS certificate CRL checking](../sites/site-slowness-because-of-sts-certificate-crl-checking.md)
 ### [Blank screen when logging on to a SharePoint site](../sites/blank-screen-when-you-log-on-sites.md)
+### [Rich Text fields don't respond](../../SharePointOnline/Sites/rich-text-fields-fails-responding.md)
+### [Issue when saving a site as a template](../../SharePointOnline/Sites/fails-saving-site-as-template.md)
+### ["HTTP request is unauthorized" error](../../SharePointOnline/Sites/calendar-overlay-unsupported.md)
 
 ## Synchronization
 
@@ -93,8 +111,17 @@
 ### [Web part controls don't work after migration](../web-parts/web-part-controls-do-not-work-after-sites-are-migrated.md)
 ### [Issue on a site page with pages library web part](../web-parts/sorry-something-went-wrong-error-on-site-page-with-pages-library-web-part.md)
 ### [Organization Browser web part doesn't render for Windows Claims users](../web-parts/organization-browser-web-part-does-not-render-for-windows-claims-users.md)
+### [A list view Web Part for a tasks list doesn't filter values](../../SharePointOnline/Web-parts/list-view-web-part-not-filter-values.md)
 
 ## Workflows
 
 ### [Workflow timer job is stuck at "Pausing"](../workflows/workflow-timer-job-is-stuck-at-pausing.md)
 ### [Can't create workflows](../workflows/unable-to-create-or-edit-sharepoint-2013-workflow-sharepoint-designer.md)
+### [Workflows aren't available for IRM policies](../../SharePointHybrid/Workflows/irm-policies-fails-sharepoint-workflows-visible.md)
+### [A workflow doesn't execute](../../SharePointOnline/Workflows/workflow-lookup-fails-executing.md)
+### [A workflow doesn't complete](../../SharePointOnline/Workflows/workflow-using-impersonation-step-fails-completed.md)
+### [Replace List Item Permissions action fails](../../SharePointOnline/Workflows/replace-list-item-permission-fail.md)
+### [Publishing Approval workflow doesn't automatically start](../../SharePointOnline/Workflows/publishing-approval-workflow-fails-starting.md)
+### [Workflow issues after connecting to a site](../../SharePointOnline/Workflows/connecting-site-workflow-problems.md)
+### [Workflow platform creates Word files that can't be opened](../../SharePointOnline/Workflows/workflow-platform-created-word-fails-opening.md)
+### [Workflow contains blank values in output](../../SharePointOnline/Workflows/workflow-contains-blank-values.md)
