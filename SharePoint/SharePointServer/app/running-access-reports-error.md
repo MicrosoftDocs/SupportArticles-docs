@@ -1,6 +1,6 @@
 ---
 title: Unable to run a report in an Access 2010 Web database
-description: "Access Services reports are not enabled" error when running a report in an Access 2010 Web database.
+description: Access Services reports are not enabled when running a report in an Access 2010 Web database.
 author: simonxjx
 manager: willchen
 audience: ITPro

@@ -1,6 +1,6 @@
 ---
 title: SharePoint crawler has insufficient permissions to crawl file shares
-description: "The crawl account did not have sufficient privileges to access the security attributes of this file or folder" error when searching a file in the crawled file shares.
+description: The crawl account did not have sufficient privileges to access the security attributes of this file or folder when searching a file in the crawled file shares.
 author: simonxjx
 manager: willchen
 audience: ITPro
