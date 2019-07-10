@@ -73,8 +73,5 @@
 ## Send Emails
 ### [Changes in message store](../send-emails/smtp-submission-improvements.md)
 
-## Spam and Malware
-### [Set up safe senders and blocked senders](../spam-and-malware/set-up-safe-blocked-senders.md)
-
 ## Shared Mailboxes
 ### [Sent items aren't saved](../shared-mailboxes/sent-mail-is-not-saved.md)
