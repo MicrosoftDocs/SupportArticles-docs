@@ -1,6 +1,5 @@
 ﻿# [SharePoint Online Troubleshooting](../online.md)
 
-
 ## Administration
 
 ### [Issue with Send To connection](../administration/troubleshoot-send-to-connection-error.md)
@@ -9,14 +8,19 @@
 ### [Automatic EXIF property import unsupported](../administration/automatic-exif-property-import-unsupported.md)
 ### [Issue when browsing to a SharePoint site](../administration/access-to-sharepoint-online-is-monitored.md)
 ### [A blank page for SharePoint tenant](../administration/a-blank-page-for-sharepoint-tenant.md)
+### [Uncompiled audiences are present in SharePoint Online](../administration/uncompiled-audiences-are-present-in-office-365-for-enterprises.md)
+### [Online information about ULS log access](../administration/information-about-uls-log-access.md)
 
 ## Lists and Libraries
 
 ### [Documents aren't displayed in web browser with TLS 1.2](../lists-and-libraries/documents-not-displayed-in-web-browser-when-using-tls-1.2.md)
 ### [Error when view or edit in Word or PowerPoint Online](../lists-and-libraries/error-when-view-or-edit-in-browser.md)
 ### [Excel survey doesn't have full functionality](../lists-and-libraries/excel-survey-does-not-have-full-functionality-when-click-new.md)
-### [Non-CDN-enabled Picture Library Slideshow web part not working](../lists-and-libraries/non-cdn-enabled-picture-library-slideshow-web-part-no-longer-switches-automatically-to-new-images.md)
 ### [Issue when opening documents in client applications](../lists-and-libraries/the-webpage-cannot-be-displayed-when-open-an-office-document.md)
+
+## Performance
+
+### [A site collection has exceeded its usage quota](../performance/site-collection-has-exceeded-its-usage-quota-or-it-is-running-out-of-resources.md)
 
 ## Search
 
@@ -27,6 +31,7 @@
 ## Security
 
 ### [Can't force Modern Authentication with using Connect-SPOService](../security/cannot-force-modern-authentication.md)
+### [Online cross-domain iframe requests are blocked](../security/cross-domain-iframe-requests-are-blocked.md)
 
 ## Sharing and Permissions
 
@@ -37,22 +42,22 @@
 ### [Anonymous users are prompted for credentials](../sharing-and-permissions/anonymous-users-are-prompted-for-credentials-in-library.md)
 ### ["Access denied" error with an Approval Workflow task](../sharing-and-permissions/access-denied-when-approve-workflow-task.md)
 ### ["Access Denied" error with an online user](../sharing-and-permissions/access-denied-for-office-365-users.md)
+### [You are not allowed to create team sites](../sharing-and-permissions/issue-when-you-click-new-site-on-followed-sites-page.md)
 
 ## Sites
 
 ### [A URL that resides under a root site collection is broken](../sites/url-that-resides-under-root-site-collection-is-broken.md)
-### [Uncompiled audiences are present in SharePoint Online](../sites/uncompiled-audiences-are-present-in-office-365-for-enterprises.md)
 ### [Online sites don't update to the 25 terabyte limit](../sites/sites-do-not-automatically-update-to-the-25-terabyte-limit.md)
-### [A site collection has exceeded its usage quota](../sites/site-collection-has-exceeded-its-usage-quota-or-it-is-running-out-of-resources.md)
 ### ["Report contains no data" error with the "Content viewing" audit log report](../sites/report-contains-no-data-when-save-the-content-viewing-audit-log.md)
 ### [Top navigation bar displays either Sites or Newsfeed instead of OneDrive](../sites/office-365-top-navigation-bar-displays-either-sites-or-newsfeed.md)
-### [You are not allowed to create team sites](../sites/issue-when-you-click-new-site-on-followed-sites-page.md)
-### [Online information about ULS log access](../sites/information-about-uls-log-access.md)
 ### ["You do not have an e-mail address" error with creating an online alert](../sites/do-not-have-an-e-mail-address-when-create-an-alert.md)
 ### [Default promoted sites appear on the Online Sites page after you delete them](../sites/default-promoted-sites-appear-page-after-you-delete-them.md)
-### [Online cross-domain iframe requests are blocked](../sites/cross-domain-iframe-requests-are-blocked.md)
 ### [Can't create an online new site based on a site template](../sites/cannot-create-new-site-based-on-template.md)
 ### [Can't access online sites with a full redelegation domain](../sites/cannot-access-sites-by-using-a-domain.md)
+
+## Web Parts
+
+### [Non-CDN-enabled Picture Library Slideshow web part not working](../web-parts/non-cdn-enabled-picture-library-slideshow-web-part-no-longer-switches-automatically-to-new-images.md)
 
 ## Workflows
 
