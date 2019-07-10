@@ -1,6 +1,6 @@
 ---
 title: Migrated user across forests is not found in People Picker
-description: "The user does not exist or is not unique" error for migrated users across forests in SharePoint.
+description: The user does not exist or is not unique error for migrated users across forests in SharePoint.
 author: simonxjx
 manager: willchen
 audience: ITPro
