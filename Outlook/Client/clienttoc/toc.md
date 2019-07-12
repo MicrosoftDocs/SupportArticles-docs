@@ -10,7 +10,7 @@
 ### [Incorrect folder names](../folders/incorrect-folder-names.md)
 
 ## IMAP/POP
-### [Can't use Quick Steps for IMAP/POP accont](../imap_pop/outlook-quick-steps-issues.md)
+### [Can't use Quick Steps](../imap_pop/outlook-quick-steps-issues.md)
 
 ## Meetings
 ### [Meeting tracking tab isn't updated](../meetings/meeting-tracking-tab-not-updated.md)
