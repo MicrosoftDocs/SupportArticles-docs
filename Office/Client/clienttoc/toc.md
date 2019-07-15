@@ -9,6 +9,19 @@
 ### [.LDB files](../access/ldb-file-description.md)
 ### [Runtime error 2147319779 (8002801d) library not registered](../access/library-unregistered-runtime-error.md)
 ### [ADODB code errors with adBiglnt data](../access/adBigInt-data-type-errors.md)
+### [Can't use ODBC driver or OLEDB provider](../access/cannot-use-odbc-or-oledb.md)
+### [Can't open a previous created database](../access/database-previous-version.md)
+### [Query must have at least one destination field](../access/query-must-have-at-least-one-destination-field.md)
+### [Crashes after install security update MS16-004](../access/access-crashes-update-ms16-004.md)
+### [Not a valid Teradata SQL token when running outer join queries](../access/invalid-teradata-token.md)
+### [Access cache formats for SharePoint](../access/access-cache-formats.md)
+### [Could not deploy package when deploying DACPAC files](../access/deploy-dacpac-access-web-app-package.md)
+### [Issue when loading an Access web app](../access/load-access-web-app-in-ie.md)
+### [Linked table to SQL Server database returns #Deleted](../access/access-linked-table-deleted.md)
+### [ODBC Data Source Administrator crashes when adding a system DSN](../access/odbc-administrator-crashes.md)
+### [Linked table to a SharePoint list returns #Deleted](../access/access-linked-table-return-deleted.md)
+### [Cannot update. Database or object is read-only](../access/database-or-object-is-read-only.md)
+### ["Linked table connection failed" when using Azure AD](../access/linked-table-connection-failed.md)
 
 ## Activation/Installation
 ### [Install and activate Office 2013](../activation-installation/install-and-activate-office-2013.md)
@@ -22,6 +35,7 @@
 ### [Can't pass the Welcome Screen in Office for Mac](../activation-installation/office-for-mac-welcome-screen.md)
 ### [Issue with changing Office 2010 product key](../activation-installation/office-2010-product-key-change-error.md)
 ### [Known issues with Office for Mac](../activation-installation/office-for-mac-issues-macos-10-7.md)
+### [Enable Office 2010 to run on a terminal server](../activation-installation/office-pro-plus-2010-terminal-server.md)
 
 ## Error Messages
 ### [Can't locate proxy server when clicking hyperlink](../error-messages/cannot-locate-server-when-click-hyperlink.md)
@@ -42,6 +56,11 @@
 ### [Issue with starting Office applications](../error-messages/microsoft-program-cannot-be-opened.md)
 ### [Issue with updating a data connection or change PivotTable fields](../error-messages/connection-failed-to-refresh.md)
 ### [Mobile viewing PDF files with Office Web Apps](../error-messages/mobile-viewing-pdf-files.md)
+### [Can't open this add-in from localhost when loading an add-in](../error-messages/cannot-open-add-in-from-localhost.md)
+### [0x80041015 when starting an Office application](../error-messages/0x80041015-start-office-program.md)
+### [Issue when Office 365 activates Skype for Business](../error-messages/office-365-activates-skype.md)
+### [Background task activation is spurious](../error-messages/background-task-activation-spurious.md)
+### [Issue when launching Office in Microsoft Store app](../error-messages/windows-cannot-access-device.md)
 
 ## Excel
 ### [Convert Excel column numbers](../excel/convert-excel-column-numbers.md)
@@ -166,11 +185,17 @@
 ## Project
 ### [Issue when change user's status to inactive in Project](../project/eventing-service-error-when-changing-user-status-to-inactive-microsoft-project.md)
 ### [Project opens calendar from a different instance](../project/project-opens-calendar-from-different-instance-when-editing.md)
+### [Sync with SharePoint tasks list](../project/sync-with-tasks-from-project.md)
+### [Removed users are not inactivated](../project/removed-erp-group-user-activated.md)
 
 ## Settings
 ### [Error in Office when file is blocked](../settings/file-blocked-in-office.md)
 ### [Task panes in Office](../settings/office-program-task-panes.md)
 ### [Use registry to clear the most recently used files list](../settings/clear-most-recently-used-file.md)
+
+## Support
+### [Support for 2013 versions of Office 365 ProPlus ends](../support/2013-versions-of-office-365.md)
+### [Office 2007 has reached end of extended support](../support/office-2007-not-support.md)
 
 ## Troubleshooting
 ### [Open network file slow or stop responding](../troubleshooting/office-slow-or-stop-responding.md)
