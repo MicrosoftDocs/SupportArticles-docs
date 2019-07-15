@@ -8,9 +8,9 @@ ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
 appliesto:
--Office 365 ProPlus
--Office 365 Home
--Office 365 Personal
+- Office 365 ProPlus
+- Office 365 Home
+- Office 365 Personal
 ---
 
 # Support for 2013 versions of Office 365 ProPlus ends February 28, 2017

@@ -8,7 +8,7 @@ ms.service: sharepoint-online
 ms.topic: article
 ms.author: v-six
 appliesto:
--Office apps for the web
+- Office apps for the web
 ---
 
 # “Windows cannot access specified device, path, or file” error launching Office
@@ -26,14 +26,14 @@ Windows cannot access the specified device, path, or file. You may not have the 
 
 ## Cause
 
-Office apps won’t launch when Folder Redirection for AppData folder is enabled.
+Office apps won't launch when Folder Redirection for AppData folder is enabled.
 
 ## Resolution
 
 This issue has been resolved in the following Microsoft Knowledge Base articles:
 
-- RS4: [April 25, 2019—KB4493437 (OS Build 17134.753)]()
-- RS5: [May 3, 2019—KB4495667 (OS Build 17763.475)]()
+- RS4: [April 25, 2019—KB4493437 (OS Build 17134.753)](https://support.microsoft.com/help/4493437)
+- RS5: [May 3, 2019—KB4495667 (OS Build 17763.475)](https://support.microsoft.com/help/4495667)
 
 These KBs address an issue that prevents certain apps from launching when you set folder redirection for the Roaming AppData folder to a network path.
 
@@ -49,7 +49,7 @@ If the issue persists, try adding permission for all users to access the %appdat
 
 1. Select the user or users required to access this folder.
 
-1. Ensure that “List folder contents” is checked under Permission for Everyone.
+1. Ensure that "List folder contents" is checked under Permission for Everyone.
 
 1. Select **OK**.
 

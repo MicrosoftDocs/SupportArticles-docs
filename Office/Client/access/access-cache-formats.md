@@ -8,12 +8,12 @@ ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
 appliesto:
--Access for Office 365
--Access 2019
--Access 2016
--Access 2013
--Access 2010
--Microsoft Office Access 2007
+- Access for Office 365
+- Access 2019
+- Access 2016
+- Access 2013
+- Access 2010
+- Microsoft Office Access 2007
 ---
 
 # Access cache formats for SharePoint lists and document libraries

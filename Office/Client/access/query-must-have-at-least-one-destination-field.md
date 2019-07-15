@@ -8,13 +8,13 @@ ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
 appliesto:
--Access for Office 365
--Access 2019
--Access 2016
--Access 2013
--Access 2010
--Microsoft Office Access 2007
--Microsoft Office Access 2003
+- Access for Office 365
+- Access 2019
+- Access 2016
+- Access 2013
+- Access 2010
+- Microsoft Office Access 2007
+- Microsoft Office Access 2003
 ---
 
 # "Query must have at least one destination field" when you run an Access query

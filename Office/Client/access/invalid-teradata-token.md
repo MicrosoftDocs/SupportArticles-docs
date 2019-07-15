@@ -8,10 +8,10 @@ ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
 appliesto:
--Access for Office 365
--Access 2019
--Access 2016
--Access 2013
+- Access for Office 365
+- Access 2019
+- Access 2016
+- Access 2013
 ---
 
 # "Not a valid Teradata SQL token" error when you run outer join queries
