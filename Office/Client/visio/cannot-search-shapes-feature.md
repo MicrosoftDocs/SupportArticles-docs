@@ -8,9 +8,9 @@ ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
 appliesto:
--Microsoft Office Visio Professional 2007
--Microsoft Office Visio Standard 2003
--Visio
+- Microsoft Office Visio Professional 2007
+- Microsoft Office Visio Standard 2003
+- Visio
 ---
 
 # Search for Shapes feature on the Internet is discontinued

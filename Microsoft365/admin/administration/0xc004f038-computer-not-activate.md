@@ -8,9 +8,9 @@ ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
 appliesto:
--Office Professional Plus 2016
--Office Professional Plus 2013
--Office Standard 2013
+- Office Professional Plus 2016
+- Office Professional Plus 2013
+- Office Standard 2013
 ---
 
 # "0xC004F038: The computer could not be activated" error in KMS activation
