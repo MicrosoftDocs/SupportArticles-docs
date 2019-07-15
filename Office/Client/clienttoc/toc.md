@@ -206,6 +206,10 @@
 ### [Can't embed Adobe OpenType fonts](../troubleshooting/fails-embedding-adobe-opentype-font.md)
 ### [Damaged documents in Word for Mac](../troubleshooting/troubleshoot-damaged-word-document.md)
 
+## Visio
+### [This is not a valid win32 application when installing Office 365](../visio/not-a-valid-win32-application-error.md)
+### [Search for Shapes feature is discontinued](../visio/cannot-search-shapes-feature.md)
+
 ## Word
 ### [Damaged documents in Word](../word/damaged-documents-in-word.md)
 ### [Issues when start or use Word](../word/issues-when-start-or-use-word.md)
