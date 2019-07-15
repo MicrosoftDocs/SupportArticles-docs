@@ -4,6 +4,7 @@
 ### [Reset Office 365 ProPlus activation state](../activation/reset-office-365-proplus-activation-state.md)
 ### [Control the blocking of OLE/COM](../activation/control-block-ole-com.md)
 ### [Issue with activate or sign in to Office Mobile](../activation/permission-error-activating-office-mobile.md)
+### [Online Services Sign In Assistant error when activating Office](../activation/sign-in-assistant-error.md)
 
 ## Active Directory
 ### [AD FS endpoint connection issues](../active-directory/ad-fs-endpoint-connection-issue.md)
@@ -46,6 +47,13 @@
 ### ["Invalid provider specified" with using Office 2016](../administration/invalid-provider-specified-error.md)
 ### [Use Office 365 PowerShell to manage Microsoft Planner licenses](../administration/how-to-use-office-365-powershell-to-manage-microsoft-planner-licenses.md)
 ### [Block OneDrive use from Office](../administration/block-onedrive-use-from-office.md)
+### [0xC004F038 computer could not be activated in KMS](../administration/0xc004f038-computer-not-activate.md)
+### [Can't start this app when installing an add-in](../administration/cannot-install-office-add-in.md)
+### [Keep on running Office 365 ProPlus 2013](../administration/run-office-365-proplus-2013.md)
+### [Troubleshoot Cortana issues](../administration/issues-in-cortana.md)
+### [Your session has expired in Office Online](../administration/your-session-has-expired-error.md)
+### [Disabled Office 365 Sway tile continues to appear in App Launcher](../administration/disabled-sway-tile-appear.md)
+### [Full Access permissions aren't working after a migration](../administration/office-365-dedicated-itar-vnext.md)
 
 ## Authentication
 ### [Enable Office 365 ProPlus ULS logging](../authentication/how-to-enable-office-365-proplus-uls-logging.md)
@@ -58,6 +66,9 @@
 ### [Sign-in issues with Office modern authentication](../authentication/sign-in-issue-with-modern-auth.md)
 ### [Can't sign in to an Office 2016 for Mac app](../authentication/sign-in-to-office-2016-for-mac-fail.md)
 ### [Issue with reset admin password](../authentication/issue-with-reset-admin-password.md)
+### [Can't sign in to Office 365, Azure, or Intune](../authentication/sign-in-to-office-365-azure-intune.md)
+### [8004789A when signing in to Office 365](../authentication/federated-user-sign-in-to-office-365.md)
+### [Can't open an IRM-protected document with sign-in prompts](../authentication/cannot-open-irm-protected-document.md)
 
 ## Licensing
 ### [License issue when retain Online mailbox](../licensing/license-issue-when-retain-online-mailbox.md)
@@ -65,6 +76,9 @@
 ### [A user with this name already exists](../licensing/office-365-user-with-name-already-exists.md)
 ### [50,000 seats RIGHTSMANAGEMENT_ADHOC SKU](../licensing/rights-management-adhoc-sku-office-365.md)
 ### [Office Feature Updates task](../licensing/office-feature-updates-task-faq.md)
+### [Click-to-Run Update Support Tool](../licensing/click-to-run-update-support-tool.md)
+### [Office C2R-P release for Project and Visio](../licensing/office-click-to-run-perpetual.md)
+### [Office 365 subscription automatic license renewal fails](../licensing/subscription-license-renewal-fail.md)
 
 ## Security
 ### [Repeatedly prompted for credentials](../security/access-denied-when-connect-to-office-365.md)
@@ -78,7 +92,14 @@
 ### [Update or repair federated domain settings](../security/update-federated-domain-office-365.md)
 ### [Data Loss Protection (DLP) policy tips](../security/troubleshooting-data-loss-protection-policy-tips.md)
 ### [Specify trusted sources for Digital Certificates](../security/specify-trusted-sources.md)
+### [Security settings for Dynamic Data Exchange in Excel Trust Center](../security/security-settings.md)
+
+## Support
+### [No support for multiple Office versions with RDS](../support/multiple-office-versions-rds.md)
+### [Collect a Network Monitor trace in Office 365](../support/collect-network-monitor-trace.md)
+### [Office 365 changes build numbers to a five-digit format](../support/build-number-five-digit.md)
 
 ## Troubleshooting
 ### [Use registry to override default behavior with recovery](../troubleshooting/registry-override-default-behavior.md)
 ### [Application cannot be started](../troubleshooting/office-365-application-cannot-be-started.md)
+### [All applications are installed when installing Skype for Business](../troubleshooting/install-skype-for-business-2016.md)
