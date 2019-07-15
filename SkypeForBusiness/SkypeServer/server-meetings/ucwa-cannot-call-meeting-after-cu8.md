@@ -8,7 +8,7 @@ ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: jimmyv
 appliesto:
--  Skype for Business Server 2015
+-  Microsoft Skype for Business Server 2015
 ---
 
 # UCWA client cannot make a call or join a meeting after installing Skype for Business Server update 6.0.9319.537 
