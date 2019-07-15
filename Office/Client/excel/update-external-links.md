@@ -8,10 +8,10 @@ ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
 appliesto:
--Excel for Office 365
--Excel 2019
--Excel 2016
--Excel 2013
+- Excel for Office 365
+- Excel 2019
+- Excel 2016
+- Excel 2013
 ---
 
 # Error message when you update external links that contain a three-dimensional reference

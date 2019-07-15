@@ -8,7 +8,7 @@ ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
 appliesto:
--Excel
+- Excel
 ---
 
 # Unable to export to Excel from SharePoint Online

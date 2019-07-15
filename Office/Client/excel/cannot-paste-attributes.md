@@ -8,12 +8,12 @@ ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
 appliesto:
--Excel for Office 365
--Excel 2019
--Excel 2016
--Excel 2013
--Excel 2010
--Microsoft Office Excel 2007
+- Excel for Office 365
+- Excel 2019
+- Excel 2016
+- Excel 2013
+- Excel 2010
+- Microsoft Office Excel 2007
 ---
 
 # You cannot paste any attributes into a workbook in another instance of Excel
