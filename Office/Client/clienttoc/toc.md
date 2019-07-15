@@ -8,6 +8,7 @@
 ### [OLE DB Provider for Jet and ODBC driver](../access/jet-odbc-driver-available-32-bit-version.md)
 ### [.LDB files](../access/ldb-file-description.md)
 ### [Runtime error 2147319779 (8002801d) library not registered](../access/library-unregistered-runtime-error.md)
+### [ADODB code errors with adBiglnt data](../access/adBigInt-data-type-errors.md)
 
 ## Activation/Installation
 ### [Install and activate Office 2013](../activation-installation/install-and-activate-office-2013.md)
