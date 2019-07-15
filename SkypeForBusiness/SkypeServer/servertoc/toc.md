@@ -47,6 +47,7 @@
 ### [Issue when join Meeting Broadcast as event team member](../server-meetings/issue-join-meeting-broadcast.md)
 ### [Meeting invitations not sent from Outlook](../server-meetings/meeting-invitations-not-sent-from-outlook.md)
 ### [Video is missing in meeting recording](../server-meetings/video-missing-meeting-recording.md)
+### [UCWA cannot make a call or join a meeting after CU8](../server-meetings/ucwa-cannot-call-meeting-after-cu8.md)
 
 ## Sign-in
 ### [Issues in mobile client for Google Android](../server-sign-in/issues-mobile-client-for-android.md)
