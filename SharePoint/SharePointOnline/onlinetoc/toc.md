@@ -16,6 +16,8 @@
 ### [Troubleshoot site collection upgrade issues](../administration/troubleshoot-site-collection-upgrade-issue.md)
 ### [Presence information doesn't show](../administration/presence-information-fails-showing.md)
 ### [Troubleshooting SharePoint issues](../administration/troubleshooting-sharepoint-site-issues.md)
+### [Using relative URLs isn't supported](../administration/using-relative-urls-not-supported.md)
+### [Third-party tools changes support](../administration/third-party-tools-change-support.md)
 
 ## Apps
 
@@ -92,6 +94,7 @@
 ### [Search results isn't rerutned](../Search/search-results-not-return.md)
 ### [Search doesn't provide results from another language](../Search/no-search-results-from-another-language.md)
 ### [Document preview and content type icon aren't displayed](../Search/content-type-icon-not-display.md)
+### [Private OneDrive for Business results isn't included](../Search/private-onedrive-results-not-included.md)
 
 ## Security
 
@@ -130,6 +133,7 @@
 ### [Credential prompts after resting mouse pointer over a user name](../sharing-and-permissions/rest-mouse-pointer-on-user-name.md)
 ### [Required permissions for managing Secure Store Service](../sharing-and-permissions/managing-secure-store-service-app-permissions.md)
 ### [Issue with activate or deactivate the Publishing feature](../sharing-and-permissions/activating-publishing-feature-access-error.md)
+### ["Everyone except external users" group is removed](../sharing-and-permissions/everyone-except-external-user-removed.md)
 
 ## Sites
 
