@@ -1,8 +1,12 @@
 # [OneDrive for Business Troubleshooting](../onedrive.md)
- 
+
+## Administration
+
+### [Expect after a user name change](../administration/expect-after-name-change.md)
+
 ## List and Libraries
 
-### [401 error when Graph API access OneDrive data](../401-error-when-using-graph-api-to-access-data.md)
+### [401 error when Graph API access OneDrive data](../lists-and-libraries/401-error-when-using-graph-api-to-access-data.md)
 ### [A link to a shared PDF file prompts users to download the file](../../SharePointOnline/lists-and-libraries/prompt-user-download-shared-pdf.md)
 
 ## Security
