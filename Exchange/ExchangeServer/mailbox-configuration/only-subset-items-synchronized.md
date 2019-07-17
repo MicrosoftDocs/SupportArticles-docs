@@ -89,7 +89,7 @@ To reduce the effect of the Outlook offline data file (.ost), the default number
 If you have to change the number of selected months of email to synchronize with your cached mode .ost file, follow these steps:
 
 1. Start Outlook.    
-2. On the **File **tab, click **Account Settings**, and then click **Account Settings**.    
+2. On the **File** tab, click **Account Settings**, and then click **Account Settings**.    
 3. On the **E-mail** tab, double-click your Microsoft Exchange account.    
 4. In the **Change Account** dialog box, drag the **Mail to keep offline** slider to the desired number of months or to **All** to synchronize all email messages.
 
@@ -154,6 +154,6 @@ The Group Policy template files for Outlook 2016, Outlook 2019 and Outlook for 
 - The **x.0** placeholder represents your version of Office (16.0 = Office 2016, Office 2019 or Outlook for Office 365, Office 2019 or Outlook for Office 365, 15.0 = Office 2013).    
 - The Outlook 2016, Outlook 2019 or Outlook for Office 365 user interface (UI) lets you set the **Mail to keep offline** setting to the additional values of 3 days, 1 week, and 2 weeks. The May 3, 2016, update for Outlook 2016 allows you to set these additional values by using the SyncWindowSettingDays registry data. For more information about how to configure Outlook 2016 with these additional values, see the following article in the Microsoft Knowledge Base: 
 
-    [3115009](https://support.microsoft.com/help/3115009) Update lets administrators set additional default Sync Slider windows for new Exchange accounts in Outlook 2016.    
-- Administrators who change the existing GPO values should be aware of the potential to impact network traffic when raising the value of the **SyncWindowSetting**. When GPO changes **SyncWindowSetting** to **any** higher value, Outlook will do a full OST resynchronization when the new value applies. For a single client, this is generally not problematic. Applying a higher value to hundreds or more clients at the same time could adversely affect available network bandwidth. Decreasing the value will have no such impact because Outlook will do a local-only deletion of excess data that's cached in the OST files of all clients to receive the lower **SyncWindowSetting** value.
-- Since Outlook only synchronizes a maximum of 1 year for groups, you are unable to search for older messages. To work around this Outlook limitation, use Outlook on the Web to view and search older messages in groups.
+    [3115009](https://support.microsoft.com/help/3115009) Update allows administrators to set additional default mail and calendar synchronization windows for new Exchange accounts in Outlook 2016.    
+- Administrators who change the existing GPO values should be aware of the potential to impact network traffic when raising the value of the **SyncWindowSetting**. When GPO changes **SyncWindowSetting** to any higher value, Outlook will do a full OST resynchronization when the new value applies. For a single client, this is generally not problematic. Applying a higher value to hundreds or more clients at the same time could adversely affect available network bandwidth. Decreasing the value will have no such impact because Outlook will do a local-only deletion of excess data that's cached in the OST files of all clients to receive the lower **SyncWindowSetting** value.
+- Since Outlook only synchronizes a maximum of 1 year for groups, you are unable to search for older messages. To work around this Outlook limitation, use Outlook on the Web to view and search for older messages in groups.
