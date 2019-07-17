@@ -47,7 +47,7 @@ Additionally, if you search for email items in your mailbox, the search results 
 If you click the **More** link, additional items that meet your search criteria are displayed in the search results. This occurs because Outlook retrieves the additional items from your mailbox on the server that's running Exchange Server.
 
 > [!NOTE]
-> This behavior can also occur in the RSS Feeds folder in your Exchange mailbox.  Also, Only a subset of items may be synchronized in groups in Outlook 2016 or Outlook for Office 365.
+> This behavior can also occur in the RSS Feeds folder in your Exchange mailbox.  Also, only a subset of items may be synchronized in groups in Outlook 2016 or Outlook for Office 365.
 
 ## Cause
 
@@ -131,7 +131,7 @@ Office 2016, Office 2019, or Outlook for Office 365: [https://www.microsoft.com/
 Office 2013: [https://www.microsoft.com/download/details.aspx?id=35554](https://www.microsoft.com/download/details.aspx?id=35554) 
  
 The Group Policy template files for Outlook 2016, Outlook 2019 and Outlook for Office 365 are Outlook16.admxand Outllk16.adml. The files for Outlook 2013 are Outlk15.admx and Outlk15.adml. If you use Group Policy to manage this setting, the following registry data is used by Outlook:
-   
+
 **Key**: HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\**x.0**\Outlook\Cached Mode
 
 **DWORD**: SyncWindowSetting
