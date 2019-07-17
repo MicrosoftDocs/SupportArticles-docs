@@ -28,7 +28,7 @@ Consider the following scenario:
     - If you're running Outlook 2013, the account must be your primary account.    
 - Your Exchange email account is configured to use Cached Exchange Mode.    
  
-In this scenario, the email folders for these mailboxes may show item counts that are lower than expected. Additionally, older items seem to be missing, and you receive the following message and hyperlink at the bottom of the list of items:
+In this scenario, the email folders for these mailboxes may show item counts that are lower than expected. Additionally, older items may seem to be missing, and you might receive the following message and hyperlink at the bottom of the list of items:
 
 **There are more items in this folder on the server** 
 
@@ -44,17 +44,14 @@ Additionally, if you search for email items in your mailbox, the search results 
 
 **More** 
 
-If you click the **More **link, additional items that meet your search criteria are displayed in the search results. This occurs because Outlook retrieves the additional items from your mailbox on the server that's running Exchange Server.
+If you click the **More** link, additional items that meet your search criteria are displayed in the search results. This occurs because Outlook retrieves the additional items from your mailbox on the server that's running Exchange Server.
 
 > [!NOTE]
-> This behavior can also occur in the RSS Feeds folder in your Exchange mailbox.  
-
-> [!NOTE]
-> Only a subset of items may also be synchronized in groups in Outlook 2016 or Outlook for Office 365. 
+> This behavior can also occur in the RSS Feeds folder in your Exchange mailbox.  Also, Only a subset of items may be synchronized in groups in Outlook 2016 or Outlook for Office 365.
 
 ## Cause
 
-This behavior occurs because the Cached Exchange mode **Mail to keep offline** setting is configured to a value other than All. For example, the following screen shot shows a profile that's configured to use Cached Exchange Mode and the **Mail to keep offline**setting is set to a default value of **12 months**.
+This behavior occurs because the Cached Exchange mode **Mail to keep offline** setting is configured to a value other than **All**. For example, the following screen shot shows a profile that's configured to use Cached Exchange Mode and the **Mail to keep offline** setting is set to a default value of **12 months**.
 
 ![Mail to keep offline](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4052177_en_1)
 
@@ -92,9 +89,9 @@ To reduce the effect of the Outlook offline data file (.ost), the default number
 If you have to change the number of selected months of email to synchronize with your cached mode .ost file, follow these steps:
 
 1. Start Outlook.    
-2. On the **File **tab, click **Account Settings**, and then click **Account Settings**.    
+2. On the **File** tab, click **Account Settings**, and then click **Account Settings**.    
 3. On the **E-mail** tab, double-click your Microsoft Exchange account.    
-4. In the **Change Account** dialog box, drag the **Mail to keep offline** slider to the desired number of months or to **All **to synchronize all email messages.
+4. In the **Change Account** dialog box, drag the **Mail to keep offline** slider to the desired number of months or to **All** to synchronize all email messages.
 
     ![Change Account](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4052178_en_1)    
 5. Click **Next**.    
@@ -114,7 +111,7 @@ This message is shown in the following screen shot.
 
 ![message](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4052179_en_1)
 
-Under similar conditions, if you search for items in your mailbox and you don't have connectivity with the Exchange server, the following message is displayed underneath the search results:
+Under similar conditions, if you search for items in your mailbox and you don't have connectivity with the Exchange server, the following message is displayed below the search results:
 
 **Server unavailable. \<x> months of results shown.**
 
@@ -157,6 +154,6 @@ The Group Policy template files for Outlook 2016, Outlook 2019 and Outlook for 
 - The **x.0** placeholder represents your version of Office (16.0 = Office 2016, Office 2019 or Outlook for Office 365, Office 2019 or Outlook for Office 365, 15.0 = Office 2013).    
 - The Outlook 2016, Outlook 2019 or Outlook for Office 365 user interface (UI) lets you set the **Mail to keep offline** setting to the additional values of 3 days, 1 week, and 2 weeks. The May 3, 2016, update for Outlook 2016 allows you to set these additional values by using the SyncWindowSettingDays registry data. For more information about how to configure Outlook 2016 with these additional values, see the following article in the Microsoft Knowledge Base: 
 
-    [3115009](https://support.microsoft.com/help/3115009) Update lets administrators set additional default Sync Slider windows for new Exchange accounts in Outlook 2016.    
-- Administrators who change the existing GPO values should be aware of the potential to impact network traffic when raising the value of the** SyncWindowSetting**. When GPO changes **SyncWindowSetting** to**any** higher value, Outlook will do a full OST resynchronization when the new value applies. For a single client, this is generally not problematic. Applying a higher value to hundreds or more clients at the same time could adversely affect available network bandwidth. Decreasing the value will have no such impact because Outlook will do a local-only deletion of excess data that's cached in the OST files of all clients to receive the lower **SyncWindowSetting** value.
-- Since Outlook only synchronizes a maximum of 1 year for groups, you are unable to search for older messages. To work around this Outlook limitation, use Outlook on the Web to view and search older messages in groups.
+    [3115009](https://support.microsoft.com/help/3115009) Update allows administrators to set additional default mail and calendar synchronization windows for new Exchange accounts in Outlook 2016.    
+- Administrators who change the existing GPO values should be aware of the potential to impact network traffic when raising the value of the **SyncWindowSetting**. When GPO changes **SyncWindowSetting** to any higher value, Outlook will do a full OST resynchronization when the new value applies. For a single client, this is generally not problematic. Applying a higher value to hundreds or more clients at the same time could adversely affect available network bandwidth. Decreasing the value will have no such impact because Outlook will do a local-only deletion of excess data that's cached in the OST files of all clients to receive the lower **SyncWindowSetting** value.
+- Since Outlook only synchronizes a maximum of 1 year for groups, you are unable to search for older messages. To work around this Outlook limitation, use Outlook on the Web to view and search for older messages in groups.
