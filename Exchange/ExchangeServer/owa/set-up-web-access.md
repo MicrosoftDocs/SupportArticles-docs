@@ -7,6 +7,13 @@ audience: ITPro
 ms.service: exchange-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Exchange Server 2016 Enterprise Edition
+- Exchange Server 2016 Standard Edition
+- Exchange Server 2013 Enterprise
+- Exchange Server 2013 Standard Edition
+- Exchange Server 2010 Enterprise
+- Exchange Server 2010 Standard
 ---
 
 # How to set up Exchange on the web to access Exchange Server
