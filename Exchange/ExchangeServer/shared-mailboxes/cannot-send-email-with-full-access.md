@@ -7,7 +7,7 @@ audience: ITPro
 ms.service: exchange-powershell
 ms.topic: article
 ms.author: v-six
-appliesto
+appliesto:
 - Outlook 2019
 - Outlook 2016
 - Outlook 2013
