@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: exchange-online
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Exchange Online
 ---
 
 # "You can't use the domain because it's not an accepted domain for your organization" error when you run the Add-RecipientPermission cmdlet

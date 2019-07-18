@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: exchange-online
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Exchange Online
 ---
 
 # "550 5.7.64 TenantAttribution; Relay Access Denied SMTP" error when users send mail externally in Office 365
