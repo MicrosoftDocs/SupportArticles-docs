@@ -7,6 +7,23 @@ audience: ITPro
 ms.service: exchange-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Windows 7 Enterprise
+- Windows 7 Home Basic
+- Windows 7 Professional
+- Windows 7 Ultimate
+- Windows 8
+- Windows 8.1
+- Exchange Server 2010 Enterprise
+- Exchange Server 2010 Standard
+- Windows Server 2008 R2 Datacenter
+- Windows Server 2008 R2 Enterprise
+- Windows Server 2008 R2 Standard
+- Windows Server 2012 Standard
+- Windows Server 2012 Standard
+- Lync 2010
+- Microsoft Dynamics AX 2009
+- Microsoft Office Communicator 2007 R2
 ---
 
 # Microsoft Diagnostics Services—Self-Help diagnostic portal

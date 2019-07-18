@@ -7,6 +7,9 @@ audience: ITPro
 ms.service: exchange-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Exchange Server 2010 Enterprise
+- Exchange Server 2010 Standard
 ---
 
 # User cannot create an appointment or all day event in the calendar of a shared mailbox in an Exchange Server 2007 or 2010 environment

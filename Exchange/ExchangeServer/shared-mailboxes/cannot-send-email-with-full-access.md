@@ -7,6 +7,15 @@ audience: ITPro
 ms.service: exchange-powershell
 ms.topic: article
 ms.author: v-six
+appliesto
+- Outlook 2019
+- Outlook 2016
+- Outlook 2013
+- Microsoft Outlook 2010
+- Exchange Online
+- Exchange Server 2016 Enterprise Edition
+- Exchange Server 2016 Standard Edition
+- Exchange Server 2013 Enterprise
 ---
 
 # Can't send an email message when Full Access permission is granted to a shared mailbox in Exchange Server

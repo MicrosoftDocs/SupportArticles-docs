@@ -7,6 +7,13 @@ audience: ITPro
 ms.service: exchange-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Exchange Server 2016 Enterprise Edition
+- Exchange Server 2016 Standard Edition
+- Exchange Server 2013 Enterprise
+- Exchange Server 2013 Standard Edition
+- Exchange Server 2010 Standard
+- Exchange Server 2010 Enterprise
 ---
 
 # "HTTP 400 Bad Request" error when proxying HTTP requests from an Exchange Server to a previous version of Exchange Server
