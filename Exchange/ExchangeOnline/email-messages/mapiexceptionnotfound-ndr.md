@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: exchange-online
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Exchange Online
 ---
 
 # "554 5.2.0 STOREDRV.Deliver.Exception:ObjectNotFoundException.MapiExceptionNotFound" NDR when users send mail in Exchange Online

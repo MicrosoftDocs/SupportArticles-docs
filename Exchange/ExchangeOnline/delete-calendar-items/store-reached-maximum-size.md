@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: exchange-online
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Exchange Online
 ---
 
 # "Message store has reached its maximum size" error when an Office 365 user tries to delete an item in Outlook or Outlook on the Web
