@@ -7,6 +7,9 @@ audience: ITPro
 ms.service: msteams
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Teams
+- Skype for Business Online
 ---
 
 # Microsoft Teams is stuck in a login loop in Edge or Internet Explorer
