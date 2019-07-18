@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: exchange-online
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Exchange Online
 ---
 
 # How to update contact information in Exchange Online in Office 365

@@ -7,6 +7,12 @@ audience: ITPro
 ms.service: exchange-online
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Exchange Online
+- Outlook 2019
+- Outlook 2016
+- Outlook 2013
+- Microsoft Outlook 2010
 ---
 
 # How to troubleshoot issues that cause Outlook to crash or stop responding when used with Office 365

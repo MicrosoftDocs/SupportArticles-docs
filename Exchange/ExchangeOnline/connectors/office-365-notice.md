@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: exchange-online
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Exchange Online
 ---
 
 # Important notice for Office 365 email customers who have configured connectors

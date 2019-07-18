@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: exchange-online
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Exchange Online
 ---
 
 # Messages sent from a shared mailbox aren't saved to the Sent Items folder of the shared mailbox in Outlook

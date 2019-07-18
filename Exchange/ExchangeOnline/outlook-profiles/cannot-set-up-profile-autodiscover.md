@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: exchange-online
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Exchange Online
 ---
 
 # Outlook can't set up a new profile by using Exchange Autodiscover for an Exchange Online mailbox in Office 365

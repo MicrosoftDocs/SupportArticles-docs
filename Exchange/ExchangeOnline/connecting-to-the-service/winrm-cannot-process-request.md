@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: exchange-online
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Exchange Online
 ---
 
 # "WinRM client cannot process the request" error when you connect to Exchange Online through remote Windows PowerShell

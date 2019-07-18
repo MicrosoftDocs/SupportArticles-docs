@@ -4,9 +4,11 @@ description: You can't viewing delegates or add or remove a delegate in Outlook 
 author: simonxjx
 manager: willchen
 audience: ITPro
-ms.service: sharepoint-powershell
+ms.service: Exchange Online
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Exchange Online
 ---
 
 # Error viewing delegates in Outlook after a migration from on-premises to Exchange Online
