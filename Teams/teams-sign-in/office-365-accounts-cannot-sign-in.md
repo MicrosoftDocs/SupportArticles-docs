@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: msteams
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Teams
 ---
 
 # Office 365 Student and service accounts can't sign in to Microsoft Teams
