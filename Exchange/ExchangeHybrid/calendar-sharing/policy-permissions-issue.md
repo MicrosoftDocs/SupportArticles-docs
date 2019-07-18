@@ -7,6 +7,12 @@ audience: ITPro
 ms.prod: exchange-server-it-pro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Exchange Online
+- Exchange Server 2016 Enterprise Edition
+- Exchange Server 2016 Standard Edition
+- Exchange Server 2013 Enterprise
+- Exchange Server 2013 Standard Edition 
 ---
 
 # "Policy does not allow granting permissions at this level to one or more of the recipient(s)" error when user tries to share calendar

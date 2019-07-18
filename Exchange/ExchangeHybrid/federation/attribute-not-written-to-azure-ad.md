@@ -7,6 +7,13 @@ audience: ITPro
 ms.prod: office 365
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Cloud Services (Web roles/Worker roles)
+- Azure Active Directory
+- Microsoft Intune
+- Azure Backup
+- Exchange Online
+- Office 365 Identity Management
 ---
 
 # Attributes for Exchange Online aren't written back to on-premises AD directory service

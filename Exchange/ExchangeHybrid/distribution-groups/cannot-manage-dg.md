@@ -7,6 +7,8 @@ audience: ITPro
 ms.prod: exchange-server-it-pro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Exchange Online
 ---
 
 # Owners of an on-premises distribution group that's synced to Office 365 can't manage the distribution group in Exchange Online

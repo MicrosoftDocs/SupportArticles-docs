@@ -7,6 +7,11 @@ audience: ITPro
 ms.prod: exchange-server-it-pro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Exchange Online
+- Outlook 2013
+- Microsoft Outlook 2010
+- Microsoft Office Outlook 2007
 ---
 
 # How to use Outlook policy to control PST use and creation in the Office 365 Import service

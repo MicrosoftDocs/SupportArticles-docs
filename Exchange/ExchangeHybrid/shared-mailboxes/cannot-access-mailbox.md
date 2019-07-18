@@ -7,6 +7,14 @@ audience: ITPro
 ms.prod: exchange-server-it-pro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Exchange Online
+- Exchange Server 2016 Enterprise Edition
+- Exchange Server 2016 Standard Edition
+- Exchange Server 2013 Enterprise
+- Exchange Server 2013 Standard Edition
+- Exchange Server 2010 Enterprise
+- Exchange Server 2010 Standard
 ---
 
 # Users in a hybrid deployment can't access a shared mailbox that was created in Exchange Online
