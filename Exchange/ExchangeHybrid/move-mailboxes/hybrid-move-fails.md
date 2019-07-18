@@ -7,6 +7,10 @@ audience: ITPro
 ms.service: o365-administration
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Exchange Online
+- Exchange Server 2010 Enterprise
+- Exchange Server 2010 Standard
 ---
 
 # Move operation fails when moving a mailbox from Office 365 back to the on-premises environment

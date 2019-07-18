@@ -7,6 +7,9 @@ audience: ITPro
 ms.prod: exchange-server-it-pro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Exchange Online
+- Exchange Online Protection
 ---
 
 # ATTR35 response code when mail is sent to EOP/EXO

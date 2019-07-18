@@ -7,6 +7,9 @@ audience: ITPro
 ms.prod: office 365
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Exchange Online 
+- Microsoft Exchange Server
 ---
 
 # "Mailbox Move to the cloud fail with error" when you move mailboxes to Office 365 
