@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: office 365
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Azure Active Directory
 ---
 
 # 50,000 seats are assigned to the RIGHTSMANAGEMENT_ADHOC SKU in your Office 365 organization

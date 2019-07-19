@@ -8,6 +8,8 @@ ms.service: o365-solutions
 ms.topic: article
 ms.author: v-maqiu
 localization_priority: Normal
+appliesto:
+- Office 365 Data Loss Prevention
 ---
 
 # Troubleshooting Data Loss Protection (DLP) policy tips

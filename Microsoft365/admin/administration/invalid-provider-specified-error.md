@@ -7,6 +7,26 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office 365 ProPlus
+- Office Professional Plus 2016
+- SharePoint Online
+- Exchange Online
+- OneDrive for Business
+- Office Standard 2016
+- Office 365 Home
+- Office 365 Personal
+- Office 365 Business
+- Access 2016
+- Excel 2016
+- OneNote 2016
+- Outlook 2016
+- PowerPoint 2016
+- Project Standard 2016
+- Microsoft Publisher 2016
+- Visio Professional 2016
+- Visio Standard 2016
+- Word 2016
 ---
 
 # "Invalid provider specified" when using an Office 2016 application to access Office 365 resources

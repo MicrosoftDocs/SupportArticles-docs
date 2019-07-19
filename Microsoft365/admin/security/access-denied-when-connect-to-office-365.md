@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: office 365
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office 365 User and Domain Management
 ---
 
 # "Access Denied", or user is repeatedly prompted for credentials when connecting to Office 365

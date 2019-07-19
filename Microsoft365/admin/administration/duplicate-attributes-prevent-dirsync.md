@@ -7,6 +7,9 @@ audience: ITPro
 ms.service: o365-administration
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Azure Active Directory
+- Office 365 Identity Management
 ---
 
 # Duplicate or invalid attributes prevent directory synchronization in Office 365

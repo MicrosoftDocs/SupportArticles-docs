@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: o365-administration
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office 365 User and Domain Management
 ---
 
 # The "Remove" link is unavailable when removing a domain from Office 365

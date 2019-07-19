@@ -7,6 +7,13 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Office 2013 Service Pack 1
+- Word 2013
+- Excel 2013
+- Outlook 2013
+- PowerPoint 2013
+- Publisher 2013
 ---
 
 # "This feature has been disabled by your administrator" error in Office 2013

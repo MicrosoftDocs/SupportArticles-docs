@@ -6,6 +6,15 @@ audience: ITPro
 ms.service: office 365
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Cloud Services (Web roles/Worker roles)
+- Azure Active Directory
+- Office 365
+- Microsoft Intune
+- CRM Online via Office 365 E Plans  
+- Azure Backup
+- Office 365 User and Domain Management
+- Office 365 Identity Management
 ---
 
 # "The user name or password is incorrect" when you use connect-MSOLService to connect to Office 365

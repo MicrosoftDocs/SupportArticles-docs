@@ -6,6 +6,8 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Excel 2003
 ---
 
 # Use the registry to override the default behavior when Excel tries to recover data

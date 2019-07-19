@@ -7,6 +7,10 @@ audience: ITPro
 ms.service: one-drive
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office 365 ProPlus
+- Office 2016
+- OneDrive
 ---
 
 # How to block OneDrive use from within Office 365 ProPlus and Office 2016 applications

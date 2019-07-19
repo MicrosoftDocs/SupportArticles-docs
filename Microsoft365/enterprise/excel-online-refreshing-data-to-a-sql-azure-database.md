@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: o365-solutions
 ms.topic: article
 ms.author: thempel
+appliesto:
+- Excel Online
 ---
 
 # How to refresh data to a SQL Azure Database in Excel Online

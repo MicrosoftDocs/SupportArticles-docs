@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: o365-solutions
 ms.topic: article
 ms.author: v-maqiu
+appliesto:
+- Office 365 ProPlus
 ---
 
 # Fixes for issues on devices with App-V enabled and Office 365 ProPlus installed
