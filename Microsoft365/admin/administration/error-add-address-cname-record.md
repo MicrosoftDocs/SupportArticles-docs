@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office 365 Small Business
 ---
 
 # "Another DNS record already exists with this host name" when adding an Address or CNAME record

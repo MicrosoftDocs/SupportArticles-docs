@@ -8,6 +8,9 @@ ms.service: o365-solutions
 ms.topic: article
 ms.author: v-maqiu
 localization_priority: Normal
+appliesto:
+- Office 365 ProPlus
+- Office 2016 version of Office 365 ProPlus
 ---
 
 # Description of the Office Feature Updates task

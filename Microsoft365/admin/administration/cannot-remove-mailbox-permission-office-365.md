@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: office 365
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Exchange Online Dedicated
 ---
 
 # Can't remove mailbox permissions in Office 365 dedicated/ITAR

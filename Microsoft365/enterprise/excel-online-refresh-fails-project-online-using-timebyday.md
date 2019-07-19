@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: o365-solutions
 ms.topic: article
 ms.author: thempel
+appliesto:
+- Excel Online
 ---
 
 # "External Data Refresh Failed" when refreshing Project Online data in Excel Online

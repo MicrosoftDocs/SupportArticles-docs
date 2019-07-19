@@ -7,6 +7,9 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office 365 ProPlus
+- Office 2016
 ---
 
 # Connection issues in sign-in after update to Office 2016 build 16.0.7967 on Windows 10

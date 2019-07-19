@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: o365-solutions
 ms.topic: article
 ms.author: ericspli
+appliesto:
+- Office 365 ProPlus
 ---
 
 # How to enable Office 365 ProPlus ULS logging

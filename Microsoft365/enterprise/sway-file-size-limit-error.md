@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: o365-solutions
 ms.topic: article
 ms.author: zakirh
+appliesto:
+- Microsoft Sway
 ---
 
 # File size limit error when you upload files to Sway

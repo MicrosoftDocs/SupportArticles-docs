@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: o365-solutions
 ms.topic: article
 ms.author: warrenr
+appliesto:
+- Excel Online
 ---
 
 # External users cannot refresh data connections from Excel Online

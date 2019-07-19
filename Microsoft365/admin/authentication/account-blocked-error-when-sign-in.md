@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: office 365
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office 365 Identity Management
 ---
 
 # "It looks like your account has been blocked" error when signing in to Office 365

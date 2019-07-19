@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office 365 Planner
 ---
 
 # How to use Office 365 PowerShell to manage Microsoft Planner licenses

@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: office 365
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office 365
 ---
 
 # "A user with this name already exists. Use a different name." error in the Office 365 portal

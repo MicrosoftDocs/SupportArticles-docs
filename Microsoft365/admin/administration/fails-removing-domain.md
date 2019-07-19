@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office 365
 ---
 
 # "Domain has associated subdomains" when removing a domain from Office 365

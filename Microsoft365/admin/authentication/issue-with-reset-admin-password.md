@@ -7,6 +7,13 @@ audience: ITPro
 ms.prod: office 365
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Cloud Services (Web roles/Worker roles) 
+- Azure Active Directory 
+- Microsoft Intune 
+- Azure Backup 
+- Office 365 
+- User and Domain Management
 ---
 
 # "We could not verify your account" error when you try to reset your admin password in Office 365, Intune, or Azure

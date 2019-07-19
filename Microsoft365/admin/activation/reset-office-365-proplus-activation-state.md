@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: o365-solutions
 ms.topic: article
 ms.author: mattphil
+appliesto:
+- Office 365 ProPlus
 ---
 
 # Reset Office 365 ProPlus activation state

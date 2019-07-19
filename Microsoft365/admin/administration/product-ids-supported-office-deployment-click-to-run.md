@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: o365-solutions
 ms.topic: article
 localization_priority: Normal
+appliesto:
+- Microsoft Office Deployment Tool
 ---
 
 # Product IDs that are supported by the Office Deployment Tool for Click-to-Run

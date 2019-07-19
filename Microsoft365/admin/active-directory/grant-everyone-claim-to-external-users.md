@@ -7,6 +7,9 @@ audience: ITPro
 ms.service: office 365
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Azure Active Directory
+- Office 365
 ---
 
 # Grant the Everyone claim to external users in Office 365
@@ -27,7 +30,7 @@ In on-premises Active Directory domains, the **Everyone** special group represen
  
 Before this change, Office 365 shared the behavior of on-premises Active Directory domains: Every user in a tenant's Azure Active Directory (Azure AD) was effectively considered a member of the **Everyone** group after you added an **Everyone** claim to the user's security context. This included external users. This claim enables a user to access any content that is shared with the **Everyone** group.
  
-Similarly, the **All Authenticated Users** and **All Forms Users** claims were added automatically to each user’s security context. This included external users who have accounts in the tenant's Azure AD. These claims enable users to access any content that is shared with the **All Authenticated Users** or **All Forms Users** groups.
+Similarly, the **All Authenticated Users** and **All Forms Users** claims were added automatically to each user's security context. This included external users who have accounts in the tenant's Azure AD. These claims enable users to access any content that is shared with the **All Authenticated Users** or **All Forms Users** groups.
  
 Office 365 enables users to share and collaborate seamlessly with users inside and outside their organizations. When a user in your organization adds an external user to an Office 365 group or shares content with an external user and requires authentication ("sign-in") for access, an account is automatically created in Azure AD to represent the external guest user. It isn't necessary for a delegated administrator to create the account for the external user.
  
