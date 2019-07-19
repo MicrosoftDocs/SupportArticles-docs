@@ -7,6 +7,10 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Outlook 2019
+- Outlook 2016
+- Outlook 2013
 ---
 
 # Outlook search folders show unexpected mail items with an empty subject

@@ -11,7 +11,7 @@ appliesto:
 - Outlook 2016
 ---
 
-# “The Calendar folder cannot be found” or “The Tasks folder cannot be found” error when you use Quick Steps in Outlook
+# "The Calendar folder cannot be found” or “The Tasks folder cannot be found" error when you use Quick Steps in Outlook
 
 ## Symptoms
 

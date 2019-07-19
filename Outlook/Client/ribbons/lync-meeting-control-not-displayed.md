@@ -7,6 +7,9 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Outlook 2010
+- Outlook 2013
 ---
 
 # Lync Meeting control is not displayed on the Outlook 2013 ribbon

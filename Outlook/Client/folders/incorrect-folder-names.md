@@ -4,9 +4,17 @@ description: Fixes an issue in which folder names are displayed in an incorrect 
 author: simonxjx
 manager: willchen
 audience: ITPro
-ms.service: sharepoint-powershell
+ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Outlook 2019
+- Outlook 2016
+- Outlook 2013
+- Outlook 2010
+- Microsoft Office Outlook 2007
+- Exchange Online
+- Microsoft Exchange Online Dedicated
 ---
 
 # Folder names are incorrect or displayed in an incorrect language in Outlook
