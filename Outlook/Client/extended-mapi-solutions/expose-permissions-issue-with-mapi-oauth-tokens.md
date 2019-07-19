@@ -7,6 +7,9 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Exchange Server
+- Microsoft Outlook
 ---
 
 # Microsoft doesn't expose permissions to generate OAuth tokens for Extended MAPI access to mailboxes

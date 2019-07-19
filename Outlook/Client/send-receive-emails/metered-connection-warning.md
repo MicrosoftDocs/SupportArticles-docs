@@ -7,6 +7,9 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Outlook 2016
+- Outlook 2013
 ---
 
 # Can't send or receive email in Outlook and "Metered Connection Warning" is triggered

@@ -7,6 +7,8 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Outlook 2016 for Mac
 ---
 
 # How to set Outlook 2016 for Mac to delay trying to renew a Kerberos ticket
