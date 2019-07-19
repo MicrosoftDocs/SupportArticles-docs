@@ -9,7 +9,7 @@ ms.topic: article
 ms.author: v-six
 appliesto:
 - Exchange Online
-- - Outlook
+- Outlook
 ---
 
 # Additional RSS feeds appear in Outlook after a user signs in to Office 365 on a new computer
