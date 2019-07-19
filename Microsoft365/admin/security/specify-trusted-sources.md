@@ -11,6 +11,7 @@ appliesto:
 - Microsoft Excel
 - Microsoft PowerPoint
 - Microsoft Word
+---
 
 # How to specify trusted sources for Digital Certificates in Excel, in PowerPoint, in and Word
 
