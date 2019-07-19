@@ -7,6 +7,11 @@ audience: ITPro
 ms.prod: office 365
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office 365 Business
+- SharePoint Server 2016
+- SharePoint Server 2013
+- SharePoint Server 2010
 ---
 
 # Preparing for TLS 1.2 in Office 365 and Office 365 GCC 

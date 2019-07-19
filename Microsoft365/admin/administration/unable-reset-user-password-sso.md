@@ -7,6 +7,12 @@ audience: ITPro
 ms.service: office 365
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Cloud Services (Web roles/Worker roles)
+- Azure Active Directory
+- Microsoft Intune
+- Azure Backup
+- Office 365 Identity Management
 ---
 
 # "Unable to reset this user’s password" when an admin resets the password of a domain member user

@@ -7,6 +7,8 @@ audience: ITPro
 ms.topic: article
 localization_priority: Normal
 ms.service: o365-solutions
+appliesto:
+- Office 365
 ---
 
 # Office 365 can't open files from the most recently used document list (MRU)

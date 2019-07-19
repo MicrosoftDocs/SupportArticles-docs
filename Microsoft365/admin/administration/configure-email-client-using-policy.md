@@ -7,6 +7,8 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Outlook
 ---
 
 # How to configure the default e-mail client using Group Policy

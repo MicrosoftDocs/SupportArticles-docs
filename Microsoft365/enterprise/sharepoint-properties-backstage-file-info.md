@@ -7,6 +7,10 @@ audience: ITPro
 ms.service: o365-solutions
 ms.topic: article
 ms.author: warrenr
+appliesto:
+- Office 365
+- Office 2019
+- Office 2016
 ---
 
 # SharePoint properties of type (lookup – multi select) don't work on Office backstage

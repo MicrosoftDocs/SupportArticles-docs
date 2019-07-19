@@ -10,6 +10,10 @@ localization_priority: Normal
 description: Unable to save a project from a Project client to PWA with the error ID 12005(0xEE5)
 ms.custom:
 ms.collection:
+appliesto:
+- Project Online
+- Project Professional 2016
+- Project Pro for Office 365
 ---
 
 # You can't save a project from a Project client to Project Web App

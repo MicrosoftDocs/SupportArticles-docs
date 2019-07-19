@@ -10,6 +10,8 @@ localization_priority: Normal
 description: Users from multiple federated domain (top level or child domains) are unable to sign in to office 365
 ms.custom: 
 ms.collection: 
+appliesto:
+- Office 365 Identity Management
 ---
 
 # You can't sign in to Office 365 from multiple federated domains

@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: office 365
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office 2016 for Mac
 ---
 
 # Can't sign in to an Office 2016 for Mac app

@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: office 365
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office 365 User and Domain Management
 ---
 
 # Domain shows a status of "Setup in progress" in the Office 365 portal

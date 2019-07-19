@@ -7,7 +7,10 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
----
+appliesto:
+- Microsoft Excel
+- Microsoft PowerPoint
+- Microsoft Word
 
 # How to specify trusted sources for Digital Certificates in Excel, in PowerPoint, in and Word
 

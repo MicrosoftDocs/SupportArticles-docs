@@ -7,6 +7,8 @@ audience: ITPro
 ms.prod: office 365
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office Mobile for iPhone
 ---
 
 # "Can't Verify Subscription" or "No Subscription Found" error messages in Office Mobile

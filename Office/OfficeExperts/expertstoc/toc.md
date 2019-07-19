@@ -24,6 +24,8 @@
 
 ## Excel
 ### ["Cannot access directory" error in Excel 2016](../excel/cannot-access-directory-error-in-excel-2016.md)
+### [Create An Excel Add-In to Calculate Body Mass Index](../excel/create-add-in-to-calculate-bmi.md)
+### [Rename Excel Sheet with Cell Contents by Using Macro](../excel/use-macro-rename-sheet.md)
 
 ## Installation
 ### [Deploy Online Server to security hardened drives](../installation/deploy-office-online-server-to-security-hardened-drive.md)

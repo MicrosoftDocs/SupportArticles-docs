@@ -7,6 +7,10 @@ audience: ITPro
 ms.service: office 365
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Azure Active Directory
+- Office 365 Identity Management
+- Windows Server 2012 Essentials
 ---
 
 # "Exception has been thrown by the target of an invocation" with Directory Sync Configuration Wizard
