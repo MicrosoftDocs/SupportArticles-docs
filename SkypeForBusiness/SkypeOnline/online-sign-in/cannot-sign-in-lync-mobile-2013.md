@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Skype for Business Online
 ---
 
 # "You can't sign-in with this version of Lync. Please install Lync 2010" error after Lync Mobile 2013 is installed

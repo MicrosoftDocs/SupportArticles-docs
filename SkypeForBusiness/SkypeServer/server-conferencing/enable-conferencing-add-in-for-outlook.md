@@ -7,6 +7,9 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Outlook 2007
+- Outlook 2003
 ---
 
 # How to enable the Conferencing Add-in for Outlook

@@ -7,6 +7,12 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Skype for Business 2016
+- Skype for Business 2015
+- Exchange Online
+- Microsoft Lync 2013
+- Skype for Business Online
 ---
 
 # Info about AllowAdalForNonLyncIndependentOfLync setting in Skype for Business, Lync 2013, and Exchange Online

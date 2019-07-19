@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Skype for Business 2015
 ---
 
 # Video is missing in a Skype for Business 2015 meeting recording after the December 2015 security update 3114351 is installed

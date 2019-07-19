@@ -7,6 +7,13 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Skype for Business Online
+- Skype for Business Server 2015
+- Lync Server 2013
+- Microsoft Lync Online
+- Lync Server 2010 Enterprise Edition
+- Lync Server 2010 Standard Edition
 ---
 
 # Lync or Skype for Business client does not start when you click a meeting link if the default browser is Google Chrome
