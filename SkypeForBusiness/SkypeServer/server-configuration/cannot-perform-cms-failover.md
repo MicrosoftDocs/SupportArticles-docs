@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Skype for Business Server 2015
 ---
 
 # Can't perform a CMS failover in Skype for Business Server 2015

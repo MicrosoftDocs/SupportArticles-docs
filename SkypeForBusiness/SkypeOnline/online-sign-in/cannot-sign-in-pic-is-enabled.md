@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Skype for Business Online
 ---
 
 # Users can't sign in to Skype by using their Microsoft account after Public IM Connectivity (PIC) or External Communications is enabled in Skype for Business Online

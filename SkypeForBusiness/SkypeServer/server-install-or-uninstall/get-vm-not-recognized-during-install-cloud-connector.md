@@ -7,6 +7,8 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Skype for Business Cloud Connector Edition
 ---
 
 # "The term 'Get-VM' is not recognized as the name of a cmdlet ..." error during install of Cloud Connector Edition

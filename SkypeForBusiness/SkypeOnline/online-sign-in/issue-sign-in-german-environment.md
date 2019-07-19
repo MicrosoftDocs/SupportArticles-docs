@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Skype for Business
 ---
 
 # Error when you sign in to Skype for Business in a German Office 365 environment

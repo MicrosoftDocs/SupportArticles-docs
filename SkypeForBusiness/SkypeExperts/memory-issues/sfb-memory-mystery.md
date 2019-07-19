@@ -6,6 +6,8 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: kenguil
+appliesto:
+- Skype for Business
 ---
 
 # The Great Skype for Business Memory Mystery

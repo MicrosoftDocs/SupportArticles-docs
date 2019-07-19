@@ -1,12 +1,16 @@
 ---
 title: Lync conferencing feature fails for a mandatory user profile
-description: 
+description: Describes Lync conferencing feature fails for a mandatory user profile.
 author: simonxjx
 manager: willchen
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Lync 2010
+- Lync 2010 Attendee
+- Microsoft Lync 2013
 ---
 
 # Lync conferencing feature fails when the user is signed in using a mandatory user profile

@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Lync Server 2013
 ---
 
 # Lync Server 2013 Access Edge service fails to start or stops responding after it starts

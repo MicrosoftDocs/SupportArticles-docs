@@ -7,6 +7,11 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Lync Server 2010
+- Outlook 2010
+- Outlook 2007
+- Outlook 2003 Service Pack 2
 ---
 
 # The presence information for a user of Lync Server 2010 or of Communications Server may not be displayed in Outlook 2003 SP2, in Outlook 2007, or in Outlook 2010

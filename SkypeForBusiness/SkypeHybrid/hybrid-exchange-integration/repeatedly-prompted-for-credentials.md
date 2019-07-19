@@ -7,6 +7,10 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Skype for Business Online
+- Lync 2010
+- Lync 2013
 ---
 
 # You're repeatedly prompted for Exchange credentials after you sign in to Lync

@@ -7,6 +7,9 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Lync 2013
+- Lync Server 2013
 ---
 
 # Lync can't verify that the server is trusted for your sign-in address" message during client sign-in
