@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+-  Lync 2010
 ---
 
 # How to enable the Online Meeting Add-in for Microsoft Lync 2010 in Outlook

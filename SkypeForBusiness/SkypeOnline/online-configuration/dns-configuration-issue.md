@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Skype for Business Online
 ---
 
 # Troubleshooting Skype for Business Online DNS configuration issues in Office 365

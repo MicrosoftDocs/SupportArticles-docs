@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Skype for Business
 ---
 
 # Meeting invitations are not sent from Outlook in Skype for Business

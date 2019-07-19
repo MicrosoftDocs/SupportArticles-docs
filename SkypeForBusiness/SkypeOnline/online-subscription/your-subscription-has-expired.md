@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Skype for Business Online
 ---
 
 # "Your subscription has expired" error for Skype for Business Online users in Office 365 Business

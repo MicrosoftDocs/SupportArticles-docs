@@ -7,6 +7,11 @@ audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Skype for Business Online
+- Windows 7 Professional
+- Windows 7 Enterprise
+- Windows 7 Home Premium
 ---
 
 # "Share your desktop" displays a black screen in Skype for Business

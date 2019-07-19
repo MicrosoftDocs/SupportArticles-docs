@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Skype for Business
 ---
 
 # Skype for Business client stops responding when receiving a toast notification of an IM or an incoming call in Citrix VDI environment

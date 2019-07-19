@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Skype for Business 2016
 ---
 
 # "MAPI unavailable" error in Skype for Business 2016 client
