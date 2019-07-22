@@ -88,7 +88,7 @@
 ### [Change formula from absolute to relative or mixed references](../excel/change-formular-reference-type-.md)
 ### [Change the Software License Registration Information for Mac](../excel/change-software-license-registration.md)
 ### [CHIINV statistical functions](../excel/statistical-functions-chiinv.md)
-### [Columns and rows are labeled numerically](../excel/numeric-columns-and-rows labels.md)
+### [Columns and rows are labeled numerically](../excel/numeric-columns-and-rows.md)
 ### [Command can't be used on multiple selections](../excel/command-cannot-be-used-on-selections.md)
 ### [Conditional formatting is set incorrectly with VBA](../excel/conditional-formatting-set-incorrectly.md)
 ### [Create a conditional format to hide errors](../excel/hide-errors.md)
