@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: office 365
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office 365
 ---
 
 # How to control the blocking of OLE/COM components in Microsoft Office 365 Subscription

@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: exchange-online
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Exchange Online
 ---
 
 # The time zone setting in Outlook Web App in Office 365 is set incorrectly to "(UTC) Monrovia, Reykjavik"

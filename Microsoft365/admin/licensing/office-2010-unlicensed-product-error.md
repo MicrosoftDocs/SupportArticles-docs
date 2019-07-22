@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: office 365
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office Professional Plus 2010
 ---
 
 # "Unlicensed Product" error when you open an Office Professional Plus 2010 application

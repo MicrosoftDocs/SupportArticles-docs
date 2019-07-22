@@ -7,6 +7,10 @@ audience: ITPro
 ms.service: exchange-online
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Exchange Online
+- Office 2016
+- Office 2013
 ---
 
 # Room Finder in Outlook doesn't display any conference rooms when a user creates a meeting

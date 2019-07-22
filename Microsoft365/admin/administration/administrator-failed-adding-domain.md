@@ -7,6 +7,10 @@ audience: ITPro
 ms.service: o365-administration
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office 365 User and Domain Management
+- Cloud Services (Web roles/Worker roles)
+- Microsoft Intune
 ---
 
 # An administrator can't add a domain to Office 365, Azure, or Intune

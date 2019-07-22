@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: o365-solutions
 ms.topic: article
 ms.author: thempel
+appliesto:
+- Excel Online
 ---
 
 # "Request Was Taking Too Long" when you opening a workbook in Excel Online

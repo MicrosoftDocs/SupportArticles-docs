@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Skype for Business Online
 ---
 
 # You can't join a Skype Meeting Broadcast as an "Event team" member by using Skype for Business on Mac

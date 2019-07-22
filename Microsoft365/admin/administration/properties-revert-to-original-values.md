@@ -7,6 +7,11 @@ audience: ITPro
 ms.service: o365-administration
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Azure Active Directory
+- Office 365 Identity Management
+- Windows Server 2012 Essentials
+- Windows Server 2012 R2 Essentials
 ---
 
 # Properties of Office 365 users revert to original values when running Windows Server Essentials

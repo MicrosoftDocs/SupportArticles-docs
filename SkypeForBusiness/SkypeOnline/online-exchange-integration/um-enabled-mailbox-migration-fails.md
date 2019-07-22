@@ -7,6 +7,10 @@ audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Exchange Online
+- Microsoft Lync Online
+- Skype for Business Online
 ---
 
 # UM-enabled mailbox migration to Exchange Online fails

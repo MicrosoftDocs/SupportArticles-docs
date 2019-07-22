@@ -7,6 +7,9 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Skype for Business Online
+- Skype for Business Server 2015
 ---
 
 # "An error occurred during the Skype Meeting" when you try to join a Skype Meeting Broadcast as an event team member

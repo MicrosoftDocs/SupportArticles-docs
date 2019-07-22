@@ -7,6 +7,9 @@ audience: ITPro
 ms.service: office 365
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office 365 ProPlus
+- Azure Active Directory
 ---
 
 # Troubleshoot sign-in issues with Office modern authentication when you use AD FS

@@ -7,6 +7,8 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Skype for Business 2016
 ---
 
 # Meeting conversation window disappears for Click-to-Run (C2R) clients in Skype for Business 2016

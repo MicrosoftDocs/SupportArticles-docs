@@ -7,6 +7,12 @@ audience: ITPro
 ms.service: office 365
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Cloud Services (Web roles/Worker roles) 
+- Azure Active Directory 
+- Microsoft Intune 
+- Azure Backup 
+- Office 365 User and Domain Management
 ---
 
 # "Access Denied" error when you use the connect-MSOLService cmdlet to connect to Office 365

@@ -7,6 +7,11 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Outlook 2013
+- Outlook 2010
+- Office Outlook 2007
+- Exchange Online
 ---
 
 # Outlook continually prompts for your password when you try to connect to Office 365

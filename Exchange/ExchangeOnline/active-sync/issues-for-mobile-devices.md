@@ -7,6 +7,8 @@ audience: ITPro
 ms.prod: office 365
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Exchange Online
 ---
 
 # How to collect ActiveSync device logs to troubleshoot sync issues between mobile devices and Exchange Online

@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Skype for Business 2016
 ---
 
 # Slow refresh or blurry desktop in Skype Meetings when a user joins the conference on a non-VbSS client

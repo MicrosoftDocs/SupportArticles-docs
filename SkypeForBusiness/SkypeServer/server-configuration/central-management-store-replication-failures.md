@@ -7,6 +7,10 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Lync Server 2010 Enterprise Edition 
+- Lync Server 2010 Standard Edition 
+- Lync Server 2013
 ---
 
 # Lync Server Central Management Store replication failures

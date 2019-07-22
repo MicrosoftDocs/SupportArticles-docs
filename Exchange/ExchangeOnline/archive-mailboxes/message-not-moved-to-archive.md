@@ -7,6 +7,8 @@ audience: ITPro
 ms.prod: office 365
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Exchange Online
 ---
 
 # Messages aren't moved to archive mailboxes after you create a retention policy in Exchange Online

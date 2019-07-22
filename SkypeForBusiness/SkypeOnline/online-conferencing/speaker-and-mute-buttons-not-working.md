@@ -7,6 +7,9 @@ audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Skype for Business Online
+- Skype Room Systems
 ---
 
 # Speaker and mute buttons stop working in a Skype Room Systems meeting

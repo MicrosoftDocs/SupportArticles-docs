@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: o365-administration
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office 365 Business
 ---
 
 # Office 365 reports show anonymous user names instead of actual user names

@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office 2010
 ---
 
 # Compile error when you edit a VBA macro in the 64-bit version of an Office 2010 program

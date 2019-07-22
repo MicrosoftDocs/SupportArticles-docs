@@ -7,6 +7,9 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Skype for Business 2016
+- Skype for Business Online
 ---
 
 # Skype for Business 2016 isn't installed when you switch from Office 365 Small Business Premium to Office 365 Business Premium

@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Skype for Business for Android
 ---
 
 # Troubleshooting issues with Microsoft Skype for Business (formerly Lync 2013) for Android

@@ -7,6 +7,15 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Outlook 2019
+- Outlook 2016
+- Outlook 2013
+- Outlook 2010
+- Microsoft Office Outlook 2007
+- Exchange Online
+- Microsoft Business Productivity Online Dedicated
+- Microsoft Business Productivity Online Suite Federal
 ---
 
 # The Outlook meeting tracking tab is not updated

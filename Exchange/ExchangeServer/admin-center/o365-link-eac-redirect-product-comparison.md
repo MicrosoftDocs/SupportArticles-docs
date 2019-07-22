@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: o365-administration
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Exchange Online
 ---
 
 # Office 365 link in on-premises EAC goes to product comparison, not Exchange admin center

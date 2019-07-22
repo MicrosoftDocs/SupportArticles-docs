@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: o365-administration
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office 365 User and Domain Management
 ---
 
 # "Add domain" option is missing from the Microsoft 365 admin center

@@ -7,6 +7,9 @@ audience: ITPro
 ms.service: o365-administration
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office Mobile for iPhone
+- Office Mobile for Android
 ---
 
 # Errors when trying to activate or sign in to Office Mobile on iPhone or Office Mobile on Android

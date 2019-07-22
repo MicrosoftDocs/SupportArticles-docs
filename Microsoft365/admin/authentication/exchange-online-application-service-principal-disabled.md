@@ -8,6 +8,8 @@ ms.service: o365-solutions
 ms.topic: article
 ms.author: v-maqiu
 localization_priority: Normal
+appliesto:
+- Office 365
 ---
 
 # "Sorry, but we're having trouble signing you in" error when signing in to Office 365

@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Skype for Business Server 2015
 ---
 
 # Windows Fabric, Front-end services won't start after Skype for Business Server 2015 installed on Windows Server 2016 or Server 2012 R2 system with 4K native disk

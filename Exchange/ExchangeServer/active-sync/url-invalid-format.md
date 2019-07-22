@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: o365-administration
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Exchange Online
 ---
 
 # "Active Sync URL was in an Invalid format" when using Remote Connectivity Analyzer tool
