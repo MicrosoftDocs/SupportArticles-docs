@@ -103,7 +103,6 @@
 ### [Digital signatures and code signing](../excel/digital-signatures-code-signing.md)
 ### [Display more digits in trendline equation coefficients](../excel/trendline-equation-coefficient-digits.md)
 ### [Endlessly loop calculating cells when inserting several subtotals](../excel/endlessly-loop-calculating.md)
-### [Excel for Mac stops responding with spinning wheel](../excel/open-excel-for-mac-stop-responding.md)
 ### [Export a text file with both comma and quote delimiters](../excel/export-text-file-with-comma-quote.md)
 ### [FALSE result with the ISBLANK() function](../excel/isblank-function-return-false.md)
 ### [Formatted text is limited to 240 characters per line](../excel/prn-file-limited-to-240-characters.md)
