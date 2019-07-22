@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Lync Server 2013
 ---
 
 # Lync Server 2013 Front-End server services do not start for a long time

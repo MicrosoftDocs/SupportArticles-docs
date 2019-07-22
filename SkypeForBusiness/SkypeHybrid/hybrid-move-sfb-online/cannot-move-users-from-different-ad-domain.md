@@ -7,6 +7,8 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Skype for Business Server 2015
 ---
 
 # You cannot move users from a different AD domain in hybrid Skype for Business Server to Skype for Business Online from Control Panel

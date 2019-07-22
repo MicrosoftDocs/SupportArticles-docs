@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Skype for Business for iOS
 ---
 
 # Some Lync 2013 for iPhone/iPad features are missing in Skype for Business for iOS

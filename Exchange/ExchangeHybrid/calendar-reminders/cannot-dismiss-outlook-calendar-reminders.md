@@ -7,6 +7,11 @@ audience: ITPro
 ms.prod: exchange-server-it-pro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Exchange Online
+- Outlook 2019
+- Outlook 2016
+- Outlook 2013
 ---
 
 # You can't successfully dismiss calendar reminders in Outlook

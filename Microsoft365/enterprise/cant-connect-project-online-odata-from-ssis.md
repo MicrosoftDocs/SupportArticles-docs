@@ -10,6 +10,8 @@ localization_priority: Normal
 description: OData Connection to Project Online from SSIS is failing if TLS is not enabled.
 ms.custom:
 ms.collection:
+appliesto:
+- Project Online
 ---
 
 # You can't connect to Project Online OData from SSIS

@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: office 365
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office 365 User and Domain Management
 ---
 
 # "Unable to remove this domain" when you try to remove a domain from Office 365

@@ -7,6 +7,9 @@ audience: ITPro
 ms.service: exchange-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Exchange Server 2016
+- Exchange Server 2013
 ---
 
 # "554 5.4.14 Hop count exceeded - possible mail loop" NDR for outgoing email that's sent to an on-premises application in Exchange Server

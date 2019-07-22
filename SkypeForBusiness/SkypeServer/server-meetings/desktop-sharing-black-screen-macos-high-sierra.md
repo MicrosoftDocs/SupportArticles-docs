@@ -7,6 +7,9 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Skype for Business Web App
+- Lync Web App
 ---
 
 # Black screen during desktop sharing in Skype for Business or Lync Web App on macOS High Sierra

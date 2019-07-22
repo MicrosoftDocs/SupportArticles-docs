@@ -7,6 +7,14 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office 365 ProPlus
+- Office 365 Business
+- Office Professional 2016
+- Office Professional Plus 2016
+- Visio Professional 2016
+- Project Professional 2016
+
 ---
 
 # How to prioritize the use of BITS by Office 2016 clients for downloading updates

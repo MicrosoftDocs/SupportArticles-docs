@@ -6,6 +6,16 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Excel 2016
+- Outlook 2016
+- Skype for Business 2016
+- Word 2016
+- PowerPoint 2016
+- Microsoft Publisher 2016
+- Access 2016
+- OneNote 2016
+- Project Standard 2016
 ---
 
 # Office Applications crash or cannot start

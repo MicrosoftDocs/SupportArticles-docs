@@ -7,6 +7,9 @@ audience: ITPro
 ms.service: office 365
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Azure Active Directory
+- Office 365 Identity Management
 ---
 
 # "One of your on-premises Federation Service certificates is expiring" message in Office 365 portal

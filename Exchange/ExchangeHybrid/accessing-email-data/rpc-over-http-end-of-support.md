@@ -7,6 +7,13 @@ audience: ITPro
 ms.prod: exchange-server-it-pro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Exchange Online
+- Outlook 2019
+- Outlook 2016
+- Outlook 2013
+- Microsoft Outlook 2010
+- Microsoft Office Outlook 2007
 ---
 
 # RPC over HTTP reaches end of support in Office 365 on October 31, 2017

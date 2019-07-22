@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: o365-solutions
 ms.topic: article
 ms.author: randring
+appliesto:
+- Excel Online
 ---
 
 # Excel Online cross forest KCD data refresh is not supported

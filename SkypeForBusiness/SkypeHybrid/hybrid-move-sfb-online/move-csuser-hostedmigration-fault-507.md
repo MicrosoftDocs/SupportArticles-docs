@@ -7,6 +7,8 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Skype for Business Online
 ---
 
 # "Move-CsUser : HostedMigration fault: Error=(507)" error message when you try to move a user to Skype for Business Online in a Lync hybrid deployment

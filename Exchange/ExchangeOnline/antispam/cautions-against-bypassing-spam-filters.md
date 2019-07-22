@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: o365-proplus-itpro
 ms.topic: article
 ms.author: v-zht
+appliesto:
+- Office 365
 ---
 
 # Cautions against bypassing Office 365 spam filters

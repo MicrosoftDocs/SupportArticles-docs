@@ -7,6 +7,8 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Skype for Business
 ---
 
 # "You are operating in a split-domain (hybrid) topology" warning when you configure an Office 365 call queue in Skype for Business admin center

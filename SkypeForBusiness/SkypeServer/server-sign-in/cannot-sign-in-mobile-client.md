@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Lync Server 2013
 ---
 
 # Lync Mobile users cannot sign in after they update to client version 5.4

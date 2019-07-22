@@ -7,6 +7,8 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Skype for Business Online
 ---
 
 # Incoming call fails when you use Skype for Business Cloud Connector Edition

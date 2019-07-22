@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: o365-solutions
 ms.topic: article
 ms.author: randrin
+appliesto:
+- Excel Online
 ---
 
 # "PivotTable Operation Failed" when you click a slicer in an Excel Online PowerPivot workbook

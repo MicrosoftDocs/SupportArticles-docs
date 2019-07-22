@@ -7,6 +7,13 @@ audience: ITPro
 ms.service: o365-administration
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Cloud Services (Web roles/Worker roles) 
+- Azure Active Directory 
+- Office 365 
+- Microsoft Intune 
+- CRM Online via Office 365 E Plans 
+- Azure Backup, Office 365 Identity Management
 ---
 
 # Error 80048163 when a federated user tries to sign in to Office 365, Azure, or Intune

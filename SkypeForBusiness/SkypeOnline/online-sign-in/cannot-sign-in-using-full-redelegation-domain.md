@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Skype for Business Online
 ---
 
 # You can't sign in to Skype for Business Online by using a domain that is configured for full redelegation

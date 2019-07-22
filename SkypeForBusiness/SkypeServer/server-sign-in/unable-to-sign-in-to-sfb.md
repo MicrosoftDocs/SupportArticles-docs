@@ -7,6 +7,8 @@ ms.reviewer:
 ms.prod: skype-for-business-itpro
 ms.topic: conceptual
 ms.date: 04/17/2019
+appliesto:
+- Skype for Business
 ---
 
 # How to troubleshoot being unable to sign in to Skype for Business

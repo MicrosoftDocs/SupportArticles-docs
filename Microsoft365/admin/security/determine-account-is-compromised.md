@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: office 365
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office 365
 ---
 
 # How to determine whether your Office 365 account has been compromised

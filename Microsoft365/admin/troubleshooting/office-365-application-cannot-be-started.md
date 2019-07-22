@@ -7,6 +7,11 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office 365 ProPlus
+- Microsoft Windows XP Professional
+- Microsoft Windows XP Home Edition
+- Office 365 User and Domain Management
 ---
 
 # "Application cannot be started. Contact the application vendor" when run Office 365 Desktop Setup

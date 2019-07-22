@@ -7,6 +7,9 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Exchange Online
+- Outlook 2016 for Mac
 ---
 
 # Outlook 2016 for Mac repeatedly prompts for authentication

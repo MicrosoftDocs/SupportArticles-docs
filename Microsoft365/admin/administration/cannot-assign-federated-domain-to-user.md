@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: office 365
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office 365 Identity Management
 ---
 
 # You can't assign a federated domain to a user in the Microsoft 365 Admin Center

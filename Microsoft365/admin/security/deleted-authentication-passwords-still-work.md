@@ -7,6 +7,12 @@ audience: ITPro
 ms.service: o365-administration
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Cloud Services (Web roles/Worker roles)
+- Azure Active Directory
+- Microsoft Intune
+- Azure Backup
+- Office 365 Identity Management
 ---
 
 # Deleted app passwords for Multi-Factor Authentication still work in Office 365, Azure, or Intune

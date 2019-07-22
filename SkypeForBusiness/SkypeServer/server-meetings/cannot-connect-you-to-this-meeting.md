@@ -7,6 +7,9 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Skype for Business 2016
+- Skype for Business 2015
 ---
 
 # Error 12029: "We couldn't connect you to this meeting" in Skype for Business 2016 or 2015

@@ -7,6 +7,9 @@ audience: ITPro
 ms.service: office 365
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Azure Active Directory
+- Office 365 User and Domain Management
 ---
 
 # Domain errors in the Office 365 portal

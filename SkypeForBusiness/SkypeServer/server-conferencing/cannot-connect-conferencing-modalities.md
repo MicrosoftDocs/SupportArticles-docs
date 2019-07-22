@@ -7,6 +7,10 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Skype for Business Server 2015
+- Microsoft Lync 2013
+- Microsoft Lync 2010
 ---
 
 # Some clients can't connect to conferencing modalities after you install Security Bulletin MS16-065

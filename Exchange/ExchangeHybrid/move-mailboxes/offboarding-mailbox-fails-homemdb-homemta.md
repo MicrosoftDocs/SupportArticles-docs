@@ -7,6 +7,8 @@ audience: ITPro
 ms.prod: office 365
 ms.topic: article
 ms.author: rrajan
+appliesto:
+- Exchange Online
 ---
 
 # Offboarding mailbox fails with error "Error: MigrationPermanentException: Target user ‎'User‎' already has a primary mailbox."

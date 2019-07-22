@@ -7,6 +7,9 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Skype for Business 2016
+- Outlook 2010
 ---
 
 # "Form region cannot be open" error in the Outlook 2010 preview pane

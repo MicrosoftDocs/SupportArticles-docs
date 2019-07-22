@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
 ms.author: v-zht
+appliesto:
+- Skype for Business Online
 ---
 
 # Cannot create a Skype meeting on behalf of delegate and with error in Skype for Business Online

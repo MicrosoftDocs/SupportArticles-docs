@@ -7,6 +7,11 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Outlook 2013
+- Outlook 2010
+- Office Outlook 2007
+- Office Outlook 2003
 ---
 
 # How to use Outlook policy to control credential prompts when connecting to an Exchange Server mailbox
