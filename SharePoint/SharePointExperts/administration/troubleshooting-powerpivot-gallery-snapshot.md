@@ -1,6 +1,6 @@
 ﻿---
 title: PowerPivot for SharePoint 2016 Gallery Snapshots Fail for SSL Host Header Sites
-author:AmandaAZ  
+author: AmandaAZ  
 manager: randring 
 audience: ITPro
 ms.service: sharepoint
