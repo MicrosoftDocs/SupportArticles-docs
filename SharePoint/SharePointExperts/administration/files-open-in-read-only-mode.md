@@ -7,6 +7,8 @@ audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
+appliesto:
+- SharePoint Server 2013
 ---
 
 # Some Office files open in read-only mode in SharePoint Server 2013

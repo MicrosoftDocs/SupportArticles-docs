@@ -7,6 +7,8 @@ audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
+appliesto:
+- SharePoint 2016
 ---
 
 # "We cannot locate a server to load the workbook Data Model" error in PowerPivot

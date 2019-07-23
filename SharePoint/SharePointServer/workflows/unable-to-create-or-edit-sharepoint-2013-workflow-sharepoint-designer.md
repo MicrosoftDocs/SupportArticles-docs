@@ -9,6 +9,8 @@ audience: Admin
 ms.topic: article
 ms.prod: office-perpetual-itpro
 localization_priority: Normal 
+appliesto:
+- SharePoint Designer
 ---
 
 # Unable to create or edit SharePoint 2013 workflow in SharePoint Designer
@@ -18,7 +20,7 @@ When you create or edit a SharePoint 2013 workflow in SharePoint Designer, nothi
 
 If you capture an HTTP trace from Fiddler or from a browser-based developer tool, you see the following error:
 
-> Exception occured in scope<br />Microsoft.SharePoint.WorkflowServices.WorkflowDeploymentService.GetActivitySignatures. Exception=System.ArgumentException: An item with the same key has already been added.
+> Exception occurred in scope<br />Microsoft.SharePoint.WorkflowServices.WorkflowDeploymentService.GetActivitySignatures. Exception=System.ArgumentException: An item with the same key has already been added.
 
 ## Cause
 A feature in the SharePoint farm was added twice with two different feature IDs.

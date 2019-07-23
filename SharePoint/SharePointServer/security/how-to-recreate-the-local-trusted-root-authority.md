@@ -7,6 +7,11 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- SharePoint Foundation 2013
+- SharePoint Server 2013
+- SharePoint Foundation 2010
+- SharePoint Server 2010 
 ---
 
 # How to re-create the local Trusted Root Authority  

@@ -7,6 +7,9 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft SharePoint Server
+- SharePoint Online
 ---
 
 # SharePoint Online content isn't displayed in a SharePoint on-premises search

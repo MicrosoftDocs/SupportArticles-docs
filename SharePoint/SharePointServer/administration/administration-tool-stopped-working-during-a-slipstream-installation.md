@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- SharePoint Server 2016
 ---
 
 # "SharePoint Foundation administration tool has stopped working" error during a slipstream installation  

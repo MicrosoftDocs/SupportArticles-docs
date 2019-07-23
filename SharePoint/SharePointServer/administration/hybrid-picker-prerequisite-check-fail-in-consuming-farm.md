@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- SharePoint Server 2016
 ---
 
 # Hybrid Picker prerequisite check fail in a consuming farm  
@@ -25,7 +27,7 @@ In this scenario, the following prerequisite check fails:
 The SPO365LinkSettings cmdlet is accessible on the server.
 ```
 
-**Note** You may continue with the Hybrid Picker wizard. However, the changes that are made by the SPO365LinkSettings cmdlet won’t be configured.  
+**Note** You may continue with the Hybrid Picker wizard. However, the changes that are made by the SPO365LinkSettings cmdlet won't be configured.  
 
 When you run the Get-SPO365LinkSettings cmdlet in SharePoint management shell, you receive the following error message:
 

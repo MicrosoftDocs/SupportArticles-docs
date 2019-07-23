@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article
 ms.author: v-six
+appliesto:
+- SharePoint Online
 ---
 
 # Cannot force Modern Authentication when using Connect-SPOService cmdlet in SharePoint Online Management Shell

@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office Online
 ---
 
 # Error when view or edit in browser for Word or PowerPoint Onlines  

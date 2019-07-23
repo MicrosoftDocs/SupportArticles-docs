@@ -12,6 +12,8 @@ search.appverid:
 - MET150
 ms.assetid: 
 description: "Describes how to resolve an 'Access Denied' error when a SharePoint 2010 workflow sends an email to a group"
+appliesto:
+- SharePoint Server 2010
 ---
 # “Access Denied” error when a SharePoint 2010 workflow sends an email to a group
 

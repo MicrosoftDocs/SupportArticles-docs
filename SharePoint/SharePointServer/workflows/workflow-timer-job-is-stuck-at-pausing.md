@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft SharePoint
 ---
 
 # SharePoint workflow timer job is stuck at "Pausing"  
@@ -15,7 +17,7 @@ ms.author: v-six
 
 In SharePoint Central Administration, a workflow timer job shows the status as "Pausing." As a result, you experience the following issues:   
 
-- Approvals of tasks don’t complete.    
+- Approvals of tasks don't complete.    
 - Workflows can't run after a pause.    
 - Random processing of workflows occurs.    
 - Workflows don't function over extended periods of time.      
@@ -27,7 +29,7 @@ The most likely cause is a bad workflow instance.
 
 ## Resolution  
 
-To fix the issue, first determine whether it’s caused by a workflow definition that was introduced in the system or by a bad workflow instance. After you verify that, work with the workflow owner to decide whether the workflow can be terminated or deleted.   
+To fix the issue, first determine whether it's caused by a workflow definition that was introduced in the system or by a bad workflow instance. After you verify that, work with the workflow owner to decide whether the workflow can be terminated or deleted.   
 ### Step 1: Restrict servers that run the workflow timer job (optional but highly recommended)  
 
 To diagnose the issue quickly, consider stopping the Microsoft SharePoint Foundation Workflow Timer Service on all servers except one.   

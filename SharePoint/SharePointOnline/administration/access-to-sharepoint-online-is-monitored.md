@@ -8,6 +8,8 @@ ms.service: o365-solutions
 ms.topic: article
 ms.author: v-maqiu
 localization_priority: Normal
+appliesto:
+- SharePoint Online
 ---
 
 # "Access to Microsoft SharePoint Online is monitored" when browsing to a SharePoint site

@@ -7,6 +7,9 @@ audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
+appliesto:
+- Microsoft SharePoint Server
+- SharePoint Online
 ---
 
 # "You'll need a new app to open this ms-visio" when you open Visio files

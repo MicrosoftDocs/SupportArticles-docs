@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft SharePoint
 ---
 
 # Anonymous Users cannot open XLSX files from a document library  
@@ -15,7 +17,7 @@ ms.author: v-six
 
 Consider the following scenario:  
 
-- A publishing site or a site that has the ‘ViewFormPagesLockDown’ feature enabled    
+- A publishing site or a site that has the 'ViewFormPagesLockDown' feature enabled    
 - The site is configured for anonymous access   
 - The site contains a document library    
 - The document library contains a file with extension .XLSX (Excel 2007 or higher format)   

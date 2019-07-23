@@ -9,6 +9,8 @@ audience: Admin
 ms.topic: article
 ms.prod: office-perpetual-itpro
 localization_priority: Normal 
+appliesto:
+- Microsoft SharePoint
 ---
 
 # “Sorry, something went wrong” error on a Site Page with a Pages library web part added

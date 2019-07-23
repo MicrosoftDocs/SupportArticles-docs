@@ -6,6 +6,10 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- SharePoint Server 2013
+- SharePoint Server 2010
+- SharePoint Server 2007
 ---
 
 # Using PageParserPath directive can cause performance problems  

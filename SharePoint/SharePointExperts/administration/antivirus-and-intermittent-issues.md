@@ -7,6 +7,9 @@ audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
+appliesto:
+- Office Online Server
+- Office Web Apps
 ---
 
 # Antivirus and intermittent issues when you view Office documents by using Office Online Server

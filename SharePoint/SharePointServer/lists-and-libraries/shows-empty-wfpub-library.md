@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- SharePoint Designer 2013
 ---
 
 # SharePoint Designer 2013 shows empty wfpub library  

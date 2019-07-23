@@ -7,6 +7,8 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: arhinesm
+appliesto:
+- Microsoft SharePoint
 ---
 
 # Additional credential prompts when opening Office documents from a web server by persistent cookies

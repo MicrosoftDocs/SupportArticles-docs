@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- SharePoint Server 2010
 ---
 
 # Server Message bar is missing for Office documents opened via a hyperlink

@@ -9,6 +9,7 @@ ms.topic: article
 ms.author: v-six
 appliesto:
 - SharePoint Online
+- SharePoint Server 2013
 ---
 
 # "Sorry, something went wrong" error when you try to save a site as a template in SharePoint Online or SharePoint Server 2013
