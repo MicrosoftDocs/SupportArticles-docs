@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- SharePoint Foundation 2010
 ---
 
 # A Web Part that is configured to refresh automatically on a SharePoint Foundation 2010 Web page never finishes refreshing

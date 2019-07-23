@@ -8,7 +8,9 @@ manager: joselr
 audience: Admin
 ms.topic: article
 ms.prod: office-perpetual-itpro
-localization_priority: Normal 
+localization_priority: Normal
+appliesto:
+- Microsoft SharePoint
 ---
 
 # SharePoint app "Import Spreadsheet" fails with error "An unexpected error has occurred. (-2147352567)"

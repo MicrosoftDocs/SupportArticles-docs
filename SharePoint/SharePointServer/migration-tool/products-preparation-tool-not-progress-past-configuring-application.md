@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- SharePoint Server 2013
 ---
 
 # Products Preparation Tool may not progress past "Configuring Application Server Role, Web Server (IIS) Role"  

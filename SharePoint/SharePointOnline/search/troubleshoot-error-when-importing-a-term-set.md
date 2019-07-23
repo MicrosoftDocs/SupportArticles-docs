@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article
 ms.author: v-six
+appliesto:
+- SharePoint Online
 ---
 
 # "Not all terms were imported successfully" error when you try to import a term set

@@ -7,6 +7,10 @@ audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
+appliesto:
+- SharePoint Online
+- SharePoint Server 2013
+- Publisher 2013
 ---
 
 # Large Publisher files open in read-only mode

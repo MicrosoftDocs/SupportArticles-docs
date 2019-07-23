@@ -7,6 +7,8 @@ audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
+appliesto:
+- Microsoft SharePoint
 ---
 
 # PowerPivot Configuration Tool shows "The user is not a farm administrator" error

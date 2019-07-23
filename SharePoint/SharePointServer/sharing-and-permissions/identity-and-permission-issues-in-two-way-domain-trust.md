@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft SharePoint
 ---
 
 # SharePoint identity and permission issues in two-way domain trust

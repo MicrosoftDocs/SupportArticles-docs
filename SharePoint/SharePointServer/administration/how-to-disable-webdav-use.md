@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- SharePoint Server 2010
 ---
 
 # How to disable WebDAV use in SharePoint  

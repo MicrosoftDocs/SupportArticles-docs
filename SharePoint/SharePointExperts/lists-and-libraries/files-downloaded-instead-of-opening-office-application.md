@@ -7,6 +7,8 @@ audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
+appliesto:
+- Office Web Apps
 ---
 
 # A SharePoint file is downloaded instead of opening the Office application with a direct connection to it

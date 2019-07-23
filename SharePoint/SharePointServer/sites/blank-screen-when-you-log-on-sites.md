@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft SharePoint
 ---
 
 # Blank screen when you log on to a SharePoint site  

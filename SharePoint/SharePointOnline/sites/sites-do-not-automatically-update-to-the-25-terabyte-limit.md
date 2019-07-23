@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article
 ms.author: v-six
+appliesto:
+- SharePoint Online
 ---
 
 # SharePoint Online sites don't automatically update to the 25 terabyte limit

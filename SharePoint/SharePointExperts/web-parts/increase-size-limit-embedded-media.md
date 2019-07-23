@@ -7,6 +7,8 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: arhinesm
+appliesto:
+- PowerPoint Web App
 ---
 
 # Increasing the size limit of embedded media for the PowerPoint Web App

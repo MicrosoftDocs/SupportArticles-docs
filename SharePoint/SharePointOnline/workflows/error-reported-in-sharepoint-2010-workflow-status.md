@@ -8,6 +8,8 @@ ms.service: o365-solutions
 ms.topic: article
 ms.author: v-maqiu
 localization_priority: Normal
+appliesto:
+- SharePoint Designer 2013
 ---
 
 # A Workflow Status error is reported when a SharePoint 2010 workflow stops

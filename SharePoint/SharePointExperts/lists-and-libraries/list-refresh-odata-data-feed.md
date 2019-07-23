@@ -7,6 +7,8 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: zakirh
+appliesto:
+- SharePoint Server 2013
 ---
 
 # PowerPivot scheduled data refresh from a SharePoint list by using OData data feed connection (PowerPivot 2012 SP1 for SharePoint 2013)

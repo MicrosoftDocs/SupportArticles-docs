@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article
 ms.author: v-six
+appliesto:
+- SharePoint Online
 ---
 
 # Cannot access SharePoint Online sites by using a domain that's configured for full redelegation

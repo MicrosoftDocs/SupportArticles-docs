@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article
 ms.author: v-six
+appliesto:
+- SharePoint Online
 ---
 
 # "SharePoint 2013 workflow HTTP Unauthorized" error occurs

@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article
 ms.author: v-six
+appliesto:
+- SharePoint Online
 ---
 
 # "Sorry, something went wrong" error when you try to update, remove, or add a Send To connection

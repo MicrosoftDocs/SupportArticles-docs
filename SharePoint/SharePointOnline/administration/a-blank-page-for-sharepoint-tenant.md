@@ -8,6 +8,8 @@ ms.service: o365-solutions
 ms.topic: article
 ms.author: v-maqiu
 localization_priority: Normal
+appliesto:
+- SharePoint Online
 ---
 
 # "Access to this web site has been blocked" error or a blank page in a SharePoint tenant

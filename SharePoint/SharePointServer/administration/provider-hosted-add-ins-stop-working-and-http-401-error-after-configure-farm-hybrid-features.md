@@ -7,6 +7,9 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- SharePoint Server 2016
+- SharePoint Server 2013
 ---
 
 # Provider-hosted add-ins stop working and HTTP 401 error after you configure SharePoint farm hybrid features  

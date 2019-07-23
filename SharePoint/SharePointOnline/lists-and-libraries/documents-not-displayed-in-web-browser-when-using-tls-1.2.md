@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office Online Server
 ---
 
 # Documents aren't displayed in web browser when you're using TLS 1.2  

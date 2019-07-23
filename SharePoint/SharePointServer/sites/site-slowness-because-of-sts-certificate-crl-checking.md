@@ -7,6 +7,9 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- SharePoint Foundation 2010
+- SharePoint Server 2010
 ---
 
 # Site slowness because of SharePoint STS certificate CRL checking  

@@ -9,6 +9,7 @@ ms.topic: article
 ms.author: v-six
 appliesto:
 - SharePoint Online
+- SharePoint Server 2013
 ---
 
 # SharePoint 2010 Workflow platform creates Word files that can't be opened

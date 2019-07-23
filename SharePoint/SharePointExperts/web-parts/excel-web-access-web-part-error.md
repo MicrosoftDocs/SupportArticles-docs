@@ -1,12 +1,14 @@
 ---
 title: We couldn't find the file you wanted
-description: This article describes SharePoint 2016 Excel Web Access Web Part error "We couldn't find the file you wanted", and provides a solution.
+description: This article describes SharePoint 2016 Excel Web Access Web Part error We couldn't find the file you wanted, and provides a solution.
 author: simonxjx
 manager: willchen
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: randring
+appliesto:
+- SharePoint Server 2016
 ---
 
 # SharePoint 2016 Excel Web Access Web Part error "We couldn't find the file you wanted"

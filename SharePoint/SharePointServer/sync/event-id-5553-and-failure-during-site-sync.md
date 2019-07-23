@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft SharePoint
 ---
 
 # Event ID 5553 when during a site sync

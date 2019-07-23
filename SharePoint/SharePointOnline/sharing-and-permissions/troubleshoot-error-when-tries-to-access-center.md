@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article
 ms.author: v-six
+appliesto:
+- SharePoint Online
 ---
 
 # "External sharing is disabled for the site" error when a delegated partner administrator tries to access a client's SharePoint Online Admin Center

@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- SharePoint Server 2016
 ---
 
 # "Upgrade Available" status in new SharePoint Server 2016 farm  

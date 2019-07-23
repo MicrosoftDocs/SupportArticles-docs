@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Windows SharePoint Services 3.0
 ---
 
 # "An update conflict has occurred, and you must re-try this action" when change or delete an alternate access mapping

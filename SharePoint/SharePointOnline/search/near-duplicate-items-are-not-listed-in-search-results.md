@@ -7,6 +7,9 @@ audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article
 ms.author: v-six
+appliesto:
+- SharePoint Online
+- SharePoint Server 2013
 ---
 
 # Near-duplicate items aren't listed in SharePoint Online or SharePoint Server 2013 on-premises search results
