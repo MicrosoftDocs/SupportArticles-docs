@@ -9,7 +9,6 @@ ms.topic: article
 ms.author: v-six
 appliesto:
 - SharePoint Online
-- SharePoint Server
 ---
 
 # "My site URL or team site URL from Discovery Service is null or empty" error when you use the SharePoint Hybrid Picker
