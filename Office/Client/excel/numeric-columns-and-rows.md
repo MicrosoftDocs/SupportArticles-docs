@@ -23,9 +23,9 @@ This behavior occurs when the **R1C1 reference style** check box is selected in 
 To change this behavior, follow these steps:
 
 1. Start Microsoft Excel.
-2. On the Tools menu, click Options.
-3. Click the General tab.
-4. Under Settings, click to clear the **R1C1 reference style** check box (upper-left corner), and then click OK.
+2. On the **Tools** menu, click **Options**.
+3. Click the **Formulas** tab.
+4. Under **Working with formulas**, click to clear the **R1C1 reference style** check box (upper-left corner), and then click OK.
 
 If you select the **R1C1 reference style** check box, Excel changes the reference style of both row and column headings, and cell references from the A1 style to the R1C1 style.
 
