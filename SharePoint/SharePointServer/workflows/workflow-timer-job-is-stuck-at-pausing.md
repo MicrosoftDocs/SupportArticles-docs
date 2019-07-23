@@ -8,7 +8,9 @@ ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
 appliesto:
-- Microsoft SharePoint
+- SharePoint Server 2016
+- SharePoint Server 2013
+- SharePoint Server 2010
 ---
 
 # SharePoint workflow timer job is stuck at "Pausing"  
