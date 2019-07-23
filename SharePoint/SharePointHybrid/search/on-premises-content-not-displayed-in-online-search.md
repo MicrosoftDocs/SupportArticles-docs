@@ -8,7 +8,7 @@ ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
 appliesto:
-- Microsoft SharePoint Server
+- SharePoint Server 2013
 - SharePoint Online
 ---
 

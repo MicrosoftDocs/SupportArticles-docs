@@ -8,7 +8,10 @@ ms.service: sharepoint-online
 ms.topic: article
 ms.author: v-six
 appliesto:
-- Office Online
+- SharePoint Server 2010
+- SharePoint Foundation 2010
+- Word for the web
+- PowerPoint for the web
 ---
 
 # Error when view or edit in browser for Word or PowerPoint Onlines  

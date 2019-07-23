@@ -8,7 +8,9 @@ ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
 appliesto:
+- SharePoint Foundation 2013
 - SharePoint Server 2013
+- Microsoft SharePoint Server 2013 Service Pack 1
 ---
 
 # Incomplete search results for choice type columns with multiple values  

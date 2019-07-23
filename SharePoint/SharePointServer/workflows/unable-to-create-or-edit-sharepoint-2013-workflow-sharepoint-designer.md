@@ -10,7 +10,7 @@ ms.topic: article
 ms.prod: office-perpetual-itpro
 localization_priority: Normal 
 appliesto:
-- SharePoint Designer
+- SharePoint Designer 2013
 ---
 
 # Unable to create or edit SharePoint 2013 workflow in SharePoint Designer

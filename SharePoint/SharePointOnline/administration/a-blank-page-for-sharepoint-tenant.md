@@ -9,7 +9,6 @@ ms.topic: article
 ms.author: v-maqiu
 localization_priority: Normal
 appliesto:
-- SharePoint Server
 - SharePoint Online
 ---
 

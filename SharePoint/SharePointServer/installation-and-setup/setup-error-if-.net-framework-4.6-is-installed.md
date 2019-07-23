@@ -8,7 +8,9 @@ ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
 appliesto:
+- SharePoint Server 2013
 - SharePoint Foundation 2013
+- Project Server 2013
 ---
 
 # Setup error if the .NET Framework 4.6 is installed  

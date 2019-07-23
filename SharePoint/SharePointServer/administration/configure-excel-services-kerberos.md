@@ -8,7 +8,7 @@ ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
 appliesto:
-- SharePoint Server 2010
+- Excel Services in SharePoint Server 2010
 ---
 
 # How to configure Excel Services in SharePoint Server 2010 for Kerberos authentication
