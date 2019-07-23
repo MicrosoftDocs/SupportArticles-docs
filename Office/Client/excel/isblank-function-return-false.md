@@ -26,7 +26,7 @@ This behavior may occur when the cell contains a zero-length string. A zero leng
 
 To work around this issue, clear the zero-length string from the cell. To do this, select the cell, click **Edit**, and then click **Clear All**. 
 
-In addition, you can also check whether a cell contains a zero-length string by using the OR function. For example, if the cell you are checking is A1, the formula will be **=OR(Len(A1)=0, Isblank(A1))**.
+In addition, you can also check whether a cell contains a zero-length string by using the LEN function. For example, if the cell you are checking is A1, the formula will be **=OR(Len(A1)=0, Isblank(A1))**.
 
 ## More information
 
