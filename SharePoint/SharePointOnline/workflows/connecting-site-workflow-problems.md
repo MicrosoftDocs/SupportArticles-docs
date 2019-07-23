@@ -9,6 +9,7 @@ ms.topic: article
 ms.author: v-six
 appliesto:
 - SharePoint Online
+- SharePoint Server 2013
 ---
 
 # Workflow problems after you connect to a SharePoint Online or SharePoint Server 2013 site

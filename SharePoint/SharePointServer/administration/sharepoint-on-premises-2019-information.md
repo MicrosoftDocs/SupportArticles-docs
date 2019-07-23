@@ -8,7 +8,7 @@ ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
 appliesto:
-- SharePoint Online
+- SharePoint Server 2019
 ---
 
 # Information about SharePoint On-Premises 2019

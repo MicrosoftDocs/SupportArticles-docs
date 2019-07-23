@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Windows SharePoint Services 2.0
 ---
 
 # "Server Error in '/' Application. Access to the path  is denied" when you log on to Windows SharePoint Services 2.0  

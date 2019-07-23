@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article
 ms.author: v-six
+appliesto:
+- SharePoint Online
 ---
 
 # "You are not allowed to create team sites" error message when you click "new site" on the SharePoint Online "Followed Sites" page

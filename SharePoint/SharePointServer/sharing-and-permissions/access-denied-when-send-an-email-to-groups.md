@@ -7,6 +7,9 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- SharePoint Server 2013
+- SharePoint Designer 2013
 ---
 
 # Access denied when you send an email to a SharePoint group  

@@ -7,6 +7,9 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- SharePoint Server 2013
+- SharePoint Server 2010
 ---
 
 # You can't start the SharePoint Foundation Web Application service  

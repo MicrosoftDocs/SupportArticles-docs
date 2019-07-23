@@ -7,6 +7,9 @@ audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
+appliesto:
+- SharePoint Designer 2013
+- SharePoint Online
 ---
 
 # SharePoint Designer 2013 login Issues in a cloud scenario

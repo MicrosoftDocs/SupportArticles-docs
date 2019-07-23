@@ -7,6 +7,8 @@ audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
+appliesto:
+- Office Web Apps
 ---
 
 # "Edit Document requires a Microsoft SharePoint Foundation compatible application and web browser" when you open documents from SharePoint

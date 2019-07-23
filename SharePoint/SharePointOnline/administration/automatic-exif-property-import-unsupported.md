@@ -8,6 +8,8 @@ ms.service: o365-solutions
 ms.topic: article
 ms.author: v-maqiu
 localization_priority: Normal
+appliesto:
+- SharePoint Online
 ---
 
 # SharePoint Online no longer supports automatic import of EXIF properties after image upload

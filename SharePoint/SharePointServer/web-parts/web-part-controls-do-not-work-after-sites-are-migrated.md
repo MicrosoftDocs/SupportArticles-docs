@@ -7,6 +7,9 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- SharePoint Server 2016
+- SharePoint Server 2013
 ---
 
 # Web part controls don't work after sites are migrated to SharePoint Server 2016  

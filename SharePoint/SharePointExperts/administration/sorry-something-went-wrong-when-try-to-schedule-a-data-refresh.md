@@ -7,6 +7,8 @@ audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
+appliesto:
+- SharePoint Server 2016
 ---
 
 # "A schedule cannot be enabled for a workbook" when you try to schedule a data refresh by using PowerPivot

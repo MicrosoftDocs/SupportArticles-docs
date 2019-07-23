@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- SharePoint Server 2013
 ---
 
 # Certain Microsoft SharePoint Server 2013 installation scenarios are not supported  

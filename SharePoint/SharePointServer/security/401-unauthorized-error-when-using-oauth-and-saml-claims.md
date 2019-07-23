@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft SharePoint
 ---
 
 # "401 unauthorized" error when using OAuth and SAML claims

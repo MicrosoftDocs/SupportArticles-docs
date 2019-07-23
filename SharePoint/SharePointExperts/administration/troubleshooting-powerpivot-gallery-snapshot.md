@@ -7,6 +7,8 @@ ms.service: sharepoint
 ms.topic: article
 ms.service: sharepoint-online
 ms.author: randring
+appliesto:
+- SharePoint Server 2016
 ---
 
 # PowerPivot Gallery Snapshots Fail for SSL Host Header Sites

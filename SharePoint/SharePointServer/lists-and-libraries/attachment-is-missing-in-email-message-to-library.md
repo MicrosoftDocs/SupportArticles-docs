@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Windows SharePoint Services 3.0
 ---
 
 # Attachment is missing from an e-mail message that is sent to a document library  

@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Windows SharePoint Services 3.0
 ---
 
 # "Request timed out" when you try to upload a large file to a SharePoint Services 3.0 document library

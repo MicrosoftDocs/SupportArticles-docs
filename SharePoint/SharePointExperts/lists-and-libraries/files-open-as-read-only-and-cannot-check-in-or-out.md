@@ -7,12 +7,15 @@ audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
+appliesto:
+- Microsoft SharePoint
+- OneDrive for Business
 ---
 # SharePoint files open as read-only and can't check in or out
 
 ## Symptoms
 
-Assume that you synchronize a SharePoint document library that requires checkout to a local folder through Microsoft OneDrive for Business. When you open a file from either online or the local synced folder, the file is opened as read-only, and it can’t be checked in or checked out from Office applications.
+Assume that you synchronize a SharePoint document library that requires checkout to a local folder through Microsoft OneDrive for Business. When you open a file from either online or the local synced folder, the file is opened as read-only, and it can't be checked in or checked out from Office applications.
 
 ## Cause
 

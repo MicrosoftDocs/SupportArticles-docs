@@ -7,6 +7,8 @@ audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
+appliesto:
+- Microsoft SharePoint
 ---
 
 # Orphaned record for PowerPivot service application database

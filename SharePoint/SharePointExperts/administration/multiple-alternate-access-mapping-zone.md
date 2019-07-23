@@ -7,6 +7,8 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: arhinesm
+appliesto:
+- Office Online Server
 ---
 
 # Behavior when using Office Online Server and SharePoint with multiple zones
