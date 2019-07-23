@@ -57,7 +57,10 @@ To prevent built-in styles from being duplicated when you copy a workbook, make 
 The following Knowledge Base articles discuss how to prevent copying custom styles between workbooks in one instance of Excel when you move or copy a worksheet.
 
 > [!NOTE]
-> These article require you to install and add a registry key.
+> These articles require you to install and add a registry key.
+
+- [Unused styles are copied from one workbook to another workbook in Excel 2007](https://support.microsoft.com/help/2553085)
+- [Unused styles are copied from one workbook to another in Excel 2010](https://support.microsoft.com/help/2598127)
 
 ### Method 3
 
