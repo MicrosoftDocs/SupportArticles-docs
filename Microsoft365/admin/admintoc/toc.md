@@ -76,7 +76,6 @@
 ### [A user with this name already exists](../licensing/office-365-user-with-name-already-exists.md)
 ### [50,000 seats RIGHTSMANAGEMENT_ADHOC SKU](../licensing/rights-management-adhoc-sku-office-365.md)
 ### [Office Feature Updates task](../licensing/office-feature-updates-task-faq.md)
-### [Click-to-Run Update Support Tool](../licensing/click-to-run-update-support-tool.md)
 ### [Office C2R-P release for Project and Visio](../licensing/office-click-to-run-perpetual.md)
 ### [Office 365 subscription automatic license renewal fails](../licensing/subscription-license-renewal-fail.md)
 
