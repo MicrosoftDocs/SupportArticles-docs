@@ -8,7 +8,7 @@ ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
 appliesto:
-- SharePoint Online 2013
+- SharePoint Online
 ---
 
 # Minimal Download Strategy feature isn't used for a SharePoint Online list or library

@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- OneDrive
 ---
 
 # How to block OneDrive.exe from being advertised after you install Office 2016  

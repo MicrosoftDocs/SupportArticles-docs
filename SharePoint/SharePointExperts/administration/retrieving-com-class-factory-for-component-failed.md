@@ -7,6 +7,8 @@ audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
+appliesto:
+- Microsoft SharePoint
 ---
 
 # "Retrieving the COM class factory for component failed 800703fa" in Excel Services and PowerPivot

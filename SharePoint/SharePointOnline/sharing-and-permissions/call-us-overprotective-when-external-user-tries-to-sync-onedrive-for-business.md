@@ -7,6 +7,9 @@ audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article
 ms.author: v-six
+appliesto:
+- SharePoint Online
+- OneDrive for Business
 ---
 
 # "Call us overprotective" message when an external user tries to sync in OneDrive for Business

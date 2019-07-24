@@ -7,6 +7,8 @@ audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
+appliesto:
+- SharePoint Server 2016
 ---
 
 # "The virtual path maps to another application, which is not allowed." error when you run a scheduled data refresh

@@ -8,7 +8,8 @@ ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
 appliesto:
-- SharePoint Online
+- Windows SharePoint Services 3.0 
+- Windows SharePoint Services 2.0
 ---
 
 # You receive an "Access denied" or a "Cannot complete this action" error message when you try to connect to a Windows SharePoint Services Web site

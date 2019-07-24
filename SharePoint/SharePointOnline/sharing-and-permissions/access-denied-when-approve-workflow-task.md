@@ -7,6 +7,10 @@ audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article
 ms.author: v-six
+appliesto:
+- SharePoint Online
+- SharePoint Server 2013
+- SharePoint Server 2010
 ---
 
 # "Access denied" error when a user tries to approve an Approval Workflow task

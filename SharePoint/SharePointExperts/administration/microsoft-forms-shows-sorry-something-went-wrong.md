@@ -7,6 +7,9 @@ audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
+appliesto:
+- SharePoint Online
+- Microsoft Forms
 ---
 
 # Microsoft Forms shows "Sorry, something went wrong"

@@ -7,6 +7,10 @@ audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
+appliesto:
+- SharePoint Server 2016
+- SharePoint Server 2013
+- SharePoint Server 2010
 ---
 
 # Schedule data refresh to a data source with non-Windows Authentication

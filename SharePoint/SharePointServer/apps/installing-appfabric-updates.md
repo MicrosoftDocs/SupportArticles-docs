@@ -7,6 +7,9 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- SharePoint Server 2013
+- SharePoint Foundation 2013
 ---
 
 # Installing Windows Server AppFabric updates SharePoint 2013 Servers  

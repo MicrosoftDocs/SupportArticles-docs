@@ -7,6 +7,9 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- SharePoint Server 2013
+- SharePoint Server 2010
 ---
 
 # "800703fa Illegal operation attempted on a registry key" error

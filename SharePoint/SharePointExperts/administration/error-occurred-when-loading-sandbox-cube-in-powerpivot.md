@@ -7,6 +7,8 @@ audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
+appliesto:
+- Microsoft SharePoint
 ---
 
 # "An error occurred when loading the Sandbox cube" error in PowerPivot

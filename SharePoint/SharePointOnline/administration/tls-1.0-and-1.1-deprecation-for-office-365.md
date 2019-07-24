@@ -7,6 +7,13 @@ audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office 365 ProPlus
+- Office 365 Business
+- Office 365 Personal
+- Office Online Server
+- Office Web Apps
+- SharePoint
 ---
 
 # TLS 1.0 and 1.1 deprecation for Office 365

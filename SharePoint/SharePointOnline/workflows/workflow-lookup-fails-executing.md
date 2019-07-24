@@ -9,6 +9,7 @@ ms.topic: article
 ms.author: v-six
 appliesto:
 - SharePoint Online
+- SharePoint Server 2013
 ---
 
 # A SharePoint workflow that uses a site column to perform a lookup on a list on a different site doesn't execute

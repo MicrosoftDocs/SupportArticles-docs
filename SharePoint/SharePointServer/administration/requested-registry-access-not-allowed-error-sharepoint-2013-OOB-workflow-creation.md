@@ -9,6 +9,8 @@ audience: Admin
 ms.topic: article
 ms.prod: office-perpetual-itpro
 localization_priority: Normal 
+appliesto:
+- SharePoint Server 2013
 ---
 
 # "Requested registry access is not allowed" error in SharePoint 2013 OOB workflow creation
