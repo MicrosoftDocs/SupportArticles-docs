@@ -6,6 +6,8 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Excel for Mac
 ---
 
 # Toolbar missing, or how to reset menus in Excel for Mac

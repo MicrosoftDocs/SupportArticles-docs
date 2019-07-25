@@ -7,6 +7,10 @@ audience: ITPro
 ms.prod: office 365
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office 365 ProPlus
+- Microsoft Visio Pro for Office 365
+- Project Online Desktop Client
 ---
 
 # "Sorry, we can't connect to your account. Please try again later" error when you activate Office from Office 365

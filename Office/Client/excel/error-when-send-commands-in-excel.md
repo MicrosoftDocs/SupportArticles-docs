@@ -7,6 +7,11 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Excel 2016
+- Excel 2013
+- Excel 2010
+- Microsoft Office Excel 2007
 ---
 
 # "An error occurred when sending commands to the program" in Excel

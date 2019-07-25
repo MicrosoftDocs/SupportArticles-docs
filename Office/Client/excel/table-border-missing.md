@@ -6,6 +6,11 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Excel 2016 for Mac 
+- Outlook 2016 for Mac
+- Microsoft Excel for Mac 2011
+- Outlook 2011 for Mac
 ---
 
 # Excel/Outlook for Mac: Border missing when pasting table in email

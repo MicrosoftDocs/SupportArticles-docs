@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Access
 ---
 
 # PRB: Error 80004005 "The Microsoft Jet Database Engine cannot open the file '(unknown)'"

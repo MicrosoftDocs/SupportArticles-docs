@@ -6,6 +6,10 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office for Mac 2011
+- Office for Mac 2008
+- Office for Mac 2004
 ---
 
 # Change the Software License Registration Information (Company, Name) for Office for Mac

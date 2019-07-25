@@ -7,6 +7,19 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Excel 2013
+- Word 2013
+- PowerPoint 2013
+- Excel 2010
+- Microsoft Word 2010
+- PowerPoint 2010
+- Office Starter 2010
+- Office Standard 2010
+- Office Home and Student 2010
+- Office Home and Business 2010
+- Office Professional 2010
+- Office Professional Plus 2010
 ---
 
 # A Microsoft Excel, Word or PowerPoint file does not open because of incorrect file associations
