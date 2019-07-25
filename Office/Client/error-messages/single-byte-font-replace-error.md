@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- PowerPoint 2010
 ---
 
 # "You selected a single-byte font to replace a double-byte font" when replacing a Japanese font

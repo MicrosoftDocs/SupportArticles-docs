@@ -7,6 +7,9 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Office 2007
+- Microsoft Office 2003
 ---
 
 # "Error 25090" error message when you start an Office program

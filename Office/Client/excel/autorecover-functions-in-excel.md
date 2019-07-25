@@ -7,6 +7,10 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Excel 2010
+- Microsoft Office Excel 2007
+- Microsoft Office Excel 2003
 ---
 
 # Description of the AutoRecover functions in Excel

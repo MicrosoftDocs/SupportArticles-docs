@@ -6,6 +6,8 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office for Mac
 ---
 
 # Cannot pass the Welcome Screen in Office for Mac

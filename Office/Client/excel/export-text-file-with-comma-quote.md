@@ -7,6 +7,10 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office Excel 2007
+- Office Excel 2003
+- Excel 2002
 ---
 
 # Procedure to export a text file with both comma and quote delimiters in Excel

@@ -6,6 +6,9 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Access 2003
+- Access 2002
 ---
 
 # You receive errors when you create a data access page in Access

@@ -7,6 +7,10 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Office Excel 2007
+- Microsoft Office Excel 2003
+- Excel 2004 for Mac
 ---
 
 # Excel statistical functions: GROWTH

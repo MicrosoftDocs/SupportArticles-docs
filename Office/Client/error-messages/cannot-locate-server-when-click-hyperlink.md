@@ -7,6 +7,20 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Word 2013
+- Outlook 2013
+- PowerPoint 2013
+- Excel 2013
+- Microsoft Word 2010
+- Microsoft Outlook 2010
+- Excel 2010
+- PowerPoint 2010
+- Microsoft Office Excel 2007
+- Microsoft Office Outlook 2007
+- Microsoft Office PowerPoint 2007
+- Microsoft Office Outlook 2003
+- Microsoft Office PowerPoint 2003
 ---
 
 # Error message when clicking hyperlink in Office: "Cannot locate the Internet server or proxy server"

@@ -7,6 +7,10 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Office Excel 2007
+- Microsoft Office Excel 2003
+- Microsoft Office Excel 2002
 ---
 
 # Use shared workbooks with different versions of Excel

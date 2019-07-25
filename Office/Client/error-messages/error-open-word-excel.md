@@ -7,6 +7,11 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Word 2007
+- Excel 2007
+- Word 2003
+- Excel 2003
 ---
 
 # "The document caused a serious error the last time it was opened" when you open a file

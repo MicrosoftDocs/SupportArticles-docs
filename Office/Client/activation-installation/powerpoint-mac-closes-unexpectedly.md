@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- PowerPoint for Mac
 ---
 
 # PowerPoint for Mac closes or quit unexpectedly when you start it or open a new presentation

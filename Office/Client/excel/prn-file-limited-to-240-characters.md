@@ -6,6 +6,8 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article 
 ms.author: v-six
+appliesto:
+- Microsoft Excel
 ---
 
 # Formatted text (.prn) is limited to 240 characters per line in Excel
