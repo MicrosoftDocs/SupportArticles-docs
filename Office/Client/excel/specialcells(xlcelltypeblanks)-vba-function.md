@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Excel
 ---
 
 # The .SpecialCells(xlCellTypeBlanks) VBA function does not work as expected in Excel

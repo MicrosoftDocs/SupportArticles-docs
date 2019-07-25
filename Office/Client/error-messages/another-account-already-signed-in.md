@@ -7,6 +7,9 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office 365
+- Office 2013
 ---
 
 # "Sorry, another account from your organization is already signed in on this computer" in Office 2013

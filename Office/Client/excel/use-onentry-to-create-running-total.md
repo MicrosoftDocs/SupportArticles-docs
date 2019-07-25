@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Excel
 ---
 
 # Use the OnEntry macro to create a running total in a cell comment in Excel

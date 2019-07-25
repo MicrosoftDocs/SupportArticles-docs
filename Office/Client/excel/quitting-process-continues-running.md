@@ -7,6 +7,9 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office Excel 2007
+- Office Excel 2003
 ---
 
 # An active Excel process continues to run after using a VBA macro to programmatically quit Excel

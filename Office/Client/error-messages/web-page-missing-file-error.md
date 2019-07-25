@@ -7,6 +7,10 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Excel
+- Microsoft PowerPoint
+- Microsoft Word
 ---
 
 # "The page cannot be found" or "Missing file" error when you view or change an Office document

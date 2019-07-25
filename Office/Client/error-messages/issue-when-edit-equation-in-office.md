@@ -7,6 +7,8 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six, v-todmc
+appliesto:
+- Microsoft Office
 ---
 
 # Error when editing an equation in Office

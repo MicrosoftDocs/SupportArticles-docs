@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Excel
 ---
 
 # PRB: "Operation must use an updateable query" When you access Excel through ODBC

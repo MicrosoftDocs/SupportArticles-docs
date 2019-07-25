@@ -7,6 +7,8 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office Professional Plus 2013
 ---
 
 # How to install and activate Office Professional Plus 2013 on a terminal server

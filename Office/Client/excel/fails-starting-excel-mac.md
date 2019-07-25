@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Excel for Mac
 ---
 
 # "Microsoft Excel has encountered a problem and needs to close" when starting Excel for Mac

@@ -6,6 +6,8 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Excel
 ---
 
 # Custom function may not calculate expected value in Excel

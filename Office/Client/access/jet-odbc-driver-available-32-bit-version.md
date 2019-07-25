@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Access
 ---
 
 # Microsoft OLE DB Provider for Jet and Jet ODBC driver are available in 32-bit versions only

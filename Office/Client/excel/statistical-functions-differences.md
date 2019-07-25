@@ -7,6 +7,9 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Office Excel 2007
+- Microsoft Office Excel 2003
 ---
 
 # Differences between the Excel statistical functions STDEVPA and STDEVP

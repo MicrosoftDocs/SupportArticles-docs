@@ -7,6 +7,9 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Excel
+- Visual Studio 2008
 ---
 
 # "Unable to cast COM object..." when exporting to Excel from Team Explorer 2008

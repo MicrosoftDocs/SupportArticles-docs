@@ -7,6 +7,9 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Excel 2007
+- Excel 2003
 ---
 
 # You may receive an error message when you sort a range that contains merged cells in Excel

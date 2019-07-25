@@ -7,6 +7,10 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Excel 2000
+- Microsoft Excel 2002
+- Microsoft Office Excel 2003
 ---
 
 # The "Center Across Columns" button doesn't appear on the toolbar or on the Ribbon in Excel

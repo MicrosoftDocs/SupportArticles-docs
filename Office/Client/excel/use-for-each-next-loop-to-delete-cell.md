@@ -6,6 +6,12 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+appliesto:
+- Microsoft Office Excel 2007
+- Microsoft Office Excel 2003
+- Microsoft Office Excel 2002
+- Excel 97
 ---
 
 # Delete cells by using a "For Each...Next" loop in Excel

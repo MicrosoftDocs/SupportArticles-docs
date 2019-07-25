@@ -7,6 +7,11 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Excel 2016 for Mac
+- PowerPoint 2016 for Mac
+- Microsoft Word 2016 for Mac
+- Microsoft Excel for Mac 2011
 ---
 
 # Hyperlinks stop working after you save as a PDF in Office 2011

@@ -7,6 +7,23 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office Professional 2010
+- Microsoft Outlook 2010
+- PowerPoint 2010
+- Publisher 2010
+- Access 2010
+- Microsoft Office Outlook 2007
+- Microsoft Office PowerPoint 2007
+- Microsoft Office Publisher 2007
+- Microsoft Office Access 2007
+- Microsoft Office Professional Edition 2003
+- Microsoft Office Outlook 2003
+- Microsoft Office PowerPoint 2003
+- Microsoft Office Publisher 2003
+- Microsoft Office Small Business Edition 2003
+- Microsoft Office Basic Edition 2003
+- Microsoft Office Access 2003
 ---
 
 # How to use a setup log to troubleshoot setup problems in Office

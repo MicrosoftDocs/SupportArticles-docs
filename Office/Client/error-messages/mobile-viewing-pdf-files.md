@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office Online Server
 ---
 
 # Mobile viewing PDF files with Office Web Apps

@@ -6,6 +6,8 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Excel 97
 ---
 
 # Unexpected behavior when you use different print quality for sheets in Excel

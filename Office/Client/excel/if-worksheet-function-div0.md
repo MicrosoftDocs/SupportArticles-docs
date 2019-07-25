@@ -6,6 +6,10 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Excel 2007
+- Excel 2003
+- Excel 2000
 ---
 
 # How to use the IF worksheet function to suppress the #DIV/0! error value in Excel

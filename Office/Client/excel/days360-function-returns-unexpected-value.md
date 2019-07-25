@@ -7,6 +7,10 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Excel 2003
+- Excel 2002
+- Excel 97
 ---
 
 # An unexpected value is returned when you use the DAYS360 function in Excel
