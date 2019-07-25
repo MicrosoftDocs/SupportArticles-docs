@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Excel 
 ---
 
 # Date format is not correct when you convert a CSV text file in Excel by using a VBA macro

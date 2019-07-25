@@ -7,6 +7,10 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Excel 2007
+- Excel 2003
+- Excel 2002
 ---
 
 # Registry keys that control the File Repair feature in Excel

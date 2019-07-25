@@ -6,6 +6,11 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office Home and Student 2010
+- Office Home and Business 2010
+- Office Professional 2010
+- Office Professional Plus 2010
 ---
 
 # Office 2010 product key change error step by step

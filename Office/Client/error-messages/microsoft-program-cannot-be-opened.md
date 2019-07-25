@@ -7,6 +7,9 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office for Mac 2008
+- Office for Mac 2011
 ---
 
 # "Microsoft  cannot be opened because of a problem” error when you start an Office program

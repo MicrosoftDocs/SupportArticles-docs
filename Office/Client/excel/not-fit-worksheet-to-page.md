@@ -7,6 +7,11 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Excel 2007
+- Excel 2003
+- Excel 2002
+- Excel 2000
 ---
 
 # Excel may not automatically fit the worksheet to the page after you set the "Fit to" option

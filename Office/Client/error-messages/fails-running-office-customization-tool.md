@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office 2007
 ---
 
 # "Files necessary to run the Office Customization Tool were not found" when you open the tool

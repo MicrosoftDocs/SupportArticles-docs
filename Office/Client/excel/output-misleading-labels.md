@@ -7,6 +7,9 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Office Excel 2003
+- Excel 2004 for Mac
 ---
 
 # Misleading labels in the output of the Analysis ToolPak t-Test tools in Excel

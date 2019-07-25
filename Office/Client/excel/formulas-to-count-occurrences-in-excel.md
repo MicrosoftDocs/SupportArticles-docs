@@ -7,6 +7,9 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Excel 2016
+- Excel 2013
 ---
 
 # Description of formulas to count the occurrences of text, characters, and words in Excel

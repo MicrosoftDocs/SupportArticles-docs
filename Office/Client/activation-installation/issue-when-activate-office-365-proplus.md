@@ -7,6 +7,9 @@ audience: ITPro
 ms.prod: office 365
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office 365 ProPlus
+- Office 365 Identity Management
 ---
 
 # "We are unable to connect right now" error when users try to activate Office 365 ProPlus

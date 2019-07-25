@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Excel 2013
 ---
 
 # "The following connection failed to refresh" error in an Excel 2013 workbook on a WAC server

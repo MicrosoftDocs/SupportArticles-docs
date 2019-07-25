@@ -7,6 +7,9 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Azure Active Directory
+- Office 2013
 ---
 
 # "We can't sign you into your company portal" when activating Office 2013
