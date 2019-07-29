@@ -124,7 +124,7 @@
 ### ["Shared With"column displays users unexpectedly](../sharing-and-permissions/shared-with-column-users-no-access.md)
 ### [Can't access a shared folder](../sharing-and-permissions/cannot-access-shared-folder.md)
 ### [Email invitation isn't received](../sharing-and-permissions/everyone-group-not-receive-email-invitation.md)
-### [Option isn't received to request access to resource](../sharing-and-permissions/request-access to-resource.md)
+### [Option isn't received to request access to resource](../sharing-and-permissions/request-access-to-resource.md)
 ### [Issue after accepting a resource invite](../sharing-and-permissions/unable-to-complete-request.md)
 ### [Can't share files with external users](../sharing-and-permissions/share-files-external-user-group-site.md)
 ### [SSL certificate authentication issues ](../sharing-and-permissions/ssl-certificate-authentication.md)
