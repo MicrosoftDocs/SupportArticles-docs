@@ -135,7 +135,7 @@
 ### [Issue with activate or deactivate the Publishing feature](../sharing-and-permissions/activating-publishing-feature-access-error.md)
 ### ["Everyone except external users" group is removed](../sharing-and-permissions/everyone-except-external-user-removed.md)
 ### [“Your organization's policies do not allow you to share with these users” error when sharing an item or site in SharePoint Online or OneDrive for Business](../administration/organization-policies-do-not-allow-you-to-share-with-users-error.md)
-### [“Access Denied”, “You need permission to access this site”, or “User not found in the directory” errors in SharePoint Online and OneDrive for Business](../administration/access-denied-or-need-permission-error-sharepoint-online-or-onedrive-for-business.md)
+### ["Access Denied", "You need permission to access this site", or "User not found in the directory" errors in SharePoint Online and OneDrive for Business](../administration/access-denied-or-need-permission-error-sharepoint-online-or-onedrive-for-business.md)
 ### [Sharing options are greyed out when sharing from SharePoint Online or OneDrive](../administration/sharing-options-grayed-out-when-sharing-from-sharepoint-online-or-onedrive.md)
 
 ## Sites
