@@ -1,5 +1,3 @@
-C:\GitHub\OfficeDocs-Support-pr2\SharePoint\SharePointOnline\administration\access-denied-or-need-permission-error-sharepoint-online-or-onedrive-for-business.md
-
 ---
 title: Access Denied, You need permission to access this site, or User not found in the directory errors in SharePoint Online and OneDrive for Business
 ms.author: v-todmc
@@ -14,7 +12,7 @@ search.appverid:
 - SPO160
 - MET150
 ms.assetid: 
-description: "Describes resolutions to error messages received when using SharePointOnline or OneDrive for Business."
+description: "Outlines resolutions to error messages received when using SharePointOnline or OneDrive for Business."
 ---
 
 # “Access Denied”, “You need permission to access this site”, or “User not found in the directory” errors in SharePoint Online and OneDrive for Business
