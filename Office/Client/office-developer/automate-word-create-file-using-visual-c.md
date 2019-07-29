@@ -7,6 +7,8 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Word
 ---
 
 # How to automate Microsoft Word to create a new document by using Visual C#

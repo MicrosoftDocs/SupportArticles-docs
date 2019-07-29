@@ -7,6 +7,8 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Office
 ---
 
 # How to use the WebBrowser control to open Office documents in Visual C# 2005 or in Visual C# .NET

@@ -7,6 +7,10 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Visio 2007
+- Visio 2003
+- Visio 2002
 ---
 
 # How to automate Visio with Visual Basic .NET

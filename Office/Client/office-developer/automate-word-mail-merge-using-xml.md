@@ -7,6 +7,8 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Word
 ---
 
 # How to automate Word to perform a client-side Mail Merge using XML from SQL Server

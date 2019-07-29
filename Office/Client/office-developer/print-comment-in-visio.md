@@ -7,6 +7,10 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Visio 2010
+- Visio 2007
+- Visio 2003
 ---
 
 # How to print comments that are inserted by reviewers when you use the Track Markup feature in Visio 2010, in Visio 2007, or in Visio 2003

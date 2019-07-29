@@ -8,6 +8,8 @@ audience: Admin|ITPro|Developer
 ms.topic: article
 ms.prod: office-perpetual-itpro
 localization_priority: Normal 
+appliesto:
+- Microsoft InfoPath 2013
 ---
 # Generated .PDB file name does not match InfoPath form name
 
