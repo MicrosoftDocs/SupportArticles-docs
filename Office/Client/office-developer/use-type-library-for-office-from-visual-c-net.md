@@ -7,6 +7,8 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Office Professional Edition 2003
 ---
 
 # How to use a type library for Office Automation from Visual C++.NET

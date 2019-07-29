@@ -7,6 +7,8 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Office Excel 2007
 ---
 
 # How to use Visual Basic for Applications to count the occurrences of a character in a selection in Excel
