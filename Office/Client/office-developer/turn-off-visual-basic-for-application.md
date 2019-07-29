@@ -7,6 +7,22 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office Professional Plus 2016
+- Office Standard 2016
+- Office Standard 2013
+- Office Professional 2013
+- Office Home and Student 2013
+- Office Home and Business 2013
+- Office Professional Plus 2013
+- Office Standard 2010
+- Office Professional 2010
+- Office Home and Student 2010
+- Office Home and Business 2010
+- Office Professional Academic 2010
+- Office Professional Plus 2010
+- Microsoft Office Standard Edition 2003
+- Microsoft Office Professional Edition 2003
 ---
 
 # How to turn off Visual Basic for Applications when you deploy Office

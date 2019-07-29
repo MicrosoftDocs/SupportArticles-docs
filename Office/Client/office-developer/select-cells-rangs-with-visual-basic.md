@@ -7,6 +7,12 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Excel for Office 365
+- Excel 2019
+- Excel 2016
+- Excel 2013
+- Excel 2010 
 ---
 
 # How to select cells/ranges by using Visual Basic procedures in Excel

@@ -7,6 +7,8 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- InfoPath 2003
 ---
 
 # How to encode and decode a file attachment programmatically by using Visual C# in InfoPath 2003

@@ -7,6 +7,9 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Word
+- Microsoft Excel
 ---
 
 # How To Use an XML Web Service by Using ASP.NET from an Office VBA Macro in Word or Excel

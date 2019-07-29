@@ -7,6 +7,9 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Excel 2010
+- Office Excel 2003
 ---
 
 # How to display a progress bar with a user form in Excel

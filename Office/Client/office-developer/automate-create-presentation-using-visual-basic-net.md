@@ -7,6 +7,8 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft PowerPoint
 ---
 
 # How to use automation to create and to show a PowerPoint presentation by using Visual Basic .NET 2002 or Visual Basic .NET 2003

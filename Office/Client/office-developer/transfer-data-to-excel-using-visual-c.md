@@ -7,6 +7,10 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Excel 2003
+- Excel 2002 
+- Excel 2000
 ---
 
 # How to transfer data to an Excel workbook by using Visual C# 2005 or Visual C# .NET
