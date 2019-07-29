@@ -10,6 +10,7 @@
 
 ## Management Console
 ### [Connecting to the remote server failed](../management-console/connecting-remote-server-failed.md)
+### [EMS fails to start with error](../management-console/fail-to-start-ems-canot-find-path.md)
 
 ## Mailbox Configuration
 ### [451 4.4.0 DNS query failed](../mailbox-configuration/dns-query-failed.md)
