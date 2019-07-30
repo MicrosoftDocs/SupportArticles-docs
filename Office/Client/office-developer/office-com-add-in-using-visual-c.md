@@ -7,6 +7,10 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Office XP
+- Microsoft Office 2003
+- Microsoft Office 2007 
 ---
 
 # How to build an Office COM add-in by using Visual C# .NET

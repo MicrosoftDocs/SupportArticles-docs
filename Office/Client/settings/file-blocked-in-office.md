@@ -7,6 +7,14 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Word 2016
+- Excel 2016
+- PowerPoint 2016
+- Visio 2016
+- PowerPoint 2019
+- Excel 2019
+- Word 2019
 ---
 
 # Error message in Office when a file is blocked by registry policy settings

@@ -7,6 +7,8 @@ audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
+appliesto:
+- Office Online Server
 ---
 
 # Office viewers or Office Web Apps shows the "This page can't be displayed" error

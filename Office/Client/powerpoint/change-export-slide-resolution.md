@@ -7,6 +7,12 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- PowerPoint 2016
+- PowerPoint 2013
+- PowerPoint 2010
+- Microsoft Office PowerPoint 2007
+- Microsoft Office PowerPoint 2003
 ---
 
 # How to change the export resolution of a PowerPoint slide

@@ -7,6 +7,8 @@ audience: ITPro
 ms.topic: article
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
+appliesto:
+- Excel 2016
 ---
 
 # "Cannot access directory" error when you change the default save location in Excel 2016

@@ -7,6 +7,10 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office PowerPoint 2007
+- Office PowerPoint 2003
+- PowerPoint 2002
 ---
 
 # Add custom values to animation effect options in PowerPoint

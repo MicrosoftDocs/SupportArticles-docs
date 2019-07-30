@@ -7,6 +7,8 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Outlook 2010
 ---
 
 # How to automate Outlook 2010 by using C++ in Visual Studio 2010 together with MFC

@@ -6,6 +6,26 @@ audience: ITPro
 ms.service: office 365
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office 365
+- Excel 2019
+- Excel 2016
+- Excel 2013
+- Excel 2010
+- Microsoft Office Excel 2007
+- Microsoft Office Excel 2003
+- PowerPoint 2019
+- PowerPoint 2016
+- PowerPoint 2013
+- PowerPoint 2010
+- Microsoft Office PowerPoint 2007
+- Microsoft Office PowerPoint 2003
+- Publisher 2019
+- Publisher 2016
+- Publisher 2013
+- Publisher 2010
+- Microsoft Office Publisher 2007
+- Microsoft Office Publisher 2003
 ---
 
 # An Office program is slow or may stop responding (hang) when you open a file from a network location

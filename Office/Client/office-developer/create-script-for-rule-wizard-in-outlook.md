@@ -7,6 +7,9 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Outlook 2010
+- Microsoft Office Outlook 2003
 ---
 
 # How to create a script for the Rules Wizard in Outlook

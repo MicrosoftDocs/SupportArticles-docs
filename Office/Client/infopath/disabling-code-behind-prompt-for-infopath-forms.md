@@ -8,7 +8,9 @@ manager: joselr
 audience: Admin
 ms.topic: article
 ms.prod: office-perpetual-itpro
-localization_priority: Normal 
+localization_priority: Normal
+appliesto:
+- Microsoft InfoPath
 ---
 # Disabling code-behind prompt for InfoPath forms
 

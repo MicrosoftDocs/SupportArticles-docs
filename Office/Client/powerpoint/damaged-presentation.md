@@ -7,6 +7,12 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- PowerPoint 2019
+- PowerPoint 2016
+- PowerPoint 2013
+- PowerPoint 2010
+- Microsoft Office PowerPoint 2007
 ---
 
 # How to troubleshoot a damaged presentation in PowerPoint
