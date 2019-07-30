@@ -14,7 +14,6 @@
 ### [Event 32263 error 0xC3E93C2F on Front End servers](../server-configuration/event-32263-0xc3e93c2f-front-end.md)
 ### [Lync Server 2013 Front-End server services not start](../server-configuration/front-end-services-not-start.md)
 ### [Can't perform a CMS failover](../server-configuration/cannot-perform-cms-failover.md)
-### [Kerberos authentication for MAPI client connection](../server-configuration/kerberos-authentication-for-mapi-client.md)
 ### [Bug Check 0x133 on Edge server](../server-configuration/bugcheck-0x133-edge-server.md)
 ### [UCWA mobility web service not accept connections](../server-configuration/ucwa-mobility-web-service-not-accept-connections.md)
 ### [Windows Fabric, Front-end services won't start](../server-configuration/windows-fabric-front-end-services-not-start.md)
