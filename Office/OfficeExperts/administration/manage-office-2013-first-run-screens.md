@@ -7,6 +7,8 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: jalalb
+appliesto:
+- Office 2013
 ---
 
 # How to manage the First Run screens that appear when Office 2013 applications are first started

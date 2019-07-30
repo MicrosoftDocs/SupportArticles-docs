@@ -7,6 +7,12 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Word for Office 365
+- Word 2019
+- Word 2016
+- Word 2013
+- Word 2010
 ---
 
 # How to recover a lost Word document

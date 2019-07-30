@@ -7,6 +7,8 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Word 2010
 ---
 
 # A picture or an object may not appear in a Word 2010 or Word 2007 document

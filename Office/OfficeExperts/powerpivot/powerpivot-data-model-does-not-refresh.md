@@ -7,6 +7,8 @@ audience: ITPro
 ms.topic: article
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
+appliesto:
+- Microsoft Excel
 ---
 
 # PowerPivot data model does not refresh when the SQL Server authentication and "Save Password" are used

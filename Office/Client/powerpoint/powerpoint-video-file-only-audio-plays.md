@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft PowerPoint
 ---
 
 # Only the audio plays when you play a video file in a PowerPoint slide presentation

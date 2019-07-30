@@ -7,6 +7,9 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Word 2002
+- Word 2000
 ---
 
 # How to troubleshoot a Visual Basic compile or runtime error in Word

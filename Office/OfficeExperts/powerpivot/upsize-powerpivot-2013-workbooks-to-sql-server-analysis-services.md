@@ -7,6 +7,8 @@ audience: ITPro
 ms.topic: article
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
+appliesto:
+- Microsoft Excel
 ---
 
 # Upsize PowerPivot 2013 workbooks to SQL Server Analysis Services (SSAS)
