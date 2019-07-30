@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Exchange Server 2010
 ---
 
 # Kerberos authentication for MAPI client connection to a Client Access server array
