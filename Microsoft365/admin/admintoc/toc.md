@@ -54,6 +54,7 @@
 ### [Your session has expired in Office Online](../administration/your-session-has-expired-error.md)
 ### [Disabled Office 365 Sway tile continues to appear in App Launcher](../administration/disabled-sway-tile-appear.md)
 ### [Full Access permissions aren't working after a migration](../administration/office-365-dedicated-itar-vnext.md)
+### [Enable O365 ProPlus ULS logging](../administration/collect-office-diagnostic-logs.md)
 
 ## Authentication
 ### [Enable Office 365 ProPlus ULS logging](../authentication/how-to-enable-office-365-proplus-uls-logging.md)
