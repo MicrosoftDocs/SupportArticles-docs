@@ -7,6 +7,17 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Office Access 2007
+- Microsoft Office Excel 2007
+- Microsoft Office PowerPoint 2007
+- Microsoft Office Access 2003
+- Microsoft Office PowerPoint 2003
+- Microsoft Word 2010
+- Excel 2010
+- PowerPoint 2010
+- Access 2010
+- Office Professional 2010
 ---
 
 # How to find the installation path of an Office application

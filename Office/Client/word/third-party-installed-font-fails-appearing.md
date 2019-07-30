@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Word for Mac
 ---
 
 # Third-party installed font does not appear in the font list in Word for Mac
@@ -17,7 +19,7 @@ After you install a font into the Fonts folder in the operating system and start
 
 ## Cause
 
-Third-party fonts are not directly supported in Microsoft Office for Mac applications. Some third-party fonts may work in one application and not in another. Other third-party fonts are installed in a ”family”. A family usually consists of the third-party font itself together with some or all of its variations (bold, italic, and so forth). Sometimes, a font may be displayed in Microsoft Word, Microsoft PowerPoint, Microsoft Excel, or Microsoft Entourage, but you may be unable to use one of its variations, such as italic.
+Third-party fonts are not directly supported in Microsoft Office for Mac applications. Some third-party fonts may work in one application and not in another. Other third-party fonts are installed in a "family". A family usually consists of the third-party font itself together with some or all of its variations (bold, italic, and so forth). Sometimes, a font may be displayed in Microsoft Word, Microsoft PowerPoint, Microsoft Excel, or Microsoft Entourage, but you may be unable to use one of its variations, such as italic.
 
 Office does not support custom fonts. This includes any fonts that were manipulated by a font or typography program.
 

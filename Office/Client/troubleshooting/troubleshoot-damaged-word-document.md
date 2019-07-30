@@ -6,6 +6,8 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Word for Mac 2008
 ---
 
 # Troubleshooting damaged documents in Word for Mac

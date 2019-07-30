@@ -7,6 +7,8 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office for Mac 2011 
 ---
 
 # "wkresources" files in Trash after using or starting Office for Mac applications

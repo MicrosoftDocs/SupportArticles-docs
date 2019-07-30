@@ -7,6 +7,8 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-todmc
+appliesto:
+- Microsoft InfoPath 2013
 ---
 
 # SoapServerException error when customizing list form (SPO and SP-onprem) using InfoPath designer

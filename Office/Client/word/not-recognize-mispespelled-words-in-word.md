@@ -7,6 +7,8 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Word 2010
 ---
 
 # Spell Checker does not recognize misspelled words in Word 2010

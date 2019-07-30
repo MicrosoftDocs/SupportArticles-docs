@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Excel
 ---
 
 # How to automate Excel from MFC and Visual C++ 2005 or Visual C++ .NET to fill or obtain data in a range using arrays

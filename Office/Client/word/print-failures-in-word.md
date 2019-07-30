@@ -7,6 +7,11 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Word 2013 
+- Word 2010
+- Word 2007
+- Word 2003
 ---
 
 # Troubleshoot print failures in Word

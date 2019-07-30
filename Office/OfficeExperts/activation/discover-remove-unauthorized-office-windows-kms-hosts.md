@@ -7,6 +7,8 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: ericspli
+appliesto:
+- Office 2010
 ---
 
 # How to discover Office and Windows KMS hosts through DNS and remove unauthorized instances

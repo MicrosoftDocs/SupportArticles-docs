@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Word
 ---
 
 # How to troubleshoot a Visual C++ runtime error in Word
@@ -17,11 +19,11 @@ The error message encountered may be similar to the following:
 
 **Microsoft Visual C++ Runtime Library Runtime Error!**
 
-## CAUSE
+## Cause
 
 A **runtime error** means that there is an error in an add-in that is attempting to run. Typically the add-ins are created by a third-party and are not part of the Word installation. These errors could be caused by a malfunctioning virus as well.
 
-## RESOLUTION
+## Resolution
 
 A Visual C++ error usually indicates the error lies in a COM Add-in. COM add-ins are add-ins loaded by Registry rather than the Startup folders.
 

@@ -7,6 +7,11 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Office Word 2003
+- Microsoft Word 2010
+- Word 2013
+- Windows 8.1
 ---
 
 # How to troubleshoot problems that occur when you start or use Word

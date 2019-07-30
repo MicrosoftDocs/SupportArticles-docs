@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- PowerPoint for Mac
 ---
 
 # "Microsoft PowerPoint has encountered a problem and needs to close" in PowerPoint for Mac startup

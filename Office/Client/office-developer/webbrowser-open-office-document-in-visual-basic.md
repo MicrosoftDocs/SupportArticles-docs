@@ -4,9 +4,11 @@ description:
 author: simonxjx
 manager: willchen
 audience: ITPro
-ms.service: sharepoint-powershell
+ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Office
 ---
 
 # How to use the WebBrowser control in Visual Basic to open an Office document

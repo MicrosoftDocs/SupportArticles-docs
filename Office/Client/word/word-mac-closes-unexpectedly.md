@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Word for Mac
 ---
 
 # Word for Mac closes unexpectedly or error "The application Microsoft Word quit unexpectedly"
