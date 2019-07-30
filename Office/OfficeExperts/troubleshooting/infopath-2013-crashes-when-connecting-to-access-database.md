@@ -7,6 +7,8 @@ audience: ITPro
 ms.topic: article
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
+appliesto:
+- InfoPath 2013
 ---
 
 # InfoPath 2013 crashes when you connect to an Access database

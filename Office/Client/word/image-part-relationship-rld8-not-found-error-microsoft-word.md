@@ -9,6 +9,8 @@ audience: ITPro
 ms.topic: article
 ms.prod: office-perpetual-itpro
 localization_priority: Normal 
+appliesto:
+- Microsoft Word
 ---
 
 # “The image part with relationship rID8 was not found” error in Microsoft Word

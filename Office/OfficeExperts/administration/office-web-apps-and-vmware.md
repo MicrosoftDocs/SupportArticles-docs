@@ -7,6 +7,8 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: arhinesm
+appliesto:
+- Office Online Server
 ---
 
 # Office Web Apps 2013 and VMWare

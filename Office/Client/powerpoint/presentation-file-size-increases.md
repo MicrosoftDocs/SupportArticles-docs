@@ -7,6 +7,10 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- PowerPoint 2007
+- PowerPoint 2003
+- PowerPoint 2002
 ---
 
 # File size of an existing presentation increases when saving the presentation in PowerPoint

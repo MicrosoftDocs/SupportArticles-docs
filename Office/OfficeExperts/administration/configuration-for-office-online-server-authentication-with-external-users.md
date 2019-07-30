@@ -7,6 +7,8 @@ audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
+appliesto:
+- Office Online Server
 ---
 
 # Configuration for Office Online Server authentication with external users

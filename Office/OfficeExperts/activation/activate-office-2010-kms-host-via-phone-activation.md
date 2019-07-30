@@ -7,6 +7,8 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: ericspli
+appliesto:
+- Office 2010
 ---
 
 # Activate Office 2010 KMS host through phone activation

@@ -7,6 +7,16 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Office Professional 2013
+- Office Standard 2013
+- Office Home and Business 2013
+- Office Home and Student 2013
+- Office Standard 2010
+- Office Professional 2010
+- Office Professional Plus 2010
+- SharePoint Foundation 2010
+- SharePoint Server 2010
 ---
 
 # Office applications open blank from SharePoint WebDAV or sites

@@ -6,6 +6,8 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- PowerPoint for Mac
 ---
 
 # How to create a mailto hyperlink in a presentation in PowerPoint for Mac

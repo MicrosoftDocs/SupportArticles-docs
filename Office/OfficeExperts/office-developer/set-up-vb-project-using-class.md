@@ -7,6 +7,10 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Excel
+- Microsoft PowerPoint
+- Microsoft Word
 ---
 
 # How to use a class (object) from outside of the VBA project in which it is declared

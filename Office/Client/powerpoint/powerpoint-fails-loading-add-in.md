@@ -6,6 +6,8 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft PowerPoint
 ---
 
 # PowerPoint cannot load an add-in when you lower the macro security level

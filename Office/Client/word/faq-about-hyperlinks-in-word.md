@@ -7,6 +7,12 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Word 2013
+- Word 2010
+- Word 2007
+- Word 2003
+- Word 2002
 ---
 
 # Frequently asked questions about hyperlinks in Word
@@ -27,7 +33,7 @@ To ensure that Word will recognize an address that includes spaces as a single h
  
 To turn off automatic hyperlinks, follow these steps, as appropriate for the version of Word that you are running: 
 
-- In Microsoft Office Word 2010and 2013, follow these steps:  
+- In Microsoft Office Word 2010 and 2013, follow these steps:  
   1. On the **File** menu, click **Options**.
 
   2.  Click **Proofing**, and then click **AutoCorrect Options**.   
