@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft PowerPoint
 ---
 
 # "Hlink.dll Can't Be Loaded" or "PowerPoint Failed to Load Hlink.dll" in a PowerPoint presentation

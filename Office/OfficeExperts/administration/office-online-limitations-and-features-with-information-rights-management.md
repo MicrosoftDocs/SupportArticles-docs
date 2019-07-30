@@ -7,6 +7,9 @@ audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
+appliesto:
+- Office Online
+- Office Web Apps
 ---
 
 # Office Online limitations and features with Information Rights Management (IRM)

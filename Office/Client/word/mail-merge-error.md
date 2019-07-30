@@ -6,6 +6,12 @@ audience: ITPro
 ms.service: office 365
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Word for Office 365
+- Word 2019
+- Word 2013
+- Word 2016
+- Word 2010
 ---
 
 # Mail merge error when a data source is accessed by multiple users in Word

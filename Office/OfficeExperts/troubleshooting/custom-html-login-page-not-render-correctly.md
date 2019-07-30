@@ -7,6 +7,8 @@ audience: ITPro
 ms.topic: article
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
+appliesto:
+- Microsoft Office
 ---
 
 # A custom HTML login page doesn't render correctly in an Office application

@@ -7,6 +7,8 @@ audience: ITPro
 ms.topic: article
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
+appliesto:
+- Microsoft Office
 ---
 
 # Office doesn't render a custom DUO API multi-factor authentication login page

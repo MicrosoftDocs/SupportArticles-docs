@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft PowerPoint 
 ---
 
 # Keyboard shortcuts to turn display of grid and guides on and off in PowerPoint

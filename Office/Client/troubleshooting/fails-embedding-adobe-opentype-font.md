@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+appliesto:
+- Microsoft Office
 ---
 
 # You cannot embed an Adobe OpenType font in a document in an Office program

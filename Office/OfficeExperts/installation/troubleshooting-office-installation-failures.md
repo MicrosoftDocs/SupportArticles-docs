@@ -7,7 +7,9 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: ericspli
-localization_priority: Normal 
+localization_priority: Normal
+appliesto:
+- Microsoft Office
 ---
 
 # Troubleshooting Office installation failures

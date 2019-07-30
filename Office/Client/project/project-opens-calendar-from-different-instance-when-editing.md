@@ -8,6 +8,8 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-todmc
+appliesto:
+- Microsoft Project
 ---
 
 # Microsoft Project opens a calendar from a different instance when editing
