@@ -8,13 +8,16 @@
 ## Calendars
 ### [Show organizer name instead of subject](../calendars/calendar-shows-organizer-name.md)
 
+## Client Access
+### [Kerberos authentication for MAPI client connection](../client-access/kerberos-authentication-for-mapi-client.md)
+
 ## Management Console
 ### [Connecting to the remote server failed](../management-console/connecting-remote-server-failed.md)
+### [EMS fails to start with error](../management-console/fail-to-start-ems-canot-find-path.md)
 
 ## Mailbox Configuration
 ### [451 4.4.0 DNS query failed](../mailbox-configuration/dns-query-failed.md)
 ### [554 5.4.14 Hop count exceeded](../mailbox-configuration/hop-count-exceeded-possible-mail-loop.md)
-### [Only subset of items are synchronized](../mailbox-configuration/only-subset-items-synchronized.md)
 
 ## HTTP Proxy
 ### [Issue with proxying HTTP requests](../http-proxy/400-bad-request.md)
