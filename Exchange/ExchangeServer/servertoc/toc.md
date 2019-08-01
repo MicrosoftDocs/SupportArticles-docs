@@ -19,6 +19,9 @@
 ### [451 4.4.0 DNS query failed](../mailbox-configuration/dns-query-failed.md)
 ### [554 5.4.14 Hop count exceeded](../mailbox-configuration/hop-count-exceeded-possible-mail-loop.md)
 
+## Migration
+###[No active public folder mailboxes were found](../migration/migrationbatch-fails-no-public-folder-mailboxes.md)
+
 ## HTTP Proxy
 ### [Issue with proxying HTTP requests](../http-proxy/400-bad-request.md)
 
