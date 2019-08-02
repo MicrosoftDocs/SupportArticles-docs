@@ -93,7 +93,7 @@ You can use the following steps in Outlook to determine the method by which Outl
 2. Press the CTRL key, right-click the Outlook icon in the notification area, and then click Test E-mail AutoConfiguration.    
 3. Verify the e-mail address is correctly entered in the E-mail Address box.    
 4. Enter your password if you are not logged into a domain or if you are accessing a mailbox that is different from your mailbox.    
-5. Click to clear the Use Guessmart and the Secure Guessmart Authenticationcheck boxes.    
+5. Click to clear the Use Guessmart and the Secure Guessmart Authentication check boxes.    
 6. Click Test.    
 7. Review the details on the Log tab.    
 
@@ -103,7 +103,7 @@ The following figure shows the Log tab when the ExcludeScpLookup and ExcludeHttp
 
 Compare this information when only the ExcludeScpLookup value is set to 1.
 
-![log tab 2](./media/unexpected-autodiscover-behavior/log-tab.png)
+![log tab 2](./media/unexpected-autodiscover-behavior/log-tab-2.png)
 
 **Note** Ignore the failures in these figures because this information is intended only to show you the different lookup attempts that are made by Outlook.
 
