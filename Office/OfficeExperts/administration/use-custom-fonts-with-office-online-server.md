@@ -7,6 +7,8 @@ audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
+appliesto:
+- Office Online Server
 ---
 
 # Use custom fonts with Office Online Server (OOS)

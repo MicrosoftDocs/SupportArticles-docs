@@ -8,6 +8,8 @@ ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: ericspli
 localization_priority: Normal 
+appliesto:
+- Microsoft Office
 ---
 
 # How to automate the uninstallation of an Office update programmatically

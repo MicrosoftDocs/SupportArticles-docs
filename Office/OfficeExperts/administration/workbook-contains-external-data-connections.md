@@ -7,6 +7,8 @@ audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
+appliesto:
+- Excel Online
 ---
 
 # "This workbook contains external data connections or BI features that are not supported." when you use a guest link to a workbook in Excel Online

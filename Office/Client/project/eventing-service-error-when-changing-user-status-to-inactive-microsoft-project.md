@@ -9,6 +9,8 @@ audience: Admin
 ms.topic: article
 ms.prod: office-perpetual-itpro
 localization_priority: Normal 
+appliesto:
+- Microsoft Project
 ---
 
 # “Eventing service” error message when changing the status of users to inactive in Microsoft Project

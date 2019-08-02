@@ -7,6 +7,8 @@ audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
+appliesto:
+- Excel Online
 ---
 
 # Compatibility Report about text queries in Excel Online

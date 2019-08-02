@@ -7,6 +7,8 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article 
 ms.author: v-six
+appliesto:
+- PowerPoint 2007
 ---
 
 # Can't edit footer information in the "Header and Footer" dialog in a PowerPoint presentation
