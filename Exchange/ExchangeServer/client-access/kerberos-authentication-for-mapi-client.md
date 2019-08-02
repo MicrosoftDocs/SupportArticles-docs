@@ -4,7 +4,7 @@ description: Describes how to configure Kerberos authentication for MAPI clients
 author: simonxjx
 manager: willchen
 audience: ITPro
-ms.service: skypeforbusiness-powershell
+ms.prod: exchange-server-it-pro
 ms.topic: article
 ms.author: v-six
 appliesto:
