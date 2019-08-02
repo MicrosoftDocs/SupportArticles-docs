@@ -1,10 +1,7 @@
 # [Office Products Troubleshooting](../client.md)
 
 ## Access
-### [Connect to a remote Access database from Active Server pages](../access/connect-access-from-active-server.md)
 ### [0x80004005 Microsoft Jet Database Engine cannot open the file](../access/error-80004005-connecting-access-database.md)
-### [Connect an HTML Page to an Access Database](../access/html-page-connects-access-database.md)
-### [Issue when creating a Data Access page](../access/create-data-access-page.md)
 ### [OLE DB Provider for Jet and ODBC driver](../access/jet-odbc-driver-available-32-bit-version.md)
 ### [.LDB files](../access/ldb-file-description.md)
 ### [Runtime error 2147319779 (8002801d) library not registered](../access/library-unregistered-runtime-error.md)
