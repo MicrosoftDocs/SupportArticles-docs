@@ -96,7 +96,7 @@ Follow the steps below depending on which area you are receiving the error:
 <li>Select <b>Contact Support</b>.
 
 > [!NOTE]
-> If you are using the old M365 admin center, you can the “Description” step as that field will not exist.
+> If you are using the old M365 admin center, you can skip the “Description” step listed below as that field will not exist
 
 </li>
 <li>Under <b>Description</b> enter <b>"PUID Mismatch on OneDrive Site"</b>. Fill out the remaining information and select <b>Contact me</b>.</li>
