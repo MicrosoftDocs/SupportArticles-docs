@@ -11,6 +11,7 @@
 
 ## Antispam
 ### [Cautions against bypassing spam filters](../antispam/cautions-against-bypassing-spam-filters.md)
+### [User Impersonation messages are classified as phishing](../antispam/user-impersonation-messages-are-classified-as-phishing.md)
 
 ## Configure Contacts
 ### [Update contact information](../configure-contacts/update-contact-information.md)
