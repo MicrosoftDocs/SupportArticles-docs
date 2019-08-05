@@ -62,9 +62,10 @@ Follow the steps below depending on which area you are receiving the error:
 <li>If the user does not have appropriate permissions, grant them permissions to the <a href="https://support.office.com/en-us/article/share-sharepoint-files-or-folders-1fe37332-0f9a-4719-970e-d2578da4941c" target="_blank">file</a> or <a href="https://support.office.com/en-us/article/share-a-site-958771a8-d041-4eb8-b51c-afea2eae3658?ui=en-US&rs=en-US&ad=US" target="_blank">site</a>.</li>
 <li>If the user continues to receive an error message, remove them from the site using the following steps: 
 
-   > [!NOTE] 
-   > This option is available only if the user previously browsed to the site collection. They won't be listed if they were granted access but never visited the site.
+> [!NOTE] 
+> This option is available only if the user previously browsed to the site collection. They won't be listed if they were granted access but never visited the site.
 
+</li>
 <ol>
 <li type=a>Browse to the site and edit the URL by adding the following string to the end of it: /_layouts/15/people.aspx?MembershipGroupId=0
    For example, the full URL will resemble the following: <b>https://contoso.sharepoint.com/_layouts/15/people.aspx/membershipGroupId=0</b> </li>
@@ -89,15 +90,15 @@ Follow the steps below depending on which area you are receiving the error:
 
 <li>If you cannot restore the original user and are still in this state,  create a support request using the following steps:
 <ul>
-<li>Navigate to <a href="https://admin.microsoft.com" target="_blank">https://admin.microsoft.com</a>.
+<li>Navigate to <a href="https://admin.microsoft.com" target="_blank">https://admin.microsoft.com</a>.</li>
+<li>In the left navigation pane, select <b>Support</b> and then <b>New Service Request</b>. This will activate the <b>Need Help?</b> pane on the right-hand side of your screen.</li>
+<li>In the <b>Briefly describe your issue</b> area, enter <b>"PUID Mismatch on OneDrive Site"</b>.</li>
+<li>Select <b>Contact Support</b>.
 
 > [!NOTE]
 > If you are using the old M365 admin center, you can the “Description” step as that field will not exist.
 
 </li>
-<li>In the left navigation pane, select <b>Support</b> and then <b>New Service Request</b>. This will activate the <b>Need Help?</b> pane on the right-hand side of your screen.</li>
-<li>In the <b>Briefly describe your issue</b> area, enter <b>"PUID Mismatch on OneDrive Site"</b>.</li>
-<li>Select <b>Contact Support</b>.</li>
 <li>Under <b>Description</b> enter <b>"PUID Mismatch on OneDrive Site"</b>. Fill out the remaining information and select <b>Contact me</b>.</li>
 <li>Once the ticket has been opened please provide the support agent with the UPN and OneDrive URL that is having the issue.
 </ul>
