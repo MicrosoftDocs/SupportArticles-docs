@@ -1,9 +1,9 @@
 ---
-title: 
-description: 
+title: Access denied error (Event ID 5566) when opening a form in the browser
+description: Describes how to work around an access denied issue that occurs when you open an InfoPath form.
 author: Teresa-Motiv
-manager: 
-audience: ITPro
+manager: joselr
+audience:  Admin|ITPro|Developer
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-tea
