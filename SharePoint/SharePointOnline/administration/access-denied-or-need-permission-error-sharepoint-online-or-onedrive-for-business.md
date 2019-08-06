@@ -18,7 +18,7 @@ appliesto:
 
 ---
 
-# “Access Denied”, “You need permission to access this site”, or “User not found in the directory” errors in SharePoint Online and OneDrive for Business
+# "Access Denied", "You need permission to access this site", or "User not found in the directory" errors in SharePoint Online and OneDrive for Business
 
 ## Symptoms
 When using SharePoint Online or OneDrive for Business, you receive one of the following error messages:
