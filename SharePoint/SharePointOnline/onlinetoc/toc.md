@@ -30,6 +30,7 @@
 
 ## InfoPath
 
+### [Access denied error (Event ID 5566) when opening a form in the browser](../InfoPath/access-denied-when-opening-form-id-5566.md)
 ### [Issue when connecting an InfoPath form](../InfoPath/fails-connecting-infopath-form.md)
 ### [InfoPath can't open the selected form when opening an InfoPath Filler form](../InfoPath/fails-opening-infopath-filler-form.md)
 ### [Issue when clicking an InfoPath form in mobile view](../InfoPath/click-infopath-form-mobile-view.md)
