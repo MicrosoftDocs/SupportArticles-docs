@@ -19,7 +19,7 @@ You apply a theme to a SharePoint Online site by using the Change the look optio
 
 ## Solution
 
-You apply a theme to a SharePoint Online site by using the Change the look option in Site Settings. However, when you view the SharePoint Online site, the Office 365 top navigation bar uses the theme that's configured for the organization, not the theme that's configured for the site.
+If the Office 365 top navigation bar is configured as the default color for the organization, SharePoint Online sites use the site theme that's configured for the site.
 
 ## More information
 
