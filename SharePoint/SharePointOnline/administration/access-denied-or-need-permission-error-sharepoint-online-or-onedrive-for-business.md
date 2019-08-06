@@ -24,7 +24,7 @@ appliesto:
 When using SharePoint Online or OneDrive for Business, you receive one of the following error messages:
 
 - Access Denied
-- You need permission to access this tie
+- You need permission to access this site
 - User not found in the directory
 
 ## Cause
