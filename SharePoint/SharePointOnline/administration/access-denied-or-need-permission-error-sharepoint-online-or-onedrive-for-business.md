@@ -12,10 +12,9 @@ search.appverid:
 - SPO160
 - MET150
 ms.assetid: 
-description: "Outlines resolutions to error messages received when using SharePointOnline or OneDrive for Business."
+description: Outlines resolutions to error messages received when using SharePoint Online or OneDrive for Business such as Access Denied, You need permission to access this site and User not found in directory errors
 appliesto:
 - SharePoint Online
-
 ---
 
 # "Access Denied", "You need permission to access this site", or "User not found in the directory" errors in SharePoint Online and OneDrive for Business

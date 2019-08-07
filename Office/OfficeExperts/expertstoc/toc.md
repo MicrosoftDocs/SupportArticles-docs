@@ -5,19 +5,19 @@
 ### [Discover Office and Windows KMS hosts](../activation/discover-remove-unauthorized-office-windows-kms-hosts.md)
 
 ## Administration
+### [Check the size of this month's Office ProPlus update](../administration/how-big-was-this-months-office-proplus-update.md)
 ### [Compatibility report in Excel Online](../administration/compatibility-report-about-text-queries-in-excel-online.md)
-### [Online Server authentication configuration](../administration/configuration-for-office-online-server-authentication-with-external-users.md)
-### [Errors when accessing documents in Online Server](../administration/errors-when-access-documents-in-office-online-server.md)
 ### [Determine build version of Online Server](../administration/how-to-determine-build-version-of-office-online-server.md)
-### [Office Online limitations and features with IRM](../administration/office-online-limitations-and-features-with-information-rights-management.md)
+### [Errors when accessing documents in Online Server](../administration/errors-when-access-documents-in-office-online-server.md)
 ### [Issue with Office viewers or Office Web Apps](../administration/office-viewers-or-web-apps-shows-this-page-cannot-be-displayed.md)
+### [Issue with using guest links to Excel Online workbook](../administration/workbook-contains-external-data-connections.md)
+### [Manage the First Run screens for Office 2013](../administration/manage-office-2013-first-run-screens.md)
+### [Office Online limitations and features with IRM](../administration/office-online-limitations-and-features-with-information-rights-management.md)
+### [Office Web Apps 2013 and VMWare](../administration/office-web-apps-and-vmware.md)
+### [Online Server authentication configuration](../administration/configuration-for-office-online-server-authentication-with-external-users.md)
 ### [Rebuild an Office Web Apps 2013 farm](../administration/rebuild-an-office-web-apps-2013-farm-easily.md)
 ### [Test viewing Office documents](../administration/test-viewing-documents-by-using-office-online-server-viewer.md)
 ### [Use custom fonts with Online Server](../administration/use-custom-fonts-with-office-online-server.md)
-### [Issue with using guest links to Excel Online workbook](../administration/workbook-contains-external-data-connections.md)
-### [Manage the First Run screens for Office 2013](../administration/manage-office-2013-first-run-screens.md)
-### [Check the size of this month's Office ProPlus update](../administration/how-big-was-this-months-office-proplus-update.md)
-### [Office Web Apps 2013 and VMWare](../administration/office-web-apps-and-vmware.md)
 
 ## Authentication
 ### [Office not render DUO API multi-factor authentication login page](../authentication/not-render-a-custom-duo-api-multi-factor-authentication-login-page.md)
@@ -28,8 +28,8 @@
 ### [Rename Excel Sheet with Cell Contents by Using Macro](../excel/use-macro-rename-sheet.md)
 
 ## Installation
-### [Deploy Online Server to security hardened drives](../installation/deploy-office-online-server-to-security-hardened-drive.md)
 ### [Automate the update uninstallation for Office ](../installation/automate-uninstall-office-update.md)
+### [Deploy Online Server to security hardened drives](../installation/deploy-office-online-server-to-security-hardened-drive.md)
 ### [Install a second KMS host for Office](../installation/guidance-on-installing-a-second-kms-host-for-office.md)
 ### [Office installation failures](../installation/troubleshooting-office-installation-failures.md)
 
@@ -37,9 +37,9 @@
 ### [Use a class (object) from outside of VBA project](../office-developer/set-up-vb-project-using-class.md)
 
 ## PowerPivot
+### ["The workbook must be checked out" error for PowerPivot](../powerpivot/powerpivot-workbook-checked-out.md)
 ### [PowerPivot data model not refresh](../powerpivot/powerpivot-data-model-does-not-refresh.md)
 ### [PowerPivot not work with .atomsvc files](../powerpivot/powerpivot-does-not-work-with-atomsvc-files.md)
-### ["The workbook must be checked out" error for PowerPivot](../powerpivot/powerpivot-workbook-checked-out.md)
 ### [Third-party PowerPivot data refresh tools not supported](../powerpivot/third-party-powerpivot-data-refresh-tools-are-not-supported.md)
 ### [Upsize PowerPivot 2013 workbooks to SSAS](../powerpivot/upsize-powerpivot-2013-workbooks-to-sql-server-analysis-services.md)
 
