@@ -2,6 +2,7 @@
 
 ## InfoPath
 ### [Issue with editing an online workflow](../InfoPath/fails-editing-workflow.md)
+### [SoapServerException when use InfoPath designer](../infopath/soapserverexception-when-customizing-list-form-using-InfoPath-designer.md)
 
 ## Search
 ### [Online content isn't displayed in on-premises search](../search/online-content-not-displayed-in-on-premises-search.md)
