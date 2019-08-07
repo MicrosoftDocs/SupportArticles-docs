@@ -9,10 +9,10 @@
 ### [On-premises content isn't displayed in online search](../search/on-premises-content-not-displayed-in-online-search.md)
 
 ## Workflows
-### [Online workflow takes a long time to finish](../Workflows/workflow-takes-longer.md)
-### [Online workflow doesn't complete](../Workflows/workflow-status-suspended.md)
 ### [Can't set "Hyperlink with formatting and constraints for publishing"](../Workflows/fails-setting-workflow-column-value.md)
 ### [Completed tasks aren't deleted for workflows](../Workflows/fails-deleting-completed-workflow-tasks.md)
 ### [Documents can't be opened in SharePoint Online](../Workflows/workflow-platform-created-document-fails-open.md)
+### [Online workflow doesn't complete](../Workflows/workflow-status-suspended.md)
+### [Online workflow takes a long time to finish](../Workflows/workflow-takes-longer.md)
 ### [Status issue with "Collect Feedback in SharePoint 2010" workflow](../Workflows/workflow-reports-retrying-status.md)
 ### [Workflows aren't available for IRM policies](../Workflows/irm-policies-fails-sharepoint-workflows-visible.md)
