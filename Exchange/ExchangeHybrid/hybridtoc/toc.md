@@ -19,8 +19,8 @@
 ### [Online attributes aren't written back to on-premises](../federation/attribute-not-written-to-azure-ad.md)
 
 ## Move Mailboxes
-### [Move mailbox operation fails](../move-mailboxes/hybrid-move-fails.md)
 ### [Mailbox Move to the cloud fails with error](../move-mailboxes/mailbox-move-to-cloud-fail-with-error.md)
+### [Move mailbox operation fails](../move-mailboxes/hybrid-move-fails.md)
 ### [Offboarding mailbox fails with error](../move-mailboxes/offboarding-mailbox-fails-homemdb-homemta.md)
 
 ## Outlook Policy

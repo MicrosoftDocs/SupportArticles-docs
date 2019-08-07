@@ -21,16 +21,16 @@
 ## Ribbons
 ### [Lync Meeting control isn't displayed](../ribbons/lync-meeting-control-not-displayed.md)
 
-## Sign-in
-### [Continually password prompts](../sign-in/continually-prompts-password-office-365.md)
-### [Additional RSS feeds appear](../sign-in/additional-rss-feeds-appear.md)
-### [Use policy to control credential prompts](../sign-in/policy-control-credential-prompts.md)
+## Search Folders
+### [Unexpected mail items](../search-folders/personmetadata-items.md)
 
 ## Send/Receive Emails
 ### [Can't send email with Metered Connection Warning](../send-receive-emails/metered-connection-warning.md)
 
-## Search Folders
-### [Unexpected mail items](../search-folders/personmetadata-items.md)
+## Sign-in
+### [Additional RSS feeds appear](../sign-in/additional-rss-feeds-appear.md)
+### [Continually password prompts](../sign-in/continually-prompts-password-office-365.md)
+### [Use policy to control credential prompts](../sign-in/policy-control-credential-prompts.md)
 
 ## Transport Logging
 ### [Enable transport logging](../transport-logging/enable-transport-logging.md)
