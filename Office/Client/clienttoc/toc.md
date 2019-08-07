@@ -180,7 +180,6 @@
 ## InfoPath
 ### [Disable code-behind prompt for InfoPath forms](../infopath/disabling-code-behind-prompt-for-infopath-forms.md)
 ### [Generated .PDB files don't match InfoPath form name](../infopath/generated-pdb-file-name-does-not-match-infopath-name.md)
-### [SoapServerException when use InfoPath designer](../infopath/soapserverexception-when-customizing-list-form-using-InfoPath-designer.md)
 
 ## PowerPoint
 ### [Office opens blank from SharePoint](../powerpoint/office-opens-blank-from-sharepoint.md)
