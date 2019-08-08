@@ -25,18 +25,23 @@ To cleanly uninstall Skype of Business on Mac, follow these steps:
 1. Exit Skype For Business on Mac if it’s running.   
 1. Drag the Skype For Business on Mac application to the Trash.   
 1. Remove the existing Skype preferences if these hidden files exist. To do this, follow these steps:
-   1. In the **Finder** menu, click **Go**, and click Go to Folder.   
-   2. Delete the following files:
+   1. In the **Finder** menu, click **Go**, and click **Go to Folder**.
+   2. Run the following commands:
 
-      - /Users/<User>/Library/Containers/com.microsoft.SkypeForBusiness   
-      - /Users/<User>/Library/Logs/LwaTracing   
-      - /Users/<User>/Saved Application State/com.microsoft.SkypeForBusiness.savedState   
-      - /Users/<User>/Preferences/com.microsoft.SkypeForBusiness.plist      
+      - sudo rm -rf /Applications/Skype\ for\ Business.app
+      - sudo rm -rf /Library/Internet\ Plug-Ins/MeetingJoinPlugin.plugin
+      - defaults delete com.microsoft.SkypeForBusiness || true
+      - rm -rf ~/Library/Containers/com.microsoft.SkypeForBusiness
+      - rm -rf ~/Library/Logs/DiagnosticReports/Skype\ for\ Business_*
+      - rm -rf ~/Library/Saved\ Application\ State/com.microsoft.SkypeForBusiness.savedState
+      - rm -rf ~/Library/Preferences/com.microsoft.SkypeForBusiness.plist
+      - rm -rf ~/Library/Application\ Support/CrashReporter/Skype\ for\ Business_*
+      - rm -rf ~/Library/Application\ Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.skypeforbusiness*
+      - rm -rf ~/Library/Cookies/com.microsoft.SkypeForBusiness*
+      - sudo rm -rf /private/var/db/receipts/com.microsoft.SkypeForBusiness*
+      - rmdir ~/Library/Application\ Scripts/com.microsoft.SkypeForBusiness
+      - find -f /private/var/db/BootCaches/* -name "app.com.microsoft.SkypeForBusiness*" -exec sudo rm -rf {} +
 
-1. Delete the following file:
-
-   - /Library/Internet Plug-Ins/MeetingJoinPlugin.plugin   
-   
 6. In the Applications/Utilities folder, open **Keychain Access**.   
 7. In your logon keychains, delete **Skype for Business**.   
 
