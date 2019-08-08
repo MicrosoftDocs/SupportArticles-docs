@@ -24,7 +24,7 @@ To cleanly uninstall Skype of Business on Mac, follow these steps:
 1. Log on to your computer by using administrative credentials.   
 1. Exit Skype For Business on Mac if it’s running.   
 1. Drag the Skype For Business on Mac application to the Trash.   
-1. Remove the existing Skype preferences if these hidden files exist. To do this, follow these steps:
+1. Remove existing Skype preferences if those hidden files exist. To do so, follow these steps:
    1. In the **Finder** menu, click **Go**, and click **Go to Folder**.
    2. Run the following commands:
 
