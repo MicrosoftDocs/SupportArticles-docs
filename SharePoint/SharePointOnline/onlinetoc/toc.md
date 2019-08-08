@@ -3,7 +3,6 @@
 ## Administration
 ### ["Sync to Outlook" button and "Task" link are missing](../administration/sync-to-outlook-tasks-link-missing.md)
 ### [A blank page for SharePoint tenant](../administration/a-blank-page-for-sharepoint-tenant.md)
-### [Access Denied, You need permission to access this site, or User not found in the directory errors in SharePoint Online and OneDrive for Business](../access-denied-or-need-permission-error-sharepoint-online-or-onedrive-for-business.md)
 ### [Automatic EXIF property import unsupported](../administration/automatic-exif-property-import-unsupported.md)
 ### [Invalid URL error when clicking an online prompted link](../administration/promoted-link-invalid-url.md)
 ### [Issue when browsing to a SharePoint site](../administration/access-to-sharepoint-online-is-monitored.md)
