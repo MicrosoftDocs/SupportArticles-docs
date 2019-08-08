@@ -4,7 +4,6 @@
 ### ["Upgrade Available" status in farms](../administration/upgrade-available-status-in-new-farm.md)
 ### [800703fa Illegal operation attempted on a registry key](../administration/800703fa-Illegal-operation-error.md)
 ### [Can't start the User Profile Synchronization service](../administration/cannot-start-the-user-profile-synchronization-service.md)
-### [Access Denied, You need permission to access this site, or User not found in the directory errors in SharePoint Online and OneDrive for Business](../administration/access-denied-or-need-permission-error-sharepoint-online-or-onedrive-for-business.md)
 ### [Change the compatibility level of content databases](../administration/compatibility-level-change.md)
 ### [Change the database server in a farm](../administration/how-to-change-the-database-in-farms.md)
 ### [Configure Excel Services for Kerberos authentication](../administration/configure-excel-services-kerberos.md)
@@ -102,7 +101,7 @@
 ### [Web part controls don't work after migration](../web-parts/web-part-controls-do-not-work-after-sites-are-migrated.md)
 
 ## Workflows
-### [../../SharePointOnline/Workflows/“A response was returned that did not come from the Workflow Manager” error in SharePoint Server 2016](response-returned-did-not-come-from-workflow-manager-error.md)
+### [../../SharePointOnline/Workflows/“A response was returned that did not come from the Workflow Manager” error in SharePoint Server 2016](../../SharePointOnline/Workflows/response-returned-did-not-come-from-workflow-manager-error.md)
 ### [A workflow doesn't complete](../../SharePointOnline/Workflows/workflow-using-impersonation-step-fails-completed.md)
 ### [A workflow doesn't execute](../../SharePointOnline/Workflows/workflow-lookup-fails-executing.md)
 ### [Can't create workflows](../workflows/unable-to-create-or-edit-sharepoint-2013-workflow-sharepoint-designer.md)
