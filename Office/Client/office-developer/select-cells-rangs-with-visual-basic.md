@@ -100,6 +100,15 @@ To select the range C2:D10 on the active worksheet, you can use any of the follo
 ActiveSheet.Range(Cells(2, 3), Cells(10, 4)).Select
 ActiveSheet.Range("C2:D10").Select
 ActiveSheet.Range("C2", "D10").Select
+
+or
+
+ActiveSheet.Range(ActiveSheet.Cells(2, 3), ActiveSheet.Cells(10, 4)).Select
+
+or, alternatively, it could be simplified to this:
+
+Range(Cells(2, 3), Cells(10, 4)).Select
+
 ```
 
 ## How to Select a Range of Cells on Another Worksheet in the Same Workbook
