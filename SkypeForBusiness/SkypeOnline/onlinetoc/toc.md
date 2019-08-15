@@ -17,14 +17,14 @@
 ### [Video is unavailable in conferences](../online-conferencing/video-is-unavailable-sfb-online-conference.md)
 
 ## Configuration
-### ["Set Your Location" field is unavailable](../online-conferencing/cant-set-location-in-lync.md)
-### [Admins can't use "Set-CsUser" in Remote PowerShell](../online-conferencing/admins-cant-use-set-csuser.md)
+### ["Set Your Location" field is unavailable](../online-configuration/cant-set-location-in-lync.md)
+### [Admins can't use "Set-CsUser" in Remote PowerShell](../online-configuration/admins-cant-use-set-csuser.md)
 ### [Calls to call queues not redirected to agents](../online-configuration/call-queues-not-redirect-to-agents.md)
 ### [DNS configuration issues](../online-configuration/dns-configuration-issue.md)
-### [Issue when Office 365 administrator disables a user](../online-conferencing/license-validation-error.md)
-### [msRTCSIP-PrimaryUserAddress or SIP address not unique](../online-conferencing/msrtcsip-primaryuseraddress-proxyaddaddress.md)
-### [Outlook email address not match sign-in address](../online-conferencing/problem-connecting-to-outlook.md)
-### [SharePoint Skill search isn't supported](../online-conferencing/sharepoint-skill-search-not-supported.md)
+### [Issue when Office 365 administrator disables a user](../online-configuration/license-validation-error.md)
+### [msRTCSIP-PrimaryUserAddress or SIP address not unique](../online-configuration/msrtcsip-primaryuseraddress-proxyaddaddress.md)
+### [Outlook email address not match sign-in address](../online-configuration/problem-connecting-to-outlook.md)
+### [SharePoint Skill search isn't supported](../online-configuration/sharepoint-skill-search-not-supported.md)
 
 ## Contacts
 ### [Can't communicate with external contacts ](../online-contacts/cant-communicate-with-external-contact.md)
