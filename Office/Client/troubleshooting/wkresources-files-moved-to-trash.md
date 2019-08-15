@@ -2,7 +2,7 @@
 title: Wkresources files in Trash when starting Office for Mac applications
 description: 
 author: simonxjx
-manager: csscontentftes
+manager: willchen
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
