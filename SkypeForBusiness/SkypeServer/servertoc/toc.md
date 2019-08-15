@@ -6,6 +6,7 @@
 ### [Enable the Conferencing Add-in for Outlook](../server-conferencing/enable-conferencing-add-in-for-outlook.md)
 
 ## Configuration
+### ["Set Your Location" field is unavailable](../../SkypeOnline/online-configuration/cant-set-location-in-lync.md)
 ### [Access Edge service fails to start ](../server-configuration/lync-server-2013-access-edge-service-not-start.md)
 ### [Bug Check 0x133 on Edge server](../server-configuration/bugcheck-0x133-edge-server.md)
 ### [Can't perform a CMS failover](../server-configuration/cannot-perform-cms-failover.md)
@@ -26,6 +27,8 @@
 ### [You have been added as a delegate for %User%](../server-configuration/added-as-delegate-notice.md)
 
 ## Exchange Integration
+### [Integrate Exchange Online with Lync Server](../../SkypeOnline/online-exchange-integration/integrate-exchange-online-skype-for-business.md)
+### [Integrate Exchange Server 2013 with Lync Server](../../SkypeOnline/online-exchange-integration/exchange-server-lync-server-hybrid.md)
 ### [MAPI unavailable](../server-exchange-integration/mapi-unavailable.md)
 
 ## IM and Presence

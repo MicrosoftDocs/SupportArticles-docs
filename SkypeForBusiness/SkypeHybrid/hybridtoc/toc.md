@@ -6,6 +6,8 @@
 
 ## Exchange Integration
 ### [AllowAdalForNonLyncIndependentOfLync setting](../hybrid-exchange-integration/allowadalfornonlyncIndependentofLync-setting.md)
+### [Integrate Exchange Online with Lync Server](../../SkypeOnline/online-exchange-integration/integrate-exchange-online-skype-for-business.md)
+### [Integrate Exchange Server 2013 with Lync Server ](../../SkypeOnline/online-exchange-integration/exchange-server-lync-server-hybrid.md)
 ### [Repeatedly prompted for Exchange credentials](../hybrid-exchange-integration/repeatedly-prompted-for-credentials.md)
 
 ## IM and Presence 
