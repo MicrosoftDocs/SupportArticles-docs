@@ -89,7 +89,7 @@
 ### [Private OneDrive for Business results isn't included](../Search/private-onedrive-results-not-included.md)
 ### [Search doesn't provide results from another language](../Search/no-search-results-from-another-language.md)
 ### [Search results is missing](../Search/search-results-missing.md)
-### [Search results isn't rerutned](../Search/search-results-not-return.md)
+### [Search results isn't returned](../Search/search-results-not-return.md)
 
 ## Security
 ### ["Session has expired" when opening a document](../Security/session-has-expired.md)
