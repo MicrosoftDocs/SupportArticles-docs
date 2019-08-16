@@ -27,6 +27,8 @@
 ### [This content cannot be displayed in a frame](../Apps/view-owa-page-viewer-web-part.md)
 
 ## InfoPath
+
+### ["Access Denied" error (Event ID 5566) when you open a form in the browser](../InfoPath/access-denied-when-opening-form-id-5566.md)
 ### [Differences of InfoPath Forms Services](../InfoPath/infopath-forms-services.md)
 ### [InfoPath can't open the selected form when opening an InfoPath Filler form](../InfoPath/fails-opening-infopath-filler-form.md)
 ### [Issue when clicking an InfoPath form in mobile view](../InfoPath/click-infopath-form-mobile-view.md)
