@@ -9,11 +9,11 @@
 ## Folders
 ### [Incorrect folder names](../folders/incorrect-folder-names.md)
 
-## Inbox Rules
-###[Create or modify Outlook client-only rule](../inbox-rules/create-modify-client-only-rule-with-error.md)
-
 ## IMAP/POP
 ### [Can't use Quick Steps](../imap-pop/outlook-quick-steps-issues.md)
+
+## Inbox Rules
+###[Create or modify Outlook client-only rule](../inbox-rules/create-modify-client-only-rule-with-error.md)
 
 ## Mailboxes
 ### [Only subset of items are synchronized](../mailboxes/only-subset-items-synchronized.md)
