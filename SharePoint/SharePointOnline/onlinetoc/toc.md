@@ -100,7 +100,6 @@
 
 ## Sharing and Permissions
 ### ["Access denied" error with an Approval Workflow task](../sharing-and-permissions/access-denied-when-approve-workflow-task.md)
-### ["Access Denied" error with an online user](../sharing-and-permissions/access-denied-for-office-365-users.md)
 ### ["Access Denied", "You need permission to access this site", or "User not found in the directory" errors in SharePoint Online and OneDrive for Business](../administration/access-denied-or-need-permission-error-sharepoint-online-or-onedrive-for-business.md)
 ### ["Call us overprotective" message with OneDrive for Business](../sharing-and-permissions/call-us-overprotective-when-external-user-tries-to-sync-onedrive-for-business.md)
 ### ["Everyone except external users" group is removed](../sharing-and-permissions/everyone-except-external-user-removed.md)
