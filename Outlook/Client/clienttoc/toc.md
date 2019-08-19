@@ -26,6 +26,7 @@
 
 ## Send/Receive Emails
 ### [Can't send email with Metered Connection Warning](../send-receive-emails/metered-connection-warning.md)
+###[Create or modify Outlook client-only rule](../send-receive-emails/create-modify-client-only-rule-with-error.md)
 
 ## Sign-in
 ### [Additional RSS feeds appear](../sign-in/additional-rss-feeds-appear.md)
