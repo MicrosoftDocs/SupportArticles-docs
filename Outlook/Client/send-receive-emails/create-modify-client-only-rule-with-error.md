@@ -27,13 +27,9 @@ In Microsoft Outlook, you either create a new client-only message rule or change
 The rules on this computer do not match the rules on Microsoft Exchange. Only one set of rules can be kept. You will usually want to keep the rules on the server. Which rules do you want to keep?
 ```
 
-![error message1](../../media/create-modify-client-only-rule-with-error/error-message1.png)
-
 ```
 One or more rules cannot be uploaded to Microsoft Exchange and have been deactivated. This could be because some of the parameters are not supported, or there is insufficient space to store all of your rules.
 ```
-
-![error message2](../../media/create-modify-client-only-rule-with-error/error-message2.png)
 
 ## Cause
 
@@ -41,7 +37,7 @@ This issue occurs if a client-only rule is created or changed to contain a total
 
 For example, the rule shown in the following screenshot is “(client-only).” This rule works because it includes only two people who were selected from the GAL in the “from” rule criteria. However, if the “from” criteria contained 20 or more people, the rule would cause the issue to occur.
 
-![Outlook-Rules](../../media/create-modify-client-only-rule-with-error/Outlook-Rules.png)
+![Outlook-Rules](../media/create-modify-client-only-rule-with-error/Outlook-Rules.png)
 
 Note: This issue occurs if the rule’s action causes the rule to become a client-only rule. For example, any of the following rules can make this change:
 
@@ -59,5 +55,5 @@ Note: This issue occurs if the rule’s action causes the rule to become a clien
 
 To work around this issue, use one of the following methods:
 
-- Create multiple identical rules, and add 19 or fewer people per rule.
-- Create a [Distribution Group](https://docs.microsoft.com/exchange/recipients-in-exchange-online/manage-distribution-groups/manage-distribution-groups) that includes the people who you want to include in the client-only rule. Then, add that distribution list to the rule.
+- Create multiple identical rules, and add 19 or fewer people per rule
+- Create a [Distribution Group](https://docs.microsoft.com/exchange/recipients-in-exchange-online/manage-distribution-groups/manage-distribution-groups) that includes the people who you want to include in the client-only rule. Then, add that distribution group to the rule
