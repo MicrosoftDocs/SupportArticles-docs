@@ -2,11 +2,12 @@
 title: Message store has reached its maximum size when delete an item
 description: Describes an issue that triggers a "maximum size" error message when an Office 365 user tries to delete an item such as a calendar event in Outlook or Outlook on the Web.
 author: simonxjx
-manager: willchen
 audience: ITPro
 ms.service: exchange-online
 ms.topic: article
 ms.author: v-six
+manager: MEERAK
+localization_priority: Normal
 appliesto:
 - Exchange Online
 ---

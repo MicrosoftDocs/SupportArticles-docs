@@ -2,11 +2,12 @@
 title: You can't successfully dismiss calendar reminders in Outlook
 description: Describes an issue that prevents you from dismissing calendar reminders in Outlook. Provides a resolution.
 author: simonxjx
-manager: willchen
 audience: ITPro
 ms.prod: exchange-server-it-pro
 ms.topic: article
 ms.author: v-six
+manager: MEERAK
+localization_priority: Normal
 appliesto:
 - Exchange Online
 - Outlook 2019

@@ -2,11 +2,12 @@
 title: Outlook policy to control PST use and creation in Office 365 Import service
 description: Describes how to use Outlook policy to prevent users from adding new items to a .pst file and to prevent users from creating new .pst files during the import process. This applies to the Office 365 Import service.
 author: simonxjx
-manager: willchen
 audience: ITPro
 ms.prod: exchange-server-it-pro
 ms.topic: article
 ms.author: v-six
+manager: MEERAK
+localization_priority: Normal
 appliesto:
 - Exchange Online
 - Outlook 2013

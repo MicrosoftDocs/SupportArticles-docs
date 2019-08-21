@@ -2,11 +2,12 @@
 title: How to set automatic replies on a user's mailbox in Office 365
 description: Describes How to set automatic replies on a user's mailbox in Office 365.
 author: simonxjx
-manager: willchen
 audience: ITPro
 ms.service: exchange-online
 ms.topic: article
 ms.author: v-six
+manager: MEERAK
+localization_priority: Normal
 appliesto:
 - Exchange Online
 ---

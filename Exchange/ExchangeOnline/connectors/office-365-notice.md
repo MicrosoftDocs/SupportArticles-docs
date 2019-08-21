@@ -2,11 +2,12 @@
 title: Important notice for Office 365 email customers who have configured connectors
 description: Describes scenarios that requires you to take action before February 1, 2017 to prevent interruptions to mail flow.
 author: simonxjx
-manager: willchen
 audience: ITPro
 ms.service: exchange-online
 ms.topic: article
 ms.author: v-six
+manager: MEERAK
+localization_priority: Normal
 appliesto:
 - Exchange Online
 ---

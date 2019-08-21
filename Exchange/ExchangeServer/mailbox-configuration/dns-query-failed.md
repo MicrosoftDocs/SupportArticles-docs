@@ -2,11 +2,12 @@
 title: 451 4.4.0 DNS query failed Exchange Server error in message queue
 description: Describes an issue in which you receive an Exchange Server error when you send email to remote domains. Provides a workaround and a resolution.
 author: simonxjx
-manager: willchen
 audience: ITPro
 ms.service: exchange-powershell
 ms.topic: article
 ms.author: v-six
+manager: MEERAK
+localization_priority: Normal
 appliesto:
 - Exchange Server 2013 Enterprise
 - Exchange Server 2013 Standard Edition
