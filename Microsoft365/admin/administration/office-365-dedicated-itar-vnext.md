@@ -2,7 +2,8 @@
 title: Full Access permissions doesn't work
 description: Describes an issue in which Full Access permissions are not working after a migration to Office 365 dedicated/ITAR (vNext). Provides a resolution.
 author: simonxjx
-manager: willchen
+manager: JOSELR
+localization_priority: Normal
 audience: ITPro
 ms.prod: Office 365
 ms.topic: article

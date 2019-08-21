@@ -2,7 +2,8 @@
 title: Another account from your organization is already signed in on this computer
 description: Discusses an error message that a user receives when he or she tries to sign in to an Office 2013 app by using Office 365 credentials.
 author: simonxjx
-manager: willchen
+manager: JOSELR
+localization_priority: Normal
 audience: ITPro
 ms.service: office 365
 ms.topic: article

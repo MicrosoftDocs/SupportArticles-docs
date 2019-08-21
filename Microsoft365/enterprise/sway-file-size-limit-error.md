@@ -2,7 +2,8 @@
 title: File size limit error when you upload files to Sway
 description: You cannot upload a file to Sway with an error message stating that the file is too large to upload.
 author: MaryQiu1987
-manager: zakirh
+manager: JOSELR
+localization_priority: Normal
 audience: ITPro
 ms.service: o365-solutions
 ms.topic: article

@@ -2,7 +2,8 @@
 title: Prioritize BITS by Office 2016 clients for downloading updates
 description: Describes how to use BITS for Office 2016 clients to download updates.
 author: simonxjx
-manager: willchen
+manager: JOSELR
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

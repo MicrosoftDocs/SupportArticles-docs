@@ -2,7 +2,8 @@
 title: Unable to sign in to Office 365, Azure, or Intune
 description: Describes an issue in which you can't sign in to Office 365, Azure, or Microsoft Intune. Provides troubleshooting information.
 author: simonxjx
-manager: willchen
+manager: JOSELR
+localization_priority: Normal
 audience: ITPro
 ms.prod: office 365
 ms.topic: article

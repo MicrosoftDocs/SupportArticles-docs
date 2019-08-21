@@ -2,7 +2,8 @@
 title: Enable Office 365 ProPlus ULS logging for random issues
 description: Describes how to collect Office diagnostic logs for Office support professionals to troubleshoot Office issues.
 author: MaryQiu1987
-manager: willchen
+manager: JOSELR
+localization_priority: Normal
 audience: ITPro
 ms.prod: office 365
 ms.topic: article

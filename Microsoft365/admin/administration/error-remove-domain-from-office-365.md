@@ -2,7 +2,8 @@
 title: You get an error message when you try to remove a domain from Office 365
 description: Discusses an issue in which you can't delete a domain from Office 365. Provides links to articles for a resolution.
 author: simonxjx
-manager: willchen
+manager: JOSELR
+localization_priority: Normal
 audience: ITPro
 ms.service: office 365
 ms.topic: article

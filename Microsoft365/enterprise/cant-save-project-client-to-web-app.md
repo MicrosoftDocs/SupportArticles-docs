@@ -2,7 +2,8 @@
 title: Cannot saving a project from Project client to Project Web App
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: willchen
+manager: JOSELR
+localization_priority: Normal
 audience: ITPro 
 ms.topic: article
 ms.service: o365-solutions

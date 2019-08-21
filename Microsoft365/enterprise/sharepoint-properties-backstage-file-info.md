@@ -2,7 +2,8 @@
 title: Properties of type (lookup – multi select) don't work on Office backstage
 description: You can't see and set SharePoint metadata properties of type on the Office backstage area
 author: MaryQiu1987
-manager: warrenr
+manager: JOSELR
+localization_priority: Normal
 audience: ITPro
 ms.service: o365-solutions
 ms.topic: article

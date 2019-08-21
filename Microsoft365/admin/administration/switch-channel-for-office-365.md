@@ -2,7 +2,8 @@
 title: How to switch from Semi-Annual Channel to Monthly Channel for the Office 365
 description: Describes how to switch from the Semi-Annual Channel to the Monthly Channel channels for the Office 365 ProPlus product family.
 author: simonxjx
-manager: willchen
+manager: JOSELR
+localization_priority: Normal
 audience: ITPro
 ms.prod: office 365
 ms.topic: article

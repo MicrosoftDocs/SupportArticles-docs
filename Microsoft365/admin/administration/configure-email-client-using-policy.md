@@ -2,7 +2,8 @@
 title: How to configure the default e-mail client using Group Policy
 description: Explains how to configure the default e-mail client using Group Policy
 author: simonxjx
-manager: willchen
+manager: JOSELR
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

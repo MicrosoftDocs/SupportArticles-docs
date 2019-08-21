@@ -2,7 +2,8 @@
 title: The code in this project must be updated for use on 64-bit systems
 description: Describes an issue in which you receive an error message when you edit a VBA macro in an Office 2010 program. Provides a resolution.
 author: simonxjx
-manager: willchen
+manager: JOSELR
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
