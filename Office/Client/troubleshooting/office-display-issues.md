@@ -80,15 +80,16 @@ Word 2016 and Word 2013 use sub-pixel text rendering by default. While this prov
  
 1.	On the **File** tab, click **Options**.
 2.	Click **Advanced**.
-3.	Under the **Display** group, clear the U**se the subpixel positioning to smooth fonts on screen** option.
+3.	Under the **Display** group, clear the **Use the subpixel positioning to smooth fonts on screen** option.
 4.	Click **OK**.
 
 If you are still experiencing a problem after you turn off the sub-pixel text rendering setting, re-enable the Use the subpixel positioning to smooth fonts on screen setting, and then go to Step 3.
 
-Step 3: On Windows 7 clients, install the Windows 8 Inter-operability Pack
+#### Step 3: On Windows 7 clients, install the Windows 8 Inter-operatibility Pack
+
 If you are using Windows10, Windows 8.1 or Windows 8, skip this section and go to the steps under the For All Other Symptoms section.
 
-If you are using Windows 7, install the update for improving video-related components that is available in the following Knowledge Base article.
+If you are using Windows 7, install the update for improving video-related components that is available in the following Knowledge Base article:
 
 [2670838](https://support.microsoft.com/help/2670838/) Platform update for Windows 7 SP1 and Windows Server 2008 R2 SP1
 

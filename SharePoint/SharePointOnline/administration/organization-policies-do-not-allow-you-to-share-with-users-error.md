@@ -9,6 +9,11 @@ audience: Admin
 ms.topic: article
 ms.prod: office-perpetual-itpro
 localization_priority: Normal 
+search.appverid:
+- SPO160
+- MET150
+appliesto:
+- SharePoint Online
 ---
 
 # “Your organization's policies do not allow you to share with these users” error when sharing an item or site in SharePoint Online or OneDrive for Business 

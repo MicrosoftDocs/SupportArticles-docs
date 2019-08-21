@@ -31,7 +31,7 @@ This occurs if the user account in your on-premises environment has a **proxyadd
 |)|closing parenthesis |
 |'|single quotation mark |
 |&|ampersand |
-| \     |pipe |
+|   \|  |pipe |
 |=|equal sign |
 |?|question mark |
 |/|forward slash |

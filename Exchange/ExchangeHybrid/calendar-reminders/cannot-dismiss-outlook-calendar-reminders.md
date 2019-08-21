@@ -57,4 +57,4 @@ Delete the Reminders folder by using the Microsoft Exchange Server MAPI Editor (
 
     > [!NOTE]
     > Do not delete the individual items inside the Reminders folder. The Reminders folder is just a view of upcoming events on the calendar. If the items inside the folder are deleted, those items will be removed from the calendar.    
-9. Run the Outlook.exe /cleanremindersor Outlook.exe /ResetFolders command line. (This step re-creates the Reminders folder and adds any valid entries back in.)    
+9. Run the **Outlook.exe /cleanreminders** or **Outlook.exe /ResetFolders** command line. (This step re-creates the Reminders folder and adds any valid entries back in.)    
