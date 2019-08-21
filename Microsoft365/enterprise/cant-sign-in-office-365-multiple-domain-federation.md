@@ -2,7 +2,8 @@
 title: AADSTS50107 when trying to sign in to Office 365 with multiple domain federation
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: willchen
+manager: JOSELR
+localization_priority: Normal
 audience: ITPro 
 ms.topic: article 
 ms.service: o365-solutions

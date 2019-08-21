@@ -1,7 +1,8 @@
 ---
 title: Office Applications crash or cannot start
 author: simonxjx
-manager: willchen
+manager: JOSELR
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

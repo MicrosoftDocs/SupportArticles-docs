@@ -2,7 +2,8 @@
 title: Unable to reset this user’s password for user that was set up for SSO
 description: Describes an issue in which an administrator can't reset the password of a user who is a member of a domain that was formerly set up for single sign-on (SSO). Provides a resolution.
 author: simonxjx
-manager: willchen
+manager: JOSELR
+localization_priority: Normal
 audience: ITPro
 ms.service: office 365
 ms.topic: article

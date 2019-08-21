@@ -2,7 +2,8 @@
 title: Account has been blocked error when sign in to Office 365
 description: Describes an issue that triggers an error message when a user tries to sign in to the Office 365 portal. Provides a resolution.
 author: simonxjx
-manager: willchen
+manager: JOSELR
+localization_priority: Normal
 audience: ITPro
 ms.service: office 365
 ms.topic: article
