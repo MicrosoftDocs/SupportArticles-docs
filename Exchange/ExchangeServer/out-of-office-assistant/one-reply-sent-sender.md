@@ -2,11 +2,12 @@
 title: Only one reply is sent to each sender when Out of Office Assistant is enabled
 description: 
 author: simonxjx
-manager: willchen
 audience: ITPro
 ms.service: exchange-powershell
 ms.topic: article
 ms.author: v-six
+manager: MEERAK
+localization_priority: Normal
 appliesto:
 - Exchange Server 2016 Enterprise Edition
 - Exchange Server 2016 Standard Edition

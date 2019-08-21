@@ -2,11 +2,12 @@
 title: How to update contact information in Exchange Online in Office 365
 description: Describes the kind of contact information that administrators and users can change by using the Exchange admin center in Office 365. Also describes how administrators can limit the kind of contact information that users can change.
 author: simonxjx
-manager: willchen
 audience: ITPro
 ms.service: exchange-online
 ms.topic: article
 ms.author: v-six
+manager: MEERAK
+localization_priority: Normal
 appliesto:
 - Exchange Online
 ---

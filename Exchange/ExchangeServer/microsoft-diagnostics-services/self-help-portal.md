@@ -2,11 +2,12 @@
 title: Microsoft Diagnostics Services—Self-Help diagnostic portal
 description: Describes the diagnostic portal that replaced Microsoft Fix it Center Pro.
 author: simonxjx
-manager: willchen
 audience: ITPro
 ms.service: exchange-powershell
 ms.topic: article
 ms.author: v-six
+manager: MEERAK
+localization_priority: Normal
 appliesto:
 - Windows 7 Enterprise
 - Windows 7 Home Basic

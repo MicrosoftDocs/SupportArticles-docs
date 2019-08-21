@@ -2,11 +2,12 @@
 title: Unable to move a mailbox from Office 365 back to on-premises in hybrid
 description: Describes an issue in which the move operation fails after it reaches 95 percent when you try to move a mailbox from Office 365 back to the on-premises environment in a hybrid deployment of Exchange Online in Office 365 and of Exchange Server. Provides a resolution.
 author: simonxjx
-manager: willchen
 audience: ITPro
 ms.service: o365-administration
 ms.topic: article
 ms.author: v-six
+manager: MEERAK
+localization_priority: Normal
 appliesto:
 - Exchange Online
 - Exchange Server 2010 Enterprise

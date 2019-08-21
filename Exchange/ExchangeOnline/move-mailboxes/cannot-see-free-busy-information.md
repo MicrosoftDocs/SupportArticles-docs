@@ -2,11 +2,12 @@
 title: Users can't see free/busy information after a mailbox is moved to Office 365
 description: Describes an issue in which on-premises users can't see free/busy information for a mailbox that is moved to Office 365. Provides a workaround.
 author: simonxjx
-manager: willchen
 audience: ITPro
 ms.service: exchange-online
 ms.topic: article
 ms.author: v-six
+manager: MEERAK
+localization_priority: Normal
 appliesto:
 - Exchange Online
 ---
