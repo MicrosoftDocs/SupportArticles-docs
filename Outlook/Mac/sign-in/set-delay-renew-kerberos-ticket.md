@@ -2,7 +2,8 @@
 title: How to set Outlook 2016 for Mac to delay trying to renew a Kerberos ticket
 description: Describes how to suppress credentials prompting when connecting with Kerberos authentication.
 author: simonxjx
-manager: willchen
+manager: MEERAK
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

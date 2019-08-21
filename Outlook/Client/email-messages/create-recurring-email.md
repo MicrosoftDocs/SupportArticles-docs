@@ -2,7 +2,8 @@
 title: How to create a recurring e-mail message in Outlook
 description: provides a method to create recurring e-mail messages in Outlook.
 author: simonxjx
-manager: willchen
+manager: MEERAK
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
