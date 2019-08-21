@@ -2,7 +2,8 @@
 title: We can't start this app when installing an Office add-in
 description: Describes an issue that installing an Office Add-in from the Office Store fails with error.
 author: simonxjx
-manager: willchen
+manager: JOSELR
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

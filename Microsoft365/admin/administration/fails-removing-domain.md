@@ -2,7 +2,8 @@
 title: You cannot remove a domain that has subdomains
 description: Describes an issue in which you receive the "Domain has associated subdomains" or "You cannot remove a domain that has subdomains" error. Provides a resolution.
 author: simonxjx
-manager: willchen
+manager: JOSELR
+localization_priority: Normal
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article

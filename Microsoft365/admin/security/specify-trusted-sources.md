@@ -2,7 +2,8 @@
 title: How to specify trusted sources for Digital Certificates in Office
 description: Describes how to specify the trusted sources for Digital Certificates. You can turn on the "Trust all installed add-ins and templates" option to trust all add-ins and templates that are currently installed on the computer.
 author: simonxjx
-manager: willchen
+manager: JOSELR
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

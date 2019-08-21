@@ -2,7 +2,8 @@
 title: AD FS endpoint connection issues during sign-in.
 description: Describes how to troubleshoot AD FS endpoint connection issues when users sign in to Office 365, Intune, or Azure.
 author: simonxjx
-manager: willchen
+manager: JOSELR
+localization_priority: Normal
 audience: ITPro
 ms.service: office 365
 ms.topic: article

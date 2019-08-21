@@ -2,7 +2,8 @@
 title: Sorry, but we're having trouble signing you in error and 8004789A error
 description: Describes an issue in which authentication fails for single sign-on (SSO) users when they try to sign in to a Microsoft cloud service such as Office 365, Azure, or Microsoft Intune after you update the relying party trust with Azure AD in AD FS 2.0.
 author: simonxjx
-manager: willchen
+manager: JOSELR
+localization_priority: Normal
 audience: ITPro
 ms.prod: Office 365
 ms.topic: article

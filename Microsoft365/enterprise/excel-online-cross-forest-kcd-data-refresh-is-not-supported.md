@@ -2,7 +2,8 @@
 title: Excel Online cross forest KCD data refresh is not supported
 description: Excel Online cross forest KCD data refresh fails with the error "The data connection uses Windows Authentication and user credentials could not be delegated."
 author: MaryQiu1987
-manager: randring
+manager: JOSELR
+localization_priority: Normal
 audience: ITPro
 ms.service: o365-solutions
 ms.topic: article

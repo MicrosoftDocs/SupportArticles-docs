@@ -2,7 +2,8 @@
 title: Product IDs that are supported by the Office Deployment Tool for Click-to-Run
 author: AmandaAZ
 ms.author: stevhord
-manager: stevhord
+manager: JOSELR
+localization_priority: Normal
 audience: ITPro
 ms.service: o365-solutions
 ms.topic: article
