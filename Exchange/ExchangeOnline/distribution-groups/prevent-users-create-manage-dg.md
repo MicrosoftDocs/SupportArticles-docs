@@ -2,11 +2,12 @@
 title: Prevent users from creating and managing distribution groups in Office 365
 description: Users can create and manage distribution groups in Office 365, but organizations may not want to allow this. Describes how Exchange Online admins can disable this functionality.
 author: simonxjx
-manager: willchen
 audience: ITPro
 ms.service: exchange-online
 ms.topic: article
 ms.author: v-six
+manager: MEERAK
+localization_priority: Normal
 appliesto:
 - Exchange Online
 ---

@@ -2,11 +2,12 @@
 title: Policy does not allow granting permissions at this level when share calendar
 description: Describes an error that occurs when users try to share their calendar to a cross-premises user.
 author: simonxjx
-manager: willchen
 audience: ITPro
 ms.prod: exchange-server-it-pro
 ms.topic: article
 ms.author: v-six
+manager: MEERAK
+localization_priority: Normal
 appliesto:
 - Exchange Online
 - Exchange Server 2016 Enterprise Edition

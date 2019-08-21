@@ -2,11 +2,12 @@
 title: You can't use the domain when you run the Add-RecipientPermission cmdlet
 description: Describes an error message that you receive when you run the Add-RecipientPermission cmdlet in Exchange Online if the proxy address of the recipient uses a domain that isn't configured as an accepted domain. Provides a solution.
 author: simonxjx
-manager: willchen
 audience: ITPro
 ms.service: exchange-online
 ms.topic: article
 ms.author: v-six
+manager: MEERAK
+localization_priority: Normal
 appliesto:
 - Exchange Online
 ---

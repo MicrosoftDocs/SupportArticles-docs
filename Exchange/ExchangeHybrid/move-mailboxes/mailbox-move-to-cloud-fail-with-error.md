@@ -2,11 +2,12 @@
 title: Mailbox Move to cloud fail with error when you move mailboxes to Office 365
 description: Describes an error message that you receive when you move mailboxes from your on-premises environment to Office 365 in a hybrid deployment. Provides a resolution.
 author: simonxjx
-manager: willchen
 audience: ITPro
 ms.prod: office 365
 ms.topic: article
 ms.author: v-six
+manager: MEERAK
+localization_priority: Normal
 appliesto:
 - Exchange Online 
 - Microsoft Exchange Server

@@ -2,11 +2,12 @@
 title: The time zone setting is set incorrectly to (UTC) Monrovia, Reykjavik
 description: Explains why a user's time zone may be set incorrectly when the user signs in to Outlook Web App in Office 365. Provides a resolution.
 author: simonxjx
-manager: willchen
 audience: ITPro
 ms.service: exchange-online
 ms.topic: article
 ms.author: v-six
+manager: MEERAK
+localization_priority: Normal
 appliesto:
 - Exchange Online
 ---
