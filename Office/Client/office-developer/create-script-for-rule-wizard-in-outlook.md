@@ -44,9 +44,3 @@ End Sub
 ```
 
 You can put the subroutine in any module, including ThisOutlookSession, but if you move the subroutine to another module or change the subroutine's name, you must modify the rule to point to the updated subroutine.
-
-Another example of creating a custom script is located at the following third-party Web site:
-
-[How to process incoming messages in Microsoft Outlook](http://www.outlookcode.com/article.aspx?id=62)
-
-The third-party products that are discussed in this article are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, regarding the performance or reliability of these products.
