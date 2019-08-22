@@ -2,7 +2,8 @@
 title: Presence information of Lync Server 2010 may not show in Outlook
 description: Describes how to fix an issue that occurs when the presence information for a Lync Server or Office Communications Server user is not displayed, or when this information is displayed intermittently. This issue occurs in Outlook 2010, in Outlook 2007, and in Outlook 2003 SP2.
 author: simonxjx
-manager: willchen
+manager: clake
+localization_priority: Normal
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article

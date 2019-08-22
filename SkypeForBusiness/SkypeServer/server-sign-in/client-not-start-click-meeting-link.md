@@ -2,7 +2,8 @@
 title: Client does not start when click a meeting link if default browser is Chrome
 description: Discusses that users who try to join Lync or Skype for Business online meetings are directed to Lync Web App, and their local client does not start. Provides a resolution.
 author: simonxjx
-manager: willchen
+manager: clake
+localization_priority: Normal
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article

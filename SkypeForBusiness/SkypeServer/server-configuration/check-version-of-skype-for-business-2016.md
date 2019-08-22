@@ -2,7 +2,8 @@
 title: How to check the version of Skype for Business 2016
 description: Describes how to check the version of Skype for Business 2016.
 author: simonxjx
-manager: willchen
+manager: clake
+localization_priority: Normal
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article

@@ -2,7 +2,8 @@
 title: Meeting invitations are not sent from Outlook in Skype for Business
 description: Discusses a problem in which meeting invitations are not sent from Outlook in Skype for Business. Provides a workaround.
 author: simonxjx
-manager: willchen
+manager: clake
+localization_priority: Normal
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article

@@ -2,7 +2,8 @@
 title: MAPI unavailable in Skype for Business 2016 client
 description: Fixes an issue that triggers a "MAPI unavailable" error in a Skype for Business 2016 client.
 author: simonxjx
-manager: willchen
+manager: clake
+localization_priority: Normal
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
