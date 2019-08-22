@@ -2,7 +2,8 @@
 title: Event 32263 error 0xC3E93C2F on Front End servers in Skype for Business Server
 description: Event 32263 "SIPPROXY_E_UNKNOWN_USER_OR_EPID" is logged on Front End servers in Skype for Business Server 2015, Lync Server 2013, and Lync Server 2010.
 author: simonxjx
-manager: willchen
+manager: clake
+localization_priority: Normal
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article

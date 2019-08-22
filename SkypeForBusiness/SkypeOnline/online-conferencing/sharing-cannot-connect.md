@@ -2,7 +2,8 @@
 title: Desktop or Application sharing can't connect in a conference
 description: Resolves a problem in which participants can't connect to a desktop-sharing or application-sharing session in Skype for Business Online.
 author: simonxjx
-manager: willchen
+manager: clake
+localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article

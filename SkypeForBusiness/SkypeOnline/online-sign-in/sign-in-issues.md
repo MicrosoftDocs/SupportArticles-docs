@@ -2,7 +2,8 @@
 title: How to troubleshoot sign-in issues in Skype for Business Online
 description: Discusses how to troubleshoot sign-in issues in Skype for Business Online.
 author: simonxjx
-manager: willchen
+manager: clake
+localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article

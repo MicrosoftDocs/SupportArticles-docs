@@ -2,7 +2,8 @@
 title: Can't transfer numbers from one tenant to another in Skype for Business Online
 description: Describes an unsupported local number porting scenario in Skype for Business Online.
 author: simonxjx
-manager: willchen
+manager: clake
+localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article

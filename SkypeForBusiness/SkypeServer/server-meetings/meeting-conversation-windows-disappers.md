@@ -2,7 +2,8 @@
 title: Meeting conversation window disappears for C2R clients
 description: Describes a workaround for users who experience a situation where the meeting conversation window in Skype for Business 2016 disappears in the middle of a meeting.
 author: simonxjx
-manager: willchen
+manager: clake
+localization_priority: Normal
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
