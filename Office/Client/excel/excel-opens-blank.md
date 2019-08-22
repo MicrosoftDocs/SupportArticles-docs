@@ -103,7 +103,7 @@ If these steps do not resolve the problem, continue to **Method 4**.
 
 Try to repair your Office programs. To do this, follow the steps for your installation type and operating system.
 
-#### For an Office 365 Select-to-Run installation
+#### For an Office 365 Click-to-Run installation
 
 ##### Windows 10
 
