@@ -2,7 +2,8 @@
 title: Form region cannot be open in the Outlook 2010 preview pane
 description: Describes an issue that triggers an error about Form region cannot be open in the Outlook 2010 preview pane after you install Skype for Business 2016.
 author: simonxjx
-manager: willchen
+manager: clake
+localization_priority: Normal
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article

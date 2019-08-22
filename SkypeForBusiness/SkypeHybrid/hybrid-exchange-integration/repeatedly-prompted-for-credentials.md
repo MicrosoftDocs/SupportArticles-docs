@@ -2,7 +2,8 @@
 title: You're repeatedly prompted for Exchange credentials after you sign in to Lync
 description: Describes an issue in which you are repeatedly prompted for a user name and password when you try to access Skype for Business Online. Resolutions are provided for certain scenarios.
 author: simonxjx
-manager: willchen
+manager: clake
+localization_priority: Normal
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article

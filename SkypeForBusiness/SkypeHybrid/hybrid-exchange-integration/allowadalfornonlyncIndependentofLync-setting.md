@@ -2,7 +2,8 @@
 title: Info about AllowAdalForNonLyncIndependentOfLync setting
 description: Describes the AllowAdalForNonLyncIndependentOfLync setting in Skype for Business, Lync 2013, and Exchange Online in Office 365.
 author: simonxjx
-manager: willchen
+manager: clake
+localization_priority: Normal
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article

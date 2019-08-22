@@ -2,7 +2,8 @@
 title: LastActive attribute gives wrong user status info in Skype for Business Online
 description: Describes a problem in which the LastActive attribute gives wrong user status info in Skype for Business Online. An update resolves the issue.
 author: simonxjx
-manager: willchen
+manager: clake
+localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article

@@ -2,7 +2,8 @@
 title: Slow refresh in meetings when join conference in non-VbSS client
 description: Describes an issue in which slow refresh or blurry desktop occurs when a user joins an online meeting on a non-video based screen sharing-capable client. Provides a workaround.
 author: simonxjx
-manager: willchen
+manager: clake
+localization_priority: Normal
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article

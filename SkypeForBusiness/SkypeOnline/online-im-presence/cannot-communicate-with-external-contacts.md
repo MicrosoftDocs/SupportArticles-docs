@@ -2,7 +2,8 @@
 title: Skype for Business Online users can't communicate with external contacts
 description: Discusses that users can't communicate with external contacts in Microsoft Skype for Business Online in Microsoft Office 365. Provides a resolution.
 author: simonxjx
-manager: willchen
+manager: clake
+localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article

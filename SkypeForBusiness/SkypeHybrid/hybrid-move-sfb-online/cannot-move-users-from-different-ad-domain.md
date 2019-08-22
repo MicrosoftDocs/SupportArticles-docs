@@ -2,7 +2,8 @@
 title: Cannot move users from a different AD domain from Control Panel
 description: Describes an issue in which users from a different AD domain in a Skype for Business Server hybrid environment cannot be moved to Skype for Business Online from Control Panel. Provides a workaround.
 author: simonxjx
-manager: willchen
+manager: clake
+localization_priority: Normal
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
