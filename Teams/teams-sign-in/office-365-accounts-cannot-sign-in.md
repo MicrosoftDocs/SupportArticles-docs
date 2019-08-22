@@ -2,7 +2,8 @@
 title: Office 365 Student and service accounts can't sign in to Microsoft Teams
 description: TeamsDisabledForTenantForbidden when trying to sign in to Microsoft Teams by using an Office 365 Education Student or Office 365 F1 license.
 author: simonxjx
-manager: willchen
+manager: CLAKE
+localization_priority: Normal
 audience: ITPro
 ms.service: msteams
 ms.topic: article
