@@ -19,9 +19,7 @@ appliesto:
 
 # Step by Step : Rename Excel Sheet with Cell Contents by Using Macro
 
-## About Author
-
-This article is provided by MVP [Raddini Rahayu](https://mvp.microsoft.com/en-us/mvp/raddini%20gusti%20rahayu-4038228). Microsoft is so thankful that MVPs who proactively share their professional experience with other users. The article would be posted on [MVP's website](https://mvp.microsoft.com/en-us/mvp/raddini%20gusti%20rahayu-4038228) or [blog](https://excelmiso.blogspot.com) later.
+This article was written by [Raddini Rahayu](https://mvp.microsoft.com/en-us/mvp/raddini%20gusti%20rahayu-4038228), Microsoft MVP.
 
 ## Case 
 
