@@ -18,8 +18,6 @@ appliesto:
 
 # Create An Excel Add-In to Calculate Body Mass Index (BMI)
 
-## About Author
-
 This article was written by [Raddini Rahayu](https://mvp.microsoft.com/en-us/mvp/raddini%20gusti%20rahayu-4038228), Microsoft MVP.
 
 ## Introduction 
