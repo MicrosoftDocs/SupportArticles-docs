@@ -172,7 +172,7 @@ These two settings ensure that packets will be managed regardless of which compu
 Transmission Control Protocol (TCP) and User Datagram Protocol (UDP) are the two networking protocols most commonly used by Skype for Business/ Lync servers and their client applications.<br/>
 <img alt="Select From this sourceport or range." src="media/103849-7.jpg">
 </li>
-<li>Follow steps 5 through 9 to create a new policy objects and label them “Lync2013-Signaling”, “Lync2013-AppShare”, “Lync2013-File Transfer”, and Lync2013-Video” with the above ports ranges and DSCP values. </li>
+<li>Follow steps 5 through 8 to create a new policy objects and label them “Lync2013-Signaling”, “Lync2013-AppShare”, “Lync2013-File Transfer”, and Lync2013-Video” with the above ports ranges and DSCP values. </li>
 <li>After you have configured all policy objects, it will look like the image below:<br/>
 <img alt="Configured policy objects." src="media/103849-8.jpg">
  </li>
