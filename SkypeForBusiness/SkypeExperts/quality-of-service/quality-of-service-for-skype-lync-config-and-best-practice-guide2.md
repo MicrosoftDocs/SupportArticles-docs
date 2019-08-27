@@ -149,7 +149,7 @@ If you already have all port ranges and DSCP values associated with communicatio
  
 Microsoft outline complete steps  https://technet.microsoft.com/enus/library/jj205076(v=ocs.15).aspx  
 
-<ol type="a">
+<ol style="list-style-type: lower-latin;">
 <li>You must have consolidated all your computer objects to a single Organization Unit (OU). (E.g., a computer.)</li>
 <li>Sign in to the Domain Controller or computer which has Group Policy Management installed.</li>
 <li>Open the Group Policy Management tool (<b>run</b> > <b>gpmc.msc</b>) and then right click the OU (computer), Then select <b>Create a GPO in this domain, and Link it here</b> to create a new GPO. (For example,  SfBLyncClient-QoS.) You must have required permission (Domain Admin) to create and link a policy object.</li>
