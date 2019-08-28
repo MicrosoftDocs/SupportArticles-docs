@@ -13,6 +13,8 @@ appliesto:
 
 # PowerPivot data model does not refresh when the SQL Server authentication and "Save Password" are used
 
+This article was written by [Warren Rath](https://social.technet.microsoft.com/profile/Warren_R_Msft), Support Escalation Engineer.
+
 ## Symptoms
 
 The Power Pivot add-in for Excel is used to create a PowerPivot model by using SQL Server as a data source and the user manually uses the Excel connections screen to have the password saved.

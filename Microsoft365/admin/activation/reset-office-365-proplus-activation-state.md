@@ -14,6 +14,8 @@ appliesto:
 
 # Reset Office 365 ProPlus activation state
 
+This article was written by [Matt Philipenko](https://social.technet.microsoft.com/profile/MattPhil+-+MSFT), Premier Field Engineer.
+
 It's very common for users to switch devices or an enterprise to add or change Microsoft Office 365 tenants. Another scenario is when enterprise organizations roam licenses or credentials to simplify sign in. After an Office 365 user is activated, there are four locations that must be cleared to reset the application to a clean state.
 
 ## Step 1: Remove Office 365 license for subscription based installs (not Shared Computer Licensing scenarios)

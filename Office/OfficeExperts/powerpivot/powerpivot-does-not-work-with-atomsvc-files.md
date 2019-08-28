@@ -13,6 +13,8 @@ appliesto:
 
 # PowerPivot does not work with .atomsvc files
 
+This article was written by [Warren Rath](https://social.technet.microsoft.com/profile/Warren_R_Msft), Support Escalation Engineer.
+
 ## Symptoms
 
 When you try to create a PowerPivot data model in a Microsoft Excel workbook by getting data from an .atomsvc file, or when you refresh a PowerPivot workbook that has an .atomsvc file in it, you receive the following error:

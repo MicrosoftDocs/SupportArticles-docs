@@ -13,6 +13,8 @@ appliesto:
 
 # Force a Word document to open in edit mode from an email link
 
+This article was written by [Warren Rath](https://social.technet.microsoft.com/profile/Warren_R_Msft), Support Escalation Engineer.
+
 By default, when you open a Microsoft Word document from a hyperlink in an email message, Word opens the document in read-only mode. However, you can update the hyperlink to force Word to open the document in edit mode. This article describes how to make this change by using a SharePoint workflow email task.
 
 ## Update a hyperlink by using a SharePoint workflow email task

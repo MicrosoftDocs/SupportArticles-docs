@@ -13,6 +13,8 @@ appliesto:
 
 # A custom HTML login page doesn't render correctly in an Office application
 
+This article was written by [Warren Rath](https://social.technet.microsoft.com/profile/Warren_R_Msft), Support Escalation Engineer.
+
 ## Symptoms
 
 If a custom HTML login page(like Active Directory Federated Services) doesn't render correctly in an Office application when users are prompted for credentials for using online Office resources, the custom HTML login page is likely incompatible with the Office application.
