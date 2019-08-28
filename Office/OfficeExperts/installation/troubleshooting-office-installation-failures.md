@@ -14,6 +14,8 @@ appliesto:
 
 # Troubleshooting Office installation failures
 
+This article was written by [Eric Ashton](https://social.technet.microsoft.com/profile/EricAshton), Senior Support Escalation Engineer.
+
 This article describes techniques on how to determine and fix Microsoft Office installation failures. The techniques can be applied to all Office installations that use Windows Installer (MSI).
 
 ## Enable verbose logging

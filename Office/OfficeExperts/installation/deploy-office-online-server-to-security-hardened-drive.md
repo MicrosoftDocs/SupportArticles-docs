@@ -13,6 +13,8 @@ appliesto:
 
 # Deploy Office Web Apps 2013 or Office Online Server to a security hardened drive
 
+This article was written by [Dan Fox](https://social.technet.microsoft.com/profile/Dan+F.+-+MSFT), Support Escalation Engineer.
+
 ## Symptoms
 
 Permissions errors to the Windows registry and file system resources can manifest in many ways within Office Web Apps.

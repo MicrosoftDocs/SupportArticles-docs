@@ -13,6 +13,8 @@ appliesto:
 
 # Third-party PowerPivot data refresh tools are not supported
 
+This article was written by [Rick Andring](https://social.technet.microsoft.com/profile/Rick+A.+-+MSFT), Support Escalation Engineer.
+
 Microsoft has seen multiple third-party tools or scripts are being used to refresh a PowerPivot workbook more frequently than the standard default PowerPivot limit of one time per day. However, these tools bring a high risk and can cause multiple issues for SharePoint Web Front End and Database servers. Microsoft doesn't support these tools and highly recommends not using them. If you need to refresh your PowerPivot workbooks multiple times a day, you need to use a different BI solution to display your data. Excel Services and PowerPivot for SharePoint are not meant to be a "live feed" of data.
 
 ## Adverse effect if you use third-party data refresh tools
