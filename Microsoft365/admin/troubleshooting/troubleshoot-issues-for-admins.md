@@ -196,5 +196,5 @@ For more troubleshooting information, see [Troubleshooting Skype for Business On
 
 [Message trace in the Security & Compliance Center](https://docs.microsoft.com/en-us/office365/securitycompliance/message-trace-scc?redirectSourcePath=%252farticle%252f3e64f99d-ac33-4aba-91c5-9cb4ca476803)
 
-[Troubleshoot Office 465 mail flow](https://docs.microsoft.com/en-us/exchange/mail-flow-best-practices/troubleshoot-mail-flow)
+[Troubleshoot Office 365 mail flow](https://docs.microsoft.com/en-us/exchange/mail-flow-best-practices/troubleshoot-mail-flow)
 

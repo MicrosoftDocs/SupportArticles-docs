@@ -15,6 +15,8 @@ appliesto:
 
 # Schedule data refresh to a data source with non-Windows Authentication
 
+This article was written by [Tom Schauer](https://social.technet.microsoft.com/profile/Tom+Schauer+-+MSFT), Technical Specialist.
+
 This article introduces configuration requirements and methods for scheduling PowerPivot workbooks that connect to data sources with non-Windows authentications in PowerPivot for Microsoft SharePoint (from 2010 to 2016).
 
 > [!NOTE]

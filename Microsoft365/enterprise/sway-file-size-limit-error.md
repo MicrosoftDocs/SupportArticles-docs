@@ -14,6 +14,8 @@ appliesto:
 
 # File size limit error when you upload files to Sway
 
+This article was written by [Zakir Haveliwala](https://social.technet.microsoft.com/profile/Zakir+H+-+MSFT), Senior Support Escalation Engineer.
+
 Microsoft Sway has file size limits for different types of files. The maximum supported file sizes are 20 MB for documents, 100 MB for audio files, and 256 MB for other types of content.
 
 If you upload a file that exceeds the size to Sway, you may receive an error message that states that the file is too large to upload.

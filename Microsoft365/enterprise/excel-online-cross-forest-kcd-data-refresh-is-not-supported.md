@@ -14,6 +14,8 @@ appliesto:
 
 # Excel Online cross forest KCD data refresh is not supported
 
+This article was written by [Rick Andring](https://social.technet.microsoft.com/profile/Rick+A.+-+MSFT), Support Escalation Engineer.
+
 ## Symptoms
 
 Consider the following scenario:

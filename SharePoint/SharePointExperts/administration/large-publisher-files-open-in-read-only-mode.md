@@ -15,6 +15,8 @@ appliesto:
 
 # Large Publisher files open in read-only mode
 
+This article was written by [Warren Rath](https://social.technet.microsoft.com/profile/Warren_R_Msft), Support Escalation Engineer.
+
 ## Symptoms
 
 In SharePoint Online or SharePoint Server 2013, large Publisher files that are more than 50 megabytes (MB) open in read-only mode and can't be directly edited. To edit the files, you must first save them locally, and then manually upload them after you complete the edit.

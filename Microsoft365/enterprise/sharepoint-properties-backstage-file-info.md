@@ -16,6 +16,8 @@ appliesto:
 
 # SharePoint properties of type (lookup – multi select) don't work on Office backstage
 
+This article was written by [Warren Rath](https://social.technet.microsoft.com/profile/Warren_R_Msft), Support Escalation Engineer.
+
 ## Symptoms
 
 In Microsoft Office 365, Office 2019, or Office 2016, when you try to open a document from SharePoint that has SharePoint metadata properties of type (for example, **Lookup** type > Multiple value selections), you don't see and set these properties on the Office backstage area (**File** > **Info**).

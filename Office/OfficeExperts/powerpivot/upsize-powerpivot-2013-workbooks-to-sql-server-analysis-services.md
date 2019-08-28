@@ -13,6 +13,8 @@ appliesto:
 
 # Upsize PowerPivot 2013 workbooks to SQL Server Analysis Services (SSAS)
 
+This article was written by [Warren Rath](https://social.technet.microsoft.com/profile/Warren_R_Msft), Support Escalation Engineer.
+
 This article introduces how to upsize a PowerPivot workbook to a Microsoft SQL Server Analysis Services (SSAS) Tabular instance for knowledge workers or SharePoint administrators.
 
 Assume that you are using PowerPivot as a data source, so no UI is present in the workbook that's hosting the PowerPivot data model. The data will display from another workbook that connects to the PowerPivot workbook as a data source or from some other reporting tool such as Power View or Excel Services.

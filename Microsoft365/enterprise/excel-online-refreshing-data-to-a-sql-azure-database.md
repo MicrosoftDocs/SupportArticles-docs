@@ -14,6 +14,8 @@ appliesto:
 
 # How to refresh data to a SQL Azure Database in Excel Online
 
+This article was written by [Tom Schauer](https://social.technet.microsoft.com/profile/Tom+Schauer+-+MSFT), Technical Specialist.
+
 This article describes how to connect to Microsoft SQL Azure Database and refresh the data in Excel Online.
 
 1. Open Excel client, click **Data** > **From Other Sources** > **From Data Connection Wizard**.

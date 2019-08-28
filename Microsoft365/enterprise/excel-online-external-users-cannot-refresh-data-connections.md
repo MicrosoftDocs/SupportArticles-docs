@@ -14,6 +14,8 @@ appliesto:
 
 # External users cannot refresh data connections from Excel Online
 
+This article was written by [Ricardo Rocha](https://social.technet.microsoft.com/profile/Ricardo+R.+-+MSFT), Escalation Engineer.
+
 ## Symptoms
 
 You're using a Microsoft Excel workbook that contains an Excel Power Pivot Model with external data connections. Currently, the data refresh in Excel Online is working without any issues for the internal users of the organization tenant.

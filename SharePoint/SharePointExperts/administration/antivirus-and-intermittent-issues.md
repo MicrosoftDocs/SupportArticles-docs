@@ -13,6 +13,8 @@ appliesto:
 
 # Antivirus and intermittent issues when you view Office documents by using Office Online Server
 
+This article was written by [Jason Haak](https://social.technet.microsoft.com/profile/Jason+Ha+-+MSFT), Senior Support Escalation Engineer.
+
 ## Symptoms
 
 When you view Office documents by using Microsoft Office Web Apps or Office Online Server, you see intermittent errors. All Office file types are affected, most frequently PowerPoint and Word files. Frequently, the same document displays at one time, and then throw an error at another document.

@@ -12,6 +12,8 @@ appliesto:
 ---
 # Rebuild an Office Web Apps 2013 farm easily
 
+This article was written by [Tom Schauer](https://social.technet.microsoft.com/profile/Tom+Schauer+-+MSFT), Technical Specialist.
+
 You can rebuild Microsoft Office Web Apps 2013 farm with a few easy steps. To do this, follow these steps:
 
 > [!NOTE]

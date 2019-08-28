@@ -13,6 +13,8 @@ appliesto:
 
 # Increasing the size limit of embedded media for the PowerPoint Web App
 
+This article was written by [Adam Rhinesmith](https://social.technet.microsoft.com/profile/Adam+R+-+MSFT), Support Escalation Engineer.
+
 ## Symptoms
 
 The Office Web Apps Server is limited to 50MB for embedded media in the PowerPoint Web App. You may experience the following error:
