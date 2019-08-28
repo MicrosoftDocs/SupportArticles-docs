@@ -13,6 +13,8 @@ appliesto:
 
 # Compatibility Report about text queries in Excel Online
 
+This article was written by [Tom Schauer](https://social.technet.microsoft.com/profile/Tom+Schauer+-+MSFT), Technical Specialist.
+
 ## Symptoms
 
 When you try to edit a workbook that contains text queries in Microsoft Excel Online, you may receive a Compatibility Report:

@@ -13,6 +13,8 @@ appliesto:
 
 # Test viewing Office documents by using Office Online Server viewer
 
+This article was written by [Tom Schauer](https://social.technet.microsoft.com/profile/Tom+Schauer+-+MSFT), Technical Specialist.
+
 Microsoft Office Web Apps Server or Office Online Server has a built-in Office file viewer for testing viewing Office files in a browser,independent of any integration such as SharePoint Server, Skype for Business Server, or Exchange Server. This article introduces how to test viewing Office documents by using Office Web Apps or Office Online Server viewer, as follows:
 
 1. By default, the **OpenFromURLEnabled** parameter is set to **False** in a new Office Web Apps farm. To set it to **True**, run the following command in PowerShell on an Office Web Apps (WAC) server:
