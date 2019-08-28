@@ -17,7 +17,7 @@
 ### [Bug Check 0x133 on Edge server](../server-configuration/bugcheck-0x133-edge-server.md)
 ### [Can't perform a CMS failover](../server-configuration/cannot-perform-cms-failover.md)
 ### [Can't start a front-end server](../server-configuration/cannot-start-front-end-server.md)
-### [Census data is now collected for Lync](../server-configuration/census-data-collected)
+### [Census data is now collected for Lync](../server-configuration/census-data-collected.md)
 ### [Central management store replication failures](../server-configuration/central-management-store-replication-failures.md)
 ### [Check the version of Skype for Business 2016](../server-configuration/check-version-of-skype-for-business-2016.md)
 ### [Disable Automatic Gain Control](../server-configuration/disable-automatic-gain-control.md)
