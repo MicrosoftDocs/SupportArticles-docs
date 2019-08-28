@@ -14,6 +14,8 @@ appliesto:
 
 # How to automate the uninstallation of an Office update programmatically
 
+This article was written by [Eric Ashton](https://social.technet.microsoft.com/profile/EricAshton), Senior Support Escalation Engineer.
+
 This article describes how to uninstall Office updates automatically by using a command line that resembles the following:
 
 ```powershell

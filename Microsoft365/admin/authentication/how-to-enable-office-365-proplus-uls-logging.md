@@ -14,6 +14,8 @@ appliesto:
 
 # How to enable Office 365 ProPlus ULS logging
 
+This article was written by [Eric Splichal](https://social.technet.microsoft.com/profile/Splic-MSFT), Support Escalation Engineer.
+
 When you troubleshoot Microsoft Office issues, traditional log settings sometimes don't collect enough information. This might be for sign-in issues, installation and patching issues, and even app issues.
 
 To collect more verbose logging details, set the following registry keys:
