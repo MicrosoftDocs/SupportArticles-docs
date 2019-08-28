@@ -13,6 +13,8 @@ appliesto:
 
 # PowerPivot scheduled data refresh fails with the error "The operation has timed out"
 
+This article was written by [Rick Andring](https://social.technet.microsoft.com/profile/Rick+A.+-+MSFT), Support Escalation Engineer.
+
 ## Symptoms
 
 Assume that you create a PowerPivot workbook with one or more data sources and upload the workbook to Microsoft SharePoint Server 2016. When you schedule the workbook to refresh, the refresh fails with the following error:

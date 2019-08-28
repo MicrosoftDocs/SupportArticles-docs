@@ -13,6 +13,8 @@ appliesto:
 
 # Behavior when using Office Online Server and SharePoint with multiple zones
 
+This article was written by [Adam Rhinesmith](https://social.technet.microsoft.com/profile/Adam+R+-+MSFT), Support Escalation Engineer.
+
 ## Issue
 
 The configuration of Office Online Server with multiple alternate access mappings and zones in SharePoint Server.

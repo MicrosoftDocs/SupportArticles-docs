@@ -13,6 +13,8 @@ appliesto:
 
 # Excel workbooks in XML format don't open from SharePoint
 
+This article was written by [Warren Rath](https://social.technet.microsoft.com/profile/Warren_R_Msft), Support Escalation Engineer.
+
 ## Symptoms
 
 When you try to open Microsoft Excel workbooks in an XML format (XML Spreadsheet 2003) from a SharePoint document library, you receive the following error:

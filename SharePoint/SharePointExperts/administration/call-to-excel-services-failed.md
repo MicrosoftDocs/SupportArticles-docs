@@ -13,6 +13,8 @@ appliesto:
 
 # "Call to Excel Services failed" error when you run a scheduled data refresh by using PowerPivot
 
+This article was written by [Zakir Haveliwala](https://social.technet.microsoft.com/profile/Zakir+H+-+MSFT), Senior Support Escalation Engineer.
+
 ## Symptoms
 
 When you run a scheduled data refresh on a workbook that has a Power Query connection to a data source by using PowerPivot for Microsoft SharePoint 2013, you may receive a "Call to Excel Services failed" error.

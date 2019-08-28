@@ -13,6 +13,8 @@ appliesto:
 
 # "We cannot locate a server to load the workbook Data Model" error in PowerPivot
 
+This article was written by [Rick Andring](https://social.technet.microsoft.com/profile/Rick+A.+-+MSFT), Support Escalation Engineer.
+
 ## Symptoms
 
 Assume that you install PowerPivot for Microsoft SharePoint 2016 or Power BI Report Server, and use SQL Server 2017 as the data model server (Analysis Services in SharePoint mode). You also have configured Office Online Server and all the other dependencies. When you try to render workbooks and slice data, you receive the following error message:

@@ -14,6 +14,8 @@ appliesto:
 
 # "You'll need a new app to open this ms-visio" when you open Visio files
 
+This article was written by [Warren Rath](https://social.technet.microsoft.com/profile/Warren_R_Msft), Support Escalation Engineer.
+
 ## Symptoms
 
 Assume that you have Microsoft Office 2016 installed, and Microsoft Office Visio is not installed. When you try to open a Visio file in SharePoint Server or SharePoint Online, the file does not open in the Microsoft 2016 Viewer tool that is included in Microsoft Office 2016. Additionally, you receive the following message:
