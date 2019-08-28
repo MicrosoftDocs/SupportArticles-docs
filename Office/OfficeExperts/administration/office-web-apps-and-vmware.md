@@ -13,6 +13,8 @@ appliesto:
 
 # Office Web Apps 2013 and VMWare
 
+This article was written by [Tom Schauer](https://social.technet.microsoft.com/profile/Tom+Schauer+-+MSFT), Technical Specialist.
+
 Several issues occur when installing Office Web Apps 2013 or Office Online Server on a nonsystem Drive by using VMWare. The problem lies in setting the Office Web Apps CacheLocation or RenderingCacheLocation to a nonsystem drive location with the HotAdd/HotPlug capability in VMWare.
 
 There are numerous possible symptoms for this issue, most visibly when viewing/editing documents. For example, you might see the following error in the SharePoint Unified Logging Service (ULS) logs.
