@@ -14,6 +14,8 @@ appliesto:
 
 # Office 365 can't open files from the most recently used document list (MRU)
 
+This article was written by [Warren Rath](https://social.technet.microsoft.com/profile/Warren_R_Msft), Support Escalation Engineer.
+
 ## Symptoms
 
 Assume that you have Microsoft Office 365 client applications and the **RoamingSettingsDisabled** policy is enabled. When you try to open a document from SharePoint or OneDrive through the Office **Most Recently Used** document list, you receive the following error message:

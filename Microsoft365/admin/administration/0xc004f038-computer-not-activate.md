@@ -16,6 +16,8 @@ appliesto:
 
 # "0xC004F038: The computer could not be activated" error in KMS activation
 
+This article was written by [Eric Ashton](https://social.technet.microsoft.com/profile/EricAshton), Senior Support Escalation Engineer.
+
 ## Symptoms
 
 You try to activate Microsoft Office 2013 or Office 2016 through the Key Management Service (KMS) host by using any of the following methods:

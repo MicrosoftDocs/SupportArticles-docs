@@ -13,6 +13,8 @@ appliesto:
 
 # "We don't know what happened, but something went wrong." error in Excel Web Access Web Parts
 
+This article was written by [Tom Schauer](https://social.technet.microsoft.com/profile/Tom+Schauer+-+MSFT), Technical Specialist.
+
 ## Symptoms
 
 When you try to view a Microsoft Excel workbook in the Excel Web Access Web Part, you receive the following error:
