@@ -13,6 +13,8 @@ appliesto:
 
 # How to discover Office and Windows KMS hosts through DNS and remove unauthorized instances
 
+This article was written by [Eric Ellis](https://social.technet.microsoft.com/profile/Eric+Ellis+%5BMSFT%5D), Senior Support Escalation Engineer.
+
 When you troubleshoot KMS configuration and activation issues, you may find unexpected Windows or Office KMS hosts in their environment. This article describes how to discover Office and Windows KMS hosts through DNS, and how to remove unauthorized KMS hosts.
 
 > [!NOTE]

@@ -13,6 +13,8 @@ appliesto:
 
 # How to determine the build version of Office Online Server
 
+This article was written by [Tom Schauer](https://social.technet.microsoft.com/profile/Tom+Schauer+-+MSFT), Technical Specialist.
+
 This article introduces two ways to determine the build version of your Office Web Apps 2013 or Office Online Server.
 
 ## Method 1: Run the "Get-Content" cmdlet in an Admin PowerShell window if you have access to the servers

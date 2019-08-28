@@ -13,6 +13,8 @@ appliesto:
 
 # How to check the size of this month's Office ProPlus update
 
+This article was written by [Eric Splichal](https://social.technet.microsoft.com/profile/Splic-MSFT), Support Escalation Engineer.
+
 Microsoft Office 365 updates are designed to be very network bandwidth friendly. There is Binary Delta Compression that occurs as long as the computers are staying current and Office has built in throttles to prevent every computer from trying to update at the same time. However, IT admins will sometimes still have to monitor the size of the monthly updates very closely. Here are the steps about how to determine how large the update for Office ProPlus:
 
 1. Download and install [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon).

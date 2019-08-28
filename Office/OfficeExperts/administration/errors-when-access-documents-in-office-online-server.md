@@ -13,6 +13,8 @@ appliesto:
 
 # Errors when you access documents in Office Online Server
 
+This article was written by [Taylor Hempel](https://social.technet.microsoft.com/profile/Taylor+H+-+MSFT), Premier Field Engineer.
+
 ## Symptoms
 
 When you preview, view, or edit documents in Microsoft Office Web Apps 2013 or Office Online Server from SharePoint web applications where **Forms Based Authentication (FBA)** is enabled, you receive various error messages.

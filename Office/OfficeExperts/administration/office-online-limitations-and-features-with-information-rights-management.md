@@ -14,6 +14,8 @@ appliesto:
 
 # Office Online limitations and features with Information Rights Management (IRM)
 
+This article was written by [Dan Fox](https://social.technet.microsoft.com/profile/Dan+F.+-+MSFT), Support Escalation Engineer.
+
 Office Online and Office Web Apps offer the read-only capability for SharePoint document libraries with Information Rights Management (IRM) enabled.  Protected documents where the IRM or Azure Information Policy protection is applied from Office applications are not supported by Office Online and Office Web Apps.
 
 Office Web Apps relies on the document host system (like SharePoint) to communicate with Rights Management servers because it has no means to directly communicate with Rights Management servers. IRM protection prevents Office Web Apps from allowing editing of IRM protected documents.

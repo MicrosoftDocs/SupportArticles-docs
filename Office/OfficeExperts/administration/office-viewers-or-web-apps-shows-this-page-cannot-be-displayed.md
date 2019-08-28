@@ -13,6 +13,8 @@ appliesto:
 
 # Office viewers or Office Web Apps shows the "This page can't be displayed" error
 
+This article was written by [Adam Rhinesmith](https://social.technet.microsoft.com/profile/Adam+R+-+MSFT), Support Escalation Engineer.
+
 ## Symptoms
 
 When you use Microsoft .NET Framework 4.6 or later versions with Office Web Apps Server 2013 or Office Online Server, Office viewers don't work or *https://internalurl/op/generate.aspx* page doesn't open in a browser, and you receive the following error:
