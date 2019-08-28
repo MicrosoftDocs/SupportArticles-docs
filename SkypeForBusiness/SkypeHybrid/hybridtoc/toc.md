@@ -13,6 +13,9 @@
 ## IM and Presence 
 ### [Office 365 domain user can't IM](../hybrid-im-presence/sfb-online-users-cant-im.md)
 
+## Meetings
+### [Online users can't present content in on-premises meetings](../hybrid-meetings/present-content-on-premises-meeting.md)
+
 ## Moving to Skype for Business Online
 ### [Cannot move users from different AD domain](../hybrid-move-sfb-online/cannot-move-users-from-different-ad-domain.md)
 ### [HostedMigration fault: Error =(506)](../hybrid-move-sfb-online/hostedmigration-fault-error-506.md)
