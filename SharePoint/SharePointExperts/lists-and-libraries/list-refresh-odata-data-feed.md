@@ -13,6 +13,8 @@ appliesto:
 
 # PowerPivot scheduled data refresh from a SharePoint list by using OData data feed connection (PowerPivot 2012 SP1 for SharePoint 2013)
 
+This article was written by [Zakir Haveliwala](https://social.technet.microsoft.com/profile/Zakir+H+-+MSFT), Senior Support Escalation Engineer.
+
 To set up PowerPivot for SharePoint scheduled data refresh for a PowerPivot workbook that has a connection to a SharePoint list, don't use the List.atomsvc file that is created by using Export as Data Feed, because it can cause issues.
 
 Another way that you can set up PowerPivot for SharePoint scheduled data refresh for a PowerPivot workbook that has a connection to a SharePoint list is to make an OData data feed connection directly to the SharePoint list data service.

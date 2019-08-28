@@ -13,6 +13,8 @@ appliesto:
 
 # "Retrieving the COM class factory for component failed 800703fa" in Excel Services and PowerPivot
 
+This article was written by [Zakir Haveliwala](https://social.technet.microsoft.com/profile/Zakir+H+-+MSFT), Senior Support Escalation Engineer.
+
 ## Symptoms
 
 When you open a workbook in a browser by using Excel Services, or when a scheduled data refresh fails in PowerPivot for SharePoint, you may receive the following error in the Universal Logging System (ULS) logs:

@@ -13,6 +13,8 @@ appliesto:
 
 # PowerPivot Performance Counter errors
 
+This article was written by [Zakir Haveliwala](https://social.technet.microsoft.com/profile/Zakir+H+-+MSFT), Senior Support Escalation Engineer.
+
 ## Symptoms
 
 You may encounter a data refresh error on a PowerPivot workbook in Microsoft SharePoint due to issues with Performance Counters on the PowerPivot Analysis Services server. You may receive the following error in the Universal Logging System (ULS) log:

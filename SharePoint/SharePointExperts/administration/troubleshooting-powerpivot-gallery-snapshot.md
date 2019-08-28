@@ -13,6 +13,8 @@ appliesto:
 
 # PowerPivot Gallery Snapshots Fail for SSL Host Header Sites
 
+This article was written by [Rick Andring](https://social.technet.microsoft.com/profile/Rick+A.+-+MSFT), Support Escalation Engineer.
+
 If you have been following the multiple threads on issues and changes to the PowerPivot for SharePoint 2016 Gallery Snapshots, you may be aware of an issue where gallery snapshots do not function properly (infinite "hourglass") for SSL sites when there are multiple sites bound to the same port. While not limited to port 443 we will use a generic port 443 site as an example here as it is the most common usage.
 
 This issue was discovered back in December 2016 during testing and again in a really well researched blog post by [Brian Laws](https://social.technet.microsoft.com/profile/Brian+H+Laws)
