@@ -14,6 +14,8 @@ appliesto:
 
 # "Request Was Taking Too Long" when you opening a workbook in Excel Online
 
+This article was written by [Tom Schauer](https://social.technet.microsoft.com/profile/Tom+Schauer+-+MSFT), Technical Specialist.
+
 ## Symptoms
 
 When you open a specific workbook in Excel Online, you receive a "Request Was Taking Too Long" error message.
