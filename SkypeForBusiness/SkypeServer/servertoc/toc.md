@@ -2,43 +2,71 @@
 
 ## Conferencing
 ### [Can't connect conferencing modalities](../server-conferencing/cannot-connect-conferencing-modalities.md)
+### [Conference creation, modification, or deletion fails](../server-conferencing/conference-operation-fail.md)
 ### [Conferencing feature fails for mandatory user profile](../server-conferencing/conferencing-feature-fails-for-mandatory-user.md)
 ### [Enable the Conferencing Add-in for Outlook](../server-conferencing/enable-conferencing-add-in-for-outlook.md)
+### [Lync clients cannot upload a presentation](../server-conferencing/cannot-upload-presentation.md)
+### [On-screen keyboard disappears](../server-conferencing/virtual-keyboard-disappears.md)
+### [Peer-to-Peer desktop sharing issues](../server-conferencing/peer-to-peer-desktop-sharing-issues.md)
+### [Video calls not working with Logitech Brio Webcam](../server-conferencing/cant-do-video-call.md)
 
 ## Configuration
 ### ["Set Your Location" field is unavailable](../../SkypeOnline/online-configuration/cant-set-location-in-lync.md)
 ### [Access Edge service fails to start ](../server-configuration/lync-server-2013-access-edge-service-not-start.md)
+### [Access edge services can't negotiate TLS connection ](../server-configuration/access-edge-services-cannot-negotiate-tls.md)
 ### [Bug Check 0x133 on Edge server](../server-configuration/bugcheck-0x133-edge-server.md)
 ### [Can't perform a CMS failover](../server-configuration/cannot-perform-cms-failover.md)
+### [Can't start a front-end server](../server-configuration/cannot-start-front-end-server.md)
+### [Census data is now collected for Lync](../server-configuration/census-data-collected)
 ### [Central management store replication failures](../server-configuration/central-management-store-replication-failures.md)
 ### [Check the version of Skype for Business 2016](../server-configuration/check-version-of-skype-for-business-2016.md)
 ### [Disable Automatic Gain Control](../server-configuration/disable-automatic-gain-control.md)
+### [Disable contextual tips](../server-configuration/disable-contextual-tips.md)
+### [Enable-CsAdForest command fails](../server-configuration/enable-csadforest-command-fails.md)
+### [Error when you use Install-CsDatabase cmdlet ](../server-configuration/error-with-install-csdatabase.md)
 ### [Event 32263 error 0xC3E93C2F on Front End servers](../server-configuration/event-32263-0xc3e93c2f-front-end.md)
 ### [Event IDs 32402, 61045 logged in Front End](../server-configuration/event-32402-61045-front-end.md)
 ### [Insufficient access rights when move user command](../server-configuration/issue-attempt-move-or-enable-user-command.md)
 ### [Issue when File Store share in unsupported configuration](../server-configuration/issue-file-store-share-unsupported.md)
 ### [Lync 2013 for iPhone/iPad features are missing](../server-configuration/lync-2013-iphone-features-missing-ios-client.md)
 ### [Lync Server 2013 Front-End server services not start](../server-configuration/front-end-services-not-start.md)
+### [Move-CsUser and Move-CsLegacyUser commands fail](../server-configuration/move-csuser-move-cslegacyuser-fail.md)
+### [Prevent Lync Server certificate expiration](../server-configuration/lync-server-certificate-expiration.md)
+### [Remote PowerShell cmdlets don't work](../server-configuration/remote-powershell-cmdlets-not-working.md)
 ### [Skype for Business 2016 freezes for Malwarebytes](../server-configuration/skype-for-business-2016-freeze-malwarebytes.md)
 ### [Stops responding when receiving IM toast notification](../server-configuration/not-responding-receive-toast-notification.md)
 ### [Supportability is available for Lync Server 2010](../server-configuration/available-supportability-lync-2010.md)
+### [Test-CsFederatedPartner cmdlet fails](../server-configuration/test-csfederatedpart-fail.md)
 ### [UCWA mobility web service not accept connections](../server-configuration/ucwa-mobility-web-service-not-accept-connections.md)
 ### [Windows Fabric, Front-end services won't start](../server-configuration/windows-fabric-front-end-services-not-start.md)
 ### [You have been added as a delegate for %User%](../server-configuration/added-as-delegate-notice.md)
+
+## Contacts
+### [Contact card shows phone number instead of name](../server-contacts/contact-card-not-display-phone-number.md)
+### [Duplicated working numbers for contacts](../server-contacts/duplicated-working-numbers-for-contacts.md)
+### [Maximum Followers Reached in contact card](../server-contacts/contact-card-maximum-followers-reached.md)
+### [No delegation relationship in Lync 2013](../server-contacts/no-delegation-relationship.md)
+### [Telephone numbers of contacts are missing](../server-contacts/contacts-telephone-numbers-missing.md)
 
 ## Exchange Integration
 ### [Integrate Exchange Online with Lync Server](../../SkypeOnline/online-exchange-integration/integrate-exchange-online-skype-for-business.md)
 ### [Integrate Exchange Server 2013 with Lync Server](../../SkypeOnline/online-exchange-integration/exchange-server-lync-server-hybrid.md)
 ### [MAPI unavailable](../server-exchange-integration/mapi-unavailable.md)
+### [Skype for Business and Exchange integration fails](../server-exchange-integration/sfb-and-exchange-integration-fails.md)
 
 ## IM and Presence
 ### [Emoticons and emojis converted to text](../server-im-presence/emoticons-and-emojis-converted-to-text.md)
+### [Enabling presence privacy mode update presence status](../server-im-presence/presence-privacy-mode-update-presence-status.md)
+### [Lync conversation window doesn't contain IM](../server-im-presence/blank-conversation-window.md)
 ### [Presence not show in Outlook](../server-im-presence/presence-not-show-outlook.md)
 
 ## Install/Uninstall
 ### ["Get-VM" is not recognized during install of Cloud Connector Edition](../server-install-or-uninstall/get-vm-not-recognized-during-install-cloud-connector.md)
 ### [Clean uninstallation of Skype for Business on Mac](../server-install-or-uninstall/clean-uninstallation.md)
+### [Error when you install Lync Server 2013](../server-install-or-uninstall/error-when-install-lync-server.md)
+### [Setup Lync Server wizard returns warning](../server-install-or-uninstall/setup-lync-server-wizard-returns-warning.md)
 ### [The installation (MSI) of Lync 2010 not complete](../server-install-or-uninstall/lync-2010-msi-installation-not-complete.md)
+### [Title bar displays "Lync"](../server-install-or-uninstall/title-bar-displays-lync.md)
 
 ## Meetings
 ### [Black screen during desktop sharing on macOS High Sierra](../server-meetings/desktop-sharing-black-screen-macos-high-sierra.md)
