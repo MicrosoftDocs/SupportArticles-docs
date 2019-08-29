@@ -14,6 +14,8 @@ appliesto:
 
 # "PivotTable Operation Failed" when you click a slicer in an Excel Online PowerPivot workbook
 
+This article was written by [Tom Schauer](https://social.technet.microsoft.com/profile/Tom+Schauer+-+MSFT), Technical Specialist.
+
 ## Symptoms
 
 When you try to click a slicer in an Excel Online PowerPivot workbook, you receive an error message that resembles the following:

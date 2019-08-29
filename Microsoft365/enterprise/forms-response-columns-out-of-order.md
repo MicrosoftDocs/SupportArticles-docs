@@ -14,6 +14,8 @@ appliesto:
 
 # Forms response columns are out of order
 
+This article was written by [Zakir Haveliwala](https://social.technet.microsoft.com/profile/Zakir+H+-+MSFT), Senior Support Escalation Engineer.
+
 ## Symptoms
 
 In Microsoft Forms, you may experience an issue in which the response columns are out of order in the response workbook for a form when you compare the columns to the order of the questions on the form.

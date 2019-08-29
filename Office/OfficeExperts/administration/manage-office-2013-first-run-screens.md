@@ -13,6 +13,8 @@ appliesto:
 
 # How to manage the First Run screens that appear when Office 2013 applications are first started
 
+This article was written by [Jalal Babool](https://social.technet.microsoft.com/profile/JalalB+-+MSFT), Senior Support Ability Project Manager.
+
 ## Summary
 
 Microsoft Office 2013 shows the following screens when an application is started for the first time. This article describes how to disable these First Run screens by using the Office Customization Tool (OCT) or Group Policy Management Editor.

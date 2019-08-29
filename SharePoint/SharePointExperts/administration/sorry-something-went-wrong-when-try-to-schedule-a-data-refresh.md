@@ -13,6 +13,8 @@ appliesto:
 
 # "A schedule cannot be enabled for a workbook" when you try to schedule a data refresh by using PowerPivot
 
+This article was written by [Zakir Haveliwala](https://social.technet.microsoft.com/profile/Zakir+H+-+MSFT), Senior Support Escalation Engineer.
+
 ## Symptoms
 
 When you try to schedule a data refresh on a PowerPivot workbook in Microsoft SharePoint 2016, you may see either of the following errors:

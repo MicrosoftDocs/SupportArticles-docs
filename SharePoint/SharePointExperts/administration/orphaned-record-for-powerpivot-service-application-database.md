@@ -13,6 +13,8 @@ appliesto:
 
 # Orphaned record for PowerPivot service application database
 
+This article was written by [Zakir Haveliwala](https://social.technet.microsoft.com/profile/Zakir+H+-+MSFT), Senior Support Escalation Engineer.
+
 ## Symptoms
 
 You may receive the following error in Windows Event Viewer or the SharePoint Unified Logging Service (ULS) logs:

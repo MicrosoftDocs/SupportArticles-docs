@@ -13,6 +13,8 @@ appliesto:
 
 # Use custom fonts with Office Online Server (OOS)
 
+This article was written by [Taylor Hempel](https://social.technet.microsoft.com/profile/Taylor+H+-+MSFT), Premier Field Engineer.
+
 You can use custom fonts with Microsoft Office Online Server (OOS) by using .otf files. Font files must be .otf files. The .ttf files don't work with OOS.
 
 To apply custom fonts in web apps, install the .otf file on your local computers and every OOS server in the farm.

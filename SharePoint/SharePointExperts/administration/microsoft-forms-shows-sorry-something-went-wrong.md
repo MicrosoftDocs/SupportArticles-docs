@@ -14,6 +14,8 @@ appliesto:
 
 # Microsoft Forms shows "Sorry, something went wrong"
 
+This article was written by [Warren Rath](https://social.technet.microsoft.com/profile/Warren_R_Msft), Support Escalation Engineer.
+
 ## Symptoms
 
 Microsoft Forms shows the following error for all users in a SharePoint Online tenant:

@@ -13,6 +13,8 @@ appliesto:
 
 # "The workbook must be checked out before it can be replaced. You can save this file with another name." when you run a scheduled data refresh on a PowerPivot workbook
 
+This article was written by [Rick Andring](https://social.technet.microsoft.com/profile/Rick+A.+-+MSFT), Support Escalation Engineer.
+
 ## Symptoms
 
 When you run a scheduled data refresh on a PowerPivot workbook, you receive the following error:
