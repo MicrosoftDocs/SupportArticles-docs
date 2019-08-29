@@ -1,23 +1,22 @@
 ---
-title: "Title goes here"
+title: PowerPoint files not rendering in Office Online Server after Security Update
 ms.author: v-todmc
 author: todmccoy
 manager: dcscontentpm
-ms.date: 2/5/2019
-ms.audience: Admin|ITPro|Developer
+ms.date: 8/29/2019
+ms.audience: Admin
 ms.topic: article
-ms.service: sharepoint-online
+ms.service: powerpoint
 localization_priority: Normal
 search.appverid:
 - SPO160
 - MET150
 ms.assetid: 
-
 appliesto:
-- SharePoint Online 
-ms.custom: CI ID
-ms.reviewer: aliases for tech reviewers and CI requestor
-description: "How to resolve the error "Virus Found" in SharePoint Server 2013 when the antivirus scanner is unavailable ."
+- PowerPoint
+ms.custom: 106705
+ms.reviewer: randring@microsoft.com
+description: Describes how to resolve an issue where PowerPoint files do not render correctly after installing a security update.
 ---
 
 # PowerPoint files not rendering in Office Online Server after Security Update
