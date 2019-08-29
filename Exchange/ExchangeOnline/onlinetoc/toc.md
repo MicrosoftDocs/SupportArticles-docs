@@ -54,7 +54,6 @@
 
 ## Move Mailboxes
 ### [Can't see free/busy information](../move-mailboxes/cannot-see-free-busy-information.md)
-### [Mailbox exists in both Exchange Online and on-premises](../move-mailboxes/mailbox-exists-exo-onpremises.md)
 
 ## Outlook Connectivity
 ### [Troubleshooting resources](../outlook-connectivity/office-365-troubleshooting-resources.md)
