@@ -1,24 +1,26 @@
 ---
-title: Quality of Service for Skype for Business/Lync configuration and best practice Guide V2
+title: Quality of Service for Skype for Business/Lync - configuration and best practice guide
+description: "Outlines best practices for Quality of Service configurations in Skype for Business and Lync."
 ms.author: v-todmc
 author: todmccoy
 manager: dcscontentpm
 ms.date: 8/27/2019
 ms.audience: ITPro
 ms.topic: article
-ms.service: sharepoint-online
+ms.prod: skype-for-business-itpro
 localization_priority: Normal
 search.appverid:
 - SPO160
 - MET150
 ms.assetid: 
 appliesto:
-- SharePoint Online 
-description: "Outlines best practices for Quality of Service configurations in Skype for Business and Lync."
+- Skype for Business
+
 ---
 
-# Quality of Service for Skype for Business/Lync configuration and best practice Guide V2 
-*Balu Ilag, System Administrator, Microsoft MVP*
+# Quality of Service for Skype for Business/Lync - configuration and best practice guide
+ 
+*This article was written by Balu Ilag, System Administrator, Microsoft MVP*
 
 ## Overview 
 As you know, Microsoft Skype for Business is a great product which has multiple features that help enterprise users communicate and collaborate effectively from anywhere. To get Skype for Business to work correctly for internal and external users is a complex task as we are dealing with a vast product. Improving the quality of service is very important. This admin guide describes why you need Quality of Service and how to configure it end to end.
