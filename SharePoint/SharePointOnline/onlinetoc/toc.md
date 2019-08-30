@@ -122,6 +122,7 @@
 ### [Issue when external users click links to shared resource](../sharing-and-permissions/external-user-fails-accessing-shared-resource.md)
 ### [Issue when processing a pending request](../sharing-and-permissions/request-approval-failed.md)
 ### [Issue with activate or deactivate the Publishing feature](../sharing-and-permissions/activating-publishing-feature-access-error.md)
+### [No verification code to access shared secure link](../sharing-and-permissions/no-verification-code-to-access-shared-secure-link.md)
 ### [Option isn't received to request access to resource](../sharing-and-permissions/request-access-to-resource.md)
 ### [Required permissions for managing Secure Store Service](../sharing-and-permissions/managing-secure-store-service-app-permissions.md)
 ### [Sharing options are greyed out when sharing from SharePoint Online or OneDrive](../administration/sharing-options-grayed-out-when-sharing-from-sharepoint-online-or-onedrive.md)
