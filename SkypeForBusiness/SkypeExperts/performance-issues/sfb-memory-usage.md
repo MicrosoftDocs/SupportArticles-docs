@@ -23,13 +23,13 @@ The first step to fix any issue is to understand the problem, and the first step
 
 When Skype for Business (SfB) first starts, memory usage is comparably small (if you can count 100 MB as small). We can see this occur in any number of tools, such as **Task Manager**:
 
-![Task manager](./media/sfb-memory-mystery/task-manager.png)
+![Task manager](./media/sfb-memory-usage/task-manager.png)
 
 Figure 1: Don't be fooled: Lync.exe is the process name for SfB (32-bit version)
 
 Over time, the amount of memory that the process uses is going to grow. How large it grows will be determined by how much Skype is used, what it is used for, and so on. As an example, here's that same client after about 24 hours:
 
-![Task manager memory growth](./media/sfb-memory-mystery/memory-grow.png)
+![Task manager memory growth](./media/sfb-memory-usage/memory-grow.png)
 
 Figure 2: The same SfB 24 hours later
 
@@ -41,13 +41,13 @@ There are many tools that can profile memory. One of the most popular – at lea
 
 After you've downloaded **VMMap**, run it. As it starts, it will open a process list so that you can choose the process that you want to examine. I'll choose **lync.exe** and click **OK**.
 
-![Vmmap at start](./media/sfb-memory-mystery/start-vmmap.png)
+![Vmmap at start](./media/sfb-memory-usage/start-vmmap.png)
 
 Figure 3: VMMap at Start
 
 Next, you see a graphic tha's a multi-colored representation of the current memory profile for the executable that you've selected – Lync.exe, in this case.
 
-![Vmmap lync](./media/sfb-memory-mystery/vmmap-lync.png)
+![Vmmap lync](./media/sfb-memory-usage/vmmap-lync.png)
 
 Figure 4: Beginning VMMap for recently started Lync.exe
 
@@ -57,7 +57,7 @@ As you can see, the memory shown in **Task Manager** doesn't align with any cate
 
 Here's our Skype instance after the 24-hour waiting period:
 
-![Vmmap for Skype after 24-hours](./media/sfb-memory-mystery/vmmap-sfb.png)
+![Vmmap for Skype after 24-hours](./media/sfb-memory-usage/vmmap-sfb.png)
 
 Figure 5: VMMap for Skype after 24-hours
 
@@ -87,13 +87,13 @@ Managing so many objects of such differing and often variable sizes creates allo
 
 An example might better illustrate this point. Let's assume that Skype (or any native program, really) allocates 64 objects, numbered 1-64, that are 4 K bytes each in size:
 
-![Skype 64 Objects](./media/sfb-memory-mystery/sfb-64-objects.png)
+![Skype 64 Objects](./media/sfb-memory-usage/sfb-64-objects.png)
 
 Figure 6: 64 Objects, each using 4 KB of memory
 
 This causes a 256 KB memory allocation and commitment. Now, let's assume that the program doesn't require the even-numbered objects, so it releases them:
 
-![Releasing all even-numbered objects](./media/sfb-memory-mystery/release-objects.png)
+![Releasing all even-numbered objects](./media/sfb-memory-usage/release-objects.png)
 
 Figure 7: Releasing all the even-numbered objects frees up 128 KB of memory!
 
