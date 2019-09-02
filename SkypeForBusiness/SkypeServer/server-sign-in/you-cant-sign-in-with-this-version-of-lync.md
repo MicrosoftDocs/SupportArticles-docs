@@ -55,17 +55,17 @@ To work around this problem in for Lync 2013 for iPhone and Lync 2013 for iPad, 
    3. Tap **Language & Region**.   
 2. If the settings don't match, do either of the following:
    - Change the language:
-           1. Tap **iPhone Language** or **iPad Language**.
-           1. Select a language that matches the **Region** setting. For example, if the region setting is **Israel**, select **Hebrew**.
-           1. Tap **Done**, and then confirm the change when you're prompted.
+     1. Tap **iPhone Language** or **iPad Language**.
+     1. Select a language that matches the **Region** setting. For example, if the region setting is **Israel**, select **Hebrew**.
+     1. Tap **Done**, and then confirm the change when you're prompted.
        
      After several seconds, your device should return to the **Home** screen and display the new language that you selected.
 
    - Change the region:
 
-          1. Tap **Region**.   
-          2. Select a region that matches the **Language** setting. For example, if the language setting is **English**, select **United States** or **United Kingdom**.   
-          3. Tap **Back**.      
+     1. Tap **Region**.   
+     2. Select a region that matches the **Language** setting. For example, if the language setting is **English**, select **United States** or **United Kingdom**.   
+     3. Tap **Back**.      
 
 **Third-party information disclaimer**
 
