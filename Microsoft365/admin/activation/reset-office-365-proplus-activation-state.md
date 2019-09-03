@@ -2,7 +2,7 @@
 title: Reset Office 365 ProPlus activation state
 description: Four locations must be cleared to reset the activation or install to a clean state after Office 365 users are activated. 
 author: MJP-MSFT 
-manager: JOSELR
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: o365-solutions

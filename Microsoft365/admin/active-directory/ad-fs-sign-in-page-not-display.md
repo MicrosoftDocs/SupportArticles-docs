@@ -2,7 +2,7 @@
 title: Internet browser can't display AD FS sign-in webpage for federated users
 description: Discusses a scenario in which a federated user may receive an error message when he or she tries to sign in to Office 365, Azure, or Microsoft Intune.
 author: simonxjx
-manager: JOSELR
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: office 365

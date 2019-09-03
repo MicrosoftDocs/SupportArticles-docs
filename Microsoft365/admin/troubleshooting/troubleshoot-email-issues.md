@@ -1,8 +1,8 @@
 ---
-title: "Troubleshoot email issues"
+title: Troubleshoot email issues
 ms.author: supotter
 author: supotter
-manager: scotv
+manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
 ms.service: o365-administration
@@ -16,7 +16,7 @@ search.appverid:
 - MOE150
 ms.assetid: 27deff23-8ab0-42e6-b827-5b9ce38f03f8
 ROBOTS: NOINDEX
-description: "Get help for solving email connection and delivery problems."
+description: Get help for solving email connection and delivery problems.
 ---
 
 # Troubleshoot email issues

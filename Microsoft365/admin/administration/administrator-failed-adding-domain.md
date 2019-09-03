@@ -2,7 +2,7 @@
 title: An administrator can't add a domain to Office 365, Azure, or Intune
 description: Discusses an issue in which an administrator can't add a domain to Office 365, Azure or Intune. Provides a resolution.
 author: simonxjx
-manager: JOSELR
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: o365-administration

@@ -2,7 +2,7 @@
 title: Grant Everyone claim to external users in Office 365
 description: Describes a new "Everyone" option to govern access of external users in Office 365 and identify resources that are granted permissions to all external users.
 author: simonxjx
-manager: JOSELR
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: office 365

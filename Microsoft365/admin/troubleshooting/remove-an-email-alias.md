@@ -1,8 +1,8 @@
 ---
-title: "Troubleshoot Remove an email alias from a user"
+title: Troubleshoot Remove an email alias from a user
 ms.author: kwekua
 author: kwekua
-manager: mnirkhe
+manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
 f1_keywords:
@@ -20,7 +20,7 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: dde511e8-0719-4b7a-8e56-d4dad0c308b3
-description: "Learn how to remove an email alias from a user in the admin center."
+description: Learn how to remove an email alias from a user in the admin center.
 ---
 
 # Troubleshoot: Remove an email alias from a user

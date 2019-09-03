@@ -2,7 +2,7 @@
 title: Troubleshooting Data Loss Protection (DLP) policy tips
 description: Describes how to troubleshoot some issues that occur if DLP policy tips are not working as expected.
 author: MaryQiu1987
-manager: JOSELR
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: o365-solutions

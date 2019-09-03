@@ -6,7 +6,7 @@ audience: ITPro
 ms.service: o365-administration
 ms.topic: article
 ms.author: v-six
-manager: JOSELR
+manager: dcscontentpm
 localization_priority: Normal
 appliesto:
 - Office Mobile for iPhone

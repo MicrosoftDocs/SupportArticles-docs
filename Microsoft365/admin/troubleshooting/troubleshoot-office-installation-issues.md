@@ -1,8 +1,8 @@
 ---
-title: "Troubleshoot Office installation issues in Office 365 for business"
+title: Troubleshoot Office installation issues in Office 365 for business
 ms.author: janellem
 author: janellem
-manager: eliree
+manager: dcscontentpm
 ms.date: 9/19/2018
 audience: Admin
 ms.topic: troubleshooting
@@ -43,7 +43,7 @@ search.appverid:
 - MBS150
 ms.assetid: fbbf663b-1e76-46d2-a417-0aa78ed2fb9a
 ROBOTS: NOINDEX
-description: "If you're simply looking for the steps to download and install or reinstall Office, see Install Office on your PC or Mac."
+description: If you're simply looking for the steps to download and install or reinstall Office, see Install Office on your PC or Mac.
 ---
 
 # Troubleshoot Office installation issues in Office 365 for business

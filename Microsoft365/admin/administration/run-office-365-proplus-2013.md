@@ -2,7 +2,7 @@
 title: How to keep on running Office 365 ProPlus 2013
 description: Describes how to avoid having your Office 365 ProPlus 2013 installation automatically upgraded to Office 2016.
 author: simonxjx
-manager: JOSELR
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: Office 365
