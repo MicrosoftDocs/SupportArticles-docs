@@ -2,7 +2,7 @@
 title: You experience poor audio or video quality in Skype for Business Online
 description: Provides guidelines for troubleshooting issues of poor audio or video quality in Skype for Business Online.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

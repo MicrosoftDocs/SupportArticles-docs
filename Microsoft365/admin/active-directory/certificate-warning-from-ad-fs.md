@@ -2,7 +2,7 @@
 title: Certificate warning from AD FS when sign in to Office 365, Azure, or Intune
 description: Describes an issue in which you receive a certificate warning from AD FS when you try to sign in to Office 365, Azure, or Microsoft Intune by using a federated account. A resolution is provided.
 author: simonxjx
-manager: JOSELR
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: office 365

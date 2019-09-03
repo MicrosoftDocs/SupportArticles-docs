@@ -2,7 +2,7 @@
 title: Mailbox rules aren't applied to Cloud PBX voice mails
 description: Describes how Cloud PBX voice mails aren't evaluated by Outlook mailbox rules for new mail delivery.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

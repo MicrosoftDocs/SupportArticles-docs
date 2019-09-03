@@ -2,7 +2,7 @@
 title: Audio or video connections are of poor quality or fail in Lync Mobile 2013
 description: Describes the conditions under which you experience poor quality audio or video connections in Lync Mobile 2013. This includes situations in which you can't connect at all.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

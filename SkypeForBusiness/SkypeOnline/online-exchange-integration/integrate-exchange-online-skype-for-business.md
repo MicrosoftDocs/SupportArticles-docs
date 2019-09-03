@@ -2,7 +2,7 @@
 title: Integrate Exchange Online with Skype for Business hybrid deployment
 description: Describes the requirements for integrating Exchange Online with Skype for Business Online, Lync Server 2013, or a Lync Server 2013 hybrid deployment. Includes troubleshooting steps and links to additional deployment documentation.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: skype-for-business-itpro

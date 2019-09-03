@@ -6,7 +6,7 @@ audience: ITPro
 ms.service: exchange-setup
 ms.topic: article
 ms.author: chris.mcgurk
-manager: MEERAK
+manager: dcscontentpm
 localization_priority: Normal
 appliesto:
 - Exchange Server 2019

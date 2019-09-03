@@ -2,7 +2,7 @@
 title: Use Outlook policy to control credential prompt for an Exchange Server mailbox
 description: This article discusses how to use a policy to control whether users are prompted for credentials when Microsoft Outlook connects to a Microsoft Exchange Server mailbox.
 author: simonxjx
-manager: MEERAK
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro

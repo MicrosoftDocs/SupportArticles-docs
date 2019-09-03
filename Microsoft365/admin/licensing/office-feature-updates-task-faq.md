@@ -2,7 +2,7 @@
 title: Office Feature Updates task description and FAQ
 description: Describes Office Feature Updates task
 author: MaryQiu1987
-manager: JOSELR
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: o365-solutions

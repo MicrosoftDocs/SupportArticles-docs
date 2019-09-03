@@ -2,7 +2,7 @@
 title: Cannot saving a project from Project client to Project Web App
 author: MaryQiu1987
 ms.author: v-maqiu
-manager: JOSELR
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro 
 ms.topic: article

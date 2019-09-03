@@ -2,7 +2,7 @@
 title: "Troubleshooting distribution group issues"
 ms.author: kwekua
 author: kwekua
-manager: scotv
+manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
 ms.service: o365-administration

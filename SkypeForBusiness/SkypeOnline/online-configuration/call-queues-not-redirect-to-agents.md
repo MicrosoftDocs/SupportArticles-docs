@@ -2,7 +2,7 @@
 title: Calls to call queues are not redirected to agents in Office 365
 description: Describes how to fix an issue in which the calls to the call queues are not redirected to agents.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

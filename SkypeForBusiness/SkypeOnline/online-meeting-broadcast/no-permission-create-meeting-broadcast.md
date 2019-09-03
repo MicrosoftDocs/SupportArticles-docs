@@ -2,7 +2,7 @@
 title: Sorry, you don't have permission to create meeting
 description: Describes an issue that may occur when you create a Skype Meeting Broadcast by using the Skype Meeting Broadcast portal in Skype for Business Online. Provides a solution.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

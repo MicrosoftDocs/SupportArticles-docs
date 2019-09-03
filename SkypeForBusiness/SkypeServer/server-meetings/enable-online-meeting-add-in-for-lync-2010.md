@@ -2,7 +2,7 @@
 title: How to enable the Online Meeting Add-in for Microsoft Lync 2010 in Outlook
 description: Describes how to enable the Online Meeting Add-in for Microsoft Lync 2010 in Outlook 2010.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skypeforbusiness-powershell

@@ -2,7 +2,7 @@
 title: Video is unavailable in a Skype for Business Online conference
 description: Describes that video is unavailable in Skype for Business Online conference when you use the call me option. Provides a workaround.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

@@ -1,8 +1,8 @@
 ---
-title: "Troubleshoot User not seeing add-ins"
+title: Troubleshoot User not seeing add-ins
 ms.author: sirkkuw
 author: Sirkkuw
-manager: scotv
+manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
 ms.service: o365-administration
@@ -15,7 +15,7 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: 060e809d-8cb6-427b-9e2f-dab67138acae
-description: "Learn how to help your users troubleshoot centralized add-ins, if they are not seeing them."
+description: Learn how to help your users troubleshoot centralized add-ins, if they are not seeing them.
 ---
 
 # Troubleshoot: User not seeing add-ins

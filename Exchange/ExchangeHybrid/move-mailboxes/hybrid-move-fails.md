@@ -6,7 +6,7 @@ audience: ITPro
 ms.service: o365-administration
 ms.topic: article
 ms.author: v-six
-manager: MEERAK
+manager: dcscontentpm
 localization_priority: Normal
 appliesto:
 - Exchange Online

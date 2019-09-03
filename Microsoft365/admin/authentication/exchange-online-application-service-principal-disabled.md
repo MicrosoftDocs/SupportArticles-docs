@@ -2,7 +2,7 @@
 title: Unable to sign in to Office 365 portal 
 description: You can't sign in to Office 365 portal when Exchange Online application service principal is disabled. 
 author: MaryQiu1987
-manager: JOSELR
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: o365-solutions

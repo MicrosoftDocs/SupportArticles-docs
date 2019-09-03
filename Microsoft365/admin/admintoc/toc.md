@@ -79,6 +79,7 @@
 ### [Office 365 subscription automatic license renewal fails](../licensing/subscription-license-renewal-fail.md)
 ### [Office C2R-P release for Project and Visio](../licensing/office-click-to-run-perpetual.md)
 ### [Office Feature Updates task](../licensing/office-feature-updates-task-faq.md)
+### [Outlook Customer Manager group](../licensing/outlook-customer-manager-group-creation.md)
 
 ## Security
 ### [BOXServiceAccount is added](../security/boxserviceaccount-is-added-to-role.md)

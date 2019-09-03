@@ -2,7 +2,7 @@
 title: Outlook SFB Contacts folder doesn't sync with Skype for Business contacts
 description: Summarizes an issue in which the Outlook Skype for Business Contacts folder doesn't sync with Skype for Business contacts. Provides a workaround.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

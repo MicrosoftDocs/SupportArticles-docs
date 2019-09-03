@@ -6,7 +6,7 @@ audience: ITPro
 ms.prod: office 365
 ms.topic: article
 ms.author: v-six
-manager: MEERAK
+manager: dcscontentpm
 localization_priority: Normal
 appliesto:
 - Cloud Services (Web roles/Worker roles)

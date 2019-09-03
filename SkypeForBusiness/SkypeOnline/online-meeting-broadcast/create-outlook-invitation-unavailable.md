@@ -2,7 +2,7 @@
 title: Create Outlook invitation link  isn't available in Skype Meeting Broadcast
 description: Discusses an issue in which the Create Outlook invitation link is available only when your browser is configured to use the English (United States) language. Provides a workaround.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

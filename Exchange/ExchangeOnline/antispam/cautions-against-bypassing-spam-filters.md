@@ -6,7 +6,7 @@ audience: ITPro
 ms.service: o365-proplus-itpro
 ms.topic: article
 ms.author: v-zht
-manager: MEERAK
+manager: dcscontentpm
 localization_priority: Normal
 appliesto:
 - Office 365

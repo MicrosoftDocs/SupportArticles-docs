@@ -6,7 +6,7 @@ audience: ITPro
 ms.service: office 365
 ms.topic: article
 ms.author: v-six
-manager: JOSELR
+manager: dcscontentpm
 localization_priority: Normal
 appliesto:
 - Office 365

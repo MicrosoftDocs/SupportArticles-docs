@@ -2,7 +2,7 @@
 title: You can't sign-in with this version of Lync in Lync Mobile 2013
 description: Describes an issue in which users can’t sign in and are asked to install Lync Mobile 2010 after Lync Mobile 2013 is installed. Provides a solution.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

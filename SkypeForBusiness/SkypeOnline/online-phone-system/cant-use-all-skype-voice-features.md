@@ -2,7 +2,7 @@
 title: Skype for Business or Lync 2013 client user can't use all Skype Voice features
 description: Describes an issue that makes advanced calling features not available for Skype for Business or Lync Basic 2013 client users. A resolution is provided.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

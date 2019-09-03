@@ -2,7 +2,7 @@
 title: Sign-in error if settings are incorrect
 description: Describes an issue in which users can't sign in to Skype for Business Online when settings such as the computer time, date, user name, or password are incorrect. Provides a solution.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online
