@@ -6,7 +6,7 @@ audience: ITPro
 ms.service: exchange-powershell
 ms.topic: article
 ms.author: v-six
-manager: MEERAK
+manager: dcscontentpm
 localization_priority: Normal
 appliesto:
 - Windows 7 Enterprise

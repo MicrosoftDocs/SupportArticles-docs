@@ -6,7 +6,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: batre
-manager: MEERAK
+manager: dcscontentpm
 localization_priority: Normal
 appliesto:
 -  Exchange Server 2013

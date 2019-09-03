@@ -6,7 +6,7 @@ audience: ITPro
 ms.prod: exchange-server-it-pro
 ms.topic: article
 ms.author: v-six
-manager: MEERAK
+manager: dcscontentpm
 localization_priority: Normal
 appliesto:
 - Exchange Server 2010
