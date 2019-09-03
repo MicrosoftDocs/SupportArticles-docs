@@ -2,7 +2,7 @@
 title: Cannot sign in to Skype for Business Online with a full redelegation domain
 description: Discusses an issue in which you can't sign in to Skype for Business Online by using a domain that's configured for full redelegation in Office 365 for Small Business. A resolution is provided.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

@@ -2,7 +2,7 @@
 title: Users can't join online meetings from Lync Mobile 2013
 description: Describes the conditions in which Skype for Business Online users can't join online meetings from Microsoft Lync Mobile 2013. Provides a solution.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

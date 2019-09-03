@@ -2,7 +2,7 @@
 title: Lync contact list is empty or read-only
 description: Discusses an issue in which there's an empty or read-only contact list in Microsoft Skype for Business Online after the user's Microsoft Exchange Online mailbox is disconnected, unlicensed, or moved. Provides a solution.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

@@ -3,7 +3,7 @@ title: How to troubleshoot being unable to sign in to Skype for Business | Micro
 description: This article fixes an issue in which you cannot sign in to Skype for Business.
 author: TobyTu
 ms.author: corbinm
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 ms.prod: skype-for-business-itpro
 ms.topic: conceptual

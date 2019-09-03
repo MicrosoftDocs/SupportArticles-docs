@@ -2,7 +2,7 @@
 title: You can't sign in to Lync clients on devices that don't support SNI
 description: Explains that users on devices that don't support Server Name Indication (SNI) can't sign in to Skype for Business or Lync clients, when you use Active Directory Federation Services 3.0 (ADFS). Provides a workaround.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

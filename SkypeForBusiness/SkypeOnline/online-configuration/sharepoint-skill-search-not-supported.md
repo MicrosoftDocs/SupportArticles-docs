@@ -2,7 +2,7 @@
 title: A SharePoint Skill search isn't supported in Skype for Business Online
 description: Describes the problem that you can't use a SharePoint Skill search with Skype for Business Online because the Skill search is unsupported. A workaround is provided.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

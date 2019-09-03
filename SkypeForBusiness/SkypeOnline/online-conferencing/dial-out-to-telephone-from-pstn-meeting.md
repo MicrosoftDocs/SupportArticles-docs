@@ -2,7 +2,7 @@
 title: Error when you dial out to a telephone number from a PSTN Conferencing meeting
 description: Discusses an issue that limits PSTN Conferencing users to dialing out only to the countries where this service is sold. If a user dials a country that's not in the list, they receive a generic error message and may hear a fast busy signal.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

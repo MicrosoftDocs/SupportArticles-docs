@@ -2,7 +2,7 @@
 title: Lync Server 2013 Front-End server services do not start for a long time
 description: During a large Pool cold-start it can take up to an hour for the placement process to finish as it must populate all Front-End databases with data from the Backup Store. If the Pool is running and the Front-End is just started, this behavior is normal. The Lync Server Event Viewer will log Event ID 32174.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skypeforbusiness-powershell

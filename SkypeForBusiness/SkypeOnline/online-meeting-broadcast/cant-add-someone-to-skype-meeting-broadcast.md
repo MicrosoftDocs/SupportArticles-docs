@@ -2,7 +2,7 @@
 title: Can't add someone to Skype Meeting Broadcast as Event team member or attendee
 description: Describes an issue that blocks an organizer from adding certain people as Event team members or attendees to a Skype Meeting Broadcast.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

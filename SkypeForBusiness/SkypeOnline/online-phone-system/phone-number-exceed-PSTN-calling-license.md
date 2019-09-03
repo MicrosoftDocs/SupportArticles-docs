@@ -2,7 +2,7 @@
 title: Total number of phone numbers exceeds the number of PSTN Calling licenses
 description: Explains that you can reserve more phone numbers than you have user licenses for in the Skype for Business admin center.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online
