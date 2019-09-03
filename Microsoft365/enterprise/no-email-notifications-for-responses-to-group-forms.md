@@ -2,7 +2,7 @@
 title: No email notifications for responses to Group Forms
 description: Describes the steps to edit group to receive email notifications. 
 author: MaryQiu1987
-manager: JOSELR
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: o365-solutions

@@ -2,7 +2,7 @@
 title: Domain errors in the Office 365 portal
 description: Describes all domain error messages that you may experience in the Office 365 portal.
 author: simonxjx
-manager: JOSELR
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: office 365

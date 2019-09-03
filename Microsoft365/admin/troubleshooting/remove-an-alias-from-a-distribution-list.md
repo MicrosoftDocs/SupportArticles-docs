@@ -1,8 +1,8 @@
 ---
-title: "Troubleshoot Remove an alias from a distribution list"
+title: Troubleshoot Remove an alias from a distribution list
 ms.author: kwekua
 author: kwekua
-manager: mnirkhe
+manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
 f1_keywords:
@@ -20,7 +20,7 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: b8c5f0f6-eefd-4d9d-b508-7ef2d84b626b
-description: "Learn how to remove an email alias from a distribution list using Exchange Online PowerShell. "
+description: Learn how to remove an email alias from a distribution list using Exchange Online PowerShell. 
 ---
 
 # Troubleshoot: Remove an alias from a distribution list

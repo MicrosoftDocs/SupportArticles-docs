@@ -1,8 +1,8 @@
 ---
-title: "Troubleshoot Remove an alias from a shared mailbox"
+title: Troubleshoot Remove an alias from a shared mailbox
 ms.author: kwekua
 author: kwekua
-manager: mnirkhe
+manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
 f1_keywords:
@@ -20,7 +20,7 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: ea585b86-76aa-4cf4-912e-f8271677d1d5
-description: "Learn how to remove an email address from a shared mailbox in the admin center so that you can reuse it."
+description: Learn how to remove an email address from a shared mailbox in the admin center so that you can reuse it.
 ---
 
 # Troubleshoot: Remove an alias from a shared mailbox

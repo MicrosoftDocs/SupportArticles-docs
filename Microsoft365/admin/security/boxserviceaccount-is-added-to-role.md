@@ -2,7 +2,7 @@
 title: BOXServiceAccount is added to a role in Office 365 alerts
 description: BOXServiceAccount is added to a role in Office 365 alerts.
 author: simonxjx
-manager: JOSELR
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: office 365
