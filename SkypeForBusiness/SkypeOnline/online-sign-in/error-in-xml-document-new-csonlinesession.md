@@ -2,7 +2,7 @@
 title: There is an error in XML document when you run New-CsOnlineSession
 description: Describes an issue that triggers a There is an error in XML document (5,2) error when you try to connect to Skype for Business Online by using a remote Windows PowerShell session. Provides a workaround.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

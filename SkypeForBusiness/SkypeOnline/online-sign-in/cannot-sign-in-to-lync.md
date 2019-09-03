@@ -2,7 +2,7 @@
 title: Cannot sign in to Lync because this sign-in address was not found
 description: Describes an issue that occurs when you try to sign in to Skype for Business Online. Provides a resolution.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

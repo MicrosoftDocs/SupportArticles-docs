@@ -2,7 +2,7 @@
 title: Lync conferencing feature fails for a mandatory user profile
 description: Describes Lync conferencing feature fails for a mandatory user profile.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skypeforbusiness-powershell

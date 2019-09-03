@@ -2,7 +2,7 @@
 title: Telephone number still rings old telephone number
 description: Describes an issue in which the time and date for a local number port order request have passed but the telephone number continues to ring the old telephone. Provides a solution.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

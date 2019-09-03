@@ -2,7 +2,7 @@
 title: Issues when you schedule a meeting in Skype for Business Online
 description: Describes how to resolve issues that may occur when you create meetings in Skype for Business Online in Office 365.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

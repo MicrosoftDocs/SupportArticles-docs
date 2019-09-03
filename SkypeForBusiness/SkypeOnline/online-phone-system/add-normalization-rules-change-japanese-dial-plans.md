@@ -2,7 +2,7 @@
 title: How to add normalization rules to change Japanese dial plans
 description: A PSTN number cannot be normalized after a change in the Japanese PSTN calling dial plan. Provides steps to change a tenant dial plan by adding rules.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

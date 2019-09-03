@@ -2,7 +2,7 @@
 title: Calls to an international phone number fail
 description: Discusses an issue that triggers a number not in service error when a user dials an international phone number in Skype for Business Online. A resolution is provided.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

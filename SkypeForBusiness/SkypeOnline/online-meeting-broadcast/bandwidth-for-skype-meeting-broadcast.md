@@ -2,7 +2,7 @@
 title: Bandwidth requirements for Skype Meeting Broadcast
 description: Contains information about the bandwidth requirements for Skype Meeting Broadcast.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

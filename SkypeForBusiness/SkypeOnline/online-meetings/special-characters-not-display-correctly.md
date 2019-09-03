@@ -2,7 +2,7 @@
 title: Special characters don't display correctly in footer of meeting invitations
 description: Describes an issue in which special characters don't display correctly in the footer of Lync meeting invitations. Provides a workaround.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

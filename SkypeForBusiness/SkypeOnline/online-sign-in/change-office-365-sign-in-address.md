@@ -2,7 +2,7 @@
 title: Considerations when you change an Office 365 sign-in address
 description: Describes how sign-in addresses and user IDs are managed in Skype for Business Online.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online
