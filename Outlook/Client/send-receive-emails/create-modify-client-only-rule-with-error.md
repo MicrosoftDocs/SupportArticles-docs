@@ -3,7 +3,7 @@ title: Error occurs when you create or change client-only rules that apply to me
 description: This article describes an issue in which users cannot create or change client-only rules that apply to email messages that are received from 20 or more people. Provides a workaround.
 author: TobyTu
 ms.author: tasitae
-manager: meerak
+manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
 ms.prod: office-perpetual-itpro 
