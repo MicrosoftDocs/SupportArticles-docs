@@ -22,13 +22,13 @@ description: Describes how to resolve an issue where PowerPoint files do not ren
 # PowerPoint files not rendering in Office Online Server after Security Update
 
 ## Symptoms
-After patching Office Online Server to the May or June 2019 security update, PowerPoint files are not rendering under what appears to be random circumstances during Skype for Business sharing sessions with the following error:
+After patching Office Online Server to the May or June 2019 security update, PowerPoint files do not render, under what appears to be random circumstances during Skype for Business sharing sessions, and displays the following error:
 
 > Sorry, PowerPoint Online ran into a problem opening this presentation. To view this presentation please open it in Microsoft PowerPoint.
 
 ![Error screen: Sorry, PowerPoint Online ran into a problem](media/files-not-rendering-office-online-server/106705-1.png)
 
-Also, while attempting to render PowerPoint in the browser, you may see a similar error message before or after scrolling through slides:
+Also, while attempting to render PowerPoint in the browser, you might see a similar error message before or after scrolling through slides:
 
 ![Alternate error screen. ](media/files-not-rendering-office-online-server/106705-2.png)
 
@@ -43,7 +43,7 @@ This issue was resolved as part of the August 2019 Security Update for Office On
 1.	Remove all Office Online Servers from the farm (all servers must be removed at the same time).
 2.	Install the August 2019 Security update on all OOS servers but do NOT rebuild the farm yet.
 https://support.microsoft.com/en-us/help/4475528/security-update-for-office-online-server-august-13 
-3.	Clear the caches on each Office Online Server:<br/>
+3.	Clear the caches on each Office Online Server:<br/><br/>
    a. Navigate to the cache location (note that this can change if you did not install OOS on the root drive): <br/><br/>
 C:\ProgramData\Microsoft\OfficeWebApps\Working<br/><br/>
     b. Delete the “d” and “waccache” folders.<br/>
