@@ -2,7 +2,7 @@
 title: 0xC004F038 computer could not be activated
 description: Describes the Office 2010 and Office 2013 Activation troubleshooter for the "0xC004F038" error message. Provides a workaround.
 author: simonxjx
-manager: JOSELR
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro

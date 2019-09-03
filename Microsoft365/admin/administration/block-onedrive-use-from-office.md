@@ -2,7 +2,7 @@
 title: How to block OneDrive use from within Office 365 ProPlus and Office 2016 applications
 description: Describes how to prevent your Office 2016 users from accessing and using OneDrive. This method involves configuring Group Policy settings.
 author: simonxjx
-manager: JOSELR
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: one-drive

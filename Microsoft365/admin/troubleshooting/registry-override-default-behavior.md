@@ -1,7 +1,7 @@
 ---
 title: Use the registry to override the default behavior When Excel recover data
 author: simonxjx
-manager: JOSELR
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro

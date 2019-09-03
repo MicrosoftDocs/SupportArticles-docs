@@ -2,7 +2,7 @@
 title: We could not verify your account when reset admin password in Office 365
 description: Describes a scenario where you receive an error message when you try to reset your admin password in Office 365, Microsoft Intune, or Azure.
 author: simonxjx
-manager: JOSELR
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office 365

@@ -2,7 +2,7 @@
 title: Forms response columns are out of order
 description: The response columns are out of order in the response workbook for a form when you compare the columns to the order of the questions on the form.
 author: MaryQiu1987
-manager: JOSELR
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: o365-solutions

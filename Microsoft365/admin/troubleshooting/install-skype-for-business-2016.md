@@ -2,7 +2,7 @@
 title: Install of Skype for Business 2016 installs Office 365 ProPlus
 description: Explains that when you install Skype for Business 2016 from the Office 365 portal, all the Office 365 ProPlus applications are installed, not just Skype. A workaround is provided.
 author: simonxjx
-manager: JOSELR
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: Office 365

@@ -1,8 +1,8 @@
 ---
-title: "Troubleshoot issues for Office 365 admins"
+title: Troubleshoot issues for Office 365 admins
 ms.author: sirkkuw
 author: Sirkkuw
-manager: scotv
+manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
 ms.service: o365-administration
@@ -16,7 +16,7 @@ search.appverid:
 - MOE150
 ms.assetid: c4f63dc5-9944-40aa-9618-3b2007f17003
 ROBOTS: NOINDEX
-description: "Learn how to troubleshoot administrative problems with Office 365 like issues with Office installation, email, or Skype for Business Online."
+description: Learn how to troubleshoot administrative problems with Office 365 like issues with Office installation, email, or Skype for Business Online.
 ---
 
 # Troubleshoot issues for Office 365 admins
