@@ -2,7 +2,7 @@
 title: Contacts appear to be offline or aren't searchable
 description: Describes how to troubleshoot instant messaging and presence issues in Skype for Business Online.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

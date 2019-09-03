@@ -2,7 +2,7 @@
 title: Can't send an IM to external contacts from Outlook Web App
 description: Describes a problem that prevents you from sending an instant message in Outlook Web App to your external contacts. Provides a solution.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

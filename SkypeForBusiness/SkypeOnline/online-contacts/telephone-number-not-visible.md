@@ -2,7 +2,7 @@
 title: Telephone number isn't visible or appears in an unexpected format
 description: Describes an issue in which the user's telephone number isn't visible or appears in an unexpected format in Microsoft Lync. Provides a resolution.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

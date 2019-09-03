@@ -2,7 +2,7 @@
 title: Users can't sign in to Skype for Business Online by using Lync Mobile 2013
 description: Describes the conditions under which users can't use Microsoft Lync Mobile 2013 to sign in to Microsoft Skype for Business Online. Provides a solution.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

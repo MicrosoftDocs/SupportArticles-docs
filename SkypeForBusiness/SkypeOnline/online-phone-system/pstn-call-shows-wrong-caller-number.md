@@ -2,7 +2,7 @@
 title: PSTN call from mobile client shows wrong caller number
 description: Describes an issue in which the phone number isn't displayed correctly in Caller ID when the PSTN call is made from a Skype for Business mobile device that uses Skype for Business Cloud Connector Edition.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

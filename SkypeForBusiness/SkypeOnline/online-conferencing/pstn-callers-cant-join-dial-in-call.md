@@ -2,7 +2,7 @@
 title: PSTN callers can't join a Skype for Business dial-in conference call
 description: Describes an issue that blocks PSTN callers from joining a Skype for Business Online dial-in conference call. Instead, these callers are stuck in the lobby. A solution is provided.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

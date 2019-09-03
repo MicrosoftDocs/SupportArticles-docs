@@ -2,7 +2,7 @@
 title: Skype for Business presence is unavailable on the Office 365 navigation bar
 description: Describes an issue that prevents the Skype for Business presence from being displayed on the Office 365 navigation bar. Occurs when you use any Office 365 service other than Outlook on the web services. Provides a resolution.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

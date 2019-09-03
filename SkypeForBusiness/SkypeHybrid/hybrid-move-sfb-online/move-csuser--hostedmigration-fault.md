@@ -2,7 +2,7 @@
 title: Move-CsUser HostedMigration fault when you move users to Skype for Business Online
 description: Describes the error message Move-CsUser HostedMigration fault when you move users to Skype for Business Online from an on-premises Lync Server. Provides a solution.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

@@ -2,7 +2,7 @@
 title: HostedMigration fault when you move users from Online to on-premises
 description: Describes an issue that triggers a Move-CsUser HostedMigration fault Error =(506) error when you move users from Skype for Business Online to on-premises Skype for Business Server.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

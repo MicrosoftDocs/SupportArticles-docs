@@ -2,7 +2,7 @@
 title: Can't schedule meetings, see presence info, or send IMs from Outlook Web App
 description: Describes a problem in which online meeting scheduling, presence, and IM services aren't available in Outlook Web App when you use OWA in Office 365.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

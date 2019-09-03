@@ -2,7 +2,7 @@
 title: Cannot connect to the server when sign in to the Lync 2010 mobile client
 description: Describes an issue in which Skype for Business Online users receive a Cannot connect to the server error message when they try to sign in to the Lync 2010 mobile client from a mobile device by using AutoDetect.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online
