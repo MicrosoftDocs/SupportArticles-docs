@@ -2,7 +2,8 @@
 title: The workbook must be checked out when run data refresh in PowerPivot 
 author: AmandaAZ
 ms.author: zakirh
-manager: zakirh
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.topic: article
 ms.prod: office-perpetual-itpro

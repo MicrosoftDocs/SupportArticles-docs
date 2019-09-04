@@ -2,7 +2,8 @@
 title: Use custom fonts with Office Online Server (OOS)
 author: AmandaAZ
 ms.author: thempel
-manager: thempel
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online

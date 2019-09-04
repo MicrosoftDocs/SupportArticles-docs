@@ -2,7 +2,8 @@
 title: Office Web Apps 2013 and VMWare
 description: This article describes some issues that occur occur when installing Office Web Apps 2013 or Office Online Server on a nonsystem Drive by using VMWare, and provide solutions.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
