@@ -4,7 +4,8 @@ description: Describes how to resolve an InfoPath issue where you are prompted f
 author: todmccoy
 ms.author: v-todmc, dmahugh
 ms.reviewer: dmahugh
-manager: joselr
+manager: dcscontentpm
+localization_priority: Normal
 audience: Admin
 ms.topic: article
 ms.prod: office-perpetual-itpro

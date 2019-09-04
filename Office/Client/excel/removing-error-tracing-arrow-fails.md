@@ -2,7 +2,8 @@
 title: You cannot remove error tracing arrow in Excel
 description: Describes that you cannot remove error tracing arrow in Excel.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

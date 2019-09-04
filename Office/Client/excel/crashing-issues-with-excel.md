@@ -2,7 +2,8 @@
 title: How to troubleshoot crashing and not responding issues with Excel
 description: This article was created to help troubleshoot hanging crashing and not responding issues while using Excel.  There are several methods to try to stop the application from crashing.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

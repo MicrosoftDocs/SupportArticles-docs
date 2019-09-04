@@ -1,7 +1,8 @@
 ---
 title: How To query and update Excel data using ADO from ASP
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

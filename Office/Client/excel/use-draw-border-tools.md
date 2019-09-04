@@ -2,7 +2,8 @@
 title: Use Draw Border tools and Draw Border Grid tools in Excel
 description: Provides examples of how to use the Draw Border and Draw Border Grid tools to add or to remove borders around and between cells in Excel 2007, in Excel 2003, and in Excel 2002.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

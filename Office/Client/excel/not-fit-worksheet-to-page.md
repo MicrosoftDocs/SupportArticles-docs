@@ -2,7 +2,8 @@
 title: Excel may not automatically fit the worksheet to the page
 description: Discusses a problem in which Excel 2000 and later versions of Excel may not automatically fit the worksheet to the page as earlier versions of Excel did after you set the "Fit to" option.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

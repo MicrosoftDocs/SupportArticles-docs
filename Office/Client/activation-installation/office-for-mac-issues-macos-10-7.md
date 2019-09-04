@@ -2,7 +2,8 @@
 title: Known issues with Office for Mac on MacOS 10.7 (Lion) and Higher
 description: Lists Office for Mac issues under MacOS 10.7 (Lion).
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

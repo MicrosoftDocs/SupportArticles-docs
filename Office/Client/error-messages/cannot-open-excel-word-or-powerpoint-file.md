@@ -2,7 +2,8 @@
 title: Excel, Word or PowerPoint file does not open because of file associations
 description: Fixes issues in which you cannot open a Word, Excel or PowerPoint file.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

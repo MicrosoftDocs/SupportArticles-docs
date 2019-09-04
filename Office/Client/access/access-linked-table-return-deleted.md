@@ -2,7 +2,8 @@
 title: Access linked table to a SharePoint list returns Deleted
 description: Describes an issue in which an Access linked table that connects to a SharePoint list returns 
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

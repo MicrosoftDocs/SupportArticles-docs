@@ -1,7 +1,8 @@
 ---
 title: Use a worksheet function in a Visual Basic macro
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

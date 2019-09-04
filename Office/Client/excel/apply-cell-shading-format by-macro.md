@@ -2,7 +2,8 @@
 title: Use macro to apply cell shading format to every other row in a selected range
 description: Describes how to use a macro to apply cell shading format to every other row in a selected range in Excel.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

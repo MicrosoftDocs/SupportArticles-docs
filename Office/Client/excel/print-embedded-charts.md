@@ -1,7 +1,9 @@
 ---
 title: Programmatically print all embedded charts on a worksheet
+description: Describes how to print all embedded charts on a worksheet programmatically.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

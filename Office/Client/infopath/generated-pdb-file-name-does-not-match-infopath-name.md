@@ -3,7 +3,8 @@ title: Generated .PDB file name does not match InfoPath form name
 description: Explains why .XSN forms created in InfoPath Designer 2013 do not match the generated .PDB files.
 author: todmccoy
 ms.author: v-todmc
-manager: joselr
+manager: dcscontentpm
+localization_priority: Normal
 audience: Admin|ITPro|Developer
 ms.topic: article
 ms.prod: office-perpetual-itpro

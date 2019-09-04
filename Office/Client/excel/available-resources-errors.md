@@ -2,7 +2,8 @@
 title: How to troubleshoot available resources errors in Excel
 description: Provides methods to resolve memory errors in Microsoft Excel.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

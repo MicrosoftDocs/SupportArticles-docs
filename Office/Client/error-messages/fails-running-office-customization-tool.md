@@ -2,7 +2,8 @@
 title: Unable to open the Office Customization Tool
 description: Describes an issue that may occur if you do not have a volume-license version of the 2007 Office system.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
