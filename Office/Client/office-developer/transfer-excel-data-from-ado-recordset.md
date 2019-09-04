@@ -2,7 +2,8 @@
 title: How to transfer data from an ADO Recordset to Excel with automation
 description: Discusses approaches on how you can transfer an ADO recordset to Excel 97, Excel 2000, Excel 2002, Excel 2003, or Excel 2007.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

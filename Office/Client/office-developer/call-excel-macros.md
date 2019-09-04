@@ -2,7 +2,8 @@
 title: How to call Microsoft Excel macros that take parameters
 description: Explains how to use automation and the Run method to call macros procedures stored in Excel workbooks. The macro procedures that take parameters cause a slight change in the syntax.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

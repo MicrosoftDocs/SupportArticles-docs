@@ -2,7 +2,8 @@
 title: Open a .wps file in Word
 description: Discusses that you receive a Do you want to download the new converter so that you can work with this file? error message when you try to open a Works .wps file in Word 2013 or Word 2016. This file requires a newer version of the Microsoft Works Converter than is currently on your system. Do you want to download the new converter so that you can work with this file?
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

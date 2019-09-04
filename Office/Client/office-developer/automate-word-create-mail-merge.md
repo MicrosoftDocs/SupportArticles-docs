@@ -1,8 +1,9 @@
 ---
 title: How to automate Word with Visual Basic to create a Mail Merge
-description: 
+description: Describes that how to automate Word with Visual Basic to create a Mail Merge.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

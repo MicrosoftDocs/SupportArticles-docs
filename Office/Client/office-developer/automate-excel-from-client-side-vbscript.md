@@ -1,8 +1,9 @@
 ---
 title: How to automate Excel from a client-side VBScript
-description: 
+description: Describes that how to automate Excel from a client-side VBScript.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

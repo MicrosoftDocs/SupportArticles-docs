@@ -2,7 +2,8 @@
 title: Sync with SharePoint tasks list from Project Professional
 description: Describes a Project Professional feature that lets you sync .mpp files to a new or existing SharePoint site. Updated for Project 2016.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: project-server-itpro
 ms.topic: article

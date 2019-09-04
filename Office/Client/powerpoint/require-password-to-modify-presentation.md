@@ -2,7 +2,8 @@
 title: Password to modify a presentation is required when you open the presentation
 description: Explains that you are prompted to provide a password to open a presentation even though you set a password only to modify the presentation in PowerPoint. To resolve this issue, you can click Read Only when you open the presentation.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

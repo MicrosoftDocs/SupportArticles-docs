@@ -2,7 +2,8 @@
 title: Custom XML markup is removed when you open a document in Word 2013
 description: Explains why a particular custom XML markup implementation is removed in Word 2013.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

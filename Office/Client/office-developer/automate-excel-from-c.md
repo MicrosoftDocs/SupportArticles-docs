@@ -2,7 +2,8 @@
 title: How to automate Excel from C++ without using MFC or #import
 description: Explains how to automate Excel from C++ without using MFC or #import
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

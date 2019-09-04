@@ -2,7 +2,8 @@
 title: How To embed and automate Office documents with Visual Basic
 description: Demonstrates how to dynamically create and Automate an Office document using the OLE Container Control.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

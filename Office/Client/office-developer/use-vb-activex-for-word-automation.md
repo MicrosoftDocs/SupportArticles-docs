@@ -1,8 +1,9 @@
 ---
 title: How to use a VB ActiveX component for Word automation from Internet Explorer
-description: 
+description: Describes that how to use a VB ActiveX component for Word automation from Internet Explorer.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

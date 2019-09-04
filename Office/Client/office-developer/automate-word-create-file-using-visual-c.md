@@ -2,7 +2,8 @@
 title: How to automate Microsoft Word to create a new document by using Visual C#
 description: Describes how to create a new document in Microsoft Word by using Automation from Microsoft Visual C# 2005 or Microsoft Visual C# .NET.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

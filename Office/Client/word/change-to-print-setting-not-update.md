@@ -2,7 +2,8 @@
 title: Changes to Settings are not updated in Preview window when you print in Word
 description: Describes a problem in which the Preview window does not update the changes that you make to how the document is to be printed in Word 2010 or Word 2013.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
