@@ -1,7 +1,8 @@
 ---
-title: Formatted text is limited to 240 characters per line 
+title: Formatted text is limited to 240 characters per line
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article 

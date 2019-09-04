@@ -2,7 +2,8 @@
 title: Error when you open a Word document or an Excel worksheet
 description: Discusses the problem where you may receive an error message when you open a Word or an Excel file. You may experience the problem when the file is added in the list of disabled files for the Office program.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

@@ -2,7 +2,8 @@
 title: Change from absolute to relative or mixed references in a formula
 description: Explains that you can use the F4 key to toggle from one reference type to another in a formula in Excel.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

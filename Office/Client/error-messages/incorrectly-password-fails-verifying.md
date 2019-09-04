@@ -2,7 +2,8 @@
 title: Can't verify a password in Excel
 description: You cannot verify a password in Excel with the error saying that the password you supplied is not correct.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

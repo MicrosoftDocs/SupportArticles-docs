@@ -2,7 +2,8 @@
 title: Description of the limitations for working with arrays in Excel
 description: Lists the limitations of arrays in Excel. The article also contains examples of array formulas that you can use.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

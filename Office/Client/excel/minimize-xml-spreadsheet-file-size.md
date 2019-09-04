@@ -2,7 +2,8 @@
 title: How to minimize the size of an XML Spreadsheet file in Excel
 description: Describes methods to minimize the XML Spreadsheet file size.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

@@ -2,7 +2,8 @@
 title: How to create a monthly calendar in Excel
 description: Describes how to use a Microsoft Excel worksheet to create a monthly calendar. Sample Visual Basic procedures are included. Procedures help you to customize the calendar to meet your personal requirements.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

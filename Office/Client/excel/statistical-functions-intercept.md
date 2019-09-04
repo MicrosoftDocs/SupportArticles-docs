@@ -2,7 +2,8 @@
 title: Excel statistical functions INTERCEPT
 description: Describes the Excel statistical function INTERCEPT for Excel 2003 and later.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

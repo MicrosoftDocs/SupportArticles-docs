@@ -2,7 +2,8 @@
 title: Manage multiple windows in Excel
 description: Describes how to manage multiple windows in Excel.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

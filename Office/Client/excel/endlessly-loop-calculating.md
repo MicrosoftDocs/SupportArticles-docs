@@ -2,7 +2,8 @@
 title: Excel endlessly loop calculating cells when inserting subtotals
 description: Describes an issue in which Excel may appear to be in an endless loop calculating cells when you insert several subtotals in a workbook.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

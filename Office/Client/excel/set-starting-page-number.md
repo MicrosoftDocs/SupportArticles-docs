@@ -2,7 +2,8 @@
 title: Set Excel header footer starting page number
 description: Lists the commands for changing the starting page number in the header or footer in Excel.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

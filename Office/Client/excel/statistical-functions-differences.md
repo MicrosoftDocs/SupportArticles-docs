@@ -2,7 +2,8 @@
 title: Differences between Excel statistical functions STDEVPA and STDEVP
 description: This article describes changes to the STDEVPA and the STDEVP statistical functions in Excel 2007, in Excel 2003, and in Excel 2004.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

@@ -2,7 +2,8 @@
 title: The document caused a serious error the last time it was opened
 description: Describes an error message that you receive when you try to open a file that Excel or Word could not open previously. Provides a resolution.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

@@ -2,7 +2,8 @@
 title: How to troubleshoot errors when you save Excel workbooks
 description: Describes how to troubleshoot errors that occur when you try to save workbooks in Microsoft Excel.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
