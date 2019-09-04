@@ -2,7 +2,8 @@
 title: Print a general field using Word and Visual FoxPro 9.0 or earlier versions
 description: Describes two methods to use to print a general field by using Word and Visual FoxPro.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

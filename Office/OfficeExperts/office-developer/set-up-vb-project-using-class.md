@@ -2,7 +2,8 @@
 title: How to use a class (object) from outside of the VBA project
 description: Describes two set up steps required before one VBA project can access an object declared in the class module of another VBA project.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

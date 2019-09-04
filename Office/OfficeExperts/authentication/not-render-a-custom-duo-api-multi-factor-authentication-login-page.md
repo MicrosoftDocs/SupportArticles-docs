@@ -2,7 +2,8 @@
 title: Office doesn't render a custom DUO API multi-factor authentication login page
 author: AmandaAZ
 ms.author: warrenr
-manager: warrenr
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.topic: article
 ms.prod: office-perpetual-itpro

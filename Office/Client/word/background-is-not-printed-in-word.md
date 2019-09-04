@@ -2,7 +2,8 @@
 title: background is not printed When print a Word document
 description: Describes an issue in which a background is not printed when you print a Microsoft Office Word document that includes a background. Provides workarounds for this issue.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

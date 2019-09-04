@@ -2,7 +2,8 @@
 title: How to use macro examples to delete duplicate items in a list in Excel
 description: Describes how to create a macro to delete duplicate items in a list in Excel. Provides macro examples to show how to accomplish this task.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

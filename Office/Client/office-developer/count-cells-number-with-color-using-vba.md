@@ -2,7 +2,8 @@
 title: Count The Number of Cells With Specific Cell Color By Using VBA
 description: Create User Defined Function (UDF) to count the number of cells with spesific cell color and pack it into Add-In file, so the UDF can be used in every workbook and other computer.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

@@ -2,7 +2,8 @@
 title: How to change the default view to Draft view in Word
 description: Describes how to set the Allow opening a document in Draft view advanced option so that documents always open in Draft view.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

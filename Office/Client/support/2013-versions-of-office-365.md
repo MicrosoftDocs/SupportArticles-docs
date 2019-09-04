@@ -2,7 +2,8 @@
 title: Support for 2013 versions of Office 365 ProPlus ends February 28, 2017
 description: Describes the end of support for the 2013 versions of Office 365 ProPlus client applications and how to obtain the latest versions of Office 365 ProPlus.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

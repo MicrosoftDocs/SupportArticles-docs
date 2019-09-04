@@ -2,7 +2,8 @@
 title: How to use Visual C# to automate a running instance of an Office program
 description: Describes how to create a Visual C# 2005 or Visual C# .NET client that gets an Automation Reference to a running instance of an Office program.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

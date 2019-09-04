@@ -2,7 +2,8 @@
 title: Troubleshoot a damaged presentation in PowerPoint
 description: Describes how to troubleshoot a damaged presentation in PowerPoint.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
