@@ -1,8 +1,9 @@
 ---
 title: How To  Export Data in a DataGrid on an ASP . NET WebForm to Microsoft Excel
-description: 
+description: Describes that how To  Export Data in a DataGrid on an ASP . NET WebForm to Microsoft Excel.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

@@ -1,8 +1,9 @@
 ---
 title: How to build an Office COM add-in by using Visual C# .NET
-description: 
+description: Describes that how to build an Office COM add-in by using Visual C# .NET.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

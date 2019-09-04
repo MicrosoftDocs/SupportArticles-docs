@@ -1,7 +1,8 @@
 ---
 title: Word for Mac crashes or quits when you save
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

@@ -1,8 +1,9 @@
 ---
 title: How to find the installation path of an Office application
-description: 
+description: Describes that how to find the installation path of an Office application.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

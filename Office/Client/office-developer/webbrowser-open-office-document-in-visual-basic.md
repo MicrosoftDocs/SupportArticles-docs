@@ -1,8 +1,9 @@
 ---
 title: How to use the WebBrowser control in Visual Basic to open an Office document
-description: 
+description: Describes that how to use the WebBrowser control in Visual Basic to open an Office document.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

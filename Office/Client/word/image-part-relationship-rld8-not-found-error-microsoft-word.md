@@ -4,7 +4,8 @@ description:
 author: todmccoy
 ms.author: v-todmc, Shuvojit.Ray
 ms.reviewer: Shuvojit.Ray
-manager: joselr
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.topic: article
 ms.prod: office-perpetual-itpro

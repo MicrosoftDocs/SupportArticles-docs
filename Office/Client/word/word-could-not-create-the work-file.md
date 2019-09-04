@@ -2,7 +2,8 @@
 title: Word could not create the work file error message when you save a document
 description: Resolves an issue in which you receive an error message when you save a document in Word 2016, Word 2013, Word 2010 or in Office Word 2007. Error message Word could not create the work file. Check the Temp environment variable
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

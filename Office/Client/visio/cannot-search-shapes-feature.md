@@ -2,7 +2,8 @@
 title: Search for Shapes feature on the Internet is discontinued
 description: Fixes an issue in which the Search for Shapes feature on the Internet is discontinued.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

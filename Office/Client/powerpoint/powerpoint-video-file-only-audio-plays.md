@@ -2,7 +2,8 @@
 title: Only audio plays when playing a video file in a presentation
 description: Describes an issue in which only the audio is played when you play a video file in a PowerPoint slide presentation.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

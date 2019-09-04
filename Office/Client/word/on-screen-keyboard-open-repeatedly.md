@@ -2,7 +2,8 @@
 title: On-screen keyboard opens repeatedly in Word Online
 description: The on-screen keyboard opens repeatedly when you use Word Online on a Chromebook, Chromebook Tablet, or some other device that runs the Chrome operating system.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

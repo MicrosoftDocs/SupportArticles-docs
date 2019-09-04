@@ -2,7 +2,8 @@
 title: How to automate Microsoft Access by using Visual C#
 description: Describes how to automate Microsoft Access from Visual C# 2005 or Visual C# .NET.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

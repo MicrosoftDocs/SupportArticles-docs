@@ -1,8 +1,9 @@
 ---
 title: How to use Office Web Components by an XML Web service created using ASP.NET
-description: 
+description: Describes that how to use Office Web Components by an XML Web service created using ASP.NET.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

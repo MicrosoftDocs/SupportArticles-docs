@@ -2,7 +2,8 @@
 title: Add custom values to animation effect options in PowerPoint
 description: Describes how to add custom values to animation effect options in PowerPoint 2002, PowerPoint 2003, or PowerPoint 2007.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

@@ -2,7 +2,8 @@
 title: Cannot edit text in print preview in Word
 description: Resolves an issue in which you cannot use Edit mode in print preview in Word 2013 and Word 2013.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

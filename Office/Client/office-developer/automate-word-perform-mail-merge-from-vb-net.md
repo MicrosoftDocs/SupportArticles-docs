@@ -1,8 +1,9 @@
 ---
 title: How to automate Word to perform a mail merge from Visual Basic .NET
-description: 
+description: Describes that how to automate Word to perform a mail merge from Visual Basic .NET.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

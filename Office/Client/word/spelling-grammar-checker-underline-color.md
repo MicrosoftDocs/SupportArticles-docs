@@ -2,7 +2,8 @@
 title: Customize the color of the spelling and grammar checker underlines in Word
 description: Describes how to customize the color of spelling and grammar checker underlines in Word 2007 and Word 2010. Provides step-by-step directions and hexadecimal values of colors.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

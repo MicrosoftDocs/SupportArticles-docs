@@ -2,7 +2,8 @@
 title: Frequently asked questions about the Comments feature in Word
 description: Provides detailed information about the Comments feature that is available in Word.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

@@ -2,7 +2,8 @@
 title: Third-party installed font does not appear in the font list in Word for Mac
 description: Fixes an issue in which third-party installed font does not appear in the font list in Word for Mac.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

@@ -2,7 +2,8 @@
 title: How to add a button to a Word document and assign its Click event at run-time
 description: Describes how to add a button to a Word document and assign its Click event at run-time
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
