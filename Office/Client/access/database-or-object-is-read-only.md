@@ -2,7 +2,8 @@
 title: Cannot update. Database or object is read-only.
 description: Discusses that you receive a Cannot update. Database or object is read-only error message if the underlying list includes lookup fields that are not linked to Access. Provides a workaround.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

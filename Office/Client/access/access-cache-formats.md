@@ -2,7 +2,8 @@
 title: Access cache formats for SharePoint lists and document libraries
 description: Discusses Access cache formats for SharePoint lists and document libraries and performance improvements in Access 2010 and Access 2007.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

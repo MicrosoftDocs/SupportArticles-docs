@@ -1,7 +1,8 @@
 ---
 title: The result is false when you use the ISBLANK function
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

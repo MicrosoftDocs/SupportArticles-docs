@@ -2,7 +2,8 @@
 title: How to convert Excel column numbers into alphabetical characters
 description: This article discusses how to convert integers into alphabetical characters.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

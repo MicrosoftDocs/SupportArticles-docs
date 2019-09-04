@@ -1,7 +1,8 @@
 ---
 title: Set page setup attributes for more than one sheet
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

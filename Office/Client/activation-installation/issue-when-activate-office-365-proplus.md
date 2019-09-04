@@ -2,7 +2,8 @@
 title: We are unable to connect right now when try to activate Office 365 ProPlus
 description: Describes an issue that triggers an error message when users try to activate Office 365 ProPlus. Provides a workaround.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office 365
 ms.topic: article

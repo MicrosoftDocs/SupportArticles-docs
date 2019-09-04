@@ -2,7 +2,8 @@
 title: Error when editing an equation in Office
 description: Microsoft Equation is not available when you edit an equation that was inserted using Equation Editor 3.0 in an Office application.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

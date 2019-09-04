@@ -2,7 +2,8 @@
 title: Make Paste Options button disappear after you paste
 description: Describes how to make Paste Options button disappear after you paste in Excel.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

@@ -2,7 +2,8 @@
 title: Use shared workbooks with different versions of Excel
 description: Describes how to use shared workbooks with different versions of Excel.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

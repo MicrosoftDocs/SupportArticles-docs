@@ -2,7 +2,8 @@
 title: Description of the algorithm used by the XIRR function in Excel
 description: Describes the algorithm used by the XIRR() function in Excel to compute the internal rate of return on a schedule of cash flows that are not necessarily periodic.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

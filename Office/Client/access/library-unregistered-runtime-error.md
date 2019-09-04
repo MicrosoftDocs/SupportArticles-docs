@@ -2,7 +2,8 @@
 title: Runtime error 2147319779 (8002801d) when setting a company as default
 description: Fails to set a company as default because of an unregistered ADO Object dependency.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

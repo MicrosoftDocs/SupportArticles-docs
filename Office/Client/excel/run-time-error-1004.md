@@ -2,7 +2,8 @@
 title: Unable to make changes to legend entries in an chart in Excel
 description: Explains that you may receive a runtime error message when you use a VBA macro to change legend entries in an Excel chart. You must reduce the font size of the chart legend text before you change the legend entries.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

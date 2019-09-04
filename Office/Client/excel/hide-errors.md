@@ -2,7 +2,8 @@
 title: How to create a conditional format to hide errors in Excel
 description: Describes how to create conditional formatting on a cell or on a range of cells so that error values are not displayed in the cell(s).
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
