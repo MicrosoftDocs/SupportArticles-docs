@@ -2,7 +2,8 @@
 title: How to discover Office and Windows KMS hosts and remove unauthorized instances
 description: Describes how to discover Office and Windows KMS hosts through DNS, and how to remove unauthorized KMS hosts. 
 author: MaryQiu1987
-manager: ericspli
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

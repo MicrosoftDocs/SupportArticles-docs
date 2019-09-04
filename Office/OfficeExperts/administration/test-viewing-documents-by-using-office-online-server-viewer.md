@@ -2,7 +2,8 @@
 title: Test viewing Office documents by using Office Web Apps or Office Online Server viewer
 author: AmandaAZ
 ms.author: jhaak
-manager: jhaak
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online

@@ -2,7 +2,8 @@
 title: Rebuild an Office Web Apps 2013 farm easily
 author: AmandaAZ
 ms.author: brbering
-manager: brbering
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online

@@ -2,7 +2,8 @@
 title: Compatibility Report about text queries in Excel Online
 author: AmandaAZ
 ms.author: jhaak
-manager: jhaak
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online

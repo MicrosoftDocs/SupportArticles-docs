@@ -2,7 +2,8 @@
 title: Open word documents in edit mode from a hyperlink in an email message
 author: AmandaAZ
 ms.author: warrenr
-manager: warrenr
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.topic: article
 ms.prod: office-perpetual-itpro
