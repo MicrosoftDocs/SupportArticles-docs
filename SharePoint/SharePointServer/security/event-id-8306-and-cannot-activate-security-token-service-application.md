@@ -1,8 +1,8 @@
 ﻿---
 title: Unable to Activate Security Token Service Application - Event ID 8306
-description:
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article

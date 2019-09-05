@@ -2,7 +2,8 @@
 title: “A response was returned that did not come from the Workflow Manager” error in SharePoint Server 2016
 ms.author: v-todmc
 author: todmccoy
-manager: joselr
+manager: dcscontentpm
+localization_priority: Normal
 ms.date: 8/1/2019
 ms.audience: Admin
 ms.topic: article

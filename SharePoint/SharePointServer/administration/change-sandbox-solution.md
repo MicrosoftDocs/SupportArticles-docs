@@ -2,7 +2,8 @@
 title: Changing an existing Sandbox solution created in Visual Studio
 description: Describes how to change an existing Sandbox solution that's created in Visual Studio.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

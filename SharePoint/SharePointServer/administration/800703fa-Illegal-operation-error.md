@@ -2,7 +2,8 @@
 title: 800703fa Illegal operation attempted on a registry key that has been marked for deletion error in SharePoint
 description: Discusses an issue in which you receive a "800703fa Illegal operation attempted on a registry key that has been marked for deletion" error message in SharePoint 2013 or SharePoint 2010. Provides a resolution.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
