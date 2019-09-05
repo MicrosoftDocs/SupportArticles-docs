@@ -2,7 +2,8 @@
 title: Incomplete search results for choice type columns with multiple values
 description: SR CASE NUMBER:114090811778669
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article

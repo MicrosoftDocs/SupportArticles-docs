@@ -1,7 +1,8 @@
 ---
 title: Using PageParserPath directive can cause performance problems
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article

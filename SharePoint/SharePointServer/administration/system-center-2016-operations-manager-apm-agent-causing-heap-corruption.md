@@ -2,7 +2,8 @@
 title: System Center 2016 Operations Manager APM Agent causing heap corruption in SharePoint
 description: Provides workarounds for an issue in which heap corruption occurs in SharePoint because of System Center 2016 Operations Manager APM Agent.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
