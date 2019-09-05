@@ -1,8 +1,9 @@
 ---
 title: How to re-create the local Trusted Root Authority
-description:
+description: Describes that how to re-create the local Trusted Root Authority.  
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article

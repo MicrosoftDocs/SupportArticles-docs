@@ -2,7 +2,8 @@
 title: IFilter alternative to the native SharePoint 2013 PDF parser
 description: Describes how to use an IFilter as an alternative to the built-in PDF parser in SharePoint 2013 to make PDF files searchable.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
