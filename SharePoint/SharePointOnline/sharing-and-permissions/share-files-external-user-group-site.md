@@ -2,7 +2,8 @@
 title: Can't share files with external users from an Office 365 group site
 description: This article describes an error unable to reach the server right now when sharing files, and provides a solution.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

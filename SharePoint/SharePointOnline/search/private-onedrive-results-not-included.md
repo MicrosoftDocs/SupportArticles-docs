@@ -2,7 +2,8 @@
 title: Private OneDrive for Business results is not included
 description: FAQ about private OneDrive for Business results is not included in the online results.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article

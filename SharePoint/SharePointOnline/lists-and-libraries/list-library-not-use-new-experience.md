@@ -2,7 +2,8 @@
 title: SharePoint Online list or library doesn't use the new experience
 description: This article describes an issue where SharePoint Online list or library doesn't use the new experience as expected, and provides a solution.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

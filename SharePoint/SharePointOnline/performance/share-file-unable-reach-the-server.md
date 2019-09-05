@@ -2,7 +2,8 @@
 title: Unable to reach the server right now
 description: This article describes an error unable to reach the server right now when sharing files, and provides a solution.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

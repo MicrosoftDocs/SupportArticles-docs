@@ -2,7 +2,8 @@
 title: Some Office files open in read-only mode in SharePoint Server 2013
 author: AmandaAZ
 ms.author: arhinesm
-manager: arhinesm
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online

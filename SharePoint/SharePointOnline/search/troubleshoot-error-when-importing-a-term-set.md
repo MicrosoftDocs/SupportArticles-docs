@@ -2,7 +2,8 @@
 title: Error when you try to import a term set into SharePoint Online
 description: Describes an issue when you try to import a term set into SharePoint Online.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article

@@ -2,7 +2,8 @@
 title: Can't check in multiple items in a document library
 description: This article describes an issue where you can't check in multiple SharePoint Online items in a document library, and provides a solution.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

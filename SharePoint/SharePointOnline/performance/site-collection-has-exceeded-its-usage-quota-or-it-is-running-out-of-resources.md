@@ -2,7 +2,8 @@
 title: You receive messages that a site collection has exceeded its usage quota or that it is running out of resources in SharePoint Online
 description: Describes an issue in which you receive messages that a site collection has exceeded its usage quota or that it is running out of resources in SharePoint Online.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article

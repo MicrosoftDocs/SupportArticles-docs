@@ -2,7 +2,8 @@
 title: SharePoint Online sites don't automatically update to the 25 terabyte limit
 description: Describes an issue in which SharePoint Online sites don't automatically update to the 25 terabyte limit.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article

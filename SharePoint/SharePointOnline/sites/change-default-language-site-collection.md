@@ -2,7 +2,8 @@
 title: Can't change the default language for a site collection
 description: This article describes an issue where you can't change the default language for a SharePoint Online site collection, and provides a solution.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

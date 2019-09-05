@@ -2,7 +2,8 @@
 title: SSL certificate authentication issues
 description: This article provides solutions for resolving SSL certificate authentication issues.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

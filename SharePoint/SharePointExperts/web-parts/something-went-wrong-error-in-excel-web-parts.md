@@ -2,7 +2,8 @@
 title: A We don't know what happened, but something went wrong error in Excel Web Access Web Parts 
 author: AmandaAZ
 ms.author: remcgurk
-manager: remcgurk
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online
