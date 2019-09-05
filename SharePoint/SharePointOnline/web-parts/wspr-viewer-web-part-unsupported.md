@@ -2,7 +2,8 @@
 title: A SharePoint Online WSRP Viewer Web Part has no Producer options
 description: WSRP View Web Part isn't supported in SharePoint Online.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

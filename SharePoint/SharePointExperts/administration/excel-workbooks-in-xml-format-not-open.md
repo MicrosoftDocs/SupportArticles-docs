@@ -2,7 +2,8 @@
 title: Excel workbooks in XML format don't open from SharePoint
 author: AmandaAZ
 ms.author: warrenr
-manager: warrenr
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online

@@ -2,7 +2,8 @@
 title: Access to this web site has been blocked in a SharePoint tenant
 description: You see a blank page in SharePoint admin center. Additionally SharePoint site collections display an "Access to this web site has been blocked" error message or a blank page. 
 author: MaryQiu1987
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: o365-solutions
 ms.topic: article

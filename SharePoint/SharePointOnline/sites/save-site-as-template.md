@@ -2,7 +2,8 @@
 title: Sorry, something went wrong when you save a site as a template
 description: This article describes Sorry, something went wrong error message when you save a SharePoint Online site as a template, and provides a solution.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

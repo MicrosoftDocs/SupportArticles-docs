@@ -2,7 +2,8 @@
 title: PowerPivot scheduled data refresh from a list by using OData data feed connection
 description: This article introduces how to set up PowerPivot scheduled data refresh from a list by using OData data feed connection.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

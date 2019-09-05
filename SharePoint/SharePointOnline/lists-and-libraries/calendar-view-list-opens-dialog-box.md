@@ -2,7 +2,8 @@
 title: SharePoint Online list using Calendar view opens the form dialog box 
 description: A SharePoint Online list that uses the Calendar view always open items in the dialog box.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

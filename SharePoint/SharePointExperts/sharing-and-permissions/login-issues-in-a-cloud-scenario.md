@@ -2,7 +2,8 @@
 title: SharePoint Designer 2013 login Issues in a cloud scenario
 author: AmandaAZ
 ms.author: joergsi
-manager: joergsi
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online

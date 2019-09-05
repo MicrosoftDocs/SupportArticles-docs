@@ -2,7 +2,8 @@
 title: Using Open with Explorer command to troubleshoot issues in SharePoint Online
 description: Discusses how to use the Open with Explorer command to view, copy, and move files in a library, and how to troubleshoot issues that you may experience when you use this command.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

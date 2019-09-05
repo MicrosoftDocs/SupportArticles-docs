@@ -2,7 +2,8 @@
 title: User doesn't receive an email invitation to a shared resource
 description: This article describes an issue where SharePoint Online user doesn't receive an email invitation to a shared resource, and provides a solution.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

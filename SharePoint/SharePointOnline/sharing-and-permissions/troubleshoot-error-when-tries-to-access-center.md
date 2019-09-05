@@ -2,7 +2,8 @@
 title: External sharing is disabled for the site when a delegated partner administrator tries to access a client's SharePoint Online Admin Center
 description: Describes an issue in which External sharing is disabled for the site when a delegated partner administrator tries to access a client's SharePoint Online Admin Center.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article

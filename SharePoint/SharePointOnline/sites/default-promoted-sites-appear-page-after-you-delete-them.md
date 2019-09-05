@@ -2,7 +2,8 @@
 title: Default promoted sites appear on the SharePoint Online Sites page after you delete them
 description: Describes an issue in which default promoted sites appear on the SharePoint Online Sites page after you delete them.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article

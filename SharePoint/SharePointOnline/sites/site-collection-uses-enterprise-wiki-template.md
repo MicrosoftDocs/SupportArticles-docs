@@ -2,7 +2,8 @@
 title: A newly created root site collection uses the Enterprise Wiki template
 description: The site collection created by using by using the Publishing Portal template uses the Enterprise Wiki template.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

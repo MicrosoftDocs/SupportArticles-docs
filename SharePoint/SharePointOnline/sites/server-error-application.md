@@ -2,7 +2,8 @@
 title: Server Error in Application in SharePoint Online
 description: This article describes an Server Error in Application error when you browse to a new site collection or subsite in SharePoint Online
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

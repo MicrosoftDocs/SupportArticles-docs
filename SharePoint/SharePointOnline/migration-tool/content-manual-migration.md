@@ -2,7 +2,8 @@
 title: SharePoint Online content manual migration
 description: This document describes the steps to save a SharePoint document library or list content from a SharePoint Online environment to file shares or to a local computer.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
