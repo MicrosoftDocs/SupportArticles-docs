@@ -2,7 +2,8 @@
 title: EMAIL EVERYONE option is missing in the Shared with tab
 description: If the site, folder, or file is already shared with more than 30 users, you cannot use the EMAIL EVERYONE functionality.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

@@ -2,7 +2,8 @@
 title: Schedule data refresh to a data source with non-Windows Authentication
 author: AmandaAZ
 ms.author: randring
-manager: randring
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online

@@ -2,7 +2,8 @@
 title: You can't access SharePoint Online sites by using a domain that's configured for full redelegation
 description: Describes an issue in which you can't access SharePoint Online sites by using a domain that's configured for full redelegation.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article

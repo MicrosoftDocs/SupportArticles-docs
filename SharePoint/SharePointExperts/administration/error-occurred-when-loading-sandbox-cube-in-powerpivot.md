@@ -2,7 +2,8 @@
 title: You receive "An error occurred when loading the Sandbox cube" error in PowerPivot for SharePoint 
 author: AmandaAZ
 ms.author: zakirh
-manager: zakirh
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online

@@ -2,7 +2,8 @@
 title: Call us overprotective message when an external user tries to sync in OneDrive for Business
 description: Describes an issue in which you receive "Call us overprotective" message when an external user tries to sync in OneDrive for Business.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article

@@ -2,7 +2,8 @@
 title: Unable to use SharePoint Designer to edit a workflow
 description: You must first install Microsoft InfoPath 2013 when editing an InfoPath form from the workflows settings page in SharePoint Designer 2013.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

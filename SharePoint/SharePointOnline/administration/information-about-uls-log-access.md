@@ -2,7 +2,8 @@
 title: Information about ULS log access for SharePoint Online
 description: Describes an issue in which information about ULS log access for SharePoint Online.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article

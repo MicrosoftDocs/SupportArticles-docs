@@ -2,7 +2,8 @@
 title: Unable to connect an InfoPath form to SharePoint Online
 description: An error occurred while connecting to a Web Service or An error occurred querying a data source when you connect an InfoPath form to a SharePoint Online web service.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

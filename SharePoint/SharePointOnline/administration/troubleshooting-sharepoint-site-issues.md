@@ -2,7 +2,8 @@
 title: Troubleshooting issues in SharePoint
 description: Describes how to troubleshoot "Sorry there's a problem with the page you tried to view" issue in SharePoint.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

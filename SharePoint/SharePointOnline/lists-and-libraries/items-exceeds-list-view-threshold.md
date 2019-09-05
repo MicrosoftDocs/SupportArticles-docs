@@ -2,7 +2,8 @@
 title: The number of items in this list exceeds the list view threshold
 description: This article describes The number of items in this list exceeds the list view threshold error, and provides a solution.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

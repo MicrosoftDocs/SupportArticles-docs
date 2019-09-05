@@ -2,7 +2,8 @@
 title: Can't access a shared folder
 description: This article describes Access Denied or Sorry, you don't have access to this page error that occurs when users access a shared folder, and provides a solution.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

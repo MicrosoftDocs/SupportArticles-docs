@@ -2,7 +2,8 @@
 title: Prompt the user to download the shared PDF file
 description: This article describes an designed behavior where a link to a shared PDF file from SharePoint Online in Office 365 or OneDrive for Business prompts the user to download the file.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

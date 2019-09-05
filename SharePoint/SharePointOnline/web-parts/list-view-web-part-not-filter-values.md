@@ -2,7 +2,8 @@
 title: A list view Web Part for a tasks list doesn't filter values
 description: This article describes an issue where a list view Web Part for a tasks list doesn't filter values from a connected Web Part in SharePoint Online or SharePoint Server 2013, and provides a solution.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

@@ -2,7 +2,8 @@
 title: Access denied error when you browse to the site mailbox in SharePoint Online
 description: This article describes an issue where Sorry Access denied error when you browse to the site mailbox in SharePoint Online, and provides a solution.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

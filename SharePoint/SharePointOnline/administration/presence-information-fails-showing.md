@@ -2,7 +2,8 @@
 title: Presence information isn't displayed on a SharePoint page
 description: When you open a SharePoint page, your presence information is not shown.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

@@ -2,7 +2,8 @@
 title: A SharePoint Online list item attachment doesn't open in the Office client app
 description: You can't open a SharePoint Online list item with an attachment in the Office client application as expected.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
