@@ -60,10 +60,6 @@ When Office 365 can't deliver email you sent, you'll receive an email notificati
 |[Code 5.6.11](https://go.microsoft.com/fwlink/p/?LinkId=618495)|[Codes 451 5.7.500-699 (ASxxx)](https://docs.microsoft.com/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/fix-error-code-451-4-7-500-699-asxxx-in-exchange-online)|
 |[Code 5.7.1](https://go.microsoft.com/fwlink/p/?LinkId=613118)||
 
-## Get more help with email issues
-
-For more troubleshooting information, see [Troubleshoot email issues](troubleshoot-email-issues.md), [My messages won't send](https://support.office.com/article/97748418-bbd5-4743-a05b-581f22a466dd.aspx) and [Fix Outlook account problems in Office 365](https://go.microsoft.com/fwlink/p/?LinkId=724310) (English only). 
-
 ## Additional email help
 
 - [Get help when email messages won't send](https://support.office.com/article/97748418-bbd5-4743-a05b-581f22a466dd.aspx)
@@ -76,7 +72,7 @@ For more troubleshooting information, see [Troubleshoot email issues](troublesho
 
 - [Recover deleted items in a user mailbox - Admin Help](https://docs.microsoft.com/en-us/office365/enterprise/recover-deleted-items-in-a-mailbox)
 
-- [Troubleshoot email issues](troubleshoot-email-issues.md)
+- [Troubleshoot email issues](https://docs.microsoft.com/exchange/troubleshoot/mail-delivery/mail-issues.md)
 
 - [My messages won't send](https://support.office.com/article/97748418-bbd5-4743-a05b-581f22a466dd.aspx)
 
