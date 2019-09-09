@@ -16,16 +16,16 @@ ms.assetid: 5f76de29-9ee3-47de-84ce-2d49fdc32174
 description: "Learn about diagnostic log collection in Support and Recovery Assistant for Office 365. "
 ---
 
-# Turn off diagnostic log collection in Support and Recovery Assistant for Office 365
+# Turn off diagnostic log collection in Support and Recovery Assistant
 
-By default, [Support and Recovery Assistant for Office 365](https://diagnostics.office.com/#/Download/?env=SOC) collects diagnostic logs to help troubleshoot problems in the following scenarios. 
+By default, [Support and Recovery Assistant](https://diagnostics.office.com/#/Download/?env=SOC) collects diagnostic logs to help troubleshoot problems in the following scenarios. 
   
 - Support and Recovery Assistant sometimes collects diagnostic logs when the tool fails to solve a user's problem.
     
 - Support and Recovery Assistant collects diagnostic logs when a user chooses to run advanced diagnostics. Typically this happens at the request of an admin or Microsoft support engineer.
     
-    ![Support and Recovery Assistant scenario screen](./media/daa5ca72-85b3-42c5-8837-18e246e3b7c6.png)
-  
+    ![Support and Recovery Assistant scenario screen](./media/diagnostic-log-collection-in-support-and-recovery-assistant/daa5ca72-85b3-42c5-8837-18e246e3b7c6.png)
+ 
 Office 365 uses diagnostic logs to improve the tool to provide better troubleshooting in the future. Microsoft support engineers can also use these logs to analyze your user's specific issue more throughly. As an admin, you can make a registry edit to prevent users from collecting diagnostic logs if your organization wants to limit data sharing.
   
 > [!CAUTION]
@@ -71,10 +71,6 @@ Support and Recovery Assistant will collect log data if either of the following 
     
 - The  `HKEY_LOCAL_MACHINE\Software\Microsoft\Support and Recovery Assistant` subkey is not present. 
     
-## Related articles
+## Related article
 
-- [Fix Outlook and Office 365 issues with Microsoft Support and Recovery Assistant for Office 365](fix-outlook-and-office-365-issues.md)
-    
-- [Download Microsoft Support and Recovery Assistant](https://diagnostics.outlook.com/)
-    
-
+[Download Microsoft Support and Recovery Assistant](https://diagnostics.outlook.com/)
