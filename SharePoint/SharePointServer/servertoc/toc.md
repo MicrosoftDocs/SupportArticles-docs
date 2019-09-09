@@ -18,7 +18,6 @@
 ### [Presence information doesn't show](../../SharePointOnline/administration/presence-information-fails-showing.md)
 ### [Provider-hosted add-ins stop working and HTTP 401 error with hybrid features](../administration/provider-hosted-add-ins-stop-working-and-http-401-error-after-configure-farm-hybrid-features.md)
 ### [Remove assembly reference from Sandbox solution](../administration/change-sandbox-solution.md)
-### [Troubleshooting SharePoint issues](../../SharePointOnline/administration/troubleshooting-sharepoint-site-issues.md)
 
 ## Apps
 ### [Access Services reports are not enabled](../Apps/running-access-reports-error.md)

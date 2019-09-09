@@ -2,7 +2,8 @@
 title: Unable to edit footer when you open a PowerPoint presentation
 description: Describes a behavior that occurs because PowerPoint 2007 handles footer information differently than earlier versions of PowerPoint do.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article 

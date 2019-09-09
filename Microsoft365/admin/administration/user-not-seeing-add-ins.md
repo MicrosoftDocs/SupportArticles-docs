@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot User not seeing add-ins
+title: User not seeing add-ins
 ms.author: sirkkuw
 author: Sirkkuw
 manager: dcscontentpm
@@ -18,7 +18,7 @@ ms.assetid: 060e809d-8cb6-427b-9e2f-dab67138acae
 description: Learn how to help your users troubleshoot centralized add-ins, if they are not seeing them.
 ---
 
-# Troubleshoot: User not seeing add-ins
+# User not seeing add-ins
 
 Now that you've deployed the add-in, your end users can start using it in their Office applications. The add-in will appear on all platforms that the add-in supports.
   
@@ -26,21 +26,21 @@ Now that you've deployed the add-in, your end users can start using it in their 
 
 If the add-in supports add-in commands, the commands appear on the Office ribbon. In the following example, the command appears for the People Graph add-in in the **Insert** tab. The add-in command can appear on any tab. 
   
-![People Graph in the Insert tab](./media/bc8f7108-72b3-4a8f-abce-9c1d49757396.png)
+![People Graph in the Insert tab](./media/user-not-seeing-add-ins/bc8f7108-72b3-4a8f-abce-9c1d49757396.png)
   
 If the deployed add-in doesn't support add-in commands or if you want to view all deployed add-ins, you can view them via **My Add-ins** from the **Insert** tab. 
   
-![You can view add-ins in My Add-ins from the Insert tab.](./media/1395dfb5-5cbb-4f9c-851c-74991eb36e1a.png)
+![You can view add-ins in My Add-ins from the Insert tab.](./media/user-not-seeing-add-ins/1395dfb5-5cbb-4f9c-851c-74991eb36e1a.png)
   
 Then select the **Admin Managed** tab along the top in the Office Add-ins window. If add-in is not there, select **Refresh** in the top right corner. 
   
-![Refresh if your Add-in is not present](./media/528df843-448c-48c9-8c82-10f2cb632174.png)
+![Refresh if your Add-in is not present](./media/user-not-seeing-add-ins/528df843-448c-48c9-8c82-10f2cb632174.png)
   
 ## For Outlook 2016
 
 On the **Home** ribbon, select **Store**, as shown here. Select **Admin-managed** in the left nav. 
   
-![Choose Store](./media/6ed3bb85-e4e6-4161-8ce9-a693e3f8dfb5.png)
+![Choose Store](./media/user-not-seeing-add-ins/6ed3bb85-e4e6-4161-8ce9-a693e3f8dfb5.png)
   
 Users can't see add-in? Try one of these:
   

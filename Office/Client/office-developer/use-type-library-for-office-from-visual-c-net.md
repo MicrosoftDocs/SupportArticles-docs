@@ -2,7 +2,8 @@
 title: How to use a type library for Office Automation from Visual C++.NET
 description: Describes how to build a Visual C++.NET project that acts as an Automation client for applications that are Component Object Model (COM) compliant.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

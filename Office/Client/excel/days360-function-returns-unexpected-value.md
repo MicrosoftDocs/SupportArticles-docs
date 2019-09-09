@@ -2,7 +2,8 @@
 title: An unexpected value returned when using the DAYS360 function in Excel
 description: Describes a behavior in which an unexpected number of days is returned by the DAYS360 function in Microsoft Excel. Provides a workaround.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

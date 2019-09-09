@@ -1,7 +1,8 @@
 ---
 title: Create a formula to correctly evaluate blank cells
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

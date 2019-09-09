@@ -4,7 +4,8 @@ description: Describes a resolution to the error "Your organization's policies d
 author: todmccoy
 ms.author: v-todmc
 ms.reviewer: 
-manager: joselr
+manager: dcscontentpm
+localization_priority: Normal
 audience: Admin
 ms.topic: article
 ms.prod: office-perpetual-itpro

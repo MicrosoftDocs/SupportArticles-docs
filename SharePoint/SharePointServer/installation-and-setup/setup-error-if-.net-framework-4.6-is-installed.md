@@ -2,7 +2,8 @@
 title: SharePoint 2013 or Project Server 2013 Setup error if the .NET Framework 4.6 is installed
 description: Describes an issue that triggers an error during SharePoint 2013 or Project Server 2013 Setup if the .NET Framework 4.6 is installed. Provides a workaround.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article

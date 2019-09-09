@@ -2,7 +2,8 @@
 title: Access denied when connecting to a Windows SharePoint Services Web site
 description: You cannot connect a Windows SharePoint Services 2.0 or a Windows SharePoint Services 3.0 Web site even though you are logged on by using a user account that's a member of the Domain Administration group.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

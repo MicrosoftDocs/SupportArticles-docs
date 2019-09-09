@@ -2,7 +2,8 @@
 title: Operating parameter limitations and specifications in Word
 description: Describes operating parameter limitations and specifications in Word.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

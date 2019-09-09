@@ -2,7 +2,8 @@
 title: SharePoint Online performance troubleshooter
 description: SharePoint Online client performance diagnostic package collects information that can be used to troubleshoot SharePoint Online client performance issues.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

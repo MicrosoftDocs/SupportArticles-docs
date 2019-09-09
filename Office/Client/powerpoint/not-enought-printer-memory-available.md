@@ -2,7 +2,8 @@
 title: Not enough printer memory available to print page
 description: Explains that you may receive a "Not enough printer memory" error when you print a presentation. This issue may be caused by an incorrect memory setting in the Windows printer driver. Requires that you reset the memory setting to resolve the problem.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

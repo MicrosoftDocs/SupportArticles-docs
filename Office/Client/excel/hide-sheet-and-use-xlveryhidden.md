@@ -1,8 +1,9 @@
 ---
 title: Hide sheets and use xlVeryHidden constant in a macro
-description: 
+description: Describes that how to hide sheets and use xlVeryHidden constant in a macro.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

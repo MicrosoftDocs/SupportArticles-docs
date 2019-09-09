@@ -4,7 +4,8 @@ description: Resolves an error when configuring a PowerPivot service with an Ora
 author: todmccoy
 ms.author: v-todmc
 ms.reviewer: 
-manager: joselr
+manager: dcscontentpm
+localization_priority: Normal
 audience: Admin
 ms.topic: article
 ms.prod: office-perpetual-itpro

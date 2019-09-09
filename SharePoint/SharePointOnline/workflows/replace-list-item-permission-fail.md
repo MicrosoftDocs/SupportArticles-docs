@@ -2,7 +2,8 @@
 title: SharePoint workflow that uses Replace List Item Permissions action fails
 description: This article describes an issue where SharePoint workflow that uses the Replace List Item Permissions action fails, and provides a solution.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

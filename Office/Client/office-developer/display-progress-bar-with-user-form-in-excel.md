@@ -2,7 +2,8 @@
 title: How to display a progress bar with a user form in Excel
 description: Describes how to display a progress bar with a user form in Excel.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

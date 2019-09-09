@@ -2,7 +2,8 @@
 title: PowerPivot for SharePoint 2016 scheduled data refresh fails with the error The operation has timed out
 author: AmandaAZ
 ms.author: randring
-manager: randring
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online

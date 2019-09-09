@@ -2,7 +2,8 @@
 title: PowerPivot Configuration Tool shows "The user is not a farm administrator" error 
 author: AmandaAZ
 ms.author: zakirh
-manager: zakirh
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online

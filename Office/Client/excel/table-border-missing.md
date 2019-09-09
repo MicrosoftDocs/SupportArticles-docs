@@ -1,7 +1,9 @@
 ---
 title: Excel/Outlook for Mac border missing when pasting table in email
+description: Describes the table border is missing when you paste a table in email in Outlook for Mac. Provides a solution.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

@@ -2,7 +2,8 @@
 title: Excel statistical functions STEYX
 description: Describes the STEYX function in Excel 2003 and in later versions of Excel.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

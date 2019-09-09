@@ -2,7 +2,8 @@
 title: Center Across Columns button doesn't appear in Excel
 description: Describes an issue that no "Center Across Columns" button appears on the toolbar or ribbon in Excel.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

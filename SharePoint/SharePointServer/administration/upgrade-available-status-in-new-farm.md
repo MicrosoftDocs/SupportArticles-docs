@@ -1,8 +1,9 @@
 ---
 title: Upgrade Available status in new SharePoint Server 2016 farm
-description:
+description: Provides a solution for an Upgrade Available status issue in new SharePoint Server 2016 farm.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article

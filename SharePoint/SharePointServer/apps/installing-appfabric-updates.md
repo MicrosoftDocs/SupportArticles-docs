@@ -2,7 +2,8 @@
 title: Installing Windows Server AppFabric updates SharePoint 2013 Servers
 description: Updates to AppFabric on SharePoint 2013 are applied via AppFabric updates. SharePoint 2013 updates do not update AppFabric.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article

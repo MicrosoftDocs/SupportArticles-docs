@@ -2,7 +2,8 @@
 title: Sample user-defined function to hide formula errors
 description: Provides information about a sample user-defined function that will hide formula errors in Excel.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

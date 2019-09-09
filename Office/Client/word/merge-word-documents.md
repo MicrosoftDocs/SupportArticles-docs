@@ -2,7 +2,8 @@
 title: How to merge multiple Word documents into one?
 description: Describes how to merge several Word documents into one.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

@@ -2,7 +2,8 @@
 title: Can't create a Records Center site as a subsite
 description: This article describes an issue where you can't create a Records Center site as a subsite in SharePoint Online, and provides a solution.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

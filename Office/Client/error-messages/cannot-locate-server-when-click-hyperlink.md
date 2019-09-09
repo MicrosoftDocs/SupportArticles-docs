@@ -1,8 +1,9 @@
 ---
 title: Cannot locate the Internet or proxy server when click hyperlink in Office
-description: 
+description: Describes issues when you click hyperlinks in Office. Provides solutions.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

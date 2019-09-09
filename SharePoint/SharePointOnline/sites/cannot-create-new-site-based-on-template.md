@@ -2,7 +2,8 @@
 title: Cannot create a new site based on a site template in SharePoint Online
 description: Fix an issue in which you cannot create new site based on a site template in SharePoint Online due to issues with Authors and ID fields.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article

@@ -2,7 +2,8 @@
 title: How column widths are determined in Excel
 description: Provides information about the factors that determine the column widths in Excel.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

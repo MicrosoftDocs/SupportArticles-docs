@@ -2,7 +2,8 @@
 title: Long numbers are displayed incorrectly in Excel
 description: Describes how to show long numbers in Excel cells.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

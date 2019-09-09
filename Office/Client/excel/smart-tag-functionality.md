@@ -2,7 +2,8 @@
 title: Description of the smart tag functionality in Excel
 description: Describes how smart tags work in Excel. The article contains steps to turn on smart tags and to transfer smart tags between Office programs.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

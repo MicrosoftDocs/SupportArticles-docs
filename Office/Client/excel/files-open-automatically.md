@@ -2,7 +2,8 @@
 title: How to prevent files from opening automatically in Excel
 description: Provides step-by-step instructions to prevent files from opening automatically when you start Excel.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

@@ -2,7 +2,8 @@
 title: Cannot access directory when change the default save location in Excel 2016
 author: AmandaAZ
 ms.author: warrenr
-manager: warrenr
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.topic: article
 ms.prod: office-perpetual-itpro

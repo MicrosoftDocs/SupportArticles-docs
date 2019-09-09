@@ -2,7 +2,8 @@
 title: How to select cells or ranges by using Visual Basic procedures in Excel.
 description: Describes how to select cells or ranges by using Visual Basic procedures in Excel.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

@@ -2,7 +2,8 @@
 title: How to automate Visio with Visual Basic .NET
 description: Demonstrates how to automate Visio using Visual Basic .NET.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

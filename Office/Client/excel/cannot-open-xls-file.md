@@ -2,7 +2,8 @@
 title: Cannot open .xls files by using Excel 2010
 description: Describes a resolution to a problem in which you cannot open .xls files with Excel 2010.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

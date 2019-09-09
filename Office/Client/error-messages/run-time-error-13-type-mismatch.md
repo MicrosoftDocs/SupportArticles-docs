@@ -2,7 +2,8 @@
 title: Run-Time Error 13 Type Mismatch when setting FW company as default
 description: You cannot set the FW company as default because there are multiple FRx versions on a workstation or server.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
