@@ -2,7 +2,8 @@
 title: Sharing options are grayed out when sharing from SharePoint Online or OneDrive
 ms.author: v-todmc
 author: todmccoy
-manager: joselr
+manager: dcscontentpm
+localization_priority: Normal
 ms.date: 7/23/2019
 ms.audience: Admin
 ms.topic: article

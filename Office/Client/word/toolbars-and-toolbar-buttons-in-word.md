@@ -2,7 +2,8 @@
 title: How to work with toolbars and toolbar buttons in Word
 description: Describes how to customize and create toolbars and toolbar buttons in Word. You can customize any toolbar by adding, deleting, moving, and grouping toolbar buttons to suit your needs.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

@@ -2,7 +2,8 @@
 title: How to set up and use the RTD function in Excel
 description: Discusses the functionality that the RealTimeData (RTD) function provides in Excel.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

@@ -2,7 +2,8 @@
 title: Expect after you change a user name in Office 365
 description: Provides information about the effect on a OneDrive for Business site after you change a user name in Office 365.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: one-drive
 ms.topic: article

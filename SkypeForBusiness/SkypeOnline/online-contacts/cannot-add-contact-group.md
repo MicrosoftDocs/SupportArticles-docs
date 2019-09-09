@@ -2,7 +2,7 @@
 title: Cannot add contact group, the Contacts list already contains the maximum number of distribution groups
 description: Describes an issue in which you receive an error message when you try to add more distribution groups to your contact list in Lync. Provides a workaround.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

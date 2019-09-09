@@ -2,7 +2,7 @@
 title: Deployment of Cloud Connector Edition in Amazon Web Services fails
 description: Describes a problem in which the deployment script fails when you deploy Cloud Connector Edition with Amazon Web Services. This is expected behavior.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

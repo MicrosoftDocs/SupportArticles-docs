@@ -14,7 +14,6 @@
 ### [TLS 1.0 and 1.1 deprecation for Office 365](../administration/tls-1.0-and-1.1-deprecation-for-office-365.md)
 ### [Troubleshoot mapped network drives](../administration/troubleshoot-mapped-network-drives.md)
 ### [Troubleshoot site collection upgrade issues](../administration/troubleshoot-site-collection-upgrade-issue.md)
-### [Troubleshooting SharePoint issues](../administration/troubleshooting-sharepoint-site-issues.md)
 ### [Uncompiled audiences are present in SharePoint Online](../administration/uncompiled-audiences-are-present-in-office-365-for-enterprises.md)
 ### [Using relative URLs isn't supported](../administration/using-relative-urls-not-supported.md)
 

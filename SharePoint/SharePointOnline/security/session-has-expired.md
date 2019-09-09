@@ -2,7 +2,8 @@
 title: Sorry, your session has expired
 description: This article describes an Sorry, your session has expired error that occurs when you try to open a document from SharePoint Online in an Office Online application, and provides a solution.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

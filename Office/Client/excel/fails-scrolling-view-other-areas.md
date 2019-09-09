@@ -2,7 +2,8 @@
 title: You cannot scroll to view the other areas of an Excel worksheet
 description: Describes an issue when you try to scroll in an Excel worksheet, you may not be able to view other areas of the worksheet.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

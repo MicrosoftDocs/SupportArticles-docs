@@ -2,7 +2,8 @@
 title: Keyboard shortcuts for grid and guides features in PowerPoint
 description: Describes how to keyboard shortcuts to turn the grid and guides features off and on.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

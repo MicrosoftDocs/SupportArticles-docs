@@ -2,7 +2,8 @@
 title: Some category labels are missing or too small to read on Excel charts
 description: Describes a workaround that you can use when the category labels on an Excel chart are missing or are too small to read.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

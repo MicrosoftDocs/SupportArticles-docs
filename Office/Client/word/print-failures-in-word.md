@@ -2,7 +2,8 @@
 title: Troubleshoot print failures in Word
 description: Describes how to diagnose print failures in Word 2013, Word 2010, Word 2007, and Word 2003. Explains how to isolate the cause of the print failure and how to resolve the issue.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

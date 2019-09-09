@@ -2,7 +2,7 @@
 title: Server Error after you click the hyperlink for Skype Meeting Broadcast portal
 description: Describes an issue that occurs after you click the hyperlink for the Skype Meeting Broadcast portal in Word or OneNote. Provides a workaround.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

@@ -2,7 +2,7 @@
 title: Lync presence is unavailable or missing in SharePoint sites
 description: Describes an issue in which the Lync presence is unavailable or missing in SharePoint sites. Provides a solution.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

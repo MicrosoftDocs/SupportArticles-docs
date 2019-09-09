@@ -55,18 +55,18 @@ To work around this issue, you must configure registry settings for these protoc
 1. Input the correct information about the third-party application that you want in the registry. For example, to change the default application that supports SIP from Office Communicator 2007 R2 to a third-party application that you want, follow these steps:
    1. Locate and then click the following registry subkey:
 
-            **HKEY_CURRENT_USER\Software\Classes\sip\shell\open\command**
+      **HKEY_CURRENT_USER\Software\Classes\sip\shell\open\command**
    1. Double-click the default registry entry. Then, change the value to reflect the application that you want to use instead of the Microsoft UC clients.
 
-            **Note** The default value in the registry entry points to the Microsoft UC client.
+      **Note** The default value in the registry entry points to the Microsoft UC client.
   
    1. Prevent Microsoft UC client information from being rewritten to the registry setting that you changed in step B. To do this, add one of the following values to the DisabledProtocolHandlerRegistrations registry entry:
-           - TEL: 0x0001   
-           - CALLTO: 0x0002   
-           - SIP: 0x0004   
-           - SIPS: 0x0008   
-           - IM: 0x0010   
-           - CONF: 0x0020   
+      - TEL: 0x0001   
+      - CALLTO: 0x0002   
+      - SIP: 0x0004   
+      - SIPS: 0x0008   
+      - IM: 0x0010   
+      - CONF: 0x0020   
 
    > [!NOTE]
    > - You can sum the values in the list if you want to prevent a Microsoft UC client from being the default application for multiple protocols. For example, to prevent the Microsoft UC client from being the default application for SIP, enter 0x0004. To prevent the Microsoft UC client from being the default application for CALLTO, enter 0x0002. To prevent the Microsoft UC client from being the default application for both SIP and CALLTO, enter 0x0006. To prevent the Microsoft UC client from being the default application for all the protocols, enter 3f.   

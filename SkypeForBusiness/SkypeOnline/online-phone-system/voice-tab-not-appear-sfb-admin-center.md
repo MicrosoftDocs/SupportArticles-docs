@@ -2,7 +2,7 @@
 title: The Voice tab doesn't appear in the Skype for Business Admin Center
 description: Discusses an issue in which the Voice tab is not displayed in the Skype for Business Admin Center. Provides a resolution.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

@@ -2,7 +2,7 @@
 title: SFB Online users in an Office 365 domain can't IM or detect users
 description: Fixes a problem in which Skype for Business Online users in a domain that's not added to the on-premises Skype for Business Server or Lync Server 2013 hybrid deployment can’t see the presence of on-premises users or send them an IM.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

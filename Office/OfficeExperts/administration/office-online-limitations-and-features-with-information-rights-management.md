@@ -2,7 +2,8 @@
 title: Office Online and Office Web Apps limitations and features with Information Rights Management (IRM)
 author: AmandaAZ
 ms.author: jhaak
-manager: jhaak
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online

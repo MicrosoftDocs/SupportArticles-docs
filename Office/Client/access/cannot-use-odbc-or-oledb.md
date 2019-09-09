@@ -2,7 +2,8 @@
 title: Can't use the Access ODBC driver or OLEDB provider outside Office Click-to-Run
 description: Fixes an issue in which you cannot create an ODBC DSN for drivers provided by Access in the Data Sources ODBC Administrator if you use an Office C2R installation.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

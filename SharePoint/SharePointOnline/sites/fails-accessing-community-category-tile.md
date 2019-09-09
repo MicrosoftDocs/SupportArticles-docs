@@ -2,7 +2,8 @@
 title: Can't click a category tile inside a SharePoint Online community site
 description: Cannot complete this action when clicking a category tile inside a community for a SharePoint Online site.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

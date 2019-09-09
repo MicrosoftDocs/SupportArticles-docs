@@ -2,7 +2,8 @@
 title: Request approval failed when you process a pending request
 description: This article describes an issue where "Access Denied" to Access Requests list or "Request approval failed" when you process a pending request, and provides a solution.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

@@ -1,8 +1,9 @@
 ---
 title: How to handle events for Excel by using Visual Basic .NET
-description: 
+description: Describes that how to handle events for Excel by using Visual Basic .NET.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

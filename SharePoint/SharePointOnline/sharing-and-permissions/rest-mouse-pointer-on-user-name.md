@@ -2,7 +2,8 @@
 title: Credential prompt after you rest the mouse pointer over the name of a user
 description: This article describes an issue where Credential prompt after you rest the mouse pointer over the name of a user in SharePoint Online or OneDrive for Business, and provides a solution.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

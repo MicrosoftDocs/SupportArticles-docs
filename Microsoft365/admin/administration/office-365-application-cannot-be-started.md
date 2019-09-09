@@ -2,7 +2,7 @@
 title: Application cannot be started, contact the application vendor in Office 365
 description: Describes an issue in which you receive an "Application cannot be started" error when you try to run an Office 365 ClickOnce application such as Office 365 Desktop Setup or the Office 365 Desktop Readiness Tool. Provides a resolution.
 author: simonxjx
-manager: JOSELR
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
@@ -49,8 +49,6 @@ To check whether the problem is fixed, follow these steps:
   - If the problem is fixed, you are finished with these steps.    
   - If the problem is not fixed, visit [https://go.microsoft.com/fwlink/?linkid=2003907](https://go.microsoft.com/fwlink/?linkid=2003907) or [contact support](https://support.microsoft.com/contactus/).    
      
-We would appreciate your feedback. To provide feedback or to report any issues with this solution, please leave a comment on the "[Fix it for me](https://blogs.technet.com/fixit4me/)" blog or send us an [email](mailto:fixit4me@microsoft.com?subject=kb) message.
-
 ## More information
 
 For more information, see [ClickOnce Unmanaged API Reference](https://msdn.microsoft.com/library/bb629396.aspx).

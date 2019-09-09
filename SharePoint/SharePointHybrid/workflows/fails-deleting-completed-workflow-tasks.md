@@ -2,7 +2,8 @@
 title: Unable to delete completed SharePoint 2013 workflow tasks
 description: Fixes an issue in which you can't delete a completed workflow that uses the SharePoint 2013 Workflow Platform Type and uses workflow tasks.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

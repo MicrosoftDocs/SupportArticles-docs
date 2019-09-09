@@ -2,7 +2,7 @@
 title: Skype for Business Online users can't manage voice mail or customize greeting
 description: Describes an issue that prevents a Skype for Business Online voice mail user who doesn't have an Exchange Online mailbox from managing voice mails or voice mail greetings. Provides a workaround.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

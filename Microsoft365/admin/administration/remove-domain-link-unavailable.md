@@ -2,7 +2,7 @@
 title: You cannot remove the initial domain when removing a domain
 description: Fixes an issue in which the "Remove" domain link is unavailable or you receive a "You cannot remove the initial domain created for you in Office 365" error message when you try to remove a domain from Office 365.
 author: simonxjx
-manager: JOSELR
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: o365-administration

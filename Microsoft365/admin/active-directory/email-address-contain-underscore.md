@@ -2,7 +2,7 @@
 title: Office 365 email address contains underscore character
 description: Describes an issue in which after you run the Azure Active Directory Sync Tool  to synchronize your on-premises Active Directory environment to Azure Active Directory, an email address unexpectedly contains an underscore character "_".
 author: simonxjx
-manager: JOSELR
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: office 365

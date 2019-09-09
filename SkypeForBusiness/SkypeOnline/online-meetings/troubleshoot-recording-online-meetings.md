@@ -2,7 +2,7 @@
 title: How to troubleshoot recording online meetings in Skype for Business Online
 description: Discusses how to troubleshoot issues that may occur when you record online meetings in Lync 2010 or Lync 2013 while you're signed in to Skype for Business Online.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

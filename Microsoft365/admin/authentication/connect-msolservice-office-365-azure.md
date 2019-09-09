@@ -1,7 +1,7 @@
 ---
-title: Error "The user name or password is incorrect" when you use connect-MSOLService
+title: The user name or password is incorrect when you use connect-MSOLService
 author: simonxjx
-manager: JOSELR
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: office 365

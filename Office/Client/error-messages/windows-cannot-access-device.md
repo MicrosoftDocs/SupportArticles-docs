@@ -2,7 +2,8 @@
 title: Windows cannot access specified device, path, or file
 description: Describes a workaround for the error Windows cannot access the specified device, path, or file received when launching an Office in the Microsoft Store app.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: sharepoint-online 
 ms.topic: article

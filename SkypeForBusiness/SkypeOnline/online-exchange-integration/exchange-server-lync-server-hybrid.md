@@ -2,7 +2,7 @@
 title: Integrate Exchange Server 2013 with Lync Server
 description: Describes the requirements  for Exchange Server 2013 with Lync Server 2013, Skype for Business Online, or a Lync Server 2013 hybrid deployment. Also includes troubleshooting steps and links to additional deployment documentation.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: skype-for-business-itpro

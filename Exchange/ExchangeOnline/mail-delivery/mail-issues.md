@@ -1,8 +1,8 @@
 ---
-title: "Troubleshoot email issues"
+title: Mail delivery issues
 ms.author: supotter
 author: supotter
-manager: scotv
+manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
 ms.service: o365-administration
@@ -16,10 +16,28 @@ search.appverid:
 - MOE150
 ms.assetid: 27deff23-8ab0-42e6-b827-5b9ce38f03f8
 ROBOTS: NOINDEX
-description: "Get help for solving email connection and delivery problems."
+description: Get help for solving email connection and delivery problems.
 ---
 
-# Troubleshoot email issues
+# Mail delivery issues
+
+Email not working? Can't connect or not getting through? Expand an option below to find out how to diagnose and fix problems.
+  
+### Trace where messages are getting stuck
+
+If you're an Office 365 Midsize Business, Office 365 Business, or Office 365 Enterprise admin, you access and run the message trace tool through the Exchange admin center. To get there, do the following:
+  
+1. Sign in to Office 365 for business with your work or school account. 
+
+2. Go to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange admin center</a>.
+  
+3. Under **mail flow**, go to **message trace**.
+
+If you're an Office 365 Small Business admin, do the following to find message trace:
+  
+1. Go to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Security & Compliance admin center</a>.
+
+2. In the left navigation, select **Mail flow** \> **Message trace**.
 
 When you run into problems with email, these resources can help you solve email connection and delivery problems.
 
@@ -54,9 +72,15 @@ When Office 365 can't deliver email you sent, you'll receive an email notificati
 
 - [Recover deleted items in a user mailbox - Admin Help](https://docs.microsoft.com/en-us/office365/enterprise/recover-deleted-items-in-a-mailbox)
 
-::: moniker range="o365-21vianet"
+- [Troubleshoot email issues](https://docs.microsoft.com/exchange/troubleshoot/mail-delivery/mail-issues.md)
+
+- [My messages won't send](https://support.office.com/article/97748418-bbd5-4743-a05b-581f22a466dd.aspx)
+
+- [Fix Outlook account problems in Office 365](https://go.microsoft.com/fwlink/p/?LinkId=724310)
+
+- [Message trace in the Security & Compliance Center](https://docs.microsoft.com/en-us/office365/securitycompliance/message-trace-scc?redirectSourcePath=%252farticle%252f3e64f99d-ac33-4aba-91c5-9cb4ca476803)
+
+- [Troubleshoot Office 365 mail flow](https://docs.microsoft.com/en-us/exchange/mail-flow-best-practices/troubleshoot-mail-flow)
 
 > [!NOTE]
 > If you're using Office 365 operated by 21Vianet in China, please [contact the 21Vianet support team](https://docs.microsoft.com/office365/admin/contact-support-for-business-products).
-
-::: moniker-end

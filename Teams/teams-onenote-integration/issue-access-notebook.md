@@ -2,7 +2,7 @@
 title: Issue when you access a notebook for Microsoft Teams.
 description: One or more of the document libraries on the user or group's OneDrive contains more than 5,000 OneNote items when you access a notebook for Microsoft Teams.
 author: simonxjx
-manager: CLAKE
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: msteams

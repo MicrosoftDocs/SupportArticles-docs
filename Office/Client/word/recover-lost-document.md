@@ -2,7 +2,8 @@
 title: How to recover a lost Word document
 description: Describes a range of methods to locate and recover lost Microsoft Word documents. Discusses Word 2002, Word 2003, Word 2007, and Word 2010 under various versions of Windows.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

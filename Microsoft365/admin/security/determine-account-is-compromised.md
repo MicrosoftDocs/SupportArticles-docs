@@ -2,7 +2,7 @@
 title: Determine whether Office 365 account is compromised
 description: Describes how to determine whether your Office 365 account has been compromised.
 author: simonxjx
-manager: JOSELR
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: office 365

@@ -2,7 +2,8 @@
 title: Errors when you access documents in Office Web Apps 2013 or Office Online Server from SharePoint web applications where Forms Based Authentication is enabled
 author: AmandaAZ
 ms.author: thempel
-manager: thempel
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online

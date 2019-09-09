@@ -2,7 +2,8 @@
 title: This feature has been disabled by your Administrator
 description: Fixes an issue in which Skype for Business activation fails if you install it from Office 365 ProPlus as a stand-alone application.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: Office 365
 ms.topic: article

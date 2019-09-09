@@ -2,7 +2,8 @@
 title: Incorrect function when saving an Office file to a CD-RW or a DVD/CD-RW drive
 description: Describes an issue when you try to save a file in an Office program to a CD-RW, or a DVD/CD-RW drive, the file is not saved and you receive the "Incorrect function" error message.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

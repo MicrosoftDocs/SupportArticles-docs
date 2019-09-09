@@ -1,7 +1,8 @@
 ---
 title: Excel works with two-digit year numbers
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

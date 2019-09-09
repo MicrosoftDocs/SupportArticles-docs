@@ -1,8 +1,9 @@
 ---
-title: Troubleshoot Excel opening blank when double-select a file icon or file name
-description: Provides multiple resolutions to seeing a blank screen when you try to open an Excel workbook by double-selecting its icon or file name.
-author: v-miegge
-manager: willchen
+title: Troubleshoot Excel opening blank when double-click a file icon or file name
+description: Discusses that you see a blank screen when you try to open an Excel workbook by double-clicking its icon or file name. Provides multiple resolutions.
+author: simonxjx
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

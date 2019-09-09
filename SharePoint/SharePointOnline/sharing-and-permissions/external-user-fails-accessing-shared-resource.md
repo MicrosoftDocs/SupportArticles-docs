@@ -2,7 +2,8 @@
 title: External users cannot access a shared SharePoint file
 description: The webpage cannot be found or 404 NOT FOUND when an external user accesses a shared file in SharePoint Online.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

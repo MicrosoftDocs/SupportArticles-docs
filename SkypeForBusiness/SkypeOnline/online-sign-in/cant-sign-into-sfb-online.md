@@ -2,7 +2,7 @@
 title: Can't sign in to Skype for Business Online because certificate can't be acquired
 description: Describes an issue in which users receive an error message that states that they can't obtain a personal certificate when they try to sign in to Skype for Business Online. Provides a resolution.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

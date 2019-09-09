@@ -2,7 +2,8 @@
 title: How to automate Microsoft Excel from Visual Basic
 description: Demonstrates how to create and manipulate Excel by using Automation from Visual Basic.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

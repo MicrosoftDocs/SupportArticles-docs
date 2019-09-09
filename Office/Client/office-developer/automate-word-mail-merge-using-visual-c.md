@@ -2,7 +2,8 @@
 title: How to automate Microsoft Word to perform Mail Merge from Visual C#
 description: Describes some sample steps about how to automate Microsoft Word to perform Mail Merge from Visual C#.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

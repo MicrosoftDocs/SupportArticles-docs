@@ -2,7 +2,7 @@
 title: Troubleshoot sign-in issues for Lync for Mac 2011 in Skype for Business Online
 description: Contains information about how to troubleshoot Lync for Mac issues in Skype for Business Online for Office 365. Discusses how to sign in to Skype for Business Online by using Lync for Mac and how to collect log files for Lync for Mac issues.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online
@@ -54,8 +54,8 @@ The following table describes error messages that may occur when users sign in o
 |---|---|---|---|
 |The service might not be available, or you might not be connected to the Internet. Make sure the server is available. Also, make sure your network connection cable is securely connected.|This issue may occur if Lync can’t detect a suitable Lync Server.|Client|To troubleshoot this issue, see the [Make sure that users follow the correct steps when they sign in to Skype for Business Online](#make-sure-that-users-follow-the-correct-steps-when-they-sign-in-to-skype-for-business-online) section.|
 |Lync was unable to sign in. Please verify your logon credentials and try again. If the problem continues, please contact your support team.|Various causes.|Client|To troubleshoot this issue, see the [Users may be unable to sign in unless they first use an incorrect sign-in address](#Users-may-be-unable-to-sign-in-unless-they-first-use-an-incorrect-sign-in-address) section.|
-|The user name, password, or domain appears to be incorrect. Ensure that you entered them correctly. If the problem continues, please contact your support team.|This issue may occur in scenarios in which a federated user tries to sign in, and this user has a password that's longer than 16 characters.|User Account|To troubleshoot this issue, see the [Federated users synchronized from on-premises Active Directory Domain Services can't sign in by using a password that's longer than 16 characters](#Federated-users-synchronized-from-on-premises-Active-Directory-Domain-Services-can't-sign-in-by-using-a-password-that's-longer-than-16-characters) section.|
-|EXC_BAD_ACCESS|This issue may occur if Lync for Mac tries to integrate or schedule meetings with an Exchange mailbox that isn't hosted in Exchange Online.|Client|To troubleshoot this issue, see the [Lync for Mac crashes, and the user receives an "EXC_BAD_ACCESS" error](#Lync-for-Mac-crashes,-and-the-user-receives-an-"EXC_BAD_ACCESS"-error) or [Clear cached data and corrupted certificates in Lync](#clear-cached-data-and-corrupted-certificates-in-lync) sections.|
+|The user name, password, or domain appears to be incorrect. Ensure that you entered them correctly. If the problem continues, please contact your support team.|This issue may occur in scenarios in which a federated user tries to sign in, and this user has a password that's longer than 16 characters.|User Account|To troubleshoot this issue, see the [Federated users synchronized from on-premises Active Directory Domain Services can't sign in by using a password that's longer than 16 characters](#Federated-users-synchronized-from-on-premises-active-directory-domain-services-cant-sign-in-by-using-a-password-thats-longer-than-16-characters) section.|
+|EXC_BAD_ACCESS|This issue may occur if Lync for Mac tries to integrate or schedule meetings with an Exchange mailbox that isn't hosted in Exchange Online.|Client|To troubleshoot this issue, see the [Lync for Mac crashes and the user receives an EXC_BAD_ACCESS error](#lync-for-mac-crashes-and-the-user-receives-an-excbadaccess-error) or [Clear cached data and corrupted certificates in Lync](#clear-cached-data-and-corrupted-certificates-in-lync) sections.|
 
 ### Troubleshoot Lync for Mac issues
 
@@ -107,7 +107,7 @@ Organizations that have on-premises customer password policies may allow for pas
 
 To work around this issue, the user should change his or her password to be 16 characters or less.
 
-#### Lync for Mac crashes, and the user receives an "EXC_BAD_ACCESS" error
+#### Lync for Mac crashes and the user receives an EXC_BAD_ACCESS error
 
 This error message usually occurs when Lync for Mac tries to integrate or schedule meetings with an Exchange mailbox that isn't hosted in Exchange Online. This scenario isn't supported in Skype for Business Online. For the best experience, you should use both Skype for Business Online and Exchange Online. However, if that isn't an option, follow these steps as a potential workaround:
 

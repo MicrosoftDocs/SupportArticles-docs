@@ -1,7 +1,7 @@
 ---
 title: The Great Skype for Business Memory Mystery
 author: TobyTu
-manager: CLAKE
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: skype-for-business-itpro

@@ -2,7 +2,8 @@
 title: Site theme in Office 365 isn't displayed when you use Internet Explorer 8
 description: This article describes an issue where SharePoint Online site theme in Office 365 isn't displayed when you use Internet Explorer 8, and provides a solution.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

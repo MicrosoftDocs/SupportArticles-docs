@@ -24,10 +24,10 @@
 ### [0xC004F038 computer could not be activated in KMS](../administration/0xc004f038-computer-not-activate.md)
 ### [A user with this name could not be found](../administration/user-found-error-fails-resetting-password.md)
 ### [Administrator forgot password](../administration/forgot-sign-in-password.md)
+### [Application cannot be started](../administration/office-365-application-cannot-be-started.md)
 ### [Block OneDrive use from Office](../administration/block-onedrive-use-from-office.md)
 ### [Can't add a domain](../administration/administrator-failed-adding-domain.md)
 ### [Can't assign a federated domain](../administration/cannot-assign-federated-domain-to-user.md)
-### [Can't remove mailbox permissions](../administration/cannot-remove-mailbox-permission-office-365.md)
 ### [Can't start this app when installing an add-in](../administration/cannot-install-office-add-in.md)
 ### [Can't to remove this domain](../administration/unable-remove-domain-office-365.md)
 ### [Can't to reset this user's password](../administration/unable-reset-user-password-sso.md)
@@ -35,7 +35,9 @@
 ### [Child domain doesn't inherit parent changes](../administration/child-domain-fails-inherit-parent-domain-changes.md)
 ### [Configure default email client using policy](../administration/configure-email-client-using-policy.md)
 ### [Connection issues when sign in Office 2016](../administration/connection-issue-when-sign-in-office-2016.md)
+### [Diagnostic log collection in Support and Recovery Assistant](../administration/diagnostic-log-collection-in-support-and-recovery-assistant.md)
 ### [Disabled Office 365 Sway tile continues to appear in App Launcher](../administration/disabled-sway-tile-appear.md)
+### [Distribution group issues](../administration/distribution-list-issues.md)
 ### [Domain errors in the Office 365 portal](../administration/domain-errors-in-office-365-portal.md)
 ### [Domain has associated subdomains](../administration/fails-removing-domain.md)
 ### [Domain shows "Setup in progress"](../administration/setup-in-progress-office-365-portal.md)
@@ -45,6 +47,7 @@
 ### [Issue when remove a domain](../administration/error-remove-domain-from-office-365.md)
 ### [Issue with adding Address or CNAME record](../administration/error-add-address-cname-record.md)
 ### [Keep on running Office 365 ProPlus 2013](../administration/run-office-365-proplus-2013.md)
+### [Office add-ins](../administration/user-not-seeing-add-ins.md)
 ### [Prioritize BITS for Office 2016 updates](../administration/prioritize-bits-for-office-2016-updates.md)
 ### [Reports show anonymous user names](../administration/reports-show-anonymous-user-name.md)
 ### [Supported Product IDs for Click-to-Run](../administration/product-ids-supported-office-deployment-click-to-run.md)
@@ -71,6 +74,10 @@
 ### [User name or password is incorrect](../authentication/connect-msolservice-office-365-azure.md)
 ### [Your account has been blocked](../authentication/account-blocked-error-when-sign-in.md)
 
+## Installation
+### [Troubleshoot issues for admins](../installation/install-apps.md)
+### [All applications are installed when installing Skype for Business](../installation/install-skype-for-business-2016.md)
+
 ## Licensing
 ### ["Unlicensed Product" error](../licensing/office-2010-unlicensed-product-error.md)
 ### [50,000 seats RIGHTSMANAGEMENT_ADHOC SKU](../licensing/rights-management-adhoc-sku-office-365.md)
@@ -79,6 +86,7 @@
 ### [Office 365 subscription automatic license renewal fails](../licensing/subscription-license-renewal-fail.md)
 ### [Office C2R-P release for Project and Visio](../licensing/office-click-to-run-perpetual.md)
 ### [Office Feature Updates task](../licensing/office-feature-updates-task-faq.md)
+### [Outlook Customer Manager group](../licensing/outlook-customer-manager-group-creation.md)
 
 ## Security
 ### [BOXServiceAccount is added](../security/boxserviceaccount-is-added-to-role.md)
@@ -100,19 +108,5 @@
 ### [Office 365 changes build numbers to a five-digit format](../support/build-number-five-digit.md)
 
 ## Troubleshooting
-### [All applications are installed when installing Skype for Business](../troubleshooting/install-skype-for-business-2016.md)
-### [Application cannot be started](../troubleshooting/office-365-application-cannot-be-started.md)
-### [Diagnostic log collection in Support and Recovery Assistant](../troubleshooting/diagnostic-log-collection-in-support-and-recovery-assistant.md)
-### [Distribution group issues](../troubleshooting/distribution-list-issues.md)
-### [Fix Outlook and Office 365 issues using Support and Recovery Assistant](../troubleshooting/fix-outlook-and-office-365-issues.md)
-### [Remove an alias  from a contact](../troubleshooting/remove-an-alias-from-a-contact.md)
-### [Remove an alias from a distribution list](../troubleshooting/remove-an-alias-from-a-distribution-list.md)
-### [Remove an alias from a group](../troubleshooting/remove-an-alias-from-a-group.md)
-### [Remove an alias from a mail-enabled security group](../troubleshooting/remove-an-alias-from-a-mail-enabled-security-group.md)
-### [Remove an alias from a shared mailbox](../troubleshooting/remove-an-alias-from-a-shared-mailbox.md)
-### [Remove an email alias](../troubleshooting/remove-an-email-alias.md)
-### [Troubleshoot email issues](../troubleshooting/troubleshoot-email-issues.md)
-### [Troubleshoot issues for admins](../troubleshooting/troubleshoot-issues-for-admins.md)
-### [Troubleshoot Office installation issues](../troubleshooting/troubleshoot-office-installation-issues.md)
+
 ### [Use registry to override default behavior with recovery](../troubleshooting/registry-override-default-behavior.md)
-### [User not seeing add-ins](../troubleshooting/user-not-seeing-add-ins.md)

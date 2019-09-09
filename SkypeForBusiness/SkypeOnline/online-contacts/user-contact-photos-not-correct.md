@@ -2,7 +2,7 @@
 title: User contact photos in Lync aren't displayed correctly
 description: Describes scenarios in which a user's contact photos don't display correctly in Microsoft Skype for Business Online in Microsoft Office 365.
 author: simonxjx
-manager: clake
+manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: skype-for-business-online

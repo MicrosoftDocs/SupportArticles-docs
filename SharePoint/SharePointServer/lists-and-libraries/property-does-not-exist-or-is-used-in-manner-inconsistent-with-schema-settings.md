@@ -1,8 +1,9 @@
 ---
 title: Property doesn't exist or is used in a manner inconsistent with schema settings
-description:
+description: Describes Property doesn't exist or is used in a manner inconsistent with schema settings error. Provides a solution.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article

@@ -2,7 +2,8 @@
 title: How to use startup folders in Excel
 description: Provides step-by-step instructions for using startup folders in Excel.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

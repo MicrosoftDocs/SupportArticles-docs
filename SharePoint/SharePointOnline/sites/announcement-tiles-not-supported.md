@@ -2,7 +2,8 @@
 title: The Announcement Tiles feature is not supported
 description: This article describes an error when you activate the Announcement Tiles feature in a SharePoint Online site, and provides a solution.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

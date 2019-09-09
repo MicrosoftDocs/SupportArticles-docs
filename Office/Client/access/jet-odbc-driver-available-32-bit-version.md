@@ -2,7 +2,8 @@
 title: OLE DB Provider for Jet and ODBC driver are 32-bit versions only
 description: Describes that there are no 64-bit versions of the Microsoft OLE DB Provider for Jet or of the Jet ODBC driver.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

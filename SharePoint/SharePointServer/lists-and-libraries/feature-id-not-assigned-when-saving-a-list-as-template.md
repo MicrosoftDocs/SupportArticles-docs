@@ -1,8 +1,9 @@
 ---
 title: Feature id not assigned when saving a list as a template
-description:
+description: Provides a solution for the issue where Feature id is not assigned when saving a list as a template.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article

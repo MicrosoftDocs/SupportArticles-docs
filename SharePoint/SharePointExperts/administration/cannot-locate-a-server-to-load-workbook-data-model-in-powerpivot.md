@@ -2,7 +2,8 @@
 title: A "We cannot locate a server to load the workbook Data Model" error in PowerPivot for SharePoint 2016 
 author: AmandaAZ
 ms.author: randring
-manager: randring
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online
