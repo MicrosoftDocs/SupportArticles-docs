@@ -2,7 +2,8 @@
 title: Sites.aspx page with My Task Web Part doesn't display content
 description: This article describes an issue where sites.aspx page doesn't display content after you add the My Tasks Web Part, and provides a solution.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

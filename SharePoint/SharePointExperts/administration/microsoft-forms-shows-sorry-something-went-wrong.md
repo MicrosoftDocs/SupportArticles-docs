@@ -2,7 +2,8 @@
 title: Microsoft Forms shows "Sorry, something went wrong"
 author: AmandaAZ
 ms.author: warrenr
-manager: warrenr
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online

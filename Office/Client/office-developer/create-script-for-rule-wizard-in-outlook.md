@@ -2,7 +2,8 @@
 title: How to create a script for the Rules Wizard in Outlook
 description: Describes how to create a script for the Rules Wizard in Outlook. When you create a rule, the Outlook Rules Wizard allows you to run a script. It helps you to perform an action on incoming mail which is not supported using the UIs in the Rules Wizard.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

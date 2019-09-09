@@ -2,7 +2,8 @@
 title: Report contains no data when you try to save the "Content viewing" audit log report in SharePoint Online
 description: Describes an issue in which you receive "Report contains no data" error when you try to save the "Content viewing" audit log report in SharePoint Online.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article

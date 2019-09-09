@@ -2,7 +2,8 @@
 title: Excel statistical functions LOGEST
 description: This article describes changes to the LOGEST statistical function in Excel.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

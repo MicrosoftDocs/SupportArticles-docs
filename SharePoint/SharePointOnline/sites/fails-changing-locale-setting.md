@@ -2,7 +2,8 @@
 title: Can't change locale setting for SharePoint Online public website
 description: The column "Site Element Id" in the list or library "Site Elements" has been marked for indexing when trying to change the locale for a SharePoint Online public site.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

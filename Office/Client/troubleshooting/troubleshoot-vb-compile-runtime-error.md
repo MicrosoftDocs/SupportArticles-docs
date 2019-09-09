@@ -2,7 +2,8 @@
 title: Troubleshoot a Visual Basic compile or runtime error in Word
 description: Describes how to troubleshoot a runtime or compile error that means there is an error in a macro or add-in attempting to run.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

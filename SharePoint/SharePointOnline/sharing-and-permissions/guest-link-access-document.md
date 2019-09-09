@@ -2,7 +2,8 @@
 title: Sorry, you cannot access this document error 
 description: This article describes an issue where Sorry, you cannot access this document error when a guest link is used to access a SharePoint Online document, and provides solutions.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

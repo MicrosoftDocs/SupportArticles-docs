@@ -2,7 +2,8 @@
 title: Excel worksheet is printed at a different size
 description: Describes a problem that may occur when you print a worksheet in Excel. The worksheet may be resized. To avoid this problem, make sure that the printer contains paper size that you selected in the printer's printing preferences.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

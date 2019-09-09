@@ -2,7 +2,8 @@
 title: Office 2007 has reached end of extended support
 description: Office 2007 has reached the end of its support lifecycle next year. Users should plan to move to Office 365 or to Office 2016.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

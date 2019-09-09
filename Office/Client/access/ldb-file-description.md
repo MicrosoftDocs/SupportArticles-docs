@@ -2,7 +2,8 @@
 title: Description of .LDB File
 description: Describes LDB files that are Microsoft Access lock information files.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

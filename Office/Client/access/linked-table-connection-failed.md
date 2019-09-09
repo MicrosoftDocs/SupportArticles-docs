@@ -2,7 +2,8 @@
 title: Linked table connection failed when using Azure AD interactive authentication
 description: You experience repetitive connection failed messages when opening objects that use an Access linked table connection.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

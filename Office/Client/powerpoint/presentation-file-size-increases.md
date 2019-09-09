@@ -2,7 +2,8 @@
 title: File size  of an existing PowerPoint presentation increases
 description: Describes the issue where the presentation file size increases when you save the presentation using PowerPoint.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

@@ -2,7 +2,8 @@
 title: Unable to cast COM object when exporting to Excel from Team Explorer 2008
 description: You cannot open a work item or collection of work items in Excel using Team Explorer 2008.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

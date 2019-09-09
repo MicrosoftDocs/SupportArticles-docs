@@ -2,7 +2,8 @@
 title: You do not have an e-mail address when you create an alert in SharePoint Online
 description: Describes an issue in which you receive "You do not have an e-mail address" error when you create an alert in SharePoint Online.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article

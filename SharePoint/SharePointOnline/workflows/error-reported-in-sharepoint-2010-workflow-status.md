@@ -2,7 +2,8 @@
 title: A Workflow Status error is reported when a SharePoint 2010 workflow stops
 description: When a workflow instance reaches the Stop Workflow action, an error that has a Correlation ID is reported to the Workflow Status page.
 author: MaryQiu1987
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: o365-solutions
 ms.topic: article

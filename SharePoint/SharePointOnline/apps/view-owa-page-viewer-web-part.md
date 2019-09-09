@@ -2,7 +2,8 @@
 title: This content cannot be displayed in a frame
 description: This article describes this content cannot be displayed in a frame error message when you view the Outlook Web App inside a Page Viewer Web Part, and provides a solution.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

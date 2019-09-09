@@ -2,7 +2,8 @@
 title: Excel 2010 not responding, hangs, freezes or stops working
 description: Provides steps to stop Excel from hanging or freezing when you open it or when you save a workbook.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

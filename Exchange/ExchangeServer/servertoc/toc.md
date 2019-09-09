@@ -4,6 +4,7 @@
 ### [Active Sync URL is in an invalid format](../active-sync/url-invalid-format.md)
 
 ## Admin Center
+### [Can't manage Exchange 2019 databases in EAC](../admin-center/can't-manage-ex19-database-eac.md)
 ### [On-premises EAC link goes to product comparison](../admin-center/o365-link-eac-redirect-product-comparison.md)
 
 ## Calendars

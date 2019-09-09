@@ -2,7 +2,8 @@
 title: Scroll bars are missing in Word for Mac
 description: Describes a problem in which the vertical and horizontal scroll bars are missing in Word for Mac. Provides two resolution methods.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

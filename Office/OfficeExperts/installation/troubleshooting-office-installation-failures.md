@@ -2,7 +2,8 @@
 title: Troubleshooting Office installation errors
 description: Describes techniques on how to determine and fix Microsoft Office installation failures. 
 author: MaryQiu1987
-manager: ericspli
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

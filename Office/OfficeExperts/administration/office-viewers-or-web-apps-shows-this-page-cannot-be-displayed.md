@@ -2,7 +2,8 @@
 title: Office viewers or Office Web Apps shows the "This page can't be displayed" error
 author: AmandaAZ
 ms.author: arhinesm
-manager: arhinesm
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online

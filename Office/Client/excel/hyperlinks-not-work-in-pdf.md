@@ -2,7 +2,8 @@
 title: Hyperlinks stop working after you save as a PDF in Office 2011
 description: Discusses that hyperlinks stop working in files that are saved to the PDF format in Excel for Mac 2011, PowerPoint for Mac 2011, and Word for Mac 2011.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

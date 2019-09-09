@@ -2,7 +2,8 @@
 title: Frequently asked questions about hyperlinks in Word
 description: Answers frequently asked questions about how to create and use hyperlinks in Word. Understanding these methods can help you use the method that best meets your requirements.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

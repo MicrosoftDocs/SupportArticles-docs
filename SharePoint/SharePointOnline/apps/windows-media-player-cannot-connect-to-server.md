@@ -2,7 +2,8 @@
 title: Windows Media Player cannot connect to the server
 description: This article describes an issue where Windows Media Player cannot connect to the server when you click a .mov or .mp4 file, and provides a solution.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

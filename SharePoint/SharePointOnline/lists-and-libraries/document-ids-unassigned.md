@@ -2,7 +2,8 @@
 title: Document ID column isn't displayed as a column in SharePoint Online
 description: Document IDs aren't assigned to items in a document library though you have enabled the Document ID Service feature on the site collection.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

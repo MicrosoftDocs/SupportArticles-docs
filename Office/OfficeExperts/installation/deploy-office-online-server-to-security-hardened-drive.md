@@ -2,7 +2,8 @@
 title: Deploy Office Web Apps 2013 or Office Online Server to a security hardened drive
 author: AmandaAZ
 ms.author: jhaak
-manager: jhaak
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online

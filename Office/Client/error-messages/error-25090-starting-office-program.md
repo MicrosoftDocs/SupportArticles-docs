@@ -2,7 +2,8 @@
 title: Error 25090 when you start an Office program
 description: Describes an error message that you may receive when you try to start an Office program.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

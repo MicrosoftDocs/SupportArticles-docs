@@ -2,7 +2,8 @@
 title: Spell Checker does not recognize misspelled words in Word 2010
 description: Provides steps to resolve an issue where the spell checker does not catch spelling mistakes in Word 2010.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

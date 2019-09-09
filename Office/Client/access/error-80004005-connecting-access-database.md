@@ -2,7 +2,8 @@
 title: Error 80004005 when using ADO or ODBC to connect an Access database
 description: You receive 80004005 when using ActiveX Data Objects (ADO) or ODBC to connect to an Access database.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

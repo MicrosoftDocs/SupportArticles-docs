@@ -2,7 +2,8 @@
 title: You cannot use external references with data validation in Excel
 description: Discusses a problem in which you cannot use external references with data validation in Excel.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

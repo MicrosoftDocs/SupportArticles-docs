@@ -2,7 +2,8 @@
 title: How to troubleshoot damaged documents in Word
 description: Describes how to identify a damaged Word document in Microsoft Office Word. Provides steps for how to recover the text and data that is contained in a document.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

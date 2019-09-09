@@ -2,7 +2,8 @@
 title: Troubleshoot mapped network drives that connect to SharePoint Online
 description: This article describes how to Troubleshoot mapped network drives that connect to SharePoint Online.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

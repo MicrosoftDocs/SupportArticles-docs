@@ -1,7 +1,8 @@
 ---
 title: Change the Software License Registration Information for Office for Mac
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

@@ -3,8 +3,8 @@ title: Sorry, something went wrong error on a Site Page with a Pages library web
 description: Describes how to resolve a 'Sorry, something went wrong' error on a Site Page with a Pages library web part added.
 author: todmccoy
 ms.author: v-todmc
-ms.reviewer: 
-manager: joselr
+manager: dcscontentpm
+localization_priority: Normal
 audience: Admin
 ms.topic: article
 ms.prod: office-perpetual-itpro

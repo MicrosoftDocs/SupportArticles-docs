@@ -2,7 +2,8 @@
 title: How to save addresses from a Word mail-merge label document to Excel
 description: Provides the detailed steps to save the addresses from a Word document that contains mail-merged labels to an Excel workbook.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

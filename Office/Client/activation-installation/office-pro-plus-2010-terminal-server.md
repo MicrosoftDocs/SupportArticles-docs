@@ -2,7 +2,8 @@
 title: Enable Office Professional Plus 2010 to run on a terminal server
 description: Discusses how to enable Office Professional Plus 2010 to run on a terminal server.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

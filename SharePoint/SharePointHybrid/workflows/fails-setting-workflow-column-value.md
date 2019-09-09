@@ -2,7 +2,8 @@
 title: Unable to set a value for publishing column using SharePoint 2013 workflow
 description: Fixes an issue in which you receive an error saying the property does not exist when setting a value for "Hyperlink with formatting and constraints for publishing" column.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

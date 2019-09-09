@@ -2,7 +2,8 @@
 title: How to create a RealTimeData server for Excel
 description: Describes how to use Visual Basic to create a RealTimeData server for use with Excel's RTD function.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

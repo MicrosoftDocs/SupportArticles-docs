@@ -2,7 +2,8 @@
 title: Relative URLs for content types across site collections is not supported
 description: This article introduces that using relative URLs for content types across site collections is not supported.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

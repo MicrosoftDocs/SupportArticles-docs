@@ -1,8 +1,9 @@
 ---
 title: How to turn off Visual Basic for Applications when you deploy Office
-description: 
+description: Describes that how to turn off Visual Basic for Applications when you deploy Office.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

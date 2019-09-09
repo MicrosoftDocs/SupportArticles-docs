@@ -1,7 +1,8 @@
 ---
 title: How to calculate ages before 1/1/1900 in Excel
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

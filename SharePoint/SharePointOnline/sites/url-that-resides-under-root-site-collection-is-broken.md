@@ -2,7 +2,8 @@
 title: A URL that resides under a SharePoint root site collection is broken after the root site collection is deleted
 description: Describes an issue in which a URL that resides under a SharePoint root site collection is broken after the root site collection is deleted.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article

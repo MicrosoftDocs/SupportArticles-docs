@@ -2,7 +2,8 @@
 title: Troubleshoot site collection upgrade issues
 description: This article describes how to troubleshoot site collection upgrade issues.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

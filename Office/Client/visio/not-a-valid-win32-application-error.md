@@ -2,7 +2,8 @@
 title: This is not a valid win32 application
 description: Discusses an issue that occurs when you try to install Office 365 ProPlus, Visio Pro for Office 365, or Project for Office 365.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: Office 365
 ms.topic: article

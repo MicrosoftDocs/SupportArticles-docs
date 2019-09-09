@@ -2,7 +2,8 @@
 title: Error when you try to update, remove, or add a Send To connection in SharePoint Online in Office 365
 description: Describes an issue when you try to update, remove, or add a Send To connection in SharePoint Online in Office 365.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article

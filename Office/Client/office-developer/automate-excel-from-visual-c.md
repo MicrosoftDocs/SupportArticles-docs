@@ -1,8 +1,9 @@
 ---
 title: How to automate Microsoft Excel from Microsoft Visual C#.NET
-description: 
+description: Describes that how to automate Microsoft Excel from Microsoft Visual C#.NET.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

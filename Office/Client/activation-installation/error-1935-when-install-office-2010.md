@@ -2,7 +2,8 @@
 title: Error 1935 when you try to install Microsoft Office 2010 or 2007
 description: Provides steps to fix 1935 setup errors you may see when you install Office 2010 or 2007 suites or stand-alone products.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article

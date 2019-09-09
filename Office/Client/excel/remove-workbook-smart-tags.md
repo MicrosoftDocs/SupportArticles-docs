@@ -2,7 +2,8 @@
 title: How to remove smart tags from a workbook in Excel
 description: Describes how to remove smart tags from a workbook in Excel.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

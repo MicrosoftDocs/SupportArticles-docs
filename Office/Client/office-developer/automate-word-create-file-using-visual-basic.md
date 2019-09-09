@@ -2,7 +2,8 @@
 title: How to Automate Microsoft Word by using Visual Basic to create a new document
 description: Describes how to create a new document in Word by using Automation from Visual Basic.
 author: simonxjx
-manager: willchen
+manager: dcscontentpm
+localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
