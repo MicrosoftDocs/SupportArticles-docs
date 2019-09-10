@@ -140,7 +140,7 @@ Message traces for items more than 7 days old are only available as a downloadab
 
 - To view a list of traces that were run for items that are more than 7 days old, click **View pending or completed traces** in the message trace tool.
 
-    ![Screenshot of the message trace tool with a cursor hovering over the "View pending or completed traces" link.](../media/email-delivery-issues/email-delivery-issues/57ceaf75-a6c9-4f83-b158-a59026bb8bd4.png)
+    ![Screenshot of the message trace tool with a cursor hovering over the "View pending or completed traces" link.](../media/email-delivery-issues/57ceaf75-a6c9-4f83-b158-a59026bb8bd4.png)
 
     In the resulting UI, the list of traces is sorted based on the date and time that they were submitted, with the most recent submissions appearing first.
 
