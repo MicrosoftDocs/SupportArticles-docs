@@ -58,7 +58,7 @@
 ### [554 5.2.0 STOREDRV.Deliver.Exception](../mail-delivery/mapiexceptionnotfound-ndr.md)
 ### [Find and fix email delivery issues](../mail-delivery/email-delivery-issues.md)
 ### [IMCEAEX non-delivery report](../mail-delivery/imceaex-ndr.md)
-### [Mail delivery issues](../mail-delivery/mail-issues.md)
+### [Non-delivery report error codes](../mail-delivery/mail-issues.md)
 
 ## Meetings
 ### [No conference rooms with Room Finders](../meetings/conference-rooms-not-dispalyed.md)
@@ -67,8 +67,8 @@
 ### [Can't see free/busy information](../move-mailboxes/cannot-see-free-busy-information.md)
 
 ## Outlook Connectivity
-### [Outlook connection issues](../outlook-connectivity/outlook-connection-issues.md)
 ### [Resources to fix connection issues](../outlook-connectivity/office-365-troubleshooting-resources.md)
+### [Sending and receiving email](../outlook-connectivity/outlook-connection-issues.md)
 
 ## Outlook Profiles
 ### [Can't set up profile with Autodiscover](../outlook-profiles/cannot-set-up-profile-autodiscover.md)

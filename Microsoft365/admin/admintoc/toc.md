@@ -75,7 +75,7 @@
 ### [Your account has been blocked](../authentication/account-blocked-error-when-sign-in.md)
 
 ## Installation
-### [Troubleshoot issues for admins](../installation/install-apps.md)
+### [Install Office 365 apps](../installation/install-apps.md)
 ### [All applications are installed when installing Skype for Business](../installation/install-skype-for-business-2016.md)
 
 ## Licensing
