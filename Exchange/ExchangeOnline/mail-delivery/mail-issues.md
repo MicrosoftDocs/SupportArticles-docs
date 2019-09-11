@@ -19,33 +19,7 @@ ROBOTS: NOINDEX
 description: Get help for solving email connection and delivery problems.
 ---
 
-# Mail delivery issues
-
-Email not working? Can't connect or not getting through? Expand an option below to find out how to diagnose and fix problems.
-  
-### Trace where messages are getting stuck
-
-If you're an Office 365 Midsize Business, Office 365 Business, or Office 365 Enterprise admin, you access and run the message trace tool through the Exchange admin center. To get there, do the following:
-  
-1. Sign in to Office 365 for business with your work or school account. 
-
-2. Go to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange admin center</a>.
-  
-3. Under **mail flow**, go to **message trace**.
-
-If you're an Office 365 Small Business admin, do the following to find message trace:
-  
-1. Go to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Security & Compliance admin center</a>.
-
-2. In the left navigation, select **Mail flow** \> **Message trace**.
-
-When you run into problems with email, these resources can help you solve email connection and delivery problems.
-
-First, check out **[these Outlook troubleshooters](https://go.microsoft.com/fwlink/p/?LinkId=724310)**.
-
-There you'll find top solutions to email issues, frequently asked questions answered by the Office team, the US support number, and a section where you can email us about your specific problem.
-
-## Look up help by error code
+# Non-delivery report error codes
 
 When Office 365 can't deliver email you sent, you'll receive an email notification called a [non-delivery report](https://go.microsoft.com/fwlink/p/?LinkId=524931). Find your error code for specific help with getting your email delivered:
 
@@ -81,6 +55,3 @@ When Office 365 can't deliver email you sent, you'll receive an email notificati
 - [Message trace in the Security & Compliance Center](https://docs.microsoft.com/en-us/office365/securitycompliance/message-trace-scc?redirectSourcePath=%252farticle%252f3e64f99d-ac33-4aba-91c5-9cb4ca476803)
 
 - [Troubleshoot Office 365 mail flow](https://docs.microsoft.com/en-us/exchange/mail-flow-best-practices/troubleshoot-mail-flow)
-
-> [!NOTE]
-> If you're using Office 365 operated by 21Vianet in China, please [contact the 21Vianet support team](https://docs.microsoft.com/office365/admin/contact-support-for-business-products).
