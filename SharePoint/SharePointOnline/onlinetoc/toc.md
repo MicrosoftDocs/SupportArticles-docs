@@ -74,7 +74,6 @@
 ### [Information about manual migration](../migration-tool/content-manual-migration.md)
 
 ## Performance
-### [A site collection has exceeded its usage quota](../performance/site-collection-has-exceeded-its-usage-quota-or-it-is-running-out-of-resources.md)
 ### [Can't reach the server when sharing files](../Performance/share-file-unable-reach-the-server.md)
 ### [Performance troublehsooter for SharePoint Online](../Performance/sharepoint-online-performance-troubleshooter.md)
 ### [Publishing pages take longer than expected to load](../Performance/publishing-pages-take-longer-to-load.md)
