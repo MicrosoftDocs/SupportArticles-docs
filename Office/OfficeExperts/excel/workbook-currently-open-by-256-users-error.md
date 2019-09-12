@@ -24,7 +24,7 @@ description: "Describes how to resolve a shared workbook error when opening an O
 ## Symptoms
 You receive the following error when opening an Excel workbook that is stored on SharePoint or OneDrive:
 
-> "The workbook is currently open by 256 users. A maximum of 256 users can have a shared workbook open at the same time.<br/><br/>
+   > "The workbook is currently open by 256 users. A maximum of 256 users can have a shared workbook open at the same time.<br/>
 The workbook will be opened read-only. You can try again later when one or more users have closed the workbook."
 
 ## Cause
