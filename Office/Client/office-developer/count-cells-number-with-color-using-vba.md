@@ -4,6 +4,8 @@ description: Create User Defined Function (UDF) to count the number of cells wit
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

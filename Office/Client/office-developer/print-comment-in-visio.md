@@ -4,6 +4,8 @@ description: Contains a macro that you can use to print  comments that are added
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

@@ -4,6 +4,8 @@ description: Discusses a problem in which you receive an 12029 error message and
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article

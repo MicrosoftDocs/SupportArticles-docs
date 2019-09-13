@@ -4,6 +4,8 @@ description: Discusses an issue in which there's an empty or read-only contact l
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article

@@ -4,6 +4,8 @@ description: Describes an issue that blocks you from joining a Skype Meeting Bro
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article

@@ -4,6 +4,8 @@ description: Discusses that hyperlinks stop working in files that are saved to t
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

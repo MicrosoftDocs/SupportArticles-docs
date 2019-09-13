@@ -4,6 +4,8 @@ description: you have a SharePoint group that contains many users, and the group
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

@@ -4,6 +4,8 @@ description: Explains how to embed a link in a Visio drawing to a named region i
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

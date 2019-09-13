@@ -4,6 +4,8 @@ description: Provides a step-by-step guide about how to use the Windows registry
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

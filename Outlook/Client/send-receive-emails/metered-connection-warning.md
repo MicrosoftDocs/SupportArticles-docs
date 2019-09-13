@@ -4,6 +4,8 @@ description: Describes an issue that blocks Outlook 2016 or Outlook 2013 from se
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

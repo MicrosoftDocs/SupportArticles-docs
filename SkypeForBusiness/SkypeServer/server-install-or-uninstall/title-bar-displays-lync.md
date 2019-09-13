@@ -4,6 +4,8 @@ description: Discusses an issue in which Lync is displayed in the title bar of L
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article

@@ -4,6 +4,8 @@ description: provides a method to create recurring e-mail messages in Outlook.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

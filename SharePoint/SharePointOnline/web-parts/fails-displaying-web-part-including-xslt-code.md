@@ -4,6 +4,8 @@ description: You cannot display a SharePoint Online Web Part with custom XSLT co
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

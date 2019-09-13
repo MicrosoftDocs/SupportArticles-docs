@@ -4,6 +4,8 @@ description: When you try to insert a synced file in Excel 2019, the icon is dis
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

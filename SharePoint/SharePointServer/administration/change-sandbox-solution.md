@@ -4,6 +4,8 @@ description: Describes how to change an existing Sandbox solution that's created
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

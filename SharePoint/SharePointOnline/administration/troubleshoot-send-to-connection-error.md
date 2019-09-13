@@ -4,6 +4,8 @@ description: Describes an issue when you try to update, remove, or add a Send To
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article

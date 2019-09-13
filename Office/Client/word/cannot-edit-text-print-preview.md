@@ -4,6 +4,8 @@ description: Resolves an issue in which you cannot use Edit mode in print previe
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

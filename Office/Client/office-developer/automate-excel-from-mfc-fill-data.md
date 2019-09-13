@@ -4,6 +4,8 @@ description: Describes how to automate Excel from Visual C++ 2005 or Visual C++ 
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article

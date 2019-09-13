@@ -3,6 +3,8 @@ title: The Great Skype for Business Memory Mystery
 author: TobyTu
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article

@@ -4,6 +4,8 @@ description: Describes an issue that occurs after you perform a system recovery 
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
