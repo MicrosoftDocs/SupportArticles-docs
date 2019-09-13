@@ -4,6 +4,8 @@ description: Describes a scenario where you receive an error message when you tr
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office 365
 ms.topic: article

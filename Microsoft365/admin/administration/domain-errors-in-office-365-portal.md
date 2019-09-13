@@ -4,6 +4,8 @@ description: Describes all domain error messages that you may experience in the 
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: office 365
 ms.topic: article

@@ -4,6 +4,8 @@ description: Describes a behavior in which an unexpected number of days is retur
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

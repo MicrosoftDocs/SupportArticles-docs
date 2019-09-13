@@ -4,6 +4,8 @@ description: Describes a behavior in which  you cannot paste cell attributes fro
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

@@ -4,6 +4,8 @@ description: This article was created to understand the new ODT to allow IT admi
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office 365
 ms.topic: article

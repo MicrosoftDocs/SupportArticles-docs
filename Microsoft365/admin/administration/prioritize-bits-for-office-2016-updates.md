@@ -4,6 +4,8 @@ description: Describes how to use BITS for Office 2016 clients to download updat
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

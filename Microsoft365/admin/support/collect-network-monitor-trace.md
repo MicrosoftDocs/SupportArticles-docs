@@ -4,6 +4,8 @@ description: Describes how to troubleshoot a network issue by using Network Moni
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: Office 365
 ms.topic: article

@@ -4,6 +4,8 @@ description: Discusses an issue in which you can't delete a domain from Office 3
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: office 365
 ms.topic: article

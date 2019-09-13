@@ -4,6 +4,8 @@ description: Discusses how to troubleshoot issues  that affect the ability to si
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: office 365
 ms.topic: article

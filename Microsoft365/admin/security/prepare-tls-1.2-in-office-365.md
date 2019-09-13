@@ -4,6 +4,8 @@ description: How to prepare to use TLS 1.2 for all client-server and browser-ser
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office 365
 ms.topic: article

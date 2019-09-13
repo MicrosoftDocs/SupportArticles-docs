@@ -4,6 +4,8 @@ description: Provides an overview of various AD FS implementation scenarios for 
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office 365
 ms.topic: article

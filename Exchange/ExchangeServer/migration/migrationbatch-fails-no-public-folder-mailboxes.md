@@ -8,6 +8,8 @@ audience: ITPro
 ms.prod: Exchange Server
 ms.topic: article
 ms.author: Bhalchandra.Atre
+search.appverid: 
+- MET150
 appliesto:
 - Exchange Server 2013
 - Exchange Server 2016

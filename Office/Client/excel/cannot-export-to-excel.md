@@ -4,6 +4,8 @@ description: Export to excel from SharePoint Online doesn't work, An unexpected 
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

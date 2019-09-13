@@ -4,6 +4,8 @@ description: Describes that an Office Professional Plus 2010 user receives an "U
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: office 365
 ms.topic: article

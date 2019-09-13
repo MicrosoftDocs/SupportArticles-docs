@@ -4,6 +4,8 @@ description: Describes how to determine whether your Office 365 account has been
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: office 365
 ms.topic: article

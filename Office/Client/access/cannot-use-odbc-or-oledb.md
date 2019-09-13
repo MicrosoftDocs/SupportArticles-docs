@@ -4,6 +4,8 @@ description: Fixes an issue in which you cannot create an ODBC DSN for drivers p
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
