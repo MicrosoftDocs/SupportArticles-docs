@@ -4,6 +4,8 @@ description: Describes how to fix an issue in which the calls to the call queues
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article

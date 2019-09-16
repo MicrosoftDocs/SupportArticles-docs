@@ -4,6 +4,8 @@ description: When attempting to view a PowerPoint Presentation or a Word documen
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article

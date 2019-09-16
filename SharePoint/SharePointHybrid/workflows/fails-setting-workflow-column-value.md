@@ -4,6 +4,8 @@ description: Fixes an issue in which you receive an error saying the property do
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

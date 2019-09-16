@@ -4,6 +4,8 @@ description: SharePoint customizations to the Office 365 top navigation revert t
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

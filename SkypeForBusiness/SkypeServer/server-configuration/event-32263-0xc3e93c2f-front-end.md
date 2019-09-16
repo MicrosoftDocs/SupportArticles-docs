@@ -4,6 +4,8 @@ description: Event 32263 "SIPPROXY_E_UNKNOWN_USER_OR_EPID" is logged on Front En
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article

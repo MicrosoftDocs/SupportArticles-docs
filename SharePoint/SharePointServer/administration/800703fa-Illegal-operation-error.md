@@ -4,6 +4,8 @@ description: Discusses an issue in which you receive a "800703fa Illegal operati
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article

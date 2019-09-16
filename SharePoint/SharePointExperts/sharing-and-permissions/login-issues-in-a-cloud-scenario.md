@@ -4,10 +4,11 @@ author: AmandaAZ
 ms.author: joergsi
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online
-localization_priority: Normal
 appliesto:
 - SharePoint Designer 2013
 - SharePoint Online

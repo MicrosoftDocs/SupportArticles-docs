@@ -4,6 +4,8 @@ description: Describes an issue that triggers a Background task activation is sp
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: Office 365
 ms.topic: article

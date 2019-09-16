@@ -4,6 +4,8 @@ description: Fails to set a company as default because of an unregistered ADO Ob
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

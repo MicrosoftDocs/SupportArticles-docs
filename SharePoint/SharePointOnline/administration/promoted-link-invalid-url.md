@@ -4,6 +4,8 @@ description: You cannot open a link to a local file that uses the file:// protoc
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

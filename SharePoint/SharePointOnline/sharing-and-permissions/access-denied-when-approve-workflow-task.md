@@ -4,6 +4,8 @@ description: Describes an issue in which Access denied when a user tries to appr
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article

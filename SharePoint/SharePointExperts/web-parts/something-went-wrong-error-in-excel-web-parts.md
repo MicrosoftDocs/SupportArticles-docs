@@ -4,10 +4,11 @@ author: AmandaAZ
 ms.author: remcgurk
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online
-localization_priority: Normal
 appliesto:
 - Microsoft SharePoint
 ---

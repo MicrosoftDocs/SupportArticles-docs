@@ -4,6 +4,8 @@ description: Describes an issue in which you Excel survey does not have full fun
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article

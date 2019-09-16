@@ -4,6 +4,8 @@ description: Describes an issue where Excel takes a long to complete the recalcu
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

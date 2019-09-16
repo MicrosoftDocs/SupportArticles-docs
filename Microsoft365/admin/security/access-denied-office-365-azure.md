@@ -4,6 +4,8 @@ description: Describes an issue in which you can't connect to a Microsoft cloud 
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: office 365
 ms.topic: article

@@ -4,6 +4,8 @@ description: Describes a problem in which the Products Preparation Tool in Share
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article

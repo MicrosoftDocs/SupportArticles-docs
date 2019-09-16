@@ -4,6 +4,8 @@ description: You cannot open Word documents that's created by SharePoint 2010 Wo
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

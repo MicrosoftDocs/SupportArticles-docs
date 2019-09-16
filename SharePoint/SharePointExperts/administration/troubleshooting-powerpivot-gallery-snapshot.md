@@ -3,6 +3,8 @@ title: PowerPivot for SharePoint 2016 Gallery Snapshots Fail for SSL Host Header
 author: AmandaAZ  
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: sharepoint
 ms.topic: article

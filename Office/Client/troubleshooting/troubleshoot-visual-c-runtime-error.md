@@ -3,6 +3,8 @@ title: Troubleshooting a Visual C++ runtime error in Word
 description: Describes how to locate the COM Add-in causing a Visual C++ runtime error in Word and disable the add-in.
 author: simonxjx
 manager: dcscontentpm
+search.appverid: 
+- MET150
 localization_priority: Normal
 audience: ITPro
 ms.service: office-perpetual-itpro

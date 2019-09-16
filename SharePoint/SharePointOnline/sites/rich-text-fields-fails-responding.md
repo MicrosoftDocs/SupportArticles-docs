@@ -4,6 +4,8 @@ description: When you use Internet Explorer to access a SharePoint Online or Sha
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

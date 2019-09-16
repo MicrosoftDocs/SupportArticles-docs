@@ -4,6 +4,8 @@ description: The webpage cannot be found or 404 NOT FOUND when an external user 
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

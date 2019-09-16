@@ -4,6 +4,8 @@ description: You cannot start a Skype for Business video call with a Logitech Br
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article

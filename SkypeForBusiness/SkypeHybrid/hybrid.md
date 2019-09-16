@@ -3,6 +3,8 @@ title: Listing some issues for Skype for Business Hybrid.
 author: simonxjx
 manager: willchen
 audience: ITPro
+search.appverid: 
+- MET150
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six

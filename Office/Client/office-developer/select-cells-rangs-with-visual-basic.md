@@ -4,6 +4,8 @@ description: Describes how to select cells or ranges by using Visual Basic proce
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

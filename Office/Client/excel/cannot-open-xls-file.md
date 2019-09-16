@@ -4,6 +4,8 @@ description: Describes a resolution to a problem in which you cannot open .xls f
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

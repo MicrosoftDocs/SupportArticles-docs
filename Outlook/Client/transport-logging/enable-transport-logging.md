@@ -4,6 +4,8 @@ description: Explains how to enable logging of the communications that occur bet
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

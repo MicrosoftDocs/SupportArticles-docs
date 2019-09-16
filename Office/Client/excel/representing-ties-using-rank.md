@@ -4,6 +4,8 @@ description: Describes how to use RANK to give an average rank value to tied obs
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

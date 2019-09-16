@@ -4,6 +4,8 @@ description: Describes an issue that may occur if you do not have a volume-licen
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

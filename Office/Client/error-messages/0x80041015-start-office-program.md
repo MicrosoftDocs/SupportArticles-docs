@@ -4,6 +4,8 @@ description: Discusses that you receive a 0x80041015 error when you try to start
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: Office 365
 ms.topic: article

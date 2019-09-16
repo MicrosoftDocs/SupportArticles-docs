@@ -4,6 +4,8 @@ description: Describes how you receive an error message and you cannot log on to
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article

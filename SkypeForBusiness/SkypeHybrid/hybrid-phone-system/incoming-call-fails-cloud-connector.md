@@ -4,6 +4,8 @@ description: Describes an issue that triggers a “We’re sorry, we cannot comp
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article

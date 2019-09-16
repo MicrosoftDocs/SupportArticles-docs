@@ -4,6 +4,8 @@ description: Describes how to use an IFilter as an alternative to the built-in P
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article

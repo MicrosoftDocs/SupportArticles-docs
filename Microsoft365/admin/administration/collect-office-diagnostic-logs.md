@@ -4,6 +4,8 @@ description: Describes how to collect Office diagnostic logs for Office support 
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office 365
 ms.topic: article

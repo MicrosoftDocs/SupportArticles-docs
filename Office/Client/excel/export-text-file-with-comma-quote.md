@@ -4,6 +4,8 @@ description: Provides the procedure to export a text file with both comma and qu
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

@@ -3,6 +3,8 @@ title: Apply different passwords or permissions to separate ranges in workbooks
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

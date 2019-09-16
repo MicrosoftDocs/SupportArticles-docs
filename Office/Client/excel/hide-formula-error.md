@@ -5,6 +5,8 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
+search.appverid: 
+- MET150
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six

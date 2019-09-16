@@ -4,6 +4,8 @@ description: Provides steps to resolve an issue where the spell checker does not
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

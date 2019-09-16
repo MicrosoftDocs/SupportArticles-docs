@@ -4,6 +4,8 @@ description: Describes how to block OneDrive.exe from being advertised after you
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article

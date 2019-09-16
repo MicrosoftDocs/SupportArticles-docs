@@ -4,6 +4,8 @@ description: Describes how to enable the Online Meeting Add-in for Microsoft Lyn
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
