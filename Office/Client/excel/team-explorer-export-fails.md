@@ -4,6 +4,8 @@ description: You cannot open a work item or collection of work items in Excel us
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

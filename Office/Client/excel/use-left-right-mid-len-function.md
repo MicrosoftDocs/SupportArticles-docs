@@ -4,6 +4,8 @@ description: Describes how to use the left, right, mid, and len functions in Vis
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

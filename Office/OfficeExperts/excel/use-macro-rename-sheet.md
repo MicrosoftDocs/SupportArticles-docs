@@ -4,6 +4,8 @@ description: This article is made to help you to manage worksheet specially rena
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

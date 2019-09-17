@@ -4,6 +4,8 @@ description: Describes an issue in which you can't add yourself to the Members l
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 audience: ITPro
 ms.service: skype-for-business-online

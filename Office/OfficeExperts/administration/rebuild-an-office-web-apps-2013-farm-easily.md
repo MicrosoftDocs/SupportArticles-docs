@@ -4,6 +4,8 @@ author: AmandaAZ
 ms.author: brbering
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online

@@ -4,6 +4,8 @@ description: Describes TLS 1.0 and 1.1 deprecation for Office 365.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article

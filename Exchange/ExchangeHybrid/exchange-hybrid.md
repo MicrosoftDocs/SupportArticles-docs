@@ -6,6 +6,8 @@ audience: ITPro
 ms.prod: exchange-server-it-pro
 ms.topic: article
 ms.author: v-six
+search.appverid: 
+- MET150
 ---
 
 # Hybrid Deployment Troubleshooting

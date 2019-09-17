@@ -4,6 +4,8 @@ description: Describes an issue in which slow refresh or blurry desktop occurs w
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article

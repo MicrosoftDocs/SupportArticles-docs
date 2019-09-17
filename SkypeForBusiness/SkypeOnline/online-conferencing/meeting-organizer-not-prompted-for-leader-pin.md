@@ -4,6 +4,8 @@ description: Discusses a scenario in which the dial-in conference organizer isn'
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article

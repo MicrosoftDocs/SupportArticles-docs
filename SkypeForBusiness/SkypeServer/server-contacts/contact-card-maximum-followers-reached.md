@@ -4,6 +4,8 @@ description: The Lync  contact will not display presence and display a Maximum F
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article

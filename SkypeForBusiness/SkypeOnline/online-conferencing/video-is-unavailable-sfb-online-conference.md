@@ -4,6 +4,8 @@ description: Describes that video is unavailable in Skype for Business Online co
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article

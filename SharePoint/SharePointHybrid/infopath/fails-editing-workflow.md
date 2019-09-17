@@ -4,6 +4,8 @@ description: You must first install Microsoft InfoPath 2013 when editing an Info
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

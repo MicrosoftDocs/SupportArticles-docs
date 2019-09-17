@@ -4,6 +4,8 @@ description: You have added the Edit (link to edit item) column to a SharePoint 
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

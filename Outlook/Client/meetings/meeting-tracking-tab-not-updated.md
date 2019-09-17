@@ -4,6 +4,8 @@ description: In Outlook, the meeting tracking tab for a meeting that you organiz
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

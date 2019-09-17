@@ -4,6 +4,8 @@ description: Works around an issue in which a Trust Model dialog box appears whe
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article

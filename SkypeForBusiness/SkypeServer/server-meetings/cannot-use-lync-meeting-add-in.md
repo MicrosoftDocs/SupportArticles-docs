@@ -4,6 +4,8 @@ description: Describes an issue in which the delegate receives You do not have p
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article

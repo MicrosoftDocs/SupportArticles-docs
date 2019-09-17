@@ -4,6 +4,8 @@ description: You cannot connect a Windows SharePoint Services 2.0 or a Windows S
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

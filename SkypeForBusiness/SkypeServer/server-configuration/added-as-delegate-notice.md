@@ -4,6 +4,8 @@ description: Fixes an issue in which a Skype for Business or Lync user is prompt
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article

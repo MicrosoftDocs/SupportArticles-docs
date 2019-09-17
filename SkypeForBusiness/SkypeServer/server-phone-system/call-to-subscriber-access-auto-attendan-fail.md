@@ -4,6 +4,8 @@ description: You receive a 500 Server Internal error message and a fast busy sig
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article

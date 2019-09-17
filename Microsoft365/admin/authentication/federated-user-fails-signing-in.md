@@ -4,6 +4,8 @@ description: Describes an issue in which a federated users receive an error mess
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: o365-administration
 ms.topic: article

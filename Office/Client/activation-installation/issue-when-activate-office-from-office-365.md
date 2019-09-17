@@ -4,6 +4,8 @@ description: Describes how to troubleshoot Office from Office 365 installation a
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office 365
 ms.topic: article

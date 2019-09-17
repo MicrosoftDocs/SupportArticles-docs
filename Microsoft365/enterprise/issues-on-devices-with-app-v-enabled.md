@@ -4,6 +4,8 @@ description: Add-ins and LOB apps delivered with App-V fail to interact with ins
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: o365-solutions
 ms.topic: article

@@ -4,6 +4,8 @@ description: Describes installing multiple Office versions on a computer with RD
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: Office 365
 ms.topic: article

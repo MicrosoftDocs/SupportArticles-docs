@@ -4,6 +4,8 @@ description: If the site, folder, or file is already shared with more than 30 us
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

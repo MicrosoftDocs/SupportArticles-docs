@@ -4,6 +4,8 @@ description: Fixes issues in which you cannot open a Word, Excel or PowerPoint f
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

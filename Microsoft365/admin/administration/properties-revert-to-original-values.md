@@ -4,6 +4,8 @@ description: Describes an issue in which the properties of user accounts revert 
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: o365-administration
 ms.topic: article

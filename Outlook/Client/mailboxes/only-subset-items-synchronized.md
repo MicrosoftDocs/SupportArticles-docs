@@ -4,6 +4,8 @@ description: Discusses that only a subset of your Exchange mailbox items are syn
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: exchange-powershell
 ms.topic: article

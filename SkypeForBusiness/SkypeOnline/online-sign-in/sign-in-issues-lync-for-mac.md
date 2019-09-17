@@ -4,6 +4,8 @@ description: Contains information about how to troubleshoot Lync for Mac issues 
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article

@@ -4,6 +4,8 @@ description: This article describes an issue where the Sync to Outlook button an
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

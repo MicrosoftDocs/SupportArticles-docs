@@ -4,6 +4,8 @@ description: Describes how to retrieve the names of macros from an Excel workboo
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

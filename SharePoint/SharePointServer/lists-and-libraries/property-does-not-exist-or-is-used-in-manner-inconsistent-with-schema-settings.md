@@ -4,6 +4,8 @@ description: Describes Property doesn't exist or is used in a manner inconsisten
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article

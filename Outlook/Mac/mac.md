@@ -2,6 +2,8 @@
 title: Listing some issues for Outlook for Mac.
 author: simonxjx
 manager: willchen
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

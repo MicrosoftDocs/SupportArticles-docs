@@ -4,6 +4,8 @@ description: Describes the algorithm used by the XIRR() function in Excel to com
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
