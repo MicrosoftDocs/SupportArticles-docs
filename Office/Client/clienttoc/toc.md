@@ -110,6 +110,7 @@
 ### [Excel opening blank](../excel/excel-opens-blank.md)
 ### [Export a text file with both comma and quote delimiters](../excel/export-text-file-with-comma-quote.md)
 ### [FALSE result with the ISBLANK() function](../excel/isblank-function-return-false.md)
+### [First sheet name displays different language](../excel/first-sheet-name-displays-different-language.md)
 ### [Formatted text is limited to 240 characters per line](../excel/prn-file-limited-to-240-characters.md)
 ### [Formula errors when list separater isn't set](../excel/formula-errors.md)
 ### [Formulas to count text occurrences in Excel](../excel/formulas-to-count-occurrences-in-excel.md)
