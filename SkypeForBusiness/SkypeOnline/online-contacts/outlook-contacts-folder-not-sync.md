@@ -34,7 +34,7 @@ To work around this issue, you can remove the contacts in the Outlook Skype for 
 > [!NOTE]
 > The steps to remove the contacts in the Contacts folder should only be performed by an administrator. After the following steps are performed, the Contacts folder will remain, but the contacts won't. And the contacts will no longer cause stale information to replicate.
 
-1. Download and install MFCMapi from the following Microsoft website: [MFCMAPI](http://mfcmapi.codeplesx.com/).
+1. Download and install MFCMapi from the following Microsoft website: [MFCMAPI](https://mfcmapi.codeplex.com).
 2. Close Skype for Business and Microsoft Outlook.   
 3. Open MFCMapi. If you're prompted, click **OK** on the usage notes box. 
 
