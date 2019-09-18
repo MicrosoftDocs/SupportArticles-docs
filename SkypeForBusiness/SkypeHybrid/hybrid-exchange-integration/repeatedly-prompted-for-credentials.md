@@ -4,6 +4,8 @@ description: Describes an issue in which you are repeatedly prompted for a user 
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article

@@ -4,6 +4,8 @@ description: If you begin IP address enforcement for OneDrive for Business, you'
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office 365
 ms.topic: article

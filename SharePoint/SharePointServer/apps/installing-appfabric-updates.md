@@ -4,6 +4,8 @@ description: Updates to AppFabric on SharePoint 2013 are applied via AppFabric u
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article

@@ -3,6 +3,8 @@ title: Listing some issues for SharePoint Server.
 author: simonxjx
 manager: willchen
 audience: ITPro
+search.appverid: 
+- MET150
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six

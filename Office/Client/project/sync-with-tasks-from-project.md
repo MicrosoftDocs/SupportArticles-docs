@@ -4,6 +4,8 @@ description: Describes a Project Professional feature that lets you sync .mpp fi
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: project-server-itpro
 ms.topic: article

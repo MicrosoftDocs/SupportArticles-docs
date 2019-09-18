@@ -4,6 +4,8 @@ description: Discusses that app passwords that are used for Azure Multi-Factor A
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: o365-administration
 ms.topic: article

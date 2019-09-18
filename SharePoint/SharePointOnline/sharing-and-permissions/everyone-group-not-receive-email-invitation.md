@@ -4,6 +4,8 @@ description: This article describes an issue that users who are in the "Everyone
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

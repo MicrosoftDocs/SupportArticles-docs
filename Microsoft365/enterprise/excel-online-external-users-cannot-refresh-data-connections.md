@@ -4,6 +4,8 @@ description: One or more data connections in this workbook can not be refreshed 
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: o365-solutions
 ms.topic: article

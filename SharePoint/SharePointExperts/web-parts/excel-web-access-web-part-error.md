@@ -4,6 +4,8 @@ description: This article describes SharePoint 2016 Excel Web Access Web Part er
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

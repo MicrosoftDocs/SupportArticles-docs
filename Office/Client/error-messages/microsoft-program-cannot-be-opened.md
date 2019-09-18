@@ -4,6 +4,8 @@ description: Describes an error that occurs when you open a Microsoft Office for
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

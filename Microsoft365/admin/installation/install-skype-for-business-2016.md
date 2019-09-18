@@ -4,6 +4,8 @@ description: Explains that when you install Skype for Business 2016 from the Off
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: Office 365
 ms.topic: article

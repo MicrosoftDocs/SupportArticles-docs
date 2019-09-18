@@ -3,6 +3,8 @@ title: Users removed from Enterprise Resource Pool group sync are not inactivate
 description: Provides solutions for the issue where users removed from Enterprise Resource Pool group sync are not inactivated.
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 author: simonxjx
 audience: ITPro
 ms.service: project-online

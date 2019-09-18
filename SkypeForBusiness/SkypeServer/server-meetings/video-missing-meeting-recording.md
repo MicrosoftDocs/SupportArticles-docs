@@ -4,6 +4,8 @@ description: Discusses a problem in which the video track is missing from a Skyp
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article

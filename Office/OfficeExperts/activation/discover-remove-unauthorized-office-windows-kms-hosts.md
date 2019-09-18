@@ -4,6 +4,8 @@ description: Describes how to discover Office and Windows KMS hosts through DNS,
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

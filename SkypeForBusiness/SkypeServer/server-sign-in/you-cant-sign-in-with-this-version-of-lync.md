@@ -4,6 +4,8 @@ description: Fixes an issue that triggers You can't sign in with this version of
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article

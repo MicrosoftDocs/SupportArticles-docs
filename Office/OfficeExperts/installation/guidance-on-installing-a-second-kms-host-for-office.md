@@ -4,6 +4,8 @@ description: Volume license editions Office 2010 support KMS activation. This ar
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

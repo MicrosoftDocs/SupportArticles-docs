@@ -3,6 +3,8 @@ title: Listing some issues for SharePoint Online.
 author: simonxjx
 manager: willchen
 audience: ITPro
+search.appverid: 
+- MET150
 ms.service: sharepoint-online
 ms.topic: article
 ms.author: v-six

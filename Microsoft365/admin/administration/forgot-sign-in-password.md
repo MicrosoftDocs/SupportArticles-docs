@@ -4,6 +4,8 @@ description: Describes a scenario in which a user or an administrator forgets hi
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: o365-administration
 ms.topic: article

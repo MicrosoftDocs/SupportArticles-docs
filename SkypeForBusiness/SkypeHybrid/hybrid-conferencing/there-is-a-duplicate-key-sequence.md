@@ -4,6 +4,8 @@ description: Describes an error in Lync Server, Skype for Business Server, and S
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article

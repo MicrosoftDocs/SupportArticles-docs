@@ -4,6 +4,8 @@ description: Fixes an issue that triggers a "MAPI unavailable" error in a Skype 
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article

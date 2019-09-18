@@ -8,6 +8,8 @@ audience: ITPro
 ms.topic: article 
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
+search.appverid: 
+- MET150
 ms.custom: CI 106436
 ms.reviewer: aruiz, EXOL_Triage
 appliesto:

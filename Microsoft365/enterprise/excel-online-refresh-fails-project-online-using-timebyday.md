@@ -4,6 +4,8 @@ description: You can't refresh Project Online data in Excel Online with an "Exte
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: o365-solutions
 ms.topic: article

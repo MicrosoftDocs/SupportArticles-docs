@@ -2,6 +2,7 @@
 
 ## Email Messages
 ### [Create recurring reminder email](../email-messages/create-recurring-email.md)
+### [Multiple slashes are changed to one slash](../email-messages/url-multiple-slashes-become-single-slash.md)
 
 ## Extended MAPI Solutions
 ### [Permission isn't exposed to OAuth tokens](../extended-mapi-solutions/expose-permissions-issue-with-mapi-oauth-tokens.md)

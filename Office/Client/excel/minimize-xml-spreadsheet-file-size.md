@@ -4,6 +4,8 @@ description: Describes methods to minimize the XML Spreadsheet file size.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

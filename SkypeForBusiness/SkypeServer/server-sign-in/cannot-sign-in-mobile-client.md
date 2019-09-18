@@ -4,6 +4,8 @@ description: Describes an issue in Lync Mobile  that occurs because of certifica
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article

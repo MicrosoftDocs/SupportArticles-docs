@@ -4,6 +4,8 @@ description: Discusses that you see a blank screen when you try to open an Excel
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

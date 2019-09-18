@@ -4,6 +4,8 @@ description: Discusses that you receive a "You are operating in a split-domain (
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article

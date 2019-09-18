@@ -4,6 +4,8 @@ description: Describes the scenarios in which Conversation history, contact card
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article

@@ -4,6 +4,8 @@ description: Describes how to use Office 365 PowerShell to manage Microsoft Plan
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article

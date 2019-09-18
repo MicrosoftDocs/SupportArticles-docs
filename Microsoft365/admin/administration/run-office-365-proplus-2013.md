@@ -4,6 +4,8 @@ description: Describes how to avoid having your Office 365 ProPlus 2013 installa
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: Office 365
 ms.topic: article

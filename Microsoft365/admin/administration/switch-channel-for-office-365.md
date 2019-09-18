@@ -4,6 +4,8 @@ description: Describes how to switch from the Semi-Annual Channel to the Monthly
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office 365
 ms.topic: article

@@ -4,6 +4,8 @@ description: External users can't find Office 365 users in the people picker whe
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

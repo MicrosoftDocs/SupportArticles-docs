@@ -4,6 +4,8 @@ description: A site contains apps that don't work in templates when saving it as
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

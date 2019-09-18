@@ -4,6 +4,8 @@ description: Explains how to automate Excel from C++ without using MFC or #impor
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

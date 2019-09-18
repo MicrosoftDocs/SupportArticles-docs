@@ -4,6 +4,8 @@ description: You cannot sync a SharePoint Online list in Outlook with the error 
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

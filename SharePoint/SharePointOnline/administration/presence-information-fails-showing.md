@@ -4,6 +4,8 @@ description: When you open a SharePoint page, your presence information is not s
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

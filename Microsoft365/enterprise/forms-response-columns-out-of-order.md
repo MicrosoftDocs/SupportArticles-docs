@@ -4,6 +4,8 @@ description: The response columns are out of order in the response workbook for 
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: o365-solutions
 ms.topic: article

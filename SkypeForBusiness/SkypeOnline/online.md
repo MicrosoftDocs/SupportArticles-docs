@@ -3,6 +3,8 @@ title: Listing some issues for Skype for Business Online.
 author: simonxjx
 manager: willchen
 audience: ITPro
+search.appverid: 
+- MET150
 ms.service: skype-for-business-online
 ms.topic: article
 ms.author: v-six

@@ -4,6 +4,8 @@ description: Fixes an issue in which you receive an "Item not crawled" error whe
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article

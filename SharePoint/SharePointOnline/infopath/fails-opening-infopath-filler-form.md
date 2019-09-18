@@ -4,6 +4,8 @@ description: InfoPath cannot open the selected form because of an error in the f
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

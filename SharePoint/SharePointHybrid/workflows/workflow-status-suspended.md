@@ -4,6 +4,8 @@ description: Fixes an issue in which the status of a SharePoint 2013 workflow re
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

@@ -3,6 +3,8 @@ title: Mail merge error when a data source is accessed by multiple users in Word
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: office 365
 ms.topic: article

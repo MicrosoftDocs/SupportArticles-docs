@@ -5,6 +5,8 @@ author: TobyTu
 ms.author: corbinm
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 ms.prod: skype-for-business-itpro
 ms.topic: conceptual
 ms.date: 04/17/2019

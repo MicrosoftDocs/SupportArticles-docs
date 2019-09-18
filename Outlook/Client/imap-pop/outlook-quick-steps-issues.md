@@ -4,6 +4,8 @@ description: When you use an IMAP or POP account that's added as a secondary acc
 author: TobyTu
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

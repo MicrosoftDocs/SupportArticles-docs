@@ -4,6 +4,8 @@ description: Describes a problem that may occur when you print a worksheet in Ex
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

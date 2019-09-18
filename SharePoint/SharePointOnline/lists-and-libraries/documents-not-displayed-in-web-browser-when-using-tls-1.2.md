@@ -4,6 +4,8 @@ description: Describes an issue that blocks Office web app documents from being 
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article

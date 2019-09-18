@@ -3,6 +3,8 @@ title: Listing some issues for SharePoint Hybrid.
 author: simonxjx
 manager: willchen
 audience: ITPro
+search.appverid: 
+- MET150
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
