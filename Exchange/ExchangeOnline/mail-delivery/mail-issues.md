@@ -46,8 +46,6 @@ When Office 365 can't deliver email you sent, you'll receive an email notificati
 
 - [Recover deleted items in a user mailbox - Admin Help](https://docs.microsoft.com/en-us/office365/enterprise/recover-deleted-items-in-a-mailbox)
 
-- [Troubleshoot email issues](https://docs.microsoft.com/exchange/troubleshoot/mail-delivery/mail-issues.md)
-
 - [My messages won't send](https://support.office.com/article/97748418-bbd5-4743-a05b-581f22a466dd.aspx)
 
 - [Fix Outlook account problems in Office 365](https://go.microsoft.com/fwlink/p/?LinkId=724310)
