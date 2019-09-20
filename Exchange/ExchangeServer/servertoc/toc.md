@@ -23,6 +23,7 @@
 ## Management Console
 ### [Connecting to the remote server failed](../management-console/connecting-remote-server-failed.md)
 ### [EMS fails to start with error](../management-console/fail-to-start-ems-canot-find-path.md)
+### [Can't open EMS on Exchange Server 2019 Edge Transport server](../management-console/unable-open-ems-launchems.md)
 
 ## Migration
 ### [No active public folder mailboxes were found](../migration/migrationbatch-fails-no-public-folder-mailboxes.md)
