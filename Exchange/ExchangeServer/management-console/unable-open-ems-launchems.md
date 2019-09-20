@@ -35,5 +35,8 @@ To fix this issue on an Exchange Server 2019 Edge Transport server, you can open
 
 ```cmd
 exshell.psc1
+```
+
+```cmd
 exchange.ps1
 ```
