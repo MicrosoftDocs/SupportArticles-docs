@@ -12,6 +12,8 @@ ms.custom: CI 106819
 ms.reviewer: cmcgurk, EXOL_Triage
 appliesto:
 - Exchange Server 2019
+search.appverid: 
+- MET150
 ---
 
 # Can't open EMS on an Exchange Server 2019 Edge Transport server by using the LaunchEMS command
@@ -33,10 +35,10 @@ This issue occurs because the `LaunchEMS` command isn't created on the Exchange 
 
 To fix this issue on an Exchange Server 2019 Edge Transport server, you can open the Exchange Management Shell by running the following commands in the given order at the command prompt:
 
-```cmd
+```
 exshell.psc1
 ```
 
-```cmd
+```
 exchange.ps1
 ```
