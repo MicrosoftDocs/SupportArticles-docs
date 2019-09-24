@@ -40,8 +40,8 @@ MetaCacheDatabaseStatus : Offline
 MetaCacheDatabaseStatusMessage : Partition not attached in active Store worker process.
 MetaCacheDatabaseFilePath : C:\ExchangeMetaCacheDbs\DB01\DB01.mcdb\DB01-mcdb.edb
 MetaCacheDatabaseLastReset :
-This example returns the status for the copy of database DB01 on Mailbox server Server01.
 ```
+This example returns the status for the copy of database DB01 on Mailbox server Server01.
 
 In the results, you find that the solid state drive (SSD) is not formatted as expected, and the MCDB status is “Offline.” Additionally, not all designated SSDs are formatted, and mount points are not created as expected.
 
