@@ -4,6 +4,7 @@
 ### ["Linked table connection failed" when using Azure AD](../access/linked-table-connection-failed.md)
 ### [.LDB files](../access/ldb-file-description.md)
 ### [0x80004005 Microsoft Jet Database Engine cannot open the file](../access/error-80004005-connecting-access-database.md)
+### [Access error “Your network access was interrupted” when using a mapped drive](../access/your-network-access-was-interrupted-error.md) 
 ### [Access cache formats for SharePoint](../access/access-cache-formats.md)
 ### [ADODB code errors with adBiglnt data](../access/adBigInt-data-type-errors.md)
 ### [Cannot update. Database or object is read-only](../access/database-or-object-is-read-only.md)
@@ -19,6 +20,7 @@
 ### [OLE DB Provider for Jet and ODBC driver](../access/jet-odbc-driver-available-32-bit-version.md)
 ### [Query must have at least one destination field](../access/query-must-have-at-least-one-destination-field.md)
 ### [Runtime error 2147319779 (8002801d) library not registered](../access/library-unregistered-runtime-error.md)
+
 
 ## Activation/Installation
 ### [Cannot verify the license for this product](../activation-installation/license-issue-when-start-office-application.md)
