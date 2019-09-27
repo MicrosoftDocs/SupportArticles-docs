@@ -11,12 +11,8 @@ localization_priority: Normal
 search.appverid:
 - SPO160
 - MET150
-ms.assetid: 
 appliesto:
 - Access
-- SharePoint 2019
-- SharePoint 2016
-- SharePoint 2013
 ms.custom: 107826
 ms.reviewer: denniwil
 description: "Describes how to resolve an error where the connection is dropped when opening Access from a mapped drive."

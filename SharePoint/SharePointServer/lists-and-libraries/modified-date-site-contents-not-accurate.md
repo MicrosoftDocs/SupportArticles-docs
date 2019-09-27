@@ -11,9 +11,11 @@ localization_priority: Normal
 search.appverid:
 - SPO160
 - MET150
-ms.assetid: 
 appliesto:
 - SharePoint Online 
+- SharePoint 2019
+- SharePoint 2016
+- SharePoint 2013
 ms.custom: 108026
 ms.reviewer: lvaznis
 description: "Explains why the modified dates in a SharePoint site contents page does not reflect the correct dates."
