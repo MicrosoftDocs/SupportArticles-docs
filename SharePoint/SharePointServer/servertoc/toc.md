@@ -69,11 +69,8 @@
 ### [Server Error in '/' Application. Access to the path is denied](../security/access-to-the-path-is-denied-during-logon.md)
 
 ## Sharing and Permissions
-### ["Access denied" error with an Approval Workflow task](../../SharePointOnline/sharing-and-permissions/access-denied-when-approve-workflow-task.md)
-### ["Access Denied" when a workflow sends an email](../sharing-and-permissions/access-denied-error-sharepoint-2010-when-workflow-sends-email-to-group.md)
 ### [Access denied when you send an email to a SharePoint group](../sharing-and-permissions/access-denied-when-send-an-email-to-groups.md)
 ### [Anonymous users can't open XLSX files from a document library](../sharing-and-permissions/anonymous-users-cannot-open-xlsx-files-from-a-document-library.md)
-### [Issue when connecting to a SharePoint Services Web site](../sharing-and-permissions/web-site-fails-connection.md)
 ### [Issue with activate or deactivate the Publishing feature](../../SharePointOnline/sharing-and-permissions/activating-publishing-feature-access-error.md)
 ### [People Picker field embedded doesn't show "Add People"](../sharing-and-permissions/picker-field-embedded-does-not-show-add-people.md)
 ### [Prompted for credentials when opening documents anonymously](../sharing-and-permissions/receive-credentials-prompting.md)
@@ -100,6 +97,8 @@
 ### [Web part controls don't work after migration](../web-parts/web-part-controls-do-not-work-after-sites-are-migrated.md)
 
 ## Workflows
+### ["Access denied" error with an Approval Workflow task](../../SharePointOnline/workflows/access-denied-when-approve-workflow-task.md)
+### ["Access Denied" when a workflow sends an email](../workflows/access-denied-error-sharepoint-2010-when-workflow-sends-email-to-group.md)
 ### [A response was returned that didn't come](../workflows/response-returned-did-not-come-from-workflow-manager-error.md)
 ### [A workflow doesn't complete](../../SharePointOnline/Workflows/workflow-using-impersonation-step-fails-completed.md)
 ### [A workflow doesn't execute](../../SharePointOnline/Workflows/workflow-lookup-fails-executing.md)
