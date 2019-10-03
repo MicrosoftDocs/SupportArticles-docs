@@ -33,7 +33,7 @@ In this scenario, when you log on to the Resource mailbox, you see that the meet
 
 ## Cause
 
-This is default behavior. It occurs because AddOrganizerToSubjectand DeleteSubjectare set to True.
+This is default behavior. It occurs because `AddOrganizerToSubject` and `DeleteSubject` are set to True.
 
 To view these value for the Resource mailbox, run the one of the following cmdlets:
 
