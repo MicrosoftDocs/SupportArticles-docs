@@ -1,10 +1,10 @@
 ---
-title: "Title goes here"
+title: "LyncBackupService.exe stops responding after pool pairing enabled on a Skype for Business 2019"
 ms.author: v-todmc
 author: todmccoy
 manager: dcscontentpm
-ms.date: 2/5/2019
-ms.audience: Admin|ITPro|Developer
+ms.date: 10/4/2019
+ms.audience: Admin
 ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
@@ -13,9 +13,9 @@ search.appverid:
 - MET150
 appliesto:
 - SharePoint Online 
-ms.custom: CI ID
-ms.reviewer: aliases for tech reviewers and CI requestor
-description: "How to resolve the error "Virus Found" in SharePoint Server 2013 when the antivirus scanner is unavailable ."
+ms.custom: 108454
+ms.reviewer: joaol
+description: "How to resolve an issue where LyncBackupService.exe stops responding after enabling pool pairing in a Skype for Business 2019 CU1 server."
 ---
 
 # LyncBackupService.exe stops responding after pool pairing enabled on a Skype for Business 2019 
