@@ -1,5 +1,5 @@
 ---
-title: "LyncBackupService.exe stops responding after pool pairing enabled on a Skype for Business 2019"
+title: "LyncBackupService.exe stops responding after pool pairing enabled on a Skype for Business 2019 CU1 server"
 ms.author: v-todmc
 author: todmccoy
 manager: dcscontentpm
@@ -18,7 +18,7 @@ ms.reviewer: joaol
 description: "How to resolve an issue where LyncBackupService.exe stops responding after enabling pool pairing in a Skype for Business 2019 CU1 server."
 ---
 
-# LyncBackupService.exe stops responding after pool pairing enabled on a Skype for Business 2019 
+# LyncBackupService.exe stops responding after pool pairing enabled on a Skype for Business 2019 CU1 server
 
 ## Symptoms
 You receive Event ID 4007 and LyncBackupservice.exe stops responding after enabling pool pairing for two or more pools on a Skype for Business 2019 CU1 server. The following details appear in the log:
