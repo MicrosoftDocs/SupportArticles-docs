@@ -25,7 +25,7 @@ appliesto:
 
 Consider the following scenario:
 
-- A Resource mailbox is configured to AutoAcceptin an Microsoft Exchange Server environment.   
+- A Resource mailbox is configured to AutoAccept in a Microsoft Exchange Server environment.   
 - You send a meeting request to the Resource mailbox.    
 - The meeting request is accepted automatically, and the meeting subject is displayed correctly in the organizer’s mailbox.   
 
