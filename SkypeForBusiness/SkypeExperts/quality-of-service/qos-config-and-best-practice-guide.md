@@ -60,7 +60,7 @@ Listed in the table below are the port ranges and DSCP values associated with th
 | Signaling | Client and Server | 5060-5061 | 2 | 46 |
 
 > [!NOTE]
-> This QoS capability is only applicable to Skype for Business clients and IP phone devices which are registered directly to an internal Skype for Business/Lync pool server on managed networks. QoS is not applicable for traffic routed over the Internet. 
+> Skype for Business clients for iOS Version 6.17 and later now support QoS.  This QoS capability is only applicable to Skype for Business clients and IP phone devices which are registered directly to an internal Skype for Business or Lync pool Server on managed networks. QoS is not applicable for traffic routed over the Internet.
 
 Let us start with QoS configuration:  
 

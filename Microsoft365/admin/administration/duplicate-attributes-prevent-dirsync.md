@@ -145,7 +145,7 @@ To determine attribute conflicts that are caused by user objects that were creat
 4. Check for duplicate proxyAddressesattributes. In the console connection that you opened in step 2, type the following commands in the order in which they are presented, and press Enter after each command:
 
    ```powershell
-   $SessionExO = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $Cred -Authentication Basic - AllowRedirection
+   $SessionExO = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $Cred -Authentication Basic -AllowRedirection
    ```
 
    ```powershell
