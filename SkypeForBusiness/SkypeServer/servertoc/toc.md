@@ -28,7 +28,7 @@
 ### [Event IDs 32402, 61045 logged in Front End](../server-configuration/event-32402-61045-front-end.md)
 ### [Insufficient access rights when move user command](../server-configuration/issue-attempt-move-or-enable-user-command.md)
 ### [Issue when File Store share in unsupported configuration](../server-configuration/issue-file-store-share-unsupported.md)
-### [LyncBackupService.exe stops responding after pool pairing enabled on a Skype for Business 2019 CU1 server](../server-configuration/lyncbackupservice-exe-crashes-with-pool-pairing.md)
+### [LyncBackupService.exe stops responding after pool pairing Skype for Business Server 2019](../server-configuration/lyncbackupservice-exe-crashes-with-pool-pairing.md)
 ### [Lync Server 2013 Front-End server services not start](../server-configuration/front-end-services-not-start.md)
 ### [Move-CsUser and Move-CsLegacyUser commands fail](../server-configuration/move-csuser-move-cslegacyuser-fail.md)
 ### [Prevent Lync Server certificate expiration](../server-configuration/lync-server-certificate-expiration.md)
