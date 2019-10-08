@@ -30,7 +30,7 @@ Set-Mailbox <mailbox> -RetentionPolicy "CorpPolicy"
 Start-ManagedFolderAssistant –Identity <mailbox>
 ```
 
-However, after you create the retention policy, the policy doesn't automatically run. That is, messages that have reached the age limit that's set in the policy aren't automatically moved to the user's archive mailbox. 
+However after you create the retention policy, the policy doesn't automatically run. That is, messages that have reached the age limit that's set in the policy aren't automatically moved to the user's archive mailbox. 
 
 ## Cause 
 
