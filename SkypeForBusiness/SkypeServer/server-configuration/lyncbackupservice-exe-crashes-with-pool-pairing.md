@@ -12,7 +12,7 @@ search.appverid:
 - SPO160
 - MET150
 appliesto:
-- SharePoint Online 
+- Skype for Business 2019
 ms.custom: 108454
 ms.reviewer: joaol
 description: "How to resolve an issue where LyncBackupService.exe stops responding after enabling pool pairing on a Skype for Business 2019 server."
@@ -21,7 +21,7 @@ description: "How to resolve an issue where LyncBackupService.exe stops respondi
 # LyncBackupService.exe stops responding after pool pairing Skype for Business Server 2019
 
 ## Symptoms
-You receive Event ID 4007 and LyncBackupservice.exe stops responding after enabling pool pairing for two or more pools on a Skype for Business Server 2019. The following details appear in the log:
+You receive Event ID 4007 and LyncBackupservice.exe stops responding after enabling pool pairing for two pools on a Skype for Business Server 2019. The following details appear in the log:
 
 ```
      Log Name:      Lync Server
