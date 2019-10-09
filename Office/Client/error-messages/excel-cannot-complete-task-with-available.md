@@ -17,7 +17,7 @@ appliesto:
 
 # "Excel cannot complete this task with available resources" error occurs in Excel 2010
 
-##  Symptoms
+## Symptoms
 
 You receive the following error message:
 
@@ -29,9 +29,7 @@ The error occurs when you:
 - Use a defined name in a formula in an Excel workbook   
 - Define or delete a name in an Excel workbook   
 
-
-
-##  Resolution
+## Resolution
 
 **Note:** Before continuing on to the Resolution methods, ensure you have the latest Office updates installed: [Keep Windows up to date with the latest Updates](https://www.update.microsoft.com/microsoftupdate/v6/vistadefault.aspx).
 
@@ -39,18 +37,17 @@ After you have installed the available updates, check to see if you still have t
 
 We recommend that you follow the provided methods in this article in order. However, if you had previously tried one of the methods to fix this error and it did not help, you can jump to another method quickly from this list:
 
- 
-- [Method 1: Check whether you exceed limits](#one)    
-- [Method 2: Make sure only one instance of Excel is active](#two)    
-- [Method 3: Close all applications](#three)    
-- [Method 4: Test Excel in safe mode](#four)    
-- [Method 5: Turn off the preview pane in Windows Explorer (Windows 7 only)](#five)    
-- [Method 6: Save as an Excel workbook file if you use relative names](#six)    
-- [Method 7: Change defined names to reference cells directly](#seven)    
- 
+- Method 1: Check whether you exceed limits
+- Method 2: Make sure only one instance of Excel is active
+- Method 3: Close all applications
+- Method 4: Test Excel in safe mode
+- Method 5: Turn off the preview pane in Windows Explorer (Windows 7 only)
+- Method 6: Save as an Excel workbook file if you use relative names
+- Method 7: Change defined names to reference cells directly
 
 ### Method 1: Check whether you exceed limits
- The error can occur if you exceed certain Excel 2010 limits, such as running too many calculations in the workbook. Some of these limits are as follows: 
+ 
+The error can occur if you exceed certain Excel 2010 limits, such as running too many calculations in the workbook. Some of these limits are as follows: 
  
 - The maximum worksheet size limit is 1,048,576 rows by 16,384 columns.    
 - The total number of characters that a cell can contain is 32,767 characters.    
@@ -64,7 +61,8 @@ For a full list of Excel 2010 specifications and limitations, read the informati
 If you have checked and the worksheet or workbook is not exceeding Excel limitations, go to the next method.
 
 ### Method 2: Make sure only one instance of Excel is active
- The error can occur if multiple instances of Excel are running. This usually happens if you have more than one Excel workbook opened at a time. We recommend that you close out all instances of Excel and then reopen your Excel workbook to test. If you are not sure if you have multiple instances of Excel running, follow these steps to check: 
+ 
+The error can occur if multiple instances of Excel are running. This usually happens if you have more than one Excel workbook opened at a time. We recommend that you close out all instances of Excel and then reopen your Excel workbook to test. If you are not sure if you have multiple instances of Excel running, follow these steps to check: 
  
 1. Open Task Manager. To do this, take any of the following actions:  
    - Press CTRL + ALT + Delete, and then click **Start Task Manager**.    
@@ -78,9 +76,8 @@ If you see more than one line with Microsoft Excel, you are running multiple ins
 
 Once all instances of Excel are closed, open the Excel workbook and test. If the error continues to occur, go to the next method.
 
-[back to top](#toc)
-
 ### Method 3: Close all applications
+
  The error may occur if other applications are active and using computer memory while you are trying to use, open, or save the Excel workbook. We recommend that you close and exit all applications except for the Excel workbook.
 
 You can close applications manually or you can follow the "clean-boot" steps provided in one of the following articles: 
@@ -94,10 +91,9 @@ Once all applications are closed, open the Excel workbook and test. If the error
 ### Method 4: Test Excel in safe mode
  The error can occur if you have too many Excel add-in programs running. To test whether an add-in is causing the problem, start Excel in safe mode: 
  
-1. Click **Start**![Start ](.\media\excel-cannot-complete-task-with-available\VistaStartButton.jpg).    
+1. Click **Start**![Start ](./media/excel-cannot-complete-task-with-available/VistaStartButton.jpg).    
 2. In Windows 7, type excel /s in the **Search programs and files** box and press **Enter**.
  In Windows Vista, type excel /s in the **Start Search** box and press **Enter**.
-
 3. Check the title. It should read Book1 - Microsoft Excel (Safe Mode).    
 4. Click **File**, and then select **Open**.    
 5. Locate the Excel workbook to test and open it.    
@@ -111,7 +107,7 @@ If the error continues to occur, go to the next method.
 ### Method 5: Turn off the preview pane in Windows Explorer (Windows 7 only)
  The preview pane is used to see the contents of most files in Windows Explorer. For example, if you click a picture, video, or text file, you can preview its contents without opening the file. By default, the preview pane is turned off in Windows 7. However, if it is turned on, it may cause a conflict with the Excel workbook you try to open leading to this error. We recommend that you turn off the preview pane and test opening your Excel workbook. To do this: 
  
-1. Click **Start**![Start ](.\media\excel-cannot-complete-task-with-available\VistaStartButton.jpg), and then click **Computer**.    
+1. Click **Start**![Start ](./media/excel-cannot-complete-task-with-available/VistaStartButton.jpg), and then click **Computer**.    
 2. Click **Organize**.    
 3. Select **Layout**, and then click to clear **Preview pane**.    
 4. Open the Excel workbook and test.    

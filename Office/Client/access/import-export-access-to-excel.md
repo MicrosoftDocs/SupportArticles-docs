@@ -1,6 +1,6 @@
 ---
-title: Access: Errors during import/export to Excel
-description: Resolve Access errors during importing/exporting to Excel.
+title: Access errors during import or export to Excel
+description: Resolve Access errors during importing or exporting to Excel.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
