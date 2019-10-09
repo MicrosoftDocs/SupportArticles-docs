@@ -12,7 +12,7 @@ ms.reviewer: v-dahedm
 search.appverid: 
 - MET150
 appliesto:
--Microsoft Project
+- Microsoft Project
 ---
 
 # "Iexplorer.exe has encountered a problem and needs to close" error when you try to view a timesheet in Project Web Access

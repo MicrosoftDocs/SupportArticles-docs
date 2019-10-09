@@ -12,11 +12,11 @@ ms.reviewer: v-dahedm
 search.appverid: 
 - MET150
 appliesto:
--Microsoft Office Project Standard 2003
-Project Professional 2010
-Project Standard 2010
-Project Professional 2013
-Project 2013 Standard
+- Microsoft Office Project Standard 2003
+- Project Professional 2010
+- Project Standard 2010
+- Project Professional 2013
+- Project 2013 Standard
 ---
 
 # File size increases greatly when you insert a picture into a Project plan

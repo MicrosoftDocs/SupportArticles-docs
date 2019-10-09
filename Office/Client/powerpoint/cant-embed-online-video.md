@@ -27,7 +27,7 @@ Consider the following scenario:
 
 In this scenario, you will not be prompted with an error but will see the following dialog:
 
-![insert video](.\media\cant-embed-online-video\insert-video.jpg)
+![insert video](./media/cant-embed-online-video/insert-video.jpg)
 
 The options that are missing are; Bing Video Search, YouTube, and From a Video Embed Code.
 
