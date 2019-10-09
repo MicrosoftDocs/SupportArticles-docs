@@ -38,7 +38,7 @@ If you find a crash signature in your Application event log that mataches one of
 
 To see whether you are using a Click-to-Run installation of Office 2013, click the File tab in Excel and then click Account. If you see"Office Updates" under Product Information, as shown in the following figure, you are using a Click-to-Run installation of Office.
 
-![product info](.\media\crash-when-move-excel-sheet-tab\product-info.PNG)
+![product info](./media/crash-when-move-excel-sheet-tab/product-info.PNG)
 
 If you do not see "Office Updates" under Product Information, you have an MSI installation of Office 2013.
 

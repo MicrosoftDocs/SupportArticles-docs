@@ -21,7 +21,7 @@ appliesto:
 
 In Microsoft Excel, when attempting to use controls on the PowerPivot ribbon, you find that the controls are grayed out, as in the following figure.
 
-![excel controls](./media\powerpivot-controls-disabled-with-non-default\excel-controls.jpg)
+![excel controls](./media/powerpivot-controls-disabled-with-non-default/excel-controls.jpg)
 
 The behavior may appear to be inconsistent between existing files; however, it occurs in any new file you attempt to create in Excel.
 
@@ -29,7 +29,7 @@ The behavior may appear to be inconsistent between existing files; however, it o
 
 This behavior can occur if the Save files in this format option is set to a file format other than the default Excel Workbook, as in the figure below.
 
-![excel options](./media\powerpivot-controls-disabled-with-non-default\excel-options.jpg)
+![excel options](./media/powerpivot-controls-disabled-with-non-default/excel-options.jpg)
 
 Here are some of the formats which may result in this behavior:
 

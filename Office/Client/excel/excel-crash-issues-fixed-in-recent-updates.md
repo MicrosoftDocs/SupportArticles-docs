@@ -40,7 +40,7 @@ To resolve this problem, please install the latest update for Excel. The method 
 
 To see whether you are using a Click-to-Run installation of Office 2013, click the Filetab in Outlook and then click Office Account. If you see "Office Updates" under Product Information, as shown in the following figure, you are using a Click-to-Run installation of Office. 
 
-![product info](.\media\excel-crash-issues-fixed-in-recent-updates\product-info.jpg)
+![product info](./media/excel-crash-issues-fixed-in-recent-updates/product-info.jpg)
 
 If you do notsee "Office Updates" under Product Information, you have an MSI installation of Office 2013. 
 
