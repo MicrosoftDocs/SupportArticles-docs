@@ -38,6 +38,7 @@ To resolve this issue, check whether you have any Exchange Transport layer rule
 #### For Exchange Transport layer rules
 
 These rules may affect delivery of email messages. Cloud Voice Mail (CVM) service now supports transport layer rules. For example, rules can be enabled to mark email messages that have MP3 attachments as SPAM. This means that voicemails are filtered out before they arrive in the Inbox. Therefore, check whether any such rules are enabled, and then change them accordingly.
+Voicemails email notification will arrive with SPF fail, if a transport rule analyze the spf as fail, the email will make what the transport rule desires,
   
 #### For third-party email systems
 
