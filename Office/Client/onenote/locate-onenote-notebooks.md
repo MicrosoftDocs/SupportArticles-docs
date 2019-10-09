@@ -42,7 +42,8 @@ This issue occurs if you are not logged in with the correct Microsoft account or
 
 4. A work or school account takes you to your company or school Office 365 sign-in page. A Microsoft account takes you to an MSA sign-in page.
 
-    ![sign in page](./media/locate-onenote-notebooks/sign-in-page.bmp)
+    ![sign in page](./media/locate-onenote-notebooks/sign-in-page.jpg)
+
 You should now see your notebooks on OneDrive or OneDrive for Business, depending on which account you signed in with. Note which account you used to access your notebooks so that you can make sure you're signed in with the correct account in OneNote on your other devices.
 
    I can’t get signed into my Microsoft account – what next?
@@ -87,7 +88,7 @@ Now that you know which account contains your notebooks, sign out of the account
    If you do not see your notebooks, go on to step 2.   
 2. On the File menu in OneNote, click Settings, and then click Accounts. Click each account that's listed, and then click **Sign out**.
 
-   ![accounts](./media/locate-onenote-notebooks/accounts.bmp)
+   ![accounts](./media/locate-onenote-notebooks/accounts.jpg)
 
 3. Restart OneNote. You will be prompted to sign in with a Microsoft account or with a work or school account. Enter the credentials for the location where your notebooks are stored, most likely a OneDrive – Personal account or a work or school account.
 
