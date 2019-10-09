@@ -9,8 +9,10 @@ ms.topic: article
 ms.prod: office 365
 localization_priority: Normal
 ms.reviewer: 
-appliesto
+appliesto:
 - office 365
+search.appverid: 
+- MET150
 ---
 
 # SupportMultipleDomain switch when managing SSO to Office 365
@@ -117,7 +119,7 @@ federationServiceIdentifier value for the child domain will also be the same as 
   To resolve this, we can modify the 3rd rule such that it ends up generating an Issuer value that matches “FederationServiceIdentifier” for the domain at O365 end. 2 different rules that can work in this scenario is below. This rule just picks up the root domain from the UPN suffix to compose the Issuer value. For a UPN suffix child1.contoso.com, it will still generate an Issuer value of [https://contoso.com/adfs/services/trust/](http://contoso.com/adfs/services/trust/) instead of  [https://Child1.contoso.com/adfs/services/trust/](https://child1.contoso.com/adfs/services/trust/) (with default rule)
 
 
-![A screen shot of claim rule](./media\supportmultipledomain-switch-when-manage-sso\claim-rule.png)
+![A screen shot of claim rule](./media/supportmultipledomain-switch-when-manage-sso/claim-rule.png)
 #### Customized 3rd rule
 
 

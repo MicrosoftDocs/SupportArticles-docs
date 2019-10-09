@@ -12,7 +12,7 @@ ms.reviewer: kerbo
 search.appverid: 
 - MET150
 appliesto:
--Office 365
+- Office 365
 ---
 
 # You receive a Microsoft account security alert email message in Office 365 Dedicated/ITAR (vNext)

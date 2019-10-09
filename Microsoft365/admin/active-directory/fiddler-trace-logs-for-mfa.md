@@ -43,34 +43,34 @@ MFA starts after the user's password has been verified by Azure AD or STS. The S
 ### Scenario 1: Working MFA scenarios 
 The SANeeded=1 cookie is set after password authentication. Network traffic is then redirected to the endpoint: [https://login.microsoftonline.com/StrongAuthCheck.srf?](https://login.microsoftonline.com/strongauthcheck.srf), and available authentication methods are requested.
 
-![authentication method](.\media\fiddler-trace-logs-for-mfa\authentication-method.png)
+![authentication method](./media/fiddler-trace-logs-for-mfa/authentication-method.png)
 
 MFA starts with BeginAuth, and then the phone call is triggered on the back end to the phone service provider. 
 
-![beginauth](.\media\fiddler-trace-logs-for-mfa\beginauth.png)
+![beginauth](./media/fiddler-trace-logs-for-mfa/beginauth.png)
 
 After MFA authorization has begun, the client starts to query the same endpoint for the EndAuth method every 10 seconds to check whether authentication has completed. Until the call has been picked and verified, the Resultvalue is returned as AuthenticationPending. 
 
-![endauth method](.\media\fiddler-trace-logs-for-mfa\endauth-method.png)
+![endauth method](./media/fiddler-trace-logs-for-mfa/endauth-method.png)
 
 When the phone has been picked and verified, the answer for the next query for EndAuth will be a ResultValue of Success. Additionally, the user has completed Mulitifactor authentication. Also the Set-Cookie : SANeeded=xxxxxxx cookie is set in the response, which will be given to the endpoint : login.srf to complete authentication. 
 
-![login srf](.\media\fiddler-trace-logs-for-mfa\login-srf.png)
+![login srf](./media/fiddler-trace-logs-for-mfa/login-srf.png)
 
 ### Scenario 2: When the phone is out of coverage or the phone is not picked
 When the phone is not picked and verified within 60 seconds after the call is made, the ResultValue will be set as UserVoiceAuthFailedPhoneUnreachable. And at the next query for the EndAuth method, UserVoiceAuthFailedPhoneUnreachable is returned, as seen in Fiddler. 
 
-![UserVoiceAuthFailedPhoneUnreachable](.\media\fiddler-trace-logs-for-mfa\uservoiceauthfailedphoneunreachable.png)
+![UserVoiceAuthFailedPhoneUnreachable](./media/fiddler-trace-logs-for-mfa/uservoiceauthfailedphoneunreachable.png)
 
 ### Scenario 3: When the fraud alert is triggered to block the account in the cloud
 When the phone has not been picked and a fraud alert posted within 60 seconds after the call is made, the ResultValue will be set as AuthenticationMethodFailed. And at the next query for the EndAuth method, an AuthenticationMethodFailed response is returned, as seen in Fiddler.
 
-![AuthenticationMethodFailed](.\media\fiddler-trace-logs-for-mfa\authenticationmethodfailed.png)
+![AuthenticationMethodFailed](./media/fiddler-trace-logs-for-mfa/authenticationmethodfailed.png)
 
 ### Scenario 4: For a blocked account
 If the user is blocked, ResultValue will be set as UserIsBlocked. At the first query for the EndAuth method, UserIsBlocked will be returned, as seen in Fiddler.
 
-![userisblocked](.\media\fiddler-trace-logs-for-mfa\userisblocked.png)
+![userisblocked](./media/fiddler-trace-logs-for-mfa/userisblocked.png)
 
 Solution: In an Azure MFA scenario with an Azure subscription, you can unblock by first logging on to manage.windowsazure.com. Then, select **Directory > Users** and **Manage Multi factor Authentication** > **Service Settings**. At the end of the page, select **Go to portal**. Now, in [https://pfweb.phonefactor.net/framefactory](https://pfweb.phonefactor.net/framefactory), select **Block/Unblock Users** to find the list of blocked users. 
 

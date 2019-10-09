@@ -24,11 +24,11 @@ Message 1: Couldn't Verify Subscription
 
 We couldn't verify your Office 365 subscription, so most features of <application> have been disabled. Please make sure you're connected to the internet and restart your application.
 
-![product info](./media\subscription-automatic-license-renew-fails\product-info.jpg)
+![product info](./media/subscription-automatic-license-renew-fails/product-info.jpg)
 
 Message 2: Application (Unlicensed Product)
 
-![unlicensed product](./media\subscription-automatic-license-renew-fails\unlicensed-product.png)
+![unlicensed product](./media/subscription-automatic-license-renew-fails/unlicensed-product.png)
 
 ##  Cause
 

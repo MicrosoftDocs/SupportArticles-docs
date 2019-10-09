@@ -31,12 +31,12 @@ Customers who use Microsoft AutoUpdate (MAU) to keep their Office applications u
 
 For information about how to use the MAU, see [Check for Office for Mac updates automatically](https://support.office.com/article/check-for-office-for-mac-updates-automatically-bfd1e497-c24d-4754-92ab-910a4074d7c1?ui=en-us&rs=en-us&ad=us).
 
-![Check Update](.\media\office-2016-for-mac-64-bit-upgrade\check-update.jpg)
+![Check Update](./media/office-2016-for-mac-64-bit-upgrade/check-update.jpg)
 
 ### Manual updates
 The August release of Office for Mac is available for manual download. The following file provides a 64-bit package to replace existing 32-bit applications with 64-bit variants during installation:
 
- ![Download](.\media\office-2016-for-mac-64-bit-upgrade\download.gif)[Download the Microsoft Office 2016 for Mac August update package now](https://go.microsoft.com/fwlink/?linkid=525133).
+ ![Download](./media/office-2016-for-mac-64-bit-upgrade/download.gif)[Download the Microsoft Office 2016 for Mac August update package now](https://go.microsoft.com/fwlink/?linkid=525133).
 
 Virus-scan claim
 
@@ -58,12 +58,12 @@ The transition to 64-bit Office for Mac was announced on the [Office developer b
 ### Tools for inspecting product architecture
 To verify the architecture of an Office application (that is, to understand whether you have a 32-bit or 64-bit build), start the application, open the Activity Monitor, and then enable the **Kind** column.
 
-![Activity Monitor](.\media\office-2016-for-mac-64-bit-upgrade\activity-monitor.jpg)
+![Activity Monitor](./media/office-2016-for-mac-64-bit-upgrade/activity-monitor.jpg)
 
 You can also use the file command in a terminal session to inspect the binary. For this use, type file -N <_path of binary_>.
 This method can be used with for any binary file, including third-party add-ins.
 
-![file Command](.\media\office-2016-for-mac-64-bit-upgrade\file-command.jpg)
+![file Command](./media/office-2016-for-mac-64-bit-upgrade/file-command.jpg)
 
 The file command returns one of three values.
 
