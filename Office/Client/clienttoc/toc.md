@@ -359,7 +359,7 @@
 ### [Task panes in Office](../settings/office-program-task-panes.md)
 ### [Use registry to clear the most recently used files list](../settings/clear-most-recently-used-file.md)
 
-## Support
+## End of Support
 ### [Office 2007 has reached end of extended support](../support/office-2007-not-support.md)
 ### [Support for 2013 versions of Office 365 ProPlus ends](../support/2013-versions-of-office-365.md)
 
