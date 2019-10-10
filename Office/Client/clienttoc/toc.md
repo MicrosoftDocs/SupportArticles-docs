@@ -268,9 +268,12 @@
 ### [Generated .PDB files don't match InfoPath form name](../infopath/generated-pdb-file-name-does-not-match-infopath-name.md)
 
 ## Office
+### [Can't embed Adobe OpenType fonts](../office/fails-embedding-adobe-opentype-font.md)
 ### [Applications crash when opening IRM doccument](../office/office-applications-crash-when-open-irm-doc.md)
+### [Office crash with SendToBluetooth add-in installed](../office/office-crash-with-sendtobluetooth.md)
 
 ## Office for Mac
+### ["wkresources" files in Trash](../office-for-mac/wkresources-files-moved-to-trash.md)
 ### [Error when you open files from SharePoint in Office client](../office-for-mac/files-fail-to-open.md)
 
 ## OneNote
@@ -278,6 +281,8 @@
 ### [Locate Onenote notebooks](../onenote/locate-onenote-notebooks.md)
 ### [Warning when a notebook is in an offline location](../onenote/notebook-offline-location.md)
 
+## Performance
+### [Open network file slow or stop responding](../performance/office-slow-or-stop-responding.md)
 
 ## PowerPoint
 ### ["Play CD Audio Track" command is not available](../powerpoint/play-cd-audio-track-not-available.md)
@@ -349,6 +354,7 @@
 
 
 ## Settings
+### [Display issues in Office applications](../settings/office-display-issues.md)
 ### [Error in Office when file is blocked](../settings/file-blocked-in-office.md)
 ### [Task panes in Office](../settings/office-program-task-panes.md)
 ### [Use registry to clear the most recently used files list](../settings/clear-most-recently-used-file.md)
@@ -357,14 +363,6 @@
 ### [Office 2007 has reached end of extended support](../support/office-2007-not-support.md)
 ### [Support for 2013 versions of Office 365 ProPlus ends](../support/2013-versions-of-office-365.md)
 
-## Troubleshooting
-### ["wkresources" files in Trash](../troubleshooting/wkresources-files-moved-to-trash.md)
-### [Can't embed Adobe OpenType fonts](../troubleshooting/fails-embedding-adobe-opentype-font.md)
-### [Damaged documents in Word for Mac](../troubleshooting/troubleshoot-damaged-word-document.md)
-### [Display issues in Office applications](../troubleshooting/office-display-issues.md)
-### [Open network file slow or stop responding](../troubleshooting/office-slow-or-stop-responding.md)
-### [Troubleshoot a VB Compile or Runtime Error](../troubleshooting/troubleshoot-vb-compile-runtime-error.md)
-### [Troubleshoot a Visual C++ Runtime Error](../troubleshooting/troubleshoot-visual-c-runtime-error.md)
 
 ## Visio
 ### ["Fit to Drawing" not working](../visio/fit-to-drawing-command-not-work.md)
