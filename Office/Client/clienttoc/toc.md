@@ -268,10 +268,12 @@
 ### [Generated .PDB files don't match InfoPath form name](../infopath/generated-pdb-file-name-does-not-match-infopath-name.md)
 
 ## Office
+### [Can't embed Adobe OpenType fonts](../office/fails-embedding-adobe-opentype-font.md)
 ### [Applications crash when opening IRM doccument](../office/office-applications-crash-when-open-irm-doc.md)
 ### [Office crash with SendToBluetooth add-in installed](../office/office-crash-with-sendtobluetooth.md)
 
 ## Office for Mac
+### ["wkresources" files in Trash](../office-for-mac/wkresources-files-moved-to-trash.md)
 ### [Error when you open files from SharePoint in Office client](../office-for-mac/files-fail-to-open.md)
 
 ## OneNote
@@ -359,8 +361,6 @@
 ### [Support for 2013 versions of Office 365 ProPlus ends](../support/2013-versions-of-office-365.md)
 
 ## Troubleshooting
-### ["wkresources" files in Trash](../troubleshooting/wkresources-files-moved-to-trash.md)
-### [Can't embed Adobe OpenType fonts](../troubleshooting/fails-embedding-adobe-opentype-font.md)
 ### [Damaged documents in Word for Mac](../troubleshooting/troubleshoot-damaged-word-document.md)
 ### [Display issues in Office applications](../troubleshooting/office-display-issues.md)
 ### [Open network file slow or stop responding](../troubleshooting/office-slow-or-stop-responding.md)
