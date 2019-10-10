@@ -269,6 +269,7 @@
 
 ## Office
 ### [Applications crash when opening IRM doccument](../office/office-applications-crash-when-open-irm-doc.md)
+### [Office crash with SendToBluetooth add-in installed](../office/office-crash-with-sendtobluetooth.md)
 
 ## Office for Mac
 ### [Error when you open files from SharePoint in Office client](../office-for-mac/files-fail-to-open.md)
