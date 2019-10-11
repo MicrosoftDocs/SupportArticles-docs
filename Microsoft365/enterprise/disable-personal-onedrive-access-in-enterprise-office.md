@@ -1,7 +1,7 @@
 ---
 title: "How to disable personal OneDrive access from within Enterprise Office products"
 ms.author: v-todmc
-author: todmccoy; delhan
+author: todmccoy
 manager: dcscontentpm
 ms.date: 10/9/2019
 ms.audience: Admin
