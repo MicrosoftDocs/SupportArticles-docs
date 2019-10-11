@@ -12,6 +12,7 @@ ms.topic: article
 ms.author: v-six
 appliesto:
 - SharePoint Online
+- Office 365
 ---
 
 # Customizations to the Office 365 top navigation bar in SharePoint Online revert to the original settings
@@ -30,7 +31,7 @@ Consider the following scenario.
 
 To work around this issue, use SharePoint themes or Office 365 themes.
 
-For more information about themes in SharePoint, go to [Overview of themes in SharePoint Server](https://docs.microsoft.com/SharePoint/sites/themes-overview).
+For more information about themes in SharePoint Online, go to [SharePoint Site Theme](https://docs.microsoft.com/sharepoint/dev/declarative-customization/site-theming/sharepoint-site-theming-overview).
 
 For more information about Office 365 themes, go to [Personalize your Office 365 experience by selecting themes](https://support.office.com/article/customizations-to-the-office-365-top-navigation-bar-in-sharepoint-online-revert-to-the-original-settings-ed6b3aca-d2f7-4350-b152-023000945f9d?ui=en-US&rs=en-US&ad=US).
 
