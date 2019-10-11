@@ -46,7 +46,7 @@ Under **User configuration** > **Administrative Templates** > **Microsoft Office
 Open registry editor and browse to the following registry key:
 
 ```
-HKCU\Software\Microsoft\Office\16.0\Common\Internet
+HKCU\Software\Policies\Microsoft\Office\16.0\Common\Internet
 ```
 
 Modify the DWORD value "OnlineStorage".
@@ -64,3 +64,7 @@ Available values are:
 If you set other values, the policy is off (all locations are shown).
 
 If the value is set to **1**, uses can no longer see their personal OneDrive location under **Add a place**.
+
+## More information
+
+[How to block OneDrive use from within Office 365 ProPlus and Office 2016 applications](https://docs.microsoft.com/en-us/office365/troubleshoot/administration/block-onedrive-use-from-office)
