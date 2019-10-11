@@ -63,6 +63,9 @@
 ## Meetings
 ### [No conference rooms with Room Finders](../meetings/conference-rooms-not-dispalyed.md)
 
+## Modern Authentication
+### [Transition from D/ITAR to vNext](../modern-authentication/modern-authentication-configuration.md)
+
 ## Move Mailboxes
 ### [Can't see free/busy information](../move-mailboxes/cannot-see-free-busy-information.md)
 
