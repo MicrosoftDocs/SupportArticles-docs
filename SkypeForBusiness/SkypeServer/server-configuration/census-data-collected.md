@@ -4,6 +4,8 @@ description: Describes the December 8, 2015, security update for Skype for Busin
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article

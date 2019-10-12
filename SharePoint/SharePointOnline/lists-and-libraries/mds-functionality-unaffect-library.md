@@ -4,6 +4,8 @@ description: Minimal Download Strategy (MDS) doesn't work for SharePoint documen
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

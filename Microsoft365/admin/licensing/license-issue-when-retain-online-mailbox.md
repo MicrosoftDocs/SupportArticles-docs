@@ -4,6 +4,8 @@ description: Discusses a scenario in which you receive a "One or more users need
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office 365
 ms.topic: article

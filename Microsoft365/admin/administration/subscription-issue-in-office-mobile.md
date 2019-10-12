@@ -4,6 +4,8 @@ description: Discusses the Can't Verify Subscription or No Subscription Found er
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office 365
 ms.topic: article

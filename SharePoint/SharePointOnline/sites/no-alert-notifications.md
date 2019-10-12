@@ -4,6 +4,8 @@ description: This article describes an issue that users don't receive SharePoint
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

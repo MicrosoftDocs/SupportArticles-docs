@@ -4,6 +4,8 @@ description: Describes how to troubleshoot instant messaging and presence issues
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article

@@ -3,6 +3,8 @@ title: The user name or password is incorrect when you use connect-MSOLService
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: office 365
 ms.topic: article

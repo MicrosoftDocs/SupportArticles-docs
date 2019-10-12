@@ -4,6 +4,8 @@ description: Describes a workaround that you can use when the category labels on
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

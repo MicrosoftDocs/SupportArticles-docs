@@ -4,6 +4,8 @@ description: SharePoint workflow is configured to use a site column that perform
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

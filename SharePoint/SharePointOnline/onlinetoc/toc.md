@@ -14,7 +14,6 @@
 ### [TLS 1.0 and 1.1 deprecation for Office 365](../administration/tls-1.0-and-1.1-deprecation-for-office-365.md)
 ### [Troubleshoot mapped network drives](../administration/troubleshoot-mapped-network-drives.md)
 ### [Troubleshoot site collection upgrade issues](../administration/troubleshoot-site-collection-upgrade-issue.md)
-### [Troubleshooting SharePoint issues](../administration/troubleshooting-sharepoint-site-issues.md)
 ### [Uncompiled audiences are present in SharePoint Online](../administration/uncompiled-audiences-are-present-in-office-365-for-enterprises.md)
 ### [Using relative URLs isn't supported](../administration/using-relative-urls-not-supported.md)
 
@@ -75,7 +74,6 @@
 ### [Information about manual migration](../migration-tool/content-manual-migration.md)
 
 ## Performance
-### [A site collection has exceeded its usage quota](../performance/site-collection-has-exceeded-its-usage-quota-or-it-is-running-out-of-resources.md)
 ### [Can't reach the server when sharing files](../Performance/share-file-unable-reach-the-server.md)
 ### [Performance troublehsooter for SharePoint Online](../Performance/sharepoint-online-performance-troubleshooter.md)
 ### [Publishing pages take longer than expected to load](../Performance/publishing-pages-take-longer-to-load.md)
@@ -99,9 +97,7 @@
 ### [There is a problem with your account when opening documents](../Security/problem-with-your-account.md)
 
 ## Sharing and Permissions
-### ["Access denied" error with an Approval Workflow task](../sharing-and-permissions/access-denied-when-approve-workflow-task.md)
 ### ["Access Denied", "You need permission to access this site", or "User not found in the directory" errors in SharePoint Online and OneDrive for Business](../administration/access-denied-or-need-permission-error-sharepoint-online-or-onedrive-for-business.md)
-### ["Call us overprotective" message with OneDrive for Business](../sharing-and-permissions/call-us-overprotective-when-external-user-tries-to-sync-onedrive-for-business.md)
 ### ["Everyone except external users" group is removed](../sharing-and-permissions/everyone-except-external-user-removed.md)
 ### ["External sharing is disabled for the site" error with Online Admin Center](../sharing-and-permissions/troubleshoot-error-when-tries-to-access-center.md)
 ### ["Shared With"column displays users unexpectedly](../sharing-and-permissions/shared-with-column-users-no-access.md)
@@ -109,16 +105,12 @@
 ### [Anonymous users are prompted for credentials](../sharing-and-permissions/anonymous-users-are-prompted-for-credentials-in-library.md)
 ### [Can't access a shared folder](../sharing-and-permissions/cannot-access-shared-folder.md)
 ### [Can't add external users to a SharePoint Online External Content Type](../sharing-and-permissions/cannot-add-external-users-to-content-type.md)
-### [Can't share files with external users](../sharing-and-permissions/share-files-external-user-group-site.md)
 ### [Creator of teams group is listed as an admin](../sharing-and-permissions/fails-retrieving-teams-group-owner.md)
 ### [Credential prompts after resting mouse pointer over a user name](../sharing-and-permissions/rest-mouse-pointer-on-user-name.md)
-### [EMAIL EVERYONE link is hidden](../sharing-and-permissions/email-everyone-option-missing.md)
 ### [Email invitation isn't received](../sharing-and-permissions/everyone-group-not-receive-email-invitation.md)
 ### [Error when accepting an online invitation with another account](../sharing-and-permissions/error-when-external-user-accepts-an-invitation-by-using-another-account.md)
 ### [External users can't find users in people picker](../sharing-and-permissions/people-picker-fails-finding-users.md)
 ### [Issue after accepting a resource invite](../sharing-and-permissions/unable-to-complete-request.md)
-### [Issue when access a document via guest links](../sharing-and-permissions/guest-link-access-document.md)
-### [Issue when accessing a shared folder](../sharing-and-permissions/access-denied-shared-folder.md)
 ### [Issue when external users click links to shared resource](../sharing-and-permissions/external-user-fails-accessing-shared-resource.md)
 ### [Issue when processing a pending request](../sharing-and-permissions/request-approval-failed.md)
 ### [Issue with activate or deactivate the Publishing feature](../sharing-and-permissions/activating-publishing-feature-access-error.md)
@@ -127,8 +119,6 @@
 ### [Required permissions for managing Secure Store Service](../sharing-and-permissions/managing-secure-store-service-app-permissions.md)
 ### [Sharing options are greyed out when sharing from SharePoint Online or OneDrive](../administration/sharing-options-grayed-out-when-sharing-from-sharepoint-online-or-onedrive.md)
 ### [SSL certificate authentication issues ](../sharing-and-permissions/ssl-certificate-authentication.md)
-### [User doesn't receive email invitatoin to a shared resource](../sharing-and-permissions/email-invitation-to-shared-resource.md)
-### [Workflow fails to update a Person or Group column](../sharing-and-permissions/access-denied-site-mailbox.md)
 ### [You are not allowed to create team sites](../sharing-and-permissions/issue-when-you-click-new-site-on-followed-sites-page.md)
 
 ## Sites
@@ -172,6 +162,7 @@
 ### [Sites.aspx page doesn't display content](../Web-parts/aspx-page-not-display-content.md)
 
 ## Workflows
+### ["Access denied" error with an Approval Workflow task](../workflows/access-denied-when-approve-workflow-task.md)
 ### [A workflow doesn't complete](../Workflows/workflow-using-impersonation-step-fails-completed.md)
 ### [A workflow doesn't execute](../Workflows/workflow-lookup-fails-executing.md)
 ### [A Workflow Status error is reported](../workflows/error-reported-in-sharepoint-2010-workflow-status.md)

@@ -4,6 +4,8 @@ description: Microsoft Teams continous loop in Edge or Internet Explorer when yo
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: msteams
 ms.topic: article

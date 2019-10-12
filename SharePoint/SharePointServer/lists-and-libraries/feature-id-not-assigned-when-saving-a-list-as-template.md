@@ -4,6 +4,8 @@ description: Provides a solution for the issue where Feature id is not assigned 
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article

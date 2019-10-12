@@ -17,10 +17,12 @@
 ### [Update contact information](../configure-contacts/update-contact-information.md)
 
 ## Configure Mailboxes
+### [Can't remove mailbox permissions](../configure-mailboxes/cannot-remove-mailbox-permission-office-365.md)
 ### [Enable or disable POP3, IMAP, MAPI, OWA or ActiveSync](../configure-mailboxes/pop3-imap-owa-activesync-office-365.md)
 ### [Set automatic replies](../configure-mailboxes/set-automatic-replies.md)
 
-## Connecting To The Service
+## Connecting to the Service
+### [Access is denied with Windows PowerShell](../connecting-to-the-service/access-denied-connect-powershell.md)
 ### [Can't connect to Exchange Online](../connecting-to-the-service/incorrect-settings.md)
 ### [WinRM client cannot process the request](../connecting-to-the-service/winrm-cannot-process-request.md)
 
@@ -39,24 +41,37 @@
 ### [Prevent users from creating and managing DG](../distribution-groups/prevent-users-create-manage-dg.md)
 ### [You don't have sufficient permissions](../distribution-groups/no-sufficient-permissions-moving-dg.md)
 
-## Email Messages
-### [554 5.2.0 STOREDRV.Deliver.Exception](../email-messages/mapiexceptionnotfound-ndr.md)
-### [Access is denied with Windows PowerShell](../email-messages/access-denied-connect-powershell.md)
-### [IMCEAEX non-delivery report](../email-messages/imceaex-ndr.md)
+## Email Alias
+### [Remove an alias  from a contact](../email-alias/remove-an-alias-from-a-contact.md)
+### [Remove an alias from a distribution list](../email-alias/remove-an-alias-from-a-distribution-list.md)
+### [Remove an alias from a group](../email-alias/remove-an-alias-from-a-group.md)
+### [Remove an alias from a mail-enabled security group](../email-alias/remove-an-alias-from-a-mail-enabled-security-group.md)
+### [Remove an alias from a shared mailbox](../email-alias/remove-an-alias-from-a-shared-mailbox.md)
+### [Remove an email alias](../email-alias/remove-an-email-alias.md)
 
 ## Mailbox Migration
 ### [Issue with Add-RecipientPermission](../mailbox-migration/issue-with-add-recipientpermission-cmdlet.md)
 ### [Migrate data with Admin Center](../mailbox-migration/migrate-data-with-admin-center.md)
 ### [No smtp proxy matching](../mailbox-migration/no-smtp-proxy-matching.md)
 
+## Mail Delivery
+### [554 5.2.0 STOREDRV.Deliver.Exception](../mail-delivery/mapiexceptionnotfound-ndr.md)
+### [Find and fix email delivery issues](../mail-delivery/email-delivery-issues.md)
+### [IMCEAEX non-delivery report](../mail-delivery/imceaex-ndr.md)
+### [Non-delivery report error codes](../mail-delivery/mail-issues.md)
+
 ## Meetings
 ### [No conference rooms with Room Finders](../meetings/conference-rooms-not-dispalyed.md)
+
+## Modern Authentication
+### [Transition from D/ITAR to vNext](../modern-authentication/modern-authentication-configuration.md)
 
 ## Move Mailboxes
 ### [Can't see free/busy information](../move-mailboxes/cannot-see-free-busy-information.md)
 
 ## Outlook Connectivity
-### [Troubleshooting resources](../outlook-connectivity/office-365-troubleshooting-resources.md)
+### [Resources to fix connection issues](../outlook-connectivity/office-365-troubleshooting-resources.md)
+### [Sending and receiving email](../outlook-connectivity/outlook-connection-issues.md)
 
 ## Outlook Profiles
 ### [Can't set up profile with Autodiscover](../outlook-profiles/cannot-set-up-profile-autodiscover.md)

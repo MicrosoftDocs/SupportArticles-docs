@@ -4,6 +4,8 @@ description: Access Denied when you activate or deactivate the SharePoint Server
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

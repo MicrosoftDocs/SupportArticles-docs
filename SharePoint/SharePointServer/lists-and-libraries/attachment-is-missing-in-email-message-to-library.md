@@ -4,6 +4,8 @@ description: Describes a problem in Microsoft Windows SharePoint Services 3.0. W
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article

@@ -4,6 +4,8 @@ description: Discusses that you see a black screen during desktop sharing in Sky
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article

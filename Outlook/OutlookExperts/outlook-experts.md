@@ -3,6 +3,8 @@ title: Listing some issues for Outlook Experts.
 author: simonxjx
 manager: willchen
 audience: ITPro
+search.appverid: 
+- MET150
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six

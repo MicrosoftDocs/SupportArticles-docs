@@ -4,6 +4,8 @@ description: Discusses an error message that a user receives when he or she trie
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

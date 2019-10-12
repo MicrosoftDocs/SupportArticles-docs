@@ -4,6 +4,8 @@ description: Describes the issues that occur when a Lync Server 2010 File Store 
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article

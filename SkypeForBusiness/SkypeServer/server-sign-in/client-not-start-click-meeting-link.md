@@ -4,6 +4,8 @@ description: Discusses that users who try to join Lync or Skype for Business onl
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article

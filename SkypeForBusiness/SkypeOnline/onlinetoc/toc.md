@@ -115,7 +115,6 @@
 ### [Lync can't connect to Skype for Business Online](../online-sign-in/lync-cant-connect-to-sfb-online.md)
 ### [Sign-in address was not found](../online-sign-in/cannot-sign-in-to-lync.md)
 ### [Sign-in errors when settings are incorrect](../online-sign-in/sfb-online-sign-in-error.md)
-### [Sign-in issues](../online-sign-in/sign-in-issues.md)
 ### [Troubleshoot Lync for Mac sign in issues ](../online-sign-in/sign-in-issues-lync-for-mac.md)
 
 ## Subscription

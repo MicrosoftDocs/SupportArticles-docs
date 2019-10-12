@@ -4,11 +4,12 @@ description: SharePoint Online no longer automatically imports the EXIF properti
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: o365-solutions
 ms.topic: article
 ms.author: v-maqiu
-localization_priority: Normal
 appliesto:
 - SharePoint Online
 ---

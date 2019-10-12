@@ -4,6 +4,8 @@ description: "Describes what to do if Microsoft Project opens a calendar from a 
 author: todmccoy
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 ms.date: 2/5/2019
 audience: ITPro
 ms.prod: office-perpetual-itpro

@@ -3,6 +3,8 @@ title: Site doesn't use the site theme for the Office 365 top navigation bar
 description: This article describes an issue where SharePoint Online site doesn't use the site theme for the Office 365 top navigation bar, and provides a solution.
 author: simonxjx
 manager: dcscontentpm
+search.appverid: 
+- MET150
 localization_priority: Normal
 audience: ITPro
 ms.prod: sharepoint-server-itpro

@@ -3,6 +3,8 @@ title: Failure trying to synch site  - Event ID 5553
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article

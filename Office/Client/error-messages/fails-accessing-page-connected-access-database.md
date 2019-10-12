@@ -4,6 +4,8 @@ description: Fixes an issue in which you receive 0x80004005 error when trying to
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

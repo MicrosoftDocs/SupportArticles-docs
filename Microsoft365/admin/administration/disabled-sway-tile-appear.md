@@ -4,6 +4,8 @@ description: Describes an issue in which the Office 365 Sway tile is still displ
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: Office 365
 ms.topic: article

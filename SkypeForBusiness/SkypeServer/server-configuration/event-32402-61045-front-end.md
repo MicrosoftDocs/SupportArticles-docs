@@ -4,6 +4,8 @@ description: Discusses that Event IDs 32402, 61045 are logged in Lync Server 201
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article

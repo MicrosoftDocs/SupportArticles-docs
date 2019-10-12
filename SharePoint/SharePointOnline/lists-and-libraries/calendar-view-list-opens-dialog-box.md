@@ -4,6 +4,8 @@ description: A SharePoint Online list that uses the Calendar view always open it
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

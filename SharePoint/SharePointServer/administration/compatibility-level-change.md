@@ -4,6 +4,8 @@ description: When migrating a content database from a SharePoint farm to another
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

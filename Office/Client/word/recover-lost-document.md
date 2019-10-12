@@ -4,6 +4,8 @@ description: Describes a range of methods to locate and recover lost Microsoft W
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

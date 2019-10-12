@@ -4,6 +4,8 @@ description: Works around an issue in which the Everyone except external users g
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article

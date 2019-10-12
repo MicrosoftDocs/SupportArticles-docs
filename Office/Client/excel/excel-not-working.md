@@ -4,6 +4,8 @@ description: Provides steps to stop Excel from hanging or freezing when you open
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
