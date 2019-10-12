@@ -44,36 +44,21 @@ Binding software is similar. Your code is made up of parts that need to be pulle
 The structure of a COM object is simple. When your code holds a reference to an object, it holds an indirect pointer to the top of the v-table. The v-table is an array of memory addresses where each entry is a different function that can be called on that object. To call the third function on a COM object, you jump down three entries in the table and then jump to the memory location given there. That executes the code for the function and, when complete, returns you back ready to execute the next line of code.
 
 ```
-+-[Code]------------+  +.....................[COM Object]...+
-
-|                   |  : +-------------+                                                             :
-
-|Set obj = Nothing -|--->| obj pointer |                                         :
-
-|                   |  : +-|-----------+                                                             :
-
-+-------------------+  :   |   +-----------------+                     :
-
-                       :   +-->| v-table pointer |                                         :
-
-                       :       +--|--------------+                                                   :
-
-                       :          |                                                                                 :
-
-                       :          |  +----------------------------+                   :
-
-                       :  (3rd)   |  | Function 1 Address pointer |         :
-
-                       : (Offset) |  +----------------------------+         :
-
-                       :          |  | Function 2 Address pointer |                    :
-
-                       :          |  +----------------------------+                    :
-
-                       :          +->| Function 3 Address pointer |                    :
-
-                       :             +----------------------------+                    :
-
++-[Code]------------+  +.................................[COM Object]...+
+|                   |  : +-------------+                                :
+|Set obj = Nothing -|--->| obj pointer |                                :
+|                   |  : +-|-----------+                                :
++-------------------+  :   |   +-----------------+                      :
+                       :   +-->| v-table pointer |                      :
+                       :       +--|--------------+                      :
+                       :          |                                     :
+                       :          |  +----------------------------+     :
+                       :  (3rd)   |  | Function 1 Address pointer |     :
+                       : (Offset) |  +----------------------------+     :
+                       :          |  | Function 2 Address pointer |     :
+                       :          |  +----------------------------+     :
+                       :          +->| Function 3 Address pointer |     :
+                       :             +----------------------------+     :
                        +................................................+
 ```                      
 
