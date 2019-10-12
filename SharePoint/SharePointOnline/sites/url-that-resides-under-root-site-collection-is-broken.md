@@ -31,6 +31,8 @@ Consider the following scenarios in Office 365:
 
 To resolve these issues, restore the root level site collection from the Recycle Bin. For more info about how to restore a deleted site collection from the Recycle Bin, go to [Restore a deleted site collection](https://docs.microsoft.com/sharepoint/restore-deleted-site-collection?redirectSourcePath=%252fen-us%252farticle%252frestore-a-deleted-site-collection-91c18651-c017-47d1-9c27-3a22f325d6f1).
 
+**Note** Use [Site Swap](https://docs.microsoft.com/powershell/module/sharepoint-online/invoke-spositeswap?view=sharepoint-ps) to replace the root level site collection with an existing or new site collection instead of deleting the root level site collection. When the root level site collection is replaced, the former root level site collection can be deleted. 
+
 If the site collection is no longer present in the Recycle Bin, or if you prefer to create a new Site collection at the root site location, follow these steps:
 
 > [!NOTE]

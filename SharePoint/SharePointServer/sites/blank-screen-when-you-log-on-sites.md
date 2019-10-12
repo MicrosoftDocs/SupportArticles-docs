@@ -9,7 +9,10 @@ ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
 appliesto:
-- Microsoft SharePoint
+- SharePoint Server 2019
+- SharePoint Server 2016
+- SharePoint Server 2013
+- SharePoint Server 2010
 ---
 
 # Blank screen when you log on to a SharePoint site  
