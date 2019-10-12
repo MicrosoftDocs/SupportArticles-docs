@@ -4,6 +4,8 @@ description: List '|0' does not exist at site with URL '|1' when trying to creat
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

@@ -4,6 +4,8 @@ description: Describes that how to automate Microsoft Word to perform mail merge
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

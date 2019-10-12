@@ -4,6 +4,8 @@ description: This article describes changes to the LOGEST statistical function i
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

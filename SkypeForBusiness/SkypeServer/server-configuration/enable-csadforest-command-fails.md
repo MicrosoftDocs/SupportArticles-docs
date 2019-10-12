@@ -4,6 +4,8 @@ description: Resolves an issue in which Lync Server Enable-CsAdForest command fa
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article

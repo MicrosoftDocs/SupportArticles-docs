@@ -4,6 +4,8 @@ description: Describe how to configure Excel Services in SharePoint Server 2010 
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article

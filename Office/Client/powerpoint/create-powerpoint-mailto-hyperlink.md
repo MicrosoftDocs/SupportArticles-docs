@@ -3,6 +3,8 @@ title: How to create a mailto hyperlink in a presentation in PowerPoint for Mac
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

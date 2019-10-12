@@ -4,6 +4,8 @@ description: Resolves the issues in which Lync Server 2010 Central Management St
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article

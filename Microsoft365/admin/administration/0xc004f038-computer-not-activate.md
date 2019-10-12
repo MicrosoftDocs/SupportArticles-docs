@@ -4,6 +4,8 @@ description: Describes the Office 2010 and Office 2013 Activation troubleshooter
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

@@ -7,6 +7,7 @@
 ## [Can't refresh data connections in Excel Online](../excel-online-external-users-cannot-refresh-data-connections.md)
 ## [Can't save a project to Project Online](../cant-save-project-client-to-web-app.md)
 ## [Can't sign in Office 365 from multiple federated domains](../cant-sign-in-office-365-multiple-domain-federation.md)
+## [Disable personal OneDrive access](../disable-personal-onedrive-access-in-enterprise-office.md)
 ## [Excel Online cross KCD data refresh not supported](../excel-online-cross-forest-kcd-data-refresh-is-not-supported.md)
 ## [File size limit error when upload files to Sway](../sway-file-size-limit-error.md)
 ## [Forms response columns are out of order](../forms-response-columns-out-of-order.md)

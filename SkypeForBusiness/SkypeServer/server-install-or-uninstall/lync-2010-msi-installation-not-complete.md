@@ -4,6 +4,8 @@ description: Lync 2010 IT Managed installations that use the Lync.msi Windows In
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article

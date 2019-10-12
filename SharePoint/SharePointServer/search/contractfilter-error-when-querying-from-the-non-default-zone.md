@@ -4,6 +4,8 @@ description: Fixes an issue in which you receive a ContractFilter error when you
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article

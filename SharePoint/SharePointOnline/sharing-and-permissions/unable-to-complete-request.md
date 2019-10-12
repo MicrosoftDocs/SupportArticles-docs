@@ -4,6 +4,8 @@ description: This article introduces that using relative URLs for content types 
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

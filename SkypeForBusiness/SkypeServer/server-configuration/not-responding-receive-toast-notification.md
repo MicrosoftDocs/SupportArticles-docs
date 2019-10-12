@@ -4,6 +4,8 @@ description: The Skype for Business client stops responding when receiving a toa
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article

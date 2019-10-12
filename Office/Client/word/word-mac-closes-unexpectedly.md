@@ -4,6 +4,8 @@ description: Discusses that Word for Mac closes unexpectedly or that files exper
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article

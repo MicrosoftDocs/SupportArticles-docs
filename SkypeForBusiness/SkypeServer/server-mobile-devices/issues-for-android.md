@@ -4,6 +4,8 @@ description: This article describes how to troubleshoot some common issues that 
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article

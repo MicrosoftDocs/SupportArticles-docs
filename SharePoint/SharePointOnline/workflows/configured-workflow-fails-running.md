@@ -4,6 +4,8 @@ description: A SharePoint workflow that's set to send a custom email message to 
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

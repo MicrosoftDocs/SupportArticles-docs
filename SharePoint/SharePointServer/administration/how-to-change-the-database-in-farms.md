@@ -4,6 +4,8 @@ description: Describes the steps to change the database server in a SharePoint f
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article

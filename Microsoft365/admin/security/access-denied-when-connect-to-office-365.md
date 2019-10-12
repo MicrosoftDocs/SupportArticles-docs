@@ -4,6 +4,8 @@ description: Describes a scenario in which users are repeatedly prompted to ente
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: office 365
 ms.topic: article

@@ -4,6 +4,8 @@ description: Describes how to work around an access denied issue that occurs whe
 author: Teresa-Motiv
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience:  Admin|ITPro|Developer
 ms.prod: sharepoint-server-itpro
 ms.topic: article

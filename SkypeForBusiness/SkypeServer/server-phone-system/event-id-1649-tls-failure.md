@@ -4,6 +4,8 @@ description: Describes a TLS failure that occurred because the remote server dis
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article

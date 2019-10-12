@@ -4,6 +4,8 @@ description: Describes an issue in which Skype for Business Online users can't u
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article

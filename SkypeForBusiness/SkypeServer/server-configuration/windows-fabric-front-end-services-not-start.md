@@ -4,6 +4,8 @@ description: After Skype for Business Server 2015 install on Windows Server 2016
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article

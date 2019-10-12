@@ -9,6 +9,9 @@
 ## Calendar Sharing
 ### [Policy not allow granting permissions](../calendar-sharing/policy-permissions-issue.md)
 
+## Delegates
+### [Requirements to configure delegation](../delegates/overview-delegation-office-365-hybrid.md)
+
 ## Distribution Groups
 ### [Owners can't manage distribution groups](../distribution-groups/cannot-manage-dg.md)
 

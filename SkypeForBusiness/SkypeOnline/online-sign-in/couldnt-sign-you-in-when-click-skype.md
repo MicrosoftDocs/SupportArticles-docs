@@ -4,6 +4,8 @@ description: Describes an issue that triggers a "We couldn't sign you in" error 
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article

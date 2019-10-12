@@ -4,6 +4,8 @@ description: Describes that the format of build numbers for Office 365 is changi
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: Office 365
 ms.topic: article

@@ -4,6 +4,8 @@ description: This article describes an error when you activate the Announcement 
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

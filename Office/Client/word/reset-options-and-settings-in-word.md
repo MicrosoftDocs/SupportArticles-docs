@@ -4,6 +4,8 @@ description: Provides a step-by-step guide to reset registry settings and user o
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

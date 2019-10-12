@@ -4,6 +4,8 @@ description: The on-screen keyboard opens repeatedly when you use Word Online on
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

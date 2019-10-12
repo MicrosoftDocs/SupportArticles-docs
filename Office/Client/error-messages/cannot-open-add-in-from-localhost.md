@@ -4,6 +4,8 @@ description: When loading an Office add-in from localhost or using Fiddler, you 
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article

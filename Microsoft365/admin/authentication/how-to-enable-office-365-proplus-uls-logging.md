@@ -4,6 +4,8 @@ description: There are times during troubleshooting an Office issue when the tra
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: o365-solutions
 ms.topic: article

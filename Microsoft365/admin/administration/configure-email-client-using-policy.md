@@ -4,6 +4,8 @@ description: Explains how to configure the default e-mail client using Group Pol
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

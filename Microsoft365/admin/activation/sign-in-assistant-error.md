@@ -4,6 +4,8 @@ description: Describes an error that occurs when you try to activate Office Prof
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office 365
 ms.topic: article

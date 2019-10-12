@@ -4,6 +4,8 @@ description: Discusses how to enable Office Professional Plus 2010 to run on a t
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article

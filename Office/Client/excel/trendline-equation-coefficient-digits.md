@@ -4,6 +4,8 @@ description: Describes how to display more digits in trendline equation coeffici
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+search.appverid: 
+- MET150
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
