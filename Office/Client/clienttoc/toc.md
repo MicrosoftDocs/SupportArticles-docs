@@ -474,6 +474,7 @@
 ### [Transfer excel data from ADO Recordset](../office-developer/transfer-excel-data-from-ado-recordset.md)
 ### [Turn off Visual Basic for application](../office-developer/turn-off-visual-basic-for-application.md)
 ### [Use a type library for Office from Visual C++.NET](../office-developer/use-type-library-for-office-from-visual-c-net.md)
+### [Use early binding and late binding in Automation](../office-developer/binding-type-available-to-automation-clients.md)
 ### [Use Office Web Components using ASP.NET](../office-developer/use-office-web-components-using-aps-net.md)
 ### [Use VB ActiveX for Word from Internet Explorer](../office-developer/use-vb-activex-for-word-automation.md)
 ### [Use VB to count occurrences in Excel](../office-developer/use-vb-count-occurrences-in-excel.md)
