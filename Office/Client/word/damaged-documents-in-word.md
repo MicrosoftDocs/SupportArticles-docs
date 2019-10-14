@@ -371,11 +371,13 @@ If the document is corrupted and none of the previous methods work, try to recov
 1. Locate the damaged document using Windows File Explorer.
 2. Right click the document and select **Open with**.
 3. Select *Notepad*:
-   1. The document will open in Notepad with extra code and text around the content.
+
+:::image type="content" source="media/damaged-documents-in-word/damaged-documents-in-word.png" alt-text="Open the Word doc in Notepad. ":::
+4. The document will open in Notepad with extra code and text around the content.
    > [!NOTE] 
    > You may have to change the file type from “Text Documents (*.txt)” to “All Files (*.*)”. 
-   2. Clean the text by deleting all or most of the extra characters.
-   3. Select **File**, and then select **Save As…** Rename the document to make sure that you don’t overwrite the damaged one.
+5. Clean the text by deleting all or most of the extra characters.
+6. Select **File**, and then select **Save As…** Rename the document to make sure that you don’t overwrite the damaged one.
 
 Go back to Word and open the new document. Once in Word, you can clean it up and try to reapply the lost format.
 
