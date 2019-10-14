@@ -37,8 +37,36 @@ To block OneDrive access for Office 2016 users in your organization, follow thes
 
         ![Org ID only](https://sawinternal.blob.core.windows.net/gds-images/3120069.png)   
    
-If you want to block the use of OneDrive from within Windows, see [How to block OneDrive.exe from being advertised after you install Office 2016](https://support.microsoft.com/help/3107393). 
+
+### Modify the registry
+
+Open registry editor and browse to the following registry key:
+
+```
+HKCU\Software\Policies\Microsoft\Office\16.0\Common\Internet
+```
+
+Modify the DWORD value "OnlineStorage".
+
+Available values are:
+
+* **0** Policy is off (all locations are shown)
+
+* **1** Only OneDrive Personal locations are hidden
+
+* **2** All SharePoint Online locations are hidden
+
+* **3** All Microsoft Online Locations are hidden
+
+If you set other values, the policy is off (all locations are shown).
+
+If the value is set to **1**, uses can no longer see their personal OneDrive location under **Add a place**.
+
+
+## More information
+To block the use of OneDrive from within Windows, see [How to block OneDrive.exe from being advertised after you install Office 2016](https://support.microsoft.com/help/3107393). 
 
 To configure the update settings for Office 365 ProPlus, see the following TechNet resource:
 
 [Configure update settings for Office 365 ProPlus](https://technet.microsoft.com/library/dn761708.aspx)
+
