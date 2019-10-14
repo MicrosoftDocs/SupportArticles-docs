@@ -361,3 +361,21 @@ If the document appears to be truncated (not all pages in the document are displ
    3. Select and delete the next paragraph, table, or object in the file.    
    4. On the **View** tab in the **Document Views** group, select **Print Layout**. If the document continues to appear to be truncated, continue to switch views and delete content until the document no longer appears truncated in **Print Layout** view.    
    5. Save the document.
+
+### Method 9: Open the document with Notepad
+If the document is corrupted and none of the previous methods work, try to recover its content by opening the document with Notepad.
+
+> [!NOTE]
+> By using this method, you will lose all formatting. The intention is to recover the content. 
+
+1. Locate the damaged document using Windows File Explorer.
+2. Right click the document and select **Open with**.
+3. Select *Notepad*:
+   1. The document will open in Notepad with extra code and text around the content.
+   > [!NOTE] 
+   > You may have to change the file type from “Text Documents (*.txt)” to “All Files (*.*)”. 
+   2. Clean the text by deleting all or most of the extra characters.
+   3. Select **File**, and then select **Save As…** Rename the document to make sure that you don’t overwrite the damaged one.
+
+Go back to Word and open the new document. Once in Word, you can clean it up and try to reapply the lost format.
+
