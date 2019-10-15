@@ -193,14 +193,14 @@ File details include: Version, Location, Description, Size, Date, Company
 |Click-to-Run Configuration Information|<*ComputerName*>_Click-To-Run_Details.*|.txt|
 |Summary of File Association information most relevant to Excel|<*ComputerName*>_Excel_File_Associations.*|.txt|
 
-
 Reports created for the Office Configuration Analyzer Tool (OffCAT)
 
 |Description|File Name|Formats|
 |---|---|---|
 |Summary of OffCAT Information|<*ComputerName*>_OffCAT_Report.*|.html|
 |OffCAT results|<*ComputerName*>_OffCAT_Results.*|.xml, .xml.log|
-Related article: 
+
+Related article:
 
 [Office Configuration Analyzer Tool (OffCAT) information](https://support.microsoft.com/help/2812744)
 
