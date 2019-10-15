@@ -1,7 +1,7 @@
 ---
 title: Unable to save a site as a template
-description: A site contains apps that don't work in templates when saving it as a template in SharePoint Online or SharePoint Server 2013.
-author: simonxjx
+description: A site contains apps that don't work in templates when saving it as a template in SharePoint Online, SharePoint Server 2013 or 2016, or SharePoint Online SharePoint Server 2019.
+author: v-miegge
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -13,13 +13,15 @@ ms.author: v-six
 appliesto:
 - SharePoint Online
 - SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Online SharePoint Server 2019
 ---
 
 # "Sorry, something went wrong" error when you try to save a site as a template in SharePoint Online or SharePoint Server 2013
 
 ## Problem
 
-When you try to save a site as a template in SharePoint Online or SharePoint Server 2013, you receive the following error message:
+When you try to save a site as a template in SharePoint Online, SharePoint Server 2013 or 2016, or SharePoint Online SharePoint Server 2019, you receive the following error message:
 
 ```asciidoc
 Sorry, something went wrong
