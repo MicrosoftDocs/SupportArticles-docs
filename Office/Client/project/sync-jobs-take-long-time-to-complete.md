@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: project-server-itpr
 ms.topic: article
 ms.author: v-six
-appliesto
+appliesto:
 - Project Server 2013
 - Project Server 2010
 - Microsoft Office Project Server 2007
