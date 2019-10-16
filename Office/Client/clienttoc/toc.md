@@ -16,6 +16,7 @@
 ### [Database requires a newer version of Access](../access/database-requires-newer-access.md)
 ### [Error when you work in Access table linked to a list](../access/cant-update-database-or-object-error.md)
 ### [Errors during importing/exporting to Excel](../access/import-export-access-to-excel.md)
+### [Incorrect registry key for current version of Access](../access/incorrect-current-version-registry-key.md)
 ### [Issue when loading an Access web app](../access/load-access-web-app-in-ie.md)
 ### [Issues when you retrieve SharePoint list data](../access/retrieve-sharepoint-list-in-access.md)
 ### [Linked table to a SharePoint list returns #Deleted](../access/access-linked-table-return-deleted.md)
@@ -163,6 +164,7 @@
 ### [Excel 2013 or Word 2013 crashes on close](../excel/excel-word-crash-on-close.md)
 ### [Excel crashes when moving Excel sheet tab](../excel/crash-when-move-excel-sheet-tab.md)
 ### [Excel crashing issues are fixed in recent updates](../excel/excel-crash-issues-fixed-in-recent-updates.md)
+### [Excel doesn't recognize data as Date type data](../excel/not-recognize-data-as-date-type-data.md)
 ### [Excel doesn't shut down after calling Quit method](../excel/jscript-not-shut-down-excel.md)
 ### [Excel hangs, freezes or stops working](../excel/excel-not-working.md)
 ### [Excel incorrectly assumes 1900 is a leap year](../excel/wrongly-assumes-1900-is-leap-year.md)
@@ -215,6 +217,7 @@
 ### [Operation Must Use an Updateable Query](../excel/fails-accessing-excel-through-odbc.md)
 ### [Parts of Excel turn white or gray](../excel/parts-of-excel-turn-white-or-gray.md)
 ### [Paster special option is missing or not working](../excel/paste-special-missing-or-not-working.md)
+### [Power View sheet is not displayed in a workbook ](../excel/power-view-sheet-not-displayed.md)
 ### [PowerPivot controls disabled with non-default Excel file format](../excel/powerpivot-controls-disabled-with-non-default.md)
 ### [Prevent files from opening automatically](../excel/files-open-automatically.md)
 ### [Print preview misses lines](../excel/print-preview-miss-lines.md)
@@ -351,6 +354,7 @@
 ## Publisher
 ### [Publication is printed incorrectly](../publisher/print-publication-incorrectly.md)
 ### [Publisher can't open file with OLE objects](../publisher/publisher-cannot-open-the-file-error.md)
+### [Text boxes in Publisher-created email are converted to bitmap](../publisher/text-boxes-coverted-to-bitmap.md)
 
 ## Reference
 ### [Document Information Panel is deprecated](../reference/document-information-panel-deprecate.md)
