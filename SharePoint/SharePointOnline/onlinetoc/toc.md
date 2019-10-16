@@ -138,7 +138,6 @@
 ### [Issue when saving a site as a template](../Sites/fails-saving-site-as-template.md)
 ### [Issue when saving an onilne site as template](../Sites/save-site-as-template.md)
 ### [Issue with "New Navigation Link" or "Save site as template" option](../Sites/new-navigation-link-save-site-as-template.md)
-### [Online sites don't update to the 25 terabyte limit](../sites/sites-do-not-automatically-update-to-the-25-terabyte-limit.md)
 ### [Public websites is discountinued](../Sites/public-websites-be-discontinued.md)
 ### [Rich Text fields don't respond](../Sites/rich-text-fields-fails-responding.md)
 ### [Server Error in '/' Application when browsing to a site collection](../Sites/server-error-application.md)
