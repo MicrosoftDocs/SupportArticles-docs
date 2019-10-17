@@ -59,7 +59,7 @@ To do this, follow these steps:
 3. Grant full access permissions back to the user for the mailbox, but don't enable automapping. To do this, at the command prompt, type the following command, and then press Enter:
 
     ```powershell
-    Add-MailboxPermission -Identity <Mailbox ID1> -User <Mailbox ID2>-AccessRights FullAccess -AutoMapping:$false 
+    Add-MailboxPermission -Identity <Mailbox ID1> -User <Mailbox ID2> -AccessRights FullAccess -AutoMapping:$false 
     ```
    > [!NOTE]
    > In this command, <Mailbox ID1> represents the mailbox to which the user is granted permission and <Mailbox ID2> is the mailbox of the user to whom you want to add full access permissions.
