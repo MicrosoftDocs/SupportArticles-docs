@@ -51,7 +51,7 @@ The best method to add external contacts in Lync 2013 is to use the **Add Contac
 
 Use the Microsoft account together with Public Internet Connectivity (PIC) when you add a user to your Lync contact list. To do this, you must make a change in the search field. A Skype for Business Online user who wants to add the Microsoft account that uses a custom domain, such as <**username**>@live-contoso.com, must add an address that resembles the following to the search field: 
 
-**JoeAndreshak(live-contoso.com)@msn.com**
+**JoeAndreshak(live-contoso.com)\@msn.com**
 
 This method allows for a quick resolution if Skype for Business Online users are going to add only a few PIC contacts.
 
