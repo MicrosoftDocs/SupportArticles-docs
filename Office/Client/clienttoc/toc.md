@@ -321,9 +321,9 @@
 ### [Use GetObject and CreateObject with automation server](../office/getobject-createobject-behavior.md)
 ### [Win32API_PtrSafe with 64-bit Support](../office/win32api_ptrsafe-with-64-bit-support.md)
 ### [Windows Installer service could not be accessed](../office/windows-installer-service-not-be-accesse.md)
-### [Applications crash when opening IRM doccument](../office/office-applications-crash-when-open-irm-doc.md)
-### [Can't embed Adobe OpenType fonts](../office/fails-embedding-adobe-opentype-font.md)
-### [Office crash with SendToBluetooth add-in installed](../office/office-crash-with-sendtobluetooth.md)
+### [Applications crash when opening IRM doccument](../office/office-applications-crash-when-open-irm-doc.md)
+### [Can't embed Adobe OpenType fonts](../office/fails-embedding-adobe-opentype-font.md)
+### [Office crash with SendToBluetooth add-in installed](../office/office-crash-with-sendtobluetooth.md)
 
 ## Office for Mac
 ### ["wkresources" files in Trash](../office-for-mac/wkresources-files-moved-to-trash.md)
