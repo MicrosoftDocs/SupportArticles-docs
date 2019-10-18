@@ -286,7 +286,9 @@
 ## Office
 ### ["No default mail client" error](../office/no-default-mail-client-error.md)
 ### ["Your system is low on virtual memory" error](../office/your-system-is-low-on-virtual-memory.md)
+### [Applications crash when opening IRM doccument](../office/office-applications-crash-when-open-irm-doc.md)
 ### [Can't change the number of places in Recent Places](../office/change-number-of-recent-places.md)
+### [Can't embed Adobe OpenType fonts](../office/fails-embedding-adobe-opentype-font.md)
 ### [Can't install 64-bit Office with 32-bit](../office/cannot-install-64-bit-office-with-32-bit.md)
 ### [Can't install Office Starter 2010 on Windows 8](../office/cant-install-office-on-windows-8.md)
 ### [Can't use "Convert bibliography to static text"](../office/convert-bibliography-to-static-text.md)
@@ -296,7 +298,6 @@
 ### [Edit OLE document property with Dsofile.dll ](../office/dsofile.dll-allow-edit-document-property.md)
 ### [Error when you install an Office program](../office/error-run-office-setup-program.md)
 ### [Error when you move mailboxes to or from Office 365](../office/error-move-mailboxes-to-from-o365.md)
-### [FAQ about Office Activation Wizard](../office/faq-about-office-activation-wizard.md)
 ### [FAQ about Office Activation Wizard](../office/faq-about-office-activation-wizard.md)
 ### [Information about Office Click-to-Run installation](../office/office-click-to-run-installation.md)
 ### [Introduce Click-to-Run for Office 2010](../office/office-click-to-run-faq.md)
@@ -308,6 +309,7 @@
 ### [Office 2010 Installation failure](../office/office-installation-failure.md)
 ### [Office 2010 installation requires MSXML ](../office/office-installtion-need-msxml.md)
 ### [Office 2010 Setup program not restart](../office/office-suite-setup-not-restart.md)
+### [Office crash with SendToBluetooth add-in installed](../office/office-crash-with-sendtobluetooth.md)
 ### [Office End User License Agreement always appears](../office/office-end-user-license-agreement.md)
 ### [Office files with RMS protection crash](../office/rms-protected-files-crash.md)
 ### [Office installtion Error 1401, 1402 or 1406](../office/office-install-error-1401-1402-1406.md)
@@ -321,9 +323,7 @@
 ### [Use GetObject and CreateObject with automation server](../office/getobject-createobject-behavior.md)
 ### [Win32API_PtrSafe with 64-bit Support](../office/win32api_ptrsafe-with-64-bit-support.md)
 ### [Windows Installer service could not be accessed](../office/windows-installer-service-not-be-accesse.md)
-### [Applications crash when opening IRM doccument](../office/office-applications-crash-when-open-irm-doc.md)
-### [Can't embed Adobe OpenType fonts](../office/fails-embedding-adobe-opentype-font.md)
-### [Office crash with SendToBluetooth add-in installed](../office/office-crash-with-sendtobluetooth.md)
+
 
 ## Office for Mac
 ### ["wkresources" files in Trash](../office-for-mac/wkresources-files-moved-to-trash.md)
