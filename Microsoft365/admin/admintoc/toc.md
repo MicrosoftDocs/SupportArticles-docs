@@ -202,6 +202,7 @@
 ### [Collect a Network Monitor trace in Office 365](../support/collect-network-monitor-trace.md)
 ### [No support for multiple Office versions with RDS](../support/multiple-office-versions-rds.md)
 ### [Office 365 changes build numbers to a five-digit format](../support/build-number-five-digit.md)
+### [Run SaRA Fiddler Trace](../support/run-fiddler-trace.md)
 
 ## Visio
 ### [Visio Services was unable to load Web Drawing](../visio/cannot-load-visio-web-drawing.md)
