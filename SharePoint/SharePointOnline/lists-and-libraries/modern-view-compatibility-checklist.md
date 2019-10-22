@@ -17,9 +17,9 @@ appliesto:
 
 # SharePoint Online Lists and Libraries Modern View Compatibility check
 
-Below are a list of potential causes for a list or library not to render in Modern View.
+The following is a list of potential reasons for a list or library not to render in Modern View.
 
-## Recommended Steps
+## Recommended steps
 
 ## The View is not a List or Library View
 
@@ -27,7 +27,7 @@ Below are a list of potential causes for a list or library not to render in Mode
 
 **Recommendation:** Specify a List or Library View and rerun the diagnostic.
 
-**More Information:**
+**More information:**
 
 * [Create, change, or delete a view of a list or library](https://support.office.com/article/create-change-or-delete-a-view-of-a-list-or-library-27ae65b8-bc5b-4949-b29b-4ee87144a9c9)
 
@@ -35,9 +35,9 @@ Below are a list of potential causes for a list or library not to render in Mode
 
 **Detection:** The View is not in a standard List or Library location.
 
-**Recommendation:** Create a new List or Library View.
+**Recommendation:** Create a List or Library View.
 
-**More Information:**
+**More information:**
 
 * [Create, change, or delete a view of a list or library](https://support.office.com/article/create-change-or-delete-a-view-of-a-list-or-library-27ae65b8-bc5b-4949-b29b-4ee87144a9c9)
 
@@ -45,9 +45,9 @@ Below are a list of potential causes for a list or library not to render in Mode
 
 **Detection:** The View utilizes Web Parts with relationships to other Web Parts.
 
-**Recommendation:** Create a new View, with a single web part on it.
+**Recommendation:** Create a view that has a single web part on it.
 
-**More Information:**
+**More information:**
 
 * [Create, change, or delete a view of a list or library](https://support.office.com/article/create-change-or-delete-a-view-of-a-list-or-library-27ae65b8-bc5b-4949-b29b-4ee87144a9c9)
 
@@ -57,7 +57,7 @@ Below are a list of potential causes for a list or library not to render in Mode
 
 **Recommendation:** Switch to SharePoint Column Formatting or Field Customizers and Remove the JSLink based customizations from the View or Columns.
 
-**More Information:**
+**More information:**
 
 * [SharePoint Column Formatting](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting)
 * [SharePoint Field Customizer](https://docs.microsoft.com/sharepoint/dev/spfx/extensions/get-started/building-simple-field-customizer)
@@ -71,7 +71,7 @@ Below are a list of potential causes for a list or library not to render in Mode
 
 **Recommendation:** Switch to SharePoint Column Formatting or Field Customizers and Remove the XslLink based customizations.
 
-**More Information:**
+**More information:**
 
 * [Customizing "modern" lists and libraries](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/modern-experience-customizations-customize-lists-and-libraries)
 * [SharePoint Column Formatting](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/column-formatting)
@@ -80,9 +80,9 @@ Below are a list of potential causes for a list or library not to render in Mode
 
 **Detection:** The View’s List or Library cannot be found.
 
-**Recommendation:** Create a new List or Library View.
+**Recommendation:** Create a List or Library View.
 
-**More Information:**
+**More information:**
 
 * [Create, change, or delete a view of a list or library](https://support.office.com/article/create-change-or-delete-a-view-of-a-list-or-library-27ae65b8-bc5b-4949-b29b-4ee87144a9c9)
 
@@ -90,9 +90,9 @@ Below are a list of potential causes for a list or library not to render in Mode
 
 **Detection:** The View contains External Data Column(s).
 
-**Recommendation:** Create a new View that doesn't include External Data Columns(s) or Remove the External Data Column(s) from the current View. You don't need to remove the column from the List or Library.
+**Recommendation:** Create a view that doesn't include External Data Columns(s) or Remove the External Data Column(s) from the current View. You don't have to remove the column from the list or library.
 
-**More Information:**
+**More information:**
 
 * [Differences between the new and classic experiences for lists and libraries](https://support.office.com/article/Differences-between-the-new-and-classic-experiences-for-lists-and-libraries-30e1aab0-a5cc-4363-b7f2-09e2ae07d4dc)
 * [Create, change, or delete a view of a list or library](https://support.office.com/article/create-change-or-delete-a-view-of-a-list-or-library-27ae65b8-bc5b-4949-b29b-4ee87144a9c9)
@@ -102,9 +102,9 @@ Below are a list of potential causes for a list or library not to render in Mode
 
 **Detection:** The View contains a Task Outcome Column(s), used for Workflow Tasks.
 
-**Recommendation:** Create a new View that doesn't include Task Outcome Column(s) or Remove the Task Outcome Column(s) from the current View. You don't need to remove the column from the List or Library.
+**Recommendation:** Create a view that doesn't include Task Outcome Column(s) or Remove the Task Outcome Column(s) from the current View. You don't have to remove the column from the list or library.
 
-**More Information:**
+**More information:**
 
 * [Differences between the new and classic experiences for lists and libraries](https://support.office.com/article/Differences-between-the-new-and-classic-experiences-for-lists-and-libraries-30e1aab0-a5cc-4363-b7f2-09e2ae07d4dc)
 * [Create, change, or delete a view of a list or library](https://support.office.com/article/create-change-or-delete-a-view-of-a-list-or-library-27ae65b8-bc5b-4949-b29b-4ee87144a9c9)
@@ -114,10 +114,10 @@ Below are a list of potential causes for a list or library not to render in Mode
 
 **Detection:** The View contains a Publishing Columns(s).
 
-**Recommendation:** Create a new View that doesn't include Publishing Columns(s) or
-remove the Publishing Columns(s) from the current View. You don't need to remove the column from the List or Library.
+**Recommendation:** Create a view that doesn't include publishing columns(s) or
+remove the publishing columns(s) from the current View. You don't have to remove the column from the list or library.
 
-**More Information:**
+**More information:**
 
 * [Differences between the new and classic experiences for lists and libraries](https://support.office.com/article/Differences-between-the-new-and-classic-experiences-for-lists-and-libraries-30e1aab0-a5cc-4363-b7f2-09e2ae07d4dc)
 * [Create, change, or delete a view of a list or library](https://support.office.com/article/create-change-or-delete-a-view-of-a-list-or-library-27ae65b8-bc5b-4949-b29b-4ee87144a9c9)
@@ -127,15 +127,15 @@ remove the Publishing Columns(s) from the current View. You don't need to remove
 
 **Detection:** The View is either a Calendar or Gantt type and is not Modern compatible.
 
-**Recommendation:** Provide feedback via [user voice](https://sharepoint.uservoice.com/forums/329214-sites-and-collaboration) if this is an important feature for you.
+**Recommendation:** Provide feedback through [user voice](https://sharepoint.uservoice.com/forums/329214-sites-and-collaboration) if this is an important feature for you.
 
 ## The List or Library is not Modern compatible
 
 **Detection:** The List or Library is not Modern compatible.
 
-**Recommendation:** Provide feedback via [user voice](https://sharepoint.uservoice.com/forums/329214-sites-and-collaboration) if this is an important feature for you.
+**Recommendation:** Provide feedback through [user voice](https://sharepoint.uservoice.com/forums/329214-sites-and-collaboration) if this is an important feature for you.
 
-**More Information:**
+**More information:**
 
 Supported Lists:
 
@@ -156,9 +156,9 @@ Supported Lists:
 
 **Detection:** The List or Library settings are set to Classic Mode only.
 
-**Recommendation:** Navigate to the settings for the list or library, click advanced settings
+**Recommendation:** Navigate to the settings for the list or library,  select Advanced Settings
 
-**More Information:**
+**More information:**
 
 * Under the List experience section, select **New experience**.
 * [Display list using new or classic experience - Advanced settings - Edit list settings in SharePoint Online](https://support.office.com/article/Edit-list-settings-in-SharePoint-Online-4d35793b-246e-42a3-990c-563a83795b7f).
@@ -167,15 +167,15 @@ Supported Lists:
 
 **Detection:** The View is not rendering using Modern due to a site collection feature being enabled.
 
-**Recommendation:** Disable feature E3540C7D-6BEA-403C-A224-1A12EAFEE4C4 to enable Modern in the site collection. This will require PowerShell/code as the feature is hidden.
+**Recommendation:** Disable the  E3540C7D-6BEA-403C-A224-1A12EAFEE4C4 feature to enable Modern in the site collection. This requires that you use PowerShell/code because the feature is hidden.
 
-**More Information:**
+**More information:**
 
 Run the following PNP commands:
 
 1. [Install SharePoint PnP](https://docs.microsoft.com/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps)
 2. Start PowerShell
-3. Enter the following:
+3. Enter the following commands:
    ``` powershell
    $UserCredentials = Get-Credential
    Connect-PnPOnline -Url https://YourTenant.sharepoint.com/sites/SiteCollectionUrl -Credentials $UserCredentials
@@ -186,9 +186,9 @@ Run the following PNP commands:
 
 **Detection:** The View is not rendering using Modern due to a site feature being enabled.
 
-**Recommendation:** Disable feature 52E14B6F-B1BB-4969-B89B-C4FAA56745EF to enable Modern in the site. This will require PowerShell/code as the feature is hidden.
+**Recommendation:** Disable the 52E14B6F-B1BB-4969-B89B-C4FAA56745EF feature to enable Modern in the site. This requires that you use PowerShell or code because the feature is hidden.
 
-**More Information:**
+**More information:**
 
 Run the following PNP commands:
 
@@ -205,9 +205,9 @@ Run the following PNP commands:
 
 **Detection:** The form page has been customized.
 
-**Recommendation:** Recreate the form page or consider [PowerApps](https://docs.microsoft.com/powerapps/maker/canvas-apps/customize-list-form).
+**Recommendation:** Recreate the form page or consider using [PowerApps](https://docs.microsoft.com/powerapps/maker/canvas-apps/customize-list-form).
 
-**More Information:**
+**More information:**
 
 1. Navigate to Site Actions.
 2. Navigate to Site Settings.
@@ -219,13 +219,13 @@ Run the following PNP commands:
 
 **Detection:** The current document library has a new item form, and this is not compatible with Modern.
 
-**Recommendation:** Provide feedback via [user voice](https://sharepoint.uservoice.com/forums/329214-sites-and-collaboration) if this is an important feature for you.
+**Recommendation:** Provide feedback through [user voice](https://sharepoint.uservoice.com/forums/329214-sites-and-collaboration) if this is an important feature for you.
 
 ## The form page contains Column(s) that are incompatible with Modern
 
 **Detection:** The form page contains Column(s) that are incompatible with Modern.
 
-**Recommendation:** Remove or set incompatible form columns as hidden to render the form with the Modern user experience.
+**Recommendation:** Remove or set incompatible form columns as hidden to render the form by using the Modern user experience.
 
 The following columns are supported:
 
@@ -248,7 +248,7 @@ The following columns are supported:
 
 **Detection:** The form page contains an invalid Columns(s).
 
-**Recommendation:** Remove the invalid Column(s). They are usually classic publishing page Column(s).
+**Recommendation:** Remove the invalid column(s). They are usually classic publishing page Column(s).
 
 The following columns are supported:
 
@@ -271,9 +271,9 @@ The following columns are supported:
 
 **Detection:** The form page contains an invalid control mode.
 
-**Recommendation:** Recreate the form page or consider [PowerApps](https://docs.microsoft.com/powerapps/maker/canvas-apps/customize-list-form).
+**Recommendation:** Recreate the form page or consider using [PowerApps](https://docs.microsoft.com/powerapps/maker/canvas-apps/customize-list-form).
 
-**More Information:**
+**More information:**
 
 * [Customize a SharePoint list form by using PowerApps](https://docs.microsoft.com/powerapps/maker/canvas-apps/customize-list-form)
 
@@ -281,9 +281,9 @@ The following columns are supported:
 
 **Detection:** The form page is customized.
 
-**Recommendation:** Recreate the form page or consider PowerApps.
+**Recommendation:** Recreate the form page or consider using PowerApps.
 
-**More Information:**
+**More information:**
 
 * [Customize a SharePoint list form by using PowerApps](https://docs.microsoft.com/powerapps/maker/canvas-apps/customize-list-form)
 
@@ -291,9 +291,9 @@ The following columns are supported:
 
 **Detection:** The View is customized.
 
-**Recommendation:** Reset page to site definition version.
+**Recommendation:** Reset page to the site definition version.
 
-**More Information:**
+**More information:**
 
 1. Navigate to Site Actions.
 2. Navigate to Site Settings.
