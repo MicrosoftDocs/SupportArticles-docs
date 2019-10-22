@@ -1,6 +1,6 @@
 ---
 title: SharePoint Online Lists and Libraries Modern View Compatibility check
-description: SharePoint Online Lists and Libraries Modern View Compatibility check
+description: A list of potential causes for a list or library not to render in Modern View.
 author: v-miegge
 manager: dcscontentpm
 localization_priority: Normal
@@ -17,7 +17,7 @@ appliesto:
 
 # SharePoint Online Lists and Libraries Modern View Compatibility check
 
-Below are list of potential causes for a list or library to render in Modern View.
+Below are a list of potential causes for a list or library not to render in Modern View.
 
 ## Recommended Steps
 
