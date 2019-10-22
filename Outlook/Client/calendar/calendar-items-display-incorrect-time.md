@@ -34,4 +34,4 @@ There's no fix or update needed. As soon as it's the year of the time zone defin
 
 ## More information
 
-For example, in 2019 the government of Brazil announced that it would not change its clocks for the upcoming daylight savings time period, which was scheduled to last from November 3, 2019, to February 16, 2020. Recurring meetings for January 7, 2020, through February 15, 2020, received by users in 2019 in the Brazil time zone may appear one hour off when viewed in the Outlook calendar until December 31, 2019. These meetings will then appear at the correct time on or after January 1, 2020.
+For example, in 2019 the government of Brazil announced that it would not change its clocks for the upcoming daylight savings time period, which was scheduled to last from November 3, 2019, to February 16, 2020. Recurring meetings for January 7, 2020, through February 15, 2020, received by users in 2019 in the Brazil time zone may appear one hour off when viewed in the Outlook calendar until December 31, 2019. These meetings will then appear at the correct time on or after January 1, 2020. 
