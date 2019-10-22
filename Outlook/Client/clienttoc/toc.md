@@ -1,5 +1,8 @@
 # [Outlook for Windows Troubleshooting](../client.md)
 
+## Calendar
+### [Items for next year display at incorrect time](../calendar/calendar-items-display-incorrect-time.md)
+
 ## Deployment
 ### [Cached Exchange Mode](../deployment/cached-exchange-mode.md)
 ### [Planning considerations](../deployment/plan-outlook-2016-deployment.md)
