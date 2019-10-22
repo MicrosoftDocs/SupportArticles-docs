@@ -9,7 +9,7 @@ ms.topic: article
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: CI 109336
-ms.reviewer: tasitae, sbradley, randyto, gbratton
+ms.reviewer: tasitae,sbradley,randyto,gbratton
 appliesto:
 - Outlook 2013
 - Outlook 2016
