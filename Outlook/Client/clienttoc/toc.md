@@ -1,6 +1,6 @@
 # [Outlook for Windows Troubleshooting](../client.md)
 
-## Calendar
+## Calendars
 ### [Items for next year display at incorrect time](../calendar/calendar-items-display-incorrect-time.md)
 
 ## Deployment
