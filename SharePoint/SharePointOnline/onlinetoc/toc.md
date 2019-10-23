@@ -34,6 +34,7 @@
 ### [Issue when connecting an InfoPath form](../InfoPath/fails-connecting-infopath-form.md)
 
 ## Lists and Libraries
+### [Lists and Libraries Modern View Compatibility check](../lists-and-libraries/modern-view-compatibility-checklist.md)
 ### ["drag files here" option is missing for a list](../lists-and-libraries/drag-files-here-option-missing.md)
 ### [0x80070005 error for an online list sync](../lists-and-libraries/sync-sharepoint-list-error-0x80070005.md)
 ### [A link to a shared PDF file prompts users to download the file](../lists-and-libraries/prompt-user-download-shared-pdf.md)
