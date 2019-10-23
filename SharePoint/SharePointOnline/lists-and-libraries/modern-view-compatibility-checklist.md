@@ -90,7 +90,7 @@ The following is a list of potential reasons for a list or library not to render
 
 **Detection:** The View contains External Data Column(s).
 
-**Recommendation:** Create a view that doesn't include External Data Columns(s) or Remove the External Data Column(s) from the current View. You don't have to remove the column from the list or library.
+**Recommendation:** Create a view that doesn't include External Data Column(s) or Remove the External Data Column(s) from the current View. You don't have to remove the column from the list or library.
 
 **More information:**
 
@@ -110,12 +110,12 @@ The following is a list of potential reasons for a list or library not to render
 * [Create, change, or delete a view of a list or library](https://support.office.com/article/create-change-or-delete-a-view-of-a-list-or-library-27ae65b8-bc5b-4949-b29b-4ee87144a9c9)
 * [Delete a column in a SharePoint list or library](https://support.office.com/article/delete-a-column-in-a-sharepoint-list-or-library-72cfd78d-dcca-4fa6-b499-c89214917604#ID0EAADAAA=Online,_2019)
 
-## The View contains a Publishing Columns(s)
+## The View contains a Publishing Column(s)
 
-**Detection:** The View contains a Publishing Columns(s).
+**Detection:** The View contains a Publishing Column(s).
 
-**Recommendation:** Create a view that doesn't include publishing columns(s) or
-remove the publishing columns(s) from the current View. You don't have to remove the column from the list or library.
+**Recommendation:** Create a view that doesn't include publishing column(s) or
+remove the publishing column(s) from the current View. You don't have to remove the column from the list or library.
 
 **More information:**
 
@@ -244,9 +244,9 @@ The following columns are supported:
 * Url
 * User and Taxonomy
 
-## The form page contains an invalid Columns(s)
+## The form page contains an invalid Column(s)
 
-**Detection:** The form page contains an invalid Columns(s).
+**Detection:** The form page contains an invalid Column(s).
 
 **Recommendation:** Remove the invalid column(s). They are usually classic publishing page Column(s).
 
