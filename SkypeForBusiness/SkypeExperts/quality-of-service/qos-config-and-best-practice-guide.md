@@ -1,6 +1,6 @@
 ---
 title: Quality of Service for Skype for Business/Lync - configuration and best practice guide
-description: "Outlines best practices for Quality of Service configurations in Skype for Business and Lync."
+description: Outlines best practices for Quality of Service configurations in Skype for Business and Lync.
 ms.author: v-todmc
 author: balasaheb.ilag@hotmail.com
 manager: dcscontentpm
@@ -70,13 +70,16 @@ Let us start with QoS configuration:
 QoS is not enabled by default on Skype for Business/Lync servers. <br/><br/>
 You can run the Get-CsMediaConfiguration command from PowerShell to see if “EnableQoS” shows “True” or “False”. By default, it shows as **False**.<br/><br/> 
 To Enable QoS globally, run the following PowerShell command: 
-   > ```
-   > Set-CsMediaConfiguration -EnableQoS $True 
-   > ```
-   In case you want to enable QoS site wide, run the following commandlet:
-   ```
-   Set-CsMediaConfiguration -Identity Site:<sitename> -EnableQoS $True
-   ``` 
+
+```
+Set-CsMediaConfiguration -EnableQoS $True 
+```
+
+In case you want to enable QoS site wide, run the following commandlet:
+
+```
+Set-CsMediaConfiguration -Identity Site:<sitename> -EnableQoS $True
+``` 
  
 2.	**Configure the port ranges for conferencing and peer-to-peer media traffic:** <br/>
 For QoS to work correctly, configure identical port ranges for audio, video, file transfer, and app sharing on your Conferencing, Application, and Mediation servers. These port ranges must not overlap in any ways. (For example, if you use ports 57501 through 65535 for video on your Conferencing servers, then you must also reserve ports 57501 through 65535 for video on your application servers. If you do not, QoS will not work as expected.) <br/><br/>
@@ -165,15 +168,21 @@ After defining port ranges, you must also create QoS policies that specify the D
    6. On the next page, enter lync.exe in the field <b>Only applications with this executable name</b> and select <b>OK</b>.
    > [!NOTE]
    > This option ensures that the Lync.exe application will match packets from the specified port range with the specified DSCP code.
+   
    <img alt="Only applications with this executable name" src="media/103849-5.jpg">
+
    7. On the next screen, make sure that both <b>Any source IP address and Any destination IP address</b> are selected and then select <b>Next</b>.
    > [!NOTE]
    > These two settings ensure that packets will be managed regardless of which computer (IP address) sent those packets and which computer (IP address) will receive those packets.
+
    <img alt="Select Any source IP address and Any destination IP address." src="media/103849-6.jpg">
+
    8. On the next screen, select <b>TCP and UDP</b> and then select <b>From this source port or range</b>. In the field, type the port range reserved for audio transmissions.
    > [!NOTE]
    > Transmission Control Protocol (TCP) and User Datagram Protocol (UDP) are the two networking protocols most commonly used by Skype for Business/ Lync servers and their client applications.
+
    <img alt="Select From this sourceport or range." src="media/103849-7.jpg">
+   
    9. Follow steps **e** through **h** to create new policy objects and label them “Lync2013-Signaling”, “Lync2013-AppShare”, “Lync2013-File Transfer”, and Lync2013-Video” with the above ports ranges and DSCP values.
    10. After you have configured all policy objects, it will look like the image below:
    <img alt="Configured policy objects." src="media/103849-8.jpg">
