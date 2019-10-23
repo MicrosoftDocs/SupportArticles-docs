@@ -56,7 +56,7 @@ If the new alert is received but existing alerts aren't received, delete and the
 
 ### Solution 4
 
-If all alerts from multiple files or libraries are not delivered, visit the [Service Health dashboard](https://admin.microsoft.com/AdminPortal/Home#/servicehealth) to check for any advisories/incidents that may be occurring with SharePoint or Exchange. The issue could be with the SharePoint alert capability or delays in emails through Exchange. It will also be important to note whether other email is being delivered, and if not, the issue is likely with Exchange delays.
+If all alerts from multiple files or libraries are not delivered, visit the Service Health Dashboard from the Microsoft 365 admin center, Health, Service health to check for any advisories/incidents that may be occurring with SharePoint or Exchange. The issue could be with the SharePoint alert capability or delays in emails through Exchange. It will also be important to note whether other email is being delivered, and if not, the issue is likely with Exchange delays.
 
 > [!Note]
 >
