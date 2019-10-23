@@ -43,7 +43,7 @@ Many articles in the Microsoft Knowledge Base that relate to installation errors
 
 ### How to create a log file
 
-Office Setup automatically creates log files in your \Temp folder. The log files have names that are similar to the following:
+Office Setup automatically creates log files in your \Temp folder. The logs will be stored under %temp% for Sign-in or Activation issues. For installation or patching issues, they use the system account, so you will also want to collect the logs from %windir%\temp. For more information, see [How to enable Office 365 ProPlus ULS logging](https://docs.microsoft.com/office365/troubleshoot/authentication/how-to-enable-office-365-proplus-uls-logging).
 
 |Log file for|Log file name
 |---|---|
@@ -53,7 +53,8 @@ Office Setup automatically creates log files in your \Temp folder. The log files
 
 The #### characters in the log file names are numbers that start with 0001. They increment by one each time that you run Setup. Therefore, the log file that has the highest number is the log file for the most recent time that you ran Setup.
 
-Note You may have only a Microsoft Windows Installer log file for the Office installation. In this situation, the Windows Installer log file for the Office installation has Task(0001) appended to the log file instead of Task(0002).
+> [!NOTE]
+> You may have only a Microsoft Windows Installer log file for the Office installation. In this situation, the Windows Installer log file for the Office installation has Task(0001) appended to the log file instead of Task(0002).
 
 ### How to interpret log files
 Depending on the problem that you are experiencing, you may have to view the Setup log file or the Windows Installer log file for the Office installation.
