@@ -34,6 +34,7 @@
 ### [Issue when connecting an InfoPath form](../InfoPath/fails-connecting-infopath-form.md)
 
 ## Lists and Libraries
+### [Lists and Libraries Modern View Compatibility check](../lists-and-libraries/modern-view-compatibility-checklist.md)
 ### ["drag files here" option is missing for a list](../lists-and-libraries/drag-files-here-option-missing.md)
 ### [0x80070005 error for an online list sync](../lists-and-libraries/sync-sharepoint-list-error-0x80070005.md)
 ### [A link to a shared PDF file prompts users to download the file](../lists-and-libraries/prompt-user-download-shared-pdf.md)
@@ -84,10 +85,11 @@
 ### [Items are missing from online search results](../Search/items-missing-from-search-results.md)
 ### [Near-duplicate items aren't listed in SharePoint Online or SharePoint Server 2013 on-premises search results](../search/near-duplicate-items-are-not-listed-in-search-results.md)
 ### [No updated results when searching people categories properties](../search/updated-results-are-not-returned-when-searching-people-properties.md)
-### [Private OneDrive for Business results isn't included](../Search/private-onedrive-results-not-included.md)
+### [Private OneDrive for Business results aren't included](../Search/private-onedrive-results-not-included.md)
 ### [Search doesn't provide results from another language](../Search/no-search-results-from-another-language.md)
-### [Search results is missing](../Search/search-results-missing.md)
-### [Search results isn't returned](../Search/search-results-not-return.md)
+### [Search results are missing](../Search/search-results-missing.md)
+### [Search results aren't returned](../Search/search-results-not-return.md)
+### [Search results don’t appear for group owners after creating a new Office 365 group](../search/search-results-dont-appear-for-group-owners.md)
 
 ## Security
 ### ["Session has expired" when opening a document](../Security/session-has-expired.md)
