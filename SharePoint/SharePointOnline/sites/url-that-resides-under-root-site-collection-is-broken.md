@@ -38,7 +38,7 @@ To address issues caused by deleting a root site, and to continue to allow the a
    > [!IMPORTANT]
    > Additional changes will soon be introduced to further prevent the root site from being deleted. This will include turning off the capability from PowerShell, Classic Admin Center, and Site Information. 
 
-- To allow admins to manage which site is at the root, Site Swap has been introduced. Site Swap will allow admins to replace the root site with either a modern communication site or a classic team site. 
+- To allow admins to manage which site is at the root, [Site Swap](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fsharepoint%2Fmodern-root-site%23swap-your-root-site&data=04%7c01%7cClaudia.Lake%40microsoft.com%7cefd613f51010438115e308d75703cf7e%7c72f988bf86f141af91ab2d7cd011db47%7c1%7c0%7c637073546195921169%7cUnknown%7cTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7c-1&sdata=GQPve6lSCJukoFM5UsAdYG22lNEsQzsrhci02YnHIyE%3D&reserved=0) has been introduced. Site Swap will allow admins to replace the root site with either a modern communication site or a classic team site. 
    > [!IMPORTANT]
    > - Site Swap is available as a PowerShell cmdlet only. Site Swap will be available in the Modern SharePoint Admin Center as a **Replace** button in future versions. 
 
