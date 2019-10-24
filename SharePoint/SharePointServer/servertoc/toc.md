@@ -3,6 +3,7 @@
 ## Administration
 ### ["Upgrade Available" status in farms](../administration/upgrade-available-status-in-new-farm.md)
 ### [800703fa Illegal operation attempted on a registry key](../administration/800703fa-Illegal-operation-error.md)
+### [Can't import active users through AD Import](../administration/active-user-not-imported-through-ad-import.md)
 ### [Can't start the User Profile Synchronization service](../administration/cannot-start-the-user-profile-synchronization-service.md)
 ### [Change the compatibility level of content databases](../administration/compatibility-level-change.md)
 ### [Change the database server in a farm](../administration/how-to-change-the-database-in-farms.md)
@@ -31,6 +32,7 @@
 ## Installation and Setup
 ### [Block OneDrive.exe from being advertised with Office 2016](../installation-and-setup/how-to-block-onedrive.exe-from-being-advertised-after-install-office-2016.md)
 ### [Certain installation scenarios aren't supported](../installation-and-setup/certain-installation-scenarios-are-not-supported.md)
+### [Error 2711 when install RBS client for SQL server 2016](../installation-and-setup/error-2711-install-rbs-for-sql-server.md)
 ### [Setup error with .NET Framework 4.6](../installation-and-setup/setup-error-if-.net-framework-4.6-is-installed.md)
 
 ## Lists and Libraries
