@@ -23,10 +23,6 @@ Msvbvm50.exe is a self-extracting file that installs the latest versions of the 
 
 ## More Information
 
-The following file is available for download from the Microsoft Download Center:
-
-[Msvbvm50.exe](https://download.microsoft.com/download/vb50pro/utility/1/win98/msvbvm50.exe) 
-
 For additional information about how to download Microsoft Support files, see [How to Obtain Microsoft Support Files from Online Services](https://support.microsoft.com/help/119591/how-to-obtain-microsoft-support-files-from-online-services).
 
 Microsoft scanned this file for viruses. Microsoft used the most current virus-detection software that was available on the date that the file was posted. The file is stored on security-enhanced servers that help to prevent any unauthorized changes to the file. 
