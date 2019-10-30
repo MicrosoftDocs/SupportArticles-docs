@@ -31,9 +31,7 @@ By default, the "Everyone except external users" claim is added to the Members a
 
 To work around this behavior, follow these steps:
 
-1. Create either of the following groups:
-    - A separate SharePoint permissions group.
-    - An Azure Active Directory (Azure AD) group.
+1. Create a separate SharePoint permissions group.
 2. Assign to the new group the same permissions role as that of the original group.
 3. Add the "Everyone except external users" group to the new group.
 
