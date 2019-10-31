@@ -18,7 +18,7 @@ appliesto:
 
 ## Introduction
 
-This article contains information about changes to the Classic usage and popularity reports. We will continue to update this article as more information becomes available. 
+This article contains information about changes to the Classic usage and popularity reports. We will continue to update this article as more information becomes available.
 
 ## More information
 
@@ -30,12 +30,12 @@ These reports are in the process of being removed and will no longer be availabl
 
 The data from the classic popularity reports will not be available after 29th February 2020. If required, you can download and save historical data from these reports.
 
-### Where can I find my data in the future? 
+### Where can I find my data in the future?
 
 Site usage data for Classic sites won’t be available from popularity reports from 1st March 2020. You would be able to get site usage data from the modern Site Usage page. Clicking "Popularity trends" from Site settings will automatically redirect you to the modern Site Usage page, where you can access usage data for the last 90 days. The data represented in the modern Site Usage report includes data from Classic sites as well as from modern sites. 
 
 Please note, usage data on the modern Site Usage page may not match exactly with the Classic popularity reports. To learn more about the modern Site Usage page, please review [our documentation here](https://support.office.com/article/2fa8ddc2-c4b3-4268-8d26-a772dc55779e).
 
-### What if I have queries? 
+### What if I have queries?
 
-In case you have queries or feedback around this activity, please reach out to us at [SP Site Analytics](spsiteanalytics@microsoft.com). 
+In case you have queries or feedback around this activity, please reach out to us at spsiteanalytics@microsoft.com.
