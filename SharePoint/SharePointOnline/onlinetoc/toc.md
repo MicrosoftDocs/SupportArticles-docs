@@ -132,6 +132,7 @@
 ### [Can't change the default language for a site collection](../Sites/change-default-language-site-collection.md)
 ### [Can't create a Records Center site as a subsite](../Sites/cannot-create-records-center-as-subsite.md)
 ### [Can't find specified web in the given URL](../Sites/cannot-find-specified-web-given-url.md)
+### [Classic popularity reports is discontinued](../Sites/classic-usage-popularity-reports-discontinued.md)
 ### [Customizations of the top navigation bar is reverted](../Sites/customizations-revert-to-default-settings.md)
 ### [Enterprise Wiki is used instead of Publishing Portal](../Sites/site-collection-uses-enterprise-wiki-template.md)
 ### [Issue when activating Announcement Tiles feature](../Sites/announcement-tiles-not-supported.md)
