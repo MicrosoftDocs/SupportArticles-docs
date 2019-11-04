@@ -12,6 +12,7 @@ f1_keywords:
 - 'AdminUsers_TSAlias'
 ms.service: o365-administration
 localization_priority: None
+ms.custom: CSSTroubleshoot
 ms.collection: 
 - M365-subscription-management 
 - Adm_O365
