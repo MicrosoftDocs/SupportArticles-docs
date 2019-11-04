@@ -5,13 +5,12 @@ ms.author: v-maqiu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro 
+ms.custom: CSSTroubleshoot
 ms.topic: article
 ms.service: o365-solutions
 search.appverid: 
 - MET150
 description: Unable to save a project from a Project client to PWA with the error ID 12005(0xEE5)
-ms.custom:
-ms.collection:
 appliesto:
 - Project Online
 - Project Professional 2016

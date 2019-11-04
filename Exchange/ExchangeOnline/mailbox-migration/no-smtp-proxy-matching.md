@@ -7,6 +7,7 @@ ms.service: exchange-online
 ms.topic: article
 ms.author: v-six
 manager: dcscontentpm
+ms.custom: CSSTroubleshoot
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 search.appverid: 

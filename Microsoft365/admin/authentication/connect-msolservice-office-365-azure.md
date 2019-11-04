@@ -9,6 +9,7 @@ audience: ITPro
 ms.service: office 365
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Cloud Services (Web roles/Worker roles)
 - Azure Active Directory

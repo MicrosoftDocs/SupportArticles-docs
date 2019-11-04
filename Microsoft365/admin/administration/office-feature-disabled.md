@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft Office 2013 Service Pack 1
 - Word 2013

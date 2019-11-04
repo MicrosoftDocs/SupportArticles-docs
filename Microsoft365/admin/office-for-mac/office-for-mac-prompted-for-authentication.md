@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Office Home & Business 2016 for Mac
 - Office Home & Student 2016 for Mac
