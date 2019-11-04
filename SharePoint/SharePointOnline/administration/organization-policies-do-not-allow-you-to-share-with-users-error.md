@@ -68,7 +68,7 @@ Try sharing again.
 
 ## More information
 
-For more information on external sharing settings, see [Turn external Sharing on or Off](https://docs.microsoft.com/en-us/sharepoint/turn-external-sharing-on-or-off). 
+For more information on external sharing settings, see [Turn external Sharing on or Off](https://docs.microsoft.com/sharepoint/turn-external-sharing-on-or-off). 
 
-For information on the various sharing settings within M365, see [Microsoft 365 guest sharing settings reference](https://docs.microsoft.com/en-us/Office365/Enterprise/microsoft-365-guest-settings). 
+For information on the various sharing settings within M365, see [Microsoft 365 guest sharing settings reference](https://docs.microsoft.com/Office365/Enterprise/microsoft-365-guest-settings). 
 
