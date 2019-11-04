@@ -102,7 +102,7 @@
 
 ## Synchronization
 ### [Event ID 5553 when during a site sync](../sync/event-id-5553-and-failure-during-site-sync.md)
-### [SharePoint Workspace doesn't always sync automatically](../synchronization/sharepoint-workspace-not-sync-with-online.md)
+### [SharePoint Workspace doesn't always sync automatically](../sync/sharepoint-workspace-not-sync-with-online.md)
 
 ## Web Parts
 ### [A list view Web Part for a tasks list doesn't filter values](../../SharePointOnline/Web-parts/list-view-web-part-not-filter-values.md)
