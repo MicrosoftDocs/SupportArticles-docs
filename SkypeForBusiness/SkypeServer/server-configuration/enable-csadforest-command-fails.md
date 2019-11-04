@@ -65,4 +65,4 @@ For more details on using the Lync Server Enable-CsAdForest PowerShell cmdlet:
 For more details on using the Office Communications Server LcsCmd.exe CheckForestPrepState command:
 
 Microsoft Office Communications Server 2007 R2
-[Forest Preparation Commands](http://technet.microsoft.com/en-us/library/dd573032(office.13).aspx)
+[Forest Preparation Commands](https://technet.microsoft.com/en-us/library/dd573032(office.13).aspx)

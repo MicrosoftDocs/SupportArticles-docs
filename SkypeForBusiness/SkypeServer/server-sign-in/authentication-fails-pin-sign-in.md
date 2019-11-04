@@ -174,4 +174,4 @@ For more information about Lync Server certificate requirements, see the followi
 
 [Certificate requirements for internal servers in Lync Server 2013](https://docs.microsoft.com/lyncserver/lync-server-2013-certificate-requirements-for-internal-servers)
 
-[Certificate requirements for external user access in Lync Server 2013](https://docs.microsoft.com/en-us/lyncserver/lync-server-2013-certificate-requirements-for-external-user-access)
+[Certificate requirements for external user access in Lync Server 2013](https://docs.microsoft.com/yncserver/lync-server-2013-certificate-requirements-for-external-user-access)
