@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-todmc
+ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft InfoPath 2013
 ---
