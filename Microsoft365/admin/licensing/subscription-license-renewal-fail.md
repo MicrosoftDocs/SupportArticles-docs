@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: Office 365
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Office 365 ProPlus

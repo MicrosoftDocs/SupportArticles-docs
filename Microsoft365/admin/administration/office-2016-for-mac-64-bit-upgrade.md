@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.reviewer: lauraho
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -51,7 +52,7 @@ Volume License customers typically get their Office 2016 software from the Volum
 The Mac operating system has been 64-bit for several years. Unlike for Windows, there's no choice between running a 32-bit or 64-bit version of the Mac operating system. Similarly, we won't offer a choice between 32-bit and 64-bit versions of Office 2016 for Mac. After each "channel" is transitioned per the rollout schedule, only 64-bit builds will be available.
 
 ### Effect on third-party applications and add-ins 
-The transition to 64-bit Office for Mac was announced on the [Office developer blog](http://dev.office.com/mac-office-64-bit-transition) in April 2016. This website is the primary reference for third-party vendors to understand the change and the effect on their products. IT Pros will want to understand which compiled add-ins are deployed to the users whom they manage so that they can assess the effect of the upgrade. The following Microsoft Office website summarizes the issues that affect the more common add-ins that are used together with Office 2016 for Mac:
+The transition to 64-bit Office for Mac was announced on the [Office developer blog](https://dev.office.com/mac-office-64-bit-transition) in April 2016. This website is the primary reference for third-party vendors to understand the change and the effect on their products. IT Pros will want to understand which compiled add-ins are deployed to the users whom they manage so that they can assess the effect of the upgrade. The following Microsoft Office website summarizes the issues that affect the more common add-ins that are used together with Office 2016 for Mac:
 
 [What to try if you can't install or activate Office for Mac](https://support.office.com/article/error-messages-after-updating-to-office-for-mac-64-bit-b62d842c-b099-434f-af65-96cb03c03242)
 

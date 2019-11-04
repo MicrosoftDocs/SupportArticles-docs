@@ -8,6 +8,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.service: o365-solutions
+ms.custom: CSSTroubleshoot
 ms.topic: article
 ms.author: v-maqiu
 appliesto:

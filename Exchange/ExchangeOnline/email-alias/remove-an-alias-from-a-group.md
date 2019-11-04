@@ -5,6 +5,7 @@ author: kwekua
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
+ms.custom: CSSTroubleshoot
 f1_keywords:
 - 'O365P_AdminGroups_TSAlias'
 - 'O365M_AdminGroups_TSAlias'
@@ -12,6 +13,7 @@ f1_keywords:
 - 'AdminGroups_TSAlias'
 ms.service: o365-administration
 localization_priority: None
+ms.custom: CSSTroubleshoot
 ms.collection: 
 - M365-subscription-management 
 - Adm_O365

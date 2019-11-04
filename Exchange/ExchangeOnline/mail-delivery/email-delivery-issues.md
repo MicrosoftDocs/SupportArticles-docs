@@ -19,7 +19,9 @@ search.appverid:
 - MBS150
 - MET150
 audience: Admin
-ms.custom: MiniMaven
+ms.custom:
+- MiniMaven
+- CSSTroubleshoot
 ms.service: exchange-online
 manager: dcscontentpm
 appliesto:
