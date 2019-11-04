@@ -9,6 +9,7 @@ ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
 ms.reviewer: lauraho
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -93,23 +94,23 @@ Click the following links for version-specific information about the Trusted Loc
 **Office 2016**
 
 Office Trusted Locations:
-[https://technet.microsoft.com/en-us/library/cc179039(v=office.16).aspx](https://technet.microsoft.com/library/cc179039%28v=office.16%29.aspx)
+[https://technet.microsoft.com/library/cc179039(v=office.16).aspx](https://technet.microsoft.com/library/cc179039%28v=office.16%29.aspx)
 
 Protected View settings:
-[https://technet.microsoft.com/en-us/library/ee857087(v=office.16).aspx](https://technet.microsoft.com/library/ee857087%28v=office.16%29.aspx)
+[https://technet.microsoft.com/library/ee857087(v=office.16).aspx](https://technet.microsoft.com/library/ee857087%28v=office.16%29.aspx)
 
 **Office 2013**
 
 Office Trusted Locations:
-[https://technet.microsoft.com/en-us/library/cc179039(v=office.15).aspx](https://technet.microsoft.com/library/cc179039%28v=office.15%29.aspx)
+[https://technet.microsoft.com/library/cc179039(v=office.15).aspx](https://technet.microsoft.com/library/cc179039%28v=office.15%29.aspx)
 
 Protected View settings:
-[https://technet.microsoft.com/en-us/library/ee857087(v=office.15).aspx](https://technet.microsoft.com/library/ee857087%28v=office.15%29.aspx)
+[https://technet.microsoft.com/library/ee857087(v=office.15).aspx](https://technet.microsoft.com/library/ee857087%28v=office.15%29.aspx)
 
 **Office 2010**
 
 Office Trusted Locations:
-[https://technet.microsoft.com/en-us/library/cc179039(v=office.14).aspx](https://technet.microsoft.com/en-us/library/cc179039(v=office.14).aspx)
+[https://technet.microsoft.com/library/cc179039(v=office.14).aspx](https://technet.microsoft.com/library/cc179039(v=office.14).aspx)
 
 Protected View settings:
-[https://technet.microsoft.com/en-us/library/ee857087(v=office.14).aspx](https://technet.microsoft.com/en-us/library/ee857087(v=office.14).aspx)
+[https://technet.microsoft.com/library/ee857087(v=office.14).aspx](https://technet.microsoft.com/library/ee857087(v=office.14).aspx)

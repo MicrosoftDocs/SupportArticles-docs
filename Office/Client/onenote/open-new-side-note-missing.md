@@ -4,6 +4,7 @@ description: Explains that the Open new side note icon is missing from the taskb
 author: lucciz
 ms.author: v-zolu
 manager: dcscontentpm
+ms.custom: CSSTroubleshoot
 audience: ITPro 
 ms.topic: article 
 ms.prod: office-perpetual-itpro

@@ -14,7 +14,9 @@ search.appverid:
 ms.assetid: 
 appliesto:
 - Teams
-ms.custom: 106370
+ms.custom: 
+- CI 106370
+- CSSTroubleshoot
 ms.reviewer: denniwil
 description: "How to add Teams to antivirus or DLP to allow Teams to start correctly."
 ---

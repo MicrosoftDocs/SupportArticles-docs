@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: arhinesm
+ms.custom: CSSTroubleshoot
 appliesto:
 - Office Online Server
 ---
