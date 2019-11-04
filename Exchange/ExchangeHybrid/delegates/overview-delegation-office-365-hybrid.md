@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: article 
 ms.service: exchange-online
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 ms.reviewer: kellybos
 search.appverid: 
 - MET150

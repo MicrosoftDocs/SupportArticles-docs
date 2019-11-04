@@ -12,6 +12,7 @@ f1_keywords:
 ms.service: o365-administration
 localization_priority: None
 ms.collection: Adm_O365
+ms.custom: CSSTroubleshoot
 search.appverid:
 - BCS160
 - MET150
