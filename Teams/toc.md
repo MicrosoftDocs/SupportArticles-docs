@@ -7,7 +7,7 @@
 ### [Teams user cannot send a message to Skype for Business](./teams-im-presence/teams-user-not-send-message-in-sfb.md)
 
 ## Mobile
-### [Windows phone app for Teams will beretired](../teams-mobile/teams-for-windows-phone-is-retiring.md)
+### [Windows phone app for Teams will beretired](./teams-mobile/teams-for-windows-phone-is-retiring.md)
 
 ## OneNote Integration
 ### [Issue with accessing notebooks](./teams-onenote-integration/issue-access-notebook.md)
