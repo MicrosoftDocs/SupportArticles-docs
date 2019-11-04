@@ -11,6 +11,7 @@ ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
 ms.reviewer: dahans
+ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Online
 - Exchange Online
@@ -68,7 +69,7 @@ Through integration with Exchange Server 2013, you can provide the following fea
   - Directory synchronization is required for this scenario.   
   - Connect to the Exchange Admin Center (EAC), and then add the user's SIP Address by using the following Microsoft TechNet article for guidance:
 
-    [Add or Remove Email Addresses for a Mailbox](http://technet.microsoft.com/library/bb123794.aspx)
+    [Add or Remove Email Addresses for a Mailbox](https://technet.microsoft.com/library/bb123794.aspx)
 
     > [!NOTE]
     > Make sure that the SIP address is added by using the correct format (for example, sip:**user@contoso.com**, where **user@contoso.com** represents the email address of the user).   

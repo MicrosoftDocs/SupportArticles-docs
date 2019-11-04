@@ -11,6 +11,7 @@ ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
 ms.reviewer: chanh
+ms.custom: CSSTroubleshoot
 appliesto:
 - Skype Room System v2
 ---

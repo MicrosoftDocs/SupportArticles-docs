@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 ms.reviewer: mahesha, miadkins, rdubois, premgan, landerl, bwilson, brandber, dahans
 appliesto:
 - Lync Server 2013
