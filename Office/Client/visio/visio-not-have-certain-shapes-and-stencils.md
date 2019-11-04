@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: article 
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 ms.reviewer: poyant, Arykhus, Kemille, barbway
 search.appverid: 
 - MET150

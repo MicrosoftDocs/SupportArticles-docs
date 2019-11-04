@@ -11,6 +11,7 @@ ms.service: skype-for-business-online
 ms.topic: article
 ms.author: v-six
 ms.reviewer: dahans
+ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Online
 ---
@@ -24,6 +25,7 @@ Conversations and calls on Lync Mobile devices are not synchronized with the use
 ## Solution
 
 No method currently exists to synchronize this data. Only calls and conversations from that particular device are displayed on the **Conversations** tab in the Lync Mobile client.
+
 
 ## More Information
 

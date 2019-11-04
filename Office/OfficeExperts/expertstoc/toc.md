@@ -45,6 +45,7 @@
 
 ## Troubleshooting
 ### [HTML login page not render correctly in Office](../troubleshooting/custom-html-login-page-not-render-correctly.md)
+### [Include or exclude Teams from antivirus or DLP applications](../troubleshooting/include-exclude-teams-from-antivirus-dlp.md)
 ### [InfoPath 2013 crashes when connect Access database](../troubleshooting/infopath-2013-crashes-when-connecting-to-access-database.md)
 
 ## Word

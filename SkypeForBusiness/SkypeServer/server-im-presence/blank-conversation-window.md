@@ -11,6 +11,7 @@ ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
 ms.reviewer: tyryan
+ms.custom: CSSTroubleshoot
 appleisto:
 - Lync 2010
 - Lync 2013

@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft Office 2007
 - Microsoft Office 2003

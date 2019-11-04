@@ -8,7 +8,9 @@ audience: ITPro
 ms.topic: article 
 ms.prod: office 365
 localization_priority: Normal
-ms.custom: CI 109036
+ms.custom: 
+- CI 109036
+- CSSTroubleshoot
 ms.reviewer: akit
 appliesto:
 - Office 365

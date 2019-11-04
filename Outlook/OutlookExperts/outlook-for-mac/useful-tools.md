@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Outlook for Mac for Office 365

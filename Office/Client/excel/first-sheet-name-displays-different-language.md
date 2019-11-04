@@ -8,7 +8,9 @@ audience: ITPro
 ms.topic: article 
 ms.prod: office 365
 localization_priority: Normal
-ms.custom: CI 106750
+ms.custom: 
+- CI 106750
+- CSSTroubleshoot
 ms.reviewer: iuliam
 appliesto:
 - Excel for Office 365

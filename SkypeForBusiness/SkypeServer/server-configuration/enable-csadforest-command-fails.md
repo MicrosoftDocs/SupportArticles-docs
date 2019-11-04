@@ -11,6 +11,7 @@ ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
 ms.reviewer: seemarah 
+ms.custom: CSSTroubleshoot
 appliesto:
 - Lync Server 2010 Standard Edition
 - Lync Server 2010 Enterprise Edition
@@ -59,9 +60,9 @@ The Office Communications Server LcsCmd.exe command listed above will provide a 
 
 For more details on using the Lync Server Enable-CsAdForest PowerShell cmdlet:
 
-[Enable-CsAdForest](https://technet.microsoft.com/en-us/library/gg425713.aspx)
+[Enable-CsAdForest](https://technet.microsoft.com/library/gg425713.aspx)
 
 For more details on using the Office Communications Server LcsCmd.exe CheckForestPrepState command:
 
 Microsoft Office Communications Server 2007 R2
-[Forest Preparation Commands](http://technet.microsoft.com/en-us/library/dd573032(office.13).aspx)
+[Forest Preparation Commands](https://technet.microsoft.com/library/dd573032(office.13).aspx)

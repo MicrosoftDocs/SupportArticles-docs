@@ -7,6 +7,7 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
+ms.custom: CSSTroubleshoot
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six

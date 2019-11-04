@@ -8,7 +8,9 @@ audience: ITPro
 ms.topic: article 
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
-ms.custom: CI 106436
+ms.custom: 
+- CI 106436
+- CSSTroubleshoot
 ms.reviewer: sasta, EXOL_Triage
 search.appverid: 
 - MET150

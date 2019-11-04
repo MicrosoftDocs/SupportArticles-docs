@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Cloud Connector Edition
 ---

@@ -11,6 +11,7 @@ ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: clake
 keyword: modern view
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 ---
@@ -73,8 +74,8 @@ The following is a list of potential reasons for a list or library not to render
 
 **More information:**
 
-* [Customizing "modern" lists and libraries](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/modern-experience-customizations-customize-lists-and-libraries)
-* [SharePoint Column Formatting](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/column-formatting)
+* [Customizing "modern" lists and libraries](https://docs.microsoft.com/sharepoint/dev/solution-guidance/modern-experience-customizations-customize-lists-and-libraries)
+* [SharePoint Column Formatting](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting)
 
 ## The View’s List or Library cannot be found
 

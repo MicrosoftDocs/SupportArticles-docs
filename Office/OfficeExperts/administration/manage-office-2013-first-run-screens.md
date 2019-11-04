@@ -9,6 +9,7 @@ localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: jalalb
 appliesto:
 - Office 2013

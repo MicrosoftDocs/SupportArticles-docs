@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: office 365
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 ms.reviewer: jalalb
 appliesto:
 - Office 365 for Mac

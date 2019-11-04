@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: project-server-itpr
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Project Online
 - Project Server 2013

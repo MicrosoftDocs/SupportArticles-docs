@@ -10,7 +10,9 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
-ms.custom: CI 109532
+ms.custom:
+- CI 109532
+- CSSTroubleshoot
 ms.reviewer: clake
 appliesto:
 - SharePoint Server 2016
