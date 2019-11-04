@@ -16,3 +16,6 @@
 
 ## Sites
 ### [Top navigation bar displays either Sites or Newsfeed instead of OneDrive](../../SharePointOnline/sites/office-365-top-navigation-bar-displays-either-sites-or-newsfeed.md)
+
+## Sync
+### [Can't connect to the specified SharePoint site](../sync/onedrive-for-business-sync-returns-error.md)
