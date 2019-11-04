@@ -11,6 +11,7 @@ ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: clake
 keyword: modern view
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 ---

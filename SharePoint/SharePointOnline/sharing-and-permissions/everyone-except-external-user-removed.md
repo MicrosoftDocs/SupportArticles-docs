@@ -8,6 +8,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.service: sharepoint-online
+ms.custom: CSSTroubleshoot
 ms.topic: article
 ms.author: v-six
 appliesto:
