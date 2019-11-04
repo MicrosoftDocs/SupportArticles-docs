@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: ericspli
 appliesto:
 - Office 2010

@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: ericspli
+ms.custom: CSSTroubleshoot
 appliesto:
 - Office 2010
 ---

@@ -13,7 +13,9 @@ search.appverid:
 - MET150
 appliesto:
 - Access
-ms.custom: 107826
+ms.custom: 
+- CI 107826
+- CSSTroubleshoot
 ms.reviewer: denniwil
 description: "Describes how to resolve an error where the connection is dropped when opening Access from a mapped drive."
 ---

@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: article 
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 ms.reviewer: Keiko Sewake (Intl Agency) 
 search.appverid: 
 - MET150

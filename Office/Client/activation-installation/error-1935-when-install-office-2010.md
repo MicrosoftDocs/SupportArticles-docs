@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft Office Access 2007
 - Microsoft Office Excel 2007

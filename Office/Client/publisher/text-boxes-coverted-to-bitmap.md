@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 ms.reviewer: lisyu, RichPo, ARykhus, debbiery
 appliesto:
 - Publisher 2010
