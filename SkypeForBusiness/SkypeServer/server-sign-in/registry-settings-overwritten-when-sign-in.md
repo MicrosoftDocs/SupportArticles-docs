@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 ms.reviewer: pankajr， genli 
 appliesto:

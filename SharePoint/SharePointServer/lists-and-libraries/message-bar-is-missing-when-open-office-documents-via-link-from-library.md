@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Foundation 2010
 - SharePoint Server 2010

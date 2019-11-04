@@ -11,6 +11,7 @@ ms.service: skype-for-business-online
 ms.topic: article
 ms.author: v-six
 ms.reviewer: randw, edpeno, shravank, dahans, willfid
+ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Online
 - Skype for Business Server 2015
@@ -51,4 +52,4 @@ Attributes that were added to your Active Directory environment after identity s
 
 For more information, see [Migrating Lync Online users to Lync on-premises in Lync Server 2013](https://technet.microsoft.com/library/dn689115%28v=ocs.15%29.aspx?f=255&mspperror=-2147217396).
 
-Still need help? Go to [Microsoft Community](http://answers.microsoft.com).
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com).

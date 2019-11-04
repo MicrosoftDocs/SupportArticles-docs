@@ -8,6 +8,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.service: sharepoint-online
 appliesto:
 - Microsoft SharePoint
