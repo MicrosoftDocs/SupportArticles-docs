@@ -72,4 +72,4 @@ Use the following steps to update the host name and primary DNS suffix of the Wi
 
 ## More Information
 
-[Configure the DNS Suffix for Edge Servers](https://technet.microsoft.com/en-us/library/gg398488.aspx)
+[Configure the DNS Suffix for Edge Servers](https://technet.microsoft.com/library/gg398488.aspx)
