@@ -26,4 +26,4 @@ This article provides links to general administration and feature documentatio
 
 - [Office 365 Admin help center](https://support.office.com/article/Office-365-for-business-%E2%80%93-Admin-help-17d3ff3f-3601-466e-b5a1-482b31cfb791)
 - [Exchange admin center in Exchange Online](https://docs.microsoft.com/exchange/exchange-admin-center?redirectedfrom=MSDN)
-- [Azure Active Directory documentation](https://docs.microsoft.com/en-us/azure/active-directory/)
+- [Azure Active Directory documentation](https://docs.microsoft.com/azure/active-directory/)

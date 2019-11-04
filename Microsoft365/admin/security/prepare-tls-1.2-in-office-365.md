@@ -79,4 +79,4 @@ The following resources provide guidance to help make sure that your clients are
 - [Exchange Server TLS guidance, part 1: Getting Ready for TLS 1.2](https://blogs.technet.microsoft.com/exchange/2018/01/26/exchange-server-tls-guidance-part-1-getting-ready-for-tls-1-2/)
 - [Exchange Server TLS guidance Part 2: Enabling TLS 1.2 and Identifying Clients Not Using It](https://blogs.technet.microsoft.com/exchange/2018/04/02/exchange-server-tls-guidance-part-2-enabling-tls-1-2-and-identifying-clients-not-using-it/)
 - [Exchange Server TLS guidance Part 3: Turning Off TLS 1.0/1.1](https://blogs.technet.microsoft.com/exchange/2018/05/23/exchange-server-tls-guidance-part-3-turning-off-tls-1-01-1/)
-- [Enable TLS 1.1 and TLS 1.2 support in Office Online Server](https://docs.microsoft.com/en-gb/officeonlineserver/enable-tls-1-1-and-tls-1-2-support-in-office-online-server)
+- [Enable TLS 1.1 and TLS 1.2 support in Office Online Server](https://docs.microsoft.com/officeonlineserver/enable-tls-1-1-and-tls-1-2-support-in-office-online-server)

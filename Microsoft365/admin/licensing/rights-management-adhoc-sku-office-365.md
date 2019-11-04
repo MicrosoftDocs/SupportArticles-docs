@@ -53,6 +53,6 @@ If Azure Rights Management is disabled in your organization, Azure Rights Manage
 
 ## More information
 
-For more information about Azure Rights Management for individuals, see [https://blogs.technet.com/b/rms/archive/2013/07/31/introducing-rms-for-individuals.aspx](http://blogs.technet.com/b/rms/archive/2013/07/31/introducing-rms-for-individuals.aspx).
+For more information about Azure Rights Management for individuals, see [https://blogs.technet.com/b/rms/archive/2013/07/31/introducing-rms-for-individuals.aspx](https://blogs.technet.com/b/rms/archive/2013/07/31/introducing-rms-for-individuals.aspx).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

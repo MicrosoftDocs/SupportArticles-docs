@@ -75,7 +75,7 @@ So when adding or updating RP trust with SupportMultipleDomain switch, a 3rd cla
 Default 3rd rule:
 
 c:[Type == "[http://schemas.xmlsoap.org/claims/UPN](http://schemas.xmlsoap.org/claims/UPN)"]
-=> issue(Type = "[http://schemas.microsoft.com/ws/2008/06/identity/claims/issuerid](http://schemas.microsoft.com/ws/2008/06/identity/claims/issuerid)", Value = regexreplace(c.Value, "[.+@(?<domain>.+)](mailto:.+@%28?%3cdomain%3e.+%29)", "http://${domain}/adfs/services/trust/"));
+=> issue(Type = "[https://schemas.microsoft.com/ws/2008/06/identity/claims/issuerid](https://schemas.microsoft.com/ws/2008/06/identity/claims/issuerid)", Value = regexreplace(c.Value, "[.+@(?<domain>.+)](mailto:.+@%28?%3cdomain%3e.+%29)", "http://${domain}/adfs/services/trust/"));
 
 This rule uses the suffix value of user’s UPN and uses that to generate a new claim called Issuerid. Example [http://contoso.com/adfs/services/trust/](http://contoso.com/adfs/services/trust/)
 

@@ -47,11 +47,11 @@ Users can't see add-in? Try one of these:
   
 - **Use the compatibility checker**
     
-  - Outputs a status report for each user in your organization, whether they have a valid Office License, if they are set up correctly on Exchange, and if they are ready for centralized deployment. For more information, see [deployment compatibility checker](https://www.microsoft.com/en-us/download/details.aspx?id=55270).
+  - Outputs a status report for each user in your organization, whether they have a valid Office License, if they are set up correctly on Exchange, and if they are ready for centralized deployment. For more information, see [deployment compatibility checker](https://www.microsoft.com/download/details.aspx?id=55270).
     
 - **Check Office version requirements**
     
-  - The user might be on an older, incompatible version of Office. For add-ins to be deployed the user must have Office ProPlus 2016. You can check this out for any member of your organization. To find out how, see [Office 365 reports](https://support.office.com/en-us/article/office-365-reports-in-the-admin-center-microsoft-office-activations-87c24ae2-82e0-4d1e-be01-c3bcc3f18c60?ui=en-US&amp;rs=en-US&amp;ad=US).
+  - The user might be on an older, incompatible version of Office. For add-ins to be deployed the user must have Office ProPlus 2016. You can check this out for any member of your organization. To find out how, see [Office 365 reports](https://support.office.com/article/office-365-reports-in-the-admin-center-microsoft-office-activations-87c24ae2-82e0-4d1e-be01-c3bcc3f18c60?ui=en-US&amp;rs=en-US&amp;ad=US).
     
   - Alternatively, you can check this manually by going to the application, such as Word, then select **File \> Account**. Under **Product Information**, you should see **Office 365 ProPlus**. 
     
@@ -59,11 +59,11 @@ Users can't see add-in? Try one of these:
     
   - Microsoft Exchange stores the add-in manifests within your organization's tenant. The admin deploying add-ins and the users receiving those add-ins must be on a version of Exchange Server that supports OAuth authentication. By default, Exchange Multi-Tenant and Dedicated VNext deployments support OAuth. Exchange Dedicated Legacy and hybrid on-premises deployments can be configured to support OAuth; however, it isn't the default configuration.
     
-  - Check with your organization's Exchange admin to find out which configuration is in use. OAuth connectivity per user can be verified by using the [Test-OAuthConnectivity](https://docs.microsoft.com/en-us/powershell/module/exchange/organization/Test-OAuthConnectivity?view=exchange-ps) PowerShell cmdlet. 
+  - Check with your organization's Exchange admin to find out which configuration is in use. OAuth connectivity per user can be verified by using the [Test-OAuthConnectivity](https://docs.microsoft.com/powershell/module/exchange/organization/Test-OAuthConnectivity?view=exchange-ps) PowerShell cmdlet. 
     
 - **See regulations surrounding minors using add-ins**
     
-  - Please see further information regarding [minors using add-ins](https://support.office.com/en-us/article/Manage-deployment-of-Office-365-add-ins-in-the-Office-365-admin-center-737e8c86-be63-44d7-bf02-492fa7cd9c3f) if applicable. 
+  - Please see further information regarding [minors using add-ins](https://support.office.com/article/Manage-deployment-of-Office-365-add-ins-in-the-Office-365-admin-center-737e8c86-be63-44d7-bf02-492fa7cd9c3f) if applicable. 
     
 - **Check for nested groups**
     
@@ -71,7 +71,7 @@ Users can't see add-in? Try one of these:
     
   - Centralized deployment currently does not support nested group assignments. It supports users in top-level groups or groups without parent groups, but not users in nested groups or groups that have parent groups.
     
-  - For more information, check out [user and group assignments](https://support.office.com/en-us/article/Determine-if-Centralized-Deployment-of-add-ins-works-for-your-Office-365-organization-B4527D49-4073-4B43-8274-31B7A3166F92).
+  - For more information, check out [user and group assignments](https://support.office.com/article/Determine-if-Centralized-Deployment-of-add-ins-works-for-your-Office-365-organization-B4527D49-4073-4B43-8274-31B7A3166F92).
     
 ## See also
 

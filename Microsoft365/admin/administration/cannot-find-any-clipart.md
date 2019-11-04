@@ -45,9 +45,9 @@ To work around this problem, validate that you can access all three required URL
 
    **Note** Typically, this computer is a front-end computer.   
 2. In a browser, validate that you can browse to the following three URLs:
-   - http://r.office.microsoft.com/r/rlidClientConfig   
-   - http://office2010.microsoft.com    
-   - http://office.microsoft.com   
+   - https://r.office.microsoft.com/r/rlidClientConfig   
+   - https://office2010.microsoft.com    
+   - https://office.microsoft.com   
    
 3. If you cannot access these URLs from a Web browser, your firewall may be blocking access to these sites. Change the settings on your firewall to enable access to each of these URLs.    
 
