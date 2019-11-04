@@ -18,7 +18,7 @@ appliesto:
 
 # Excel crashing issues fixed in recent updates
 
-##  Symptoms
+## Symptoms
 
 Consider the following scenario when working in Excel the application stops responding or crashes. If you examine the Application Event log, you will find entries for Event ID 1000 that have one or more of the following crash signatures.
 
@@ -47,7 +47,7 @@ If you do notsee "Office Updates" under Product Information, you have an MSI ins
 
 The latest updates for Office can found using the following links:
 
-MSI installation [https://technet.microsoft.com/en-us/office/ee748587.aspx](http://technet.microsoft.com/office/ee748587.aspx)
+MSI installation [https://technet.microsoft.com/office/ee748587.aspx](http://technet.microsoft.com/office/ee748587.aspx)
 
 Click-to-Run installation 
 [ https://support.microsoft.com/gp/office-2013-click-to-run](/gp/office-2013-click-to-run)

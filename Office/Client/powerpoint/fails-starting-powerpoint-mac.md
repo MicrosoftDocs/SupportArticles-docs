@@ -85,7 +85,7 @@ If the problem continues to occur, go to the next step.
 
 For information how to "clean start" your computer, click the following article number to view the article in the Microsoft Knowledge Base:
 
-[2398596](http://support.microsoft.com/help/2398596) How to use a "clean startup" to determine whether background programs are interfering with Office for Mac
+[2398596](https://support.microsoft.com/help/2398596) How to use a "clean startup" to determine whether background programs are interfering with Office for Mac
 
 If the problem continues to occur, go to the next step.
 

@@ -48,7 +48,7 @@ When you use the Teradata ODBC driver (15.10 or a later version), you can use th
 
 Prevent Access from using outer joins in queries, or run outer joins within pass-through queries. For more information, see the following Knowledge Base and Office articles:
 
-- [How to create an SQL pass-through query in Access](http://support.microsoft.com/help/303968)
+- [How to create an SQL pass-through query in Access](https://support.microsoft.com/help/303968)
 
 - [Process SQL on a database server by using a pass-through query](https://support.office.com/article/Process-SQL-on-a-database-server-by-using-a-pass-through-query-B775AC23-8A6B-49B2-82E2-6DAC62532A42)
 

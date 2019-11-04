@@ -64,7 +64,7 @@ Because Hyper-V is included with Windows 8, you do not have to download and inst
 For more information about Hyper-V in Windows 8 and Windows Server 2012, go to the following Microsoft TechNet websites:
 
 - [Client Hyper-V](https://technet.microsoft.com/library/hh857623.aspx )
-- [Overview of Hyper-V](http://technet.microsoft.com/library/hh831531.aspx)
+- [Overview of Hyper-V](https://technet.microsoft.com/library/hh831531.aspx)
 
 ### Installation order
 

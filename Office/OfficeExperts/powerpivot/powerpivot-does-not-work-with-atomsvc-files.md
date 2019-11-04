@@ -41,4 +41,4 @@ The URL for a SSRS report:
 
 http://sharepointserver/_vti_bin/ReportServer?http://sharepointserver/Shared Documents/EMEA1.rdl&rs:Command=Render&rs:Format=ATOM&rc:ItemPath=Tablix1
 
-For more information about the ReportServer API, see [URL Access Parameter Reference](https://msdn.microsoft.com/en-us/library/ms152835.aspx).
+For more information about the ReportServer API, see [URL Access Parameter Reference](https://msdn.microsoft.com/library/ms152835.aspx).

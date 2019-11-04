@@ -35,7 +35,7 @@ Access requires a fast and stable network connection when opening databases over
 ## Resolution
 Review the mapped drive preferences within the Group Policy Management Console. If the GPO is set to Replace, change the GPO to Update.
 
-[Configure a Mapped Drive Item](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770902(v=ws.11)?redirectedfrom=MSDN)
+[Configure a Mapped Drive Item](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770902(v=ws.11)?redirectedfrom=MSDN)
 
 See the following article to prevent mapped drives from performing an auto disconnect:
 

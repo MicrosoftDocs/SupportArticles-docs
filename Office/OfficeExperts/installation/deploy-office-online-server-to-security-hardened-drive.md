@@ -23,7 +23,7 @@ This article was written by [Dan Fox](https://social.technet.microsoft.com/profi
 
 Permissions errors to the Windows registry and file system resources can manifest in many ways within Office Web Apps.
 
-When you install and deploy Office Web Apps 2013 to a security hardened drive, Office Web Apps 2013 may not work correctly if there are permissions missing from the security hardened drive, including but not limited to Office Web Apps cache locations. For locations, see [Set-OfficeWebAppsFarm](https://docs.microsoft.com/en-us/powershell/module/officewebapps/set-officewebappsfarm?view=officewebapps-ps).
+When you install and deploy Office Web Apps 2013 to a security hardened drive, Office Web Apps 2013 may not work correctly if there are permissions missing from the security hardened drive, including but not limited to Office Web Apps cache locations. For locations, see [Set-OfficeWebAppsFarm](https://docs.microsoft.com/powershell/module/officewebapps/set-officewebappsfarm?view=officewebapps-ps).
 
 The default location on most systems is the drive C, but some customers may install it to non-system drives, such as a drive D or drive E, and permissions may be stripped from those drives.
 
@@ -35,4 +35,4 @@ When you deploy Office Web Apps 2013 to a hard disk drive that is security harde
 
 ![the program files properties](./media/deploy-office-online-server-to-security-hardened-drive/programs-files-properties.png)
 
-For more information, see [Deploy Office Online Server](https://docs.microsoft.com/en-us/officeonlineserver/deploy-office-online-server).
+For more information, see [Deploy Office Online Server](https://docs.microsoft.com/officeonlineserver/deploy-office-online-server).

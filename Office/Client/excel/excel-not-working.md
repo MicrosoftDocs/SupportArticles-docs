@@ -137,7 +137,6 @@ If the information in this knowledge base article did not help resolve your issu
 - More Microsoft online articles:
 [Perform a search to find more online articles about this specific error](https://support.microsoft.com/search) 
 - Help from the Microsoft Community online:
-[Visit the Microsoft Community online and post your question about this error.](http://answers.microsoft.com/)  
+[Visit the Microsoft Community online and post your question about this error.](https://answers.microsoft.com/)  
 - Contact Microsoft support:
 [Find the phone number to contact Microsoft Support.](https://support.microsoft.com/contactus/) 
-

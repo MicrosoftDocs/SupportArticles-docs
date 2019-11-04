@@ -52,7 +52,7 @@ The following are examples of Office features that are designed to help make you
 - Digitally Signed VBA Macro Projects
 You can use digitally signed Microsoft Office Visual Basic for Applications (VBA) macro projects. When you add a digital signature to a VBA macro project, you are supplying a verifiable signature that can vouch for the authenticity and the integrity of the VBA macro project.
 
-  For more information about digitally signed macros, see [Code Signing Office XP Visual Basic for Applications Macro Projects](http://msdn2.microsoft.com/en-us/library/aa163622(office.10).aspx).
+  For more information about digitally signed macros, see [Code Signing Office XP Visual Basic for Applications Macro Projects](https://msdn2.microsoft.com/library/aa163622(office.10).aspx).
  
 The "More Information" section contains additional information about Office features that are intended to enable specific collaboration scenarios.
 
