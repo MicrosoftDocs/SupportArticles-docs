@@ -11,6 +11,7 @@ ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
 ms.reviewer: jefzhang
+ms.custom: CSSTroubleshoot
 appliesto:
 - Lync Phone Edition
 ---
