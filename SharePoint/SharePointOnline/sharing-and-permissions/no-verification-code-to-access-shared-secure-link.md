@@ -8,7 +8,9 @@ audience: ITPro
 ms.topic: article 
 ms.service: sharepoint-online
 localization_priority: Normal
-ms.custom: CI 105797
+ms.custom: 
+- CI 105797
+- CSSTroubleshoot
 ms.reviewer: salarson, CLAKE
 search.appverid: MET150
 appliesto:

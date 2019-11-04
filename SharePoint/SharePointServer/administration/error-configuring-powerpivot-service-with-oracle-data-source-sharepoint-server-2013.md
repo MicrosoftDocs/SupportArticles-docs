@@ -10,6 +10,7 @@ search.appverid:
 - MET150
 audience: Admin
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
 appliesto:
