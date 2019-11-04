@@ -48,7 +48,7 @@ To workaround the error message follow the following steps:
 3. Use the Reset button to reset the options to match the default for the selected country or modify the Windows List Separator to a different character (some special characters cannot be used).
 
 > [!NOTE]
-> By default, Microsoft Excel uses the system separators that are defined in the regional settings in Control Panel. If you sometimes need to display numbers with different separators for thousands or decimals, you can temporarily replace the system separators with custom separators. To do that please follow the steps in the following [article](http://office.microsoft.com/excel-help/change-the-separator-for-thousands-and-decimals-hp003089676.aspx).
+> By default, Microsoft Excel uses the system separators that are defined in the regional settings in Control Panel. If you sometimes need to display numbers with different separators for thousands or decimals, you can temporarily replace the system separators with custom separators. To do that please follow the steps in the following [article](https://office.microsoft.com/excel-help/change-the-separator-for-thousands-and-decimals-hp003089676.aspx).
 >
 > The comma is the default list separator for US - English Locale.
 

@@ -47,10 +47,10 @@ If you do notsee "Office Updates" under Product Information, you have an MSI ins
 
 The latest updates for Office can found using the following links:
 
-MSI installation [https://technet.microsoft.com/office/ee748587.aspx](http://technet.microsoft.com/office/ee748587.aspx)
+MSI installation [https://technet.microsoft.com/office/ee748587.aspx](https://technet.microsoft.com/office/ee748587.aspx)
 
 Click-to-Run installation 
-[ https://support.microsoft.com/gp/office-2013-click-to-run](/gp/office-2013-click-to-run)
+[https://support.microsoft.com/gp/office-2013-click-to-run](https://support.microsoft.com/gp/office-2013-click-to-run])
 
 ##  More Information
 
