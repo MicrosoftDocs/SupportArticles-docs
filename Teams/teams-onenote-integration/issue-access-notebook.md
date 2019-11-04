@@ -9,7 +9,6 @@ search.appverid:
 audience: ITPro
 ms.service: msteams
 ms.topic: article
-ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Microsoft Teams

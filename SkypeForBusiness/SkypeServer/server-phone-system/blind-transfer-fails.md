@@ -10,7 +10,6 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
-ms.custom: CSSTroubleshoot
 ms.reviewer: acorman, miadkins 
 appliesto:
 - Lync Server 2010 Enterprise Edition

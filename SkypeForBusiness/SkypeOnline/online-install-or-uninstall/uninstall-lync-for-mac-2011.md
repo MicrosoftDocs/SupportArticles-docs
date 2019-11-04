@@ -10,7 +10,6 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
-ms.custom: CSSTroubleshoot
 ms.reviewer: dahans
 appliesto:
 - Lync for Mac 2011

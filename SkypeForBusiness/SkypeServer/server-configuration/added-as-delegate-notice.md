@@ -10,7 +10,6 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
-ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft Lync 2013
 - Skype for Business 2016

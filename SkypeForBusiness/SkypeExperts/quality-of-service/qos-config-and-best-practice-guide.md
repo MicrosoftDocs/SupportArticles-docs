@@ -16,9 +16,7 @@ search.appverid:
 ms.assetid: 
 appliesto:
 - Skype for Business
-ms.custom: 
-- 103849
-- CSSTroubleshoot
+ms.custom: 103849
 ms.reviewer: meerak
 ---
 

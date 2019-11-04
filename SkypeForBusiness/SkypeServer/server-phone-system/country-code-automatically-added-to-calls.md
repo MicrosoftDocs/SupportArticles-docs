@@ -10,7 +10,6 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
-ms.custom: CSSTroubleshoot
 ms.reviewer: rischwen， landerl， mirung， corbinm
 appliesto:
 - Skype for Business for iOS

@@ -11,7 +11,6 @@ ms.service: skype-for-business-online
 ms.topic: article
 ms.author: v-six
 ms.reviewer: landerl, jasco
-ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Online
 ---

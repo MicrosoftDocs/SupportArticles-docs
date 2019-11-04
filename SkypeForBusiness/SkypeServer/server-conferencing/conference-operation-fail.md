@@ -11,7 +11,6 @@ ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
 ms.reviewer: corbinm, arianr, nsuter
-ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business 2015
 - Lync Server 2013

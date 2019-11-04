@@ -10,8 +10,7 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
-ms.reviewer: jaym, carlsh
-ms.custom: CSSTroubleshoot 
+ms.reviewer: jaym, carlsh 
 appliesto:
 - Skype for Business 2016
 ---

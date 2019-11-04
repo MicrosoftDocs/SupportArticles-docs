@@ -9,7 +9,6 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.custom: CSSTroubleshoot
 ms.author: v-six
 ms.reviewer: landerl, jasco, corbinm, dougl, lynnroe, cbland, rischwen, leonarwo, msp, romanma, tonyq
 appliesto:
@@ -31,7 +30,6 @@ The resource cannot be found.
 ## Workaround
 
 To work around this issue, copy and paste the URL from Word or OneNote into the Internet Explorer address bar.
-
 
 ## More Information
 

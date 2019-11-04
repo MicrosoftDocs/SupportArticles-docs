@@ -11,7 +11,6 @@ ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
 ms.reviewer: dahans
-ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Online
 - Exchange Online

@@ -9,7 +9,6 @@ search.appverid:
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
-ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Skype for Business Web App
