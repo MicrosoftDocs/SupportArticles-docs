@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 ms.reviewer: v-six, genli, christys, UPKUMAR
 appliesto:
 - Skype for Business Server 2015

@@ -10,7 +10,9 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
-ms.custom: CI 109531
+ms.custom: 
+- CI 109531
+- CSSTroubleshoot
 ms.reviewer: bpeterse, dhirmeht
 appliesto:
 - SharePoint Server 2019

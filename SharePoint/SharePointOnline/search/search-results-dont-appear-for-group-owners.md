@@ -13,7 +13,9 @@ search.appverid:
 - MET150
 appliesto:
 - SharePoint Online 
-ms.custom: 108412
+ms.custom: 
+- CI 108412
+- SSTroubleshoot
 ms.reviewer: snarra, anundlie, knutb
 description: Describes how to get search results to appear for a group owner after creating a new Office 365 group. 
 ---

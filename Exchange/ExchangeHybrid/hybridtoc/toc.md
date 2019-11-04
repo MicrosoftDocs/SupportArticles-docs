@@ -22,6 +22,7 @@
 ### [Online attributes aren't written back to on-premises](../federation/attribute-not-written-to-azure-ad.md)
 
 ## Move Mailboxes
+### [LitigationHoldEnabled property mismatch](../move-mailboxes/litigationholdenabled-property-differs-onpremises-cloud.md)
 ### [Mailbox exists in both Exchange Online and on-premises](../move-mailboxes/mailbox-exists-exo-onpremises.md)
 ### [Mailbox Move to the cloud fails with error](../move-mailboxes/mailbox-move-to-cloud-fail-with-error.md)
 ### [Move mailbox operation fails](../move-mailboxes/hybrid-move-fails.md)

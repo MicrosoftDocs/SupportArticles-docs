@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 ms.reviewer: landerl, jasco, corbinm, lynnroe, cbland
 appliesto:
 - Skype for Business Online
