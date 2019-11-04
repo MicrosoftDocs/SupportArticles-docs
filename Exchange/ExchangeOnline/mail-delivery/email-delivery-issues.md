@@ -19,7 +19,7 @@ search.appverid:
 - MBS150
 - MET150
 audience: Admin
-ms.custom: 
+ms.custom:
 - MiniMaven
 - CSSTroubleshoot
 ms.service: exchange-online

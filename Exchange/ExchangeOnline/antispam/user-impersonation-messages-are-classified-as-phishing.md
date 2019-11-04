@@ -9,6 +9,7 @@ ms.author: Scott.Landry
 manager: dcscontentpm
 ms.custom: CSSTroubleshoot
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:

@@ -18,7 +18,7 @@ search.appverid:
 - ZOL150
 - ZOL160
 audience: Admin
-ms.custom: 
+ms.custom:
 - MiniMaven
 - CSSTroubleshoot
 keywords:
