@@ -39,7 +39,7 @@ For this relay to work correctly, your organization must follow these steps:
 
         The sender domain belongs to your organization (that is, you have registered your domain in Office365).
 
-        **Note** For more information, see [Add User and Domain in Office 365](https://docs.microsoft.com/en-us/office365/admin/setup/add-domain?redirectSourcePath=%252fen-us%252farticle%252fAdd-your-users-and-domain-to-Office-365-6383f56d-3d09-4dcb-9b41-b5f5a5efd611&view=o365-worldwide).    
+        **Note** For more information, see [Add User and Domain in Office 365](https://docs.microsoft.com/office365/admin/setup/add-domain?redirectSourcePath=%252fen-us%252farticle%252fAdd-your-users-and-domain-to-Office-365-6383f56d-3d09-4dcb-9b41-b5f5a5efd611&view=o365-worldwide).    
     - **Certificate-based connector configuration**
 
        Your on-premises email server is configured to use a certificate to send email to Office 365, and the Common-Name (CN) or Subject Alternate Name (SAN ) in the certificate contains a domain name that you have registered in Office 365, and you have created a certificate-based connector in Office 365 that has that domain.    
