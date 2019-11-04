@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: msteams
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft Teams
 ---

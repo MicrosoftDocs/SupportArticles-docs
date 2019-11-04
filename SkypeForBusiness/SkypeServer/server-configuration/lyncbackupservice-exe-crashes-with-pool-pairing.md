@@ -13,7 +13,9 @@ search.appverid:
 - MET150
 appliesto:
 - Skype for Business 2019
-ms.custom: 108454
+ms.custom: 
+- 108454
+- CSSTroubleshoot
 ms.reviewer: joaol
 description: "How to resolve an issue where LyncBackupService.exe stops responding after enabling pool pairing on a Skype for Business 2019 server."
 ---

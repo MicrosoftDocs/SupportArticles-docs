@@ -11,6 +11,7 @@ ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
 ms.reviewer: kkodali
+ms.custom: CSSTroubleshoot
 appliesto:
 - Lync Server 2013
 - Lync Server 2010 Enterprise Edition
