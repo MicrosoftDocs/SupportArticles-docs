@@ -13,6 +13,7 @@ f1_keywords:
 - 'AdminMESG_TSAlias'
 ms.service: o365-administration
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 ms.collection: 
 - M365-subscription-management 
 - Adm_O365
