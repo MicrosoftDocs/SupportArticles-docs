@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 ms.reviewer: rtaylor, terusu
 appliesto:
 - Office 365

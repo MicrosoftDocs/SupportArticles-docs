@@ -10,7 +10,9 @@ ms.prod: office-perpetual-itpro
 localization_priority: Normal
 search.appverid: 
 - MET150
-ms.custom: CI 105069
+ms.custom: 
+- CI 105069
+- CSSTroubleshoot
 ms.reviewer: gquintin,tasitae,EXOL_Triage
 appliesto:
 - Outlook 2019

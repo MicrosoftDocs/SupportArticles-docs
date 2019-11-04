@@ -7,6 +7,7 @@ localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 ms.reviewer: v-chasec
 search.appverid: 

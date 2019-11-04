@@ -8,6 +8,7 @@ search.appverid:
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft Excel for Mac
 ---

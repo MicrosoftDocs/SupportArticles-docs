@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.reviewer: christm 
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:

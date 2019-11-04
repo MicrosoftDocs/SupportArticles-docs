@@ -7,6 +7,7 @@ ms.date: 8/29/2019
 ms.audience: Admin
 ms.topic: article
 ms.service: powerpoint
+ms.custom: CSSTroubleshoot
 localization_priority: Normal
 search.appverid:
 - SPO160

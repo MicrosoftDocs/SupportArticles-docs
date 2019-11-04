@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: sharepoint-online 
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Office apps for the web
 ---

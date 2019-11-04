@@ -8,7 +8,8 @@ audience: ITPro
 ms.topic: article 
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
-ms.reviewer: genli; christys
+ms.custom: CSSTroubleshoot
+ms.reviewer: genli, christys
 search.appverid: 
 - MET150
 appliesto:
