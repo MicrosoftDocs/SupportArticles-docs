@@ -6,6 +6,7 @@ ms.author: v-zolu
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
+ms.custom: CSSTroubleshoot
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.reviewer: chadmat, jenl

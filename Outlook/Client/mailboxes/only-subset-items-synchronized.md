@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: exchange-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Outlook for Office 365
 - Outlook 2019

@@ -7,6 +7,7 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
+ms.custom: CSSTroubleshoot
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
@@ -68,9 +69,9 @@ For more information about the differences between the 32-bit and 64-bit version
 
 [Choose between the 64-bit or 32-bit version of Office](https://support.office.com/article/choose-between-the-64-bit-or-32-bit-version-of-office-2dee7807-8f95-4d0c-b5fe-6c6f49b8d261?ocmsassetID=HA010369476&CorrelationId=6f42bedf-c669-4508-b4ef-37b0c5a8e72c)
 
-[64-bit editions of Office 2013](http://technet.microsoft.com/library/ee681792.aspx)
+[64-bit editions of Office 2013](https://technet.microsoft.com/library/ee681792.aspx)
 
-[Compatibility Between the 32-bit and 64-bit Versions of Office 2010](http://msdn.microsoft.com/library/ee691831%28office.14%29.aspx)
+[Compatibility Between the 32-bit and 64-bit Versions of Office 2010](https://msdn.microsoft.com/library/ee691831%28office.14%29.aspx)
 
 Microsoft does provide 32-bit and 64-bit versions of the following components for Office 2010. You can install the 64-bit versions of these components to work with the 64-bit version of Office 2010.
 

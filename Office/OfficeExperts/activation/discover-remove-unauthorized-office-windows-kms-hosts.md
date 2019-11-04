@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: ericspli
+ms.custom: CSSTroubleshoot
 appliesto:
 - Office 2010
 ---
@@ -148,6 +149,6 @@ Then, follow these steps to remove an Office KMS host in your environment:
 
 For more information, see the following articles:
 
-- [KMS activation of Office 2013](https://technet.microsoft.com/en-us/library/ee624357.aspx)
-- [Troubleshoot volume activation for Office 2013](https://technet.microsoft.com/en-us/library/ee624355.aspx)
+- [KMS activation of Office 2013](https://technet.microsoft.com/library/ee624357.aspx)
+- [Troubleshoot volume activation for Office 2013](https://technet.microsoft.com/library/ee624355.aspx)
 - [KMS Activation of Office 2016/2019](https://docs.microsoft.com/deployoffice/vlactivation/activate-office-by-using-kms)

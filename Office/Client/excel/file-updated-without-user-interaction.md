@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Excel for the web

@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: gabesl
+ms.custom: CSSTroubleshoot
 appliesto:
 - Outlook 2016
 ---

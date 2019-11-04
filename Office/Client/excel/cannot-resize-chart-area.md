@@ -6,6 +6,7 @@ manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
+ms.custom: CSSTroubleshoot
 ms.topic: article
 ms.author: v-six
 search.appverid: 
