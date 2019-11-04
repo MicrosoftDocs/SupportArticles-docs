@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: office 365
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Office 365 Business
 - SharePoint Server 2016

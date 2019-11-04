@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: o365-administration
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Cloud Services (Web roles/Worker roles)

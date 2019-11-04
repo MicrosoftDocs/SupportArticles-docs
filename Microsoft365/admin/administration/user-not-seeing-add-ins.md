@@ -6,6 +6,7 @@ manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
 ms.service: o365-administration
+ms.custom: CSSTroubleshoot
 localization_priority: Normal
 ms.collection: 
 - M365-subscription-management 

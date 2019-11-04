@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: o365-administration
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Azure Active Directory
 ---

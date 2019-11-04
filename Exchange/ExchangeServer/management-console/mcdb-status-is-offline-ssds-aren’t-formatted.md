@@ -8,7 +8,9 @@ audience: ITPro
 ms.topic: article 
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
-ms.custom: CI 107238
+ms.custom: 
+- CI 107238
+- CSSTroubleshoot
 ms.reviewer: Ralf.Leistner, EXOL_Triage
 appliesto:
 - Exchange Server 2019

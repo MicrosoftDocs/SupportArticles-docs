@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: article 
 ms.prod: office 365
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 ms.reviewer: 
 appliesto:
 - office 365

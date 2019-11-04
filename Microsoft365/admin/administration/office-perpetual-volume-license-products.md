@@ -9,6 +9,7 @@ ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
 ms.reviewer: v-katva, thdevine, Jenl, joselr, meerak
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:

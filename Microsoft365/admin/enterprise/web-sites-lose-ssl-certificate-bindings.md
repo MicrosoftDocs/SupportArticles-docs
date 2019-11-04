@@ -8,6 +8,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.service: sharepoint-powershell
+ms.custom: CSSTroubleshoot
 ms.topic: article
 ms.author: v-six
 ms.reviewer: mgraham

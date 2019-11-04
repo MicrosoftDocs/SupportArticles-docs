@@ -18,7 +18,9 @@ search.appverid:
 - ZOL150
 - ZOL160
 audience: Admin
-ms.custom: MiniMaven
+ms.custom: 
+- MiniMaven
+- CSSTroubleshoot
 keywords:
 - fix outlook
 - Outlook doesn't work
