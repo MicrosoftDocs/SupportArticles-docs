@@ -8,6 +8,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: kenguil
 appliesto:
 - Skype for Business

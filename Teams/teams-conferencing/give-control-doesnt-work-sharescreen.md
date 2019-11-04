@@ -8,7 +8,9 @@ audience: ITPro
 ms.topic: article 
 ms.service: msteams
 localization_priority: Normal
-ms.custom: CI 107235
+ms.custom: 
+- CI 107235
+- CSSTroubleshoot
 ms.reviewer: sarvdon, SfB_Triage
 appliesto:
 - Microsoft Teams

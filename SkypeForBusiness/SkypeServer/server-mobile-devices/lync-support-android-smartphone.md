@@ -11,6 +11,7 @@ ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
 ms.reviewer: adam
+ms.custom: CSSTroubleshoot
 appliesto:
 - Lync 2010 for Android
 ---
