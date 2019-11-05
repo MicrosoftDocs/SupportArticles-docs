@@ -18,7 +18,7 @@ search.appverid:
 - MET150
 ---
 
-# Procedure: Microsoft Fluid Framework preview – access management
+# Microsoft Fluid Framework preview – access management
 
 This article describes how administrators of Microsoft 365 tenants can manage access to Microsoft Fluid Framework preview by disabling user sign-ins in the [Azure portal](https://portal.azure.com/).
 
