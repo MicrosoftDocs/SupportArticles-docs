@@ -94,7 +94,7 @@
 ### [Issue when remove a domain](../administration/error-remove-domain-from-office-365.md)
 ### [Issue with adding Address or CNAME record](../administration/error-add-address-cname-record.md)
 ### [Keep on running Office 365 ProPlus 2013](../administration/run-office-365-proplus-2013.md)
-### [Manage access to Microsoft Fluid Framework preview](../administration/manage-fluid-framework-preview-access.md)
+### [Manage Fluid Framework preview access](../administration/manage-fluid-framework-preview-access.md)
 ### [No Add-ins loaded due to group policy settings ](../administration/office-add-in-not-loaded.md)
 ### [Office 2016 for Mac 64-bit upgrade](../administration/office-2016-for-mac-64-bit-upgrade.md)
 ### [Office 2019 perpetual volume license products available as Click-to-Run](../administration/office-perpetual-volume-license-products.md)
