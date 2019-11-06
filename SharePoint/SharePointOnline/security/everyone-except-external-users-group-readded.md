@@ -1,5 +1,5 @@
 ---
-title: "Everyone except external users" group is re-added to Visitors or Members group on Office 365 public group website 
+title: Everyone except external users group is re-added to Visitors or Members group on Office 365 public group website 
 ms.author: v-todmc
 author: todmccoy
 manager: dcscontentpm
