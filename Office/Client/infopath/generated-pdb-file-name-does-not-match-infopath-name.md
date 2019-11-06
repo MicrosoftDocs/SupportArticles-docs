@@ -7,8 +7,12 @@ manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
 - MET150
-audience: Admin|ITPro|Developer
-ms.custom: CSSTroubleshoot
+- SPO160
+audience: Admin
+ms.custom: 
+- CSSTroubleshoot
+- CI 100405
+ms.reviewer: doug.mahugh
 ms.topic: article
 ms.prod: office-perpetual-itpro
 localization_priority: Normal 
