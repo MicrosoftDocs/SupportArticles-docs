@@ -20,6 +20,7 @@
 ### [Error when you work in Access table linked to a list](../access/cant-update-database-or-object-error.md)
 ### [Errors during importing/exporting to Excel](../access/import-export-access-to-excel.md)
 ### [Extra Access report page prints](../access/extra-access-report-page-prints.md)
+### [Functions return a wrong week number](../access/functions-return-wrong-week-number.md)
 ### [Incorrect registry key for current version of Access](../access/incorrect-current-version-registry-key.md)
 ### [Issue when loading an Access web app](../access/load-access-web-app-in-ie.md)
 ### [Issues when you retrieve SharePoint list data](../access/retrieve-sharepoint-list-in-access.md)
