@@ -9,6 +9,7 @@ audience: ITPro
 ms.service: sharepoint
 ms.topic: article
 ms.service: sharepoint-online
+ms.custom: CSSTroubleshoot
 ms.author: randring
 appliesto:
 - SharePoint Server 2016

@@ -8,6 +8,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 ms.reviewer: johnlan, of12sstr
 search.appverid: 
 - MET150

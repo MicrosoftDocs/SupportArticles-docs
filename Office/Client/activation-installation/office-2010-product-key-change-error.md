@@ -9,6 +9,7 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Office Home and Student 2010
 - Office Home and Business 2010

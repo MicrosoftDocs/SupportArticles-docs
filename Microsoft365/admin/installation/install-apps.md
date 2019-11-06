@@ -7,6 +7,7 @@ audience: Admin
 ms.topic: troubleshooting
 ms.service: o365-administration
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 ms.collection: 
 - M365-subscription-management 
 - Adm_O365

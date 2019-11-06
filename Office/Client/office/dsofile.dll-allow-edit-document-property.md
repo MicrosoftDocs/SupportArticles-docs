@@ -6,6 +6,7 @@ manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
 - MET150
+ms.custom: CSSTroubleshoot
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
@@ -36,7 +37,7 @@ The Dsofile.dll sample file is written in Microsoft Visual C++. The Dsofile.dll 
 
 The following files are available for download from the Microsoft Download Center:
 
-[Download the DsoFileSetup_KB224351_x86.exe package now.](https://www.microsoft.com/downloads/details.aspx?familyid=9ba6fac6-520b-4a0a-878a-53ec8300c4c2&displaylang=en)
+[Download the DsoFileSetup_KB224351_x86.exe package now.](https://www.microsoft.com/download/details.aspx?familyid=9ba6fac6-520b-4a0a-878a-53ec8300c4c2&displaylang=en)
 
 You have a royalty-free right to use, to modify, to reproduce, and to distribute the Dsofile.dll sample file component and the C++ source code files in any way you find useful. This is provided that you agree that Microsoft has no warranty, no obligations, and no liability for their use or for the information provided within. The component and source code is provided free of charge for educational purposes only and is considered a sample. If you want to use the component, or any part thereof, in a production solution, you are responsible for reviewing, for modifying, for testing, and for supporting the component yourself. 
 

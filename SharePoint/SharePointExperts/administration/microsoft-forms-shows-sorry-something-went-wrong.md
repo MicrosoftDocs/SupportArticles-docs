@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 - Microsoft Forms

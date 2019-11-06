@@ -9,6 +9,7 @@ localization_priority: Normal
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - SharePoint Server 2010

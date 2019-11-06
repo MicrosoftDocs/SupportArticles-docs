@@ -10,7 +10,9 @@ ms.prod: office 365
 localization_priority: Normal
 search.appverid: 
 - MET150
-ms.custom: CI 105558
+ms.custom: 
+- CI 105558
+- CSSTroubleshoot
 ms.reviewer: sulobr
 appliesto:
 - Exchange Online

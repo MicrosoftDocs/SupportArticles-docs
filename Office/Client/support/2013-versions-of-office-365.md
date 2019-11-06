@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Office 365 ProPlus
 - Office 365 Home
@@ -47,7 +48,7 @@ After February 28, 2017:
 
 1. Contact the [FastTrack Center](https://aka.ms/requestonboarding) to get assistance for your Office 365 ProPlus deployment.
 
-    The FastTrack engineers will help you upgrade 2013 clients to 2016 and make sure that you're on the latest service managed client. You can review the [FastTrack Benefit Overview](https://technet.microsoft.com/library/office-365-onboarding-benefit-process.aspx) to learn more about how to work remotely with Microsoft specialists to get your Office 365 environment ready for use, and to plan rollout and usage within your organization. The FastTrack Center can help you with testing, repackaging, and distributing the 2016 version of Office 365 ProPlus, or help you validate your deployment approach with a Microsoft engineer. To request assistance, go to the [FastTrack site](http://fasttrack.microsoft.com/), select the **Services** tab, and then submit the Request Office 2016 ProPlus Upgrade Assistance form. You can also contact your Microsoft sales representative or Technical Account Manager for assistance.
+    The FastTrack engineers will help you upgrade 2013 clients to 2016 and make sure that you're on the latest service managed client. You can review the [FastTrack Benefit Overview](https://technet.microsoft.com/library/office-365-onboarding-benefit-process.aspx) to learn more about how to work remotely with Microsoft specialists to get your Office 365 environment ready for use, and to plan rollout and usage within your organization. The FastTrack Center can help you with testing, repackaging, and distributing the 2016 version of Office 365 ProPlus, or help you validate your deployment approach with a Microsoft engineer. To request assistance, go to the [FastTrack site](https://fasttrack.microsoft.com/), select the **Services** tab, and then submit the Request Office 2016 ProPlus Upgrade Assistance form. You can also contact your Microsoft sales representative or Technical Account Manager for assistance.
 
 2. Get to know the Office channel release model.
 
@@ -77,4 +78,4 @@ After February 28, 2017:
 
      If you plan to upgrade Exchange Server, make sure that the Microsoft Exchange Server Autodiscover service is functional, because Outlook 2016 no longer supports the option to manually configure an Exchange account. For more information about Autodiscover, see [Autodiscover service](https://technet.microsoft.com/library/bb124251%28v=exchg.150%29.aspx). For more information about Autodiscover and Outlook 2016, see [3098831](https://support.microsoft.com/help/3098831) “Stop, you should wait to install Office 2016” or “Outlook cannot log on” error in Microsoft Outlook 2016.
 
-Still need help? Go to [Microsoft Community](http://answers.microsoft.com).
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com).

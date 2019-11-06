@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: exchange-online
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Exchange Online
