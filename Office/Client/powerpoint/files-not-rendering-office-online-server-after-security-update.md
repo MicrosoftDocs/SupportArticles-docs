@@ -4,9 +4,9 @@ ms.author: v-todmc
 author: todmccoy
 manager: dcscontentpm
 ms.date: 8/29/2019
-ms.audience: Admin
+audience: Admin
 ms.topic: article
-ms.service: powerpoint
+ms.prod: powerpoint
 ms.custom: CSSTroubleshoot
 localization_priority: Normal
 search.appverid:
@@ -15,8 +15,10 @@ search.appverid:
 ms.assetid: 
 appliesto:
 - PowerPoint
-ms.custom: 106705
-ms.reviewer: randring@microsoft.com
+ms.custom: 
+- CI 106705
+- CSSTroubleshoot
+ms.reviewer: randring
 description: Describes how to resolve an issue where PowerPoint files do not render correctly after installing a security update.
 ---
 
