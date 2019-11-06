@@ -15,7 +15,7 @@ appliesto:
 - SharePoint Online 
 - SharePoint Online MSIT
 ms.custom: 
-- 109312
+- CI 109312
 - CSSTroubleshoot 
 ms.reviewer: salarson, clake  
 description: Describes why the security group "Everyone except external users" is automatically added back to the Visitors or Members groups after being removed. 
