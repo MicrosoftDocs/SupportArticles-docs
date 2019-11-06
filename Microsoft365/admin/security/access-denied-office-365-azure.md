@@ -10,12 +10,9 @@ search.appverid:
 audience: ITPro
 ms.service: office 365
 ms.topic: article
-<<<<<<< Updated upstream
-=======
 ms.custom: 
 - CSSTroubleshoot
 - CI 109573
->>>>>>> Stashed changes
 ms.author: v-six
 appliesto:
 - Cloud Services (Web roles/Worker roles) 
