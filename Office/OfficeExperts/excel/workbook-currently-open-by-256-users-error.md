@@ -4,9 +4,9 @@ ms.author: v-todmc
 author: todmccoy
 manager: dcscontentpm
 ms.date: 9/11/2019
-ms.audience: Admin
+audience: Admin
 ms.topic: article
-ms.service: excel
+ms.prod: excel
 localization_priority: Normal
 ms.custom: 
 - CSSTroubleshoot
