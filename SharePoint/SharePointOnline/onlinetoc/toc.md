@@ -125,7 +125,6 @@
 
 ## Sites
 ### ["HTTP request is unauthorized" error](../Sites/calendar-overlay-unsupported.md)
-### ["Report contains no data" error with the "Content viewing" audit log report](../sites/report-contains-no-data-when-save-the-content-viewing-audit-log.md)
 ### ["You do not have an e-mail address" error with creating an online alert](../sites/do-not-have-an-e-mail-address-when-create-an-alert.md)
 ### [A URL that resides under a root site collection is broken](../sites/url-that-resides-under-root-site-collection-is-broken.md)
 ### [Can't access online sites with a full redelegation domain](../sites/cannot-access-sites-by-using-a-domain.md)
