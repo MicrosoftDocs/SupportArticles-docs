@@ -24,7 +24,7 @@ appliesto:
 
 # "Access Denied" error when you use the connect-MSOLService cmdlet to connect to Office 365
 
-## Problem 
+## Symptoms 
 
 When you try to use the connect-MSOLService cmdlet in the Microsoft Azure Active Directory Module for Windows PowerShell to connect to a Microsoft cloud service such as Office 365, Microsoft Azure, or Microsoft Intune, your attempt is unsuccessful. Additionally, you may receive the following error message:
 
