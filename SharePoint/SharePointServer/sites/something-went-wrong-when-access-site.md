@@ -10,7 +10,9 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- CSSTroubleshoot
+- 04_11_2023
 appliesto:
 - SharePoint Server 2013 Service Pack 1
 - SharePoint Server 2013
