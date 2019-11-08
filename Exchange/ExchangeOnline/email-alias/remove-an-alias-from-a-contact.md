@@ -5,6 +5,7 @@ author: kwekua
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
+ms.custom: CSSTroubleshoot
 f1_keywords:
 - 'O365P_AdminMailContact_TSAlias'
 - 'O365E_AdminMailContact_TSAlias'
@@ -12,7 +13,6 @@ f1_keywords:
 ms.service: o365-administration
 localization_priority: None
 ms.collection: Adm_O365
-ms.custom: CSSTroubleshoot
 search.appverid:
 - BCS160
 - MET150

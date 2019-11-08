@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: project-server-itpr
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Project Server 2013

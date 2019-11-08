@@ -8,8 +8,8 @@ audience: ITPro
 ms.prod: office 365
 ms.topic: article
 ms.author: v-six
-ms.reviewer: kellybos
 ms.custom: CSSTroubleshoot
+ms.reviewer: kellybos
 search.appverid: 
 - MET150
 appliesto:

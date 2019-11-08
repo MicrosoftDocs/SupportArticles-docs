@@ -6,9 +6,9 @@ audience: ITPro
 ms.service: exchange-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 manager: dcscontentpm
 localization_priority: Normal
-ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:

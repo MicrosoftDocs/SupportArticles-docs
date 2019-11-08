@@ -7,8 +7,8 @@ ms.prod: office 365 ATP
 ms.topic: article
 ms.author: Scott.Landry
 manager: dcscontentpm
-localization_priority: Normal
 ms.custom: CSSTroubleshoot
+localization_priority: Normal
 search.appverid: 
 - MET150
 appliesto:

@@ -7,8 +7,8 @@ ms.prod: office 365
 ms.topic: article
 ms.author: rrajan
 manager: dcscontentpm
-localization_priority: Normal
 ms.custom: CSSTroubleshoot
+localization_priority: Normal
 search.appverid: 
 - MET150
 appliesto:

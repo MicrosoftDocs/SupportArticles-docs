@@ -7,6 +7,7 @@ manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
 ms.prod: office-perpetual-itpro
+ms.custom: CSSTroubleshoot
 localization_priority: Normal
 ms.reviewer: balram
 search.appverid: 

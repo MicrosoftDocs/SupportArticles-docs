@@ -1,0 +1,40 @@
+---
+title: Problems opening documents from a SharePoint site
+description: Describes issues that may arise when working with Office documents located on a SharePoint site if the local webclient service is disabled.
+author: simonxjx
+manager: dcscontentpm
+localization_priority: Normal
+search.appverid: 
+- MET150
+audience: ITPro
+ms.prod: office-perpetual-itpro
+ms.topic: article
+ms.author: v-six
+ms.custom: CSSTroubleshoot
+appliesto:
+- Office 2010
+---
+
+# Problems opening Office documents from a SharePoint site if webclient service is disabled
+
+## Symptoms
+
+When opening an Office document from a SharePoint site, and clicking "Save As", Office 2010 and 2007 applications may take a long time to show the Save As dialog box. In addition, the default location within the Save As dialog box is a local folder, and not the SharePoint site. 
+
+Office 2007 applications may also display the error "A problem occurred while connecting to the server. If the problem continues, contact your administrator." if a file is opened Read-Only from a SharePoint site, and the user clicks the Edit button within the Office 2007 application.
+
+## Cause
+
+The local webclient service on the machine is disabled.
+
+## Resolution
+
+Click Start and type Services in the search pane. Open the Services window, right click the Webclient service and choose Properties. Change the startup type to Manual, then click OK and exit the Services window.
+
+If you are running Windows Server 2008 or Windows Server 2012, the webclient service must first be installed as a part of the Desktop Experience. For instructions on how to install the Desktop Experience on Server 2008, please see [Desktop Experience Overview](https://technet.microsoft.com/library/cc772567.aspx).
+
+For instructions on how to install the Desktop Experience on Server 2012, please see [Install Desktop Experience](https://technet.microsoft.com/library/cc754314).
+
+## More Information
+
+This issue affects documents located on SharePoint 2007 and 2010 sites.
