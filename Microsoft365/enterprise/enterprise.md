@@ -4,8 +4,7 @@ author: simonxjx
 manager: willchen
 audience: ITPro
 ms.service: o365-solutions
-ms.topic: landing-page
-layout: LandingPage
+ms.topic: article
 ms.author: v-six
 ---
 
