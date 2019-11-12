@@ -139,7 +139,6 @@
 ### [Issue with "New Navigation Link" or "Save site as template" option](../Sites/new-navigation-link-save-site-as-template.md)
 ### [Public websites is discountinued](../Sites/public-websites-be-discontinued.md)
 ### [Rich Text fields don't respond](../Sites/rich-text-fields-fails-responding.md)
-### [Server Error in '/' Application when browsing to a site collection](../Sites/server-error-application.md)
 ### [SharePoint Online alert notifications isn't received](../Sites/no-alert-notifications.md)
 ### [Site doesn't use the site theme for top navigation bar](../Sites/top-navigation-bar-not-use-site-theme.md)
 ### [Top navigation bar displays either Sites or Newsfeed instead of OneDrive](../sites/office-365-top-navigation-bar-displays-either-sites-or-newsfeed.md)
