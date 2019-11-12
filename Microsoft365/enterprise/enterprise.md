@@ -11,7 +11,7 @@ ms.author: v-six
 
 # Office 365 Enterprise Troubleshooting
 
-Welcome to Office 365 Enterprise Troubleshooting! Here's a collection of information on how to identify and fix errors that you may run into when using this product.
+Welcome to Office 365! Here's a collection of information on how to identify and fix errors that you may run into when using this product.
 
 ## Still need help? 
 
