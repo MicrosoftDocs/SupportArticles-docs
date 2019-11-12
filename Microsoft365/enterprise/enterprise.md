@@ -9,9 +9,11 @@ layout: LandingPage
 ms.author: v-six
 ---
 
-# Office 365 Enterprise
+# Office 365 Enterprise Troubleshooting
 
-Microsoft Office 365 provides powerful online cloud services that enable collaboration, security and compliance, mobility, and intelligence and analytics. This page provides links to guidance for admins and IT Professionals who are deploying, configuring, and managing Office 365 services in enterprise organizations
+Welcome to Office 365 Enterprise Troubleshooting! Here's a collection of information on how to identify and fix errors that you may run into when using this product.
+
+
 
 <ul class="cardsF panelContent">
     <li>
