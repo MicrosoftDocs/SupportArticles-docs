@@ -129,7 +129,6 @@
 ### [A URL that resides under a root site collection is broken](../sites/url-that-resides-under-root-site-collection-is-broken.md)
 ### [Can't access online sites with a full redelegation domain](../sites/cannot-access-sites-by-using-a-domain.md)
 ### [Can't change the default language for a site collection](../Sites/change-default-language-site-collection.md)
-### [Can't create a Records Center site as a subsite](../Sites/cannot-create-records-center-as-subsite.md)
 ### [Can't find specified web in the given URL](../Sites/cannot-find-specified-web-given-url.md)
 ### [Customizations of the top navigation bar is reverted](../Sites/customizations-revert-to-default-settings.md)
 ### [Issue when activating Announcement Tiles feature](../Sites/announcement-tiles-not-supported.md)
