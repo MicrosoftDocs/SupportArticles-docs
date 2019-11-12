@@ -60,8 +60,8 @@ The configuration requirements vary, depending on the Outlook version. The follo
 
   HKEY_CURRENT_USER\Software\Microsoft\Exchange\AlwaysUseMSOAuthForAutoDiscover
 
-  For more information, see [KB 3126599]() - Outlook prompts for password when Modern Authentication is enabled.     
-- MAPI/HTTP cannot be disabled. For more information, see [KB 2937684]() - Outlook 2010, 2013, or 2016 may not connect using MAPI over HTTPs as expected.     
+  For more information, see [KB 3126599](https://support.microsoft.com/help/3126599) - Outlook prompts for password when Modern Authentication is enabled.     
+- MAPI/HTTP cannot be disabled. For more information, see [KB 2937684](https://support.microsoft.com/help/2937684) - Outlook 2010, 2013, or 2016 may not connect using MAPI over HTTPs as expected.     
  
 ### Skype for Business or Lync 2013
  
