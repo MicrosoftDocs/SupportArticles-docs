@@ -132,7 +132,6 @@
 ### [Can't create a Records Center site as a subsite](../Sites/cannot-create-records-center-as-subsite.md)
 ### [Can't find specified web in the given URL](../Sites/cannot-find-specified-web-given-url.md)
 ### [Customizations of the top navigation bar is reverted](../Sites/customizations-revert-to-default-settings.md)
-### [Enterprise Wiki is used instead of Publishing Portal](../Sites/site-collection-uses-enterprise-wiki-template.md)
 ### [Issue when activating Announcement Tiles feature](../Sites/announcement-tiles-not-supported.md)
 ### [Issue when changing the locale setting for a public website](../Sites/fails-changing-locale-setting.md)
 ### [Issue when creating an onilne ste](../Sites/site-names-cant-contain-reserved-word.md)
