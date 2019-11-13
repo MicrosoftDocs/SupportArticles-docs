@@ -100,7 +100,34 @@ To manually remove existing product keys for an Office 2013 program, follow thes
 Here's an example of the output of steps 5a through 5c:   
 
 ```AsciiDoc
-Microsoft Windows [Version 6.1.7601] Copyright (c) 2009 Microsoft Corporation. All rights reserved. C:\Windows\system32>cd "C:\Program Files (x86)\Microsoft Office\Office15" C:\Program Files (x86)\Microsoft Office\Office15>cscript ospp.vbs /dstatus Microsoft (R) Windows Script Host Version 5.8 Copyright (C) Microsoft Corporation. All rights reserved. ---Processing-------------------------- --------------------------------------- SKU ID: 82cef0d9-d31d-456e-a3fa-ae2637ea2984 LICENSE NAME: Office 15, OfficeProPlusSubR_Subscription edition LICENSE DESCRIPTION: Office 15, TIMEBASED_SUB channel EXPIRATION: 10/11/2013 4:59:59 PM LICENSE STATUS: ---NOTIFICATIONS--- ERROR CODE: 0xC004F005 ERROR DESCRIPTION: The Software Licensing Service reported that the product key does not match the product key for the license. Last 5 characters of installed product key: RMYP4--------------------------------------- ---Exiting----------------------------- C:\Program Files (x86)\Microsoft Office\Office15>cscript ospp.vbs /unpkey:RMYP4 Microsoft (R) Windows Script Host Version 5.8 Copyright (C) Microsoft Corporation. All rights reserved. ---Processing-------------------------- --------------------------------------- Uninstalling product key for: Office 15, OfficeProPlusSubR_Subscription edition <Product key uninstall successful> --------------------------------------- ---Exiting-----------------------------
+Microsoft Windows [Version 6.1.7601] 
+Copyright (c) 2009 Microsoft Corporation. All rights reserved. 
+C:\Windows\system32>cd "C:\Program Files (x86)\Microsoft Office\Office15" 
+C:\Program Files (x86)\Microsoft Office\Office15>cscript ospp.vbs /dstatus 
+Microsoft (R) Windows Script Host Version 5.8 
+Copyright (C) Microsoft Corporation. All rights reserved. 
+---Processing-------------------------- 
+--------------------------------------- 
+SKU ID: 82cef0d9-d31d-456e-a3fa-ae2637ea2984 
+LICENSE NAME: Office 15, OfficeProPlusSubR_Subscription edition 
+LICENSE DESCRIPTION: Office 15, TIMEBASED_SUB channel 
+EXPIRATION: 10/11/2013 4:59:59 PM 
+LICENSE STATUS: ---NOTIFICATIONS--- 
+ERROR CODE: 0xC004F005 
+ERROR DESCRIPTION: The Software Licensing Service reported that the product key 
+does not match the product key for the license. 
+Last 5 characters of installed product key: RMYP4
+--------------------------------------- 
+---Exiting----------------------------- 
+C:\Program Files (x86)\Microsoft Office\Office15>cscript ospp.vbs /unpkey:RMYP4 
+Microsoft (R) Windows Script Host Version 5.8 
+Copyright (C) Microsoft Corporation. All rights reserved. 
+---Processing-------------------------- 
+--------------------------------------- 
+Uninstalling product key for: Office 15, OfficeProPlusSubR_Subscription edition 
+<Product key uninstall successful> 
+--------------------------------------- 
+---Exiting-----------------------------
 ```
         
 For more information, see the following Microsoft Knowledge Base articles: 
