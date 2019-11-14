@@ -9,6 +9,7 @@
 ### [Change the compatibility level of content databases](../administration/compatibility-level-change.md)
 ### [Change the database server in a farm](../administration/how-to-change-the-database-in-farms.md)
 ### [Configure Excel Services for Kerberos authentication](../administration/configure-excel-services-kerberos.md)
+### [Delete temporary and permanent SharePoint data](../administration/delete-temporary-permanent-data.md)
 ### [Disable WebDAV use in SharePoint](../administration/how-to-disable-webdav-use.md)
 ### [Disabled Functions in SharePoint Workspace safe mode](../administration/function-disabled-in-safe-mode.md)
 ### [Hybrid Picker prerequisite check fail in a consuming farm](../administration/hybrid-picker-prerequisite-check-fail-in-consuming-farm.md)
@@ -68,6 +69,7 @@
 ### [Crawler has insufficient permissions](../Search/crawler-has-insufficient-permissions.md)
 ### [Document preview and content type icon aren't displayed](../../SharePointOnline/Search/content-type-icon-not-display.md)
 ### [Incomplete search results for choice type columns with multiple values](../search/incomplete-search-results-for-choice-type-columns-with-multiple-values.md)
+### [Privileges don't exist in service account configuration](../search/privilege-not-exist-service-account-configuration.md)
 
 ## Security
 ### ["401 unauthorized" when using OAuth and SAML claims](../security/401-unauthorized-error-when-using-oauth-and-saml-claims.md)
