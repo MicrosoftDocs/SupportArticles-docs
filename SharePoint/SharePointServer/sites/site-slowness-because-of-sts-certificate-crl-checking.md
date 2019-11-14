@@ -9,7 +9,8 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - SharePoint Foundation 2010
