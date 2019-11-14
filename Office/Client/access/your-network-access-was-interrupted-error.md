@@ -1,12 +1,12 @@
 ---
-title: "Access error 'Your network access was interrupted' when using a mapped drive"
+title: Access error "Your network access was interrupted" when using a mapped drive
 ms.author: v-todmc
 author: todmccoy
 manager: dcscontentpm
 ms.date: 9/26/2019
-ms.audience: Admin
+audience: Admin
 ms.topic: article
-ms.service: access
+ms.prod: access
 localization_priority: Normal
 search.appverid:
 - SPO160
@@ -17,7 +17,7 @@ ms.custom:
 - CI 107826
 - CSSTroubleshoot
 ms.reviewer: denniwil
-description: "Describes how to resolve an error where the connection is dropped when opening Access from a mapped drive."
+description: Describes how to resolve an error where the connection is dropped when opening Access from a mapped drive.
 ---
 
 # Access error “Your network access was interrupted” when using a mapped drive 
