@@ -34,11 +34,11 @@ Win32API_PtrSafe.txt contains the following:
 
 ·         Type declarations for the user-defined types (structures) that the provided Declare statements use. 
 
-You can download Win32API_PtrSafe.txt by accessing the file Office2010Win32API_PtrSafe.exe  from the web page at [Office 2010 Help Files: Win32API_PtrSafe with 64-bit Support](https://www.microsoft.com/downloads/details.aspx?familyid=035b72a5-eef9-4baf-8dbc-63fbd2dd982b&displaylang=en).
+You can download Win32API_PtrSafe.txt by accessing the file Office2010Win32API_PtrSafe.exe  from the web page at [Office 2010 Help Files: Win32API_PtrSafe with 64-bit Support](https://www.microsoft.com/download/details.aspx?familyid=035b72a5-eef9-4baf-8dbc-63fbd2dd982b&displaylang=en).
 
 The instructions of installing this download are included on the web page at the link above, or by pasting the following address in your browser:
 
-[https://www.microsoft.com/downloads/details.aspx?FamilyID=035b72a5-eef9-4baf-8dbc-63fbd2dd982b&displaylang=en](https://www.microsoft.com/downloads/details.aspx?familyid=035b72a5-eef9-4baf-8dbc-63fbd2dd982b)
+[Office 2010 Help Files: Win32API_PtrSafe with 64-bit Support](https://www.microsoft.com/download/details.aspx?familyid=035b72a5-eef9-4baf-8dbc-63fbd2dd982b)
 
 The download “Office2010Win32API_PtrSafe.exe” installs “Win32API_PtrSafe.txt”, “Using Win32API_PtrSave.xps” and “UsingWin32API_PtrSafe.docx.”  The latter two files contain important information about using the contents of Win32API_PtrSafe.txt when writing VBA code.
 
