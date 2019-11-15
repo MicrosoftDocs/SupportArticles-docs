@@ -305,7 +305,6 @@
 ### [Issues when you click hyperlink to SSO Web site in a document](../office/click-hyperlink-to-sso-website.md)
 ### [Loss of image quality occurs in a document](../office/office-docuemnt-image-quality-loss.md)
 ### [Manage templates in Office program ](../office/manage-office-program-templates.md)
-### [Msvbvm50.exe Installs VB 5.0 Run-Time Files](../office/msvbvm50-installs-vb-5-0-run-time.md)
 ### [No Office entitlement found on device](../office/office-not-entitled-on-device.md)
 ### [Office 2010 Installation failure](../office/office-installation-failure.md)
 ### [Office 2010 installation requires MSXML ](../office/office-installtion-need-msxml.md)
