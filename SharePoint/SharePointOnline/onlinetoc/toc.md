@@ -130,6 +130,7 @@
 ### [Can't access online sites with a full redelegation domain](../sites/cannot-access-sites-by-using-a-domain.md)
 ### [Can't change the default language for a site collection](../Sites/change-default-language-site-collection.md)
 ### [Can't find specified web in the given URL](../Sites/cannot-find-specified-web-given-url.md)
+### [Classic popularity reports is discontinued](../Sites/classic-usage-popularity-reports-discontinued.md)
 ### [Customizations of the top navigation bar is reverted](../Sites/customizations-revert-to-default-settings.md)
 ### [Issue when activating Announcement Tiles feature](../Sites/announcement-tiles-not-supported.md)
 ### [Issue when creating an onilne ste](../Sites/site-names-cant-contain-reserved-word.md)
