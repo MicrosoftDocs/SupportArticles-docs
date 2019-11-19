@@ -63,7 +63,7 @@ To end the task for your browser, follow these steps:
        **Note** Make sure that you end the Iexplore.exe task. Do not end the Explore.exe task.    
      - If you're using Mozilla Firefox, find and right-click **firefox.exe** in the list, and then click **End task**.    
      - If you're using Apple Safari, find and right-click **safari.exe** in the list, and then click **End task**.    
-     - If you're using Google Chrome, find and right-click **iexplore.exe** in the list, and then click **End task**.    
+     - If you're using Google Chrome, find and right-click **chrome.exe** in the list, and then click **End task**.    
  
     > [!NOTE]
     > - If more than one browser is listed, end the task for each browser.    
