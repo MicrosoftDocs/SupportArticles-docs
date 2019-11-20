@@ -35,7 +35,7 @@ When determining the week number of a date according to the ISO 8601 standard, t
 
 ## Resolution
 
-Use a user-defined function to return the Week number based on the rules for the ISO 8601 standard. An example is included in this article.
+Use a user-defined function to return the Week number based on the rules for the ISO 8601 standard. [An example is included in this article.](#Workarounds)
 
 ## More Information
 
