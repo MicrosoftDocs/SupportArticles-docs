@@ -4,7 +4,7 @@ ms.author: v-todmc
 author: krishnp
 manager: dcscontentpm
 ms.date: 11/20/2019
-audience: Admin
+audience: ITPro
 ms.topic: article
 ms.prod: 
 - project-server-2019
