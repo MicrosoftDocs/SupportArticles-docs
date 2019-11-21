@@ -4,7 +4,7 @@ ms.author: v-todmc
 author: todmccoy
 manager: dcscontentpm
 ms.date: 9/11/2019
-audience: Admin
+audience: ITPro
 ms.topic: article
 ms.prod: excel
 localization_priority: Normal
