@@ -27,6 +27,8 @@
 ### [Create An Excel Add-In to Calculate Body Mass Index](../excel/create-add-in-to-calculate-bmi.md)
 ### [Rename Excel Sheet with Cell Contents by Using Macro](../excel/use-macro-rename-sheet.md)
 
+### ["The workbook is currently open by 256 users" error when opening an Excel workbook from SharePoint or OneDrive](../excel/workbook-currently-open-by-256-users-error.md)
+
 ## Installation
 ### [Automate the update uninstallation for Office ](../installation/automate-uninstall-office-update.md)
 ### [Deploy Online Server to security hardened drives](../installation/deploy-office-online-server-to-security-hardened-drive.md)
