@@ -27,7 +27,7 @@ The popularity reports provide historical data for a period of three years about
 
 ## What will happen to the existing data?
 
-The data from the classic popularity reports will not be available after February 29, 2020. If it's required, you can download and save historical data from these reports before February 29, 2020.
+The data from the classic popularity reports will not be available after February 29, 2020. If it's required, you can download and save historical data from these reports before February 29, 2020. To learn more about downloading the classic usage reports in Excel, please refer to our [support article](https://docs.microsoft.com/sharepoint/view-popularity-trends-and-most-popular-items).
 
 ## Where can I find my data in the future?
 
@@ -39,4 +39,4 @@ Usage data on the modern **Site Usage** page may not exactly match the classic p
 
 ## Have questions?
 
-For questions or feedback, please reach out to us at spsiteanalytics@microsoft.com.
+Please submit your feedback or questions to Message Center post 195889 (MC195889), in the Message Center.
