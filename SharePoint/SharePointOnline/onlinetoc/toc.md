@@ -57,7 +57,6 @@
 ### [Issue when opening documents in client applications](../lists-and-libraries/the-webpage-cannot-be-displayed-when-open-an-office-document.md)
 ### [Issue when saving a list or library as template](../lists-and-libraries/fails-saving-list-as-template.md)
 ### [Issue when sorting or filtering a column](../lists-and-libraries/fails-filtering-sharepoint-column.md)
-### [List or library doesn't use new experience](../lists-and-libraries/list-library-not-use-new-experience.md)
 ### [Minimal Download Strategy feature isn't used for a list or library](../lists-and-libraries/mds-functionality-unaffect-library.md)
 ### [Modified time isn't displayed correctly for an online list item](../lists-and-libraries/modified-time-shows-incorrectly.md)
 ### [Number of items in this list exceeds the list view threshold](../lists-and-libraries/items-exceeds-list-view-threshold.md)
