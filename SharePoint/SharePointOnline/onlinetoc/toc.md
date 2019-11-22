@@ -37,7 +37,6 @@
 ### [Lists and Libraries Modern View Compatibility check](../lists-and-libraries/modern-view-compatibility-checklist.md)
 ### ["drag files here" option is missing for a list](../lists-and-libraries/drag-files-here-option-missing.md)
 ### [0x80070005 error for an online list sync](../lists-and-libraries/sync-sharepoint-list-error-0x80070005.md)
-### [A link to a shared PDF file prompts users to download the file](../lists-and-libraries/prompt-user-download-shared-pdf.md)
 ### [An online list item attachment doesn't open in Office](../lists-and-libraries/office-app-fails-opening-list-item-attachment.md)
 ### [An online list opens the form dialog box when adding items](../lists-and-libraries/calendar-view-list-opens-dialog-box.md)
 ### [Asset library displays a film reel icon for the video content type](../lists-and-libraries/film-reel-icon-video-content.md)
