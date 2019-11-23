@@ -15,11 +15,11 @@ appliesto:
 - SharePoint Online
 ---
 
-# The simple controls are missing for a SharePoint Online document library
+# The simple controls are missing for a SharePoint Online document library 
 
 ## Problem
 
-When you browse to a SharePoint Online document library, the following simple controls are missing and aren't available for the list:
+When you browse to a SharePoint Online document library in classic Experience, the following simple controls are missing and aren't available for the list:
 
 - New
 
@@ -36,6 +36,8 @@ When you browse to a SharePoint Online document library, the following simple co
 ## Solution
 
 To work around this problem, use the **Default** style within the view for the affected library.
+or
+Switch to Modern Experience 
 
 ## More information
 

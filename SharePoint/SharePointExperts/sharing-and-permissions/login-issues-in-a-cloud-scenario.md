@@ -21,7 +21,7 @@ This article was written by [Joerg Sinemus](https://social.msdn.microsoft.com/pr
 
 Microsoft SharePoint Designer 2013 can be used to create workflows, change design of classic pages and do much more. When you work SharePoint Designer 2013 with Office 365 SharePoint Online, you may get some login issues. To avoid login issues, make sure that SharePoint Designer 2013 and Office are up to date by using Windows Update.
 
-## Issue
+## Symptoms
 
 Assume that you install SharePoint Designer 2013 on Windows Server 2012 R2, Windows Server 2016, or Windows 10. You may also install Office 2013 or Office 2016. You open a SharePoint Site such as "https://contoso.sharepoint.de" by using SharePoint Designer 2013, the following sign-in dialog box may appear:
 
@@ -39,7 +39,7 @@ This issue may occur when you work with SharePoint Server on-premises and modern
 
 Office 2013, including SharePoint Designer 2013, is not configured to use ADAL. You may find the ADAL.DLL (current build version 1.0.2019.909) in the folder "C:\Program Files (x86)\Common Files\Microsoft Shared\OFFICE15\ " or similar, depending on 32-bit or 64-bit of Windows or SharePoint Designer 2013. However, that DLL won't be loaded when you have a look by using [ProcessExplorer](https://technet.microsoft.com/sysinternals/processexplorer.aspx).
 
-## Solution
+## Resolution
 
 To fix this issue, set the value of the **EnableADAL** registry key to 1 and check the **Version** registry key. For the two registry keys, see [Enable Modern Authentication for Office 2013 on Windows devices](https://docs.microsoft.com/office365/admin/security-and-compliance/enable-modern-authentication?redirectSourcePath=%252fen-us%252farticle%252fEnable-Modern-Authentication-for-Office-2013-on-Windows-devices-7dc1c01a-090f-4971-9677-f1b192d6c910&view=o365-worldwide).
 
@@ -48,6 +48,28 @@ After you set the registry key, restart SharePoint Designer 2013. Then the sign-
 ![the signinthree dialog box](./media/login-issues-in-a-cloud-scenario/signinthree.png)
 
 This issue occurs with tests in the Microsoft Cloud Germany (MCG) (also called Microsoft Cloud Deutschland (MCD)).
+
+### Connection issues
+
+If SharePoint Designer is experiencing connection issues to SharePoint sites, try the following common solutions.
+
+1. Verify that SharePoint Designer 2013 is updated with [SharePoint Designer Service Pack 1](https://admin.microsoft.com/Concierge/RedirectToArticle?uri=https%3A%2F%2Fsupport.microsoft.com%2Fhelp%2F2817441%2Fdescription-of-microsoft-sharepoint-designer-2013-service-pack-1-sp1&solutionType=AlchemyInsight&title=SharePoint%20Designer%20connection%20issues&clientAppName=SupportCentralSearch) and the [August 2, 2016, Update for SharePoint Designer 2013](https://admin.microsoft.com/Concierge/RedirectToArticle?uri=https%3A%2F%2Fsupport.microsoft.com%2Fhelp%2F3114721%2Faugust-2-2016-update-for-sharepoint-designer-2013-kb3114721&solutionType=AlchemyInsight&title=SharePoint%20Designer%20connection%20issues&clientAppName=SupportCentralSearch).
+
+2. Clear the local cache files:
+
+   1. Close SharePoint Designer 2013.
+   2. On the local computer, remove all files found in each of the following folders.
+   ```
+   %APPDATA%\Microsoft\Web Server Extensions\Cache
+   %APPDATA%\Microsoft\SharePoint Designer\ProxyAssemblyCache
+   %USERPROFILE%\AppData\Local\Microsoft\WebsiteCache
+   ```
+
+   3. Open SharePoint Designer 2013 and enter the account again to see if it works.
+
+3. [Enable Modern Authentication for Office 2013 on Windows Devices](https://admin.microsoft.com/Concierge/RedirectToArticle?uri=https%3A%2F%2Fdocs.microsoft.com%2Foffice365%2Fadmin%2Fsecurity-and-compliance%2Fenable-modern-authentication%3FredirectSourcePath%3D%2Farticle%2FEnable-Modern-Authentication-for-Office-2013-on-Windows-devices-7dc1c01a-090f-4971-9677-f1b192d6c910%26view%3Do365-worldwide&solutionType=AlchemyInsight&title=SharePoint%20Designer%20connection%20issues&clientAppName=SupportCentralSearch).
+
+4. Administrators will need to **Allow Custom Script** in the SharePoint Admin Center settings to allow the SharePoint Designer connection. See [Allow or prevent custom script](https://admin.microsoft.com/Concierge/RedirectToArticle?uri=https%3A%2F%2Fdocs.microsoft.com%2Fsharepoint%2Fallow-or-prevent-custom-script&solutionType=AlchemyInsight&title=SharePoint%20Designer%20connection%20issues&clientAppName=SupportCentralSearch) for more information.
 
 ## More information
 
