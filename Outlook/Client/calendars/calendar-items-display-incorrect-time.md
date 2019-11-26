@@ -34,7 +34,7 @@ This happens because Outlook doesn't apply time zone rules for recurring meeting
 
 **Option 1**: Wait until it is the year of the time zone definition change. As soon as it's the year of the time zone definition change, your meetings will display at the correct time in Outlook.
 
-**Option 2**: Use Outlook on the web (OWA) to view Outlook calendar items. You can use OWA to view the Outlook calendar items. OWA isn't affected by this situation.
+**Option 2**: Use Outlook on the web (OWA) to view Outlook calendar items. OWA isn't affected by this situation.
 
 **Option 3**: Install the latest build of Office 365 Subscription products (Version 1910 (Build 12130.20410)) or Windows Installer (MSI) based version of Outlook 2016, and then set the **TimeZoneOverride** registry key. This workaround enables you to configure the year that Outlook uses when it applies time zone rules for recurring meetings by using the **TimeZoneOverride** registry key setting.
 
