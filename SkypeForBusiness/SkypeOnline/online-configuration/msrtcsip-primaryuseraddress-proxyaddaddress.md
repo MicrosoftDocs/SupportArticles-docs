@@ -30,7 +30,7 @@ For this user the value of msRTCSIP-PrimaryUserAddress or the SIP address in the
 
 If you're using directory synchronization, locate and correct the duplicate attributes. To do this, follow these steps:
 
-1. Search Active Directory Domain Services (AD DS) for the duplicate msRTCSIP-PrimaryUserAddressattributes. To do this, follow these steps:
+1. Search Active Directory Domain Services (AD DS) for the duplicate msRTCSIP-PrimaryUserAddress attributes. To do this, follow these steps:
    1. On a domain controller, open Active Directory Service Interfaces (ADSI) Edit. To do this, click **Start**, click **Run**, type adsiedit.msc, and then click **OK**.   
    2. Create a new query in the AD DS domain in which the users reside. To do this, follow these steps:
        1. In ADSI Edit, in the console tree, click **Default naming context**, point to **New** on the **Action** menu, and then click **Query**.   
@@ -45,13 +45,13 @@ If you're using directory synchronization, locate and correct the duplicate attr
           Any users who have duplicate msRTCSIP-PrimaryUserAddress attributes are listed in the query results.       
    3. The results are listed under **Default naming context** in the ADSI Edit console tree.   
    4. Right-click the user, and then click **Properties**.   
-   5. Edit the msRTCSIP-PrimaryUserAddressattributes of the users so that the values are unique within the organization.
+   5. Edit the msRTCSIP-PrimaryUserAddress attributes of the users so that the values are unique within the organization.
 
         > [!NOTE]
         > If you currently have Lync Server deployed on-premises, you’ll want to change the user’s SIP address through the Lync Server Control Panel or the Lync Server Management Shell by using the Set-CsUser cmdlet. For more information, see [Modify the SIP Address of an Enabled Lync Server User](https://blogs.technet.com/b/csps/archive/2011/03/21/usermodifysip.aspx).   
    6. Force directory synchronization. Wait approximately 15 minutes for the changes to take full effect.   
    
-2. Search AD DS for duplicate SIP proxies in the proxyAddressesattributes. To do this, follow these steps: 
+2. Search AD DS for duplicate SIP proxies in the proxyAddresses attributes. To do this, follow these steps: 
    1. On a domain controller, open Active Directory Service Interfaces (ADSI) Edit. To do this, click **Start**, click **Run**, type adsiedit.msc, and then click **OK**.   
    2. Create a new query in the AD DS domain in which the users reside. To do this, follow these steps:
       1. In ADSI Edit, in the console tree, click **Default naming context**, point to **New** on the **Action** menu, and then click **Query**.   
@@ -66,7 +66,7 @@ If you're using directory synchronization, locate and correct the duplicate attr
          Any users who have duplicate SIP proxyAddresses attributes are listed in the query results.       
   3. The results are listed under **Default naming context** in the ADSI Edit console tree..   
   4. Right-click the user, and then select **Properties**.   
-  5. Edit the proxyAddressesattributes of the users so that the values are unique within the organization.
+  5. Edit the proxyAddresses attributes of the users so that the values are unique within the organization.
 
      > [!NOTE]
      > If you currently have Exchange Server deployed on-premises, you can make these changes in the Exchange Management Console (EMC) or the Exchange Management Shell.   
@@ -76,7 +76,7 @@ If you don't use directory synchronization, contact Office 365 technical support
 
 ## More Information
 
-This problem occurs if the value of the msRTCSIP-PrimaryUserAddressattribute or the value of the Session Initiation Protocol (SIP) proxy address is the same for two users in Office 365.
+This problem occurs if the value of the msRTCSIP-PrimaryUserAddress attribute or the value of the Session Initiation Protocol (SIP) proxy address is the same for two users in Office 365.
 
 > [!NOTE]
 > Even though the error message specifically states that the value in the local Active Directory isn't unique, you may experience this issue even though you aren't using the Microsoft Azure Active Directory Sync Tool. If you don't use Directory Synchronization, contact Office 365 technical support for help with resolving the issue. 
