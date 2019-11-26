@@ -98,6 +98,7 @@
 
 ## Sharing and Permissions
 ### ["Access Denied", "You need permission to access this site", or "User not found in the directory" errors in SharePoint Online and OneDrive for Business](../administration/access-denied-or-need-permission-error-sharepoint-online-or-onedrive-for-business.md)
+### ["Everyone except external users" group is re-added to Visitors or Members group on Office 365 public group website ](../sharing-and-permissions/everyone-except-external-users-group-readded.md)
 ### ["Everyone except external users" group is removed](../sharing-and-permissions/everyone-except-external-user-removed.md)
 ### ["External sharing is disabled for the site" error with Online Admin Center](../sharing-and-permissions/troubleshoot-error-when-tries-to-access-center.md)
 ### ["Shared With"column displays users unexpectedly](../sharing-and-permissions/shared-with-column-users-no-access.md)
