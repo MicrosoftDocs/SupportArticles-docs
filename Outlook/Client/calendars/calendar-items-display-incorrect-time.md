@@ -50,21 +50,21 @@ To apply this workaround to Brazil, follow these steps:
 
             **Note** If **Update Now** is not available, select **Enable updates**. Then go to step 1.
         1. After the update is applied, select **File** > **Office Account**, and then verify the version that is listed is Version 1910 (Build 12130.20410) or later versions. If it is not, select **Update Options** > **Update Now** again to install the latest update.
-1. **For Windows Installer (MSI) based version of Outlook 2016**
-    1. Download and install [KB 4484172](https://support.microsoft.com/help/4484172).
-    2. Verify that Outlook.exe is version 16.4939.1001 or later versions:
-        1. Find Outlook.exe at either C:\Program Files\Microsoft Office\Office16 or C:\Program Files (x86)\Microsoft Office\Office16.
-        2. Right-click Outlook.exe and then click **Properties**.
-        3. View the **Details** tab to verify that the file version is 16.4939.1001 or later versions.
+    1. **For Windows Installer (MSI) based version of Outlook 2016**
+        1. Download and install [KB 4484172](https://support.microsoft.com/help/4484172).
+        2. Verify that Outlook.exe is version 16.4939.1001 or later versions:
+            1. Find Outlook.exe at either C:\Program Files\Microsoft Office\Office16 or C:\Program Files (x86)\Microsoft Office\Office16.
+            2. Right-click Outlook.exe and then click **Properties**.
+            3. View the **Details** tab to verify that the file version is 16.4939.1001 or later versions.
 1. Set the **TimeZoneOverride** registry key:
     1. Click **Start**, click **Run**, type regedit in the **Open** box, and then click **OK**.
-    2. Locate **HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook**, and then select the **Outlook** node in the navigation pane.
-    3. On the **Edit** menu, select **New** > **Key**.
-    4. Type **TimeZoneOverride** and then press **Enter**.
-    5. Select the **TimeZoneOverride** registry key that you just created.
-    6. On the **Edit** menu, select **New** > **DWORD (32-bit) Value**.
-    7. Type **E. South America Standard Time** and press **Enter**.
-    8. Double-click **E. South America Standard Time**. Set **Base** to **Decimal**, and type **2020** in the **Value data**, then click **OK**. 
+    1. Locate **HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook**, and then select the **Outlook** node in the navigation pane.
+    1. On the **Edit** menu, select **New** > **Key**.
+    1. Type **TimeZoneOverride** and then press **Enter**.
+    1. Select the **TimeZoneOverride** registry key that you just created.
+    1. On the **Edit** menu, select **New** > **DWORD (32-bit) Value**.
+    1. Type **E. South America Standard Time** and press **Enter**.
+    1. Double-click **E. South America Standard Time**. Set **Base** to **Decimal**, and type **2020** in the **Value data**, then click **OK**. 
 
 The final registry data should be displayed as follows:
 
