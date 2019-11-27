@@ -48,13 +48,13 @@ To apply this workaround for Brazil, follow these steps:
     
     **For Office 365 Subscription installations**
     
-    Install Office 365 version 1910 (build 12130.20410) or a later version. To do this, follow these steps:
-    1. In Outlook, select **File** > **Office Account**.
-    1. Select **Update Options** > **Update Now**. 
+    1. Install Office 365 version 1910 (build 12130.20410) or a later version. To do this, follow these steps:
+       1. In Outlook, select **File** > **Office Account**.
+       1. Select **Update Options** > **Update Now**. 
 
-         **Note** If **Update Now** is not available, select **Enable updates**. Then, go to step b.
+           **Note** If **Update Now** is not available, select **Enable updates**. Then, select **Update Now** under **Update Options** again.
     
-    After the update is applied, select **File** > **Office Account**, and then verify that the version that is listed is version 1910 (build 12130.20410) or a later version. If it is not, select **Update Options** > **Update Now** again to install the latest update.
+    1. After the update is applied, select **File** > **Office Account**, and then verify that the version that is listed is version 1910 (build 12130.20410) or a later version. If it is not, select **Update Options** > **Update Now** again to install the latest update.
     
     **For a Windows Installer (MSI) based version of Outlook 2016**
      1. Download and install [KB 4484172](https://support.microsoft.com/help/4484172).
