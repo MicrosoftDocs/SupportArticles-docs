@@ -50,7 +50,7 @@ To apply this workaround for Brazil, follow these steps:
         2. In Outlook, select **File** > **Office Account**.
         3. Select **Update Options** > **Update Now**. 
 
-            **Note** If **Update Now** is not available, select **Enable updates**. Then, go to step i.
+            **Note** If **Update Now** is not available, select **Enable updates**. Then, go to step a.
         1. After the update is applied, select **File** > **Office Account**, and then verify that the version that is listed is version 1910 (build 12130.20410) or a later version. If it is not, select **Update Options** > **Update Now** again to install the latest update.
      - **For a Windows Installer (MSI) based version of Outlook 2016**
         1. Download and install [KB 4484172](https://support.microsoft.com/help/4484172).
