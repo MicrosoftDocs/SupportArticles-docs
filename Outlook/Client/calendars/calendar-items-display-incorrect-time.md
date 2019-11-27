@@ -45,19 +45,23 @@ To work around the Brazil issues that are described in the "**More information**
 To apply this workaround for Brazil, follow these steps:
 
 1. Install the applicable update for Office.
-    - **For Office 365 Subscription installations**
-        1. Install Office 365 version 1910 (build 12130.20410) or a later version.
-        2. In Outlook, select **File** > **Office Account**.
-        3. Select **Update Options** > **Update Now**. 
+    
+    **For Office 365 Subscription installations**
+    
+    Install Office 365 version 1910 (build 12130.20410) or a later version. To do this, follow these steps:
+    1. In Outlook, select **File** > **Office Account**.
+    1. Select **Update Options** > **Update Now**. 
 
-            **Note** If **Update Now** is not available, select **Enable updates**. Then, go to step a.
-        1. After the update is applied, select **File** > **Office Account**, and then verify that the version that is listed is version 1910 (build 12130.20410) or a later version. If it is not, select **Update Options** > **Update Now** again to install the latest update.
-     - **For a Windows Installer (MSI) based version of Outlook 2016**
-        1. Download and install [KB 4484172](https://support.microsoft.com/help/4484172).
-        2. Verify that Outlook.exe is version 16.4939.1001 or a later version. To do this, follow these steps:
-            1. Locate Outlook.exe in either C:\Program Files\Microsoft Office\Office16 or C:\Program Files (x86)\Microsoft Office\Office16.
-            2. Right-click Outlook.exe and then select **Properties**.
-            3. View the **Details** tab to verify that the file version is 16.4939.1001 or a later version.
+         **Note** If **Update Now** is not available, select **Enable updates**. Then, go to step a.
+    
+    After the update is applied, select **File** > **Office Account**, and then verify that the version that is listed is version 1910 (build 12130.20410) or a later version. If it is not, select **Update Options** > **Update Now** again to install the latest update.
+    
+    **For a Windows Installer (MSI) based version of Outlook 2016**
+     1. Download and install [KB 4484172](https://support.microsoft.com/help/4484172).
+     2. Verify that Outlook.exe is version 16.4939.1001 or a later version. To do this, follow these steps:
+         1. Locate Outlook.exe in either C:\Program Files\Microsoft Office\Office16 or C:\Program Files (x86)\Microsoft Office\Office16.
+         2. Right-click Outlook.exe and then select **Properties**.
+         3. View the **Details** tab to verify that the file version is 16.4939.1001 or a later version.
 1. Set the **TimeZoneOverride** registry key:
     1. Select **Start**, select **Run**, type regedit in the **Open** box, and then select **OK**.
     1. Locate **HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook**, and then select the **Outlook** node in the navigation pane.
