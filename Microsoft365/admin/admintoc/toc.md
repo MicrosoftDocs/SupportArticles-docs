@@ -123,6 +123,7 @@
 ### [80041317 or 80043431 during sign in](../authentication/office-365-sign-in-error-80041317-80043431.md)
 ### [8004789A when signing in to Office 365](../authentication/federated-user-sign-in-to-office-365.md)
 ### [80048163 when federated user tries to sign in](../authentication/federated-user-fails-signing-in.md)
+### [Authentication automatically fails](../authentication/automatic-authentication-fails.md)
 ### [Can't open an IRM-protected document with sign-in prompts](../authentication/cannot-open-irm-protected-document.md)
 ### [Can't sign in to an Office 2016 for Mac app](../authentication/sign-in-to-office-2016-for-mac-fail.md)
 ### [Can't sign in to Office 365, Azure, or Intune](../authentication/sign-in-to-office-365-azure-intune.md)
