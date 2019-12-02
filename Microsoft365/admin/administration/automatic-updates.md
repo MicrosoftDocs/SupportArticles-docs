@@ -13,6 +13,8 @@ ms.reviewer: gregmans
 search.appverid: 
 - MET150
 appliesto:
+- Office 365 Professional Plus
+- Office Standard 2019
 - Office Professional Plus 2016
 - Office Standard 2016
 - Office Home and Business 2013
@@ -62,16 +64,16 @@ We recommend that you keep automatic updating enabled for Office installations b
         
   2. Locate and then select the following registry key:<br />
    **Note:** If this key does not exist in your Registry Editor, see How to add the registry key via policy below.<br /><br />
-     **Office 2016**<br/>
+     **Office 365 ProPlus, Office 2019, and Office 2016**<br/>
      HKEY_LOCAL_MACHINE\software\policies\microsoft\office\16.0\common\OfficeUpdate<br/><br/>**Office 2013**<br/>
      HKEY_LOCAL_MACHINE\software\policies\microsoft\office\15.0\common\OfficeUpdate
   
-  3. Examine the following registry values under the \OfficeUpdate key:  
-           - DWORD: EnableAutomaticUpdates
-        
+  3. Examine the following registry values under the \OfficeUpdate key:<br/><br/>
+
+           - DWORD: EnableAutomaticUpdates<br/>
              Values:<br/>
              0 = automatic updates are disabled<br/>
-             1 = automatic updates are enabled<br/>    
+             1 = automatic updates are enabled<br/><br/>
            - DWORD: HideEnableDisableUpdates<br/>
              Values:<br/>
              1 = hide the menu option to enable or disable automatic updates<br/>
