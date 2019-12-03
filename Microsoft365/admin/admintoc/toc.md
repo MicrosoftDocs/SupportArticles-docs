@@ -154,6 +154,7 @@
 ## Installation
 ### [All applications are installed when installing Skype for Business](../installation/install-skype-for-business-2016.md)
 ### [Install Office 365 apps](../installation/install-apps.md)
+### [Install SaRA from network share](../installation/install-sara-from-network-share.md)
 ### [Installation stops at the "10% - Configuring" stage](../installation/installation-process-stops.md)
 
 
