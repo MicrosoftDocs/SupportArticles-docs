@@ -4,18 +4,18 @@ description: TLS Deprecation Report shows Outlook clients are using TLS 1.0/1.1 
 author: TobyTu
 ms.author: bhava
 manager: dcscontentpm
-audience: ITPro 
-ms.topic: article 
+audience: ITPro
+ms.topic: article
 ms.service: o365-proplus-itpro
 localization_priority: Normal
 ms.custom:
-- CI 110061
-- CSSTroubleshoot 
+- CI 110061
+- CSSTroubleshoot
 ms.reviewer: mhaque, bhava
 appliesto:
 - Outlook for Office 365
 search.appverid:
-- MET150
+- MET150
 ---
 
 # Office 365 TLS Deprecation Report shows Outlook clients are using TLS 1.0/1.1
