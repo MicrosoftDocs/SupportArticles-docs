@@ -70,6 +70,7 @@
 ### [Can't see free/busy information](../move-mailboxes/cannot-see-free-busy-information.md)
 
 ## Outlook Connectivity
+### [Outlook clients use TLS 1.0/1.1](../outlook-connectivity/outlook-uses-tls-1.0-1.1.md)
 ### [Resources to fix connection issues](../outlook-connectivity/office-365-troubleshooting-resources.md)
 ### [Sending and receiving email](../outlook-connectivity/outlook-connection-issues.md)
 
