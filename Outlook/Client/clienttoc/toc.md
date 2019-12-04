@@ -8,7 +8,7 @@
 ### [Planning considerations](../deployment/plan-outlook-2016-deployment.md)
 
 ## Diagnostics
-### [Install SaRA from network share](../../../office365/troubleshoot/installation/install-sara-from-network-share)
+### [Install SaRA from network share](/office365/troubleshoot/installation/install-sara-from-network-share)
 
 ## Email Messages
 ### [Create recurring reminder email](../email-messages/create-recurring-email.md)
