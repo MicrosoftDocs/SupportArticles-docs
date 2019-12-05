@@ -97,6 +97,7 @@
 ### [Can't start SharePoint Workspace or Groove](../sites/workspace-groove-detected-another-device.md)
 ### [Error when starting Groove or SharePoint Workspace](../sites/cant-start-groove-or-sharepoint.md)
 ### [Issue when saving a site as a template](../../SharePointOnline/Sites/fails-saving-site-as-template.md)
+### [Modified dates on the SharePoint site contents page are not accurate](../lists-and-libraries/modified-date-site-contents-not-accurate.md)
 ### [Rich Text fields don't respond](../../SharePointOnline/Sites/rich-text-fields-fails-responding.md)
 ### [Site slowness because of STS certificate CRL checking](../sites/site-slowness-because-of-sts-certificate-crl-checking.md)
 ### [Using PageParserPath directive can cause performance problems](../sites/using-pageparserpath-directive.md)
