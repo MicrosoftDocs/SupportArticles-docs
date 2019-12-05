@@ -7,6 +7,9 @@
 ### [Cached Exchange Mode](../deployment/cached-exchange-mode.md)
 ### [Planning considerations](../deployment/plan-outlook-2016-deployment.md)
 
+## Diagnostics
+### [Install SaRA from network share](https://docs.microsoft.com/office365/troubleshoot/installation/install-sara-from-network-share)
+
 ## Email Messages
 ### [Create recurring reminder email](../email-messages/create-recurring-email.md)
 ### [Multiple slashes are changed to one slash](../email-messages/url-multiple-slashes-become-single-slash.md)
