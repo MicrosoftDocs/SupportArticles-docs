@@ -78,7 +78,6 @@
 ### [Issue after click Skype Meeting Broadcast portal](../online-meeting-broadcast/click-hyperlink-skype-meeting-broadcast.md)
 ### [Issue when join a meeting broadcast](../online-meeting-broadcast/issue-join-meeting-broadcast.md)
 ### [No permission to create Meeting Broadcast](../online-meeting-broadcast/no-permission-create-meeting-broadcast.md)
-### [PowerPoint files not rendering in Office Online Server after Security Update](../../../Office/Client/powerpoint/files-not-rendering-office-online-server-after-security-update.md)
 ### [Skype Meeting Broadcast portal not load ](../online-meeting-broadcast/meeting-broadcast-portal-not-load.md)
 
 ## Phone System

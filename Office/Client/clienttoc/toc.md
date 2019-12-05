@@ -356,6 +356,7 @@
 ### [Password to modify a presentation is required](../powerpoint/require-password-to-modify-presentation.md)
 ### [PowerPoint 2010 not responding](../powerpoint/powerpoint-not-responding.md)
 ### [Powerpoint doesn't print in pure black and white](../powerpoint/powerpoint-not-print-in-pure-black-white.md)
+### [PowerPoint files not rendering in Office Online Server after Security Update](../powerpoint/files-not-rendering-office-online-server-after-security-update.md)
 ### [PowerPoint for Mac startup error](../powerpoint/fails-starting-powerpoint-mac.md)
 ### [PowerPoint stops responding (spinning wheel)](../powerpoint/powerpoint-stops-responding.md)
 ### [Shortcuts to control display of grid and guides](../powerpoint/grid-guides-keyboard-shortcuts.md)
