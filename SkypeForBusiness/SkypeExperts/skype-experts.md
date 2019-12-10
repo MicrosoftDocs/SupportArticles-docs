@@ -8,8 +8,9 @@ ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-weizhu
 localization_priority: Normal
-search.appverid: MET150
-ms.custom: CSSTroubleshoot
+search.appverid: 
+- MET150
+ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business
 ---
