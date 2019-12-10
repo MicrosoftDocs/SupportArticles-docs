@@ -8,7 +8,8 @@ ms.service: exchange-powershell
 ms.topic: article
 ms.author: v-weizhu
 localization_priority: Normal
-search.appverid: MET150
+search.appverid: 
+- MET150
 ms.custom: CSSTroubleshoot
 appliesto:
 - Exchange Server
