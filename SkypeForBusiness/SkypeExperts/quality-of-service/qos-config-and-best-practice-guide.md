@@ -5,7 +5,7 @@ ms.author: v-todmc
 author: balasaheb.ilag@hotmail.com
 manager: dcscontentpm
 ms.date: 8/27/2019
-ms.audience: ITPro
+audience: ITPro
 ms.service: skype
 ms.topic: article
 ms.prod: skype-for-business-itpro
