@@ -10,7 +10,7 @@ ms.author: v-weizhu
 localization_priority: Normal
 search.appverid: 
 - MET150
-ms.custom: CSSTroubleshoot
+ms.custom: CSSTroubleshoot
 appliesto: 
 - Microsoft Outlook
 ---
