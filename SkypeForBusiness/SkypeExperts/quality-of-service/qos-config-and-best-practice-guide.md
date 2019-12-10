@@ -165,7 +165,7 @@ After defining port ranges, you must also create QoS policies that specify the D
    3. Open the Group Policy Management tool (<b>run</b> > <b>gpmc.msc</b>) and then right click the OU (computer). Select <b>Create a GPO in this domain, and Link it here</b> to create a new GPO. (For example,  SfBLyncClient-QoS.) You must have the required permission (Domain Admin) to create and link a policy object.
    4. Right-click the new GPO and select <b>Edit</b> to open the Group Policy Management editor. Then expand <b>Computer Configuration</b> > <b>Policies</b> > <b>Windows Settings</b>. Right-click <b>Policy-based QoS</b> and then select <b>Create new policy</b>.
    <img alt="Create new policy option." src="media/103849-3.jpg">
-   5. In the policy-based QoS page, give the policy a name such as "Lync2013-Audio". Then set <b>Specify DSCP Value</b>: at 46 and select <b>Next</b>.
+   5. In the policy-based QoS page, give the policy a name such as "Lync2013-Audio". Then set <b>Specify DSCP Value</b>: at 46 and select <b>Next</b>.<br/>
    <img alt="Edit an existing QoS policy screen." src="media/103849-4.jpg">
    6. On the next page, enter lync.exe in the field <b>Only applications with this executable name</b> and select <b>OK</b>.
    > [!NOTE]
