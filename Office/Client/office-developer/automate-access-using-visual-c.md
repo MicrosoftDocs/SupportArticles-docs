@@ -55,7 +55,7 @@ You may also use the System.Runtime.InteropServices.Marshal.BindToMoniker(\<path
  
 OpenCurrentDatabase is the preferred method to open a database, because you specify the instance of Access that you are automating. You can also provide arguments to control how the database is opened, for example: 
 
-```sql
+```cs
 Access.Application oAccess = null;
 
 // Start a new instance of Access for Automation:
@@ -72,7 +72,7 @@ oAccess.OpenCurrentDatabase(
  
 To preview or to print an Access report, you call the OpenReport method of the DoCmd object. When you call OpenReport, one of the arguments that you pass determines whether the report is previewed on the screen, or whether it is sent to the printer: 
 
-```sql
+```cs
 // Preview a report named Sales:
 oAccess.DoCmd.OpenReport(
    "Sales", //ReportName
@@ -96,7 +96,7 @@ If you are previewing a report, be sure to set the Visible property of the Appli
 
 There is another way to print a report or other objects in the database. Use the PrintOut method of the DoCmd object. In this example, you select a report named Employees in the Database window, and then you call PrintOut to print the selected object. The PrintOut method allows you to provide arguments that correspond to the Print dialog box in Access: 
 
-```sql
+```cs
 // Select the Employees report in the database window:
 oAccess.DoCmd.SelectObject(
    Access.AcObjectType.acReport, //ObjectType
@@ -117,7 +117,7 @@ oAccess.DoCmd.PrintOut(
  
 Or, in some cases, you may want to use both the OpenReport and the PrintOut methods to print a report. Suppose you want to print multiple copies of the Employees report but only for a specific employee. This example first uses OpenReport to open the Employees report in preview mode, using the WhereCondition argument to limit the records to a specific employee. Then, PrintOut is used to print multiple copies of the active object: 
 
-```sql
+```cs
 // Open the report in preview mode using a WhereCondition:
 oAccess.DoCmd.OpenReport(
    "Employees", //ReportName
@@ -152,7 +152,7 @@ Access 2002 introduced the Printer object. You can use this object to customize 
  
 Visual C# .NET has very powerful form capabilities. However, there may be times when you want the user to view a form that was previously developed in Access. Or, you may have a form in your Access database that provides criteria for a query or report, and you must open that form before you can preview or print the report. To open and show an Access form, you call the OpenForm method of the DoCmd object: 
 
-```sql
+```cs
 // Show a form named Employees:
 oAccess.DoCmd.OpenForm(
    "Employees", //FormName
@@ -177,7 +177,7 @@ There are two types of security in Microsoft Access: password-protected database
  
 If you are opening a database that has been protected with a password, you can avoid the dialog box by providing the password to the OpenCurrentDatabase method: 
 
-```sql
+```cs
 // Open a password-protected database in shared mode:
 // Note: The bstrPassword argument is case-sensitive
 oAccess.OpenCurrentDatabase(
@@ -189,7 +189,7 @@ oAccess.OpenCurrentDatabase(
 
 Here is an example, where oAccess has been previously set to an instance of Access that does not have a database open. This code provides the password to the database to avoid a dialog box: 
 
-```sql
+```cs
 string sDBPassword = "MyPassword"; //database password
 DAO._DBEngine oDBEngine = oAccess.DBEngine;
 DAO.Database oDB = oDBEngine.OpenDatabase("c:\\mydb.mdb",
