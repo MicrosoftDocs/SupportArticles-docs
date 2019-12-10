@@ -13,7 +13,9 @@ search.appverid:
 ms.custom:
 - CSSTroubleshoot
 appliesto:
-- Skype for Business
+- Skype for Business Online
+- Skype for Business Server
+- Lync Server
 ---
 
 # Hybrid Deployment Troubleshooting
