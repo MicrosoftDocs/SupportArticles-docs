@@ -1,13 +1,17 @@
 ---
 title: Listing some issues for Office Experts.
-author: simonxjx
-manager: willchen
-search.appverid: 
-- MET150
+description: This article lists Office related issues.
+author: AmandaAZ
+manager: dcscontentpm
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: v-weizhu
+localization_priority: Normal
+search.appverid: MET150
+ms.custom: CSSTroubleshoot
+appliesto:
+- Microsoft Office
 ---
 
 # Office Experts

@@ -1,13 +1,17 @@
 ---
 title: Listing some issues for Skype for Business Online.
-author: simonxjx
-manager: willchen
+description: This article lists Skype for Business Online related issues.
+author: AmandaAZ
+manager: dcscontentpm
 audience: ITPro
-search.appverid: 
-- MET150
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-six
+ms.author: v-weizhu
+localization_priority: Normal
+search.appverid: MET150
+ms.custom: CSSTroubleshoot
+appliesto:
+- Skype for Business Online
 ---
 
 # Skype for Business Online Troubleshooting
