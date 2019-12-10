@@ -1,5 +1,5 @@
 ---
-title: Listing some issues for Exchange Hybrid.
+title: Listing some issues for Exchange Hybrid
 description: This article lists Hybrid deployment related issues.
 author: AmandaAZ
 manager: dcscontentpm

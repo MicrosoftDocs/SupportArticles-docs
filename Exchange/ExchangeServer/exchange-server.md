@@ -1,5 +1,5 @@
 ---
-title: Listing some issues for Exchange Server.
+title: Listing some issues for Exchange Server
 description: This article lists Exchange Server related issues.
 author: AmandaAZ
 manager: dcscontentpm

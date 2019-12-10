@@ -1,5 +1,5 @@
 ---
-title: Listing some issues for SharePoint Online.
+title: Listing some issues for SharePoint Online
 description: This article lists SharePoint Online related issues.
 author: AmandaAZ
 manager: dcscontentpm

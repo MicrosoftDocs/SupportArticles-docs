@@ -1,5 +1,5 @@
 ---
-title: Listing some issues for Outlook for Mac.
+title: Listing some issues for Outlook for Mac
 description: This article lists Outlook for Mac related issues.
 author: AmandaAZ
 manager: dcscontentpm

@@ -1,5 +1,5 @@
 ---
-title: Listing some issues for Outlook.
+title: Listing some issues for Outlook
 description: This article lists Outlook related issues.
 author: AmandaAZ
 manager: dcscontentpm

@@ -1,5 +1,5 @@
 ---
-title: Listing some issues for Skype for Business Online.
+title: Listing some issues for Skype for Business Online
 description: This article lists Skype for Business Online related issues.
 author: AmandaAZ
 manager: dcscontentpm

@@ -1,5 +1,5 @@
 ---
-title: Listing some issues for SharePoint Server.
+title: Listing some issues for SharePoint Server
 description: This article lists SharePoint Server related issues.
 author: AmandaAZ
 manager: dcscontentpm

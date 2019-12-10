@@ -1,5 +1,5 @@
 ---
-title: Listing some issues for Outlook Experts.
+title: Listing some issues for Outlook Experts
 description: This article lists Outlook related issues.
 author: AmandaAZ
 manager: dcscontentpm

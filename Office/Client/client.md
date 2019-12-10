@@ -1,5 +1,5 @@
 ---
-title: Listing some issues for Office products.
+title: Listing some issues for Office products
 description: This article lists Office related issues.
 author: AmandaAZ
 manager: dcscontentpm

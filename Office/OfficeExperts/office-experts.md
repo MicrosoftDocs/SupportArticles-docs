@@ -1,5 +1,5 @@
 ---
-title: Listing some issues for Office Experts.
+title: Listing some issues for Office Experts
 description: This article lists Office related issues.
 author: AmandaAZ
 manager: dcscontentpm

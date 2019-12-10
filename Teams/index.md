@@ -1,5 +1,5 @@
 ---
-title: Listing some issues for Teams.
+title: Listing some issues for Teams
 description: This article lists Teams related issues.
 author: AmandaAZ
 manager: dcscontentpm

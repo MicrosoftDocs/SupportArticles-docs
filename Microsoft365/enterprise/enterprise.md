@@ -1,5 +1,5 @@
 ---
-title: Listing some issues for Office 365 Enterprise.
+title: Listing some issues for Office 365 Enterprise
 description: This article lists Office 365 related issues.
 author: AmandaAZ
 manager: dcscontentpm

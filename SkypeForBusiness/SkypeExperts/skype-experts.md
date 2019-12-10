@@ -1,5 +1,5 @@
 ---
-title: Listing some issues for Skype for Business Experts.
+title: Listing some issues for Skype for Business Experts
 description: This article lists Skype for Business related issues.
 author: AmandaAZ
 manager: dcscontentpm

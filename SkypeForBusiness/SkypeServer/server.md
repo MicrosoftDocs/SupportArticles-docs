@@ -1,5 +1,5 @@
 ---
-title: Listing some issues for Skype for Business Server.
+title: Listing some issues for Skype for Business Server
 description: This article lists Skype for Business Server related issues.
 author: AmandaAZ
 manager: dcscontentpm

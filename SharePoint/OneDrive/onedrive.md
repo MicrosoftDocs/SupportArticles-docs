@@ -1,5 +1,5 @@
 ---
-title: Listing some issues for OneDrive for Business.
+title: Listing some issues for OneDrive for Business
 description: This article lists OneDrive for Business related issues.
 author: AmandaAZ
 manager: dcscontentpm

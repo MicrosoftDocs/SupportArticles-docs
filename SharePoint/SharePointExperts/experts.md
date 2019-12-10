@@ -1,5 +1,5 @@
 ---
-title: Listing some issues for SharePoint experts.
+title: Listing some issues for SharePoint experts
 description: This article lists SharePoint related issues.
 author: AmandaAZ
 manager: dcscontentpm

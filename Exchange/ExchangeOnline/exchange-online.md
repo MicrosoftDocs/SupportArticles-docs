@@ -1,5 +1,5 @@
 ---
-title: Listing some issues for Exchange Online.
+title: Listing some issues for Exchange Online
 description: This article lists Exchange Online related issues.
 author: AmandaAZ
 manager: dcscontentpm
