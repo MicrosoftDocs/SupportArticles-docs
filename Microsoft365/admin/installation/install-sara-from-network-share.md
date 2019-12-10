@@ -26,7 +26,7 @@ If you want to install and start Microsoft Support and Recovery Assistant (SaRA)
 
 1. Download SaRA by using the following link:  
 
-   [SaRA_17_0_3711_12.zip](https://download.microsoft.com/download/9/0/4/90412ee2-beeb-4696-9980-862d3b57a37e/SaRA_17_0_3711_12.zip)
+   [SaRA Network Installation Files](https://aka.ms/SaRANetworkInstallFiles)
 
 2. After the file is downloaded, extract the files from the ClickOnce folder to a shared network folder.
 3. On the computer on which you want to install SaRA, browse to the shared folder.
@@ -78,4 +78,5 @@ The following table provides the versions of SaRA that were made available on th
 
 |Release date|SaRA version|
 |--------|--------|
+|December 9, 2019|17.00.3891.009|
 |December 2, 2019|17.00.3711.012|
