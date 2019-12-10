@@ -49,7 +49,7 @@ The Jet compact utility, JETCOMP.exe, is a stand-alone utility that compacts dat
 
 The following file is available for download from the Microsoft Download Center:
 
-[Download the JETCOMP.exe package now.](http://download.microsoft.com/download/access2000/utility/1.0/win98me/en-us/jetcu40.exe)
+[Download the JETCOMP.exe package now.](https://download.microsoft.com/download/access2000/utility/1.0/win98me/en-us/jetcu40.exe)
 
 For additional information about how to download Microsoft Support files, click the following article number to view the article in the Microsoft Knowledge Base:
 
