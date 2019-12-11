@@ -11,13 +11,12 @@ localization_priority: Normal
 ms.custom: 
 - CI 111727
 - CSSTroubleshoot
-ms.reviewer: batre
+ms.reviewer: batre, EXOL_Triage
 appliesto:
 - Exchange Online
 search.appverid: 
 - MET150
 ---
-
 
 # “The mailbox is not found in the local forest” error when you access public folders
 
