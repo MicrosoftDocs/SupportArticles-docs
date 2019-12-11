@@ -22,6 +22,7 @@
 
 ## Management Console
 ### [Can't open EMS on Edge Transport server](../management-console/unable-open-ems-launchems.md)
+### [Can't restore database from backup with MCDB enabled](../management-console/restore-database-backup-mcdb-enable.md)
 ### [Connecting to the remote server failed](../management-console/connecting-remote-server-failed.md)
 ### [EMS fails to start with error](../management-console/fail-to-start-ems-canot-find-path.md)
 ### [MCDB status is Offline and SSDs aren’t formatted](../management-console/mcdb-status-is-offline-ssds-aren’t-formatted.md)
