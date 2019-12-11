@@ -1,28 +1,28 @@
 ---
-title: “The mailbox is not found in the local forest” error when you access public folders
-description: When you try to access public folders by using Exchange Admin Center EAC) or Exchange Online PowerShell, you receive an error “The mailbox is not found in the local forest”.
-author: TobyTu
-ms.author: batre
-manager: dcscontentpm
-audience: ITPro 
-ms.topic: article 
+title: The mailbox is not found in the local forest error when you access public folders
+description: When you try to access public folders by using EAC or Exchange Online PowerShell, you receive an error The mailbox is not found in the local forest.
+author: TobyTu
+ms.author: batre
+manager: dcscontentpm
+audience: ITPro 
+ms.topic: article 
 ms.service: exchange-online
-localization_priority: Normal
-ms.custom: 
-- CI 111727
-- CSSTroubleshoot 
-ms.reviewer: batre
-appliesto: 
+localization_priority: Normal
+ms.custom: 
+- CI 111727
+- CSSTroubleshoot
+ms.reviewer: batre
+appliesto:
 - Exchange Online
-search.appverid: 
-- MET150
+search.appverid: 
+- MET150
 ---
 
 # “The mailbox is not found in the local forest” error when you access public folders
 
 ## Symptoms
 
-When you try to access public folders by using Exchange Admin Center EAC) or Exchange Online PowerShell, you receive an error message that resembles the following:
+When you try to access public folders by using Exchange Admin Center or Exchange Online PowerShell, you receive an error message that resembles the following:
 
 ```
 The mailbox ‘Mailbox GUID’ is not found in the local forest. Please connect using ConnectionUri as https://outlook.office365.com/powershell-liveid?email=<emailaddressofthemailbox> while running New-PSSession
