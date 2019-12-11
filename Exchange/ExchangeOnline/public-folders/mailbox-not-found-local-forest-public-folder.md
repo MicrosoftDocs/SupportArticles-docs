@@ -18,6 +18,7 @@ search.appverid:
 - MET150
 ---
 
+
 # “The mailbox is not found in the local forest” error when you access public folders
 
 ## Symptoms
