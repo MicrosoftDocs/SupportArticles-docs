@@ -6,7 +6,7 @@ ms.author: batre
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
-ms.service: exchange-online
+ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
 - CI 111727
