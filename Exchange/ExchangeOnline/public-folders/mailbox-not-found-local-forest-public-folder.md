@@ -42,10 +42,10 @@ To work around this issue, follow these steps:
     Get-Mailbox -PublicFolder ‘Mailbox GUID’ | fl *primarysmtp*
     ```
 
-2. Use this SMTP address like 'User@contoso.onmicrosoft.com' in the connection string to open Exchange Online PowerShell:
+2. Use the Primary SMTP address of public folder mailbox in the connection string to open Exchange Online PowerShell. For example:
 
     ```powershell
-    Import-PSSession -Session (New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid?User@contoso.onmicrosoft.com -Credential (Get-Credential) -Authentication Basic -AllowRedirection) -DisableNameChecking
+    Import-PSSession -Session (New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid?PFMBX1_3f15ace7@contoso.onmicrosoft.com -Credential (Get-Credential) -Authentication Basic -AllowRedirection) -DisableNameChecking
     ```
 
 ## Status
