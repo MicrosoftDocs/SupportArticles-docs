@@ -28,8 +28,6 @@ Make sure that you have the latest version of the app installed. The Skype for B
 > [!NOTE]
 > The current release for Android smartphones isn't supported on Android media tablets or on other non-phone Android form factors (hardware models). For more information, click the following article number to view the article in the Microsoft Knowledge Base:
 
-[2829747](https://support.microsoft.com/help/en-us) Android smartphone devices that are supported for use with Skype for Business for Android.
-
 ### Sign-in requirements for Google Android
 
 When users sign in to the Skype for Business for Android, the sign-in information that's required to successfully authenticate depends on the following scenarios:
@@ -126,5 +124,4 @@ Assume that a new operating system update is released for your device. After yo
 
 ## More Information
 
-- [We can't sign you in error when you use an Android device to sign in to Lync Mobile](https://support.microsoft.com/help/2973873)   
-- [How to troubleshoot the Lync mobile client in Office 365 dedicated](https://support.microsoft.com/help/2837185)   
+[We can't sign you in error when you use an Android device to sign in to Lync Mobile](https://support.microsoft.com/help/2973873)   
