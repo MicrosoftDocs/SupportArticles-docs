@@ -36,7 +36,7 @@ This issue occurs when the administrator’s mailbox and the public folder mailb
 
 To work around this issue, follow these steps:
 
-1. Get the Primary SMTP address of the public folder mailbox that’s reported in the error message. To do this, run the following PowerShell commands:
+1. Get the SMTP address of the public folder mailbox that’s reported in the error message by running the following PowerShell command:
 
     ```powershell
     Get-Mailbox -PublicFolder ‘Mailbox GUID’ | fl *primarysmtp*
@@ -55,3 +55,4 @@ Microsoft is researching this problem and will post more information in this art
 ## More information
 
 In this situation, it’s possible that either the administrator’s mailbox or public folder mailbox was redistributed among different forests. This may have been done as part of the [go-local](https://docs.microsoft.com/office365/enterprise/moving-data-to-new-datacenter-geos) initiative or to load balance mailboxes. Currently, there's no option available in EAC to administer the public folders that are in different forests.
+
