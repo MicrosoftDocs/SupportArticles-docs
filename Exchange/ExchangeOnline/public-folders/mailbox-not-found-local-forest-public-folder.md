@@ -55,3 +55,4 @@ Microsoft is researching this problem and will post more information in this art
 ## More information
 
 In this situation, it’s possible that either the administrator’s mailbox or public folder mailbox was redistributed among different forests. This may have been done as part of the [go-local](https://docs.microsoft.com/office365/enterprise/moving-data-to-new-datacenter-geos) initiative or to load balance mailboxes. Currently, there's no option available in EAC to administer the public folders that are in different forests.
+
