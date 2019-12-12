@@ -36,7 +36,7 @@ This issue occurs when the administrator’s mailbox and the public folder mailb
 
 To work around this issue, follow these steps:
 
-1. Get the Primary SMTP address of the public folder mailbox that’s reported in the error message. To do this, run the following PowerShell commands:
+1. Get the SMTP address of the public folder mailbox that’s reported in the error message by running the following PowerShell command:
 
     ```powershell
     Get-Mailbox -PublicFolder ‘Mailbox GUID’ | fl *primarysmtp*
