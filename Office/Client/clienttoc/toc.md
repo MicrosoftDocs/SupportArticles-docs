@@ -248,7 +248,7 @@
 ### [Issue when starting Excel for Mac](../excel/fails-starting-excel-mac.md)
 ### [Issue when updating external links](../excel/update-external-links.md)
 ### [Issue with using different print quality for sheets](../excel/different-print-quality.md)
-### [Large Address Aware capability change](../excel/lla-capability-change.md)
+### [Large Address Aware capability change](../excel/laa-capability-change.md)
 ### [Legacy UML features are missing](../excel/legacy-uml-features-missing.md)
 ### [Limitations for working with arrays](../excel/arrays-limitations.md)
 ### [Link a Visio drawing to a specific region](../excel/link-visio-drawing-to-a-specific-region.md)
