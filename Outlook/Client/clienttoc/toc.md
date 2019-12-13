@@ -26,6 +26,7 @@
 
 ## Meetings
 ### [Meeting tracking tab isn't updated](../meetings/meeting-tracking-tab-not-updated.md)
+### [Room Finder isn’t available on shared calendars](../meetings/room-finder-is-not-available-shared-calendars-outlook.md)
 
 ## Ribbons
 ### [Lync Meeting control isn't displayed](../ribbons/lync-meeting-control-not-displayed.md)
