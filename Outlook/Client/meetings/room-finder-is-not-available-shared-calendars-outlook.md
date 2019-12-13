@@ -9,13 +9,13 @@ ms.topic: article 
 ms.prod: office 365
 localization_priority: Normal
 ms.custom:
-- CI 111779
-- CSSTroubleshoot 
+- CI 111779
+- CSSTroubleshoot 
 ms.reviewer: gabesl, aruiz
 appliesto:
 - Outlook for Office 365
 search.appverid:
-- MET150
+- MET150
 ---
 
 # Room Finder isn’t available on shared calendars when multiple Exchange accounts are added to the same Outlook profile
