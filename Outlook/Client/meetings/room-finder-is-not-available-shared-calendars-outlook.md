@@ -11,7 +11,7 @@ localization_priority: Normal
 ms.custom: 
 - CI 111779
 - CSSTroubleshoot 
-ms.reviewer: gabesl, aruiz
+ms.reviewer: gabesl, aruiz
 appliesto: 
 - Outlook for Office 365
 search.appverid: 
