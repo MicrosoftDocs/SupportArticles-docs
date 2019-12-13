@@ -87,6 +87,10 @@
 ### [Incorrect time zone in OWA](../owa-time-zones/incorrect-setting.md)
 ### [Incorrect time zone in read receipt](../owa-time-zones/read-receipt-incorrect-timezone.md)
 
+## Public Folders
+
+### [The mailbox is not found in the local forest](../public-folders/mailbox-not-found-local-forest-public-folder.md)
+
 ## Send Emails
 ### [Changes in message store](../send-emails/smtp-submission-improvements.md)
 

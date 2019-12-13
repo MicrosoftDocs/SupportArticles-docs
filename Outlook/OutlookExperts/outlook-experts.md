@@ -1,13 +1,19 @@
 ---
-title: Listing some issues for Outlook Experts.
-author: simonxjx
-manager: willchen
+title: Listing some issues for Outlook Experts
+description: This article lists Outlook related issues.
+author: AmandaAZ
+manager: dcscontentpm
 audience: ITPro
-search.appverid: 
-- MET150
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: v-weizhu
+localization_priority: Normal
+search.appverid: 
+- MET150
+ms.custom:
+- CSSTroubleshoot
+appliesto:
+- Microsoft Outlook
 ---
 
 # Outlook Experts
