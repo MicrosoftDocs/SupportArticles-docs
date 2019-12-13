@@ -1,20 +1,20 @@
 ---
-title: Room Finder isn’t available on shared calendars that have multiple accounts added to Outlook profile
-description: When you access an existing meeting on a shared calendar that you are a delegate for, Outlook doesn’t respond if you select the Room Finder button.
-author: TobyTu
-ms.author: gabesl
-manager: dcscontentpm
-audience: ITPro 
-ms.topic: article 
-ms.prod: office 365
-localization_priority: Normal
-ms.custom: 
+title: Room Finder isn’t available on shared calendars that have multiple accounts added to Outlook profile
+description: When you access an existing meeting on a shared calendar that you are a delegate for, Outlook doesn’t respond if you select the Room Finder button.
+author: TobyTu
+ms.author: gabesl
+manager: dcscontentpm
+audience: ITPro 
+ms.topic: article 
+ms.prod: office 365
+localization_priority: Normal
+ms.custom:
 - CI 111779
 - CSSTroubleshoot 
 ms.reviewer: gabesl, aruiz
-appliesto: 
+appliesto:
 - Outlook for Office 365
-search.appverid: 
+search.appverid:
 - MET150
 ---
 
