@@ -39,6 +39,7 @@
 ### [User contact photos not correct in Lync ](../online-contacts/user-contact-photos-not-correct.md)
 
 ## Exchange Integration
+### [Chat app in Outlook for Mac defaults to Teams instead of Skype for Business](../online-exchange-integration/outlook-for-mac-chat-app-defaults-to-teams.md)
 ### [Integrate Exchange Online with Lync Server](../online-exchange-integration/integrate-exchange-online-skype-for-business.md)
 ### [Integrate Exchange Server 2013 with Lync Server ](../online-exchange-integration/exchange-server-lync-server-hybrid.md)
 ### [UM-enabled mailbox migration fails](../online-exchange-integration/um-enabled-mailbox-migration-fails.md)
