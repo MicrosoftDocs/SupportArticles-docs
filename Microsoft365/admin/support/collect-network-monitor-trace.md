@@ -28,7 +28,7 @@ For example, you might have to use Network Monitor to troubleshoot the following
 - You receive continual authentication prompts.    
 
 > [!NOTE]
-> We prefer NetMon traces, but if your organization uses another capture program like Wireahark you can send that as an alternative. 
+> We prefer NetMon traces, but if your organization uses another capture program like Wireshark you can send that as an alternative. 
 
 ## More Information
 
