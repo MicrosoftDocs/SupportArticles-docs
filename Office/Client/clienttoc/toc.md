@@ -193,6 +193,7 @@
 ### [Create and user two-input data tables](../excel/create-two-input-data-tables.md)
 ### [Create application-level event handlers](../excel/create-application-level-event-handler.md)
 ### [Custom function may not calculate expected value](../excel/custom-function-calculate-wrong-value.md)
+### [Data collected by Excel Baseline Diagnostic](../excel/data-collected-by-excel-support-diagnostic.md)
 ### [Date format is incorrect when converting a CSV text file with macros](../excel/incorrect-date-format-converted-csv-file.md)
 ### [Delete cells with a "For Each...Next" loop](../excel/use-for-each-next-loop-to-delete-cell.md)
 ### [Delete every other row on a worksheet](../excel/delete-every-other-row.md)
@@ -212,7 +213,9 @@
 ### [Error when you save a workbook in OneDrive](../excel/excel-file-path-too-long.md)
 ### [Excel 2013 crashes when you scroll down](../excel/excel-crashes-mouse-wheel.md)
 ### [Excel 2013 or Word 2013 crashes on close](../excel/excel-word-crash-on-close.md)
+### [Excel 2016 for Mac crashes](../excel/excel-2016-for-mac-crashes.md)
 ### [Excel crashes when moving Excel sheet tab](../excel/crash-when-move-excel-sheet-tab.md)
+### [Excel crashes when working on multiple workbooks](../excel/crash-when-work-on-multiple-workbooks.md)
 ### [Excel crashing issues are fixed in recent updates](../excel/excel-crash-issues-fixed-in-recent-updates.md)
 ### [Excel doesn't recognize data as Date type data](../excel/not-recognize-data-as-date-type-data.md)
 ### [Excel doesn't shut down after calling Quit method](../excel/jscript-not-shut-down-excel.md)
@@ -316,10 +319,12 @@
 ### [Use the AutoRepublish feature](../excel/autorepublish-feature.md)
 ### [Use the IF worksheet function to suppress the #DIV/0! Error](../excel/if-worksheet-function-div0.md)
 ### [VBA writes to cells slowly when ActiveX controls are invisible](../excel/vba-writes-to-cells-slowly.md)
+### [Workbook isn't activated when you run a macro](../excel/workbook-not-activated.md)
 ### [Workbook loads slowly the first time that it is opened](../excel/workbook-loads-slowly.md)
 ### [Workbooks not open ](../excel/workbooks-not-open.md)
 ### [Worksheets may be printed at an unexpected different size](../excel/worksheet-printed-different-size.md)
 ### [Wrap text doesn't adjust row height](../excel/wrap-text-not-adjust-row-height.md)
+
 
 ## InfoPath
 ### [Disable code-behind prompt for InfoPath forms](../infopath/disabling-code-behind-prompt-for-infopath-forms.md)
@@ -369,6 +374,9 @@
 ## Office for Mac
 ### ["wkresources" files in Trash](../office-for-mac/wkresources-files-moved-to-trash.md)
 ### [Error when you open files from SharePoint in Office client](../office-for-mac/files-fail-to-open.md)
+### [Office 2016 for Mac 64-bit upgrade](../office-for-mac/office-2016-for-mac-64-bit-upgrade.md)
+### [Office 2016 for Mac prompts you for authentication](../office-for-mac/office-for-mac-prompted-for-authentication.md)
+### [Office 365 Enterprise E3 setup is incomplete](../office-for-mac/o365-e3-setup-incomplete.md)
 
 ## OneNote
 ### ["Open new side note" missing from  Windows notification](../onenote/open-new-side-note-missing.md)
@@ -385,7 +393,8 @@
 ### [Add section command is unavailable](../powerpoint/add-section-not-available.md)
 ### [Audio stops playback after you leave original slide](../powerpoint/audio-stops-playback.md)
 ### [Cannot edit the footer information in the Header and Footer](../powerpoint/fails-editing-footer-information.md)
-### [Can't load an add-in with a low macro security level](../powerpoint/powerpoint-fails-loading-add-in.md)
+### [Cannot edit video or audio in a presentation](../powerpoint/cannot-edit-video-or-audio.md)
+### [Cannot load an add-in with a low macro security level](../powerpoint/powerpoint-fails-loading-add-in.md)
 ### [Change the export resolution of PowerPoint slide](../powerpoint/change-export-slide-resolution.md)
 ### [Create a mailto hyperlink in a presentation in PowerPoint for Mac](../powerpoint/create-powerpoint-mailto-hyperlink.md)
 ### [Embedded videos don't play](../powerpoint/embedded-video-not-play.md)
@@ -407,13 +416,14 @@
 ### [Videos are listed as "Unsupported](../powerpoint/videos-listed-as-unsupported.md)
 
 
-
 ## Project
 ### ["Can't save to global.mpt" when existing Project](../project/cant-save-to-global.mpt-error.md)
 ### [Calculate work and duration with resource assignment changes](../project/calculate-work-duration-assignment.md)
 ### [Can't add or edit resources in Enterprise Resource Pool](../project/error-when-add-edit-resource.md)
+### [Can't enter User Logon Account for new resource](../project/cannot-enter-user-logon-account.md)
 ### [Can't view a timesheet in PWA](../project/iexplorer.exe-encountered-problem.md)
 ### [Circular relationship error when indenting task](../project/circular-relationship-error-when-indenting-task.md)
+### [Create a report template](../project/create-report-template.md)
 ### [Definition of project constraints](../project/definition-of-project-constraints.md)
 ### [Error when accessing Project Web App](../project/error-when-access-pwa.md)
 ### [Error when opening a visual report](../project/error-when-open-visual-report-in-project.md)
@@ -430,11 +440,13 @@
 ### [Print Gantt Chart view without table information](../project/print-gantt-chart-view-without-table.md)
 ### [Progress bars not drawn for tasks that are in progress](../project/progress-bars-not-drawn-for-tasks.md)
 ### [Project opens calendar from a different instance](../project/project-opens-calendar-from-different-instance-when-editing.md)
+### [Project Publish job process remains at 80%](../project/project-publish-jobs-not-complete.md)
 ### [Removed users are not inactivated](../project/removed-erp-group-user-activated.md)
 ### [SharePoint task list sync job fails when Project is published](../project/sharepoint-task-list-sync-job-fails-when-project-published.md)
 ### [Sync Jobs take a long time to complete](../project/sync-jobs-take-long-time-to-complete.md)
 ### [Sync with SharePoint tasks list](../project/sync-with-tasks-from-project.md)
 ### [Tasks are not scheduled](../project/tasks-not-scheduled.md)
+
 
 ## Publisher
 ### [Publication is printed incorrectly](../publisher/print-publication-incorrectly.md)
@@ -475,9 +487,9 @@
 ### [Text not displayed when the drawing opens in a browser](../visio/text-not-displayed-in-drawing.md)
 ### [This is not a valid win32 application when installing Office 365](../visio/not-a-valid-win32-application-error.md)
 ### [Troubleshoot damaged drawings in Visio](../visio/troubleshoot-damaged-drawings.md)
-### [Visio Services does not render diagrams](../visio/visio-services-not-render-diagrams.md)
 ### [Visip doesn't have shapes and stencils](../visio/visio-not-have-certain-shapes-and-stencils.md)
-
+### [Visio Services does not render diagrams](../visio/visio-services-not-render-diagrams.md)
+### [Visio Services was unable to load Web Drawing](../visio/cannot-load-visio-web-drawing.md)
 
 ## Word
 ### ["End tag" error when opening docx file](../word/end-tag-error-when-open-docx.md)

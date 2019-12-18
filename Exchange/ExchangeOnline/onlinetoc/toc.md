@@ -6,6 +6,9 @@
 ## Add Users
 ### [Proxy address is already being used](../add-users/proxy-address-being-used.md)
 
+## Administration
+### [Can't manage Send on Behalf permissions](../administration/send-on-behalf-for-shared-mailbox.md)
+
 ## Antispam
 ### [Cautions against bypassing spam filters](../antispam/cautions-against-bypassing-spam-filters.md)
 ### [User Impersonation messages are classified as phishing](../antispam/user-impersonation-messages-are-classified-as-phishing.md)
