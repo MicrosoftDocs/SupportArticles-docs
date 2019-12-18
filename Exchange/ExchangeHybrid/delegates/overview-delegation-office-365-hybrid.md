@@ -81,9 +81,9 @@ This article describes the necessary configuration, administration details, and
 - Autodiscover is used to find the mailbox even if it’s in another forest (by using the target address redirect).    
 - Folder access can be granted by users byusing Outlook or by administrators byusing the Remote PowerShell cmdlet [Add-MailboxFolderPermission](https://technet.microsoft.com/library/dd298062%28v=exchg.160%29.aspx). The following conditions apply:
 
-  - The Calendar folder works differently in Outlook than other folders do. For more information, see[Can't view cross-forest calendar data in Office 365 hybrid environment](https://support.microsoft.com/help/3187044).    
-  - Private items are viewable only if the user is configured correctly as a delegate. For more information, see[Delegates are not listed correctly in Outlook after a migration to Office 365 hybrid environment](https://support.microsoft.com/help/4023846).    
-  - The user cannot view the calendar of a hidden mailbox in Exchange Online. For more information, see[Can't access a hidden mailbox in Outlook after a migration to Office 365 hybrid environment](https://support.microsoft.com/help/4034273).    
+  - The Calendar folder works differently in Outlook than other folders do. For more information, see [Can't view cross-forest calendar data in Office 365 hybrid environment](https://support.microsoft.com/help/3187044).    
+  - Private items are viewable only if the user is configured correctly as a delegate. For more information, see [Delegates are not listed correctly in Outlook after a migration to Office 365 hybrid environment](https://support.microsoft.com/help/4023846).    
+  - The user cannot view the calendar of a hidden mailbox in Exchange Online. For more information, see [Can't access a hidden mailbox in Outlook after a migration to Office 365 hybrid environment](https://support.microsoft.com/help/4034273).    
      
  
 ### Send on Behalf of
