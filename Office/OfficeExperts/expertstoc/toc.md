@@ -3,8 +3,10 @@
 ## Activation
 ### [Activate Office 2010 KMS host through phone](../activation/activate-office-2010-kms-host-via-phone-activation.md)
 ### [Discover Office and Windows KMS hosts](../activation/discover-remove-unauthorized-office-windows-kms-hosts.md)
+### [Reset Office 365 ProPlus activation state](../activation/reset-office-365-proplus-activation-state.md)
 
 ## Administration
+### [0xC004F038 computer could not be activated in KMS](../administration/0xc004f038-computer-not-activate.md)
 ### [Check the size of this month's Office ProPlus update](../administration/how-big-was-this-months-office-proplus-update.md)
 ### [Compatibility report in Excel Online](../administration/compatibility-report-about-text-queries-in-excel-online.md)
 ### [Determine build version of Online Server](../administration/how-to-determine-build-version-of-office-online-server.md)
@@ -22,11 +24,15 @@
 ## Authentication
 ### [Office not render DUO API multi-factor authentication login page](../authentication/not-render-a-custom-duo-api-multi-factor-authentication-login-page.md)
 
+## Diagnostic Logs
+### [Enable Office 365 ProPlus ULS logging](../diagnostic-logs/how-to-enable-office-365-proplus-uls-logging.md)
+### [Office Lens icons display incorrectly ](../diagnostic-logs/office-lens-icons-incorrectly-display.md)
+
+
 ## Excel
 ### ["Cannot access directory" error in Excel 2016](../excel/cannot-access-directory-error-in-excel-2016.md)
 ### [Create An Excel Add-In to Calculate Body Mass Index](../excel/create-add-in-to-calculate-bmi.md)
 ### [Rename Excel Sheet with Cell Contents by Using Macro](../excel/use-macro-rename-sheet.md)
-
 ### ["The workbook is currently open by 256 users" error when opening an Excel workbook from SharePoint or OneDrive](../excel/workbook-currently-open-by-256-users-error.md)
 
 ## Installation
