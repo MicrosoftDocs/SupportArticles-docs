@@ -49,6 +49,6 @@ To learn about the system and software requirements for the Directory Sync tool,
 
 For a list of attributes that are synchronized by the Azure Active Directory Sync tool, see the following wiki article:
 
-[Azure AD Connect sync: Attributes synchronized to Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized)
+[Azure AD Connect sync: Attributes synchronized to Azure Active Directory](https://docs.microsoft.com/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.
