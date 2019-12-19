@@ -15,6 +15,7 @@
 
 ## Sites
 ### [Top navigation bar displays either Sites or Newsfeed instead of OneDrive](../../SharePointOnline/sites/office-365-top-navigation-bar-displays-either-sites-or-newsfeed.md)
+### [Troubleshooting guide to OneDrive for Business sites stopped at provisioning stage](../../SharePointOnline/sites/troubleshooting-guide-for-sites-stopped-at-provisioning.md)
 
 ## Sync
 ### [Can't connect to the specified SharePoint site](../sync/onedrive-for-business-sync-returns-error.md)

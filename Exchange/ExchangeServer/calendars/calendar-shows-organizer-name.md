@@ -26,7 +26,7 @@ appliesto:
 
 Consider the following scenario:
 
-- A Resource mailbox is configured to AutoAcceptin an Microsoft Exchange Server environment.   
+- A Resource mailbox is configured to AutoAccept in a Microsoft Exchange Server environment.   
 - You send a meeting request to the Resource mailbox.    
 - The meeting request is accepted automatically, and the meeting subject is displayed correctly in the organizer’s mailbox.   
 
@@ -34,7 +34,7 @@ In this scenario, when you log on to the Resource mailbox, you see that the meet
 
 ## Cause
 
-This is default behavior. It occurs because AddOrganizerToSubjectand DeleteSubjectare set to True.
+This is default behavior. It occurs because `AddOrganizerToSubject` and `DeleteSubject` are set to True.
 
 To view these value for the Resource mailbox, run the one of the following cmdlets:
 

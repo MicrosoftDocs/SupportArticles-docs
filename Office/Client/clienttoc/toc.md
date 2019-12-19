@@ -560,7 +560,7 @@
 ### [Automate Excel from HTML Web page](../office-developer/automate-excel-using-jscript.md)
 ### [Automate Excel from MFC and Visual C++ to fill data](../office-developer/automate-excel-from-mfc-fill-data.md)
 ### [Automate Excel From Visual Basic .NET](../office-developer/automate-excel-from-visual-basic-net.md)
-### [Automate Excel From Visual Basic C#.NET](../office-developer/automate-excel-from-visual-c.md)
+### [Automate Excel From Visual C#.NET](../office-developer/automate-excel-from-visual-c.md)
 ### [Automate Excel from Visual Basic](../office-developer/automate-excel-from-visual-basic.md)
 ### [Automate Excel using Visual C# to fill data](../office-developer/automate-excel-using-visual-c-fill-data.md)
 ### [Automate Outlook using C++ in Visual Stuido 2010](../office-developer/automate-outlook-2010-using-c-with-mfc.md)
