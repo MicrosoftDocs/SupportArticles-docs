@@ -36,7 +36,7 @@ You can determine whether you're using IP address enforcement in the following 
   1. In the SharePoint Online Management Shell module, connect to the SharePoint Online admin center by using the [Connect-SPOService](https://go.microsoft.com/fwlink/?linkid=873059) cmdlet. For example, run the following cmdlet: 
 
         ```powershell
-        Connect-SPOService -URL http://contoso-admin.sharepoint.com
+        Connect-SPOService -URL https://contoso-admin.sharepoint.com
         ```
   1. Run the following cmdlet to check the **IPAddressEnforcement** parameter:
 
