@@ -141,6 +141,7 @@
 ### [SharePoint Online alert notifications isn't received](../Sites/no-alert-notifications.md)
 ### [Site doesn't use the site theme for top navigation bar](../Sites/top-navigation-bar-not-use-site-theme.md)
 ### [Top navigation bar displays either Sites or Newsfeed instead of OneDrive](../sites/office-365-top-navigation-bar-displays-either-sites-or-newsfeed.md)
+### [Troubleshooting guide to OneDrive for Business sites stopped at provisioning stage](../sites/troubleshooting-guide-for-sites-stopped-at-provisioning.md)
 
 ## Sync
 ### [A synchronized file is moved to the recycle bin](../Sync/synced-file-moved-to-recycle-bin.md)
