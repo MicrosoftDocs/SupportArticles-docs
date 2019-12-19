@@ -46,17 +46,17 @@ The following is a list of potential reasons for a list or library not to render
 
 **Detection:** The View utilizes Web Parts with relationships to other Web Parts.
 
-**Recommendation:** Create a view that has a single web part on it.
+**Recommendation:** Create a View that has a single web part on it.
 
 **More information:**
 
 * [Create, change, or delete a view of a list or library](https://support.office.com/article/create-change-or-delete-a-view-of-a-list-or-library-27ae65b8-bc5b-4949-b29b-4ee87144a9c9)
 
-## JSLink based customizations detected on the View or Columns
+## JSLink based customizations detected on the View or Column(s)
 
-**Detection:** JSLink based customizations detected on the View or Columns.
+**Detection:** JSLink based customizations detected on the View or Column(s).
 
-**Recommendation:** Switch to SharePoint Column Formatting or Field Customizers and Remove the JSLink based customizations from the View or Columns.
+**Recommendation:** Switch to SharePoint Column Formatting or Field Customizers and Remove the JSLink based customizations from the View or Column(s).
 
 **More information:**
 
@@ -103,7 +103,7 @@ The following is a list of potential reasons for a list or library not to render
 
 **Detection:** The View contains a Task Outcome Column(s), used for Workflow Tasks.
 
-**Recommendation:** Create a view that doesn't include Task Outcome Column(s) or Remove the Task Outcome Column(s) from the current View. You don't have to remove the column from the list or library.
+**Recommendation:** Create a view that doesn't include Task Outcome Column(s) or Remove the Task Outcome Column(s) from the current View. You don't have to remove the Column(s) from the List or Library.
 
 **More information:**
 
@@ -115,8 +115,8 @@ The following is a list of potential reasons for a list or library not to render
 
 **Detection:** The View contains a Publishing Column(s).
 
-**Recommendation:** Create a view that doesn't include publishing column(s) or
-remove the publishing column(s) from the current View. You don't have to remove the column from the list or library.
+**Recommendation:** Create a view that doesn't include publishing Column(s) or
+remove the publishing Column(s) from the current View. You don't have to remove the Column(s) from the List or Library.
 
 **More information:**
 
@@ -168,7 +168,7 @@ Supported Lists:
 
 **Detection:** The View is not rendering using Modern due to a site collection feature being enabled.
 
-**Recommendation:** Disable the  E3540C7D-6BEA-403C-A224-1A12EAFEE4C4 feature to enable Modern in the site collection. This requires that you use PowerShell/code because the feature is hidden.
+**Recommendation:** Disable the E3540C7D-6BEA-403C-A224-1A12EAFEE4C4 feature to enable Modern in the site collection. This requires that you use PowerShell/code because the feature is hidden.
 
 **More information:**
 
@@ -216,9 +216,9 @@ Run the following PNP commands:
 4. Specify the customized page.
 5. Reset.
 
-## The current document library has a new item form, and this is not compatible with Modern
+## The current Document Library has a new item form, and this is not compatible with Modern
 
-**Detection:** The current document library has a new item form, and this is not compatible with Modern.
+**Detection:** The current Document Library has a new item form, and this is not compatible with Modern.
 
 **Recommendation:** Provide feedback through [user voice](https://sharepoint.uservoice.com/forums/329214-sites-and-collaboration) if this is an important feature for you.
 
@@ -226,7 +226,7 @@ Run the following PNP commands:
 
 **Detection:** The form page contains Column(s) that are incompatible with Modern.
 
-**Recommendation:** Remove or set incompatible form columns as hidden to render the form by using the Modern user experience.
+**Recommendation:** Remove or set incompatible form Column(s) as hidden to render the form by using the Modern user experience.
 
 The following columns are supported:
 

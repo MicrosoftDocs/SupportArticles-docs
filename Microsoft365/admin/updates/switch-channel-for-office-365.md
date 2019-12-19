@@ -29,7 +29,7 @@ To switch from the Semi-Annual Channel to the Monthly Channel, follow these step
     > [!NOTE]
     > In the following script, notice that the value of **CDNBaseURL** is set to the URL of the Monthly channel that’s identified in step 1. If you want to switch to a different channel, you can use the appropriate URL from the referenced article in step 1.
 
-    ```powershell
+    ```batch
     setlocal 
     reg query HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration\ /v CDNBaseUrl if %errorlevel%==0 (goto SwitchChannel) else (goto End) 
     :SwitchChannel 
@@ -58,7 +58,7 @@ To switch to a different channel by using the Office Deployment Tool (ODT), foll
     ```
 1. From an elevated command prompt, switch to the folder location where setup.exe resides, and then run the following command:  
 
-    ```powershell
+    ```batch
     setup.exe /configure update.xml
     ```
 1. Start an Office application (such as Excel), and then select **File** > **Account**. In the **Product Information** section, select **Update Options** > **Update Now**.  

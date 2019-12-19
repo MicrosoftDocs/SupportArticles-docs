@@ -36,22 +36,22 @@ By default, installations of Microsoft Office are configured to automatically up
 
 This issue occurs if updates have been manually disable or are managed through Group Policy settings.
 
-##  Resolution
+## Resolution
 
 We recommend that you keep automatic updating enabled for Office installations because this configuration allows Office to automatically update with the latest fixes and security features. To re-enable automatic updates for Office, follow the steps below. 
- 
+
 - **Manually configure automatic updates**
 
-  If your Office installation is not managed by Group Policy, you can manually re-enable automatic updates by following these steps. If you cannot follow these steps because the **Update Options** control is disabled or missing, your updates are being managed by Group Policy.  
+  If your Office installation is not managed by Group Policy, you can manually re-enable automatic updates by following these steps. If you cannot follow these steps because the **Update Options** control is disabled or missing, your updates are being managed by Group Policy.
   1. Start any program.    
-  2. On the **File** tab, select **Account**. <br />**Note:** In Outlook, select **Office Account**.
+  1. On the **File** tab, select **Account**. <br />**Note:** In Outlook, select **Office Account**.
   1. On the right side, select **Update Options**, and then select **Enable Updates**.    
   1. If you are asked whether you want to let Microsoft Office make changes to your computer, select **Yes**.    
-     
+
 - **Automatic updates managed by Group Policy**
-   > [!WARNING]
-   > Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, 
-[back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
+   
+  > [!WARNING]
+  > Follow the steps in this section carefully. Serious problems might occur if you modify the  registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
   If you cannot follow the steps in the "Manually configure automatic updates" section, this is because the **Update Options** control is disabled or missing due to a Group Policy. For example, the following figure shows the **Update Options** control when the **Enable Updates** option is hidden through a Group Policy:
 
@@ -59,25 +59,32 @@ We recommend that you keep automatic updating enabled for Office installations b
 
   To examine the registry data that is associated with the Group Policy settings which control this feature, follow these steps:  
   1. Start Registry Editor. To do this, take one of the following actions:  
-           - In Windows 10 or Windows 8, press the Windows key + X, select **Run**, type regedit in the **Open** box, and then press **Enter**.
-           - In Windows 7 and Windows Vista, select **Start**, type regedit in the **Start Search** box, and then press Enter. If you are prompted for an administrator password or for confirmation, type the password, or select **Allow**.     
+
+    - In Windows 10 or Windows 8, press the Windows key + X, select **Run**, type regedit in the **Open** box, and then press **Enter**.
+    - In Windows 7 and Windows Vista, select **Start**, type regedit in the **Start Search** box, and then press Enter. If you are prompted for an administrator password or for confirmation, type the password, or select **Allow**.     
         
-  2. Locate and then select the following registry key:<br />
-   **Note:** If this key does not exist in your Registry Editor, see How to add the registry key via policy below.<br /><br />
-     **Office 365 ProPlus, Office 2019, and Office 2016**<br/>
-     HKEY_LOCAL_MACHINE\software\policies\microsoft\office\16.0\common\OfficeUpdate<br/><br/>**Office 2013**<br/>
-     HKEY_LOCAL_MACHINE\software\policies\microsoft\office\15.0\common\OfficeUpdate
+  2. Locate and then select the following registry key:
+
+    **Note:** If this key does not exist in your Registry Editor, see How to add the registry key via policy below.
+
+    **Office 365 ProPlus, Office 2019, and Office 2016**
+
+    HKEY_LOCAL_MACHINE\software\policies\microsoft\office\16.0\common\OfficeUpdate
+
+    **Office 2013**
+
+    HKEY_LOCAL_MACHINE\software\Wow6432Node\microsoft\office\15.0\common\OfficeUpdate
   
   3. Examine the following registry values under the \OfficeUpdate key:<br/><br/>
 
-           - DWORD: EnableAutomaticUpdates<br/>
-             Values:<br/>
-             0 = automatic updates are disabled<br/>
-             1 = automatic updates are enabled<br/><br/>
-           - DWORD: HideEnableDisableUpdates<br/>
-             Values:<br/>
-             1 = hide the menu option to enable or disable automatic updates<br/>
-             0 = show the menu option to enable or disable automatic updates         
+    - DWORD: EnableAutomaticUpdates<br/>
+      Values:<br/>
+      0 = automatic updates are disabled<br/>
+      1 = automatic updates are enabled<br/><br/>
+    - DWORD: HideEnableDisableUpdates<br/>
+      Values:<br/>
+      1 = hide the menu option to enable or disable automatic updates<br/>
+      0 = show the menu option to enable or disable automatic updates         
   4. If you have any questions or concerns about these policy settings, see your domain administrator.    
      
 ### How to add the registry key via policy
