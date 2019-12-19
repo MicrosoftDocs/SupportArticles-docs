@@ -3,7 +3,7 @@
 ## ["Invalid provider specified" with using Office 2016](../invalid-provider-specified-error.md)
 ## ["PivotTable Operation Failed" in Excel Online](../excel-online-pivottable-operation-failed.md)
 ## ["Request Was Taking Too Long" in Excel Online](../request-too-long-opening-excel-workbook.md)
-## [Access Project Online Tenant](../enterprise/access-project-online-tenant.md)
+## [Access Project Online Tenant](../access-project-online-tenant.md)
 ## [Can't access newly purchased project online with license](../cant-access-newly-purchased-project-online.md)
 ## [Can't connect to Project Online OData from SSIS](../cant-connect-project-online-odata-from-ssis.md)
 ## [Can't find or insert any clipart](../cannot-find-any-clipart.md)
