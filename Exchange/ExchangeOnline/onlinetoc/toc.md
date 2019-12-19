@@ -6,6 +6,9 @@
 ## Add Users
 ### [Proxy address is already being used](../add-users/proxy-address-being-used.md)
 
+## Administration
+### [Can't manage Send on Behalf permissions](../administration/send-on-behalf-for-shared-mailbox.md)
+
 ## Antispam
 ### [Cautions against bypassing spam filters](../antispam/cautions-against-bypassing-spam-filters.md)
 ### [User Impersonation messages are classified as phishing](../antispam/user-impersonation-messages-are-classified-as-phishing.md)
@@ -86,6 +89,10 @@
 ## OWA Time Zones
 ### [Incorrect time zone in OWA](../owa-time-zones/incorrect-setting.md)
 ### [Incorrect time zone in read receipt](../owa-time-zones/read-receipt-incorrect-timezone.md)
+
+## Public Folders
+
+### [The mailbox is not found in the local forest](../public-folders/mailbox-not-found-local-forest-public-folder.md)
 
 ## Send Emails
 ### [Changes in message store](../send-emails/smtp-submission-improvements.md)

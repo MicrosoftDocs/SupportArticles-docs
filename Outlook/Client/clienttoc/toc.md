@@ -7,6 +7,10 @@
 ### [Cached Exchange Mode](../deployment/cached-exchange-mode.md)
 ### [Planning considerations](../deployment/plan-outlook-2016-deployment.md)
 
+## Domain Management
+### [Remove automapping for shared mailbox](../domain-management/remove-automapping-for-shared-mailbox.md)
+### [Unexpected autodiscover behavior](../domain-management/unexpected-autodiscover-behavior.md)
+
 ## Email Messages
 ### [Create recurring reminder email](../email-messages/create-recurring-email.md)
 ### [Multiple slashes are changed to one slash](../email-messages/url-multiple-slashes-become-single-slash.md)
@@ -26,6 +30,7 @@
 
 ## Meetings
 ### [Meeting tracking tab isn't updated](../meetings/meeting-tracking-tab-not-updated.md)
+### [Room Finder isn’t available on shared calendars](../meetings/room-finder-is-not-available-shared-calendars-outlook.md)
 
 ## Ribbons
 ### [Lync Meeting control isn't displayed](../ribbons/lync-meeting-control-not-displayed.md)

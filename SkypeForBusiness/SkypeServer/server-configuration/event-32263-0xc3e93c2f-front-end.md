@@ -33,7 +33,7 @@ Ensure the front end is functioning correctly.
 
 ## Cause
 
-This issue occurs because client sessions sometimes don't disconnect cleanly from the Front Endserver. This causes stale subscriptions to remain on the server. When a notification is generated for one of these subscriptions, the server doesn't find a valid user for that subscription. Therefore, it logs the event entry that is mentioned in the "Symptoms" section.  
+This issue occurs because client sessions sometimes don't disconnect cleanly from the Front End server. This causes stale subscriptions to remain on the server. When a notification is generated for one of these subscriptions, the server doesn't find a valid user for that subscription. Therefore, it logs the event entry that is mentioned in the "Symptoms" section.  
 
 ## More Information
 

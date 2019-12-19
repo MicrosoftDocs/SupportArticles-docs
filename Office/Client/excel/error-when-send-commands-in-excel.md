@@ -71,18 +71,18 @@ To check whether the file associations in the system are performing correctly, r
  
 1. On the Start screen, type Control Panel.    
 2. Select **Control Panel**.    
-3. Select **Default Programs **> **Set your default programs**.    
-4. Select **Excel **> **Choose default for this program**.    
-5. On the **Set Program Associations** screen, select **Select All **> **Save**.    
+3. Select **Default Programs** > **Set your default programs**.    
+4. Select **Excel** > **Choose default for this program**.    
+5. On the **Set Program Associations** screen, select **Select All** > **Save**.    
  
 **Windows 7**  
  
-1. Select **Start **> **Control Panel**.    
+1. Select **Start** > **Control Panel**.    
 2. Select **Default Programs**.    
 3. Select **Associate a file type or protocol with a specific program**.   
 4. Select **Microsoft Excel Worksheet**, and then select change program.    
 5. Under **Recommended Programs**, select **Microsoft Excel**.    
-6. If Excel does not appear in this list, select **Browse**, locate the Excel installation folder, select **Excel.exe **> **Excel**.    
+6. If Excel does not appear in this list, select **Browse**, locate the Excel installation folder, select **Excel.exe** > **Excel**.    
     
 If these steps do not resolve the problem, go to Method 4.
 
@@ -94,9 +94,9 @@ Try to repair your Office programs. To do this, follow the steps for your instal
 
 Windows 10  
  
-1. In the search box, type **Control Panel**, and then click** Control Panel **in the search results.    
+1. In the search box, type **Control Panel**, and then click **Control Panel** in the search results.    
 2. Under **Programs**, click **Uninstall a program**.    
-3. Click **Microsoft Office 365 **> **Change**.    
+3. Click **Microsoft Office 365** > **Change**.    
 4. Click **Online Repair** > **Repair**.    
  
 > [!NOTE]
@@ -106,17 +106,17 @@ Windows 10
 2. Select **Control Panel**.    
 3. Under **Programs**, select **Uninstall a program**.    
 4. Select **Microsoft Office 365 **> **Change**.    
-5. Select **Online Repair **> **Repair**.
+5. Select **Online Repair** > **Repair**.
 
 > [!NOTE]
 > You may have to restart your computer after the repair process is finished.    
  
 Windows 7  
 
-1. Select **Start **>**Control Panel**.    
+1. Select **Start** >**Control Panel**.    
 2. Double-click **Programs and Features**.    
 3. Select **Microsoft Office 365 **> **Change**.    
-4. Select **Online Repair **> **Repair**.
+4. Select **Online Repair** > **Repair**.
 
 > [!NOTE]
 > You may have to restart your computer after the repair process is complete.
@@ -135,7 +135,7 @@ If these steps do not resolve the problem, go to Method 5.
  
 Excel and COM add-in programs can also cause this problem. These two kinds of add-ins are located in different folders. For testing, disable and isolate the conflict by turning off each add-in one at a time. To do this, follow these steps: 
  
-1. On the **File** menu, select **Options **> **Add-Ins**.    
+1. On the **File** menu, select **Options** > **Add-Ins**.    
 2. In the **Manage** list at the bottom of the screen, select **COM Add-Ins** > **Go**.    
 3. Clear one of the add-ins in the list, and then select **OK**.    
 4. Restart Excel by double-clicking the icon or file name for the workbook that you are trying to open. 
