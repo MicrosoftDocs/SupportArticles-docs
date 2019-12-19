@@ -16,6 +16,7 @@ ms.custom:
 ms.reviewer: sulobr
 appliesto:
 - Exchange Online
+- Office 365
 ---
 
 # "Can't add you to the Outlook Customer Manager group" error after you assign licenses to users

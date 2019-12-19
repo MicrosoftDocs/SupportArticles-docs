@@ -45,6 +45,10 @@ Upgrade to the latest version of the Directory Sync tool. This is now called the
 
 ## More information
 
-To learn about the system and software requirements for the Directory Sync tool, see [Prepare for directory synchronization](https://technet.microsoft.com/library/jj151831.aspx). 
+To learn about the system and software requirements for the Directory Sync tool, see [Prepare for directory synchronization](https://technet.microsoft.com/library/jj151831.aspx).
+
+For a list of attributes that are synchronized by the Azure Active Directory Sync tool, see the following wiki article:
+
+[List of Attributes that are Synced by the Azure Active Directory Sync Tool](https://social.technet.microsoft.com/wiki/contents/articles/19901.list-of-attributes-that-are-synced-by-the-windows-azure-active-directory-sync-tool.aspx)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.
