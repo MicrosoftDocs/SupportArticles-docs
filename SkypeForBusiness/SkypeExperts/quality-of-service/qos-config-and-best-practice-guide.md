@@ -129,7 +129,7 @@ With Edge servers, you do not have to configure separate port ranges for audio, 
 
 ```   
 Get-CsService -EdgeServer | ForEach-Object {Set-CsEdgeServer -Identity 
-$_.Identity -MediaCommunicationPortStart 50000 MediaCommunicationPortCount 10000} 
+$_.Identity -MediaCommunicationPortStart 50000 -MediaCommunicationPortCount 10000} 
 ```
  
 **Configure client port ranges for peer-to-peer media:**<br/>
@@ -143,8 +143,8 @@ Get-CsConferencingConfiguration | fl Client*
 **To make changes in client port ranges:**
 
 ```
-Set-CsConferencingConfiguration -ClientMediaPortRangeEnabled $True ClientAudioPort "50020" -ClientAudioPortRange "40" -ClientVideoPort "58000" -
-ClientVideoPortRange "20" -ClientAppSharingPort "42000" ClientAppSharingPortRange "20" -ClientFileTransferPort "40783" -
+Set-CsConferencingConfiguration -ClientMediaPortRangeEnabled $True -ClientAudioPort "50020" -ClientAudioPortRange "40" -ClientVideoPort "58000" -
+ClientVideoPortRange "20" -ClientAppSharingPort "42000" -ClientAppSharingPortRange "20" -ClientFileTransferPort "40783" -
 ClientFileTransferPortRange "20" 
 ```
 
