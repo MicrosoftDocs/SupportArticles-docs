@@ -87,9 +87,6 @@
 ### [Issue when remove a domain](../administration/error-remove-domain-from-office-365.md)
 ### [SupportMultipleDomain switch when managing SSO](../administration/supportmultipledomain-switch-when-manage-sso.md)
 
-## Enterprise
-### [Access Project Online Tenant](../enterprise/access-project-online-tenant.md)
-
 ## Group Policy
 ### [Block OneDrive use from Office](../group-policy/block-onedrive-use-from-office.md)
 ### [Configure default email client using policy](../group-policy/configure-email-client-using-policy.md)
