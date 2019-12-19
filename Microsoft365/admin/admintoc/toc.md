@@ -75,7 +75,6 @@
 ### [Can't assign a federated domain](../domain-management/cannot-assign-federated-domain-to-user.md)
 ### [Can't remove a domain from Office 365](../domain-management/cannot-remove-domain-from-o365.md)
 ### [Can't send emails from full redelegation domain](../administration/send-email-full-redelegation-domain.md)
-### [Can't to reset this user's password](../administration/unable-reset-user-password-sso.md)
 ### [Can't verify a domain in Office 365](../administration/cant-verify-domain-error-when-verify-domain.md)
 ### [Child domain doesn't inherit parent changes](../administration/child-domain-fails-inherit-parent-domain-changes.md)
 ### [Click-to-Run compatibility with add-ins](../administration/click-to-run-compatibility-with-add-in.md)
@@ -86,9 +85,6 @@
 ### [Enable or disable hyperlink warning messages](../administration/enable-disable-hyperlink-warning.md)
 ### [Issue when remove a domain](../administration/error-remove-domain-from-office-365.md)
 ### [SupportMultipleDomain switch when managing SSO](../administration/supportmultipledomain-switch-when-manage-sso.md)
-
-## Enterprise
-### [Access Project Online Tenant](../enterprise/access-project-online-tenant.md)
 
 ## Group Policy
 ### [Block OneDrive use from Office](../group-policy/block-onedrive-use-from-office.md)
@@ -150,6 +146,7 @@
 ### [Can't sign in to Office 365, Azure, or Intune](../sign-in/sign-in-to-office-365-azure-intune.md)
 ### [Can't sign out of Office 365, Azure, or Intune](../sign-in/cannot-sign-out-cloud-service.md)
 ### [Can't to remove this domain](../sign-in/unable-remove-domain-office-365.md)
+### [Can't to reset this user's password](../sign-in/unable-reset-user-password-sso.md)
 ### [Determine whether account is compromised](../sign-in/determine-account-is-compromised.md)
 ### [Error when federated users sign in to Office 365](../sign-in/federated-users-sign-in-error-ad-fs.md)
 ### [Error when you access emails in Office 365](../sign-in/we-are-having-trouble-signing-you-in-error.md)
