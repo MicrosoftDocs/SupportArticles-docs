@@ -83,6 +83,7 @@
 ### [Video is missing in meeting recording](../server-meetings/video-missing-meeting-recording.md)
 
 ## Mobile Devices
+### [Message content is missing in Apple push notifications](../server-mobile-devices/im-content-not-appear-notification.md)
 ### [Issues with Skype for Business for Android](../server-mobile-devices/issues-for-android.md)
 ### [Lync 2010 for Android supports Android smartphone](../server-mobile-devices/lync-support-android-smartphone.md)
 ### [Lync 2013 for iPhone/iPad features are missing](../server-mobile-devices/lync-2013-iphone-features-missing-ios-client.md)

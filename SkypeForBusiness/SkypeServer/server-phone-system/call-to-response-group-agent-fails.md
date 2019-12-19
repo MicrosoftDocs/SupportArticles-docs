@@ -11,6 +11,7 @@ ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
 ms.reviewer: miadkins
+ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft Lync Server
 ---

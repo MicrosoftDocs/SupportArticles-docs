@@ -1,11 +1,12 @@
 ---
 title: Quality of Service for Skype for Business/Lync - configuration and best practice guide
-description: "Outlines best practices for Quality of Service configurations in Skype for Business and Lync."
+description: Outlines best practices for Quality of Service configurations in Skype for Business and Lync.
 ms.author: v-todmc
 author: balasaheb.ilag@hotmail.com
 manager: dcscontentpm
 ms.date: 8/27/2019
-ms.audience: ITPro
+audience: ITPro
+ms.service: skype
 ms.topic: article
 ms.prod: skype-for-business-itpro
 localization_priority: Normal
@@ -15,7 +16,10 @@ search.appverid:
 ms.assetid: 
 appliesto:
 - Skype for Business
-
+ms.custom: 
+- CI 103849
+- CSSTroubleshoot
+ms.reviewer: meerak
 ---
 
 # Quality of Service for Skype for Business/Lync - configuration and best practice guide
@@ -23,7 +27,7 @@ appliesto:
 *This article was written by Balu Ilag, System Administrator, Microsoft MVP*
 
 ## Overview 
-As you know, Microsoft Skype for Business is a great product which has multiple features that help enterprise users communicate and collaborate effectively from anywhere. To get Skype for Business to work correctly for internal and external users is a complex task as we are dealing with a vast product. Improving the quality of service is very important. This admin guide describes why you need Quality of Service and how to configure it end to end.
+As you know, Microsoft Skype for Business is a great product which has multiple features that help enterprise users communicate and collaborate effectively from anywhere. To get Skype for Business to work correctly for internal and external users is a complex task as we are dealing with a vast product. Improving Quality of Service is very important. This admin guide describes why you need Quality of Service and how to configure it end to end.
 
 ## Why is QoS required? 
 Quality of Service (QoS) is a combination of networking technologies that enables companies to optimize the end-user experience for real time audio, video, and application sharing communications. 
@@ -69,9 +73,9 @@ QoS is not enabled by default on Skype for Business/Lync servers. <br/><br/>
 You can run the Get-CsMediaConfiguration command from PowerShell to see if “EnableQoS” shows “True” or “False”. By default, it shows as **False**.<br/><br/> 
 To Enable QoS globally, run the following PowerShell command: 
 
-> ```
-> Set-CsMediaConfiguration -EnableQoS $True 
-> ```
+```
+Set-CsMediaConfiguration -EnableQoS $True 
+```
 
 In case you want to enable QoS site wide, run the following commandlet:
 
@@ -82,11 +86,13 @@ Set-CsMediaConfiguration -Identity Site:<sitename> -EnableQoS $True
 2.	**Configure the port ranges for conferencing and peer-to-peer media traffic:** <br/>
 For QoS to work correctly, configure identical port ranges for audio, video, file transfer, and app sharing on your Conferencing, Application, and Mediation servers. These port ranges must not overlap in any ways. (For example, if you use ports 57501 through 65535 for video on your Conferencing servers, then you must also reserve ports 57501 through 65535 for video on your application servers. If you do not, QoS will not work as expected.) <br/><br/>
 You must use Power Shell to configure port ranges. You can verify the existing port ranges for your Conferencing, Application, and Mediation servers by running power shell commands.
+
 ```
 Get-CsService -ConferencingServer | Select-Object Identity, AudioPortStart, 
 AudioPortCount, VideoPortStart, VideoPortCount, AppSharingPortStart, 
 AppSharingPortCount 
 ```
+
 ![CMD screen showing Get-CsService command. ](media/103849-1.jpg)
 
 ```
@@ -144,50 +150,53 @@ ClientFileTransferPortRange "20"
 
 3. **Configure separate Group Policy Objects for client and server:**<br/>
 After defining port ranges, you must also create QoS policies that specify the DSCP code to be associated with each port range. Restricting a set of ports to a specific type of traffic does not result in packets traveling through those ports being marked with the appropriate DSCP code. In addition to defining port ranges, you must also create QoS policies that specify the DSCP code to be associated with each port range. 
- 
-Associating these DSCP values with port ranges can be achieved via GPO which has policy-based QoS. 
- 
-If you already have all port ranges and DSCP values associated with communication types, then continue the process below. If not then decide port ranges and follow the step two for configure port ranges. 
- 
-Microsoft outline complete steps  https://technet.microsoft.com/enus/library/jj205076(v=ocs.15).aspx  
 
-<ol style="list-style-type: lower-latin;">
-<li>You must have consolidated all your computer objects to a single Organization Unit (OU). (E.g., a computer.)</li>
-<li>Sign in to the Domain Controller or computer which has Group Policy Management installed.</li>
-<li>Open the Group Policy Management tool (<b>run</b> > <b>gpmc.msc</b>) and then right click the OU (computer), Then select <b>Create a GPO in this domain, and Link it here</b> to create a new GPO. (For example,  SfBLyncClient-QoS.) You must have required permission (Domain Admin) to create and link a policy object.</li>
-<li>Right-click the new GPO and select <b>Edit</b> to open the Group Policy Management editor. Then expand <b>Computer Configuration</b> > <b>Policies</b> > <b>Windows Settings</b>. Right-click <b>Policy-based QoS</b> and then select <b>Create new policy</b>.<br/>
-<img alt="Create new policy option." src="media/103849-3.jpg">
-</li>
-<li>In the policy-based QoS page, give the policy a name such as "Lync2013-Audio". Then set <b>Specify DSCP Value</b>: at 46 and select <b>Next</b>.<br/>
-<img alt="Edit an existing QoS policy screen." src="media/103849-4.jpg"></li>
-<li>On next page, enter lync.exe in the fied <b>Only applications with this executable name</b> and select <b>OK</b>.<br/><br/>
-<b>NOTE</b><br/>
-This option ensures that the Lync.exe application will match packets from the specified port range with the specified DSCP code. <br/>
-<img alt="Only applications with this executable name" src="media/103849-5.jpg"></li>
-<li>On the next screen, make sure that both <b>Any source IP address and Any destination IP address</b> are selected and then select <b>Next</b>. <br/><br/>
-<b>NOTE</b><br/>
-These two settings ensure that packets will be managed regardless of which computer (IP address) sent those packets and which computer (IP address) will receive those packets. <br/>
-<img alt="Select Any source IP address and Any destination IP address." src="media/103849-6.jpg">
-</li>
-<li>On next screen select <b>TCP and UDP</b> and then select <b>From this source port or range</b>. In the field, type the port range reserved for audio transmissions.<br/><br/>
-<b>NOTE</b><br/>
-Transmission Control Protocol (TCP) and User Datagram Protocol (UDP) are the two networking protocols most commonly used by Skype for Business/ Lync servers and their client applications.<br/>
-<img alt="Select From this sourceport or range." src="media/103849-7.jpg">
-</li>
-<li>Follow steps 5 through 8 to create a new policy objects and label them “Lync2013-Signaling”, “Lync2013-AppShare”, “Lync2013-File Transfer”, and Lync2013-Video” with the above ports ranges and DSCP values. </li>
-<li>After you have configured all policy objects, it will look like the image below:<br/>
-<img alt="Configured policy objects." src="media/103849-8.jpg">
- </li>
-<li>Open Group Policy Management and then right click <b>OU (Server)</b>. Select <b>Create a GPO in this domain, and Link it here</b> to create a new GPO. (For example, SfBLync-Server-QoS.) You must then add your Skype for Business/Lync Server-to-Server OU. Repeat steps D through I to create a policy object for the server as well.  After configuring all policy objects for the server, it will look like the image below:<br/>
-<img alt="Screen after configuring all policy objects." src="media/103849-9.jpg">
-</li>
-</ol>
+   Associating these DSCP values with port ranges can be achieved via GPO which has policy-based QoS. 
+ 
+   If you already have all port ranges and DSCP values associated with communication types, then continue the process below. If not then decide port ranges and follow Step Two to configure port ranges. 
+ 
+   Microsoft outlines the complete steps here:
+   
+   [Configuring a Quality of Service policy in Lync Server 2013 for your Conferencing, Application, and Mediation servers](https://technet.microsoft.com/enus/library/jj205076(v=ocs.15).aspx)
 
-4. Finally test the QoS. 
+
+   1. You must have consolidated all your computer objects to a single Organization Unit (OU). (E.g., a computer.)
+   2. Sign in to the Domain Controller or computer which has Group Policy Management installed.
+   3. Open the Group Policy Management tool (<b>run</b> > <b>gpmc.msc</b>) and then right click the OU (computer). Select <b>Create a GPO in this domain, and Link it here</b> to create a new GPO. (For example,  SfBLyncClient-QoS.) You must have the required permission (Domain Admin) to create and link a policy object.
+   4. Right-click the new GPO and select <b>Edit</b> to open the Group Policy Management editor. Then expand <b>Computer Configuration</b> > <b>Policies</b> > <b>Windows Settings</b>. Right-click <b>Policy-based QoS</b> and then select <b>Create new policy</b>.
+   <img alt="Create new policy option." src="media/103849-3.jpg">
+   5. In the policy-based QoS page, give the policy a name such as "Lync2013-Audio". Then set <b>Specify DSCP Value</b>: at 46 and select <b>Next</b>.<br/>
+   <img alt="Edit an existing QoS policy screen." src="media/103849-4.jpg">
+   6. On the next page, enter lync.exe in the field <b>Only applications with this executable name</b> and select <b>OK</b>.
+   > [!NOTE]
+   > This option ensures that the Lync.exe application will match packets from the specified port range with the specified DSCP code.
+   
+   <img alt="Only applications with this executable name" src="media/103849-5.jpg">
+
+   7. On the next screen, make sure that both <b>Any source IP address and Any destination IP address</b> are selected and then select <b>Next</b>.
+   > [!NOTE]
+   > These two settings ensure that packets will be managed regardless of which computer (IP address) sent those packets and which computer (IP address) will receive those packets.
+
+   <img alt="Select Any source IP address and Any destination IP address." src="media/103849-6.jpg">
+
+   8. On the next screen, select <b>TCP and UDP</b> and then select <b>From this source port or range</b>. In the field, type the port range reserved for audio transmissions.
+   > [!NOTE]
+   > Transmission Control Protocol (TCP) and User Datagram Protocol (UDP) are the two networking protocols most commonly used by Skype for Business/ Lync servers and their client applications.
+
+   <img alt="Select From this sourceport or range." src="media/103849-7.jpg">
+   
+   9. Follow steps **e** through **h** to create new policy objects and label them “Lync2013-Signaling”, “Lync2013-AppShare”, “Lync2013-File Transfer”, and Lync2013-Video” with the above ports ranges and DSCP values.
+   10. After you have configured all policy objects, it will look like the image below:
+   <img alt="Configured policy objects." src="media/103849-8.jpg">
+   11. Open Group Policy Management and then right-click <b>OU (Server)</b>. Select <b>Create a GPO in this domain, and Link it here</b> to create a new GPO. (For example, SfBLync-Server-QoS.) You must then add your Skype for Business/Lync Server-to-Server OU. Repeat steps **d** through **i** to create a policy object for the server as well.  After configuring all policy objects for the server, it will look like the image below:
+   <img alt="Screen after configuring all policy objects." src="media/103849-9.jpg">
+
+
+4. **Finally test the QoS.**
 > [!NOTE]
-> As a best practice you must validate QoS configuration and DSCP tagging on a quarterly basis.
+> As a best practice, validate the QoS configuration and DSCP tagging on a quarterly basis.
   
-**How enable QoS for Skype for Business / Lync Phone devices?**<br/>
+**How to enable QoS for Skype for Business/Lync Phone devices**<br/>
 The Skype for Business/Lync Phone edition primarily supports audio, therefore you only need to define DSCP values for audio traffic.
 
 To enable QoS on a Skype for Business/Lync Phone Edition device, edit the VoiceDiffServTag and Voice8021p settings on the device. By default, VoiceDiffServTag is set to 40, and Voice8021p is set to 0. 
@@ -212,7 +221,7 @@ Restart the device for the changes to take effect.
  
 #### Test1: 
 
-1. First, we need test GPO policy correctly applied or not, after the newly created GPO is applied and linked to OU where Computer and Server objects are stored (separate OUs). Before testing, you can force the policy by running "*gpupdate.exe /force*" on a testing computer and server which will refresh the policy. 
+1. First, we need to test whether the GPO policy correctly applied or not, after the newly created GPO is applied and linked to the OU where Computer and Server objects are stored (separate OUs). Before testing, you can force the policy by running "*gpupdate.exe /force*" on a testing computer and server which will refresh the policy. 
 2. After the policy refresh on the client computer, go to  **Start** > **Run** > **cmd** (open as administrator). Then type ***Gpresult /h result.htm***.
 3. The policy will output in HTML format with the name “result.htm”. Open this file to view your QoS policy.   
 
@@ -220,15 +229,15 @@ Restart the device for the changes to take effect.
 Enable Skype for Business/ Lync client log. Sign in to Skype for
 Business/Lync client and then open the Skype/Lync (UCCAPILOG) logs in Notepad or Snooper. Make sure the **qosenabled** shows **true** and verify all client port numbers. The log file locations are found here: 
 - Skype for Business 2015/Lync2013 client: 
-%userprofile%\appdata\local\Microsoft\Office\15.0\Lync\Tr acing\ 
+%userprofile%\appdata\local\Microsoft\Office\15.0\Lync\Tracing\ 
 - Skype for Business 2015 client: 
-%userprofile%\appdata\local\Microsoft\Office\16.0\Lync\Tr acing\ 
+%userprofile%\appdata\local\Microsoft\Office\16.0\Lync\Tracing\ 
 
 The screenshot below shows the correct client ports. 
 ![The correct client ports.](media/103849-11.jpg)
 
 #### Test3: 
-Make audio call with another internal user and capture network traffic to verify whether the QoS tagging shows correctly or not. Verify two-way packets and check that the DSCP value shows correctly. 
+Make an audio call with another internal user and capture network traffic to verify whether the QoS tagging shows correctly or not. Verify two-way packets and check that the DSCP value shows correctly. 
 The screenshot below shows UDP traffic DSCP: FE (Expedited Forwarding (46)), which is the correct tagging. 
 ![UDP traffic DSCP: FE, the correct tagging.](media/103849-12.jpg)
 
@@ -243,9 +252,9 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\QoS<br/><br/> The Front E
 ![How the Front End Server should appear.](media/103849-14.jpg)
 
 ## Best practices
-1.	Audit QoS policies every quarterly and observe the tagging. 
+1.	Audit QoS policies every quarter and observe the tagging. 
 2.	Check with the WAN provider (MPLS) for QoS plane. 
-3.	We recommend that you validate the QoS end-to-end because sometimes incorrectly configured network devices (such as routers, wireless access points, or switches) might set or change DSCP markings to something you did not intend, or even strip DSCP markings set to 0. 
+3.	We recommend that you validate the QoS end-to-end because sometimes incorrectly configured network devices (such as routers, wireless access points, or switches) might be set or change DSCP markings to something you did not intend, or even strip DSCP markings set to 0. 
 
 ## More information
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

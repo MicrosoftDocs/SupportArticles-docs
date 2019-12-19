@@ -10,6 +10,8 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: 
+- CSSTroubleshoot
 appliesto:
 - SharePoint Server 2013 Service Pack 1
 - SharePoint Server 2013

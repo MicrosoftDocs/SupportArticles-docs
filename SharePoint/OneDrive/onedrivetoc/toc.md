@@ -2,7 +2,6 @@
 
 ## List and Libraries
 ### [401 error when Graph API access OneDrive data](../lists-and-libraries/401-error-when-using-graph-api-to-access-data.md)
-### [A link to a shared PDF file prompts users to download the file](../../SharePointOnline/lists-and-libraries/prompt-user-download-shared-pdf.md)
 
 ## Security
 ### [There is a problem with your account when opening documents](../../SharePointOnline/Security/problem-with-your-account.md)
@@ -16,3 +15,7 @@
 
 ## Sites
 ### [Top navigation bar displays either Sites or Newsfeed instead of OneDrive](../../SharePointOnline/sites/office-365-top-navigation-bar-displays-either-sites-or-newsfeed.md)
+### [Troubleshooting guide to OneDrive for Business sites stopped at provisioning stage](../../SharePointOnline/sites/troubleshooting-guide-for-sites-stopped-at-provisioning.md)
+
+## Sync
+### [Can't connect to the specified SharePoint site](../sync/onedrive-for-business-sync-returns-error.md)

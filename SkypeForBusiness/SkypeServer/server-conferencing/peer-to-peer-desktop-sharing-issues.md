@@ -11,6 +11,7 @@ ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
 ms.reviewer: landerl, corbinm, rischwen
+ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business for iOS
 ---

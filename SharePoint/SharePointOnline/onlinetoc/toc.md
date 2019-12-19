@@ -34,9 +34,9 @@
 ### [Issue when connecting an InfoPath form](../InfoPath/fails-connecting-infopath-form.md)
 
 ## Lists and Libraries
+### [Lists and Libraries Modern View Compatibility check](../lists-and-libraries/modern-view-compatibility-checklist.md)
 ### ["drag files here" option is missing for a list](../lists-and-libraries/drag-files-here-option-missing.md)
 ### [0x80070005 error for an online list sync](../lists-and-libraries/sync-sharepoint-list-error-0x80070005.md)
-### [A link to a shared PDF file prompts users to download the file](../lists-and-libraries/prompt-user-download-shared-pdf.md)
 ### [An online list item attachment doesn't open in Office](../lists-and-libraries/office-app-fails-opening-list-item-attachment.md)
 ### [An online list opens the form dialog box when adding items](../lists-and-libraries/calendar-view-list-opens-dialog-box.md)
 ### [Asset library displays a film reel icon for the video content type](../lists-and-libraries/film-reel-icon-video-content.md)
@@ -57,7 +57,6 @@
 ### [Issue when opening documents in client applications](../lists-and-libraries/the-webpage-cannot-be-displayed-when-open-an-office-document.md)
 ### [Issue when saving a list or library as template](../lists-and-libraries/fails-saving-list-as-template.md)
 ### [Issue when sorting or filtering a column](../lists-and-libraries/fails-filtering-sharepoint-column.md)
-### [List or library doesn't use new experience](../lists-and-libraries/list-library-not-use-new-experience.md)
 ### [Minimal Download Strategy feature isn't used for a list or library](../lists-and-libraries/mds-functionality-unaffect-library.md)
 ### [Modified time isn't displayed correctly for an online list item](../lists-and-libraries/modified-time-shows-incorrectly.md)
 ### [Number of items in this list exceeds the list view threshold](../lists-and-libraries/items-exceeds-list-view-threshold.md)
@@ -84,10 +83,11 @@
 ### [Items are missing from online search results](../Search/items-missing-from-search-results.md)
 ### [Near-duplicate items aren't listed in SharePoint Online or SharePoint Server 2013 on-premises search results](../search/near-duplicate-items-are-not-listed-in-search-results.md)
 ### [No updated results when searching people categories properties](../search/updated-results-are-not-returned-when-searching-people-properties.md)
-### [Private OneDrive for Business results isn't included](../Search/private-onedrive-results-not-included.md)
+### [Private OneDrive for Business results aren't included](../Search/private-onedrive-results-not-included.md)
 ### [Search doesn't provide results from another language](../Search/no-search-results-from-another-language.md)
-### [Search results is missing](../Search/search-results-missing.md)
-### [Search results isn't returned](../Search/search-results-not-return.md)
+### [Search results are missing](../Search/search-results-missing.md)
+### [Search results aren't returned](../Search/search-results-not-return.md)
+### [Search results don’t appear for group owners after creating a new Office 365 group](../search/search-results-dont-appear-for-group-owners.md)
 
 ## Security
 ### ["Session has expired" when opening a document](../Security/session-has-expired.md)
@@ -98,6 +98,7 @@
 
 ## Sharing and Permissions
 ### ["Access Denied", "You need permission to access this site", or "User not found in the directory" errors in SharePoint Online and OneDrive for Business](../administration/access-denied-or-need-permission-error-sharepoint-online-or-onedrive-for-business.md)
+### ["Everyone except external users" group is re-added to Visitors or Members group on Office 365 public group website ](../sharing-and-permissions/everyone-except-external-users-group-readded.md)
 ### ["Everyone except external users" group is removed](../sharing-and-permissions/everyone-except-external-user-removed.md)
 ### ["External sharing is disabled for the site" error with Online Admin Center](../sharing-and-permissions/troubleshoot-error-when-tries-to-access-center.md)
 ### ["Shared With"column displays users unexpectedly](../sharing-and-permissions/shared-with-column-users-no-access.md)
@@ -123,32 +124,24 @@
 
 ## Sites
 ### ["HTTP request is unauthorized" error](../Sites/calendar-overlay-unsupported.md)
-### ["Report contains no data" error with the "Content viewing" audit log report](../sites/report-contains-no-data-when-save-the-content-viewing-audit-log.md)
 ### ["You do not have an e-mail address" error with creating an online alert](../sites/do-not-have-an-e-mail-address-when-create-an-alert.md)
 ### [A URL that resides under a root site collection is broken](../sites/url-that-resides-under-root-site-collection-is-broken.md)
 ### [Can't access online sites with a full redelegation domain](../sites/cannot-access-sites-by-using-a-domain.md)
 ### [Can't change the default language for a site collection](../Sites/change-default-language-site-collection.md)
-### [Can't create a Records Center site as a subsite](../Sites/cannot-create-records-center-as-subsite.md)
-### [Can't create an online new site based on a site template](../sites/cannot-create-new-site-based-on-template.md)
 ### [Can't find specified web in the given URL](../Sites/cannot-find-specified-web-given-url.md)
+### [Classic popularity reports is discontinued](../Sites/classic-usage-popularity-reports-discontinued.md)
 ### [Customizations of the top navigation bar is reverted](../Sites/customizations-revert-to-default-settings.md)
-### [Default promoted sites appear on the Online Sites page after you delete them](../sites/default-promoted-sites-appear-page-after-you-delete-them.md)
-### [Enterprise Wiki is used instead of Publishing Portal](../Sites/site-collection-uses-enterprise-wiki-template.md)
 ### [Issue when activating Announcement Tiles feature](../Sites/announcement-tiles-not-supported.md)
-### [Issue when changing the locale setting for a public website](../Sites/fails-changing-locale-setting.md)
-### [Issue when clicking a category tile inside a community](../Sites/fails-accessing-community-category-tile.md)
 ### [Issue when creating an onilne ste](../Sites/site-names-cant-contain-reserved-word.md)
 ### [Issue when saving a site as a template](../Sites/fails-saving-site-as-template.md)
 ### [Issue when saving an onilne site as template](../Sites/save-site-as-template.md)
 ### [Issue with "New Navigation Link" or "Save site as template" option](../Sites/new-navigation-link-save-site-as-template.md)
-### [Online sites don't update to the 25 terabyte limit](../sites/sites-do-not-automatically-update-to-the-25-terabyte-limit.md)
 ### [Public websites is discountinued](../Sites/public-websites-be-discontinued.md)
 ### [Rich Text fields don't respond](../Sites/rich-text-fields-fails-responding.md)
-### [Server Error in '/' Application when browsing to a site collection](../Sites/server-error-application.md)
 ### [SharePoint Online alert notifications isn't received](../Sites/no-alert-notifications.md)
 ### [Site doesn't use the site theme for top navigation bar](../Sites/top-navigation-bar-not-use-site-theme.md)
-### [Site theme isn't displayed](../Sites/site-theme-not-displayed.md)
 ### [Top navigation bar displays either Sites or Newsfeed instead of OneDrive](../sites/office-365-top-navigation-bar-displays-either-sites-or-newsfeed.md)
+### [Troubleshooting guide to OneDrive for Business sites stopped at provisioning stage](../sites/troubleshooting-guide-for-sites-stopped-at-provisioning.md)
 
 ## Sync
 ### [A synchronized file is moved to the recycle bin](../Sync/synced-file-moved-to-recycle-bin.md)

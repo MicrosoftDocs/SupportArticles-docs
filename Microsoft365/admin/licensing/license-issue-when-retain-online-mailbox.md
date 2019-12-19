@@ -9,9 +9,11 @@ search.appverid:
 audience: ITPro
 ms.prod: office 365
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Exchange Online
+- Office 365
 ---
 
 # You receive a "One or more users need an assigned license in order to retain an Exchange Online mailbox or archive" message on the Users page of the Office 365 portal

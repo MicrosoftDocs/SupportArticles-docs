@@ -11,6 +11,7 @@ ms.service: skype-for-business-online
 ms.topic: article
 ms.author: v-six
 ms.reviewer: girishg, dahans
+ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Online
 - Exchange Online
@@ -39,7 +40,7 @@ To send an IM to the newly created external contact, type the contact’s IM add
 
 ## More Information
 
-This issue occurs when the **IM Address** field is populated only with **user2@sip-contoso.com**. Outlook Web App uses the IM address to look for external contacts in Active Directory Domain Services (AD DS) that have a matching Session Initiation Protocol (SIP) address in the **ProxyAddresses** attribute in AD DS. However, the IM address in the **ProxyAddresses** attribute always includes the **sip:** prefix. If the **IM Address** field is populated only by **user2@sip-contoso.com**, Outlook Web App won't be able to find the user, and the IM will fail. 
+This issue occurs when the **IM Address** field is populated only with **user2\@sip-contoso.com**. Outlook Web App uses the IM address to look for external contacts in Active Directory Domain Services (AD DS) that have a matching Session Initiation Protocol (SIP) address in the **ProxyAddresses** attribute in AD DS. However, the IM address in the **ProxyAddresses** attribute always includes the **sip:** prefix. If the **IM Address** field is populated only by **user2\@sip-contoso.com**, Outlook Web App won't be able to find the user, and the IM will fail. 
 
 The IM address must also exist as a SMTP proxy address for the user account. Although the IM address doesn't have to be a primary SMTP address, it must exist so that the user and the SIP address can be located. 
 

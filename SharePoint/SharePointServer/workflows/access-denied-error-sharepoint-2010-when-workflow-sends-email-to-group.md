@@ -8,6 +8,7 @@ ms.audience: Admin
 ms.topic: article
 ms.service: sharepoint-2010
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 search.appverid:
 - SPO160
 - MET150

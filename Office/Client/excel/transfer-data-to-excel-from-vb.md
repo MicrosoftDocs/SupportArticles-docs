@@ -8,6 +8,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 ms.reviewer: grege
 search.appverid: 
 - MET150
@@ -370,7 +371,7 @@ For more information, click the following article numbers to view the article in
 [904953 ](https://support.microsoft.com/help/904953) You cannot change, add, or delete data in tables that are linked to an Excel workbook in Office Access 2003 or in Access 2002
 
 For additional information on using ADO to access an Excel workbook, see 
-[How To Query and Update Excel Data Using ADO From ASP](https://docs.microsoft.com/en-us/office/troubleshoot/excel/query-update-data).
+[How To Query and Update Excel Data Using ADO From ASP](https://docs.microsoft.com/office/troubleshoot/excel/query-update-data).
 
 #### Use DDE to transfer data to Excel
 

@@ -8,6 +8,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.prod: sharepoint-server-itpro
+ms.custom: CSSTroubleshoot
 ms.topic: article
 ms.author: v-six
 appliesto:
@@ -24,7 +25,7 @@ When you load an Office add-in from https://localhost or when you use [Fiddler](
 
 ## Resolution
 
-To resolve this issue, use either of these options to add a local loopback exemption to **Desktop App Web Viewer**:
+One cause of this error is that the Microsoft Edge Web Viewer does not have a loopback exemption. To resolve this issue, use either of these options to add a local loopback exemption to **Desktop App Web Viewer**:
 
 ### Option 1: Use command to add a local loopback exemption
  

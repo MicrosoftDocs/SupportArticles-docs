@@ -1,21 +1,23 @@
 ---
-title: "Access error 'Your network access was interrupted' when using a mapped drive"
+title: Access error "Your network access was interrupted" when using a mapped drive
 ms.author: v-todmc
 author: todmccoy
 manager: dcscontentpm
 ms.date: 9/26/2019
-ms.audience: Admin
+audience: Admin
 ms.topic: article
-ms.service: access
+ms.prod: access
 localization_priority: Normal
 search.appverid:
 - SPO160
 - MET150
 appliesto:
 - Access
-ms.custom: 107826
+ms.custom: 
+- CI 107826
+- CSSTroubleshoot
 ms.reviewer: denniwil
-description: "Describes how to resolve an error where the connection is dropped when opening Access from a mapped drive."
+description: Describes how to resolve an error where the connection is dropped when opening Access from a mapped drive.
 ---
 
 # Access error “Your network access was interrupted” when using a mapped drive 
@@ -33,7 +35,7 @@ Access requires a fast and stable network connection when opening databases over
 ## Resolution
 Review the mapped drive preferences within the Group Policy Management Console. If the GPO is set to Replace, change the GPO to Update.
 
-[Configure a Mapped Drive Item](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770902(v=ws.11)?redirectedfrom=MSDN)
+[Configure a Mapped Drive Item](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770902(v=ws.11)?redirectedfrom=MSDN)
 
 See the following article to prevent mapped drives from performing an auto disconnect:
 

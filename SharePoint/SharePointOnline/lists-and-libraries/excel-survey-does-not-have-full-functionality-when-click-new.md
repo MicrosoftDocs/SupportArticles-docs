@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 ---
@@ -29,6 +30,8 @@ For the Excel survey to have full functionality, you must configure the followin
 - Correctly configure Sharing for your site collections.
 
 - Disable file check-out for the library.
+
+- Disable mutiple content types.
 
 To correctly configure Sharing for your tenant, follow these steps:
 
@@ -63,6 +66,18 @@ To remove the check-out requirement, follow these steps:
 4. Set the **Require Check Out** setting to **No**, and then click **OK**.
 
   **NOTE** The check-out feature must be disabled because anonymous users can't check out files and complete the survey. If your existing library requires check-out, we recommend that you create a library specifically for Excel survey files.
+
+To disable mutiple content types, follow these steps:
+
+1. Browse to the affected library.
+
+2. On the **LIBRARY** tab of the ribbon, click **Library Settings**.
+
+3. In the **General Settings** section, click **Advanced settings**.
+
+4. Set the **Allow management of Content types** setting to **No**, and then click **OK**.
+
+**NOTE** Performing this will not show non default content types when clicked New
 
 ## More information
 

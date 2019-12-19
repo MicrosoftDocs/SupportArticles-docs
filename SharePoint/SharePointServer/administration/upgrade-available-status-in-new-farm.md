@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Server 2016
 ---
@@ -72,7 +73,7 @@ This can happen if some components in the database have not have been set to the
 
 To resolve this issue, use one of the following methods:  
 
-1. Run the following in the SharePoint 2016 Management Shell  to upgrade the compoments in the Central Administration database:
+1. Run the following in the SharePoint 2016 Management Shell  to upgrade the components in the Central Administration database:
 
    ```  
    Get-SPWebApplication <Central Administration URL> | Get-SPContentDatabase | Upgrade-SPContentDatabase  

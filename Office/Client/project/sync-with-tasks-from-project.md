@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: project-server-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - SharePoint Server 2019
@@ -45,7 +46,7 @@ When you use SharePoint Server, you can use the "All My Work in One Place" featu
 
 The following Office article describes how to synchronize a Project plan with SharePoint, and how to sync to create a New Project site and an Existing Project site:
 
-- [Sync with a SharePoint tasks list](http://office.microsoft.com/en-us/project-help/sync-with-a-sharepoint-tasks-list-ha102828524.aspx)
+- [Sync with a SharePoint tasks list](https://office.microsoft.com/project-help/sync-with-a-sharepoint-tasks-list-ha102828524.aspx)
 
 ## More Information
 

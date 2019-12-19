@@ -8,6 +8,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
+ms.custom: CSSTroubleshoot
 ms.topic: article
 ms.author: v-six
 appliesto:
@@ -23,7 +24,7 @@ appliesto:
 
 You have a Microsoft Access linked table that’s connected to a Microsoft SQL Server database. The compatibility level of the database is 130 (the compatibility level for SQL Server 2016) or higher, and the table that’s linked contains one or more datetime or datetime2 columns.
 
-In this scenario, the linked table returns #Deleted in the results. 
+In this scenario, the linked table returns **#Deleted** in the results. You may also experience a **Write Conflict** stating "This record has been changed by another user since you started editing it" when attempting to commit record changes to the linked table.
 
 ## Cause
 

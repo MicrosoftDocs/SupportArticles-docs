@@ -9,6 +9,8 @@ search.appverid:
 audience: ITPro
 ms.service: o365-solutions
 ms.topic: article
+ms.custom: CSSTroubleshoot
+ms.collection: SPO_Content
 ms.author: v-maqiu
 appliesto:
 - SharePoint Online

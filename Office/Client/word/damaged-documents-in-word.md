@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Word for Office 365
 - Word 2019
@@ -65,10 +66,10 @@ Try the methods in the order given. If one does not work for you, try the next o
 #### Step 1: Configure Word
 
 1. Start Word.    
-2. On the **View** tab, select **Draft** in the **Document Views** group.    
-3. Select the **File Menu**, and then Options,and then Advanced.    
-4. In the Show document contentsection, select Use Draft font in Draft and Outline viewsand Show Picture placeholders.    
-5. In the **General** section, clear the check box Update automatic links at Open, select OK,and then close Word.    
+2. On the **View** tab, select **Draft** in the **Views** group.    
+3. Select the **File Menu**, and then **Options**, and then **Advanced**.    
+4. In the **Show document content** section, select **Use draft font in Draft and Outline views** and **Show picture placeholders**.    
+5. Scroll down to the **General** section, clear the check box **Update automatic links at open**, select **OK**, and then close Word.    
  
 #### Step 2: Open the damaged document
 
@@ -109,7 +110,7 @@ If you can open the document, close the document and then reopen it by using met
  
 #### Step 2: Create link
  
-1. Select the text you typed in step 1c.    
+1. Select the text you typed in step 1-3.    
 2. On the **Home** tab, select **Copy** in the **Clipboard** group.    
 3. Select the **File Menu**, and then select **New**.    
 4. Select **Blank document**, and then select **Create**.    
@@ -162,7 +163,7 @@ After the document is recovered by using the "Recover Text from Any File" conver
 #### Step 3: Copy the contents of document, and then paste the contents into the new document
 
 > [!NOTE]
-> If your document contains section breaks, copy only the text between the sections breaks. Do not copy the section breaks because this may bring the damage into your new document. Change the document view to draft view when you copy and paste between documents to avoid transferring section breaks. To change to draft view, on the**View** tab, select**Draft** in the**Document Views** group.     
+> If your document contains section breaks, copy only the text between the sections breaks. Do not copy the section breaks because this may bring the damage into your new document. Change the document view to draft view when you copy and paste between documents to avoid transferring section breaks. To change to draft view, on the **View** tab, select **Draft** in the **Document Views** group.     
  
 1. In the damaged document, press CTRL+END, and then press CTRL+SHIFT+HOME.    
 2. On the **Home** tab, select **Copy** in the **Clipboard** group.    
@@ -187,8 +188,8 @@ The **Document template** box will list the template that is used by the documen
 #### Step 2: Rename the global template (Normal.dotm)
 
 1. Exit Word.    
-2. Select the **Start**** button**.    
-3. In your operating system search for the normal.dotm. It's typically found in this location: %userprofile%\appdata\roaming\microsoft\templates     
+2. Select the **Start** button.    
+3. In your operating system, search for  normal.dotm. It's typically found in this location: %userprofile%\appdata\roaming\microsoft\templates     
 4. Right-click **Normal.dotm**, and then select **Rename**.    
 5. Type "Oldword.old", and then press ENTER.    
 6. Close File Explorer.    
@@ -215,7 +216,7 @@ If the strange behavior persists, go to method 3.
 
 ### Method 3: Start Word using default settings  
 
-You can use the/a switch to start Word by using only the default settings in Word. When you use the/a switch, Word does not load any add-ins. Additionally, Word does not use your existing Normal.dotm template. Restart Word by using the/a switch. 
+You can use the /a switch to start Word by using only the default settings in Word. When you use the /a switch, Word does not load any add-ins. Additionally, Word does not use your existing Normal.dotm template. Restart Word by using the /a switch. 
 
 #### Step 1: Start Word by using the /a switch
 
@@ -318,7 +319,7 @@ Verify that the strange behavior no longer occurs. If the behavior persists, try
 - Plain Text (.txt)    
    
 > [!NOTE]
-> When you save files in the**Plain Text (.txt)** format, you might resolve the damage to the document. However, all document formatting, macro code, and graphics are lost. When you save files in the**Plain Text (.txt)** format, you must reformat the document. Therefore, use the**Plain Text (.txt)** format only if the other file formats do not resolve the problem.     
+> When you save files in the **Plain Text (.txt)** format, you might resolve the damage to the document. However, all document formatting, macro codes, and graphics are lost. When you save files in the **Plain Text (.txt)** format, you must reformat the document. Therefore, use the **Plain Text (.txt)** format only if the other file formats do not resolve the problem.     
 
 If the strange behavior persists, go to method 7.
 
@@ -337,7 +338,7 @@ If the strange behavior persists, go to method 7.
 #### Step 3: Copy the undamaged parts of document, and then paste the undamaged parts to the new document
 
 > [!NOTE]
-> If your document contains section breaks, copy only the text between the sections breaks. Do not copy the section breaks because this might bring the damage into your new document. Change the document view to draft view when you copy and paste between documents to avoid transferring section breaks. To change to draft view, on the**View** tab, select**Draft** in the**Document Views** group.     
+> If your document contains section breaks, copy only the text between the sections breaks. Do not copy the section breaks because this might bring the damage into your new document. Change the document view to draft view when you copy and paste between documents to avoid transferring section breaks. To change to draft view, on the **View** tab, select **Draft** in the **Document Views** group.     
  
 1. In the damaged document, locate and then select an undamaged part of the document's contents.    
 2. On the **Home** tab, select **Copy** in the **Clipboard** group.    
@@ -361,3 +362,23 @@ If the document appears to be truncated (not all pages in the document are displ
    3. Select and delete the next paragraph, table, or object in the file.    
    4. On the **View** tab in the **Document Views** group, select **Print Layout**. If the document continues to appear to be truncated, continue to switch views and delete content until the document no longer appears truncated in **Print Layout** view.    
    5. Save the document.
+
+### Method 9: Open the document with Notepad
+If the document is corrupted and none of the previous methods work, try to recover its content by opening the document with Notepad.
+
+> [!NOTE]
+> By using this method, you will lose all formatting. The intention is to recover the content. 
+
+1. Locate the damaged document using Windows File Explorer.
+2. Right click the document and select **Open with**.
+3. Select *Notepad*:
+
+:::image type="content" source="media/damaged-documents-in-word/damaged-documents-in-word.png" alt-text="Open the Word doc in Notepad. ":::
+4. The document will open in Notepad with extra code and text around the content.
+   > [!NOTE] 
+   > You may have to change the file type from “Text Documents (*.txt)” to “All Files (*.*)”. 
+5. Clean the text by deleting all or most of the extra characters.
+6. Select **File**, and then select **Save As…** Rename the document to make sure that you don’t overwrite the damaged one.
+
+Go back to Word and open the new document. Once in Word, you can clean it up and try to reapply the lost format.
+

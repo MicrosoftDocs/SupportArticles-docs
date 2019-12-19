@@ -10,8 +10,9 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
-- Office 365
+- User and Domain Management
 ---
 
 # "Domain has associated subdomains" when removing a domain from Office 365

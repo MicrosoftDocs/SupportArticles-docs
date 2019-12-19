@@ -10,6 +10,7 @@ audience:  Admin|ITPro|Developer
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-tea
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 ---

@@ -1,7 +1,7 @@
 ---
-title: Unable to save a site as a template
-description: A site contains apps that don't work in templates when saving it as a template in SharePoint Online or SharePoint Server 2013.
-author: simonxjx
+title: Unable to save a site as a template in SharePoint Online or SharePoint Server
+description: A site contains apps that don't work in templates when saving it as a template in SharePoint Online or SharePoint Server
+author: v-miegge
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -10,16 +10,19 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 - SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
 ---
 
-# "Sorry, something went wrong" error when you try to save a site as a template in SharePoint Online or SharePoint Server 2013
+# "Sorry, something went wrong" error when you try to save a site as a template in SharePoint Online or SharePoint Server
 
 ## Problem
 
-When you try to save a site as a template in SharePoint Online or SharePoint Server 2013, you receive the following error message:
+When you try to save a site as a template in SharePoint Online, SharePoint Server 2013, 2016 or 2019, you receive the following error message:
 
 ```asciidoc
 Sorry, something went wrong
@@ -32,7 +35,7 @@ Sorry, this site can't be saved as a template. It contains apps that don't work 
 
 ## Solution/Workaround
 
-To work around this issue, remove any affected apps that are listed in the error message, and then save the site as a template. If you want use the app after you save the site as a template, you'll have to add it to the site again.
+To work around this issue, remove any affected apps that are listed in the error message, and then save the site as a template. If you want to use the app after you save the site as a template, you'll have to add it to the site again.
 
 > [!NOTE]
 > Use caution when you remove apps to make sure that you don't lose any data that's associated with the app.

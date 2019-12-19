@@ -10,9 +10,10 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
-- Excel for Office 365
-- Excel
+- Office 365
+- Exchange
 ---
 
 # Security settings for Dynamic Data Exchange in Excel Trust Center in Office 365

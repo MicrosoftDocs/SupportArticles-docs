@@ -13,7 +13,9 @@ search.appverid:
 - MET150
 appliesto:
 - Skype for Business 2019
-ms.custom: 108454
+ms.custom: 
+- CI 108454
+- CSSTroubleshoot
 ms.reviewer: joaol
 description: "How to resolve an issue where LyncBackupService.exe stops responding after enabling pool pairing on a Skype for Business 2019 server."
 ---
@@ -50,4 +52,4 @@ The Skype for Business Server 2019 Cumulative Updates include an update to the L
 To fix this issue, run the Skype for Business Server Cumulative Update installer again in order to patch the LyncBackupService to a version compatible with the Skype for Business Server 2019 Core Components.
 
 ## More information
-[Front End pool disaster recovery in Skype for Business Server](https://docs.microsoft.com/en-us/skypeforbusiness/plan-your-deployment/high-availability-and-disaster-recovery/disaster-recovery)
+[Front End pool disaster recovery in Skype for Business Server](https://docs.microsoft.com/skypeforbusiness/plan-your-deployment/high-availability-and-disaster-recovery/disaster-recovery)

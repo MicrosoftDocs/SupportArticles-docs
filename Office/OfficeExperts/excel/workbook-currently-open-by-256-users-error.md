@@ -4,17 +4,19 @@ ms.author: v-todmc
 author: todmccoy
 manager: dcscontentpm
 ms.date: 9/11/2019
-ms.audience: Admin
+audience: ITPro
 ms.topic: article
-ms.service: excel
+ms.prod: excel
 localization_priority: Normal
+ms.custom: 
+- CSSTroubleshoot
+- CI 106765
 search.appverid:
 - SPO160
 - MET150
 ms.assetid: 
 appliesto:
 - SharePoint Online 
-ms.custom: 106765
 ms.reviewer: denniwil
 description: "Describes how to resolve a shared workbook error when opening an Office 365 Excel file."
 ---

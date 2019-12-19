@@ -1,13 +1,19 @@
 ---
-title: Listing some issues for Skype for Business Server.
-author: simonxjx
-manager: willchen
+title: Listing some issues for Skype for Business Server
+description: This article lists Skype for Business Server related issues.
+author: AmandaAZ
+manager: dcscontentpm
 audience: ITPro
-search.appverid: 
-- MET150
 ms.service: skypeforbusiness-powershell
 ms.topic: article
-ms.author: v-six
+ms.author: v-weizhu
+localization_priority: Normal
+search.appverid: 
+- MET150
+ms.custom:
+- CSSTroubleshoot
+appliesto:
+- Skype for Business Server
 ---
 
 # Skype for Business Server Troubleshooting

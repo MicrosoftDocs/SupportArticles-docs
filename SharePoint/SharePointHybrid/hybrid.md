@@ -1,13 +1,20 @@
 ---
 title: Listing some issues for SharePoint Hybrid.
-author: simonxjx
-manager: willchen
+description: This article lists SharePoint hybrid related issues.
+author: AmandaAZ
+manager: dcscontentpm
 audience: ITPro
-search.appverid: 
-- MET150
 ms.prod: sharepoint-server-itpro
 ms.topic: article
-ms.author: v-six
+ms.author: v-weizhu
+localization_priority: Normal
+search.appverid: 
+- MET150
+ms.custom:
+- CSSTroubleshoot
+appliesto:
+- SharePoint Online
+- SharePoint Server
 ---
 
 # Hybrid Deployment Troubleshooting
