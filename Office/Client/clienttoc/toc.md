@@ -432,6 +432,7 @@
 ### [Project opens calendar from a different instance](../project/project-opens-calendar-from-different-instance-when-editing.md)
 ### [Removed users are not inactivated](../project/removed-erp-group-user-activated.md)
 ### [SharePoint task list sync job fails when Project is published](../project/sharepoint-task-list-sync-job-fails-when-project-published.md)
+### [Show fiscal dates on a timescaled view](../project/fiscal-dates-on-timescaled-view.md)
 ### [Sync Jobs take a long time to complete](../project/sync-jobs-take-long-time-to-complete.md)
 ### [Sync with SharePoint tasks list](../project/sync-with-tasks-from-project.md)
 ### [Tasks are not scheduled](../project/tasks-not-scheduled.md)
