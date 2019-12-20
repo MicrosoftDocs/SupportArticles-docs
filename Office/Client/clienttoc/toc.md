@@ -384,6 +384,7 @@
 ### [Warning when a notebook is in an offline location](../onenote/notebook-offline-location.md)
 
 ## Performance
+### [Some Office applications are not responding](../performance/office-applications-not-responding.md)
 ### [Open network file slow or stop responding](../performance/office-slow-or-stop-responding.md)
 
 ## PowerPoint
