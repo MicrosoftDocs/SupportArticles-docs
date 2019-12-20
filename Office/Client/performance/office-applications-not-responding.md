@@ -1,7 +1,7 @@
 ---
-title: Office applications are crashing
-description: Fix Office applications crashing issue because some versions of the Intel graphics driver have a heap corruption bug in the system.
-author: MaryQiu1987
+title: Some Office applications are not responding
+description: Fix Office applications not responding issue because some versions of the Intel graphics driver have a heap corruption bug in the system.
+author: v-todmc
 ms.author: v-maqiu
 manager: dcscontentpm 
 audience: ITPro 
@@ -17,15 +17,15 @@ appliesto:
 search.appverid: MET150
 ---
 
-# Office applications are crashing
+# Some Office applications are not responding
 
 ## Symptoms
 
-Microsoft Office applications are crashing in common usage scenarios.
+Office applications stop responding in some common usage scenarios.
 
 ## Cause
 
-Starting in Microsoft Office 2013, the Office suite of applications takes advantage of hardware acceleration if the option is available. To do this, Office uses the graphics adapter that is installed on the computer. This causes Office applications to load and use graphics driver code. For systems that use an Intel graphics adapter, some versions of the Intel graphics driver have a heap corruption bug that causes Office applications to crash.
+Starting in Microsoft Office 2013, the Office suite of applications takes advantage of hardware acceleration if the option is available. To do this, Office uses the graphics adapter that is installed on the computer. This causes Office applications to load and use graphics driver code. For systems that use an Intel graphics adapter, some versions of the Intel graphics driver have a heap corruption bug that causes Office applications to stop responding.
 
 The following Intel graphics driver versions cause this problem.
 
