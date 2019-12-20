@@ -62,10 +62,10 @@ The versions of Office that contain this fix are the following.
 
 |   |   |
 | - | - |
-| 1911 November 2019 | 16.0.12325.20120 |
-| 1910 October 2019 | 16.0.12228.20364 |
-| 1907 July 2019 | 16.0.11929.20516 |
-| 1901 January 2019 | 16.0.11328.20492 |
+| 1911 (November 2019) | 16.0.12325.20120 |
+| 1910 (October 2019) | 16.0.12228.20364 |
+| 1907 (July 2019) | 16.0.11929.20516 |
+| 1901 (January 2019) | 16.0.11328.20492 |
 | Office Insiders | 16.0.12406.20000 |
 
 To fix the problem, update your Office installation.
