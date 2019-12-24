@@ -1,23 +1,23 @@
 ---
-title: Can’t run In-Place eDiscovery search for Exchange Online mailbox in Exchange Server 2019 or 2016 by using EAC
-description: When run In-Place eDiscovery search for Exchange Online mailbox in the on-premises server, it fails and you may receive an error message.
-author: TobyTu
-ms.author: akashb
-manager: dcscontentpm
-audience: ITPro 
-ms.topic: article 
-ms.prod: office 365
-localization_priority: Normal
-ms.custom: 
-- CI 111898
-- CSSTroubleshoot 
-ms.reviewer: lindabr, akashb
-appliesto: 
+title: Can’t run In-Place eDiscovery search for Exchange Online mailbox in Exchange Server 2019 or 2016 by using EAC
+description: When run In-Place eDiscovery search for Exchange Online mailbox in the on-premises server, it fails and you may receive an error message.
+author: TobyTu
+ms.author: akashb
+manager: dcscontentpm
+audience: ITPro 
+ms.topic: article
+ms.prod: office 365
+localization_priority: Normal
+ms.custom:
+- CI 111898
+- CSSTroubleshoot 
+ms.reviewer: lindabr, akashb
+appliesto:
 - Exchange Online
 - Exchange Server 2019
 - Exchange Server 2016
-search.appverid: 
-- MET150
+search.appverid:
+- MET150
 ---
 
 # Can’t run In-Place eDiscovery search for Exchange Online mailbox in Exchange Server 2019 or 2016 by using EAC
@@ -38,7 +38,7 @@ You are trying to search a remote mailbox that has an online archive enabled. Th
 
 `Failed Search or Export, Mailbox:UserOne@contoso.com::Item:::DocumentId:::ItemId: with error: [FailedToGetRootFolders] Export failed with error type: 'FailedToGetRootFolders'. Message: ErrorNonExistentMailbox : No mailbox with such guid. Endpoint: https://mail.contoso.com:444/EWS/Exchange.asmx`
 
-## Workaround
+## Workarounds
 
 This is a known issue in Exchange Server 2019 and 2016. To work around this issue, use either of the following methods:
 
