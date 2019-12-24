@@ -186,6 +186,7 @@
 ## Security
 ### [Account security alert email message](../security/account-security-alert-email.md)
 ### [BOXServiceAccount is added](../security/boxserviceaccount-is-added-to-role.md)
+### [Can’t run In-Place eDiscovery search in EAC](../security/can’t-run-ediscovery-search-cloud-mailbox.md)
 ### [Data Loss Protection (DLP) policy tips](../security/troubleshooting-data-loss-protection-policy-tips.md)
 ### [Deleted app passwords still work](../security/deleted-authentication-passwords-still-work.md)
 ### [Determine whether account is compromised](../security/determine-account-is-compromised.md)
