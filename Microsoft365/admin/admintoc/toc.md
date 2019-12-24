@@ -130,6 +130,7 @@
 ## Security
 ### [Account security alert email message](../security/account-security-alert-email.md)
 ### [BOXServiceAccount is added](../security/boxserviceaccount-is-added-to-role.md)
+### [Can’t run In-Place eDiscovery search in EAC](../security/can’t-run-ediscovery-search-cloud-mailbox.md)
 ### [Data Loss Protection (DLP) policy tips](../security/troubleshooting-data-loss-protection-policy-tips.md)
 ### [Invalid Security Code when resetting password](../security/invalid-security-code-office-365-azure.md)
 ### [Issue with connect-MSOLService cmdlet](../security/access-denied-office-365-azure.md)

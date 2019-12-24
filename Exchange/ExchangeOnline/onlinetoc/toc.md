@@ -93,6 +93,7 @@
 ## Public Folders
 
 ### [The mailbox is not found in the local forest](../public-folders/mailbox-not-found-local-forest-public-folder.md)
+### [Can’t apply permissions to subfolders](../public-folders/can’t-apply-permissions-public-folder-subfolders.md)
 
 ## Send Emails
 ### [Changes in message store](../send-emails/smtp-submission-improvements.md)
