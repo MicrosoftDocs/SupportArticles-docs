@@ -329,6 +329,7 @@
 ## InfoPath
 ### [Disable code-behind prompt for InfoPath forms](../infopath/disabling-code-behind-prompt-for-infopath-forms.md)
 ### [Generated .PDB files don't match InfoPath form name](../infopath/generated-pdb-file-name-does-not-match-infopath-name.md)
+### [InfoPath 2013 crashes when connect Access database](../infopath/infopath-2013-crashes-when-connecting-to-access-database.md)
 
 ## Office
 ### ["No default mail client" error](../office/no-default-mail-client-error.md)
@@ -579,6 +580,7 @@
 ### [Count cells number with cell color using VBA](../office-developer/count-cells-number-with-color-using-vba.md)
 ### [Create a RealTimeData server for Excel](../office-developer/create-realtimedata-server-in-excel.md)
 ### [Create script for Outlook Rules Wizard](../office-developer/create-script-for-rule-wizard-in-outlook.md)
+### [Compile Error in VBA macro](../office-developer/compile-error-editing-vba-macro.md)
 ### [Declare the return type explicitly in 64-bit macro](../office-developer/declare-return-type-in-64-bit-vba.md)
 ### [Display progress bar with user form in Excel](../office-developer/display-progress-bar-with-user-form-in-excel.md)
 ### [Embed and automate documents with VB](../office-developer/embed-automate-document-using-vb.md)
@@ -596,6 +598,7 @@
 ### [Transfer data to Excel workbook using Visual C#](../office-developer/transfer-data-to-excel-using-visual-c.md)
 ### [Transfer excel data from ADO Recordset](../office-developer/transfer-excel-data-from-ado-recordset.md)
 ### [Turn off Visual Basic for application](../office-developer/turn-off-visual-basic-for-application.md)
+### [Use a class (object) from outside of VBA project](../office-developer/set-up-vb-project-using-class.md)
 ### [Use a type library for Office from Visual C++.NET](../office-developer/use-type-library-for-office-from-visual-c-net.md)
 ### [Use early binding and late binding in Automation](../office-developer/binding-type-available-to-automation-clients.md)
 ### [Use Office Web Components using ASP.NET](../office-developer/use-office-web-components-using-aps-net.md)
