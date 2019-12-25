@@ -1,7 +1,7 @@
 # [Teams Troubleshooting](index.md)
 
 ## Administration
-### [Include or exclude Teams from antivirus or DLP applications](../teams-administration/include-exclude-teams-from-antivirus-dlp.md)
+### [Include or exclude Teams from antivirus or DLP applications](./teams-administration/include-exclude-teams-from-antivirus-dlp.md)
 
 ## Conferencing
 ### ["Give Control" doesn’t work](./teams-conferencing/give-control-doesn’t-work-sharescreen.md)
