@@ -1,7 +1,6 @@
 # [Office 365 Enterprise Troubleshooting](../enterprise.md)
 
 ## Administration
-### [Can't insert scriptable ActiveX controls](../administration/insert-scriptable-activex-control.md)
 ### [Issue on devices with App-V enabled](../administration/issues-on-devices-with-app-v-enabled.md)
 ### [Office applications crash or can't start](../administration/office-crash-or-cannot-start.md)
 
