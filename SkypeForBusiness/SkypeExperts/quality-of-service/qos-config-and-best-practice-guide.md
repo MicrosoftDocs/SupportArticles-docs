@@ -253,7 +253,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\QoS<br/><br/> The Front E
 
 ## Best practices
 1.	Audit QoS policies every quarter and observe the tagging. 
-2.	Check with the WAN provider (MPLS) for QoS plane. 
+2.	Check with the WAN provider (MPLS) for the QoS plane. 
 3.	We recommend that you validate the QoS end-to-end because sometimes incorrectly configured network devices (such as routers, wireless access points, or switches) might be set or change DSCP markings to something you did not intend, or even strip DSCP markings set to 0. 
 
 ## More information
