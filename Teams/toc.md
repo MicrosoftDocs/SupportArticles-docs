@@ -1,6 +1,7 @@
 # [Teams Troubleshooting](index.md)
 
 ## Conferencing
+### [No dial pad for Enterprise Voice user](./teams-conferencing/ev-user-have-no-dial-pad.md)
 ### ["Give Control" doesn’t work](./teams-conferencing/give-control-doesn’t-work-sharescreen.md)
 
 ## IM and Presence 
