@@ -198,9 +198,9 @@ If you can't access the site as the incorrect external user, follow these steps:
 
 6. In a new browser window or tab, paste the URL that you copied in the previous step into the address box. Add **&force=1** to the end of the URL, and then press Enter.
 
-7. In the **Account** field, review the email address. For example, **i:0#.f|membership|JonDoe@contoso.com**.<br/>
+7. In the **Account** field, review the email address. For example, **i:0#.f|membership|JonDoe\@contoso.com**.<br/>
 > [!NOTE]
-> In this example, **JonDoe@contoso.com** is the email account that accepted the user invitation.
+> In this example, **JonDoe\@contoso.com** is the email account that accepted the user invitation.
 
 8. If the address is incorrect, go to the "Remove the incorrect external user account" section.
 
