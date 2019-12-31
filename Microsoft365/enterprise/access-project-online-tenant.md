@@ -69,4 +69,4 @@ A tile icon is added to the top of the page for all tenant users.  When the til
 - PJO - Unable to access PWA \ Approvals page - 2845774   
 - PJO - "The site is read only at the moment" message when accessing PWA - 2812372   
 - PJO or PSVR 2013 Security to View and/or Edit specific plans - 2860324   
-- Project Online:  Getting to Project Web App - [https://blogs.technet.com/b/projectsupport/archive/2013/05/15/project-online-getting-to-project-web-app.aspx](https://blogs.technet.com/b/projectsupport/archive/2013/05/15/project-online-getting-to-project-web-app.aspx)   
+- Project Online:  Getting to Project Web App - [https://techcommunity.microsoft.com/t5/project-support-blog/project-online-getting-to-project-web-app/ba-p/361455](https://techcommunity.microsoft.com/t5/project-support-blog/project-online-getting-to-project-web-app/ba-p/361455)   
