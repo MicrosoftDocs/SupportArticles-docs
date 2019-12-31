@@ -34,7 +34,7 @@ The Temporary Internet Files folder for Windows Internet Explorer is set to be i
 To resolve this issue, create a new folder on your computer.
 
 1. Start Windows Explorer
-2. Locatethe folder location C:\Users\\*userprofile*\AppData\Local\Microsoft\Windows   
+2. Locate the folder location C:\Users\\*userprofile*\AppData\Local\Microsoft\Windows   
 3. Create the folder labeled INetCacheContent.Word. 
 
     > [!NOTE]

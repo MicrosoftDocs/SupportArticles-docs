@@ -60,7 +60,7 @@ Then, force the settings to sync through Azure AD Connect.
 To sync the settings for Exchange Online, run the following example cmdlet after you substitute the actual values:
 
 ```powershell
-Get-Mailbox user1@contoso.com | Get-MailboxRegionalConfiguration | Set-MailboxRegionalConfiguration -Language it-it -DateFormat "dd/MM/yyyy" -TimeFormat "HH.mm" -TimeZone "W. Europe Standard Time"
+Get-Mailbox user1@contoso.com | Get-MailboxRegionalConfiguration | Set-MailboxRegionalConfiguration -Language it-it -DateFormat "dd/MM/yyyy" -TimeFormat "HH:mm" -TimeZone "W. Europe Standard Time"
 ```
 
 **Note** It will take from one to two hours for the changes to be reflected on all services.
