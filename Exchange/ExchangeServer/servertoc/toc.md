@@ -29,6 +29,7 @@
 
 ## Migration
 ### [No active public folder mailboxes were found](../migration/migrationbatch-fails-no-public-folder-mailboxes.md)
+### [Public folder migration stops at 95%](../migration/public-folder-migration-fails.md)
 
 ## Microsoft Diagnostics Services
 ### [Self-Help portal](../microsoft-diagnostics-services/self-help-portal.md)
