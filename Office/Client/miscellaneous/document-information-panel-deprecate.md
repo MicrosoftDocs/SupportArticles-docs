@@ -18,8 +18,9 @@ appliesto:
 
 # The Document Information Panel (DIP) is deprecated in Office 2016 applications
 
-##  Workaround
+## Summary
 
 The Document Information Panel (DIP) is deprecated in Microsoft Office 2016 applications. However, you can select FILE > Info > Show All Properties to view and edit document properties in the Properties section. Some document library property types, such as lookups, require additional SharePoint data and can't be edited directly in the Properties section. These properties are displayed together with a **Show Details** button. You can click **Show Details** to edit these properties in the metadata web dialog box. This dialog box is the same as the metadata web dialog box in the Microsoft SharePoint web user interface.
 
-**Note** Missing required fields are enclosed by a red frame.
+> [!NOTE]
+> Missing required fields are enclosed by a red frame.
