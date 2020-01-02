@@ -331,8 +331,15 @@
 
 
 ## Miscellaneous
+### [Document Information Panel is deprecated](../miscellaneous/document-information-panel-deprecate.md)
+### [Enable co-authoring for OneDrive-synced files](../miscellaneous/enable-co-authoring-for-onedrive-synced-file.md)
 ### [Enable Office 2010 to run on a terminal server](../miscellaneous/office-pro-plus-2010-terminal-server.md)
-
+### [Features to enable collaboration](../miscellaneous/enable-collaboration.md)
+### [Incompatibilities between Office and Adob](../miscellaneous/incompatibilities-between-office-and-adob.md)
+### [Numbering Schema for Office 2016](../miscellaneous/numbering-scheme-for-product-guid.md)
+### [Numbering Schema for Office 2013](../miscellaneous/numbering-scheme-product-code-guids.md)
+### [Updates are offered for nonexistent Office programs ](../miscellaneous/updates-provided-for-nonexistent-office.md)
+### [Use different versions of Office on the same PC](../miscellaneous/use-multiple-versions-of-office.md)
 
 ## Office
 ### ["No default mail client" error](../office/no-default-mail-client-error.md)
@@ -461,17 +468,6 @@
 ### [Publication is printed incorrectly](../publisher/print-publication-incorrectly.md)
 ### [Publisher can't open file with OLE objects](../publisher/publisher-cannot-open-the-file-error.md)
 ### [Text boxes in Publisher-created email are converted to bitmap](../publisher/text-boxes-coverted-to-bitmap.md)
-
-## Reference
-### [Document Information Panel is deprecated](../reference/document-information-panel-deprecate.md)
-### [Enable co-authoring for OneDrive-synced files](../reference/enable-co-authoring-for-onedrive-synced-file.md)
-### [Features to enable collaboration](../reference/enable-collaboration.md)
-### [Incompatibilities between Office and Adob](../reference/incompatibilities-between-office-and-adob.md)
-### [Numbering Schema for Office 2016](../reference/numbering-scheme-for-product-guid.md)
-### [Numbering Schema for Office 2013](../reference/numbering-scheme-product-code-guids.md)
-### [Updates are offered for nonexistent Office programs ](../reference/updates-provided-for-nonexistent-office.md)
-### [Use different versions of Office on the same PC](../reference/use-multiple-versions-of-office.md)
-
 
 ## Settings
 ### [Display issues in Office applications](../settings/office-display-issues.md)
