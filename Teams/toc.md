@@ -1,10 +1,14 @@
 # [Teams Troubleshooting](index.md)
 
+## Administration
+### [Include or exclude Teams from antivirus or DLP applications](./teams-administration/include-exclude-teams-from-antivirus-dlp.md)
+
 ## Conferencing
 ### ["Give Control" doesn’t work](./teams-conferencing/give-control-doesn’t-work-sharescreen.md)
+### [No dial pad for Enterprise Voice user](./teams-conferencing/ev-user-have-no-dial-pad.md)
 
 ## IM and Presence 
-### [Teams user cannot send a message to Skype for Business](./teams-im-presence/teams-user-not-send-message-in-sfb.md)
+### [Cannot send message to Skype for Business](./teams-im-presence/teams-user-not-send-message-in-sfb.md)
 
 ## Mobile
 ### [Windows phone app for Teams will beretired](./teams-mobile/teams-for-windows-phone-is-retiring.md)
