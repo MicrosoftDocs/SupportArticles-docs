@@ -31,7 +31,7 @@ Microsoft Excel supports two different date systems. These systems are the 1900 
 
 ### The 1900 Date System
  
-In the 1900 date system, the first day that is supported is January 1, 1900. When you enter a date, the date is converted into a serial number that represents the number of elapsed days since January 1, 1900. For example, if you enter July 5, 1998, Excel converts the date to the serial number 35981. 
+In the 1900 date system, the first day that is supported is January 1, 1900. When you enter a date, the date is converted into a serial number that represents the number of elapsed days beginning with January 1, 1900, which is equal to 1 in the series. For example, if you enter July 5, 1998, Excel converts the date to the serial number 35981. 
 
 By default, Microsoft Excel for Windows uses the 1900 date system. The 1900 date system enables better compatibility between Excel and other spreadsheet programs, such as Lotus 1-2-3, that are designed to run under MS-DOS or Microsoft Windows. 
 
