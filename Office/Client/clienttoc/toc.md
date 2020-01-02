@@ -78,22 +78,14 @@
 ### [Use the Workgroup Administrator utility ](../access/use-workgroup-administrator-utility.md)
 
 
-
-## Activation/Installation
-### [Cannot verify the license for this product](../activation-installation/license-issue-when-start-office-application.md)
-### [Can't activate Office on a new computer](../activation-installation/cant-activate-on-new-computer.md)
-### [Can't pass the Welcome Screen in Office for Mac](../activation-installation/office-for-mac-welcome-screen.md)
-### [Enable Office 2010 to run on a terminal server](../activation-installation/office-pro-plus-2010-terminal-server.md)
-### [Error 1935 when install Office 2010](../activation-installation/error-1935-when-install-office-2010.md)
-### [Install and activate Office 2013](../activation-installation/install-and-activate-office-2013.md)
-### [Issue when activate Office 365 ProPlus](../activation-installation/issue-when-activate-office-365-proplus.md)
-### [Issue when activate Office from Office 365](../activation-installation/issue-when-activate-office-from-office-365.md)
-### [Issue with changing Office 2010 product key](../activation-installation/office-2010-product-key-change-error.md)
-### [Known issues with Office for Mac](../activation-installation/office-for-mac-issues-macos-10-7.md)
-### [Office setup issues](../activation-installation/office-setup-issues.md)
-### [PowerPoint for Mac is closed unexpectedly ](../activation-installation/powerpoint-mac-closes-unexpectedly.md)
-### [Something went wrong 30016-4 error ](../activation-installation/something-went-wrong-30016-4-error.md)
-### [We can't sign you into your company portal](../activation-installation/something-configured-fails-activating-office.md)
+## Activation
+### [Can't activate Office on a new computer](../activation/cant-activate-on-new-computer.md)
+### [Can't verify the license for this product](../activation/license-issue-when-start-office-application.md)
+### [Office activation process issues](../activation/office-activation-process-issues.md)
+### [Issue when activate Office 365 ProPlus](../activation/issue-when-activate-office-365-proplus.md)
+### [Issue when activate Office from Office 365](../activation/issue-when-activate-office-from-office-365.md)
+### [Issue with changing Office 2010 product key](../activation/office-2010-product-key-change-error.md)
+### [We can't sign you into your company portal](../activation/something-configured-fails-activating-office.md)
 
 
 ## Error Messages
@@ -331,6 +323,17 @@
 ### [Generated .PDB files don't match InfoPath form name](../infopath/generated-pdb-file-name-does-not-match-infopath-name.md)
 ### [InfoPath 2013 crashes when connect Access database](../infopath/infopath-2013-crashes-when-connecting-to-access-database.md)
 
+## Installation
+### [Error 1935 when install Office 2010](../installation/error-1935-when-install-office-2010.md)
+### [Install Office Pro 2013 on a Terminal Server](../installation/install-and-activate-office-2013.md)
+### [Office setup issues](../installation/office-setup-issues.md)
+### [Something went wrong 30016-4 error ](../installation/something-went-wrong-30016-4-error.md)
+
+
+## Miscellaneous
+### [Enable Office 2010 to run on a terminal server](../miscellaneous/office-pro-plus-2010-terminal-server.md)
+
+
 ## Office
 ### ["No default mail client" error](../office/no-default-mail-client-error.md)
 ### ["Your system is low on virtual memory" error](../office/your-system-is-low-on-virtual-memory.md)
@@ -374,10 +377,13 @@
 
 ## Office for Mac
 ### ["wkresources" files in Trash](../office-for-mac/wkresources-files-moved-to-trash.md)
+### [Can't pass the Welcome Screen in Office for Mac](../office-for-mac/office-for-mac-welcome-screen.md)
 ### [Error when you open files from SharePoint in Office client](../office-for-mac/files-fail-to-open.md)
+### [Known issues with Office for Mac](../office-for-mac/office-for-mac-issues-macos-10-7.md)
 ### [Office 2016 for Mac 64-bit upgrade](../office-for-mac/office-2016-for-mac-64-bit-upgrade.md)
 ### [Office 2016 for Mac prompts you for authentication](../office-for-mac/office-for-mac-prompted-for-authentication.md)
 ### [Office 365 Enterprise E3 setup is incomplete](../office-for-mac/o365-e3-setup-incomplete.md)
+### [PowerPoint for Mac is closed unexpectedly ](../office-for-mac/powerpoint-mac-closes-unexpectedly.md)
 
 ## OneNote
 ### ["Open new side note" missing from  Windows notification](../onenote/open-new-side-note-missing.md)
@@ -461,9 +467,8 @@
 ### [Enable co-authoring for OneDrive-synced files](../reference/enable-co-authoring-for-onedrive-synced-file.md)
 ### [Features to enable collaboration](../reference/enable-collaboration.md)
 ### [Incompatibilities between Office and Adob](../reference/incompatibilities-between-office-and-adob.md)
-### [Numbering scheme for product code GUIDs](../reference/numbering-scheme-for-product-guid.md)
-### [Numbering scheme for product code GUIDs](../reference/numbering-scheme-product-code-guids.md)
-### [Office activation process issues](../reference/office-activation-process-issues.md)
+### [Numbering Schema for Office 2016](../reference/numbering-scheme-for-product-guid.md)
+### [Numbering Schema for Office 2013](../reference/numbering-scheme-product-code-guids.md)
 ### [Updates are offered for nonexistent Office programs ](../reference/updates-provided-for-nonexistent-office.md)
 ### [Use different versions of Office on the same PC](../reference/use-multiple-versions-of-office.md)
 
