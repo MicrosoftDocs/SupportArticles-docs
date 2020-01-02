@@ -325,9 +325,9 @@
 
 ## Installation
 ### [Error 1935 when install Office 2010](../installation/error-1935-when-install-office-2010.md)
+### [Error when uninstalling O365 Pro Plus](../installation/something-went-wrong-30016-4-error.md)
 ### [Install Office Pro 2013 on a Terminal Server](../installation/install-and-activate-office-2013.md)
 ### [Office setup issues](../installation/office-setup-issues.md)
-### [Something went wrong 30016-4 error ](../installation/something-went-wrong-30016-4-error.md)
 
 
 ## Miscellaneous
