@@ -414,9 +414,9 @@ The ActiveWorkbook property can also usually be omitted. Unless a specific workb
 When you use the Application.Goto method, if you want to use two Cells methods within the Range method when the specified range is on another (not the active) worksheet, you must include the Sheets object each time. For example:
 
 ```vb
-Application.Goto Sheets("Sheet1").Range( _
-      Sheets("Sheet1").Range(Sheets("Sheet1").Cells(2, 3), _
-      Sheets("Sheet1").Cells(4, 5)))
+    With ActiveWorkbook.Sheets("Sheet1")
+        Application.Goto .Range(.Cells(2, 3), .Cells(4, 5))
+    End With
 ```
 
 For any item in quotation marks (for example, the named range "Test"), you can also use a variable whose value is a text string. For example, instead of
