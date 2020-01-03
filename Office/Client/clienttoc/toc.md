@@ -332,7 +332,6 @@
 
 ## Miscellaneous
 ### [Document Information Panel is deprecated](../miscellaneous/document-information-panel-deprecate.md)
-### [Enable co-authoring for OneDrive-synced files](../miscellaneous/enable-co-authoring-for-onedrive-synced-file.md)
 ### [Enable Office 2010 to run on a terminal server](../miscellaneous/office-pro-plus-2010-terminal-server.md)
 ### [Features to enable collaboration](../miscellaneous/enable-collaboration.md)
 ### [Incompatibilities between Office and Adob](../miscellaneous/incompatibilities-between-office-and-adob.md)

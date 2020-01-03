@@ -19,3 +19,4 @@
 
 ## Sync
 ### [Can't connect to the specified SharePoint site](../sync/onedrive-for-business-sync-returns-error.md)
+### [Enable co-authoring for OneDrive-synced files](../sync/enable-co-authoring-for-onedrive-synced-file.md)
