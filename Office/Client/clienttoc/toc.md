@@ -549,6 +549,7 @@
 ### [Word could not create the work file](../word/word-could-not-create-the-work-file.md)
 ### [Word for Mac crashes with saving](../word/word-for-mac-crashes-or-quits.md)
 ### [Word for Mac is closed unexpectedly](../word/word-mac-closes-unexpectedly.md)
+### [Word slows or stops responding](../word/word-stops-responding.md)
 ### [Work with toolbars in Word](../word/toolbars-and-toolbar-buttons-in-word.md)
 ### [Wrong paper size in the Printer Properties](../word/paper-size-printer-property.md)
 ### [You're prompted to save changes to global template](../word/save-changes-to-global-template.md)
