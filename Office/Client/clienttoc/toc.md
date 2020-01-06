@@ -49,6 +49,7 @@
 ### [How to create a running totals query](../access/create-a-running-totals-query.md)
 ### [ID is increment when adding a new field](../access/id-field-increment-by-one.md)
 ### [Incorrect registry key for current version of Access](../access/incorrect-current-version-registry-key.md)
+### [Introduction to lock files (.laccdb & .ldb)](../access/lock-files-introduction.md)
 ### [Issue when loading an Access web app](../access/load-access-web-app-in-ie.md)
 ### [Issues when you retrieve SharePoint list data](../access/retrieve-sharepoint-list-in-access.md)
 ### [Jet compact utility is available in download center](../access/jet-compact-utility-download.md)
