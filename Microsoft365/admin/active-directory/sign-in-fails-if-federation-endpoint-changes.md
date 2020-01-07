@@ -67,7 +67,7 @@ To resolve this issue, use one of the following methods, as appropriate for your
    |/adfs/services/trust/13/ issuedtokenmixedsymmetricbasic256|Yes|Yes |
    |/adfs/services/trsuttcp/windows|Yes|No |
    |/adfs/services/trust/mex|Yes|Yes |
-   |/FederationMetadat/2007-06/FederationMetadata.xml|Yes|Yes |
+   |/FederationMetadata/2007-06/FederationMetadata.xml|Yes|Yes |
    |/adfs/ls/federationserverservice.asmx|Yes|No |
 
 3. If an item in the list doesn't match the default settings in the previous table, right-click the entry, and then select **Enable** or **Enable on Proxy** as necessary.
