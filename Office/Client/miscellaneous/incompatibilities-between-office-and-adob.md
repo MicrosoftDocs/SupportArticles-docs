@@ -36,13 +36,13 @@ appliesto:
 # Incompatibilities between Office programs and Adobe Acrobat PDFMaker Office COM Addin
 
 ## Summary
-If you have the Adobe Acrobat PDFMaker Office COM add-in installed on your computer and your Office programs are crashing or not responding, this might mean that the current version of PDFMaker is incompatible with your version of Office.
+If you have the Adobe Acrobat PDFMaker Office COM add-in installed on your computer and your Office programs are crashing or not responding, this might mean that the version of PDFMaker you have installed is incompatible with your version of Office.
 
 ## More information
 
 To verify that the PDFMaker add-in is installed on your computer, do the following:
 - Office 2010: Open any Office application, and then select **File** > **Add-Ins**.
-- Office 2013 and later versions, select **File** > **Options** > **Add-Ins**. You should see something that resembles the following screenshot:
+- Office 2013 and later versions, select **File** > **Options** > **Add-Ins**. Next to **Manage COM Add-ins** select **Go**. You will see a dialog box that resembles the following screenshot:
 
 
 ![the screen shot for the add-ins of outlook options window](./media/incompatibilities-between-office-and-adob/the-screen-shot-for-the-add-ins-of-outlook-options-window.jpg)
@@ -169,3 +169,9 @@ Select the Office program that you're having problems with, and then use the app
 #### Third-party information disclaimer
 
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+
+## Other resources
+
+[I get a "stopped working" error when I start Office applications on my PC](https://support.office.com/article/i-get-a-stopped-working-error-when-i-start-office-applications-on-my-pc-52bd7985-4e99-4a35-84c8-2d9b8301a2fa)
+
+[How to troubleshoot crashing and not responding issues with Excel](https://docs.microsoft.com/office/troubleshoot/excel/crashing-issues-with-excel)
