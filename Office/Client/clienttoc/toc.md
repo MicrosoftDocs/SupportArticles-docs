@@ -49,6 +49,7 @@
 ### [How to create a running totals query](../access/create-a-running-totals-query.md)
 ### [ID is increment when adding a new field](../access/id-field-increment-by-one.md)
 ### [Incorrect registry key for current version of Access](../access/incorrect-current-version-registry-key.md)
+### [Introduction to lock files (.laccdb & .ldb)](../access/lock-files-introduction.md)
 ### [Issue when loading an Access web app](../access/load-access-web-app-in-ie.md)
 ### [Issues when you retrieve SharePoint list data](../access/retrieve-sharepoint-list-in-access.md)
 ### [Jet compact utility is available in download center](../access/jet-compact-utility-download.md)
@@ -332,7 +333,6 @@
 
 ## Miscellaneous
 ### [Document Information Panel is deprecated](../miscellaneous/document-information-panel-deprecate.md)
-### [Enable co-authoring for OneDrive-synced files](../miscellaneous/enable-co-authoring-for-onedrive-synced-file.md)
 ### [Enable Office 2010 to run on a terminal server](../miscellaneous/office-pro-plus-2010-terminal-server.md)
 ### [Features to enable collaboration](../miscellaneous/enable-collaboration.md)
 ### [Incompatibilities between Office and Adob](../miscellaneous/incompatibilities-between-office-and-adob.md)
@@ -549,6 +549,7 @@
 ### [Word could not create the work file](../word/word-could-not-create-the-work-file.md)
 ### [Word for Mac crashes with saving](../word/word-for-mac-crashes-or-quits.md)
 ### [Word for Mac is closed unexpectedly](../word/word-mac-closes-unexpectedly.md)
+### [Word slows or stops responding](../word/word-stops-responding.md)
 ### [Work with toolbars in Word](../word/toolbars-and-toolbar-buttons-in-word.md)
 ### [Wrong paper size in the Printer Properties](../word/paper-size-printer-property.md)
 ### [You're prompted to save changes to global template](../word/save-changes-to-global-template.md)
