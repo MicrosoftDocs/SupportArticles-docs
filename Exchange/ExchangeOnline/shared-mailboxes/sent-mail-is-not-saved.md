@@ -46,7 +46,7 @@ set-mailbox <mailbox name> -MessageCopyForSentAsEnabled $True
 Using Exchange PowerShell, for emails Sent On Behalf of the shared mailbox, run the following cmdlet:
 
 ```powershell
-set-mailbox <mailbox name> -MessageCopyForSentAsEnabled $True
+set-mailbox <mailbox name> -MessageCopyForSendOnBehalfEnabled $True
 ```
 
 #### Exchange Server 2010 Service Pack 2 Update Rollup 4 or later update
