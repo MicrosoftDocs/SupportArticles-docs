@@ -1,5 +1,5 @@
 ---
-title: This feature has been disabled by your administrator error in Office
+title: This feature has been disabled by your administrator error in Microsoft Office
 description: Describes an issue that triggers an error in Office 2013 applications when you try to sign in or share a file. This issue involves certain registry settings. A resolution is provided.
 author: simonxjx
 manager: dcscontentpm
@@ -12,6 +12,21 @@ ms.topic: article
 ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
+- Word O365
+- Excel O365
+- Outlook O365
+- PowerPoint O365
+- Publisher O365
+- Word 2019
+- Excel 2019
+- Outlook 2019
+- PowerPoint 2019
+- Publisher 2019
+- Word 2016
+- Excel 2016
+- Outlook 2016
+- PowerPoint 2016
+- Publisher 2016
 - Microsoft Office 2013 Service Pack 1
 - Word 2013
 - Excel 2013
@@ -20,11 +35,11 @@ appliesto:
 - Publisher 2013
 ---
 
-# "This feature has been disabled by your administrator" error in Office 2013
+# "This feature has been disabled by your administrator" error in Microsoft Office
 
 ## Symptoms
 
-When you try to perform certain actions in Microsoft Office 2013 or Office 2016 applications, you receive the following error message:
+When you try to perform certain actions in Microsoft Office O365, 2019, 2016, or 2013 applications, you receive the following error message:
 
 **This feature has been disabled by your administrator.**
 
@@ -104,7 +119,7 @@ To resolve this issue, follow these steps to modify the registry:
 1. Exit Registry Editor.
 
 > [!NOTE]
-> If the **UseOnlineContent** or **SignInOptions** value is located under the **Policies** hive, it may have been created by Group Policy. In this situation, your administrator must modify the policy to change this setting.
+> If the **UseOnlineContent** or **SignInOptions** value is located under the **Policies** hive, it may have been created by Group Policy. In this situation, your administrator must modify the policy to change this setting if the administrator set the value.
 
 ## More Information
 
