@@ -35,9 +35,13 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "/microsoftteams/support/breadcrumb/toc.json",
+      "breadcrumb_path": "/microsoftteams/troubleshoot/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "None"
+      "feedback_system": "GitHub",
+      "feedback_github_repo": "MicrosoftDocs/OfficeDocs-Support",
+      "feedback_product_url": "https://microsoftteams.uservoice.com/",
+      "titleSuffix": "Microsoft Teams",
+      "searchScope": ["Teams Support"] 
     },
     "fileMetadata": {},
     "template": [],

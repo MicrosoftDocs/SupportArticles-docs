@@ -1,0 +1,35 @@
+---
+title: SharePoint Online list using Calendar view opens the form dialog box 
+description: A SharePoint Online list that uses the Calendar view always open items in the dialog box.
+author: simonxjx
+manager: dcscontentpm
+localization_priority: Normal
+search.appverid: 
+- MET150
+audience: ITPro
+ms.prod: sharepoint-server-itpro
+ms.topic: article
+ms.author: v-six
+ms.custom: CSSTroubleshoot
+appliesto:
+- SharePoint Online
+---
+
+# A SharePoint Online list that uses the Calendar view opens the form dialog box when you add or edit items
+
+## Problem
+
+Consider the following scenario:
+
+- You have a SharePoint Online list that uses the Calendar view.
+- In the **Advanced Settings** section of **List Settings**, you have specified **No** for the **Launch forms in a dialog** option.
+
+In this scenario, the list opens the form dialog box when you edit or create a new item for the Calendar view for the list.
+
+## Solution
+
+This is a known issue in SharePoint Online. A SharePoint Online list that uses the Calendar view will always open items in the dialog box.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
