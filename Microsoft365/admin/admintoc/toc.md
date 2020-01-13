@@ -167,4 +167,3 @@
 ### [Keep on running Office 365 ProPlus 2013](../updates/run-office-365-proplus-2013.md)
 ### [Office Feature Updates task](../updates/office-feature-updates-task-faq.md)
 ### [Prioritize BITS for Office 2016 updates](../updates/prioritize-bits-for-office-2016-updates.md)
-### [Switch from Semi-Annual to Monthly](../updates/switch-channel-for-office-365.md)
