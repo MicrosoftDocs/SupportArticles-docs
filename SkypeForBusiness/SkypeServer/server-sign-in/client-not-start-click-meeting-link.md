@@ -49,22 +49,7 @@ To resolve this problem, use one of the following methods.
 
 Set Internet Explorer or another supported browser as the user's default browser. 
 
-### Option 2: Enable NPAPI
-
-Enable NPAPI in the Chrome browser. To do this, follow these steps:
-
-1. Enter the following URL into the Chrome address bar:
-
-    **Chrome://Flags/#enable-npapi**   
-2. Click the **Enable** link to enable NPAPI support.   
-3. Restart the browser.   
-4. Click the meeting invitation link.   
-5. Enable the plugin for the meeting join domain by using the dialog box that follows the plugin warning message.
-
-    > [!NOTE]
-    > This step is required for each unique meeting join domain, depending on the company that hosts the meeting.   
-
-### Option 3: Set GPO settings
+### Option 32: Set GPO settings
 
 Use the Chrome ADMX template to set GPO settings that apply configurations to domain-joined computers. To do this, follow these steps:
 
@@ -74,8 +59,7 @@ Use the Chrome ADMX template to set GPO settings that apply configurations to do
 2. Install the GPO policy templates by using the following directions:
 
     [Scenario 2: Editing Domain-Based GPOs Using ADMX Files](https://technet.microsoft.com/library/cc748955%28v=ws.10%29.aspx)   
-3. Configure the "Computer Configuration\Administrative Templates\Google\Google Chrome\Specify a list of enabled plugins" setting by enabling the policy and specifying npapi as the value for enabled plugins.   
-4. Configure the "Computer Configuration\Administrative Templates\Google\Google Chrome\Content Settings\Allow plugins on these sites" setting by enabling the policy and by configuring the list of meeting join domain URLs that should be trusted. 
+3. Configure the "Computer Configuration\Administrative Templates\Google\Google Chrome\Content Settings\Allow plugins on these sites" setting by enabling the policy and by configuring the list of meeting join domain URLs that should be trusted. 
 
     > [!NOTE]
     > This list should contain the following items: 
