@@ -31,7 +31,7 @@ You experience the following issues that affect folder names in Microsoft Outlo
 
     > [!NOTE]
     > This issue occurs if a mobile device or a third-party server application synchronizes the Exchange Server mailbox. To resolve this issue, try Method 1 first. If that doesn't work, try Method 2 or 3.    
-- Folder names are changed unexpectedly (for example, the **Inbox **folder and the **Outbox **folder are switched).
+- Folder names are changed unexpectedly (for example, the **Inbox** folder and the **Outbox** folder are switched).
 
     > [!NOTE]
     > This issue may occur after Exchange Server mailbox maintenance. To resolve this issue, try Method 1 first. If that doesn't work, try Method 2 or 3.
@@ -81,12 +81,11 @@ Use Outlook Web App to reset the default folder names:
 If you are an administrator, run the following cmdlet to reset the default folder names for the user:   
 
 ```powershell
-set-MailboxRegionalConfiguration -id <**alias**> -LocalizeDefaultFolderName:$true -Language <**Language_code_to_switch_to**> -DateFormat <**your_preferred_DateFormat**>
+set-MailboxRegionalConfiguration -id <alias> -LocalizeDefaultFolderName:$true -Language <Language_code_to_switch_to> -DateFormat <your_preferred_DateFormat>
 ```
-   
-For more information about the possible language codes and the **Set-MailboxRegionalConfiguration** cmdlet, see the following MSDN websites: 
+
+For more information about the **Set-MailboxRegionalConfiguration** cmdlet, see the following MSDN websites: 
  
-- [Language Codes](https://msdn.microsoft.com/library/ms533052%28v=vs.85%29.aspx)
 - [Set-MailboxRegionalConfiguration](https://msdn.microsoft.com/subscriptions/dd351103%28v=exchg.141%29.aspx)
 
 ### Method 4
