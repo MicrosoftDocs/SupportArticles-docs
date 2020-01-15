@@ -45,7 +45,8 @@ This problem occurs for one of the following reasons:
 
 #### Method 1: Run Office 365 Support and Recovery Assistant
 
-Use the [I need help setting up my Office 365 email in Outlook](https://aka.ms/SaRA-OutlookSetupProfile)** **diagnostic** **in the Support and Recovery Assistant (SaRA).** **Click **Run** when you are prompted by your browser. 
+Use the [I need help setting up my Office 365 email in Outlook](https://aka.ms/SaRA-OutlookSetupProfile) **diagnostic** in the Support and Recovery Assistant (SaRA). Click **Run** when you are prompted by your browser.
+
 This diagnostic does automated checks and returns possible solutions for you to use to try to fix any detected issues. 
 
 ### Additional methods
