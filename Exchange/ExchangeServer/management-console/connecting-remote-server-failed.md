@@ -12,13 +12,9 @@ ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
-- Exchange Server 2013 Service Pack 1
-- Exchange Server 2013 Enterprise
-- Exchange Server 2013 Standard Edition
 - Exchange Server 2010 Service Pack 3
 - Exchange Server 2010 Enterprise
 - Exchange Server 2010 Standard
-
 ---
 
 # "Connecting to the remote server failed with the following error message" error when you start the Exchange Management Shell or the Exchange Management Console
