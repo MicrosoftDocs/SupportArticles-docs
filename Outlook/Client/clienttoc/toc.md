@@ -20,6 +20,7 @@
 
 ## Folders
 ### [Incorrect folder names](../folders/incorrect-folder-names.md)
+### [Insufficient memory to display a folder](../folders/outlook-folder-fails-displaying.md)
 
 ## IMAP/POP
 ### [Can't use Quick Steps](../imap-pop/outlook-quick-steps-issues.md)
