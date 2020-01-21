@@ -27,7 +27,7 @@ Locate "**Object**", press a small triangle next to it, and click "**Text from F
 
 !["Text from File" of the dropdown menu of "Object"](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4491214_en_1) 
  
-After that, you can select files to be merged into the current document. To select more than one documents, pressing and holding **Ctrl** 
+After that, you can select files to be merged into the current document. To select more than one document, pressing and holding **Ctrl** 
 
 > [!NOTE]
 > Documents placed at the top will be merged in the first place. Therefore, please sort and number each target document in case that you want to keep a certain sequence for your documents.
