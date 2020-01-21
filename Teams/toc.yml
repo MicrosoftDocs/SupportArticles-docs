@@ -1,0 +1,31 @@
+- name: Teams Troubleshooting
+  href: index.md
+  items:
+  - name: Administration
+    items:
+    - name: Include or exclude Teams from antivirus or DLP applications
+      href: ./teams-administration/include-exclude-teams-from-antivirus-dlp.md
+  - name: Conferencing
+    items:
+    - name: '"Give Control" does not work'
+      href: ./teams-conferencing/give-control-doesn’t-work-sharescreen.md
+    - name: No dial pad for Enterprise Voice user
+      href: ./teams-conferencing/ev-user-have-no-dial-pad.md
+  - name: IM and Presence
+    items:
+    - name: Cannot send message to Skype for Business
+      href: ./teams-im-presence/teams-user-not-send-message-in-sfb.md
+  - name: Mobile
+    items:
+    - name: Windows phone app for Teams will beretired
+      href: ./teams-mobile/teams-for-windows-phone-is-retiring.md
+  - name: OneNote Integration
+    items:
+    - name: Issue with accessing notebooks
+      href: ./teams-onenote-integration/issue-access-notebook.md
+  - name: Sign-in
+    items:
+    - name: User with EDU or F1 license can't sign in to Teams
+      href: ./teams-sign-in/office-365-accounts-cannot-sign-in.md
+    - name: Stuck in login loop in Edge or Internet Explorer
+      href: ./teams-sign-in/sign-in-loop.md
