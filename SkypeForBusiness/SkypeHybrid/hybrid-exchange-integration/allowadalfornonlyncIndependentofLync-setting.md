@@ -82,7 +82,8 @@ Then, apply the **AllowAdalForNonLyncIndependentOfLync** registry key setting: 
 To enable the in-band setting on the Lync server, run the following cmdlet:   
 
 ```powershell
-$a = New-CsClientPolicyEntry -name AllowAdalForNonLyncIndependentOfLync -value "True" Set-CsClientPolicy -Identity Global -PolicyEntry @{Add=$a} 
+$a = New-CsClientPolicyEntry -name AllowAdalForNonLyncIndependentOfLync -value "True" 
+Set-CsClientPolicy -Identity Global -PolicyEntry @{Add=$a} 
 ```
 
 > [!IMPORTANT]
