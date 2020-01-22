@@ -63,6 +63,8 @@
       href: ../send-receive-emails/metered-connection-warning.md
     - name: Create or modify Outlook client-only rule
       href: ../send-receive-emails/create-modify-client-only-rule-with-error.md
+    - name: Delete nonexistent messages by using MFCMAPI
+      href: ../send-receive-emails/delete-nonexistent-messages.md
     - name: DLP Policy Tip notifications are not displayed
       href: ../send-receive-emails/can't-display-dlp-policytip.md
   - name: Sign-in
