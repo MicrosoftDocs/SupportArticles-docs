@@ -1,0 +1,151 @@
+- name: Exchange Online Troubleshooting
+  href: ../exchange-online.md
+  items:
+  - name: Active Sync
+    items:
+    - name: Issues for mobile devices
+      href: ../active-sync/issues-for-mobile-devices.md
+  - name: Add Users
+    items:
+    - name: Proxy address is already being used
+      href: ../add-users/proxy-address-being-used.md
+  - name: Administration
+    items:
+    - name: Can't manage Send on Behalf permissions
+      href: ../administration/send-on-behalf-for-shared-mailbox.md
+  - name: Antispam
+    items:
+    - name: Cautions against bypassing spam filters
+      href: ../antispam/cautions-against-bypassing-spam-filters.md
+    - name: User Impersonation messages are classified as phishing
+      href: ../antispam/user-impersonation-messages-are-classified-as-phishing.md
+  - name: Archive mailboxes
+    items:
+    - name: Messages aren't moved to archive mailboxes
+      href: ../archive-mailboxes/message-not-moved-to-archive.md
+  - name: Configure Contacts
+    items:
+    - name: Update contact information
+      href: ../configure-contacts/update-contact-information.md
+  - name: Configure Mailboxes
+    items:
+    - name: Can't remove mailbox permissions
+      href: ../configure-mailboxes/cannot-remove-mailbox-permission-office-365.md
+    - name: Enable or disable POP3, IMAP, MAPI, OWA or ActiveSync
+      href: ../configure-mailboxes/pop3-imap-owa-activesync-office-365.md
+    - name: Set automatic replies
+      href: ../configure-mailboxes/set-automatic-replies.md
+  - name: Connecting to the Service
+    items:
+    - name: Access is denied with Windows PowerShell
+      href: ../connecting-to-the-service/access-denied-connect-powershell.md
+    - name: Can't connect to Exchange Online
+      href: ../connecting-to-the-service/incorrect-settings.md
+    - name: WinRM client cannot process the request
+      href: ../connecting-to-the-service/winrm-cannot-process-request.md
+  - name: Connectors
+    items:
+    - name: 550 5.7.64 TenantAttribution
+      href: ../connectors/relay-access-denied-smtp.md
+    - name: Important notice for Office 365
+      href: ../connectors/office-365-notice.md
+  - name: Delegates
+    items:
+    - name: Error viewing delegates in Outlook
+      href: ../delegates/no-delegate-permissions-after-migration.md
+  - name: Delete Calendar Items
+    items:
+    - name: Can't remove calendar items or emails
+      href: ../delete-calendar-items/cannot-remove-items.md
+    - name: Message store has reached its maximum size
+      href: ../delete-calendar-items/store-reached-maximum-size.md
+  - name: Distribution Groups
+    items:
+    - name: Prevent users from creating and managing DG
+      href: ../distribution-groups/prevent-users-create-manage-dg.md
+    - name: You don't have sufficient permissions
+      href: ../distribution-groups/no-sufficient-permissions-moving-dg.md
+  - name: Email Alias
+    items:
+    - name: Remove an alias  from a contact
+      href: ../email-alias/remove-an-alias-from-a-contact.md
+    - name: Remove an alias from a distribution list
+      href: ../email-alias/remove-an-alias-from-a-distribution-list.md
+    - name: Remove an alias from a group
+      href: ../email-alias/remove-an-alias-from-a-group.md
+    - name: Remove an alias from a mail-enabled security group
+      href: ../email-alias/remove-an-alias-from-a-mail-enabled-security-group.md
+    - name: Remove an alias from a shared mailbox
+      href: ../email-alias/remove-an-alias-from-a-shared-mailbox.md
+    - name: Remove an email alias
+      href: ../email-alias/remove-an-email-alias.md
+  - name: Mailbox Migration
+    items:
+    - name: Issue with Add-RecipientPermission
+      href: ../mailbox-migration/issue-with-add-recipientpermission-cmdlet.md
+    - name: Migrate data with Admin Center
+      href: ../mailbox-migration/migrate-data-with-admin-center.md
+    - name: No smtp proxy matching
+      href: ../mailbox-migration/no-smtp-proxy-matching.md
+  - name: Mail Delivery
+    items:
+    - name: 554 5.2.0 STOREDRV.Deliver.Exception
+      href: ../mail-delivery/mapiexceptionnotfound-ndr.md
+    - name: Find and fix email delivery issues
+      href: ../mail-delivery/email-delivery-issues.md
+    - name: IMCEAEX non-delivery report
+      href: ../mail-delivery/imceaex-ndr.md
+    - name: Non-delivery report error codes
+      href: ../mail-delivery/mail-issues.md
+  - name: Meetings
+    items:
+    - name: No conference rooms with Room Finders
+      href: ../meetings/conference-rooms-not-dispalyed.md
+  - name: Modern Authentication
+    items:
+    - name: Transition from D/ITAR to vNext
+      href: ../modern-authentication/modern-authentication-configuration.md
+  - name: Move Mailboxes
+    items:
+    - name: Can't see free/busy information
+      href: ../move-mailboxes/cannot-see-free-busy-information.md
+  - name: Outlook Connectivity
+    items:
+    - name: Outlook clients use TLS 1.0/1.1
+      href: ../outlook-connectivity/outlook-uses-tls-1.0-1.1.md
+    - name: Resources to fix connection issues
+      href: ../outlook-connectivity/office-365-troubleshooting-resources.md
+    - name: Sending and receiving email
+      href: ../outlook-connectivity/outlook-connection-issues.md
+  - name: Outlook Profiles
+    items:
+    - name: Can't set up profile with Autodiscover
+      href: ../outlook-profiles/cannot-set-up-profile-autodiscover.md
+  - name: Outlook Crashes
+    items:
+    - name: Issues with crash or stop responding
+      href: ../outlook-crashes/crash-issues.md
+  - name: OWA Attachments
+    items:
+    - name: Can't open or view attachments
+      href: ../owa-attachments/cannot-open-attachments.md
+  - name: OWA Time Zones
+    items:
+    - name: Incorrect time zone in OWA
+      href: ../owa-time-zones/incorrect-setting.md
+    - name: Incorrect time zone in read receipt
+      href: ../owa-time-zones/read-receipt-incorrect-timezone.md
+  - name: Public Folders
+    items:
+    - name: The mailbox is not found in the local forest
+      href: ../public-folders/mailbox-not-found-local-forest-public-folder.md
+    - name: Can’t apply permissions to subfolders
+      href: ../public-folders/can’t-apply-permissions-public-folder-subfolders.md
+  - name: Send Emails
+    items:
+    - name: Changes in message store
+      href: ../send-emails/smtp-submission-improvements.md
+  - name: Shared Mailboxes
+    items:
+    - name: Sent items aren't saved
+      href: ../shared-mailboxes/sent-mail-is-not-saved.md
