@@ -333,9 +333,9 @@ When this code is used with the sample table, cells A1 through A4 will be select
 To select a range of cells that are non-contiguous, use one of the following examples:
 
 ```vb
-ActiveSheet.Range("a1",ActiveSheet.Range("a65536").End(xlUp)).Select
+ActiveSheet.Range("a1",ActiveSheet.Range("a" & ActiveSheet.Rows.Count).End(xlUp)).Select
    -or-
-ActiveSheet.Range("a1:" & ActiveSheet.Range("a65536"). _
+ActiveSheet.Range("a1:" & ActiveSheet.Range("a" & ActiveSheet.Rows.Count). _
    End(xlUp).Address).Select
 ```
 
@@ -363,11 +363,11 @@ In some instances, you may want to select cells A1 through C6. In this example, 
 
 ```vb
 lastCol = ActiveSheet.Range("a1").End(xlToRight).Column
-lastRow = ActiveSheet.Cells(65536, lastCol).End(xlUp).Row
+lastRow = ActiveSheet.Cells(ActiveSheet.Rows.Count, lastCol).End(xlUp).Row
 ActiveSheet.Range("a1", ActiveSheet.Cells(lastRow, lastCol)).Select
     -or-
 lastCol = ActiveSheet.Range("a1").End(xlToRight).Column
-lastRow = ActiveSheet.Cells(65536, lastCol).End(xlUp).Row
+lastRow = ActiveSheet.Cells(ActiveSheet.Rows.Count, lastCol).End(xlUp).Row
 ActiveSheet.Range("a1:" & _
    ActiveSheet.Cells(lastRow, lastCol).Address).Select
 ```
