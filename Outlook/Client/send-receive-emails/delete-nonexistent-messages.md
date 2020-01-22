@@ -51,7 +51,7 @@ Use the MFCMAPI tool to delete the stuck messages. To do this, follow these step
 > [!NOTE]
 > If you have the 64-bit version of Outlook installed, you must install the 64-bit build of the MFCMAPI tool.
 
-1. [Download and install the MFCMAPI tool](https://aka.ms/mfcmapi_download.).
+1. [Download and install the MFCMAPI tool](https://aka.ms/mfcmapi_download).
 2. Open the MFCMAPI tool, and then select **OK**.
 3. Select the **Session** tab, and then select the **Logon** option.
 4. In the window that opens, select the Outlook profile, and then select the **OK** button.
