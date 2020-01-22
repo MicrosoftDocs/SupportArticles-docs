@@ -225,6 +225,8 @@
     items:
     - name: Can't connect to the Azure Information Protection service
       href: ../miscellaneous/cant-connect-azure-information-protection.md
+    - name: Chrome cookie behavior effect on applications
+      href: ../miscellaneous/chrome-behavior-affects-applications.md
     - name: Office 365 changes build numbers to a five-digit format
       href: ../miscellaneous/build-number-five-digit.md
     - name: Open Support cases for GCC High and DoD
