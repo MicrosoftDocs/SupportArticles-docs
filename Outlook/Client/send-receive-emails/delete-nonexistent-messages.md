@@ -24,7 +24,7 @@ search.appverid:
 
 You experience one or more of the following problems when you use Outlook:
 
-- Outlook continuously displays a message such as “Sending message 4 of 6” in the Progress bar even though there are no email messages queued. Additionally, Outlook stops responding when you try to close it. For example, you see the following Outlook window:
+- Outlook continuously displays a message such as “Sending message 4 of 6” in the Progress bar even though there are no email messages queued. Additionally, Outlook stops responding when you try to close it. For example, you see the following message in the Progress bar:
 
     ![outbox_error](../media/delete-nonexistent-messages/outbox-error.png)
 
