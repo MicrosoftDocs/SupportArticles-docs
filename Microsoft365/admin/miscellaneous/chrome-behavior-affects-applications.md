@@ -1,11 +1,9 @@
 ---
 title: Chrome SameSite cookie behavior effect on customer applications
 description: Describes a potential disruptive impact to customer applications and services because of a change in cookie behavior in Chrome browser version 80 and later.
-Chrome SameSite cookie behavior effect on customer applications
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm 
-date: 1/21/2020
 audience: ITPro 
 ms.topic: article
 ms.prod: office 365
@@ -87,7 +85,7 @@ Use Chrome Beta version 80 to test the scenarios:
 1. Download Chrome Beta version 80:
 
    - For Windows 64-bit: [Beta channel for Windows (64-bit)](https://www.google.com/chrome/browser/beta.html?platform=win64)
-   - For Windows 32 bit: [Beta channel for Windows (32-bit)](https://www.google.com/chrome/browser/beta.html?platform=win)
+   - For Windows 32-bit: [Beta channel for Windows (32-bit)](https://www.google.com/chrome/browser/beta.html?platform=win)
 
 2. Start at the experimental feature flag ```--enable-features=SameSiteDefaultChecksMethodRigorously```. 
 
