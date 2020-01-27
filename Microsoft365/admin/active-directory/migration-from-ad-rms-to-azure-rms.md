@@ -39,7 +39,7 @@ The update is available for the following versions of Office:
 
 - Office 2013 version 15.0.4849.1000, or later versions
 - Office 2016 MSI version 16.0.4496.1000, or later versions.
-- Office 2017 C2R version 16.0.7407.1000, or later versions
+- Office 2016 C2R version 16.0.7407.1000, or later versions
 
 To set AD RMS in read-only mode after you install the fix on Windows clients that are running Office 2013, Office 2016, or other applications developed by using the MSIPC SDK, you have to deny access to the Publish.asmx page. To do this, follow these steps: 
 
