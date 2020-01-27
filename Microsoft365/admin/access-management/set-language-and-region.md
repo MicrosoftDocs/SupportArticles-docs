@@ -40,7 +40,7 @@ To sync the settings by using a user ID, run the following example cmdlets after
 
 ```powershell
 Get-MsolUser -UserPrincipalName user1@contoso.com | Set-MsolUser -PreferredLanguage "it-it"
-Get-MsolUser -UserPrincipalName user1@contoso.com | Set-MsolUser – UsageLocation IT
+Get-MsolUser -UserPrincipalName user1@contoso.com | Set-MsolUser –UsageLocation IT
 ```
 
 Synchronized identity model
@@ -50,7 +50,7 @@ To sync the settings by using an on-premises instance of Azure AD, run the follo
 ```powershell
 Get-ADUser -SearchBase "OU=Italy,OU=Countries,DC=contoso,DC=com" -Filter * -Properties PreferredLanguage | ForEach-Object {Set-ADUser $_.SAMAccountName –replace @{PreferredLanguage="it-it"}}
 
-Get-MsolUser -UserPrincipalName user1@contoso.com | Set-MsolUser – UsageLocation IT
+Get-MsolUser -UserPrincipalName user1@contoso.com | Set-MsolUser –UsageLocation IT
 ```
 
 Then, force the settings to sync through Azure AD Connect.

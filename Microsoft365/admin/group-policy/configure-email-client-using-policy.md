@@ -19,7 +19,7 @@ appliesto:
 
 ## Symptoms
 
-When you use Group Policy to administer the default e-mail client you are unable to locate a setting to make this configuration.
+When you use Group Policy to administer the default e-mail client, you are unable to locate a setting to make this configuration.
 
 ## Cause
 
