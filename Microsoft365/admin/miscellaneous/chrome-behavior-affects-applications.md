@@ -46,9 +46,6 @@ Microsoft Edge browser on Chromium is not impacted by Chrome SameSite changes, d
 
 Microsoft customers who use Active Directory Federation Services (AD FS) or Web Application Proxy must deploy one of the following Windows Server updates:
 
-- For Windows Server 2016: [January 14, 2020—KB4534271 (OS Build 14393.3443)](https://support.microsoft.com/help/4534271)
-- For Windows Server 2019: [January 14, 2020—KB4534273 (OS Build 17763.973)](https://support.microsoft.com/help/4534273)
-
  - Windows Server 2019: [4534273](https://support.microsoft.com/en-us/help/4534273/windows-10-update-kb4534273)
  - Windows Server 2016: [4534271](https://support.microsoft.com/en-us/help/4534271/windows-10-update-kb4534271)
  - Windows Server 2012 R2: [4534309](https://support.microsoft.com/en-us/help/4534309/windows-8-1-kb4534309)
@@ -72,9 +69,9 @@ Google has released the following enterprise controls that can be set to disable
 - LegacySameSiteCookieBehaviorEnabledForDomainList
 
 Details on how to configure these policies can be found here:
-[Main page for SameSite policies](https://www.chromium.org/administrators/policy-list-3/cookie-legacy-samesite-policies)
-[Chrome policy to enable/disable it](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=LegacySameSiteCookieBehaviorEnabled)
-[Chrome policy to exclude specific domains](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=LegacySameSiteCookieBehaviorEnabledForDomainList)
+ - [Main page for SameSite policies](https://www.chromium.org/administrators/policy-list-3/cookie-legacy-samesite-policies)
+ - [Chrome policy to enable/disable it](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=LegacySameSiteCookieBehaviorEnabled)
+ - [Chrome policy to exclude specific domains](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=LegacySameSiteCookieBehaviorEnabledForDomainList)
 
 For more information, see [SameSite Updates](https://www.chromium.org/updates/same-site) on the Chromium Projects website.
 
