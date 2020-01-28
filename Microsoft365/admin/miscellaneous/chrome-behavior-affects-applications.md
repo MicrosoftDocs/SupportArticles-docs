@@ -40,6 +40,8 @@ You should thoroughly test all applications by using Chrome Beta version 80 to v
 
 Chrome versions 78 and 79 have an improvement that delays the **SameSite:Lax** attribute enforcement for two minutes. However, using these versions for testing may mask other problems. Therefore, we recommend that you test by using Chrome version 80 by having specific flags enabled. Doing this can, at least, help you discover the effect so that you can determine your best plan. For more information, see the "[Testing guidelines](#testing-guidelines)" section.
 
+Microsoft Edge browser on Chromium is not impacted by Chrome SameSite changes, details can be found [here](https://docs.microsoft.com/en-us/microsoft-edge/web-platform/site-impacting-changes).
+
 ## Recommendations
 
 Microsoft customers who use Active Directory Federation Services (AD FS) or Web Application Proxy must deploy one of the following Windows Server updates:
@@ -47,10 +49,16 @@ Microsoft customers who use Active Directory Federation Services (AD FS) or Web 
 - For Windows Server 2016: [January 14, 2020—KB4534271 (OS Build 14393.3443)](https://support.microsoft.com/help/4534271)
 - For Windows Server 2019: [January 14, 2020—KB4534273 (OS Build 17763.973)](https://support.microsoft.com/help/4534273)
 
+ - Windows Server 2019: [4534273](https://support.microsoft.com/en-us/help/4534273/windows-10-update-kb4534273)
+ - Windows Server 2016: [4534271](https://support.microsoft.com/en-us/help/4534271/windows-10-update-kb4534271)
+- -Windows Server, v1803: (Server Core) [4534293](https://support.microsoft.com/en-us/help/4534293/windows-10-update-kb4534293)  
+ - Windows Server, v1903 and Windows Server, v1909: (Server Core) [4528760](https://support.microsoft.com/en-us/help/4528760/windows-10-update-kb4528760)
+ - Windows Server 2012 R2: [4534309](https://support.microsoft.com/en-us/help/4534309/windows-8-1-kb4534309)
+
 The following Microsoft server or client products must also be updated. The updates will be added to this article when they're available. We recommend that you revisit this article regularly for the latest updates.
 
 - Exchange Server
-- SharePoint Server
+- SharePoint Server: Sharepoint 2019 – February PU, Sharepoint 2016 – March PU
 - Skype for Business client
 
 You must test your applications for all the following scenarios, and determine the appropriate plan based on the outcome of the tests:
@@ -62,9 +70,12 @@ You must test your applications for all the following scenarios, and determine t
 If enterprise customers learn that most of their apps are affected, or if they have enough time to test their apps before the Chrome Stable version release date, they're encouraged to disable the **SameSite** behavior in computers they govern. This can be done by using Group Policy, System Center Configuration Manager, or Microsoft Intune (or any Mobile Device Management software) until they can verify that the new behavior doesn't break basic scenarios in their apps.
 
 Google has released the following enterprise controls that can be set to disable the **SameSite** enforcement behavior in Chrome:
-
 - LegacySameSiteCookieBehaviorEnabled
 - LegacySameSiteCookieBehaviorEnabledForDomainList
+Details on how to configure these policies can be found here:
+[Main page for SameSite policies](https://www.chromium.org/administrators/policy-list-3/cookie-legacy-samesite-policies)
+[Chrome policy to enable/disable it](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=LegacySameSiteCookieBehaviorEnabled)
+[Chrome policy to exclude specific domains](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=LegacySameSiteCookieBehaviorEnabledForDomainList)
 
 For more information, see [SameSite Updates](https://www.chromium.org/updates/same-site) on the Chromium Projects website.
 
@@ -75,6 +86,8 @@ For enterprise customers who develop their applications on .NET Framework, we re
 Also, see the following Google Chromium Blog article for developer guidance about this issue:
 
 [Developers: Get Ready for New SameSite=None; Secure Cookie Settings](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
+
+For customers who have affected sites that impact consumers or users who are not under their enterprise policies, they will need to instruct users to use a different browser (Edge, Firefox, Internet Explorer) or walk them through how they can disable the settings in Chrome (shown below in the testing guidelines).
 
 ## Testing guidelines
 
