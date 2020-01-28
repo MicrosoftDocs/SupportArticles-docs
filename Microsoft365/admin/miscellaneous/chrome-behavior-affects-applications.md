@@ -38,7 +38,7 @@ All Microsoft Cloud services are updated to comply with the new requirements mad
 
 You should thoroughly test all applications by using Chrome Beta version 80 to verify the effect of this change. We expect that problems similar to the problems that this article describes will affect your applications. This is especially true for applications that use any web platform or technology that relies on cross-domain cookie sharing, such as apps that are embedded in other apps.
 
-Chrome versions 78 and 79 have an improvement that delays the **SameSite:Lax** attribute enforcement for two minutes. However, using these versions for testing may mask other problems. Therefore, we recommend that you test by using Chrome version 80 by having specific flags enabled. Doing this can, at least, help you discover the effect so that you can determine your best plan. For more information, see the "[Testing guidelines](#testing-guidelines)" section.
+Chrome versions 78 and 79 betas have an improvement that delays the **SameSite:Lax** attribute enforcement for two minutes. However, using these versions for testing may mask other problems. Therefore, we recommend that you test by using Chrome version 80 by having specific flags enabled. Doing this can, at least, help you discover the effect so that you can determine your best plan. For more information, see the "[Testing guidelines](#testing-guidelines)" section.
 
 Microsoft Edge browser on Chromium is not impacted by Chrome SameSite changes, details can be found [here](https://docs.microsoft.com/en-us/microsoft-edge/web-platform/site-impacting-changes).
 
@@ -52,8 +52,9 @@ Microsoft customers who use Active Directory Federation Services (AD FS) or Web 
 
 The following Microsoft server or client products must also be updated. The updates will be added to this article when they're available. We recommend that you revisit this article regularly for the latest updates.
 
-- Exchange Server
-- SharePoint Server: Sharepoint 2019 – February PU, Sharepoint 2016 – March PU
+- Exchange Server - March update
+- Sharepoint Server 2019 – February PU
+- Sharepoint Server 2016 – March PU
 - Skype for Business client
 
 You must test your applications for all the following scenarios, and determine the appropriate plan based on the outcome of the tests:
@@ -64,16 +65,9 @@ You must test your applications for all the following scenarios, and determine t
 
 If enterprise customers learn that most of their apps are affected, or if they have enough time to test their apps before the Chrome Stable version release date, they're encouraged to disable the **SameSite** behavior in computers they govern. This can be done by using Group Policy, System Center Configuration Manager, or Microsoft Intune (or any Mobile Device Management software) until they can verify that the new behavior doesn't break basic scenarios in their apps.
 
-Google has released the following enterprise controls that can be set to disable the **SameSite** enforcement behavior in Chrome:
-- LegacySameSiteCookieBehaviorEnabled
-- LegacySameSiteCookieBehaviorEnabledForDomainList
-
-Details on how to configure these policies can be found here:
- - [Main page for SameSite policies](https://www.chromium.org/administrators/policy-list-3/cookie-legacy-samesite-policies)
- - [Chrome policy to enable/disable it](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=LegacySameSiteCookieBehaviorEnabled)
- - [Chrome policy to exclude specific domains](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=LegacySameSiteCookieBehaviorEnabledForDomainList)
-
-For more information, see [SameSite Updates](https://www.chromium.org/updates/same-site) on the Chromium Projects website.
+Google has released the following [enterprise controls](https://www.chromium.org/updates/same-site) that can be set to disable the **SameSite** enforcement behavior in Chrome:
+- [LegacySameSiteCookieBehaviorEnabled](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=LegacySameSiteCookieBehaviorEnabled)
+- [LegacySameSiteCookieBehaviorEnabledForDomainList](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=LegacySameSiteCookieBehaviorEnabledForDomainList)
 
 For enterprise customers who develop their applications on .NET Framework, we recommend that they update libraries and set the **SameSite** behavior intentionally to avoid unpredictable results that are caused by the change in the cookie behavior. To do this, see the guidance in the following Microsoft ASP.NET Blog article:
 
@@ -83,7 +77,7 @@ Also, see the following Google Chromium Blog article for developer guidance abou
 
 [Developers: Get Ready for New SameSite=None; Secure Cookie Settings](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
 
-For customers who have affected sites that impact consumers or users who are not under their enterprise policies, they will need to instruct users to use a different browser (Edge, Firefox, Internet Explorer) or walk them through how they can disable the settings in Chrome (shown below in the testing guidelines).
+For customers who have affected sites that impact consumers or users who are not under their enterprise policies, they will need to instruct users to use a different browser (Edge, Firefox, Internet Explorer) or walk users through how to disable the settings in Chrome (shown below in the testing guidelines) while they fix their applications. 
 
 ## Testing guidelines
 
@@ -96,7 +90,7 @@ Use Chrome Beta version 80 to test the scenarios:
    - For Windows 64-bit: [Beta channel for Windows (64-bit)](https://www.google.com/chrome/browser/beta.html?platform=win64)
    - For Windows 32-bit: [Beta channel for Windows (32-bit)](https://www.google.com/chrome/browser/beta.html?platform=win)
 
-2. Start at the experimental feature flag ```--enable-features=SameSiteDefaultChecksMethodRigorously```. 
+2. Start with the experimental feature flag ```--enable-features=SameSiteDefaultChecksMethodRigorously```. 
 
 3. Enable the **SameSite** flags. To do this, type **Chrome://flags** in the **Address** bar, search for **SameSite**, and then select **Enabled** for the following options.
  
@@ -106,7 +100,7 @@ Use Chrome Beta version 80 to test the scenarios:
 
 The web community is working on a solution to address the abusive use of tracking cookies and cross-site request forgery through a standard that's known as [SameSite](https://web.dev/samesite-cookies-explained).
 
-The Chrome team had announced plans to roll out [a change in the default behavior](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/AknSSyQTGYs/discussion) of the SameSite functionality starting in a release of Chrome version 78 Beta on October 18, 2019. This rollout will be moved to Chrome version 80 release on February 4, 2020.l This change helps improve web security. However, it also breaks authentication flows that are based on the OpenID Connect standard. Therefore, well-established patterns of authentication won't work.
+The Chrome team had announced plans to roll out [a change in the default behavior](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/AknSSyQTGYs/discussion) of the SameSite functionality starting in a release of Chrome version 78 Beta on October 18, 2019. This rollout will be moved to Chrome version 80 release on February 4, 2020. This change helps improve web security. However, it also breaks authentication flows that are based on the OpenID Connect standard. Therefore, well-established patterns of authentication won't work.
 
 ## Checking Chrome version
 
