@@ -51,8 +51,6 @@ Microsoft customers who use Active Directory Federation Services (AD FS) or Web 
 
  - Windows Server 2019: [4534273](https://support.microsoft.com/en-us/help/4534273/windows-10-update-kb4534273)
  - Windows Server 2016: [4534271](https://support.microsoft.com/en-us/help/4534271/windows-10-update-kb4534271)
-- -Windows Server, v1803: (Server Core) [4534293](https://support.microsoft.com/en-us/help/4534293/windows-10-update-kb4534293)  
- - Windows Server, v1903 and Windows Server, v1909: (Server Core) [4528760](https://support.microsoft.com/en-us/help/4528760/windows-10-update-kb4528760)
  - Windows Server 2012 R2: [4534309](https://support.microsoft.com/en-us/help/4534309/windows-8-1-kb4534309)
 
 The following Microsoft server or client products must also be updated. The updates will be added to this article when they're available. We recommend that you revisit this article regularly for the latest updates.
@@ -72,6 +70,7 @@ If enterprise customers learn that most of their apps are affected, or if they h
 Google has released the following enterprise controls that can be set to disable the **SameSite** enforcement behavior in Chrome:
 - LegacySameSiteCookieBehaviorEnabled
 - LegacySameSiteCookieBehaviorEnabledForDomainList
+
 Details on how to configure these policies can be found here:
 [Main page for SameSite policies](https://www.chromium.org/administrators/policy-list-3/cookie-legacy-samesite-policies)
 [Chrome policy to enable/disable it](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=LegacySameSiteCookieBehaviorEnabled)
