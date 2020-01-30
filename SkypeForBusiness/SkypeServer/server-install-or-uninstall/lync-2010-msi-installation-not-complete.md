@@ -25,7 +25,7 @@ You may experience one or more of the following symptoms:
 
     **Microsoft Lync 2010 must be installed by running the appropriate Lync setup executable**   
 - The Active Directory Domain Services (AD DS) Software Installation Group Policy setting for MSI deployment methods will not complete when Lync.msi is deployed to supported Windows clients.   
-- The Microsoft Systems Management Server (SMS) 2003 or Microsoft System Center Configuration Manager (Configuration Manager) 2007 R2 automated deployments of the Lync.msi may not complete, or errors that are specific to the SMS environment or to the Configuration Manager environment may occur.   
+- The Microsoft Systems Management Server (SMS) 2003 or Configuration Manager 2007 R2 automated deployments of the Lync.msi may not complete, or errors that are specific to the SMS environment or to the Configuration Manager environment may occur.   
 
 ## Cause
 

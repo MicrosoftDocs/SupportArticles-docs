@@ -26,7 +26,7 @@ In Microsoft Office 2013, we introduced Click-to-Run, a modern deployment techno
 - Software that is up-to-date immediately upon installation    
 - Easy upgrade path to Office 365 subscription products    
  
-Click-to-Run offers the same enterprise-focused management capabilities as MSI-based products. These include volume activation, Group Policy management, administrative control over updates, and integration with management tools such as System Center Configuration Manager. To help you migrate from older MSI-based products, Click-to-Run also supports in-place upgrade when you move to Microsoft Office 2019 or Office 365. 
+Click-to-Run offers the same enterprise-focused management capabilities as MSI-based products. These include volume activation, Group Policy management, administrative control over updates, and integration with management tools such as Microsoft Endpoint Configuration Manager. To help you migrate from older MSI-based products, Click-to-Run also supports in-place upgrade when you move to Microsoft Office 2019 or Office 365. 
 
 Beginning in Office 2019, Office client applications will no longer be available in MSI format. This change in deployment technology does not affect how products are licensed or supported. A preview program is available so that you can start to test Office 2019 Preview in your organization. 
 

@@ -3,9 +3,9 @@
   items:
   - name: Access
     items:
-    - name: '"Enter Parameter Value" dialog box appears'
+    - name: "\"Enter Parameter Value\" dialog box appears"
       href: ../access/enter-parameter-value-when-run-query.md
-    - name: '"Linked table connection failed" when using Azure AD'
+    - name: "\"Linked table connection failed\" when using Azure AD"
       href: ../access/linked-table-connection-failed.md
     - name: .LDB files
       href: ../access/ldb-file-description.md
@@ -53,7 +53,7 @@
       href: ../access/cannot-use-odbc-or-oledb.md
     - name: Change dates by using functions and operators
       href: ../access/change-dates-by-functions-operators.md
-    - name: Change the connection of a  project programmatically 
+    - name: Change the connection of a  project programmatically
       href: ../access/change-the-connection-of-project.md
     - name: Convert data values of Text data type to proper case format
       href: ../access/convert-data-values-of-text-data-type.md
@@ -107,9 +107,9 @@
       href: ../access/retrieve-sharepoint-list-in-access.md
     - name: Jet compact utility is available in download center
       href: ../access/jet-compact-utility-download.md
-    - name: Linked table to a SharePoint list returns #Deleted
+    - name: Linked table to a SharePoint list returns
       href: ../access/access-linked-table-return-deleted.md
-    - name: Linked table to SQL Server database returns #Deleted
+    - name: Linked table to SQL Server database returns
       href: ../access/access-linked-table-deleted.md
     - name: Memory leak when Access connects to database files
       href: ../access/access-engine-memory-leak.md
@@ -153,7 +153,7 @@
       href: ../access/setoption-disable-warning-messages.md
     - name: Use SQLConfigDataSource to create a system DSN
       href: ../access/sqlconfigdatasource-access-system-dsn.md
-    - name: Use the Workgroup Administrator utility 
+    - name: Use the Workgroup Administrator utility
       href: ../access/use-workgroup-administrator-utility.md
   - name: Activation
     items:
@@ -173,17 +173,17 @@
       href: ../activation/something-configured-fails-activating-office.md
   - name: Error Messages
     items:
-    - name: '"Missing file" error with a web page file'
+    - name: "\"Missing file\" error with a web page file"
       href: ../error-messages/web-page-missing-file-error.md
-    - name: '"This file can’t be previewed" error'
+    - name: "\"This file can’t be previewed\" error"
       href: ../error-messages/this-file-cant-be-previewed.md
-    - name: '"0x80004005: General Error Unable to Open Registry Key"'
+    - name: "\"0x80004005: General Error Unable to Open Registry Key\""
       href: ../error-messages/fails-accessing-page-connected-access-database.md
     - name: 0x80041015 when starting an Office application
       href: ../error-messages/0x80041015-start-office-program.md
     - name: Another account is already signed in
       href: ../error-messages/another-account-already-signed-in.md
-    - name: Apps for Office don't start 
+    - name: Apps for Office don't start
       href: ../error-messages/apps-for-office-not-start.md
     - name: Background task activation is spurious
       href: ../error-messages/background-task-activation-spurious.md
@@ -243,7 +243,7 @@
       href: ../error-messages/office-file-fails-validation.md
     - name: Repair process of click-to-run app
       href: ../error-messages/click-to-run-app-repair-process.md
-    - name: '"Run-time Error 13: Type Mismatch"'
+    - name: "\"Run-time Error 13: Type Mismatch\""
       href: ../error-messages/run-time-error-13-type-mismatch.md
     - name: Selected a single-byte font to replace a double-byte font with Japanese
       href: ../error-messages/single-byte-font-replace-error.md
@@ -255,11 +255,11 @@
       href: ../error-messages/view-error-signatures.md
   - name: Excel
     items:
-    - name: '"Center Across Columns" does not appear on the toolbar'
+    - name: "\"Center Across Columns\" does not appear on the toolbar"
       href: ../excel/center-across-columns-button-disappear.md
-    - name: '"Margins do not fit page size" error with print'
+    - name: "\"Margins do not fit page size\" error with print"
       href: ../excel/fails-printing-a-workbook.md
-    - name: '"Total" row is not shown in waterfall charts'
+    - name: "\"Total\" row is not shown in waterfall charts"
       href: ../excel/table-total-row-not-shown-in-waterfall.md
     - name: .SpecialCells(xlCellTypeBlanks) VBA function doesn't work
       href: ../excel/specialcells(xlcelltypeblanks)-vba-function.md
@@ -279,7 +279,7 @@
       href: ../excel/autocomplete-not-work.md
     - name: AutoRecover functions in Excel
       href: ../excel/autorecover-functions-in-excel.md
-    - name: Blank pages are unexpectedly printed 
+    - name: Blank pages are unexpectedly printed
       href: ../excel/blank-pages-unexpectedly-printed.md
     - name: Border missing when pasting table in email for Mac
       href: ../excel/table-border-missing.md
@@ -313,7 +313,7 @@
       href: ../excel/external-references-data-validation-fails.md
     - name: Category labels are missing or too small to read
       href: ../excel/chart-category-labels-missing.md
-    - name: Cell content is displayed as #N/A! 
+    - name: Cell content is displayed as
       href: ../excel/cell-content-shows-na-enable-editing.md
     - name: Cell shading continually darkens
       href: ../excel/cell-shading-continually-darkens.md
@@ -327,7 +327,7 @@
       href: ../excel/clean-workbook-less-memory.md
     - name: Columns and rows are labeled numerically
       href: ../excel/numeric-columns-and-rows.md
-    - name: COM add-ins are not displayed 
+    - name: COM add-ins are not displayed
       href: ../excel/com-add-ins-not-displayed.md
     - name: Command bars of add-ins aren't displayed or removed
       href: ../excel/add-ins-command-bars-removed.md
@@ -513,7 +513,7 @@
       href: ../excel/parts-of-excel-turn-white-or-gray.md
     - name: Paster special option is missing or not working
       href: ../excel/paste-special-missing-or-not-working.md
-    - name: Power View sheet is not displayed in a workbook 
+    - name: Power View sheet is not displayed in a workbook
       href: ../excel/power-view-sheet-not-displayed.md
     - name: PowerPivot controls disabled with non-default Excel file format
       href: ../excel/powerpivot-controls-disabled-with-non-default.md
@@ -561,7 +561,7 @@
       href: ../excel/set-up-realtimedata-function.md
     - name: Smart tag functionality
       href: ../excel/smart-tag-functionality.md
-    - name: Startup message about updating linked workbooks 
+    - name: Startup message about updating linked workbooks
       href: ../excel/control-startup-message.md
     - name: STEYX statistical functions
       href: ../excel/statistical-functions-steyx.md
@@ -591,7 +591,7 @@
       href: ../excel/indirect-function-to-create-reference.md
     - name: Use left, right, mid, and len functions in VB
       href: ../excel/use-left-right-mid-len-function.md
-    - name: Use logical AND or OR in a SUM+IF statement 
+    - name: Use logical AND or OR in a SUM+IF statement
       href: ../excel/logical-and-or-in-sum-if.md
     - name: Use macro to apply cell shading format to other rows
       href: ../excel/apply-cell-shading-format-by-macro.md
@@ -607,7 +607,7 @@
       href: ../excel/insert-options-button.md
     - name: Use the AutoRepublish feature
       href: ../excel/autorepublish-feature.md
-    - name: Use the IF worksheet function to suppress the #DIV/0! Error
+    - name: Use the IF worksheet function to suppress the
       href: ../excel/if-worksheet-function-div0.md
     - name: VBA writes to cells slowly when ActiveX controls are invisible
       href: ../excel/vba-writes-to-cells-slowly.md
@@ -615,7 +615,7 @@
       href: ../excel/workbook-not-activated.md
     - name: Workbook loads slowly the first time that it is opened
       href: ../excel/workbook-loads-slowly.md
-    - name: Workbooks not open 
+    - name: Workbooks not open
       href: ../excel/workbooks-not-open.md
     - name: Worksheets may be printed at an unexpected different size
       href: ../excel/worksheet-printed-different-size.md
@@ -653,15 +653,15 @@
       href: ../miscellaneous/numbering-scheme-for-product-guid.md
     - name: Numbering Schema for Office 2013
       href: ../miscellaneous/numbering-scheme-product-code-guids.md
-    - name: Updates are offered for nonexistent Office programs 
+    - name: Updates are offered for nonexistent Office programs
       href: ../miscellaneous/updates-provided-for-nonexistent-office.md
     - name: Use different versions of Office on the same PC
       href: ../miscellaneous/use-multiple-versions-of-office.md
   - name: Office
     items:
-    - name: '"No default mail client" error'
+    - name: "\"No default mail client\" error"
       href: ../office/no-default-mail-client-error.md
-    - name: '"Your system is low on virtual memory" error'
+    - name: "\"Your system is low on virtual memory\" error"
       href: ../office/your-system-is-low-on-virtual-memory.md
     - name: Applications crash when opening IRM doccument
       href: ../office/office-applications-crash-when-open-irm-doc.md
@@ -675,13 +675,13 @@
       href: ../office/cant-install-office-on-windows-8.md
     - name: Can't use "Convert bibliography to static text"
       href: ../office/convert-bibliography-to-static-text.md
-    - name: '"Compile Error: Procedure too large"'
+    - name: "\"Compile Error: Procedure too large\""
       href: ../office/compile-error-procedure-too-large.md
     - name: Connection to a network document is lost
       href: ../office/connect-to-network-document-lost.md
     - name: Document files in Office Document Cache not deleted
       href: ../office/office-temporary-files-not-delete.md
-    - name: Edit OLE document property with Dsofile.dll 
+    - name: Edit OLE document property with Dsofile.dll
       href: ../office/dsofile.dll-allow-edit-document-property.md
     - name: Error when you install an Office program
       href: ../office/error-run-office-setup-program.md
@@ -697,13 +697,13 @@
       href: ../office/click-hyperlink-to-sso-website.md
     - name: Loss of image quality occurs in a document
       href: ../office/office-docuemnt-image-quality-loss.md
-    - name: Manage templates in Office program 
+    - name: Manage templates in Office program
       href: ../office/manage-office-program-templates.md
     - name: No Office entitlement found on device
       href: ../office/office-not-entitled-on-device.md
     - name: Office 2010 Installation failure
       href: ../office/office-installation-failure.md
-    - name: Office 2010 installation requires MSXML 
+    - name: Office 2010 installation requires MSXML
       href: ../office/office-installtion-need-msxml.md
     - name: Office 2010 Setup program not restart
       href: ../office/office-suite-setup-not-restart.md
@@ -737,7 +737,7 @@
       href: ../office/windows-installer-service-not-be-accesse.md
   - name: Office for Mac
     items:
-    - name: '"wkresources" files in Trash'
+    - name: "\"wkresources\" files in Trash"
       href: ../office-for-mac/wkresources-files-moved-to-trash.md
     - name: Can't pass the Welcome Screen in Office for Mac
       href: ../office-for-mac/office-for-mac-welcome-screen.md
@@ -751,11 +751,11 @@
       href: ../office-for-mac/office-for-mac-prompted-for-authentication.md
     - name: Office 365 Enterprise E3 setup is incomplete
       href: ../office-for-mac/o365-e3-setup-incomplete.md
-    - name: PowerPoint for Mac is closed unexpectedly 
+    - name: PowerPoint for Mac is closed unexpectedly
       href: ../office-for-mac/powerpoint-mac-closes-unexpectedly.md
   - name: OneNote
     items:
-    - name: '"Open new side note" missing from  Windows notification'
+    - name: "\"Open new side note\" missing from  Windows notification"
       href: ../onenote/open-new-side-note-missing.md
     - name: Locate Onenote notebooks
       href: ../onenote/locate-onenote-notebooks.md
@@ -769,7 +769,7 @@
       href: ../performance/office-slow-or-stop-responding.md
   - name: PowerPoint
     items:
-    - name: '"Play CD Audio Track" command is not available'
+    - name: "\"Play CD Audio Track\" command is not available"
       href: ../powerpoint/play-cd-audio-track-not-available.md
     - name: A .pps file is saved as a .pptx file
       href: ../powerpoint/pps-file-saved-as-pptx-file.md
@@ -815,7 +815,7 @@
       href: ../powerpoint/powerpoint-stops-responding.md
     - name: Shortcuts to control display of grid and guides
       href: ../powerpoint/grid-guides-keyboard-shortcuts.md
-    - name: Slide transition sounds are missing 
+    - name: Slide transition sounds are missing
       href: ../powerpoint/slide-transition-sounds-missing.md
     - name: Troubleshoot a damaged presentation
       href: ../powerpoint/damaged-presentation.md
@@ -825,7 +825,7 @@
       href: ../powerpoint/videos-listed-as-unsupported.md
   - name: Project
     items:
-    - name: '"Can not save to global.mpt" when existing Project'
+    - name: "\"Can not save to global.mpt\" when existing Project"
       href: ../project/cant-save-to-global.mpt-error.md
     - name: Calculate work and duration with resource assignment changes
       href: ../project/calculate-work-duration-assignment.md
@@ -911,7 +911,7 @@
       href: ../support/2013-versions-of-office-365.md
   - name: Visio
     items:
-    - name: '"Fit to Drawing" not working'
+    - name: "\"Fit to Drawing\" not working"
       href: ../visio/fit-to-drawing-command-not-work.md
     - name: Can't add visio drawing control
       href: ../visio/cannot-add-visio-drawing-control.md
@@ -939,9 +939,9 @@
       href: ../visio/cannot-load-visio-web-drawing.md
   - name: Word
     items:
-    - name: '"End tag" error when opening docx file'
+    - name: "\"End tag\" error when opening docx file"
       href: ../word/end-tag-error-when-open-docx.md
-    - name: '"relationship rID8 was not found" in Word'
+    - name: "\"relationship rID8 was not found\" in Word"
       href: ../word/image-part-relationship-rld8-not-found-error-microsoft-word.md
     - name: A connector doesn't move when moving a shape
       href: ../word/connector-not-move-with-shapes.md
@@ -1054,112 +1054,4 @@
     - name: You're prompted to save changes to global template
       href: ../word/save-changes-to-global-template.md
   - name: Office Developer
-    items:
-    - name: Add a button in Word
-      href: ../office-developer/add-button-in-word.md
-    - name: Automate Access using Visual C#
-      href: ../office-developer/automate-access-using-visual-c.md
-    - name: Automate create presentation using Visual Basic .NET
-      href: ../office-developer/automate-create-presentation-using-visual-basic-net.md
-    - name: Automate Excel from C++
-      href: ../office-developer/automate-excel-from-c.md
-    - name: Automate Excel from client-side VBScript
-      href: ../office-developer/automate-excel-from-client-side-vbscript.md
-    - name: Automate Excel from HTML Web page
-      href: ../office-developer/automate-excel-using-jscript.md
-    - name: Automate Excel from MFC and Visual C++ to fill data
-      href: ../office-developer/automate-excel-from-mfc-fill-data.md
-    - name: Automate Excel From Visual Basic .NET
-      href: ../office-developer/automate-excel-from-visual-basic-net.md
-    - name: Automate Excel From Visual C#.NET
-      href: ../office-developer/automate-excel-from-visual-c.md
-    - name: Automate Excel from Visual Basic
-      href: ../office-developer/automate-excel-from-visual-basic.md
-    - name: Automate Excel using Visual C# to fill data
-      href: ../office-developer/automate-excel-using-visual-c-fill-data.md
-    - name: Automate Outlook using C++ in Visual Stuido 2010
-      href: ../office-developer/automate-outlook-2010-using-c-with-mfc.md
-    - name: Automate Visio using VB .NET
-      href: ../office-developer/how-to-automate-visio-with-visual-basic-.net.md
-    - name: Automate Word create mail merge
-      href: ../office-developer/automate-word-create-mail-merge.md
-    - name: Automate Word for mail merge using Visual C#
-      href: ../office-developer/automate-word-mail-merge-using-visual-c.md
-    - name: Automate Word from VB create mail merge for mailing labels
-      href: ../office-developer/automate-word-create-mail-merge-for-mailing-labels.md
-    - name: Automate Word perform a client-side mail merge using XML
-      href: ../office-developer/automate-word-mail-merge-using-xml.md
-    - name: Automate Word perform a mail merge fro VB .NET
-      href: ../office-developer/automate-word-perform-mail-merge-from-vb-net.md
-    - name: Automate Word perform mail merge using C++ and MFC
-      href: ../office-developer/automate-word-mail-merge-using-visual-c-mfc.md
-    - name: Automate Word using Visual Basic to create files
-      href: ../office-developer/automate-word-create-file-using-visual-basic.md
-    - name: Automate Word using Visual C# to create files
-      href: ../office-developer/automate-word-create-file-using-visual-c.md
-    - name: Call Excel macros
-      href: ../office-developer/call-excel-macros.md
-    - name: Count cells number with cell color using VBA
-      href: ../office-developer/count-cells-number-with-color-using-vba.md
-    - name: Create a RealTimeData server for Excel
-      href: ../office-developer/create-realtimedata-server-in-excel.md
-    - name: Create script for Outlook Rules Wizard
-      href: ../office-developer/create-script-for-rule-wizard-in-outlook.md
-    - name: Compile Error in VBA macro
-      href: ../office-developer/compile-error-editing-vba-macro.md
-    - name: Declare the return type explicitly in 64-bit macro
-      href: ../office-developer/declare-return-type-in-64-bit-vba.md
-    - name: Display progress bar with user form in Excel
-      href: ../office-developer/display-progress-bar-with-user-form-in-excel.md
-    - name: Embed and automate documents with VB
-      href: ../office-developer/embed-automate-document-using-vb.md
-    - name: Encode attachment using Visual C# in InfoPath 2003
-      href: ../office-developer/encode-and-decode-attachment-using-visual-c-in-infopath-2003.md
-    - name: Encode attachment using Visual C# in InfoPath 2010
-      href: ../office-developer/encode-and-decode-attachment-using-visual-c-in-infopath-2010.md
-    - name: Export data in DataGrid on ASP .NET WebForm to Excel
-      href: ../office-developer/export-data-in-datagrid-on-asp.net-webform-to-excel.md
-    - name: Find Office installation path
-      href: ../office-developer/find-office-installation-path.md
-    - name: Handle events for Excel using VB .NET
-      href: ../office-developer/handle-excel-event-using-vb-net.md
-    - name: Limit of Asynchronous Programming to Object Model
-      href: ../office-developer/asynchronous-programming-to-object-model.md
-    - name: Macro delete duplicate items in Excel
-      href: ../office-developer/macro-delete-duplicate-items-in-excel.md
-    - name: Office COM add-in using Visual C# .NET
-      href: ../office-developer/office-com-add-in-using-visual-c.md
-    - name: Print comments in Visio
-      href: ../office-developer/print-comment-in-visio.md
-    - name: Retrieve macro names from Excel using VB 6.0
-      href: ../office-developer/retrieve-macro-name-in-excel-using-vb.md
-    - name: Select ranges or cells with Visual Basic
-      href: ../office-developer/select-cells-rangs-with-visual-basic.md
-    - name: Transfer data to Excel workbook using Visual C#
-      href: ../office-developer/transfer-data-to-excel-using-visual-c.md
-    - name: Transfer excel data from ADO Recordset
-      href: ../office-developer/transfer-excel-data-from-ado-recordset.md
-    - name: Turn off Visual Basic for application
-      href: ../office-developer/turn-off-visual-basic-for-application.md
-    - name: Use a class (object) from outside of VBA project
-      href: ../office-developer/set-up-vb-project-using-class.md
-    - name: Use a type library for Office from Visual C++.NET
-      href: ../office-developer/use-type-library-for-office-from-visual-c-net.md
-    - name: Use early binding and late binding in Automation
-      href: ../office-developer/binding-type-available-to-automation-clients.md
-    - name: Use Office Web Components using ASP.NET
-      href: ../office-developer/use-office-web-components-using-aps-net.md
-    - name: Use VB ActiveX for Word from Internet Explorer
-      href: ../office-developer/use-vb-activex-for-word-automation.md
-    - name: Use VB to count occurrences in Excel
-      href: ../office-developer/use-vb-count-occurrences-in-excel.md
-    - name: Use Visual C# to automate running program instance
-      href: ../office-developer/use-visual-c-automate-run-program-instance.md
-    - name: Use WebBrowser in Visual Basic to open document
-      href: ../office-developer/webbrowser-open-office-document-in-visual-basic.md
-    - name: Use WebBrowser in Visual C# to open document
-      href: ../office-developer/webbrowser-open-office-document-in-visual-c.md
-    - name: Use XML Web Service using ASP.NET in Word or Excel
-      href: ../office-developer/use-xml-web-service-in-word-or-excel.md
-    - name: Word automation to count page numbers
-      href: ../office-developer/use-word-automation-count-page-number.md
+    href: /previous-versions/office/troubleshoot/office-developer/add-button-in-word
