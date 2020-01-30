@@ -26,10 +26,6 @@ This article suggests ways in which you can diagnose and resolve issues when you
 
 ## More Information
 
-For more information about printing problems in Word, click the following article number to view the article in the Microsoft Knowledge Base: 
-
-[826862](https://support.microsoft.com/help/826862) How to troubleshoot printing problems in Word 
-
 Examples of print failure are as follows: 
  
 - You receive error messages and other messages when you try to print a file.    
