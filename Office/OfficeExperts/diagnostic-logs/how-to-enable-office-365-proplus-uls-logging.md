@@ -23,13 +23,19 @@ When you troubleshoot Microsoft Office issues, traditional log settings sometime
 
 To collect more verbose logging details, set the following registry keys:
 
-For sign-in or activation issues, add the following registry key:
+**For sign-in or activation issues, add the following registry key:**
 
-**[HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Logging]**
+[HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Logging]
+"EnableLogging"=dword:00000001
 
-**"EnableLogging"=dword:00000001**
+To enable and disable the above key automatically, download and run the following .reg files:
 
-For installation or patching issues, run the following commands to add the registry keys:
+- [Enable-Local-Logging2016](https://msdnshared.blob.core.windows.net/media/2018/06/Enable-Local-Logging2016.zip)
+- [Disable-Local-Logging2016](https://msdnshared.blob.core.windows.net/media/2018/06/Disable-Local-Logging2016.zip)
+
+Reproduce the issue and collect the logs for review. The logs are stored under %temp% for sign-in or activation issues.
+
+**For installation or patching issues, run the following commands to add the registry keys:**
 
 ```powershell
 reg add HKLM\SOFTWARE\Microsoft\ClickToRun\OverRide /v LogLevel /t REG_DWORD /d 3
@@ -41,11 +47,8 @@ reg add HKLM\SOFTWARE\Microsoft\ClickToRun\OverRide /v PipelineLogging /t REG_DW
 
 You have to restart Microsoft Office Click-to-Run Service inside Services.msc for the logging to take effect.
 
-Reproduce the issue and collect the logs for review. The logs are stored under %temp% for sign-in or activation issues. For installation or patching issues, you also have to collect the logs from %windir%\temp. Note the time stamp you do the repro so that you collect the correct logs.
+Reproduce the issue and collect the logs for review. The logs are stored under %windir%\temp and %temp% for installation or patching issues.
 
-After you collect the logs, turn off the Office ULS verbose logging setting. Otherwise, this continues to collect verbose data and use more dive space.
+**Note:** Take notice of the time stamp you do the repro so that you collect the correct logs.
 
-To enable and disable ULS logging automatically, download and run the following .reg files:
-
-- [Enable-Local-Logging2016](https://msdnshared.blob.core.windows.net/media/2018/06/Enable-Local-Logging2016.zip)
-- [Disable-Local-Logging2016](https://msdnshared.blob.core.windows.net/media/2018/06/Disable-Local-Logging2016.zip)
+After you collect the logs, turn off the Office ULS verbose logging settings. Otherwise, this continues to collect verbose data and use more dive space.
