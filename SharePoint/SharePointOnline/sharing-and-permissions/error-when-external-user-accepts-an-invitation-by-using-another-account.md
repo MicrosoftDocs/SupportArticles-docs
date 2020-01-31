@@ -202,7 +202,7 @@ Next, you have to remove the account from Azure Active Directory. To do this, fo
    Remove-MsolUser -RemoveFromRecycleBin -UserPrincipalName 'jondoe_contoso.com#EXT#@yourdomaint.onmicrosoft.com'
    ```
 
-   **NOTE** Replace **jondoe_contoso.com#EXT#@yourdomain.onmicrosoft.com** with the specific user in your scenario.
+   **NOTE** Replace **jondoe_contoso.com#EXT#\@yourdomain.onmicrosoft.com** with the specific user in your scenario.
 
 ### Clear the browser cache
 
