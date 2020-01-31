@@ -23,11 +23,11 @@ search.appverid: MET150
 
 > [!NOTE]
 > Previously, this article referenced Google Chrome Beta version 79. Google is scheduled to release a cookie behavior in Chrome Stable version 80.
-> Chrome has updated their [rollout timeline](https://www.chromium.org/updates/same-site) to indicate that this change will be rolled out in Chrome 80 starting the week of February 17th. Chrome 80 will ship on February 4th with this feature disabled by default, and be enabled in a ramp starting February 17th. 
+> Chrome has updated their [rollout timeline](https://www.chromium.org/updates/same-site) to indicate that this change will be rolled out in Chrome 80 starting the week of February 17. Chrome 80 will ship on February 4 and have this feature disabled by default. The feature will be enabled on a graduated schedule starting February 17. 
 
 ## Summary
 
-The Stable release of the Google Chrome web browser (build 80, scheduled for release on February 4, 2020) will also roll out a change in the way cookies work by default, starting the week of February 17th. Although the change is intended to discourage malicious cookie tracking and protect web applications, it's also expected to affect many applications and services that are based on open standards. This includes Microsoft cloud services.
+The Stable release of the Google Chrome web browser (build 80, scheduled for release on February 4, 2020) will also roll out a change in the manner in which cookies work by default, starting the week of February 17. Although the change is intended to discourage malicious cookie tracking and protect web applications, it's also expected to affect many applications and services that are based on open standards. This includes Microsoft cloud services.
 
 Enterprise customers are encouraged to make sure that they're prepared for the change and are ready to implement mitigations by testing their applications (whether custom-developed or purchased). For more information, see the "[Recommendations](#recommendations)" section.
 
