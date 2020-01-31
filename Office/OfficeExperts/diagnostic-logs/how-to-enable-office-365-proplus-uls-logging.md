@@ -50,9 +50,7 @@ reg add HKLM\SOFTWARE\Microsoft\ClickToRun\OverRide /v PipelineLogging /t REG_DW
 ```
 Restart the Microsoft Office Click-to-Run Service inside Services.msc for the logging to take effect.
 
-### Reproduce the issue
-
-After you have added the appropriate registry keys, reproduce the issue and collect the logs for review. The logs are stored under %windir%\temp and %temp% for installation or patching issues.
+Reproduce the issue and collect the logs for review. The logs are stored under %windir%\temp and %temp% for installation or patching issues.
 
 > [!NOTE]
 > Note the time stamp when you run the repro so that you collect the correct logs.
