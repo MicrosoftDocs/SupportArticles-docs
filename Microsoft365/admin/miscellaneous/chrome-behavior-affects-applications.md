@@ -27,7 +27,7 @@ search.appverid: MET150
 
 ## Summary
 
-The Stable release of the Google Chrome web browser (build 80, scheduled for release on February 4, 2020) will also roll out a change in the manner in which cookies work by default, starting the week of February 17. Although the change is intended to discourage malicious cookie tracking and protect web applications, it's also expected to affect many applications and services that are based on open standards. This includes Microsoft cloud services.
+The Stable release of the Google Chrome web browser (build 80, scheduled for release on February 4, 2020) will roll out a change to the default cookie behavior starting the week of February 17. Although the change is intended to discourage malicious cookie tracking and protect web applications, it's also expected to affect many applications and services that are based on open standards. This includes Microsoft cloud services.
 
 Enterprise customers are encouraged to make sure that they're prepared for the change and are ready to implement mitigations by testing their applications (whether custom-developed or purchased). For more information, see the "[Recommendations](#recommendations)" section.
 
