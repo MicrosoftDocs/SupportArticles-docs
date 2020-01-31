@@ -23,14 +23,15 @@ search.appverid: MET150
 
 > [!NOTE]
 > Previously, this article referenced Google Chrome Beta version 79. Google is scheduled to release a cookie behavior in Chrome Stable version 80.
+> Chrome has updated their [rollout timeline](https://www.chromium.org/updates/same-site) to indicate that this change will be rolled out in Chrome 80 starting the week of February 17th. Chrome 80 will ship on February 4th with this feature disabled by default, and be enabled in a ramp starting February 17th. 
 
 ## Summary
 
-The Stable release of the Google Chrome web browser (build 80, scheduled for release on February 4, 2020) features a change in how cookies are handled. Although the change is intended to discourage malicious cookie tracking, it's also expected to severely affect many applications and services that are based on open standards. This includes Microsoft cloud services.
+The Stable release of the Google Chrome web browser (build 80, scheduled for release on February 4, 2020) will also roll out a change in the way cookies work by default, starting the week of February 17th. Although the change is intended to discourage malicious cookie tracking and protect web applications, it's also expected to affect many applications and services that are based on open standards. This includes Microsoft cloud services.
 
 Enterprise customers are encouraged to make sure that they're prepared for the change and are ready to implement mitigations by testing their applications (whether custom-developed or purchased). For more information, see the "[Recommendations](#recommendations)" section.
 
-Microsoft is committed to addressing this change in behavior in its products and services before the February 4, 2020, rollout date. This article discusses the guidance from both Microsoft and Google for installing the various updates that are required for products and libraries, and the guidance for testing and preparation. However, it's equally important that you test your own applications against this change in Chrome behavior and prepare your own websites and web applications as necessary.
+Microsoft is committed to addressing this change in behavior in its products and services before the Chrome 80 release date. This article discusses the guidance from both Microsoft and Google for installing the various updates that are required for products and libraries, and the guidance for testing and preparation. However, it's equally important that you test your own applications against this change in Chrome behavior and prepare your own websites and web applications as necessary.
 
 ## Effect on customer applications
 
