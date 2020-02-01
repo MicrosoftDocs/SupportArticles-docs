@@ -41,15 +41,15 @@ You should thoroughly test all applications by using Chrome Beta version 80 to v
 
 Chrome versions 78 and 79 betas have an improvement that delays the **SameSite:Lax** attribute enforcement for two minutes. However, using these versions for testing may mask other problems. Therefore, we recommend that you test by using Chrome version 80 by having specific flags enabled. Doing this can, at least, help you discover the effect so that you can determine your best plan. For more information, see the "[Testing guidelines](#testing-guidelines)" section.
 
-Microsoft Edge browser on Chromium is not affected by Chrome SameSite changes. You can see more information [here](https://docs.microsoft.com/en-us/microsoft-edge/web-platform/site-impacting-changes).
+Microsoft Edge browser on Chromium is not affected by Chrome SameSite changes. You can see more information [here](https://docs.microsoft.com/microsoft-edge/web-platform/site-impacting-changes).
 
 ## Recommendations
 
 Microsoft customers who use Active Directory Federation Services (AD FS) or Web Application Proxy must deploy one of the following Windows Server updates:
 
- - Windows Server 2019: [4534273](https://support.microsoft.com/en-us/help/4534273/windows-10-update-kb4534273)
- - Windows Server 2016: [4534271](https://support.microsoft.com/en-us/help/4534271/windows-10-update-kb4534271)
- - Windows Server 2012 R2: [4534309](https://support.microsoft.com/en-us/help/4534309/windows-8-1-kb4534309)
+ - Windows Server 2019: [4534273](https://support.microsoft.com/help/4534273/windows-10-update-kb4534273)
+ - Windows Server 2016: [4534271](https://support.microsoft.com/help/4534271/windows-10-update-kb4534271)
+ - Windows Server 2012 R2: [4534309](https://support.microsoft.com/help/4534309/windows-8-1-kb4534309)
 
 The following Microsoft server or client products must also be updated. The updates will be added to this article when they're available. We recommend that you revisit this article regularly for the latest updates.
 

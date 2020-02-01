@@ -3,7 +3,7 @@ title: How to enable Office 365 ProPlus ULS logging
 description: There are times during troubleshooting an Office issue when the traditional log settings are not gathering enough information. This article describes how to collect more verbose logging details. 
 author: todmccoy
 manager: dcscontentpm
-ms.date 01/31/2020
+ms.date: 01/31/2020
 localization_priority: Normal
 search.appverid: 
 - MET150
@@ -50,11 +50,9 @@ reg add HKLM\SOFTWARE\Microsoft\ClickToRun\OverRide /v PipelineLogging /t REG_DW
 ```
 Restart the Microsoft Office Click-to-Run Service inside Services.msc for the logging to take effect.
 
-### Reproduce the issue
-
-After you have added the appropriate registry keys, reproduce the issue and collect the logs for review. The logs are stored under %windir%\temp and %temp% for installation or patching issues.
+Reproduce the issue and collect the logs for review. The logs are stored under %windir%\temp and %temp% for installation or patching issues.
 
 > [!NOTE]
-> Note the time stamp when you run the repro so that you collect the correct logs.
+> Note the time stamp when you run the repro so that you can collect the correct logs.
 
 After you collect the logs, turn off the Office ULS verbose logging settings. Otherwise, this continues to collect verbose data and use more dive space.
