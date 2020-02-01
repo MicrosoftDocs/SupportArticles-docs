@@ -3,7 +3,7 @@ title: How to enable Office 365 ProPlus ULS logging
 description: There are times during troubleshooting an Office issue when the traditional log settings are not gathering enough information. This article describes how to collect more verbose logging details. 
 author: todmccoy
 manager: dcscontentpm
-ms.date 01/31/2020
+ms.date: 01/31/2020
 localization_priority: Normal
 search.appverid: 
 - MET150
