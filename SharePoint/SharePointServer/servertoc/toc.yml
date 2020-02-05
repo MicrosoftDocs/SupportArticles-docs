@@ -83,6 +83,8 @@
       href: ../lists-and-libraries/cant-save-file-in-document-library.md
     - name: Content Organizer doesn't comply with specified interval
       href: ../../SharePointOnline/lists-and-libraries/content-organizer-not-comply-with-interval.md
+    - name: Error when view or edit in Word or PowerPoint Online
+      href: ../../SharePointOnline/lists-and-libraries/error-when-view-or-edit-in-browser.md
     - name: Feature id isn't assigned when saving a list as a template
       href: ../lists-and-libraries/feature-id-not-assigned-when-saving-a-list-as-template.md
     - name: IFilter alternative to the native PDF parser
@@ -125,6 +127,8 @@
       href: ../../SharePointOnline/Search/content-type-icon-not-display.md
     - name: Incomplete search results for choice type columns with multiple values
       href: ../search/incomplete-search-results-for-choice-type-columns-with-multiple-values.md
+    - name: Near-duplicate items aren't listed in SharePoint Online or SharePoint Server 2013 on-premises search results
+      href: ../../SharePointOnline/search/near-duplicate-items-are-not-listed-in-search-results.md
     - name: Privileges don't exist in service account configuration
       href: ../search/privilege-not-exist-service-account-configuration.md
   - name: Security

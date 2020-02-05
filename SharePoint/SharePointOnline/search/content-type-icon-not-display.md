@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - SharePoint Online
+- SharePoint Server
 ---
 
 # The document preview and content type icon aren't displayed when you change the search result types display template

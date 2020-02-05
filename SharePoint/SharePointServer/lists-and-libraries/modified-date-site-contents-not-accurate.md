@@ -13,9 +13,9 @@ search.appverid:
 - MET150
 appliesto:
 - SharePoint Online 
-- SharePoint 2019
-- SharePoint 2016
-- SharePoint 2013
+- SharePoint Server 2019
+- SharePoint Server 2016
+- SharePoint Server 2013
 ms.custom: 
 - CI 108026
 - CSSTroubleshoot
