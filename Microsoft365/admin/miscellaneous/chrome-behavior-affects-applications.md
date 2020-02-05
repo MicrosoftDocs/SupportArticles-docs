@@ -56,7 +56,8 @@ The following Microsoft server or client products must also be updated. The upda
 - Exchange Server - March update
 - Sharepoint Server 2019 – February PU
 - Sharepoint Server 2016 – March PU
-- Skype for Business client
+-  Skype for Business Server 2019 – March CU (CU 3) 
+- Skype for Business Server 2015 – April CU (CU 11)
 
 You must test your applications for all the following scenarios, and determine the appropriate plan based on the outcome of the tests:
 
