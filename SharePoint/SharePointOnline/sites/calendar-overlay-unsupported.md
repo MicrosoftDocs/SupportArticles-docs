@@ -13,6 +13,7 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
+- SharePoint Server
 ---
 
 # The "HTTP request is unauthorized" error in a SharePoint Online or SharePoint Server calendar after you configure a calendar overlay to Exchange Online
