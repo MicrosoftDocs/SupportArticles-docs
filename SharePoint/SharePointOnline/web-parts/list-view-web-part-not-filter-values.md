@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - SharePoint Online
+- SharePoint Server
 ---
 
 # A list view Web Part for a tasks list doesn't filter values from a connected Web Part

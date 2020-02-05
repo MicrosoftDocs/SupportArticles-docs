@@ -21,6 +21,8 @@
       href: ../administration/information-about-uls-log-access.md
     - name: Presence information doesn't show
       href: ../administration/presence-information-fails-showing.md
+    - name: Remove assembly reference from Sandbox solution
+      href: ../../SharePointServer/administration/change-sandbox-solution.md
     - name: Third-party tools changes support
       href: ../administration/third-party-tools-change-support.md
     - name: TLS 1.0 and 1.1 deprecation for Office 365
@@ -75,6 +77,8 @@
       href: ../lists-and-libraries/film-reel-icon-video-content.md
     - name: Can't check in multiple items in a document library
       href: ../lists-and-libraries/cannot-check-in-multiple-items.md
+    - name: Can't open documents in a local client from Chrome
+      href: ../../SharePointServer/lists-and-libraries/cant-open-sp-documents-from-chrome.md
     - name: Can't sync files or folders
       href: ../lists-and-libraries/cannot-sync-files-folders.md
     - name: Changes to default versioning setting for document libraries
@@ -253,6 +257,8 @@
       href: ../Sites/save-site-as-template.md
     - name: Issue with "New Navigation Link" or "Save site as template" option
       href: ../Sites/new-navigation-link-save-site-as-template.md
+    - name: Modified dates on the SharePoint site contents page are not accurate
+      href: ../../SharePointServer/lists-and-libraries/modified-date-site-contents-not-accurate.md
     - name: Public websites is discountinued
       href: ../Sites/public-websites-be-discontinued.md
     - name: Rich Text fields don't respond
@@ -265,10 +271,12 @@
       href: ../sites/office-365-top-navigation-bar-displays-either-sites-or-newsfeed.md
     - name: Troubleshooting guide to OneDrive for Business sites stopped at provisioning stage
       href: ../sites/troubleshooting-guide-for-sites-stopped-at-provisioning.md
-  - name: Sync
+  - name: Synchronization
     items:
     - name: A synchronized file is moved to the recycle bin
       href: ../Sync/synced-file-moved-to-recycle-bin.md
+    - name: SharePoint Workspace doesn't always sync automatically
+      href: ../../SharePointServer/sync/sharepoint-workspace-not-sync-with-online.md
   - name: Web Parts
     items:
     - name: A list view Web Part for a tasks list doesn't filter values
@@ -277,6 +285,8 @@
       href: ../Web-parts/wspr-viewer-web-part-unsupported.md
     - name: An online Web Part doesn't display
       href: ../Web-parts/fails-displaying-web-part-including-xslt-code.md
+    - name: Issue on a site page with pages library web part
+      href: ../../SharePointServer/web-parts/sorry-something-went-wrong-error-on-site-page-with-pages-library-web-part.md
     - name: Issue when changing Summary Links Web Part
       href: ../Web-parts/change-summary-link-web-part.md
     - name: Non-CDN-enabled Picture Library Slideshow web part not working
