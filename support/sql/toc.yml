@@ -1,0 +1,11 @@
+# - name: Support articles for SQL Server
+#   items:
+
+- name: Welcome to SQL Server Support
+  href: welcome-support-sql-server.md
+
+- name: End of support for SQL Server 2008
+  href: end-support-sql-server-2008.md
+
+- name: Resource Monitor in nonyielding conditions
+  href: resource-monitor-nonyielding-condition.md

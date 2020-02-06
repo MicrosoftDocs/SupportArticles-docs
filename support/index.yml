@@ -1,0 +1,38 @@
+### YamlMime:Hub
+title: Microsoft Support articles
+
+summary: Find support articles about work-arounds, hotfixes, and other knowledge base (KB) information, for several commercial server products from Microsoft.
+
+# TODO - Identify a generic Microsoft brand code, from Kurtis. (Gene)
+brand: sql-server
+
+
+metadata:
+   title: Support articles | Microsoft Docs
+   description: Find support articles about work-arounds, hotfixes, and other knowledge base (KB) information, for several commercial server products from Microsoft.
+   ms.topic: hub-page
+
+
+# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+# highlightedContent:
+
+
+productDirectory:
+  items:
+
+  - title: SQL Server 
+    imageSrc: media/hub-landing/database-design.svg
+    links:
+      - url: https://docs.microsoft.com/support/sql/
+        text: SQL Server
+
+  - title: Visual Studio (under construction)
+    imageSrc: media/hub-landing/vs-ide-2019.svg
+
+
+# conceptualContent:
+
+
+# additionalContent: 
+
