@@ -26,7 +26,7 @@ appliesto:
 
 ## Symptoms
 
-> [NOTE]
+> [!NOTE]
 > **This article only addresses the crash scenario where mso30win32client.dll is the module name in a crash signature.**
 >
 > For other scenarios, see the following articles:
