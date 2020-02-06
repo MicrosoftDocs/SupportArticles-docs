@@ -5,6 +5,8 @@
     items:
     - name: 401 error when Graph API access OneDrive data
       href: ../lists-and-libraries/401-error-when-using-graph-api-to-access-data.md
+    - name: “Can’t open online-only file” error when opening a file in OneDrive
+    - href: ../sync/cant-open-online-file.md
   - name: Security
     items:
     - name: There is a problem with your account when opening documents
