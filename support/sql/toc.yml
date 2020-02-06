@@ -4,6 +4,9 @@
 - name: Welcome to SQL Server Support
   href: welcome-support-sql-server.md
 
+- name: (Back up to Support hub page)
+  href: ../index.yml
+
 - name: End of support for SQL Server 2008
   href: end-support-sql-server-2008.md
 

@@ -10,3 +10,7 @@ ms.date: 02/05/2020
 The articles in the table of contents (TOC) provide support for issues and mitigations for Microsoft SQL Server and closely related products.
 
 Many of these Support articles are what Microsoft calls Knowledge Base (KB) articles.
+
+&nbsp;
+
+- [!INCLUDE[back-up-to-support-hub-page](../includes/back-up-to-support-hub-page.md)]

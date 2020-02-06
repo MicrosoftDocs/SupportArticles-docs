@@ -24,7 +24,7 @@ productDirectory:
   - title: SQL Server 
     imageSrc: media/hub-landing/database-design.svg
     links:
-      - url: https://docs.microsoft.com/support/sql/welcome-support-sql-server
+      - url: sql/welcome-support-sql-server.md
         text: SQL Server
 
   - title: Visual Studio (under construction)
