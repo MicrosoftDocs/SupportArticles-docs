@@ -13,6 +13,7 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
+- SharePoint Server
 ---
 
 # Information about dragging files into document libraries in SharePoint Server 2013 or SharePoint Online by using a web browser

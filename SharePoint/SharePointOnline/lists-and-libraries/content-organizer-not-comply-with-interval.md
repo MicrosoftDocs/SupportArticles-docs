@@ -13,6 +13,7 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
+- SharePoint Server
 ---
 
 # Content Organizer doesn't comply with specified interval for sending alerts to rule managers

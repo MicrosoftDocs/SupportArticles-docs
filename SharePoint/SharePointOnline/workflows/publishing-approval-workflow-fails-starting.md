@@ -13,6 +13,7 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
+- SharePoint Server
 ---
 
 # Publishing Approval workflow doesn't automatically start in SharePoint Online or in SharePoint Server on-premises

@@ -13,6 +13,7 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
+- SharePoint Server
 ---
 
 # InfoPath Forms Services differences between SharePoint Online (DvNext/MT) and SharePoint On-Premises

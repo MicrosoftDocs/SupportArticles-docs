@@ -15,6 +15,7 @@ appliesto:
 - SharePoint Server 2016
 - SharePoint Server 2013
 - SharePoint Server 2010
+- SharePoint Online
 ---
 
 # User accounts migrated with their SID history across forests are not resolved in SharePoint
