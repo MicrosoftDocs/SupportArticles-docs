@@ -33,8 +33,8 @@ Customers who use these versions of SQL Server products and services should take
 
 The following table concerns products for SQL Server 2008 and SQL Server 2008 R2. The table shows the dates on which each product will reach, or has reached, the end of its support by Microsoft:
 
-| Product | End dates of [Extended Support](https://support.microsoft.com/help/14085) |
-| :------ | :------------------------------------------------------------------------ |
+| Product | End dates of <br/>[Extended Support](https://support.microsoft.com/help/14085) |
+| :------ | :----------------------------------------------------------------------------- |
 | Microsoft SQL Server 2008 Developer     | 7/9/2019 |
 | Microsoft SQL Server 2008 Enterprise    | 7/9/2019 |
 | Microsoft SQL Server 2008 Express       | 7/9/2019 |

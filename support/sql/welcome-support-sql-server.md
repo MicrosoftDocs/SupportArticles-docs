@@ -13,4 +13,4 @@ Many of these Support articles are what Microsoft calls Knowledge Base (KB) arti
 
 &nbsp;
 
-- [!INCLUDE[back-up-to-support-hub-page](../includes/back-up-to-support-hub-page.md)]
+[!INCLUDE[back-up-to-support-hub-page](../includes/back-up-to-support-hub-page.md)]
