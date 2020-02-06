@@ -1,1 +1,0 @@
-# Welcome to support1-docset!

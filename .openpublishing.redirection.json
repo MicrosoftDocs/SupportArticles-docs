@@ -5,11 +5,6 @@
       "source_path": "support/sql/index.md",
       "redirect_url": "/support/sql/welcome-support-sql-server",
       "redirect_document_id": false
-    },
-    {
-      "source_path": "support/sql/index.yml",
-      "redirect_url": "/support/sql/welcome-support-sql-server",
-      "redirect_document_id": false
     }
 
   ]
