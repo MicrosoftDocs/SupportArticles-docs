@@ -1,3 +1,13 @@
 - name: Docs
   tocHref: /
   topicHref: /
+  items:
+
+  - name: Support
+    tocHref: /support/
+    topicHref: /support/index
+    items:
+
+    - name: SQL
+      tocHref: /support/sql/
+      topicHref: /support/sql/index
