@@ -72,7 +72,7 @@ Starting with the following service packs, the non-yielding Resource Monitor mes
 
 The new message will resemble the following example:
 
-> `Resource Monitor (0x9b0) Worker 0x0000000003A2C1C0 appears to be non-yielding on Node Node_#. Memory freed: 0 KB. Last wait: \> lastwaittype. Last clerk: type clerk_type, name clerk_name. Approx CPU Used: kernel 0 ms, user 0 ms, Interval: Interval_value.`
+> `Resource Monitor (0x9b0) Worker 0x0000000003A2C1C0 appears to be non-yielding on Node Node_#. Memory freed: 0 KB. Last wait: > lastwaittype. Last clerk: type clerk_type, name clerk_name. Approx CPU Used: kernel 0 ms, user 0 ms, Interval: Interval_value.`
 
 The following are descriptions of the various fields that are used in this message:
 
