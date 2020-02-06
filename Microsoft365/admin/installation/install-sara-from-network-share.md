@@ -1,7 +1,7 @@
 ---
 title: Install and maintain SaRA tool from a network share
 description: Learn how to install SaRA from a network share and update the SaRA files so that SaRA installations use the latest files.
-author: MaryQiu1987
+author: todmccoy
 ms.author: v-maqiu
 manager: dcscontentpm 
 audience: ITPro 
@@ -78,6 +78,7 @@ The following table provides the versions of SaRA that were made available on th
 
 |Release date|SaRA version|
 |--------|--------|
+|February 5, 2020|17.00.4163.010|
 |January 14, 2020|17.00.4058.000|
 |December 9, 2019|17.00.3891.009|
 |December 2, 2019|17.00.3711.012|
