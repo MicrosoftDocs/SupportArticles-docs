@@ -9,6 +9,8 @@
       href: ../administration/call-to-excel-services-failed.md
     - name: '"cannot locate a server" error in PowerPivot'
       href: ../administration/cannot-locate-a-server-to-load-workbook-data-model-in-powerpivot.md
+    - name: Can't open Office files from SharePoint 
+      href: ../administration/cant-open-office-files.md
     - name: '"Retrieving the COM class factory for component failed 800703fa" in Excel Services and PowerPivot'
       href: ../administration/retrieving-com-class-factory-for-component-failed.md
     - name: '"SetAuthContext need to be run as sysadmin" error in PowerPivot'
