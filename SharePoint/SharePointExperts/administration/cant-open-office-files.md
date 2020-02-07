@@ -1,5 +1,5 @@
 ---
-title: Can't open Office files from SharePoint
+title: Can't open Office files from SharePoint Online
 ms.author: v-todmc
 author: todmccoy
 manager: dcscontentpm
@@ -17,10 +17,10 @@ ms.custom:
 - CI 113496
 - CSSTroubleshoot 
 ms.reviewer: salarson
-description: "What to do if you can't open Office files from a SharePoint repository."
+description: "What to do if you can't open Office files from a SharePoint Online repository."
 ---
 
-# Can't open Office files from SharePoint
+# Can't open Office files from SharePoint Online
 
 ## Summary
 
