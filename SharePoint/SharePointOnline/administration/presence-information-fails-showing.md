@@ -14,6 +14,7 @@ ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Server 2019
 - SharePoint Server 2016
+- SharePoint Online
 ---
 
 # Presence information does not show on a SharePoint page
