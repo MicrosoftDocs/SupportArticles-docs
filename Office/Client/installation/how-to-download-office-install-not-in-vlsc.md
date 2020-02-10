@@ -1,23 +1,23 @@
 ---
-title: "Title goes here"
+title: How to download and run Office 2019 installation files not in VLSC
 ms.author: v-todmc
 author: todmccoy
 manager: dcscontentpm
-ms.date: 2/5/2019
-audience: Admin|ITPro|Developer
+ms.date: 02/10/2020
+audience: Admin
 ms.topic: article
-ms.service OR ms.prod: see https://docsmetadatatool.azurewebsites.net/allowlists
+ms.prod: office
 localization_priority: Normal
 search.appverid:
 - SPO160
 - MET150
 appliesto:
-- SharePoint Online 
+- Office
 ms.custom: 
-- CI ID
+- CI 113921
 - CSSTroubleshoot 
-ms.reviewer: MS aliases for tech reviewers and CI requestor, without "@microsoft.com".  
-description: "How to resolve the error "Virus Found" in SharePoint Server 2013 when the antivirus scanner is unavailable ."
+ms.reviewer: joselr
+description: Describes how to install Office with files that are not in VLSC or with a product key. 
 ---
 
 # How to download and run Office 2019 installation files not in VLSC
