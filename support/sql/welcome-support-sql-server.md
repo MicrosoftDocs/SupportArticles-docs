@@ -10,8 +10,8 @@ ms.date: 02/10/2020
 
 The articles in the table of contents (TOC) provide support for Microsoft SQL Server and closely related products. The articles discuss items such as the following:
 
-- The precise meaning of a particular error message mean. And what you can do to solve the problem.
-- Strategies for identifying why your SQL Server is not performing at the high speed you are used to.
+- The precise meaning of a particular error message. And what you can do to solve the problem.
+- Strategies for identifying why the speed performance of your SQL Server might have decreased recently after application updates.
 - Information about available service packs or cumulative updates that you can install.
 - Techniques for solving data problems, such as how to remove duplicate rows from a table.
 - And much more.
