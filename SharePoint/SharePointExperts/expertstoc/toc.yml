@@ -45,7 +45,7 @@
       href: ../administration/powerpivot-scheduled-data-refresh-fails.md
     - name: Some Office files open in read-only mode in SharePoint
       href: ../administration/files-open-in-read-only-mode.md
-    - name: Unable to delete files
+    - name: Unable to delete items in SharePoint and OneDrive
       href: ../administration/unable-to-delete-files.md
   - name: Lists and libraries
     items:
