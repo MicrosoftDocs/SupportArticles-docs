@@ -1,5 +1,6 @@
 {
   "build": {
+
     "content": [
       {
         "files": [
@@ -20,6 +21,7 @@
         ]
       }
     ],
+
     "resource": [
       {
         "files": [
@@ -36,16 +38,63 @@
         ]
       }
     ],
+
     "overwrite": [],
     "externalReference": [],
+
     "globalMetadata": {
       "breadcrumb_path": "/support/breadcrumb/toc.json",
       "extendBreadcrumb": true,
       "feedback_system": "None"
     },
-    "fileMetadata": {},
+
+    "fileMetadata": {
+
+      "layout":{
+        "**/index.yml": "LandingPage"
+      },
+
+      "manager": {
+        "**/*.md": "ramakoni"
+      },
+      "audience": {
+        "**/*.md": "itpro"
+      },
+      "author": {
+        "**/*.md": "ramakoni1"
+      },
+      "ms.author": {
+        "**/*.md": "ramakoni"
+      },
+      "ms.localizationpriority": {
+        "**/*.md": "Normal"
+      },
+      "ms.reviewer": {
+        "**/*.md": "DEV_Triage, DaleChe, RamaKoni, DelHan, SureshKa, SueHar"
+      },
+      "ms.topic": {
+        "**/*.md": "kb-support"
+      },
+
+
+
+      "ms.prod": {
+        "sql/**/*.md": "sql"
+      },
+      "ms.technology": {
+        "sql/**/*.md": ""
+      },
+
+
+      "titleSuffix": {
+        "sql/**/*.md": "SQL Server"
+      }
+
+    },
+
     "template": [],
     "dest": "support1-docset",
     "markdownEngineName": "markdig"
+
   }
 }

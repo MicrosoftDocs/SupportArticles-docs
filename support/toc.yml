@@ -1,0 +1,5 @@
+- name: Index
+  href: index.yml
+
+- name: SQL Server support
+  href: sql/welcome-support-sql-server.md
