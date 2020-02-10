@@ -48,7 +48,7 @@ Note: The screenshots below are examples that may not match your own experience.
 ![Select Save As. ](../media/how-to-download-install-2.png)
 4. Create a new folder for the file. (The name of the folder is irrelevant.)
 ![Create a new folder. ](../media/how-to-download-install-3.png)
-5. Double click the .EXE file.
+5. Double click the .EXE file.<br/>
 ![Double click the executable file.](../media/how-to-download-install-4.png)
 6. A pop up window will display the Microsoft Software License Terms. Check the box and select Continue.
 ![Accept the Microsoft Software License Terms.](../media/how-to-download-install-5.png)
@@ -59,7 +59,7 @@ Note: The screenshots below are examples that may not match your own experience.
 
 8. Under Create a new configuration, select Create.
 ![Select Create.](../media/how-to-download-install-6.png)
-9. Under Products and releases, select 32-bit.
+9. Under Products and releases, select 32-bit.<br/>
 ![Select the 32-bit option.](../media/how-to-download-install-7.png)
 10. In the next screen, select the product or app that you want to deploy.
 ![Select the product or app you want to deploy. ](../media/how-to-download-install-8.png)
@@ -76,7 +76,7 @@ Note: The screenshots below are examples that may not match your own experience.
 ![Enter your name or your company's name.](../media/how-to-download-install-14.png)
 16. Under Application preferences, select Finish.
 ![Select Finish. ](../media/how-to-download-install-15.png)
-17. Select Export in the upper-right corner of the page.
+17. Select Export in the upper-right corner of the page.<br/>
 ![Select Export.](../media/how-to-download-install-16.png)
 18. In the File Name text box, type “Configuration” (if it does not already show this) and then select Save as to save it to the folder you created.
     > [!NOTE]
@@ -101,7 +101,7 @@ Note: The screenshots below are examples that may not match your own experience.
 
     ![Enter the command into the command line.](../media/how-to-download-install-24.png)
 
-23. The Office installation will start.
+23. The Office installation will start.<br/>
 ![The installation will start. ](../media/how-to-download-install-25.png)
 ![Office splash screen.](../media/how-to-download-install-26.png)
  
@@ -114,10 +114,10 @@ If automatic activation did not work, you can manually activate your software by
 1. Open a Word, Excel, or PowerPoint file. Select File. 
 ![Open an Office program.](../media/how-to-download-install-27.png)
  
-2. Select Help or Account. 
+2. Select Help or Account. <br/>
 ![Select Help or Account.](../media/how-to-download-install-28.png)
 3. Select Change Product Key. 
 ![Select Change Product Key.](../media/how-to-download-install-29.png)
-4. Enter the product key in the field box and then select Install.
+4. Enter the product key in the field box and then select Install.<br/>
 ![Enter the product key.](../media/how-to-download-install-30.png)
 The Office installation will begin. 
