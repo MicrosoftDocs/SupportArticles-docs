@@ -45,6 +45,8 @@
       href: ../administration/powerpivot-scheduled-data-refresh-fails.md
     - name: Some Office files open in read-only mode in SharePoint
       href: ../administration/files-open-in-read-only-mode.md
+    - name: Unable to delete files
+      href: ../administration/unable-to-delete-files.md
   - name: Lists and libraries
     items:
     - name: '"You will need a new app to open this ms-visio" when opening Visio files'
