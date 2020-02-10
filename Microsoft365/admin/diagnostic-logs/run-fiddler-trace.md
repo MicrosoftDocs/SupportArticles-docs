@@ -28,7 +28,7 @@ Fiddler is a third-party (non-Microsoft) web debugging proxy that logs all HTTP(
 
 To install Microsoft Support and Recovery Assistant (SaRA), follow these steps:
 
-1. Go to the [SaRA Setup](https://aka.ms/SaRASetup).
+1. Go to the [SaRA Assisted Setup](https://aka.ms/SaRA-Assisted).
 2. When prompted by your browser, select **Run**.
 3. In the "Do you want to install this application?" window, select **Install**.
 
