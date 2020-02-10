@@ -9,5 +9,5 @@
     items:
 
     - name: SQL
-      tocHref: /support/sql/
-      topicHref: /support/sql/
+      tocHref: /support/sql/index.md
+      topicHref: /support/sql/welcome-support-sql-server
