@@ -8,11 +8,11 @@ ms.date: 02/10/2020
 ---
 # End of support for SQL Server 2008 and SQL Server 2008 R2
 
+This article discusses the end of support for SQL Server 2008.
+
 _Original product version:_ &nbsp; 2008  
 _Original KB date:_ &nbsp; 07/31/2018  
 _Original KB number:_ &nbsp; 4456242
-
-This article discusses the end of support for SQL Server 2008.
 
 ## Summary
 
