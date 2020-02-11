@@ -25,7 +25,5 @@
       href: ./teams-onenote-integration/issue-access-notebook.md
   - name: Sign-in
     items:
-    - name: User with EDU or F1 license can't sign in to Teams
-      href: ./teams-sign-in/office-365-accounts-cannot-sign-in.md
     - name: Stuck in login loop in Edge or Internet Explorer
       href: ./teams-sign-in/sign-in-loop.md
