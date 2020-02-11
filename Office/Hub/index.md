@@ -5,4 +5,4 @@ title: Office client Support
 description: Office client Support
 ---
 
-[!INCLUDE [support](../../common/Office/includes/troubleshoot.yml)]
+[!INCLUDE [support](../../common/Office/includes/troubleshoot.md)]
