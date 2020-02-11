@@ -7,4 +7,4 @@ ms.author: v-six
 ms.prod: exchange-server-it-pro
 ---
 
-[!INCLUDE [support](../../common/Office/includes/troubleshoot.md)]
+[!INCLUDE [support](../../common/Office/includes/troubleshoot.yml)]
