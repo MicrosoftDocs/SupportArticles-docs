@@ -47,17 +47,25 @@ Microsoft Edge browser on Chromium (version 80) will not be affected by these Sa
 
 Microsoft customers who use Active Directory Federation Services (AD FS) or Web Application Proxy must deploy one of the following Windows Server updates:
 
- - Windows Server 2019: [4534273](https://support.microsoft.com/help/4534273/windows-10-update-kb4534273)
- - Windows Server 2016: [4534271](https://support.microsoft.com/help/4534271/windows-10-update-kb4534271)
- - Windows Server 2012 R2: [4534309](https://support.microsoft.com/help/4534309/windows-8-1-kb4534309)
+|**Product**|**KB Number**|**Release Date**|
+|:-----|:-----|:-----|
+Windows Server 2019|[KB 4534273](https://support.microsoft.com/help/4534273/windows-10-update-kb4534273)|January 14, 2020|
+|Windows Server 2016|[KB 4534271](https://support.microsoft.com/help/4534271/windows-10-update-kb4534271)|January 14, 2020|
+Windows Server 2012 R2|[KB 4534309](https://support.microsoft.com/help/4534309/windows-8-1-kb4534309)|January 14, 2020|
 
 The following Microsoft server or client products must also be updated. The updates will be added to this article when they're available. We recommend that you revisit this article regularly for the latest updates.
 
-- Exchange Server - March update
-- Sharepoint Server 2019 – February PU
-- Sharepoint Server 2016 – March PU
-- Skype for Business Server 2019 – March CU (CU 3)
-- Skype for Business Server 2015 – April CU (CU 11)
+|**Product**|**KB Number**|**Release Date**|
+|:-----|:-----|:-----|
+|Exchange Server||March 2020 Cumulative Update|
+|SharePoint Server 2019|[KB 4484259](https://support.microsoft.com/help/4484259/security-update-for-sharepoint-server-2019-february-11)|February 11, 2020|
+|SharePoint Server 2016||March 2020 Public Update|
+|SharePoint Foundation 2013||March 2020 Public Update|
+|SharePoint Server 2013||March 2020 Public Update|
+|SharePoint Foundation 2010||March 2020 Public Update|
+|SharePoint Server 2010||March 2020 Public Update|
+|Skype for Business Server 2019||March 2020 Cumulative Update (CU 3)|
+|Skype for Business Server 2015||April 2020 Cumulative Update (CU 11)|
 
 You must test your applications for all the following scenarios, and determine the appropriate plan based on the outcome of the tests:
 
