@@ -85,9 +85,20 @@
         "sql/**/*.md": ""
       },
 
+      "ms.prod": {
+        "visualstudio/**/*.md": "visual-studio-family"
+      },
+      "ms.technology": {
+        "visualstudio/**/*.md": ""
+      },
+
+
 
       "titleSuffix": {
         "sql/**/*.md": "SQL Server"
+      },
+      "titleSuffix": {
+        "visualstudio/**/*.md": "Visual Studio"
       }
 
     },
