@@ -1,0 +1,9 @@
+- name: Welcome to Visual Studio Support
+  href: welcome-support-visual-studio.md
+
+- name: (Back up to Support hub page)
+  href: ../index.yml
+
+- name: ASP.NET error CS0433
+  href: cs0433-error-when-building-asp-net-project.md
+

@@ -5,6 +5,11 @@
       "source_path": "support/sql/index.md",
       "redirect_url": "/support/sql/welcome-support-sql-server",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/visualstudio/index.md",
+      "redirect_url": "/support/visualstudio/welcome-support-visual=studio",
+      "redirect_document_id": false
     }
 
   ]

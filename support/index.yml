@@ -21,12 +21,15 @@ metadata:
 productDirectory:
   items:
   - title: SQL Server 
-    imageSrc: media/hub-landing/database-design.svg
+    imageSrc: "media/hub-landing/database-design.svg"
     links:
     - url: sql/welcome-support-sql-server.md
-      text: SQL Server
-  - title: Visual Studio (under construction)
-    imageSrc: media/hub-landing/vs-ide-2019.svg
+      text: SQL Server support
+  - title: Visual Studio
+    imageSrc: "media/hub-landing/vs-ide-2019.svg"
+    links:
+    - url: visualstudio/welcome-support-visual-studio.md
+      text: Visual Studio support
 
 
 # conceptualContent:
