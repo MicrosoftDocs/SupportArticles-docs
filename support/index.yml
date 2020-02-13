@@ -23,7 +23,7 @@ productDirectory:
   - title: Edge and Internet Explorer browsers
     imageSrc: "media/hub-landing/Microsoft-Edge-Chromium1-browser-g10a.png"
     links:
-    - url: sql/welcome-support-browsers.md
+    - url: browsers/welcome-support-browsers.md
       text: Support for Edge and Internet Explorer browsers
   - title: SQL Server 
     imageSrc: "media/hub-landing/database-design.svg"
