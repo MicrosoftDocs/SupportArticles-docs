@@ -10,7 +10,7 @@
 
     - name: Edge and IE browsers
       tocHref: /support/browsers/
-      topicHref: /support/sql/welcome-support-browsers
+      topicHref: /support/browsers/welcome-support-browsers
 
     - name: SQL
       tocHref: /support/sql/
