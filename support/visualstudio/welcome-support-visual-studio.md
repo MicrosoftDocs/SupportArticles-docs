@@ -2,9 +2,7 @@
 title: Welcome Support articles Visual Studio
 description: This table of contents (TOC) lists Knowledge Base (KB) and other Support articles for Microsoft Visual Studio.
 ms.topic: article
-ms.prod: visual-studio-family
-ms.technology:
-ms.date: 02/11/2020
+ms.date: 02/12/2020
 ---
 # Welcome to Support articles for Visual Studio
 
