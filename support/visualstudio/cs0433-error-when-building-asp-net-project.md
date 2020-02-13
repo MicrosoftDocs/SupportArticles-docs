@@ -1,8 +1,6 @@
 ---
 title: ASP.NET project suffers CS0433 compiler error message
 description: Describes scenarios when building an ASP.NET project in Visual Studio.
-ms.prod: visual-studio-family
-ms.technology:
 ms.date: 01/23/2020
 ---
 # Building an ASP.NET project in Visual Studio results in Compiler Error Message CS0433 (KB 2028526)

@@ -2,9 +2,7 @@
 title: Welcome Support articles SQL Server
 description: This table of contents (TOC) lists Knowledge Base (KB) and other Support articles for Microsoft SQL Server.
 ms.topic: article
-ms.prod: sql
-ms.technology:
-ms.date: 02/10/2020
+ms.date: 02/12/2020
 ---
 # Welcome to Support articles for SQL Server
 
