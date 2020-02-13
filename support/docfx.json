@@ -79,6 +79,13 @@
 
 
       "ms.prod": {
+        "browsers/**/*.md": "internet-explorer"
+      },
+      "ms.technology": {
+        "browsers/**/*.md": ""
+      },
+
+      "ms.prod": {
         "sql/**/*.md": "sql"
       },
       "ms.technology": {
@@ -94,6 +101,9 @@
 
 
 
+      "titleSuffix": {
+        "browsers/**/*.md": "Edge & IE"
+      },
       "titleSuffix": {
         "sql/**/*.md": "SQL Server"
       },
