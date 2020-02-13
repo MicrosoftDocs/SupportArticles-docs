@@ -9,7 +9,7 @@ brand: sql-server
 
 metadata:
    title: Support articles | Microsoft Docs
-   description: Find support articles about work-arounds, hotfixes, and other knowledge base (KB) information, for several commercial server products from Microsoft.
+   description: Find support articles about work-arounds, in-depth explanations for troubleshooting, and other knowledge base (KB) information, for several commercial server products from Microsoft.
    ms.topic: hub-page
 
 
@@ -20,16 +20,21 @@ metadata:
 
 productDirectory:
   items:
+  - title: Edge and Internet Explorer browsers
+    imageSrc: "media/hub-landing/Microsoft-Edge-Chromium1-browser-g10a.png"
+    links:
+    - url: sql/welcome-support-browsers.md
+      text: Support for Edge and Internet Explorer browsers
   - title: SQL Server 
     imageSrc: "media/hub-landing/database-design.svg"
     links:
     - url: sql/welcome-support-sql-server.md
-      text: SQL Server support
+      text: Support for SQL Server
   - title: Visual Studio
     imageSrc: "media/hub-landing/vs-ide-2019.svg"
     links:
     - url: visualstudio/welcome-support-visual-studio.md
-      text: Visual Studio support
+      text: Support for Visual Studio
 
 
 # conceptualContent:

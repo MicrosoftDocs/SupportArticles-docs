@@ -1,6 +1,9 @@
 - name: Index
   href: index.yml
 
+- name: Browsers, Edge, IE support
+  href: browsers/welcome-support-browsers.md
+
 - name: SQL Server support
   href: sql/welcome-support-sql-server.md
 

@@ -8,6 +8,10 @@
     topicHref: /support/index
     items:
 
+    - name: Edge and IE browsers
+      tocHref: /support/browsers/
+      topicHref: /support/sql/welcome-support-browsers
+
     - name: SQL
       tocHref: /support/sql/
       topicHref: /support/sql/welcome-support-sql-server
