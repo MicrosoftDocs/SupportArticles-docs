@@ -3,6 +3,7 @@ title: Troubleshoot "Open with Explorer" issues in SharePoint Online
 description: Discusses how to troubleshoot issues that you may experience when you use the “Open with Explorer” command.
 author: simonxjx
 manager: dcscontentpm
+ms.date: 02/14/2020
 localization_priority: Normal
 search.appverid: 
 - MET150
@@ -13,6 +14,9 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
+ms.custom: 
+- CI 113862
+- CSSTroubleshoot 
 ---
 
 # Troubleshoot "Open with Explorer" issues in SharePoint Online
