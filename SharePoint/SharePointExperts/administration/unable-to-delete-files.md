@@ -19,7 +19,7 @@ ms.custom:
 - CI 113501
 - CSSTroubleshoot 
 ms.reviewer: prbalusu 
-description: If you're unable to delete files from SharePoint or OneDrive, this article lists how you might be able to resolve the issue. 
+description: If you're unable to delete files from SharePoint or OneDrive, this article lists ways you might be able to resolve the issue. 
 ---
 
 # Unable to delete items in SharePoint and OneDrive
