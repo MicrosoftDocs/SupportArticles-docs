@@ -127,11 +127,14 @@
       href: ../lists-and-libraries/upload-file-using-new-experience.md
     - name: Simple controls are missing for a document library
       href: ../lists-and-libraries/simple-controls-missing.md
+    - name: Slow "Open with Explorer" performance on Windows 8 or Windows Server 2012
+      href: ../lists-and-libraries/slow-open-with-explorer-performance.md
     - name: Template-generated list doesn't display correct column data
       href: ../lists-and-libraries/template-generated-list-incorrect-data.md
     - name: The URL <file name> is invalid when uploading a file
       href: ../lists-and-libraries/url-invalid-upload-file-to-list.md
     - name: Use "Open with Explorer" command to troubleshoot issues
+
       href: ../lists-and-libraries/troubleshoot-issues-using-open-with-explorer.md
   - name: Migration Tool
     items:
