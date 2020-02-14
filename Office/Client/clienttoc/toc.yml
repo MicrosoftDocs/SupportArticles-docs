@@ -241,6 +241,8 @@
       href: ../error-messages/install-and-use-this-product-error.md
     - name: Office has detected a problem with this file
       href: ../error-messages/office-file-fails-validation.md
+    - name: Office file previews in Windows Explorer may not show after switching from 64-bit Office to 32-bit Office
+      href: ../error-messages/no-file-previews-file-explorer-switching-to-32-bit.md
     - name: Repair process of click-to-run app
       href: ../error-messages/click-to-run-app-repair-process.md
     - name: "\"Run-time Error 13: Type Mismatch\""
