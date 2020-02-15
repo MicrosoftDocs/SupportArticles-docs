@@ -129,7 +129,7 @@ Make sure that the latest Windows updates are applied. If all the latest updates
    > [!NOTE]
    > If the **Startup Type** for the **WebClient** service is set to **Disabled**, the **Open with Explorer** button doesn't function correctly, and you cannot start the service. To enable the service, go to the **WebClient Properties** dialog box, select the list option for the **Startup type** setting, and then select either **Manual** or **Automatic**. Next, select **Apply**, select **Start** to start the service, and then select **OK**.
 
-#### Apply hotfix for Internet Explorer 10 on Windows 8 or Windows 7
+### Apply hotfix for Internet Explorer 10 on Windows 8 or Windows 7
 
 If you're running Internet Explorer 10 on Windows 8 or Windows 7, a hotfix has been released to resolve this issue. For more information, go to [Error when you open a SharePoint Document Library in Windows Explorer or map a network drive to the library after you install Internet Explorer 10](https://support.microsoft.com/help/2846960).
 
