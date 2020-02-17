@@ -230,6 +230,8 @@
       href: ../administration/sharing-options-grayed-out-when-sharing-from-sharepoint-online-or-onedrive.md
     - name: SSL certificate authentication issues 
       href: ../sharing-and-permissions/ssl-certificate-authentication.md
+    - name: Unable to access SharePoint Online
+      href: ../sharing-and-permissions/sharepoint-online-inaccessible.md 
     - name: You are not allowed to create team sites
       href: ../sharing-and-permissions/issue-when-you-click-new-site-on-followed-sites-page.md
   - name: Sites
