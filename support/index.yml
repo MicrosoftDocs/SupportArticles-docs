@@ -26,7 +26,7 @@ productDirectory:
     - url: browsers/welcome-support-browsers.md
       text: Support for Edge and Internet Explorer browsers
   - title: SQL Server 
-    imageSrc: "media/hub-landing/database-design.svg"
+    imageSrc: "media/hub-landing/sql-database-blue.svg"
     links:
     - url: sql/welcome-support-sql-server.md
       text: Support for SQL Server
