@@ -17,7 +17,7 @@ ms.custom:
 - CI 113694
 - CSSTroubleshoot 
 ms.reviewer: lucaband 
-description: "How to resolve the error "Virus Found" in SharePoint Server 2013 when the antivirus scanner is unavailable ."
+description: How to resolve an issue where a .NET update in SharePoint causes an add-in running on Azure to stop working. 
 ---
 
 # .NET update causes  SharePoint provider-hosted add-in running on Azure to stop working
