@@ -4,7 +4,6 @@ description: Describes an issue that causes the .NET Framework 4.6.2 client driv
 ms.date: 02/17/2020
 ms.prod-support-area-path: 
 ---
-
 # The .NET Framework 4.6.2 client driver for "Always Encrypted" intermittently fails during row decryption
 
 **Applies to**: SQL Server
