@@ -4,7 +4,6 @@ description: This article describes that you can't uninstall ODBC driver complet
 ms.date: 02/17/2020
 ms.prod-support-area-path:
 ---
-
 # Driver uninstall leaves remnants when ODBC 13(.1)/17(.1) are both installed on Windows
 
 **Applies to**: ODBC Driver for SQL Server
