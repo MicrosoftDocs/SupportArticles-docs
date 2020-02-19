@@ -4,7 +4,6 @@ description: Lists the SQL Server on Azure Virtual Machines logs and diagnostic 
 ms.date: 02/17/2020
 ms.prod-support-area-path:
 ---
-
 # SQL Server on Azure Virtual Machines logs
 
 **Applies to**: SQL Server in VM - Windows
