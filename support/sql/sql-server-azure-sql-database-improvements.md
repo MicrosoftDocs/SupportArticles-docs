@@ -4,7 +4,6 @@ description: Describes how persisted structures in your SQL Server database can 
 ms.date: 02/17/2020
 ms.prod-support-area-path:
 ---
-
 # SQL Server and Azure SQL Database improvements in handling some data types and uncommon operations
 
 **Applies to**: SQL Server
