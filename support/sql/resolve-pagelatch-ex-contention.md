@@ -4,7 +4,6 @@ description: This article describes how to resolve last-page insert PAGELATCH_EX
 ms.date: 02/17/2020
 ms.prod-support-area-path:
 ---
-
 # How to resolve last-page insert PAGELATCH_EX contention in SQL Server
 
 **Applies to**: SQL Server
