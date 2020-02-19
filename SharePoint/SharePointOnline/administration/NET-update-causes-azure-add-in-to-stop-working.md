@@ -65,14 +65,14 @@ To resolve this issue, set the defaults in the web.config as follows in the syst
 To update the **Web.config** file on the live instance of your Azure web app, follow these steps:
  
 1.	Navigate to your web application settings in the Azure portal.
-2.	Select **Advanced Tools**, and then select **Go**.
+2.	Select **Advanced Tools**, and then select **Go**.<br/>
 ![Advanced Tools screen in the Azure portal.](media/NET-update-causes-azure-add-in-to-stop-working/NET-update-causes-azure-add-in-to-stop-working-1.png)
-3.	In the Kudu screen, select **Debug console**, and then select **CMD**.
-![Select CMD in the Debug console.](media/NET-update-causes-azure-add-in-to-stop-working/NET-update-causes-azure-add-in-to-stop-working-2.png)
+3.	In the Kudu screen, select **Debug console**, and then select **CMD**.<br/>
+![Select CMD in the Debug console.](media/NET-update-causes-azure-add-in-to-stop-working/NET-update-causes-azure-add-in-to-stop-working-2.png)<br/>
 ![Search results. ](media/NET-update-causes-azure-add-in-to-stop-working/NET-update-causes-azure-add-in-to-stop-working-3.png)
 4.	In the **File View** screen, enter the **CD site\wwwroot** command (shown in the lower red box in the next screenshot) to get the root directory of the web application. Then, press **Enter**.
     > [!NOTE]
-    > The file list on the upper part of the page refreshes to show the **Web.config** file (you may have to scroll to see it). To edit the file , select the edit icon (the pencil, as shown in the red box in the  image below).
+    > The file list on the upper part of the page refreshes to show the **Web.config** file (you may have to scroll to see it). To edit the file, select the edit icon (the pencil, as shown in the red box in the  image below).
 ![To edit the file, select the pencil icon.](media/NET-update-causes-azure-add-in-to-stop-working/NET-update-causes-azure-add-in-to-stop-working-4.png)
 5.	Add the **httpCookies** and **sessionState** cookie settings that are highlighted  in the next screenshot. If the **system.web** section is missing, add it so that it resembles the sample that’s shown in the next screenshot.
 ![How the system.web section should look. ](media/NET-update-causes-azure-add-in-to-stop-working/NET-update-causes-azure-add-in-to-stop-working-5.png)
