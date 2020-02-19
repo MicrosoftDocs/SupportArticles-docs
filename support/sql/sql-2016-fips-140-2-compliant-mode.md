@@ -4,7 +4,6 @@ description: Discusses FIPS 140-2 instructions and how to use SQL Server2016 in 
 ms.date: 02/17/2020
 ms.prod-support-area-path:
 ---
-
 # How to use SQL Server 2016 in FIPS 140-2-compliant mode
 
 **Applies to**: SQL Server
