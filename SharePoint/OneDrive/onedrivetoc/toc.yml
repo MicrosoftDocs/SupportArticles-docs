@@ -1,6 +1,10 @@
 - name: OneDrive for Business Troubleshooting
   href: ../onedrive.md
   items:
+  - name: Installation
+    items:
+    - name: OneDrive for Business stopped at "Setting up..." screen
+      href: ../installation/onedrive-stopped-at-setting-up-screen.md
   - name: List and Libraries
     items:
     - name: 401 error when Graph API access OneDrive data

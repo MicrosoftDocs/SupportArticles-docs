@@ -24,7 +24,10 @@ description: Ways to resolve an issue where provisioning OneDrive for Business s
 
 ## Symptoms
 
-When installing OneDrive for Business, the app might be stopped at the “Setting up..” screen for more than 24 hours.
+When initializing OneDrive for Business, the app might stop for more than 24 hours with one of the following error messages:
+- “Setting up..”
+- “We’re still setting a few things up, but feel free to get started.”
+
 ![When initializing OneDrive, you may be stopped at the "Setting up..." screen.](../media/one-drive-stopped-at-setting-up-screen/one-drive-stopped-at-setting-up-screen-1.png)
 
 ## Resolution
