@@ -67,6 +67,8 @@
       href: ../setup/ex2019-setup-does-not-run-correctly-started-powershell.md
   - name: Shared Mailboxes
     items:
+    - name: Can't access shared mailboxes via POP/IMAP
+      href: ../shared-mailboxes/accessing-shared-mailboxes-fails.md
     - name: Can't create appointment or all day event
       href: ../shared-mailboxes/cannot-create-appointment.md
     - name: Can't send an email with full access
