@@ -122,7 +122,7 @@ The following tables list data type conversions and additional operations.
 |Numerical addition or subtraction when the scale of one operand is larger than the scale of the result.|Rounding always occurs after the addition/subtraction, while previously it could sometimes occur before.|DECLARE @p1 numeric(38, 2) = -1.15  DECLARE @p2 numeric(38, 1) = 10  SELECT @p1 + @p2|8.8|8.9|
 |**CONVERT** with **NULL** style.|**CONVERT** with **NULL** style always returns **NULL** when the target type is numeric.|SELECT CONVERT (SMALLINT, '0', NULL);|0|NULL|
 |**DATEPART** that uses the microseconds or nanoseconds option, with the datetime data type.|Value is no longer truncated at the millisecond level before converting to micro- or nanoseconds.|DECLARE @dt DATETIME = '01-01-1900 00:00:00.003';  SELECT DATEPART(MICROSECOND, @dt);|3000|3333|
-|**DATEDIFF** that uses the microseconds or nanoseconds option, with the datetime data type.|Value is no longer truncated at the millisecond level before converting to micro- or nanoseconds.|DECLARE @d1 DATETIME = '1900-01-01 00:00:00.003' DECLARE @d2 DATETIME = '1900-01-01 00:00:00.007'| SELECT DATEDIFF(MICROSECOND, @d1, @d2)|3000|3333|
+|**DATEDIFF** that uses the microseconds or nanoseconds option, with the datetime data type.|Value is no longer truncated at the millisecond level before converting to micro- or nanoseconds.|DECLARE @d1 DATETIME = '1900-01-01 00:00:00.003' DECLARE @d2 DATETIME = '1900-01-01 00:00:00.007'  SELECT DATEDIFF(MICROSECOND, @d1, @d2)|3000|3333|
 |Comparison between datetime and datetime2 values with nonzero values for milliseconds.|Datetime value is no longer truncated at the millisecond level when you run a comparison with a datetime2 value. This means that certain values that previously compared equal, no longer compare equal.|DECLARE @d1 DATETIME = '1900-01-01 00:00:00.003'  DECLARE @d2 DATETIME2(3) = @d1 SELECT CAST(@d1 AS datetime2(7)), @d2SELECT CASE WHEN (@d1=@d2) THEN 'equal' ELSE 'unequal' END  |1900-01-01 00:00:00.0030000, 1900-01-01 00:00:00.003   equal|1900-01-01 00:00:00.0033333, 1900-01-01 00:00:00.003    unequal|
 |**ROUND** function that uses the float data type.|Rounding results differ.|SELECT ROUND(CAST (-0.4175 AS FLOAT), 3)|-0.418|-0.417|
 
@@ -283,11 +283,10 @@ If the statement is finished with errors, follow these steps:
 
 Table 1: Persisted structures and corresponding error messages for inconsistencies
 
-|Structure type affected |Error messages observed Take note of|
-|---|---|
+|Structure type affected |Error messages observed| Take note of|
+|---|---|---|
 |Persisted computed columns|Msg 2537, Level 16 Table error: object ID <object_id> , index ID <index_id> , . The record check (valid computed column) failed. The values are .|object ID <object_id> and index ID <index_id>|
-|Indexes referencing computed columns in the key or included columns    Filtered indexes |Msg 8951   Table error: table '<table_name>' (ID <object_id>). Data row does not have a matching index row in the index '<index_name>' (ID <index_id>)   And/or    Msg 8952
-Table error: table '<table_name>' (ID <table_name>). Index row in index '' (ID <index_id>) does not match any data row. In addition, there may be secondary errors 8955 and/or 8956. This contains details about the exact rows impacted. These may be disregarded for this exercise.|object ID <object_id> and index ID <index_id>|
+|Indexes referencing computed columns in the key or included columns    Filtered indexes |Msg 8951   Table error: table '<table_name>' (ID <object_id>). Data row does not have a matching index row in the index '<index_name>' (ID <index_id>)   And/or    Msg 8952 Table error: table '<table_name>' (ID <table_name>). Index row in index '' (ID <index_id>) does not match any data row. In addition, there may be secondary errors 8955 and/or 8956. This contains details about the exact rows impacted. These may be disregarded for this exercise.|object ID <object_id> and index ID <index_id>|
 |Indexed views|Msg 8908  The indexed view '<view_name>' (object ID <object_id>) does not contain all rows that the view definition produces.  And/or   Msg 8907  The indexed view '<view_name>' (object ID <object_id>) contains rows that were not produced by the view definition.| object ID <object_id>|
 
 After you complete database-level validation, go to Step 3.
@@ -544,7 +543,7 @@ Follow these steps for every object_id related to inconsistencies in computed co
     WHERE referencing_class=1 AND referenced_class=1 AND referencing_id=object_id AND referencing_minor_id=computed_column_id
     ```
 
-3. Run an **UPDATE**statement involving one of the referenced columns to trigger an update of the computed column:
+3. Run an **UPDATE** statement involving one of the referenced columns to trigger an update of the computed column:
    - The following statement will trigger an update of the column that's referenced by the computed column and also trigger an update of the computed column.
 
       ```sql
@@ -593,7 +592,7 @@ ALTER INDEX index_name ON [schema_name].[table_name] REBUILD WITH (ONLINE=ON)
 ```
 
 > [!NOTE]
-> If you're using Standard, Web, or Express editions, online index build isn't supported. Therefore, the option**WITH (ONLINE=ON)**must be removed from the ALTER INDEX statement.
+> If you're using Standard, Web, or Express editions, online index build isn't supported. Therefore, the option WITH (ONLINE=ON) must be removed from the ALTER INDEX statement.
 
 The following example shows rebuild of a filtered index:
 
