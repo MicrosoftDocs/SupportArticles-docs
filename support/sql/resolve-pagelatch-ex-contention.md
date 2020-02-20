@@ -58,7 +58,7 @@ You notice that multiple sessions are all waiting for the same resource that res
 database_id = 5, file_id = 1, database page_id = 4144
 
 > [!NOTE]
-> The database_id should be a user database (the ID number is greater than or equal to**5**). If the database_id is **2**, you may, instead, be experiencing the issue that is discussed in [Files, trace flags and updates on TEMPDB](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/).
+> The database_id should be a user database (the ID number is greater than or equal to **5**). If the database_id is **2**, you may, instead, be experiencing the issue that is discussed in [Files, trace flags and updates on TEMPDB](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/).
 
 ## Cause
 
