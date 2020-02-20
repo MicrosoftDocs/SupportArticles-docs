@@ -30,11 +30,11 @@ When initializing OneDrive for Business, the app might stop for more than 24 hou
 
 ![When initializing OneDrive, you may be stopped at the "Setting up..." screen.](../media/one-drive-stopped-at-setting-up-screen/one-drive-stopped-at-setting-up-screen-1.png)
 
-## Resolution
+## Resolutions
 
 Listed below are ways to resolve this issue.
 
-### Verify the services health
+### Verify the health of services 
 
 See the Microsoft Knowledge Base article ["Setting up..." messages in the Microsoft 365 admin center](https://support.microsoft.com/help/2635238/setting-up-messages-in-the-office-365-admin-center) to verify if any of Microsoft’s services (in this case OneDrive and SharePoint Online) are experiencing problems.
 
@@ -51,7 +51,7 @@ In some situations, the user's license might not have been assigned correctly. T
 6.	Remove and re-add the license and/or plan after saving the changes.
 7.	Confirm that the issue is resolved. You may have to wait several hours for the change to take effect. 
 
-### User provisioning
+### Verify user provisioning
 
 Due to the connection between OneDrive and SharePoint, it is necessary for users to have their profile provisioned within SharePoint itself in order for OneDrive to be able to provision the personal site.
 
@@ -68,7 +68,7 @@ In order to verify if the user has a current profile created within SharePoint, 
 6.	Search for the user with the issue and verify that the profile appears.
 If the profile doesn't exist, perform a sync from the Active Directory. You can also contact Office 365 Technical Support for additional help. 
 
-### Personal Site Capabilities
+### Check Personal Site Capabilities
 
 Another reason for provisioning issues on OneDrive sites is the lack of enough capabilities to the site to be provisioned. This value can be found within the user's profile in SharePoint. For more information about the Personal Site Capabilities property and what each number represents, see the Microsoft support article [PersonalSiteCapabilities enumeration](https://docs.microsoft.com/previous-versions/office/sharepoint-csom/jj163383%28v%3Doffice.15%29).
 
@@ -84,7 +84,7 @@ To perform this verification and/or change of the value follow the below steps:
 > [!IMPORTANT]
 > If the user has the **Guest** capability, alone or combined (Example: property with the value 36 (32 guest + 4 storage)), this will also prevent the OneDrive site from provisioning. 
 
-### Users permissions
+### Verify user permissions
 
 The Personal Site Capabilities explained in the previous section are determined by the **Manage User Permissions** settings also within SharePoint Admin Center.
 
@@ -98,27 +98,27 @@ In order to verify if everything is set correctly, follow these steps:
 6.	Verify that the group "Everyone except external users" has been added (or the user who should be part of this group).
 7.	Also verify that the level of permissions assigned to the user and/or group. The box next to "Create Personal Site (required for personal storage, newsfeed, and followed content)" should be checked.
 
-### Site ownership
+### Establish correct site ownership
 
-In some situation, the OneDrive site might have already been provisioned but the user may have lost its ownership, which caused this behavior.
+In some situations, the OneDrive site might have already been provisioned but the user may have lost its ownership, which in turn caused this behavior.
 
 If you have the [SharePoint Online Management Shell](https://www.microsoft.com/download/details.aspx?id=35588) (which contains the Windows PowerShell module to manage SharePoint Online), you can verify the site status and attempt to give user the ownership of their OneDrive for Business personal site.
 
 
-- To verify if the site exists:<br/>
+- To verify that the site exists, run the following PowerShell command:<br/>
     ```
     Get-SPOSite -Site https://contoso-my.sharepoint.com/personal/user_contoso_onmicrosoft_com 
     ```
     [Get-SPOSite documentation](https://docs.microsoft.com/powershell/module/sharepoint-online/get-sposite?view=sharepoint-ps )
 
-- To attempt to restore ownership: 
+- To attempt to restore ownership, run the following PowerShell command: 
     ```
     Set-SPOSite -Identity https://contoso-my.sharepoint.com/personal/user_contoso_onmicrosoft_com -Owner user@contoso.onmicrosoft.com 
     ```
     [Set-SPOSite documentation](https://docs.microsoft.com/powershell/module/sharepoint-online/set-sposite?view=sharepoint-ps)
 
 
-### Self diagnostics
+### Run a self diagnostics tool
 
 Office 365 admin users have access to diagnostics that can be run within the tenant to verify possible issues with the OneDrive provision.
 
