@@ -111,10 +111,7 @@ Clear the following persisted locations:
 
 These steps reset the activation state for Office 365 ProPlus (2016 and 2013). After the locations are cleared, the activation flow will represent an initial activation.
 
-The four steps can be automated by using a script. To do this, copy the content from OLicenseCleanup, save the content as a .vbs file, and then run the .vbs file.
-
-<details><summary>OLicenseCleanup</summary>
-<p>
+The four steps can be automated by using a script. To do this, copy the following content, save the content as a .vbs file, and then run the .vbs file.
 
 ```vbs
 '*******************************************************************************
@@ -785,5 +782,3 @@ Sub LogOnly (sLog)
     End If
 End Sub 'Log
 ```
-</p>
-</details>
