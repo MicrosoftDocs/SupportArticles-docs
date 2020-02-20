@@ -6,13 +6,4 @@
 
 - name: ASP.NET error CS0433
   href: cs0433-error-when-building-asp-net-project.md
-
-- name: Configure FIPS-compliant cryptography with security settings
-  href: fips-compliant-algorithms.md
-
-- name: Debug Windows services by using WinDbg debugger
-  href: debug-windows-services.md
-
-- name: HIS 2013 is incompatible out-of-the-box with VS 2013
-  href: his-2013-not-work-visual-studio.md
   
