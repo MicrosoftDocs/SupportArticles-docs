@@ -34,8 +34,8 @@ If you select **Allow access to logs** when you create a Microsoft SQL Server 
 |**Powershell command**|**Frequency–once every...**|
 |---|---|
 |**Get-ClusterLog**|Hour|
-|**get-clusterresource** | **get-clusterparameter**|Hour|
-|**get-cluster** | **fl**|Hour|
+|**get-clusterresource** **get-clusterparameter**|Hour|
+|**get-cluster** **fl**|Hour|
 
 ## Information collected by WMI queries
 
@@ -49,4 +49,4 @@ If you select **Allow access to logs** when you create a Microsoft SQL Server 
 
 ## More information
 
-If you create a SQL Server AlwaysOn Availability Groups cluster, the AlwaysOn_health.xel files will be collected. For more information about the collected files, see[Always On Availability Groups extended events](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/always-on-extended-events).
+If you create a SQL Server AlwaysOn Availability Groups cluster, the AlwaysOn_health.xel files will be collected. For more information about the collected files, see [Always On Availability Groups extended events](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/always-on-extended-events).

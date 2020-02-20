@@ -63,7 +63,7 @@ After you use either method, verify that the error doesn't reappear during a tab
 
 > [!IMPORTANT]
 > Users who experience the problem that is described in the **Symptoms** section during the validation scan should contact
-**sqlalwaysencrypted@microsoft.com**. The Support team can help recover all previously encrypted rows that are affected by this bug. This bug doesn't cause permanent data loss.
+sqlalwaysencrypted@microsoft.com. The Support team can help recover all previously encrypted rows that are affected by this bug. This bug doesn't cause permanent data loss.
 
 ## References
 

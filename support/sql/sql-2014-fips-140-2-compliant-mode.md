@@ -8,7 +8,7 @@ ms.prod-support-area-path:
 
 **Applies to**: SQL Server
 
-_Original version:_ &nbsp; 2014  
+_Original product version:_ &nbsp; 2014  
 _Original KB number:_ &nbsp; 3141890
 
 This article discusses the instructions for Federal Information Processing Standard Publication 140-2 (FIPS 140-2) and how to use Microsoft SQL Server 2014 in the FIPS 140-2-compliant mode.

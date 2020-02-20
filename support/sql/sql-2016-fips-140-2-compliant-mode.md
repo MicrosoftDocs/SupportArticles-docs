@@ -8,7 +8,7 @@ ms.prod-support-area-path:
 
 **Applies to**: SQL Server
 
-_Original version:_ &nbsp; 2016  
+_Original product version:_ &nbsp; 2016  
 _Original KB number:_ &nbsp; 4014354
 
 This article discusses FIPS 140-2 instructions and how to use SQL Server 2016 in FIPS 140-2-compliant mode.
