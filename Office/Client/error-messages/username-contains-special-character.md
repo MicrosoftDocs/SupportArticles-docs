@@ -60,7 +60,7 @@ This behavior occurs because certain special characters aren't permitted in user
 - Equal sign (=)   
 - Brackets ([ ])   
 - Braces ({ })   
-- Backslash (\)   
+- Backslash (\\)   
 - Slash mark (/)   
 - Pipe (|)   
 - Semicolon (;)   
