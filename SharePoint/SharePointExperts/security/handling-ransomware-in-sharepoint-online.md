@@ -61,10 +61,6 @@ If you are affected by ransomware, try the following:
 > - What site collection URL(s) that have been affected by ransomware?
 > - When was the last known time the files were not modified by the ransomware?
 
-
-
-
-
 ### Need more help?
 
 For more information on ransomware, see the support article on [Ransomware](https://www.microsoft.com/security/portal/mmpc/shared/ransomware.aspx). 
