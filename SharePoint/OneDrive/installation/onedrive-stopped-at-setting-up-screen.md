@@ -6,7 +6,7 @@ manager: dcscontentpm
 ms.date: 2/20/2020
 audience: Admin
 ms.topic: article
-ms.service OR ms.prod: see https://docsmetadatatool.azurewebsites.net/allowlists
+ms.prod: onedrive
 localization_priority: Normal
 search.appverid:
 - SPO160
@@ -16,28 +16,28 @@ appliesto:
 ms.custom: 
 - CI 112359
 - CSSTroubleshoot 
-ms.reviewer: MS aliases for tech reviewers and CI requestor, without "@microsoft.com".  
-description: "How to resolve the error "Virus Found" in SharePoint Server 2013 when the antivirus scanner is unavailable ."
+ms.reviewer: Daniel.Teixeira 
+description: Ways to resolve an issue where provisioning OneDrive for Business stops with a "Setting up" or "We're still setting a few things up" message.
 ---
 
 # OneDrive for Business stopped at "Setting up..." screen
 
-# Symptoms
+## Symptoms
 
 When installing OneDrive for Business, the app might be stopped at the “Setting up..” screen for more than 24 hours.
 ![When initializing OneDrive, you may be stopped at the "Setting up..." screen.](../media/one-drive-stopped-at-setting-up-screen/one-drive-stopped-at-setting-up-screen-1.png)
 
-# Resolution
+## Resolution
 
 Listed below are ways to resolve this issue.
 
-## Verify the services health
+### Verify the services health
 
 See the Microsoft Knowledge Base article ["Setting up..." messages in the Microsoft 365 admin center](https://support.microsoft.com/help/2635238/setting-up-messages-in-the-office-365-admin-center) to verify if any of Microsoft’s services (in this case OneDrive and SharePoint Online) are experiencing problems.
 
 If the health of all affected services appear valid, and if more than 24 hours have passed since you first saw this issue, contact Office 365 Technical Support after performing the other actions in this article.
 
-## Remove and re-add licenses
+### Remove and re-add licenses
 
 In some situations, the user's license might not have been assigned correctly. This reason alone can cause the behavior. We recommend that you remove and re-add the OneDrive and/or SharePoint license assigned to the user. To do so perform the below steps:
 1.	Sign in to portal.office.com with an admin account.
@@ -48,7 +48,7 @@ In some situations, the user's license might not have been assigned correctly. T
 6.	Remove and re-add the license and/or plan after saving the changes.
 7.	Confirm that the issue is resolved. You may have to wait several hours for the change to take effect. 
 
-## User provisioning
+### User provisioning
 
 Due to the connection between OneDrive and SharePoint, it is necessary for users to have their profile provisioned within SharePoint itself in order for OneDrive to be able to provision the personal site.
 
@@ -65,7 +65,7 @@ In order to verify if the user has a current profile created within SharePoint, 
 6.	Search for the user with the issue and verify that the profile appears.
 If the profile doesn't exist, perform a sync from the Active Directory. You can also contact Office 365 Technical Support for additional help. 
 
-## Personal Site Capabilities
+### Personal Site Capabilities
 
 Another reason for provisioning issues on OneDrive sites is the lack of enough capabilities to the site to be provisioned. This value can be found within the user's profile in SharePoint. For more information about the Personal Site Capabilities property and what each number represents, see the Microsoft support article [PersonalSiteCapabilities enumeration](https://docs.microsoft.com/previous-versions/office/sharepoint-csom/jj163383%28v%3Doffice.15%29).
 
@@ -81,7 +81,7 @@ To perform this verification and/or change of the value follow the below steps:
 > [!IMPORTANT]
 > If the user has the **Guest** capability, alone or combined (Example: property with the value 36 (32 guest + 4 storage)), this will also prevent the OneDrive site from provisioning. 
 
-## Users permissions
+### Users permissions
 
 The Personal Site Capabilities explained in the previous section are determined by the **Manage User Permissions** settings also within SharePoint Admin Center.
 
@@ -95,7 +95,7 @@ In order to verify if everything is set correctly, follow these steps:
 6.	Verify that the group "Everyone except external users" has been added (or the user who should be part of this group).
 7.	Also verify that the level of permissions assigned to the user and/or group. The box next to "Create Personal Site (required for personal storage, newsfeed, and followed content)" should be checked.
 
-## Site ownership
+### Site ownership
 
 In some situation, the OneDrive site might have already been provisioned but the user may have lost its ownership, which caused this behavior.
 
@@ -115,7 +115,7 @@ If you have the [SharePoint Online Management Shell](https://www.microsoft.com/d
     [Set-SPOSite documentation](https://docs.microsoft.com/powershell/module/sharepoint-online/set-sposite?view=sharepoint-ps)
 
 
-## Self diagnostics
+### Self diagnostics
 
 Office 365 admin users have access to diagnostics that can be run within the tenant to verify possible issues with the OneDrive provision.
 
