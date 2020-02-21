@@ -65,6 +65,8 @@
       href: ../sharing-and-permissions/login-issues-in-a-cloud-scenario.md
   - name: Security
     items:
+    - name: Handling ransomware in Sharepoint Online
+      href: ../security/handling-ransomware-in-sharepoint-online.md
     - name: Scheduled data refresh with non-Windows Authentication
       href: ../security/schedule-data-refresh-to-a-source-with-non-windows-authentication.md
   - name: Web Parts
