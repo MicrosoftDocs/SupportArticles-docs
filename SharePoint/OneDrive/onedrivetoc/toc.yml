@@ -17,6 +17,10 @@
       href: ../../SharePointOnline/search/near-duplicate-items-are-not-listed-in-search-results.md
     - name: Search doesn't provide results from another language
       href: ../../SharePointOnline/Search/no-search-results-from-another-language.md
+  - name: Set up
+    items:
+    - name: OneDrive for Business stopped at "Setting up..." screen
+      href: ../setup/onedrive-stopped-at-setting-up-screen.md
   - name: Sharing and Permissions
     items:
     - name: Credential prompts after resting mouse pointer over a user name
