@@ -53,10 +53,13 @@
     items:
     - name: Lync Meeting control isn't displayed
       href: ../ribbons/lync-meeting-control-not-displayed.md
-  - name: Search Folders
+  - name: Search
     items:
+    - name: Can't search from additional mailbox 
+      href: ../search/can't-search-additional-mailbox.md
     - name: Unexpected mail items
-      href: ../search-folders/personmetadata-items.md
+      href: ../search/personmetadata-items.md
+
   - name: Send/Receive Emails
     items:
     - name: Can't send email with Metered Connection Warning
