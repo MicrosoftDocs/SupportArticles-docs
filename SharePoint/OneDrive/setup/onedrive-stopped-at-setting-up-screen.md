@@ -130,5 +130,6 @@ To do this, follow these steps:
 
  
 
-Need more help? 
-Contact Microsoft Technical Support. 
+### Need More Help?
+
+Get help from the [Microsoft Community](https://answers.microsoft.com/) online community, search for more information on [Microsoft Support](https://support.microsoft.com/) or [Office Help and How To](https://office.microsoft.com/support/), or learn more about [Assisted Support](https://support.microsoft.com/contactus/) options.
