@@ -571,6 +571,8 @@
       href: ../excel/too-many-different-cell-formats-in-excel.md
     - name: Toolbar missing or reset menus in Excel for Mac
       href: ../excel/toolbar-missing-reset-menu.md
+    - name: Top columns in an Excel spreadsheet pasted into PowerPoint cut off
+      href: ../excel/excel-columns-in-powerpoint-cut-off-in-surface-pro.md
     - name: Transfer data to Excel from Visual Basic
       href: ../excel/transfer-data-to-excel-from-vb.md
     - name: Troubleshoot available resources issues
