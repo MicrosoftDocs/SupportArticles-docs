@@ -20,7 +20,7 @@ ms.reviewer: Daniel.Teixeira
 description: Ways to resolve an issue where provisioning OneDrive for Business stops with a "Setting up" or "We're still setting a few things up" message.
 ---
 
-# OneDrive for Business stopped at "Setting up..." screen
+# OneDrive for Business stopped at "Setting up..." or "We're still setting a few things up" screen
 
 ## Symptoms
 
