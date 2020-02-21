@@ -1,5 +1,5 @@
 ---
-title: .NET update causes  SharePoint provider-hosted add-in running on Azure to stop working
+title: .NET update causes SharePoint provider-hosted add-in running on Azure to stop working
 ms.author: v-todmc
 author: todmccoy
 manager: dcscontentpm
@@ -20,7 +20,7 @@ ms.reviewer: lucaband
 description: How to resolve an issue where a .NET update in SharePoint causes an add-in running on Azure to stop working. 
 ---
 
-# .NET update causes  SharePoint provider-hosted add-in running on Azure to stop working
+# A SharePoint provider-hosted add-in running on Azure to stop working after a .NET update
 
 *This article is based on a contribution from Westley Hall, an engineer on the SharePoint Developer Support team.*
 
@@ -83,4 +83,3 @@ For future deployments, we recommend that you add this change to any source code
 
 ## More information
 For more information about the .NET Framework update, see [Azure App Service—SameSite cookie handling and .NET Framework 4.7.2 patch](https://azure.microsoft.com/updates/app-service-samesite-cookie-update/). 
-
