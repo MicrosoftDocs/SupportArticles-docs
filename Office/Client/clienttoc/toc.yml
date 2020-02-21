@@ -259,6 +259,8 @@
     items:
     - name: "\"Center Across Columns\" does not appear on the toolbar"
       href: ../excel/center-across-columns-button-disappear.md
+    - name: Top columns in an Excel spreadsheet pasted into PowerPoint are truncated by Surface Pro with docking station and external monitor 
+      href: ../excel/excel-columns-in-powerpoint-cut-off-in-surface-pro.md
     - name: "\"Margins do not fit page size\" error with print"
       href: ../excel/fails-printing-a-workbook.md
     - name: "\"Total\" row is not shown in waterfall charts"
