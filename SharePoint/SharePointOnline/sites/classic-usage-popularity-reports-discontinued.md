@@ -29,11 +29,15 @@ The popularity reports provide historical data for a period of three years about
 
 The data from the classic popularity reports will not be available after February 29, 2020. If it's required, you can download and save historical data from these reports before February 29, 2020. To learn more about downloading the classic usage reports in Excel, please refer to our [support article](https://docs.microsoft.com/sharepoint/view-popularity-trends-and-most-popular-items).
 
+>Note: This exercise will affect only the existing classic usage reports. The search reports available in the same location would not be affected as part of this exercise.
+
 ## Where can I find my data in the future?
 
 Site usage data for classic sites will no longer be available in popularity reports starting on March 1, 2020. Instead, you can get site usage data from the modern **Site Usage** page. 
 
-To see the page, select **Popularity trends** from **Site settings**. You can access usage data for the last 90 days.
+To get usage reports for individual items (list items, documents), you can use the [GetItemAnalytics Graph API](https://docs.microsoft.com/en-us/graph/api/itemanalytics-get?view=graph-rest-1.0).
+
+To see the page, select **Site settings** > **Popularity trends** > **Usage**. You can access usage data for the last 90 days.
 
 Usage data on the modern **Site Usage** page may not exactly match the classic popularity reports. Learn more about the modern [Site Usage](https://support.office.com/article/2fa8ddc2-c4b3-4268-8d26-a772dc55779e) page.
 
