@@ -1,5 +1,5 @@
 ---
-title: .NET update causes SharePoint provider-hosted add-in running on Azure to stop working
+title: .NET update causes SharePoint provider-hosted add-in running on Azure stops working
 ms.author: v-todmc
 author: todmccoy
 manager: dcscontentpm
