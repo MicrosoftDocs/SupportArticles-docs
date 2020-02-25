@@ -4,3 +4,14 @@
 - name: (Back up to Support hub page)
   href: ../index.yml
 
+- name: Wrong output font if using dot matrix printer via IE 8
+  href: dot-matrix-printer-wrong-output-font.md
+
+- name: Supported languages for Internet Explorer Administration Kit 9
+  href: dot-matrix-printer-wrong-output-font.md
+
+- name: Page Cannot be Displayed error
+  href: page-cannot-be-displayed.md
+
+- name: Information that needs to be collected when you run Internet 
+  href: sdp-3d0cc9543-9d32-4312-9519-274f34305f1f-windows.md
