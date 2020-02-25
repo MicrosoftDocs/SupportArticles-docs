@@ -36,7 +36,7 @@ productDirectory:
     - url: visualstudio/welcome-support-visual-studio.md
       text: Support for Visual Studio
   - title: Web Apps
-    imageSrc: "media/hub-landing/windows.svg"
+    imageSrc: "media/hub-landing/app-service-web.svg"
     links:
     - url: webapps/welcome-support-webapps.md
       text: Support for Web Apps
