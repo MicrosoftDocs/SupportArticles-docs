@@ -13,7 +13,12 @@
     },
     {
       "source_path": "support/visualstudio/index.md",
-      "redirect_url": "/support/visualstudio/welcome-support-visual=studio",
+      "redirect_url": "/support/visualstudio/welcome-support-visual-studio",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/webapps/index.md",
+      "redirect_url": "/support/webapps/welcome-support-webapps",
       "redirect_document_id": false
     }
 

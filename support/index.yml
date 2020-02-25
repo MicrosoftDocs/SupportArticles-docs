@@ -35,6 +35,11 @@ productDirectory:
     links:
     - url: visualstudio/welcome-support-visual-studio.md
       text: Support for Visual Studio
+  - title: Web Apps
+    imageSrc: "media/hub-landing/scenario-webapp-signs-in-users.svg"
+    links:
+    - url: webapps/welcome-support-webapps.md
+      text: Support for Web Apps
 
 
 # conceptualContent:

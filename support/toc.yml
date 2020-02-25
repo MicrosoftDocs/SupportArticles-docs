@@ -9,3 +9,6 @@
 
 - name: Visual Studio support
   href: visualstudio/welcome-support-visual-studio.md
+
+- name: Web Apps support
+  href: webapps/welcome-support-webapps.md

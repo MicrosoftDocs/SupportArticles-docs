@@ -99,6 +99,13 @@
         "visualstudio/**/*.md": ""
       },
 
+      "ms.prod": {
+        "webapps/**/*.md": "web-apps-server"
+      },
+      "ms.technology": {
+        "webapps/**/*.md": ""
+      },
+
 
 
       "titleSuffix": {
@@ -109,6 +116,9 @@
       },
       "titleSuffix": {
         "visualstudio/**/*.md": "Visual Studio"
+      },
+      "titleSuffix": {
+        "webapps/**/*.md": "Web Apps"
       }
 
     },
