@@ -94,7 +94,8 @@ You can check whether the zone in which the site is included allows Automatic lo
 
 ![local intranet](./media/troubleshooting-kerberos-failures-with-ie/local-intranet.png)
 
- > [!NOTE] Even through this configuration is not common (because it requires the client to have access to a DC), Kerberos can be used for a URL in the Internet Zone. In this case, unless default settings are changed, the browser will always prompt the user for credentials. Notice also that Kerberos delegation won’t work in the Internet Zone. This is because Internet Explorer allows Kerberos delegation only for a URL in the Intranet and Trusted sites zones.
+ > [!NOTE]
+ > Even through this configuration is not common (because it requires the client to have access to a DC), Kerberos can be used for a URL in the Internet Zone. In this case, unless default settings are changed, the browser will always prompt the user for credentials. Notice also that Kerberos delegation won’t work in the Internet Zone. This is because Internet Explorer allows Kerberos delegation only for a URL in the Intranet and Trusted sites zones.
 
 ### Is the IIS server configured to send the WWW-Authenticate: Negotiate header? 
 
@@ -104,7 +105,8 @@ If IIS doesn’t send this header, you will have to use the IIS Manager console 
 
 ![providers settings in authentication](./media/troubleshooting-kerberos-failures-with-ie/providers-settings-in-authentication.png)
 
-> [!NOTE] By default, the **NTAuthenticationProviders** property is not set. This causes IIS to send both Negotiate and NTLM headers.
+> [!NOTE] 
+> By default, the **NTAuthenticationProviders** property is not set. This causes IIS to send both Negotiate and NTLM headers.
 
 ### Are the client and installed on the same computer?
 
@@ -114,7 +116,8 @@ By default, Kerberos is not enabled in this configuration. To change this behavi
 
 You can use the KLIST tool to verify that the client computer can obtain a Kerberos ticket for a given service principal name (SPN). In this example, the SPN is "http/web-server." 
 
-> [!NOTE] KLIST is a native Windows tool since Windows 2008 Server for server-side operating systems and Windows 7 Service Pack 1 for client-side operating systems.
+> [!NOTE] 
+> KLIST is a native Windows tool since Windows 2008 Server for server-side operating systems and Windows 7 Service Pack 1 for client-side operating systems.
 
 ![klist tool](./media/troubleshooting-kerberos-failures-with-ie/klist-tool.png)
 
@@ -249,9 +252,9 @@ Kernel mode authentication is a feature that was introduced in IIS7. It provides
   - Kerberos ticket decoding is made by using the machine account (not by using application pool identity). This lets you have multiple applications pools running under different identities without having to declare SPNs.
 
 > [!WARNING] 
->If an SPN has been declared for a specific user account (also used as application pool identity), kernel mode authentication can't decrypt the Kerberos ticket because it uses the machine account. This problem is typical in web farm scenarios. This is because this scenario usually declares an SPN for the (virtual) NLB hostname. To prevent this from occurring, you can do either of the following: 
->- Disable Kernel mode authentication. (Not recommended from a performance standpoint.)
->- Set **useAppPoolCredentials** to **true**. (Doing this retains the performance benefit of kernel mode authentication while allowing the Kerberos ticket to be decoded under the application pool identity). For more information, see [New in IIS 7 - Kernel Mode Authentication](http://www.adopenstatic.com/cs/blogs/ken/archive/2008/02/12/16189.aspx).
+> If an SPN has been declared for a specific user account (also used as application pool identity), kernel mode authentication can't decrypt the Kerberos ticket because it uses the machine account. This problem is typical in web farm scenarios. This is because this scenario usually declares an SPN for the (virtual) NLB hostname. To prevent this from occurring, you can do either of the following: 
+> - Disable Kernel mode authentication. (Not recommended from a performance standpoint.)
+> - Set **useAppPoolCredentials** to **true**. (Doing this retains the performance benefit of kernel mode authentication while allowing the Kerberos ticket to be decoded under the application pool identity). For more information, see [New in IIS 7 - Kernel Mode Authentication](http://www.adopenstatic.com/cs/blogs/ken/archive/2008/02/12/16189.aspx).
  
 ### Why does delegation fail although Kerberos authentication works?
 
@@ -272,7 +275,8 @@ You can change this behavior using the **authPersistNonNTLM** property if you ar
 
 [Request based versus Session based Kerberos Authentication (or the AuthPersistNonNTLM parameter)](https://techcommunity.microsoft.com/t5/iis-support-blog/request-based-versus-session-based-kerberos-authentication-or/ba-p/916043)
 
->[!NOTE] It may not be a good idea to blindly use Kerberos authentication on all objects. Using Kerberos authentication to fetch hundreds of images by using conditional GET requests that are likely generate "304 not modified" responses is like trying to kill a fly by using a hammer. Such a method will also not provide obvious security gains.
+> [!NOTE] 
+> It may not be a good idea to blindly use Kerberos authentication on all objects. Using Kerberos authentication to fetch hundreds of images by using conditional GET requests that are likely generate "304 not modified" responses is like trying to kill a fly by using a hammer. Such a method will also not provide obvious security gains.
 
 ### Why does Kerberos delegation fail between my two forests although it used to work?
 

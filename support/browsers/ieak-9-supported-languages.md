@@ -127,12 +127,12 @@ To have access to these languages, you will have to replace your ieak.ini file. 
 
 The default configuration of IEAK 9 can create customization packages for the languages in the default set. If packages are needed for languages in the additional set, you must replace the ieak.ini file. The ieak.ini files for the default set and additional set of languages are available here:
 
-- Default set: [ieak.ini](http://go.microsoft.com/fwlink/?linkid=219450)
-- Additional set: [ieak.ini](http://go.microsoft.com/fwlink/?linkid=219451)
+- Default set: [ieak.ini](https://go.microsoft.com/fwlink/?linkid=219450)
+- Additional set: [ieak.ini](https://go.microsoft.com/fwlink/?linkid=219451)
 
 To access the additional set of languages:
 
-1. Download the ieak.ini file for the [additional set](http://go.microsoft.com/fwlink/?linkid=219451) of languages. 
+1. Download the ieak.ini file for the [additional set](https://go.microsoft.com/fwlink/?linkid=219451) of languages. 
    
 2. Replace the default ieak.ini file in the following directory:   
      For x86 platforms:  C:\Program Files\Windows IEAK 9\  
