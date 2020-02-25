@@ -61,5 +61,5 @@ To work around this issue, use any of the following methods:
 > [!NOTE]
 > The OCT registry path will be `HKEY_CURRENT_USER\software\microsoft\office\16.0\outlook\search`.
 
-- Set the additional mailbox on disabling Cached Exchange Mode, see this [Microsoft Support article](https://support.office.com/article/Turn-on-Cached-Exchange-Mode-7885AF08-9A60-4EC3-850A-E221C1ED0C1C).
+- Set the additional mailbox to stop using Cached Exchange Mode, see this [Microsoft Support article](https://support.office.com/article/Turn-on-Cached-Exchange-Mode-7885AF08-9A60-4EC3-850A-E221C1ED0C1C).
 - Create a shared mailbox as an additional mailbox. For more information, see [Create a shared mailbox](https://docs.microsoft.com/office365/admin/email/create-a-shared-mailbox?view=o365-worldwide).
