@@ -19,3 +19,7 @@
     - name: Visual Studio
       tocHref: /support/visualstudio/
       topicHref: /support/visualstudio/welcome-support-visual-studio
+
+    - name: Web Apps
+      tocHref: /support/webapps/
+      topicHref: /support/webapps/welcome-support-webapps
