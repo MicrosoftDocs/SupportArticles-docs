@@ -15,3 +15,12 @@
 
 - name: Information that needs to be collected when you run Internet 
   href: sdp-3d0cc9543-9d32-4312-9519-274f34305f1f-windows.md
+
+- name: Cannot turn off Internet Explorer Enhanced Security
+  href: cannot-turn-off-i-e-esc.md
+
+- name: Troubleshooting Kerberos failures in Internet Explorer
+  href: troubleshooting-kerberos-failures-with-ie.md
+
+- name: Internet Explorer document modes FAQ
+  href: ie-document-modes.md
