@@ -11,6 +11,10 @@
       href: ../deployment/cached-exchange-mode.md
     - name: Planning considerations
       href: ../deployment/plan-outlook-2016-deployment.md
+  - name: Diagnostics
+    items:
+    - name: Install SaRA from network share
+      href: /office365/troubleshoot/installation/install-sara-from-network-share
   - name: Domain Management
     items:
     - name: Remove automapping for shared mailbox
