@@ -25,6 +25,8 @@
     items:
     - name: Create recurring reminder email
       href: ../email-messages/create-recurring-email.md
+    - name: Error when you copy MSG email message files in Outlook containing multiple attachments or recipients
+      href: ../email-messages/error-when-copying-msg-with-many-attachments-or-recipients.md
     - name: Multiple slashes are changed to one slash
       href: ../email-messages/url-multiple-slashes-become-single-slash.md
   - name: Extended MAPI Solutions
