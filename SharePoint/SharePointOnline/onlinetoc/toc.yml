@@ -31,6 +31,8 @@
       href: ../administration/troubleshoot-mapped-network-drives.md
     - name: Troubleshoot site collection upgrade issues
       href: ../administration/troubleshoot-site-collection-upgrade-issue.md
+    - name: Unable to delete items in SharePoint and OneDrive
+      href: ../administration/unable-to-delete-files.md
     - name: Uncompiled audiences are present in SharePoint Online
       href: ../administration/uncompiled-audiences-are-present-in-office-365-for-enterprises.md
     - name: Using relative URLs isn't supported
@@ -125,6 +127,8 @@
       href: ../lists-and-libraries/relative-url-across-site-collection-not-supported.md
     - name: Required information isn't prompted when uploading files
       href: ../lists-and-libraries/upload-file-using-new-experience.md
+    - name: SharePoint files open as read-only
+      href: ../lists-and-libraries/files-open-as-read-only-and-cannot-check-in-or-out.md
     - name: Simple controls are missing for a document library
       href: ../lists-and-libraries/simple-controls-missing.md
     - name: Slow "Open with Explorer" performance on Windows 8 or Windows Server 2012
@@ -134,7 +138,6 @@
     - name: The URL <file name> is invalid when uploading a file
       href: ../lists-and-libraries/url-invalid-upload-file-to-list.md
     - name: Use "Open with Explorer" command to troubleshoot issues
-
       href: ../lists-and-libraries/troubleshoot-issues-using-open-with-explorer.md
   - name: Migration Tool
     items:
@@ -176,6 +179,8 @@
       href: ../Security/session-has-expired.md
     - name: Can't force Modern Authentication with using Connect-SPOService
       href: ../security/cannot-force-modern-authentication.md
+    - name: Handling ransomware in Sharepoint Online
+      href: ../security/handling-ransomware-in-sharepoint-online.md
     - name: Migrated accounts aren't resolved
       href: ../Security/migrated-user-name-resolution-fails.md
     - name: Online cross-domain iframe requests are blocked
