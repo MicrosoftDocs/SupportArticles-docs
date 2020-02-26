@@ -40,7 +40,11 @@ productDirectory:
     links:
     - url: webapps/welcome-support-webapps.md
       text: Support for Web Apps
-
+  - title: Windows Developer
+    imageSrc: "media/hub-landing/windows.svg"
+    links:
+    - url: windowsdeveloper/welcome-support-windowsdeveloper.md
+      text: Support for Windows Developer
 
 # conceptualContent:
 
