@@ -45,8 +45,6 @@
       href: ../administration/powerpivot-scheduled-data-refresh-fails.md
     - name: Some Office files open in read-only mode in SharePoint
       href: ../administration/files-open-in-read-only-mode.md
-    - name: Unable to delete items in SharePoint and OneDrive
-      href: ../administration/unable-to-delete-files.md
   - name: Lists and libraries
     items:
     - name: '"You will need a new app to open this ms-visio" when opening Visio files'
@@ -55,8 +53,6 @@
       href: ../lists-and-libraries/files-downloaded-instead-of-opening-office-application.md
     - name: PowerPivot data refresh from a list 
       href: ../lists-and-libraries/list-refresh-odata-data-feed.md
-    - name: SharePoint files open as read-only
-      href: ../lists-and-libraries/files-open-as-read-only-and-cannot-check-in-or-out.md
   - name: Sharing and Permissions
     items:
     - name: Additional credential prompts for Office documents
@@ -65,8 +61,6 @@
       href: ../sharing-and-permissions/login-issues-in-a-cloud-scenario.md
   - name: Security
     items:
-    - name: Handling ransomware in Sharepoint Online
-      href: ../security/handling-ransomware-in-sharepoint-online.md
     - name: Scheduled data refresh with non-Windows Authentication
       href: ../security/schedule-data-refresh-to-a-source-with-non-windows-authentication.md
   - name: Web Parts
