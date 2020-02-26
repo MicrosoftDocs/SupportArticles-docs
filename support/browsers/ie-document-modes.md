@@ -8,9 +8,7 @@ ms.date: 02/25/2020
 # Internet Explorer document modes FAQ
 This article provides answers to some of the most common questions about [document modes](https://docs.microsoft.com/openspecs/ie_standards/ms-iedoco/d3fffb13-31cc-4dd0-b38c-2b6aaabc153e) in Internet Explorer.
 
-## Frequently asked questions
-
-### Q: How does Internet Explorer determine the document mode?
+## Question: How does Internet Explorer determine the document mode?
 
 By default, Windows Internet Explorer 8 (IE8) uses IE8 mode, and Windows Internet Explorer 9 (IE9) uses IE9 mode, and so on. However, Windows Internet Explorer uses several criteria to determine which document mode to use. For example, if an HTML page contains a valid <!DOCTYPE> declaration (see [HTML5](https://html.spec.whatwg.org/multipage/)), Internet Explorer uses one of the standards-based document modes. But if there's no valid <!DOCTYPE> declaration, Internet Explorer uses Quirks mode. Only if there's no <!DOCTYPE> declaration does a page render in Quirks mode. 
 
@@ -28,23 +26,23 @@ The following rules determine how Internet Explorer selects the document mode:
 - Group Policy settings override other settings and force all webpages to be displayed in the specified document mode.
 - If none of these rules apply, the <!DOCTYPE> declaration determines whether the webpage renders in Standards mode, Almost Standards mode, or Quirks mode.
 
-The sections (2.1.3.2-2.1.3.8) that are explained in the article [2.1.3.1 How Internet Explorer Chooses Between Document Modes](https://docs.microsoft.com/openspecs/ie_standards/ms-iedoco/3764531c-97c8-4bf2-bdc6-b3623738ea46) show that these rules affect how Internet Explorer selects between document modes. Most of the sections don't apply to Microsoft Edge unless this is explicitly indicated.
+The sections (2.1.3.2-2.1.3.8) that are explained in the article [2.1.3.1 How Internet Explorer Chooses Between Document Modes](/openspecs/ie_standards/ms-iedoco/3764531c-97c8-4bf2-bdc6-b3623738ea46) show that these rules affect how Internet Explorer selects between document modes. Most of the sections don't apply to Microsoft Edge unless this is explicitly indicated.
 
 Additionally, the following rule determines how Microsoft Edge selects the document mode:
 
-The <!DOCTYPE> declaration determines whether the webpage renders some specific Quirks mode emulation (QME) behavior that is specified in the [MS-HTML5](https://docs.microsoft.com/openspecs/ie_standards/ms-html5/4257eddd-d92e-4ef0-88d5-b7accc73e094) and [MS-CSS21](https://docs.microsoft.com/openspecs/ie_standards/ms-css21/dbb3fd1b-4d0c-4899-9e87-587d4f232a9e) documentation.
+The <!DOCTYPE> declaration determines whether the webpage renders some specific Quirks mode emulation (QME) behavior that is specified in the [MS-HTML5](/openspecs/ie_standards/ms-html5/4257eddd-d92e-4ef0-88d5-b7accc73e094) and [MS-CSS21](/openspecs/ie_standards/ms-css21/dbb3fd1b-4d0c-4899-9e87-587d4f232a9e) documentation.
 
 For more information about how to configure document modes, see the following articles: 
-- [Deprecated document modes and Internet Explorer 11](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/deprecated-document-modes)
-- [Specifying legacy document modes](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/compatibility/jj676915(v=vs.85))
+- [Deprecated document modes and Internet Explorer 11](/internet-explorer/ie11-deploy-guide/deprecated-document-modes)
+- [Specifying legacy document modes](/previous-versions/windows/internet-explorer/ie-developer/compatibility/jj676915(v=vs.85))
 
-### Q: What is Enterprise mode?
+## Question: What is Enterprise mode?
 
-The [Document mode selection flowchart](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/img-ie11-docmode-lg) explains clearly how Internet Explorer determines document modes.
+The [Document mode selection flowchart](/internet-explorer/ie11-deploy-guide/img-ie11-docmode-lg) explains clearly how Internet Explorer determines document modes.
 
 The Windows Internet Explorer 11 (IE11) Enterprise mode site list lets you specify document modes for specific websites. This helps you fix compatibility issues without changing a single line of code on the site. This addition to the site list is a continuation of our commitment to help you upgrade and stay up-to-date regarding the latest version of Internet Explorer, while preserving your investments in existing apps.
 
-### Q: When do I use document modes versus Enterprise node?
+## Question: When do I use document modes versus Enterprise node?
 
 While the Enterprise mode functionality provides great compatibility for you on Internet Explorer 8 or Internet Explorer 7, the new document mode capabilities can help you stay up-to-date regardless of which versions of Internet Explorer are running in your environment. Therefore, we recommend that you start your testing process as follows:
 
@@ -56,7 +54,7 @@ Because you might have multiple versions of Internet Explorer deployed, you migh
 > [!IMPORTANT] 
 > Enterprise mode takes precedence over document modes.
 
-### Q: What is the difference between EmulateIE7 and Internet Explorer 7 document modes?
+## Question: What is the difference between EmulateIE7 and Internet Explorer 7 document modes?
 
 in Internet Explorer 8, Microsoft introduced compatibility options to allow Internet Explorer to act as if it were Internet Explorer 7. This change lets users view both fully compliant sites and "compatibility views" of web content that required Internet Explorer 7.
 
@@ -76,26 +74,25 @@ Officially, the rules for rendering a webpage are evaluated in the following ord
 - "Compatibility View" setting – If "X-UA-compatible" is not specified, the user’s local browser "Compatibility View" setting will apply. This is the equivalent (for non-standard pages) of the X-UA-Compatible "EmulateIE7" setting.
 - \<!DOCTYPE> setting – If none of the previous mechanisms are used, the <!DOCTYPE> tag selects the rendering of "Standards" (or "Almost Standards") or "IE 5 Quirks" mode.
 
-For details about how document modes are manipulated, see [Deprecated document modes and Internet Explorer 11](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/deprecated-document-modes).
+For details about how document modes are manipulated, see [Deprecated document modes and Internet Explorer 11](/internet-explorer/ie11-deploy-guide/deprecated-document-modes).
 
-For more general information about document modes, see [Document Modes](https://docs.microsoft.com/openspecs/ie_standards/ms-iedoco/d3fffb13-31cc-4dd0-b38c-2b6aaabc153e?redirectedfrom=MSDN).
+For more general information about document modes, see [Document Modes](/openspecs/ie_standards/ms-iedoco/d3fffb13-31cc-4dd0-b38c-2b6aaabc153e?redirectedfrom=MSDN).
 
-### Q: How can I configure browser emulation for web browser controls in Internet Explorer?
+## Question: How can I configure browser emulation for web browser controls in Internet Explorer?
 
 By default, a WebOC Project will load in Internet Explorer 7 Document mode.
 
 For Internet Explorer 8 and later versions, the **FEATURE_BROWSER_EMULATION** feature defines the default emulation mode for Internet Explorer, and supports the following values. To control the value of this feature by using the registry, add the name of your executable file to the following setting, and set the value to match the desired setting. 
 
-Registry key location:
-
-`HKEY_LOCAL_MACHINE (or HKEY_CURRENT_USER)`
-`SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BROWSER_EMULATION`
+Registry key location:  
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BROWSER_EMULATION`  
+`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BROWSER_EMULATION`
 
 Add the process of your WebOC Application: 
 
 Example: **contoso.exe**  
 Value: **(DWORD) 00009000**
 
-For more information, see [Internet Feature Controls (B..C)](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/general-info/ee330730(v=vs.85)?redirectedfrom=MSDN#browser_emulation).
+For more information, see [Internet Feature Controls (B..C)](/previous-versions/windows/internet-explorer/ie-developer/general-info/ee330730(v=vs.85)?redirectedfrom=MSDN#browser_emulation).
 
 Also see: [Incorrect document mode is displayed in Internet Explorer 11 when you open an HTML file by using a WebOC application](https://support.microsoft.com/help/3004259/incorrect-document-mode-is-displayed-in-internet-explorer-11-when-you).
