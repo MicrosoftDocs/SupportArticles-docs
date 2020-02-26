@@ -6,13 +6,16 @@ manager: dcscontentpm
 ms.date: 2/21/2020
 audience: Admin
 ms.topic: article
-ms.prod: excel
+ms.prod: 
+- excel
+- powerpoint
 localization_priority: Normal
 search.appverid:
 - SPO160
 - MET150
 appliesto:
-- SharePoint Online 
+- Excel
+- PowerPoint
 ms.custom: 
 - CI 113893
 - CSSTroubleshoot 
