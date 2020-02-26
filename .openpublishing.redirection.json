@@ -20,6 +20,11 @@
       "source_path": "support/webapps/index.md",
       "redirect_url": "/support/webapps/welcome-support-webapps",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windowsdeveloper/index.md",
+      "redirect_url": "/support/windowsdeveloper/welcome-support-windowsdeveloper",
+      "redirect_document_id": false
     }
 
   ]

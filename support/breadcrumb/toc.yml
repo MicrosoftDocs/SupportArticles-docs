@@ -23,3 +23,7 @@
     - name: Web Apps
       tocHref: /support/webapps/
       topicHref: /support/webapps/welcome-support-webapps
+
+    - name: Windows Developer
+      tocHref: /support/windowsdeveloper/
+      topicHref: /support/windowsdeveloper/welcome-support-windowsdeveloper

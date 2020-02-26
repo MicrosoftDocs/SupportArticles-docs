@@ -12,3 +12,6 @@
 
 - name: Web Apps support
   href: webapps/welcome-support-webapps.md
+
+- name: Windows Developer support
+  href: windowsdeveloper/welcome-support-windowsdeveloper.md
