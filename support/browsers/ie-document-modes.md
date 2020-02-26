@@ -4,8 +4,8 @@ description: Provides answers to frequently asked questions about Internet Explo
 ms.prod-support-area-path: 
 ms.date: 02/25/2020
 ---
-
 # Internet Explorer document modes FAQ
+
 This article provides answers to some of the most common questions about [document modes](https://docs.microsoft.com/openspecs/ie_standards/ms-iedoco/d3fffb13-31cc-4dd0-b38c-2b6aaabc153e) in Internet Explorer.
 
 ## Question: How does Internet Explorer determine the document mode?
