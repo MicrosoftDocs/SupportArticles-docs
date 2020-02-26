@@ -256,7 +256,7 @@
       href: ../Sites/customizations-revert-to-default-settings.md
     - name: Issue when activating Announcement Tiles feature
       href: ../Sites/announcement-tiles-not-supported.md
-    - name: Issue when creating an onilne ste
+    - name: Issue when creating an onilne site
       href: ../Sites/site-names-cant-contain-reserved-word.md
     - name: Issue when saving a site as a template
       href: ../Sites/fails-saving-site-as-template.md
