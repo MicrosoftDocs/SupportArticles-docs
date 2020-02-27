@@ -93,10 +93,6 @@
       href: ../server-contacts/contacts-telephone-numbers-missing.md
   - name: Exchange Integration
     items:
-    - name: Integrate Exchange Online with Lync Server
-      href: ../../SkypeOnline/online-exchange-integration/integrate-exchange-online-skype-for-business.md
-    - name: Integrate Exchange Server 2013 with Lync Server
-      href: ../../SkypeOnline/online-exchange-integration/exchange-server-lync-server-hybrid.md
     - name: MAPI unavailable
       href: ../server-exchange-integration/mapi-unavailable.md
     - name: Skype for Business and Exchange integration fails

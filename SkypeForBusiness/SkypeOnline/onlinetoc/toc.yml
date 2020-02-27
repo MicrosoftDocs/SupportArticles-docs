@@ -73,10 +73,6 @@
     items:
     - name: Chat app in Outlook for Mac defaults to Teams instead of Skype for Business
       href: ../online-exchange-integration/outlook-for-mac-chat-app-defaults-to-teams.md
-    - name: Integrate Exchange Online with Lync Server
-      href: ../online-exchange-integration/integrate-exchange-online-skype-for-business.md
-    - name: Integrate Exchange Server 2013 with Lync Server 
-      href: ../online-exchange-integration/exchange-server-lync-server-hybrid.md
     - name: UM-enabled mailbox migration fails
       href: ../online-exchange-integration/um-enabled-mailbox-migration-fails.md
   - name: IM and Presence
