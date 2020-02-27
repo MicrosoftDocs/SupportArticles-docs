@@ -387,7 +387,7 @@
       href: ../excel/embedded-macros-not-run.md
     - name: Endlessly loop calculating cells when inserting several subtotals
       href: ../excel/endlessly-loop-calculating.md
-    - name: Error when opening Excel files signed in newer version
+    - name: Invalid signature error in Excel workbooks
       href: ../excel/document-contains-invalid-signatures-error.md
     - name: Error when sending commands in Excel
       href: ../excel/error-when-send-commands-in-excel.md
