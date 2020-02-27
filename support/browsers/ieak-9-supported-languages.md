@@ -13,7 +13,7 @@ The [Internet Explorer Administration Kit (IEAK) 9](https://www.microsoft.com/do
 
 The following tables list the languages for the supported platform and operating system configurations. The first table has the default set. The second table has the additional set. English US is available in both sets. Some of the languages will be available in late May 2011. Other languages aren't supported for creating custom browser packages on the platform and operating system configuration.
 
-## Default set:
+## Default set
 
 > [!Note]
 > By default, these languages are available with IEAK 9.
@@ -70,7 +70,7 @@ The following tables list the languages for the supported platform and operating
 |Vietnamese|Yes|Not supported|Yes|Yes|
 |Welsh|Late May 2011|Not supported|Late May 2011|Late May 2011|
 
-## Additional set:
+## Additional set
 
 To have access to these languages, you will have to replace your ieak.ini file. English US is available in both sets. 
 
@@ -121,6 +121,8 @@ To have access to these languages, you will have to replace your ieak.ini file. 
 |isiXhosa|Late May 2011|Late May 2011|
 |Yoruba|Late May 2011|Late May 2011|
 |isiZulu|Late May 2011|Late May 2011|
+
+## More information
 
 The default configuration of IEAK 9 can create customization packages for the languages in the default set. If packages are needed for languages in the additional set, you must replace the ieak.ini file. The ieak.ini files for the default set and additional set of languages are available here:
 

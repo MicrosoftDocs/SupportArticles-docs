@@ -88,8 +88,7 @@ Registry key location:
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BROWSER_EMULATION`  
 `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BROWSER_EMULATION`
 
-Add the process of your WebOC Application: 
-
+Add the process of your WebOC Application:  
 Example: **contoso.exe**  
 Value: **(DWORD) 00009000**
 

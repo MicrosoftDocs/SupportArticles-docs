@@ -9,7 +9,7 @@ ms.date: 02/14/2020
 _Original product version:_ &nbsp; Internet Explorer  
 _Original KB number:_ &nbsp; 2551554
 
-Microsoft identified an issue with how server connection failures can affect proxy server use by the web browser. You may receive a 'Page Cannot be Displayed' error message in a corporate network. This article provides temporary workarounds to restore connectivity.
+Microsoft identified an issue with how server connection failures can affect proxy server use by the web browser. You may receive a `Page Cannot be Displayed` error message in a corporate network. This article provides temporary workarounds to restore connectivity.
 
 ## Symptoms
 
