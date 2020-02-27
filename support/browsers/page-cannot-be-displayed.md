@@ -21,11 +21,11 @@ For performance reasons, in the event that Internet Explorer cannot establish a 
 
 Microsoft is investigating the issue and available options. If you encounter this issue, there are temporary workarounds that can restore connectivity.
 
-## Workaround 1
+## Workaround
 
-Restart Internet Explorer to clear the list of bad proxy servers.
+To work around this issue, restart Internet Explorer to clear the list of bad proxy servers.
 
-## Workaround 2
+Also, you can set a registry key to prevent Internet Explorer from adding proxy server to the bad proxy list.
 
 > [!WARNING]
 > Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system. Microsoft cannot guarantee that these problems can be solved. Modify the registry at your own risk.
