@@ -86,9 +86,7 @@ If you do not receive errors in the test document but still cannot print your or
 
 Again, rely on systematic troubleshooting instead of on assumptions about what is causing the problem. If you cannot print a particular document but can print other documents in Word, you may have a damaged document. 
 
-For more information about how to troubleshoot damaged Word documents, see the following Microsoft Knowledge Base article:
-
-826864 How to troubleshoot damaged Word documents
+For more information about how to troubleshoot damaged Word documents, see [How to troubleshoot damaged Word documents](https://docs.microsoft.com/office/troubleshoot/word/damaged-documents-in-word). 
 
 If Word cannot print at all, or if Word cannot print a certain font or a certain kind of graphic, go to the next step.
 
@@ -106,9 +104,9 @@ The following tests can help determine whether this problem involves programs ot
     > [!NOTE] 
     > Make sure that your printer is selected. If your printer is not listed, select **Add Printer…** from the **Printer** drop-down box and add your printer.  
 
-4.	Select OK or Print to print the file.
+4.	Select **OK** or **Print** to print the file.
 
-If you found in “Step 2: Test printing in other documents" that the print problem occurs only with certain fonts or certain graphics images, try to reproduce this problem in WordPad. To do this, apply the same font, or insert the same kind of graphics image. (To select a different font in WordPad, use the same method that you used in Word.) Then try printing the same document again. 
+If you found in “Step 3: Test printing in other documents" that the print problem occurs only with certain fonts or certain graphics images, try to reproduce this problem in WordPad. To do this, apply the same font, or insert the same kind of graphics image. (To select a different font in WordPad, use the same method that you used in Word.) Then try printing the same document again. 
 
 To insert a graphics image in WordPad, follow these steps:
 
@@ -127,7 +125,8 @@ After you finish creating the document in WordPad, you can test the print functi
     - If you cannot print a test page, or if you cannot print in several (or all) Windows-based programs, you have a printer driver problem, a Windows problem, a hardware problem, or a connectivity problem.
     - If the problem is limited to a particular font, a damaged font file may be the cause. For more information about how to test and reinstall fonts, see the following Microsoft Knowledge Base article:<br/><br/>
     [314960](https://support.microsoft.com/help/314960/how-to-install-or-remove-a-font-in-windows) How to install or remove a font in Windows<br/><br/>
-    - If you can print without problems in all programs except Word, go to "Step 3: Test printing with different printer drivers."
+    - If you can print without problems in all programs except Word, go to "Step 4: Test printing with different printer drivers."
+
 You might be able to use the Windows 10 printing help and troubleshooting wizard to resolve the printing problem. Select **Start**, type printing, and then select **Find and fix problems with printing**.
 
 ### Step 4: Test printing with different printer drivers
@@ -194,7 +193,7 @@ To look for device drivers or memory-resident programs that might be interfering
 
 If the Word printing problem does not occur when you start Windows in safe mode, use clean-boot troubleshooting to help determine the source of the problem.
 
-Need More Help?
+## Need More Help?
 
 Get help from the [Microsoft Community](https://answers.microsoft.com/) online community, search for more information on [Microsoft Support](https://support.microsoft.com/) or [Office Help and How To](https://office.microsoft.com/support/), or learn more about [Assisted Support](https://support.microsoft.com/contactus/) options.
 
