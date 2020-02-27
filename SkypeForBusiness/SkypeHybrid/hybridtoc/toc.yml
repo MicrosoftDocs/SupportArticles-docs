@@ -11,10 +11,6 @@
     items:
     - name: AllowAdalForNonLyncIndependentOfLync setting
       href: ../hybrid-exchange-integration/allowadalfornonlyncIndependentofLync-setting.md
-    - name: Integrate Exchange Online with Lync Server
-      href: ../../SkypeOnline/online-exchange-integration/integrate-exchange-online-skype-for-business.md
-    - name: Integrate Exchange Server 2013 with Lync Server 
-      href: ../../SkypeOnline/online-exchange-integration/exchange-server-lync-server-hybrid.md
     - name: Repeatedly prompted for Exchange credentials
       href: ../hybrid-exchange-integration/repeatedly-prompted-for-credentials.md
   - name: IM and Presence
