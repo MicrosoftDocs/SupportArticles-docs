@@ -12,7 +12,7 @@ search.appverid:
 - SPO160
 - MET150
 appliesto:
-- SharePoint Online 
+- All versions of Outlook
 ms.custom: 
 - CI 111840
 - CSSTroubleshoot 
