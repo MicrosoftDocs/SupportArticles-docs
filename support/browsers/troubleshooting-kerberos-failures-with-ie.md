@@ -4,14 +4,11 @@ description: Provides information about symptoms and various steps you can take 
 ms.prod-support-area-path: 
 ms.date: 02/25/2020
 ---
-
 # Troubleshooting Kerberos failures in Internet Explorer
 
 This article can help you to isolate and fix the causes of various errors that you may experience when you access websites that are configured to use Kerberos authentication in Internet Explorer. The number of potential issues that may occur is almost as large as the number of tools that are available to solve them.
 
 ## Common symptoms when Kerberos fails
-
-### Symptom 1
 
 You try to access a website for which Windows Integrated Authenticated has been configured and for which you expect to be using the Kerberos authentication protocol. When you access the website, your browser immediately prompts you for credentials, as follows:
 
@@ -49,6 +46,7 @@ If you're using classic ASP, you can use the following page:
 
 Testkerb.asp
 
+```html
 <%
 	authType=UCase(Request.ServerVariables("AUTH_TYPE"))
 	authHeader=Request.ServerVariables("HTTP_AUTHORIZATION")
@@ -57,6 +55,7 @@ Testkerb.asp
 	response.write " Protocol : "
 	if Len(authType ) =0 then response.write " Anonymous" else if authType<>"NEGOTIATE" then response.write authType else if LenAuthHeader>1000 then response.write "Kerberos" else response.write  "NTLM"
 %>
+```
 
 You can also use tools such as Fiddler, HttpWatch, Network Monitor, or the developer tools in your browser to determine whether Kerberos is used. For more information about how such traces can be generated, see [client-side tracing](https://techcommunity.microsoft.com/t5/iis-support-blog/how-to-take-an-http-trace-from-the-client/ba-p/799618). 
 
@@ -228,10 +227,12 @@ If you do not explicitly declare an SPN, Kerberos authentication works only if t
 
 However, these identities are not recommended because they are a security risk. In this case, the Kerberos ticket is built by using a default SPN that's created in Active Directory when a computer (in this case, the server that IIS is running on) is added to the domain. This "default SPN" is associated with the computer account. Under IIS, the computer account maps to “Network Service” or “ApplicationPoolIdentity.”
 
-If your application pool has to use an identity other than the listed identies, you’ll have to declare an SPN (using [SETSPN](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc773257(v=ws.10)?redirectedfrom=MSDN)), and then associate it with the account that's used for your application pool identity. A common mistake is to create similar SPNs that have different accounts. For example:
+If your application pool has to use an identity other than the listed identies, you’ll have to declare an SPN (using [SETSPN](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc773257(v=ws.10))), and then associate it with the account that's used for your application pool identity. A common mistake is to create similar SPNs that have different accounts. For example: 
 
+``` console
 SETSPN http/mywebsite UserAppPool1  
 SETSPN http/mywebsite UserAppPool2
+```
 
 This configuration won’t work because there is no deterministic way to know whether the Kerberos ticket for the "http/mywebsite" SPN will be encrypted by using the UserAppPool1 or UserAppPool2 password. This configuration typically generates KRB_AP_ERR_MODIFIED errors. To determine whether you are in this (bad) "duplicate SPNs" scenario, you can use the tools that are documented in [Why you can still have duplicate SPNs in AD 2012 R2 and AD 2016](https://docs.microsoft.com/archive/blogs/389thoughts/why-you-can-still-have-duplicate-spns-in-ad-2012-r2-and-ad-2016). From Windows Server 2008 onwards, you can also use an updated version of SETSPN for Windows that allows the detection of duplicate SPNs by using the **setspn –X** command when you declare a new SPN for your target account. For more information, see [Setspn](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731241(v%3Dws.11).
 
@@ -261,9 +262,7 @@ Kernel mode authentication is a feature that was introduced in IIS7. It provides
 In this scenario, check the following items:
 
   - The Internet Explorer Zone that's used for the URL. Kerberos delegation is allowed only for the Intranet and Trusted Sites zones. (In other words, Internet Explorer sets the ISC_REQ_DELEGATE flag when it calls [InitializeSecurityContext](https://docs.microsoft.com/windows/win32/api/sspi/nf-sspi-initializesecuritycontexta?redirectedfrom=MSDN) only if the zone that is determined is either Intranet or Trusted Sites.)
-
   - The user account must have the "Trusted for delegation" flag set.
-
 
 If delegation still fails, consider using the Kerberos Configuration Manager for IIS. This tool lets you diagnose and fix IIS configurations for Kerberos authentication and for the associated SPNs on the target accounts. For more information, see the [README.md](https://github.com/SurajDixit/KerberosConfigMgrIIS/blob/master/README.md). You can download the tool from: https://github.com/SurajDixit/KerberosConfigMgrIIS/releases.
 
@@ -290,11 +289,10 @@ Internet Explorer feature keys
 
 These are registry keys that turn some features of the browser on or off. The keys are located in the following registry locations:
 
-`HKU\<UserSID>\Software\Microsoft\Internet Explorer\Main\FeatureControl – if defined at the user level`
-
-`HKLM\SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\ - if defined at the machine level`
+`HKU\<UserSID>\Software\Microsoft\Internet Explorer\Main\FeatureControl` – if defined at the user level  
+`HKLM\SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\` - if defined at the machine level
 
 Feature keys should be created in one of these locations, depending on whether you want to turn the feature on or off for all users on the computer or for only a specific account. These keys should be created under the respective path. Inside the key, a DWORD value that's named **iexplorer.exe** should be declared. The default value of each key should be set to either **true** or **false**, depending on the desired setting of the feature. By default, the value of both feature keys, FEATURE_INCLUDE_PORT_IN_SPN_KB908209 and FEATURE_USE_CNAME_FOR_SPN_KB911149, is **false**. For completeness, here is an example export of the registry by turning the feature key to include port numbers in the Kerberos ticket to true:
 
-`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_INCLUDE_PORT_IN_SPN_KB908209]
-"iexplore.exe"=dword:00000001`
+`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_INCLUDE_PORT_IN_SPN_KB908209]`  
+`"iexplore.exe"=dword:00000001`

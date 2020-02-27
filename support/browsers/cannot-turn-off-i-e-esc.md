@@ -4,7 +4,6 @@ description: Provides information about symptoms and various steps you can take 
 ms.prod-support-area-path: 
 ms.date: 02/25/2020
 ---
-
 # Standard users can’t turn off Internet Explorer Enhanced Security feature on a Windows Server 2003-based terminal server or a later version
 
 This article provides information on troubleshooting the issues in which you cannot turn off Internet Explorer Enhanced Security.
@@ -49,14 +48,12 @@ To turn off Internet Explorer Enhanced Security Configuration for specific user 
 
 4. Select **The following user**, enter an account name that has administrative credentials, and then select **OK**.
 
-5. Locate and select the following registry subkey:
-
+5. Locate and select the following registry subkey:  
    `HKEY_ CURRENT_ USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zonemap`
 
 6. In the details pane, right-click **IEHarden**, select **Modify**, enter **0** (zero) in the **Value data** box, and then select **OK**. You can also remove this registry entry.
 
-7. Locate and select the following registry subkey:
-
+7. Locate and select the following registry subkey:  
    `HKEY_ CURRENT_ USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings`
 
 8. In the details pane, right-click **lEHardenlENoWarn**, select **Modify**, enter **0** (zero) in the **Value data** box, and then select **OK**. You can also remove this registry entry.
@@ -90,9 +87,7 @@ In this scenario, follow these steps:
    > [!NOTE]
    > This action overwrites the existing NTUser.dat file in the Default User profile folder. Therefore, you may want to back up the original NTUser.dat file before you perform this action.
 
-
-5. Create a Group Policy Object to disable or to enable Internet Explorer hardening in the Active Directory directory service.
- 
+5. Create a Group Policy Object to disable or to enable Internet Explorer hardening in the Active Directory directory service. 
 
 The package that contains this white paper includes the InetEsc.adm file. You can use this file to configure Internet Explorer Enhanced Security Configuration.
 

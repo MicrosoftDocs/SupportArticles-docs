@@ -9,14 +9,11 @@ ms.date: 02/14/2020
 _Original product version:_ &nbsp; the Internet Explorer Administration Kit 9  
 _Original KB number:_ &nbsp; 2555560
 
-
 The [Internet Explorer Administration Kit (IEAK) 9](https://www.microsoft.com/download/details.aspx?id=23643) now supports creating custom Internet Explorer 9 packages in a total of 93 languages. Because of a limitation in the IEAK 9 Wizard, the languages for IEAK 9 are divided into two sets and require two separate ieak.ini files. Not all 93 languages are supported on all platform and operating system configurations.
-
-## More Information
 
 The following tables list the languages for the supported platform and operating system configurations. The first table has the default set. The second table has the additional set. English US is available in both sets. Some of the languages will be available in late May 2011. Other languages aren't supported for creating custom browser packages on the platform and operating system configuration.
 
-### Default set:
+## Default set:
 
 > [!Note]
 > By default, these languages are available with IEAK 9.
@@ -73,7 +70,7 @@ The following tables list the languages for the supported platform and operating
 |Vietnamese|Yes|Not supported|Yes|Yes|
 |Welsh|Late May 2011|Not supported|Late May 2011|Late May 2011|
 
-### Additional set:
+## Additional set:
 
 To have access to these languages, you will have to replace your ieak.ini file. English US is available in both sets. 
 
