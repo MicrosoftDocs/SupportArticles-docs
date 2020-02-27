@@ -4,7 +4,7 @@ description: When you print to a dot matrix printer like Epson LX-300+II via IE8
 ms.prod-support-area-path: Internet Explorer 8
 ms.date: 02/14/2020
 ---
-# Printing to a dot matrix printer from Internet Explorer 8 results in malformed characters
+# Printing to a dot matrix printer from Internet Explorer 8 results in malformed characters 
 
 _Original product version:_ &nbsp; Internet Explorer 8  
 _Original KB number:_ &nbsp; 2543597
