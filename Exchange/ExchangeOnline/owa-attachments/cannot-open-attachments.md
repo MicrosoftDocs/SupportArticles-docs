@@ -32,9 +32,7 @@ This issue occurs if the attachment is blocked by Outlook Web App. By default, O
 
 ## SOLUTION 
 
-Change the Outlook Web App mailbox policy to include and exclude the file types that you want. For more information about how to do this, see the “Add or remove file types from file access lists” section of the following Microsoft website: 
-
-[View and customize settings in Outlook Web App mailbox policies](https://help.outlook.com/140/gg192742.aspx)
+Change the Outlook Web App mailbox policy to include and exclude the file types that you want.
 
 The following is an example of the Windows PowerShell commands to remove the .xml file type from the BlockedFileTypes and BlockedMimeTypes lists and add it to the AllowedFileTypes and AllowedMimeTypes lists:
 
