@@ -39,6 +39,8 @@
       href: ../folders/incorrect-folder-names.md
     - name: Insufficient memory to display a folder
       href: ../folders/outlook-folder-fails-displaying.md
+    - name: Remove duration from retention tags
+      href: ../folders/remove-duration-retention-policy-tag.md
   - name: IMAP/POP
     items:
     - name: Can't use Quick Steps
