@@ -30,7 +30,7 @@ Client Environment: A person running the Internet Explorer
 - Requests made relatively consecutively
 - Host application lifetime is short (length of browser session)
 
-Server Environment: A Web server (such as, www.microsoft.com)
+Server Environment: A Web server (such as, https://www.microsoft.com)
 - High number of requests per second
 - Multiple threads making requests concurrently
 - Must run for weeks or months

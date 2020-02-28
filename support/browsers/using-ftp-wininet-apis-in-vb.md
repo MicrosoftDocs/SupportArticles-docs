@@ -30,7 +30,7 @@ The sample demonstrates the following concepts:
 
 The following file is available for download from the Microsoft Download Center:
 
-[Vbsmpftp.exe](http://download.microsoft.com/download/ie4095/vbsmpftp/1/w9xnt4/en-us/vbsmpftp.exe)
+[Vbsmpftp.exe](https://download.microsoft.com/download/ie4095/vbsmpftp/1/w9xnt4/en-us/vbsmpftp.exe)
 
 For more information about how to download Microsoft Support files, see the following article:
 
