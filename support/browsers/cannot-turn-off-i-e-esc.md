@@ -1,10 +1,10 @@
 ---
 title: Cannot turn off Internet Explorer Enhanced Security
 description: Provides information about symptoms and various steps you can take to solve them, depending on the scenario.
-ms.prod-support-area-path: 
-ms.date: 02/25/2020
+ms.prod-support-area-path:
+ms.date: 02/29/2020
 ---
-# Standard users can’t turn off Internet Explorer Enhanced Security feature on a Windows Server 2003-based terminal server or a later version
+# Standard users can't turn off Internet Explorer Enhanced Security feature on a Windows Server 2003-based terminal server or a later version
 
 This article provides information on troubleshooting the issues in which you cannot turn off Internet Explorer Enhanced Security.
 
@@ -30,6 +30,7 @@ For administrator accounts, you can run the following command to turn off Intern
 ```console
 rundll32.exe setupapi.dll,InstallHinfSection IESoftenAdmin 128 %windir%\inf\IEHARDEN.INF
 ```
+
 > [!NOTE]
 > You must run this command by using an account that has administrative credentials. For the changes to take effect, you must also restart the computer after you run this command.
 
@@ -59,9 +60,9 @@ To turn off Internet Explorer Enhanced Security Configuration for specific user 
 8. In the details pane, right-click **lEHardenlENoWarn**, select **Modify**, enter **0** (zero) in the **Value data** box, and then select **OK**. You can also remove this registry entry.
 
 9. Exit Registry Editor, and then start Internet Explorer.
- 
+
 10. On the **Tools** menu, select **Internet Options**.
- 
+
 11. Select the **Advanced** tab, select **Restore Defaults**, and then select **OK**.
 
 ## Resolution 4: Create a new default profile for standard user accounts

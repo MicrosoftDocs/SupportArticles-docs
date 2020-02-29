@@ -1,8 +1,8 @@
 ---
 title: Troubleshooting Kerberos failures in Internet Explorer
 description: Provides information about symptoms and various steps you can take to solve them, depending on the scenario.
-ms.prod-support-area-path: 
-ms.date: 02/25/2020
+ms.prod-support-area-path:
+ms.date: 02/29/2020
 ---
 # Troubleshooting Kerberos failures in Internet Explorer
 
@@ -14,11 +14,11 @@ You try to access a website for which Windows Integrated Authenticated has been 
 
 ![prompt for credentials](./media/troubleshooting-kerberos-failures-with-ie/prompt-for-credentials.png)
 
-Although you enter a valid user name and password, you're prompted again (three prompts total). Then, you're shown a screen that indicates that you aren't allowed to access the desired resource. The screen displays a "401: forbidden response" code that resembles the following:
+Although you enter a valid user name and password, you're prompted again (three prompts total). Then, you're shown a screen that indicates that you aren't allowed to access the desired resource. The screen displays a **401: forbidden response** code that resembles the following:
 
 ![http error 401](./media/troubleshooting-kerberos-failures-with-ie/http-error-401.png)
 
-On the Internet Information Services (IIS) server, the website logs contains requests that end in a "401.2" status code, such as the following:
+On the Internet Information Services (IIS) server, the website log contains requests that end in a **401.2** status code, such as the following:
 
 ```
 #Fields: date time s-ip cs-method cs-uri-stem cs-uri-query s-port cs-username c-ip cs(User-Agent) cs(Referer) sc-status sc-substatus sc-win32-status time-taken
@@ -28,7 +28,7 @@ DateTime IP GET /whoami.aspx - 80 – IP Mozilla/4.0+(compatible;+MSIE+7.0;+Wind
 DateTime IP GET /whoami.aspx - 80 - IP Mozilla/4.0+(compatible;+MSIE+7.0;+Windows+NT+10.0;+WOW64;+Trident/7.0;+.NET4.0C;+.NET4.0E;+.NET+CLR+2.0.50727;+.NET+CLR+3.0.30729;+.NET+CLR+3.5.30729) - 401 2 5 8
 ```
 
-Alternatively, the screen displays a "401.1" status codes, such as the following:
+Alternatively, the screen displays a **401.1** status codes, such as the following:
 
 ```
 #Fields: date time s-ip cs-method cs-uri-stem cs-uri-query s-port cs-username c-ip cs(User-Agent) cs(Referer) sc-status sc-substatus sc-win32-status time-taken
@@ -40,7 +40,7 @@ DateTime IP GET /whoami.aspx - 80 - IP Mozilla/4.0+(compatible;+MSIE+7.0;+Window
 
 ## Determine whether Kerberos is used
 
-When you troubleshoot Kerberos authentication failure, we recommend that you simplify the configuration to the minimum (one client, one server, one IIS site that's running on the default port). Additionally, you can follow some basic troubleshooting steps. For example, use a test page to verify the authentication method that's used. If you use ASP.NET, you can create this [ASP.net authentication test page](https://docs.microsoft.com/archive/blogs/friis/asp-net-authentication-test-page). 
+When you troubleshoot Kerberos authentication failure, we recommend that you simplify the configuration to the minimum (one client, one server, one IIS site that's running on the default port). Additionally, you can follow some basic troubleshooting steps. For example, use a test page to verify the authentication method that's used. If you use ASP.NET, you can create this [ASP.net authentication test page](https://docs.microsoft.com/archive/blogs/friis/asp-net-authentication-test-page).
 
 If you're using classic ASP, you can use the following page:
 
@@ -48,12 +48,12 @@ Testkerb.asp
 
 ```html
 <%
-	authType=UCase(Request.ServerVariables("AUTH_TYPE"))
-	authHeader=Request.ServerVariables("HTTP_AUTHORIZATION")
-	response.write " Authentication Method : " & authType & "<BR>"
-	LenAuthHeader = len(authHeader)
-	response.write " Protocol : "
-	if Len(authType ) =0 then response.write " Anonymous" else if authType<>"NEGOTIATE" then response.write authType else if LenAuthHeader>1000 then response.write "Kerberos" else response.write  "NTLM"
+  authType=UCase(Request.ServerVariables("AUTH_TYPE"))
+  authHeader=Request.ServerVariables("HTTP_AUTHORIZATION")
+  response.write " Authentication Method : " & authType & "<BR>"
+  LenAuthHeader = len(authHeader)
+  response.write " Protocol : "
+  if Len(authType ) =0 then response.write " Anonymous" else if authType<>"NEGOTIATE" then response.write authType else if LenAuthHeader>1000 then response.write "Kerberos" else response.write  "NTLM"
 %>
 ```
 
@@ -79,13 +79,13 @@ Using Kerberos requires a domain because a Kerberos ticket is delivered by the d
 
 ![windows authentication](./media/troubleshooting-kerberos-failures-with-ie/windows-authentication.png)
 
-### Is integrated authentication enabled in Internet Explorer? 
+### Is integrated authentication enabled in Internet Explorer?
 
 ![internet options](./media/troubleshooting-kerberos-failures-with-ie/internet-options.png)
 
 ### Does the URL that's used resolve to a security zone for which credentials can be sent?
 
- You should always run this check for sites that are matched to the Local Intranet zone of the browser or for sites in the Trusted Sites zone. You can check in which zone your browser decides to include the site. To do this, open to the **File** menu of Internet Explorer, and then select **Properties**. The **Properties** window will display the zone in which the browser has decided to include the site that you are browsing to.
+You should always run this check for sites that are matched to the Local Intranet zone of the browser or for sites in the Trusted Sites zone. You can check in which zone your browser decides to include the site. To do this, open to the **File** menu of Internet Explorer, and then select **Properties**. The **Properties** window will display the zone in which the browser has decided to include the site that you are browsing to.
 
 ![properties](./media/troubleshooting-kerberos-failures-with-ie/properties.png)
 
@@ -93,10 +93,10 @@ You can check whether the zone in which the site is included allows Automatic lo
 
 ![local intranet](./media/troubleshooting-kerberos-failures-with-ie/local-intranet.png)
 
- > [!NOTE]
- > Even through this configuration is not common (because it requires the client to have access to a DC), Kerberos can be used for a URL in the Internet Zone. In this case, unless default settings are changed, the browser will always prompt the user for credentials. Notice also that Kerberos delegation won’t work in the Internet Zone. This is because Internet Explorer allows Kerberos delegation only for a URL in the Intranet and Trusted sites zones.
+> [!NOTE]
+> Even through this configuration is not common (because it requires the client to have access to a DC), Kerberos can be used for a URL in the Internet Zone. In this case, unless default settings are changed, the browser will always prompt the user for credentials. Notice also that Kerberos delegation won’t work in the Internet Zone. This is because Internet Explorer allows Kerberos delegation only for a URL in the Intranet and Trusted sites zones.
 
-### Is the IIS server configured to send the WWW-Authenticate: Negotiate header? 
+### Is the IIS server configured to send the WWW-Authenticate: Negotiate header?
 
 ![headers](./media/troubleshooting-kerberos-failures-with-ie/headers.png)
 
@@ -104,7 +104,7 @@ If IIS doesn’t send this header, you will have to use the IIS Manager console 
 
 ![providers settings in authentication](./media/troubleshooting-kerberos-failures-with-ie/providers-settings-in-authentication.png)
 
-> [!NOTE] 
+> [!NOTE]
 > By default, the **NTAuthenticationProviders** property is not set. This causes IIS to send both Negotiate and NTLM headers.
 
 ### Are the client and installed on the same computer?
@@ -113,22 +113,22 @@ By default, Kerberos is not enabled in this configuration. To change this behavi
 
 ### Can the client get a Kerberos ticket?
 
-You can use the KLIST tool to verify that the client computer can obtain a Kerberos ticket for a given service principal name (SPN). In this example, the SPN is "http/web-server." 
+You can use the KLIST tool to verify that the client computer can obtain a Kerberos ticket for a given service principal name (SPN). In this example, the SPN is `http/web-server`.
 
-> [!NOTE] 
+> [!NOTE]
 > KLIST is a native Windows tool since Windows 2008 Server for server-side operating systems and Windows 7 Service Pack 1 for client-side operating systems.
 
 ![klist tool](./media/troubleshooting-kerberos-failures-with-ie/klist-tool.png)
 
 If the Kerberos ticket request fails, Kerberos authentication is not used. NTLM fallback may occur if the Kerberos ticket request fails. This is because the SPN requested is unknown to the DC. Notice also that if the DC is unreachable, no NTLM fallback occurs.
 
-In order to declare an SPN, consult the following Knowledge Base article: 
+In order to declare an SPN, consult the following Knowledge Base article:
 
 [How to use SPNs when you configure Web applications that are hosted on Internet Information Services](https://support.microsoft.com/help/929650/how-to-use-spns-when-you-configure-web-applications-that-are-hosted-on)
 
 ### Does the web server use a port other than default (80)?
 
-By default, Internet Explorer doesn’t include the port number information in the SPN that's used to request a Kerberos ticket. This can be a problem if you use IIS to host multiple sites under different ports and identities. In this configuration, Kerberos authentication may work only for specific sites even if all SPNs have been correctly declared in Active Directory. To fix this issue, you must set the **FEATURE_INCLUDE_PORT_IN_SPN_KB908209** registry value. (See the Appendix in the "Summary" section for information about how to declare the key.) This setting forces Internet Explorer to include the port number in the SPN that's used to request the Kerberos ticket.
+By default, Internet Explorer doesn’t include the port number information in the SPN that's used to request a Kerberos ticket. This can be a problem if you use IIS to host multiple sites under different ports and identities. In this configuration, Kerberos authentication may work only for specific sites even if all SPNs have been correctly declared in Active Directory. To fix this issue, you must set the **FEATURE_INCLUDE_PORT_IN_SPN_KB908209** registry value. (See the Appendix in the **Summary** section for information about how to declare the key.) This setting forces Internet Explorer to include the port number in the SPN that's used to request the Kerberos ticket.
 
 ### Does IE use the expected SPN?
 
@@ -210,59 +210,59 @@ The following procedure is a summary of the Kerberos authentication algorithm:
 
 3. LSASS uses the SPN that's passed in to request a Kerberos ticket to a DC. If the DC can serve the request (known SPN), it creates a Kerberos ticket, and then encrypts the ticket by using a key that's constructed from the hash of the user account password for the account that's associated with the SPN. LSASS then sends the ticket to the client. As far as Internet Explorer is concerned, the ticket is an opaque blob.
 
-4. Internet Explorer encapsulates the Kerberos ticket that's provided by LSASS in the “Authorization : Negotiate” header, and then it sends the ticket to the IIS server.
+4. Internet Explorer encapsulates the Kerberos ticket that's provided by LSASS in the **Authorization : Negotiate** header, and then it sends the ticket to the IIS server.
 
 5. IIS handles the request and routes it to the correct application pool (by using the host header that's specified).
 
 6. The application pool tries to decrypt the ticket by using SSPI/LSASS APIs and by following these conditions:
 
-   -  If the ticket can be decrypted, Kerberos authentication succeeds, and all services that are associated with the ticket (impersonation, delegation if ticket allows it, and so on) are available.
-   -  If the ticket can’t be decrypted, a Kerberos error (KRB_AP_ERR_MODIFIED) is returned. This error is a generic error that indicates that the ticket was altered in some manner during its transport. Therefore, the ticket cannot be decrypted. This error is also logged in the Windows event logs.
+   - If the ticket can be decrypted, Kerberos authentication succeeds, and all services that are associated with the ticket (impersonation, delegation if ticket allows it, and so on) are available.
+   - If the ticket can’t be decrypted, a Kerberos error (KRB_AP_ERR_MODIFIED) is returned. This error is a generic error that indicates that the ticket was altered in some manner during its transport. Therefore, the ticket cannot be decrypted. This error is also logged in the Windows event logs.
 
 If you do not explicitly declare an SPN, Kerberos authentication works only if the application pool identity is one of the following:
 
-- “Network Service”
-- “ApplicationPoolIdentity”
-- Another system account such as LOCALSYSTEM or LOCALSERVICE
+- **Network Service**
+- **ApplicationPoolIdentity**
+- Another system account such as **LOCALSYSTEM** or **LOCALSERVICE**
 
-However, these identities are not recommended because they are a security risk. In this case, the Kerberos ticket is built by using a default SPN that's created in Active Directory when a computer (in this case, the server that IIS is running on) is added to the domain. This "default SPN" is associated with the computer account. Under IIS, the computer account maps to “Network Service” or “ApplicationPoolIdentity.”
+However, these identities are not recommended because they are a security risk. In this case, the Kerberos ticket is built by using a default SPN that's created in Active Directory when a computer (in this case, the server that IIS is running on) is added to the domain. This _default SPN_ is associated with the computer account. Under IIS, the computer account maps to **Network Service** or **ApplicationPoolIdentity.**
 
-If your application pool has to use an identity other than the listed identies, you’ll have to declare an SPN (using [SETSPN](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc773257(v=ws.10))), and then associate it with the account that's used for your application pool identity. A common mistake is to create similar SPNs that have different accounts. For example: 
+If your application pool has to use an identity other than the listed identities, you’ll have to declare an SPN (using [SETSPN](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc773257(v=ws.10))), and then associate it with the account that's used for your application pool identity. A common mistake is to create similar SPNs that have different accounts. For example:
 
-``` console
+```console
 SETSPN http/mywebsite UserAppPool1  
 SETSPN http/mywebsite UserAppPool2
 ```
 
-This configuration won’t work because there is no deterministic way to know whether the Kerberos ticket for the "http/mywebsite" SPN will be encrypted by using the UserAppPool1 or UserAppPool2 password. This configuration typically generates KRB_AP_ERR_MODIFIED errors. To determine whether you are in this (bad) "duplicate SPNs" scenario, you can use the tools that are documented in [Why you can still have duplicate SPNs in AD 2012 R2 and AD 2016](https://docs.microsoft.com/archive/blogs/389thoughts/why-you-can-still-have-duplicate-spns-in-ad-2012-r2-and-ad-2016). From Windows Server 2008 onwards, you can also use an updated version of SETSPN for Windows that allows the detection of duplicate SPNs by using the **setspn –X** command when you declare a new SPN for your target account. For more information, see [Setspn](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731241(v%3Dws.11).
+This configuration won’t work because there is no deterministic way to know whether the Kerberos ticket for the `http/mywebsite` SPN will be encrypted by using the UserAppPool1 or UserAppPool2 password. This configuration typically generates KRB_AP_ERR_MODIFIED errors. To determine whether you are in this (bad) **duplicate SPNs** scenario, you can use the tools that are documented in [Why you can still have duplicate SPNs in AD 2012 R2 and AD 2016](https://docs.microsoft.com/archive/blogs/389thoughts/why-you-can-still-have-duplicate-spns-in-ad-2012-r2-and-ad-2016). From Windows Server 2008 onwards, you can also use an updated version of SETSPN for Windows that allows the detection of duplicate SPNs by using the **setspn –X** command when you declare a new SPN for your target account. For more information, see [Setspn](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731241(v%3Dws.11).
 
 We also recommended that you review the following articles:
 
-  - [Kerberos Authentication problems – Service Principal Name (SPN) issues - Part 1](https://docs.microsoft.com/archive/blogs/askds/kerberos-authentication-problems-service-principal-name-spn-issues-part-1)
+- [Kerberos Authentication problems – Service Principal Name (SPN) issues - Part 1](https://docs.microsoft.com/archive/blogs/askds/kerberos-authentication-problems-service-principal-name-spn-issues-part-1)
 
-  - [Kerberos Authentication problems – Service Principal Name (SPN) issues - Part 2](https://docs.microsoft.com/archive/blogs/askds/kerberos-authentication-problems-service-principal-name-spn-issues-part-2)
+- [Kerberos Authentication problems – Service Principal Name (SPN) issues - Part 2](https://docs.microsoft.com/archive/blogs/askds/kerberos-authentication-problems-service-principal-name-spn-issues-part-2)
 
-  - [Kerberos Authentication problems – Service Principal Name (SPN) issues - Part 3](https://docs.microsoft.com/archive/blogs/askds/kerberos-authentication-problems-service-principal-name-spn-issues-part-3)
+- [Kerberos Authentication problems – Service Principal Name (SPN) issues - Part 3](https://docs.microsoft.com/archive/blogs/askds/kerberos-authentication-problems-service-principal-name-spn-issues-part-3)
 
 ### Does Kerberos authentication fail in IIS7 and later versions even though it works in IIS6?
 
-
 Kernel mode authentication is a feature that was introduced in IIS7. It provides the following advantages:
 
-  -	Performance is increased because kernel-mode-to-user-mode transitions are no longer made.
-  - Kerberos ticket decoding is made by using the machine account (not by using application pool identity). This lets you have multiple applications pools running under different identities without having to declare SPNs.
+- Performance is increased because kernel-mode-to-user-mode transitions are no longer made.
+- Kerberos ticket decoding is accomplished by using the machine account, not by using application pool identity. This lets you have multiple applications pools running under different identities without having to declare SPNs.
 
-> [!WARNING] 
-> If an SPN has been declared for a specific user account (also used as application pool identity), kernel mode authentication can't decrypt the Kerberos ticket because it uses the machine account. This problem is typical in web farm scenarios. This is because this scenario usually declares an SPN for the (virtual) NLB hostname. To prevent this from occurring, you can do either of the following: 
-> - Disable Kernel mode authentication. (Not recommended from a performance standpoint.)
-> - Set **useAppPoolCredentials** to **true**. (Doing this retains the performance benefit of kernel mode authentication while allowing the Kerberos ticket to be decoded under the application pool identity). For more information, see [New in IIS 7 - Kernel Mode Authentication](http://www.adopenstatic.com/cs/blogs/ken/archive/2008/02/12/16189.aspx).
- 
+> [!WARNING]
+> If an SPN has been declared for a specific user account (also used as application pool identity), kernel mode authentication can't decrypt the Kerberos ticket because it uses the machine account. This problem is typical in web farm scenarios. This is because this scenario usually declares an SPN for the (virtual) NLB hostname. To prevent this from occurring, you can do either of the following:
+> - Disable Kernel mode authentication. This is not recommended from a performance standpoint.
+> - Set **useAppPoolCredentials** to **true**.
+>    - Doing this retains the performance benefit of kernel mode authentication while allowing the Kerberos ticket to be decoded under the application pool identity. For more information, see [New in IIS 7 - Kernel Mode Authentication](http://www.adopenstatic.com/cs/blogs/ken/archive/2008/02/12/16189.aspx).
+
 ### Why does delegation fail although Kerberos authentication works?
 
 In this scenario, check the following items:
 
-  - The Internet Explorer Zone that's used for the URL. Kerberos delegation is allowed only for the Intranet and Trusted Sites zones. (In other words, Internet Explorer sets the ISC_REQ_DELEGATE flag when it calls [InitializeSecurityContext](https://docs.microsoft.com/windows/win32/api/sspi/nf-sspi-initializesecuritycontexta?redirectedfrom=MSDN) only if the zone that is determined is either Intranet or Trusted Sites.)
-  - The user account must have the "Trusted for delegation" flag set.
+- The Internet Explorer Zone that's used for the URL. Kerberos delegation is allowed only for the Intranet and Trusted Sites zones. (In other words, Internet Explorer sets the ISC_REQ_DELEGATE flag when it calls [InitializeSecurityContext](https://docs.microsoft.com/windows/win32/api/sspi/nf-sspi-initializesecuritycontexta?redirectedfrom=MSDN) only if the zone that is determined is either Intranet or Trusted Sites.)
+- The user account must have the **Trusted for delegation** flag set.
 
 If delegation still fails, consider using the Kerberos Configuration Manager for IIS. This tool lets you diagnose and fix IIS configurations for Kerberos authentication and for the associated SPNs on the target accounts. For more information, see the [README.md](https://github.com/SurajDixit/KerberosConfigMgrIIS/blob/master/README.md). You can download the tool from: https://github.com/SurajDixit/KerberosConfigMgrIIS/releases.
 
@@ -275,7 +275,7 @@ You can change this behavior using the **authPersistNonNTLM** property if you ar
 [Request based versus Session based Kerberos Authentication (or the AuthPersistNonNTLM parameter)](https://techcommunity.microsoft.com/t5/iis-support-blog/request-based-versus-session-based-kerberos-authentication-or/ba-p/916043)
 
 > [!NOTE] 
-> It may not be a good idea to blindly use Kerberos authentication on all objects. Using Kerberos authentication to fetch hundreds of images by using conditional GET requests that are likely generate "304 not modified" responses is like trying to kill a fly by using a hammer. Such a method will also not provide obvious security gains.
+> It may not be a good idea to blindly use Kerberos authentication on all objects. Using Kerberos authentication to fetch hundreds of images by using conditional GET requests that are likely generate **304 not modified** responses is like trying to kill a fly by using a hammer. Such a method will also not provide obvious security gains.
 
 ### Why does Kerberos delegation fail between my two forests although it used to work?
 
