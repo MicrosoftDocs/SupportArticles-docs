@@ -6,9 +6,9 @@ ms.date: 02/29/2020
 ---
 # Printing to a dot-matrix printer from Internet Explorer 8 results in malformed characters
 
-This articles discusses flaws in printouts from dot-matrix printers, when using Internet Explorer 8 (IE8). Sometimes the font size is incorrect, and sometimes characters overlap.
+This article discusses flaws in printouts from dot-matrix printers, when printing with Internet Explorer 8 (IE8). Sometimes the font size is incorrect, and sometimes characters overlap.
 
-[!INCLUDE[Visual eye catcher for legacy KB](../includes/kb-letters-blue.md)]  
+[!INCLUDE[Visual eye catcher for legacy KB](../includes/kb-letters-blue.md)]
 _Original product version:_ &nbsp; Internet Explorer 8  
 _Original KB number:_ &nbsp; 2543597
 
@@ -26,7 +26,7 @@ Additionally, _overlap_ between adjacent characters might exist. However, this o
 
 One dot-matrix printer model that IE8 has this inter-operation problem with is Epson LX-300+II.
 
-## Workaround
+## Workarounds
 
 To work around this problem, choose one of the following options:
 
