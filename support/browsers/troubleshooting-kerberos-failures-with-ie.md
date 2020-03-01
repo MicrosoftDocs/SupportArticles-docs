@@ -10,7 +10,7 @@ Errors can occur when you use Internet Explorer to access a website that uses Ke
 
 ## Common symptoms when Kerberos fails
 
-You try to access a website for which the following items are true:
+Suppose you try to access a website for which the following items are true:
 
 - Windows Integrated Authenticated has been configured.
 - You expect to use the Kerberos authentication protocol.

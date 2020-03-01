@@ -53,12 +53,12 @@ To turn off Internet Explorer Enhanced Security Configuration for specific user 
 4. Select **The following user**, enter an account name that has administrative credentials, and then select **OK**.
 
 5. Locate and select the following registry subkey:  
-   `HKEY_ CURRENT_ USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zonemap`
+   `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zonemap`
 
 6. In the details pane, right-click **IEHarden**, select **Modify**, enter **0** (zero) in the **Value data** box, and then select **OK**. You can also remove this registry entry.
 
 7. Locate and select the following registry subkey:  
-   `HKEY_ CURRENT_ USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings`
+   `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings`
 
 8. In the details pane, right-click **lEHardenlENoWarn**, select **Modify**, enter **0** (zero) in the **Value data** box, and then select **OK**. You can also remove this registry entry.
 
