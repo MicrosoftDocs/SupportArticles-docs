@@ -10,8 +10,7 @@ The [Internet Explorer Administration Kit (IEAK) 9](https://www.microsoft.com/do
 
 The following tables list the languages for the supported platform and operating system configurations. The first table has the default set. The second table has the additional set. English US is available in both sets. Some of the languages will be available in late May 2011. Other languages aren't supported for creating custom browser packages on the platform and operating system configuration.
 
-[!INCLUDE[Visual eye catcher for legacy KB](../includes/kb-letters-blue.md)]
-
+[!INCLUDE[Visual eye catcher for legacy KB](../includes/kb-letters-blue.md)]  
 _Original product version:_ &nbsp; the Internet Explorer Administration Kit 9  
 _Original KB number:_ &nbsp; 2555560
 

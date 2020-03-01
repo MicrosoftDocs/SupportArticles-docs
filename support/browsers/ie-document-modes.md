@@ -26,11 +26,13 @@ The following rules determine how Internet Explorer selects the document mode:
 - Group Policy settings override other settings and force all webpages to be displayed in the specified document mode.
 - If none of these rules apply, the <!DOCTYPE> declaration determines whether the webpage renders in Standards mode, Almost Standards mode, or Quirks mode.
 
-The sections (2.1.3.2-2.1.3.8) that are explained in the article [2.1.3.1 How Internet Explorer Chooses Between Document Modes](/openspecs/ie_standards/ms-iedoco/3764531c-97c8-4bf2-bdc6-b3623738ea46) show that these rules affect how Internet Explorer selects between document modes. Most of the sections don't apply to Microsoft Edge unless this is explicitly indicated.
+The sections (2.1.3.2 - 2.1.3.8) that are explained in the following article show that these rules affect how Internet Explorer selects between document modes. Most of the sections don't apply to Microsoft Edge unless this is explicitly indicated:
+
+- [2.1.3.1 How Internet Explorer Chooses Between Document Modes](/openspecs/ie_standards/ms-iedoco/3764531c-97c8-4bf2-bdc6-b3623738ea46)
 
 Additionally, the following rule determines how Microsoft Edge selects the document mode:
 
-The <!DOCTYPE> declaration determines whether the webpage renders some specific Quirks mode emulation (QME) behavior that is specified in the [MS-HTML5](/openspecs/ie_standards/ms-html5/4257eddd-d92e-4ef0-88d5-b7accc73e094) and [MS-CSS21](/openspecs/ie_standards/ms-css21/dbb3fd1b-4d0c-4899-9e87-587d4f232a9e) documentation.
+   The <!DOCTYPE> declaration determines whether the webpage renders some specific Quirks mode emulation (QME) behavior that is specified in the [MS-HTML5](/openspecs/ie_standards/ms-html5/4257eddd-d92e-4ef0-88d5-b7accc73e094) and [MS-CSS21](/openspecs/ie_standards/ms-css21/dbb3fd1b-4d0c-4899-9e87-587d4f232a9e) documentation.
 
 For more information about how to configure document modes, see the following articles:
 

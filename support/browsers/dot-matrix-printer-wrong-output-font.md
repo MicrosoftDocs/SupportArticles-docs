@@ -8,8 +8,7 @@ ms.date: 02/29/2020
 
 When you print to a dot matrix printer like Epson LX-300+II via IE8 on Windows XP or Windows 7, the output font gets larger or smaller than real size, and characters are overlapped sometimes. There's no problem if using Internet Explorer 6, Internet Explorer 7 or not using Dot Matrix Printer to print.
 
-[!INCLUDE[Visual eye catcher for legacy KB](../includes/kb-letters-blue.md)]
-
+[!INCLUDE[Visual eye catcher for legacy KB](../includes/kb-letters-blue.md)]  
 _Original product version:_ &nbsp; Internet Explorer 8  
 _Original KB number:_ &nbsp; 2543597
 
