@@ -1,12 +1,12 @@
 ---
-title: Wrong output font if using dot-matrix printer via IE 8
-description: When you print to a dot-matrix printer like Epson LX-300+II via IE8 on Windows XP or Windows 7, the output font gets larger or smaller than real size, and characters are overlapped sometimes. There's no problem if using IE6/7 or not using dot-matrix printer to print.
+title: Wrong output font if using dot matrix printer via IE 8
+description: When you print to a dot matrix printer like Epson LX-300+II via IE8 on Windows XP or Windows 7, the output font gets larger or smaller than real size, and characters are overlapped sometimes. There's no problem if using IE6/7 or not using dot matrix printer to print.
 ms.prod-support-area-path: Internet Explorer 8
 ms.date: 02/29/2020
 ---
-# Printing to a dot-matrix printer from Internet Explorer 8 results in malformed characters
+# Printing to a dot matrix printer from Internet Explorer 8 results in malformed characters
 
-This article discusses flaws in printouts from dot-matrix printers, when printing with Internet Explorer 8 (IE8). Sometimes the font size is incorrect, and sometimes characters overlap.
+This article discusses flaws in printouts from dot matrix printers, when printing with Internet Explorer 8 (IE8). Sometimes the font size is incorrect, and sometimes characters overlap.
 
 [!INCLUDE[Visual eye catcher for legacy KB](../includes/kb-letters-blue.md)]
 _Original product version:_ &nbsp; Internet Explorer 8  
@@ -16,15 +16,15 @@ _Original KB number:_ &nbsp; 2543597
 
 The font _size_ on a printout is sometimes either too large or too small when all the following are true:
 
-- You print to a dot-matrix printer.
+- You print to a dot matrix printer.
 - You print using IE8.
 - You are on Windows XP or Windows 7.
 
 The font size can be too large or too small.
 
-Additionally, _overlap_ between adjacent characters might exist. However, this overlap problem does not exist when printing to a dot-matrix printer from the earlier versions IE7 and IE6. Nor does any overlap occur with printers that are not dot-matrix, even when IE8 is used.
+Additionally, _overlap_ between adjacent characters might exist. However, this overlap problem does not exist when printing to a dot matrix printer from the earlier versions IE7 and IE6. Nor does any overlap occur with printers that are not dot matrix, even when IE8 is used.
 
-One dot-matrix printer model that IE8 has this inter-operation problem with is Epson LX-300+II.
+One dot matrix printer model that IE8 has this inter-operation problem with is Epson LX-300+II.
 
 ## Workarounds
 
@@ -42,7 +42,7 @@ To work around this problem, choose one of the following options:
 
    1. Open the Printers Control Panel.
 
-   2. Right-click the dot-matrix printer.
+   2. Right-click the dot matrix printer.
 
    3. Select **Printing Preferences...**.
 
