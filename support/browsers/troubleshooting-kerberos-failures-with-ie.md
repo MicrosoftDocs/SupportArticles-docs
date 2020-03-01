@@ -6,11 +6,16 @@ ms.date: 02/29/2020
 ---
 # Troubleshooting Kerberos failures in Internet Explorer
 
-This article can help you to isolate and fix the causes of various errors that you may experience when you access websites that are configured to use Kerberos authentication in Internet Explorer. The number of potential issues that may occur is almost as large as the number of tools that are available to solve them.
+Errors can occur when you use Internet Explorer to access a website that uses Kerberos authentication. This article explains how you can isolate and fix the causes of these errors. The number of potential issues is almost as large as the number of tools that are available to solve them.
 
 ## Common symptoms when Kerberos fails
 
-You try to access a website for which Windows Integrated Authenticated has been configured and for which you expect to be using the Kerberos authentication protocol. When you access the website, your browser immediately prompts you for credentials, as follows:
+You try to access a website for which the following items are true:
+
+- Windows Integrated Authenticated has been configured.
+- You expect to use the Kerberos authentication protocol.
+
+When you access the website, your browser immediately prompts you for credentials, as follows:
 
 ![prompt for credentials](./media/troubleshooting-kerberos-failures-with-ie/prompt-for-credentials.png)
 
@@ -40,11 +45,15 @@ DateTime IP GET /whoami.aspx - 80 - IP Mozilla/4.0+(compatible;+MSIE+7.0;+Window
 
 ## Determine whether Kerberos is used
 
-When you troubleshoot Kerberos authentication failure, we recommend that you simplify the configuration to the minimum (one client, one server, one IIS site that's running on the default port). Additionally, you can follow some basic troubleshooting steps. For example, use a test page to verify the authentication method that's used. If you use ASP.NET, you can create this [ASP.net authentication test page](https://docs.microsoft.com/archive/blogs/friis/asp-net-authentication-test-page).
+When you troubleshoot Kerberos authentication failure, we recommend that you simplify the configuration to the minimum, as follows:
 
-If you're using classic ASP, you can use the following page:
+- One client
+- One server
+- One IIS site that's running on the default port
 
-Testkerb.asp
+Additionally, you can follow some basic troubleshooting steps. For example, use a test page to verify the authentication method that's used. If you use ASP.NET, you can create this [ASP.net authentication test page](https://docs.microsoft.com/archive/blogs/friis/asp-net-authentication-test-page).
+
+If you're using classic ASP, you can use the following **Testkerb.asp** page:
 
 ```html
 <%
@@ -57,9 +66,16 @@ Testkerb.asp
 %>
 ```
 
-You can also use tools such as Fiddler, HttpWatch, Network Monitor, or the developer tools in your browser to determine whether Kerberos is used. For more information about how such traces can be generated, see [client-side tracing](https://techcommunity.microsoft.com/t5/iis-support-blog/how-to-take-an-http-trace-from-the-client/ba-p/799618). 
+Also, you can ascertain whether Kerberos is configured by using tools such as the following:
 
-When Kerberos is used, the request that's sent by the client is large (generally more than 2,000 bytes). This is because the HTTP_AUTHORIZATION header includes the Kerberos ticket. The following request is for a page that uses Kerberos-based Windows Authentication to authenticate incoming users. Notice that the size of the GET request is more than 4,000 bytes.
+- Fiddler
+- HttpWatch
+- Network Monitor
+- The developer tools in your browser
+
+For more information about how such traces can be generated, see [client-side tracing](https://techcommunity.microsoft.com/t5/iis-support-blog/how-to-take-an-http-trace-from-the-client/ba-p/799618).
+
+When Kerberos is used, the request that's sent by the client is generally more than 2,000 bytes, which is large. The request is large because the HTTP_AUTHORIZATION header includes the Kerberos ticket. The following request is for a page that uses Kerberos-based Windows Authentication to authenticate incoming users. The size of the GET request is more than 4,000 bytes.
 
 ![get request more than 4,000 bytes](./media/troubleshooting-kerberos-failures-with-ie/get-request-more-than-4000-bytes.png)
 
@@ -67,13 +83,13 @@ If the NTLM handshake is used, the request will be much smaller. The following c
 
 ![get request less than 1,400 bytes](./media/troubleshooting-kerberos-failures-with-ie/get-request-under-1400-bytes.png)
 
-After you determine that Kerberos authentication is failing, check each of the following items in the given order.
-
 ## Things to check if Kerberos authentication fails
+
+After you determine that Kerberos authentication is failing, check each of the following items in the given order.
 
 ### Are the client and server in the same domain?
 
-Using Kerberos requires a domain because a Kerberos ticket is delivered by the domain controller (DC). Advanced scenarios are also possible in which the client and server are not in the same domain but in two domains of the same forest, or in two different forests. These possible scenarios are discussed in the advanced section of this article.
+Using Kerberos requires a domain because a Kerberos ticket is delivered by the domain controller (DC). Advanced scenarios are also possible in which the client and server are not in the same domain. Instead, the client and server are in different domains of the same forest, or in two different forests. These scenarios are discussed in the advanced section of this article.
 
 ### Is IIS configured to use integrated authentication?
 
