@@ -1,10 +1,10 @@
 ---
 title: Cannot turn off Internet Explorer Enhanced Security
 description: Provides information about symptoms and various steps you can take to solve them, depending on the scenario.
-ms.prod-support-area-path: 
-ms.date: 02/25/2020
+ms.prod-support-area-path:
+ms.date: 02/29/2020
 ---
-# Standard users can’t turn off Internet Explorer Enhanced Security feature on a Windows Server 2003-based terminal server or a later version
+# Standard users can't turn off Internet Explorer Enhanced Security feature on a Windows Server 2003-based terminal server or a later version
 
 This article provides information on troubleshooting the issues in which you cannot turn off Internet Explorer Enhanced Security.
 
@@ -19,9 +19,12 @@ To fix this problem, use one or more of the following methods, as appropriate fo
 
 ## Resolution 1: Rebuild the terminal server
 
-If the terminal server was configured to have Internet Explorer Enhanced Security Configuration enabled, and if the terminal server is in a locked-down environment, you may be unable to completely remove Internet Explorer Enhanced Security Configuration.
+You might be unable to remove completely the Enhanced Security Configuration from Internet Explorer, if the terminal server has the following attributes:
 
-In this case, it may be quicker to rebuild the terminal server. When you do this, use an Unattend.txt file together with the Windows Setup program to disable Internet Explorer Enhanced Security Configuration during the installation of Windows.
+- Terminal server is configured to have Enhanced Security Configuration enabled for Internet Explorer.
+- Terminal server is in a locked-down environment.
+
+In this case, it may be quicker to rebuild the terminal server. When you rebuild, use an Unattend.txt file together with the Windows Setup program, to disable Internet Explorer Enhanced Security Configuration during the installation of Windows.
 
 ## Resolution 2: Modify Internet Explorer settings for administrator accounts
 
@@ -30,6 +33,7 @@ For administrator accounts, you can run the following command to turn off Intern
 ```console
 rundll32.exe setupapi.dll,InstallHinfSection IESoftenAdmin 128 %windir%\inf\IEHARDEN.INF
 ```
+
 > [!NOTE]
 > You must run this command by using an account that has administrative credentials. For the changes to take effect, you must also restart the computer after you run this command.
 
@@ -38,7 +42,7 @@ rundll32.exe setupapi.dll,InstallHinfSection IESoftenAdmin 128 %windir%\inf\IEHA
 > [!IMPORTANT]
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756/how-to-back-up-and-restore-the-registry-in-windows).
 
-To turn off Internet Explorer Enhanced Security Configuration for specific user accounts, you can remove the **lEHarden** registry entry from each standard user account profile. To do this, follow these steps:
+To turn off Internet Explorer Enhanced Security Configuration for specific user accounts, you can remove the **lEHarden** registry entry from each standard user account profile. To remove the entry, follow these steps:
 
 1. Log on to the terminal server by using the credentials of the standard user account.
 
@@ -49,19 +53,19 @@ To turn off Internet Explorer Enhanced Security Configuration for specific user 
 4. Select **The following user**, enter an account name that has administrative credentials, and then select **OK**.
 
 5. Locate and select the following registry subkey:  
-   `HKEY_ CURRENT_ USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zonemap`
+   `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zonemap`
 
 6. In the details pane, right-click **IEHarden**, select **Modify**, enter **0** (zero) in the **Value data** box, and then select **OK**. You can also remove this registry entry.
 
 7. Locate and select the following registry subkey:  
-   `HKEY_ CURRENT_ USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings`
+   `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings`
 
 8. In the details pane, right-click **lEHardenlENoWarn**, select **Modify**, enter **0** (zero) in the **Value data** box, and then select **OK**. You can also remove this registry entry.
 
 9. Exit Registry Editor, and then start Internet Explorer.
- 
+
 10. On the **Tools** menu, select **Internet Options**.
- 
+
 11. Select the **Advanced** tab, select **Restore Defaults**, and then select **OK**.
 
 ## Resolution 4: Create a new default profile for standard user accounts

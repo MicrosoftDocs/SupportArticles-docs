@@ -2,22 +2,27 @@
 title: Page Cannot be Displayed error
 description: Microsoft identified an issue with how server connection failures can affect proxy server use by the web browser. You may receive a 'Page Cannot be Displayed' error message in a corporate network. This article provides temporary workarounds to restore connectivity.
 ms.prod-support-area-path: Internet Explorer
-ms.date: 02/14/2020
+ms.date: 02/29/2020
 ---
 # Internet Explorer "Page Cannot be Displayed" error due to bad proxy server timeout
 
+Microsoft identified an issue with how server connection failures can affect proxy server use by the web browser. You may receive a **Page Cannot be Displayed** error message in a corporate network. This article provides temporary workarounds to restore connectivity.
+
+[!INCLUDE[Visual eye catcher for legacy KB](../includes/kb-letters-blue.md)]  
 _Original product version:_ &nbsp; Internet Explorer  
 _Original KB number:_ &nbsp; 2551554
 
-Microsoft identified an issue with how server connection failures can affect proxy server use by the web browser. You may receive a `Page Cannot be Displayed` error message in a corporate network. This article provides temporary workarounds to restore connectivity.
-
 ## Symptoms
 
-In rare scenarios, it is possible for certain server connection errors to result in proxy servers being added to the bad proxy list incorrectly, causing Internet Explorer to rotate through the specified list of proxy servers until all are temporarily disabled. At this point, Internet Explorer will show a “Page Cannot be Displayed” error until the bad proxy list is cleared (30 minutes later by default).
+In rare scenarios, certain errors in a server connection can cause proxy servers to be added inappropriately to the list of bad proxy servers. These inappropriate additions cause Internet Explorer to rotate through the specified list of proxy servers, until all proxy servers are temporarily disabled. Then Internet Explorer displays the error saying **Page Cannot be Displayed**. The error remains until the bad proxy list is cleared. The list is cleared in 30 minutes, unless the default was overridden.
 
 ## Cause
 
-For performance reasons, in the event that Internet Explorer cannot establish a connection to a proxy server, that proxy server is added to a list of bad proxy servers so that it is not reused for a period of time. This period of time is 30 minutes by default. If an automatic proxy configuration script returns a PROXY list that specifies multiple proxy servers, a connection to the next proxy in the list will be attempted. If that connection fails, then the process repeats until a connection is established or the list is exhausted. If the list is exhausted and no connection was established, the user will receive a "Page Cannot Be Displayed" error message in Internet Explorer.
+Sometimes Internet Explorer cannot establish a connection to a given proxy server. When this happens, the server is added to a list of bad proxy servers. This addition prevents the proxy server from being reused until a period of time has passed. The default value for this period is 30 minutes.
+
+Suppose an automatic proxy configuration script returns a PROXY list that specifies multiple proxy servers. In this case, a connection to the next proxy in the list is attempted. The process continues through the list until either a connection is established or the list is exhausted. The user receives a **Page Cannot Be Displayed** error message in Internet Explorer if the list is exhausted and no connection was established.
+
+This entire process is designed to improve overall performance.
 
 Microsoft is investigating the issue and available options. If you encounter this issue, there are temporary workarounds that can restore connectivity.
 
@@ -25,7 +30,7 @@ Microsoft is investigating the issue and available options. If you encounter thi
 
 To work around this issue, restart Internet Explorer to clear the list of bad proxy servers.
 
-Also, you can set a registry key to prevent Internet Explorer from adding proxy server to the bad proxy list.
+Also, you can set a registry key to prevent Internet Explorer from adding proxy servers to the bad proxy list.
 
 > [!WARNING]
 > Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system. Microsoft cannot guarantee that these problems can be solved. Modify the registry at your own risk.
@@ -33,9 +38,10 @@ Also, you can set a registry key to prevent Internet Explorer from adding proxy 
 1. Set a custom-retry interval for bad proxy servers under the following registry key:  
    `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings`
 
-2. Create a **DWORD** value in this key named **BadProxyExpiresTime**, and assign a value of **0**. Note that this value is in seconds. Setting this value to 0 will prevent proxy servers from being added to the bad proxy list.
+2. Create a **DWORD** value in this key named **BadProxyExpiresTime**, and assign a value of **0**. This value is in seconds. Setting this value to 0 prevents proxy servers from being added to the bad proxy list.
 
 ## More Information
 
-BadProxyExpiresTime was introduced with Internet Explorer 5.01. For more information, see the following article:  
-[Internet Explorer does not retry bad proxy server for 30 minutes](https://support.microsoft.com/help/320507)
+The `BadProxyExpiresTime` registry key was introduced with Internet Explorer 5.01, around April 2002. For more information, see the following article:
+
+- [Internet Explorer does not retry bad proxy server for 30 minutes](https://support.microsoft.com/help/320507)
