@@ -87,6 +87,8 @@
       href: ../mailbox-migration/migrate-data-with-admin-center.md
     - name: No smtp proxy matching
       href: ../mailbox-migration/no-smtp-proxy-matching.md
+    - name: WhenCreated date is changed
+      href: ../mailbox-migration/whencreated-date-changed.md
   - name: Mail Delivery
     items:
     - name: 554 5.2.0 STOREDRV.Deliver.Exception
