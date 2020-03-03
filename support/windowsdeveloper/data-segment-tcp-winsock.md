@@ -39,9 +39,9 @@ Winsock uses the following rules to indicate a send completion to the applicatio
 
 A Winsock TCP client needs to send 10000 records to a Winsock TCP server to store in a database. The size of the records varies from 20 bytes to 100 bytes long. To simplify the application logic, the design is as follows:
 
-- The client does blocking send only. The server does blocking recv only.
+- The client does blocking send only. The server does blocking receive only.
 - The client socket sets the SO_SNDBUF to 0 so that each record goes out in a single data segment.
-- The server calls recv in a loop. The buffer posted in recv is 200 bytes so that each record can be received in one recv call.
+- The server calls receive in a loop. The buffer posted in receive is 200 bytes so that each record can be received in one receive call.
 
 ### Performance
 
@@ -80,11 +80,11 @@ The two connection (channel) design is unnecessary here. If you use only one con
 
 ## Recommendations
 
-While these two case studies are fabricated, they help to illustrate some worst case scenarios. When you design an application that involves extensive small data segment sends and recvs, you should consider the following guidelines:
+While these two case studies are fabricated, they help to illustrate some worst case scenarios. When you design an application that involves extensive small data segment sends and receives, you should consider the following guidelines:
 
 - If the data segments are not time critical, the application should coalesce them into a larger data block to pass to a send call. Because the send buffer is likely to be copied to the Winsock kernel buffer, the buffer should not be too large. Slightly less than 8K is effective. As long as the Winsock kernel gets a block larger than the MTU, it will send out multiple full-sized packets and a last packet with whatever is left. The sending side, except the last packet, will not be hit by the 200-ms delay timer. The last packet, if it happens to be an odd-numbered packet, is still subject to the delayed acknowledgment algorithm. If the sending end stack gets another block larger than the MTU, it can still bypass the Nagle algorithm.
   
-- If possible, avoid socket connections with unidirectional data flow. Communications over unidirectional sockets are more easily impacted by the Nagle and delayed acknowledgment algorithms. If the communication follows a request and a response flow, you should use a single socket to do both sends and recvs so that the ACK can be piggybacked on the response.
+- If possible, avoid socket connections with unidirectional data flow. Communications over unidirectional sockets are more easily impacted by the Nagle and delayed acknowledgment algorithms. If the communication follows a request and a response flow, you should use a single socket to do both sends and receives so that the ACK can be piggybacked on the response.
 
 - If all the small data segments have to be sent immediately, set TCP_NODELAY option on the sending end.
 
