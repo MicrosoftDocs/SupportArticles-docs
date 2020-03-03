@@ -462,8 +462,9 @@ You may experience the following problems when you use device fonts:
 
     There are two reasons why you can't find a device font by enumerating the fonts available for use on a printer device context:
     
-      - The printer driver was written to exclude that device font for some reason.
-      - The printer driver enumerates the font, but the font isn't properly marked in theFontTypeparameter as a device font.
+    - The printer driver was written to exclude that device font for some reason.
+    - The printer driver enumerates the font, but the font isn't properly marked in theFontTypeparameter as a device font.
+    
 - There are system fonts that seem to enumerate as device fonts.
 
     This problem occurs when a system-provided font is downloaded to a printer.
