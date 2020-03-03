@@ -3,7 +3,7 @@ title: How to download and run Office 2019 installation files not in VLSC
 ms.author: v-todmc
 author: todmccoy
 manager: dcscontentpm
-ms.date: 02/10/2020
+ms.date: 03/03/2020
 audience: Admin
 ms.topic: article
 ms.prod: office
@@ -60,7 +60,7 @@ Follow the steps below to download and install your Office 2019 software or appl
 
 6. Open your browser and go to https://config.office.com.
 
-7. Under **Create a new configuration**, select **Create**.
+7. Under **Create a new configuration**, select **Create**.<br/>
 ![Select Create.](../media/how-to-download-install/how-to-download-install-6.png)
 8. Under **Products and releases**, select 64-bit.
     > [!NOTE]
