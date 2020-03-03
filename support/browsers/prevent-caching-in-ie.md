@@ -6,10 +6,6 @@ ms.prod-support-area-path: Internet Explorer
 ---
 # How to prevent caching in Internet Explorer
 
-_Original product version:_ &nbsp; Internet Explorer  
-_Original KB date:_ &nbsp; 09/22/2011  
-_Original KB number:_ &nbsp; 234067
-
 This article describes the use of HTTP headers to control the caching of Web pages in Internet Explorer.
 
 You can use Microsoft Internet Information Server (IIS) to easily mark highly volatile or sensitive pages using the following script at the extreme beginning of the specific Active Server Pages (ASP) pages:
@@ -20,6 +16,9 @@ You can use Microsoft Internet Information Server (IIS) to easily mark highly vo
 <% Response.Expires = -1 %>
 ```
 
+_Original product version:_ &nbsp; Internet Explorer  
+_Original KB date:_ &nbsp; 09/22/2011  
+_Original KB number:_ &nbsp; 234067
 
 ## Expiration and the Expires Header
 

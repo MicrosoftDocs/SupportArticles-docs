@@ -7,12 +7,11 @@ ms.reviewer: cgilbert
 ---
 # How to set advanced settings in Internet Explorer by using Group Policy Objects
 
+This article describes how to implement advanced settings by using Group Policy objects (GPOs) in Microsoft Internet Explorer on a computer that is running Microsoft Windows Server 2003 or Microsoft Windows 2000. This article does assume that you have successfully implemented Group Policies in your environment. When you configure Internet Explorer on client computers by using Group Policies, you can customize the Advanced settings and some of the Temporary Internet Files settings that are not available by default.
+
 _Original product version:_ &nbsp; Internet Explorer, Windows Server 2003, Windows 2000  
 _Original KB date:_ &nbsp; 07/16/2008  
 _Original KB number:_ &nbsp; 274846
-
-
-This article describes how to implement advanced settings by using Group Policy objects (GPOs) in Microsoft Internet Explorer on a computer that is running Microsoft Windows Server 2003 or Microsoft Windows 2000. This article does assume that you have successfully implemented Group Policies in your environment. When you configure Internet Explorer on client computers by using Group Policies, you can customize the Advanced settings and some of the Temporary Internet Files settings that are not available by default.
 
 ## Use Group Policy Objects to set advanced settings
 
