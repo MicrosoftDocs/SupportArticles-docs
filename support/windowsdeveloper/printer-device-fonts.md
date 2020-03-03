@@ -461,13 +461,14 @@ You may experience the following problems when you use device fonts:
 - There's a device font, but the printer driver doesn't enumerate it.
 
     There are two reasons why you can't find a device font by enumerating the fonts available for use on a printer device context:
+    
       - The printer driver was written to exclude that device font for some reason.
       - The printer driver enumerates the font, but the font isn't properly marked in theFontTypeparameter as a device font.
 - There are system fonts that seem to enumerate as device fonts.
 
     This problem occurs when a system-provided font is downloaded to a printer.
 
-    When this occurs with TrueType fonts, the font enumeration callback function receives a call with theTRUETYPE_FONTTYPEand theDEVICE_FONTTYPEbits set on theFontTypeparameter. This is handled in the sample code by not including any fonts that contain these combinations of bits.
+    When this occurs with TrueType fonts, the font enumeration callback function receives a call with the TRUETYPE_FONTTYPE and the DEVICE_FONTTYPE bits set on the FontType parameter. This is handled in the sample code by not including any fonts that contain these combinations of bits.
 
     This also occurs with Adobe PostScript fonts that are installed in the system that are downloaded to the printer. One way to differentiate these fonts from the other device fonts is to look for them in both a system screen device context and the printer device context. If the same font can be enumerated on both device contexts, the font will likely be downloaded to the printer when it is used on the printer device context.
 
