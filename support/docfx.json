@@ -55,7 +55,7 @@
       },
 
       "manager": {
-        "**/*.md": "ramakoni"
+        "**/*.md": "dcscontentpm"
       },
       "audience": {
         "**/*.md": "itpro"
