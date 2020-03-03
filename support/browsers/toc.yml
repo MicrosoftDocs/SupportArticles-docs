@@ -8,7 +8,7 @@
   href: dot-matrix-printer-wrong-output-font.md
 
 - name: Supported languages for Internet Explorer Administration Kit 9
-  href: dot-matrix-printer-wrong-output-font.md
+  href: ieak-9-supported-languages.md
 
 - name: Page Cannot be Displayed error
   href: page-cannot-be-displayed.md
@@ -24,4 +24,21 @@
 
 - name: Internet Explorer document modes FAQ
   href: ie-document-modes.md
-  
+
+- name: Web page with frames isn't shown correctly
+  href: ie-wrongly-show-web-page-with-frames.md
+
+- name: Use FTP WinInet APIs in Visual Basic application
+  href: using-ftp-wininet-apis-in-vb.md
+
+- name: Disable Internet Explorer password caching
+  href: disable-ie-password-caching.md
+
+- name: Control the caching of Web pages in Internet Explorer
+  href: prevent-caching-in-ie.md
+
+- name: Win32 Internet Functions not supported in services
+  href: wininet-not-supported-in-services.md
+
+- name: Internet Explorer advanced settings
+  href: advanced-settings-in-ie.md
