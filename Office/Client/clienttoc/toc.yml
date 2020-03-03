@@ -639,6 +639,8 @@
       href: ../installation/error-1935-when-install-office-2010.md
     - name: Error when uninstalling O365 Pro Plus
       href: ../installation/something-went-wrong-30016-4-error.md
+    - name: How to download and run Office 2019 installation files not in VLSC
+      href: ../installation/how-to-download-office-install-not-in-vlsc.md
     - name: Install Office Pro 2013 on a Terminal Server
       href: ../installation/install-and-activate-office-2013.md
     - name: Office setup issues
