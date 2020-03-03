@@ -4,3 +4,18 @@
 - name: (Back up to Support hub page)
   href: ../index.yml
 
+- name: Win32
+  items:
+  - name: Can't print from app to XPS Document Writer
+    href: print-app-xps-document-writer.md
+  - name: Get printer and print job status
+    href: printer-print-job-status.md
+  - name: Printer Device Fonts
+    href: printer-device-fonts.md
+  - name: Screen Saver command line arguments
+    href: screen-saver-command-line.md
+  - name: Send small data packets over TCP with Winsock
+    href: data-segment-tcp-winsock.md
+  - name: Win32 code for sending raw data to printer
+    href: win32-raw-data-to-printer.md
+
