@@ -1,12 +1,14 @@
 ---
 title: WinInet not supported in services
 description: Win32 Internet Functions (exported from WinInet.dll) are not supported in services. This article discusses using the WinInet.dll in a service or in Internet Information Server applications.
-ms.date: 2/27/2020
+ms.date: 02/27/2020
 ms.prod-support-area-path: Internet Explorer
+ms.reviewer: leonbr
 ---
 # WinInet is not supported in a service or an Internet Information Server (IIS) application
 
 _Original product version:_ &nbsp; Internet Explorer  
+_Original KB date:_ &nbsp; 06/19/2014  
 _Original KB number:_ &nbsp; 238425
 
 
