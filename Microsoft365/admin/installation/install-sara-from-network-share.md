@@ -9,7 +9,7 @@ ms.topic: article
 ms.prod: office 365
 localization_priority: Normal
 ms.custom: 
-- CI 110828
+- CI 110828, CI 114761
 - CSSTroubleshoot
 ms.reviewer: gregmans
 appliesto:
@@ -78,6 +78,7 @@ The following table provides the versions of SaRA that were made available on th
 
 |Release date|SaRA version|
 |--------|--------|
+|February 27, 2020|17.00.4304.006|
 |February 5, 2020|17.00.4163.010|
 |January 14, 2020|17.00.4058.000|
 |December 9, 2019|17.00.3891.009|
