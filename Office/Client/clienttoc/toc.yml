@@ -1043,6 +1043,8 @@
       href: ../word/word-mac-toolbars-missing.md
     - name: Track Changes functionality disabled when RMS is disabled
       href: ../word/track-changes-disabled.md
+    - name: Troubleshoot print failures in Word for Office 365 on Windows 10
+      href: ../word/print-failures-word-for-office-365-on-win-10.md
     - name: Troubleshooting guide for unwanted page breaks
       href: ../word/troubleshoot-unwanted-page-breaks.md
     - name: Word could not create the work file
