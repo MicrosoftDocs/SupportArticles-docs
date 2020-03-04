@@ -163,9 +163,9 @@
       href: ../activation/license-issue-when-start-office-application.md
     - name: Office activation process issues
       href: ../activation/office-activation-process-issues.md
-    - name: Issue when activate Office 365 ProPlus
+    - name: Issue when activating Office 365 ProPlus
       href: ../activation/issue-when-activate-office-365-proplus.md
-    - name: Issue when activate Office from Office 365
+    - name: Issue when activating Office from Office 365
       href: ../activation/issue-when-activate-office-from-office-365.md
     - name: Issue with changing Office 2010 product key
       href: ../activation/office-2010-product-key-change-error.md
@@ -465,7 +465,7 @@
       href: ../excel/statistical-functions-intercept.md
     - name: Invalid signature error in Excel workbooks
       href: ../excel/document-contains-invalid-signatures-error.md
-    - name: Issue when save Excel workbooks
+    - name: Issue when saving Excel workbooks
       href: ../excel/issue-when-save-excel-workbooks.md
     - name: Issue when setting the Fit to option
       href: ../excel/not-fit-worksheet-to-page.md
@@ -639,6 +639,8 @@
       href: ../installation/error-1935-when-install-office-2010.md
     - name: Error when uninstalling O365 Pro Plus
       href: ../installation/something-went-wrong-30016-4-error.md
+    - name: How to download and run Office 2019 installation files not in VLSC
+      href: ../installation/how-to-download-office-install-not-in-vlsc.md
     - name: Install Office Pro 2013 on a Terminal Server
       href: ../installation/install-and-activate-office-2013.md
     - name: Office setup issues
@@ -863,7 +865,7 @@
       href: ../project/upgrade-project-global-template.md
     - name: Import task outline structure into-project
       href: ../project/import-task-outline-structure.md
-    - name: Issue when change user's status to inactive in Project
+    - name: Issue when changing user's status to inactive in Project
       href: ../project/eventing-service-error-when-changing-user-status-to-inactive-microsoft-project.md
     - name: Make a custom toolbarribbon available to all users
       href: ../project/custom-toolbarribbon-available-to-all-users.md

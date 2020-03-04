@@ -17,23 +17,23 @@ appliesto:
 
 # How to merge multiple Word documents into one
 
-If you need to cope with Word documents quite often during work, merger of multiple Word documents into one might be required sometimes. You can copy and paste the content directly when the info quantity is not large. But what if it is not that case? 
+If you need to cope with Word documents quite often during work, merger of multiple Word documents into one might be required sometimes. You can copy and paste the content directly when the info quantity is not large. But what if it is not that case?
 
-"**Insert**" tab allows you to subtly merge documents.
+The **Insert** tab allows you to subtly merge documents.
 
-!["Insert" tab](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4491213_en_1) 
+!["Insert" tab](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4491213_en_1)
 
-Locate "**Object**", press a small triangle next to it, and click "**Text from File**" from the dropdown menu.
+Locate **Object**, press a small triangle next to it, and click **Text from File** from the dropdown menu.
 
-!["Text from File" of the dropdown menu of "Object"](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4491214_en_1) 
- 
-After that, you can select files to be merged into the current document. To select more than one document, pressing and holding **Ctrl** 
+!["Text from File" of the dropdown menu of "Object"](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4491214_en_1)
+
+After that, you can select files to be merged into the current document. To select more than one document, pressing and holding **Ctrl**.
 
 > [!NOTE]
 > Documents placed at the top will be merged in the first place. Therefore, please sort and number each target document in case that you want to keep a certain sequence for your documents.
 
-!["Insert File" window](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4491215_en_1) 
- 
-This method applies both to Word 2010 and Word 2007. Attention required: Formats will not be necessarily remained when you merge the documents. Please be careful of that. 
+!["Insert File" window](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4491215_en_1)
 
-If it does not work all the same, you are suggested to dig the [Forum](https://answers.microsoft.com/default.aspx) to see if any solution can be best for you. 
+This method applies both to Word 2010 and Word 2007. Attention required: Formats will not be necessarily remained when you merge the documents. Please be careful of that.
+
+If it does not work all the same, you are suggested to dig the [Forum](https://answers.microsoft.com/default.aspx) to see if any solution can be best for you.
