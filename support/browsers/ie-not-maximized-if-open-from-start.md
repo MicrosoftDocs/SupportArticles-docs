@@ -13,17 +13,17 @@ _Original KB number:_ &nbsp; 555217
 
 ## Cause
 
-This issue occurs because the short cut to Internet Explorer has its default "Run" property as "Normal Window".
+This issue occurs because the short cut to Internet Explorer has its default Run property as normal window.
 
 ## Resolution
 
 Follow the steps to solve this issue:
 
-1. Right click on the desktop and create a short cut to "Program Files/Internet Explorer/iexplore.exe".
+1. Right click on the desktop and create a short cut to `Program Files/Internet Explorer/iexplore.exe`.
 
 2. Right click on the short cut and then select **Properties**.
 
-3. Click on the **Shortcut** tab and then change the value in the Run command to "Maximized".
+3. Click on the **Shortcut** tab and then change the value in the Run command to **Maximized**.
 
 4. Click **Apply**.
 

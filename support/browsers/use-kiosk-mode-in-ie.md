@@ -8,10 +8,10 @@ ms.prod-support-area-path: Internet Explorer
 
 Internet Explorer includes a Kiosk Mode feature that allows you to only access Web pages. This article describes how to use the Kiosk Mode feature in Internet Explorer.
 
+When you run Internet Explorer in Kiosk mode, the Internet Explorer title bar, menus, toolbars, and status bar are not displayed and Internet Explorer runs in Full Screen mode. The Windows 95 taskbar is not displayed, but you can switch to other running programs by pressing ALT+TAB or CTRL+ALT+DEL. Because Internet Explorer is running in Full Screen mode, you cannot access the Windows 95 desktop until you quit Internet Explorer.
+
 _Original product version:_ &nbsp; Internet Explorer  
 _Original KB number:_ &nbsp; 154780
-
-When you run Internet Explorer in Kiosk mode, the Internet Explorer title bar, menus, toolbars, and status bar are not displayed and Internet Explorer runs in Full Screen mode. The Windows 95 taskbar is not displayed, but you can switch to other running programs by pressing ALT+TAB or CTRL+ALT+DEL. Because Internet Explorer is running in Full Screen mode, you cannot access the Windows 95 desktop until you quit Internet Explorer.
 
 ## How to Start Internet Explorer in Kiosk Mode
 
