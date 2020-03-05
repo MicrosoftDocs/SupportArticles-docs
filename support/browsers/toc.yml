@@ -1,44 +1,82 @@
-- name: Welcome to browsers Support
-  href: welcome-support-browsers.md
+- name: Support articles for Internet Explorer
+  items: 
+  - name: Welcome to browsers Support
+    href: welcome-support-browsers.md
+  
+  - name: (Back up to Support hub page)
+    href: ../index.yml
 
-- name: (Back up to Support hub page)
-  href: ../index.yml
+- name: Administration
+  expanded: true
+  items:
+  - name: Disable Internet Explorer password caching
+    href: disable-ie-password-caching.md
 
-- name: Wrong output font if using dot matrix printer via IE 8
-  href: dot-matrix-printer-wrong-output-font.md
+  - name: Internet Explorer advanced settings
+    href: advanced-settings-in-ie.md
 
-- name: Supported languages for Internet Explorer Administration Kit 9
-  href: ieak-9-supported-languages.md
+  - name: Supported languages for Internet Explorer Administration Kit 9
+    href: ieak-9-supported-languages.md
 
-- name: Page Cannot be Displayed error
-  href: page-cannot-be-displayed.md
+  - name: ActiveX Controls installation in IE
+    href: install-activex-control-in-ie.md
 
-- name: Information that needs to be collected when you run Internet 
-  href: sdp-3d0cc9543-9d32-4312-9519-274f34305f1f-windows.md
+- name: Connectivity and Navigation
+  expanded: true
+  items:
+  - name: Control the caching of Web pages in Internet Explorer
+    href: prevent-caching-in-ie.md
 
-- name: Cannot turn off Internet Explorer Enhanced Security
-  href: cannot-turn-off-i-e-esc.md
+  - name: Page Cannot be Displayed error
+    href: page-cannot-be-displayed.md
 
-- name: Troubleshooting Kerberos failures in Internet Explorer
-  href: troubleshooting-kerberos-failures-with-ie.md
+- name: Core Features
+  expanded: true
+  items:
+  - name: Wrong output font if using dot matrix printer via IE 8
+    href: dot-matrix-printer-wrong-output-font.md
 
-- name: Internet Explorer document modes FAQ
-  href: ie-document-modes.md
+  - name: Use IE Kiosk mode
+    href: use-kiosk-mode-in-ie.md 
 
-- name: Web page with frames isn't shown correctly
-  href: ie-wrongly-show-web-page-with-frames.md
+  - name: IE short cut not maximized if opened from Start
+    href: ie-not-maximized-if-open-from-start.md
 
-- name: Use FTP WinInet APIs in Visual Basic application
-  href: using-ftp-wininet-apis-in-vb.md
+- name: Development and Website Issues
+  expanded: true
+  items:
+  - name: Web page with frames isn't shown correctly
+    href: ie-wrongly-show-web-page-with-frames.md
 
-- name: Disable Internet Explorer password caching
-  href: disable-ie-password-caching.md
+  - name: Use FTP WinInet APIs in Visual Basic application
+    href: using-ftp-wininet-apis-in-vb.md
 
-- name: Control the caching of Web pages in Internet Explorer
-  href: prevent-caching-in-ie.md
+  - name: Win32 Internet Functions not supported in services
+    href: wininet-not-supported-in-services.md
 
-- name: Win32 Internet Functions not supported in services
-  href: wininet-not-supported-in-services.md
+  - name: Internet Explorer document modes FAQ
+    href: ie-document-modes.md
 
-- name: Internet Explorer advanced settings
-  href: advanced-settings-in-ie.md
+  - name: Use FTP with CERN-based proxy using WinInet API 
+    href: ftp-with-cern-based-proxy-using-wininet-api.md
+
+  - name: CSS styles  renders incorrectly in webpage
+    href: css-styles-webpage-renders-wrongly.md
+  
+  - name: Download files over 2 GB fails
+    href: cannot-download-files-over-2-gb.md
+
+- name: Security and Privacy
+  expanded: true
+  items:
+  - name: Cannot turn off Internet Explorer Enhanced Security
+    href: cannot-turn-off-i-e-esc.md
+
+  - name: Java security setup in IE
+    href: set-java-security-in-ie.md
+
+- name: Stability and Performance
+  expanded: true
+  items:
+  - name: Information that needs to be collected when you run Internet Explorer 8 Diagnostics
+    href: sdp-3d0cc9543-9d32-4312-9519-274f34305f1f-windows.md
