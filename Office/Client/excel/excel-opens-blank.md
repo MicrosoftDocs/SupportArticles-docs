@@ -49,9 +49,7 @@ To correct this setting, follow these steps:
 1. Clear the **Ignore other applications that use Dynamic Data Exchange (DDE)** check box, then select the **OK** button at the bottom of the window.
 
 > [!NOTE]
-> For more information about how to turn off DDE, see the following Microsoft Knowledge Base article:
->
->[211494](https://support.microsoft.com/help/211494) - "There was a problem sending the command to the program" error in Excel
+> For more information about how to turn off DDE, see ["An error occurred when sending commands to the program" in Excel](https://docs.microsoft.com/office/troubleshoot/excel/error-when-send-commands-in-excel)
 
 If these steps do not resolve the problem, continue to **Method 2**.
 
@@ -142,7 +140,7 @@ Try to repair your Office programs. To do this, follow the steps for your instal
 
 To repair Office 2013, Office 2010, or Office 2007, follow the steps in the following Office website topic:
 
-[Repair Office programs](https://office.microsoft.com/outlook-help/repair-office-programs-ha010357402.aspx)
+[Repair an Office application](https://office.microsoft.com/outlook-help/repair-office-programs-ha010357402.aspx)
 
 If these steps do not resolve the problem, continue to **Method 5**.
 
@@ -157,7 +155,7 @@ Excel and COM add-in programs can also cause this problem. These two kinds of ad
 1. If the problem persists, repeat steps 1-4, except select a different add-in in step 3.
 1. If the problem persists after you clear all the COM Add-ins, repeat steps 1-4, except select **Excel Add-Ins** in step 2, then try each of the Excel add-ins one at a time in step 3.  
 
-If Excel loads the file, the add-in you last turned off is causing the problem. If this is the case, we recommend that you visit the manufacturer's website for the add-in to learn whether an updated version of the add-in is available. If a newer version of the add-in is not available, or if you don’t have to use the add-in, you can leave it turned off.
+If Excel loads the file, the add-in you last turned off is causing the problem. If this is the case, we recommend that you visit the manufacturer's website for the add-in to learn whether an updated version of the add-in is available. If a newer version of the add-in is not available, or if you don't have to use the add-in, you can leave it turned off.
 
 If Excel does not open the file after you turn off all the add-ins, the problem has a different cause.
 
@@ -184,5 +182,23 @@ To disable hardware acceleration, follow these steps:
 > For more information about hardware acceleration, see the following Microsoft Knowledge Base article:
 >
 >[2768648](https://support.microsoft.com/help/2768648) - Performance and display issues in Office 2013 client applications
+
+### Method 7: Minimizing and maximizing the window
+
+Minimizing and then maximizing the window can sometimes refresh the Excel page and cause any hidden data to appear.
+
+1.    Select the minimize button in the top-right corner of the Excel sheet.
+2.    In the task tray, right-click Excel and select your spreadsheet. (Or double click the Excel icon.)
+
+When your sheet is maximized, your data may appear. 
+
+### Method 8: Check for hidden sheets
+
+An Excel sheet may have inadvertently been saved as a hidden document. To find out:
+1.    Go to the **View** tab.
+2.    Select **Unhide**.
+3.    Choose a workbook from the list.
+4.    Select **OK**. 
+
 
 If you still experience this problem after you try all these methods, contact [Microsoft Support](https://support.microsoft.com/) for additional troubleshooting help.
