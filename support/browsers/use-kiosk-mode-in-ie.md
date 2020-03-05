@@ -23,7 +23,7 @@ iexplore -k page
 
 where **page** is the Web page address for the Web page that you want to appear when Internet Explorer starts. If you do not specify a Web page in the **Open** box, Internet Explorer opens your start page. Note that the Web page that you specify can be a Web page on the Internet, on your computer, or on another computer on the network.
 
-To start Internet Explorer in Kiosk mode and start Internet Explorer with the Microsoft Web site, click **Start**, point to **Run**, and then type iexplore -k www.microsoft.com in the **Open** box.
+To start Internet Explorer in Kiosk mode and start Internet Explorer with the Microsoft Web site, click **Start**, point to **Run**, and then type iexplore "-k www.microsoft.com" in the **Open** box.
 
 To start Internet Explorer in Kiosk mode and start Internet Explorer with the Example.htm Web page that is located in the My Documents folder on your computer, click **Start**, point to **Run**, and then type iexplore -k "c:\my documents\example.htm" in the **Open** box.
 
