@@ -20,6 +20,9 @@
   - name: Install IE ActiveX Controls
     href: install-activex-control-in-ie.md
 
+  - name: Check IE version
+    href: check-ie-version.md  
+
 - name: Connectivity and Navigation
   items:
   - name: IE control Web page caching
@@ -62,6 +65,12 @@
   - name: Download files over 2 GB fails
     href: cannot-download-files-over-2-gb.md
 
+  - name: Cannot access FTP sites
+    href: ie-cannot-visit-ftp-sites.md
+
+  - name: Cannot read location object
+    href: permission-denied-read-location-object.md  
+
 - name: Security and Privacy
   items:
   - name: Cannot stop IE Enhanced Security
@@ -69,6 +78,12 @@
 
   - name: Java security setup in IE
     href: set-java-security-in-ie.md
+
+  - name: Cannot visit SSL sites
+    href: ssl-sites-cannot-find-server-error.md
+
+  - name: IE enhanced security effects
+    href: ie-enhanced-security-effects.md  
 
 - name: Stability and Performance
   items:
