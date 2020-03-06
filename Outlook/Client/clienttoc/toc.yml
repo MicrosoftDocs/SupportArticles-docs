@@ -35,6 +35,8 @@
       href: ../extended-mapi-solutions/expose-permissions-issue-with-mapi-oauth-tokens.md
   - name: Folders
     items:
+    - name: Focused Inbox disappears
+      href: ../folders/focused-inbox-disappears-switch-folder.md
     - name: Incorrect folder names
       href: ../folders/incorrect-folder-names.md
     - name: Insufficient memory to display a folder
