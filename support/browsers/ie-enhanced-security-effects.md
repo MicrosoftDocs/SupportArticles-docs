@@ -95,7 +95,7 @@ When Internet Explorer Enhanced Security Configuration is enabled, the following
 
 - The Windows Update Web site is added to the **Trusted sites** zone. This allows you to continue to receive important updates for your operating system.
 - The Windows error reporting site is added to the **Trusted sites** zone. This allows you to report problems encountered with your operating system and search for fixes.
-- Several local computer sites (for example, **http://localhost**, **https://localhost**, and **hcp://system**) are added to the **Local intranet** zone. This allows applications and code to work locally so that you can complete common administrative tasks.
+- Several local computer sites (for example, `http://localhost`, `https://localhost`, and `hcp://system`) are added to the **Local intranet** zone. This allows applications and code to work locally so that you can complete common administrative tasks.
 - The **Platform for Privacy Preferences (P3P)** level is set to **Medium** for the **Trusted sites** zone. If you want to change the P3P level for any zone other than the Internet Zone, click the **Privacy** tab of **Internet Options** in **Control Panel**, and then click **Import** to apply a custom privacy policy.
 
 #### Internet Explorer Enhanced Security Configuration and Terminal Services
@@ -163,9 +163,9 @@ To do this, follow these steps:
 > - If an Internet site tries to use scripting or ActiveX Controls, a dialog box appears to notify you. You can add the Internet site to the **Trusted sites** zone directly from this dialog box. If you have disabled this dialog box, you can re-enable the dialog box in Internet Explorer: On the **Tools** menu, click **Internet Options**. On the **Advanced** tab, select **Display enhanced security configuration dialog**.
 > - A Web page can be part of only one zone at a time. You cannot add a page to both the **Trusted sites** zone and the **Local intranet** zone.
 > - When you add a Web page to the **Trusted sites** zone, you are adding the domain for that page. Therefore, all pages in that domain are also added. For example, if you add
-**http://www.microsoft.com/windowsxp/expertzone/** to your **Trusted sites** zone, you are adding **http://www.microsoft.com**. If you then want to view the Windows Help and Support site, you must add **http://support.microsoft.com** separately, because the Windows Help and Support site is a separate domain.
+`http://www.microsoft.com/windowsxp/expertzone/` to your **Trusted sites** zone, you are adding `http://www.microsoft.com`. If you then want to view the Windows Help and Support site, you must add `http://support.microsoft.com` separately, because the Windows Help and Support site is a separate domain.
 > - Internet Explorer maintains two different lists of sites for the **Trusted Sites** zone. One list is in effect when the enhanced security configuration is enabled, and a separate list is in effect when the enhanced security configuration is disabled. When you add a Web page to the **Trusted sites** zone, you are adding it only to the list that is currently in effect.
-> - You can use wildcard characters to add all subdomains for a particular domain. For example, you can add *.microsoft.com to the list. This adds both **www.microsoft.com** and **support.microsoft.com**.
+> - You can use wildcard characters to add all subdomains for a particular domain. For example, you can add *.microsoft.com to the list. This adds both `www.microsoft.com` and `support.microsoft.com`.
 > - Many Internet sites use more than one domain to host their content. You may have to add several domains to the **Trusted sites** zone to have full functionality for one site.
 > - During installation, you can add many sites at the same time to the **Trusted sites** zone by using certain settings in Unattend.txt. For more information about how to do this, see the Readme file in Deploy.cab on the Windows product CD. You can also use Group Policy to add and manage multiple sites. For more information about how to do this, see the Microsoft Windows Server 2003 Deployment Kit.
 
