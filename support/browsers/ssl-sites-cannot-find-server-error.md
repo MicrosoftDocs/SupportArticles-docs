@@ -8,6 +8,7 @@ ms.prod-support-area-path: Internet Explorer
 
 This article describes the error message that occurs when you visit a Secure Sockets Layer (SSL) web site using Internet Explorer. You can choose one of the methods that are provided in the Resolution section of this article to solve this issue.
 
+_Original product version:_ &nbsp; Internet Explorer  
 _Original KB number:_ &nbsp; 811834
 
 ## Symptoms
@@ -28,8 +29,7 @@ When you use Microsoft Internet Explorer to visit a Secure Sockets Layer (SSL) W
 > - If you are trying to reach a secure site, make sure your Security settings can support it. Click the Tools menu, and then click Internet Options. On the Advanced tab, scroll to the Security section and check settings for SSL 2.0, SSL 3.0, TLS 1.0, PCT 1.0.
 > - Click the Back button to try another link. Finally, at the very bottom of the IE content pane you see the error Cannot find server or DNS Error.
 
-When you use the following Microsoft Windows Update Web site: [http://update.microsoft.com](http://update.microsoft.com)  
-and you click the **Scan for Updates** button, you may receive the following error message:  
+When you use the Microsoft Windows Update Web site [Windows Update: FAQ](https://support.microsoft.com/help/12373/windows-update-faq) and click the **Scan for Updates** button, you may receive the following error message:  
 >Windows Update Error
 
 This is error number 0x800C0008. This error occurs because Windows Update fails to download the software update catalog through SSL.
@@ -74,9 +74,3 @@ If the Web server that you visit does not support TLS 1.0, you must disable the 
 3. Under **Policy** in the right pane, double-click **System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing**, and then click **Disabled**.
 
 The change takes effect after the local security policy is reapplied.
-
-## Applies To
-
-- Microsoft Windows Server 2003 Standard Edition (32-bit x86)
-- Microsoft Windows Server 2003 Enterprise Edition (32-bit x86)
-- Microsoft Windows Server 2003 Datacenter Edition (32-bit x86)
