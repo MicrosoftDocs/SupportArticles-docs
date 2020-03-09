@@ -8,6 +8,10 @@
     topicHref: /support/index
     items:
 
+    - name: Biztalk
+      tocHref: /support/biztalk/
+      topicHref: /support/biztalk/welcome-support-biztalk
+
     - name: Edge and IE browsers
       tocHref: /support/browsers/
       topicHref: /support/browsers/welcome-support-browsers
