@@ -47,7 +47,7 @@ Microsoft Edge browser on Chromium (version 80) will not be affected by these Sa
 
 Microsoft customers who use Active Directory Federation Services (AD FS) or Web Application Proxy must deploy one of the following Windows Server updates:
 
-|**Product**|**KB Number**|**Release Date**|
+|**Product**|**KB Article**|**Release Date**|
 |:-----|:-----|:-----|
 Windows Server 2019|[KB 4534273](https://support.microsoft.com/help/4534273/windows-10-update-kb4534273)|January 14, 2020|
 |Windows Server 2016|[KB 4534271](https://support.microsoft.com/help/4534271/windows-10-update-kb4534271)|January 14, 2020|
@@ -55,17 +55,21 @@ Windows Server 2012 R2|[KB 4534309](https://support.microsoft.com/help/4534309/w
 
 The following Microsoft server or client products must also be updated. The updates will be added to this article when they're available. We recommend that you revisit this article regularly for the latest updates.
 
-|**Product**|**KB Number**|**Release Date**|
+|**Product**|**KB Article**|**Release Date**|
 |:-----|:-----|:-----|
 |Exchange Server||March 2020 Cumulative Update|
+|Project Server 2013|[KB 4484279](https://support.microsoft.com/help/4484279/march-10-2020-cumulative-update-for-project-server-2013-kb4484279)|March 10, 2020|
+|Project Server 2010|[KB 4484239](https://support.microsoft.com/help/4484239/march-10-2020-cumulative-update-for-project-server-2010-kb4484239)|March 10, 2020|
+|SharePoint Foundation 2013|[KB 4484282](https://support.microsoft.com/help/4484282/security-update-for-sharepoint-foundation-2013-march-10)<br />(Cumulative Update: [KB 4484278](https://support.microsoft.com/help/4484278/march-10-2020-cumulative-update-for-sharepoint-foundation-2013-kb44842))[<sup>1</sup>](#Note1)|March 10, 2020|
+|SharePoint Foundation 2010|[KB 4484197](https://support.microsoft.com/help/4484197/security-update-for-sharepoint-foundation-2010-march-10)|March 10, 2020|
 |SharePoint Server 2019|[KB 4484259](https://support.microsoft.com/help/4484259/security-update-for-sharepoint-server-2019-february-11)|February 11, 2020|
-|SharePoint Server 2016||March 2020 Public Update|
-|SharePoint Foundation 2013||March 2020 Public Update|
-|SharePoint Server 2013||March 2020 Public Update|
-|SharePoint Foundation 2010||March 2020 Public Update|
-|SharePoint Server 2010||March 2020 Public Update|
+|SharePoint Server 2016|[KB 4484272](https://support.microsoft.com/help/4484272/security-update-for-sharepoint-server-2016-march-10-2020)|March 10, 2020|
+|SharePoint Server 2013|[KB 4484280](https://support.microsoft.com/help/4484280/march-10-2020-cumulative-update-for-sharepoint-enterprise-server-2013)|March 10, 2020|
+|SharePoint Server 2010|[KB 4484241](https://support.microsoft.com/help/4484241/march-10-2020-cumulative-update-for-sharepoint-server-2010-kb4484241)|March 10, 2020|
 |Skype for Business Server 2019||March 2020 Cumulative Update (CU 3)|
 |Skype for Business Server 2015||April 2020 Cumulative Update (CU 11)|
+
+<a name="Note1"><sup>1</sup></a> This Cumulative Update contains the fix for the SameSite cookie issue, plus additional fixes unrelated to the SameSite cookie issue. Microsoft recommends installing the Cumulative Update rather than the individual update to ensure your environment has all of the fixes available at the time the Cumulative Update was released.
 
 You must test your applications for all the following scenarios, and determine the appropriate plan based on the outcome of the tests:
 
