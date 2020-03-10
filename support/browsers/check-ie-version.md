@@ -15,8 +15,8 @@ _Original KB number:_ &nbsp; 556019
 
 You can use the following methods:
 
-1. Connect to Remote Registry Service
-2. Use a script
+- Connect to Remote Registry Service
+- Use a script
 
 The first method is easy but includes many efforts. You can navigate to the following location in the registry after connecting to the remote registry:  
 `HKLM\Software\Microsoft\Internet Explorer`

@@ -1,10 +1,8 @@
-- name: Support articles for Internet Explorer
-  items: 
-  - name: Welcome to browsers Support
-    href: welcome-support-browsers.md
+- name: Internet Explorer troubleshoot articles
+  href: welcome-support-browsers.md
   
-  - name: (Back up to Support hub page)
-    href: ../index.yml
+- name: (Back up to Support hub page)
+  href: ../index.yml
 
 - name: Administration
   items:

@@ -38,7 +38,7 @@ DIRECT value.
 To resolve this problem, use any of the following methods:
 
 > [!NOTE]
-> The following methods are based on the sample that is mentioned in the "More Information" section of this article. Therefore, the code and the file names in these methods may differ from your code and from your file names.
+> The following methods are based on the sample that is mentioned in the _[Steps to reproduce the behavior](#steps-to-reproduce-the-behavior-anchor)_ section of this article. Therefore, the code and the file names in these methods may differ from your code and from your file names.
 
 - Hard code a proxy server in the Proxy server settings of Internet Explorer instead of using an automatic configuration script, and then press F5 to refresh the HTA in the browser.
 - Use a host name instead of a Fully Qualified Domain Name (FQDN) to access the path to the HTA.
@@ -47,9 +47,7 @@ To resolve this problem, use any of the following methods:
 - Do not use the Location object in your code.
 - Click to clear the **Include all sites that bypass the proxy server** check box in the Security settings of Internet Explorer.
 
-## More Information
-
-### Steps to reproduce the behavior
+## <a name="steps-to-reproduce-the-behavior-anchor"></a> Steps to reproduce the behavior
 
 1. Start Internet Explorer.
 
@@ -124,5 +122,4 @@ To resolve this problem, use any of the following methods:
 
 ## References
 
-For more information, see
-[Introduction to HTML Applications (HTAs)](https://msdn2.microsoft.com/library/ms536496.aspx).
+For more information, see [Introduction to HTML Applications (HTAs)](https://msdn2.microsoft.com/library/ms536496.aspx).

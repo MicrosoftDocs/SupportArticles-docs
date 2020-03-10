@@ -13,7 +13,8 @@ _Original KB number:_ &nbsp; 811834
 
 ## Symptoms
 
-When you use Microsoft Internet Explorer to visit a Secure Sockets Layer (SSL) Web site, "Cannot find server" is displayed the title bar, and you receive the following error message in the content pane of Internet Explorer:  
+When you use Microsoft Internet Explorer to visit a Secure Sockets Layer (SSL) Web site, the error message **Cannot find server** is displayed the title bar, and you receive the following error message in the content pane of Internet Explorer:
+
 >The page cannot be displayed.
 >
 >The page you are looking for is currently unavailable. The Web site might be experiencing technical difficulties, or you may need to adjust your browser settings.
@@ -41,11 +42,9 @@ You receive the error that is described in the Symptoms section when one of the 
 - You visit a Web site that uses Microsoft Internet Information Services (IIS) 4.0 or later, and Internet Explorer is not configured to support TLS 1.0. By default, TLS 1.0 is not enabled in all versions of Internet Explorer.
 - You visit a Web site that is running software other than Internet Information Services that does not support encryption, hashing, or signing algorithms that are Federal Information Processing Standard (FIPS) compliant. For example, the protocol SSL3 is used by many non-IIS Web servers for HTPPS. However, because SSL3 uses the MD5 algorithm (an algorithm that is not FIPS compliant), users whose local security policy forced the use of only FIPS compliant algorithms experience the documented error.
 
-## Resolution
+## Resolution method 1
 
-To solve this problem, use one of the following methods:
-
-### Method 1
+This section describes one method you can use to solve the problem.
 
 Enable TLS 1.0 protocol support in Internet Explorer first. If you visit a Web site that is running Internet Information Services 4.0 or higher, configuring Internet Explorer to support TLS 1.0 helps to secure your connection (if the remote Web server that you are trying to use supports this protocol). To configure Internet Explorer to support TLS 1.0, follow these steps:
 
@@ -58,7 +57,7 @@ Enable TLS 1.0 protocol support in Internet Explorer first. If you visit a Web s
   
 3. Click **Apply**, and then click **OK**. After you enable TLS 1.0, try to visit the Web site again. If you still cannot use SSL, the remote Web server probably does not support TLS 1.0.
 
-### Method 2
+## Resolution method 2
 
 If the Web server that you visit does not support TLS 1.0, you must disable the system policy that requires FIPS compliant algorithms. To do this, follow these steps:
 
