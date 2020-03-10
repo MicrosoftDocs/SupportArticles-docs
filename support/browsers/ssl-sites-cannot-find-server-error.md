@@ -23,16 +23,11 @@ When you use Microsoft Internet Explorer to visit a Secure Sockets Layer (SSL) W
 > - Click the Refresh button, or try again later.
 > - If you typed the page address in the Address bar, make sure that it is spelled correctly.
 > - To check your connection settings, click the Tools menu, and then click Internet Options. On the Connections tab, click Settings. The settings should match those provided by your local area network (LAN) administrator or Internet service provider (ISP).
-> - If your Network Administrator has enabled it, Microsoft Windows can examine your network and automatically discover network connection settings
+> - If your Network Administrator has enabled it, Microsoft Windows can examine your network and automatically discover network connection settings.
 > - If you would like Windows to try and discover them, click Detect Network Settings.
 > - Some sites require 128-bit connection security. Click the Help menu and then click About Internet Explorer to determine what strength security you have installed.
 > - If you are trying to reach a secure site, make sure your Security settings can support it. Click the Tools menu, and then click Internet Options. On the Advanced tab, scroll to the Security section and check settings for SSL 2.0, SSL 3.0, TLS 1.0, PCT 1.0.
 > - Click the Back button to try another link. Finally, at the very bottom of the IE content pane you see the error Cannot find server or DNS Error.
-
-When you use the Microsoft Windows Update Web site [Windows Update: FAQ](https://support.microsoft.com/help/12373/windows-update-faq) and click the **Scan for Updates** button, you may receive the following error message:  
->Windows Update Error
-
-This is error number 0x800C0008. This error occurs because Windows Update fails to download the software update catalog through SSL.
 
 ## Cause
 
@@ -41,7 +36,7 @@ This error may occur if you have enabled the following local security setting (o
 
 If this setting is enabled, the security channel provider of the operating system is forced to use only the following security algorithms: TLS_RSA_WITH_3DES_EDE_CBC_SHA. This behavior forces the security channel provider to negotiate only the stronger Transport Layer Security (TLS) 1.0 protocol when you use applications such as Microsoft Windows Messenger, Microsoft MSN Messenger, and Internet Explorer to visit SSL sites.
 
-You receive the error that is described in the "Symptoms" section when one of the following scenarios is true:
+You receive the error that is described in the Symptoms section when one of the following scenarios is true:
 
 - You visit a Web site that uses Microsoft Internet Information Services (IIS) 4.0 or later, and Internet Explorer is not configured to support TLS 1.0. By default, TLS 1.0 is not enabled in all versions of Internet Explorer.
 - You visit a Web site that is running software other than Internet Information Services that does not support encryption, hashing, or signing algorithms that are Federal Information Processing Standard (FIPS) compliant. For example, the protocol SSL3 is used by many non-IIS Web servers for HTPPS. However, because SSL3 uses the MD5 algorithm (an algorithm that is not FIPS compliant), users whose local security policy forced the use of only FIPS compliant algorithms experience the documented error.
