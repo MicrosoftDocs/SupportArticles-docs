@@ -20,6 +20,11 @@ metadata:
 
 productDirectory:
   items:
+  - title: Biztalk Server
+    imageSrc: "media/hub-landing/biztalk.svg"
+    links:
+    - url: biztalk/welcome-support-biztalk.md
+      text: Support for Biztalk Server
   - title: Edge and Internet Explorer browsers
     imageSrc: "media/hub-landing/Microsoft-Edge-Chromium1-browser-g10a.png"
     links:

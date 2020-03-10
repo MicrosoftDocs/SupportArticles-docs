@@ -77,6 +77,12 @@
       },
 
 
+      "ms.prod": {
+        "biztalk/**/*.md": "biztalk-server"
+      },
+      "ms.technology": {
+        "biztalk/**/*.md": ""
+      },
 
       "ms.prod": {
         "browsers/**/*.md": "internet-explorer"
@@ -113,7 +119,9 @@
         "windowsdeveloper/**/*.md": ""
       },
 
-
+      "titleSuffix": {
+        "biztalk/**/*.md": "Biztalk Server"
+      },
       "titleSuffix": {
         "browsers/**/*.md": "Edge & IE"
       },
