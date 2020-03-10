@@ -3,3 +3,33 @@
 
 - name: (Back up to Support hub page)
   href: ../index.yml
+
+- name: BizTalk Server supportability on a VM
+  href: biztalk-server-supportability-on-vm.md
+
+- name: BizTalk Server 2013 known issues
+  href: known-issues-biztalk-server-2013.md
+
+- name: BizTalk Server SQL Server Agent jobs
+  href: sql-server-agent-jobs-biztalk.md
+
+- name: Change default whitespace behavior in BizTalk
+  href: biztalk-default-whitespace-behavior.md
+
+- name: Connection issues with BizTalkMsgBoxDb database
+  href: biztalkmsgboxdb-connection-issue.md
+
+- name: Exceptions when you configure BizTalk Server
+  href: cannot-configure-biztalk-server.md
+
+- name: How to use Adapter Trace Utility
+  href: biztalk-adapter-trace-utility.md
+
+- name: Host instance can't start after config file change
+  href: biztalk-host-instance-cannot-start.md
+
+- name: Hotfixes and Cumulative Updates support
+  href: biztalk-hotfixes-cumulative-update.md
+
+- name: Issues and resolutions with Administration console
+  href: common-issues-resolutions-biztalk.md
