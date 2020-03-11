@@ -26,11 +26,9 @@ This error can occur when the following situations occur:
 - MS DTC service is configured incorrectly
 - MS DTC Ports are not allowed in the Firewall rules
 
-## Resolution
+## Configure the MSDTC service
 
 To resolve this issue, configure the MSDTC service correctly both on the computer that is running BizTalk Server and on the computer that is running SQL Server, and open the DTC ports on your Firewall.
-
-**Configure the MSDTC service**
 
 1. Open the MSDTC **Security Configuration** page.
 
@@ -71,7 +69,7 @@ To resolve this issue, configure the MSDTC service correctly both on the compute
 
 3.Save the configurations, and then wait for the MSDTC service to restart.
 
-**Open the MS DTC ports in your Firewall**
+## Open the MS DTC ports in your Firewall
 
 - [Ports for the Administration Server](https://go.microsoft.com/fwlink/p/?linkid=275568)
 

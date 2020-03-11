@@ -226,11 +226,11 @@ If BizTalk support assistance is needed, collect the following data while reprod
 
     |Errors and Warnings|All events|
     |---|---|
-    |Locks|Lock: Deadlock </br> Lock: Escalation </br>Lock: Timeout|
-    |Security Audit| Audit Login</br>Audit Login Failed</br>Audit Logout|
+    |Locks|Lock: Deadlock <br/> Lock: Escalation <br/>Lock: Timeout|
+    |Security Audit| Audit Login<br/>Audit Login Failed<br/>Audit Logout|
     |Sessions| ExistingConnection|
-    |Stored Procedures| SP: Completed</br>SP: Starting</br>SP: StmtCompleted</br>SP: StmtStarting|
-    |TSQL|SQL: StmtCompleted</br>SQL: StmtStarting|
-    |Transactions| DTCTransaction</br>SQL Transaction|
+    |Stored Procedures| SP: Completed<br/>SP: Starting<br/>SP: StmtCompleted<br/>SP: StmtStarting|
+    |TSQL|SQL: StmtCompleted<br/>SQL: StmtStarting|
+    |Transactions| DTCTransaction<br/>SQL Transaction|
 
 4. Capture simultaneous Network Monitor captures on the BizTalk and SQL servers while reproducing the issue.

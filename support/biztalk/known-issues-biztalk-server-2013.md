@@ -110,12 +110,10 @@ XslTransform class is deprecated. Therefore, no new updates or fixes will be rel
 
 If you can't update the map by using the solutions mentioned earlier, this change can be made by adding a DWORD UseXslTransform with value of 1at the following locations:
 
-- For 64-bit BizTalk host instances:
-
+- For 64-bit BizTalk host instances:  
   `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\BizTalk Server\3.0\Configuration`
 
-- For 32-bit BizTalk host instances and Visual Studio's Test Map functionality:
-
+- For 32-bit BizTalk host instances and Visual Studio's Test Map functionality:  
   `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\BizTalk Server\3.0\Configuration`
 
 ## Known Issues in Enterprise Single Sign-On (SSO)
