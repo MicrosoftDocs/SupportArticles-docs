@@ -29,7 +29,7 @@ Fiddler is a third-party (non-Microsoft) web debugging proxy that logs all HTTP(
 > [!NOTE]
 > The Fiddler Trace scenario in SaRA can only be run with the assistance of [Microsoft Support](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsupport.microsoft.com%2Fcontactus&data=02%7C01%7Cv-todmc%40microsoft.com%7Cd86b09f9921c4eaaf93308d7c55457f8%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637194838359073605&sdata=0VX3VHUkV%2BOzj2OKC3%2FOrbnmMs0LAmw%2FMq8lQgiSx7I%3D&reserved=0).
 
-To install Microsoft Support and Recovery Assistant (SaRA), follow these steps:
+To install and run the Fiddler Trace scenario in the Microsoft Support and Recovery Assistant (SaRA), follow these steps:
 
 1. Go to the [SaRA Assisted Setup](https://aka.ms/SaRA-Assisted).
 2. When prompted by your browser, select **Run**.
@@ -45,7 +45,7 @@ To install Microsoft Support and Recovery Assistant (SaRA), follow these steps:
 
    ![Microsoft Services Agreement](./media/run-fiddler-trace/agreement.png)
 
-6. Enter the passcode in the box, and then select **Next**.
+6. Enter the passcode provided by Microsoft Support in the box, and then select **Next**.
 
    ![Enter the passcode](./media/run-fiddler-trace/passcode.png)
 
