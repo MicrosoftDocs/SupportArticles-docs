@@ -40,6 +40,7 @@ To resolve this issue, use one of the following resolutions:
     |Receive Port Availability Monitor|2220|
     |Send Port Availability Monitor|2580|
     |Send Port Group Availability Monitor|2940|
+    |||
 
 ### Issue 2: Error message when clicking Refresh or expanding Handlers
 
@@ -73,6 +74,7 @@ To set the ClearAfter property, use **wbemtest** on all BizTalk servers in the g
     |__EventSinkCacheControl=@|00000000000015.000000:000|
     |__ObjectProviderCacheControl=@|00000000000030.000000:000|
     |__PropertyProviderCacheControl=@|00000000000030.000000:000|
+    |||
 
     If any value exceeds the values listed above, click the **Edit Property** button to change it. Click **Save Property**. Click **Save Object**.
 
@@ -136,6 +138,7 @@ To resolve this, follow the steps in the link below to modify the registry key a
         |Port No|TCP port used by SQL Server|
         |Protocol|TCP/IP|
         |Server|SQL Server name|
+        |||
     
         For example, if your SQL Server computer is named MySQL and listening on port 40090, then you would specify the following:
     
@@ -144,6 +147,7 @@ To resolve this, follow the steps in the link below to modify the registry key a
         |Port No|40090|
         |Protocol|TCP/IP|
         |Server|MySQL|
+        |||
     
     3. Click **OK**.
     

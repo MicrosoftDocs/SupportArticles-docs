@@ -24,8 +24,6 @@ This issue may occur if one or more of the following conditions are true:
 - The max degree of parallelism option is set to a value other than 1 on the computer that is running SQL Server and that is hosting the BizTalkMsgBoxDb database.
 - You defragment or rebuild an index in the BizTalkMsgBoxDb database when BizTalk Server is processing data.
 
-To resolve this issue, use one of the following methods.
-
 ## Resolution 1: Disable the Auto Create Statistics option and the Auto Update Statistics option
 
 To resolve this issue, disable the Auto Create Statistics option and the Auto Update Statistics option on the BizTalkMsgBoxDb database in SQL Server.
