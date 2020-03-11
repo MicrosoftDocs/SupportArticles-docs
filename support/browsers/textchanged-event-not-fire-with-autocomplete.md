@@ -97,4 +97,4 @@ To work around this behavior, disable the AutoComplete feature of the Web form. 
 
 ## References
 
-For more information, see [TextBox.AutoPostBack Property](https://docs.microsoft.com/en-us/dotnet/api/system.web.ui.webcontrols.textbox.autopostback).
+For more information, see [TextBox.AutoPostBack Property](https://docs.microsoft.com/dotnet/api/system.web.ui.webcontrols.textbox.autopostback).

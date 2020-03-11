@@ -63,7 +63,7 @@
   - name: IE runtime errors
     href: ie-runtime-errors.md
 
-  - name: Textchanged does not fire
+  - name: Textchanged event does not fire
     href: textchanged-event-not-fire-with-autocomplete.md
 
   - name: Cannot close IE window
