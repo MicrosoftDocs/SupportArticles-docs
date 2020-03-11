@@ -84,7 +84,7 @@ Although browser add-ons can enhance your online experience, they can occasional
 
 1. Click ![vista start button](./media/cannot-view-secure-web-sites-in-ie/vista-start-button.png), and then click Internet Explorer.
 
-2. Click Internet Explorer (No Add-Ons). Internet Explorer opens without add-ons, toolbars, or plug-ins.
+2. Click Internet Explorer (No Add-ons). Internet Explorer opens without add-ons, toolbars, or plug-ins.
 
 3. Try to view the Web page again to see whether it works correctly.
 
