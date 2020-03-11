@@ -78,6 +78,7 @@ The following table provides the versions of SaRA that were made available on th
 
 |Release date|SaRA version|
 |--------|--------|
+|March 11, 2020|17.00.4376.002|
 |February 27, 2020|17.00.4304.006|
 |February 5, 2020|17.00.4163.010|
 |January 14, 2020|17.00.4058.000|
