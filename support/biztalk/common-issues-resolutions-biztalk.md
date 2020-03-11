@@ -168,16 +168,13 @@ To resolve this, follow the steps in the link below to modify the registry key a
         
         32-bit applications don't use the Domain Name System (DNS) cache on a computer that is running an x64-based version of Windows Server 2003 or of Windows XP
         
-        If a remote server is specified in a receive location or a send port that is running in a 32-bit host, the DNS query for this server could also be affected. In this scenario, you can add the remote server to the hosts file. For example, the remote server IP address is 1.1.1.1 and the remote server name is MyServer. You would add the following to the hosts file:
-        
+        If a remote server is specified in a receive location or a send port that is running in a 32-bit host, the DNS query for this server could also be affected. In this scenario, you can add the remote server to the hosts file. For example, the remote server IP address is 1.1.1.1 and the remote server name is MyServer. You would add the following to the hosts file:  
         1.1.1.1 MyServer
 
-        BizTalk Administration runs as a 32-bit process on a 64-bit server. As a result, the following issue may impact the MMC:
-
+        BizTalk Administration runs as a 32-bit process on a 64-bit server. As a result, the following issue may impact the MMC:  
         32-bit applications don't use the Domain Name System (DNS) cache on a computer that is running an x64-based version of Windows Server 2003 or of Windows XP
 
-        If a remote server is specified in a receive location or a send port that is running in a 32-bit host, the DNS query for this server could also be affected. In this scenario, you can add the remote server to the hosts file. For example, the remote server IP address is 1.1.1.1 and the remote server name is MyServer. You would add the following to the hosts file:
-
+        If a remote server is specified in a receive location or a send port that is running in a 32-bit host, the DNS query for this server could also be affected. In this scenario, you can add the remote server to the hosts file. For example, the remote server IP address is 1.1.1.1 and the remote server name is MyServer. You would add the following to the hosts file:  
         1.1.1.1 MyServer
 
     - The Speed & Duplex value on the Network Interface Card (NIC) and additional network layers (for example router) can impact performance. If the Speed & Duplex value on the SQL Server NIC is set to 100 MB Half and theSpeed & Duplex value on the BizTalk Server NIC is set to 1 GB Full, then a delay will probably occur.
