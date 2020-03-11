@@ -69,17 +69,17 @@ BizTalk Server 2013 uses the .NET XslCompiledTransform class for better transfor
 
   public static bool WriteNode(XPathNodeIterator node)
   {
-  node.MoveNext(); //needs to be added in BizTalk Server 2013 to avoid error
-  XPathNavigator xpn = node.Current;
-  XmlDocument xdoc = new XmlDocument();
-  xdoc.LoadXml(xpn.OuterXml);
-  return true;
+      node.MoveNext(); //needs to be added in BizTalk Server 2013 to avoid error
+      XPathNavigator xpn = node.Current;
+      XmlDocument xdoc = new XmlDocument();
+      xdoc.LoadXml(xpn.OuterXml);
+      return true;
   }
   ```
 
   **Resolution**
 
-  Call theMoveNext()function.
+  Call the MoveNext() function.
 
 - Function overloads are differentiated by number of parameters instead of by types
 
@@ -103,10 +103,10 @@ BizTalk Server 2013 uses the .NET XslCompiledTransform class for better transfor
 
   Make sure all function overloads contain a different number of parameters.
 
-Falling Back to the XslTransform Class
+- Falling Back to the XslTransform Class
 
-You can configure the BizTalk Server 2013 transform engine to use the older XslTransform class. We do not recommend this approach because the environment will lose the many performance and memory usage improvements provided by the XslCompiledTransform class. Also, the .NET
-XslTransform class is deprecated. Therefore, no new updates or fixes will be released for it.
+    You can configure the BizTalk Server 2013 transform engine to use the older XslTransform class. We do not recommend this approach because the environment will lose the many performance and memory usage improvements provided by the XslCompiledTransform class. Also, the .NET
+    XslTransform class is deprecated. Therefore, no new updates or fixes will be released for it.
 
 If you can't update the map by using the solutions mentioned earlier, this change can be made by adding a DWORD UseXslTransform with value of 1at the following locations:
 

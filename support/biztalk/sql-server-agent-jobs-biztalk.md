@@ -18,7 +18,7 @@ The following table lists the BizTalk Server SQL Server Agent jobs.
 
 |Job name|Description|Enabled by default|
 |---|---|---|
-|Backup BizTalk Server|Consists of three steps. Step 1: Performs full database backup of the BizTalk Server databases. Step 2: Backs up the BizTalk Server database logs. Step 3: Specifies for how long the backup history is kept.|No|
+|Backup BizTalk Server|Consists of three steps: <br/>Step 1: Performs full database backup of the BizTalk Server databases. <br/>Step 2: Backs up the BizTalk Server database logs. <br/>Step 3: Specifies for how long the backup history is kept.|No|
 |CleanupBTFExpiredEntriesJob_BizTalkMgmtDb|Deletes expired BizTalk Framework entries from the BizTalk Management (BizTalkMgmtDb) database.|Yes|
 |DTA Purge and Archive|Automates the archiving of tracked messages and the purging of the BizTalk Tracking database to maintain a healthy system and to keep the tracking data archived for future use. On BizTalk Server 2004, this job is created after you install BizTalk Server 2004 Service Pack 2.|No|
 |MessageBox_DeadProcesses_Cleanup_BizTalkMsgBoxDb|Detects when a BizTalk Server host instance (BTSNTSvc.exe) has stopped responding. The job then releases the work from the host instance so a different host instance can finish the tasks.|Yes|
