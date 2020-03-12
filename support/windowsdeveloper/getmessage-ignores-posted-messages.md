@@ -99,17 +99,17 @@ for(;;)
     
     if(!fGot)
 
-{
+    {
 
-    MsgWaitForMultipleObjects(1, &ghMessageReadyEvent,
-    
-    FALSE/*bWaitAll*/, INFINITE,
-    
-    QS_ALLEVENTS | QS_ALLPOSTMESSAGE);
-    
-    fGot = PeekMessage(&msg, NULL, 0, 0, PM_REMOVE);
+        MsgWaitForMultipleObjects(1, &ghMessageReadyEvent,
 
-}
+        FALSE/*bWaitAll*/, INFINITE,
+
+        QS_ALLEVENTS | QS_ALLPOSTMESSAGE);
+
+        fGot = PeekMessage(&msg, NULL, 0, 0, PM_REMOVE);
+
+    }
 
 if(!fGot)
 
