@@ -17,19 +17,12 @@ When you run a distributed transaction from a process (ex. w3wp.exe) under a dom
 
 ```console
 Log Name:      Application
-
 Source:        Microsoft-Windows-MSDTC Client
-
 Event ID:      4448
-
 Task Category: KTMRM
-
 Level:         Error
-
 Keywords:      Classic
-
 Description:
-
 KTMRM service failed to load the system restore information. As a result, the service is exiting. Please try restarting the service, if the service fails to start, contact product support. Error Specifics: hr = 0x80070005, xxxx, CmdLine: xxxx, Pid: xxxx
 ```
 
