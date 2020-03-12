@@ -12,6 +12,8 @@ It' sometimes desirable to mix Windows Graphics Device Interface (GDI) and GDI+ 
 _Original product version:_ &nbsp; Windows Graphics Device Interface  
 _Original KB number:_ &nbsp; 311221
 
+## Summary
+
 Certain rules apply when mixing GDI and GDI+ code. For example, you shouldn't interleave GDI and GDI+ calls on one target object. It's okay to wrap a Graphics object around an HDC, but you shouldn't access the HDC directly from GDI until the Graphics object is destroyed.
 
 Four primary scenarios for interoperability between GDI and GDI+ are covered in this article:
