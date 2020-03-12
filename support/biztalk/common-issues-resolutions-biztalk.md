@@ -60,7 +60,7 @@ BizTalk Server Administration relies on Windows Management Instrumentation (WMI)
 
 The BizTalk WMI Provider relies on the ClearAfter property within the WMI root namespace. The default ClearAfter property is 30 seconds (00000000000030.000000:000). If this value has been changed to a larger value, like 500 seconds (00000000000500.000000:000), then this error may be returned.
 
-To set the ClearAfter property, use **wbemtest** on all BizTalk servers in the group using the steps below:
+To set the ClearAfter property, use Windows Management Instrumentation Tester (wbemtest) on all BizTalk servers in the group using the steps below:
 
 1. Go to **Start** or **Run**, and type **wbemtest**.
 2. Click the **Connect** button and change the name pace to root. Click **Connect**.
