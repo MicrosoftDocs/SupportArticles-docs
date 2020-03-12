@@ -25,7 +25,7 @@
     href: biztalk-hotfixes-cumulative-update.md
 
 - name: Management and Operations
-  items
+  items：
   - name: Connection issues with BizTalkMsgBoxDb database
     href: biztalkmsgboxdb-connection-issue.md
   - name: Issues and resolutions with Administration console
