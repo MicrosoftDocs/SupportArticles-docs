@@ -43,11 +43,11 @@ Additional error information:
 
 ## Cause
 
-The btsntsvc.exe.config or btsntsvc64.exe.config file had been modified with an xlang section.  No Configuration section handler was present for xlang.
+The btsntsvc.exe.config or btsntsvc64.exe.config file had been modified with an `xlang` section.  No Configuration section handler was present for `xlang`.
 
 ## Resolution
 
-Add a configuration section handler for xlangs.
+Add a configuration section handler for `xlangs`.
 
 ``` xml
 <?xml version="1.0"?>
