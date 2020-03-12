@@ -4,7 +4,7 @@ description: Fixes a System.EnterpriseServices.TransactionProxyException issue i
 ms.date: 03/06/2020
 ms.prod-support-area-path: 
 ---
-# Exception of type 'System.EnterpriseServices.TransactionProxyException' was thrown when you configure BizTalk Server
+# Exception of type System.EnterpriseServices.TransactionProxyException was thrown when you configure BizTalk Server
 
 This article provides information about resolving a System.EnterpriseServices.TransactionProxyException issue when you configure BizTalk Server.
 
