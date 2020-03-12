@@ -7,7 +7,7 @@ ms.reviewer: MIKELIU
 ---
 # Header and Library Requirement When Set/Get Socket Options at the IPPROTO_IP Level
 
-This article provides information about the Header and Library requirement When setting or getting socket options at the IPPROTO_IP level, and setsockopt or getsockopt failure with runtime error.
+This article provides information about the Header and Library requirement when setting or getting socket options at the IPPROTO_IP level, and the setsockopt or getsockopt function fails with runtime errors.
 
 _Original product version:_ &nbsp; Winsock  
 _Original KB number:_ &nbsp; 257460
