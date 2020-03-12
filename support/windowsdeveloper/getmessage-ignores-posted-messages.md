@@ -111,13 +111,13 @@ for(;;)
 
     }
 
-if(!fGot)
+    if(!fGot)
 
-{
+    {
 
-    continue;
+        continue;
 
-}
+    }
 
     ... process message here ...
 
