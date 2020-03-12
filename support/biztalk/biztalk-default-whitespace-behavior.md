@@ -28,7 +28,7 @@ In BizTalk 2010, this is set at the host level:
 
 1. Open **BizTalk Server Administration Console**.
 2. Expand the **BizTalk Group** out to **Platform Settings** > **Hosts**.
-3. Right-click on the host and choose Settings.
+3. Right-click on the host and choose **Settings**.
 4. Check the checkbox next to Legacy whitespace behavior.
 5. Click **OK**.
 6. Restart the BizTalk Host Instances for this host.
