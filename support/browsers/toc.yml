@@ -75,9 +75,6 @@
   - name: Services not support WinInet
     href: wininet-not-supported-in-services.md
 
-  - name: IE document modes FAQ
-    href: ie-document-modes.md
-
   - name: FTP CERN-based proxy with WinInet API
     href: ftp-with-cern-based-proxy-using-wininet-api.md
 
@@ -95,9 +92,6 @@
 
 - name: Security and Privacy
   items:
-  - name: Cannot stop IE Enhanced Security
-    href: cannot-turn-off-i-e-esc.md
-
   - name: CSP is loading for certificate request
     href: csp-shows-loading-for-certificate-request.md
 
