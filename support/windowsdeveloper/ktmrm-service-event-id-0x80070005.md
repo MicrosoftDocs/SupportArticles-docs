@@ -8,7 +8,7 @@ ms.prod-support-area-path:
 
 This article provides information about resolving Kernel Transaction Manager Resource Manager (KTMRM) service failed when you run a distributed transaction from a process (ex. w3wp.exe) under a domain account on Windows.
 
-_Original product version:_ &nbsp; Kernel Transaction Manager Resource Manager service  
+_Original product version:_ &nbsp; Windows Server 2008 
 _Original KB number:_ &nbsp; 2607379
 
 ## Symptoms
