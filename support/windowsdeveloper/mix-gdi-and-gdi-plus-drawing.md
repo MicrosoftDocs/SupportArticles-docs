@@ -9,7 +9,7 @@ ms.reviewer: V-JEFFBO, jhornick
 
 It' sometimes desirable to mix Windows Graphics Device Interface (GDI) and GDI+ drawing operations in the same code path. This article provides tips to help you write code that allows GDI and GDI+ to work together.
 
-_Original version:_ &nbsp; Windows Graphics Device Interface  
+_Original product version:_ &nbsp; Windows Graphics Device Interface  
 _Original KB number:_ &nbsp; 311221
 
 Certain rules apply when mixing GDI and GDI+ code. For example, you shouldn't interleave GDI and GDI+ calls on one target object. It's okay to wrap a Graphics object around an HDC, but you shouldn't access the HDC directly from GDI until the Graphics object is destroyed.
