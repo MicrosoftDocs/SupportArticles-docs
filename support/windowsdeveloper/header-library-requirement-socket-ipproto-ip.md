@@ -12,6 +12,8 @@ This article provides information about the Header and Library requirement when 
 _Original product version:_ &nbsp; Winsock  
 _Original KB number:_ &nbsp; 257460
 
+## Summary
+
 When setting or getting socket options at the IPPROTO_IP level in a C/C++ Winsock application that's targeted for Windows NT, Windows 2000, Windows 95, or Windows 98, including the correct header and library file in the program project is critical. If the header and library files aren't properly matched, setsockopt or getsockopt may fail with runtime error 10042 (WSAENOPROTOOPT). In certain cases, even if the API returns successfully, the option value that you set or get may not be what you would have expected.
 
 To avoid this problem, observe the following guidelines:
