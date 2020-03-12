@@ -10,7 +10,7 @@
     href: biztalk-adapter-trace-utility.md
 
 - name: BizTalk Server Setup and Configuration
-  items：
+  items:
   - name: BizTalk Server supportability on a VM
     href: biztalk-server-supportability-on-vm.md
   - name: BizTalk Server SQL Server Agent jobs
@@ -25,13 +25,13 @@
     href: biztalk-hotfixes-cumulative-update.md
 
 - name: Management and Operations
-  items：
+  items:
   - name: Connection issues with BizTalkMsgBoxDb database
     href: biztalkmsgboxdb-connection-issue.md
   - name: Issues and resolutions with Administration console
     href: common-issues-resolutions-biztalk.md
 
 - name: Performance
-  items：
+  items:
   - name: BizTalk Server 2013 known issues
     href: known-issues-biztalk-server-2013.md
