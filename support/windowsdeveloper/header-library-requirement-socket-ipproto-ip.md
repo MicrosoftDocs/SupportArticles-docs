@@ -139,28 +139,28 @@ int main(int argc, char* argv[])
    source_sin.sin_port = htons(0);    
    source_sin.sin_addr.s_addr = htonl (INADDR_ANY);
 
-if (bind(sock, 
-            (struct sockaddr FAR *)&source_sin, 
-            sizeof(source_sin)) == SOCKET_ERROR) 
-   {
-      printf ("bind() failed: %d"), WSAGetLastError());
-      closesocket (sock);
-      return FALSE;
-   }
+    if (bind(sock, 
+                (struct sockaddr FAR *)&source_sin, 
+                sizeof(source_sin)) == SOCKET_ERROR) 
+       {
+          printf ("bind() failed: %d"), WSAGetLastError());
+          closesocket (sock);
+          return FALSE;
+       }
 
-if (setsockopt(sock,
-                  IPPROTO_IP,
-                  IP_MULTICAST_TTL,
-                  (char *)&ttl,
-                  sizeof(ttl))) == SOCKET_ERROR)
-   {
-      printf ("setsockopt failed: %d"), WSAGetLastError());
-      closesocket (sock);
-      return FALSE;
-   }
-   ...
-   ...
-   ...
+    if (setsockopt(sock,
+                      IPPROTO_IP,
+                      IP_MULTICAST_TTL,
+                      (char *)&ttl,
+                      sizeof(ttl))) == SOCKET_ERROR)
+       {
+          printf ("setsockopt failed: %d"), WSAGetLastError());
+          closesocket (sock);
+          return FALSE;
+       }
+       ...
+       ...
+       ...
 }
 
 ```
