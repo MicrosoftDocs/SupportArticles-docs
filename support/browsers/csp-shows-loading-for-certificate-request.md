@@ -16,9 +16,9 @@ _Original KB number:_ &nbsp; 939290
 
 Consider the following scenario in Windows Internet Explorer:
 
-- You use the Advanced Certificate Request page.
+1. You use the Advanced Certificate Request page.
 
-- You submit a certificate request to an enterprise certification authority (CA).
+2. You submit a certificate request to an enterprise certification authority (CA).
 
 In this scenario, the value in the **CSP** field under **Key Options** appears as Loading.
 

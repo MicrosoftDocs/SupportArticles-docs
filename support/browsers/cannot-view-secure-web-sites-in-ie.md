@@ -18,13 +18,11 @@ When you try to view secure Web site by using Microsoft Internet Explorer 8, you
 > [!NOTE]
 > Secure Web sites are generally accessed by using a URL that includes the `https://` protocol.
 
-## Resolution
-
-### Enable Compatibility View in Internet Explorer
+## Resolution: Enable Compatibility View in Internet Explorer
 
 The Web site might not be fully compatible with Internet Explorer 8 and might not be displayed correctly. You can enable Compatibility View for the Web site to see whether that resolves the problem.
 
-#### Method 1: Enable Compatibility View for a Web site
+### Method 1: Enable Compatibility View for a Web site
 
 To enable Compatibility View for a specific Web site that is not displayed correctly or that is not working correctly, follow these steps:
 
@@ -47,7 +45,7 @@ You can also add or remove specific Web sites from Compatibility View without ac
 
 If the Web site is not displayed correctly or is not working, you are experiencing a different problem. Try the other resolutions in this section.
 
-#### Method 2: Enable Compatibility View for all Web sites
+### Method 2: Enable Compatibility View for all Web sites
 
 Consider the following scenario. Most Web sites that you frequently visit are not displayed correctly or are not working correctly. You have tried Method 1 on some of these Web sites, and that method worked. In this case, you may want to enable Compatibility View for all Web sites. To do this, follow these steps:
 
@@ -62,7 +60,7 @@ Consider the following scenario. Most Web sites that you frequently visit are no
 
 4. Visit several Web sites that did not display correctly or that did not work correctly to make sure the problem is resolved.
 
-### Delete browsing history
+## Resolution: Delete browsing history
 
 Internet Explorer could be using old information when you try to view the Web page. Try deleting your browsing history to see whether the problem is resolved. Follow these steps:
 
@@ -78,7 +76,7 @@ Internet Explorer could be using old information when you try to view the Web pa
 
 If the Web page works correctly, you are finished with this article. If the Web page does not work correctly, try the next resolution.
 
-### Run Internet Explorer in No Add-ons mode
+## Resolution: Run Internet Explorer in No Add-ons mode
 
 Although browser add-ons can enhance your online experience, they can occasionally interfere or conflict with other software on your computer. Try starting Internet Explorer without add-ons to see whether the problem is resolved. Follow these steps:
 
@@ -106,7 +104,7 @@ If disabling all add-ons resolves the problem, you might want to use Add-on Mana
 
 If no add-on is causing the problem, try the next resolution.
 
-### Make sure that the Date and Time settings are correct
+## Resolution: Make sure that the Date and Time settings are correct
 
 Some secure sites require that the date and time match the date and time of the secure site. Make sure that the Date and Time settings are correct on the computer. To do this, follow these steps:
 
@@ -118,7 +116,7 @@ Some secure sites require that the date and time match the date and time of the 
 
 4. Click **OK** two times.
 
-### Reset Internet Explorer settings
+## Resolution: Reset Internet Explorer settings
 
 Try resetting Internet Explorer back to its default settings. This removes all changes that were made to Internet Explorer since it was installed, but it does not delete your favorites or feeds. Follow these steps:
 
@@ -140,7 +138,7 @@ Try resetting Internet Explorer back to its default settings. This removes all c
 
 If the Web page works correctly, you are finished with this article. If the Web page does not work correctly, try the next resolution.
 
-### Perform System Restore
+## Resolution: Perform System Restore
 
 1. Click Start ![vista start button](./media/cannot-view-secure-web-sites-in-ie/vista-start-button.png), and then click **All Programs**.
 
