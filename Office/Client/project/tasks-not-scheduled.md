@@ -13,13 +13,13 @@ ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
-- Microsoft Office Project Professional 2003
-- Microsoft Office Project Standard 2003
+- Project Professional 2013
+- Project 2013 Standard
 - Project Professional 2010
 - Project Server 2010
 - Project Standard 2010
-- Project Professional 2013
-- Project 2013 Standard
+- Microsoft Office Project Professional 2003
+- Microsoft Office Project Standard 2003
 ---
 
 # Tasks don't schedule as expected in Microsoft Project
@@ -57,12 +57,12 @@ A task may not schedule as expected for a number of reasons. To determine the ex
 
    1. On the **File** tab, select **Options**.
    1. Select the **Schedule** tab.
-   1. Uncheck the **ShowSchedulingMessages** check box.
+   1. Uncheck the **Show Scheduling Messages** check box.
    1. Select the **Advanced** tab.
    1. Under **Planning Wizard**, select all check boxes.
 
    > [!NOTE]
-   > After scheduling messages are turned on, press F9 on the keyboard. Any scheduling messages that occur must be resolved before the project will be calculated correctly.
+   > After scheduling messages are turned on, press **F9** on the keyboard. Any scheduling messages that occur must be resolved before the project will be calculated correctly.
 
 3. Are you scheduling from the project's **Start Date** or the project's **Finish Date**?
 
@@ -74,7 +74,7 @@ A task may not schedule as expected for a number of reasons. To determine the ex
 
 4. What is the project's Start Date?
 
-   If the Show Scheduling Messages option is turned on, and you enter a task that occurs before the project's Start Date, you will receive a warning message. If you want to schedule a task to start before the porject's Start Date, manually enter the date for the task. To check the Project Start Date, select **Project information** on the **Project** tab.
+   If the Show Scheduling Messages option is turned on, and you enter a task that occurs before the project's Start Date, you will receive a warning message. If you want to schedule a task to start before the project's Start Date, manually enter the date for the task. To check the Project Start Date, select **Project Information** on the **Project** tab.
 
 5. Did you enter a percent complete on a task?
 
@@ -113,7 +113,7 @@ A task may not schedule as expected for a number of reasons. To determine the ex
 
     1. On the **File** tab, select **Options**.
     1. Select the **Schedule** tab.
-    1. Select the checkbox **Tasks will always honor their contraint dates**.
+    1. Select the check box **Tasks will always honor their contraint dates**.
     1. Select **OK**.
 
 9. Are you using automatic **Resource Leveling**?
@@ -163,7 +163,7 @@ A task may not schedule as expected for a number of reasons. To determine the ex
 
 ### Project 2007
 
-To determine the exact cause in Project 2007 and earlier versions, ask yourself the following questions.
+To determine the exact cause in Project 2007 and earlier versions, review the following questions:
 
 > [!NOTE]
 > Before testing any of the scenarios in this article, make a backup copy of the file or save any changes you might have made to the file.
@@ -186,16 +186,16 @@ To determine the exact cause in Project 2007 and earlier versions, ask yourself 
    2. Select the **Schedule** tab.   
    3. Select to select or clear the **Show Scheduling Messages** check box.   
    4. Select the **General** tab.   
-   5. Under **PlanningWizard**, select all check boxes.   
+   5. Under **Planning Wizard**, select all check boxes.   
 
     > [!NOTE]
     > After scheduling messages are turned on, press **F9** on the keyboard. Any scheduling messages that occur must be resolved before the project will be calculated correctly.   
 3. Are you scheduling from the project's Start Date or the project's Finish Date?
 
-   When scheduling from the project's Start Date, the tasks will begin as soon as possible. When scheduling from the project's Finish Date, the tasks will begin as late as possible. To check which date is set in your file, select **Project information** on the **Project** menu.   
+   When scheduling from the project's Start Date, the tasks will begin as soon as possible. When scheduling from the project's Finish Date, the tasks will begin as late as possible. To check which date is set in your file, select **Project Information** on the **Project** menu.   
 4. What is the project's Start Date?
 
-   If the Show Scheduling Messages option is turned on, and you enter a task that occurs before the project's Start Date, you will receive a warning message. If you want to schedule a task to start before the project's Start Date, manually enter the date for the task. To check the Project Start Date, select **Project information** on the **Project** menu.
+   If the Show Scheduling Messages option is turned on, and you enter a task that occurs before the project's Start Date, you will receive a warning message. If you want to schedule a task to start before the project's Start Date, manually enter the date for the task. To check the Project Start Date, select **Project Information** on the **Project** menu.
 
 5. Did you enter a percent complete on a task?
 
@@ -228,7 +228,7 @@ To determine the exact cause in Project 2007 and earlier versions, ask yourself 
    To set this option, follow these steps:
     1. On the **Tools** menu, select **Options**.   
     2. Select the **Schedule** tab.   
-    3. Select to select the **Tasks will always honor their constraint dates**check box.   
+    3. Select to select the check box **Tasks will always honor their constraint dates**.   
     4. Select **OK**.    
 9. Are you using automatic Resource Leveling?
 
