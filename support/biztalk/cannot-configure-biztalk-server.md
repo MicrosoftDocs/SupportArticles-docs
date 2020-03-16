@@ -8,7 +8,7 @@ ms.prod-support-area-path:
 
 This article provides information about resolving a `System.EnterpriseServices.TransactionProxyException` issue when you configure BizTalk Server.
 
-_Original product version:_ &nbsp; BizTalk Server 2010, 2009, 2006 R2， 2006  
+_Original product version:_ &nbsp; BizTalk Server 2010, 2009, 2006 R2, 2006  
 _Original KB number:_ &nbsp; 2556390
 
 ## Symptoms
@@ -68,7 +68,7 @@ To resolve this issue, configure the MSDTC service correctly both on the compute
 
     ![local DTC properties configure screenshot](./media/cannot-configure-biztalk-server/local-dtc-property-setting.jpg)
 
-3.Save the configurations, and then wait for the MSDTC service to restart.
+3. Save the configurations, and then wait for the MSDTC service to restart.
 
 ## Open the MS DTC ports in your Firewall
 
@@ -80,6 +80,6 @@ To resolve this issue, configure the MSDTC service correctly both on the compute
 
 For more information about this issue, visit the following Microsoft websites:
 
-- [Troubleshooting problems in MSDTC](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753620(v=ws.10)?redirectedfrom=MSDN)
+- [Troubleshooting problems in MSDTC](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753620(v=ws.10))
 
-- [Enable Network Access Securely for MS DTC](https://docs.microsoft.com/biztalk/core/troubleshooting-problems-with-msdtc?redirectedfrom=MSDN)
+- [Enable Network Access Securely for MS DTC](https://docs.microsoft.com/biztalk/core/troubleshooting-problems-with-msdtc)

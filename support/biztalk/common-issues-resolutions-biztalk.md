@@ -113,7 +113,7 @@ On the BizTalk Server around the same time as the SCOM server error, the followi
 
 To resolve this, follow the steps in the link below to modify the registry key and install the appropriate hotfix:
 
-[Troubleshooting Issues When Monitoring BizTalk Server Using System Center Operations Manager 2007](https://msdn.microsoft.com/library/ee290753%28bts.10%29.aspx)
+[Troubleshooting Issues When Monitoring BizTalk Server Using System Center Operations Manager 2007](https://www.microsoft.com/download/details.aspx?id=56498)
 
 ## Additional Issues
 
@@ -181,7 +181,7 @@ To resolve this, follow the steps in the link below to modify the registry key a
     
         To test this scenario, copy/paste a file from the BizTalk Server to a folder on the SQL Server, and vice versa. If this copy process takes a while, then something in the network layer is causing an issue.
 
-    - When connecting to the SQL Server Database Engine, a network protocol must be enabled. For BizTalk, confirm the TCP/IP protocol is enable. See [Choosing a Network Protocol](https://msdn.microsoft.com/library/ms187892.aspx).
+    - When connecting to the SQL Server Database Engine, a network protocol must be enabled. For BizTalk, confirm the TCP/IP protocol is enable. See [Choosing a Network Protocol](https://docs.microsoft.com/previous-versions/sql/sql-server-2016/ms187892(v=sql.130)).
 
 4. You may get an `OutOfMemory` exception when working within BizTalk Administration. WMI has a `__ProviderHostQuotaConfiguration` class that applies to the BizTalk WMI namespace. This class consists of the following properties:
 
@@ -200,7 +200,7 @@ To check the MemoryPerHost value, use **wbemtest** on all BizTalk servers in the
 5. If the **MemoryPerHost** value is less than 512 MB (536870912), double-click **MemoryPerHost** and set the value to 536870912. Click **Save Property**, click **Save Object** and exit.
 6. Restart the Windows Management Instrumentation service.
 
-For more information, see [ProviderHostQuotaConfiguration class](https://msdn.microsoft.com/library/aa394671%28vs.85%29.aspx).
+For more information, see [ProviderHostQuotaConfiguration class](https://docs.microsoft.com/windows/win32/wmisdk/--providerhostquotaconfiguration).
 
 ## Troubleshooting
 

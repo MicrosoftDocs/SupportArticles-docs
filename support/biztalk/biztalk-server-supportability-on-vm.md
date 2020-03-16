@@ -52,13 +52,13 @@ For more information about SQL Server support in a virtualization environment or
 
 ## Frequently Asked Questions
 
-**Question**: What level of technical support will I receive if my non-Microsoft vendor configuration is certified through SVVP?
+**Question 1**: What level of technical support will I receive if my non-Microsoft vendor configuration is certified through SVVP?
 
-**Answer**: Customer Service and Support will work together with you and the SVVP certified vendor to investigate the problem. Customer Service and Support or the SVVP vendor will  use the TSANet program together with your permission in an attempt to resolve the problem.
+**Answer 1**: Customer Service and Support will work together with you and the SVVP certified vendor to investigate the problem. Customer Service and Support or the SVVP vendor will  use the TSANet program together with your permission in an attempt to resolve the problem.
 
-**Question**: What if the non-Microsoft vendor virtualization configuration is not certified through SVVP?
+**Question 2**: What if the non-Microsoft vendor virtualization configuration is not certified through SVVP?
 
-**Answer**: Customer Service and Support will follow the support policies that are documented in Microsoft Knowledge Base article 897615.
+**Answer 2**: Customer Service and Support will follow the support policies that are documented in Microsoft Knowledge Base article 897615.
 
 For more information, see [Support policy for Microsoft software running in non-Microsoft hardware virtualization software](https://support.microsoft.com/help/897615)
 

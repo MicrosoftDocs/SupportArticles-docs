@@ -20,7 +20,7 @@ To install the BizTalk Adapter Trace Utility on Windows Server 2008, follow thes
     > [!NOTE]
     > The `Tracelog.exe` file is not included with Windows SDK for Windows Server 2008 and the Microsoft .NET Framework 3.5. Therefore, install the Windows Vista SDK on Windows Server 2008.
 
-    For more information, see [Windows Software Development Kit (SDK) for Windows Server 2008 and .NET Framework 3.5 Release Notes](https://msdn.microsoft.com/windowsserver/bb986638.aspx).
+    For more information, see [Windows Software Development Kit (SDK) for Windows Server 2008 and .NET Framework 3.5 Release Notes](https://docs.microsoft.com/previous-versions/bb986638(v=msdn.10)).
 
 2. When the Installation Options window is displayed, expand **Developer Tools**, expand **Windows Development Tools**, and then click to select the **Win32 Development Tools** check box.
 
@@ -54,27 +54,27 @@ To enable the BizTalk Adapter Trace Utility, follow these steps:
     trace -tools "Path of the BizTalk Adapter Trace Utility"
     ```
 
-    By default on Windows Server 2003, the Trace Utilities are located in the following directory:  
-    `C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Bin`
+By default on Windows Server 2003, the Trace Utilities are located in the following directory:  
+`C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Bin`
 
-    By default on Windows Server 2008, the Trace Utilities are located in the following directory:  
-    `C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin`
+By default on Windows Server 2008, the Trace Utilities are located in the following directory:  
+`C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin`
 
-    You must enclose the path of the Trace Utilities in quotation marks.
+You must enclose the path of the Trace Utilities in quotation marks.
 
-    For example, type the following command on Windows Server 2003:
+For example, type the following command on Windows Server 2003:
 
-    ``` console
-    trace -tools "C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Bin"
-    ```
+``` console
+trace -tools "C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Bin"
+```
 
-    On Windows Server 2008, type the following command:
+On Windows Server 2008, type the following command:
 
-    ``` console
-    trace -tools "C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin"
-    ```
+``` console
+trace -tools "C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin"
+```
 
-    The tools switch indicates to the `Trace.cmd` file the location of the `Tracelog.exe` file.
+The tools switch indicates to the `Trace.cmd` file the location of the `Tracelog.exe` file.
 
 ### Run the BizTalk Adapter Trace Utility
 

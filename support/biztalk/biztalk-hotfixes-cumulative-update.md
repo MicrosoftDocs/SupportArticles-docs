@@ -64,11 +64,11 @@ If the hotfix contains an SQL script (.sql), it will execute the SQL script agai
 
 To force a full Backup of the data and log files, execute the `BizTalkMgmtDb.dbo.sp_ForceFullBackup` stored procedure. Then, execute the Backup BizTalk Server SQL Agent job.
 
-For more information about how to back up and restore the BizTalk Server databases in BizTalk Server, visit the following MSDN websites:
+For more information about how to back up and restore the BizTalk Server databases in BizTalk Server, visit the following websites:
 
-- [BizTalk Server 2010](https://msdn.microsoft.com/library/aa561125%28v=BTS.70%29.aspx)
-- [BizTalk Server 2006 R2 and BizTalk Server 2006](https://msdn.microsoft.com/library/aa561125%28v=BTS.20%29.aspx)
-- [BizTalk Server 2004](https://msdn.microsoft.com/library/ms962203.aspx)
+- [BizTalk Server 2010](https://www.microsoft.com/download/details.aspx?id=56420)
+- [BizTalk Server 2006 R2 and BizTalk Server 2006](https://www.microsoft.com/download/details.aspx?id=56495)
+- [BizTalk Server 2004](https://www.microsoft.com/download/details.aspx?id=56488)
 
 To roll back a hotfix that includes an SQL script (.sql), follow these steps:
 
