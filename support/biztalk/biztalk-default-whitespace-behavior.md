@@ -35,7 +35,7 @@ In BizTalk 2010, this is set at the host level:
 
 In BizTalk 2009 and 2006 R2, this value is set at a per-machine level:
 
-1. Open Registry Editor.
+1. Open **Registry Editor**.
 2. Locate and then click the following registry subkey on an x86-based computer:  
     `HKEY_LOCAL_MACHINE\Software\Microsoft\BizTalk Server\3.0\Administration`
 
