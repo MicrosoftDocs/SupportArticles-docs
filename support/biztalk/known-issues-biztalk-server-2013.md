@@ -14,24 +14,24 @@ _Original KB number:_ &nbsp; 2954101
 
 ## Known Issues in XSLCompiledTransform
 
-BizTalk Server 2013 uses the .NET XslCompiledTransform class for better transform performance. There are some differences in behavior between the XslCompiledTransform class and the previously used XslTransform class. The following are some known issues related to this difference and the recommended solutions:
+BizTalk Server 2013 uses the .NET `XslCompiledTransform` class for better transform performance. There are some differences in behavior between the `XslCompiledTransform` class and the previously used `XslTransform` class. The following are some known issues related to this difference and the recommended solutions:
 
-- Change in scripting functoid Boolean parameter
+- Change in scripting `functoid` Boolean parameter
 
   **Symptom**
 
-  When the input XML node contains any value that is false or the input XML node is empty, Boolean parameter in a scripting functoid is true.
+  When the input XML node contains any value that is false or the input XML node is empty, Boolean parameter in a scripting `functoid` is true.
 
 - Private functions are not supported
 
   **Symptom**
 
-  When you use private function in a functoid, the map fails and you receive the following error message:
+  When you use private function in a `functoid`, the map fails and you receive the following error message:
   
   > Method 'MyPrivateFunct' of extension object 'http://schemas.microsoft.com/BizTalk/2003/userCSharp' cannot be called because it is not public.
 
   > [!NOTE]
-  > The XslCompiledTransform class only supports calling public methods. This limitation is documented at [Migrating From the XslTransform Class](https://msdn.microsoft.com/library/66f54faw.aspx).
+  > The `XslCompiledTransform` class only supports calling public methods. This limitation is documented at [Migrating From the XslTransform Class](https://msdn.microsoft.com/library/66f54faw.aspx).
 
   **Resolution**
 
@@ -41,7 +41,7 @@ BizTalk Server 2013 uses the .NET XslCompiledTransform class for better transfor
 
   **Symptom**
 
-  When you return a null value from a functoid, the map fails and you receive the following generic error message:
+  When you return a null value from a `functoid`, the map fails and you receive the following generic error message:
   
   > ExceptionType: Microsoft.XLANGs.Core.XTransformationFailureException
   >
@@ -56,17 +56,16 @@ BizTalk Server 2013 uses the .NET XslCompiledTransform class for better transfor
 
   **Resolution**
 
-  Return String.Empty or some other alternative value to represent the null scenario. If it is needed, use a global variable to make the null value available across multiple functions.
+  Return `String.Empty` or some other alternative value to represent the null scenario. If it is needed, use a global variable to make the null value available across multiple functions.
 
-- Change in scripting functoid XPathNodeIterator parameter
+- Change in scripting functoid `XPathNodeIteraton` parameter
 
   **Symptom**
 
-  AnXPathNodeIterator parameter in a scripting functoid uses the XPathArrayIterator type. In earlier BizTalk Server versions, it used the XPathSelectionIterator type. Because of this change, the node.MoveNext() call has to be added, as in the following code, in order to avoid the following error message:
+  An `XPathNodeIterator` parameter in a scripting functoid uses the `XPathArrayIterator` type. In earlier BizTalk Server versions, it used the `XPathSelectionIterator` type. Because of this change, the node.MoveNext() call has to be added, as in the following code, in order to avoid the following error message:  
+  > Enumeration has not started. Call MoveNext.
   
   ```csharp
-  Enumeration has not started. Call MoveNext.
-
   public static bool WriteNode(XPathNodeIterator node)
   {
       node.MoveNext(); //needs to be added in BizTalk Server 2013 to avoid error
@@ -97,18 +96,17 @@ BizTalk Server 2013 uses the .NET XslCompiledTransform class for better transfor
   > Ambiguous method call. Extension object 'http://schemas.microsoft.com/BizTalk/2003/ScriptNS0' contains multiple 'MyOverloadedFunction' methods that have 1 parameter(s).
 
   > [!NOTE]
-  > The XslCompiledTransform class only differentiates between functions based on the number of arguments. This limitation is documented at [Migrating From the XslTransform Class](https://msdn.microsoft.com/library/66f54faw.aspx).
+  > The `XslCompiledTransform` class only differentiates between functions based on the number of arguments. This limitation is documented at [Migrating From the XslTransform Class](https://msdn.microsoft.com/library/66f54faw.aspx).
 
   **Resolution**
 
   Make sure all function overloads contain a different number of parameters.
 
-- Falling Back to the XslTransform Class
+- Falling Back to the `XslTransform` Class
 
-    You can configure the BizTalk Server 2013 transform engine to use the older XslTransform class. We do not recommend this approach because the environment will lose the many performance and memory usage improvements provided by the XslCompiledTransform class. Also, the .NET
-    XslTransform class is deprecated. Therefore, no new updates or fixes will be released for it.
+    You can configure the BizTalk Server 2013 transform engine to use the older `XslTransform` class. We do not recommend this approach because the environment will lose the many performance and memory usage improvements provided by the `XslCompiledTransform` class. Also, the .NET `XslTransform` class is deprecated. Therefore, no new updates or fixes will be released for it.
 
-If you can't update the map by using the solutions mentioned earlier, this change can be made by adding a DWORD UseXslTransform with value of 1at the following locations:
+If you can't update the map by using the solutions mentioned earlier, this change can be made by adding a DWORD `UseXslTransform` with value of 1 at the following locations:
 
 - For 64-bit BizTalk host instances:  
   `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\BizTalk Server\3.0\Configuration`
@@ -130,13 +128,13 @@ The followings are some known issues that are specific to SSO on BizTalk Server 
 
   Any component of BizTalk Server that references Microsoft.BizTalk.Interop.SSOClient.dll fails, and you receive the following error message:
   
-  > Could not load file or assembly 'Microsoft.BizTalk.Interop.SSOClient, Version=7.0.2300.0
+  > Could not load file or assembly 'Microsoft.BizTalk.Interop.SSOClient, Version=7.0.2300.0'
 
   **Resolution**
 
   This issue is resolved in later releases of the BizTalk Server 2013 media. Therefore, make sure that you upgrade by using the latest available media.
 
-- Can't load Microsoft.BizTalk.Interop.SSOClient.dll version 5.0.1.0
+- Can't load `Microsoft.BizTalk.Interop.SSOClient.dll version 5.0.1.0`
 
   **Symptom**
 
@@ -144,26 +142,26 @@ The followings are some known issues that are specific to SSO on BizTalk Server 
   
   > Could not load file or assembly 'Microsoft.BizTalk.Interop.SSOClient.dll, Version=5.0.1.0'
 
-  - The error is thrown by a WCF receive location or WCF send port after an in-place upgrade from BizTalk Server 2009 or BizTalk Server 2010. This occurs because the Microsoft.BizTalk.Adapter.Wcf.Runtime.dll file is not upgraded to version 3.10.229.0 correctly.
+  - The error is thrown by a WCF receive location or WCF send port after an in-place upgrade from BizTalk Server 2009 or BizTalk Server 2010. This occurs because the `Microsoft.BizTalk.Adapter.Wcf.Runtime.dll` file is not upgraded to version 3.10.229.0 correctly.
 
     **Resolution**
 
-     If the version of Microsoft.BizTalk.Adapter.Wcf.Runtime.dll is earlier than 3.10.229.0, copy the correct version of the file from the BizTalk Server 2013 installation media (located in **\<DVD-Drive>\BizTalk Server\MSI\Program Files**), put it in the BizTalk Server installation folder, and then install it into the Global Assembly Cache (GAC). You can install the .dll file into the GAC by using the gacutil.exe tool as following:
+     If the version of `Microsoft.BizTalk.Adapter.Wcf.Runtime.dll` is earlier than 3.10.229.0, copy the correct version of the file from the BizTalk Server 2013 installation media (located in `<DVD-Drive>\BizTalk Server\MSI\Program Files`), put it in the BizTalk Server installation folder, and then install it into the Global Assembly Cache (GAC). You can install the .dll file into the GAC by using the `gacutil.exe` tool as following:
 
      ```console
      gacutil.exe /if Microsoft.BizTalk.Adapter.Wcf.Runtime.dll
      ```
 
-  - The error is thrown by custom code that is previously used in BizTalk Server 2009 or BizTalk Server 2010. This is because BizTalk Server 2009 and BizTalk Server 2010 have .NET version 5.0.1.0 of the Microsoft.BizTalk.Interop.SSClient.dll file. However, BizTalk Server 2013 uses .NET version 7.0.2300.0 of the file.
+  - The error is thrown by custom code that is previously used in BizTalk Server 2009 or BizTalk Server 2010. This is because BizTalk Server 2009 and BizTalk Server 2010 have .NET version 5.0.1.0 of the `Microsoft.BizTalk.Interop.SSClient.dll` file. However, BizTalk Server 2013 uses .NET version 7.0.2300.0 of the file.
 
     **Resolution**
 
-    Update and rebuild the custom code to reference the BizTalk Server 2013 version (7.0.2300.0) of the Microsoft.BizTalk.Interop.SSClient.dll file. If rebuilding is not an option, redirect to version 7.0.2300.0 by making the following modification to the `<runtime>/<assemblyBinding>` section of the appropriate configuration file:
+    Update and rebuild the custom code to reference the BizTalk Server 2013 version (7.0.2300.0) of the `Microsoft.BizTalk.Interop.SSClient.dll` file. If rebuilding is not an option, redirect to version 7.0.2300.0 by making the following modification to the `<runtime>/<assemblyBinding>` section of the appropriate configuration file:
 
-    ```html
+    ```xml
     <dependentAssembly>
-    <assemblyIdentity name="Microsoft.BizTalk.Interop.SSOClient" publicKeyToken="31bf3856ad364e35" culture="neutral" />
-    <bindingRedirect oldVersion="5.0.1.0" newVersion="7.0.2300.0"/>
+        <assemblyIdentity name="Microsoft.BizTalk.Interop.SSOClient" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="5.0.1.0" newVersion="7.0.2300.0"/>
     </dependentAssembly>
     ```
 
@@ -177,7 +175,7 @@ The followings are some known issues that are specific to SSO on BizTalk Server 
 
     For how to obtain the latest cumulative update to resolve it, see [Service Pack and cumulative update list for BizTalk Server](https://support.microsoft.com/help/2555976).
 
-- Failed to load SSOPSServer.dll
+- Failed to load `SSOPSServer.dll`
 
   **Symptom**
 
@@ -187,7 +185,7 @@ The followings are some known issues that are specific to SSO on BizTalk Server 
 
   **Resolution**
 
-  This error is harmless and can be ignored. In order to prevent this error from continuing to occur, copy the SSOPSServer.dll file from the original installation media into the **\Program Files\Common Files\Enterprise Single Sign-On** folder on the computer. For 64-bit installations of SSO, use the SSOPSServer.dll file from **\Platforms\SSO64\Files** on the installation media. For 32-bit installations of SSO, use the file from **\Platforms\SSO\Files**.
+  This error is harmless and can be ignored. In order to prevent this error from continuing to occur, copy the `SSOPSServer.dll` file from the original installation media into the `\Program Files\Common Files\Enterprise Single Sign-On` folder on the computer. For 64-bit installations of SSO, use the `SSOPSServer.dll` file from `\Platforms\SSO64\Files` on the installation media. For 32-bit installations of SSO, use the file from `\Platforms\SSO\Files`.
 
 - BizTalk SSO Master Secret cannot be used by Host Integration Server 2013 SSO
 
@@ -203,11 +201,11 @@ The followings are some known issues that are specific to SSO on BizTalk Server 
 
 ## Other Known Issues
 
-- Upgrade to BizTalk Server 2013 doesn't deploy new Microsoft.BizTalk.GlobalPropertySchemas.dll
+- Upgrade to BizTalk Server 2013 doesn't deploy new `Microsoft.BizTalk.GlobalPropertySchemas.dll`
 
   **Symptom**
 
-  An in-place upgrade from BizTalk Server 2009 or BizTalk Server 2010 to BizTalk Server 2013 does not correctly deploy the new Microsoft.BizTalk.GlobalPropertySchemas.dll file into the BizTalkMgmtDb database. This can result in errors when any of the new global properties are accessed by BizTalk. This can occur when you use WCF.HttpHeaders, any property associated with the SB-Messaging Adapter, or any other new property. The error messages that the SB-Messaging Adapter fails together with are following:
+  An in-place upgrade from BizTalk Server 2009 or BizTalk Server 2010 to BizTalk Server 2013 does not correctly deploy the new `Microsoft.BizTalk.GlobalPropertySchemas.dll` file into the `BizTalkMgmtDb` database. This can result in errors when any of the new global properties are accessed by BizTalk. This can occur when you use `WCF.HttpHeaders`, any property associated with the `SB-Messaging Adapter`, or any other new property. The error messages that the `SB-Messaging Adapter` fails together with are following:
   
   > The adapter "SB-Messaging" raised an error message. Details "System.Runtime.InteropServices.COMException (0xC0C01620): Exception from HRESULT: 0xC0C01620
   >
@@ -246,13 +244,13 @@ The followings are some known issues that are specific to SSO on BizTalk Server 
 
   **Symptom**
 
-  ESB Toolkit 2.2 uses Unity 2.0 that requires modifications to the default esb.config file. Without these modifications, the following issues can occur:
+  ESB Toolkit 2.2 uses Unity 2.0 that requires modifications to the default `esb.config` file. Without these modifications, the following issues can occur:
 
   - ESB 2.2 configuration fails, and you receive the following error message:
   
     > Exception calling "PushAllConfiguration" with "6" argument(s): "Unrecognized element 'typeConfig'. (C:\Program Files (x86)\Microsoft BizTalk ESB Toolkit\esb.config line 151)
 
-  - When theItinerarySelectReceiveXML receive pipeline is used to call the Business Rules Engine to dynamically select an itinerary (by using the ESB BRI Resolver), the following error is thrown:
+  - When the `ItinerarySelectReceiveXML` receive pipeline is used to call the Business Rules Engine to dynamically select an itinerary (by using the ESB BRI Resolver), the following error is thrown:
   
     > Exception has been thrown by the target of an invocation.
     >
@@ -284,11 +282,11 @@ The followings are some known issues that are specific to SSO on BizTalk Server 
 
   For more information about this issue and instructions on how to modify the esb.config file to resolve it, see [ESB Toolkit BRE Itinerary Resolver Fails with Exception](https://support.microsoft.com/help/2887594) and [ESB Configuration fails with Unrecognized element 'typeConfig'](https://support.microsoft.com/help/2887942).
 
-- EDIFACT message that has UNB 3.3 segment is suspended
+- `EDIFACT` message that has UNB 3.3 segment is suspended
 
   **Symptom**
 
-  After the upgrade to BizTalk Server 2013, an EDIFACT message that contains a UNB 3.3 segment fails, and you receive the following error message. This same EDIFACT message processed without issue in BizTalk Server 2010:
+  After the upgrade to BizTalk Server 2013, an `EDIFACT` message that contains a UNB 3.3 segment fails, and you receive the following error message. This same `EDIFACT` message processed without issue in BizTalk Server 2010:
   
   > Loading property information list by namespace failed or property not found in the list. Verify that the schema is deployed properly.
 
@@ -298,6 +296,6 @@ The followings are some known issues that are specific to SSO on BizTalk Server 
 
   - In BizTalk Server Administration Console, navigate to **BizTalk Group** > **Applications** > **BizTalk EDI Applications** > **Resources**.
   - Right-click **Resources**, and then click **Add** > **BizTalk Assemblies**.
-  - In the **Add Resources** window, click **Add**, select the Microsoft.BizTalk.Edi.BaseArtifacts.dll file (the default location is **C:\Program Files (x86)\Microsoft BizTalk Server 2013**), and then click **Open**.
+  - In the **Add Resources** window, click **Add**, select the Microsoft.BizTalk.Edi.BaseArtifacts.dll file (the default location is `C:\Program Files (x86)\Microsoft BizTalk Server 2013`), and then click **Open**.
   - Select the **Overwrite all** check box.
   - Select the **Add to the global assembly cache on add resource** check box, and then click **OK**.

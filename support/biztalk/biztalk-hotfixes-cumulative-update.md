@@ -38,7 +38,7 @@ If the hotfix includes an SQL script (.sql), you must stop the BizTalk Services 
 If the hotfix doesn't include an SQL script (.sql), you must restart the BizTalk Host Instance after the hotfix installation is complete.
 
 > [!NOTE]
-> You can review the Setup.xml file to determine which files will be updated.
+> You can review the `Setup.xml` file to determine which files will be updated.
 
 ## Install in a BizTalk group
 
@@ -47,22 +47,22 @@ When multiple BizTalk servers are configured in a group, you must install the ho
 1. Stop all BizTalk host instances, custom isolated adapters, and any other services or applications (such as BizTalk Admin console, Health, and Activity Tracking) that are related to BizTalk Services. Do this on all servers in the BizTalk group. If you use the HTTP, SOAP, WSE, or WCF adapters, restart and stop the IIS services. If you don't stop the IIS services, you may still receive incoming traffic. This behavior may affect the update, and the traffic may be lost when you do the rollback.
 2. Stop the SQL Server Agent service on the SQL instance(s) that host the BizTalk databases.
 3. Leave the SSO services running.
-4. Verify that the BizTalk databases aren't in use by checking Activity Monitoring in SQL Server Management Studio or by running the **sp_who2** SQL command.
+4. Verify that the BizTalk databases aren't in use by checking **Activity Monitoring** in SQL Server Management Studio or by running the `sp_who2` SQL command.
 5. Install the hotfix on all servers in the BizTalk group. Only install the hotfix on one server at a time.
 6. Restart all the BizTalk Services, all the IIS services, and the SQL Server Agent.
 
 ## Uninstall and rollback
 
-A BizTalk hotfix may update .dll files, and it may execute SQL scripts. If the hotfix contains only .dll files, and if it doesn't include an SQL script (.sql), it can be rolled back by using the uninstall command in Add or Remove Programs.  You can review the Setup.xml file to determine which files will be updated.
+A BizTalk hotfix may update .dll files, and it may execute SQL scripts. If the hotfix contains only .dll files, and if it doesn't include an SQL script (.sql), it can be rolled back by using the uninstall command in Add or Remove Programs. You can review the `Setup.xml` file to determine which files will be updated.
 
-If the hotfix contains an SQL script (.sql), it will execute the SQL script against a BizTalk database or databases. In this case, the hotfix can't be rolled back by uninstalling. If you uninstall by using Add or Remove Programs, this won't roll back the database changes, and it may leave the BizTalk environment in an inconsistent state.
+If the hotfix contains an SQL script (.sql), it will execute the SQL script against a BizTalk database or databases. In this case, the hotfix can't be rolled back by uninstalling. If you uninstall by using **Add or Remove Programs**, this won't roll back the database changes, and it may leave the BizTalk environment in an inconsistent state.
 
 ## Back up the BizTalk Server databases
 
 > [!NOTE]
 > Before you apply a hotfix that includes an SQL (.sql) script, you must back up all the BizTalk Server databases.
 
-To force a full Backup of the data and log files, execute the **BizTalkMgmtDb.dbo.sp_ForceFullBackup** stored procedure. Then, execute the Backup BizTalk Server SQL Agent job.
+To force a full Backup of the data and log files, execute the `BizTalkMgmtDb.dbo.sp_ForceFullBackup` stored procedure. Then, execute the Backup BizTalk Server SQL Agent job.
 
 For more information about how to back up and restore the BizTalk Server databases in BizTalk Server, visit the following MSDN websites:
 
@@ -73,7 +73,7 @@ For more information about how to back up and restore the BizTalk Server databas
 To roll back a hotfix that includes an SQL script (.sql), follow these steps:
 
 1. Stop all BizTalk hosts, services, custom isolated adapters, and the SQL Server Agent. If you use the HTTP, SOAP, or WCF adapters, restart the IIS services. If you make heavy use of the isolated host, you may want to consider stopping the IIS services.
-2. Uninstall the hotfix by using Add or Remove Programs.
+2. Uninstall the hotfix by using **Add or Remove Programs**.
 3. Restore the full Backups of all the BizTalk databases.
 
     > [!NOTE]

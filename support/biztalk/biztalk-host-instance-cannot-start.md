@@ -39,11 +39,11 @@ Additional error information:
 >
 > Error source: System.Data
 >
-> Error description: The type initializer for 'System.Data.SqlClient.SqlConnection' threw an exception. For more information, see Help and Support Center at [Microsoft Support](https://support.microsoft.com/en-us).
+> Error description: The type initializer for 'System.Data.SqlClient.SqlConnection' threw an exception. For more information, see Help and Support Center at [Microsoft Support](https://support.microsoft.com).
 
 ## Cause
 
-The btsntsvc.exe.config or btsntsvc64.exe.config file had been modified with an `xlang` section.  No Configuration section handler was present for `xlang`.
+The `btsntsvc.exe.config` or `btsntsvc64.exe.config` file had been modified with an `xlang` section.  No Configuration section handler was present for `xlang`.
 
 ## Resolution
 

@@ -48,9 +48,9 @@ You get one of these error messages:
 
 > Unable to load adapter handlers for Adapter adapter.(Microsoft.BizTalk.Administration.SnapIn)
 
-Additional information
+Additional information:
 
-> Failed to create a CLSID_Biztalk Property Bag Factory COM component installed with a BizTalk server. 
+> Failed to create a CLSID_Biztalk Property Bag Factory COM component installed with a BizTalk server.
 >
 > A dynamic link library (DLL) initialization routine failed. (WinMgmt)
 
@@ -58,14 +58,14 @@ Additional information
 
 BizTalk Server Administration relies on Windows Management Instrumentation (WMI); more specifically, the BizTalk WMI Provider (BTSWMIProvider.dll).
 
-The BizTalk WMI Provider relies on the ClearAfter property within the WMI root namespace. The default ClearAfter property is 30 seconds (00000000000030.000000:000). If this value has been changed to a larger value, like 500 seconds (00000000000500.000000:000), then this error may be returned.
+The BizTalk WMI Provider relies on the ClearAfter property within the WMI root namespace. The default `ClearAfter` property is 30 seconds (00000000000030.000000:000). If this value has been changed to a larger value, like 500 seconds (00000000000500.000000:000), then this error may be returned.
 
-To set the ClearAfter property, use Windows Management Instrumentation Tester (wbemtest) on all BizTalk servers in the group using the steps below:
+To set the `ClearAfter` property, use Windows Management Instrumentation Tester (wbemtest) on all BizTalk servers in the group using the steps below:
 
 1. Go to **Start** or **Run**, and type **wbemtest**.
 2. Click the **Connect** button and change the name pace to root. Click **Connect**.
 3. Click the **Query** button and type `select * from __CacheControl`. Click **Apply**.
-4. Double-click each item and select the ClearAfter property. Confirm they have the following values:
+4. Double-click each item and select the `ClearAfter` property. Confirm they have the following values:
 
     |||
     |---|---|
@@ -140,7 +140,7 @@ To resolve this, follow the steps in the link below to modify the registry key a
         |Server|SQL Server name|
         |||
     
-        For example, if your SQL Server computer is named MySQL and listening on port 40090, then you would specify the following:
+        For example, if your SQL Server computer is named `MySQL` and listening on port 40090, then you would specify the following:
     
         |Alias Name|MySQL|
         |---|---|
@@ -152,7 +152,7 @@ To resolve this, follow the steps in the link below to modify the registry key a
     3. Click **OK**.
     
         > [!NOTE]
-        > In this scenario, a Network Monitor capture may show connections to port 1433 continually being reset. This typically occurs if SQL Server is not listening on port 1433. To confirm the SQL Server port, run `netstat -a noon` the SQL Server. Look for the sqlservr.exe Process ID (PID) in the netstat output to determine the port number.
+        > In this scenario, a Network Monitor capture may show connections to port 1433 continually being reset. This typically occurs if SQL Server is not listening on port 1433. To confirm the SQL Server port, run `netstat -a noon` the SQL Server. Look for the `sqlservr.exe` Process ID (PID) in the `netstat` output to determine the port number.
 
 3. When BizTalk and SQL Server are remote, the network layer could be responsible for some delays. Consider the following:
 
@@ -162,20 +162,18 @@ To resolve this, follow the steps in the link below to modify the registry key a
         
         **64-bit server**: %systemroot% \SysWOW64\drivers\etc
 
-        For example, if the SQL Server IP address is 1.1.1.1 and the SQL Server name is MySQL, you should add the hosts file: 1.1.1.1 MySQL
+        For example, if the SQL Server IP address is `1.1.1.1` and the SQL Server name is `MySQL`, you should add the hosts file `1.1.1.1 MySQL`.
         
         BizTalk Administration runs as a 32-bit process on a 64-bit server. As a result, the issue described below may impact the MMC:
         
         32-bit applications don't use the Domain Name System (DNS) cache on a computer that is running an x64-based version of Windows Server 2003 or of Windows XP
         
-        If a remote server is specified in a receive location or a send port that is running in a 32-bit host, the DNS query for this server could also be affected. In this scenario, you can add the remote server to the hosts file. For example, the remote server IP address is 1.1.1.1 and the remote server name is MyServer. You would add the following to the hosts file:  
-        1.1.1.1 MyServer
+        If a remote server is specified in a receive location or a send port that is running in a 32-bit host, the DNS query for this server could also be affected. In this scenario, you can add the remote server to the hosts file. For example, the remote server IP address is `1.1.1.1` and the remote server name is `MyServer`. You would add the following to the hosts file `1.1.1.1 MyServer`.
 
         BizTalk Administration runs as a 32-bit process on a 64-bit server. As a result, the following issue may impact the MMC:  
         32-bit applications don't use the Domain Name System (DNS) cache on a computer that is running an x64-based version of Windows Server 2003 or of Windows XP
 
-        If a remote server is specified in a receive location or a send port that is running in a 32-bit host, the DNS query for this server could also be affected. In this scenario, you can add the remote server to the hosts file. For example, the remote server IP address is 1.1.1.1 and the remote server name is MyServer. You would add the following to the hosts file:  
-        1.1.1.1 MyServer
+        If a remote server is specified in a receive location or a send port that is running in a 32-bit host, the DNS query for this server could also be affected. In this scenario, you can add the remote server to the hosts file. For example, the remote server IP address is `1.1.1.1` and the remote server name is `MyServer`. You would add the following to the hosts file `1.1.1.1 MyServer`.
 
     - The Speed & Duplex value on the Network Interface Card (NIC) and additional network layers (for example router) can impact performance. If the Speed & Duplex value on the SQL Server NIC is set to 100 MB Half and theSpeed & Duplex value on the BizTalk Server NIC is set to 1 GB Full, then a delay will probably occur.
 
@@ -185,7 +183,7 @@ To resolve this, follow the steps in the link below to modify the registry key a
 
     - When connecting to the SQL Server Database Engine, a network protocol must be enabled. For BizTalk, confirm the TCP/IP protocol is enable. See [Choosing a Network Protocol](https://msdn.microsoft.com/library/ms187892.aspx).
 
-4. You may get an OutOfMemory exception when working within BizTalk Administration. WMI has a __ProviderHostQuotaConfiguration class that applies to the BizTalk WMI namespace. This class consists of the following properties:
+4. You may get an `OutOfMemory` exception when working within BizTalk Administration. WMI has a `__ProviderHostQuotaConfiguration` class that applies to the BizTalk WMI namespace. This class consists of the following properties:
 
     - HandlesPerHost
     - MemoryAllHosts
@@ -199,7 +197,7 @@ To check the MemoryPerHost value, use **wbemtest** on all BizTalk servers in the
 2. Click the **Connect** button and change the Name pace to root. Click **Connect**.
 3. Click the **Enum Instances** button and enter **__ProviderHostQuotaConfiguration**. Click **OK**.
 4. Double-click **__ProviderHostQuotaConfiguration=@**.
-5. If the MemoryPerHost value is less than 512 MB (536870912), double-click **MemoryPerHost** and set the value to 536870912. Click **Save Property**, click **Save Object** and exit.
+5. If the **MemoryPerHost** value is less than 512 MB (536870912), double-click **MemoryPerHost** and set the value to 536870912. Click **Save Property**, click **Save Object** and exit.
 6. Restart the Windows Management Instrumentation service.
 
 For more information, see [ProviderHostQuotaConfiguration class](https://msdn.microsoft.com/library/aa394671%28vs.85%29.aspx).
@@ -208,7 +206,7 @@ For more information, see [ProviderHostQuotaConfiguration class](https://msdn.mi
 
 If BizTalk support assistance is needed, collect the following data while reproducing the issue:
 
-1. Capture a BizTalk trace using the -all option while reproducing the issue. 、
+1. Capture a BizTalk trace using the `-all` option while reproducing the issue. 、
 2. Configure the Private Trace registry key to enable WMI tracing in the BizTalk Administration console using the steps below:
 
     1. Open the registry and go to the following key:
@@ -217,11 +215,11 @@ If BizTalk support assistance is needed, collect the following data while reprod
 
         64-bit server: `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\BizTalk Server\3.0\Administration`
 
-    2. Create a new DWORD value named Private Trace and set it to 1.
+    2. Create a new DWORD value named **Private Trace** and set it to 1.
 
     3. Restart the Windows Management Instrumentation service.
 
-        This creates the **c:\BizTalkAdminDbgLog.txt** log file. The log file path and file name can' be changed.
+        This creates the `c:\BizTalkAdminDbgLog.txt` log file. The log file path and file name can' be changed.
 
 3. Capture a SQL Server Profiler trace with the following Events:
 

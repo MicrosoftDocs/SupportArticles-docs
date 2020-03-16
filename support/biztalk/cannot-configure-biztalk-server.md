@@ -6,7 +6,7 @@ ms.prod-support-area-path:
 ---
 # Exception of type System.EnterpriseServices.TransactionProxyException was thrown when you configure BizTalk Server
 
-This article provides information about resolving a System.EnterpriseServices.TransactionProxyException issue when you configure BizTalk Server.
+This article provides information about resolving a `System.EnterpriseServices.TransactionProxyException` issue when you configure BizTalk Server.
 
 _Original product version:_ &nbsp; BizTalk Server 2010, 2009, 2006 R2， 2006  
 _Original KB number:_ &nbsp; 2556390
@@ -34,14 +34,14 @@ To resolve this issue, configure the MSDTC service correctly both on the compute
 
    To do this in Windows Server 2003, follow these steps:
 
-      1. Click **Start**, click **Run**, type dcomcnfg, and then click **OK** to start the Component Services management console.
+      1. Click **Start**, click **Run**, type **dcomcnfg**, and then click **OK** to start the **Component Services** management console.
       2. Expand **Component Services**, and then expand **Computers**.
       3. Right-click **My Computer**, and then click **Properties**.
       4. Click the **MSDTC** tab, and then click **Security Configuration** to display the **Security Configuration** page.
   
    To do this in Windows Vista, Windows Server 2008, Windows 7, and Windows Server 2008 R2, follow these steps:
 
-      1. Click **Start**, click **Run**, type dcomcnfg, and then click **OK** to start the Component Services management console.
+      1. Click **Start**, click **Run**, type **dcomcnfg**, and then click **OK** to start the **Component Services** management console.
       2. Expand **Component Services**, and then expand **Computers**.
       3. Expand **My Computer**, expand **Distributed Transaction Coordinator**, right-click **Local DTC**, and then click **Properties**.
       4. Click the **Security** tab to display the **Security Configuration** page.
