@@ -60,7 +60,7 @@ For more information about SQL Server support in a virtualization environment or
 
 **Answer 2**: Customer Service and Support will follow the support policies that are documented in Microsoft Knowledge Base article 897615.
 
-For more information, see [Support policy for Microsoft software running in non-Microsoft hardware virtualization software](https://support.microsoft.com/help/897615)
+For more information, see [Support policy for Microsoft software running in non-Microsoft hardware virtualization software](https://support.microsoft.com/help/897615).
 
 If Customer Service and Support determine that the problem may be related to the vendor virtualization software, Customer Service and Support may require that you try to reproduce the problem outside the virtualization environment. It's important to carefully read about the configurations that are supported for SVVP.
 

@@ -156,7 +156,7 @@ To resolve this, follow the steps in the link below to modify the registry key a
 
 3. When BizTalk and SQL Server are remote, the network layer could be responsible for some delays. Consider the following:
 
-    - If there are any delays or issues with name resolution within Domain Name System (DNS), the BizTalk Administration console will be affected. As a work-around, you can add the SQL Server IP address to the hosts file on all BizTalk servers in the group. The hosts file is located in the following directory:
+    - If there are any delays or issues with name resolution within Domain Name System (DNS), the BizTalk Administration console will be affected. As a workaround, you can add the SQL Server IP address to the hosts file on all BizTalk servers in the group. The hosts file is located in the following directory:
 
         32-bit server: `%systemroot% \system32\drivers\etc`
         
@@ -164,20 +164,16 @@ To resolve this, follow the steps in the link below to modify the registry key a
 
         For example, if the SQL Server IP address is `1.1.1.1` and the SQL Server name is `MySQL`, you should add the hosts file `1.1.1.1 MySQL`.
         
-        BizTalk Administration runs as a 32-bit process on a 64-bit server. As a result, the issue described below may impact the MMC:
-        
+        BizTalk Administration runs as a 32-bit process on a 64-bit server. As a result, the issue described below may impact the MMC:  
         32-bit applications don't use the Domain Name System (DNS) cache on a computer that is running an x64-based version of Windows Server 2003 or of Windows XP
         
         If a remote server is specified in a receive location or a send port that is running in a 32-bit host, the DNS query for this server could also be affected. In this scenario, you can add the remote server to the hosts file. For example, the remote server IP address is `1.1.1.1` and the remote server name is `MyServer`. You would add the following to the hosts file `1.1.1.1 MyServer`.
 
-        BizTalk Administration runs as a 32-bit process on a 64-bit server. As a result, the following issue may impact the MMC:  
-        32-bit applications don't use the Domain Name System (DNS) cache on a computer that is running an x64-based version of Windows Server 2003 or of Windows XP
-
-        If a remote server is specified in a receive location or a send port that is running in a 32-bit host, the DNS query for this server could also be affected. In this scenario, you can add the remote server to the hosts file. For example, the remote server IP address is `1.1.1.1` and the remote server name is `MyServer`. You would add the following to the hosts file `1.1.1.1 MyServer`.
+        To reset the hosts file back to the default, see [How to reset the Hosts file back to the default](https://support.microsoft.com/help/972034).
 
     - The Speed & Duplex value on the Network Interface Card (NIC) and additional network layers (for example router) can impact performance. If the Speed & Duplex value on the SQL Server NIC is set to 100 MB Half and theSpeed & Duplex value on the BizTalk Server NIC is set to 1 GB Full, then a delay will probably occur.
 
-        Confirm theSpeed & Duplex value of all network layers involved (NIC, router, and so on) are the same. In the scenario above, configure the SQL Server NIC and the router to 1 GB Full.
+        Confirm the Speed & Duplex value of all network layers involved (NIC, router, and so on) are the same. In the scenario above, configure the SQL Server NIC and the router to 1 GB Full.
     
         To test this scenario, copy/paste a file from the BizTalk Server to a folder on the SQL Server, and vice versa. If this copy process takes a while, then something in the network layer is causing an issue.
 
@@ -191,16 +187,16 @@ To resolve this, follow the steps in the link below to modify the registry key a
     - ProcessLimitAllHosts
     - ThreadsPerHost
 
-To check the MemoryPerHost value, use **wbemtest** on all BizTalk servers in the group:
+    To check the MemoryPerHost value, use **wbemtest** on all BizTalk servers in the group:
 
-1. Go to **Start** or **Run**, and type **wbemtest**.
-2. Click the **Connect** button and change the Name pace to root. Click **Connect**.
-3. Click the **Enum Instances** button and enter **__ProviderHostQuotaConfiguration**. Click **OK**.
-4. Double-click **__ProviderHostQuotaConfiguration=@**.
-5. If the **MemoryPerHost** value is less than 512 MB (536870912), double-click **MemoryPerHost** and set the value to 536870912. Click **Save Property**, click **Save Object** and exit.
-6. Restart the Windows Management Instrumentation service.
-
-For more information, see [ProviderHostQuotaConfiguration class](https://docs.microsoft.com/windows/win32/wmisdk/--providerhostquotaconfiguration).
+    1. Go to **Start** or **Run**, and type **wbemtest**.
+    2. Click the **Connect** button and change the Name pace to root. Click **Connect**.
+    3. Click the **Enum Instances** button and enter **__ProviderHostQuotaConfiguration**. Click **OK**.
+    4. Double-click **__ProviderHostQuotaConfiguration=@**.
+    5. If the **MemoryPerHost** value is less than 512 MB (536870912), double-click **MemoryPerHost** and set the value to 536870912. Click **Save Property**, click **Save Object** and exit.
+    6. Restart the Windows Management Instrumentation service.
+    
+    For more information, see [ProviderHostQuotaConfiguration class](https://docs.microsoft.com/windows/win32/wmisdk/--providerhostquotaconfiguration).
 
 ## Troubleshooting
 
