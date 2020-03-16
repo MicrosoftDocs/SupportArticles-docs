@@ -148,7 +148,7 @@ The followings are some known issues that are specific to SSO on BizTalk Server 
 
     **Resolution**
 
-     If the version of Microsoft.BizTalk.Adapter.Wcf.Runtime.dll is earlier than 3.10.229.0, copy the correct version of the file from the BizTalk Server 2013 installation media (located in \<DVD-Drive>\BizTalk Server\MSI\Program Files), put it in the BizTalk Server installation folder, and then install it into the Global Assembly Cache (GAC). You can install the .dll file into the GAC by using the gacutil.exe tool as following:
+     If the version of Microsoft.BizTalk.Adapter.Wcf.Runtime.dll is earlier than 3.10.229.0, copy the correct version of the file from the BizTalk Server 2013 installation media (located in **\<DVD-Drive>\BizTalk Server\MSI\Program Files**), put it in the BizTalk Server installation folder, and then install it into the Global Assembly Cache (GAC). You can install the .dll file into the GAC by using the gacutil.exe tool as following:
 
      ```console
      gacutil.exe /if Microsoft.BizTalk.Adapter.Wcf.Runtime.dll
@@ -298,6 +298,6 @@ The followings are some known issues that are specific to SSO on BizTalk Server 
 
   - In BizTalk Server Administration Console, navigate to **BizTalk Group** > **Applications** > **BizTalk EDI Applications** > **Resources**.
   - Right-click **Resources**, and then click **Add** > **BizTalk Assemblies**.
-  - In the **Add Resources** window, click **Add**, select the Microsoft.BizTalk.Edi.BaseArtifacts.dll file (the default location is C:\Program Files (x86)\Microsoft BizTalk Server 2013), and then click **Open**.
+  - In the **Add Resources** window, click **Add**, select the Microsoft.BizTalk.Edi.BaseArtifacts.dll file (the default location is **C:\Program Files (x86)\Microsoft BizTalk Server 2013**), and then click **Open**.
   - Select the **Overwrite all** check box.
   - Select the **Add to the global assembly cache on add resource** check box, and then click **OK**.
