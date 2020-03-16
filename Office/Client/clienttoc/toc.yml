@@ -5,6 +5,8 @@
     items:
     - name: "\"Enter Parameter Value\" dialog box appears"
       href: ../access/enter-parameter-value-when-run-query.md
+    - name: "\"File already in use\" error"
+      href: ../access/error-opening-database.md
     - name: "\"Linked table connection failed\" when using Azure AD"
       href: ../access/linked-table-connection-failed.md
     - name: .LDB files
@@ -67,16 +69,28 @@
       href: ../access/create-dsn-less-connection-linkted-table.md
     - name: Create SQL pass-through query with ADO
       href: ../access/adox-create-sql-pass-through-query.md
+    - name: Damaged data on the Clipboard
+      href: ../access/clipboard-data-damaged.md
     - name: Database begins to bloat after you use DAO
       href: ../access/prevent-database-bloat-dao.md
+    - name: Database normalization basics
+      href: ../access/database-normalization-description.md
     - name: Database requires a newer version of Access
       href: ../access/database-requires-newer-access.md
     - name: Decimal value  is rounded up or down to integer value
       href: ../access/decimal-value-rounded-up-down-integer.md
+    - name: Define relationships between tables
+      href: ../access/define-table-relationships.md
     - name: Determine who is logged on to a database
       href: ../access/determine-who-is-logged-on-to-database.md
+    - name: Display images using custom function
+      href: ../access/display-images-using-custom-function.md
     - name: Enforce or disable startup options in a database
       href: ../access/disable-database-startup-options.md
+    - name: Error 2950 when running a macro
+      href: ../access/error-running-macro.md
+    - name: Error using special characters
+      href: ../access/error-using-special-characters.md
     - name: Error when you work in Access table linked to a list
       href: ../access/cant-update-database-or-object-error.md
     - name: Errors during importing/exporting to Excel
@@ -113,6 +127,8 @@
       href: ../access/access-linked-table-deleted.md
     - name: Memory leak when Access connects to database files
       href: ../access/access-engine-memory-leak.md
+    - name: Missing or broken reference
+      href: ../access/database-contain-missing-reference.md
     - name: Move to a specific record from Combo Box selection
       href: ../access/move-to-specific-record-from-combo-box-selection.md
     - name: Not a valid Teradata SQL token when running outer join queries
@@ -129,10 +145,16 @@
       href: ../access/error-run-query-in-access.md
     - name: Query must have at least one destination field
       href: ../access/query-must-have-at-least-one-destination-field.md
+    - name: Query to filter unique data
+      href: ../access/query-filter-unique-data.md
     - name: Register or unregister ActiveX controls
       href: ../access/register-activex-controls.md
+    - name: Reset an AutoNumber field value
+      href: ../access/reset-autonumber-value.md
     - name: Reset page number on group level in a report
       href: ../access/reset-page-number-on-a-group-level.md
+    - name: Resolve database reference issues
+      href: ../access/resolve-reference-issues.md
     - name: Runtime error 2147319779 (8002801d) library not registered
       href: ../access/library-unregistered-runtime-error.md
     - name: Scroll records with mouse wheel
@@ -149,6 +171,8 @@
       href: ../access/retrieve-items-in-multiple-selection-list-box.md
     - name: Store, calculate, and compare Date/Time data
       href: ../access/store-calculate-compare-datetime-data.md
+    - name: Unable to create an MDE, ACCDE, or ADE database
+      href: ../access/error-saving-database.md
     - name: Use SetOption to disable warning messages
       href: ../access/setoption-disable-warning-messages.md
     - name: Use SQLConfigDataSource to create a system DSN
