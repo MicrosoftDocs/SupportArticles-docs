@@ -21,7 +21,7 @@ search.appverid: MET150
 _Original KB number:_ &nbsp; 931407
 
 > [!NOTE]
-> If you are a Small Business customer, find additional troubleshooting and learning resources at the [Support for Small Business](http://smallbusiness.support.microsoft.com) site.
+> If you are a Small Business customer, find additional troubleshooting and learning resources at the [Support for Small Business](https://smallbusiness.support.microsoft.com) site.
 
 ## Symptoms
 

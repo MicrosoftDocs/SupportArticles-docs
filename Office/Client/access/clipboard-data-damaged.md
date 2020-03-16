@@ -88,4 +88,4 @@ You receive the one of these versions of the error:
 - The data on the Clipboard is damaged, so Microsoft Access can't paste it. There may be an error in the Clipboard, or there may not be enough free memory. Try the operation again.
 
 > [!NOTE]
-> This is a "FAST PUBLISH" article created directly from within the Microsoft support organization. The information contained here is provided as-is in response to emerging issues. As a result of the speed in making it available, the materials may include typographical errors and may be revised at any time without notice. See [Terms of Use](http://go.microsoft.com/fwlink/?LinkId=151500) for other considerations.
+> This is a "FAST PUBLISH" article created directly from within the Microsoft support organization. The information contained here is provided as-is in response to emerging issues. As a result of the speed in making it available, the materials may include typographical errors and may be revised at any time without notice. See [Terms of Use](https://go.microsoft.com/fwlink/?LinkId=151500) for other considerations.
