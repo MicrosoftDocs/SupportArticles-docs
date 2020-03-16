@@ -3,12 +3,16 @@ title: Error when you create a user name that contains a special character
 description: Describes an issue in which you receive an Invalid user name error message when you try to create a user name that contains special characters in Microsoft Office 365.
 author: simonxjx
 manager: dcscontentpm
+date: 3/16/2020
 localization_priority: Normal
 audience: ITPro
 ms.prod: office 365
 ms.topic: article
 ms.author: v-six
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- CI 115151
+- CSSTroubleshoot
+ms.reviewer: timball
 search.appverid: 
 - MET150
 appliesto:
@@ -74,7 +78,7 @@ However, the following exceptions apply:
 
 - A period (.) or a hyphen (-) is permitted anywhere in the user name, except at the beginning or end of the name.   
 - An underscore (_) is permitted anywhere in the user name. This includes at the beginning or end of the name.
-- When creating group, the number sign (#) **can** be used as part of the group's name. However, the email address you create for a distribution group or shared mailbox **cannot** use the # sign.  
+- When creating a group, the number sign (#) **can** be used as part of the group's name. However, the email address you create for a distribution group or shared mailbox **cannot** use the # sign.  
 
 ## Solution
 
