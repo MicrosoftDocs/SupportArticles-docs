@@ -158,9 +158,9 @@ To resolve this, follow the steps in the link below to modify the registry key a
 
     - If there are any delays or issues with name resolution within Domain Name System (DNS), the BizTalk Administration console will be affected. As a work-around, you can add the SQL Server IP address to the hosts file on all BizTalk servers in the group. The hosts file is located in the following directory:
 
-        **32-bit server**: %systemroot% \system32\drivers\etc
+        32-bit server: `%systemroot% \system32\drivers\etc`
         
-        **64-bit server**: %systemroot% \SysWOW64\drivers\etc
+        64-bit server: `%systemroot% \SysWOW64\drivers\etc`
 
         For example, if the SQL Server IP address is `1.1.1.1` and the SQL Server name is `MySQL`, you should add the hosts file `1.1.1.1 MySQL`.
         
