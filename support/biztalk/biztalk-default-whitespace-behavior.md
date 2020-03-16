@@ -1,6 +1,6 @@
 ---
 title: Change default whitespace behavior in BizTalk
-description: BizTalk 2006 R2 SP1 CU4, 2009 CU3, and 2010 CU1 all changed the default whitespace behavior in BizTalk due to the inclusion of hotfix 2492255.  This article notifies users and provides instructions on how to revert back to the previous behavior if needed.
+description: BizTalk 2006 R2 SP1 CU4, 2009 CU3, and 2010 CU1 all changed the default whitespace behavior in BizTalk due to the inclusion of hotfix 2492255. This article notifies users and provides instructions on how to revert back to the previous behavior if needed.
 ms.date: 03/04/2020
 ms.prod-support-area-path:
 ---
