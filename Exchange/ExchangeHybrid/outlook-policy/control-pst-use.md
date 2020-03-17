@@ -55,7 +55,7 @@ To prevent users from adding new data or content to an existing .pst file, add t
 > |Value|Description|
 > |-|-|
 > |0|User can add new items to an existing .pst file. This is the default value.|
-> |1|Use cannot add new content or data to an existing .pst file|
+> |1|Use cannot add new content or data to an existing .pst file.|
 
 ### Prevent users from adding new .pst files
 
