@@ -1,5 +1,5 @@
 ---
-title: "A response was returned that did not come from the Workflow Manager" error in SharePoint Server 2016
+title: Unable to configure and register a workflow manager
 ms.author: v-todmc
 author: todmccoy
 manager: dcscontentpm
