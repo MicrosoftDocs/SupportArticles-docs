@@ -51,6 +51,7 @@ To prevent users from adding new data or content to an existing .pst file, add t
 
 > [!NOTE]
 > The **PSTDisableGrow** registry entry can be set to the following values:
+>
 > |Value|Description|
 > |-|-|
 > |0|User can add new items to an existing .pst file. This is the default value.|
@@ -78,6 +79,7 @@ To prevent users from connecting a .pst file to Outlook, add the **DisablePST** 
 
 > [!NOTE]
 > The **DisablePST** registry entry can be set to the following values:
+>
 > |Value|Description|
 > |-|-|
 > |0|Users can add .pst files. This is the default value.|
