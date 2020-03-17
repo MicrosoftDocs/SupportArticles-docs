@@ -109,16 +109,13 @@ Each port type – audio, video, and application sharing – is assigned two sep
 **To make changes in all Pool Servers:**<br/>
 
 ```
-Get-CsService -ConferencingServer | ForEach-Object {Set-CsConferenceServer Identity $_.identity -AppSharingPortStart "40803" -AppSharingPortCount "4348" -
-AudioPortStart "49152" -AudioPortCount "4348" -VideoPortStart "57501" -
-VideoPortCount "8034"}
+Get-CsService -ConferencingServer | ForEach-Object {Set-CsConferenceServer -Identity $_.identity -AppSharingPortStart "40803" -AppSharingPortCount "4348" -AudioPortStart "49152" -AudioPortCount "4348" -VideoPortStart "57501" -VideoPortCount "8034"}
 ``` 
  
 **To modify instant messaging SIP port in all Pool Servers (optional):**<br/>
 
 ```
-Get-CsService -ConferencingServer | ForEach-Object {Set-CsConferenceServer -
-Identity $_.Identity -ImSipPort 5062}
+Get-CsService -ConferencingServer | ForEach-Object {Set-CsConferenceServer -Identity $_.Identity -ImSipPort 5062}
 ``` 
  
 You can make changes to mediation and application server audio port ranges. 
@@ -143,9 +140,7 @@ Get-CsConferencingConfiguration | fl Client*
 **To make changes in client port ranges:**
 
 ```
-Set-CsConferencingConfiguration -ClientMediaPortRangeEnabled $True -ClientAudioPort "50020" -ClientAudioPortRange "40" -ClientVideoPort "58000" -
-ClientVideoPortRange "20" -ClientAppSharingPort "42000" -ClientAppSharingPortRange "20" -ClientFileTransferPort "40783" -
-ClientFileTransferPortRange "20" 
+Set-CsConferencingConfiguration -ClientMediaPortRangeEnabled $True -ClientAudioPort "50020" -ClientAudioPortRange "40" -ClientVideoPort "58000" -ClientVideoPortRange "20" -ClientAppSharingPort "42000" -ClientAppSharingPortRange "20" -ClientFileTransferPort "40783" -ClientFileTransferPortRange "20" 
 ```
 
 3. **Configure separate Group Policy Objects for client and server:**<br/>
