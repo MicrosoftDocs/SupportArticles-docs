@@ -27,4 +27,6 @@ description: "How to add Teams to antivirus or DLP to allow Teams to start corre
 Antivirus and data loss prevention (DLP) applications can interfere with the Microsoft Teams app, and it can prevent the application from starting correctly. ITPRO and Security customers can include or approve the Teams app when they use antivirus or DLP in PC clients. This action specifically helps enhance performance and mitigate the effect on security. 
 
 ## More information
-To prevent any interference of Teams, add **Teams.exe** and **update.exe** to the “approved” (or “safe” or “whitelisted”) programs list in your antivirus or DLP applications. (The method to accomplish this varies. For specific instructions, contact the application manufacturer.)
+To prevent any interference of Teams, add **Teams.exe** and **update.exe** to the "approved" (or "safe" or "whitelisted") programs list in your antivirus or DLP applications. (The method to accomplish this varies. For specific instructions, contact the application manufacturer.)
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

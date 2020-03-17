@@ -45,3 +45,7 @@ To resolve this issue, assign the Manage Auditing And Security Log permission to
 
    > [!NOTE]
    > If you assign the Manage Auditing And Security Log permission by using a Group Policy Object (GPO), add the crawl account to the GPO.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

@@ -55,3 +55,7 @@ For more information about global objects, visit the following Websites:
 
 - [Create global objects](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc739176(v=ws.10)?redirectedfrom=MSDN)
 - [User Rights](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-xp/bb457125(v=technet.10)?redirectedfrom=MSDN)
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

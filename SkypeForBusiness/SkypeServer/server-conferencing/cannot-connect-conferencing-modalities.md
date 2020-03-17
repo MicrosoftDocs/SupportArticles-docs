@@ -249,3 +249,5 @@ To learn more about the MS16-065 Security Update, see the following article in t
 [3155464](https://support.microsoft.com/help/3155464) MS16-065: Description of the TLS/SSL protocol information disclosure vulnerability (CVE-2016-0149): May 10, 2016
 
 For a complete list of related .NET Framework updates, see the [Microsoft Security Bulletin MS16-065 – Important](https://technet.microsoft.com/library/security/ms16-065) topic on the Microsoft TechNet website.
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

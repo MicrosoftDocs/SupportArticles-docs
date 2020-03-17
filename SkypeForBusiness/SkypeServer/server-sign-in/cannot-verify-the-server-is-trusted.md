@@ -38,12 +38,12 @@ For example, the following trust model dialog box is displayed:
 
 ### Scenario 2
 
-The **Lync – Sign In** dialog box that's shown in the screen shot in Scenario 1 displays the fully qualified domain name (FQDN) of the organization’s Exchange Client Access server (CAS) interface. This interface is used by the Lync client to access user mailbox information through Exchange Web Services (EWS). This behavior occurs if the Lync user’s SIP URI contains a domain suffix that does not match the domain suffix of the Exchange CAS interface. If the user chooses not to trust the connection to the Exchange CAS interface, the Lync client will not have access to the Exchange mailbox services that are provisioned by EWS.
+The **Lync – Sign In** dialog box that's shown in the screen shot in Scenario 1 displays the fully qualified domain name (FQDN) of the organization's Exchange Client Access server (CAS) interface. This interface is used by the Lync client to access user mailbox information through Exchange Web Services (EWS). This behavior occurs if the Lync user's SIP URI contains a domain suffix that does not match the domain suffix of the Exchange CAS interface. If the user chooses not to trust the connection to the Exchange CAS interface, the Lync client will not have access to the Exchange mailbox services that are provisioned by EWS.
 
 To verify this behavior, follow these steps:
 
-1. Make sure that the Lync client is signed in to on the Windows client’s desktop.    
-2. Hold down the CTRL key and right-click the Lync icon in the Windows client’s notification area.    
+1. Make sure that the Lync client is signed in to on the Windows client's desktop.    
+2. Hold down the CTRL key and right-click the Lync icon in the Windows client's notification area.    
 3. In the shortcut menu, click **Configuration Information**. 
 4. Locate the "EWS Information" line.    
 5. If this line contains "EWS not fully initialized," you are experiencing the Scenario 2 behavior.    
@@ -107,3 +107,5 @@ The Lync client makes https requests to the Exchange CAS interface as part of it
 - https://autodiscover.\<smtpdomain>/autodiscover/autodiscover.xml    
  
 If the FQDN of the SMTP domain does not match the FQDN of the SIP domain that the Lync client is signed in to, the Scenario 2 issue occurs.
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

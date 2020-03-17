@@ -72,3 +72,5 @@ These settings can also be confirmed by using the Snooper tool to analyze the cl
 
 - EnableExchangeDelegateSyncUp   
 - EnableDelegation   
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
