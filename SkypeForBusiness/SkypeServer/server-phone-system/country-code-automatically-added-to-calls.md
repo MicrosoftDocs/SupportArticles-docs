@@ -45,3 +45,5 @@ For more information, see the following TechNet resources:
 [Plan for outbound voice routing in Skype for Business Server 2015](https://technet.microsoft.com/library/gg413082.aspx)
 
 [Set-CsTrunkConfiguration](https://technet.microsoft.com/library/gg398238.aspx)
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

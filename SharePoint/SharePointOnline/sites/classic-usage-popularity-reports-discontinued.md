@@ -44,3 +44,7 @@ Usage data on the modern **Site Usage** page may not exactly match the classic p
 ## Have questions?
 
 Please submit your feedback or questions to Message Center post 195889 (MC195889), in the Message Center.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

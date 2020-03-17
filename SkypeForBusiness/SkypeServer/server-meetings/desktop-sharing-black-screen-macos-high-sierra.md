@@ -27,7 +27,7 @@ Consider the following scenario.
  
 In this scenario, you see only a black screen instead of the shared desktop. 
 
-This problem occurs when the meeting is hosted in Skype for Business Server 2015 or Lync Server 2013. This problem doesn’t occur if the meeting is hosted in Skype for Business Online. 
+This problem occurs when the meeting is hosted in Skype for Business Server 2015 or Lync Server 2013. This problem doesn't occur if the meeting is hosted in Skype for Business Online. 
 
 ## Workaround
 
@@ -47,3 +47,7 @@ There is no workaround yet for this problem for Lync Web App.
 ## Status
 
 Microsoft is working closely with Apple to resolve this problem.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

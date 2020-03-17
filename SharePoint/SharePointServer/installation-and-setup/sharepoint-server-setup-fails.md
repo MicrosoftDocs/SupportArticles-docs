@@ -42,3 +42,7 @@ To fix this issue, use one of the following methods.
 ### Method 2
 1. Download and install Microsoft Visual C++ 2017 Redistributable (x64) version 14.13.26020.0 (or a later version) from [https://go.microsoft.com/fwlink/?LinkId=848299](https://go.microsoft.com/fwlink/?LinkId=848299).
 2. Run SharePoint Server 2019 Setup.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

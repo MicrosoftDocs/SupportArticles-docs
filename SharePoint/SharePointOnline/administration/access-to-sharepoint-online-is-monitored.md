@@ -51,3 +51,5 @@ To disable monitoring, you have to browse to the Microsoft Cloud App Security pa
 ## More information
 
 For more information, see [Session policies](https://docs.microsoft.com/cloud-app-security/session-policy-aad).
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

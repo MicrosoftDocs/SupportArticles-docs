@@ -91,3 +91,5 @@ For more detailed information on Crypto API functionality with Mandatory profile
 
 [RSACryptoServiceProvider fails when used with mandatory profiles](
 https://blogs.msdn.com/b/alejacma/archive/2007/10/23/rsacryptoserviceprovider-fails-when-used-with-mandatory-profiles.aspx)
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

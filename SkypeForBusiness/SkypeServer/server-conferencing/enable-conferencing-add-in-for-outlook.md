@@ -31,7 +31,7 @@ To have us enable or disable the Conferencing Add-in for Outlook automatically, 
 To fix this problem automatically, click the **Download** button. In the **File Download** dialog box, click **Run** or **Open**, and then follow the steps in the easy fix wizard.
 
 - This wizard may be in English only. However, the automatic fix also works for other language versions of Windows.   
-- If you’re not on the computer that has the problem, save the easy fix solution to a flash drive or a CD, and then run it on the computer that has the problem.   
+- If you're not on the computer that has the problem, save the easy fix solution to a flash drive or a CD, and then run it on the computer that has the problem.   
 
 [Enable the Conferencing Add-in for Outlook](https://download.microsoft.com/download/C/7/7/C7728197-260C-4D35-8AC6-B655BBAFE33F/MicrosoftEasyFix50760.msi)
 
@@ -96,3 +96,7 @@ The registry settings for COM Add-ins can be applied at the level of the compute
 #### Did this fix the problem?
 
 Check whether the problem is fixed. If the problem is fixed, you are finished with this section. If the problem is not fixed, you can [contact support](https://support.microsoft.com/contactus).
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
