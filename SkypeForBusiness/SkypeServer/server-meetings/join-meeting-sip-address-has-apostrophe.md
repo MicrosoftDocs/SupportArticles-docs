@@ -30,3 +30,5 @@ If a user (user A) uses a SIP address that contains an apostrophe (') or a dash 
 This issue has been addressed as part of the Lync Server 2010 Web Conferencing Server cumulative update for June 2012.
 
 [2708616](https://support.microsoft.com/help/2708616) Description of the cumulative update for Lync Server 2010, Web Conferencing Server: June 2012
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

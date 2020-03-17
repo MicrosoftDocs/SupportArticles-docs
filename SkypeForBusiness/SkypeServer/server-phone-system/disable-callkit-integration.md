@@ -46,3 +46,7 @@ Set-CsMobilityPolicy -Identity site:Redmond -AllowDeviceContactsSync $False
 ### Disable CallKit integration for a single user
 
 A user can disable CallKit integration on their device by tapping their avatar, selecting **Settings**, and then toggling **Mobile Integration** to off (default is on). This cannot be done if CallKit is disabled for the user's tenant.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

@@ -49,3 +49,7 @@ The following methods help you determine the installed version of Skype for Bus
 See the following Microsoft website to learn how to create a PowerShell script to check the version number of Skype for Business:
 
 [https://gallery.technet.microsoft.com/How-to-check-the-version-bbf20466](https://gallery.technet.microsoft.com/how-to-check-the-version-bbf20466)
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

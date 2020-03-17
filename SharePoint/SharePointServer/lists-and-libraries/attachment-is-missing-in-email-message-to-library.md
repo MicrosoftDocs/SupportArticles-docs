@@ -52,3 +52,7 @@ To resolve this issue, you must use Active Directory Service Interfaces (ADSI) t
 ## Workaround  
 
 In the Exchange Management Console, you can add a new Message Format under the Global Settings, set the domain to the Fully Qualified Domain Name of the SharePoint server, and set it to never use Exchange Rich-Text Format.   
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

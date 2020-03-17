@@ -42,3 +42,7 @@ To work around this issue on your Windows client computer, use the workarounds t
 ## Status
 
 Information about this issue will be released soon for mobile clients.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

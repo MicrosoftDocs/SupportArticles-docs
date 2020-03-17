@@ -47,3 +47,7 @@ To resolve this problem, enable TLS 1.2 support on Windows 7. To do this, follow
 > To resolve the problem, you must also make sure that the Skype for Business installation meets the minimum version requirements, as specified in the following Skype for Business Blog article: 
 
 [Preparing for TLS 1.0/1.1 Deprecation - O365 Skype for Business](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Preparing-for-TLS-1-0-1-1-Deprecation-O365-Skype-for-Business/ba-p/222247)
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

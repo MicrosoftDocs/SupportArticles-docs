@@ -52,3 +52,7 @@ $firstmp.Update()
 ```  
 
 This will republish the Index Schema without any changes.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

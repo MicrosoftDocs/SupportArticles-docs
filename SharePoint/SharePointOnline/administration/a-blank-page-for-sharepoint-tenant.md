@@ -55,3 +55,7 @@ To resolve the issue, unlock the App Catalog site collection. To do this, follow
    ```powershell
    Set-SPOSite -Identity <SiteCollectionURL> -LockState Unlock
    ```
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

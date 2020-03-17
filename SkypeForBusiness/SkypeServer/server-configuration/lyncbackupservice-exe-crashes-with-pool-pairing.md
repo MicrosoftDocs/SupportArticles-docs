@@ -53,3 +53,5 @@ To fix this issue, run the Skype for Business Server Cumulative Update installer
 
 ## More information
 [Front End pool disaster recovery in Skype for Business Server](https://docs.microsoft.com/skypeforbusiness/plan-your-deployment/high-availability-and-disaster-recovery/disaster-recovery)
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

@@ -33,3 +33,7 @@ There are several PDF IFilter tools available, some free and some commercial. Th
 If you're experiencing PDF parsing issues when you use the SharePoint 2013 built-in PDF parser, we recommend that you try to use a PDF IFilter instead.  
 
 Third-party information disclaimer The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

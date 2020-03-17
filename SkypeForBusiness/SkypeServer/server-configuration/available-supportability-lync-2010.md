@@ -62,3 +62,5 @@ Lync Server 2010 server roles are compatible with Windows Server 2012. For this 
     For more information about the Lync 2010 Attendee - User level installation: October 2012 cumulative update, click the following article number to view the article in the Microsoft Knowledge Base:
 
     [2752157](https://support.microsoft.com/help/2752157) Description of the cumulative update for the Lync 2010 Attendee - User level installation: October 2012   
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

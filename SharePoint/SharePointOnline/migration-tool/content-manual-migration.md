@@ -113,7 +113,7 @@ The OneDrive for Business sync client is an additional option that provides the 
 
 ## Known limitations
 
-SharePoint list content must be exported to Excel or to an Access database. Simple lists can be exported to Excel. However, if the content of a single cell exceeds Excel’s maximum cell size limit of 32,767 characters, the information that exceeds that maximum is lost. If your lists contain large cells, you should export to Access.
+SharePoint list content must be exported to Excel or to an Access database. Simple lists can be exported to Excel. However, if the content of a single cell exceeds Excel's maximum cell size limit of 32,767 characters, the information that exceeds that maximum is lost. If your lists contain large cells, you should export to Access.
 
 SharePoint lists are used to host complex data like wikis and blogs. These complex data forms consist of several tables. For example, blog tables are as follows: Categories, Posts, Comments, Links, and Other Blogs. For the best results, export wikis and blogs to Access. When wikis and blogs are exported to Access, each of these tables is exported correctly. However, all properties, permissions, and relationships between tables and contents are lost.
 
@@ -124,5 +124,7 @@ When you export list data to Access or Excel, list data will be saved. However, 
 For more information about how to use and troubleshoot "Open with Explorer" issues, see [How to use the "Open with Explorer" command to troubleshoot issues in SharePoint Online](https://support.office.com/article/how-to-use-the-open-with-explorer-command-to-troubleshoot-issues-in-sharepoint-online-87155331-0c92-4224-a4c1-da5c21c4ade4).
 
 For more information about how to synchronize a SharePoint 2010 list by using Access 2010, see [Synchronize a SharePoint 2010 list with Access 2010](https://support.office.com/article/synchronize-a-sharepoint-2010-list-with-access-2010-975bfb97-c799-4fce-b7cc-3db3b397f116).
+
+## More information
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com).

@@ -40,3 +40,5 @@ This creates a Groove workspace by using the 2007 template and then adds a Share
 Because the SharePoint Files tool is part of a Groove workspace, content in the tool can be shared with workspace members who do not have access to the SharePoint server. This is sometimes useful for sharing information without providing access to a restricted network. However, it can create issues in security and conflict resolution. 
 
 The preferred means of synchronizing with a SharePoint server is by using a SharePoint workspace. A SharePoint workspace can synchronize many kinds of lists and libraries with a SharePoint 2010 site. You cannot invite other members to a SharePoint workspace, and it does not replicate to other computers on which you use SharePoint Workspace with the same account. Instead, the SharePoint 2010 Server remains the nexus for content.
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

@@ -33,3 +33,7 @@ In SharePoint 2016 and prior versions of the product, the modified date on the s
 
 ## Resolution
 This is expected behavior for SharePoint 2016 and prior versions. This behavior has been modified in SharePoint 2019 and SharePoint Online by introducing a new attribute (<code>LastItemUserModifiedDate</code>) to track changes that are the result of the user events. Items on the site contents page now reflect the value of this property.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
