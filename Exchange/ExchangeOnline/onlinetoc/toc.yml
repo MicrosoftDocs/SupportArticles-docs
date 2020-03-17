@@ -139,10 +139,12 @@
       href: ../owa-time-zones/read-receipt-incorrect-timezone.md
   - name: Public Folders
     items:
-    - name: The mailbox is not found in the local forest
-      href: ../public-folders/mailbox-not-found-local-forest-public-folder.md
+    - name: Can’t add reviewer permission to calendars
+      href: ../public-folders/add-reviewer-permission-public-folder-calendar-powershell.md
     - name: Can’t apply permissions to subfolders
       href: ../public-folders/can’t-apply-permissions-public-folder-subfolders.md
+    - name: The mailbox is not found in the local forest
+      href: ../public-folders/mailbox-not-found-local-forest-public-folder.md
   - name: Send Emails
     items:
     - name: Changes in message store
