@@ -131,6 +131,8 @@
       href: ../access/cant-update-database-or-object-error.md
     - name: Errors during importing/exporting to Excel
       href: ../access/import-export-access-to-excel.md
+    - name: Exclusive lock required for saving changes
+      href: ../access/saving-changes-require-exclusive-lock.md
     - name: Extra Access report page prints
       href: ../access/extra-access-report-page-prints.md
     - name: Features incompatible with current Access version
@@ -139,6 +141,8 @@
       href: ../access/error-double-clicking-database.md
     - name: Find a record by using ADO and Jet OLE DB provider
       href: ../access/find-record-by-ado-and-jet-ole-db-provider.md
+    - name: Floating-point calculations
+      href: ../access/floating-calculations-info.md
     - name: Force a new line in a MsgBox message
       href: ../access/force-new-line-msgbox-message.md
     - name: Functions return a wrong week number
@@ -171,6 +175,8 @@
       href: ../access/access-linked-table-return-deleted.md
     - name: Linked table to SQL Server database returns
       href: ../access/access-linked-table-deleted.md
+    - name: List Access reserved words
+      href: ../access/reserved-words.md
     - name: Memory leak when Access connects to database files
       href: ../access/access-engine-memory-leak.md
     - name: Missing or broken reference
@@ -241,8 +247,12 @@
       href: ../access/error-saving-database.md
     - name: Unable to save multi-table view record
       href: ../access/error-saving-edited-record.md
+    - name: Use Attributes property of a TableDef object
+      href: ../access/tabledef-attributes-usage.md
     - name: Use Common Dialog API
       href: ../access/use-common-dialog-api.md
+    - name: Use query by form (QBF) technique
+      href: ../access/use-query-form-qbf-technique.md
     - name: Use SetOption to disable warning messages
       href: ../access/setoption-disable-warning-messages.md
     - name: Use SQLConfigDataSource to create a system DSN
