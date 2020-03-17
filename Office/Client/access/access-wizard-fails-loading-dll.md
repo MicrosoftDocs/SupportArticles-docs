@@ -76,4 +76,4 @@ Method 2: Install the latest version of MDAC
 
 For additional information about how to download the latest version of MDAC, visit the following Microsoft Developer Network (MSDN) Web site:
 
-[http://msdn.microsoft.com/en-us/data/aa937729.aspx](http://msdn.microsoft.com/data/aa937729.aspx)
+[MDAC](https://msdn.microsoft.com/data/aa937729.aspx)
