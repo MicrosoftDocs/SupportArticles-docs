@@ -34,7 +34,7 @@ When you use the Microsoft Office 365 Import service, you may want to control wh
 To prevent users from adding new data or content to an existing .pst file, add the **PSTDisableGrow** registry entry, and then set the value to 1. To do this, follow these steps:
 
 1. Open Registry Editor.
-1. Locate and click the following registry subkey. You have to create the key if it does not exist.
+1. Locate and click the following registry subkey accordingly. You have to create the key if it does not exist.
 
    |Type|Registry path|
    |-|-|
@@ -61,7 +61,7 @@ The **PSTDisableGrow** registry entry can be set to the following values:
 To prevent users from connecting a .pst file to Outlook, add the **DisablePST** registry entry, and then set the value to 1. To do this, follow these steps:
 
 1. Open Registry Editor.
-1. Locate and click the following registry subkey. You have to create the key if it does not exist.
+1. Locate and click the following registry subkey accordingly. You have to create the key if it does not exist.
 
    |Type|Registry path|
    |-|-|
