@@ -61,7 +61,7 @@ Use EAC to add the reviewer permission the calendar. To do this, follow these st
 
 ### Method 3
 
-Grant the "Folder Visible" access right. Actually, the **Reviewer** role will add the **Folder Visible** access right to the public folder. To do the same, run the following command:
+Grant the **Folder Visible** access right. Actually, the **Reviewer** role will add the **Folder Visible** access right to the public folder. To do the same, run the following command:
 
 ```powershell
 Add-PublicFolderClientPermission -Identity "\publiccalendartest" -User "User" -AccessRights ReadItems,FolderVisible
