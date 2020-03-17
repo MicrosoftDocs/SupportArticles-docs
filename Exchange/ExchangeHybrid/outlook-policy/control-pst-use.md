@@ -80,7 +80,7 @@ To prevent users from connecting a .pst file to Outlook, add the **DisablePST** 
 > [!NOTE]
 > The **DisablePST** registry entry can be set to the following values:
 >
-> |Value|Description|
+> | Value | Description |
 > |-|-|
 > |0|Users can add .pst files. This is the default value.|
 > |1|Users cannot add .pst files. However, in scenarios where a .pst file was connected to Outlook before this registry value was added, the existing .pst file will still be connected. No new.pst files can be added.|
