@@ -49,13 +49,12 @@ To prevent users from adding new data or content to an existing .pst file, add t
 1. Right-click the **PSTDisableGrow** registry entry that you created, and then click **Modify**.
 1. In the **Value data** box, type **1**, and then click **OK**.
 
-> [!NOTE]
-> The **PSTDisableGrow** registry entry can be set to the following values:
->
-> |Value|Description|
-> |-|-|
-> |0|User can add new items to an existing .pst file. This is the default value.|
-> |1|Use cannot add new content or data to an existing .pst file.|
+The **PSTDisableGrow** registry entry can be set to the following values:
+
+|Value|Description|
+|-|-|
+|0|User can add new items to an existing .pst file. This is the default value.|
+|1|Use cannot add new content or data to an existing .pst file.|
 
 ### Prevent users from adding new .pst files
 
@@ -77,14 +76,13 @@ To prevent users from connecting a .pst file to Outlook, add the **DisablePST** 
 1. Right-click the **DisablePST** registry entry that you created, and then click **Modify**.
 1. In the **Value data** box, type **1**, and then click **OK**.
 
-> [!NOTE]
-> The **DisablePST** registry entry can be set to the following values:
->
-> | Value | Description |
-> |-|-|
-> |0|Users can add .pst files. This is the default value.|
-> |1|Users cannot add .pst files. However, in scenarios where a .pst file was connected to Outlook before this registry value was added, the existing .pst file will still be connected. No new.pst files can be added.|
-> |2|Users can only add exclusive sharing .pst files, such as SharePoint .pst files.|
+The **DisablePST** registry entry can be set to the following values:
+
+|Value|Description|
+|-|-|
+|0|Users can add .pst files. This is the default value.|
+|1|Users cannot add .pst files. However, in scenarios where a .pst file was connected to Outlook before this registry value was added, the existing .pst file will still be connected. No new.pst files can be added.|
+|2|Users can only add exclusive sharing .pst files, such as SharePoint .pst files.|
 
 ## More information
 
