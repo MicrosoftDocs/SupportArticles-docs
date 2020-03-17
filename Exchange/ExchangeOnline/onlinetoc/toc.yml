@@ -139,7 +139,7 @@
       href: ../owa-time-zones/read-receipt-incorrect-timezone.md
   - name: Public Folders
     items:
-    - name: Can’t add reviewer permission to public folder calendar
+    - name: Can’t add reviewer permission to calendar
       href: ../public-folders/add-reviewer-permission-public-folder-calendar-powershell.md
     - name: Can’t apply permissions to subfolders
       href: ../public-folders/can’t-apply-permissions-public-folder-subfolders.md
