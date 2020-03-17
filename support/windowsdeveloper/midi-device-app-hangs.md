@@ -56,9 +56,9 @@ To fix this issue, use the new Windows Runtime (WinRT) API functions to replac
 
 ## Status
 
-Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the previous **Original product version** line.
+Microsoft has confirmed that this is a problem in Windows 10.
 
-## Reference
+## References
 
 - [Calling Windows 10 APIs From a desktop application](https://blogs.windows.com/buildingapps/2017/01/25/calling-windows-10-apis-desktop-application/#7EtM8fwQgUA9Q1fd.97)
 

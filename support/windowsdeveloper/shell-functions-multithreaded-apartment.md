@@ -14,22 +14,22 @@ _Original KB number:_ &nbsp; 287087
 
 ## Cause
 
-A call to **CoInitializeEx** (COINIT_MULTITHREADED) allows calls to objects created on the calling thread to be run on any thread. When accessing objects that use the apartment threading model from a multithreaded apartment, COM will synchronize access to the object. In order for this synchronization to occur, COM must marshal calls to the object. Because the shell currently doesn't provide the necessary information, either through a type library or proxy/stub code, for its objects to be marshaled, attempts to access shell objects from a multithreaded apartment fail.
+A call to `CoInitializeEx (COINIT_MULTITHREADED)` allows calls to objects created on the calling thread to be run on any thread. When accessing objects that use the apartment threading model from a multithreaded apartment, COM will synchronize access to the object. In order for this synchronization to occur, COM must marshal calls to the object. Because the shell currently doesn't provide the necessary information, either through a type library or proxy/stub code, for its objects to be marshaled, attempts to access shell objects from a multithreaded apartment fail.
 
 ## Calls that can affect shell functions
 
-The following are examples of how calls to **CoInitializeEx** (COINIT_MULTITHREADED) can affect functions that rely on shell objects:
+The following are examples of how calls to `CoInitializeEx (COINIT_MULTITHREADED)` can affect functions that rely on shell objects:
 
 - GetOpenFileName/GetSaveFileName
 
-    Users can navigate to namespace extension folders such as **My Documents** through the Open and Save As dialog boxes. However, these folders can't be browsed to because the browser can't create the required interfaces, such as IShellFolder.
+    Users can navigate to namespace extension folders such as **My Documents** through the **Open and Save As** dialog boxes. However, these folders can't be browsed to because the browser can't create the required interfaces, such as `IShellFolder`.
 
 - ShellExecute/ShellExecuteEx
 
-    ShellExecute hooks can be written to extend the functionality of ShellExecute/ShellExecuteEx by implementing the IShellExecuteHook interface. When ShellExecute/ShellExecuteEx is called, registered ShellExecute hooks can't be loaded.
+    `ShellExecute` hooks can be written to extend the functionality of `ShellExecute` or `ShellExecuteEx` by implementing the `IShellExecuteHook` interface. When `ShellExecute` or `ShellExecuteEx` is called, registered `ShellExecute` hooks can't be loaded.
 
-In both of these examples, the component that is attempting to obtain an interface pointer to a shell object with **CoCreateInstance**, IUnknown::QueryInterface, and so forth, will typically fail with error E_NOINTERFACE when called from multithreaded apartments. The reason, as noted above, is that there's no type information or proxy/stub code for the objects being requested.
+In both of these examples, the component that is attempting to obtain an interface pointer to a shell object with `CoCreateInstance`, `IUnknown::QueryInterface`, and so forth, will typically fail with error `E_NOINTERFACE` when called from multithreaded apartments. The reason, as noted above, is that there's no type information or proxy/stub code for the objects being requested.
 
 ## References
 
-[Process, Threads, and Apartments](https://msdn.microsoft.com/library/ms693344%28vs.85%29.aspx)
+[Process, Threads, and Apartments](https://docs.microsoft.com/windows/win32/com/processes--threads--and-apartments)

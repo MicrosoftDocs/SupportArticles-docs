@@ -7,22 +7,22 @@ ms.reviewer: davean
 ---
 # GetMessage ignores posted messages received during the execution of a WinEvent callback
 
-This article provides information about resolving an issue that the GetMessage API doesn't receive messages that are posted while a WinEvent callback function is being executed.
+This article provides information about resolving an issue that the `GetMessage` API doesn't receive messages that are posted while a WinEvent callback function is being executed.
 
 _Original product version:_ &nbsp; Windows Server 2008, Windows 7, Windows Server 2003 R2, Windows Vista  
 _Original KB number:_ &nbsp; 2682659
 
 ## Symptoms
 
-GetMessage appears not to receive messages that are posted while a WinEvent callback function is being executed. If another message enters the queue, both messages will be received and processed.
+`GetMessage` appears not to receive messages that are posted while a WinEvent callback function is being executed. If another message enters the queue, both messages will be received and processed.
 
 ## Cause
 
-There's a known issue with GetMessage and the use of WinEvent callbacks that themselves use Windows messages. GetMessage ignores a message that is received during the execution of the callback. Therefore, in particular, if the callback function calls PostThreadMessage, that message won't register until another message enters the queue (for example, because of a mouse movement); at that point, both the earlier posted message and the new message will register and be processed.
+There's a known issue with `GetMessage` and the use of WinEvent callbacks that themselves use Windows messages. `GetMessage` ignores a message that is received during the execution of the callback. Therefore, in particular, if the callback function calls `PostThreadMessage`, that message won't register until another message enters the queue (for example, because of a mouse movement); at that point, both the earlier posted message and the new message will register and be processed.
 
 ## Resolution
 
-To work around this block, we recommend using MsgWaitForMultipleObjects and PeekMessage instead of GetMessage. It's also necessary to create a new event that can be sent from the WinEvent handler to wake up the message loop.
+To work around this block, we recommend using `MsgWaitForMultipleObjects` and `PeekMessage` instead of `GetMessage`. It's also necessary to create a new event that can be sent from the WinEvent handler to wake up the message loop.
 
 ## More Information
 
@@ -50,7 +50,7 @@ DWORD dwmsEventTime)
 }
 ```
 
-GetMessage can block in the above fragment after failing to register a message sent from WinEventProc. Instead, use MsgWaitForMultipleObjects and PeekMessage together with declaring and using a special wake-up event from the handler back to the message loop, as shown in this fragment:
+`GetMessage` can block in the above fragment after failing to register a message sent from `WinEventProc`. Instead, use `MsgWaitForMultipleObjects` and `PeekMessage` together with declaring and using a special wake-up event from the handler back to the message loop, as shown in this fragment:
 
 ```cpp
 HANDLE ghMessageReadyEvent = NULL; // Event used to wake up the main thread
