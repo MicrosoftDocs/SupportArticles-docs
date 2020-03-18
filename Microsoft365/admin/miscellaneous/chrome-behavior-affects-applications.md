@@ -57,7 +57,8 @@ The following Microsoft server or client products must also be updated. The upda
 
 |**Product**|**KB Article**|**Release Date**|
 |:-----|:-----|:-----|
-|Exchange Server||March 2020 Cumulative Update|
+|Exchange Server 2019|[KB 4537677](https://support.microsoft.com/help/4537677/cumulative-update-5-for-exchange-server-2019)|March 17, 2020|
+|Exchange Server 2016|[KB 4537678](https://support.microsoft.com/help/4537678/cumulative-update-16-for-exchange-server-2016)|March 17, 2020|
 |Project Server 2013|[KB 4484279](https://support.microsoft.com/help/4484279/march-10-2020-cumulative-update-for-project-server-2013-kb4484279)|March 10, 2020|
 |Project Server 2010|[KB 4484239](https://support.microsoft.com/help/4484239/march-10-2020-cumulative-update-for-project-server-2010-kb4484239)|March 10, 2020|
 |SharePoint Foundation 2013|[KB 4484282](https://support.microsoft.com/help/4484282/security-update-for-sharepoint-foundation-2013-march-10)<br />(Cumulative Update: [KB 4484278](https://support.microsoft.com/help/4484278/march-10-2020-cumulative-update-for-sharepoint-foundation-2013-kb44842))[<sup>1</sup>](#Note1)|March 10, 2020|
