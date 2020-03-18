@@ -15,7 +15,7 @@
   items:
   - name: Header and Library requirement at IPPROTO_IP Level
     href: header-library-requirement-socket-ipproto-ip.md
-  - name: Memory leaks when closnig non-blocking socket
+  - name: Memory leaks when closing non-blocking socket
     href: close-non-blocked-socket-memory-leak.md
   - name: Send small data packets over TCP with Winsock
     href: data-segment-tcp-winsock.md
