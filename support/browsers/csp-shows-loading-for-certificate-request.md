@@ -47,4 +47,4 @@ To solve this problem, enable active scripting for the security zone to which th
 
 ## References
 
-For more information about how to troubleshoot script errors in Internet Explorer 6 and in Internet Explorer 7 on Windows 2000-based, Windows XP-based, Windows Server 2003-based, or Windows Vista-based computers, see [How to Troubleshoot Script Errors in Internet Explorer](https://support.microsoft.com/help/308260).
+For more information about how to troubleshoot script errors in Internet Explorer, see [How to Troubleshoot Script Errors in Internet Explorer](https://support.microsoft.com/help/308260).
