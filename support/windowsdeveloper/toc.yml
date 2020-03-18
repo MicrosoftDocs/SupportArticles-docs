@@ -5,53 +5,56 @@
   href: ../index.yml
 
 - name: Routing Windows SDK
-- name: Desktop app UI development
   items:
-  - name: Call Shell functions from Multithreaded Apartment
-    href: shell-functions-multithreaded-apartment.md
-  - name: Screen Saver command line arguments
-    href: screen-saver-command-line.md
-- name: Networking Development
-  items:
-  - name: Header and Library requirement at IPPROTO_IP Level
-    href: header-library-requirement-socket-ipproto-ip.md
-  - name: Memory leaks when closing non-blocking socket
-    href: close-non-blocked-socket-memory-leak.md
-  - name: Send small data packets over TCP with Winsock
-    href: data-segment-tcp-winsock.md
-- name: System Services Development
-  items:
-  - name: GetMessage ignores messages when executing callbacks
-    href: getmessage-ignores-posted-messages.md
-  - name: KTMRM service failed with event ID 4448
-    href: ktmrm-service-event-id-0x80070005.md
+  - name: Desktop app UI development
+    items:
+    - name: Call Shell functions from Multithreaded Apartment
+      href: shell-functions-multithreaded-apartment.md
+    - name: Screen Saver command line arguments
+      href: screen-saver-command-line.md
+  - name: Networking Development
+    items:
+    - name: Header and Library requirement at IPPROTO_IP Level
+      href: header-library-requirement-socket-ipproto-ip.md
+    - name: Memory leaks when closing non-blocking socket
+      href: close-non-blocked-socket-memory-leak.md
+    - name: Send small data packets over TCP with Winsock
+      href: data-segment-tcp-winsock.md
+  - name: System Services Development
+    items:
+    - name: GetMessage ignores messages when executing callbacks
+      href: getmessage-ignores-posted-messages.md
+    - name: KTMRM service failed with event ID 4448
+      href: ktmrm-service-event-id-0x80070005.md
 
 - name: Routing Windows App Dev (UWP)
-- name: Devices and Sensors Development
   items:
-  - name: Win32 code for sending raw data to printer
-    href: win32-raw-data-to-printer.md
-- name: Graphics and Multimedia development
-  items:
-  - name: Former MIDI API causes applications to hang
-    href: midi-device-app-hangs.md
-  - name: Interoperability Between GDI and GDI+
-    href: mix-gdi-and-gdi-plus-drawing.md
-- name: System Services Development
-  items:
-  - name: DXGI 1.2 API can't draw cursor to desktop image
-    href: dxgi-cannot-draw-cursor.md
-  - name: SetSystemTimeAdjustment loses adjustments
-    href: setsystemtimeadjustment-less-than-16.md
+  - name: Devices and Sensors Development
+    items:
+    - name: Win32 code for sending raw data to printer
+      href: win32-raw-data-to-printer.md
+  - name: Graphics and Multimedia development
+    items:
+    - name: Former MIDI API causes applications to hang
+      href: midi-device-app-hangs.md
+    - name: Interoperability Between GDI and GDI+
+      href: mix-gdi-and-gdi-plus-drawing.md
+  - name: System Services Development
+    items:
+    - name: DXGI 1.2 API can't draw cursor to desktop image
+      href: dxgi-cannot-draw-cursor.md
+    - name: SetSystemTimeAdjustment loses adjustments
+      href: setsystemtimeadjustment-less-than-16.md
 
 - name: Routing WDK V2
-- name: Print Driver
   items:
-  - name: Can't print from app to XPS Document Writer
-    href: print-app-xps-document-writer.md
-  - name: Get printer and print job status
-    href: printer-print-job-status.md
-  - name: Printer Device Fonts
-    href: printer-device-fonts.md
-  - name: XPSDrv isn't compatible with RAW database
-    href: v4-print-driver-raw-mode-pcl-postscript.md
+  - name: Print Driver
+    items:
+    - name: Can't print from app to XPS Document Writer
+      href: print-app-xps-document-writer.md
+    - name: Get printer and print job status
+      href: printer-print-job-status.md
+    - name: Printer Device Fonts
+      href: printer-device-fonts.md
+    - name: XPSDrv isn't compatible with RAW database
+      href: v4-print-driver-raw-mode-pcl-postscript.md
