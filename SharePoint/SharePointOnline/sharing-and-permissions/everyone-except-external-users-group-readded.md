@@ -37,3 +37,6 @@ By default, the "Everyone except external users" claim is added to the Members a
  
 To work around this behavior, we recommend using a [Private Group](https://support.office.com/en-us/article/learn-about-office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2) instead. 
  
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

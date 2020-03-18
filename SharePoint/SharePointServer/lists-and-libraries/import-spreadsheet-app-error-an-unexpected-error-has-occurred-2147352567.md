@@ -64,3 +64,7 @@ If you enable this policy setting, you can choose from three options for control
 - **Disable macros by default** - All macros are disabled in the programmatically opened application.
 
 If this policy setting is disabled or not set, any separate program used to launch Microsoft Excel, PowerPoint, or Word programmatically can run macros without being blocked.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

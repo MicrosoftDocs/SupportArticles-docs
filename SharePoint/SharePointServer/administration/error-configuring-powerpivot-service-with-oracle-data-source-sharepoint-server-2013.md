@@ -57,4 +57,6 @@ Perform the following steps to see the error:
 Since the farm account is different from the PowerPivot account, the error appears due to a lack of permission.
 
 ## More information
-The target ID created in the SSS should be a “Group” type.
+The target ID created in the SSS should be a "Group" type.
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

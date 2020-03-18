@@ -51,3 +51,7 @@ To work around the issue, don't have both accounts enabled at the same time.
 [SharePoint People Picker shows old domain account during Active Directory migration](https://blogs.technet.microsoft.com/rgullick/2010/05/15/sharepoint-people-picker-shows-old-domain-account-during-active-directory-migration/)
 
 [SharePoint and SID History not playing well together](https://blogs.technet.microsoft.com/craigf/2012/10/15/sharepoint-and-sid-history-not-playing-well-together/)
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

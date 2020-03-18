@@ -38,3 +38,5 @@ For instructions on how to install the Desktop Experience on Server 2012, please
 ## More Information
 
 This issue affects documents located on SharePoint 2007 and 2010 sites.
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

@@ -29,7 +29,7 @@ Additionally, you learn that TLS 1.0 has been disabled on the SharePoint web fro
 
 ## Cause  
 
-TLS 1.2 is not currently supported because Office Online Server (and Office Web Apps) uses .NET Framework 4.*x* to establish network connections. By default, .NET Framework 4.*x* doesn’t support TLS 1.2.    
+TLS 1.2 is not currently supported because Office Online Server (and Office Web Apps) uses .NET Framework 4.*x* to establish network connections. By default, .NET Framework 4.*x* doesn't support TLS 1.2.    
 
 ## Resolution  
 
@@ -39,7 +39,7 @@ Microsoft released the following optional security update to .NET Framework 4.*x
 
 This update changes the default encryption protocols from **SSL 3.0 or TLS 1.0** to the following: **TLS 1.0 or TLS 1.1 or TLS 1.2**  
 
-**Note** This security update won’t be released for Windows Server 2016 or later. Starting with Windows 2016, the registry keys that the optional security update automatically sets will have to be manually configured on each Office Online Server computer. Those registry keys and settings are as follows:  
+**Note** This security update won't be released for Windows Server 2016 or later. Starting with Windows 2016, the registry keys that the optional security update automatically sets will have to be manually configured on each Office Online Server computer. Those registry keys and settings are as follows:  
 
 ```
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319]  
@@ -48,3 +48,7 @@ This update changes the default encryption protocols from **SSL 3.0 or TLS 1.0**
 [HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432N ode\Microsoft\.NETFramework\v4.0.30319]  
 "SchUseStrongCrypto"=dword:00000001
 ```
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

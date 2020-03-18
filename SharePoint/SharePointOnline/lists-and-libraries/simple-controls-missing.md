@@ -22,15 +22,10 @@ appliesto:
 When you browse to a SharePoint Online document library in classic Experience, the following simple controls are missing and aren't available for the list:
 
 - New
-
 - Upload
-
 - Sync
-
 - Edit
-
 - Manage
-
 - Share
 
 ## Solution

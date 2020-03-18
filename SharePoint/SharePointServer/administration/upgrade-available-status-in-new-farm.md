@@ -84,3 +84,7 @@ To resolve this issue, use one of the following methods:
    ```
    PSConfig.exe -cmd upgrade -inplace b2b -wait -force -cmd applicationcontent -install -cmd installfeatures -cmd secureresources
    ```
+
+## More information  
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

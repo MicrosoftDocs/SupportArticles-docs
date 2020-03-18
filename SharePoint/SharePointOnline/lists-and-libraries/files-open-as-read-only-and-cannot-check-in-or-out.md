@@ -32,7 +32,7 @@ At times, you may find that when you open files from SharePoint or OneDrive for 
 There are several reasons why a file may open as read only:
 
 - Antivirus programs may open potentially unsafe files as read-only. Check with your antivirus provider to learn how to adjust these settings. BitDefender, for example, has content on adding application exclusions here: [How to add application or process exclusions in Bitdefender Control Center](https://www.bitdefender.com/support/how-to-add-application-or-process-exclusions-in-bitdefender-control-center-1119.html).
-- If you have libraries with **Checkout**, **Required**, or **Validation** columns or metadata, or when **Draft Item Security** is set to either **Only users who can edit** or **Only uses who can approve items** in Version Settings of the library, these items will be synchronized as read-only. For more information, see the section “[Libraries with specific columns or metadata](https://support.office.com/article/invalid-file-names-and-file-types-in-onedrive-onedrive-for-business-and-sharepoint-64883a5d-228e-48f5-b3d2-eb39e07630fa?ui=en-US&rs=en-001&ad=US#librariesspecificcolumns)” in the document Invalid file names and file types in OneDrive, OneDrive for Business, and SharePoint.
+- If you have libraries with **Checkout**, **Required**, or **Validation** columns or metadata, or when **Draft Item Security** is set to either **Only users who can edit** or **Only uses who can approve items** in Version Settings of the library, these items will be synchronized as read-only. For more information, see the section "[Libraries with specific columns or metadata](https://support.office.com/article/invalid-file-names-and-file-types-in-onedrive-onedrive-for-business-and-sharepoint-64883a5d-228e-48f5-b3d2-eb39e07630fa?ui=en-US&rs=en-001&ad=US#librariesspecificcolumns)" in the document Invalid file names and file types in OneDrive, OneDrive for Business, and SharePoint.
 - An Office document opens in Protected View even though you enable the "Open Office documents as read/write while browsing" policy setting. For more information, see [An Office document opens in Protected View even though you enable the "Open Office documents as read/write while browsing" policy setting](https://support.microsoft.com/help/983047/an-office-document-opens-in-protected-view-even-though-you-enable-the).
 
 
@@ -50,3 +50,7 @@ To resolve this issue, one of the following methods may help:
 - Restart your computer.
 - [Check that all Office updates are installed](https://support.office.com/article/Update-Office-with-Microsoft-Update-f59d3f9d-bd5d-4d3b-a08e-1dd659cf5282).
 - [Perform an Online repair of Office](https://support.office.com/Article/Repair-an-Office-application-7821d4b6-7c1d-4205-aa0e-a6b40c5bb88b).
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
