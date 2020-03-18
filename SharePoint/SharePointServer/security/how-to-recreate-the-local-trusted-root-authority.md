@@ -55,3 +55,7 @@ New-SPTrustedRootAuthority -Name  "localNew" -Certificate  $rootCert
 ```
 
 After running the above commands, perform an IISReset on all servers in the farm.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

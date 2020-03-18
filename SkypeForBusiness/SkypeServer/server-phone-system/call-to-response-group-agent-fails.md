@@ -63,3 +63,5 @@ The statement has been terminated.
 This error occurs because the removed Lync Server response group agent information has been marked for deletion in the dbo.Agents table of the rgsconfig database. There is some latency associated with the deletion process for the removed Lync Server response group agent record in the dbo.Agents table of the rgsconfig database. Only after the row that contains the unwanted Lync Server response group agent information is completely removed from the dbo.Agents table the Lync Server Response Group Agent Group commit process can be completed.
 
 Therefore, the behavior that is described in the "Symptoms" section is by design.
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

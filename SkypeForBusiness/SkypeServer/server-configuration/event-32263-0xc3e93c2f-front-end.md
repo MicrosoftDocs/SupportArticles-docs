@@ -38,3 +38,5 @@ This issue occurs because client sessions sometimes don't disconnect cleanly f
 ## More Information
 
 This issue can be safely ignored because it's caused by client behavior. This issue is not an indication of a server or environmental problem.
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

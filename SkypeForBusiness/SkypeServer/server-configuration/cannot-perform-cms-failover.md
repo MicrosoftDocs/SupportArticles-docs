@@ -74,3 +74,7 @@ To fix this issue, follow these steps:
     > After the process is complemented, the configuration.zip file can be deleted, although we recommend that you keep a copy of the file for disaster recovery.    
 5. On each server of the previously identified pool, run the **[Invoke-CsManagementStoreReplication](https://technet.microsoft.com/library/gg413060.aspx)** cmdlet in the Skype for Business Server Management Shell.     
 6. Run the Invoke-CsManagementServerFailover cmdlet to perform a CMS failover again.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

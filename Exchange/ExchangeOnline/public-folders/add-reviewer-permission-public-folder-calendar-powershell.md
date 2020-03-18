@@ -39,7 +39,7 @@ An item with the specified id 'LgAAAAAaRHOQqmYRzZvIAKoAL8RaAwBUKPrqV1IcSb2sevrqO
 
 ### Method 1
 
-Use the Microsoft Outlook client to add the reviewer permission the calendar. To do this, follow these steps:
+Use the Microsoft Outlook client to add the reviewer permission to the calendar. To do this, follow these steps:
 
 1. Locate the public folder calendar that you want to add the permission to.
 2. Right-click the calendar, and select **Properties**.
@@ -50,7 +50,7 @@ Use the Microsoft Outlook client to add the reviewer permission the calendar. To
 
 ### Method 2
 
-Use EAC to add the reviewer permission the calendar. To do this, follow these steps:
+Use EAC to add the reviewer permission to the calendar. To do this, follow these steps:
 
 1. Use your administrator account to sign in to EAC.
 2. Go to **Public Folders** > **Public Folders**

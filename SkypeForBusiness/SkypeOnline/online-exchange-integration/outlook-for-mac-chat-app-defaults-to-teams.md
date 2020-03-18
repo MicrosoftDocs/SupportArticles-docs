@@ -47,3 +47,5 @@ Microsoft is researching this problem and will post more information in this art
 ## More information
 
 For detailed information about how to manage preferences by using Workgroup Manager, see the [Mac OS X Server User Management](https://go.microsoft.com/fwlink/?LinkId=106762) documentation.
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
