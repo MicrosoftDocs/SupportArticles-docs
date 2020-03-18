@@ -26,7 +26,7 @@ The Web site might not be fully compatible with Internet Explorer 8 and might no
 
 To enable Compatibility View for a specific Web site that is not displayed correctly or that is not working correctly, follow these steps:
 
-1. Click Start ![vista start button](./media/cannot-view-secure-web-sites-in-ie/vista-start-button.png), and then click Internet Explorer.
+1. Click **Start**, and then click Internet Explorer.
 
 2. Enter the address of the Web site that is not displayed correctly or that does not work correctly, and press ENTER.
 
@@ -49,7 +49,7 @@ If the Web site is not displayed correctly or is not working, you are experienci
 
 Consider the following scenario. Most Web sites that you frequently visit are not displayed correctly or are not working correctly. You have tried Method 1 on some of these Web sites, and that method worked. In this case, you may want to enable Compatibility View for all Web sites. To do this, follow these steps:
 
-1. Click Start ![vista start button](./media/cannot-view-secure-web-sites-in-ie/vista-start-button.png), and then click Internet Explorer.
+1. Click **Start**, and then click Internet Explorer.
 
 2. On the **Tools** menu, click **Compatibility View Settings**.
 
@@ -64,7 +64,7 @@ Consider the following scenario. Most Web sites that you frequently visit are no
 
 Internet Explorer could be using old information when you try to view the Web page. Try deleting your browsing history to see whether the problem is resolved. Follow these steps:
 
-1. Click Start ![vista start button](./media/cannot-view-secure-web-sites-in-ie/vista-start-button.png), and then click Internet Explorer.
+1. Click **Start**, and then click Internet Explorer.
 
 2. Click **Tools**, and then click **Delete Browsing History**.
 
@@ -80,7 +80,7 @@ If the Web page works correctly, you are finished with this article. If the Web 
 
 Although browser add-ons can enhance your online experience, they can occasionally interfere or conflict with other software on your computer. Try starting Internet Explorer without add-ons to see whether the problem is resolved. Follow these steps:
 
-1. Click ![vista start button](./media/cannot-view-secure-web-sites-in-ie/vista-start-button.png), and then click Internet Explorer.
+1. Click **Start**, and then click Internet Explorer.
 
 2. Click Internet Explorer (No Add-ons). Internet Explorer opens without add-ons, toolbars, or plug-ins.
 
@@ -88,7 +88,7 @@ Although browser add-ons can enhance your online experience, they can occasional
 
 If disabling all add-ons resolves the problem, you might want to use Add-on Manager to disable all add-ons and then turn on add-ons only as you need them. This will let you determine which add-on is causing the problem.
 
-1. Click Start ![vista start button](./media/cannot-view-secure-web-sites-in-ie/vista-start-button.png), and then click Internet Explorer.
+1. Click **Start**, and then click Internet Explorer.
 
 2. Click **Tools**, and then click **Internet Options**.
 
@@ -108,7 +108,7 @@ If no add-on is causing the problem, try the next resolution.
 
 Some secure sites require that the date and time match the date and time of the secure site. Make sure that the Date and Time settings are correct on the computer. To do this, follow these steps:
 
-1. In Control Panel, open **Date and Time**. To do this, click Start ![vista start button](./media/cannot-view-secure-web-sites-in-ie/vista-start-button.png), type date and time in the **Start Search** box, and then click **Date and Time** in the **Programs** list.
+1. In Control Panel, open **Date and Time**. To do this, click **Start**, type date and time in the **Start Search** box, and then click **Date and Time** in the **Programs** list.
 
 2. Click **Change date and time**.
 
@@ -122,7 +122,7 @@ Try resetting Internet Explorer back to its default settings. This removes all c
 
 1. Close all Internet Explorer and Windows Explorer windows.
 
-2. Click Start ![vista start button](./media/cannot-view-secure-web-sites-in-ie/vista-start-button.png), and then click Internet Explorer.
+2. Click **Start**, and then click Internet Explorer.
 
 3. Click **Tools**, and then click **Internet Options**.
 
@@ -140,7 +140,7 @@ If the Web page works correctly, you are finished with this article. If the Web 
 
 ## Resolution: Perform System Restore
 
-1. Click Start ![vista start button](./media/cannot-view-secure-web-sites-in-ie/vista-start-button.png), and then click **All Programs**.
+1. Click **Start**, and then click **All Programs**.
 
 2. Click **Accessories**, and then click **System Tools**.
 
