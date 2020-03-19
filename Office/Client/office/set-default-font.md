@@ -78,6 +78,8 @@ To set the default theme, follow these steps:
 5. Select **More options** to opens a file name dialog box, replace the whole file name with **%appdata%\Microsoft\Templates\\**, and then press Enter.
 6. In the **Templates** folder, open the **Document Themes** folder. If you see a **Default Theme.potx** file existing in the folder, you can also make a backup of the file. To do this, select the file, press Ctrl+C, and then press Ctrl+V.
 7. Enter the name "**Default Theme**" to manually name the file, and then save it. If a Default Theme.potx file exists, you can also select the Default Theme.potx file, and then select **Save** to overwrite it.
-8. Close PowerPoint, and then select **File** > **New**. Now, you see the default template that's displayed as an option.  
+8. Close PowerPoint, and then select **File** > **New**. Now, you see the default template that's displayed as an option. 
+
+   ![Default Theme shows as an option](./media/set-default-font/template.png)
 
 For more information, see [Change the default font in PowerPoint](https://support.office.com/article/Change-the-default-font-in-PowerPoint-8e93c947-c160-4310-8070-afea7da78c33).
