@@ -789,6 +789,8 @@
       href: ../office/convert-bibliography-to-static-text.md
     - name: "\"Compile Error: Procedure too large\""
       href: ../office/compile-error-procedure-too-large.md
+    - name: AD FS sites are slow to open
+      href: ../office/slow-open-adfs-sites.md
     - name: Connection to a network document is lost
       href: ../office/connect-to-network-document-lost.md
     - name: Document files in Office Document Cache not deleted
