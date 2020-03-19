@@ -28,7 +28,6 @@ In SharePoint Central Administration, a workflow timer job shows the status as "
 - Random processing of workflows occurs.    
 - Workflows don't function over extended periods of time.      
 
-
 ## Cause  
 
 The most likely cause is a bad workflow instance.   
@@ -135,3 +134,7 @@ $workflowId =  [GUID]$WorkflowInstanceID
 $workflow = New-Object Microsoft.SharePoint.Workflow.SPWorkflow($web, $workflowId);  
 [Microsoft.SharePoint.Workflow.SPWorkflowManager]::CancelWorkflow($workflow)
 ```
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

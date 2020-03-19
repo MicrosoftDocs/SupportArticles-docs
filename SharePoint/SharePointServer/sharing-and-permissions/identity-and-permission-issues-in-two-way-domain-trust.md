@@ -39,3 +39,7 @@ This scenario is unsupported. SharePoint can't reside in a domain that's part of
 
 - Disable the source account.     
 - Delete the source account's objectSid attribute from the SID history of the destination account.       
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

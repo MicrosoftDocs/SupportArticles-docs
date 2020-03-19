@@ -58,3 +58,7 @@ To work around this issue, use one of the following methods as a user with admin
 - Expand the contact card details before you try to call that particular user, as in the following screen shot:
 
   ![Expand contact card details](./media/contacts-telephone-numbers-missing/expand-contact-card.jpg)
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

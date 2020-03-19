@@ -89,3 +89,5 @@ For more information about how to administer the Office 2010 group policy templa
 ## Status
 
 Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section.
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

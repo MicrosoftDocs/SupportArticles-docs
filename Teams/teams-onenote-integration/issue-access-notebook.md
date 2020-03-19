@@ -59,3 +59,5 @@ To determine the item count, use one of the following methods:
     File Type:True
     HTML File Type:True 
     ```
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

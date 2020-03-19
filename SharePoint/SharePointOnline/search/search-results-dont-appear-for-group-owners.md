@@ -1,5 +1,5 @@
 ---
-title: Search results don’t appear for group owners after creating a new Office 365 group
+title: Search results don't appear for group owners after creating a new Office 365 group
 ms.author: v-todmc
 author: todmccoy
 manager: dcscontentpm
@@ -20,7 +20,7 @@ ms.reviewer: snarra, anundlie, knutb
 description: Describes how to get search results to appear for a group owner after creating a new Office 365 group. 
 ---
 
-# Search results don’t appear for group owners after creating a new Office 365 group
+# Search results don't appear for group owners after creating a new Office 365 group
 
 ## Symptoms
 
@@ -35,7 +35,7 @@ The owner fails to find content in the search results.
 
 ## Cause
 
-The issue is caused by the security trimming of the query (filtering based on user’s access rights and memberships) which only relates to the  security group membership, not the group ownership.  Office 365 groups can have an owner that is not a member.  
+The issue is caused by the security trimming of the query (filtering based on user's access rights and memberships) which only relates to the  security group membership, not the group ownership.  Office 365 groups can have an owner that is not a member.  
 
 ## Resolution
 
@@ -59,3 +59,5 @@ In certain cases, this may be the expected behavior. If an admin creates a group
 
 In other cases, this may be unintentional and cause issues because the group admin is also a participant of the group but failed to add himself/herself as a group member.
 If you create the group from a user interface in Outlook or SharePoint, this is not an issue. The group creator automatically becomes a member.
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

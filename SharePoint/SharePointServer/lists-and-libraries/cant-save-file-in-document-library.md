@@ -59,3 +59,7 @@ To work around this issue, choose one of the following workarounds:
 ## Status
 
 Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

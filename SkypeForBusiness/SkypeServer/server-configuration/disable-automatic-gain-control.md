@@ -81,3 +81,7 @@ In Registry Editor, create and set the following registry entry:
     **Value data:** 1
 
     **Base:** Decimal    
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
