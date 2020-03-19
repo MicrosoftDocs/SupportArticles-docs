@@ -1,11 +1,11 @@
 ---
-title: Call Shell functions from Multithreaded apartment
+title: Call shell functions from multithreaded apartment
 description: Introduces why calling shell functions from a thread that has been initialized as a multithreaded apartment may cause the functions fail.
 ms.date: 03/10/2020
 ms.prod-support-area-path:
 ms.reviewer: DAVEAN
 ---
-# Calling Shell Functions and Interfaces from a Multithreaded Apartment
+# Calling shell functions and interfaces from a multithreaded apartment
 
 When you call or access a shell function or shell interface from a thread that has been initialized as a multithreaded apartment, the function or interface may have its functionality impaired or completely fail.
 
@@ -22,7 +22,7 @@ The following are examples of how calls to `CoInitializeEx (COINIT_MULTITHREADED
 
 - GetOpenFileName/GetSaveFileName
 
-    Users can navigate to namespace extension folders such as **My Documents** through the **Open and Save As** dialog boxes. However, these folders can't be browsed to because the browser can't create the required interfaces, such as `IShellFolder`.
+    Users can navigate to namespace extension folders such as **My Documents** through the **Open and Save As** dialog box. However, these folders can't be browsed to because the browser can't create the required interfaces, such as `IShellFolder`.
 
 - ShellExecute/ShellExecuteEx
 

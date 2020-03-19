@@ -26,7 +26,7 @@ If the linger timeout in the above scenario equals 0, then the worker thread wi
 
 ## Resolution
 
-Best practice is to explicitly shut down the socket using the shutdown or `WSASendDisconnect` functions, then call the `closesocket` function.
+Best practice is to explicitly shut down the socket using the `shutdown` or `WSASendDisconnect` functions, then call the `closesocket` function.
 
 Alternatively, you may set the linger timeout value to a value other than 0 - for example 1 second. The worker thread will only wait for the specified linger timeout value before shutting down the socket and exiting.
 

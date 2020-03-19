@@ -5,7 +5,7 @@ ms.date: 03/10/2020
 ms.prod-support-area-path:
 ms.reviewer: Franki, jlambert
 ---
-# SetSystemTimeAdjustment May Lose Adjustments Less than 16
+# SetSystemTimeAdjustment may lose adjustments less than 16
 
 This article explains why the `SetSystemTimeAdjustment` function loses time adjustments that are less than 16 in Windows 7 and Windows Vista.
 

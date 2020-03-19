@@ -5,7 +5,7 @@ ms.date: 03/09/2020
 ms.prod-support-area-path:
 ms.reviewer: v-mafect
 ---
-# V4 Print Drivers using RAW mode to send PCL/Postscript have 0 byte spool file
+# V4 print drivers using RAW mode to send PCL/Postscript have 0 byte spool file
 
 This article explains how to work around V4 print drivers attempting to send PCL/Postscript data in `RAW` mode to a printer and producing a 0-byte spool file.
 

@@ -15,20 +15,13 @@ _Original KB number:_ &nbsp; 2607379
 
 When you run a distributed transaction from a process (for example, w3wp.exe) under a domain account on Windows Server 2008 and above, the transaction may fail. An access denied error (0x80070005) is logged in the application log:
 
-> Log Name:      Application
->
-> Source:        Microsoft-Windows-MSDTC Client
->
-> Event ID:      4448
->
-> Task Category: KTMRM
->
-> Level:         Error
->
-> Keywords:      Classic
->
-> Description:
->
+> Log Name:      Application<br/>
+> Source:        Microsoft-Windows-MSDTC Client<br/>
+> Event ID:      4448<br/>
+> Task Category: KTMRM<br/>
+> Level:         Error<br/>
+> Keywords:      Classic<br/>
+> Description:<br/>
 > KTMRM service failed to load the system restore information. As a result, the service is exiting. Please try restarting the service, if the service fails to start, contact product support. Error Specifics: hr = 0x80070005, xxxx, CmdLine: xxxx, Pid: xxxx
 
 ## Cause
@@ -50,7 +43,7 @@ To change the access right, follow the steps below:
 1. Run the following `SC` command at a command prompt to display the current discretionary access control list (DACL) on the SCM.
 
     ```console
-    > sc sdshow SCMANAGER
+    sc sdshow SCMANAGER
     ```
 
     Here is a sample output:
@@ -64,7 +57,7 @@ To change the access right, follow the steps below:
 2. Run the following `SC` command at a command prompt to add the `Authenticated Users` the `SC_MANAGER_QUERY_LOCK_STATUS` (RP) access right to the SCM:
 
     ```console
-    > sc sdset scmanager D:(A;;CCRP;;;AU)(A;;CCLCRPRC;;;IU)(A;;CCLCRPRC;;;SU)(A;;CCLCRPWPRC;;;SY)(A;;KA;;;BA)S:(AU;FA;KA;;;WD)(AU;OIIOFA;GA;;;WD)
+    sc sdset scmanager D:(A;;CCRP;;;AU)(A;;CCLCRPRC;;;IU)(A;;CCLCRPRC;;;SU)(A;;CCLCRPWPRC;;;SY)(A;;KA;;;BA)S:(AU;FA;KA;;;WD)(AU;OIIOFA;GA;;;WD)
     ```
 
 This workaround will ensure the user has the `SC_MANAGER_CONNECT` and `SC_MANAGER_QUERY_LOCK_STATUS` access rights to the SCM.

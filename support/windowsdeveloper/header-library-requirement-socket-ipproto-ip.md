@@ -5,7 +5,7 @@ ms.date: 03/09/2020
 ms.prod-support-area-path:
 ms.reviewer: MIKELIU
 ---
-# Header and Library Requirement When Set/Get Socket Options at the IPPROTO_IP Level
+# Header and Library requirement when set/get socket options at the IPPROTO_IP level
 
 This article provides information about the Header and Library requirement when setting or getting socket options at the `IPPROTO_IP` level, and the `setsockopt` or `getsockopt` function fails with runtime errors.
 
@@ -69,11 +69,11 @@ The options at this level are defined in `Ws2tcpip.h` as:
 
 ```
 
-## Setsockopt or getsockopt Runtime Error
+## Setsockopt or getsockopt runtime error
 
 If you don't correctly match the header and library files, `setsockopt` or `getsockopt` may fail with runtime error 10042 (`WSAENOPROTOOPT`) or the option value you set or get may not be as you would have expected.
 
-### Case 1: Runtime Error 10042 (WSAENOPROTOOPT)
+### Case 1: runtime error 10042 (WSAENOPROTOOPT)
 
 Options that fall into this category include:
 
@@ -114,7 +114,7 @@ int main(int argc, char* argv[])
 > [!NOTE]
 > This includes Winsock.h. If the project is linked with `Ws2_32.lib`, setsockopt will fail with runtime error 10042 (`WSAENOPROTOOPT`). This is because in `Winsock.h`, `IP_ADD_MEMBERSHIP` is defined as 5. The corresponding Winsock runtime can't resolve option 5 at the `IPPROTO_IP` level, so the failure occurs with error code 10042.
 
-### Case 2: Options Set or Get Appear Do Not Take Effect
+### Case 2: Options set or get don't take effect
 
 Options that fall into this category include:
 
