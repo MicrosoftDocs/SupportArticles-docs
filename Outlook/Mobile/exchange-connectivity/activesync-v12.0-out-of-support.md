@@ -25,4 +25,4 @@ After June 15, 2020, Microsoft Outlook for iOS and Android will no longer connec
 
 Exchange ActiveSync v12.0 is used on Microsoft Exchange Server 2007 RTM Server, though it may also be used by third-party applications or services. After June 15, 2020, Outlook for iOS and Android will no longer be able to use this protocol version.
 
-We recommend that you migrate mailboxes off Exchange Server 2007 RTM to a newer version of Exchange Server, or contact your Microsoft Partner to investigate your options.
+We recommend that you migrate mailboxes off Exchange Server 2007 RTM to a newer version of Exchange Server, or contact your application provider to investigate your options.
