@@ -66,9 +66,6 @@
   - name: Textchanged event does not fire
     href: textchanged-event-not-fire-with-autocomplete.md
 
-  - name: Cannot close IE window
-    href: window-settimeout-window-close-1.md
-
   - name: FTP WinInet APIs in VB application
     href: using-ftp-wininet-apis-in-vb.md
 
