@@ -34,6 +34,25 @@
   - name: Resolve last-page insert PAGELATCH_EX contention
     href: resolve-pagelatch-ex-contention.md
 
+- name: Replication, change tracking, change data capture
+  items:
+  - name: Apply SQL hotfixes in a replication topology
+    href: apply-hotfix-sql-replication-topology.md
+  - name: Duplicate key rows from sys.syscommittab table
+    href: duplicate-keys-sys-syscommittab-table.md
+  - name: Errors when you attach CDC-enabled database
+    href: attach-change-data-capture-database.md
+  - name: Errors when you attach CDC-enabled database
+    href: attach-change-data-capture-database.md
+  - name: Errors when you create peer-to-peer replication
+    href: peer-to-peer-replication-fails.md
+  - name: Replication agents can't run
+    href: sql-replication-agents-not-run.md
+  - name: SQL Transaction log grows continuously
+    href: sql-transaction-log-grows.md
+  - name: Synchronization for merge replication fails
+    href: sql-merge-replication-synchronization-fails.md
+
 - name: Security Issues
   items:
   - name: Decrypting records from Always Encrypted-enabled database fails
