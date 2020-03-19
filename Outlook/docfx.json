@@ -54,7 +54,7 @@
           "**/*.md",
           "**/**.yml"
         ],
-        "src": "ios-and-android",
+        "src": "Mobile",
         "dest": ".",
         "exclude": [
           "**/obj/**",
