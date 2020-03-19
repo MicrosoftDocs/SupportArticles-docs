@@ -27,7 +27,7 @@ _Original KB number:_ &nbsp; 968870
 
 3. Locate and then double-click **FullScreen** in the right pane.
 
-4. Type _yes_ in the **Data data** field, and then click **OK**.
+4. Type _yes_ in the **Data data** field, and then click **OK**. Note that if the FullScreen key does not exist in the right pane, manually create the same with its data type REG_SZ and set its value to **Yes**.
 
 5. Exit Registry Editor.
 
