@@ -9,7 +9,7 @@ ms.reviewer: vijayts
 
 This article describes how to apply a hotfix for Microsoft SQL Server in a replication topology. In a replication topology, you may have to apply a hotfix to different servers.
 
-_Original product version:_ &nbsp; SQL Server 2019, 2017, 2016, 2014, 2012, 2008, 2005  
+_Original product version:_ &nbsp; SQL Server 2005 and the later versions  
 _Original KB number:_ &nbsp; 941232
 
 ## Servers for applying a hotfix

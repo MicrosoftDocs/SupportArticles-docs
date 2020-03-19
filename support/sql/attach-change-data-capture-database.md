@@ -8,7 +8,7 @@ ms.prod-support-area-path:
 
 This article provides information about resolving an issue that you can't attach a CDC-enabled database to an instance of SQL Server 2016 or SQL Server 2017 on Windows.
 
-_Original product version:_ &nbsp; SQL Server 2017, 2016, 2014, 2012, 2008  
+_Original product version:_ &nbsp; SQL Server 2008 and the later versions  
 _Original KB number:_ &nbsp; 3200464
 
 ## Symptoms
@@ -21,7 +21,7 @@ Command
 EXEC sys.sp_cdc_enable_table @source_schema='<schema name>', @source_name='<source name>', @role_name='<role name>', @supports_net_changes=1, @allow_partition_switch=0;
 ```
 
-Error Message
+Error message
 
 > Msg 22832, Level 16, State 1, Procedure<br/>
 > sp_cdc_enable_table_internal, Line 639 [Batch Start Line 0]<br/>

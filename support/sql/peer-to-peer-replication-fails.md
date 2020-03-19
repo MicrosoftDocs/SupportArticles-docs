@@ -92,7 +92,7 @@ Corrected Syntax
 
 When you add new articles to an existing peer-to-peer publication, open the **Article Properties** window, and remove the `[dbo].` schema prefix before you save the changes.
 
-![Edit the Article Properties and remove ](./media/peer-to-peer-replication-fails/remove-dbo-schema-prefix.png)
+![Open the Article Properties and remove the "[dbo]."](./media/peer-to-peer-replication-fails/remove-dbo-schema-prefix.png)
 
 ## Status
 

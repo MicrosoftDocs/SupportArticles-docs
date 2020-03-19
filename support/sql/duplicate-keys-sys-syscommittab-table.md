@@ -8,7 +8,7 @@ ms.prod-support-area-path:
 
 This article provides information about resolving a SQL Server Change Tracking issue that generates duplicate key rows between the `SYSCOMMITTABLE` and `sys.syscommittab` file.
 
-_Original product version:_ &nbsp; SQL Server 2019, 2017, 2016, 2014, 2012, 2008 R2, 2008  
+_Original product version:_ &nbsp; SQL Server 2008 and the later versions  
 _Original KB number:_ &nbsp; 3083381
 
 ## Symptoms
@@ -46,7 +46,7 @@ For more information about change tracking, see [Enable and disable change trac
 ## Manually delete the duplicate rows
 
 1. Copy the Transact-SQL script at the end of the **Transact-SQL script** section into a text editor.
-2. Locate the \<AFFECTED_DB> placeholder in the script, and replace it with the name of the affected database.
+2. Locate the `<AFFECTED_DB>` placeholder in the script, and replace it with the name of the affected database.
 3. Save the modified script to your hard disk as a .sql file. For example, `C:\temp\remove_duplicates.sql`.
 
 If you're running SQL Server 2014, you must grant the per-Service SID full control to the `mssqlsystemresource.ldf` and `mssqlsystemresource.mdf` files. To do this, follow these steps:

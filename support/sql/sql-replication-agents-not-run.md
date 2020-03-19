@@ -111,7 +111,8 @@ The output resembles the following:
 Desktop Heap Information Monitor Tool (Version 8.1.2925.0)
 Copyright (c) Microsoft Corporation. All rights reserved.
 -------------------------------------------------------------
-Session ID: 0 Total Desktop: ( 7872 KB - 12 desktops)
+Session ID: 0
+Total Desktop: ( 7872 KB - 12 desktops)
 WinStation\Desktop Heap Size(KB) Used Rate(%)
 -------------------------------------------------------------
 WinSta0\Default 3072 24.2
@@ -194,9 +195,9 @@ We recommend that the desktop heap use remain between 80 percent and 90 percent.
     Service-0x0-3e5 $\Default           768                 0%
     Service-0x0-10a75$\Default         768                 0%
     ------------------------------------------------------
-    Total Desktop: (   23840 KB -   7 desktops)
+    Total Desktop: (23840 KB - 7 desktops)
     Session ID:  0
-    ============================================================
+    ------------------------------------------------------
     ```
 
 11. Decode the encrypted logon by doing the following:
@@ -206,9 +207,9 @@ We recommend that the desktop heap use remain between 80 percent and 90 percent.
     3. Connect to the `root\cimv2` namespace.
     4. Click **Query**, and then type `select * from win32_logonsession`.
     5. Double-click the entry that contains 997.
-    6. Select **UUID** in the object editor, and then click **Associators**  to show the actual logon name. Refer to the following screenshot:
+    6. Select **UUID** in the object editor, and then click **Associators** to show the actual logon name. Refer to the following screenshot:
 
-        ![This screenshot shows the previously mentioned steps.](./media/sql-replication-agents-not-run/select-uuid-click-associators.png)
+        ![Select UUID, click Associators to show the actual logon name](./media/sql-replication-agents-not-run/select-uuid-click-associators.png)
 
 ## Considerations if you use Remote Desktop Protocol
 

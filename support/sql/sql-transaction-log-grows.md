@@ -8,7 +8,7 @@ ms.prod-support-area-path:
 
 This article provides information about resolving an issue that causes SQL Server database transaction log file grows continuously, consumes excessive disk space, and affects performance.
 
-_Original product version:_ &nbsp; SQL Server 2019, 2017, 2016, 2014, 2012  
+_Original product version:_ &nbsp; SQL Server 2012 and the later versions  
 _Original KB number:_ &nbsp; 2871474
 
 ## Symptoms
@@ -37,7 +37,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 
 You may have a non-distributed LSN because CDC for Oracle uses CDC for SQL stored procedures, and that, in turn, uses the replication log reader. This non-distributed LSN corresponds to the log entries to add the mirrored table in the Attunity CDC database.
 
-If you run this query, the `log_reuse_wait_desc` option returns a value of `REPLICATION`, indicating the cause. Select the log_reuse_wait_desc name from sys.databases, where the name is <your_cdc_database>:
+If you run this query, the `log_reuse_wait_desc` option returns a value of `REPLICATION`, indicating the cause. Select the `log_reuse_wait_desc` name from `sys.databases`, where the name is <your_cdc_database>:
 
 ```sql
 REPLICATION <your_cdc_database>
