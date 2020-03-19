@@ -15,10 +15,8 @@ _Original KB number:_ &nbsp; 3083381
 
 When you compare the in-memory `SYSCOMMITTABLE` and the on-disk `sys.syscommittab` file in Microsoft SQL Server, you may see duplicate key rows. These duplicate values may cause backup and checkpoint operations to fail.
 
-> "Cannot insert duplicate key row in object 'sys.syscommittab' with unique index 'si_xdes_id'. The duplicate key value is (KeyValue).
->
-> Error: 3999, Severity: 17, State: 1.
->
+> "Cannot insert duplicate key row in object 'sys.syscommittab' with unique index 'si_xdes_id'. The duplicate key value is (KeyValue).<br/>
+> Error: 3999, Severity: 17, State: 1.<br/>
 > Failed to flush the commit table to disk in dbidDatabaseID due to error 2601. Check the errorlog for more information."
 
 ## Cause

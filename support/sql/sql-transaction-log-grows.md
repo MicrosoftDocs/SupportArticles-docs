@@ -30,9 +30,7 @@ To verify this exact cause, run the `DBCC OPENTRAN` command while you're connect
 
 ```console
 Replicated Transaction Information:
-
 Oldest distributed LSN : (0:0:0)
-
 Oldest non-distributed LSN : (38:272:1) 
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.
 ```
@@ -100,11 +98,11 @@ REPLICATION <your_cdc_database>
     DBCC SHRINKFILE (yourcdcdatabase_log, 1024)
     ```
 
-For more information, see [Manage the size of the transaction log file](https://msdn.microsoft.com/library/ms365418%28v=sql.110%29.aspx).
+For more information, see [Manage the size of the transaction log file](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms365418(v=sql.110)).
 
 ## More information
 
 For more information, see
-[Troubleshoot CDC instance errors in Microsoft change data capture for Oracle by Attunity](http://social.technet.microsoft.com/wiki/contents/articles/7642.troubleshoot-cdc-instance-errors-in-microsoft-change-data-capture-for-oracle-by-attunity.aspx).
+[Troubleshoot CDC instance errors in Microsoft change data capture for Oracle by Attunity](https://social.technet.microsoft.com/wiki/contents/articles/7642.troubleshoot-cdc-instance-errors-in-microsoft-change-data-capture-for-oracle-by-attunity.aspx).
 
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.

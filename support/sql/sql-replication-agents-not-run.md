@@ -20,8 +20,7 @@ Consider the following scenario:
 
 In this scenario, some replication agents can't run. Additionally, the following error message is logged in the system log:
 
-> Application Error : The application failed to initialize properly (0xc0000142).
->
+> Application Error : The application failed to initialize properly (0xc0000142).<br/>
 > Click on OK to terminate the application.
 
 ## Cause
@@ -113,7 +112,6 @@ Desktop Heap Information Monitor Tool (Version 8.1.2925.0)
 Copyright (c) Microsoft Corporation. All rights reserved.
 -------------------------------------------------------------
 Session ID: 0 Total Desktop: ( 7872 KB - 12 desktops)
-
 WinStation\Desktop Heap Size(KB) Used Rate(%)
 -------------------------------------------------------------
 WinSta0\Default 3072 24.2
@@ -156,50 +154,28 @@ We recommend that the desktop heap use remain between 80 percent and 90 percent.
 
     ```console
     LiveKd v5.3 - Execute kd/windbg on a live system
-    Sysinternals -
-    [www.sysinternals.com](http://www.sysinternals.com/) 
+    Sysinternals -[www.sysinternals.com](http://www.sysinternals.com/) 
     Copyright (C) 2000-2012 Mark Russinovich and Ken Johnson
-    
     Launching C:\Debugger\kd.exe:
-    
     Microsoft (R) Windows Debugger Version 6.2.9200.20512 AMD64
-    
     Copyright (c) Microsoft Corporation. All rights reserved.
-    
     Loading Dump File [C:\Windows\livekd.dmp]
-    
     Kernel Complete Dump File: Full address space is available
-    
     Comment: 'LiveKD live system view'
-    
     Symbol search path is: srv*http://msdl.microsoft.com/download/symbols
-    
     Executable search path is:
-    
     Product: Server, suite:
-    
     Built by:
-    
     Machine Name:
-    
     Kernel base =
-    
     Debug session time:
-    
     System Uptime:
-    
     Loading Kernel Symbols
-    
     ...............................................................
-    
     ..............................................................
-    
     Loading User Symbols
-    
     ...................................................
-    
     Loading unloaded module list
-    
     ......Unable to enumerate user-mode unloaded modules, NTSTATUS 0xC0000147
     ```
 
@@ -207,34 +183,19 @@ We recommend that the desktop heap use remain between 80 percent and 90 percent.
 
     ````console
     kd> !dskheap
-    
     *** ERROR: Module load completed but symbols could not be loaded for LiveKdD.SYS
-    
     Winstation\Desktop            Heap Size(KB)   Used Rate(%)
-    
     ------------------------------------------------------------
-    
     WinSta0\Default                  20480                 0%
-    
     WinSta0\Disconnect                  96                 4%
-    
     WinSta0\Winlogon                   192                 2%
-    
     Service-0x0-3e7$\Default           768                 1%
-    
     Service-0x0-3e4$\Default           768                 0%
-    
-    Service-0x0-
-     3e5 $\Default           768                 0%
-    
+    Service-0x0-3e5 $\Default           768                 0%
     Service-0x0-10a75$\Default         768                 0%
-    
     ------------------------------------------------------
-    
     Total Desktop: (   23840 KB -   7 desktops)
-    
     Session ID:  0
-    
     ============================================================
     ```
 

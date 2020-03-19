@@ -20,42 +20,28 @@ These error messages appear in the SQL Server Agent job history, in a SQL Profil
 
 SQL Server Agent Error message
 
-> Error messages:
->
-> Incorrect syntax near 'sp_MSins_ProductionProduct'. (Source: MSSQLServer, Error number: 102)
->
-> Get help: http://help/102 
+> Error messages:<br/>
+> Incorrect syntax near 'sp_MSins_ProductionProduct'. (Source: MSSQLServer, Error number: 102)<br/>
+> Get help: http://help/102 <br/>
 
 SQL Profiler Trace
 
-> Profiler Trace failing  statement with missing "." between schema and procedure name
->
->if object_id(N'[dbo][sp_MSins_ProductionProduct]', 'P') > 0
-> 
-> drop proc [dbo][sp_MSins_ProductionProduct] 
+> Profiler Trace failing  statement with missing "." between schema and procedure name<br/>
+>if object_id(N'[dbo][sp_MSins_ProductionProduct]', 'P') > 0<br/>
+> drop proc [dbo][sp_MSins_ProductionProduct]
 
 Agent Log error message
 
-> Time stamp    Connecting to Subscriber
->
-> Time stamp    Initializing
->
-> Time stamp    Agent message code 102. Incorrect syntax near ''sp_MSins_ProductionProduct''.
->
-> Time stamp    Category:COMMAND
->
-> Source: Failed Command
->
-> Number:
->
-> Message: if @@trancount > 0 rollback tran
->
-> Time stamp    Category:NULL
->
-> Source: Microsoft SQL Server Native Client 11.0
->
-> Number: 102
->
+> Time stamp    Connecting to Subscriber<br/>
+> Time stamp    Initializing<br/>
+> Time stamp    Agent message code 102. Incorrect syntax near ''sp_MSins_ProductionProduct''.<br/>
+> Time stamp    Category:COMMAND<br/>
+> Source: Failed Command<br/>
+> Number:<br/>
+> Message: if @@trancount > 0 rollback tran<br/>
+> Time stamp    Category:NULL<br/>
+> Source: Microsoft SQL Server Native Client 11.0<br/>
+> Number: 102<br/>
 > Message: Incorrect syntax near ''sp_MSins_ProductionProduct''.
 
 > [!NOTE]

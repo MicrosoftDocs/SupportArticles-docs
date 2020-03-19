@@ -42,8 +42,6 @@
     href: duplicate-keys-sys-syscommittab-table.md
   - name: Errors when you attach CDC-enabled database
     href: attach-change-data-capture-database.md
-  - name: Errors when you attach CDC-enabled database
-    href: attach-change-data-capture-database.md
   - name: Errors when you create peer-to-peer replication
     href: peer-to-peer-replication-fails.md
   - name: Replication agents can't run
