@@ -5,7 +5,7 @@ ms.date: 03/10/2020
 ms.prod-support-area-path:
 ms.reviewer: V-JEFFBO, jhornick
 ---
-## Interoperability between GDI and GDI+
+# Interoperability between GDI and GDI+
 
 It's sometimes desirable to mix Windows Graphics Device Interface (GDI) and GDI+ drawing operations in the same code path. This article provides tips to help you write code that allows GDI and GDI+ to work together.
 
