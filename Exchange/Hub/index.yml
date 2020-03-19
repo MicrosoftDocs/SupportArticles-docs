@@ -83,7 +83,7 @@ productDirectory:
           text: Outlook for Windows
         - url: /outlook/troubleshoot/mac
           text: Outlook for Mac
-        - url: /outlook/troubleshoot/ios-and-android
+        - url: /outlook/troubleshoot/mobile
           text: Outlook for iOS and Android
         - url: /outlook/troubleshoot/outlook-experts
           text: From the Outlook experts
