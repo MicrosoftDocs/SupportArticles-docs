@@ -34,4 +34,4 @@ Alternatively, you may set the linger timeout value to a value other than 0 - fo
 
 The `closesocket` function and the worker thread function are implemented in the `afd.dll`.
 
-For more background information about linger, see [Graceful Shutdown, Linger Options, and Socket Closure](https://docs.microsoft.com/windows/win32/winsock/graceful-shutdown-linger-options-and-socket-closure-2).
+For more background information about linger, see [Graceful Shutdown, Linger Options, and Socket Closure](/windows/win32/winsock/graceful-shutdown-linger-options-and-socket-closure-2).

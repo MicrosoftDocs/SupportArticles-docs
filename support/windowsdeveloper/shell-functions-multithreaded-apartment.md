@@ -32,4 +32,4 @@ In both of these examples, the component that is attempting to obtain an interfa
 
 ## References
 
-[Process, Threads, and Apartments](https://docs.microsoft.com/windows/win32/com/processes--threads--and-apartments)
+[Process, Threads, and Apartments](/windows/win32/com/processes--threads--and-apartments)

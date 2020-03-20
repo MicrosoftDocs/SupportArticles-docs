@@ -34,8 +34,8 @@ Use `XPS_PASS` instead of `RAW` to pass information directly to the print filter
 
 The `XPS_PASS` datatype was introduced in Windows Vista to pass XPS directly to the print filter pipeline for a v3 XPSDrv driver. That prevents overloading the `RAW` datatype for v3 drivers. `XPS_PASS` has replaced `RAW` for v4 drivers.
 
-- [How To: Send Data Directly to an XPS Printer](https://docs.microsoft.com/windows/win32/printdocs/sending-data-directly-to-an-xps-printer)
+- [How To: Send Data Directly to an XPS Printer](/windows/win32/printdocs/sending-data-directly-to-an-xps-printer)
 
-- [GetPrinterDriver Function](https://docs.microsoft.com/windows/win32/printdocs/getprinterdriver)
+- [GetPrinterDriver Function](/windows/win32/printdocs/getprinterdriver)
 
-- [DRIVER_INFO_8 Structure](https://docs.microsoft.com/windows-hardware/drivers/ddi/winspool/ns-winspool-_driver_info_8a)
+- [DRIVER_INFO_8 Structure](/windows-hardware/drivers/ddi/winspool/ns-winspool-_driver_info_8a)

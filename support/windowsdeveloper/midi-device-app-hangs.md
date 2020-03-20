@@ -52,7 +52,7 @@ To fix this issue, use the new Windows Runtime (WinRT) API functions to replac
 >
 > - The API functions are primarily available to be called from a modern/UWP app.
 > - Such modern APPs can be developed by using C++ language.
-> - There's an option to develop classic user-mode desktop application that consumes WinRT APIs by using the *DualApiPartitionAttribute* attribute. For example, the [MidiInPort Class](https://docs.microsoft.com/uwp/api/Windows.Devices.Midi.MidiInPort#Windows_Devices_Midi_MidiInPort_GetDeviceSelector) lists it.
+> - There's an option to develop classic user-mode desktop application that consumes WinRT APIs by using the *DualApiPartitionAttribute* attribute. For example, the [MidiInPort Class](/uwp/api/Windows.Devices.Midi.MidiInPort#Windows_Devices_Midi_MidiInPort_GetDeviceSelector) lists it.
 
 ## Status
 
@@ -64,9 +64,9 @@ Microsoft has confirmed that this is a problem in Windows 10.
 
 - [MIDI enhancements in Windows 10](https://blogs.windows.com/buildingapps/2016/09/21/midi-enhancements-in-windows-10/)
 
-- [Windows.​Devices.​Midi Namespace](https://docs.microsoft.com/uwp/api/windows.devices.midi)
+- [Windows.​Devices.​Midi Namespace](/uwp/api/windows.devices.midi)
 
-- [How to enumerate MIDI devices and send and receive MIDI messages from a UWP app](https://docs.microsoft.com/windows/uwp/audio-video-camera/midi)
+- [How to enumerate MIDI devices and send and receive MIDI messages from a UWP app](/windows/uwp/audio-video-camera/midi)
 
 - [A MIDI sample shows how to use the Windows.Devices.Midi API in a Windows Runtime app](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MIDI)
 

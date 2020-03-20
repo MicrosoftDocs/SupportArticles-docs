@@ -121,12 +121,10 @@ for(;;)
 void CALLBACK WinEventProc(HWINEVENTHOOK hWinEventHook, DWORD eventId, HWND hwnd, LONG idObject, LONG idChild, DWORD dwEventThread, DWORD dwmsEventTime)
 
 {
-
     ... process winevent here ...
 
     // Before we return, check if posted messages were received during this
     // callback. If so, fire the event to ensure that we do process them.
-
     MSG msg;
 
     if(PeekMessage(&msg, (HWND)-1, WM_USER + 1, WM_USER + 2, PM_NOREMOVE | PM_QS_POSTMESSAGE))

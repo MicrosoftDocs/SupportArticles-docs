@@ -33,4 +33,4 @@ To work around this issue, update the graphics driver to support a hardware curs
 
 The graphics driver developer can emulate a hardware cursor by saving the background of the pointer image and performing a bit-block transfer of the pointer shape into the frame buffer. This method is used in the Microsoft Basic Display Adapter driver but was removed from the Display Only sample driver in the Windows Driver Kit (WDK).
 
-For more information about DXGI, see [DXGI Overview](https://docs.microsoft.com/windows/win32/direct3ddxgi/d3d10-graphics-programming-guide-dxgi).
+For more information about DXGI, see [DXGI Overview](/windows/win32/direct3ddxgi/d3d10-graphics-programming-guide-dxgi).

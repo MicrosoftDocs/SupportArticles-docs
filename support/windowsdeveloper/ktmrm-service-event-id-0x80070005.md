@@ -30,7 +30,7 @@ During System Restore operations the Microsoft Distributed Transaction Coordinat
 
 The access denied error (0x80070005) in the Microsoft-Windows-MSDTC event ID 4448 is returned from the `OpenSCManager` function that's invoked by the MSDTC proxy. During the process of recovering transactions, a registry check fails because the application process identity is a domain account in the Users group and doesn't have permissions to access the registry. When this registry check fails, the recovery will call `OpenSCManager`, which also fails because of permission issues. The MSDTC proxy specifies `SC_MANAGER_CONNECT` and `SC_MANAGER_QUERY_LOCK_STATUS` as desired access rights to the `OpenSCManager` function. However, the domain account in the Users group doesn't have the `SC_MANAGER_QUERY_LOCK_STATUS` access right. Therefore, `OpenSCManager` function fails.
 
-For more information about the `SC_MANAGER_QUERY_LOCK_STATUS` access right, please see [Service Security and Access Rights](https://docs.microsoft.com/windows/win32/services/service-security-and-access-rights).
+For more information about the `SC_MANAGER_QUERY_LOCK_STATUS` access right, please see [Service Security and Access Rights](/windows/win32/services/service-security-and-access-rights).
 
 ## Workaround
 
@@ -62,4 +62,4 @@ To change the access right, follow the steps below:
 
 This workaround will ensure the user has the `SC_MANAGER_CONNECT` and `SC_MANAGER_QUERY_LOCK_STATUS` access rights to the SCM.
 
-For more information, see [Troubleshooting MSDTC Permission Issues When a Distributed Transaction Starts](https://docs.microsoft.com/archive/blogs/distributedservices/troubleshooting-msdtc-permission-issues-when-a-distributed-transaction-starts).
+For more information, see [Troubleshooting MSDTC Permission Issues When a Distributed Transaction Starts](/archive/blogs/distributedservices/troubleshooting-msdtc-permission-issues-when-a-distributed-transaction-starts).
