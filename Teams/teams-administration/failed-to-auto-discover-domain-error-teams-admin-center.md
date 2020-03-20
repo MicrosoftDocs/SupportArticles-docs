@@ -32,7 +32,7 @@ The following situations might cause this error to occur.
 
 ### SIPDomain is not enabled in the tenant
 
-This issue can be resolved by following these steps below:
+This issue can be resolved by following these steps:
  
 1. Connect to Skype for Business Online with PowerShell:
 
