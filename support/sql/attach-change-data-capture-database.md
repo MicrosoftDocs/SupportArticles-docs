@@ -31,4 +31,4 @@ Error message
 
 To resolve this issue, run `sp_cdc_vupgrade` after you attach a database on an instance of SQL Server 2016 or SQL Server 2017 on Windows that has `Change Data Capture` enabled.
 
-For more information, see [Attach a database](https://docs.microsoft.com/sql/relational-databases/databases/attach-a-database).
+For more information, see [Attach a database](/sql/relational-databases/databases/attach-a-database).

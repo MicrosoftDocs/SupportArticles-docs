@@ -29,7 +29,7 @@ To resolve the factors that cause the duplicate keys, apply one of the following
 
 - [FIX: A backup operation on a SQL Server 2008 or SQL Server 2008 R2 database fails if you enable change tracking on this database](https://support.microsoft.com/help/2522893)
 
-- [FIX: Backup fails in SQL Server 2008, SQL Server 2008 R2, or SQL Server 2012 if you enable change tracking on the database](https://support.microsoft.com/kb/2603910) 
+- [FIX: Backup fails in SQL Server 2008, SQL Server 2008 R2, or SQL Server 2012 if you enable change tracking on the database](https://support.microsoft.com/kb/2603910)
 
 - [FIX: Backup operation fails in a SQL Server 2008, SQL Server 2008 R2, or SQL Server 2012 database after you enable change tracking](https://support.microsoft.com/kb/2682488)
 
@@ -41,7 +41,7 @@ Although these fixes prevent duplicate key rows from continuing to appear, they 
 2. Issue a manual database Checkpoint.
 3. Enable change tracking on the affected database and tables.
 
-For more information about change tracking, see [Enable and disable change tracking](https://docs.microsoft.com/sql/relational-databases/track-changes/enable-and-disable-change-tracking-sql-server). For issuing a manual Checkpoint, see [CHECKPOINT (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/language-elements/checkpoint-transact-sql).
+For more information about change tracking, see [Enable and disable change tracking](/sql/relational-databases/track-changes/enable-and-disable-change-tracking-sql-server). For issuing a manual Checkpoint, see [CHECKPOINT (Transact-SQL)](/sql/t-sql/language-elements/checkpoint-transact-sql).
 
 ## Manually delete the duplicate rows
 
@@ -61,7 +61,7 @@ If you're running SQL Server 2014, you must grant the per-Service SID full contr
     - `*Read`
 
 4. Grant the SQL Server service per-Service SID Full Control, and then close the permissions dialog boxes.
-5. Start SQL Server in Single-User mode. For more information, see [Start SQL Server in Single-User mode](https://docs.microsoft.com/sql/database-engine/configure-windows/start-sql-server-in-single-user-mode).
+5. Start SQL Server in Single-User mode. For more information, see [Start SQL Server in Single-User mode](/sql/database-engine/configure-windows/start-sql-server-in-single-user-mode).
 6. Use a `sqlcmd` command line to connect to SQL Server under the Dedicated Administrator Connection (DAC). For example:
 
     ```console

@@ -35,7 +35,7 @@ To work around this problem, use one of the following methods:
   
   - You can specify this while you are creating replication agents.
   - You have to make sure all permissions touch points are taken care of.
-  - The procedure to change the security settings for already-created replication agents can be found at [View and modify replication security settings](https://docs.microsoft.com/sql/relational-databases/replication/security/view-and-modify-replication-security-settings).
+  - The procedure to change the security settings for already-created replication agents can be found at [View and modify replication security settings](/sql/relational-databases/replication/security/view-and-modify-replication-security-settings).
 
 - Use registry settings to increase the desktop heap size.
   
@@ -52,7 +52,7 @@ To work around this problem, use one of the following methods:
 - Change the replication agents from running continuously to running on a scheduled basis.
   
   - This makes sure that the replication agents run only when it's necessary, and not to stay idle constantly (because this wastes resources).
-  - Instructions about how to change the replication agent schedule are available at [Specify synchronization schedules](https://docs.microsoft.com/sql/relational-databases/replication/specify-synchronization-schedules).
+  - Instructions about how to change the replication agent schedule are available at [Specify synchronization schedules](/sql/relational-databases/replication/specify-synchronization-schedules).
 
 - Change the server location on which the replication agents are running.
   
@@ -140,7 +140,7 @@ We recommend that the desktop heap use remain between 80 percent and 90 percent.
 
 1. Download [Debugging Tools for Windows as part of the SDK](https://developer.microsoft.com/windows/downloads/sdk-archive/).
 2. Run `Sdksetup.exe`, and then install Debugging Tools for Windows.
-3. [Download LiveKD](https://docs.microsoft.com/sysinternals/downloads/livekd).
+3. [Download LiveKD](/sysinternals/downloads/livekd).
 4. Create a `C:\debugger` folder.
 5. Copy all the files from the location where you installed the debugging tools to `C:\debugger`. The default path is `C:\Program Files (x86)\Windows Kits\8.0\Debuggers\x64`.
 6. Extract LiveKD to `C:\debugger`.
@@ -173,7 +173,6 @@ We recommend that the desktop heap use remain between 80 percent and 90 percent.
     System Uptime:
     Loading Kernel Symbols
     ...............................................................
-    ..............................................................
     Loading User Symbols
     ...................................................
     Loading unloaded module list

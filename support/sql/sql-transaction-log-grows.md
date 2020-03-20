@@ -98,7 +98,7 @@ REPLICATION <your_cdc_database>
     DBCC SHRINKFILE (yourcdcdatabase_log, 1024)
     ```
 
-For more information, see [Manage the size of the transaction log file](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms365418(v=sql.110)).
+For more information, see [Manage the size of the transaction log file](/previous-versions/sql/sql-server-2012/ms365418(v=sql.110)).
 
 ## More information
 

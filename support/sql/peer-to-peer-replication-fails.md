@@ -53,15 +53,10 @@ This problem occurs when you add articles to an existing peer-to-peer publicatio
 
 ```sql
  exec sp_addarticle @publication = N'Products', @article = N'Product', @source_owner = N'Production', @source_object = N'Product',
-
  ...
-
  @ins_cmd = N'CALL [dbo].[sp_MSins_ProductionProduct]',
-
  @del_cmd = N'CALL [dbo].[sp_MSdel_ProductionProduct]',
-
  @upd_cmd = N'SCALL [dbo].[sp_MSupd_ProductionProduct]'
-
  GO
 ```
 
@@ -80,7 +75,7 @@ To fix this problem, follow these steps:
 
 The tables and data determine which option you should choose. If the broken tables represent a large part of the database, and the data includes changes, we recommend that you try to rebuild the peer-to-peer environment through a fresh backup-restore process, and that you use the peer-to-peer wizard to re-create the topology.
 
-Corrected Syntax
+Corrected syntax
 
 ```sql
 @ins_cmd = N'CALL [sp_MSins_ProductionProduct]',
