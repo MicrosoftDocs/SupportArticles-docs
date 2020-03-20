@@ -20,7 +20,7 @@ ms.reviewer: prbalusu
 description: Methods to resolve the error FAILED_TO_AUTO_DISCOVER_DOMAIN in the Microsoft Teams admin center. 
 ---
 
-# "FAILED_TO_AUTO_DISCOVER_DOMAIN" error in Microsoft Teams admin center
+# FAILED_TO_AUTO_DISCOVER_DOMAIN error in Microsoft Teams admin center
 
 ## Summary
 
