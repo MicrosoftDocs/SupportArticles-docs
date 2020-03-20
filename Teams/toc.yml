@@ -3,6 +3,8 @@
   items:
   - name: Administration
     items:
+    - name: "FAILED_TO_AUTO_DISCOVER_DOMAIN" error in Microsoft Teams admin center
+      href: ../teams-administration/FAILED_TO_AUTO_DISCOVER_DOMAIN error in Microsoft Teams admin center.md
     - name: Include or exclude Teams from antivirus or DLP applications
       href: ./teams-administration/include-exclude-teams-from-antivirus-dlp.md
   - name: Conferencing
