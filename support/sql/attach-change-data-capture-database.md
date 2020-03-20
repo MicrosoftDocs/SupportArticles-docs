@@ -18,7 +18,8 @@ You detach a database with `Change Data Capture` enabled on SQL Server 2014 or a
 Command
 
 ```sql
-EXEC sys.sp_cdc_enable_table @source_schema='<schema name>', @source_name='<source name>', @role_name='<role name>',  
+EXEC sys.sp_cdc_enable_table @source_schema='<schema name>',
+@source_name='<source name>', @role_name='<role name>',  
 @supports_net_changes=1, @allow_partition_switch=0;
 ```
 

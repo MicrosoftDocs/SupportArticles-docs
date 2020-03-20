@@ -75,7 +75,10 @@ If you're running SQL Server 2014, you must grant the per-Service SID full contr
 ## Transact-SQL script
 
 ```sql
---Create a temporary database to store the necessary rows  required to remove the duplicate data
+/*
+Create a temporary database to store the necessary rows
+required to remove the duplicate data
+*/
 if exists(select 1 from sys.databases where name = 'dbChangeTrackingMetadata')
 begin
 drop database dbChangeTrackingMetadata
@@ -96,7 +99,9 @@ commit_ts bigint
 )
 go
 
---Table to store the duplicate rows to be removed from   the sys.syscommittab table
+/*Table to store the duplicate rows to be removed from the
+ sys.syscommittab table
+*/
 create table dbo.t_syscommittab (
 commit_ts bigint
 ,xdes_id bigint
@@ -135,7 +140,8 @@ set @rowcount = @@rowcount
 if (@rowcount > 0)
 begin
 print ''
-print 'DELETED '+CAST(@rowcount as NVARCHAR(10))+' rows from sys.syscommittab that were also stored in SYSCOMMITTABLE'
+print 'DELETED '+CAST(@rowcount as NVARCHAR(10))+
+' rows from sys.syscommittab that were also stored in SYSCOMMITTABLE'
 print ''
 end
 else
