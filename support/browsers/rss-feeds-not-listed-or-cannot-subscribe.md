@@ -17,7 +17,6 @@ _Original KB number:_ &nbsp; 926448
 In Windows Internet Explorer, you subscribe to Really Simple Syndication (RSS) feeds. Then, you may experience one or more of the following issues:
 
 - The RSS feeds to which you subscribe are not listed in Internet Explorer.
-
 - You cannot subscribe to RSS feeds in Internet Explorer.
 
 ## Cause
@@ -25,11 +24,8 @@ In Windows Internet Explorer, you subscribe to Really Simple Syndication (RSS) f
 These issues may occur for one of the following reasons:
 
 - The feed storage file is corrupted.
-
 - An issue exists with the user profile.
-
 - An issue exists with a browser add-on.
-
 - A proxy server may be redirecting the form authentication page when you try to subscribe to feeds.
 
 ## Resolution
@@ -42,25 +38,28 @@ To resolve issues with missing feeds or to resolve issues when you try to subscr
 
 3. Log on as a different user, and test the feed. If the issue is resolved, you can use the new user profile to work with RSS feeds.
 
-4. If the issue continues, test in the Internet Explorer (No Add-ons) mode. To do this, follow these steps:  
+4. If the issue continues, test in the Internet Explorer (No Add-ons) mode. To do this, follow these steps:
+
    1. Click **Start**, point to **All Programs**, point to **Accessories**, and then point to **System Tools**.
+
    2. Click **Internet Explorer (No Add-ons)**.
 
    > [!NOTE]
    > If the issue is resolved in this mode, use the **Manage Add-ons** option that is available in the **Tools** menu to isolate the specific browser add-ons that are causing the issue.
 
-5. If the issue continues, remove and reimport the RSS feeds. To do this, follow these steps:  
+5. If the issue continues, remove and reimport the RSS feeds. To do this, follow these steps:
+
    1. Export the feeds on the computer to a file. For more information about how to export RSS feeds, see the [How to import or export RSS feeds](#how-to-import-or-export-rss-feeds) section.
 
    2. Close Internet Explorer.
 
    3. Remove the RSS feeds by removing the files from the following folder:  
-      %userprofile% \Local Settings\Application Data\Microsoft\Feeds
+      `%userprofile% \Local Settings\Application Data\Microsoft\Feeds`
 
    4. Open Internet Explorer, and then add one feed from a trusted Web site.
-  
+
    5. Verify that the RSS feed from a trusted Web site is working correctly.
-  
+
    6. Import the feeds from the file that you exported in step 5a earlier in this section. These are the feeds to which you previously subscribed. For more information about how to import RSS feeds, see the [How to import or export RSS feeds](#how-to-import-or-export-rss-feeds) section.
 
 6. If you have determined that the proxy server is redirecting the form authentication page, you may be able to change the proxy setting to return the feeds.
