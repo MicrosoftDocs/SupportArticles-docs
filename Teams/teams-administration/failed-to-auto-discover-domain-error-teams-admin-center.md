@@ -10,7 +10,7 @@ ms.prod: Teams
 localization_priority: Normal
 search.appverid:
 - SPO160
-- MET150
+- MET150'
 appliesto:
 - Microsoft Teams
 ms.custom: 
@@ -52,7 +52,7 @@ The domain should have at least one user licensed for Skype for Business or Team
 
 To assign a license:
 
-1. Sign in to [portal.office.com](portal.office.com).
+1. Sign in to https://portal.office.com.
 2. Navigate to **Admin** and then **Users**.
 3. Select **Active users** and then **Product license**.
 4. Select **Edit** and then select **Turn on Skype for Business license**.
