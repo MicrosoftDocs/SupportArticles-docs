@@ -89,8 +89,6 @@ Assume that you intend to join a multicast group by running code that's similar 
 int main(int argc, char* argv[])
 {
    ...
-   ...
-   ...
    if (setsockopt(sock, 
                   IPPROTO_IP, 
                   IP_ADD_MEMBERSHIP, 
@@ -101,8 +99,6 @@ int main(int argc, char* argv[])
       closesocket (sock);
       return FALSE;
    }
-   ...
-   ...
    ...
 }
 ```
@@ -130,8 +126,6 @@ int main(int argc, char* argv[])
 {
    int ttl = 7 ; // Arbitrary TTL value.
    ...
-   ...
-   ...
    source_sin.sin_family = AF_INET;
    source_sin.sin_port = htons(0);
    source_sin.sin_addr.s_addr = htonl (INADDR_ANY);
@@ -139,25 +133,23 @@ int main(int argc, char* argv[])
     if (bind(sock,
                 (struct sockaddr FAR *)&source_sin, 
                 sizeof(source_sin)) == SOCKET_ERROR) 
-       {
-          printf ("bind() failed: %d"), WSAGetLastError());
-          closesocket (sock);
-          return FALSE;
-       }
+    {
+        printf ("bind() failed: %d"), WSAGetLastError());
+        closesocket (sock);
+        return FALSE;
+    }
 
     if (setsockopt(sock,
                       IPPROTO_IP,
                       IP_MULTICAST_TTL,
                       (char *)&ttl,
                       sizeof(ttl))) == SOCKET_ERROR)
-       {
-          printf ("setsockopt failed: %d"), WSAGetLastError());
-          closesocket (sock);
-          return FALSE;
-       }
-       ...
-       ...
-       ...
+    {
+        printf ("setsockopt failed: %d"), WSAGetLastError());
+        closesocket (sock);
+        return FALSE;
+    }
+    ...
 }
 ```
 
