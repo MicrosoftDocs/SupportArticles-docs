@@ -69,4 +69,6 @@ To resolve this issue, follow the guidance in [Skype for Business Online and Mic
 
 For Skype for Business and Teams interoperability, [a Skype for Business hybrid model is required](https://docs.microsoft.com/microsoftteams/migration-interop-guidance-for-teams-with-skype).
 
-This error can result from any ongoing service incident. For a list of current incidents, see your [service health dashboard](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/servicehealth).
+### The result of an ongoing service incident
+
+This error can also result from any ongoing service incident. For a list of current incidents, see your [service health dashboard](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/servicehealth).
