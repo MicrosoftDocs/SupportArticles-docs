@@ -181,7 +181,7 @@ We recommend that the desktop heap use remain between 80 percent and 90 percent.
 
 10. Run `!dskheap` to receive the following output:
 
-    ````console
+    ```console
     kd> !dskheap
     *** ERROR: Module load completed but symbols could not be loaded for LiveKdD.SYS
     Winstation\Desktop            Heap Size(KB)   Used Rate(%)
