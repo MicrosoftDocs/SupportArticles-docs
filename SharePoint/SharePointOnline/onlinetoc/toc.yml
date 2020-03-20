@@ -83,6 +83,8 @@
       href: ../lists-and-libraries/cannot-check-in-multiple-items.md
     - name: Can't open documents in a local client from Chrome
       href: ../../SharePointServer/lists-and-libraries/cant-open-sp-documents-from-chrome.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
+    - name: Can't share/break inheritance of a folder, list, or library
+      href: ../lists-and-libraries/error-share-break-inheritance.md
     - name: Can't sync files or folders
       href: ../lists-and-libraries/cannot-sync-files-folders.md
     - name: Changes to default versioning setting for document libraries
@@ -209,6 +211,8 @@
       href: ../sharing-and-permissions/cannot-access-shared-folder.md
     - name: Can't add external users to a SharePoint Online External Content Type
       href: ../sharing-and-permissions/cannot-add-external-users-to-content-type.md
+    - name: Can't share/break inheritance of a folder, list, or library
+      href: ../lists-and-libraries/error-share-break-inheritance.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Creator of teams group is listed as an admin
       href: ../sharing-and-permissions/fails-retrieving-teams-group-owner.md
     - name: Credential prompts after resting mouse pointer over a user name
