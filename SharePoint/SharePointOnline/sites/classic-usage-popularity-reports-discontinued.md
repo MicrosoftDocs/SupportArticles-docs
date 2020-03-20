@@ -35,7 +35,7 @@ The data from the classic popularity reports will not be available after Februar
 
 Site usage data for classic sites will no longer be available in popularity reports starting on March 1, 2020. Instead, you can get site usage data from the modern **Site Usage** page. 
 
-To get usage reports for individual items (list items, documents), you can use the [GetItemAnalytics Graph API](https://docs.microsoft.com/en-us/graph/api/itemanalytics-get?view=graph-rest-1.0).
+To get usage reports for individual items (list items, documents), you can use the [GetItemAnalytics Graph API](https://docs.microsoft.com/graph/api/itemanalytics-get?view=graph-rest-1.0).
 
 To see the page, select **Site settings** > **Popularity trends** > **Usage**. You can access usage data for the last 90 days.
 
@@ -44,3 +44,7 @@ Usage data on the modern **Site Usage** page may not exactly match the classic p
 ## Have questions?
 
 Please submit your feedback or questions to Message Center post 195889 (MC195889), in the Message Center.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

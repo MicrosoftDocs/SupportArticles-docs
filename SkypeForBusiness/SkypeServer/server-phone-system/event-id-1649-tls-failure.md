@@ -69,3 +69,7 @@ So recommendation is:
 1. Disabled the Start up mode to use TCP 4) Now remove the old cert and assigned a new certificate for UM & UM callrouterservice 
 1. Assign the certificate with UM services 
 1. Change start up mode back to TLS
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

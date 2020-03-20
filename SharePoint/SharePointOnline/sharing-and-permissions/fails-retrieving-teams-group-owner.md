@@ -44,3 +44,5 @@ To fix this issue, follow these steps:
 ## More information
 
 Microsoft is aware of the issue and working to improve the user experience.
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

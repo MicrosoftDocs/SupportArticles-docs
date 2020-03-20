@@ -108,3 +108,5 @@ The main aspect to consider is for other certificates that are used on the compu
    - For CAPI2 Diagnostics, the log can grow in size quickly, and we recommend that you increase the log size to at least 4 megabytes (MB) to capture relevant events. To increase the log size, right-click **Operational**, and then select **Properties**. In the log properties, increase the maximum log size.  
 
      **Note** The default size for the event log is 1 MB.     
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

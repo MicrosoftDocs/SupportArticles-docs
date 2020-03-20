@@ -57,3 +57,7 @@ This behavior is a by-design change in the behavior of Skype for Business 2015 a
 ## Workaround
 
 To work around this issue and restore the emoticon functionality, close the current chat window, and then start a new chat session.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

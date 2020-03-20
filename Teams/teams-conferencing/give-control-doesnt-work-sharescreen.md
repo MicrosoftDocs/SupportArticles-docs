@@ -1,6 +1,6 @@
 ---
-title: Give control doesn’t work when you share screen in Teams
-description: This article describes an issue in which drop-down for Give control doesn’t work when you share screen in Teams desktop client. Provides a resolution.
+title: Give control doesn't work when you share screen in Teams
+description: This article describes an issue in which drop-down for Give control doesn't work when you share screen in Teams desktop client. Provides a resolution.
 author: TobyTu
 ms.author: sarvdon
 manager: dcscontentpm
@@ -16,11 +16,11 @@ appliesto:
 - Microsoft Teams
 ---
 
-# "Give Control" doesn’t work when you share a screen in Teams
+# "Give Control" doesn't work when you share a screen in Teams
 
 ## Symptoms
 
-You share a screen with another user on the Microsoft Teams desktop client, and the other user requests control of your screen. In this situation, you see the user's request on the Sharing toolbar. However, you do not see an option to approve or deny the request. Even the Give Control drop-down menu doesn’t react when you try to open it.
+You share a screen with another user on the Microsoft Teams desktop client, and the other user requests control of your screen. In this situation, you see the user's request on the Sharing toolbar. However, you do not see an option to approve or deny the request. Even the Give Control drop-down menu doesn't react when you try to open it.
 
 ## Cause
 
@@ -37,3 +37,5 @@ When this issue occurs, you can see the following information in Teams client lo
 ```
 info -- [screenSharing][control] appSharingToolbar: AppSharingToolbar created with hardware acceleration: false
 ```
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

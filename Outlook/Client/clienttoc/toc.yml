@@ -14,7 +14,7 @@
   - name: Diagnostics
     items:
     - name: Install SaRA from network share
-      href: /office365/troubleshoot/installation/install-sara-from-network-share
+      href: /office365/troubleshoot/installation/install-sara-from-network-share?context=/outlook/troubleshoot/context/context
   - name: Domain Management
     items:
     - name: Remove automapping for shared mailbox

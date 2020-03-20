@@ -66,3 +66,5 @@ For more details on using the Office Communications Server LcsCmd.exe CheckFores
 
 Microsoft Office Communications Server 2007 R2
 [Forest Preparation Commands](https://technet.microsoft.com/library/dd573032(office.13).aspx)
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

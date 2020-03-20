@@ -40,7 +40,7 @@
     - name: Operations Manager APM Agent causes heap corruption
       href: ../administration/system-center-2016-operations-manager-apm-agent-causing-heap-corruption.md
     - name: Presence information doesn't show
-      href: ../../SharePointOnline/administration/presence-information-fails-showing.md
+      href: ../../SharePointOnline/administration/presence-information-fails-showing.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Provider-hosted add-ins stop working and HTTP 401 error with hybrid features
       href: ../administration/provider-hosted-add-ins-stop-working-and-http-401-error-after-configure-farm-hybrid-features.md
     - name: Remove assembly reference from Sandbox solution
@@ -58,7 +58,7 @@
   - name: InfoPath
     items:
     - name: Differences of InfoPath Forms Services
-      href: ../../SharePointOnline/InfoPath/infopath-forms-services.md
+      href: ../../SharePointOnline/InfoPath/infopath-forms-services.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
   - name: Installation and Setup
     items:
     - name: Block OneDrive.exe from being advertised with Office 2016
@@ -84,17 +84,17 @@
     - name: Can't save documents in a document library
       href: ../lists-and-libraries/cant-save-file-in-document-library.md
     - name: Content Organizer doesn't comply with specified interval
-      href: ../../SharePointOnline/lists-and-libraries/content-organizer-not-comply-with-interval.md
+      href: ../../SharePointOnline/lists-and-libraries/content-organizer-not-comply-with-interval.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Error when view or edit in Word or PowerPoint Online
-      href: ../../SharePointOnline/lists-and-libraries/error-when-view-or-edit-in-browser.md
+      href: ../../SharePointOnline/lists-and-libraries/error-when-view-or-edit-in-browser.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Feature id isn't assigned when saving a list as a template
       href: ../lists-and-libraries/feature-id-not-assigned-when-saving-a-list-as-template.md
     - name: IFilter alternative to the native PDF parser
       href: ../lists-and-libraries/ifilter-alternative-to-the-native-pdf-parser.md
     - name: Information about dragging files into document libraries
-      href: ../../SharePointOnline/lists-and-libraries/dragging-files-using-web-browser.md
+      href: ../../SharePointOnline/lists-and-libraries/dragging-files-using-web-browser.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Per-location view settings don't work at the folder level
-      href: ../../SharePointOnline/lists-and-libraries/per-location-view-settings-fail-working.md
+      href: ../../SharePointOnline/lists-and-libraries/per-location-view-settings-fail-working.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Problems opening Office documents from SharePoint
       href: ../lists-and-libraries/problems-open-files-from-sharepoint.md
     - name: Property doesn't exist
@@ -108,7 +108,7 @@
     - name: Slide Library toolbar is unavailable for certain installations
       href: ../lists-and-libraries/slide-library-toolbar-not-available.md
     - name: The URL <file name> is invalid when uploading a file
-      href: ../../SharePointOnline/lists-and-libraries/url-invalid-upload-file-to-list.md
+      href: ../../SharePointOnline/lists-and-libraries/url-invalid-upload-file-to-list.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
   - name: Migration Tool
     items:
     - name: Products Preparation Tool may not progress past
@@ -126,11 +126,11 @@
     - name: Crawler has insufficient permissions
       href: ../Search/crawler-has-insufficient-permissions.md
     - name: Document preview and content type icon aren't displayed
-      href: ../../SharePointOnline/Search/content-type-icon-not-display.md
+      href: ../../SharePointOnline/Search/content-type-icon-not-display.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Incomplete search results for choice type columns with multiple values
       href: ../search/incomplete-search-results-for-choice-type-columns-with-multiple-values.md
     - name: Near-duplicate items aren't listed in SharePoint Online or SharePoint Server 2013 on-premises search results
-      href: ../../SharePointOnline/search/near-duplicate-items-are-not-listed-in-search-results.md
+      href: ../../SharePointOnline/search/near-duplicate-items-are-not-listed-in-search-results.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Privileges don't exist in service account configuration
       href: ../search/privilege-not-exist-service-account-configuration.md
   - name: Security
@@ -142,7 +142,7 @@
     - name: Issue when changing an alternate access mapping
       href: ../security/update-conflict-when-modify-or-delete-alternate-access-mapping.md
     - name: Migrated accounts aren't resolved
-      href: ../../SharePointOnline/Security/migrated-user-name-resolution-fails.md
+      href: ../../SharePointOnline/Security/migrated-user-name-resolution-fails.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Re-create the local Trusted Root Authority
       href: ../security/how-to-recreate-the-local-trusted-root-authority.md
     - name: Server Error in '/' Application. Access to the path is denied
@@ -154,19 +154,19 @@
     - name: Anonymous users can't open XLSX files from a document library
       href: ../sharing-and-permissions/anonymous-users-cannot-open-xlsx-files-from-a-document-library.md
     - name: Issue with activate or deactivate the Publishing feature
-      href: ../../SharePointOnline/sharing-and-permissions/activating-publishing-feature-access-error.md
+      href: ../../SharePointOnline/sharing-and-permissions/activating-publishing-feature-access-error.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: People Picker field embedded doesn't show "Add People"
       href: ../sharing-and-permissions/picker-field-embedded-does-not-show-add-people.md
     - name: Prompted for credentials when opening documents anonymously
       href: ../sharing-and-permissions/receive-credentials-prompting.md
     - name: Required permissions for managing Secure Store Service
-      href: ../../SharePointOnline/sharing-and-permissions/managing-secure-store-service-app-permissions.md
+      href: ../../SharePointOnline/sharing-and-permissions/managing-secure-store-service-app-permissions.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: SharePoint identity and permission issues in two-way domain trust
       href: ../sharing-and-permissions/identity-and-permission-issues-in-two-way-domain-trust.md
   - name: Sites
     items:
     - name: '"HTTP request is unauthorized" error'
-      href: ../../SharePointOnline/Sites/calendar-overlay-unsupported.md
+      href: ../../SharePointOnline/Sites/calendar-overlay-unsupported.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: '"Something went wrong" when accessing a site'
       href: ../sites/something-went-wrong-when-access-site.md
     - name: '"Sync to SharePoint Workspace" is not available'
@@ -180,11 +180,11 @@
     - name: Error when starting Groove or SharePoint Workspace
       href: ../sites/cant-start-groove-or-sharepoint.md
     - name: Issue when saving a site as a template
-      href: ../../SharePointOnline/Sites/fails-saving-site-as-template.md
+      href: ../../SharePointOnline/Sites/fails-saving-site-as-template.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Modified dates on the SharePoint site contents page are not accurate
       href: ../lists-and-libraries/modified-date-site-contents-not-accurate.md
     - name: Rich Text fields don't respond
-      href: ../../SharePointOnline/Sites/rich-text-fields-fails-responding.md
+      href: ../../SharePointOnline/Sites/rich-text-fields-fails-responding.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Site slowness because of STS certificate CRL checking
       href: ../sites/site-slowness-because-of-sts-certificate-crl-checking.md
     - name: Using PageParserPath directive can cause performance problems
@@ -200,7 +200,7 @@
   - name: Web Parts
     items:
     - name: A list view Web Part for a tasks list doesn't filter values
-      href: ../../SharePointOnline/Web-parts/list-view-web-part-not-filter-values.md
+      href: ../../SharePointOnline/Web-parts/list-view-web-part-not-filter-values.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: A Web Part never finishes refreshing
       href: ../web-parts/web-part-refresh-in-sharepoint-foundation-2010.md
     - name: Issue on a site page with pages library web part
@@ -212,30 +212,30 @@
   - name: Workflows
     items:
     - name: '"Access denied" error with an Approval Workflow task'
-      href: ../../SharePointOnline/workflows/access-denied-when-approve-workflow-task.md
+      href: ../../SharePointOnline/workflows/access-denied-when-approve-workflow-task.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: '"Access Denied" when a workflow sends an email'
       href: ../workflows/access-denied-error-sharepoint-2010-when-workflow-sends-email-to-group.md
     - name: A response was returned that didn't come
       href: ../workflows/response-returned-did-not-come-from-workflow-manager-error.md
     - name: A workflow doesn't complete
-      href: ../../SharePointOnline/Workflows/workflow-using-impersonation-step-fails-completed.md
+      href: ../../SharePointOnline/Workflows/workflow-using-impersonation-step-fails-completed.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: A workflow doesn't execute
-      href: ../../SharePointOnline/Workflows/workflow-lookup-fails-executing.md
+      href: ../../SharePointOnline/Workflows/workflow-lookup-fails-executing.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Can't create workflows
       href: ../workflows/unable-to-create-or-edit-sharepoint-2013-workflow-sharepoint-designer.md
     - name: Publishing Approval workflow doesn't automatically start
-      href: ../../SharePointOnline/Workflows/publishing-approval-workflow-fails-starting.md
+      href: ../../SharePointOnline/Workflows/publishing-approval-workflow-fails-starting.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Replace List Item Permissions action fails
-      href: ../../SharePointOnline/Workflows/replace-list-item-permission-fail.md
+      href: ../../SharePointOnline/Workflows/replace-list-item-permission-fail.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Workflow can't send email to groupfrom initiation form
       href: ../workflows/workflow-cannot-send-email-to-group.md
     - name: Workflow contains blank values in output
-      href: ../../SharePointOnline/Workflows/workflow-contains-blank-values.md
+      href: ../../SharePointOnline/Workflows/workflow-contains-blank-values.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Workflow issues after connecting to a site
-      href: ../../SharePointOnline/Workflows/connecting-site-workflow-problems.md
+      href: ../../SharePointOnline/Workflows/connecting-site-workflow-problems.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Workflow platform creates Word files that can't be opened
-      href: ../../SharePointOnline/Workflows/workflow-platform-created-word-fails-opening.md
+      href: ../../SharePointOnline/Workflows/workflow-platform-created-word-fails-opening.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Workflow timer job is stuck at "Pausing"
       href: ../workflows/workflow-timer-job-is-stuck-at-pausing.md
     - name: Workflows aren't available for IRM policies
-      href: ../../SharePointHybrid/Workflows/irm-policies-fails-sharepoint-workflows-visible.md
+      href: ../../SharePointHybrid/Workflows/irm-policies-fails-sharepoint-workflows-visible.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json

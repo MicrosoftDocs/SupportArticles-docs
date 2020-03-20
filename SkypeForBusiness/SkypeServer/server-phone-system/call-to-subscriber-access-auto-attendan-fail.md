@@ -56,3 +56,7 @@ To work around this problem, move the Subscriber Access or Auto Attendant contac
 ## Status
 
 Microsoft is aware of this problem and is currently investigating it.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

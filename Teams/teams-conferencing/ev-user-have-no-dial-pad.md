@@ -22,7 +22,7 @@ search.appverid:
 
 ## Symptom
 
-Assume that a user has been moved to Teams Only mode. The user is enabled for Enterprise Voice, and is assigned the correct licenses. However, the user can’t see a dial pad in the **Calls** screen in Microsoft Teams. Therefore, this user cannot make outbound calls to external phone numbers.
+Assume that a user has been moved to Teams Only mode. The user is enabled for Enterprise Voice, and is assigned the correct licenses. However, the user can't see a dial pad in the **Calls** screen in Microsoft Teams. Therefore, this user cannot make outbound calls to external phone numbers.
 
 ## Cause
 
@@ -41,3 +41,7 @@ Grant-CsOnlineVoiceRoutingPolicy -Identity "Ken Myer" -PolicyName "RedmondOnline
 ```
 
 These actions force an update of the policy in the back-end environment of Teams. After this change is made, the user should see the dial pad appear under **Calls** within four hours.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

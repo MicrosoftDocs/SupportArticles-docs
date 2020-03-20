@@ -95,3 +95,5 @@ Use the following steps to make sure that the Lync Server User Replicator initia
 ## More Information
 
 After the Lync Server User Replicator initial synchronization has completed, the Lync Server User Replicator will check all the domain controllers in each Lync Server enabled domain of the Active Directory, directory services Forest at a default 60 second interval. If the Lync Server User Replicator locates any user information that has been updated since the completion of the initial synchronization then it will synchronize the newly updated Lync Server user information with the Lync Server user information that exists in the Lync Server back end database.
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

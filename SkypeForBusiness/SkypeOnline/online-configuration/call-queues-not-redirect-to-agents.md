@@ -33,3 +33,7 @@ To resolve this issue, follow these steps:
 2. Locate **Skype admin center** -> **Organization** -> **External Communications**.     
 3. Under **external access**, select **On only for allowed domains**.    
 4. Add the tenant domain name to the **blocked or allowed domains** list.    
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

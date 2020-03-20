@@ -110,3 +110,5 @@ Set-CsTenantDialPlan -Identity "Existing Dialplan" -NormalizationRules @{replace
 For more information about the commands that are used to manage dial plans, see [Create and manage dial plans](https://docs.microsoft.com/skypeforbusiness/what-are-calling-plans-in-office-365/create-and-manage-dial-plans). 
 
 For more information about how tenant dial plans work, see [What are dial plans?](https://docs.microsoft.com/skypeforbusiness/what-are-calling-plans-in-office-365/what-are-dial-plans)
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
