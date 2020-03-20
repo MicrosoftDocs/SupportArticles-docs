@@ -17,7 +17,7 @@ ms.custom:
 - CI 115814
 - CSSTroubleshoot 
 ms.reviewer: prbalusu 
-description: Methods to resolve the error FAILED_TO_AUTO_DISCOVER_DOMAIN in the Micrsoft Teams admin center. 
+description: Methods to resolve the error FAILED_TO_AUTO_DISCOVER_DOMAIN in the Microsoft Teams admin center. 
 ---
 
 # "FAILED_TO_AUTO_DISCOVER_DOMAIN" error in Microsoft Teams admin center
@@ -44,7 +44,7 @@ This issue can be resolved by following the instructions below:
 3. Enable [SipDomain for the domain](https://docs.microsoft.com/powershell/module/skype/enable-csonlinesipdomain).<br/>
    Powershell Cmdlet: `Enable-CsOnlineSipDomain -Domain <yourdomain>`
 
-This fix can take anywhere from fifteen minutes to an hour to take effect.
+This fix can take anywhere from 15 minutes to an hour to take effect.
 
 ### No user is licensed for Skype for Business or Teams 
 
