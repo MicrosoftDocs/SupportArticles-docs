@@ -195,7 +195,8 @@ We recommend that the desktop heap use remain between 80 percent and 90 percent.
     Service-0x0-10a75$\Default         768                 0%
     ------------------------------------------------------
     Total Desktop: (23840 KB - 7 desktops)
-    Session ID:
+    Session ID:  0
+    ============================================================
     ```
 
 11. Decode the encrypted logon by doing the following:
