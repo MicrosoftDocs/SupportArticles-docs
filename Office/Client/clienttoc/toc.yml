@@ -873,6 +873,8 @@
     items:
     - name: "\"Open new side note\" missing from  Windows notification"
       href: ../onenote/open-new-side-note-missing.md
+    - name: Errors when you sync a notebook
+      href: ../onenote/error-sync-notebook.md
     - name: Locate Onenote notebooks
       href: ../onenote/locate-onenote-notebooks.md
     - name: Warning when a notebook is in an offline location
