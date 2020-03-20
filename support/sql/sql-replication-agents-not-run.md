@@ -20,7 +20,7 @@ Consider the following scenario:
 
 In this scenario, some replication agents can't run. Additionally, the following error message is logged in the system log:
 
-> Application Error : The application failed to initialize properly (0xc0000142).<br/>
+> Application Error : The application failed to initialize properly (0xc0000142).  
 > Click on OK to terminate the application.
 
 ## Cause
@@ -31,34 +31,29 @@ This problem occurs because the desktop heap is used up.
 
 To work around this problem, use one of the following methods:
 
-- Use separate accounts for the replication agents created for different databases.
+### Use separate accounts for the replication agents created for different databases
   
-  - You can specify this while you are creating replication agents.
-  - You have to make sure all permissions touch points are taken care of.
-  - The procedure to change the security settings for already-created replication agents can be found at [View and modify replication security settings](/sql/relational-databases/replication/security/view-and-modify-replication-security-settings).
+You can specify this while you are creating replication agents. You have to make sure all permissions touch points are taken care of. The procedure to change the security settings for already-created replication agents can be found at [View and modify replication security settings](/sql/relational-databases/replication/security/view-and-modify-replication-security-settings).
 
-- Use registry settings to increase the desktop heap size.
+### Use registry settings to increase the desktop heap size
   
-  - You can change the following registry entries:
+You can change the following registry entries:
 
-    - `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\SessionViewSize` (for example, increase the value from 48 to 64).
+- `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\SessionViewSize` (for example, increase the value from 48 to 64).
 
-    - `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\SubSystems\Windows` (for example, increase the third value of `SharedSection` by 256 kilobytes)
+- `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\SubSystems\Windows` (for example, increase the third value of `SharedSection` by 256 kilobytes)
 
-  - You have to apply the changes on both nodes.
+You have to apply the changes on both nodes. You have to save the registry keys before the change, and you have to restart the server after you apply the change.
+
+### Change the replication agents from running continuously to running on a scheduled basis
   
-  - You have to save the registry keys before the change, and you have to restart the server after you apply the change.
+This makes sure that the replication agents run only when it's necessary, and not to stay idle constantly (because this wastes resources).
 
-- Change the replication agents from running continuously to running on a scheduled basis.
-  
-  - This makes sure that the replication agents run only when it's necessary, and not to stay idle constantly (because this wastes resources).
-  - Instructions about how to change the replication agent schedule are available at [Specify synchronization schedules](/sql/relational-databases/replication/specify-synchronization-schedules).
+Instructions about how to change the replication agent schedule are available at [Specify synchronization schedules](/sql/relational-databases/replication/specify-synchronization-schedules).
 
-- Change the server location on which the replication agents are running.
+### Change the server location on which the replication agents are running
   
-  - You can evaluate the publisher-subscriber pairs and see whether you can change some subscribers to pull that will make the distribution/merge agent run on the subscriber instead of on the publisher.
-  
-  - This helps reduce the number of concurrent agents that have to run on the server.
+You can evaluate the publisher-subscriber pairs and see whether you can change some subscribers to pull that will make the distribution/merge agent run on the subscriber instead of on the publisher. This helps reduce the number of concurrent agents that have to run on the server.
 
 ## Status
 

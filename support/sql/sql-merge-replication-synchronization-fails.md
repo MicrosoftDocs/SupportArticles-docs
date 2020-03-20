@@ -34,12 +34,12 @@ In this scenario, the synchronization may fail during the conflict resolution. W
 
 Error message 1  
 
-> The Merge Agent failed because the schema of the article at the Publisher does not match the schema of the article at the Subscriber. This can occur when there are pending DDL changes waiting to be applied at the Subscriber.<br/>
+> The Merge Agent failed because the schema of the article at the Publisher does not match the schema of the article at the Subscriber. This can occur when there are pending DDL changes waiting to be applied at the Subscriber.  
 > Restart the Merge Agent to apply the DDL changes and synchronize the subscription.
 
 Error message 2  
 
-> The merge process could not store conflict information for article 'article_name'. Check the publication properties to determine where conflicts records are stored.<br/>
+> The merge process could not store conflict information for article 'article_name'. Check the publication properties to determine where conflicts records are stored.  
 > Invalid character value for cast specification.
 
 These errors are reported by the merge agent if the merge agent job fails.

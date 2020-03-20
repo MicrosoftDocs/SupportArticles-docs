@@ -20,29 +20,29 @@ These error messages appear in the SQL Server Agent job history, in a SQL Profil
 
 SQL Server Agent Error message
 
-> Error messages:<br/>
-> Incorrect syntax near 'sp_MSins_ProductionProduct'. (Source: MSSQLServer, Error number: 102)<br/>
-> Get help: http://help/102 <br/>
+> Error messages:  
+> Incorrect syntax near 'sp_MSins_ProductionProduct'. (Source: MSSQLServer, Error number: 102)  
+> Get help: http://help/102
 
 SQL Profiler Trace
 
-> Profiler Trace failing  statement with missing "." between schema and procedure name<br/>
->if object_id(N'[dbo][sp_MSins_ProductionProduct]', 'P') > 0<br/>
+> Profiler Trace failing  statement with missing "." between schema and procedure name  
+>if object_id(N'[dbo][sp_MSins_ProductionProduct]', 'P') > 0  
 > drop proc [dbo][sp_MSins_ProductionProduct]
 
 Agent Log error message
 
-> Time stamp    Connecting to Subscriber<br/>
-> Time stamp    Initializing<br/>
-> Time stamp    Agent message code 102. Incorrect syntax near ''sp_MSins_ProductionProduct''.<br/>
-> Time stamp    Category:COMMAND<br/>
-> Source: Failed Command<br/>
-> Number:<br/>
-> Message: if @@trancount > 0 rollback tran<br/>
-> Time stamp    Category:NULL<br/>
-> Source: Microsoft SQL Server Native Client 11.0<br/>
-> Number: 102<br/>
-> Message: Incorrect syntax near ''sp_MSins_ProductionProduct''.
+> Time stamp    Connecting to Subscriber  
+> Time stamp    Initializing  
+> Time stamp    Agent message code 102. Incorrect syntax near ''sp_MSins_ProductionProduct''.  
+> Time stamp    Category:COMMAND  
+> Source: Failed Command  
+> Number:  
+> Message: if @@trancount > 0 rollback tran  
+> Time stamp    Category:NULL  
+> Source: Microsoft SQL Server Native Client 11.0  
+> Number: 102  
+> Message: Incorrect syntax near ''sp_MSins_ProductionProduct''.  
 
 > [!NOTE]
 > You may see error messages for other replications that are generated for such stored procedure as `sp_MSdel_{article}` and `sp_MDupd_{article}`.
@@ -52,11 +52,12 @@ Agent Log error message
 This problem occurs when you add articles to an existing peer-to-peer publication by using Microsoft SQL Server Management Studio 17.x.x. When you do this, the replication generates a stored procedure name that's prefixed by using the `[dbo]` schema. You can see this by scripting out the publication in the `sp_addarticle` command, as shown the following example.
 
 ```sql
- exec sp_addarticle @publication = N'Products', @article = N'Product', @source_owner = N'Production', @source_object = N'Product',
+ exec sp_addarticle @publication = N'Products', @article = N'Product',
+ @source_owner = N'Production', @source_object = N'Product',
  ...
  @ins_cmd = N'CALL [dbo].[sp_MSins_ProductionProduct]',
  @del_cmd = N'CALL [dbo].[sp_MSdel_ProductionProduct]',
- @upd_cmd = N'SCALL [dbo].[sp_MSupd_ProductionProduct]'
+ @upd_cmd = N'SCALL [dbo].[sp_MSupd_ProductionProduct]' 
  GO
 ```
 

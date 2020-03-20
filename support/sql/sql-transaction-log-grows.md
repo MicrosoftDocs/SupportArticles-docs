@@ -31,7 +31,7 @@ To verify this exact cause, run the `DBCC OPENTRAN` command while you're connect
 ```console
 Replicated Transaction Information:
 Oldest distributed LSN : (0:0:0)
-Oldest non-distributed LSN : (38:272:1) 
+Oldest non-distributed LSN : (38:272:1)
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.
 ```
 

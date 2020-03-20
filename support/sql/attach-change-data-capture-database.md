@@ -18,13 +18,14 @@ You detach a database with `Change Data Capture` enabled on SQL Server 2014 or a
 Command
 
 ```sql
-EXEC sys.sp_cdc_enable_table @source_schema='<schema name>', @source_name='<source name>', @role_name='<role name>', @supports_net_changes=1, @allow_partition_switch=0;
+EXEC sys.sp_cdc_enable_table @source_schema='<schema name>', @source_name='<source name>', @role_name='<role name>',  
+@supports_net_changes=1, @allow_partition_switch=0;
 ```
 
 Error message
 
-> Msg 22832, Level 16, State 1, Procedure<br/>
-> sp_cdc_enable_table_internal, Line 639 [Batch Start Line 0]<br/>
+> Msg 22832, Level 16, State 1, Procedure  
+> sp_cdc_enable_table_internal, Line 639 [Batch Start Line 0]  
 > Could not update the metadata that indicates table [\<schema name>]. [\<object name>] is enabled for Change Data Capture. The failure occurred when executing the command 'insert into [cdc].[captured_columns]'. The error returned was 213: 'Column name or number of supplied values does not match table definition.'. Use the action and error to determine the cause of the failure and resubmit the request.
 
 ## Resolution
