@@ -30,23 +30,15 @@ Here is a code fragment that includes a generic message loop and a `WinEvent` ha
 
 ```cpp
 // Main message loop of thread that called SetWinEventHook while(GetMessage(&msg, NULL, 0, 0))
-
 {
-
     ... process message here ...
-
 }
 
 void CALLBACK WinEventProc(HWINEVENTHOOK hWinEventHook, DWORD eventId,
-
 HWND hwnd, LONG idObject, LONG idChild, DWORD dwEventThread,
-
 DWORD dwmsEventTime)
-
 {
-
     ... process winevent here ...
-
 }
 ```
 
@@ -56,83 +48,53 @@ DWORD dwmsEventTime)
 HANDLE ghMessageReadyEvent = NULL; // Event used to wake up the main thread
 
 ghMessageReadyEvent = CreateEvent(NULL, FALSE/*bManualReset*/,
-
 FALSE/*bIntialState*/, NULL);
 
 // Main message loop of thread that called SetWinEventHook
-
 // We can't reliably use GetMessage here. If a posted message is received
-
 // while we're in a reentrant call to WinEventProc, when the WinEventProc
-
 // returns, GetMessage does not recognize that a message has been
-
 // received and just blocks. To avoid this we use
-
 // MsgWaitForMultipleObjects + PeekMessage. Code at the end of the
-
 // WinEventProc checks if a posted message was received during the
-
 // callback using PeekMessage; if so, it sets the event which causes
-
 // MsgWaitForMultipleObjects to wake up.
-
 // Note that MsgWaitForMultipleObjects usually only wakes up if a message
-
 // is received during it. Even with QS_ALLPOSTMESSAGE, it only wakes up
-
 // if a message is received between it and the most recent PeekMessage,
-
 // so we have to call PeekMessage *before* calling it in case there are
-
 // multiple queued-up messages.
 
 for(;;)
-
 {
-
     BOOL fGot = PeekMessage(&msg, NULL, 0, 0, PM_REMOVE);
 
     if(!fGot)
     {
-
         MsgWaitForMultipleObjects(1, &ghMessageReadyEvent,
-
         FALSE/*bWaitAll*/, INFINITE,
-
         QS_ALLEVENTS | QS_ALLPOSTMESSAGE);
 
         fGot = PeekMessage(&msg, NULL, 0, 0, PM_REMOVE);
-
     }
 
     if(!fGot)
-
     {
-
         continue;
-
     }
-
     ... process message here ...
-
 }
 
 void CALLBACK WinEventProc(HWINEVENTHOOK hWinEventHook, DWORD eventId, HWND hwnd, LONG idObject, LONG idChild, DWORD dwEventThread, DWORD dwmsEventTime)
-
 {
     ... process winevent here ...
-
     // Before we return, check if posted messages were received during this
     // callback. If so, fire the event to ensure that we do process them.
     MSG msg;
 
     if(PeekMessage(&msg, (HWND)-1, WM_USER + 1, WM_USER + 2, PM_NOREMOVE | PM_QS_POSTMESSAGE))
     {
-
         SetEvent(ghMessageReadyEvent);
-
     }
-
 }
 ```

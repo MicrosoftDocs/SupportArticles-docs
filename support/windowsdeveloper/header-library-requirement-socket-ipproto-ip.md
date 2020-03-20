@@ -41,11 +41,9 @@ The `IPPROTO_IP` level socket options are defined differently in `Winsock.h` tha
 #define IP_TTL              7           /* set/get IP Time To Live          */ 
 #define IP_TOS              8           /* set/get IP Type Of Service       */ 
 #define IP_DONTFRAGMENT     9           /* set/get IP Don't Fragment flag   */ 
-
 #define IP_DEFAULT_MULTICAST_TTL   1    /* normally limit m'casts to 1 hop  */ 
 #define IP_DEFAULT_MULTICAST_LOOP  1    /* normally hear sends if a member  */ 
-#define IP_MAX_MEMBERSHIPS         20   /* per socket; must fit in one mbuf */ 
-
+#define IP_MAX_MEMBERSHIPS         20   /* per socket; must fit in one mbuf */
 ```
 
 ## IPPROTO_IP level socket options in Ws2tcpip.h
@@ -66,7 +64,6 @@ The options at this level are defined in `Ws2tcpip.h` as:
 #define IP_ADD_MEMBERSHIP      12     /* add an IP group membership */ 
 #define IP_DROP_MEMBERSHIP     13    /* drop an IP group membership */ 
 #define IP_DONTFRAGMENT        14     /* don't fragment IP datagrams */ 
-
 ```
 
 ## Setsockopt or getsockopt runtime error
@@ -108,7 +105,6 @@ int main(int argc, char* argv[])
    ...
    ...
 }
-
 ```
 
 > [!NOTE]
@@ -163,7 +159,6 @@ int main(int argc, char* argv[])
        ...
        ...
 }
-
 ```
 
 If you link the project with `Ws2_32.lib` and run the application, `setsockopt` with `IP_MULTICAST_TTL` will succeed. However, the multicast TTL setting won't take effect. If you examine the network trace, you see that the TTL value still remains as 1 (the default).
