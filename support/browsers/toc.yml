@@ -26,6 +26,9 @@
   - name: IE control Web page caching
     href: prevent-caching-in-ie.md
 
+  - name: Operation aborted error
+    href: operation-aborted-web-page.md
+
   - name: Page Cannot be Displayed error
     href: page-cannot-be-displayed.md
 
@@ -33,6 +36,15 @@
   items:
   - name: IE dot matrix printer wrong font 
     href: dot-matrix-printer-wrong-output-font.md
+
+  - name: How to set Fullscreen mode 
+    href: set-fullscreen-ie.md
+
+  - name: XML file opens in IE
+    href: xml-files-open-in-ie-not-office.md
+
+  - name: RSS feeds not listed or subscribed
+    href: rss-feeds-not-listed-or-cannot-subscribe.md
 
   - name: IE Kiosk mode
     href: use-kiosk-mode-in-ie.md 
@@ -45,14 +57,20 @@
   - name: Wrong Web page with frames
     href: ie-wrongly-show-web-page-with-frames.md
 
+  - name: Wrong character set used for html page
+    href: ie-uses-wrong-character-set-for-html-page.md
+
+  - name: IE runtime errors
+    href: ie-runtime-errors.md
+
+  - name: Textchanged event does not fire
+    href: textchanged-event-not-fire-with-autocomplete.md
+
   - name: FTP WinInet APIs in VB application
     href: using-ftp-wininet-apis-in-vb.md
 
   - name: Services not support WinInet
     href: wininet-not-supported-in-services.md
-
-  - name: IE document modes FAQ
-    href: ie-document-modes.md
 
   - name: FTP CERN-based proxy with WinInet API
     href: ftp-with-cern-based-proxy-using-wininet-api.md
@@ -71,8 +89,11 @@
 
 - name: Security and Privacy
   items:
-  - name: Cannot stop IE Enhanced Security
-    href: cannot-turn-off-i-e-esc.md
+  - name: CSP is loading for certificate request
+    href: csp-shows-loading-for-certificate-request.md
+
+  - name: Cannot view secure web sites
+    href: cannot-view-secure-web-sites-in-ie.md
 
   - name: Java security setup in IE
     href: set-java-security-in-ie.md
