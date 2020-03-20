@@ -5,6 +5,8 @@
     items:
     - name: Include or exclude Teams from antivirus or DLP applications
       href: ./teams-administration/include-exclude-teams-from-antivirus-dlp.md
+    - name: FAILED_TO_AUTO_DISCOVER_DOMAIN error in Microsoft Teams admin center
+      href: ./teams-administration/failed-to-auto-discover-domain-error-teams-admin-center.md
   - name: Conferencing
     items:
     - name: '"Give Control" does not work'
