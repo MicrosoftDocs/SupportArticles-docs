@@ -31,3 +31,7 @@ Use one of the following two workarounds, and then open the page again:
 ## Why this issue occurs
 
 The Office add-on for Internet Explorer loops though all the processes on the computer to look for the Skype for Business process so that it can use a handle to the process to communicate with it.  When Internet Explorer runs in Protected Mode, Windows security restricts the process list that is sent back to the Office add-on, and the Skype for Business handle is inaccessible.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

@@ -22,3 +22,7 @@ In Microsoft SharePoint Online, when you specify the **Document Template** for a
 Specifically, under **Site Content Type** > **Advanced Settings** > **Document Template**, the URL (if any) has to be an URL of an existing content type on the same site collection.
 
 ![Enter the URL for Document Template in Site Content Type: Advanced Settings page](./media/relative-url-across-site-collection-not-supported/enter-url.png)
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

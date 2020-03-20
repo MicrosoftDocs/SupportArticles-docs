@@ -70,3 +70,7 @@ To resolve this issue, replace the **Sign Out**  link with the **Sign-in As Diff
    ```  
 
    **Note** The text and description attributes are changed to mimic the logoff button.     
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

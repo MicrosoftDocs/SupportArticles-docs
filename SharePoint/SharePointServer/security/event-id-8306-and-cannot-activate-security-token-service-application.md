@@ -37,3 +37,7 @@ This problem can be caused if one or more of the following conditions are true:
 
 - From IIS Manager, click on the SecureTokenServiceApplication. In the "Features View", double click on .NET Trust Levels. Ensure that the trust level is set to "Full"   
 - From IIS Manager, ensure that the application pool for SecureTokenServiceApplication is running. By default, the name of the application pool is SecureTokenServiceApplicationPool.  
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

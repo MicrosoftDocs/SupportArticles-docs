@@ -63,3 +63,7 @@ To do this, follow these steps:
 4. Right-click **RenormalizeContactModelPhoneNumbersBeforeDisplay**, and then click **Modify**.    
 5. In the **Value data** box, enter **1**, and then click **OK**.    
 6. Exit Registry Editor.    
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

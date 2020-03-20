@@ -46,8 +46,10 @@ Get-SPO365LinkSettings : UserProfileApplicationNotAvailableException_Logging :: 
 
 ## Cause  
 
-The issue occurs because running Hybrid Picker from a consuming farm that consumes the User Profile service application from a publishing farm isn’t supported yet.   
+The issue occurs because running Hybrid Picker from a consuming farm that consumes the User Profile service application from a publishing farm isn't supported yet.   
 
 ## More Information  
 
 Microsoft is aware of this issue and will address it in a future update.
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

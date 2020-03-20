@@ -36,7 +36,7 @@ There are two way to locate information about the certificate that is associated
 **Note** You can also request a certificate from an internal CA, or assign an existing certificate from this wizard.
 
 1. Launch the Lync Server Deployment Wizard from the Windows Start menu on the Lync Server server   
-2. Click on “Install or Update Lync Server System”   
+2. Click on "Install or Update Lync Server System"   
 3. Click run on Step 3: Request, Install or Assign Certificates   
 4. Use the Certificate Wizard to view all the certificates that are installed for the Lync Server server    
 
@@ -67,4 +67,6 @@ To assign a certificate using Lync Management Shell use the Set-CsCertificate cm
 
 For more information on Set-CsCertificate cmdlet please refer the following document:
 
-[Set-CsCertificate](https://technet.microsoft.com/library/gg398518.aspx )
+[Set-CsCertificate](https://technet.microsoft.com/library/gg398518.aspx)
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

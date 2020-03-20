@@ -58,3 +58,7 @@ Wildcard domains are not supported for server-to-server communication under Acce
 ## Resolution
 
 The only solution is to explicitly define all accepted domains on the Exchange server and not use any wildcards.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

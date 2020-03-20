@@ -101,3 +101,5 @@ For more information about how to configure the Lync Server 2013 Access Edge ser
 
 - [Set-CsAccessEdgeConfiguration](https://technet.microsoft.com/library/gg413017.aspx)
 - [Get-CsAccessEdgeConfiguration](https://technet.microsoft.com/library/gg398574.aspx)
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

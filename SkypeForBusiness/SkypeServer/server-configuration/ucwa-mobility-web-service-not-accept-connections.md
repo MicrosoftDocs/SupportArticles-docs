@@ -227,3 +227,5 @@ The following information should be returned to the console to confirm the updat
  <cpu />
 </add>
 ```
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
