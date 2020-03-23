@@ -3,6 +3,13 @@
 
 - name: (Back up to Support hub page)
   href: ../index.yml
+  
+- name: Accelerators
+  items:
+  - name: EDI/AS2 Runtime configuration fails
+    href: biztalk-edias2-runtime-feature-fails.md
+  - name: Set up filters to send the EDI Interchange
+    href: send-edi-interchange.md
 
 - name: Adapter
   items:
@@ -12,13 +19,6 @@
     href: http-error-biztalk-sharepoint-adapter.md
   - name: Supported file systems in BizTalk
     href: file-system-in-biztralk-server.md
-
-- name: Accelerators
-  items:
-  - name: EDI/AS2 Runtime configuration fails
-    href: biztalk-edias2-runtime-feature-fails.md
-  - name: Set up filters to send the EDI Interchange
-    href: send-edi-interchange.md
 
 - name: BizTalk Server Setup and Configuration
   items:
