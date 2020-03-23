@@ -1,6 +1,6 @@
 ---
 title: How to diagnose and fix public folder permission issues
-description: This article help you diagnose and fix public folder permission-related issues.
+description: This article helps you diagnose and fix public folder permission-related issues.
 author: TobyTu
 ms.author: batre
 manager: dcscontentpm
@@ -22,11 +22,11 @@ search.appverid:
 
 ## Symptoms
 
-In Exchange Online, you cannot do specific tasks such as creating or deleting items or subfolders in a public folder. Additionally, you may receive an error message that indicates that this is a permission-related issue.
+In Exchange Online, you cannot do specific tasks such as creating or deleting items or subfolders in a public folder. Additionally, you may receive an error message that indicates this is a permission-related issue.
 
 ## Cause
 
-This issue typically occurs because the public folder hierarchy replication is not completed or is having problems.
+This issue typically occurs because the public folder hierarchy replication isn't completed or is having problems.
 
 ## Troubleshooting step
 
@@ -67,7 +67,7 @@ This issue typically occurs because the public folder hierarchy replication is n
     + PSComputerName        : outlook.office365.com
     ```
 
-    The output indicates that the permissions are not yet replicated to the public folder mailbox that's assigned to the user. In some cases, the permission may appear, but it will be different from the permission that is returned in step 2b.
+    The output indicates the permissions are not yet replicated to the public folder mailbox that's assigned to the user. In some cases, the permission may appear, but it will be different from the permission that is returned in step 2b.
 
 ## Resolution
 
@@ -88,7 +88,7 @@ Get-PublicFolderClientPermission \puf1 -User User1 -Mailbox pubmbx1
 
 ## More Information
 
-If the permissions are still not synchronized or you encounter an error when you force hierarchy synchronization, follow these steps to get hierarchy synchronization logs:
+If the permissions are still not synchronized or you meet an error when you force hierarchy synchronization, follow these steps to get hierarchy synchronization logs:
 
 1. Compare the hierarchy between public folder mailboxes:
 
