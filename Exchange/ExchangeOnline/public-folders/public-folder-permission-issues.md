@@ -28,7 +28,7 @@ In Exchange Online, you cannot do specific tasks such as creating or deleting it
 
 This issue typically occurs because the public folder hierarchy replication isn't completed or is having problems.
 
-## Troubleshooting step
+## Troubleshooting steps
 
 1. Verify the public folder mailbox that is assigned to the user. To do this, run the following command (for example):
 
@@ -117,7 +117,7 @@ If the permissions are still not synchronized or you meet an error when you forc
     $s.AssistantInfo.LastSyncFailure
     ```
 
-    You can also explore values of AssistantInfo, such as SyncInfo and HierarchyInfo blocks.
+    You can also explore other values of AssistantInfo, such as SyncInfo and HierarchyInfo blocks.
 
 If you have to contact Microsoft Support, export the report to XML format, and then send it to the Support agent. To export the report, run the following command (for example):
 
