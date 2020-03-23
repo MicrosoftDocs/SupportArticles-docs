@@ -33,4 +33,4 @@ Verify that you've selected the appropriate configuration options for BizTalk Me
 
 To start the **Configuration Framework Wizard**, double-click the **Configframework.exe** file. By default, the **Configframework.exe** file is located in the `C:\Program Files\Microsoft BizTalk Server 2004\` folder.
 
-To start the **Configuration Framework Wizard** in unconfigure mode from a command prompt, switch to the directory that contains the **Configframework.exe** file, type **configframework /u**, and then press **ENTER**.
+To start the **Configuration Framework Wizard** in unconfigure mode from a command prompt, switch to the directory that contains the **Configframework.exe** file, type `configframework /u`, and then press **ENTER**.

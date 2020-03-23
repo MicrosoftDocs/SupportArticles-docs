@@ -6,7 +6,7 @@ ms.prod-support-area-path:
 ---
 # HTTP 404 error when you connect to alternate host headers on SharePoint 2010 from BizTalk Server 2010 with the BizTalk SharePoint Adapter
 
-This article provides information about resolving an HTTP 404 error when you connect to alternate host headers on SharePoint 2010 from BizTalk Server 2010 with the BizTalk SharePoint Adapter.
+This article provides information about resolving an HyperText Transfer Protocol (HTTP) 404 error when you connect to alternate host headers on SharePoint 2010 from BizTalk Server 2010 with the BizTalk SharePoint Adapter.
 
 _Original product version:_ &nbsp; BizTalk Server 2010  
 _Original KB number:_ &nbsp; 2674591
@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 2674591
 
 In Microsoft BizTalk Server 2010, the SharePoint adapter Web service can be installed on any SharePoint installation that it is needed upon.
 
-However each installation on a SharePoint server can only be used from within one SharePoint virtual directory. As such if alternative access mappings are used to access the same SharePoint installation and BizTalk is then used to integrate with these mappings all queries will fail with an HyperText Transfer Protocol (HTTP) 404 error.
+However each installation on a SharePoint server can only be used from within one SharePoint virtual directory. As such if alternative access mappings are used to access the same SharePoint installation and BizTalk is then used to integrate with these mappings all queries will fail with an HTTP 404 error.
 
 ## Cause
 

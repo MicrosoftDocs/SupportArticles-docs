@@ -3,7 +3,7 @@ title: High availability for MQSAgent COM+
 description: Explains that you must install the MQSAgent COM+ application or the MQSAgent2 COM+ application on each cluster node to provide high availability in a clustered environment.
 ms.date: 03/17/2020
 ms.prod-support-area-path: 
-ms.reviewer:  shaheera
+ms.reviewer: shaheera
 ---
 # How to provide high availability for the MQSAgent COM+ application or for the MQSAgent2 COM+ application in a clustered environment
 

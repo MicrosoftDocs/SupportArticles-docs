@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 2269514
 
 Consider the following scenario:
 
-You install and configure a BizTalk Server group. You install BizTalk on a second server. In the **Configuration Wizard**, you create a new BizTalk Server group using the same SQL Server with unique database names. The BizTalk EDI/AS2 Runtime configuration fails and you may see an error similar to the following:
+You install and configure a BizTalk Server group. You install BizTalk on a second server. In the **Configuration Wizard**, you create a new BizTalk Server group using the same SQL Server with unique database names. The BizTalk EDI/AS2 Runtime configuration fails and you may see any one of the following error messages:
 
 > Failed to configure EDI/AS2 Status Reporting functionalities.
 

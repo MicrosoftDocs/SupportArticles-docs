@@ -80,7 +80,7 @@ You should restart your computer after implementing the changes above.
 
 TCP/IP settings can also be configured using the Network shell (netsh) command-line utility at a Windows command prompt with administrator-level permissions. Refer to [Netsh Technical Reference](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc725935(v=ws.10)) for more information.
 
-The [Description of TCP/IP settings that you may have to adjust when SQL Server connection pooling is disabled](https://support.microsoft.com/en-us/help/328476) also reference general network errors.
+The [Description of TCP/IP settings that you may have to adjust when SQL Server connection pooling is disabled](https://support.microsoft.com/help/328476) also reference general network errors.
 
 ## Disclaimer
 
