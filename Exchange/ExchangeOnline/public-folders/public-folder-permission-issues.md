@@ -36,8 +36,6 @@ This issue typically occurs because the public folder hierarchy replication isn'
     Get-Mailbox -Identity User1 | Format-List *public*
     ```
 
-    This example returns information about the public folder mailbox for User1.
-
 2. Verify that the public folder permission is replicated to the public folder mailbox that is assigned to the user. To do this, follow these steps:
 
     a) Check permissions on primary hierarchy public folder mailbox first. To do this, run the following cmdlet (for example):
@@ -46,10 +44,7 @@ This issue typically occurs because the public folder hierarchy replication isn'
     Get-PublicFolderClientPermission \puf1 -User User1 -Mailbox (Get-Mailbox -PublicFolder | ?{$_.IsRootPublicFolderMailbox -eq "True"}).Name
     ```
 
-    This example returns the public folder "\puf1" permissions for User1 from the primary hierarchy mailbox.
-
-    b) Check the permissions on the folder for the user on the public folder mailbox that you got from step 1.
-    For example:
+    b) Check the permissions on the folder for the user on the public folder mailbox that you got from step 1 (for example).
 
     ```powershell
     Get-PublicFolderClientPermission "\puf1" -User1 -Mailbox pubmbx1
@@ -122,9 +117,9 @@ If the permissions are still not synchronized or you meet an error when you forc
     $s.AssistantInfo.LastSyncFailure
     ```
 
-You can also explore values of AssistantInfo, such as SyncInfo and HierarchyInfo blocks.
+    You can also explore values of AssistantInfo, such as SyncInfo and HierarchyInfo blocks.
 
-If you have to contact Microsoft Support, export the report to XML format, and then send it to the Support agent. To export the report, run the following command:
+If you have to contact Microsoft Support, export the report to XML format, and then send it to the Support agent. To export the report, run the following command (for example):
 
 ```powershell
 Get-PublicFolderMailboxDiagnostics <pf mailbox failing to sync> -IncludeHierarchyInfo |Export-Clixml epf.xml
