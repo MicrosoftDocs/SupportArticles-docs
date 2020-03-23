@@ -145,6 +145,8 @@
       href: ../public-folders/can’t-apply-permissions-public-folder-subfolders.md
     - name: The mailbox is not found in the local forest
       href: ../public-folders/mailbox-not-found-local-forest-public-folder.md
+    - name: Troubleshoot public folder permission issues
+      href: ../public-folders/public-folder-permission-issues.md
   - name: Send Emails
     items:
     - name: Changes in message store
