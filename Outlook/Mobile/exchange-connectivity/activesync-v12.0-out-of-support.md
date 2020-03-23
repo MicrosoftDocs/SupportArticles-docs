@@ -21,7 +21,7 @@ search.appverid:
 
 # Exchange ActiveSync protocol v12.0 is out-of-support for Outlook for iOS and Android
 
-After June 15, 2020, Microsoft Outlook for iOS and Android will no longer connect to servers that are running Exchange ActiveSync protocol v12.0.
+After June 15, 2020, Microsoft Outlook for iOS and Android and its accompanying cloud service will no longer connect to servers that are running Exchange ActiveSync protocol v12.0.
 
 Exchange ActiveSync v12.0 is used on Microsoft Exchange Server 2007 RTM Server, though it may also be used by third-party applications or services. After June 15, 2020, Outlook for iOS and Android will no longer be able to use this protocol version.
 
