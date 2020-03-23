@@ -62,7 +62,7 @@ This issue typically occurs because the public folder hierarchy replication isn'
     + PSComputerName        : outlook.office365.com
     ```
 
-    The output indicates the permissions are not yet replicated to the public folder mailbox that's assigned to the user. In some cases, the permission may appear, but it will be different from the permission that is returned in step 2b.
+    The output indicates the permissions aren't yet replicated to the public folder mailbox that's assigned to the user. In some cases, the permission may appear, but it will be different from the permission that is returned in step 2b.
 
 ## Resolution
 
@@ -124,3 +124,4 @@ If you have to contact Microsoft Support, export the report to XML format, and t
 ```powershell
 Get-PublicFolderMailboxDiagnostics <pf mailbox failing to sync> -IncludeHierarchyInfo |Export-Clixml epf.xml
 ```
+
