@@ -789,6 +789,8 @@
       href: ../office/convert-bibliography-to-static-text.md
     - name: "\"Compile Error: Procedure too large\""
       href: ../office/compile-error-procedure-too-large.md
+    - name: AD FS sites are slow to open
+      href: ../office/slow-open-adfs-sites.md
     - name: Connection to a network document is lost
       href: ../office/connect-to-network-document-lost.md
     - name: Document files in Office Document Cache not deleted
@@ -835,6 +837,8 @@
       href: ../office/saving-file-to-network-server-slow.md
     - name: Services display incorrectly in Research pane
       href: ../office/duplicate-service-listed.md
+    - name: Set default font for Office apps
+      href: ../office/set-default-font.md
     - name: Some VB Editor settings disabled in Office 2010
       href: ../office/vb-editor-settings-disabled.md
     - name: The ability to uninstall Office updates
@@ -869,6 +873,8 @@
     items:
     - name: "\"Open new side note\" missing from  Windows notification"
       href: ../onenote/open-new-side-note-missing.md
+    - name: Errors when you sync a notebook
+      href: ../onenote/error-sync-notebook.md
     - name: Locate Onenote notebooks
       href: ../onenote/locate-onenote-notebooks.md
     - name: Warning when a notebook is in an offline location

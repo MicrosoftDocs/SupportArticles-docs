@@ -10,13 +10,13 @@
   - name: Security
     items:
     - name: There is a problem with your account when opening documents
-      href: ../../SharePointOnline/Security/problem-with-your-account.md
+      href: ../../SharePointOnline/Security/problem-with-your-account.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
   - name: Search
     items:
     - name: Near-duplicate items aren't listed in SharePoint Online or SharePoint Server 2013 on-premises search results
-      href: ../../SharePointOnline/search/near-duplicate-items-are-not-listed-in-search-results.md
+      href: ../../SharePointOnline/search/near-duplicate-items-are-not-listed-in-search-results.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Search doesn't provide results from another language
-      href: ../../SharePointOnline/Search/no-search-results-from-another-language.md
+      href: ../../SharePointOnline/Search/no-search-results-from-another-language.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
   - name: Set up
     items:
     - name: OneDrive for Business stopped at "Setting up..." screen
@@ -24,13 +24,13 @@
   - name: Sharing and Permissions
     items:
     - name: Credential prompts after resting mouse pointer over a user name
-      href: ../../SharePointOnline/sharing-and-permissions/rest-mouse-pointer-on-user-name.md
+      href: ../../SharePointOnline/sharing-and-permissions/rest-mouse-pointer-on-user-name.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
   - name: Sites
     items:
     - name: Top navigation bar displays either Sites or Newsfeed instead of OneDrive
-      href: ../../SharePointOnline/sites/office-365-top-navigation-bar-displays-either-sites-or-newsfeed.md
+      href: ../../SharePointOnline/sites/office-365-top-navigation-bar-displays-either-sites-or-newsfeed.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Troubleshooting guide to OneDrive for Business sites stopped at provisioning stage
-      href: ../../SharePointOnline/sites/troubleshooting-guide-for-sites-stopped-at-provisioning.md
+      href: ../../SharePointOnline/sites/troubleshooting-guide-for-sites-stopped-at-provisioning.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
   - name: Sync
     items:
     - name: Can't connect to the specified SharePoint site
