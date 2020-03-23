@@ -174,10 +174,10 @@ These values would then be represented in the `BTSNTSvc64.exe.config` file as fo
 ```xml
 <xlangs>
     <Configuration>
-        <Dehydration>
-            <VirtualMemoryThrottlingCriteria OptimalUsage="6069" MaximalUsage="7889" IsActive="true" />
-                <PrivateMemoryThrottlingCriteria OptimalUsage="457" MaximalUsage="594" IsActive="true" />
-            </Dehydration>
+       <Dehydration>
+         <VirtualMemoryThrottlingCriteria OptimalUsage="6069" MaximalUsage="7889" IsActive="true" />
+         <PrivateMemoryThrottlingCriteria OptimalUsage="457" MaximalUsage="594" IsActive="true" />
+       </Dehydration>
     </Configuration>
 </xlangs>
 ```

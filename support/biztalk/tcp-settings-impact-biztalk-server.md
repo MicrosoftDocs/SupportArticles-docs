@@ -76,7 +76,7 @@ There are several items to implement to stop the errors from occurring:
 
 You should restart your computer after implementing the changes above.
 
-## More Information
+## More information
 
 TCP/IP settings can also be configured using the Network shell (netsh) command-line utility at a Windows command prompt with administrator-level permissions. Refer to [Netsh Technical Reference](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc725935(v=ws.10)) for more information.
 
