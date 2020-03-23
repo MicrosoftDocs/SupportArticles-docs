@@ -26,7 +26,7 @@ This problem occurs because the web service doesn't exist in the alternate acces
 After you configure this fix, this problem doesn't occur for that alternate access mapping. This fix needs to be configured on each Alternate Access Mapping that is added to the SharePoint installation.
 
 Install the BizTalk SharePoint Adapter Web Service to the first Web Site as normal. These instructions are available in
-[Setting Up and Deploying the Windows SharePoint Services Adapter](/biztalk/core/setting-up-and-deploying-the-windows-sharepoint-services-adapte).
+[Setting Up and Deploying the Windows SharePoint Services Adapter](biztalk/core/setting-up-and-deploying-the-windows-sharepoint-services-adapter).
 
 Once the installation is finished, complete the procedure below for all alternate access mappings that are configured within SharePoint that you would like to integrate with.
 

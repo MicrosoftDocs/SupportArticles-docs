@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 2269514
 
 Consider the following scenario:
 
-You install and configure a BizTalk Server group. You install BizTalk on a second server. In the Configuration Wizard, you create a new BizTalk Server group using the same SQL Server with unique database names. The BizTalk EDI/AS2 Runtime configuration fails and you may see an error similar to the following:
+You install and configure a BizTalk Server group. You install BizTalk on a second server. In the **Configuration Wizard**, you create a new BizTalk Server group using the same SQL Server with unique database names. The BizTalk EDI/AS2 Runtime configuration fails and you may see an error similar to the following:
 
 > Failed to configure EDI/AS2 Status Reporting functionalities.
 
@@ -32,7 +32,7 @@ The Business Activity Monitoring (BAM) Data Transformation Services (DTS) packag
 
 ## Resolution
 
-To resolve this problem, you can rename the existing packages beginning with BAM_DM_ and then configure the BizTalk EDI/AS2 Runtime feature.
+To resolve this problem, you can rename the existing packages beginning with `BAM_DM_` and then configure the BizTalk EDI/AS2 Runtime feature.
 
 The EDI/AS2 BAM SSIS package names begin with `BAM_DM_`. You can manually rename the `BAM_DM_` SSIS packages in SQL Server Integration Services. For example, you can rename the `BAM_DM_AS2InterchangeActivity` SSIS package to `BizTalkGroup_BAM_DM_AS2InterchangeActivity`. Then configure the BizTalk EDI/AS2 Runtime feature.
 

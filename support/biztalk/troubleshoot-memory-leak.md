@@ -31,9 +31,7 @@ Because it may be expected behavior for a process to use about half the physical
 
 ## Large messages
 
-When BizTalk Server processes large messages, the system seems to have a memory leak. However, the messages may be using a large amount of memory. For more information about large messages, visit the following Microsoft Developer Network (MSDN) website:
-
-[BizTalk Server 2009 Retired Technical documentation](https://www.microsoft.com/download/details.aspx?id=56498)
+When BizTalk Server processes large messages, the system seems to have a memory leak. However, the messages may be using a large amount of memory.
 
 Also, consider that high memory usage may be expected if BizTalk Server is processing large messages. You may want to upgrade your hardware to meet the performance requirements of BizTalk Server in your environment.
 
@@ -76,7 +74,7 @@ The following table lists PAE and 3 GB supportability for different versions of 
 |BizTalk Server 2006|Yes|Yes|
 |BizTalk Server 2006 R2|Yes|Yes|
 |BizTalk Server 2009|Yes|Yes|
-|||
+||||
 
 If you must enable the **/3GB switch** to meet the performance requirements of a computer that is running BizTalk Server, you may want to consider adding servers to the BizTalk group. This enables you to scale out the memory-intensive host instances.
 
@@ -113,19 +111,19 @@ Sometimes, it may be appropriate to run the Workstation version of the execution
 
 ## BizTalk 2006 and later versions
 
-Create the following CRL Hosting String registry key with the corresponding values:
+Create the following `CRL Hosting` String registry key with the corresponding values:
 
-- Key: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\BTSSvc$BizTalkHostName \CLR Hosting`
-- Name: Flavor
-- Data: wks
+- Key: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\BTSSvc$BizTalkHostName\CLR Hosting`
+- Value name: Flavor
+- Value data: wks
 
 ## BizTalk 2004
 
-Create the following CRL Hosting String registry key with the corresponding values:
+Create the following `CRL Host` String registry key with the corresponding values:
 
-- Key: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\BTSSvc{GUID }\CLR Host`
-- Name: Flavor
-- Data: wks
+- Key: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\BTSSvc{GUID }\CLR Hosting`
+- Value name: Flavor
+- Value data: wks
 
 For more information, visit [Performance Considerations for Run-Time Technologies in the .NET Framework](/previous-versions/dotnet/articles/ms973838(v=msdn.10)).
 
@@ -157,11 +155,11 @@ To work around this behavior, change the **VirtualMemoryThrottlingCriteria** and
     - **VirtualMemoryThrottlingCriteria**: \Process\Virtual Bytes value + 10%
     - **PrivateMemoryThrottlingCriteria**: \Process\Private Bytes value + 10%
 
-- Set **MaximalUsage** for both properties to the OptimalUsage value + 30%
+- Set **MaximalUsage** for both properties to the **OptimalUsage** value + 30%
 
 For example, if the \Process\Virtual Byte Performance Monitor counter value for an orchestration instance is 5,784,787,695 bytes (5,517 MB), set the **OptimalUsage** value for **VirtualMemoryThrottlingCriteria** to 6,069 MB (5,784,787,695 * 1.10 = 6,363,266,464.5 bytes). Set the **MaximalUsage** value for **VirtualMemoryThrottlingCriteria** to 7,889 MB (6,363,266,464.5 * 1.30 = 8,272,246,403.85 bytes).
 
-If the \Process\Private Bytes Performance Monitor counter value is 435689400 bytes (415 MB), set the **OptimalUsage** value for **PrivateMemoryThrottlingCriteria** to 457 MB (435689400 * 1.10 = 479258340 bytes). Set the MaximalUsage value for **PrivateMemoryThrottlingCriteria** to 594 MB (479258340 * 1.30 = 623035842).
+If the \Process\Private Bytes Performance Monitor counter value is 435689400 bytes (415 MB), set the **OptimalUsage** value for **PrivateMemoryThrottlingCriteria** to 457 MB (435689400 * 1.10 = 479258340 bytes). Set the **MaximalUsage** value for **PrivateMemoryThrottlingCriteria** to 594 MB (479258340 * 1.30 = 623035842).
 
 For this example, the following values would be specified in the `BTSNTSvc64.exe.config` file to reduce throttling.
 
@@ -175,12 +173,12 @@ These values would then be represented in the `BTSNTSvc64.exe.config` file as fo
 
 ```xml
 <xlangs>
-      <Configuration>
-                  <Dehydration>
-                              <VirtualMemoryThrottlingCriteria OptimalUsage="6069" MaximalUsage="7889" IsActive="true" />
-                              <PrivateMemoryThrottlingCriteria OptimalUsage="457" MaximalUsage="594" IsActive="true" />
-                  </Dehydration>
-      </Configuration>
+    <Configuration>
+        <Dehydration>
+            <VirtualMemoryThrottlingCriteria OptimalUsage="6069" MaximalUsage="7889" IsActive="true" />
+                <PrivateMemoryThrottlingCriteria OptimalUsage="457" MaximalUsage="594" IsActive="true" />
+            </Dehydration>
+    </Configuration>
 </xlangs>
 ```
 
@@ -386,18 +384,18 @@ To obtain the dump file, use one of the following methods:
 
 #### Method 1: Automatic
 
-Creating a Memory and Handle Leak rule with DebugDiag is the recommended approach to capture a memory dump. The Memory and Handle Leak rule automatically attaches Leaktrack.dll. This is used to track memory allocations. To create the Memory and Handle Leak rule, follow these steps:
+Creating a Memory and Handle Leak rule with DebugDiag is the recommended approach to capture a memory dump. The Memory and Handle Leak rule automatically attaches `Leaktrack.dll`. This is used to track memory allocations. To create the Memory and Handle Leak rule, follow these steps:
 
 1. Start Debug Diagnostics Tool 1.1.
 2. Select **Memory and Handle Leak**, and then click **Next**.
 3. Select the **Btsntsvc.exe** process, and then click **Next**.
 4. On the **Configure Leak Rule** page, follow these steps:
 
-   1. Click to select the **Start memory tracking immediately when rule is activated** check box. Otherwise, you can specify a warm-up time before `LeakTrack.dll` is injected in the BTSNTSvc.exe process.
+   1. Click to select the **Start memory tracking immediately when rule is activated** check box. Otherwise, you can specify a warm-up time before `LeakTrack.dll` is injected in the **BTSNTSvc.exe** process.
 
    2. Click **Configure**, and then do the following:
 
-      - Confirm that **Autocreate a crash rule** is selected. By selecting this option, a memory dump will be created automatically if the BTSNTSvc.exe process stops.
+      - Confirm that **Autocreate a crash rule** is selected. By selecting this option, a memory dump will be created automatically if the **BTSNTSvc.exe** process stops.
 
       - Click to select the **Generate a userdump when virtual bytes reach** check box, and keep the default value of **1024**.
 
@@ -405,7 +403,7 @@ Creating a Memory and Handle Leak rule with DebugDiag is the recommended approac
 
    3. Click **Save & Close**.
    4. Click **Next**.
-   5. On the Select Dump Location And Rule Name page, click **Next**.
+   5. On the **Select Dump Location And Rule Name** page, click **Next**.
 
       > [!NOTE]
       > You can also change the path of the dump file in the **Userdump Location** box on this page.
@@ -413,7 +411,7 @@ Creating a Memory and Handle Leak rule with DebugDiag is the recommended approac
    6. Click **Finish** to make the rule active now.
 
        > [!NOTE]
-       > The rule status is now Tracking. Every time that a memory dump is created, the value will increase in the Userdump Count column on the Rules tab. The default memory dump location is C:\Program Files\DebugDiag\Logs.
+       > The rule status is now **Tracking**. Every time that a memory dump is created, the value will increase in the **Userdump Count** column on the **Rules** tab. The default memory dump location is `C:\Program Files\DebugDiag\Logs`.
 
 #### Method 2: Manual
 
@@ -448,7 +446,7 @@ To help determine the cause of a memory leak, you can use the Debug Diagnostics 
 2. Click **Add Data Files**, and then locate the .dmp file.
 3. Select the **Memory Pressure Analysis** script, and then click **Start Analysis**.
 
-By default, an analysis report file (.mht) will be created in the `C:\Program Files\DebugDiag\Reports` folder when the analysis is finished. The report file will also be displayed in your browser. The report file contains the results of the analysis. Additionally, the report file may contain recommendations for how to resolve the memory leak.
+By default, an analysis report file (the .mht file) will be created in the `C:\Program Files\DebugDiag\Reports` folder when the analysis is finished. The report file will also be displayed in your browser. The report file contains the results of the analysis. Additionally, the report file may contain recommendations for how to resolve the memory leak.
 
 If you use custom DLLs, you can add the symbol path of the custom .pdb files for analysis. To do this, follow these steps:
 

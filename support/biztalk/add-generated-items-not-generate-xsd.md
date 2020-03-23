@@ -7,14 +7,14 @@ ms.reviewer: rickcau
 ---
 # Add Generated Items Wizard fails to generate an XSD schema
 
-This article discusses a problem in a BizTalk Server project where the Add Generated Items Wizard may not generate an XSD schema.
+This article discusses a problem in a BizTalk Server project where the **Add Generated Items Wizard** may not generate an XSD schema.
 
 _Original product version:_ &nbsp; BizTalk Server 2006, 2004  
 _Original KB number:_ &nbsp; 911771
 
 ## Symptoms
 
-On a computer that is running Microsoft Visual Studio, you try to use the Add Generated Items Wizard in a Microsoft BizTalk Server 2006 or Microsoft BizTalk Server 2004 project to generate an XML Schema definition language (XSD) schema. When you have a try, the Add Generated Items Wizard may not generate an XSD schema and you may receive an error message that is similar to the one:
+On a computer that is running Microsoft Visual Studio, you try to use the **Add Generated Items Wizard** in a Microsoft BizTalk Server 2006 or Microsoft BizTalk Server 2004 project to generate an XML Schema definition language (XSD) schema. When you have a try, the **Add Generated Items Wizard** may not generate an XSD schema and you may receive an error message that is similar to the one:
 
 > There were some errors generated during schema generation. Go to task list to view errors. Task list may be filtered, enable showing of all task list items to see schema generation errors.
 
