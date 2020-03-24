@@ -17,7 +17,7 @@ appliesto:
 
 # BOXServiceAccount is added to a role in Office 365 alerts
 
-## Problem 
+## Problem
 
 You receive Microsoft Office 365 security alerts (configured in the Security Compliance Center) that state that the BOXServiceAccount is added to a role.
 
@@ -27,7 +27,7 @@ BOXServiceAccount@DomainName.prod.outlook.com is added to DomainName.PROD.OUTLOO
 
 ## Cause
 
-This is by design. 
+This is by design.
 
 ## Resolution
 
