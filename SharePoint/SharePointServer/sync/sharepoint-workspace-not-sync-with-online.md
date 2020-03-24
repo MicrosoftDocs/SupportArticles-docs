@@ -47,3 +47,7 @@ To synchronize the SharePoint Files tool, use the following workaround:
 1. Log on to the SharePoint Online site in your browser to establish your logon credentials.    
 2. In the SharePoint Files tool, click **Sync**, and then click **Sync Now**.    
 Because you have an active SharePoint Online site logon in the browser session, the sync can finish successfully. Scheduled background syncs will finish successfully until you log off from the site or close your browser.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

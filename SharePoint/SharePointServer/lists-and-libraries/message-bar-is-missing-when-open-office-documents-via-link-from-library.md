@@ -53,7 +53,7 @@ NOTE: This only happens when opening the Office document BY CLICKING ON A HYPERL
 
 ## Cause  
 
-SharePoint 2010 implements a new security feature called 'Permissive or Strict browser file handling'. Each type of file delivered from a web server has an associated MIME type (also called a “content-type”) that describes the nature of the content (e.g. image, text, application, etc). Internet Explorer (IE) has a MIME-sniffing feature that will attempt to determine the content-type for each downloaded resource. For Office files, if the Content-Type sent by the server is not found in the MIME database in the registry of the client machine, IE "sniffs" the MIME content types to see if there is another similar MIME type in the client machine's MIME database and will open the file using the similar MIME type. However, Strict browser file handling is enabled on each web application in SharePoint 2010 by default and this disallows the sniffing of Content-Types, so if no exact match of the Content-Type sent in the server response is found in the client's MIME database in the registry, the file will open from the Temporary Internet Files of the client machine instead of being opened from the server. MIME-sniffing also can lead to security problems for servers hosting untrusted content.
+SharePoint 2010 implements a new security feature called 'Permissive or Strict browser file handling'. Each type of file delivered from a web server has an associated MIME type (also called a "content-type") that describes the nature of the content (e.g. image, text, application, etc). Internet Explorer (IE) has a MIME-sniffing feature that will attempt to determine the content-type for each downloaded resource. For Office files, if the Content-Type sent by the server is not found in the MIME database in the registry of the client machine, IE "sniffs" the MIME content types to see if there is another similar MIME type in the client machine's MIME database and will open the file using the similar MIME type. However, Strict browser file handling is enabled on each web application in SharePoint 2010 by default and this disallows the sniffing of Content-Types, so if no exact match of the Content-Type sent in the server response is found in the client's MIME database in the registry, the file will open from the Temporary Internet Files of the client machine instead of being opened from the server. MIME-sniffing also can lead to security problems for servers hosting untrusted content.
 
 For example: When opening a .docx file from a hyperlink that points to a document located in a SharePoint 2010 document library, the Content Type sent by the SharePoint 2010 server in the response is "vnd.ms-word.document.12" along with a header "X-Content-Type-Options: nosniff" which looks like this:   
 
@@ -81,7 +81,7 @@ Eliminate the no-sniff header sent from SharePoint 2010
 - Select the web application  and click onGeneral Settings  from the ribbon   
 - Scroll down to Browser File Handling , and choose Permissive  instead of Strict .  
 
-NOTE: This reduces security. Browser File Handling  specifies whether additional security headers are added to documents served to web browsers. These headers specify that a browser should show a download prompt for certain types of files (for example, .html) and to use the server’s specified MIME type for other types of files. "Permissive" specifies no headers are added, which provides a more compatible user experience. "Strict" adds headers that force the browser to download certain types of files. The forced download improves security for the server by disallowing the automatic execution of Web content that contributors upload.  
+NOTE: This reduces security. Browser File Handling  specifies whether additional security headers are added to documents served to web browsers. These headers specify that a browser should show a download prompt for certain types of files (for example, .html) and to use the server's specified MIME type for other types of files. "Permissive" specifies no headers are added, which provides a more compatible user experience. "Strict" adds headers that force the browser to download certain types of files. The forced download improves security for the server by disallowing the automatic execution of Web content that contributors upload.  
 
 ### Client-side Workarounds
 
@@ -145,7 +145,7 @@ Update the registry of the Office client computer to install the needed content 
 To fix this problem automatically, click [Download](https://download.microsoft.com/download/6/B/4/6B42815C-DA94-4B64-8E83-4B90DADC676E/MicrosoftEasyFix50832.msi). In the **File Download ** dialog box, click **Run** or **Open**, and then follow the steps in the easy fix wizard.  
 
 - This wizard may be in English only. However, the automatic fix also works for other language versions of Windows.   
-- If you’re not on the computer that has the problem, save the easy fix solution to a flash drive or a CD, and then run it on the computer that has the problem.     
+- If you're not on the computer that has the problem, save the easy fix solution to a flash drive or a CD, and then run it on the computer that has the problem.     
 
 ## More Information  
 
@@ -169,3 +169,5 @@ Value: 1
 ```
 
 If the the Server bar still does not appear with the [Edit Document] button even after the OptimisticBHO key is enabled, make sure that the "Office Document Cache Handler" Add-on is Enabled in Internet Explorer's Tools>Manage Add-ons.
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

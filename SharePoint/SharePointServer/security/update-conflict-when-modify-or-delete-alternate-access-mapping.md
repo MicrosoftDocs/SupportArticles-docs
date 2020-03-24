@@ -104,3 +104,7 @@ To resolve this issue, clear the file system cache on all servers in the server 
 15. In the list of timer jobs, verify that the status of the **Config Refresh** entry is **Succeeded**.
 
 16. On the **File** menu, click **Close**.     
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

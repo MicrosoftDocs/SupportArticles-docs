@@ -19,10 +19,6 @@
       href: ../antispam/cautions-against-bypassing-spam-filters.md
     - name: User Impersonation messages are classified as phishing
       href: ../antispam/user-impersonation-messages-are-classified-as-phishing.md
-  - name: Archive mailboxes
-    items:
-    - name: Messages aren't moved to archive mailboxes
-      href: ../archive-mailboxes/message-not-moved-to-archive.md
   - name: Configure Contacts
     items:
     - name: Update contact information
@@ -47,6 +43,8 @@
     items:
     - name: 550 5.7.64 TenantAttribution
       href: ../connectors/relay-access-denied-smtp.md
+    - name: Email sent to EXO deferred with ATTR35
+      href: ../connectors/wrong-office-365-region-exo.md
     - name: Important notice for Office 365
       href: ../connectors/office-365-notice.md
   - name: Delegates
@@ -139,10 +137,14 @@
       href: ../owa-time-zones/read-receipt-incorrect-timezone.md
   - name: Public Folders
     items:
-    - name: The mailbox is not found in the local forest
-      href: ../public-folders/mailbox-not-found-local-forest-public-folder.md
+    - name: Can’t add reviewer permission to calendars
+      href: ../public-folders/add-reviewer-permission-public-folder-calendar-powershell.md
     - name: Can’t apply permissions to subfolders
       href: ../public-folders/can’t-apply-permissions-public-folder-subfolders.md
+    - name: The mailbox is not found in the local forest
+      href: ../public-folders/mailbox-not-found-local-forest-public-folder.md
+    - name: Troubleshoot public folder permission issues
+      href: ../public-folders/public-folder-permission-issues.md
   - name: Send Emails
     items:
     - name: Changes in message store

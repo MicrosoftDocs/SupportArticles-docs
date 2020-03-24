@@ -97,3 +97,5 @@ Disable the related Windows User Profile Service feature. To do this, follow the
 For more information, see the following MSDN Distributed Services Support Team Blog article:  
 
 [A COM+ application may stop working on Windows Server 2008 when the identity user logs off](https://blogs.msdn.com/b/distributedservices/archive/2009/11/06/a-com-server-application-may-stop-working-on-windows-server-2008.aspx)
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

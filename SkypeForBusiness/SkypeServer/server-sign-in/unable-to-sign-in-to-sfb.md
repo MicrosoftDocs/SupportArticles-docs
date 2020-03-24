@@ -70,3 +70,7 @@ If the issue persists, go to Step 3 to remove the cache.
 **%userprofile%\appdata\roaming\Microsoft\Office\15.0\Lync**
 2. Delete the folders that have the name of your sip address.
 3. Delete the AccountProfiles.dat file.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

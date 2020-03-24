@@ -31,3 +31,7 @@ There are several reasons why Microsoft SharePoint or Microsoft OneDrive might b
 
 - If users are receiving "503" or "Server is busy" error messages, the error might be caused by throttling within the SharePoint service. SharePoint Online uses throttling to maintain optimal performance and reliability of the SharePoint Online service. Throttling limits the number of user actions or concurrent calls (by script or code) to prevent overuse of resources. For more information about throttling, see [Avoid getting throttled or blocked in SharePoint Online](https://docs.microsoft.com/sharepoint/dev/general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online).
 - If the SharePoint or OneDrive site is slow or delayed for multiple users, a temporary service issue may be occurring. In this case, users may experience intermittent delays or navigation errors when they try to access SharePoint sites or OneDrive content. To determine whether your organization is affected, check the [Service Health Dashboard](https://admin.microsoft.com/AdminPortal/Home#/servicehealth).
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

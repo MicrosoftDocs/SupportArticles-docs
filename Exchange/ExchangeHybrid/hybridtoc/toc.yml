@@ -21,10 +21,6 @@
     items:
     - name: Owners can't manage distribution groups
       href: ../distribution-groups/cannot-manage-dg.md
-  - name: Email Delivery
-    items:
-    - name: Email sent to EXO deferred with ATTR35
-      href: ../email-delivery/wrong-office-365-region-exo.md
   - name: Federation
     items:
     - name: Online attributes aren't written back to on-premises

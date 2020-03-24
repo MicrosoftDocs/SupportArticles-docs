@@ -33,3 +33,7 @@ This behavior is by design. Although the workflow author has to specify the **St
 ## Status
 
 This behavior is harmless and doesn't affect the execution of the workflow. The reported error can be safely ignored.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

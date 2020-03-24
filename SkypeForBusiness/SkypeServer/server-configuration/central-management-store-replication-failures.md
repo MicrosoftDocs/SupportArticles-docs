@@ -246,7 +246,7 @@ Use the steps listed below to evaluate the Access Control List (ACL) of the xds
 7. Click **OK **after the xds-replica Properties dialog box is closed.   
 8. Right-click the xds-replica folder and then select **Share**.   
 9. Click the **Change sharing permissions **choice on the** File sharing **dialog box.   
-10. Make sure that the RTC Local Config Replicator local security account is added to the File sharing dialog’s ACL with co-owner or read/write permissions. Click **Share**, click **Done**.   
+10. Make sure that the RTC Local Config Replicator local security account is added to the File sharing dialog's ACL with co-owner or read/write permissions. Click **Share**, click **Done**.   
 11. Use the **Active Directory Users and Computers **snap-in to make sure that the Windows Active directory computer account for the Lync front end server that hosts the CMS role is a member of the RTCUniversalConfigReplicator Windows security group.   
 12. From the console of a Windows Server based computer that hosts the Active Directory Domain Services role, open the **Active Directory Users and Computers** tool   
 13. Locate the** RTCUniversalConfigReplicator** Windows security group and right-click it, and then click Properties.   
@@ -291,3 +291,5 @@ Here's a brief summary of how permissions are applied and then used to secure ac
 - The Windows Active directory computer account for the Lync front end server that hosts the CMS role will be made a member RTCUniversalConfigReplicator Windows security group.   
 - The RTCUniversalConfigReplicator Windows security group, NT SERVICE\FTA, NT SERVICE\MASTER, and NT SERVICE\REPLICA local services will be made a members of the RTC Local Config Replicator local security group. This guarantees secure access to the local CMSFileStore folder.  
 - Also, the first Lync front end server is added to the pool will manage the CMS replication process by using the Lync Server Master Replicator Agent, Lync Server File Transfer Agent, and Lync Server Replica Replicator Agent services.
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

@@ -83,3 +83,5 @@ For future deployments, we recommend that you add this change to any source code
 
 ## More information
 For more information about the .NET Framework update, see [Azure App Service—SameSite cookie handling and .NET Framework 4.7.2 patch](https://azure.microsoft.com/updates/app-service-samesite-cookie-update/). 
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

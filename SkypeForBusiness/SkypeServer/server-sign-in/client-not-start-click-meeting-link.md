@@ -74,3 +74,7 @@ Use the Chrome ADMX template to set GPO settings that apply configurations to do
     > - The meeting join URL of the user's organization.
     > - The URLs of any business partners that members of the user's organization frequently join in meetings.
     > - The default Lync and Skype for Business [online meeting URL](https://meet.lync.com).
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

@@ -42,3 +42,7 @@ These steps will help ensure that the IM conference invitations will primarily b
 
 > [!NOTE]
 > IM conference invitations that are sent to non-responsive IM conference participants will hold for 15 seconds after receiving the toast notification for the IM conference invitation then they will join the conference by default.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

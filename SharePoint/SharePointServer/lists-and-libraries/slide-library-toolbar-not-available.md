@@ -42,3 +42,7 @@ The Slide Library ActiveX control is used for communication between the PowerPoi
 For information about how to add a slide from a Slide Library to a PowerPoint 2013 presentation, go to the following Microsoft website:
 
 [Reuse slides from another presentation](https://office.microsoft.com/powerpoint-help/reuse-import-slides-from-another-presentation-ha010338386.aspx)
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

@@ -99,3 +99,7 @@ Move the server side inline scripts from the pages, page layouts, and master pag
 
 - [User Controls and Server Controls in SharePoint](https://blogs.msdn.com/b/kaevans/archive/2011/04/28/user-controls-and-server-controls-in-sharepoint.aspx)  
 - [Developing Custom ASP.NET Server Controls](https://msdn.microsoft.com/library/zt27tfhy%28v=vs.85%29.aspx)
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
