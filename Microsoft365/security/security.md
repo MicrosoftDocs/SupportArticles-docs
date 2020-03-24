@@ -1,6 +1,6 @@
 ---
-title: Listing some issues for Office 365 Security
-description: This article lists Office 365 Security related issues.
+title: Listing some issues for Microsoft 365 Security
+description: This article lists Microsoft 365 Security related issues.
 author: AmandaAZ
 manager: dcscontentpm
 audience: ITPro
@@ -13,13 +13,13 @@ search.appverid:
 ms.custom:
 - CSSTroubleshoot
 appliesto:
-- Office 365
+- Microsoft 365
 ---
 
-# Office 365 Security Troubleshooting
+# Microsoft 365 Security Troubleshooting
 
-Welcome to Office 365 Security! Here's a collection of information on how to identify and fix errors that you may run into about Office 365 Security.
+Welcome to Microsoft 365 Security! Here's a collection of information on how to identify and fix errors that you may run into about Microsoft 365 Security.
 
 ## Still need help?
 
-Go to [Microsoft Community](https://answers.microsoft.com) or the [Office 365 Tech Community](https://techcommunity.microsoft.com/t5/Office-365/ct-p/Office365).
+Go to [Microsoft Community](https://answers.microsoft.com) or the [Microsoft 365 Tech Community](https://techcommunity.microsoft.com/t5/microsoft-365/ct-p/microsoft365).
