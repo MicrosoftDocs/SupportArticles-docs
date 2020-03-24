@@ -26,11 +26,11 @@ productDirectory:
         - url: /office365/troubleshoot/enterprise
           text: Office 365 Enterprise
         - url: /office365/troubleshoot/admin
-          text: Office 365 Admin
+          text: Office 365 Admin Center
         - url: /office365/troubleshoot/compliance
-          text: Office 365 Compliance
+          text: Microsoft 365 Compliance
         - url: /office365/troubleshoot/security
-          text: Office 365 Security
+          text: Microsoft 365 Security
     # Card
     - title: Microsoft Teams
       imageSrc: https://docs.microsoft.com/media/logos/logo_MSTeams.svg
