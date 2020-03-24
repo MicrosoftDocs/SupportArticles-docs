@@ -1,5 +1,6 @@
 - name: Office 365 Security Troubleshooting
   href: ../security.md
+  items:
   - name: Security
     items:
     - name: Account security alert email message

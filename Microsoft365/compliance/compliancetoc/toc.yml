@@ -1,5 +1,6 @@
 - name: Office 365 Compliance Troubleshooting
   href: ../compliance.md
+  items:
   - name: Archive mailboxes
     items:
     - name: Messages aren't moved to archive mailboxes
