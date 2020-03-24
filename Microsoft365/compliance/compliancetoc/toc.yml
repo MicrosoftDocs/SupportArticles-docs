@@ -12,8 +12,8 @@
   - name: Data Loss Protection (DLP)
     items:
     - name: Policy tips
-      href: ../data-loss-protection/troubleshooting-data-loss-protection-policy-tips.md
+      href: ../data-loss-protection/data-loss-protection-policy-tips.md
   - name: eDiscovery
     items:
     - name: Can't run In-Place eDiscovery search in EAC
-      href: ../ediscovery/can’t-run-ediscovery-search-cloud-mailbox.md
+      href: ../ediscovery/cannot-run-ediscovery-search-cloud-mailbox.md
