@@ -19,10 +19,6 @@
       href: ../antispam/cautions-against-bypassing-spam-filters.md
     - name: User Impersonation messages are classified as phishing
       href: ../antispam/user-impersonation-messages-are-classified-as-phishing.md
-  - name: Archive mailboxes
-    items:
-    - name: Messages aren't moved to archive mailboxes
-      href: ../archive-mailboxes/message-not-moved-to-archive.md
   - name: Configure Contacts
     items:
     - name: Update contact information
@@ -47,6 +43,8 @@
     items:
     - name: 550 5.7.64 TenantAttribution
       href: ../connectors/relay-access-denied-smtp.md
+    - name: Email sent to EXO deferred with ATTR35
+      href: ../connectors/wrong-office-365-region-exo.md
     - name: Important notice for Office 365
       href: ../connectors/office-365-notice.md
   - name: Delegates
