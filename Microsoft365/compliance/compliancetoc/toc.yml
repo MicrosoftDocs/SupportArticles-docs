@@ -1,17 +1,17 @@
 - name: Office 365 Compliance Troubleshooting
   href: ../compliance.md
   items:
-  - name: Archive mailboxes
+  - name: Archive Mailboxes
     items:
     - name: Messages aren't moved to archive mailboxes
       href: ../archive-mailboxes/message-not-moved-to-archive.md
-  - name: Audit logs
+  - name: Audit Logs
     items:
     - name: BOXServiceAccount is added
       href: ../audit-logs/boxserviceaccount-is-added-to-role.md
   - name: Data Loss Protection (DLP)
     items:
-    - name: Policy tips
+    - name: Policy Tips
       href: ../data-loss-protection/data-loss-protection-policy-tips.md
   - name: eDiscovery
     items:
