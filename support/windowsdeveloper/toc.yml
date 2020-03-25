@@ -12,6 +12,14 @@
       href: shell-functions-multithreaded-apartment.md
     - name: Screen Saver command line arguments
       href: screen-saver-command-line.md
+  - name: Graphics and Multimedia development
+    items:
+    - name: DirectShow doesn't connect to downstream filter
+      href: directshow-not-connect-downstream-filter.md
+    - name: DWM drops frames of Direct3D applications
+      href: dwm-drop-direct3d-10-application-frame.md
+    - name: WIA 2.0 doesn't support duplex scan
+      href: wia-2-does-not-support-duplex.md
   - name: Networking Development
     items:
     - name: Header and Library requirement at IPPROTO_IP Level
@@ -20,12 +28,25 @@
       href: close-non-blocked-socket-memory-leak.md
     - name: Send small data packets over TCP with Winsock
       href: data-segment-tcp-winsock.md
+  - name: Security Development
+    items:
+    - name: Changing krbtgt password may fail
+      href: change-krbtgt-password-may-fail.md
   - name: System Services Development
     items:
+    - name: CreateProcess cannot eliminate duplicated variables
+      href: createprocess-cannot-eliminate-duplicate-variables.md
     - name: GetMessage ignores messages when executing callbacks
       href: getmessage-ignores-posted-messages.md
+    - name: Heap manager may not decommit memory
+      href: heap-manager-may-not-decommit-memory.md
     - name: KTMRM service failed with event ID 4448
       href: ktmrm-service-event-id-0x80070005.md
+    - name: New functionality in MSDTC service
+      href: new-functionality-in-msdtc-service.md
+    - name: XA Transaction support requires registry entries
+      href: xa-transaction-require-registry-entry.md
+      
 
 - name: Routing Windows App Dev (UWP)
   items:
@@ -45,6 +66,8 @@
       href: dxgi-cannot-draw-cursor.md
     - name: SetSystemTimeAdjustment loses adjustments
       href: setsystemtimeadjustment-less-than-16.md
+    - name: VarI8FromCy produces incorrect value
+      href: vari8fromcy-produces-incorrect-value.md
 
 - name: Routing WDK V2
   items:
@@ -58,3 +81,7 @@
       href: printer-device-fonts.md
     - name: XPSDrv isn't compatible with RAW database
       href: v4-print-driver-raw-mode-pcl-postscript.md
+  - name: Storage Driver
+    items:
+    - name: Receive CD-ROM notification
+      href: receive-cd-rom-notification.md
