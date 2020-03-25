@@ -17,3 +17,7 @@
     items:
     - name: Can't run In-Place eDiscovery search in EAC
       href: ../ediscovery/cannot-run-ediscovery-search-cloud-mailbox.md
+  - name: Holds
+    items:
+    - name: Search logic change for Title property
+      href: ../holds/change-to-search-logic-for-title-property.md
