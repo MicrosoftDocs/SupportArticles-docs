@@ -25,6 +25,8 @@
       href: ../access-management/set-language-and-region.md
     - name: This feature has been disabled by your administrator
       href: ../access-management/office-feature-disabled.md
+    - name: Turn off File Transfer
+      href: ../access-management/control-file-transfer.md
     - name: User name or password is incorrect
       href: ../access-management/connect-msolservice-office-365-azure.md
     - name: Users properties revert to original values
