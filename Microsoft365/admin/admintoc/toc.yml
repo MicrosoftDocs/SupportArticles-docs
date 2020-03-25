@@ -3,6 +3,8 @@
   items:
   - name: Access Management
     items:
+    - name: Adding guest users in the M365 admin center
+      href: ../access-management/cannot-add-guest-users-in-m365-admin-center.md
     - name: '"Application configuration incomplete" error'
       href: ../access-management/error-run-office-365-desktop-setup-tool.md
     - name: Can't open an IRM-protected document with sign-in prompts
