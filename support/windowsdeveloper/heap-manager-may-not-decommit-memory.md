@@ -7,14 +7,14 @@ ms.reviewer: jlambert, davean
 ---
 # Heap manager may not decommit memory after memory is freed
 
-This article describes an issue that the Low Fragmentation Heap (LFH) may not decommit memory that's freed by using HeapFree.
+This article describes an issue that the Low Fragmentation Heap (LFH) may not decommit memory that's freed by using `HeapFree`.
 
 _Original product version:_ &nbsp; Windows 8.1  
 _Original KB number:_ &nbsp; 3073576
 
 ## Symptoms
 
-The LFH heap manager may not decommit memory that was freed by using HeapFree. Therefore, private bytes may grow even though the memory in the heap was freed.
+The LFH heap manager may not decommit memory that was freed by using `HeapFree`. Therefore, private bytes may grow even though the memory in the heap was freed.
 
 ## Cause
 

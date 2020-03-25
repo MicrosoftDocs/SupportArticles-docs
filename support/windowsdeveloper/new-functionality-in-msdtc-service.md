@@ -16,7 +16,7 @@ Since Windows Server 2003 Service Pack 1 (SP1) and Windows XP Service Pack 2 (SP
 
 These changes can be accessed by using the updated **Security Configuration** dialog box that is available in the Component Services administrative tool.
 
-These changes are made to the default security settings that cause Distributed Transaction Coordinator (DTC) traffic to fail over the network. In this situation, you may receive one or more error messages or error codes.
+These changes are made to the default security settings that cause DTC traffic to fail over the network. In this situation, you may receive one or more error messages or error codes.
 
 By modifying the settings in the **Security Configuration** dialog box, you can help control how the DTC service communicates with remote computers over the network.
 
@@ -119,13 +119,13 @@ Registry key 3
 
 The functionality that is set by using **Mutual Authentication Required** differs from the functionality that is set by using **Incoming Caller Authentication Required**. The three options that are listed under **Transaction Manager Communication** behave as follows:
 
-- The **Mutual Authentication Required** transaction mode requires the remotely accessing component to provide an authenticated connection with the local computer. This authentication is verified by impersonation on the local computer. Additionally, if the remote access communication is performed between two Distributed Transaction Coordinator services, this authentication information must specify a computer account that matches the remote transaction mode computer's host name.
+- The **Mutual Authentication Required** transaction mode requires the remotely accessing component to provide an authenticated connection with the local computer. This authentication is verified by impersonation on the local computer. Additionally, if the remote access communication is performed between two DTC services, this authentication information must specify a computer account that matches the remote transaction mode computer's host name.
 
-- The **Incoming Caller Authentication Required** transaction mode only requires the remote connection to be authenticated. Additionally, if the remotely accessing component is a Distributed Transaction Coordinator service, the authentication information must be for a computer account.
+- The **Incoming Caller Authentication Required** transaction mode only requires the remote connection to be authenticated. Additionally, if the remotely accessing component is a DTC service, the authentication information must be for a computer account.
 
 - The **No Authentication Required** transaction mode does not validate an authenticated connection or verify whether an authenticated connection is being established.
 
-In a clustered environment, the computer account for the Distributed Transaction Coordinator service specifies the cluster node's host name. In a clustered environment, the Distributed Transaction Coordinator authentication does not use the transaction mode's host name. In a clustered environment, the transaction mode's host name is the name of the virtual service. Therefore, you cannot use the **Mutual Authentication Required**  transaction mode in a clustered environment, or on any computers that are negotiating transactions with such computers. You can use the **Mutual Authentication Required** transaction mode between two nonclustered computers that are running Windows Server 2003 SP1 or between two computers that are running Windows XP SP2.
+In a clustered environment, the computer account for the DTC service specifies the cluster node's host name. In a clustered environment, the DTC authentication does not use the transaction mode's host name. In a clustered environment, the transaction mode's host name is the name of the virtual service. Therefore, you cannot use the **Mutual Authentication Required**  transaction mode in a clustered environment, or on any computers that are negotiating transactions with such computers. You can use the **Mutual Authentication Required** transaction mode between two nonclustered computers that are running Windows Server 2003 SP1 or between two computers that are running Windows XP SP2.
 
 Use the **Incoming Caller Authentication Required** transaction mode between Windows Server 2003-based computers in a clustered environment.
 
@@ -195,11 +195,11 @@ Registry key 3
 
 ## Significance of the new options
 
-The new options that are available in the **Security Configuration** dialog box let you apply security settings to outgoing or incoming network communications. By default, after you install Windows, the computer does not accept network traffic. Therefore, the computer is less vulnerable to network access by a malicious user. Additionally, the protocols that are sent over the network are updated to support a more securely encrypted and mutually authenticated communications mode. This helps reduce the chance that a malicious user could intercept and take over communications between Distributed Transaction Coordinator services.
+The new options that are available in the **Security Configuration** dialog box let you apply security settings to outgoing or incoming network communications. By default, after you install Windows, the computer does not accept network traffic. Therefore, the computer is less vulnerable to network access by a malicious user. Additionally, the protocols that are sent over the network are updated to support a more securely encrypted and mutually authenticated communications mode. This helps reduce the chance that a malicious user could intercept and take over communications between DTC services.
 
 ## Network communication changes in Windows
 
-The network communication coming out of the Distributed Transaction Coordinator service or coming in to the Distributed Transaction Coordinator service is disabled. For example, if a COM+ object tries to update a Microsoft SQL Server database that is located on a remote computer by using a Distributed Transaction Coordinator transaction, this transaction does not succeed. Conversely, if the computer hosts a SQL Server database that components from a remote computer try to access by using a Distributed Transaction Coordinator transaction, this transaction does not succeed.
+The network communication coming out of the DTC service or coming in to the DTC service is disabled. For example, if a COM+ object tries to update a Microsoft SQL Server database that is located on a remote computer by using a DTC transaction, this transaction does not succeed. Conversely, if the computer hosts a SQL Server database that components from a remote computer try to access by using a DTC transaction, this transaction does not succeed.
 
 The following issues are related to the DTC service:
 
@@ -216,7 +216,7 @@ If the DTC transactions fail because of network connectivity issues, click to se
   - **Allow Inbound**
   - **Allow Outbound**
   
-If you want to programmatically change these settings as part of a Windows, you can directly modify the registry settings that correspond to the settings that you want to set. After you modify the registry settings, you must restart the Distributed Transaction Coordinator service.
+If you want to programmatically change these settings as part of a Windows, you can directly modify the registry settings that correspond to the settings that you want to set. After you modify the registry settings, you must restart the DTC service.
 
 We recommend that you do not manually modify the registry to change these settings. If you manually modify these registry settings, you may experience issues with the Cluster service on Windows Server 2003 SP1-based server clusters.
 

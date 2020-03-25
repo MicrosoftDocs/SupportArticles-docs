@@ -55,7 +55,7 @@ void Main_OnDeviceChange (HWND hwnd, WPARAM wParam, LPARAM lParam)
             MessageBox (hwnd, szMsg, "WM_DEVICECHANGE", MB_OK);
          }
       }
-     break;
+      break;
 
       case DBT_DEVICEREMOVECOMPLETE:
       // See if a CD-ROM was removed from a drive.
@@ -70,9 +70,9 @@ void Main_OnDeviceChange (HWND hwnd, WPARAM wParam, LPARAM lParam)
             MessageBox (hwnd, szMsg, "WM_DEVICECHANGE", MB_OK);
          }
       }
-   break;
+     break;
 
-  default:
+     default:
      /*
        Other WM_DEVICECHANGE notifications get sent for other devices or 
        reasons; we don't care about them here.  If they were important, we 

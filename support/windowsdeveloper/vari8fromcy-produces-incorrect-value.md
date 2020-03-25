@@ -52,7 +52,8 @@ STDAPI MyVariantChangeType( VARIANTARG * pvargDest, VARIANTARG * pvargSrc,
    return MyVariantChangeTypeEx( pvargDest, pvargSrc, LOCALE_USER_DEFAULT, wFlags, vt );
 }
 
-STDAPI MyVariantChangeTypeEx( VARIANTARG * pvargDest, const VARIANTARG * pvargSrc, LCID lcid, unsigned short wFlags, VARTYPE vt )
+STDAPI MyVariantChangeTypeEx( VARIANTARG * pvargDest, const VARIANTARG * pvargSrc, LCID lcid,
+                              unsigned short wFlags, VARTYPE vt )
 {
    HRESULT hResult = E_FAIL;
 
