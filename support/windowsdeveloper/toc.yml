@@ -19,7 +19,7 @@
     - name: DWM drops frames of Direct3D applications
       href: dwm-drop-direct3d-10-application-frame.md
     - name: WIA 2.0 doesn't support duplex scan
-      href: wia-2-does-not-support-duplex.md
+      href: wia-2-not-support-duplex.md
   - name: Networking Development
     items:
     - name: Header and Library requirement at IPPROTO_IP Level

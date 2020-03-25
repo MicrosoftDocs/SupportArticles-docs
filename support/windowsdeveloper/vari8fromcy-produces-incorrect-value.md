@@ -25,7 +25,7 @@ There is a known flaw in the logic that will cause all values to be rounded away
 Use your own replacement for these functions to implement the correct logic.
 
 > [!NOTE]
-> If you inter operate with other components that have not implemented this same workaround, then you (or your end user) may get differing or confusing results.
+> If you interoperate with other components that have not implemented this same workaround, then you (or your end user) may get differing or confusing results.
 
 Here is an example of some functions that may suit your purposes to do this. In this case, you would call `MyVariantChangeType(Ex)` instead of `VariantChangeType(Ex)` in your code. And replace any direct calls to `VarI8FromCy` with calls to `MyVarI8FromCy` instead:
 
