@@ -7,7 +7,7 @@ ms.date: 3/25/2020
 audience: Admin
 ms.topic: article
 ms.prod: microsoft-teams
-localization_priority: Normal
+localization_priority: High
 search.appverid:
 - SPO160
 - MET150
