@@ -28,7 +28,7 @@ You cannot add guest users to your organization by using the Microsoft 365 admin
 
 ## Workaround
 
-To work around this issue and add the guest user, go to the [Azure Active Director (AAD) admin center](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UsersManagementMenuBlade/AllUsers?WT.mc_id=365AdminCSH), and then select New guest user. 
+To work around this issue and add the guest user, go to **All users** in the [Azure Active Directory (AAD) admin center](https://aad.portal.azure.com/), and then select **New guest user**. 
 
 ## More information
 

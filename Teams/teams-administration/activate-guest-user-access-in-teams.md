@@ -23,7 +23,8 @@ description: Describes how to enable guest user access in Teams for remote worke
 # Activating guest user access in the Microsoft Teams admin center
 
 ## Symptoms
-You want to enable guest user access in Microsoft Teams to allow users to work remotely. 
+
+You want to enable guest user access in Microsoft Teams so teams in your organization can collaborate with people outside your organization. 
 
 ## Resolution
 
