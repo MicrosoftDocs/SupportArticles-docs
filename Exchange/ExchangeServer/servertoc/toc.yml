@@ -23,12 +23,12 @@
     items:
     - name: Issue with proxying HTTP requests
       href: ../http-proxy/400-bad-request.md
-  - name: Mail Flow
+  - name: Mailflow
     items:
     - name: 451 4.4.0 DNS query failed
-      href: ../mail-flow/dns-query-failed.md
+      href: ../mailflow/dns-query-failed.md
     - name: 554 5.4.14 Hop count exceeded
-      href: ../mail-flow/hop-count-exceeded-possible-mail-loop.md
+      href: ../mailflow/hop-count-exceeded-possible-mail-loop.md
   - name: Management Console
     items:
     - name: Can't open EMS on Edge Transport server
