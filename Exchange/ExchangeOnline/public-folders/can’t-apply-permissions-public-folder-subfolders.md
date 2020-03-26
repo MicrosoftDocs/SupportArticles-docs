@@ -1,5 +1,5 @@
 ---
-title: Can’t apply permissions to public folder subfolders in EAC
+title: Can't apply permissions to public folder subfolders in EAC
 description: When you apply permissions to a public folder and its subfolders by using EAC, the permissions aren't applied to all or some subfolders.
 author: TobyTu
 ms.author: batre
@@ -21,13 +21,13 @@ search.appverid:
 - MET150
 ---
 
-# Can’t apply permissions to public folder subfolders in EAC
+# Can't apply permissions to public folder subfolders in EAC
 
 ## Symptom
 
 When you apply permissions to a public folder and its subfolders by selecting the **Apply changes to this public folder and all its subfolders** check box in the Exchange admin center (EAC), the permissions are not applied to all or some subfolders.
 
-![public-folder-permission](../media/can’t-apply-permissions-public-folder-subfolders/public-folder-permission.png)
+![public-folder-permission](./media/can't-apply-permissions-public-folder-subfolders/public-folder-permission.png)
 
 ## Cause
 
