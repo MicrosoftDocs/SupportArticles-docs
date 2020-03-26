@@ -5,12 +5,12 @@
     items:
     - name: Active Sync URL is in an invalid format
       href: ../active-sync/url-invalid-format.md
-  - name: Admin Center
+  - name: Administration
     items:
     - name: Can't manage Exchange 2019 databases in EAC
-      href: ../admin-center/can't-manage-ex19-database-eac.md
+      href: ../administration/can't-manage-ex19-database-eac.md
     - name: On-premises EAC link goes to product comparison
-      href: ../admin-center/o365-link-eac-redirect-product-comparison.md
+      href: ../administration/o365-link-eac-redirect-product-comparison.md
   - name: Calendars
     items:
     - name: Show organizer name instead of subject
@@ -23,12 +23,12 @@
     items:
     - name: Issue with proxying HTTP requests
       href: ../http-proxy/400-bad-request.md
-  - name: Mailbox Configuration
+  - name: Mail Flow
     items:
     - name: 451 4.4.0 DNS query failed
-      href: ../mailbox-configuration/dns-query-failed.md
+      href: ../mail-flow/dns-query-failed.md
     - name: 554 5.4.14 Hop count exceeded
-      href: ../mailbox-configuration/hop-count-exceeded-possible-mail-loop.md
+      href: ../mail-flow/hop-count-exceeded-possible-mail-loop.md
   - name: Management Console
     items:
     - name: Can't open EMS on Edge Transport server
