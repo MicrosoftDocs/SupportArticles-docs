@@ -1,5 +1,5 @@
 ---
-title: "550 5.7.64 TenantAttribution; Relay Access Denied SMTP" in Exchange Online
+title: 550 5.7.64 TenantAttribution; Relay Access Denied SMTP in Exchange Online
 description: Describes an issue in which you receive a "550 5.7.64 TenantAttribution; Relay Access Denied SMTP" error when sending mail through Exchange Online Protection.
 author: simonxjx
 ms.author: v-six
