@@ -12,7 +12,7 @@ ms.topic: article
 ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
-- Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
 ---
 
 # "Microsoft Online Services Sign In Assistant Error" when you activate Office Professional Plus

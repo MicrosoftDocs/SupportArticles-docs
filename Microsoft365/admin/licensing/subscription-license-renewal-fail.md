@@ -12,7 +12,7 @@ ms.topic: article
 ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
-- Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
 - Office 365 Business
 - Office 365 Home
 ---

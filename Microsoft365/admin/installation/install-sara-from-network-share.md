@@ -13,7 +13,7 @@ ms.custom:
 - CSSTroubleshoot
 ms.reviewer: gregmans
 appliesto:
-- Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
 - Outlook
 search.appverid: MET150
 ---

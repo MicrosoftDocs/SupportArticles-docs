@@ -1,5 +1,5 @@
 ---
-title: How to enable Office 365 ProPlus ULS logging
+title: How to enable Microsoft 365 Apps for enterprise ULS logging
 description: There are times during troubleshooting an Office issue when the traditional log settings are not gathering enough information. This article describes how to collect more verbose logging details. 
 author: todmccoy
 manager: dcscontentpm
@@ -15,11 +15,11 @@ ms.custom:
 - CI 113644
 ms.author: ericspli
 appliesto:
-- Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
 ms.reviewer: ericspli
 ---
 
-# How to enable Office 365 ProPlus ULS logging
+# How to enable Microsoft 365 Apps for enterprise ULS logging
 
 *This article was written by [Eric Splichal](https://social.technet.microsoft.com/profile/Splic-MSFT), Support Escalation Engineer.*
 

@@ -269,7 +269,7 @@
       href: ../activation/license-issue-when-start-office-application.md
     - name: Office activation process issues
       href: ../activation/office-activation-process-issues.md
-    - name: Issue when activating Office 365 ProPlus
+    - name: Issue when activating Microsoft 365 Apps for enterprise
       href: ../activation/issue-when-activate-office-365-proplus.md
     - name: Issue when activating Office from Office 365
       href: ../activation/issue-when-activate-office-from-office-365.md
@@ -1025,7 +1025,7 @@
     items:
     - name: Office 2007 has reached end of extended support
       href: ../support/office-2007-not-support.md
-    - name: Support for 2013 versions of Office 365 ProPlus ends
+    - name: Support for 2013 versions of Microsoft 365 Apps for enterprise ends
       href: ../support/2013-versions-of-office-365.md
   - name: Visio
     items:

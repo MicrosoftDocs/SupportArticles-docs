@@ -46,7 +46,7 @@ The following table lists Office 365 and Microsoft 365 plan names and the correc
 
 |**Office 365 Plan**          |**Product ID**      |
 |-----------------------------|--------------------|
-|Office 365 ProPlus           |O365ProPlusRetail   |
+|Microsoft 365 Apps for enterprise           |O365ProPlusRetail   |
 |Office 365 Enterprise E3     |O365ProPlusRetail   |
 |Office 365 Enterprise E4     |O365ProPlusRetail   |
 |Office 365 Enterprise E5     |O365ProPlusRetail   |

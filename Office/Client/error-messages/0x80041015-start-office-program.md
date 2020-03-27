@@ -12,7 +12,7 @@ ms.prod: Office 365
 ms.topic: article
 ms.author: v-six
 appliesto:
-- Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
 - Office 365 Home
 - Office 365 Personal
 - Office Home and Student 2013

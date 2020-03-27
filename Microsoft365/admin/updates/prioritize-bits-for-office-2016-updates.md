@@ -12,7 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.topic: article
 ms.author: v-six
 appliesto:
-- Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
 - Office 365 Business
 - Office Professional 2016
 - Office Professional Plus 2016
@@ -54,10 +54,10 @@ Enabled Value: 1 (default)
 **Notes** 
  
 - This item only applies for Office client build that's greater than or equals to 16.0.7213.6925.
-- This policy setting only applies to Office 365 clients that are installed by using Click-to-Run (Office 2016 Click-to-Run editions). This includes Office 365 ProPlus, Office 365 Business, Visio Pro for Office 365 and Project Pro for Office 365. It doesn't apply to Office products that use Windows Installer (MSI).    
+- This policy setting only applies to Office 365 clients that are installed by using Click-to-Run (Office 2016 Click-to-Run editions). This includes Microsoft 365 Apps for enterprise, Office 365 Business, Visio Pro for Office 365 and Project Pro for Office 365. It doesn't apply to Office products that use Windows Installer (MSI).    
 - If the policy setting is enabled, BITS is used on devices that are downloading Office updates directly from the Office CDN.    
 - The devices won't use BITS if updates are obtained from a local Universal Naming Convention (UNC) share.    
-- BITS can be used when Office 365 ProPlus is updated from a local HTTP server. For more information, see the following section, "How to set up an internal HTTP site to distribute Office sources."    
+- BITS can be used when Microsoft 365 Apps for enterprise is updated from a local HTTP server. For more information, see the following section, "How to set up an internal HTTP site to distribute Office sources."    
 - If the policy setting is disabled or not configured, BITS isn't prioritized and the HTTP will be the primary transport for downloading updates.    
  
 ### How to set up an internal HTTP site to distribute Office sources

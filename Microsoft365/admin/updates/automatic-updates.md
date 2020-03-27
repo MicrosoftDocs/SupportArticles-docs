@@ -67,7 +67,7 @@ We recommend that you keep automatic updating enabled for Office installations b
 
     **Note:** If this key does not exist in your Registry Editor, see How to add the registry key via policy below.
 
-    **Office 365 ProPlus, Office 2019, and Office 2016**
+    **Microsoft 365 Apps for enterprise, Office 2019, and Office 2016**
 
     HKEY_LOCAL_MACHINE\software\policies\microsoft\office\16.0\common\OfficeUpdate
 
@@ -90,9 +90,9 @@ We recommend that you keep automatic updating enabled for Office installations b
 ### How to add the registry key via policy
 The registry key is added automatically when you install ADMX/ADML files. To do this:
 
-#### Office 365 ProPlus, Office 2019, and Office 2016
+#### Microsoft 365 Apps for enterprise, Office 2019, and Office 2016
 1.	Always download the LATEST admin templates to a location of your choice: 
-[Administrative Template files (ADMX/ADML) and Office Customization Tool for Office 365 ProPlus, Office 2019, and Office 2016](https://www.microsoft.com/download/details.aspx?id=49030 )
+[Administrative Template files (ADMX/ADML) and Office Customization Tool for Microsoft 365 Apps for enterprise, Office 2019, and Office 2016](https://www.microsoft.com/download/details.aspx?id=49030 )
 2.	Select the **Download** button. 
 3.	Select either the x64 or the x86 build. 
 4.	Select **Run** and follow the prompts to install the software. 
@@ -114,5 +114,5 @@ After you copy the Administrative Template files to AD DS, you'll find the updat
 
 ## More information
 
-For more information about configuring the update settings via GPO, see [Configure update settings for Office 365 ProPlus](https://docs.microsoft.com/deployoffice/configure-update-settings-for-office-365-proplus). 
+For more information about configuring the update settings via GPO, see [Configure update settings for Microsoft 365 Apps for enterprise](https://docs.microsoft.com/deployoffice/configure-update-settings-for-office-365-proplus). 
 

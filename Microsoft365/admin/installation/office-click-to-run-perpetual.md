@@ -12,7 +12,7 @@ ms.topic: article
 ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
-- Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
 ---
 
 # Office Click-to-Run Perpetual (C2R-P) release for Project 2016 and Visio 2016
@@ -21,7 +21,7 @@ appliesto:
 
 Consider the following scenario:
 
-A customer has purchased Volume-Licensed perpetual copies of Project 2016 and Visio 2016.  While migrating the enterprise to Office 365 ProPlus (2016) they find out that the 2016 version of Office 365 ProPlus which uses click-to-run, cannot be installed side-by-side with the 2016 version of Project and Visio that are MSI based.  This blocks customers from upgrading their versions of Project and Visio to 2016.
+A customer has purchased Volume-Licensed perpetual copies of Project 2016 and Visio 2016.  While migrating the enterprise to Microsoft 365 Apps for enterprise (2016) they find out that the 2016 version of Microsoft 365 Apps for enterprise which uses click-to-run, cannot be installed side-by-side with the 2016 version of Project and Visio that are MSI based.  This blocks customers from upgrading their versions of Project and Visio to 2016.
 
 ## Resolution
 

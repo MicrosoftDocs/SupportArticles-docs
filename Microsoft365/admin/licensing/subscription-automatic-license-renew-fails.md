@@ -12,7 +12,7 @@ ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
-- Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
 ---
 
 # Office 365 subscription automatic license renewal fails when heartbeatcache is in wrong location

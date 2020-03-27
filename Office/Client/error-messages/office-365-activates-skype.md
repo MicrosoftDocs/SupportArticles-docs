@@ -1,6 +1,6 @@
 ---
 title: This feature has been disabled by your Administrator
-description: Fixes an issue in which Skype for Business activation fails if you install it from Office 365 ProPlus as a stand-alone application.
+description: Fixes an issue in which Skype for Business activation fails if you install it from Microsoft 365 Apps for enterprise as a stand-alone application.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -12,14 +12,14 @@ ms.topic: article
 ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
-- Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
 ---
 
 # "This feature has been disabled by your Administrator" when Office 365 activates Skype for Business
 
 ## Symptoms
 
-When you try to install Microsoft Skype for Business as a stand-alone application from a Microsoft Office 365 ProPlus suite, you receive one of the following error messages:
+When you try to install Microsoft Skype for Business as a stand-alone application from a Microsoft Microsoft 365 Apps for enterprise suite, you receive one of the following error messages:
 
 **Error message 1**
 

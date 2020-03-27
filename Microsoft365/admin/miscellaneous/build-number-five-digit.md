@@ -15,7 +15,7 @@ appliesto:
 - Office 365 Enterprise
 - Office 365 Business
 - Office 365 Home
-- Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
 - Office 365 Personal
 - Project Pro for Office 365
 - Visio Pro for Office 365

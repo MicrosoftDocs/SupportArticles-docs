@@ -60,7 +60,7 @@ To resolve this issue, take one of the following actions:
 
 This issue occurs for Skype for Business Online users when the following conditions are true: 
  
-- You're running the version of Lync 2013 that's included with Office 365 ProPlus, and you have a current Office 365 Business Premium or Office 365 subscription.    
+- You're running the version of Lync 2013 that's included with Microsoft 365 Apps for enterprise, and you have a current Office 365 Business Premium or Office 365 subscription.    
 - You either haven't renewed into one of the new Office 365 offerings (for example, Office 365 Business Essentials, Office 365 Business, or Office 365 Business Premium) or you haven't installed Lync Basic 2013 after you renewed your subscription.    
  
 Lync 2013 will go into reduced functionality mode after 30 days if one of the conditions is true: 

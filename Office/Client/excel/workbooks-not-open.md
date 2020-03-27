@@ -36,7 +36,7 @@ Install the latest updates (this includes Current Channel, First Release Deferre
 
 For more information about how to obtain the latest Office updates, see the following TechNet topic:
 
-[Overview of the update process for Office 365 ProPlus](https://technet.microsoft.com/library/dn761709.aspx)
+[Overview of the update process for Microsoft 365 Apps for enterprise](https://technet.microsoft.com/library/dn761709.aspx)
 
 ### Windows Installer version (MSI)
 

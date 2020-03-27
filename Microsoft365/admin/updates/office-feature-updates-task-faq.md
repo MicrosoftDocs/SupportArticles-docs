@@ -13,8 +13,8 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 appliesto:
-- Office 365 ProPlus
-- Office 2016 version of Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
+- Office 2016 version of Microsoft 365 Apps for enterprise
 ---
 
 # Description of the Office Feature Updates task

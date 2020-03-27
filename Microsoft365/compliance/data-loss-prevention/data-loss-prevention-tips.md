@@ -15,7 +15,7 @@ appliesto:
 - Exchange Online
 - Exchange Online Protection
 - Office Professional Plus 2013
-- Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
 search.appverid: MET150
 ---
 # How to troubleshoot data loss prevention policy tips in Exchange Online Protection in Office 365

@@ -12,14 +12,14 @@ ms.custom: CSSTroubleshoot
 ms.topic: article
 ms.author: v-maqiu
 appliesto:
-- Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
 ---
 
-# Fixes for issues on devices with App-V enabled and Office 365 ProPlus installed
+# Fixes for issues on devices with App-V enabled and Microsoft 365 Apps for enterprise installed
 
 ## Symptoms
 
-You experience one or more of the following issues on devices that are enabled for Microsoft Application Virtualization (App-V) and that have Office products such as Office 365 ProPlus deployed through the Click-to-Run technology.
+You experience one or more of the following issues on devices that are enabled for Microsoft Application Virtualization (App-V) and that have Office products such as Microsoft 365 Apps for enterprise deployed through the Click-to-Run technology.
 
 - Add-ins and line-of-business (LOB) apps that are delivered through App-V cannot interact with the installed Office apps.
 - When you try to use Internet Explorer to access documents on SharePoint, the browser cannot interact with the installed Office apps.

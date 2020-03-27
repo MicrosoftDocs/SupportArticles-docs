@@ -12,7 +12,7 @@ ms.topic: article
 ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
-- Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
 - Office 2016
 ---
 
@@ -22,13 +22,13 @@ appliesto:
 
 This article contains information about a new authentication framework for Microsoft Office 2016. 
 
-By default, Microsoft Office 365 ProPlus (2016 version) uses Azure Active Directory Authentication Library (ADAL) framework-based authentication. Starting in build 16.0.7967, Office uses Web Account Manager (WAM) for sign-in workflows on Windows builds that are later than 15000 (Windows 10, version 1703, build 15063.138). 
+By default, Microsoft Microsoft 365 Apps for enterprise (2016 version) uses Azure Active Directory Authentication Library (ADAL) framework-based authentication. Starting in build 16.0.7967, Office uses Web Account Manager (WAM) for sign-in workflows on Windows builds that are later than 15000 (Windows 10, version 1703, build 15063.138). 
 
 ### General guidance
 
 If you experience authentication issues in Office application on Windows 10, we recommend to do the following actions: 
  
-- Update Office products to the latest build for your channel according to [Update history for Office 365 ProPlus (listed by date)](https://docs.microsoft.com/officeupdates/update-history-office365-proplus-by-date).    
+- Update Office products to the latest build for your channel according to [Update history for Microsoft 365 Apps for enterprise (listed by date)](https://docs.microsoft.com/officeupdates/update-history-office365-proplus-by-date).    
 - Make sure that you are running any of the following Windows builds:   
   - Any build for Windows 10, version 1809 or a later version    
   - 17134.677 or later builds for Windows 10, version 1803    

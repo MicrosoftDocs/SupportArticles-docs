@@ -42,7 +42,7 @@ This issue occurs because you can't install Click-to-Run versions of Office prog
 
 To work around this issue, do one of the following;
 
-- For customers who have an Office 365 ProPlus license, install Office with shared computer activation. For more information about installing Office 365 ProPlus with shared computer activation, see [Deploy Office 365 ProPlus by using Remote Desktop Services](https://technet.microsoft.com/library/dn782858.aspx).   
+- For customers who have an Microsoft 365 Apps for enterprise license, install Office with shared computer activation. For more information about installing Microsoft 365 Apps for enterprise with shared computer activation, see [Deploy Microsoft 365 Apps for enterprise by using Remote Desktop Services](https://technet.microsoft.com/library/dn782858.aspx).   
 - For all other versions of Office Click-to-Run, install an edition of the Office program or suite that uses a volume license key.   
 
 

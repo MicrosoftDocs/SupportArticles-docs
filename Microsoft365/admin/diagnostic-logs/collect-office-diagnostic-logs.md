@@ -1,5 +1,5 @@
 ---
-title: Enable Office 365 ProPlus ULS logging for random issues
+title: Enable Microsoft 365 Apps for enterprise ULS logging for random issues
 description: Describes how to collect Office diagnostic logs for Office support professionals to troubleshoot Office issues.
 author: MaryQiu1987
 manager: dcscontentpm
@@ -13,10 +13,10 @@ ms.custom: CSSTroubleshoot
 ms.author: v-maqiu
 localization_priority: Normal
 appliesto:
-- Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
 ---
 
-# How to enable Office 365 ProPlus ULS logging for random issues
+# How to enable Microsoft 365 Apps for enterprise ULS logging for random issues
 
 To troubleshoot Office issues, Microsoft Office support professionals may have to review advanced log data that's created by Office applications.
 
