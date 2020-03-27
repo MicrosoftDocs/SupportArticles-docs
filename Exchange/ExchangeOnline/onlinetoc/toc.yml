@@ -67,7 +67,9 @@
       href: ../delete-calendar-items/store-reached-maximum-size.md
   - name: Distribution Groups
     items:
-    - name: Prevent users from creating and managing DG
+    - name: Cannot determine group type
+      href: ../distribution-groups/cannot-determine-group-type-error.md
+    - name: Prevent users from creating and managing group
       href: ../distribution-groups/prevent-users-create-manage-dg.md
     - name: You don't have sufficient permissions
       href: ../distribution-groups/no-sufficient-permissions-moving-dg.md
