@@ -33,7 +33,7 @@ The following are recommendations that can help ensure your code passes the new 
     > this method updates the `cbFormat` and `pbFormat` members of the `AM_MEDIA_TYPE structure`.
 
 - Verify `BITMAPINFOHEADER` structure for invalid values.
-- Make sure `biSize` is equal to sizeof(`BITMAPINFOHEADER`).
+- Make sure `biSize` is equal to `sizeof(BITMAPINFOHEADER)`.
 - Verify `biSizeImage` for bad value (that is, > 0x40000000).
 - Verify `biClrUsed` for bad value (that is, > 256).
 
@@ -50,13 +50,18 @@ GraphEdit is available in the Microsoft Windows Software Development Kit (SDK).
     - Input pin and output pin will connect without any error on Windows 7 SP1.
     - GraphEdit will show you error message on Windows 8 and Windows 7 SP1 with KB 2670838 installed. Terms used in this article:
 
-Buffer Overflow:  
-A buffer overflow occurs when we try to fit more data into a buffer than was allocated. A buffer overflow can be used to execute malicious code in a system.
+## More information
 
-Buffer Overruns:  
-A buffer overrun is caused by treating unchecked, external input as trustworthy data. The act of copying this data, using operations such as `CopyMemory`, `strcat`, `strcpy`, or `wcscpy`, can create unanticipated results, which allows for system corruption.
+Terms that are used in this article:
 
-## Reference
+- Buffer Overflow
+
+    A buffer overflow occurs when we try to fit more data into a buffer than was allocated. A buffer overflow can be used to execute malicious code in a system.
+- Buffer Overruns
+
+    A buffer overrun is caused by treating unchecked, external input as trustworthy data. The act of copying this data, using operations such as `CopyMemory`, `strcat`, `strcpy`, or `wcscpy`, can create unanticipated results, which allows for system corruption.
+
+Related links:
 
 - [CBasePin.ReceiveConnection method](/windows/win32/directshow/cbasepin-receiveconnection)
 
@@ -66,6 +71,6 @@ A buffer overrun is caused by treating unchecked, external input as trustworthy 
 
 - [AM_MEDIA_TYPE structure](/windows/win32/api/strmif/ns-strmif-am_media_type)
 
-- [BITMAPINFOHEADER structure](/previous-versions//dd183376(v=vs.85))
+- [BITMAPINFOHEADER structure](/previous-versions/dd183376(v=vs.85))
 
 - [Using GraphEdit](/windows/win32/directshow/using-graphedit)

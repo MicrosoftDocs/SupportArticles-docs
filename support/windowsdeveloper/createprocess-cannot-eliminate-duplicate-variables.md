@@ -26,13 +26,11 @@ For more information about the `lpEnvironment` parameter, see [CreateProcess fun
 
 ## Environment variables
 
-When the child process has been created and wants to access those variables, it may use `GetEnvironmentStrings` or `GetEnvironmentVariable` APIs.
+When the child process has been created and wants to access those [environment variables](/windows/win32/procthread/environment-variables), it may use `GetEnvironmentStrings` or `GetEnvironmentVariable` APIs.
 
-[Environment Variables](/windows/win32/procthread/environment-variables)  
+- `GetEnvironmentStrings` will just return a pointer to the environment block buffer of the process, which would be the same as the buffer that we passed to `CreateProcess`.
 
-`GetEnvironmentStrings` will just return a pointer to the environment block buffer of the process, which would be the same as the buffer that we passed to `CreateProcess`.
-
-`GetEnvironmentVariable` will look for the variable that we want within the buffer that we passed to `CreateProcess` with a simple algorithm:  
-it will go over the buffer from left to right, and when it finds the variable name we want, it will return its value. `GetEnvironmentVariable` won't care if there are other variables with the same name after that one in the buffer.
+- `GetEnvironmentVariable` will look for the variable that we want within the buffer that we passed to `CreateProcess` with a simple algorithm:  
+    it will go over the buffer from left to right, and when it finds the variable name we want, it will return its value. `GetEnvironmentVariable` won't care if there are other variables with the same name after that one in the buffer.
 
 Summing up, with current design, it is the responsibility of the application that calls `CreateProcess` to eliminate duplicated variables from the environment block buffer.

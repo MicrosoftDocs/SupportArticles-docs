@@ -8,7 +8,7 @@ ms.prod-support-area-path:
 
 Some applications need to know when the user inserts or removes a compact disc or DVD from a CD-ROM drive without polling for media changes. Windows provide a way to notify these applications through the `WM_DEVICECHANGE` message. This article explains how to handle the `WM_DEVICECHANGE` message to detect CD-ROM or DVD media changes.
 
-_Original product version:_ Windows  
+_Original product version:_ &nbsp; Windows  
 _Original KB number:_ &nbsp; 163503
 
 ## Windows notification
@@ -21,7 +21,7 @@ When the user inserts a new compact disc or DVD into a drive, applications get a
 
 When the user removes a compact disc from a CD-ROM drive or DVD, applications will get a `WM_DEVICECHANCE` message with a `DBT_DEVICEREMOVECOMPLETE` event. As with `DBT_DEVICEARRIVAL` above, the application must check the event to make sure that the device being removed is a volume and that the event's media flag is set.
 
-## Sample Code
+## Sample code
 
 The following code demonstrates how to use the `WM_DEVICECHANGE` message to check for compact disc or DVD insertion or removal.
 
@@ -70,9 +70,9 @@ void Main_OnDeviceChange (HWND hwnd, WPARAM wParam, LPARAM lParam)
             MessageBox (hwnd, szMsg, "WM_DEVICECHANGE", MB_OK);
          }
       }
-     break;
+      break;
 
-     default:
+      default:
      /*
        Other WM_DEVICECHANGE notifications get sent for other devices or 
        reasons; we don't care about them here.  If they were important, we 
@@ -98,7 +98,7 @@ char FirstDriveFromMask (ULONG unitmask)
             break;
       unitmask = unitmask >> 1;
    }
-      return (i + 'A');
+   return (i + 'A');
 }
 ```
 
