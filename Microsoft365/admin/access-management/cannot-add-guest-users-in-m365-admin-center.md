@@ -24,7 +24,7 @@ description: Describes a workaround for adding guest users to the Microsoft 365 
 
 ## Summary
 
-Tenant administrators can make a change in Settings to allow team leaders and users who are not admins to add other guest users who work remotely. 
+Administrators can make a change in Settings to allow team leaders and users who are not admins to add other guest users who work remotely. 
 
 
 ## Resolution
@@ -33,7 +33,7 @@ Tenant administrators can make a change in Settings to allow team leaders and us
 
 For non-admins (team leaders and other end users) to add guest users, follow these steps:
 
-1. Have the tenant administrator sign into the [Azure portal](https://portal.azure.com/).
+1. Have the administrator sign into the [Azure portal](https://portal.azure.com/).
 2. Go to the **Dashboard**, and then select **Users**. 
 3. Select **User settings**. 
 4. Under **External collaboration settings**, set **Members can invite** to **Yes**.
