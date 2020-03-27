@@ -1,5 +1,5 @@
 ---
-title: "550-DKIM" NDR when send emails to an external domain.
+title: 550-DKIM NDR when send emails to an external domain.
 description: Describes an issue in which Office 365 users receive NDRs that contain 550.
 author: simonxjx
 ms.author: v-six
