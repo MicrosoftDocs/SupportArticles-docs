@@ -1,5 +1,5 @@
 ---
-title: 'Eventing service' error message when changing the status of users to inactive in Microsoft Project
+title: Eventing service error message when changing the status of users to inactive in Microsoft Project
 description: Describes how to handle an 'Eventing service' error when deactivating a user in Microsoft Project.
 author: todmccoy
 ms.author: v-todmc
