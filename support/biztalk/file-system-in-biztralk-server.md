@@ -5,9 +5,7 @@ ms.date: 03/16/2020
 ms.prod-support-area-path: 
 ms.reviewer: tracey
 ---
-# Information about the file systems that are supported when you use the BizTalk Server File Receive function and the BizTalk Server File Adapter
-
-This article discusses the file systems that are supported when you use the Microsoft BizTalk Server File Receive function and the Microsoft BizTalk Server File Adapter.
+# Supported file systems when you use the BizTalk Server File Receive function and BizTalk Server File Adapter
 
 _Original product version:_ &nbsp;  BizTalk Server  
 _Original KB number:_ &nbsp; 815070

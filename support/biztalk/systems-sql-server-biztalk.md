@@ -39,7 +39,7 @@ The following tables list the operating systems, SQL Server, Visual Studio, and 
 | SQL Server 2014|Yes|No|No|No|No|
 | SQL Server Express|Yes but not recommended|Yes but not recommended|Yes but not recommended|Yes but not recommended|Yes but not recommended|
 | Visual Studio version|Visual Studio 2013|Visual Studio 2012|Visual Studio 2010|Visual Studio 2008 SP1 or later service pack|Visual Studio 2005|
-| .NET Framework version|Visual Studio project target build: .NET Framework 4.5 <p>BizTalk Runtime: .NET Framework 4.5. x|Visual Studio project target build: .NET Framework 4.5 <p>BizTalk Runtime: .NET Framework 4.5. x|Visual Studio project target build: .NET Framework 4 or .NET Framework 3.5 SP1 <p>BizTalk Runtime: .NET Framework 4.5.x (Only with CU7)|.NET Framework 3.5 SP1|.NET Framework 3.0 <p>.NET Framework 2.0|
+| .NET Framework version|Visual Studio project target build: .NET Framework 4.5 <br/><br/>BizTalk Runtime: .NET Framework 4.5. x|Visual Studio project target build: .NET Framework 4.5 <br/><br/>BizTalk Runtime: .NET Framework 4.5. x|Visual Studio project target build: .NET Framework 4 or .NET Framework 3.5 SP1 <br/><br/>BizTalk Runtime: .NET Framework 4.5.x (Only with CU7)|.NET Framework 3.5 SP1|.NET Framework 3.0 <br/>.NET Framework 2.0|
 |||||||
 
 > [!IMPORTANT]
