@@ -41,8 +41,16 @@
       href: ../connecting-to-the-service/winrm-cannot-process-request.md
   - name: Connectors
     items:
+    - name: 550 5.1.1 ExRecipNotFound NDR
+      href: ../connectors/exrecipnotfound-ndr.md
+    - name: 550 5.1.10 RecipientNotFound NDR
+      href: ../connectors/recipientnotfound-ndr.md
+    - name: 550 5.2.0 BadPrimary NDR
+      href: ../connectors/badprimary-ndr.md
     - name: 550 5.7.64 TenantAttribution
       href: ../connectors/relay-access-denied-smtp.md
+    - name: 554 5.6.0 Invalid message NDR
+      href: ../connectors/invalid-message-ndr.md
     - name: Email sent to EXO deferred with ATTR35
       href: ../connectors/wrong-office-365-region-exo.md
     - name: Important notice for Office 365
@@ -59,7 +67,9 @@
       href: ../delete-calendar-items/store-reached-maximum-size.md
   - name: Distribution Groups
     items:
-    - name: Prevent users from creating and managing DG
+    - name: Cannot determine group type
+      href: ../distribution-groups/cannot-determine-group-type-error.md
+    - name: Prevent users from creating and managing group
       href: ../distribution-groups/prevent-users-create-manage-dg.md
     - name: You don't have sufficient permissions
       href: ../distribution-groups/no-sufficient-permissions-moving-dg.md
@@ -87,6 +97,10 @@
       href: ../mailbox-migration/no-smtp-proxy-matching.md
     - name: WhenCreated date is changed
       href: ../mailbox-migration/whencreated-date-changed.md
+  - name: Mailflow
+    items:
+    - name: 550 5.7.64 TenantAttribution NDR
+      href: ../mailflow/tenantattribution-ndr.md
   - name: Mail Delivery
     items:
     - name: 554 5.2.0 STOREDRV.Deliver.Exception
@@ -121,6 +135,8 @@
     items:
     - name: Can't set up profile with Autodiscover
       href: ../outlook-profiles/cannot-set-up-profile-autodiscover.md
+    - name: Encrypted connection unavailable
+      href: ../outlook-profiles/encrypted-connection-unavailable.md
   - name: Outlook Crashes
     items:
     - name: Issues with crash or stop responding
