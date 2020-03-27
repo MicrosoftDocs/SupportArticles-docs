@@ -9,10 +9,10 @@
     items:
     - name: BOXServiceAccount is added
       href: ../audit-logs/boxserviceaccount-is-added-to-role.md
-  - name: Data Loss Protection (DLP)
+  - name: Data Loss Prevention (DLP)
     items:
-    - name: Policy Tips
-      href: ../data-loss-protection/data-loss-protection-policy-tips.md
+    - name: Common scenarios for tips
+      href: ../data-loss-prevention/data-loss-prevention-policy-tips.md
   - name: eDiscovery
     items:
     - name: Can't run In-Place eDiscovery search in EAC
