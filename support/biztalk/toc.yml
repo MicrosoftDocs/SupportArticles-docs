@@ -38,8 +38,6 @@
     href: biztalk-hotfixes-cumulative-update.md
   - name: Set Message Queuing configuration options
     href: biztalk-message-queuing-configuration.md
-  - name: TCP settings may impact BizTalk Server
-    href: tcp-settings-impact-biztalk-server.md
 
 - name: Development and Deployment
   items:
