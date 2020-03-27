@@ -18,6 +18,9 @@ appliesto:
 
 # Users removed from the Enterprise Resource Pool group sync are not inactivated
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 After removing users from an Active Directory security group used to synchronize user accounts in Project Web App's (PWA) 2013 Enterprise Resource Pool, resources are not inactivated.  Previous behavior in Project Web App 2010 the users were inactivated.

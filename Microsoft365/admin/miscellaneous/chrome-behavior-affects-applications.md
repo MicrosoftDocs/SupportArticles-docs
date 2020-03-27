@@ -22,6 +22,9 @@ search.appverid: MET150
 # Effect on customer websites and Microsoft services and products in Chrome version 80 or later
 
 > [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
+> [!NOTE]
 > Previously, this article referenced Google Chrome Beta version 79. Google is scheduled to release a cookie behavior in Chrome Stable version 80.
 > Chrome has updated their [rollout timeline](https://www.chromium.org/updates/same-site) to indicate that this change will be rolled out in Chrome 80 starting the week of February 17. Chrome 80 will ship on February 4 and have this feature disabled by default. The feature will be enabled on a graduated schedule starting February 17. 
 

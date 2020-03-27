@@ -17,6 +17,9 @@ appliesto:
 
 # Edit the Windows registry to clear the list of most recently used files in Office
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 You can edit a single registry entry to clear the most recently used files list that appears in most Microsoft Office programs.

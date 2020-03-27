@@ -20,6 +20,9 @@ appliesto:
 
 # Description of the algorithm used by the XIRR() function in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 The following information describes the algorithm used by the XIRR() function in Microsoft Excel to compute the internal rate of return on a schedule of cash flows that are not necessarily periodic. That is, payments may be made at different time intervals.

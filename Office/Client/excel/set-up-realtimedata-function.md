@@ -17,6 +17,9 @@ appliesto:
 
 # How to set up and use the RTD function in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 This article describes the functionality that the RealTimeData (RTD) function provides. Microsoft Office Excel provides a worksheet function, RealTimeData (RTD). This function enables you to call a Component Object Model (COM) Automation server to retrieve data in real time.

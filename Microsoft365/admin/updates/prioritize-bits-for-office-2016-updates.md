@@ -23,6 +23,9 @@ appliesto:
 
 # How to prioritize the use of BITS by Office 2016 clients for downloading updates
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 When you download updates from Microsoft Content Delivery Network (CDN) to update Office 2016 clients, you may need to prioritize the use of Windows Background Interface Transfer Service (BITS) to better manage network bandwidth.

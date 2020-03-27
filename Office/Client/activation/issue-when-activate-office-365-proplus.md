@@ -18,6 +18,9 @@ appliesto:
 
 # "We are unable to connect right now" error when users try to activate Microsoft 365 Apps for enterprise
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you set up your network to block Internet Explorer 6, users discover that they cannot activate Microsoft 365 Apps for enterprise. When users try to activate Microsoft 365 Apps for enterprise, they receive the following error message:

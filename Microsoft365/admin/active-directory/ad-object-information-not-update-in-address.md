@@ -19,6 +19,9 @@ appliesto:
 
 # Changed Active Directory object information is not updated in the address book in Office 365 dedicated/ITAR
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Symptoms
 
 When you change or update Active Directory object information, you notice that the information is not updated in the address book in Microsoft Office 365 dedicated/ITAR.
@@ -53,7 +56,7 @@ If the object or updated information is displayed correctly in OWA but cannot be
    5. Delete the contents of the Offline Address Books folder.   
    6. Restart Outlook.    
 
-    **Note** This step should only be used for troubleshooting to determine whether there’s a potential issue in the Outlook client.   
+    **Note** This step should only be used for troubleshooting to determine whether there's a potential issue in the Outlook client.   
 
 If the issue affects all users, determine whether enough time has passed for the OAB to be updated.
 

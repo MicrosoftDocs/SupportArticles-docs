@@ -17,16 +17,22 @@ appliesto:
 
 # No Office entitlement found on device
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
+
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
 
 You start up the Office on a new device and you get a message that "Office isn't entitled on this device" along with the option to try Office, enter a product key or purchase Office. 
 
 ## Cause
 
-This may or may not be an error depending on whether Office was entitled to come on the device. PC manufacturers have the option to check for an entitlement for devices that come with Office and for ones that don't but might have it added later. The message will inform you that your device has been checked and there’s no record of Office coming with the device.  
+This may or may not be an error depending on whether Office was entitled to come on the device. PC manufacturers have the option to check for an entitlement for devices that come with Office and for ones that don't but might have it added later. The message will inform you that your device has been checked and there's no record of Office coming with the device.  
 
 ## Resolution
 
 If Office wasn't supposed to come with your device, you can either get a trial or purchase Office. If you've purchased Office online or at a retail store, you can also enter that product key.
 
-An Office 365 Subscription is included with certain devices. These are typically small screen touch devices and it’s usually marked on the box. If you feel that there's an error and your device should have come with Office, you will need to contact support.
+An Office 365 Subscription is included with certain devices. These are typically small screen touch devices and it's usually marked on the box. If you feel that there's an error and your device should have come with Office, you will need to contact support.

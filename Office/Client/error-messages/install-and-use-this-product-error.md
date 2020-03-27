@@ -26,6 +26,9 @@ appliesto:
 
 #  "To install and use this product..." error when you install Office 2010
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Symptoms
 
 When you try to install Microsoft Office 2010, the installation does not finish, and you receive the following error message:

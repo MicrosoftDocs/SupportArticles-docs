@@ -22,6 +22,9 @@ appliesto:
 
 # File size increases greatly when you insert a picture into a Project plan
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Symptoms
 
 When you insert a picture into a Microsoft Project task, into a Microsoft Project resource, or into a Microsoft Project assignment note and then you save your Microsoft Project plan, the size of your Microsoft Project file may increase more than you expect it to. 

@@ -17,6 +17,9 @@ appliesto:
 
 # Error when editing an equation in Office
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you try to edit an equation that was inserted using Equation Editor 3.0 in an Office application (such as Word), you see the following error: 

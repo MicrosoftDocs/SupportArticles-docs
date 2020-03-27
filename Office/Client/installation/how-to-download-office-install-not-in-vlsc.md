@@ -22,6 +22,9 @@ description: Describes how to install Office with files that are not in VLSC or 
 
 # How to install Office 2019 installation files not found in VLSC
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 Office files can be downloaded separately. 
@@ -46,7 +49,7 @@ Follow the steps below to download and install your Office 2019 software or appl
 ![Select the file to download.](../media/how-to-download-install/how-to-download-install-1.png)
 2. Select the arrow next to the **Save As** option.
 ![Select Save As. ](../media/how-to-download-install/how-to-download-install-2.png)
-3. Create a new folder and save the file to this folder. (The name of the folder is irrelevant. For instance, create a folder on your Desktop named “Office”.)
+3. Create a new folder and save the file to this folder. (The name of the folder is irrelevant. For instance, create a folder on your Desktop named "Office".)
     > [!NOTE]
     > This folder should be a shared location that is accessible for installation to other devices. 
 
@@ -88,16 +91,16 @@ Follow the steps below to download and install your Office 2019 software or appl
 ![Select Finish. ](../media/how-to-download-install/how-to-download-install-15.png)
 16. Select **Export** in the upper-right corner of the page.<br/>
 ![Select Export.](../media/how-to-download-install/how-to-download-install-16.png)
-17. In the **File Name** text box, type “Configuration” (if it does not already show this) and then select **Save as** to save it to the folder you created.
+17. In the **File Name** text box, type "Configuration" (if it does not already show this) and then select **Save as** to save it to the folder you created.
     > [!NOTE]
     > Make a note of this location as it will be needed for the following steps. 
 
     ![Type Configuration in the text box.](../media/how-to-download-install/how-to-download-install-17.png)
     ![Select Save.](../media/how-to-download-install/how-to-download-install-18.png)
-18. Open an elevated Command Prompt. (Select the **Windows** button, type “CMD”, right-click **Command Prompt**, and select **Run as administrator**.)<br/>
+18. Open an elevated Command Prompt. (Select the **Windows** button, type "CMD", right-click **Command Prompt**, and select **Run as administrator**.)<br/>
 ![Open a Command Prompt.](../media/how-to-download-install/how-to-download-install-19.png)
 ![Run as Administrator.](../media/how-to-download-install/how-to-download-install-20.png)
-19. Type “cd “(c+d+space bar). Copy the file path of the location where you downloaded the file and paste it in the command prompt window.
+19. Type "cd "(c+d+space bar). Copy the file path of the location where you downloaded the file and paste it in the command prompt window.
 ![Copy the filepath.](../media/how-to-download-install/how-to-download-install-21.png)
 ![Paste the location in the command prompt.](../media/how-to-download-install/how-to-download-install-22.png)
 20. Select **Enter**. The Command Prompt Line is now updated to the location where the files were downloaded:

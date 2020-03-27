@@ -17,6 +17,9 @@ appliesto:
 
 # "This feature has been disabled by your Administrator" when Office 365 activates Skype for Business
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you try to install Microsoft Skype for Business as a stand-alone application from a Microsoft Microsoft 365 Apps for enterprise suite, you receive one of the following error messages:

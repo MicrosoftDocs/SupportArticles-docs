@@ -19,6 +19,9 @@ appliesto:
 
 # Password to modify a presentation is required when you open the presentation in PowerPoint
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 If you save a Microsoft PowerPoint presentation that requires a password to modify the presentation, but not a password to open the presentation, you are still required to type a password the next time that you open the presentation.

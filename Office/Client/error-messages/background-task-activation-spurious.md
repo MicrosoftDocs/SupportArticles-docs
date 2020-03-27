@@ -35,6 +35,9 @@ appliesto:
 
 # "Background task activation is spurious" when you use an Office 2016 application to access Office 365 resources
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem
 
 This article contains information that applies when you use the OneDrive for Business Next Generation Sync Client (onedrive.exe) or the OneDrive for Business sync client (groove.exe) OneDrive for Business sync client.

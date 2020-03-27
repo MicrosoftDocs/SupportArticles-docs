@@ -20,6 +20,9 @@ appliesto:
 
 # Print all embedded charts programmatically on a worksheet in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 In Microsoft Excel, you can create a Microsoft Visual Basic for Applications macro that prints all embedded charts in an Excel worksheet. Each chart is printed on a separate page.

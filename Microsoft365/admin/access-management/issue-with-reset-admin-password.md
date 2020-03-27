@@ -22,6 +22,9 @@ appliesto:
 
 # "We could not verify your account" error when you try to reset your admin password in Office 365, Intune, or Azure
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem 
 
 When you try to reset your admin password for a Microsoft cloud service such as Office 365, Microsoft Intune, or Microsoft Azure, you receive the following error message:

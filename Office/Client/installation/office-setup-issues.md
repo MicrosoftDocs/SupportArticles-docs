@@ -32,6 +32,9 @@ appliesto:
 
 # How to use a setup log to troubleshoot setup problems in Office
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 This step-by-step article describes how to use the Microsoft Office installation log files to troubleshoot Office Setup issues.

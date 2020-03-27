@@ -18,6 +18,9 @@ appliesto:
 
 # Excel statistical functions: STEYX
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 This article describes the STEYX function in Microsoft Office Excel 2003 and in later versions of Excel, illustrates how the function is used, and compares the results of the function for Excel 2003 and for later versions of Excel with the results of STEYX in earlier versions of Excel.

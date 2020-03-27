@@ -17,6 +17,9 @@ appliesto:
 
 # "Another DNS record already exists with this host name" when adding an Address or CNAME record
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem
 
 In Office 365 Small Business, you try to add an Address (A) record or a CNAME record in the Office 365 portal. However, you get the following error message:

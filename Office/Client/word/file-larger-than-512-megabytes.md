@@ -20,6 +20,9 @@ appliesto:
 
 # "Word cannot open this file because it is larger than 512 Megabytes" when opening a document in Word 
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you try to open a Word file, you receive an error:

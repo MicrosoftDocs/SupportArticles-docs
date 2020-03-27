@@ -19,6 +19,9 @@ appliesto:
 
 # Excel statistical functions: GROWTH
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 This article describes the GROWTH function in Microsoft Office Excel 2003 and in later versions of Excel, illustrates how the function is used, and compares results of the function for Excel 2003 and for later versions of Excel with results of GROWTH in earlier versions of Excel. GROWTH is evaluated by calling the related function, LINEST. Extensive changes to LINEST for Excel 2003 and for later versions of Excel are summarized, and their implications for GROWTH are noted.

@@ -17,6 +17,9 @@ appliesto:
 
 # "The installation of Microsoft Office 2010 requires that MSXML version 6.10.1129.0 be installed on your computer" when you install Office 2010 on a Windows 7-based computer
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you install Office 2010 on a Windows 7-based computer, you may receive the following error message: 

@@ -16,6 +16,9 @@ appliesto:
 
 # Cannot pass the Welcome Screen in Office for Mac
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you start any Office for Mac application such as Microsoft Word for Mac, PowerPoint for Mac, Excel for Mac or Outlook for Mac, the Welcome screen does not have any buttons such as OK or Close to continue.

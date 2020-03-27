@@ -22,6 +22,9 @@ description: Describes a workaround for adding guest users to the Microsoft 365 
 
 # Admins cannot add guest users to their organization in Microsoft 365 admin center
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 You cannot add guest users to your organization by using the Microsoft 365 admin center. 

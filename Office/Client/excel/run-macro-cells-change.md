@@ -20,6 +20,9 @@ appliesto:
 
 # How to run a macro when certain cells change in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 In Microsoft Excel, you can create a macro that is called only when a value is entered into a cell in a particular sheet or in any sheet that is currently open.

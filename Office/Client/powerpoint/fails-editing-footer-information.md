@@ -17,6 +17,9 @@ appliesto:
 
 # Can't edit footer information in the "Header and Footer" dialog in a PowerPoint presentation
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 Consider the following scenario. In Microsoft Office PowerPoint 2007, you save a presentation that contains footer information. This presentation was created in Microsoft Office PowerPoint 2003 or in an earlier version of PowerPoint.

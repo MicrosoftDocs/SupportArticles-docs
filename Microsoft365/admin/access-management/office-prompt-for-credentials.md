@@ -18,6 +18,9 @@ appliesto:
 
 # Office applications periodically prompt for credentials to SharePoint Online, OneDrive, and Lync Online
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 Users are periodically being prompted by Office 2013 and Lync 2013 for credentials to SharePoint Online, OneDrive, and Lync Online. 

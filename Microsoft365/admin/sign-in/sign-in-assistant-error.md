@@ -17,6 +17,9 @@ appliesto:
 
 # "Microsoft Online Services Sign In Assistant Error" when you activate Office Professional Plus
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem
 
 When you try to activate Office Professional Plus on your computer, you receive the following error message:

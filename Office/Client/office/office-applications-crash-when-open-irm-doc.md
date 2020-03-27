@@ -26,6 +26,9 @@ appliesto:
 
 # Office applications crash when you open an IRM document if HTTPS proxy is enabled
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 You do one of the following: 

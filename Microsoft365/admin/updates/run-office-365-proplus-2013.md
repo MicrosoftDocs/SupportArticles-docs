@@ -17,6 +17,9 @@ appliesto:
 
 # How do I keep on running Microsoft 365 Apps for enterprise 2013?
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 > [!NOTE]
@@ -25,9 +28,9 @@ appliesto:
 To prevent Microsoft Microsoft 365 Apps for enterprise from being automatically updated to Office 2016 over the Internet, use one of the methods in the "Resolution" section. 
 
 > [!IMPORTANT]
-> Apply one of these methods only on installations of Microsoft 365 Apps for enterprise that are configured to automatically receive monthly updates over the Internet. If you’ve configured Microsoft 365 Apps for enterprise to receive updates from a location on your internal network, or if you’ve turned off automatic updates, you don’t have to use these methods, because you control when the update to Office 2016 occurs.
+> Apply one of these methods only on installations of Microsoft 365 Apps for enterprise that are configured to automatically receive monthly updates over the Internet. If you've configured Microsoft 365 Apps for enterprise to receive updates from a location on your internal network, or if you've turned off automatic updates, you don't have to use these methods, because you control when the update to Office 2016 occurs.
 
-We've enhanced the upgrade and installation experience, and for Office 365 subscribers we’ve made changes to how Office 2016 apps will be updated from this point forward. We’re also delivering new tools and resources to help you prepare, deploy, and manage Office.
+We've enhanced the upgrade and installation experience, and for Office 365 subscribers we've made changes to how Office 2016 apps will be updated from this point forward. We're also delivering new tools and resources to help you prepare, deploy, and manage Office.
 
 ## Resolution
 
@@ -58,7 +61,7 @@ To have us fix this problem for you, go to the "Here's an easy fix" section. If 
 To fix this problem automatically, [download this easy fix](https://download.microsoft.com/download/9/D/A/9DA2374F-5766-4CDB-BE7F-36871DFAD05E/MicrosoftEasyFix20156.mini.diagcab), run MicrosoftEasyFix20156.mini.diagcab, and then follow the steps in the easy fix wizard.
 
 - This wizard may be in English only. However, the automatic fix also works for other language versions of Windows.   
-- If you’re not on the computer that has the problem, save the easy fix solution to a flash drive or a CD, and then run it on the computer that has the problem.   
+- If you're not on the computer that has the problem, save the easy fix solution to a flash drive or a CD, and then run it on the computer that has the problem.   
 
 #### Let me fix it myself
 

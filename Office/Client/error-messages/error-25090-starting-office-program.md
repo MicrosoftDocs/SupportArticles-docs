@@ -18,6 +18,9 @@ appliesto:
 
 # "Error 25090" error message when you start an Office program
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you try to start a Microsoft Office 2007 or Microsoft Office 2003 program, you may receive the following error message or an error message that is similar to the following:

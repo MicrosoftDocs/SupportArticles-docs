@@ -18,6 +18,9 @@ appliesto:
 
 # How to configure the default search engine in Word 2013
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Introduction
 
 Microsoft Word 2013 includes a feature that lets you use a search engine to search for a word in a Word document. By default, the search is performed by Bing. However, you can configure the feature to use a different search engine.

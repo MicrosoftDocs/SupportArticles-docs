@@ -19,6 +19,9 @@ appliesto:
 
 # You receive an error message when you try to open a presentation in PowerPoint
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you try to open a presentation in PowerPoint 2002, in PowerPoint 2003, or in PowerPoint 2007, you receive the following error message:

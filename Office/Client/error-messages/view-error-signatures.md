@@ -17,6 +17,9 @@ appliesto:
 
 # How to view error signatures if an Office program experiences a serious error and quits
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Introduction
 
 If a Microsoft Office program experiences a serious error and quits, your computer records an error signature that describes the error that occurred. This article explains how to view these error signatures.

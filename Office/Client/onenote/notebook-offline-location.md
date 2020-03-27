@@ -17,6 +17,9 @@ appliesto:
 
 # Warning in OneNote 2013 when a notebook is in an offline location
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When Microsoft OneNote 2013 detects a notebook that is in an offline location (for example, an offline folder that is created by IntelliMirror), you receive the following message in the information bar: 
@@ -38,7 +41,7 @@ If you want to share it with specific people, please put it on OneDrive or Share
 
 Windows Offline Files provides cached access to network file shares when you're offline. Also, OneNote has its own cache that enables it to work offline and to do things like multi-user edit, sync, and merge automatically. We do not recommend that you use these caching methods together. This has been true since OneNote 2007. However, the message in the information bar is new in OneNote 2013. It warns users that doing this may cause problems with syncing. 
 
-When OneNote 2013 detects that the notebook is in an offline folder location, you see the information bar message that is mentioned in the "Symptoms" section. You can disable the information bar message by using a registry key. (See the "More Information" section.) However, we do not recommend that you do this, because you can encounter problems when you use both an offline folder and OneNote’s own cache (such as Windows Offline Files). For example, doing this can cause the following issues: 
+When OneNote 2013 detects that the notebook is in an offline folder location, you see the information bar message that is mentioned in the "Symptoms" section. You can disable the information bar message by using a registry key. (See the "More Information" section.) However, we do not recommend that you do this, because you can encounter problems when you use both an offline folder and OneNote's own cache (such as Windows Offline Files). For example, doing this can cause the following issues: 
 
 - Duplicate copies of sections may be created if those sections are edited from more than one computer.    
 - Edits that are performed on one computer do not appear or are lost.    

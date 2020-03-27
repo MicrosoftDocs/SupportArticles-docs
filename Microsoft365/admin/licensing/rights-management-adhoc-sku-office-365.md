@@ -18,6 +18,9 @@ appliesto:
 # 50,000 seats are assigned to the RIGHTSMANAGEMENT_ADHOC SKU in your Office 365 organization
 
 > [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
+> [!NOTE]
 > Microsoft Azure Information Protection was previously known as Microsoft Azure Rights Management. 
 
 ## Problem 

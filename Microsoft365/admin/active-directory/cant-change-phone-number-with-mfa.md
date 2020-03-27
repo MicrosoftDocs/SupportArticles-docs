@@ -21,6 +21,9 @@ appliesto:
 
 # Users can't change their office phone number when they set up Azure Multi-Factor Authentication
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem
 
 When a user tries to set up Azure Multi-Factor Authentication, she can't select or change the **Office Phone** option. The user can't edit the phone number because the text box is unavailable (appears dimmed). Additionally, she can't set the office phone as the preferred contact method. 

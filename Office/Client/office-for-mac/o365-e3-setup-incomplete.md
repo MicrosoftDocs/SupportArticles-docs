@@ -18,6 +18,9 @@ appliesto:
 
 # "Office 365 Enterprise E3 setup is incomplete" error in Office 365 for Mac
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 If Microsoft Office for Mac is installed by some method other than directly from the Office 365 portal, you receive the following error message even though Office is installed successfully: 

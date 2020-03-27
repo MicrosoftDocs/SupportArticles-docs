@@ -23,6 +23,9 @@ appliesto:
 
 # Gantt Chart view or Usage view print on too many pages in Project
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 In Microsoft Project, when you print or print preview a Gantt Chart view or a Usage view, task bars or columns of data may be printed on more pages than necessary, or you may see an additional timescale beyond the end of your project.

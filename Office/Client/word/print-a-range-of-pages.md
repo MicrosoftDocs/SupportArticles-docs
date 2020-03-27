@@ -19,6 +19,9 @@ appliesto:
 
 # How to print a range of pages in a multiple-section document in Word 2013, Word 2010, Word 2007, and Word 2003
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 This article discusses how to print a page or a range of pages in Microsoft Word 2013, in Microsoft Word 2010, in Microsoft Office Word 2007, and in Microsoft Office Word 2003.

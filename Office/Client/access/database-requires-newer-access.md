@@ -19,6 +19,9 @@ appliesto:
 
 # "Database you are trying to open requires a newer version of Microsoft Access" error in Access
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you try to open a Microsoft Access database, you receive the following error message:

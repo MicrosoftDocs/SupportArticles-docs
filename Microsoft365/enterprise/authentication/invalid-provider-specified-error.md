@@ -35,11 +35,14 @@ appliesto:
 
 # "Invalid provider specified" when using an Office 2016 application to access Office 365 resources
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## PROBLEM
 
 Consider the following scenario:
 
-- You’re running one of the following Office 2016 applications as an administrator in Windows 10:
+- You're running one of the following Office 2016 applications as an administrator in Windows 10:
 
   - Access 2016
   - Excel 2016

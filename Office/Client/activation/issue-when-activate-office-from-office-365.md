@@ -19,6 +19,9 @@ appliesto:
 
 # "Sorry, we can't connect to your account. Please try again later" error when you activate Office from Office 365
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 This article discusses how to troubleshoot the activation issues in Microsoft Office from Office 365. Activation fails and you receive one the following error messages:  

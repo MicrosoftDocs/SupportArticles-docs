@@ -17,6 +17,9 @@ appliesto:
 
 # Cannot Access Newly Purchased Project Online with One License
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Summary
 
 Having a license to Project Online is just the first step in getting started with Project Web App (PWA). Next, your account needs to be given permissions to access the PWA Home page. This can be a bit tricky if your organization has only purchased one license for evaluation. Your Tenant Admin can assign you the license, but if the Tenant Admin has not first configured access for you to the default PWA site, you will receive some type of error message. The most common error would be "Access Denied".

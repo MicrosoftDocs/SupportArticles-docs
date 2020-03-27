@@ -19,6 +19,9 @@ appliesto:
 
 # An unexpected value is returned when you use the DAYS360 function in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you use the DAYS360 function to calculate the number of days between two dates, an unexpected value is returned. For example, when you use the DAYS360 function with a start date of February 28 and with an end date of March 28, a value of 28 days is returned. You expect a value of 30 days to be returned for every full month.

@@ -21,6 +21,9 @@ appliesto:
 
 # "Sorry, but we're having trouble signing you in" and "8004789A" error when a federated user sign in to Office 365, Azure, or Intune
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem
 
 Consider the following scenario. You update the relying party trust with Microsoft Azure Active Directory (Azure AD) in Active Directory Federation Services (AD FS) 2.0 by using the procedures that are described in one of the following resources: 

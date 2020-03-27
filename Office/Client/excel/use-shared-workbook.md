@@ -19,6 +19,9 @@ appliesto:
 
 # Use shared workbooks with different versions of Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 This step-by-step article explains how to share a Microsoft Excel workbook with other users.

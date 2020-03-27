@@ -17,6 +17,9 @@ appliesto:
 
 # Third-party installed font does not appear in the font list in Word for Mac
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 After you install a font into the Fonts folder in the operating system and start Microsoft Word for Mac, the font unexpectedly is not available in the Font dialog box, in the drop-down list, or in the Formatting Palette.
@@ -38,7 +41,7 @@ First, restart your computer, and then test the font again. Some installations a
 
 ### Method 1
 
-1. Clear the font caches. To do this, quit all Microsoft Office applications. On the **Home** menu, click **Go **> **Applications**, and then click Apple’s Font Book.
+1. Clear the font caches. To do this, quit all Microsoft Office applications. On the **Home** menu, click **Go **> **Applications**, and then click Apple's Font Book.
 2. On the **Edit** menu, click **Select Duplicated Fonts**.
 3. On the **Edit** menu, click **Resolve Duplicates**.
 4. To remove all the fonts from the computer that Font Book just disabled, follow these steps:  

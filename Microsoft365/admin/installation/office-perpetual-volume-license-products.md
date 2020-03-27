@@ -18,9 +18,12 @@ appliesto:
 
 # Office 2019 perpetual volume license products available as Click-to-Run
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 For almost two decades, Microsoft Office has relied on the Windows Installer (MSI) technology for core deployment functionality. To better address the ever-growing requirements of businesses, Office has continually introduced modern deployment features. 
 
-In Microsoft Office 2013, we introduced Click-to-Run, a modern deployment technology that is now delivering Office to hundreds of millions of users worldwide. Beginning in Microsoft Office 2019, we’ll expand the availability of Click-to-Run to all client products. Perpetual volume licensed products will now be able to take advantage of benefits that improve security and ease of use while reducing deployment costs. These benefits include the following: 
+In Microsoft Office 2013, we introduced Click-to-Run, a modern deployment technology that is now delivering Office to hundreds of millions of users worldwide. Beginning in Microsoft Office 2019, we'll expand the availability of Click-to-Run to all client products. Perpetual volume licensed products will now be able to take advantage of benefits that improve security and ease of use while reducing deployment costs. These benefits include the following: 
  
 - Predictable cumulative monthly updates    
 - Software that is up-to-date immediately upon installation    

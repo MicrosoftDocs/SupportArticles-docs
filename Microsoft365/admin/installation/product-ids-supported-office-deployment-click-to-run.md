@@ -22,6 +22,9 @@ appliesto:
 
 # List of Product IDs which are supported by the Office Deployment Tool for Click-to-Run
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 This article lists product IDs that are supported by the Microsoft Office Deployment Tool.

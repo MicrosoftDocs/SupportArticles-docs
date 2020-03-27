@@ -18,6 +18,9 @@ appliesto:
 
 # An update is available for Office to support migrations from AD RMS to Azure RMS
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 If an organization has Active Directory Rights Management Services (AD RMS) deployed and wants to migrate to Azure Information Protection, the typical migration process involves exporting the root keys from the AD RMS cluster and importing them into Azure RMS. Azure RMS is a service that is part of the Azure Information Protection platform.
@@ -75,6 +78,6 @@ Among these artifacts, Windows clients obtain the Client Licensor Certificate (C
 
 By denying access to these APIs, a client that has this fix installed and that is configured to use Azure RMS can consume content from AD RMS without receiving a CLC from AD RMS. This enables the client to continue using Azure RMS to protect all new content while keeping access to content previously protected with AD RMS, even if the AD RMS key has not been imported into Azure RMS.
 
-This allows for a gradual phase-out of the AD RMS infrastructure because new content is protected by using Azure RMS until the content that’s protected by AD RMS is re-protected by the new keys in Azure RMS or it is no longer relevant. Then, the AD RMS cluster and its SLC can be decommissioned.
+This allows for a gradual phase-out of the AD RMS infrastructure because new content is protected by using Azure RMS until the content that's protected by AD RMS is re-protected by the new keys in Azure RMS or it is no longer relevant. Then, the AD RMS cluster and its SLC can be decommissioned.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

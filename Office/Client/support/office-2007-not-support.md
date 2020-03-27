@@ -17,6 +17,9 @@ appliesto:
 
 # Office 2007 has reached end of extended support
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 Office 2007 has reached the end of its [support lifecycle](https://support.microsoft.com/hub/4095338/microsoft-lifecycle-policy), meaning there are no new security updates, non-security updates, free or paid assisted support options, or online technical content updates. Customers who are using Office 2007 products and services should move to Office 365 or [upgrade to the most recent version of Office](https://products.office.com). 

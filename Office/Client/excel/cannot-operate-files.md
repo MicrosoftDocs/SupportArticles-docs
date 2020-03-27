@@ -20,6 +20,9 @@ appliesto:
 
 # Office 365 users cannot open or synchronize SharePoint files after the Office 2013: March 12, 2013 update is installed
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 Office 365 users may be unable to open, edit, or synchronize files if the following conditions are true: 
@@ -33,7 +36,7 @@ In this scenario, users may be prompted for credentials multiple times.
 
 This issue occurs because of a problem in the Office 2013 update for March 12, 2013.
 
-**Note** To verify the file versions, and to determine whether this issue applies to your situation, see the “How to determine whether the update is installed” section in the following article in the Microsoft Knowledge Base:
+**Note** To verify the file versions, and to determine whether this issue applies to your situation, see the "How to determine whether the update is installed" section in the following article in the Microsoft Knowledge Base:
 
 [2768349 ](https://support.microsoft.com/help/2768349) Description of the Office 2013 update: March 12, 2013
 

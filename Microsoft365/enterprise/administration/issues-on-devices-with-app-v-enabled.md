@@ -17,6 +17,9 @@ appliesto:
 
 # Fixes for issues on devices with App-V enabled and Microsoft 365 Apps for enterprise installed
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 You experience one or more of the following issues on devices that are enabled for Microsoft Application Virtualization (App-V) and that have Office products such as Microsoft 365 Apps for enterprise deployed through the Click-to-Run technology.

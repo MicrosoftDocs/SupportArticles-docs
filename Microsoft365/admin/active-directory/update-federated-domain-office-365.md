@@ -21,6 +21,9 @@ appliesto:
 
 # Update or repair the settings of a federated domain in Office 365, Azure, or Intune
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Introduction 
 
 Single sign-on (SSO) in a Microsoft cloud service such as Office 365, Microsoft Azure, or Microsoft Intune depends on an on-premises deployment of Active Directory Federation Services (AD FS) that functions correctly. Several scenarios require rebuilding the configuration of the federated domain in AD FS to correct technical problems. This article contains step-by-step guidance on how to update or to repair the configuration of the federated domain.

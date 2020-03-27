@@ -18,6 +18,9 @@ appliesto:
 
 # Connection issues in sign-in after update to Office 2016 build 16.0.7967 on Windows 10
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Overview
 
 This article contains information about a new authentication framework for Microsoft Office 2016. 
@@ -82,7 +85,7 @@ https://login.microsoftonline.com/
 
 ### Symptom 2
 
-When you try to open or save a document in Microsoft SharePoint Online, OneDrive for Business, or SharePoint, or you try to synchronize email messages or your calendar in Microsoft Outlook, you’re prompted for credentials. After you enter credentials, you’re prompted again. This issue may occur for the following reasons: 
+When you try to open or save a document in Microsoft SharePoint Online, OneDrive for Business, or SharePoint, or you try to synchronize email messages or your calendar in Microsoft Outlook, you're prompted for credentials. After you enter credentials, you're prompted again. This issue may occur for the following reasons: 
  
 - The Trusted Platform Module (TPM) chip or firmware is malfunctioning. Windows uses the TPM chip to protect your credentials. The chip may become corrupted or reset in some conditions. To determine whether you are experiencing this kind of issue, follow these steps:  
   1. Open Event Viewer.    
@@ -92,9 +95,9 @@ When you try to open or save a document in Microsoft SharePoint Online, OneDrive
  
    To avoid this issue in future, we recommend that you update the TPM firmware.  
 
-   **For Windows 10, version 1709 or later versions:** The operating system automatically detects situations that are related to TPM failures and provides a user recovery process that should occur automatically. If this process doesn’t occur automatically, we recommend that you use [this manual recovery](#manualrecovery) method. 
+   **For Windows 10, version 1709 or later versions:** The operating system automatically detects situations that are related to TPM failures and provides a user recovery process that should occur automatically. If this process doesn't occur automatically, we recommend that you use [this manual recovery](#manualrecovery) method. 
 
-   **For Windows 10, version 1703:** An automatic process is provided for Hybrid Azure AD join. No automatic process is provided for other environment configurations. If the Hybrid Azure AD join process doesn’t occur automatically, we recommend that you use [this manual recovery](#manualrecovery) method.     
+   **For Windows 10, version 1703:** An automatic process is provided for Hybrid Azure AD join. No automatic process is provided for other environment configurations. If the Hybrid Azure AD join process doesn't occur automatically, we recommend that you use [this manual recovery](#manualrecovery) method.     
 - A device is disabled by the user, the Enterprise administrator, or a policy because of a security concern or by mistake. To determine whether you are experiencing this issue, follow these steps:  
   1. Open Event viewer.    
   2. Go to **Applications and Services Logs** > **Microsoft** > **Windows** > **AAD**.    

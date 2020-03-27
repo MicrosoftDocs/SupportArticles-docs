@@ -21,6 +21,9 @@ appliesto:
 
 # Visio Services does not render diagrams that are hosted on servers that have IDNs
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you have Microsoft Silverlight installed on a computer, Microsoft Visio Services cannot render diagrams that are hosted on servers that have International Domain Names (IDNs). Specifically, Visio Services cannot render these diagrams by using Silverlight on a Microsoft SharePoint Server site. Additionally, a JavaScript error occurs.

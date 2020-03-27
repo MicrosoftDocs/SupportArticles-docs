@@ -1,5 +1,5 @@
 ---
-title: “Eventing service” error message when changing the status of users to inactive in Microsoft Project
+title: "Eventing service" error message when changing the status of users to inactive in Microsoft Project
 description: Describes how to handle an "Eventing service" error when deactivating a user in Microsoft Project.
 author: todmccoy
 ms.author: v-todmc
@@ -17,7 +17,10 @@ appliesto:
 - Microsoft Project
 ---
 
-# “Eventing service” error message when changing the status of users to inactive in Microsoft Project
+# "Eventing service" error message when changing the status of users to inactive in Microsoft Project
+
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
 
 ## Symptoms
 When you deactivate a user in Microsoft Project, you see the following message:

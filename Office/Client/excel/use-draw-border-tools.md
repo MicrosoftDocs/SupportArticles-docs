@@ -19,6 +19,9 @@ appliesto:
 
 # How to use Draw Border tools and Draw Border Grid tools to apply and remove Excel cell borders
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 This step-by-step article shows an example of how you can use the Draw Border tools and the Draw Border Grid tools in Microsoft Excel.

@@ -17,6 +17,9 @@ appliesto:
 
 # Office Click-to-Run Perpetual (C2R-P) release for Project 2016 and Visio 2016
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 Consider the following scenario:

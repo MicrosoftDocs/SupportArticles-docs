@@ -20,6 +20,9 @@ appliesto:
 
 # You cannot change the text or shape fill color in Visio when using a High Contrast Windows theme
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms 
 
 When changing the text color or shape fill color within a Visio 2013 or Visio 2010 drawing, the changes are not displayed on screen. However, the changes are reflected on a physical printout.

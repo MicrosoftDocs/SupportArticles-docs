@@ -22,6 +22,9 @@ appliesto:
 
 # Sign in to Office 365, Azure, or Intune fails after you change the federation service endpoint
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem 
 
 After you change Active Directory Federation Services (AD FS) service endpoint settings in the AD FS Management Console, single sign-on (SSO) authentication to a Microsoft cloud service such as Office 365, Microsoft Azure, or Microsoft Intune fails, and you experience one of the following symptoms: 

@@ -19,6 +19,9 @@ appliesto:
 
 # A worksheet is printed at a different size than you expect when printing the worksheet in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you print a Microsoft Excel worksheet, the printed text may appear to be a slightly different size than expected. The number of rows printed per page may not be the same as expected, or the margins may not appear to be the same width that you set.

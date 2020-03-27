@@ -23,6 +23,9 @@ appliesto:
 
 # No support for multiple Office versions installed on a machine with Remote Desktop Service (RDS)
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 On a computer with Remote Desktop Service (RDS) enabled, it is possible to install multiple versions of Office. However, this is not a supported Office configuration.

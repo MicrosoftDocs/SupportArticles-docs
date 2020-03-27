@@ -18,6 +18,9 @@ appliesto:
 
 # An active Excel process continues to run after using a VBA macro to programmatically quit Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you run a Microsoft Visual Basic for Applications (VBA) macro to programmatically exit Microsoft Excel, Excel appears to close as expected. However, an active Excel process continues to run.

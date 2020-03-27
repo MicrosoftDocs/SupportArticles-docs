@@ -21,6 +21,9 @@ appliesto:
 
 # How to create a dynamic defined range in an Excel worksheet
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 In Microsoft Excel, you may have a named range that must be extended to include new information. This article describes a method to create a dynamic defined name.

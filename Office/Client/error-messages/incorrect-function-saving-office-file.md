@@ -17,6 +17,9 @@ appliesto:
 
 # "Incorrect function" when saving a file from an Office program to a CD-RW or a DVD/CD-RW drive
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you try to save a file in one of Office programs to a CD-RW or a DVD/CD-RW drive, the file is not saved. Additionally, you receive the following error message:

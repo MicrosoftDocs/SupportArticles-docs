@@ -17,6 +17,9 @@ appliesto:
 
 # "Margins do not fit page size" error when you print an Excel workbook
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 In a Microsoft Office Excel workbook, you select the **Fit to** option in the **Page Setup** dialog box. However, when you print this workbook or when you use the print preview feature to view the workbook, you receive the following error message:

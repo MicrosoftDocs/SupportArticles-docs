@@ -17,6 +17,9 @@ appliesto:
 
 # Word for Mac closes unexpectedly or error "The application Microsoft Word quit unexpectedly"
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you start Microsoft Word for Mac, or when you try to open a new document, you experience one of the following conditions:

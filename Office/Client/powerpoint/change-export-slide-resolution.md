@@ -21,6 +21,9 @@ appliesto:
 
 # How to change the export resolution of a PowerPoint slide
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 You can change the export resolution in Microsoft PowerPoint by saving a slide in a picture format. There are two steps to this process: using the system registry to change the default resolution setting for exported slides, and then actually saving the slide as a picture at the new resolution.
 
 ## Step 1: Change the export resolution setting
@@ -110,12 +113,12 @@ When you set the ExportBitmapResolution registry value in PowerPoint, there's a 
 Maximum DPI is dependent upon the slide size. The formula is:
 maxdpi = (sqrt(100,000,000 / (slide with * slide height)), where slide width/height are in inches.
 
-For example, for a standard 13.3” x 7.5” slide, the equation would be:
+For example, for a standard 13.3" x 7.5" slide, the equation would be:
 sqrt(100,000,000 / (13.333 * 7.5) ) = 1000.
 
 **PowerPoint 2019, 2016, 2013, and 365**
 
-There is no fixed DPI limit. Slide export is only limited by how big the resulting bitmap gets. PowerPoint can support creating bitmaps up to ~100,000,000 pixels (width x height). For standard widescreen slides (13.3” x 7.5”) this means a maximum DPI of 1000. For the old style 10” x 7.5” slides this means a maximum of 1155 DPI, but depending on slide size, this can be more or less.
+There is no fixed DPI limit. Slide export is only limited by how big the resulting bitmap gets. PowerPoint can support creating bitmaps up to ~100,000,000 pixels (width x height). For standard widescreen slides (13.3" x 7.5") this means a maximum DPI of 1000. For the old style 10" x 7.5" slides this means a maximum of 1155 DPI, but depending on slide size, this can be more or less.
 
 **PowerPoint 2010 and older**
 

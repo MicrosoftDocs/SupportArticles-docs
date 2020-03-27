@@ -18,6 +18,9 @@ appliesto:
 
 # "Can't verify domain" error message when you try to verify a domain in Office 365
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem 
 
 When you try to verify a domain in Microsoft Office 365, you receive the following error message:

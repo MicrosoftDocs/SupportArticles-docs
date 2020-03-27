@@ -34,6 +34,9 @@ appliesto:
 
 # An Office program is slow or may stop responding (hang) when you open a file from a network location
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you try to open a file from a network location in one of the Microsoft Office programs such as PowerPoint 2003 , Excel 2003, Publisher 2003 or a later version of them, the Office program may run very slowly or may appear to stop responding (hang).

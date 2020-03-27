@@ -23,6 +23,9 @@ appliesto:
 
 # You can't open Visio files in Visio Web Access even if Visio Viewer is installed
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 Consider the following scenario:

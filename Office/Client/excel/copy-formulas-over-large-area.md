@@ -21,6 +21,9 @@ appliesto:
 
 # "Not enough memory" when you copy formulas over large area in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 If you fill or copy formulas into a large area of a worksheet, or you add formulas to a large worksheet, you receive error messages that are similar to the following: 

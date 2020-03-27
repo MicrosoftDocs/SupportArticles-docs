@@ -17,6 +17,9 @@ appliesto:
 
 # What is an .LDB File?
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 LDB files are Microsoft Access lock information files. An .LDB file is created when an Access database is opened/accessed by a user - the file is created with the same name as the Access database, but with an .LDB extension. The file is used to keep track of all users that are currently accessing the database.
 
 Because FRx uses Access databases for most of its normal operations, .LDB files are created in the FRx directory when the Designer, Report Launcher, or Queue Monitor applications are in use. Although .LDB files are typically removed when all users have closed FRx, one or more .LDB files may occasionally be left behind. When this occurs, these files are safe to delete - they will be re-created the next time a user launches FRx. The .LDB file may be used to determine which users are logged into FRx. This is useful when users must be asked to exit for a task that requires the FRx databases to be available.

@@ -18,6 +18,9 @@ appliesto:
 
 # "Error 25004. The product key you entered cannot be used on this machine" when you install Office 2013
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you try to Install Microsoft Office 2013, you receive the following error message:

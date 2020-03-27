@@ -20,6 +20,9 @@ appliesto:
 
 # Create application-level event handlers in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 If you want a particular event handler to run whenever a certain event is triggered, you can write an event handler for the Application object. Event handlers for the Application object are global, which means that as long as Microsoft Excel is open, the event handler will run when the appropriate event occurs, regardless of which workbook is active when the event occurs.

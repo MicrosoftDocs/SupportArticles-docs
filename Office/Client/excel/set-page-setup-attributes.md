@@ -16,6 +16,9 @@ appliesto:
 
 # Set page setup attributes for more than one sheet in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 In Microsoft Excel, page setup attributes, such as margins, sheet orientation, and print titles, are set for each worksheet, individually. This article describes three methods that you can use to set some of these attributes globally.

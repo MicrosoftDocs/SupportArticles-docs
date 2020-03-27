@@ -22,6 +22,9 @@ appliesto:
 
 # "Sorry, but we're having trouble signing you in" when a user signs in to Office 365, Azure, or Intune
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem
 
 When a user tries to sign in to a Microsoft cloud service such as Office 365, Microsoft Azure, or Microsoft Intune from a sign-in webpage whose URL starts with "https://login.microsoftonline.com/login.srf," the user receives a sign-in error message and can't sign in.
@@ -50,14 +53,14 @@ To troubleshoot this issue, identify the error code, and then contact technical 
 
 ### List of known error codes
 
-The following table lists known error codes for the “Sorry, but we're having trouble signing you in” error message. The table also contains information about how to troubleshoot the issue.
+The following table lists known error codes for the "Sorry, but we're having trouble signing you in" error message. The table also contains information about how to troubleshoot the issue.
 
 |Error code|More information|Resource|
 |---|---|---|
 |8004786C|This issue may occur in scenarios where you pilot Active Directory user accounts as Office 365 single sign-on (SSO)-enabled user IDs, and then the user account is piloted incorrectly.|[2392130 ](https://support.microsoft.com/help/2392130) Troubleshoot user name issues that occur for federated users when they sign in to Office 365, Azure, or Intune |
 |80041034|This issue may occur when the UPN has been changed from its original value.||
 |80041317 or 80043431|This issue may occur if the configuration settings of the Office 365 federated domain for the on-premises Active Directory Federation Services (AD FS) 2.0 service and for the Azure AD authentication system are mismatched.|[2647020](https://support.microsoft.com/help/2647020) "80041317" or "80043431" error when federated users sign in to Office 365, Azure, or Intune|
-|80048163|This issue occurs if unsupported characters are used in the user’s sign-in name.||
+|80048163|This issue occurs if unsupported characters are used in the user's sign-in name.||
 |80045C06|This issue may occur if the time setting in the on-premises environment doesn't match the time setting of the Office 365 service.|[2578667 ](https://support.microsoft.com/help/2578667) "Sorry, but we're having trouble signing you in" and "80045C06" error when a federated user tries to sign in to Office 365, Azure, or Intune|
 |8004789A||[2635357 ](https://support.microsoft.com/help/2635357) "Sorry, but we're having trouble signing you in" and "8004789A" error when a federated user tries to sign in to Office 365, Azure, or Intune|
 

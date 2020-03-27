@@ -21,6 +21,9 @@ appliesto:
 
 # "Invalid Security Code" error when you reset your admin password for Office 365, Intune, or Azure
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem 
 
 When you try to reset your password by using the self-service password reset for administrators feature in Office 365, Microsoft Intune, or Microsoft Azure, you receive the following error message: 

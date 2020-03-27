@@ -19,6 +19,9 @@ search.appverid: MET150
 
 # Can't see the Calendar folder of an online archive mailbox by using OWA
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 _Original KB number:_&nbsp;4341449
 
 ## Symptoms

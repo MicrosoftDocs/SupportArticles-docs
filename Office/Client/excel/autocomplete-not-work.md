@@ -16,6 +16,9 @@ appliesto:
 
 # AutoComplete may not work
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 You type text in a cell in Microsoft Excel. The first few characters of the text that you type match an existing entry in that column. When this occurs, the AutoComplete feature may not automatically fill in the remaining characters.

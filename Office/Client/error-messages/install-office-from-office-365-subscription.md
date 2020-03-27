@@ -17,6 +17,9 @@ appliesto:
 
 # "The Installation of This Package Failed" When you install Office Pro Plus 2010 from Office 365 Subscription Portal
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 You download Microsoft Office Professional Plus from the Office 365 Subscription Portal and when you double-click the MicrosoftOffice.EXE file to install it, you receive the following error message: "The Installation of this package failed."

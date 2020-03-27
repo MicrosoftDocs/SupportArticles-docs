@@ -19,6 +19,9 @@ search.appverid: MET150
 
 # Some Office applications are not responding
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 Office applications stop responding in some common usage scenarios.

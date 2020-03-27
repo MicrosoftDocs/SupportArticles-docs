@@ -20,6 +20,9 @@ search.appverid: MET150
 
 # Error message when you use special characters in Access databases
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 _Original KB number:_ &nbsp; 826763
 
 > [!NOTE]

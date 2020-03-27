@@ -18,6 +18,9 @@ search.appverid: MET150
 ---
 # Control the File Transfer feature in the Office app
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Introduction
 
 The File Transfer feature in the Microsoft Office app lets you send files from your mobile device to your computer, and receive files from your computer or device. For more information about the feature, see [Transfer files in the Office app for Android and iOS](https://support.office.com/article/transfer-files-in-the-office-app-for-android-and-ios-76e6a127-4af0-454a-83e3-1eee0d0877f5).

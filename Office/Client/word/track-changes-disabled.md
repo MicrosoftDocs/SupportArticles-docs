@@ -20,6 +20,9 @@ appliesto:
 
 # Word Track Changes functionality disabled when Rights Management Services (RMS) is applied
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 You are editing a Microsoft Word document that has Rights Management Services (RMS) applied to it and includes tracked changes. You notice that you cannot use Word's Track Changes feature. The Track Changes control, as well as the Accept and Reject changes controls are disabled. 
@@ -28,7 +31,7 @@ This applies when the RMS is applied to individual documents or when RMS is appl
 
 ## Cause
 
-You will see this behavior when you don't have "Full control" provided by Rights Management Services (RMS) for the user. A Microsoft Word file that contains tracked changes has the changes stored in a log within the file. In order to preserve the tracked changes log in a less than full control permissions scenario, the Track Changes and Accept Changes features are disabled for users who do not have “Full control” in the My Permission dialog for the RMS protected document.  
+You will see this behavior when you don't have "Full control" provided by Rights Management Services (RMS) for the user. A Microsoft Word file that contains tracked changes has the changes stored in a log within the file. In order to preserve the tracked changes log in a less than full control permissions scenario, the Track Changes and Accept Changes features are disabled for users who do not have "Full control" in the My Permission dialog for the RMS protected document.  
 
 ## Resolution
 

@@ -18,6 +18,9 @@ appliesto:
 
 # Cannot enter User Logon Account for new resource
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you open the Enterprise Resource Pool from Project Server 2013 or Project Online, into Project Professional 2013 or Project Pro for Office 365 respectively, you cannot edit the **User Logon Account** field,the field is unavailable or grayed out. 

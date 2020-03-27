@@ -48,6 +48,9 @@ appliesto:
 
 # Office programs may crash with the SendToBluetooth add-in installed
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Resolution
 
 If you have the WIDCOMM SendToBluetoothadd-in installed, your Office programs might be crashing due to an incompatibility issue between the add-in and other Microsoft Office programs.

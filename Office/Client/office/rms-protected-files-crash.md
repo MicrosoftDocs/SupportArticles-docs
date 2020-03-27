@@ -19,6 +19,9 @@ appliesto:
 
 # Office files that have RMS protection seem to crash
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you try to open a Microsoft Office document that has Information Rights Management (IRM) protection, the document seems to crash and does not respond. This behavior occurs after you install either of the following: 

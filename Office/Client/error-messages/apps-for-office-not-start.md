@@ -18,6 +18,9 @@ appliesto:
 
 # Apps for Office don't start if you disable protected mode for the Restricted Sites zone in Internet Explorer
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you use Microsoft Office 2013 or later, you experience the following issues.

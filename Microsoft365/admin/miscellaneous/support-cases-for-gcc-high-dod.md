@@ -17,6 +17,9 @@ appliesto:
 
 # How to open Support cases for GCC High and DoD
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 Office 365 Support is available only to users with Administrator roles associated with a valid email address.  Therefore, only user accounts marked in the Office 365 Admin Center as an administrator will be able to contact support and/or create a support incident.  Visit your Office 365 Admin Center to manage your user accounts and define who has permissions to contact support.  

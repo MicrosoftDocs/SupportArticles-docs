@@ -20,6 +20,9 @@ search.appverid: MET150
 
 _Original KB number:_&nbsp;2845046
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem  
 
 Users in a Microsoft Exchange Online Protection environment receive a nondelivery report (NDR) when they send email messages to a recipient. This occurs when the recipient's messaging environment uses the China Anti-Spam Alliance (CASA) service for mail security.

@@ -19,6 +19,9 @@ appliesto:
 
 # Description of the Office Feature Updates task
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 Starting in Microsoft Office ProPlus build 16.0.11220.*xxxxx* or a later build, there are two new tasks:

@@ -18,6 +18,9 @@ appliesto:
 
 # Project Publish jobs remain at 80 percent for a long time before completing
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When publishing your Project plan, you notice on the Project Server Manage Queue Jobs page that the Project Publish job takes a long time to complete. Specifically, the progress spends a lot of time at the 80 percent mark.
@@ -86,7 +89,7 @@ This section covers steps on how to configure a new EPT to use a changed Project
 
 **How to configure a custom EPT with a changed Project Site template with the Task List removed**
 
-First we’ll start with creating a new template from a default Project site:
+First we'll start with creating a new template from a default Project site:
 
 1. Log on to PWA, and then click **Server Settings** > **Site Contents**.   
 2. On the **Site Contents** page, click **new subsite**.   

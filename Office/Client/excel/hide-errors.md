@@ -21,6 +21,9 @@ appliesto:
 
 # How to create a conditional format to hide errors in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 In Microsoft Excel, you can create conditional formatting on a cell or on a range of cells so that error values are not displayed in the cell(s).

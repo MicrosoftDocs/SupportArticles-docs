@@ -18,6 +18,9 @@ appliesto:
 
 # The Dsofile.dll files lets you edit Office document properties when you do not have Office installed
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 The Dsofile.dll sample file is an in-process ActiveX component for programmers that use Microsoft Visual Basic .NET or the Microsoft .NET Framework. You can use this in your custom applications to read and to edit the OLE document properties that are associated with Microsoft Office files, such as the following:

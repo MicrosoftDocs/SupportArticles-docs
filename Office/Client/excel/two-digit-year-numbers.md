@@ -16,6 +16,9 @@ appliesto:
 
 # How Excel works with two-digit year numbers
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 When you type a date using a two-digit year number (such as 98), Microsoft Excel uses specific rules to determine which century to use for the date. This article explains how Microsoft Excel determines the century.

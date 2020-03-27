@@ -18,6 +18,9 @@ appliesto:
 
 # How to clean up an Excel workbook so that it uses less memory
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 After you upgrade to Microsoft Office 2013/2016/Office 365, you experience one or more of the following symptoms:
@@ -183,7 +186,7 @@ If you continue to experience the issue after you update your array formulas, mo
 
 Defined names are used to reference cells and formulas throughout the workbook to add a "friendly name" to your formulas. You should check for any defined names that link to other workbooks or temporary Internet files. Typically, these links are unnecessary and slow down the opening of an Excel workbook.
 
-You can use the [Name Manager tool](https://www.jkp-ads.com/officemarketplacenm-en.asp) to view hidden defined names that you can’t see in the Excel interface. This tool enables you to view and delete the defined names that you don't need.
+You can use the [Name Manager tool](https://www.jkp-ads.com/officemarketplacenm-en.asp) to view hidden defined names that you can't see in the Excel interface. This tool enables you to view and delete the defined names that you don't need.
 
 If Excel continues to crash and hang after you remove any unnecessary defined names, move on to method 7.
 

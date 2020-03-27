@@ -18,6 +18,9 @@ appliesto:
 
 # How to enable Microsoft 365 Apps for enterprise ULS logging for random issues
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 To troubleshoot Office issues, Microsoft Office support professionals may have to review advanced log data that's created by Office applications.
 
 To collect Office diagnostic logs, follow these steps:

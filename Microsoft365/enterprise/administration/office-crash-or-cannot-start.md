@@ -25,6 +25,9 @@ appliesto:
 # Office Applications crash or cannot start
 
 > [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
+> [!NOTE]
 > **This article only addresses the crash scenario where mso30win32client.dll is the module name in a crash signature.**
 >
 > For other scenarios, see the following articles:

@@ -18,6 +18,9 @@ appliesto:
 
 # Troubleshoot sign-in issues with Office modern authentication when you use AD FS
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Introduction 
 
 This article contains information about how to troubleshoot problems that affect the ability to sign in to Microsoft Office 2016 apps and Microsoft Office 2013 apps that are enabled for modern authentication. This article also contains resources for IT administrators to address reports about Active Directory Federation Services (AD FS) issues that are specific to Office for Windows platforms.

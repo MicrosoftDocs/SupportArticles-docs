@@ -20,6 +20,9 @@ appliesto:
 
 # How Excel determines the current mode of calculation
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 In Microsoft Excel, all currently open documents use the same mode of calculation, regardless of the mode in which they were saved.

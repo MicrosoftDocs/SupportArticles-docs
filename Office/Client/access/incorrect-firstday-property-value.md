@@ -19,6 +19,9 @@ search.appverid: MET150
 ---
 # Microsoft Calendar Control 10.0 and later versions use an incorrect value for the FirstDay property
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 _Original KB number:_ &nbsp; 826761
 
 > [!NOTE]

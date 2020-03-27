@@ -20,6 +20,9 @@ appliesto:
 
 # "Index was outside the bounds of the array" error when you import data from multiple tables in a SQL Server database to an Excel 2013 workbook
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Symptoms
 
 Consider the following scenario in which you try to import data from a Microsoft SQL Server 2012 database to a Microsoft Excel 2013 workbook: 
