@@ -25,7 +25,7 @@ To troubleshoot Office issues, Microsoft Office support professionals may have t
 
 To collect Office diagnostic logs, follow these steps:
 
-1. Download [OfficeDiagnosticLogging.zip](http://download.microsoft.com/download/2/8/9/ccb152a7-a11e-45da-8764-b5f52045e1d1/OfficeDiagnosticLogging.zip), save the file to a location that will be easy to access by using a command prompt, and then expand the compressed file.
+1. Download [OfficeDiagnosticLogging.zip](https://download.microsoft.com/download/2/8/9/ccb152a7-a11e-45da-8764-b5f52045e1d1/OfficeDiagnosticLogging.zip), save the file to a location that will be easy to access by using a command prompt, and then expand the compressed file.
 1. Open a Command Prompt window, and then locate the folder in which the expanded OfficeDiagnosticLogging.bat script is located.
 1. Close all instances of the Office application that you're troubleshooting  (for example, Word, Excel, or PowerPoint).
 1. Run the following command:
