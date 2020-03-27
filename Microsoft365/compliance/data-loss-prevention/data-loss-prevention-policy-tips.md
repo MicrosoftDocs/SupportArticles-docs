@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting Data Loss Protection (DLP) policy tips
+title: Troubleshooting Data Loss Prevention (DLP) policy tips
 description: Describes how to troubleshoot some issues that occur if DLP policy tips are not working as expected.
 author: MaryQiu1987
 manager: dcscontentpm
@@ -16,13 +16,13 @@ appliesto:
 - Office 365 Data Loss Prevention
 ---
 
-# Troubleshooting Data Loss Protection (DLP) policy tips
+# Troubleshooting Data Loss prevention (DLP) policy tips
 
 ## Summary
 
 The detection and protection of data is among the most important tasks that any business has today. As more and more organizations move their services to the cloud to store data, solutions to protect data flow and access are becoming increasingly important.
 
-Microsoft Office 365 provides Data Loss Protection (DLP) services to help organizations comply with business standards and industry regulations. This behavior protects sensitive information and prevents its unintended disclosure.
+Microsoft Office 365 provides Data Loss prevention (DLP) services to help organizations comply with business standards and industry regulations. This behavior protects sensitive information and prevents its unintended disclosure.
 
 This article describes how to troubleshoot some issues that occur if DLP policy tips are not working as expected.
 
