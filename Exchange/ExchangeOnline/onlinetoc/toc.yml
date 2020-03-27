@@ -96,6 +96,7 @@
     - name: WhenCreated date is changed
       href: ../mailbox-migration/whencreated-date-changed.md
   - name: Mailflow
+    items:
     - name: 550 5.7.64 TenantAttribution NDR
       href: ../mailflow/tenantattribution-ndr.md
   - name: Mail Delivery
