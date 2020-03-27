@@ -11,6 +11,8 @@
       href: ../administration/can't-manage-ex19-database-eac.md
     - name: On-premises EAC link goes to product comparison
       href: ../administration/o365-link-eac-redirect-product-comparison.md
+    - name: Unhealthy state when monitoring mailboxes are deleted
+      href: ../administration/unhealthy-state-monitoring-mailboxes-deleted.md
   - name: Calendars
     items:
     - name: Show organizer name instead of subject
