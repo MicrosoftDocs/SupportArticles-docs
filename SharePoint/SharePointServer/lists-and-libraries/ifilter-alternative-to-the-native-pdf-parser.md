@@ -34,7 +34,7 @@ There are several PDF IFilter tools available, some free and some commercial. Th
 
 If you're experiencing PDF parsing issues when you use the SharePoint built-in PDF parser, we recommend that you try to use a PDF iFilter instead.
 
-## Installation example
+## Enabling support for installed PDF iFilter
 
 Enabling third-party PDF iFilter tools can be done via SharePoint PowerShell once the iFilter has been installed on the search servers.
 
