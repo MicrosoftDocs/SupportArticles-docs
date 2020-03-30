@@ -45,8 +45,6 @@ $ssa = Get-SPEnterpriseSearchServiceApplication -Identity "Search Service Applic
 Set-SPEnterpriseSearchFileFormatState -SearchApplication $ssa -Identity PDF -Enable $true -UseIFilter $true
 ```
 
-Another example on how to install a PDF iFilter can be found in the blogpost SharePoint 2013 - Installing Adobe iFilter and the 'real' PDF icon.
-
 **Third-party information disclaimer**
 
 The third-party products that are discussed in this article are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, regarding the performance or reliability of these products.
