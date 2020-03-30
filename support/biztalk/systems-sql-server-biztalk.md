@@ -52,7 +52,7 @@ The following tables list the operating systems, SQL Server, Visual Studio, and 
 | BizTalk Server 2013 R2|All editions|Enterprise Edition<br/> Standard Edition<br/>Developer Edition<br/>Branch Edition<br/> Evaluation Edition|
 | BizTalk Server 2013|All editions|Enterprise Edition<br/>Standard Edition<br/>Developer Edition<br/>Branch Edition<br/> Evaluation Edition|
 | BizTalk Server 2010|All editions|Enterprise Edition<br/>Standard Edition<br/>Developer Edition<br/>Branch Edition<br/>Evaluation Edition|
-| BizTalk Server 2009|All editions|Enterprise Edition<br/>Developer Edition<br/>Branch Edition<br/>Evaluation Edition </p>The Standard Edition is not supported for native 64-bit execution.|
+| BizTalk Server 2009|All editions|Enterprise Edition<br/>Developer Edition<br/>Branch Edition<br/>Evaluation Edition <br/><br/>The Standard Edition is not supported for native 64-bit execution.|
 | BizTalk Server 2006 R2|All editions|Enterprise Edition<br/> Developer Edition<br/>Branch Edition<br/>Evaluation Edition <br/><br/>The Standard Edition is not supported for native 64-bit execution.|
 ||||
 
