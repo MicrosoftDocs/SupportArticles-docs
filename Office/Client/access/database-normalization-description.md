@@ -20,6 +20,9 @@ search.appverid: MET150
 
 # Description of the database normalization basics
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 _Original KB number:_ &nbsp; 283878
 
 This article explains database normalization terminology for beginners. A basic understanding of this terminology is helpful when discussing the design of a relational database.

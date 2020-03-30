@@ -20,6 +20,9 @@ appliesto:
 
 # Large Address Aware capability change for Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 32-bit versions of Microsoft Excel 2013 and Excel 2016 can take advantage of Large Address Aware (LAA) functionality after installation of the latest updates. (see the "Resolution" section) This change lets 32-bit installations of Excel 2016 consume double the memory when users work on a 64-bit Windows OS. The system provides this capability by increasing the user mode virtual memory from 2 gigabytes (GB) to 4 GB. This change provides 50 percent more memory (for example, from 2 GB to 3 GB) when users work on a 32-bit system. 
@@ -34,8 +37,8 @@ Out of Memory
 Not enough System Resources to Display Completely 
 
 There isn't enough memory to complete this action. Try using less data or closing other applications. To increase memory availability, consider: 
-• Using a 64-bit version of Microsoft Excel.
-• Adding memory to your device.
+* Using a 64-bit version of Microsoft Excel.
+* Adding memory to your device.
 ```
 
 ## Resolution

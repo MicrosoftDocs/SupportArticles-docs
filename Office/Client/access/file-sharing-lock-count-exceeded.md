@@ -23,6 +23,9 @@ appliesto:
 
 # "File sharing lock count exceeded…" error during large transaction processing
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When one or more users process many transactions in a multi-user environment, the transactions may fail with the following error message:

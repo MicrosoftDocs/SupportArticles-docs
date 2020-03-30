@@ -18,6 +18,9 @@ appliesto:
 
 # You are redirected to a logon page or an error page, or you are prompted for authentication information when you click a hyperlink to a SSO Web site in an Office document
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you click a hyperlink in a Microsoft Office document, you may experience the following behavior before you can open the page that you requested:

@@ -16,6 +16,9 @@ appliesto:
 
 # How to create a mailto hyperlink in a presentation in PowerPoint for Mac
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 In a slide show presentation in Microsoft PowerPoint, you can create a hyperlink to a mailto Uniform Resource Locator (URL) to send mail to a specific recipient. The mailto URL uses the following syntax:

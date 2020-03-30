@@ -12,7 +12,7 @@ ms.prod: Office 365
 ms.topic: article
 ms.author: v-six
 appliesto:
-- Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
 - Office 365 Home
 - Office 365 Personal
 - Office 365 Business
@@ -34,6 +34,9 @@ appliesto:
 ---
 
 # "Background task activation is spurious" when you use an Office 2016 application to access Office 365 resources
+
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
 
 ## Problem
 

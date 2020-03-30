@@ -17,6 +17,9 @@ appliesto:
 
 # BOXServiceAccount is added to a role in Office 365 alerts
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem
 
 You receive Microsoft Office 365 security alerts (configured in the Security Compliance Center) that state that the BOXServiceAccount is added to a role.

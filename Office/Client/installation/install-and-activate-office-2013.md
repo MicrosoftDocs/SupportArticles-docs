@@ -17,6 +17,9 @@ appliesto:
 
 # How to install and activate Office Professional Plus 2013 on a terminal server
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 This article describes how Microsoft Developer Network (MSDN) and TechNet subscription customers can install and activate Microsoft Office Professional Plus 2013 on a terminal server.

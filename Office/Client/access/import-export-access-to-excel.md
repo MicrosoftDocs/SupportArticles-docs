@@ -18,6 +18,9 @@ appliesto:
 
 # Access: Errors during import/export to Excel xls
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 Access encounters import/export errors when working with Excel *.xls files that have cells which contain more than 8224 bytes of data.

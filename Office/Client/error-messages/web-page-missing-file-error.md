@@ -19,6 +19,9 @@ appliesto:
 
 # "The page cannot be found" or "Missing file" error when you view or change an Office document
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you save a Microsoft Word document, a Microsoft Excel document, or a Microsoft PowerPoint presentation as a Web page and then you upload the Web page to the document library of your Microsoft Windows SharePoint Services Web site, you may experience one or more of the following symptoms:

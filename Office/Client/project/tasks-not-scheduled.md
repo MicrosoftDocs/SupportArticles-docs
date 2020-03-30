@@ -24,6 +24,9 @@ appliesto:
 
 # Tasks don't schedule as expected in Microsoft Project
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 This article describes why a task may not be scheduled as expected in Microsoft Project and offers suggestions for correcting the behavior.

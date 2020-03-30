@@ -19,6 +19,9 @@ appliesto:
 
 # You are prompted to save the changes to the global template every time that you exit Word 2007 or Word 2010
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 This article contains workarounds for an issue in which you are always prompted to save the changes to the global template, Normal.dotm, when you exit Microsoft Office Word 2007 or Word 2010. First, you can turn off the **Prompt before saving Normal template** option. However, when you do this, Word will not prompt you when it automatically saves the changes the global template. You may still have an issue. Second, you can remove any add-ins or templates that may be changing the global template. Third, you can help protect the computer from macro viruses that change the global template.

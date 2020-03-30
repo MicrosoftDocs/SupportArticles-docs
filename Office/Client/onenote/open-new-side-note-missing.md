@@ -17,6 +17,9 @@ appliesto:
 
 # The "Open new side note" icon is missing from the Windows notification area in OneNote
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Symptoms
 
 When you start Microsoft Windows, the Microsoft Office OneNote **Open new side note** icon may be missing from the Windows notification area.

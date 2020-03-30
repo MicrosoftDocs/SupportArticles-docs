@@ -23,6 +23,9 @@ appliesto:
 
 # You receive a "Too many different cell formats" error message in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 In Microsoft Office Excel 2003, when you format a cell or a range of cells, you receive the following error message: 

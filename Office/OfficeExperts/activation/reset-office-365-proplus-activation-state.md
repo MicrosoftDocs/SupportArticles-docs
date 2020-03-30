@@ -1,5 +1,5 @@
 ---
-title: Reset Office 365 ProPlus activation state
+title: Reset Microsoft 365 Apps for enterprise activation state
 description: Four locations must be cleared to reset the activation or install to a clean state after Office 365 users are activated. 
 author: MJP-MSFT 
 manager: dcscontentpm
@@ -13,10 +13,10 @@ ms.custom:
 - CSSTroubleshoot
 ms.author: mattphil
 appliesto:
-- Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
 ---
 
-# Reset Office 365 ProPlus activation state
+# Reset Microsoft 365 Apps for enterprise activation state
 
 This article is written and maintained by [Matt Philipenko](https://social.technet.microsoft.com/profile/MattPhil+-+MSFT), Sr Premier Field Engineer.
 
@@ -105,11 +105,11 @@ Clear the following persisted locations:
 **Office 365 activation tokens and identities**
 
 - Appdata\local\Microsoft\Office\16.0\Licensing
-- %localappdata%\Microsoft\Office\Licenses (Office 365 ProPlus version 1909 or later)
+- %localappdata%\Microsoft\Office\Licenses (Microsoft 365 Apps for enterprise version 1909 or later)
 - HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Identity
 - HKEY_USERS\The user's SID\Software\Microsoft\Office\16.0\Common\Identity
 
-These steps reset the activation state for Office 365 ProPlus. After the locations are cleared, the activation flow will represent an initial activation.
+These steps reset the activation state for Microsoft 365 Apps for enterprise. After the locations are cleared, the activation flow will represent an initial activation.
 
 The four steps can be automated by using a script. To do this, copy the following content, save the content as a .vbs file, and then run the .vbs file.
 

@@ -17,6 +17,9 @@ appliesto:
 
 # Credentials don't work for IRM-protected content
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you try to open an Information Rights Management (IRM)-protected document, workbook, email message, or other item, you discover that you don't have access to the item even though you correctly signed in to Microsoft Office. Additionally, you're prompted to sign in, but you still can't access the content when you should be able to access to it.

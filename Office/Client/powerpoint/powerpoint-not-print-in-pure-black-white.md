@@ -18,6 +18,9 @@ appliesto:
 
 # PowerPoint 2013 does not print in Pure Black and White mode
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Symptoms
 
 When you print a Microsoft Office PowerPoint 2013 presentation by selecting **Pure Black and White** in the print settings, the printer prints in grayscale instead.

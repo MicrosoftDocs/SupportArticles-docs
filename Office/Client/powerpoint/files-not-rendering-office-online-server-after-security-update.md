@@ -24,6 +24,9 @@ description: Describes how to resolve an issue where PowerPoint files do not ren
 
 # PowerPoint files not rendering in Office Online Server after Security Update
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 After patching Office Online Server to the May or June 2019 security update, PowerPoint files do not render, under what appears to be random circumstances during Skype for Business sharing sessions, and displays the following error:
 
@@ -43,18 +46,18 @@ Issue was introduced to the product in the May and June 2019 security updates fo
 ## Resolution
 This issue was resolved as part of the August 2019 Security Update for Office Online Server, but some steps must be taken to ensure functionality after the patch. This is currently the only supported resolution for the issue:
 
-1.	Remove all Office Online Servers from the farm (all servers must be removed at the same time).
-2.	Install the August 2019 Security update on all OOS servers but do NOT rebuild the farm yet.
+1.    Remove all Office Online Servers from the farm (all servers must be removed at the same time).
+2.    Install the August 2019 Security update on all OOS servers but do NOT rebuild the farm yet.
 https://support.microsoft.com/en-us/help/4475528/security-update-for-office-online-server-august-13 
-3.	Clear the caches on each Office Online Server:<br/><br/>
+3.    Clear the caches on each Office Online Server:<br/><br/>
    a. Navigate to the cache location (note that this can change if you did not install OOS on the root drive): <br/><br/>
 C:\ProgramData\Microsoft\OfficeWebApps\Working<br/><br/>
-    b. Delete the “d” and “waccache” folders.<br/>
+    b. Delete the "d" and "waccache" folders.<br/>
 ![Delete the d and waccache folders.](media/files-not-rendering-office-online-server/106705-3.png)
  
 
-4.	Add the Office Online Servers back to the farm.
-5.	Verify that the PowerPoint files appear as expected.
+4.    Add the Office Online Servers back to the farm.
+5.    Verify that the PowerPoint files appear as expected.
 
 ## More information
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com).

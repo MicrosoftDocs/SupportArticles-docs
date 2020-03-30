@@ -18,6 +18,9 @@ appliesto:
 
 # How to save the addresses from a Word mail-merge label document to Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 This article describes how to save addresses that are contained in a Microsoft Word mail merged label document to a Microsoft Excel workbook.

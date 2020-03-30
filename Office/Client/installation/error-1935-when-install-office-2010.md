@@ -33,6 +33,9 @@ appliesto:
 
 # Error 1935 when you try to install Microsoft Office 2010 or 2007
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Resolution
 
 If you see "Error 1935. An error occurred during the installation of assembly component" when you install Office 2010 or 2007 or one of the Office stand-alone products like Excel, restart the computer and try to run setup again as a quick first step.

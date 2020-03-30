@@ -17,6 +17,9 @@ appliesto:
 
 # Use the left, right, mid, and len functions in Visual Basic for Applications in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 This article contains examples of how to manipulate text strings using the Left, Right, Mid, and Len functions in Microsoft Visual Basic for Applications in Microsoft Excel.

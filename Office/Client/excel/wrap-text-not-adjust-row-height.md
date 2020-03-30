@@ -20,6 +20,9 @@ appliesto:
 
 # Wrap text does not adjust row height in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 In Microsoft Excel, if you manually modify the height of a row and then format a cell in that row to wrap text, Excel does not change the height of the row to fit all the text in the cell. 

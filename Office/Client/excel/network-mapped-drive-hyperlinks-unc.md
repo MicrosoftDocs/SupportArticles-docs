@@ -28,6 +28,9 @@ appliesto:
 
 # Network Mapped Drive Hyperlinks resolve as UNC in Office Products
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Symptoms
 
 After a user inserts a hyperlink to a file residing on a network mapped drive within an Office product, the hyperlink's text displays the network mapped drive path, however the link is resolved as the UNC path. 

@@ -18,16 +18,19 @@ appliesto:
 - Access 2007
 ---
 
-# "This feature isn’t installed, or has been disabled" when you open a wizard in Access
+# "This feature isn't installed, or has been disabled" when you open a wizard in Access
+
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
 
 ## Symptoms
 
 You enable the **Disable all macros except digitally signed macros** option in the **Macro Settings** pane of the **Trust Center Settings** and the **Disable all Trusted Locations** option in the **Trusted Locations** pane in Microsoft Access. When you try to open any wizard, you receive the following error message:
 
 ```adoc
-This feature isn’t installed, or has been disabled.
+This feature isn't installed, or has been disabled.
 
-To install this feature, rerun the Microsoft Office Access or Microsoft Office Setup program or, if you’re using a third-party add-in, reinstall the add-in. To reenable this wizard, click About Microsoft Office Access on the Help menu, and then click the Disabled Items button to view a list of addins which you can enable.
+To install this feature, rerun the Microsoft Office Access or Microsoft Office Setup program or, if you're using a third-party add-in, reinstall the add-in. To reenable this wizard, click About Microsoft Office Access on the Help menu, and then click the Disabled Items button to view a list of addins which you can enable.
 ```
 
 **Note** The **Help** menu no longer exists in Access 2007 or a later version.

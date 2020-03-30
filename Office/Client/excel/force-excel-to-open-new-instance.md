@@ -19,6 +19,9 @@ appliesto:
 
 # How to force Excel to open in a new instance by default
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 In Microsoft Excel 2013 and later versions, when you open multiple spreadsheets, they all open in the same instance of Excel. However, in some situations, such as when you're working with large Excel spreadsheets, you may want to open each one in a new instance. This article explains how to do that by configuring a registry key. 

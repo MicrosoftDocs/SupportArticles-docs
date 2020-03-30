@@ -1,6 +1,6 @@
 ---
-title: We are unable to connect right now when try to activate Office 365 ProPlus
-description: Describes an issue that triggers an error message when users try to activate Office 365 ProPlus. Provides a workaround.
+title: We are unable to connect right now when try to activate Microsoft 365 Apps for enterprise
+description: Describes an issue that triggers an error message when users try to activate Microsoft 365 Apps for enterprise. Provides a workaround.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -12,15 +12,18 @@ ms.topic: article
 ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
-- Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
 - Office 365 Identity Management
 ---
 
-# "We are unable to connect right now" error when users try to activate Office 365 ProPlus
+# "We are unable to connect right now" error when users try to activate Microsoft 365 Apps for enterprise
+
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
 
 ## Symptoms
 
-When you set up your network to block Internet Explorer 6, users discover that they cannot activate Office 365 ProPlus. When users try to activate Office 365 ProPlus, they receive the following error message:
+When you set up your network to block Internet Explorer 6, users discover that they cannot activate Microsoft 365 Apps for enterprise. When users try to activate Microsoft 365 Apps for enterprise, they receive the following error message:
 
 **We are unable to connect right now. Please check your network and try again later.**
 

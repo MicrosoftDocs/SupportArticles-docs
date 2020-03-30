@@ -22,6 +22,9 @@ appliesto:
 
 # Troubleshoot Excel opening blank when you double-select a file icon or file name
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you double-select an icon or file name for a Microsoft Excel workbook, Excel starts, then displays a blank screen where you expect the file content to appear.

@@ -17,6 +17,9 @@ appliesto:
 
 # Download information about the SQL Server Native Client drivers that are used by Access
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 This article contains download information about the Microsoft SQL Server Native Client Drivers package. Certain Microsoft Access features do not work correctly when these drivers are not installed.

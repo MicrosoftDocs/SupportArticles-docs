@@ -18,6 +18,9 @@ appliesto:
 
 # Microsoft Office stops responding when you try to open or save a file
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 If you perform one of the following procedures in one of the Microsoft Office programs that are listed at the end of this article, the program may stop responding (hang) for a long time:

@@ -18,6 +18,9 @@ appliesto:
 
 # Description of formulas to count the occurrences of text, characters, and words in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 This article contains and describes formulas that calculate the following:

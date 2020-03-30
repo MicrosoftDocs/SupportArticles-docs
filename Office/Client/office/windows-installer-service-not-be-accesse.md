@@ -19,6 +19,9 @@ appliesto:
 
 # "The Windows Installer service could not be accessed" when you try to install Office
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you try to install Microsoft Office, you may receive an error message that is similar to the following: 

@@ -23,6 +23,9 @@ appliesto:
 
 # Importing an Task Outline Structure into Project
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Summary
 
 When you import files from a different application to Microsoft Project, you can include information that will allow Microsoft Project to generate a project outline structure for the imported file.

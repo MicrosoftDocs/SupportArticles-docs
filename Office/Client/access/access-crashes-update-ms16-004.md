@@ -22,6 +22,9 @@ appliesto:
 
 # Error messages or Access crashes after you install security update MS16-004
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 After you apply security update 2881067, 2881029, 3039794, or 2920727 that are described in security bulletin MS16-004, you have problems that affect your Access database if you use certain Windows common controls. Specifically, these problems occur if you use the controls that are associated with the MSCOMCTL.OCX file that's updated in the security update. These problems may include the following:

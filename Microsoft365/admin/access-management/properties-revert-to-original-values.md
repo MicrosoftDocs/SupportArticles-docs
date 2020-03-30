@@ -20,6 +20,9 @@ appliesto:
 
 # Properties of Office 365 users revert to original values when running Windows Server Essentials
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## PROBLEM
 
 Assume that you're running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials integrated with Microsoft Office 365. You change the properties of one or more Office 365 users by using the Office 365 portal. However, after the Windows Server Essentials directory integration process runs, the properties revert to their original values.

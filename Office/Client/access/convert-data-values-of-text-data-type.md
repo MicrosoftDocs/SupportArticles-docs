@@ -21,6 +21,9 @@ appliesto:
 
 # How to convert data values of the Text data type to the proper case format in Microsoft Access
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 Moderate: Requires basic macro, coding, and interoperability skills. 
 
 This article applies to a Microsoft Access database (.mdb) file or to a Microsoft Access database (.accdb) file.

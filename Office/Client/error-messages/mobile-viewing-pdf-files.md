@@ -17,6 +17,9 @@ appliesto:
 
 # Mobile viewing PDF files with Office Web Apps
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you open a PDF file on a mobile device by using Microsoft SharePoint and Office Web Apps or Office Online Server, the mobile browser displays the following error message:

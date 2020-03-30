@@ -21,6 +21,9 @@ appliesto:
 
 # "This document contains invalid signatures" error when opening Excel workbooks that were digitally signed in an earlier version
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 You open a Microsoft Excel workbook that was digitally signed in an earlier version of Excel than the one that you are using. In this situation, the signature is no longer valid, and the following warning message is displayed in the Trust Bar:

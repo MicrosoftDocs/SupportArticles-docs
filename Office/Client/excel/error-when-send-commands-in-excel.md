@@ -20,6 +20,9 @@ appliesto:
 
 # "An error occurred when sending commands to the program" in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 You receive the following error message in Microsoft Excel. This error indicates that some process that is running inside Excel will not let Excel close.
@@ -54,7 +57,7 @@ If these steps do not resolve the problem, go to Method 2.
  
 If you are running Update User Experience Virtualization (UE-V), install [Hotfix Package 1 for Microsoft User Experience Virtualization 2.0 (KB2927019)](https://support.microsoft.com/help/2927019).
 
-If you are not sure whether you are running UE-V, examine the program list in the **Programs and Features** item in Control Panel. An entry for “Company Settings Center” indicates that you are running UE-V.
+If you are not sure whether you are running UE-V, examine the program list in the **Programs and Features** item in Control Panel. An entry for "Company Settings Center" indicates that you are running UE-V.
 
 If these steps do not resolve the problem, go to Method 3.
 
@@ -142,7 +145,7 @@ Excel and COM add-in programs can also cause this problem. These two kinds of ad
 5. If the problem persists, repeat steps 1-4, except select a different add-in in step 3.    
 6. If the problem persists after you clear all the COM Add-ins, repeat steps 1-4, except select **Excel Add-Ins** in step 2, and then try each of the Excel add-ins one at a time in step 3.    
  
-If Excel loads the file, the add-in you last turned off is causing the problem. If this is the case, we recommend that you visit the manufacturer's website for the add-in to learn whether an updated version of the add-in is available. If a newer version of the add-in is not available, or if you don’t have to use the add-in, you can leave it turned off.
+If Excel loads the file, the add-in you last turned off is causing the problem. If this is the case, we recommend that you visit the manufacturer's website for the add-in to learn whether an updated version of the add-in is available. If a newer version of the add-in is not available, or if you don't have to use the add-in, you can leave it turned off.
 
 If Excel does not open the file after you turn off all the add-ins, the problem has a different cause.
 

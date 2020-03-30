@@ -18,6 +18,9 @@ appliesto:
 
 # Duplicate or invalid attributes prevent directory synchronization in Office 365
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 In Microsoft Office 365, an administrator receives the following email message warning when directory synchronization finishes:

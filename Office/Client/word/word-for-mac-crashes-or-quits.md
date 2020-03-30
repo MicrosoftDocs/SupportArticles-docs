@@ -16,6 +16,9 @@ appliesto:
 
 # When you save, Word for Mac crashes or quits
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you save a Word for Mac document, the application crashes or quits unexpectedly.

@@ -18,6 +18,9 @@ appliesto:
 
 # You cannot open an IRM protected workbook in Protected View in Excel 2013
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Symptoms
 
 When you try to open an Information Rights Management (IRM) protected Microsoft Excel 97-2003 workbook (.xls file) in Protected View in Excel 2013, the operation fails. Additionally, you receive the following error message:

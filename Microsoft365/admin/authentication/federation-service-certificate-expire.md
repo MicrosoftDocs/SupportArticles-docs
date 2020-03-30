@@ -18,6 +18,9 @@ appliesto:
 
 # "One of your on-premises Federation Service certificates is expiring" message in Office 365 portal
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem
 
 You receive the following message in the Microsoft Office 365 portal:

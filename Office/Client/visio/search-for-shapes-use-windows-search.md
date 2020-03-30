@@ -21,6 +21,9 @@ appliesto:
 
 # Enable the Windows Search service if you want to use the Search for Shapes feature in Visio 2010 or in Visio 2013
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Introduction 
 
 The Search for Shapes feature in Microsoft Visio 2010 and in Microsoft Visio 2013 uses the Windows Search service to search for the Visio stencils that are installed on your computer. The Windows Search service must be running to enable quick searching. Otherwise, searches take a long time to finish, and the search results may be incorrect. Additionally, you receive the following warning message:

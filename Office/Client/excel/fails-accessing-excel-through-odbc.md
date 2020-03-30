@@ -17,6 +17,9 @@ appliesto:
 
 # PRB: "Operation must use an updateable query" When you access Excel through ODBC
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you edit an Excel worksheet through ADO and ODBC, you may receive the following error message if you use an ADO DataControl object:

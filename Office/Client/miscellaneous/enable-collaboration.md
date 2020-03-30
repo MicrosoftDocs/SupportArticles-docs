@@ -21,6 +21,9 @@ appliesto:
 
 # Description of Office features that are intended to enable collaboration and that are not intended to increase security
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 Microsoft Office products include features that enable specific collaboration scenarios and features that are designed to help make your documents and files more secure. Features that enable collaboration scenarios function correctly in collaboration environments that do not include users who have malicious intent. 

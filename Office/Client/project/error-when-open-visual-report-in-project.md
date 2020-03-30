@@ -19,6 +19,9 @@ appliesto:
 
 # Error when opening a Visual Report in Project 2010 with Office 2013
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you attempt to open a Visual Report in Project 2010 with Visio 2013 installed you may receive the following error message:

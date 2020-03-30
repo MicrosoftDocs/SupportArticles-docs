@@ -19,6 +19,9 @@ search.appverid: MET150
 
 # Introduction to lock files (.laccdb and .ldb) in Access
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Introduction
 
 The .laccdb or .ldb file plays an important role in the multiuser scheme of the Microsoft Access database engine. The .laccdb or .ldb file is used to determine which records are locked in a shared database and by whom. The .laccdb file is used with .accdb databases and the .ldb file is used with .mdb databases. Both the .laccdb and .ldb files are commonly referred as lock files.

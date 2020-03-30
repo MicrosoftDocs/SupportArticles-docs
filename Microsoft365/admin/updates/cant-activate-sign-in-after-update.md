@@ -18,6 +18,9 @@ appliesto:
 
 # You can't activate or sign-in after you update to Office 2016 for Mac version 15.33
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you try to activate or sign in to any of the Microsoft Office 2016 applications after you install the version 15.33 update, you receive a blank authentication screen.

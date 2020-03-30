@@ -18,6 +18,9 @@ appliesto:
 
 # BUG: Excel Does Not Shut Down After Calling the Quit Method When Automating from JScript
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When automating Microsoft Excel from Microsoft JScript, Excel stays in memory after calling the Quit method until you close Internet Explorer or navigate to another page. 

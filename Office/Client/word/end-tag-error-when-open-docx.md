@@ -19,6 +19,9 @@ appliesto:
 
 # "end tag" error occurs when you open a DOCX file in Word 2013, 2010, or 2007
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you try to open a Microsoft Word 2007, 2010 or 2013 document, you may receive this error message:
@@ -70,7 +73,7 @@ Incorrect tags:
 
 <mc:AlternateContent>
 
-<mc:Choice Requires=”wps”>
+<mc:Choice Requires="wps">
 
 <m:oMath>
 
@@ -86,7 +89,7 @@ Correct tags:
 
 <mc:AlternateContent>
 
-<mc:Choice Requires=”wps”>
+<mc:Choice Requires="wps">
 
 …
 

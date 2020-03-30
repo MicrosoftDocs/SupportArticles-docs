@@ -19,6 +19,9 @@ appliesto:
 
 # Office 365 email address contains an underscore character after directory synchronization
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 After the Microsoft Azure Active Directory Sync Tool runs to sync your on-premises Active Directory environment to Azure Active Directory, a user's Office 365 email address unexpectedly contains an underscore character "_". 
@@ -41,7 +44,7 @@ This occurs if the user account in your on-premises environment has a **proxyadd
 |/|forward slash |
 |%|percent |
     
-In this scenario, after directory synchronization is run, the special character is replaced by an underscore character. Therefore, the user’s Office 365 email address contains an underscore character instead of the special character. 
+In this scenario, after directory synchronization is run, the special character is replaced by an underscore character. Therefore, the user's Office 365 email address contains an underscore character instead of the special character. 
 
 ## Resolution
 

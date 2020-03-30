@@ -17,6 +17,9 @@ appliesto:
 
 # Run-Time Error 13: Type Mismatch
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 "Run-time Error 13: Type Mismatch" This error occurs when setting the FW company as default.

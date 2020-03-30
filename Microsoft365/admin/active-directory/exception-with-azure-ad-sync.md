@@ -19,6 +19,9 @@ appliesto:
 
 # "Exception has been thrown by the target of an invocation" with Directory Sync Configuration Wizard
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem
 
 You run the Azure Active Directory Sync tool Configuration Wizard after you install the Azure Active Directory Sync tool on a Windows Server 2012 Essentials server or a Windows Server 2012 R2 Essentials server. In this situation, you receive the following error message:

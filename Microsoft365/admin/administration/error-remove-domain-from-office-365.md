@@ -17,6 +17,9 @@ appliesto:
 
 # You get an error message when you try to remove a domain from Office 365
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem
 
 You can't remove a domain from Microsoft Office 365. When you try to remove the domain, you receive an error message. 

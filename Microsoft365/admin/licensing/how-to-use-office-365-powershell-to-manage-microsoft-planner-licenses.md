@@ -17,13 +17,16 @@ appliesto:
 
 # How to use Office 365 PowerShell to manage Microsoft Planner licenses
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Introduction
 
 This article describes how to use Microsoft Office 365 PowerShell to manage licenses for Microsoft Planner.
 
 ## Procedure
 
-The management of Microsoft Planner licenses differs between the First Release experience and General Availability (GA). In First Release, Microsoft Planner is a top-level SKU, and licenses aren't assigned to users by default. Whereas in General Availability, Microsoft Planner is an available service under your main Office 365 subscription, and licenses will be assigned to users by default. The following sections cover the First Release and General Availability scenarios. If you’re in First Release and also see Microsoft Planner listed under your main Office 365 subscription, you must use both methods.
+The management of Microsoft Planner licenses differs between the First Release experience and General Availability (GA). In First Release, Microsoft Planner is a top-level SKU, and licenses aren't assigned to users by default. Whereas in General Availability, Microsoft Planner is an available service under your main Office 365 subscription, and licenses will be assigned to users by default. The following sections cover the First Release and General Availability scenarios. If you're in First Release and also see Microsoft Planner listed under your main Office 365 subscription, you must use both methods.
 
 ## First Release
 
@@ -73,7 +76,7 @@ If you want to remove licenses from users, replace -AddLicenses with -RemoveLice
 
 ## General Availability (GA)
 
-After Microsoft Planner is GA, Microsoft Planner licenses are listed under your main Office 365 subscription alongside services such as Sway, Office Online, Skype, and so on (depending on your subscription). You may already see this before GA if you’re in First Release as we prepare for the GA release.
+After Microsoft Planner is GA, Microsoft Planner licenses are listed under your main Office 365 subscription alongside services such as Sway, Office Online, Skype, and so on (depending on your subscription). You may already see this before GA if you're in First Release as we prepare for the GA release.
 
 By default, the license for Microsoft Planner will be enabled for all users. You can use PowerShell to disable it if you prefer. For more information, see [Disable access to services with Office 365 PowerShell](https://technet.microsoft.com/library/dn771769.aspx).
 

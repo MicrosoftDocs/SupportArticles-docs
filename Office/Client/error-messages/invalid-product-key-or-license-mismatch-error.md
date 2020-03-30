@@ -20,6 +20,9 @@ appliesto:
 
 # "Invalid product key or license mismatch" error message when you try to activate Office 2013
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Symptoms
 
 Assume that you try to activate Microsoft Office 2013 by using the Volume Activation Tools wizard on a Windows Server 2012-based computer. Additionally, assume that you use Active Directory-based or Key Management Service-based activation. In this situation, you receive the following error message: 

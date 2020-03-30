@@ -18,6 +18,9 @@ appliesto:
 
 # Print preview display is missing lines in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Summary
 
 Thin lines or lines at certain positions in an Excel spreadsheet are not rendered in the print preview area when the print scaling is set too small. This problem occurs when you use any printer that uses a PCL driver or when you use the Microsoft XPS Document Writer or any other XPS printer. This problem does not occur when you use a printer that uses a PostScript (PS) driver.

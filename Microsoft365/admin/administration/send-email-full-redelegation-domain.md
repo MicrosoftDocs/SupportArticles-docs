@@ -18,6 +18,9 @@ appliesto:
 
 # You can't send email messages in Office 365 Small Business from a domain that's set up for full redelegation
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem
 
 When you try to send email messages in Office 365 Small Business from a domain that's set up for full redelegation, some messages aren't sent. Additionally, you may receive a nondelivery report (NDR) that resembles the following:

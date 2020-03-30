@@ -17,6 +17,9 @@ appliesto:
 
 # ACCESS 2010: Extra report page prints when Group Footer set to After Section
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptom 
 
 When printing a Microsoft Access 2010 report that has a Group Footer, you may see an extra page print at the end of the report. 

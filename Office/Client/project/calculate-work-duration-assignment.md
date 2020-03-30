@@ -25,6 +25,9 @@ appliesto:
 
 # How work and duration are calculated with assignment changes
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Summary
 
 This article describes how work and duration are calculated when you make resource assignment changes.

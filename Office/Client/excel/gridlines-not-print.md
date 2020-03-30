@@ -20,6 +20,9 @@ appliesto:
 
 # Gridlines not printing as expected in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When printing a workbook or worksheet, and gridlines are set to print, Excel is not printing the gridlines as expected.
@@ -48,6 +51,6 @@ Option 3: Print to a printer that is 1200 dpi capable if using a Universal Print
 
 ## More Information
 
-Microsoft is aware of this issue. When saving the file, Excel stores printer related information within the workbook.  This cached information is then compared to the client’s default printer information when the workbook is printed.  If the information is different, Excel will use the client’s default printer information.  
+Microsoft is aware of this issue. When saving the file, Excel stores printer related information within the workbook.  This cached information is then compared to the client's default printer information when the workbook is printed.  If the information is different, Excel will use the client's default printer information.  
 
 However, in the scenario described above, since the same Universal Printer Driver is being used in both cases, Excel does not consider the lower resolution printer to be different, and as such uses the cached information when printing the workbook.  This results in the workbook being printed at a higher resolution than the printer supports and this leads to the issue described within the Symptoms section.

@@ -25,6 +25,9 @@ description: Resolution to an issue where the top of Excel columns are truncated
 
 # Top columns in an Excel spreadsheet pasted into a PowerPoint presentation cut off 
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When editing an Excel spreadsheet embedded into PowerPoint on a Surface Pro attached to an external monitor when connected through a docking station, the source file is opened instead of the edit window.  
@@ -37,6 +40,6 @@ This issue can occur when the scaling and layout of the monitor is different tha
 
 This issue can be resolved by following the steps below:
 
-1.	Open PowerPoint.
-2.	Under **User Interface Options**, select **File**, then **Options**, then **General**, and then **Optimize for Compatibility**.
-3.	Under **Display settings**, set the scale and layout of all monitors connected to the Surface Pro to **125**. 
+1.    Open PowerPoint.
+2.    Under **User Interface Options**, select **File**, then **Options**, then **General**, and then **Optimize for Compatibility**.
+3.    Under **Display settings**, set the scale and layout of all monitors connected to the Surface Pro to **125**. 

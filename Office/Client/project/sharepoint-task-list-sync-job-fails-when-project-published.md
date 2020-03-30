@@ -25,14 +25,17 @@ description: Desribes how to resolve an issue where the SharePoint task list syn
 
 # SharePoint task list sync job fails when Project is published
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 A SharePoint task list sync job fails in the Project queue when published from Project Professional or from Project Web App (PWA). 
 
 ## Cause
-This issue occurs if a user who was added to an item in the “AssignedTo” field in a task list has been removed from the site collection.
+This issue occurs if a user who was added to an item in the "AssignedTo" field in a task list has been removed from the site collection.
 
 ## Resolution
-The PowerShell script below can be used to find the list items in a task list which still contain user accounts in the “AssignedTo” field that are missing from site collection:
+The PowerShell script below can be used to find the list items in a task list which still contain user accounts in the "AssignedTo" field that are missing from site collection:
  
 ```
 asnp *share*
@@ -88,21 +91,21 @@ $result | Export-Csv -Encoding UTF8 -NoTypeInformation -Path C:\Logs\Report1.csv
 > Change the PWA URL and task list name before running the PowerShell.
  
 Once the list items are found:
-1.	Go to **Site Settings** and then **Content and Structure**. 
-2.	Access the task list of the workspace associated with the Project. 
-3.	Remove the user from assignment in task list.
+1.    Go to **Site Settings** and then **Content and Structure**. 
+2.    Access the task list of the workspace associated with the Project. 
+3.    Remove the user from assignment in task list.
 
 Alternative workaround options include the following:
  
-1.	Disable the task list sync by running the following command:
+1.    Disable the task list sync by running the following command:
 ```
 Disable-SPProjectEnterpriseProjectTaskSync –Url http://servername/PWA/NameOfProject
 ```
  
-2.	Delete and recreate the task list.
+2.    Delete and recreate the task list.
 
 ## More information
-The ULS logs that show the error when updating the “AssignedTo” field in the task list will appear similar to the following:
+The ULS logs that show the error when updating the "AssignedTo" field in the task list will appear similar to the following:
 
 ``` 
 PWA:https://Server/PWA, ServiceApp:PWA_APP_SVC, User:i:0#.w|mydomain\krishnp, PSI: [QUEUE] SynchronizeTaskListInManagedModeMessage failed on project e7e90257-d10e-e911-89a6-ace2d39a7fa8. Exception: System.NullReferenceException: Object reference not set to an instance of an object.    

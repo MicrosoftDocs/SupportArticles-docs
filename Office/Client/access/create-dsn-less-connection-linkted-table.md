@@ -21,6 +21,9 @@ appliesto:
 
 # How to create a DSN-less connection to SQL Server for linked tables in Access
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 Advanced: Requires expert coding, interoperability, and multiuser skills. 
 
 This article applies only to a Microsoft Access database (.accdb and .mdb).

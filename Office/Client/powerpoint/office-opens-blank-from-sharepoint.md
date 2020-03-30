@@ -25,6 +25,9 @@ appliesto:
 
 # Office applications open blank from SharePoint WebDAV or sites
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 When this problem occurs, you may also experience the following additional symptoms: 
  
 - You do not receive a Basic authentication password prompt when you try to open or download the file.

@@ -18,6 +18,9 @@ appliesto:
 
 # "This doesn't look like a valid user ID" error when a user tries to sign in to Office 365
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem
 
 When a user tries to sign in to Office 365, the user receives the following error message:

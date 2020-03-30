@@ -20,6 +20,9 @@ appliesto:
 
 # Access linked table to a SharePoint list returns #Deleted
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptom
 
 When you open a linked table in Access that's linked to a SharePoint list, the results are displayed as #Deleted.
@@ -38,4 +41,4 @@ To work around this issue, use one of the following methods:
 - Change the caching options to one of the following:  
   - Clear the option **Use the cache format that is compatible with Microsoft Access 2010 and later**.    
   - Select both the **Use the cache format that is compatible with Microsoft Access 2010 and later** and **Never Cache** options.    
-- Use the [ImportSharePointList macro action](https://docs.microsoft.com/office/client-developer/access/desktop-database-reference/importsharepointlist-macro-action) to link to a SharePoint view of the list that doesn’t contain the Memo fields.
+- Use the [ImportSharePointList macro action](https://docs.microsoft.com/office/client-developer/access/desktop-database-reference/importsharepointlist-macro-action) to link to a SharePoint view of the list that doesn't contain the Memo fields.

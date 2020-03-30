@@ -20,6 +20,9 @@ appliesto:
 
 # "An error has occurred" message when you load an Access web app in Internet Explorer
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you try to load a Microsoft Access web app in Internet Explorer, the app may not load completely, and then you receive an "Error has occurred. Sorry, something went wrong. Please try again later" error message.

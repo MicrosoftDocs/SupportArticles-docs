@@ -21,6 +21,9 @@ appliesto:
 
 # "Cannot update. Database or object is read-only" error in linked SharePoint list in Access
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Symptoms
 
 When you work in a Microsoft Access table that is linked to a Microsoft SharePoint list that contains a hidden metadata column, you receive the following error message: 

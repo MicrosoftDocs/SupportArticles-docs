@@ -17,6 +17,9 @@ appliesto:
 
 # A picture or an object may not appear in a Word 2010 or Word 2007 document
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 For a Microsoft Word 2000 and Microsoft Office Word 2003 version of this article, see [285957 ](https://support.microsoft.com/help/285957).
 
 ## Symptoms

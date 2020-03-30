@@ -20,6 +20,9 @@ appliesto:
 
 # You cannot use the mouse to draw a selection rectangle around multiple AutoShape objects in Microsoft Word
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Symptoms
 
 If a Microsoft Word 2010 or later document contains multiple AutoShape objects that are near one another, you cannot use the mouse to draw a selection rectangle around the objects.

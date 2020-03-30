@@ -21,6 +21,9 @@ appliesto:
 
 # How to troubleshoot damaged drawings in Visio
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 This article discusses how to troubleshoot damaged drawings in Microsoft Office Visio 2013, Visio 2010, Visio 2007, Microsoft Office Visio 2003, and Microsoft Visio 2002. This article describes some symptoms that may indicate that the drawing that you are working with in Visio is damaged. 
@@ -38,7 +41,7 @@ If you experience unexpected behavior when you work with a Visio drawing, the Vi
 
   "An error (100) occurred during the action Open"
 
-  "Visio cannot open the file because it’s not a Visio file or it has become corrupted."
+  "Visio cannot open the file because it's not a Visio file or it has become corrupted."
 
 - "Out of memory" error messages or error messages that indicate low system resources   
 

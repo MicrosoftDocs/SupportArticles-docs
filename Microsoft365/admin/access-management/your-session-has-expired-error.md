@@ -17,6 +17,9 @@ appliesto:
 
 # "Your session has expired" error message in Office Online
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 Users receive a "Your session has expired" error message in Microsoft Office Online after 15 minutes.This error may occur when they do one or more of the following actions: 

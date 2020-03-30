@@ -16,6 +16,9 @@ appliesto:
 
 # Formatted text (.prn) is limited to 240 characters per line in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 In Microsoft Excel, when you save a worksheet as a Formatted Text (Space Delimited) (.prn) file, any characters beyond the two-hundred fortieth character are wrapped to the next line. 

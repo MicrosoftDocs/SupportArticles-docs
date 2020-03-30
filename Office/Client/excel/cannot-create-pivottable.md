@@ -18,11 +18,14 @@ appliesto:
 
 # You cannot create a PivotTable in Excel 2013 when field names in a source range contain similar characters
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 Consider the following scenario:
 
-- You have two field names in a source range that have similar characters. For example, one field is named "Hello2World," and the other field is named "Hello²World." The "²" character corresponds to the "178" character in ASCII.  
+- You have two field names in a source range that have similar characters. For example, one field is named "Hello2World," and the other field is named "Hello<sup>2</sup>World." The "<sup>2</sup>" character corresponds to the "178" character in ASCII.  
 - You try to create a PivotTable by selecting the source range in Microsoft Excel 2013.   
 - You select the **Add this data to the Data Model** check box in the **Create PivotTable** dialog box.
 
@@ -31,7 +34,7 @@ In this scenario, you receive the following error message:
 ```adoc
 We couldn't get data from the Data Model. Here's the error we got: 
 
-The attribute with the name of Hello²World already exists in the '**Range**' dimension.
+The attribute with the name of Hello<sup>2</sup>World already exists in the '**Range**' dimension.
 ```
 
 ## Cause

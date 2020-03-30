@@ -19,6 +19,9 @@ appliesto:
 
 # Description of the AutoRecover functions in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 Microsoft Excel now has a built-in AutoRecover feature that has replaced the AutoSave add-in that exists in versions of Excel that are earlier than Microsoft Excel 2002. The AutoRecover feature saves copies of all open Excel files at a user-definable fixed interval. The files can be recovered if Excel closes unexpectedly, for example, during a power failure.

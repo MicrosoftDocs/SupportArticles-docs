@@ -20,6 +20,9 @@ appliesto:
 
 # "Do you want to download the new converter?" error when you try to open a .wps file in Word
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 Microsoft Office no longer includes the Microsoft Works Converter when it ships. If you try to open a Works word processor file (.wps) in Microsoft Word, Word tries to read the file as a text file. If you upgraded from an earlier version of Word, you may still have the .wps file format in the list of available files that you can open. However, Word no longer opens these files.

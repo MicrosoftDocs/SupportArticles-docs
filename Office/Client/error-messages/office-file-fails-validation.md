@@ -18,6 +18,8 @@ appliesto:
 
 # "Office has detected a problem with this file" error in Microsoft Office 2010
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
 
 ## Symptoms
 
@@ -49,6 +51,6 @@ Office File Validation is a feature that performs security checks on files. If O
 
 A trusted location is a folder on your computer or on a network. Any file that you put in a trusted location can be opened without being checked by the Trust Center. Additionally, the file is not opened in Protected View. 
 
-Files from the Internet and from other potentially unsafe locations may contain viruses, worms, or other kinds of malware. These agents may harm your computer. To help protect your computer, Office 2010 opens files from these potentially unsafe locations in Protected View. By using Protected View, you can read a file and inspect its contents. Additionally, you can reduce the risks that are associated with the actions that are mentioned in the “Symptoms” section. 
+Files from the Internet and from other potentially unsafe locations may contain viruses, worms, or other kinds of malware. These agents may harm your computer. To help protect your computer, Office 2010 opens files from these potentially unsafe locations in Protected View. By using Protected View, you can read a file and inspect its contents. Additionally, you can reduce the risks that are associated with the actions that are mentioned in the "Symptoms" section. 
 
 For more information about trusted locations, see [Add, remove, or modify a trusted location for your files](https://officebeta.microsoft.com/infopath-help/add-remove-or-modify-a-trusted-location-for-your-files-ha010354311.aspx?ctt=1).

@@ -16,6 +16,9 @@ appliesto:
 
 # Create a formula to correctly evaluate blank cells in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 In Microsoft Excel, when you use a formula that tests for a zero value, you may see unexpected results if the cell is blank. Microsoft Excel interprets a blank cell as zero, and not as empty or blank. Therefore, any cells that are blank are evaluated as zero in the function.

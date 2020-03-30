@@ -20,6 +20,9 @@ appliesto:
 
 # Tabbing between form fields and content controls does not work correctly in Word
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Symptoms
 
 Consider the following scenario. In Microsoft Word, you combine form fields (Legacy Tools) and content controls in the same document. Then, you enable the **Filling in forms** editing restriction. In this scenario, you cannot use the TAB key to move freely between the form fields and the content controls. You can tab from a form field to a content control. However, you cannot tab from a content control to a form field. Therefore, when you reach the first content control, you can only move between the content controls.

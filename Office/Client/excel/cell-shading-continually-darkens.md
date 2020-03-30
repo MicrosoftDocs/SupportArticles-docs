@@ -19,6 +19,9 @@ appliesto:
 
 # Cell shading continually darkens when you hold down Ctrl and repeatedly select the cell in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 Assume that you select multiple cells in a Microsoft Excel 2013 or Microsoft Excel 2016 worksheet. You mistakenly select some cells that you do not want to include in the selection. When you hold down Ctrl and then click those cells in order to remove them from the selection, the cell shading becomes darker, and the cells are not unselected. Additionally, the cell shading continues to darken if you repeatedly click the cells.

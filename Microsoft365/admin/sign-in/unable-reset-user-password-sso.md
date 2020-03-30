@@ -1,5 +1,5 @@
 ---
-title: Unable to reset this user’s password for user that was set up for SSO
+title: Unable to reset this user's password for user that was set up for SSO
 description: Describes an issue in which an administrator can't reset the password of a user who is a member of a domain that was formerly set up for single sign-on (SSO). Provides a resolution.
 author: simonxjx
 manager: dcscontentpm
@@ -19,13 +19,16 @@ appliesto:
 - Office 365 Identity Management
 ---
 
-# "Unable to reset this user’s password" when an admin resets the password of a domain member user
+# "Unable to reset this user's password" when an admin resets the password of a domain member user
+
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
 
 ## Problem
 
-Consider the following scenario: A user can't sign in to a Microsoft cloud service such as Office 365, Microsoft Azure, or Microsoft Intune by using a user ID that's a member of a cloud service domain that was formerly set up for single sign-on (SSO). In this scenario, when a cloud service admin tries to reset the user’s password by using the cloud service portal or Azure Active Directory Module for Windows PowerShell, the administrator receives the following error message:
+Consider the following scenario: A user can't sign in to a Microsoft cloud service such as Office 365, Microsoft Azure, or Microsoft Intune by using a user ID that's a member of a cloud service domain that was formerly set up for single sign-on (SSO). In this scenario, when a cloud service admin tries to reset the user's password by using the cloud service portal or Azure Active Directory Module for Windows PowerShell, the administrator receives the following error message:
 
-**Unable to reset this user’s password. Try again later.**
+**Unable to reset this user's password. Try again later.**
 
 ## Cause 
 

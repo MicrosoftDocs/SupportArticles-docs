@@ -18,6 +18,9 @@ appliesto:
 
 # Inquire COM add-in options do not respond in Excel 2013
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you enable the Inquire COM add-in in Microsoft Excel 2013, the **INQUIRE** tab is displayed as expected. However, there is no response when you click any option (such as the **Clean Excess Cell Formatting** or **Compare Files** option) on the **INQUIRE** tab. When this issue occurs, you do not receive an error message. 

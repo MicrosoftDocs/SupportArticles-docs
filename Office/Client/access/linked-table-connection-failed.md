@@ -20,6 +20,9 @@ appliesto:
 
 # Access: Linked table "connection failed" messages when using Azure AD interactive authentication
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 In Microsoft Access, you create a linked table that uses Azure Active Directory interactive authentication. When you open objects that use this connection, you experience repetitive "connection failed" messages that resemble the following:
