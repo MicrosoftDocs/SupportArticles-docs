@@ -19,6 +19,9 @@ appliesto:
 
 # Known issues with Office for Mac on MacOS 10.7 (Lion) and Higher
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 This article discusses known issues that may occur with Office for Mac applications on MacOS 10.7 (Lion).

@@ -18,6 +18,9 @@ appliesto:
 
 # You receive an error message when you run a query in Microsoft Access because of a double-byte Arabic number
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 In Microsoft Access 2010, Microsoft Access 2007, or in Microsoft Office Access 2003, you experience one of the following symptoms:

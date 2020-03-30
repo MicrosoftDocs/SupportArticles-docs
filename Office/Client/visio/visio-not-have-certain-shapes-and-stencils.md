@@ -19,6 +19,9 @@ appliesto:
 
 # Visio 2010 or 2013 does not have certain shapes and stencils included with the product
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Introduction 
 
 With each release of Microsoft Visio, we evaluate the set of shapes that are included in Visio. We then make additions, replacements, and deletions, based on usage data on the different shapes, together with customer feedback about the shapes. For Microsoft Visio 2010, the following stencils were removed:

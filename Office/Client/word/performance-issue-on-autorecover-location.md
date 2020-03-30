@@ -18,6 +18,9 @@ appliesto:
 
 # Performance issues with AutoRecover location on network share
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 You're working with a complex Word document. After an AutoSave operation (the default interval is 10 minutes) you notice a general performance degradation when editing the document:

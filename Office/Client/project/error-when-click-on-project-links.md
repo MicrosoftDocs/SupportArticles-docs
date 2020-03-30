@@ -17,6 +17,9 @@ appliesto:
 
 # Project Online: Error when you click on the Projects link in the top navigation bar
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Symptoms
 
 When you click the Projects link from the Office 365 ribbon to get to Project Web Access, you receive one of the following errors:

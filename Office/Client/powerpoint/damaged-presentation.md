@@ -21,6 +21,9 @@ appliesto:
 
 # How to troubleshoot a damaged presentation in PowerPoint
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 You may experience unexpected behavior when you work with a Microsoft PowerPoint presentation. This behavior may occur because the presentation is damaged. This article contains step-by-step methods that may help you partly or fully restore your presentation. 

@@ -20,6 +20,9 @@ appliesto:
 
 # Background is not printed when you print a Word document
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you print a Microsoft Office Word document that includes a background, the background is not printed. Examples of things that can be on a background include colors, pictures, or themes.

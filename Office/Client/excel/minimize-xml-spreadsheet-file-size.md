@@ -18,6 +18,9 @@ appliesto:
 
 # How to minimize the size of an XML Spreadsheet file in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 When you save an Excel workbook as an XML Spreadsheet file (.xml), and the workbook contains large ranges of special formatting, the size of the file may be much larger than the original workbook (.xls) file size.

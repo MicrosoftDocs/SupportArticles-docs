@@ -17,6 +17,9 @@ appliesto:
 
 # How to print a general field by using Word and Visual FoxPro 9.0 or earlier versions
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 When using the Report Designer to print a general field that has text inserted into it with a word processor, the OLE bound Control object of the Report Designer has to be sized to be as large as the largest amount of text in the general fields. This can present problems if there are multiple pages of text in the general field. The OLE Bound control can be enlarged only to the height of a single page in the Report Designer, which is usually not large enough to print a general field that has more than a page of data.

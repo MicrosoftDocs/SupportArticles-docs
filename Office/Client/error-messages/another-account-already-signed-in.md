@@ -18,6 +18,9 @@ appliesto:
 
 # "Sorry, another account from your organization is already signed in on this computer" in Office 2013
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you try to sign in to an Office 2013 app by using your Office 365 user ID and password, you receive the following error message:  
@@ -93,9 +96,9 @@ In Office 2013 apps, you can access Office 365 content in SharePoint Online by p
 
 However, Office 2013 only supports one Office 365 user sign-in from each tenant or organization per session.
 
-Office 2013 makes a best effort to prevent a second user from signing in when another user from the same organization is already signed in. However, there may be cases in which this scenario is not detected and the Office 2013 user interface may show that another user is successfully signed in. In this case, the second user cannot access his or her own content. All Office 365 content that he or she tries to open will be performed by using the first user’s credentials.
+Office 2013 makes a best effort to prevent a second user from signing in when another user from the same organization is already signed in. However, there may be cases in which this scenario is not detected and the Office 2013 user interface may show that another user is successfully signed in. In this case, the second user cannot access his or her own content. All Office 365 content that he or she tries to open will be performed by using the first user's credentials.
 
-Be aware that Office 2013 respects the permissions of all documents and SharePoint Online libraries. That is, if the first user doesn’t have access to a document that the second user has access to, and the second user (who believes they are signed in) attempts to open that document, the document will not open because Office tries to open the document as the first user.
+Be aware that Office 2013 respects the permissions of all documents and SharePoint Online libraries. That is, if the first user doesn't have access to a document that the second user has access to, and the second user (who believes they are signed in) attempts to open that document, the document will not open because Office tries to open the document as the first user.
 
 To fix this scenario, the signed-in user should sign out of Office 2013, and then restart his or her computer. Doing this makes sure that a clean state is present when the other user tries to sign in again.
 

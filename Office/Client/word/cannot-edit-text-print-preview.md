@@ -21,6 +21,9 @@ appliesto:
 
 # Cannot edit text in print preview in Microsoft Word
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 In Microsoft Word 2010 and later, you cannot edit text in print preview. This is because Edit mode does not work in print preview. Edit mode lets you edit the print preview without returning to the document.

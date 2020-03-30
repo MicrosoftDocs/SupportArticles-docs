@@ -19,6 +19,9 @@ appliesto:
 
 # Text is not copied from the Clipboard as expected in Microsoft Office Word 2007 - 2010
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 Text is not copied from the Clipboard as expected in Microsoft Office Word 2007 or Microsoft Office Word 2010. This behavior occurs in the following scenario. You configure Microsoft Office Word 2007 or 2010 to use the following default behavior when you paste items: 

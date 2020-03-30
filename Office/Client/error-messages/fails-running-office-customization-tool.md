@@ -17,6 +17,9 @@ appliesto:
 
 # "Files necessary to run the Office Customization Tool were not found" when you open the tool
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 You use the Office Customization Tool to customize an installation of the 2007 Microsoft Office system. You try to open the Office Customization Tool by typing the following command at a command prompt:

@@ -17,6 +17,9 @@ appliesto:
 
 # Date format is not correct when you convert a CSV text file in Excel by using a VBA macro
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you use a Microsoft Visual Basic for Applications (VBA) macro to convert a Comma-Separated Values (CSV) text file into a Microsoft Office Excel workbook (*.xls), the format of dates that are converted into your Excel workbook may not be correct.

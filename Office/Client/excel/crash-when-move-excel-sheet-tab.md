@@ -17,6 +17,9 @@ appliesto:
 
 # Excel 2013 crashes when moving Excel sheet tab
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Symptoms
 
 While you are working with Excel spread sheet, Microsoft Excel 2013 crashes when you move Excel sheet tab to reposition within the same workbook or to a separate workbook window.

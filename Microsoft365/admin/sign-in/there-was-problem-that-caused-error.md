@@ -25,6 +25,9 @@ appliesto:
 
 # You receive a "There was a problem that caused parts of the Microsoft Online Services Sign-in Assistant to be disabled" error
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem
 
 You experience sign-in issues in a Microsoft cloud service such as Office 365, Microsoft Azure, or Microsoft Intune. Specifically, you see a pop-up dialog box that contains the following error message:
@@ -69,6 +72,6 @@ Did this fix the problem?
 
 For more information about related technical issues, see the following Microsoft Knowledge Base article: 
 
-[2637629](https://support.microsoft.com/help/2637629) How to troubleshoot non-browser apps that can’t sign in to Office 365, Azure, or Intune
+[2637629](https://support.microsoft.com/help/2637629) How to troubleshoot non-browser apps that can't sign in to Office 365, Azure, or Intune
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.

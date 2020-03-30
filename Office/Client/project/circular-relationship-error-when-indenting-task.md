@@ -23,6 +23,9 @@ appliesto:
 
 # Circular Relationship error When indenting task
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Symptoms
 
 In Microsoft Project, if two tasks are linked in a predecessor/successor relationship and you indent the successor to make it a subtask and the predecessor of a summary task, you may receive the following error message:

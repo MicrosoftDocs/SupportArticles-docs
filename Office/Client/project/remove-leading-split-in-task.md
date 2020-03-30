@@ -23,6 +23,9 @@ appliesto:
 
 # How to Remove a Leading Split in a Task
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Symptoms
 
 In Microsoft Project, you can split a task so that the task is interrupted, and then resumes later in the schedule. If you drag a portion of a split task so that it touches another portion, Microsoft Project removes the split. However, this method does not work if the split is assigned at the beginning of a task (a leading split).

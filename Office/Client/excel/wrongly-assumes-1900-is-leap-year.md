@@ -24,6 +24,9 @@ appliesto:
 
 # Excel incorrectly assumes that the year 1900 is a leap year
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Symptoms
 
 Microsoft Excel incorrectly assumes that the year 1900 is a leap year. This article explains why the year 1900 is treated as a leap year, and outlines the behaviors that may occur if this specific issue is corrected.

@@ -12,12 +12,15 @@ ms.topic: article
 ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
-- Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
 - Microsoft Visio Pro for Office 365
 - Project Online Desktop Client
 ---
 
 # "Sorry, we can't connect to your account. Please try again later" error when you activate Office from Office 365
+
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
 
 ## Summary
 
@@ -64,7 +67,7 @@ Are you behind a firewall? If you're not sure, ask your administrator. If you're
  
 Each firewall will have a different method for enable access to these URIs. Check your software's documentation for instructions or ask your administrator to do this for you. 
 
-For more information about Office 365 ProPlus URLs and IP addresses, see the following Microsoft article: [Office 365 URLs and IP address ranges](https://technet.microsoft.com/library/hh373144.aspx)
+For more information about Microsoft 365 Apps for enterprise URLs and IP addresses, see the following Microsoft article: [Office 365 URLs and IP address ranges](https://technet.microsoft.com/library/hh373144.aspx)
 
 ### Step 4. Check whether you have the appropriate license   
  

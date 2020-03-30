@@ -19,6 +19,9 @@ appliesto:
 
 # Search for Shapes feature on the Internet is discontinued
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 The Search for Shapes feature in Visio 2003 and 2007 (known as "Find Shape" in Visio 2002) allowed users to query for Visio shapes both on their computer as well as online from Microsoft servers. The online search portion of Search for Shapes feature is being discontinued and the servers are being shut down. Users of Visio 2002 and later versions will only be able to search for shapes locally. Results will not be returned from the online source.

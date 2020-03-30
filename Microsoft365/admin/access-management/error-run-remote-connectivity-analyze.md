@@ -18,6 +18,9 @@ appliesto:
 
 # "To authenticate to Office 365, you must enter your Microsoft account" when you run the Remote Connectivity Analyzer tool to test connectivity to Office 365
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem
 
 When you try to run the Microsoft Remote Connectivity Analyzer tool to test connectivity to Microsoft Office 365, you receive the following error message:

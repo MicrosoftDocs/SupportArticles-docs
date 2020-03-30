@@ -21,6 +21,9 @@ appliesto:
 
 # A user or an administrator forgot his or her password in Office 365, Azure, or Intune
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem
 
 A user or admin forgot his or her password and can't sign in to Office 365, Microsoft Azure, or Microsoft Intune.

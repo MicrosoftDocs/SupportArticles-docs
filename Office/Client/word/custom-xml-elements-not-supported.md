@@ -18,6 +18,9 @@ appliesto:
 
 # "The file contains custom XML elements which are no longer supported by Word" when you try to open a document in Word
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 Consider the following scenario. You try to open a document in Microsoft Office Word 2007, in Microsoft Word 2010 or in Microsoft Word 2013 that is using one of the following file formats: 

@@ -18,6 +18,9 @@ appliesto:
 
 # Error occurs when accessing Project Web App
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Symptoms
 
 When you attempt to navigate to a PWA site, you may receive one of the following error messages:

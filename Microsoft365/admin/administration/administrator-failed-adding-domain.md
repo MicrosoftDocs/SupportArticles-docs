@@ -19,6 +19,9 @@ appliesto:
 
 # An administrator can't add a domain to Office 365, Azure, or Intune
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## PROBLEM
 
 When you try to add a domain to Microsoft Office 365, Microsoft Azure, or Microsoft Intune as an administrator, you experience one of the following symptoms:

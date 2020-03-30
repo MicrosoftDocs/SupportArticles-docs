@@ -21,6 +21,9 @@ appliesto:
 
 # "Connect-MsolService: Exception of type was thrown" when you use the connect-MSOLService to connect to Office 365, Azure, or Intune
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem
 
 When you try to use the connect-MSOLService cmdlet in the Microsoft Azure Active Directory Module for Windows PowerShell to connect to a Microsoft cloud service such as Office 365, Azure, or Microsoft Intune, your attempt is unsuccessful. You may also receive the following error message:
@@ -40,7 +43,7 @@ This issue may occur for one or more of the following reasons:
 
 To resolve this issue, follow these steps:
 
-1. Troubleshoot Office 365 rich client connectivity. For more information, see [How to troubleshoot non-browser apps that can’t sign in to Office 365, Azure, or Intune](https://support.microsoft.com/help/2637629).     
+1. Troubleshoot Office 365 rich client connectivity. For more information, see [How to troubleshoot non-browser apps that can't sign in to Office 365, Azure, or Intune](https://support.microsoft.com/help/2637629).     
 2. Troubleshoot common client configuration issues that limit SSO authentication. For more information, see [Signing in to Office 365, Azure, or Intune by using single sign-on doesn't work from some devices](https://support.microsoft.com/help/2530713).    
 
 ## More information

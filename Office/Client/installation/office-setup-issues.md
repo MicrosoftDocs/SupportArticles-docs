@@ -32,6 +32,9 @@ appliesto:
 
 # How to use a setup log to troubleshoot setup problems in Office
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 This step-by-step article describes how to use the Microsoft Office installation log files to troubleshoot Office Setup issues.
@@ -44,7 +47,7 @@ Many articles in the Microsoft Knowledge Base that relate to installation errors
 
 ### How to create a log file
 
-Office Setup automatically creates log files in your \Temp folder. The logs will be stored under %temp% for Sign-in or Activation issues. For installation or patching issues, they use the system account, so you will also want to collect the logs from %windir%\temp. For more information, see [How to enable Office 365 ProPlus ULS logging](https://docs.microsoft.com/office365/troubleshoot/authentication/how-to-enable-office-365-proplus-uls-logging).
+Office Setup automatically creates log files in your \Temp folder. The logs will be stored under %temp% for Sign-in or Activation issues. For installation or patching issues, they use the system account, so you will also want to collect the logs from %windir%\temp. For more information, see [How to enable Microsoft 365 Apps for enterprise ULS logging](https://docs.microsoft.com/office365/troubleshoot/authentication/how-to-enable-office-365-proplus-uls-logging).
 
 |Log file for|Log file name
 |---|---|

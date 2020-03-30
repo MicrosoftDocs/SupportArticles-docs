@@ -20,6 +20,9 @@ appliesto:
 
 # How to loop through a list of data on a worksheet by using macros in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 When you write a Microsoft Visual Basic for Applications (VBA) macro, you may have to loop through a list of data on a worksheet. There are several methods for performing this task. The "More Information" section of this article contains information about the methods that you can use to search the following types of lists: 

@@ -21,6 +21,9 @@ appliesto:
 
 # Formula errors in Excel when list separater is not set correctly
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When entering a formula an error will occur if trying to use a symbol that is not the default 'list separator' in the Windows Regional settings.

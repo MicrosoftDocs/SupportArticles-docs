@@ -18,6 +18,9 @@ appliesto:
 
 # How to use Office 2013 suites and programs (MSI deployment) on a computer running another version of Office
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 For a Microsoft Office 2010 version of this article, see [2121447](https://support.microsoft.com/help/2121447).
 
 For a Microsoft Office 365 client version of this article, see [Install and use different versions of Office on the same PC](https://support.office.com/article/Install-and-use-different-versions-of-Office-on-the-same-PC-6ebb44ce-18a3-43f9-a187-b78c513788bf). 

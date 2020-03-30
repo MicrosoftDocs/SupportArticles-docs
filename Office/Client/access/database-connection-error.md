@@ -21,6 +21,9 @@ search.appverid: MET150
 ---
 # Connection error when using CurrentProject.Connection or CurrentDB.Connection in Access
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 _Original KB number:_ &nbsp; 2459087
 
 ## Symptoms

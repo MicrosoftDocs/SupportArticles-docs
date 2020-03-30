@@ -19,6 +19,9 @@ appliesto:
 
 # How to turn off Function Argument ToolTips in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 In Microsoft Excel, you can complete functions with the aid of the ToolTip feature. This feature displays ToolTips by default when you begin to type a formula in the formula bar. These ToolTips also make it easier to obtain additional help for a given function by allowing you to click the function name in the ToolTip and jump directly to its associated Help topic.

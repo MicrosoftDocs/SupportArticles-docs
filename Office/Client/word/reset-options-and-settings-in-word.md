@@ -17,6 +17,9 @@ appliesto:
 
 # How to reset user options and registry settings in Word
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 > [!IMPORTANT]
 > This article contains information about how to modify the registry. Make sure to back up the registry before you modify it. Make sure that you know how to restore the registry if a problem occurs. For more information about how to back up, restore, and modify the registry, see [Description of the Microsoft Windows registry](https://support.microsoft.com/help/256986).
 
@@ -40,7 +43,7 @@ To have us reset user options and registry settings in Microsoft Word for you, g
 To fix this problem automatically, click the [**Download**](https://download.microsoft.com/download/6/2/A/62A1385F-513F-4DCB-8F38-E4CB730A334D/MicrosoftEasyFix25011.mini.diagcab) button. In the **File Download** dialog box, click **Run** or **Open**, and then follow the steps in the easy fix wizard.
 
 - This wizard may be in English only. However, the automatic fix also works for other language versions of Windows.   
-- If you’re not on the computer that has the problem, save the easy fix solution to a flash drive or a CD, and then run it on the computer that has the problem.   
+- If you're not on the computer that has the problem, save the easy fix solution to a flash drive or a CD, and then run it on the computer that has the problem.   
 
 #### Let me fix it myself
 

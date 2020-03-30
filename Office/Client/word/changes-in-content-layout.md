@@ -18,6 +18,9 @@ appliesto:
 
 # Changes in content layout between Word 2013 and earlier versions of Word
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Summary
 
 Microsoft Word 2013 uses a new and improved layout engine and compatibility mode to help ensure that layout is consistent between different versions of Microsoft Word. 

@@ -17,6 +17,9 @@ appliesto:
 
 # "A user with this name already exists. Use a different name." error in the Office 365 portal
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem
 
 In Microsoft Office 365, you receive an error message that's like the following in the Microsoft Office 365 portal:

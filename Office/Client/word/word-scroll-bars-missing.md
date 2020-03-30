@@ -20,6 +20,9 @@ appliesto:
 
 # Scroll bars are missing in Word for Mac
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you start Microsoft Word for Mac, the vertical and horizontal scroll bars are not displayed on the screen.
@@ -36,18 +39,18 @@ This behavior can occur if the **Horizontal scroll bar** and **Vertical scroll b
 To resolve this issue, make sure that the scroll bars in both Word and the Apple iOS System Preferences are both on. To do this, follow these steps:
 
 **Step 1: Adjust the preferences**
-1.	Select the **Apple** menu. 
-2.	Select **System Preferences**.
-3.	Select **General**.
-4.	Set the “Show scroll bars” option to **Always**.
+1.    Select the **Apple** menu. 
+2.    Select **System Preferences**.
+3.    Select **General**.
+4.    Set the "Show scroll bars" option to **Always**.
 
 **Step 2: Adjust the Word preferences**
 
-1.	Start Word.
-2.	On the **Word** menu, select **Preferences**.
-3.	Open **View**.
-4.	Select the **Horizontal scroll bar** and the **Vertical scroll bar** check boxes in the "Show Window Elements" section.
-5.	Close the **View** dialog bo.
+1.    Start Word.
+2.    On the **Word** menu, select **Preferences**.
+3.    Open **View**.
+4.    Select the **Horizontal scroll bar** and the **Vertical scroll bar** check boxes in the "Show Window Elements" section.
+5.    Close the **View** dialog bo.
 
 ### Restore the preferences and Normal template to the default settings
 

@@ -17,6 +17,9 @@ appliesto:
 
 # Office 2007 has reached end of extended support
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 Office 2007 has reached the end of its [support lifecycle](https://support.microsoft.com/hub/4095338/microsoft-lifecycle-policy), meaning there are no new security updates, non-security updates, free or paid assisted support options, or online technical content updates. Customers who are using Office 2007 products and services should move to Office 365 or [upgrade to the most recent version of Office](https://products.office.com). 
@@ -76,4 +79,4 @@ We encourage customers to evaluate transitioning to Office 365 with the help of 
 
 #### Migration assistance with Microsoft FastTrack
 
-[Microsoft FastTrack](https://fasttrack.microsoft.com/office) services are available with an Office 365 ProPlus subscription. These services can help customers move to Office 365 smoothly and with confidence, and allow them to realize business value more quickly. Customers can discover what's possible, plan for successful rollouts, and enable new users and capabilities at their own pace. Other benefits include best practices, tools, resources, and experts who are committed to making the customer experience with Office 365 a success.
+[Microsoft FastTrack](https://fasttrack.microsoft.com/office) services are available with an Microsoft 365 Apps for enterprise subscription. These services can help customers move to Office 365 smoothly and with confidence, and allow them to realize business value more quickly. Customers can discover what's possible, plan for successful rollouts, and enable new users and capabilities at their own pace. Other benefits include best practices, tools, resources, and experts who are committed to making the customer experience with Office 365 a success.

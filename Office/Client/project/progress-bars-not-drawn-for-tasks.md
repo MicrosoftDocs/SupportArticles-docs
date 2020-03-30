@@ -23,6 +23,9 @@ appliesto:
 
 # Progress bars not drawn for tasks that are in progress in Project
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Symptoms
 
 In Microsoft Project, in a Gantt Chart view, task progress bars may not be displayed when there is progress on a task.

@@ -21,6 +21,9 @@ appliesto:
 
 # 0x800488EE when connecting to Office 365, Azure, or Intune in the Azure AD Module for PowerShell
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## PROBLEM
 
 Assume that Azure Multi-Factor Authentication was disabled for your admin account because you want to use the Azure Active Directory Module for Windows PowerShell. (Admins who are enabled for Azure Multi-Factor Authentication can't use the Azure Active Directory Module for Windows PowerShell.)

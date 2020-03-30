@@ -23,6 +23,9 @@ appliesto:
 
 # Unable to create DSN for Microsoft Office System Driver on 64-bit versions of Windows
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When attempting to create ODBC connections that utilize the Microsoft Office System Driver, such as connections to Access or Excel, on a 64-bit Operating system like Windows 7, the drivers are not visible. They are not visible in the standard ODBC Administrator dialog that is launched from the Administrative Tools dialog in the Control Panel.
@@ -44,7 +47,7 @@ To determine whether Office 2010 64-bit or 32-bit is installed, take the followi
 1) Open an Office application like Excel.
 2) Click on the File tab in the upper left corner.
 3) Select Help on the left-hand side
-4) Underneath “About Microsoft Excel” you will see a version number and in parentheses 32-bit or 64-bit will be listed.
+4) Underneath "About Microsoft Excel" you will see a version number and in parentheses 32-bit or 64-bit will be listed.
 
 **Note**: All Office versions prior to Office 2010 can only be installed as 32-bit applications.
 

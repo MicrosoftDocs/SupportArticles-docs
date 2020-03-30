@@ -20,6 +20,9 @@ search.appverid: MET150
 ---
 # Access Error: Data on the Clipboard is damaged, so Microsoft Access can't paste it
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 _Original KB number:_ &nbsp; 2221635
 
 ## Symptoms

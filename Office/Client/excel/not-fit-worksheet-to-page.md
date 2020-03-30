@@ -20,6 +20,9 @@ appliesto:
 
 # Excel may not automatically fit the worksheet to the page after you set the "Fit to" option
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 Microsoft Excel 2000 and later versions of Excel may not automatically fit the worksheet to the page as earlier versions of Excel did. 

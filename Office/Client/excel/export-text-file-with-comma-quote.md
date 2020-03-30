@@ -19,6 +19,9 @@ appliesto:
 
 # Procedure to export a text file with both comma and quote delimiters in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 Microsoft Excel does not have a menu command to automatically export data to a text file so that the text file is exported with both quotation marks and commas as delimiters. For example, there is no command to automatically create a text file that contains the following data:

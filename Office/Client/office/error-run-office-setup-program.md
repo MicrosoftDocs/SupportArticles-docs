@@ -18,6 +18,9 @@ appliesto:
 
 # "Error 1919. Error configuring ODBC data source" when you run the Setup program for Office
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you run the Setup program for any of the programs listed in the "Applies to" section, you may receive the following error message:

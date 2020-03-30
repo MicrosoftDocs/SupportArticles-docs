@@ -17,6 +17,9 @@ appliesto:
 
 # Frequently asked questions about the Office Activation Wizard
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Introduction
 
 This article contains some of the most frequently asked questions about the Microsoft Office Activation Wizard.This article only pertains to Retail versions of Office 2010 suite or program.

@@ -18,6 +18,9 @@ appliesto:
 
 # Error occurs when you add or edit a Resource in Enterprise Resource Pool
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Symptoms
 
 When you attempt to Save a resource to the Enterprise Resource Pool, you may receive the following error message:

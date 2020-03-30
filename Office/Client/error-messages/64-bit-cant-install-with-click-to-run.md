@@ -19,6 +19,9 @@ search.appverid:
 
 # "This 64-bit product may not be installed with Microsoft Office Click-to-Run" when you install a 64-bit version of Office
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 Consider the following scenario:

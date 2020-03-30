@@ -18,6 +18,9 @@ appliesto:
 
 # Domain errors in the Office 365 portal
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Introduction 
 
 This article lists all domain error messages that you may experience in the Microsoft Office 365 portal.
@@ -38,15 +41,15 @@ The following table contains the cause and the resolution for each error message
 | Verification DNS record not found. We couldn't verify **DomainName**. Make sure that the verification DNS record that you created at your domain registrar is correct, and that you've waited at least 72 hours after you added the record. Or, you receive this error: Sorry, we can't find the record you created.|This issue may occur if the two conditions are true: The Domain Name System (DNS) record was not created correctly. The DNS record hasn't propagated to all DNS servers. Changes to the Simple Mail Transfer Protocol (SMTP) domain may take 72 hours to propagate to all DNS servers. |To resolve this issue, see [Troubleshoot domain verification issues in Office 365](https://support.microsoft.com/help/2515404)
 | **DomainName** has already been verified for your account, or for another Microsoft Online Services account.|The domain exists in another Office 365 organization.|To resolve this issue, see [Troubleshoot domain verification issues in Office 365 ](https://support.microsoft.com/help/2515404)
 | Can't verify domain We can't verify the domain because it is associated with another Microsoft hosted service. A domain can be associated with only one service. To use this domain, first remove it from the other service, and then try again to verify the domain. If you still can't verify the domain, contact Microsoft Online Services Support to resolve the issue.|The domain exists in another Office 365 organization.|To resolve this issue, see [Troubleshoot domain verification issues in Office 365](https://support.microsoft.com/help/2515404)
-| Sorry, we can’t display information about your domains right now. Please wait a few minutes, and try again.|Office 365 portal can't communicate with Microsoft Azure Active Directory (Azure AD) in which domain information for the company is stored.|To resolve this issue, try again later and wait up to 24 hours. 
-| Sorry, we can’t add your domain right now. Please wait a few minutes, and try again.|Office 365 portal can't communicate with Azure AD in which domain information for the company is stored.|To resolve this issue, try again later and wait up to 24 hours. 
-| Sorry, we can’t verify your domain right now. Please try again later.|Office 365 portal can't communicate with Azure AD in which domain information for the company is stored.|To resolve this issue, try again later and wait up to 24 hours. 
-| Sorry, we can’t display DNS record information for Office 365 services right now. Please try again later.|Office 365 portal can't communicate with Azure AD in which domain information for the company is stored.|To resolve this issue, try again later and wait up to 24 hours. 
-| Sorry, we can’t display DNS record information for your domain right now. Please try again later.|Office 365 portal can't communicate with the DNS in which your DNS records are hosted.|To resolve this issue, try again later and wait up to 24 hours. 
-| Sorry, we can’t save your record right now. Please try again later.|Office 365 portal can't communicate with the DNS in which your DNS records are hosted.|To resolve this issue, try again later and wait up to 24 hours. 
-| Sorry, we can’t remove your domain right now. Please try again later.|Office 365 portal can't communicate with Azure AD in which domain information for the company is stored.|To resolve this issue, try again later and wait up to 24 hours. 
-| Sorry, we can’t help troubleshoot right now. Please try again later.|Office 365 portal can't communicate with Azure AD in which domain information for the company is stored.|To resolve this issue, try again later and wait up to 24 hours. 
-| Sorry, we can’t complete this right now. Wait a little bit, and then try again.|Office 365 portal can't communicate with Azure AD in which domain information for the company is stored.|To resolve this issue, try again later and wait up to 24 hours. 
-| Sorry, we can’t complete this right now. Please try again later.|Office 365 portal can't load the page.|To resolve this issue, try again later and wait up to 24 hours. |
+| Sorry, we can't display information about your domains right now. Please wait a few minutes, and try again.|Office 365 portal can't communicate with Microsoft Azure Active Directory (Azure AD) in which domain information for the company is stored.|To resolve this issue, try again later and wait up to 24 hours. 
+| Sorry, we can't add your domain right now. Please wait a few minutes, and try again.|Office 365 portal can't communicate with Azure AD in which domain information for the company is stored.|To resolve this issue, try again later and wait up to 24 hours. 
+| Sorry, we can't verify your domain right now. Please try again later.|Office 365 portal can't communicate with Azure AD in which domain information for the company is stored.|To resolve this issue, try again later and wait up to 24 hours. 
+| Sorry, we can't display DNS record information for Office 365 services right now. Please try again later.|Office 365 portal can't communicate with Azure AD in which domain information for the company is stored.|To resolve this issue, try again later and wait up to 24 hours. 
+| Sorry, we can't display DNS record information for your domain right now. Please try again later.|Office 365 portal can't communicate with the DNS in which your DNS records are hosted.|To resolve this issue, try again later and wait up to 24 hours. 
+| Sorry, we can't save your record right now. Please try again later.|Office 365 portal can't communicate with the DNS in which your DNS records are hosted.|To resolve this issue, try again later and wait up to 24 hours. 
+| Sorry, we can't remove your domain right now. Please try again later.|Office 365 portal can't communicate with Azure AD in which domain information for the company is stored.|To resolve this issue, try again later and wait up to 24 hours. 
+| Sorry, we can't help troubleshoot right now. Please try again later.|Office 365 portal can't communicate with Azure AD in which domain information for the company is stored.|To resolve this issue, try again later and wait up to 24 hours. 
+| Sorry, we can't complete this right now. Wait a little bit, and then try again.|Office 365 portal can't communicate with Azure AD in which domain information for the company is stored.|To resolve this issue, try again later and wait up to 24 hours. 
+| Sorry, we can't complete this right now. Please try again later.|Office 365 portal can't load the page.|To resolve this issue, try again later and wait up to 24 hours. |
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

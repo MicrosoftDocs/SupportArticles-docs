@@ -19,6 +19,9 @@ appliesto:
 
 # Office 2010 product key change error step by step
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 The previously installed version of Office 2010 prompts the user to change the product key. The screen then disappears, and shows no response when product key change is clicked.

@@ -17,6 +17,9 @@ appliesto:
 
 # "You selected a single-byte font to replace a double-byte font" when replacing a Japanese font
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 Consider the following scenario. You open a Microsoft PowerPoint 2010 presentation that contains Japanese font sets. On the **Home** tab, in the **Editing** group, under **Replace**, you click **Replace Fonts**. In the **Replace** drop-down list, you select a Japanese font that you want to replace. You select a different Japanese font in the **With** drop-down list. Then, you click **Replace**.

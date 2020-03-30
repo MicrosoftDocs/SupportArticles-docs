@@ -23,6 +23,9 @@ search.appverid: MET150
 ---
 # Links in Office take at least 60 seconds to open AD FS sites
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you access Active Directory Federation Services (AD FS) sites through hyperlinks in Microsoft Office applications, the sites take a minimum of 60 seconds to open.

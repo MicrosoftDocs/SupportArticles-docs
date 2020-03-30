@@ -17,6 +17,9 @@ appliesto:
 
 # Access 2010 crashes after you install Office 2010 Service Pack 1, and the error signature in Event Viewer points to the Vbe7.dll file
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 After you install Microsoft Office 2010 Service Pack 1 (SP1), you may experience random crashes when you work with Microsoft Access 2010 databases. These crashes may occur in those databases when you open objects, or you try to use the Visual Basic Editor. When you look in Event Viewer, the error signature resembles the following: 

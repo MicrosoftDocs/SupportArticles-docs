@@ -18,6 +18,9 @@ appliesto:
 
 # In the Research pane in an Office application, a service is listed two times, or a service returns no result
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 In a Microsoft Office application, you encounter the following issues.

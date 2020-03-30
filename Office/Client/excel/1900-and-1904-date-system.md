@@ -23,6 +23,9 @@ appliesto:
 
 # Differences between the 1900 and the 1904 date system in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 Microsoft Excel supports two different date systems. These systems are the 1900 date system and the 1904 date system. This article describes the two date systems and the problems that you may encounter when you use workbooks that use different date systems. 

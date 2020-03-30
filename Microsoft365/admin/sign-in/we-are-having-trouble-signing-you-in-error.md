@@ -17,6 +17,9 @@ appliesto:
 
 # "We're having trouble signing you in" error when you try to access your mail in Office 365
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem
 
 When you try to access mail for your organizational account in Office 365, you receive the following error message: 

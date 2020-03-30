@@ -18,6 +18,9 @@ appliesto:
 
 # How to collect a Network Monitor trace in Office 365 Dedicated/ITAR
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 To help you resolve an issue that you have reported, Microsoft Support may request that you run a network trace by using the Network Monitor (NetMon.exe) tool.  

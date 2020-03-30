@@ -21,6 +21,9 @@ appliesto:
 
 # How to troubleshoot crashing and not responding issues with Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you open or use Microsoft Excel, Excel stops responding, hangs, freezes, or stops working. Additionally, you may receive one of the following error messages:
@@ -54,7 +57,7 @@ If your issue is not resolved after you start Excel in safe mode, go to method 2
   
 The simplest way to resolve this possible cause is to [run this troubleshooter](https://aka.ms/diag_cssemerg6619).  
 
-If the troubleshooter resolves the issue, but it recurs, you’ll have to determine which add-in is causing the problem. To disable COM add-ins, follow these steps:
+If the troubleshooter resolves the issue, but it recurs, you'll have to determine which add-in is causing the problem. To disable COM add-ins, follow these steps:
 
 1. Select **File** > **Options** > **Add-ins**.
 2. At the bottom of the dialog box, change the Manage dropdown to COM add-ins, and select **Go**.
@@ -97,7 +100,7 @@ Antivirus software can interfere with Excel, and cause performance issues. Frequ
 
 #### How to check whether your antivirus software is up to date
 
-To keep up with new viruses that are created, antivirus software vendors periodically provide updates that you can download from the Internet. Download the latest updates by visiting your antivirus software vendor’s website. For a list of antivirus software vendors, see the following Microsoft website:
+To keep up with new viruses that are created, antivirus software vendors periodically provide updates that you can download from the Internet. Download the latest updates by visiting your antivirus software vendor's website. For a list of antivirus software vendors, see the following Microsoft website:
 
 [Consumer antivirus software providers for Windows](https://www.microsoft.com/windows/antivirus-partners/windows-7.aspx)
 

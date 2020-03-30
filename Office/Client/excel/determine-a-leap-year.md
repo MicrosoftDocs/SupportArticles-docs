@@ -23,6 +23,9 @@ appliesto:
 
 # Method to determine whether a year is a leap year
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 This article describes how to determine whether the year in a date that is used in a Microsoft Excel document is a leap year. 

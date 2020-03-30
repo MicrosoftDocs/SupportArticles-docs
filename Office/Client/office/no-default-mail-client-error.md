@@ -17,6 +17,9 @@ appliesto:
 
 # "No default mail client" error when sending files from Office programs
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you attempt to send a file from Microsoft Excel, Microsoft  Word, or Microsoft PowerPoint using email, you receive the following error:

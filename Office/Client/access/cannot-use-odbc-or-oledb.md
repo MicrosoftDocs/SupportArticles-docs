@@ -24,6 +24,9 @@ appliesto:
 
 # Can't use the Access ODBC driver or OLEDB provider outside Office Click-to-Run applications
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you try to create an ODBC DSN for drivers that are provided by Microsoft Access in the Data Sources ODBC Administrator, the attempt fails. This problem occurs if you're using a Click-to-Run (C2R) installation of Office. Depending on the version of Office, you may encounter any of the following issues when you try this operation:

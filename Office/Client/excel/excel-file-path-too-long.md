@@ -18,6 +18,9 @@ appliesto:
 
 # "File path you entered is too long" when saving Excel file in OneDrive
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptom
 
 When you try to save a Microsoft Excel workbook in OneDrive, you receive the following error message:

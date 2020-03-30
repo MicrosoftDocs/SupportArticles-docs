@@ -19,6 +19,9 @@ appliesto:
 
 # Connection to ODBC driver fails in PowerPivot for Excel 2010 or PowerPivot for Excel 2013
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 Assume that you try to connect to a database by using Microsoft OLE DB Provider for ODBC Drivers in the PowerPivot for Microsoft Excel 2010 or PowerPivot for Microsoft Excel 2013 add-in. You create the connection string by using the Table Import Wizard. The connection test is successful. However, when you click **Next**, you receive the following error message:

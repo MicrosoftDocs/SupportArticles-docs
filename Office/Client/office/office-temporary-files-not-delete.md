@@ -18,6 +18,9 @@ appliesto:
 
 # Document files in the Office Document Cache are not deleted when you run the Windows Disk Cleanup utility on a computer that is running a 64-bit version of Windows
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 Consider the following scenario:

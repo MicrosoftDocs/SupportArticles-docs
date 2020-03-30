@@ -20,6 +20,9 @@ ms.reviewer: markjjo
 
 # Change to search logic for the "Title" property in the Security and Compliance Center
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 If you use the Security & Compliance Center to create content searches and eDiscovery holds (especially if you use the [Query Based Hold](https://docs.microsoft.com/microsoft-365/compliance/ediscovery-cases?view=o365-worldwide#step-4-place-content-locations-on-hold) feature), you should be aware of a change coming to the way that the Title property is handled.
 
 When the SharePoint managed property Title is used in a search query or a query-based hold, the results can come from several different places, including the text of a Word or PowerPoint document. Since the primary objective of the Title property is to create a descriptive title, this method doesn't always work and returns incorrect information.

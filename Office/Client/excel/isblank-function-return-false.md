@@ -20,6 +20,9 @@ appliesto:
 
 # The result is "FALSE" when you use the ISBLANK() function in an Excel spreadsheet
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you use the **ISBLANK()** function in a Microsoft Excel spreadsheet, the result is "FALSE". This behavior occurs even though the cell appears to be empty. Additionally, this behavior occurs even though the formula bar may show that nothing is in the cell.

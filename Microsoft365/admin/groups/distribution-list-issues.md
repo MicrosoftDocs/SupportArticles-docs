@@ -19,6 +19,9 @@ description: "Learn how to solve distribution group issues in Office 365 like em
 
 # Distribution group issues
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 This topic discusses how to solve distribution group (also known as distribution list) issues that you may run into when using Office 365.
 
 > [!NOTE]

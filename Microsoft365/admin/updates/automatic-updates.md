@@ -26,6 +26,9 @@ appliesto:
 
 # Automatic updating for Microsoft Office is not enabled
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Symptoms
 
 By default, installations of Microsoft Office are configured to automatically update your Office installation when new updates are made publicly available. However, if you examine the Account section of the backstage, you may see that updates are disabled or that the command to manage updates is disabled or hidden. For example, the following figure indicates that updates are disabled in the backstage.
@@ -67,7 +70,7 @@ We recommend that you keep automatic updating enabled for Office installations b
 
     **Note:** If this key does not exist in your Registry Editor, see How to add the registry key via policy below.
 
-    **Office 365 ProPlus, Office 2019, and Office 2016**
+    **Microsoft 365 Apps for enterprise, Office 2019, and Office 2016**
 
     HKEY_LOCAL_MACHINE\software\policies\microsoft\office\16.0\common\OfficeUpdate
 
@@ -90,23 +93,23 @@ We recommend that you keep automatic updating enabled for Office installations b
 ### How to add the registry key via policy
 The registry key is added automatically when you install ADMX/ADML files. To do this:
 
-#### Office 365 ProPlus, Office 2019, and Office 2016
-1.	Always download the LATEST admin templates to a location of your choice: 
-[Administrative Template files (ADMX/ADML) and Office Customization Tool for Office 365 ProPlus, Office 2019, and Office 2016](https://www.microsoft.com/download/details.aspx?id=49030 )
-2.	Select the **Download** button. 
-3.	Select either the x64 or the x86 build. 
-4.	Select **Run** and follow the prompts to install the software. 
-5.	Copy the *.admx files into the C:/Windows/PolicyDefinitions/ folder.
-6.	Copy the *.adml files from the language-locale subfolder (for instance, “en-US”) into the respective language-locale folder under C:/Windows/PolicyDefinitions/.
+#### Microsoft 365 Apps for enterprise, Office 2019, and Office 2016
+1.    Always download the LATEST admin templates to a location of your choice: 
+[Administrative Template files (ADMX/ADML) and Office Customization Tool for Microsoft 365 Apps for enterprise, Office 2019, and Office 2016](https://www.microsoft.com/download/details.aspx?id=49030 )
+2.    Select the **Download** button. 
+3.    Select either the x64 or the x86 build. 
+4.    Select **Run** and follow the prompts to install the software. 
+5.    Copy the *.admx files into the C:/Windows/PolicyDefinitions/ folder.
+6.    Copy the *.adml files from the language-locale subfolder (for instance, "en-US") into the respective language-locale folder under C:/Windows/PolicyDefinitions/.
 > [!WARNING]
 > Be sure to preserve the same language-locale PolicyDefinitions folder which is applicable to your environment. 
 #### Office 2013
-1.	Go to the [Office 2013 Administrative Template files (ADMX/ADML) and Office Customization Tool](https://www.microsoft.com/download/details.aspx?id=35554) page. 
-2.	Select the **Download** button. 
-3.	Select either the x64 or the x86 build. 
-4.	Select **Run** and follow the prompts to install the software. 
-5.	Copy the *.admx files into the C:/Windows/PolicyDefinitions/ folder.
-6.	Copy the *.adml files from the language-locale subfolder (for instance, “en-US”) into the respective language-locale folder under C:/Windows/PolicyDefinitions/.
+1.    Go to the [Office 2013 Administrative Template files (ADMX/ADML) and Office Customization Tool](https://www.microsoft.com/download/details.aspx?id=35554) page. 
+2.    Select the **Download** button. 
+3.    Select either the x64 or the x86 build. 
+4.    Select **Run** and follow the prompts to install the software. 
+5.    Copy the *.admx files into the C:/Windows/PolicyDefinitions/ folder.
+6.    Copy the *.adml files from the language-locale subfolder (for instance, "en-US") into the respective language-locale folder under C:/Windows/PolicyDefinitions/.
 > [!WARNING]
 > Be sure to preserve the same language-locale PolicyDefinitions folder which is applicable to your environment.
 
@@ -114,5 +117,5 @@ After you copy the Administrative Template files to AD DS, you'll find the updat
 
 ## More information
 
-For more information about configuring the update settings via GPO, see [Configure update settings for Office 365 ProPlus](https://docs.microsoft.com/deployoffice/configure-update-settings-for-office-365-proplus). 
+For more information about configuring the update settings via GPO, see [Configure update settings for Microsoft 365 Apps for enterprise](https://docs.microsoft.com/deployoffice/configure-update-settings-for-office-365-proplus). 
 

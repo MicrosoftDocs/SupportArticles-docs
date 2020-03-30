@@ -19,6 +19,9 @@ appliesto:
 
 # Troubleshoot account issues for federated users in Office 365, Azure, or Intune
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem
 
 When you try to authenticate to a Microsoft a cloud service such as Office 365, Microsoft Azure, or Microsoft Intune by using a federated account, the authentication is unsuccessful, and one or more of the following issues occur:
@@ -55,7 +58,7 @@ If these issues only occur for some user accounts, this indicates that those use
    
 - Subdomain doesn't inherit parent domain's federation settings
 
-  When a subdomain, such as **subdomain.contoso.com**, is added before its parent domain, for example **contoso.com**, the subdomain automatically inherits the parent domain’s federation status. To determine the inheritance status, follow these steps:
+  When a subdomain, such as **subdomain.contoso.com**, is added before its parent domain, for example **contoso.com**, the subdomain automatically inherits the parent domain's federation status. To determine the inheritance status, follow these steps:
   1. Sign in to Office 365 ([https://portal.office.com](https://portal.office.com/)) by using an Office 365 admin user account. You can use a managed account if this is required.   
   2. Click **Admin**, and then in the left navigation pane, click **Domains**.    
   3. In the list of domains, locate the federated subdomain name, and then determine whether the **Domain type** setting is set to **Single Sign-On**.   
@@ -87,7 +90,7 @@ To resolve this issue, use one or more of the following methods:
 
   After the domain is removed, you have to re-create the domain.
 
-  When the domain is re-created, the subdomain inherits the parent domain’s Domain type setting.
+  When the domain is re-created, the subdomain inherits the parent domain's Domain type setting.
 
   **Note** Domain verification by using DNS TXT records or MX records isn't required for subdomain re-creation because the subdomain is recognized as part of the already-verified parent domain.   
 - Directory synchronization issues prevent the on-premises user account configuration from syncing properly to Windows Azure AD.
@@ -104,7 +107,7 @@ To resolve this issue, use one or more of the following methods:
 
      If minor changes are not synced to the Office 365 user account, a directory synchronization problem may cause this issue.
 
-     **Note** Directory synchronization may sync successfully without updating the user’s UPN to the appropriate value if the user account is already licensed.
+     **Note** Directory synchronization may sync successfully without updating the user's UPN to the appropriate value if the user account is already licensed.
 
      For more info about how to update the UPN in this case, see the following Microsoft Knowledge Base article: 
 

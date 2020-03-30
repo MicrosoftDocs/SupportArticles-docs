@@ -17,6 +17,9 @@ appliesto:
 
 # Incorrect icon shows when inserting an object in Excel 2019
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 In Microsoft Excel 2019, when you try to insert a file that's located on a OneDrive for Business locally synced folder and you select the **Display as icon** check box, the wrong icon is displayed.

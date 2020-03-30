@@ -16,6 +16,9 @@ appliesto:
 
 # Columns and rows are labeled numerically in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 Your column labels are numeric rather than alphabetic. For example, instead of seeing A, B, and C at the top of your worksheet columns, you see 1, 2, 3, and so on.

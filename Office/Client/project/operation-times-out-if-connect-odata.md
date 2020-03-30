@@ -17,6 +17,9 @@ appliesto:
 
 # The operation has timed out when connecting to OData by using SSIS in Project Online
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you use Microsoft SQL Server Integration Services (SSIS) packages to download data from your Project Online OData feeds, you receive the following error message:  
@@ -52,7 +55,7 @@ To work around this issue, edit the .NET Framework Machine.config files to inc
    **Notes**
 
    - You must replace the address with your SharePoint domain. For example, if your PWA site is "https://contoso.sharepoint.com/sites/pwa," the address should be as follows: https://contoso.sharepoint.com     
-   - Consider increasing or decreasing the **maxconnection **value in this step, depending on how your SSIS package is configured. For example, if you have a larger number of feeds that you’re pulling concurrently, you may need a larger number of connections. For only a few feeds, you can use a smaller value. For more information about the .NET Framework Connection Management setting, see [Element for connectionManagement (Network Settings)](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/network/add-element-for-connectionmanagement-network-settings).    
+   - Consider increasing or decreasing the **maxconnection **value in this step, depending on how your SSIS package is configured. For example, if you have a larger number of feeds that you're pulling concurrently, you may need a larger number of connections. For only a few feeds, you can use a smaller value. For more information about the .NET Framework Connection Management setting, see [Element for connectionManagement (Network Settings)](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/network/add-element-for-connectionmanagement-network-settings).    
    - After you're done adding the snippet, the edited file should resemble the following:
 
      ![Machine config file](./media/operation-times-out-if-connect-odata/machine-config-file.png)    

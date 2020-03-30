@@ -17,6 +17,9 @@ appliesto:
 
 # "Runtime error 2147319779 (8002801d) library not registered" when setting a company as default
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 "Runtime error -2147319779 (8002801d) automation error library not registered." This error occurs when trying to set a company as default.

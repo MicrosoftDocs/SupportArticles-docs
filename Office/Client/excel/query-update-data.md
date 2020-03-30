@@ -16,6 +16,9 @@ appliesto:
 
 # How To Query and Update Excel Data Using ADO From ASP
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 This article demonstrates how to query and update information in an Excel spreadsheet using ActiveX Data Objects (ADO) from an Active Server Pages (ASP) page. The article also describes the limitations that are associated with this type of application.

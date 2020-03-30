@@ -22,6 +22,9 @@ appliesto:
 
 # "Blank" is displayed in the ERROR column for one or more objects after you run the IdFix tool
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem
 
 When you run the IdFix DirSync Error Remediation Tool in your on-premises Active Directory Domain Services (AD DS) environment, "blank" is displayed in the **ERROR** column for one or more objects.

@@ -16,6 +16,9 @@ appliesto:
 
 # Description of task panes in Office programs
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 Task panes, a new feature in Microsoft Office XP, provide a common area for those commands that may require more information or options than a toolbar can provide. This article describes task panes and how to use them.

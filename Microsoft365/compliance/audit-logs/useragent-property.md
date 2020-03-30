@@ -18,6 +18,9 @@ search.appverid: MET150
 
 # UserAgent property value in the unified audit log from the Security & Compliance Center
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 _Original KB number:_&nbsp;4487380
 
 ## Summary

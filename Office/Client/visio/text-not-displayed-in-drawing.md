@@ -21,6 +21,9 @@ appliesto:
 
 # Text is not displayed in a Visio 2010 / 2013 drawing when you open the drawing in a browser
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 Using Microsoft Visio 2010 / 2013, you save a Microsoft Visio Drawing as a Web Page (.htm; .html) to an HTTP server. However, the text in the Visio drawing is not displayed when you open the Web Page (.htm; .html) file in a browser.

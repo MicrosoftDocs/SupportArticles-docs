@@ -22,11 +22,14 @@ appliesto:
 
 # Access cache formats for SharePoint lists and document libraries
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 Both Microsoft Access 2010 and Microsoft Office Access 2007 make significant improvements over earlier versions in how they work together with linked Microsoft SharePoint lists and document libraries to deliver a better user experience.
 
-Beginning in Access 2010, you can choose which caching format best suits your needs. To do this, you can adjust the **Caching Web Service and SharePoint tables** options in the **File** > **Options** > **Current Database** dialog base. Unless you’re experiencing one of the known issues that are listed in the following sections, we recommend that you select the option to **Use the cache format that is compatible with Microsoft Access 2010 and later**.
+Beginning in Access 2010, you can choose which caching format best suits your needs. To do this, you can adjust the **Caching Web Service and SharePoint tables** options in the **File** > **Options** > **Current Database** dialog base. Unless you're experiencing one of the known issues that are listed in the following sections, we recommend that you select the option to **Use the cache format that is compatible with Microsoft Access 2010 and later**.
 
 ## Improvements in Access 2007
 
@@ -88,13 +91,13 @@ Access 2010 Cache mode should not be selected if that database will be shared to
 
 [Access: "Cannot update. Database or object is read-only" error in linked SharePoint list](https://support.microsoft.com/help/3200680) (about a hidden taxonomy list)
 
-[Access: “Cannot update. Database or object is read-only” error when executing update query against the linked SharePoint view](https://support.microsoft.com/help/3200677) (about lookup data that is missing)
+[Access: "Cannot update. Database or object is read-only" error when executing update query against the linked SharePoint view](https://support.microsoft.com/help/3200677) (about lookup data that is missing)
 
 [Access: Troubleshooting errors opening linked SharePoint lists/document libraries](https://support.microsoft.com/help/2702762)
 
 [Synchronize a SharePoint 2010 list with Access 2010](https://support.office.com/article/synchronize-a-sharepoint-2010-list-with-access-2010-975bfb97-c799-4fce-b7cc-3db3b397f116)
 
-[Access: “Cannot update. Database or object is read-only” error when executing update query against the linked SharePoint list](https://support.microsoft.com/help/3200674) (because the record exceeds the MaxSize property)
+[Access: "Cannot update. Database or object is read-only" error when executing update query against the linked SharePoint list](https://support.microsoft.com/help/3200674) (because the record exceeds the MaxSize property)
 
 [You cannot download data from a SharePoint list to Access 2010](https://support.microsoft.com/help/2553007)
 

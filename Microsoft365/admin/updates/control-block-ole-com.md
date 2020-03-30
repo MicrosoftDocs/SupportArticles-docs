@@ -17,6 +17,9 @@ appliesto:
 
 # How to control the blocking of OLE/COM components in Microsoft Office 365 Subscription
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Introduction 
 
 After you install the March 2017 updates for Office 365 Subscription Version 1703 (Build 7967.2139), you gain the ability to block activation of OLE/COM components. In this update, we are blocking activation of components that are listed under the following registry key:

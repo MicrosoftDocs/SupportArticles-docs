@@ -18,6 +18,9 @@ appliesto:
 
 # When you try to optimize a presentation, some videos are listed as "Unsupported" in the Compress Media dialog box in PowerPoint 2010
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you try to optimize a presentation that contains one or more videos in Microsoft PowerPoint 2010, the **Compress Media** dialog box lists the status of the videos as "Unsupported."

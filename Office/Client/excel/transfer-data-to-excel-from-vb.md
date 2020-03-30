@@ -20,6 +20,9 @@ appliesto:
 
 # Methods for transferring data to Excel from Visual Basic
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 This article discusses numerous methods for transferring data to Microsoft Excel from your Microsoft Visual Basic application. This article also presents the advantages and the disadvantages for each method so that you can choose the solution that works best for you.

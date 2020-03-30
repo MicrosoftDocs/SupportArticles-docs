@@ -19,6 +19,9 @@ search.appverid: MET150
 ---
 # You cannot edit a database that was saved in Access 2010 if you open the database in Office Access 2007
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 _Original KB number:_ &nbsp; 982277
 
 ## Symptoms

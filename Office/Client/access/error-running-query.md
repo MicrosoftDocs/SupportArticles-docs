@@ -19,6 +19,9 @@ search.appverid: MET150
 ---
 # "The field is too small to accept the amount of data you attempted to add" error when running a query
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 _Original KB number:_ &nbsp; 896950
 
 ## Symptoms

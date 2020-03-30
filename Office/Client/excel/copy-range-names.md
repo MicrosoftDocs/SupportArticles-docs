@@ -20,6 +20,9 @@ appliesto:
 
 # Copy all range names programmatically in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 In Microsoft Office Excel, you can create a Microsoft Visual Basic for Applications (VBA) macro that you can use to copy all the range names from the active workbook to another workbook. 

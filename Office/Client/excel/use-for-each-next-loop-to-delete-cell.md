@@ -20,6 +20,9 @@ appliesto:
 
 # Delete cells by using a "For Each...Next" loop in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 Microsoft Excel 2002 and later versions of Excel delete cells in a "For Each...Next" loop in a different way than Microsoft Excel 97 and earlier versions of Excel do.

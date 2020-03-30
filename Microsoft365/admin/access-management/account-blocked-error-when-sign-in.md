@@ -17,6 +17,9 @@ appliesto:
 
 # "It looks like your account has been blocked" error when signing in to Office 365
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem 
 
 When a user tries to sign in to the Office 365 portal, he or she receives the following error message:

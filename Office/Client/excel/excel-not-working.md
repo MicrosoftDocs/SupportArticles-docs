@@ -17,9 +17,12 @@ appliesto:
 
 # Excel 2010 not responding, hangs, freezes or stops working
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
-This article discusses troubleshooting steps that can help resolve issues when you receive an “Excel not responding” error, or Excel hangs or freezes when you launch Excel, open a file or save a file.
+This article discusses troubleshooting steps that can help resolve issues when you receive an "Excel not responding" error, or Excel hangs or freezes when you launch Excel, open a file or save a file.
 
 ## Cause
 
@@ -103,7 +106,7 @@ If your antivirus software is not up-to-date, Excel may not function properly.
 
 **To check whether your antivirus software is up-to-date**
 
-To keep up with new viruses that are created, antivirus software vendors periodically provide updates that you can download from the Internet. Download the latest updates by visiting your antivirus software vendor’s website.
+To keep up with new viruses that are created, antivirus software vendors periodically provide updates that you can download from the Internet. Download the latest updates by visiting your antivirus software vendor's website.
 
 For a list of antivirus software vendors, see [Consumer security software providers](https://www.microsoft.com/windows/antivirus-partners/windows-7.aspx).
 
@@ -126,7 +129,7 @@ This section is intended for more advanced computer users. If you are not comfor
 
 Click here to show information on how to perform a selective startup.
 
-When you start Windows normally, several applications and services start automatically and then run in the background. These applications and services can interfere with other software on your PC. Performing a Selective Startup or “clean boot” can help you identify problems with conflicting applications. To perform a Selective Startup, see [How to perform a clean boot in Windows](https://support.microsoft.com/help/310353).
+When you start Windows normally, several applications and services start automatically and then run in the background. These applications and services can interfere with other software on your PC. Performing a Selective Startup or "clean boot" can help you identify problems with conflicting applications. To perform a Selective Startup, see [How to perform a clean boot in Windows](https://support.microsoft.com/help/310353).
 
 If performing a Selective Startup does not resolve your issue, continue to method 2.
 
