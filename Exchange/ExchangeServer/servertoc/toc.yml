@@ -9,7 +9,7 @@
     items:
     - name: Can't manage Exchange 2019 databases in EAC
       href: ../administration/can't-manage-ex19-database-eac.md
-    - name: Mailbox Audit Log searches fail
+    - name: Audit Log searches fail with "ErrorInvalidServerVersion"
       href: ../administration/mailbox-audit-log-searches-fail-errorinvalidserverversion.md
     - name: On-premises EAC link goes to product comparison
       href: ../administration/o365-link-eac-redirect-product-comparison.md
