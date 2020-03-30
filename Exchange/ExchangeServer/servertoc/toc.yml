@@ -7,10 +7,10 @@
       href: ../active-sync/url-invalid-format.md
   - name: Administration
     items:
-    - name: Can't manage Exchange 2019 databases in EAC
-      href: ../administration/can't-manage-ex19-database-eac.md
     - name: Audit Log searches fail with "ErrorInvalidServerVersion"
       href: ../administration/mailbox-audit-log-searches-fail-errorinvalidserverversion.md
+    - name: Can't manage Exchange 2019 databases in EAC
+      href: ../administration/can't-manage-ex19-database-eac.md
     - name: On-premises EAC link goes to product comparison
       href: ../administration/o365-link-eac-redirect-product-comparison.md
     - name: Unhealthy state when monitoring mailboxes are deleted
