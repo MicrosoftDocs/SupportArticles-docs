@@ -18,6 +18,9 @@ appliesto:
 
 # Description of digital signatures and code signing in workbooks in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 In Microsoft Office Excel 2003 and in later versions of Excel, you can digitally sign a workbook or code sign your macro project. This ensures that you were the last person to make changes to the workbook or macro project.

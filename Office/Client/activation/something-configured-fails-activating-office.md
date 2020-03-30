@@ -18,6 +18,9 @@ appliesto:
 
 # "We can't sign you into your company portal" when activating Office 2013
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## PROBLEM
 
 When a user tries to activate Office 2013, the user receives the following error message:

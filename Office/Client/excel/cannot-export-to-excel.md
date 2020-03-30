@@ -17,6 +17,9 @@ appliesto:
 
 # Unable to export to Excel from SharePoint Online
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you use the **Export to Excel** button in Microsoft SharePoint Online, Excel starts and shows the following error message:

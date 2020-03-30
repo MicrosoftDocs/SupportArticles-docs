@@ -20,6 +20,9 @@ appliesto:
 
 # Workbook loads slowly the first time that it is opened in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Symptoms
 
 When you open a file in Microsoft Excel for the first time, the file may take more time than usual to load.

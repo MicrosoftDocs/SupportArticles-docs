@@ -17,6 +17,9 @@ appliesto:
 
 # PRB: Error 80004005 "The Microsoft Jet Database Engine cannot open the file '(unknown)'"
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you use ActiveX Data Objects (ADO) or ODBC to connect to a Microsoft Access database, you may receive the following error message:

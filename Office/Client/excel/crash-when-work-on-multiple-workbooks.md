@@ -18,6 +18,9 @@ appliesto:
 
 # Excel 2013 crashes when working on multiple workbooks
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 While you are working with multiple Excel workbooks, Microsoft Excel 2013 crashes when you are interacting with one of editor windows shortly before the workbook owning this editor window is closed.

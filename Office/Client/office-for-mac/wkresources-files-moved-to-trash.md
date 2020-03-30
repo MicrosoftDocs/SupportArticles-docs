@@ -17,6 +17,9 @@ appliesto:
 
 # "wkresources" files in Trash after using or starting Office for Mac applications
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 The file "wkresources" gets created and moved to Trash-Recovered Files every time you open Office for Mac 2011 document or application.

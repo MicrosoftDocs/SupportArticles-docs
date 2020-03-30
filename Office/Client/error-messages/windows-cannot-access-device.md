@@ -15,7 +15,10 @@ appliesto:
 - Office apps for the web
 ---
 
-# “Windows cannot access specified device, path, or file” error launching Office
+# "Windows cannot access specified device, path, or file" error launching Office
+
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
 
 ## Symptoms
 
@@ -72,13 +75,13 @@ For more information, see the following Microsoft Knowledge Base articles:
 
 ### Determine your version of Office
 
-To determine whether your Office is an “Office in the Microsoft Store” version or another, follow these steps:
+To determine whether your Office is an "Office in the Microsoft Store" version or another, follow these steps:
 
 #### Method 1
 
 1. Open **Settings **from the Windows menu and select **Apps**.
 
-1. Under "Apps & features", enter “Office” in the **Search this list** box.
+1. Under "Apps & features", enter "Office" in the **Search this list** box.
 
  If "Microsoft Office Desktop Apps" is listed, you are using "Office in the Microsoft Store".
 

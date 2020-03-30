@@ -22,6 +22,9 @@ appliesto:
 
 # F4 keyboard shortcut does not work as expected in Excel 2013, Excel 2010, and Excel 2007
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 The F4 keyboard shortcut does not work as expected in Microsoft Excel 2013, Excel 2010, or Excel 2007. 

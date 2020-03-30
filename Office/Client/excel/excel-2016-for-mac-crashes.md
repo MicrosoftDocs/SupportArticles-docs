@@ -18,6 +18,9 @@ appliesto:
 
 # Excel 2016 for Mac crashes when you click the From Database option
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 Excel 2016 for Mac crashes when you click **Data** > **New Database Query** > **From Database**. 
@@ -34,7 +37,7 @@ To resolve this issue, remove the 32-bit driver, and then install a new 64-bit d
 
 In September 2015, Excel 2016 for Mac was originally released as 32-bit software. However, in August 2016, the software was updated to 64-bit. To check whether you have this update, click **About Excel** on the **Excel** menu. If you have version 15.25 or later, you have the 64-bit version. 
 
-If you have the 64-bit version and an older 32-bit ODBC driver, this may cause Excel to crash. To prevent this issue, install a 64-bit driver from the provider or from the company’s website. Some of the most common drivers are provided by Openlink Software and Actual Technologies. 
+If you have the 64-bit version and an older 32-bit ODBC driver, this may cause Excel to crash. To prevent this issue, install a 64-bit driver from the provider or from the company's website. Some of the most common drivers are provided by Openlink Software and Actual Technologies. 
 
 To determine whether your driver is 32-bit or 64-bit, follow these steps: 
 

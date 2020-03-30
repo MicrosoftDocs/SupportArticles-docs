@@ -18,6 +18,9 @@ appliesto:
 
 # You cannot use the mouse wheel to scroll through records in an Access 2007 or Access 2010 form
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 In Form View in Microsoft Office Access 2007 or in Microsoft Access 2010, when you try to use the mouse wheel to move through records in a form, nothing happens. However, you can use the mouse wheel to move records up and down when you switch the form to Datasheet View.

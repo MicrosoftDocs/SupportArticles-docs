@@ -20,6 +20,9 @@ appliesto:
 
 # Information about the error codes and corresponding descriptions of Microsoft Office activation process issues that can be repaired by using the Office Repair tool
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Introduction 
 
 This article describes the error codes and corresponding descriptions of Microsoft Office activation process issues that can be repaired by using the Office Repair tool.

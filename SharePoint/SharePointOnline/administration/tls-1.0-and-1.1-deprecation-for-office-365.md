@@ -12,7 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.topic: article
 ms.author: v-six
 appliesto:
-- Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
 - Office 365 Business
 - Office 365 Personal
 - Office Online Server
@@ -26,7 +26,7 @@ As of October 31, 2018, the Transport Layer Security (TLS) 1.0 and 1.1 protocols
 
 **Note** This article also applies to the following:
 
-- Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
 - Office 365 Business
 - Office 365 Personal
 

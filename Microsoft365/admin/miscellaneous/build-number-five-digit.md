@@ -15,13 +15,16 @@ appliesto:
 - Office 365 Enterprise
 - Office 365 Business
 - Office 365 Home
-- Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
 - Office 365 Personal
 - Project Pro for Office 365
 - Visio Pro for Office 365
 ---
 
 # Office 365 is changing its build numbers to a five-digit format
+
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
 
 ## Summary
 
@@ -40,7 +43,7 @@ To locate the build number of an Office installation, start an Office applicatio
 
 If you're an information worker, this change shouldn't affect you. You will see this change only in the Backstage build version number. This change will not affect the functionality of any application.
 
-If you're an IT Professional or an ISV, this change shouldn’t affect any of your manageability tools if those tools have no hardcoded logic that expects to find four-digit build numbers. This expectation also applies to any line-of-business (LOB) applications that may rely on logic that detects build version numbers.
+If you're an IT Professional or an ISV, this change shouldn't affect any of your manageability tools if those tools have no hardcoded logic that expects to find four-digit build numbers. This expectation also applies to any line-of-business (LOB) applications that may rely on logic that detects build version numbers.
 
 > [!NOTE]
-> The major version number in Office binary files remains **16.0**. Therefore, this change doesn’t affect registry hive locations or file folder locations.
+> The major version number in Office binary files remains **16.0**. Therefore, this change doesn't affect registry hive locations or file folder locations.

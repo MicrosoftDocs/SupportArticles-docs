@@ -18,6 +18,9 @@ appliesto:
 
 # Make Paste Options button disappear after you paste in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 After you perform a copy-and-paste operation in Microsoft Excel, the Paste Options button is displayed near the paste destination. This step-by-step article explains how to make the Paste Options button disappear and how to prevent options from appearing.

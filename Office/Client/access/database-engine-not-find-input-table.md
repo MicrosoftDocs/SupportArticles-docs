@@ -18,6 +18,9 @@ appliesto:
 
 # "The Microsoft Office Access database engine cannot find the input table" when you try to open a table in an Access 2010 template
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 Consider the following scenario:

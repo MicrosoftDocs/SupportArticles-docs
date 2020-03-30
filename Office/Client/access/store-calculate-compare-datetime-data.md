@@ -20,6 +20,9 @@ appliesto:
 
 # How to store, calculate, and compare Date/Time data in Microsoft Access
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 This article describes how Microsoft Access stores the Date/Time data type. This article also describes why you may receive unexpected results when you calculate dates and times or compare dates and times.

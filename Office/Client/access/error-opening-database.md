@@ -20,6 +20,9 @@ search.appverid: MET150
 ---
 # "File already in use" error when you try to open an Access database that's located on a server
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 _Original KB number:_ &nbsp; 289681
 
 > [!NOTE]

@@ -16,6 +16,9 @@ appliesto:
 
 # Using a worksheet function in a Visual Basic macro in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 You can call most built-in Microsoft Excel worksheet functions directly from a Microsoft Visual Basic for Applications macro. This article describes how to use a built-in worksheet function in a macro.

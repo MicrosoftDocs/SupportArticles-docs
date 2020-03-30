@@ -24,6 +24,9 @@ appliesto:
 
 # Definition of Microsoft Project constraints
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Summary
 
 Each constraint type in Microsoft Project can be defined as a formula using the following conventions:

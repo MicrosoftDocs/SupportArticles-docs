@@ -19,6 +19,9 @@ appliesto:
 
 # File size of an existing presentation increases when saving the presentation in PowerPoint
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you open and then save an existing Microsoft PowerPoint presentation, the file size of the presentation may increase by several megabytes.

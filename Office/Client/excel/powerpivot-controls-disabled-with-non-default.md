@@ -18,6 +18,9 @@ appliesto:
 
 # PowerPivot controls disabled with non-default Excel file format
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Symptoms
 
 In Microsoft Excel, when attempting to use controls on the PowerPivot ribbon, you find that the controls are grayed out, as in the following figure.

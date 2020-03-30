@@ -21,6 +21,9 @@ appliesto:
 
 # How to recover a lost Word document
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 If you're looking for recent Word document recovery info, see:
 
 - [Recover your Office files](https://support.office.com/article/recover-your-office-files-dc901de2-acae-47f2-9175-fb5a91e9b3c8) (For versions through Office 2019)
@@ -143,7 +146,7 @@ Some temporary file names start with the tilde (~) character. To find these file
 1. Select **Start**, type ~ in the **Start Search** box.
 2. Select **See more results**.
 
-   Scroll through the files, and look for any that may match the last few dates and times that you edited the document. If you find the document that you’re looking for, go to "Method 6: How to troubleshoot damaged documents" for more information about how to recover information from the file.
+   Scroll through the files, and look for any that may match the last few dates and times that you edited the document. If you find the document that you're looking for, go to "Method 6: How to troubleshoot damaged documents" for more information about how to recover information from the file.
 
 For information about how Word creates and uses temporary files, see [Description of how Word creates temporary files](https://support.microsoft.com/help/211632).
 

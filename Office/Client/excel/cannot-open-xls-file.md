@@ -17,6 +17,9 @@ appliesto:
 
 # You cannot open .xls files by using Microsoft Office Excel 2010
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 After you install Microsoft Office 2010, you cannot open .xls files, and you may receive the following message:

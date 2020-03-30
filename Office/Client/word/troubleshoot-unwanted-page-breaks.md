@@ -20,6 +20,9 @@ appliesto:
 
 # Troubleshooting guide for unwanted page breaks
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 This article describes how to troubleshoot page breaks that occur in a Word document at unexpected or unwanted locations.

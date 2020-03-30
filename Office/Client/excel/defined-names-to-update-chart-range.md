@@ -20,6 +20,9 @@ appliesto:
 
 # How to use defined names to automatically update a chart range in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 To set up a chart that is automatically updated as you add new information to an existing chart range in Microsoft Excel, create defined names that dynamically change as you add or remove data. 

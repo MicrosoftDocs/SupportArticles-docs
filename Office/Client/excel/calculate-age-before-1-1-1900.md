@@ -16,6 +16,9 @@ appliesto:
 
 # How to calculate ages before 1/1/1900 in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 Although Microsoft Excel date formulas can only use dates entered between 1/1/1900 and 12/31/9999, you can use a custom Microsoft Visual Basic for Applications function to calculate the age (in years) of someone or something that was first created before January 1, 1900.

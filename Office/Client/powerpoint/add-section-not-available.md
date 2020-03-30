@@ -32,6 +32,9 @@ appliesto:
 
 # 'Add Section' command is unavailable in PowerPoint 2010
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Symptoms
 
 When you try to add sections by clicking the Home tab, in the Slides group, click on Section, the Add Section command is unavailable (grayed out). The command is also unavailable if you right-click inside of the slides pane in Normal View or right-click inside of Slide Sorter View.

@@ -18,6 +18,9 @@ appliesto:
 
 # Loss of image quality after you save in Word, Excel, or PowerPoint 2007
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 After saving a document, spreadsheet, or presentation which contains an image, a loss of image quality such as blur may occur.

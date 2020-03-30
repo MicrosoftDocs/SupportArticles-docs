@@ -18,6 +18,9 @@ appliesto:
 
 # "Total" row of a table isn't displayed in waterfall charts in Excel 2016
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Symptoms
 
 After you create a waterfall chart for a table that contains a "total" row and also contains a column of positive and negative numbers in Microsoft Excel 2016, the total isn't displayed in the waterfall chart.

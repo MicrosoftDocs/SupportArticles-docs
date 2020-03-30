@@ -19,6 +19,9 @@ appliesto:
 
 # Add custom values to animation effect options in PowerPoint
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Introduction 
 
 This article describes how to enter custom values for timings and for effects when you click Effect Options for a custom animation in Microsoft PowerPoint. This procedure is useful when the value that you want is not listed.

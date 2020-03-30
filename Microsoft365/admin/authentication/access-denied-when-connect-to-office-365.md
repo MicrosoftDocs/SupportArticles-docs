@@ -17,6 +17,9 @@ appliesto:
 
 # "Access Denied", or user is repeatedly prompted for credentials when connecting to Office 365
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem 
 
 When users try to access a Microsoft Office 365 resource from a rich client application such as Microsoft Outlook or Microsoft Lync, one of the following symptoms occurs:
@@ -35,7 +38,7 @@ To fix this problem, reset the user's password. To do this, follow these steps:
 
 For information about related issues, see the following articles: 
 
-- [How to troubleshoot non-browser apps that can’t sign in to Office 365, Azure, or Intune](https://support.microsoft.com/help/2637629)     
+- [How to troubleshoot non-browser apps that can't sign in to Office 365, Azure, or Intune](https://support.microsoft.com/help/2637629)     
 - [A federated user is repeatedly prompted for credentials during sign-in to Office 365, Azure, or Intune](https://support.microsoft.com/help/2461628)      
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

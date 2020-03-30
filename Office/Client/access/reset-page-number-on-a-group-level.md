@@ -20,6 +20,9 @@ appliesto:
 
 # How to reset the page number on a group level in an Access report
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 Moderate: Requires basic macro, coding, and interoperability skills.
 
 This article applies to a Microsoft Access database (.mdb or .accdb) and to a Microsoft Access project (.adp).

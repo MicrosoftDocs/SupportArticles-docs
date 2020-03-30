@@ -18,6 +18,9 @@ appliesto:
 
 # Download Microsoft Office Web Apps Server
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Summary
 
 Microsoft Office Web Apps Server is now available for download exclusively from the Microsoft Volume Licensing Service Center (VLSC) under Volume Licensing agreements only. For more information, visit the following Microsoft website:

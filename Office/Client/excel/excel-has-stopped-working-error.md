@@ -15,13 +15,16 @@ appliesto:
 - Excel 2016
 ---
 
-# Error message “Microsoft Excel has stopped working” after installing KB3118373
+# Error message "Microsoft Excel has stopped working" after installing KB3118373
+
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
 
 ##  Symptoms
 
 Customers reported that after installing [October 4, 2016, update for Excel 2016](https://support.microsoft.com/help/3118373). Some Excel 2016 workbooks stopped responding and returned the error.
 
-    “Microsoft Excel has stopped working”
+    "Microsoft Excel has stopped working"
 
 ##  Cause
 

@@ -18,6 +18,9 @@ appliesto:
 
 # "Iexplorer.exe has encountered a problem and needs to close" error when you try to view a timesheet in Project Web Access
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Symptoms
 
 When you try to view a timesheet in Microsoft Project Web Access, Microsoft Internet Explorer quits, and you receive the following error message:

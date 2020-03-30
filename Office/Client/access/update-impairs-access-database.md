@@ -19,6 +19,9 @@ appliesto:
 
 # Security Update MS12-060 Impairs Functionality of Access Database
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 After applying security update MS12-060 you may experience problems with your Access database if you are using any of the Windows Common Controls associated with the MSCOMCTL.OCX file updated in the patch. Problems may include hanging on opening an object that includes one of the controls, or error messages indicating that events have been cancelled. Example error messages may include (but aren't limited to) the following:
@@ -125,7 +128,7 @@ Microsoft Toolbar Control 6.0 (SP6)
 
 Microsoft TreeView Control 6.0 (SP6)
 
-**Note**: The version number and service pack level may be something other than “6.0 (SP6)”.
+**Note**: The version number and service pack level may be something other than "6.0 (SP6)".
 
 Problems have also surfaced in other Office products after adding the patch, though symptoms may be different than those seen in Access. Removal of the registry key as noted above may not be necessary to address issues in those cases. 
 

@@ -17,6 +17,9 @@ appliesto:
 
 # How to set the starting page number in the header or footer in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 The starting page number for a Microsoft Excel document can be changed by clicking the Page Setup command. Using the following commands in the header or footer prints a starting page number other than 1.

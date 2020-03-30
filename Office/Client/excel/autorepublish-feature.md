@@ -18,6 +18,9 @@ appliesto:
 
 # How to use the AutoRepublish feature in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 This step-by-step article explains how to use the AutoRepublish feature in Microsoft Excel. This feature lets you automatically update a Web page as the workbook from which it was created is updated. 

@@ -18,6 +18,9 @@ appliesto:
 
 # Misleading labels in the output of the Analysis ToolPak t-Test tools in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 This article describes the misleading labels that exist in the output of each of the three Analysis ToolPak t-Test tools, and that are common to the output of all three tools.

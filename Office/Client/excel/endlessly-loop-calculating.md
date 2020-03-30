@@ -18,6 +18,9 @@ appliesto:
 
 # Excel may appear to endlessly loop calculating cells when inserting subtotals in a workbook
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you insert several subtotals in a Microsoft Excel workbook, Excel may appear to endlessly loop calculating cells.

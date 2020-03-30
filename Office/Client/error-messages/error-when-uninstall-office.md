@@ -18,6 +18,9 @@ appliesto:
 
 # Error messages when you try to uninstall Microsoft Office 2013
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 You receive one of the following error messages when you try to uninstall Microsoft Office 2013 or Office 365 suite.

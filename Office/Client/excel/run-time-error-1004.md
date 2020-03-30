@@ -17,6 +17,9 @@ appliesto:
 
 # "Run-time Error 1004" when you make changes to legend entries in an chart in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you run a Microsoft Visual Basic for Applications (VBA) macro that uses the LegendEntries method to make changes to legend entries in a Microsoft Excel chart, you may receive the following error message:

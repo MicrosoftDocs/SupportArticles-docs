@@ -17,6 +17,9 @@ appliesto:
 
 # Office 365 app launcher and menu bar icons are blank
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem
 
 In Office 365, a user experiences the following symptoms:

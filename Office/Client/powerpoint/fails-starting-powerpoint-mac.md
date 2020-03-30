@@ -17,6 +17,9 @@ appliesto:
 
 # "Microsoft PowerPoint has encountered a problem and needs to close" in PowerPoint for Mac startup
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you try to start PowerPoint for Mac, you may receive the following error message:
@@ -93,7 +96,7 @@ If the problem continues to occur, go to the next step.
 
 Sometimes, a specific user's information may become corrupted, and this may prevent installation, startup, or use of some applications. To determine whether this is the case, you can log on to the computer by using a different or new user account, and then test the application.
 
-If the problem no longer occurs, the cause exists within the user’s home folder. If you think that the user account was responsible, you can continue to troubleshoot by using the new user account.
+If the problem no longer occurs, the cause exists within the user's home folder. If you think that the user account was responsible, you can continue to troubleshoot by using the new user account.
 
 > [!NOTE]
 > For help moving your user files to the new account, contact Apple.

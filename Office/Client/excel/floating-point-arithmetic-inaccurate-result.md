@@ -22,6 +22,9 @@ appliesto:
 
 # Floating-point arithmetic may give inaccurate results in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 This article discusses how Microsoft Excel stores and calculates floating-point numbers. This may affect the results of some numbers or formulas because of rounding or data truncation. 

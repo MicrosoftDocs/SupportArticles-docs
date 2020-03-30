@@ -20,6 +20,9 @@ appliesto:
 
 # Issues when you retrieve SharePoint list data in Access
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you request data from Microsoft SharePoint lists in Microsoft Access, you may receive one of the following error messages: 
@@ -36,7 +39,7 @@ Or, you may experience one of the following issues:
  
 ## Cause
 
-When Access requests list items from a SharePoint list, Access waits a finite period of time for that data to be returned. Specifically, if Access doesn’t receive the data for the given batch after 30 seconds, it aborts the request and may resend the batch as a new request. If Access encounters failures when sending these batches, the program may give up and return an error message.
+When Access requests list items from a SharePoint list, Access waits a finite period of time for that data to be returned. Specifically, if Access doesn't receive the data for the given batch after 30 seconds, it aborts the request and may resend the batch as a new request. If Access encounters failures when sending these batches, the program may give up and return an error message.
  
 Some conditions that may cause this issue are: 
  

@@ -18,6 +18,9 @@ appliesto:
 
 # Cannot modify the oData connections in an Excel 2013 PowerPivot workbook
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you try to modify the oData connections in a Microsoft Excel 2103 PowerPivot workbook, you receive the following error message:

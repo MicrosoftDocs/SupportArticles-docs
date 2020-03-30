@@ -20,6 +20,9 @@ appliesto:
 
 # "The document caused a serious error the last time it was opened" when you open a file
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you try to open a file that Microsoft Office Excel or Microsoft Office Word could not open previously, you may receive the following error message:

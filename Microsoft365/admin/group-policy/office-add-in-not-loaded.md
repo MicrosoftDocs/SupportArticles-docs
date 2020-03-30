@@ -25,6 +25,9 @@ appliesto:
 
 # No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you look at **Add-Ins** section of the **Options** dialog box in a Microsoft 2016 or Microsoft Office 2013 program, none of your add-ins are enabled, as shown in the following figure for Outlook.

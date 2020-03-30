@@ -18,6 +18,9 @@ appliesto:
 
 # Excel crashing issues fixed in recent updates
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 Consider the following scenario when working in Excel the application stops responding or crashes. If you examine the Application Event log, you will find entries for Event ID 1000 that have one or more of the following crash signatures.

@@ -20,6 +20,9 @@ appliesto:
 
 # Overview of fonts and how to troubleshoot font problems in Microsoft Word
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 This article contains an overview of fonts. Additionally, it describes how to troubleshoot font problems in Microsoft Office Word 2007 and later.

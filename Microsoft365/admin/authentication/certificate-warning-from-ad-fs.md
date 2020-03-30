@@ -21,6 +21,9 @@ appliesto:
 
 # You receive a certificate warning from AD FS when you sign in to Office 365, Azure, or Intune
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem
 
 When you try to sign in to a Microsoft cloud service such as Office 365, Microsoft Azure, or Microsoft Intune by using a federated account, you receive a certificate warning from the AD FS web service in your browser.

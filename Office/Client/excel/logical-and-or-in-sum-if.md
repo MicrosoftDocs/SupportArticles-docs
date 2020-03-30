@@ -20,6 +20,9 @@ appliesto:
 
 # How to use a logical AND or OR in a SUM+IF statement in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 In Microsoft Excel, when you use the logical functions AND and/or OR inside a SUM+IF statement to test a range for more than one condition, it may not work as expected. A nested IF statement provides this functionality; however, this article discusses a second, easier method that uses the following formulas.

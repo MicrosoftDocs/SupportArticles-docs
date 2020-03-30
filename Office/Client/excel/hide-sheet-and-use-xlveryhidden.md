@@ -19,6 +19,9 @@ appliesto:
 
 # Hide sheets and use the xlVeryHidden constant in a macro
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 In Microsoft Excel, you can hide sheets in a workbook so that a user cannot see them. You can hide any type of sheet in a workbook, but you must always leave at least one sheet visible.

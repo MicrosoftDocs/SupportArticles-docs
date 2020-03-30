@@ -16,6 +16,9 @@ appliesto:
 
 # Sample macro to insert/delete rows or columns on multiple sheets in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 This article contains a sample Microsoft Visual Basic for Applications macro (Sub procedure) that you can use to insert or delete rows or columns in multiple worksheets in Microsoft Excel.

@@ -21,6 +21,9 @@ appliesto:
 ---
 # Generated .PDB file name does not match InfoPath form name
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 When a form is created in InfoPath Designer 2013 and then saved as an .XSN file which contains non-ASCII characters in the file name, the generated .PDB file does not match the .XSN file name. If you then attempt to debug the form with Visual Studio, Visual Studio is not able to find symbol definitions for the form. One symptom of this problem is that breakpoints set in Visual Studio are not triggered.
 

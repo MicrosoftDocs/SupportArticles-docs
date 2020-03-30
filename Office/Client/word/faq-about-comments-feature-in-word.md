@@ -20,6 +20,9 @@ appliesto:
 
 # Frequently asked questions about the Comments feature in Word
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 A comment is a note or annotation that an author or reviewer can add to a document. Microsoft Word displays the comment in the Reviewing pane or in a balloon in the margin of the document.

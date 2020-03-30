@@ -23,6 +23,9 @@ appliesto:
 
 # Make a custom toolbar/ribbon available to all users in Project client
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Introduction
 
 This article describes how to create a custom macro, and toolbar/ribbon that contains buttons to run macros). Additionally, this article describes how to deploy the custom objects to either the local global template (Global.mpt) or the enterprise global template if using Project Server. This allows the custom toolbar/ribbon to be available to all users of Microsoft Office Project clients whether users connect to Microsoft Office Project Server or use standalone Project clients.

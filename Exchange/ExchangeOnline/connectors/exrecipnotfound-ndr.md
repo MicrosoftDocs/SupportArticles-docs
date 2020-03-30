@@ -13,7 +13,7 @@ ms.custom:
 ms.reviewer: jmartin
 appliesto: 
 - Exchange Online
-- Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
 search.appverid: MET150
 ---
 

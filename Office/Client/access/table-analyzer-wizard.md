@@ -22,6 +22,9 @@ appliesto:
 
 # How the Table Analyzer Wizard works
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 Novice: Requires knowledge of the user interface on single-user computers. 
 
 This article applies only to a Microsoft Access database (.mdb) or a Microsoft Office Access 2007 database (.accdb).

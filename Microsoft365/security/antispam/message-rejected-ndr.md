@@ -19,6 +19,9 @@ search.appverid: MET150
 
 # "550 5.7.1 Message rejected due to content restrictions" when you send email to external recipients in Exchange Online Protection
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 _Original KB number:_&nbsp;3024906
 
 ## Problem

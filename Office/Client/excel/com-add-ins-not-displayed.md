@@ -20,6 +20,9 @@ appliesto:
 
 # COM add-ins are not displayed in the COM Add-Ins dialog box in Excel 2013 and Excel 2016
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 You try to enable one of the following COM add-ins installed with Microsoft Excel 2013 and Microsoft Excel 2016:
@@ -78,8 +81,8 @@ Notes
 These add-ins and the Inquire add-in all require specific SKUs of Microsoft Office 2013 and Microsoft Office 2016. They are available on:
 
 - Microsoft Office 2013 Professional Plus and Microsoft Office Professional Plus 2016   
-- Microsoft Office 365 ProPlus available as a standalone subscription.   
-- Microsoft Office 365 ProPlus available as part of the Office 365 Enterprise E3, Office 365 Enterprise E4, Office 365 Education E2, Office 365 Education E3, Office 365 Government E3, or Office 365 Government E4 offerings.   
+- Microsoft Microsoft 365 Apps for enterprise available as a standalone subscription.   
+- Microsoft Microsoft 365 Apps for enterprise available as part of the Office 365 Enterprise E3, Office 365 Enterprise E4, Office 365 Education E2, Office 365 Education E3, Office 365 Government E3, or Office 365 Government E4 offerings.   
 - Microsoft Excel 2013 standalone with the update: [Description of the Excel 2013 update: August 13, 2013](https://support.microsoft.com/help/2817425)   
 
 For more information about a COM add-in, see [What Is a COM Add-in?](https://msdn.microsoft.com/library/aa141383%28v=office.10%29.aspx).

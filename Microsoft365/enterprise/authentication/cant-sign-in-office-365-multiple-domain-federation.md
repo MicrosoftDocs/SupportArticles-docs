@@ -17,11 +17,14 @@ appliesto:
 
 # You can't sign in to Office 365 from multiple federated domains
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## PROBLEM
 
 Users from multiple federated domains (top-level or child domains) cannot sign in to Office 365. Additionally, they receive the following error message:
 
-**Sorry, but we’re having trouble signing you in.**
+**Sorry, but we're having trouble signing you in.**
 **AADSTS50107: Requested federation realm object 'http:// <*ADFShostname*>/adfs/services/trust' does not exist.**
 
 ## CAUSE

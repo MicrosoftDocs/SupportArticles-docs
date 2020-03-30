@@ -19,6 +19,9 @@ appliesto:
 
 # Error message when you open a file type that is blocked by registry policy settings in Visio 2013
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 A user cannot open a drawing file that uses one of the following formats or save a drawing file to one of the following formats by using Microsoft Visio 2013:

@@ -20,6 +20,9 @@ appliesto:
 
 # "We can't start this app..." error installing an Office add-in
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you attempt to install an Office Add-in from the Office Store you receive the following error:

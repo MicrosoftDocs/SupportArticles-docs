@@ -21,6 +21,9 @@ appliesto:
 
 # Frequently asked questions about hyperlinks in Word
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 For a Microsoft Word 98 Macintosh Edition version of this article, see [211955](https://support.microsoft.com/help/211955).
 
 ## Summary

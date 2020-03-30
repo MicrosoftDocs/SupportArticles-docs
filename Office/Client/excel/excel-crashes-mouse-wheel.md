@@ -18,6 +18,9 @@ appliesto:
 
 # Excel 2013 crashes when you scroll down by using the mouse wheel or the worksheet scrollbar
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you scroll down in a workbook in Microsoft Excel 2013, Excel may crash. If you review the Application log, you see that the crash occurred in OSF.dll.

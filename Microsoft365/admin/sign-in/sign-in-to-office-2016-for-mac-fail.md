@@ -17,6 +17,9 @@ appliesto:
 
 # Can't sign in to an Office 2016 for Mac app
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem
 
 When you try to sign in to an Office 2016 for Mac app by using your Office 365 user ID and password, you receive the following error message:

@@ -16,6 +16,9 @@ appliesto:
 
 # How to use cell references and defined names in criteria in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 In Microsoft Excel, criteria can be set by typing the exact value that is desired in the criteria cells, or by using cell references or defined names.

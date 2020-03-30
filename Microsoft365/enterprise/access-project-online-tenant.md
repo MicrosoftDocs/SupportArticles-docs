@@ -17,6 +17,9 @@ appliesto:
 
 # How do I Access my Project Online Tenant
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 When you log into Office 365 there is a menu bar across the top of the page.  If you have been assigned a license to Project Online then you will see a **Projects** link either on the menu bar or in the ellipsis menu (...) that displays between **Sites** and **Admin**. Clicking the **Projects** link will take you to the default Project Web App (PWA) site created by Microsoft when your organization first added Project Online to your tenant.  

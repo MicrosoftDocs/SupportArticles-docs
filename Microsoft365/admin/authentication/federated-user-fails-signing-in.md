@@ -22,6 +22,9 @@ appliesto:
 
 # Error 80048163 when a federated user tries to sign in to Office 365, Azure, or Intune
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem
 
 When a federated user tries to sign in to a Microsoft cloud service such as Office 365, Microsoft Azure, or Microsoft Intune from a sign-in webpage whose URL starts with https://login.microsoftonline.com/login, authentication for that user is unsuccessful. The user gets the following error message:
@@ -51,7 +54,7 @@ You can update the LSA cache time-out setting on the AD FS server to disable cac
 
 To resolve this issue, follow these steps:
 
-1. Make sure that the changes to the user’s UPN are synced through directory synchronization.
+1. Make sure that the changes to the user's UPN are synced through directory synchronization.
 1. Direct the user to log off the computer and then log on again.
 1. If steps 1 and 2 don't resolve the issue, follow these steps:
 

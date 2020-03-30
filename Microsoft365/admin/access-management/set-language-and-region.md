@@ -17,6 +17,9 @@ appliesto:
 
 # How to set language and region settings for Office 365
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 This article explains how to set the language and region settings for all Office 365 services (including OneDrive For Business, Delve, and SharePoint Online) by using Office 365 PowerShell centrally for all users.

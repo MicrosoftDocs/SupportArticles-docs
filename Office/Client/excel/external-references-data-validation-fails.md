@@ -20,6 +20,9 @@ appliesto:
 
 # You cannot use external references with data validation in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you type a cell reference to a cell in the Source or Formula box in the Data Validation dialog box, and then click OK, you receive the following error message:

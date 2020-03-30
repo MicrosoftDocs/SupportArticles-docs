@@ -19,6 +19,9 @@ search.appverid: MET150
 
 # ArchiveStatus is set to "None" for an active archive mailbox in Office 365
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 _Original KB number:_&nbsp;4486848
 
 ## Symptoms

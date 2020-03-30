@@ -19,6 +19,9 @@ appliesto:
 
 # Description of the limitations for working with arrays in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 In the versions of Microsoft Excel that are listed in the "Applies to" section, the "Calculation Specifications" Help topic lists the limitations for working with an array. This article describes the limitations of arrays in Excel.

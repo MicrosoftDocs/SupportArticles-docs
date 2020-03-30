@@ -33,6 +33,9 @@ appliesto:
 
 # Enable or disable hyperlink warning messages in 2007 Office programs and in Office 2010 programs
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Introduction
 
 This step-by-step article describes how to enable or to disable the display of a warning message every time that you click a hyperlink in a 2007 Microsoft Office program or in a Microsoft Office 2010 program. 
@@ -74,7 +77,7 @@ To have us enable hyperlink warnings for 2007 Office programs and for Office 201
 To fix this problem automatically, download and run "Microsoft Easy Fix 20189",and then follow the steps in the easy fix wizard.
 
 - This wizard may be in English only. However, the automatic fix also works for other language versions of Windows.   
-- If you’re not on the computer that has the problem, save the easy fix solution to a flash drive or a CD, and then run it on the computer that has the problem.   
+- If you're not on the computer that has the problem, save the easy fix solution to a flash drive or a CD, and then run it on the computer that has the problem.   
 
 ##### Enable hyperlink warnings
 

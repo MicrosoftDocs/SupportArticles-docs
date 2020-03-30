@@ -20,6 +20,9 @@ search.appverid: MET150
 ---
 # Description of troubleshooting corruption in an Office Access 2003 database
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 _Original KB number:_ &nbsp; 824271
 
 > [!NOTE]

@@ -12,11 +12,14 @@ ms.topic: article
 ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
-- Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
 - Azure Active Directory
 ---
 
 # Troubleshoot sign-in issues with Office modern authentication when you use AD FS
+
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
 
 ## Introduction 
 
@@ -31,7 +34,7 @@ The following table lists known issues and recommended solutions.
 
 If you have an issue that's not listed in this article, go to the following Microsoft TechNet wiki page. The wiki page lists other known issues and workarounds.
 
-[Office 2013 and Office 365 ProPlus modern authentication: Things to know before onboarding](https://social.technet.microsoft.com/wiki/contents/articles/30214.office-2013-and-office-365-proplus-modern-authentication-things-to-know-before-onboarding.aspx)
+[Office 2013 and Microsoft 365 Apps for enterprise modern authentication: Things to know before onboarding](https://social.technet.microsoft.com/wiki/contents/articles/30214.office-2013-and-office-365-proplus-modern-authentication-things-to-know-before-onboarding.aspx)
 
 ## More information 
 
@@ -80,7 +83,7 @@ Follow these steps:
 
 ### Issue: Desktop single sign-on (SSO) with AD FS fails
 
-Desktop SSO is the process that's used to obtain seamless sign-in to Office 365 resources through AD FS from a domain-joined computer that's inside a company network. When desktop SSO fails, users may be unable to activate Office 365 ProPlus or users may be prompted for forms-based logon even though they are using domain joined-computers from inside the company network. 
+Desktop SSO is the process that's used to obtain seamless sign-in to Office 365 resources through AD FS from a domain-joined computer that's inside a company network. When desktop SSO fails, users may be unable to activate Microsoft 365 Apps for enterprise or users may be prompted for forms-based logon even though they are using domain joined-computers from inside the company network. 
 
 Modern authentication (ADAL) with AD FS requires the /adfs/services/trust/13/windowstransport endpoint to be enabled.
 

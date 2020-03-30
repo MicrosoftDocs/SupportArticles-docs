@@ -20,6 +20,9 @@ appliesto:
 
 # How to print a Gantt Chart view without table information
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 It is possible to print a Gantt Chart view without any table information. To do this, you must apply a table that has all the column widths set to zero. Note that a Gantt Chart view always requires some table to be applied.

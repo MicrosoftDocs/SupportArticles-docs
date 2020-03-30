@@ -21,6 +21,9 @@ appliesto:
 
 # Access freezes when you open a linked table to a SharePoint list
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Symptoms
 
 In a Microsoft Access desktop database, when you try to open a table that's linked to a SharePoint list, Access stops responding. 
@@ -92,8 +95,8 @@ To relink the list, follow these steps:
 
 ```vb
 Public Function TableRelinkSample()
- 	      CurrentDb.TableDefs("<TableName>").RefreshLink
- 	End Function
+           CurrentDb.TableDefs("<TableName>").RefreshLink
+     End Function
 ```
 
 **Note** If you have multiple linked SharePoint lists, you have to call **RefreshLink** only one time for any one of the tables.

@@ -21,6 +21,9 @@ appliesto:
 
 # Deleted app passwords for Multi-Factor Authentication still work in Office 365, Azure, or Intune
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## PROBLEM
 
 After you delete an app password that's used for Azure Multi-Factor Authentication, the app password appears to continue to work.

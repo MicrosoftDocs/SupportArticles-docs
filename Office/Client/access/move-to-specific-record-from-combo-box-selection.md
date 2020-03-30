@@ -21,6 +21,9 @@ appliesto:
 
 # How to move to a specific record from a Combo Box selection in Microsoft Access
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 Moderate: Requires basic macro, coding, and interoperability skills. 
 
 This article applies to a Microsoft Access database (.mdb) file or to a Microsoft Access database (.accdb) file.

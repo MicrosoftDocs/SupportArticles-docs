@@ -21,6 +21,9 @@ appliesto:
 
 # Internet browser can't display the AD FS sign-in webpage for federated users
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem
 
 When a federated user tries to sign in to a Microsoft cloud service such as Office 365, Microsoft Azure, or Microsoft Intune, the Internet browser can't display the Active Directory Federation Services (AD FS) sign-in webpage. Additionally, the user may receive an error message. For example, if the user is using Internet Explorer, the user may receive the following error message:

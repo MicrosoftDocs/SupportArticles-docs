@@ -18,6 +18,9 @@ appliesto:
 
 # Connection to a network document is lost in the 2007 Office system or in Office 2010 after the computer resumes from standby
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 Consider the following scenario. You access a Microsoft Office 2010 document that is located on a network share. Your computer enters standby. Then, you resume the computer from standby. In this scenario, you receive an error message. Error messages resemble those below. 

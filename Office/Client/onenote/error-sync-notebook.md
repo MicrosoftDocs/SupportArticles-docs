@@ -21,6 +21,9 @@ search.appverid: MET150
 ---
 # "0xE40200B4" and "0x800700DF" errors when you sync a notebook in OneNote
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 In Microsoft SharePoint with the OneNote 2016 desktop client, you can't sync a notebook by selecting **View Sync Status** > **Sync All**. Additionally, you receive error messages that mention the "0xE40200B4" and "0x800700DF" error codes.

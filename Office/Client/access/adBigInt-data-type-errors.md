@@ -19,6 +19,9 @@ appliesto:
 
 # Access ADODB code errors when you use the adBigInt data type
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 In Microsoft Access for Office 365 and Microsoft Access 2019, you may encounter the following error messages in the Visual Basic for Applications (VBA) ADODB code that refers to the adBigInt data type:

@@ -19,6 +19,9 @@ appliesto:
 
 # Macro to extract data from a chart in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 In Microsoft Excel, you can retrieve data from a chart even when the data is in an external worksheet or workbook. This is useful in situations where the chart was created from, or linked to, another file that is unavailable or has been damaged in some way. When the source data to a chart is lost, the data can still be retrieved from the chart itself, by using a Microsoft Visual Basic for Applications macro.

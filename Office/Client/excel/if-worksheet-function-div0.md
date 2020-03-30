@@ -18,6 +18,9 @@ appliesto:
 
 # How to use the IF worksheet function to suppress the #DIV/0! error value in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 For a Microsoft Excel 2000 version of this article, see [Hide error values and error indicators in cells](https://support.microsoft.com/help/182188).
 
 ## Summary

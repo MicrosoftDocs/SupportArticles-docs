@@ -17,6 +17,9 @@ appliesto:
 
 # Excel macros that protect and unprotect worksheets may run slowly
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Symptoms
 
 Macros in Microsoft Excel 2013 run slower than in earlier versions of Excel. For example, you may notice that .xlsm files open very slowly or that it takes a long time to move to the next cell when you enter data in cells.
@@ -27,7 +30,7 @@ Because of a new, stronger hashing algorithm (SHA-512) for encryption in Micr
 
 ##  Resolution
 
-This behavior is by design. It's not noticeable when you’re manually protecting a worksheet. However, if you have code that protects or unprotects work sheets repeatedly, this behavior can cause a performance issue.
+This behavior is by design. It's not noticeable when you're manually protecting a worksheet. However, if you have code that protects or unprotects work sheets repeatedly, this behavior can cause a performance issue.
 
 ##  More Information
 

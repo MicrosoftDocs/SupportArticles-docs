@@ -19,6 +19,9 @@ appliesto:
 
 # In Visio, the "Fit to Drawing" command does not resize the page to fit the drawing's dimensions
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 In Microsoft Visio 2010 or Visio 2013, when you click **Fit to Drawing** in the **Size** group on the **Design** tab, the page resizes. But a small margin remains between the edge of the page and the drawing. 

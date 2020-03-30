@@ -17,6 +17,9 @@ appiesto:
 
 # Office 365 Sway tile continues to appear in App Launcher even after it's disabled
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem 
 
 After a Microsoft Office 365 administrator disables Sway in the Microsoft 365 admin center, the Sway tile continues to appear in the Office 365 App Launcher and on the Office 365 home page. 
@@ -65,6 +68,6 @@ To work around the delay of associating the new Sway Service plan to users in an
 
 > [!NOTE]
 > For more information about how to assign licenses for Office 365, see [Assign or unassign licenses for Office 365 for business](https://support.office.com/article/assign-or-unassign-licenses-for-office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).     
-4. After the Sway service plan is associated with an organization’s users, you can enable or disable Sway at a per-user level. To do this, follow the steps in the “Enable or disable Sway at a per-user level” section.
+4. After the Sway service plan is associated with an organization's users, you can enable or disable Sway at a per-user level. To do this, follow the steps in the "Enable or disable Sway at a per-user level" section.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

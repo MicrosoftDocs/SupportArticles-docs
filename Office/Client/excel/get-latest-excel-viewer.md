@@ -20,6 +20,9 @@ appliesto:
 
 # How to obtain the latest Excel Viewer
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Notice
 
 **Excel Viewer has been retired**
@@ -32,7 +35,7 @@ appliesto:
 
 ## Summary
 
-The Microsoft Excel Viewer is a small, freely redistributable program that lets you view and print Microsoft Excel spreadsheets if you don’t have Excel installed. In addition, the Excel Viewer can open workbooks that were created in Microsoft Excel for the Macintosh.
+The Microsoft Excel Viewer is a small, freely redistributable program that lets you view and print Microsoft Excel spreadsheets if you don't have Excel installed. In addition, the Excel Viewer can open workbooks that were created in Microsoft Excel for the Macintosh.
 
 The Excel Viewer can open the latest version of Excel workbooks, but it will not display newer features. 
 

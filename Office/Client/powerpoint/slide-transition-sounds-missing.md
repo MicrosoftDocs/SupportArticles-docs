@@ -19,6 +19,9 @@ appliesto:
 
 # Sounds missing after a PowerPoint presentation is saved as video
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you save a Microsoft PowerPoint 2010 presentation as a video, any slide transition sounds that were used in the presentation are missing. When you view the video, there are no slide transition sounds.

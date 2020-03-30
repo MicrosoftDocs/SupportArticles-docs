@@ -19,6 +19,9 @@ appliesto:
 
 # Saving Office documents to a network server is slow when using EFS
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 Assume that you use the Encrypting File System (EFS) to help secure the Temporary Internet Files folder. You save Microsoft Office documents to a remote server than can support encryption, but the server is not configured to do remote encryption. In this situation, it takes longer than expected to save the documents. 

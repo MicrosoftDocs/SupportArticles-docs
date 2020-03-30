@@ -40,6 +40,9 @@ appliesto:
 
 # Error message when selecting hyperlink in Office: "Cannot locate the Internet server or proxy server"
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you create a hyperlink in an Office document and then select the link, you may receive one of these error messages:
@@ -88,7 +91,7 @@ To have us work around this problem for you, go to the "Here's an easy fix" sect
 To fix this problem automatically, select the **[Download](https://download.microsoft.com/download/2/7/4/2746551A-B7FF-4DF9-9EF0-1D81FC7DF272/MicrosoftEasyFix50655.msi)** button. In the **File Download** dialog box, select **Run** or **Open**, and then follow the steps in the easy fix wizard.
 
 - This wizard may be in English only. However, the automatic fix also works for other language versions of Windows.   
-- If you’re not on the computer that has the problem, save the easy fix solution to a flash drive or a CD, and then run it on the computer that has the problem.   
+- If you're not on the computer that has the problem, save the easy fix solution to a flash drive or a CD, and then run it on the computer that has the problem.   
 
 ### Let me fix it myself
 

@@ -19,6 +19,9 @@ appliesto:
 
 # You cannot remove error tracing arrow in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you correct an error found by the **Formulas referring to empty cells** rule in Microsoft Excel, the Trace Empty Cell arrow changes into a Trace Precedents arrow instead of disappearing as expected.

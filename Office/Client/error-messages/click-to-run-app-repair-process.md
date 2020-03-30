@@ -24,6 +24,9 @@ appliesto:
 
 # Repair process for an Office Click-to-Run application does not start
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 Assume that a Microsoft Office Click-to-Run application crashes multiple times when you try to start it, and then you receive the following dialog box:
 

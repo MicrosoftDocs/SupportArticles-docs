@@ -21,6 +21,9 @@ appliesto:
 
 # How to troubleshoot damaged documents in Word
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 This article describes how to identify a damaged document in Word 2007 and later versions. Additionally, this article includes steps that explain how to recover the text and data that is contained in a document after you have identified the document as damaged.
@@ -376,9 +379,9 @@ If the document is corrupted and none of the previous methods work, try to recov
 :::image type="content" source="media/damaged-documents-in-word/damaged-documents-in-word.png" alt-text="Open the Word doc in Notepad. ":::
 4. The document will open in Notepad with extra code and text around the content.
    > [!NOTE] 
-   > You may have to change the file type from “Text Documents (*.txt)” to “All Files (*.*)”. 
+   > You may have to change the file type from "Text Documents (*.txt)" to "All Files (*.*)". 
 5. Clean the text by deleting all or most of the extra characters.
-6. Select **File**, and then select **Save As…** Rename the document to make sure that you don’t overwrite the damaged one.
+6. Select **File**, and then select **Save As…** Rename the document to make sure that you don't overwrite the damaged one.
 
 Go back to Word and open the new document. Once in Word, you can clean it up and try to reapply the lost format.
 

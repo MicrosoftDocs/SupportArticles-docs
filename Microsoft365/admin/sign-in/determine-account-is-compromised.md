@@ -17,13 +17,16 @@ appliesto:
 
 # How to determine whether your Office 365 account has been compromised
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem 
 
 You may have issues when you try to sign in to Microsoft Office 365. Or, you notice that suspicious activity occurs in your account, such as large amounts of spam that originates from your account.
 
 You may also experience one or more of the following issues:
 
-- The Sent or Deleted Items folders in Microsoft Outlook or in Microsoft Outlook Web App contain common hacked-account messages, such as "I’m stuck in London, send money."
+- The Sent or Deleted Items folders in Microsoft Outlook or in Microsoft Outlook Web App contain common hacked-account messages, such as "I'm stuck in London, send money."
 - Unusual profile changes, such as the name, the telephone number, or the postal code were updated.
 - Unusual credential changes, such as multiple password changes are required.
 - Mail forwarding was recently added.

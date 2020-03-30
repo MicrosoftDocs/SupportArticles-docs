@@ -23,6 +23,9 @@ appliesto:
 
 # "The expression you entered has a function containing the wrong number of arguments" when you use CDec() function in an Access query
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 Moderate: Requires basic macro, coding, and interoperability skills.
 
 This article applies only to a Microsoft Access database (.mdb).

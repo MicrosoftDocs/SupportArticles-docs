@@ -12,7 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.topic: article
 ms.author: ericspli
 appliesto:
-- Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
 ---
 
 # How to check the size of this month's Office ProPlus update

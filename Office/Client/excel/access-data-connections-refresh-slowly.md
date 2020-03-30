@@ -18,6 +18,9 @@ appliesto:
 
 # Access data connections are slow to refresh in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you open an Excel file from a file server and that Excel file contains data connections to an Access database which are also stored on a file server, you experience a slow Access data refresh rate. 

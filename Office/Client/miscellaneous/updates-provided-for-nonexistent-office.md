@@ -21,6 +21,9 @@ appliesto:
 
 # Microsoft Update and Windows Update offer updates for Office programs that you do not have installed
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you visit the Microsoft Update Web site or start Windows Update to scan for updates for the Microsoft Office programs, Microsoft Update or Windows Update may offer updates to programs that you do not have installed on your computer.

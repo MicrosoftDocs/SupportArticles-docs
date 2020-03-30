@@ -18,6 +18,9 @@ appliesto:
 
 # User passwords aren't synced, and "Password Synchronization has not been activated for this company" error is logged in Event Viewer
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem 
 
 After you discover that some users can't sign in to a Microsoft cloud service such as Office 365, Microsoft Intune, or Microsoft Azure, you notice that user passwords aren't being synced from your local Active Directory Domain Services (AD DS) environment to Azure Active Directory (Azure AD). When you view the Application log in Event Viewer, you see that the following event ID 6900 error is logged:

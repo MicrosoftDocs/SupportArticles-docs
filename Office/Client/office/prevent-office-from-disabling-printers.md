@@ -18,6 +18,9 @@ appliesto:
 
 # How to prevent Office 2010 from disabling printers
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Introduction
 
 This article introduces a method to prevent Microsoft Office 2010 from disabling printers when Office 2010 detects the problems with printers.
@@ -54,4 +57,4 @@ For more information about new printing functionalities in Microsoft Office, vis
 
 For more information about resolving this problem without using group policy, visit the following Microsoft website:
 
-[My Print button and some printer settings aren’t available](https://office.microsoft.com/help/my-print-button-and-some-printer-settings-are-unavailable-ha010378053.aspx)
+[My Print button and some printer settings aren't available](https://office.microsoft.com/help/my-print-button-and-some-printer-settings-are-unavailable-ha010378053.aspx)

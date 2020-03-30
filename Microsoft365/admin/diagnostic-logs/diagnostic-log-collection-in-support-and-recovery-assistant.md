@@ -19,6 +19,9 @@ description: "Learn about diagnostic log collection in Support and Recovery Assi
 
 # Turn off diagnostic log collection in Support and Recovery Assistant
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 By default, [Support and Recovery Assistant](https://diagnostics.office.com/#/Download/?env=SOC) collects diagnostic logs to help troubleshoot problems in the following scenarios. 
   
 - Support and Recovery Assistant sometimes collects diagnostic logs when the tool fails to solve a user's problem.
