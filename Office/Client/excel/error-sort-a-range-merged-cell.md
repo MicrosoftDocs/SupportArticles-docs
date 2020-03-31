@@ -47,7 +47,7 @@ To work around this issue, split all the merged cells in the range, or merge all
 
 1.    Select the entire range you want to sort.
 2.    In the **Alignment** group on the **Home** tab, select the **Alignment** dialog box launcher.
-![Select the Alignment dialog box.](../media/error-sort-a-range-merged-cell/error-sort-a-range-merged-cell.png)
+![Select the Alignment dialog box.](./media/error-sort-a-range-merged-cell/error-sort-a-range-merged-cell.png)
 3.    Select the **Alignment** tab, and then clear the **Merge cells** check box.
 4.    Select **OK**.
 
@@ -67,7 +67,7 @@ To work around this issue, split all the merged cells in the range, or merge all
 2. Merge cells A1 and B1, A2 and B2, and A3 and B3. To do this, follow these steps:  
       1. Select each pair of cells.    
       2. Select the **Alignment** dialog box launcher in the **Alignment** group on the **Home** tab.
-    ![Select the Alignment dialog box.](../media/error-sort-a-range-merged-cell/error-sort-a-range-merged-cell.png)
+    ![Select the Alignment dialog box.](./media/error-sort-a-range-merged-cell/error-sort-a-range-merged-cell.png)
  
       3. Select the **Alignment** tab, and then select the **Merge cells** check box.    
       4. Select **OK**.
