@@ -661,6 +661,8 @@
       href: ../excel/sap-add-ins-not-display-control.md
     - name: Save the addresses from a Word mail-merge label document
       href: ../excel/save-mail-merge-label-document-addresses.md
+    - name: Security settings for Dynamic Data Exchange
+      href: ../excel/security-settings.md
     - name: Set page setup attributes for sheets
       href: ../excel/set-page-setup-attributes.md
     - name: Set starting page in header or footer

@@ -243,10 +243,6 @@
       href: ../miscellaneous/issues-in-cortana.md
     - name: Web sites lose SSL certificate bindings
       href: ../miscellaneous/web-sites-lose-ssl-certificate-bindings.md
-  - name: Security
-    items:
-    - name: Security settings for Dynamic Data Exchange in Excel Trust Center
-      href: ../security/security-settings.md
   - name: Sign-in
     items:
     - name: AD FS sign-in webpage not displayed
