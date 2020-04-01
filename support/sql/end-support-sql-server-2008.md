@@ -2,12 +2,14 @@
 title: End support SQL Server 2008 R2 (KB 4456242)
 description: SQL Server 2008 and SQL Server 2008 R2 are approaching the end of their support life cycle.
 ms.date: 02/12/2020
+ms.prod-support-area-path:
+ms.reviewer: sureshka, suehar
 ---
 # End of support for SQL Server 2008 and SQL Server 2008 R2
 
 This article discusses the end of support for SQL Server 2008.
 
-_Original product version:_ &nbsp; 2008  
+_Original product version:_ &nbsp; SQL Server 2008  
 _Original KB date:_ &nbsp; 07/31/2018  
 _Original KB number:_ &nbsp; 4456242
 
@@ -63,13 +65,15 @@ Gone. Merely redirects to generic Hub page...
 https://docs.microsoft.com/sql/?view=sql-server-ver15
 -->
 
-[Extend support for SQL Server 2008 and SQL Server 2008 R2 with _Azure_](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)
+- [SQL Server end of support options](/sql/sql-server/end-of-support/sql-server-end-of-life-overview?view=sql-server-ver15)
 
-[End of _Mainstream_ support for SQL Server 2008 and SQL Server 2008 R2, July 2014](https://docs.microsoft.com/archive/blogs/sqlreleaseservices/end-of-mainstream-support-for-sql-server-2008-and-sql-server-2008-r2)
+- [Extend support for SQL Server 2008 and SQL Server 2008 R2 with _Azure_](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)
 
-[SQL Server 2008 R2 documentation](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms130214%28v=sql.105%29)
+- [End of _Mainstream_ support for SQL Server 2008 and SQL Server 2008 R2, July 2014](/archive/blogs/sqlreleaseservices/end-of-mainstream-support-for-sql-server-2008-and-sql-server-2008-r2)
 
-[SQL Server 2008 documentation](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms130214%28v=sql.100%29)
+- [SQL Server 2008 R2 documentation](/previous-versions/sql/sql-server-2008-r2/ms130214%28v=sql.105%29)
+
+- [SQL Server 2008 documentation](/previous-versions/sql/sql-server-2008/ms130214%28v=sql.100%29)
 
 ### Migration assistance with the Azure Migration Center
 
