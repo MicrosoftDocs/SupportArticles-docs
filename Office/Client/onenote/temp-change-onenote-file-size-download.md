@@ -1,23 +1,23 @@
 ---
-title: "Title goes here"
+title: OneNote temporary limit to file size download
 ms.author: v-todmc
 author: todmccoy
 manager: dcscontentpm
-ms.date: 2/5/2019
-audience: Admin|ITPro|Developer
+ms.date: 4/1/2020
+audience: Admin
 ms.topic: article
-ms.service OR ms.prod: see https://docsmetadatatool.azurewebsites.net/allowlists
+ms.prod: onenote
 localization_priority: Normal
 search.appverid:
 - SPO160
 - MET150
 appliesto:
-- ADD PRODUCT
+- OneNote
 ms.custom: 
-- CI ID
+- CI 115970
 - CSSTroubleshoot 
-ms.reviewer: MS aliases for tech reviewers and CI requestor, without "@microsoft.com".  
-description: "How to resolve the error "Virus Found" in SharePoint Server 2013 when the antivirus scanner is unavailable ."
+ms.reviewer: morales 
+description: OneNote download sizes will be temporarily limited to 100MB.
 ---
 
 # Temporary change to file size download limit in OneNote
