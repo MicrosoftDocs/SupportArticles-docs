@@ -17,7 +17,7 @@ ms.custom:
 - CI 115970
 - CSSTroubleshoot 
 ms.reviewer: morales 
-description: OneNote download sizes will be temporarily limited to 100MB.
+description: OneNote download sizes will be temporarily limited to 100 MB.
 ---
 
 # Temporary change to file size download limit in OneNote
@@ -28,7 +28,7 @@ To best support OneNote customers worldwide during these unprecedented times, Mi
 
 ## More information
 
-The maximum capacity of downloaded file attachments is temporarily set at 100 MB. Because most OneNote clients limit file uploads to 50MB, this change shouldn't affect most attachments. 
+The maximum capacity of downloaded file attachments is temporarily set at 100 MB. Because most OneNote clients limit file uploads to 50 MB, this change shouldn't affect most attachments. 
 
 The following workarounds enable users to download larger file attachments:
 
