@@ -179,6 +179,8 @@
       href: ../group-policy/office-add-in-not-loaded.md
   - name: Groups
     items:
+    - name: Common tasks for O365 Groups
+      href: ../groups/o365-group-tasks.md
     - name: Distribution group issues
       href: ../groups/distribution-list-issues.md
   - name: Installation
