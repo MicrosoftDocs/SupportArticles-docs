@@ -68,7 +68,7 @@ To do this, follow these steps:
    For example, to add full access permissions for an administrator to John Smith's mailbox, type the following command, and then press Enter:
 
    ```powershell
-   Add-MailboxPermission -Identity johnsmith@contoso.onmicrosoft.com -User admin@contoso.onmicrosoft.com -AccessRights FullAccess -AutoMapping:$false
+   Add-MailboxPermission -Identity johnsmith@contoso.onmicrosoft.com -User admin@contoso.onmicrosoft.com -AccessRights FullAccess -AutoMapping $false
    ```
     
    After you run this command, the following output is displayed.  
