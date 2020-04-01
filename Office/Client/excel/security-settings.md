@@ -12,8 +12,8 @@ ms.topic: article
 ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
-- Office 365
-- Exchange
+- Excel for Office 365
+- Excel 2019
 ---
 
 # Security settings for Dynamic Data Exchange in Excel Trust Center in Office 365
