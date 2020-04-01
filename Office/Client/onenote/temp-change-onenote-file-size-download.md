@@ -1,0 +1,46 @@
+---
+title: "Title goes here"
+ms.author: v-todmc
+author: todmccoy
+manager: dcscontentpm
+ms.date: 2/5/2019
+audience: Admin|ITPro|Developer
+ms.topic: article
+ms.service OR ms.prod: see https://docsmetadatatool.azurewebsites.net/allowlists
+localization_priority: Normal
+search.appverid:
+- SPO160
+- MET150
+appliesto:
+- ADD PRODUCT
+ms.custom: 
+- CI ID
+- CSSTroubleshoot 
+ms.reviewer: MS aliases for tech reviewers and CI requestor, without "@microsoft.com".  
+description: "How to resolve the error "Virus Found" in SharePoint Server 2013 when the antivirus scanner is unavailable ."
+---
+
+# Temporary change to file size download limit in OneNote
+
+## Summary
+
+To best support OneNote customers worldwide during these unprecedented times, Microsoft is temporarily adjusting the download limit of file attachments in OneNote. We do not expect this change to impact most users.
+
+## More information
+
+The maximum capacity of downloaded file attachments will be 100MB. Since most OneNote clients limit file uploads to 50MB, this shouldn't impact most attachments. 
+
+The following workarounds will allow larger file attachments to be downloaded:
+
+1.    Attach as a cloud file. This is the best way to ensure that others can access the file without restrictions. If you have access to the file, upload the attachment to SharePoint Online first and then link to the attachment from within the Notebook. (If you use OneNote for Windows 10, this can be done in one step by following these instructions:
+    a. Select Insert  and then File.
+    b. Select Upload to OneDrive and insert link.
+Attaching as a cloud file allows others with access to the notebook to view your attachment without any size restrictions. If you don't have access to the original file, use either of the two workarounds listed below to obtain the file, and then attach it as a cloud file.
+
+2.    Open your notebook in OneNote for the web (go to https://www.onenote.com and then select the purple Sign in button) and save the attachment by right-clicking the attached file and selecting Save As.
+
+3.    Use OneNote 2016 or another desktop version of OneNote to download the attachment. 
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fanswers.microsoft.com%2F&data=02%7C01%7Cv-todmc%40microsoft.com%7C98910814456c474880f108d7cf62d97d%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637205895885805857&sdata=9%2FYStDGvrU5ZIYXB7guowmaPlKazab0U%2BTpiBIItDaQ%3D&reserved=0).
