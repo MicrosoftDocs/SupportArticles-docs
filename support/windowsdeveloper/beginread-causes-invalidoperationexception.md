@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 2501751
 
 ## Symptoms
 
-When a single `NetworkStream` object is used by multiple threads at the same time, calling the `BeginRead` method may cause the `InvalidOperationException` exception to be thrown.
+When a single `NetworkStream` object is used by multiple threads at the same time, calling the `BeginRead` method may cause the **InvalidOperationException** exception to be thrown.
 
 ## Cause
 
