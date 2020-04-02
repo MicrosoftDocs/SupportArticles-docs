@@ -14,7 +14,7 @@
     items:
     - name: Call Shell functions from Multithreaded Apartment
       href: shell-functions-multithreaded-apartment.md
-    - name: Calling SystemParametersInfo work incorrectly
+    - name: Calling SystemParametersInfo works incorrectly
       href: calling-systemparametersinfo-work-incorrectly.md
     - name: Change hard error popup handling
       href: hard-error-popup-mode.md

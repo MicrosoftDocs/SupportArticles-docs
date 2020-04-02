@@ -7,7 +7,7 @@ ms.reviewer: koichm
 ---
 # The BeginRead method causes the InvalidOperationException
 
-This article provides information about resolving  the issue that the `NetworkStream.BeginRead` method causes the `InvalidOperationException` exception.
+This article provides information about resolving  the issue that the `NetworkStream.BeginRead` method causes the **InvalidOperationException** exception.
 
 _Original product version:_ &nbsp; Microsoft .NET Framework  
 _Original KB number:_ &nbsp; 2501751
@@ -18,11 +18,11 @@ When a single `NetworkStream` object is used by multiple threads at the same tim
 
 ## Cause
 
-When a call to the `NetworkStream.close` method or `NetworkStream.Dispose` method of a `NetworkStream` object is being made, an attempt to call the `NetworkStream.BeginRead` method of the same `NetworkStream` object from another thread may throw the `InvalidOperationException`.
+When a call to the `NetworkStream.close` method or `NetworkStream.Dispose` method of a `NetworkStream` object is being made, an attempt to call the `NetworkStream.BeginRead` method of the same `NetworkStream` object from another thread may throw the **InvalidOperationException** exception.
 
 ## Resolution
 
-When `InvalidOperationException` is thrown, destroy the `NetworkStream` object.
+When **InvalidOperationException** is thrown, destroy the `NetworkStream` object.
 
 ## More information
 
