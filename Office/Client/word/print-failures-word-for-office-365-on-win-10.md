@@ -150,6 +150,7 @@ Remove all media (USB drive, DVD, CD) from your computer.</li>
 </tr>
 </table>
 
+
 ## Detailed view of the Options
 
 Outlined below are more detailed descriptions of the Options above.
