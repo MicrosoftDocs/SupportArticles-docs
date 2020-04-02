@@ -62,8 +62,8 @@ Try the following options to help determine the cause of your printing failure.
 
 </td><td><b>Test printing in other documents</b>
 <ol>
-<li>Open a new blank document</li>
-<li>Type the following text: "=rand(10)"</li>
+<li>Open a new blank document.</li>
+<li>Type the following text: "=rand(10)".</li>
 <li>Press <b>Enter</b>.</li>
 <li>Try to print again.</li>
 </ol>
@@ -80,7 +80,7 @@ Try the following options to help determine the cause of your printing failure.
 <li>Open WordPad.</li>
 <li>In a new document, type "This is a test".</li>
 <li>On the <b>File</b> menu, select <b>Print</b>.</li>
-<li>Select <b>OK</b> or <b>Print</b> to print the <li>file.</li>
+<li>Select <b>OK</b> or <b>Print</b> to print the file.</li>
 </td>
 </tr>
 <tr>
