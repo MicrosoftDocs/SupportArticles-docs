@@ -34,9 +34,9 @@ The reminders folder or the reminder view is corrupted. A sync conflict may also
 
 Delete the item using a command line:
 
-- Close Outlook.
-- Right click the **Start** button in Windows and select **Run**.
-- In the **Run** window, type or paste the command below and select **Enter**.
+1. Close Outlook.
+2. Right click the **Start** button in Windows and select **Run**.
+3. In the **Run** window, type or paste the command below and select **Enter**.
 
     ```
     outlook.exe /cleanreminders 
