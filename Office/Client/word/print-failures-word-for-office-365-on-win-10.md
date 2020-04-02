@@ -49,14 +49,112 @@ To resolve a print failure in Word, you must determine its cause. Causes typical
 - The Windows operating system.
 - Connectivity or hardware.
 
-Do not make assumptions about what is causing your printing problem. Instead, rely on systematic troubleshooting to reveal the cause.
+Try the following options to help determine the cause of your printing failure.
 
-Use the following tests to help determine the cause of your printing failure.
+> [!NOTE]
+> Before you begin, make sure that [Windows is up to date](https://support.microsoft.com/help/4027667/windows-10-update) and then try to print again.
 
-### Step 1: Update Windows 10 
-Make sure that [Windows is up to date](https://support.microsoft.com/help/4027667/windows-10-update).
+<table align="left">
+<tr>
+<td valign="top"> 
 
-### Step 2: Test printing in other documents
+![Option 1](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-1.png)
+
+</td><td><b>Test printing in other documents</b>
+<ol>
+<li>Open a new blank document</li>
+<li>Type the following text: "=rand(10)"</li>
+<li>Press <b>Enter</b>.</li>
+<li>Try to print again.</li>
+</ol>
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+![Option 2](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-2.png)
+
+</td>
+<td><b>Test printing in other programs: WordPad</b>
+<ol>
+<li>Open WordPad.</li>
+<li>In a new document, type "This is a test".</li>
+<li>On the <b>File</b> menu, select <b>Print</b>.</li>
+<li>Select <b>OK</b> or <b>Print</b> to print the <li>file.</li>
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+![Option 3](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-3.png)
+
+</td>
+<td><b>Repair the Word program files</b>
+<ol>
+<li>Exit all Office programs.</li>
+<li>Select <b>Start</b>, then type "uninstall".</li>
+<li>Open <b>Add or Remove Programs</b>.</li>
+<li>Under <b>Apps & features</b>, select <b>Microsoft Office Word</b>.</li>
+<li>Select <b>Modify</b>.</li>
+<li>Select <b>Online Repair</b>, then follow instructions to repair the programs.</li>
+</ol>
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+![Option 4](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-4.png)
+
+</td>
+<td><b>Test for problems in Windows</b>
+
+<ol>
+<li>
+Remove all media (USB drive, DVD, CD) from your computer.</li>
+<li>Select <b>Start</b>, then the <b>Power button</b>, then select <b>Restart</b>.</li>
+ <li>Press and hold <b>F8</b> key as your computer restarts.</li>
+<li>On the <b>Advanced Boot Options</b> screen, select <b>Safe Mode</b>, then <b>Enter</b>.</li>
+ <li>Sign in to your computer using administrative credentials.</li>
+ <li>Try printing again.</li>
+</ol>
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+![Option 5](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-5.png)
+
+</td>
+<td><b>Test printing with different print drivers</b>
+<ol>
+<li>Select <b>Start</b>, then <b>Settings</b>.
+<li>Select <b>Devices</b>, then <b>Printers & scanners</b>.</li>
+<li>Select <b>Add a printer or scanner</b>.</li>
+<li>Select <b>The printer that I wanted isn't listed.</b></li>
+<li>In the "Find a printer by other options" screen, select <b>Add a local printer or network printer with manual settings.</b>    Select <b>Next</b>.</li>
+<li>Make sure that the check box <b>Use an existing port</b> is selected, then change the dropdown option to <b>File: (Print to file)</b>. Select <b>Next</b>.</li>
+<li>Under Manufacturer, select <b>Generic</b>. Under Printers, select <b>Generic/Text Only</b> and select <b>Next</b>.</li>
+<li>In the screen "Type a printer name," leave the name as <b>Generic/Text Only</b> and select <b>Next</b>.</li>
+<li>In the "Printer Sharing" screen, select <b>Share this printer so that others on your network can find and use it.</b></li>
+<li>Leave the default Share name. Select <b>Next</b>.</li>
+<li>Select <b>Finish</b>.</li>
+<li>When the driver installation is complete, open a document in Word. On the <b>File</b> menu, select <b>Print</b>.</li>
+<li>Select <b>Generic/Text Only</b>, then select <b>Print</b>.</li>
+<li>Change the location to <b>My Documents</b> and name the file Test.prn</li>
+<li>Select <b>OK</b>.</li>
+</ol>
+
+</td>
+</tr>
+</table>
+
+## Detailed view of the Options
+
+Outlined below are more detailed descriptions of the Options above.
+
+### Option 1: Test printing of other documents
 
 Damaged documents or documents that contain damaged graphics or damaged fonts can cause print errors in Word. Before you reinstall drivers or software, test the Word program's ability to print. To do this, follow these steps.
 
@@ -93,7 +191,7 @@ For more information about how to troubleshoot damaged Word documents, see [How 
 
 If Word cannot print at all, or if Word cannot print a certain font or a certain kind of graphic, go to the next step.
 
-### Step 3: Test printing in other programs
+### Option 2: Test printing in other programs
 
 The scope of the printing problem may reveal its cause. For example, some printing problems affect only Word, whereas other printing problems affect several of or all Windows-based programs.
 
