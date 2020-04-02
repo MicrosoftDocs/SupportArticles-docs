@@ -28,7 +28,7 @@
     - name: Issue with accessing notebooks
       href: ./teams-onenote-integration/issue-access-notebook.md
     - name: Temporary change to file size download limit in OneNote
-      href: /Office/Client/onenote/temp-change-onenote-file-size-download.md?toc=/office/troubleshoot/clienttoc/toc.json&bc=/office/troubleshoot/breadcrumb/toc.json
+      href: /office/troubleshoot/onenote/temp-change-onenote-file-size-download?toc=/MicrosoftTeams/troubleshoot/toc.json&bc=/MicrosoftTeams/troubleshoot/breadcrumb/toc.json
   - name: Sign-in
     items:
     - name: Stuck in login loop in Edge or Internet Explorer
