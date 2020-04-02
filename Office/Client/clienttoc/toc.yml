@@ -879,6 +879,8 @@
       href: ../onenote/error-sync-notebook.md
     - name: Locate Onenote notebooks
       href: ../onenote/locate-onenote-notebooks.md
+    - name: Temporary change to file size download limit in OneNote
+      href: ../onenote/temp-change-onenote-file-size-download.md
     - name: Warning when a notebook is in an offline location
       href: ../onenote/notebook-offline-location.md
   - name: Performance
