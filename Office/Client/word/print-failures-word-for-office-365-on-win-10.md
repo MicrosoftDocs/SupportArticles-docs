@@ -58,10 +58,12 @@ Try the following options to help determine the cause of your printing failure.
 <tr>
 <td valign="top"> 
 <div class="test" style="width: 156px;">
+        <img src="media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-1.png" alt="no image" />
+</div>
 
 ![Option 1](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-1.png)
 
-</div>
+
 </td><td><b>Test printing in other documents</b>
 <ol>
 <li>Open a new blank document.</li>
