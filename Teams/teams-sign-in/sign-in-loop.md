@@ -46,9 +46,8 @@ To resolve this issue, make the following changes to Internet Explorer settings 
     - https://*.skypeforbusiness.com     
 
 > [!NOTE]
-> It's always good to validate and enable all trusted URLs for Teams and review the requirements in the following article: 
- 
-[Office 365 URLs and IP address ranges](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2#bkmk_teams)
+> It's always good to validate and enable all trusted URLs for Teams and review the requirements in this article: [Office 365 URLs and IP address ranges](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2#bkmk_teams)
+
 
 ## More information
 
