@@ -48,7 +48,7 @@ To resolve this issue, make the following changes to Internet Explorer settings 
 > [!NOTE]
 > It's always good to validate and enable all trusted URLs for Teams and review the requirements in the following article: 
  
-[Microsoft Teams](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2#bkmk_teams)
+[Office 365 URLs and IP address ranges](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2#bkmk_teams)
 
 ## More information
 
