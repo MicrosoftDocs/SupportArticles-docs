@@ -54,6 +54,9 @@ Try the following options to help determine the cause of your printing failure.
 > [!NOTE]
 > Before you begin, make sure that [Windows is up to date](https://support.microsoft.com/help/4027667/windows-10-update) and then try to print again.
 
+<table align="left">
+<tr>
+<td valign="top"> 
 
 ![Option 1](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-1.png)
 
