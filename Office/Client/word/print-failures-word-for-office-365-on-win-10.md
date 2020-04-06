@@ -54,17 +54,9 @@ Try the following options to help determine the cause of your printing failure.
 > [!NOTE]
 > Before you begin, make sure that [Windows is up to date](https://support.microsoft.com/help/4027667/windows-10-update) and then try to print again.
 
-<table align="left">
-<tr>
-<td valign="top"> 
-<div style="width: 72px;">
-        <img src="media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-1.png" alt="no image" />
-</div>
-<div style="width: 72px;">
 
 ![Option 1](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-1.png)
 
-</div>
 </td><td><b>Test printing in other documents</b>
 <ol>
 <li>Open a new blank document.</li>
@@ -86,6 +78,7 @@ Try the following options to help determine the cause of your printing failure.
 <li>In a new document, type "This is a test".</li>
 <li>On the <b>File</b> menu, select <b>Print</b>.</li>
 <li>Select <b>OK</b> or <b>Print</b> to print the file.</li>
+</ol>
 </td>
 </tr>
 <tr>
@@ -170,6 +163,7 @@ Damaged documents or documents that contain damaged graphics or damaged fonts ca
 3.    Press **Enter**. This inserts 10 paragraphs of sample text.
 4.    Try to print the document.
 5.    If the document prints successfully, change to a different font, or insert clip art, a table, or a drawing object.
+
     - To change the font, follow these steps:
         1.    Select a section of the sample text.
         2.    In the **Home** menu, use the font drop-down box to select a different font.
