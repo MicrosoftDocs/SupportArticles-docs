@@ -188,8 +188,6 @@ The success or failure of these tests shows whether Word is functionally able to
 
 If you do not receive errors in the test document but still cannot print your original document, your original document may be damaged. This may be true even if you can print the same document on another computer, because there are many situations in which the symptoms of file damage appear on some computers and not on other computers.
 
-Again, rely on systematic troubleshooting instead of on assumptions about what is causing the problem. If you cannot print a particular document but can print other documents in Word, you may have a damaged document. 
-
 For more information about how to troubleshoot damaged Word documents, see [How to troubleshoot damaged Word documents](https://docs.microsoft.com/office/troubleshoot/word/damaged-documents-in-word). 
 
 If Word cannot print at all, or if Word cannot print a certain font or a certain kind of graphic, go to the next step.
@@ -219,7 +217,7 @@ To insert a graphics image in WordPad, follow these steps:
     - To create a new graphics image, select **Create New**, and then select one of the object types from the list. For example, select **Paintbrush Picture** to create a test bitmap in the Microsoft Paint program.
     - To insert a graphics image from a file, select **Create from File**, and then select **Browse** to select the file.
 
-### Test printing from other programs
+#### Test printing from other programs
 
 After you finish creating the document in WordPad, you can test the print functions in your web browser or another Office program. You can also try to print a test page for your printer. To print a text page, follow these steps:
 
@@ -233,7 +231,39 @@ After you finish creating the document in WordPad, you can test the print functi
 
 You might be able to use the Windows 10 printing help and troubleshooting wizard to resolve the printing problem. Select **Start**, type printing, and then select **Find and fix problems with printing**.
 
-### Step 4: Test printing with different printer drivers
+### Option 3: Repair the Word program files 
+
+After you verify that the printing problem is not limited to a particular document or to a particular printer driver, and that the problem is limited to the Word program, test the Word program by using only the default settings.
+
+For more information about how to start by using the default settings, see the following Microsoft Knowledge Base：
+
+[921541](https://docs.microsoft.com/office/troubleshoot/word/issues-when-start-or-use-word) How to troubleshoot problems that occur when you start or use Word
+
+If the printing problem continues to occur, run the repair program to reinstall the missing or damaged program files. To run the repair program, follow these steps.
+
+1.    Exit all Office programs.
+2.    In Windows 10, select **Start**, and then type uninstall.
+3.    Open **Add or Remove Programs**.
+4.    Under the "Apps & features" list, find and select your version of Microsoft Office Word you have installed.
+5.    Select **Modify**.
+6.    Select **Online Repair**, and then follow the onscreen instructions to repair the program.
+
+### Option 4: Test for problems in Windows
+
+To look for device drivers or memory-resident programs that might be interfering with the Word print function, start Windows in safe mode, and then test printing to a file in Word. To start Windows in safe mode, follow the steps below.
+
+1.    Remove all floppy disks, CDs, and DVDs from your computer, and then restart your computer.
+2.    Select **Start**, then the **Power button**, and then select **Restart**.
+3. Press and hold the F8 key as your computer restarts.
+   > [!NOTE]
+   > You must press F8 before the Windows logo appears. If the Windows logo appears, restart your computer and try again. To do this, wait until the Windows logon prompt appears, and then shut down and restart your computer.
+4. On the "Advanced Boot Options" screen, use the arrow keys to select the **Safe Mode** option, and then press **Enter**.
+5. Log on to your computer by using a user account that has administrative credentials. 
+6.    Try printing from Word again.
+
+If the Word printing problem does not occur when you start Windows in safe mode, use clean-boot troubleshooting to help determine the source of the problem.
+
+### Option 5: Test printing with different printer drivers
 
 If Word is the only program on your computer that cannot print, you might think that Word is the cause of the problem. Be aware that Word is a very printer-intensive program. Therefore, a minor problem with the printer driver affects Word before it affects other programs.
 
@@ -265,37 +295,7 @@ If you receive an error message in Word when you print files that contain only t
 
 If the printing problem continues to occur with a different printer driver, go to the next step.
 
-### Step 5: Repair the Word program files 
 
-After you verify that the printing problem is not limited to a particular document or to a particular printer driver, and that the problem is limited to the Word program, test the Word program by using only the default settings.
-
-For more information about how to start by using the default settings, see the following Microsoft Knowledge Base：
-
-[921541](https://docs.microsoft.com/office/troubleshoot/word/issues-when-start-or-use-word) How to troubleshoot problems that occur when you start or use Word
-
-If the printing problem continues to occur, run the repair program to reinstall the missing or damaged program files. To run the repair program, follow these steps.
-
-1.    Exit all Office programs.
-2.    In Windows 10, select **Start**, and then type uninstall.
-3.    Open **Add or Remove Programs**.
-4.    Under the "Apps & features" list, find and select your version of Microsoft Office Word you have installed.
-5.    Select **Modify**.
-6.    Select **Online Repair**, and then follow the onscreen instructions to repair the program.
-
-### Step 6: Test for problems in Windows
-
-To look for device drivers or memory-resident programs that might be interfering with the Word print function, start Windows in safe mode, and then test printing to a file in Word. To start Windows in safe mode, follow the steps below.
-
-1.    Remove all floppy disks, CDs, and DVDs from your computer, and then restart your computer.
-2.    Select **Start**, then the **Power button**, and then select **Restart**.
-3. Press and hold the F8 key as your computer restarts.
-   > [!NOTE]
-   > You must press F8 before the Windows logo appears. If the Windows logo appears, restart your computer and try again. To do this, wait until the Windows logon prompt appears, and then shut down and restart your computer.
-4. On the "Advanced Boot Options" screen, use the arrow keys to select the **Safe Mode** option, and then press **Enter**.
-5. Log on to your computer by using a user account that has administrative credentials. 
-6.    Try printing from Word again.
-
-If the Word printing problem does not occur when you start Windows in safe mode, use clean-boot troubleshooting to help determine the source of the problem.
 
 ## Need More Help?
 
