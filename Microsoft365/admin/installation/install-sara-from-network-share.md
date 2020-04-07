@@ -9,7 +9,7 @@ ms.topic: article
 ms.prod: office 365
 localization_priority: Normal
 ms.custom: 
-- CI 110828, CI 114761, 115829
+- CI 110828, CI 114761, CI 115829, CI 116348
 - CSSTroubleshoot
 ms.reviewer: gregmans
 appliesto:
@@ -42,7 +42,7 @@ If you want to install and start Microsoft Support and Recovery Assistant (SaRA)
 
 SaRA is now installed and ready to run troubleshooting scenarios.
 
-![Select Which app you're having problem with](./media/install-sara-from-network-share/2.png)
+![Select Which app you're having problem with](./media/install-sara-from-network-share/options.png)
 
 ## Maintaining the SaRA installation folder
 
@@ -71,7 +71,7 @@ Any computer that has SaRA already installed can now be updated by using the fol
 
 SaRA is now updated and ready to run troubleshooting scenarios.
 
-![Update is finished and you go back to troubleshooting scenarios page](./media/install-sara-from-network-share/7.png)
+![Update is finished and you go back to troubleshooting scenarios page](./media/install-sara-from-network-share/scenarios.png)
 
 ## SaRA version history
 
@@ -81,6 +81,7 @@ The following table provides the versions of SaRA that were made available on th
 
 |Release date|SaRA version|
 |--------|--------|
+|April 6, 2020|17.00.4478.003|
 |March 20, 2020|17.00.4376.007|
 |March 11, 2020|17.00.4376.002|
 |February 27, 2020|17.00.4304.006|

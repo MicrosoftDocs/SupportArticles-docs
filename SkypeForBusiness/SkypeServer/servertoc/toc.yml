@@ -17,6 +17,8 @@
       href: ../server-conferencing/virtual-keyboard-disappears.md
     - name: Peer-to-Peer desktop sharing issues
       href: ../server-conferencing/peer-to-peer-desktop-sharing-issues.md
+    - name: Skype for Business broadcasts a dial tone
+      href: ../server-conferencing/sfb-play-dial-tone-teams-call.md
     - name: Video calls not working with Logitech Brio Webcam
       href: ../server-conferencing/cant-do-video-call.md
   - name: Configuration

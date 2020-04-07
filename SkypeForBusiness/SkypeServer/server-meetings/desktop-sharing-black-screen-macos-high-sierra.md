@@ -50,4 +50,10 @@ Microsoft is working closely with Apple to resolve this problem.
 
 ## More information
 
+This issue can also occur when the camera isn't granted access permission to Skype for Business. 
+
+1. Select Apple menu > **System Preferences**, select **Security & Privacy**, and then **Privacy**.
+2. Grant Skype for Business access to the camera. You will be prompted to restart Skype for Business.  
+3. Check if the issue is resolved after the restart.
+
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
