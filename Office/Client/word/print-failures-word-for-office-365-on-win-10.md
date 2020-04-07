@@ -57,7 +57,7 @@ Try the following options to help determine the cause of your printing failure.
 <table align="left">
 <tr>
 <td valign="top"> 
-<a href="option1">
+<a href="#option1">
 
 ![Option 1](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-1.png)
 
