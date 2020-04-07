@@ -57,9 +57,11 @@ Try the following options to help determine the cause of your printing failure.
 <table align="left">
 <tr>
 <td valign="top"> 
+<a href="option1">
 
 ![Option 1](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-1.png)
 
+</a>
 </td><td><b>Test printing in other documents</b>
 <ol>
 <li>Open a new blank document.</li>
@@ -155,7 +157,7 @@ Remove all media (USB drive, DVD, CD) from your computer.</li>
 ## Detailed view of the Options
 
 Outlined below are more detailed descriptions of the Options above.
-
+<a id="option1"></a>
 ### Option 1: Test printing of other documents
 
 Damaged documents or documents that contain damaged graphics or damaged fonts can cause print errors in Word. Before you reinstall drivers or software, test the Word program's ability to print. To do this, follow these steps.
