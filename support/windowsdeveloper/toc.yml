@@ -6,10 +6,20 @@
 
 - name: Routing Windows SDK
   items:
+  - name: Component Development
+    items:
+    - name: Two DLL hosts start when COM+ is enabled
+      href: two-dll-hosts-start-com-plus-enabled.md
   - name: Desktop app UI development
     items:
     - name: Call Shell functions from Multithreaded Apartment
       href: shell-functions-multithreaded-apartment.md
+    - name: Calling SystemParametersInfo works incorrectly
+      href: calling-systemparametersinfo-work-incorrectly.md
+    - name: Change hard error popup handling
+      href: hard-error-popup-mode.md
+    - name: Icon overlay handlers aren't displayed
+      href: icon-overlay-handlers-windows-shell.md
     - name: Screen Saver command line arguments
       href: screen-saver-command-line.md
   - name: Graphics and Multimedia development
@@ -22,6 +32,8 @@
       href: wia-2-not-support-duplex.md
   - name: Networking Development
     items:
+    - name: BeginRead method causes exception
+      href: beginread-causes-invalidoperationexception.md
     - name: Header and Library requirement at IPPROTO_IP Level
       href: header-library-requirement-socket-ipproto-ip.md
     - name: Memory leaks when closing non-blocking socket
@@ -32,6 +44,8 @@
     items:
     - name: Changing krbtgt password may fail
       href: change-krbtgt-password-may-fail.md
+    - name: Limitation of 10 smart card readers in Windows
+      href: limitation-10-smart-card-readers.md
   - name: System Services Development
     items:
     - name: CreateProcess cannot eliminate duplicated variables
@@ -46,7 +60,6 @@
       href: new-functionality-in-msdtc-service.md
     - name: XA Transaction support requires registry entries
       href: xa-transaction-require-registry-entry.md
-      
 
 - name: Routing Windows App Dev (UWP)
   items:
@@ -60,6 +73,8 @@
       href: midi-device-app-hangs.md
     - name: Interoperability Between GDI and GDI+
       href: mix-gdi-and-gdi-plus-drawing.md
+    - name: WritePrinter API with RAW data can't print
+      href: writeprinter-raw-data-not-print.md
   - name: System Services Development
     items:
     - name: DXGI 1.2 API can't draw cursor to desktop image
