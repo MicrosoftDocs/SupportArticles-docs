@@ -27,15 +27,15 @@ The following registry entry controls the hard error popup handling in Windows:
 
 The following are valid values for `ErrorMode`:
 
-- Mode 0
+- **Mode 0**
 
     This is the default operating mode that serializes the errors and waits for a response.
 
-- Mode 1
+- **Mode 1**
 
     If the error doesn't come from the system, this is the normal operating mode. If the error comes from the system, this logs the error to the event log and returns **OK** to the hard error. No intervention is required and the popup isn't seen.
 
-- Mode 2
+- **Mode 2**
 
     This always logs the error to the event log and returns **OK** to the hard error. Popups aren't seen.
 
@@ -54,13 +54,15 @@ BOOL SetGlobalErrorMode(
     LONG lRetCode;
 
     // make sure the value passed isn't out-of-bounds
-    if (dwErrorMode > 2) return FALSE;
+    if (dwErrorMode > 2)
+        return FALSE;
 
     if(RegOpenKeyEx(HKEY_LOCAL_MACHINE,
                     "SYSTEM\\CurrentControlSet\\Control\\Windows",
                     0,
                     KEY_SET_VALUE,
-                    &hKey) != ERROR_SUCCESS) return FALSE;
+                    &hKey) != ERROR_SUCCESS)
+        return FALSE;
 
     lRetCode=RegSetValueEx(hKey,
                             "ErrorMode",
@@ -70,7 +72,9 @@ BOOL SetGlobalErrorMode(
                             sizeof(DWORD) );
 
     RegCloseKey(hKey);
-    if (lRetCode != ERROR_SUCCESS) return FALSE;
+    if (lRetCode != ERROR_SUCCESS)
+        return FALSE;
+
     return TRUE;
 }
 ```
@@ -92,7 +96,8 @@ BOOL GetGlobalErrorMode(
                     "SYSTEM\\CurrentControlSet\\Control\\Windows",
                     0,
                     KEY_QUERY_VALUE,
-                    &hKey) != ERROR_SUCCESS) return FALSE;
+                    &hKey) != ERROR_SUCCESS)
+        return FALSE;
 
     lRetCode=RegQueryValueEx(hKey,
                             "ErrorMode",
@@ -102,7 +107,9 @@ BOOL GetGlobalErrorMode(
                             &cbData );
 
     RegCloseKey(hKey);
-    if (lRetCode != ERROR_SUCCESS) return FALSE;
+    if (lRetCode != ERROR_SUCCESS)
+        return FALSE;
+
     return TRUE;
 }
 ```
