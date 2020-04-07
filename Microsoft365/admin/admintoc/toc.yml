@@ -178,9 +178,11 @@
     - name: No Add-ins loaded due to group policy settings 
       href: ../group-policy/office-add-in-not-loaded.md
   - name: Groups
-    items:
+    items: 
     - name: Distribution group issues
       href: ../groups/distribution-list-issues.md
+    - name: Manage O365 groups
+      href: ../groups/o365-group-tasks.md
   - name: Installation
     items:
     - name: All applications are installed when installing Skype for Business
