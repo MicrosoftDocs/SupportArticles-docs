@@ -73,9 +73,11 @@ Try the following options to help determine the cause of your printing failure.
 </tr>
 <tr>
 <td valign="top">
+<a href="#option2">
 
 ![Option 2](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-2.png)
 
+</a>
 </td>
 <td><b>Test printing in other programs: WordPad</b>
 <ol>
@@ -88,9 +90,11 @@ Try the following options to help determine the cause of your printing failure.
 </tr>
 <tr>
 <td valign="top">
+<a href="#option3">
 
 ![Option 3](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-3.png)
 
+</a>
 </td>
 <td><b>Repair the Word program files</b>
 <ol>
@@ -106,9 +110,11 @@ Try the following options to help determine the cause of your printing failure.
 </tr>
 <tr>
 <td valign="top">
+<a href="#option4">
 
 ![Option 4](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-4.png)
 
+</a>
 </td>
 <td><b>Test for problems in Windows</b>
 
@@ -126,9 +132,11 @@ Remove all media (USB drive, DVD, CD) from your computer.</li>
 </tr>
 <tr>
 <td valign="top">
+<a href="#option5">
 
 ![Option 5](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-5.png)
 
+</a>
 </td>
 <td><b>Test printing with different print drivers</b>
 <ol>
@@ -157,9 +165,11 @@ Remove all media (USB drive, DVD, CD) from your computer.</li>
 ## Detailed view of the Options
 
 Outlined below are more detailed descriptions of the Options above.
-<a id="option1"></a>
+<a id="option1">
+
 ### Option 1: Test printing of other documents
 
+</a>
 Damaged documents or documents that contain damaged graphics or damaged fonts can cause print errors in Word. Before you reinstall drivers or software, test the Word program's ability to print. To do this, follow these steps.
 
 1.    Open a new blank document in Word.
@@ -194,8 +204,11 @@ For more information about how to troubleshoot damaged Word documents, see [How 
 
 If Word cannot print at all, or if Word cannot print a certain font or a certain kind of graphic, go to the next step.
 
+<a id="option2">
+
 ### Option 2: Test printing in other programs
 
+</a>
 The scope of the printing problem may reveal its cause. For example, some printing problems affect only Word, whereas other printing problems affect several of or all Windows-based programs.
 
 The following tests can help determine whether this problem involves programs other than Word.
@@ -233,8 +246,11 @@ After you finish creating the document in WordPad, you can test the print functi
 
 You might be able to use the Windows 10 printing help and troubleshooting wizard to resolve the printing problem. Select **Start**, type printing, and then select **Find and fix problems with printing**.
 
+<a id="option3">
+
 ### Option 3: Repair the Word program files 
 
+</a>
 After you verify that the printing problem is not limited to a particular document or to a particular printer driver, and that the problem is limited to the Word program, test the Word program by using only the default settings.
 
 For more information about how to start by using the default settings, see the following Microsoft Knowledge Base：
@@ -250,8 +266,11 @@ If the printing problem continues to occur, run the repair program to reinstall 
 5.    Select **Modify**.
 6.    Select **Online Repair**, and then follow the onscreen instructions to repair the program.
 
+<a id="option4">
+
 ### Option 4: Test for problems in Windows
 
+</a>
 To look for device drivers or memory-resident programs that might be interfering with the Word print function, start Windows in safe mode, and then test printing to a file in Word. To start Windows in safe mode, follow the steps below.
 
 1.    Remove all floppy disks, CDs, and DVDs from your computer, and then restart your computer.
@@ -265,8 +284,11 @@ To look for device drivers or memory-resident programs that might be interfering
 
 If the Word printing problem does not occur when you start Windows in safe mode, use clean-boot troubleshooting to help determine the source of the problem.
 
+<a id="option5">
+
 ### Option 5: Test printing with different printer drivers
 
+</a>
 If Word is the only program on your computer that cannot print, you might think that Word is the cause of the problem. Be aware that Word is a very printer-intensive program. Therefore, a minor problem with the printer driver affects Word before it affects other programs.
 
 To determine whether the printer driver is the cause of the problem, you can test different drivers. If the Word printing problem occurs only when you print documents that use a certain font or a certain kind of graphics image, try to print to another printer.
