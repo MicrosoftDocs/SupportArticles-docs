@@ -49,7 +49,7 @@ To resolve a print failure in Word, you must determine its cause. Causes typical
 - The Windows operating system.
 - Connectivity or hardware.
 
-Try the following options to help determine the cause of your printing failure. Select the arrow image to see more detailed instructions about that option. 
+*Try the following options to help determine the cause of your printing failure. Select the arrow image to see more detailed instructions about that option.*
 
 > [!NOTE]
 > Before you begin, make sure that [Windows is up to date](https://support.microsoft.com/help/4027667/windows-10-update) and then try to print again.
