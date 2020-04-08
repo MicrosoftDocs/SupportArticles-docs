@@ -21,7 +21,7 @@ search.appverid: MET150
 Tenant administrators perform many common tasks to manage O365 groups. This article provides a quick reference for doing these tasks. Tasks are divided into sections to help you sort through them quickly. Select a task to navigate directly to it.
 
 - Office 365 Groups and Teams
-  - [Display an Office 365 group associated with a team](#display-an-office-365-group-associated-with-a-tem)
+  - [Display an Office 365 group associated with a team](#display-an-office-365-group-associated-with-a-team)
   - [Control Office 365 group creation](#control-office-365-group-creation)
 - Office 365 group delegation
   - [Enable specific users to send as an Office 365 group](#enable-specific-users-to-send-as-an-office-365-group)
@@ -32,7 +32,7 @@ Tenant administrators perform many common tasks to manage O365 groups. This arti
   - [Remove the onmicrosoft.com email address](#remove-the-onmicrosoft.com-email-address)
   - [Customize email addresses stamped onto new Office 365 groups](#customize-email-addresses-stamped-onto-new-office-365-groups)
   - [Change email addresses of existing groups after you add a domain to a tenant](#change-email-addresses-of-existing-groups-after-you-add-a-domain-to-a-tenant)
-  - [Add or remove the secondary email address from Office 365 Groups](#add-or-remove-the-secondary-email-address-from-Office-365-groups)
+  - [Add or remove the secondary email address from Office 365 Groups](#add-or-remove-the-secondary-email-address-from-office-365-groups)
   - [Group email messages delivered to new members](#group-email-messages-delivered-to-new-members)
   - [Send group email messages to your Inbox](#send-group-email-messages-to-your-inbox)
   - [Email issues in Office 365 Groups](#email-issues-in-office-365-groups)
