@@ -215,13 +215,13 @@ The following tests can help determine whether this problem involves programs ot
 
 #### Test in WordPad
 
-1.    In the **Windows** menu, search for and start WordPad. 
-2.    In the blank WordPad document, type This is a test.
-3.    On the **File** menu, select **Print**.
-    > [!NOTE] 
-    > Make sure that your printer is selected. If your printer is not listed, select **Add Printer…** from the **Printer** drop-down box and add your printer.  
+1. In the **Windows** menu, search for and start WordPad. 
+2. In the blank WordPad document, type This is a test.
+3. On the **File** menu, select **Print**.
+   > [!NOTE] 
+   > Make sure that your printer is selected. If your printer is not listed, select **Add Printer…** from the **Printer** drop-down box and add your printer.  
 
-4.    Select **OK** or **Print** to print the file.
+4. Select **OK** or **Print** to print the file.
 
 If you found in "Step 3: Test printing in other documents" that the print problem occurs only with certain fonts or certain graphics images, try to reproduce this problem in WordPad. To do this, apply the same font, or insert the same kind of graphics image. (To select a different font in WordPad, use the same method that you used in Word.) Then try printing the same document again. 
 
@@ -297,31 +297,29 @@ If no other printer is available, contact the manufacturer to determine whether 
 
 If the Word printing problem occurs even when you print documents that are made up only of text, you can use a generic, text-only printer driver to test printing from Word. To do this, follow these steps:
 
-1.    Select **Start**, and then **Settings**.
-2.    Select **Devices**, and then **Printers & scanners**.
-3.    Select **Add a printer or scanner**.
-4.    Select **The printer that I want isn't listed**. 
-    > [!NOTE]
-    > You may have to search for a printer first to see this option.
-5.    In the "Find a printer by other options" screen, select **Add a local printer or network printer with manual settings**. Select **Next**.
-6.    Make sure that the **Use an existing port** check box is selected, then change the dropdown option to **File: (Print to file)**, and select **Next**.
-7.    Under Manufacturer, select **Generic**. Under Printers, select **Generic/Text Only**, and then select **Next**.
-8.    In the screen "Type a printer name," leave the name as **Generic/Text Only** and select **Next**.
-9.    In the "Printer Sharing" screen, select **Share this printer so that others on your network can find and use it**. 
-10.    Leave the default Share name, and then select **Next**. 
-11.    Select **Finish**.
-12.    When the driver installation is complete, open a document in Word, and on the **File** menu, select **Print**. 
-13.    Select **Generic/Text Only**, and then select **Print**. 
-14.    Change the location to **My Documents**, and then name the file **Test.prn**.
-15.    Select **OK**.
+1. Select **Start**, and then **Settings**.
+2. Select **Devices**, and then **Printers & scanners**.
+3. Select **Add a printer or scanner**.
+4. Select **The printer that I want isn't listed**. 
+   > [!NOTE]
+   > You may have to search for a printer first to see this option.
+5. In the "Find a printer by other options" screen, select **Add a local printer or network printer with manual settings**. Select **Next**.
+6. Make sure that the **Use an existing port** check box is selected, then change the dropdown option to **File: (Print to file)**, and select **Next**.
+7. Under Manufacturer, select **Generic**. Under Printers, select **Generic/Text Only**, and then select **Next**.
+8. In the screen "Type a printer name," leave the name as **Generic/Text Only** and select **Next**.
+9. In the "Printer Sharing" screen, select **Share this printer so that others on your network can find and use it**. 
+10. Leave the default Share name, and then select **Next**. 
+11. Select **Finish**.
+12. When the driver installation is complete, open a document in Word, and on the **File** menu, select **Print**. 
+13. Select **Generic/Text Only**, and then select **Print**. 
+14. Change the location to **My Documents**, and then name the file **Test.prn**.
+15. Select **OK**.
 
 If you receive an error message in Word when you print files that contain only text but do not receive the error message when you print with the generic, text-only printer driver, your printer driver may be damaged. In this case, contact the manufacturer for help in removing the printer driver and installing an updated version. 
 
 If the printing problem continues to occur with a different printer driver, go to the next step.
 
-
-
-## Need More Help?
+## Need more help?
 
 Get help from the [Microsoft Community](https://answers.microsoft.com/) online community, search for more information on [Microsoft Support](https://support.microsoft.com/) or [Office Help and How To](https://office.microsoft.com/support/), or learn more about [Assisted Support](https://support.microsoft.com/contactus/) options.
 
