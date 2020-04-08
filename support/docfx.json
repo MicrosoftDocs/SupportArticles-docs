@@ -119,6 +119,20 @@
         "windowsdeveloper/**/*.md": ""
       },
 
+      "ms.prod": {
+        "mem/intune/**/*.md": "intune"
+      },
+      "ms.technology": {
+        "mem/intune/**/*.md": ""
+      },
+
+      "ms.prod": {
+        "mem/configmgr/**/*.md": "configuration-manager"
+      },
+      "ms.technology": {
+        "mem/configmgr/**/*.md": ""
+      },
+
       "titleSuffix": {
         "biztalk/**/*.md": "Biztalk Server"
       },
@@ -136,6 +150,12 @@
       },
       "titleSuffix": {
         "windowsdeveloper/**/*.md": "Windows Developer"
+      },
+      "titleSuffix": {
+        "mem/intune/**/*.md": "Intune"
+      },
+      "titleSuffix": {
+        "mem/configmgr/**/*.md": "Configuration Manager"
       }
 
     },

@@ -31,3 +31,14 @@
     - name: Windows Developer
       tocHref: /support/windowsdeveloper/
       topicHref: /support/windowsdeveloper/welcome-support-windowsdeveloper
+
+    - name: Microsoft Endpoint Manager
+      tocHref: /support/mem/
+      topicHref: /support/mem/
+      items:
+      - name: Intune
+        tocHref: /support/mem/intune/
+        topicHref: /support/mem/intune/welcome-support-intune
+      - name: Configuration Manager
+        tocHref: /support/mem/configmgr/
+        topicHref: /support/mem/configmgr/welcome-support-configmgr      
