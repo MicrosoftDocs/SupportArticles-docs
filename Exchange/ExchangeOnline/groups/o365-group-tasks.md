@@ -18,11 +18,36 @@ search.appverid: MET150
 ---
 # O365 Groups - common tasks
 
-Tenant administrators perform many common tasks to manage O365 groups. This article provides a quick reference for doing these tasks. Tasks are divided into sections to help you sort through them quickly. Select a section on the list to your right to navigate directly to it.
+Tenant administrators perform many common tasks to manage O365 groups. This article provides a quick reference for doing these tasks. Tasks are divided into sections to help you sort through them quickly. Select a task to navigate directly to it.
+
+- Office 365 Groups and Teams
+  - [Display an Office 365 group associated with a team](#display-an-office-365-group-associated-with-a-tem)
+  - [Control Office 365 group creation](#control-office-365-group-creation)
+- Office 365 group delegation
+  - [Enable specific users to send as an Office 365 group](#enable-specific-users-to-send-as-an-office-365-group)
+  - [Restrict user access to only a group calendar](#restrict-user-access-to-only-a-group-calendar)
+  - [Prevent group members from changing a group calendar](#prevent-group-members-from-changing-a-group-calendar)
+  - [Office 365 group limits](#office-365-group-limits)
+- Office 365 Groups email management
+  - [Remove the onmicrosoft.com email address](#remove-the-onmicrosoft.com-email-address)
+  - [Customize email addresses stamped onto new Office 365 groups](#customize-email-addresses-stamped-onto-new-office-365-groups)
+  - [Change email addresses of existing groups after you add a domain to a tenant](#change-email-addresses-of-existing-groups-after-you-add-a-domain-to-a-tenant)
+  - [Add or remove the secondary email address from Office 365 Groups](#add-or-remove-the-secondary-email-address-from-Office-365-groups)
+  - [Group email messages delivered to new members](#group-email-messages-delivered-to-new-members)
+  - [Send group email messages to your Inbox](#send-group-email-messages-to-your-inbox)
+  - [Email issues in Office 365 Groups](#email-issues-in-office-365-groups)
+- Other tasks
+  - [Restoring Office 365 groups](#restoring-office-365-groups)
+  - [Convert to an Office 365 group](#convert-to-an-office-365-group)
+  - [Office 365 group client access](#office-365-group-client-access)
+  - [Office 365 group migration](#office-365-group-migration)
+  - [Office 365 group deletion](#office-365-group-deletion)
+  - [Export Office 365 group information](#export-office-365-group-information)
+- Useful scripts for Office 365 Groups management
 
 ## Office 365 Groups and Teams
 
-### Display an Office 365 group associated with a team in Outlook and OWA clients or in the address list
+### Display an Office 365 group associated with a team
 
 All new teams have an associated Office 365 group. By default, this Office 365 group is hidden from Exchange clients (Outlook and OWA) and is also hidden from the global address list (GAL). To unhide the group, use Exchange Online PowerShell.
 
@@ -74,7 +99,7 @@ You can also use the following tools to control Office 365 group creation:
 
 ## Office 365 group delegation
 
-### Enable specific users to "Send As" as Office 365 group
+### Enable specific users to send as an Office 365 group
 
 You can assign "Send As" permissions to allow specific users to send messages on behalf of an Office 365 group:
 
@@ -172,9 +197,9 @@ Set-UnifiedGroup -Identity $O365Group.identity -EmailAddresses @{add=$Newemailid
 > [!NOTE]
 > Replace *groups.contoso.com* with the domain name that you want to add, and make sure that the new name exists in the accepted domains.
 
-### Add or remove the secondary email address on Office 365 Group
+### Add or remove the secondary email address from Office 365 Groups
 
-You can use following Exchange Online PowerShell command to add and remove a non-primary email address from Office 365 group:
+You can use the following Exchange Online PowerShell commands to add and remove a non-primary email address from an Office 365 group:
 
 Add:
 
@@ -187,6 +212,37 @@ Remove:
 ```powershell
 Set-UnifiedGroup Group1 -EmailAddresses @{remove="group1@secondary.contoso.com"}
 ```
+
+### Group email messages delivered to new members
+
+To control whether new members of a group receive group email messages, run the following Exchange Online command:
+
+```powershell
+Set-UnifiedGroup <GroupName> -AutoSubscribeNewMembers
+```
+
+Group owner can enable/disable the subscription from group settings and by selecting the following option:
+
+![Select the subscription option](./media/o365-group-tasks/subscription-checkbox.png)
+
+> [!NOTE]
+> The `AutoSubscribeNewMembers` parameter takes effect for new members of a group after the change is made. Existing members are not affected.
+
+Individual users can start and stop receiving group email messages by selecting the **Follow in Inbox/Stop following in Inbox** option on the group. See [Follow a group in Outlook](https://support.microsoft.com/en-us/office/follow-a-group-in-outlook-e147fc19-f548-4cd2-834f-80c6235b7c36).
+
+### Send group email messages to your Inbox
+
+By default, when you send an email message to an Outlook group that you're a member of, you don't receive a copy of that message in your Inbox. You can change this setting.
+
+1. Sign in to your mailbox by using Outlook on the web (OWA), and then select **Settings** > **view all Outlook settings**.
+2. Select **Mail** > **Groups**.
+3. Select the **Send me a copy of email I send to a group** check box.
+
+   ![Select the send me a copy of email I send to a group checkbox](./media/o365-group-tasks/checkbox.png)
+
+> [!NOTE]
+> - This setting takes up to an hour to take effect.
+> - There is no admin control or command to push this setting to users. The setting must be enabled individually.
 
 ### Email issues in Office 365 Groups
 
@@ -225,37 +281,6 @@ Get-UnifiedGroup <GroupName> | Get-UnifiedGroupLinks -LinkType Subscribers
 
 See [Message trace in the Security & Compliance Center](/microsoft-365/security/office-365-security/message-trace-scc?view=o365-worldwide).
 
-### Group email messages delivered to new members
-
-To control whether new members of a group receive group email messages, run the following Exchange Online command:
-
-```powershell
-Set-UnifiedGroup <GroupName> -AutoSubscribeNewMembers
-```
-
-Group owner can enable/disable the subscription from group settings and selecting following option:
-
-![Select the subscription option](./media/o365-group-tasks/subscription-checkbox.png)
-
-> [!NOTE]
-> The `AutoSubscribeNewMembers` parameter takes effect for new members of a group after the change is made. Existing members are not affected.
-
-Individual users can start and stop receiving group email messages by selecting the **Follow in Inbox/Stop following in Inbox** option on the group. See [Follow a group in Outlook](https://support.microsoft.com/en-us/office/follow-a-group-in-outlook-e147fc19-f548-4cd2-834f-80c6235b7c36).
-
-### Send group email messages to your Inbox
-
-By default, when you send an email message to an Outlook group that you're a member of, you don't receive a copy of that message in your Inbox. You can change this setting.
-
-1. Sign in to your mailbox by using Outlook on the web (OWA), and then select **Settings** > **view all Outlook settings**.
-2. Select **Mail** > **Groups**.
-3. Select the **Send me a copy of email I send to a group** check box.
-
-   ![Select the send me a copy of email I send to a group checkbox](./media/o365-group-tasks/checkbox.png)
-
-> [!NOTE]
-> - This setting takes up to an hour to take effect.
-> - There is no admin control or command to push this setting to users. The setting must be enabled individually.
-
 ## Other tasks
 
 ### Restoring Office 365 groups
@@ -293,7 +318,7 @@ You can upgrade distribution lists one at a time, or several at the same time. I
 
 Also, see [Upgrade distribution lists to Office 365 Groups in Outlook](/microsoft-365/admin/manage/upgrade-distribution-lists?view=o365-worldwide).
 
-### Office 365 Groups clients access
+### Office 365 group client access
 
 For the best Office 365 group user experience, use the latest version of Outlook from the Office 365 suite or Outlook on the web (OWA).
 
@@ -328,7 +353,7 @@ Deleted office 365 groups and related services (such as Teams, SharePoint sites,
    Remove-AzureADMSDeletedDirectoryObject -Id <objectId>
    ```
 
-### Export Office 365 Groups information
+### Export Office 365 group information
 
 You can run PowerShell commands to accomplish the following tasks.
 
