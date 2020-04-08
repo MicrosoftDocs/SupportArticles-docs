@@ -29,7 +29,7 @@ Tenant administrators perform many common tasks to manage O365 groups. This arti
   - [Prevent group members from changing a group calendar](#prevent-group-members-from-changing-a-group-calendar)
   - [Office 365 group limits](#office-365-group-limits)
 - Office 365 Groups email management
-  - [Remove the onmicrosoft.com email address](#remove-the-onmicrosoft.com-email-address)
+  - [Remove the onmicrosoft.com email address](#remove-the-email-address)
   - [Customize email addresses stamped onto new Office 365 groups](#customize-email-addresses-stamped-onto-new-office-365-groups)
   - [Change email addresses of existing groups after you add a domain to a tenant](#change-email-addresses-of-existing-groups-after-you-add-a-domain-to-a-tenant)
   - [Add or remove the secondary email address from Office 365 Groups](#add-or-remove-the-secondary-email-address-from-office-365-groups)
@@ -42,7 +42,7 @@ Tenant administrators perform many common tasks to manage O365 groups. This arti
   - [Office 365 group client access](#office-365-group-client-access)
   - [Office 365 group migration](#office-365-group-migration)
   - [Office 365 group deletion](#office-365-group-deletion)
-  - [Export Office 365 group information](#export-office-365-group-information)
+  - [Export Office 365 Groups information](#export-office-365-groups-information)
 - Useful scripts for Office 365 Groups management
 
 ## Office 365 Groups and Teams
@@ -152,7 +152,7 @@ This table shows the size and membership limits that apply to Office 365 Groups.
 
 ## Office 365 Groups email management
 
-### Remove the onmicrosoft.com email address
+### <a id="remove-the-email-address" />Remove the onmicrosoft.com email address
 
 The *\<domain>.onmicrosoft.com* email address is a Microsoft Online Email Routing Address (MOERA). At least one MOERA must be attached to a group at any one time. Therefore, you can't remove the onmicrosoft.com address from a group. However, you can change the MOERA domain to be a secondary email address of the group.
 
@@ -228,7 +228,7 @@ Group owner can enable/disable the subscription from group settings and by selec
 > [!NOTE]
 > The `AutoSubscribeNewMembers` parameter takes effect for new members of a group after the change is made. Existing members are not affected.
 
-Individual users can start and stop receiving group email messages by selecting the **Follow in Inbox/Stop following in Inbox** option on the group. See [Follow a group in Outlook](https://support.microsoft.com/en-us/office/follow-a-group-in-outlook-e147fc19-f548-4cd2-834f-80c6235b7c36).
+Individual users can start and stop receiving group email messages by selecting the **Follow in Inbox/Stop following in Inbox** option on the group. See [Follow a group in Outlook](https://support.microsoft.com/office/e147fc19-f548-4cd2-834f-80c6235b7c36).
 
 ### Send group email messages to your Inbox
 
@@ -241,6 +241,7 @@ By default, when you send an email message to an Outlook group that you're a mem
    ![Select the send me a copy of email I send to a group checkbox](./media/o365-group-tasks/checkbox.png)
 
 > [!NOTE]
+>
 > - This setting takes up to an hour to take effect.
 > - There is no admin control or command to push this setting to users. The setting must be enabled individually.
 
@@ -271,7 +272,7 @@ If your sender receives a non-delivery report (NDR) that has the status code 550
 
 #### Issue 2: Messages sent to an Office 365 group are not received by all members
 
-Make sure that all group members have subscribed to the desired messages. See [Follow a group in Outlook](https://support.microsoft.com/en-us/office/follow-a-group-in-outlook-e147fc19-f548-4cd2-834f-80c6235b7c36).
+Make sure that all group members have subscribed to the desired messages. See [Follow a group in Outlook](https://support.microsoft.com/office/e147fc19-f548-4cd2-834f-80c6235b7c36).
 
 To check the message status of members who have subscribed to group emails, tenant admins can run the following command:
 
@@ -344,6 +345,7 @@ Deleted office 365 groups and related services (such as Teams, SharePoint sites,
    ```powershell
    Get-AzureADMSDeletedGroup
    ```
+
 3. Purge the deleted group by running the following command.
 
    > [!CAUTION]
@@ -353,7 +355,7 @@ Deleted office 365 groups and related services (such as Teams, SharePoint sites,
    Remove-AzureADMSDeletedDirectoryObject -Id <objectId>
    ```
 
-### Export Office 365 group information
+### Export Office 365 Groups information
 
 You can run PowerShell commands to accomplish the following tasks.
 
