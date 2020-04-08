@@ -65,14 +65,6 @@
       href: ../delete-calendar-items/cannot-remove-items.md
     - name: Message store has reached its maximum size
       href: ../delete-calendar-items/store-reached-maximum-size.md
-  - name: Distribution Groups
-    items:
-    - name: Cannot determine group type
-      href: ../distribution-groups/cannot-determine-group-type-error.md
-    - name: Prevent users from creating and managing group
-      href: ../distribution-groups/prevent-users-create-manage-dg.md
-    - name: You don't have sufficient permissions
-      href: ../distribution-groups/no-sufficient-permissions-moving-dg.md
   - name: Email Alias
     items:
     - name: Remove an alias  from a contact
@@ -87,6 +79,14 @@
       href: ../email-alias/remove-an-alias-from-a-shared-mailbox.md
     - name: Remove an email alias
       href: ../email-alias/remove-an-email-alias.md
+  - name: Groups
+    items:
+    - name: Cannot determine group type
+      href: ../groups/cannot-determine-group-type-error.md
+    - name: Prevent users from creating and managing group
+      href: ../groups/prevent-users-create-manage-dg.md
+    - name: You don't have sufficient permissions
+      href: ../groups/no-sufficient-permissions-moving-dg.md
   - name: Mailbox Migration
     items:
     - name: Issue with Add-RecipientPermission
