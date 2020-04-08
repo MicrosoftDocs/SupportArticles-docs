@@ -383,13 +383,13 @@ To list all Office 365 groups together with tracking information about the group
 
 ## Useful scripts for Office 365 Groups management
 
-### <a id="sample-one" />Sample 1: See all the groups together with created date, owner, and membership count
+### Sample 1: See all the groups together with created date, owner, and membership count
 
 ```powershell
 Get-UnifiedGroup | Select-Object Id, DisplayName, ManagedBy, Alias, AccessType, WhenCreated, @{Expression={([array](Get-UnifiedGroupLinks -Identity $_.Id -LinkType Members)).Count }; Label='Members'} | Sort-Object whencreated | Format-Table displayname, alias, managedby, Members, accesstype, whencreated
 ```
 
-### <a id="sample-two" />Sample 2: Create a report for users in a group
+### Sample 2: Create a report for users in a group
 
 ```powershell
 $Groups = Get-UnifiedGroup -ResultSize Unlimited
@@ -406,7 +406,7 @@ Get-UnifiedGroupLinks -Identity $group.Name -LinkType Members | ForEach-Object {
 } | Export-CSV ".\Office365GroupMembers.csv" -NoTypeInformation -Encoding UTF8
 ```
 
-### <a id="sample-three" />Sample 3: Assign "Send As" permissions on a group
+### Sample 3: Assign "Send As" permissions on a group
 
 ```powershell
 $groupAlias = "group1"
