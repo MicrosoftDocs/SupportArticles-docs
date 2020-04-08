@@ -44,9 +44,6 @@ Tenant administrators perform many common tasks to manage O365 groups. This arti
   - [Office 365 group deletion](#office-365-group-deletion)
   - [Export Office 365 Groups information](#export-office-365-groups-information)
 - Useful scripts for Office 365 Groups management
-  - [Sample 1: See all the groups together with created date, owner, and membership count](#sample-one)
-  - [Sample 2: Create a report for users in a group](#sample-two)
-  - [Sample 3: Assign "Send As" permissions on a group](#sample-three)
 
 ## Office 365 Groups and Teams
 
