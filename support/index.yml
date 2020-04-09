@@ -50,6 +50,11 @@ productDirectory:
     links:
     - url: windowsdeveloper/welcome-support-windowsdeveloper.md
       text: Support for Windows Developer
+  - title: Microsoft Endpoint Manager
+    imageSrc: "media/hub-landing/MEM.jpg"
+    links:
+    - url: mem/index.yml
+      text: Support for Microsoft Endpoint Manager
 
 # conceptualContent:
 
