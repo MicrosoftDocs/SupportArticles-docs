@@ -18,34 +18,58 @@ search.appverid: MET150
 ---
 # O365 Groups - common tasks
 
-Tenant administrators perform many common tasks to manage O365 groups. This article provides a quick reference for doing these tasks. Tasks are divided into sections to help you sort through them quickly. Select a task to navigate directly to it.
+<a id="top" />Tenant administrators perform many common tasks to manage O365 groups. This article provides a quick reference for doing these tasks. Tasks are divided into sections to help you sort through them quickly. Select a task to navigate directly to it.
 
-- Office 365 Groups and Teams
-  - [Display an Office 365 group associated with a team](#display-an-office-365-group-associated-with-a-team)
+- Office 365 creation & display
   - [Control Office 365 group creation](#control-office-365-group-creation)
+  - [Display an Office 365 group associated with a team](#display-an-office-365-group-associated-with-a-team)
 - Office 365 group delegation
   - [Enable specific users to "Send As" an Office 365 group](#enable-specific-users)
-  - [Restrict user access to only a group calendar](#restrict-user-access-to-only-a-group-calendar)
+  - [Control user access to specific group resources](#control-user-access-to-specific-group-resources)
   - [Prevent group members from changing a group calendar](#prevent-group-members-from-changing-a-group-calendar)
   - [Office 365 group limits](#office-365-group-limits)
 - Office 365 Groups email management
   - [Remove the onmicrosoft.com email address](#remove-the-email-address)
   - [Customize email addresses stamped onto new Office 365 groups](#customize-email-addresses-stamped-onto-new-office-365-groups)
-  - [Change email addresses of existing groups after you add a domain to a tenant](#change-email-addresses-of-existing-groups-after-you-add-a-domain-to-a-tenant)
-  - [Add or remove the secondary email address from Office 365 Groups](#add-or-remove-the-secondary-email-address-from-office-365-groups)
-  - [Group email messages delivered to new members](#group-email-messages-delivered-to-new-members)
-  - [Send group email messages to your Inbox](#send-group-email-messages-to-your-inbox)
+  - [Change email addresses of existing groups after adding a domain to a tenant](#change-email-addresses-of-existing-groups-after-adding-a-domain-to-a-tenant)
+  - [Add or remove a secondary email address from an Office 365 Group](#add-or-remove-a-secondary-email-address-from-an-office-365-group)
+  - [Control delivery of group email messages to new members](#control-delivery-of-group-email-messages-to-new-members)
+  - [Get a copy of group email messages you send](#get-a-copy-of-group-email-messages-you-send)
   - [Email issues in Office 365 Groups](#email-issues-in-office-365-groups)
 - Other tasks
   - [Restoring Office 365 groups](#restoring-office-365-groups)
   - [Convert to an Office 365 group](#convert-to-an-office-365-group)
-  - [Office 365 group client access](#office-365-group-client-access)
+  - [Access Office 365 groups from Exchange clients](#access-office-365-groups-from-exchange-clients)
   - [Office 365 group migration](#office-365-group-migration)
   - [Office 365 group deletion](#office-365-group-deletion)
   - [Export Office 365 Groups information](#export-office-365-groups-information)
 - Useful scripts for Office 365 Groups management
 
-## Office 365 Groups and Teams
+## Office 365 Groups creation & display
+
+### Control Office 365 group creation
+
+By default, all users of the tenant are allowed to create Office 365 groups. However, this can result in unaccounted, orphaned, and inactive groups. To avoid this problem, you can [control how users create Office 365 Groups](/microsoft-365/admin/create-groups/manage-creation-of-groups?view=o365-worldwide).
+
+You can also use the following tools to control Office 365 group creation:
+
+- Office 365 Groups expiration policy
+
+  This feature makes life easier for users, including admins, group owners, and members by automating the expiration and renewal process. It does this by tracking groups for user activity across different apps, such as Teams, SharePoint, and Outlook, that are associated with the group.
+
+  To learn more, see:
+
+  [User Activity based Expiration Policy for Office 365 groups](https://techcommunity.microsoft.com/t5/office-365-blog/user-activity-based-expiration-policy-for-office-365-groups-is/ba-p/942877)
+
+  [Office 365 group expiration policy](/microsoft-365/admin/create-groups/office-365-groups-expiration-policy?view=o365-worldwide)
+
+  [Configure the expiration policy for Office 365 Groups](/azure/active-directory/users-groups-roles/groups-lifecycle)
+
+- Office 365 group naming policy
+
+  Worried that users might give offensive names to the Office 365 groups that they create? Use the Office 365 Groups naming policy to block specific words and limit group names to certain criteria, such as department names. See [Office 365 Groups naming policy](/microsoft-365/admin/create-groups/groups-naming-policy?view=o365-worldwide).
+
+[Back to top](#top)
 
 ### Display an Office 365 group associated with a team
 
@@ -75,27 +99,7 @@ All new teams have an associated Office 365 group. By default, this Office 365 g
    > [!NOTE]
    > The value **$false** unhides the group from the Exchange client, and **$true** hides it.
 
-### Control Office 365 group creation
-Office 365 group client access
-By default, all users of the tenant are allowed to create Office 365 groups. However, this can result in unaccounted, orphaned, and inactive groups. To avoid this problem, you can [control how users create Office 365 Groups](/microsoft-365/admin/create-groups/manage-creation-of-groups?view=o365-worldwide).
-
-You can also use the following tools to control Office 365 group creation:
-
-- Office 365 Groups expiration policy
-
-  This feature makes life easier for users, including admins, group owners, and members by automating the expiration and renewal process. It does this by tracking groups for user activity across different apps, such as Teams, SharePoint, and Outlook, that are associated with the group.
-
-  To learn more, see:
-
-  [User Activity based Expiration Policy for Office 365 groups](https://techcommunity.microsoft.com/t5/office-365-blog/user-activity-based-expiration-policy-for-office-365-groups-is/ba-p/942877)
-
-  [Office 365 group expiration policy](/microsoft-365/admin/create-groups/office-365-groups-expiration-policy?view=o365-worldwide)
-
-  [Configure the expiration policy for Office 365 Groups](/azure/active-directory/users-groups-roles/groups-lifecycle)
-
-- Office 365 group naming policy
-
-  Worried that users might give offensive names to the Office 365 groups that they create? Use the Office 365 Groups naming policy to block specific words and limit group names to certain criteria, such as department names. See [Office 365 Groups naming policy](/microsoft-365/admin/create-groups/groups-naming-policy?view=o365-worldwide).
+[Back to top](#top)
 
 ## Office 365 group delegation
 
@@ -112,7 +116,9 @@ You can assign "Send As" permissions to allow specific users to send messages on
 
 For more information, see [Allow members to send as or send on behalf of a Group](/microsoft-365/admin/create-groups/allow-members-to-send-as-or-send-on-behalf-of-group?view=o365-worldwide).
 
-### Restrict user access to only a group calendar
+[Back to top](#top)
+
+### Control user access to specific group resources
 
 An Office 365 group has the following resources:
 
@@ -123,6 +129,8 @@ An Office 365 group has the following resources:
 
 A user must be the member of the Office 365 group to access any of these resources. You can't delegate access to a group resource individually. However, you can grant access to group conversations, files, calendar invitations, and notebooks to individual guests. See [Adding guests to Office 365 Groups](https://support.office.com/article/adding-guests-to-office-365-groups-bfc7a840-868f-4fd6-a390-f347bf51aff6).
 
+[Back to top](#top)
+
 ### Prevent group members from changing a group calendar
 
 You can set read-only calendar permissions on group members by specifying the `CalendarMemberReadOnly` parameter.
@@ -132,6 +140,8 @@ For example, the following command makes the calendar read-only for all members 
 ```powershell
 Set-UnifiedGroup Group1 -CalendarMemberReadOnly
 ```
+
+[Back to top](#top)
 
 ### Office 365 group limits
 
@@ -150,6 +160,8 @@ This table shows the size and membership limits that apply to Office 365 Groups.
 |Distribution Group as a member of an Office 365 group|A distribution group that has more than 1,000 members cannot be added to an Office 365 group. This also includes the nested distribution group members.|
 |||
 
+[Back to top](#top)
+
 ## Office 365 Groups email management
 
 ### <a id="remove-the-email-address" />Remove the onmicrosoft.com email address
@@ -166,6 +178,8 @@ Set-UnifiedGroup Marketing -PrimarySmtpAddress marketing@contoso.com
 
 To learn more about MOERA addresses, see [How the proxyAddresses attribute is populated in Azure AD](https://support.microsoft.com/help/3190357/how-the-proxyaddresses-attribute-is-populated-in-azure-ad).
 
+[Back to top](#top)
+
 ### Customize email addresses stamped onto new Office 365 groups
 
 You can create an email address policy to automatically stamp customized email addresses onto Office 365 groups. See [Choose the domain to use when creating Office 365 Groups](/microsoft-365/admin/create-groups/choose-domain-to-create-groups?view=o365-worldwide).
@@ -173,7 +187,9 @@ You can create an email address policy to automatically stamp customized email a
 > [!NOTE]
 > The email address policy does not change the email addresses of Office 365 groups that were in use before the policy was created.
 
-### Change email addresses of existing groups after you add a domain to a tenant
+[Back to top](#top)
+
+### Change email addresses of existing groups after adding a domain to a tenant
 
 Assume that you add an accepted domain, and you want to make it the primary SMTP address for all Office 365 groups that were created before the domain was added to the tenant.
 
@@ -197,7 +213,9 @@ Set-UnifiedGroup -Identity $O365Group.identity -EmailAddresses @{add=$Newemailid
 > [!NOTE]
 > Replace *groups.contoso.com* with the domain name that you want to add, and make sure that the new name is an accepted domain.
 
-### Add or remove the secondary email address from Office 365 Groups
+[Back to top](#top)
+
+### Add or remove a secondary email address from an Office 365 Group
 
 You can use the following Exchange Online PowerShell commands to add and remove a non-primary email address from an Office 365 group:
 
@@ -213,7 +231,9 @@ Remove:
 Set-UnifiedGroup Group1 -EmailAddresses @{remove="group1@secondary.contoso.com"}
 ```
 
-### Group email messages delivered to new members
+[Back to top](#top)
+
+### Control delivery of group email messages to new members
 
 To control whether new members of a group receive group email messages, run the following Exchange Online PowerShell command:
 
@@ -230,7 +250,9 @@ Group owners can enable/disable the subscription from group settings by selectin
 
 Individual users can start and stop receiving group email messages by selecting the **Follow in Inbox/Stop following in Inbox** option on the group. See [Follow a group in Outlook](https://support.microsoft.com/office/e147fc19-f548-4cd2-834f-80c6235b7c36).
 
-### Send group email messages to your Inbox
+[Back to top](#top)
+
+### Get a copy of group email messages you send
 
 By default, when you send an email message to an Outlook group that you're a member of, you don't receive a copy of that message in your Inbox. You can change this setting.
 
@@ -244,6 +266,8 @@ By default, when you send an email message to an Outlook group that you're a mem
 >
 > - This setting takes up to an hour to take effect.
 > - There is no admin control or command to push this setting to users. The setting must be enabled individually.
+
+[Back to top](#top)
 
 ### Email issues in Office 365 Groups
 
@@ -282,6 +306,8 @@ Get-UnifiedGroup <GroupName> | Get-UnifiedGroupLinks -LinkType Subscribers
 
 See [Message trace in the Security & Compliance Center](/microsoft-365/security/office-365-security/message-trace-scc?view=o365-worldwide).
 
+[Back to top](#top)
+
 ## Other tasks
 
 ### Restoring Office 365 groups
@@ -309,17 +335,21 @@ Restoring an Office 365 group restores any services that are related to the grou
 
 Use the Exchange admin center (EAC) or Azure Active Directory (Azure AD) PowerShell to restore a deleted group. See [Restore a deleted Office 365 Group](/microsoft-365/admin/create-groups/restore-deleted-group?view=o365-worldwide).
 
+[Back to top](#top)
+
 ### Convert to an Office 365 group
 
 Microsoft provides no tools to convert a shared mailbox to an Office365 group, or vice versa.
 
-However, you can upgrade distribution lists to Office 365 groups. This is a great way to give your organization's distribution lists all the features and functionality of Office 365 groups. See [Why you should upgrade your distribution lists to groups in Outlook](https://support.microsoft.com/en-us/office/why-you-should-upgrade-your-distribution-lists-to-groups-in-outlook-7fb3d880-593b-4909-aafa-950dd50ce188).
+However, you can upgrade distribution lists to Office 365 groups. This is a great way to give your organization's distribution lists all the features and functionality of Office 365 groups. See [Why you should upgrade your distribution lists to groups in Outlook](https://support.microsoft.com/office/7fb3d880-593b-4909-aafa-950dd50ce188).
 
 You can upgrade distribution lists one at a time, or several at the same time. If the distribution list can't be upgraded, a dialog box opens to indicate this. See [Which distribution lists cannot be upgraded?](/microsoft-365/admin/manage/upgrade-distribution-lists?view=o365-worldwide#which-distribution-lists-cannot-be-upgraded).
 
 Also, see [Upgrade distribution lists to Office 365 Groups in Outlook](/microsoft-365/admin/manage/upgrade-distribution-lists?view=o365-worldwide).
 
-### Office 365 group client access
+[Back to top](#top)
+
+### Access Office 365 groups from Exchange clients
 
 For the best Office 365 group user experience, use the latest version of Outlook from the Office 365 suite or Outlook on the web (OWA).
 
@@ -331,9 +361,13 @@ The following Outlook clients can access Office 365 groups:
 - Outlook for Android and Outlook for iOS
 - Outlook on the web (OWA)
 
+[Back to top](#top)
+
 ### Office 365 group migration
 
 Currently, there is no default tool or method available to migrate Office 365 groups between tenants.
+
+[Back to top](#top)
 
 ### Office 365 group deletion
 
@@ -354,6 +388,8 @@ Deleted office 365 groups and related services (such as Teams, SharePoint sites,
    ```powershell
    Remove-AzureADMSDeletedDirectoryObject -Id <objectId>
    ```
+
+[Back to top](#top)
 
 ### Export Office 365 Groups information
 
@@ -380,6 +416,8 @@ Get-UnifiedGroup -IncludeSoftDeletedGroups |?{$_.ManagedBy -eq $null}
 To list all Office 365 groups together with tracking information about the group creator, you have to use the [auditing](https://protection.office.com/unifiedauditlog) information. [Search](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance?view=o365-worldwide) the unified audit log for the "added group" activity.
 
 ![Search for added group](./media/o365-group-tasks/search.png)
+
+[Back to top](#top)
 
 ## Useful scripts for Office 365 Groups management
 
