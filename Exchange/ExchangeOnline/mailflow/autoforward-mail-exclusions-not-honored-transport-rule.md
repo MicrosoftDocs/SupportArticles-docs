@@ -1,21 +1,21 @@
 ---
-title: Exclusions to automatically forwarded messages are not honored by a transport rule
-description: The transport rule doesn't honor the exclusions, and it rejects the messages. This article provides a resolution.
-author: TobyTu
-ms.author: Arindam.Thokder
-manager: dcscontentpm
-audience: ITPro 
-ms.topic: article 
+title: Exclusions to automatically forwarded messages are not honored by a transport rule
+description: The transport rule doesn't honor the exclusions, and it rejects the messages. This article provides a resolution.
+author: TobyTu
+ms.author: Arindam.Thokder
+manager: dcscontentpm
+audience: ITPro 
+ms.topic: article 
 ms.service: exchange-online
-localization_priority: Normal
-ms.custom: 
-- CI 116057
-- CSSTroubleshoot 
-ms.reviewer: lindabr, Arindam.Thokder
-appliesto: 
+localization_priority: Normal
+ms.custom: 
+- CI 116057
+- CSSTroubleshoot
+ms.reviewer: Arindam.Thokder
+appliesto:
 - Exchange Online
-search.appverid: 
-- MET150
+search.appverid: 
+- MET150
 ---
 
 # Exclusions to automatically forwarded messages are not honored by a transport rule
