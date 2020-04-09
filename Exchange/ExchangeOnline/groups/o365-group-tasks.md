@@ -63,7 +63,7 @@ All new teams have an associated Office 365 group. By default, this Office 365 g
    > [!NOTE]
    > The value **$false** unhides the group from the address list, and **$true** hides it.
 
-#### Unhide the Office 365 group from the Outlook or OWA client
+#### Unhide the Office 365 group from an Exchange client
 
 1. [Connect to Exchange Online PowerShell](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps).
 2. Run the following command and specify the required value:
@@ -76,8 +76,8 @@ All new teams have an associated Office 365 group. By default, this Office 365 g
    > The value **$false** unhides the group from the Exchange client, and **$true** hides it.
 
 ### Control Office 365 group creation
-
-By default, all users of the tenant are allowed to create Office 365 groups. However, this can leave you with unaccounted, orphaned, and inactive groups. To avoid this problem, you can [control how users create Office 365 Groups](/microsoft-365/admin/create-groups/manage-creation-of-groups?view=o365-worldwide).
+Office 365 group client access
+By default, all users of the tenant are allowed to create Office 365 groups. However, this can result in unaccounted, orphaned, and inactive groups. To avoid this problem, you can [control how users create Office 365 Groups](/microsoft-365/admin/create-groups/manage-creation-of-groups?view=o365-worldwide).
 
 You can also use the following tools to control Office 365 group creation:
 
@@ -195,7 +195,7 @@ Set-UnifiedGroup -Identity $O365Group.identity -EmailAddresses @{add=$Newemailid
 ```
 
 > [!NOTE]
-> Replace *groups.contoso.com* with the domain name that you want to add, and make sure that the new name exists in the accepted domains.
+> Replace *groups.contoso.com* with the domain name that you want to add, and make sure that the new name is an accepted domain.
 
 ### Add or remove the secondary email address from Office 365 Groups
 
@@ -215,13 +215,13 @@ Set-UnifiedGroup Group1 -EmailAddresses @{remove="group1@secondary.contoso.com"}
 
 ### Group email messages delivered to new members
 
-To control whether new members of a group receive group email messages, run the following Exchange Online command:
+To control whether new members of a group receive group email messages, run the following Exchange Online PowerShell command:
 
 ```powershell
 Set-UnifiedGroup <GroupName> -AutoSubscribeNewMembers
 ```
 
-Group owner can enable/disable the subscription from group settings and by selecting the following option:
+Group owners can enable/disable the subscription from group settings by selecting the following option:
 
 ![Select the subscription option](./media/o365-group-tasks/subscription-checkbox.png)
 
@@ -274,7 +274,7 @@ If your sender receives a non-delivery report (NDR) that has the status code 550
 
 Make sure that all group members have subscribed to the desired messages. See [Follow a group in Outlook](https://support.microsoft.com/office/e147fc19-f548-4cd2-834f-80c6235b7c36).
 
-To check the message status of members who have subscribed to group emails, tenant admins can run the following command:
+To check the message status of members who have subscribed to group emails, run the following command:
 
 ```powershell
 Get-UnifiedGroup <GroupName> | Get-UnifiedGroupLinks -LinkType Subscribers
@@ -346,7 +346,7 @@ Deleted office 365 groups and related services (such as Teams, SharePoint sites,
    Get-AzureADMSDeletedGroup
    ```
 
-3. Purge the deleted group by running the following command.
+3. Purge the deleted group by running the following command:
 
    > [!CAUTION]
    > Purging the group removes the group and its data permanently.
