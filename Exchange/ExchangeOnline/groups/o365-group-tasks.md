@@ -44,6 +44,9 @@ search.appverid: MET150
   - [Office 365 group deletion](#office-365-group-deletion)
   - [Export Office 365 Groups information](#export-office-365-groups-information)
 - Useful scripts for Office 365 Groups management
+  - [Sample 1: See all the groups together with created date, owner, and membership count](#sample-one)
+  - [Sample 2: Create a report for users in a group](#sample-two)
+  - [Sample 3: Assign "Send As" permissions on a group](#sample-three)
 
 ## Office 365 Groups creation & display
 
@@ -421,13 +424,15 @@ To list all Office 365 groups together with tracking information about the group
 
 ## Useful scripts for Office 365 Groups management
 
-### Sample 1: See all the groups together with created date, owner, and membership count
+### <a id="sample-one" />Sample 1: See all the groups together with created date, owner, and membership count
 
 ```powershell
 Get-UnifiedGroup | Select-Object Id, DisplayName, ManagedBy, Alias, AccessType, WhenCreated, @{Expression={([array](Get-UnifiedGroupLinks -Identity $_.Id -LinkType Members)).Count }; Label='Members'} | Sort-Object whencreated | Format-Table displayname, alias, managedby, Members, accesstype, whencreated
 ```
 
-### Sample 2: Create a report for users in a group
+[Back to top](#top)
+
+### <a id="sample-two" />Sample 2: Create a report for users in a group
 
 ```powershell
 $Groups = Get-UnifiedGroup -ResultSize Unlimited
@@ -444,7 +449,9 @@ Get-UnifiedGroupLinks -Identity $group.Name -LinkType Members | ForEach-Object {
 } | Export-CSV ".\Office365GroupMembers.csv" -NoTypeInformation -Encoding UTF8
 ```
 
-### Sample 3: Assign "Send As" permissions on a group
+[Back to top](#top)
+
+### <a id="sample-three" />Sample 3: Assign "Send As" permissions on a group
 
 ```powershell
 $groupAlias = "group1"
@@ -452,3 +459,5 @@ $userAlias = "john"
 $groupsRecipientDetails = Get-Recipient -RecipientTypeDetails groupmailbox -Identity $groupAlias
 Add-RecipientPermission -Identity $groupsRecipientDetails.Name -Trustee $userAlias -AccessRights SendAs
 ```
+
+[Back to top](#top)
