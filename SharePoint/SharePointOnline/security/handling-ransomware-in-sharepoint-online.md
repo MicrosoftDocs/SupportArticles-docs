@@ -65,4 +65,4 @@ If you are affected by ransomware, try the following:
 
 For more information on ransomware, see the support article on [Ransomware](https://www.microsoft.com/security/portal/mmpc/shared/ransomware.aspx). 
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

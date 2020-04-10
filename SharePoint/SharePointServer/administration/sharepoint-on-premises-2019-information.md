@@ -35,4 +35,4 @@ Go [here](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/bg-p/Window
 
 The information on this page is subject to the [Microsoft Policy Disclaimer and Change Notice](https://www.microsoft.com/en-us/legal/intellectualproperty/onlinedisclaimer.aspx). Return to this site periodically to review any such changes.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

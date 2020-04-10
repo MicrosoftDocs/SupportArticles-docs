@@ -83,4 +83,4 @@ In Scenario 2, if we select Accounting OU but do not select Sales OU during the 
 
 This behavior is by design. This behavior is included to avoid unexpected scenarios in multi-tenant situations. However, it also applies to single tenant, on-premises SharePoint 2019, 2016, and 2013 farms.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

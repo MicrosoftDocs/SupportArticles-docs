@@ -51,4 +51,4 @@ This update changes the default encryption protocols from **SSL 3.0 or TLS 1.0**
 
 ## More information
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

@@ -120,4 +120,4 @@ sp_recompile proc_getwebnavstruct
 
 Running the [sp_recompile](https://msdn.microsoft.com/library/ms181647.aspx) command together with procedure, function, or table parameters targets a single element in the cache for removal without affecting the instance.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

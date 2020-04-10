@@ -102,4 +102,4 @@ For more information about how to set up and manage access requests, go to [Set 
 
 For more information about how to use the F12 developer tools, go to [Using the F12 developer tools](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/samples/bg182326(v=vs.85)).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/)
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

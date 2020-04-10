@@ -41,4 +41,4 @@ To work around this issue, disable automatic updating of the workflow status to 
 
 This error occurs because the Style Library list requires you to check out items. You expect that the "update status" action within the workflow will perform this operation. However, it does not.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

@@ -38,4 +38,4 @@ After CDN capability is configured, you can work with your tenant administrator 
 
 For guidelines and instructions about how to enable the CDN and create a private CDN, see [General availability of Office 365 CDN](https://dev.office.com/blogs/general-availability-of-office-365-cdn).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

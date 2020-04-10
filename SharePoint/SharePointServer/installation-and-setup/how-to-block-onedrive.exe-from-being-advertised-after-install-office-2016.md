@@ -117,4 +117,4 @@ If you have to reinstall OneDrive.exe in the future, make sure that you perform 
 
 - If you delete the shortcuts for starting OneDrive.exe after you install Office 2016, you must again deploy and run the latest OneDrive setup package (OneDriveSetup.exe) on your users' computer to restore the shortcuts.     
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

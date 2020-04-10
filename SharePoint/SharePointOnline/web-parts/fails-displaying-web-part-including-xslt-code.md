@@ -42,4 +42,4 @@ This issue occurs when the XSLT code is throttled by SharePoint Online. In order
 - The custom XSLT causes a stack overflow.
 - The XSLT execution time exceeds one second.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

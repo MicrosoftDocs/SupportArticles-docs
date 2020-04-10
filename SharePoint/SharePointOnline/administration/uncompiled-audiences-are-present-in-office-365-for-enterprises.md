@@ -33,4 +33,4 @@ Note Audience targeting won't function correctly on SharePoint Online sites unti
 
 This behavior occurs because audiences are compiled weekly in SharePoint Online.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

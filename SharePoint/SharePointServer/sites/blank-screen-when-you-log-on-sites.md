@@ -84,4 +84,4 @@ To resolve the issue, disable FIPS by following these steps on the computer that
 
 SharePoint Server uses several Windows encryption algorithms for computing hash values that do not comply with Federal Information Processing Standard (FIPS) 140-2, Security Requirements for Cryptographic Modules. These algorithms are not used for security purposes. They are used for internal processing. For example, SharePoint Server uses MD5 to create hash values that are used as unique identifiers. Because SharePoint Server uses these algorithms, the program doesn't support the Windows security policy setting that requires FIPS-compliant algorithms for encryption and hashing.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

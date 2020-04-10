@@ -97,4 +97,4 @@ To remove a guest attribute from a user profile:
 7. In the field **Personal site capabilities**, remove the value that has been set.
 8. Select **Save and Close**.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

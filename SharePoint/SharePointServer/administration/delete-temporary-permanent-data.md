@@ -82,4 +82,4 @@ To delete permanent SharePoint Workspace data, follow these steps:
 > [!IMPORTANT]
 > When you run Groove.exe together with the /clean switch and the /all switch, all SharePoint Workspace account data and most file data are deleted. In this case, you cannot use SharePoint Workspace until you create a new account or import a previously saved account. If you create a new account, it will not have the same identity and will not belong to any workspaces. This occurs even if you use all the same information when you create the account. If you create a new account, distribute your new identity to all SharePoint Workspace contacts so that you can be re-invited to workspaces.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

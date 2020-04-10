@@ -22,7 +22,7 @@ appliesto:
 
 When you start a SharePoint Online workflow that uses the Microsoft SharePoint 2010 Workflow platform type, you experience one of the following symptoms:
 
-- The workflow displays a “Please wait while your workflow is started” message for about one minute.
+- The workflow displays a "Please wait while your workflow is started" message for about one minute.
 - The workflow takes longer than expected to finish or seems slow.
 
 Depending on the point at which you interact with the workflow, such as a web browser, through Microsoft Outlook or approving a task, the workflow takes about one minute to respond when you approve a task or do a similar action and the workflow seems slow. Examples of common situations that may experience this issue include such out-of-the-box (OOB) workflows as the following:
@@ -45,4 +45,4 @@ This problem occurs because the workflow has to be compiled before it can be pro
 
 If a workflow has to complete compiling before it runs, you will encounter this delay. This can cause the workflow to take longer than expected or seem slow. This is expected behavior. SharePoint 2010 workflows enable enterprises to reduce the number of unnecessary interactions between people as they run business processes. Workflows such as an approval workflow generally require human interaction because they aren't designed to immediately process an action. Therefore, you may experience the behavior that's described in the "PROBLEM" section, such as the approving of a task being slow or taking longer than expected, if the workflow has to compile.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

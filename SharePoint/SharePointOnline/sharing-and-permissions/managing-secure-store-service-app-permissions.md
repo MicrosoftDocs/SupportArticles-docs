@@ -47,4 +47,4 @@ If the user is added to the Central Administration server's Local Administrators
 
 Even though the user is explicitly listed in Central Administration's Farm Administrators group, after the August 2013 Cumulative Update for SharePoint 2010 is applied, the account cannot administer the Secure Store without additional permissions.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

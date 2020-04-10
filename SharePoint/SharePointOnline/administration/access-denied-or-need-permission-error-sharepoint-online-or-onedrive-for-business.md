@@ -19,7 +19,7 @@ appliesto:
 - SharePoint Online
 ---
 
-# “Access Denied”, “You need permission to access this site”, or “User not found in the directory” errors in SharePoint Online and OneDrive for Business
+# "Access Denied", "You need permission to access this site", or "User not found in the directory" errors in SharePoint Online and OneDrive for Business
 
 ## Symptoms
 When using SharePoint Online or OneDrive for Business, you receive one of the following error messages:
@@ -57,7 +57,7 @@ Follow the steps below depending on which area you are receiving the error:
 <li type=a>To use the <b>Check Permissions</b> feature, navigate to the User.aspx page by selecting the gear icon in the upper right corner, then <b>Site Settings</b> . Below <b>Users and Permissions</b> , select <b>Site Permissions</b> <br/>
    For example, the full URL will resemble the following: <b>https://contoso.sharepoint.com/_layouts/15/user.aspx</b> </li>
 <li type=a>In the top ribbon, choose <b>Check Permissions</b> </li>
-<li type=a>In the <b>User/Group</b> field, type the user’s name and select <b>Check Now</b> </li>
+<li type=a>In the <b>User/Group</b> field, type the user's name and select <b>Check Now</b> </li>
 <li type=a>The type of permissions the user has on a site and which security group it is derived from (if applicable) will be displayed.</li>
 </ol>
 <li>If the user does not have appropriate permissions, grant them permissions to the <a href="https://support.office.com/en-us/article/share-sharepoint-files-or-folders-1fe37332-0f9a-4719-970e-d2578da4941c" target="_blank">file</a> or <a href="https://support.office.com/en-us/article/share-a-site-958771a8-d041-4eb8-b51c-afea2eae3658?ui=en-US&rs=en-US&ad=US" target="_blank">site</a>.</li>
@@ -97,7 +97,7 @@ Follow the steps below depending on which area you are receiving the error:
 <li>Select <b>Contact Support</b>.
 
 > [!NOTE]
-> If you are using the old M365 admin center, you can skip the “Description” step listed below as that field will not exist
+> If you are using the old M365 admin center, you can skip the "Description" step listed below as that field will not exist
 
 </li>
 <li>Under <b>Description</b> enter <b>"PUID Mismatch on OneDrive Site"</b>. Fill out the remaining information and select <b>Contact me</b>.</li>
@@ -108,12 +108,12 @@ Follow the steps below depending on which area you are receiving the error:
 </li></ul>
 </li></ul>
 
-<li><b>If the user is attempting to access another user’s OneDrive site:</b>
+<li><b>If the user is attempting to access another user's OneDrive site:</b>
 <ul><li>Determine what <a href="https://docs.microsoft.com/sharepoint/understanding-permission-levels" target="_blank">permission level</a> the user should have to the site (member, owner, etc.) and then verify the permissions via the <b>Check Permissions</b> feature.
 <ul><li>To use the <b>Check Permissions</b> feature, navigate to the User.aspx.
 For example, the full URL will resemble the following: https://contoso-my.sharepoint.com/personal/admin_contoso_onmicrosoft_com/_layouts/15/user.aspx.</li>
 <li>In the top ribbon, choose <b>Check Permissions</b>. </li>
-<li>In the <b>User/Group</b> field, type the user’s name and select <b>Check Now</b>. </li>
+<li>In the <b>User/Group</b> field, type the user's name and select <b>Check Now</b>. </li>
 <li>The kind of permissions that the user has on a site and which security group it is derived from (if applicable) will be displayed.</li></ul></li>
 <li>If the user does not have appropriate permissions, grant them permissions to the <a href="https://support.office.com/en-us/article/share-sharepoint-files-or-folders-1fe37332-0f9a-4719-970e-d2578da4941c" target="_blank">file</a> or <a href="https://support.office.com/en-us/article/share-a-site-958771a8-d041-4eb8-b51c-afea2eae3658?ui=en-US&rs=en-US&ad=US" target="_blank">site</a>.</li>
 <li>If the user continues to receive an error message, remove them from the site using the following steps:<br/> 
@@ -135,7 +135,7 @@ For example, the full URL will resemble the following: <b>https://contoso-my.sha
 <li type=a>To use the <b>Check Permissions</b> feature, navigate to the User.aspx page by selecting the gear icon in the upper right corner and then <b>Site Settings</b>  Under <b>Users and Permissions</b>, select <b>Site Permissions</b> <br/>
 For example, the full URL will resemble the following: <b>https://contoso.sharepoint.com/_layouts/15/user.aspx</b></li>
       <li type=a>In the top ribbon, choose <b>Check Permissions</b> </li>
-      <li type=a>In the <b>User/Group</b> field, type the user’s name and select <b>Check Now</b> </li>
+      <li type=a>In the <b>User/Group</b> field, type the user's name and select <b>Check Now</b> </li>
       <li type=a>You will now see what kind of permissions the user has on a site and via which security group (if applicable).</li></ol></li>
 <li>If the user does not have appropriate permissions, grant them permissions to the <a href="https://support.office.com/en-us/article/share-sharepoint-files-or-folders-1fe37332-0f9a-4719-970e-d2578da4941c" target="_blank">file</a> or <a href="https://support.office.com/en-us/article/share-a-site-958771a8-d041-4eb8-b51c-afea2eae3658?ui=en-US&rs=en-US&ad=US" target="_blank">site</a>.</li>
 <li>If the user still receiving an error message, please remove them from the site using the following steps: 
@@ -252,7 +252,7 @@ All other subscriptions must use the SharePoint Online Management Shell by follo
     Remove-SPOExternalUser -UniqueIDs @($ExtUser.UniqueId)
    ```
 
-The steps below remove the external user’s ability to access SharePoint Online. However, the user will still appear in any people searches and within the SharePoint Online Management Shell Get-SPOUser cmdlet. To remove the user completely from SharePoint Online, you'll have to remove the user from the UserInfo list. There are two ways to achieve this.
+The steps below remove the external user's ability to access SharePoint Online. However, the user will still appear in any people searches and within the SharePoint Online Management Shell Get-SPOUser cmdlet. To remove the user completely from SharePoint Online, you'll have to remove the user from the UserInfo list. There are two ways to achieve this.
 
 1. Use the SharePoint Online UI. To do this, browse to each site collection to which the user previously had access, and then follow these steps:
 
@@ -298,7 +298,7 @@ The steps below remove the external user’s ability to access SharePoint Online
       Get-SPOUser -Site https://<contoso>.sharepoint.com | FT –a
       ```
 
-    Notice the external user’s Login Name in the returned results. As an external user, it might have a "live.com#" prefix if it's a Microsoft Account.
+    Notice the external user's Login Name in the returned results. As an external user, it might have a "live.com#" prefix if it's a Microsoft Account.
 
     Type the following cmdlet:
 
@@ -458,4 +458,4 @@ For more information about approval workflows, go to [Understand approval workfl
 
 For more information about permission levels in SharePoint Online, go to [Understanding permission levels](https://support.office.com/article/understanding-permission-levels-in-sharepoint-87ecbb0e-6550-491a-8826-c075e4859848?ocmsassetID=HA102772294&CorrelationId=8cb2ee53-10d3-48ec-baee-588885e94ba3&ui=en-US&rs=en-US&ad=US).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

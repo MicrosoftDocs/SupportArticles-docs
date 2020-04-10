@@ -71,4 +71,4 @@ If all alerts from multiple files or libraries are not delivered, visit the Serv
 
 This issue may occur if permissions aren't granted to the user's account in order to access the sites, the library, or the list in which the user wants to use alert functionality. This means that users must have permissions to the list or to the library for alerts and to the task list for tasks and for workflows.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

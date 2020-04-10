@@ -60,4 +60,4 @@ In certain cases, this may be the expected behavior. If an admin creates a group
 In other cases, this may be unintentional and cause issues because the group admin is also a participant of the group but failed to add himself/herself as a group member.
 If you create the group from a user interface in Outlook or SharePoint, this is not an issue. The group creator automatically becomes a member.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).
