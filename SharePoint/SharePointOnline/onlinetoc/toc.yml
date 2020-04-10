@@ -3,6 +3,8 @@
   items:
   - name: Administration
     items:
+    - name: Temporary off-peak processing of SharePoint Online services 
+      href: ../administration/temporary-adjustments-in-sharepoint-online.md
     - name: '"Sync to Outlook" button and "Task" link are missing'
       href: ../administration/sync-to-outlook-tasks-link-missing.md
     - name: Automatic EXIF property import unsupported
