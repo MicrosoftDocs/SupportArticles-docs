@@ -35,4 +35,4 @@ In this scenario, you receive the following error message:
 
 This error occurs because the Announcement Tiles feature is available only on the My Site host on which the My Sites websites reside.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

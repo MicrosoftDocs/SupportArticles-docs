@@ -52,4 +52,4 @@ The issue occurs because running Hybrid Picker from a consuming farm that consum
 
 Microsoft is aware of this issue and will address it in a future update.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

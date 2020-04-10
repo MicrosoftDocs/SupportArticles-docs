@@ -42,4 +42,4 @@ To work around this issue, do one of the following:
 
 This issue occurs because the Replace List Item Permissions action causes the workflow to terminate when the site collection contains complex permissions, such as 200 SharePoint groups. This is a known limitation in SharePoint.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

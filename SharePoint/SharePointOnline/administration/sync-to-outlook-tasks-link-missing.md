@@ -69,4 +69,4 @@ The **Tasks** menu option has been removed from SharePoint Online. Additionally,
 
 The personal **Tasks** page will also continue to be available for one year following the announcement that was made on September 4, 2014. After that time, this functionality will be removed and will no longer be available or supported. 
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

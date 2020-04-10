@@ -41,4 +41,4 @@ To fix this issue, remove the ampersand (&) from the site that contains the cale
 
 This issue occurs when the site that contains the calendar that you're creating the calendar overlay from contains an ampersand (&) in the URL.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

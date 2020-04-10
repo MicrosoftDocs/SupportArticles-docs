@@ -70,4 +70,4 @@ The steps to reproduce the error are as follows:
 8. Place the page in **Edit** mode, then place the **Pages Library web part** in edit mode.
 9. Select **OK** in the **web part properties** box without making any changes, then **Save and check-in** the page.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

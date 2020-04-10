@@ -27,4 +27,4 @@ http://weather.service.msn.com/data.aspx?weadegreetype=F&culture=en-US&weasearch
 
 There are third-party alternative providers that offer API-based weather information.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

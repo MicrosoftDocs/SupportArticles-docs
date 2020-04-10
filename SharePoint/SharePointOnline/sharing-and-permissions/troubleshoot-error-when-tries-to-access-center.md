@@ -43,4 +43,4 @@ This issue occurs when the account that the delegated partner administrator uses
 
 For more information, go to [Partners: Build your business and administer your Office 365 partner account](https://support.office.com/article/partners-build-your-business-and-administer-your-office-365-partner-subscription-30dd1681-47e0-4cbc-abfe-a222cd111319?ocmsassetID=HA102927574&CorrelationId=af24bbd4-dab1-4c25-a7f3-dc0767260c34&ui=en-US&rs=en-US&ad=US).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

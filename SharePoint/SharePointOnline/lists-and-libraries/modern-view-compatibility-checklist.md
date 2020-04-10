@@ -77,9 +77,9 @@ The following is a list of potential reasons for a list or library not to render
 * [Customizing "modern" lists and libraries](https://docs.microsoft.com/sharepoint/dev/solution-guidance/modern-experience-customizations-customize-lists-and-libraries)
 * [SharePoint Column Formatting](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting)
 
-## The View’s List or Library cannot be found
+## The View's List or Library cannot be found
 
-**Detection:** The View’s List or Library cannot be found.
+**Detection:** The View's List or Library cannot be found.
 
 **Recommendation:** Create a List or Library View.
 
@@ -306,4 +306,4 @@ The following columns are supported:
 
 For more information, see [Differences between the new and classic experiences for lists and libraries](https://support.office.com/article/differences-between-the-new-and-classic-experiences-for-lists-and-libraries-30e1aab0-a5cc-4363-b7f2-09e2ae07d4dc).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

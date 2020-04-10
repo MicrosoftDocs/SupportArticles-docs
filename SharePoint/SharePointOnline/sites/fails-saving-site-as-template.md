@@ -46,4 +46,4 @@ This issue occurs if the site contains apps that can't be saved as part of the t
 
 For more information about how to remove an app from a site, go to [Remove an app from a site](https://support.office.com/article/remove-an-app-from-a-site-03198d1b-c33b-498d-9469-af641a587d6c?ocmsassetID=HA103022226&CorrelationId=f300e60d-751b-4426-9932-42283b1567c6&ui=en-US&rs=en-US&ad=US).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

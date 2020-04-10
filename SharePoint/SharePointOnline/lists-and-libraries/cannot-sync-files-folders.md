@@ -33,7 +33,7 @@ After you upload or create a folder that's named "_private" in Microsoft SharePo
 
 - You try to open an item that exists in the _private folder in Microsoft Office Online, you receive the following error message:
 
-    - **Sorry, this document can’t be opened for editing**.
+    - **Sorry, this document can't be opened for editing**.
 
 ## Solution
 
@@ -43,4 +43,4 @@ To work around this issue, use a folder name other than "_private" in SharePoint
 
 This issue occurs because a folder that's named "_private" isn't supported in SharePoint Online.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

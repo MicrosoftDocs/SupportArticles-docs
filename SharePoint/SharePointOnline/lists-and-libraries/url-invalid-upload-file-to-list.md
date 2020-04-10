@@ -45,6 +45,6 @@ To work around this issue, remove the Version column from the list of Indexed Co
 
 ## More information
 
-This issue occurs when the Version column is configured as an Indexed Column. 
+This issue occurs when the Version column is configured as an Indexed Column.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

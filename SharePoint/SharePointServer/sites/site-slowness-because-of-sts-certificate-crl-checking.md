@@ -109,4 +109,4 @@ The main aspect to consider is for other certificates that are used on the compu
 
      **Note** The default size for the event log is 1 MB.     
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

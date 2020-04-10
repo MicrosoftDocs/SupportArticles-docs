@@ -49,4 +49,4 @@ msiexec /qn /lvx* rbs_install_log.txt /i RBS_amd64.msi DBNAME="WSS_Content" DBIN
 
 [Install the RBS client library on all SharePoint Front-end and Application servers](https://docs.microsoft.com/SharePoint/administration/install-and-configure-rbs#to-install-the-rbs-client-library-on-all-sharepoint-front-end-and-application-servers)
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

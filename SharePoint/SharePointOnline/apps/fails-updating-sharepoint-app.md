@@ -33,4 +33,4 @@ For more information, see [Update SharePoint Add-ins](https://docs.microsoft.com
 
 This error can occur if you don't manually update the app version number in the app manifest file (Appmanifest.xml).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

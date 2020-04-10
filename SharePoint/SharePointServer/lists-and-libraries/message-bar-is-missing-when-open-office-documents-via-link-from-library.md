@@ -170,4 +170,4 @@ Value: 1
 
 If the the Server bar still does not appear with the [Edit Document] button even after the OptimisticBHO key is enabled, make sure that the "Office Document Cache Handler" Add-on is Enabled in Internet Explorer's Tools>Manage Add-ons.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

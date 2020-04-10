@@ -53,4 +53,4 @@ The third-party products that are discussed in this article are manufactured by 
 
 For more information on the activation state of the parser that corresponds to the specified file format, see [Set-SPEnterpriseSearchFileFormatState](https://technet.microsoft.com/library/jj730455.aspx).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

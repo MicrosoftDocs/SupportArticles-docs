@@ -46,4 +46,4 @@ If you also cannot create the workspace from the SharePoint Workspace applicatio
 - FSSHTTP is disabled on the server   
 - The server is a 2007 SharePoint sever   
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

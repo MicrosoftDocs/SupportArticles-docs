@@ -65,4 +65,4 @@ To resolve this issue, use SharePoint Designer 2013 to publish the globally reus
 
 This issue may occur if the user account that created the site collection or that started the Publishing Approval workflow feature was removed from the site collection.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

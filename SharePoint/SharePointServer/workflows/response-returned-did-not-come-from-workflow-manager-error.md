@@ -144,4 +144,4 @@ Gateway sending HTTP response: StatusCode: 201, ReasonPhrase: 'Created', Version
 - We identified that "Anonymous" authentication was disabled on WFM server in your DEV farm. Enabling it fixed the issue.
 - We were able to publish and run the workflows successfully. 
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).
