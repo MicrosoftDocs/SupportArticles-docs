@@ -67,4 +67,4 @@ For more information, visit the following Microsoft websites:
 > [!IMPORTANT]
 > The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

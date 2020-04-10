@@ -128,4 +128,4 @@ If appending "-eval" causes the URL to exceed the character limit then you'll ge
 
 ## More information
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

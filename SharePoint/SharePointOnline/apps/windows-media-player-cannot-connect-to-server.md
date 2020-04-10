@@ -82,4 +82,4 @@ This article doesn't apply to Office 365 Video or Microsoft Stream scenarios. Fo
 > [!NOTE]
 > Office 365 Video will be replaced by Microsoft Stream. To learn more about the new enterprise video service that adds intelligence to video collaboration, go to https://stream.microsoft.com. 
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

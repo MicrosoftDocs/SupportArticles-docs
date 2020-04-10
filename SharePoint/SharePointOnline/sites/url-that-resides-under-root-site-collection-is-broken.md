@@ -42,4 +42,4 @@ To address issues caused by deleting a root site, and to continue to allow the a
    > [!IMPORTANT]
    > Site Swap is available as a PowerShell cmdlet only. For more info about using this cmdlet and what happens with the previous root site, see [Invoke-SPOSiteSwap](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fsharepoint-online%2Finvoke-spositeswap&data=02%7C01%7Cv-todmc%40microsoft.com%7Cb838e9fa97e44029b75208d758b1e83f%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637075393627150492&sdata=613RMNKp7kmUyftj4VYvzZ1vEbgEuFPQNxh6cY96oKc%3D&reserved=0). Site Swap will be available in the Modern SharePoint Admin Center as a **Replace** button in future versions. 
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

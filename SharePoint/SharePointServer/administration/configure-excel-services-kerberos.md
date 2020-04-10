@@ -139,4 +139,4 @@ For more information about how to configure Kerberos constrained delegation to e
 
 [Identity delegation for Excel Services (SharePoint Server 2010)](https://docs.microsoft.com/previous-versions/office/sharepoint-server-2010/gg502605(v=office.14))
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

@@ -61,4 +61,4 @@ The following SharePoint Server 2013 installation scenarios are not supported:
 - You install SharePoint Server 2013 on a virtual machine (VM) that uses the Microsoft Hyper-V Dynamic Memory feature.   
 - You disable Distributed Cache in a farm configuration.     
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

@@ -50,4 +50,4 @@ For example, consider the following scenario: 
 
 In this scenario, starting SharePoint Workspace in safe mode may help you resolve the issue. Because synchronization is disabled, resources are not consumed, and you can work within SharePoint Workspace to save other unsynchronized changes from the workspace to local files, delete the local copy of the workspace from the computer, and clear the communications queue.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

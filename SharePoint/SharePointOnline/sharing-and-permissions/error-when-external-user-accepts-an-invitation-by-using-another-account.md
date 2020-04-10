@@ -124,7 +124,7 @@ All other subscriptions must use the SharePoint Online Management Shell by follo
    Remove-SPOExternalUser -UniqueIDs @($ExtUser.UniqueId)
    ```
 
-The steps below remove the external user’s ability to access SharePoint Online. However, the user will still appear in any people searches and within the SharePoint Online Management Shell Get-SPOUser cmdlet. To remove the user completely from SharePoint Online, you'll have to remove the user from the UserInfo list. There are two ways to achieve this.
+The steps below remove the external user's ability to access SharePoint Online. However, the user will still appear in any people searches and within the SharePoint Online Management Shell Get-SPOUser cmdlet. To remove the user completely from SharePoint Online, you'll have to remove the user from the UserInfo list. There are two ways to achieve this.
 
 1. Use the SharePoint Online UI. To do this, browse to each site collection to which the user previously had access, and then follow these steps:
 
@@ -171,7 +171,7 @@ The steps below remove the external user’s ability to access SharePoint Online
       Get-SPOUser -Site https://<contoso>.sharepoint.com | FT –a
       ```
 
-    Notice the external user’s Login Name in the returned results. As an external user, it might have a "live.com#" prefix if it's a Microsoft Account.
+    Notice the external user's Login Name in the returned results. As an external user, it might have a "live.com#" prefix if it's a Microsoft Account.
 
     Type the following cmdlet:
 
@@ -225,4 +225,4 @@ For example, a user is signed in through a browser by using a Microsoft account,
 
 When the user signs in to the resource by using the user's external user account, the user receives the error that the user isn't found in the directory.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

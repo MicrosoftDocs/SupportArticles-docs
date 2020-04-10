@@ -53,4 +53,4 @@ Note: The document will be displayed in the browser window with the option to se
 
 This issue only occurs with SharePoint 2010.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

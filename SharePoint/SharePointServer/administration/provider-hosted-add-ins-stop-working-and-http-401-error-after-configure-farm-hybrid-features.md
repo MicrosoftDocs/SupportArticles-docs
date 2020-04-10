@@ -144,4 +144,4 @@ To create a server-to-server trust between your SharePoint on-premises environme
 
 To create SharePoint provider-hosted add-ins, see [Get started creating provider-hosted SharePoint Add-ins](https://msdn.microsoft.com/library/office/fp142381.aspx).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

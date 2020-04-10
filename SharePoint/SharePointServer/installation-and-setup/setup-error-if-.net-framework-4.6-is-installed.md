@@ -93,4 +93,4 @@ Although you receive the error message during installation, SharePoint Foundatio
 
 Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

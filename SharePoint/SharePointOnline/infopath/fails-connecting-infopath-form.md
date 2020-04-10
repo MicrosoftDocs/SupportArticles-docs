@@ -46,4 +46,4 @@ For security reasons, loopback protection is always enabled in SharePoint Online
 >   - GetUserMemberships
 >   - GetCommonMemberships
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

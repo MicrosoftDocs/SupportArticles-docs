@@ -40,4 +40,4 @@ This error occurs because the guest user has access to the content that uses the
 
 For more information about apps for Office and SharePoint, go to the [Getting Started with Office Development](https://developer.microsoft.com/office/docs).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

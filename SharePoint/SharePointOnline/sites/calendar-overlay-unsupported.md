@@ -37,4 +37,4 @@ This issue occurs because the ability to use the calendar overlay in a SharePoin
 
 ## More information
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

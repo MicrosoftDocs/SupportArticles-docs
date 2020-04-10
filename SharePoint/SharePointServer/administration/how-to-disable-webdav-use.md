@@ -54,4 +54,4 @@ For more information, please the following articles:
 - [User permissions and permission levels (SharePoint Server 2010)](https://technet.microsoft.com/library/cc721640.aspx)   
 - [SPBasePermissions Enumeration](https://msdn.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx)     
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

@@ -49,4 +49,4 @@ Repro steps:
 5. Start the workflow and choose a SharePoint Group in Initiation Form.
 6. Error in workflow history shows "Coercion warning: user or group does not have a valid e-mail address." even though workflow status is completed.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).
