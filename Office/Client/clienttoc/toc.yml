@@ -773,7 +773,7 @@
       href: ../miscellaneous/use-multiple-versions-of-office.md
   - name: Office
     items:
-    - name: "\"Access Denied\" error when starting Microsoft Office third-party add-ins 
+    - name: "\"Access Denied\" error when starting Microsoft Office third-party add-ins"
       href: ../installation/access-denied-error-when-starting-third-party-apps.md
     - name: "\"No default mail client\" error"
       href: ../office/no-default-mail-client-error.md
