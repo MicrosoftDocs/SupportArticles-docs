@@ -18,7 +18,7 @@ search.appverid: MET150
 ---
 # O365 Groups - common tasks
 
-<a id="top" />Tenant administrators perform many common tasks to manage O365 groups. This article provides a quick reference for doing these tasks. Tasks are divided into sections to help you sort through them quickly. Select a task to navigate directly to it.
+<a id="top" />Tenant administrators perform many common tasks to manage O365 groups. Here's a quick reference for doing these tasks. The tasks are divided into sections to help you sort through them quickly. Select a task to navigate directly to it.
 
 - Office 365 creation & display
   - [Control Office 365 group creation](#control-office-365-group-creation)
@@ -37,7 +37,7 @@ search.appverid: MET150
   - [Get a copy of group email messages you send](#get-a-copy-of-group-email-messages-you-send)
   - [Email issues in Office 365 Groups](#email-issues-in-office-365-groups)
 - Other tasks
-  - [Restoring Office 365 groups](#restoring-office-365-groups)
+  - [Restore an Office 365 Group](#restore-an-office-365-group)
   - [Convert to an Office 365 group](#convert-to-an-office-365-group)
   - [Access Office 365 groups from Exchange clients](#access-office-365-groups-from-exchange-clients)
   - [Office 365 group migration](#office-365-group-migration)
@@ -313,7 +313,7 @@ See [Message trace in the Security & Compliance Center](/microsoft-365/security/
 
 ## Other tasks
 
-### Restoring Office 365 groups
+### Restore an Office 365 Group
 
 Deleted Office 365 groups are retained for 30 days. Within this period, either a group owner or a tenant admin can restore the group. After 30 days, the group and its associated contents are permanently deleted and cannot be restored.
 
