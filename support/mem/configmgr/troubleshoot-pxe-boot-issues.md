@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 4468612
 
 **Home users**: This article is only intended for technical support agents and IT professionals. If you're looking for help with a problem, please ask the [Microsoft Community](https://answers.microsoft.com/).
 
-For essential information about how PXE works, see the companion article [Understand PXE boot in ConfigMgr](https://support.microsoft.com/help/4468601/pxe-boot-in-configuration-manager).
+For essential information about how PXE works, see the companion article [Understand PXE boot in ConfigMgr](understand-pxe-boot.md).
 
 Before you start to troubleshoot on the PXE Service Point, we recommend that you try the following solutions. If Solution 1 is successful for you, there is no need to go to Solution 2. These solutions resolve most problems that affect PXE boot.
 
@@ -86,7 +86,7 @@ In many cases, errors that occur during installation or configuration are the ca
 
 ## Need more help
 
-For additional help with troubleshooting PXE boot issues, see [Advanced troubleshooting for PXE boot issues in Configuration Manager](https://support.microsoft.com/help/4491871/advanced-troubleshooting-for-pxe-boot-issues-in-configuration-manager).
+For additional help with troubleshooting PXE boot issues, see [Advanced troubleshooting for PXE boot issues in Configuration Manager](advanced-troubleshooting-pxe-boot.md).
 
 For more help to resolve this issue, see our [TechNet support forum](https://social.technet.microsoft.com/Forums/home?forum=configmanagerosd&filter=alltypes&sort=lastpostdesc) or [contact Microsoft Support](https://support.microsoft.com/).
 

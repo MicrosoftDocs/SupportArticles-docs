@@ -12,9 +12,9 @@ _Original KB number:_ &nbsp; 4491871
 
 ## Applies to: Configuration Manager (current branch)
 
-For essential information about how PXE works, see the companion article [Understand PXE boot in ConfigMgr](https://support.microsoft.com/help/4468601/pxe-boot-in-configuration-manager).
+For essential information about how PXE works, see the companion article [Understand PXE boot in ConfigMgr](understand-pxe-boot.md).
 
-The solutions that are provided in [Troubleshooting PXE boot issues in Configuration Manager section](https://support.microsoft.com/help/4468612/troubleshoot-pxe-boot-issues-in-configuration-manager) can resolve most issues that affect PXE boot.
+The solutions that are provided in [Troubleshooting PXE boot issues in Configuration Manager section](troubleshoot-pxe-boot-issues.md) can resolve most issues that affect PXE boot.
 
 If you cannot resolve your PXE boot issue by using IP Helpers or reinstalling PXE, try the following additional troubleshooting steps.
 

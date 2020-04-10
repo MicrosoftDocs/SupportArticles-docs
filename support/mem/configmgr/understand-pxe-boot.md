@@ -427,5 +427,5 @@ Loading bitmap
 
 For more information about troubleshooting PXE boot issues, see the following articles:
 
-- [Troubleshooting PXE boot issues](https://support.microsoft.com/help/4468612/troubleshoot-pxe-boot-issues-in-configuration-manager)
-- [Advanced troubleshooting for PXE boot issues in Configuration Manager](https://support.microsoft.com/help/4491871/advanced-troubleshooting-for-pxe-boot-issues-in-configuration-manager).
+- [Troubleshooting PXE boot issues](troubleshoot-pxe-boot-issues.md)
+- [Advanced troubleshooting for PXE boot issues in Configuration Manager](advanced-troubleshooting-pxe-boot.md).
