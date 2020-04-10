@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 3054335
 
 The BizTalk Explorer Object Model allows users to manipulate service instances and messages like shown in the example below:
 
-```cpp
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Linq;
