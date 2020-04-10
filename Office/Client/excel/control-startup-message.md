@@ -71,4 +71,4 @@ To update the links manually, follow these steps:
 
 ### Do not display the alert and update links
 
-When the option **Don't display the alert and update links** is selected on a workbook, the selection is ignored. If the person opening the workbook selected the **Ask to update automatic links** check box, the message appears. If not, links are automatically updated.
+When the **Don't display the alert and update links** option is selected on a workbook, the selection is ignored. If the person opening the workbook selected the **Ask to update automatic links** check box, the message appears. If not, links are automatically updated.
