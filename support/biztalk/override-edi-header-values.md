@@ -32,7 +32,7 @@ Due to this situation, the logic at [Agreement Resolution and Schema Determinat
 
 In order to use the override EDI headers, the custom pipeline component needs to first remove the above four context properties.
 
-Below is the sample `Execute()` code for a pipeline component that sets **ISA05**,**ISA06**, **ISA07**, and **ISA08** on an outgoing 997 message.
+Below is the sample `Execute()` code for a pipeline component that sets `ISA05`,`ISA06`, `ISA07`, and `ISA08` on an outgoing 997 message.
 
 ```csharp
 public IBaseMessage Execute(IPipelineContext pContext, IBaseMessage pInMsg)

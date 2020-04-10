@@ -5,7 +5,7 @@ ms.date: 03/16/2020
 ms.prod-support-area-path: 
 ms.reviewer: shaheera
 ---
-# ESB Configuration fails with Unrecognized element 'typeConfig'
+# ESB configuration fails with unrecognized element typeConfig
 
 This article describes the issue that the Enterprise Service Bus (ESB) 2.2 configuration fails.
 

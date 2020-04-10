@@ -32,6 +32,6 @@ To work around this issue, remove the extra spaces. The PD1 segment is the Patie
 
 > NormalString^Test&Test^Test^Test^Test^Test^AE^simpletext^simpletext&Test&ISO^P   ^NormalString^M10^MC^simpletext&NormalString&HCD^A|
 
-In this sample, there are spaces between **P** and the next caret (^) character. These spaces cause the issue that is described in the **Symptoms** section. After you remove the spaces, the PD1 segment should resemble the following:
+In this sample, there are spaces between **P** and the next caret (^) character. These spaces cause the issue that is described in the [Symptoms](#symptoms) section. After you remove the spaces, the PD1 segment should resemble the following:
 
 > D1|S|F|NormalString^A^+1^-1^ISO^simpletext&Test&HCD^GI^simpletext&NormalString&ISO^I|   NormalString^Test&Test^Test^Test^Test^Test^AE^simpletext^simpletext&Test&ISO^P^NormalString^M10^MC^simpletext&NormalString&HCD^A|N|simpletext|I|I|N|NormalString   ^+1^M11^simpletext&NormalString&L,M,N^RRI^simpletext&NormalString&HCD|NOVALUE^NormalString   ^Test^Test^NormalString^Test|N

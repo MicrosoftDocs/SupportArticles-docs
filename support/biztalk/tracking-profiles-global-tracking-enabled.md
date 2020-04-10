@@ -18,7 +18,7 @@ A profile is a set of characteristics that define a business process. It maps th
 
 ## Symptoms
 
-If there's more than one tracking profile associated with an entity (say an orchestration) and the global tracking settings is turned off, only the latest tracking profile will get reflected. However, when Global Tracking is turned on, all tracking profiles are functional.
+If there's more than one tracking profile associated with an entity (say an orchestration) and the global tracking settings is turned off, only the latest tracking profile will get reflected. However, when **Global Tracking** is turned on, all tracking profiles are functional.
 
 ## Resolution
 

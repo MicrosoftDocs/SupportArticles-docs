@@ -4,7 +4,7 @@ description: When you make a call into the PipelineObjects assembly from your ow
 ms.date: 03/18/2020
 ms.prod-support-area-path: 
 ---
-# Call into PipelineObjects fails with Exception
+# Call into PipelineObjects fails with exception
 
 This article provides a solution for the failure when you make a call into the `PipelineObjects` from your application.
 
@@ -35,8 +35,7 @@ When you make a call into the `PipelineObjects` assembly from your own applicati
 > at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)  
 > at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)  
 > at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)  
-> at System.Threading.ThreadHelper.ThreadStart()
->
+> at System.Threading.ThreadHelper.ThreadStart()  
 > InnerException: System.InvalidCastException  
 > HResult=-2147467262  
 > Message=Unable to cast COM object of type 'System.__ComObject' to interface type 'Microsoft.BizTalk.Component.Interop.IComponentTypeInfo'. This operation failed because the QueryInterface call on the COM component for the interface with IID '{custom IID}' failed due to the following error: No such interface supported (Exception from HRESULT: 0x80004002 (E_NOINTERFACE)).  
