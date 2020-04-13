@@ -6,13 +6,25 @@
   
 - name: Accelerators
   items:
+  - name: ADT^A03 issues in BizTalk Accelerator for HL7
+    href: adta03-file-biztalk-accelerator-hl7.md
+  - name: Can't call HL7 pipelines from Orchestration
+    href: call-hl7-pipelines-orchestration-fail.md
   - name: EDI/AS2 Runtime configuration fails
     href: biztalk-edias2-runtime-feature-fails.md
+  - name: MessagesToLOB and MessageContent in BTARN
+    href: messagestolob-messagecontent-btarn.md
+  - name: Override EDI Header for outgoing X12 997
+    href: override-edi-header-values.md
   - name: Set up filters to send the EDI Interchange
     href: send-edi-interchange.md
+  - name: Segment terminator for X12 interchange
+    href: segment-terminator-x12-encoded-interchange.md
 
 - name: Adapter
   items:
+  - name: BizTalk Adapter for TIBCO EMS only supports text
+    href: biztalk-adapter-tibco-ems-text-message-type.md
   - name: How to use Adapter Trace Utility
     href: biztalk-adapter-trace-utility.md
   - name: HTTP 404 when connecting to alternate host headers
@@ -46,12 +58,23 @@
   - name: Supported OS, VS and SQL Server by BizTalk 
     href: systems-sql-server-biztalk.md
 
+- name: ESB Toolkit
+  items:
+  - name: Call into PipelineObjects fails
+    href: call-into-pipelineobjects-fails.md
+  - name: ESB Configuration fails
+    href: esb-configuration-fails.md
+
 - name: Management and Operations
   items:
+  - name: BizTalk Explorer operations fail
+    href: biztalk-explorer-operations-fails.md
   - name: Connection issues with BizTalkMsgBoxDb database
     href: biztalkmsgboxdb-connection-issue.md
   - name: Issues and resolutions with Administration console
     href: common-issues-resolutions-biztalk.md
+  - name: Wrong behavior of tracking profiles
+    href: tracking-profiles-global-tracking-enabled.md
 
 - name: Performance
   items:
