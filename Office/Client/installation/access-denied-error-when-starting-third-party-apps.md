@@ -39,7 +39,7 @@ The Project Centennial version of Office will then be in a "staged" state and wi
 
 ## Resolution
 
-Once the permissions have been stripped, the only way to correct the issue on the computer is to uninstall and reinstall the Office product to replace the ACLs or by running a PowerShell script to reset the ACLs. See Repair an Office application for more information. 
+Once the permissions have been stripped, the only way to correct the issue on the computer is to uninstall and reinstall the Office product to replace the ACLs or by running a PowerShell script to reset the ACLs. See [Repair an Office application](https://support.office.com/Article/Repair-an-Office-application-7821d4b6-7c1d-4205-aa0e-a6b40c5bb88b) for more information. 
 
 ## More information
 
