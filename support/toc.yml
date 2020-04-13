@@ -21,3 +21,6 @@
 
 - name: Microsoft Endpoint Manager support
   href: mem/index.yml
+
+- name: System Center support
+  href: system-center/index.yml

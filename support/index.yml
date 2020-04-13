@@ -55,6 +55,11 @@ productDirectory:
     links:
     - url: mem/index.yml
       text: Support for Microsoft Endpoint Manager
+  - title: System Center
+    imageSrc: "media/hub-landing/logo-systemcenter.png"
+    links:
+    - url: system-center/index.yml
+      text: Support for System Center
 
 # conceptualContent:
 

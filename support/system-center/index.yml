@@ -1,0 +1,27 @@
+### YamlMime:Hub
+title: Microsoft System Center documentation
+summary: Support articles for Microsoft System Center
+
+metadata:
+   ms.topic: hub-page
+   services: service
+   ms.service: system-center
+   ms.author: luche
+
+highlightedContent:
+  items:
+    - title: Support for Data Protection Manager
+      itemType: overview
+      url: dpm/welcome-support-dpm.md
+    - title: Support for Operations Manager
+      itemType: overview
+      url: scom/welcome-support-scom.md
+    - title: Support for Orchestrator
+      itemType: overview
+      url: orchestrator/welcome-support-orchestrator.md
+    - title: Support for Service Manager
+      itemType: overview
+      url: scsm/welcome-support-scsm.md
+    - title: Support for Virtual Machine Manager
+      itemType: overview
+      url: vmm/welcome-support-vmm.md
