@@ -1,5 +1,5 @@
 ---
-title: SharePoint Online service processes temporarily limited to off-peak hours
+title: SharePoint Online service process schedule temporary change 
 ms.author: v-todmc
 author: todmccoy
 manager: dcscontentpm
@@ -20,7 +20,7 @@ ms.reviewer: MS aliases for tech reviewers and CI requestor, without "@microsoft
 description: Microsoft is temporarily restricting some SharePoint Online processes to operate only during off-peak hours. 
 ---
 
-# Temporary off-peak processing of SharePoint Online services 
+# Temporary changes in process schedule for SharePoint Online services
 
 ## Summary
 
