@@ -103,7 +103,7 @@
     items:
     - name: 550 5.7.64 TenantAttribution NDR
       href: ../mailflow/tenantattribution-ndr.md
-    - name: Automatic forwarding changes in Transport Rule
+    - name: Automatically forward email in transport rule
       href: ../mailflow/autoforward-mail-exclusions-not-honored-transport-rule.md
   - name: Mail Delivery
     items:
