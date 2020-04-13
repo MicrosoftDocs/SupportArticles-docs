@@ -743,6 +743,8 @@
       href: ../infopath/infopath-2013-crashes-when-connecting-to-access-database.md
   - name: Installation
     items:
+    - name: "\"Access Denied\" error when starting Microsoft Office third-party add-ins"
+      href: ../installation/access-denied-error-when-starting-third-party-apps.md
     - name: Error 1935 when install Office 2010
       href: ../installation/error-1935-when-install-office-2010.md
     - name: Error when uninstalling O365 Pro Plus
