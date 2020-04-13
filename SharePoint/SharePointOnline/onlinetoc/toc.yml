@@ -3,7 +3,7 @@
   items:
   - name: Administration
     items:
-    - name: Temporary off-peak processing of SharePoint Online services 
+    - name: Temporary changes in process schedule for SharePoint Online services 
       href: ../administration/temporary-adjustments-in-sharepoint-online.md
     - name: '"Sync to Outlook" button and "Task" link are missing'
       href: ../administration/sync-to-outlook-tasks-link-missing.md
