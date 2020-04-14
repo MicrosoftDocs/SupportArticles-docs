@@ -21,7 +21,7 @@ appliesto:
 # Preparing for TLS 1.2 in Office 365 and Office 365 GCC 
 
 > [!IMPORTANT]
-> The world is in the middle of a pandemic, and we at Microsoft are aware of the impact on our customers and Partners. To lighten the burden on our commercial customers, we have temporarily halted any deprecation enforcement of TLS 1.0 and 1.1. An update will be sent on a revised timeline after the current crisis stabilizes. (This article is revised to reflect the change.) 
+> The world is in the middle of a pandemic, and we at Microsoft are aware of the impact on our customers and partners. To lighten the burden on our commercial customers, we have temporarily halted any deprecation enforcement of TLS 1.0 and 1.1. An update will be sent on a revised timeline after the current crisis stabilizes. (This article is revised to reflect the change.) 
 
 > [!NOTE]
 > **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
