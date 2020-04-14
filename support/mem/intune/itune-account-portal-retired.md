@@ -6,12 +6,10 @@ ms.prod-support-area-path:
 ---
 # How to manage Intune and EMS subscriptions in the Office 365 portal
 
+Intune account portal is prompting users to navigate to the O365 portal. O365 portal has Intune subscription data. This is by design. The Intune account portal was retired on September 28, 2015 and all functionalities were moved to the O365 portal at [https://portal.office.com](https://portal.office.com). Therefore, update your favorite from the Intune account portal to the [Office 365 management portal](https://portal.office.com).
+
 _Original product version:_ &nbsp; Microsoft Intune  
 _Original KB number:_ &nbsp; 3093591
-
-## Applies to: Microsoft Intune
-
-Intune account portal is prompting users to navigate to the O365 portal. O365 portal has Intune subscription data. This is by design. The Intune account portal was retired on September 28, 2015 and all functionalities were moved to the O365 portal at [https://portal.office.com](https://portal.office.com). Therefore, update your favorite from the Intune account portal to the [Office 365 management portal](https://portal.office.com).
 
 ## Manage Intune and EMS subscriptions in the Office 365 portal
 
@@ -25,7 +23,7 @@ For EMS customers who previously visited the Azure portal for user creation and 
 
 ## FAQs
 
-**What functionality is now available in the Office 365 management portal?**
+Q: What functionality is now available in the Office 365 management portal?
 
 - Subscription activation, modification, renewal, cancellation, and invoicing
 - Domain setup and modification
@@ -34,7 +32,7 @@ For EMS customers who previously visited the Azure portal for user creation and 
 - Service health status
 - Service request ticketing
 
-**As an existing Intune customer, what differences can I expect when using the Office 365 management portal?**
+Q: As an existing Intune customer, what differences can I expect when using the Office 365 management portal?
 
 - User management has a new flow with more options and greater control when setting passwords.
 - When setting up a new tenant, you'll find that subscription activation is a more guided experience and trial subscriptions no longer require a mailing address.
@@ -42,6 +40,6 @@ For EMS customers who previously visited the Azure portal for user creation and 
 - The domain setup wizard provides registrar-specific guidance for creating the required DNS records.
 - The purchase tab lists all offers available for both Intune and Office.
 
-**Does this mean that Intune will become part of Office 365?**
+Q: Does this mean that Intune will become part of Office 365?
 
 No, Intune is taking advantage of the Office management portal for managing subscriptions and assigning licenses but will remain a separate service.

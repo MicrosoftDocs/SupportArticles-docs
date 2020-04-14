@@ -6,16 +6,14 @@ ms.prod-support-area-path: PXE
 ---
 # Troubleshooting PXE boot issues in Configuration Manager
 
+This article helps administrators diagnose and resolve PXE boot failures in System Center Configuration Manager.
+
 _Original product version:_ &nbsp; Configuration Manager (current branch), Microsoft System Center 2012 Configuration Manager, Microsoft System Center 2012 R2 Configuration Manager  
 _Original KB number:_ &nbsp; 4468612
 
-## Applies to
+## Introduction
 
-- Configuration Manager (current branch)
-- Microsoft System Center 2012 Configuration Manager
-- Microsoft System Center 2012 R2 Configuration Manager
-
-**Home users**: This article is only intended for technical support agents and IT professionals. If you're looking for help with a problem, please ask the [Microsoft Community](https://answers.microsoft.com/).
+Home users: This article is only intended for technical support agents and IT professionals. If you're looking for help with a problem, please ask the [Microsoft Community](https://answers.microsoft.com/).
 
 For essential information about how PXE works, see the companion article [Understand PXE boot in ConfigMgr](understand-pxe-boot.md).
 

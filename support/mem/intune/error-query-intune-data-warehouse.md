@@ -6,12 +6,10 @@ ms.prod-support-area-path: Intune Data Warehouse
 ---
 # Error AADSTS50011 when you query the Intune Data Warehouse
 
+This article help you fix an issue in which you receive error 'The reply url specified in the request does not match the reply urls configured for the application' when you query the Intune Data Warehouse.
+
 _Original product version:_ &nbsp; Microsoft Intune  
 _Original KB number:_ &nbsp; 4505733
-
-## Applies to: Microsoft Intune
-
-This article help you fix an issue in which you receive error 'The reply url specified in the request does not match the reply urls configured for the application' when you query the Intune Data Warehouse.
 
 ## Symptom
 
@@ -27,7 +25,7 @@ This issue occurs if the default redirect URI for the application registration o
 
 To fix the issue, do the following:
 
-- If you use PowerShell, make sure that the default redirect URI  is set.
+- If you use PowerShell, make sure that the default redirect URI is set.
 
   Here is an example:
 

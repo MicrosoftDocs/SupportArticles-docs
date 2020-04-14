@@ -6,12 +6,10 @@ ms.prod-support-area-path:
 ---
 # How to use PowerShell to look up licenses for a Microsoft Intune subscription
 
+The information below describes how to use Windows PowerShell to determine the number of free and used Microsoft Intune licenses.
+
 _Original product version:_ &nbsp; Microsoft Intune  
 _Original KB number:_ &nbsp; 3117663
-
-## Applies to: Microsoft Intune
-
-The information below describes how to use Windows PowerShell to determine the number of free and used Microsoft Intune licenses.
 
 ## Determine the number of free and used Intune licenses
 

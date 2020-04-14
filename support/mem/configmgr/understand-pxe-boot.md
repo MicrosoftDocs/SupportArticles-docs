@@ -1,19 +1,17 @@
 ---
 title: PXE boot in Configuration Manager
-description: Introduces basic processes of PXE boot in Configuration Manager, how they work and how they interoperate with each other.
+description: Introduces basic processes of PXE boot in Configuration Manager, how they work, and how they interoperate with each other.
 ms.date: 03/27/2020
 ms.prod-support-area-path: PXE
 ---
 # Understand PXE boot in Configuration Manager
 
+This article describes basic processes of Preboot Execution Environment (PXE) boot in Configuration Manager, how they work, and how they interoperate with each other.
+
 _Original product version:_ &nbsp; System Center Configuration Manager (current branch), Microsoft System Center 2012 R2 Configuration Manager, Microsoft System Center 2012 Configuration Manager  
 _Original KB number:_ &nbsp; 4468601
 
-## Applies to
-
-- System Center Configuration Manager (current branch)
-- Microsoft System Center 2012 R2 Configuration Manager
-- Microsoft System Center 2012 Configuration Manager
+## Introduction
 
 Preboot Execution Environment (PXE) boot in System Center 2012 Configuration Manager (ConfigMgr 2012 or ConfigMgr 2012 R2) and later versions enables administrators to easily access the Windows Preinstallation Environment (WinPE) across the network via PXE. PXE is an industry standard created by Intel that provides pre-boot services within the devices firmware that enables devices to download network boot programs to client computers.
 
@@ -391,37 +389,37 @@ Once TSPXE is loaded, it downloads the TS variables using TFTP:
 At this point, TSPXE locates the Management Point (MP) and downloads policy before presenting the user interface for the user to select the optional Task Sequence:
 
 > SMSTS.log  
-site=RR2,RR2, MP=<http://ConfigMgrR2.CONTOSO.COM,> ports: http=80,https=443  
-certificates are received from MP.  
-CLibSMSMessageWinHttpTransport::Send: URL: ConfigMgrR2.CONTOSO.COM:80 CCM_POST /ccm_system/request  
-Request was successful.  
-Downloading policy from <http://ConfigMgrR2.CONTOSO.COM.>  
-Retrieving Policy Assignments:  
-Processing Policy Assignment {7898f153-a6de-43e9-98c3-ca5cc61483b0}.  
-Processing Policy Assignment {fba19677-0e9b-490d-b601-07e247979bd4}.  
-Processing Policy Assignment {6306ca4c-e7ed-4cf5-8419-af9b1695a909}.  
-Processing Policy Assignment {05a027ff-e9cf-4fa1-8bd8-4565481061e2}.  
-Processing Policy Assignment {b3c991f6-9f83-43c3-875c-f60c4492d278}.  
-...  
-Successfully read 152 policy assignments.
+> site=RR2,RR2, MP=<http://ConfigMgrR2.CONTOSO.COM>, ports: http=80,https=443  
+> certificates are received from MP.  
+> CLibSMSMessageWinHttpTransport::Send: URL: ConfigMgrR2.CONTOSO.COM:80 CCM_POST /ccm_system/request  
+> Request was successful.  
+> Downloading policy from <http://ConfigMgrR2.CONTOSO.COM>.  
+> Retrieving Policy Assignments:  
+> Processing Policy Assignment {7898f153-a6de-43e9-98c3-ca5cc61483b0}.  
+> Processing Policy Assignment {fba19677-0e9b-490d-b601-07e247979bd4}.  
+> Processing Policy Assignment {6306ca4c-e7ed-4cf5-8419-af9b1695a909}.  
+> Processing Policy Assignment {05a027ff-e9cf-4fa1-8bd8-4565481061e2}.  
+> Processing Policy Assignment {b3c991f6-9f83-43c3-875c-f60c4492d278}.  
+> ...  
+> Successfully read 152 policy assignments.
 
 Lastly, the collection and machine variables are downloaded and the Welcome Page is activated:
 
 > SMSTS.log  
-Retrieving collection variable policy.  
-Found 0 collection variables.  
-Retrieving machine variable policy.  
-Downloading policy body {01000053}-{RR2}.  
-Response ID: {01000053}-{RR2}  
-Reading Policy Body.  
-Parsing Policy Body.  
-Found 0 machine variables.  
-Setting collection variables in the task sequencing environment.  
-Setting machine variables in the task sequencing environment.  
-Running Wizard in Interactive mode  
-Loading Media Variables from 'X:\sms\data\variables.dat'  
-Activating Welcome Page.  
-Loading bitmap
+> Retrieving collection variable policy.  
+> Found 0 collection variables.  
+> Retrieving machine variable policy.  
+> Downloading policy body {01000053}-{RR2}.  
+> Response ID: {01000053}-{RR2}  
+> Reading Policy Body.  
+> Parsing Policy Body.  
+> Found 0 machine variables.  
+> Setting collection variables in the task sequencing environment.  
+> Setting machine variables in the task sequencing environment.  
+> Running Wizard in Interactive mode  
+> Loading Media Variables from 'X:\sms\data\variables.dat'  
+> Activating Welcome Page.  
+> Loading bitmap
 
 ## More Information
 

@@ -5,14 +5,12 @@ ms.date: 03/30/2020
 ms.prod-support-area-path: Windows enrollment
 ms.reviewer: luche
 ---
-# 80180002b error during Windows 10 group policy-based auto-enrollment to Intune
+# 80180002b error during Windows 10 Group Policy-based auto-enrollment to Intune
+
+This article helps you fix an issue in which Windows 10 Group Policy-based auto-enrollment to Intune fails with the error code 0x80180002b in Event Viewer.
 
 _Original product version:_ &nbsp; Microsoft Intune  
 _Original KB number:_ &nbsp; 4493944
-
-## Applies to: Microsoft Intune
-
-This article helps you fix an issue in which Windows 10 Group Policy-based auto-enrollment to Intune fails with the error code 0x80180002b in Event Viewer.
 
 ## Symptoms
 

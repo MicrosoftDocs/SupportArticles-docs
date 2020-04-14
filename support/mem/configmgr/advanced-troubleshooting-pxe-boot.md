@@ -7,10 +7,12 @@ ms.reviewer: frankroj
 ---
 # Advanced troubleshooting for PXE boot issues in Configuration Manager
 
+This article provides advance troubleshooting techniques to help administrators diagnose and resolve PXE boot failures in System Center Configuration Manager.
+
 _Original product version:_ &nbsp; Configuration Manager (current branch)  
 _Original KB number:_ &nbsp; 4491871
 
-## Applies to: Configuration Manager (current branch)
+## Introduction
 
 For essential information about how PXE works, see the companion article [Understand PXE boot in ConfigMgr](understand-pxe-boot.md).
 
@@ -28,7 +30,7 @@ When DHCP and WDS are co-hosted on the same computer, WDS requires a special con
 
 2. Run the following WDS command:
 
-   ```cmd
+   ```console
    WDSUTIL /Set-Server /UseDHCPPorts:No /DHCPOption60:Yes
    ```
 
@@ -46,11 +48,11 @@ To configure these settings without having WDS enabled, follow these guidelines:
 
   To configure the WDS options according to these guidelines, close any DHCP consoles that are open, and then run the following commands at an elevated command prompt:
   
-  ```cmd
+  ```console
   netsh dhcp server \\<DHCP_server_machine_name> add optiondef 60 PXEClient String 0 comment=PXE support
   ```
 
-  ```cmd
+  ```console
   netsh dhcp server \\<DHCP_server_machine_name> set optionvalue 60 STRING PXEClient
   ```
   
@@ -60,17 +62,17 @@ If DHCP is ever moved to another server and removed from the server that is host
 
 1. Run the following command at an elevated command prompt:
 
-   ```cmd
+   ```console
    REG ADD 'HKLM\SYSTEM\CurrentControlSet\services\WDSServer\Providers\WDSPXE' /v UseDHCPPorts /t REG_DWORD /d 1 /f`
    ```
 
 2. Run the following commands at an elevated command prompt:
 
-   ```cmd
+   ```console
    netsh dhcp server \\<DHCP_server_machine_name> delete optionvalue 60
    ```
 
-   ```cmd
+   ```console
    netsh dhcp server \\<DHCP_server_machine_name> delete optiondef 60 PXEClient
    ```
 
