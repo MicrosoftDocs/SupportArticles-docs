@@ -22,6 +22,12 @@
       href: icon-overlay-handlers-windows-shell.md
     - name: Screen Saver command line arguments
       href: screen-saver-command-line.md
+  - name: Distributed Transactions
+    items:
+    - name: Can't start transactions in MS DTC
+      href: cant-start-transaction-ms-dtc.md
+    - name: Enable diagnostic tracing for MS DTC
+      href: enable-diagnostic-tracing-ms-dtc.md
   - name: Graphics and Multimedia development
     items:
     - name: DirectShow doesn't connect to downstream filter
@@ -73,14 +79,20 @@
       href: midi-device-app-hangs.md
     - name: Interoperability Between GDI and GDI+
       href: mix-gdi-and-gdi-plus-drawing.md
+    - name: Modify printer settings by SetPrinter API
+      href: modify-printer-settings-setprinter-api.md
     - name: WritePrinter API with RAW data can't print
       href: writeprinter-raw-data-not-print.md
   - name: System Services Development
     items:
     - name: DXGI 1.2 API can't draw cursor to desktop image
       href: dxgi-cannot-draw-cursor.md
+    - name: Guidelines for dates and times handling
+      href: handle-dates-and-times-dst.md
     - name: SetSystemTimeAdjustment loses adjustments
       href: setsystemtimeadjustment-less-than-16.md
+    - name: Troubleshoot "Event Message Not Found" error
+      href: troubleshoot-event-message-not-found.md
     - name: VarI8FromCy produces incorrect value
       href: vari8fromcy-produces-incorrect-value.md
 
@@ -100,3 +112,7 @@
     items:
     - name: Receive CD-ROM notification
       href: receive-cd-rom-notification.md
+  - name: System Services Development
+    items:
+    - name: Asynchronous Disk I/O appears synchronous
+      href: asynchronous-disk-io-synchronous.md
