@@ -14,7 +14,7 @@ ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-weizhu
 appliesto:
-- Acess 2007
+- Access 2007
 - Access 2003
 - Access 2002
 ---

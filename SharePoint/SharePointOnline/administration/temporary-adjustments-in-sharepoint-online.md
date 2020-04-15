@@ -1,5 +1,5 @@
 ---
-title: SharePoint Online service processes temporarily limited to off-peak hours
+title: SharePoint Online service process schedule temporary change 
 ms.author: v-todmc
 author: todmccoy
 manager: dcscontentpm
@@ -20,7 +20,7 @@ ms.reviewer: MS aliases for tech reviewers and CI requestor, without "@microsoft
 description: Microsoft is temporarily restricting some SharePoint Online processes to operate only during off-peak hours. 
 ---
 
-# Temporary off-peak processing of SharePoint Online services 
+# Temporary changes in process schedule for SharePoint Online services
 
 ## Summary
 
@@ -47,7 +47,7 @@ Migration, DLP, and backup solutions might achieve limited throughput during reg
 
 The following documents provide best practice guidance for getting maximize throughput:
 
-- [General migration performance guidance](https://docs.microsoft.com/sharepointmigration/sharepoint-online-and-onedrive-migration-speed). (This includes an [FAQ & Troubleshooting section](https://docs.microsoft.com/en-us/sharepointmigration/sharepoint-online-and-onedrive-migration-speed#faq-and-troubleshooting).
+- [General migration performance guidance](https://docs.microsoft.com/sharepointmigration/sharepoint-online-and-onedrive-migration-speed). (This includes an [FAQ & Troubleshooting section](https://docs.microsoft.com/sharepointmigration/sharepoint-online-and-onedrive-migration-speed#faq-and-troubleshooting).
 - For DLP, apps that scan the service and backup apps: [Best practices for discovering files and detecting changes at scale](https://docs.microsoft.com/onedrive/developer/rest-api/concepts/scan-guidance?view=odsp-graph-online).
 
 ### File management 
