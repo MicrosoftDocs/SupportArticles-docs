@@ -20,7 +20,7 @@ ms.reviewer: scapero
 description: Explains why some Teams users can't create a team.
 ---
 
-# Users can't create a team in Microsoft Teams
+# Users can't create a team 
 
 ## Summary
 
