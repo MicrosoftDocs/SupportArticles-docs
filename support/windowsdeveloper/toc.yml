@@ -25,7 +25,7 @@
   - name: Distributed Transactions
     items:
     - name: Can't start transactions in MS DTC
-      href: cant-start-transaction-ms-dtc.md
+      href: cannot-start-transaction-ms-dtc.md
     - name: Enable diagnostic tracing for MS DTC
       href: enable-diagnostic-tracing-ms-dtc.md
   - name: Graphics and Multimedia development

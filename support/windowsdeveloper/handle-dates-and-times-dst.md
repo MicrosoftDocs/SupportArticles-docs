@@ -137,7 +137,7 @@ The CRT contains its own logic for converting UTC to local time. Applications ca
 > [!NOTE]
 > This conversion follows rules specific to the United States.
 
-Before you apply the DST 2007 update, the CRT correctly handles current timestamps in United States time zones. After you apply the DST 2007 update, the CRT also handles both past and future United States dates. Updates for the CRT are listed in the [References](##references) section.
+Before you apply the DST 2007 update, the CRT correctly handles current timestamps in United States time zones. After you apply the DST 2007 update, the CRT also handles both past and future United States dates. Updates for the CRT are listed in the [References](#references) section.
 
 ## Local time conversion in the .NET Framework
 
