@@ -249,7 +249,7 @@ In the PXE boot process, the client must first acquire TCP/IP parameters and the
    ![DHCP without server name or boot file information](./media/understand-pxe-boot/18498_en_3.png)
 
 3. The client then replies with a **DHCPREQUEST** once it has selected a **DHCPOFFER**. This contains the IP address from the offer that was selected.
-4. The DHCP server responds to the **DHCPREQUEST** with a DHCPACK that contains the same details as the **DHCPOFFER**. The server host name and the boot file name are not provided here:
+4. The DHCP server responds to the **DHCPREQUEST** with a **DHCPACK** that contains the same details as the **DHCPOFFER**. The server host name and the boot file name are not provided here:
 
    ![DHCPACK contains the same details as the DHCPOFFER](./media/understand-pxe-boot/18499_en_3.png)
 
@@ -312,7 +312,7 @@ In the PXE boot process, the client must first acquire TCP/IP parameters and the
 
 ## WinPE boot
 
-Once WinPE has booted, the TS boot shell is initiated from the SMS folder that's included in the WinPE image (this folder is injected into the boot WIM when it's imported into Configuration Manager). You can see this process logged in **SMSTS.log** that's located under `X:\Windows\Temp\SMSTS\`. X is the drive for PXE boot.
+Once WinPE has booted, the TS boot shell is initiated from the SMS folder that's included in the WinPE image (this folder is injected into the boot WIM when it's imported into Configuration Manager). You can see this process logged in **SMSTS.log** that's located under `X:\Windows\Temp\SMSTS\`.
 
 > [!TIP]
 > To access this login WinPE, enable the command prompt on the boot image. To do this, right-click **Boot Image** > **Properties** > **Customization**, and then check **Enable command support (testing only)**. You can then access the command prompt by pressing F8 in WinPE.

@@ -8,7 +8,7 @@ ms.prod-support-area-path:
 
 The Mobile Device Management (MDM) authority determines where you will run mobile device management tasks. You can set the MDM authority to Microsoft Intune by using the Intune administrator portal.
 
-_Original product version:_ &nbsp; Microsoft Intune, Microsoft System Center 2012 Service Pack 2, Microsoft System Center 2012 R2, Microsoft System Center 2012 R2 Service Pack 1  
+_Original product version:_ &nbsp; Microsoft Intune  
 _Original KB number:_ &nbsp; 3103996
 
 ## Possible configurations
