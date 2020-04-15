@@ -1,5 +1,5 @@
 ---
-title: Can't enroll a device automatically
+title: Windows 10 auto enrollment error 80180002b
 description: Fixes an issue in which Windows 10 Group Policy-based auto-enrollment to Intune fails with the error code 0x80180002b in Event Viewer.
 ms.date: 03/30/2020
 ms.prod-support-area-path: Windows enrollment

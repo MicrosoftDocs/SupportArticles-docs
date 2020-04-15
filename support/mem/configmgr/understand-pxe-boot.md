@@ -8,7 +8,7 @@ ms.prod-support-area-path: PXE
 
 This article describes basic processes of Preboot Execution Environment (PXE) boot in Configuration Manager, how they work, and how they interoperate with each other.
 
-_Original product version:_ &nbsp; System Center Configuration Manager (current branch), Microsoft System Center 2012 R2 Configuration Manager, Microsoft System Center 2012 Configuration Manager  
+_Original product version:_ &nbsp; Configuration Manager (current branch), Microsoft System Center 2012 R2 Configuration Manager, Microsoft System Center 2012 Configuration Manager  
 _Original KB number:_ &nbsp; 4468601
 
 ## Introduction
@@ -32,7 +32,7 @@ Installation is initiated by selecting the **Enable PXE support for clients** op
 > CExtProviderClassObject::DoPutInstanceInstanceSMS Provider04/09/2014 11:30:131552 (0x0610)  
 > INFO: 'RemoteDp.contoso.com' is a valid FQDN.SMS Provider04/09/2014 11:30:131552 (0x0610)
 
-In the WMI namespace *Root\SMS\Site_RR2* (where RR2 is the site code of the site), the `SMS_SCI_SYSResUse` class contains all the site systems roles on the primary site server. You can run the following query in **WBEMTEST** to identify all the DPs on that site server:
+In the WMI namespace `Root\SMS\Site_RR2` (where RR2 is the site code of the site), the `SMS_SCI_SYSResUse` class contains all the site systems roles on the primary site server. You can run the following query in **WBEMTEST** to identify all the DPs on that site server:
 
 ```sql
 SELECT * FROM SMS_SCI_SysResUse WHERE rolename like 'SMS Distribution Point'
@@ -40,7 +40,7 @@ SELECT * FROM SMS_SCI_SysResUse WHERE rolename like 'SMS Distribution Point'
 
 Changing the properties of these roles via the SDK will alter the site control file and configure the DP. The `IsPXE` property name is a member of the props property and is set to **1** when the DP is PXE enabled.
 
-The SMS Database Monitor component detects the change to the DPNotificaiton and DistributionPoints tables and drops files in distmgr.box:
+The SMS Database Monitor component detects the change to the `DPNotificaiton` and `DistributionPoints` tables and drops files in distmgr.box:
 
 > Smsdbmon.log  
 > RCV:UPDATE on SiteControl for SiteControl_AddUpd_HMAN [RR2 ][19604]  
@@ -63,9 +63,9 @@ The SMS Database Monitor component detects the change to the DPNotificaiton and 
 The Distribution Manager component on the primary site server then initiates the configuration of the remote DP:
 
 > ConfigureDPSMS_DISTRIBUTION_MANAGER04/09/2014 11:30:263776 (0x0EC0)  
-> IISPortsList in the SCF is '80'.SMS_DISTRIBUTION_MANAGER04/09/2014 11:30:263776 (0x0EC0)  
-> ISSSLPortsList in the SCF is '443'.SMS_DISTRIBUTION_MANAGER04/09/2014 11:30:263776 (0x0EC0)  
-> IISWebSiteName in the SCF is ''.SMS_DISTRIBUTION_MANAGER04/09/2014 11:30:263776 (0x0EC0)  
+> IISPortsList in the SCF is "80".SMS_DISTRIBUTION_MANAGER04/09/2014 11:30:263776 (0x0EC0)  
+> ISSSLPortsList in the SCF is "443".SMS_DISTRIBUTION_MANAGER04/09/2014 11:30:263776 (0x0EC0)  
+> IISWebSiteName in the SCF is "".SMS_DISTRIBUTION_MANAGER04/09/2014 11:30:263776 (0x0EC0)  
 > IISSSLState in the SCF is 448.SMS_DISTRIBUTION_MANAGER04/09/2014 11:30:263776 (0x0EC0)  
 > DP registry settings have been successfully updated on RemoteDp.contoso.com  
 > SMS_DISTRIBUTION_MANAGER04/09/2014 11:30:263776 (0x0EC0)  
@@ -81,9 +81,9 @@ In the SMS DP Provider log on the remote DP, we can see the following informatio
 The Visual C++ Redistributable is installed:
 
 > Smsdpprov.log  
-> [66C][Thu 09/04/2014 11:30:28]:Running: C:\SMS_DP$\sms\bin\vcredist_x64.exe /q /log 'C:\SMS_DP$\sms\bin\vcredist.log'  
-> [66C][Thu 09/04/2014 11:30:28]:Waiting for the completion of: C:\SMS_DP$\sms\bin\vcredist_x64.exe /q /log 'C:\SMS_DP$\sms\bin\vcredist.log'  
-> [66C][Thu 09/04/2014 11:30:39]:Run completed for: C:\SMS_DP$\sms\bin\vcredist_x64.exe /q /log 'C:\SMS_DP$\sms\bin\vcredist.log'
+> [66C][Thu 09/04/2014 11:30:28]:Running: C:\SMS_DP$\sms\bin\vcredist_x64.exe /q /log "C:\SMS_DP$\sms\bin\vcredist.log"  
+> [66C][Thu 09/04/2014 11:30:28]:Waiting for the completion of: C:\SMS_DP$\sms\bin\vcredist_x64.exe /q /log "C:\SMS_DP$\sms\bin\vcredist.log"  
+> [66C][Thu 09/04/2014 11:30:39]:Run completed for: C:\SMS_DP$\sms\bin\vcredist_x64.exe /q /log "C:\SMS_DP$\sms\bin\vcredist.log"
 
 WDS is installed:
 
@@ -131,9 +131,9 @@ The `REMINST` share is created and WDS is configured:
 > [66C][Thu 09/04/2014 11:31:37]:Disabling WDS/RIS functionality  
 > [66C][Thu 09/04/2014 11:31:39]:WDSServer status is 1  
 > [66C][Thu 09/04/2014 11:31:39]:WDSServer is NOT STARTED  
-> [66C][Thu 09/04/2014 11:31:39]:Running: WDSUTIL.exe /Initialize-Server /REMINST:'C:\RemoteInstall'  
-> [66C][Thu 09/04/2014 11:31:39]:Waiting for the completion of: WDSUTIL.exe /Initialize-Server /REMINST:'C:\RemoteInstall'  
-> [66C][Thu 09/04/2014 11:31:50]:Run completed for: WDSUTIL.exe /Initialize-Server /REMINST:'C:\RemoteInstall'  
+> [66C][Thu 09/04/2014 11:31:39]:Running: WDSUTIL.exe /Initialize-Server /REMINST:"C:\RemoteInstall"  
+> [66C][Thu 09/04/2014 11:31:39]:Waiting for the completion of: WDSUTIL.exe /Initialize-Server /REMINST:"C:\RemoteInstall"  
+> [66C][Thu 09/04/2014 11:31:50]:Run completed for: WDSUTIL.exe /Initialize-Server /REMINST:"C:\RemoteInstall"  
 > [66C][Thu 09/04/2014 11:31:50]:CcmInstallPXE: Deleting the DP mutex key for WDS.  
 > [66C][Thu 09/04/2014 11:31:50]:Installed PXE  
 > [66C][Thu 09/04/2014 11:32:03]:CcmInstallPXE  
@@ -169,16 +169,16 @@ Once this is done, Distribution Manager will start processing the request and in
 > DistMgr.log  
 > Found notification for package 'RR200004'Used 0 out of 30 allowed processing threads.  
 > Starting package processing thread, thread ID = 0x152C (5420)  
-> Start adding package to server ['Display=\\\RemoteDp.contoso.com\\']MSWNET:['SMS_SITE=RR2']\\\RemoteDp.contoso.com\\...  
+> Start adding package to server ["Display=\\\RemoteDp.contoso.com\\"]MSWNET:["SMS_SITE=RR2"]\\\RemoteDp.contoso.com\\...  
 > Attempting to add or update a package on a distribution point.  
-> Successfully made a network connection to \\RemoteDp.contoso.com \ADMIN$.  
+> Successfully made a network connection to \\\RemoteDp.contoso.com\ADMIN$.  
 > CreateSignatureShare, connecting to DP  
-> Signature share exists on distribution point path \\RemoteDp.contoso.com \SMSSIG$  
-> Share SMSPKGC$ exists on distribution point \\RemoteDp.contoso.com \SMSPKGC$  
-> Checking configuration of IIS virtual directories on DP ['Display=\\\RemoteDp.contoso.com\\']MSWNET:['SMS_SITE=RR2']\\\RemoteDp.contoso.com\\  
+> Signature share exists on distribution point path \\\RemoteDp.contoso.com\SMSSIG$  
+> Share SMSPKGC$ exists on distribution point \\\RemoteDp.contoso.com\SMSPKGC$  
+> Checking configuration of IIS virtual directories on DP ["Display=\\\RemoteDp.contoso.com\\"]MSWNET:["SMS_SITE=RR2"]\\\RemoteDp.contoso.com\\  
 > Creating, reading or updating IIS registry key for a distribution point.  
 > Virtual Directory SMS_DP_SMSSIG$ for the physical path C:\SMSSIG$ already exists.  
-> Created package transfer job to send package RR200004 to distribution point ['Display=\\\RemoteDp.contoso.com\\']MSWNET:['SMS_SITE=RR2']\\\RemoteDp.contoso.com\\.  
+> Created package transfer job to send package RR200004 to distribution point ["Display=\\\RemoteDp.contoso.com\\"]MSWNET:["SMS_SITE=RR2"]\\\RemoteDp.contoso.com\\.  
 > StoredPkgVersion (9) of package RR200004. StoredPkgVersion in database is 9.  
 > SourceVersion (9) of package RR200004. SourceVersion in database is 9.
 
@@ -191,7 +191,7 @@ Package Transfer Manager (the DP is remote) then initiates sending of the conten
 > Sending thread starting for Job: 105, package: RR200004, Version: 9, Priority: 2, server: REMOTEDP.CONTOSO.COM, DPPriority: 200  
 > Sending legacy content RR200004.9 for package RR200004  
 > Finished sending SWD package RR200004 version 9 to distribution point REMOTEDP.CONTOSO.COM  
-> Sent status to the distribution manager for pkg RR200004, version 9, status 3 and distribution point ['Display=\\\RemoteDp.contoso.com\\']MSWNET:['SMS_SITE=RR2']\\\RemoteDp.contoso.com\\  
+> Sent status to the distribution manager for pkg RR200004, version 9, status 3 and distribution point ["Display=\\\RemoteDp.contoso.com\\"]MSWNET:["SMS_SITE=RR2"]\\\RemoteDp.contoso.com\\  
 StateTable::CState::Handle - (8210:1 2014-09-10 13:19:12.087+00:00) >> (8203:3 2013-11-26 15:43:48.108+00:00)  
 > Successfully send state change notification 7F6041B0-3EE2-427F-AB72-B89610A6331C  
 > Sending thread complete
@@ -249,7 +249,7 @@ In the PXE boot process, the client must first acquire TCP/IP parameters and the
    ![DHCP without server name or boot file information](./media/understand-pxe-boot/18498_en_3.png)
 
 3. The client then replies with a **DHCPREQUEST** once it has selected a **DHCPOFFER**. This contains the IP address from the offer that was selected.
-4. The DHCP server responds to the **DHCPREQUEST** with a **DHCPACK that contains the same details as the **DHCPOFFER**. The server host name and the boot file name are not provided here:
+4. The DHCP server responds to the **DHCPREQUEST** with a DHCPACK that contains the same details as the **DHCPOFFER**. The server host name and the boot file name are not provided here:
 
    ![DHCPACK contains the same details as the DHCPOFFER](./media/understand-pxe-boot/18499_en_3.png)
 
@@ -277,7 +277,7 @@ In the PXE boot process, the client must first acquire TCP/IP parameters and the
 
    NBPs are both architecture and firmware specific (BIOS or UEFI). On BIOS computers, the NBP is a 16-bit real-mode application, therefore it's possible to use the same NBP for both x86-based and x64-based operating systems.
 
-   In our case (an x64 BIOS machine), the NBP is located in the following directory on the PXE enabled DP: *\\\remotedp\c$\RemoteInstall\SMSBoot\x64*
+   In our case (an x64 BIOS machine), the NBP is located in the following directory on the PXE enabled DP: `\\remotedp\c$\RemoteInstall\SMSBoot\x64`
 
    ![WDS NBP location](./media/understand-pxe-boot/18487_en_1.png)
 
@@ -312,7 +312,7 @@ In the PXE boot process, the client must first acquire TCP/IP parameters and the
 
 ## WinPE boot
 
-Once WinPE has booted, the TS boot shell is initiated from the SMS folder that's included in the WinPE image (this folder is injected into the boot WIM when it's imported into Configuration Manager). You can see this process logged in **SMSTS.log** that's located under *Disk:\Windows\Temp\SMSTS\\*.  
+Once WinPE has booted, the TS boot shell is initiated from the SMS folder that's included in the WinPE image (this folder is injected into the boot WIM when it's imported into Configuration Manager). You can see this process logged in **SMSTS.log** that's located under `X:\Windows\Temp\SMSTS\`. X is the drive for PXE boot.
 
 > [!TIP]
 > To access this login WinPE, enable the command prompt on the boot image. To do this, right-click **Boot Image** > **Properties** > **Customization**, and then check **Enable command support (testing only)**. You can then access the command prompt by pressing F8 in WinPE.
@@ -320,7 +320,7 @@ Once WinPE has booted, the TS boot shell is initiated from the SMS folder that's
 Here is the initial TS boot shell process:
 
 > SMSTS.log  
-> =========================[ TSBootShell.exe ]=========================  
+> ========================[ TSBootShell.exe ]========================  
 > Succeeded loading resource DLL 'X:\sms\bin\i386\1033\TSRES.DLL'  
 > Debug shell is enabled  
 > Waiting for PNP initialization...  
@@ -341,12 +341,12 @@ Here is the initial TS boot shell process:
 Followed by the Task Sequence Manager boot strap:
 
 > SMSTS.log  
-> =========================[ TSMBootStrap.exe ]=========================  
+> ========================[ TSMBootStrap.exe ]========================  
 > Command line: X:\sms\bin\i386\TsmBootstrap.exe /env:WinPE /configpath:X:\sms\data\  
 > Succeeded loading resource DLL 'X:\sms\bin\i386\1033\TSRES.DLL'  
 > Succeeded loading resource DLL 'X:\sms\bin\i386\TSRESNLC.DLL'  
 > Current OS version is 6.2.9200.0  
-> Adding SMS bin folder 'X:\sms\bin\i386' to the system environment PATH  
+> Adding SMS bin folder "X:\sms\bin\i386" to the system environment PATH  
 > PXE Boot with Root = X:\\  
 > Executing from PXE in WinPE  
 > Loading TsPxe.dll from X:\sms\bin\i386\TsPxe.dll
@@ -359,17 +359,19 @@ Once TSPXE is loaded, it downloads the TS variables using TFTP:
 > Variable Path: \SMSTemp\2014.09.05.18.20.31.0001.{0C616323-A027-41B0-A215-057AF4F1E361}.boot.var  
 > Succesfully added firewall rule for Tftp  
 > Executing: X:\sms\bin\i386\smstftp.exe -i 10.238.0.2 get \SMSTemp\2014.09.05.18.20.31.0001.{0C616323-A027-41B0-A215-057AF4F1E361}.boot.var X:\sms\data\variables.dat  
-> Executing command line: 'X:\sms\bin\i386\smstftp.exe' -i 10.238.0.2 get \SMSTemp\2014.09.05.18.20.31.0001.{0C616323-A027-41B0-A215-057AF4F1E361}.boot.var X:\sms\data\variables.dat  
+> Executing command line: "X:\sms\bin\i386\smstftp.exe" -i 10.238.0.2 get \SMSTemp\2014.09.05.18.20.31.0001.{0C616323-A027-41B0-A215-057AF4F1E361}.boot.var X:\sms\data\variables.dat  
 > Process completed with exit code 0  
 > Succesfully removed firewall rule for Tftp  
 > Successfully downloaded pxe variable file.  
-> Loading Media Variables from 'X:\sms\data\variables.dat'  
-> Loading Media Variables from 'X:\sms\data\variables.dat'  
-> Found network adapter 'Intel 21140-Based PCI Fast Ethernet Adapter (Emulated)' with IP Address 10.238.0.3.  
-> Loading Media Variables from 'X:\sms\data\variables.dat'  
+>
+> Loading Media Variables from "X:\sms\data\variables.dat"  
+> Loading Media Variables from "X:\sms\data\variables.dat"  
+> Found network adapter "Intel 21140-Based PCI Fast Ethernet Adapter (Emulated)" with IP Address 10.238.0.3.  
+> Loading Media Variables from "X:\sms\data\variables.dat"  
 > Loading variables from the Task Sequencing Removable Media.  
-> Loading Media Variables from 'X:\sms\data\variables.dat'  
-> Succeeded loading resource DLL 'X:\sms\bin\i386\1033\TSRES.DLL'  
+> Loading Media Variables from "X:\sms\data\variables.dat"  
+> Succeeded loading resource DLL "X:\sms\bin\i386\1033\TSRES.DLL"  
+>
 > Setting SMSTSMP TS environment variable  
 > Setting _SMSMediaGuid TS environment variable  
 > Setting _SMSTSBootMediaPackageID TS environment variable  
@@ -389,7 +391,7 @@ Once TSPXE is loaded, it downloads the TS variables using TFTP:
 At this point, TSPXE locates the Management Point (MP) and downloads policy before presenting the user interface for the user to select the optional Task Sequence:
 
 > SMSTS.log  
-> site=RR2,RR2, MP=<http://ConfigMgrR2.CONTOSO.COM>, ports: http=80,https=443  
+> site=RR2, MP=<http://ConfigMgrR2.CONTOSO.COM>, ports: http=80,https=443  
 > certificates are received from MP.  
 > CLibSMSMessageWinHttpTransport::Send: URL: ConfigMgrR2.CONTOSO.COM:80 CCM_POST /ccm_system/request  
 > Request was successful.  

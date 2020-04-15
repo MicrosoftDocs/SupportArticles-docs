@@ -1,5 +1,5 @@
 ---
-title: Can't turn on an Apple DEP device
+title: DEP enrollment error XPC_TYPE_ERROR
 description: Fixes an issue in which you receive error 'XPC_TYPE_ERROR Connection invalid' during enrolling an Apple DEP device.
 ms.date: 03/30/2020
 ms.prod-support-area-path: 
@@ -29,7 +29,3 @@ This issue occurs if there's a connection problem between the device and the App
 To fix this issue, fix the connection problem, or use a different network connection to enroll the device. If the issue persists, contact [Apple support](https://support.apple.com).
 
 For more information about how to enroll DEP devices, see [Automatically enroll iOS devices with Apple's Device Enrollment Program](/mem/intune/enrollment/device-enrollment-program-enroll-ios).
-
-[!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]
-
-[!INCLUDE [Third-party contact disclaimer](../../includes/third-party-contact-disclaimer.md)]

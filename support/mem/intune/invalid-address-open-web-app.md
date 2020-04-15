@@ -1,13 +1,13 @@
 ---
 title: Can't open a web app on iOS
-description: Fixes an issue in which you can't open a Web App on an iOS device with the "Safari cannot open the page because the address is invalid" error message.
+description: Fixes an issue in which you can't open a Web App on an iOS device with the 'Safari cannot open the page because the address is invalid' error message.
 ms.date: 03/27/2020
 ms.prod-support-area-path:
 ms.reviewer: joelste, intunecic, stephgil
 ---
-# "Safari cannot open the page because address is invalid" error when you open a web app on iOS
+# 'Safari cannot open the page because address is invalid' error when you open a web app on iOS
 
-This article fixes an issue in which you can't open a Web App on an iOS device with the "Safari cannot open the page because the address is invalid" error message.
+This article fixes an issue in which you can't open a Web App on an iOS device with the **Safari cannot open the page because the address is invalid** error message.
 
 _Original product version:_ &nbsp; Microsoft Intune  
 _Original KB number:_ &nbsp; 4487249

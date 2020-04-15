@@ -1,13 +1,13 @@
 ---
 title: Advanced troubleshooting for PXE boot issues
-description: Advance troubleshooting techniques to help administrators diagnose and resolve PXE boot failures in System Center Configuration Manager.
+description: Advance troubleshooting techniques to help administrators diagnose and resolve PXE boot failures in Configuration Manager.
 ms.date: 03/27/2020
 ms.prod-support-area-path: PXE
 ms.reviewer: frankroj
 ---
 # Advanced troubleshooting for PXE boot issues in Configuration Manager
 
-This article provides advance troubleshooting techniques to help administrators diagnose and resolve PXE boot failures in System Center Configuration Manager.
+This article provides advance troubleshooting techniques to help administrators diagnose and resolve PXE boot failures in Configuration Manager.
 
 _Original product version:_ &nbsp; Configuration Manager (current branch)  
 _Original KB number:_ &nbsp; 4491871
@@ -63,7 +63,7 @@ If DHCP is ever moved to another server and removed from the server that is host
 1. Run the following command at an elevated command prompt:
 
    ```console
-   REG ADD 'HKLM\SYSTEM\CurrentControlSet\services\WDSServer\Providers\WDSPXE' /v UseDHCPPorts /t REG_DWORD /d 1 /f`
+   REG ADD HKLM\SYSTEM\CurrentControlSet\services\WDSServer\Providers\WDSPXE /v UseDHCPPorts /t REG_DWORD /d 1 /f
    ```
 
 2. Run the following commands at an elevated command prompt:
@@ -83,19 +83,19 @@ If DHCP is ever moved to another server and removed from the server that is host
 
 Before you start to troubleshoot the initial DHCP discovery stage of the PXE booting process, consider the following points:
 
-- In SMSPXE.log, you should see the MAC address or the `DHCPREQUEST` of the device that you are trying to start. If you don't see that, a router configuration issue might exist between the client and the DP.
+- In SMSPXE.log, you should see the MAC address or the **DHCPREQUEST** of the device that you are trying to start. If you don't see that, a router configuration issue might exist between the client and the DP.
 - Do not use DHCP options 60, 66, or 67. **This is not supported**.
 - Test whether the device can start when it is plugged into a switch on the same subnet as the PXE-enabled DP. If it can, the issue likely involves the router configuration.
 - Make sure that the DHCP (67 and 68), TFTP (69), and BINL (4011) ports are open between the client computer, the DHCP server, and the PXE DP.
 
 At this stage, there are no logs to refer to. However, a PXE error code is usually displayed if the PXE boot process fails before WinPE starts. The following are examples of the error messages that you might see:
 
-- > PXE-E51: No DHCP or proxyDHCP offers were received.
-- > PXE-E52: proxyDHCP offers were received. No DHCP offers were received.
-- > PXE-E53: No boot filename received.
-- > PXE-E55: proxyDHCP service did not reply to request on port 4011.
-- > PXE-E77 bad or missing discovery server list.
-- > PXE-E78: Could not locate boot server.
+- PXE-E51: No DHCP or proxyDHCP offers were received.
+- PXE-E52: proxyDHCP offers were received. No DHCP offers were received.
+- PXE-E53: No boot filename received.
+- PXE-E55: proxyDHCP service did not reply to request on port 4011.
+- PXE-E77 bad or missing discovery server list.
+- PXE-E78: Could not locate boot server.
 
 Although this helps narrow the focus of your troubleshooting, you might still have to capture a network trace of the issue by using a network monitoring tool such as [Netmon](https://www.microsoft.com/download/details.aspx?id=4865) or [WireShark](https://www.wireshark.org/download.html). The network monitoring tool must be installed on both the PXE-enabled DP and a computer that is connected to a mirrored port on the switch. For more information about how to configure mirrored ports, refer to the manual that's provided by the manufacturer of the specific switch or routing device.
 
@@ -119,12 +119,12 @@ Capture a simultaneous network trace on the client and the DP to determine wheth
 
 If the error on PXE boot refers to TFTP, you may be unable to transfer the boot files. The following are examples of the error messages that you may receive:
 
-- > PXE-E32: TFTP open timeout
-- > PXE-E35: TFTP read timeout
-- > PXE-E36: Error received from TFTP server
-- > PXE-E3F: TFTP packet size is invalid
-- > PXE-E3B: TFTP Error - File not Found
-- > PXE-T04: Access Violation
+- PXE-E32: TFTP open timeout
+- PXE-E35: TFTP read timeout
+- PXE-E36: Error received from TFTP server
+- PXE-E3F: TFTP packet size is invalid
+- PXE-E3B: TFTP Error - File not Found
+- PXE-T04: Access Violation
 
 A good way to troubleshoot these errors is to monitor the network by using Netmon or Wireshark. The following is an example of the data that is captured from a PXE client when a TFTP Open time-out occurs.
 
@@ -163,7 +163,7 @@ The most common issues that occur during this phase are driver-related. Overall,
 The SMSTS.log file (located in \<*SystemDrive*>:\Windows\temp\SMSTS) is the most useful resource to troubleshoot these issues. (Remember to enable the command prompt during startup so that you can examine this file.) If you do not see a log entry that has a valid IP address and resembles the following entry, you are probably experiencing a driver issue:
 
 > SMSTS.log  
-> Found network adapter 'Intel 21140-Based PCI Fast Ethernet Adapter (Emulated)' with IP Address \<IP address>
+> Found network adapter "Intel 21140-Based PCI Fast Ethernet Adapter (Emulated)" with IP Address \<IP address>
 
 To verify this situation, press F8, and then run `IPCONFIG` at the command prompt to determine whether the NIC is recognized and has a valid IP address.
 
@@ -184,10 +184,10 @@ Another common issue that affects PXE boot involves Task Sequence deployments. 
 Upon further investigation, you notice the following entry in the SMSPXE log:
 
 > SMSPXE.log  
-> Client lookup reply: \<ClientIDReply>\<Identification Unknown='0' ItemKey='16777299' ServerName=''>\<Machine>\<ClientID/>\<NetbiosName/>\</Machine>\</Identification>\</ClientIDReply>  
+> Client lookup reply: \<ClientIDReply>\<Identification Unknown="0" ItemKey="16777299" ServerName="">\<Machine>\<ClientID/>\<NetbiosName/>\</Machine>\</Identification>\</ClientIDReply>  
 > MP_LookupDevice succeeded: 16777299 1 16777299 1 0  
 > 00:15:5D:00:19:CA, 32E5B71A-B626-4A4B-902E-7F94AD38B5B3: device is in the database.  
-> Client boot action reply: \<ClientIDReply>\<Identification Unknown='0' ItemKey='16777299' ServerName=''>\<Machine>\<ClientID/>\<NetbiosName/>\</Machine>\</Identification>\<PXEBootAction LastPXEAdvertisementID='' LastPXEAdvertisementTime='' OfferID='' OfferIDTime='' PkgID='' PackageVersion='' packagePath='' BootImageID='' Mandatory=''/>\</ClientIDReply>  
+> Client boot action reply: \<ClientIDReply>\<Identification Unknown="0" ItemKey="16777299" ServerName="">\<Machine>\<ClientID/>\<NetbiosName/>\</Machine>\</Identification>\<PXEBootAction LastPXEAdvertisementID="" LastPXEAdvertisementTime="" OfferID="" OfferIDTime="" PkgID="" PackageVersion="" packagePath="" BootImageID="" Mandatory=""/>\</ClientIDReply>  
 > Client Identity:  
 > 00:15:5D:00:19:CA, 32E5B71A-B626-4A4B-902E-7F94AD38B5B3: SMSID= OfferID=, PackageID=, PackageVersion=, BootImageID=, PackagePath=, Mandatory=0  
 > 00:15:5D:00:19:CA, 32E5B71A-B626-4A4B-902E-7F94AD38B5B3: no advertisements found  
