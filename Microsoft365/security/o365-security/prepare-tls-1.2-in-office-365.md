@@ -20,26 +20,25 @@ appliesto:
 
 # Preparing for TLS 1.2 in Office 365 and Office 365 GCC 
 
+> [!IMPORTANT]
+> The world is in the middle of a pandemic, and we at Microsoft are aware of the impact on our customers and partners. To lighten the burden on our commercial customers, we have temporarily halted any deprecation enforcement of TLS 1.0 and 1.1. An update will be sent on a revised timeline after the current crisis stabilizes. (This article is revised to reflect the change.) 
+
 > [!NOTE]
 > **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
 
 ## Summary
 
-To provide the best-in-class encryption to our customers, Microsoft plans to deprecate Transport Layer Security (TLS) versions 1.0 and 1.1 in Office 365 and Office 365 GCC as of June 2020.
-
-We understand that the security of your data is important, and we're committed to transparency about changes that may affect your use of the TLS service.
+To provide the best-in-class encryption to our customers, Microsoft plans to deprecate Transport Layer Security (TLS) versions 1.0 and 1.1 in Office 365 and Office 365 GCC. We understand that the security of your data is important, and we're committed to transparency about changes that may affect your use of the TLS service.
 
 The [Microsoft TLS 1.0 implementation](https://support.microsoft.com/help/3117336/schannel-implementation-of-tls-1-0-in-windows-security-status-update-n) has no known security vulnerabilities. But because of the potential for future protocol downgrade attacks and other TLS vulnerabilities, we are discontinuing support for TLS 1.0 and 1.1 in Microsoft Office 365 and Office 365 GCC.
 
-For information about how to remove TLS 1.0 and 1.1 dependencies, see the whitepaper [Solving the TLS 1.0 problem](https://www.microsoft.com/download/details.aspx?id=55266).
+For information about how to remove TLS 1.0 and 1.1 dependencies, see the following white paper: [Solving the TLS 1.0 problem](https://www.microsoft.com/download/details.aspx?id=55266).
 
 ## More information
 
-As of June 2020, Office 365 will begin deprecating TLS 1.0 and 1.1 in worldwide environments for commercial customers and in GCC environments for GCC customers. This means that starting in June 2020, any commercial and GCC clients, devices or services that connect to Office 365 by using TLS 1.0 and 1.1 will not succeed.
+We have already begun deprecation of TLS 1.0 and 1.1 as of January 2020. Any clients, devices, or services that connect to Office 365 through TLS 1.0 or 1.1 in our DoD or GCC High instances are unsupported. For our commercial customers of Office 365, we will halt any deprecation enforcement of TLS 1.0 and 1.1 until the situation regarding COVID-19 stabilizes. 
 
-Please note that TLS 1.0 and 1.1 is already unsupported, but the actual deprecation when Office 365 will stop accepting any connections using TLS 1.0 and 1.1 is scheduled to start in June 2020.
-
-We recommend that all client-server and browser-server combinations use TLS 1.2 (or a later version) to maintain connection to Office 365 services. You might have to update certain client-server and browser-server combinations.  
+We recommend that all client-server and browser-server combinations use TLS 1.2 (or a later version) in order to maintain connection to Office 365 services. You might have to update certain client-server and browser-server combinations.
 
 The following clients are known to be unable to use TLS 1.2. Update these clients to ensure uninterrupted access to the service.
 
