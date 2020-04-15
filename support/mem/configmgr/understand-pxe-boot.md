@@ -419,7 +419,7 @@ Lastly, the collection and machine variables are downloaded and the Welcome Page
 > Setting collection variables in the task sequencing environment.  
 > Setting machine variables in the task sequencing environment.  
 > Running Wizard in Interactive mode  
-> Loading Media Variables from 'X:\sms\data\variables.dat'  
+> Loading Media Variables from "X:\sms\data\variables.dat"  
 > Activating Welcome Page.  
 > Loading bitmap
 
