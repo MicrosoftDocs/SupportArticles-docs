@@ -20,7 +20,7 @@ ms.reviewer: scapero
 description: Explains what the website tab is and why it may be confusing to customers.
 ---
 
-# Microsoft Teams website tabs leads to customer confusion 
+# Teams website tabs leads to customer confusion 
 
 ## Summary
 
