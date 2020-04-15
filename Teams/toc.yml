@@ -110,7 +110,7 @@
     - name: Temporary change to file size download limit in OneNote
       href: /office/troubleshoot/onenote/temp-change-onenote-file-size-download?toc=/MicrosoftTeams/troubleshoot/toc.json&bc=/MicrosoftTeams/troubleshoot/breadcrumb/toc.json
   - name: Provisioning
-     items:
+    items:
     - name: Deleting a team also deletes the group associated with it in Teams
       href: ./known-issues/deleting-team-also-deletes-group.md
     - name: Incorrect user listed as SharePoint site creator
@@ -128,7 +128,7 @@
     - name: Using a symlink or mapping a drive to C:\users causes Teams to start with a white screen
       href: ./known-issues/symlink-or-drivemap-causes-white-screen.md
   - name: Tabs
-     items:
+    items:
     - name: Can't rename legacy OneNote tabs in Teams
       href: ./known-issues/unable-to-rename-legacy-onenote-tabs.md
     - name: File download failure in Teams
