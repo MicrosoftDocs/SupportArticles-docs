@@ -4,7 +4,7 @@ ms.author: v-todmc
 author: todmccoy
 manager: dcscontentpm
 localization_priority: Normal
-ms.date: 7/23/2019
+ms.date: 4/15/2020
 ms.audience: Admin
 ms.topic: article
 ms.service: sharepoint-online
@@ -15,8 +15,9 @@ search.appverid:
 - MET150
 ms.assetid: 
 appliesto:
+- CI 116765
 - SharePoint Online
-description: "Describes a resolution to an issue where sharing options are not available or grayed out when using SharePointOnline or OneDrive for Business."
+description: Describes a resolution to an issue where sharing options are not available or grayed out when using SharePointOnline or OneDrive for Business.
 ---
 
 # Sharing options are greyed out when sharing from SharePoint Online or OneDrive
@@ -66,6 +67,17 @@ Try sharing again.
 3.    Select **Save**.
 
 Try sharing again.
+
+### Anonymous access
+
+If the site collection feature **Limited-access user permission lockdown mode** is activated, the end user will see both **Anyone** and **People in Microsoft** grayed out.
+ 
+To resolve this issue, follow the steps below:
+
+1. Go to **Site administration** > **Site settings**. 
+2. Select **Site collection features**. 
+3. Deactivate **Limited-access user permission lockdown mode**.
+
 
 ## More information
 For more information on external sharing settings, see [Turn external Sharing on or Off](https://docs.microsoft.com/sharepoint/turn-external-sharing-on-or-off). 
