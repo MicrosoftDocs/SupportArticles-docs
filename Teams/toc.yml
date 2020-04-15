@@ -79,7 +79,7 @@
       href: ./known-issues/no-audio-when-sharing-content-in-meeting.md
     - name: Team member maximum of 5000 in Microsoft Teams
       href: ./known-issues/teams-member-max-5000.md
-    - name: "The following application instance is not present in BVD" error when assigning a phone number to a resource accounts
+    - name: '"The following application instance is not present in BVD" error when assigning a phone number to a resource accounts'
       href: ./known-issues/following-application-instance-not-present-error.md
     - name: Users with Exchange Online mailboxes can't access Meetings or Connectors 
       href: ./known-issues/exchange-users-cant-access-meetings.md
@@ -142,4 +142,3 @@
     - name: Unable to upload or download OneNote file in Teams
       href: ./known-issues/cant-upload-download-onenote-file.md
 
-      
