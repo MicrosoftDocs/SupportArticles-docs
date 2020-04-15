@@ -41,4 +41,24 @@
         topicHref: /support/mem/intune/welcome-support-intune
       - name: Configuration Manager
         tocHref: /support/mem/configmgr/
-        topicHref: /support/mem/configmgr/welcome-support-configmgr      
+        topicHref: /support/mem/configmgr/welcome-support-configmgr
+
+    - name: System Center
+      tocHref: /support/system-center/
+      topicHref: /support/system-center/
+      items:
+      - name: Data Protection Manager
+        tocHref: /support/system-center/dpm/
+        topicHref: /support/system-center/dpm/welcome-support-dpm
+      - name: Operations Manager
+        tocHref: /support/system-center/scom/
+        topicHref: /support/system-center/scom/welcome-support-scom
+      - name: Orchestrator
+        tocHref: /support/system-center/orchestrator/
+        topicHref: /support/system-center/orchestrator/welcome-support-orchestrator
+      - name: Service Manager
+        tocHref: /support/system-center/scsm/
+        topicHref: /support/system-center/scsm/welcome-support-scsm
+      - name: Virtual Machine Manager
+        tocHref: /support/system-center/vmm/
+        topicHref: /support/system-center/vmm/welcome-support-vmm
