@@ -20,7 +20,7 @@ ms.reviewer: scapero
 description: Resolves an issue where you get a sign-in error in Teams after changing your password. 
 ---
 
-# Sign-in error after password changed in Microsoft Teams
+# Sign-in error after password change in Microsoft Teams
 
 ## Symptom
 

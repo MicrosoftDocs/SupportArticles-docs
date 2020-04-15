@@ -20,7 +20,7 @@ ms.reviewer: scapero
 description: Resolves an issue where assigning a toll service number in the Teams admin center gives an error. 
 ---
 
-# Error "You need a phone system license" when assigning a toll service number from the Teams admin center
+# Error "You need a phone system license" when assigning a toll service number from the admin center
 
 ## Symptoms
 

@@ -20,7 +20,7 @@ ms.reviewer: scapero
 description: Describes a resolution to an issue with Safari's Intelligent Tracking Prevention in Teams.
 ---
 
-# Organizations are unable to prevent users from changing profile photos in Microsoft Teams
+# Organizations are unable to prevent users from changing profile photos
 
 ## Summary
 

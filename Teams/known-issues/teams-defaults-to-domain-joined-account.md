@@ -20,7 +20,7 @@ ms.reviewer: scapero
 description: Describes how to resolve an issue where Teams uses a domain-joined account if another is available when connecting. 
 ---
 
-# Microsoft Teams will always log into the domain-joined PC account
+#  Teams will always log into the domain-joined PC account
 
 ## Symptom
 If a user has two different Microsoft Teams accounts and has a domain-joined machine, Teams uses the domain-joined profile on the machine to automatically log the user into Teams.

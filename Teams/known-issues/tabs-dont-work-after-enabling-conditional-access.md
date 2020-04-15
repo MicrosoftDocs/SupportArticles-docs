@@ -20,7 +20,7 @@ ms.reviewer: scapero
 description: Explains why tab might stop functioning after enabling Conditional Access in Teams.
 ---
 
-# Tabs not working after enabling Conditional Access in Teams
+# Tabs not working after enabling Conditional Access
 
 ## Summary
 
