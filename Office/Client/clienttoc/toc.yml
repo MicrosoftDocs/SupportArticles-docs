@@ -1111,6 +1111,8 @@
       href: ../word/faq-about-comments-feature-in-word.md
     - name: Fonts in Word
       href: ../word/troubleshoot-font-problems.md
+    - name: Graphics and images don't display correctly in 32-bit version of Word
+      href: ../word/graphics-images-display-incorrectly-32-bit.md
     - name: Image DPI is changed after you print to PDF
       href: ../word/image-dpi-change-after-print-to-pdf.md
     - name: Issue when opening a .wps file
