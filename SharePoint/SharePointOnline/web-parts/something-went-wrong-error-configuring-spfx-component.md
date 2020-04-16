@@ -20,11 +20,11 @@ ms.reviewer: lucaband
 description: Explains why you receive the error "Something went wrong" when configuring an SPFx component on a page in SharePoint Online.
 ---
 
-# "Something went wrong" error configuring SPFx component in a SharePoint Online page
+# "Something went wrong" error configuring SPFx control in a SharePoint Online page
 
 ## Symptoms
 
-You see the following error message when you configure a SharePoint Framework (SPFx) control on a page in SharePoint Online:
+You see the following error message when you configure a SharePoint Framework (SPFx) component on a page in SharePoint Online:
 
 ```
 Something went wrong
