@@ -26,7 +26,7 @@ description: Describes a resolution to an issue where sharing options are not av
 Sharing options are grayed out when attempting to share from SharePoint Online or OneDrive.
 
 ## Cause
-This issue can occur if you do not have sharing settings enabled properly for the site or organization. 
+This issue can occur if you do not have sharing settings enabled properly for the site or organization. This issue may also occur if the site collection feature **Limited-access user permission lockdown mode** is activated. 
 
 For example:
 1.    Select the file or folder you want to share, and then select **Share**.
