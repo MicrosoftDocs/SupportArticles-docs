@@ -309,6 +309,10 @@
       href: ../web-parts/non-cdn-enabled-picture-library-slideshow-web-part-no-longer-switches-automatically-to-new-images.md
     - name: Sites.aspx page doesn't display content
       href: ../Web-parts/aspx-page-not-display-content.md
+    - name: '"Something went wrong" error configuring SPFx component in a SharePoint Online page'
+      href: ../web-parts/something-went-wrong-error-configuring-spfx-component.md
+    - name: Unable to drag and drop web parts onto classic pages in SharePoint Online
+      href: ../web-parts/unable-to-drag-drop-web-parts.md
   - name: Workflows
     items:
     - name: '"Access denied" error with an Approval Workflow task'
