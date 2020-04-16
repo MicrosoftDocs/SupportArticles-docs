@@ -32,7 +32,7 @@ When you use an IMAP or POP account that's added as a secondary account to the O
 * Create a task with attachment
 * Create a task with text of message
 * Create an appointment with attachment
-* Create  an appointment with text of message
+* Create an appointment with text of message
 
 ## Cause
 
