@@ -31,16 +31,6 @@
       href: ./known-issues/teams-stops-working-when-joining-from-edge.md
     - name: Teams will always log into the domain-joined PC account
       href: ./known-issues/teams-defaults-to-domain-joined-account.md
-  - name: Third-party programs
-    items:
-    - name: Dell Encryption prevents Teams from starting correctly 
-      href: ./known-issues/dell-encryption-prevents-teams-from-starting.md
-    - name: Microsoft Teams requires access to Google Gstatic
-      href: ./known-issues/unable-to-access-gstatic-in-teams.md
-    - name: Problems with Safari Intelligent Tracking Prevention
-      href: ./known-issues/safari-intelligent-tracking-prevention-problems.md
-    - name: Symantec DLP interferes with Teams processes
-      href: ./known-issues/symantec-dlp-interferes-with-teams.md
   - name: Channels
     items:
     - name: A channel cannot be recreated after deletion
@@ -141,4 +131,13 @@
       href: ./known-issues/website-tabs-cause-confusion-teams.md
     - name: Unable to upload or download OneNote file in Teams
       href: ./known-issues/cant-upload-download-onenote-file.md
-
+  - name: Third-party programs
+    items:
+    - name: Dell Encryption prevents Teams from starting correctly 
+      href: ./known-issues/dell-encryption-prevents-teams-from-starting.md
+    - name: Microsoft Teams requires access to Google Gstatic
+      href: ./known-issues/unable-to-access-gstatic-in-teams.md
+    - name: Problems with Safari Intelligent Tracking Prevention
+      href: ./known-issues/safari-intelligent-tracking-prevention-problems.md
+    - name: Symantec DLP interferes with Teams processes
+      href: ./known-issues/symantec-dlp-interferes-with-teams.md
