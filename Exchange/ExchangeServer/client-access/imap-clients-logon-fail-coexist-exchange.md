@@ -45,11 +45,11 @@ Exchange 2016 server doesn’t support NTLM or Kerberos authentication methods w
 
 2. Restart the following IMAP services on the Exchange 2016 server:
 
-    Microsoft Exchange IMAP4 (MSExchangeImap4)
-    Microsoft Exchange IMAP4 Backend (MSExchangeIMAP4BE)
+    - Microsoft Exchange IMAP4 (MSExchangeImap4)
+    - Microsoft Exchange IMAP4 Backend (MSExchangeIMAP4BE)
 
 > [!NOTE]
-> You might have to set the LoginType to PlainTextAuthentication if you’re using nonsecure (TCP 143) IMAP. This applies mostly to older IMAP clients. If SecureLogin is set, the IMAP client must do a STARTTLS before authentication. Clients that don't support STARTTLS need to set the LoginType to PlainTextAuthentication.
+> You might have to set the **LoginType** to **PlainTextAuthentication** if you’re using nonsecure (TCP 143) IMAP. This applies mostly to older IMAP clients. If **SecureLogin** is set, the IMAP client must do a **STARTTLS** before authentication. Clients that don't support **STARTTLS** need to set the **LoginType** to **PlainTextAuthentication**.
 
 ### Method 2
 
