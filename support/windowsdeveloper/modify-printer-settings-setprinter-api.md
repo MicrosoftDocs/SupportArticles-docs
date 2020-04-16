@@ -6,7 +6,7 @@ ms.reviewer: kayda
 ---
 # How to modify printer settings by using SetPrinter
 
-The `SetPrinter` function allows applications to change various printer attributes. However, as the code in this article demonstrates, a certain amount of preparation is necessary to correctly call SetPrinter.
+The `SetPrinter` function allows applications to change various printer attributes. However, as the code in this article demonstrates, a certain amount of preparation is necessary to correctly call `SetPrinter`.
 
 _Original product version:_ &nbsp; Windows  
 _Original KB number:_ &nbsp; 140285
