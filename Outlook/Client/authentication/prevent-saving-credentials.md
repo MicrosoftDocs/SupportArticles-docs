@@ -39,6 +39,6 @@ The **Prevent saving credentials for Basic Authentication** policy setting is lo
 
 ### Outlook 2013
 
-The **Prevent saving credentials for Basic Authentication policy** setting is located in the `Microsoft Outlook 2013\Account Settings\E-mail` section of the Outlook 2013 Group Policy template. If this policy is enabled, the `DisableBasicAuthSavedCreds` value is written to the following Windows registry location on the workstation:
+The **Prevent saving credentials for Basic Authentication** policy setting is located in the `Microsoft Outlook 2013\Account Settings\E-mail` section of the Outlook 2013 Group Policy template. If this policy is enabled, the `DisableBasicAuthSavedCreds` value is written to the following Windows registry location on the workstation:
 
 `HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\15.0\Outlook\RPC`

@@ -29,7 +29,7 @@ Before your password changed, you saved your credentials. The stored credentials
 
 ## Resolution
 
-To resolve this problem, install the latest update for Outlook 2010 or Outlook 2013. For more information about the latest updates for Microsoft Outlook, see [How to install the latest applicable updates for Microsoft Outlook (US English only)](https://support.microsoft.com/help/2625547).
+To resolve this problem, install the latest update for Outlook 2010 or Outlook 2013. For more information about the latest updates for Microsoft Outlook, see [How to install the latest applicable updates for Microsoft Outlook (US English only)](../deployment/install-outlook-latest-updates.md).
 
 ## Workaround
 
