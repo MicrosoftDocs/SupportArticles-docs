@@ -1,6 +1,12 @@
 - name: Outlook for Windows Troubleshooting
   href: ../client.md
   items:
+  - name: Authentication
+    items:
+    - name: Outlook prompts for credentials
+      href: ../authentication/outlook-prompts-credentials.md
+    - name: Prevent saving credentials policy doesn't work
+      href: ../authentication/prevent-saving-credentials.md
   - name: Calendars
     items:
     - name: Items for next year display at incorrect time
@@ -9,6 +15,8 @@
     items:
     - name: Cached Exchange Mode
       href: ../deployment/cached-exchange-mode.md
+    - name: Install Outlook latest applicable updates
+      href: ../deployment/install-outlook-latest-updates.md
     - name: Planning considerations
       href: ../deployment/plan-outlook-2016-deployment.md
   - name: Diagnostics

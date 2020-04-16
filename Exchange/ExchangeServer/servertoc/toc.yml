@@ -21,6 +21,8 @@
       href: ../calendars/calendar-shows-organizer-name.md
   - name: Client Access
     items:
+    - name: IMAP clients fail to logon
+      href: ../client-access/imap-clients-logon-fail-coexist-exchange.md
     - name: Kerberos authentication for MAPI client connection
       href: ../client-access/kerberos-authentication-for-mapi-client.md
   - name: HTTP Proxy
