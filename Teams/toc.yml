@@ -93,12 +93,12 @@
       href: ./known-issues/deleted-messages-send-notifications-with-link.md
   - name: Mobile
     items:
+    - name: A website with Conditional Access does not display when viewed in the Website tab 
+      href: ./known-issues/websites-with-conditional-access-dont-display.md
     - name: Chrome version 80 users unable to sign in to some applications
       href: ./known-issues/chrome-80-users-unable-to-sign-in-on-teams.md
     - name: Notifications and preview issues using Microsoft Teams on iOS 13 Beta
       href: ./known-issues/problems-using-teams-on-ios-13-beta.md
-    - name: Tabs not working after enabling Conditional Access
-      href: ./known-issues/tabs-dont-work-after-enabling-conditional-access.md
     - name: Unable to see auto-favorited channels in the Teams mobile app
       href: ./known-issues/cant-see-auto-favorited-channels-in-mobile.md
     - name: Windows phone app for Teams will beretired
