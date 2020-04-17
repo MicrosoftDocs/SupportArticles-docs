@@ -1,5 +1,35 @@
 - name: Microsoft Intune
   href: welcome-support-intune.md
-
 - name: (Back up to Support hub page)
   href: ../../index.yml
+- name: Device enrollment
+  items:
+  - name: Android enrollment
+  - name: iOS/iPadOS enrollment
+    items:
+    - name: DEP enrollment error XPC_TYPE_ERROR 
+      href: dep-enrollment-xpc-type-error.md
+  - name: Windows enrollment
+    items:
+    - name: 80180002b during Windows 10 Group Policy-based auto-enrollment
+      href: windows10-enroll-error-80180002b.md
+- name: App management
+  items:
+  - name: Error when you open a web app on iOS 
+    href: invalid-address-open-web-app.md
+- name: Fundamentals
+  items:
+  - name: Set the MDM authority
+    href: set-mdm-authority.md
+  - name: Licenses
+    items:
+    - name: Device-only subscription
+      href: device-licenses-introduction.md
+    - name: Use PowerShell to look up licenses
+      href: look-up-intune-licenses.md
+  - name: Intune account portal retired
+    href: itune-account-portal-retired.md
+- name: Intune Data Warehouse
+  items:
+  - name: AADSTS50011 query the Intune Data Warehouse
+    href: error-query-intune-data-warehouse.md
