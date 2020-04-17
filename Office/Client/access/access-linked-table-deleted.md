@@ -20,9 +20,12 @@ appliesto:
 
 # Access linked table to SQL Server database returns #Deleted
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptom
 
-You have a Microsoft Access linked table that’s connected to a Microsoft SQL Server database. The compatibility level of the database is 130 (the compatibility level for SQL Server 2016) or higher, and the table that’s linked contains one or more datetime or datetime2 columns.
+You have a Microsoft Access linked table that's connected to a Microsoft SQL Server database. The compatibility level of the database is 130 (the compatibility level for SQL Server 2016) or higher, and the table that's linked contains one or more datetime or datetime2 columns.
 
 In this scenario, the linked table returns **#Deleted** in the results. You may also experience a **Write Conflict** stating "This record has been changed by another user since you started editing it" when attempting to commit record changes to the linked table.
 
@@ -40,6 +43,6 @@ Microsoft is aware of this issue. Until the issue is resolved, use one of the fo
 
 - Change the compatibility level of the database to 120 (the compatibility level for SQL Server 2014) or lower.    
 - Remove fractional seconds from the datetime columns.    
-- Make sure that the datetime columns aren’t part of the primary key. Add a timestamp column to the table, and then use the Linked Table Manager in Access to refresh the linked table.    
+- Make sure that the datetime columns aren't part of the primary key. Add a timestamp column to the table, and then use the Linked Table Manager in Access to refresh the linked table.    
 - If editing data isn't requested, create a query and change the **RecordsetType** property to **Snapshot**.
 

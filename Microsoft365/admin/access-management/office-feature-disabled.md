@@ -37,6 +37,9 @@ appliesto:
 
 # "This feature has been disabled by your administrator" error in Microsoft Office
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you try to perform certain actions in Microsoft Office O365, 2019, 2016, or 2013 applications, you receive the following error message:
@@ -126,7 +129,7 @@ To resolve this issue, follow these steps to modify the registry:
 The **UseOnlineContent** setting controls users' access to the Office online features. This setting can be configured by using the following values:
  
 - 0 = Do not allow Office to connect to the Internet. Office applications do not connect to the Internet to access online services or to download the latest online content from Office.com. Connected features of Office are disabled.
-- 2 = Allow Office to connect to the Internet. Office applications use online services and download the latest online content from Office.com when users’ computers are connected to the Internet. Connected features of Office are enabled. This option enforces the default configuration.
+- 2 = Allow Office to connect to the Internet. Office applications use online services and download the latest online content from Office.com when users' computers are connected to the Internet. Connected features of Office are enabled. This option enforces the default configuration.
 
 The **SignInOptions** setting controls whether users can provide credentials to Office by using either their Windows Live ID or the user ID that was assigned by their organization (Org ID) for accessing Office 365. This setting can be configured by using the following values:
  

@@ -17,6 +17,9 @@ appliesto:
 
 # "Not enough printer memory available to print page" when you print a presentation in PowerPoint
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you print a presentation in Microsoft PowerPoint, you may receive the following error message:

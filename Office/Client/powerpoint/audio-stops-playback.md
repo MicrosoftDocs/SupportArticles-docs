@@ -20,6 +20,9 @@ appliesto:
 
 # An audio file that is set to repeat and play across a set number of slides in PowerPoint stops playback after you leave the original slide
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 Consider the following scenario. In Microsoft PowerPoint, you add an audio file to a slide. Then, you set this audio file to repeat multiple times and only play for a set number of slides. For example, you set an audio file to repeat five times and only play for two slides. Then, you run the presentation and play the audio file. The audio file plays and may repeat itself before you transition to the next slide. However, in this scenario, the audio file stops playing as soon as you leave the slide it was started on and the next slide opens. 

@@ -17,6 +17,9 @@ appliesto:
 
 # You can't assign a federated domain to a user in the Microsoft 365 Admin Center
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem 
 
 You create a new user in the Microsoft 365 Admin Center in Office 365. However, when you try to assign a federated domain to the new user, the federated domain isn't listed in the user's list of domains. 

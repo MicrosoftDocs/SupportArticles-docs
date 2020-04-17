@@ -19,7 +19,7 @@ appliesto:
 - SharePoint Server
 ---
 
-# “Sorry, something went wrong” error on a Site Page with a Pages library web part added
+# "Sorry, something went wrong" error on a Site Page with a Pages library web part added
 
 ## Symptoms
 You see the following error when selecting **Show Related Resources** within the Site Content and Structure page (sitemanager.aspx):
@@ -38,7 +38,7 @@ w3wp.exe (0x192C) 0x14AC SharePoint Foundation General 8nca Medium Application e
 ```
 
 ## Cause
-This might happen if a list view web part that is consuming a publishing or pages library has the option ”Require Content Approval” checked.
+This might happen if a list view web part that is consuming a publishing or pages library has the option "Require Content Approval" checked.
 
 ## Resolution
 Beginning in October 2018, the Site Content and Structure options were deprecated in SharePoint Online. The UI entry point to SiteManager.aspx was removed from SharePoint Online and direct access is restricted to Site Collection Admins until March 2019.
@@ -69,3 +69,5 @@ The steps to reproduce the error are as follows:
 7. Navigate back to the Site Page created in step 2.
 8. Place the page in **Edit** mode, then place the **Pages Library web part** in edit mode.
 9. Select **OK** in the **web part properties** box without making any changes, then **Save and check-in** the page.
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

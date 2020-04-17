@@ -20,6 +20,9 @@ appliesto:
 
 # How to create and use two-input data tables in Microsoft Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 This article describes how to create and to use two-input tables in Microsoft Excel. These tables allow you to test how changes in two variables affect one formula.

@@ -3,12 +3,16 @@ title: Error when you create a user name that contains a special character
 description: Describes an issue in which you receive an Invalid user name error message when you try to create a user name that contains special characters in Microsoft Office 365.
 author: simonxjx
 manager: dcscontentpm
+date: 3/16/2020
 localization_priority: Normal
 audience: ITPro
 ms.prod: office 365
 ms.topic: article
 ms.author: v-six
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- CI 115151
+- CSSTroubleshoot
+ms.reviewer: timball
 search.appverid: 
 - MET150
 appliesto:
@@ -17,9 +21,12 @@ appliesto:
 
 # "Invalid user name" when you try to create a user name that contains a special character in Office 365
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem
 
-When you try to create a user name that contains a special character in Microsoft Office 365, you receive one of the following error messages: 
+When you create a user name that contains a special character in Microsoft Office 365, you receive one of the following error messages: 
 
 Within the Office 365 portal
 
@@ -60,7 +67,7 @@ This behavior occurs because certain special characters aren't permitted in user
 - Equal sign (=)   
 - Brackets ([ ])   
 - Braces ({ })   
-- Backslash (\)   
+- Backslash (\\)   
 - Slash mark (/)   
 - Pipe (|)   
 - Semicolon (;)   
@@ -73,7 +80,8 @@ This behavior occurs because certain special characters aren't permitted in user
 However, the following exceptions apply:
 
 - A period (.) or a hyphen (-) is permitted anywhere in the user name, except at the beginning or end of the name.   
-- An underscore (_) is permitted anywhere in the user name. This includes at the beginning or end of the name.   
+- An underscore (_) is permitted anywhere in the user name. This includes at the beginning or end of the name.
+- When creating a group, the number sign (#) **can** be used as part of the group's name. However, the email address you create for a distribution group or shared mailbox **cannot** use the # sign.  
 
 ## Solution
 

@@ -20,6 +20,9 @@ appliesto:
 
 # Hyperlinks stop working after you save as a PDF in Office 2011
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you save one of the following Microsoft Office for Mac 2011 file types as a PDF, hyperlinks no longer work in the converted file:

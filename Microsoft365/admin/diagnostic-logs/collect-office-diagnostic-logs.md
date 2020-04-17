@@ -1,5 +1,5 @@
 ---
-title: Enable Office 365 ProPlus ULS logging for random issues
+title: Enable Microsoft 365 Apps for enterprise ULS logging for random issues
 description: Describes how to collect Office diagnostic logs for Office support professionals to troubleshoot Office issues.
 author: MaryQiu1987
 manager: dcscontentpm
@@ -13,16 +13,19 @@ ms.custom: CSSTroubleshoot
 ms.author: v-maqiu
 localization_priority: Normal
 appliesto:
-- Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
 ---
 
-# How to enable Office 365 ProPlus ULS logging for random issues
+# How to enable Microsoft 365 Apps for enterprise ULS logging for random issues
+
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
 
 To troubleshoot Office issues, Microsoft Office support professionals may have to review advanced log data that's created by Office applications.
 
 To collect Office diagnostic logs, follow these steps:
 
-1. Download [OfficeDiagnosticLogging.zip](https://download.microsoft.com/download/2/8/9/28936D78-D59E-4D5C-A8B2-06F1DB7A6569/OfficeDiagnosticLogging.zip), save the file to a location that will be easy to access by using a command prompt, and then expand the compressed file.
+1. Download [OfficeDiagnosticLogging.zip](https://download.microsoft.com/download/2/8/9/ccb152a7-a11e-45da-8764-b5f52045e1d1/OfficeDiagnosticLogging.zip), save the file to a location that will be easy to access by using a command prompt, and then expand the compressed file.
 1. Open a Command Prompt window, and then locate the folder in which the expanded OfficeDiagnosticLogging.bat script is located.
 1. Close all instances of the Office application that you're troubleshooting  (for example, Word, Excel, or PowerPoint).
 1. Run the following command:

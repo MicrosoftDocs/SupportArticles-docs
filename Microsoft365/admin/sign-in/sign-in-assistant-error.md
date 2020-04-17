@@ -12,10 +12,13 @@ ms.topic: article
 ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
-- Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
 ---
 
 # "Microsoft Online Services Sign In Assistant Error" when you activate Office Professional Plus
+
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
 
 ## Problem
 

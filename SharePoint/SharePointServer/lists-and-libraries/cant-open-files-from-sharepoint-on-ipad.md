@@ -52,3 +52,5 @@ Note: The document will be displayed in the browser window with the option to se
 ## More Information
 
 This issue only occurs with SharePoint 2010.
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

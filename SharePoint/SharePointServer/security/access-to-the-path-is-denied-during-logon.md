@@ -77,3 +77,7 @@ To resolve this issue, follow the steps for the version of ASP.NET that you are 
 ## Workaround  
 
 To prevent this issue from occurring, install Active Directory before you install IIS 6.0 and ASP.NET.
+
+## More information
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

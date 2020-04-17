@@ -22,6 +22,9 @@ appliesto:
 
 # "There was a problem accessing the site" error from AD FS when a federated user signs in to Office 365, Azure, or Intune
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem
 
 When a federated user tries to sign in to a Microsoft cloud service such as Office 365, Microsoft Azure, or Microsoft Intune, the user receives the following error message from Active Directory Federation Services (AD FS):
@@ -32,7 +35,7 @@ If the problem persists, contact the administrator of this site and provide the 
 Reference number: <GUID>
 ```
 
-When this error occurs, the web browser’s address bar points to the on-premises AD FS endpoint at an address that resembles the following: 
+When this error occurs, the web browser's address bar points to the on-premises AD FS endpoint at an address that resembles the following: 
 
 "https://sts.domain.com/adfs/ls/?cbcxt=&vv=&username=username%40domain.com&mkt=&lc=1033&wa=wsignin1.0&wtrealm=urn:federation:MicrosoftOnline&wctx=MEST%3D0%26LoginOptions%3D2%26wa%3Dwsignin1.0%26rpsnv%3D2%26ct%3D1299115248%26rver%3D6.1.6206.0%26wp%3DMCMBI%26wreply%3Dhttps:%252F%252Fportal.office.com%252FDefault.aspx%26lc%3D1033%26id%3D271346%26bk%3D1299115248"
 

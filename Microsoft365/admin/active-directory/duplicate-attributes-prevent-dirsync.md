@@ -18,7 +18,10 @@ appliesto:
 
 # Duplicate or invalid attributes prevent directory synchronization in Office 365
 
-## PROBLEM
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
+## Symptoms
 
 In Microsoft Office 365, an administrator receives the following email message warning when directory synchronization finishes:
 
@@ -60,7 +63,7 @@ Error Name: InvalidSoftMatch
 Error Detail: Unable to update this object because the following attributes associated with this object have values that may already be associated with another object in your local directory services: [ProxyAddresses SMTP:john@contoso.com;]. Correct or remove the duplicate values in your local directory.
 ```
 
-## CAUSE
+## Cause
 
 This issue may occur if user objects in the on-premises Active Directory Domain Services (AD DS) schema have duplicate or invalid alias values, and if these user objects are not synced from the AD DS schema to Office 365 correctly during directory synchronization.
 
@@ -70,11 +73,11 @@ In an on-premises environment, you can have alias values that are the same as lo
 
 If you create objects that have duplicate alias values in the cloud for Office 365, to make the aliases unique, one alias has a unique number appended to it. (For example, if the duplicate alias values are "Albert," one of them becomes "Albert2" automatically. If "Albert2" is already being used, the alias becomes "Albert3," and so on.) However, if objects that have duplicate alias values are created in your on-premises AD DS, an object collision occurs when directory synchronization runs, and object synchronization fails.
 
-## SOLUTION
+## Solution
 
 To resolve this issue, determine duplicate values and values that conflict with other AD DS objects. To do this, use one of the following methods.
 
-#### Method 1: Use the IdFix DirSync Error Remediation Tool
+### Method 1: Use the IdFix DirSync Error Remediation Tool
 
 Use the IdFix DirSync Error Remediation Tool to identify duplicate or invalid attributes. To resolve duplicate attributes by using the IdFix Tool, see the following Microsoft Knowledge Base article:
 
@@ -82,13 +85,13 @@ Use the IdFix DirSync Error Remediation Tool to identify duplicate or invalid at
 
 For more information about the IdFix tool, go to [IdFix DirSync Error Remediation Tool](https://www.microsoft.com/download/details.aspx?id=36832).
 
-#### Method 2: Map an existing on-premises user to an Azure AD user
+### Method 2: Map an existing on-premises user to an Azure AD user
 
 To do this, see the following Microsoft Knowledge Base article:
 
 [2641663](https://support.microsoft.com/help/2641663) How to use SMTP matching to match on-premises user accounts to Office 365 user accounts for directory synchronization
 
-#### Method 3: Determine attribute conflicts that are caused by objects that weren't created in Azure AD through directory synchronization
+### Method 3: Determine attribute conflicts that are caused by objects that weren't created in Azure AD through directory synchronization
 
 To determine attribute conflicts that are caused by user objects that were created by using Office 365 management tools (and that weren't created in Azure AD through directory synchronization), follow these steps:
  
@@ -162,7 +165,7 @@ To determine attribute conflicts that are caused by user objects that were creat
    > In this command, the placeholder"search proxyAddress" represents the value of a proxyAddresses attribute that you recorded in step 1f.
 
    ```powershell
-   Get-Recipient | Where {[string] $str = ($_.EmailAddresses); $str.tolower().Contains($proxyAddress.tolower()) -eq $true} | foreach {get-MsolUser -ObjectID $_.ExternalDirectoryObjectId | Where {($_.LastDirSyncTime -eq $null)}}
+   Get-Cloudmailbox | Where {[string] $str = ($_.EmailAddresses); $str.tolower().Contains($proxyAddress.tolower()) -eq $true} | foreach {get-MsolUser -ObjectID $_.ExternalDirectoryObjectId | Where {($_.LastDirSyncTime -eq $null)}}
    ```
 
 Items that are returned after you run the commands in step 3 and 4 represent user objects that weren't created through directory synchronization and that have attributes that conflict with the object that is not syncing correctly.
@@ -171,7 +174,7 @@ After you determine conflicting or invalid attribute values, troubleshoot the is
 
 [2643629](https://support.microsoft.com/help/2643629) One or more objects don't sync when the Azure Active Directory Sync tool is used
 
-## MORE INFORMATION
+## More information
 
 The Windows PowerShell commands in this article require the Azure Active Directory Module for Windows PowerShell. For more information about Azure Active Directory Module for Windows PowerShell, go to the following Microsoft website:
 

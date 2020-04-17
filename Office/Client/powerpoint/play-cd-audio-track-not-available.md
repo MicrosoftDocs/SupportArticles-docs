@@ -20,6 +20,9 @@ appliesto:
 
 # The "Play CD Audio Track" command is not available on the ribbon in PowerPoint 2010
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Summary
 
 In Microsoft PowerPoint 2010, the command **Play CD Audio Track** is not available from the **Audio** drop-down list in the **Media** group on the **Insert** tab of the ribbon. If you want to play a music track from an audio CD, we recommend that you transfer the audio track that you want to play to an MP3 audio file format. You can use Windows Media Player or another, similar program to create the MP3 file. For more information about how to transfer tracks from a CD to MP3 files, see the Windows Media Player Help topic "Rip music from a CD."

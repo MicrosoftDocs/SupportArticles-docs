@@ -36,6 +36,8 @@ appliesto:
 
 # Description of the numbering scheme for product code GUIDs in Office 2013
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
 
 ##  Summary
 

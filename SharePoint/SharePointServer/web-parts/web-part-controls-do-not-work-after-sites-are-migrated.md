@@ -69,3 +69,7 @@ Add the following entry to the **SafeControls** section:
 ```
 <SafeControl Assembly="Microsoft.ReportingServices.SharePoint.UI.WebParts, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" Namespace="Microsoft.ReportingServices.SharePoint.UI.WebParts" TypeName="*" Safe="True" />
 ```
+
+## More information
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

@@ -19,6 +19,9 @@ appliesto:
 
 # Long numbers are displayed incorrectly in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 After you enter a long number (such as a credit card number) in an Excel cell, the number is not displayed correctly in Excel. For example,

@@ -26,7 +26,7 @@ In certain situations, the MAPI connection to Exchange Server may not be availab
 
 This issue may occur for Office 365 Exchange Online or Exchange On-Premises users. When this issue occurs, the MAPI connection is unavailable to Skype for Business 2016 clients. Additionally, you may experience the following symptoms:
 
-- The Skype for Business Configuration Information feature (hold down the Ctrl key and right-click the Skype for Business 2016 system tray icon) shows a “MAPI unavailable” status, as shown.
+- The Skype for Business Configuration Information feature (hold down the Ctrl key and right-click the Skype for Business 2016 system tray icon) shows a "MAPI unavailable" status, as shown.
 
     ![The screenshot for MAPI status ](https://internal.support.services.microsoft.com/Library/Images/3147146.png)
 
@@ -145,7 +145,7 @@ To work around this issue in a Click-to-Run version of Skype for Business 2016, 
 
 3. Click **Profile**, and then click **Show Profiles**.
 
-4. Double-click the affected user’s profile. In this situation, there is only the default profile that's named “Outlook.” If the user has multiple profiles, select the one that represents their primary user account that is experiencing this issue.
+4. Double-click the affected user's profile. In this situation, there is only the default profile that's named "Outlook." If the user has multiple profiles, select the one that represents their primary user account that is experiencing this issue.
 
     ![Outlook profiles](https://internal.support.services.microsoft.com/Library/Images/3186670.png)
 
@@ -157,7 +157,7 @@ To work around this issue in a Click-to-Run version of Skype for Business 2016, 
 
     ![Providers ](https://internal.support.services.microsoft.com/Library/Images/3186672.png)
 
-7. In the MFCMapi tool, examine the Providers window to make sure that the user’s SMTP address provider is selected. Then, look for the property that's named PR_PROFILE_USER. If this property exists, go to step 10. If this property does not exist, click **Additional Properties** on the **Property** menu, and then click the **Add** button.
+7. In the MFCMapi tool, examine the Providers window to make sure that the user's SMTP address provider is selected. Then, look for the property that's named PR_PROFILE_USER. If this property exists, go to step 10. If this property does not exist, click **Additional Properties** on the **Property** menu, and then click the **Add** button.
 
     ![Providers property ](https://internal.support.services.microsoft.com/Library/Images/3186673.png)
 
@@ -172,13 +172,13 @@ To work around this issue in a Click-to-Run version of Skype for Business 2016, 
 
     ![Additional properties ](https://internal.support.services.microsoft.com/Library/Images/3186675.png)
 
-10. Run Test Autodiscovery from the Preliminary steps procedure to get the affected user’s Legacy Exchange DN (LegDN). Copy this information to the clipboard.
+10. Run Test Autodiscovery from the Preliminary steps procedure to get the affected user's Legacy Exchange DN (LegDN). Copy this information to the clipboard.
 
 11. In the Providers window, right-click the PR_PROFILE_USER property, and then click **Edit**. 
 
     ![Properties editor ](https://internal.support.services.microsoft.com/Library/Images/3186638.png)
 
-12. Paste the user’s LegDN information in the **Ansi** text box, and then click **OK**.
+12. Paste the user's LegDN information in the **Ansi** text box, and then click **OK**.
 
     ![Property Editor completed ](https://internal.support.services.microsoft.com/Library/Images/3186639.png)
 
@@ -211,3 +211,5 @@ To determine whether your Office installation is Click-to-Run or MSI-based, foll
 |![The screenshot for Word click to run ](https://internal.support.services.microsoft.com/Library/Images/3099590.png)|![The screenshot for Word MSI ](https://internal.support.services.microsoft.com/Library/Images/2971882.png)|
 
 Third-party information disclaimerThe third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

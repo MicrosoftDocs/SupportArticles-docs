@@ -20,15 +20,14 @@ appliesto:
 
 # Troubleshoot print failures in Word
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 This article suggests ways in which you can diagnose and resolve issues when you cannot print a Microsoft Word document.
 
 ## More Information
-
-For more information about printing problems in Word, click the following article number to view the article in the Microsoft Knowledge Base: 
-
-[826862](https://support.microsoft.com/help/826862) How to troubleshoot printing problems in Word 
 
 Examples of print failure are as follows: 
  

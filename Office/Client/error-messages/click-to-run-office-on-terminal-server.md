@@ -22,6 +22,9 @@ appliesto:
 
 # Error when opening the Click-to-Run version of an Office program or suite on a terminal server
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 Assume that you install the Click-to-Run version of a Microsoft Office program or suite on a terminal server. When you open the Office program or suite, you receive the following error message:
@@ -36,13 +39,13 @@ In Microsoft Office 2016:
 
 ## Cause
 
-This issue occurs because you can't install Click-to-Run versions of Office programs or suites on a server that's running Remote Desktop Services (formerly known as Terminal Services).
+This issue occurs because Click-to-Run versions of Office programs or suites running on a server with Remote Desktop Services (RDS), must have [Shared Computer Activation](https://docs.microsoft.com/en-us/deployoffice/overview-of-shared-computer-activation-for-office-365-proplus) enabled. Remote Desktop Services are formerly known as Terminal Services. Shared Computer Activation is only available for Microsoft 365 Apps. Other releases are not supported.
 
 ## Workaround
 
 To work around this issue, do one of the following;
 
-- For customers who have an Office 365 ProPlus license, install Office with shared computer activation. For more information about installing Office 365 ProPlus with shared computer activation, see [Deploy Office 365 ProPlus by using Remote Desktop Services](https://technet.microsoft.com/library/dn782858.aspx).   
+- For customers who have an Microsoft 365 Apps for enterprise license, install Office with shared computer activation. For more information about installing Microsoft 365 Apps for enterprise with shared computer activation, see [Deploy Microsoft 365 Apps for enterprise by using Remote Desktop Services](https://technet.microsoft.com/library/dn782858.aspx).   
 - For all other versions of Office Click-to-Run, install an edition of the Office program or suite that uses a volume license key.   
 
 

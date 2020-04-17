@@ -56,7 +56,7 @@ MAPI over HTTP offers the following benefits:
 
 Make sure that you use Outlook for Windows clients that are updated to work with MAPI over HTTP.
 
-The best and recommended option is to move to the latest version of Office 2016 as part of Office 365 ProPlus. If you cannot move to Office 365 ProPlus by October 31, 2017, make sure that Office applications in your organization are updated by having the most recent cumulative update.
+The best and recommended option is to move to the latest version of Office 2016 as part of Microsoft 365 Apps for enterprise. If you cannot move to Microsoft 365 Apps for enterprise by October 31, 2017, make sure that Office applications in your organization are updated by having the most recent cumulative update.
 
 You should have at least the currently recommended minimum installation of Outlook updates installed for connecting to Exchange Online that uses MAPI over HTTP. To verify the current list, see the following Office article: 
 

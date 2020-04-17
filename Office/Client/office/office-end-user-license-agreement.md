@@ -18,6 +18,9 @@ appliesto:
 
 # You must accept the Office End User License Agreement every time that you start an Office program
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 Every time that you start a Microsoft Office program, such as Microsoft Office Word, the **End User License Agreement** dialog box appears. If you click **I Accept**, the **End User License Agreement** dialog box disappears and then reappears. If you click **I Accept** again, the **End User License Agreement** dialog box disappears, and the Office program functions as expected.

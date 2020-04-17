@@ -15,7 +15,10 @@ appliesto:
 - Azure Active Directory Directories, Domains, and Objects
 ---
 
-# “An Error Occurred” error and domain removal fails in Office 365
+# "An Error Occurred" error and domain removal fails in Office 365
+
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
 
 ## Symptoms
 

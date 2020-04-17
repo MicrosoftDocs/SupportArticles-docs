@@ -27,7 +27,7 @@ Upgrade status indicators and log files should give you an idea of what went wro
 
    On the **Site Settings**(**Settings** > **Site Settings**) page for the site collection, in the **Site Collection Administration** section, click **Site collection upgrade**. On the Site Collection Upgrade page, click **Review Site Collection Upgrade Status**.
 
-1. If pages don't render, check the **Site Settings** page. If the **Site Settings** page works and the upgrade has succeeded, there might be issues with the master page or home page. If the Site Settings page doesn’t work, check the site collection upgrade log file for information about the problem.
+1. If pages don't render, check the **Site Settings** page. If the **Site Settings** page works and the upgrade has succeeded, there might be issues with the master page or home page. If the Site Settings page doesn't work, check the site collection upgrade log file for information about the problem.
 
 1. Review the site collection upgrade log files. You can review the site collection upgrade logs by clicking on the link on the upgrade status page for your site collection.
 
@@ -106,7 +106,7 @@ In SharePoint 2013, the theming engine has been completely redesigned so that th
 
 To resolve this, you should first create an evaluation site collection, and then re-create the theme by using the new theming features in SharePoint 2013.
 
-**Q: My custom branding doesn’t look right or there are issues in my upgraded site**
+**Q: My custom branding doesn't look right or there are issues in my upgraded site**
 
 **A:** Create an evaluation site collection, and then re-create the master page in the SharePoint 2013 site.
 
@@ -118,10 +118,14 @@ To resolve this, you should first create an evaluation site collection, and then
 
 **A:** Your custom branding may use a custom master page that contains a custom content placeholder.
 
-If your custom master page contains a custom content placeholder, and if custom page layouts also contain this custom content placeholder, then an error may prevent the home page of your site from rendering at all after upgrade. Instead, after upgrade, you may see the error message “An unexpected error has occurred.”
+If your custom master page contains a custom content placeholder, and if custom page layouts also contain this custom content placeholder, then an error may prevent the home page of your site from rendering at all after upgrade. Instead, after upgrade, you may see the error message "An unexpected error has occurred."
 
 **Q: When I click the button to create an evaluation site I get a correlation ID error message.**
 
 **A:** SharePoint appends "–eval" to the end of the evaluation site URL, which may cause the URL to exceed the character limit.
 
-If appending "-eval" causes the URL to exceed the character limit then you’ll get the correlation ID error. Lengthy URLs can be caused by deep folder structures and/or folders and files with long names. If you are getting this error, Support can work with you to identify the URLs that exceed the limit and provide the steps to resolve the problem.
+If appending "-eval" causes the URL to exceed the character limit then you'll get the correlation ID error. Lengthy URLs can be caused by deep folder structures and/or folders and files with long names. If you are getting this error, Support can work with you to identify the URLs that exceed the limit and provide the steps to resolve the problem.
+
+## More information
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

@@ -107,3 +107,7 @@ These are the solution steps for a site column with e.g. the name MyChoiceSiteCo
 3. Finally save the new managed property with its configuration by clicking on OK   
 
 Now start a full crawl or select to re-index your SharePoint site, list or library, which contains the multiple value enabled choice type of column, and wait for the scheduled start of the next continouos or incremental crawl or manually start an incremental crawl.
+
+## More information
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

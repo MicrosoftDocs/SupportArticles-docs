@@ -17,6 +17,9 @@ appliesto:
 
 # How to work with toolbars and toolbar buttons: add, create, edit, delete, restore, and more in Word
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 One of the most convenient features of Microsoft Word is the ability to customize the tools that you work with. This article describes how you can customize and create toolbars and toolbar buttons. You can customize any toolbar by adding, deleting, moving, or grouping toolbar buttons to suit your needs.

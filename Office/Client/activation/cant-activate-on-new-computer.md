@@ -22,6 +22,9 @@ appliesto:
 
 # Cannot activate Office 2013 on a new computer
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Summary
 
 When you enter a product key and then click **Activate** to active Microsoft Office 2013 for the first time on a new computer, you receive the following error message:

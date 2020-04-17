@@ -19,6 +19,9 @@ appliesto:
 
 # You cannot use the "Convert bibliography to static text" option in Word 2007 and Word 2010
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 You cannot use the **Convert bibliography to static text** option in Microsoft Office Word 2007 or Word 2010.

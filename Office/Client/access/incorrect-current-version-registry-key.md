@@ -19,6 +19,9 @@ appliesto:
 
 # Access: Incorrect Current Version registry key
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 In some instances Access may not detect/repair the registry key which specifies the currently configured version of Access. In this scenario, when double-clicking on the database file, you receive the following error:

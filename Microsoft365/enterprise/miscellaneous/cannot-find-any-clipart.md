@@ -19,6 +19,9 @@ appliesto:
 
 # You cannot find any clipart when you open Word Web App or OneNote Web App and try to insert some clipart
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 Consider the following scenarios.

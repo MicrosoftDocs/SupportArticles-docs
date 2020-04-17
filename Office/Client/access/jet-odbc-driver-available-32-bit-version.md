@@ -17,6 +17,9 @@ appliesto:
 
 # Microsoft OLE DB Provider for Jet and Jet ODBC driver are available in 32-bit versions only
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## INTRODUCTION
 
 The Microsoft OLE DB Provider for Microsoft Jet and the Microsoft Access ODBC driver (Jet ODBC driver) provide an interface to Microsoft Office Access databases. The Microsoft OLE DB Provider for Jet and the Jet ODBC driver are available in 32-bit versions only.

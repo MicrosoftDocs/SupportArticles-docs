@@ -18,6 +18,9 @@ appliesto:
 
 # You can't install Office Starter 2010 on Windows 8
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 After you upgrade a Windows 7 PC that came with Microsoft Office Starter 2010 to Windows 8, a compatibility error will occur when you click **Use** to install Office Starter 2010:

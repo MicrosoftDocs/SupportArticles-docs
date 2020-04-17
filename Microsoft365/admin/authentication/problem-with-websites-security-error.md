@@ -22,6 +22,9 @@ appliesto:
 
 # "There is a problem with this website's security certificate" error when a federated user signs out of Office 365, Intune, or Azure
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem
 
 When a federated user signs out of a Microsoft cloud service such as Office 365, Microsoft Intune, or Microsoft Azure, the user receives the following error message on login.microsoftonline.com:
@@ -51,7 +54,7 @@ Azure Active Directory (Azure AD) will automatically display a message to notify
 
 To remove the HTTP URL that's specified in the LogOffUri parameter, open the Azure Active Directory Module for Windows PowerShell, and then run the following cmdlet:
 ```PowerShell
-Set-MsolDomainFederationSettings -DomainName contoso.com -LogOffUri “ ” –PreferredAuthenticationProtocol SAMLP 
+Set-MsolDomainFederationSettings -DomainName contoso.com -LogOffUri " " –PreferredAuthenticationProtocol SAMLP 
 ```
 **Important** Make sure that there's a space between the quotation marks (" ") in the command line. 
 

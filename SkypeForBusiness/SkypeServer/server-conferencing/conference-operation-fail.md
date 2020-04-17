@@ -82,3 +82,7 @@ PurgeAppEndpointUserDataFromPSD.ps1 - PoolName <Pool name> -Command delete -AllP
 This tool purges all relevant entries that are currently in the PersistedServiceData table, however, as any third-party applications that use conferences continue to create new conferences, the size of the table will continue to grow. Therefore, we recommend that you run the PurgeAppEndpointUserDataFromPSD.ps1 ​tool periodically to ensure the size of the PersistedServiceData table does not grow to the point where this issue occurs again.
 
 The frequency with which to run this tool depends on the rate at which these third-party applications create conferences. You can use the SQL query from step 1 in the "Resolution" section to monitor the size of the table and to determine how quickly it is growing. This will help you determine an appropriate schedule for your environment.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

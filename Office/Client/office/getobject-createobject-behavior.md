@@ -18,6 +18,9 @@ appliesto:
 
 # GetObject and CreateObject behavior of Office automation servers
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 This article discusses the different behaviors that occur when you use the GetObject and CreateObject functions with various versions of Microsoft Office applications.

@@ -17,6 +17,9 @@ appliesto:
 
 # Excel Online updates a file stored in the document library without user interaction
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 When you use Excel Online to open an Excel file stored in the document library, the fields such as Modified, Modified By, and Version are updated without user interaction in the following cases: 

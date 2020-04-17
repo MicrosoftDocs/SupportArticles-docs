@@ -14,12 +14,15 @@ ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-weizhu
 appliesto:
-- Acess 2007
+- Access 2007
 - Access 2003
 - Access 2002
 ---
 
 # How to find a record using ADO and Jet OLE DB provider
+
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
 
 Advanced: Requires expert coding, interoperability, and multiuser skills. 
 

@@ -52,3 +52,7 @@ To fix the issue, follow these steps:
 2. Under **Security Settings**, expand **Local Policies**, and then click **User Rights Assignment**.    
 3. In the details pane, double-click **Impersonate a client after authentication**.    
 4. Click **Add User or Group**, add **IIS_IUSRS**, and then click **OK** two times to close the dialog box.      
+
+## More information
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

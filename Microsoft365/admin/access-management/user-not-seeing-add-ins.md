@@ -21,6 +21,9 @@ description: Learn how to help your users troubleshoot centralized add-ins, if t
 
 # User not seeing add-ins
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 Now that you've deployed the add-in, your end users can start using it in their Office applications. The add-in will appear on all platforms that the add-in supports.
   
 ## For Word, PowerPoint, and Excel 2016
@@ -53,7 +56,7 @@ Users can't see add-in? Try one of these:
     
   - The user might be on an older, incompatible version of Office. For add-ins to be deployed the user must have Office ProPlus 2016. You can check this out for any member of your organization. To find out how, see [Office 365 reports](https://support.office.com/article/office-365-reports-in-the-admin-center-microsoft-office-activations-87c24ae2-82e0-4d1e-be01-c3bcc3f18c60?ui=en-US&amp;rs=en-US&amp;ad=US).
     
-  - Alternatively, you can check this manually by going to the application, such as Word, then select **File \> Account**. Under **Product Information**, you should see **Office 365 ProPlus**. 
+  - Alternatively, you can check this manually by going to the application, such as Word, then select **File \> Account**. Under **Product Information**, you should see **Microsoft 365 Apps for enterprise**. 
     
 - **Check Exchange requirements**
     

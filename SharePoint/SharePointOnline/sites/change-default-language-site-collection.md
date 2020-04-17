@@ -50,7 +50,7 @@ This issue occurs because the default language for the My Site Host and Search C
 
 - The country that was selected on the office.microsoft.com page.
 
-- The language preference that’s specified by your browser settings.
+- The language preference that's specified by your browser settings.
 
 For more information about multilingual features and about configuring your display language, go to the following Microsoft websites:
 
@@ -58,4 +58,4 @@ For more information about multilingual features and about configuring your disp
 - [Change your display language](https://support.office.com/article/6f238bff-5252-441e-b32b-655d5d85d15b)
 - [Change your language and region settings](https://support.office.com/article/caa1fccc-bcdb-42f3-9e5b-45957647ffd7)
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/en-us).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

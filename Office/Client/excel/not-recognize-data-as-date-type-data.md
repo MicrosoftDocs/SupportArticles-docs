@@ -18,6 +18,9 @@ appliesto:
 
 # Excel 2013 does not recognize data as Date type data after you import the data from a SQL Server data source to an Excel workbook
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 Consider the following scenario:

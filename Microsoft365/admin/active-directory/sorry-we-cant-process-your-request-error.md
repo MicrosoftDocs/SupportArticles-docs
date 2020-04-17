@@ -19,13 +19,16 @@ appliesto:
 - Office 365 Identity Management
 ---
 
-# "Sorry! We can’t process your request” error when you try to set up security verification settings for Azure Multi-Factor Authentication
+# "Sorry! We can't process your request" error when you try to set up security verification settings for Azure Multi-Factor Authentication
+
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
 
 ## Problem
 
 When you try to set up additional security verification settings for Microsoft Azure Multi-Factor Authentication, you receive the following message:
 
-    Sorry! We can’t process your request. Your session is invalid or expired.
+    Sorry! We can't process your request. Your session is invalid or expired.
 
     There was an error processing your request because your session is invalid or expired. Please try again.
 

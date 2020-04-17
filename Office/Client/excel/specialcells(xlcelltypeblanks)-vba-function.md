@@ -17,6 +17,9 @@ appliesto:
 
 # The .SpecialCells(xlCellTypeBlanks) VBA function does not work as expected in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you create a Microsoft Visual Basic for Applications (VBA) macro that selects multiple non-contiguous ranges in a Microsoft Excel workbook that uses a VBA expression that is similar to the following, actions that were only supposed to occur with non-contiguous cells occur to every cell in the original selection on the worksheet:

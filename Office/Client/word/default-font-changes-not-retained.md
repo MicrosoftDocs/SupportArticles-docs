@@ -18,6 +18,9 @@ appliesto:
 
 # Changes to default font settings are not retained in Word 2013 and 2010
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Symptoms
 
 When you set a font as the default font in Microsoft Office Word 2010 and Word 2013, and you then restart Word, the changes are not retained.

@@ -111,3 +111,5 @@ In a Farm Setup, we suggest that the Farm Account be running under a different a
 ## More Information  
 
 [Deploy Office Web Apps (Installed on SharePoint 2010 Products)](https://technet.microsoft.com/library/ff431687%28office.14%29.aspx)
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

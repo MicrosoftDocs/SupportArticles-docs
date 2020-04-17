@@ -18,6 +18,9 @@ appliesto:
 
 # Office 365 or Office 2013 installation process stops at the "10% - Configuring" stage
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 Assume that you access the Internet by using a proxy server. When you try to install Microsoft Office 365 or Microsoft Office 2013 Click-to-Run, the installation process stops at the "10% - Configuring" stage.

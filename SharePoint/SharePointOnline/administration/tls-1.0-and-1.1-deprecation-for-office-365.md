@@ -12,7 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.topic: article
 ms.author: v-six
 appliesto:
-- Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
 - Office 365 Business
 - Office 365 Personal
 - Office Online Server
@@ -26,7 +26,7 @@ As of October 31, 2018, the Transport Layer Security (TLS) 1.0 and 1.1 protocols
 
 **Note** This article also applies to the following:
 
-- Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
 - Office 365 Business
 - Office 365 Personal
 
@@ -78,3 +78,5 @@ The following table shows the appropriate registry key values in Office 365 clie
 You can use the default Windows Calculator in Programmer mode to set up the same reference registry key values. For more information, see [KB 3140245 Update to enable TLS 1.1 and TLS 1.2 as a default secure protocols in WinHTTP in Windows](https://support.microsoft.com/help/3140245).
 
 Regardless if the Windows 7 update ([KB 3140245](https://support.microsoft.com/help/3140245)) is installed or not, the DefaultSecureProtocols registry sub key isn't present and must be added manually or through a group policy object (GPO). That is, unless you have to customize what secure protocols are enabled or restricted, this key is not required. You only need the Windows 7 SP1 ([KB 3140245](https://support.microsoft.com/help/3140245)) update.
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

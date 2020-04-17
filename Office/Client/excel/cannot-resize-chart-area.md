@@ -19,6 +19,9 @@ appliesto:
 
 # Cannot Resize the Chart Area of a chart located on a Chartsheet
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 Starting from Excel 2010,  you cannot adjust the size of the chart area when the chart is located on a chart sheet. Excel 2007 would allow you to resize the chart area.

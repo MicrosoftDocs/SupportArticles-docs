@@ -40,3 +40,7 @@ This issue occurs because desktop sharing is currently supported for Skype for B
 ## Status
 
 This feature will be available in a future Skype for Business for iOS update.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

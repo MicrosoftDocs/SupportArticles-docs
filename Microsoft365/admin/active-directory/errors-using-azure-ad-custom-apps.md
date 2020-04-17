@@ -17,6 +17,9 @@ appliesto:
 
 # Error messages when using Azure Active Directory Graph API custom applications in Office 365
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you try to use Microsoft Azure Active Directory Graph API custom applications in Office 365, you may receive one of the following messages:

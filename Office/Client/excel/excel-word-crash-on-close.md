@@ -19,6 +19,9 @@ appliesto:
 
 # Excel 2013 or Word 2013 crashes on close after using the Insert menu
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 Microsoft Excel 2013 or Microsoft Word 2013 may crash on exit after certain actions, such as using the Insert menu.

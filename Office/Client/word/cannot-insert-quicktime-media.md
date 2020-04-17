@@ -20,6 +20,9 @@ appliesto:
 
 # "PowerPoint cannot insert a video from the selected file" when you insert an MPEG-4 or QuickTime Movie file into a presentation
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 On a slide in the 64-bit version of Microsoft PowerPoint 2013 or 2010, you try to insert a movie that uses one of following Apple QuickTime video and audio formats: 

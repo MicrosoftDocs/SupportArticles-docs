@@ -2,21 +2,28 @@
 title: Product IDs that are supported by the Office Deployment Tool for Click-to-Run
 description: Describes Product IDs that are supported by the Office Deployment Tool for Click-to-Run。
 author: AmandaAZ
-ms.author: stevhord
+ms.author: v-todmc
+ms.date: 2/26/2020
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- CSSTroubleshoot
+- CI 114638
 ms.service: o365-solutions
 ms.topic: article
 localization_priority: Normal
+ms.reviewer: vikkarti
 appliesto:
 - Microsoft Office Deployment Tool
 ---
 
-# Product IDs that are supported by the Office Deployment Tool for Click-to-Run
+# List of Product IDs which are supported by the Office Deployment Tool for Click-to-Run
+
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
 
 ## Summary
 
@@ -24,7 +31,7 @@ This article lists product IDs that are supported by the Microsoft Office Deploy
 
 ## More Information
 
-The following Office 365 product IDs are supported by the Office Deployment Tool in Office 365 deployments:
+The following product IDs are supported by the Office Deployment Tool in Office 365 and Microsoft 365 deployments:
 
 - O365ProPlusRetail
 - O365BusinessRetail
@@ -33,16 +40,16 @@ The following Office 365 product IDs are supported by the Office Deployment Tool
 - AccessRuntimeRetail
 - LanguagePack
 
-For more information about using these product IDs with the Office Deployment Tool, see Configuration options for the Office Deployment Tool (Product element section).
+For more information about using these product IDs with the Office Deployment Tool, see [Configuration options for the Office Deployment Tool](https://docs.microsoft.com/deployoffice/configuration-options-for-the-office-2016-deployment-tool) (**Product element** section).
 
 > [!NOTE]
 > If you use the wrong product ID, you can't activate Office.
 
-The following table lists the Office 365 plan name and the correct product ID to use for that plan:
+The following table lists Office 365 and Microsoft 365 plan names and the correct product ID to use for that plan:
 
 |**Office 365 Plan**          |**Product ID**      |
 |-----------------------------|--------------------|
-|Office 365 ProPlus           |O365ProPlusRetail   |
+|Microsoft 365 Apps for enterprise           |O365ProPlusRetail   |
 |Office 365 Enterprise E3     |O365ProPlusRetail   |
 |Office 365 Enterprise E4     |O365ProPlusRetail   |
 |Office 365 Enterprise E5     |O365ProPlusRetail   |
@@ -50,6 +57,10 @@ The following table lists the Office 365 plan name and the correct product ID to
 |Office 365 Business          |O365BusinessRetail  |
 |Office 365 Business Premium  |O365BusinessRetail  |
 |Office Small Business Premium|O365SmallBusPremRetail |
+|Microsoft 365 E3 | O365ProPlusRetail|
+|Microsoft 365 E5 | O365ProPlusRetail |
+|Microsoft 365 Business | O365BusinessRetail |
+
 
 In addition to these product IDs, the following non-Office 365 product IDs are supported by this tool:
 

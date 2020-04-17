@@ -17,6 +17,9 @@ appliesto:
 
 # How to troubleshoot issues when you use Cortana with Office 365
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Introduction
 
 This article contains information to help you troubleshoot issues that you may encounter when you use Cortana with Microsoft Office 365.
@@ -45,12 +48,12 @@ This issue occurs if Cortana was disabled for your organization.
 
 To resolve this issue, Office 365 administrators can turn on Cortana in the Microsoft 365 admin center. For information about how to do this, see [Cortana for Office 365](https://support.office.com/article/cortana-for-office-365-7257cb50-0d5c-4f7a-ac2e-9fe5d13bb5cb?ui=en-us&rs=en-us&ad=us).
 
-**Issue: "I wasn’t able to contact Office 365, but it might work if you try again later" message**
+**Issue: "I wasn't able to contact Office 365, but it might work if you try again later" message**
 
 When you try to use Cortana with Office 365, you receive the following message:
 
 ```adoc
-I wasn’t able to contact Office 365, but it might work if you try again later
+I wasn't able to contact Office 365, but it might work if you try again later
 ```
 
 This error is most likely caused by a network connection failure or time-out.

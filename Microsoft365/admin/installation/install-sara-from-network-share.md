@@ -1,7 +1,7 @@
 ---
 title: Install and maintain SaRA tool from a network share
 description: Learn how to install SaRA from a network share and update the SaRA files so that SaRA installations use the latest files.
-author: MaryQiu1987
+author: todmccoy
 ms.author: v-maqiu
 manager: dcscontentpm 
 audience: ITPro 
@@ -9,16 +9,19 @@ ms.topic: article
 ms.prod: office 365
 localization_priority: Normal
 ms.custom: 
-- CI 110828
+- CI 110828, CI 114761, CI 115829, CI 116348
 - CSSTroubleshoot
 ms.reviewer: gregmans
 appliesto:
-- Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
 - Outlook
 search.appverid: MET150
 ---
 
 # How to install and maintain Microsoft Support and Recovery Assistant (SaRA) from a network share
+
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
 
 If you want to install and start Microsoft Support and Recovery Assistant (SaRA) from a shared location on a network instead of the default internet location, don't use the download link in the [About the Microsoft Support and Recovery Assistant](https://support.office.com/article/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f) article. Instead, follow these steps.
 
@@ -39,7 +42,7 @@ If you want to install and start Microsoft Support and Recovery Assistant (SaRA)
 
 SaRA is now installed and ready to run troubleshooting scenarios.
 
-![Select Which app you're having problem with](./media/install-sara-from-network-share/2.png)
+![Select Which app you're having problem with](./media/install-sara-from-network-share/options.png)
 
 ## Maintaining the SaRA installation folder
 
@@ -68,7 +71,7 @@ Any computer that has SaRA already installed can now be updated by using the fol
 
 SaRA is now updated and ready to run troubleshooting scenarios.
 
-![Update is finished and you go back to troubleshooting scenarios page](./media/install-sara-from-network-share/7.png)
+![Update is finished and you go back to troubleshooting scenarios page](./media/install-sara-from-network-share/scenarios.png)
 
 ## SaRA version history
 
@@ -78,5 +81,11 @@ The following table provides the versions of SaRA that were made available on th
 
 |Release date|SaRA version|
 |--------|--------|
+|April 6, 2020|17.00.4478.003|
+|March 20, 2020|17.00.4376.007|
+|March 11, 2020|17.00.4376.002|
+|February 27, 2020|17.00.4304.006|
+|February 5, 2020|17.00.4163.010|
+|January 14, 2020|17.00.4058.000|
 |December 9, 2019|17.00.3891.009|
 |December 2, 2019|17.00.3711.012|

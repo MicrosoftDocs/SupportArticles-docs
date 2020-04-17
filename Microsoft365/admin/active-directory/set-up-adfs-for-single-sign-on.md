@@ -18,6 +18,9 @@ appliesto:
 
 # Set up ADFS for Office 365 for Single Sign-On
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 This video shows how to set up Active Directory Federation Service (ADFS) to work together with Office 365. It does not cover the ADFS proxy server scenario. This video discusses ADFS for Windows Server 2012 R2. However, the procedure also applies to ADFS 2.0 — except for steps 1, 3, and 7. In each of those steps, see the "Notes for ADFS 2.0" section for more information about how to use this procedure in Windows Server 2008.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/9ffdb7ee-07bf-45ba-adec-f1acf576bd65]
@@ -44,7 +47,7 @@ When you customize the certificate request, make sure that you add the Federatio
 
 In this video, we explain only how to generate a certificate signing request (CSR). You must send the CSR file to a third-party CA. The CA will return a signed certificate to you. Then, follow these steps to import the certificate to your computer certificate store:
 
-1. Run Certlm.msc to open the local computer’s certificate store.   
+1. Run Certlm.msc to open the local computer's certificate store.   
 2. In the navigation pane, Expand **Personal**, expand **Certificate**, right click the Certificate folder, and then click **Import**.   
 
 **About the Federation server name**
@@ -53,13 +56,13 @@ The Federation Service name is the Internet-facing domain name of your ADFS serv
 
 ### Step 3: Configure ADFS
 
-You cannot manually type a name as the Federation server name. The name is determined by the subject name (Common name) of a certificate in the local computer’s certificate store.
+You cannot manually type a name as the Federation server name. The name is determined by the subject name (Common name) of a certificate in the local computer's certificate store.
 
 **Notes for ADFS 2.0**
 
-In ADFS 2.0, the Federation server name is determined by the certificate that binds to “Default Web Site” in Internet Information Services (IIS). You must bind the new certificate to the Default website before you configure ADFS.
+In ADFS 2.0, the Federation server name is determined by the certificate that binds to "Default Web Site" in Internet Information Services (IIS). You must bind the new certificate to the Default website before you configure ADFS.
 
-You can use any account as the service account. If the service account’s password is expired, ADFS will stop working. Therefore, make sure that the password of the account is set to never expire.
+You can use any account as the service account. If the service account's password is expired, ADFS will stop working. Therefore, make sure that the password of the account is set to never expire.
 
 ### Step 4: Download Office 365 tools
 
@@ -89,13 +92,13 @@ If the commands run successfully, you should see the following:
 
 ### Step 7: Sync local Active Directory user accounts to Office 365
 
-If your internal domain name differs from the external domain name that is used as an email address suffix, you have to add the external domain name as an alternative UPN suffix in the local Active Directory domain. For example, the internal domain name is “company.local” but the external domain name is “company.com.” In this situation, you have to add “company.com” as an alternative UPN suffix.
+If your internal domain name differs from the external domain name that is used as an email address suffix, you have to add the external domain name as an alternative UPN suffix in the local Active Directory domain. For example, the internal domain name is "company.local" but the external domain name is "company.com." In this situation, you have to add "company.com" as an alternative UPN suffix.
 
 Sync the user accounts to Office 365 by using Directory Sync Tool.
 
 **Notes for ADFS 2.0**
 
-If you are using ADFS 2.0, you must change the UPN of the user account from “company.local” to “company.com” before you sync the account to Office 365. Otherwise, the user will not be validated on the ADFS server. 
+If you are using ADFS 2.0, you must change the UPN of the user account from "company.local" to "company.com" before you sync the account to Office 365. Otherwise, the user will not be validated on the ADFS server. 
 
 ### Step 8: Configure the client computer for Single Sign-On
 

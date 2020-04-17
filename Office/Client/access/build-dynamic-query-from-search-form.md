@@ -27,6 +27,9 @@ appliesto:
 
 # How to build a dynamic query with values from a search form in Access
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 Advanced: Requires expert coding, interoperability, and multiuser skills.
 
 This article applies to either a Microsoft Access database (.mdb) file or to a Microsoft Access database (.accdb) file, and to a Microsoft Access project (.adp) file.

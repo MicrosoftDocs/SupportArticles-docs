@@ -16,6 +16,9 @@ appliesto:
 
 # Use Saved property to determine if a workbook has changed
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 You can determine if changes have been made to a workbook by checking the Saved property of the workbook. The Saved property returns a True or False value depending on whether changes have been made to the workbook. 

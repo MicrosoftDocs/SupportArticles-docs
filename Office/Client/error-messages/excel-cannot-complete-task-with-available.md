@@ -18,6 +18,9 @@ appliesto:
 
 # "Excel cannot complete this task with available resources" error occurs in Excel 2010
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 You receive the following error message:

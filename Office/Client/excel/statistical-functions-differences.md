@@ -18,6 +18,9 @@ appliesto:
 
 # Differences between the Excel statistical functions STDEVPA and STDEVP
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 This article discusses the differences between the STDEVPA function in Microsoft Excel and the closely related STDEVP function. In particular, it discusses how the results of the STDEVPA function for Microsoft Office Excel 2007 and for Microsoft Office Excel 2003 may differ from the results of STDEVPA in earlier versions of Excel.

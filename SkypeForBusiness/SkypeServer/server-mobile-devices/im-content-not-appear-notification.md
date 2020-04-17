@@ -27,3 +27,7 @@ When you receive a push notification for a Microsoft Skype for Business message 
 ## Resolution
 
 For security, Skype for Business for iOS update 6.26 prevents IM message content from being sent on mobile devices. Users see only the sender's name.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

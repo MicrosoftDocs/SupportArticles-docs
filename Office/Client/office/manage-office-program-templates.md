@@ -19,6 +19,9 @@ appliesto:
 
 # How to manage templates in 2007 Office programs and in 2010 Office programs
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Introduction
 
 This article describes the different types and locations of templates in 2007 Microsoft Office programs and in 2010 Office programs. Additionally, this article contains information about registry settings that control where you find custom templates.

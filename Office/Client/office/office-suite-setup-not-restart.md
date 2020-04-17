@@ -19,6 +19,9 @@ appliesto:
 
 # The 2010 Office suite Setup program will not restart after an initial installation is interrupted
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 Consider the following scenario. When you install a Microsoft Office suite or an Office program, the installation process is interrupted. Additionally, the Setup program is prevented from rolling back the Office installation. In this scenario, when you try to install the same Office suite or the Office program again, you receive the following error message: **Microsoft Office suite_name** encountered an error during setup.

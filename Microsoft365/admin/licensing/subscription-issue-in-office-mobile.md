@@ -17,6 +17,9 @@ appliesto:
 
 # "Can't Verify Subscription" or "No Subscription Found" error messages in Office Mobile
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you use Office Mobile for iPhone, you receive one of the following error messages:  
@@ -27,7 +30,7 @@ When you use Office Mobile for iPhone, you receive one of the following error me
 
 **No Subscription Found**
 
-**We couldn’t find a subscription connected to your account.** 
+**We couldn't find a subscription connected to your account.** 
 
 ## Cause
 

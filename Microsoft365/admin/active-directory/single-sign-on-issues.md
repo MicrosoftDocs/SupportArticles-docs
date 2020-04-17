@@ -22,6 +22,9 @@ appliesto:
 
 # How to use Remote Connectivity Analyzer to troubleshoot single sign-on issues for Office 365, Azure, or Intune
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Introduction
 
 This article describes how to diagnose single sign-on (SSO) logon issues in a Microsoft cloud service such as Office 365, Microsoft Azure, or Microsoft Intune by using Microsoft Remote Connectivity Analyzer. It also contains information about causes of common SSO failures and lists links to resources for how to troubleshoot the issue.

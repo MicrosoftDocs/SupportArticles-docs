@@ -15,7 +15,7 @@ appliesto:
 - SharePoint Server 2010
 ---
 
-# A user‘s display name is incorrect on a company’s SharePoint MySite page
+# A user's display name is incorrect on a company's SharePoint MySite page
 
 ## Symptoms
 
@@ -42,3 +42,7 @@ Temporarily flag the user as active on the MySite Root to force the affected use
 
    **Note** The user's display name is now updated on the Profile page.   
 5. Remove the Contribute permissions for this user.    
+
+## More information  
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

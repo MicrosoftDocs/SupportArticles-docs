@@ -67,3 +67,7 @@ Reset-CsPoolRegistrarState -PoolFqdn -ResetType QuorumLossRecovery
 
 > [!NOTE]
 > This command will finish within 30 minutes. After that, replicas will be put on available servers in the pool.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

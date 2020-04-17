@@ -20,6 +20,9 @@ appliesto:
 
 # How to use the INDIRECT function to create references in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 In Microsoft Excel, the INDIRECT worksheet function returns the contents of the specified reference and displays its contents. You can use the INDIRECT worksheet function to create linked references to other workbooks. You can reference each attribute of the reference (workbook name, worksheet name, and cell reference) individually by using the INDIRECT function to create a user-defined dynamic reference with worksheet cell references as inputs.

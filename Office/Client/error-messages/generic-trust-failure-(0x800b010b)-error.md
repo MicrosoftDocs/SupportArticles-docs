@@ -19,6 +19,9 @@ appliesto:
 
 # "Generic Trust Failure (0x800B010B)" error when you install Visual Studio 2010 Tools for Office Runtime
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Symptoms
 
 When you try to install [Visual Studio 2010 Tools for Office Runtime](https://www.microsoft.com/download/details.aspx?id=44074), you receive the following error message:

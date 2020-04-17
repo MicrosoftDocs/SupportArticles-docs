@@ -21,6 +21,9 @@ appliesto:
 
 # Problems when signing out of Office 365, Azure, or Intune in a web browser
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem
 
 Users experience issues when they try to sign out of Office 365, Microsoft Intune, or Microsoft Azure in a web browser. For example, users may experience one of the following issues:
@@ -31,7 +34,7 @@ Users experience issues when they try to sign out of Office 365, Microsoft Intun
 - If your Microsoft account ends in the ".edu" domain extension and is managed by your university domain administrator, or if your Microsoft account was registered or is still registered in Office 365, you may see one of the following messages:
 
     ```adoc
-    Sorry, but we’re having trouble signing you out"
+    Sorry, but we're having trouble signing you out"
     ```
     
     ```adoc
@@ -67,7 +70,7 @@ To end the task for your browser, follow these steps:
  
     > [!NOTE]
     > - If more than one browser is listed, end the task for each browser.    
-    > - If you’re using a different browser than those that are listed here, end the task for that browser.    
+    > - If you're using a different browser than those that are listed here, end the task for that browser.    
     
 ### Method 3: Sign out of all Microsoft online services  
   

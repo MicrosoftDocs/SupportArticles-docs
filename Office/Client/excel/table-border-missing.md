@@ -20,6 +20,9 @@ appliesto:
 
 # Excel/Outlook for Mac: Border missing when pasting table in email
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you create a table in Microsoft Excel for Mac and copy it into a new email message in Microsoft Outlook for Mac, the table is pasted into the email without any borders.

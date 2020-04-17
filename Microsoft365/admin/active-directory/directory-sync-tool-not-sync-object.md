@@ -21,6 +21,9 @@ appliesto:
 
 # Microsoft Online Services Directory Synchronization tool stops syncing objects and triggers event ID 0
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem
 
 You notice that synchronization of objects from your local Active Directory Domain Services to Microsoft cloud services has stopped. (These services may include Office 365, Microsoft Azure, and Microsoft Intune.)
@@ -37,7 +40,7 @@ Description: This version of the Microsoft Online Services Directory Sync tool i
 
 ## Cause
 
-This issue occurs if you're using the 32-bit version of the Microsoft Online Services Directory Synchronization tool. We no longer accept connections to Azure Active Directory (Azure AD) if you’re using a 32-bit version of the Microsoft Online Services Directory Synchronization tool. 
+This issue occurs if you're using the 32-bit version of the Microsoft Online Services Directory Synchronization tool. We no longer accept connections to Azure Active Directory (Azure AD) if you're using a 32-bit version of the Microsoft Online Services Directory Synchronization tool. 
 
 ## Solution
 

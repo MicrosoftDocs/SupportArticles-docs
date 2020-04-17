@@ -17,6 +17,9 @@ appliesto:
 
 # Office 365 users aren't automatically signed into an Office app through Active Directory accounts after they sign out
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Problem 
 
 An Office 365 who is signed in to an Office app through their Active Directory account from a domain-joined computer signs out of the Office app. The next time that the user opens the Office app, they aren't automatically signed in. The user has to manually sign in to the Office app. 

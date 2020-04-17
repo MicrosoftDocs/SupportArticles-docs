@@ -7,7 +7,7 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.prod: office 365
+ms.prod: office-365
 ms.topic: article
 ms.author: v-six
 ms.custom: CSSTroubleshoot
@@ -22,10 +22,17 @@ appliesto:
 
 # You can't sign in to Office 365, Azure, or Intune
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 > [!NOTE]
-> Don't use this article if you use a [Microsoft account](https://support.microsoft.com/search?query=what%20is%20a%20microsoft%20account%3F) to sign in.   
+> - Don't use this article if you use a [Microsoft account](https://support.microsoft.com/search?query=what%20is%20a%20microsoft%20account%3F) to sign in.
+> -  If you use Azure Multi-Factor Authentication, contact your administrator for help.
+> -  For more information about two-factor authorization, see [Sign in to your work or school account using your two-factor verification method](https://docs.microsoft.com/azure/active-directory/user-help/multi-factor-authentication-end-user-signin). 
+> -  To reset your password, see [Reset my Office 365 tenant admin password](https://docs.microsoft.com/microsoft-365/admin/add-users/reset-passwords?view=o365-worldwide#reset-my-office-365-tenant-admin-password).
+
 
 You can't sign in to Microsoft Office 365, Microsoft Azure, or Microsoft Intune. You might be trying to sign in by using a portal such as [https://login.microsoftonline.com](https://login.microsoftonline.com/). Or, you might be trying to sign in by using a non-browser–based app, such as one of the following: 
 
@@ -67,7 +74,7 @@ If you can sign in to the portal, but you can't sign in to a non-browser–based
 1. Work with your admin to make sure that you have the correct licenses applied to your account.    
 2. If you're enabled for multi-factor authentication, make sure that you have set up app passwords. For more information about multi-factor authentication, see [Manage your settings for two-step verification](https://docs.microsoft.com/azure/active-directory/user-help/multi-factor-authentication-end-user-manage-settings).    
 3. If you use a mail app such as Outlook, and if you're a federated user, see [Federated users can't connect to an Exchange Online mailbox](https://support.microsoft.com/help/2466333).      
-4. For more information about how to troubleshoot sign-in issues that use non-browser–based apps, see [How to troubleshoot non-browser apps that can’t sign in to Office 365, Azure, or Intune](https://support.office.com/article/how-to-troubleshoot-non-browser-apps-that-can-t-sign-in-to-office-365-azure-or-intune-3ba1b268-66f6-462c-b0e5-070f5c2603c1).      
+4. For more information about how to troubleshoot sign-in issues that use non-browser–based apps, see [How to troubleshoot non-browser apps that can't sign in to Office 365, Azure, or Intune](https://support.office.com/article/how-to-troubleshoot-non-browser-apps-that-can-t-sign-in-to-office-365-azure-or-intune-3ba1b268-66f6-462c-b0e5-070f5c2603c1).      
   
 #### You can't sign in to the portal
 
@@ -84,7 +91,7 @@ If you can't sign in to the portal, use one of the solutions in the following ta
 |You're asked to change your password.|Your password may be temporary or your password has expired. If you're prompted, change your password. |
 | Sorry, but we're having trouble signing you in. Please try again in a few minutes. If this doesn't work, you might want to contact your admin and report the error: \<error code>|To resolve this, see ["This doesn't look like a valid user ID" error when a user tries to sign in to Office 365](https://support.microsoft.com/help/2844931/this-doesn-t-look-like-a-valid-user-id-error-when-a-user-tries-to-sign).  |
 |You don't see any of the previous error messages, and the website address doesn't start with [https://login.microsoftonline.com](https://login.microsoftonline.com/).|You may be a federated user. Work with your company admin, and see [How to use Remote Connectivity Analyzer to troubleshoot single sign-on issues for Office 365, Azure, or Intune](https://support.microsoft.com/help/2650717) and [A federated user is prompted unexpectedly to enter their work or school account credentials](https://support.microsoft.com/help/2535227).    |
-| Sorry! We can’t process your request. Your session is invalid or expired. There was an error processing your request because your session is invalid or expired. Please try again.|To resolve this issue, see ["Sorry! We can’t process your request” error when you try to set up security verification settings for Azure Multi-Factor Authentication ](https://support.microsoft.com/help/2909939). |
+| Sorry! We can't process your request. Your session is invalid or expired. There was an error processing your request because your session is invalid or expired. Please try again.|To resolve this issue, see ["Sorry! We can't process your request" error when you try to set up security verification settings for Azure Multi-Factor Authentication ](https://support.microsoft.com/help/2909939). |
 | We did not receive the expected response. Please try again.|To resolve this issue, see [ "We did not receive the expected response" error message when you try to sign in by using Azure Multi-Factor Authentication](https://support.microsoft.com/help/2834968). |
 | We didn't receive a response. Please try again.|To resolve this issue, see ["We didn't receive a response" error message when you try to sign in by using Azure Multi-Factor Authentication](https://support.microsoft.com/help/2834965). |
 | Sorry, our account verification system is having trouble. This could be temporary, but if you see it again, you might want to contact your admin.|To resolve this issue, see ["Account verification system is having trouble" error message when you try to sign in by using a work or school account](https://support.microsoft.com/help/2834966).  |

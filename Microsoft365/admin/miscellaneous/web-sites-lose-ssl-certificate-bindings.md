@@ -1,6 +1,6 @@
 ---
 title: Web sites lose SSL certificate bindings
-description: Web sites lose SSL certificate bindings when the certificate doesn’t have a unique Friendly name field on servers that are running Office Web Apps Server.
+description: Web sites lose SSL certificate bindings when the certificate doesn't have a unique Friendly name field on servers that are running Office Web Apps Server.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -18,6 +18,9 @@ appliesto:
 
 # Web sites lose SSL certificate bindings on Office Web Apps Server
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 Consider the following scenario: 
@@ -29,7 +32,7 @@ In this scenario, when the server is restarted, the certificate become unbound f
 
 ## Cause
 
-This issue occurs because the certificate doesn’t have a unique **Friendly name** field. This field is required by the Office Web Apps. Therefore, Office Web Apps manager removes the bindings. 
+This issue occurs because the certificate doesn't have a unique **Friendly name** field. This field is required by the Office Web Apps. Therefore, Office Web Apps manager removes the bindings. 
 
 The Friendly name field must be unique within the Trusted Root Certificate Authorities store. If you have multiple certificates that share a Friendly Name field, the farm creation process fails because the **New-OfficeWebAppsFarm** cmdlet can't know which certificates to use. 
 

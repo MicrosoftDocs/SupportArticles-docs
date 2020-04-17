@@ -16,6 +16,9 @@ appliesto:
 
 # Save a file to a network drive programmatically in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 In Microsoft Excel, you can save a file to any drive to which you have write and delete privileges. In addition, you can use a Microsoft Visual Basic for Applications macro to save the active workbook and use a variable for the file name. You can use variables from the ActiveWorkbook.Nameproperty, from input box data, or from a cell reference.

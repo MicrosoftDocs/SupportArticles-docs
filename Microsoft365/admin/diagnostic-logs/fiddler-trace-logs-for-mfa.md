@@ -18,6 +18,9 @@ appliesto:
 
 # How to use Fiddler trace logs for MFA in Office 365 and Azure AD
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Summary
 
 This article introduces the Fiddler trace log for the following multifactor authentication (MFA) scenarios:

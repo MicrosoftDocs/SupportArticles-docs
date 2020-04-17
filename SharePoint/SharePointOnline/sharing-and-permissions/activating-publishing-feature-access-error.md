@@ -13,6 +13,7 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
+- SharePoint Server
 ---
 
 # Access error when a user tries to activate or deactivate the SharePoint Server Publishing feature
@@ -39,4 +40,4 @@ For more information about how to manage SharePoint groups, see [Customize Share
 
 his is the expected behavior in SharePoint Online. The user must have access to the parent site collection through the **Hierarchy Managers** group to activate or deactivate the SharePoint Server Publishing site feature for the subsite.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

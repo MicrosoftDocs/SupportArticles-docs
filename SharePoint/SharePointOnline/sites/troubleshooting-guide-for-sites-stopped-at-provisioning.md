@@ -26,7 +26,7 @@ description: Guide to troubleshooting provisioning issues in OneDrive for Busine
 
 This article will help you troubleshoot user accounts whose OneDrive for Business sites have provisioning issues such as:
 
-- Being unable to select a OneDrive tile stopped at the “Setting up” message.
+- Being unable to select a OneDrive tile stopped at the "Setting up" message.
 - Selecting a OneDrive tile that redirects you to the **Delve** page. 
 - Selecting a OneDrive tile redirects you to the **MyBraryFirstRun.aspx** page.
 
@@ -96,3 +96,5 @@ To remove a guest attribute from a user profile:
 6. In the results displayed, hover your cursor next to the name of the user. In  the drop-down box, select **Edit my profile**.
 7. In the field **Personal site capabilities**, remove the value that has been set.
 8. Select **Save and Close**.
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

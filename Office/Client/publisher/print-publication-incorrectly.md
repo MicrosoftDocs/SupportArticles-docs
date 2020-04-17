@@ -19,6 +19,9 @@ appliesto:
 
 # A publication is printed incorrectly in Publisher 2010 or 2013
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 Consider the following scenario. In Microsoft Publisher, you select a sheet size that is larger than the maximum sheet size that is supported by the printer. For example, the maximum sheet size is A4, and the sheet size that you select is A3. You print the publication. In this scenario, the publication is not printed in the A3 sheet size. However, in print preview, the publication is displayed correctly.

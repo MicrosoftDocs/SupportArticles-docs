@@ -1,0 +1,81 @@
+- name: Exchange Server Troubleshooting
+  href: ../exchange-server.md
+  items:
+  - name: Active Sync
+    items:
+    - name: Active Sync URL is in an invalid format
+      href: ../active-sync/url-invalid-format.md
+  - name: Administration
+    items:
+    - name: Audit Log searches fail with ErrorInvalidServerVersion
+      href: ../administration/mailbox-audit-log-searches-fail-errorinvalidserverversion.md
+    - name: Can't manage Exchange 2019 databases in EAC
+      href: ../administration/can't-manage-ex19-database-eac.md
+    - name: On-premises EAC link goes to product comparison
+      href: ../administration/o365-link-eac-redirect-product-comparison.md
+    - name: Unhealthy state when monitoring mailboxes are deleted
+      href: ../administration/unhealthy-state-monitoring-mailboxes-deleted.md
+  - name: Calendars
+    items:
+    - name: Show organizer name instead of subject
+      href: ../calendars/calendar-shows-organizer-name.md
+  - name: Client Access
+    items:
+    - name: IMAP clients fail to logon
+      href: ../client-access/imap-clients-logon-fail-coexist-exchange.md
+    - name: Kerberos authentication for MAPI client connection
+      href: ../client-access/kerberos-authentication-for-mapi-client.md
+  - name: HTTP Proxy
+    items:
+    - name: Issue with proxying HTTP requests
+      href: ../http-proxy/400-bad-request.md
+  - name: Mailflow
+    items:
+    - name: 451 4.4.0 DNS query failed
+      href: ../mailflow/dns-query-failed.md
+    - name: 554 5.4.14 Hop count exceeded
+      href: ../mailflow/hop-count-exceeded-possible-mail-loop.md
+  - name: Management Console
+    items:
+    - name: Can't open EMS on Edge Transport server
+      href: ../management-console/unable-open-ems-launchems.md
+    - name: Can't restore database from backup with MCDB enabled
+      href: ../management-console/restore-database-backup-mcdb-enable.md
+    - name: Connecting to the remote server failed
+      href: ../management-console/connecting-remote-server-failed.md
+    - name: EMS fails to start with error
+      href: ../management-console/fail-to-start-ems-canot-find-path.md
+    - name: MCDB status is Offline and SSDs aren’t formatted
+      href: ../management-console/mcdb-status-is-offline-ssds-aren’t-formatted.md
+  - name: Migration
+    items:
+    - name: No active public folder mailboxes were found
+      href: ../migration/migrationbatch-fails-no-public-folder-mailboxes.md
+    - name: Public folder migration stops at 95%
+      href: ../migration/public-folder-migration-fails.md
+  - name: Microsoft Diagnostics Services
+    items:
+    - name: Self-Help portal
+      href: ../microsoft-diagnostics-services/self-help-portal.md
+  - name: Out Of Office Assistant
+    items:
+    - name: Only one reply is sent to each sender
+      href: ../out-of-office-assistant/one-reply-sent-sender.md
+  - name: OWA
+    items:
+    - name: Incorrect Sent time stamp
+      href: ../owa/incorrect-sent-time-stamp.md
+    - name: Set up Exchange on the web
+      href: ../owa/set-up-web-access.md
+  - name: Setup
+    items:
+    - name: Exchange Server 2019 setup does not run correctly using PowerShell
+      href: ../setup/ex2019-setup-does-not-run-correctly-started-powershell.md
+  - name: Shared Mailboxes
+    items:
+    - name: Can't access shared mailboxes via POP/IMAP
+      href: ../shared-mailboxes/accessing-shared-mailboxes-fails.md
+    - name: Can't create appointment or all day event
+      href: ../shared-mailboxes/cannot-create-appointment.md
+    - name: Can't send an email with full access
+      href: ../shared-mailboxes/cannot-send-email-with-full-access.md

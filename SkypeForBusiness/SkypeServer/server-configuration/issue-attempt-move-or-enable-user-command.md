@@ -73,3 +73,5 @@ For more detailed information on using the Enable-CsUser, Move-CsUser, and Move-
 - [Move-CsUser](https://technet.microsoft.com/library/gg398528.aspx)
 
 - [Move-CsLegacyUser](https://technet.microsoft.com/library/gg413025.aspx)
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

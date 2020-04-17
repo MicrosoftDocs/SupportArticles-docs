@@ -17,6 +17,9 @@ appliesto:
 
 # Only the audio plays when you play a video file in a PowerPoint slide presentation
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 You insert a video file, such as a .wmv file, an .mpeg file, or an .avi file, into a Microsoft PowerPoint slide presentation. When you play the video file, the video does not play. However, the audio plays as expected.

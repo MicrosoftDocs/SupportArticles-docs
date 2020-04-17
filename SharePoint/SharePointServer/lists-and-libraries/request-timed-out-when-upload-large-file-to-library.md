@@ -72,7 +72,6 @@ To increase the connection time-out setting, follow these steps:
 
 ### Method 3: Add the executionTimeout value  
 
-
 1. Open the Web.config file in Notepad.   
 
    **NOTE** By default, this file is in the following location:Program Files\Common Files\Microsoft Shared\Web server extensions\12\TEMPLATE\LAYOUTS
@@ -162,3 +161,7 @@ To work around this problem, edit the <configuration> section in the Web.config 
 For more information about the maxAllowedContentLength setting, see the following article in the Microsoft Knowledge Base:  
 
 [942074](https://support.microsoft.com/help/942074) Error message when you visit a Web site that is hosted on a server that is running Internet Information Services 7.0: "HTTP Error 404.13 - CONTENT_LENGTH_TOO_LARGE"
+
+## More information
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

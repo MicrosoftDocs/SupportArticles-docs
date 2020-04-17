@@ -72,4 +72,4 @@ If other users are connected to the same data in the Access app, you'll have to 
 
 This issue may occur when you open an Access desktop database that has tables that are linked to an Access app in SharePoint Online.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

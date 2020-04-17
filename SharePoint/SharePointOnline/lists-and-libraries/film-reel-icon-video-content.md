@@ -32,7 +32,6 @@ Consider the following scenario:
 - You change the properties and then change the Content Type setting back to Folder from Video.
   In classic UI, the thumbnail image will have film reel icon still
   In Modern UI, the thumbnail image will have folder icon 
-  
 
 ## Solution
 
@@ -41,4 +40,4 @@ Although the film reel icon appears in classic UI, the Content Type will functio
 
 ## More information
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

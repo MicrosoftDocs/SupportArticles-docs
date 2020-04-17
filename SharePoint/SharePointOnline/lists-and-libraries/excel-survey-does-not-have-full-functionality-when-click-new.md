@@ -87,4 +87,4 @@ For more information about how to manage external sharing for your SharePoint on
 
 For more information about document check-out, go to [Set up a library to require check-out of files](https://support.office.com/article/set-up-a-library-to-require-check-out-of-files-0c73792b-f727-4e19-a1f9-3173899e695b).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

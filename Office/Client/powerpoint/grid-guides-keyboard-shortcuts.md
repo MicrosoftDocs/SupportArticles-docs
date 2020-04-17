@@ -17,6 +17,9 @@ appliesto:
 
 # Keyboard shortcuts to turn display of grid and guides on and off in PowerPoint
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 The grid and guides features help you line up text and objects while creating Microsoft PowerPoint presentations. This article tells you how to use keyboard shortcuts to quickly turn these features off and on.

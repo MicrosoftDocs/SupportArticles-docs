@@ -18,6 +18,9 @@ appliesto:
 
 # "Unable to cast COM object..." when exporting to Excel from Team Explorer 2008
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Action
 
 Using Team Explorer 2008 you try to open a work item or collection of work items in Microsoft Excel via the menu item "Open Selection in Microsoft Excel" or "Open in Microsoft Excel".

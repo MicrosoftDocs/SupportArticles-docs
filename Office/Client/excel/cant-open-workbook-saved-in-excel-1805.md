@@ -18,6 +18,9 @@ appliesto:
 
 # "We found a problem with some content" error when trying to open a workbook
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you try to open an XLSX/XLSM Excel workbook that was saved in Microsoft Excel version 1805, you may receive the following error message:

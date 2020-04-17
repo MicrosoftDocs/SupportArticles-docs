@@ -36,4 +36,6 @@ To use the CDN together with the Picture Library Slideshow web part, your ShareP
 
 After CDN capability is configured, you can work with your tenant administrator to enable a private CDN for the Image Library that you want to use as the source for your auto-rotating web part. To do this, the administrator must run additional scripts for the source image library.
 
-For guidelines and instructions about how to enable the CDN and create a private CDN, see [General availability of Office 365 CDN](https://dev.office.com/blogs/general-availability-of-office-365-cdn).
+For guidelines and instructions about how to enable the CDN and create a private CDN, see [General availability of Office 365 CDN](https://developer.microsoft.com/office/blogs/general-availability-of-office-365-cdn).
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

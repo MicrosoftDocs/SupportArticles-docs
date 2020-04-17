@@ -44,7 +44,9 @@ Repro steps:
    1. Choose From: All Users
 3. Configure the workflow with one Activity: Send email to user.
    1. Configure to send email to the Initiation Form Parameter (from above)
-   1. In the “Lookup for Person or Group” dialog, select any option from the "Return field as" (for example Email Addresses, Semicolon Deliminted).
+   1. In the "Lookup for Person or Group" dialog, select any option from the "Return field as" (for example Email Addresses, Semicolon Deliminted).
 4. Publish the workflow and associate with a list.  During association, enter use a SharePoint Group for the value.
 5. Start the workflow and choose a SharePoint Group in Initiation Form.
 6. Error in workflow history shows "Coercion warning: user or group does not have a valid e-mail address." even though workflow status is completed.
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

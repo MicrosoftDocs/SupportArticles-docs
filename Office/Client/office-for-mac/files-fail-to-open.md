@@ -18,6 +18,9 @@ appliesto:
 
 # Office files in SharePoint fail to open from an Office 2016 client
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 An error occurs when you try to open a Microsoft Office file from SharePoint by using an Office 2016 client, such as Word, Excel, or PowerPoint. You may receive one of the following error messages, depending on the version of Office or SharePoint and the method that's used to open the file: 
@@ -30,13 +33,13 @@ An error occurs when you try to open a Microsoft Office file from SharePoint by
    
 ![Cannot download the information error](./media/files-fail-to-open/cannot-download-the-information-error.png) 
     
-    Sorry, we couldn’t open <DocumentLocation>    
+    Sorry, we couldn't open <DocumentLocation>    
  
 ![cannot open file location error](./media/files-fail-to-open/cannot-open-file-location-error.png)  
    
-    Sorry, we can’t open <DocumentLocation> because the server isn’t responding.  
+    Sorry, we can't open <DocumentLocation> because the server isn't responding.  
    
-![cannot open file because the server isn’t responding error](./media/files-fail-to-open/server-is-not-responding-error.png)
+![cannot open file because the server isn't responding error](./media/files-fail-to-open/server-is-not-responding-error.png)
 
 Additionally, you may see one of the following error messages when you try to sign in Office. Or, if you have successfully signed in to Office, you may still see the error message in an Office application: 
 
@@ -46,7 +49,7 @@ Additionally, you may see one of the following error messages when you try to si
 ![Problems in your account error](./media/files-fail-to-open/problems-in-your-account-error.png)   
 
     Account Error   
-    Sorry, we can’t get to your account right now. To fix this, please sign in again.  
+    Sorry, we can't get to your account right now. To fix this, please sign in again.  
    
 ![Cannot get to your account error](./media/files-fail-to-open/cannot-get-to-your-account-error.png)
    

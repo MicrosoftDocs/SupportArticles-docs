@@ -17,6 +17,9 @@ appliesto:
 
 # "Cannot be opened" error when you start an Office Starter 2010 program.
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ##  Resolution
 
 If Word Starter 2010 or Excel Starter 2010 cannot be opened, uninstall and reinstall Microsoft Office Starter 2010: 

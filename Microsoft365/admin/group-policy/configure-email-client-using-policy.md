@@ -17,9 +17,12 @@ appliesto:
 
 # How to configure the default e-mail client using Group Policy
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
-When you use Group Policy to administer the default e-mail client you are unable to locate a setting to make this configuration.
+When you use Group Policy to administer the default e-mail client, you are unable to locate a setting to make this configuration.
 
 ## Cause
 

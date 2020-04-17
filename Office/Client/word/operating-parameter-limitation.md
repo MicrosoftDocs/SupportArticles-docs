@@ -21,6 +21,9 @@ appliesto:
 
 # Operating parameter limitations and specifications in Word
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 This article lists the operating parameter limits of Microsoft Office Word and Microsoft Visual Basic for Applications.

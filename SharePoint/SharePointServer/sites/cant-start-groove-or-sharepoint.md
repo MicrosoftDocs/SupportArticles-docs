@@ -62,3 +62,5 @@ The binary file store refers to the Groovebinaryfilestore.xss file and folder. T
 - Groove Workspace or Groove Virtual Office on a Windows XP-based computer
 
   C:\Documents and Settings\All Users\Application Data\Groove Networks\Groove\Permanent   
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

@@ -21,6 +21,9 @@ appliesto:
 
 # Sample user-defined function to hide formula errors in Excel
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 Some formulas in Microsoft Excel return error values under certain conditions. For example, when you use a division formula that multiplies a number by zero, you receive the following error value:

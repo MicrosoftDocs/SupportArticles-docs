@@ -99,3 +99,5 @@ For detailed information on Lync Server user models and capacity planning, revie
 - [Lync Server 2010 User Models](https://technet.microsoft.com/library/gg398811%28v=ocs.14%29.aspx)
 - [User models in Skype for Business Server](https://technet.microsoft.com/library/gg398811.aspx)
 - [Capacity Planning Requirements and Recommendations](https://technet.microsoft.com/library/gg425715%28v=ocs.14%29.aspx)
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

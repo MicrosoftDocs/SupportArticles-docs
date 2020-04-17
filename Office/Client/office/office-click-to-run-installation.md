@@ -17,6 +17,9 @@ appliesto:
 
 # Information about Office Click-to-Run installations and about related anti-malware applications
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
 For Microsoft Office 2010, Microsoft is offering a new way to download and install its Office 2010 products. This technology is called Click-to-Run, and this article discusses Click-to-Run and how it interacts with some anti-malware applications. 
@@ -31,7 +34,7 @@ How does Click-to-Run work?
 
 Click-to-Run products use streaming. Think of this in the same way that you think about streaming video. You can watch the first part of the video before the whole file is downloaded. Similarly, with Click-to-Run, you can start using Office before the whole suite or product has been downloaded. While you are using your application, the rest of Office is being downloaded quietly in the background. 
 
-Another aspect of Office Click-to-Run is the unique way that Office is stored after it is downloaded onto your computer. Click-to-Run uses Microsoft virtualization technology to contain Office 2010 inside a virtualized application space. This virtual “bubble” separates Office from the regular file system and applications on your hard disk. This lets Office 2010 Click-to-Run coexist side-by-side with any existing version of Office that is already installed on your computer. There are also other benefits to Office Click-to-Run. For more information, visit the following Microsoft blog site:
+Another aspect of Office Click-to-Run is the unique way that Office is stored after it is downloaded onto your computer. Click-to-Run uses Microsoft virtualization technology to contain Office 2010 inside a virtualized application space. This virtual "bubble" separates Office from the regular file system and applications on your hard disk. This lets Office 2010 Click-to-Run coexist side-by-side with any existing version of Office that is already installed on your computer. There are also other benefits to Office Click-to-Run. For more information, visit the following Microsoft blog site:
 
 [Click-to-Run: Delivering Office in the 21st Century](https://blogs.technet.com/office2010/archive/2009/11/06/click-to-run-delivering-office-in-the-21st-century.aspx)
 
@@ -51,7 +54,7 @@ The drive Q implementation (or drive R on some systems) is not yet completely co
 
 Does Click-to-Run present a security risk to users who have used Click-to-Run to obtain Office 2010?
 
-The Microsoft Office Click-to-Run implementation, based on Microsoft virtualization technology, is compliant with Microsoft’s strict security standards. Users are no more vulnerable than if they did not have a Click-to-Run Office product. Click-to-Run has passed third-party penetration tests and has completed extensive security reviews.
+The Microsoft Office Click-to-Run implementation, based on Microsoft virtualization technology, is compliant with Microsoft's strict security standards. Users are no more vulnerable than if they did not have a Click-to-Run Office product. Click-to-Run has passed third-party penetration tests and has completed extensive security reviews.
 
 That said, users will have a drive Q or drive R configuration that is incompatible with some anti-malware solutions. Therefore, malware may hide undetected on drive Q or drive R, but only if the user's computer is already exploited. Microsoft is not aware of any instance of this scenario, but it is considered possible.
 
@@ -59,6 +62,6 @@ What can users do to protect against malware until their anti-malware vendors re
 
 Users should run their existing anti-malware software. They are no more vulnerable than if they did not have a Click-to-Run Office product installed. If the installation of Office is experiencing problems, users can perform a repair of Office. This procedure removes any non-Microsoft content and restores Office to its original installation state. Microsoft also recommends that users contact their anti-malware vendors for specific help with malware concerns.
 
-What if my anti-malware vendor doesn’t have a solution for detecting and cleaning malware on drive Q or drive R?
+What if my anti-malware vendor doesn't have a solution for detecting and cleaning malware on drive Q or drive R?
 
 Anti-malware vendors should contact Microsoft.

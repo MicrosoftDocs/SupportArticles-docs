@@ -17,6 +17,9 @@ appliesto:
 
 # Office 2010 Installation failure: "...encountered an error during setup" CAQuietExec wevtutil.exe BCSEvents.man
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 User is attempting to install Office 2010 Professional Plus on a Dell machine with Windows 7 OS. Setup halts during installation with in the following error, and Office is not installed:

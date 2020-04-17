@@ -16,6 +16,9 @@ appliesto:
 
 # PowerPoint cannot load an add-in when you lower the macro security level
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you lower the level of macro security in Microsoft PowerPoint, and then open a PowerPoint add-in file (*.ppa), the new level of macro security may not be applied, and the add-in file may not run as expected. The add-in is listed as an available add-in in the Add-Ins dialog box, but the check box is not selected, and you receive an error message similar to the following when you attempt to select the check box:

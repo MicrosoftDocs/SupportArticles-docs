@@ -18,6 +18,9 @@ appliesto:
 
 # Memory usage in the 32-bit edition of Excel 2013 and 2016
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 After you upgrade to Microsoft Office 2013 or 2016, you experience one or more of the following symptoms:  

@@ -21,6 +21,9 @@ appliesto:
 # How to troubleshoot problems that occur when you start or use Word
 
 > [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
+> [!NOTE]
 > If you experience specific issues when you use Word, visit the [Word help center](https://support.office.com/word) to search for information about your issue. 
 
 ## Summary
@@ -112,7 +115,7 @@ To restore the original Word Data registry subkey, follow these steps:
 1. Exit all Office programs.    
 2. Double-click the **Wddata.reg** icon on the desktop.    
 3. Click **Yes**, and then click **OK**.    
- If restoring the Word Data registry subkey doesn’t work, go to the next procedure.
+ If restoring the Word Data registry subkey doesn't work, go to the next procedure.
 
 #### Method 4: Delete the Word Options registry key
  

@@ -19,6 +19,9 @@ appliesto:
 
 # Office 2016 for Mac 16.x prompts you for authentication when you open a URL
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 After you install or upgrade to Microsoft Office 2016 for Mac version 16.9 and later versions, you experience one of the following issues in Microsoft Excel, Microsoft Word, or Microsoft PowerPoint: 
@@ -33,7 +36,7 @@ After you install or upgrade to Microsoft Office 2016 for Mac version 16.9 and
 
 This problem occurs because of one or more of the following situations: 
  
-- An Office file contains an embedded URL that triggers a SafeLink check. SafeLink is run to verify that it’s safe to open the target content before it's handed to the local browser.    
+- An Office file contains an embedded URL that triggers a SafeLink check. SafeLink is run to verify that it's safe to open the target content before it's handed to the local browser.    
 - Office tries to connect to an online endpoint for an Office service.    
  
 Office 2016 for Mac 16.9 and later versions use a new user agent string in the HTTP request that starts with "Microsoft Office".

@@ -12,13 +12,16 @@ ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
 appliesto:
-- Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
 - Microsoft Windows XP Professional
 - Microsoft Windows XP Home Edition
 - Office 365 User and Domain Management
 ---
 
 # "Application cannot be started. Contact the application vendor" when run Office 365 Desktop Setup
+
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
 
 ## Problem
 

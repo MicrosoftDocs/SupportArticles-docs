@@ -23,6 +23,9 @@ search.appverid: MET150
 
 # Word slows or stops responding if there are excessive tracked changes or comments
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 Microsoft Word becomes very slow or stops responding if an open document contains excessive tracked changes or comments.

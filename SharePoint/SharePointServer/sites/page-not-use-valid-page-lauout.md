@@ -56,3 +56,6 @@ In my experience, we sometimes have force the page layout to reset, by changing 
 5. Confirm the layout in sitemanager.aspx now displays by Name, not path. 
 6. Confirm the page no longer throws errors. 
 
+## More information
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

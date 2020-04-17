@@ -63,12 +63,12 @@ To do this, follow these steps:
     Add-MailboxPermission -Identity <Mailbox ID1> -User <Mailbox ID2> -AccessRights FullAccess -AutoMapping:$false 
     ```
    > [!NOTE]
-   > In this command, <Mailbox ID1> represents the mailbox to which the user is granted permission and <Mailbox ID2> is the mailbox of the user to whom you want to add full access permissions.
+   > In this command, \<Mailbox ID1> represents the mailbox to which the user is granted permission and \<Mailbox ID2> is the mailbox of the user to whom you want to add full access permissions.
 
    For example, to add full access permissions for an administrator to John Smith's mailbox, type the following command, and then press Enter:
 
    ```powershell
-   Add-MailboxPermission -Identity johnsmith@contoso.onmicrosoft.com -User admin@contoso.onmicrosoft.com -AccessRights FullAccess -AutoMapping:$false
+   Add-MailboxPermission -Identity johnsmith@contoso.onmicrosoft.com -User admin@contoso.onmicrosoft.com -AccessRights FullAccess -AutoMapping $false
    ```
     
    After you run this command, the following output is displayed.  

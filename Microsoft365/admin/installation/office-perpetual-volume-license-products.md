@@ -18,15 +18,18 @@ appliesto:
 
 # Office 2019 perpetual volume license products available as Click-to-Run
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 For almost two decades, Microsoft Office has relied on the Windows Installer (MSI) technology for core deployment functionality. To better address the ever-growing requirements of businesses, Office has continually introduced modern deployment features. 
 
-In Microsoft Office 2013, we introduced Click-to-Run, a modern deployment technology that is now delivering Office to hundreds of millions of users worldwide. Beginning in Microsoft Office 2019, we’ll expand the availability of Click-to-Run to all client products. Perpetual volume licensed products will now be able to take advantage of benefits that improve security and ease of use while reducing deployment costs. These benefits include the following: 
+In Microsoft Office 2013, we introduced Click-to-Run, a modern deployment technology that is now delivering Office to hundreds of millions of users worldwide. Beginning in Microsoft Office 2019, we'll expand the availability of Click-to-Run to all client products. Perpetual volume licensed products will now be able to take advantage of benefits that improve security and ease of use while reducing deployment costs. These benefits include the following: 
  
 - Predictable cumulative monthly updates    
 - Software that is up-to-date immediately upon installation    
 - Easy upgrade path to Office 365 subscription products    
  
-Click-to-Run offers the same enterprise-focused management capabilities as MSI-based products. These include volume activation, Group Policy management, administrative control over updates, and integration with management tools such as System Center Configuration Manager. To help you migrate from older MSI-based products, Click-to-Run also supports in-place upgrade when you move to Microsoft Office 2019 or Office 365. 
+Click-to-Run offers the same enterprise-focused management capabilities as MSI-based products. These include volume activation, Group Policy management, administrative control over updates, and integration with management tools such as Microsoft Endpoint Configuration Manager. To help you migrate from older MSI-based products, Click-to-Run also supports in-place upgrade when you move to Microsoft Office 2019 or Office 365. 
 
 Beginning in Office 2019, Office client applications will no longer be available in MSI format. This change in deployment technology does not affect how products are licensed or supported. A preview program is available so that you can start to test Office 2019 Preview in your organization. 
 

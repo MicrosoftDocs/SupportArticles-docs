@@ -19,6 +19,9 @@ appliesto:
 
 # Macros in embedded Excel workbook are blocked from running
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptom
 
 In an environment that has the **Block macros from running in Office files from the Internet** Group Policy setting enabled for Microsoft Excel 2016, macros in embedded Excel workbooks are blocked from running.
@@ -33,7 +36,7 @@ Macros in this document have been disabled by your enterprise administrator for 
 
 ## Cause
 
-This issue occurs if the embedded Excel workbook isn’t from a trusted location, or the new workbook isn't saved to a trusted location. 
+This issue occurs if the embedded Excel workbook isn't from a trusted location, or the new workbook isn't saved to a trusted location. 
 
 ## Resolution
 

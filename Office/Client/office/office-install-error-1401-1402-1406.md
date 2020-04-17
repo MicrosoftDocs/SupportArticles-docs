@@ -19,6 +19,9 @@ appliesto:
 
 # Error 1401, 1402 or 1406 when you install an Office program or open an Office program or document
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 When you install a Microsoft Office program, you may receive one of the following error messages during or at the end of the installation process:

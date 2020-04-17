@@ -20,6 +20,9 @@ appliesto:
 
 # Error message when you update external links that contain a three-dimensional reference
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Symptoms
 
 Consider the following scenario:
@@ -39,7 +42,7 @@ There are two possible reasons: The name you specified may not be defined. The n
 ```
 
 ```adoc
-We can’t update some of the links in your workbook right now. You can continue without updating their values, or edit the links you think are wrong.
+We can't update some of the links in your workbook right now. You can continue without updating their values, or edit the links you think are wrong.
 ```
 
 ## Workaround

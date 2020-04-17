@@ -22,6 +22,9 @@ description: Learn how to install Office 365 apps.
 
 # Install Office 365 apps
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 Sometimes, things just aren't working. Here's some help for fixing administrative problems with Office 365.
   
  **If you need immediate help, [contact support](https://docs.microsoft.com/office365/admin/contact-support-for-business-products)** to help resolve your technical issues.

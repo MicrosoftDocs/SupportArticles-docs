@@ -98,7 +98,7 @@ To update database statistics on a single database that uses the FULLSCAN option
 EXEC sp_MSforeachtable 'UPDATE STATISTICS ? WITH FULLSCAN'  
 ```  
 
-Important note  The “sp_MSforeachtable” option is an undocumented procedure that's provided “as is” and should only be used to mitigate the immediate issue. We do not recommended that you use this procedure as part of a regular maintenance plan. Instead, see our [UPDATE STATISTICS (Transact-SQL)](https://msdn.microsoft.com/library/ms187348.aspx) documentation about how to implement a plan to UPDATE STATISTICS, using the FULLSCAN option.   
+Important note  The "sp_MSforeachtable" option is an undocumented procedure that's provided "as is" and should only be used to mitigate the immediate issue. We do not recommended that you use this procedure as part of a regular maintenance plan. Instead, see our [UPDATE STATISTICS (Transact-SQL)](https://msdn.microsoft.com/library/ms187348.aspx) documentation about how to implement a plan to UPDATE STATISTICS, using the FULLSCAN option.   
 
 Depending on how outdated the database statistics have become, you may have to clear the query plan cache by running the [DBCC FREEPROCCACHE](https://msdn.microsoft.com/library/ms174283.aspx) command after you update the database statistics. You'll find the syntax and arguments for this procedure in [DBCC FREEPROCCACHE (Transact-SQL)](https://msdn.microsoft.com/library/ms174283.aspx). Doing this makes sure that new queries use the optimal execution plan after the database statistics are updated. For example, see the following query:  
 
@@ -119,3 +119,5 @@ sp_recompile proc_getwebnavstruct
 ```  
 
 Running the [sp_recompile](https://msdn.microsoft.com/library/ms181647.aspx) command together with procedure, function, or table parameters targets a single element in the cache for removal without affecting the instance.
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

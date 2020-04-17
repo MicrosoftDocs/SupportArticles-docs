@@ -1,6 +1,6 @@
 ---
 title: Enable co-authoring for OneDrive-synced files
-description: Explains how to enable co-authoring for OneDrive-synced files in Office 365 after a September 2019 change removes the feature.
+description: Explains how to enable co-authoring for OneDrive-synced files in Office 365 after a October 2019 change removes the feature.
 author: lucciz
 ms.author: v-zolu
 manager: dcscontentpm
@@ -19,7 +19,7 @@ appliesto:
 
 ## Summary
 
-Beginning in the September 2019 update for Microsoft Office 365, co-authoring capabilities will no longer be available for files that are synced to a local computer through the OneDrive for Business (Groove.exe) sync client. 
+Beginning in the October 2019 update for Microsoft Office 365, co-authoring capabilities are no longer be available for files that are synced to a local computer through the OneDrive for Business (Groove.exe) sync client. 
 
 After this update is applied, you will see the following changes:  
  
@@ -28,7 +28,7 @@ After this update is applied, you will see the following changes: 
 - Files that are opened directly from a SharePoint URL while the computer is not connected to the internet will not open.
 
  
-We are targeting this change to go into effect starting in the September 2019 monthly update (build 16.0.12129.xxxxx) Additionally, this change will be rolled into the next semi-annual channel release in the January 2020 update.   
+This change is in effect starting in the October 2019 monthly update (build 16.0.12228.xxxxx) Additionally, this change will be rolled into the next semi-annual channel release in the January 2020 update (build 16.0.12527.xxxxx).   
 
 ## Workaround
 
@@ -43,6 +43,6 @@ For more information about how to deploy the OneDrive sync client, see [The OneD
 
 This change affects only local files that are synced by OneDrive for Business (Groove.exe). Users who open the Office file directly from SharePoint or OneDrive on the web will continue to be able to co-author.
 
-### Workaround 3: Stay on a version of Office earlier than September 2019 (not recommended)
+### Workaround 3: Stay on a version of Office earlier than October 2019 (not recommended)
 
-Versions of Office that are earlier than the September 2019 monthly update will continue to have co-authoring capabilities. However, we do not recommend this method. This is because the rest of the Office suite will no longer get the latest features, bugfixes, and improvements.
+Versions of Office that are earlier than the October 2019 monthly update will continue to have co-authoring capabilities. However, we do not recommend this method. This is because the rest of the Office suite will no longer get the latest features, bugfixes, and improvements.

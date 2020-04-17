@@ -18,9 +18,12 @@ appliesto:
 
 # PowerPoint 2010 not responding, hangs or freezes
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## Summary
 
-This article discusses troubleshooting steps that can help resolve issues when you receive an “Microsoft PowerPoint has stopped working” error, or PowerPoint hangs or freezes when you launch PowerPoint, open a file or save a file.
+This article discusses troubleshooting steps that can help resolve issues when you receive an "Microsoft PowerPoint has stopped working" error, or PowerPoint hangs or freezes when you launch PowerPoint, open a file or save a file.
 
 ## Cause
 
@@ -51,7 +54,7 @@ If PowerPoint is not in use by another process, continue to the next step.
  
 ### Investigate possible issues with add-ins
 
-While add-ins can enhance your experience, they can occasionally interfere or conflict with PowerPoint. Try starting PowerPoint without add-ins to see if the problem goes away. Here’s how:
+While add-ins can enhance your experience, they can occasionally interfere or conflict with PowerPoint. Try starting PowerPoint without add-ins to see if the problem goes away. Here's how:
 
 1. Do one of the following:
     
@@ -95,7 +98,7 @@ If your antivirus software is not up-to-date, PowerPoint may not function proper
 
 To check whether your antivirus software is up-to-date
 
-To keep up with new viruses that are created, antivirus software vendors periodically provide updates that you can download from the Internet. Download the latest updates by visiting your antivirus software vendor’s website. 
+To keep up with new viruses that are created, antivirus software vendors periodically provide updates that you can download from the Internet. Download the latest updates by visiting your antivirus software vendor's website. 
 
 For a list of antivirus software vendors, see [Consumer antivirus software providers for Windows](https://www.microsoft.com/windows/antivirus-partners/windows-7.aspx)
 

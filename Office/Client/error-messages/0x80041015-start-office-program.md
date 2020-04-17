@@ -12,7 +12,7 @@ ms.prod: Office 365
 ms.topic: article
 ms.author: v-six
 appliesto:
-- Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
 - Office 365 Home
 - Office 365 Personal
 - Office Home and Student 2013
@@ -21,6 +21,9 @@ appliesto:
 ---
 
 # You receive a "0x80041015" error message when you try to start an Office program
+
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
 
 ## Symptoms
 

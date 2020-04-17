@@ -37,3 +37,7 @@ To work around this behavior, follow these steps:
 3. Add the "Everyone except external users" group to the new group.
 
 After you make this change, the claim is removed from only the default Members and Visitors groups. 
+
+## More information
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).
