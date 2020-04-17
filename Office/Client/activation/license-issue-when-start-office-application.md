@@ -43,6 +43,11 @@ appliesto:
 
 ## Symptoms
 
+> [!NOTE]
+> -  If you use Azure Multi-Factor Authentication, contact your administrator for help.
+> -  For more information about two-factor authorization, see [Sign in to your work or school account using your two-factor verification method](https://docs.microsoft.com/azure/active-directory/user-help/multi-factor-authentication-end-user-signin). 
+> -  To reset your password, see [Reset my Office 365 tenant admin password](https://docs.microsoft.com/microsoft-365/admin/add-users/reset-passwords?view=o365-worldwide#reset-my-office-365-tenant-admin-password).
+
 When you start a Microsoft Office 2016 or Office 2013 application, such as Outlook, Word, Excel, or PowerPoint, you may receive the following error message:
 
 ![Microsoft Office cannot verify the license for this product. You should repair the Office program by using Control Panel.](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4341078_en_1)
