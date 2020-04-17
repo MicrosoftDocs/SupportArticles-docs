@@ -24,7 +24,7 @@ description: Explains why you receive the error "Something went wrong" when conf
 
 ## Symptoms
 
-You see the following error message when you configure a SharePoint Framework (SPFx) control on a page in SharePoint Online:
+You see the following error message when you configure a SharePoint Framework (SPFx) component on a page in SharePoint Online:
 
 ```
 Something went wrong
