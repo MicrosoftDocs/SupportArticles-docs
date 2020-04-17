@@ -1,5 +1,14 @@
 - name: Microsoft Endpoint Configuration Manager
   href: welcome-support-configmgr.md
-
 - name: (Back up to Support hub page)
   href: ../../index.yml
+- name: OS deployment
+  items:
+  - name: PXE boot
+    items:
+    - name: Understand PXE boot
+      href: understand-pxe-boot.md
+    - name: Troubleshoot PXE boot
+      href: troubleshoot-pxe-boot-issues.md
+    - name: Advanced troubleshooting for PXE boot
+      href: advanced-troubleshooting-pxe-boot.md
