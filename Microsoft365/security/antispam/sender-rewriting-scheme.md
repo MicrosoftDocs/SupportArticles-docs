@@ -74,7 +74,7 @@ A message is sent from Bob (ob@fabrikam.com) to John's mailbox in Office 365 (jo
 A message that is relayed from a customer's on-premises server or application through Office 365 from a non-verified domain has the **P1 From** address rewritten before it leaves Office 365. The address is rewritten by using the following pattern:
 
 ```powershell
-bounces+SRS=<Hash>=<Timestamp>=<Original Sender Domain>=<Original Sender Username>@<Default Accepted Domain>
+bounces+SRS=<Hash>=<Timestamp>@<Default Accepted Domain>
 ```
 
 > [!IMPORTANT]
@@ -82,12 +82,14 @@ bounces+SRS=<Hash>=<Timestamp>=<Original Sender Domain>=<Original Sender Usernam
 
 Example
 
-A message is sent from Bob (ob@fabrikam.com) to John's mailbox (john.onprem@contoso.com) on his company's own server that is running Exchange Server. John has set up autoforwarding to his home email address (john.home@example.com).
+A message is sent from Bob (bob@fabrikam.com) to John's mailbox (john.onprem@contoso.com) on his company's own server that is running Exchange Server. John has set up autoforwarding to his home email address (john.home@example.com).
 
 ||Original message|Relayed message received by Office 365|Relayed message sent from Office 365|
 |---|---|---|---|
 |Recipient|john.onprem@contoso.com|john.home@example.com|john.home@example.com|
-|P1 From|ob@fabrikam.com|ob@fabrikam.com|bounces+SRS=44ldt=IX=fabrikam.com=bob@contoso.com|
-|From header|ob@fabrikam.com|ob@fabrikam.com|ob@fabrikam.com|
+|P1 From|bob@fabrikam.com|bob@fabrikam.com|bounces+SRS=44ldt=IX@contoso.com|
+|From header|bob@fabrikam.com|bob@fabrikam.com|bob@fabrikam.com|
+
+
 
 Microsoft provides third-party contact information to help you find additional information about this topic. This contact information may change without notice. Microsoft does not guarantee the accuracy of third-party contact information.
