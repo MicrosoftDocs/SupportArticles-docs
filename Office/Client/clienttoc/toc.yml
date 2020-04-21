@@ -125,6 +125,8 @@
       href: ../access/access-wizard-fails-loading-dll.md
     - name: Error running query with UniqueValues property
       href: ../access/error-running-query.md
+    - name: Error running wizards
+      href: ../access/running-wizard-error-loading-dll.md
     - name: Error using special characters
       href: ../access/error-using-special-characters.md
     - name: Error when you work in Access table linked to a list
@@ -235,6 +237,8 @@
       href: ../access/store-calculate-compare-datetime-data.md
     - name: Support diagnostic
       href: ../access/diagnostic-data-collected.md
+    - name: Switchboard Manager doesn't appear
+      href: ../access/switchboard-manager-option-disappears.md
     - name: Synchronize two combo boxes
       href: ../access/sync-combo-boxes.md
     - name: Troubleshooting corruption in database
