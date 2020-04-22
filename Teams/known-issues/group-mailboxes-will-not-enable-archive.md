@@ -1,5 +1,5 @@
 ---
-title: Unable to flag Group mailboxes for archival purposes
+title: Unable to flag Group mailboxes for archival purposes in Teams
 ms.author: v-todmc
 author: todmccoy
 ms.date: 4/9/2020
@@ -17,14 +17,14 @@ ms.custom:
 - CI 113425
 - CSSTroubleshoot 
 ms.reviewer: scapero
-description: Describes why you may be unable to enable Group mailboxes for archiving or extra storage. 
+description: Describes why you may be unable to enable Group mailboxes for archiving or extra storage in Teams. 
 ---
 
-# Group mailboxes will not enable for archival purposes 
+# Teams group mailboxes will not enable for archival purposes 
 
 ## Summary
 
-Group mailboxes will not enable for archival purposes (or creating extra storage).
+Group mailboxes in Teams will not enable for archival purposes (or for creating extra storage).
 
 ## Cause
 
@@ -32,7 +32,7 @@ In the Office 365 Security and Compliance Center, Global Admins cannot enable ar
 
 ## Resolution
 
-If the Group mailbox is at or near capacity, [contact Microsoft Office Support](https://support.microsoft.com/contactus/) to extend mailbox size.
+If the Group mailbox is at or near capacity, [contact Microsoft Office Support](https://support.microsoft.com/contactus/) to extend your mailbox size.
 
 ## More information
 
