@@ -34,8 +34,8 @@ The error report in the email message may contain one or more of the following e
 - A synchronized object with the same proxy address already exists in your Microsoft Online Services directory.
 - Unable to update this object because the user ID is not found.
 - Unable to update this object in Microsoft Online Services because the following attributes associated with this object have values that may already be associated with another object in your local directory.
-- Unable to update this object because the following attributes associated with this object have values that may already be associated with another object in your local directory services: [UserPrincipalName *john@contoso.com*;]. Correct or remove the duplicate values in your local directory.
-- Unable to update this object because the following attributes associated with this object have values that may already be associated with another object in your local directory services: [ProxyAddresses SMTP:*john@contoso.com*;]. Correct or remove the duplicate values in your local directory.
+- Unable to update this object because the following attributes associated with this object have values that may already be associated with another object in your local directory services: [UserPrincipalName *john\@contoso.com*;]. Correct or remove the duplicate values in your local directory.
+- Unable to update this object because the following attributes associated with this object have values that may already be associated with another object in your local directory services: [ProxyAddresses SMTP:*john\@contoso.com*;]. Correct or remove the duplicate values in your local directory.
 
 Additionally, if you're running Azure Active Directory (Connect) Sync Service, an instance of event ID 6941 that contains one of the following error messages is logged in the Application log in Event Viewer:
 
