@@ -34,7 +34,7 @@ The problem only occurs when using the `Microsoft.Web.Administration` API to mak
 For example, to delete a site called *MyWebsite*, run the following  command:
 
 ```console
-appcmd.exe delete site 'MyWebsite'
+appcmd.exe delete site "MyWebsite"
 ```
 
 ## References

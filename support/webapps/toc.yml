@@ -31,8 +31,6 @@
 
 - name: Site Behavior and Performance
   items:
-  - name: Access Violation when you call Ping.send
-    href: access-violation-call-ping-send-repeatedly.md
   - name: Async WCF service uses wrong impersonation
     href: asynchronous-wcf-service-use-wrong-impersonation.md
   - name: Expression Encoder crashes
