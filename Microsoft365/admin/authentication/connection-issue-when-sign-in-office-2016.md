@@ -190,7 +190,7 @@ To resolve this issue and secure user credentials, we recommend that you enable 
 
 ### Symptom 4
 
-You have a non-persistent Virtual Desktop Infrastructure (VDI) environment that has a federated Identity Provider (IdP) that is configured as Single-Sign On (SSO). You do not expect to be prompted to activate or sign in because SSO is configured. However, you are prompted to sign in for each new session. [Office ULS logs](https://blogs.technet.microsoft.com/odsupport/2018/06/18/how-to-enable-office-365-proplus-uls-logging/) display the following error message:
+You have a non-persistent Virtual Desktop Infrastructure (VDI) environment that has a federated Identity Provider (IdP) that is configured as Single-Sign On (SSO). You do not expect to be prompted to activate or sign in because SSO is configured. However, you are prompted to sign in for each new session. [Office ULS logs](https://docs.microsoft.com/office/troubleshoot/diagnostic-logs/how-to-enable-office-365-proplus-uls-logging) display the following error message:
 
 **{"Action": "BlockedRequest", "HRESULT": "0xc0f10005"**
 
