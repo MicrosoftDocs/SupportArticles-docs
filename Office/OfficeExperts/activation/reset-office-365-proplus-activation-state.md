@@ -38,7 +38,7 @@ To remove the Office 365 license, follow these steps:
    > [!NOTE]
    > The opss.vbs script is in the Program Files\Microsoft Office\Office16 folder. If you installed the 32-bit version of Office on a 64-bit operating system, the script is in the Program Files (x86)\Microsoft Office\Office16 folder. Before you run the "ospp.vbs" command, you may have to change to the correct directory by using one of the following commands, based on your Office  versions:
    > - `cd C:\Program Files (x86)\Microsoft Office\Office16`
-   > - `cd C:\Program Files/Microsoft Office/Office16`
+   > - `cd C:\Program Files\Microsoft Office\Office16`
 
    The "ospp.vbs" command generates a report of the current licenses that are in use. The output resembles the following example:
 
