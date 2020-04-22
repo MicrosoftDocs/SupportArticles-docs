@@ -9,7 +9,7 @@
       href: ./known-issues/eaf-in-emet-ids-chrome-optimizations-as-threats.md
     - name: Error "We couldn't add member" when adding users to Teams 
       href: ./known-issues/couldnt-add-member-error.md
-    - name: Group mailboxes will not enable for archival purposes 
+    - name: Group mailboxes in Teams will not enable for archival purposes 
       href: ./known-issues/group-mailboxes-will-not-enable-archive.md
     - name: Include or exclude Teams from antivirus or DLP applications
       href: ./teams-administration/include-exclude-teams-from-antivirus-dlp.md
