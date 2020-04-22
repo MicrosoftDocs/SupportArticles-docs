@@ -28,11 +28,11 @@ Group mailboxes in Teams will not enable for archival purposes (or for creating 
 
 ## Cause
 
-In the Office 365 Security and Compliance Center, Global Admins cannot enable archival flags on Group mailboxes. They can only do this on user mailboxes. 
+In the Office 365 Security and Compliance Center, global admins can only enable archival flags on user mailboxes, not group mailboxes. 
 
 ## Resolution
 
-If the Group mailbox is at or near capacity, [contact Microsoft Office Support](https://support.microsoft.com/contactus/) to extend your mailbox size.
+If the group mailbox is at or near capacity, [contact Microsoft Office Support](https://support.microsoft.com/contactus/) to extend the mailbox size.
 
 ## More information
 
