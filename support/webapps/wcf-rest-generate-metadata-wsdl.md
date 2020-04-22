@@ -5,7 +5,7 @@ ms.date: 03/20/2020
 ms.prod-support-area-path:
 ms.reviewer: hongmeig, vinelap, pradnyad, tvish
 ---
-# Windows Communication Foundation REST service generates metadata in the WSDL
+# WCF REST service generates metadata in the WSDL
 
 This article provides information about resolving the issue that other non-RESTful services may be affected because Windows Communication Foundation (WCF) doesn't support metadata for RESTful services.
 

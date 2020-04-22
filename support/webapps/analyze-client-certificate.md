@@ -23,17 +23,17 @@ X509 Certificate:
 Version: 3
 Serial Number: 25f51e4e0000115a
 Signature Algorithm:
- Algorithm ObjectId: 1.2.840.113549.1.1.4
- Algorithm Parameters:
+  Algorithm ObjectId: 1.2.840.113549.1.1.4
+  Algorithm Parameters:
 05 00 ..
 Issuer: CN=MS CertSrv Test Group CA, OU=Windows NT, O=Microsoft, L=Redmond, S=WA, C=US
 NotBefore: 10/23/1998 3:33 PM
 NotAfter: 10/23/1999 3:33 PM
-Subject: CN=Name (Signing), OU=IASG, O=Microsoft, L=Redmond, 
- S=WA, C=US, E=name@domain.com
+Subject: CN=Name (Signing), OU=IASG, O=Microsoft, L=Redmond,
+         S=WA, C=US, E=name@domain.com
 Public Key Algorithm:
- Algorithm ObjectId: 1.2.840.113549.1.1.1
- Algorithm Parameters:
+  Algorithm ObjectId: 1.2.840.113549.1.1.1
+  Algorithm Parameters:
 05 00 ..
 PublicKey: UnusedBits=0
 30 48 02 41 00 d4 c1 0e 6f 0b 86 54 b8 9b 08 de 0H.A....o..T....
@@ -42,42 +42,42 @@ PublicKey: UnusedBits=0
 0d ce c4 7a 1a f3 10 28 ca 15 46 4e 48 52 8c 89 ...z...(..FNHR..
 87 f8 5d 0d 1b 02 03 01 00 01 ..].......
 Certificate Extensions: 6
- 2.5.29.15: Flags = 0(), Length = 4
- Key Usage
- Digital Signature, Key Encipherment, Data Encipherment, Key Agreement(B8)
+  2.5.29.15: Flags = 0(), Length = 4
+     Key Usage
+     Digital Signature, Key Encipherment, Data Encipherment, Key Agreement(B8)
  2.5.29.37: Flags = 0(), Length = c
- Enhanced Key Usage
- Client Authentication(1.3.6.1.5.5.7.3.2)
+     Enhanced Key Usage
+         Client Authentication(1.3.6.1.5.5.7.3.2)
 
 2.5.29.35: Flags = 0(), Length = a9
  Authority Key Identifier
- KeyID=2A58 2026 5B9F CFB1 E328 F42A EA4D F8CA 19CB F3C4
- Certificate Issuer: Directory Address:
- CN=MS CertSrv Test Group CA
- OU=Windows NT
- O=Microsoft
- L=Redmond
- S=WA
- C=US
- Certificate SerialNumber=1113 6100 AA00 2B86 11D2 5EF8 DDA0 99B4
+     KeyID=2A58 2026 5B9F CFB1 E328 F42A EA4D F8CA 19CB F3C4
+     Certificate Issuer: Directory Address:
+             CN=MS CertSrv Test Group CA
+             OU=Windows NT
+             O=Microsoft
+             L=Redmond
+             S=WA
+             C=US
+     Certificate SerialNumber=1113 6100 AA00 2B86 11D2 5EF8 DDA0 99B4
 
 2.5.29.31: Flags = 0(), Length = 91
- CRL Distribution Points
- [1]CRL Distribution Point Distribution Point Name:
- Full Name:
- URL=http://CERTSRV/CertSrv/CertEnroll/MS CertSrv Test Group CA.crl
- [2]CRL Distribution Point Distribution Point Name: 
- Full Name: 
- URL=file://\\CERTSRV\CertSrv\CertEnroll\MS CertSrv Test Group CA.crl 
- 2.5.29.19: Flags = 0(), Length = 2
- Basic Constraints
- Subject Type=End Entity Path Length Constraint=None 
- 1.3.6.1.5.5.7.1.1: Flags = 0(), Length = 56
- Authority Information Access
- [1]Authority Info Access 
- AccessMethod=Certification Authority Issuer(1.3.6.1.5.5.7.48.2) 
- Alternative Name:
- URL=http://CERTSRV/CertSrv/CertEnroll/CERTSRV_MS CertSrv Test Group CA.crt 
+    CRL Distribution Points
+    [1]CRL Distribution Point Distribution Point Name:
+    Full Name:
+    URL=http://CERTSRV/CertSrv/CertEnroll/MS CertSrv Test Group CA.crl
+    [2]CRL Distribution Point Distribution Point Name:
+    Full Name:
+    URL=file://\\CERTSRV\CertSrv\CertEnroll\MS CertSrv Test Group CA.crl
+2.5.29.19: Flags = 0(), Length = 2
+    Basic Constraints
+        Subject Type=End Entity Path Length Constraint=None
+1.3.6.1.5.5.7.1.1: Flags = 0(), Length = 56
+    Authority Information Access
+        [1]Authority Info Access
+    AccessMethod=Certification Authority Issuer(1.3.6.1.5.5.7.48.2)
+    Alternative Name:
+    URL=http://CERTSRV/CertSrv/CertEnroll/CERTSRV_MS CertSrv Test Group CA.crt
 Non-root Certificate
 ```
 

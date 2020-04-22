@@ -110,7 +110,7 @@ Now that the server certificate is installed, you can enforce SSL secure channel
 
 1. From the Computer Management console, right-click the Web site on which you want to enforce SSL and click **Properties**.
 2. Click the **Web Site** tab. In the Web Site **Identification** section, verify that the SSL Port field is populated with the numeric value 443.
-3. Click **Advanced**. You should see two fields. The IP address and port of the Web site should already be listed in the **Multiple identities** for this web site field. Under the **Multiple SSL Identities** for this web site field, click **Add** if port 443 isn't already listed. Select the server's IP address, and type the numeric value 443 in the SSL Port field. Click **OK**.
+3. Click **Advanced**. You should see two fields. The IP address and port of the Web site should already be listed in the **Multiple identities** for this web site field. Under the **Multiple SSL Identities** for this web site field, click **Add** if port 443 isn't already listed. Select the server's IP address, and type the numeric value *443* in the SSL Port field. Click **OK**.
 
 Now that port 443 is enabled, you can enforce SSL connections. To do this, follow these steps:
 

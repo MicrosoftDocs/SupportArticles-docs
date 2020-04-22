@@ -26,7 +26,7 @@ AppFabric Cache for Windows Server data collector gathers the following informat
 |---|---|
 |Application log:|ApplicationLog.evtx|
 |System log:|SystemLog.evtx|
-|ApplicationLog.evtx|CacheAdminLog.evtx|
+|AppFabric Cache Admin log:|CacheAdminLog.evtx|
 |AppFabric Cache Operational log:|CacheOperationalLog.evtx|
 |AppFabric Cache Debug log:|CacheDebugLog.evtx|
 |||
