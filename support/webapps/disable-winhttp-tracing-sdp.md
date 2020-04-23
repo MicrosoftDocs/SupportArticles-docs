@@ -18,11 +18,9 @@ The SDP for WinHTTP is used to configure WinHTTP tracing on the machine that is 
 
 While the SDP package will usually take care of enabling the WinHTTP tracing and disabling the tracing, the trace will need to be manually stopped/disabled if the user decides to cancel the SDP package before the SDP package gets a chance to perform the necessary cleanup. This KB article outlines the steps required to disable WinHTTP tracing depending on the operating system the tracing package was run on.
 
-## Disable WinHTTP tracing manually
-
 To disable WinHTTP tracing manually, follow the steps below based on the operating system you were collecting the trace.
 
-Windows Server 2008  
+## Disable WinHTTP tracing manually on Windows Server 2008
 
 1. Open an elevated command prompt (Run as administrator) and then type the command:
 
@@ -38,7 +36,7 @@ Windows Server 2008
 
 3. Restart your application that was experiencing the issue to ensure that the tracing stops for your application. You can delete the trace from the location where it was being collected. This trace location is specified when you use the SDP package. By default the SDP package creates the WinHTTP trace in the `C:\WinHttpTraces` folder.
 
-Windows 7 and Windows Server 2008 R2
+## Disable WinHTTP tracing manually on Windows 7 and Windows Server 2008 R2
 
 1. Open an elevated command prompt (Run as administrator) and then type the command:
 

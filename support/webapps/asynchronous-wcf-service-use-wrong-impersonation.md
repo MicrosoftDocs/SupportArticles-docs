@@ -43,7 +43,8 @@ To resolve this issue, follow these steps:
     ```xml
     <configuration>
         <runtime>
-            <legacyImpersonationPolicy enabled="false"/> <alwaysFlowImpersonationPolicy enabled="true"/>
+            <legacyImpersonationPolicy enabled="false"/> 
+            <alwaysFlowImpersonationPolicy enabled="true"/>
         </runtime>
     </configuration>
     ```
