@@ -25,8 +25,6 @@
     items:
     - name: Modern authentication failure in Microsoft Teams
       href: ./known-issues/modern-authentication-failure-teams.md
-    - name: Sign-in error after password change in Microsoft Teams
-      href: ./known-issues/sign-in-error-after-password-change.md
     - name: Teams stops working when joining from Edge or Internet Explorer 
       href: ./known-issues/teams-stops-working-when-joining-from-edge.md
     - name: Teams will always log into the domain-joined PC account
@@ -35,8 +33,6 @@
     items:
     - name: A channel cannot be recreated after deletion
       href: ./known-issues/channel-cannot-be-recreated-after-deletion.md
-    - name: Removed user appears as "Unknown user"
-      href: ./known-issues/removed-user-appears-as-unknown.md
     - name: Renaming a Teams channel does not rename the corresponding folder in SharePoint Online
       href: ./known-issues/renaming-channel-does-not-rename-folder-sharepoint.md
   - name: Conferencing
@@ -113,6 +109,8 @@
     items:
     - name: Can't start Teams for Surface Hub from Microsoft Store
       href: ./known-issues/teams-for-surface-hub-wont-start-from-store.md
+    - name: Sign-in error after password change
+      href: ./known-issues/sign-in-error-after-password-change.md
     - name: Stuck in login loop in Edge or Internet Explorer
       href: ./teams-sign-in/sign-in-loop.md
     - name: Teams does not automatically update
@@ -125,6 +123,8 @@
       href: ./known-issues/unable-to-rename-legacy-onenote-tabs.md
     - name: File download failure in Teams
       href: ./known-issues/file-download-failure-teams.md
+    - name: Removed user appears as "Unknown user"
+      href: ./known-issues/removed-user-appears-as-unknown.md
     - name: Tabs not working after enabling Conditional Access
       href: ./known-issues/tabs-dont-work-after-enabling-conditional-access.md
     - name: Task buckets do not appear in Teams Planner online 
