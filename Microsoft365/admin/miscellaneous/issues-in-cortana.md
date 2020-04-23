@@ -27,6 +27,9 @@ This article contains information to help you troubleshoot issues that you may e
 > [!NOTE]
 > This document refers primarily to our consumer experiences, which are currently delivered in Windows 10 (version 1909 and earlier) and the Cortana app on iOS and Android.
 
+> [!NOTE]
+> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+
 ## More information
 
 **Issue: "Cortana is disabled by company policy" message when you try to enable Cortana from a device that's joined to Azure Active Directory (Azure AD)**
