@@ -4,43 +4,43 @@ description: Describes how to some other useful logs and queries for advanced tr
 ms.date: 03/30/2020
 ms.prod-support-area-path: 
 ---
-# Advanced troubleshooting tips for Content Distribution
+# Advanced troubleshooting tips for content distribution
 
-This article describes some advanced tips that may be helpful for you troubleshooting various content distribution related issues.
+This article provides some advanced troubleshooting tips to help you identify and solve content distribution issues.
 
-_Original product version:_ &nbsp; Configuration Manager current branch, Microsoft System Center 2012 Configuration Manager (ConfigMgr 2012), Microsoft System Center 2012 R2 Configuration Manager (ConfigMgr 2012 R2)  
+_Original product version:_ &nbsp; Configuration Manager current branch, Microsoft System Center 2012 Configuration Manager, Microsoft System Center 2012 R2 Configuration Manager  
 _Original KB number:_ &nbsp; 4482728
 
 ## Enable verbose logging
 
 - **PkgXferMgr.log**
 
-  For Package Transfer Manager, verbose logging provides more information in the log about content copy process, file hashes, and job scheduling. Verbose logging can be enabled by setting the following registry key:
+  For Package Transfer Manager, verbose logging provides more information in the log about content copy process, file hashes, and job scheduling. Verbose logging can be enabled by setting the following registry value to **0**:
   
-  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Tracing\SMS_PACKAGE_TRANSFER_MANAGER\LoggingLevel` = **0**
+  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Tracing\SMS_PACKAGE_TRANSFER_MANAGER\LoggingLevel`
 
-  For Package Transfer Manager, Debug logging provides more information about the content copy process. Debug logging can be enabled by setting the following registry key:
+  For Package Transfer Manager, debug logging provides more information about the content copy process. Debug logging can be enabled by setting the following registry value to **1**:
   
-  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Tracing\SMS_PACKAGE_TRANSFER_MANAGER\DebugLogging` = **1**
+  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Tracing\SMS_PACKAGE_TRANSFER_MANAGER\DebugLogging`
 
   > [!NOTE]
   > These registry change(s) do not require a restart of `SMS_Executive` service.
 
-- Client logs (includes Pull DP and Management Point logs)
+- Client logs (includes pull DP and management point logs)
 
-  Verbose logging is enabled by setting the following key:
+  Verbose logging can be enabled by setting the following registry value to **0**:
   
-  `HKEY_LOCAL_MACHINE\Software\Microsoft\CCM\Logging\@GLOBAL\LogLevel` = **0**
+  `HKEY_LOCAL_MACHINE\Software\Microsoft\CCM\Logging\@GLOBAL\LogLevel`
   
-  Debug logging for the client is setting the following key:
+  Debug logging can be enabled by setting the following registry value as REG_SZ with value **True**:
   
-  `HKEY_LOCAL_MACHINE\Software\Microsoft\CCM\Logging\DebugLogging\Enabled` as REG_SZ with value **True**.
+  `HKEY_LOCAL_MACHINE\Software\Microsoft\CCM\Logging\DebugLogging\Enabled`
+
+  The CCM log size can be increased to 5M by setting the following registry value to **5242880** (decimal)
   
-  The CCM log size can be increased to 5M by setting:
+  `HKEY_LOCAL_MACHINE\Software\Microsoft\CCM\Logging\@GLOBAL\LogMaxSize`
   
-  `HKEY_LOCAL_MACHINE\Software\Microsoft\CCM\Logging\@GLOBAL\LogMaxSize` = **5242880** (decimal)
-  
-  Additionally, you can edit the DWORD Value for following key to increase the number of History log files to be retained:
+  Additionally, you can edit the DWORD value for the following registry value to increase the number of history log files to be retained:
 
   `HKEY_LOCAL_MACHINE\Software\Microsoft\CCM\Logging\@GLOBAL\LogMaxHistory`
   
@@ -49,80 +49,80 @@ _Original KB number:_ &nbsp; 4482728
 
 - **StateSys.log**
 
-  Verbose logging for StateSys.log can be enabled by setting the following registry key:
+  Verbose logging for StateSys.log can be enabled by setting the following registry value to **1**:
   
-  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\COMPONENTS\SMS_STATE_SYSTEM\Verbose logging` = **1**
+  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\COMPONENTS\SMS_STATE_SYSTEM\Verbose logging`
   
   > [!NOTE]
   > This registry key change does not require a restart of `SMS_Executive` service.
 
-- (Global - Site Server only) SQL queries
+- (Global - site server only) SQL queries
 
-  To get information about SQL queries executed by `ConfigMgr` components, SQL Tracing can be enabled by setting the following registry key:
+  To get information about SQL queries executed by `ConfigMgr` components, SQL tracing can be enabled by setting the following registry value to **1**:
   
-  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Tracing\SqlEnabled` = **1**
+  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Tracing\SqlEnabled`
   
-  This registry key adds SQL Trace logging for all Site Server logs. This should only be done temporarily while troubleshooting, and should be disabled after getting the relevant logs.
+  This registry value adds SQL trace logging for all site server logs. This should only be done temporarily while troubleshooting, and should be disabled after getting the relevant logs.
 
   > [!NOTE]
   > This registry change does not require a restart of `SMS_Executive` service.
 
-- (Global - Site Server only) Enable log archiving
+- (Global - site server only) Enable log archiving
 
-  There are occasions when the issue does not reproduce on demand and while waiting for the issue to reproduce, there's a risk of logs rolling over. In these situations, enabling log archiving can be useful as it allows you to have more historical logs. This is only relevant for Site Server Logs.
+  There are occasions when the issue does not reproduce on demand and while waiting for the issue to reproduce, there's a risk of logs rolling over. In these situations, enabling log archiving can be useful as it allows you to have more historical logs. This is only relevant for site server logs.
 
-  Log Archiving can be enabled by setting the following registry keys:
+  Log archiving can be enabled by setting the following registry values:
   
   `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Tracing\ArchiveEnabled` = **1**
 
   `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Tracing\ArchivePath` = \<ArchiveLocation>
   
-  After enabling log archiving, ConfigMgr will archive the rolled over logs to the ArchiveLocation, and will keep 10 copies of each log.
+  After enabling log archiving, ConfigMgr will archive the rolled over logs to the \<ArchiveLocation>, and will keep 10 copies of each log.
 
-  To increase the number of copies maintained for a specific component when Log Archiving is enabled, set the following registry key:
+  To increase the number of copies maintained for a specific component when log archiving is enabled, set the following registry value to **20**:
 
-  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Tracing\COMPONENT_NAME\LogMaxHistory` = **20**
+  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Tracing\COMPONENT_NAME\LogMaxHistory`
   
   > [!NOTE]
   > These registry change(s) require a restart of `SMS_Executive` service.
 
-- (Per Log - Site Server only) Increase log file size
+- (Per log - site server only) Increase log file size
 
-  To increase log file size for an individual log to 50 MB, you can do so by setting the component-specific registry key:
+  To increase log file size for an individual log to 50 MB, set the component-specific registry value to **52428800** (decimal):
   
-  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Tracing\COMPONENT_NAME\MaxFileSize` = **52428800**
+  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Tracing\COMPONENT_NAME\MaxFileSize`
   
   > [!NOTE]
   > This registry change requires a restart of `SMS_Executive` service.  
 
 ## Resend compressed copy of a package to a site
 
-When a package is first distributed to a Site, DistMgr sends a compressed copy of the package to the site. After the package is extracted in the Content Library on the Site, the local copy of the content is used to send the package to DPs as long as the same package version is being distributed to the DPs in the site.
+When a package is first distributed to a site, DistMgr sends a compressed copy of the package to the site. After the package is extracted in the content library on the site, the local copy of the content is used to send the package to DPs as long as the same package version is being distributed to the DPs in the site.
 
 There are a few occasions where it's necessary to force a site to resend the compressed copy of a package to a specified site. Most notably, this is required when:
 
-1. Content is missing from Content Library (`PkgLib`, `DataLib`, or `FileLib`) on a Primary/Secondary Site Server itself.
-2. **DistMgr.log** consistently complains about the content not having arrived from the parent site (For example: *The contents for the package CS100026 hasn't arrived from site CS1 yet, will retry later*).
+1. Content is missing from content library (`PkgLib`, `DataLib`, or `FileLib`) on a primary or secondary site server itself.
+2. **DistMgr.log** consistently complains about the content not having arrived from the parent site (for example: '*The contents for the package CS100026 hasn't arrived from site CS1 yet, will retry later*').
 
-In most cases, the message '*The contents for the package CS100026 hasn't arrived from site CS1 yet, will retry later*' is logged temporarily while the package content is in transit. When you see this message, review the Sender/Despooler logs to ensure that there are no issues with site communications. Review [Distribute a package to DP across sites](understand-package-actions.md#distribute-a-package-to-dp-across-sites) section to understand the log flow.
+In most cases, the message '*The contents for the package CS100026 hasn't arrived from site CS1 yet, will retry later*' is logged temporarily while the package content is in transit. When you see this message, review the Sender/Despooler logs to ensure that there are no issues with site communications. Review [Distribute a package to DP across sites](understand-package-actions.md#distribute-a-package-to-dp-across-sites) to understand the log flow.
 
-### How does DistMgr know if the current Site has a copy of the package installed
+### How does DistMgr know if the current site has a copy of the package installed
 
-DistMgr checks if there is a Type 1 row in `PkgStatus` for the Package for the Package Version in question. If there is a Type 1 row for the site with **Status** = **Installed**, the local copy of the package content is used to send to the DPs. If there is no Type 1 row in `PkgStatus`, it means that the package content is not yet installed on the Site Server.
+DistMgr checks if there is a Type 1 row in `PkgStatus` for the package for the package version in question. If there is a Type 1 row for the site with **Status** = **Installed**, the local copy of the package content is used to send to the DPs. If there is no Type 1 row in `PkgStatus`, it means that the package content is not yet installed on the site server.
 
-### Does redistribute package to DP colocated on the Site Server cause the compressed copy of the package to get resent
+### Does redistribute package to DP colocated on the site server cause the compressed copy of the package to get resent
 
-No. Redistributing the package relies on the site already having the package content in the Package Source Directory. If the package was sent to the site at some point and marked as **Installed**, then a redistribute action on the DP colocated on the Site Server doesn't do anything as DistMgr thinks that the content is already installed and the following line will be logged in **DistMgr.log**:
+No. Redistributing the package relies on the site already having the package content in the package source directory. If the package was sent to the site at some point and marked as **Installed**, then a redistribute action on the DP colocated on the site server doesn't do anything as DistMgr thinks that the content is already installed and the following line will be logged in **DistMgr.log**:
 
 > The distribution point is on the siteserver and the package is a content type package. There is nothing to be copied over.
 
-### What if the content is missing in the Content Library on the Package Source Site
+### What if the content is missing in the content library on the package source site
 
-If the content is missing in the Content Library on the Package Source Site, then resetting the `SourceVersion` will not help. The only way to repopulate the missing content is to update the package. Updating the package causes the package source site to take a package snapshot from the package source location and write the content to the Content Library.
+If the content is missing in the content library on the package source site, then resetting the `SourceVersion` will not help. The only way to repopulate the missing content is to update the package. Updating the package causes the package source site to take a package snapshot from the package source location and write the content to the content library.
 
-### How do I force the Package Source Site to resend the compressed copy of the Package to a specific Site
+### How do I force the package source site to resend the compressed copy of the package to a specific site
 
-After confirming that the Package Source Site has the required content, it's possible to force the Package Source Site to resend the Package PCK file to a specific site by setting `SourceVersion` to 0 for the Type 1 row in `PkgStatus` for the affected site. This row can be identified by running the following SQL query on the Package Source Site's database after replacing the *PACKAGEID* and *SITECODE* of the desired package and Site:
+After confirming that the package source site has the required content, it's possible to force the package source site to resend the package PCK file to a specific site by setting `SourceVersion` to 0 for the Type 1 row in `PkgStatus` for the affected site. This row can be identified by running the following SQL query on the package source site's database after replacing the *PACKAGEID* and *SITECODE* of the desired package and site:
 
 ```sql
 SELECT * FROM PkgStatus WHERE Type = 1 AND ID = 'PACKAGEID' AND SiteCode = 'SITECODE'
@@ -134,12 +134,12 @@ After confirming that this query returns a unique and correct row, running the b
 UPDATE PkgStatus SET SourceVersion = 0 WHERE Type = 1 AND ID = 'PACKAGEID' AND SiteCode = 'SITECODE'
 ```
 
-After resetting the `SourceVersion` to **0** for the Type 1 row, redistributing the package to any DP in the affected Site will force the Package Source site to resend the compressed copy of the package to the affected site.
+After resetting the `SourceVersion` to **0** for the Type 1 row, redistributing the package to any DP in the affected site will force the package source site to resend the compressed copy of the package to the affected site.
 
 > [!NOTE]
-> It is very important to run the above query on the site that owns the package, i.e., the Package Source Site.
+> It is very important to run the above query on the site that owns the package, i.e., the package source site.
 
-## Relevant tables for Content Distribution
+## Relevant tables for content distribution
 
 - `SMSPackages` - Contains a list of all packages
 
@@ -151,7 +151,7 @@ After resetting the `SourceVersion` to **0** for the Type 1 row, redistributing 
   |PackageType|0 - Regular Package<br/>3 - Driver Package<br/>4 - Task Sequence<br/>5 - Software Updates Package<br/>6 - Device Settings Package<br/>7 - Virtual App Package<br/>8 - Content Package (Application)<br/>257 - Operating System Image<br/>258 - Boot Image<br/>259 - OS Installation Package<br/>260 - VHD Package|
   |||
 
-- `PkgServers` - Contains a list of all the Packages along with the DPs they are currently targeted to.
+- `PkgServers` - Contains a list of all the packages along with the DPs they are currently targeted to.
 
   Interesting columns:
 
@@ -160,17 +160,17 @@ After resetting the `SourceVersion` to **0** for the Type 1 row, redistributing 
   |Action|0 - NONE<br/>1 - UPDATE<br/>2 - ADD<br/>3 - DELETE<br/>4 - VALIDATE<br/>5 - CANCEL|
   |||
 
-- `PkgStatus` - Contains a list of the current package status for each Package for each DP.
+- `PkgStatus` - Contains a list of the current package status for each package for each DP.
 
   Interesting columns:
 
   |Column|Values|
   |---|---|
-  |Type|1 - SITE (MASTER)<br/>2 - DP (COPY)<br/><br/>Type 1 rows are created for each Site the package is targeted to. PkgServer for this row is the Site Server FQDN.<br/> <br/>Type 2 rows are created for each DP the package is targeted to. PkgServer is the DP NALPATH.|
+  |Type|1 - SITE (MASTER)<br/>2 - DP (COPY)<br/><br/>Type 1 rows are created for each site the package is targeted to. PkgServer for this row is the site server FQDN.<br/> <br/>Type 2 rows are created for each DP the package is targeted to. PkgServer is the DP NALPATH.|
   |Status|0 - NONE<br/>1 - SENT<br/>2 - RECEIVED<br/>3 - INSTALLED<br/>4 - RETRY<br/>5 - FAILED<br/>6 - REMOVED<br/>7 - PENDING REMOVE (Not Used)<br/>8 - REMOVE FAILED<br/>9 - RETRY REMOVE|
     |||
 
-- `DistributionJobs` - Contains a list of Package Transfer Manager Jobs along with their current State.
+- `DistributionJobs` - Contains a list of Package Transfer Manager Jobs along with their current state.
 
   Interesting columns:
 
@@ -180,7 +180,7 @@ After resetting the `SourceVersion` to **0** for the Type 1 row, redistributing 
   |State|0 - PENDING<br/>1 - READY<br/>2 - STARTED<br/>3 - INPROGRESS<br/>4 - PENDING RESTART<br/>5 - COMPLETE<br/>6 - FAILED<br/>7 - CANCELLED<br/>8 - SUSPENDED|
   |||
 
-- `DistributionPoints` - Contains a list of all the Distribution Points.
+- `DistributionPoints` - Contains a list of all the distribution points.
 
   Interesting columns:
 
@@ -189,7 +189,7 @@ After resetting the `SourceVersion` to **0** for the Type 1 row, redistributing 
   |Action|0  -  NONE<br/>1  -  UPDATE<br/>2  -  ADD<br/>3  -  DELETE<br/>4  -  VALIDATE<br/>5  -  CANCEL|
   |||
 
-- `PullDPResponse` - Temporarily contains the package status response sent from the Pull DPs. DistMgr processes the response and updates `PkgStatus`.
+- `PullDPResponse` - Temporarily contains the package status response sent from the pull DPs. DistMgr processes the response and updates `PkgStatus`.
 
   Interesting columns:
 
@@ -207,7 +207,7 @@ After resetting the `SourceVersion` to **0** for the Type 1 row, redistributing 
   |Type|0 - UNKNOWN<br/>1 - PACKAGE<br/>2 - PROGRAM<br/>4 - PACKAGE SERVER (DP)<br/>8 - PACKAGE ACCESS ACCOUNT<br/>15 - ALL|
   |||
 
-- **Pull DP State Messages** - List of State Message IDs raised by Pull DP
+- **Pull DP state messages** - List of state message IDs raised by pull DP
 
   Interesting columns:
 
@@ -258,11 +258,11 @@ After resetting the `SourceVersion` to **0** for the Type 1 row, redistributing 
 
 ## Useful SQL queries
 
-This section is just for reference purposes, but below are some SQL queries that may prove to be helpful when troubleshooting various content distribution related issues.  
+Here are some SQL queries that may be helpful when troubleshooting various content distribution related issues.  
 
 ### Package/DP status queries
 
-- All Failed packages/DPs
+- All **Failed** packages/DPs
 
   ```sql
   SELECT distinct DPSD.DPName, DPSD.PackageID, SP.Name, DPSD.MessageState, DPSD.LastStatusTime, DPSD.SiteCode
@@ -271,7 +271,7 @@ This section is just for reference purposes, but below are some SQL queries that
   WHERE MessageState = 4
   ```
 
-- All In Progress packages/DPs
+- All **In Progress** packages/DPs
 
   ```sql
   SELECT distinct DPSD.DPName, DPSD.PackageID, SP.Name, DPSD.MessageState, DPSD.LastStatusTime, DPSD.SiteCode
@@ -280,7 +280,7 @@ This section is just for reference purposes, but below are some SQL queries that
   WHERE MessageState = 2
   ```
 
-- All Success packages/DPs
+- All **Success** packages/DPs
 
   ```sql
   SELECT distinct DPSD.DPName, DPSD.PackageID, SP.Name, DPSD.MessageState, DPSD.LastStatusTime, DPSD.SiteCode
@@ -289,7 +289,7 @@ This section is just for reference purposes, but below are some SQL queries that
   WHERE MessageState = 1
   ```
 
-- All package/DPs in InProgress state for more than three days
+- All package/DPs in **In Progress** state for more than three days
 
   ```sql
   SELECT distinct DPSD.DPName, DPSD.PackageID, SP.Name, DPSD.MessageState, DPSD.LastStatusTime, DPSD.SiteCode
@@ -299,7 +299,7 @@ This section is just for reference purposes, but below are some SQL queries that
   AND MessageState = 2
   ```
 
-- All package/DPs in Failed state for more than three days
+- All package/DPs in **Failed** state for more than three days
 
   ```sql
   SELECT distinct DPSD.DPName, DPSD.PackageID, SP.Name, DPSD.MessageState, DPSD.LastStatusTime, DPSD.SiteCode
@@ -319,7 +319,7 @@ This section is just for reference purposes, but below are some SQL queries that
   GROUP BY MessageState
   ```
 
-- Counts of package states Per DP
+- Counts of package states per DP
 
   ```sql
   SELECT DPName,
@@ -351,7 +351,7 @@ This section is just for reference purposes, but below are some SQL queries that
   ORDER BY State
   ```
 
-- Count of DP states per Package
+- Count of DP states per package
 
   ```sql
   SELECT  
@@ -451,7 +451,3 @@ JOIN CI_ContentPackages CP ON CP.Content_ID = CIC.Content_ID
 JOIN v_Package P ON CP.PkgID = P.PackageID
 WHERE CI.CI_UniqueID = '<UniqueID>'
 ```
-
-## More Information
-
-For more information about content distribution, see [Content Distribution in Configuration Manager](content-distribution-introduction.md).

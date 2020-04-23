@@ -4,11 +4,11 @@ description: Describes how to troubleshoot common content distribution problems.
 ms.date: 03/30/2020
 ms.prod-support-area-path: 
 ---
-# Troubleshooting Content Distribution
+# Troubleshoot content distribution
 
 This article discusses how to troubleshoot common content distribution issues.
 
-_Original product version:_ &nbsp; Configuration Manager current branch, Microsoft System Center 2012 Configuration Manager (ConfigMgr 2012), Microsoft System Center 2012 R2 Configuration Manager (ConfigMgr 2012 R2)  
+_Original product version:_ &nbsp; Configuration Manager current branch, Microsoft System Center 2012 Configuration Manager, Microsoft System Center 2012 R2 Configuration Manager  
 _Original KB number:_ &nbsp; 4482728
 
 ## Sample problem
@@ -17,24 +17,24 @@ For this example, let's say that you distributed a package to a distribution poi
 
 1. First, review **DistMgr.log** on the site (primary/secondary) where the DP resides.
 
-   1. Look for *~Processing package* entries in the log and identify the package processing thread for the package ID in question. Filter DistMgr.log for the thread ID you identified. Review step 4 in [Distribute a package to Standard DP](understand-package-actions.md#distribute-a-package-to-standard-dp) to see log excerpts.
+   1. Look for *~Processing package* entries in the log and identify the package processing thread for the package ID in question. Filter DistMgr.log for the thread ID you identified. Review step 4 in [Distribute a package to standard DP](understand-package-actions.md#distribute-a-package-to-standard-dp) to see log excerpts.
    2. Review the filtered log and check if a DP thread was created for the DP in question. Filter **DistMgr.log** for the thread ID to make this easier.
    3. Review the filtered log and check whether a PkgXferMgr job was created.
 
 2. Review **PkgXferMgr.log** on the site (primary/secondary) where the DP resides.
 
-   1. Look for *Found send request with ID* entries in the log and identify the sending thread for the affected DP/package combination. Filter **PkgXferMgr.log** for the thread ID identified. Review step 6 in [Distribute a package to Standard DP](understand-package-actions.md#distribute-a-package-to-standard-dp) to see log excerpts.
+   1. Look for *Found send request with ID* entries in the log and identify the sending thread for the affected DP/package combination. Filter **PkgXferMgr.log** for the thread ID identified. Review step 6 in [Distribute a package to standard DP](understand-package-actions.md#distribute-a-package-to-standard-dp) to see log excerpts.
    2. Review the filtered log to see if the content was successfully transferred to the DP or if there was an error.
 
-3. For Standard DPs, PkgXferMgr copies the content file(s) to the DP, it instructs the DP WMI Provider to add the file to the Content Library by calling WMI methods. Review **SMSDPProv.log** on the DP to ensure that content was added to the Content Library. Review step 7 in [Distribute a package to Standard DP](understand-package-actions.md#distribute-a-package-to-standard-dp) to see log excerpts.
+3. For Standard DPs, PkgXferMgr copies the content file(s) to the DP, it instructs the DP WMI Provider to add the file to the content library by calling WMI methods. Review **SMSDPProv.log** on the DP to ensure that content was added to the content library. Review step 7 in [Distribute a package to standard DP](understand-package-actions.md#distribute-a-package-to-standard-dp) to see log excerpts.
 
-   For Pull DPs, PkgXferMgr notifies Pull DP to initiate the content download. Review steps 8-16 in [Distribute a package to Pull DP](understand-package-actions.md#distribute-a-package-to-standard-dp) to understand the flow and review **PullDP.log** and **DataTransferService.log** to ensure content was downloaded successfully.
+   For pull DPs, PkgXferMgr notifies pull DP to initiate the content download. Review steps 8-16 in [Distribute a package to pull DP](understand-package-actions.md#distribute-a-package-to-standard-dp) to understand the flow and review **PullDP.log** and **DataTransferService.log** to ensure content was downloaded successfully.
 
-4. For Standard DPs, PkgXferMgr sends a status message to DistMgr. Review **DistMgr.log** to verify if the status message was processed successfully. Review step 8 in [Distribute a package to Standard DP](understand-package-actions.md#distribute-a-package-to-standard-dp) to see log excerpts.
+4. For standard DPs, PkgXferMgr sends a status message to DistMgr. Review **DistMgr.log** to verify if the status message was processed successfully. Review step 8 in [Distribute a package to standard DP](understand-package-actions.md#distribute-a-package-to-standard-dp) to see log excerpts.
 
-   For Pull DPs, Pull DP sends a State Message to indicate success. Review steps 16-22 in [Distribute a package to Pull DP](understand-package-actions.md#distribute-a-package-to-pull-dp) to understand the flow and review the relevant logs to ensure State Message is processed successfully.
+   For pull DPs, pull DP sends a state message to indicate success. Review steps 16-22 in [Distribute a package to pull DP](understand-package-actions.md#distribute-a-package-to-pull-dp) to understand the flow and review the relevant logs to ensure state message is processed successfully.
 
-5. If multiple sites are involved, ensure that Database Replication is working and the database links between relevant sites are active.
+5. If multiple sites are involved, ensure that database replication is working and the database links between relevant sites are active.
 
 ## Common DistMgr issues
 
@@ -79,7 +79,7 @@ For this example, let's say that you distributed a package to a distribution poi
 
   After PkgXferMgr copies the content file to the DP, it executes WMI methods to instruct the remote DP to add the file to the content library. If the remote DP fails to add the file to the content library, you will see a generic WMI error (**0x80041001 = WBEM_E_FAILED**) in **PkgXferMgr.log**.
 
-  When this happens, it is necessary to review **SMSDPProv.log** on the DP to identify the reason that the DP failed to add the file to the content library. If you see 'File/Path not found' errors in **SMSDPProv.log**, you would need to capture a [Process Monitor](/sysinternals/downloads/procmon) trace to determine the reason for failure.
+  When this happens, it is necessary to review **SMSDPProv.log** on the DP to identify the reason that the DP failed to add the file to the content library. If you see **File/Path not found** errors in **SMSDPProv.log**, you would need to capture a [Process Monitor](/sysinternals/downloads/procmon) trace to determine the reason for failure.
 
 - **PkgXferMgr.log** shows that only one connection is allowed to the DP:
 
@@ -89,7 +89,7 @@ For this example, let's say that you distributed a package to a distribution poi
 
   > SMS_PACKAGE_TRANSFER_MANAGER 21216 (0x52e0) ~Address to DPNAME.CONTOSO.COM is currently in pulse mode, therefore only one connection is allowed.
 
-If **PkgXferMgr.log** shows that '*only one connection is allowed*' to the DP, it means that the DP is configured for bandwidth throttling. If this is the case, PkgXferMgr can only use one thread for the DP, and as a result only send one package to the DP at a time. See [Bandwidth control and threads](components-and-threads.md#bandwidth-control-and-threads) for more information.
+    If **PkgXferMgr.log** shows that '*only one connection is allowed*' to the DP, it means that the DP is configured for bandwidth throttling. If this is the case, PkgXferMgr can only use one thread for the DP, and as a result only send one package to the DP at a time. See [Bandwidth control and threads](components-and-threads.md#bandwidth-control-and-threads) for more information.
 
 - **PkgXferMgr.log** shows the address is closed:
 
@@ -110,14 +110,14 @@ If **PkgXferMgr.log** shows that '*only one connection is allowed*' to the DP, i
 
   Typically, PkgXferMgr uses one thread for a job, but if it uses multiple threads for the same job, the content transfer may start failing because of error **0x80070020 (ERROR_SHARING_VIOLATION)**. This happens if the site server and the site database servers are in different time zones. The solution here is to ensure that the site server and site database servers have the same time zone set.
 
-## Common Pull DP issues
+## Common pull DP issues
 
-- **PkgXferMgr.log** shows that the Pull DP is at capacity and no more jobs are sent to the Pull DP:
+- **PkgXferMgr.log** shows that the Pull DP is at capacity and no more jobs are sent to the pull DP:
 
   > SMS_PACKAGE_TRANSFER_MANAGER 4712 (0x1268) PullDP ["Display=\\\P01PDP1.CONTOSO.COM\\"]MSWNET:["SMS_SITE=P01"]\\\P01PDP1.CONTOSO.COM\\ has reached maximum capacity 50  
   > SMS_PACKAGE_TRANSFER_MANAGER 4712 (0x1268) ~ PullDP has no capacity. Restart time = 1/10/2019 1:16:33 PM Eastern Standard Time
 
-  PkgXferMgr runs the following query to check how many jobs are currently in an unfinished state on the Pull DP. If the query returns more than 50 jobs, it will not send any more jobs to the Pull DP.
+  PkgXferMgr runs the following query to check how many jobs are currently in an unfinished state on the pull DP. If the query returns more than 50 jobs, it will not send any more jobs to the pull DP.
   
   ```sql
   SELECT COUNT(*) FROM DistributionJobs job
@@ -125,31 +125,31 @@ If **PkgXferMgr.log** shows that '*only one connection is allowed*' to the DP, i
   WHERE job.State in (2, 3, 4) AND (job.Action<>5) AND (ISNULL(job.SendAction, '') <> '')
   ```
 
-  These jobs are removed from the `DistributionJobs` table when Pull DP sends a **Success** state message or when the Status Polling stops (based on configured values). To see the jobs on the Pull DP, you can use wbemtest or [WMI Explorer](https://github.com/vinaypamnani/wmie2/releases) to review the instance count for `SMS_PullDPNotification` class. You can also review the instances of `ROOT\SCCMDP:SMS_PullDPState` WMI class on the Pull DP to identify packages that are in a **Failed** state and review **PullDP.log** as well as **DataTransferService.log** to investigate the failures.
+  These jobs are removed from the `DistributionJobs` table when pull DP sends a **Success** state message or when the status polling stops (based on configured values). To see the jobs on the pull DP, you can use wbemtest or [WMI Explorer](https://github.com/vinaypamnani/wmie2/releases) to review the instance count for `SMS_PullDPNotification` class. You can also review the instances of `ROOT\SCCMDP:SMS_PullDPState` WMI class on the pull DP to identify packages that are in a **Failed** state and review **PullDP.log** as well as **DataTransferService.log** to investigate the failures.
 
-- `SignatureDownload` job on Pull DP fails with HTTP 404 Error.
+- `SignatureDownload` job on pull DP fails with HTTP 404 error.
 
   > Created SignatureDownload DTS job {JOBID} for package C010000D.28, content id ContentID. JobState = NotStarted  
   > DTS error message received for C010000D.28, content job {JOBID}, 0x80070002 : BITS error: 'HTTP status 404: The requested URL does not exist on the server.
   
-  This is a known issue because the signature files are not present on a Source DP that is colocated on a site server. This issue only occurs when the distribution action is not 'redist'.
+  This is a known issue because the signature files are not present on a Source DP that is colocated on a site server. This issue only occurs when the distribution action is not **redist**.
 
   To work around this issue, use one of the following methods:
 
   - Redistribute the package (redistributing the package does not require downloading signatures since full content is downloaded).
-  - Configure the Pull DP to use a Source DP that is not colocated on the Site Server.
+  - Configure the pull DP to use a source DP that is not colocated on the site server.
 
-- **DataTransferService.log** shows **0x800706D9** when trying to download content from the Source DP:
+- **DataTransferService.log** shows **0x800706D9** when trying to download content from the source DP:
 
   > DataTransferService 4864 (0x1300) CDTSJob::HandleErrors: DTS Job '{5285F8B3-C426-4882-85F2-AD5331DD4179}' BITS Job '{D53BA625-24AA-41FA-A357-6EB1B7D7E701}' under user 'S-1-5-18' OldErrorCount 29 NewErrorCount 30 ErrorCode
 
-  0x800706D9 means that there are no more endpoints available from the endpoint mapper. This issue may occur due to RPC Port allocation failures caused by firewall. It can also occur when **Windows Firewall** service is disabled.
+  0x800706D9 means that there are no more endpoints available from the endpoint mapper. This issue may occur due to RPC port allocation failures caused by firewall. It can also occur when **Windows Firewall** service is disabled.
 
-  Check to see if there is a firewall between the Site Server and the affected Server and find out if [RPC ports](/configmgr/core/plan-design/hierarchy/ports?redirectedfrom=MSDN) are open. You can also [capture a Network Trace](https://blogs.technet.microsoft.com/msindiasupp/2011/08/10/how-to-setup-and-collect-network-capture-using-network-monitor-tool/) (from the Pull DP as well as the Source DP Server) while reproducing the error for review.
+  Check to see if there is a firewall between the site server and the affected server and find out if [RPC ports](/mem/configmgr/core/plan-design/hierarchy/ports?redirectedfrom=MSDN) are open. You can also [capture a Network Trace](https://blogs.technet.microsoft.com/msindiasupp/2011/08/10/how-to-setup-and-collect-network-capture-using-network-monitor-tool/) (from the pull DP as well as the source DP server) while reproducing the error for review.
 
 - Pull DP shows that it has a large number of jobs but the jobs are not getting processed.
 
-  In some instances (normally after installation of a new Pull DP when all content is sent to the Pull DP), too many job failures on the Pull DP can end up stalled processing of the jobs. Although most of these issues are fixed in the recent releases of the product (Configuration Manager version 1810), some environmental factors can result in Pull DP not processing jobs. When this happens, you would likely see thousands of DTS jobs in `ROOT\ccm\DataTransferService:CCM_DTS_JobEx` WMI class and ~50 (or more) BITS jobs in **Failed** state. In this scenario, it can be beneficial to remove all the job-specific items from WMI on the Pull DP and distribute the content again to the Pull DP in a controlled manner and investigate failures.
+  In some instances (normally after installation of a new pull DP when all content is sent to the pull DP), too many job failures on the pull DP can end up stalled processing of the jobs. Although most of these issues are fixed in the recent releases of the product (Configuration Manager version 1810), some environmental factors can result in pull DP not processing jobs. When this happens, you would likely see thousands of DTS jobs in `ROOT\ccm\DataTransferService:CCM_DTS_JobEx` WMI class and ~50 (or more) BITS jobs in **Failed** state. In this scenario, it can be beneficial to remove all the job-specific items from WMI on the pull DP and distribute the content again to the pull DP in a controlled manner and investigate failures.
 
   To remove all the job-specific items from WMI on the Pull DP, you can use the below PowerShell script (review the script comments for help):
 
@@ -521,17 +521,17 @@ If **PkgXferMgr.log** shows that '*only one connection is allowed*' to the DP, i
     Write-Host ""
     ```
 
-- Content shows **Installed** on the Pull DP but URL and URLSubPath for the Pull DP is not populated in `ContentDPMap`, which causes issues with packages having SMB Access enabled.
+- Content shows **Installed** on the pull DP but URL and URLSubPath for the pull DP is not populated in `ContentDPMap`, which causes issues with packages having SMB Access enabled.
 
-  When the Pull DP has the content successfully installed, it sends a state message that contains the data necessary to update the `URL/URLSubPath` values in `ContentDPMap`. This happens when the Pull DP Response is processed. Review steps 16-22 in the [Distribute a package to Pull DP](understand-package-actions.md#distribute-a-package-to-pull-dp) section to understand the flow and review the relevant logs to investigate why the State Message is not getting processed. Most likely cause for this issue is either a backlog of State Messages in the `\MP\outboxes\StateMsg.box` on the Management Point or MPFDM failing to copy files to the Site Server due to permission issues.  
+  When the Pull DP has the content successfully installed, it sends a state message that contains the data necessary to update the `URL/URLSubPath` values in `ContentDPMap`. This happens when the pull DP response is processed. Review steps 16-22 in [Distribute a package to pull DP](understand-package-actions.md#distribute-a-package-to-pull-dp) to understand the flow and review the relevant logs to investigate why the state message is not getting processed. Most likely cause for this issue is either a backlog of state messages in the `\MP\outboxes\StateMsg.box` on the management point or MPFDM failing to copy files to the site server due to permission issues.  
 
-## Missing content files in Content Library
+## Missing content files in content library
 
-There are times when you would notice content missing from the Content Library. This could happen due to previous Content Distribution issues or someone/something accidentally deleting files from the Content Library. To confirm that the content is missing from the Content Library, identify an affected Package and track the package content from `PkgLib` to `FileLib`.
+There are times when you would notice content missing from the content library. This could happen due to previous content distribution issues or someone/something accidentally deleting files from the content library. To confirm that the content is missing from the content library, identify an affected package and track the package content from `PkgLib` to `FileLib`.
 
 Once you confirm that the required content for a Package is missing in the Content Library, see [Resend compressed copy of a package to a site](advanced-troubleshooting-tips.md#resend-compressed-copy-of-a-package-to-a-site) for information on how to re-populate the content.  
 
-### Generic issues
+## Generic issues
 
 - The DistMgr or PkgXferMgr log shows a file/path not found error:
 
@@ -547,15 +547,15 @@ Once you confirm that the required content for a Package is missing in the Conte
   > SMS_PACKAGE_TRANSFER_MANAGER 11228 (0x2bdc) CContentDefinition::TotalFileSizes failed; 0x80070003  
   > SMS_PACKAGE_TRANSFER_MANAGER 11228 (0x2bdc) CSendFileAction::SendFiles failed; 0x80070003
 
-  Common Error Codes: **0x80070002**, **0x80070003**.
+  Common error codes: **0x80070002**, **0x80070003**.
 
   For file/path not found errors, the problem is likely due to the fact that the content library on the site server is missing content files for the package. As a result, PkgXferMgr is not able to send the files to the DP.
 
-  In these cases, you can identify the content ID from the log and track the content from `PkgLib` to `FileLib` to ensure that the files exist. You can also use Content Library Explorer to check if the package content files are available in the content library, however Content Library Explorer can take some time to load and it may be easier to manually track the content from `PkgLib` to `FileLib`. Alternatively, you can capture a [Process Monitor](/sysinternals/downloads/procmon) trace to verify if the necessary files are missing from the Content Library on the Site Server.
+  In these cases, you can identify the content ID from the log and track the content from `PkgLib` to `FileLib` to ensure that the files exist. You can also use Content Library Explorer to check if the package content files are available in the content library, however Content Library Explorer can take some time to load and it may be easier to manually track the content from `PkgLib` to `FileLib`. Alternatively, you can capture a [Process Monitor](/sysinternals/downloads/procmon) trace to verify if the necessary files are missing from the content library on the site server.
 
-  If the site that is missing content in the content library is the Package Source site, it is necessary to Update the package to increment the **Package Source** version so that DistMgr takes a snapshot of the content from the Package Source Directory again and re-populates the missing content.
+  If the site that is missing content in the content library is the package source site, it is necessary to update the package to increment the **Package Source** version so that DistMgr takes a snapshot of the content from the package source directory again and re-populates the missing content.
 
-  If the site missing the content in the content library is different from the Package Source site, you can force the Package Source site to resend the compressed copy of the package to the affected site. See [Resend compressed copy of a package to a site](advanced-troubleshooting-tips.md#resend-compressed-copy-of-a-package-to-a-site) for more information.
+  If the site missing the content in the content library is different from the package source site, you can force the package source site to resend the compressed copy of the package to the affected site. See [Resend compressed copy of a package to a site](advanced-troubleshooting-tips.md#resend-compressed-copy-of-a-package-to-a-site) for more information.
 
 - DistMgr/PkgXferMgr log shows a network error:
 
@@ -563,16 +563,16 @@ Once you confirm that the required content for a Package is missing in the Conte
   > SMS_DISTRIBUTION_MANAGER 5112 (0x13f8) ~Cannot establish connection to ["Display=\\\DPNAME.CONTOSO.COM\\"]MSWNET:["SMS_SITE=PS1"]\\\DPNAME.CONTOSO.COM\\. Error = 53
   > SMS_DISTRIBUTION_MANAGER 5112 (0x13f8) Error occurred. Performing error cleanup prior to returning.
 
-  Common Error Codes:**2**, **3**, **53**, **64**.
+  Common error codes: **2**, **3**, **53**, **64**.
 
   For network related errors, review the log and identify the server you're trying to communicate with when you get the error. Once identified, test the following:
 
   1. Can you ping the affected SERVERNAME using the FQDN/NetBIOS/IP address?
   2. Can you access *\\\SERVERNAME\admin$* share using the FQDN/NetBIOS/IP address using the SYSTEM account from the site server?
   3. Can you access *\\\SERVERNAME\admin$* share using the FQDN/NetBIOS/IP address using the logged in user's account from the site server?
-  4. Is there a firewall between the site server and the affected server? Are [relevant ports (RPC/SMB)](/configmgr/core/plan-design/hierarchy/ports?redirectedfrom=MSDN) open?
+  4. Is there a firewall between the site server and the affected server? Are [relevant ports (RPC/SMB)](/mem/configmgr/core/plan-design/hierarchy/ports?redirectedfrom=MSDN) open?
   
-  If the above tests are successful, [capture a network trace](/archive/blogs/msindiasupp/how-to-setup-and-collect-network-capture-using-network-monitor-tool) (from the Site Server as well as the affected Server) while reproducing the error for review.
+  If the above tests are successful, [capture a network trace](/archive/blogs/msindiasupp/how-to-setup-and-collect-network-capture-using-network-monitor-tool) (from the site server as well as the affected server) while reproducing the error for review.
 
 - DistMgr/PkgXferMgr log shows an access denied error:
 
@@ -580,7 +580,7 @@ Once you confirm that the required content for a Package is missing in the Conte
   > SMS_DISTRIBUTION_MANAGER    7076 (0x1ba4)    ~The source directory \\\PS1SITE\PKGSOURCE\DummyPackage doesn't exist or the SMS service cannot access it, Win32 last error = 5
   > SMS_DISTRIBUTION_MANAGER    7076 (0x1ba4)    ~Failed to take snapshot of package \<PackageID>
 
-  Common Error Codes: **5**, **0x80070005**.
+  Common error codes: **5**, **0x80070005**.
 
   For permissions related errors, review the log and identify the path you're trying to access when you get the error. Once identified, test the following:
 
@@ -588,14 +588,10 @@ Once you confirm that the required content for a Package is missing in the Conte
   2. Does the site server computer account have permissions to access the path?
   3. Can you access the affected path using the FQDN/NetBIOS/IP address when using the SYSTEM account from the site server?
   4. Can you access the affected path using the FQDN/NetBIOS/IP address when using the logged in user's account from the site server?
-  5. Is there a firewall between the site server and the affected server? Are [relevant ports (RPC/SMB)](/configmgr/core/plan-design/hierarchy/ports?redirectedfrom=MSDN) open?
+  5. Is there a firewall between the site server and the affected server? Are [relevant ports (RPC/SMB)](/mem/configmgr/core/plan-design/hierarchy/ports?redirectedfrom=MSDN) open?
   
-  If the above tests are successful, capture a [Process Monitor](/sysinternals/downloads/procmon) trace from the Site Server while reproducing the error for review.
+  If the above tests are successful, capture a [Process Monitor](/sysinternals/downloads/procmon) trace from the site server while reproducing the error for review.
 
-- DistMgr/PkgXferMgr look for content in the `\bin\x64\FileLib` directory instead of the actual Content Library location
+- DistMgr/PkgXferMgr look for content in the `\bin\x64\FileLib` directory instead of the actual content library location.
 
   This is due to a known issue in the Content Library Transfer tool.
-
-## More Information
-
-For more information about content distribution, see [Content Distribution in Configuration Manager](content-distribution-introduction.md).

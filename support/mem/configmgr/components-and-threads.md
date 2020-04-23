@@ -4,18 +4,18 @@ description: Helps administrators understand components and threads for content 
 ms.date: 03/30/2020
 ms.prod-support-area-path: 
 ---
-# Components and threads for Content Distribution
+# Components and threads for content distribution
 
 This article helps you understand components and threads for Content Distribution.
 
-_Original product version:_ &nbsp; Configuration Manager current branch, Microsoft System Center 2012 Configuration Manager (ConfigMgr 2012), Microsoft System Center 2012 R2 Configuration Manager (ConfigMgr 2012 R2)  
+_Original product version:_ &nbsp; Configuration Manager current branch, Microsoft System Center 2012 Configuration Manager, Microsoft System Center 2012 R2 Configuration Manager  
 _Original KB number:_ &nbsp; 4482728
 
 ## The components used for content distribution
 
 Here's a quick list of the primary components used for content distribution:
 
-|Name|Component Name|Friendly Name|Description|
+|Name|Component name|Friendly name|Description|
 |---|---|---|---|
 |Distribution Manager|SMS_DISTRIBUTION_MANAGER|DistMgr|Manages content and creates jobs for PkgXferMgr|
 |Package Transfer Manager|SMS_PACKAGE_TRANSFER_MANAGER|PkgXferMgr|Transfers packages to distribution points|
@@ -36,15 +36,15 @@ Distribution Manager (DistMgr) performs a variety of operations to distribute co
 
 ![Distribution Manager thread hierarchy](./media/components-and-threads/4000597_en_2.png)
 
-- **Main DistMgr Thread**
+- **Main DistMgr thread**
 
   Log entry for identification: `SMS_EXECUTIVE started SMS_DISTRIBUTION_MANAGER as thread ID 3648 (0xE40)`
 
-  This thread is started by `SMS_Executive` on service startup. The Main DistMgr thread starts Replication Processing, DP Manager, Content Cleanup, DP Certificate Monitoring, Content Library Move, IIS Config Change Processing, DP Reassignment and Upgrade Processing threads when it starts. It also starts Package Processing threads on-demand when a package change occurs.
+  This thread is started by `SMS_Executive` on service startup. The main DistMgr thread starts the replication processing, DP Manager, content cleanup, DP certificate monitoring, content library move, IIS config change processing, DP reassignment and upgrade processing threads when it starts. It also starts package processing threads on-demand when a package change occurs
 
-  In addition to managing these threads, this thread also handles changes to the Site Control File and updates DP settings (Configure DP/PXE, update registry settings, create monitoring/usage tasks on the DP, and so on).
+  In addition to managing these threads, this thread also handles changes to the Site Control File and updates DP settings (configure DP/PXE, update registry settings, create monitoring/usage tasks on the DP, and so on).
 
-- **Replication Processing Thread**
+- **Replication processing thread**
 
   Log entry for identification: `Starting thread for processing replication, thread ID = 0x1A14 (6676)`
 
@@ -55,13 +55,13 @@ Distribution Manager (DistMgr) performs a variety of operations to distribute co
   |.STA|Updates package status in the `PkgStatus` table in the database.|
   |.FWD|Forwards the specified package to the specified destination site by creating a mini-job to send the package.|
   |.DMD|Distributes on-demand requests. Targets the specified package to the specified DP.|
-  |.PUL|Updates Pull DP package response in the `PullDPResponse` table in the DB.|
+  |.PUL|Updates pull DP package response in the `PullDPResponse` table in the DB.|
   |||
 
   > [!NOTE]
   > This thread is single-threaded and doesn't create more threads to process any of these files.
 
-- **DP Manager Thread**
+- **DP Manager thread**
 
   Log entry for identification: `Starting the DP Manager thread, thread ID = 0x5D8 (1496)`
 
@@ -72,7 +72,7 @@ Distribution Manager (DistMgr) performs a variety of operations to distribute co
   > [!NOTE]
   > This thread is single-threaded and doesn't create more threads to perform work.
 
-- **Content Cleanup Thread**
+- **Content cleanup thread**
 
   Log entry for identification: `Starting the content cleanup thread, thread ID = 0x1604 (5636)`
 
@@ -85,52 +85,52 @@ Distribution Manager (DistMgr) performs a variety of operations to distribute co
   > [!NOTE]
   > Do not change this value without consulting Microsoft support professional. This thread is single-threaded and doesn't create more threads to perform work.
 
-- **DP Certificate Monitoring Thread**
+- **DP certificate monitoring thread**
 
-  Log Entry for Identification: `Starting the DP cert monitoring thread, thread ID = 0x7290 (29328)`
+  Log Entry for identification: `Starting the DP cert monitoring thread, thread ID = 0x7290 (29328)`
 
-  This thread is started by the main DistMgr thread. This thread processes *.CER* files and configures the certificate binding in IIS when Enhanced HTTP Mode is enabled. This mode requires use of Configuration Manager generated certificates in IIS.
-
-  > [!NOTE]
-  > This thread is single-threaded and doesn't create more threads to perform work.
-
-- **Content Library Move Thread**
-
-  Log Entry for Identification: `Starting the content library move thread, thread ID = 0x11D6C (73068)`
-
-  This thread is started by the main DistMgr thread, and moves Content Library to the new location after a *.CML* file is dropped in `DistMgr.box`.
+  This thread is started by the main DistMgr thread. This thread processes *.CER* files and configures the certificate binding in IIS when enhanced HTTP mode is enabled. This mode requires use of Configuration Manager generated certificates in IIS.
 
   > [!NOTE]
   > This thread is single-threaded and doesn't create more threads to perform work.
 
-- **IIS Config Change Processing Thread**
+- **Content library move thread**
 
-  Log Entry for Identification: `Starting the IIS config change processing thread, thread ID = 0x408C (16524)`
+  Log Entry for identification: `Starting the content library move thread, thread ID = 0x11D6C (73068)`
 
-  This thread is started by the main DistMgr thread, and handles configuring IIS virtual directories for Standard and Pull Distribution Points after IIS files are dropped in `DistMgr.box`. This thread reads the `IISConfigChangeThreadLimit` Site Control File (SCF) property for `SMS_DISTRIBUTION_MANAGER` component to determine the number of threads it can start for performing IIS changes simultaneously. The default value of `IISConfigChangeThreadLimit` SCF Property is **50**, but it can be changed if necessary. However, if this SCF property doesn't exist for some reason, the default value of **50** is used for `IISConfigChangeThreadLimit`.
+  This thread is started by the main DistMgr thread, and moves content library to the new location after a *.CML* file is dropped in `DistMgr.box`.
 
   > [!NOTE]
-  > This thread does create more threads to perform DP IIS Config changes. Each worker thread handles configuration of IIS virtual directories of a specific DP.
+  > This thread is single-threaded and doesn't create more threads to perform work.
 
-- **DP Reassignment Thread**
+- **IIS config change processing thread**
 
-  Log Entry for Identification: `Starting the shared DP reassignment thread, thread ID = 0x9C0C (39948)`
+  Log Entry for identification: `Starting the IIS config change processing thread, thread ID = 0x408C (16524)`
 
-  This thread is started by the main DistMgr thread, and handles DP reassignments for Standard and Pull Distribution Points when a *.DPU* file is dropped in `DistMgr.box`. This thread reads the `SharedDPImportThreadLimit` Site Control File (SCF) property for `SMS_DISTRIBUTION_MANAGER` component to determine the number of threads it can start for performing DP reassignments simultaneously. The default value of `SharedDPImportThreadLimit` SCF Property is **50**, but it can be changed if necessary. However, if this SCF property doesn't exist for some reason, the default value of 50 is used for `SharedDPImportThreadLimit`.
+  This thread is started by the main DistMgr thread, and handles configuring IIS virtual directories for standard and pull distribution points after IIS files are dropped in `DistMgr.box`. This thread reads the `IISConfigChangeThreadLimit` Site Control File (SCF) property for `SMS_DISTRIBUTION_MANAGER` component to determine the number of threads it can start for performing IIS changes simultaneously. The default value of `IISConfigChangeThreadLimit` SCF Property is **50**, but it can be changed if necessary. However, if this SCF property doesn't exist for some reason, the default value of **50** is used for `IISConfigChangeThreadLimit`.
+
+  > [!NOTE]
+  > This thread does create more threads to perform DP IIS config changes. Each worker thread handles configuration of IIS virtual directories of a specific DP.
+
+- **DP reassignment thread**
+
+  Log Entry for identification: `Starting the shared DP reassignment thread, thread ID = 0x9C0C (39948)`
+
+  This thread is started by the main DistMgr thread, and handles DP reassignments for standard and pull distribution points when a *.DPU* file is dropped in `DistMgr.box`. This thread reads the `SharedDPImportThreadLimit` Site Control File (SCF) property for `SMS_DISTRIBUTION_MANAGER` component to determine the number of threads it can start for performing DP reassignments simultaneously. The default value of `SharedDPImportThreadLimit` SCF Property is **50**, but it can be changed if necessary. However, if this SCF property doesn't exist for some reason, the default value of **50** is used for `SharedDPImportThreadLimit`.
 
   > [!NOTE]
   > This thread does create more threads to perform DP reassignments. Each worker thread handles reassignment of a specific DP.
 
-- **Upgrade Processing Thread**
+- **Upgrade processing thread**
 
   Log entry for identification: `Starting the DP upgrade processing thread, thread ID = 0x1968 (6504)`
 
-  This thread is started by the main DistMgr thread, and handles DP Installations and Upgrades for Standard and Pull Distribution Points. It calls `spGetDPsForUpgrade` to get a list of DPs that need to be upgraded. This thread reads the `DPUpgradeThreadLimit` Site Control File (SCF) property for `SMS_DISTRIBUTION_MANAGER` component to determine the number of threads it can start for performing DP Installations/Upgrades simultaneously. The default value of `DPUpgradeThreadLimit` SCF Property is **50**, but it can be changed if necessary. However, if this SCF property doesn't exist for some reason, the default value of **5** is used for `DPUpgradeThreadLimit`.
+  This thread is started by the main DistMgr thread, and handles DP installations and upgrades for standard and pull distribution points. It calls `spGetDPsForUpgrade` to get a list of DPs that need to be upgraded. This thread reads the `DPUpgradeThreadLimit` Site Control File (SCF) property for `SMS_DISTRIBUTION_MANAGER` component to determine the number of threads it can start for performing DP Installations/Upgrades simultaneously. The default value of `DPUpgradeThreadLimit` SCF Property is **50**, but it can be changed if necessary. However, if this SCF property doesn't exist for some reason, the default value of **5** is used for `DPUpgradeThreadLimit`.
 
   > [!NOTE]
-  > This thread does create more threads to perform DP Install/Upgrade work. Each worker thread handles installation/upgrade of a specific DP.
+  > This thread does create more threads to perform DP installation/upgrade work. Each worker thread handles installation/upgrade of a specific DP.
 
-- **Package Processing Thread**
+- **Package processing thread**
 
   Log entry for identification: `Started package processing thread for package 'PKGID', thread ID = 0x8E8 (2280)`
 
@@ -151,9 +151,9 @@ Distribution Manager (DistMgr) performs a variety of operations to distribute co
 
 ## Distribution Manager thread configuration
 
-All Configuration Manager sites (including the CAS) allow configuring the number of threads that can be used for distributing content to the distribution points (DPs). This configuration is specific to each site and can be accessed by right-clicking the site under the **Sites** node and selecting **Configure Site Components** > **Software Distribution**. Here's a look at the default configuration:
+All Configuration Manager sites (including the central administration site) allow configuring the number of threads that can be used for distributing content to the distribution points (DPs). This configuration is specific to each site and can be accessed by right-clicking the site under the **Sites** node and selecting **Configure Site Components** > **Software Distribution**. Here's a look at the default configuration:
 
-![Software Distribution Component Properties window](./media/components-and-threads/4000600_en-us_1.png)
+![Software Distribution Component Properties window](./media/components-and-threads/4000598_en-us_1.png)
 
 In most cases, you would only be concerned with the **Maximum number of packages** and **Maximum threads per package** settings.
 
@@ -180,21 +180,21 @@ For each PkgXferMgr job created by DistMgr, PkgXferMgr uses one thread. Thread c
 
 #### DistMgr threads
 
-The purpose of a DP thread is to create a job for Package Transfer Manager, which then does the actual content copy to the DP. DP threads finish after creating the PkgXferMgr job, and as a result, the lifetime of a DP thread is short. Due to this nature, most of the time there is no need to set up aggressive thread configuration to speed up content distribution. Instead of setting aggressive values, look towards **finding a balance** (more information below).
+The purpose of a DP thread is to create a job for Package Transfer Manager, which then does the actual content copy to the DP. DP threads finish after creating the PkgXferMgr job, and as a result, the lifetime of a DP thread is short. Due to this nature, most of the time there is no need to set up aggressive thread configuration to speed up content distribution. Instead of setting aggressive values, look towards **Choosing the right values** (more information below).
 
 #### PkgXferMgr threads
 
-For standard DPs, since PkgXferMgr threads perform the real work of sending the content, the lifetime of these threads depends on the size of the packages. For larger packages, these threads can take a long time depending on the package size, network speed etc.; While these threads can take a long time to complete, the lifetime of DistMgr threads is much shorter, which means that DistMgr can queue a large number of jobs for PkgXferMgr, creating a backlog of jobs in the queue.
+For standard DPs, since PkgXferMgr threads perform the real work of sending the content, the lifetime of these threads depends on the size of the packages. For larger packages, these threads can take a long time depending on the package size and network speed. While these threads can take a long time to complete, the lifetime of DistMgr threads is much shorter, which means that DistMgr can queue a large number of jobs for PkgXferMgr, creating a backlog of jobs in the queue.
 
-For pull DPs, PkgXferMgr threads notify the pull DP, asking the pull DP to download the content. As a result, the lifetime of PkgXferMgr threads for pull DPs is short. PkgXferMgr does start another thread to perform **Pull DP** polling (based on the configured polling interval) to check on the progress of the job. However, this is also a quick operation and these threads do have a short lifetime as well.
+For pull DPs, PkgXferMgr threads notify the pull DP, asking the pull DP to download the content. As a result, the lifetime of PkgXferMgr threads for pull DPs is short. PkgXferMgr does start another thread to perform pull DP polling (based on the configured polling interval) to check on the progress of the job. However, this is also a quick operation and these threads do have a short lifetime as well.
 
 ### Choosing the right values
 
 To determine the appropriate values for these settings, you first need to understand the Configuration Manager hierarchy. Let's consider the following hypothetical Configuration Manager environment:
 
-- Central Administration Site: CS1
-- Primary Site: PS1
-- Number of regular Distribution Points reporting to PS1: 200
+- Central administration site: CS1
+- Primary site: PS1
+- Number of regular distribution points reporting to PS1: 200
 - Total number of packages: 1000
 
 In this environment, the default thread configuration (**3x5**) means that if a new package needs to get distributed to all 200 DPs, we will only process 5 DPs at a time. Once a DP thread exits, another DP thread will then spawn and the process will continue until all the DPs are processed. This process will take some time to loop through all 200 DPs.
@@ -221,7 +221,7 @@ In the same hierarchy, you may run into a situation where you are bringing a new
 
 ## Sender thread configuration
 
-Each Configuration Manager site (including the CAS and secondary sites) has one sender. The sender manages the network connection from one site to a destination site, and can establish connections to multiple sites at the same time. To connect to a site, the sender uses the file replication route to the site to identify the account to use to establish the network connection. The sender also uses this account to write data to the destination site's `SMS_SITE` share.
+Each Configuration Manager site (including the central administration site and secondary sites) has one sender. The sender manages the network connection from one site to a destination site, and can establish connections to multiple sites at the same time. To connect to a site, the sender uses the file replication route to the site to identify the account to use to establish the network connection. The sender also uses this account to write data to the destination site's `SMS_SITE` share.
 
 By default, sender writes data to a destination site by using multiple concurrent threads. Each concurrent thread can transfer a different file-based object to the destination site. By default, when the sender begins to send an object, it continues to write blocks of data for that object until the entire object is sent.
 
@@ -244,11 +244,11 @@ The value specified under **All sites** defines the total number of threads that
 
 To determine appropriate values for these settings, you first need to understand the Configuration Manager hierarchy. Let's consider the following hypothetical Configuration Manager environment:
 
-- Central Administration Site: CS1
-- Primary Site: PS1
-- Primary Site: PS2
-- Primary Site: PS3
-- Primary Site: PS4
+- Central administration site: CS1
+- Primary site: PS1
+- Primary site: PS2
+- Primary site: PS3
+- Primary site: PS4
 
 In this environment, the default Sender thread configuration will allow using a total of 5 threads. Out of those 5 threads, 3 can be used for any one of the 4 destination primary sites. If an administrator sends 3 to all of these sites, it is possible that sender will end up using three threads for one of these sites (let's say PS1), leaving only 2 threads for the remaining sites. Out of the remaining 2 threads, sender may use 1 for PS2 and the other for PS3 utilizing all five allowed threads leaving no room for sending data concurrently to PS4. At this point, Sender will have to wait for one of the existing 5 threads to finish before it can send more data. Once an existing thread finishes, Sender will then be able to use another thread for sending more data to the PS2/PS3/PS4 sites.
 
@@ -259,11 +259,11 @@ It is recommended to set aside 10 threads for each site that Sender will communi
 
 ## Bandwidth control and threads
 
-In Configuration Manager, you can configure a schedule and set specific throttling settings for remote distribution points as well as for *File Replication Routes* for sites. The controls for scheduling and throttling to the remote distribution point are similar to the settings for a standard sender address, but in this case, the settings are used by a component called Package Transfer Manager.
+In Configuration Manager, you can configure a schedule and set specific throttling settings for remote distribution points as well as for file replication routes for sites. The controls for scheduling and throttling to the remote distribution point are similar to the settings for a standard sender address, but in this case, the settings are used by a component called Package Transfer Manager.
 
-For the Package Transfer Manager component (for *Site Server* - > *DP*), the throttling settings are configured in the *Properties for a Standard Distribution Point* that is not on a site server.
+For the Package Transfer Manager component (for *Site Server* - > *DP*), the throttling settings are configured in the properties for a standard Distribution Point that is not on a site server.
 
-For the Sender component (for *Site Server* <-> *Site Server*), the throttling settings are configured in the properties of the *File Replication Route under Hierarchy Configuration* - > *File Replication*.
+For the Sender component (for *Site Server* <-> *Site Server*), the throttling settings are configured in the properties of the file replication route under **Hierarchy Configuration** > **File Replication**.
 
 > [!NOTE]
 > The time settings are based on the time zone from the sending site, not the distribution point.
@@ -275,7 +275,9 @@ To restrict data, select the time period, and then select one of the following s
 - **Open for all priorities**: Specifies that Configuration Manager sends data to the distribution point with no restrictions.
 - **Allow medium and high priority**: Specifies that Configuration Manager sends only medium and high priority data to the distribution point.
 - **Allow high priority only**: Specifies that Configuration Manager sends only high priority data to the distribution point.
-- **Closed**: Specifies that Configuration Manager does not send any data to the distribution point. You can restrict data by priority or close the connection for selected time periods.
+- **Closed**: Specifies that Configuration Manager does not send any data to the distribution point.
+
+  You can restrict data by priority or close the connection for selected time periods.
 
 ### Rate limit options
 
@@ -306,7 +308,3 @@ Pulse Mode:
 > ~Abandoning send request because only one connection is allowed in pulse mode.
 
 **Sender.log** will show similar entries when bandwidth throttling is configured.
-
-## More Information
-
-For more information about content distribution, see [Content Distribution in Configuration Manager](content-distribution-introduction.md).
