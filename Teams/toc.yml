@@ -99,6 +99,8 @@
       href: ./teams-onenote-integration/issue-access-notebook.md
     - name: Temporary change to file size download limit in OneNote
       href: /office/troubleshoot/onenote/temp-change-onenote-file-size-download?toc=/MicrosoftTeams/troubleshoot/toc.json&bc=/MicrosoftTeams/troubleshoot/breadcrumb/toc.json
+    - name: Unable to upload or download OneNote file in Teams
+      href: ./known-issues/cant-upload-download-onenote-file.md
   - name: Provisioning
     items:
     - name: Deleting a team also deletes the group associated with it in Teams
@@ -129,8 +131,6 @@
       href: ./known-issues/task-buckets-do-not-appear-in-planner.md
     - name: Teams website tabs leads to customer confusion 
       href: ./known-issues/website-tabs-cause-confusion-teams.md
-    - name: Unable to upload or download OneNote file in Teams
-      href: ./known-issues/cant-upload-download-onenote-file.md
   - name: Third-party programs
     items:
     - name: Dell Encryption prevents Teams from starting correctly 
