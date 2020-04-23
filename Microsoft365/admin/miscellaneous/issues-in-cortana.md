@@ -17,9 +17,6 @@ appliesto:
 
 # How to troubleshoot issues when you use Cortana with Office 365
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
-
 ## Introduction
 
 This article contains information to help you troubleshoot issues that you may encounter when you use Cortana with Office 365.
