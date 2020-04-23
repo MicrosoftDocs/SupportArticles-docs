@@ -1,5 +1,5 @@
 ---
-title: Important notice for Office 365 email customers who have configured connectors
+title: Configure a certificate-based connector to relay email messages through Office 365
 description: Describes scenarios that requires you to take action before February 1, 2017 to prevent interruptions to mail flow.
 author: simonxjx
 audience: ITPro
@@ -14,12 +14,6 @@ search.appverid:
 appliesto:
 - Exchange Online
 ---
-
-# Important notice for Office 365 email customers who have configured connectors
-
-## Notice
-
-If you are an Exchange Online or Exchange Online Protection (EOP) customer, and you have configured connectors, this article contains important information that might affect your organization. To make sure that your mail flow isn’t interrupted, we strongly recommend that you read this article and take any necessary action before the July 5, 2017, deadline.
 
 ## Introduction 
 
