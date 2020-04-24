@@ -19,7 +19,7 @@ appliesto:
 
 ## Introduction
 
-This article contains information to help you troubleshoot issues that you may encounter when you use Cortana with Office 365.
+This article contains information to help you troubleshoot issues that you could encounter when you use Cortana with Office 365.
 
 > [!NOTE]
 > This document refers primarily to our consumer experiences, which are currently delivered in Windows 10 (version 1909 and earlier) and the Cortana app on iOS and Android.
