@@ -30,8 +30,9 @@ ms.reviewer: Desribes resolutions to the OneNote error message "Content Not Yet 
 You see the following error when trying to access a OneNote page:
 
 > Content Not Yet Available
-> Sorry, it looks like this page was added from another computer and hasn't synced yet. Click here or press ENTER to reload the page.<br/>
-![Content Not Yet Available error](./media/onenote-error-content-not-yet-available/onenote-error-content-not-yet-available-1.jpg)
+> Sorry, it looks like this page was added from another computer and hasn't synced yet. Click here or press ENTER to reload the page.
+
+   ![Content Not Yet Available error](./media/onenote-error-content-not-yet-available/onenote-error-content-not-yet-available-1.jpg)
 
 ## Cause
 
@@ -46,6 +47,7 @@ Check to see if the page (or section) is in one of the following states:
 2. **Shared with multiple users.** If so, check to see if other users also experience the same problem. 
 
     a.	If No (content is visible), move the available content to a new section.
+
     b.	If Yes (content isn’t visible), go to step 3 or step 4.
 
 3.	**Stored in OneDrive for Business.** If so, follow the steps in Restore your OneDrive to restore the content to a previous state.
@@ -74,15 +76,18 @@ A successful sync icon can appear as either of the two images below:
  
 ### Other OneNote sync status messages: 
 
-- A page sync is in progress: <br/>
-![Notebook sync in progress.](./media/onenote-error-content-not-yet-available/onenote-error-content-not-yet-available-4.jpg)
+- A page sync is in progress:
 
-- A page has been saved offline:<br/>
-![Notebook has been saved offline.](./media/onenote-error-content-not-yet-available/onenote-error-content-not-yet-available-5.jpg)<br/>
-![Notebook has been saved offline.](./media/onenote-error-content-not-yet-available/onenote-error-content-not-yet-available-6.jpg)
+  ![Notebook sync in progress.](./media/onenote-error-content-not-yet-available/onenote-error-content-not-yet-available-4.jpg)
+
+- A page has been saved offline:
+
+  ![Notebook has been saved offline.](./media/onenote-error-content-not-yet-available/onenote-error-content-not-yet-available-5.jpg)
+  ![Notebook has been saved offline.](./media/onenote-error-content-not-yet-available/onenote-error-content-not-yet-available-6.jpg)
  
-- A page has not been saved due to network issues and is trying to connect:<br/>
-![Notebook has network issues and is trying to connect.](./media/onenote-error-content-not-yet-available/onenote-error-content-not-yet-available-7.jpg)
+- A page has not been saved due to network issues and is trying to connect:
+
+  ![Notebook has network issues and is trying to connect.](./media/onenote-error-content-not-yet-available/onenote-error-content-not-yet-available-7.jpg)
  
 ## More information
 
