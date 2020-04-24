@@ -8,7 +8,7 @@
   items:
   - name: Can't create object when ASP applications run
     href: cannot-create-object-asp-run.md
-  - name: Set ASP locale ID per the brwoser's language
+  - name: Set ASP locale ID per the browser's language
     href: set-asp-locale-id-browser-language.md
 
 - name: Development

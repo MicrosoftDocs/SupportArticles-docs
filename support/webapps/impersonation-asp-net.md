@@ -75,8 +75,7 @@ Visual C# .NET
 
 ```csharp
 System.Security.Principal.WindowsImpersonationContext impersonationContext;
-impersonationContext =
- ((System.Security.Principal.WindowsIdentity)User.Identity).Impersonate();
+impersonationContext = ((System.Security.Principal.WindowsIdentity)User.Identity).Impersonate();
 //Insert your code that runs under the security context of the authenticating user here.
 impersonationContext.Undo();
 ```
@@ -147,7 +146,7 @@ ByVal domain As String, ByVal password As String) As Boolean
         CloseHandle(tokenDuplicate)
     End If
     If Not token.Equals(IntPtr.Zero) Then
-    CloseHandle(token)
+        CloseHandle(token)
     End If
 End Function
 
@@ -228,9 +227,9 @@ private bool impersonateValidUser(String userName, String domain, String passwor
         }
     }
     if(token!= IntPtr.Zero)
-    CloseHandle(token);
+        CloseHandle(token);
     if(tokenDuplicate!=IntPtr.Zero)
-    CloseHandle(tokenDuplicate);
+        CloseHandle(tokenDuplicate);
     return false;
 }
 

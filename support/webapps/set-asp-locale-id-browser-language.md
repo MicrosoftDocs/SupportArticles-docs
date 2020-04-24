@@ -29,7 +29,7 @@ Sub SetLCID()
     strAcceptLanguage = Request.ServerVariables("HTTP_ACCEPT_LANGUAGE")
     strPos = InStr(1, strAcceptLanguage, ",")
     If strPos > 0 Then
-      strAcceptLanguage = Left(strAcceptLanguage, strPos - 1)
+        strAcceptLanguage = Left(strAcceptLanguage, strPos - 1)
     End If
 
     Select Case LCase(strAcceptLanguage)
@@ -114,7 +114,7 @@ Sub SetLCID()
         Case "en-jm"
           strLCID = 8201 ' English(Jamaica)
         Case "en-ca"
-          strLCID = 9225 &apos; English(Caribbean)"?>
+          strLCID = 9225 ' English(Caribbean)
         Case "en-bz"
           strLCID = 10249 ' English(Belize)
         Case "en-tt"
@@ -244,43 +244,43 @@ Sub SetLCID()
         Case "es-bo"
           strLCID = 16394 ' Spanish(Bolivia)
         Case "es-sv"
-        strLCID = 17418 ' Spanish(El Salvador)
+          strLCID = 17418 ' Spanish(El Salvador)
         Case "es-hn"
-        strLCID = 18442 ' Spanish(Honduras)
+          strLCID = 18442 ' Spanish(Honduras)
         Case "es-ni"
-        strLCID = 19466 ' Spanish(Nicaragua)
+          strLCID = 19466 ' Spanish(Nicaragua)
         Case "es-pr"
-        strLCID = 20490 ' Spanish(Puerto Rico)
+          strLCID = 20490 ' Spanish(Puerto Rico)
         Case "sx"
-        strLCID = 1072 ' Sutu
+          strLCID = 1072 ' Sutu
         Case "sv"
-        strLCID = 1053 ' Swedish
+          strLCID = 1053 ' Swedish
         Case "sv-fi"
-        strLCID = 2077 ' Swedish(Finland)
+          strLCID = 2077 ' Swedish(Finland)
         Case "th"
-        strLCID = 1054 ' Thai
+          strLCID = 1054 ' Thai
         Case "ts"
-        strLCID = 1073 ' Tsonga
+          strLCID = 1073 ' Tsonga
         Case "tn"
-        strLCID = 1074 ' Tswana
+          strLCID = 1074 ' Tswana
         Case "tr"
-        strLCID = 1055 ' Turkish
+          strLCID = 1055 ' Turkish
         Case "uk"
-        strLCID = 1058 ' Ukrainian
+          strLCID = 1058 ' Ukrainian
         Case "ur"
-        strLCID = 1056 ' Urdu
+          strLCID = 1056 ' Urdu
         Case "ve"
-        strLCID = 1075 ' Venda
+          strLCID = 1075 ' Venda
         Case "vi"
-        strLCID = 1066 ' Vietnamese
+          strLCID = 1066 ' Vietnamese
         Case "xh"
-        strLCID = 1076 ' Xhosa
+          strLCID = 1076 ' Xhosa
         Case "ji"
-        strLCID = 1085 ' Yiddish
+          strLCID = 1085 ' Yiddish
         Case "zu"
-        strLCID = 1077 ' Zulu
+          strLCID = 1077 ' Zulu
         Case Else
-        strLCID = 2048 ' default
+          strLCID = 2048 ' default
     End Select
 
     Session.LCID = strLCID

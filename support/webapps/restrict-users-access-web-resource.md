@@ -36,8 +36,8 @@ To restrict access to ASP.NET applications that use forms authentication, edit t
 
     ```xml
     <authorization>
-     <allow users="user1, user2"/>
-     <deny users="?"/>
+        <allow users="user1, user2"/>
+        <deny users="?"/>
     </authorization>
     ```
 

@@ -60,10 +60,10 @@ The modified `<sessionState>` element should appear as follows:
 
 ```xml
 <sessionState
-            mode="SQLServer"
-            sqlConnectionString="data source=127.0.0.1;user id=<username>;password=<strongpassword>"
-            cookieless="false"
-            timeout="20"
+    mode="SQLServer"
+    sqlConnectionString="data source=127.0.0.1;user id=<username>;password=<strongpassword>"
+    cookieless="false"
+    timeout="20"
 />
 ```
 
