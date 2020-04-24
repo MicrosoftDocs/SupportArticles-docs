@@ -26,7 +26,7 @@ description: OneNote download sizes will be temporarily limited to 100 MB.
 
 To best support OneNote customers worldwide during these unprecedented times, Microsoft is temporarily adjusting the download limit of file attachments in OneNote. We do not expect this change to affect most users.
 
-## More information
+## Workarounds
 
 The maximum capacity of downloaded file attachments is temporarily set at 100 MB. Because most OneNote clients limit file uploads to 50 MB, this change shouldn't affect most attachments. 
 
@@ -39,8 +39,8 @@ Attaching files as cloud files enables others who have access to the notebook to
 
 - **OneNote for web.** Open your notebook in OneNote for the web (go to https://www.onenote.com, select the purple **Sign in** button), and then save the attachment by right-clicking the attached file and selecting **Save As**.
 
-- **OneNote desktop.** Use [OneNote 2016](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsupport.office.com%2Fen-us%2Farticle%2FInstall-or-reinstall-OneNote-2016-for-Windows-c08068d8-b517-4464-9ff2-132cb9c45c08%255d&data=02%7C01%7CTricia.Van%40microsoft.com%7Cfdfe575532b34c5d971208d7cf797256%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637205992829041026&sdata=qNoA9Ey7IuDT8eVDt1gdDCLO%2B5TbDJlI3ojuJwOOEZo%3D&reserved=0) or another desktop version of OneNote to download the attachment. 
+- **OneNote desktop.** Use [OneNote 2016](https://support.office.com/article/install-or-reinstall-onenote-2016-for-windows-c08068d8-b517-4464-9ff2-132cb9c45c08?ui=en-US&rs=en-US&ad=US) or another desktop version of OneNote to download the attachment.
 
 ## More information
 
-Still need help? Go to [Microsoft Community](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fanswers.microsoft.com%2F&data=02%7C01%7Cv-todmc%40microsoft.com%7C98910814456c474880f108d7cf62d97d%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637205895885805857&sdata=9%2FYStDGvrU5ZIYXB7guowmaPlKazab0U%2BTpiBIItDaQ%3D&reserved=0).
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
