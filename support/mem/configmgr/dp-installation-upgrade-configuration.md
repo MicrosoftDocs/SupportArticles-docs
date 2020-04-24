@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 4482728
 
 ## Introduction
 
-When troubleshooting DP installation and upgrade issues, it is important to remember that DP installation/upgrade is performed by a thread from the DP Upgrade Processing thread pool. Review the DP Installation/Upgrade process flow to understand how to identify the thread performing the DP installation/upgrade and filter the **DistMgr.log** for the identified thread. Review the filtered **DistMgr.log** to identify whether the DP Installation/Upgrade failed/succeeded and proceed accordingly.
+When troubleshooting DP installation and upgrade issues, it is important to remember that DP installation/upgrade is performed by a thread from the DP upgrade processing thread pool. Review the DP installation/upgrade process flow to understand how to identify the thread performing the DP installation/upgrade and filter the **DistMgr.log** for the identified thread. Review the filtered **DistMgr.log** to identify whether the DP installation/upgrade failed/succeeded and proceed accordingly.
 
 When troubleshooting DP removal issues, it is important to remember that the DP removal is performed by the DP Manager thread, which is single-threaded. This means that if multiple DPs are removed at the same time, the DP removal will be performed one by one and can take a long time if a large number of DPs are removed. Review the DP Removal process to understand how to identify the DP Manager thread and filter the **DistMgr.log** for the identified thread.
 
@@ -283,7 +283,7 @@ DistMgr starts up after reinstallation and detects the resetdps.trn file:
 
 ### Step 3: DistMgr upgrade processing thread starts DP upgrade worker threads to perform the DP upgrade
 
-DistMgr Upgrade Processing thread starts and starts DP upgrade worker threads to upgrade all the DPs. Each of these worker threads work simultaneously and upgrade multiple DPs at once. For DP upgrade processing, we can start up to 50 threads by default, however this is a configurable Site Control value and is governed by the `DPUpgradeThreadLimit` property for `SMS_DISTRIBUTION_MANAGER` component.
+DistMgr upgrade processing thread starts and starts DP upgrade worker threads to upgrade all the DPs. Each of these worker threads work simultaneously and upgrade multiple DPs at once. For DP upgrade processing, we can start up to 50 threads by default, however this is a configurable site control value and is governed by the `DPUpgradeThreadLimit` property for `SMS_DISTRIBUTION_MANAGER` component.
 
 > SMS_DISTRIBUTION_MANAGER    4984 (0x1378)    ~Starting the DP upgrade processing thread, thread ID = 0x7C (124)  
 > SMS_DISTRIBUTION_MANAGER    124 (0x7c)    DP upgrade processing thread: Started, will perform any pending work then will wait for additional work.  

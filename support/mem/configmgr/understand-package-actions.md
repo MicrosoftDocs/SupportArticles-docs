@@ -17,7 +17,7 @@ Package actions in content distribution are divided into the following:
 
 - **Distribute**
 
-  The first major action pertaining to content distribution is the Distribute action. This refers to the initial distribution of a package to a distribution point. This is triggered by the Distribute Content wizard in the Configuration Manager console. This will transfer all files in a package to the target distribution points, excluding those which are already present in the Content Library of the DP as part of another package. If the package contains any files that are already in the content library on the distribution point, those files are shared between multiple packages.
+  The first major action pertaining to content distribution is the Distribute action. This refers to the initial distribution of a package to a distribution point. This is triggered by the Distribute Content wizard in the Configuration Manager console. This will transfer all files in a package to the target distribution points, excluding those which are already present in the content library of the DP as part of another package. If the package contains any files that are already in the content library on the distribution point, those files are shared between multiple packages.
 
 - **Update**
 
@@ -155,7 +155,7 @@ On the receiving site, after receiving the *.PKN* file, DistMgr wakes up to proc
 
 The following steps outline the flow of events when a package is distributed to a DP in the primary site but the primary site server in question does **not** contain a copy of this package in the content library. This package was created on the central administration site and as a result, the central administration site is the package source site:
 
-### On the Package Source Site
+### On the package source site
 
 #### Step 1: The admin console adds the DP to the package by calling the `AddDistributionPoints` method on the `SMS_PackageWMI` class
 
@@ -303,7 +303,7 @@ The scheduler component monitors the send requests, and after Sender has finishe
 
 After this step, the sending site has no more work to do and the receiving site starts the processing of the package.
 
-### On the Destination Site
+### On the destination site
 
 #### Step 7: Despooler processes the PCK and SNI files
 
@@ -664,7 +664,7 @@ After the administrator distributed the package to a DP from the console, consol
 
 When this method is called, SMS Provider inserts a row in PkgServers with `Action` set to **2** (ADD) and a notification is created in the `PkgNotification` table.  
 
-### Step 2: If administrator distributes the package from a different primary site or the central administration site, DRS replicates changes to the Site in question
+### Step 2: If administrator distributes the package from a different primary site or the central administration site, DRS replicates changes to the site in question
 
 If the administrator distributed this package with the console connected to the central administration site or a different primary site, DRS replicates the changes in PkgServers to other sites.
 
@@ -742,7 +742,7 @@ After the PkgxferMgr job is created, SMSDBMON this time detects a change in `Dis
 
    Unlike a regular sending thread, pull DP sending thread (TID 11084) instructs the pull DP to start downloading the content by sending a notification. This is done in 4 phases.
 
-   **Phase 1:** Pull DP sending thread checks to see if the content being distributed to the pull DP is available on a source DP(s). If the content is not available on the source DP, the pull DP sending thread ends with the below message in the log and raises **Status Message ID 8212** which means '*This pull distribution point has no sources from which it can download content. We will try again later*.' Retries are attempted later based on Retry settings configured in **Software Distribution Component Configuration** > **Pull Distribution Point** tab.
+   **Phase 1:** Pull DP sending thread checks to see if the content being distributed to the pull DP is available on a source DP(s). If the content is not available on the source DP, the pull DP sending thread ends with the below message in the log and raises **Status Message ID 8212** which means '*This pull distribution point has no sources from which it can download content. We will try again later*.' Retries are attempted later based on **Retry** settings configured in **Software Distribution Component Configuration** > **Pull Distribution Point** tab.
 
    > ~Unable to find any source locations for one or more contents under package P0100009, for pull DP P01PDP1.CONTOSO.COM. Notification not sent.  
    > ~ PullDP notification failed. Failure count = 1/30, Restart time = 1/10/2019 2:00:42 AM Eastern Standard Time  
@@ -805,7 +805,7 @@ After the PkgxferMgr job is created, SMSDBMON this time detects a change in `Dis
    update DistributionJobs set DPID=8,SendAction = N'PullQueryResultAction', LastUpdateTime = N'2019/01/07 21:07:14' where JobID = 194
    ```
 
-   State Messages are used as the primary mechanism for distribution status reporting from the pull DP and the distribution job remains in the database until we are notified of success/failure status of the job. PkgXferMgr starts polling at scheduled intervals (configurable in the **Software Distribution Component Properties** > **Pull Distribution Point** tab) to check whether the content has been downloaded on the pull DP. Although the pull DP sends a state message containing the distribution status, PkgXferMgr also performs polling as a backup mechanism to get the distribution status in case pull DP cannot send a state message to the management point for some reason.
+   State messages are used as the primary mechanism for distribution status reporting from the pull DP and the distribution job remains in the database until we are notified of success/failure status of the job. PkgXferMgr starts polling at scheduled intervals (configurable in the **Software Distribution Component Properties** > **Pull Distribution Point** tab) to check whether the content has been downloaded on the pull DP. Although the pull DP sends a state message containing the distribution status, PkgXferMgr also performs polling as a backup mechanism to get the distribution status in case pull DP cannot send a state message to the management point for some reason.
 
 4. (On polling interval): Pull DP sending thread is created to poll the distribution status from the pull DP.
 

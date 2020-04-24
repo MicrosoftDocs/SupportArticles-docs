@@ -523,7 +523,7 @@ For this example, let's say that you distributed a package to a distribution poi
 
 - Content shows **Installed** on the pull DP but URL and URLSubPath for the pull DP is not populated in `ContentDPMap`, which causes issues with packages having SMB Access enabled.
 
-  When the Pull DP has the content successfully installed, it sends a state message that contains the data necessary to update the `URL/URLSubPath` values in `ContentDPMap`. This happens when the pull DP response is processed. Review steps 16-22 in [Distribute a package to pull DP](understand-package-actions.md#distribute-a-package-to-pull-dp) to understand the flow and review the relevant logs to investigate why the state message is not getting processed. Most likely cause for this issue is either a backlog of state messages in the `\MP\outboxes\StateMsg.box` on the management point or MPFDM failing to copy files to the site server due to permission issues.  
+  When the pull DP has the content successfully installed, it sends a state message that contains the data necessary to update the `URL/URLSubPath` values in `ContentDPMap`. This happens when the pull DP response is processed. Review steps 16-22 in [Distribute a package to pull DP](understand-package-actions.md#distribute-a-package-to-pull-dp) to understand the flow and review the relevant logs to investigate why the state message is not getting processed. Most likely cause for this issue is either a backlog of state messages in the `\MP\outboxes\StateMsg.box` on the management point or MPFDM failing to copy files to the site server due to permission issues.  
 
 ## Missing content files in content library
 

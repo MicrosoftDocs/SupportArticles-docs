@@ -6,7 +6,7 @@ ms.prod-support-area-path:
 ---
 # Components and threads for content distribution
 
-This article helps you understand components and threads for Content Distribution.
+This article helps you understand components and threads for content distribution.
 
 _Original product version:_ &nbsp; Configuration Manager current branch, Microsoft System Center 2012 Configuration Manager, Microsoft System Center 2012 R2 Configuration Manager  
 _Original KB number:_ &nbsp; 4482728
@@ -261,7 +261,7 @@ It is recommended to set aside 10 threads for each site that Sender will communi
 
 In Configuration Manager, you can configure a schedule and set specific throttling settings for remote distribution points as well as for file replication routes for sites. The controls for scheduling and throttling to the remote distribution point are similar to the settings for a standard sender address, but in this case, the settings are used by a component called Package Transfer Manager.
 
-For the Package Transfer Manager component (for *Site Server* - > *DP*), the throttling settings are configured in the properties for a standard Distribution Point that is not on a site server.
+For the Package Transfer Manager component (for *Site Server* - > *DP*), the throttling settings are configured in the properties for a standard distribution point that is not on a site server.
 
 For the Sender component (for *Site Server* <-> *Site Server*), the throttling settings are configured in the properties of the file replication route under **Hierarchy Configuration** > **File Replication**.
 
