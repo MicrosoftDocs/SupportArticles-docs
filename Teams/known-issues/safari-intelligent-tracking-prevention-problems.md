@@ -30,4 +30,6 @@ While in preview, you may experience issues related to Safari's [Intelligent Tra
 
 Teams is now available in preview on Safari 11.1+ on macOS. To mitigate issues with Intelligent Tracking Prevention while Safari browser support is in preview, go to **Preferences** > **Privacy**  and uncheck the **Prevent cross-site tracking** setting. Then, close your browser and navigate back to teams.microsoft.com in Safari. 
 
-Still need help? Go to [Microsoft Community](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fanswers.microsoft.com%2F&data=02%7C01%7Cv-todmc%40microsoft.com%7C98910814456c474880f108d7cf62d97d%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637205895885805857&sdata=9%2FYStDGvrU5ZIYXB7guowmaPlKazab0U%2BTpiBIItDaQ%3D&reserved=0).
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
