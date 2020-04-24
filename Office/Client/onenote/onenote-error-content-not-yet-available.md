@@ -29,7 +29,7 @@ ms.reviewer: Desribes resolutions to the OneNote error message "Content Not Yet 
 
 You see the following error when trying to access a OneNote page:
 
-> Content Not Yet Available
+> **Content Not Yet Available**<br/>
 > Sorry, it looks like this page was added from another computer and hasn't synced yet. Click here or press ENTER to reload the page.
 
    ![Content Not Yet Available error](./media/onenote-error-content-not-yet-available/onenote-error-content-not-yet-available-1.jpg)
