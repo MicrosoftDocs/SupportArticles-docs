@@ -9,7 +9,7 @@ ms.topic: article
 ms.prod: office 365
 localization_priority: Normal
 ms.custom: 
-- CI 110828, CI 114761, CI 115829, CI 116348
+- CI 110828, CI 114761, CI 115829, CI 116348, CI 117120
 - CSSTroubleshoot
 ms.reviewer: gregmans
 appliesto:
@@ -17,7 +17,6 @@ appliesto:
 - Outlook
 search.appverid: MET150
 ---
-
 # How to install and maintain Microsoft Support and Recovery Assistant (SaRA) from a network share
 
 > [!NOTE]
@@ -81,6 +80,7 @@ The following table provides the versions of SaRA that were made available on th
 
 |Release date|SaRA version|
 |--------|--------|
+|April 23, 2020|17.00.4589.001|
 |April 6, 2020|17.00.4478.003|
 |March 20, 2020|17.00.4376.007|
 |March 11, 2020|17.00.4376.002|
@@ -89,3 +89,4 @@ The following table provides the versions of SaRA that were made available on th
 |January 14, 2020|17.00.4058.000|
 |December 9, 2019|17.00.3891.009|
 |December 2, 2019|17.00.3711.012|
+|||
