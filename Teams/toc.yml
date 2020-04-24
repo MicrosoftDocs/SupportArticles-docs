@@ -91,8 +91,6 @@
       href: ./known-issues/problems-using-teams-on-ios-13-beta.md
     - name: Unable to see auto-favorited channels in the Teams mobile app
       href: ./known-issues/cant-see-auto-favorited-channels-in-mobile.md
-    - name: Windows phone app for Teams will beretired
-      href: ./teams-mobile/teams-for-windows-phone-is-retiring.md
   - name: OneNote Integration
     items:
     - name: Issue with accessing notebooks
