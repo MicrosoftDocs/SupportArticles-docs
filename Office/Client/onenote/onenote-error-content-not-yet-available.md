@@ -30,7 +30,7 @@ ms.reviewer: Desribes resolutions to the OneNote error message "Content Not Yet 
 You see the following error when trying to access a OneNote page:
 
 > Content Not Yet Available
-> Sorry, it looks like this page was added from another computer and hasn't synced yet. Click here or press ENTER to reload the page.
+> Sorry, it looks like this page was added from another computer and hasn't synced yet. Click here or press ENTER to reload the page.<br/>
 ![Content Not Yet Available error](./media/onenote-error-content-not-yet-available/onenote-error-content-not-yet-available-1.jpg)
 
 ## Cause
@@ -69,19 +69,19 @@ A successful sync icon can appear as either of the two images below:
 > [!NOTE]
 > All screenshot images are taken from OneNote for Windows 10.
 
-![Successful sync icon.](./media/onenote-error-content-not-yet-available/onenote-error-content-not-yet-available-2.jpg)
+![Successful sync icon.](./media/onenote-error-content-not-yet-available/onenote-error-content-not-yet-available-2.jpg)<br/>
 ![Saved message.](./media/onenote-error-content-not-yet-available/onenote-error-content-not-yet-available-3.jpg)
  
 ### Other OneNote sync status messages: 
 
-- A page sync is in progress: 
+- A page sync is in progress: <br/>
 ![Notebook sync in progress.](./media/onenote-error-content-not-yet-available/onenote-error-content-not-yet-available-4.jpg)
 
-- A page has been saved offline:
-![Notebook has been saved offline.](./media/onenote-error-content-not-yet-available/onenote-error-content-not-yet-available-5.jpg)
+- A page has been saved offline:<br/>
+![Notebook has been saved offline.](./media/onenote-error-content-not-yet-available/onenote-error-content-not-yet-available-5.jpg)<br/>
 ![Notebook has been saved offline.](./media/onenote-error-content-not-yet-available/onenote-error-content-not-yet-available-6.jpg)
  
-- A page has not been saved due to network issues and is trying to connect:
+- A page has not been saved due to network issues and is trying to connect:<br/>
 ![Notebook has network issues and is trying to connect.](./media/onenote-error-content-not-yet-available/onenote-error-content-not-yet-available-7.jpg)
  
 ## More information
