@@ -19,12 +19,42 @@
   - name: ASP support in Windows
     href: asp-support-windows.md
 
+- name: Health, Diagnostic, and Performance Features
+  items:
+  - name: Windows Server AppFabric Cache diagnostic
+    href: windows-server-appfabric-cache.md
+
 - name: IISAdmin Service and Inetinfo Process Operation
   items:
   - name: Can't stop HTTP service
     href: http-service-fail-stopped.md
 
+- name: Site Behavior and Performance
+  items:
+  - name: Async WCF service uses wrong impersonation
+    href: asynchronous-wcf-service-use-wrong-impersonation.md
+  - name: Expression Encoder crashes
+    href: expression-encoder-crash-live-broadcasting.md
+  - name: FtpPutFile always returns success
+    href: ftpputfile-success-451-status.md
+  - name: WCF REST service generates metadata in WSDL
+    href: wcf-rest-generate-metadata-wsdl.md
+
+- name: WWW Administration and Management
+  items:
+  - name: Enable SSL for all customers
+    href: enable-ssl-all-customers-iis.md
+  - name: Read and analyze a client certificate
+    href: analyze-client-certificate.md
+
 - name: WWW Authentication and Authorization
   items:
   - name: Access Denied when calling web service
     href: access-denied-call-web-service.md
+  - name: Changing IP/port causes other sites fail
+    href: change-ip-port-wildcard certificate-site-fail.md
+
+- name: WWW Service and Svchost Operation
+  items:
+  - name: WinHTTP SDP package information
+    href: disable-winhttp-tracing-sdp.md
