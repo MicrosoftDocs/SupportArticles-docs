@@ -72,7 +72,7 @@
   items:
   - name: Access Denied when calling web service
     href: access-denied-call-web-service.md
-  - name: Can't import SSL .pfx file to personal certidicate store
+  - name: Can't import SSL .pfx file to personal certificate store
     href: cannot-import-ssl-pfx-local-certificate.md
   - name: Changing IP/port causes other sites fail
     href: change-ip-port-wildcard certificate-site-fail.md

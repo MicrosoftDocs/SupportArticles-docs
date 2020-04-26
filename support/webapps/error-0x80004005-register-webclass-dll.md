@@ -5,7 +5,7 @@ ms.date: 03/24/2020
 ms.prod-support-area-path: 
 ms.reviewer: MCLAY
 ---
-# Error 0x80004005 when you try to register a `WebClass` DLL
+# Error 0x80004005 when you try to register a WebClass DLL
 
 This article provides information about resolving an issue that an unexpected error may be thrown when you register a `WebClass` DLL.
 
