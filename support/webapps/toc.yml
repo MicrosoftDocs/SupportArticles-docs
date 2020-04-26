@@ -11,16 +11,33 @@
 
 - name: Development
   items:
+  - name: Add an HTTP response header to a web site
+    href: add-http-response-header-web-site.md
   - name: COM Objects called from ASP can't be printed
     href: asp-com-objects-fail-to-print.md
+  - name: Error 0x80004005 when registering WebClass
+    href: error-0x80004005-register-webclass-dll.md
+  - name: Pre-compiled WCF workflow service activation fails
+    href: pre-compiled-wcf-workflow-activation-fails.md
+
+- name: FTP Authentication and Authorization
+  items:
+  - name: Use FTP Utility in a typical session
+    href: how-to-use-ftp-utility.md
 
 - name: General
   items:
   - name: ASP support in Windows
     href: asp-support-windows.md
+  - name: Expression Web 4.0 FAQs
+    href: expression-web-faq.md
 
 - name: Health, Diagnostic, and Performance Features
   items:
+  - name: HTTP error 403.16 when accessing a website
+    href: http-403-forbidden-access-website.md
+  - name: HTTP error 403.7 when you run web applications
+    href: http-error-403-7-forbidden-web-app.md
   - name: Windows Server AppFabric Cache diagnostic
     href: windows-server-appfabric-cache.md
 
@@ -33,6 +50,8 @@
   items:
   - name: Async WCF service uses wrong impersonation
     href: asynchronous-wcf-service-use-wrong-impersonation.md
+  - name: Error when calling MTS COM from ASP
+    href: server-execution-fail-call-mts-com-asp.md
   - name: Expression Encoder crashes
     href: expression-encoder-crash-live-broadcasting.md
   - name: FtpPutFile always returns success
@@ -42,6 +61,8 @@
 
 - name: WWW Administration and Management
   items:
+  - name: Configure intermediate certificates in IIS
+    href: configure-intermediate-certificates-iis.md
   - name: Enable SSL for all customers
     href: enable-ssl-all-customers-iis.md
   - name: Read and analyze a client certificate
@@ -51,6 +72,8 @@
   items:
   - name: Access Denied when calling web service
     href: access-denied-call-web-service.md
+  - name: Can't import SSL .pfx file to personal certidicate store
+    href: cannot-import-ssl-pfx-local-certificate.md
   - name: Changing IP/port causes other sites fail
     href: change-ip-port-wildcard certificate-site-fail.md
 
