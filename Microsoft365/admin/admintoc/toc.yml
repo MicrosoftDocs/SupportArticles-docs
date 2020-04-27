@@ -97,7 +97,7 @@
       href: ../authentication/office-365-user-with-name-already-exists.md
     - name: Authentication automatically fails
       href: ../authentication/automatic-authentication-fails.md
-    - name: Certificate based authenticatio -fails on iOS
+    - name: Certificate-based authentication fails on iOS
       href: ../authentication/certificate-based-authentication-fails-on-ios.md
     - name: Certificate warning from AD FS
       href: ../authentication/certificate-warning-from-ad-fs.md
@@ -105,6 +105,8 @@
       href: ../authentication/connection-issue-when-sign-in-office-2016.md
     - name: Deleted app passwords still work
       href: ../authentication/deleted-authentication-passwords-still-work.md
+    - name: Disabling ADAL or WAM not recommended for fixing Office sign-in or activation issues
+      href: ../administration/disabling-adal-wam-not-recommended.md
     - name: Error when federated users sign out
       href: ../authentication/problem-with-websites-security-error.md
     - name: Federated users account issues
