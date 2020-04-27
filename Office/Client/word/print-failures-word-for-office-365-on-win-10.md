@@ -23,31 +23,12 @@ description: Describes how to troubleshoot problems when printing documents from
 # Troubleshoot print failures in Word for Office 365 on Windows 10
 
 > [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+> - **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+> - For previous versions of this article to troubleshoot Word on Windows, see [Troubleshoot print failures in Word](https://docs.microsoft.com/office/troubleshoot/word/print-failures-in-word). 
 
 ## Summary
 
 This article suggests ways in which you can diagnose and resolve issues when you cannot print a Microsoft Word for Office 365 document on Windows 10.
-
-> [!NOTE]
-> For previous versions of this article to troubleshoot Word on Windows, see [Troubleshoot print failures in Word](https://docs.microsoft.com/office/troubleshoot/word/print-failures-in-word). 
-
-## More Information
-
-Examples of print failure are as follows:
-- You receive error messages and other messages when you try to print a file.
-- The printer does not respond.
-- Files print as meaningless symbols.
-
-> [!NOTE]
-> This article does not discuss printer output issues, such as envelope-positioning problems, missing graphics, and inaccurate page numbers.
-
-To resolve a print failure in Word, you must determine its cause. Causes typically fit into one of the following categories:
-- Damaged documents or damaged content in documents.
-- The Word program itself.
-- The printer driver.
-- The Windows operating system.
-- Connectivity or hardware.
 
 *Try the following options to help determine the cause of your printing failure. Select the arrow image to see more detailed instructions about that option.*
 
@@ -161,6 +142,22 @@ Remove all media (USB drive, DVD, CD) from your computer.</li>
 </tr>
 </table>
 
+## More Information
+
+Examples of print failure are as follows:
+- You receive error messages and other messages when you try to print a file.
+- The printer does not respond.
+- Files print as meaningless symbols.
+
+> [!NOTE]
+> This article does not discuss printer output issues, such as envelope-positioning problems, missing graphics, and inaccurate page numbers.
+
+To resolve a print failure in Word, you must determine its cause. Causes typically fit into one of the following categories:
+- Damaged documents or damaged content in documents.
+- The Word program itself.
+- The printer driver.
+- The Windows operating system.
+- Connectivity or hardware.
 
 ## Detailed view of the Options
 
