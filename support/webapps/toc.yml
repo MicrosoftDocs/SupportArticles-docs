@@ -26,10 +26,10 @@
   items:
   - name: Changes to service reference not update EndpointConfigurationName
     href: service-reference-endpointconfigurationname.md
-  - name: Configure SQL Server to store ASP.NET session state
-    href: configure-sql-store-asp-net-session-state.md
   - name: COM Objects called from ASP can't be printed
     href: asp-com-objects-fail-to-print.md
+  - name: Configure SQL Server to store ASP.NET session state
+    href: configure-sql-store-asp-net-session-state.md
   - name: Disable debugging for ASP.NET applications
     href: disable-debugging-asp-net-application.md
   - name: How to edit the Web.config file

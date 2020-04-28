@@ -55,7 +55,7 @@ _Original KB number:_ &nbsp; 2509312
 
     Expression Web 4 provides seamless integration with Visual Studio 2008 & 2010 and ASP.NET 4, enabling designers and developers to work together using products that they are most comfortable with. Designers and Web developers can easily lay out XHTML, CSS, JavaScript, and dynamic functionality using Expression Web 4 and take advantage of many ASP.NET specific features like Master Pages for templating, and drag and drop controls. The project can then be handed over to Visual Studio developers, enabling them to extend the functionality through advanced server-side code and business logic.
 
-## Support questions
+## Support question
 
 **Is customer support offered with Expression Trial versions?**
 
