@@ -30,13 +30,13 @@ When you start OneNote for the first time, you see the following errors if you c
 - Delete the Notebook Cache
 - Delete Settings
 
-A sign-in prompt appears at the first launch:
+A sign-in prompt appears at the first launch:<br/>
 ![Sign-in prompt at first launch.](couldnt-start-onenote-the-last-time-error/couldnt-start-onenote-the-last-time-error-1.png)
 
-Error message:
+Error message:<br/>
 !["We couldn't start OneNote" error message.](couldnt-start-onenote-the-last-time-error/couldnt-start-onenote-the-last-time-error-2.png)
 
-If you select **Delete Notebook Cache** or **Delete Settings**, OneNote will start, but displays the message “You don’t have any open notebooks.” 
+If you select **Delete Notebook Cache** or **Delete Settings**, OneNote will start, but displays the message “You don’t have any open notebooks.”<br/>
 !["You don't have any open notebooks" error message.](couldnt-start-onenote-the-last-time-error/couldnt-start-onenote-the-last-time-error-3.gif)
 
 ## Cause
