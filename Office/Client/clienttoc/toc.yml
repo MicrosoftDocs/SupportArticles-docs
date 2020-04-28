@@ -893,7 +893,7 @@
       href: ../onenote/temp-change-onenote-file-size-download.md
     - name: Warning when a notebook is in an offline location
       href: ../onenote/notebook-offline-location.md
-    - name: '"We couldn't start OneNote the last time you tried” error'
+    - name: '"We couldn\'t start OneNote the last time you tried” error'
       href: ../onenote/couldnt-start-onenote-the-last-time-error.md
   - name: Performance
     items:
