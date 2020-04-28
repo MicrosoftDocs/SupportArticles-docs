@@ -16,17 +16,17 @@ _Original KB number:_ &nbsp; 942061
 
 You have a website that's hosted on IIS 7.0. When you try to access the site through a web browser, you receive an error message that resembles one of the following examples.
 
-Error message 1
+- Error message 1
 
-> Server Error in Application "**application name**"  
-> HTTP Error 403.16 - Forbidden  
-> HRESULT: 0x800b0109  
-> Description of HRESULT  
-> Your client certificate is either not trusted or is invalid.
+    > Server Error in Application "**application name**"  
+    > HTTP Error 403.16 - Forbidden  
+    > HRESULT: 0x800b0109  
+    > Description of HRESULT  
+    > Your client certificate is either not trusted or is invalid.
 
-Error message 2
+- Error message 2
 
-> HTTP 403.16 Client certificate is untrusted or invalid. Smart Card Users Cannot Authenticate.403 Forbidden
+    > HTTP 403.16 Client certificate is untrusted or invalid. Smart Card Users Cannot Authenticate.403 Forbidden
 
 ## Cause 1: Root certificate isn't in Trusted Root Certification Authorities Certificate store
 

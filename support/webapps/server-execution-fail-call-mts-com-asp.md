@@ -9,7 +9,7 @@ ms.reviewer: jmeier
 
 This article provides information about resolving the issue that server execution fails when you call an Microsoft Transaction Server (MTS) Component Object Model (COM) component from Active Server Pages (ASP)
 
-_Original product version:_ &nbsp;  
+_Original product version:_ &nbsp; Internet Information Services  
 _Original KB number:_ &nbsp; 241057
 
 ## Symptoms

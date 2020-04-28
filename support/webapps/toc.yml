@@ -8,6 +8,8 @@
   items:
   - name: Can't create object when ASP applications run
     href: cannot-create-object-asp-run.md
+  - name: Set ASP locale ID per the browser's language
+    href: set-asp-locale-id-browser-language.md
 
 - name: Development
   items:
@@ -22,6 +24,18 @@
 
 - name: FTP Authentication and Authorization
   items:
+  - name: Changes to service reference not update EndpointConfigurationName
+    href: service-reference-endpointconfigurationname.md
+  - name: Configure SQL Server to store ASP.NET session state
+    href: configure-sql-store-asp-net-session-state.md
+  - name: COM Objects called from ASP can't be printed
+    href: asp-com-objects-fail-to-print.md
+  - name: Disable debugging for ASP.NET applications
+    href: disable-debugging-asp-net-application.md
+  - name: How to edit the Web.config file
+    href: edit-web-config-asp-dot-net.md
+  - name: Impersonation in ASP.NET application
+    href: impersonation-asp-net.md
   - name: Use FTP Utility in a typical session
     href: how-to-use-ftp-utility.md
 
@@ -34,6 +48,10 @@
 
 - name: Health, Diagnostic, and Performance Features
   items:
+  - name: Create Web.config for ASP.NET applications
+    href: create-web-config-asp-dot-net.md
+  - name: HTTP Bad Request error in CLM portal
+    href: clm-http-bad-request.md
   - name: HTTP error 403.16 when accessing a website
     href: http-403-forbidden-access-website.md
   - name: HTTP error 403.7 when you run web applications
@@ -54,6 +72,8 @@
     href: server-execution-fail-call-mts-com-asp.md
   - name: Expression Encoder crashes
     href: expression-encoder-crash-live-broadcasting.md
+  - name: FileNotFoundException when client application calls web service
+    href: filenotfindexception-asp-net-call-web-service.md
   - name: FtpPutFile always returns success
     href: ftpputfile-success-451-status.md
   - name: WCF REST service generates metadata in WSDL
@@ -67,6 +87,8 @@
     href: enable-ssl-all-customers-iis.md
   - name: Read and analyze a client certificate
     href: analyze-client-certificate.md
+  - name: Restrict users from accessing to web resources
+    href: restrict-users-access-web-resource.md
 
 - name: WWW Authentication and Authorization
   items:
