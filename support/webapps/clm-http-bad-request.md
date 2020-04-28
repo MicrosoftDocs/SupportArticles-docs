@@ -33,11 +33,9 @@ Configure the HTTP registry keys `MaxFieldLength` and `MaxRequestBytes` on the I
 > [!IMPORTANT]
 > Changing these registry keys is considered extremely dangerous. Increasing these keys' values will cause HTTP.sys to use more memory and may increase vulnerability to malicious attacks. If changing these keys is your only option, don't set their values larger than they need to be. Information on determining how large the request headers are and therefore what value to set the registry keys is found later in this article.
 
-For more information on the HTTP.sys registry keys for IIS, see the following article:  
-[Http.sys registry settings for IIS](https://support.microsoft.com/help/820129)
+- For more information on the HTTP.sys registry keys for IIS, see [Http.sys registry settings for IIS](https://support.microsoft.com/help/820129).
 
-For more information on HTTP.sys error logging, see the following article:  
-[Error logging in HTTP APIs](https://support.microsoft.com/help/820729)
+- For more information on HTTP.sys error logging, see [Error logging in HTTP APIs](https://support.microsoft.com/help/820729).
 
 ## Determine HTTP request size
 

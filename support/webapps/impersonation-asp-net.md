@@ -60,25 +60,25 @@ To work around this problem, use one of the following methods:
 
 To impersonate the authenticating user (`User.Identity`) only when you run a particular section of code, you can use the code to follow. This method requires that the authenticating user identity is of type `WindowsIdentity`.
 
-Visual Basic .NET
+- Visual Basic .NET
 
-```vb
-Dim impersonationContext As System.Security.Principal.WindowsImpersonationContext
-Dim currentWindowsIdentity As System.Security.Principal.WindowsIdentity
-currentWindowsIdentity = CType(User.Identity, System.Security.Principal.WindowsIdentity)
-impersonationContext = currentWindowsIdentity.Impersonate()
-'Insert your code that runs under the security context of the authenticating user here.
-impersonationContext.Undo()
-```
+    ```vb
+    Dim impersonationContext As System.Security.Principal.WindowsImpersonationContext
+    Dim currentWindowsIdentity As System.Security.Principal.WindowsIdentity
+    currentWindowsIdentity = CType(User.Identity, System.Security.Principal.WindowsIdentity)
+    impersonationContext = currentWindowsIdentity.Impersonate()
+    'Insert your code that runs under the security context of the authenticating user here.
+    impersonationContext.Undo()
+    ```
 
-Visual C# .NET
+- Visual C# .NET
 
-```csharp
-System.Security.Principal.WindowsImpersonationContext impersonationContext;
-impersonationContext = ((System.Security.Principal.WindowsIdentity)User.Identity).Impersonate();
-//Insert your code that runs under the security context of the authenticating user here.
-impersonationContext.Undo();
-```
+    ```csharp
+    System.Security.Principal.WindowsImpersonationContext impersonationContext;
+    impersonationContext = ((System.Security.Principal.WindowsIdentity)User.Identity).Impersonate();
+    //Insert your code that runs under the security context of the authenticating user here.
+    impersonationContext.Undo();
+    ```
 
 ## Impersonate a specific user in code
 

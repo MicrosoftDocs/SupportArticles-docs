@@ -31,8 +31,8 @@ To restrict access to ASP.NET applications that use forms authentication, edit t
     > [!NOTE]
     > If the *Web.config* file doesn't exist, create a *Web.config* file for the ASP.NET application.
 
-2. If you want to control authorization for the whole application, add the `<authorization>` configuration element to the `<system.web>` element in the *Web.config*file.
-3. In the `<authorization>` element, add the `<allow>` configuration element and the `<deny>` configuration element. Use the `users` attribute to specify a comma-delimited list of user names. You can use a question mark (?) as a wildcard character that matches any user name. For example, the following code denies access to all users except user1 and user2:
+2. If you want to control authorization for the whole application, add the `<authorization>` configuration element to the `<system.web>` element in the *Web.config* file.
+3. In the `<authorization>` element, add the `<allow>` configuration element and the `<deny>` configuration element. Use the `users` attribute to specify a comma-delimited list of user names. You can use a question mark (?) as a wildcard character that matches any user name. For example, the following code denies access to all users except `user1` and `user2`:
 
     ```xml
     <authorization>

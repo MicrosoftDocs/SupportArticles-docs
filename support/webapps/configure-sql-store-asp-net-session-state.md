@@ -20,7 +20,7 @@ The following list outlines the recommended hardware, software, network infrastr
 - Microsoft Internet Information Services (IIS)
 - Microsoft SQL Server
 
-## Configure SQL Server for ASP.NET SQL server session state
+## Configure SQL Server for ASP.NET SQL Server session state
 
 The following steps describe how to run the *InstallSqlState.sql* and the *UninstallSqlState.sql* script files to configure SQL Server mode session state management.
 
