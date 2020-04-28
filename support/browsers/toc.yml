@@ -1,110 +1,152 @@
 - name: Internet Explorer troubleshoot articles
   href: welcome-support-browsers.md
-  
+
 - name: (Back up to Support hub page)
   href: ../index.yml
 
 - name: Administration
   items:
-  - name: Disable IE password caching
-    href: disable-ie-password-caching.md
+    - name: Disable IE password caching
+      href: disable-ie-password-caching.md
 
-  - name: IE advanced settings
-    href: advanced-settings-in-ie.md
+    - name: IE advanced settings
+      href: advanced-settings-in-ie.md
 
-  - name: IEAK 9 supported languages 
-    href: ieak-9-supported-languages.md
+    - name: Cannot change home page
+      href: cannot-change-home-page-in-ie.md
 
-  - name: Install IE ActiveX Controls
-    href: install-activex-control-in-ie.md
+    - name: IEAK 9 supported languages
+      href: ieak-9-supported-languages.md
 
-  - name: Check IE version
-    href: check-ie-version.md  
+    - name: Install IE ActiveX Controls
+      href: install-activex-control-in-ie.md
+
+    - name: Check IE version
+      href: check-ie-version.md
+
+    - name: PAC file isn't read
+      href: cannot-read-pac-file.md
 
 - name: Connectivity and Navigation
   items:
-  - name: IE control Web page caching
-    href: prevent-caching-in-ie.md
+    - name: IE control Web page caching
+      href: prevent-caching-in-ie.md
 
-  - name: Operation aborted error
-    href: operation-aborted-web-page.md
+    - name: Intranet options are enabled automatically
+      href: intranet-options-enabled-automatically.md
 
-  - name: Page Cannot be Displayed error
-    href: page-cannot-be-displayed.md
+    - name: Operation aborted error
+      href: operation-aborted-web-page.md
+
+    - name: Change keep-alive time-out
+      href: change-keep-alive-time-out.md
+
+    - name: Page Cannot be Displayed error
+      href: page-cannot-be-displayed.md
 
 - name: Core Features
   items:
-  - name: IE dot matrix printer wrong font 
-    href: dot-matrix-printer-wrong-output-font.md
+    - name: IE dot matrix printer wrong font
+      href: dot-matrix-printer-wrong-output-font.md
 
-  - name: How to set Fullscreen mode 
-    href: set-fullscreen-ie.md
+    - name: AutoComplete not working in IE
+      href: autocomplete-not-work-in-ie.md
 
-  - name: XML file opens in IE
-    href: xml-files-open-in-ie-not-office.md
+    - name: Can't print from the web as another user
+      href: cannot-print-from-web-using-another-user.md
 
-  - name: RSS feeds not listed or subscribed
-    href: rss-feeds-not-listed-or-cannot-subscribe.md
+    - name: How to set Fullscreen mode
+      href: set-fullscreen-ie.md
 
-  - name: IE Kiosk mode
-    href: use-kiosk-mode-in-ie.md 
+    - name: XML file opens in IE
+      href: xml-files-open-in-ie-not-office.md
 
-  - name: IE shortcut not maximized from Start
-    href: ie-not-maximized-if-open-from-start.md
+    - name: RSS feeds not listed or subscribed
+      href: rss-feeds-not-listed-or-cannot-subscribe.md
+
+    - name: IE Kiosk mode
+      href: use-kiosk-mode-in-ie.md
+
+    - name: IE shortcut not maximized from Start
+      href: ie-not-maximized-if-open-from-start.md
 
 - name: Development and Website Issues
   items:
-  - name: Wrong Web page with frames
-    href: ie-wrongly-show-web-page-with-frames.md
+    - name: Wrong Web page with frames
+      href: ie-wrongly-show-web-page-with-frames.md
 
-  - name: Wrong character set used for html page
-    href: ie-uses-wrong-character-set-for-html-page.md
+    - name: Cannot open in new tab or window
+      href: cannot-open-in-new-tab-or-window.md
 
-  - name: IE runtime errors
-    href: ie-runtime-errors.md
+    - name: Isolation values don't take effect
+      href: unicode-bidi-isolation-not-supported.md
 
-  - name: Textchanged event does not fire
-    href: textchanged-event-not-fire-with-autocomplete.md
+    - name: Onload event not show if back
+      href: onload-event-not-occur-if-back.md
 
-  - name: FTP WinInet APIs in VB application
-    href: using-ftp-wininet-apis-in-vb.md
+    - name: BHOs and toolbars not working
+      href: third-party-products-break.md
 
-  - name: Services not support WinInet
-    href: wininet-not-supported-in-services.md
+    - name: Table layout changes in standards mode
+      href: wrong-table-layput-in-standards-mode.md
 
-  - name: FTP CERN-based proxy with WinInet API
-    href: ftp-with-cern-based-proxy-using-wininet-api.md
+    - name: Cannot load .NET control
+      href: net-control-not-load-in-internet-zone.md
 
-  - name: Webpage wrong CSS styles
-    href: css-styles-webpage-renders-wrongly.md
-  
-  - name: Download files over 2 GB fails
-    href: cannot-download-files-over-2-gb.md
+    - name: Enable file download for MIME types
+      href: raise-file-download-for-mime-types.md
 
-  - name: Cannot access FTP sites
-    href: ie-cannot-visit-ftp-sites.md
+    - name: Wrong character set used for html page
+      href: ie-uses-wrong-character-set-for-html-page.md
 
-  - name: Cannot read location object
-    href: permission-denied-read-location-object.md  
+    - name: IE runtime errors
+      href: ie-runtime-errors.md
+
+    - name: Textchanged event does not fire
+      href: textchanged-event-not-fire-with-autocomplete.md
+
+    - name: FTP WinInet APIs in VB application
+      href: using-ftp-wininet-apis-in-vb.md
+
+    - name: Services not support WinInet
+      href: wininet-not-supported-in-services.md
+
+    - name: FTP CERN-based proxy with WinInet API
+      href: ftp-with-cern-based-proxy-using-wininet-api.md
+
+    - name: Webpage wrong CSS styles
+      href: css-styles-webpage-renders-wrongly.md
+
+    - name: Download files over 2 GB fails
+      href: cannot-download-files-over-2-gb.md
+
+    - name: Cannot access FTP sites
+      href: ie-cannot-visit-ftp-sites.md
+
+    - name: Cannot read location object
+      href: permission-denied-read-location-object.md
 
 - name: Security and Privacy
   items:
-  - name: CSP is loading for certificate request
-    href: csp-shows-loading-for-certificate-request.md
+    - name: CSP is loading for certificate request
+      href: csp-shows-loading-for-certificate-request.md
 
-  - name: Cannot view secure web sites
-    href: cannot-view-secure-web-sites-in-ie.md
+    - name: Cannot sign in to VSTS
+      href: cannot-sign-in-to-vsts.md
 
-  - name: Java security setup in IE
-    href: set-java-security-in-ie.md
+    - name: Cannot view secure web sites
+      href: cannot-view-secure-web-sites-in-ie.md
 
-  - name: Cannot visit SSL sites
-    href: ssl-sites-cannot-find-server-error.md
+    - name: Java security setup in IE
+      href: set-java-security-in-ie.md
 
-  - name: IE enhanced security effects
-    href: ie-enhanced-security-effects.md  
+    - name: Cannot visit SSL sites
+      href: ssl-sites-cannot-find-server-error.md
+
+    - name: IE enhanced security effects
+      href: ie-enhanced-security-effects.md
 
 - name: Stability and Performance
   items:
-  - name: IE 8 Diagnostics collected information
-    href: sdp-3d0cc9543-9d32-4312-9519-274f34305f1f-windows.md
+    - name: IE Diagnostics collected information
+      href: ie-diagnostics-collected-data.md
