@@ -26,7 +26,7 @@ Assume that you use the Microsoft Skype for Business client in a Citrix VDI envi
 > [!IMPORTANT]
 > Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur. 
 
-To fix this issue, install the April 2, 2019 update for Skype for Business for a Click-to-Run installation. To do this, open an Office program, such as Word, and then select **File **> **Account **> **Update Options **> **Update Now**.
+To fix this issue, install the April 2, 2019 update for Skype for Business for a Click-to-Run installation. To do this, open an Office program, such as Word, and then select **File** > **Account** > **Update Options** > **Update Now**.
 
 > [!NOTE]
 > If "Update Options" does not exist in the client, this is an .msi installation.
