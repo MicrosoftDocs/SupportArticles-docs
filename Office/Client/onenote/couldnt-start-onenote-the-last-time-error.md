@@ -22,7 +22,7 @@ description: How to resolve the error "We couldn't start OneNote the last time y
 
 # "We couldn't start OneNote the last time you tried” error
 
-*Written and maintained by [Gaurav Singh](https://social.technet.microsoft.com/profile/gaurav0327/), Support Engineer Office Core*
+*Written and maintained by [Gaurav Singh](https://social.technet.microsoft.com/profile/gaurav0327/), Support Engineer Office Core*.
 
 ## Symptoms
 
