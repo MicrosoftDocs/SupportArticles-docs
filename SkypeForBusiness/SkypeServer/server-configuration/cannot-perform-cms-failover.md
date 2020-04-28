@@ -39,7 +39,7 @@ This issue occurs when you perform the second failover immediately after the pre
 
 ### Scenario 3
 
-The ActiveMasterFqdn status is blank when you run the **[Get-CsManagementStoreReplicationStatus –CentralManagementStoreStatus](https://technet.microsoft.com/library/gg399052.aspx) **cmdlet. 
+The ActiveMasterFqdn status is blank when you run the **[Get-CsManagementStoreReplicationStatus –CentralManagementStoreStatus](https://technet.microsoft.com/library/gg399052.aspx)** cmdlet. 
 
 ## Cause
 
