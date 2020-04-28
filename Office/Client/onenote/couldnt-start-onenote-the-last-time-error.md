@@ -107,7 +107,7 @@ To install via the [Office Deployment Tool](https://support.microsoft.com/help/4
        <Language ID="MatchOS"/>
       </Product>
    </Add>
-   <Display Level="None" AcceptEULA="TRUE" />    
+   <Display Level="None" AcceptEULA="TRUE" />
 </Configuration>
 ```
 
@@ -117,7 +117,7 @@ Reference: [Deployment guide for OneNote](https://docs.microsoft.com/deployoffic
 
 - Get OneNote: [Mac](http://onenote.com/get) | [iOS](https://app.adjust.com/ux3h90) | [Android](https://app.adjust.com/l1lwt7) | [Windows](https://www.microsoft.com/en-gb/store/apps/onenote/9wzdncrfhvjl?tduid=(4f1f9eff755d289683367a384622ff4b)(259740)(2542549)(d_wp)()) | [OneNote Online](http://www.onenote.com/notebooks)
 - Suggestions: [OneNote UserVoice](https://onenote.uservoice.com/)
-- Help: [Answers.Microsoft.com](http://answers.microsoft.com/office/forum/office_onenote?sort=lastreplydate&dir=desc&tab=threads&status=all&mod=&modAge=&advFil=&postedAfter=&postedBefore=&threadType=all&tm=1446668353787)
+- Help: [Answers.Microsoft.com](https://answers.microsoft.com/)
 - [Install or reinstall OneNote 2016 for Windows](https://support.office.com/article/install-or-reinstall-onenote-2016-for-windows-c08068d8-b517-4464-9ff2-132cb9c45c08?ui=en-US&rs=en-US&ad=US)
 - [Your OneNote](https://techcommunity.microsoft.com/t5/office-365-blog/your-onenote/ba-p/954922)
 - [What's new in OneNote for Windows 10](https://support.office.com/article/what-s-new-in-onenote-for-windows-10-1477d5de-f4fd-4943-b18a-ff17091161ea?ui=en-US&rs=en-US&ad=US)
