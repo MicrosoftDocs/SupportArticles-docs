@@ -30,7 +30,7 @@ It's very common for users to switch devices or for an enterprise to add or chan
 Here's how to remove the Office 365 license:
 
 > [!NOTE]
-> The `opss.vbs` script is in the \<Program Files\Microsoft Office\Office16> folder. If the 32-bit version of Office is installed on a 64-bit operating system, the script is in the \<Program Files (x86)\Microsoft Office\Office16 folder>. Before running the `ospp.vbs` command, set the correct directory by using one of these commands, based on your Office version:
+> The `ospp.vbs` script is in the \<Program Files\Microsoft Office\Office16> folder. If the 32-bit version of Office is installed on a 64-bit operating system, the script is in the \<Program Files (x86)\Microsoft Office\Office16 folder>. Before running the `ospp.vbs` command, set the correct directory by using one of these commands, based on your Office version:
 >
 > - `cd C:\Program Files (x86)\Microsoft Office\Office16`
 > - `cd C:\Program Files\Microsoft Office\Office16`
@@ -162,7 +162,9 @@ To clear all WAM accounts associated with Office on the device, download and run
 >
 > - This script will remove tokens and accounts associated with Office. Single sign-on (SSO) of other applications will remain untouched, as well as the device state. This is a safe operation.
 > - This script is only compatible with Windows 10 version 1803 and later. If the OS isn't compatible, you'll receive a message saying the tool isn't supported on that version of Windows.
-> - Run signoutofwamaccounts.ps1 separately from OLicenseCleanup.vbs. If you place signoutofwamaccounts.ps1 in the same location as OLicenseCleanup.vbs, run OLicenseCleanup.vbs and the two scripts will run together.
+> - Signoutofwamaccounts.ps1 can be ran separately or in conjuction with OLicenseCleanup.vbs. If you place signoutofwamaccounts.ps1 in the same location as OLicenseCleanup.vbs, running only OLicenseCleanup.vbs will also execute Signoutofwamaccounts.ps1.
+
+## Clear credentials from Workplace Join
 
 To manually clear Workplace Joined accounts, go to **Access Work or School** on the device and select **Disconnect** to remove the device from WPJ.
 
