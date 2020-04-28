@@ -22,6 +22,8 @@ description: How to resolve the error "We couldn't start OneNote the last time y
 
 # "We couldn't start OneNote the last time you tried” error
 
+*Written and maintained by [Gaurav Singh](https://social.technet.microsoft.com/profile/gaurav0327/), Support Engineer Office Core*
+
 ## Symptoms
 
 When you start OneNote for the first time, you see the following errors if you cancel the sign-in prompt:
@@ -31,13 +33,13 @@ When you start OneNote for the first time, you see the following errors if you c
 - Delete Settings
 
 A sign-in prompt appears at the first launch:<br/>
-![Sign-in prompt at first launch.](couldnt-start-onenote-the-last-time-error/couldnt-start-onenote-the-last-time-error-1.png)
+![Sign-in prompt at first launch.](./media/couldnt-start-onenote-the-last-time-error/couldnt-start-onenote-the-last-time-error-1.png)
 
 Error message:<br/>
-!["We couldn't start OneNote" error message.](couldnt-start-onenote-the-last-time-error/couldnt-start-onenote-the-last-time-error-2.png)
+!["We couldn't start OneNote" error message.](./media/couldnt-start-onenote-the-last-time-error/couldnt-start-onenote-the-last-time-error-2.png)
 
 If you select **Delete Notebook Cache** or **Delete Settings**, OneNote will start, but displays the message “You don’t have any open notebooks.”<br/>
-!["You don't have any open notebooks" error message.](couldnt-start-onenote-the-last-time-error/couldnt-start-onenote-the-last-time-error-3.gif)
+!["You don't have any open notebooks" error message.](./media/couldnt-start-onenote-the-last-time-error/couldnt-start-onenote-the-last-time-error-3.gif)
 
 ## Cause
 
