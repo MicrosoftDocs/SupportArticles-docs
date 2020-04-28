@@ -1,5 +1,5 @@
 ---
-title: Error "We couldn't start OneNote the last time you tried” 
+title: Error "We couldn't start OneNote the last time we tried” 
 ms.author: v-todmc
 author: todmccoy
 manager: dcscontentpm
@@ -17,10 +17,10 @@ ms.custom:
 - CI 117067
 - CSSTroubleshoot 
 ms.reviewer: subhbasu
-description: How to resolve the error "We couldn't start OneNote the last time you tried".
+description: How to resolve the error "We couldn't start OneNote the last time we tried".
 ---
 
-# "We couldn't start OneNote the last time you tried” error
+# "We couldn't start OneNote the last time we tried” error
 
 *Written and maintained by [Gaurav Singh](https://social.technet.microsoft.com/profile/gaurav0327/), Support Engineer Office Core*.
 
