@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot print failures in Word
+title: Print failure troubleshooting in Word
 description: Describes how to diagnose print failures in Word 2013, Word 2010, Word 2007, and Word 2003. Explains how to isolate the cause of the print failure and how to resolve the issue.
 author: simonxjx
 manager: dcscontentpm
@@ -21,7 +21,7 @@ appliesto:
 # Troubleshoot print failures in Word
 
 > [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+> If you are using Microsoft 365 (Microsoft Word for Office 365 with Windows 10), see [Troubleshoot print failures in Word for Office 365 on Windows 10](https://docs.microsoft.com/office/troubleshoot/word/print-failures-word-for-office-365-on-win-10).
 
 ## Summary
 
