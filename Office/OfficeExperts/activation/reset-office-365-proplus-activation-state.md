@@ -80,6 +80,10 @@ Here's how to remove the Office 365 license:
 
    If the output contains the message "product key uninstall successful", close the Command Prompt window and go to Step 2.
 
+> [!NOTE]
+> For Shared Computer Activation (SCA), remove the tokens listed here:
+%localappdata%\Microsoft\Office\16.0\Licensing
+
 ## Step 2: Remove cached identities in HKCU registry
 
 > [!WARNING]
@@ -101,24 +105,20 @@ Remove all identities under the `Identities` registry entry.
 
    ![Remove stored credentials in the Credential Manager](./media/reset-office-365-proplus-activation-state/remove-credentials.png)
 
-For Shared Computer Licensing scenarios, remove the tokens and identities listed here:
-
-`Appdata\local\Microsoft\Office\16.0\Licensing`
-
 ## Step 4: Clear persisted locations
 
-Clear the following persisted locations:
+Clear the following persisted locations if they exist:
 
 ### Credential Manager
 
-- `Appdata\Roaming\Microsoft\Credentials`
-- `Appdata\Local\Microsoft\Credentials`
-- `Appdata\Roaming\Microsoft\Protect`
+- `%appdata%\Microsoft\Credentials`
+- `%localappdata%\Microsoft\Credentials`
+- `%appdata%\Microsoft\Protect`
 - `HKEY_CURRENT_USER\Software\Microsoft\Protected Storage System Provider`
 
 ### Office 365 activation tokens and identities
 
-- `Appdata\local\Microsoft\Office\16.0\Licensing`
+- `%localappdata%\Microsoft\Office\16.0\Licensing`
 - `%localappdata%\Microsoft\Office\Licenses` (Microsoft 365 Apps for enterprise version 1909 or later)
 - `HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Identity`
 - `HKEY_USERS\The user's SID\Software\Microsoft\Office\16.0\Common\Identity`
