@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 317723
 
 A race condition occurs when two threads access a shared variable at the same time. The first thread reads the variable, and the second thread reads the same value from the variable. Then the first thread and second thread perform their operations on the value, and they race to see which thread can write the value last to the shared variable. The value of the thread that writes its value last is preserved, because the thread is writing over the value that the previous thread wrote.
 
-## Details and example for a race condition
+## Details and examples for a race condition
 
 Each thread is allocated a predefined period of time to execute on a processor. When the time that is allocated for the thread expires, the thread's context is saved until its next turn on the processor, and the processor begins the execution of the next thread.
 
@@ -78,7 +78,7 @@ The most common symptom of a race condition is unpredictable values of variables
 
 A deadlock occurs when two threads each lock a different variable at the same time and then try to lock the variable that the other thread already locked. As a result, each thread stops executing and waits for the other thread to release the variable. Because each thread is holding the variable that the other thread wants, nothing occurs, and the threads remain deadlocked.
 
-## Details and example for deadlocks
+## Details and examples for deadlocks
 
 The following code has two objects, `LeftVal` and `RightVal`:
 

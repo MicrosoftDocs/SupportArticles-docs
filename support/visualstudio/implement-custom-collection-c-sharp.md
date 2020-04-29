@@ -7,7 +7,7 @@ ms.reviewer: bobbym
 ---
 # How to use Visual C# to implement custom collections  
 
-This step-by-step article shows you how to implement a custom collection in Visual C#. The .NET Framework base class libraries offer a formal definition of a collection `System.Collections.ICollection` interface.
+This step-by-step article shows you how to implement a custom collection in Visual C#. The Microsoft .NET Framework base class libraries offer a formal definition of a collection `System.Collections.ICollection` interface.
 
 _Original product version:_ &nbsp; Visual C#  
 _Original KB number:_ &nbsp; 307484

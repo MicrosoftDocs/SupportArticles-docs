@@ -37,11 +37,9 @@ You can use one of the following two possible workarounds:
 - Use the `CDbl` or `CInt` function to convert the `adNumeric` field.
 - Use JScript, which does not exhibit this behavior.
 
-## Steps to reproduce the behavior
-
 You can reproduce this behavior in an Active Server Pages (ASP) page or through a simple Visual Basic Script (.vbs) file. The following steps demonstrate how to reproduce the problem in a simple .vbs file.
 
-### Create the Oracle table
+## Step 1 to reproduce the behavior: Create the Oracle table
 
 Run the following script on your Oracle server to create the sample table:
 
@@ -53,7 +51,7 @@ INSERT INTO Cust VALUES(333,'Sally');
 COMMIT;
 ```
 
-### Create the VBS file
+## Step 2 to reproduce the behavior: Create the VBS file
 
 1. In Notepad, create a new text document named *Test.vbs*, and paste the following code into test.
 

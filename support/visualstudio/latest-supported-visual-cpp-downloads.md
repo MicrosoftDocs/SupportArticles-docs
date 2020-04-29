@@ -24,12 +24,7 @@ Download the [Microsoft Visual C++ Redistributable for Visual Studio 2015, 2017 
 - x64: [vc_redist.x64.exe](https://aka.ms/vs/16/release/vc_redist.x64.exe)
 - ARM64: [vc_redist.arm64.exe](https://aka.ms/vs/16/release/VC_redist.arm64.exe)
 
-> [!NOTE]
-> Visual C++ 2015, 2017 and 2019 all share the same redistributable files.
-
-For example, installing the Visual C++ 2019 redistributable will affect programs built with Visual C++ 2015 and 2017 also. However, installing the Visual C++ 2015 redistributable won't replace the newer versions of the files installed by the Visual C++ 2017 and 2019 redistributable files.
-
-This is different from all previous Visual C++ versions, as they each had their own distinct runtime files, not shared with other versions.
+Visual C++ 2015, 2017 and 2019 all share the same redistributable files. For example, installing the Visual C++ 2019 redistributable will affect programs built with Visual C++ 2015 and 2017 also. However, installing the Visual C++ 2015 redistributable won't replace the newer versions of the files installed by the Visual C++ 2017 and 2019 redistributable files. This is different from all previous Visual C++ versions, as they each had their own distinct runtime files, not shared with other versions.
 
 ## Visual Studio 2013 (VC++ 12.0)
 

@@ -16,11 +16,11 @@
   - name: Add references to managed Visual C++ projects
     href: add-references-managed-cpp.md
   - name: Basic file I/O in Visual C#
-    href: file-io-in-visual-c-sharp.md
+    href: file-io-visual-c-sharp.md
   - name: Compute hash value by Visual C#
     href: compute-hash-values-visual-c-sharp.md
   - name: Implement custom collections in Visual C#
-    href: implement-custom-collection-csharp.md
+    href: implement-custom-collection-c-sharp.md
   - name: Race conditions and deadlocks
     href: race-conditions-deadlocks.md
   - name: Sort ListView by columns in Visual C#

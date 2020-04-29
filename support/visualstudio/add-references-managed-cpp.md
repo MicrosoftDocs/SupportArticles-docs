@@ -75,7 +75,7 @@ Private assemblies must reside in the same folder as the executable that is usin
 4. Modify the **Command Line** property to the following command:
 
     ```console
-    copy $(*<ProjectDir>*)mylib.dll $(*<TargetDir>*)  
+    copy $(<ProjectDir>)mylib.dll $(<TargetDir>)  
     ```
 
 ## In Visual C++ .NET or Visual C++

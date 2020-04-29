@@ -45,8 +45,8 @@ This article assumes that you're familiar with the following topics:
     }
     ```
 
-> [!NOTE]
-> The code should be changed in Visual Studio. When you create a Windows Forms project, Visual C# adds one form to the project by default. This form is named *Form1*. The two files that represent the form are named *Form1.cs* and *Form1.designer.cs*. You write your code in *Form1.cs*. The *Designer.cs* file is where the Windows Forms Designer writes the code that implements all the actions that you performed by adding controls. For more information about the Windows Forms Designer in Visual C#, see [Creating a Project (Visual C#)](/previous-versions/visualstudio/visual-studio-2008/ms173077(v=vs.90)).
+    > [!NOTE]
+    > The code should be changed in Visual Studio. When you create a Windows Forms project, Visual C# adds one form to the project by default. This form is named *Form1*. The two files that represent the form are named *Form1.cs* and *Form1.designer.cs*. You write your code in *Form1.cs*. The *Designer.cs* file is where the Windows Forms Designer writes the code that implements all the actions that you performed by adding controls. For more information about the Windows Forms Designer in Visual C#, see [Creating a Project (Visual C#)](/previous-versions/visualstudio/visual-studio-2008/ms173077(v=vs.90)).
 
 ## Customize form and control properties
 

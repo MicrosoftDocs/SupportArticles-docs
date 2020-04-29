@@ -30,8 +30,8 @@ ObjectCompare.Compare(listviewX.SubItems[ColumnToSort].Text,listviewY.SubItems[C
 
 ## Steps to build the sample project
 
-1. Create a new Visual C# Windows application project. Form1 is created by default.
-2. Add a ListView control to Form1. Size the form to be several inches wide by several inches tall.
+1. Create a new Visual C# Windows application project. *Form1* is created by default.
+2. Add a ListView control to *Form1*. Size the form to be several inches wide by several inches tall.
 3. Paste the following code into the class for the form:
 
     ```csharp
