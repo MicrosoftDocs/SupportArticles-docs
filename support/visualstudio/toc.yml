@@ -4,6 +4,36 @@
 - name: (Back up to Support hub page)
   href: ../index.yml
 
-- name: ASP.NET error CS0433
-  href: cs0433-error-when-building-asp-net-project.md
-  
+- name: C and C++ Libraries
+  items:
+  - name: Latest supported Visual C++ downloads
+    href: latest-supported-visual-cpp-downloads.md
+
+- name: General
+  items:
+  - name: Add controls to Windows forms by Visual C#
+    href: add-controls-to-windows-forms-c-sharp.md
+  - name: Add references to managed Visual C++ projects
+    href: add-references-managed-cpp.md
+  - name: Basic file I/O in Visual C#
+    href: file-io-in-visual-c-sharp.md
+  - name: Compute hash value by Visual C#
+    href: compute-hash-values-visual-c-sharp.md
+  - name: Implement custom collections in Visual C#
+    href: implement-custom-collection-csharp.md
+  - name: Race conditions and deadlocks
+    href: race-conditions-deadlocks.md
+  - name: Sort ListView by columns in Visual C#
+    href: sort-listview-by-column-c-sharp.md
+  - name: VBScript type mismatch error
+    href: vbs-type-mismatch-error.md
+
+- name: Installation
+  items:
+  - name: Remove third-party applications deployed in VS2015 setup
+    href: vs-secondary-installer-third-party-app.md
+
+- name: Language or Compilers
+  items:
+  - name: ASP.NET error CS0433
+    href: cs0433-error-when-building-asp-net-project.md
