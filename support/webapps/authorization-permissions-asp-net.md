@@ -61,7 +61,7 @@ When using forms-based authentication in ASP.NET applications, only authenticate
     </configuration>
     ```
 
-    Users can open the Default1.aspx file or any other file saved in the *Subdir1* folder in your application. They won't be redirected automatically to the *Logon.aspx* file for authentication.
+    Users can open the *Default1.aspx* file or any other file saved in the `subdir1` folder in your application. They won't be redirected automatically to the *Logon.aspx* file for authentication.
 4. Repeat Step 3 to identify any other pages or folders for which you want to permit access by unauthenticated users.
 
 ## References

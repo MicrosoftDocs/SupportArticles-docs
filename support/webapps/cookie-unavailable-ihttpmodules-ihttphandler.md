@@ -49,6 +49,7 @@ namespace AddCookieModule
 
             context.Response.Cookies.Add(testCookie);
         }
+
         public void Dispose()
         {
             // nothing to do.

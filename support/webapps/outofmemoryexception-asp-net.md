@@ -68,9 +68,9 @@ Fragmentation in the VA space is often caused by one or more of the following sc
 
   - The debug attribute of the `<compilation>` element should be `false` when in production.
   - You can use the `<deploy retail="true" />` configuration to ensure that debug is always disabled in product. For more information, see [deployment Element (ASP.NET Settings Schema)](/previous-versions/dotnet/netframework-2.0/ms228298(v=vs.80)).
-- Use of scripting within eXtensible Stylesheet Language (XSL) transforms or creating `XmlSerializers`.
+- Use of scripting within eXtensible Style sheet Language (XSL) transforms or creating `XmlSerializers`.
 
-  In this cace, dynamic assemblies caused by Extensible Stylesheet Language Transformations (XSLT) scripting or `XmlSerializers`.
+  In this case, dynamic assemblies caused by Extensible Style sheet Language Transformations (XSLT) scripting or `XmlSerializers`.
 
 ## Returning large sets of data
 

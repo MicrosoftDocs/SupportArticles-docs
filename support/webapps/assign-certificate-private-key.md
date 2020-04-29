@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 889651
 
 ## Summary
 
-You delete the original certificate from the personal folder in the local computer's certificate store. This article assumes that you have the matching certificate file backed up as a PKCS#7 file, a .cer file, or a .crt file. When you delete a certificate on a computer that is running IIS, the private key is not deleted:
+You delete the original certificate from the personal folder in the local computer's certificate store. This article assumes that you have the matching certificate file backed up as a PKCS#7 file, a .cer file, or a .crt file. When you delete a certificate on a computer that is running IIS, the private key is not deleted.
 
 ## Assign the existing private key to a new certificate
 

@@ -453,14 +453,14 @@ Function LooksAlive( )
     End If
 
     'Get the state of the Application Pool
-     if GetAppPoolState(adminManager, APP_POOL_NAME) <> 1 Then
+    if GetAppPoolState(adminManager, APP_POOL_NAME) <> 1 Then
          Resource.LogInformation "The resource failed because Application Pool " & APP_POOL_NAME & " is not started."
          LooksAlive = false  
- Exit Function
+         Exit Function
     End if
 
-     'Web site and Application Pool state are valid return true
-     LooksAlive = true
+    'Web site and Application Pool state are valid return true
+    LooksAlive = true
 End Function
 
 'Cluster resource IsAlive entry point
