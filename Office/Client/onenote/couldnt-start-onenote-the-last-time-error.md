@@ -67,7 +67,7 @@ If the key is not located or not found at the location (which is normal for a ne
 To avoid this behavior, set the value for **FirstBootStatus** to show that OneNote is already installed. Do this by following the steps in one of the methods below:
 
 - For a single device, use the Registry Editor:
-   1. Select the Windows Start button, select **Run**, and then type regedit to launch the Registry Editor. 
+   1. Select the Windows Start button, select **Run**, and then type **regedit** to launch the Registry Editor. 
    2. Locate the following registry location:  [HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\OneNote].
    3. Right-click on the **FirstBootStatus** DWORD and modify the value to 02000202.
 
