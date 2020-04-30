@@ -109,6 +109,8 @@
       href: ./known-issues/teams-for-surface-hub-wont-start-from-store.md
     - name: Sign-in error after password change
       href: ./known-issues/sign-in-error-after-password-change.md
+    - name: Someone has already setup Teams for your organization
+      href: ./teams-sign-in/someone-has-already-setup-teams.md
     - name: Stuck in login loop in Edge or Internet Explorer
       href: ./teams-sign-in/sign-in-loop.md
     - name: Teams does not automatically update
