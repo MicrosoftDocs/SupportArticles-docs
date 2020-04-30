@@ -175,4 +175,4 @@ To automate WPJ removal, download [WPJCleanUp.zip](https://download.microsoft.co
 > [!NOTE]
 > This tool removes all SSO accounts on the device. After this operation, all applications will lose SSO state, and the device will be unenrolled from management tools (MDM) and unregistered from the cloud. The next time an application tries to sign in, users will be asked to add the account again.
 
-Additional Information:[Plan your hybrid Azure Active Directory join implementation](https://docs.microsoft.com/en-us/azure/active-directory/devices/hybrid-azuread-join-plan)
+Additional Information: [Plan your hybrid Azure Active Directory join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan)
