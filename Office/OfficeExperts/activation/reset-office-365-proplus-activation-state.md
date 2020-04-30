@@ -30,7 +30,7 @@ It's very common for users to switch devices or for an enterprise to add or chan
 Here's how to remove the Office 365 license:
 
 > [!NOTE]
-> The `opss.vbs` script is in the \<Program Files\Microsoft Office\Office16> folder. If the 32-bit version of Office is installed on a 64-bit operating system, the script is in the \<Program Files (x86)\Microsoft Office\Office16 folder>. Before running the `ospp.vbs` command, set the correct directory by using one of these commands, based on your Office version:
+> The `ospp.vbs` script is in the \<Program Files\Microsoft Office\Office16> folder. If the 32-bit version of Office is installed on a 64-bit operating system, the script is in the \<Program Files (x86)\Microsoft Office\Office16 folder>. Before running the `ospp.vbs` command, set the correct directory by using one of these commands, based on your Office version:
 >
 > - `cd C:\Program Files (x86)\Microsoft Office\Office16`
 > - `cd C:\Program Files\Microsoft Office\Office16`
@@ -80,6 +80,10 @@ Here's how to remove the Office 365 license:
 
    If the output contains the message "product key uninstall successful", close the Command Prompt window and go to Step 2.
 
+> [!NOTE]
+> For Shared Computer Activation (SCA), remove the tokens listed here:
+%localappdata%\Microsoft\Office\16.0\Licensing
+
 ## Step 2: Remove cached identities in HKCU registry
 
 > [!WARNING]
@@ -101,31 +105,27 @@ Remove all identities under the `Identities` registry entry.
 
    ![Remove stored credentials in the Credential Manager](./media/reset-office-365-proplus-activation-state/remove-credentials.png)
 
-For Shared Computer Licensing scenarios, remove the tokens and identities listed here:
-
-`Appdata\local\Microsoft\Office\16.0\Licensing`
-
 ## Step 4: Clear persisted locations
 
-Clear the following persisted locations:
+Clear the following persisted locations if they exist:
 
 ### Credential Manager
 
-- `Appdata\Roaming\Microsoft\Credentials`
-- `Appdata\Local\Microsoft\Credentials`
-- `Appdata\Roaming\Microsoft\Protect`
+- `%appdata%\Microsoft\Credentials`
+- `%localappdata%\Microsoft\Credentials`
+- `%appdata%\Microsoft\Protect`
 - `HKEY_CURRENT_USER\Software\Microsoft\Protected Storage System Provider`
 
 ### Office 365 activation tokens and identities
 
-- `Appdata\local\Microsoft\Office\16.0\Licensing`
+- `%localappdata%\Microsoft\Office\16.0\Licensing`
 - `%localappdata%\Microsoft\Office\Licenses` (Microsoft 365 Apps for enterprise version 1909 or later)
 - `HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Identity`
 - `HKEY_USERS\The user's SID\Software\Microsoft\Office\16.0\Common\Identity`
 
 ## OLicenseCleanup.vbs
 
-The four steps above can be automated using [OLicenseCleanup.vbs](https://download.microsoft.com/download/e/1/b/e1bbdc16-fad4-4aa2-a309-2ba3cae8d424/OLicenseCleanup.zip). Simply download and run the script.
+The four steps above can be automated using [OLicenseCleanup.vbs](https://download.microsoft.com/download/e/1/b/e1bbdc16-fad4-4aa2-a309-2ba3cae8d424/OLicenseCleanup.zip). Simply download and run the script with elevated priviledges.
 
 ## Clear Office credentials and activation state for managed devices
 
@@ -140,29 +140,31 @@ Here's how to find out if a device is DJ, AADJ, HAADJ, or WPJ:
 
    Domain Joined (DJ):
 
-   ![Domain Joined](./media/reset-office-365-proplus-activation-state/dj.png)
+   ![Azure AD Joined](./media/reset-office-365-proplus-activation-state/aadj.png)
 
    Azure AD Joined (AADJ):
 
-   ![Azure AD Joined](./media/reset-office-365-proplus-activation-state/aadj.png)
+   ![Domain Joined](./media/reset-office-365-proplus-activation-state/dj.png)
 
    Hybrid Azure AD Joined (HAADJ):
 
-   ![Hybrid Azure AD Joined](./media/reset-office-365-proplus-activation-state/haadj.png)
+   ![Workplace Joined](./media/reset-office-365-proplus-activation-state/wpj.png)
 
    Workplace Joined (WPJ):
 
-   ![Workplace Joined](./media/reset-office-365-proplus-activation-state/wpj.png)
+   ![Hybrid Azure AD Joined](./media/reset-office-365-proplus-activation-state/haadj.png)
 
 In scenarios where all stored credentials (such as domain/tenant migration) must be cleared, clear the additional WAM locations.
 
-To clear all WAM accounts associated with Office on the device, download and run the [signoutofwamaccounts.ps1](https://download.microsoft.com/download/f/8/7/f8745d3b-49ad-4eac-b49a-2fa60b929e7d/signoutofwamaccounts.zip) script.
+To clear all WAM accounts associated with Office on the device, download and run the [signoutofwamaccounts.ps1](https://download.microsoft.com/download/f/8/7/f8745d3b-49ad-4eac-b49a-2fa60b929e7d/signoutofwamaccounts.zip) script with elevated priviledges.
 
 > [!NOTE]
 >
-> - This script will remove tokens and accounts associated with Office. Single sign-on (SSO) of other applications will remain untouched, as well as the device state. This is a safe operation.
+> - This script will remove tokens and accounts associated with Office, this is a safe operation. Single sign-on (SSO) of other applications will remain untouched, as well as the device state.
 > - This script is only compatible with Windows 10 version 1803 and later. If the OS isn't compatible, you'll receive a message saying the tool isn't supported on that version of Windows.
-> - Run signoutofwamaccounts.ps1 separately from OLicenseCleanup.vbs. If you place signoutofwamaccounts.ps1 in the same location as OLicenseCleanup.vbs, run OLicenseCleanup.vbs and the two scripts will run together.
+> - Signoutofwamaccounts.ps1 can be ran separately or in conjuction with OLicenseCleanup.vbs. If you place signoutofwamaccounts.ps1 in the same location as OLicenseCleanup.vbs, running only OLicenseCleanup.vbs will also execute Signoutofwamaccounts.ps1.
+
+## Clear credentials from Workplace Join
 
 To manually clear Workplace Joined accounts, go to **Access Work or School** on the device and select **Disconnect** to remove the device from WPJ.
 
@@ -172,3 +174,5 @@ To automate WPJ removal, download [WPJCleanUp.zip](https://download.microsoft.co
 
 > [!NOTE]
 > This tool removes all SSO accounts on the device. After this operation, all applications will lose SSO state, and the device will be unenrolled from management tools (MDM) and unregistered from the cloud. The next time an application tries to sign in, users will be asked to add the account again.
+
+Additional Information:[Plan your hybrid Azure Active Directory join implementation](https://docs.microsoft.com/en-us/azure/active-directory/devices/hybrid-azuread-join-plan)
