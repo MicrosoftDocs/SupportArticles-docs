@@ -24,7 +24,7 @@ search.appverid:
 
 When setting up a Microsoft Teams account, the error “Someone has already setup Teams for your organization" occurs.
 
-## Resolution
+## Resolutions
 
 There are multiple possible causes. Corresponding resolutions are listed below:
 
