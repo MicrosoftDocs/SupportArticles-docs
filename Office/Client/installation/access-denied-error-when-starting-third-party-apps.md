@@ -1,10 +1,10 @@
 ---
-title: Starting third-party apps cause "Access Denied" error
+title: Starting third-party add-in causes "Access Denied" error
 ms.author: v-todmc
 author: todmccoy
 manager: dcscontentpm
-ms.date: 2/5/2019
-audience: Admin|ITPro|Developer
+ms.date: 4/29/2020
+audience: Admin
 ms.topic: article
 ms.prod: office
 localization_priority: Normal
@@ -16,7 +16,7 @@ appliesto:
 ms.custom: 
 - CI 115993
 - CSSTroubleshoot 
-ms.reviewer: MS aliases for tech reviewers and CI requestor, without "@microsoft.com".  
+ms.reviewer: rycarter
 description: What to do if you get an "Access Denied" error when starting third-party add-ins which rely on .NET framework. 
 ---
 
@@ -25,6 +25,7 @@ description: What to do if you get an "Access Denied" error when starting third-
 ## Symptoms
 
 You receive one of the following kinds of error messages when attempting to start a third-party Office add-in that relies on .NET framework Office binaries:
+
 - "Access Denied"
 - "File not found or no read permission"
 - "Could not load file or assembly…"
