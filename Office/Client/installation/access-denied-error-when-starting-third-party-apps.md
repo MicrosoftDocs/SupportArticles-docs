@@ -3,7 +3,7 @@ title: Starting third-party add-in causes "Access Denied" error
 ms.author: v-todmc
 author: todmccoy
 manager: dcscontentpm
-ms.date: 4/21/2020
+ms.date: 4/29/2020
 audience: Admin
 ms.topic: article
 ms.prod: office
