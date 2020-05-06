@@ -42,3 +42,6 @@ There are multiple possible causes. Corresponding resolutions are listed below:
 
 **Resolution:** Use your organization’s tenant for this account. For personal use, create a free Teams account with a personal email address.
 
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
