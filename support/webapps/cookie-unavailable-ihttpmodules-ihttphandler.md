@@ -46,7 +46,6 @@ namespace AddCookieModule
             testCookie.Expires = DateTime.Now.AddYears(5);
             context.Request.Headers.Add("Cookie",
                                         "testCookie=" + testCookie.Value);
-
             context.Response.Cookies.Add(testCookie);
         }
 

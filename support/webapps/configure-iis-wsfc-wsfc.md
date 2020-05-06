@@ -9,7 +9,7 @@ ms.reviewer: bretb, ahmedb, ctimon, mlaing
 
 This article describes how to configure Microsoft Internet Information Services (IIS) World Wide Web Publishing Service (W3SVC) in a Windows Server failover cluster (WSFC).
 
-_Original product version:_ &nbsp; Windows Server 2019, 2016, 2012 R2, 2012, 2008 R2, 2008, Internet Information Services 10.0, 8.5, 8.0  
+_Original product version:_ &nbsp; Windows Server 2008 and later versions, Internet Information Services 8.0 and later versions  
 _Original KB number:_ &nbsp; 970759
 
 ## Introduction
