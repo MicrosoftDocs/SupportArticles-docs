@@ -41,11 +41,11 @@ When you are concerned only with the day, month, and year, you can work around t
 
 ## More Information
 
-The ECMAScript standard can be found at [ECMAScript® 2019 Language Specification](https://www.ecma-international.org/ecma-262/10.0/index.html).
+The ECMAScript standard can be found at [ECMAScript® 2016 Language Specification](https://www.ecma-international.org/ecma-262/7.0/index.html).
 
-Section 15.9.3.1 defines how the Date constructor is interpreted, including the fact of a conversion of a time value to Coordinated Universal Time (UTC).
+[Section 20.3.2](https://www.ecma-international.org/ecma-262/7.0/index.html#sec-date-constructor) defines how the Date constructor is interpreted, including the fact of a conversion of a time value to Coordinated Universal Time (UTC).
 
-Section 15.9.1.9 defines the conversions between local time and UTC time, and states that these conversions are not necessarily inverses of each other.
+[Section 20.3.1.10](https://www.ecma-international.org/ecma-262/7.0/index.html#sec-utc-t) defines the conversions between local time and UTC time, and states that these conversions are not necessarily inverses of each other.
 
 The formula for this conversion is as follows:
 
