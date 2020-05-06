@@ -1,20 +1,22 @@
 ---
-title: Information that needs to be collected when you run Internet Explorer 8 Diagnostics in Windows 7 and Windows Server 2008 R2
-description: This article describes the information that may be collected from a computer when running Internet Explorer 8 Diagnostics for Windows 7 and Windows Server 2008 R2.
-ms.prod-support-area-path: Internet Explorer 8
+title: Collected data by IE Diagnostics
+description: This article describes the information that may be collected from a computer when running Internet Explorer 8 and later versions Diagnostics for Windows 7 and Windows Server 2008 R2.
+ms.prod-support-area-path: 
 ms.date: 02/29/2020
+ms.reviewer: louiss
 ---
-# Information that needs to be collected when you run Internet Explorer 8 Diagnostics in Windows 7 and Windows Server 2008 R2
+# Collected information by Internet Explorer 8 and later versions Diagnostics
 
-This article lists the information that can be collected by running Internet Explorer 8 Diagnostics, on Windows 7 and Windows Server 2008 R2.
+This article lists the information that can be collected by running Internet Explorer 8 or a later version Diagnostics, on Windows 7 and Windows Server 2008 R2.
 
-[!INCLUDE[Visual eye catcher for legacy KB](../includes/kb-letters-blue.md)]  
-_Original product version:_ &nbsp; Windows 2008 R2, Windows 7, Internet Explorer 8  
+[!INCLUDE [Visual eye catcher for legacy KB](../includes/kb-letters-blue.md)]
+
+_Original product version:_ &nbsp; Windows 2008 R2, Windows 7, Internet Explorer 8 and later versions  
 _Original KB number:_ &nbsp; 2547213
 
 ## System information
 
-Operating System:
+*Operating System*
 
 * Machine Name
 * OS Name
@@ -23,7 +25,7 @@ Operating System:
 * User Account Control
 * Username
 
-Computer System:
+*Computer System*
 
 * Computer Model
 * Processor(s)
@@ -38,6 +40,7 @@ Computer System:
 |---|---|
 |Elevated User:|{Computername}_EnvironmentVariables_MSDT.txt|
 |Target User:|{Computername}_EnvironmentVariables_{Username}.txt|
+|||
 
 ### Event Logs
 
@@ -45,6 +48,7 @@ Computer System:
 |---|---|
 |Filtered Event Logs (.csv):|{Computername}_ApplicationLog.csv|
 |Filtered Event Logs (.csv):|{Computername}_SystemLog.csv|
+|||
 
 ### Group Policy and IEAK
 
@@ -66,10 +70,14 @@ Computer System:
 |GP User (.htm):|{Computername}_GPResult_User_{Username}.htm|
 |GP Computer (.txt):|{Computername}_GPResult_Computer.txt|
 |GP Computer (.htm):|{Computername}_GPResult_Computer.htm|
+|||
 
 ### IE Setup Log
 
-IE Setup Log (.log): {Computername}_IE9_main.log
+|Name|Value|
+|---|---|
+|IE Setup Log (.log):| {Computername}_IE9_main.log|
+|||
 
 ### Installed updates/hotfixes
 
@@ -78,6 +86,7 @@ IE Setup Log (.log): {Computername}_IE9_main.log
 |Update/Hotfix history:|{Computername}_Hotfixes.CSV|
 |Update/Hotfix history:|{Computername}_Hotfixes.htm|
 |Update/Hotfix history:|{Computername}_Hotfixes.TXT|
+|||
 
 ### Internet Explorer Core
 
@@ -92,12 +101,14 @@ IE Setup Log (.log): {Computername}_IE9_main.log
 |HKLM Wow64:|{Computername}_reg_HKLM_Wow6432Node_FeatureControl.TXT|
 |HKLM:|{Computername}_reg_HKLM_InternetSettings.TXT|
 |HKLM:|{Computername}_reg_HKLM_FeatureControl.TXT|
+|||
 
 ### Internet Explorer File Versions
 
 |Name|Value|
 |---|---|
 |Version Info:|{Computername}_IE_File_Version_Info.txt|
+|||
 
 ### Internet Explorer Zones
 
@@ -146,6 +157,7 @@ IE Setup Log (.log): {Computername}_IE9_main.log
 |HKLM:|{Computername}_reg_HKLM_TemplatePolicies_MedHigh.TXT|
 |HKLM:|{Computername}_reg_HKLM_TemplatePolicies_Medium.TXT|
 |HKLM:|{Computername}_reg_HKLM_TemplatePolicies_MedLow.TXT|
+|||
 
 ### Networking Information
 
@@ -154,6 +166,7 @@ IE Setup Log (.log): {Computername}_IE9_main.log
 |Host File:|{Computername}_hosts|
 |TCP/IP Basic Information:|{Computername}_TcpIp-Info.txt|
 |SMB Basic Information:|{Computername}_SMB-Info.txt|
+|||
 
 ### Operating System Registry
 
@@ -180,6 +193,7 @@ IE Setup Log (.log): {Computername}_IE9_main.log
 |HKLM:|{Computername}_reg_HKLM_SSL_Ciphers.TXT|
 |HKLM:|{Computername}_reg_HKLM_Code_Store_Database.TXT|
 |HKLM:|{Computername}_reg_HKLM_Ext_PreApproved.TXT|
+|||
 
 ### REG Export
 
@@ -196,15 +210,25 @@ IE Setup Log (.log): {Computername}_IE9_main.log
 |HKLM Wow64:|{Computername}_HKLM_Wow6432Node_Internet_Settings.REG.txt|
 |HKLM Wow64:|{Computername}_HKLM_Wow6432Node_Policies.REG.txt|
 |HKLM Wow64:|{Computername}_HKLM_Wow6432Node_Classes.REG.txt|
+|||
 
 ### Registry - IEAK
 
-HKLM Wow64: {Computername}_reg_HKLM_Wow6432Node_IEAK.TXT
+|Name|Value|
+|---|---|
+|HKLM Wow64:|{Computername}_reg_HKLM_Wow6432Node_IEAK.TXT|
+|||
 
 ### Windows Setup API Logs
 
-Windows Setup API Log: {Computername}_SetupAPI.app.Log
+|Name|Value|
+|---|---|
+|Windows Setup API Log:|{Computername}_SetupAPI.app.Log|
+|||
 
 ### Windows update log
 
-Windows Update Log File: {Computername}_WindowsUpdate.log
+|Name|Value|
+|---|---|
+|Windows Update Log File:|{Computername}_WindowsUpdate.log|
+|||

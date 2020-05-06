@@ -12,6 +12,9 @@
     - name: IE advanced settings
       href: advanced-settings-in-ie.md
 
+    - name: Cannot change home page
+      href: cannot-change-home-page-in-ie.md
+
     - name: IEAK 9 supported languages
       href: ieak-9-supported-languages.md
 
@@ -20,6 +23,9 @@
 
     - name: Check IE version
       href: check-ie-version.md
+
+    - name: PAC file isn't read
+      href: cannot-read-pac-file.md
 
 - name: Connectivity and Navigation
   items:
@@ -38,11 +44,17 @@
     - name: Download HTML files from Download Manager
       href: how-ie-downloads-html-files.md
 
+    - name: Intranet options are enabled automatically
+      href: intranet-options-enabled-automatically.md
+
+    - name: Change keep-alive time-out
+      href: change-keep-alive-time-out.md
+
 - name: Core Features
   items:
     - name: IE dot matrix printer wrong font
       href: dot-matrix-printer-wrong-output-font.md
-
+      
     - name: How to set Fullscreen mode
       href: set-fullscreen-ie.md
 
@@ -61,6 +73,12 @@
     - name: IE Kiosk mode
       href: use-kiosk-mode-in-ie.md
 
+    - name: AutoComplete not working in IE
+      href: autocomplete-not-work-in-ie.md
+
+    - name: Can't print from the web as another user
+      href: cannot-print-from-web-using-another-user.md
+
     - name: IE shortcut not maximized from Start
       href: ie-not-maximized-if-open-from-start.md
 
@@ -68,7 +86,6 @@
   items:
     - name: Wrong Web page with frames
       href: ie-wrongly-show-web-page-with-frames.md
-
     - name: ActiveX control is not loaded
       href: activex-not-loaded-registry.md
 
@@ -99,11 +116,32 @@
     - name: IE runtime errors
       href: ie-runtime-errors.md
 
-    - name: Textchanged event does not fire
-      href: textchanged-event-not-fire-with-autocomplete.md
-
     - name: FTP WinInet APIs in VB application
       href: using-ftp-wininet-apis-in-vb.md
+
+    - name: Cannot open in new tab or window
+      href: cannot-open-in-new-tab-or-window.md
+
+    - name: Isolation values don't take effect
+      href: unicode-bidi-isolation-not-supported.md
+
+    - name: Onload event not show if back
+      href: onload-event-not-occur-if-back.md
+
+    - name: BHOs and toolbars not working
+      href: third-party-products-break.md
+
+    - name: Table layout changes in standards mode
+      href: wrong-table-layput-in-standards-mode.md
+
+    - name: Cannot load .NET control
+      href: net-control-not-load-in-internet-zone.md
+
+    - name: Enable file download for MIME types
+      href: raise-file-download-for-mime-types.md
+
+    - name: Text changed event does not fire
+      href: text-changed-event-not-fire-with-autocomplete.md
 
     - name: Services not support WinInet
       href: wininet-not-supported-in-services.md
@@ -127,6 +165,9 @@
   items:
     - name: CSP is loading for certificate request
       href: csp-shows-loading-for-certificate-request.md
+
+    - name: Cannot sign in to VSTS
+      href: cannot-sign-in-to-vsts.md
 
     - name: Cannot view secure web sites
       href: cannot-view-secure-web-sites-in-ie.md
@@ -155,3 +196,6 @@
 
     - name: Troubleshoot IE11 failed installation
       href: ie-installation-fails.md
+      
+    - name: IE Diagnostics collected information
+      href: ie-diagnostics-collected-data.md
