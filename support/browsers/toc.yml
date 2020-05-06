@@ -85,7 +85,7 @@
       href: table-text-overlaps-borders-or-missing.md
 
     - name: How to hide the Clear button
-      href: hide-clear-button-in-ie10.md
+      href: hide-clear-button-in-ie.md
 
     - name: Named browser windows is missing
       href: cannot-find-named-browser-windows.md
