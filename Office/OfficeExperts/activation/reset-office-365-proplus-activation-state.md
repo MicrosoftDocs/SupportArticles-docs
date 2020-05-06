@@ -125,7 +125,7 @@ Clear the following persisted locations if they exist:
 
 ## OLicenseCleanup.vbs
 
-The four steps above can be automated using [OLicenseCleanup.vbs](https://download.microsoft.com/download/e/1/b/e1bbdc16-fad4-4aa2-a309-2ba3cae8d424/OLicenseCleanup.zip). Simply download and run the script with elevated priviledges.
+The four steps above can be automated using [OLicenseCleanup.vbs](https://download.microsoft.com/download/e/1/b/e1bbdc16-fad4-4aa2-a309-2ba3cae8d424/OLicenseCleanup.zip). Simply download and run the script with elevated privileges.
 
 ## Clear Office credentials and activation state for managed devices
 
