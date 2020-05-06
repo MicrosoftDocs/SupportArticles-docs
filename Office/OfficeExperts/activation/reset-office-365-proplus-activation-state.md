@@ -156,7 +156,7 @@ Here's how to find out if a device is DJ, AADJ, HAADJ, or WPJ:
 
 In scenarios where all stored credentials (such as domain/tenant migration) must be cleared, clear the additional WAM locations.
 
-To clear all WAM accounts associated with Office on the device, download and run the [signoutofwamaccounts.ps1](https://download.microsoft.com/download/f/8/7/f8745d3b-49ad-4eac-b49a-2fa60b929e7d/signoutofwamaccounts.zip) script with elevated priviledges.
+To clear all WAM accounts associated with Office on the device, download and run the [signoutofwamaccounts.ps1](https://download.microsoft.com/download/f/8/7/f8745d3b-49ad-4eac-b49a-2fa60b929e7d/signoutofwamaccounts.zip) script with elevated privileges.
 
 > [!NOTE]
 >
