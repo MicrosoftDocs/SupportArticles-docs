@@ -8,7 +8,7 @@ ms.prod-support-area-path:
 
 This article lists the download links for the latest versions of Microsoft Visual C++.
 
-_Original product version:_ &nbsp; Visual Studio 2010, 2012, 2013, 2015, 2017, 2019  
+_Original product version:_ &nbsp; Visual Studio  
 _Original KB number:_ &nbsp; 2977003
 
 > [!NOTE]
