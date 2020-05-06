@@ -4,19 +4,29 @@
   href: ../../index.yml
 - name: Device enrollment
   items:
+  - name: Can't enroll devices in Company Portal
+    href: cannot-update-enrollment.md
   - name: Android enrollment
   - name: iOS/iPadOS enrollment
     items:
+    - name: Apple DEP devices don't start enrollment
+      href: apple-dep-device-fails-auto-enrollment.md
     - name: DEP enrollment error XPC_TYPE_ERROR 
       href: dep-enrollment-xpc-type-error.md
+    - name: Keychain error -25244 enrolling devices
+      href: keychain-error-enrolling-macos-devices.md
   - name: Windows enrollment
     items:
     - name: 80180002b during Windows 10 Group Policy-based auto-enrollment
       href: windows10-enroll-error-80180002b.md
+    - name: Error 0xcaa9001f in MDM enrollment
+      href: mdm-enrollment-error-0xcaa9001f.md
 - name: App management
   items:
   - name: Error when you open a web app on iOS 
     href: invalid-address-open-web-app.md
+  - name: Open-in protection on unenrolled devices
+    href: unenrolled-device-open-in-protection.md
 - name: Fundamentals
   items:
   - name: Set the MDM authority
@@ -33,3 +43,11 @@
   items:
   - name: AADSTS50011 query the Intune Data Warehouse
     href: error-query-intune-data-warehouse.md
+- name: Co-management with System Center Configuration Manager
+  items:
+  - name: Troubleshoot co-management auto-enrolling
+    href: troubleshoot-co-management-auto-enrolling.md
+  - name: Troubleshoot co-management Bootstrap
+    href: troubleshoot-co-management-bootstrap.md
+  - name: Troubleshoot co-management workloads
+    href: troubleshoot-co-management-workloads.md
