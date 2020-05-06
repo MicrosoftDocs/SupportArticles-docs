@@ -184,7 +184,7 @@
 - name: Stability and Performance
   items:
     - name: IE 8 Diagnostics collected information
-      href: sdp-3d0cc9543-9d32-4312-9519-274f34305f1f-windows.md
+      href: ie-diagnostics-collected-data.md
 
     - name: Slow rendering for document modes
       href: document-modes-slow-rendering.md
