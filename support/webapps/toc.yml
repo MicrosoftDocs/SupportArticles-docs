@@ -15,10 +15,16 @@
   items:
   - name: Add an HTTP response header to a web site
     href: add-http-response-header-web-site.md
+  - name: Assign a private key to a new certificate
+    href: assign-certificate-private-key.md
   - name: COM Objects called from ASP can't be printed
     href: asp-com-objects-fail-to-print.md
+  - name: Cookies added by HttpModule are  not available
+    href: cookie-unavailable-ihttpmodules-ihttphandler.md
   - name: Error 0x80004005 when registering WebClass
     href: error-0x80004005-register-webclass-dll.md
+  - name: Make application configuration in ASP.NET
+    href: application-directory-configuration-asp-net.md
   - name: Pre-compiled WCF workflow service activation fails
     href: pre-compiled-wcf-workflow-activation-fails.md
 
@@ -50,6 +56,8 @@
   items:
   - name: Create Web.config for ASP.NET applications
     href: create-web-config-asp-dot-net.md
+  - name: How to troubleshoot OutOfMemoryException
+    href: outofmemoryexception-asp-net.md
   - name: HTTP Bad Request error in CLM portal
     href: clm-http-bad-request.md
   - name: HTTP error 403.16 when accessing a website
@@ -70,6 +78,8 @@
     href: asynchronous-wcf-service-use-wrong-impersonation.md
   - name: Error when calling MTS COM from ASP
     href: server-execution-fail-call-mts-com-asp.md
+  - name: Exception when an application runs in Integrated Pipeline mode
+    href: exception-integrated-pipeline-mode.md
   - name: Expression Encoder crashes
     href: expression-encoder-crash-live-broadcasting.md
   - name: FileNotFoundException when client application calls web service
@@ -81,10 +91,16 @@
 
 - name: WWW Administration and Management
   items:
+  - name: Configure IIS W3SVC in WSFC
+    href: configure-iis-wsfc-wsfc.md
   - name: Configure intermediate certificates in IIS
     href: configure-intermediate-certificates-iis.md
   - name: Enable SSL for all customers
     href: enable-ssl-all-customers-iis.md
+  - name: Error when you change identity of an application pool
+    href: 0x80090016-change-application-pool-identity.md
+  - name: HTTP 400 error when sending requests that need Kerberos
+    href: http-bad-request-response-kerberos.md
   - name: Read and analyze a client certificate
     href: analyze-client-certificate.md
   - name: Restrict users from accessing to web resources
@@ -98,6 +114,10 @@
     href: cannot-import-ssl-pfx-local-certificate.md
   - name: Changing IP/port causes other sites fail
     href: change-ip-port-wildcard certificate-site-fail.md
+  - name: Control authorization permission in ASP.NET
+    href: authorization-permissions-asp-net.md
+  - name: HTTP error 403.7  when opening an IIS webpage
+    href: http-403-forbidden-open-iis-webpage.md
 
 - name: WWW Service and Svchost Operation
   items:
