@@ -46,7 +46,7 @@ Website number 10 has the following settings:
 - IP address assigned as 192.168.0.1
 - TCP Port assigned as 80
 - SSL Port assigned as 443
-- Host Header of www.different.com
+- Host Header of `www.different.com`
 
 To host multiple websites on IIS, websites must use different IP addresses, different port numbers, or different Host Headers. In this example, the settings seem correct because the Host Header on each site is different. However, Host Headers can't be used, for the purpose of SSL. That means the SSL portion of the websites have the same settings. When the web service initializes, it can start the first website completely. When it tries to start website 10, it can start the port 80 portion, but can't start the port 443 portion, which causes the Event ID 115 error. To resolve this problem, assign a different IP address to one of the websites. That will make them unique for both TCP and SSL considerations.
 
@@ -84,7 +84,7 @@ If all else fails, another program or service is probably bound to port 443. In 
 
 Here's how to check this:
 
-1. From a command prompt, type `et stop iisadmi` , and press ENTER to stop the `IISADMIN` service.
+1. From a command prompt, type `et stop iisadmi` , and press ENTER to stop the IISADMIN service.
 
     > [!NOTE]
     > You may need to stop other IIS services.

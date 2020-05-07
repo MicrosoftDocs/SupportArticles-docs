@@ -34,7 +34,7 @@ To make an assembly available for an ASP.NET application, you must place the ass
 
 ## Register the assembly in an ASP.NET application web form
 
-In a .NET programming environment, open the Form.aspx source window and add the following tag at top of the code:
+In a .NET programming environment, open the *Form.aspx* source window and add the following tag at top of the code:
 
 ```aspx
 <%@ Register TagPrefix="Custom" Namespace="CustomControlNamespace" Assembly= "CustomControl" %>

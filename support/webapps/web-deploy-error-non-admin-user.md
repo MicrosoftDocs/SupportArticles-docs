@@ -40,7 +40,7 @@ If Web Deploy operation runs from a command line using Msdeploy.exe, verify if t
 
 If Web Deploy operation performed using delegation via the Web Management Service (WMSVC), verify if the account configured in the delegation rule has the following permissions:
 
-- Read permission to `%windir%\system32\inetsrv\config`
+- Read permission to `%windir%\system32\inetsrv\config`.
 - Modify permission to `%windir%\system32\inetsrv\config\applicationHost.config`.
 
 > [!NOTE]
