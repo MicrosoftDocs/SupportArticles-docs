@@ -5,7 +5,7 @@ ms.date: 03/19/2020
 ms.prod-support-area-path: 
 ms.reviewer: mlaing
 ---
-# Global Modules should be added and removed at both the server level and child level configuration in Internet Information Services
+# Global Modules should be added and removed at both the server level and child level configuration in IIS
 
 This article explains you should add and remove global modules at both the server level and child level configuration in Internet Information Services.
 
@@ -18,7 +18,7 @@ When you install and configure a global native module in Internet Information Se
 
 ## Remove a global native module
 
-When you decide to remove this global module, you are again required to remove it from the server level. However, this removal process doesn't ensure that the previous configuration entries written in the `web.config` file(s) for the site or application also get removed. This behavior is by design. When removing a global module, ensure you remove or disable the module from the child level configuration before removing it completely from the server level.
+When you decide to remove this global module, you are again required to remove it from the server level. However, this removal process doesn't ensure that the previous configuration entries written in the *web.config* file(s) for the site or application also get removed. This behavior is by design. When removing a global module, ensure you remove or disable the module from the child level configuration before removing it completely from the server level.
 
 ## More information
 

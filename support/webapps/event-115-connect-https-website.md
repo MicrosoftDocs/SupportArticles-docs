@@ -30,7 +30,7 @@ The following information occurs in the event logs:
 > Data: 0000: 34 00 00 00 4...
 
 > [!NOTE]
-> The **instance** in the error description refers to the website number. Websites are numbered incrementally as they are added to IIS. This error indicates that the Default website (or site number 1) is having problems. In this example, **Event ID: 115** refers to the Secure Sockets Layer (SSL) portion of the Default website that's unable to start. **Event ID: 113** refers to the port 80 bindings (non-SSL) having trouble to start.
+> The **instance** in the error description refers to the website number. Websites are numbered incrementally as they are added to IIS. This error indicates that the Default website (or site number 1) is having problems. In this example, Event ID: 115 refers to the Secure Sockets Layer (SSL) portion of the Default website that's unable to start. Event ID: 113 refers to the port 80 bindings (non-SSL) having trouble to start.
 
 ## Workaround 1
 
@@ -39,7 +39,7 @@ Website number 3 has the following settings:
 - IP address assigned as 192.168.0.1
 - TCP Port assigned as 80
 - SSL Port assigned as 443
-- Host Header of www.company.com
+- Host Header of `www.company.com`
 
 Website number 10 has the following settings:
 
@@ -74,20 +74,20 @@ Since IIS 8, the new feature `SNI` is provided to resolve such issue.
 
 ## Workaround 3
 
-If you have assigned each SSL website a unique IP address and you still receive an **Event ID 115**, there may be some Advanced settings on a website which are preventing the SSL portions of your websites from being unique. To view these settings go into the Properties for each website and click **Advanced** on the website tab. You will see a section called **Multiple SSL Identities for this website**. If only one IP address is assigned to the website, make sure there's a single SSL identity.
+If you have assigned each SSL website a unique IP address and you still receive an Event ID 115, there may be some Advanced settings on a website which are preventing the SSL portions of your websites from being unique. To view these settings go into the Properties for each website and click **Advanced** on the website tab. You will see a section called **Multiple SSL Identities for this website**. If only one IP address is assigned to the website, make sure there's a single SSL identity.
 
 Since IIS 8, the new feature `SNI` is provided to resolve such issue.
 
 ## Workaround 4
 
-If all else fails, another program or service is probably bound to port 443. In this case, all your websites (instances) using SSL are logged with an **Event ID 115**.
+If all else fails, another program or service is probably bound to port 443. In this case, all your websites (instances) using SSL are logged with an Event ID 115.
 
 Here's how to check this:
 
-1. From a command prompt, type `et stop iisadmi` , and press **ENTER** to stop the `IISADMIN` service.
+1. From a command prompt, type `et stop iisadmi` , and press ENTER to stop the `IISADMIN` service.
 
     > [!NOTE]
     > You may need to stop other IIS services.
 
-2. Type `etstat -a` and press **ENTER**. (If the output is too long, you may need to pipe the output by using `|` more or `> output.txt`)
-3. Look for `0.0.0.0:443` or any other IP address ending in **:443** under the **Local Address**. For example, **column. 0.0.0.0** means something is bound to all IP addresses on port 443 and 192.0.0.1:443. After the `IISADMIN` service is stopped, if you see `0.0.0.0:443`, something else than IIS is bound and listening on port 443. Stop programs using port 443 to allow your websites to run normally.
+2. Type `etstat -a` and press ENTER. (If the output is too long, you may need to pipe the output by using `|` more or `> output.txt`)
+3. Look for `0.0.0.0:443` or any other IP address ending in **:443** under the **Local Address**. For example, *column. 0.0.0.0* means something is bound to all IP addresses on port 443 and 192.0.0.1:443. After the IIS Admin Service (IISADMIN) service is stopped, if you see `0.0.0.0:443`, something else than IIS is bound and listening on port 443. Stop programs using port 443 to allow your websites to run normally.

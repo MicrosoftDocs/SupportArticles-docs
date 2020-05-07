@@ -24,11 +24,11 @@ When performing a Web Deploy operation that requires administrative permissions,
 
 ## Cause
 
-Internet Information Services (IIS) requires administrative privileges to make configuration changes to the `ApplicationHost.config file`. The user executing the operation doesn't have sufficient rights to access the `ApplicationHost.config` file and perform changes. This error could occur in a hosted scenario where the person executing the command isn't the administrator of the target hosting machine.  
+Internet Information Services (IIS) requires administrative privileges to make configuration changes to the *ApplicationHost.config file*. The user executing the operation doesn't have sufficient rights to access the *ApplicationHost.config* file and perform changes. This error could occur in a hosted scenario where the person executing the command isn't the administrator of the target hosting machine.  
 
 ## Resolution when Web Deploy operation runs by Msdeploy.exe
 
-If Web Deploy operation runs from a command line using `Msdeploy.exe`, verify if the account performing the operation has the following permissions:
+If Web Deploy operation runs from a command line using Msdeploy.exe, verify if the account performing the operation has the following permissions:
 
 - Read permission to `%windir%\system32\inetsrv\config`
 - Modify permission to `%windir%\system32\inetsrv\config\applicationHost.config`.
@@ -47,7 +47,7 @@ If Web Deploy operation performed using delegation via the Web Management Servic
 > The account's identity depends on how the `Delegation Rule` is configured:
 > - `CurrentUser`: The user account used to make the remote connection in IIS. 
 > - `ProcessIdentity`: The configured identity of the WMSVC service on the target server.
->- `SpecificUser`: User defined in the **Specify Credentials** dialog of the delegation rule.
+> - `SpecificUser`: User defined in the **Specify Credentials** dialog of the delegation rule.
 
 ## More information
 

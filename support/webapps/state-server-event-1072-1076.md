@@ -56,7 +56,7 @@ One of the events below appears in the Application Event log of the state server
 
 ## Cause
 
-When using the state server mode of Session state in ASP.NET, the ASP.NET Web server process in the Web server communicates with the state server by using `WinSocket` over Transmission Control Protocol/Internet Protocol (TCP/IP). By default, the Web server process sets the time-out value of all send and receive TCP/IP operations to 10 seconds. Similarly, the state server also times out all send and receive TCP/IP operations after 10 seconds.
+When using the state server mode of Session state in ASP.NET, the ASP.NET Web server process in the Web server communicates with the state server by using WinSocket over Transmission Control Protocol/Internet Protocol (TCP/IP). By default, the Web server process sets the time-out value of all send and receive TCP/IP operations to 10 seconds. Similarly, the state server also times out all send and receive TCP/IP operations after 10 seconds.
 
 However, if the Web server or the state server is under high CPU utilization (close to 100 percent), a TCP/IP operation can take more than 10 seconds and thus is canceled before completion. As a result, one of the above-mentioned events is logged, and the originating client request fails. The state server logs event ID 1072 if the ASP.NET Web server process times out a TCP/IP operation. If the state server times out a TCP/IP operation, the state server logs event ID 1076.
 
@@ -73,13 +73,13 @@ To modify the TCP/IP operation time-out value for the ASP.NET Web server process
 Here's how to modify the TCP/IP operation time-out value for the state server:
 
 1. Stop the ASP.NET state server service.
-2. Click **Start**, click **Run**, type Regedt32.exe, and then click **OK** to start Registry Editor.
+2. Click **Start**, click **Run**, type *Regedt32.exe*, and then click **OK** to start Registry Editor.
 3. Locate the following key in the registry:  `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\aspnet_state\Parameter`
 4. Add a DWORD value that is named *SocketTimeout*. Set a positive integer to represent the new TCP/IP timeout in seconds.
 5. Quit the Registry Editor.
 6. Restart the ASP.NET state server service.
 
-For users who experience the problems that are mentioned in the **Symptoms** section, use these methods to increase the time-out values on the state server and on all Web servers to 20 seconds.
+For users who experience the problems that are mentioned in the [Symptoms](#symptoms) section, use these methods to increase the time-out values on the state server and on all Web servers to 20 seconds.
 
 > [!NOTE]
 > If the state server isn't running when you increase the time-out values on the Web server, the client request times out after *n* seconds, where *n* equals a new timeout value, instead of the default 10 seconds.

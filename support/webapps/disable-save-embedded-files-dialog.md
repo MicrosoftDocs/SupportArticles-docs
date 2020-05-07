@@ -21,6 +21,6 @@ Expression Web allows you to insert image files, style sheets, script files, and
 In cases where you want to use absolute links for external files instead of saving the files into your site, you may want to disable the **Save Embedded Files** dialog box. You can do that with the following registry key:  
 `HKEY_CURRENT_USER\Software\Microsoft\Expression\Web\4.0\SaveEmbeddedFilesDisabled`
 
-By setting the `SaveEmbeddedFilesDisabled` key to a string value of `1`, the **Save Embedded Files** dialog will be disabled. Any other value (or the absence of the Registry key) will enable the **Save Embedded Files** dialog. When the **Save Embedded Files** dialog is disabled, Expression Web will use the links to the existing files on your disk.
+By setting the `SaveEmbeddedFilesDisabled` key to a string value of `1`, the **Save Embedded Files** dialog box will be disabled. Any other value (or the absence of the Registry key) will enable the **Save Embedded Files** dialog box. When the **Save Embedded Files** dialog box is disabled, Expression Web will use the links to the existing files on your disk.
 
-It is not necessary to close and relaunch Expression Web after setting the `SaveEmbeddedFilesDisabled` Registry key.
+It is not necessary to close and relaunch Expression Web after setting the `SaveEmbeddedFilesDisabled` registry key.

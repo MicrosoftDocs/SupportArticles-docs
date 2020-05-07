@@ -124,9 +124,9 @@ The expression builder is used to set values of control properties based on the 
 
 The dollar sign ($) indicates to ASP.NET that the following expression is an expression builder. The expression prefix defines the kind of expression, such as `AppSettings`, `ConnectionStrings`, or `Resources`. Additionally, you can create and define your own expression builder. The expression value that follows the colon (:) is what ASP.NET will actually use as the value of a certain property.
 
-The following demo shows how to use the expression builder to obtain the copyright of a Web site from the `AppSettings` node in the `Web.config` file and how to set the copyright information as the value of the Literal's Text property.
+The following demo shows how to use the expression builder to obtain the copyright of a Web site from the `AppSettings` node in the *Web.config* file and how to set the copyright information as the value of the Literal's Text property.
 
-The `AppSettings` node in `Web.config` file:
+The `AppSettings` node in *Web.config* file:
 
 ```xml
 <appSettings>

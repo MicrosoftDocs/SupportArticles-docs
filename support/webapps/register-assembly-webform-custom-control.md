@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 321749
 
 ## Sample assembly properties
 
-To be represented as a Custom Server Control, the assembly must have a class that directly or indirectly derives from `System.Web.UI.Control` and you must enclose the class in a namespace. Samples in this article assume that the class is enclosed in the `CustomControlNamespace` namespace, and that the assembly was successfully compiled in a file named `CustomControl.dll`.
+To be represented as a Custom Server Control, the assembly must have a class that directly or indirectly derives from `System.Web.UI.Control` and you must enclose the class in a namespace. Samples in this article assume that the class is enclosed in the `CustomControlNamespace` namespace, and that the assembly was successfully compiled in a file named *CustomControl.dll*.
 
 ## Make an assembly available to ASP.NET application
 
@@ -29,7 +29,7 @@ To make an assembly available for an ASP.NET application, you must place the ass
     3. In the **Project Properties** dialog box, click **Common Properties** and click **General**.
 
     In the tree pane, you see the list with the **Project Folder** property. This is typically the root directory of the application.
-2. In a **Web Application** project folder, create a folder named *bin* if it doesn't exist.
+2. In a Web Application project folder, create a folder named *bin* if it doesn't exist.
 3. Copy or move the assembly's .dll in this folder. You can now use the control from any ASP.NET page in your application's root directory (or any of its subfolders).
 
 ## Register the assembly in an ASP.NET application web form

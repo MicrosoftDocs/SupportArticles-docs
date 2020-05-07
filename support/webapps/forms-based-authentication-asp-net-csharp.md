@@ -35,7 +35,7 @@ The following list outlines the recommended hardware, software, network infrastr
 
 This section demonstrates how to add and modify the `<authentication>` and `<authorization>` configuration sections to configure the ASP.NET application to use forms-based authentication.
 
-1. In Solution Explorer, open the `Web.config` file.
+1. In Solution Explorer, open the *Web.config* file.
 2. Change the authentication mode to **Forms**.
 3. Insert the `<Forms>` tag, and fill the appropriate attributes. Copy the following code, and then click **Paste as HTML** on the **Edit** menu to paste the code in the `<authentication>` section of the file:
 
@@ -292,7 +292,7 @@ This section creates a test page to which users are redirected after they authen
 
 - You may want to store passwords securely in a database. You can use the `FormsAuthentication` class utility function named `HashPasswordForStoringInConfigFile` to encrypt the passwords before you store them in the database or configuration file.
 
-- You may want to store the SQL connection information in the configuration file (`Web.config`) so that you can easily modify it if necessary.
+- You may want to store the SQL connection information in the configuration file (*Web.config*) so that you can easily modify it if necessary.
 
 - You may consider adding code to prevent hackers who try to use different combinations of passwords from logging on. For example, you can include logic that accepts only two or three logon attempts. If the user can't log on in a certain number of attempts, you may want to set a flag in the database to not allow that user to log on until that user re-enables his or her account by visiting a different page or by calling your support line. In addition, you should add appropriate error handling wherever necessary.
 

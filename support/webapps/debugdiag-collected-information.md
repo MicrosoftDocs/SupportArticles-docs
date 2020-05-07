@@ -4,20 +4,18 @@ description: Information on what is collected in DebugDiag Diagnostic.
 ms.date: 03/19/2020
 ms.prod-support-area-path:
 ---
-# DebugDiag 1.2 Installation and Data Collector
+# DebugDiag 1.2 installation and data collector
 
-This article describes the information that may be collected from a machine when running the DebugDiag 1.2 Installation and data collector.
+This article describes the information that may be collected from a machine when running the DebugDiag 1.2 installation and data collector.
 
 _Original product version:_ &nbsp; Windows Server 2008 R2, 2008  
 _Original KB number:_ &nbsp; 2700007
 
 ## Summary
 
-The DebugDiag 1.2 Installation and Data Collector will install DebugDiag 1.2 to the machine, and allow the user to create a hang dump to upload to Microsoft. It also allows the user to run DebugDiag manually and upload data to Microsoft at a later time.
+The DebugDiag 1.2 installation and data collector will install DebugDiag 1.2 to the machine, and allow the user to create a hang dump to upload to Microsoft. It also allows the user to run DebugDiag manually and upload data to Microsoft at a later time.
 
-## Information collected
-
-- Operating System
+## Operating system
 
 |Description|
 |-|
@@ -29,7 +27,7 @@ The DebugDiag 1.2 Installation and Data Collector will install DebugDiag 1.2 to 
 |Username:|
 ||
 
-- Computer System
+## Computer system
 
 |Description|
 |-|
@@ -39,21 +37,21 @@ The DebugDiag 1.2 Installation and Data Collector will install DebugDiag 1.2 to 
 |Role:|
 ||
 
-- Hang Dump Files
+## Hang dump files
 
 |Description|File Name|
 |--|--|
 |Process Dump files|{Computername}\_SDPHangDumps_{Date}_{Time}.zip|
 |||
 
-- DebugDiag Data Files
+## DebugDiag data files
 
 |Description| File Name |
 |--|--|
 |File Folder specified by user that will contain data they want to upload to Microsoft.|{Computername}\_SDPDebugDiagData_{Date}_{Time}.zip|
 |||
 
-- DebugDiag Log Files
+## DebugDiag log files
 
 |Description| File Name |
 |--|--|

@@ -105,7 +105,7 @@
     href: filenotfindexception-asp-net-call-web-service.md
   - name: FtpPutFile always returns success
     href: ftpputfile-success-451-status.md
-  - name: Internet Printing fails whenfiles are larger than 29 MB
+  - name: Internet Printing fails when files are larger than 29 MB
     href: internet-printing-fails-iis.md
   - name: WCF REST service generates metadata in WSDL
     href: wcf-rest-generate-metadata-wsdl.md
