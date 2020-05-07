@@ -1,5 +1,5 @@
 ---
-title: Apple devices don't start enrollment
+title: Apple DEP devices don't start auto-enrollment
 description: Describes an issue in which Intune enrollment doesn't automatically start on Apple DEP devices when you turn on the devices.
 ms.date: 04/16/2020
 ms.prod-support-area-path:

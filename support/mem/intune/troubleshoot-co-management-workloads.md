@@ -2,7 +2,7 @@
 title: Troubleshooting co-management workloads
 description: Helps you understand and troubleshoot issues that you may encounter when you configure workloads in an Intune and Configuration Manager co-management environment.
 ms.date: 04/16/2020
-ms.prod-support-area-path: Co-management with System Center Configuration Manager
+ms.prod-support-area-path: Co-management with Configuration Manager
 ms.reviewer: luche
 ---
 # Troubleshoot co-management workloads

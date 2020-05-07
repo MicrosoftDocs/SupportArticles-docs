@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot Bootstrap with modern provisioning
-description: Helps you understand and troubleshoot issues that you may encounter when you set up co-management by taking path 2 'Bootstrap the Configuration Manager client with modern provisioning.'
+title: Troubleshoot bootstrap with modern provisioning
+description: Helps you understand and troubleshoot issues that you may encounter when you set up co-management by taking path 2: Bootstrap the Configuration Manager client with modern provisioning.
 ms.date: 04/16/2020
 ms.prod-support-area-path: Co-management with System Center Configuration Manager
 ms.reviewer: luche
@@ -79,7 +79,7 @@ To verify the deployment, follow these steps on the Windows 10 device:
 
 1. Open File Explorer, and go to `%WinDir%\CCM\logs`.
 2. Open the ADALOperationProvider.log file with [CMTrace](/mem/configmgr/core/support/cmtrace), and look for **Getting AAD (User) token and Getting AAD (device) token** to verify the tokens.
-3. In CMTrace, open the **CoManagementHandler.log** file, look for **Device is already enrolled with MDM and Device Provisioned** to verify the enrollment.
+3. In CMTrace, open the CoManagementHandler.log file, look for **Device is already enrolled with MDM and Device Provisioned** to verify the enrollment.
 4. Open Control Panel, type **Configuration Manager** in the search box, and then select it.
 5. Select the **General** tab, and verify the **Assigned management point**.
 6. Select the **Network** tab, and verify the **Internet-based management point**.
@@ -129,9 +129,9 @@ To fix the issue, follow the steps in [Azure AD User Discovery](/mem/configmgr/c
 >[!NOTE]
 > If the Configuration Manager site is new or recently rebuilt, you must also configure [Active Directory User Discovery](/mem/configmgr/core/servers/deploy/configure/configure-discovery-methods#BKMK_ConfigADDiscGeneral).
 
-### CoManagementHandler.log shows 'Queuing enrollment timer to fire at...'
+### CoManagementHandler.log shows **Queuing enrollment timer to fire at...**
 
-The **ADALOperationProvider.log** file on the Windows devices shows **Getting AAD (User) token and Getting AAD (device) token**. However, the device isn't enrolled, and the last line in **CoManagementHandler.log** is '*Queuing enrollment timer to fire at...*'.
+The ADALOperationProvider.log file on the Windows devices shows **Getting AAD (User) token and Getting AAD (device) token**. However, the device isn't enrolled, and the last line in CoManagementHandler.log is **Queuing enrollment timer to fire at...**.
 
 This behavior is expected in Configuration Manager current branch version 1806 and later versions. Starting in version 1806, automatic enrollment isn't immediate for all clients. This behavior helps enrollment scale better for large environments. Configuration Manager randomizes enrollment based on the number of clients. For example, if your environment has 100,000 clients, enrollment may occur over several days.
 
@@ -164,9 +164,9 @@ If the `ClientHealthStatus` value is **7** (healthy), Intune considers the Confi
 
 If the `ClientHealthStatus` value isn't **7** (unhealthy), Intune considers the Configuration Manager client as healthy if the `ClientHealthLastSyncTime` is not older than 48 hours.
 
-The `ClientHealthLastSyncTime` value is updated by the **Client Notification** component of Configuration Manager client, and the log file is **CcmNotificationAgent.log**.
+The `ClientHealthLastSyncTime` value is updated by the **Client Notification** component of Configuration Manager client, and the log file is CcmNotificationAgent.log.
 
-To troubleshoot this issue, check the **CcmNotificationAgent.log** file if the `ClientHealthLastSyncTime` is not up to date. Here is an example:
+To troubleshoot this issue, check the CcmNotificationAgent.log file if the `ClientHealthLastSyncTime` is not up to date. Here is an example:
 
 > Updating MDM_ConfigSetting.ClientHealthLastSyncTime with value 2019-04-01T21:42:51Z             BgbAgent                4/2/2019 8:42:51 AM     9476 (0x2504)
 
@@ -176,16 +176,16 @@ If the `ClientHealthLastSyncTime` value is up-to-date, but the last check-in ti
 
 The issue occurs because of a permissions issue between the remote site system where the CMG connection point role is installed and the primary site.
 
-The remote site system collects the `TrafficData` report from the CMG, then sends the data to the primary site through state messages. Here is a sample log snippet of **SMS_Cloud_ProxyConnector.log**:
+The remote site system collects the `TrafficData` report from the CMG, then sends the data to the primary site through state messages. Here is a sample log snippet of SMS_Cloud_ProxyConnector.log:
 
 > SMS_CLOUD_PROXYCONNECTOR    6124 (0x17ec)    ReportTrafficData - state message to send: \~~\<ProxyTrafficStateDetails ServerName="PS1DP.CONTOSO.COM" StartTime="Date1 Time1" EndTime="Date2 Time2" MaxConcurrentRequests="2">  \<EndPoints>~~    \<EndPoint Name="BGB" ProxyServer="DOMAINCMG.CLOUDAPP.NET" TargetHost="ps.contoso.com" TotalRequests="2" TotalRequestsWithBearerToken="0" MaxConcurrentRequests="2" TotalRequestBytes="2594" TotalResponseBytes="716" FailedRequests="0"/>~~  \</EndPoints>\~~\</ProxyTrafficStateDetails>~~~~
 
-Because the remote site system is also a management point, these state messages are moved into an outbox that is accessed by MP File Dispatch Manager that sends the files to the primary site. Here is a sample log snippet of **mpfdm.log**:
+Because the remote site system is also a management point, these state messages are moved into an outbox that is accessed by MP File Dispatch Manager that sends the files to the primary site. Here is a sample log snippet of mpfdm.log:
 
 > SMS_MP_FILE_DISPATCH_MANAGER    7044 (0x1b84)    ~Moving 1 *.SMX file(s) from C:\SMS\MP\OUTBOXES\statemsg.box\ to \\\PS.contoso.com\SMS_PS1\inboxes\auth\statesys.box\incoming\\.  
 > SMS_MP_FILE_DISPATCH_MANAGER    6584 (0x19b8)    ~Moved file C:\SMS\MP\OUTBOXES\statemsg.box\\___CMUp5onztqe.SMX to \\\PS.contoso.com\SMS_PS1\inboxes\auth\statesys.box\incoming\\___CMUp5onztqe.SMX
 
-When there is a permission issue, MP File Dispatch Manager can't access the inboxes on the primary site and logs the following error in **mpfdm.log**:
+When there is a permission issue, MP File Dispatch Manager can't access the inboxes on the primary site and logs the following error in mpfdm.log:
 
 > SMS_MP_FILE_DISPATCH_MANAGER    3828 (0xef4)    ~**ERROR: Cannot connect to the inbox source, sleep 30 seconds and try again.
 
@@ -193,11 +193,11 @@ To fix the issue, add the machine account of the remote site system to the Local
 
 ### Clients can't locate the management point by using the CMG, and you receive error 403
 
-When this issue occurs, the following error is logged in the **LocationServices.log** on the client:
+When this issue occurs, the following error is logged in LocationServices.log on the client:
 
 > [CCMHTTP] ERROR INFO: StatusCode= **403** StatusText=CMGConnector_Clientcertificaterequired LocationServices
 
-Additionally, the following error is logged in **SMS_Cloud_ProxyConnector.log** on the CMG connection point server:
+Additionally, the following error is logged in SMS_Cloud_ProxyConnector.log on the CMG connection point server:
 
 > MessageID: \<ID> RequestURI: https://\<FQDN>/SMS_MP/.sms_aut?SITESIGNCERT EndpointName: SMS_MP ResponseHeader: HTTP/1.1 **403** CMGConnector_Clientcertificaterequired~~ ResponseBodySize: 5274 ElapsedTime: 44 ms SMS_CLOUD_PROXYCONNECTOR
 
@@ -205,7 +205,7 @@ If the CMG connection point server has a valid client authentication certificate
 
 > The revocation function was unable to check revocation because the revocation server was offline.  80092013
 
-Additionally, if you enable verbose logging by setting the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\SMS_CLOUD_PROXYCONNECTOR\VerboseLogging` registry value to **1**, error entries that resemble the following are logged in **SMS_Cloud_ProxyConnector.log**:
+Additionally, if you enable verbose logging by setting the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\SMS_CLOUD_PROXYCONNECTOR\VerboseLogging` registry value to **1**, error entries that resemble the following are logged in SMS_Cloud_ProxyConnector.log:
 
 > Chain build failed cert: C019CC17EEFA681D154BA9F24F8EAE9640D54C49  
 > Chain 0 status: RevocationStatusUnknown  
@@ -217,7 +217,7 @@ Additionally, if you enable verbose logging by setting the `HKEY_LOCAL_MACHINE\S
 > Filtered cert count with allowed root CA and has private key: 0  
 > Filtered cert count with client auth: 0
 
-We recommend that, instead of instead of automatically disabling CRL checking, you first make sure that it works. However, if you can't get CRL checking to work correctly, temporarily disable CRL checking for CMG connection points. This lets a client certificate be selected without performing CRL checking, and enables communication with the management point.
+We recommend that, instead of automatically disabling CRL checking, you first make sure that it works. However, if you can't get CRL checking to work correctly, temporarily disable CRL checking for CMG connection points. This lets a client certificate be selected without performing CRL checking, and enables communication with the management point.
 
 ## References
 

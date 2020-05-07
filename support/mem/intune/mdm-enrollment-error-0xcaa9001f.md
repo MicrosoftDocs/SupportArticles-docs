@@ -33,11 +33,11 @@ MDM enrollment fails for co-managed Windows devices that are hybrid Azure AD-joi
   > Error description: **AADSTS70002: Error validating credentials. AADSTS50155: Device is not authenticated.**
 
 > [!NOTE]
-> [Bring your own device (BYOD)](/mem/intune/user-help/enroll-windows-10-device) enrollment or[auto-enrollment by using Group Policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy) works successfully.
+> [Bring your own device (BYOD)](/mem/intune/user-help/enroll-windows-10-device) enrollment or [auto-enrollment by using Group Policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy) works successfully.
 
 ## Cause
 
-This issue occurs when Integrated Windows Authentication is tried by the Configuration Manager client against Azure AD while the verified domain isn't federated.
+This issue occurs when integrated Windows authentication is tried by the Configuration Manager client against Azure AD while the verified domain isn't federated.
 
 This issue occurs in one of the following situations:
 

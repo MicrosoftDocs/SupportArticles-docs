@@ -1,15 +1,15 @@
 ---
 title: Troubleshoot auto-enrolling existing devices 
-description: Helps you understand and troubleshoot issues that you may encounter when you set up co-management by taking Path 1 'Auto-enroll existing Configuration Manager-managed devices into Intune.'
+description: Helps you understand and troubleshoot issues that you may encounter when you set up co-management by taking Path 1: Auto-enroll existing Configuration Manager-managed devices into Intune.
 ms.date: 04/16/2020
-ms.prod-support-area-path: Co-management with System Center Configuration Manager
+ms.prod-support-area-path: Co-management with Configuration Manager
 ms.reviewer: luche
 ---
 # Troubleshoot co-management: Auto-enroll existing Configuration Manager-managed devices into Intune
 
 This article helps you understand and troubleshoot issues that you may encounter when you set up co-management by [auto-enrolling existing Configuration Manager-managed devices into Intune](/mem/configmgr/comanage/quickstart-paths#bkmk_path1).
 
-In this scenario, you can continue to manage Windows 10 devices by using Microsoft System Center Configuration Manager, or you can selectively move workloads to Microsoft Intune as you want. For more information about how to configure workloads, see [Support Tip: Configuring workloads in a co-managed environment](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Configuring-workloads-in-a-co-managed-environment/ba-p/707221).
+In this scenario, you can continue to manage Windows 10 devices by using Configuration Manager, or you can selectively move workloads to Microsoft Intune as you want. For more information about how to configure workloads, see [Support Tip: Configuring workloads in a co-managed environment](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Configuring-workloads-in-a-co-managed-environment/ba-p/707221).
 
 _Original product version:_ &nbsp; Microsoft Intune  
 _Original KB number:_ &nbsp; 4519160
@@ -180,7 +180,7 @@ Hybrid Azure AD registration of a Windows 10 device fails, and you receive the 
 
 > Something went wrong. Confirm you are using the correct sign-in information and that your organization uses this feature. You can try to do this again or contact your system administrator with the error code 0x80090016
 
-The error message of 0x80090016 is 'Keyset does not exist.' This means that the device registration could not save the device key because the TPM keys were not accessible.
+The error message of 0x80090016 is **Keyset does not exist**. This means that the device registration could not save the device key because the TPM keys were not accessible.
 
 This issue occurs if Windows isn't the owner of the TPM. Starting with Windows 10, the operating system automatically initializes and takes ownership of the TPM. However, if this process fails, Windows won't be the owner and will result in the issue.
 
@@ -206,10 +206,8 @@ To fix this issue, clear the TPM and restart the client device. To clear the TP
 
 After the device restarts, hybrid Azure AD join should be successful. To verify, run `dsregcmd /status` command at a command prompt. The following result indicates a successful join:
 
-```console
-AzureAdJoined : YES
-DomainName : <on-prem Domain name>
-```
+> AzureAdJoined : YES  
+> DomainName : \<on-prem Domain name>
 
 For more information, see [Troubleshoot the TPM](/windows/security/information-protection/tpm/initialize-and-configure-ownership-of-the-tpm).
 

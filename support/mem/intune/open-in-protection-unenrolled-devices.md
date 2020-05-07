@@ -1,5 +1,5 @@
 ---
-title: Support Intune MAM without enrollment policies
+title: OneDrive supports Open-in protection on unenrolled devices
 description: Describes a change since OneDrive for iOS version 8.14 to support 'Open-in' protection on devices not managed by an MDM solution.
 ms.date: 04/16/2020
 ms.prod-support-area-path: 
