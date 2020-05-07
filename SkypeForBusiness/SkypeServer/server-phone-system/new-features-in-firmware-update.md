@@ -23,9 +23,7 @@ This article describes the features of the firmware update for the Polycom VVX 
 
 A new firmware for the Polycom VVX IP phone is currently undergoing certification, and it will be available for customers soon. 
 
-The new firmware release version is 5.5.1.11526.
-
-## Summary
+The new firmware release version is 5.9.X.
 
 ### Firmware upgrade options
 
@@ -53,7 +51,7 @@ The following models of the Polycom VVX Business Media Phone are supported by th
 > - The estimated time to install new firmware on this phone is less than 15 minutes.   
 > - The phone will restart as part of the upgrade process.   
 
-### What's New
+### What's new
 
 The following table lists the features that are provided in this firmware update.
 
@@ -73,5 +71,9 @@ The following table lists the features that are provided in this firmware update
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
 
 ## More information
+
+- [OAuth 2.0 and third-party application ID](https://techcommunity.microsoft.com/t5/skype-for-business-blog/oauth-2-0-and-third-party-application-id-timeline-extended-to/ba-p/482876)
+- [IP Phones](https://docs.microsoft.com/skypeforbusiness/certification/devices-ip-phones)
+- [Device update considerations](https://docs.microsoft.com/skypeforbusiness/what-is-phone-system-in-office-365/getting-phones-for-skype-for-business-online/deploying-skype-for-business-online-phones#step-4---device-update-considerations)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
