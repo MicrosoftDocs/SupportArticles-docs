@@ -2,7 +2,7 @@
 title: Troubleshoot bootstrap with modern provisioning
 description: Helps you understand and troubleshoot issues that you may encounter when you set up co-management by taking path 2 - Bootstrap the Configuration Manager client with modern provisioning.
 ms.date: 04/16/2020
-ms.prod-support-area-path: Co-management with System Center Configuration Manager
+ms.prod-support-area-path: Co-management with Configuration Manager
 ms.reviewer: luche
 ---
 # Troubleshoot co-management: Bootstrap with modern provisioning
