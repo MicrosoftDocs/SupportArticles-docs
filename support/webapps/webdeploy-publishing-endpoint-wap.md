@@ -22,13 +22,25 @@ Starting with V2U6 (April 2015), the Web Deploy publishing protocol was moved fr
 Example of the new V2U6 publishing profile (snip):
 
 ```xml
-<publishData><publishProfile profileName="Site1 - Web Deploy" publishMethod="MSDeploy" publishUrl="Site1.SCM.contosocloud.com:443" msdeploySite="Site1" userName="$Site1" userPWD="<password>" destinationAppUrl="http://Site1.contosocloud.com"
+<publishData>
+    <publishProfile profileName="Site1 - Web Deploy" publishMethod="MSDeploy"
+        publishUrl="Site1.SCM.contosocloud.com:443"
+        msdeploySite="Site1" userName="$Site1" userPWD="<password>"
+        destinationAppUrl="http://Site1.contosocloud.com">
+    </publishProfile>
+</publishData>
 ```
 
 Example of the old publishing profile:
 
 ```xml
-<publishData><publishProfile profileName="Site1 - Web Deploy" publishMethod="MSDeploy" publishUrl="publish.contosocloud.com" msdeploySite="Site1" userName="$Site1" userPWD="<password>" destinationAppUrl="http://Site1.contosocloud.com"
+<publishData>
+    <publishProfile profileName="Site1 - Web Deploy" publishMethod="MSDeploy"
+        publishUrl="publish.contosocloud.com"
+        msdeploySite="Site1" userName="$Site1" userPWD="<password>"
+        destinationAppUrl="http://Site1.contosocloud.com">
+    </publishProfile>
+</publishData>
 ```
 
 ## Changes in WAP Websites V2U7
