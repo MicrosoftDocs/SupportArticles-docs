@@ -16,7 +16,7 @@ appliesto:
 - Microsoft 365 Apps for enterprise
 ---
 
-# How to enable Microsoft 365 Apps for enterprise ULS logging for random issues
+# How to enable ULS logging for Microsoft 365 Apps for enterprise
 
 > [!NOTE]
 > **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
@@ -39,7 +39,7 @@ To collect Office diagnostic logs, follow these steps:
 1. Use the Office application as usual. When the random issue is reproduced, continue to the next step.
 1. Close all the Office application windows that experienced the issue (this behavior forces all log data to be flushed to disk).
 1. Go to the %temp%\diagnostics folder, and then open the application folder that's being used (for example, WINWORD, EXCEL, or POWERPNT).
-1. Sort by the date changed, and then compress the most recent .log file.
+1. There may be more than one .log file to gather. Sort the .log files by the modified date and gather all .log files with a "Date modified" time from one hour before the issue occurrence up to (and including) the most recent .log file. Bundle all gathered .log files into a .zip archive file.
 1. Send the compressed (.zip) file to Microsoft Support.
 1. Turn logging off to prevent decreased performance and excessive disk consumption. To do this, run the following command at a command prompt:
 

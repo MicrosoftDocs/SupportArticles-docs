@@ -125,7 +125,7 @@ Clear the following persisted locations if they exist:
 
 ## OLicenseCleanup.vbs
 
-The four steps above can be automated using [OLicenseCleanup.vbs](https://download.microsoft.com/download/e/1/b/e1bbdc16-fad4-4aa2-a309-2ba3cae8d424/OLicenseCleanup.zip). Simply download and run the script with elevated priviledges.
+The four steps above can be automated using [OLicenseCleanup.vbs](https://download.microsoft.com/download/e/1/b/e1bbdc16-fad4-4aa2-a309-2ba3cae8d424/OLicenseCleanup.zip). Simply download and run the script with elevated privileges.
 
 ## Clear Office credentials and activation state for managed devices
 
@@ -156,7 +156,7 @@ Here's how to find out if a device is DJ, AADJ, HAADJ, or WPJ:
 
 In scenarios where all stored credentials (such as domain/tenant migration) must be cleared, clear the additional WAM locations.
 
-To clear all WAM accounts associated with Office on the device, download and run the [signoutofwamaccounts.ps1](https://download.microsoft.com/download/f/8/7/f8745d3b-49ad-4eac-b49a-2fa60b929e7d/signoutofwamaccounts.zip) script with elevated priviledges.
+To clear all WAM accounts associated with Office on the device, download and run the [signoutofwamaccounts.ps1](https://download.microsoft.com/download/f/8/7/f8745d3b-49ad-4eac-b49a-2fa60b929e7d/signoutofwamaccounts.zip) script with elevated privileges.
 
 > [!NOTE]
 >
