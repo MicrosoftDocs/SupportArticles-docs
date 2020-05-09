@@ -69,6 +69,9 @@ A message is sent from Bob (ob@fabrikam.com) to John's mailbox in Office 365 (jo
 | **P1 From**|ob@fabrikam.com|john.work+SRS=44ldt=IX=fabrikam.com=bob@contoso.com|
 | **From header**|ob@fabrikam.com|ob@fabrikam.com|
 
+> [!NOTE]
+> SRS rewriting causes the username part of an email address increasing in length. However, the email address has a limit of 64 characters. If the email address involves the SRS rewriting and exceeds 64 characters, the rewritten SRS address will take the form of "bounces" below.
+
 ### Relaying from a customer's on-premises server
 
 A message that is relayed from a customer's on-premises server or application through Office 365 from a non-verified domain has the **P1 From** address rewritten before it leaves Office 365. The address is rewritten by using the following pattern:
