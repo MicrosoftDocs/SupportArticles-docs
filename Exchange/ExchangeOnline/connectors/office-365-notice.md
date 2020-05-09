@@ -15,6 +15,8 @@ appliesto:
 - Exchange Online
 ---
 
+# Configure a certificate-based connector to relay email messages through Office 365
+
 ## Introduction 
 
 If your organization has a hybrid deployment (on-premises plus Microsoft Office 365), you frequently have to relay email messages to the Internet through Office 365. That is, messages that you send from your on-premises environment (mailboxes, applications, scanners, fax machines, and so on) to Internet recipients are first routed to Office 365, and then sent out. 
