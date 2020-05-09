@@ -70,7 +70,7 @@ A message is sent from Bob (ob@fabrikam.com) to John's mailbox in Office 365 (jo
 | **From header**|ob@fabrikam.com|ob@fabrikam.com|
 
 > [!NOTE]
-> SRS rewriting causes the username part of the email address to increase in length, which has a limit of 64 characters. If the email addresses involved with the SRS rewrite cause the 64 characters to be exceeded, the rewritten SRS address will take the form of the "bounces" format below. 
+> SRS rewriting causes the username part of an email address increasing in length. However, the email address has a limit of 64 characters. If the email address involves the SRS rewriting and exceeds 64 characters, the rewritten SRS address will take the form of "bounces" below.
 
 ### Relaying from a customer's on-premises server
 
