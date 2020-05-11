@@ -71,7 +71,7 @@
       href: ./known-issues/exchange-users-cant-access-meetings.md
   - name: Files
     items:
-    - name: Documents downloaded from desktop client open in protected view
+    - name: Downloaded documents open in protected view
       href: ./known-issues/download-documents-open-in-protected-view.md
   - name: IM and Presence
     items:
@@ -145,3 +145,4 @@
       href: ./known-issues/safari-intelligent-tracking-prevention-problems.md
     - name: Symantec DLP interferes with Teams processes
       href: ./known-issues/symantec-dlp-interferes-with-teams.md
+
