@@ -59,4 +59,4 @@ NOTE: Microsoft Excel correctly handles all other leap years, including century 
 
 For additional information about determining whether a given year is a leap year, click the article number below to view the article in the Microsoft Knowledge Base:
 
-   [214019](/help/214019) XL2000: Method to Determine Whether a Year Is a Leap Year
+   [Method to Determine Whether a Year Is a Leap Year](https://docs.microsoft.com/office/troubleshoot/excel/determine-a-leap-year)

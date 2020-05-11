@@ -79,7 +79,7 @@ To determine whether your Office is an "Office in the Microsoft Store" version o
 
 #### Method 1
 
-1. Open **Settings **from the Windows menu and select **Apps**.
+1. Open **Settings** from the Windows menu and select **Apps**.
 
 1. Under "Apps & features", enter "Office" in the **Search this list** box.
 

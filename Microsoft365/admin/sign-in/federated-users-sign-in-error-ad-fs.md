@@ -87,9 +87,9 @@ To renew the token-signing certificate on the primary AD FS server by using a ce
    3. In the file, change subject="CN=adfs.contoso.com" to the following: 
 
       subject="CN=**your-federation-service-name**"   
-   4. On the **File **menu, click **Save As**.    
-   5. In the** Save As **dialog box, click **All Files (*.*)** in the **Save as type** box.    
-   6. Type WebServerTemplate.inf in the **File name **box, and then click **Save**.    
+   4. On the **File** menu, click **Save As**.    
+   5. In the** Save As **dialog box, click** All Files (*.*)** in the **Save as type** box.    
+   6. Type WebServerTemplate.inf in the **File name** box, and then click **Save**.    
 2. Copy the WebServerTemplate.inf file to one of your AD FS Federation servers.    
 3. On the AD FS server, open an Administrative Command Prompt window.    
 4. Use the cd(change directory) command to change to the directory where you copied the .inf file.    
