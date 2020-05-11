@@ -31,7 +31,7 @@ The sample code that is described in this article performs a byte-by-byte compar
 2. Add two textbox controls to the form.
 3. Add a command button to the form.
 4. On the **View** menu, click **Code**.
-5. Add the following `USING` statement to the `Form1` class:
+5. Add the following `using` statement to the `Form1` class:
 
     ```csharp
     using System.IO;

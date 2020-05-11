@@ -288,4 +288,4 @@ namespace readwriteapp
 
 ## Troubleshoot
 
-For all file manipulations, it's good programming practice to wrap the code inside a try-catch-finally block to handle errors and exceptions. Specifically, you may want to release handles to the file in the final block so that the file isn't locked indefinitely. Some possible errors include a file that doesn't exist, or a file that is already in use.
+For all file manipulations, it's good programming practice to wrap the code inside a `try-catch-finally` block to handle errors and exceptions. Specifically, you may want to release handles to the file in the final block so that the file isn't locked indefinitely. Some possible errors include a file that doesn't exist, or a file that is already in use.

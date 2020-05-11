@@ -31,7 +31,7 @@ ICodeCompiler icc = codeProvider.CreateCompiler();
 
 Once you have a reference to an `ICodeCompiler` interface, you can use it to compile your source code. You'll pass parameters to the compiler by using the `CompilerParameters` class. Here is an example:
 
-```Csharp
+```csharp
 System.CodeDom.Compiler.CompilerParameters parameters = new CompilerParameters();
 parameters.GenerateExecutable = true;
 parameters.OutputAssembly = Output;
@@ -101,8 +101,9 @@ There are other options for compiling, such as compiling from a file. You can al
             if (ButtonObject.Text == "Run") Process.Start(Output);
         }
     }
+    ```
 
-    Add the beginning of the file, add these `using` statements:
+    At the beginning of the file, add these `using` statements:
 
     ```csharp
     using System.CodeDom.Compiler;
@@ -113,7 +114,7 @@ There are other options for compiling, such as compiling from a file. You can al
 7. In *Form1.cs*, locate the `Form1` constructor.
 8. After the call to `InitializeComponent` in the `Form1` constructor, add the following code to wire the button click handler to both buttons that you added to Form1.
 
-    ```Csharp
+    ```csharp
     public Form1()
     {
         InitializeComponent();

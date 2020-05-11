@@ -38,7 +38,7 @@ Follow these steps to create a console application that creates an object, and t
 2. On the **Project** menu, click **Add Class** to add a new class to the project.
 3. In the **Add New Item** dialog box, change the name of the class to *clsPerson*.
 4. Click **Add**. A new class is created.
-5. Add the following code after the `Public Class clsPerson` statement
+5. Add the following code after the public class `clsPerson` statement.
 
     ```csharp
     public string FirstName;

@@ -242,7 +242,7 @@ The sample code in this article illustrates how to create a control that support
 
     1. On the **Tools** menu, click **Choose Toolbox Items**.
     2. Click the **.NET Framework Components** tab.
-    3. Click **Browse**, and then locate the *SmoothProgressBar.dll* file, which you created in the [Create a custom ProgressBar control](#create-a-custom-progressBar-control) section.
+    3. Click **Browse**, and then locate the *SmoothProgressBar.dll* file, which you created in the [Create a custom ProgressBar control](#create-a-custom-progressbar-control) section.
     4. Click **OK**.
 
         > [!NOTE]

@@ -231,8 +231,6 @@ To resolve the exception error, remove the white-space character that precedes t
 
 ## References
 
-- [Download Books.xml now](https://download.microsoft.com/download/xml/utility/1.0.0.1/wxp/books.exe)
-
 - [XML in .NET: .NET Framework XML Classes and C# Offer Simple, Scalable Data Manipulation](/previous-versions/bb985993(v=msdn.10))
 
 - [XmlReader Class](/dotnet/api/system.xml.xmlreader)

@@ -45,7 +45,7 @@ The `IEnumerable` interface provides support for the foreach iteration. `IEnumer
 ```csharp
 public IEnumerator GetEnumerator()
 {
-  return (IEnumerator)this;
+    return (IEnumerator)this;
 }
 ```
 
@@ -76,11 +76,11 @@ The following example demonstrates how to use these interfaces. In this example,
           [STAThread]
           static void Main(string[] args)
           {
-            cars C = new cars();
-            Console.WriteLine("\nInternal Collection (Unsorted - IEnumerable,Enumerator)\n");
-            foreach(car c in C)
-            Console.WriteLine(c.Make + "\t\t" + c.Year);
-            Console.ReadLine();
+              cars C = new cars();
+              Console.WriteLine("\nInternal Collection (Unsorted - IEnumerable,Enumerator)\n");
+              foreach(car c in C)
+              Console.WriteLine(c.Make + "\t\t" + c.Year);
+              Console.ReadLine();
           }
       }
    }
@@ -97,23 +97,23 @@ The following example demonstrates how to use these interfaces. In this example,
    {
       public class car
       {
-        private int year;
-        private string make;
-        public car(string Make,int Year)
-        {
-          make=Make;
-          year=Year;
-        }
-        public int Year
-        {
-          get  {return year;}
-          set {year=value;}
-        }
-        public string Make
-        {
-          get {return make;}
-          set {make=value;}
-        }
+          private int year;
+          private string make;
+          public car(string Make,int Year)
+          {
+              make=Make;
+              year=Year;
+          }
+          public int Year
+          {
+              get  {return year;}
+              set {year=value;}
+          }
+          public string Make
+          {
+              get {return make;}
+              set {make=value;}
+          }
       }//end class
    }//end namespace
    ```
@@ -201,15 +201,15 @@ namespace ConsoleEnum
         //Create internal array in constructor.
         public cars()
         {
-          carlist= new car[6]
-          {
-              new car("Ford",1992),
-              new car("Fiat",1988),
-              new car("Buick",1932),
-              new car("Ford",1932),
-              new car("Dodge",1999),
-              new car("Honda",1977)
-          };
+            carlist= new car[6]
+            {
+                new car("Ford",1992),
+                new car("Fiat",1988),
+                new car("Buick",1932),
+                new car("Ford",1932),
+                new car("Dodge",1999),
+                new car("Honda",1977)
+            };
         }
         //private enumerator class
         private class  MyEnumerator:IEnumerator
@@ -242,14 +242,14 @@ namespace ConsoleEnum
             {
                 get
                 {
-                  try
-                  {
-                      return carlist[position];
-                  }
-                  catch (IndexOutOfRangeException)
-                  {
-                      throw new InvalidOperationException();
-                  }
+                    try
+                    {
+                        return carlist[position];
+                    }
+                    catch (IndexOutOfRangeException)
+                    {
+                        throw new InvalidOperationException();
+                    }
                 }
             }
         }  //end nested class

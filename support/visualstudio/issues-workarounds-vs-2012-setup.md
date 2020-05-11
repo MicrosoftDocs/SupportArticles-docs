@@ -79,7 +79,7 @@ If you use an ISO file for your installation of Visual Studio, or if you use a d
 
     1. If you downloaded the ISO file from [MSDN](/previous-versions/dn292944(v=msdn.10)), the SHA-1 value is provided in the Details section for each ISO file.
 
-    2. If you downloaded the ISO file from the[Download Center](https://www.microsoft.com/download), you can find the SHA-1 value by expanding the Install Instructions section of the product page.
+    2. If you downloaded the ISO file from the [Download Center](https://www.microsoft.com/download), you can find the SHA-1 value by expanding the Install Instructions section of the product page.
 
 If the expected SHA-1 value doesn't match the value that is returned by the File Checksum tool, the ISO file is corrupted. In this case, delete the file, and then download it again.
 
@@ -106,7 +106,7 @@ If the error occurs when you try to repair Visual Studio, your installation cach
 
 This error typically occurs when an installation of the .NET Framework that is separate from Visual Studio is already in progress. Because many components of the Visual Studio installer depend on the .NET Framework, an attempt to install the .NET Framework while Visual Studio is being installed can cause unexpected behavior. To work around this issue, wait for the .NET Framework installer to finish before you install Visual Studio.
 
-## Web Deploy 3.0 - Certificate warning or Unable to locate package source error
+## Web Deploy 3.0 - Certificate warning or unable to locate package source error
 
 A warning related to WebDeploy 3.0 may cause two types of problems:
 

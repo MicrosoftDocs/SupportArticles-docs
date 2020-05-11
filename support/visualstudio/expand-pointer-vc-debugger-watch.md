@@ -28,12 +28,12 @@ In the **Watch** window, type an expression that evaluates to a pointer followed
     #include <iostream.h>
     void main(void)
     {
-      int * p;
-      char* ptr = "Hello World";
-      p = new int [10];
+        int * p;
+        char* ptr = "Hello World";
+        p = new int [10];
 
-      for(int i=0; i<=9; i++){*(p+i) = i+1;}
-      cout << i <<endl;
+        for(int i=0; i<=9; i++){*(p+i) = i+1;}
+        cout << i <<endl;
     }
     ```
 

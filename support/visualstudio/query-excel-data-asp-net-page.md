@@ -43,9 +43,9 @@ This code sample demonstrates how to query and display information in an Excel w
 4. In the **New Project** dialog box, locate the **Name** and **Location** text boxes.
 
     > [!NOTE]
-    > The **Name** text box is not available (it appears grayed out or dimmed). The **Location** text box contains the following text (or similar):  
-    > `http://localhost/WebApplication1`  
-    > Replace the text in the **Location** text box with `http://localhost/ExcelCSTest`, and then click **OK**. A new project is created, which includes a Web Form named *WebForm1.aspx*.
+    >
+    > - The **Name** text box is not available (it appears grayed out or dimmed). The **Location** text box contains the text (or similar) `http://localhost/WebApplication1`.
+    > - Replace the text in the **Location** text box with `http://localhost/ExcelCSTest`, and then click **OK**. A new project is created, which includes a Web Form named *WebForm1.aspx*.
 
 5. In the Visual Studio .NET IDE, locate the **Solution Explorer** window. If you can't find it, click **Solution Explorer** on the **View** menu.
 6. In **Solution Explorer**, right-click *WebForm1.aspx*, and then click **View Designer** to display the designer for the appearance of the page. The designer allows you to add controls and manipulate the appearance of the page.
@@ -55,7 +55,7 @@ This code sample demonstrates how to query and display information in an Excel w
 
 8. When the designer view of a Web Form is active, the toolbox is divided into sections, including the **Web Forms**, **Components**, **HTML**, and other sections. Click the **Web Forms** section.
 9. In the **Web Forms** section of the toolbox, click **DataGrid**, and then drag it onto the designer for *WebForm1*.
-10. Right-click **WebForm1.aspx**, and then click **View Code** to display the code-behind page source.
+10. Right-click *WebForm1.aspx*, and then click **View Code** to display the code-behind page source.
 11. Add the following statements to the top of the code-behind page, above the namespace section:
 
     ```csharp
@@ -128,8 +128,11 @@ In this example, the file path on the hard disk is like `C:\Inetpub\Wwwroot\Exce
 
 The IIS path to the files is like `C:\Web Root\ExcelCSTest`. And *Web Root* contains *ExcelData.xls*, *ExcelCSTest* contains *WebForm1.aspx*.
 
-In this case, the relative path from the *WebForm1.aspx* page to the *ExcelData.xls* file is *../ExcelData.xls*. The *../* characters inform IIS to go up one folder level. So the code `Server.MapPath("../ExcelData.xls")` returns the following string:  
-`C:\Inetpub\Wwwroot\ExcelData.xls`
+In this case, the relative path from the *WebForm1.aspx* page to the *ExcelData.xls* file is *../ExcelData.xls*. The *../* characters inform IIS to go up one folder level. So the code `Server.MapPath("../ExcelData.xls")` returns the following string:
+
+```console
+C:\Inetpub\Wwwroot\ExcelData.xls
+```
 
 You aren't required to use `Server.MapPath`. You can also hard code this information to a specific path, or you can use any method to supply the location of the Excel file on the hard disk.
 

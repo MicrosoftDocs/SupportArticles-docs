@@ -63,7 +63,7 @@
 - name: Installation
   items:
   - name: Issues and workarounds in VS 2012 setup
-    href: issues-workarounds-vs-2012-setup
+    href: issues-workarounds-vs-2012-setup.md
   - name: Minimum service pack levels for VC++ Redistributable
     href: minimum-service-pack-levels-cpp.md
   - name: Uninstall Visual Studio 2012

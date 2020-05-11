@@ -23,7 +23,7 @@ By default, a UserControl object can act as a control container only when you cr
 
 `designerBaseType` is the name of the base class for the designer. The class that is used for the design-time services must implement the IDesigner interface.
 
-## Create the UserControl as a design-sime control container
+## Create the UserControl as a design-time control container
 
 1. Create a new Visual C# Windows Control Library project. To do this, follow these steps:
 
@@ -33,7 +33,7 @@ By default, a UserControl object can act as a control container only when you cr
 
 2. Name the project *ContainerUserControl*. By default, *UserControl1.cs* is created.
 3. In Solution Explorer, right-click **UserControl1.cs**, and then click **View Code**.
-4. Add the following code to the `Declarations` section:
+4. Add the following code to the declarations section:
 
     ```csharp
     using System.ComponentModel.Design;

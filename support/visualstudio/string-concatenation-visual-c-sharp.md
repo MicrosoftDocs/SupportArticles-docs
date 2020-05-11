@@ -27,7 +27,7 @@ However, the .NET Framework includes a `StringBuilder` class that is optimized f
 ## Build and run a demonstration application
 
 1. Start Visual Studio, and then create a new Visual C# Console application.
-2. The following code uses the `+=` concatenation operator and the `StringBuilder` class to time 5,000 concatenations of 30 characters each. Add this code to the main procedure.
+2. The following code uses the `+=` concatenation operators and the `StringBuilder` class to time 5,000 concatenations of 30 characters each. Add this code to the main procedure.
 
     ```csharp
     const int sLen=30, Loops=5000;
