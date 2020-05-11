@@ -34,7 +34,6 @@
   items:
   - name: Fails to upgrade SCVMM
     href: database-error-upgrading-scvmm.md
-  - name: 
 - name: Site recovery
   items:
   - name: A protected VM in a resync state

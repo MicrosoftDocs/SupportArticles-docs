@@ -30,7 +30,7 @@ To resolve this problem, follow these steps:
 
 ## More Information
 
-For more information about the SQL Server instance level, see the following Microsoft TechNet topic:
+For more information about the SQL Server instance level, see the following Microsoft topic:
 
 [System Requirements: VMM Database](/previous-versions/system-center/system-center-2012-R2/gg610574(v=sc.12)?redirectedfrom=MSDN)
 
