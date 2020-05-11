@@ -38,6 +38,8 @@ This article describes how to troubleshoot problems that may occur when you star
 > [!IMPORTANT]
 > Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration ](https://support.microsoft.com/help/322756) in case problems occur.
 
+## Quick resolution
+
 <table align="left">
 <tr>
 <td valign="top"> 
