@@ -1,5 +1,43 @@
 - name: System Center Virtual Machine Manager
   href: welcome-support-vmm.md
-
 - name: (Back up to Support hub page)
   href: ../../index.yml
+- name: Administration
+  items:
+  - name: Authentication and authorization problems
+    href: authentication-authorization-problems.md
+- name: Host, Cluster, Library Service management
+  items:
+  - name: Error 25310 creating a cluster
+    href: creating-cluster-error-25310.md
+  - name: Error 2912 adding a cluster
+    href: adding-cluster-error-2912.md
+  - name: Error 415 adding hosts
+    href: adding-host-error-415.md
+  - name: Incorrect status in VMM library share
+    href: incorrect-agent-status.md
+  - name: VMM crashes with reserved characters
+    href: reserved-characters-cause-vmm-crash.md
+- name: Virtual Machine creation and management
+  items:
+  - name: Can't connect to a Hyper-V VM
+    href: connecting-hyper-v-vm-fails.md
+  - name: Error 12700 attaching ISO files
+    href: attaching-iso-file-error-12700.md
+  - name: Error 25035 enabling VM protection
+    href: enable-vm-protection-error-25035.md
+- name: VMM service and console failures
+  items:
+  - name: Apostrophe causes VMM console to crash
+    href: apostrophe-causes-vmm-crash.md
+- name: Setup
+  items:
+  - name: Fails to upgrade SCVMM
+    href: database-error-upgrading-scvmm.md
+  - name: 
+- name: Site recovery
+  items:
+  - name: A protected VM in a resync state
+    href: protected-vm-resync-state.md
+  - name: Can't create a protection group
+    href: creating-protection-group-fails.md
