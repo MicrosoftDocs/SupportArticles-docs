@@ -37,7 +37,7 @@
     href: compute-hash-values-visual-c-sharp.md
   - name: Create a remote server by Visual C#
     href: visual-csharp-create-remote-server.md
-  - name: Display hierarchical data by nested Repeater controler
+  - name: Display hierarchical data by nested Repeater control
     href: hierarchical-data-nested-repeater-control.md
   - name: Examine CheckBox control values in a DataGrid column
     href: checkbox-control-values-datagrid-vb.md
