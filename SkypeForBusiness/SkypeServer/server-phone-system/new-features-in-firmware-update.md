@@ -21,9 +21,6 @@ appliesto:
 
 This article describes the features of the firmware update for the Polycom VVX Phone for Skype for Business (IP phone) that supports Microsoft Skype for Business Online.
 
-A new firmware for the Polycom VVX IP phone is currently undergoing certification, and it will be available for customers soon. 
-
-The new firmware release version is 5.9.X.
 
 ### Firmware upgrade options
 
@@ -72,6 +69,7 @@ The third-party products that this article discusses are manufactured by compani
 
 ## More information
 
+- [Polycom Phones FAQ](https://www.polycom.com/polycom-phones-and-microsoft-teams-faq.html)
 - [OAuth 2.0 and third-party application ID](https://techcommunity.microsoft.com/t5/skype-for-business-blog/oauth-2-0-and-third-party-application-id-timeline-extended-to/ba-p/482876)
 - [IP Phones](https://docs.microsoft.com/skypeforbusiness/certification/devices-ip-phones)
 - [Device update considerations](https://docs.microsoft.com/skypeforbusiness/what-is-phone-system-in-office-365/getting-phones-for-skype-for-business-online/deploying-skype-for-business-online-phones#step-4---device-update-considerations)
