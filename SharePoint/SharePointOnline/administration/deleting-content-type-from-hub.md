@@ -13,11 +13,14 @@ search.appverid:
 - MET150
 appliesto:
 - SharePoint Online
+- SharePoint 2019
+- SharePoint 2016
+- SharePoint 2013
 ms.custom: 
 - CI 117077
 - CSSTroubleshoot 
 ms.reviewer: paulpa
-description: Describes how to correctly delete a content type from a Content Type and the results if not deleted correctly. 
+description: Describes how to correctly delete a content type from a SharePoint Content Type hub and the result if not deleted correctly. 
 ---
 
 # Deleting a content type from the SharePoint Content Type Hub
