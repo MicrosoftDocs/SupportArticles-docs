@@ -38,7 +38,7 @@ The Standard C++ library can be divided into the following categories:
 
     - Localization: components that C++ programs may use to encapsulate cultural differences. The locale facility includes internationalization support for character classification and string collation, numeric, monetary, and date/time formatting and parsing, and message retrieval (`locale`, `clocale`).
 
-## Question 2: What is difference between CRT and Standard C++ library? What libraries will the Runtime library compiler options include
+## Question 2: What is difference between CRT and Standard C++ library? What libraries will Runtime library compiler options include
 
 Visual C++ include the following libraries in addition to the Microsoft Foundation Classes (MFC) libraries:
 
@@ -76,7 +76,7 @@ Standard C++ headers
 |TYPEINFO|UTILITY|VALARRAY|VECTOR|
 |||||
 
-## Question 3: How to retain old iostream functionality from Visual C++ .NET 2003 or from earlier versions of Visual C++ if I port my project from an earlier version
+## Question 3: How to retain old iostream functionality from Visual C++ .NET 2003 or earlier versions if I port my project from an earlier version
 
 If you want to retain the old `iostream` library (*iostream.h*), include one or more of the old `iostream` header files in your code. Don't use the new Standard C++ headers. You can't mix calls to the old `iostream` library and the new Standard C++ library.
 
@@ -84,11 +84,11 @@ If you want to retain the old `iostream` library (*iostream.h*), include one or 
 
 If you want to make the Standard C++ Libraries the default, include one or more of the new Standard C++ headers. You can't mix calls to the old `iostream` and the new Standard C++ library. Existing libraries (static or dynamic link) that use old `iostream` functions will have to be modified to use Standard C++ library `iostream` functions.
 
-## Question 5: Will using Standard C++ Libraries in an MFC application cause any conflicts with the C-Runtime Libraries
+## Question 5: Will using Standard C++ Libraries in MFC applications cause conflicts with C-Runtime Libraries
 
 No. Microsoft Foundation Classes (MFC) doesn't use any C-Runtime functions that will conflict with the Standard C++ Libraries.
 
-## Question 6: Why do I get "error C2065: 'cout' : undeclared identifier" even though I have included iostream
+## Question 6: Why I get "error C2065: 'cout' : undeclared identifier" even though I have included iostream
 
 Standard C++ library is implemented in its own namespace `std`. Make sure to add the following statement in the beginning of your program:
 
@@ -98,7 +98,7 @@ using namespace std;
 
  Or qualify each Standard C++ library identifier with namespace `std`, for example, `std::cout`.
 
-## Question 7: Why am I getting "compiler error C2371: 'identifier' redefinition; different basic types"
+## Question 7: Why I get "compiler error C2371: 'identifier' redefinition; different basic types"
 
 In versions of Visual C++ that are earlier than Visual C++ 2005, mixing Standard C++ headers and old `iostream` headers causes this error, even if they're included in different source files. The following are the different headers:
 
@@ -127,7 +127,7 @@ In versions of Visual C++ that are earlier than Visual C++ 2005, mixing Standard
     |TYPEINFO|UTILITY|VALARRAY|VECTOR|
     |||||
 
-## Question 8: I have a project that was built with the Ignore Default Libraries option. With Visual C++, I'm getting linker error "LNK2001: unresolved external symbol 'symbol';" on all iostream function calls. What has changed
+## Question 8: Why I get "LNK2001: unresolved external symbol 'symbol';" on iostream function calls when the project is built with Ignore Default Libraries
 
 The `iostream` functions have been removed from the C-Runtime library.
 
@@ -139,20 +139,20 @@ Don't mix different versions of the libraries. For example, if you're using the 
 
 You can't mix calls to the old `iostream` library functions and the new Standard C++ library `iostream` functions.
 
-## Question 9: I'm getting compiler warnings C4786 or C4788. None of the symbols in my program is anywhere near 255 characters in length. What is causing this
+## Question 9: Why do I get compiler warnings C4786 or C4788? None of the symbols in my program is anywhere near 255 characters in length
 
 C4786 or C4788 is issued when a symbol's name exceeds 255 characters in length. This often happens with template class, and `STL` uses template class extensively.
 
 Ignoring this warning is safe. Use a `#pragma` warning (disable: 4786,4788) to suppress the messages.
 
-## Question 10: I'm getting compiler warning "C4530: C++ exception handler used, but unwind semantics aren't enabled. Specify -GX." What does this mean
+## Question 10: Why I get "C4530: C++ exception handler used, but unwind semantics aren't enabled. Specify -GX"
 
 Programs that use the Standard C++ library must be compiled with C++ exception handling enabled. C++ exception handling can be enabled by one of the following methods:
 
 - Selecting the **Enable exception handling** option in the **C++ Language Category of the C/C++** tab in the **Project Settings** dialog box.
 - Using the **/GX** compiler switch.
 
-## Question 11: I'm getting compiler error C2146, followed by C2065, and finally C2143, all pointing to the same line in my source. What does this mean
+## Question 11: Why I get compiler error C2146, followed by C2065, and finally C2143, all pointing to the same line in my source
 
 This sequence of errors can be caused by the following type of construct:
 
