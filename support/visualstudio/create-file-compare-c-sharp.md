@@ -82,7 +82,8 @@ The sample code that is described in this article performs a byte-by-byte compar
             // Read one byte from each file.
             file1byte = fs1.ReadByte();
             file2byte = fs2.ReadByte();
-        }while ((file1byte == file2byte) && (file1byte != -1));
+        }
+        while ((file1byte == file2byte) && (file1byte != -1));
 
         // Close the files.
         fs1.Close();

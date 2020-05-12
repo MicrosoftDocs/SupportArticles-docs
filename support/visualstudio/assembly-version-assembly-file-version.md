@@ -1,12 +1,12 @@
 ---
 title: Use AssemblyVersion and AssemblyFileVersion
-description: Describes how to use Assembly version and Assembly File version.
+description: Describes how to use AssemblyVersion and AssemblyFileVersion attributes in AssemblyInfo.cs file.
 ms.date: 04/14/2020
 ms.prod-support-area-path: 
 ---
-# How to use Assembly Version and Assembly File Version
+# How to use AssemblyVersion and AssemblyFileVersion attributes
 
-This article describes how to use `AssemblyVersion` and `AssemblyFileVersion`.
+This article describes how to use `AssemblyVersion` and `AssemblyFileVersion` attributes in the *AssemblyInfo.cs* file.
 
 _Original product version:_ &nbsp; Microsoft .NET Framework  
 _Original KB number:_ &nbsp; 556041

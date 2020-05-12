@@ -84,7 +84,7 @@ The sample code in this article illustrates how to create a control that support
 
         set
         {
-        // Prevent a negative value.
+            // Prevent a negative value.
             if (value < 0)
             {
                 min = 0;
