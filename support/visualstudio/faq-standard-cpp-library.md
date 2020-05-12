@@ -7,12 +7,12 @@ ms.reviewer: JIANGES
 ---
 # Frequently asked questions about the Standard C++ library
 
-This article presents a list of frequently asked questions (FAQs) regarding the Standard C++ libraries and the answers to those questions.
+This article presents a list of frequently asked questions (FAQs) about the Standard C++ libraries and the answers to those questions.
 
 _Original product version:_ &nbsp; Visual C++  
 _Original KB number:_ &nbsp; 154419
 
-## Question 1: What does the Standard C++ library contain
+## Question 1: What does Standard C++ library contain
 
 The Standard C++ library provides an extensible framework and contains components for language support, diagnostics, general utilities, strings, locales, standard template library (containers, iterators, algorithms, and numerics), and input/output.
 
@@ -38,7 +38,7 @@ The Standard C++ library can be divided into the following categories:
 
     - Localization: components that C++ programs may use to encapsulate cultural differences. The locale facility includes internationalization support for character classification and string collation, numeric, monetary, and date/time formatting and parsing, and message retrieval (`locale`, `clocale`).
 
-## Question 2: What is the difference between C-Runtime library and Standard C++ library? What libraries will the Runtime library compiler options include
+## Question 2: What is difference between CRT and Standard C++ library? What libraries will the Runtime library compiler options include
 
 Visual C++ include the following libraries in addition to the Microsoft Foundation Classes (MFC) libraries:
 
@@ -57,8 +57,8 @@ Visual C++ include the following libraries in addition to the Microsoft Foundati
 
 > [!NOTE]
 >
-> - The `/ML` and `/MLd` library compiler options for statically single-threaded libraries have been removed in Visual C++.
-> - *MSVCPRT.lib* and *MSVCPRTD.lib* are static libraries and don't have any dynamic link libraries (DLLs) directly related to them. These libraries are also dependent on *MSVCRT.lib* and *MSVCRTD.lib*, respectively. If you have any applications that use *MSVCPRT.lib* or *MSVCPRTD.lib* and you use the **Ignore Default Library** (`/NOD` or `NODEFAULTLIB`) option, be sure to link *MSVCPRT.lib* (or *MSVCPRTD.lib*) and *MSVCRT.lib* (or *MSVCRTD.lib*) with your application. Otherwise, you will get linker errors (LNK2001: unresolved externals in MSVCPRT.lib or MSVCPRTD.lib) when linking your application. Depending on the headers you use in your code, a library from the Standard C++ library may also be linked.
+> - The **/ML** and **/MLd** library compiler options for statically single-threaded libraries have been removed in Visual C++.
+> - *MSVCPRT.lib* and *MSVCPRTD.lib* are static libraries and don't have any dynamic link libraries (DLLs) directly related to them. These libraries are also dependent on *MSVCRT.lib* and *MSVCRTD.lib*, respectively. If you have any applications that use *MSVCPRT.lib* or *MSVCPRTD.lib* and you use the **Ignore Default Library** (**/NOD** or **NODEFAULTLIB**) option, be sure to link *MSVCPRT.lib* (or *MSVCPRTD.lib*) and *MSVCRT.lib* (or *MSVCRTD.lib*) with your application. Otherwise, you will get linker errors (**LNK2001: unresolved externals in MSVCPRT.lib or MSVCPRTD.lib**) when linking your application. Depending on the headers you use in your code, a library from the Standard C++ library may also be linked.
 
 The header file *use_ansi.h* contains `#pragma` statements that force the Standard C++ library to be linked in. All Standard C++ headers include *use_ansi.h*: if you include any Standard C++ header in your application, the Standard C++ library will be linked by default.
 
@@ -76,13 +76,13 @@ Standard C++ headers
 |TYPEINFO|UTILITY|VALARRAY|VECTOR|
 |||||
 
-## Question 3: How do I retain the old iostream functionality from Visual C++ .NET 2003 or from earlier versions of Visual C++ if I port my project from an earlier version
+## Question 3: How to retain old iostream functionality from Visual C++ .NET 2003 or from earlier versions of Visual C++ if I port my project from an earlier version
 
-If you want to retain the old `iostream` library (*iostream.h*), include one or more of the old iostream header files in your code. Don't use the new Standard C++ headers. You can't mix calls to the old iostream library and the new Standard C++ library.
+If you want to retain the old `iostream` library (*iostream.h*), include one or more of the old `iostream` header files in your code. Don't use the new Standard C++ headers. You can't mix calls to the old `iostream` library and the new Standard C++ library.
 
-## Question 4: How do I make the Standard C++ Libraries the default libraries for my application
+## Question 4: How to make Standard C++ Libraries the default libraries for my application
 
-If you want to make the Standard C++ Libraries the default, include one or more of the new Standard C++ headers. Remember, you cannot mix calls to the old iostream and the new Standard C++ library. Existing libraries (static or dynamic link) that use old iostream functions will have to be modified to use Standard C++ library iostream functions.
+If you want to make the Standard C++ Libraries the default, include one or more of the new Standard C++ headers. You can't mix calls to the old `iostream` and the new Standard C++ library. Existing libraries (static or dynamic link) that use old `iostream` functions will have to be modified to use Standard C++ library `iostream` functions.
 
 ## Question 5: Will using Standard C++ Libraries in an MFC application cause any conflicts with the C-Runtime Libraries
 
@@ -100,59 +100,59 @@ using namespace std;
 
 ## Question 7: Why am I getting "compiler error C2371: 'identifier' redefinition; different basic types"
 
-In versions of Visual C++ that are earlier than Visual C++ 2005, mixing Standard C++ headers and old iostream headers causes this error, even if they are included in different source files. The following are the different headers:
+In versions of Visual C++ that are earlier than Visual C++ 2005, mixing Standard C++ headers and old `iostream` headers causes this error, even if they're included in different source files. The following are the different headers:
 
-Old iostream headers
+- Old `iostream` headers:
 
-|||
-|---|---|
-|FSTREAM.H|IOMANIP.H|
-|IOS.H|IOSTREAM.H|
-|ISTREAM.H|OSTREAM.H|
-|STDIOSTR.H|STREAMB.H|
-|STRSTREA.H||
-|||
+    |||
+    |---|---|
+    |FSTREAM.H|IOMANIP.H|
+    |IOS.H|IOSTREAM.H|
+    |ISTREAM.H|OSTREAM.H|
+    |STDIOSTR.H|STREAMB.H|
+    |STRSTREA.H||
+    |||
 
-Standard C++ headers
+- Standard C++ headers:
 
-|||||
-|---|---|---|---|
-|ALGORITHM|BITSET|COMPLEX|DEQUE|
-|EXCEPTION|FSTREAM|FUNCTIONAL|IOMANIP|
-|IOS|IOSFWD|IOSTREAM|ISTREAM|
-|ITERATOR|LIMITS|LIST|LOCALE|
-|MAP|MEMORY|NUMERIC|OSTREAM|
-|QUEUE|SET|SSTREAM|STACK|
-|STDEXCEPT|STREAMBUF|STRING|STRSTREAM|
-|TYPEINFO|UTILITY|VALARRAY|VECTOR|
-|||||
+    |||||
+    |---|---|---|---|
+    |ALGORITHM|BITSET|COMPLEX|DEQUE|
+    |EXCEPTION|FSTREAM|FUNCTIONAL|IOMANIP|
+    |IOS|IOSFWD|IOSTREAM|ISTREAM|
+    |ITERATOR|LIMITS|LIST|LOCALE|
+    |MAP|MEMORY|NUMERIC|OSTREAM|
+    |QUEUE|SET|SSTREAM|STACK|
+    |STDEXCEPT|STREAMBUF|STRING|STRSTREAM|
+    |TYPEINFO|UTILITY|VALARRAY|VECTOR|
+    |||||
 
-## Question 8: I have a project that was built with the Ignore Default Libraries option. With Visual C++, I am getting linker error "LNK2001: unresolved external symbol 'symbol';" on all iostream function calls. What has changed
+## Question 8: I have a project that was built with the Ignore Default Libraries option. With Visual C++, I'm getting linker error "LNK2001: unresolved external symbol 'symbol';" on all iostream function calls. What has changed
 
-The iostream functions have been removed from the C-Runtime library.
+The `iostream` functions have been removed from the C-Runtime library.
 
-If you are using the old iostream functions, you must add an additional library *LIBCI.lib* (single-threaded `ML`), *LIBCIMT.lib* (multithreaded `MT`), or *MSVCIRT.lib*(multithreaded dll `MD`). These libraries have been removed from Visual C++.
+If you're using the old `iostream` functions, you must add an additional library *LIBCI.lib* (single-threaded **ML**), *LIBCIMT.lib* (multithreaded **MT**), or *MSVCIRT.lib* (multithreaded dll **MD**). These libraries have been removed from Visual C++.
 
-If you are using the new iostream functions included with the Standard C++ library, you must add an additional library *LIBCP.lib* (single-threaded `ML`), *LIBCPMT.lib* (multithreaded `MT`), or *MSVCPRT.lib* (multithreaded dll `MD`).
+If you're using the new `iostream` functions included with the Standard C++ library, you must add an additional library *LIBCP.lib* (single-threaded **ML**), *LIBCPMT.lib* (multithreaded **MT**), or *MSVCPRT.lib* (multithreaded dll **MD**).
 
-Don't mix different versions of the libraries. For example, if you are using the single-threaded version of the C-Runtime library, you must also use the single-threaded version of the old iostream library or Standard C++ library.
+Don't mix different versions of the libraries. For example, if you're using the single-threaded version of the C-Runtime library, you must also use the single-threaded version of the old `iostream` library or Standard C++ library.
 
-You can't mix calls to the old iostream library functions and the new Standard C++ library iostream functions.
+You can't mix calls to the old `iostream` library functions and the new Standard C++ library `iostream` functions.
 
-## Question 9: I am getting compiler warnings C4786 or C4788. None of the symbols in my program is anywhere near 255 characters in length. What is causing this
+## Question 9: I'm getting compiler warnings C4786 or C4788. None of the symbols in my program is anywhere near 255 characters in length. What is causing this
 
 C4786 or C4788 is issued when a symbol's name exceeds 255 characters in length. This often happens with template class, and `STL` uses template class extensively.
 
 Ignoring this warning is safe. Use a `#pragma` warning (disable: 4786,4788) to suppress the messages.
 
-## Question 10: I am getting compiler warning "C4530: C++ exception handler used, but unwind semantics are not enabled. Specify -GX." What does this mean
+## Question 10: I'm getting compiler warning "C4530: C++ exception handler used, but unwind semantics aren't enabled. Specify -GX." What does this mean
 
-Programs that use the Standard C++ library must be compiled with C++ exception handling enabled. C++ exception handling can be enabled by one of the following method:
+Programs that use the Standard C++ library must be compiled with C++ exception handling enabled. C++ exception handling can be enabled by one of the following methods:
 
 - Selecting the **Enable exception handling** option in the **C++ Language Category of the C/C++** tab in the **Project Settings** dialog box.
-- Using the `/GX`compiler switch.
+- Using the **/GX** compiler switch.
 
-## Question 11: I am getting compiler error C2146, followed by C2065, and finally C2143, all pointing to the same line in my source. What does this mean
+## Question 11: I'm getting compiler error C2146, followed by C2065, and finally C2143, all pointing to the same line in my source. What does this mean
 
 This sequence of errors can be caused by the following type of construct:
 

@@ -14,11 +14,11 @@ _Original KB number:_ &nbsp; 140858
 
 ## Symptoms
 
-When an object is allocated through use of the `New` operator and dumped through use of the debugging routines in the C Run-Time Library, the allocation is reported as occurring in the *Crtdbg.h* file line 512.
+When an object is allocated through use of the `new` operator and dumped through use of the debugging routines in the C Run-Time Library, the allocation is reported as occurring in the *Crtdbg.h* file line 512.
 
 ## Cause
 
-This is caused by the definition of the overloaded operator `New` in the *Crtdbg.h* file:
+This is caused by the definition of the overloaded operator `new` in the *Crtdbg.h* file:
 
 ```cpp
 #ifdef _CRTDBG_MAP_ALLOC
@@ -27,13 +27,13 @@ inline void* __cdecl operator new(unsigned int s)
 #endif /* _CRTDBG_MAP_ALLOC */
 ```
 
-Here `__FILE__`and `__LINE__` are macros defined by the compiler that report the current file name and line number. Macros are filled out by the preprocessor. Then the compiler replaces your call to `New` with this function. Therefore, the macros have already been filled out before they are inlined. Hence they will report the header file information.
+Here `__FILE__`and `__LINE__` are macros defined by the compiler that report the current file name and line number. Macros are filled out by the preprocessor. Then the compiler replaces your call to `new` with this function. Therefore, the macros have already been filled out before they are inlined. Hence they will report the header file information.
 
 ## Resolution
 
-Defining the `_CRTDBG_MAP_ALLOC` symbol causes all instances of `New` in your code to be mapped properly to the debug version of `New` so as to record source file and line number information.
+Defining the `_CRTDBG_MAP_ALLOC` symbol causes all instances of `new` in your code to be mapped properly to the debug version of `new` so as to record source file and line number information.
 
-While it is true that this will map calls to the debug version of `New`, it will not store the proper source file or line number information. There are two ways to mark the correct file name and line number:
+While it is true that this will map calls to the debug version of `new`, it will not store the proper source file or line number information. There are two ways to mark the correct file name and line number:
 
 - Call the debug version of the `new` operator directly.
 - Create macros that replace the operator `new` in debug mode as in the following sample code.
@@ -60,7 +60,7 @@ While it is true that this will map calls to the debug version of `New`, it will
 #include "mydbgnew.h"
 
 #ifdef _DEBUG
-#define new MYDEBUG_NEW
+    #define new MYDEBUG_NEW
 #endif
 
 void main( )

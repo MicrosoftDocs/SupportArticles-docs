@@ -128,7 +128,7 @@ void main(void)
 }
 ```
 
-Program Output:
+Program output:
 
 ```console
 4

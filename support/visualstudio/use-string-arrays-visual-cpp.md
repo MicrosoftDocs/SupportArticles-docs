@@ -7,14 +7,14 @@ ms.reviewer: V-JEFFBO
 ---
 # How to create and use string arrays in Visual C++
 
-This article provides a code sample that shows how to create and use string arrays in Visual C++.
+This article provides a code sample to show how to create and use string arrays in Visual C++.
 
-_Original product version:_ &nbsp; Visual C++
+_Original product version:_ &nbsp; Visual C++  
 _Original KB number:_ &nbsp; 310809
 
 ## Summary
 
-This article shows you how to use Managed C++ to create and use string arrays in Visual C++ .NET and in Visual C++. Although the example uses a two-dimensional string array, the information can also be applied to a one-dimensional string array or a multidimensional string array.
+This article shows you how to use managed C++ to create and use string arrays in Visual C++ .NET and in Visual C++. Although the example uses a two-dimensional string array, the information can also be applied to a one-dimensional string array or a multidimensional string array.
 
 ## Initializing an array
 
@@ -46,16 +46,16 @@ using namespace System;
 
 int _tmain(void)
 {
-  Int32 nRows, nColumns;
-  nRows = 10;
-  nColumns = 10;
-  String* myString = "This is a test";
+    Int32 nRows, nColumns;
+    nRows = 10;
+    nColumns = 10;
+    String* myString = "This is a test";
 
-  String* myStringArray[,]= new String* [nRows,nColumns];
-  myStringArray[0,0] = myString;
+    String* myStringArray[,]= new String* [nRows,nColumns];
+    myStringArray[0,0] = myString;
 
-  Console::WriteLine(myStringArray[0,0]);
-  return 0;
+    Console::WriteLine(myStringArray[0,0]);
+    return 0;
 }
 ```
 

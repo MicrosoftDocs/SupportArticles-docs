@@ -1,7 +1,7 @@
 ---
 title: Issues and workarounds in VS 2013 setup
 description: Describes common issues during Visual Studio installation. Provides suggested workarounds.
-ms.date: 04/135/2020
+ms.date: 04/13/2020
 ms.prod-support-area-path: 
 ---
 # Common issues and workarounds in Visual Studio 2013 setup
@@ -68,7 +68,7 @@ If you use an ISO file for your installation of Visual Studio, or if you use a d
     ```
 
     > [!NOTE]
-    >In this command, the *<DIRECTORY NAME>* placeholder is the folder to which you extracted the files, and the *<ISO_NAME>* placeholder is the path of the Visual Studio ISO file. For more information, see the *ReadMe.htm* file in the extraction directory.
+    >In this command, the *\<DIRECTORY NAME>* placeholder is the folder to which you extracted the files, and the *\<ISO_NAME>* placeholder is the path of the Visual Studio ISO file. For more information, see the *ReadMe.htm* file in the extraction directory.
 
 4. Verify that the Secure Hash Algorithm 1 (SHA-1) value that is returned by the File Checksum tool matches the expected value. To determine the expected value, examine the folder to which you downloaded the ISO file.
 
@@ -90,7 +90,7 @@ If the expected SHA-1 value doesn't match the value that is returned by the File
 If the error occurs when you try to repair Visual Studio, your installation cache may have become corrupted. To repair the cache, follow these steps:
 
 1. Close Visual Studio.
-2. Open an elevated command prompt. To do it, click **Start**, type cmd in the **Start search** box, right-click **cmd.exe** in the results list, and then click **Run as administrator**.
+2. Open an elevated command prompt. To do it, click **Start**, type cmd in the **Start** search box, right-click *cmd.exe* in the results list, and then click **Run as administrator**.
 3. At the command prompt, type `cd C:\ProgramData\Package Cache`, and then press Enter.
 4. To clear the *.msi* and *.cab* files from the cache, type the following commands at the command prompt, and press Enter after each command:
 
@@ -112,7 +112,7 @@ When you installed Visual Studio on Windows 7, you encountered the following war
 
 > Installation errors may occur because the security certificate updates that are required to install some Visual Studio components cannot be applied to this computer.
 
-If you then click **Continue** to proceed with the Visual Studio installation, you may encounter the **Unable to locate package source errors** that are not resolved through the Download packages from the internet option. When the Visual Studio installation finishes, you see the following message:
+If you then click **Continue** to proceed with the Visual Studio installation, you may encounter the **Unable to locate package source** errors that are not resolved through the Download packages from the internet option. When the Visual Studio installation finishes, you see the following message:
 
 > Setup Completed. However, not all features installed correctly.
 

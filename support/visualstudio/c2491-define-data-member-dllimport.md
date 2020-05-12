@@ -25,7 +25,9 @@ You receive the compiler C2491 error when you try to compile the following code:
 
 ```cpp
 // function definition
-void __declspec(dllimport) funcB() { // error C2491: 'funcB' : definition of dllimport function not allowed
+void __declspec(dllimport) funcB() 
+{
+    // error C2491: 'funcB' : definition of dllimport function not allowed
 }
 ```
 
@@ -34,7 +36,8 @@ This behavior occurs because you defined the function implementation as `dllimpo
 ```cpp
 // function declaration
 void __declspec(dllimport) funcB(); // ok
-int main() {
+int main()
+{
 }
 ```
 
@@ -42,7 +45,8 @@ Similarly, you receive the compiler C2491 error when you try to compile the foll
 
 ```cpp
 //defining data member
-extern __declspec(dllimport) int code = 1; // error C2491: 'code' : definition of dllimport data not allowed
+extern __declspec(dllimport) int code = 1;
+// error C2491: 'code' : definition of dllimport data not allowed
 ```
 
 You receive this error message because you defined the data member as `dllimport`. To avoid this compiler error, don't define the data member, but instead declare the data member as follows:

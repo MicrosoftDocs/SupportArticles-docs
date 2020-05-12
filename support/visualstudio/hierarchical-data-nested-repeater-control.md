@@ -7,7 +7,7 @@ ms.reviewer: patcole, jallen
 ---
 # How to display hierarchical data by using nested Repeater controls and Visual C# .NET  
 
-This article provides information about how to display hierarchical data by using Nested Repeater Controls and Visual C# .NET.
+This article provides information about how to display hierarchical data by using nested Repeater controls and Visual C# .NET.
 
 _Original product version:_ &nbsp; Visual C#  
 _Original KB number:_ &nbsp; 306154
@@ -26,11 +26,11 @@ This article refers to the following Microsoft .NET Framework Class Library name
 1. Start Microsoft Visual Studio .NET.
 2. On the **File** menu, point to **New**, and then click **Project**.
 3. Click **Visual C# Projects** under **Project Types**, and then click **ASP.NET Web Application** under **Templates**.
-4. In the **Location** box, delete the *WebApplication#*, and then type *NestedRepeater*. If you use the local server, leave the server name as <http://localhost>. The <http://localhost/NestedRepeater> path appears in the **Location** box. Click **OK**.
+4. In the **Location** box, delete the *WebApplication#*, and then type *NestedRepeater*. If you use the local server, leave the server name as `http://localhost`. The `http://localhost/NestedRepeater` path appears in the **Location** box. Click **OK**.
 5. In Solution Explorer, right-click the NestedRepeater project name node, point to **Add**, and then click **Add Web Form**.
 6. To name the Web Form, type *NestedRepeater*, and click **Open**.
 7. The new Web Form is created. It opens in Design View in the Integrated Development Environment (IDE) of Microsoft Visual Studio .NET. From the Toolbox, select the Repeater control, and then drag it to the Web Form page.
-8. Change the ID property of this Repeater control to *parentRepeater*.
+8. Change the **ID** property of this Repeater control to *parentRepeater*.
 9. Switch to the HTML view for this Web Form. To do so, click the **HTML** tab in the lower-left corner of the Designer. The Repeater control generates the following HTML code:
 
     ```aspx
@@ -41,7 +41,10 @@ This article refers to the following Microsoft .NET Framework Class Library name
 
     ```aspx
     <itemtemplate>
-        <b><%# DataBinder.Eval(Container.DataItem, "au_id") %></b><br>
+        <b>
+            <%# DataBinder.Eval(Container.DataItem, "au_id") %>
+        </b>
+        <br>
     </itemtemplate>
     ```
 
@@ -50,7 +53,10 @@ This article refers to the following Microsoft .NET Framework Class Library name
     ```aspx
     <asp:Repeater id="parentRepeater" runat="server">
         <itemtemplate>
-            <b><%# DataBinder.Eval(Container.DataItem, "au_id") %></b><br>
+            <b>
+                <%# DataBinder.Eval(Container.DataItem, "au_id") %>
+            </b>
+            <br>
         </itemtemplate>
     </asp:Repeater>
     ```
@@ -64,7 +70,7 @@ This article refers to the following Microsoft .NET Framework Class Library name
     using System.Data.SqlClient;
     ```
 
-13. Add the following code to the `Page_Load` event to create a connection to the *Pubs* database, and then to bind the *Authors* table to the Repeater control:
+13. Add the following code to the `Page_Load` event to create a connection to the *Pubs* database, and then to bind the `Authors` table to the Repeater control:
 
     ```csharp
      public void Page_Load(object sender, EventArgs e)
@@ -92,15 +98,14 @@ This article refers to the following Microsoft .NET Framework Class Library name
 14. Save all of the files.
 15. In Solution Explorer, right-click the *NestedRepeater.aspx*, and then click **Set As Start Page**.
 16. On the **Build** menu, click **Build Solution** to compile the project.
-17. View the .aspx page in the browser, and then verify that the page works thus far.
-
-    The output should appear as follows:
+17. View the .aspx page in the browser, and then verify that the page works thus far. The output should appear as follows:
 
     ```console
     172-32-1176
     213-46-8915
     238-95-7766
     267-41-2394
+    ...
     ```
 
 ## Bind to the child table
@@ -108,7 +113,10 @@ This article refers to the following Microsoft .NET Framework Class Library name
 1. In the HTML view of the *NestedRepeater.aspx* page, locate the following line of code:
 
     ```aspx
-    <b><%# DataBinder.Eval(Container.DataItem, "au_id") %></b><br>
+    <b>
+        <%# DataBinder.Eval(Container.DataItem, "au_id") %>
+    </b>
+    <br>
     ```
 
     Add the following code after this code:
@@ -116,7 +124,8 @@ This article refers to the following Microsoft .NET Framework Class Library name
     ```aspx
     <asp:repeater id="childRepeater" runat="server">
         <itemtemplate>
-            <%# DataBinder.Eval(Container.DataItem, "[\"title_id\"]")%><br>
+            <%# DataBinder.Eval(Container.DataItem, "[\"title_id\"]")%>
+            <br>
         </itemtemplate>
     </asp:repeater>
     ```
@@ -140,9 +149,9 @@ This article refers to the following Microsoft .NET Framework Class Library name
             <br>
             <asp:repeater id="childRepeater" runat="server"
             datasource='<%# ((DataRowView)Container.DataItem).Row.GetChildRows("myrelation") %>' >
-            <itemtemplate>
-                <%# DataBinder.Eval(Container.DataItem, "[\"title_id\"]")%><br>
-            </itemtemplate>
+                <itemtemplate>
+                    <%# DataBinder.Eval(Container.DataItem, "[\"title_id\"]")%><br>
+                </itemtemplate>
             </asp:Repeater>
         </itemtemplate>
     </asp:Repeater>
@@ -169,7 +178,7 @@ This article refers to the following Microsoft .NET Framework Class Library name
     ds.Tables["titles"].Columns["au_id"]);
     ```
 
-    This adds the *Titles* table to the DataSet, and then adds the relationships between the *Authors* and *Titles* tables.
+    This adds the `Titles` table to the DataSet, and then adds the relationships between the `Authors` and `Titles` tables.
 
 5. Save and compile the application.
 6. View the page in the browser, and then verify that the page works so far. The output should appear as follows:
@@ -187,7 +196,7 @@ This article refers to the following Microsoft .NET Framework Class Library name
     TC7777
     ```
 
-## Nestedrepeater.aspx
+## Nestedrepeater.aspx code
 
 ```aspx-csharp
 <%@ Page language="c#" Codebehind="NestedRepeater.aspx.cs" AutoEventWireup="false" Inherits="NestedRepeater.NestedRepeater" %>
@@ -199,7 +208,10 @@ This article refers to the following Microsoft .NET Framework Class Library name
             <!-- start parent repeater -->
             <asp:repeater id="parentRepeater" runat="server">
                 <itemtemplate>
-                    <b><%# DataBinder.Eval(Container.DataItem,"au_id") %></b><br>
+                    <b>
+                        <%# DataBinder.Eval(Container.DataItem,"au_id") %>
+                    </b>
+                    <br>
                     <!-- start child repeater -->
                     <asp:repeater id="childRepeater" datasource='<%# ((DataRowView)Container.DataItem).Row.GetChildRows("myrelation") %>' runat="server">
                         <itemtemplate>
@@ -215,7 +227,7 @@ This article refers to the following Microsoft .NET Framework Class Library name
 </html>
 ```
 
-## Nestedrepeater.aspx.cs
+## Nestedrepeater.aspx.cs code
 
 ```csharp
 using System;

@@ -24,7 +24,7 @@ You receive one of the following error messages at compile time or at link time:
 
 These warnings may occur during the following circumstances:
 
-- When you compile linking objects with the `/clr` switch.
+- When you compile linking objects with the **/clr** switch.
 - When you are building one of the following projects:
   - ASP.NET Web Service Template
   - Class Library Template
@@ -50,11 +50,11 @@ This problem is caused by the mixed DLL loading problem. Mixed DLLs (that is, DL
 
 ## Resolution
 
-Managed extensions for C++ projects that are created as DLLs by default do not link to native C/C++ libraries such as the C run-time (CRT) library, ATL, or MFC and do not use any static variables. Additionally, the project settings specify that the DLLs should be linked with the `/NOENTRY` option enabled.
+Managed extensions for C++ projects that are created as DLLs by default do not link to native C/C++ libraries such as the C run-time (CRT) library, ATL, or MFC and do not use any static variables. Additionally, the project settings specify that the DLLs should be linked with the **/NOENTRY** option enabled.
 
 This is done because linking with an entry point causes managed code to run during `DllMain`, which is not safe (see `DllMain` for the limited set of things you can do during its scope).
 
-A DLL without an entry point has no way to initialize static variables except for simple types such as integers. You don't typically have static variables in a `/NOENTRY` DLL.
+A DLL without an entry point has no way to initialize static variables except for simple types such as integers. You don't typically have static variables in a **/NOENTRY** DLL.
 
 The ATL, MFC, and CRT libraries all rely on static variables, so you also cannot use these libraries from within these DLLs without first making modifications.
 
@@ -64,7 +64,7 @@ The first step to manual initialization is to make sure that you disable the aut
 
 ## Remove the entry point of the managed DLL
 
-1. Link with `/NOENTRY`. In Solution Explorer, right-click the project node, click **Properties**. In the **Property Pages** dialog box, click **Linker**, click **Command Line**, and then add this switch to the **Additional Options** field.
+1. Link with **/NOENTRY**. In Solution Explorer, right-click the project node, click **Properties**. In the **Property Pages** dialog box, click **Linker**, click **Command Line**, and then add this switch to the **Additional Options** field.
 2. Link *msvcrt.lib*. In the **Property Pages** dialog box, click **Linker**, click **Input**, and then add *msvcrt.lib* to the **Additional Dependencies** property.
 3. Remove *nochkclr.obj*. On the **Input** page (same page as in the previous step), remove *nochkclr.obj* from the **Additional Dependencies** property.
 4. Link in the CRT. On the **Input** page (same page as in the previous step), add *__DllMainCRTStartup@12* to the **Force Symbol References** property.
@@ -175,7 +175,7 @@ To modify DLLs that you enter by using dll exports (`__declspec(dllexport)`) and
         {
             // exit, return; there is nothing else to do
         }
-        pfnForceTerm pfnDll=::( pfnForceTerm) GetProcAddress(hDll, 
+        pfnForceTerm pfnDll=::( pfnForceTerm) GetProcAddress(hDll,
          "DllForceTerm");
         if(!pfnDll)
         {
@@ -265,23 +265,30 @@ To modify DLL that contains consumers that use managed code and dll exports or m
 
     #using <mscorlib.dll>
     using namespace System;
-    public __gc class ManagedWrapper {
+    public __gc class ManagedWrapper
+    {
         public:
-        static BOOL minitialize() {
+        static BOOL minitialize()
+        {
             BOOL retval = TRUE;
-            try {
+            try
+            {
                 retval = __crt_dll_initialize();
-            } catch(System::Exception* e) {
+            } catch(System::Exception* e)
+            {
                 Console::WriteLine(e->Message);
                 retval = FALSE;
             }
             return retval;
         }
-        static BOOL mterminate() {
+        static BOOL mterminate()
+        {
             BOOL retval = TRUE;
-            try {
+            try
+            {
                 retval = __crt_dll_terminate();
-            } catch(System::Exception* e) {
+            } catch(System::Exception* e)
+            {
                 Console::WriteLine(e->Message);
                 retval = FALSE;
             }
@@ -290,7 +297,8 @@ To modify DLL that contains consumers that use managed code and dll exports or m
     };
 
     BOOL WINAPI DllMain(HINSTANCE hModule, DWORD dwReason, LPVOID
-    lpvReserved) {
+    lpvReserved)
+    {
         Console::WriteLine(S"DllMain is called...");
         return TRUE;
     } /* DllMain */
@@ -306,7 +314,8 @@ To modify DLL that contains consumers that use managed code and dll exports or m
     using namespace System::Reflection;
     #using "ijwdll.dll";
 
-    int main() {
+    int main()
+    {
         int retval = ManagedWrapper::minitialize();
         ManagedWrapper::mterminate();
     }

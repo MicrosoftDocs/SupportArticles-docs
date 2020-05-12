@@ -42,10 +42,7 @@ The sample declares an empty vector of integers. It adds 10 integers to the vect
 
 ## Sample code
 
-> [!NOTE]
-> The first line in the sample code is `// Compile options needed: /GX`.
-
-In Visual C++ .NET and in Visual C++, `/EHsc` is set by default and is equivalent to `/GX`.
+In Visual C++ .NET and in Visual C++, **/EHsc** is set by default and is equivalent to **/GX**.
 
 > [!NOTE]
 > In Visual C++, you must change the code from
@@ -71,7 +68,7 @@ In Visual C++ .NET and in Visual C++, `/EHsc` is set by default and is equivalen
 // Written by Tom Campbell
 // of Microsoft Corporation
 // Copyright (c) 1996 Microsoft Corporation. All rights reserved.
-////////////////////////////////////////////////////////////////////// 
+//////////////////////////////////////////////////////////////////////
 // The debugger can't handle symbols more than 255 characters long.
 // STL often creates symbols longer than that.
 // When symbols are longer than 255 characters, the warning is disabled.
@@ -82,7 +79,7 @@ In Visual C++ .NET and in Visual C++, `/EHsc` is set by default and is equivalen
 
 #if _MSC_VER > 1020 // if VC++ version is > 4.2
     using namespace std; // std c++ libs implemented in std
-    #endif
+#endif
 
 typedef vector<int, allocator<int> > INTVECTOR;
 
@@ -144,7 +141,7 @@ void ShowVector(INTVECTOR &theVector)
 }
 ```
 
-## Program output
+Program output:
 
 ```console
 theVector [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]

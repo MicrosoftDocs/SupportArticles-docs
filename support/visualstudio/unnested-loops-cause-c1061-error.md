@@ -7,7 +7,7 @@ ms.reviewer: ScotBren
 ---
 # Too many unnested loops incorrectly causes a C1061 compiler error in Visual C++
 
-This article provides information about resolving the problem that occurs when you include more than 250 unnested loops in a function. You may receive a compiler error in Visual C++.
+This article provides information about resolving the C1061 compiler error that occurs when you compile the source code that includes more than 250 unnested loops in a function as a C++ source file.
 
 _Original product version:_ &nbsp; Visual Studio Premium 2012, Visual Studio 2010  
 _Original KB number:_ &nbsp; 315481
@@ -20,9 +20,18 @@ If a function contains more than approximately 250 unnested loops, you receive t
 
 The problem occurs only when you compile the source code as a C++ source file. The source code compiles without errors when you compile it as a C source file.
 
-## Status
+## Workaround
 
-Microsoft has confirmed that this is a bug in the Microsoft products that are listed at the beginning of this article.  
+Surround each for loop with braces to create an enclosing scope:
+
+```cpp
+{
+    for (i=0; i<5; i++)
+    {
+        a += a*i;
+    }
+}
+```
 
 ## Steps to reproduce the behavior
 
@@ -33,7 +42,7 @@ The following sample code demonstrates the error:
 */
 #include <stdio.h>
 
-// The code blocks in this function have only two nesting levels. 
+// The code blocks in this function have only two nesting levels.
 // C1061 should not occur.
 void func1()
 {
@@ -43,14 +52,16 @@ void func1()
 
     count++;
     a = count;
-    for (i=0; i<5; i++) {
+    for (i=0; i<5; i++)
+    {
         a += a*i;
     }
     printf("a=%d\n", a);
 
     // Copy and paste the following code 250 times.
     /*
-    for (i=0; i<5; i++) {
+    for (i=0; i<5; i++)
+    {
         a += a*i;
     }
     printf("a=%d\n", a);
@@ -58,26 +69,16 @@ void func1()
 
     count++;
     a = count;
-    for (i=0; i<5; i++) {
+    for (i=0; i<5; i++)
+    {
         a += a*i;
     }
     printf("a=%d\n", a);
 }
 
-void main(){
-    func1();
-}
-```
-
-## Workaround
-
-Surround each for loop with braces to create an enclosing scope:
-
-```cpp
+void main()
 {
-    for (i=0; i<5; i++) {
-        a += a*i;
-    }
+    func1();
 }
 ```
 
@@ -97,7 +98,7 @@ void foo()
 }
 ```
 
-With **/Zc:ForScope** disabled, that *i* on the commented line would come from the for-loop instead. Users must be informed of this difference in behavior.
+With **/Zc:ForScope** disabled, that `i` on the commented line would come from the for-loop instead. Users must be informed of this difference in behavior.
 
 Unfortunately, scopes are non-trivial data structures, so the compiler has a limit on the number of scopes it can keep track of at the same time, which leads to the bug described here.
 
@@ -113,6 +114,7 @@ void foo()
             if (i == 5) break;
         }
     }
-    if (i == 5)... // this 'i' comes from the outer scope regardless of whether /Zc:forScope is enabled
+    if (i == 5)...
+    // this 'i' comes from the outer scope regardless of whether /Zc:forScope is enabled
 }
 ```
