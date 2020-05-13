@@ -38,4 +38,7 @@ When this issue occurs, you can see the following information in Teams client lo
 info -- [screenSharing][control] appSharingToolbar: AppSharingToolbar created with hardware acceleration: false
 ```
 
+> [!NOTE]
+> To collect the logs on a Windows machine, go to `%appdata%\Microsoft\Teams\media-stack\*.*`. On a Mac machine, go to `~Library/Application Support/Microsoft/Teams/media-stack/*.*`.
+
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

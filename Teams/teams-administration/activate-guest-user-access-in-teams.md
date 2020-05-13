@@ -3,7 +3,7 @@ title: How to activate guest users in the Microsoft Teams admin center
 ms.author: v-todmc
 author: todmccoy
 manager: dcscontentpm
-ms.date: 3/25/2020
+ms.date: 04/28/2020
 audience: Admin
 ms.topic: article
 ms.prod: microsoft-teams
@@ -20,15 +20,15 @@ ms.reviewer: alhopper
 description: Describes how to enable guest user access in Teams for remote workers. 
 ---
 
-# Activating guest user access in the Microsoft Teams admin center
+# Activate guest user access in the Microsoft Teams admin center
 
 ## Symptoms
 
-You want to enable guest user access in Microsoft Teams so teams in your organization can collaborate with people outside your organization. 
+You cannot add guest users in Microsoft Teams. Therefore, teams that are within your organization can't collaborate with people outside your organization.
 
 ## Resolution
 
-Guest access in Teams is turned off by default. To enable guest access:
+By default, guest access in Teams is turned off. To enable guest access, follow these steps:
 
 1. Go to the [Microsoft Teams admin center](https://admin.teams.microsoft.com/).
 2. Select **Org-wide settings**.

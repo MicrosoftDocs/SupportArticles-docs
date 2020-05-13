@@ -9,7 +9,7 @@
       href: ./known-issues/eaf-in-emet-ids-chrome-optimizations-as-threats.md
     - name: Error "We couldn't add member" when adding users to Teams 
       href: ./known-issues/couldnt-add-member-error.md
-    - name: Group mailboxes will not enable for archival purposes 
+    - name: Group mailboxes in Teams will not enable for archival purposes 
       href: ./known-issues/group-mailboxes-will-not-enable-archive.md
     - name: Include or exclude Teams from antivirus or DLP applications
       href: ./teams-administration/include-exclude-teams-from-antivirus-dlp.md
@@ -25,8 +25,6 @@
     items:
     - name: Modern authentication failure in Microsoft Teams
       href: ./known-issues/modern-authentication-failure-teams.md
-    - name: Sign-in error after password change in Microsoft Teams
-      href: ./known-issues/sign-in-error-after-password-change.md
     - name: Teams stops working when joining from Edge or Internet Explorer 
       href: ./known-issues/teams-stops-working-when-joining-from-edge.md
     - name: Teams will always log into the domain-joined PC account
@@ -35,8 +33,6 @@
     items:
     - name: A channel cannot be recreated after deletion
       href: ./known-issues/channel-cannot-be-recreated-after-deletion.md
-    - name: Removed user appears as "Unknown user"
-      href: ./known-issues/removed-user-appears-as-unknown.md
     - name: Renaming a Teams channel does not rename the corresponding folder in SharePoint Online
       href: ./known-issues/renaming-channel-does-not-rename-folder-sharepoint.md
   - name: Conferencing
@@ -91,14 +87,14 @@
       href: ./known-issues/problems-using-teams-on-ios-13-beta.md
     - name: Unable to see auto-favorited channels in the Teams mobile app
       href: ./known-issues/cant-see-auto-favorited-channels-in-mobile.md
-    - name: Windows phone app for Teams will beretired
-      href: ./teams-mobile/teams-for-windows-phone-is-retiring.md
   - name: OneNote Integration
     items:
     - name: Issue with accessing notebooks
       href: ./teams-onenote-integration/issue-access-notebook.md
     - name: Temporary change to file size download limit in OneNote
       href: /office/troubleshoot/onenote/temp-change-onenote-file-size-download?toc=/MicrosoftTeams/troubleshoot/toc.json&bc=/MicrosoftTeams/troubleshoot/breadcrumb/toc.json
+    - name: Unable to upload or download OneNote file in Teams
+      href: ./known-issues/cant-upload-download-onenote-file.md
   - name: Provisioning
     items:
     - name: Deleting a team also deletes the group associated with it in Teams
@@ -111,6 +107,10 @@
     items:
     - name: Can't start Teams for Surface Hub from Microsoft Store
       href: ./known-issues/teams-for-surface-hub-wont-start-from-store.md
+    - name: Sign-in error after password change
+      href: ./known-issues/sign-in-error-after-password-change.md
+    - name: Someone has already setup Teams for your organization
+      href: ./teams-sign-in/someone-has-already-setup-teams.md
     - name: Stuck in login loop in Edge or Internet Explorer
       href: ./teams-sign-in/sign-in-loop.md
     - name: Teams does not automatically update
@@ -123,14 +123,14 @@
       href: ./known-issues/unable-to-rename-legacy-onenote-tabs.md
     - name: File download failure in Teams
       href: ./known-issues/file-download-failure-teams.md
+    - name: Removed user appears as "Unknown user"
+      href: ./known-issues/removed-user-appears-as-unknown.md
     - name: Tabs not working after enabling Conditional Access
       href: ./known-issues/tabs-dont-work-after-enabling-conditional-access.md
     - name: Task buckets do not appear in Teams Planner online 
       href: ./known-issues/task-buckets-do-not-appear-in-planner.md
     - name: Teams website tabs leads to customer confusion 
       href: ./known-issues/website-tabs-cause-confusion-teams.md
-    - name: Unable to upload or download OneNote file in Teams
-      href: ./known-issues/cant-upload-download-onenote-file.md
   - name: Third-party programs
     items:
     - name: Dell Encryption prevents Teams from starting correctly 

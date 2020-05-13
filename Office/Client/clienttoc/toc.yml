@@ -125,6 +125,8 @@
       href: ../access/access-wizard-fails-loading-dll.md
     - name: Error running query with UniqueValues property
       href: ../access/error-running-query.md
+    - name: Error running wizards
+      href: ../access/running-wizard-error-loading-dll.md
     - name: Error using special characters
       href: ../access/error-using-special-characters.md
     - name: Error when you work in Access table linked to a list
@@ -235,6 +237,8 @@
       href: ../access/store-calculate-compare-datetime-data.md
     - name: Support diagnostic
       href: ../access/diagnostic-data-collected.md
+    - name: Switchboard Manager doesn't appear
+      href: ../access/switchboard-manager-option-disappears.md
     - name: Synchronize two combo boxes
       href: ../access/sync-combo-boxes.md
     - name: Troubleshooting corruption in database
@@ -743,7 +747,7 @@
       href: ../infopath/infopath-2013-crashes-when-connecting-to-access-database.md
   - name: Installation
     items:
-    - name: "\"Access Denied\" error when starting Microsoft Office third-party add-ins"
+    - name: Error starting Microsoft Office third-party .NET add-in
       href: ../installation/access-denied-error-when-starting-third-party-apps.md
     - name: Error 1935 when install Office 2010
       href: ../installation/error-1935-when-install-office-2010.md
@@ -883,10 +887,14 @@
       href: ../onenote/error-sync-notebook.md
     - name: Locate Onenote notebooks
       href: ../onenote/locate-onenote-notebooks.md
+    - name: 'OneNote error “Content Not Yet Available”'
+      href: ../onenote/onenote-error-content-not-yet-available.md
     - name: Temporary change to file size download limit in OneNote
       href: ../onenote/temp-change-onenote-file-size-download.md
     - name: Warning when a notebook is in an offline location
       href: ../onenote/notebook-offline-location.md
+    - name: "\"We couldn't start OneNote the last time we tried\" error"
+      href: ../onenote/couldnt-start-onenote-the-last-time-error.md
   - name: Performance
     items:
     - name: Some Office applications are not responding

@@ -220,7 +220,9 @@ Set-UnifiedGroup -Identity $O365Group.identity -EmailAddresses @{add=$Newemailid
 
 ### Add or remove a secondary email address from an Office 365 Group
 
-You can use the following Exchange Online PowerShell commands to add and remove a non-primary email address from an Office 365 group:
+You can change the email address of Office 365 Group using [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home#/groups), select the group and selecting @edit email address.
+
+Alternatively, you can also use the following Exchange Online PowerShell commands to add and remove a non-primary email address from an Office 365 group:
 
 Add:
 

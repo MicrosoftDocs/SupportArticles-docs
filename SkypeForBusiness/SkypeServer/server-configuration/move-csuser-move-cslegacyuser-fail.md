@@ -49,7 +49,7 @@ The Lync Server User Replicator Service has not completed the initial replicatio
 1. Use the following steps to locate the migration user information in the Lync Server database:   
 2. Install the Lync Server Resource Kit tools locally on one of the Lync Server Pool front end servers   
 3. Open a an administrative command prompt window   
-4. Browse to** %ProgramFiles%\Microsoft Lync Server 2010\ResKit **or **%ProgramFiles%\Microsoft Lync Server 2013\ResKit**    
+4. Browse to **%ProgramFiles%\Microsoft Lync Server 2010\ResKit** or **%ProgramFiles%\Microsoft Lync Server 2013\ResKit**    
 5. Use the following Dbanalyze command to verify that the user information has been migrated into the Lync target pool:
 
     ```powershell
