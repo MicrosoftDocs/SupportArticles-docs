@@ -30,7 +30,7 @@ Mapping a library as a network drive is temporary and supported only through Int
 
 ## Not recommended: Map a network drive
 
-If you choose to map a drive instead of [using the new OneDrive sync client](https://support.office.com/en-us/article/6de9ede8-5b6e-4503-80b2-6190f3354a88), follow the steps below in **Internet Explorer**:
+If you choose to map a drive instead of [using the new OneDrive sync client](https://support.office.com/article/6de9ede8-5b6e-4503-80b2-6190f3354a88), follow the steps below in **Internet Explorer**:
 
 1. Sign in to the SharePoint Online site by using your Office 365 work or school account credentials. Make sure that you select the **Stay signed in** option.
 
