@@ -63,7 +63,7 @@ If all alerts from multiple files or libraries are not delivered, visit the Serv
 >
 > * Please check the JUNK folder in your email, as sometimes alerts might go there.
 > 
-> * It is not possible to send alerts to Distribution Groups only Security and O365 groups are supported.
+> * It is not possible to send alerts to Distribution or O365 groups only Security groups are supported.
 >
 > * You cannot customize alert email templates; you need to use Microsoft FLOW or SharePoint Designer Workflow to achieve those.
 
