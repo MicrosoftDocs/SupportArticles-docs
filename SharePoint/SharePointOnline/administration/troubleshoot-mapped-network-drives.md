@@ -1,16 +1,20 @@
 ---
-title: Troubleshoot mapped network drives that connect to SharePoint Online
-description: This article describes how to Troubleshoot mapped network drives that connect to SharePoint Online.
+title: Mapping and syncing network drives that connect to SharePoint Online
+description: Describes how to troubleshoot mapped network drives that connect to SharePoint Online.
 author: simonxjx
 manager: dcscontentpm
+ms.date: 5/14/2020
 localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- CSSTroubleshoot
+- CI 117634
 ms.author: v-six
+ms.reviewer: prbalusu
 appliesto:
 - SharePoint Online
 ---
@@ -18,6 +22,9 @@ appliesto:
 # Troubleshoot mapped network drives that connect to SharePoint Online
 
 ## Recommended: Sync instead of mapping a drive
+
+> [!NOTE]
+> Mapping a network drive is slower and less reliable than syncing SharePoint files with the OneDrive sync app. 
 
 Mapping a library as a network drive is temporary and supported only through Internet Explorer. Instead, [sync SharePoint files with the new OneDrive sync client](https://support.office.com/article/6de9ede8-5b6e-4503-80b2-6190f3354a88) which provides [Files On-Demand](https://support.office.com/article/0e6860d3-d9f3-4971-b321-7092438fb38e). Access all your files in OneDrive without using local storage space.
 
