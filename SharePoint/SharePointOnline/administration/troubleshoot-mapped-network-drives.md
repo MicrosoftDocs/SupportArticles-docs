@@ -21,30 +21,12 @@ appliesto:
 
 # Troubleshoot mapped network drives that connect to SharePoint Online
 
-## Recommended: Sync instead of mapping a drive
-
 > [!NOTE]
-> Mapping a network drive is slower and less reliable than syncing SharePoint files with the OneDrive sync app. 
+> Mapping a network drive is slower and less reliable than syncing SharePoint files with the OneDrive sync app. We recommend that you [sync SharePoint files with the new OneDrive sync client](https://support.office.com/article/6de9ede8-5b6e-4503-80b2-6190f3354a88) which provides [Files On-Demand](https://support.office.com/article/0e6860d3-d9f3-4971-b321-7092438fb38e). Access all your files in OneDrive without using local storage space.
 
-Mapping a library as a network drive is temporary and supported only through Internet Explorer. Instead, [sync SharePoint files with the new OneDrive sync client](https://support.office.com/article/6de9ede8-5b6e-4503-80b2-6190f3354a88) which provides [Files On-Demand](https://support.office.com/article/0e6860d3-d9f3-4971-b321-7092438fb38e). Access all your files in OneDrive without using local storage space.
+## Sync a drive instead of mapping it
 
-## Not recommended: Map a network drive
-
-If you choose to map a drive instead of [using the new OneDrive sync client](https://support.office.com/article/6de9ede8-5b6e-4503-80b2-6190f3354a88), follow the steps below in **Internet Explorer**:
-
-1. Sign in to the SharePoint Online site by using your Office 365 work or school account credentials. Make sure that you select the **Stay signed in** option.
-
-1. Browse to the library that you want to map the drive for.
-
-1. Select the view menu > **View in File Explorer**. The **View in File Explorer** option is not available in Microsoft Edge, Google Chrome or Firefox.
-
-1. Select an empty area of the Explorer window address bar, and then copy the URL of the library.
-
-1. Right-click **Computer** or **This PC** from the Desktop, or within Windows Explorer, and then click **Map Network Drive**.
-
-1. Click the **Connect to a Web site that you can store your documents and pictures** link, and then click **Next** two times.
-
-1. Paste the URL that you copied in step 4, click **Next**, and then follow the instructions in the wizard.
+Mapping a library as a network drive is temporary and supported only through Internet Explorer. Mapping uses WebDav, an outdated technology which is considered unreliable. 
 
 ## Troubleshoot mapped network drive error messages
 
@@ -129,13 +111,11 @@ Make sure that the latest Windows updates are applied. If all the latest updates
 
 ### Troubleshoot slower-than-expected mapped network drive performance on Windows 8-based or Windows Server 2012-based computers
 
-When you browse to a SharePoint Online document library through a mapped network drive, you may experience an issue in which the enumeration of the files and directories is slower than expected. A hotfix was released to resolve this issue. For more info, go to [Slow performance when you connect to a WebDAV shared folder in Windows 8 or Window Server 2012](https://support.microsoft.com/help/2782826).
+When you browse to a SharePoint Online document library through a mapped network drive, you may experience an issue in which the enumeration of the files and directories is slower than expected. A hotfix was released to resolve this issue. 
 
 ## More information
 
-For more info about how to work with the WebClient service, go to the following Microsoft Knowledge Base articles:
-
-- [A WebClient service crashes on a computer that is running Windows 7 or Windows Server 2008 R2 when you connect a WebDav resource](https://support.microsoft.com/help/2548470)
+For more info about how to work with the WebClient service, see the following Microsoft Knowledge Base articles:
 
 - [Prompt for Credentials When Accessing FQDN Sites From a Windows Vista or Windows 7 Computer](https://support.microsoft.com/help/943280)
 
