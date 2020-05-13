@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 2679685
 
 ## Symptoms
 
-When adding a library share to System Center 2012 Virtual Machine Manager, the console may crash if the share being used contains certain reserved characters (such as **>** or **?**, etc.).
+When adding a library share to System Center 2012 Virtual Machine Manager, the console may crash if the share being used contains certain reserved characters (such as **>** or **?**).
 
 ## Cause
 
