@@ -14,11 +14,11 @@ _Original KB number:_ &nbsp; 3010979
 
 ## Symptoms
 
-When you try to enable protection for a virtual machine, the operation may fail by returning error code 25035. This error indicates that the cluster resource could not be found in Azure Site Recovery.
+When you try to enable protection for a virtual machine, the operation may fail by returning error code 25035. This error indicates that **The cluster resource could not be found** in Azure Site Recovery.
 
 ## Cause
 
-This issue may occur after you apply Update Rollup 3 ([KB2965413](https://support.microsoft.com/help/2965414)) for System Center 2012 R2 Virtual Machine Manager (SC 2012 R2 VMM).
+This issue may occur after you apply Update Rollup 3 ([KB2965414](https://support.microsoft.com/help/2965414)) for System Center 2012 R2 Virtual Machine Manager.
 
 After VMM is updated, the Virtual Machine Manager service tries to find a virtual machine cluster resource name that has a **SCVMM \<VMNAME>** prefix, where \<VMNAME> is the name of your virtual machine. However, Hyper-V Cluster Broker creates the cluster resource by using just the name of the virtual machine (\<VMNAME>). For example, if your machine name is *machine01*, VMM assumes that the name is *SCVMM machine01*. Whereas Hyper-V cluster broker assumes that the cluster resource name is just *machine01*.
 

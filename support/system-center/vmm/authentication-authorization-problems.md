@@ -9,12 +9,12 @@ ms.reviewer: steveth
 
 This article helps you fix authentication and authorization problems in System Center Virtual Machine Manager due to missing or incorrect service principal names (SPNs).
 
-_Original product version:_ &nbsp; Microsoft System Center Virtual Machine Manager 2008, Microsoft System Center 2012 R2 Virtual Machine Manager  
+_Original product version:_ &nbsp; Microsoft System Center 2012 R2 Virtual Machine Manager  
 _Original KB number:_ &nbsp; 2961630
 
 ## Symptoms
 
-You may encounter various problems with Microsoft System Center Virtual Machine Manager 2008 (VMM 2008) or System Center 2012 Virtual Machine Manager (VMM 2012) that are related to authentication and authorization if the required service principal names (SPNs) are missing or incorrect.
+You may encounter various problems with Microsoft System Center 2012 Virtual Machine Manager (VMM 2012) that are related to authentication and authorization if the required service principal names (SPNs) are missing or incorrect.
 
 ## Cause
 
@@ -27,7 +27,7 @@ To resolve this issue, you can use the `setspn` command to check for duplicate S
 > [!NOTE]
 > Not all SPNs may be required. The requirements will vary based on the server roles that are installed.
 
-For Virtual console support for Hyper-V hosts (VMConnect.exe), the following SPNs are required on Hyper-V hosts:
+For virtual console support for Hyper-V hosts (VMConnect.exe), the following SPNs are required on Hyper-V hosts:
 
 - `setspn -s computername "Microsoft Virtual Console Service/hostname"`
 - `setspn -s computername "Microsoft Virtual Console Service/hostname.fqdn.etc"`

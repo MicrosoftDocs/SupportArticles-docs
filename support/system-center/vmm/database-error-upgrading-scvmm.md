@@ -4,7 +4,7 @@ description: Discusses that an upgrade from SCVMM 2012 SP1 to SCVMM 2012 R2 fail
 ms.date: 04/26/2020
 ms.prod-support-area-path:
 ---
-# Database can not be upgraded when upgrading from SCVMM 2012 SP1 to SCVMM 2012 R2
+# Database can not be upgraded error when upgrading from SCVMM 2012 SP1 to SCVMM 2012 R2
 
 This article helps you fix an issue in which you can't upgrade from Microsoft System Center 2012 Virtual Machine Manager Service Pack 1 to System Center 2012 R2 Virtual Machine Manager.
 

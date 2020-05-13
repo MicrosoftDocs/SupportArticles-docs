@@ -1,22 +1,22 @@
 ---
 title: Error 2912 adding a cluster to SCVMM 
-description: Fixes an issue in which you can't add a cluster to System Center Virtual Machine Manager with error 2912 (unknown error (0x800007d0)).
+description: Fixes an issue in which you can't add a cluster to System Center Virtual Machine Manager and receive error 2912 (unknown error (0x800007d0)).
 ms.date: 04/26/2020
 ms.prod-support-area-path: 
 ms.reviewer: markstan
 ---
 # Adding a cluster to SCVMM fails with error 2912 (unknown error (0x800007d0))
 
-This article fixes an issue in which you can't add a cluster to System Center Virtual Machine Manager with error 2912 (unknown error (0x800007d0)).
+This article fixes an issue in which you can't add a cluster to System Center Virtual Machine Manager and receive error 2912 (unknown error (0x800007d0)).
 
-_Original product version:_ &nbsp; Microsoft System Center Virtual Machine Manager 2008, Microsoft System Center Virtual Machine Manager 2008 R2, Microsoft System Center Virtual Machine Manager 2008 R2 Service Pack 1, Microsoft System Center 2012 R2 Virtual Machine Manager  
+_Original product version:_ &nbsp; Microsoft System Center 2012 R2 Virtual Machine Manager  
 _Original KB number:_ &nbsp; 2686573
 
 ## Symptoms
 
 Consider the following scenario:
 
-1. You are using System Center Virtual Machine Manager 2008 (VMM) to manage a cluster resource.
+1. You are using System Center Virtual Machine Manager (VMM) to manage a cluster resource.
 2. One node of the cluster displays a status of **Needs Attention**.
 3. Viewing the properties of the node displays a connection status of **Not Responding** on the **Status** tab.
 4. Remove and attempting to re-add the cluster back again fails with the following error:
@@ -80,9 +80,3 @@ To resolve this issue, complete the steps below:
 3. Remove the partially added cluster and re-add the same cluster once again.
 
 At this point all nodes should be added successfully.
-
-## More Information
-
-For more information, see the following Knowledge Base article:
-
-[976640](https://support.microsoft.com/help/976640) How to troubleshoot the "Not Responding" host status in SCVMM 2008 and in SCVMM 2008 R2

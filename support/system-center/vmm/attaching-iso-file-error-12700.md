@@ -1,13 +1,13 @@
 ---
 title: Error 12700 when attaching an ISO file
-description: Fixes an issue in which you can't attach an ISO file to a virtual machine with error 12700.
+description: Fixes an issue in which you can't attach an ISO file to a virtual machine and receive error 12700.
 ms.date: 04/26/2020
 ms.prod-support-area-path: 
 ms.reviewer: jeffpatt
 ---
 # Attaching an ISO file in System Center 2012 Virtual Machine Manager fails with error 12700
 
-This article helps you fix an issue in which you can't attach an ISO file to a virtual machine with error 12700.
+This article helps you fix an issue in which you can't attach an ISO file to a virtual machine and receive error 12700.
 
 _Original product version:_ &nbsp; System Center 2012 Virtual Machine Manager  
 _Original KB number:_ &nbsp; 2689989

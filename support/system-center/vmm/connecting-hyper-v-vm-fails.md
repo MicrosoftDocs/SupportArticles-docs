@@ -1,13 +1,13 @@
 ---
 title: Can't connect to a Hyper-V virtual machine
-description: Fixes an issue in which you can't connect to a Hyper-V VM with the error 'Virtual Machine Manager lost the connection to the virtual machine.'
+description: Fixes an issue in which you can't connect to a Hyper-V VM and receive error 'Virtual Machine Manager lost the connection to the virtual machine.'
 ms.date: 04/26/2020
 ms.prod-support-area-path: 
 ms.reviewer: jchornbe
 ---
 # Virtual Machine Manager lost the connection to the virtual machine when connecting to a Hyper-V VM
 
-This article fixes an issue in which you can't connect to a Hyper-V virtual machine (VM) with the error **Virtual Machine Manager lost the connection to the virtual machine**.
+This article fixes an issue in which you can't connect to a Hyper-V virtual machine (VM) and receive error **Virtual Machine Manager lost the connection to the virtual machine**.
 
 _Original product version:_ &nbsp; System Center Virtual Machine Manager  
 _Original KB number:_ &nbsp; 2288932
@@ -22,7 +22,7 @@ Consider the following scenario:
 
 - Two user accounts exist: *User1* and *User2*.
 - *User1* isn't a configured in SCVMM anywhere.
-- *User2* is a member of a Self-Service user role in SCVMM and is the owner of a VM.
+- *User2* is a member of a self-service user role in SCVMM and is the owner of a VM.
 - *User1* logs on to a Windows client and connects to the SSP where they authenticate as *User2*.
 - The VM owned by *User2* is selected from the list and the **Connect to VM** button is clicked.
 

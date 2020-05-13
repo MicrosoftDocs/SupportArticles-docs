@@ -34,8 +34,9 @@ Adding a custom property that contains an apostrophe character (e.g. fabrikam's 
 > Problem Signature 09: N3CTRYE2KN3C34SGL4ZQYRBFTE4M13NB  
 > OS Version: 6.1.7601.2.1.0.274.10  
 > Locale ID: 1033  
-> A corresponding event will be written to the Application Log:  
->
+
+A corresponding event will be written to the Application Log:  
+
 > Log Name:      Application  
 > Source:        Windows Error Reporting  
 > Event ID:      1001  

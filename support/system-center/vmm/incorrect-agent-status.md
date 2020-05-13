@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 2795033
 
 ## Symptoms
 
-When looking at the properties of a System Center 2012 Virtual Machine Manager (VMM) Service Pack 1 library server on a highly available library file server, not all nodes show up in the **Agent Status** as responding. It may also indicate that **this node is not being managed by VMM**, which is incorrect.
+When looking at the properties of a System Center 2012 Virtual Machine Manager (VMM) Service Pack 1 library server on a highly available library file server, not all nodes show up in the **Agent Status** as responding. It may also indicate that **This node is not being managed by VMM**, which is incorrect.
 
 ## Cause
 
