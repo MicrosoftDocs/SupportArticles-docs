@@ -6,7 +6,7 @@ ms.prod-support-area-path:
 ---
 # How to install and configure PHP on IIS 8 in Windows 8
 
-This article provides information about installing and configuring PHP on Internet Information Services(IIS) 8.0 in Windows 8.
+This article provides information about installing and configuring PHP on Internet Information Services (IIS) 8.0 in Windows 8.
 
 _Original product version:_ &nbsp; Internet Information Services 8.0, Windows 8  
 _Original KB number:_ &nbsp; 2819022

@@ -29,7 +29,7 @@ The default document (*default.asp*) in the WebPort virtual directory within Int
 
 On the Web Server, verify the default document setting.
 
-1. Open the IIS console (Internet Services Manager).
+1. Open the IIS (Internet Information Services) Manager.
 2. Right-click on the WebPort virtual directory and select **Properties**.
 3. Click the **Documents** tab.
 4. Select each document and click the **Remove** button.

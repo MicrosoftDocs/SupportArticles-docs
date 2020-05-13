@@ -39,10 +39,10 @@ Make sure that the client sends a request that contains a valid HTTP method. To 
     > [!NOTE]
     >  If you are prompted for an administrator password or for a confirmation, type the password, or provide confirmation.
 2. On the **File** menu, click **Open**. In the **File name** box, type `%windir%\system32\inetsrv\config\applicationhost.config`, and then click **Open**.
-3. In the `ApplicationHost.config` file, locate the `<handlers>` tag.
+3. In the *ApplicationHost.config* file, locate the `<handlers>` tag.
 4. Make sure that all the handlers use valid HTTP methods.
-5. Save the `ApplicationHost.config` file.
+5. Save the *ApplicationHost.config* file.
 
 ## Resolution for cause 2
 
-Send the `POST` request to a page that is configured to be handled by a handler other than the `StaticFile` handler (for example, the `ASPClassic` handler). Or, change the request that is being handled by the `StaticFile` handler so that it's a `GET` request instead of a `POST` request.
+Send the POST request to a page that is configured to be handled by a handler other than the `StaticFile` handler (for example, the `ASPClassic` handler). Or, change the request that is being handled by the `StaticFile` handler so that it's a GET request instead of a POST request.

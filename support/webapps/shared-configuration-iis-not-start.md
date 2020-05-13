@@ -13,7 +13,13 @@ _Original KB number:_ &nbsp; 2565028
 
 ## Symptoms
 
-Consider the following scenario. You have enabled shared configuration on an IIS 7.0 or 7.5 server. You disable shared configuration to make changes to your IIS configuration, such as to uninstall a module or disable an IIS feature. You then re-enable shared configuration and export the new configuration file (applicationHost.config) to the centralized location. After taking these steps, the Windows Process Activation Service and the WWW service fail to start. Errors similar to the following are written to the event logs:
+Consider the following scenario:
+
+- You have enabled shared configuration on an IIS 7.0 or 7.5 server.
+- You disable shared configuration to make changes to your IIS configuration, such as to uninstall a module or disable an IIS feature.
+- You then re-enable shared configuration and export the new configuration file (applicationHost.config) to the centralized location.
+
+After taking these steps, the Windows Process Activation Service and the WWW service fail to start. Errors similar to the following are written to the event logs:
 
 ```console
 Log Name: System

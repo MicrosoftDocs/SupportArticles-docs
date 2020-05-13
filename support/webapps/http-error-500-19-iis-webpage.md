@@ -24,11 +24,11 @@ Error message
 
 Cause
 
-This problem occurs because the ``ApplicationHost.config`` file or the ``Web.config`` file contains a malformed XML element.
+This problem occurs because the *ApplicationHost.config* file or the *Web.config* file contains a malformed XML element.
 
 Resolution
 
-Delete the malformed XML element from the ``ApplicationHost.config`` file or from the ``Web.config`` file.
+Delete the malformed XML element from the *ApplicationHost.config* file or from the *Web.config* file.
 
 ## HResult code 0x80070005
 
@@ -45,7 +45,7 @@ Cause
 This problem occurs for one of the following reasons:
 
 - You're using IIS on a computer that is running Windows. Additionally, you configure the Web site to use UNC Pass-through authentication to access a remote Universal Naming Convention (UNC) share.
-- The IIS_IUSRS group doesn't have the appropriate permissions for the `ApplicationHost.config` file, for the `Web.config` file, or for the virtual/application directories of IIS.
+- The IIS_IUSRS group doesn't have the appropriate permissions for the *ApplicationHost.config* file, for the *Web.config* file, or for the virtual/application directories of IIS.
 
 To resolve this problem, use one of the following methods:
 
@@ -55,14 +55,14 @@ Do not configure the Web site to use UNC Pass-through authentication to access t
 
 ### Resolution 2
 
-Grant the Read permission to the IIS_IUSRS group for the `ApplicationHost.config` file or for the `Web.config` file. To do this, follow these steps:
+Grant the Read permission to the IIS_IUSRS group for the *ApplicationHost.config* file or for the *Web.config* file. To do this, follow these steps:
 
-1. In Windows Explorer, locate the folder that contains the `ApplicationHost.config` file that is associated with the Web site, or locate the virtual directories or the application directories that contain the `Web.config` file that is associated with the Web site.
+1. In Windows Explorer, locate the folder that contains the *ApplicationHost.config* file that is associated with the Web site, or locate the virtual directories or the application directories that contain the *Web.config* file that is associated with the Web site.
 
     > [!NOTE]
-    > The `Web.config` file may not be in the virtual directories or the application directories in IIS. Even in this situation, you need to follow these steps.
+    > The *Web.config* file may not be in the virtual directories or the application directories in IIS. Even in this situation, you need to follow these steps.
 
-1. Right-click the folder that contains the `ApplicationHost.config` file, or right-click the virtual or application directories that may contain the `Web.config` file.
+1. Right-click the folder that contains the *ApplicationHost.config* file, or right-click the virtual or application directories that may contain the *Web.config* file.
 
 1. Click **Properties**.
 
@@ -80,7 +80,7 @@ Grant the Read permission to the IIS_IUSRS group for the `ApplicationHost.config
 1. In the **Properties** dialog box for the folder, click **OK**.
 
     > [!NOTE]
-    > Make sure the folder's properties are inherited by the `ApplicationHost.config` and `Web.config` files so that IIS_IUSRS has the Read permission for those files.
+    > Make sure the folder's properties are inherited by the *ApplicationHost.config* and *Web.config* files so that IIS_IUSRS has the Read permission for those files.
 
 ## HResult code 0x800700b7
 
@@ -94,17 +94,17 @@ Error message
 
 Cause
 
-This problem may occur if there's a duplicate entry for the specified configuration section setting at a higher level in the configuration hierarchy (for example, in a parent site/folder's `Web.Config` or `ApplicationHost.Config` file). The error message itself points out the location of duplicate entry or entries.
+This problem may occur if there's a duplicate entry for the specified configuration section setting at a higher level in the configuration hierarchy (for example, in a parent site/folder's *Web.Config* or *ApplicationHost.Config* file). The error message itself points out the location of duplicate entry or entries.
 
 Resolution
 
-Examine the specified configuration file and compare it with its parent `ApplicationHost.Config` and/or W`eb.Config` files to check for duplicate entries as suggested by the error message. Either remove the duplicate entry, or make the entry unique. For example, this problem may occur because the `ApplicationHost.Config` file has a duplicate entry for the following code.
+Examine the specified configuration file and compare it with its parent *ApplicationHost.Config* and/or *Web.Config* files to check for duplicate entries as suggested by the error message. Either remove the duplicate entry, or make the entry unique. For example, this problem may occur because the *ApplicationHost.Config* file has a duplicate entry for the following code.
 
 ```xml
 <add accessType="Allow" users="*" />
 ```
 
-To resolve this problem, in the `ApplicationHost.config` file, delete the duplicate entry for the authorization rule. To do this, follow these steps:
+To resolve this problem, in the *ApplicationHost.config* file, delete the duplicate entry for the authorization rule. To do this, follow these steps:
 
 1. Click **Start**, type *Notepad* in the **Start Search** box, right-click **Notepad**, and then click **Run as administrator**.
 
@@ -113,7 +113,7 @@ To resolve this problem, in the `ApplicationHost.config` file, delete the duplic
 
 2. On the **File** menu, click **Open**, type *%windir%\System32\inetsrv\config\applicationHost.config* in the **File name** box, and then click **Open**.
 
-3. In the `ApplicationHost.config` file, delete the duplicate entry that resembles the following code:
+3. In the *ApplicationHost.config* file, delete the duplicate entry that resembles the following code:
 
     ```xml
     <add accessType="Allow" users="*" />
@@ -131,11 +131,11 @@ Error message
 
 Cause
 
-This problem occurs because the `ApplicationHost.config` file or the `Web.config` file references a module or a DLL that is invalid or that does not exist.
+This problem occurs because the *ApplicationHost.config* file or the *Web.config* file references a module or a DLL that is invalid or that does not exist.
 
 Resolution
 
-In the `ApplicationHost.config` file or in the `Web.config` file, locate the module reference or the DLL reference that is invalid, and then fix the reference. To determine which module reference is incorrect, enable Failed Request Tracing, and then reproduce the problem.
+In the *ApplicationHost.config* file or in the *Web.config* file, locate the module reference or the DLL reference that is invalid, and then fix the reference. To determine which module reference is incorrect, enable Failed Request Tracing, and then reproduce the problem.
 
 ## HResult code 0x800700c1
 
@@ -185,7 +185,7 @@ The requested page cannot be accessed because the related configuration data for
 
 Cause
 
-The default process identity in IIS does not have sufficient permissions to open the `Web.config` file on a remote share.
+The default process identity in IIS does not have sufficient permissions to open the *Web.config* file on a remote share.
 
 ## HResult code 0x80070021
 

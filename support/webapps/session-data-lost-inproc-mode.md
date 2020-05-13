@@ -33,7 +33,7 @@ InProc session mode indicates that session state is stored locally. This means t
 To work around this problem, you can use StateServer or SqlServer session state mode. ASP.NET provides these other approaches for storing session state data. In the StateServer and SqlServer modes, your session state is not stored in the `AppDomain` of the Web application.
 
 > [!NOTE]
-> It is important to understand the behavior and the issues that are associated with each session state mode when you decide which mode is appropriate for your requirements. For more information, see the **References** section of this article.
+> It is important to understand the behavior and the issues that are associated with each session state mode when you decide which mode is appropriate for your requirements.
 
 ## Status
 

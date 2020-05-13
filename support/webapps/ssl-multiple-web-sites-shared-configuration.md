@@ -13,15 +13,15 @@ _Original KB number:_ &nbsp; 2548832
 
 ## Summary
 
-Consider the following scenario. You want to set up shared configuration for two IIS servers. For the purpose of this example, they are named *Server A* and *Server B*. You are going to have two different web sites, here named *Site1* and *Site2*. Both of these websites are going to use their own dedicated IP addresses as shown below:
+Assume that you want to set up shared configuration for two IIS servers. For the purpose of this example, they are named *Server A* and *Server B*. You are going to have two different web sites, here named *Site1* and *Site2*. Both of these websites are going to use their own dedicated IP addresses as shown below:
 
 *Server A* --> Site1 --> 10.10.10.1  
 *Server A* --> Site2 --> 10.10.10.2
 
-Server B --> Site1 --> 10.10.10.3  
-Server B --> Site2 --> 10.10.10.4  
+*Server B* --> Site1 --> 10.10.10.3  
+*Server B* --> Site2 --> 10.10.10.4  
 
-Now, you configure *Server A* & B for shared configuration, however you run into a unique situation when it comes to the web site bindings. Web site bindings configuration typically looks like the example below in an *applicationHost.config* file:
+Now, you configure *Server A* & *B* for shared configuration, however you run into a unique situation when it comes to the web site bindings. Web site bindings configuration typically looks like the example below in an *applicationHost.config* file:
 
 ```xml
 <site name="Site1" id="1">

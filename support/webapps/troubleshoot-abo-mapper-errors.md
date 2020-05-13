@@ -33,13 +33,13 @@ To help troubleshoot these problems, you can configure the computer that is runn
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\IISADMIN`
 
 3. Right-click **IISADMIN**, point to **New**, and then click **Key**.
-4. Type **Parameters** for the new key name, and then press Enter.
+4. Type parameters for the new key name, and then press Enter.
 5. Right-click **Parameters**, point to **New**, and then click **DWORD (32-bit) Value**.
-6. Type *EnableABOMapperLog* for the DWORD **Value name**, and then press Enter.
+6. Type *EnableABOMapperLog* for the DWORD Value name, and then press Enter.
 7. Right-click **EnableABOMapperLog**, and then click **Modify**.
 8. Set the **Value data** value to **1** to enable the log file. A value of **0** turns off ABOMapper logging.
 9. Close the registry.
-10. Click **Start**, type *Services*in the **Start Search** box, and then click **Services**.
+10. Click **Start**, type *Services* in the **Start Search** box, and then click **Services**.
 
     > [!NOTE]
     > If you are prompted for an administrator password or for confirmation, type the password or click **Continue**.

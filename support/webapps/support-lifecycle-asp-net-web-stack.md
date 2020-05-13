@@ -7,12 +7,12 @@ ms.reviewer: ericam
 ---
 # Support lifecycle for ASP.NET Web Stack
 
-This article describes the support lifecycle for ASP.NET Web Stack.
+This article describes the support lifecycle for ASP.NET web stack.
 
 _Original product version:_ &nbsp; ASP.NET MVC 3.0  
 _Original KB number:_ &nbsp; 2902020
 
-## Microsoft Support Lifecycle
+## Microsoft support lifecycle
 
 The [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle/?ln) website provides consistent and predictable guidelines about providing product support availability when a product is released and throughout the life of the product.
 
