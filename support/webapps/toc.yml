@@ -10,6 +10,8 @@
     href: cannot-create-object-asp-run.md
   - name: Set ASP locale ID per the browser's language
     href: set-asp-locale-id-browser-language.md
+  - name: Use Active Server Pages to create GUIDs
+    href: create-guids-asp.md
 
 - name: Deployment and Migration
   items:
@@ -40,6 +42,12 @@
     href: pre-compiled-wcf-workflow-activation-fails.md
   - name: Register assembly to use custom control
     href: register-assembly-webform-custom-control.md
+  - name: Response filtering and post-cache substitution not compatible
+    href: response-filterer-post-cache-not-compatible.md
+  - name: Session data is lost for InProc mode
+    href: session-data-lost-inproc-mode.md
+  - name: Support lifecycle for ASP.NET Web Stack
+    href: support-lifecycle-asp-net-web-stack.md
 
 - name: FTP Authentication and Authorization
   items:
@@ -71,26 +79,55 @@
     href: create-web-config-asp-dot-net.md
   - name: DebugDiag 1.2 Installation and Data Collector
     href: debugdiag-collected-information.md
+  - name: Hidden static files return HTTP 404 errors
+    href: hidden-static-files-http-404-access-denied.md
   - name: How to troubleshoot OutOfMemoryException
     href: outofmemoryexception-asp-net.md
   - name: HTTP Bad Request error in CLM portal
     href: clm-http-bad-request.md
   - name: HTTP error 403.16 when accessing a website
     href: http-403-forbidden-access-website.md
+  - name: HTTP Error 403.14 when you open a webpage
+    href: http-403-14-forbidden-iis-webpage.md
   - name: HTTP error 403.7 when you run web applications
     href: http-error-403-7-forbidden-web-app.md
+  - name: HTTP Error 403/404 when accessing FRx WebPort 
+    href: http-error-403-404-frx-webport.md
+  - name: HTTP Error 404.13 when visiting a website
+    href: http-404-13-iis-web-site.md
+  - name: HTTP Error 405.0 when you visit a website
+    href: http-error-405-iis-website.md
+  - name: HTTP Error 500.19 when you open a webpage
+    href: http-error-500-19-iis-webpage.md
+  - name: Http.sys registry settings for Windows
+    href: http.sys-registry-windows.md
+  - name: Time-taken field in IIS HTTP logging
+    href: time-taken-iis-http-log.md
+  - name: Troubleshoot ABO Mapper errors in IIS
+    href: troubleshoot-abo-mapper-errors.md
   - name: Windows Server AppFabric Cache diagnostic
     href: windows-server-appfabric-cache.md
+
+- name: IIS Extensions, Tools, and Add-Ons
+  items:
+  - name: Use X509CertificateValidator with WCF service
+    href: x509certificatevalidator-wcf-service-certificate.md
 
 - name: IISAdmin Service and Inetinfo Process Operation
   items:
   - name: Can't stop HTTP service
     href: http-service-fail-stopped.md
+  - name: Set multiple site bindings and SSL in shared configuration
+    href: ssl-multiple-web-sites-shared-configuration.md
 
 - name: Site Behavior and Performance
   items:
   - name: Async WCF service uses wrong impersonation
     href: asynchronous-wcf-service-use-wrong-impersonation.md
+  - name: Authorization for requests to default document fails
+    href: authorization-fails-default-documents.md
+  - name: Can't transfer control to Active Server Pages
+    href: error-executing-child-request.md
   - name: Error when calling MTS COM from ASP
     href: server-execution-fail-call-mts-com-asp.md
   - name: Event 115 when connecting HTTPS website 
@@ -122,8 +159,12 @@
     href: 0x80090016-change-application-pool-identity.md
   - name: HTTP 400 error when sending requests that need Kerberos
     href: http-bad-request-response-kerberos.md
+  - name: install and configure PHP on IIS 8 in Windows 8
+    href: install-configure-php-iis-8-windows-8.md
   - name: Read and analyze a client certificate
     href: analyze-client-certificate.md
+  - name: Re-enabling shared configuration causes IIS can't start
+    href: shared-configuration-iis-not-start.md
   - name: Restrict users from accessing to web resources
     href: restrict-users-access-web-resource.md
 
@@ -146,6 +187,8 @@
     href: add-remove-global-modules-iis.md
   - name: Disable the Save Embedded Files dialog
     href: disable-save-embedded-files-dialog.md
+  - name: Request Restrictions can't set for Wildcard ISAPI extension
+    href: request-restrictions-not-set-isapi.md
 
 - name: WWW Service and Svchost Operation
   items:
