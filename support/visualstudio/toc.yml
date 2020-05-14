@@ -6,10 +6,24 @@
 
 - name: C and C++ Libraries
   items:
+  - name: ATL service with _ATL_NO_COM_SUPPORT not starting
+    href: atl-service-not-start.md
+  - name: Call Run() method of Script control in C++
+    href: call-script-control-run-method-cpp.md
+  - name: Create string arrays in Visual C++
+    href: use-string-arrays-visual-cpp.md
+  - name: _CRTDBG_MAP_ALLOC macro doesn't work
+    href: crtdbg-map-alloc-macro-not-work.md
+  - name: FAQs about Standard C++ library
+    href: faq-standard-cpp-library.md
   - name: C++ Runtime packages for Desktop Bridge
     href: c-runtime-packages-desktop-bridge.md
   - name: Latest supported Visual C++ downloads
     href: latest-supported-visual-cpp-downloads.md
+  - name: Use priority_queue STL function in Visual C++
+    href: use-priority-queue-stl-function-cpp.md
+  - name: Use vector functions in Visual C++
+    href: vectorerase-vectorempty-vectorpush-back.md
 
 - name: General
   items:
@@ -19,14 +33,24 @@
     href: add-references-managed-cpp.md
   - name: Basic file I/O in Visual C#
     href: file-io-visual-c-sharp.md
+  - name: Cannot find resource in XAML or WPF designer
+    href: cannot-find-resource-named-error.md
   - name: Compute hash value by Visual C#
     href: compute-hash-values-visual-c-sharp.md
+  - name: Create a remote server by Visual C#
+    href: visual-csharp-create-remote-server.md
   - name: Creat File-Compare function in Visual C#
     href: create-file-compare-c-sharp.md
   - name: Creat smooth progress bar in Visual C#
     href: create-smooth-progress-bar.md
+  - name: Display hierarchical data by nested Repeater control
+    href: hierarchical-data-nested-repeater-control.md
+  - name: Examine CheckBox control values in a DataGrid column
+    href: checkbox-control-values-datagrid-vb.md
   - name: Expand a pointer in VC++ debugger Watch window
     href: expand-pointer-vc-debugger-watch.md
+  - name: Failed to download error for installation of JDK
+    href: failed-download-error-jdk-vs.md
   - name: How to compile code using C# compiler
     href: compile-code-c-sharp-compiler.md
   - name: Implement custom collections in Visual C#
@@ -57,19 +81,26 @@
     href: use-icomparable-icomparer-visual-c-sharp.md
   - name: VBScript type mismatch error
     href: vbs-type-mismatch-error.md
-  - name: Wait for a shelled app to finish by Visual C#
-    href: wait-shelled-app-finish-visual-csharp.md
+  - name: Visual Studio 2013 known issues
+    href: known-issues-visual-studio-2013.md
+  - name: Known issues when you install Release Management
+    href: issue-release-management-vs-2013.md
+
 
 - name: Installation
   items:
   - name: Issues and workarounds in VS 2012 setup
     href: issues-workarounds-vs-2012-setup.md
+  - name: Issues and workarounds in VS 2013 setup
+    href: issues-workarounds-vs-2013-setup.md
   - name: Minimum service pack levels for VC++ Redistributable
     href: minimum-service-pack-levels-cpp.md
   - name: Uninstall Visual Studio 2012
     href: uninstall-visual-studio-2012.md
   - name: Remove third-party applications deployed in VS2015 setup
     href: vs-secondary-installer-third-party-app.md
+  - name: Wait for a shelled app to finish by Visual C#
+    href: wait-shelled-app-finish-visual-csharp.md
 
 - name: Integrated Development Environment (IDE)
   items:
@@ -80,3 +111,16 @@
   items:
   - name: ASP.NET error CS0433
     href: cs0433-error-when-building-asp-net-project.md
+  - name: C2491 error when defining data members as dllimport
+    href: c2491-define-data-member-dllimport.md
+  - name: Linker warning when building managed extension
+    href: linker-warning-managed-extension-c-dll-project.md
+  - name: LNK1000 error when using /WHOLEARCHIVE switch
+    href: lnk1000-error-wholearchive-switch.md
+  - name: Unnested loops causes C1061 compiler error
+    href: unnested-loops-cause-c1061-error.md
+
+- name: Third Party Tools installed with Visual Studio
+  items:
+  - name: Third-party dependencies in VS 2015
+    href: third-party-dependencies-vs-2015.md
