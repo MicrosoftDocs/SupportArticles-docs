@@ -19,7 +19,7 @@ appliesto:
 
 ## Introduction
 
-This article contains information to help you troubleshoot issues that you could encounter when you use Cortana with Office 365.
+This article contains information to help you troubleshoot issues that you could encounter when you use Cortana.
 
 > [!NOTE]
 > This document refers primarily to our consumer experiences, which are currently delivered in Windows 10 (version 1909 and earlier) and the Cortana app on iOS and Android.
@@ -52,7 +52,7 @@ When you try to use Cortana with Office 365, you receive the following message:
 
 This error is most likely caused by a network connection failure or time-out.
 
-Wait 5 to 10 minutes, and then try to sign in again. 
+Wait 5 to 10 minutes, and then try to sign in again.
 
 ## Reference
 
