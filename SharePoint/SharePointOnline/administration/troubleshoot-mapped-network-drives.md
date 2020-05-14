@@ -28,14 +28,13 @@ appliesto:
 
 When you browse to a mapped network drive, you may receive an error message that resembles the following:
 
-```adoc
-\\Path is not accessible. You might not have permission to use this network resource. Contact the administrator of this server to find out if you have access permissions.
+   > \\\Path is not accessible. You might not have permission to use this network resource. Contact the administrator of this server to find out if you have access permissions.
+   > 
+   > Access Denied. Before opening files in this location, you must first add the web site to your trusted site list, browse to the web site, and select the option to login automatically'
 
-Access Denied. Before opening files in this location, you must first add the web site to your trusted site list, browse to the web site, and select the option to login automatically'
-```
 
 > [!NOTE]
-> For Internet Explorer 10 with Windows 8 or Windows 7, install the hotfix to resolve this problem. See the article [Error when you open a SharePoint Document Library in Windows Explorer or map a network drive to the library after you install Internet Explorer 10](https://support.microsoft.com/help/2846960).
+> For Internet Explorer 10 with Windows 8 or Windows 7, install the hotfix to resolve this problem. See the article [Error when you open a SharePoint Document Library in Windows Explorer or map a network drive to the library after you install Internet Explorer 10](https://support.microsoft.com/help/2846960) for more information.
 
 ### Authenticate to Office 365
 
