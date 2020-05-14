@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 4294477
 
 In Microsoft Internet Information Services (IIS), if FTP user isolation is configured at the site-level to **User name physical directory (enable global virtual directories)**, FTP authorization rules do not adhere to the physical path of the application and will not be inherited as per the folder structure.
 
-Assume that an IIS FTP site has user isolation set to **User name physical directory (enable global virtual directories)**, and in the FTP authorization feature, read permissions are granted to all users. A folder named *Upload*is created under `\FTP\Localuser\<user_name>\`, and read and write access is granted to all users through the FTP authorization feature in IIS for this *Upload* folder. Despite having write permissions to the *Upload* folder, when a user whose user name matches the *<user_name>* folder in the path tries to upload a file in the `Upload` folder, the user receives an **Access denied** error message.
+Assume that an IIS FTP site has user isolation set to **User name physical directory (enable global virtual directories)**, and in the FTP authorization feature, read permissions are granted to all users. A folder named *Upload* is created under `\FTP\Localuser\<user_name>\`, and read and write access is granted to all users through the FTP authorization feature in IIS for this *Upload* folder. Despite having write permissions to the *Upload* folder, when a user whose user name matches the *<user_name>* folder in the path tries to upload a file in the *Upload* folder, the user receives an **Access denied** error message.
 
 The output from trying to upload an FTP file through the command-line FTP utility that is included in Windows resembles the following:
 
@@ -40,7 +40,7 @@ This behavior is by design. The FTP user isolation **User name physical director
 
 To get the desired behavior, use another folder outside the user isolated folders, and then set the required FTP authorization rules on that folder. For FTP sites that use **User name physical directory (enable global virtual directories)** isolation, use the `FTP/Upload` path instead of `FTP/LocalUser/<user_name>/Upload` for setting the FTP authorization rules. The directory parser will ignore the part of the path for `FTP/LocalUser/<user_name>/Upload` because this is used for the isolation lookup. Therefore, the behavior will only work as expected when authorization rules are defined on paths outside the user isolated folders, such as the `FTP/Upload` example path. In this manner, authorization applies to the *Upload* folder for all users.
 
-The following is a sample authorization rule in the `ApplicationHost.config` file:
+The following is a sample authorization rule in the *ApplicationHost.config* file:
 
 ```xml
 <location path="FTP/Upload">

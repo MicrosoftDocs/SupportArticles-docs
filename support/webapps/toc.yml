@@ -31,13 +31,13 @@
   - name: Assign a private key to a new certificate
     href: assign-certificate-private-key.md
   - name: Can't write to event log from ASP.NET 
-    href: fail-write-event-log-asp-net
+    href: fail-write-event-log-asp-net.md
   - name: COM Objects called from ASP can't be printed
     href: asp-com-objects-fail-to-print.md
   - name: Cookies added by HttpModule are  not available
     href: cookie-unavailable-ihttpmodules-ihttphandler.md
   - name: Create cascading drop-down list in ASP.NET AJAX
-    href: build-cascading-drop-down-list-asp-net
+    href: build-cascading-drop-down-list-asp-net.md
   - name: Descriptions of ASP.NET inline expressions
     href: asp-net-inline-expressions.md
   - name: Duplicate events by child requests
@@ -53,13 +53,13 @@
   - name: Response filtering and post-cache substitution not compatible
     href: response-filterer-post-cache-not-compatible.md
   - name: Set current culture in ASP.NET
-    href: set-current-culture-asp-net
+    href: set-current-culture-asp-net.md
   - name: Session data is lost for InProc mode
     href: session-data-lost-inproc-mode.md
   - name: Support lifecycle for ASP.NET Web Stack
     href: support-lifecycle-asp-net-web-stack.md
   - name: Use app .resx to create a ASP.NET Web app
-    href: use-app-resx-create-asp-net-web-app
+    href: use-app-resx-create-asp-net-web-app.md
 
 - name: FTP Authentication and Authorization
   items:
@@ -72,7 +72,7 @@
   - name: Disable debugging for ASP.NET applications
     href: disable-debugging-asp-net-application.md
   - name: FTP authorization rules not inherited with user isolation setting
-    href: ftp-authorization-rules-not-inherited
+    href: ftp-authorization-rules-not-inherited.md
   - name: How to edit the Web.config file
     href: edit-web-config-asp-dot-net.md
   - name: Impersonation in ASP.NET application
@@ -121,7 +121,7 @@
   - name: Http.sys registry settings for Windows
     href: http.sys-registry-windows.md
   - name: IIS SSL Diagnostic tool for SDP
-    href: iis-ssl-diagnostic-tool-sdp
+    href: iis-ssl-diagnostic-tool-sdp.md
   - name: Time-taken field in IIS HTTP logging
     href: time-taken-iis-http-log.md
   - name: Troubleshoot ABO Mapper errors in IIS
@@ -141,7 +141,7 @@
   - name: Can't stop HTTP service
     href: http-service-fail-stopped.md
   - name: Disable documentation protocol for ASP.NET Web Services
-    href: disable-documentation-protocol-asp-net
+    href: disable-documentation-protocol-asp-net.md
   - name: Set multiple site bindings and SSL in shared configuration
     href: ssl-multiple-web-sites-shared-configuration.md
 
@@ -160,7 +160,7 @@
   - name: Error when using VM to host ASP.NET application
     href: system-security-securityexception.md
   - name: Exceptions cause ASP.NET apps to quit
-    href: exceptions-cause-asp-net-apps-quit
+    href: exceptions-cause-asp-net-apps-quit.md
   - name: Event 115 when connecting HTTPS website 
     href: event-115-connect-https-website.md
   - name: Event ID 1072 or 1076 on state servers
@@ -178,7 +178,7 @@
   - name: Internet Printing fails when files are larger than 29 MB
     href: internet-printing-fails-iis.md
   - name: ThreadAbortException when you use Server.Transfer
-    href: system-threading-threadabortexception
+    href: system-threading-threadabortexception.md
   - name: WCF REST service generates metadata in WSDL
     href: wcf-rest-generate-metadata-wsdl.md
 

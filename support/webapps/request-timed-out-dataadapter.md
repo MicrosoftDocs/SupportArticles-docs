@@ -19,7 +19,7 @@ When you use the `DataAdapter.Fill` method, or you run a query in an ASP.NET Web
 
 > HttpException (0x80004005): Request timed out.
 
-This error occurs only when you run the Web application in release mode, and the value of the `Debug` attribute in the `Web.Config` file is set to **false**.
+This error occurs only when you run the Web application in release mode, and the value of the `Debug` attribute in the *web.config* file is set to **false**.
 
 ## Cause
 
@@ -29,11 +29,11 @@ By default, the value of the `executionTimeout` attribute is set to 90 seconds i
 
 To work around this problem, increase the time-out value that is set for the `executionTimeout` attribute in the configuration file.
 
-The `executionTimeout` attribute exists under `<httpRequest>` in the `Machine.config` file. You can change these settings either in the `Web.Config` file or in the `Machine.config` file. The default value for the time-out is 90 seconds. The `executionTimeout` attribute indicates the maximum number of seconds a request is permitted to run before being shut down by the ASP.NET Web application.
+The `executionTimeout` attribute exists under `<httpRequest>` in the *Machine.config* file. You can change these settings either in the *web.config* file or in the *Machine.config* file. The default value for the time-out is 90 seconds. The `executionTimeout` attribute indicates the maximum number of seconds a request is permitted to run before being shut down by the ASP.NET Web application.
 
 ### Method 1: Set the ExecutionTimeout attribute value in the Web.config file
 
-1. Open the `Web.config` file in Notepad.
+1. Open the *web.config* file in Notepad.
 2. Add the `<httpRuntime>` element in the `<system.web>` section as follows:
 
     ```xml
@@ -46,12 +46,12 @@ The `executionTimeout` attribute exists under `<httpRequest>` in the `Machine.co
     ```
 
 3. Modify the value of the `executionTimeout` attribute to avoid time-out errors.
-4. Save the `Web.config` file.
+4. Save the *web.config* file.
 
 ### Method 2: Set the ExecutionTimeout attribute value in the Machine.config file
 
-1. Open the `Machine.config` file in Notepad. The `Machine.config` file is located in the `%SystemRoot%\Microsoft.NET\Framework\%VersionNumber%\CONFIG\` directory.
-2. In the `Machine.config` file, locate the `<httpRuntime>` element. The `Web.config` file is located in the Web Application directory.
+1. Open the *Machine.config* file in Notepad. The *Machine.config* file is located in the `%SystemRoot%\Microsoft.NET\Framework\%VersionNumber%\CONFIG\` directory.
+2. In the *Machine.config* file, locate the `<httpRuntime>` element. The *web.config* file is located in the Web Application directory.
 
     ```xml
     <httpRuntime executionTimeout="90" maxRequestLength="4096" useFullyQualifiedRedirectUrl="false"
@@ -59,7 +59,7 @@ The `executionTimeout` attribute exists under `<httpRequest>` in the `Machine.co
     ```
 
 3. Modify the value of the `executionTimeout` attribute to avoid time-out errors.
-4. Save the `Machine.config` file.
+4. Save the *Machine.config* file.
 
 ## Status
 
@@ -77,18 +77,6 @@ This behavior is by design.
     Imports System.Data.SqlClient
     Public Class WebForm1
        Inherits System.Web.UI.Page
-
-    #Region " Web Form Designer Generated Code "
-       'The Web Form Designer requires this call.
-       <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
-       End Sub
-
-       Private Sub Page_Init(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Init
-          'CODEGEN: The Web Form Designer requires this method call
-          'Do not modify it using the code editor.
-          InitializeComponent()
-       End Sub
-    #End Region
 
        Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
           Try
@@ -122,7 +110,7 @@ This behavior is by design.
     End Class
     ```
 
-6. Open the `Web.config` file in Notepad, and then set the value for the `Debug` attribute to **false** as follows:
+6. Open the *web.config* file in Notepad, and then set the value for the `Debug` attribute to **false** as follows:
 
     ```xml
     <configuration>
@@ -142,7 +130,7 @@ This behavior is by design.
 8. On the **Debug** menu, click **Start** to build and run the project. You may receive the error message that the [Symptoms](#symptoms) section describes.
 
 > [!NOTE]
-> The default value for the time-out as set in the `Machine.config` file is 90 seconds. If the process time is less than 90 seconds, increase the processing time by increasing the number of records to be fetched.
+> The default value for the time-out as set in the *Machine.config* file is 90 seconds. If the process time is less than 90 seconds, increase the processing time by increasing the number of records to be fetched.
 
 ## References
 

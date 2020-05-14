@@ -40,7 +40,7 @@ The following steps outline the sequence of events when a client makes a request
 1. A client requests an .aspx page that resides on an IIS server.
 2. The client's credentials are passed to IIS.
 3. IIS authenticates the client and forwards the authenticated token along with the client's request to the ASP.NET worker process.
-4. Based on the authenticated token from IIS and the configuration settings for the web application, ASP.NET decides whether to impersonate a user on the thread that is processing the request. In a distinct difference between Microsoft Active Server Pages (ASP) and ASP.NET, ASP.NET no longer impersonates the authenticated user by default. To enable impersonation, you must set the impersonate attribute of the identity section in the `Web.config` file to true.
+4. Based on the authenticated token from IIS and the configuration settings for the web application, ASP.NET decides whether to impersonate a user on the thread that is processing the request. In a distinct difference between Microsoft Active Server Pages (ASP) and ASP.NET, ASP.NET no longer impersonates the authenticated user by default. To enable impersonation, you must set the impersonate attribute of the identity section in the *Web.config* file to true.
 
 For more information about the security flow, see [ASP.NET Data Flow](/previous-versions/dotnet/netframework-1.1/xa68twcb(v=vs.71)).
 
@@ -48,7 +48,7 @@ For more information about impersonating in ASP.NET, see [How to implement imper
 
 ## Related configuration settings
 
-IIS maintains security-related configuration settings in the IIS metabase. However, ASP.NET maintains security (and other) configuration settings in Extensible Markup Language (XML) configuration files. Although this generally simplifies the deployment of your application from a security standpoint, the security model that your application adopts necessitates the correct configuration of both the IIS metabase and your ASP.NET application through its configuration file (`Web.config`).
+IIS maintains security-related configuration settings in the IIS metabase. However, ASP.NET maintains security (and other) configuration settings in Extensible Markup Language (XML) configuration files. Although this generally simplifies the deployment of your application from a security standpoint, the security model that your application adopts necessitates the correct configuration of both the IIS metabase and your ASP.NET application through its configuration file (*Web.config*).
 
 The following configuration sections are related to ASP.NET security:
 

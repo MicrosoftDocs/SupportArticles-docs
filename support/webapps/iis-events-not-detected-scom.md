@@ -10,7 +10,7 @@ ms.reviewer: dougste
 
 This article provides information about resolving the issue that certain Internet Information Services (IIS) events are not detected by the IIS Management Pack.
 
-_Original product version:_ &nbsp; Internet Information Services 7.0, Internet Information Services 7.5  
+_Original product version:_ &nbsp; Internet Information Services 7.5, 7.0  
 _Original KB number:_ &nbsp; 2635429
 
 ## Symptoms

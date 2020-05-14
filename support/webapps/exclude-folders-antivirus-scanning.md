@@ -22,15 +22,15 @@ ASP.NET uses the `ReadDirectoryChangesW` Win32 function to monitor directories a
 
 2. The `bin`, `App_Code`, `App_WebReferences`, `App_GlobalResources`, and `App_Browsers` subdirectories of the application root folder are monitored for creation, deletion, renaming, ACL changes, changes to the last-write time, and changes to the size. If any of these things change, the `AppDomain` is unloaded.
 
-3. The `machine.config` and root `web.config` files are monitored for changes. A change to either of these files will unload the `AppDomain`.
+3. The `machine.config` and root *web.config* files are monitored for changes. A change to either of these files will unload the `AppDomain`.
 
-4. The `web.config` file of parent applications is monitored. A change to this file will unload the `AppDomain`.
+4. The *web.config* file of parent applications is monitored. A change to this file will unload the `AppDomain`.
 
-5. The `web.config` file in the application root is monitored. A change to this file will unload the `AppDomain`.
+5. The *web.config* file in the application root is monitored. A change to this file will unload the `AppDomain`.
 
 6. The `hash.web` file that's located in the hash subdirectory of the Temporary ASP.NET Files folder is monitored. This monitoring was added to support development scenarios in which both the `ClientBuildManager` and the runtime `BuildManager` are updating the application files. Because there are two build managers, there was a need to keep them in sync, and the `hash.web` file is used for that purpose.
 
-7. The `web.config` file in any subdirectory of the application is monitored. A change to this file will unload the `AppDomain`.
+7. The *web.config* file in any subdirectory of the application is monitored. A change to this file will unload the `AppDomain`.
 
 8. The `App_LocalResources` subdirectory of each virtual subdirectory is monitored for creation, deletion, renaming, ACL changes, changes to the last-write time, and changes to the size. If any of these things change, the `AppDomain` is unloaded.
 

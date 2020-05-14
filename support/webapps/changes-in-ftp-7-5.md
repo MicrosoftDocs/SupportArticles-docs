@@ -23,7 +23,7 @@ The establishing and disconnecting of the FTP data connection is processed in th
 
 ## IisFtp.vbs isn't supported with FTP 7.5
 
-Beginning in FTP 7.5, the `IisFtp.vbs` script is no longer supported and is not included as part of the FTP 7.5 installation package. Therefore some functionality that was possible using `IisFtp.vbs` requires different action to be taken starting in FTP 7.5. For example, the `IIsFtp.vbs /setadprop` command available in Internet Information Services (IIS) 6.0 to create an FTP site in Active Directory isolation Mode cannot be used in FTP 7.5. Instead, use ADSI Editor to set the `msIIS-FTPRoot` and `msIIS-FTPDir` properties to point to the home directories in Active Directory Isolation Mode.
+Beginning in FTP 7.5, the *IisFtp.vbs* script is no longer supported and is not included as part of the FTP 7.5 installation package. Therefore some functionality that was possible using *IisFtp.vbs* requires different action to be taken starting in FTP 7.5. For example, the `IIsFtp.vbs /setadprop` command available in Internet Information Services (IIS) 6.0 to create an FTP site in Active Directory isolation Mode cannot be used in FTP 7.5. Instead, use ADSI Editor to set the `msIIS-FTPRoot` and `msIIS-FTPDir` properties to point to the home directories in Active Directory Isolation Mode.
 
 ADSI Editor is a Lightweight Directory Access Protocol (LDAP) editor that you can use to manage objects and attributes in Active Directory. This is installed on Windows Server 2008 domain controllers by default and will have to be manually installed on member servers.
 
@@ -37,7 +37,7 @@ To create and configure the FTP sites to be isolated, see [FTP Active Directory 
 
 When you configure the file servers, you must create the shares and user directories for all the users who are permitted to connect to the FTP service, including the user configured to impersonate anonymous users. Before you complete this step, consider factors such as expected disk space usage, storage management, and network traffic.
 
-To configure Active Directory, you can use ADSI Editor instead of `IisFtp.vbs`. To configure an FTP 7.5 site in Active Directory Isolation Mode, take the following steps:
+To configure Active Directory, you can use ADSI Editor instead of *IisFtp.vbs*. To configure an FTP 7.5 site in Active Directory Isolation Mode, take the following steps:
 
 1. Click **Start**, click **Run**, and enter **adsiedit.msc** to run ADSI Editor.
 2. If necessary, connect to the FTP server's domain. By default, it connects to the domain that the domain controller belongs to.

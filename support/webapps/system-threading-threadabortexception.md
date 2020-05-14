@@ -136,7 +136,6 @@ This behavior is by design.
        Protected WithEvents Label1 As System.Web.UI.WebControls.Label
        Protected WithEvents HyperLink1 As System.Web.UI.WebControls.HyperLink
 
-       #Region " Web Form Designer Generated Code "
        'Web Form Designer requires this call.
        <System.Diagnostics.DebuggerStepThrough()>
        Private Sub InitializeComponent()
@@ -147,7 +146,6 @@ This behavior is by design.
           'Do not modify it by using the code editor.
           InitializeComponent()
        End Sub
-       #End Region
 
        Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
           'Put user code to initialize the page here
@@ -285,7 +283,7 @@ This behavior is by design.
     ```
 
 11. On the **Debug** menu, click **Start**, and then click the following hyperlink on *WebForm1.aspx*:  
-    **http://localhost/ServerTransferTest/test.ashx**
+    `http://localhost/ServerTransferTest/test.ashx`
 
 ## References
 

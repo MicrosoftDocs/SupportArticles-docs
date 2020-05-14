@@ -103,4 +103,4 @@ The following log entry shows that the parent request finishes:
 
 For more information about how to call the `ExecuteRequest` method to execute the child request, see [IHttpContext::ExecuteRequest Method](/iis/web-development-reference/native-code-api-reference/ihttpcontext-executerequest-method).
 
-In this sample code, the parent request is /default.aspx, and the child request is /example/default.aspx.
+In this sample code, the parent request is `/default.aspx`, and the child request is `/example/default.aspx`.

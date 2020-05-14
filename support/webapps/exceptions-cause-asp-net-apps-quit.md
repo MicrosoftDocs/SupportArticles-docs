@@ -29,7 +29,7 @@ In the Microsoft .NET Framework 1.1 and in the Microsoft .NET Framework 1.0, unh
 
 ASP.NET uses the default policy for unhandled exceptions in the .NET Framework 2.0 and later versions. When an unhandled exception is thrown, the ASP.NET-based application unexpectedly quits.
 
-This behavior doesn't apply to exceptions that occur in the context of a request. These kinds of exceptions are still handled and wrapped by an `HttpException` object. Exceptions that occur in the context of a request don't cause the worker process to end. However, unhandled exceptions outside the context of a request, such as exceptions on a timer thread or in a `callback` function, cause the worker process to end.
+This behavior doesn't apply to exceptions that occur in the context of a request. These kinds of exceptions are still handled and wrapped by an `HttpException` object. Exceptions that occur in the context of a request don't cause the worker process to end. However, unhandled exceptions outside the context of a request, such as exceptions on a timer thread or in a callback function, cause the worker process to end.
 
 ## Resolution 1
 
@@ -115,7 +115,7 @@ To modify the `IHttpModule` object, follow these steps.
             {
             }
 
-             void OnUnhandledException(object o, UnhandledExceptionEventArgs e)
+            void OnUnhandledException(object o, UnhandledExceptionEventArgs e)
             {
                 // Let this occur one time for each AppDomain.
                 if (Interlocked.Exchange(ref _unhandledExceptionCount, 1) != 0)
@@ -156,7 +156,7 @@ To modify the `IHttpModule` object, follow these steps.
 6. Type `gacutil.exe /if UnhandledExceptionModule.dll`, and then press **ENTER**.
 7. Type `ngen install UnhandledExceptionModule.dll`, and then press **ENTER**.
 8. Type `gacutil /l UnhandledExceptionModule`, and then press **ENTER** to display the strong name for the *UnhandledExceptionModule* file.
-9. Add the following code to the `Web.config` file of your ASP.NET-based application.
+9. Add the following code to the *Web.config* file of your ASP.NET-based application.
 
     ```xml
     <add name="UnhandledExceptionModule"
@@ -170,7 +170,7 @@ Change the unhandled exception policy back to the default behavior that occurs i
 > [!NOTE]
 > We do not recommend that you change the default behavior. If you ignore exceptions, the application may leak resources and abandon locks.
 
-To enable this default behavior, add the following code to the `Aspnet.config` file that is located in the following folder:  
+To enable this default behavior, add the following code to the *Aspnet.config* file that is located in the following folder:  
 `%WINDIR%\Microsoft.NET\Framework\v2.0.50727`
 
 ```xml

@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 976156
 > [!NOTE]
 > You must have the Microsoft .NET Framework 3.5 installed to use the ASP.NET AJAX features. If you want to incorporate ASP.NET AJAX features in the .NET Framework 2.0, you must have ASP.NET 2.0 AJAX Extensions 1.0 installed.
 
-A cascading drop-down list is a series of dependent `DropDownList` controls in which one `DropDownList` control depends on the parent or previous `DropDownList` controls. The items in the `DropDownList` control are populated based on an item that is selected by the user from another `DropDownList` control. When the selection of a parent `DropDownList` control changes, the web page calls the AJAX Web service to retrieve the list of values for the child `DropDownList` control. The ASP.NET AJAX framework enables you to call Web services (.asmx files) from the browser by using client scripts. So when you call the Web service in the client-side onchange event of the parent `DropDownList` control, the Web page will be only partly refreshed to populate the items for the child `DropDownList` control.
+A cascading drop-down list is a series of dependent `DropDownList` controls in which one `DropDownList` control depends on the parent or previous `DropDownList` controls. The items in the `DropDownList` control are populated based on an item that is selected by the user from another `DropDownList` control. When the selection of a parent `DropDownList` control changes, the web page calls the AJAX Web service to retrieve the list of values for the child `DropDownList` control. The ASP.NET AJAX framework enables you to call Web services (.asmx files) from the browser by using client scripts. So when you call the Web service in the client-side `onchange` event of the parent `DropDownList` control, the Web page will be only partly refreshed to populate the items for the child `DropDownList` control.
 
 > [!NOTE]
 > The ASP.NET AJAX Control Toolkit provides a `CascadingDropDown` control as an ASP.NET AJAX extender. You can use the `CascadingDropDown` control to create a cascading drop-down list. This article discusses how to use the standard `DropDownList` control in ASP.NET together with the ASP.NET AJAX framework to achieve the cascading drop-down function.
@@ -39,7 +39,7 @@ A cascading drop-down list is a series of dependent `DropDownList` controls in w
     Visual Basic
 
     ```vb
-    <System.Web.Script.Services.ScriptService()> _
+    <System.Web.Script.Services.ScriptService()>
     Public Class WebService
     ```
 
@@ -333,7 +333,7 @@ A cascading drop-down list is a series of dependent `DropDownList` controls in w
     </script>
     ```
 
-    Calling a Web service method from a script is asynchronous. To obtain a return value or to determine when the request has returned, you must provide a succeeded callback function. The `callback` function is invoked when the request has finished successfully, and it contains the return value from the Web Service Method call. You can also provide a failed `callback` function to handle errors. Additionally, you can pass user context information to use in the `callback` functions.
+    Calling a Web service method from a script is asynchronous. To obtain a return value or to determine when the request has returned, you must provide a succeeded callback function. The callback function is invoked when the request has finished successfully, and it contains the return value from the Web Service Method call. You can also provide a failed callback function to handle errors. Additionally, you can pass user context information to use in the callback functions.
 
     You can call a Web Service method in an AJAX Web service in the following format:
 
@@ -341,7 +341,7 @@ A cascading drop-down list is a series of dependent `DropDownList` controls in w
     theServiceNameSpace.WebServiceName.ServiceMethodName(parameters, SucceededCallbackFunctionName, FailedCallbackFunctionName, userContextString);
     ```
 
-    You can provide a single succeeded `callback` function that is invoked from multiple Web service method calls. To enable the function to differentiate different callers, you can pass the user context information to the function in the parameter.
+    You can provide a single succeeded callback function that is invoked from multiple Web service method calls. To enable the function to differentiate different callers, you can pass the user context information to the function in the parameter.
 
 9. Build the project.
 

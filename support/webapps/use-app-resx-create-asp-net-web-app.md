@@ -72,7 +72,7 @@ To generate the resource files automatically, follow these steps:
 2. On the **Tools** menu, click **Generate Local Resources**.
 
     > [!NOTE]
-    > By default, a new folder that is named *App_LocalResources* is created. Additionally, a resource file that is named *Default.aspx.resx* is created. This file contains information about each `Label` control on the page. The values in the resource file match the values that you entered for each Label control in Design view.
+    > By default, a new folder that is named *App_LocalResources* is created. Additionally, a resource file that is named *Default.aspx.resx* is created. This file contains information about each Label control on the page. The values in the resource file match the values that you entered for each Label control in Design view.
 
 3. In Solution Explorer, right-click the *Default.aspx.resx* file, and then click **Copy**.
 

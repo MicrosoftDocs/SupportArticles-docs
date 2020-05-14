@@ -15,19 +15,19 @@ _Original KB number:_ &nbsp; 320268
 
 When you use a virtual directory that points to a remote share to host a Microsoft ASP.NET-based application, you may receive an error message that is similar to one of the following examples:
 
-Message 1
+- Message 1
 
-> Security Exception Description: The application attempted to perform an operation not allowed by the security policy. To grant this application the required permission please contact your system administrator or change the application's trust level in the configuration file.  
-> Exception Details: System.Security.SecurityException: Security error.  
-> Source Error:  
-> Line 30: private static bool __intialized = false; Line 31: Line 32: public Global_asax() { Line 33: if ((ASP.Global_asax.__intialized == false)) { Line 34: ASP.Global_asax.__intialized = true;
+    > Security Exception Description: The application attempted to perform an operation not allowed by the security policy. To grant this application the required permission please contact your system administrator or change the application's trust level in the configuration file.  
+    > Exception Details: System.Security.SecurityException: Security error.  
+    > Source Error:  
+    > Line 30: private static bool __intialized = false; Line 31: Line 32: public Global_asax() { Line 33: if ((ASP.Global_asax.__intialized == false)) { Line 34: ASP.Global_asax.__intialized = true;
 
-Message 2
+- Message 2
 
-> Server Error in /ApplicationName Application.  
-> Parser Error Description: An error occurred during the parsing of a resource required to service this request. Please review the following specific parse error details and modify your source file appropriately.  
-> Parser Error Message: Could not load type ApplicationName.Global.  
-> Source Error: Line 1: <%@ Application Codebehind="Global.asax.cs" Inherits="ApplicationName.Global" %> Source File: Path of Application\global.asax Line: 1
+    > Server Error in /ApplicationName Application.  
+    > Parser Error Description: An error occurred during the parsing of a resource required to service this request. Please review the following specific parse error details and modify your source file appropriately.  
+    > Parser Error Message: Could not load type ApplicationName.Global.  
+    > Source Error: Line 1: <%@ Application Codebehind="Global.asax.cs" Inherits="ApplicationName.Global" %> Source File: Path of Application\global.asax Line: 1
 
 ## Cause
 
@@ -72,13 +72,13 @@ This behavior is by design.
 
 ## More information
 
-In this configuration, the account under which the ASP.NET worker process runs must have sufficient rights to the remote share. You can set the account under which the worker process runs by using the `<processmodel>` tag in the `Machine.config` file.
+In this configuration, the account under which the ASP.NET worker process runs must have sufficient rights to the remote share. You can set the account under which the worker process runs by using the `<processmodel>` tag in the *Machine.config* file.
 
 ### Steps to reproduce the behavior
 
 1. Create a new virtual directory that points to a remote share.
 2. Create an application for the virtual directory. Make sure that the user who connects to the share has read access to the remote content.
-3. In the `<processmodel>` tag of the `Machine.config` file, change the user to a domain user who has list, read, and execute permissions on the remote share.
+3. In the `<processmodel>` tag of the *Machine.config* file, change the user to a domain user who has list, read, and execute permissions on the remote share.
 4. Create an inline .aspx file, and then put the file in the remote share.
 5. Make a request for the page.
 

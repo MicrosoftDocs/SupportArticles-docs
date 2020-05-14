@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 2005172
 
 ## Symptoms
 
-A web application is created using Microsoft Visual Studio and then published to IIS 7.5 or a later version. As part of the application's request processing, it needs to write data to the *App_Data* folder on the server. For example, the application uses a `SQLDataSource` or `XMLDataSource`. When it attempts to do so, an error message similar to the following is displayed:
+A web application is created using Microsoft Visual Studio and then published to Internet Information Services (IIS) 7.5 or a later version. As part of the application's request processing, it needs to write data to the *App_Data* folder on the server. For example, the application uses a `SQLDataSource` or `XMLDataSource`. When it attempts to do so, an error message similar to the following is displayed:
 
 > Exception Details: System.UnauthorizedAccessException: Access to the path [path to App_Data folder] is denied.
 

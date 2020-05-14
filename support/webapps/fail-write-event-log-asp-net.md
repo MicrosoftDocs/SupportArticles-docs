@@ -9,7 +9,7 @@ ms.reviewer: Isha
 
 This article provides information about resolving an issue that an unexpected error may be thrown when you write to the Windows event log from an ASP.NET or application service provider (ASP) application.
 
-_Original product version:_ &nbsp; Internet Information Services 8.0 and later versions
+_Original product version:_ &nbsp; Internet Information Services 8.0 and later versions  
 _Original KB number:_ &nbsp; 2028427
 
 ## Symptoms

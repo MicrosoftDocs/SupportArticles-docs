@@ -27,12 +27,12 @@ This information can be useful to developers, especially developers who create c
 
 To disable the documentation web services protocol for an ASP.NET application, follow these steps:
 
-1. Open the `Web.config`file from the web application's root directory in a text editor (for example, Notepad). If the `Web.config`file doesn't exist, create a `Web.config`file for the ASP.NET Application.
-2. Add the `<webServices>` configuration element to the `system.web` element in the `Web.config`file.
+1. Open the *web.config* file from the web application's root directory in a text editor (for example, Notepad). If the *web.config* file doesn't exist, create a *web.config* file for the ASP.NET Application.
+2. Add the `<webServices>` configuration element to the `system.web` element in the *web.config* file.
 3. In the `<webServices>` element, add the `<protocols>` configuration element.
-4. In the `<protocols>` element, add the `remove name="Documentation"/` element.
+4. In the `<protocols>` element, add the `remove name="Documentation"` element.
 
-    The following example shows the `<webServices>` configuration element added to a `Web.config`file to disable the automatic generation of browser-friendly documentation:
+    The following example shows the `<webServices>` configuration element added to a *web.config* file to disable the automatic generation of browser-friendly documentation:
 
     ```xml
     <webServices>
@@ -42,7 +42,7 @@ To disable the documentation web services protocol for an ASP.NET application, f
     </webServices>
     ```
 
-5. Save the `Web.config`file.
+5. Save the *web.config* file.
 
 ## References
 

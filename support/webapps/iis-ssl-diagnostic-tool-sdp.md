@@ -115,9 +115,9 @@ The IIS SSL Diagnostic tool for Support Diagnostic Platform (SDP) is designed to
 
 If the user selects to collect an IIS ETW Log, the diagnostic will enable IIS ETW Trace named *IIS ETW SDP Trace*. The diagnostic will automatically stop this trace when the user is clicks **next** while the trace is running. If the user clicks **Cancel**, they should stop the trace with the following command from an Administrative command prompt:
 
-    ```console
-    logman.exe stop "IIS ETW SDP Trace" -ets
-    ```
+```console
+logman.exe stop "IIS ETW SDP Trace" -ets
+```
 
 In addition to the collected information that is listed in these tables, this troubleshooter can detect one or more of the following situations:
 

@@ -18,7 +18,7 @@ In the .NET Framework, the `CultureInfo` class from the `System.Globalization` n
 
 ## Application level
 
-Specify application level culture information in the `Web.config` file:
+Specify application level culture information in the *web.config* file:
 
 1. Start Notepad (or any other text editor).
 2. Paste the following code in Notepad:
@@ -34,7 +34,7 @@ Specify application level culture information in the `Web.config` file:
     </configuration>
     ```
 
-3. Save the text file as `Web.config` in the root folder of your Web server. For example, `C:\Inetpub\wwwroot\Web.config`.
+3. Save the text file as *web.config* in the root folder of your Web server. For example, `C:\Inetpub\wwwroot\Web.config`.
 4. Start another instance of Notepad. Paste the following code in Notepad:
 
     ```aspx-csharp
@@ -45,9 +45,9 @@ Specify application level culture information in the `Web.config` file:
         </head>
         <script runat=server>
             public void Page_Load()
-    {
-        Response.Write ("Current Culture is " + CultureInfo.CurrentCulture.EnglishName);
-    }
+            {
+                Response.Write ("Current Culture is " + CultureInfo.CurrentCulture.EnglishName);
+            }
         </script>
         <body>
         </body>
@@ -61,7 +61,7 @@ Specify application level culture information in the `Web.config` file:
 
 The page level culture-specific information settings override the application level culture-specific information settings. Specify page level culture information by using the `<@Page>` directive:
 
-1. Follow steps 1, 2, and 3 of the [Application level](#application-level) section to create the `Web.config` file.
+1. Follow steps 1, 2, and 3 of the [Application level](#application-level) section to create the *web.config* file.
 2. Start another instance of Notepad. Paste the following code in Notepad:
 
     ```aspx-csharp
@@ -72,9 +72,9 @@ The page level culture-specific information settings override the application le
         </head>
             <script runat=server>
             public void Page_Load()
-    {
-        Response.Write ("Current Culture is " + CultureInfo.CurrentCulture.EnglishName);
-    }
+            {
+                Response.Write ("Current Culture is " + CultureInfo.CurrentCulture.EnglishName);
+            }
             </script>
         <body>
         </body>
@@ -84,13 +84,13 @@ The page level culture-specific information settings override the application le
 3. Save this text file as *Page.aspx* in the root folder of your Web server.
 4. Start Internet Explorer, and then open *Page.aspx*.
     > [!NOTE]
-    > The Current Culture setting is French, although Japanese is specified as the current culture in the `Web.config` file.
+    > The Current Culture setting is French, although Japanese is specified as the current culture in the *web.config* file.
 
 ## Thread level
 
 The thread level culture-specific information settings override the page level culture-specific information settings. Specify the thread level culture-specific information by setting the `CurrentCulture` property or the `CurrentUICulture` property of the current thread:
 
-1. Follow the steps 1, 2, and 3 of the [Application level](#application-level) section to create the `Web.config` file.
+1. Follow the steps 1, 2, and 3 of the [Application level](#application-level) section to create the *web.config* file.
 2. Start another instance of Notepad. Paste the following code in Notepad:
 
     ```csharp
@@ -102,10 +102,10 @@ The thread level culture-specific information settings override the page level c
         </head>
             <script runat=server>
             public void Page_Load()
-            {// Display the Current Culture
+            {    // Display the Current Culture
                 Response.Write("Current Culture is " + Thread.CurrentThread.CurrentCulture.EnglishName + "<br>");
 
-            // Modify the Current Culture
+                // Modify the Current Culture
                 Thread.CurrentThread.CurrentCulture = new CultureInfo("de-DE");
                 Response.Write("Changing Culture to " + Thread.CurrentThread.CurrentCulture.EnglishName + "<br>");
             }
@@ -119,7 +119,7 @@ The thread level culture-specific information settings override the page level c
 4. Start Internet Explorer, and then open *Thread.aspx*.
 
     > [!NOTE]
-    > The current culture setting is German, although French is specified at the page level and Japanese is specified in the `Web.config` file.
+    > The current culture setting is German, although French is specified at the page level and Japanese is specified in the *web.config* file.
 
 ## References
 
