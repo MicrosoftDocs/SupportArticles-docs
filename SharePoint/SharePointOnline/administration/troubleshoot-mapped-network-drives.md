@@ -26,10 +26,10 @@ appliesto:
 
 ## Troubleshoot mapped network drive error messages
 
-When you browse to a mapped network drive, you may receive an error message that resembles the following:
+When you browse to a mapped network drive, you may receive one of the following error messages:
 
    > \\\Path is not accessible. You might not have permission to use this network resource. Contact the administrator of this server to find out if you have access permissions.
-   > 
+   
    > Access Denied. Before opening files in this location, you must first add the web site to your trusted site list, browse to the web site, and select the option to login automatically'
 
 
