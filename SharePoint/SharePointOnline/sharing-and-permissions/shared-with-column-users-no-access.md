@@ -33,6 +33,6 @@ To avoid this issue, [hide the **Shared with** column](https://support.microsoft
 
 ## More information
 
-This is a known issue. The **Shared with** column may display any accounts with whom the document was previously shared before automatic updating of this column was disabled. However, the contents of the column will not be automatically added to, nor cleaned up, in future versions of the software.
+This is a known issue. The **Shared with** column may display any accounts with whom the document was previously shared before automatic updating of this column was disabled. However, the contents of the column will not be automatically added to nor cleaned up in future versions of the software.
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).
