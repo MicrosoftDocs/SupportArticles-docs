@@ -129,8 +129,6 @@
       href: ../move-mailboxes/cannot-see-free-busy-information.md
   - name: Outlook Connectivity
     items:
-    - name: Outlook clients use TLS 1.0/1.1
-      href: ../outlook-connectivity/outlook-uses-tls-1.0-1.1.md
     - name: Resources to fix connection issues
       href: ../outlook-connectivity/office-365-troubleshooting-resources.md
     - name: Sending and receiving email
