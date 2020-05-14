@@ -16,6 +16,8 @@
     href: crtdbg-map-alloc-macro-not-work.md
   - name: FAQs about Standard C++ library
     href: faq-standard-cpp-library.md
+  - name: C++ Runtime packages for Desktop Bridge
+    href: c-runtime-packages-desktop-bridge.md
   - name: Latest supported Visual C++ downloads
     href: latest-supported-visual-cpp-downloads.md
   - name: Use priority_queue STL function in Visual C++
@@ -37,32 +39,73 @@
     href: compute-hash-values-visual-c-sharp.md
   - name: Create a remote server by Visual C#
     href: visual-csharp-create-remote-server.md
+  - name: Creat File-Compare function in Visual C#
+    href: create-file-compare-c-sharp.md
+  - name: Creat smooth progress bar in Visual C#
+    href: create-smooth-progress-bar.md
   - name: Display hierarchical data by nested Repeater control
     href: hierarchical-data-nested-repeater-control.md
   - name: Examine CheckBox control values in a DataGrid column
     href: checkbox-control-values-datagrid-vb.md
+  - name: Expand a pointer in VC++ debugger Watch window
+    href: expand-pointer-vc-debugger-watch.md
   - name: Failed to download error for installation of JDK
     href: failed-download-error-jdk-vs.md
+  - name: How to compile code using C# compiler
+    href: compile-code-c-sharp-compiler.md
   - name: Implement custom collections in Visual C#
     href: implement-custom-collection-c-sharp.md
-  - name: Known issues when you install Release Management
-    href: issue-release-management-vs-2013.md
+  - name: Improve string concatenation performance
+    href: string-concatenation-visual-c-sharp.md
+  - name: Install assembly into GAC in Visual C#
+    href: install-assembly-gac-c-sharp.md
+  - name: Make a class in a foreach statement
+    href: make-class-foreach-statement.md
+  - name: Make UserControl act as control container
+    href: usercontrol-act-control-container-design-time.md
+  - name: Query excel data with an ASP.NET page
+    href: query-excel-data-asp-net-page.md
+  - name: Read XML data from a URL using Visual C#
+    href: read-xml-data-from-url-visual-c-sharp.md
   - name: Race conditions and deadlocks
     href: race-conditions-deadlocks.md
+  - name: Read and write a text file by Visual C#
+    href: read-write-text-file-visual-c-sharp.md
+  - name: Serialize an object to XML with Visual C#
+    href: serialize-object-xml-visual-c-sharp.md
   - name: Sort ListView by columns in Visual C#
     href: sort-listview-by-column-c-sharp.md
+  - name: Use AssemblyVersion and AssemblyFileVersion
+    href: assembly-version-assembly-file-version.md
+  - name: Use IComparable and IComparer in Visual C#
+    href: use-icomparable-icomparer-visual-c-sharp.md
   - name: VBScript type mismatch error
     href: vbs-type-mismatch-error.md
   - name: Visual Studio 2013 known issues
     href: known-issues-visual-studio-2013.md
+  - name: Known issues when you install Release Management
+    href: issue-release-management-vs-2013.md
 
 
 - name: Installation
   items:
+  - name: Issues and workarounds in VS 2012 setup
+    href: issues-workarounds-vs-2012-setup.md
   - name: Issues and workarounds in VS 2013 setup
     href: issues-workarounds-vs-2013-setup.md
+  - name: Minimum service pack levels for VC++ Redistributable
+    href: minimum-service-pack-levels-cpp.md
+  - name: Uninstall Visual Studio 2012
+    href: uninstall-visual-studio-2012.md
   - name: Remove third-party applications deployed in VS2015 setup
     href: vs-secondary-installer-third-party-app.md
+  - name: Wait for a shelled app to finish by Visual C#
+    href: wait-shelled-app-finish-visual-csharp.md
+
+- name: Integrated Development Environment (IDE)
+  items:
+  - name: Performance and crashes issues in Visual Studio
+    href: performance-crash-issue-vs.md
 
 - name: Language or Compilers
   items:

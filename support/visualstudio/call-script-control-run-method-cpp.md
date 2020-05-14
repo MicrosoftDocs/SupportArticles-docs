@@ -18,7 +18,6 @@ The Script control has four methods. One of them is `Run()`, which runs a subrou
 ## Sample code
 
 ```cpp
-//---------------------- Begin ---------------------------
 #include <stdio.h>
 #import "C:\winnt\system32\msscript.ocx" // msscript.ocx
 using namespace MSScriptControl;
@@ -76,7 +75,6 @@ int main(void)
     CoUninitialize();
     return(0);
 }
-// --------------- End -----------------------
 ```
 
 ## References
