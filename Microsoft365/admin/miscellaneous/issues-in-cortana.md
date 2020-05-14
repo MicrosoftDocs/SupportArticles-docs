@@ -28,11 +28,9 @@ This article contains information to help you troubleshoot issues that you could
 
 **Issue: "Cortana is disabled by company policy" message when you try to enable Cortana from a device that's joined to Azure Active Directory (Azure AD)**
 
- When you try to enable Cortana after you sign in to a device that's joined to Azure AD by using a work or school account, you receive the following error message:
+When you try to enable Cortana after you sign in to a device that's joined to Azure AD by using a work or school account, you receive the following error message:
 
-```adoc
-Cortana is disabled by company policy  
-```
+- Cortana is disabled by company policy
 
 To enable Cortana from a device that's joined to Azure AD, the Windows 10 November update must be installed.
 
@@ -40,9 +38,7 @@ To enable Cortana from a device that's joined to Azure AD, the Windows 10 Novemb
 
 You receive the following error message:
 
-```adoc
-Your Office 365 settings prevent you from using Cortana. Contact your support person for more information
-```
+- Your Office 365 settings prevent you from using Cortana. Contact your support person for more information
 
 This issue occurs if Cortana was disabled for your organization.
 
@@ -52,9 +48,7 @@ To resolve this issue, Office 365 administrators can turn on Cortana in the Micr
 
 When you try to use Cortana with Office 365, you receive the following message:
 
-```adoc
-I wasn't able to contact Office 365, but it might work if you try again later
-```
+- I wasn't able to contact Office 365, but it might work if you try again later.
 
 This error is most likely caused by a network connection failure or time-out.
 
