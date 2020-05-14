@@ -27,16 +27,15 @@ Here are some situations when you might want an MFC application to display diffe
 
 Here are three ways an application can change the mouse pointer in a window:
 
-- Override the `CWnd::OnSetCursor()` function. Call Windows API `SetCursor()` function to change the pointer.
-- Register your own window class with the desired mouse pointer, override the `CWnd::PreCreateWindow()` function, and use the newly registered window class to create the window.
-- To show the standard hourglass pointer, an application can call the `CCmdTarget::BeginWaitCursor()`, which displays the hourglass, and call `CmdTarget::EndWaitCursor()` to revert back to the default pointer. This scheme works only for the duration of a single message. If the mouse is moved before a call to `EndWaitCursor` is made, Windows sends a `WM_SETCURSOR` message to the window underneath the pointer. The default handling of this message resets the pointer to the default type, the one registered with the class, so you need to override `CWnd::OnSetCursor()` for that window, and reset the pointer back to the hourglass.
+- Method 1: override the `CWnd::OnSetCursor()` function. Call Windows API `SetCursor()` function to change the pointer.
+- Method 2: register your own window class with the desired mouse pointer, override the `CWnd::PreCreateWindow()` function, and use the newly registered window class to create the window.
+- Method 3: to show the standard hourglass pointer, an application can call the `CCmdTarget::BeginWaitCursor()`, which displays the hourglass, and call `CmdTarget::EndWaitCursor()` to revert back to the default pointer. This scheme works only for the duration of a single message. If the mouse is moved before a call to `EndWaitCursor` is made, Windows sends a `WM_SETCURSOR` message to the window underneath the pointer. The default handling of this message resets the pointer to the default type, the one registered with the class, so you need to override `CWnd::OnSetCursor()` for that window, and reset the pointer back to the hourglass.
 
-
-The following code shows by example how to change the mouse pointer of a `CView` derived class window by using the three methods.
+The following code samples show by example how to change the mouse pointer of a `CView` derived class window by using the three methods.
 
 `m_ChangeCursor` is a member variable of `CMyView` class and is of type `BOOL`. It indicates whether a different pointer type needs to be displayed.
 
-## Code to illustrate the method 1
+## Code for the method 1
 
 Change the mouse pointer for the `CMyView` object by overriding `CWnd::OnSetCursor()` function. Use the Class Wizard to establish the message map function `CMyView::OnSetCursor()` for Windows message `WM_SETCURSOR` and supply the body of the function as follows:
 
@@ -52,7 +51,7 @@ BOOL CMyView::OnSetCursor(CWnd *pWnd, UINT nHitTest, UINT message)
 }
 ```
 
-## Code to illustrate the method 2
+## Code for the method 2
 
 Register your own window class containing the desired mouse pointer by using either the `AfxRegisterClass()` or `AfxRegisterWndClass()` function. Then create the view window based on the registered window class. For more information on registering window classes in MFC, see **Window Class Registration** in MFC Tech Note 1.
 
@@ -67,7 +66,7 @@ BOOL CMyView::PreCreateWindow(CREATESTRUCT &cs)
 }
 ```
 
-## Code to illustrate the method 3
+## Code for the method 3
 
 Call the `BeginWaitCursor()` and `EndWaitCursor()` functions to change the mouse pointer.
 
@@ -83,8 +82,7 @@ void CMyView::PerformLengthyOperation()
 }
 ```
 
-> [!NOTE]
-> If calls to `BeginWaitCursor()` and `EndWaitCursor()` are not in the same handler, you must override `OnSetCursor` as follows:
+If calls to `BeginWaitCursor()` and `EndWaitCursor()` are not in the same handler, you must override `OnSetCursor` as follows:
 
 ```cpp
 BOOL CMyView::OnSetCursor(CWnd *pWnd, UINT nHitTest, UINT message)

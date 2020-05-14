@@ -23,9 +23,7 @@ This article assumes that you are familiar with the following topics:
 - Visual C# programming
 - Visual Studio .NET Integrated Development Environment (IDE) or Visual Studio IDE
 
-This article refers to the following Microsoft .NET Framework Class Library namespaces:
-
-- `System.Threading`
+This article refers to the Microsoft .NET Framework Class Library namespace `System.Threading`.
 
 ## Create a Visual C# application with threads
 
@@ -40,7 +38,7 @@ This article refers to the following Microsoft .NET Framework Class Library name
     using System.Threading;
     ```
 
-7. Add the following `Click` event handler for Button1:
+7. Add the following `button1_Click` event handler for Button1:
 
     ```cs
     private void button1_Click(object sender, System.EventArgs e)
@@ -81,7 +79,7 @@ This article refers to the following Microsoft .NET Framework Class Library name
     > [!NOTE]
     > This is the code that underlies the thread. This code is an infinite loop that randomly increments or decrements the value in ProgressBar1, and then waits 100 milliseconds before it continues.
 
-10. Add the following `Load` event handler for Form1. This code creates a new thread, makes the thread a background thread, and then starts the thread.
+10. Add the following `Form1_Load` event handler for Form1. This code creates a new thread, makes the thread a background thread, and then starts the thread.
 
     ```cs
     private void Form1_Load(object sender, System.EventArgs e)

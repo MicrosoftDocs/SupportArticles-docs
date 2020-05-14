@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 2846829
 On a Tablet PC running Windows, the system will send a
 [WM_TABLET_QUERYSYSTEMGESTURESTATUS](/windows/win32/tablet/wm-tablet-querysystemgesturestatus-message) message to active windows that could receive user input. In an MFC application, all windows are typically derived from the `CWnd` class, and this base class handles this message in its `OnTabletQuerySystemGestureStatus` method. This method calls the virtual function `CWnd::GetGestureStatus`, which will then return `TABLET_DISABLE_PRESSANDHOLD`, for performance reasons. If your application wants to enable the press-and-hold gesture, you must override this method in your derived window class and return something that doesn't include the `TABLET_DISABLE_PRESSANDHOLD` flag.
 
-## Default behavior: disable press and hold gesture
+## Default behavior: Disable press and hold gesture
 
 To enable the right-click concept that usually means *display the context menu*, and comes in the form of `WM_RBUTTONDOWN`, `WM_RBUTTONUP`, and `WM_CONTEXTMENU` messages and `ISG_HOLDENTER` and `ISG_RIGHTTAP` events, the press and hold gesture must be enabled for that window. In order to detect this gesture, by necessity some delay is introduced to distinguish between a simple press (treated as a left-click) and a press and hold (right-click). Thus, it will take longer for left click events to be raised, and the application will seem less responsive. So, for this reason, the default behavior is to disable the press and hold gesture.
 
@@ -38,4 +38,4 @@ ULONG CMyView::GetGestureStatus(CPoint /*ptTouch*/)
 }
 ```
 
-The return value 0 could be replaced by a combination of other flags as described in the [WM_TABLET_QUERYSYSTEMGESTURESTATUS](/windows/win32/tablet/wm-tablet-querysystemgesturestatus-message) documentation, but if you wish to enable press and hold, don't include the `TABLET_DISABLE_PRESSANDHOLD` flag.
+The return value `0` could be replaced by a combination of other flags as described in the [WM_TABLET_QUERYSYSTEMGESTURESTATUS](/windows/win32/tablet/wm-tablet-querysystemgesturestatus-message) documentation, but if you wish to enable press and hold, don't include the `TABLET_DISABLE_PRESSANDHOLD` flag.

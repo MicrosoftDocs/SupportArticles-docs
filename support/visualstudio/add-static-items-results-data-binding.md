@@ -24,18 +24,18 @@ The following list outlines the recommended hardware, software, network infrastr
 
 This article refers to the following Microsoft .NET Framework Class Library namespace `System.Data.SqlClient`.
 
-## Use Visual C# to create an ASP.NET Web application
+## Use Visual C# to create an ASP.NET web application
 
-To create a new ASP.NET Web application that is named *DDLSample*, follow these steps:
+To create a new ASP.NET web application that is named *DDLSample*, follow these steps:
 
 1. Open Microsoft Visual Studio .NET.
 2. On the **File** menu, point to **New**, and then click **Project**.
 3. In the **New Project** dialog box, click **Visual C# Projects** under **Project Types**, and then click **ASP.NET Web Application** under **Templates**.
-4. In the **Location** box, replace *WebApplication1* in the default URL with *DDLSample*. If you are using the local server, you can leave the server name as <http://localhost> so that the **Location** box displays <http://localhost/DDLSample.>
+4. In the **Location** box, replace *WebApplication1* in the default URL with *DDLSample*. If you are using the local server, you can leave the server name as `http://localhost` so that the **Location** box displays `http://localhost/DDLSample`.
 
 ## Create the sample
 
-In the following steps, you create an .aspx page that contains a DropDownList control. The DropDownList control is data bound to columns of the Authors table from the SQL Server *Pubs* database.
+In the following steps, you create an .aspx page that contains a DropDownList control. The DropDownList control is data bound to columns of the `Authors` table from the SQL Server *Pubs* database.
 
 1. To add a Web Form to the project, follow these steps:
 

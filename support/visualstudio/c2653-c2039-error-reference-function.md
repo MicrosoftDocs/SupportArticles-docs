@@ -5,7 +5,7 @@ ms.date: 04/22/2020
 ms.prod-support-area-path:
 ms.reviewer: v-ingor
 ---
-# You receive a C2653 or C2039 error message when you try to reference a function from the STD C++ library
+# You receive a C2653 or C2039 error when you try to reference a function from the STD C++ library
 
 This article provides the information about solving the C2653 or C2039 error that occurs when you reference a function from the STD C++ library.
 
@@ -14,17 +14,17 @@ _Original KB number:_ &nbsp; 243444
 
 ## Symptoms
 
-Attempting to reference a function from the STD C++ library header `<cstdlib>` using the namespace `STD` (for example, `std::exit(0)`) causes the compiler to emit a C2653 or a C2039 (depending upon whether or not namespace `STD` is defined at the point where the error is emitted) error message.
+Attempting to reference a function from the STD C++ library header `<cstdlib>` using the namespace `std` (for example, `std::exit(0)`) causes the compiler to emit a C2653 or a C2039 (depending upon whether or not namespace `std` is defined at the point where the error is emitted) error message.
 
 ## Cause
 
-`<cstdlib>` does not define the namespace `STD`. This is contrary to the Visual C++ documentation, which says:
+`<cstdlib>` does not define the namespace `std`. This is contrary to the Visual C++ documentation, which says:
 
 Include the standard header `<cstdlib>` to effectively include the standard header `<stdlib.h>` within the `std` namespace.
 
 ## Resolution
 
-To work around the problem, place the `#include <cstdlib>` in the namespace `STD`.
+To work around the problem, place the `#include <cstdlib>` in the namespace `std`.
 
 ## More information
 
@@ -57,7 +57,7 @@ void main()
 }
 ```
 
-In the first case, the C2653 is displayed, because the namespace `STD` has not been defined. In the second case, the C2039 is displayed, because the namespace `STD` has been defined (in the header `<vector>`), but the function `exit` is not part of that namespace. To work around the problem in either case, simply enclose the `#include <cstdlib>` in the namespace `STD`, as follows:
+In the first case, the C2653 is displayed, because the namespace `std` has not been defined. In the second case, the C2039 is displayed, because the namespace `std` has been defined (in the header `<vector>`), but the function `exit` is not part of that namespace. To work around the problem in either case, simply enclose the `#include <cstdlib>` in the namespace `std`, as follows:
 
 ```cpp
 // Compile Options: /GX

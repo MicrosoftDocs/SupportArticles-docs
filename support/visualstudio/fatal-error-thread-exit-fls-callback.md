@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 2754614
 
 A C++ DLL statically linked to C Run-time Library (CRT) may cause a fatal error at thread exit if the DLL load or unload sequence is interrupted by an unhandled exception.  
 
-A process may crash at thread exit with an Access Violation exception (0xC0000005, EXCEPTION_ACCESS_VIOLATION) if it had dynamically loaded (such as by calling [LoadLibrary()](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya)) a native C++ DLL that was statically linked with C Runtime, and the DLL generated an unhandled exception during its initialization or shutdown.
+A process may crash at thread exit with an Access Violation exception (0xC0000005, EXCEPTION_ACCESS_VIOLATION) if it had dynamically loaded (such as by calling [LoadLibraryA()](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya)) a native C++ DLL that was statically linked with C Runtime, and the DLL generated an unhandled exception during its initialization or shutdown.
 
 During the CRT startup or shutdown (such as during `DLL_PROCESS_ATTACH` or `DLL_PROCESS_DETACH` in `DllMain()`, or in the constructor or destructor of a global/static C++ object), if the DLL generates a fatal error that is unhandled, the `LoadLibrary` call just swallows the exception and returns with **NULL**. When the DLL load or unload fails, some error codes you may observe include:
 
@@ -35,7 +35,7 @@ TestExe!doexit+0x12a TestExe!exit+0x11 TestExe!__tmainCRTStartup+0x11c
 kernel32!BaseThreadInitThunk+0xe ntdll!__RtlUserThreadStart+0x70 ntdll!_RtlUserThreadStart+0x1b
 ```
 
-This behavior can be reproduced with the following snippet of code on Visual Studio:
+This behavior can be reproduced with the following snippet of code in Visual Studio:
 
 ```cpp
 //TestDll.dll: Make sure to use STATIC CRT to compile this DLL (i.e., /MT or /MTd)
@@ -82,9 +82,9 @@ Because the C Runtime is statically linked in the DLL, its FLS callback is imple
 A change has been made in the VC++ 11.0 CRT (in VS 2012) to better address FLS callback cleanup on unhandled exceptions during DLL startup. So, for DLLs whose source code is accessible and hence could be recompiled, the following options can be tried:
 
 1. Compile the DLL with the latest VC11 CRT (for example, build the DLL with VS2012 RTM).
-2. Use the *CRT DLL*, rather than static linking to C Runtime while compiling your DLL; use /MD or /MDd instead of /MT or /MTd.
+2. Use the CRT DLL, rather than static linking to C Runtime while compiling your DLL; use **/MD** or **/MDd** instead of **/MT** or **/MTd**.
 3. If possible, correct the cause of the unhandled exception, remove the exception-prone piece of code from `DllMain`, and/or handle the exception properly.
-4. Implement a custom DLL entry point function, wrapping up CRT's initialization and code to unregister the CRT's FLS callback if an exception occurs during DLL startup. This exception handling around the entry point can cause a problem when /GS (buffer security checks) is used in a debug build. If you choose this option, exclude the exception handling (using `#if` or `#ifdef`) from debug builds. For DLLs that can't be rebuilt, there is currently no way to correct this behavior.
+4. Implement a custom DLL entry point function, wrapping up CRT's initialization and code to unregister the CRT's FLS callback if an exception occurs during DLL startup. This exception handling around the entry point can cause a problem when **/GS** (buffer security checks) is used in a debug build. If you choose this option, exclude the exception handling (using `#if` or `#ifdef`) from debug builds. For DLLs that can't be rebuilt, there is currently no way to correct this behavior.
 
 ## More information
 

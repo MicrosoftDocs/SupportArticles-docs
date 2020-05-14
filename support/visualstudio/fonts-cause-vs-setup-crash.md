@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 2978135
 
 This issue may occur because there are issues with certain fonts on your system, such as invalid characters in the font path or invalid file timestamps. You can use this information in this article to determine whether you're hitting this problem and resolve the problem as needed.
 
-## Diagnosis to determine whether fonts on your system are causing this crash
+## Diagnose whether fonts are causing this crash
 
 To do this, you have to open the Visual Studio setup log file and look for a particular exception near the end of the log. You can find the setup log file in your `%TEMP%` directory. The Visual Studio setup log file is typically one of the latest log files in your `%TEMP%` directory. The name of the Visual Studio setup log file has the following pattern:  
 dd_<**EXE name** >_<**Time stamp** >.log
@@ -54,7 +54,7 @@ To work around this problem, check whether there are invalid characters in your 
 ### Check for invalid file timestamps in the fonts
 
 1. Open a command prompt, and then locate the `%WINDIR%\Font` directory:
-2. List the fonts in this directory by using the `DIR` command:
+2. List the fonts in this directory by using the `DIR` command.
 3. Look for any invalid timestamps, such as *01/02/20145* for font <**Bad font** >.TTF.
 4. If there are invalid timestamps, correct them. To do this, follow these steps:
     1. Open an elevated PowerShell window, and then input the following command in order to fix the font with the invalid time stamp, substituting your font file name for <**Bad font**>.TTF:

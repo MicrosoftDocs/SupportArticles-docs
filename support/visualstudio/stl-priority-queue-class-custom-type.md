@@ -6,14 +6,14 @@ ms.prod-support-area-path:
 ---
 # How to use the STL PRIORITY_QUEUE class with a custom type
 
-This article describes how to define a Standard Template Library (STL) priority_queue template container adaptor class that uses custom (user-defined) data types.
+This article describes how to define a Standard Template Library (STL) `priority_queue` template container adaptor class that uses custom (user-defined) data types.
 
 _Original product version:_ &nbsp; Visual C++  
 _Original KB number:_ &nbsp; 837697
 
 ## Summary
 
-This article describes how to use the STL priority_queue template container adaptor class with custom (user-defined) data types such as structures and classes. This article also describes how to order the priority_queue class members by overloading the left angle bracket (<) or the right angle bracket (>) comparison operators. This article also describes how to declare the priority_queue container class variables that contain the custom (user-defined) data members and how to access these variables in your program. The information in this article applies only to unmanaged Visual C++ code.
+This article describes how to use the STL `priority_queue` template container adaptor class with custom (user-defined) data types such as structures and classes. This article also describes how to order the `priority_queue` class members by overloading the left angle bracket (<) or the right angle bracket (>) comparison operators. This article also describes how to declare the `priority_queue` container class variables that contain the custom (user-defined) data members and how to access these variables in your program. The information in this article applies only to unmanaged Visual C++ code.
 
 ## Requirements
 
@@ -27,7 +27,8 @@ To use the `priority_queue` class with the custom (user-defined) data types, you
 
 ```cpp
 //Define a custom data type.
-class Student {
+class Student
+{
 public:
 char* chName;
 int nAge;
@@ -64,7 +65,7 @@ The prototype of the `priority_queue` template class is as follows:
 template <
   class Type,
   class Container=vector<Type>,
-  class Compare=less<typename Container::value_type> 
+  class Compare=less<typename Container::value_type>
 >
 class priority_queue
 ```
@@ -86,7 +87,8 @@ pqStudent1.push( Student( "Andy", 13 ));
 pqStudent1.push( Student( "Newt", 44 ));
 
 //Display container elements.
-while ( !pqStudent1.empty()) {
+while ( !pqStudent1.empty())
+{
   cout << pqStudent1.top().chName << endl;
   pqStudent1.pop();
 }
@@ -110,7 +112,8 @@ while ( !pqStudent1.empty()) {
 using namespace System;
 
 //Define a custom data type.
-class Student {
+class Student
+{
 public:
 char* chName;
 int nAge;
@@ -172,7 +175,7 @@ int _tmain()
 }
 ```
 
-You must add the common language runtime support compiler option (`/clr:oldSyntax`) in Visual C++ to successfully compile the previous code sample. To add the common language runtime support compiler option in Visual C++, follow these steps:
+You must add the common language runtime support compiler option (**/clr:oldSyntax**) in Visual C++ to successfully compile the previous code sample. To add the common language runtime support compiler option in Visual C++, follow these steps:
 
 1. Click **Project**, and then click **\<ProjectName> Properties**.
 

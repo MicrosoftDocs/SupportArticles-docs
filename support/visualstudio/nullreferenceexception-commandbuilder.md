@@ -20,16 +20,10 @@ If you use the `CommandBuilder` object to explicitly get commands for the `DataA
 da.InsertCommand = cb.GetInsertCommand
 ```
 
-and then run the following Visual Basic .NET code:
+Then, run the following Visual Basic .NET code:
 
 ```vb
 cb.DataAdapter = Nothing
-```
-
-or the following Visual C# .NET code:
-
-```csharp
-cb.DataAdapter = null;
 ```
 
 The commands that you add to the `DataAdapter` are deleted, and you receive the following error message:
@@ -39,7 +33,7 @@ The commands that you add to the `DataAdapter` are deleted, and you receive the 
 
 ## Cause
 
-`CommandBuilder` deletes the commands that it generates when it is disassociated from a `DataAdapter`. `CommandBuilder` and `DataAdapter` are linked; when they are unlinked or disassociated, the commands are nulled. This problem does not affect commands that you build from the beginning (from scratch).
+`CommandBuilder` deletes the commands that it generates when it is disassociated from a `DataAdapter.CommandBuilder` and `DataAdapter` are linked; when they are unlinked or disassociated, the commands are nulled. This problem does not affect commands that you build from the beginning.
 
 ## Resolution
 

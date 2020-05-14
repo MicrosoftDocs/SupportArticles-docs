@@ -19,7 +19,7 @@ The `SqlDataAdapter` object serves as a bridge between an ADO.NET `DataSet` obje
 - Populate an ADO.NET `DataSet` with data retrieved from a SQL Server database.
 - Update the database to reflect the changes (inserts, updates, deletes) made to the data by using the `DataSet`.This article provides Visual C++ .NET code samples to demonstrate how the `SqlDataAdapter` object can be used to update a SQL Server database with data modifications executed on a `DataSet` object that is populated with data from a table in the database.
 
-This article refers to the following Microsoft .NET Framework Class Library namespace `System::Data::SqlClient`.
+This article refers to the Microsoft .NET Framework Class Library namespace `System::Data::SqlClient`.
 
 ## SqlDataAdapter object and properties
 
@@ -70,9 +70,9 @@ To create a sample Visual C++ .NET console application that demonstrates how to 
     using namespace System::Data::SqlClient;
 
     #ifdef _UNICODE
-    int wmain(void)
+        int wmain(void)
     #else
-    int main(void)
+        int main(void)
     #endif
     {
         SqlConnection *cn = new SqlConnection();

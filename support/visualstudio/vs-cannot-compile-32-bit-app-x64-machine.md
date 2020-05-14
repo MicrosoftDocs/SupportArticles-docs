@@ -7,6 +7,8 @@ ms.reviewer: prabhatt, scotbren
 ---
 # MSBuild 4.0 or Visual Studio 2010 may fail to compile a 32-bit application targeted for .NET Framework 3.5, 3.0 or 2.0 on x64 machine
 
+This article provides information about resolving the issue that MSBuild 4.0 or Visual Studio 2010 can't compile a 32-bit application that's targeted for .NET Framework 3.5, 3.0 or 2.0 on x64 machine.
+
 _Original product version:_ &nbsp; Visual Studio 2010  
 _Original KB number:_ &nbsp; 2028833
 
@@ -20,12 +22,9 @@ You may get the following error:
 
 The diagnostic build-log shows that task *GenerateResource* fails.
 
-Resgen.exe referenced:  
-`<system_drive>:\Program Files (x86)\Microsoft SDKs\Windows\vx.x\bin\ResGen.exe`
-
 ## Cause
 
-Resgen.exe, which is a part of Windows SDK, is marked as MSIL, so it will run as a 64-bit process. It will try to load a 32-bit assembly and fail.
+Resgen.exe in `<system_drive>:\Program Files (x86)\Microsoft SDKs\Windows\vx.x\bin`, which is a part of Windows SDK, is marked as MSIL, so it will run as a 64-bit process. It will try to load a 32-bit assembly and fail.
 
 ## Resolution
 
@@ -47,4 +46,4 @@ In order to work around this issue, you need to perform the following steps:
 
 If you want to build a .resx file that references a 64-bit assembly targeting v3.5, v3.0 or v2.0, you may have to reverse this workaround before doing so.
 
-[CorFlagsCorFlags.exe (CorFlags Conversion Tool)](/dotnet/framework/tools/corflags-exe-corflags-conversion-tool)
+[CorFlagsCorFlags.exe (CorFlags Conversion Tool)](/dotnet/framework/tools/corflags-exe-corflags-conversion-tool) may help you.

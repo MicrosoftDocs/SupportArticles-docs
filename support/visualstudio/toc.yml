@@ -16,7 +16,7 @@
     href: use-string-arrays-visual-cpp.md
   - name: _CRTDBG_MAP_ALLOC macro doesn't work
     href: crtdbg-map-alloc-macro-not-work.md
-  - name: Display different pointers for a windows in MFC
+  - name: Display different pointers for a window in MFC
     href: change-mouse-pointer-window-mfc.md
   - name: Enable Tablet press-and-hold gesture in MFC
     href: mfc-enable-tablet-press-and-hold-gesture.md
@@ -155,11 +155,11 @@
     href: linker-warning-managed-extension-c-dll-project.md
   - name: LNK1000 error when using /WHOLEARCHIVE switch
     href: lnk1000-error-wholearchive-switch.md
-  - name: Unnested loops causes C1061 compiler error
+  - name: Unnested loops cause C1061 compiler error
     href: unnested-loops-cause-c1061-error.md
   - name: VS2010 fails to compile 32-bit app on x64 machine
     href: vs-cannot-compile-32-bit-app-x64-machine.md
-  - name: The referenced project not exist when builing a solution
+  - name: The referenced projects not exist when building a solution
     href: vs-2010-build-fails.md
 
 - name: Third Party Tools installed with Visual Studio

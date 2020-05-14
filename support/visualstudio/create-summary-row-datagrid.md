@@ -5,16 +5,16 @@ ms.date: 04/22/2020
 ms.prod-support-area-path:
 ms.reviewer: anandh
 ---
-# How to create a summary row for a DataGrid by Using Visual C# in ASP.NET
+# How to create a summary row for a DataGrid by using Visual C# in ASP.NET
 
-This article describes how to create a summary row for a DataGrid control in ASP.NET.
+This article describes how to create a summary row for a DataGrid control by using Visual C# in ASP.NET.
 
 _Original product version:_ &nbsp; Visual C#  
 _Original KB number:_ &nbsp; 326339
 
 ## Summary
 
-In this article, you create a Visual C# .NET project, add code to access the **Sales Totals by Amount** view from the *Northwind* database, and then bind the **Sales Totals by Amount** view to the DataGrid. This sample uses the `ItemDataBound` event of the DataGrid to total the **SaleAmount** field when you bind the data to the DataGrid. This sample also uses the footer of the DataGrid to display the summary or the totals.
+In this article, you create a Visual C# .NET project, add code to access the **Sales Totals by Amount** view from the *Northwind* database, and then bind the **Sales Totals by Amount** view to the DataGrid. This sample uses the `ItemDataBound` event of the DataGrid to total the `SaleAmount` field when you bind the data to the DataGrid. This sample also uses the footer of the DataGrid to display the summary or the totals.
 
 For a Microsoft Visual Basic .NET version of this article, see [How to create a summary row for a DataGrid in ASP.NET by using Visual Basic .NET](https://support.microsoft.com/help/313154).
 
@@ -28,10 +28,10 @@ The following list outlines the recommended hardware, software, network infrastr
 - Microsoft .NET Framework
 - Microsoft Visual Studio .NET
 - Microsoft Internet Information Services (IIS)
-- Microsoft SQL Server 7.0 or later and the Northwind database
+- Microsoft SQL Server 7.0 or later and the *Northwind* database
 
 > [!NOTE]
-> The Northwind database is included with Microsoft SQL Server 7.0 and later.
+> The *Northwind* database is included with Microsoft SQL Server 7.0 and later.
 
 ## Create a Visual C# .NET project and add the DataGrid
 
@@ -44,9 +44,9 @@ In this section, you create a Visual C# .NET project, select a format for the Da
 2. On the **File** menu, point to **New**, and then click **Project**.
 3. In the **New Project** dialog box, click **Visual C# Projects** under **Project Types**, and then click **ASP.NET Web Application** under **Templates**.
 
-4. In the **New Project** dialog box, notice that the **Name** box is unavailable (it appears dimmed). The **Location** box contains the text (or similar) <http://localhost/WebApplication1>.
+4. In the **New Project** dialog box, notice that the **Name** box is unavailable (it appears dimmed). The **Location** box contains the text (or similar) `http://localhost/WebApplication1`.
 
-   Change the location to <http://localhost/SummaryRow>, and then click **OK**. A new project is created, which includes a Web Form that is named *WebForm1.aspx*.
+   Change the location to `http://localhost/SummaryRow`, and then click **OK**. A new project is created, which includes a Web Form that is named *WebForm1.aspx*.
 
 5. In Solution Explorer, double-click *WebForm1.aspx*.
 6. Drag a DataGrid control from the toolbox to the form.
@@ -55,7 +55,7 @@ In this section, you create a Visual C# .NET project, select a format for the Da
 
 ## Write code to access the database
 
-In this section, you use the **Sales Totals by Amount** view that is located in the *Northwind* database to calculate the summary for the **SaleAmount** field. The **Sales Totals by Amount** view includes the **Orders**, the **CompanyName**, and the **SaleAmount** fields.
+In this section, you use the **Sales Totals by Amount** view that is located in the *Northwind* database to calculate the summary for the `SaleAmount` field. The **Sales Totals by Amount** view includes the `Orders`, the `CompanyName`, and the `SaleAmount` fields.
 
 1. In the Visual Studio .NET IDE, right-click the Web Form, and then click **View Code**.
 2. In the code-behind window, add the following code to the top of the page:
@@ -101,10 +101,10 @@ In this section, you use the **Sales Totals by Amount** view that is located in 
 
 The `ItemDataBound` event is raised after an item is data bound to the DataGrid control. This event gives you with the last opportunity to access the data item before it appears on the client. After this event is raised, the data item is null and is no longer available.
 
-For each item that is data bound, you must check the **ItemType** property. If **ItemType** is of type **Item** or **AlternatingItem**, you receive the value from the last cell of the item, which contains the **SaleAmount** value. In this sample, you add this value to the running summary variable. When the **ItemType** is **Footer**, you receive the total from all of the rows. Therefore, you assign the value of the summary variable to the text value of the last cell.
+For each item that is data bound, you must check the `ItemType` property. If `ItemType` is of type `Item` or `AlternatingItem`, you receive the value from the last cell of the item, which contains the `SaleAmount` value. In this sample, you add this value to the running summary variable. When the `ItemType` is `Footer`, you receive the total from all of the rows. Therefore, you assign the value of the summary variable to the text value of the last cell.
 
 > [!NOTE]
-> This code uses formatting expressions to provide a uniform look for the **SaleAmount** data.
+> This code uses formatting expressions to provide a uniform look for the `SaleAmount` data.
 
 Add the following code after the `Page_Load` event:
 

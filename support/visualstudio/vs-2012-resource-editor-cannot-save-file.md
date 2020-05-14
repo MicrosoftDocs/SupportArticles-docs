@@ -28,13 +28,13 @@ There's an issue with how the **AutoRecover** feature is interacting with the Re
 
     1. Disable the **AutoRecover** option in **Tools** > **Options** > **Environment** > **AutoRecover**, by un-checking the **Save AutoRecover information every:** checkbox:
 
-        ![unselected Save AutoRecover information every checkbox ](./media/vs-2012-resource-editor-cannot-save-file/uncheck-save-autorecover-information-every-option.png)
+        ![unselected Save AutoRecover information every checkbox](./media/vs-2012-resource-editor-cannot-save-file/uncheck-save-autorecover-information-every-option.png)
 
     1. Save your edited resources within the specified interval to avoid the triggering of Auto-Save. You may increase the interval, but this also increases the risk of losing unsaved work.
 
 2. Don't use context-sensitive help.
 
-    1. If you aren't using context help ID, then turning that off for every control would be the easiest solution. Turning it off from the resource editor would be safest. In the resource editor, check for all the controls and one of the properties will be Help ID. Set it to **False** for every control where it's **True**.
+    1. If you aren't using context help ID, then turning that off for every control would be the easiest solution. Turning it off from the resource editor would be safest. In the resource editor, check for all the controls and one of the properties will be **Help ID**. Set it to **False** for every control where it's **True**.
 
         ![Control properties Help ID ](./media/vs-2012-resource-editor-cannot-save-file/set-help-id-to-false.png)
 

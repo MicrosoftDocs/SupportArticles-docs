@@ -5,7 +5,7 @@ ms.date: 04/23/2020
 ms.prod-support-area-path: Third Party Tools installed with Visual Studio
 ms.reviewer: vyedin
 ---
-# JDK misses when you create a Xamarin-based app in Visual Studio 2015
+# JDK missing when you create a Xamarin-based app in Visual Studio 2015
 
 This article provides information about resolving the issue that Java Development Kit (JDK) misses when you create a Xamarin Android or Xamarin.Forms app in Microsoft Visual Studio 2015.
 
@@ -24,7 +24,7 @@ For example, you see an error message dialog box that's similar to the followi
 
 ## Cause
 
-This issue occurs because Oracle no longer allows distribution of JDK in Visual Studio (as of January 2019).
+This issue occurs because Oracle no longer allows distribution of Java Development Kit (JDK) in Visual Studio (as of January 2019).
 
 ## Workaround
 

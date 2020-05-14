@@ -7,12 +7,12 @@ ms.reviewer: markm
 ---
 # How to declare an array of pointers to functions in Visual C++
 
-This article introduces how to declare an array of pointers to functions in Visual C++. The information in this article applies only to unmanaged Visual C++ code. The sample below demonstrates building an array that contains function addresses and calling those functions.
-
 _Original product version:_ &nbsp; Visual C++  
 _Original KB number:_ &nbsp; 30580
 
-## Sample code
+This article introduces how to declare an array of pointers to functions in Visual C++. The information in this article applies only to unmanaged Visual C++ code.
+
+The sample code below demonstrates building an array that contains function addresses and calling those functions.
 
 ```cpp
 /*

@@ -37,7 +37,7 @@ This article assumes that you are familiar with the following topics:
 
    1. Capture the substring before the `@` symbol and put that into the `user` group.
    2. Capture the substring after the `@` symbol and put that into the `host` group.
-   3. Make sure that the first half of the string does not have an @ symbol.
+   3. Make sure that the first half of the string does not have an `@` symbol.
 
     ```csharp
     Regex emailregex = new Regex("(?<user>[^@]+)@(?<host>.+)");
@@ -49,7 +49,7 @@ This article assumes that you are familiar with the following topics:
     String s = "johndoe@tempuri.org";
     ```
 
-6. Check to see if there are any command-line parameters; if there are, retrieve the first parameter, and assign it to the variable *s*.
+6. Check to see if there are any command-line parameters; if there are, retrieve the first parameter, and assign it to the variable `s`.
 
     ```csharp
     if (args.Length > 0) {
@@ -70,7 +70,8 @@ This article assumes that you are familiar with the following topics:
     {
         Console.WriteLine ("User: " + m.Groups["user"].Value);
         Console.WriteLine ("Host: " + m.Groups["host"].Value);
-    } else
+    }
+    else
     {
         Console.WriteLine (s + " is not a valid email address");
     }
@@ -89,7 +90,7 @@ This article assumes that you are familiar with the following topics:
 
     - On the **Project** menu, click **Properties**, and then click **Debug**. In the **Start Options** section in the right pane, specify the e-mail address that you want to test. Press F5, or click **Start** on the **Debug** menu to run the application.
     - Start a command window and navigate to the *bin* or *debug* folder under the folder in which your project resides. Then type in the name of the executable followed by the e-mail address you wish to test.
-    - Locate the executable file for this project, and drag it to the **Start...Run** window on the taskbar. Add the e-mail address to verify, and click or press **OK**.
+    - Locate the executable file for this project, and drag it to the **Start...Run** window on the taskbar. Add the e-mail address to verify, and click **OK**.
 
 ## References
 
