@@ -65,7 +65,7 @@ In Windows Server 2008 and later versions, you can also create the following DWO
 |CertChainCacheOnlyUrlRetrieval|1|0<br/>1|By default, the AIA hints are not followed during chain validation when IIS is configured to use Client Certificates. This behavior is for performance and security reasons. For example, this behavior can help prevent DoS attacks. However, this behavior can also lead to unexpected certificate rejections when AIA retrieval is needed. To override this behavior, you can set the DWORD parameter `CertChainCacheOnlyUrlRetrieval` to 0 (zero) under the `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\HTTPFilter\Parameters` registry key.|Not applicable|
 ||||||
 
-## WARNING codes
+## Warning codes
 
 - 0: No risks.
 - 1: Changing this registry key is considered dangerous. This key causes Http.sys to use more memory and may increase vulnerability to malicious attacks.

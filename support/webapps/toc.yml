@@ -159,8 +159,6 @@
     href: 0x80090016-change-application-pool-identity.md
   - name: HTTP 400 error when sending requests that need Kerberos
     href: http-bad-request-response-kerberos.md
-  - name: install and configure PHP on IIS 8 in Windows 8
-    href: install-configure-php-iis-8-windows-8.md
   - name: Read and analyze a client certificate
     href: analyze-client-certificate.md
   - name: Re-enabling shared configuration causes IIS can't start

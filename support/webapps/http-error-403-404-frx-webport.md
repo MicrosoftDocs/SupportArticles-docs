@@ -6,6 +6,8 @@ ms.prod-support-area-path:
 ---
 # HTTP Error 403 - Forbidden or HTTP Error 404 - File Not Found
 
+This article provides information about the issue that when accessing WebView or WebPort, HTTP Error 403 and 404 errors occur, provides resolutions.
+
 _Original product version:_ &nbsp; Microsoft FRx WebPort  
 _Original KB number:_ &nbsp; 965174
 

@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 2902020
 
 ## Microsoft support lifecycle
 
-The [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle/?ln) website provides consistent and predictable guidelines about providing product support availability when a product is released and throughout the life of the product.
+The [Microsoft Support Lifecycle](/lifecycle/?ln) website provides consistent and predictable guidelines about providing product support availability when a product is released and throughout the life of the product.
 
 ## Supported products
 
@@ -38,6 +38,6 @@ The product receives a minimum of 12 months notification before the support ends
 
 ## References
 
-- [Microsoft Support Lifecycle](https://support.microsoft.com/lifecycle/?ln)
+- [Microsoft Support Lifecycle](/lifecycle/?ln)
 
 - [ASP.NET Support Policy](https://dotnet.microsoft.com/platform/support/policy/aspnet)
