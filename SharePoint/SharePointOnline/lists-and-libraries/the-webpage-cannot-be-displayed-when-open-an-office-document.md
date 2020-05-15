@@ -45,7 +45,7 @@ In this scenario, when you try to open a document from SharePoint Online by usin
 
 ### Scenario 1
 
-To work around this issue, remove the Microsoft SharePoint Foundation Support program component from the Office 2013 installation on the affected computer or computers. To do this, follow the "Install or remove individual Office program components" section of [Install or remove individual Office programs and components](https://support.office.com/article/install-office-2010-1b8f3c9b-bdd2-4a4f-8c88-aa756546529d?ocmsassetID=1b8f3c9b-bdd2-4a4f-8c88-aa756546529d&redirectSourcePath=%252fen-us%252farticle%252finstall-or-remove-individual-office-2010-programs-and-components-aeb80df5-326c-4afc-8064-bd195f560753&ui=en-US&rs=en-US&ad=US).
+To work around this issue, remove the Microsoft SharePoint Foundation Support program component from the Office 2013 installation on the affected computer or computers. To do this, follow the "Install or remove individual Office program components" section of [Install or remove individual Office programs and components](https://support.office.com/article/1b8f3c9b-bdd2-4a4f-8c88-aa756546529d).
 
 After you complete these steps, repair 2007 Office. For more information about how to repair the installation, click the following article number to go to [How to install the individual 2007 Office features or to repair the installed 2007 Office programs](https://support.microsoft.com/help/924611).
 
