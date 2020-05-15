@@ -22,8 +22,8 @@ In ASP.NET, if you do not use the `Session` object to store any data or if any o
 The following steps demonstrate how to disable session state at the application level, which affects all pages in the application:
 
 1. Start Microsoft Visual Studio .NET, and create a new ASP.NET web application.
-2. In **Solution Explorer**, double-click `Web.config` to view the contents of this file.
-3. Locate the `<sessionState>` section, and set the mode value to `Off`.
+2. In **Solution Explorer**, double-click *Web.config* to view the contents of this file.
+3. Locate the `<sessionState>` section, and set the mode value to **Off**.
 4. Save the file and/or the project to disable session state throughout all pages in the application.
 
 ## Disable session state at the page level

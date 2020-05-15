@@ -9,7 +9,7 @@ ms.technology: iis
 
 This article provides information about resolving the issue that configuration files cannot be exported to a DFS share through the internet services manager.
 
-_Original product version:_ &nbsp; IIS 7.0, IIS 7.5  
+_Original product version:_ &nbsp; Internet Information Services 7.0, 7.5  
 _Original KB number:_ &nbsp; 2511835
 
 ## Symptoms

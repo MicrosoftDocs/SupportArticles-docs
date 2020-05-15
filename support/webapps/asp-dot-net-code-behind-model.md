@@ -30,10 +30,10 @@ Myinlinecode.aspx
 <%@ Language=C# %>
 <HTML>
     <script runat="server" language="C#">
-    void MyButton_OnClick(Object sender, EventArgs e)
-    {
-        MyLabel.Text = MyTextbox.Text.ToString();
-    }
+        void MyButton_OnClick(Object sender, EventArgs e)
+        {
+            MyLabel.Text = MyTextbox.Text.ToString();
+        }
     </script>
     <body>
         <form id="MyForm" runat="server">
@@ -49,52 +49,52 @@ Myinlinecode.aspx
 
 Code-behind refers to code for your ASP.NET page that is contained within a separate class file. This allows a clean separation of your HTML from your presentation logic. The following sample illustrates an ASP.NET code-behind page:
 
-MyCodebehind.aspx
+- MyCodebehind.aspx
 
-```aspx-csharp
-<%@ Language="C#" Inherits="MyStuff.MyClass" %>
-<HTML>
-    <body>
-        <form id="MyForm" runat="server">
-        <asp:textbox id="MyTextBox" text="Hello World" runat="server"></asp:textbox>
-        <asp:button id="MyButton" text="Echo Input" Onclick="MyButton_Click" runat="server"></asp:button>
-        <asp:label id="MyLabel" runat="server" />
-        </form>
-    </body>
-</HTML>
-```
+    ```aspx-csharp
+    <%@ Language="C#" Inherits="MyStuff.MyClass" %>
+    <HTML>
+        <body>
+            <form id="MyForm" runat="server">
+                <asp:textbox id="MyTextBox" text="Hello World" runat="server"></asp:textbox>
+                <asp:button id="MyButton" text="Echo Input" Onclick="MyButton_Click" runat="server"></asp:button>
+                <asp:label id="MyLabel" runat="server" />
+            </form>
+        </body>
+    </HTML>
+    ```
 
-Mycodebehind.cs
+- Mycodebehind.cs
 
-```aspx-csharp
-using System;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+    ```aspx-csharp
+    using System;
+    using System.Web;
+    using System.Web.UI;
+    using System.Web.UI.WebControls;
 
-namespace MyStuff
-{
-    public class MyClass : Page
+    namespace MyStuff
     {
-        protected System.Web.UI.WebControls.Label MyLabel;
-        protected System.Web.UI.WebControls.Button MyButton;
-        protected System.Web.UI.WebControls.TextBox MyTextBox;
-
-        public void MyButton_Click(Object sender, EventArgs e)
+        public class MyClass : Page
         {
-            MyLabel.Text = MyTextBox.Text.ToString();
+            protected System.Web.UI.WebControls.Label MyLabel;
+            protected System.Web.UI.WebControls.Button MyButton;
+            protected System.Web.UI.WebControls.TextBox MyTextBox;
+
+            public void MyButton_Click(Object sender, EventArgs e)
+            {
+                MyLabel.Text = MyTextBox.Text.ToString();
+            }
         }
     }
-}
-```
+    ```
 
-In the preceding sample, you can use the following syntax to compile Mycodebehind.cs:
+In the preceding sample, you can use the following syntax to compile *Mycodebehind.cs*:
 
 ```console
 csc.exe /out:mycodebehind.dll /t:library mycodebehind.cs
 ```
 
-When you use the following code, the code-behind page inherits from the Page class. The Page class resides in the System.Web.UI namespace:
+When you use the following code, the code-behind page inherits from the Page class. The Page class resides in the `System.Web.UI namespace`:
 
 ```aspx-csharp
 public class MyClass : Page
@@ -102,7 +102,7 @@ public class MyClass : Page
 
 Inheriting from the `Page` class gives the code-behind page access to the ASP.NET intrinsic objects, such as `Request` and `Response`. In addition, inheriting from the `Page` class provides a framework for handling events for controls within the ASP.NET page.
 
-In the preceding sample, the code-behind page is compiled before ASP.NET runs. Alternatively, you can reference the code-behind class by using an SRC tag as follows:
+In the preceding sample, the code-behind page is compiled before ASP.NET runs. Alternatively, you can reference the code-behind class by using an `SRC` tag as follows:
 
 ```aspx-csharp
 <%@ Language="C#" Inherits="MyStuff.MyClass" src="MyCodebehind.cs" %>
@@ -115,4 +115,4 @@ In this case, ASP.NET compiles the code-behind page on the fly. This compilation
 When you use Microsoft Visual Studio .NET to create ASP.NET Web Forms, code-behind pages are the default method. In addition, Visual Studio .NET automatically performs pre-compilation for you when you build your solution.
 
 > [!NOTE]
-> Code-behind pages that are created in Visual Studio .NET include a special page attribute, `Code-behind`, which Visual Studio .NET uses.
+> Code-behind pages that are created in Visual Studio .NET include a special `page` attribute, `Code-behind`, which Visual Studio .NET uses.

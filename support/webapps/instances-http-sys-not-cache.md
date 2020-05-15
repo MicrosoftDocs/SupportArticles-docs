@@ -64,7 +64,7 @@ The `HTTP.sys` response cache caches any request with the appropriate flag in th
     > By default, ISAPI filters are not cache-aware. You must set the `FilterEnableCache` metabase property for the filter to make it cache-aware. All filters in a default installation of IIS are cache-aware. This includes Microsoft FrontPage and Microsoft ASP.NET.  
     For more information about the `FilterEnableCache` metabase property, view [What's new in Windows 10 deployment](/windows/deployment/deploy-whats-new).
 
-- A static file is accessed as a default document. (For example, Default.htm exists in the root directory.) Accessing the specific file by name (http://example.com/default.htm/) causes `HTTP.sy`s to cache the file. Accessing the website by requesting the root folder (http://example.com/) results in a non-cached response.
+- A static file is accessed as a default document. (For example, Default.htm exists in the root directory.) Accessing the specific file by name (`http://contoso.com/default.htm/`) causes `HTTP.sy`s to cache the file. Accessing the website by requesting the root folder (`http://contoso.com/`) results in a non-cached response.
 
     > [!NOTE]
     >  If the first page that's listed in the Default Document list is inaccessible, IIS tries to serve the second page in the Default Document list. In this situation, that static page will not be served from the cache.

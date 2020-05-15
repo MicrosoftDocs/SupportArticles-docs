@@ -122,7 +122,7 @@ The following computer system is collected:
 |MSINFO32.exe Information in NFO Format|{Computername}_msinfo32.nfo|
 |||
 
-## Virtualization Information
+## Virtualization information
 
 |Description|File Name|
 |---|---|

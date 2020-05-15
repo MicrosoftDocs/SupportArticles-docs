@@ -31,7 +31,7 @@ When the problem occurs, you may be able to view the same website over a standar
 
 ## Cause
 
-The problem occurs because the [KB26612540](https://support.microsoft.com//help/2661254) is installed on the client machine, and the website the client is trying to browse to over SSL has an RSA security certificate that uses cryptographic keys that are less than 1024 bits in length. For more information regarding the security impact associated with the changes made by KB2661254, see [Microsoft Security Advisory 2661254](/security-updates/SecurityAdvisories/2012/2661254).
+The problem occurs because the website the client is trying to browse to over SSL has an RSA security certificate that uses cryptographic keys that are less than 1024 bits in length. For more information regarding the security impact associated with the changes made by KB2661254, see [Microsoft Security Advisory 2661254](/security-updates/SecurityAdvisories/2012/2661254).
 
 ## Resolution
 

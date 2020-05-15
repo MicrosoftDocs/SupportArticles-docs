@@ -26,9 +26,9 @@ To determine the exact failure that occurred, click the log file  link on the la
 This error condition can be caused by the following circumstances:
 
 - You have a pre-release version of ASP.NET Web Pages or ASP.NET MVC 3 installed and you installed Visual Studio 2010 SP1. When you install the released version of ASP.NET Web Pages or ASP.NET MVC 3, you receive the error listed above when the installation fails.
-- You have sections in the root `Web.config` file marked with `allowOverride="false"`. (The root configuration file is in the `%system%\Microsoft.NET\Framework\<version>\Config` folder).
-- Another process has locked the root `Web.config` file. This prevents the installer from writing to it.
-- The root `Web.config` is read-only.
+- You have sections in the root *web.config* file marked with `allowOverride="false"`. (The root configuration file is in the `%system%\Microsoft.NET\Framework\<version>\Config` folder).
+- Another process has locked the root *web.config* file. This prevents the installer from writing to it.
+- The root *web.config* is read-only.
 
 ## Resolution
 
@@ -45,7 +45,7 @@ The solution depends on which of the possible error conditions occurred. If you 
 
 Otherwise, try these steps:
 
-1. Change any sections in the root `Web.config` file that have `allowOverride="false"` to `allowOverride="true"`.
-2. Determine what process is locking the root `Web.config` file and end that process, or restart the computer you are trying to install to.
-3. Make sure that the root `Web.config` file is not set to read-only.
+1. Change any sections in the root *web.config* file that have `allowOverride="false"` to `allowOverride="true"`.
+2. Determine what process is locking the root *web.config* file and end that process, or restart the computer you are trying to install to.
+3. Make sure that the root *web.config* file is not set to read-only.
 4. After making these changes, install ASP.NET Web Pages or ASP.NET MVC 3 again.

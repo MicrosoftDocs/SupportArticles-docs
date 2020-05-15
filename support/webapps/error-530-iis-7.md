@@ -9,7 +9,7 @@ ms.reviewer: Robmcm, MLaing
 
 This article provides information about resolving the error 530 that occurs when users browse an anonymous FTP site configured for Active Directory User Isolation in Internet Information Services (IIS) 7.0 or 7.5.
 
-_Original product version:_ &nbsp; IIS 7.0, IIS 7.5  
+_Original product version:_ &nbsp; Internet Information Services 7.0, 7.5  
 _Original KB number:_ &nbsp; 2649659
 
 ## Symptoms
@@ -36,7 +36,7 @@ This behavior is by design. Configuring an FTP site for anonymous access as well
 
 When configuring an FTP site for Active Directory User Isolation, do not allow anonymous access. FTP sites configured with Active Directory User Isolation must use Basic Authentication.
 
-## More Information
+## More information
 
 For more information about configure FTP User Isolation in IIS 7.0 and 7.5, see the following articles:
 

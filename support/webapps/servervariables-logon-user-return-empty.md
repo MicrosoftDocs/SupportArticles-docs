@@ -24,19 +24,19 @@ Request.ServerVariables["LOGON_USER"]
 
 ## Cause
 
-This problem occurs because the authentication-related variables in the `ServerVariables` collection are not populated if you use Anonymous Access security to access the .aspx page. This problem can also occur if you give the anonymous user access in the `<authorization>` section of the `Web.config` file.
+This problem occurs because the authentication-related variables in the `ServerVariables` collection are not populated if you use Anonymous Access security to access the .aspx page. This problem can also occur if you give the anonymous user access in the `<authorization>` section of the *web.config* file.
 
 ## Resolution
 
-To populate the `LOGON_USER` variable when you use any authentication mode other than `None`, you can deny access to the anonymous user in the `<authorization>` section of the `Web.config` file. To deny access to the anonymous user in the `<authorization>` section, follow these steps:
+To populate the `LOGON_USER` variable when you use any authentication mode other than `None`, you can deny access to the anonymous user in the `<authorization>` section of the *web.config* file. To deny access to the anonymous user in the `<authorization>` section, follow these steps:
 
-1. Change the authentication mode in the `Web.config` file to anything other than `None`. For example, the following entry in the `Web.config` file sets the authentication mode to Forms-based authentication:
+1. Change the authentication mode in the *web.config* file to anything other than `None`. For example, the following entry in the *web.config* file sets the authentication mode to Forms-based authentication:
 
     ```xml
     <authentication mode="Forms" />
     ```
 
-2. To deny access to the anonymous user in the `Web.config` file, use the following syntax:
+2. To deny access to the anonymous user in the *web.config* file, use the following syntax:
 
     ```xml
     <authorization>
@@ -47,7 +47,7 @@ To populate the `LOGON_USER` variable when you use any authentication mode other
 
 If you are using Windows authentication, you can also use the following steps to resolve this problem:
 
-1. Change the authentication mode in the `Web.config` file to `Windows` as follows:
+1. Change the authentication mode in the *web.config* file to `Windows` as follows:
 
     ```xml
     <authentication mode="Windows" />

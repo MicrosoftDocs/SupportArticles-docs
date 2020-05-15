@@ -24,7 +24,7 @@ However, in Web Pages Razor V2, the tilde notation in URLs maps to the rewritten
 
 ## Resolution
 
-To resolve the tilde notation to the rewritten URLs by using the same behavior as in Web Pages Razor V2, set the `IIS_WasUrlRewritten` context to **false** in each Web page or in `Application_BeginRequest` in Global.asax for the global setting as follows:
+To resolve the tilde notation to the rewritten URLs by using the same behavior as in Web Pages Razor V2, set the `IIS_WasUrlRewritten` context to **false** in each Web page or in `Application_BeginRequest` in *Global.asax* for the global setting as follows:
 
 ```aspx-csharp
 protected void Application_BeginRequest(object sender, EventArgs e)

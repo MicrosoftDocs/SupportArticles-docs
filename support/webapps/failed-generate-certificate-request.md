@@ -20,16 +20,16 @@ When you try to create a certificate request in IIS, you may receive an error me
 
 ## Cause
 
-This issue occurs if the administrator who tries to create the certificate request doesn't have **Full Control** permissions on the files and the sub folders in the following folder:  
+This issue occurs if the administrator who tries to create the certificate request doesn't have Full Control permissions on the files and the sub folders in the following folder:  
 `\Documents and Settings\All Users\Application Data\Microsoft\Crypto\RSA\MachineKeys`
 
 ## Resolution
 
-To resolve this issue, grant the administrator account **Full Control** on all files and sub folders in the `MachineKeys` folder. Follow these steps to resolve the issue:
+To resolve this issue, grant the administrator account Full Control on all files and sub folders in the `MachineKeys` folder. Follow these steps to resolve the issue:
 
 1. Click **Start**, click **Run**, type `\Documents and Settings\All Users\Application Data\Microsoft\Crypto\RSA\`, and then click **OK**.
 2. Right-click **MachineKeys**, and then click **Properties**.
-3. On the **Security** tab, click **Administrator** or click the administrator group account you want, click to select the check box to enable **Full Control** permissions, and then click **OK**.
+3. On the **Security** tab, click **Administrator** or click the administrator group account you want, click to select the check box to enable Full Control permissions, and then click **OK**.
 
 ## References
 

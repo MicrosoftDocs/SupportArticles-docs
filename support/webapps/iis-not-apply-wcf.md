@@ -8,7 +8,7 @@ ms.prod-support-area-path:
 
 This article provides workarounds for the issue that Internet Information Services (IIS) application pool `ShutdownTimeLimit` recycle property does not apply to WAS-hosted Communication Foundation (WCF) services using net.tcp.
 
-_Original product version:_ &nbsp; IIS  
+_Original product version:_ &nbsp; Internet Information Services  
 _Original KB number:_ &nbsp; 2819362
 
 ## Symptoms
