@@ -10,7 +10,7 @@ ms.reviewer: mlaing
 This article describes HResult codes and provides solutions when you encounter the HTTP 500.19 error on a Web application on Internet Information Services (IIS) 7.0 and later versions.
 
 _Original product version:_ &nbsp; Internet Information Services 7.0 and later versions  
-_Original KB number:_ &nbsp; 2819022
+_Original KB number:_ &nbsp; 942055
 
 ## Error code message
 
