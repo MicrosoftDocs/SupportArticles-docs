@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting guide to OneDrive for Business sites stopped at provisioning stage
+title: Troubleshoot OneDrive for Business sites that stop at provisioning stage
 ms.author: v-todmc
 author: todmccoy
 manager: dcscontentpm
@@ -74,7 +74,7 @@ A profile **must** exist in the SharePoint Online profile database to provision 
 
 It is a rare scenario that a profile does not exist. If, for any reason, a profile is taking longer than expected to create, wait at least two hours and then validate again.
    > [!NOTE]
-   > The exception to this process is an EDU tenant. Profiles will not be created for a user until the user logs into SharePoint Online for the first time.
+   > For tenants with an EDU subscription, user profiles are not created until the user logs into SharePoint Online or an admin has processed the user account for [OneDrive pre-provisioning](https://docs.microsoft.com/onedrive/pre-provision-accounts).
 
 To validate that a profile exists:
 
