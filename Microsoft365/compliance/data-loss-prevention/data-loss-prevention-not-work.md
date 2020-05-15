@@ -61,7 +61,7 @@ Did this fix the problem?
 
 - Check whether the problem is fixed.
   - If the problem is fixed, you are finished with these steps.
-  - If the problem is not fixed, visit [Microsoft Community](https://answers.microsoft.com/) or [contact support](https://www.microsoft.com/contact-microsoft-how-can-we-help-you).
+  - If the problem is not fixed, visit [Microsoft Community](https://answers.microsoft.com/) or [contact support](https://support.microsoft.com/contactus/).
 
 ## More information
 

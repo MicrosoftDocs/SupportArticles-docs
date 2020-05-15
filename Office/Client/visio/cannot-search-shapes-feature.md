@@ -39,5 +39,3 @@ Enable Windows Search service - Right click the taskbar and select Start Task Ma
 1. Go to Start > Control Panel > Uninstall a program > Turn Windows features on or off
 
 1. Place a check mark next to "Windows Search" to enable the service, then click OK.
-
-Installing the latest IFilter updates (Visio 2007 and earlier) - refer to the [website](https://www.microsoft.com/download/details.aspx?id=20109) to download the update.

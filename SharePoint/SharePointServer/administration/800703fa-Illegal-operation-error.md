@@ -95,6 +95,6 @@ Disable the related Windows User Profile Service feature. To do this, follow the
 
 For more information, see the following MSDN Distributed Services Support Team Blog article:  
 
-[A COM+ application may stop working on Windows Server 2008 when the identity user logs off](https://blogs.msdn.com/b/distributedservices/archive/2009/11/06/a-com-server-application-may-stop-working-on-windows-server-2008.aspx)
+[A COM+ application may stop working on Windows Server 2008 when the identity user logs off](https://softnovation.wordpress.com/2015/06/18/a-com-application-may-stop-working-on-windows-server-2008-when-the-identity-user-logs-off/)
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

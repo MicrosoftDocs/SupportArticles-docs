@@ -48,7 +48,7 @@ If you're using directory synchronization, locate and correct the duplicate attr
    5. Edit the msRTCSIP-PrimaryUserAddress attributes of the users so that the values are unique within the organization.
 
         > [!NOTE]
-        > If you currently have Lync Server deployed on-premises, you’ll want to change the user’s SIP address through the Lync Server Control Panel or the Lync Server Management Shell by using the Set-CsUser cmdlet. For more information, see [Modify the SIP Address of an Enabled Lync Server User](https://blogs.technet.com/b/csps/archive/2011/03/21/usermodifysip.aspx).   
+        > If you currently have Lync Server deployed on-premises, you’ll want to change the user’s SIP address through the Lync Server Control Panel or the Lync Server Management Shell by using the Set-CsUser cmdlet. For more information, see [Modify the SIP Address of an Enabled Lync Server User](https://techcommunity.microsoft.com/t5/skype-for-business-blog/modify-the-sip-address-of-an-enabled-lync-server-user/ba-p/619467).   
    6. Force directory synchronization. Wait approximately 15 minutes for the changes to take full effect.   
    
 2. Search AD DS for duplicate SIP proxies in the proxyAddresses attributes. To do this, follow these steps: 

@@ -76,7 +76,7 @@ If the user is blocked, ResultValue will be set as UserIsBlocked. At the first q
 
 ![userisblocked](./media/fiddler-trace-logs-for-mfa/userisblocked.png)
 
-Solution: In an Azure MFA scenario with an Azure subscription, you can unblock by first logging on to manage.windowsazure.com. Then, select **Directory > Users** and **Manage Multi factor Authentication** > **Service Settings**. At the end of the page, select **Go to portal**. Now, in [https://pfweb.phonefactor.net/framefactory](https://pfweb.phonefactor.net/framefactory), select **Block/Unblock Users** to find the list of blocked users. 
+Solution: In an Azure MFA scenario with an Azure subscription, you can unblock by first logging on to manage.windowsazure.com. Then, select **Directory > Users** and **Manage Multi factor Authentication** > **Service Settings**. At the end of the page, select **Go to portal**. Now, select **Block/Unblock Users** to find the list of blocked users. 
 
 If MFA is enabled through Office 365, open a support case with Microsoft to unblock it. 
 
