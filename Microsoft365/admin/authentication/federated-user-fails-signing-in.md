@@ -1,6 +1,6 @@
 ---
 title: A federated user has trouble signing in with error code 80048163
-description: Describes an issue in which a federated users receive an error message when they try to sign in to Office 365, Azure, or Microsoft Intune from a sign-in webpage whose URL starts with "https://login.microsoftonline.com/login."
+description: Describes an issue in which a federated users receive an error message when they try to sign in to Office 365, Azure, or Microsoft Intune from a sign-in webpage whose URL starts with "https://login.microsoftonline.com."
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -27,7 +27,7 @@ appliesto:
 
 ## Problem
 
-When a federated user tries to sign in to a Microsoft cloud service such as Office 365, Microsoft Azure, or Microsoft Intune from a sign-in webpage whose URL starts with https://login.microsoftonline.com/login, authentication for that user is unsuccessful. The user gets the following error message:
+When a federated user tries to sign in to a Microsoft cloud service such as Office 365, Microsoft Azure, or Microsoft Intune from a sign-in webpage whose URL starts with https://login.microsoftonline.com, authentication for that user is unsuccessful. The user gets the following error message:
 
 ```asciidoc
 Sorry, but we're having trouble signing you in

@@ -17,7 +17,7 @@ appliesto:
 
 # How to install a second KMS host for Office in an environment that has an existing KMS host for Windows
 
-This article was written by [Sean Francis](https://blogs.technet.microsoft.com/odsupport/author/sfrancis/), Technical Specialist.
+This article was written by Sean Francis, Technical Specialist.
 
 Volume license editions of Microsoft Office support Key Management Service (KMS) activation. If your environment has an existing KMS host for activating Windows, you have the following ways of activating Office by using a KMS host:
 

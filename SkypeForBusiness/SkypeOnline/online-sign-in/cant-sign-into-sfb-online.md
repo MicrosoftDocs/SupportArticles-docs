@@ -128,7 +128,7 @@ Did this fix the problem?
 
 - Check whether the problem is fixed. 
   - If the problem is fixed, you are finished with these steps.    
-  - If the problem isn't fixed, go to [Microsoft Community](https://answers.microsoft.com/), or [contact support](https://support.microsoft.com/contactus/).   
-- We'd appreciate your feedback. To provide feedback or to report any issues with this solution, please leave a comment on the "[Fix it for me](https://blogs.technet.com/fixit4me/)" blog or send us an [email](mailto:fixit4me@microsoft.com?subject=kb) message.
+  - If the problem isn't fixed, go to [Microsoft Community](https://answers.microsoft.com/), or [contact support](https://support.microsoft.com/contactus/).
+- We'd appreciate your feedback. To provide feedback or to report any issues with this solution, please send us an [email](mailto:fixit4me@microsoft.com?subject=kb) message.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

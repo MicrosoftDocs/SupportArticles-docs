@@ -63,9 +63,3 @@ You can continue to use your mouse wheel in Form View in Access 2007 and in Acce
 4. Save and then open your form in Form View.   
 
 This code forces the user to save a record in which changes were made before the user scrolls to another record. One of the main reasons for the change in the scroll behavior was that users would use the mouse wheel to scroll through records and automatically and unexpectedly save their changes to their record.
-
-## More Information
-
-For more information about scroll records and the mouse wheel, visit the following website:
-
-[https://www.allenbrowne.com/ser-70.html](https://www.allenbrowne.com/ser-70.html)

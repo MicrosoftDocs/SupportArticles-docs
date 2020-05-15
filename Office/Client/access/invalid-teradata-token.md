@@ -42,7 +42,7 @@ To fix the issue, use one of the following methods:
 
 ### Method 1
 
-When you use the Teradata ODBC driver (15.10 or a later version), you can use the **EnableLegacyParser** option to continue using the previous SQL parser. For more information, see [Teradata DSN Options](http://www.info.teradata.com/HTMLPubs/DB_TTU_15_10/index.html#page/Connectivity/B035_2509_035K/2509ch05.07.09.html).
+When you use the Teradata ODBC driver (15.10 or a later version), you can use the **EnableLegacyParser** option to continue using the previous SQL parser.
 
 > [!NOTE]
 > Teradata plans to remove the **EnableLegacyParser** option beginning in driver version 18.
