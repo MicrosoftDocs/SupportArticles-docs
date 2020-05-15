@@ -62,14 +62,14 @@ The following Microsoft server or client products must also be updated. The upda
 |:-----|:-----|:-----|
 |Exchange Server 2019|[KB 4537677](https://support.microsoft.com/help/4537677/cumulative-update-5-for-exchange-server-2019)|March 17, 2020|
 |Exchange Server 2016|[KB 4537678](https://support.microsoft.com/help/4537678/cumulative-update-16-for-exchange-server-2016)|March 17, 2020|
-|Project Server 2013|[KB 4484279](https://support.microsoft.com/help/4484279/march-10-2020-cumulative-update-for-project-server-2013-kb4484279)|March 10, 2020|
-|Project Server 2010|[KB 4484239](https://support.microsoft.com/help/4484239/march-10-2020-cumulative-update-for-project-server-2010-kb4484239)|March 10, 2020|
-|SharePoint Foundation 2013|[KB 4484282](https://support.microsoft.com/help/4484282/security-update-for-sharepoint-foundation-2013-march-10)<br />(Cumulative Update: [KB 4484278](https://support.microsoft.com/help/4484278/march-10-2020-cumulative-update-for-sharepoint-foundation-2013-kb44842))[<sup>1</sup>](#Note1)|March 10, 2020|
-|SharePoint Foundation 2010|[KB 4484197](https://support.microsoft.com/help/4484197/security-update-for-sharepoint-foundation-2010-march-10)|March 10, 2020|
+|Project Server 2013|[KB 4484360](https://support.microsoft.com/help/4484360/may-12-2020-cumulative-update-for-microsoft-project-server-2013-kb4484)|May 12, 2020|
+|Project Server 2010|[KB 4484388](https://support.microsoft.com/help/4484388/may-12-2020-cumulative-update-for-project-server-2010-kb4484388)|May 12, 2020|
+|SharePoint Foundation 2013|[KB 4484364](https://support.microsoft.com/help/4484364/security-update-for-sharepoint-foundation-2013-may)<br />(Cumulative Update: [KB 4484358](https://support.microsoft.com/help/4484358/may-12-2020-cumulative-update-for-microsoft-sharepoint-foundation-2013))[<sup>1</sup>](#Note1)|May 12, 2020|
+|SharePoint Foundation 2010|[KB 4484386](https://support.microsoft.com/help/4484386/april-27-2020-update-for-sharepoint-foundation-2010-kb4484386)|April 27, 2020|
 |SharePoint Server 2019|[KB 4484259](https://support.microsoft.com/help/4484259/security-update-for-sharepoint-server-2019-february-11)|February 11, 2020|
 |SharePoint Server 2016|[KB 4484272](https://support.microsoft.com/help/4484272/security-update-for-sharepoint-server-2016-march-10-2020)|March 10, 2020|
-|SharePoint Server 2013|[KB 4484280](https://support.microsoft.com/help/4484280/march-10-2020-cumulative-update-for-sharepoint-enterprise-server-2013)|March 10, 2020|
-|SharePoint Server 2010|[KB 4484241](https://support.microsoft.com/help/4484241/march-10-2020-cumulative-update-for-sharepoint-server-2010-kb4484241)|March 10, 2020|
+|SharePoint Server 2013|[KB 4484362](https://support.microsoft.com/help/4484362/may-12-2020-cumulative-update-for-microsoft-sharepoint-enterprise-serv)|May 12, 2020|
+|SharePoint Server 2010|[KB 4484389](https://support.microsoft.com/help/4484389/may-12-2020-cumulative-update-for-sharepoint-server-2010-kb4484389)|May 12, 2020|
 |Skype for Business Server 2019||Upcoming late Summer 2020 Cumulative Update (tentative)|
 |Skype for Business Server 2015||April 2020 Cumulative Update (CU 11)|
 

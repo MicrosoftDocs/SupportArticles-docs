@@ -57,7 +57,7 @@ For admins to directly add a guest user, go to **All users** in the [Azure Activ
 
 For more information about how to add new users, see the following Microsoft articles:
 
-- [Quickstart: Add guest users to your directory in the Azure portal](https://docs.microsoft.com/eazure/active-directory/b2b/b2b-quickstart-add-guest-users-portal)
+- [Quickstart: Add guest users to your directory in the Azure portal](https://docs.microsoft.com/azure/active-directory/b2b/b2b-quickstart-add-guest-users-portal)
 - [Microsoft Teams guest access checklist](https://docs.microsoft.com/microsoftteams/guest-access-checklist#step-2-configure-azure-ad-business-to-business-settings)
 
 
