@@ -28,7 +28,7 @@ Documents downloaded from the Microsoft Teams desktop client open in protected v
 
 ## Workaround
 
-To workaround this issue, download the documents directly from Microsoft Teams or SharePoint in a web browser.
+To workaround this issue, download the documents  from Microsoft Teams or SharePoint in a web browser. You may first have to [add the URL as a trusted location](https://support.office.com/article/Add-remove-or-change-a-trusted-location-7EE1CDC2-483E-4CBB-BCB3-4E7C67147FB4). 
 
 ## More information
 
