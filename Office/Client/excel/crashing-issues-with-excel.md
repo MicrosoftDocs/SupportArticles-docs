@@ -116,7 +116,7 @@ If updating your antivirus software or excluding it from integrating with Excel 
 #### Windows updates
 
 You might have to set Windows Update to automatically download and install recommended updates. Installing any important, recommended, and optional updates can frequently correct problems by replacing out-of-date files and fixing vulnerabilities.
-To install the latest Windows updates, see [Microsoft Windows FAQ](https://support.microsoft.comhelp/12373/windows-update-faq).
+To install the latest Windows updates, see [Microsoft Windows FAQ](https://support.microsoft.com/help/12373/windows-update-faq).
 
 #### Office updates
 

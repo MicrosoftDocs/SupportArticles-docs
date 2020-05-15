@@ -46,6 +46,6 @@ To fix this problem, follow these steps:
 
     ![Screen shot of the result for the Remote Connectivity Analyzer Test  ](https://support.microsoft.com/Library/Images/2799312.jpg)   
 
-If the NS records and the Lync Service (SRV) records are correct, perform standard Lync sign-in troubleshooting. For more information, go to the following Microsoft Knowledge Base article:[2541980 ](https://support.microsoft.com/help/2541980) How to troubleshoot sign-in issues in Skype for Business Online
+If the NS records and the Lync Service (SRV) records are correct, perform standard Lync sign-in troubleshooting.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

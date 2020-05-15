@@ -98,4 +98,4 @@ To fix this issue, follow these steps to stop running the application in compati
 
 ## More Information
 
-For more information, see [Outlook is unable to start in Windows 7 or 8 ](/EN-US/help/2968977).
+For more information, see [Outlook is unable to start in Windows 7 or 8](https://support.microsoft.com/help/2968977).

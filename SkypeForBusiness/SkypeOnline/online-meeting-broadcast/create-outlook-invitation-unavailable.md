@@ -43,7 +43,7 @@ To manually send a join link to the Skype Meeting Broadcast participants by usin
 To manually change the language identifier for the Skype Meeting Broadcast portal, follow these steps:
 
 1. In the [Skype Meeting Broadcast portal](https://portal.broadcast.skype.com), browse to the meeting summary page.    
-2. In the address bar of your browser, change the language identifier of the URL. For example, if you're using the French language, the URL will be https://portal.broadcast.skype.com/fr-FR. Change this to https://portal.broadcast.skype.com/en-US.   
+2. In the address bar of your browser, change the language identifier of the URL. For example, if you're using the French language, the URL will be https://portal.broadcast.skype.com/fr-FR/. Change this to https://portal.broadcast.skype.com/en-US.   
 3. Refresh your browser, and then open your meeting. The **Create Outlook invitation** option should be visible.   
 
 ## More Information
