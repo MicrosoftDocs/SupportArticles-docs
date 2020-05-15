@@ -75,7 +75,7 @@ This issue can be resolved by removing the Office 2010 registry values.
 ### Issue resolved?
 
 - Determine if the issue has been resolved. If the issue has been resolved, the process described in this section is finished. If the issue is not resolved, you can [contact technical support](https://support.microsoft.com/contactus).  
-- Thank you for your comments. To submit feedback or any problems found in the approach to resolving this issue, please leave comments on the "[Fix it for me](https://blogs.technet.com/fixit4me/)" blog or send an [E-mail](mailto:fixit4me@microsoft.com?Subject=KB).
+- Thank you for your comments. To submit feedback or any problems found in the approach to resolving this issue, please send an [E-mail](mailto:fixit4me@microsoft.com?Subject=KB).
 
 ## Reference materials
 

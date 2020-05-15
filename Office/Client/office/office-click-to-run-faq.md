@@ -35,9 +35,7 @@ Office Click-to-Run Technology
 
 Office Click-to-Run products use streaming technology that is similar to watching a video on the web. When you watch a video on the web, you can watch the first part of the video before the whole file is downloaded. Similarly, you can start using Office 2010 before the whole suite or product is downloaded when you use Office Click-to-Run. Therefore, the rest of Office 2010 is being downloaded in the background quietly while you use one part of Office 2010. 
 
-Office Click-to-Run products also use Microsoft virtualization technology that stores Office 2010 in virtualized application space. This virtual space separates Office 2010 from the regular file system and from the other applications on your computer. This separation lets Office 2010 coexist together with any existing version of Office that is already installed on your computer. There are also other benefits to Office Click-to-Run. For more information, visit the following Microsoft blog website:
-
-[https://blogs.technet.com/office2010/archive/2009/11/06/click-to-run-delivering-office-in-the-21st-century.aspx](https://blogs.technet.com/office2010/archive/2009/11/06/click-to-run-delivering-office-in-the-21st-century.aspx)
+Office Click-to-Run products also use Microsoft virtualization technology that stores Office 2010 in virtualized application space. This virtual space separates Office 2010 from the regular file system and from the other applications on your computer. This separation lets Office 2010 coexist together with any existing version of Office that is already installed on your computer.
 
 Office Click-to-Run products
 
