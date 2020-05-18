@@ -69,6 +69,10 @@
       href: ./known-issues/following-application-instance-not-present-error.md
     - name: Users with Exchange Online mailboxes can't access Meetings or Connectors 
       href: ./known-issues/exchange-users-cant-access-meetings.md
+  - name: Files
+    items:
+    - name: Downloaded documents open in protected view
+      href: ./known-issues/download-documents-open-in-protected-view.md
   - name: IM and Presence
     items:
     - name: Cannot send message to Skype for Business
@@ -141,3 +145,4 @@
       href: ./known-issues/safari-intelligent-tracking-prevention-problems.md
     - name: Symantec DLP interferes with Teams processes
       href: ./known-issues/symantec-dlp-interferes-with-teams.md
+
