@@ -19,7 +19,8 @@ When you attempt to add a cluster in which System Center 2012 Virtual Machine M
 > Error (444)  
 > %ComputerName% is a VMM management server. A VMM management server cannot be associated with another VMM management server.  
 >
-> Recommended Action Uninstall the VMM management server from %ComputerName% using Add or Remove Programs on %ComputerName% and try the operation again.
+> Recommended Action  
+> Uninstall the VMM management server from %ComputerName% using Add or Remove Programs on %ComputerName% and try the operation again.
 
 An ETL trace (carmine trace) will show an error similar to the following:
 

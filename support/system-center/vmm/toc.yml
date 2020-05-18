@@ -56,7 +56,7 @@
   items:
   - name: Apostrophe causes VMM console to crash
     href: apostrophe-causes-vmm-crash.md
-  - name: Troubleshoot SCVMM 801 errors
+  - name: Troubleshoot VMM 801 errors
     href: fix-scvmm-801-errors.md
 - name: Setup
   items:

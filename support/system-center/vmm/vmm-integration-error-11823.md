@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 3040764
 
 ## Symptoms
 
-When you try to integrate System Center 2012 Virtual Machine Manager (VMM 2012 or VMM 2012 R2) with System Center 2012 Operations Manager (OpsMgr 2012 or OpsMgr 2012 R2), the operation fails and the following error is returned:
+When you try to integrate System Center Virtual Machine Manager (VMM 2012 or VMM 2012 R2) with System Center Operations Manager (OpsMgr 2012 or OpsMgr 2012 R2), the operation fails and the following error is returned:
 
 > Error (11823)
 >

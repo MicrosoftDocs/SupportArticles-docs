@@ -4,7 +4,7 @@ description: Fixes an issue in which you receive error 0x80190193 when you deplo
 ms.date: 04/29/2020
 ms.prod-support-area-path:
 ---
-# Deploying a VM with Virtual Machine Manager fails with error (2912) - forbidden (403) (0x80190193)
+# Deploying a VM with Virtual Machine Manager fails with error (2912) - Forbidden (403) (0x80190193)
 
 This article fixes an issue in which you receive error 0x80190193 when you deploy a virtual machine.
 
@@ -24,7 +24,7 @@ Using System Center 2012 Virtual Machine Manager (VMM) Service Pack 1 (SP1) to d
 
 This issue can occur if the VMM library share where the VHD file of the VM being created is located on a virtual machine that is running on a VMware ESX or ESXi host, and the virtual machine's disk where the VMM library share is located has `HotAdd`/`HotPlug` capability enabled.
 
-To check whether the `HotAdd`/`HotPlug` capability is enabled for the virtual machine disk, use administrative credentials to try to remotely access the admin share of the disk where the VMM library share is located (such as \\\server\E$). If enabled, this operation should fail with the following error:
+To check whether the `HotAdd`/`HotPlug` capability is enabled for the virtual machine disk, use administrative credentials to try to remotely access the admin share of the disk where the VMM library share is located (such as \\\\\<server>\e$). If enabled, this operation should fail with the following error:
 
 > You do not have permission to access \\\\\<server>\e$, contact your network administrator to request access.
 

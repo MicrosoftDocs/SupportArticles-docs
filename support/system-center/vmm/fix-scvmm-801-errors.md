@@ -1,11 +1,11 @@
 ---
-title: Troubleshoot 801 errors in SCVMM console 
+title: Troubleshoot 801 errors in VMM console 
 description: Describes an issue that causes a refresh of virtual machines in Virtual Machine Manager to fail and to trigger a 801 error that indicates VMM cannot find the Virtual hard disk object. Occurs because of orphaned object information in the database. A resolution is provided.
 ms.date: 04/29/2020
 ms.prod-support-area-path:
 ms.reviewer: brenth, DPM-VMM
 ---
-# 801 Missing %ObjectType and VmmAdminUI has stopped working errors in SCVMM
+# 801 Missing %ObjectType and VmmAdminUI has stopped working errors in VMM
 
 This article discusses how to troubleshoot the **801 Missing %ObjectType** and **VmmAdminUI has stopped working** errors in the System Center Virtual Machine Manager (SCVMM) console.
 

@@ -25,4 +25,4 @@ The agent removal process is still in the process of creating a failure for the
 
 ## Resolution
 
-To resolve this issue, wait a few seconds and then retry the installation again. If it continues to fail, reboot to the library server to stop any agent process that may be preventing the installation, then try the installation again.
+To resolve this issue, wait a few seconds and then retry the installation again. If it continues to fail, restart the library server to stop any agent process that may be preventing the installation, then try the installation again.

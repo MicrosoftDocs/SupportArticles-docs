@@ -75,7 +75,7 @@ When this issue occurs, you see the following error:
 
 This issue is caused by a bug that is not scheduled to be fixed.
 
-The VMWare VM has an associated snapshot (called a *checkpoint* in Hyper-V), and Virtual Machine Manager stores its ID in the `VirtualMachineDB` database together with extra information. This extra information is appended to the GUID that is stored in the `LastRestoredCheckpointID` column in the tbl_WLC_VmInstance table.
+The VMWare VM has an associated snapshot (called a *checkpoint* in Hyper-V), and Virtual Machine Manager stores its ID in the `VirtualMachineDB` database together with extra information. This extra information is appended to the GUID that is stored in the `LastRestoredCheckpointID` column in the `tbl_WLC_VmInstance` table.
 
 To check whether you have an affected VM, run the following query:
 
@@ -85,15 +85,11 @@ select LastRestoredCheckpointID FROM tbl_wlc_vminstance where LEN(LastRestoredCh
 
 The result is shown in the following format:
 
-```console
-GUID*snapshot-401
-```
+> GUID*snapshot-401
 
 For example, the result is shown as:
 
-```console
-94EC7414-5BC5-5ABE-D1FB-66F4EBB7ECAD*snapshot-401
-```
+> 94EC7414-5BC5-5ABE-D1FB-66F4EBB7ECAD*snapshot-401
 
 ## Resolution
 
@@ -112,7 +108,7 @@ update tbl_wlc_vminstance set lastrestoredcheckpointid = SUBSTRING(lastrestoredc
 > [!NOTE]
 > In this query, \<*COMPUTERNAME*> represents the actual name of the VM that you're trying to change.
 
-Running these queries fixes the issue temporarily. However, the bad values will be re-created by SCVMM. To prevent this from occurring without manual intervention, you can add the following trigger to the tbl_wlc_vminstance table so that it automatically removes the offending data each time a row is inserted or updated.
+Running these queries fixes the issue temporarily. However, the bad values will be re-created by SCVMM. To prevent this from occurring without manual intervention, you can add the following trigger to the `tbl_wlc_vminstance` table so that it automatically removes the offending data each time a row is inserted or updated.
 
 > [!IMPORTANT]
 > You have to run the first query to wipe all bad values from the database first because this trigger affects only newly inserted or updated rows in the database.
