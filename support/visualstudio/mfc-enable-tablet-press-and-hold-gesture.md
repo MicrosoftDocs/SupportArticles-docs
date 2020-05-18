@@ -9,7 +9,7 @@ ms.reviewer: scotbren
 
 This article provides information about how to enable press-and-hold gesture in an Microsoft Foundation Class (MFC) application.
 
-_Original product version:_ &nbsp; Visual Studio 2017, 2015, 2013, 2012, 2010  
+_Original product version:_ &nbsp; Visual Studio 2010 and later versions  
 _Original KB number:_ &nbsp; 2846829
 
 ## Summary

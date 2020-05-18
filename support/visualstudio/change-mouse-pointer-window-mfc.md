@@ -27,9 +27,9 @@ Here are some situations when you might want an MFC application to display diffe
 
 Here are three ways an application can change the mouse pointer in a window:
 
-- Method 1: override the `CWnd::OnSetCursor()` function. Call Windows API `SetCursor()` function to change the pointer.
-- Method 2: register your own window class with the desired mouse pointer, override the `CWnd::PreCreateWindow()` function, and use the newly registered window class to create the window.
-- Method 3: to show the standard hourglass pointer, an application can call the `CCmdTarget::BeginWaitCursor()`, which displays the hourglass, and call `CmdTarget::EndWaitCursor()` to revert back to the default pointer. This scheme works only for the duration of a single message. If the mouse is moved before a call to `EndWaitCursor` is made, Windows sends a `WM_SETCURSOR` message to the window underneath the pointer. The default handling of this message resets the pointer to the default type, the one registered with the class, so you need to override `CWnd::OnSetCursor()` for that window, and reset the pointer back to the hourglass.
+- [Method 1](#code-for-the-method-1): override the `CWnd::OnSetCursor()` function. Call Windows API `SetCursor()` function to change the pointer.
+- [Method 2](#code-for-the-method-2): register your own window class with the desired mouse pointer, override the `CWnd::PreCreateWindow()` function, and use the newly registered window class to create the window.
+- [Method 3](#code-for-the-method-3): to show the standard hourglass pointer, an application can call the `CCmdTarget::BeginWaitCursor()`, which displays the hourglass, and call `CmdTarget::EndWaitCursor()` to revert back to the default pointer. This scheme works only for the duration of a single message. If the mouse is moved before a call to `EndWaitCursor` is made, Windows sends a `WM_SETCURSOR` message to the window underneath the pointer. The default handling of this message resets the pointer to the default type, the one registered with the class, so you need to override `CWnd::OnSetCursor()` for that window, and reset the pointer back to the hourglass.
 
 The following code samples show by example how to change the mouse pointer of a `CView` derived class window by using the three methods.
 

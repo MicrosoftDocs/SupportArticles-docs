@@ -19,9 +19,9 @@ This issue may occur because there are issues with certain fonts on your system,
 ## Diagnose whether fonts are causing this crash
 
 To do this, you have to open the Visual Studio setup log file and look for a particular exception near the end of the log. You can find the setup log file in your `%TEMP%` directory. The Visual Studio setup log file is typically one of the latest log files in your `%TEMP%` directory. The name of the Visual Studio setup log file has the following pattern:  
-dd_<**EXE name** >_<**Time stamp** >.log
+dd_<**EXE name**>_<**Time stamp**>.log
 
-The <**Time stamp** > token in the log name pattern has the time format: yyyymmddhhmmss. The <**EXE name** > token in the log name pattern is the same name as the setup executable. The setup executable name varies by the name of the Visual Studio product that you tried to install. The following are examples of the value in the <**Exe name** > token:
+The <**Time stamp**> token in the log name pattern has the time format: yyyymmddhhmmss. The <**EXE name**> token in the log name pattern is the same name as the setup executable. The setup executable name varies by the name of the Visual Studio product that you tried to install. The following are examples of the value in the <**Exe name**> token:
 
 |Visual Studio product short name|\<EXE name> value|
 |---|---|
@@ -37,8 +37,8 @@ As soon as you find the Visual Studio setup log, you have to look for one of the
 
 |Exception type|Messages|
 |---|---|
-|Invalid font name or path|[70B4:8A7C][< **Time stamp** >]e000: MUX: ERROR: The type initializer for 'System.Windows.Media.FontFamily' threw an exception.<br/><br/>[70B4:8A7C][< **Time stamp** >]e000: MUX: Stack: at System.Windows.Media.Typeface..ctor(FontFamily fontFamily, FontStyle style, FontWeight weight, FontStretch stretch)<br/>at MS.Internal.Text.DynamicPropertyReader.GetTypeface(DependencyObject element)<br/>at MS.Internal.Text.TextProperties.InitCommon(DependencyObject target)<br/>at MS.Internal.Text.TextProperties..ctor(FrameworkElement target, Boolean isTypographyDefaultValue)|
-|Invalid font time stamp|[70B4:8A7C][< **Time stamp** >]e000: MUX: ERROR: The type initializer for 'System.Windows.Media.FontFamily' threw an exception.<br/><br/>[70B4:8A7C][< **Time stamp** >]e000: MUX: Stack: at System.Windows.Media.Typeface..ctor(FontFamily fontFamily, FontStyle style, FontWeight weight, FontStretch stretch)<br/>at MS.Internal.Text.DynamicPropertyReader.GetTypeface(DependencyObject element)<br/>at MS.Internal.Text.TextProperties.InitCommon(DependencyObject target)<br/>at MS.Internal.Text.TextProperties..ctor(FrameworkElement target, Boolean isTypographyDefaultValue)|
+|Invalid font name or path|[70B4:8A7C][<**Time stamp**>]e000: MUX: ERROR: The type initializer for 'System.Windows.Media.FontFamily' threw an exception.<br/><br/>[70B4:8A7C][<**Time stamp**>]e000: MUX: Stack: at System.Windows.Media.Typeface..ctor(FontFamily fontFamily, FontStyle style, FontWeight weight, FontStretch stretch)<br/>at MS.Internal.Text.DynamicPropertyReader.GetTypeface(DependencyObject element)<br/>at MS.Internal.Text.TextProperties.InitCommon(DependencyObject target)<br/>at MS.Internal.Text.TextProperties..ctor(FrameworkElement target, Boolean isTypographyDefaultValue)|
+|Invalid font time stamp|[70B4:8A7C][<**Time stamp**>]e000: MUX: ERROR: The type initializer for 'System.Windows.Media.FontFamily' threw an exception.<br/><br/>[70B4:8A7C][<**Time stamp**>]e000: MUX: Stack: at System.Windows.Media.Typeface..ctor(FontFamily fontFamily, FontStyle style, FontWeight weight, FontStretch stretch)<br/>at MS.Internal.Text.DynamicPropertyReader.GetTypeface(DependencyObject element)<br/>at MS.Internal.Text.TextProperties.InitCommon(DependencyObject target)<br/>at MS.Internal.Text.TextProperties..ctor(FrameworkElement target, Boolean isTypographyDefaultValue)|
 |||
 
 ## Workaround
@@ -55,7 +55,7 @@ To work around this problem, check whether there are invalid characters in your 
 
 1. Open a command prompt, and then locate the `%WINDIR%\Font` directory:
 2. List the fonts in this directory by using the `DIR` command.
-3. Look for any invalid timestamps, such as *01/02/20145* for font <**Bad font** >.TTF.
+3. Look for any invalid timestamps, such as *01/02/20145* for font <**Bad font**>.TTF.
 4. If there are invalid timestamps, correct them. To do this, follow these steps:
     1. Open an elevated PowerShell window, and then input the following command in order to fix the font with the invalid time stamp, substituting your font file name for <**Bad font**>.TTF:
 
