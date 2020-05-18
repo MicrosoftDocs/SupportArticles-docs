@@ -55,11 +55,11 @@ This issue occurs because the database is put into an inconsistent state in the 
 3. You assign the SoFS shares to one or more hosts.
 4. You remove the **Storage Provider** entry that was created for the SoFS server but don't remove the individual shares before removing the entry. This may occur if you remove the SoFS server by using the user interface or you execute the `Remove-SCStorageProvider` PowerShell cmdlet.
 
-When these steps are done in this listed order, the System Center Virtual Machine Manager database table **tbl_ST_StorageFileShare** doesn't have the `AssociatedVolumeID` column set to **NULL** for SoFS shares. In System Center 2012 R2, this issue did not have any effect. However, System Center 2016 Virtual Machine Manager is more dependent on this setting.
+When these steps are done in this listed order, the System Center Virtual Machine Manager database table `tbl_ST_StorageFileShare` doesn't have the `AssociatedVolumeID` column set to **NULL** for SoFS shares. In System Center 2012 R2, this issue did not have any effect. However, System Center 2016 Virtual Machine Manager is more dependent on this setting.
 
 ## Resolution
 
-To resolve this issue, execute the following SQL statement against your System Center Virtual Machine Manager database to correctly update the `AssociatedVolumeID` values in the **tbl_ST_StorageFileShare** table:
+To resolve this issue, execute the following SQL statement against your System Center Virtual Machine Manager database to correctly update the `AssociatedVolumeID` values in the `tbl_ST_StorageFileShare` table:
 
 ```sql
 update tbl_ST_StorageFileShare set AssociatedVolumeID = NULL where AssociatedVolumeID not in (select VolumeID from tbl_ADHC_HostVolume)
