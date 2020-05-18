@@ -118,7 +118,7 @@ Similarly, you can have other mappings for the accounts based on the fields **Is
 
 ## Configure certificate mapping by APPCMD.exe
 
-So far what has been illustrated is achieved using the Configuration Editor, which provides a graphical interface to easily set the configuration. You can achieve the same thing using `APPCMD.exe` commands, and in fact the Configuration Editor does the same thing in the background and adds these settings into the `ApplicationHost.config` file.
+So far what has been illustrated is achieved using the Configuration Editor, which provides a graphical interface to easily set the configuration. You can achieve the same thing using `APPCMD.exe` commands, and in fact the Configuration Editor does the same thing in the background and adds these settings into the *ApplicationHost.config* file.
 
 Configuration Editor also gives you an option to run these commands manually, and it generates the scripts to achieve it from inside the UI itself:
 

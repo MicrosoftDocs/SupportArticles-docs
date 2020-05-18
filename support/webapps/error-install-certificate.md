@@ -15,15 +15,15 @@ _Original KB number:_ &nbsp; 959216
 
 When you try to install a certificate from a `PKCS#7` file by using IIS 7.0 Manager, you may receive one of the following error messages:
 
-Error message 1
+- Error message 1
 
-> Cannot find the certificate request associated with this certificate file. A certificate request must be completed on the computer where it was created.
+    > Cannot find the certificate request associated with this certificate file. A certificate request must be completed on the computer where it was created.
 
-Error message 2
+- Error message 2
 
-> There was an error while performing this operation  
-> Details: CertEnroll::CX509Enrollment::p_InstallResponse: ASN1 bad tag value met.  
-> 0x8009310b (ASN:276)
+    > There was an error while performing this operation  
+    > Details: CertEnroll::CX509Enrollment::p_InstallResponse: ASN1 bad tag value met.  
+    > 0x8009310b (ASN:276)
 
 > [!NOTE]
 > The certificate is installed correctly despite the error message.
@@ -36,7 +36,7 @@ This issue occurs because IIS Manager performs a lookup operation to look for a 
 
 To resolve this problem, add a friendly name to the certificate. Follow these steps to resolve this problem:
 
-1. Click **Start**, click**Run**, type **certmgr.mmc**, and then click**OK**.
+1. Click **Start**, click**Run**, type **certmgr.mmc**, and then click **OK**.
 2. Click **File**, click **Add/Remove Span-ins**.
 3. Select **Certificates**, and click **Add**, and then click **OK**.
 4. Select **Computer account**, and click **Next**, and then click **Finish**.

@@ -28,9 +28,9 @@ Microsoft has confirmed that this is a problem in the Advanced Logging feature o
 ## Resolution 1: Change applicationHost.config directly
 
 > [!IMPORTANT]
-> The following steps involve directly editing the `applicationHost.config` file. Always back up your configuration files before making any changes.
+> The following steps involve directly editing the *applicationHost.config* file. Always back up your configuration files before making any changes.
 
-To work around this issue, edit the `applicationHost.config` file for the Advanced Logging feature using the following steps:
+To work around this issue, edit the *applicationHost.config* file for the Advanced Logging feature using the following steps:
 
 1. Open the `C:\Windows\System32\inetsrv\config\applicationHost.config` file in a text editor.
 2. Locate the `<advancedLogging>` section.
@@ -50,7 +50,7 @@ To work around this issue, edit the `applicationHost.config` file for the Advanc
 
 5. Save the changes and close the text editor.
 
-The cs-username column of the Advanced Logging logs should now be populated. You don't need to restart the IIS services to make this change take effect.
+The `cs-username` column of the Advanced Logging logs should now be populated. You don't need to restart the IIS services to make this change take effect.
 
 ## Resolution 2: Change applicationHost.config by Appcmd.exe
 

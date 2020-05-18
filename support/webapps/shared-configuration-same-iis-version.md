@@ -6,7 +6,7 @@ ms.prod-support-area-path:
 ---
 # IIS Shared Configuration feature requires all servers to run the same version of IIS
 
-This article describes you can't mix and match IIS versions in the same server farm when you use the Shared Configuration feature in Microsoft Internet Information Services (IIS).
+This article describes you can't mix and match Internet Information Services (IIS) versions in the same server farm when you use the Shared Configuration feature in IIS.
 
 _Original product version:_ &nbsp; Internet Information Services 8.0, 8.5  
 _Original KB number:_ &nbsp; 3151973
@@ -26,7 +26,7 @@ For example, the following combinations aren't supported:
 
 ## More information
 
-This behavior is by design. The `Administration.Config` feature includes the modules for use in IIS Manager, and these entries specify the version numbers. When you use unsupported combinations of IIS, IIS Manager can't load the feature components, and the user interface (UI) is missing the icons for those modules.
+This behavior is by design. The *Administration.Config* feature includes the modules for use in IIS Manager, and these entries specify the version numbers. When you use unsupported combinations of IIS, IIS Manager can't load the feature components, and the user interface (UI) is missing the icons for those modules.
 
 For example:  
 Microsoft.Web.Management.Iis.dll from IIS 8 specifies Version=8.0.0.0, and IIS 8.5 specifies Version=8.5.0.0.

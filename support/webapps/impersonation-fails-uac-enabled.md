@@ -7,7 +7,7 @@ ms.reviewer: robmcm
 ---
 # Impersonation fails with IIS Express when User Account Control (UAC) is enabled
 
-This article provides information about resolving an issue that an impersonation fails with IIS Express when User Account Control (UAC) is enabled.
+This article provides information about resolving an issue that an impersonation fails with Internet Information Services (IIS) Express when User Account Control (UAC) is enabled.
 
 _Original product version:_ &nbsp;  Internet Information Services Express  
 _Original KB number:_ &nbsp; 2701070
@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 2701070
 
 Consider the following scenario:
 
-You're running a web application in Internet Information Services (IIS) Express with Visual Studio. The application is configured for Anonymous authentication, and uses impersonation of a service account to access a backend SQL database. When browsing to the web application with a web browser, an error message similar to the following example is displayed:
+You're running a web application in IIS Express with Visual Studio. The application is configured for Anonymous authentication, and uses impersonation of a service account to access a backend SQL database. When browsing to the web application with a web browser, an error message similar to the following example is displayed:
 
 > Server Error in /my_app Application.  
 > Configuration Error  

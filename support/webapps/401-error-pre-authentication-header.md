@@ -7,7 +7,7 @@ ms.reviewer: bretb, mlaing
 ---
 # An unexpected 401.1 status is returned when using Pre-Authentication headers with IE and IIS
 
-This article provides information about resolving ans issue when you use Internet Explorer to browser to a web application hosted on Microsoft Internet Information Services (IIS), an unexpected 401.1 status is returned with Pre-Authentication headers.
+This article provides information about resolving an issue when you use Internet Explorer to browser to a web application hosted on Microsoft Internet Information Services (IIS), an unexpected 401.1 status is returned with Pre-Authentication headers.
 
 _Original product version:_ &nbsp; Internet Information Services 8.0, Internet Explorer 10, 9  
 _Original KB number:_ &nbsp; 2749007
@@ -16,7 +16,11 @@ _Original KB number:_ &nbsp; 2749007
 
 Consider the following scenario:
 
-You use Windows Internet Explorer to browse to a web application hosted on IIS 7.0 or higher. The Internet Explorer browser is configured to use Pre-Authentication, and Kernel Mode Authentication is enabled in IIS. Additionally, this web request being sent by Internet Explorer is the first request to be sent to the IIS application. In this scenario, IIS may return an HyperText Transfer Protocol (HTTP) 401.1 response to Internet Explorer in response to the browser's request. The web browser may prompt you to enter your username and password, or the HTTP 401.1 error message may be displayed in the browser window.
+- You use Windows Internet Explorer to browse to a web application hosted on IIS 7.0 or higher.
+- The Internet Explorer browser is configured to use Pre-Authentication, and Kernel Mode Authentication is enabled in IIS.
+- Additionally, this web request being sent by Internet Explorer is the first request to be sent to the IIS application.
+
+In this scenario, IIS may return an HyperText Transfer Protocol (HTTP) 401.1 response to Internet Explorer in response to the browser's request. The web browser may prompt you to enter your username and password, or the HTTP 401.1 error message may be displayed in the browser window.
 
 ## Cause
 
@@ -49,7 +53,7 @@ To modify this behavior in IIS, disable Kernel Mode Authentication for the IIS w
 1. Open Internet Information Services (IIS) Manager by running the following command from an administrative command prompt:
 
     ```console
-    `%windir%\System32\inetsrv\inetmgr.exe`
+    %windir%\System32\inetsrv\inetmgr.exe
     ```
 
 2. In the **Connections** pane, expand the server name, expand **Sites**, and then the site, application, or Web service for which you want to disable Kernel Mode Authentication.

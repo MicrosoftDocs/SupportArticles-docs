@@ -16,8 +16,7 @@ _Original KB number:_ &nbsp; 2023855
 When you perform Web Deploy operations remotely through IIS Manager and are using the Web Management Service (WMSVC), you may receive an error message that's similar to the following example:
 
 > An error occurred when the request was processed on the remote computer.  
-> Attempted to perform an unauthorized operation. \<Web Deploy Provider Name>  
-> http://go.microsoft.com/fwlink/?LinkId=178034
+> Attempted to perform an unauthorized operation.
 
 ## Cause
 
@@ -47,7 +46,7 @@ Below are some of the common issues that may be met in this scenario:
 - Look for entries in the logs that contain failures such as:
 
     > Details: No rule was found that could authorize user server1\siteowner, provider appPoolConfig, operation Read, path DefaultAppPool. In this case, the provider appPoolConfig isn't authorized and the user tried to use a provider for which the user didn't have permissions.
-- Another common error is if the `RunAs` user that is being used to create applications doesn't have proper access to configuration. In this case, Process Monitor is a useful tool for determining where an access denied error may be coming from.
+- Another common error is if the RunAs user that is being used to create applications doesn't have proper access to configuration. In this case, Process Monitor is a useful tool for determining where an access denied error may be coming from.
 
 ## References
 

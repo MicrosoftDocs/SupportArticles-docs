@@ -15,11 +15,11 @@ _Original KB number:_ &nbsp; 2693489
 
 You have configured ARR with load balancing of two or more IIS servers. Your website is configured on an HTTP port other than port 80, or your website address isn't a fully qualified domain name (FQDN). You also have enabled client affinity in ARR. In this scenario, ARR client affinity fails. This could cause problems with a website that relies on session-based data for a request, because the request was forwarded to an IIS server other than the original one.
 
-Cause
+### Cause for Issue 1
 
 This issue occurs due to ARR generating the session cookie with domain parameters that include the HTTP port number. This makes the web browser ignore the cookie for the website, causing affinity to fail on the next request due to the missing cookie.
 
-Resolution
+### Resolution for Issue 1
 
 This issue has been fixed as part of this software update to ARR.
 
@@ -27,11 +27,11 @@ This issue has been fixed as part of this software update to ARR.
 
 When proxying a request using Secure Socket Layers (SSL) to an application server, ARR doesn't enforce Common Name Restrictions on the SSL certificate hosted on the application server.
 
-Cause
+### Cause for Issue 2
 
 In a standard IIS web application scenario where ARR isn't configured, this scenario would result in an error message in the web browser alerting the user that the website's address doesn't match the address in the security certificate; the user would then be given the opportunity to deny the name mismatch or to accept it and continue browsing to the site. The initial release of ARR doesn't have support for this alert functionality and the certificate name mismatch was silently ignored.
 
-Resolution
+### Resolution for Issue 2
 
 As part of this software update release, support has been added to allow administrators to configure ARR to enforce the common name match requirement. Full documentation of this new feature can be found in
 [ARR: Support Added for WINHTTP_OPTION_SECURITY_FLAGS](/iis/extensions/configuring-application-request-routing-arr/arr-support-added-for-winhttpoptionsecurityflags).

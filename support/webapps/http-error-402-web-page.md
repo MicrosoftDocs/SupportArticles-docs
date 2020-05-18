@@ -7,14 +7,14 @@ ms.reviewer: cochen
 ---
 # HTTP Error 404.2 when you visit a web page that is hosted on a computer that is running IIS 7.0
 
-This article provides information about resolving an issue that an unexpected error may be thrown when visit a web page that is hosted on a computer that is running IIS 7.0.
+This article provides information about resolving an issue that an unexpected error may be thrown when visit a web page that is hosted on a computer that is running Internet Information Services (IIS) 7.0.
 
 _Original product version:_ &nbsp; Internet Information Services 7.0  
 _Original KB number:_ &nbsp; 942040
 
 ## Symptoms
 
-When you try to visit a Web page that is hosted on a computer that is running Internet Information Services (IIS) 7.0, you may receive the following error message:
+When you try to visit a Web page that is hosted on a computer that is running IIS 7.0, you may receive the following error message:
 
 > Server Error in Application "**application name**"  
 > HTTP Error 404.2 - Not Found
