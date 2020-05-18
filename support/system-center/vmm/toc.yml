@@ -10,6 +10,8 @@
   items:
   - name: Cluster overcommit algorithm approaches
     href: cluster-overcommit-algorithm-details.md
+  - name: Enable the event-based refresher mode
+    href: enable-event-based-refresher-mode.md
   - name: Error 415 adding hosts
     href: adding-host-error-415.md
   - name: Error 444 adding highly available cluster
@@ -26,6 +28,12 @@
     href: incorrect-agent-status.md
   - name: VMM crashes with reserved characters
     href: reserved-characters-cause-vmm-crash.md
+- name: Networking Issues
+  items:
+  - name: Create logical switches on Nano Servers
+    href: create-nano-server-logical-switches.md
+  - name: Recover gateways deployed through VMM
+    href: recover-gateways.md
 - name: Operations Manager integration
   items:
   - name: Error 11823 integrating VMM with OpsMgr
@@ -34,6 +42,8 @@
   items:
   - name: Can't connect to a Hyper-V VM
     href: connecting-hyper-v-vm-fails.md
+  - name: Can't start generation 2 virtual machines
+    href: cannot-start-generation-2-vms.md
   - name: Empty VM list in WAP tenant portal
     href: wap-tenant-portal-empty-vm-list.md
   - name: Error 12700 attaching ISO files
@@ -48,8 +58,14 @@
     href: deploying-vm-error-2931.md
   - name: Error 22042 deploying a service template
     href: deploy-service-template-error-22042.md
+  - name: VMM activity fails error HostAgentFail (2912)
+    href: vmm-activity-hostagentfail-2912.md
 - name: Virtual Machine migration and conversion
   items:
+  - name: Collect VMM storage traces
+    href: collect-vmm-traces.md
+  - name: Convert between VHD and VHDX formats
+    href: convert-between-vhd-vhdx-formats.md
   - name: Error 11028 migrating a VM
     href: migrating-vm-error-11028.md
 - name: VMM service and console failures
@@ -60,8 +76,16 @@
     href: fix-scvmm-801-errors.md
 - name: Setup
   items:
+  - name: Errors when using SoFS shares
+    href: errors-using-scale-out-file-server-shares.md
   - name: Fails to upgrade SCVMM
     href: database-error-upgrading-scvmm.md
+  - name: HostAgentBadSharePathname error installing VMM
+    href: vmm-installation-hostagentbadsharepathname-error.md
+  - name: Install and configure SQL Analysis Server
+    href: install-configure-sql-analysis-server.md
+  - name: Reinstall a VMM agent on a host
+    href: reinstall-vmm-agent.md
   - name: Server App-V Agent custom actions
     href: server-app-v-agent-custom-actions.md
   - name: Server App-V Sequencer custom actions
