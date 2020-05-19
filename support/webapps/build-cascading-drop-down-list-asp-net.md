@@ -55,7 +55,7 @@ A cascading drop-down list is a series of dependent `DropDownList` controls in w
 
 4. Open the *WebFormName.aspx* file of the Web form, and then change the \<asp:ScriptManager> tag as follows:
 
-    ```csharp
+    ```aspx
     <asp:ScriptManager ID="ScriptManager1" runat="server">
         <Services>
             <asp:ServiceReference Path="~/WebServiceName.asmx" />
@@ -69,7 +69,7 @@ A cascading drop-down list is a series of dependent `DropDownList` controls in w
 
 5. Set the `EnableEventValidation` property of the Web page to **false** in the source code of the *WebFormName.aspx* file, as shown in the following example.
 
-    ```csharp
+    ```aspx
     <%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Default.aspx.vb" Inherits="KB_CascadingDDL_VB._Default"
      EnableEventValidation="false" %>
     ```
