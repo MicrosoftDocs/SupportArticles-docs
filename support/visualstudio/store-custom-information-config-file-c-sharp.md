@@ -183,9 +183,7 @@ Key: Key2 Value:2
 
 - The configuration file must be saved in the same folder as its associated application.
 - You must use the following syntax for the configuration file name:  
-    \<ApplicationName>.\<ApplicationType>.config
-
-    where \<ApplicationName> is the name of the application. \<ApplicationType> is the type of application (for example, .exe), and .config is the required suffix.
+    \<ApplicationName>.\<ApplicationType>.config where \<ApplicationName> is the name of the application. \<ApplicationType> is the type of application (for example, .exe), and .config is the required suffix.
 
 ## References
 

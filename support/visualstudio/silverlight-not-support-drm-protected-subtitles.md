@@ -20,6 +20,6 @@ You're playing a DRM protected video in Microsoft Silverlight, but it doesn't sh
 
 Silverlight doesn't display DRM protected subtitles.
 
-## More Information
+## More information
 
 Subtitling is a synchronized, optional additional format used to deliver text content of an audio stream. Typically, subtitles are displayed through a client-side media player.

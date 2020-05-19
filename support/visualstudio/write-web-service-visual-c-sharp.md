@@ -20,9 +20,7 @@ The following items describe the recommended hardware, software, network infrast
 - Microsoft Internet Information Server
 - Microsoft Visual Studio .NET
 
-This article assumes that you're familiar with the following topic:
-
-- How to use the Visual Studio .NET integrated development environment
+This article assumes that you're familiar with the topic: How to use the Visual Studio .NET integrated development environment
 
 ## Write an .asmx web service
 

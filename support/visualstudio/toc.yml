@@ -174,6 +174,8 @@
     href: performance-crash-issue-vs.md
   - name: Screen Readers can't read VS tool windows
     href: screen-readers-not-read-vs-windows.md
+  - name: VC 2013 crashes at startup because of CLR settings
+    href: vc-2013-crashes-startup.md
   - name: VS 2012 crashes with StarDist-3
     href: vs-2012-crash-stardist-3.md
 
@@ -187,8 +189,6 @@
     href: linker-warning-managed-extension-c-dll-project.md
   - name: LNK1000 error when using /WHOLEARCHIVE switch
     href: lnk1000-error-wholearchive-switch.md
-  - name: Stack corruption when you call Oi in VC++
-    href: stack-corruption-when-you-call-oi-vcpp.md
   - name: The referenced projects not exist when building a solution
     href: vs-2010-build-fails.md
   - name: Unnested loops cause C1061 compiler error

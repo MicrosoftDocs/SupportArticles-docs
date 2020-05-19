@@ -1090,13 +1090,13 @@ namespace Microsoft.VisualStudio.Debugger.InteropEE
 
         public void Init()
         {
-        ulAppDomainID = 0;
-        guidModule = Guid.Empty;
-        tokClass = 0;
-        addr.dwKind = Microsoft.VisualStudio.Debugger.Interop.enum_ADDRESS_KIND.ADDRESS_KIND_METADATA_METHOD;
-        addr.unionmember.addrMethod.tokMethod = 0;
-        addr.unionmember.addrMethod.dwOffset = 0;
-        addr.unionmember.addrMethod.dwVersion = 1;
+            ulAppDomainID = 0;
+            guidModule = Guid.Empty;
+            tokClass = 0;
+            addr.dwKind = Microsoft.VisualStudio.Debugger.Interop.enum_ADDRESS_KIND.ADDRESS_KIND_METADATA_METHOD;
+            addr.unionmember.addrMethod.tokMethod = 0;
+            addr.unionmember.addrMethod.dwOffset = 0;
+            addr.unionmember.addrMethod.dwVersion = 1;
         }
     }
 
