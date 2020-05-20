@@ -29,7 +29,7 @@ So we need to create logical switch in SCVMM considering the above constraint:
 1. Sign in to SCVMM console, and then go to **Fabric** > **Networking** > **Logical switch**.
 2. Select **Create new logical switch**, and then provide the name for logical switch. Select **Uplink mode** as **Embedded Team**.
 
-   ![Uplink mode is selected as Embedded Team](./media/create-nano-server-logical-switches/4464068_en_1.png)
+   ![Uplink mode is selected as Embedded Team](./media/create-nano-server-logical-switches/uplink-mode.png)
 
 3. Go through the wizard and select the required options.
 
@@ -40,13 +40,13 @@ So we need to create logical switch in SCVMM considering the above constraint:
 
       Another key difference between NIC teaming and SET is that NIC teaming provides the choice of three different teaming modes, while SET supports only **Switch Independent** mode.
 
-      ![Teaming mode is selected as Switch Independent](./media/create-nano-server-logical-switches/4464069_en_1.png)
+      ![Teaming mode is selected as Switch Independent](./media/create-nano-server-logical-switches/switch-independent.png)
 
 4. Now we can apply the above logical switch to the Nano host managed by SCVMM.
 
 If we select other **Teaming mode** as show below e.g. LACP, we will get an error while applying to Nano host:
 
-![Teaming mode is selected as LACP](./media/create-nano-server-logical-switches/4464071_en_1.png)
+![Teaming mode is selected as LACP](./media/create-nano-server-logical-switches/teaming-mode-lacp.png)
 
 > Error (2912)  
 > An internal error has occurred trying to contact the 'nano.hoster.lab' server: : .  

@@ -27,7 +27,7 @@ When you try to install System Center 2012 Virtual Machine Manager (VMM 2012 R2 
 > [!NOTE]  
 > In this error message, *Server-SCVMM-001.Contoso.com* represents the actual server name. This error message is shown in the following screen shot.
 
-![Setup cannot be completed error](./media/vmm-installation-hostagentbadsharepathname-error/3004796.png)
+![Setup cannot be completed error](./media/vmm-installation-hostagentbadsharepathname-error/setup-error.png)
 
 Additionally, the following entry will be logged in the Installer (MSI) log (`%ProgramData%\VMMLogs\SetupWizard.log`):
 
