@@ -1,6 +1,6 @@
 ---
-title: Video calls not working with Logitech Brio Webcam
-description: You cannot start a Skype for Business video call with a Logitech Brio Webcam with firmware update (version 2.0.12).
+title: Video calls not working with Logitech BRIO Webcam
+description: You cannot start a Skype for Business video call with a Logitech BRIO Webcam with firmware update (version 2.0.12).
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -18,11 +18,11 @@ appliesto:
 - Lync 2010
 ---
 
-# Skype for Business video calls not working with Logitech Brio Webcam
+# Skype for Business video calls not working with Logitech BRIO Webcam
 
 ## Symptoms
 
-The firmware update of Logitech Brio Webcam (version**2.0.12**) introduces an additional video steam to enable Windows Hello face authentication. However, you cannot start a Skype for Business video call in a Logitech Brio Webcam because of the additional stream.
+The firmware update of Logitech BRIO Webcam (version**2.0.12**) introduces an additional video steam to enable Windows Hello face authentication. However, you cannot start a Skype for Business video call in a Logitech BRIO Webcam because of the additional stream.
 
 **Third-party information disclaimer** 
 

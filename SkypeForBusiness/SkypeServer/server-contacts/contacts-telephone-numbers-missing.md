@@ -25,11 +25,11 @@ appliesto:
 
 When you use one of the following methods to call a user in Microsoft Lync 2013 or Microsoft Skype for Business, the telephone number (or numbers) may not be displayed:
 
-- You right-click the contact, as in the following screen shot:
+- You right-click the contact, as in the following screenshot:
 
    ![Select Contact card](./media/contacts-telephone-numbers-missing/select-contact.jpg)
 
-- You select the call menu, as in the following screen shot:
+- You select the call menu, as in the following screenshot:
 
    ![Select call menu](./media/contacts-telephone-numbers-missing/select-call-menu.jpg)   
 
@@ -55,7 +55,7 @@ To work around this issue, use one of the following methods as a user with admin
 
   ![Enable show my picture](./media/contacts-telephone-numbers-missing/enable-show-my-picture.jpg)
 
-- Expand the contact card details before you try to call that particular user, as in the following screen shot:
+- Expand the contact card details before you try to call that particular user, as in the following screenshot:
 
   ![Expand contact card details](./media/contacts-telephone-numbers-missing/expand-contact-card.jpg)
 

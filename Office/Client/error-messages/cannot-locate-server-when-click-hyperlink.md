@@ -69,11 +69,11 @@ This problem occurs when the following conditions are true:
 
 - The ForceShellExecuteregistry key is not present in the following location or is not set to 1:
 
-    For 32 bit Office Versions installed on 64 bit OperatingSystems
+    For 32-bit Office Versions installed on 64-bit OperatingSystems
     
     HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\9.0\Common\Internet
     
-    For 32 Bit Office Versions installed on 32 bit Operating Systems or 64 Bit Office Versionsinstalled on 64 bit Operating Systems
+    For 32 Bit Office Versions installed on 32 bit Operating Systems or 64 Bit Office Versions installed on 64-bit Operating Systems
     
     HKEY_LOCAL_MACHINE \Software\Microsoft\Office\9.0\Common\Internet   
 
@@ -95,23 +95,23 @@ To fix this problem automatically, select the **[Download](https://download.micr
 
 ### Let me fix it myself
 
-To work around this issue, either add the ForceShellExecute subkey, if it is not present, and set the Value data, or if it is present, set the Valuedata of the ForceShellExecute subkey.
+To work around this issue, either add the ForceShellExecute subkey, if it is not present, and set the Value data, or if it is present, set the Value data of the ForceShellExecute subkey.
 
 ### Adding the Internet Subkey to the Registry and Setting the Value Data
 
 1. Quit any programs that are running.   
 2. select Start, and then select Run. Type regedit in the Open box, and then select OK.   
-3. In Registry Editor, browse to one of the following subkey (create the keys when they do not exist):
+3. In Registry Editor, browse to one of the following subkeys (create the keys when they do not exist):
 
-    For a 32 Bit version of Office on 64 bit version of Windows
+    For a 32-Bit version of Office on 64-bit version of Windows
     
     HKLM\SOFTWARE\Wow6432Node\Microsoft\Office\9.0\Common\Internet\
     
-    For a 32 Bit version of Office on 32 bit version of Windows
+    For a 32-Bit version of Office on 32-bit version of Windows
     
     HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\9.0\Common\Internet
     
-    For a 64 Bit version of Office on 64 bit version of Windows
+    For a 64-Bit version of Office on 64-bit version of Windows
     
     HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\9.0\Common\Internet
 
@@ -136,4 +136,4 @@ In this case, the Urlmon.dll file sends a request to get a file via http:// thro
 
 The Urlmon.dll file gets this and simply returns the error message mentioned earlier. The error means that the request failed, but it never states why it failed.
 
-The workaround is to simply use a ShellExecute() on the URL. This allows the operating system to start the URL on the default browser. If the default browser is not restricted by the proxy server, the proper page is displayed.
+The workaround is to use a ShellExecute() on the URL. This allows the operating system to start the URL on the default browser. If the default browser is not restricted by the proxy server, the proper page is displayed.

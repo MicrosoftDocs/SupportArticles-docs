@@ -1,5 +1,5 @@
 ---
-title: Unable to access Google Gstatic through Teams
+title: Unable to access Google GSTATIC through Teams
 ms.author: v-todmc
 author: todmccoy
 ms.date: 4/9/2020
@@ -17,18 +17,18 @@ ms.custom:
 - CI 113425
 - CSSTroubleshoot 
 ms.reviewer: scapero
-description: Describes an issue where Gstatic can't be accessed through Microsoft Teams. 
+description: Describes an issue where GSTATIC can't be accessed through Microsoft Teams. 
 ---
 
-# Microsoft Teams requires access to Google Gstatic
+# Microsoft Teams requires access to Google GSTATIC
 
 ## Symptom
 
-You are unable to access Google Gstatic through Microsoft Teams. 
+You are unable to access Google GSTATIC through Microsoft Teams. 
 
 ## Cause
 
-Teams presently requires access (TCP port 443) to the Google ssl.gstatic.com service for all users; this is true even if you're not using Gstatic. Teams will remove this requirement soon (early 2020).
+Teams presently requires access (TCP port 443) to the Google **ssl.gstatic.com** service for all users; this is true even if you're not using GSTATIC. Teams will remove this requirement soon (early 2020).
 
 ## Resolution
 
