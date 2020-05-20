@@ -1,6 +1,9 @@
 - name: Index
   href: index.yml
 
+- name: Host Integration Server
+  href: host-integration-server/welcome-support-his.md
+
 - name: Biztalk Server support
   href: biztalk/welcome-support-biztalk.md
   
