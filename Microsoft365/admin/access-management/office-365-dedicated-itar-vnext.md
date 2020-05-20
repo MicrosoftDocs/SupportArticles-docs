@@ -1,5 +1,5 @@
 ---
-title: Full Access permissions doesn't work
+title: Full Access permissions don't work
 description: Describes an issue in which Full Access permissions are not working after a migration to Office 365 dedicated/ITAR (vNext). Provides a resolution.
 author: simonxjx
 manager: dcscontentpm
@@ -31,10 +31,10 @@ Full Access permissions should be successfully migrated. However, if a provision
 
 ## Resolution
 
-To make sure that no the migration does not have any negative effects, section **3.3.8.1 Translate On-Premises SIDs** of the [Exchange vNext Topology and General Guidelines](https://sharepoint.partners.extranet.microsoft.com/sites/MMS%20Knowledge%20Base/Release%20Docs/Convergence/Content/EXO/EXO-D%20vNext%20Topology%20Upgrade%20Customer%20Environment%20Configuration%20Sample.docx) document should be completed. This section states the following: 
+To make sure that no the migration does not have any negative effects, section **3.3.8.1 Translate On-Premises SIDs** of the [Exchange vNext Topology and General Guidelines](https://sharepoint.partners.extranet.microsoft.com/sites/MMS%20Knowledge%20Base/Release%20Docs/Convergence/Content/EXO/EXO-D%20vNext%20Topology%20Upgrade%20Customer%20Environment%20Configuration%20Sample.docx) document should be completed. This section states as follows: 
 
 *The Dedicated service, via Active Directory Trusts, has allowed customers to set permissions on cloud objects using on-premises security identifiers (SIDs). This is a practice that does not work for vNext as there will no longer be AD trusts to the on-premises directory. To ensure that permissions to shared mailboxes are not lost during migration, you must ensure that all permissions are set using cloud objects.*
 
 - *To facilitate this, the Microsoft team will provide a report of all on-premises SIDs being used to permission cloud mailboxes.*    
-- *You must ensure all these objects are in scope of MMSSPP synchronization.*    
+- *Make sure that all these objects are in scope of MMSSPP synchronization.*    
 - *Once all the objects have been synchronized to the Dedicated directory, the Microsoft team will translate the permissions to the cloud objects so that permissions persist during migration to vNext.*

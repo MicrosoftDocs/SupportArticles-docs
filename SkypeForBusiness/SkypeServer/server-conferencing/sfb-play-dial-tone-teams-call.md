@@ -31,7 +31,7 @@ This issue occurs because new changes have been made in the HID feature for Isla
 
 ## Workaround
 
-Set **PlayAbbreviatedDialTone** to "true" in the client policy. If PlayAbbreviatedDialTone is set to True, a 3 seconds dial tone will be played when a Skype for Business-compatible handset is taken off the hook. To learn more, read [Set-CsClientPolicy](https://docs.microsoft.com/powershell/module/skype/set-csclientpolicy?view=skype-ps). To set the value, run the following command:
+Set **PlayAbbreviatedDialTone** to "true" in the client policy. If PlayAbbreviatedDialTone is set to True, a 3-seconds dial tone will be played when a Skype for Business-compatible handset is taken off the hook. To learn more, read [Set-CsClientPolicy](https://docs.microsoft.com/powershell/module/skype/set-csclientpolicy?view=skype-ps). To set the value, run the following command:
 
 ```powershell
 Set-CsClientPolicy -Identity RedmondClientPolicy  -PlayAbbreviatedDialTone $True
@@ -41,6 +41,6 @@ Set-CsClientPolicy -Identity RedmondClientPolicy  -PlayAbbreviatedDialTone $True
 
 To improve the user's experience, Microsoft has rolled out a new HID feature to enable **Mute/Unmute** for Island mode users in Teams. Here are a few notes and requirements regarding this new feature:
  
-1. This feature applies to Windows (32 bit) only. MacOS experience is unchanged.
+1. This feature applies to Windows (32 bit) only. macOS experience is unchanged.
 2. You must update Skype for Business client to version 16.0.11020.10000 or higher. If you don't, HID will remain disabled in Teams.
 3. The new feature allows the use of the **Mute/Unmute** HID controls. The **Hook/OffHook** and other HID controls won't work. Volume control and ring tone aren't affected.

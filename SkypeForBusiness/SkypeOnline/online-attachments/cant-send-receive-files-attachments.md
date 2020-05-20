@@ -54,7 +54,7 @@ Transferring files to Skype contacts isn't supported.
 
 By default, Skype for Business Online is configured to prevent users from sending files through IM that have the following file name extensions: 
 
-.ade, .adp, .app, .asp, .bas, .bat, .cer, .chm, .cmd, .com, .cpl, .crt, .csh, .exe, .fxp, .grp, .hlp, .hta, .inf, .ins, .isp, .its, .js, .jse, .ksh, .lnk, .mad, .maf, .mag, .mam, .maq, .mar, .mas, .mat, .mau, .mav, .maw, .mda, .mdb, .mde, .mdt, .mdw, .mdz, .msc, .msi, .msp, .mst, .ocx, .ops, .pcd, .pif, .pl, .pnp, .prf, .prg, .pst, .reg, .scf, .scr, .sct, .shb, .shs, .tmp, .url, .vb, .vbe, .vbs, .vsd, .vsmacros, .vss, .vst, .vsw, .ws, .wsc, .wsf, .wsh
+ade, adp, app, asp, bas, bat, cer, chm, cmd, com, cpl, crt, csh, exe, fxp, grp, hlp, hta, inf, ins, isp, its, js, jse, ksh, lnk, mad, maf, mag, mam, maq, mar, mas, mat, mau, mav, maw, mda, mdb, mde, mdt, mdw, mdz, msc, msi, msp, mst, ocx, ops, pcd, pif, pl, pnp, prf, prg, pst, reg, scf, scr, sct, shb, shs, tmp, url, vb, vbe, vbs, vsd, vsmacros, vss, vst, vsw, ws, wsc, wsf, wsh
 
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
 

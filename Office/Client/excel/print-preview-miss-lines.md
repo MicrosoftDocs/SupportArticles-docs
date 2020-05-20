@@ -27,4 +27,4 @@ Thin lines or lines at certain positions in an Excel spreadsheet are not rendere
 
 ##  More Information
 
-Print preview is implemented by creating and displaying a metafile. If the file has a very small print scaling setting, such as less than 50 percent, thin lines or lines at certain positions are not rendered in the print preview area. This is because the preview graphic is too small to display many lines or lines that are too thin.
+Print preview is implemented by creating and displaying a metafile. If the file has a small print scaling setting, such as less than 50 percent, thin lines, or lines at certain positions are not rendered in the print preview area. This is because the preview graphic is too small to display many lines or lines that are too thin.
