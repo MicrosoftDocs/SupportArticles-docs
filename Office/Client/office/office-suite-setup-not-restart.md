@@ -1,6 +1,6 @@
 ---
-title: Office 2010 Setup program not restart
-description: Describes a problem in which you cannot rerun a Office suite installation or Office program installation after the first installation is interrupted.
+title: Office 2010 Setup programs not restart
+description: Describes a problem in which you cannot rerun an Office suite installation or Office program installation after the first installation is interrupted.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -58,7 +58,7 @@ In Windows Vista and Windows 7
 3. Type attrib -h rgstrtn.lck, and then press ENTER.   
 4. Type del rgstrtn.lck, and then press ENTER.   
 5. Type dir /b /od /ad, and then press ENTER.   
-6. Type rd /q /s "\<folder names>",and then press ENTER.
+6. Type rd /q /s "\<folder names>", and then press ENTER.
 
    **Note** The \<folder names> are the folder names that are listed after you run the command in step 5. There should be a space between each folder-name. For example: rd /q /s "foldername1" "foldername2" "foldername3"   
 7. Type exit, and then press ENTER.   

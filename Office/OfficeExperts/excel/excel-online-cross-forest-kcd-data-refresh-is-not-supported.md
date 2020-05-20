@@ -51,7 +51,7 @@ If you dig deeper into this issue and pull Office Online Server logs, you will s
 
 **The above process causes the following:**
 
-*Timestamp* w3wp.exe (0x4D94) 0x193C Excel Online Excel Calculation Services a1tj8 Medium CredentialsProvider.**TranslateSidToUpn translation** elapsed 285ms
+*Timestamp* w3wp.exe (0x4D94) 0x193C Excel Online Excel Calculation Services a1tj8 Medium CredentialsProvider.**TranslateSidToUpn translation** elapsed 285 ms
 
 *Timestamp* w3wp.exe (0x4D94) 0x193C Excel Online Excel Calculation Services a1tj0 Verbose CredentialsDelegation.UpnLogon: **upn is null (ok on DataCenter)**
 
@@ -60,7 +60,7 @@ If you dig deeper into this issue and pull Office Online Server logs, you will s
 
 *Timestamp* w3wp.exe (0x4D94) 0x193C Excel Online Excel Calculation Services c9la Medium CredentialsProvider.GetCredentials: **Failed to get WindowsIdentity**
 
-*Timestamp* w3wp.exe (0x4D94) 0x193C Services Infrastructure Services Infrastructure Logging ai2vt Verbose An event was fired: id: NoIntegratedConnectionsAllowed, eventId: 5252, eventType: Warning, eventMessage: **Credential delegation failed because Excel Services Application was unable to obtain a Windows Identity.  [Session: TRUNCATED User: i:0#.w|domainb\user1]**
+*Timestamp* w3wp.exe (0x4D94) 0x193C Services Infrastructure Logging ai2vt Verbose An event was fired: id: NoIntegratedConnectionsAllowed, eventId: 5252, eventType: Warning, eventMessage: **Credential delegation failed because Excel Services Application was unable to obtain a Windows Identity.  [Session: TRUNCATED User: i:0#.w|domainb\user1]**
 
 *Timestamp* w3wp.exe (0x4D94) 0x193C Excel Online Excel Calculation Services oyyh Verbose CredentialsProvider.ProcessCancel: **Processing cancel of the credentials for external source with data connection name: EXAMPLEDATASOURCE**
 
@@ -70,7 +70,7 @@ You will also notice that there are no calls to the other forest from Office Onl
 
 ## Workaround
 
-To perform any data refresh action, Office Online Server requires the Windows Identity of the user which is collected by the Claims to Windows Token Service. You will notice in the logs above that Office Online Server doesn't even try to query DomainB. This is a product limitation. Currently, Office Online Server only tries to query domains located within the same forest as itself.
+To perform any data refresh action, Office Online Server requires the Windows Identity of the user that is collected by the Claims to Windows Token Service. You will notice in the logs above that Office Online Server doesn't even try to query DomainB. This is a product limitation. Currently, Office Online Server only tries to query domains located within the same forest as itself.
 
 To work around this issue, use the following methods:
 

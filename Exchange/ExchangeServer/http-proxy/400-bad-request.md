@@ -1,6 +1,6 @@
 ---
 title: HTTP 400 Bad Request when proxying HTTP requests from an Exchange Server
-description: Describes a situation in which you receive a "HTTP 400 Bad Request" error message when proxying HTTP requests from an Exchange Server to a previous version of Exchange Server.
+description: Describes a situation in which you receive an "HTTP 400 Bad Request" error message when proxying HTTP requests from an Exchange Server to a previous version of Exchange Server.
 author: simonxjx
 audience: ITPro
 ms.service: exchange-powershell
@@ -76,5 +76,5 @@ To fix this issue, use one of the following methods:
 
     > [!NOTE]
     > The value should be 65536 for Exchange Server. It should not be 65534, as indicated in [KB 2020943](https://support.microsoft.com/help/2020943). That setting is for Internet Information Services (IIS). This difference is because of additional requirements for Exchange Server.    
-- In some cases, a **MaxFieldLength** value of 65536may not fix the issue. If this occurs, we recommend that you reduce the size of the user's access token by removing groups instead of increasing the value.    
+- In some cases, a **MaxFieldLength** value of 65536 may not fix the issue. If this occurs, we recommend that you reduce the size of the user's access token by removing groups instead of increasing the value.    
 - Increasing the value of **MaxRequestBytes** to be greater 65536 has risks. Therefore, we do not recommend that you do this. These risks are discussed in detail in [KB 820129](https://support.microsoft.com/help/820129). This key is assigned a warning code of 1 to indicate a high risk for changing the default value.

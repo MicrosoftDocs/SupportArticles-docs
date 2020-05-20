@@ -1,6 +1,6 @@
 ---
 title: Insufficient access rights to perform the operation when move or enable user
-description: Lync Server Control Panel returns that error "Insufficient access rightsmove user or enable user command. This issue occurs when the user account t to perform the operation" when attempting a hat needs to be enabled for Lync or moved to a Lync registrar pool is a member of a protected Windows security group.
+description: Lync Server Control Panel returns that error "Insufficient access rights move user or enable user command. This issue occurs when the user account t to perform the operation" when attempting a hat needs to be enabled for Lync or moved to a Lync registrar pool is a member of a protected Windows security group.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -29,7 +29,7 @@ Active Directory operation failed on "DC1.contoso.com". You cannot retry this op
 
 The error that is described in the SYMPTOMS section of this article is caused by the combination of the following two reasons:
 
-- The user account that is part of the Lync Server move or enable operation is a member of an Active Directory, directory service protected domain security group. Since the user account belongs to a Windows Server protected domain security group it is unable to keep the RTCUniversalUserAdmins and RTCUniversalUserReadOnlyGroup Lync Server Universal Security groups and their permissions as Access Control Entries (ACEs) for the protected domain security group's default Access Control List (ACL).   
+- The user account that is part of the Lync Server move or enable operation is a member of an Active Directory, directory service protected domain security group. Since the user account belongs to a Windows Server protected domain security group, it is unable to keep the RTCUniversalUserAdmins and RTCUniversalUserReadOnlyGroup Lync Server Universal Security groups and their permissions as Access Control Entries (ACEs) for the protected domain security group's default Access Control List (ACL).   
 - The Lync Server Control Panel is not designed to delegate the permissions of RTCUniversalUserAdmins and RTCUniversalUserReadOnlyGroup Lync Server Universal Security groups that are needed to complete the user account move or enable operation.    
 
 > [!NOTE]

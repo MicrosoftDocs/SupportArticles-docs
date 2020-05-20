@@ -20,10 +20,10 @@ ms.custom:
 - CI 113893
 - CSSTroubleshoot 
 ms.reviewer: azali 
-description: Resolution to an issue where the top of Excel columns are truncated when pasted in a PowerPoint presentation on a Surface Pro using a docking station and an external monitor.
+description: Resolution to an issue where the top of Excel columns is truncated when pasted in a PowerPoint presentation on a Surface Pro using a docking station and an external monitor.
 ---
 
-# Top columns in an Excel spreadsheet pasted into a PowerPoint presentation cut off 
+# Top columns in an Excel spreadsheet pasted into a PowerPoint presentation cut-off 
 
 > [!NOTE]
 > **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).

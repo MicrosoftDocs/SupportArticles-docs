@@ -25,15 +25,15 @@ Consider the following scenario:
 
 - You have an on-premises Microsoft Skype for Business Server 2015 or Lync Server 2013 enterprise pool.   
 - You have one or more third-party applications using trusted application endpoints that create a large number of conferences.   
-- An outage or network disconnect occurs for one or more of your Skype for Business Server 2015 or Lync Server 2013 Front End servers.   
+- An outage or network disconnect occurs for one or more of your Skype for Business Server 2015 or Lync Server 2013 Front-End servers.   
 
 In this scenario, you find that some portion of the endpoints used by your applications cannot create, modify, or delete conferences. The endpoint receives a "503 syncReplicationFailed" or "400 conferenceAlreadyExists" error for every conference it tries to create, modify, or delete.
 
 ## Cause
 
-Replication of stateful data from the primary Front End server to both of its secondary Front End servers fails while trying to create, modify, or delete a conference. 
+Replication of stateful data from the primary Front-End server to both of its secondary Front-End servers fails while trying to create, modify, or delete a conference. 
 
-During an outage or disconnect of one or more Front End servers, the currently active Front End servers may take ownership of certain sets of users, and in the process, require the creation of new secondary replicas for those users.
+During an outage or disconnect of one or more Front-End servers, the currently active Front-End servers may take ownership of certain sets of users, and in the process, require the creation of new secondary replicas for those users.
 
 When many conferences are created over time by a third-party application, the Persisted Service Data (PSD) table may grow to a size at which replication to the new secondary replicas takes an excessive amount of time to complete. This prolonged process causes queues on the server to become full for longer than expected, and it triggers replication failures during conference operations. 
 
@@ -52,7 +52,7 @@ You can use the Get-CsPoolUpgradeReadinessState PowerShell command to determine 
 
 Follow these steps on every affected pool: 
 
-1. Optional: Run the following SQL query on the RTCLocal SQL instance of your Front End servers to determine the current number of entries in the PersistedServiceData table. The value returned may vary between individual Front End servers in a particular pool. 
+1. Optional: Run the following SQL query on the RTCLocal SQL instance of your Front-End servers to determine the current number of entries in the PersistedServiceData table. The value returned may vary between individual Front-End servers in a particular pool. 
 
     ```sql
     select count(*) from [rtc].[dbo].[PersistedServiceData] psd with (nolock)
@@ -69,7 +69,7 @@ Follow these steps on every affected pool: 
     ```powershell
     PurgeAppEndpointUserDataFromPSD.ps1 -PoolName <pool name> -Command delete
     ```
-5. Optional: While the tool is running, you can run the SQL query from step 1 to verify that the count is being reduced. After the script has finished running, you can run the SQL query one more time to determine the final number of entries in the PersistedServiceData table on each Front End server. This number should be significantly less than the count seen in step 1.    
+5. Optional: While the tool is running, you can run the SQL query from step 1 to verify that the count is being reduced. After the script has finished running, you can run the SQL query one more time to determine the final number of entries in the PersistedServiceData table on each Front-End server. This number should be less than the count seen in step 1.    
 
 By default, this script will process application endpoints that are currently homed on a particular pool. If application endpoints have been moved to a different pool, you can use the optional AllPoolEndpoints switch to indicate that you want to include application endpoints homed on any pool, as follows:
 

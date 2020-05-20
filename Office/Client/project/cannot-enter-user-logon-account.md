@@ -23,18 +23,18 @@ appliesto:
 
 ## Symptoms
 
-When you open the Enterprise Resource Pool from Project Server 2013 or Project Online, into Project Professional 2013 or Project Pro for Office 365 respectively, you cannot edit the **User Logon Account** field,the field is unavailable or grayed out. 
+When you open the Enterprise Resource Pool from Project Server 2013 or Project Online, into Project Professional 2013 or Project Pro for Office 365 respectively, you cannot edit the **User Logon Account** field, the field is unavailable or grayed out. 
 
 ## Cause
 
-This is by design. Microsoft Project Server 2013 and Project Online use the SharePoint platform for identity management, user management and authentication. This gives Project Server access to more types of authentication providers via SharePoint Server 2013, such as claims based authentication as well as Google, Yahoo or Facebook, which requires a specific process for adding resources/users. 
+This is by design. Microsoft Project Server 2013 and Project Online use the SharePoint platform for identity management, user management and authentication. This gives Project Server access to more types of authentication providers via SharePoint Server 2013, such as claims-based authentication as well as Google, Yahoo, or Facebook, which requires a specific process for adding resources/users. 
 
 ## Resolution
 
 > [!NOTE]
 > The resources and users that are created will have Log On permission, but no other permissions are granted and no group memberships are automatically applied.  In SharePoint Permissions mode, when you **Share** the top-level Project Web App (PWA) site with these users, you will select their group membership at the same time. Using ProjectServer Permissions mode you sync or add users to a specific security group.
 
-**Resoulution 1:** Use Active Directory Synchronization to add user login accounts to the Enterprise Resource Pool.  This is the preferred method and works for both SharePoint or ProjectServer permissions modes.
+**Resolution 1:** Use Active Directory Synchronization to add user login accounts to the Enterprise Resource Pool.  This is the preferred method and works for both SharePoint or ProjectServer permissions modes.
 
 **Resolution 2** for SharePoint permissions mode only:
 
@@ -46,7 +46,8 @@ You will create a SharePoint Tasks list and assign Active Directory or Office 
 
 **Resolution 3:** for Project Server permissions mode: 
 
-**Note** This method will be phased out over time. 
+> [!NOTE]
+> This method will be phased out over time. 
 
 This regkey will allow you to edit the **User logon Account** field when the Enterprise Resource Pool is opened in Project Professional 2013.
 
@@ -63,4 +64,4 @@ Steps to add the registry key in order to edit User Logon Accounts in Project 
 > [!NOTE]
 > [ProfileName] implies that the registry key must be applied to each server profile configured in Project Pro 2013 for which you want to re-enable the User Logon Account field. The server profile would need to be set up first to ensure the full registry path exists.
 
-Back in PWA Resource Center, select at least one resource, thenclick **Open** to open the Enterprise Resource Pool in Project Professional. You can now insert the **User Logon Account** field in the resource sheet and edit the field. Save and Close the Enterprise Pool and the resources are saved to PWA.  You still need to **Share** the top-level PWA site with these users for them to access PWA.
+Back in PWA Resource Center, select at least one resource, then click **Open** to open the Enterprise Resource Pool in Project Professional. You can now insert the **User Logon Account** field in the resource sheet and edit the field. Save and Close the Enterprise Pool and the resources are saved to PWA.  You still need to **Share** the top-level PWA site with these users for them to access PWA.

@@ -25,7 +25,7 @@ Upgrade status indicators and log files should give you an idea of what went wro
 
 1. Review the upgrade status page for your site collection.
 
-   On the **Site Settings**(**Settings** > **Site Settings**) page for the site collection, in the **Site Collection Administration** section, click **Site collection upgrade**. On the Site Collection Upgrade page, click **Review Site Collection Upgrade Status**.
+   On the **Site Settings**(**Settings** > **Site Settings**) pages for the site collection, in the Site Collection Administration section, click **Site collection upgrade**. On the Site Collection Upgrade page, click **Review Site Collection Upgrade Status**.
 
 1. If pages don't render, check the **Site Settings** page. If the **Site Settings** page works and the upgrade has succeeded, there might be issues with the master page or home page. If the Site Settings page doesn't work, check the site collection upgrade log file for information about the problem.
 
@@ -47,7 +47,7 @@ To reset the page, you can use the **Reset to site definition** link under **Sit
 
 **A:** Create indexed columns, folders, or new views for large lists. You might have to add the indexed column to your existing views.
 
-If a list is very large, and users use a view or perform a query that exceeds the limit or throttling threshold, the view or query will not be permitted. You can create indexed columns with filtered views, organize items into folders, set an item limit on the page for a large view, or use an external list. For more information about large list throttling and how to address issues with large lists, see [Manage lists and libraries with many items](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59).
+If a list is large, and users use a view or perform a query that exceeds the limit or throttling threshold, the view, or query will not be permitted. You can create indexed columns with filtered views, organize items into folders, set an item limit on the page for a large view, or use an external list. For more information about large list throttling and how to address issues with large lists, see [Manage lists and libraries with many items](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59).
 
 **Q: I see an error about a duplicate content type name**
 
@@ -55,7 +55,7 @@ If a list is very large, and users use a view or perform a query that exceeds th
 
 Occasionally, custom elements (such as a content type) may have a name that conflicts with a name in the new version. In the upgrade log files, you may see an error such as the following:
 
-Failed to activate site collection features on site Site Url. Exception: A duplicate content type name "name" was found.
+Failed to activate site collection features on-site Site Url. Exception: A duplicate content type name "name" was found.
 
 This error indicates that a custom content type was added to the specified site in SharePoint Online 2010. During upgrade to SharePoint Online 2013, its name conflicted with the default content type by the same name. Rename the custom content type in the specified site to a different name and run upgrade again.
 
@@ -74,7 +74,7 @@ A problem with custom or inline JavaScript or CSS files can cause these issues.
 
 **A:** Change the master page, or change the content so that it doesn't require different Web Part zone layouts.
 
-The master page might have different zone layouts and the content might no longer reference it correctly. As a last resort, you can also reset the page to the default version. However, if you reset the page, you might lose zone specific content.
+The master page might have different zone layouts and the content might no longer reference it correctly. As a last resort, you can also reset the page to the default version. However, if you reset the page, you might lose zone-specific content.
 
 **Q: I receive an error that says a control or page cannot render**
 
@@ -102,7 +102,7 @@ For more information, see [Upgrade site templates](https://support.office.com/ar
 
 **A:** Re-create the theme by using the new theming features in SharePoint 2013.
 
-In SharePoint 2013, the theming engine has been completely redesigned so that theming is more powerful and more flexible, and so that themes can be more easily upgraded moving forward. However, there is no support for upgrading a THMX file from SharePoint 2010 to SharePoint 2013.
+In SharePoint 2013, the theming engine has been redesigned so that theming is more powerful and more flexible, and so that themes can be more easily upgraded moving forward. However, there is no support for upgrading a THMX file from SharePoint 2010 to SharePoint 2013.
 
 To resolve this, you should first create an evaluation site collection, and then re-create the theme by using the new theming features in SharePoint 2013.
 
@@ -120,7 +120,7 @@ To resolve this, you should first create an evaluation site collection, and then
 
 If your custom master page contains a custom content placeholder, and if custom page layouts also contain this custom content placeholder, then an error may prevent the home page of your site from rendering at all after upgrade. Instead, after upgrade, you may see the error message "An unexpected error has occurred."
 
-**Q: When I click the button to create an evaluation site I get a correlation ID error message.**
+**Q: When I click the button to create an evaluation site, I get a correlation ID error message.**
 
 **A:** SharePoint appends "–eval" to the end of the evaluation site URL, which may cause the URL to exceed the character limit.
 

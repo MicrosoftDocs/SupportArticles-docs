@@ -27,7 +27,7 @@ You have Microsoft Office Groove 2007 installed on a computer. You have Microsof
 
 To synchronize SharePoint Workspace 2010 to Document Libraries on a SharePoint Server 2007 site, use the legacy SharePoint Files tool in SharePoint Workspace 2010. This is the same SharePoint Files tool that was included in Office Groove 2007. To add this tool, follow these steps: 
 
-1. On the **Home** tab of SharePoint Workspace **Launchbar**, click **New**, and then click **Groove workspace**.    
+1. On the **Home** tab of SharePoint Workspace **Launch bar**, click **New**, and then click **Groove workspace**.    
 2. In the **New Groove Workspace** window, click **Options**, then click to select **2007** in the **Workspace Version** drop-down list, and then click **OK**.   
 3. In the new workspace, click the **Workspace** tab, click **Add**, and then click **SharePoint Files**.    
 

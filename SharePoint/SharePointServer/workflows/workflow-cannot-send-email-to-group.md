@@ -20,7 +20,8 @@ appliesto:
 
 ## Symptoms
 
-Customer develops SharePoint Designer workflow, set Initiation Form to collect parameter of type Person or Group. Workflow steps include "Send an Email" action with "To" as lookup to the Person or Group parameter collected from Initiation Form. 
+Customer develops SharePoint Designer workflow, set Initiation Form to collect parameter of type Person or Group. Workflow steps include "Send an Email" action with "To" as look up to the Person or Group parameter collected from Initiation Form.
+
 Run the workflow, after execute all steps, workflow status shows "completed" but no email is sent and workflow history displays error "Coercion warning: user or group does not have a valid e-mail address.".
 
 ## Cause
@@ -35,7 +36,7 @@ When configure workflow action - Send an Email on workflow canvas in SharePoint 
 
 Repro steps:
 
-1. Create a SPD 2010 List Workflow. 
+1. Create an SPD 2010 List Workflow. 
 2. Create an Initiation Form Parameter value with following settings:
    1. Information Type: Person or Group
    1. Collect from parameter during: Association
@@ -44,7 +45,7 @@ Repro steps:
    1. Choose From: All Users
 3. Configure the workflow with one Activity: Send email to user.
    1. Configure to send email to the Initiation Form Parameter (from above)
-   1. In the "Lookup for Person or Group" dialog, select any option from the "Return field as" (for example Email Addresses, Semicolon Deliminted).
+   1. In the "Lookup for Person or Group" dialog, select any option from the "Return field as" (for example Email Addresses, Semicolon Delimited).
 4. Publish the workflow and associate with a list.  During association, enter use a SharePoint Group for the value.
 5. Start the workflow and choose a SharePoint Group in Initiation Form.
 6. Error in workflow history shows "Coercion warning: user or group does not have a valid e-mail address." even though workflow status is completed.

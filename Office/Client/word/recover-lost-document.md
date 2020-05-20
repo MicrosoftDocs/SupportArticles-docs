@@ -31,7 +31,7 @@ If you're looking for recent Word document recovery info, see:
 
 For more on earlier versions of Word, see:
 
-- [How Word creates and recovers the AutoRecover files](https://support.microsoft.com/help/107686)
+- [How Word creates and recovers the Auto-Recover files](https://support.microsoft.com/help/107686)
 
 ## Resolution
 
@@ -46,9 +46,9 @@ To do this, follow these steps, as appropriate for the version of Windows that y
 1. Select **Start**, type the document name in the **Start Search** box (.doc or .docx), and then press Enter. If the **File** list contains the document, double-click the document to open it in Word.
 2. If the **File** list does not contain the file, go to Method 2.
 
-### Method 2: Search for Word backup files
+### Method 2: Search for Word Backup files
 
-Word backup file names end with the .wbk extension. If the **Always create backup copy** option is selected, there may be a backup copy of the file.
+Word Backup file names end with the .wbk extension. If the **Always create Backup copy** option is selected, there may be a Backup copy of the file.
 
 > [!NOTE]
 > To locate this option:
@@ -58,7 +58,7 @@ Word backup file names end with the .wbk extension. If the **Always create backu
 > - **Word 2010**:
  Select File, then Options. In the **Save** tab, select **Always create backup copy**.
 
-To find the backup copy of the file, follow these steps:
+To find the Backup copy of the file, follow these steps:
 
 1. Locate the folder in which you last saved the missing file.
 2. Search for files that have the .wbk file name extension.
@@ -68,7 +68,7 @@ If there's no .wbk file in the original folder, search the computer for any .wbk
 **Windows 10** and **Windows 7**
 
 1. Select **Start**, type *.wbk in the **Start Search** box, and then press Enter.
-2. If the **File** list contains the backup file, repeat the steps in step 2 ("Search for files that have the .wbk file name extension") to open the file. If the **File** list does not contain the backup file, go to Method 3.
+2. If the **File** list contains the Backup file, repeat the steps in step 2 ("Search for files that have the .wbk file name extension") to open the file. If the **File** list does not contain the Backup file, go to Method 3.
 
 If you find any files that have the name "Backup of" followed by the name of the missing file, use one of the following procedures, as appropriate for the version of Word that you're running.
 
@@ -76,27 +76,27 @@ If you find any files that have the name "Backup of" followed by the name of the
 
 1. On the **File** menu, select **Open**, and then **Browse**. (In some versions, select **Computer** and then **Browse**.)
 2. In the **Files of type** list (All Word Documents), select **All Files**.
-3. Select the backup file that you found, and then select **Open**.
+3. Select the Backup file that you found, and then select **Open**.
 
 **Word 2010**
 
 1. On the **File** menu, select Open.
 2. In the **Files of type** list (All Word documents), select **All Files**.
-3. Select the backup file that you found, and then select **Open**.
+3. Select the Backup file that you found, and then select **Open**.
 
-### Method 3: Search for AutoRecover files
+### Method 3: Search for Auto-Recover files
 
-AutoRecover file names end with the .asd extension. By default, Word searches for AutoRecover files every time that it starts, and then it displays all that it finds in the Document Recovery task pane.
+Auto-Recover file names end with the .asd extension. By default, Word searches for Auto-Recover files every time that it starts, and then it displays all that it finds in the Document Recovery task pane.
 
-1. Use Word to automatically find the AutoRecover files. To do this, follow these steps:
+1. Use Word to automatically find the Auto-Recover files. To do this, follow these steps:
 
    1. Right-click the taskbar, and then select **Task Manager**.
    2. On the **Processes** tab, select any instance of **Winword.exe** or **Microsoft Word**, and then select **End Task** or **End Process**. Repeat this step until you have exited all instances of Winword.exe and Word.
    3. Close the **Windows Task Manager** dialog box, and then start Word.
 
-      If Word finds the AutoRecover file, the Document Recovery task pane opens on the left side of the screen, and the missing document is listed as "**document name** [Original]" or as "**document name** [Recovered]." If this occurs, double-click the file in the Document Recovery pane, select **Save As** on the **File** menu, and then save the document as a .docx file. Manually change the extension to .docx, if necessary, by right-clicking the file and selecting **Rename**.
+      If Word finds the Auto-Recover file, the Document Recovery task pane opens on the left side of the screen, and the missing document is listed as "**document name** [Original]" or as "**document name** [Recovered]." If this occurs, double-click the file in the Document Recovery pane, select **Save As** on the **File** menu, and then save the document as a .docx file. Manually change the extension to .docx, if necessary, by right-clicking the file and selecting **Rename**.
 
-2. If the Recovery pane does not open, manually search for AutoRecover files. To do this, use one of the following procedures, as appropriate for the version of Word that you're running.
+2. If the Recovery pane does not open, manually search for Auto-Recover files. To do this, use one of the following procedures, as appropriate for the version of Word that you're running.
 
    **Word for Office 365**, **Word 2019**, **Word 2016**, and **Word 2013**  
    1. On the **File** menu, select **Open**, and then Browse.
@@ -106,11 +106,11 @@ AutoRecover file names end with the .asd extension. By default, Word searches fo
    1. On the File menu, select Recent.
    2. If you don't see your document listed, select **Recover Unsaved Documents**.
 
-3. If you can't locate an AutoRecover file in the location that is identified in the **Folder name** list, search your whole drive for any .asd files. To do this, follow these steps:
+3. If you can't locate an Auto-Recover file in the location that is identified in the **Folder name** list, search your whole drive for any .asd files. To do this, follow these steps:
 
    **Windows 10 and Windows 7**
    1. Select **Start**, type .asd in the **Start Search** box, and then press Enter.
-   2. If the **File** list does not contain AutoRecover files, go to Method 4.
+   2. If the **File** list does not contain Auto-Recover files, go to Method 4.
   
    If you find any files that have the .asd extension, use one of the following procedures, as appropriate for the version of Word that you're running:
 
@@ -129,7 +129,7 @@ AutoRecover file names end with the .asd extension. By default, Word searches fo
 
 ### Method 4: Search for temporary files
 
-Temporary file names end with the .tmp extension. To find these files, use one of the following procedure.
+Temporary file names end with the .tmp extension. To find these files, use one of the following procedures.
 
 **Windows 10** and **Windows 7**
 
@@ -163,15 +163,15 @@ You can lose a Word document in certain situations. For example, the document ma
 > [!NOTE]
 > The whole document may be lost if you have not recently saved the document. If you have saved your document, you may lose only the changes that you made since the last save. Be aware that some lost documents may not be recoverable.
 
-The AutoRecover feature in Word performs an emergency backup of open documents when an error occurs. Some errors can interfere with the AutoRecover functionality. The AutoRecover feature is not a substitute for saving your files.
+The Auto-Recover feature in Word performs an emergency Backup of open documents when an error occurs. Some errors can interfere with the Auto-Recover functionality. The Auto-Recover feature is not a substitute for saving your files.
 
 We do not provide any utilities to recover deleted documents. However, some third-party utilities to recover deleted documents might be available on the Internet.
 
-For more information about AutoRecover, see the following articles in the Microsoft Knowledge Base:
+For more information about Auto-Recover, see the following articles in the Microsoft Knowledge Base:
 
-- [What is AutoSave?](https://support.office.com/article/What-is-AutoSave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5)
+- [What is Auto-Save?](https://support.office.com/article/What-is-AutoSave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5)
 - [WD2000: Why you are unable to recover a lost document](https://support.microsoft.com/help/212273)
 - [WD2000: Automatically Saving Current Work (Open Document)](https://support.microsoft.com/help/211762)
-- [How Word creates and recovers the AutoRecover files](https://support.microsoft.com/help/107686)
+- [How Word creates and recovers the Auto-Recover files](https://support.microsoft.com/help/107686)
 
 The third-party products that are discussed in this article are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, regarding the performance or reliability of these products.
