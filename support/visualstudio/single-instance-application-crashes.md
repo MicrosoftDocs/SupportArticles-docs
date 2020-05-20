@@ -47,7 +47,7 @@ To work around this, you can use a named `mutex` or enumerate all the processes 
 
 - Visual Basic .NET code
 
-    ```aspx-vb
+    ```vb
     Public mutex As System.Threading.Mutex
     Public Sub main()
         Dim prevInstance As Boolean

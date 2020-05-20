@@ -79,8 +79,6 @@ This article illustrates the use of STL trigonometry functions through the follo
 // main.cpp : Illustrates the use of STL trigonometry functions.
 // Functions:
 // acos, asin, atan, atan2, cos, cosh, sin, sinh, tan, tanh
-// Written by Yeong-Kah Tam
-// of Microsoft Product Support Services,
 // Copyright (c) 1996 Microsoft Corporation. All rights reserved.
 //////////////////////////////////////////////////////////////////////
 

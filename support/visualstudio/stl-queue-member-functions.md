@@ -44,8 +44,6 @@ The sample shows queue implementation using `list` and `deque` containers.
 // Functions:
 // queue::push(), queue::pop(), queue::empty(), queue::back(),
 // queue::front(),queue::size()
-// Written by Debabrata Sarma
-// of Microsoft Product Support Services,
 // Copyright (c) 1996 Microsoft Corporation. All rights reserved.
 //////////////////////////////////////////////////////////////////////
 

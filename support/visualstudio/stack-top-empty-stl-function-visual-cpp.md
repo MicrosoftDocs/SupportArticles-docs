@@ -50,8 +50,6 @@ The `empty` function returns **true** if there are no elements in the stack. If 
 // Functions:
 // top : returns the top element of the stack.
 // empty : returns true if the stack has 0 elements.
-// Written by Derek Jamison
-// of Microsoft Product Support Services,
 // Copyright (c) 1996 Microsoft Corporation. All rights reserved.
 //////////////////////////////////////////////////////////////////////
 

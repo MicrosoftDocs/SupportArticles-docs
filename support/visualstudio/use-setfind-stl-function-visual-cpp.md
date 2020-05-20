@@ -54,8 +54,6 @@ The `find` function is used to locate an element in a controlled sequence. It re
 //                 in the controlled sequence that has the same sort key
 //                 as the value passed to the find function. If no such
 //                 element exists, the iterator equals end().
-// Written by Derek Jamison
-// of Microsoft Technical Support,
 // Copyright (c) 1996 Microsoft Corporation. All rights reserved.
 //////////////////////////////////////////////////////////////////////
 
