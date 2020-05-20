@@ -1,5 +1,5 @@
 ---
-title: Can't install VMM with the HostAgentBadSharePathname error 
+title: VMM installation fails with the HostAgentBadSharePathname error 
 description: Discusses that you receive a HostAgentBadSharePathname error message when you try to install System Center 2012 Virtual Machine Manager. Provides a resolution.
 ms.date: 05/07/2020
 ms.prod-support-area-path:
@@ -67,7 +67,7 @@ This string is case-sensitive. Therefore, if the server name contains the same s
 
 To resolve this problem, rename the server before you install System Center 2012 Virtual Machine Manager.
 
-## More Information
+## More information
 
 For more information about how to collect a VMM debug log, see the following Microsoft Knowledge Base article:
 

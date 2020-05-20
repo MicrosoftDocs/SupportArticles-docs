@@ -6,7 +6,7 @@ ms.prod-support-area-path:
 ---
 # How to collect Virtual Machine Manager traces
 
-This article describes how to enable debug logging for the Microsoft System Center 2012 R2 Virtual Machine Manager (SC 2012 R2 VMM) Storage Management Service.
+This article describes how to enable debug logging for the Microsoft System Center 2012 R2 Virtual Machine Manager Storage Management Service.
 
 _Original product version:_ &nbsp; Microsoft System Center 2012 R2 Virtual Machine Manager, System Center 2012 Virtual Machine Manager  
 _Original KB number:_ &nbsp; 3037626
@@ -56,7 +56,7 @@ In the .cab file that you saved in step 5, locate the following files:
 
    |Name|Type|Data|
    |---|---|---|
-   |`LogFileName`|REG_SZ|Type the full path of your `CIMXMLLog`. For example, type `C:\temp\cimxmllog.xml`.|
+   |`LogFileName`|REG_SZ|The full path of your `CIMXMLLog`. For example, `C:\temp\cimxmllog.xml`.|
    |`LogLevel`|REG_DWORD|4|
    |`MaxLogFileSize`|REG_DWORD|0x4000000 (hexadecimal)|
    |||

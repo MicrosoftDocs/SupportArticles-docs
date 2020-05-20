@@ -4,7 +4,7 @@ description: Describes how to create logical switches on Nano Servers through Sy
 ms.date: 05/07/2020
 ms.prod-support-area-path:
 ---
-# How to create the logical switch on Nano Servers through SCVMM 2016
+# How to create the logical switch on Nano Servers through VMM 2016
 
 This article describes how to create logical switches on Nano Servers through System Center 2016 Virtual Machine Manager.
 
@@ -54,4 +54,4 @@ If we select other **Teaming mode** as show below e.g. LACP, we will get an erro
 > Unknown error (0x80078005)
 >
 > Recommended Action  
-> Check that WS-Management service is installed and running on server 'nano.hoster.lab'. For more information use the command "winrm helpmsg hresult". If 'nano.hoster.lab' is a host/library/update server or a PXE server role then ensure that VMM agent is installed and running. Refer to [https://support.microsoft.com/kb/2742275](https://support.microsoft.com/kb/2742275) for more details.
+> Check that WS-Management service is installed and running on server 'nano.hoster.lab'. For more information use the command "winrm helpmsg hresult". If 'nano.hoster.lab' is a host/library/update server or a PXE server role then ensure that VMM agent is installed and running. Refer to [https://support.microsoft.com/help/2742275](https://support.microsoft.com/help/2742275) for more details.

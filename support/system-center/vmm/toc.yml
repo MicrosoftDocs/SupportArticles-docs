@@ -28,7 +28,7 @@
     href: incorrect-agent-status.md
   - name: VMM crashes with reserved characters
     href: reserved-characters-cause-vmm-crash.md
-- name: Networking Issues
+- name: Networking issues
   items:
   - name: Create logical switches on Nano Servers
     href: create-nano-server-logical-switches.md

@@ -1,13 +1,13 @@
 ---
 title: Errors occur when using SoFS shares
-description: Errors occur when you use Scale-Out File Serve shares after you upgrade to System Center 2016 Virtual Machine Manager. Provides a resolution.
+description: Errors occur when you use Scale-Out File Server shares after you upgrade to System Center 2016 Virtual Machine Manager. Provides a resolution.
 ms.date: 05/07/2020
 ms.prod-support-area-path:
 ms.reviewer: delhan, paulw, brenth
 ---
 # Errors occur when using SoFS shares after upgrading to System Center 2016 Virtual Machine Manager
 
-This article fixes an issue in which you receive error messages when you use Scale-Out File Serve shares after you upgrade to System Center 2016 Virtual Machine Manager.
+This article fixes an issue in which you receive error messages when you use Scale-Out File Server shares after you upgrade to System Center 2016 Virtual Machine Manager.
 
 _Original product version:_ &nbsp; System Center 2016 Virtual Machine Manager, Microsoft System Center 2012 R2 Virtual Machine Manager  
 _Original KB number:_ &nbsp; 4021611
@@ -43,7 +43,7 @@ You use Scale-Out File Server (SoFS) shares in System Center 2012 R2 Virtual Mac
 
 >[!NOTE]
 >
-> - This issue can also cause you to be unable to get host ratings for any host that uses one of the affected SOFS shares .
+> - This issue can also cause you to be unable to get host ratings for any host that uses one of the affected SoFS shares.
 > - This issue does not occur in a fresh (not upgraded) System Center 2016 Virtual Machine Manager environment.
 
 ## Cause
