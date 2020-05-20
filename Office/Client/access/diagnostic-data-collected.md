@@ -40,7 +40,7 @@ NoteThe diagnostic that is described in this article can be used on the followin
 - Windows 7
 - Windows 8
 
-When you run the diagnostic, you are prompted with a message advising you that the application must be running in order to collect certain information, as in the following screen shot:
+When you run the diagnostic, you are prompted with a message advising you that the application must be running in order to collect certain information, as in the following screenshot:
 
 ![Access Running Prompt](./media/diagnostic-data-collected/prompt.png)
 
@@ -78,9 +78,9 @@ This contains events from the last 15 days, including those that were recorded i
 
 |Description|File name|
 |---|---|
-|Export of the Application log in .csv format|{Computername}_evt_Application.csv|
-|Export of the Application log in .evtx format; use Event Viewer to read|{Computername}_evt_Application.evtx|
-|Export of the Application log in .txt format|{Computername}_evt_Application.txt|
+|Export of the Application login .csv format|{Computername}_evt_Application.csv|
+|Export of the Application login .evtx format; use Event Viewer to read|{Computername}_evt_Application.evtx|
+|Export of the Application login .txt format|{Computername}_evt_Application.txt|
 
 #### System log
 
@@ -88,14 +88,14 @@ This contains events from the last 15 days, including those that were recorded i
 
 |Description|File name|
 |---|---|
-|Export of the System log in .csv format|{Computername}_evt_System.csv|
-|Export of the Application log in .evtx format|{Computername}_evt_System.evtx|
-|Export of the Application log in .txt format|{Computername}_evt_System.txt|
+|Export of the System login .csv format|{Computername}_evt_System.csv|
+|Export of the Application login .evtx format|{Computername}_evt_System.evtx|
+|Export of the Application login .txt format|{Computername}_evt_System.txt|
 
 #### Environment variables
 
 This is a text file that contains environment variables and their values. The same set of environment variables is a subset of those that are displayed by running the
-Setcommand at a command prompt.
+Set command at a command prompt.
 
 |Description|File|
 |---|---|
@@ -170,7 +170,7 @@ These are text files that contain exported keys from the Windows registry.
 
 |Description|File name|
 |---|---|
-|Zip file containing two files; MSOCredProv.txt and msoidLitTrace{guid}.txt. These files contain identity logging information related to the user account connecting to services shown in the Account section of the BackStage.|IdentityLogging.zip|
+|Zip file containing two files; MSOCredProv.txt and msoidLitTrace{guid}.txt. These files contain identity logging information related to the user account connecting to services shown in the Account section of the Backstage.|IdentityLogging.zip|
 
 #### Information on Click-to-Run Office 2013 installation
 
@@ -186,9 +186,9 @@ These are text files that contain exported keys from the Windows registry.
 
 |Description|File name|
 |---|---|
-|Export of the MicrosoftOffice Alertsevent log file in .csv format.|{Computername}_evt_OAlerts.csv|
-|Export of the MicrosoftOffice Alertsevent log file in .evtx format.|{Computername}_evt_OAlerts.evtx|
-|Export of the MicrosoftOffice Alertsevent log file in .txt format.|{Computername}_evt_OAlerts.txt|
+|Export of the MicrosoftOffice Alerts event log file in .csv format.|{Computername}_evt_OAlerts.csv|
+|Export of the MicrosoftOffice Alerts event log file in .evtx format.|{Computername}_evt_OAlerts.evtx|
+|Export of the MicrosoftOffice Alerts event log file in .txt format.|{Computername}_evt_OAlerts.txt|
 
 #### Registry data related to Microsoft Access
 

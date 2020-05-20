@@ -1,6 +1,6 @@
 ---
-title: The .SpecialCells(xlCellTypeBlanks) VBA function doesn't work as expected
-description: Explains that the .SpecialCells(xlCellTypeBlanks) VBA function does not work as expected when you select more than 8,192 non-contiguous cells with your macro. You can use a looping structure to work around this problem.
+title: The SpecialCells(xlCellTypeBlanks) VBA function doesn't work as expected
+description: Explains that the SpecialCells(xlCellTypeBlanks) VBA function does not work as expected when you select more than 8,192 non-contiguous cells with your macro. You can use a looping structure to work around this problem.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -15,7 +15,7 @@ appliesto:
 - Microsoft Excel
 ---
 
-# The .SpecialCells(xlCellTypeBlanks) VBA function does not work as expected in Excel
+# The SpecialCells(xlCellTypeBlanks) VBA function does not work as expected in Excel
 
 > [!NOTE]
 > **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).

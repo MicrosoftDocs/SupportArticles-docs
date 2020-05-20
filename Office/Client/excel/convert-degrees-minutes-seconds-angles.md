@@ -25,7 +25,7 @@ appliesto:
 
 ## Summary
 
-Angular measurements are commonly expressed in units of degrees, minutes, and seconds (DMS). One degree equals 60 minutes, and one minute equals 60 seconds. To simplify some mathematical calculations you may want to express angular measurements in degrees and decimal fractions of degrees. 
+Angular measurements are commonly expressed in units of degrees, minutes, and seconds (DMS). 1 degree equals 60 minutes, and one minute equals 60 seconds. To simplify some mathematical calculations, you may want to express angular measurements in degrees and decimal fractions of degrees. 
 
 This article contains a sample custom function you can use to convert a degree value stored in decimal format, to DMS stored in text format, and a sample function that converts DMS to a degree value stored in decimal format. 
 
@@ -73,7 +73,7 @@ To use this function, create a conversion formula, as in the following example:
  
 ### Converting Degrees/Minutes/Seconds to Decimal Degrees
 
-The following Microsoft Visual Basic for Applications custom function accepts a text string of degrees, minutes and seconds formatted in the exact same format that the Convert_Degree function returns (for example, 10° 27' 36") and converts it to an angle formatted as a decimal value. This is exactly the reverse of the Convert_Degree custom function.
+The following Microsoft Visual Basic for Applications custom function accepts a text string of degrees, minutes, and seconds formatted in the exact same format that the Convert_Degree function returns (for example, 10° 27' 36") and converts it to an angle formatted as a decimal value. This is exactly the reverse of the Convert_Degree custom function.
 
 > [!WARNING]
 > This custom function fails if the Degree_Deg argument is not in the format <degrees>° <minutes>' <seconds>" even if the seconds value is 0.   

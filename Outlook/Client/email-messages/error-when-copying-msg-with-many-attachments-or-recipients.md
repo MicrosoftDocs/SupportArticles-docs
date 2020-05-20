@@ -34,10 +34,10 @@ Symptoms include:
 
 ## Cause
 
-Archiving is not the functional purpose of an MSG format. There are a number of issues regarding the MSG format which are important to understand:
+Archiving is not the functional purpose of an MSG format. There are a number of issues regarding the MSG format that are important to understand:
 
 - The MAPI specification requires a new transaction each time a recipient or attachment is added. Com Structured Storage, the underlying storage format on which MSG is built, cannot handle a large number of transactions on it. A limit will be reached whenever a message has a large number of recipients or attachments, or when there exists a deep level of embedded messages. Depending on exactly where the limit is encountered, it may be observed either as an outright failure or a memory error.
-- The underlying storage format is a legacy format which cannot be altered.
+- The underlying storage format is a legacy format that cannot be altered.
 - The time needed to write to an MSG file increases exponentially as the number of transactions increases. For example, a message with more than 5000 recipients may take over an hour to copy into an MSG file.
 
 ## More information
@@ -51,4 +51,4 @@ The process of archiving email to an MSG format does not contain desirable trait
 
 For developers seeking to export messaging data, the only workaround is to avoid using MSG to archive messages. Instead, develop your own file format to preserve the important properties on a message.
 
-For more detailed information about this subject, see the Microsoft blogpost [No MSG For You!](https://docs.microsoft.com/archive/blogs/stephen_griffin/no-msg-for-you)
+For more detailed information about this subject, see the Microsoft blog post [No MSG For You!](https://docs.microsoft.com/archive/blogs/stephen_griffin/no-msg-for-you)

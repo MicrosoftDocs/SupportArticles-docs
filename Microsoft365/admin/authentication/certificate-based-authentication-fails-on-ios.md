@@ -1,6 +1,6 @@
 ---
 title: Certificate-based authentication for iOS fails to prompt for user certificates
-description: Fixes an issue that federated users on iOS devices cannot use Certificate Based Authentication (CBA) to authenticate.
+description: Fixes an issue that federated users on iOS devices cannot use Certificate-Based Authentication (CBA) to authenticate.
 author: lucciz
 ms.author: v-zolu
 manager: dcscontentpm
@@ -23,20 +23,20 @@ appliesto:
 
 ##  Symptoms
 
-Federated users on Apple iOS devices that have valid user certificates discover that they can't perform Certificate Based Authentication (CBA) against Azure AD. However, federated users on Android and Windows devices can successfully authenticate by using CBA. The same iOS users encounter no issues when they authenticate by using their user name and password.
+Federated users on Apple iOS devices that have valid user certificates discover that they can't perform Certificate-Based Authentication (CBA) against Azure AD. However, federated users on Android and Windows devices can successfully authenticate by using CBA. The same iOS users encounter no issues when they authenticate by using their user name and password.
 
 Here's the typical experience for iOS users who can't authenticate when they sign in to ADAL-enabled Office applications on iOS:
 
 1. The user walks through the Office app setup experience. At the "Office365" sign-in page, the user clicks Sign-in.   
 2. The ADAL Sign-in page appears, on which the user enters their federated email address and then clicks Next.   
-3. The ADAL Sign-in process hangs at a blank page until it times out and returns a "There is a problem with your account. Please try again later" error. This page includes the option to tap OK.   
+3. The ADAL Sign-in process hangs at a blank page until it times out and returns a "There is a problem with your account. Try again later" error. This page includes the option to tap OK.   
 4. If the user taps OK, they sit at the same blank Sign-in page with the option at the top to tap Back.   
 5. Tapping Backreturns the user to the ADAL Sign-in page, where the process starts all over: the user is prompted to enter their federated email address and then click Next.   
 6. Tapping OK returns to a blank Sign-in screen, where the user can enter their UserPrincipalName and repeat the process.
 
 To eliminate Office applications as a factor, we recommend that federated users in an iOS environment test certificate-based authentication in the Safari browser by following the steps in "More Information" section. The typical experience for iOS users who cannot authenticate against [https://portal.office.com](https://portal.office.com/) from a Safari browser goes as follows:
 
-1. The user is not prompted as expected to approve the use of their user certificate after they click the Sign in using an X.509 certificate link.    
+1. The user is not prompted as expected to approve the use of their user certificate after they click the Sign-in using an X.509 certificate link.    
 2. The federated user either sits at an unresponsive STS sign-in page or advances to the default STS sign-in page, where they are prompted as follows: 
 
     Select a certificate that you want to use for authentication. If you cancel the operation, please close your browser and try again.

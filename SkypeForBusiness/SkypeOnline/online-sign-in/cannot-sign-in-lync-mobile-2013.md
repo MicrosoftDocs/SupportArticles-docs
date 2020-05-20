@@ -1,5 +1,5 @@
 ---
-title: You can't sign-in with this version of Lync in Lync Mobile 2013
+title: You can't sign in with this version of Lync in Lync Mobile 2013
 description: Describes an issue in which users can’t sign in and are asked to install Lync Mobile 2010 after Lync Mobile 2013 is installed. Provides a solution.
 author: simonxjx
 manager: dcscontentpm
@@ -15,13 +15,13 @@ appliesto:
 - Skype for Business Online
 ---
 
-# "You can't sign-in with this version of Lync. Please install Lync 2010" error after Lync Mobile 2013 is installed
+# "You can't sign in with this version of Lync. Install Lync 2010" error after Lync Mobile 2013 is installed
 
 ## Problem 
 
 After Lync Mobile 2013 is installed, users who try to sign in to their organization’s Lync server or to Skype for Business Online (formerly Lync Online) in Office 365 receive the following error message:
 
-**You can't sign-in with this version of Lync. Please install Lync 2010.**
+**You can't sign in with this version of Lync. Install Lync 2010.**
 
 ## Solution 
 
