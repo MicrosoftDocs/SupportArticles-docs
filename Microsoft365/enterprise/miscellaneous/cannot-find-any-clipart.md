@@ -1,6 +1,6 @@
 ---
-title: Can't find clip art when you open Office Web App
-description: Describes a problem in which you cannot find any clip art when you open OneNote Web App and try to insert a clip art whether the ClipArt button is disabled or enabled.
+title: Can't find clip art when you open Office Online
+description: Describes a problem in which you cannot find any clip art when you open Microsoft OneNote Online and try to insert a clip art whether the ClipArt button is disabled or enabled.
 author: simonxjx
 manager: dcscontentpm
 audience: ITPro
@@ -17,7 +17,7 @@ appliesto:
 - IIS Media Services 3.0
 ---
 
-# You cannot find any clip art when you open Word Web App or OneNote Web App and try to insert some clip art
+# You cannot find any clip art when you open Microsoft Word Online or Microsoft OneNote Online and try to insert some clip art
 
 > [!NOTE]
 > **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
@@ -28,13 +28,13 @@ Consider the following scenarios.
 
 Scenario 1
 
-You have a server that is running Microsoft Office Web Apps. You open the Microsoft Word Web App or Microsoft OneNote Web App and then you click the ClipArt button. However, when you type an item to search, the search returns no clip art results.
+You have a server that is running Microsoft Microsoft Offices Online. You open the Microsoft Word Online or Microsoft OneNote Online and then you click the ClipArt button. However, when you type an item to search, the search returns no clip art results.
 
 This behavior occurs when the ClipArt button is enabled.
 
 Scenario 2
 
-You have a server that is running Microsoft Office Web Apps. When you open the Word Web App or OneNote Web App and try to insert some clip art, you notice that the ClipArt button is disabled. 
+You have a server that is running Microsoft Microsoft Offices Online. When you open the Microsoft Word Online or Microsoft OneNote Online and try to insert some clip art, you notice that the ClipArt button is disabled. 
 
 ## Cause
 
@@ -44,7 +44,7 @@ This problem occurs because the service retrieves clip art by contacting Microso
 
 To work around this problem, validate that you can access all three required URLs from the SharePoint box. Additionally, make sure that the proxy settings are configured appropriately for the server. To do this, follow these steps: 
 
-1. Log on to the computer that hosts the Word Web App or OneNote Web App.
+1. Log on to the computer that hosts the Microsoft Word Online or OneNote Web App.
 
    **Note** Typically, this computer is a front-end computer.   
 2. In a browser, validate that you can browse to the following three URLs:
@@ -54,7 +54,7 @@ To work around this problem, validate that you can access all three required URL
    
 3. If you cannot access these URLs from a Web browser, your firewall may be blocking access to these sites. Change the settings on your firewall to enable access to each of these URLs.    
 
-Frequently, outgoing traffic will have to use a proxy in order to reach these URLs. In order to instruct the OneNote Web App to use a proxy, use the following cmdlet for each site that the OneNote Web App is enabled:
+Frequently, outgoing traffic will have to use a proxy in order to reach these URLs. In order to instruct the Microsoft OneNote Online to use a proxy, use the following cmdlet for each site that the Microsoft OneNote Online is enabled:
 
 ```powershell
 PS C:\> Set-SPOneNoteWebAppConfig -Site "http://localhost" -Proxy "http://myproxyURL"

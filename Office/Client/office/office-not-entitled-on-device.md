@@ -33,6 +33,6 @@ This may or may not be an error depending on whether Office was entitled to come
 
 ## Resolution
 
-If Office wasn't supposed to come with your device, you can either get a trial or purchase Office. If you've purchased Office online or at a retail store, you can also enter that product key.
+If Office wasn't supposed to come with your device, you can either get a trial or purchase Office. If you've purchased Office Online or at a retail store, you can also enter that product key.
 
 An Office 365 Subscription is included with certain devices. These are typically small screen touch devices and it's marked on the box. If you feel that there's an error and your device should have come with Office, you will need to contact support.
