@@ -22,16 +22,16 @@ appliesto:
 
 When you try to start a desktop sharing session in a Peer-to-Peer (P2P) instant message (IM) or in a P2P audio conversation with a Microsoft Skype for Business for iOS user, you experience the following symptoms: 
 
-- Skype for Business for iOS users receive the following notification:
+- Users of Skype for Business for iOS receive the following notification:
 
    "UserA tried to start a screen presentation, but this version of the app only supports that in conference calls and Skype Meetings."   
-- Skype for Business Desktop users receive the following notification:
+- Users of Skype for Business Desktop receive the following notification:
 
   "The invitation you sent to UserB expired."
 
 When you try to start a desktop sharing session in a P2P video conversation with a Skype for Business for iOS user, you experience the following symptoms:
-- Skype for Business for iOS users are not notified that the desktop user tried to start a desktop sharing session.   
-- Skype for Business Desktop users receive the following notification:The invitation you sent to UserB expired.
+- Users of Skype for Business for iOS do not notify that the desktop user tried to start a desktop sharing session.   
+- Skype for Business Desktop users receives the following notification: The invitation you sent to UserB expired.
 
 ## Cause
 

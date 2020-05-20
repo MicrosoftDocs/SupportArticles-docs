@@ -23,11 +23,11 @@ appliesto:
 Consider the following scenario: 
  
 - You have a parent domain, **contoso.com**, that you have added as an accepted domain to an on-premises Microsoft Exchange Server 2016 or 2013 environment.    
-- You have an on-premises application server domain, such as **app.contoso.com**, that is asubdomain of the parent domain.    
+- You have an on-premises application server domain, such as **app.contoso.com**, that is a subdomain of the parent domain.    
 - The parent domain is configured to accept email messages from domains such as ***.contoso.com**.   
 - You try to send an email message to the on-premises application through Exchange Server.   
 
-In this scenario, the message cannot be sent. Instead, it loops between the Exchange Edge Transport server and Exchange Online Protection (EOP). Additionally,you receive a non-delivery report (NDR) that resembles the following: 
+In this scenario, the message cannot be sent. Instead, it loops between the Exchange Edge Transport server and Exchange Online Protection (EOP). Additionally, you receive a non-delivery report (NDR) that resembles the following: 
  
 **554 5.4.14 Hop count exceeded - possible mail loop** 
 
@@ -47,7 +47,7 @@ To fix this issue, follow these steps:
     New-AcceptedDomain -DomainName app.Contoso.com -DomainType InternalRelay -Name app.contoso.com
     ```
 
-2. To have the newly added accepted domain synced to the Edge servers immediately, run the following command: 
+2. To have the added accepted domain synced to the Edge servers immediately, run the following command: 
 
     ```powershell
     Start-EdgeSynchronization

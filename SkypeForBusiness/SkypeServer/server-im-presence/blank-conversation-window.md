@@ -25,19 +25,20 @@ After joining an active Lync conference the Lync conversation window does not 
 
 ## Cause
 
-The design of the Lync Instant Messaging Conferencing Unit (ImMcu) limits the amount of IM information that will be submitted to the Lync conference participants. The ImMcu message history component records each IM sent by the conference participants for the first 40 seconds after the first IM is added to an IM conference. Within the beginning 40 seconds the ImMcu message history component can manage a maximum limit of 50 IM at a time in its buffer. When the limit of 50 IM is met then the first IM for the conference will be removed from the ImMcu message history component as the last IM for the conference is added to the ImMcu message history component. After the ImMcu message history component's 40 second timer expires, the ImMcu message history component will clear all IMs from its buffer. These design features of the ImMcu message history component provide conference participants with the following experiences when joining a Lync IM conference:
+The design of the Lync Instant Messaging Conferencing Unit (ImMcu) limits the amount of IM information that will be submitted to the Lync conference participants. The ImMcu message history component records each IM sent by the conference participants for the first 40 seconds after the first IM is added to an IM conference. Within the beginning 40 seconds the ImMcu message history component can manage a maximum limit of 50 IM at a time in its buffer. When the limit of 50 IM is met then the first IM for the conference will be removed from the ImMcu message history component as the last IM for the conference is added to the ImMcu message history component. After the ImMcu message history component's 40-second timer expires, the ImMcu message history component will clear all IMs from its buffer. These design features of the ImMcu message history component provide conference participants with the following experiences when joining a Lync IM conference:
 
-- Participants that join the IM conference within the first 40 seconds of the IM conference will receive all of the IM that are current with the ImMcu message history component in their Lync conversation window   
+- Participants that join the IM conference within the first 40 seconds of the IM conference will receive all of the IM that is current with the ImMcu message history component in their Lync conversation window   
 - Participants that join the IM conference after the first 40 seconds of the IM conference will not receive any IM and their Lync conversation window   
 
 ## Workaround
 
-To optimize the number of conference participants that will be able to view a Lync IM conversation window that includes the IMs that are buffered by the ImMcu message history component within its initial 40 second interval, use the following steps to sort the Lync contacts by availability:
+To optimize the number of conference participants that will be able to view a Lync IM conversation window that includes the IMs that are buffered by the ImMcu message history component within its initial 40-second interval, use the following steps to sort the Lync contacts by availability:
 
 
 1. Select the Lync Display contacts by groups (Groups) feature of the Lync contact window   
 2. From the View more layouts drop down list choose Sort by Availability   
-3. Select the available contacts that will be conference participants from the sorted contact list   
+3. Select the available contacts that will be conference participants from the sorted contact list. 
+
 These steps will help ensure that the IM conference invitations will primarily be sent to conference participants that will be available to respond to the IM conference invitations. 
 
 > [!NOTE]

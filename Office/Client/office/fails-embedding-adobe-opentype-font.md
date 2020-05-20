@@ -22,19 +22,19 @@ appliesto:
 
 ## Symptoms
 
-When you try to embed fonts in a Microsoft Office document, Adobe OpenType fonts that have the .otf extension are not embedded.
+When you try to embed fonts in a Microsoft Office document, Adobe OpenType fonts that have the ".otf" extension are not embedded.
 
 ## Cause
 
-This issue occurs because the programs that are listed in the "Applies to" section do not embed fonts that have the .otf extension. The programs that are listed in the "Applies to" section only embed fonts that have the .ttf extension.
+This issue occurs because the programs that are listed in the "Applies to" section do not embed fonts that have the ".otf" extension. The programs that are listed in the "Applies to" section only embed fonts that have the ".ttf" extension.
 
 ## Workaround
 
-To work around this issue, use only fonts that have the .ttf extension in documents in which you intend to embed the fonts.
+To work around this issue, use only fonts that have the ".ttf" extension in documents in which you intend to embed the fonts.
 
 ## More Information
 
-The Adobe OpenType format is an extension of the TrueType SFNT format that supports Adobe PostScript font data and new typographic features. Adobe OpenType fonts that contain PostScript data have an .otf extension. However, TrueType-based OpenType fonts have a .ttf extension.
+The Adobe OpenType format is an extension of the TrueType SFNT format that supports Adobe PostScript font data and new typographic features. Adobe OpenType fonts that contain PostScript data have an ".otf" extension. However, TrueType-based OpenType fonts have a ".ttf" extension.
 
 For more information about Adobe's OpenType fonts, visit the following Adobe Web site:
 
