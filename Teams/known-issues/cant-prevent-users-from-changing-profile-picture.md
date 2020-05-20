@@ -24,8 +24,7 @@ description: Describes a resolution to an issue with Safari's Intelligent Tracki
 
 ## Summary
 
-Currently, Teams does not have a mechanism to prevent users from changing photos. The BTS team has met with the development team who has filed the following for consideration: 
-Feature 108874: IT Policy to disable Profile Photo uploading 
+Currently, Teams does not have a mechanism to prevent users from changing photos. 
 
 ## More information
 
