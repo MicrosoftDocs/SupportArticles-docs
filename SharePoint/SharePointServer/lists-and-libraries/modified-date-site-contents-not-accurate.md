@@ -20,7 +20,7 @@ ms.custom:
 - CI 108026
 - CSSTroubleshoot
 ms.reviewer: lvaznis
-description: "Explains why the modified dates in a SharePoint site contents page does not reflect the correct dates."
+description: "Explains why the modified dates in a SharePoint site contents page do not reflect the correct dates."
 ---
 
 # Modified dates on the SharePoint site contents page are not accurate

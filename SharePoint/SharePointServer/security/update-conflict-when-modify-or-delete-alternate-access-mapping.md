@@ -15,7 +15,7 @@ appliesto:
 - Windows SharePoint Services 3.0
 ---
 
-# "An update conflict has occurred, and you must re-try this action" when change or delete an alternate access mapping
+# "An update conflict has occurred, and you must retry this action" when change or delete an alternate access mapping
 
 ## Symptoms  
 
@@ -49,9 +49,9 @@ To resolve this issue, clear the file system cache on all servers in the server 
 
   3. Close the Services console.     
 
-2. On the computer that is running Microsoft Office SharePoint Server 2007 and on which the Central Administration site is hosted, click **Start**, click **Run**, type explorer , and then press ENTER.   
+2. On the computer that is running Microsoft Office SharePoint Server 2007 and on which the Central Administration site is hosted, click **Start**, click **Run**, type explorer, and then press ENTER.   
 
-3. In Windows Explorer, locate and then double-click the following folder: **Drive**:\Documents and Settings\All Users\Application Data\Microsoft\SharePoint\Config\**GUID**
+3. In Windows Explorer, locate and then double-click the following folder: **Drive**: \Documents and Settings\All Users\Application Data\Microsoft\SharePoint\Config\**GUID**
 
     **Notes**
 
@@ -67,7 +67,7 @@ To resolve this issue, clear the file system cache on all servers in the server 
 
          3. In the **Advanced settings** list, click **Show hidden files and folders** under **Hidden files and folders**, and then click **OK**.   
 
-      - In Windows Server 2008, the configuration cache is in the following location: **Drive**:\ProgramData\Microsoft\SharePoint\Config\**GUID**     
+      - In Windows Server 2008, the configuration cache is in the following location: **Drive**: \ProgramData\Microsoft\SharePoint\Config\*GUID*     
 
 4. Back up the Cache.ini file.    
 
@@ -81,7 +81,7 @@ To resolve this issue, clear the file system cache on all servers in the server 
 
 8. On the **Edit** menu, click **Delete**.    
 
-9. Type 1 , and then click **Save** on the **File** menu.   
+9. Type 1, and then click **Save** on the **File** menu.   
 
 10. On the **File** menu, click **Exit**.   
 
@@ -93,7 +93,7 @@ To resolve this issue, clear the file system cache on all servers in the server 
 
    3. Close the Services console.      
 
-      **Note**  The file system cache is re-created after you perform this procedure. Make sure that you perform this procedure on all servers in the server farm.    
+      **Note** The file system cache is re-created after you perform this procedure. Make sure that you perform this procedure on all servers in the server farm.    
 
 12. Make sure that the Cache.ini file has been updated. For example it should no longer be 1 if the cache has been updated.   
 

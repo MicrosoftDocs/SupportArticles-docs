@@ -47,7 +47,7 @@ When data is loaded into a datasheet or form, the first page of data or a single
 
 Fetch incremental data changes
 
-Although data must be fetched from the server when a link is first used within an session of Access, changes that were to the web service infrastructure enable the program to fetch incremental data changes. Access 2007 caches the data rowsets in memory after they are first opened. Therefore, later use of the SharePoint links becomes significantly faster. In cases of large datasets, there is contention for RAM on the client computer. In this case, rowsets are released, and this frees RAM for the rest of the system.
+Although data must be fetched from the server when a link is first used within a session of Access, changes that were to the web service infrastructure enable the program to fetch incremental data changes. Access 2007 caches the data rowsets in memory after they are first opened. Therefore, later use of the SharePoint links become faster. In cases of large datasets, there is contention for RAM on the client computer. In this case, rowsets are released, and this frees RAM for the rest of the system.
 
 Cache lists in XML
 
@@ -67,9 +67,9 @@ The following improvements in Access 2010 increase SharePoint performance:
 
 Cache data in local tables
 
-Access 2010 enhances the connected SharePoint list experience by caching data in local tables that persist across Access sessions. This enables Access to parse the bulk of the SharePoint XML data only one time. Later use of the links fetches only incremental data changes from the server. An additional benefit of using local tables internally instead of the in-memory rowsets is that multi-valued lookups and value list use in a SharePoint list becomes much faster.
+Access 2010 enhances the connected SharePoint list experience by caching data in local tables that persist across Access sessions. This enables Access to parse the bulk of the SharePoint XML data only one time. Later use of the links fetch only incremental data changes from the server. An additional benefit of using local tables internally instead of the in-memory rowsets is that multi-valued lookups and value list use in a SharePoint list becomes much faster.
 
-The first time that a link is opened, Access must still download all the data from SharePoint and parse it into the local tables. In some cases, all the data may be required immediately. For example, all the data must be read before you can move to the last record in the datasheet or run a query that has a join. In these cases, the time that is required to use the data is about the same as in Access 2007. The real-time savings occurs the next time that the link is used. This occurs either after you start a new session of Access or if many SharePoint links are used within a session. 
+The first time that a link is opened, Access must still download all the data from SharePoint and parse it into the local tables. In some cases, all the data may be required immediately. For example, all the data must be read before you can move to the last record in the datasheet or run a query that has a join. In these cases, the time that is required to use the data is about the same as in Access 2007. The real-time savings occur the next time that the link is used. This occurs either after you start a new session of Access or if many SharePoint links are used within a session. 
 
 Using Access 2010 Cached mode
 

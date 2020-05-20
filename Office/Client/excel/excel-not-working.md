@@ -1,5 +1,5 @@
 ---
-title: Excel 2010 not responding, hangs, freezes or stops working
+title: Excel 2010 not responding, hangs, freezes, or stops working
 description: Provides steps to stop Excel from hanging or freezing when you open it or when you save a workbook.
 author: simonxjx
 manager: dcscontentpm
@@ -15,7 +15,7 @@ appliesto:
 - Excel 2010
 ---
 
-# Excel 2010 not responding, hangs, freezes or stops working
+# Excel 2010 not responding, hangs, freezes, or stops working
 
 > [!NOTE]
 > **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
@@ -93,18 +93,18 @@ If you're not sure if the version of Office that you have is Click to Run, check
 
 1. Open any Office product (Excel, Word, PowerPoint etc.).  
 2. Click on the FileTab and select Help.    
-3. Under "About Microsoft Office" it should say (32-bit) or (64-bit) next to the version number.    
-4. If you have a Click to Runversion it will be stated there. 
+3. Under "About Microsoft Office", it should say (32-bit) or (64-bit) next to the version number.    
+4. If you have a Click to Runversion, it will be stated there. 
 
 If repairing your Office programs did not resolve your issue, continue to method 5.  
 
 ### Method 5: Check to see if your antivirus software is up-to-date or conflicting with Excel
 
-Click here to show information on how you can check for conflicts or if the antivirus is up-to-date.
+Click here to show information on how you can check for conflicts or if the antivirus is up to date.
 
 If your antivirus software is not up-to-date, Excel may not function properly.
 
-**To check whether your antivirus software is up-to-date**
+**To check whether your antivirus software is up to date**
 
 To keep up with new viruses that are created, antivirus software vendors periodically provide updates that you can download from the Internet. Download the latest updates by visiting your antivirus software vendor's website.
 

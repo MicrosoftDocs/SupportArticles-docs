@@ -40,7 +40,8 @@ After the installation, you may receive the following error message when you try
 Microsoft program has not been installed for the current user. Please run setup to install the application.
 ```
 
-**Note** The **program** placeholder represents the name of the Office program that you are trying to start.
+> [!NOTE]
+> The **program** placeholder represents the name of the Office program that you are trying to start.
 
 ## Resolution
 
@@ -52,12 +53,12 @@ Set the permission for the **Everyone** group of the registry subkeys that are 
 
 ### Method 2
 
-Disable the third-party application. For example, to disable WebRoot Spysweeper, follow these steps: 
+Disable the third-party application. For example, to disable WebRoot Spy sweeper, follow these steps: 
 
-1. Right-click the WebRoot Spysweeper icon that is located in the notification area, at the far right of the taskbar.   
-2. Left-click the **Shut Down**option.   
-3. In the **Office installation Error 1406**dialog box, click **Retry**.   
-4. When the Office setup is completed, restart the computer, and then re-enable WebRoot Spysweeper.   
+1. Right-click the WebRoot Spy sweeper icon that is located in the notification area, at the far right of the taskbar.   
+2. Left-click the **Shut Down option.   
+3. In the **Office installation Error 1406 dialog box, click **Retry**.   
+4. When the Office setup is completed, restart the computer, and then re-enable WebRoot Spy sweeper.   
 
 ### Method 3
 
@@ -67,7 +68,8 @@ Take the system into a "clean boot" state, and then run Office setup. This disab
 
 Some activation problems indicate that the license file is corrupted. If the license file is corrupted, you cannot resolve the problem by removing and then reinstalling the Office product. The license file is not removed when you remove the Office product. Additionally, the license file is not overwritten when you reinstall the Office product. If the license file is corrupted, use one of the following methods to delete the license file.
 
-**Note** This method applies only to Office 2007, Office 2003 and Office XP. Office 2010 does not use the OPA licensing file. 
+> [!NOTE]
+> This method applies only to Office 2007, Office 2003 and Office XP. Office 2010 does not use the OPA licensing file. 
  
 #### Delete the license file manually
 
@@ -117,7 +119,7 @@ For Windows XP or Windows Server 2003
 This issue may occur if one of the following scenarios is true: 
 
 - The user who is installing the program, or the user who is opening the program or file does not have sufficient permissions to modify sections of the registry that is required to perform the action. The permission for the Everyone group of the registry subkey noted in the error message is not set to Full Control.    
-- There is a third-party application on the system that is denying the required access to the registry subkey. In most cases, this behavior is caused by WebRoot Spysweeper.   
+- There is a third-party application on the system that is denying the required access to the registry subkey. In most cases, this behavior is caused by WebRoot Spy sweeper.   
 - The nonadministrative user accounts on the computer do not have permission to modify specific files that are used by the Office 2003 Setup program or the Office XP Setup program. These files are used by the Office 2003 Setup program or the Office XP Setup program to register different accounts for access to the Office programs. This issue may occur if a Group Policy high-security template was applied to the computer and if the high-security template restricts access to the following file: 
   - For Windows XP or Windows Server 2003
     - Office 2007  C:\Documents and Settings\All Users\Application Data\Microsoft\Office\Data\Opa12.dat   
@@ -128,4 +130,4 @@ This issue may occur if one of the following scenarios is true:
     - Office 2003 C:\Users\All Users\Microsoft\Office\Data\Opa11.dat   
     - Office XP C:\Users\All Users\Microsoft\Office\Data\Data.dat      
 
-If the non-administrative user accounts cannot modify this file, users cannot start any Office 2007 programs, 2003 programs or Office XP programs on the computer. The Opa12.dat, the Opa11.dat file and the Data.dat file are hardware specific. Additionally, these files are compiled during installation of Office.    
+If the non-administrative user accounts cannot modify this file, users cannot start any Office 2007 programs, 2003 programs, or Office XP programs on the computer. The Opa12.dat, the Opa11.dat file and the Data.dat file are hardware-specific. Additionally, these files are compiled during installation of Office.    

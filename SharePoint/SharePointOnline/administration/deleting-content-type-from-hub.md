@@ -31,18 +31,18 @@ When a content type is deleted from the SharePoint Content Type Hub, the content
 
 ## More information
 
-If a content type becomes unavailable in the content type hub, the subscribing site collections will have one of two outcomes:
+If a content type becomes unavailable on the content type hub, the subscribing site collections will have one of two outcomes:
 
 - The content type will remain available for download for all site collections in every web application that consumes content types from the content type hub. Any copies of this content type will become orphaned, or:
 - The content type will become unavailable for download for all site collections in every web application that consumes content types from the content type hub. Copies of this content type being used in subscribing site collections will be unsealed (set to not be read only) and made into a local content type. 
 
-In no situation will the content type be automatically removed from any subscribing site collections.
+In no situation, the content type will be automatically removed from any subscribing site collections.
 
-Once a content type is published, that content type definition for subscribing is stored in the term store database for the managed metadata service that the content type hub belongs to. The only way to change the content type definition is to manipulate the content type in the content type hub and re-publish it, causing an update to that item in the term store database and consequently updates to subscribing site collections' sealed copies. 
+Once a content type is published, that content type definition for subscribing is stored in the term store database for the managed metadata service that the content type hub belongs to. The only way to change the content type definition is to manipulate the content type in the content type hub and republish it, causing an update to that item in the term store database and consequently updates to subscribing site collections' sealed copies. 
 
 The nature of this structure means that, if you were to delete the content type from the content type hub without first unpublishing it, all copies of the content type in subscribing site collections will become orphaned—they will lose their ability to be updated while still thinking that they are subscribed. In fact, when a new site collection is created that utilizes that content type hub, that orphaned content type will appear because it is being retrieved from its item in the term store database. You will never be able to unpublish an orphaned content type, unless you follow the guidance in the blog post [How to unpublish a published content type if the published content type no longer exists](http://blogs.technet.com/b/stefan_gossner/archive/2014/04/15/how-to-unpublish-a-published-content-type-if-the-published-content-type-no-longer-exists.aspx).
 
-If the content type is unpublished from the hub and deleted it will still appear in the subscriber site collection.
+If the content type is unpublished from the hub and deleted, it will still appear in the subscriber site collection.
 
 ### Deleting a content type
 
