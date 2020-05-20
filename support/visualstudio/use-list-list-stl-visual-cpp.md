@@ -4,9 +4,9 @@ description: Describes how to use the list::list STL functions in Visual C++. Th
 ms.date: 04/24/2020
 ms.prod-support-area-path: 
 ---
-# How to use the list::list STL functions in Visual C++
+# How to use the list::list STL function in Visual C++
 
-This article illustrates how to use the `list::list` STL functions in Visual C++.
+This article illustrates how to use the `list::list` STL function in Visual C++.
 
 _Original product version:_ &nbsp; Visual C++  
 _Original KB number:_ &nbsp; 158091
@@ -14,12 +14,16 @@ _Original KB number:_ &nbsp; 158091
 ## Required header
 
 ```cpp
-   <list>
-Prototype
-   explicit list(const A& al = A());
-   explicit list(size_type n, const T& v = T(), const A& al = A());
-   list(const list& x);
-   list(const_iterator first, const_iterator last, const A& al = A());
+<list>
+```
+
+## Prototype
+
+```cpp
+explicit list(const A& al = A());
+explicit list(size_type n, const T& v = T(), const A& al = A());
+list(const list& x);
+list(const_iterator first, const_iterator last, const A& al = A());
 ```
 
 > [!NOTE]
@@ -27,7 +31,7 @@ Prototype
 
 ## Description
 
-The first constructor specifies an empty initial controlled sequence. The second constructor specifies a repetition of *n* elements of value *x*. The third constructor specifies a copy of the sequence controlled by *x*. The last constructor specifies the sequence (first, last). All constructors store the allocator object *al*, or for the copy constructor, `x.get_allocator()`, in allocator and initialize the controlled sequence.
+The first constructor specifies an empty initial controlled sequence. The second constructor specifies a repetition of `n` elements of value `x`. The third constructor specifies a copy of the sequence controlled by `x`. The last constructor specifies the sequence (`first`, `last`). All constructors store the allocator object `al`, or for the copy constructor, `x.get_allocator()`, in allocator and initialize the controlled sequence.
 
 ## Sample code
 
@@ -37,7 +41,6 @@ The first constructor specifies an empty initial controlled sequence. The second
 // list.cpp : demonstrates the different constructors for list<T>
 // Functions:
 //    list::list
-// Written by Andrew Bradnan
 // Copyright (c) 1996 Microsoft Corporation. All rights reserved.
 //////////////////////////////////////////////////////////////////////
 

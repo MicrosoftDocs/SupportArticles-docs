@@ -11,7 +11,7 @@ This article illustrates how to use the STL `sqrt` and `pow` functions in Visual
 _Original product version:_ &nbsp; Visual C++  
 _Original KB number:_ &nbsp; 157942
 
-## Required header
+## Required headers
 
 ```cpp
 <valarray>
@@ -41,7 +41,7 @@ inline valarray<T> pow(const T& x, const valarray<T>& y);
 
 ## Description
 
-This article illustrates the use of STL `sqrt()` and `pow()` functions through the sample code. `sqrt()` returns an object of class `<valarrayT>`, each of whose elements at index I is the square root of `x[I]`. `pow()` has three template functions. The first template function returns an object of class `valarray<T>`, each of whose elements at index I is `x[I]` raised to the power of `y[I]`. The second template function stores in element I `x[I]` raised to the power of *y*. The third template function stores in element I *x* raised to the power of `y[I]`.
+This article illustrates the use of STL `sqrt()` and `pow()` functions through the sample code. `sqrt()` returns an object of class `<valarrayT>`, each of whose elements at index I is the square root of `x[I]`. `pow()` has three template functions. The first template function returns an object of class `valarray<T>`, each of whose elements at index I is `x[I]` raised to the power of `y[I]`. The second template function stores in element I, `x[I]` raised to the power of *y*. The third template function stores in element I *x* raised to the power of `y[I]`. For the same information about `sqrt` and `pow`, visit [sqrt and pow](/previous-versions/visualstudio/visual-studio-2010/awbsh9hw(v%3dvs.100)).
 
 ## Sample code
 
@@ -62,7 +62,7 @@ This article illustrates the use of STL `sqrt()` and `pow()` functions through t
 
 #if _MSC_VER > 1020   // if VC++ version is > 4.2
    using namespace std;  // std c++ libs implemented in std
-   #endif
+#endif
 
 #define ARRAY_SIZE  3               // array size
 
@@ -167,7 +167,3 @@ The result after calling pow(val_array, 2.0):
 The result after calling pow(2.0, val_array):
 2     16     512
 ```
-
-## References
-
-For the same information about sqrt and pow, visit [sqrt and pow](/previous-versions/visualstudio/visual-studio-2010/awbsh9hw(v%3dvs.100)).

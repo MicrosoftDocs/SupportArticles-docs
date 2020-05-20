@@ -1,12 +1,12 @@
 ---
-title: When clicking a Check box in a TreeView
-description: Describes how to know when the user clicks a Check box in a TreeView control.
+title: Click a check box in a TreeView
+description: Describes how to know when the user clicks a check box in a TreeView control.
 ms.date: 04/24/2020
 ms.prod-support-area-path: 
 ---
 # How to know when the user clicks a check box in a TreeView control
 
-This article describes how to know when the user clicks a Check box in a TreeView control.
+This article describes how to know when the user clicks a check box in a TreeView control.
 
 _Original product version:_ &nbsp;  Visual C#  
 _Original KB number:_ &nbsp; 261289

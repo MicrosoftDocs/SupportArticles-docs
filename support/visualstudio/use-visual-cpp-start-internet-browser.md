@@ -1,5 +1,5 @@
 ---
-title: Use Visual C++ to start Internet browser 
+title: Use Process::Start method to start browser 
 description: Describes how to start the default Internet browser by using managed extensions for Visual C++. This article also provides a code sample to show how to do this task.
 ms.date: 04/24/2020
 ms.prod-support-area-path: 
@@ -10,8 +10,6 @@ This article demonstrates how to start the default Internet browser by using man
 
 _Original product version:_ &nbsp; Visual C++  
 _Original KB number:_ &nbsp; 307382
-
-## Summary
 
 > [!NOTE]
 >
@@ -55,16 +53,16 @@ int main()
     System::String * target = "C:\\Program Files\\Microsoft Visual Studio\\INSTALL.HTM";
     try
     {
-       System::Diagnostics::Process::Start(target);
+        System::Diagnostics::Process::Start(target);
     }
     catch (System::ComponentModel::Win32Exception * noBrowser)
     {
-       if (noBrowser->ErrorCode==-2147467259)
-          System::Windows::Forms::MessageBox::Show(noBrowser->Message);
+        if (noBrowser->ErrorCode==-2147467259)
+           System::Windows::Forms::MessageBox::Show(noBrowser->Message);
     }
     catch (System::Exception * other)
     {
-       System::Windows::Forms::MessageBox::Show(other->Message);
+        System::Windows::Forms::MessageBox::Show(other->Message);
     }
     return 0;
 }
@@ -73,7 +71,3 @@ int main()
 ## Troubleshooting
 
 This code is highly dependent on the application-file type associations in the HKEY_CLASSES_ROOT hive of the registry. Which can lead to unexpected results and exceptions if the registry is damaged. In addition, file types and extensions may be associated with applications other than the browser. For example, HTM or Hyper Text Markup Language (HTML) files may be associated with Web development software instead of the browser.
-
-## References
-
-[Process Class](/dotnet/api/system.diagnostics.process)

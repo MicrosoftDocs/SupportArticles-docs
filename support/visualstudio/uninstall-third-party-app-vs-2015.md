@@ -8,13 +8,13 @@ ms.prod-support-area-path:
 
 This article describes how to uninstall the third-party applications that are installed together with Visual Studio 2015. When you uninstall Visual Studio 2015, the third-party applications that were installed together with Visual Studio 2015 might not be uninstalled.
 
-_Original product version:_ &nbsp; Visual Studio Professional 2015, Visual Studio Express 2015 for Windows Desktop, Web, and Windows 10  
+_Original product version:_ &nbsp; Visual Studio 2015  
 _Original KB number:_ &nbsp; 3060695
 
 ## Android NDK
 
 The Android NDK does not have an entry in the **Programs and Features** item in Control Panel. It is installed locally in the following folder:  
-    `%ALLUSERSPROFILE%\Microsoft Visual Studio 14.0\Apps`
+`%ALLUSERSPROFILE%\Microsoft Visual Studio 14.0\Apps`
 
 The Android NDK can be removed by removing the *Android-ndk-r10* folder from the hard disk.
 
@@ -73,3 +73,10 @@ Websocket4Net is installed as a DLL to your operating system (only on Windows 7)
 3. In this folder, locate and delete `WebSocket4Net.dll`.
 
 [!INCLUDE [Third-party disclaimer](../includes/third-party-disclaimer.md)]
+
+## Applies to
+
+- Visual Studio Professional 2015
+- Visual Studio Express 2015 for Windows Desktop
+- Visual Studio Express 2015 for Web
+- Visual Studio Express 2015 for Windows 10

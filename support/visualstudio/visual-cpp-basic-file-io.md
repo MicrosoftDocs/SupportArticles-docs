@@ -33,16 +33,16 @@ You can still use the `FileSystemObject` in the Microsoft .NET Framework. Becaus
 
 The examples in this article describe basic file I/O operations. The [Step-by-step example](#step-by-step-example) section describes how to create a sample program that demonstrates the following six file I/O operations:
 
-- Read a text file
-- Write a text file
-- View file information
-- List disk drives
-- List folders
-- List files
+- [Read a text file](#read-a-text-file)
+- [Write a text file](#write-a-text-file)
+- [View file information](#view-file-information)
+- [List disk drives](#list-disk-drives)
+- [List sub folders](#list-sub-folders)
+- [List files](#list-files)
 
-### Read a text file
+## Read a text file
 
-The following sample code uses a `StreamReader` class to read a text file. The contents of the file are added to a `ListBox` control. The `try...catch` block is used to alert the program if the file is empty. There are many ways to determine when the end of the file is reached; this sample uses the `Peek` method to examine the next line before reading it.
+The following sample code uses a `StreamReader` class to read a text file. The contents of the file are added to a ListBox control. The `try...catch` block is used to alert the program if the file is empty. There are many ways to determine when the end of the file is reached; this sample uses the `Peek` method to examine the next line before reading it.
 
 ```csharp
 listBox1->Items->Clear();
@@ -53,8 +53,7 @@ try
     do
     {
         listBox1->Items->Add(reader->ReadLine());
-    }
-    while(reader->Peek() != -1);
+    } while(reader->Peek() != -1);
 }
 
 catch (System::Exception *e)
@@ -63,7 +62,7 @@ catch (System::Exception *e)
 }
 ```
 
-In Visual C++, you must add the common language runtime support compiler option (`/clr:oldSyntax`) to successfully compile the previous code sample as Managed C++. To add the common language runtime support compiler option, follow these steps:
+In Visual C++, you must add the common language runtime support compiler option (**/clr:oldSyntax**) to successfully compile the previous code sample as managed C++. To add the common language runtime support compiler option, follow these steps:
 
 1. Click **Project**, and then click **\<ProjectName> Properties**.
 
@@ -78,7 +77,7 @@ In Visual C++, you must add the common language runtime support compiler option 
 
 This sample code uses a `StreamWriter` class to create and write to a file. If you have an existing file, you can open it in the same way.
 
-```csharp
+```cpp
 StreamWriter* pwriter = new StreamWriter(S"c:\\KBTest.txt");
 pwriter->WriteLine(S"File created using StreamWriter class.");
 pwriter->Close();
@@ -89,9 +88,9 @@ listBox1->Items->Add(filew);
 
 ## View file information
 
-This sample code uses a `FileInfo` class to access a file's properties. Notepad.exe is used in this sample. The properties appear in a `ListBox` control.
+This sample code uses a `FileInfo` class to access a file's properties. Notepad.exe is used in this sample. The properties appear in a ListBox control.
 
-```csharp
+```cpp
 listBox1->Items->Clear();
 String* testfile = String::Concat(windir, (S"\\notepad.exe"));
 FileInfo *pFileProps =new FileInfo(testfile);
@@ -105,7 +104,7 @@ listBox1->Items->Add(String::Concat(S"Size = ", (pFileProps->get_Length()).ToStr
 
 ## List disk drives
 
-This sample code uses the `Directory` and `Drive` classes to list the logical drives on a system. For this sample, the results appear in a `ListBox` control.
+This sample code uses the `Directory` and `Drive` classes to list the logical drives on a system. For this sample, the results appear in a ListBox control.
 
 ```csharp
 listBox1->Items->Clear();
@@ -121,7 +120,7 @@ for (int i=0; i<numDrives; i++)
 
 This sample code uses the `GetDirectories` method of the `Directory` class to obtain a list of folders.
 
-```csharp
+```cpp
 listBox1->Items->Clear();
 String* dirs[] = Directory::GetDirectories(windir);
 int numDirs = dirs->get_Length();
@@ -135,7 +134,7 @@ for (int i=0; i<numDirs; i++)
 
 This sample code uses the `GetFiles` method of the `Directory` class to obtain a listing of files.
 
-```csharp
+```cpp
 listBox1->Items->Clear();
 String* files[]= Directory::GetFiles(this->windir);
 int numFiles = files->get_Length();
@@ -175,14 +174,14 @@ Many things can go wrong when a user gains access to files. The files may not ex
 
 9. Open the *Form1.h* file. In the `Form1` class declaration, declare one private `String` variable with the following code:
 
-    ```csharp
+    ```cpp
     private:
     String *windir;
     ```
 
 10. In the `Form1` class constructor, add the following code:
 
-    ```csharp
+    ```cpp
     windir = System::Environment::GetEnvironmentVariable("windir");
     ```
 
@@ -190,7 +189,7 @@ Many things can go wrong when a user gains access to files. The files may not ex
 
 12. Press SHIFT+F7 to open *Form1* in Design view. Double-click the **Read Text File** button, and then paste the following code:
 
-    ```csharp
+    ```cpp
     // How to read a text file:
     // Use try...catch to deal with a 0 byte file or a non-existant file.
     listBox1->Items->Clear();
@@ -199,11 +198,10 @@ Many things can go wrong when a user gains access to files. The files may not ex
     {
         String* textFile = String::Concat(windir, (S"\\mytest.txt"));
         StreamReader *reader=new  StreamReader(textFile);
-    do
-    {
-        listBox1->Items->Add(reader->ReadLine());
-    }
-    while(reader->Peek() != -1);
+        do
+        {
+            listBox1->Items->Add(reader->ReadLine());
+        } while(reader->Peek() != -1);
     }
     catch(FileNotFoundException *ex)
     {
@@ -218,7 +216,7 @@ Many things can go wrong when a user gains access to files. The files may not ex
 
 13. In the Form1 Design view, double-click the **Write Text File** button, and then paste the following code:
 
-    ```csharp
+    ```cpp
     // This demonstrates how to create and to write to a text file.
     StreamWriter* pwriter = new StreamWriter(S"c:\\KBTest.txt");
     pwriter->WriteLine(S"The file was created by using the StreamWriter class.");
@@ -230,7 +228,7 @@ Many things can go wrong when a user gains access to files. The files may not ex
 
 14. In the Form1 Design view, double-click the **View File Information** button, and then paste the following code in the method:
 
-    ```csharp
+    ```cpp
     // This code retrieves file properties. The example uses Notepad.exe.
     listBox1->Items->Clear();
     String* testfile = String::Concat(windir, (S"\\notepad.exe"));
@@ -245,7 +243,7 @@ Many things can go wrong when a user gains access to files. The files may not ex
 
 15. In the Form1 Design view, double-click the List Drives button, and then paste the following code:
 
-    ```csharp
+    ```cpp
     // This demonstrates how to obtain a list of disk drives.
     listBox1->Items->Clear();
     String* drives[] = Directory::GetLogicalDrives();
@@ -258,7 +256,7 @@ Many things can go wrong when a user gains access to files. The files may not ex
 
 16. In the Form1 Design view, double-click the List Subfolders button, and then paste the following code:
 
-    ```csharp
+    ```cpp
     // This code obtains a list of folders. This example uses the Windows folder.
     listBox1->Items->Clear();
     String* dirs[] = Directory::GetDirectories(windir);
@@ -271,7 +269,7 @@ Many things can go wrong when a user gains access to files. The files may not ex
 
 17. In the Form1 Design view, double-click the List Files button, and then paste the following code:
 
-    ```csharp
+    ```cpp
     // This code obtains a list of files. This example uses the Windows folder.
     listBox1->Items->Clear();
     String* files[]= Directory::GetFiles(this->windir);
@@ -286,7 +284,7 @@ Many things can go wrong when a user gains access to files. The files may not ex
 
 ## Complete code sample
 
-```csharp
+```cpp
 //Form1.h
 #pragma once
 
@@ -302,7 +300,6 @@ namespace KB307398
 
     /// <summary>
     /// Summary for Form1
-    ///
     /// WARNING: If you change the name of this class, you will need to change the
     ///          'Resource File Name' property for the managed resource compiler tool
     ///          associated with all .resx files this class depends on.  Otherwise,
@@ -428,11 +425,11 @@ namespace KB307398
             {
                 String* textFile = String::Concat(windir, (S"\\mytest.txt"));
                 StreamReader *reader=new  StreamReader(textFile);
-            do
-            {
-                listBox1->Items->Add(reader->ReadLine());
-            }
-            while(reader->Peek() != -1);
+                do
+                {
+                    listBox1->Items->Add(reader->ReadLine());
+                }
+                while(reader->Peek() != -1);
             }
             catch(FileNotFoundException *ex)
             {
@@ -528,5 +525,4 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
 
 ## References
 
-- For more information, visit [Microsoft Support](https://support.microsoft.com/)
-- For more information about how to create Windows forms in Managed Extensions for C++, see the `ManagedCWinFormWiz` sample in Visual Studio .NET Help.
+For more information, visit [Microsoft Support](https://support.microsoft.com/). For more information about how to create Windows forms in managed extensions for C++, see the `ManagedCWinFormWiz` sample in Visual Studio .NET Help.

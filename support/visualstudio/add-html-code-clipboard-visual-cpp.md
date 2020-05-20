@@ -4,7 +4,7 @@ description: Describes how to add Hypertext Markup Language (HTML) to the Micros
 ms.date: 04/24/2020
 ms.prod-support-area-path: 
 ---
-# How to add HTML code to the clipboard by Using Visual C++
+# How to add HTML code to the clipboard by using Visual C++
 
 This article demonstrates how to add Hypertext Markup Language (HTML) code to Microsoft Windows clipboard by using Visual C++.
 
@@ -13,13 +13,15 @@ _Original KB number:_ &nbsp; 274308
 
 ## Summary
 
-This article includes a sample function that you can use in your applications to simplify the process.
+This article includes a sample function that you can use in your applications to simplify the process of adding HTML code to the clipboard.
 
 ## HTML clipboard format
 
 HTML has its own clipboard format called HTML Format (CF_HTML) that you can use to provide your data to other applications, such as Microsoft Excel, Microsoft Word, or other Microsoft Office applications.
 
 CF_HTML is entirely a text-based format that includes a description, a context, and a fragment within that context. When you build data to send to the clipboard, you must include a description of the data to indicate the clipboard version and the offsets for the context and fragment. Calculating the offsets can be the difficult part. However, you can use the following routine to simplify this task.
+
+For more information, see [HTML Clipboard Format](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa767917(v=vs.85)).
 
 ## Sample code
 
@@ -115,8 +117,4 @@ CopyHTML(html);
 
 ## More information
 
-Using an approach that sends HTML code to the clipboard might be especially beneficial for Office Automation clients. For example, if you have an Automation client that needs to generate formatted data for cells in Microsoft Excel or paragraphs in Microsoft Word, you could build the data in HTML code, send it to the clipboard, and then paste it into the application. By using this technique, you could reduce the number of out-of-process calls to the Automation client.
-
-## References
-
-- [HTML Clipboard Format](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa767917(v=vs.85))
+Using an approach that sends HTML code to the clipboard might be especially beneficial for Office automation clients. For example, if you have an automation client that needs to generate formatted data for cells in Microsoft Excel or paragraphs in Microsoft Word, you could build the data in HTML code, send it to the clipboard, and then paste it into the application. By using this technique, you could reduce the number of out-of-process calls to the Automation client.

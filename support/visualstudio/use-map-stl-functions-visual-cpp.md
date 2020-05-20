@@ -6,7 +6,7 @@ ms.prod-support-area-path:
 ---
 # How to use the map::end, map::find, map::insert, map::iterator, and map::value_type STL functions in Visual C++
 
-This article illustrates how to use the`map::end`, `map::find`, `map::insert`, `map::iterator`, and m`ap::value_type` Standard Template Library (STL) symbols in Visual C++.
+This article illustrates how to use the `map::end`, `map::find`, `map::insert`, `map::iterator`, and `map::value_type` Standard Template Library (STL) symbols in Visual C++.
 
 _Original product version:_ &nbsp; Visual C++  
 _Original KB number:_ &nbsp; 157159
@@ -15,12 +15,16 @@ _Original KB number:_ &nbsp; 157159
 
 ```cpp
 <map>
-Prototypes
-   iterator map::end();
+```
 
-   // Key is the data type of template argument #1 for map
-   iterator map::find(const Key& key);
-   pair<iterator, bool> map::insert(const value_type& x);
+## Prototypes
+
+```cpp
+iterator map::end();
+
+// Key is the data type of template argument #1 for map
+iterator map::find(const Key& key);
+pair<iterator, bool> map::insert(const value_type& x);
 ```
 
 > [!NOTE]
@@ -30,13 +34,13 @@ Prototypes
 
 The `end()` function returns an iterator that points one past the end of a sequence.
 
-Find returns an iterator that chooses the first element whose sort key equals key. If no such element exists, the iterator equals `end()`.
+Find returns an iterator that chooses the first element whose sort key equals `key`. If no such element exists, the iterator equals `end()`.
 
-If the key doesn't already exist, insert will add it to the sequence and return `pair<iterator, true>`. If the key already exists, insert doesn't add it to the sequence and returns `pair <iterator, false>`.
+If the key doesn't already exist, `insert` will add it to the sequence and return `pair<iterator, true>`. If the key already exists, `insert` doesn't add it to the sequence and returns `pair <iterator, false>`.
 
 The following sample creates a map of ints to strings. In this case, the mapping is from digits to their string equivalents (1 -> One, 2 -> Two, and so on.).
 
-The program reads a number from the user, finds the word equivalent for each digit (using the map), and prints the number back as a series of words. For example, if the user enters *25463*, the program responds with: Two Five Four Six Three.
+The program reads a number from the user, finds the word equivalent for each digit (using the map), and prints the number back as a series of words. For example, if the user enters *25463*, the program responds with: **Two Five Four Six Three**.
 
 ## Sample code
 
@@ -48,7 +52,6 @@ The program reads a number from the user, finds the word equivalent for each dig
 // end
 // find
 // insert
-// Written by Rick Troemel
 // of Microsoft Product Support Services,
 // Copyright (c) 1996 Microsoft Corporation. All rights reserved.
 //////////////////////////////////////////////////////////////////////

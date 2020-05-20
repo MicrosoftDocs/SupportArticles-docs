@@ -22,7 +22,7 @@ During the initial installation of Visual Studio, Internet Information Services 
 
 During the upgrade to Visual Studio 2015 Update 3, IIS Express installs a new SHA256 self-signed certificate into the `Certificates (Local Computer)\Personal\Certificates` folder. However, because there is already a certificate installed in the `Certificates - Current User\Trusted Root Certification Authorities\Certificates` folder, Visual Studio fails to prompt you to install the new SHA256 certificate into the `Certificates - Current User\Trusted Root Certification Authorities\Certificates` folder.
 
-## Method 1
+## Method 1: Use PowerShell script
 
 > [!NOTE]
 > This is the preferred method.
@@ -44,14 +44,14 @@ During the upgrade to Visual Studio 2015 Update 3, IIS Express installs a new SH
     }
     else
     {
-            foreach ($cert in $certs)
-            {
-                Export-Certificate -Cert $cert.PSPath -FilePath $cerFile -Type CERT | Out-Null
-                Import-Certificate -FilePath $cerFile -CertStoreLocation Cert:\CurrentUser\Root | Out-Null
-                Remove-Item $cerFile -Force
-            }
-            Write-Host 'Successfully installed the certificate to
-            Trusted Root Certification Authorities of the current user.'
+        foreach ($cert in $certs)
+        {
+            Export-Certificate -Cert $cert.PSPath -FilePath $cerFile -Type CERT | Out-Null
+            Import-Certificate -FilePath $cerFile -CertStoreLocation Cert:\CurrentUser\Root | Out-Null
+            Remove-Item $cerFile -Force
+        }
+        Write-Host 'Successfully installed the certificate to
+        Trusted Root Certification Authorities of the current user.'
     }
     ```
 
@@ -63,47 +63,45 @@ During the upgrade to Visual Studio 2015 Update 3, IIS Express installs a new SH
 
     > Successfully installed the certificate to Trusted Root Certification Authorities of the current user.
 
-## Method 2
-
-Configure your computer to trust the IIS Express Certificate. To do this, follow these steps:
+## Method 2: Configure computers to trust IIS Express certificate
 
 1. Open the Microsoft Management Console by clicking **Start**, typing *Run*, and then pressing Enter. In the **Run** dialog box, type *mmc*, and then click **OK**.
 
-    ![enter mmc](./media/warnings-untrusted-certificate/mmc.jpg)
+    ![Screenshot of entering mmc.](./media/warnings-untrusted-certificate/mmc.jpg)
 
 2. Add a snap-in to manage certificates for the local computer. To do this, follow these steps:
    1. On the **File** menu, click **Add/Remove Snap-in**.
 
-      ![Console to add or remove snap-ins](./media/warnings-untrusted-certificate/add-or-remove-snap-ins.jpg)
+      ![Console to add or remove snap-ins.](./media/warnings-untrusted-certificate/add-or-remove-snap-ins.jpg)
 
    2. In the **Add or Remove Snap-ins** dialog box, select **Certificates**, and then click **Add**.
 
-      ![Select Certificates](./media/warnings-untrusted-certificate/select-certificates.jpg)
+      ![Screenshot of selecting Certificates.](./media/warnings-untrusted-certificate/select-certificates.jpg)
 
    3. In the **Certificates snap-in** dialog box, select **Computer account**, and then click **Next**.
 
-      ![Click](./media/warnings-untrusted-certificate/certificates-snap-in.jpg)
+      ![Screenshot of Computer account.](./media/warnings-untrusted-certificate/certificates-snap-in.jpg)
 
    4. In the **Select Computer** dialog box, select **Local Computer**, and then click **Finish**.
 
-       ![Select computer](./media/warnings-untrusted-certificate/select-computer.jpg)
+       ![Screenshot of selecting computer.](./media/warnings-untrusted-certificate/select-computer.jpg)
 
    5. In the **Add or Remove Snap-ins** dialog box, select **Certificates** again, and this time select **My user account** in the **Certificates snap-in** dialog box.
 
-      ![Select my user account](./media/warnings-untrusted-certificate/select-my-user-account.jpg)
+      ![Screenshot of selecting my user account.](./media/warnings-untrusted-certificate/select-my-user-account.jpg)
 
 3. Export the SHA256 IIS Express certificate from `Certificates (Local Computer)\Personal\Certificates`, as follows:
    1. Open the IIS Express Development Certificate, verify that you have selected the SHA256 certificate. and then click **Copy to File**.
 
-      ![Select the SHA256 certificate and Copy](./media/warnings-untrusted-certificate/copy-to-file.jpg)
+      ![Screenshot of selecting the SHA256 certificate and Copy.](./media/warnings-untrusted-certificate/copy-to-file.jpg)
 
    2. In the Certificate Export Wizard, select **No, do not export the private key**, and then click **Next**.
 
-      ![Certificate Export Wizard dialog](./media/warnings-untrusted-certificate/certificate-export-wizard.jpg)
+      ![Screenshot of Certificate Export Wizard dialog.](./media/warnings-untrusted-certificate/certificate-export-wizard.jpg)
 
    3. On the next page of the wizard, select **DER encoded binary X.509 (.CER)**, and then click **Next**.
 
-      ![DER encoded binary X.509](./media/warnings-untrusted-certificate/der-encoded-binary-x-509.jpg)
+      ![DER encoded binary X.509.](./media/warnings-untrusted-certificate/der-encoded-binary-x-509.jpg)
 
    4. On the next page of the wizard, select a location on disk, and follow the remaining steps until you have successfully exported the certificate.
 

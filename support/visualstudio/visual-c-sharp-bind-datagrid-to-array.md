@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 315786
 
 ## Summary
 
-The example consists of a Windows form with a DataGrid control to display object property values and four command buttons to browse the rows of the DataGrid control.
+The example in this article consists of a Windows form with a DataGrid control to display object property values and four command buttons to browse the rows of the DataGrid control.
 
 ## Requirements
 
@@ -171,7 +171,7 @@ currencyManager.Position = arr.Length - 1;
 8. Change the **Text** property of Button2 to **Previous**.
 9. Change the **Text** property of Button3 to **First**.
 10. Change the **Text** property of Button4 to **Last**.
-11. Add the following code to the Form1 class.
+11. Add the following code to the `Form1` class.
 
     ```csharp
     private guitar[] arr=new guitar[3];
@@ -179,7 +179,7 @@ currencyManager.Position = arr.Length - 1;
     ```
 
 12. Switch to the **Form Designer**, right-click the form, and then click **Properties**.
-13. Click the **Events** icon, and then double-click the `Load` event to add the `Form1_Load` event to your code.
+13. Click the **Events** icon, and then double-click the load event to add the `Form1_Load` event to your code.
 14. Add the following code to the `Form1_Load` event.
 
     ```csharp

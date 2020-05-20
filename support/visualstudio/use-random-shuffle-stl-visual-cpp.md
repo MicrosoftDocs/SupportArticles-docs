@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 156994
 
 ## Required header
 
-```console
+```cpp
 <algorithm>
 ```
 
@@ -31,15 +31,15 @@ void random_shuffle(RandomAccessIterator first,
 
 ## Description
 
-The `random_shuffle` algorithm shuffles the elements of a sequence [first..last) in a random order.
+The `random_shuffle` algorithm shuffles the elements of a sequence (first..last) in a random order.
 
-The predicate version uses the pred function to generate the indices of the elements to swap. The pred has to be a function object that takes a parameter *n* and returns an integral random number in the range 0 - (n - 1).
+The predicate version uses the pred function to generate the indices of the elements to swap. The pred has to be a function object that takes a parameter *n* and returns an integral random number in the range 0 to (n - 1).
 
-The predicate version of `random_shuffle` uses `operator=`to perform swaps.
+The predicate version of `random_shuffle` uses `operator=` to perform swaps.
 
 ## Sample code
 
-```csharp
+```cpp
 //////////////////////////////////////////////////////////////////////
 // Compile options needed: /GX
 // random_shuffle.cpp: Illustrates how to use the predicate version
@@ -48,8 +48,6 @@ The predicate version of `random_shuffle` uses `operator=`to perform swaps.
 //    random_shuffle: Shuffle the elements in a random order.
 //     Rand: Given n, generates an integral random number in the
 //          in the range 0 - (n - 1).
-//
-// Written by Kalindi Sanghrajka
 // of Microsoft Product Support Services,
 // Software Core Developer Support.
 // Copyright (c) 1996 Microsoft Corporation. All rights reserved.
@@ -132,4 +130,4 @@ Numbers { 10 30 4 70 96 100 69 10  }
 
 ## References
 
-For more information about the random_shuffle function, visit [random_shuffle (STL Samples)](/previous-versions/visualstudio/visual-studio-2010/6zyd6ahz(v%3dvs.100)).
+For more information about the `random_shuffle` function, visit [random_shuffle (STL Samples)](/previous-versions/visualstudio/visual-studio-2010/6zyd6ahz(v%3dvs.100)).

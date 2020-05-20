@@ -44,7 +44,7 @@ This article assumes that you're familiar with the following topics:
 
 2. Make sure that the project references the `System.Xml` namespace.
 
-3. Use the `using statement` on the `Xml` and `XPath` namespaces so that you aren't required to qualify declarations in those namespaces later in your code. You can use the `using statement` before any other declarations, as follows:
+3. Use the `using` statement on the `Xml` and `XPath` namespaces so that you aren't required to qualify declarations in those namespaces later in your code. You can use the `using` statement before any other declarations, as follows:
 
     ```csharp
     using System.Xml;
@@ -236,7 +236,7 @@ To resolve the error, remove the white-space character(s) that precede the first
 
 ## References
 
-- [Download Books.xml now](http://download.microsoft.com/download/xml/utility/1.0.0.1/wxp/books.exe)
+- [Download Books.xml now](https://download.microsoft.com/download/xml/utility/1.0.0.1/wxp/en-us/books.exe)
 
 - [XPathNavigator Class](/dotnet/api/system.xml.xpath.xpathnavigator)
 
