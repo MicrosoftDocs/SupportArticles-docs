@@ -77,7 +77,7 @@ powershell -executionpolicy unrestricted c:\rigel\x64\scripts\provisioning\scrip
 
 ### Step 3: Check whether the app is installed under user NT AUTHORITY\SYSTEM
 
-Some systems in the field have installed the Microsoft.SkypeRoomSystem app for the NT AUTHORITY\SYSTEM user. These systems cannot run APPX apps and should not have the Microsoft.SkypeRoomSystem app installed or staged to them. Such systems frequently do not start correctly. The remedy is to remove the app from the system.
+Some systems in the field have installed the Microsoft.SkypeRoomSystem app for the NT AUTHORITY\SYSTEM user. The NT AUTHORITY\SYSTEM user context cannot run APPX apps and should not have the Microsoft.SkypeRoomSystem app installed or staged to it. Such systems frequently do not start correctly. The remedy is to remove the app from the system.
 
 To check for this situation:
 
@@ -139,7 +139,9 @@ To check for this situation, follow these steps:
     powershell -Command “& {(Get-CimInstance -Namespace ‘root\cimv2\mdm\dmmap’ -ClassName ‘MDM_AssignedAccess’).ShellLauncher}”
     ```
 
-6.	If the command prints an XML file between one and 24 lines long, the system is not affected. In this case, go to Step 5. If the command returns an error, nothing, or an empty XML file, the system is affected. If your system is affected, follow these steps:
+6.	If the command prints an XML file between one and 24 lines long, the system is not affected. In this case, go to Step 5. 
+
+7. If the command returns an error, nothing, or an empty XML file, the system is affected. If your system is affected, follow these steps:
     1. [Sign in to the Administrator account on the device](https://docs.microsoft.com/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
     2. Open the **Start** menu.
     3. Type **winver**, and select the search result.
