@@ -92,7 +92,7 @@ To check for this situation:
 5.	If the command generates no output, the system is not affected. In this case, go to Step 4.
 
 6.	If the command does generate output, the system is affected. In this case, follow these steps:
-    1.	[Sign in to the Admin user on the device](https://docs.microsoft.com/en-us/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
+    1.	[Sign in to the Admin user on the device](https://docs.microsoft.com/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
     2.	Open the **Start** menu.
     3.	Type **Notepad**, right-click the search result, and then select **Run as administrator**.
     4.	Copy the following script into Notepad:
@@ -152,12 +152,14 @@ To check for this situation, follow these steps:
      ```
     > [!NOTE]
     > A new shell is created.
+
     8. In the new shell, type and run the following script: 
     ```
     powershell -executionpolicy unrestricted c:\Rigel\x64\Scripts\Provisioning\ScriptLaunch.ps1 Config\SetupShell\CustomShell.ps1
     ```
     > [!NOTE]
     > This command returns “RebootRequired.”
+
     9. Restart the computer. Up to two additional restarts may be required (see Step 1).
 
 ### Step 5: Contact Customer Support
