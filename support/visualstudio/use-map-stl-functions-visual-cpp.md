@@ -107,7 +107,7 @@ void main()
 }
 ```
 
-Program output is:
+Program output:
 
 ```console
 Enter "q" to quit, or enter a Number: 22

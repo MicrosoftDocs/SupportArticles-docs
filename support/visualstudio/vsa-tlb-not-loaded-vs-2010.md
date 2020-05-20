@@ -1,5 +1,5 @@
 ---
-title: Microsoft.Vsa.tlb not be loaded error
+title: Microsoft.Vsa.tlb could not be loaded error
 description: Resolves an error that occurs in Visual Studio 2010 after you upgrade from Windows 8 to Windows 8.1. This issue occurs when you start the Visual Studio.
 ms.date: 04/22/2020
 ms.prod-support-area-path:
@@ -27,5 +27,5 @@ To resolve this issue, use one of the following methods:
 - Repair the Visual Studio installation:
 
   1. Click **Start**, click **Control Panel**, click **Programs**, and then click **Programs and Features**.
-  2. Right-click the version of Visual Studio 2010 that you have installed, and then click **Change**.
+  2. Right-click the version of Visual Studio 2010 that you've installed, and then click **Change**.
   3. Click **Repair** when the Visual Studio 2010 Setup wizard opens.

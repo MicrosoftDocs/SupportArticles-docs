@@ -115,7 +115,7 @@ void main()
 }
 ```
 
-Program Output is:
+Program output:
 
 ```console
 

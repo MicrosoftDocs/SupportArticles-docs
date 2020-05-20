@@ -1,5 +1,5 @@
 ---
-title: Alternate credentials doesn't working
+title: Alternate credentials don't working
 description: Discusses an issue in which alternate credentials stop working for existing Visual Studio Online account users after you connect to an Azure Active Directory (AAD).
 ms.date: 04/22/2020
 ms.prod-support-area-path:
@@ -35,7 +35,7 @@ To work around the issue, reset your alternate credentials for that account to r
 
     :::image type="content" source="./media/alternate-credentials-stop-working/user-profile.jpg" alt-text="User profile.":::
 
-4. Set a password and optionally a secondary user name that is not an email account if @ is not supported by your application.
+4. Set a password and optionally a secondary user name that isn't an email account if @ is not supported by your application.
 
     :::image type="content" source="./media/alternate-credentials-stop-working/set-password.jpg" alt-text="Set Password.":::
 
