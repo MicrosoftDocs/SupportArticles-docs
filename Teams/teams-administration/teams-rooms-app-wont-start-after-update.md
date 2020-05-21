@@ -32,7 +32,7 @@ If your MTR system is running smoothly, but the application does not start after
 
 ### Step 1: Restart up to two times
 
-If any errors occur that might MTR from starting as expected after the update is installed, you can try to fix them by restarting the system two times. Wait 10 minutes between restarts. This step clears most cases. 
+If any errors occur that prevent the MTR from starting as expected after the update is installed, you can try to fix them by restarting the system two times. Wait 10 minutes between restarts. This step clears most cases. 
 
 To restart MTR, try any of the following methods:
 - Use the power button in the Start menu (RDP or local)
