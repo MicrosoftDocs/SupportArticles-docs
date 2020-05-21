@@ -37,6 +37,8 @@ For more on earlier versions of Word, see:
 
 ## Quick resolution
 
+*Try the following options to help determine the cause of your printing failure. Select the arrow image to see more detailed instructions about that option.*
+
 <table align="left">
 <tr>
 <td valign="top"> 
