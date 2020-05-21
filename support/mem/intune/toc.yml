@@ -2,6 +2,40 @@
   href: welcome-support-intune.md
 - name: (Back up to Support hub page)
   href: ../../index.yml
+- name: App management
+  items:
+  - name: Access denied configuring MAM
+    href: configure-app-protection-access-denied.md
+  - name: Can't prevent saving images locally
+    href: app-protection-policy-fails-restricting-images.md
+  - name: Error when you open a web app on iOS 
+    href: invalid-address-open-web-app.md
+  - name: OneDrive supports Open-in protection on unenrolled devices
+    href: open-in-protection-unenrolled-devices.md
+  - name: Protected data is attached to an iMessage
+    href: onedrive-attaches-corporate-protected-data.md
+- name: Co-management with Configuration Manager
+  items:
+  - name: Troubleshoot co-management auto-enroll
+    href: troubleshoot-co-management-auto-enrolling.md
+  - name: Troubleshoot co-management bootstrap
+    href: troubleshoot-co-management-bootstrap.md
+  - name: Troubleshoot co-management workloads
+    href: troubleshoot-co-management-workloads.md
+- name: Configure devices
+  items:
+  - name: Can't assign SCEP certificates to devices
+    href: scep-certificates-fails-assigned-to-devices.md
+  - name: Connectivity issues due to root certificates
+    href: fix-connectivity-issues.md
+- name: Company resource access
+  items:
+  - name: Apps don't appear as Available
+    href: apps-appear-unavailable.md
+  - name: Error 0x80090014 installing NDES certificate
+    href: error-0x80090014-installing-ndes-certificate.md
+  - name: Sign in to Intune NDES Connector error 0x80004003
+    href: ndes-connector-signin-error-80004003.md
 - name: Device enrollment
   items:
   - name: Can't update enrollment
@@ -21,12 +55,24 @@
       href: windows10-enroll-error-80180002b.md
     - name: Error 0xcaa9001f in MDM enrollment
       href: mdm-enrollment-error-0xcaa9001f.md
-- name: App management
+- name: Device life cycle
+  items: 
+  - name: Help desk operators can't do remote tasks
+    href: help-desk-operator-fails-remote-tasks.md
+  - name: RemoteWipe CSP fails to send a doWipe command
+    href: remotewipe-fails-sending-dowipe-command.md
+- name: Device management
   items:
-  - name: Error when you open a web app on iOS 
-    href: invalid-address-open-web-app.md
-  - name: OneDrive supports Open-in protection on unenrolled devices
-    href: open-in-protection-unenrolled-devices.md
+  - name: Can't move an Intune Exchange connector
+    href: fails-moving-intune-exchange-connector.md
+  - name: Error -2016281112 deploying a password policy
+    href: error-deploying-password-policy.md
+  - name: Not compliant for BitLocker-encrypted device
+    href: bitlocker-encrypted-device-not-compliant.md
+  - name: Password expiration setting doesn't work
+    href: password-expiration-setting-uneffect.md
+  - name: Troubleshoot CSP custom settings
+    href: troubleshoot-csp-custom-settings.md
 - name: Fundamentals
   items:
   - name: Set the MDM authority
@@ -39,15 +85,23 @@
       href: look-up-intune-licenses.md
   - name: Intune account portal retired
     href: itune-account-portal-retired.md
+- name: General guidance or advisory
+  items:
+  - name: Attributes synced by Intune
+    href: intune-synced-attributes-list.md
 - name: Intune Data Warehouse
   items:
   - name: AADSTS50011 query the Intune Data Warehouse
     href: error-query-intune-data-warehouse.md
-- name: Co-management with Configuration Manager
+- name: Migration to the Azure Portal
   items:
-  - name: Troubleshoot co-management auto-enroll
-    href: troubleshoot-co-management-auto-enrolling.md
-  - name: Troubleshoot co-management bootstrap
-    href: troubleshoot-co-management-bootstrap.md
-  - name: Troubleshoot co-management workloads
-    href: troubleshoot-co-management-workloads.md
+  - name: Migration blockers for grouping and targeting
+    href: grouping-targeting-migration-blockers.md
+- name: Service administration
+  items:
+  - name: Managed Browser policy triggers error 0x87D1FDE8
+    href: managed-browser-policy-triggers-error-0x87d1fde8.md
+- name: Software distribution
+  items:
+  - name: Software distribution tips and practices
+    href: software-distribution-best-practices.md
