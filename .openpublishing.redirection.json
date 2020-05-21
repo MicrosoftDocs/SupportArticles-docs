@@ -1,6 +1,5 @@
 {
   "redirections": [
-
     {
       "source_path": "support/biztalk/index.md",
       "redirect_url": "/support/biztalk/welcome-support-biztalk",
@@ -9,6 +8,16 @@
     {
       "source_path": "support/browsers/index.md",
       "redirect_url": "/support/browsers/welcome-support-browsers",
+      "redirect_document_id": false
+    },    
+    {
+      "source_path": "support/dotnet/index.md",
+      "redirect_url": "/support/dotnet/welcome-support-dotnet",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/host-integration-server/index.md",
+      "redirect_url": "/support/host-integration-server/welcome-support-his",
       "redirect_document_id": false
     },
     {
