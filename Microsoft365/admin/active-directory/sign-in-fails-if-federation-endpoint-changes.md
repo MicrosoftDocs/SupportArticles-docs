@@ -55,7 +55,7 @@ To resolve this issue, use one of the following methods, as appropriate for your
    |URL Path|Enabled|Proxy enabled |
    |--|--|--|
    |/adfs/ls/|True|True |
-   |/adfs/services/trust/2005/windowstransport/|True|False |
+   |/adfs/services/trust/2005/windowstransport|True|False |
    |/adfs/services/trust/2005/certificatemixed|True|True |
    |/adfs/services/trust/2005/certificatetransport|True|True |
    |/adfs/services/trust/2005/usernamemixed|True|True |
@@ -67,7 +67,7 @@ To resolve this issue, use one of the following methods, as appropriate for your
    |/adfs/services/trust/13/usernamemixed|True|True |
    |/adfs/services/trust/13/issuedtokenmixedasymmetricbasic256|True|True |
    |/adfs/services/trust/13/issuedtokenmixedsymmetricbasic256|True|True |
-   |/adfs/services/trsuttcp/windows|True|False |
+   |/adfs/services/trusttcp/windows|True|False |
    |/adfs/services/trust/mex|True|True |
    |/FederationMetadata/2007-06/FederationMetadata.xml|True|True |
    |/adfs/ls/federationserverservice.asmx|True|False |
