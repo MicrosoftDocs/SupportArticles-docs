@@ -47,4 +47,4 @@ To resolve this problem, add a friendly name to the certificate. Follow these st
 
 ## More information
 
-This issue is scheduled to be resolved in Windows Server 2008 service pack 3.
+This issue is scheduled to be resolved in Windows Server 2008 Service Pack 3.

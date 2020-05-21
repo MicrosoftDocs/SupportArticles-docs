@@ -38,9 +38,9 @@ As part of this software update release, support has been added to allow adminis
 
 To obtain this software update, follow one of the links below:
 
-- [Hotfix for Microsoft Application Request Routing Version 2.5 for IIS7 and above (x64)](https://www.microsoft.com/download/en/details.aspx?id=29416)
+- [Hotfix for Microsoft Application Request Routing Version 2.5 for IIS7 and above (x64)](https://www.microsoft.com/download/details.aspx?id=29416)
 
-- [Hotfix for Microsoft Application Request Routing Version 2.5 for IIS7 and above (x86)](https://www.microsoft.com/download/en/details.aspx?id=29417)
+- [Hotfix for Microsoft Application Request Routing Version 2.5 for IIS7 and above (x86)](https://www.microsoft.com/download/details.aspx?id=29417)
 
 ## References
 
