@@ -53,7 +53,6 @@ This example shows how to use `list::remove` and `list::remove_if`. It also show
 // Functions:
 // list::remove
 // list::remove_if
-// Written by Andrew Bradnan
 // Copyright (c) 1996 Microsoft Corporation. All rights reserved.
 //////////////////////////////////////////////////////////////////////
 

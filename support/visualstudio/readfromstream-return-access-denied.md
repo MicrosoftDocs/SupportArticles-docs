@@ -47,6 +47,6 @@ Another way is to change `_ATL_STREAM_MAX_SIZE` itself.
 
 We are reading from a stream and the stream can be from untrusted source. The MAX value is there to catch any issues with streams that have been manipulated to try the code to allocate huge number of memory causing DOS attacks.
 
-- [Inside the Active Template Library (ATL) Security Update](http://channel9.msdn.com/Blogs/Charles/Out-of-Band-Inside-the-ATL-Security-Update)  
+- [Inside the Active Template Library (ATL) Security Update](https://channel9.msdn.com/Blogs/Charles/Out-of-Band-Inside-the-ATL-Security-Update)  
 
 - [Active Template Library Security Update for Developers](/previous-versions/ee309358(v=msdn.10))

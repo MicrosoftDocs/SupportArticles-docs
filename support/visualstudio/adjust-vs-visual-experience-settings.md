@@ -25,7 +25,7 @@ Examples of symptoms that may be resolved through manual adjustments include:
 
 The Visual Studio visual experience settings are available from **Tools** > **Options**, on the **Environment** > **General** page:
 
-![show the Visual Studio visual experience option](./media/adjust-vs-visual-experience-settings/visual-experience-settings.png)
+:::image type="content" source="./media/adjust-vs-visual-experience-settings/visual-experience-settings.png" alt-text="show the Visual Studio visual experience option":::
 
 The status text beneath the settings checkboxes describes the current visual experience configuration; this text is only updated after changes have been applied.
 

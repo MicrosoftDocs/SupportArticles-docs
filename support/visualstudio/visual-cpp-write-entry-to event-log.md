@@ -25,13 +25,13 @@ To do it, follow these steps:
 2. Create a new Visual C++ Managed C++ Application project.
 3. Add a reference to *system.dll* by adding the following line to the code:
 
-    ```csharp
+    ```cpp
     #using <system.dll>
     ```
 
 4. Use the `using` directive on the `System` and `System::Diagnostics` namespaces so that you don't have to qualify declarations from these namespaces later in your code. You can use the following statements before any other declarations:
 
-    ```csharp
+    ```cpp
     using namespace System;
     using namespace System::Diagnostics;
     ```
@@ -43,7 +43,7 @@ To do it, follow these steps:
 
     You can register a particular source with only a single event log. If you want to write messages to more than one log, you must define multiple sources.
 
-    ```csharp
+    ```cpp
     String *sSource;
     String *sLog;
     String *sEvent;
@@ -55,13 +55,13 @@ To do it, follow these steps:
 
 6. Use two static methods of the `EventLog` class to check whether your source exists, and if the source doesn't exist, to create this source that is associated with a particular event log. If the log name that you specify doesn't exist, the name is created automatically when you write your first entry to the log. By default, if you don't supply a log name to the `CreateEventSource` method, the log file is named *Application Log*.
 
-    ```csharp
+    ```cpp
     if(!EventLog::SourceExists(sSource)) EventLog::CreateEventSource(sSource,sLog);
     ```
 
 7. To write a message to an event log, you can use the static method `EventLog.WriteEntry`. This method has several different overloaded versions. The following sample code shows the simplest method (which takes a source string and your message), and one of the more complex methods (which supports specifying the event ID and event type):
 
-    ```csharp
+    ```cpp
     EventLog::WriteEntry(sSource,sEvent);
     EventLog::WriteEntry(sSource, sEvent, EventLogEntryType::Warning, 235);
     ```
@@ -70,7 +70,7 @@ To do it, follow these steps:
 
 ## Complete code listing in Visual C++ .NET
 
-```csharp
+```cpp
 #include <tchar.h>
 #using <system.dll>
 #using <mscorlib.dll>

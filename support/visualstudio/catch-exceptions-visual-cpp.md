@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 815662
 
 ## Summary
 
-A t`ry-catch-finally` block is a wrapper that you put around any code where an exception might occur. Catching and dealing with exceptions are standard programming tasks.
+A `try-catch-finally` block is a wrapper that you put around any code where an exception might occur. Catching and dealing with exceptions are standard programming tasks.
 
 A `try-catch-finally` block is made up of the following sections:
 

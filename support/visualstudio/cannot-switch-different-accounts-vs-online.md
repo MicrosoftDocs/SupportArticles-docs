@@ -18,13 +18,13 @@ When you use [Visual Studio Online](https://www.visualstudio.com) accounts that 
 
 When this problem occurs, you see a flashing blank sign-in dialog box several times. Then, you receive the following error message after you connect to or add a new connection in **Connect to Team Foundation Server** dialog box:
 
-Error message 1
+- Error message 1
 
-> TF31003: Either you have not entered the necessary credentials or your user account does not have permission to connect to the Team Foundation Server
+    > TF31003: Either you have not entered the necessary credentials or your user account does not have permission to connect to the Team Foundation Server
 
-Error message 2
+- Error message 2
 
-> TF31002: Unable to connect to this Team foundation Server
+    > TF31002: Unable to connect to this Team foundation Server
 
 ## Resolution: Install Visual Studio 2013 update
 

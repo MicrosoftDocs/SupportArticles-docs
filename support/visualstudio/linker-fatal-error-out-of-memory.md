@@ -22,7 +22,7 @@ In this scenario, the linker may report out of memory (OOM) issues that result i
 
 This issue occurs mostly because of the large amount of heap space that is required by the compiler during LTCG. Generally, the linker is disk input/output (I/O) bound and doesn't use as much memory as the compiler. However, the linker does invoke the compiler during LTCG.
 
-The linker and the compiler each have their own heap management scheme. They don't have a mechanism to communicate with one another to help out when address space pressure is met. Additionally, because of heavy and frequently spikey memory usage in the compiler, there might be severe fragmentation in address space that results in failure when a small amount of heap space is requested.
+The linker and the compiler each have their own heap management scheme. They don't have a mechanism to communicate with one another to help out when address space pressure is met. Additionally, because of heavy and frequently spike memory usage in the compiler, there might be severe fragmentation in address space that results in failure when a small amount of heap space is requested.
 
 ## Resolution
 
@@ -38,7 +38,7 @@ In Visual Studio 2013, we also introduced x64 cross tool. It includes 64-bit cro
 
 You can find the two x64-based cross tool sets in your `%Install Path%\Microsoft Visual Studio 12.0\VC\bin directory`, as shown in the following figure.
 
-![cross tool sets in the bin](./media/linker-fatal-error-out-of-memory/bin.png)
+:::image type="content" source="./media/linker-fatal-error-out-of-memory/bin.png" alt-text="cross tool sets in the bin":::
 
 The *amd64_x86* and *amd64_arm* folders contain everything that you must have to build for x86 and arm targets by using x64 cross tool sets.
 
@@ -54,13 +54,13 @@ The x64 cross tools aren't supported out of the box in the Visual Studio Integra
 
 1. Start the Visual Studio 2013 developer command prompt. You can find the developer command prompt on the Windows start screen, as shown here.
 
-    ![how to search for developer on the Windows start screen](./media/linker-fatal-error-out-of-memory/search-for-developer.png)
+    :::image type="content" source="./media/linker-fatal-error-out-of-memory/search-for-developer.png" alt-text="how to search for developer on the Windows start screen":::
 
 2. At the developer command prompt, set the `PreferredToolArchitecture` property to point to the tool set that you want to use to build your target applications.
 3. Start Visual Studio (devenv) from the developer command prompt. You should now be ready to take advantage of the cross tools.
 
-    ![Develop command prompt for VS2013 preview](./media/linker-fatal-error-out-of-memory/develop-command-prompt.png)
+    :::image type="content" source="./media/linker-fatal-error-out-of-memory/develop-command-prompt.png" alt-text="Develop command prompt for VS2013 preview":::
 
-One quick way to verify that the correct tool set is being used is to create and build an application that has the additional compiler flag `/Bt`. The `/Bt` compiler flag spits out verbose information about time that is spent in C1, C1XX, and C2 DLLs. Additionally, it provides details on which tool set is being used to build the target applications. The `/Bt` flag can be applied under the project property pages (**Configuration Properties** > **C++** > **Command Line**). In the following figure, notice the tool set that is being used (amd64_x86).  
+    One quick way to verify that the correct tool set is being used is to create and build an application that has the additional compiler flag `/Bt`. The `/Bt` compiler flag spits out verbose information about time that is spent in C1, C1XX, and C2 DLLs. Additionally, it provides details on which tool set is being used to build the target applications. The `/Bt` flag can be applied under the project property pages (**Configuration Properties** > **C++** > **Command Line**). In the following figure, notice the tool set that is being used (amd64_x86).  
 
-![Displays output and all options in MFCApplication3 Property Pages](./media/linker-fatal-error-out-of-memory/mfcapplicationthree-property-pages.png)
+    :::image type="content" source="./media/linker-fatal-error-out-of-memory/mfcapplicationthree-property-pages.png" alt-text="Displays output and all options in MFCApplication3 Property Pages":::
