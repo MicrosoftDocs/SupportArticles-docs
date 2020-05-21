@@ -107,7 +107,7 @@ In addition to positioning and sizing the ComboBox, this sample also watches for
 2. Follow these steps to add the control that you created in the [Create the inherited ListView control](#create-the-inherited-listview-control) section to your Windows application:
     1. On the **Tools** menu, click **Customize Toolbox**.
     2. On the **.NET Framework Components** tab, click **Browse**.
-    3. In the **Open** dialog box, locate the control that you created in the [Create the inherited ListView control](#Create-the-inherited-listView-control) section, and then click **Open**. It adds this control to the toolbox so that you can use the control similarly to any other control.
+    3. In the **Open** dialog box, locate the control that you created in the [Create the inherited ListView control](#create-the-inherited-listView-control) section, and then click **Open**. It adds this control to the toolbox so that you can use the control similarly to any other control.
     4. Drag MyListView from the **General** section of the toolbox to Form1.
 3. Drag a ComboBox control from the **Windows Forms** section of the toolbox to Form1.
 4. In the **Properties** window of ComboBox, change the **Name** property to **cbListViewCombo**, and then set the **Visible** property to **False**.
