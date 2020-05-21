@@ -45,7 +45,7 @@ rosoftOnlineException
 
 ## SOLUTION
 
-Restart the Microsoft Online Services Sign-In Assistant service. To do this, follow these steps:
+Restart the Online Services Sign-In Assistant service. To do this, follow these steps:
 
 1. Open Control Panel, click **Administrative Tools**, and then click **Services**.
 2. In the list of services, right-click **Microsoft Online Services Sign-In Assistant**, and then click **Restart**.
