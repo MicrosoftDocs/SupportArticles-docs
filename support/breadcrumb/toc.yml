@@ -8,17 +8,21 @@
     topicHref: /support/index
     items:
 
-    - name: HIS
-      tocHref: /support/host-integration-server/
-      topicHref: /support/host-integration-server/welcome-support-his
-
     - name: Biztalk
       tocHref: /support/biztalk/
       topicHref: /support/biztalk/welcome-support-biztalk
+      
+    - name: .NET
+      tocHref: /support/dotnet/
+      topicHref: /support/dotnet/welcome-support-dotnet
 
     - name: Edge and IE browsers
       tocHref: /support/browsers/
       topicHref: /support/browsers/welcome-support-browsers
+
+    - name: Host Integration Server
+      tocHref: /support/host-integration-server/
+      topicHref: /support/host-integration-server/welcome-support-his
 
     - name: SQL
       tocHref: /support/sql/
