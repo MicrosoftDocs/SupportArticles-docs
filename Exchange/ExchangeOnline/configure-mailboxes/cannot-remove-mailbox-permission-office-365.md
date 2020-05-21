@@ -27,7 +27,7 @@ For example, you try to use the following cmdlet to remove mailbox permissions:
 Remove-MailboxPermission -Identity MailboxAccount -User UserAccount -AccessRights FullAccess -Confirm:$false
 ```
 
-When you run the cmdlet, you recieve the following error message:
+When you run the cmdlet, you receive the following error message:
 
 ```asciidoc 
 WARNING

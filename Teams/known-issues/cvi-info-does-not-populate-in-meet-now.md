@@ -1,5 +1,5 @@
 ---
-title: When setting up a Meet Now in Teams, the CVI information does not auto-populate
+title: When setting up a Meet Now in Teams, the CVI information does not autopopulate
 ms.author: v-todmc
 author: todmccoy
 ms.date: 4/9/2020
@@ -17,10 +17,10 @@ ms.custom:
 - CI 113425
 - CSSTroubleshoot 
 ms.reviewer: scapero
-description: Describes why some Meet Now instances to not auto-populate with CVI information.
+description: Describes why some Meet Now instances to not autopopulate with CVI information.
 ---
 
-# CVI information does not auto-populate in a Teams Meet Now instance 
+# CVI information does not autopopulate in a Teams Meet Now instance 
 
 ## Summary
 

@@ -84,9 +84,9 @@ End Function
 
 ```
 
-To call the AttachDSNLessTable function, add code that is similar to one of the following code examples in the AutoExec macro or in the startup form Form_Open event:
+To call the AttachDSNLessTable function, add code that is similar to one of the following code examples in the Auto-Exec macro or in the startup form Form_Open event:
 
-- When you use the AutoExec macro, call the AttachDSNLessTable function, and then pass parameters that are similar to the following from the RunCode action. 
+- When you use the Auto-Exec macro, call the AttachDSNLessTable function, and then pass parameters that are similar to the following from the RunCode action. 
 
     ```vb
         AttachDSNLessTable ("authors", "authors", "(local)", "pubs", "", "")
@@ -107,7 +107,7 @@ To call the AttachDSNLessTable function, add code that is similar to one of the 
 
 ### Method 2: Use the DAO.RegisterDatabase method
 
-The DAO.RegisterDatabase method lets you create a DSN connection in the AutoExec macro or in the startup form. Although this method does not remove the requirement for a DSN connection, it does help you resolve the issue by creating the DSN connection in code. To use this method, create a new module, and then add the following CreateDSNConnection function to the new module.
+The DAO.RegisterDatabase method lets you create a DSN connection in the Auto-Exec macro or in the startup form. Although this method does not remove the requirement for a DSN connection, it does help you resolve the issue by creating the DSN connection in code. To use this method, create a new module, and then add the following CreateDSNConnection function to the new module.
 
 ```vb
 '//Name     :   CreateDSNConnection
@@ -145,9 +145,9 @@ End Function
 
 **Note** If the RegisterDatabase method is called again, the DSN is updated.
 
-To call the CreateDSNConnection function, add code that is similar to one of the following code examples in the AutoExec macro or in the startup form Form_Open event:
+To call the CreateDSNConnection function, add code that is similar to one of the following code examples in the Auto-Exec macro or in the startup form Form_Open event:
 
-- When you use the AutoExec macro, call the CreateDSNConnection function, and then pass parameters that are similar to the following from the RunCode action. 
+- When you use the Auto-Exec macro, call the CreateDSNConnection function, and then pass parameters that are similar to the following from the RunCode action. 
 
     ```vb
         CreateDSNConnection ("(local)", "pubs", "", "")
@@ -165,4 +165,5 @@ To call the CreateDSNConnection function, add code that is similar to one of the
     End Sub
     ```
 
-**Note** This method assumes that you have already created the SQL Server linked tables in the Access database by using "myDSN" as the DSN name.
+> [!NOTE]
+> This method assumes that you have already created the SQL Server linked tables in the Access database by using "myDSN" as the DSN name.

@@ -113,6 +113,8 @@
       href: ../online-meetings/troubleshoot-recording-online-meetings.md
     - name: URL for online meetings not use custom domain
       href: ../online-meetings/url-for-meetings-not-use-custom-domain.md
+    - name: Users removed from a meeting
+      href: ../online-meetings/user-removed-meeting-sfb-ucwa-application.md
   - name: Meeting Broadcast
     items:
     - name: '"Create Outlook invitation" link is not available'

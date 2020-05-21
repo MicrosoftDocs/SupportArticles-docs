@@ -24,7 +24,7 @@ appliesto:
 
 ##  Symptoms
 
-When you try to install [Visual Studio 2010 Tools for Office Runtime](https://www.microsoft.com/download/details.aspx?id=44074), you receive the following error message:
+When you try to install [Visual Studio 2010 Tools for Office Runtime](https://www.microsoft.com/download/details.aspx?id=48217), you receive the following error message:
 
     Generic Trust Failure (0x800B010B)
 

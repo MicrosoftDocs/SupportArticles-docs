@@ -1,6 +1,6 @@
 ---
 title: Command bars of Excel add-ins are not displayed or removed automatically
-description: Describes issues in which command bars that are included in Excel add-ins are not displayed or removed when the add-ins are loaded or unloaded in Excel 2013. or later. Provides workarounds.
+description: Describes issues in which command bars that are included in Excel add-ins are not displayed or removed when the add-ins are loaded or unloaded in Excel 2013.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -29,7 +29,7 @@ When you use add-ins in Microsoft Excel 2013 or later, you experience the follow
 
 ### Issue 1
 
-When you load an Excel add-in (.xlam) or an Excel 97-2003 add-in (.xla), the command bars of the add-in are not displayed automatically. Instead, you must close all workbooks and then restart Excel to display the command bars.
+When you load an Excel add-in (xlam) or an Excel 97-2003 add-in (xla), the command bars of the add-in are not displayed automatically. Instead, you must close all workbooks and then restart Excel to display the command bars.
 
 ### Issue 2
 

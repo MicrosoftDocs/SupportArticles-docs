@@ -1,6 +1,6 @@
 ---
 title: Office programs may crash with the SendToBluetooth add-in installed
-description: Describes problems that may occur with Office applictions with the SendToBluetooth add-in installed.
+description: Describes problems that may occur with Office applications with the SendToBluetooth add-in installed.
 author: lucciz
 ms.author: v-zolu
 manager: dcscontentpm
@@ -64,7 +64,7 @@ Here's how you can check to see if the add-in is the cause of your Office progra
 **For a Windows 10, Windows 8.1 and Windows 8**
 
 
-1. From the Startscreen, type View event logsin the search box.    
+1. From the Start screen, type View event log-in the search box.    
 2. Select View event logs.   
 
 **Windows 7 and Vista**
@@ -89,7 +89,7 @@ Event ID: 1000
 
 Faulting module name: ntdll.dll
 
-Note: Even if you do not see an Event 1000with either of these two dlls listed, you may still be encountering crashes due to this add-in.
+Note: Even if you do not see an Event 1000 with either of these two dlls listed, you may still be encountering crashes due to this add-in.
 
 ### Method 1: Try to update the SendToBluetooth add-inYou might be able to find an update to the Bluetooth add-in here:
 
@@ -98,7 +98,7 @@ Note: Even if you do not see an Event 1000with either of these two dlls listed, 
 If you weren't able to update the add-in, you can continue to Method 2 to disable the SendToBluetooth add-in. 
 
 ### Method 2: Manually disable the SendToBluetooth add-in
-Important:This article contains information about how to modify the registry. Make sure that you back up the registry before you modify it. Make sure that you know how to restore the registry if a problem occurs. For more information about how to back up, restore, and modify the registry, click the following article number to view the article in the Microsoft Knowledge Base: [322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows
+Important: This article contains information about how to modify the registry. Make sure that you back up the registry before you modify it. Make sure that you know how to restore the registry if a problem occurs. For more information about how to back up, restore, and modify the registry, click the following article number to view the article in the Microsoft Knowledge Base: [322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows
 
 Warning: Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system. Microsoft cannot guarantee that these problems can be solved. Modify the registry at your own risk.
 
@@ -144,7 +144,7 @@ HKEY_LOCAL_MACHINE\Software\Microsoft\Visio\Addins
 Note: If you are using a 32-bit version of Office on a 64-bit version of Windows, you will need to select the following key:
 
 HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Visio\Addins   
-3.  Expand the \Addins subkeyto display all of the add-ins registered at the Machine level.   
+3.  Expand the \Addins subkey to display all of the add-ins registered at the Machine level.   
 4. If listed, select the subkey for the SendToBluetooth add-in called BtOfficeAddin.BtOfficeIntegration.1.   
 5. Right-click the LoadBehavior value and then click Modify.   
 6. Change the Value data to 0, and then click OK and then close the Registry Editor.   

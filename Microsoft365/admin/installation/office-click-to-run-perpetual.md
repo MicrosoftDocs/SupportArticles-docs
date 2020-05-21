@@ -24,13 +24,13 @@ appliesto:
 
 Consider the following scenario:
 
-A customer has purchased Volume-Licensed perpetual copies of Project 2016 and Visio 2016.  While migrating the enterprise to Microsoft 365 Apps for enterprise (2016) they find out that the 2016 version of Microsoft 365 Apps for enterprise which uses click-to-run, cannot be installed side-by-side with the 2016 version of Project and Visio that are MSI based.  This blocks customers from upgrading their versions of Project and Visio to 2016.
+A customer has purchased Volume-Licensed perpetual copies of Project 2016 and Visio 2016.  While migrating the enterprise to Microsoft 365 Apps for enterprise (2016) they find out that the 2016 version of Microsoft 365 Apps for enterprise, which uses click-to-run, cannot be installed side by side with the 2016 version of Project and Visio that are MSI-based.  This blocks customers from upgrading their versions of Project and Visio to 2016.
 
 ## Resolution
 
 Customers that are based on the scenario described above are now able to use the latest version of Office Deployment Tool (2016) to download and install click-to-run based Project 2016 and Visio 2016 that can be activated using their volume license (KMS or MAK).
 
-The new Office Deployment Tool supports four new ProductIDs that allow the customers to download and install the standard or Professional versions of Project 2016 and/or Visio 2016. For more details see [Use the Office Deployment Tool to install volume licensed editions of Visio 2016 and Project 2016](https://technet.microsoft.com/library/mt703272.aspx)
+The new Office Deployment Tool supports four new ProductIDs that allow the customers to download and install the standard or Professional versions of Project 2016 and/or Visio 2016. For more details, see [Use the Office Deployment Tool to install volume licensed editions of Visio 2016 and Project 2016](https://technet.microsoft.com/library/mt703272.aspx)
 
 Download the latest version of the Office 2016 Deployment Tool [here](https://www.microsoft.com/download/details.aspx?id=49117). 
 

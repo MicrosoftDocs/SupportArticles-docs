@@ -54,7 +54,7 @@ MSI installation
 
 Click-to-Run installation
 
-[https://support.microsoft.com/gp/office-2013-click-to-run](/gp/office-2013-click-to-run)
+[https://support.microsoft.com/gp/office-2013-click-to-run](https://docs.microsoft.com/office/troubleshoot/office/office-click-to-run-installation)
 
 ##  More Information
 

@@ -28,7 +28,7 @@ When Office 365 users try to open or view attachments in email messages in Outlo
 
 This issue occurs if the attachment is blocked by Outlook Web App. By default, Outlook Web App blocks attachments that have the following file name extensions: 
 
-.vsmacros, .msh2xml, .msh1xml, .ps2xml, .ps1xml, .mshxml, .gadget, .mhtml, .psc2, .psc1, .msh2,.msh1, .aspx, .xml, .wsh, .wsf, .wsc, .vsw, .vst, .vss, .vbs, .vbe, .url, .tmp, .shs, .shb, .sct,.scr, .scf, .reg, .pst, .ps2, .ps1, .prg, .prf, .plg, .pif, .pcd, .ops, .mst, .msp, .msi, .msh,.msc, .mht, .mdz, .mdw, .mdt, .mde, .mdb, .mda, .maw, .mav, .mau, .mat, .mas, .mar, .maq, .mam,.mag, .maf, .mad, .lnk, .ksh, .jse, .its, .isp, .ins, .inf, .htc, .hta, .hlp, .fxp, .exe, .der,.csh, .crt, .cpl, .com, .cmd, .chm, .cer, .bat, .bas, .asx, .asp, .app, .adp, .ade, .ws, .vb, .js 
+vsmacros, msh2xml, msh1xml, ps2xml, ps1xml, mshxml, gadget, mhtml, psc2, psc1, msh2,msh1, aspx, xml, wsh, wsf, wsc, vsw, vst, vss, vbs, vbe, url, tmp, shs, shb, sct,scr, scf, reg, pst, ps2, ps1, prg, prf, plg, pif, pcd, ops, mst, msp, msi, msh,msc, mht, mdz, mdw, mdt, mde, mdb, mda, maw, mav, mau, mat, mas, mar, maq, mam,mag, maf, mad, lnk, ksh, jse, its, isp, ins, inf, htc, hta, hlp, fxp, exe, der,csh, crt, cpl, com, cmd, chm, cer, bat, bas, asx, asp, app, adp, ade, ws, vb, js
 
 ## SOLUTION 
 

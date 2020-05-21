@@ -65,10 +65,16 @@
       href: ./known-issues/no-audio-when-sharing-content-in-meeting.md
     - name: Team member maximum of 5000 in Microsoft Teams
       href: ./known-issues/teams-member-max-5000.md
+    - name: Teams Rooms app doesn't start after update to version 4.4.41.0
+      href: ./teams-administration/teams-rooms-app-wont-start-after-update.md
     - name: '"The following application instance is not present in BVD" error when assigning a phone number to a resource accounts'
       href: ./known-issues/following-application-instance-not-present-error.md
     - name: Users with Exchange Online mailboxes can't access Meetings or Connectors 
       href: ./known-issues/exchange-users-cant-access-meetings.md
+  - name: Files
+    items:
+    - name: Downloaded documents open in protected view
+      href: ./known-issues/download-documents-open-in-protected-view.md
   - name: IM and Presence
     items:
     - name: Cannot send message to Skype for Business
@@ -141,3 +147,4 @@
       href: ./known-issues/safari-intelligent-tracking-prevention-problems.md
     - name: Symantec DLP interferes with Teams processes
       href: ./known-issues/symantec-dlp-interferes-with-teams.md
+

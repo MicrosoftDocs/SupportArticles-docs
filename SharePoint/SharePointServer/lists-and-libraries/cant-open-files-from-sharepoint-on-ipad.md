@@ -26,16 +26,16 @@ There is no SharePoint Foundation application available to open the app.
 
 ## Cause
 
-There is an issue with SharePoint 2010. It is required a plugin or active X control to start client applications. The plugin or active X control are not allowed on the iOS platform.
+There is an issue with SharePoint 2010. It is required a plugin or active X control to start client applications. The plugin or active X control is not allowed on the iOS platform.
 
-SharePoint 2013 and SharePoint online, however, support protocol handlers which is the modern method for communicating with client apps. Therefore, when you open an Office file from SharePoint 2013 or SharePoint Online, the Office file can open with Office for iPad.
+SharePoint 2013 and SharePoint online, however, support protocol handlers that is the modern method for communicating with client apps. Therefore, when you open an Office file from SharePoint 2013 or SharePoint Online, the Office file can open with Office for iPad.
 
 ## Resolution
 
 To resolve this issue, use one of the following solutions:
 
-- Add a SharePoint place within an Office for iPad application which will connect to the SharePoint Document Library. Follow these steps:
-   1. Open Office for iPad installed application such as Word, Excel or PowerPoint.   
+- Add a SharePoint place within an Office for iPad application that will connect to the SharePoint Document Library. Follow these steps:
+   1. Open Office for iPad installed application such as Word, Excel, or PowerPoint.   
    2. Select Add a Place.   
   3. In the Add a Place window click SharePoint site URL.   
    4. Enter the URL or an Internet address of the SharePoint Document Library.
@@ -47,7 +47,7 @@ To resolve this issue, use one of the following solutions:
    1. Go to the SharePoint Document Library.   
    2. Click on Download a copy.   
 
-Note: The document will be displayed in the browser window with the option to select how to open in the appropriate application. When the file opens it will be read-only with the option to edit and save.   
+Note: The document will be displayed in the browser window with the option to select how to open in the appropriate application. When the file opens, it will be read-only with the option to edit and save.   
 
 ## More Information
 

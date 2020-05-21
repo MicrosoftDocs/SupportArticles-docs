@@ -48,18 +48,18 @@ Android smartphone devices that are supported for use with Lync 2010 for Android
 
     |Lync account |SIP address and UPN |Required fields|
     |-|-|-|
-    |On-premises Lync server|Same|Sign-in address:SIP address; User name: Blank |
-    |On-premises Lync server|Different|Sign-in address:SIP address; User name:UPN or domain\username |
-    |Office 365|Same|Sign-in address:SIP address; User Name: Blank |
-    |Office 365|Different|Sign-in address:SIP address; User name:UPN |
+    |On-premises Lync server|Same|Sign-in address: SIP address; User name: Blank |
+    |On-premises Lync server|Different|Sign-in address: SIP address; User name: UPN or domain\username |
+    |Office 365|Same|Sign-in address: SIP address; User Name: Blank |
+    |Office 365|Different|Sign-in address: SIP address; User name: UPN |
 
-5. Verify whether **Auto-detect server** is **On**. Lync tries to determine your Lync server based on your sign-in address. If it can't detect your Lync server, you may have to turn off **Auto-detect server** and specify the Lync server manually.
+5. Verify whether **Autodetect server** is **On**. Lync tries to determine your Lync server based on your sign-in address. If it can't detect your Lync server, you may have to turn off **Autodetect server** and specify the Lync server manually.
 
-    If **Auto-detect server** is turned on but you still can’t sign in, try manually entering the internal and external discovery addresses. This doesn’t resolve the issue. However, if you can successfully sign in manually, this indicates that the **Auto-detect server** option isn’t set up correctly by your administrator.  
+    If **Autodetect server** is turned on but you still can’t sign in, try manually entering the internal and external discovery addresses. This doesn’t resolve the issue. However, if you can successfully sign in manually, this indicates that the **Autodetect server** option isn’t set up correctly by your administrator.  
       - For Skype for Business Online (formerly Lync Online) users in Office 365:  
          - Internal discovery address: https://webdir.online.lync.com/Autodiscover/autodiscoverservice.svc/Root    
          - External discovery address: https://webdir.online.lync.com/Autodiscover/autodiscoverservice.svc/Root         
-      - For Lync on-premises users, contact your support team or system administrator for help to determine your internal and external discovery address. In most cases, the internal and external discovery address should resemble the following:  
+      - For Lync on-premises users, contact your support team or system administrator for help with determining your internal and external discovery address. In most cases, the internal and external discovery address should resemble the following:  
          - Internal discovery address: https://lyncdiscover.lyncFE01.contoso.local/Autodiscover/autodiscoverservice.svc/Root    
          - External discovery address: https://lyncdiscover.contoso.com/Autodiscover/autodiscoverservice.svc/Root     
  
@@ -91,15 +91,15 @@ For a feature comparison of Lync 2010 mobile clients, go to the following Micros
  
 When users experience an issue that affects the Lync 2010 mobile client for Google Android, they can send logs by email to the support team or administrator. To do this, follow these steps:
 
-1. On the Google Android device, after a user is signed in, tap **Options**on the **Signing in** tab. On the Options screen, tap **Diagnostic logging**, sign out, and then sign in again. (The screen shot for this step is listed below).
+1. On the Google Android device, after a user is signed in, tap **Options on the **Signing in** tab. On the Options screen, tap **Diagnostic logging**, sign out, and then sign in again. (The screenshot for this step is listed below).
  
     ![Diagnostic logging](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4041556_en_1)
 
 2. Reproduce the issue, return to the Options screen, and then tap **About Lync**.    
-3. Tap **Send diagnostic logs**, and then select a configured email account. (The screen shot for this step is listed below).
+3. Tap **Send diagnostic logs**, and then select a configured email account. (The screenshot for this step is listed below).
 
     ![Send diagnostic logs](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4041557_en_1)    
-4. In the **To** box, enter the recipient's email address. For example, your personal email address or your technical support team's alias. In the **Subject** box, enter a subject, and then tap **Send**. Logs are attached as a .zip file. (The screen shot for this step is listed below).
+4. In the **To** box, enter the recipient's email address. For example, your personal email address or your technical support team's alias. In the **Subject** box, enter a subject, and then tap **Send**. Logs are attached as a .zip file. (The screenshot for this step is listed below).
  
     ![Subject](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4041558_en_1)
 

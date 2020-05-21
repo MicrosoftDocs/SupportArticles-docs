@@ -41,7 +41,7 @@ When you try to add sections by clicking the Home tab, in the Slides group, clic
 
 ##  Cause
 
-The presentation is in Compatibiliy Mode. The file was saved as PowerPoint 97-2003Presentation (*.ppt) format. If you look at the Title Bar of the PowerPoint application (bar accross the top of the PowerPoint window) it will read filename [Compatibility Mode] and the file extension is *.ppt.
+The presentation is in Compatibility Mode. The file was saved as PowerPoint 97-2003Presentation (*.ppt) format. If you look at the Title Bar of the PowerPoint application (bar across the top of the PowerPoint window) it will read filename [Compatibility Mode] and the file extension is *.ppt.
 
 ##  Resolution
 
@@ -49,7 +49,7 @@ Convert the presentation to a native PowerPoint 2010 presentation by clicking on
 
 ##  More Information
 
-Once you convert the presentation to a PowerPoint Presentation (*.pptx) and open the file in previous versions of PowerPoint you will no longer have the sections visible. However, if you re-open the file in PowerPoint 2010 the sections will be available.
+Once you convert the presentation to a PowerPoint Presentation (*.pptx) and open the file in previous versions of PowerPoint, you will no longer have the sections visible. However, if you reopen the file in PowerPoint 2010 the sections will be available.
 
 For more information on slide sections in PowerPoint 2010 read the following help article on the Office website:
 

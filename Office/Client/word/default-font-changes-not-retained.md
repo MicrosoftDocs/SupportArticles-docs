@@ -63,4 +63,4 @@ To set and make sure that the style of the default font in Word 2013 is retained
 
 Need More Help?
 
-You can also get help from the [Microsoft Community](https://answers.microsoft.com/) online, search for more information on [Microsoft Support](/search/) or [Windows Help and How To](https://office.microsoft.com/support/), or learn more about [Assisted Support](/contactus/) options.
+You can also get help from the [Microsoft Community](https://answers.microsoft.com/) online, search for more information on [Microsoft Support](/search/) or [Windows Help and How To](https://office.microsoft.com/support/), or learn more about [Assisted Support](https://support.microsoft.com/contactus/) options.

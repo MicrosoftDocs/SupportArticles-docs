@@ -34,8 +34,8 @@ To work around this behavior, use Outlook Web App for mail, and apply retention 
 
 |Tag name|Tag type|Retention age limit (days)|Retention action|
 |---|---|---|---|
-|Personal 1 year move to archive|Personal|365|Move to archive|
-|Personal 5 year move to archive|Personal|1825|Move to archive|
+|Personal 1-years move to archive|Personal|365|Move to archive|
+|Personal 5-years move to archive|Personal|1825|Move to archive|
 |*Personal never move to archive|Personal|No age limit|Move to archive|
 |||||*This tag is not enabled by default. Items that have this retention tag are either never moved or never deleted.
 
@@ -45,7 +45,7 @@ Whereas Outlook for Mac 2011 doesn't support the archive feature, Outlook 2016 f
 
 ## More information
 
-You can create an archive mailbox for a user's primary cloud-based mailbox. Users can use the archive mailbox (also known as a personal archive) to store historical messaging data by moving or copying messages from their primary mailbox to their archive mailbox. The archived messages reside in the cloud, and users can access the messages by using Outlook 2016 for Mac, Outlook 2013, Outlook 2010 or Outlook Web App.
+You can create an archive mailbox for a user's primary cloud-based mailbox. Users can use the archive mailbox (also known as a personal archive) to store historical messaging data by moving or copying messages from their primary mailbox to their archive mailbox. The archived messages reside in the cloud, and users can access the messages by using Outlook 2016 for Mac, Outlook 2013, Outlook 2010, or Outlook Web App.
 
 For more information about the archive mailbox feature in Exchange Online, see [Enable or disable an archive mailbox in Exchange Online](https://technet.microsoft.com/library/jj984357%28v=exchg.150%29.aspx).
 

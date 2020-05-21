@@ -1,6 +1,6 @@
 ---
 title: Problems opening documents from a SharePoint site
-description: Describes issues that may arise when working with Office documents located on a SharePoint site if the local webclient service is disabled.
+description: Describes issues that may arise when working with Office documents located on a SharePoint site if the local web client service is disabled.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -15,7 +15,7 @@ appliesto:
 - Office 2010
 ---
 
-# Problems opening Office documents from a SharePoint site if webclient service is disabled
+# Problems opening Office documents from a SharePoint site if web client service is disabled
 
 ## Symptoms
 
@@ -25,13 +25,13 @@ Office 2007 applications may also display the error "A problem occurred while co
 
 ## Cause
 
-The local webclient service on the machine is disabled.
+The local web client service on the machine is disabled.
 
 ## Resolution
 
-Click Start and type Services in the search pane. Open the Services window, right click the Webclient service and choose Properties. Change the startup type to Manual, then click OK and exit the Services window.
+Click Start and type Services in the search pane. Open the Services window, right-click the Web client service and choose Properties. Change the startup type to Manual, then click OK and exit the Services window.
 
-If you are running Windows Server 2008 or Windows Server 2012, the webclient service must first be installed as a part of the Desktop Experience. For instructions on how to install the Desktop Experience on Server 2008, please see [Desktop Experience Overview](https://technet.microsoft.com/library/cc772567.aspx).
+If you are running Windows Server 2008 or Windows Server 2012, the web client service must first be installed as a part of the Desktop Experience. For instructions on how to install the Desktop Experience on Server 2008, please see [Desktop Experience Overview](https://technet.microsoft.com/library/cc772567.aspx).
 
 For instructions on how to install the Desktop Experience on Server 2012, please see [Install Desktop Experience](https://technet.microsoft.com/library/cc754314).
 

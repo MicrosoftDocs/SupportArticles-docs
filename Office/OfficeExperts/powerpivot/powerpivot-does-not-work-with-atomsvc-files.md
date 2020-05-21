@@ -37,7 +37,7 @@ The URL for a SharePoint list:
 
 http://sharepointserver/_vti_bin/ListData.svc/HTMLList
 
-The URL for a SSRS report:
+The URL for an SSRS report:
 
 http://sharepointserver/_vti_bin/ReportServer?http://sharepointserver/Shared Documents/EMEA1.rdl&rs:Command=Render&rs:Format=ATOM&rc:ItemPath=Tablix1
 

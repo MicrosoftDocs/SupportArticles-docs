@@ -24,8 +24,8 @@ appliesto:
 
 The Lync Server Enable-CsAdForest command will fail under the following circumstances and return the error listed below:
 
-- When used as an Lync Server active directory preparation step for a Office Communications Server and Lync Server migration coexistence scenario   
-- When run in a active directory domain that does not host the pre-existing Office Communications Server RTC Universal security groups   
+- When used as a Lync Server active directory preparation step for an Office Communications Server and Lync Server migration coexistence scenario   
+- When run in an active directory domain that does not host the pre-existing Office Communications Server RTC Universal security groups   
 
 ```adoc
 PS C:\Users\Administrator.SERVER01> Enable-CsAdForest
@@ -50,7 +50,7 @@ The Enable-CsAdForest Lync Server command has to be directed to the Active Direc
 
 ## More Information
 
-The Lync Server Get-CsADForest command will not reveal any information that is related to the Office Communications Server forest preparation. The Office Communications Server command line tool LcsCmd.exe can be used with the following parameters to provide a HTML report that will disclose the Active Directory Domain Services domain that hosts the pre-existing RTC Universal security groups for the forest. As listed below:
+The Lync Server Get-CsADForest command will not reveal any information that is related to the Office Communications Server forest preparation. The Office Communications Server command-line tool LcsCmd.exe can be used with the following parameters to provide an HTML report that will disclose the Active Directory Domain Services domain that hosts the pre-existing RTC Universal security groups for the forest. As listed below:
 
 **LcsCmd /forest:<forest FQDN> /action:CheckForestPrepState**
 

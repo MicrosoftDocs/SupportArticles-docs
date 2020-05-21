@@ -17,16 +17,16 @@ ms.custom:
 - CI 112359
 - CSSTroubleshoot 
 ms.reviewer: Daniel.Teixeira 
-description: Ways to resolve an issue where provisioning OneDrive for Business stops with a "Setting up" or "We're still setting a few things up" message.
+description: Ways to resolve an issue where provisioning OneDrive for Business stops with a "Setting up" or "We're still setting up a few things" message.
 ---
 
-# OneDrive for Business stopped at "Setting up..." or "We're still setting a few things up" screen
+# OneDrive for Business stopped at "Setting up..." or "We're still setting up a few things" screen
 
 ## Symptoms
 
 When initializing OneDrive for Business, the app might stop for more than 24 hours with one of the following error messages:
 - “Setting up..”
-- “We’re still setting a few things up, but feel free to get started.”
+- “We’re still setting up a few things, but feel free to get started.”
 
 ![When initializing OneDrive, you may be stopped at the "Setting up..." screen.](../media/one-drive-stopped-at-setting-up-screen/one-drive-stopped-at-setting-up-screen-1.png)
 
@@ -38,17 +38,17 @@ Listed below are ways to resolve this issue.
 
 See the Microsoft Knowledge Base article ["Setting up..." messages in the Microsoft 365 admin center](https://support.microsoft.com/help/2635238/setting-up-messages-in-the-office-365-admin-center) to verify if any of Microsoft’s services (in this case OneDrive and SharePoint Online) are experiencing problems.
 
-If the health of all affected services appear valid, and if more than 24 hours have passed since you first saw this issue, contact Office 365 Technical Support after performing the other actions in this article.
+If the health of all affected services appears valid, and if more than 24 hours have passed since you first saw this issue, contact Office 365 Technical Support after performing the other actions in this article.
 
-### Remove and re-add licenses
+### Remove and readd licenses
 
-In some situations, the user's license might not have been assigned correctly. This reason alone can cause the behavior. We recommend that you remove and re-add the OneDrive and/or SharePoint license assigned to the user. To do so perform the below steps:
+In some situations, the user's license might not have been assigned correctly. This reason alone can cause the behavior. We recommend that you remove and readd the OneDrive and/or SharePoint license assigned to the user. To do so perform the below steps:
 1.	Sign in to portal.office.com with an admin account.
-2.	Select **Admin** to open the Office 365 Admin Center.
+2.	Select **Admin** to open the Office 365 admin center.
 3.	Within the **Admin Center**, navigate to **Users** and then to **Active users**.
 4.	Search for the user with the issue and select the profile.
 5.	Go to **Licenses and Apps**.
-6.	Remove and re-add the license and/or plan after saving the changes.
+6.	Remove and readd the license and/or plan after saving the changes.
 7.	Confirm that the issue is resolved. You may have to wait several hours for the change to take effect. 
 
 ### Verify user provisioning
@@ -61,7 +61,7 @@ Due to the connection between OneDrive and SharePoint, it is necessary for users
 In order to verify if the user has a current profile created within SharePoint, perform the following steps:
 
 1.	Sign in to portal.office.com with an admin account.
-2.	Select **Admin** to open the Office 365 Admin Center.
+2.	Select **Admin** to open the Office 365 admin center.
 3.	Go to the **Admin Center** and open **SharePoint**.
 4.	Select **More features** and then **User profiles**.
 5.	Select **Manage User Profiles**.
@@ -74,7 +74,7 @@ Another reason for provisioning issues on OneDrive sites is the lack of enough c
 
 To perform this verification and/or change of the value follow the below steps:
 1.	Sign in to portal.office.com with an admin account.
-2.	Select **Admin** to open the Office 365 Admin Center.
+2.	Select **Admin** to open the Office 365 admin center.
 3.	Go to the **Admin Center** and open **SharePoint**.
 4.	Select **More features** and then **User profiles**.
 5.	Select **Manage User Profiles**.
@@ -91,7 +91,7 @@ The Personal Site Capabilities explained in the previous section are determined 
 In order to verify if everything is set correctly, follow these steps:
 
 1.	Sign in to portal.office.com with an admin account.
-2.	Select **Admin** to open the Office 365 Admin Center.
+2.	Select **Admin** to open the Office 365 admin center.
 3.	Go to the **Admin Center** and open **SharePoint**.
 4.	Select **More features** and then **User profiles**.
 5.	Select **Manage User Permissions**.
@@ -118,12 +118,12 @@ If you have the [SharePoint Online Management Shell](https://www.microsoft.com/d
     [Set-SPOSite documentation](https://docs.microsoft.com/powershell/module/sharepoint-online/set-sposite?view=sharepoint-ps)
 
 
-### Run a self diagnostics tool
+### Run a self-diagnostics tool
 
 Office 365 admin users have access to diagnostics that can be run within the tenant to verify possible issues with the OneDrive provision.
 
 To do this, follow these steps:
-1.	Navigate to the Office 365 Admin Center and select **Need help?** 
+1.	Navigate to the Office 365 admin center and select **Need help?** 
 2.	In the search bar type "Diag:" to see all the available diagnostics.
 3.	The "Diag: OneDrive Provisioning" diagnostic will perform a large range of verifications.
 ![Search the diagnostics library.](../media/one-drive-stopped-at-setting-up-screen/one-drive-stopped-at-setting-up-screen-2.png)

@@ -1,5 +1,5 @@
 ---
-title: "Your archive appears to be unavailable" in a hybrid deployment.
+title: Your archive appears to be unavailable in a hybrid deployment.
 description: Describes a scenario in which users can't access a cloud-based archive mailbox by using Outlook Web App and can't update the archive mailbox in Outlook in a hybrid deployment. Provides a resolution.
 author: simonxjx
 ms.author: v-six
@@ -21,7 +21,7 @@ appliesto:
 search.appverid: MET150
 ---
 
-# "Your archive appears to be unavailable" error when users try to access a cloud-based archive mailbox in a hybrid deployment
+# Your archive appears to be unavailable error when users try to access a cloud-based archive mailbox in a hybrid deployment
 
 > [!NOTE]
 > **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).

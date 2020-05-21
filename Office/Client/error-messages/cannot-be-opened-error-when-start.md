@@ -1,6 +1,6 @@
 ---
 title: Cannot be opened error when you start Office Starter 2010
-description: Provides steps to fix a cannot be opened error you may get with Office Starter 2010.
+description: Provides steps to fix an issue in which you cannot be opened error you may get with Office Starter 2010.
 author: lucciz
 ms.author: v-zolu
 manager: dcscontentpm
@@ -27,7 +27,7 @@ If Word Starter 2010 or Excel Starter 2010 cannot be opened, uninstall and reins
 1. Click Start (or Start > Run in Windows XP).    
 2. Type appwiz.cpl, and then press Enter.
 
-   **Warning** Do not remove Microsoft Office 2010from the list of installed programs. You will need this to reinstall Microsoft Office Starter 2010.
+   **Warning** Do not remove Microsoft Office 2010 from the list of installed programs. You will need this to reinstall Microsoft Office Starter 2010.
 
 3. Click Microsoft Office Starter 2010, and then click Uninstall (or Remove in Windows XP).
 
@@ -41,7 +41,7 @@ If Word Starter 2010 or Excel Starter 2010 cannot be opened, uninstall and reins
 6. Click Use.
 
     ![Use](./media/cannot-be-opened-error-when-start/use.png)    
-7. And then click Open. This will re-install Office Starter 2010.
+7. And then click Open. This will reinstall Office Starter 2010.
 
     ![Open](./media/cannot-be-opened-error-when-start/open.png)    
  If the error continues to occur, you may have to do a full restore of the computer to reinstall Microsoft Office Starter 2010. We recommend you contact the computer manufacturer to talk about your options before you do this.

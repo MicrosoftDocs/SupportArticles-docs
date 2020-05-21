@@ -20,7 +20,7 @@ appliesto:
 
 ## Problem
 
-When you set a value for the **Hyperlink with formatting and constraints for publishing** column in Microsoft SharePoint Online, a SharePoint 2013 workflow is cancelled. Additionally, you receive the following error message:
+When you set a value for the **Hyperlink with formatting and constraints for publishing** column in Microsoft SharePoint Online, a SharePoint 2013 workflow is canceled. Additionally, you receive the following error message:
 
 **The property PropertyName does not exist on type 'SP.Data.ListNameListItem'. Make sure to only use property names that are defined by the type.**
 

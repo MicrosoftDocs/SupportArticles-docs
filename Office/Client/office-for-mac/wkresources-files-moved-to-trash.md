@@ -26,12 +26,12 @@ The file "wkresources" gets created and moved to Trash-Recovered Files every tim
 
 ## More Information
 
-Click Help then type *recovered files* to review the information why recovered files are created. From Mac OS Help Topic:
+Click Help then type *recovered files* to review the information why recovered files are created. From macOS Help Topic:
 
 If the Trash contains folders of recovered files
 
 *One or more Recovered files folders may appear in Trash after restarting your computer.*
 
-*The recovered files are temporary files used by Mac OS X applications. Usually temporary files are deleted by an application when it no longer needs them. If an application quits unexpectedly, the temporary files may not be deleted by the application. When you restart your computer, Mac OS X moves these temporarily files to the Trash.*
+*The recovered files are temporary files used by macOS X applications. Temporary files are deleted by an application when it no longer needs them. If an application quits unexpectedly, the temporary files may not be deleted by the application. When you restart your computer, macOS X moves these temporary files to the Trash.*
 
-*You can retrieved usefully files by dragging them out of the Trash. In most cases, however, the temporary files are not important and it is safe to empty your Trash.*
+*You can retrieve usefully files by dragging them out of the Trash. In most cases, however, the temporary files are not important and it is safe to empty your Trash.*
