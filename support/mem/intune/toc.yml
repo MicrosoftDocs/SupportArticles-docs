@@ -6,6 +6,8 @@
   items:
   - name: Access denied configuring MAM
     href: configure-app-protection-access-denied.md
+  - name: Access denied for Intune app protection options
+    href: app-protection-options-access-denied.md
   - name: Can't prevent saving images locally
     href: app-protection-policy-fails-restricting-images.md
   - name: Error when you open a web app on iOS 
