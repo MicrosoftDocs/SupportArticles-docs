@@ -17,7 +17,7 @@ When you deploy a device restriction policy for password in Microsoft Intune, yo
 
 Here is an example case in which you specify the **Required password type** setting:
 
-![Screenshot of the error code -2016281112](./media/error-deploying-password-policy/error-code.png)
+![Screenshot of the error code -2016281112.](./media/error-deploying-password-policy/error-code.png)
 
 ## Cause
 

@@ -81,7 +81,7 @@ After you pass the migration pre-check, we will pre-populate your groups in Azur
 Even if you do not fix your grouping, exclusion, and nesting issues, we will continue to try to migrate you. In this situation, we will try to reach you through the Message Center to let you know that you are blocked. Eventually, we will take a snapshot of the current situation, and create static groups in Azure AD that mimic what you had in Intune. We will also notify you through the Message Center that we created static groups instead of dynamic groups during the migration. You can then decide what to do about that situation after the migration.
 
 > [!NOTE]
-> Several customers who had nested groups but no other blocking issues were unintentionally migrated together with **snapshot** groups. If you are one of those customers, search for a Message Center post at [http://portal.office.com](http://portal.office.com/) for more information.
+> Several customers who had nested groups but no other blocking issues were unintentionally migrated together with **snapshot** groups. If you are one of those customers, search for a Message Center post at [https://portal.office.com](https://portal.office.com/) for more information.
 
 ### Why should I care whether my group is migrated as a static group?
 
