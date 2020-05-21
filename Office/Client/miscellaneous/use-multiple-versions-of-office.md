@@ -18,8 +18,7 @@ appliesto:
 
 # How to use Office 2013 suites and programs (MSI deployment) on a computer running another version of Office
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 For a Microsoft Office 2010 version of this article, see [2121447](https://support.microsoft.com/help/2121447).
 

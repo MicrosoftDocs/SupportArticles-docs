@@ -19,8 +19,7 @@ appliesto:
 
 # The paper size for a document in Word 2010 does not match the paper size in the Printer Properties dialog box
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

@@ -35,8 +35,7 @@ appliesto:
 
 # Incompatibilities between Office programs and Adobe Acrobat PDFMaker Office COM Addin
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 If you have the Adobe Acrobat PDFMaker Office COM add-in installed on your computer and your Office programs are crashing or not responding, this might mean that the version of PDFMaker you have installed is incompatible with your version of Office.

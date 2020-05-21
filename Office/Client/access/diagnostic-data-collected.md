@@ -20,8 +20,7 @@ search.appverid: MET150
 ---
 # [SDP 3][b4abb87b-898d-4e51-b723-4151ec94c452] Microsoft Access Support Diagnostic
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 _Original KB number:_ &nbsp; 2678469
 

@@ -22,8 +22,7 @@ description: What to do if document previews don't show up after uninstalling th
 
 # Office file previews in Windows Explorer may not show after switching from 64-bit Office to 32-bit Office
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

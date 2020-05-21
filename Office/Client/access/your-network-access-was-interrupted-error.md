@@ -22,8 +22,7 @@ description: Describes how to resolve an error where the connection is dropped w
 
 # Access error "Your network access was interrupted" when using a mapped drive 
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 When opening Access from a mapped drive, using linked tables mapped to a drive, or executing VBA code based on mapped drive locations, you get the error "Your network access was interrupted. To continue, close the database, and then open it again." 
