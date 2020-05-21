@@ -68,7 +68,7 @@ To resolve this issue, use one of the following methods, as appropriate for your
    |/adfs/services/trust/13/usernamemixed|True|True |
    |/adfs/services/trust/13/issuedtokenmixedasymmetricbasic256|True|True |
    |/adfs/services/trust/13/issuedtokenmixedsymmetricbasic256|True|True |
-   |/adfs/services/trsuttcp/windows|True|False |
+   |/adfs/services/trusttcp/windows|True|False |
    |/adfs/services/trust/mex|True|True |
    |/FederationMetadata/2007-06/FederationMetadata.xml|True|True |
    |/adfs/ls/federationserverservice.asmx|True|False |
