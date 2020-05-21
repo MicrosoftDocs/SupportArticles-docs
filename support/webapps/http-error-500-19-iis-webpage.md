@@ -10,13 +10,11 @@ ms.reviewer: mlaing
 This article describes HResult codes and provides solutions when you encounter the HTTP 500.19 error on a Web application on Internet Information Services (IIS) 7.0 and later versions.
 
 _Original product version:_ &nbsp; Internet Information Services 7.0 and later versions  
-_Original KB number:_ &nbsp; 2819022
-
-## Error code message
+_Original KB number:_ &nbsp; 942055
 
 You can find more information about following error codes:
 
-### HResult code 0x8007000d
+## HResult code 0x8007000d
 
 Error message
 
@@ -34,7 +32,7 @@ This problem occurs because the *ApplicationHost.config* file or the *Web.config
 
 Delete the malformed XML element from the *ApplicationHost.config* file or from the *Web.config* file.
 
-### HResult code 0x80070005
+## HResult code 0x80070005
 
 Error message
 
@@ -88,7 +86,7 @@ To resolve this problem, use one of the following methods:
         > [!NOTE]
         > Make sure the folder's properties are inherited by the *ApplicationHost.config* and *Web.config* files so that IIS_IUSRS has the Read permission for those files.
 
-### HResult code 0x800700b7
+## HResult code 0x800700b7
 
 Error message
 
@@ -125,7 +123,7 @@ To resolve this problem, in the *ApplicationHost.config* file, delete the duplic
     <add accessType="Allow" users="*" />
     ```
 
-### HResult code 0x8007007e
+## HResult code 0x8007007e
 
 Error message
 
@@ -143,7 +141,7 @@ This problem occurs because the *ApplicationHost.config* file or the *Web.config
 
 In the *ApplicationHost.config* file or in the *Web.config* file, locate the module reference or the DLL reference that is invalid, and then fix the reference. To determine which module reference is incorrect, enable Failed Request Tracing, and then reproduce the problem.
 
-### HResult code 0x800700c1
+## HResult code 0x800700c1
 
 Error message
 
@@ -161,7 +159,7 @@ This problem can occur if the bitness of the specified module is different than 
 
 Ensure that the specified module's bitness is the same as the hosting application pool, and make sure that the module is not corrupt.
 
-### HResult code 0x8007010b
+## HResult code 0x8007010b
 
 Error message
 
@@ -179,7 +177,7 @@ This problem can occur if the specified content directory cannot be accessed.
 
 Verify that the file path exists, is properly named, has correct file-level permissions set, and is pointing to a valid file system type. If you are not sure what the file path is, use the Process Monitor tool or Failed Request Tracing to identify it.
 
-### HResult code 0x8007052e
+## HResult code 0x8007052e
 
 Error message
 
@@ -193,7 +191,7 @@ The requested page cannot be accessed because the related configuration data for
 
 The default process identity in IIS does not have sufficient permissions to open the *Web.config* file on a remote share.
 
-### HResult code 0x80070021
+## HResult code 0x80070021
 
 Error message
 

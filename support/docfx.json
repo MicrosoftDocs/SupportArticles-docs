@@ -76,12 +76,25 @@
         "**/*.md": "kb-support"
       },
 
-
       "ms.prod": {
         "biztalk/**/*.md": "biztalk-server"
       },
       "ms.technology": {
         "biztalk/**/*.md": ""
+      },
+
+      "ms.prod": {
+        "dotnet/**/*.md": ".net"
+      },
+      "ms.technology": {
+        "dotnet/**/*.md": ""
+      },
+      
+      "ms.prod": {
+        "host-integration-server/**/*.md": "host-integration-server"
+      },
+      "ms.technology": {
+        "host-integration-server/**/*.md": ""
       },
 
       "ms.prod": {
@@ -170,9 +183,15 @@
 
       "titleSuffix": {
         "biztalk/**/*.md": "Biztalk Server"
+      },      
+      "titleSuffix": {
+        "dotnet/**/*.md": ".NET"
       },
       "titleSuffix": {
         "browsers/**/*.md": "Edge & IE"
+      },      
+      "titleSuffix": {
+        "host-integration-server/**/*.md": "Host Integration Server"
       },
       "titleSuffix": {
         "sql/**/*.md": "SQL Server"
