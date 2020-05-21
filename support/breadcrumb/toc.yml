@@ -8,6 +8,10 @@
     topicHref: /support/index
     items:
 
+    - name: HIS
+      tocHref: /support/host-integration-server/
+      topicHref: /support/host-integration-server/welcome-support-his
+
     - name: Biztalk
       tocHref: /support/biztalk/
       topicHref: /support/biztalk/welcome-support-biztalk
