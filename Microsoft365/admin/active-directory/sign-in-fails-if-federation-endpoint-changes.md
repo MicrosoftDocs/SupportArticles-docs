@@ -56,7 +56,7 @@ To resolve this issue, use one of the following methods, as appropriate for your
    |URL Path|Enabled|Proxy enabled |
    |--|--|--|
    |/adfs/ls/|True|True |
-   |/adfs/services/trust/2005/windowstransport/|True|False |
+   |/adfs/services/trust/2005/windowstransport|True|False |
    |/adfs/services/trust/2005/certificatemixed|True|True |
    |/adfs/services/trust/2005/certificatetransport|True|True |
    |/adfs/services/trust/2005/usernamemixed|True|True |
