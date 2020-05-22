@@ -1,5 +1,5 @@
 ---
-title: Teams Planner does not show task buckets
+title: Teams Class Schedule does not show task buckets
 ms.author: v-todmc
 author: todmccoy
 ms.date: 4/9/2020
@@ -17,14 +17,14 @@ ms.custom:
 - CI 113425
 - CSSTroubleshoot 
 ms.reviewer: scapero
-description: Explains why task buckets may not appear in Teams Planner online. 
+description: Explains why task buckets may not appear in Teams Class Schedule online. 
 ---
 
-# Task buckets do not appear in Teams Planner online 
+# Task buckets do not appear in Teams Class Schedule online 
 
 ## Summary
 
-Tasks buckets in Microsoft Teams Planner do not show up in the Planner online experience. 
+Tasks buckets in Microsoft Teams Class Schedule do not show up in the Class Schedule online experience. 
 
 ## More information
 

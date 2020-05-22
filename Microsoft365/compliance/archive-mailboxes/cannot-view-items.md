@@ -1,5 +1,5 @@
 ---
-title: Can't view items in an Exchange Online archive mailbox by using OWA
+title: Can't view items in an Exchange Online archive mailbox by using Microsoft Outlook Web App
 description: Describes an issue in which users can't access an online archive mailbox by using Outlook Web App.
 author: simonxjx
 ms.author: v-six
@@ -15,7 +15,7 @@ appliesto:
 - Exchange Online
 search.appverid: MET150
 ---
-# Can't view items in Exchange Online archive mailbox by using OWA
+# Can't view items in Exchange Online archive mailbox by using Microsoft Outlook Web App
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
@@ -23,7 +23,7 @@ _Original KB number:_&nbsp;4051373
 
 ## Symptoms
 
-When a user tries to view items in a Microsoft Exchange Online archive mailbox by using Outlook Web App (OWA), they receive the following error message:
+When a user tries to view items in a Microsoft Exchange Online archive mailbox by using Outlook Web App (Microsoft Outlook Web App), they receive the following error message:
 
 > Your request can't be completed right now. Try again.
 

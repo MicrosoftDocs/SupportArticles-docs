@@ -1,6 +1,6 @@
 ---
 title: Domain removal fails in Office 365
-description: This article provides troubleshooting steps for situations in which you recieve a An Error Occured message when using PowerShell to remove a domain Office 365.
+description: This article provides troubleshooting steps for situations in which you receive a An Error Occurred message when using PowerShell to remove a domain Office 365.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -21,7 +21,7 @@ appliesto:
 
 ## Symptoms
 
-When you use the **Remove-MsolDomain -domainname domain.com** PowerShell cmdlet to remove a domain from Office 365, you receive the following error message: 
+When you use the **Remove-MsolDomain -domain name domain.com** PowerShell cmdlet to remove a domain from Office 365, you receive the following error message: 
 
 "An Error Occurred"
 
@@ -41,7 +41,7 @@ Get-AzureADApplication | Where-Object -Property identifieruris -Match '<domain t
 
 ## Solution
 
-To resolve the issue, update the **identifierURIs** attribute to refer to the .onmicrosoft.com domain of the tenant. Do this in each of the AzureAD applications that refer to the domain.
+To resolve the issue, update the **identifierURIs** attribute to refer to the .onmicrosoft.com domain of the tenant. Do this in each of the Azure AD applications that refer to the domain.
  
 To make the replacement, use the following cmdlets:
 

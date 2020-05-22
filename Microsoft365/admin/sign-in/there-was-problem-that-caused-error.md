@@ -44,17 +44,17 @@ To restart the Microsoft Online Services Sign-in Assistant service, follow these
 1. Click **Start**, and then click **Run**.
 2. In the **Open** box, type **services.msc**, and then press Enter.
 
-   ![Screen shot of Run windows with services.msc typed ](./media/there-was-problem-that-caused-error/run-page.jpg)   
+   ![Screenshot of Run windows with services.msc typed ](./media/there-was-problem-that-caused-error/run-page.jpg)   
 3. In the list of services, locate and then double-click the Microsoft Online Services Sign-in Assistant service.
 
-   ![Screen shot of Services windows, Microsoft Online Services Sign-in Assistant highlighted ](./media/there-was-problem-that-caused-error/online-services-sign-in-assistant.png)
+   ![Screenshot of Services windows, Microsoft Online Services Sign-in Assistant highlighted ](./media/there-was-problem-that-caused-error/online-services-sign-in-assistant.png)
 
 4. Stop the service. To do this, click Stop, and then wait until the service stops. The Service status should be displayed as Stopped.
 
-   ![Screen shot of Microsoft Online Services Sign-in Assistant properties, showing Service status is stopped ](./media/there-was-problem-that-caused-error/service-status-is-stopped.png)   
+   ![Screenshot of Online Services Sign-in Assistant properties, showing Service status is stopped ](./media/there-was-problem-that-caused-error/service-status-is-stopped.png)   
 5. Start the service. To do this, click Start, and then wait until the service starts. The Service status should be displayed as Started.
 
-   ![Screen shot of Microsoft Online Services Sign-in Assistant properties, showing Service status is started ](./media/there-was-problem-that-caused-error/service-status-is-started.png)   
+   ![Screenshot of Online Services Sign-in Assistant properties, showing Service status is started ](./media/there-was-problem-that-caused-error/service-status-is-started.png)   
 6. Verify that the issue is resolved and the pop-up dialog box is no longer displayed.   
 7. If you continue to see the pop-dialog box, restart the computer, and then verify that the issue is resolved.
 

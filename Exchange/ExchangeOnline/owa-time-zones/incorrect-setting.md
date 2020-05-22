@@ -27,9 +27,9 @@ This issue occurs if the user didn't set the time zone to the correct setting wh
 
 The first time that a user signs in to Outlook Web App, the user has to set his or her current time zone. If the user doesn't set the time zone, the time zone is set to **(UTC) Monrovia, Reykjavik**. There's no method for admins to set up the time zone setting in advance in Outlook Web App for all users.
 
-The following screen shot shows the Outlook Web App sign-in screen in Office 365.
+The following screenshot shows the Outlook Web App sign-in screen in Office 365.
 
-![The following screen shot shows the Outlook Web App sign-in screen in Office 365.](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4055096_en_1) 
+![The following screenshot shows the Outlook Web App sign-in screen in Office 365.](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4055096_en_1) 
 
 ## Solution 
 
