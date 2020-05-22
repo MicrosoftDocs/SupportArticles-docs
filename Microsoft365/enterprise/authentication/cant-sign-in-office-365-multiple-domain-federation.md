@@ -1,5 +1,5 @@
 ---
-title: AADSTS50107 when trying to sign in to Office 365 with multiple domain federation
+title: AADSTS50107 when trying to sign in to Office 365 with multiple domain federations
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -51,14 +51,14 @@ This issue occurs when multiple top-level domains are federated to the same AD F
    Get-MsolDomain | Select-Object Name, RootDomain, Authentication | ConvertTo-Csv -NoTypeInformation | % {$_.Replace('"','')} | Out-File output.csv
    ```
 4. Click **Generate Claims**, and then copy the PowerShell cmdlets from the **Claim Rules** section.
-5. Save the cmdlets as a PowerShell script (for example,updatelclaimrules.ps1), and then run the following command to run the script on the primary AD FS server:
+5. Save the cmdlets as a PowerShell script (for example, updatelclaimrules.ps1), and then run the following command to run the script on the primary AD FS server:
 
    ```powershell
    .\Updateclaims.ps1
    ```
-6. The script makes a backup of the existing Issuance Transform rules as a .txt file in the current working directory.
+6. The script makes a Backup of the existing Issuance Transform rules as a .txt file in the current working directory.
 
-If you want to restore the issuance rules that you backed up by using the script, run the following cmdlet, and specify the backup file that you created in step 5. In the following example, the backup file is *Backup 2018.12.26_09.21.03*.txt.
+If you want to restore the issuance rules that you backed up by using the script, run the following cmdlet, and specify the Backup file that you created in step 5. In the following example, the Backup file is *Backup 2018.12.26_09.21.03*.txt.
 ```powershell
 Set-AdfsRelyingPartyTrust -TargetIdentifier "urn:federation:MicrosoftOnline" -IssuanceTransformRulesFile "Backup 2018.12.26_09.21.03.txt"
 ```

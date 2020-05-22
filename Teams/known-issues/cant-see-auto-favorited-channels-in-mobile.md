@@ -1,5 +1,5 @@
 ---
-title: Auto-favorited channels don't appear in Teams mobile app
+title: Autofavorited channels don't appear in Teams mobile app
 ms.author: v-todmc
 author: todmccoy
 ms.date: 4/9/2020
@@ -17,18 +17,18 @@ ms.custom:
 - CI 113425
 - CSSTroubleshoot 
 ms.reviewer: scapero
-description: Describes a resolution to an issue where auto-favorited channels don't show up in the Teams mobile app.
+description: Describes a resolution to an issue where autofavorited channels don't show up in the Teams mobile app.
 ---
 
-# Unable to see auto-favorited channels in the Teams mobile app
+# Unable to see autofavorited channels in the Teams mobile app
 
 ## Symptoms
 
-Some members aren't able to see auto-favorited channels on the Teams mobile app. 
+Some members aren't able to see autofavorited channels on the Teams mobile app. 
 
 ## Resolution
 
-Members must sign in to the desktop or web app first to see auto-favorited channels on their mobile app.
+Members must sign in to the desktop or web app first to see autofavorited channels on their mobile app.
 
 ## More information
 
