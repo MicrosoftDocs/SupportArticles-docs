@@ -82,16 +82,16 @@ If you are still experiencing a problem after you adjust the ClearType settings,
 
 #### Step 2: Disable the Sub-Pixel Positioning Feature
 
-Word 2016 and Word 2013 use sub-pixel text rendering by default. While this provides optimal spacing, you may prefer the appearance of pixel-snapped text for a minor improvement in contrast. To disable the sub-pixel positioning feature in Word 2016 or Word 2013, follow these steps.
+Word 2016 and Word 2013 use subpixel text rendering by default. While this provides optimal spacing, you may prefer the appearance of pixel-snapped text for a minor improvement in contrast. To disable the subpixel positioning feature in Word 2016 or Word 2013, follow these steps.
  
 1.    On the **File** tab, click **Options**.
 2.    Click **Advanced**.
-3.    Under the **Display** group, clear the **Use the subpixel positioning to smooth fonts on screen** option.
+3.    Under the **Display** group, clear the **Use the subpixel positioning to smooth fonts on-screen** option.
 4.    Click **OK**.
 
-If you are still experiencing a problem after you turn off the sub-pixel text rendering setting, re-enable the Use the subpixel positioning to smooth fonts on screen setting, and then go to Step 3.
+If you are still experiencing a problem after you turn off the subpixel text rendering setting, re-enable the Use the subpixel positioning to smooth fonts on-screen setting, and then go to Step 3.
 
-#### Step 3: On Windows 7 clients, install the Windows 8 Inter-operatibility Pack
+#### Step 3: On Windows 7 clients, install the Windows 8 Interoperatibility Pack
 
 If you are using Windows10, Windows 8.1 or Windows 8, skip this section and go to the steps under the For All Other Symptoms section.
 

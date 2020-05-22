@@ -1,6 +1,6 @@
 ---
-title: Apps for Office don't start if you disable protected mode for  Restricted Sites zone
-description: Resolves issues that blocks apps for Office from starting if protected mode for the Restricted Sites zone is not enabled in Internet Explorer.
+title: Office Add-in don't start if you disable protected mode for Restricted Sites zone
+description: Resolves issues that blocks Office Add-in from starting if protected mode for the Restricted Sites zone is not enabled in Internet Explorer.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -16,7 +16,7 @@ appliesto:
 - Office 2013
 ---
 
-# Apps for Office don't start if you disable protected mode for the Restricted Sites zone in Internet Explorer
+# Office Add-in don't start if you disable protected mode for the Restricted Sites zone in Internet Explorer
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
@@ -61,4 +61,4 @@ Re-enable protected mode for Restricted Sites: 
 
 ## More Information
 
-Microsoft Office add-ins using the Apps for Office platform are designed to run in isolation, using a low rights sandbox. Several features, such as the task pane view, use web views provided using Internet Explorer APIs.  To ensure these components execute HTML script in low rights mode, Office explicitly requires the browser object to run in Protected Mode.  Currently, IE does not support this from the API unless Protected Mode is enabled for Restricted Sites zone in IE itself.  This is typically not a problem since this is the default setting, and rarely will users disable it. However, if disabled (by user action or by GPO), these Office add-in types may report an error when starting and refuse to load. It is an expected failure under that condition, and is blocked for security reasons.
+Microsoft Office Add-ins using the Office Add-in platform are designed to run in isolation, using a low right sandbox. Several features, such as the task pane view, use web views provided using Internet Explorer APIs.  To ensure these components execute HTML script in low rights mode, Office explicitly requires the browser object to run in Protected Mode.  Currently, IE does not support this from the API unless Protected Mode is enabled for Restricted Sites zone in IE itself.  This is typically not a problem since this is the default setting, and rarely will users disable it. However, if disabled (by user action or by GPO), these Office add-in types may report an error when starting and refuse to load. It is an expected failure under that condition, and is blocked for security reasons.

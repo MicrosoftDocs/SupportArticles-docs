@@ -1,6 +1,6 @@
 ---
 title: We can't open this add-in from localhost
-description: When loading an Office add-in from localhost or using Fiddler, you may see an error stating that a problem occurred while trying to reach your add-in.
+description: When loading an Office Add-in from localhost or using Fiddler, you may see an error stating that a problem occurred while trying to reach your add-in.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -15,13 +15,13 @@ appliesto:
 - Office Web Apps
 ---
 
-# "We can't open this add-in from localhost" when loading an Office add-in or using Fiddler
+# "We can't open this add-in from localhost" when loading an Office Add-in or using Fiddler
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 
-When you load an Office add-in from https://localhost or when you use [Fiddler](https://www.telerik.com/fiddler), you receive the following error:     
+When you load an Office Add-in from https://localhost or when you use [Fiddler](https://www.telerik.com/fiddler), you receive the following error:     
 
 **We can't open this add-in from localhost.**
 

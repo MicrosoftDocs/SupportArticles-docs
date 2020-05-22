@@ -28,7 +28,7 @@ When the owner of an Office 365 group conducts a SharePoint Online search by way
 
 - Microsoft 365 search box
 - Enterprise Search Center
-- Customized search web parts
+- Design customization search web parts
 - Queries via the CSOM/REST search API
 
 The owner fails to find content in the search results.
@@ -45,7 +45,7 @@ If you create a group from the admin portal, this is the dialogue you will see:
 
 ![The admin portal dialogue box.](media/search-results-dont-appear/search-results-dont-appear-1.png)
 
-Here you can define owner of the group. Note that the owner is not automatically added as a member. 
+Here you can define owner of the group. The owner is not automatically added as a member. 
 
 For the owner to be a first-class member of the group, and be able to search for all the content, you must explicitly add the owner as member of the group via the configuration dialogue:
  
