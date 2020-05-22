@@ -29,7 +29,7 @@ For more information about the root certificate program and about other ways to 
 
 ## More information
 
-Microsoft maintains the list of root certificates that are distributed by the Windows Root Certificate Program on the program website. For more information about the Windows Root Certificate Program and the list of certification authorities (CAs) who are members, see [Windows and Windows Phone 8 SSL Root Certificate Program (Member CAs)](https://go.microsoft.com/fwlink/?linkid=269988).
+Microsoft maintains the list of root certificates that are distributed by the Windows Root Certificate Program on the program website. For more information about the Windows Root Certificate Program and the list of certification authorities (CAs) who are members, see [Release notes - Microsoft Trusted Root Certificate Program](/security/trusted-root/release-notes).
 
 Root certificate update mechanisms are available in different versions of Windows. This includes the automatic root update mechanisms. For more information about how to update the root certificate list in different versions of Windows, see the following article:
 
@@ -37,4 +37,4 @@ Root certificate update mechanisms are available in different versions of Window
 
 By default, the automatic root update mechanism is enabled in different versions of Windows. However, if this mechanism is disabled, and if the clients do not have the Baltimore CyberTrust root certificate installed, connectivity issues with Microsoft Intune may occur. Clients may no longer be able to access the Microsoft Intune infrastructure to receive updates, policies, and other such resources. Therefore, the clients may no longer be up to date and secure. New enrollments on such clients may also have issues.
 
-For more information about Microsoft Intune and resources that are available to the clients by using Microsoft Intune, see [Windows and Windows Phone 8 SSL Root Certificate Program (Member CAs)](https://go.microsoft.com/fwlink/?linkid=269988).
+For more information about Microsoft Intune and resources that are available to the clients by using Microsoft Intune, see [Release notes - Microsoft Trusted Root Certificate Program](/security/trusted-root/release-notes).
