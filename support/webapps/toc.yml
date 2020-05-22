@@ -40,13 +40,13 @@
   - name: ASP.NET HTTP modules and handlers
     href: asp-dot-net-http-modules-handlers.md
   - name: ASP.NET installation error 1721
-    href: asp-net-installation-failed.md
+    href: asp-dot-net-installation-failed.md
   - name: ASP.NET security
     href: asp-net-security-overview.md
   - name: ASP.NET server controls overview
     href: asp-dot-net-server-controls.md
   - name: ASP.NET web application debug issue
-    href: cannot-debug-asp-net-web-app.md
+    href: cannot-debug-asp-net-web-application.md
   - name: Assign a private key to a new certificate
     href: assign-certificate-private-key.md
   - name: Can't write to event log from ASP.NET 
