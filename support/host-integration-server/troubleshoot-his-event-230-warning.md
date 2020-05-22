@@ -34,7 +34,7 @@ Because of above, you'll see four TEST and four XID commands sent by the 802.2 D
 
 ### Token Ring connections
 
-- On Token Ring, a DLC TEST command is sent to the local ring first. If there's no response to the TEST command, Host Integration Server resends the TEST command with the *all routes broadcast* setting enabled, causing the TEST command to be forwarded to adjacent rings by any source routing bridges that are present on the ring.
+On Token Ring, a DLC TEST command is sent to the local ring first. If there's no response to the TEST command, Host Integration Server resends the TEST command with the *all routes broadcast* setting enabled, causing the TEST command to be forwarded to adjacent rings by any source routing bridges that are present on the ring.
 
 If the Host Integration Server doesn't receive a response to the TEST or XID commands, the SNA DLC Link Service logs an Event 230 warning in the application event log.
 

@@ -66,7 +66,7 @@ The remote system isn't responding to the Host Integration Server computer's att
 
 - 00AD
 
-The remote system has detected a DLC protocol error in a frame sent by Windows NT, and has sent a FRMR causing the connection to end. Event 227 should be logged when this error occurs.
+    The remote system has detected a DLC protocol error in a frame sent by Windows NT, and has sent a FRMR causing the connection to end. Event 227 should be logged when this error occurs.
 
 > [!NOTE]
 > Related to IP-DLC link services: Connections using an IP-DLC link service also log event warnings when the connection fails. In these instances, the two outage codes that can be logged are 0029 and 00AE which have basically the same meaning as they do for connections using an 802.2 DLC link service. In the case of a 00AE outage for IP-DLC, the information regarding t1 and ti DLC timers don't apply as these are DLC specific settings.
@@ -83,7 +83,7 @@ For Host Integration Server environments using 802.2 DLC and IP-DLC link service
 
 - Host Integration Server traces
 
-    These traces are captured using the SNA Trace Utility (snatrace.exe)
+    These traces are captured using the SNA Trace Utility (snatrace.exe).
 
 - Network traces
 
@@ -154,10 +154,10 @@ The Microsoft Host Integration Server support team uses the resulting trace data
 
 Generally, the network traces are the main troubleshooting tools for these types of problems because they are normally external to Host Integration Server. The HIS traces are useful to see the data flow leading up to the outage. The link service Level 2 message traces also include DLC return codes (for 802.2 DLC link services) that can also be helpful.
 
-For 802.2 DLC connection failures, the outage code in the Event 23 tells you why the connection dropped. If you refer to the specific outage descriptions above, you will see get an idea as to what to look for in the traces.
+- For 802.2 DLC connection failures, the outage code in the Event 23 tells you why the connection dropped. If you refer to the specific outage descriptions above, you will see get an idea as to what to look for in the traces.
 
-The traces help verify or prove the underlying cause as noted by the outage code.
+    The traces help verify or prove the underlying cause as noted by the outage code.
 
-For example, an outage code of 0029 (Remote system not responding) usually indicates that the 802.2 DLC link service is not getting a response to the DLC TEST or XID commands that it is sending to the remote system to establish the DLC connection. In these cases, you should also see an Event 230 warning logged in the Application Event log that indicates if the problem occurs because of a TEST or XID command. The network traces in this case are used to verify that the TEST and/or XID command is sent on the wire by the 802.2 DLC link service. If concurrent network traces were captured, you can see if the TEST or XID commands reached the remote network segment. If so, then you should see a TEST or XID response being sent back. If you see the response in the remote network trace but not the other network trace, then the packets were dropped/lost while traversing the WAN. At this point, troubleshooting continues with your network support team.
+    For example, an outage code of 0029 (Remote system not responding) usually indicates that the 802.2 DLC link service is not getting a response to the DLC TEST or XID commands that it is sending to the remote system to establish the DLC connection. In these cases, you should also see an Event 230 warning logged in the Application Event log that indicates if the problem occurs because of a TEST or XID command. The network traces in this case are used to verify that the TEST and/or XID command is sent on the wire by the 802.2 DLC link service. If concurrent network traces were captured, you can see if the TEST or XID commands reached the remote network segment. If so, then you should see a TEST or XID response being sent back. If you see the response in the remote network trace but not the other network trace, then the packets were dropped/lost while traversing the WAN. At this point, troubleshooting continues with your network support team.
 
-For the outage codes that indicate a Frame Reject (FRMR) being sent or received, you would search through the network trace for the FRMR and then work backwards to see the sequence that led to the Frame Reject being sent. In these cases, typical causes are DLC frames being sent out of sequence, incorrect sequence numbers, incorrect DLC frame size. Additional details will be included in a corresponding Event 227 warning, which includes a frame reject code that specifies the reason the frame reject was sent.
+- For the outage codes that indicate a Frame Reject (FRMR) being sent or received, you would search through the network trace for the FRMR and then work backwards to see the sequence that led to the Frame Reject being sent. In these cases, typical causes are DLC frames being sent out of sequence, incorrect sequence numbers, incorrect DLC frame size. Additional details will be included in a corresponding Event 227 warning, which includes a frame reject code that specifies the reason the frame reject was sent.

@@ -18,7 +18,7 @@ Consider the following scenario:
 - BizTalk Server 2010 writes e-commerce order information to DB2/AS400.
 - The BizTalk orchestration uses the DB2 adapter to write the information to the DB2 tables.
 
-when an order has more than 128 line items, insert operation fails with the following error:
+When an order has more than 128 line items, insert operation fails with the following error:
 
 > The maximum number of statements has been reached for the current connection. SQLSTATE: HY000, SQLCODE:-1500
 
@@ -29,9 +29,9 @@ The client relies on pre-defined SQL statements in sections within DB2 static SQ
 ## Resolution
 
 - Add the following registry key:  
-  - Key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Host Integration Server\Data Integration
-  - Value: NumberOfPackages
+  - Key: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Host Integration Server\Data Integration`
+  - Value: **NumberOfPackages**
   - Type: REG_DWORD
-  - Value data: 512
+  - Value data: **512**
 - Recreate packages.
 - Stop/restart BizTalk.
