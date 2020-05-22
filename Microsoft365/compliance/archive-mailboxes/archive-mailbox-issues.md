@@ -20,8 +20,7 @@ search.appverid: MET150
 
 # Archive mailbox issues for a mailbox that's migrated to or from Office 365
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 _Original KB number:_&nbsp;2757430
 

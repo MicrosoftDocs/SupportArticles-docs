@@ -18,8 +18,7 @@ appliesto:
 
 # Use startup folders in Excel
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 For a Microsoft Excel 2001 for Mac version of this article, see [259921](https://support.microsoft.com/help/259921).
 

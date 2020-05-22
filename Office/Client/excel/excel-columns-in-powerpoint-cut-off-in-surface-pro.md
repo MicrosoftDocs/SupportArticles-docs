@@ -25,8 +25,7 @@ description: Resolution to an issue where the top of Excel columns is truncated 
 
 # Top columns in an Excel spreadsheet pasted into a PowerPoint presentation cut-off 
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

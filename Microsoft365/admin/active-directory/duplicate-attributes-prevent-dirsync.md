@@ -18,8 +18,7 @@ appliesto:
 
 # Duplicate or invalid attributes prevent directory synchronization in Office 365
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 
@@ -37,7 +36,7 @@ The error report in the email message may contain one or more of the following e
 - Unable to update this object because the following attributes associated with this object have values that may already be associated with another object in your local directory services: [UserPrincipalName *john\@contoso.com*;]. Correct or remove the duplicate values in your local directory.
 - Unable to update this object because the following attributes associated with this object have values that may already be associated with another object in your local directory services: [ProxyAddresses SMTP:*john\@contoso.com*;]. Correct or remove the duplicate values in your local directory.
 
-Additionally, if you're running Azure Active Directory (Connect) Sync Service, an instance of event ID 6941 that contains one of the following error messages is logged in the Application log in Event Viewer:
+Additionally, if you're running Azure Active Directory (Connect) Sync Service, an instance of event ID 6941 that contains one of the following error messages is logged in the Application login Event Viewer:
 
 ```asciidoc
 Event ID: 6941
@@ -77,13 +76,13 @@ If you create objects that have duplicate alias values in the cloud for Office 3
 
 To resolve this issue, determine duplicate values and values that conflict with other AD DS objects. To do this, use one of the following methods.
 
-### Method 1: Use the IdFix DirSync Error Remediation Tool
+### Method 1: Use the IdFix Microsoft Azure Active Directory Synchronization Tool Error Remediation Tool
 
-Use the IdFix DirSync Error Remediation Tool to identify duplicate or invalid attributes. To resolve duplicate attributes by using the IdFix Tool, see the following Microsoft Knowledge Base article:
+Use the IdFix Microsoft Azure Active Directory Synchronization Tool Error Remediation Tool to identify duplicate or invalid attributes. To resolve duplicate attributes by using the IdFix Tool, see the following Microsoft Knowledge Base article:
 
 [2857385](https://support.microsoft.com/help/2857385) "Duplicate" is displayed in the ERROR column for two or more objects after you run the IdFix tool
 
-For more information about the IdFix tool, go to [IdFix DirSync Error Remediation Tool](https://www.microsoft.com/download/details.aspx?id=36832).
+For more information about the IdFix tool, go to [IdFix Microsoft Azure Active Directory Synchronization Tool Error Remediation Tool](https://www.microsoft.com/download/details.aspx?id=36832).
 
 ### Method 2: Map an existing on-premises user to an Azure AD user
 
@@ -115,7 +114,7 @@ To determine attribute conflicts that are caused by user objects that were creat
       > Ldp.exe is included in Windows Server 2008 and in the Windows Server 2003 Support Tools. The Windows Server 2003 Support Tools are included in the Windows Server 2003 installation media. Or, to obtain the tool, go to the following Microsoft website: [Windows Server 2003 Service Pack 2 32-bit Support Tools](https://go.microsoft.com/fwlink/?linkid=100114)
 
 2. Connect to Office 365 by using the Azure Active Directory Module for Windows PowerShell. To do this, follow these steps:  
-   1. Click **Start**, click **All Programs**, click **Windows Azure Active Directory**, and then click **Windows Azure Active Directory Module for Windows PowerShell**.
+   1. Click **Start**, click **All Programs**, click **Azure Active Directory**, and then click **Azure Active Directory Module for Windows PowerShell**.
    2. Type the following commands in the order in which they are presented, and press Enter after each command:
       
       ```powershell
