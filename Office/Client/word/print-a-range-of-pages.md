@@ -19,8 +19,7 @@ appliesto:
 
 # How to print a range of pages in a multiple-section document in Word 2013, Word 2010, Word 2007, and Word 2003
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

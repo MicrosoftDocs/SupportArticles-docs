@@ -22,8 +22,7 @@ description: Describes how to install Office with files that are not in VLSC or 
 
 # How to install Office 2019 installation files not found in VLSC
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

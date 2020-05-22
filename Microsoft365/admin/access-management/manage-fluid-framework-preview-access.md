@@ -20,8 +20,7 @@ search.appverid:
 
 # Microsoft Fluid Framework preview – access management
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 This article describes how administrators of Microsoft 365 tenants can manage access to Microsoft Fluid Framework preview by disabling user sign-ins in the [Azure portal](https://portal.azure.com/).
 

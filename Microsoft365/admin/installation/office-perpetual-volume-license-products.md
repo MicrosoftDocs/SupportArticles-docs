@@ -18,8 +18,7 @@ appliesto:
 
 # Office 2019 perpetual volume license products available as Click-to-Run
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 For almost two decades, Microsoft Office has relied on the Windows Installer (MSI) technology for core deployment functionality. To better address the ever-growing requirements of businesses, Office has continually introduced modern deployment features. 
 

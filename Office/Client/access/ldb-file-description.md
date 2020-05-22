@@ -17,8 +17,7 @@ appliesto:
 
 # What is an LDB File?
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 LDB files are Microsoft Access lock information files. An ".LDB" file is created when an Access database is opened/accessed by a user - the file is created with the same name as the Access database, but with an ".LDB" extension. The file is used to keep track of all users that are currently accessing the database.
 

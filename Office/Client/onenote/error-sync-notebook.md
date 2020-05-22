@@ -21,8 +21,7 @@ search.appverid: MET150
 ---
 # "0xE40200B4" and "0x800700DF" errors when you sync a notebook in OneNote
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

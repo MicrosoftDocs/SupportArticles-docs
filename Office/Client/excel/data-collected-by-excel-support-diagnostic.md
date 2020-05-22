@@ -18,8 +18,7 @@ appliesto:
 
 # [SDP 3][7b5791e2-2449-4351-867a-a22d34449d15] Data that is collected by the Excel Support Diagnostic
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

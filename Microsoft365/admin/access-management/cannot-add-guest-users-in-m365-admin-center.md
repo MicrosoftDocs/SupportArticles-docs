@@ -22,8 +22,7 @@ description: Describes a workaround for adding guest users to the Microsoft 365 
 
 # Enabling guest users to access resources through the Microsoft 365 admin center
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 
