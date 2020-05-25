@@ -20,7 +20,7 @@ search.appverid: MET150
 
 <a id="top" />Tenant administrators perform many common tasks to manage O365 groups. Here's a quick reference for doing these tasks. The tasks are divided into sections to help you sort through them quickly. Select a task to navigate directly to it.
 
-- Office 365 creation & display
+- Office 365 Groups creation & display
   - [Control Office 365 group creation](#control-office-365-group-creation)
   - [Display an Office 365 group associated with a team](#display-an-office-365-group-associated-with-a-team)
 - Office 365 group delegation
