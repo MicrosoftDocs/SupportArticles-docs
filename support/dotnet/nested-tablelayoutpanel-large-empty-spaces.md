@@ -24,7 +24,7 @@ The current implementation of TableLayoutPanel does a separate scaling pass for 
 
 To resolve this issue, set **Margins** or **Padding** to zero and use alternative ways of achieving space between controls or avoid nesting TableLayoutPanel controls.
 
-## More Information
+## More information
 
 The TableLayoutPanel control simplifies the positioning and sizing of any windows forms by arranging them in arbitrary table-like layouts. When TableLayoutPanel control calculates the appropriate sizes for each control in the layout, TableLayoutPanel will scale the margins and any surrounding padding of the control according to the current DPI settings so that the overall look of the layout stays the same regardless of resolution. When one of these controls is another nested TableLayoutPanel, the scaling will be applied over what these controls have already calculated its margins and padding to be. This results in the unexpected large margins and padding.
 

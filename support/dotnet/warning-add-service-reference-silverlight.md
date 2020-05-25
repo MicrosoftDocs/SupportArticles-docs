@@ -25,7 +25,7 @@ These warnings occur because Silverlight doesn't support WCF endpoints configure
 
 ## Resolution
 
-If the WCF service being imported only exposes the endpoint with a secure NetTcp binding, the Silverlight application won't be able to use that service until it's updated to expose a compatible endpoint. The documentation listed in the **More Information** section contains resources for adding compatible endpoints for WCF and Silverlight applications.
+If the WCF service being imported only exposes the endpoint with a secure NetTcp binding, the Silverlight application won't be able to use that service until it's updated to expose a compatible endpoint. The documentation listed in the **References** section contains resources for adding compatible endpoints for WCF and Silverlight applications.
 
 ## References
 

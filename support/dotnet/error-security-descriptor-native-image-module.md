@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 2468429
 
 ## Symptoms
 
-When you try to obtain the security descriptor of a generic class from a native image (Ngen.exe) module in a Microsoft .NET Framework environment, you receive a F**atal Execution Engine Error** error message. This problem may occur if the following conditions are true:
+When you try to obtain the security descriptor of a generic class from a native image (Ngen.exe) module in a Microsoft .NET Framework environment, you receive a **Fatal Execution Engine Error** error message. This problem may occur if the following conditions are true:
 
 - The application includes an assembly that is loaded domain-neutral (`LoaderOptimization.MultiDomain` or `LoaderOptimization.MultiDomainHost`).
 - The assembly contains an instantiation of a generic class.

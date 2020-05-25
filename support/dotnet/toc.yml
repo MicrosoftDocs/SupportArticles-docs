@@ -34,7 +34,7 @@
     href: ports-run-out-use-connectiongroupname.md
   - name: RemotingException when using binary format to serialize messages
     href: net-remotingexception-binary-format-message.md
-  - name: Warning when adding service reference to Silverlight project
+  - name: Warning when adding service reference to Silverlight project
     href: warning-add-service-reference-silverlight.md
   - name: Windows Forms applications throw SecurityException
     href: securityexception-winform-net-framework-3-dot-5.md

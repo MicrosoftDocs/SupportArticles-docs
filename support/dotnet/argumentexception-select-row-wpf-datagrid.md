@@ -21,9 +21,9 @@ You've developed a Microsoft .NET Framework 4.x application that uses the Window
 > Source=mscorlib  
 > StackTrace:  
 > at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)  
-> at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)  
-> at System.Collections.Generic.Dictionary`2..ctor(IDictionary`2 dictionary, IEqualityComparer`1 comparer)  
-> at System.Windows.Controls.Primitives.Selector.InternalSelectedItemsStorage..ctor(InternalSelectedItemsStorage collection, IEqualityComparer`1 equalityComparer)  
+> at System.Collections.Generic.Dictionary 2.Insert(TKey key, TValue value, Boolean add)  
+> at System.Collections.Generic.Dictionary 2..ctor(IDictionary 2 dictionary, IEqualityComparer 1 comparer)  
+> at System.Windows.Controls.Primitives.Selector.InternalSelectedItemsStorage..ctor(InternalSelectedItemsStorage collection, IEqualityComparer 1 equalityComparer)  
 > at System.Windows.Controls.Primitives.Selector.SelectionChanger.ApplyCanSelectMultiple()  
 > at System.Windows.Controls.Primitives.Selector.SelectionChanger.End()  
 > at System.Windows.Controls.SelectedItemCollection.EndUpdateSelectedItems()  

@@ -29,7 +29,7 @@ A ClickOnce application can be published successfully. However when you attempt 
 
 ## Cause
 
-When the ampersand special character is used within the folder structure of the published ClickOnce application, the installation and launching will fail. Other special characters such as the backslash (\), slash (/), question mark (?), asterisk (*), less than sign (<) and greater than sign (>) are blocked by the operating system. Others such as the plus sign (+), backquote (`), semicolon (;), braceleft ({), bracketleft ([), braceright (}), bracketright (]), number sign (#), exclamation point (!), at sign (@), dollar sign ($), percent (%), caret (^), opening or closing parenthesis can be used successfully. However it's always advisable not to use any special characters in file or folder names.
+When the ampersand special character is used within the folder structure of the published ClickOnce application, the installation and launching will fail. Other special characters such as the backslash (\), slash (/), question mark (?), asterisk (*), less than sign (<) and greater than sign (>) are blocked by the operating system. Others such as the plus sign (+), back quote (`), semicolon (;), brace left ({), bracket left ([), brace right (}), bracket right (]), number sign (#), exclamation point (!), at sign (@), dollar sign ($), percent (%), caret (^), opening or closing parenthesis can be used successfully. However it's always advisable not to use any special characters in file or folder names.
 
 ## Resolution
 

@@ -8,7 +8,7 @@ ms.prod-support-area-path:
 
 This article provides information about resolving an issue that ClickOnce deployed applications can't avoid some prompts to accept installation from unknown publishers when Microsoft .NET Framework 4.0 or a later version has been installed.
 
-_Original product version:_ &nbsp; Microsoft .NET Framework 4.0 and later versions
+_Original product version:_ &nbsp; Microsoft .NET Framework 4.0 and later versions  
 _Original KB number:_ &nbsp; 2651504
 
 ## Symptoms

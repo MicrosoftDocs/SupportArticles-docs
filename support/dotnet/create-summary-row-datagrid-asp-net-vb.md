@@ -79,7 +79,7 @@ In this section, you use the Sales Totals by Amount view that is located in the 
     ByVal e As System.EventArgs) Handles MyBase.Load
         'Connect to the database, retrieve data, and then fill the data in the DataSet.
         Dim myConnection As New SqlConnection("server=(local)\netsdk;"Integrated Security=SSPI" & _
-        "pwd=;database=northwind")
+        pwd=;database=northwind")
         Dim myDataAdapter As New SqlDataAdapter("SELECT top 15 [OrderID], [CompanyName], " & _
         "[SaleAmount] FROM [Northwind].[dbo].[Sales Totals by Amount]", myConnection)
         Dim myDataSet As New DataSet()
