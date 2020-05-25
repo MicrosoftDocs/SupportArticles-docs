@@ -19,8 +19,7 @@ search.appverid: MET150
 ---
 # You cannot connect directly to FoxPro databases in Access 2007 and in Access 2003
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 _Original KB number:_ &nbsp; 824264
 

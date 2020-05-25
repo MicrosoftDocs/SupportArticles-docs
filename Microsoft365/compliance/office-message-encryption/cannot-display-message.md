@@ -17,8 +17,7 @@ search.appverid: MET150
 
 # We can't display your message right now error in Outlook Web App when an Exchange Online user views an encrypted message
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 _Original KB number:_&nbsp;2971787
 

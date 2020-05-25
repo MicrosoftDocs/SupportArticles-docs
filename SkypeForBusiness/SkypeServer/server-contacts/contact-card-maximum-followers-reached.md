@@ -56,13 +56,13 @@ For detailed information on how the MaxCategorySubscription value of the Lync cl
 
 ## Resolution
 
-The following step by step information describes how to analyze and update the current presence policy settings for the Lync user's MaxCategorySubscription 
+The following step-by-step information describes how to analyze and update the current presence policy settings for the Lync user's MaxCategorySubscription 
 
 **Using Server 2008**
 
 Perform the following steps from a computer that has the Lync Server Administrative Tools installed:
 1. Click on the Start button, then click on All Programs   
-2. Click on Microsoft Lync Server , then select Lync Server Management Shell   
+2. Click on Microsoft Lync Server, then select Lync Server Management Shell   
 3. In the Lync Server Management Shell enter the following PowerShell command:
 
    **Get-CsPresencePolicy**   

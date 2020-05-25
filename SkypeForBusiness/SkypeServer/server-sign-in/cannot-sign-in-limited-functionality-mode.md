@@ -24,11 +24,11 @@ A user in a routing group may experience the following issues in a Microsoft Lyn
 
 ### Issue 1
 
-When a primary replica of the routing group is unavailable, the user cannot sign in to a Lync client. This may be because one or more servers in a pool shut down or have connectivity problems.
+When a primary replica of the routing group is unavailable, the user cannot sign in to a Lync client. This may be because one or more servers in a pool shutdown or have connectivity problems.
 
 ### Issue 2
 
-Assume that the primary replica is available, but a secondary replica and a backup secondary replica are unavailable. In this situation, the user will sign in to a Lync client in limited functionality mode. 
+Assume that the primary replica is available, but a secondary replica and a Backup secondary replica are unavailable. In this situation, the user will sign in to a Lync client in limited functionality mode. 
 
 This issue occurs because the operation data that requires Windows Fabric writes cannot be replicated to a secondary replica. 
 

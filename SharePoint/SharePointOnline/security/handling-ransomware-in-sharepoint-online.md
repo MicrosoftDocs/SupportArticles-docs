@@ -30,7 +30,7 @@ Ransomware is a malware that blocks access to various items on your computer and
 
 ### How does it work with SharePoint Online or OneDrive for Business?
 
-Ransomware is an executable which is run locally on a user's computer.  The ransomware reviewed by Microsoft that affects SharePoint Online or OneDrive for Business manipulates individual files on the user's local machine by way of a One Drive for Business connection or a mapped drive into a SharePoint Online library. 
+Ransomware is an executable that is run locally on a user's computer.  The ransomware reviewed by Microsoft that affects SharePoint Online or OneDrive for Business manipulates individual files on the user's local machine by way of a OneDrive for Business connection or a mapped drive into a SharePoint Online library. 
 
 Once the ransomware is placed, the infected files are then synchronized to the online environment by the sync client tool or by various Web DAV methods. Various manipulations of the files include (but are not limited to):
 
@@ -38,14 +38,14 @@ Once the ransomware is placed, the infected files are then synchronized to the o
 - Appending an unknown extension to the filename.
 - Deleting existing files.
 
-In addition, many new files are added to each directory which create display instructions regarding who to pay the ransom.
+In addition, many new files are added to each directory that create display instructions regarding who to pay the ransom.
 
 ### How do I confirm the items of a library are actually being held for ransom?
 
 Signs that a SharePoint Online library has been infected by ransomware include the following:
 - Majority of the files within the library have the same **Modified By** timestamp.
 - Files fail to open with a message stating that they are possibly corrupt.
-- Each directory within the library contains several files named **HELP_DECRYPT**, **HELP_Recover** or similar random names. The files can be opened and contain instructions for paying the ransom.
+- Each directory within the library contains several files named **HELP_DECRYPT**, **HELP_Recover, or similar random names. The files can be opened and contain instructions for paying the ransom.
 - Files have been renamed or have an extension appended to the end.
 
 ### How is Microsoft able to help?
@@ -63,6 +63,6 @@ If you are affected by ransomware, try the following:
 
 ### Need more help?
 
-For more information on ransomware, see the support article on [Ransomware](https://www.microsoft.com/security/portal/mmpc/shared/ransomware.aspx). 
+For more information on ransomware, see the support article on [Ransom ware](https://www.microsoft.com/security/portal/mmpc/shared/ransomware.aspx). 
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

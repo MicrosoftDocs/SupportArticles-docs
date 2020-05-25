@@ -18,8 +18,7 @@ appliesto:
 ---
 # Disabling code-behind prompt for InfoPath forms
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 When a domain-trusted InfoPath form with code behind is launched, a dialog appears and prompt for confirmation before the code runs. This prompt interferes with automated solutions, such as a server-side process that prints InfoPath forms.

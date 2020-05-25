@@ -23,8 +23,7 @@ search.appverid: MET150
 ---
 # How to set the default font for Word, Excel, and PowerPoint
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 This article provides detailed steps for administrators to set the default font for Microsoft Office applications, such as Microsoft Word, Microsoft Excel, and Microsoft PowerPoint.
 

@@ -33,7 +33,7 @@ Assume that you perform a force failover because one of the pools is unavailable
 
 This issue occurs when you perform the second failover immediately after the previous failover, and the pool isn't yet in a consistent state. When you try to run the **Invoke-CsManagementServerFailover** cmdlet, you receive the following error messages: 
 
-**Invoke-CsManagementServerFailover : Cannot fail over the Central Management Server. The new Central Management Store located at "skypepool.contoso.com" is not in backup mode.**
+**Invoke-CsManagementServerFailover: Cannot fail over the Central Management Server. The new Central Management Store located at "skypepool.contoso.com" is not in Backup mode.**
 
 **Invoke-CSManagementServerFailover: Central Management Server cannot be moved to pool skypepool.contoso.com because either a previous failover attempt failover or there is already a failover in progress. If the central management server was recently moved to another pool this condition might be caused by a delay in Active Directory Replication** 
 
@@ -45,11 +45,11 @@ The ActiveMasterFqdn status is blank when you run the **[Get-CsManagementStoreRe
 
 ### Scenario 1
 
-If the main pool is unavailable, the CMS status that's persisted into databases will still be set as active. When pool functionality is restored, backup services may take longer to mark the CMS as in backup mode, CMS replication may fail, and a failover may be blocked. 
+If the main pool is unavailable, the CMS status that's persisted into databases will still be set as active. When pool functionality is restored, Backup services may take longer to mark the CMS as in Backup mode, CMS replication may fail, and a failover may be blocked. 
 
 ### Scenario 2
 
-If a failover isn't completed and another failover is performed immediately after, the CMS could be marked either as in active or backup mode due a race condition issue. 
+If a failover isn't completed and another failover is performed immediately after, the CMS could be marked either as in active or Backup mode due to a race condition issue. 
 
 ### Scenario 3
 
