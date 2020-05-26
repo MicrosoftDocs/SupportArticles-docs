@@ -25,7 +25,8 @@ Error entries that resemble the following are logged in the NDES Connector .svcl
 > \<Source Name="NDESConnectorService" />\<Correlation ActivityID="{\<Correlation ActivityID>}" />\<Execution ProcessName="NDESConnector" ProcessID="7364" ThreadID="50" />\<Channel/>\<Computer>Computer_Name\</Computer>\</System>\<ApplicationData>Writing registry SOFTWARE\Microsoft\MicrosoftIntune\NDESConnector\ConnectionStatus - IssueDetails with the value **0x80004003**.
 
 > [!NOTE]
-> The NDES Connector .svclog files are located in the following folder on the computer that runs the Microsoft Intune Certificate Connector: `%programfiles%\Microsoft Intune\NDESConnectorSvc\Logs\Logs\`.
+> The NDES Connector .svclog files are located in the following folder on the computer that runs the Microsoft Intune Certificate Connector:
+> `%programfiles%\Microsoft Intune\NDESConnectorSvc\Logs\Logs\`.
 >
 > These files are named in the format: NDESConnector_*YYYY*-*MM*-*DD*_*xxxxxx*.svclog
 
@@ -38,7 +39,7 @@ This issue occurs if the account that you use to sign in doesn't have a valid In
 To fix the issue, assign a valid Intune license to the account that you use to sign in.
 
 > [!NOTE]
-> The account that you use to sign in must be an Intune service administrator or a tenant administrator that has **Global administrator** permissions.
+> The account that you use to sign in must be an Intune Service Administrator or a tenant administrator that has **Global Administrator** permissions.
 
 ## More information
 

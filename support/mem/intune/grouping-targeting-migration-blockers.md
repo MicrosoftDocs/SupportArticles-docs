@@ -34,7 +34,7 @@ The following situations are considered the most significant migration blockers.
 
 ### Policies or applications targeted to ungrouped users or devices
 
-Currently, Intune lets you target policies tonon-groups. Non-groups are those devices or users that were not put anywhere specific. Therefore, they are located in the All Users bucket. In Azure AD, you can use [dynamic groups](/azure/active-directory/users-groups-roles/groups-dynamic-membership) to automatically assign devices and users directly to groups. However, targeting must be done at a group level.
+Currently, Intune lets you target policies to non-groups. Non-groups are those devices or users that were not put anywhere specific. Therefore, they are located in the All Users bucket. In Azure AD, you can use [dynamic groups](/azure/active-directory/users-groups-roles/groups-dynamic-membership) to automatically assign devices and users directly to groups. However, targeting must be done at a group level.
 
 To remove this blocker, you must move your ungrouped users and devices to the desired groups. Additionally, you must remove anything that you have targeted to those ungrouped users or devices. This includes policies, applications, and terms of use. After you move a device or user from one group to another, the policy is applied according to the group that you move the device to. You would not want to cause migration blockers to be restored after you have removed them.
 
@@ -42,23 +42,23 @@ To remove this blocker, you must move your ungrouped users and devices to the de
 
 Currently, you can create security groups in [https://portal.office.com](https://portal.office.com) or [https://portal.azure.com](https://portal.azure.com). However, you cannot target any policy or applications to those groups in Intune. Instead, you create Intune groups by including or excluding your security groups from a parent group, and then targeting your policies to the Intune groups. After the migration, you can target your policies directly to the security groups.
 
-If your Intune groups are created by excluding security groups, Intune cannot migrate them yet because there is no equivalent way to exclude groups in Azure AD. For example, you could create an Intune group that is named *All US Users* by excluding the *All EU Users* security group from the *All Users* group. However, that exclusion would delay your migration because the process cannot create a dynamic group that has the same result. Again, when you remove your excluded groups, remember that the excluded group and your policies and anything else that you have targeted to that excluded group must also be removed.
+If your Intune groups are created by excluding security groups, Intune cannot migrate them yet because there is no equivalent way to exclude groups in Azure AD. For example, you could create an Intune group that is named **All US Users** by excluding the **All EU Users** security group from the **All Users** group. However, that exclusion would delay your migration because the process cannot create a dynamic group that has the same result. Again, when you remove your excluded groups, remember that the excluded group and your policies and anything else that you have targeted to that excluded group must also be removed.
 
 ### Using nested (implicit exclusion) groups
 
 Even if you never use the **Exclude** button on your criteria membership, you create a nested group (also known as an implicit exclusion group) if you do the following:
 
-- Create a group that does not use *All Users* as the parent group.
+- Create a group that does not use **All Users** as the parent group.
 - Start by having an empty group on the criteria membership page.
 - Include one or more security groups.
 
-For example, you want a group that is named *US Marketing*. You already have an Intune group that is named *All US Users*, and a security group that is named *Worldwide Marketing*. When you create your *US Marketing* Intune group, you do the following:
+For example, you want a group that is named **US Marketing**. You already have an Intune group that is named **All US Users**, and a security group that is named **Worldwide Marketing**. When you create your **US Marketing** Intune group, you do the following:
 
-- Set the parent group to *All US Users*.
+- Set the parent group to **All US Users**.
 - Start by having an empty group on the criteria membership page.
-- Include *Worldwide Marketing*.
+- Include **Worldwide Marketing**.
 
-Because you use the *All US Users* parent group, you exclude any marketing employees who are not based in the United States.
+Because you use the **All US Users** parent group, you exclude any marketing employees who are not based in the United States.
 
 ### Groups that use the `Is Manager` clause
 
@@ -87,7 +87,7 @@ Even if you do not fix your grouping, exclusion, and nesting issues, we will con
 
 Dynamic groups in Azure AD make life easier for administrators. When a user or device meets certain criteria, they are automatically added to the dynamic group and automatically receive policies, applications, and terms and conditions that are deployed to that dynamic group.
 
-If you had an Intune group that used to update dynamically but is migrated as a static group, your newly added users and devices will not automatically receive deployments. For example, if you had an Intune group that included everyone on the *Sales* team but excluded user *Joey Maxfield*, the **snapshot** group is migrated as a flat list of users in *Sales*, minus the user *Joey Maxfield*. Therefore, *Joey* will not receive the deployments that he used to receive. If a new user, *Terri Richards*, joins the *Sales* team after the migration, she is not automatically added to the static *Sales* group and does not receive applications, policies, or terms and conditions that are targeted to that group.
+If you had an Intune group that used to update dynamically but is migrated as a static group, your newly added users and devices will not automatically receive deployments. For example, if you had an Intune group that included everyone on the **Sales** team but excluded user *Joey Maxfield*, the **snapshot** group is migrated as a flat list of users in **Sales**, minus the user *Joey Maxfield*. Therefore, *Joey* will not receive the deployments that he used to receive. If a new user, *Terri Richards*, joins the **Sales** team after the migration, she is not automatically added to the static **Sales** group and does not receive applications, policies, or terms and conditions that are targeted to that group.
 
 ## References
 

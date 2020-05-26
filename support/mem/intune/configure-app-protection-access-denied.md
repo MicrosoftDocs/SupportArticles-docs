@@ -4,7 +4,7 @@ description: Fixes an issue in which an administrator receives the Access Denied
 ms.date: 05/11/2020
 ms.prod-support-area-path:
 ---
-# Intune service administrator gets Access Denied when trying to configure MAM
+# Intune Service Administrator gets Access Denied when trying to configure MAM
 
 This article fixes the **Access Denied** error when an administrator configures Intune App Protection **Conditional Access**.
 
@@ -13,11 +13,11 @@ _Original KB number:_ &nbsp; 4025997
 
 ## Symptoms
 
-Assume that an administrator isn't in the Global administrator role but is in the Intune service administrator role. When they try to configure Intune App Protection (MAM) **Conditional Access** (CA), an **Access Denied** error occurs.
+Assume that an administrator isn't in the Global Administrator role but is in the Intune Service Administrator role. When they try to configure Intune App Protection (MAM) **Conditional Access**, an **Access Denied** error occurs.
 
 ## Cause
 
-The Intune service administrator must be given explicit **Contributor** role permission to access MAM CA blades.
+The Intune Service Administrator must be given explicit **Contributor** role permission to access MAM Conditional Access blades.
 
 ## Resolution
 

@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 4293765
 
 ## Symptoms
 
-After you deploy applications to Windows 10 devices, the apps are not displayed as **Available** in the Intune Company Portal.
+After you deploy applications to Windows 10 devices, the apps are not displayed as **Available** in the Intune Company Portal app.
 
 ## Cause
 
@@ -36,7 +36,7 @@ To resolve this issue, users must identify their enrolled device by following t
 
    :::image type="content" source="./media/apps-appear-unavailable/select-device.png" alt-text="Screenshot of selecting which device.":::
 
-5. You are returned to **My Devices**. The device should show a green check, as shown in the following screen shot.
+5. You are returned to **My Devices**. The device should show a green check, as shown in the following screenshot.
 
    :::image type="content" source="./media/apps-appear-unavailable/my-deivce.png" alt-text="Screenshot of my devices.":::
 

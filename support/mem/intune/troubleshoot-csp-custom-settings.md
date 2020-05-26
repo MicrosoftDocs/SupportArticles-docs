@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 4055338
 
 A CSP is an interface in the client operating system between configuration settings that are specified in a provisioning document and configuration settings on the device. CSPs provide an interface to read, set, modify, or delete configuration settings for a given feature. Typically, these settings map to registry keys, files, or permissions. Some of these settings are configurable, and some are read-only.
 
-In Windows 10, the management approach for both desktop and mobile devices converges, taking advantage of the same CSPs to configure and manage all devices that are running Windows 10. Each CSP provides access to specific settings. For example, the Wi-Fi CSP contains the settings to create a Wi-Fi profile.
+In Windows 10, the management approach for both desktop and mobile devices converges, taking advantage of the same CSPs to configure and manage all devices that are running Windows 10. Each CSP provides access to specific settings. For example, the WiFi CSP contains the settings to create a WiFi profile.
 
 CSPs are behind many of the management tasks and policies for Windows 10 in Microsoft Intune and non-Microsoft mobile device management (MDM) service providers. CSPs receive configuration policies in the XML-based SyncML format that are pushed to the CSP from an MDM-compliant management server, such as Microsoft Intune. Traditional enterprise management systems, such as System Center Configuration Manager, can also target CSPs by using a client-side Windows Management Instrumentation-to-CSP bridge.
 

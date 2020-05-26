@@ -8,14 +8,14 @@
     href: configure-app-protection-access-denied.md
   - name: Access denied for Intune app protection options
     href: app-protection-options-access-denied.md
-  - name: Can't prevent saving images locally
-    href: app-protection-policy-fails-restricting-images.md
+  - name: Saving images locally not restricted
+    href: saving-images-locally-not-restricted.md
   - name: Error when you open a web app on iOS 
     href: invalid-address-open-web-app.md
   - name: OneDrive supports Open-in protection on unenrolled devices
     href: open-in-protection-unenrolled-devices.md
   - name: Protected data is attached to an iMessage
-    href: onedrive-attaches-corporate-protected-data.md
+    href: onedrive-attaches-corporate-protected-data-imessage.md
 - name: Co-management with Configuration Manager
   items:
   - name: Troubleshoot co-management auto-enroll
@@ -27,14 +27,14 @@
 - name: Configure devices
   items:
   - name: Can't assign SCEP certificates to devices
-    href: scep-certificates-fails-assigned-to-devices.md
+    href: cannot-assign-scep-certificates.md
   - name: Connectivity issues due to root certificates
     href: fix-connectivity-issues.md
 - name: Company resource access
   items:
   - name: Apps don't appear as Available
     href: apps-appear-unavailable.md
-  - name: Error 0x80090014 installing NDES certificate
+  - name: Error 0x80004003 signing in to Intune NDES Connector UI
     href: error-0x80090014-installing-ndes-certificate.md
   - name: Sign in to Intune NDES Connector error 0x80004003
     href: ndes-connector-signin-error-80004003.md
@@ -59,7 +59,7 @@
       href: mdm-enrollment-error-0xcaa9001f.md
 - name: Device life cycle
   items: 
-  - name: Help desk operators can't do remote tasks
+  - name: Help desk operators can't perform remote tasks
     href: help-desk-operator-fails-remote-tasks.md
   - name: RemoteWipe CSP fails to send a doWipe command
     href: remotewipe-fails-sending-dowipe-command.md
@@ -69,10 +69,10 @@
     href: fails-moving-intune-exchange-connector.md
   - name: Error -2016281112 deploying a password policy
     href: error-deploying-password-policy.md
-  - name: Not compliant for BitLocker-encrypted device
+  - name: BitLocker-encrypted device displays as Not compliant
     href: bitlocker-encrypted-device-not-compliant.md
   - name: Password expiration setting doesn't work
-    href: password-expiration-setting-uneffect.md
+    href: password-expiration-setting-not-working.md
   - name: Troubleshoot CSP custom settings
     href: troubleshoot-csp-custom-settings.md
 - name: Fundamentals
