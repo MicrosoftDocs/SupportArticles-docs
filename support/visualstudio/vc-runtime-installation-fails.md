@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 2629642
 
 ## Symptoms
 
-When you try to install Microsoft Visual C++ Redistributable Package from a folder name containing a double byte (for example, ダウンロード), you receive the following error message:
+When you try to install Microsoft Visual C++ Redistributable Package from a folder name containing a double byte (for example, :::no-loc text="ダウンロード":::), you receive the following error message:
 
 > Extraction Failed  
 > The filename, directory name, or volume label syntax is incorrect.

@@ -39,9 +39,7 @@ An update to resolve this problem is available for manual download and installat
 
 - [Download for Update to Microsoft Visual Studio 2013 Update 4](https://www.microsoft.com/download/details.aspx?id=44998)
 
-### Virus-scan claim
-
-Microsoft scanned this file for viruses, using the most current virus-detection software that was available on the date that the file was posted. The file is stored on security-enhanced servers that help prevent any unauthorized changes to it.  
+[!INCLUDE [Virus-scan claim](../includes/virus-scan-claim.md)]
 
 ## Prerequisites
 
