@@ -8,14 +8,20 @@
     href: configure-app-protection-access-denied.md
   - name: Access denied for Intune app protection options
     href: app-protection-options-access-denied.md
-  - name: Saving images locally not restricted
-    href: saving-images-locally-not-restricted.md
+  - name: Can't wrap LOB app via wrapping tool
+    href: application-could-not-be-wrapped.md
   - name: Error when you open a web app on iOS 
     href: invalid-address-open-web-app.md
+  - name: MacOS LOB apps aren't deployed
+    href: macos-lob-apps-not-deployed.md
   - name: OneDrive supports Open-in protection on unenrolled devices
     href: open-in-protection-unenrolled-devices.md
   - name: Protected data is attached to an iMessage
     href: onedrive-attaches-corporate-protected-data-imessage.md
+  - name: Saving images locally not restricted
+    href: saving-images-locally-not-restricted.md
+  - name: Set up and validate app protection policies
+    href: set-up-app-protection-policies-ios-device.md
 - name: Co-management with Configuration Manager
   items:
   - name: Troubleshoot co-management auto-enroll
@@ -26,10 +32,14 @@
     href: troubleshoot-co-management-workloads.md
 - name: Configure devices
   items:
+  - name: 2016341112 -iOS device is currently busy
+    href: 2016341112-ios-device-is-currently-busy.md
   - name: Can't assign SCEP certificates to devices
     href: cannot-assign-scep-certificates.md
   - name: Connectivity issues due to root certificates
     href: fix-connectivity-issues.md
+  - name: SCEP certificate request fails on CRP
+    href: scep-certificate-request-fails.md
 - name: Company resource access
   items:
   - name: Apps don't appear as Available
@@ -38,6 +48,14 @@
     href: error-0x80090014-installing-ndes-certificate.md
   - name: Sign in to Intune NDES Connector error 0x80004003
     href: ndes-connector-signin-error-80004003.md
+- name: Conditional Access
+  items:
+  - name: Could not retrieve access token for Graph API
+    href: could-not-retrieve-access-token.md
+  - name: Mismatch between value type and configuration value
+    href: mismatch-error-configuration-value-ampersand.md
+  - name: Unable to connect or send inventory information
+    href: unable-to-connect-send-inventory-information.md
 - name: Device enrollment
   items:
   - name: Can't update enrollment
@@ -55,38 +73,48 @@
     items:
     - name: 80180002b during Windows 10 Group Policy-based auto-enrollment
       href: windows10-enroll-error-80180002b.md
+    - name: Cannot delete autopilot deployment profile
+      href: cannot-delete-autopilot-deployment-profile.md
     - name: Error 0xcaa9001f in MDM enrollment
       href: mdm-enrollment-error-0xcaa9001f.md
 - name: Device life cycle
   items: 
   - name: Help desk operators can't perform remote tasks
     href: help-desk-operator-fails-remote-tasks.md
+  - name: Intune Exchange Connector version is not supported
+    href: exchange-connector-version-not-supported.md
   - name: RemoteWipe CSP fails to send a doWipe command
     href: remotewipe-fails-sending-dowipe-command.md
 - name: Device management
   items:
+  - name: BitLocker-encrypted device displays as Not compliant
+    href: bitlocker-encrypted-device-not-compliant.md
   - name: Can't move an Intune Exchange connector
     href: fails-moving-intune-exchange-connector.md
   - name: Error -2016281112 deploying a password policy
     href: error-deploying-password-policy.md
-  - name: BitLocker-encrypted device displays as Not compliant
-    href: bitlocker-encrypted-device-not-compliant.md
+  - name: Gpupdate /force returns error
+    href: windows-failed-to-apply-mdm-policy.md
   - name: Password expiration setting doesn't work
     href: password-expiration-setting-not-working.md
+  - name: Secure boot enabled shows as Not Compliant
+    href: win-10-device-shows-not-compliant.md
   - name: Troubleshoot CSP custom settings
     href: troubleshoot-csp-custom-settings.md
+  - name: UPN listed as None for deleted user
+    href: missing-removed-user-intune-info.md
 - name: Fundamentals
   items:
-  - name: Set the MDM authority
-    href: set-mdm-authority.md
+  - name: Intune account portal retired
+    href: itune-account-portal-retired.md
   - name: Licenses
     items:
     - name: Device-only subscription
       href: device-licenses-introduction.md
     - name: Use PowerShell to look up licenses
       href: look-up-intune-licenses.md
-  - name: Intune account portal retired
-    href: itune-account-portal-retired.md
+  - name: Set the MDM authority
+    href: set-mdm-authority.md
 - name: General guidance or advisory
   items:
   - name: Attributes synced by Intune
@@ -103,6 +131,10 @@
   items:
   - name: Managed Browser policy triggers error 0x87D1FDE8
     href: managed-browser-policy-triggers-error-0x87d1fde8.md
+- name: Set up Intune
+  items:
+  - name: Intune Connector Setup Wizard ended prematurely
+    href: connector-setup-wizard-ends-prematurely.md
 - name: Software distribution
   items:
   - name: Software distribution tips and practices
