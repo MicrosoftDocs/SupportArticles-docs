@@ -2,7 +2,7 @@
 title: Could not retrieve access token for Graph API
 description: Describes an issue in which you receive an error message during the configuration of Microsoft Intune Integration in Jamf Pro.
 ms.date: 05/13/2020
-ms.prod-support-area-path: Mac management: Jamf 
+ms.prod-support-area-path: Mac management Jamf
 ---
 # Could not retrieve the access token for Microsoft Graph API when configuring Microsoft Intune Integration in Jamf Pro
 
@@ -38,6 +38,6 @@ To fix the issue, make sure that the following TCP ports aren't blocked:
 - [Network Ports Used by Jamf Pro](https://www.jamf.com/jamf-nation/articles/34/network-ports-used-by-jamf-pro)
 - [TCP and UDP ports used by Apple software products](https://support.apple.com/HT202944)
 
-[!INCLUDE [Third-party disclaimer](../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Third-party contact disclaimer](../includes/third-party-contact-disclaimer.md)]
+[!INCLUDE [Third-party contact disclaimer](../../includes/third-party-contact-disclaimer.md)]

@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 4464186
 
 ## Symptoms
 
-When you try to [configure the Microsoft Intune on-premises Exchange connector](mem/intune/protect/exchange-connector-install), you receive the following error message:
+When you try to [configure the Microsoft Intune on-premises Exchange connector](/mem/intune/protect/exchange-connector-install), you receive the following error message:
 
 > Configuration Failed  
 > The Microsoft Intune Exchange Connector version is not supported.

@@ -21,7 +21,7 @@ To have Intune app protection policies apply only to managed iOS devices, follow
 
 2. Deploy the policy-managed apps through the Mobile Device Management (MDM) channel with **Available** or **Required** intent. The apps can't be installed from the App Store.
 
-3. Create an app configuration policy for each targeted app. **Device enrollment type** must be set to **Managed devices**. And you must set the **IntuneMAMUPN** key and value. For more information, see [Target app protection policies based on device management state](mem/intune/apps/app-protection-policies#target-app-protection-policies-based-on-device-management-state). Here's an example:
+3. Create an app configuration policy for each targeted app. **Device enrollment type** must be set to **Managed devices**. And you must set the **IntuneMAMUPN** key and value. For more information, see [Target app protection policies based on device management state](/mem/intune/apps/app-protection-policies#target-app-protection-policies-based-on-device-management-state). Here's an example:
 
     :::image type="content" source="media/set-up-app-protection-policies-ios-device/policy-setting.png" alt-text="screenshot of Policy setting":::
 

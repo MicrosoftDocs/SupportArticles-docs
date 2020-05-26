@@ -69,6 +69,6 @@ For Apple-specific developer documentation, see [https://developer.apple.com/](h
 
 Currently, support for macOS app deployment is limited to simple .pkg apps that are installed in the **/Applications** folder and [Office 365 apps for macOS](/mem/intune/apps/apps-add-office365-macOS).
 
-[!INCLUDE [Third-party disclaimer](../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Third-party contact disclaimer](../includes/third-party-contact-disclaimer.md)]
+[!INCLUDE [Third-party contact disclaimer](../../includes/third-party-contact-disclaimer.md)]
