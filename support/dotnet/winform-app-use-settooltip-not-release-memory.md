@@ -86,8 +86,8 @@ namespace WindowsFormsApplication1
                 TextBox tb = list[i];
                 this.Controls.Remove(tb);
                 list.Remove(tb);
-  //Uncomment this line to disassociate the ToolTip control from the Windows Forms Control
-             //   toolTip.SetToolTip(tb, "");
+                //Uncomment this line to disassociate the ToolTip control from the Windows Forms Control
+                //toolTip.SetToolTip(tb, "");
                 tb.Dispose();
             }
         }

@@ -24,51 +24,51 @@ Before `System.Net` or WCF SDP package enables the trace feature, it asks the .N
 
 1. Select .NET application type:
 
-    ![Select application type](./media/system-dot-net-wcf-diagnostics/select-application-type.JPG)
+    :::image type="content" source="./media/system-dot-net-wcf-diagnostics/select-application-type.JPG" alt-text="Select application type." border="false":::
 
     If your application is a web application, select **IIS Web Application**. If your application is Visual Studio itself, such as Team Foundation Server (TFS) client, select **Visual Studio**. If the application is a service or .exe, select **Your Own Application**.
 
     **IIS Web Application** option will automatically detect the *web.config* file location to enable WCF or `System.Net` trace.
 
-    ![Select Default Web Site](./media/system-dot-net-wcf-diagnostics/select-target-website.JPG)
+    :::image type="content" source="./media/system-dot-net-wcf-diagnostics/select-target-website.JPG" alt-text="Select Default Web Site." border="false":::
 
-    ![Web application location](./media/system-dot-net-wcf-diagnostics/select-web-applictaion-location.JPG)
+    :::image type="content" source="./media/system-dot-net-wcf-diagnostics/select-web-applictaion-location.JPG" alt-text="Web application location." border="false":::
 
     **Visual Studio** option will automatically detect and find your Visual Studio version and configuration file location.
 
-    ![Select Visual Studio](./media/system-dot-net-wcf-diagnostics/visual-studio.JPG)
+    :::image type="content" source="./media/system-dot-net-wcf-diagnostics/visual-studio.JPG" alt-text="Select Visual Studio." border="false":::
 
     **Your Own Application** option will ask you to select the application configuration file, such as *web.config* or *application.exe.config*.
 
-    ![Your Own Application Configuration Location ](./media/system-dot-net-wcf-diagnostics/choose-location.JPG)
+    :::image type="content" source="./media/system-dot-net-wcf-diagnostics/choose-location.JPG" alt-text="Your Own Application Configuration Location." border="false":::
 
 2. Select trace file type to be enabled. You can select **System.Net Trace** or **WCF Trace** or both.
 
-    ![Select Trace Type](./media/system-dot-net-wcf-diagnostics/trace-type.JPG)
+    :::image type="content" source="./media/system-dot-net-wcf-diagnostics/trace-type.JPG" alt-text="Select Trace Type." border="false":::
 
 3. Trace file output folder:
 
-    ![Trace File Output Folder](./media/system-dot-net-wcf-diagnostics/trace-folder-location.JPG)
+    :::image type="content" source="./media/system-dot-net-wcf-diagnostics/trace-folder-location.JPG" alt-text="Trace File Output Folder." border="false":::
 
 4. `System.Net` trace option if you have `System.Net` trace enabled:
 
-    ![`System.Net` Trace Option](./media/system-dot-net-wcf-diagnostics/select-features.JPG)
+    :::image type="content" source="./media/system-dot-net-wcf-diagnostics/select-features.JPG" alt-text="System.Net Trace Option." border="false":::
 
     WCF trace option if you have WCF trace enabled:
 
-    ![WCF Trace Option](./media/system-dot-net-wcf-diagnostics/select-tracing-configuration.JPG)
+    :::image type="content" source="./media/system-dot-net-wcf-diagnostics/select-tracing-configuration.JPG" alt-text="WCF Trace Option." border="false":::
 
 5. After you click **Next** button, the trace(s) will be enabled and the SDP package will be paused waiting for you to reproduce issue.
 
     If your application is an ASP.NET application, there's no need to restart Internet Information Services (IIS) Application Pool. If your application is a service or .exe application, you'll need to manually restart application to make new configuration file take effect.
 
-    ![Asking Issue Repro](./media/system-dot-net-wcf-diagnostics/tracing-enabled.JPG)
+    :::image type="content" source="./media/system-dot-net-wcf-diagnostics/tracing-enabled.JPG" alt-text="Asking Issue Repro." border="false":::
 
 6. After you reproduce the issue, click **Next** button and package will automatically disable the tracing feature. If your application is an ASP.NET application, there's no need to restart IIS Application Pool. If your application is a service or .exe application, you'll need to manually restart application to make new configuration file take effect.
 
-    ![Trace Disabled](./media/system-dot-net-wcf-diagnostics/finished-system-net-wcf-trace.JPG)
+    :::image type="content" source="./media/system-dot-net-wcf-diagnostics/finished-system-net-wcf-trace.JPG" alt-text="Trace Disabled." border="false":::
 
-For more information, see the folowing articles:
+For more information, see the following articles:
 
 - [How to: Configure network tracing](/dotnet/framework/network-programming/how-to-configure-network-tracing)
 
@@ -88,4 +88,4 @@ The trace file will be located in the trace file folder, which you select in SDP
 
 ## References  
 
-- [Information about Microsoft Automated Troubleshooting Services and Support Diagnostic Platform](https://support.microsoft.com/help/2598970)
+[Information about Microsoft Automated Troubleshooting Services and Support Diagnostic Platform](https://support.microsoft.com/help/2598970)

@@ -6,7 +6,7 @@ ms.prod-support-area-path:
 ---
 # The endpoints of an arc may not be drawn correctly
 
-This article provides information about resolving the issue that the and starting point and endpoint may not be drawn in the correct position when you draw an arc that has a large radius.
+This article provides information about resolving the issue that starting point and endpoints may not be drawn in the correct position when you draw an arc that has a large radius.
 
 _Original product version:_ &nbsp; .NET Framework 3.5 Service Pack 1, .NET Framework 3.5.1, .NET Framework 4.5  
 _Original KB number:_ &nbsp; 2984519
@@ -39,7 +39,7 @@ When drawing an arc with a large radius, you may not get the expected result bec
 
 Below are the steps to reproduce the case of drawing an arc with a large radius using the `A` command of the `Path` Markup:
 
-Save the code below in a text file with .xaml extension to create a loose XAML file. When you open this file using Internet Explorer 11, the WPF rendering engine draws the red arc and the blue line as shown in Figure 1.
+Save the code below in a text file with .xaml extension to create a loose XAML file. When you open this file using Internet Explorer 11, the WPF rendering engine draws the red arc and the blue line as shown in the following screenshot.
 
 ```xaml
 <?xml version="1.0" encoding="utf-8"?>
@@ -71,6 +71,6 @@ Meanwhile the code in line 15 draws a blue line from an absolute coordinate (265
 
 ![Figure 1: Endpoints of the red arc are misplaced ](./media/endpoints-of-arc-not-be-drawn-correctly/figure1-endpoint-misplaced.jpg)
 
-This example is meant to connect two points that are 32 pixels apart using an arc with a 1.7 million pixel radius; which isn't a meaningful approach because these two values are astronomically different. As shown in Figure 2, the maximum deviation of the arc (AM'B) from the line (AMB) is less than 0.0001 pixel (MM'), which would be small enough to be invisible even if those shapes were drawn with utmost mathematical precision. Therefore in situations like this, drawing a line between these two points would be a far more preferable approach because it would reduce the chance of hitting numeric limitations of internal processing.
+This example is meant to connect two points that are 32 pixels apart using an arc with a 1.7 million pixel radius; which isn't a meaningful approach because these two values are astronomically different. As shown in the following screenshot, the maximum deviation of the arc (AM'B) from the line (AMB) is less than 0.0001 pixel (MM'), which would be small enough to be invisible even if those shapes were drawn with utmost mathematical precision. Therefore in situations like this, drawing a line between these two points would be a far more preferable approach because it would reduce the chance of hitting numeric limitations of internal processing.
 
-![Figure 2: Maximum deviation of the arc from the line](./media/endpoints-of-arc-not-be-drawn-correctly/figure2-maximum-deviation-from-line.jpg)
+:::image type="content" source="./media/endpoints-of-arc-not-be-drawn-correctly/figure2-maximum-deviation-from-line.jpg" alt-text="Figure 2: Maximum deviation of the arc from the line.":::

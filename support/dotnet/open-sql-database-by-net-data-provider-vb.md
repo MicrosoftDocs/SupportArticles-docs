@@ -5,7 +5,7 @@ ms.date: 05/12/2020
 ms.prod-support-area-path:
 ms.reviewer: 
 ---
-# How to open SQL Server Database by using SQL Server .NET Data Provider with Visual Basic .NET  
+# How to open SQL Server database by using SQL Server .NET Data Provider with Visual Basic .NET  
 
 This article provides information about how to open SQL Server databases by using SQL Server .NET Data Provider with Visual Basic .NET.
 
@@ -54,12 +54,12 @@ Modify the `Form1` class as follows:
 
 ```vb
 Public Class Form1
- Inherits System.Windows.Forms.Form
- 'Create ADO.NET objects.
- Private myConn As SqlConnection
- Private myCmd As SqlCommand
- Private myReader As SqlDataReader
- Private results As String
+    Inherits System.Windows.Forms.Form
+    'Create ADO.NET objects.
+    Private myConn As SqlConnection
+    Private myCmd As SqlCommand
+    Private myReader As SqlDataReader
+    Private results As String
 ```
 
 The `SqlConnection` object establishes a database connection, the `SqlCommand` object runs a query against the database, and the `SqlDataReader` object retrieves the results of the query.

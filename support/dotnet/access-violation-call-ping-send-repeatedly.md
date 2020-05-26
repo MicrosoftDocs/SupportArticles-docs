@@ -5,24 +5,24 @@ ms.date: 03/23/2020
 ms.prod-support-area-path:
 ms.reviewer: tomioy
 ---
-# Access Violation Exception may be thrown when you call the Ping.send method repeatedly
+# Access Violation exception may be thrown when you call the Ping.send method repeatedly
 
-This article provides information about resolving an issue that an unexpected **Runtime Error** or **Access Violation Exception** may be thrown when you call the `Ping.send` method repeatedly.
+This article provides information about resolving an issue that an unexpected runtime error or **Access Violation** exception may be thrown when you call the `Ping.send` method repeatedly.
 
 _Original product version:_ &nbsp; Visual Studio 2010  
 _Original KB number:_ &nbsp; 2533627
 
 ## Symptoms
 
-When you create and destroy a `Ping` class object repeatedly, this may result in an unexpected **Runtime Error** such as **Access Violation Exception** depending on the application configuration or when the `System.Net.NetworkInformation.Ping.Send` method is called.
+When you create and destroy a `Ping` class object repeatedly, this may result in an unexpected runtime error such as **Access Violation** exception depending on the application configuration or when the `System.Net.NetworkInformation.Ping.Send` method is called.
 
 For more information about the `Ping` class, see [Ping Class](/dotnet/api/system.net.networkinformation.ping?&view=netframework-4.8).
 
 ## Cause
 
-When an application creates and destroys a `Ping` object repeatedly, some objects that are internally retained by the `Ping` class are recognized as a not referred object, that's then destroyed by the garbage collection mechanism. This may cause an unexpected **Runtime Error** or **Access Violation Exception** depending on the implementation of the application or the timing of the `Ping.Send` method being called.
+When an application creates and destroys a `Ping` object repeatedly, some objects that are internally retained by the `Ping` class are recognized as a not referred object, that's then destroyed by the garbage collection mechanism. This may cause an unexpected runtime error or **Access Violation** exception depending on the implementation of the application or the timing of the `Ping.Send` method being called.
 
-For example, with the implementation described below, it's likely that the **Runtime Error** occurs.
+For example, with the implementation described below, it's likely that the runtime error occurs.
 
 ```csharp
 static void Pinger()
@@ -36,13 +36,13 @@ static void Pinger()
 }
 ```
 
-You can work around this problem by using either of the following options:
+You can work around this problem by using either of the following options.
 
 ## Workaround 1: Use the GC.KeepAlive method
 
 Use `GC.KeepAlive` to tell the garbage collector not to destroy a `Ping` class object.
 
-This prevents the `Ping` class and any class objects that it internally retains from being destroyed by the garbage collector until `GC.KeepAlive` exists. As a result, the cause of the problem is eliminated and the **Access Violation Exception** can be avoided.
+This prevents the `Ping` class and any class objects that it internally retains from being destroyed by the garbage collector until `GC.KeepAlive` exists. As a result, the cause of the problem is eliminated and the **Access Violation** exception can be avoided.
 
 ```csharp
 static void Pinger()

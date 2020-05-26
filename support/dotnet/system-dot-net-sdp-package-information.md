@@ -22,13 +22,13 @@ While the SDP package will usually take care of enabling the `System.Net` tracin
 
 When `System.Net` SDP package enables the trace feature, it asks the .NET application configuration file and `System.Net` output location.
 
-- .NET Application configuration file selection dialog box:
+- .NET application configuration file selection dialog box:
 
-    ![.NET application configuration file selection ](./media/system-dot-net-sdp-package-information/system-net-diagnostic-package.JPG)
+    :::image type="content" source="./media/system-dot-net-sdp-package-information/system-net-diagnostic-package.JPG" alt-text=".NET application configuration file selection "border="false":::
 
 - `System.Net` trace output folder:
 
-    ![System.Net trace output directory ](./media/system-dot-net-sdp-package-information/system-net-folder-location.JPG)
+    :::image type="content" source="./media/system-dot-net-sdp-package-information/system-net-folder-location.JPG" alt-text="System.Net trace output directory." border="false":::
 
 To enable the `System.Net` trace, the SDP package will have to register following `<system.diagnostics>` entry into your .NET application configuration file.
 
@@ -46,9 +46,9 @@ The additional trace options include, `DateTime`, `ProcessID`, `Callstack`, and 
         </switches>
         <sources>
             <source name="System.Net" tracemode="includehex" maxdatasize="1024">
-            <listeners>
-                <add name="System.Net" />
-            </listeners>
+                <listeners>
+                    <add name="System.Net" />
+                </listeners>
             </source>
             <source name="System.Net.Sockets" tracemode="includehex" maxdatasize="1024">
                 <listeners>

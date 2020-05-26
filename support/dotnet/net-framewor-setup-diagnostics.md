@@ -9,14 +9,14 @@ ms.reviewer: KelHo
 
 This article describes the information that may be collected from a computer when running the Installation Data Collection for .NET Framework and .NET Framework security updates.
 
-_Original product version:_ &nbsp; .NET Framework 2.0, 3.0, 3.5, 4.0  
+_Original product version:_ &nbsp; .NET Framework 4.0  
 _Original KB number:_ &nbsp; 2681569
 
 ## Summary
 
 [Download Microsoft Visual Studio and .NET Framework Log Collection Tool](https://www.microsoft.com/download/details.aspx?displaylang=en&id=12493) to collect installation logs. The utility creates a compressed cabinet of all the Visual Studio and .NET Framework logs at `%TEMP%\vslogs.cab`.
 
-The Collection Tool will collect available logs from all Visual Studio 2005, 2008, 2010 and .NET Framework 2.0, 3.0, 3.5, and 4.0 release installations on your computer. If you encounter any setup issues and contact Microsoft Support or Visual Studio on Microsoft Connect, you may need to provide relevant installation logs.
+The Collection Tool will collect available logs from all Visual Studio 2010 and .NET Framework 4.0 release installations on your computer. If you encounter any setup issues and contact Microsoft Support or Visual Studio on Microsoft Connect, you may need to provide relevant installation logs.
 
 The following files and logs can be collected.
 

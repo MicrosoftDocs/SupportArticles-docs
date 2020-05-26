@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 2843607
 
 ## Symptoms
 
-Assume that you have a class that has a generic overload of a method, as shown in the following sample,
+Assume that you have a class that has a generic overload of a method, as shown in the following sample:
 
 ```csharp
 class Test
@@ -80,7 +80,7 @@ public class MyBinder : Binder
             }
         }
 
-        return System.Type.DefaultBinder.BindToMethod(bindingAttr, match2.ToArray<MethodBase>() , ref args, modifiers, culture, names, out state);
+        return System.Type.DefaultBinder.BindToMethod(bindingAttr, match2.ToArray<MethodBase>(), ref args, modifiers, culture, names, out state);
     }
     public override object ChangeType(
         object value,
