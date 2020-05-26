@@ -23,8 +23,7 @@ appliesto:
 
 # "Cannot save to Global.mpt" when exiting Microsoft Project
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ##  Symptoms
 
@@ -67,7 +66,7 @@ The Global.mpt file has read-only permissions when any of the following conditio
   \Users\Username\Application Data\Microsoft\MS Project   
 - The user's profile language folder
 
-  This folder is the language ID subfolder in the "Application Data" folder for the user profile. For example, on a computer that is running Windows 98 with User Profiles turned on, this folder is typically found in the following location if the user's language is English:\Users\Username\Application Data\Microsoft\MS Project\1033   
+  This folder is the language ID subfolder in the "Application Data" folder for the user profile. For example, on a computer that is running Windows 98 with User Profiles turned on, this folder is typically found in the following location if the user's language is English: \Users\Username\Application Data\Microsoft\MS Project\1033   
 - The folder where the Winproj.exe file is located
 
   By default, the Project application is installed in the following folder: 
@@ -79,7 +78,7 @@ The Global.mpt file has read-only permissions when any of the following conditio
 
   \program files\Microsoft Office\Office\1033 
 
-  If Project opens the Global.mpt file from this location, Project does not save changes to this copy. Instead, Project saves them to the profile language folder. By default, Project opens the Global.mpt file from this location the first time Project is started.    
--  If the Global file is not found in any of these locations, Microsoft Windows Installer starts and tries to restore a copy to the Winproj.exe language folder. 
+  If Project opens the Global.mpt file from this location, Project does not save changes to this copy. Instead, Project saves them to the profile language folder. By default, Project opens the Global.mpt file from this location the first-time Project is started.    
+-  If the Global file is not found in any of these locations, Windows Installer starts and tries to restore a copy to the Winproj.exe language folder. 
 
 - If Windows Installer is unable to restore a copy of the Global.mpt file, Project displays a message that states that it will create a new Global.mpt file that may be missing some items.    

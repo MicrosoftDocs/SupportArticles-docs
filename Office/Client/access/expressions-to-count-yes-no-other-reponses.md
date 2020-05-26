@@ -23,8 +23,7 @@ appliesto:
 
 # Description of the expressions to count yes, no, and other responses in Access
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 Moderate: Requires basic macro, coding, and interoperability skills.
 

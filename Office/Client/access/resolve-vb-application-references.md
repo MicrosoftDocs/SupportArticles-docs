@@ -19,8 +19,7 @@ search.appverid: MET150
 ---
 # How Access resolves Visual Basic for Applications references
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 _Original KB number:_ &nbsp; 824255
 

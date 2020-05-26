@@ -1,5 +1,5 @@
 ---
-title: Cannot access an archived Calendar in OWA
+title: Cannot access an archived Calendar in Microsoft Outlook Web App
 description: You cannot view the Calendar folder of an online-archive mailbox by using Outlook Web App.
 author: simonxjx
 ms.author: v-six
@@ -17,16 +17,15 @@ search.appverid: MET150
 
 ---
 
-# Can't see the Calendar folder of an online archive mailbox by using OWA
+# Can't see the Calendar folder of an online archive mailbox by using Microsoft Outlook Web App
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 _Original KB number:_&nbsp;4341449
 
 ## Symptoms
 
-Assume that you have a cloud mailbox, and Exchange Online Archiving is enabled for the mailbox. In Outlook Web App (OWA), you can't see the Calendar folder of the online-archive mailbox.
+Assume that you have a cloud mailbox, and Exchange Online Archiving is enabled for the mailbox. In Outlook Web App (Microsoft Outlook Web App), you can't see the Calendar folder of the online-archive mailbox.
 
 ## Cause
 

@@ -22,8 +22,7 @@ appliesto:
 
 # Error message when you open an Office file that has a long folder name
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 For a Microsoft Office 2000 version of this article, see [325573](https://support.microsoft.com/help/325573).
 

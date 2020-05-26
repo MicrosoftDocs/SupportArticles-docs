@@ -19,8 +19,7 @@ search.appverid: MET150
 
 # Format or DatePart functions can return wrong week number for last Monday in Year
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 > [!WARNING]
 > There is an issue with the use of this function. The last Monday in some calendar years can be returned as week 53 when it should be week 1. For more information and a workaround, see [Format or DatePart functions can return wrong week number for last Monday in Year](https://docs.microsoft.com/office/troubleshoot/access/functions-return-wrong-week-number).

@@ -22,8 +22,7 @@ appliesto:
 
 # You cannot add the Microsoft Visio 2010 or 2013 drawing control to a Windows Form application in Visual Studio if you have the 64-bit version of Visio installed
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ##  Symptoms
 

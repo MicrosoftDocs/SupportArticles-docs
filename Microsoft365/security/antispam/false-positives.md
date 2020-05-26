@@ -18,8 +18,7 @@ search.appverid: MET150
 
 # Lots of false positives are generated when the "SPF record: hard fail" advanced spam filtering option is enabled
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 _Original KB number:_&nbsp;3089691
 
