@@ -33,7 +33,7 @@ To override Visual Studio automatic settings:
 
 - Unselect the **Automatically adjust visual experience based on client performance** checkbox.
 - Check or unselect the **Enable rich client visual experience** checkbox to ensure rich visuals are always on or off respectively. When checked, rich visuals will be used independent of machine environment, for example when running locally on a rich client and over remote desktop.
-- Check or unselect the **Use hardware graphics acceleration if available** checkbox to force or block use of hardware graphics acceleration when it's available.
+- Check or unselect the **Use hardware graphics acceleration if available** checkbox to force or block use of hardware graphics acceleration when it's available.
 
     Forcing hardware graphics acceleration off can resolve Windows Presentation Foundation (WPF) rendering issues that are because of driver issues, but before doing so, customers should ensure that they have the latest graphics drivers installed.
 

@@ -169,7 +169,7 @@ This article refers to the following Microsoft .NET Framework Class Library name
         // You do not have the appropriate permission to take this action.
         catch(SecurityException *se)
         {
-        Console::WriteLine("An SecurityException exception occur")
+            Console::WriteLine("An SecurityException exception occur")
         }
         // Catch all exceptions
         catch(Exception *e)

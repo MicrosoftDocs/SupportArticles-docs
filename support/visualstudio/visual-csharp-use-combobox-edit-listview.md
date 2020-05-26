@@ -4,7 +4,7 @@ description: Describes how to use a ComboBox control to edit data that is in a L
 ms.date: 04/22/2020
 ms.prod-support-area-path: 
 ---
-# How to use a ComboBox control to edit data in a ListView control in Visual C Sharp
+# How to use a ComboBox control to edit data in a ListView control in Visual C#
 
 This article demonstrates how to use a ComboBox control to edit the data in a ListView control. This method replaces the standard text box approach of editing the data in a ListView control.
 
