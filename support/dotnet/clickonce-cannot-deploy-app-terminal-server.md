@@ -8,7 +8,7 @@ ms.prod-support-area-path:
 
 This article explains the issue that ClickOnce can't be used to deploy applications on Windows Terminal Servers.
 
-_Original product version:_ &nbsp;
+_Original product version:_ &nbsp; .NET Framework  
 _Original KB number:_ &nbsp; 2020945
 
 ## Symptoms

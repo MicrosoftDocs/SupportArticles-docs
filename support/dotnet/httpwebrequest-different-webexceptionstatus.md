@@ -14,15 +14,15 @@ _Original KB number:_ &nbsp; 2007873
 
 ## Symptoms
 
-You are using the `System.Net.HttpWebRequest` class of the .Net framework to send an Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol Secure (HTTPS) request to a server. This request takes some time to receive a response from the server. During this wait time, if the system clock time is increased manually or if the system clock lags behind and then the Windows Time service adjusts to the actual local time, you experience one of the following:
+You are using the `System.Net.HttpWebRequest` class of the .Net framework to send a Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol Secure (HTTPS) request to a server. This request takes some time to receive a response from the server. During this wait time, if the system clock time is increased manually or if the system clock lags behind and then the Windows Time service adjusts to the actual local time, you experience one of the following:
 
-For a request which was sent over plaintext HTTP, the `System.Net.HttpWebRequest` class will throw the following exception:
+For a request, which was sent over plaintext HTTP, the `System.Net.HttpWebRequest` class will throw the following exception:
 
 > The request was aborted: The operation has timed out.
 
 Additionally, the `Status` property on the thrown `WebException` will indicate the value **WebExceptionStatus.Timeout**.
 
-For a request which was sent over HTTPS, the `System.Net.HttpWebRequest` class will throw one of the following exceptions:
+For a request, which was sent over HTTPS, the `System.Net.HttpWebRequest` class will throw one of the following exceptions:
 
 > The underlying connection was closed: An unexpected error occurred on a receive.
 
@@ -34,7 +34,7 @@ Or
 
 Additionally, the `Status` property on the thrown `WebException` will indicate the value **WebExceptionStatus.KeepAliveFailure**.
 
-In all of the above scenarios the `WebException` which is caught has the `InnerException` property. If you catch the `WebException` and reference the `WebException.InnerException.InnerException` property, you will notice that for all the above cases, the `Message` string will indicate:
+In all of the above scenarios the, which is caught has the `InnerException` property. If you catch the `WebException` and reference the `WebException.InnerException.InnerException` property, you will notice that for all the above cases, the `Message` string will indicate:
 
 > A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
 
@@ -46,7 +46,7 @@ Under normal timeout circumstances where the system time is not tampered with, 
 
 ## Cause
 
-When you make the request over either SSL or non-SSL, then the `System.Net.ServicePointManager` class will assign the request to an internal connection which is eventually going to make the winsock connection. In the case of SSL requests, this request or connection goes through another internal SSL/TLS class which is responsible for the encryption or decryption of the data. For non-SSL connections, this internal SSL/TLS class is not involved at all.
+When you make the request over either SSL or non-SSL, then the `System.Net.ServicePointManager` class will assign the request to an internal connection, which is eventually going to make the winsock connection. In the case of SSL requests, this request or connection goes through another internal SSL/TLS class, which is responsible for the encryption or decryption of the data. For non-SSL connections, this internal SSL/TLS class is not involved at all.
 
 When the time is modified and the exception is encountered at the winsock layer, this error now needs to travel upwards from winsock to the application layer. For non-SSL connections, this exception is caught directly by the internal connection class, but for SSL requests, this error is handled by the internal SSL/TLS class. This class considers this non-SSL error as a ReceiveFailure or KeepAliveFailure and hence has a different exception status, whereas for non-SSL connection the error gets cast correctly since it is handled by a different class.
 
@@ -60,7 +60,7 @@ In order to resolve this discrepancy of the thrown exception types under this sp
 
 If the `Message` string equals the winsock verbose error equivalent of 10060 = WSAETIMEDOUT, then you can consider the ReceiveFailure or KeepAliveFailure as a regular Timeout and not consider it as a ReceiveFailure or KeepAliveFailure.
 
-The application can use the below workaround upon performing the `catch()` of the `WebException` for an English version of the framework. Please note that for a localized version of the framework, the below workaround needs to be adjusted depending on the language localization.
+The application can use the below workaround upon performing the `catch()` of the `WebException` for an English version of the framework. For a localized version of the framework, the below workaround needs to be adjusted depending on the language localization.
 
 > [!IMPORTANT]
 > This sample code is provided as-is and is intended for sample purposes only. It is provided without warranties and confers no rights.

@@ -33,7 +33,7 @@ The following releases contain the Japanese era updates for .NET Framework. They
 
 ### Knowledge base articles by .NET Framework version for Japanese era updates
 
-The servicing updates that are listed in the following table contain all the Japanese era updates for .NET Framework that were already included in the previously released updates. The servicing updates also contain a new quality update that removes the dependency on single quotation marks to output the Gannen character in Japanese era formatting, so that either "y年" or "y'年'" of the custom date and time format string enable .NET Framework to format year number 1 to 元. These updates are available on Windows Update, Windows Server Update Service (WSUS), and Windows Update Catalog.
+The servicing updates that are listed in the following table contain all the Japanese era updates for .NET Framework that were already included in the previously released updates. The servicing updates also contain a new quality update that removes the dependency on single quotation marks to output the Gannen character in Japanese era formatting, so that either :::no-loc text=""y年""::: or :::no-loc text=""y'年'""::: of the custom date and time format string enable .NET Framework to format year number 1 to :::no-loc text="元":::. These updates are available on Windows Update, Windows Server Update Service (WSUS), and Windows Update Catalog.
 
 |Windows 10, version 1507|Windows 10, version 1607 (Anniversary Update) / Windows Server 2016|Windows 10, version 1703 (Creators Update)|Windows 10, version 1709 (Fall Creators Update)|Windows 10, version 1803 (April 2018 Update)|Windows 10, version 1809 (October 2018 Update) / Windows Server 2019|
 |---|---|---|---|---|---|
@@ -92,9 +92,9 @@ An update to Windows will add the new era value to the registry after the era n
 
 - The first year of an era
 
-    This test scenario is to verify the Gannen (元年) convention in formatting operations as the first year of a new Japanese calendar era.
+    This test scenario is to verify the Gannen (:::no-loc text="元年":::) convention in formatting operations as the first year of a new Japanese calendar era.
 
-    By default, .NET adopts the Gannen (元年) convention in formatting operations. You can restore the previous behavior. That behavior always represents the year as "1" instead of as Gannen (元年). To do this, set the following value to **true**:
+    By default, .NET adopts the Gannen (:::no-loc text="元年":::) convention in formatting operations. You can restore the previous behavior. That behavior always represents the year as "1" instead of as Gannen (:::no-loc text="元年":::). To do this, set the following value to **true**:
 
     `Switch.System.Globalization.FormatJapaneseFirstYearAsANumber`
 
@@ -106,11 +106,11 @@ An update to Windows will add the new era value to the registry after the era n
 
 - **Range-Relaxation**
 
-    When Heisei (平成) Era ends on April 30th, 2019 which is Heisei (平成) 31, and the new era begins on May 1, 2019, "平成 31 年 5 月 1 日" becomes invalid. We have relaxed our parsers to allow the future or past dates (both Gregorian and Japanese dates) in .NET applications, to be converted into a relevant Japanese era date without throwing an exception such as `ArgumentOutOfRangeException` and `System.FormatException`. You will also be able to convert the future dates in Heisei to the new Japanese era once the new Japanese era name is announced. It can be disabled in .NET Framework. By setting the value of `Switch.System.Globalization.EnforceJapaneseEraYearRanges` to **true**.
+    When Heisei (:::no-loc text="平成":::) Era ends on April 30th, 2019 which is Heisei (:::no-loc text="平成":::) 31, and the new era begins on May 1, 2019, :::no-loc text=""平成 31 年 5 月 1 日""::: becomes invalid. We have relaxed our parsers to allow the future or past dates (both Gregorian and Japanese dates) in .NET applications, to be converted into a relevant Japanese era date without throwing an exception such as `ArgumentOutOfRangeException` and `System.FormatException`. You will also be able to convert the future dates in Heisei to the new Japanese era once the new Japanese era name is announced. It can be disabled in .NET Framework. By setting the value of `Switch.System.Globalization.EnforceJapaneseEraYearRanges` to **true**.
 
-- **Gannen (元年) for the first year of Japanese era**
+- **Gannen (:::no-loc text="元年":::) for the first year of Japanese era**
 
-    In historical practice, for the first year of the era, a special character "Gan (元)", whose Kanji character means "origin" or "beginning", is used in place of the number "Ichi (1)". The first year "Gannen (元年)" continues until the end date of the Gregorian calendar year, December 31st. .NET Framework supports both "Gannen (元年)" and "Ichinen (1 年)" for the first year of the era. For all the versions of .NET Framework, Gannen is ON by default. It can be disabled by setting the value of `Switch.System.Globalization.FormatJapaneseFirstYearAsANumber` to **true**.
+    In historical practice, for the first year of the era, a special character "Gan (:::no-loc text="元":::)", whose Kanji character means "origin" or "beginning", is used in place of the number "Ichi (1)". The first year "Gannen (:::no-loc text="元年":::)" continues until the end date of the Gregorian calendar year, December 31st. .NET Framework supports both "Gannen (:::no-loc text="元年":::)" and "Ichinen (1 :::no-loc text="年":::)" for the first year of the era. For all the versions of .NET Framework, Gannen is ON by default. It can be disabled by setting the value of `Switch.System.Globalization.FormatJapaneseFirstYearAsANumber` to **true**.
 
 ## Previously released updates
 

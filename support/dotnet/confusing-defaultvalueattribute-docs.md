@@ -19,7 +19,7 @@ A member's default value is typically its initial value.
 
 From this, you may conclude that if you set the `DefaultValue` attribute for a property, the property is initialized to that value. However, you should set the property's `DefaultValue` attribute equal to its initialized value.
 
-## More Information
+## More information
 
 The [Extending Metadata Using Attributes](/dotnet/standard/attributes/) topic states:
 
@@ -32,11 +32,9 @@ However, the `DefaultValue` attribute does not cause the initial value to be ini
 ```vb
 Imports System.ComponentModel
 Public Class DefaultAttributeSample
-    '
     ' You must still initialize your member variable to its default value;
     ' the DefaultValue attribute does not do this.
     Private m_isValueSet As Boolean = True
-    '
     ' The DefaultValue attribute should be equal to the member's initial
     ' value.
     <DefaultValueAttribute(True)> _

@@ -1,11 +1,11 @@
 ---
 title: Error MC6017 when you define class by XAML
-description: Provides the resolution to solve the build error MC6017 when you try to define a class that derives from a XAML generated class.
+description: Provides the resolution to solve the build error MC6017 when you try to define a class that derives from a XAML-generated class.
 ms.date: 05/06/2020
 ms.prod-support-area-path: 
 ms.reviewer: shimada, davean
 ---
-# Build error MC6017 when you define a class that derives from a XAML generated class
+# Build error MC6017 when you define a class that derives from a XAML-generated class
 
 This article provides the information about solving the build error MC6017 that occurs when you define a class that derives from an Extensible Application Markup Language (XAML) generated class.
 
@@ -52,17 +52,17 @@ In this situation, you will receive the following error message:
 
 ## Cause
 
-Currently deriving a XAML generated class from another XAML generated class is not supported.
+Currently deriving a XAML-generated class from another XAML-generated class is not supported.
 
 ## Resolution
 
-You need to define your base class all in code without using XAML.
+Define your base class all in code without using XAML.
 
 Your derived class is not instantiated in the designer when you are designing it, which means that any calls made to your base class from the constructor are not called. Furthermore, if you try to initialize your base class's content in its constructor, you will find that `Content` member is still set to null.
 
 This results in that your base class's content does not show up in the designer when you are designing your deriving class, even though it does at runtime.
 
-One way to workaround is to add code similar to the one below in your base class:
+One way to work around is to add code similar to the one below in your base class:
 
 ```csharp
 public class UserControlInCode : UserControl

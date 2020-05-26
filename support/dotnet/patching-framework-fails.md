@@ -52,7 +52,8 @@ To detect whether assemblies are being used, follow these steps:
 1. Download [procexp.exe](http://live.sysinternals.com/procexp.exe) to discover process that are locking assemblies.
 2. Launch procexp.exe and then press Ctrl+F to open the **Process Explorer Search** window.
 3. In the **Handle or DLL substring** textbox, type *Assembly* and then click **Search**.
-    ![search assembly](./media/patching-framework-fails/search-assembly.png)
+
+    :::image type="content" source="./media/patching-framework-fails/search-assembly.png" alt-text="search assembly":::
 
 4. All files listed could have an impact on the installation of the patch. Terminate all the listed processes or close the associated applications. To do this, follow these steps:
 
@@ -60,4 +61,4 @@ To detect whether assemblies are being used, follow these steps:
     2. Right click the process name in the **Process** pane.
     3. Click **Kill Process** to terminate the Process.
 
-        ![kill process](./media/patching-framework-fails/kill-process.png)
+        :::image type="content" source="./media/patching-framework-fails/kill-process.png" alt-text="kill process":::
