@@ -91,7 +91,7 @@ For Host Integration Server environments using 802.2 DLC and IP-DLC link service
 
 The basic idea is to enable the HIS and network traces before a connection failure. Once a connection failure occurs, you'll need to stop the traces as soon as possible to prevent the trace data that contains the failure from being overwritten.
 
-### Host Integration Server traces
+## Host Integration Server traces
 
 The following steps outline the Host Integration Server traces to capture for a connection outage:
 
@@ -114,7 +114,7 @@ The following steps outline the Host Integration Server traces to capture for a 
 
 14. Once the connection failure occurs, restore (or reopen) the SNA Trace Utility window and click the **Clear All Traces** button to turn off tracing. You want to do this as soon as possible because the HIS traces are written to circular traces files. The data will be overwritten if the traces continue to run. On busy servers, the traces can wrap quickly.
 
-### Network traces
+## Network traces
 
 The steps to enable a network trace depend on the network capture utility that you choose to use. Therefore, specific network capture steps are not included here. Instead, an overview of what needs to be captures is provided:
 
@@ -132,7 +132,7 @@ The steps to enable a network trace depend on the network capture utility that y
 
 4. When a connection failure occurs, you want to stop and save the network trace as soon as possible.
 
-### Trace analysis  
+## Trace analysis  
 
 The Microsoft Host Integration Server support team uses the resulting trace data to isolate the root cause of the connection failures. In most cases, the problem is caused by one of the following:
 
