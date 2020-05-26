@@ -239,14 +239,12 @@
     href: readfromstream-return-access-denied.md
   - name: Single instance VB .NET/C# application crashes
     href: single-instance-application-crashes.md
-  - name: Stack corruption when you call Oi in VC++
-    href: stack-corruption-when-you-call-oi-vcpp.md
   - name: The referenced projects not exist when building a solution
     href: vs-2010-build-fails.md
   - name: Unnested loops cause C1061 compiler error
     href: unnested-loops-cause-c1061-error.md
   - name: Use a ComboBox to edit data in a ListView
-    href: visual-c-sharp-use-combobox-edit-listview.md
+    href: visual-csharp-use-combobox-edit-listview.md
   - name: Use Visual C++ to write own entries to event log
     href: visual-cpp-write-entry-to event-log.md
   - name: VS2010 fails to compile 32-bit app on x64 machine
