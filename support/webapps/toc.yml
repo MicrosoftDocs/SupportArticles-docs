@@ -13,6 +13,11 @@
   - name: Use Active Server Pages to create GUIDs
     href: create-guids-asp.md
 
+- name: Application Request and Routing (ARR)
+  items:
+  - name: SSL Common Names aren't enforced by ARR
+    href: affinity-not-honored-ssl-common-names-arr.md
+
 - name: Deployment and Migration
   items:
   - name: Web Deployment error with non-admin user
@@ -30,6 +35,8 @@
     href: asp-dot-net-code-behind-model.md
   - name: ASP.NET Forms-based authentication by C#
     href: forms-based-authentication-asp-net-csharp.md
+  - name: ASP.NET MVC3 NuGet Package Manager missing
+    href: aspnet-mvc-nuget-missing.md
   - name: ASP.NET HTTP modules and handlers
     href: asp-dot-net-http-modules-handlers.md
   - name: ASP.NET installation error 1721
@@ -81,6 +88,11 @@
   - name: Use app .resx to create a ASP.NET Web app
     href: use-app-resx-create-asp-net-web-app.md
 
+- name: Deployment and Migration
+  items:
+  - name: Errors occur when you use Web Deploy
+    href: error-occurs-you-use-the-web-deploy.md
+
 - name: FTP Authentication and Authorization
   items:
   - name: Changes to service reference not update EndpointConfigurationName
@@ -118,6 +130,8 @@
 
 - name: Health, Diagnostic, and Performance Features
   items:
+  - name: An application pool exceeds time limits
+    href: application-pool-exceed-time-limits.md
   - name: Create Web.config for ASP.NET applications
     href: create-web-config-asp-dot-net.md
   - name: DebugDiag 1.2 Installation and Data Collector
@@ -144,6 +158,8 @@
     href: http-error-500-19-iis-webpage.md
   - name: Http.sys registry settings for Windows
     href: http.sys-registry-windows.md
+  - name: IIS ETW logs diagnostic
+    href: iis-etw-log.md
   - name: IIS SSL Diagnostic tool for SDP
     href: iis-ssl-diagnostic-tool-sdp.md
   - name: Information diagnostic of IIS and ASP.NET
@@ -157,8 +173,12 @@
 
 - name: IIS Extensions, Tools, and Add-Ons
   items:
+  - name: FIM 2010 password reset issue
+    href: fim-password-reset-issue.md
   - name: Management Pack doesn't detect IIS events
     href: iis-events-not-detected-scom.md
+  - name: No cs-username data in Advanced Logging
+    href: no-cs-username-data-advanced-logging.md
   - name: Use X509CertificateValidator with WCF service
     href: x509certificatevalidator-wcf-service-certificate.md
 
@@ -168,6 +188,8 @@
     href: http-service-fail-stopped.md
   - name: Disable documentation protocol for ASP.NET Web Services
     href: disable-documentation-protocol-asp-net.md
+  - name: IIS admin cmdlets slow in PowerShell 4.0
+    href: iis-administration-cmdlets-slow.md
   - name: Processor affinity not working on a NUMA server
     href: iis-processor-affinity-not-work.md
   - name: Set multiple site bindings and SSL in shared configuration
@@ -211,6 +233,10 @@
     href: ftpputfile-success-451-status.md
   - name: HTTP 500 error when using Response.BinaryWrite
     href: http-500-response-binarywrite.md
+  - name: HTTP Error 404.2 when visiting a web page 
+    href: http-error-402-web-page.md
+  - name: IIS Worker Process takes much memory
+    href: iis-work-process-much-memory.md
   - name: Internet Printing fails when files are larger than 29 MB
     href: internet-printing-fails-iis.md
   - name: ThreadAbortException when you use Server.Transfer
@@ -220,6 +246,8 @@
 
 - name: WWW Administration and Management
   items:
+  - name: ASP.NET 4.5 in Windows 8 and Server 2012
+    href: asp-dot-net-4-dot-5-windows-8-server-2012.md
   - name: ASP.NET configuration files backup
     href: back-up-asp-net-configuration-files.md
   - name: Avoid AppDomain unload in antivirus scanning
@@ -228,8 +256,12 @@
     href: configure-iis-wsfc-wsfc.md
   - name: Configure intermediate certificates in IIS
     href: configure-intermediate-certificates-iis.md
+  - name: Default permissions and user rights in IIS
+    href: default-permissions-user-rights.md
   - name: Enable SSL for all customers
     href: enable-ssl-all-customers-iis.md
+  - name: Error occurs when you install certificate
+    href: error-install-certificate.md
   - name: Error when you change identity of an application pool
     href: 0x80090016-change-application-pool-identity.md
   - name: Exporting configuration files fails
@@ -242,21 +274,31 @@
     href: shared-configuration-iis-not-start.md
   - name: Restrict users from accessing to web resources
     href: restrict-users-access-web-resource.md
+  - name: Shared Configuration requires the same IIS
+    href: shared-configuration-same-iis-version.md
   - name: ShutdownTimeLimit property not working
     href: iis-not-apply-wcf.md
 
 - name: WWW Authentication and Authorization
   items:
+  - name: 401.1 error with pre-authentication header
+    href: 401-error-pre-authentication-header.md
   - name: Access Denied when calling web service
     href: access-denied-call-web-service.md
   - name: Can't import SSL .pfx file to personal certificate store
     href: cannot-import-ssl-pfx-local-certificate.md
   - name: Changing IP/port causes other sites fail
     href: change-ip-port-wildcard certificate-site-fail.md
+  - name: Configure Many-to-One client mappings
+    href: configure-many-one-client-mappings.md
   - name: Control authorization permission in ASP.NET
     href: authorization-permissions-asp-net.md
   - name: HTTP error 403.7  when opening an IIS webpage
     href: http-403-forbidden-open-iis-webpage.md
+  - name: Impersonation fails when UAC is enabled
+    href: impersonation-fails-uac-enabled.md
+  - name: Proxy routed IIS digest authentication 
+    href: iis-digest-authentication.md
   - name: Web application can't write data to App_Data
     href: applicationpoolidentity-write-app-data.md
 

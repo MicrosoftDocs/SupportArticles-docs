@@ -3,3 +3,52 @@
 
 - name: (Back up to Support hub page)
   href: ../index.yml
+
+- name: General
+  items:
+  - name: ArgumentException when selecting rows in WPF DataGrid
+    href: argumentexception-select-row-wpf-datagrid.md
+  - name: Break on Memory Leaks runtime check fails in WPF
+    href: break-memory-leak-debugbreak-wpf.md
+  - name: COMException when you create WeakReference<T> object
+    href: comexception-weakreference-object.md
+  - name: Create summary row for DataGrid using VB .NET
+    href: create-summary-row-datagrid-asp-net-vb.md
+  - name: Custom WCF extensions force concurrent operations to run sequentially
+    href: wcf-extensions-concurrent-request-run sequentially.md
+  - name: Event handle leaks in a .NET Framework 4 application
+    href: event-handle-leaks-net-framework-4.md
+  - name: Fail to get security descriptor of a class from native image module
+    href: error-security-descriptor-native-image-module.md
+  - name: Form height and width changes in Visual Studio 2012
+    href: wrong-winform-height-width-vs-2012.md
+  - name: Information collected by PerfView
+    href: perfview-diagnostic-information.md
+  - name: Initialize WinForm controls before accessing LocalDataStore
+    href: initialize-winform-control-access-localdatastore.md
+  - name: Nested TableLayoutPanel is displayed with large spaces
+    href: nested-tablelayoutpanel-large-empty-spaces.md
+  - name: Null reference exception when running .NET app with UI automation
+    href: exception-run-net-app-ui-automation.md
+  - name: Ports run out when you use ConnectionGroupName property
+    href: ports-run-out-use-connectiongroupname.md
+  - name: RemotingException when using binary format to serialize messages
+    href: net-remotingexception-binary-format-message.md
+  - name: Warning when adding service reference to Silverlight project
+    href: warning-add-service-reference-silverlight.md
+  - name: Windows Forms applications throw SecurityException
+    href: securityexception-winform-net-framework-3-dot-5.md
+  - name: WPF XBAPs may crash during start-up
+    href: wpf-browser-hosted-applications-xbaps-crash.md
+  - name: Wrong time on past dates when using TimeZoneInfo
+    href: 2998527-incorrect-time-timezoneinfo.md
+
+- name: installation
+  items:
+  - name: Framework 4.0 requires ClickOnce Manifest signing
+    href: framework-4-clickonce-manifest-signing.md
+  - name: Installation of published ClickOnce app fails
+    href: clickonce-app-install-launch-fail.md
+
+
+
