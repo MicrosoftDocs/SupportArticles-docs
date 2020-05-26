@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 2007873
 
 ## Symptoms
 
-You are using the `System.Net.HttpWebRequest` class of the .Net framework to send a Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol Secure (HTTPS) request to a server. This request takes some time to receive a response from the server. During this wait time, if the system clock time is increased manually or if the system clock lags behind and then the Windows Time service adjusts to the actual local time, you experience one of the following:
+You are using the `System.Net.HttpWebRequest` class of the .Net framework to send a Hypertext Transfer Protocol (HTTP) or Hypertext Transfer Protocol Secure (HTTPS) request to a server. This request takes some time to receive a response from the server. During this wait time, if the system clock time is increased manually or if the system clock lags behind and then the Windows Time service adjusts to the actual local time, you experience one of the following scenarios:
 
 For a request, which was sent over plaintext HTTP, the `System.Net.HttpWebRequest` class will throw the following exception:
 
@@ -40,15 +40,15 @@ In all of the above scenarios the, which is caught has the `InnerException` prop
 
 This message is the verbose interpretation of the Winsock error code 10060 = WSAETIMEDOUT.
 
-Therefore, when the system time is manually increased, winsock correctly throws the timeout error 10060, but it gets wrapped around as different exception types for Secure Sockets Layer (SSL) and non-SSL requests.
+Therefore, when the system time is manually increased, Winsock correctly throws the timeout error 10060, but it gets wrapped around as different exception types for Secure Sockets Layer (SSL) and non-SSL requests.
 
 Under normal timeout circumstances where the system time is not tampered with, the SSL and non-SSL scenarios will correctly reflect the `WebExceptionStatus.Timeout` status and throw the common exception: **The operation has timed out**.
 
 ## Cause
 
-When you make the request over either SSL or non-SSL, then the `System.Net.ServicePointManager` class will assign the request to an internal connection, which is eventually going to make the winsock connection. In the case of SSL requests, this request or connection goes through another internal SSL/TLS class, which is responsible for the encryption or decryption of the data. For non-SSL connections, this internal SSL/TLS class is not involved at all.
+When you make the request over either SSL or non-SSL, then the `System.Net.ServicePointManager` class will assign the request to an internal connection, which is eventually going to make the Winsock connection. In the case of SSL requests, this request or connection goes through another internal SSL/TLS class, which is responsible for the encryption or decryption of the data. For non-SSL connections, this internal SSL/TLS class is not involved at all.
 
-When the time is modified and the exception is encountered at the winsock layer, this error now needs to travel upwards from winsock to the application layer. For non-SSL connections, this exception is caught directly by the internal connection class, but for SSL requests, this error is handled by the internal SSL/TLS class. This class considers this non-SSL error as a ReceiveFailure or KeepAliveFailure and hence has a different exception status, whereas for non-SSL connection the error gets cast correctly since it is handled by a different class.
+When the time is modified and the exception is encountered at the Winsock layer, this error now needs to travel upwards from Winsock to the application layer. For non-SSL connections, this exception is caught directly by the internal connection class, but for SSL requests, this error is handled by the internal SSL/TLS class. This class considers this non-SSL error as a ReceiveFailure or KeepAliveFailure and hence has a different exception status, whereas for non-SSL connection the error gets cast correctly since it is handled by a different class.
 
 ## Status
 

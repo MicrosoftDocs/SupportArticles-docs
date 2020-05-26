@@ -28,7 +28,7 @@ The cause of this issue is due to a behavior change in the `System.Net.FtpWebReq
 
 In order to resolve this issue, it is required to force the `System.Net.FtpWebRequest` command to revert back to the old behavior of how it used to work in .Net Framework 2.0 or 3.5 and issue the extra `CWD` command before issuing the actual command.
 
-In order to do this, the following code needs to be placed before any instance of the `System.Net.FtpWebRequest` class is invoked.
+The following code should be placed before any instance of the `System.Net.FtpWebRequest` class is invoked.
 
 The code below only needs to be called once, since it changes the settings of the entire application domain.
 
@@ -76,6 +76,6 @@ The difference between the two behaviors is that in the 3.5 version, the upload 
 
 However, .Net Framework 4 implementation prevents the send of the additional CWD command, and sends the `STOR` command directly to the destination directory with the fully qualified directory structure.
 
-For fully RFC-compliant FTP servers, this would not be an issue, but for others, this behavior may break existing applications from working with .Net Framework 4.
+For fully RFC-compliant FTP servers, it would not be an issue, but for others, this behavior may break existing applications from working with .Net Framework 4.
 
 For such server communication, you will see the server respond back with an FTP Error code: 5xx, such as **501 Syntax error - sender/receiver missing** whereas the same code will work for the `System.Net.FtpWebRequest` class when used with the .Net Framework 3.5.
