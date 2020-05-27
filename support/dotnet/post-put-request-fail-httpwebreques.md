@@ -85,7 +85,7 @@ public void test(Uri URL)
             tempStream.Write(FileData,0,DataRead);
             Array.Clear(FileData,0, 2048); // Clear the array.
         }
-    }while(DataRead > 0);
+    } while (DataRead > 0);
 
     WResponse = (HttpWebResponse)WRequest.GetResponse();
     // Read your response data here.

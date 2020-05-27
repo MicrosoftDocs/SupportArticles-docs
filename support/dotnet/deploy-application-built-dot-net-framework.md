@@ -39,11 +39,11 @@ For additional information about how to override .NET framework default configur
 
 ## Determine if a client system meets the minimum requirements for installing the .NET Framework
 
-Before you can deploy applications that are built on the .NET Framework to a client system, that system must have specific software components and patches installed. Most client systems meet the requirements. However, you may have to manually verify that a specific system is ready to receive the .NET Framework redistributables.
+Before you can deploy applications that are built on the .NET Framework to a client system, that system must have specific software components and patches installed. Most client systems meet the requirements. However, you may have to manually verify that a specific system is ready to receive the .NET Framework redistributable.
 
 ## Determine if a server system meets the minimum requirements for installing the .NET Framework
 
-Before you can deploy applications that are built on the .NET Framework to a server, the server must have specific software components and patches installed. Most server systems meet the requirements. However, you may have to manually verify that a specific system is ready to receive the .NET Framework redistributables.
+Before you can deploy applications that are built on the .NET Framework to a server, the server must have specific software components and patches installed. Most server systems meet the requirements. However, you may have to manually verify that a specific system is ready to receive the .NET Framework redistributable.
 
 ## Selectively enable and disable ASP.NET functionality in IIS
 

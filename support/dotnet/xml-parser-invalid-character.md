@@ -8,7 +8,7 @@ ms.prod-support-area-path:
 
 This article provides information about resolving errors when parsing XML that contains special characters using the Microsoft XML parser (MSXML).
 
-_Original product version:_ &nbsp;  
+_Original product version:_ &nbsp;  .NET Framework  
 _Original KB number:_ &nbsp; 238833
 
 ## Symptoms
@@ -39,7 +39,7 @@ Most often, you see this problem if you're working with data that uses the simpl
 ```xml
 <?xml version="1.0" encoding="iso-8859-1" ?>
 <rootelement>
-...XML data...
+    ...XML data...
 </rootelement>
 ```
 

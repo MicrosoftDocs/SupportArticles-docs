@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 2713442
 
 Consider this scenario. You have a ClickOnce application that always succeeds when first installed. However, during subsequent launches the ClickOnce application fails while checking for updates. It appears to be random, but more prevalent when there's an update available.
 
-Another way to determine if this article applies is if the problem is corrected even temporarily by deleting the ClickOnce File Cache. See the [More information](#more-information) section.
+Another way to determine if this article applies is if the problem is corrected even temporarily by deleting the ClickOnce File Cache.
 
 ## Cause
 
