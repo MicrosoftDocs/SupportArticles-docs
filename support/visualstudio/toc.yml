@@ -192,6 +192,8 @@
     href: vbs-type-mismatch-error.md
   - name: Visual Studio 2013 known issues
     href: known-issues-visual-studio-2013.md
+  - name: VS subscriptions administrator migration
+    href: vs-subscription-administrator-migration.md
   - name: Windows Automation API 3.0 improves VS 2010
     href: windows-automation-api-3-improve-vs-2010.md
 
