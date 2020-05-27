@@ -25,6 +25,9 @@ When you view a Web page that attempts to load an ActiveX control, a red X may b
 
 :::image type="content" source="./media/remove-pii_700.png" alt-text="test":::
 
+:::image type="content" source="./media/full-screen-1200.png" alt-text="test":::
+
+:::image type="content" source="./media/full-screen-1920.png" alt-text="test":::
 
 ## Cause
 
