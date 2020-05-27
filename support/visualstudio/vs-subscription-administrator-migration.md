@@ -22,3 +22,5 @@ For more information, see the following websites:
 - [Super admins and administrators for Visual Studio subscription agreements](/visualstudio/subscriptions/admin-roles)
 
 - [FAQ and Support](/visualstudio/subscriptions/)
+
+> [!VIDEO https://www.youtube.com/embed/iAtwVM-Z7rY]
