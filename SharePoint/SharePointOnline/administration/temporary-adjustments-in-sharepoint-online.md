@@ -33,7 +33,7 @@ During these unprecedented times, we are taking steps to make sure that critical
 > [!NOTE]
 > These temporary feature adjustments may be in place during business hours in your region.  
 
-### Content migration, Data Loss Prevention (DLP), and backup solutions 
+### Content migration, Data Loss Prevention (DLP), and Backup solutions 
 Many SharePoint Online and OneDrive customers run business-critical applications against services that run in the background, such as:
 
 - Content migration
@@ -43,12 +43,12 @@ Many SharePoint Online and OneDrive customers run business-critical applications
 
 To help meet our objective to remain highly available, we are moving some operations to regional evening and weekend hours.
 
-Migration, DLP, and backup solutions might achieve limited throughput during regional weekday daytime hours. During evening and weekend hours for the region, the service will process a significantly higher volume of requests from background apps. 
+Migration, DLP, and Backup solutions might achieve limited throughput during regional weekday daytime hours. During evening and weekend hours for the region, the service will process a higher volume of requests from background apps. 
 
 The following documents provide best practice guidance for getting maximize throughput:
 
 - [General migration performance guidance](https://docs.microsoft.com/sharepointmigration/sharepoint-online-and-onedrive-migration-speed). (This includes an [FAQ & Troubleshooting section](https://docs.microsoft.com/sharepointmigration/sharepoint-online-and-onedrive-migration-speed#faq-and-troubleshooting).
-- For DLP, apps that scan the service and backup apps: [Best practices for discovering files and detecting changes at scale](https://docs.microsoft.com/onedrive/developer/rest-api/concepts/scan-guidance?view=odsp-graph-online).
+- For DLP, apps that scan the service and Backup apps: [Best practices for discovering files and detecting changes at scale](https://docs.microsoft.com/onedrive/developer/rest-api/concepts/scan-guidance?view=odsp-graph-online).
 
 ### File management 
 
@@ -68,7 +68,7 @@ Modified processes include:
   - New extensions that might be permanently blocked because no thumbnail generator is likely to ever exist: reg|bak|iso|nupkg, and so on
   - Files types that are already currently blocked because no generator exists: lnk|xlsx|xls|url|exe|zip|rar|rdp|apprefms|msi|website
 
-There is no workaround at this time. We will continue to listen to your feedback in regards to this approach.
+There is no workaround at this time. We will continue to listen to your feedback regarding this approach.
 
 ## More information  
 - [Our commitment to customers and Microsoft cloud services continuity](https://www.microsoft.com/microsoft-365/blog/2020/03/21/commitment-customers-microsoft-cloud-services-continuity/) 

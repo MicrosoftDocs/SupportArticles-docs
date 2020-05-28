@@ -22,9 +22,10 @@ description: Describes how to troubleshoot problems when printing documents from
 
 # Troubleshoot print failures in Word for Office 365 on Windows 10
 
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+
 > [!NOTE]
-> - **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
-> - For previous versions of this article to troubleshoot Word on Windows, see [Troubleshoot print failures in Word](https://docs.microsoft.com/office/troubleshoot/word/print-failures-in-word). 
+> For previous versions of this article to troubleshoot Word on Windows, see [Troubleshoot print failures in Word](https://docs.microsoft.com/office/troubleshoot/word/print-failures-in-word). 
 
 ## Summary
 

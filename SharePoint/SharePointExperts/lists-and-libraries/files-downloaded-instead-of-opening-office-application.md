@@ -20,7 +20,7 @@ This article was written by [Warren Rath](https://social.technet.microsoft.com/p
 
 ## Symptoms
 
-Assume that you have Microsoft Office Web Apps in a SharePoint farm. When you open a URL (like http://sharepointserver/Shared%20Documents/DateTest.docx) to a SharePoint document by using the Chrome browser, the document is downloaded directly instead of opening the Office application with a direct connection to the document on SharePoint.
+Assume that you have Microsoft Offices Online in a SharePoint farm. When you open a URL (like http://sharepointserver/Shared%20Documents/DateTest.docx) to a SharePoint document by using the Chrome browser, the document is downloaded directly instead of opening the Office application with a direct connection to the document on SharePoint.
 
 ## Cause
 

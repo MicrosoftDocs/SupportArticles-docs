@@ -18,8 +18,7 @@ appliesto:
 
 # Some settings for the Visual Basic Editor that you enabled in an earlier version of an Office application are disabled in Office 2010
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

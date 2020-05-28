@@ -23,8 +23,7 @@ appliesto:
 
 # Error message in Office when a file is blocked by registry policy settings
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 A file is blocked when you open or save the file in a Microsoft Office program. In this situation, you may receive an error message that resembles one of the following:
 

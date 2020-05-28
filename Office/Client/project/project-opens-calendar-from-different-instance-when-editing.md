@@ -18,8 +18,7 @@ appliesto:
 
 # Microsoft Project opens a calendar from a different instance when editing
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 When you open a calendar created from a Project Work App (PWA) instance in a Microsoft Project client, a calendar from a different PWA instance opens instead.

@@ -24,8 +24,7 @@ description: Describes how to resolve an issue where PowerPoint files do not ren
 
 # PowerPoint files not rendering in Office Online Server after Security Update
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 After patching Office Online Server to the May or June 2019 security update, PowerPoint files do not render, under what appears to be random circumstances during Skype for Business sharing sessions, and displays the following error:

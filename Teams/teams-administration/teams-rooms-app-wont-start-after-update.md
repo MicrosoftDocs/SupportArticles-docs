@@ -32,7 +32,7 @@ If your MTR system is running smoothly, but the application does not start after
 
 ### Step 1: Restart up to two times
 
-If any errors occur that prevent the MTR from starting as expected after the update is installed, you can try to fix them by restarting the system two times. Wait 10 minutes between restarts. This step clears most cases. 
+If any errors occur that might prevent the MTR from starting as expected after the update is installed, you can try to fix them by restarting the system two times. Wait 10 minutes between restarts. This step clears most cases. 
 
 To restart MTR, try any of the following methods:
 - Use the power button in the Start menu (RDP or local)
@@ -139,7 +139,7 @@ To check for this situation, follow these steps:
     powershell -Command “& {(Get-CimInstance -Namespace ‘root\cimv2\mdm\dmmap’ -ClassName ‘MDM_AssignedAccess’).ShellLauncher}”
     ```
 
-6.	If the command prints an XML file between one and 24 lines long, the system is not affected. In this case, go to Step 5. 
+6.	If the command prints an XML file that's about 24 lines long, the system is not affected. In this case, go to Step 5. 
 
 7. If the command returns an error, nothing, or an empty XML file, the system is affected. If your system is affected, follow these steps:
     1. [Sign in to the Administrator account on the device](https://docs.microsoft.com/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).

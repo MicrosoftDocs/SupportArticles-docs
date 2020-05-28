@@ -19,7 +19,7 @@ appliesto:
 
 ## Problem
 
-This article contains information that applies when you use the OneDrive for Business Next Generation Sync Client (onedrive.exe) or the OneDrive for Business sync client (groove.exe) OneDrive for Business sync client.
+This article contains information that applies when you use the OneDrive sync client (onedrive.exe) or the OneDrive for Business sync client (groove.exe) OneDrive for Business sync client.
 
 > [!NOTE]
 > To determine which OneDrive sync client you're using, see [Which version of OneDrive am I using?](https://support.office.com/article/which-version-of-onedrive-am-i-using-19246eae-8a51-490a-8d97-a645c151f2ba)

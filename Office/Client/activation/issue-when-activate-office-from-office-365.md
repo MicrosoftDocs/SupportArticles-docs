@@ -19,8 +19,7 @@ appliesto:
 
 # "Sorry, we can't connect to your account. Please try again later" error when you activate Office from Office 365
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 
@@ -85,7 +84,7 @@ To manually remove existing product keys for an Office 2013 program, follow thes
    - If you're running 64-bit Windows with 32-bit Office:   
 
      ```powershell
-     cscript.exe "ProgramFiles(x86)%\Microsoft Office\Office15\ospp.vbs" /dstatus
+     cscript.exe "%ProgramFiles(x86)%\Microsoft Office\Office15\ospp.vbs" /dstatus
      ```       
    - If you're running 32-bit Windows, or running 64-bit Office with 64-bit Windows:  
 

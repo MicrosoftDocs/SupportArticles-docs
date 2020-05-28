@@ -17,8 +17,7 @@ appliesto:
 
 # "Unlicensed Product" error when you open an Office Professional Plus 2010 application
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 For an Office 2013 version of this article, see [Unlicensed Product and activation errors in Office](https://support.office.com/article/Unlicensed-Product-and-activation-errors-in-Office-0d23d3c0-c19c-4b2f-9845-5344fedc4380). 
 

@@ -1,6 +1,6 @@
 ---
-title: SharePoint 2010 workflow takes longer than expected to finish
-description: Fixes an issue in which a SharePoint 2010 workflow in SharePoint Online takes longer than expected to finish or shows "Please wait" for about one minute.
+title: SharePoint 2010 workflow takes longer than expected to complete
+description: Fixes an issue in which a SharePoint 2010 workflow in SharePoint Online takes longer than expected to complete or shows "Please wait" for about one minute.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -16,16 +16,16 @@ appliesto:
 - SharePoint Server 2010
 ---
 
-# A SharePoint 2010 workflow in SharePoint Online takes longer than expected to finish or shows "Please wait" for about one minute
+# A SharePoint 2010 workflow in SharePoint Online takes longer than expected to complete or shows "Please wait" for about one minute
 
 ## Problem
 
 When you start a SharePoint Online workflow that uses the Microsoft SharePoint 2010 Workflow platform type, you experience one of the following symptoms:
 
 - The workflow displays a "Please wait while your workflow is started" message for about one minute.
-- The workflow takes longer than expected to finish or seems slow.
+- The workflow takes longer than expected to complete or seems slow.
 
-Depending on the point at which you interact with the workflow, such as a web browser, through Microsoft Outlook or approving a task, the workflow takes about one minute to respond when you approve a task or do a similar action and the workflow seems slow. Examples of common situations that may experience this issue include such out-of-the-box (OOB) workflows as the following:
+Depending on the point at which you interact with the workflow, such as a web browser, through Microsoft Outlook or approving a task, the workflow takes about one minute to respond when you approve a task or do a similar action and the workflow seems slow. Examples of common situations that may experience this issue include such out-of-box (OOB) workflows as the following:
 
 - Approval
 - Publishing Approval

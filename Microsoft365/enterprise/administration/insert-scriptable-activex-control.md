@@ -18,8 +18,7 @@ appliesto:
 
 # Cannot insert certain scriptable ActiveX controls into Office 2013 documents
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 > [!NOTE]
 > Information the user should notice even if skimmingImportant This article contains information that shows how to reduce security settings or turn off security features on a computer. You can perform these changes to work around a specific problem. Before you make these changes, we recommend that you evaluate the risks that are associated with implementing this workaround in your environment. If you implement this workaround, take appropriate additional steps to help protect the computer.

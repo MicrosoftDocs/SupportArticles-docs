@@ -19,8 +19,7 @@ appliesto:
 
 # Changed Active Directory object information is not updated in the address book in Office 365 dedicated/ITAR
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ##  Symptoms
 
@@ -36,13 +35,13 @@ This issue typically occurs when one or more of the following conditions are tru
 
 ##  Resolution
 
-To resolve this issue, look for the new object or updated information from Microsoft Office Outlook Web Access (OWA) or Microsoft Outlook in online mode. Both OWA and Outlook in online mode reference the information directly from the managed Active Directory site. This helps determine the appropriate next action.
+To resolve this issue, look for the new object or updated information from Microsoft Office Outlook Web App (Outlook Web App) or Microsoft Outlook in online mode. Both Outlook Web App and Outlook in online mode reference the information directly from the managed Active Directory site. This helps determine the appropriate next action.
 
-If the object or updated information isn't found in OWA, refer to the following Microsoft Knowledge Base article to troubleshoot MMSSPP provisioning issues: 
+If the object or updated information isn't found in Outlook Web App, refer to the following Microsoft Knowledge Base article to troubleshoot MMSSPP provisioning issues: 
 
 [2615447](https://support.microsoft.com/help/2615447) MMSSPP does not synchronize Exchange mailbox and mail-enabled objects to the dedicated managed Office 365 environment
 
-If the object or updated information is displayed correctly in OWA but cannot be found when you use Outlook in cached mode, you must identify the number of users who are affected. If the issue is limited to a small group of users, follow these steps to troubleshoot the client:
+If the object or updated information is displayed correctly in Outlook Web App but cannot be found when you use Outlook in cached mode, you must identify the number of users who are affected. If the issue is limited to a small group of users, follow these steps to troubleshoot the client:
 
 1. Check Outlook to determine whether a new OAB is needed. To do this, follow these steps:
    1. On the **Tools** menu, point to **Send/Receive**, and then click **Download Address Book**.    
