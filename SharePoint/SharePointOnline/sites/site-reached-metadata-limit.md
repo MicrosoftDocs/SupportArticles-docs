@@ -1,5 +1,5 @@
 ---
-title: SharePoint site is at or near the metadata limit
+title: SharePoint site metadata is at or near limit error message
 ms.author: v-todmc
 author: todmccoy
 manager: dcscontentpm
@@ -20,7 +20,7 @@ ms.reviewer: arkumar
 description: How to resolve an issue where you are at or near the metadata limit for your SharePoint site.
 ---
 
-# Your SharePoint site is at or near the metadata limit
+# SharePoint site is at or near the metadata limit
 
 ## Symptom
 
