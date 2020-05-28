@@ -21,11 +21,6 @@ When you view a Web page that attempts to load an ActiveX control, a red X may b
 
 > ActiveX control failed to load!-- Please check browser security settings.
 
-:::image type="content" source="./media/remove-pii.png" alt-text="":::
-
-:::image type="content" source="./media/remove-pii_700.png" alt-text="":::
-
-
 ## Cause
 
 This problem can occur if all of the following conditions exist:
