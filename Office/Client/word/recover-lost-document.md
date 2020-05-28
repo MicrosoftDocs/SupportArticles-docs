@@ -2,6 +2,7 @@
 title: How to recover a lost Word document
 description: Describes a range of methods to locate and recover lost Microsoft Word documents. Discusses Word 2002, Word 2003, Word 2007, and Word 2010 under various versions of Windows.
 author: simonxjx
+ms.date: 5/28/2020
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -42,7 +43,7 @@ To do this, follow these steps, as appropriate for the version of Windows that y
 
 **Windows 10** and **Windows 7**
 
-1. Select **Start**, type the document name in the **Start Search** box (.doc or .docx), and then press Enter. If the **File** list contains the document, double-click the document to open it in Word.
+1. Select **Start**, type the document name in the **Start Search** box (.doc or .docx), and then press Enter. If the **File** list contains the document, double-click the document to open it in Word.
 2. If the **File** list does not contain the file, go to Method 2.
 
 ### Method 2: Search for Word Backup files
@@ -89,7 +90,7 @@ Auto-Recover file names end with the .asd extension. By default, Word searches f
 
 1. Use Word to automatically find the Auto-Recover files. To do this, follow these steps:
 
-   1. Right-click the taskbar, and then select **Task Manager**.
+   1. Right-click the taskbar, and then select **Task Manager**.
    2. On the **Processes** tab, select any instance of **Winword.exe** or **Microsoft Word**, and then select **End Task** or **End Process**. Repeat this step until you have exited all instances of Winword.exe and Word.
    3. Close the **Windows Task Manager** dialog box, and then start Word.
 
