@@ -4,7 +4,7 @@ description: Describes a problem that occurs when you try to access an IIS site 
 ms.date: 05/28/2020
 ms.prod-support-area-path: 
 ---
-# "Page cannot be displayed" error message when you try to access a site by using HTTPS
+# Error when you try to access a site by using HTTPS: Page cannot be displayed
 
 This article provides information about resolving an issue that an error may be thrown when you try to access a site by using Hypertext Transfer Protocol Secure (HTTPS).
 
