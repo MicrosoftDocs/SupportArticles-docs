@@ -21,8 +21,7 @@ appliesto:
 
 # How to make a change to dates by using functions and operators in Access
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 This article applies to either a Microsoft Access database (.mdb) file or to a Microsoft Access database (.accdb) file, and to a Microsoft Access project (.adp) file.
 

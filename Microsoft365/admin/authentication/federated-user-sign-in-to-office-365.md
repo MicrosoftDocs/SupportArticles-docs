@@ -21,8 +21,7 @@ appliesto:
 
 # "Sorry, but we're having trouble signing you in" and "8004789A" error when a federated user sign in to Office 365, Azure, or Intune
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Problem
 

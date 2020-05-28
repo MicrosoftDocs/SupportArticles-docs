@@ -1,5 +1,5 @@
 ---
-title: Your archive appears to be unavailable in a hybrid deployment.
+title: (Your archive appears to be unavailable) in a hybrid deployment.
 description: Describes a scenario in which users can't access a cloud-based archive mailbox by using Outlook Web App and can't update the archive mailbox in Outlook in a hybrid deployment. Provides a resolution.
 author: simonxjx
 ms.author: v-six
@@ -21,10 +21,9 @@ appliesto:
 search.appverid: MET150
 ---
 
-# Your archive appears to be unavailable error when users try to access a cloud-based archive mailbox in a hybrid deployment
+# Error (Your archive appears to be unavailable) when you try to access a cloud-based archive mailbox in a hybrid deployment
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 > [!NOTE]
 > The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the Office 365 Hybrid Configuration wizard that's available at [http://aka.ms/HybridWizard](https://aka.ms/hybridwizard). For more information, see [Office 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).

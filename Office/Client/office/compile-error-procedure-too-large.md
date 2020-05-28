@@ -18,8 +18,7 @@ appliesto:
 
 # "Compile Error: Procedure too large" when you try to run a VBA macro in a 32-bit version of an Office 2010 program
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

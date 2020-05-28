@@ -19,8 +19,7 @@ appliesto:
 
 # Excel 2013 or Word 2013 crashes on close after using the Insert menu
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 
@@ -64,10 +63,10 @@ This issue is fixed in the Office 2013 hotfix package KB2825683 that is dated 
 
 You can use the following steps to review the Application event log: 
 
-1. In Control Panel, open Administrative Tools .    
-2. Double-click Event Viewer .   
-3. In the left pane, select Application under Windows Logs .    
-4. In the Actions pane, click Filter Current Log .   
-5. In the Filter Current Log dialog box, enter 1000 (as shown in the following figure) and then click OK . 
+1. In Control Panel, open Administrative Tools.    
+2. Double-click Event Viewer.   
+3. In the left pane, select Application under Windows Logs.    
+4. In the Actions pane, click Filter Current Log.   
+5. In the Filter Current Log dialog box, enter 1000 (as shown in the following figure) and then click OK. 
 
    ![type 1000 in Filter Current Log dialog box](./media/excel-word-crash-on-close/filter-some-events-in-log.jpg)

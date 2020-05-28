@@ -17,8 +17,7 @@ appliesto:
 
 # How to merge multiple Word documents into one
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 If you need to cope with Word documents quite often during work, merger of multiple Word documents into one might be required sometimes. You can copy and paste the content directly when the info quantity is not large. But what if it is not that case?
 

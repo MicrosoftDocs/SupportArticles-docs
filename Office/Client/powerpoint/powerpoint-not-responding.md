@@ -1,5 +1,5 @@
 ---
-title: PowerPoint 2010 not responding, hangs or freezes
+title: PowerPoint 2010 not responding, hangs, or freezes
 description: Provides several methods to fix problems when you start, open a file or save a file in PowerPoint 2010 and it hangs or freezes.
 author: simonxjx
 manager: dcscontentpm
@@ -16,14 +16,13 @@ appliesto:
 - PowerPoint 2010
 ---
 
-# PowerPoint 2010 not responding, hangs or freezes
+# PowerPoint 2010 not responding, hangs, or freezes
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 
-This article discusses troubleshooting steps that can help resolve issues when you receive an "Microsoft PowerPoint has stopped working" error, or PowerPoint hangs or freezes when you launch PowerPoint, open a file or save a file.
+This article discusses troubleshooting steps that can help resolve issues when you receive a "Microsoft PowerPoint has stopped working" error, or PowerPoint hangs or freezes when you launch PowerPoint, open a file or save a file.
 
 ## Cause
 
@@ -87,8 +86,8 @@ If you're not sure if the version of Office that you have is Click to Run, check
 
 1. Open any Office product (Excel, Word, PowerPoint etc.).   
 2. Click on the FileTab and select Help.   
-3. Under "About Microsoft Office" it should say (32-bit) or (64-bit) next to the version number.   
-4. If you have a Click to Runversion it will be stated there.   
+3. Under "About Microsoft Office", it should say (32-bit) or (64-bit) next to the version number.   
+4. If you have a Click to Run version, it will be stated there.   
 
 If repairing your Office programs did not resolve your issue, continue to the next step.
 
@@ -96,7 +95,7 @@ If repairing your Office programs did not resolve your issue, continue to the ne
 
 If your antivirus software is not up-to-date, PowerPoint may not function properly. 
 
-To check whether your antivirus software is up-to-date
+To check whether your antivirus software is up to date
 
 To keep up with new viruses that are created, antivirus software vendors periodically provide updates that you can download from the Internet. Download the latest updates by visiting your antivirus software vendor's website. 
 
@@ -104,7 +103,7 @@ For a list of antivirus software vendors, see [Consumer antivirus software provi
 
 To check whether antivirus software is conflicting with PowerPoint
 
-If your antivirus software includes integration with PowerPoint , you may experience performance issues. In this case, you can disable all PowerPoint integration within the antivirus software. Or, you can disable any antivirus software add-ins that are installed in PowerPoint. 
+If your antivirus software includes integration with PowerPoint, you may experience performance issues. In this case, you can disable all PowerPoint integration within the antivirus software. Or, you can disable any antivirus software add-ins that are installed in PowerPoint. 
 
 > [!IMPORTANT]
 > Changing your antivirus settings may make your PC vulnerable to viral, fraudulent, or malicious attacks. Microsoft does not recommend that you attempt to change your antivirus settings. Use this workaround at your own risk. 
@@ -128,8 +127,8 @@ If performing a Selective Startup does not resolve your issue, please contact Mi
 PowerPoint loads a default printer, and changing this setting may resolve the issue:
 
 1. Open the Control Panel, open Hardware and Sound, and then open Devices and Printers.   
-2. In the list of printers, right click either the Microsoft XPS Document Writer or Send to OneNote.   
-3. Select Set as default printerfrom the menu.   
+2. In the list of printers, right-click either the Microsoft XPS Document Writer or Send to OneNote.   
+3. Select Set as default printer from the menu.   
 
 ## More Information
 

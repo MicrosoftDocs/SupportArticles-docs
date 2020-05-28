@@ -19,8 +19,7 @@ appliesto:
 
 # [SDP 3][c6406ad7-cdd8-406e-a409-a7f0c676ccb3] Office Sign-in and Authentication Diagnostic
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ##  Summary
 

@@ -21,8 +21,7 @@ appliesto:
 
 # How to change the export resolution of a PowerPoint slide
 
-> [!NOTE]
-> **Office 365 ProPlus** is being renamed to **Microsoft 365 Apps for enterprise**. For more information about this change, [read this blog post](https://go.microsoft.com/fwlink/p/?linkid=2120533).
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 You can change the export resolution in Microsoft PowerPoint by saving a slide in a picture format. There are two steps to this process: using the system registry to change the default resolution setting for exported slides, and then actually saving the slide as a picture at the new resolution.
 
