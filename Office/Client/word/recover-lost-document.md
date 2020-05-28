@@ -1,16 +1,15 @@
 ---
 title: How to recover a lost Word document
-description: Describes a range of options to locate and recover lost Microsoft Word documents. Discusses Word 2019, Word 2016, Word 2013, and Word 2010 under various versions of Windows.
+description: Describes a range of methods to locate and recover lost Microsoft Word documents. Discusses Word 2002, Word 2003, Word 2007, and Word 2010 under various versions of Windows.
 author: simonxjx
+ms.date: 5/28/2020
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
-ms.custom: 
-- CSSTroubleshoot
-- CI 118866
+ms.custom: CSSTroubleshoot
 ms.topic: article
 ms.author: v-six
 appliesto:
@@ -19,12 +18,9 @@ appliesto:
 - Word 2016
 - Word 2013
 - Word 2010
-ms.date: 5/28/2020
 ---
 
 # How to recover a lost Word document
-
-## Summary
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
@@ -37,147 +33,20 @@ For more on earlier versions of Word, see:
 
 - [How Word creates and recovers the Auto-Recover files](https://support.microsoft.com/help/107686)
 
-## Quick resolution
+## Resolution
 
-*Try the following options to help determine the cause of your printing failure. Select the arrow image to see more detailed instructions about that option.*
+To fix this problem, use the following methods in the order in which they're presented, as appropriate for your situation.
 
-<table align="left">
-<tr>
-<td valign="top"> 
-<a href="#option1">
+### Method 1: Search for the original document
 
-![Option 1](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-1.png)
-
-</a>
-</td><td><b>Search for the original document</b>
-
-**Windows 10** and **Windows 7**
-
-Select **Start**, type the document name in the **Start Search** box (.doc or .docx), and then press Enter. If the **File** list contains the document, double-click the document to open it in Word.
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-<a href="#option2">
-
-![Option 2](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-2.png)
-
-</a>
-</td>
-<td><b>Search for Word Backup files</b>
-
-1. Locate the folder in which you last saved the missing file.
-2. Search for files that have the .wbk file name extension.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-<a href="#option3">
-
-![Option 3](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-3.png)
-
-</a>
-</td>
-<td><b>Search for Auto-Recover files</b>
-
-1. Right-click the taskbar and select **Task Manager**.
-2. On the **Processes** tab, select any instance of **Winword.exe** or **Microsoft Word**, and then select **End Task** or **End Process**. Repeat this step until you have exited all instances of Winword.exe and Word.
-3. Close the **Windows Task Manager** dialog box, and then start Word.
-
-   Double-click the file in the Document Recovery pane, select **Save As** on the **File** menu, and then save the document as a .docx file. Manually change the extension to .docx, if necessary, by right-clicking the file and selecting **Rename**.
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-<a href="#option4">
-
-![Option 4](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-4.png)
-
-</a>
-</td>
-<td><b>Search for temporary files</b>
-
-1. Select **Start**, type .tmp in the **Start Search** box, and then press Enter.
-2. On the **Show only** toolbar, select **Other**.
-3. Scroll through the files and search for files that match the last few dates and times that you edited the document. 
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-<a href="#option5">
-
-![Option 5](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-5.png)
-
-</a>
-</td>
-<td><b>Search for "~" files</b>
-
-**Windows 10** and **Windows 7**
-
-1. Select **Start**, type ~ in the **Start Search** box.
-2. Select **See more results**.
-
-   Scroll through the files, and look for any that may match the last few dates and times that you edited the document. 
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-<a href="#option6">
-
-![Option 6](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-6.png)
-
-</a>
-</td>
-<td><b>How to troubleshoot damaged documents</b>
-
-For information about how to troubleshoot damaged Word documents, see the following articles in the Microsoft Knowledge Base:
-
-[How to troubleshoot damaged documents in Word](https://support.microsoft.com/help/826864) 
-
-</td>
-</tr>
-
-</table>
-
-
-## Microsoft Support options
-
-If you can't resolve this problem, you can use Microsoft Support to search the Microsoft Knowledge Base and other technical resources for answers. You can also customize the site to control your search. To start your search, go to the [Microsoft Support](https://www.microsoft.com/support/) website. 
-
-## Additional resources
- 
-If you experience specific issues when you use Word, go to the following websites to search for specific information about your program version:
-
-[Microsoft Word Product Solution Center: Word](https://support.office.com/search/results?query=word)
-
-### Recover lost Word documents
-
-<a id="option1">
-
-### Option 1: Search for the original document
-
-</a>
+To do this, follow these steps, as appropriate for the version of Windows that you're running.
 
 **Windows 10** and **Windows 7**
 
 1. Select **Start**, type the document name in the **Start Search** box (.doc or .docx), and then press Enter. If the **File** list contains the document, double-click the document to open it in Word.
-2. If the **File** list does not contain the file, go to Option 2.
+2. If the **File** list does not contain the file, go to Method 2.
 
-<a id="option2">
-
-### Option 2: Search for Word Backup files
-
-</a>
+### Method 2: Search for Word Backup files
 
 Word Backup file names end with the .wbk extension. If the **Always create Backup copy** option is selected, there may be a Backup copy of the file.
 
@@ -215,11 +84,7 @@ If you find any files that have the name "Backup of" followed by the name of the
 2. In the **Files of type** list (All Word documents), select **All Files**.
 3. Select the Backup file that you found, and then select **Open**.
 
-<a id="option3">
-
-### Option 3: Search for Auto-Recover files
-
-</a>
+### Method 3: Search for Auto-Recover files
 
 Auto-Recover file names end with the .asd extension. By default, Word searches for Auto-Recover files every time that it starts, and then it displays all that it finds in the Document Recovery task pane.
 
@@ -262,11 +127,7 @@ Auto-Recover file names end with the .asd extension. By default, Word searches f
 > [!NOTE]
 > If you find an AutoRecover file in the Recovery pane that does not open correctly, go to "Method 6: How to troubleshoot damaged documents" for more information about how to open damaged files.
 
-<a id="option4">
-
-### Option 4: Search for temporary files
-
-</a>
+### Method 4: Search for temporary files
 
 Temporary file names end with the .tmp extension. To find these files, use one of the following procedures.
 
@@ -276,11 +137,7 @@ Temporary file names end with the .tmp extension. To find these files, use one o
 2. On the **Show only** toolbar, select **Other**.
 3. Scroll through the files and search for files that match the last few dates and times that you edited the document. If you find the document that you're looking for, go to "Method 6: How to troubleshoot damaged documents" for more information about how to recover information from the file.
 
-<a id="option5">
-
-### Option 5: Search for "~" files
-
-</a>
+### Method 5: Search for "~" files
 
 Some temporary file names start with the tilde (~) character. To find these files, follow these steps:
 
@@ -293,11 +150,7 @@ Some temporary file names start with the tilde (~) character. To find these file
 
 For information about how Word creates and uses temporary files, see [Description of how Word creates temporary files](https://support.microsoft.com/help/211632).
 
-<a id="option6">
-
-### Option 6: How to troubleshoot damaged documents
-
-</a>
+### Method 6: How to troubleshoot damaged documents
 
 For information about how to troubleshoot damaged Word documents, see the following articles in the Microsoft Knowledge Base:
 
@@ -314,7 +167,7 @@ The Auto-Recover feature in Word performs an emergency Backup of open documents 
 
 We do not provide any utilities to recover deleted documents. However, some third-party utilities to recover deleted documents might be available on the Internet.
 
-For more information about Auto-Recover, see the following articles:
+For more information about Auto-Recover, see the following articles in the Microsoft Knowledge Base:
 
 - [What is Auto-Save?](https://support.office.com/article/What-is-AutoSave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5)
 - [WD2000: Why you are unable to recover a lost document](https://support.microsoft.com/help/212273)
@@ -322,5 +175,3 @@ For more information about Auto-Recover, see the following articles:
 - [How Word creates and recovers the Auto-Recover files](https://support.microsoft.com/help/107686)
 
 The third-party products that are discussed in this article are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, regarding the performance or reliability of these products.
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
