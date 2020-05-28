@@ -78,33 +78,33 @@ Here are the prerequisites needed for this walk-through:
 1. Launch the IIS manager and select the web site to be configured for client certificate authentication.
 2. In the **Features View**, select **Configuration Editor** under the **Management** section.
 
-    ![select Features View under Configuration Editor](./media/configure-many-to-one-client-mappings/open-features-view.jpg)
+    :::image type="content" source="./media/configure-many-to-one-client-mappings/open-features-view.jpg" alt-text="select Features View under Configuration Editor":::
 
 3. Go to `system.webServer/security/authentication/iisClientCertificateMappingAuthentication` in the drop-down box as shown below:
 
-    ![select iisClientCertificateMappingAuthentication under authentication](./media/configure-many-to-one-client-mappings/iisclientcertificatemappingauthentication.jpg)
+    :::image type="content" source="./media/configure-many-to-one-client-mappings/iisclientcertificatemappingauthentication.jpg" alt-text="select iisClientCertificateMappingAuthentication under authentication":::
 
     You will see a window to configure Many-to-One or One-to-One certificate mappings here. This is the UI provided through Configuration Editor from where you can set up all of the mapping configurations.
 
-    ![a window used to set up all mapping configurations](./media/configure-many-to-one-client-mappings/setup-configure-mapping.jpg)
+    :::image type="content" source="./media/configure-many-to-one-client-mappings/setup-configure-mapping.jpg" alt-text="a window used to set up all mapping configurations":::
 
 4. Modify the properties through this graphical user interface (GUI).
 
-    - Set **enabled** to **true**
-    - Set **manyToOneCertificateMappingsEnabled** to **True**
+    - Set **enabled** to **True**.
+    - Set **manyToOneCertificateMappingsEnabled** to **True**.
     - Select **manyToOneMappings** and click on the ellipsis button to launch a new window for configuring mappings.
 
 5. Under this new window, click to add a new item. You can modify the properties from within the window as shown below:
 
-    ![modify-properties.jpg](./media/configure-many-to-one-client-mappings/modify-properties.jpg)
+    :::image type="content" source="./media/configure-many-to-one-client-mappings/modify-properties.jpg" alt-text="modify-properties.jpg":::
 
 6. Click on the ellipsis button for **rules**, which will give you the option to add multiple patterns for matching based on the certificate properties.
 
-    ![Screenshot 1 for adding multiple patterns](./media/configure-many-to-one-client-mappings/add-multiple-patterns-example-1.jpg)
+    :::image type="content" source="./media/configure-many-to-one-client-mappings/add-multiple-patterns-example-1.jpg" alt-text="Screenshot 1 for adding multiple patterns":::
 
-    ![screenshot 2 for adding multiple patterns](./media/configure-many-to-one-client-mappings/add-multiple-patterns-example-2.jpg)
+    :::image type="content" source="./media/configure-many-to-one-client-mappings/add-multiple-patterns-example-2.jpg" alt-text="screenshot 2 for adding multiple patterns":::
 
-    ![screenshot 3 for adding multiple patterns](./media/configure-many-to-one-client-mappings/add-multiple-patterns-exmaple-3.jpg)
+    :::image type="content" source="./media/configure-many-to-one-client-mappings/add-multiple-patterns-exmaple-3.jpg" alt-text="screenshot 3 for adding multiple patterns":::
 
 In these example images, there are two entries for rules for mapping the certificate.
 
@@ -112,7 +112,7 @@ First, there are the **Subject** and **Issuer** fields in the certificate.  S
 
 In the image below, the final mapping for a specific windows account is illustrated. As you can see, there are two entries for **rules** for this account.
 
-![entry for rules](./media/configure-many-to-one-client-mappings/entry-for-rules.jpg)
+:::image type="content" source="./media/configure-many-to-one-client-mappings/entry-for-rules.jpg" alt-text="entry for rules":::
 
 Similarly, you can have other mappings for the accounts based on the fields **Issuer** and **Subject** in the certificate.
 
@@ -122,9 +122,9 @@ So far what has been illustrated is achieved using the Configuration Editor, wh
 
 Configuration Editor also gives you an option to run these commands manually, and it generates the scripts to achieve it from inside the UI itself:
 
-![select generate script option to run commands](./media/configure-many-to-one-client-mappings/generate-script.jpg)
+:::image type="content" source="./media/configure-many-to-one-client-mappings/generate-script.jpg" alt-text="select generate script option to run commands":::
 
-![run commands manually in script dialog](./media/configure-many-to-one-client-mappings/script-dialog.jpg)
+:::image type="content" source="./media/configure-many-to-one-client-mappings/script-dialog.jpg" alt-text="run commands manually in script dialog":::
 
 These are the code snippets to perform the same steps as above to configure the certificate mapping. They were generated using Configuration Editor's Script Generation feature.
 
