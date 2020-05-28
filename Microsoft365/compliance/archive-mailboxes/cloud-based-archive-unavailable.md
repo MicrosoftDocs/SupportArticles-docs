@@ -21,7 +21,7 @@ appliesto:
 search.appverid: MET150
 ---
 
-# (Your archive appears to be unavailable) error when users try to access a cloud-based archive mailbox in a hybrid deployment
+# Error (Your archive appears to be unavailable) when you try to access a cloud-based archive mailbox in a hybrid deployment
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
