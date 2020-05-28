@@ -8,7 +8,7 @@ ms.prod-support-area-path:
 
 This article provides information about resolving an issue that an error may be thrown when you try to access a site by using Hypertext Transfer Protocol Secure (HTTPS).
 
-_Original product version:_ &nbsp;   
+_Original product version:_ &nbsp; Internet Information Services  
 _Original KB number:_ &nbsp; 824035
 
 ## Symptoms

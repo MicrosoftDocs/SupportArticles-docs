@@ -163,12 +163,12 @@ You can use inline script blocks and external code components, known as XSLT Ext
         </xsl:template>
         <xsl:template match="*">
             <TR>
-            <xsl:apply-templates select="*"/>
+                <xsl:apply-templates select="*"/>
             </TR>
         </xsl:template>
         <xsl:template match="FirstName">
             <TD>
-            <xsl:value-of select="."/>
+                <xsl:value-of select="."/>
             </TD>
         </xsl:template>
         <xsl:template match="BirthDate">

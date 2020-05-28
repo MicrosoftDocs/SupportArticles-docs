@@ -20,10 +20,10 @@ The following topics describe the different aspects of HTTP API error logging.
 - [Configure HTTP API error logging](#configure-http-api-error-logging)  
     Registry settings control the HTTP API logs errors, the maximum permitted size of log files, and the location of the log files.
 
-- [Format of the HTTP API error logs](#Format-of-the-HTTP-API-error-logs)  
+- [Format of the HTTP API error logs](#format-of-the-http-api-error-logs)  
     The HTTP API creates log files that follow the World Wide Web Consortium (W3C) log file conventions. You can use standard tools to parse these log files. However, unlike W3C log files, HTTP API log files don't contain the columns names.
 
-- [Types of errors that the HTTP API logs](#Types-of-errors-that-the-HTTP-API-logs)  
+- [Kinds of errors that the HTTP API logs](#kinds-of-errors-that-the-http-api-logs)  
     The HTTP API logs many common errors.
 
 ## Resolution
