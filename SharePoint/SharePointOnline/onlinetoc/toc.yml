@@ -287,6 +287,8 @@
       href: ../Sites/no-alert-notifications.md
     - name: Site doesn't use the site theme for top navigation bar
       href: ../Sites/top-navigation-bar-not-use-site-theme.md
+    - name: Site is at or near the metadata limit
+      href: ../sites/site-reached-metadata-limit.md
     - name: Top navigation bar displays either Sites or Newsfeed instead of OneDrive
       href: ../sites/office-365-top-navigation-bar-displays-either-sites-or-newsfeed.md
     - name: Troubleshooting guide to OneDrive for Business sites stopped at provisioning stage
