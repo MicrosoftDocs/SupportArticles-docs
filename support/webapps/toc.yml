@@ -8,6 +8,8 @@
   items:
   - name: Can't create object when ASP applications run
     href: cannot-create-object-asp-run.md
+  - name: Format DateTime and Date values of DataTable columns in XML
+    href: format-datetime-values-xml-dataset-vb.md
   - name: Set ASP locale ID per the browser's language
     href: set-asp-locale-id-browser-language.md
   - name: Use Active Server Pages to create GUIDs
@@ -164,6 +166,8 @@
     href: iis-ssl-diagnostic-tool-sdp.md
   - name: Information diagnostic of IIS and ASP.NET
     href: iis-and-asp-net-diagnostic.md
+  - name: Page cannot be displayed
+    href: error-page-cant-displayed.md
   - name: Time-taken field in IIS HTTP logging
     href: time-taken-iis-http-log.md
   - name: Troubleshoot ABO Mapper errors in IIS
@@ -211,6 +215,8 @@
     href: cannot-view-website-using-ssl.md
   - name: Can't use DataAdapter in ASP.NET application
     href: request-timed-out-dataadapter.md
+  - name: Error logging in HTTP APIs
+    href: error-logging-http-apis.md
   - name: Error when calling MTS COM from ASP
     href: server-execution-fail-call-mts-com-asp.md
   - name: Error when using VM to host ASP.NET application
@@ -290,7 +296,7 @@
   - name: Changing IP/port causes other sites fail
     href: change-ip-port-wildcard certificate-site-fail.md
   - name: Configure Many-to-One client mappings
-    href: configure-many-one-client-mappings.md
+    href: configure-many-to-one-client-mappings.md
   - name: Control authorization permission in ASP.NET
     href: authorization-permissions-asp-net.md
   - name: HTTP error 403.7  when opening an IIS webpage
