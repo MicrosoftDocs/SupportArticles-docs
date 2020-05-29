@@ -136,7 +136,7 @@
     href: wpf-browser-hosted-applications-xbaps-crash.md
   - name: Wrong time on past dates when using TimeZoneInfo
     href: 2998527-incorrect-time-timezoneinfo.md
-  - name: XML parser: Invalid character was in text content
+  - name: Invalid character was found in text content
     href: xml-parser-invalid-character.md
 
 - name: Installation
