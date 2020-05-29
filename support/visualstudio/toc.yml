@@ -28,8 +28,6 @@
     href: faq-standard-cpp-library.md
   - name: Know when clicking a Check box in a TreeView
     href: click-check-box-treeview.md
-  - name: Latest supported Visual C++ downloads
-    href: latest-supported-visual-cpp-downloads.md
   - name: MFC application can't redraw control
     href: mfc-application-fail-redraw-control.md
   - name: Use functions of STL queue class in Visual C++
