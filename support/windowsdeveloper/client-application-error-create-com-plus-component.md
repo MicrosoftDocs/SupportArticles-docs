@@ -9,7 +9,7 @@ ms.reviewer: wmascia, wmascia
 
 This article provides information about resolving the issue that the client application may intermittently receive an error message when it creates a COM+ component.
 
-_Original product version:_ &nbsp; Windows
+_Original product version:_ &nbsp; Windows  
 _Original KB number:_ &nbsp; 911359
 
 > [!NOTE]
@@ -20,17 +20,17 @@ _Original KB number:_ &nbsp; 911359
 
 When a client application tries to create a Microsoft COM+ component, the client application may intermittently receive an error message.
 
-Microsoft C++ applications may receive the following error message:
+- Microsoft C++ applications may receive the following error message:
 
-> E_INVALIDARG: "The parameter is incorrect" (0x80070057/-2147024809)
+    > E_INVALIDARG: "The parameter is incorrect" (0x80070057/-2147024809)
 
-Microsoft Visual Basic 6.0 applications may receive the following error message:
+- Microsoft Visual Basic 6.0 applications may receive the following error message:
 
-> Run-time error '5': "Invalid procedure call or argument" (0x800a0005/-2146828283)
+    > Run-time error '5': "Invalid procedure call or argument" (0x800a0005/-2146828283)
 
-Client applications that are built on the Microsoft .NET Framework may receive the following error message:
+- Client applications that are built on the Microsoft .NET Framework may receive the following error message:
 
-> System.ArgumentException: "The parameter is incorrect." at System.Runtime.Type.CreateInstanceImpl(Boolean publicOnly) at System.Activator.CreateInstance(Type type, Boolean nonPublic) (with _HResult = 0x80070057/-2147024809)
+    > System.ArgumentException: "The parameter is incorrect." at System.Runtime.Type.CreateInstanceImpl(Boolean publicOnly) at System.Activator.CreateInstance(Type type, Boolean nonPublic) (with _HResult = 0x80070057/-2147024809)
 
 The COM+ application will typically function without error for some time immediately after the COM+ application is opened. The problem occurs intermittently, but increases in frequency over time until the application eventually fails on every activation request.
 
