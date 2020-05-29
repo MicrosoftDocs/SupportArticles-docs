@@ -74,17 +74,19 @@ To find the GroupID, use one of the following methods:
   1. Sign in to [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) by using a Global Administrator account of the tenant.
   2. Run the following query to get details of the profile:
 
-        > GET  
-        > `https://graph.microsoft.com/beta/deviceManagement/windowsAutopilotDeploymentProfiles/<AutopilotProfileID>`
+     ```http
+     GET https://graph.microsoft.com/beta/deviceManagement/windowsAutopilotDeploymentProfiles/<AutopilotProfileID>
+     ```
 
-        :::image type="content" source="media/cannot-delete-autopilot-deployment-profile/query1.png" alt-text="screenshot of Query 1":::
+     :::image type="content" source="media/cannot-delete-autopilot-deployment-profile/query1.png" alt-text="screenshot of Query 1":::
 
   3. Run the following query to get details of the assignment:
 
-        > GET  
-        > `https://graph.microsoft.com/beta/deviceManagement/windowsAutopilotDeploymentProfiles/<AutopilotProfileID>/assignments`
+     ```http
+     GET https://graph.microsoft.com/beta/deviceManagement/windowsAutopilotDeploymentProfiles/<AutopilotProfileID>/assignments
+     ```
 
-        :::image type="content" source="media/cannot-delete-autopilot-deployment-profile/query2.png" alt-text="screenshot of Query 2]":::
+     :::image type="content" source="media/cannot-delete-autopilot-deployment-profile/query2.png" alt-text="screenshot of Query 2]":::
 
   4. Find the GroupID from the result. Here is an example:
 
@@ -94,8 +96,9 @@ To find the GroupID, use one of the following methods:
 
 To delete the assignment, run the following query:
 
-> DELETE  
-> `https://graph.microsoft.com/beta/deviceManagement/windowsAutopilotDeploymentProfiles/<AutopilotProfileID>/assignments/<AutopilotProfileID>_<GroupID>`
+```http
+DELETE https://graph.microsoft.com/beta/deviceManagement/windowsAutopilotDeploymentProfiles/<AutopilotProfileID>/assignments/<AutopilotProfileID>_<GroupID>
+```
 
 :::image type="content" source="media/cannot-delete-autopilot-deployment-profile/query3.png" alt-text="screenshot of Query 3]":::
 
@@ -103,8 +106,7 @@ You may receive the following error message when you run the DELETE query:
 
 > Failure - Status Code 403 - Looks like you may not have the permissions for this call. Please modify your permissions.
 
-If this occurs, select **Modify Permissions**, and then select the following permission:  
-DeviceManagementServiceConfig.ReadWrite.All
+If this occurs, select **Modify Permissions**, and then select the **DeviceManagementServiceConfig.ReadWrite.All** permission.
 
 Click **Modify Permissions**, log on again to the Graph Explorer, and then rerun the DELETE query.
 
@@ -112,5 +114,6 @@ Click **Modify Permissions**, log on again to the Graph Explorer, and then rerun
 
 To delete the profile, run the following query:
 
-> DELETE  
-> `https://graph.microsoft.com/beta/deviceManagement/windowsAutopilotDeploymentProfiles/<AutopilotProfileID>`
+```http
+DELETE https://graph.microsoft.com/beta/deviceManagement/windowsAutopilotDeploymentProfiles/<AutopilotProfileID>
+```

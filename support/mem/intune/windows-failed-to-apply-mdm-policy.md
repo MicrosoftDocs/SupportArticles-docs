@@ -4,7 +4,7 @@ description: Describes an issue in which you receive an error message that occur
 ms.date: 05/13/2020
 ms.prod-support-area-path: Windows enrollment
 ---
-# Windows failed to apply the MDM Policy settings when running gpupdate /force on hybrid Azure AD-joined devices
+# Windows failed to apply the MDM Policy settings error when running gpupdate /force on hybrid Azure AD-joined devices
 
 This article discusses the **Windows failed to apply the MDM Policy settings** error message that occurs when you run the `gpupdate /force` command on an enrolled Windows device in Microsoft Intune.
 
@@ -30,7 +30,7 @@ When you run the `gpupdate /force` command on a hybrid Azure Active Directory (
 
 This issue occurs if the **Auto MDM Enrollment with AAD Token** Group Policy Object (GPO) is applied to the Windows device. In this case, it tries to enroll the device in MDM when you run the `gpupdate /force` command. Because the device was already enrolled, you receive the warning message.
 
-> This behavior is expected. You can safely ignore the warning message.
+This behavior is expected. You can safely ignore the warning message.
 
 ## More information
 
@@ -42,6 +42,6 @@ The following is an example of the `%windir%\debug\usermode\Gpsvc.log` file entr
 > ProcessGPOList: Passing in the force refresh flag to Extension MDM Policy  
 > ProcessGPOList: **Extension MDM Policy returned 0x8018000a**.  
 > ProcessGPOList: Extension MDM Policy doesn't support rsop logging  
-> ProcessGPOs(Machine): E**xtension MDM Policy ProcessGroupPolicy failed, status 0x8018000a**.
+> ProcessGPOs(Machine): **Extension MDM Policy ProcessGroupPolicy failed, status 0x8018000a**.
 
 The [0x8018000a](/windows/win32/mdmreg/mdm-registration-constants) error means that the device is already enrolled.

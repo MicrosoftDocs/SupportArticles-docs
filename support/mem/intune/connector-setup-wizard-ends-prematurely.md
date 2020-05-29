@@ -47,8 +47,10 @@ To fix the issue, follow these steps to restore the **Default Web Site** name t
 1. Open IIS Manager.
 2. Expand \<*Server Name*>\\**Sites**, and then locate the default website.
 
-    If multiple websites are listed, do the following for each site:  
-    Right-click the site, and then select **Manage Website** > **Advanced Settings**.
+    If multiple websites are listed, do the following for each site:
+
+    - Right-click the site, and then select **Manage Website** > **Advanced Settings**.
+
     Find the default website whose ID is **1**.  
 
     :::image type="content" source="media/connector-setup-wizard-ends-prematurely/web-site-id.png" alt-text="screenshot of Web site ID" border="false":::

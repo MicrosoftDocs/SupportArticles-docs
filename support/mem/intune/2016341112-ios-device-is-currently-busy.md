@@ -4,7 +4,7 @@ description: Describes an issue in which you receive the 2016341112 -iOS device 
 ms.date: 05/13/2020
 ms.prod-support-area-path: Monitor profiles 
 ---
-# 2016341112 -iOS device is currently busy when you deploy a device profile to an iOS device
+# 2016341112 -iOS device is currently busy error when you deploy a device profile to an iOS device
 
 This article discusses a behavior that the **2016341112 -iOS device is currently busy** error occurs when deploying a device configuration profile to iOS devices in Microsoft Intune.
 

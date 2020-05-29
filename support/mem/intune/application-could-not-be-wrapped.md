@@ -4,7 +4,7 @@ description: Describes a problem that occurs when you try to wrap an LOB app by 
 ms.date: 05/13/2020
 ms.prod-support-area-path: Intune App SDK
 ---
-# The application could not be wrapped when wrapping LOB app via Intune App Wrapping Tool for Android
+# The application could not be wrapped error when wrapping an LOB app
 
 This article solves the error message that occurs when you try to wrap a Line of Business (LOB) app by using the Microsoft Intune App Wrapping Tool for Android.
 

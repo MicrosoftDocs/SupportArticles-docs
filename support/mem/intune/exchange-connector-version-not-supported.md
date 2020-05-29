@@ -4,7 +4,7 @@ description: Describes an issue in which you receive an Intune Exchange Connecto
 ms.date: 05/13/2020
 ms.prod-support-area-path: Exchange on-premises connector
 ---
-# Intune Exchange connector version is not supported when configuring on-premises Exchange connector
+# Intune Exchange connector version is not supported when configuring the on-premises Exchange connector
 
 This article provides the information to solve the **Intune Exchange Connector version is not supported** error message that occurs when you try to configure the on-premises Exchange connector.
 

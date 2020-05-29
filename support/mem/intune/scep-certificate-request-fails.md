@@ -19,8 +19,9 @@ The SCEP certificate request fails during the verification phase on the certifi
 Additionally, you see error entries in CRP logs.
 
 > [!NOTE]
-> The default log file location is the following:  
-> C:\Program Files\Microsoft Intune\NDESConnectorSvc\Logs\Logs\CertificateRegistrationPoint_xx_xx.svclog
+> The default log file location is the following:
+>  
+> `C:\Program Files\Microsoft Intune\NDESConnectorSvc\Logs\Logs\CertificateRegistrationPoint_xx_xx.svclog`
 
 There are three instances of the error that specify Cryptography Exception, as shown in the following screenshot.
 
@@ -62,11 +63,9 @@ This issue occurs because the registry keys that are responsible for verificatio
 
 ## Resolution - Method 1
 
-To fix this certificate request verification issue, try the following method.
-
 Follow these steps:
 
-1. On the connector-installed server, open the **Services** snap-in. To do this, open the **Start** menu, enter *services.msc*, and then select **Services** from the results list.
+1. On the connector-installed server, open the **Services** snap-in. To do this, open the **Start** menu, enter `services.msc`, and then select **Services** from the results list.
 2. In the **Services** snap-in, restart the Intune Connector Service.
 3. Check the `HKLM\Software\Microsoft\MicrosoftIntune\NDESConnector` registry subkey to verify that the registry keys were created according to the following screenshot.
 
@@ -79,10 +78,10 @@ If restarting the service or computer does not fix the issue, go to Method 2.
 Follow these steps:
 
 1. On the NDES computer, open the registry, and locate the following subkey:  
-    `HKEY_LOCAL_Machine:\Software\Microsoft\Cryptography\MSCEP`
+    `HKEY_LOCAL_Machine\Software\Microsoft\Cryptography\MSCEP`
 
 2. Change the template values to the default (**IPSECIntermediateOffline**), and restart the server.
 
-3. After the server restarts, check the `HKEY_LOCAL_Machine:\Software\Microsoft\MicrosoftIntune\NDESConnector` subkey. You should now see the signing certificates.
+3. After the server restarts, check the `HKEY_LOCAL_Machine\Software\Microsoft\MicrosoftIntune\NDESConnector` subkey. You should now see the signing certificates.
 
-4. After the keys are created, change the template name under `HKEY_LOCAL_Machine:\Software\Microsoft\Cryptography\MSCEP` to the custom template name that was created for SCEP and NDES.
+4. After the keys are created, change the template name under `HKEY_LOCAL_Machine\Software\Microsoft\Cryptography\MSCEP` to the custom template name that was created for SCEP and NDES.

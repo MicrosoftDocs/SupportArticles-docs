@@ -6,7 +6,7 @@ ms.prod-support-area-path: Manage Apps
 ---
 # macOS LOB apps aren't deployed in Microsoft Intune
 
-This article provides the information to solve the issue that the macOS line-of-business (LOB) app cannot be deployed on the devices.
+This article provides the information to solve the issue that the macOS line-of-business (LOB) apps cannot be deployed on the devices.
 
 _Original product version:_ &nbsp; Microsoft Intune  
 _Original KB number:_ &nbsp; 4344141
@@ -56,8 +56,8 @@ To check whether your .pkg package contains the required information, follow t
 
 4. Check whether the output contains `CFBundleVersion` and `install-location`. The installation location should be **/Applications** or its subfolder, as in the following example:
 
-    > <pkg-info identifier="com.microsoft.OneDrive" version="17.3.6760"install-location="/Applications">  
-    > <bundle path="./OneDrive.app" id="com.microsoft.OneDrive" CFBundleShortVersionString="17.3.6760" CFBundleVersion="6760.105"/>
+    > \<pkg-info identifier="com.microsoft.OneDrive" version="17.3.6760" install-location="/Applications">  
+    > \<bundle path="./OneDrive.app" id="com.microsoft.OneDrive" CFBundleShortVersionString="17.3.6760" CFBundleVersion="6760.105"/>
 
 ## Resolution
 

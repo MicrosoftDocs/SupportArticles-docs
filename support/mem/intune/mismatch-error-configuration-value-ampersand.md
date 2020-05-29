@@ -4,7 +4,7 @@ description: Provides the resolution to solve the mismatch between the value typ
 ms.date: 05/13/2020
 ms.prod-support-area-path: iOS app configuration profiles
 ---
-# Mismatch between the value type and the configuration value when configuration value has an ampersand
+# Mismatch between the value type and the configuration value error when configuration value has an ampersand
 
 This article provides the methods to solve the mismatch error that occurs if the configuration value has an ampersand in Microsoft Intune.
 

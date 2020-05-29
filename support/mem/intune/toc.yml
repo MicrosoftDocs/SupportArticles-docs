@@ -10,14 +10,16 @@
     href: app-protection-options-access-denied.md
   - name: Apps don't appear as Available
     href: apps-appear-unavailable.md
-  - name: Can't wrap LOB app via wrapping tool
+  - name: Can't wrap an LOB app with Intune App Wrapping Tool
     href: application-could-not-be-wrapped.md
   - name: Error when you open a web app on iOS 
     href: invalid-address-open-web-app.md
-  - name: MacOS LOB apps aren't deployed
+  - name: macOS LOB apps aren't deployed
     href: macos-lob-apps-not-deployed.md
   - name: Managed Browser policy triggers error 0x87D1FDE8
     href: managed-browser-policy-triggers-error-0x87d1fde8.md
+  - name: Mismatch between value type and configuration value
+    href: mismatch-error-configuration-value-ampersand.md
   - name: OneDrive supports Open-in protection on unenrolled devices
     href: open-in-protection-unenrolled-devices.md
   - name: Protected data is attached to an iMessage
@@ -38,24 +40,12 @@
   items:
   - name: 2016341112 -iOS device is currently busy
     href: 2016341112-ios-device-is-currently-busy.md
-  - name: Can't assign SCEP certificates to devices
-    href: cannot-assign-scep-certificates.md
   - name: Connectivity issues due to root certificates
     href: fix-connectivity-issues.md
   - name: Password expiration setting doesn't work
     href: password-expiration-setting-not-working.md
-  - name: SCEP certificate request fails on CRP
-    href: scep-certificate-request-fails.md
   - name: Troubleshoot CSP custom settings
     href: troubleshoot-csp-custom-settings.md
-- name: Conditional Access
-  items:
-  - name: Could not retrieve access token for Graph API
-    href: could-not-retrieve-access-token.md
-  - name: Mismatch between value type and configuration value
-    href: mismatch-error-configuration-value-ampersand.md
-  - name: Unable to connect or send inventory information
-    href: unable-to-connect-send-inventory-information.md
 - name: Device enrollment
   items:
   - name: Can't update enrollment
@@ -81,8 +71,6 @@
   items:
   - name: Help desk operators can't perform remote tasks
     href: help-desk-operator-fails-remote-tasks.md
-  - name: Intune Exchange Connector version is not supported
-    href: exchange-connector-version-not-supported.md
   - name: RemoteWipe CSP fails to send a doWipe command
     href: remotewipe-fails-sending-dowipe-command.md
 - name: Device protection
@@ -95,17 +83,28 @@
     href: fails-moving-intune-exchange-connector.md
   - name: Error -2016281112 deploying a password policy
     href: error-deploying-password-policy.md
-  - name: Gpupdate /force returns error
+  - name: Windows failed to apply the MDM Policy settings
     href: windows-failed-to-apply-mdm-policy.md
+  - name: Intune Connector Setup Wizard ended prematurely
+    href: connector-setup-wizard-ends-prematurely.md
+  - name: Intune Exchange Connector version is not supported
+    href: exchange-connector-version-not-supported.md
   - name: NDES certificate not installed
     href: error-0x80090014-installing-ndes-certificate.md
-  - name: Secure boot enabled shows as Not Compliant
-    href: win-10-device-shows-not-compliant.md
+  - name: SCEP certificate request fails on CRP
+    href: scep-certificate-request-fails.md
+  - name: Secure boot enabled device shows as Not Compliant
+    href: secure-boot-enabled-device-shows-not-compliant.md
   - name: Sign in to Intune NDES Connector error 0x80004003
     href: ndes-connector-signin-error-80004003.md
-  - name: UPN listed as None for deleted user
-    href: missing-removed-user-intune-info.md
+  - name: UPN listed as None for orphaned devices
+    href: orphaned-device-upn-shown-as-none.md
   - name: Conditional Access
+    items:
+    - name: Could not retrieve access token for Graph API
+      href: could-not-retrieve-access-token.md
+    - name: Unable to connect or send inventory information
+      href: unable-to-connect-send-inventory-information.md
 - name: General guidance or advisory
   items:
   - name: Attributes synced by Intune
@@ -126,10 +125,6 @@
   items:
   - name: AADSTS50011 query the Intune Data Warehouse
     href: error-query-intune-data-warehouse.md
-- name: Set up Intune
-  items:
-  - name: Intune Connector Setup Wizard ended prematurely
-    href: connector-setup-wizard-ends-prematurely.md
 - name: Software distribution
   items:
   - name: Software distribution tips and practices

@@ -21,7 +21,7 @@ If an administrator removes or deletes a user from Microsoft Azure Active Direct
 A script is available that removes an orphaned device that is managed by Intune and whose owner was removed from Azure AD. The script requires that you have the UPN of the active or deleted user. You can download the script ([RemoveIntuneDevice.ps1](https://github.com/patlewis-MSFT/RemoveIntuneDevice/blob/master/RemoveIntuneDevice.ps1)) from the following Microsoft website:  
 [https://github.com/patlewis-MSFT/RemoveIntuneDevice](https://github.com/patlewis-MSFT/RemoveIntuneDevice)
 
-## Prerequisites
+### Prerequisites
 
 - The Azure Active Directory recycle bin must be enabled before you delete a device for a deleted user. Read more about [Azure AD Connect sync: Enable AD recycle bin](/azure/active-directory/hybrid/how-to-connect-sync-recycle-bin).
 
@@ -41,7 +41,7 @@ A script is available that removes an orphaned device that is managed by Intune
 
 - If you receive an error message that states that scripts are disabled on your computer, you have to enable the script to run by running the `Set-ExecutionPolicy` cmdlet. For more information, see [Set-ExecutionPolicy](/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-6).
 
-## Getting started
+### Getting started
 
 After the prerequisites are installed or met, follow these steps to use the script:
 
