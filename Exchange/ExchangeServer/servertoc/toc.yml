@@ -63,6 +63,8 @@
       href: ../out-of-office-assistant/one-reply-sent-sender.md
   - name: OWA
     items:
+    - name: Can't search people in OWA
+      href: ../owa/can't-connect-error-searching-people-owa.md
     - name: Incorrect Sent time stamp
       href: ../owa/incorrect-sent-time-stamp.md
     - name: Set up Exchange on the web
