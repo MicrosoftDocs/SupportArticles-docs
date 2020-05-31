@@ -48,5 +48,5 @@ You can disable the **Encrypt-Only** option on the **Encrypt**  list without a
 1. On the **Edit** menu, point to **New**, and then select **String Value**.
 1. Type **DefaultPermissionTemplateGuid**, and then press Enter.
 1. In the **Detail** pane, right-click **DefaultPermissionTemplateGuid**, and then select **Modify**.
-1. In the **Value data** ox, type **irmdnf**, and then select**OK**.
+1. In the **Value data** box, type **irmdnf**, and then select **OK**.
 1. Exit Registry Editor.
