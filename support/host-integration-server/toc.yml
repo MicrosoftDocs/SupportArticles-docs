@@ -15,14 +15,14 @@
   items:
   - name: General questions
     items:
-    - name: Maximum number of statements has reached
+    - name: Maximum number of statements has reached
       href: maximum-number-statements-reach.md
 
 - name: HIS Setup and Configuration
   items:
   - name: General setup and configuration questions
     items:
-    - name: Change Enterprise SSO service account
+    - name: Change Enterprise SSO service account
       href: change-enterprise-sso-service-account.md
 
 - name: Network integration (SNA gateway)
@@ -37,7 +37,7 @@
       href: troubleshoot-his-event-23-warning.md
   - name: SNA Manager
     items:
-    - name: SNA Manager version combinations
+    - name: SNA Manager version combinations
       href: sna-manager-version-combination.md
-    - name: Unable to stop or start connections or service
+    - name: Unable to stop or start connections or service
       href: unable-stop-start-connections-service.md
