@@ -170,4 +170,4 @@ To check for this situation, follow these steps:
 
 If your problem is not addressed by this troubleshooting guide, it is possible that we are not aware of it. Contact your customer service representative for help to identify and resolve the problem.
 
-Still need help? Go to [Microsoft Community]https://answers.microsoft.com/).
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
