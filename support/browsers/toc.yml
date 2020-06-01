@@ -10,59 +10,59 @@
       href: check-ie-version.md
 
     - name: IEAK 9 supported languages
-      href: ieak-9-supported-languages
+      href: ieak-9-supported-languages.md
 
 - name: Connectivity and Navigation
   items:
     - name: Page Cannot be Displayed error
-      href: page-cannot-be-displayed
+      href: page-cannot-be-displayed.md
 
 - name: Core Features
   items:
     - name: Apply Property Error when changing shortcut
-      href: apply-property-error
+      href: apply-property-error.md
 
 - name: Development and Website Issues
   items:
     - name: FTP WinInet APIs in VB application
-      href: using-ftp-wininet-apis-in-vb
+      href: using-ftp-wininet-apis-in-vb.md
 
     - name: Services not support WinInet
-      href: wininet-not-supported-in-services
+      href: wininet-not-supported-in-services.md
 
     - name: Cannot access FTP sites
-      href: ie-cannot-visit-ftp-sites
+      href: ie-cannot-visit-ftp-sites.md
 
     - name: Delay for visiting pages or page elements
-      href: updatepanel-async-postbacks-slow-in-ie
+      href: updatepanel-async-postbacks-slow-in-ie.md
 
     - name: VBD documents can't be loaded
-      href: ie-fails-to-load-vbd-documents
+      href: ie-fails-to-load-vbd-documents.md
 
     - name: Standards mode not used for trusted sites
-      href: compatibility-view-for-trusted-sites
+      href: compatibility-view-for-trusted-sites.md
 
     - name: FormData can't be sent by XMLHttpRequest
-      href: xmlhttprequest-not-correctly-send-formdata
+      href: xmlhttprequest-not-correctly-send-formdata.md
 
     - name: VML isn't displayed in strict standards-compliant
-      href: vml-not-shown-in-strict-standards-compliant
+      href: vml-not-shown-in-strict-standards-compliant.md
 
 - name: Security and Privacy
   items:
     - name: Java security setup in IE
-      href: set-java-security-in-ie
+      href: set-java-security-in-ie.md
 
     - name: Cannot view secure web sites
-      href: cannot-view-secure-web-sites-in-ie
+      href: cannot-view-secure-web-sites-in-ie.md
 
     - name: Error occurs when opening files
-      href: cannot-open-certain-files
+      href: cannot-open-certain-files.md
 
 - name: Stability and Performance
   items:
     - name: Flickers when showing animated content
-      href: ie-flickers-with-hybrid-graphics
+      href: ie-flickers-with-hybrid-graphics.md
 
     - name: Memory usage rises due to iframes
-      href: memory-usage-rises-with-iframes
+      href: memory-usage-rises-with-iframes.md

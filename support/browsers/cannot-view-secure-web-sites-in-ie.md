@@ -64,7 +64,7 @@ If no add-on is causing the problem, try the next resolution.
 
 ## Resolution 3: Make sure that the Date and Time settings are correct
 
-Some secure sites require that the date and time match the date and time of the secure site. Make sure that the **Date and Time**settings are correct on the computer. To do this, follow these steps:
+Some secure sites require that the date and time match the date and time of the secure site. Make sure that the **Date and Time** settings are correct on the computer. To do this, follow these steps:
 
 1. In Control Panel, open **Date and Time**. To do this, click **Start**, type date and time in the **Start Search** box, and then click **Date and Time** in the **Programs** list.
 
