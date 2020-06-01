@@ -1,9 +1,6 @@
 - name: Welcome to Host Integration Server Support
   href: welcome-support-his.md
 
-- name: (Back up to Support hub page)
-  href: ../index.yml
-
 - name: Application integration (Transaction Integrator)
   items:
   - name: General questions
