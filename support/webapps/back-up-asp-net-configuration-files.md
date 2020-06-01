@@ -35,8 +35,8 @@ For more information about how to use AppCmd.exe, see [Getting Started with AppC
 
 For *web.config* files, you can use the [Configuration Editor](https://www.iis.net/downloads/microsoft/administration-pack) to find where all of the *web.config* files are located as shown below, and accordingly make a backup for all of them.
 
-![Configuration editor](./media/back-up-asp-net-configuration-files/config-editor.png)
+:::image type="content" source="./media/back-up-asp-net-configuration-files/config-editor.png" alt-text="Configuration editor":::
 
-![Web.config files location 1](./media/back-up-asp-net-configuration-files/webconfig-files-location-1.png)
+:::image type="content" source="./media/back-up-asp-net-configuration-files/webconfig-files-location-1.png" alt-text="Web.config files location 1":::
 
-![Web.config files location 2](./media/back-up-asp-net-configuration-files/webconfig-files-location-2.png)
+:::image type="content" source="./media/back-up-asp-net-configuration-files/webconfig-files-location-2.png" alt-text="Web.config files location 2":::
