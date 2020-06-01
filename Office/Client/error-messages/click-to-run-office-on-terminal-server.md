@@ -38,7 +38,7 @@ In Microsoft Office 2016:
 
 ## Cause
 
-This issue occurs because Click-to-Run versions of Office programs or suites running on a server with Remote Desktop Services (RDS), must have [Shared Computer Activation](https://docs.microsoft.com/en-us/deployoffice/overview-of-shared-computer-activation-for-office-365-proplus) enabled. Remote Desktop Services are formerly known as Terminal Services. Shared Computer Activation is only available for Microsoft 365 Apps. Other releases are not supported.
+This issue occurs because Click-to-Run versions of Office programs or suites running on a server with Remote Desktop Services (RDS), must have [Shared Computer Activation](https://docs.microsoft.com/deployoffice/overview-of-shared-computer-activation-for-office-365-proplus) enabled. Remote Desktop Services are formerly known as Terminal Services. Shared Computer Activation is only available for Microsoft 365 Apps. Other releases are not supported.
 
 ## Workaround
 

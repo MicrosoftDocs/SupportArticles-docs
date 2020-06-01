@@ -84,7 +84,7 @@ To manually remove existing product keys for an Office 2013 program, follow thes
    - If you're running 64-bit Windows with 32-bit Office:   
 
      ```powershell
-     cscript.exe "ProgramFiles(x86)%\Microsoft Office\Office15\ospp.vbs" /dstatus
+     cscript.exe "%ProgramFiles(x86)%\Microsoft Office\Office15\ospp.vbs" /dstatus
      ```       
    - If you're running 32-bit Windows, or running 64-bit Office with 64-bit Windows:  
 
