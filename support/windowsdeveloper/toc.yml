@@ -8,6 +8,8 @@
   items:
   - name: Component Development
     items:
+    - name: Applications receive errors when creating COM+ component
+      href: client-application-error-create-com-plus-component.md
     - name: Two DLL hosts start when COM+ is enabled
       href: two-dll-hosts-start-com-plus-enabled.md
   - name: Desktop app UI development
@@ -87,6 +89,8 @@
     items:
     - name: DXGI 1.2 API can't draw cursor to desktop image
       href: dxgi-cannot-draw-cursor.md
+    - name: Get formatted strings for an event using EvtFormatMessage
+      href: evtformatmessage-formatted-string-event.md
     - name: Guidelines for dates and times handling
       href: handle-dates-and-times-dst.md
     - name: SetSystemTimeAdjustment loses adjustments
@@ -116,3 +120,10 @@
     items:
     - name: Asynchronous Disk I/O appears synchronous
       href: asynchronous-disk-io-synchronous.md
+
+- name: Windows Administration and Management Development
+  items:
+  - name: Windows Management Instrumentation (WMI) API
+    items:
+    - name: MSI packages that use WMI queries fail to run
+      href: msi-packages-wmi-queries-cannot-run.md
