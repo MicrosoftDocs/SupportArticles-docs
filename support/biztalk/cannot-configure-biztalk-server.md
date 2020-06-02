@@ -1,5 +1,5 @@
 ---
-title: Exceptions when you configure BizTalk Server
+title: Exception when you configure BizTalk Server
 description: Fixes a System.EnterpriseServices.TransactionProxyException issue in which you receive an error when you configure BizTalk Server. This issue occurs in BizTalk Server 2006, 2006 R2, 2009, or 2010.
 ms.date: 03/06/2020
 ms.prod-support-area-path: 
@@ -66,7 +66,7 @@ To resolve this issue, configure the MSDTC service correctly both on the compute
 
     After you configure the properties page, the properties page settings resemble the settings in the following image.
 
-    ![local DTC properties configure screenshot](./media/cannot-configure-biztalk-server/local-dtc-property-setting.jpg)
+    :::image type="content" source="./media/cannot-configure-biztalk-server/local-dtc-property-setting.jpg" alt-text="local DTC properties configure screenshot" border="false":::
 
 3. Save the configurations, and then wait for the MSDTC service to restart.
 

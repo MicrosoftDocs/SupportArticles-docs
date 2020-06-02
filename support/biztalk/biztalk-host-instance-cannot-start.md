@@ -15,32 +15,19 @@ _Original KB number:_ &nbsp; 2411668
 
 BizTalk Host instance can't start after changing the config file in BizTalk Server. You may receive the following error:
 
-> A failure occurred when executing a Windows service request.
->
-> Service request: Start
->
-> BizTalk host name: BizTalkServerApplication
->
-> Windows service name: BTSSvc$BizTalkServerApplication
->
-> Additional error information:
->
-> Error code: 0xc0c0153a
->
-> Error source: BizTalk Server 2009
->
-> Error description: A BizTalk subservice has failed while executing a service request.
->
-> Subservice: Tracking
->
-> Service request: Start
->
-> Additional error information:
->
-> Error code: 0x80131534
->
-> Error source: System.Data
->
+> A failure occurred when executing a Windows service request.  
+> Service request: Start  
+> BizTalk host name: BizTalkServerApplication  
+> Windows service name: BTSSvc$BizTalkServerApplication  
+> Additional error information:  
+> Error code: 0xc0c0153a  
+> Error source: BizTalk Server 2009  
+> Error description: A BizTalk subservice has failed while executing a service request.  
+> Subservice: Tracking  
+> Service request: Start  
+> Additional error information:  
+> Error code: 0x80131534  
+> Error source: System.Data  
 > Error description: The type initializer for 'System.Data.SqlClient.SqlConnection' threw an exception. For more information, see Help and Support Center at [Microsoft Support](https://support.microsoft.com).
 
 ## Cause

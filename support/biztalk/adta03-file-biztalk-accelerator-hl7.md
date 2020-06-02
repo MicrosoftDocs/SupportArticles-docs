@@ -1,5 +1,5 @@
 ---
-title: ADT^A03 issues in BizTalk Accelerator for HL7
+title: ADT^A03 issue in BizTalk Accelerator for HL7
 description: Describes event ID 4101. This issue occurs when using sample data to create the ADT^A03.txt file in the BizTalk Server Accelerator for HL 7 1.3 tutorial.
 ms.date: 03/16/2020
 ms.prod-support-area-path:
