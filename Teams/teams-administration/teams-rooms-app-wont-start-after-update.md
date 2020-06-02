@@ -32,9 +32,10 @@ If your MTR system is running smoothly, but the application does not start after
 
 ### Step 1: Restart up to two times
 
-If any errors occur that might prevent the MTR from starting as expected after the update is installed, you can try to fix them by restarting the system two times. Wait 10 minutes between restarts. This step clears most cases. 
+If any errors occur that might prevent the MTR from starting as expected after the update is installed, you can try to fix them by restarting the system two times. Wait 10 minutes between restarts. This step clears most cases.
 
 To restart MTR, try any of the following methods:
+
 - Use the power button in the Start menu (RDP or local)
 - Run the “shutdown /r /t 0” command (remote or local)
 - Run the PowerShell “Restart-Computer” command (remote or local)
@@ -49,26 +50,26 @@ After the second restart, wait an additional 10 minutes. If the system does not 
 
 Critical scripts that typically run during startup may not run on some systems. To check for this situation, follow these steps:
 
-1.	[Sign in to the Administrator account on the device](/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
-2.	Select the **Start** menu.
-3.	Type **Event Viewer**, and then press **Enter**.
-4.	Expand **Application and Service Logs**, and then select **ScriptLaunch** log.
-5.	In the details pane, select **Filter Current Log**.
-6.	Select the **Error** check box, and then type 1002 into the text box labeled **\<All Event IDs>**.
-7.	Select **OK**.
+1. [Sign in to the administrative account on the device.](/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
+2. Select the **Start** menu.
+3. Type **Event Viewer**, and then press **Enter**.
+4. Expand **Application and Service Logs**, and then select **ScriptLaunch** log.
+5. In the details pane, select **Filter Current Log**.
+6. Select the **Error** check box, and then type 1002 into the text box labeled **\<All Event IDs>**.
+7. Select **OK**.
 
 If there are entries in the filtered list that correspond to your system’s recent startups, you are likely affected by this problem.
 
 If your system is affected (and app version 4.4.41.0 or later is installed), follow these steps:
 
-1.	[Sign in to the Administrator account on the device](/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
-2.	Open the **Start** menu.
-3.	Type **Command Prompt**, right-click the search result, and then select **Run as administrator**.
-4.	At the command prompt, type the following command, and then press Enter:
+1. [Sign in to the administrative account on the device.](/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
+2. Open the **Start** menu.
+3. Type **Command Prompt**, right-click the search result, and then select **Run as administrator**.
+4. At the command prompt, type the following command, and then press Enter:
 
-```
-powershell -executionpolicy unrestricted c:\rigel\x64\scripts\provisioning\scriptlaunch.ps1 Config\LocalProvisioning\CopyFiles.ps1
-```
+   ```
+   powershell -executionpolicy unrestricted c:\rigel\x64\scripts\provisioning\scriptlaunch.ps1 Config\LocalProvisioning\CopyFiles.ps1
+   ```
 
    > [!NOTE]
    > If errors are produced, you can safely disregard them. The final line of the output should read, "Success."
@@ -81,38 +82,42 @@ Some systems in the field have installed the Microsoft.SkypeRoomSystem app for t
 
 To check for this situation:
 
-1. [Sign in to the Admin account on the device](/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
+1. [Sign in to the administrative account on the device.](/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
 2. Open the **Start** menu.
 3. Type Windows PowerShell, right-click the search result, and then select **Run as administrator**.
 4. At the command prompt, type and run the following script:
 
-    ```
-    Get-AppxPackage -User “NT AUTHORITY\SYSTEM” Microsoft.SkypeRoomSystem
-    ```
+   ```
+   Get-AppxPackage -User “NT AUTHORITY\SYSTEM” Microsoft.SkypeRoomSystem
+   ```
 
 5. If the command generates no output, the system is not affected. In this case, go to Step 4.
 
 6. If the command does generate output, the system is affected. In this case, follow these steps:
-    1. [Sign in to the Admin user on the device](/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
-    2. Open the **Start** menu.
-    3. Type **Notepad**, right-click the search result, and then select **Run as administrator**.
-    4. Copy the following script into Notepad:
 
-       ```
-       Get-AppxPackage Microsoft.SkypeRoomSystem | Remove-AppxPackage
-       Remove-Item C:\Rigel\AdminHookScripts\Logon.ps1
-       Restart-Computer -Force
-       ```
-        
-    5. Press **Ctrl+S**.
-    6. In the File name field, enter: 
-            ```
-            C:\Rigel\AdminHookScripts\Logon.ps1.
-            ```
-    7. In the **Save as type** list, select **All Files (*.*)**.
-    8. Select **Save**.
-    > [!NOTE]
-    > You must have elevated privileges to write to this directory.
+   1. [Sign in to the administrative account on the device.](/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
+   2. Open the **Start** menu.
+   3. Type **Notepad**, right-click the search result, and then select **Run as administrator**.
+   4. Copy the following script into Notepad:
+
+      ```
+      Get-AppxPackage Microsoft.SkypeRoomSystem | Remove-AppxPackage
+      Remove-Item C:\Rigel\AdminHookScripts\Logon.ps1
+      Restart-Computer -Force
+      ```
+
+   5. Press **Ctrl+S**.
+   6. In the File name field, enter:
+
+      ```
+      C:\Rigel\AdminHookScripts\Logon.ps1.
+      ```
+
+   7. In the **Save as type** list, select **All Files (*.*)**.
+   8. Select **Save**.
+
+   > [!NOTE]
+   > You must have elevated privileges to write to this directory.
 
 After the script is successfully saved, restart the computer. Up to two additional restarts may be required (see Step 1).
 
@@ -127,44 +132,53 @@ Some systems may have been interrupted or otherwise failed to correctly set thei
 
 To check for this situation, follow these steps:
 
-1.	[Sign in to the Administrator account on the device](/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
-2.	Open the **Start** menu.
-3.	Type **Command Prompt**, right-click the search result, and then select **Run as administrator**.
-4.	At the command prompt, type the following script, and then press Enter: 
-    ```
-    psexec -accepteula -i -s cmd
-    ```
-    > [!NOTE]
-    > A new shell is created.
-5.	In the new shell, type and run the following command: 
-    ```
-    powershell -Command “& {(Get-CimInstance -Namespace ‘root\cimv2\mdm\dmmap’ -ClassName ‘MDM_AssignedAccess’).ShellLauncher}”
-    ```
+1. [Sign in to the administrative account on the device.](/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
+2. Open the **Start** menu.
+3. Type **Command Prompt**, right-click the search result, and then select **Run as administrator**.
+4. At the command prompt, type the following script, and then press Enter:
 
-6.	If the command prints an XML file that's about 24 lines long, the system is not affected. In this case, go to Step 5. 
+   ```
+   psexec -accepteula -i -s cmd
+   ```
+
+   > [!NOTE]
+   > A new shell is created.
+
+5. In the new shell, type and run the following command:
+
+   ```
+   powershell -Command “& {(Get-CimInstance -Namespace ‘root\cimv2\mdm\dmmap’ -ClassName ‘MDM_AssignedAccess’).ShellLauncher}”
+   ```
+
+6. If the command prints an XML file that's about 24 lines long, the system is not affected. In this case, go to Step 5.
 
 7. If the command returns an error, nothing, or an empty XML file, the system is affected. If your system is affected, follow these steps:
-    1. [Sign in to the Administrator account on the device](/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
-    2. Open the **Start** menu.
-    3. Type **winver**, and select the search result.
-    4. Verify that the window that opens indicates “Version 1903” or a later version. If you follow these steps on MTR devices that run earlier versions of Windows this procedure will not resolve the issue and might cause further problems.
-    5. Open the **Start** menu.
-    6. Type **Command Prompt**, right-click the search result, and then select **Run as administrator**.
-    7. At the command prompt, type the following script, and then press Enter:
-     ```
-     psexec -accepteula -i -s cmd
-     ```
-    > [!NOTE]
-    > A new shell is created.
 
-    8. In the new shell, type and run the following script: 
-    ```
-    powershell -executionpolicy unrestricted c:\Rigel\x64\Scripts\Provisioning\ScriptLaunch.ps1 Config\SetupShell\CustomShell.ps1
-    ```
-    > [!NOTE]
-    > This command returns “RebootRequired.”
+   1. [Sign in to the administrative account on the device.](/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
+   2. Open the **Start** menu.
+   3. Type **winver**, and select the search result.
+   4. Verify that the window that opens indicates “Version 1903” or a later version. If you follow these steps on MTR devices that run earlier versions of Windows this procedure will not resolve the issue and might cause further problems.
+   5. Open the **Start** menu.
+   6. Type **Command Prompt**, right-click the search result, and then select **Run as administrator**.
+   7. At the command prompt, type the following script, and then press Enter:
 
-    9. Restart the computer. Up to two additional restarts may be required (see Step 1).
+      ```
+      psexec -accepteula -i -s cmd
+      ```
+
+      > [!NOTE]
+      > A new shell is created.
+
+   8. In the new shell, type and run the following script:
+
+      ```
+      powershell -executionpolicy unrestricted c:\Rigel\x64\Scripts\Provisioning\ScriptLaunch.ps1 Config\SetupShell\CustomShell.ps1
+      ```
+
+      > [!NOTE]
+      > This command will return “RebootRequired.” If the command generates an error (whether or not it returns “RebootRequired”), then this mitigation has failed. Please contact support.
+
+   9. Restart the computer. Up to two additional restarts may be required (see Step 1).
 
 ### Step 5: Contact Customer Support
 
