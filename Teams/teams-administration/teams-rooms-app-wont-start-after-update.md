@@ -50,7 +50,7 @@ After the second restart, wait an additional 10 minutes. If the system does not 
 
 Critical scripts that typically run during startup may not run on some systems. To check for this situation, follow these steps:
 
-1. [Sign in to the administrative account on the device.](/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
+1. [Sign in to the administrative account on the device](/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
 2. Select the **Start** menu.
 3. Type **Event Viewer**, and then press **Enter**.
 4. Expand **Application and Service Logs**, and then select **ScriptLaunch** log.
@@ -62,7 +62,7 @@ If there are entries in the filtered list that correspond to your system’s rec
 
 If your system is affected (and app version 4.4.41.0 or later is installed), follow these steps:
 
-1. [Sign in to the administrative account on the device.](/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
+1. [Sign in to the administrative account on the device](/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
 2. Open the **Start** menu.
 3. Type **Command Prompt**, right-click the search result, and then select **Run as administrator**.
 4. At the command prompt, type the following command, and then press Enter:
@@ -82,7 +82,7 @@ Some systems in the field have installed the Microsoft.SkypeRoomSystem app for t
 
 To check for this situation:
 
-1. [Sign in to the administrative account on the device.](/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
+1. [Sign in to the administrative account on the device](/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
 2. Open the **Start** menu.
 3. Type Windows PowerShell, right-click the search result, and then select **Run as administrator**.
 4. At the command prompt, type and run the following script:
@@ -95,7 +95,7 @@ To check for this situation:
 
 6. If the command does generate output, the system is affected. In this case, follow these steps:
 
-   1. [Sign in to the administrative account on the device.](/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
+   1. [Sign in to the administrative account on the device](/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
    2. Open the **Start** menu.
    3. Type **Notepad**, right-click the search result, and then select **Run as administrator**.
    4. Copy the following script into Notepad:
@@ -132,7 +132,7 @@ Some systems may have been interrupted or otherwise failed to correctly set thei
 
 To check for this situation, follow these steps:
 
-1. [Sign in to the administrative account on the device.](/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
+1. [Sign in to the administrative account on the device](/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
 2. Open the **Start** menu.
 3. Type **Command Prompt**, right-click the search result, and then select **Run as administrator**.
 4. At the command prompt, type the following script, and then press Enter:
@@ -154,7 +154,7 @@ To check for this situation, follow these steps:
 
 7. If the command returns an error, nothing, or an empty XML file, the system is affected. If your system is affected, follow these steps:
 
-   1. [Sign in to the administrative account on the device.](/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
+   1. [Sign in to the administrative account on the device](/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
    2. Open the **Start** menu.
    3. Type **winver**, and select the search result.
    4. Verify that the window that opens indicates “Version 1903” or a later version. If you follow these steps on MTR devices that run earlier versions of Windows this procedure will not resolve the issue and might cause further problems.
