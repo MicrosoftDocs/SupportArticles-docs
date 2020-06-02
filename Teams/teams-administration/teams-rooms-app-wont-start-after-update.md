@@ -91,7 +91,7 @@ To check for this situation:
    Get-AppxPackage -User “NT AUTHORITY\SYSTEM” Microsoft.SkypeRoomSystem
    ```
 
-5. If the command generates no output, the system is not affected. In this case, go to Step 4.
+5. If the command generates no output, the system is not affected. In this case, go to "Step 4: Check the shell configuration.".
 
 6. If the command does generate output, the system is affected. In this case, follow these steps:
 
