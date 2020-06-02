@@ -67,7 +67,7 @@ If your system is affected (and app version 4.4.41.0 or later is installed), fol
 3. Type **Command Prompt**, right-click the search result, and then select **Run as administrator**.
 4. At the command prompt, type the following command, and then press Enter:
 
-   ```
+   ```PowerShell
    powershell -executionpolicy unrestricted c:\rigel\x64\scripts\provisioning\scriptlaunch.ps1 Config\LocalProvisioning\CopyFiles.ps1
    ```
 
@@ -87,7 +87,7 @@ To check for this situation:
 3. Type Windows PowerShell, right-click the search result, and then select **Run as administrator**.
 4. At the command prompt, type and run the following script:
 
-   ```
+   ```PowerShell
    Get-AppxPackage -User “NT AUTHORITY\SYSTEM” Microsoft.SkypeRoomSystem
    ```
 
@@ -146,7 +146,7 @@ To check for this situation, follow these steps:
 
 5. In the new shell, type and run the following command:
 
-   ```
+   ```PowerShell
    powershell -Command “& {(Get-CimInstance -Namespace ‘root\cimv2\mdm\dmmap’ -ClassName ‘MDM_AssignedAccess’).ShellLauncher}”
    ```
 
@@ -171,7 +171,7 @@ To check for this situation, follow these steps:
 
    8. In the new shell, type and run the following script:
 
-      ```
+      ```PowerShell
       powershell -executionpolicy unrestricted c:\Rigel\x64\Scripts\Provisioning\ScriptLaunch.ps1 Config\SetupShell\CustomShell.ps1
       ```
 
