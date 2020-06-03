@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 4011918
 When you try to build a Windows driver for Windows 10 by using Visual Studio 2015 and the Windows Driver Kit 10, the build is unsuccessful. This issue may occur if you install Visual Studio 2015 from a DVD or from the ISO you received as part of your MSDN subscription.
 
 > [!NOTE]
-> This issue doesn't occur if you use the default installation type (Typical for Windows 10 Developers) for Visual Studio 2015 from[Download the Windows Driver Kit (WDK)](/windows-hardware/drivers/download-the-wdk).  
+> This issue doesn't occur if you use the default installation type (Typical for Windows 10 Developers) for Visual Studio 2015 from [Download the Windows Driver Kit (WDK)](/windows-hardware/drivers/download-the-wdk).  
 
 ## Cause
 

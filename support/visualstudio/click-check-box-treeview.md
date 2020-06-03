@@ -8,7 +8,7 @@ ms.prod-support-area-path:
 
 This article describes how to know when the user clicks a check box in a TreeView control.
 
-_Original product version:_ &nbsp;  Visual C#  
+_Original product version:_ &nbsp;  Visual C++  
 _Original KB number:_ &nbsp; 261289
 
 ## Summary
@@ -23,7 +23,7 @@ When the user clicks the check box of a TreeView item, an `NM_CLICK` notificatio
 
 You can post a user-defined message to the same window that is processing the `NM_CLICK` notification, and treat this user-defined message as a notification that the checked state has changed. The following sample code illustrates how it can be accomplished.
 
-```csharp
+```cpp
 #define UM_CHECKSTATECHANGE (WM_USER + 100)
 
 case WM_NOTIFY:

@@ -5,7 +5,7 @@ ms.date: 04/22/2020
 ms.prod-support-area-path:
 ms.reviewer: danmose
 ---
-# Visual Studio 2010 build fails with the referenced project doesn't exist error
+# Visual Studio 2010 build fails: The referenced project doesn't exist
 
 This article provides information about resolving the Visual Studio 2010 build failure when building a solution with multiple projects and there exists dependency relationships among those projects.
 

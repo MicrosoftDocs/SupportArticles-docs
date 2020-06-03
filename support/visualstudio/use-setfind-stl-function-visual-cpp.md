@@ -8,7 +8,7 @@ ms.prod-support-area-path:
 
 This article illustrates how to use the `set::find` Standard Template Library (STL) function in Visual C++.
 
-_Original product version:_ &nbsp; Visual Studio  
+_Original product version:_ &nbsp; Visual C++  
 _Original KB number:_ &nbsp; 158576
 
 ## Required header

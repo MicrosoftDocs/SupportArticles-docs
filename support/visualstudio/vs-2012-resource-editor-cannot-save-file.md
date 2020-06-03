@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 2839032
 
 You're using Visual Studio 2012, where you're editing a Visual C++ project and making changes to a dialog in the Resource Editor. An unexpected message box appears with the error message:
 
-![Can't save file error](./media/vs-2012-resource-editor-cannot-save-file/error-message.png)
+:::image type="content" source="./media/vs-2012-resource-editor-cannot-save-file/error-message.png" alt-text="Can't save file error" border="false":::
 
 ## Cause
 
@@ -28,7 +28,7 @@ There's an issue with how the **AutoRecover** feature is interacting with the Re
 
     1. Disable the **AutoRecover** option in **Tools** > **Options** > **Environment** > **AutoRecover**, by un-checking the **Save AutoRecover information every:** checkbox:
 
-        ![unselected Save AutoRecover information every checkbox](./media/vs-2012-resource-editor-cannot-save-file/uncheck-save-autorecover-information-every-option.png)
+        :::image type="content" source="./media/vs-2012-resource-editor-cannot-save-file/uncheck-save-autorecover-information-every-option.png" alt-text="unselected Save AutoRecover information every checkbox" border="false":::
 
     1. Save your edited resources within the specified interval to avoid the triggering of Auto-Save. You may increase the interval, but this also increases the risk of losing unsaved work.
 
@@ -36,7 +36,7 @@ There's an issue with how the **AutoRecover** feature is interacting with the Re
 
     1. If you aren't using context help ID, then turning that off for every control would be the easiest solution. Turning it off from the resource editor would be safest. In the resource editor, check for all the controls and one of the properties will be **Help ID**. Set it to **False** for every control where it's **True**.
 
-        ![Control properties Help ID ](./media/vs-2012-resource-editor-cannot-save-file/set-help-id-to-false.png)
+        :::image type="content" source="./media/vs-2012-resource-editor-cannot-save-file/set-help-id-to-false.png" alt-text="Control properties Help ID" :::
 
     2. Alternatively you could edit the .rc file directly. For instance, removing the last parameter here for every control with a **Help ID** would turn off the feature:
 

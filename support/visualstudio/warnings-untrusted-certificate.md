@@ -57,7 +57,7 @@ During the upgrade to Visual Studio 2015 Update 3, IIS Express installs a new SH
 
 2. Click **Yes** when you receive the following warning:
 
-    ![Certification Authority warning](./media/warnings-untrusted-certificate/certification-authority-warning.jpg)
+    :::image type="content" source="./media/warnings-untrusted-certificate/certification-authority-warning.jpg" alt-text="Certification Authority warning" border="false":::
 
 3. After the script finishes running, you should see the following message in the PowerShell ISE command window:
 
@@ -67,41 +67,41 @@ During the upgrade to Visual Studio 2015 Update 3, IIS Express installs a new SH
 
 1. Open the Microsoft Management Console by clicking **Start**, typing *Run*, and then pressing Enter. In the **Run** dialog box, type *mmc*, and then click **OK**.
 
-    ![Screenshot of entering mmc.](./media/warnings-untrusted-certificate/mmc.jpg)
+    :::image type="content" source="./media/warnings-untrusted-certificate/mmc.jpg" alt-text="Screenshot of entering mmc." border="false":::
 
 2. Add a snap-in to manage certificates for the local computer. To do this, follow these steps:
    1. On the **File** menu, click **Add/Remove Snap-in**.
 
-      ![Console to add or remove snap-ins.](./media/warnings-untrusted-certificate/add-or-remove-snap-ins.jpg)
+      :::image type="content" source="./media/warnings-untrusted-certificate/add-or-remove-snap-ins.jpg" alt-text="Console to add or remove snap-ins." border="false":::
 
    2. In the **Add or Remove Snap-ins** dialog box, select **Certificates**, and then click **Add**.
 
-      ![Screenshot of selecting Certificates.](./media/warnings-untrusted-certificate/select-certificates.jpg)
+      :::image type="content" source="./media/warnings-untrusted-certificate/select-certificates.jpg" alt-text="Screenshot of selecting Certificates." border="false":::
 
    3. In the **Certificates snap-in** dialog box, select **Computer account**, and then click **Next**.
 
-      ![Screenshot of Computer account.](./media/warnings-untrusted-certificate/certificates-snap-in.jpg)
+      :::image type="content" source="./media/warnings-untrusted-certificate/certificates-snap-in.jpg" alt-text="Screenshot of Computer account." border="false":::
 
    4. In the **Select Computer** dialog box, select **Local Computer**, and then click **Finish**.
 
-       ![Screenshot of selecting computer.](./media/warnings-untrusted-certificate/select-computer.jpg)
+       :::image type="content" source="./media/warnings-untrusted-certificate/select-computer.jpg" alt-text="Screenshot of selecting computer." border="false":::
 
    5. In the **Add or Remove Snap-ins** dialog box, select **Certificates** again, and this time select **My user account** in the **Certificates snap-in** dialog box.
 
-      ![Screenshot of selecting my user account.](./media/warnings-untrusted-certificate/select-my-user-account.jpg)
+      :::image type="content" source="./media/warnings-untrusted-certificate/select-my-user-account.jpg" alt-text="Screenshot of selecting my user account." border="false":::
 
 3. Export the SHA256 IIS Express certificate from `Certificates (Local Computer)\Personal\Certificates`, as follows:
    1. Open the IIS Express Development Certificate, verify that you have selected the SHA256 certificate. and then click **Copy to File**.
 
-      ![Screenshot of selecting the SHA256 certificate and Copy.](./media/warnings-untrusted-certificate/copy-to-file.jpg)
+      :::image type="content" source="./media/warnings-untrusted-certificate/copy-to-file.jpg" alt-text="Screenshot of selecting the SHA256 certificate and Copy." border="false":::
 
    2. In the Certificate Export Wizard, select **No, do not export the private key**, and then click **Next**.
 
-      ![Screenshot of Certificate Export Wizard dialog.](./media/warnings-untrusted-certificate/certificate-export-wizard.jpg)
+      :::image type="content" source="./media/warnings-untrusted-certificate/certificate-export-wizard.jpg" alt-text="Screenshot of Certificate Export Wizard dialog." border="false":::
 
    3. On the next page of the wizard, select **DER encoded binary X.509 (.CER)**, and then click **Next**.
 
-      ![DER encoded binary X.509.](./media/warnings-untrusted-certificate/der-encoded-binary-x-509.jpg)
+      :::image type="content" source="./media/warnings-untrusted-certificate/der-encoded-binary-x-509.jpg" alt-text="DER encoded binary X.509." border="false":::
 
    4. On the next page of the wizard, select a location on disk, and follow the remaining steps until you have successfully exported the certificate.
 
@@ -114,7 +114,7 @@ During the upgrade to Visual Studio 2015 Update 3, IIS Express installs a new SH
 
     2. In the Certificate Import Wizard, browse to the certificate that you exported (Trusted Root Certification Authority), and then select **Place all certificates in the following store**.
 
-       ![all certificates in Trusted Root Certification Authority store](./media/warnings-untrusted-certificate/place-all-certificates.jpg)
+       :::image type="content" source="./media/warnings-untrusted-certificate/place-all-certificates.jpg" alt-text="all certificates in Trusted Root Certification Authority store" border="false":::
 
     3. Click **Next**, verify that you selected the correct certificate, and then click **Finish**.
 

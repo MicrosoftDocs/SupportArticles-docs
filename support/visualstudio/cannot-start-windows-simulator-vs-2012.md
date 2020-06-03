@@ -37,7 +37,7 @@ To resolve this issue, use one of the following methods:
 
 ## Status
 
-Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the [Applies to](#applies-to) section.
+Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the Applies to section.
 
 ## Applies to
 
