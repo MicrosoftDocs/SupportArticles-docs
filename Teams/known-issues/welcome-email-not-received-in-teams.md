@@ -30,4 +30,4 @@ When adding a member to a team using PowerShell or the Teams admin center, they 
 
 [Adding a member from the Teams UI](https://support.office.com/article/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) directly is the only way to send the welcome email. Currently, there is no workaround doing so administratively.
 
-Still need help? Go to [Microsoft Community](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fanswers.microsoft.com%2F&data=02%7C01%7Cv-todmc%40microsoft.com%7C98910814456c474880f108d7cf62d97d%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637205895885805857&sdata=9%2FYStDGvrU5ZIYXB7guowmaPlKazab0U%2BTpiBIItDaQ%3D&reserved=0).
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
