@@ -1,6 +1,6 @@
 ---
-title: Default Office Add-in icon displayed in the Outlook Ribbon
-description: Describes an issue in which Office Add-in isn't displayed the actual icon in the Outlook Ribbon. 
+title: Default Office Add-in icon is displayed in the Outlook Ribbon
+description: Describes an issue in which Office Add-in icon isn't displayed the actual icon in the Outlook Ribbon in Outlook 2013 or 2016. 
 author: TobyTu
 ms.author: aruiz
 manager: dcscontentpm
@@ -44,7 +44,7 @@ Disable the Internet Explorer Security setting **Do not save encrypted pages to 
 1. Exit Outlook
 2. In Windows, open **Internet Options** and select **Advanced** tab.
 3. Under the **Security** heading, clear the **Do not save encrypted pages to disk** option.
-4. Click **OK**.
+4. Select **OK**.
 5. Start Outlook.
 
 If you can't disable the option, it’s managed by a Group Policy. Contact your system administrator to determine the appropriate configuration for this setting.
