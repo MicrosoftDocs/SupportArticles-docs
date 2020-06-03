@@ -5,7 +5,7 @@ ms.date: 04/27/2020
 ms.prod-support-area-path:
 ms.reviewer: dangrif
 ---
-# Visual Studio 2010 Concurrency Visualizer prevents lost kernel and user mode events by adjusting Event Tracing for Windows (ETW) buffer
+# Visual Studio 2010 Concurrency Visualizer prevents lost kernel and user mode events by ETW buffer
 
 This article provides information about how to prevent lost kernel and user mode events by adjusting Event Tracing for Windows (ETW) buffer settings in the Windows registry.
 

@@ -51,7 +51,6 @@ This article illustrates the use of STL `sqrt()` and `pow()` functions through t
 // main.cpp : Illustrates the use of STL sqrt() and pow() functions.
 // Functions:
 //    sqrt, pow
-// Written by Yeong-Kah Tam
 // of Microsoft Product Support Services,
 // Copyright (c) 1996 Microsoft Corporation. All rights reserved.
 //////////////////////////////////////////////////////////////////////

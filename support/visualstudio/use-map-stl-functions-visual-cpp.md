@@ -92,15 +92,15 @@ void main()
        cout << "Enter \"q\" to quit, or enter a Number: ";
        cin >> theString;
        if(theString == "q")
-       break;
+           break;
        // extract each digit from the string, find its corresponding
        // entry in the map (the word equivalent) and print it
        for(index = 0; index < theString.length(); index++){
-       theIterator = theMap.find(theString[index] - '0');
-       if(theIterator != theMap.end()) // is 0 - 9
-       cout << (*theIterator).second << " ";
-       else // some character other than 0 - 9
-       cout << "[err] ";
+           theIterator = theMap.find(theString[index] - '0');
+           if(theIterator != theMap.end()) // is 0 - 9
+               cout << (*theIterator).second << " ";
+           else // some character other than 0 - 9
+               cout << "[err] ";
        }
        cout << endl;
     }

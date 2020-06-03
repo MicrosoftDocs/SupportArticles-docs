@@ -65,7 +65,6 @@ In Visual C++ .NET and in Visual C++, **/EHsc** is set by default and is equival
 // vector::push_back - Appends (inserts) an element to the end of a
 // vector, allocating memory for it if necessary.
 // vector::iterator - Traverses the vector.
-// Written by Tom Campbell
 // of Microsoft Corporation
 // Copyright (c) 1996 Microsoft Corporation. All rights reserved.
 //////////////////////////////////////////////////////////////////////

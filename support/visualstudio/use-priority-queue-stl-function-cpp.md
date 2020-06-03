@@ -51,7 +51,6 @@ The sample shows `priority_queue`implementation using `deque` and `vector` conta
 // Functions:
 // priority_queue::push(), priority_queue::pop(),
 // priority_queue::empty(), priority_queue::top(), queue::size()
-// Written by Debabrata Sarma
 // of Microsoft Product Support Services,
 // Copyright (c) 1996 Microsoft Corporation. All rights reserved.
 //////////////////////////////////////////////////////////////////////

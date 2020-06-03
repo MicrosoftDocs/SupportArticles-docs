@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 816149
 
 ## Summary
 
-The [Read a Text File](#read-a-text-file) section of this article describes how to use the `StreamReader` class to read a text file. The [Write a text file (Example 1)](#write-a-text-file-example-1) and the [Write a text file (Example 2)](#write-a-text-file-example-2) sections describe how to use the `StreamWriter` class to write text to a file.
+The [Read a Text File](#read-a-text-file) section of this article describes how to use the `StreamReader` class to read a text file. The [Write a text file (example 1)](#write-a-text-file-example-1) and the [Write a text file (example 2)](#write-a-text-file-example-2) sections describe how to use the `StreamWriter` class to write text to a file.
 
 ## Read a text file
 

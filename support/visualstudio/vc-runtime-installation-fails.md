@@ -5,7 +5,7 @@ ms.date: 04/27/2020
 ms.prod-support-area-path: 
 ms.reviewer: smondal
 ---
-# The filename, directory name, or volume label syntax is incorrect error when installing VC Runtime
+# Error when installing VC Runtime: The filename, directory name, or volume label syntax is incorrect
 
 This article provides the information about solving the error message that occurs when you try to install the Microsoft Visual C++ Redistributable Package.
 
