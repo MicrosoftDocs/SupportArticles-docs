@@ -16,7 +16,7 @@ _Original KB number:_&nbsp;911771
 
 On a computer that's running Microsoft Visual Studio, you try to use the Add Generated Items Wizard in a BizTalk Server 2006 or BizTalk Server 2004 project to generate an XML Schema Definition (XSD) schema. The wizard doesn't generate an XSD schema, and you might get an error message like this one:
 
-> "There were some errors generated during schema generation. Go to task list to view errors. Task list may be filtered, enable showing of all task list items to see schema generation errors."
+> There were some errors generated during schema generation. Go to task list to view errors. Task list may be filtered, enable showing of all task list items to see schema generation errors.
 
 ## Cause
 
@@ -31,7 +31,7 @@ To resolve the problem, use one of the following methods:
 
 ## Status
 
-Microsoft has confirmed that this is a problem in the Microsoft products that are listed as the *original product version* at the beginning of this article.
+Microsoft has confirmed that this is a problem in the Microsoft products that are listed as the original product version at the beginning of this article.
 
 ## More information
 
