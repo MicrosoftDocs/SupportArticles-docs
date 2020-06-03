@@ -66,7 +66,7 @@ This article describes how to troubleshoot problems that may occur when you star
 </td>
 <td><b><a href="#option2">Start Word by using the /a switch</a></b>
 <ol>
-<li>Type <b>Run</b> in the <b>Search</b> box (in Windows 10, Windows 8.1, or Windows 8) or in the <b>Start Search</b> box on the <b>Start</b> menu (in earlier versions of Windows), and then press Enter.</li>
+<li>Type <b>Run</b> in the <b>Search</b> box (in Windows 10, Windows 8.1, or Windows 8) or in the <b>Start Search</b> box on the <b>Start</b> menu (in earlier versions of Windows), and then press <b>Enter</b>.</li>
 <li>In the <b>Run</b> dialog box, type <b>winword /a</b>, and then press <b>Enter</b>.</li>
 </ol>
 </td>
@@ -116,7 +116,7 @@ This article describes how to troubleshoot problems that may occur when you star
 
 <ol>
 <li>Exit all Office programs.</li>
-<li>Type <b>regedit</b> in the <b>Search</b> box (in Windows 10, Windows 8.1, or Windows 8) or in the <b>Start Search</b> box on the <b>Start</b> menu (in earlier versions of Windows), and then press Enter.</li>
+<li>Type <b>regedit</b> in the <b>Search</b> box (in Windows 10, Windows 8.1, or Windows 8) or in the <b>Start Search</b> box on the <b>Start</b> menu (in earlier versions of Windows), and then press <b>Enter</b>.</li>
 <li>Locate the following registry subkey, as appropriate for the version of Word that you are running:
 
 |||
@@ -149,7 +149,7 @@ This article describes how to troubleshoot problems that may occur when you star
 <td><b><a href="#option5">Replace the Normal.dot or Normal.dotm global template file</a></b>
 <ol>
 <li>Exit all Office programs.</li>
-<li>Type <b>cmd</b> in the <b>Search</b> box (in Windows 10, Windows 8.1, or Windows 8) or in the <b>Start Search</b> box on the <b>Start</b> menu (in earlier versions of Windows), and then press Enter.</li>
+<li>Type <b>cmd</b> in the <b>Search</b> box (in Windows 10, Windows 8.1, or Windows 8) or in the <b>Start Search</b> box on the <b>Start</b> menu (in earlier versions of Windows), and then press <b>Enter</b>.</li>
 <li>At the command prompt, type the following command, as appropriate for the version of Word that you are running, and then press <b>Enter</b>:
 
    **Word 2016, Word 2013, Word 2010, or Word 2007**
@@ -164,7 +164,7 @@ This article describes how to troubleshoot problems that may occur when you star
 
 
 </li>
-<li>At the command prompt, type exit, and then press <b>Enter</b>.</li>
+<li>At the command prompt, type <b>exit</b>, and then press <b>Enter</b>.</li>
 <li>Start Word.</li>
 </ol>
 
@@ -182,8 +182,8 @@ This article describes how to troubleshoot problems that may occur when you star
 
 <ol>
 <li>Exit all Office programs.</li>
-<li>Start Windows Explorer. Type windows ex in the <b>Search</b> box (in Windows 10, Windows 8.1, or Windows 8) or in the <b>Start Search</b> box on the <b>Start</b> menu (in earlier versions of Windows), and then press Enter.</li>
-<li>Type the following command in the address bar, as appropriate for the version of Word that you're running and its installation type, and then press Enter:
+<li>Start Windows Explorer. Type <b>windows ex</b> in the <b>Search</b> box (in Windows 10, Windows 8.1, or Windows 8) or in the <b>Start Search</b> box on the <b>Start</b> menu (in earlier versions of Windows), and then press <b>Enter</b>.</li>
+<li>Type the following command in the address bar, as appropriate for the version of Word that you're running and its installation type, and then press <b>Enter</b>:
 
 
 
@@ -203,7 +203,7 @@ This article describes how to troubleshoot problems that may occur when you star
 
 </li>
 <li>Right-click one of the files that is contained in the folder, and then select <b>Rename</b>.</li>
-<li>After the file name, type .old, and then press Enter.
+<li>After the file name, type <b>.old</b>, and then press <b>Enter</b>.
 
    > [!IMPORTANT]
    >  Make a note of the original file name so that you can restore the file, if it is necessary.
@@ -242,7 +242,7 @@ This article describes how to troubleshoot problems that may occur when you star
 
 <ol>
 <li>Exit all Office programs.</li>
-<li>Type <b>regedit</b> in the <b>Search</b> box (in Windows 10, Windows 8.1, or Windows 8) or in the <b>Start Search</b> box on the <b>Start</b> menu (in earlier versions of Windows), and then press Enter.</li>
+<li>Type <b>regedit</b> in the <b>Search</b> box (in Windows 10, Windows 8.1, or Windows 8) or in the <b>Start Search</b> box on the <b>Start</b> menu (in earlier versions of Windows), and then press <b>Enter</b>.</li>
 <li>Locate the following registry subkey:<br/>
 HKEY_CURRENT_USER\Software\Microsoft\Office\Word\Addins
 
@@ -275,7 +275,7 @@ HKEY_LOCAL_MACHINE\Software\Microsoft\Office\Word\Addins
 
 <ol>
 <li>Exit all Office programs.</li>
-<li>Type <b>regedit</b> in the <b>Search</b> box (in Windows 10, Windows 8.1, or Windows 8) or in the <b>Start Search</b> box on the <b>Start</b> menu (in earlier versions of Windows), and then press Enter.</li>
+<li>Type <b>regedit</b> in the <b>Search</b> box (in Windows 10, Windows 8.1, or Windows 8) or in the <b>Start Search</b> box on the <b>Start</b> menu (in earlier versions of Windows), and then press <b>Enter</b>.</li>
 <li>Right-click <b>Microsoft XPS Document Writer</b>, and then select <b>Set as default printer</b>.</li>
 <li>Start Word.</li>
 </ol>
@@ -326,8 +326,8 @@ To access a document but leave its final paragraph mark behind, follow these ste
 
 The /a switch is a troubleshooting tool that is used to determine where a problem may exist in Word. The /a switch prevents add-ins and global templates from being loaded automatically. The /a switch also locks the settings files to prevent it from being read or modified. To start Word by using the /a switch, follow these steps:
 
-1. Type **Run** in the **Search** box (in Windows 10, Windows 8.1, or Windows 8) or in the **Start Search** box on the **Start** menu (in earlier versions of Windows), and then press Enter.    
-2. In the **Run** dialog box, type **winword /a**, and then press Enter.    
+1. Type **Run** in the **Search** box (in Windows 10, Windows 8.1, or Windows 8) or in the **Start Search** box on the **Start** menu (in earlier versions of Windows), and then press **Enter**.    
+2. In the **Run** dialog box, type **winword /a**, and then press **Enter**.    
  
 For more information about the /a switch, see KB [826857](https://support.microsoft.com/help/826857) "Description of the "/a" startup switch in Word."
  
@@ -349,7 +349,7 @@ Most of the frequently used options in Word are stored in the Word Data registry
 To delete the Word Data registry subkey, follow these steps:
 
 1. Exit all Office programs.    
-2. Type **regedit** in the **Search** box (in Windows 10, Windows 8.1, or Windows 8) or in the **Start Search** box on the **Start** menu (in earlier versions of Windows), and then press Enter.    
+2. Type **regedit** in the **Search** box (in Windows 10, Windows 8.1, or Windows 8) or in the **Start Search** box on the **Start** menu (in earlier versions of Windows), and then press **Enter**.    
 3. Locate the following registry subkey, as appropriate for the version of Word that you are using:
 
    |||
@@ -392,7 +392,7 @@ The Word Options registry key stores options that you can set in Word. These set
 To delete the Word Options registry key, follow these steps:
  
 1. Exit all Office programs.    
-2. Type **regedit** in the **Search** box (in Windows 10, Windows 8.1, or Windows 8) or in the **Start Search** box on the **Start** menu (in earlier versions of Windows), and then press Enter.    
+2. Type **regedit** in the **Search** box (in Windows 10, Windows 8.1, or Windows 8) or in the **Start Search** box on the **Start** menu (in earlier versions of Windows), and then press **Enter**.    
 3. Locate the following registry subkey, as appropriate for the version of Word that you are running:
 
    |||
@@ -437,7 +437,7 @@ To rename the global template file, follow these steps:
 
 1. Exit all Office programs.    
 2. Type **cmd** in the **Search** box (in Windows 10, Windows 8.1, or Windows 8) or in the **Start Search** box on the **Start** menu (in earlier versions of Windows), and then press Enter.    
-3. At the command prompt, type the following command, as appropriate for the version of Word that you are running, and then press Enter:
+3. At the command prompt, type the following command, as appropriate for the version of Word that you are running, and then press **Enter**:
 
    **Word 2016, Word 2013, Word 2010, or Word 2007**
   
@@ -448,7 +448,7 @@ To rename the global template file, follow these steps:
    ```powershell   
    ren %userprofile%\AppData\Roaming\Microsoft\Templates\Normal.dot OldNormal.dot    
    ``` 
-4. At the command prompt, type exit, and then press Enter.    
+4. At the command prompt, type **exit**, and then press **Enter**.    
 5. Start Word.    
  
 If Word starts correctly, you have resolved the problem. In this case, the problem is a damaged global template file. Now, you may have to change several settings to restore your favorite options.
@@ -463,7 +463,7 @@ If the problem is not resolved, restore the original global template file (see b
 To restore the original global template file, follow these steps:
 
 1. Exit all Office programs.    
-2. Type **cmd** in the **Search** box (in Windows 10, Windows 8.1, or Windows 8) or in the **Start Search** box on the **Start** menu (in earlier versions of Windows), and then press Enter.    
+2. Type **cmd** in the **Search** box (in Windows 10, Windows 8.1, or Windows 8) or in the **Start Search** box on the **Start** menu (in earlier versions of Windows), and then press **Enter**.    
 3. At the command prompt, type the following command, as appropriate for the version of Word that you are running, and then press **Enter**:
 
    **Word 2016, Word 2013, Word 2010 and Word 2007**
@@ -475,7 +475,7 @@ To restore the original global template file, follow these steps:
    ```powershell
    ren %userprofile%\AppData\Roaming\Microsoft\Templates\OldNormal.dot Normal.dot   
     ```
-4. Type exit, and then press Enter.    
+4. Type **exit**, and then press **Enter**.    
 5. Start Word.    
  
 <a id="option6">
@@ -489,8 +489,8 @@ When you start Word, Word automatically loads templates and add-ins that are loc
 To do this, follow these steps:
  
 1. Exit all Office programs.    
-2. Start Windows Explorer. Type windows ex in the **Search** box (in Windows 10, Windows 8.1, or Windows 8) or in the **Start Search** box on the **Start** menu (in earlier versions of Windows), and then press Enter.    
-3. Type the following command in the address bar, as appropriate for the version of Word that you're running and its installation type, and then press Enter:
+2. Start Windows Explorer. Type **windows ex** in the **Search** box (in Windows 10, Windows 8.1, or Windows 8) or in the **Start Search** box on the **Start** menu (in earlier versions of Windows), and then press **Enter**.    
+3. Type the following command in the address bar, as appropriate for the version of Word that you're running and its installation type, and then press **Enter**:
 
    | | | |
    |---|---|---|
@@ -540,7 +540,7 @@ You can install COM add-ins to any location. Programs that interact with Word in
 To delete the COM add-ins registry keys, follow these steps:
  
 1. Exit all Office programs.    
-2. Type **regedit** in the **Search** box (in Windows 10, Windows 8.1, or Windows 8) or in the **Start Search** box on the **Start** menu (in earlier versions of Windows), and then press Enter.    
+2. Type **regedit** in the **Search** box (in Windows 10, Windows 8.1, or Windows 8) or in the **Start Search** box on the **Start** menu (in earlier versions of Windows), and then press **Enter**.    
 3. Locate the following registry subkey: HKEY_CURRENT_USER\Software\Microsoft\Office\Word\Addins     
 4. On the **File** menu, select **Addins**, and then select **Export**.    
 5. Name the file WdaddinHKCU.reg, and then save the file to the desktop.    

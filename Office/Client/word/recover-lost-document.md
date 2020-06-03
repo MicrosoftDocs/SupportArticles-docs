@@ -281,7 +281,7 @@ Type **.asd** in the **Search** box (in Windows 10, Windows 8.1, or Windows 8) o
 
 Temporary file names end with the .tmp extension. To find these files, follow these steps:
 
-1. 1.	Type **.tmp** in the Search box (in Windows 10, Windows 8.1, or Windows 8) or in the **Start Search** box on the **Start** menu (in earlier versions of Windows), and then press **Enter**.
+1.	Type **.tmp** in the Search box (in Windows 10, Windows 8.1, or Windows 8) or in the **Start Search** box on the **Start** menu (in earlier versions of Windows), and then press **Enter**.
 2. On the **Show only** toolbar, select **Other**.
 3. Scroll through the files and search for files that match the last few dates and times that you edited the document. If you find the document that you're looking for, go to Option 6 to find out how to recover information from the file.
 
