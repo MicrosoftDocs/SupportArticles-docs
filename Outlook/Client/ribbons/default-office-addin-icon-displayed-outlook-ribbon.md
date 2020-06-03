@@ -23,15 +23,15 @@ search.appverid:
 
 ## Symptoms
 
-In Outlook 2013 or Outlook 2016, the default Office Add-in image is displayed in the Outlook Ribbon instead of the actual Office Add-in image.
+In Microsoft Outlook 2013 or Outlook 2016, the default Office Add-in image is displayed in the Outlook Ribbon instead of the actual Office Add-in image.
 
 For example, this screenshot shows the default icon for **Share to Teams** and **Reply with Meeting Poll** Office Add-ins:
 
-:::image type="content" source="./media/default-office-addin-icon-displayed-outlook-ribbon/officeaddin1.png" alt-text="Screenshot of default Office Add-in.":::
+:::image type="content" source="../media/default-office-addin-icon-displayed-outlook-ribbon/officeaddin1.png" alt-text="Screenshot of default Office Add-in.":::
 
 This screenshot shows the expected icon for **Share to Teams** and **Reply with Meeting Poll** Office Add-ins:
 
-:::image type="content" source="./media/default-office-addin-icon-displayed-outlook-ribbon/officeaddin2.png" alt-text="Screenshot of actual Office Add-in.":::
+:::image type="content" source="../media/default-office-addin-icon-displayed-outlook-ribbon/officeaddin2.png" alt-text="Screenshot of actual Office Add-in.":::
 
 ## Cause
 
