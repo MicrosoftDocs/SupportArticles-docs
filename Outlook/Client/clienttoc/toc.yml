@@ -69,6 +69,8 @@
       href: ../meetings/room-finder-is-not-available-shared-calendars-outlook.md
   - name: Ribbons
     items:
+    - name: Default Office Add-in icon is displayed
+      href: ../ribbons/default-office-addin-icon-displayed-outlook-ribbon.md
     - name: Lync Meeting control isn't displayed
       href: ../ribbons/lync-meeting-control-not-displayed.md
   - name: Search
