@@ -17,7 +17,7 @@ appliesto:
 - Office Professional 2013
 ---
 
-# [SDP 3][c6406ad7-cdd8-406e-a409-a7f0c676ccb3] Office Sign-in and Authentication Diagnostic
+#  Office Sign-in and Authentication Diagnostics
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 

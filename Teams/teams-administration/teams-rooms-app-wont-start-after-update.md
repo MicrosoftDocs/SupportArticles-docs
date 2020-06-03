@@ -49,7 +49,7 @@ After the second restart, wait an additional 10 minutes. If the system does not 
 
 Critical scripts that typically run during startup may not run on some systems. To check for this situation, follow these steps:
 
-1.	[Sign in to the Administrator account on the device](https://docs.microsoft.com/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
+1.	[Sign in to the Administrator account on the device](/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
 2.	Select the **Start** menu.
 3.	Type **Event Viewer**, and then press **Enter**.
 4.	Expand **Application and Service Logs**, and then select **ScriptLaunch** log.
@@ -61,7 +61,7 @@ If there are entries in the filtered list that correspond to your system’s rec
 
 If your system is affected (and app version 4.4.41.0 or later is installed), follow these steps:
 
-1.	[Sign in to the Administrator account on the device](https://docs.microsoft.com/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
+1.	[Sign in to the Administrator account on the device](/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
 2.	Open the **Start** menu.
 3.	Type **Command Prompt**, right-click the search result, and then select **Run as administrator**.
 4.	At the command prompt, type the following command, and then press Enter:
@@ -81,25 +81,27 @@ Some systems in the field have installed the Microsoft.SkypeRoomSystem app for t
 
 To check for this situation:
 
-1.	[Sign in to the Admin account on the device](https://docs.microsoft.com/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
-2.	Open the **Start** menu.
-3.	Type Windows PowerShell, right-click the search result, and then select **Run as administrator**.
-4.	At the command prompt, type and run the following script:
+1. [Sign in to the Admin account on the device](/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
+2. Open the **Start** menu.
+3. Type Windows PowerShell, right-click the search result, and then select **Run as administrator**.
+4. At the command prompt, type and run the following script:
+
     ```
-    Get-AppxPackage –User “NT AUTHORITY\SYSTEM” Microsoft.SkypeRoomSystem
+    Get-AppxPackage -User “NT AUTHORITY\SYSTEM” Microsoft.SkypeRoomSystem
     ```
 
-5.	If the command generates no output, the system is not affected. In this case, go to Step 4.
+5. If the command generates no output, the system is not affected. In this case, go to Step 4.
 
-6.	If the command does generate output, the system is affected. In this case, follow these steps:
-    1.	[Sign in to the Admin user on the device](https://docs.microsoft.com/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
-    2.	Open the **Start** menu.
-    3.	Type **Notepad**, right-click the search result, and then select **Run as administrator**.
-    4.	Copy the following script into Notepad:
+6. If the command does generate output, the system is affected. In this case, follow these steps:
+    1. [Sign in to the Admin user on the device](/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
+    2. Open the **Start** menu.
+    3. Type **Notepad**, right-click the search result, and then select **Run as administrator**.
+    4. Copy the following script into Notepad:
+
        ```
        Get-AppxPackage Microsoft.SkypeRoomSystem | Remove-AppxPackage
        Remove-Item C:\Rigel\AdminHookScripts\Logon.ps1
-       Restart-Computer –Force
+       Restart-Computer -Force
        ```
         
     5. Press **Ctrl+S**.
@@ -121,11 +123,11 @@ This step applies to Windows 10, version 1903 or later systems only. If your sys
 Some systems may have been interrupted or otherwise failed to correctly set their shell launch configuration. Therefore, they cannot start the app when the Skype user signs in.
 
 > [!NOTE]
-> The [PSExec](https://docs.microsoft.com/sysinternals/downloads/psexec) tool must be available on the device. If Psexec.exe is not in the device’s execution path, you will have to specify the full path to your copy of the Psexec.exe executable in your commands.
+> The [PSExec](/sysinternals/downloads/psexec) tool must be available on the device. If Psexec.exe is not in the device’s execution path, you will have to specify the full path to your copy of the Psexec.exe executable in your commands.
 
 To check for this situation, follow these steps:
 
-1.	[Sign in to the Administrator account on the device](https://docs.microsoft.com/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
+1.	[Sign in to the Administrator account on the device](/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
 2.	Open the **Start** menu.
 3.	Type **Command Prompt**, right-click the search result, and then select **Run as administrator**.
 4.	At the command prompt, type the following script, and then press Enter: 
@@ -142,7 +144,7 @@ To check for this situation, follow these steps:
 6.	If the command prints an XML file that's about 24 lines long, the system is not affected. In this case, go to Step 5. 
 
 7. If the command returns an error, nothing, or an empty XML file, the system is affected. If your system is affected, follow these steps:
-    1. [Sign in to the Administrator account on the device](https://docs.microsoft.com/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
+    1. [Sign in to the Administrator account on the device](/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
     2. Open the **Start** menu.
     3. Type **winver**, and select the search result.
     4. Verify that the window that opens indicates “Version 1903” or a later version. If you follow these steps on MTR devices that run earlier versions of Windows this procedure will not resolve the issue and might cause further problems.
@@ -168,5 +170,4 @@ To check for this situation, follow these steps:
 
 If your problem is not addressed by this troubleshooting guide, it is possible that we are not aware of it. Contact your customer service representative for help to identify and resolve the problem.
 
-
-Still need help? Go to [Microsoft Community](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fanswers.microsoft.com%2F&data=02%7C01%7Cv-todmc%40microsoft.com%7C98910814456c474880f108d7cf62d97d%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637205895885805857&sdata=9%2FYStDGvrU5ZIYXB7guowmaPlKazab0U%2BTpiBIItDaQ%3D&reserved=0).
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
