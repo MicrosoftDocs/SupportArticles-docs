@@ -44,10 +44,10 @@ This article suggests ways in which you can diagnose and resolve issues when you
 ![Option 1](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-1.png)
 
 </a>
-</td><td><b>Test printing in other documents</b>
+</td><td><b><a href="#option1">Test printing in other documents</a></b>
 <ol>
 <li>Open a new blank document.</li>
-<li>Type the following text: "=rand(10)".</li>
+<li>Type the following text: <b>=rand(10)</b>.</li>
 <li>Press <b>Enter</b>.</li>
 <li>Try to print again.</li>
 </ol>
@@ -61,10 +61,10 @@ This article suggests ways in which you can diagnose and resolve issues when you
 
 </a>
 </td>
-<td><b>Test printing in other programs: WordPad</b>
+<td><b><a href="#option2">Test printing in other programs: WordPad</a></b>
 <ol>
 <li>Open WordPad.</li>
-<li>In a new document, type "This is a test".</li>
+<li>In a new document, type <b>This is a test</b>.</li>
 <li>On the <b>File</b> menu, select <b>Print</b>.</li>
 <li>Select <b>OK</b> or <b>Print</b> to print the file.</li>
 </ol>
@@ -78,10 +78,10 @@ This article suggests ways in which you can diagnose and resolve issues when you
 
 </a>
 </td>
-<td><b>Repair the Word program files</b>
+<td><b><a href="#option3">Repair the Word program files</a></b>
 <ol>
 <li>Exit all Office programs.</li>
-<li>Select <b>Start</b>, then type "uninstall".</li>
+<li>Select <b>Start</b>, then type <b>uninstall</b>.</li>
 <li>Open <b>Add or Remove Programs</b>.</li>
 <li>Under <b>Apps & features</b>, select <b>Microsoft Office Word</b>.</li>
 <li>Select <b>Modify</b>.</li>
@@ -98,7 +98,7 @@ This article suggests ways in which you can diagnose and resolve issues when you
 
 </a>
 </td>
-<td><b>Test for problems in Windows</b>
+<td><b><a href="#option4">Test for problems in Windows</a></b>
 
 <ol>
 <li>
@@ -120,7 +120,7 @@ Remove all media (USB drive, DVD, CD) from your computer.</li>
 
 </a>
 </td>
-<td><b>Test printing with different print drivers</b>
+<td><b><a href="#option5">Test printing with different print drivers</a></b>
 <ol>
 <li>Select <b>Start</b>, then <b>Settings</b>.
 <li>Select <b>Devices</b>, then <b>Printers & scanners</b>.</li>
@@ -171,8 +171,7 @@ Outlined below are more detailed descriptions of the Options above.
 Damaged documents or documents that contain damaged graphics or damaged fonts can cause print errors in Word. Before you reinstall drivers or software, test the Word program's ability to print. To do this, follow these steps.
 
 1.    Open a new blank document in Word.
-2.    On the first line of the document, type the following text:
-=rand(10)
+2.    On the first line of the document, type the following text: **=rand(10)**.
 3.    Press **Enter**. This inserts 10 paragraphs of sample text.
 4.    Try to print the document.
 5.    If the document prints successfully, change to a different font, or insert clip art, a table, or a drawing object.
@@ -214,7 +213,7 @@ The following tests can help determine whether this problem involves programs ot
 #### Test in WordPad
 
 1. In the **Windows** menu, search for and start WordPad. 
-2. In the blank WordPad document, type This is a test.
+2. In the blank WordPad document, type **This is a test**.
 3. On the **File** menu, select **Print**.
    > [!NOTE] 
    > Make sure that your printer is selected. If your printer is not listed, select **Add Printer…** from the **Printer** drop-down box and add your printer.  
@@ -243,7 +242,7 @@ After you finish creating the document in WordPad, you can test the print functi
    - If the problem is limited to a particular font, a damaged font file may be the cause. For more information about how to test and reinstall fonts, see KB [314960](https://support.microsoft.com/help/314960/how-to-install-or-remove-a-font-in-windows) "How to install or remove a font in Windows."
    - If you can print without problems in all programs except Word, go to Option 4.
 
-You might be able to use the Windows 10 printing help and troubleshooting wizard to resolve the printing problem. Select **Start**, type printing, and then select **Find and fix problems with printing**.
+You might be able to use the Windows 10 printing help and troubleshooting wizard to resolve the printing problem. Select **Start**, type **printing**, and then select **Find and fix problems with printing**.
 
 <a id="option3">
 
@@ -257,7 +256,7 @@ For more information about how to start by using the default settings, see KB [9
 If the printing problem continues to occur, run the repair program to reinstall the missing or damaged program files. To run the repair program, follow these steps.
 
 1.    Exit all Office programs.
-2.    In Windows 10, select **Start**, and then type uninstall.
+2.    In Windows 10, select **Start**, and then type **uninstall**.
 3.    Open **Add or Remove Programs**.
 4.    Under the "Apps & features" list, find and select your version of Microsoft Office Word you have installed.
 5.    Select **Modify**.
