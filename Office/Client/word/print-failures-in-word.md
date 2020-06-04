@@ -139,7 +139,7 @@ The following tests can help determine whether this problem involves programs ot
 1. Click **Start**, point to **Programs** (in Windows XP, point to **All Programs**), point to **Accessories**, and then click
  **WordPad**. (In Windows 8, press the Windows key to go to the Start Screen, type WordPad, and then click the icon.)  
 2. In the blank WordPad document, type This is a test.    
-3. On the **File **menu, click **Print**. 
+3. On the **File** menu, click **Print**. 
 4. Click **OK** or **Print** to print the file.    
  
 If you found in Step 1: Test printing in other documents" that the print problem occurs only with certain fonts or certain graphics images, try to reproduce this problem in WordPad. To do this, apply the same font, or insert the same kind of graphics image. (To select a different font in WordPad, use the same method that you use in Word.)
@@ -231,7 +231,7 @@ Note On some versions of Windows, these steps may require access to the Windows 
 #### Windows 2000
  
 1. Click **Start**, point to **Settings**, and then click **Printers**.    
-2. Double-click the **Add Printer **icon.
+2. Double-click the **Add Printer** icon.
 3. Click **Next** on the first screen of the Add Printer Wizard.    
 4. Click **Local printer**, and then click **Next**.    
 5. Click **FILE** for the port, and then click **Next**.    
@@ -264,11 +264,11 @@ If the printing problem continues to occur, run Detect and Repair to reinstall t
 2. Use one of the following procedures, depending on your version of Windows:  
    - In Windows 7 or Windows Vista, click **Start**, and then type add remove.    
    - In Windows XP or Windows Server 2003, click **Start**, and then click **Control Panel**.    
-   - In Windows 2000, click **Start**, point to **Setting**, and then click** Control Panel**.    
+   - In Windows 2000, click **Start**, point to **Setting**, and then click **Control Panel**.    
      
 3. Open **Add or Remove Programs**.    
 4. Click **Change or Remove Programs**, click **Microsoft Office (Microsoft Office Word)** or the version of Office or Word that you have in the **Currently installed programs** list, and then click **Change**.    
-5. Click **Repair or Repair Word (Repair Office)**, and then click **Continue **or **Next**.    
+5. Click **Repair or Repair Word (Repair Office)**, and then click **Continue** or **Next**.    
  
 #### Word 2007
 
