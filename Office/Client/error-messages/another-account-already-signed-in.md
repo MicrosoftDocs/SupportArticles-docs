@@ -44,7 +44,17 @@ Sign out of the first account that signed in, then restart that computer. If thi
 
 To work around this behavior, remove the existing user account and all connected services from your Office 2013 profile, and then clear cached credentials that may be on the computer:
 
-### Step 1: Remove the user account from your Office 2013 profile
+### Step 1: Sign out of Office and then sign back in
+
+Sign out of Microsoft Office using any Office product: Word, Excel, PowerPoint, Outlook, etc.
+ 
+   1. Select **File**, and then select **Account**. 
+   2. Select **Sign out**. 
+   3. Close the Office product and then restart it.
+   4. Select **File**, and then select **Account**.
+   5. Select **Sign in** and use your credentials to sign back in. 
+
+### Step 2: Remove the user account from your Office 2013 profile
  
 1. In the upper-right corner of an Office 2013 app (Word, Excel, PowerPoint), select your name, and then select **Switch Account**.
 1. On the **Accounts** screen, click **Sign out**.
@@ -53,14 +63,14 @@ To work around this behavior, remove the existing user account and all connected
 
 1. Locate the account that you want to remove, and then click **Sign out**.
 
-### Step 2: Remove connected services from your Office 2013 profile
+### Step 3: Remove connected services from your Office 2013 profile
  
 1. Go to **File**, and then click **Account**.
 1. Under **Connected Services**, remove all the services for the existing account.
  
    ![Under Connected Services, remove all the services for the existing account.](./media/another-account-already-signed-in/2750229-5.png)
 
-### Step 3: Clear cached credentials on the computer
+### Step 4: Clear cached credentials on the computer
  
 1. Edit the registry to remove cached credentials:
 
@@ -90,6 +100,8 @@ To work around this behavior, remove the existing user account and all connected
 1. Log off, and then log back in to the computer.
 
 ## More information
+
+For more information, see [Recommendations on resolving common sign-in issues](https://docs.microsoft.com/office365/troubleshoot/administration/disabling-adal-wam-not-recommended#recommendations-on-resolving-common-sign-in-issues).
 
 In Office 2013 apps, you can access Office 365 content in SharePoint Online by providing your Office 365 user ID and password. If you have multiple Office 365 user IDs from different organizations, you can access content from the SharePoint Online deployments of each organization.
 
