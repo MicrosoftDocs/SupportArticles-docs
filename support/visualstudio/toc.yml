@@ -1,9 +1,6 @@
 - name: Welcome to Visual Studio Support
   href: welcome-support-visual-studio.md
 
-- name: (Back up to Support hub page)
-  href: ../index.yml
-
 - name: C and C++ Libraries
   items:
   - name: ATL service with _ATL_NO_COM_SUPPORT not starting
@@ -16,6 +13,8 @@
     href: cdatabase-getconnect-returnn-empty.md
   - name: Create string arrays in Visual C++
     href: use-string-arrays-visual-cpp.md
+  - name: C++ Runtime packages for Desktop Bridge
+    href: c-runtime-packages-desktop-bridge.md
   - name: _CRTDBG_MAP_ALLOC macro doesn't work
     href: crtdbg-map-alloc-macro-not-work.md
   - name: Display different pointers for a window in MFC
@@ -24,22 +23,32 @@
     href: mfc-enable-tablet-press-and-hold-gesture.md
   - name: FAQs about Standard C++ library
     href: faq-standard-cpp-library.md
-  - name: C++ Runtime packages for Desktop Bridge
-    href: c-runtime-packages-desktop-bridge.md
-  - name: Latest supported Visual C++ downloads
-    href: latest-supported-visual-cpp-downloads.md
+  - name: Know when clicking a Check box in a TreeView
+    href: click-check-box-treeview.md
+  - name: MFC application can't redraw control
+    href: mfc-application-fail-redraw-control.md
   - name: Use functions of STL queue class in Visual C++
     href: stl-queue-member-functions.md
+  - name: Use map STL functions in Visual C++
+    href: use-map-stl-functions-visual-cpp.md
   - name: Use list STL function in Visual C++
     href: use-list-stl-function-visual-cpp.md
+  - name: Use PageHeap to detect memory errors in Visual C++
+    href: pageheap-detect-memory-errors-cpp.md
   - name: Use priority_queue STL function in Visual C++
     href: use-priority-queue-stl-function-cpp.md
   - name: Use stack::top and stack::empty in Visual C++
     href: stack-top-empty-stl-function-visual-cpp.md
+  - name: Use STL sqrt and pow functions in Visual C++
+    href: stl-sqrt-pow-functions-visual-cpp.md
   - name: Use set::find STL function in Visual C++
     href: use-setfind-stl-function-visual-cpp.md
   - name: Use STL PRIORITY_QUEUE class with custom type
     href: stl-priority-queue-class-custom-type.md
+  - name: Use the list::list STL function in Visual C++
+    href: use-list-list-stl-visual-cpp.md
+  - name: Use random_shuffle STL function in Visual C++
+    href: use-random-shuffle-stl-visual-cpp.md
   - name: Use trigonometry STL functions in Visual C++
     href: trigonometry-stl-functions-visual-cpp.md
   - name: Use vector functions in Visual C++
@@ -49,14 +58,16 @@
   items:
   - name: .NET source code debugging by Reference Source Code Center
     href: vs-dot-net-source-code-debug.md
-  - name: Can’t use Windows Simulator after you upgrade to Windows 8.1
+  - name: Can't use Windows Simulator after you upgrade to Windows 8.1
     href: windows-simulator-needs-credentials-vs.md
-  - name: Concurrency Visualizer reports lost  kernel and user mode events
+  - name: Concurrency Visualizer reports lost kernel and user mode events
     href: concurrency-visualizer-lost-kernel-user-mode-event.md
   - name: Information collected by VS Remote Debugger
     href: vs-remote-debugger-collect-information.md
   - name: VS2010 crashes when IDebugAddress.GetAddress() is invoked
     href: vs-crash-debug-address-getaddress-called.md
+  - name: VS .NET debugger doesn't stop on breakpoints
+    href: vs-debugger-not-stop-breakpoint.md
 
 - name: General
   items:
@@ -66,12 +77,16 @@
     href: add-references-managed-cpp.md
   - name: Add static items and results to DropDownList
     href: add-static-items-results-data-binding.md
+  - name: Alternate credentials not working for VS online accounts
+    href: alternate-credentials-stop-working.md
   - name: Basic file I/O in Visual C#
     href: file-io-visual-c-sharp.md
-  - name: BI project not opens after upgraded to VS 2010 format
+  - name: BI project not open after upgraded to VS 2010 format
     href: bi-project-not-open-upgrade-vs-2010-format.md
   - name: Cannot find resource in XAML or WPF designer
     href: cannot-find-resource-named-error.md
+  - name: Can't sign in to Visual Studio with disabled JavaScript
+    href: not-sign-in-to-vs-javascript-disabled.md
   - name: Compute hash value by Visual C#
     href: compute-hash-values-visual-c-sharp.md
   - name: Create a remote server by Visual C#
@@ -126,15 +141,17 @@
     href: known-issues-vs-2010-sp1-windows-8.md
   - name: Match pattern through regular expressions
     href: match-pattern-regular-expression.md
-  - name: Make a class in a foreach statement
+  - name: Make a class usable in a foreach statement
     href: make-class-foreach-statement.md
   - name: Make UserControl act as control container
     href: usercontrol-act-control-container-design-time.md
+  - name: Microsoft.Vsa.tlb could not be loaded
+    href: vsa-tlb-not-loaded-vs-2010.md
   - name: NullReferenceException  when using CommandBuilder
     href: nullreferenceexception-commandbuilder.md
   - name: Query excel data with an ASP.NET page
     href: query-excel-data-asp-net-page.md
-  - name: Read XML data from a URL using Visual C#
+  - name: Read XML data from a URL by using Visual C#
     href: read-xml-data-from-url-visual-c-sharp.md
   - name: Race conditions and deadlocks
     href: race-conditions-deadlocks.md
@@ -142,13 +159,15 @@
     href: read-write-text-file-visual-c-sharp.md
   - name: Run Silverlight Configuration tool in Silverlight 4
     href: run-silverlight-configuration-tool.md
+  - name: Send HTML code to clipboard by Visual C++
+    href: add-html-code-clipboard-visual-cpp.md
   - name: Serialize an object to XML with Visual C#
     href: serialize-object-xml-visual-c-sharp.md
-  - name: Silverlight 5 applications crash  with 0xC0000094 exception
+  - name: Silverlight 5 application crash with 0xC0000094 exception
     href: exception-0xc0000094-silverlight-5.md
   - name: Silverlight doesn't show DRM protected subtitles
     href: silverlight-not-support-drm-protected-subtitles.md
-  - name: slsvcutil.exe crashes when Silverlight 5 is installed
+  - name: Slsvcutil.exe crashes when Silverlight 5 is installed
     href: slsvcutil-tool-crash-silverlight-5.md
   - name: Sort ListView by columns in Visual C#
     href: sort-listview-by-column-c-sharp.md
@@ -160,10 +179,16 @@
     href: use-icomparable-icomparer-visual-c-sharp.md
   - name: Use SqlDataAdapter to update SQL database
     href: update-database-sqldataadapter-visual-cpp.md
-  - name: VBScript type mismatch error
+  - name: Use Visual C# to start Internet browser
+    href: use-visual-c-sharp-start-internet-browser.md
+  - name: Use Visual C++ to start Internet browser 
+    href: use-visual-cpp-start-internet-browser.md
+  - name: VBScript type mismatch
     href: vbs-type-mismatch-error.md
   - name: Visual Studio 2013 known issues
     href: known-issues-visual-studio-2013.md
+  - name: VS subscriptions administrator migration
+    href: vs-subscription-administrator-migration.md
   - name: Windows Automation API 3.0 improves VS 2010
     href: windows-automation-api-3-improve-vs-2010.md
 
@@ -181,7 +206,9 @@
     href: msiapplymultiplepatches-error-1601.md
   - name: Uninstall Visual Studio 2012
     href: uninstall-visual-studio-2012.md
-  - name: Remove third-party applications deployed in VS2015 setup
+  - name: Uninstall third-party applications for VS 2015
+    href: uninstall-third-party-app-vs-2015.md
+  - name: Remove third-party application installed by installer
     href: vs-secondary-installer-third-party-app.md
   - name: Visual C++ Redistributable Package installation fails
     href: vc-runtime-installation-fails.md
@@ -189,6 +216,8 @@
     href: fonts-cause-vs-setup-crash.md
   - name: Wait for a shelled app to finish by Visual C#
     href: wait-shelled-app-finish-visual-csharp.md
+  - name: Warnings about untrusted certificate with VS 2015 Update 3
+    href: warnings-untrusted-certificate.md
 
 - name: Integrated Development Environment (IDE)
   items:
@@ -239,15 +268,21 @@
     href: readfromstream-return-access-denied.md
   - name: Single instance VB .NET/C# application crashes
     href: single-instance-application-crashes.md
-  - name: The referenced projects not exist when building a solution
+  - name: Referenced projects not exist when building a solution
     href: vs-2010-build-fails.md
   - name: Unnested loops cause C1061 compiler error
     href: unnested-loops-cause-c1061-error.md
   - name: Use a ComboBox to edit data in a ListView
     href: visual-csharp-use-combobox-edit-listview.md
+  - name: Use Visual C# to bind DataGrid control to array
+    href: visual-c-sharp-bind-datagrid-to-array.md
+  - name: Use Visual C# to navigate XML with XPathNavigator
+    href: visual-c-sharp-xml-xpathnavigator.md
   - name: Use Visual C++ to write own entries to event log
     href: visual-cpp-write-entry-to event-log.md
-  - name: VS2010 fails to compile 32-bit app on x64 machine
+  - name: Use Visual C++ to do basic file I/O
+    href: visual-cpp-basic-file-io.md
+  - name: VS 2010 fails to compile 32-bit app on x64 machine
     href: vs-cannot-compile-32-bit-app-x64-machine.md
 
 - name: Project / Build System
@@ -279,7 +314,7 @@
 
 - name: Tools and Utilities
   items:
-  - name: Can't start Windows Simulator from VS2012 in Windows 8.1
+  - name: Can't start Windows Simulator from VS 2012
     href: cannot-start-windows-simulator-vs-2012.md
   - name: Can't use Custom Report Items in SSDT for VS
     href: cannot-use-custom-report-items-ssdt-vs.md

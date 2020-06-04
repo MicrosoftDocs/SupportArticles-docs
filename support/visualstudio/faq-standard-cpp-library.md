@@ -88,7 +88,7 @@ If you want to make the Standard C++ Libraries the default, include one or more 
 
 No. Microsoft Foundation Classes (MFC) doesn't use any C-Runtime functions that will conflict with the Standard C++ Libraries.
 
-## Question 6: Why I get "error C2065: 'cout' : undeclared identifier" even though I have included iostream
+## Question 6: Why I get error (error C2065: 'cout' : undeclared identifier) even though I have included iostream
 
 Standard C++ library is implemented in its own namespace `std`. Make sure to add the following statement in the beginning of your program:
 
@@ -98,7 +98,7 @@ using namespace std;
 
  Or qualify each Standard C++ library identifier with namespace `std`, for example, `std::cout`.
 
-## Question 7: Why I get "compiler error C2371: 'identifier' redefinition; different basic types"
+## Question 7: Why I get error (compiler error C2371: 'identifier' redefinition; different basic types)
 
 In versions of Visual C++ that are earlier than Visual C++ 2005, mixing Standard C++ headers and old `iostream` headers causes this error, even if they're included in different source files. The following are the different headers:
 
@@ -127,7 +127,7 @@ In versions of Visual C++ that are earlier than Visual C++ 2005, mixing Standard
     |TYPEINFO|UTILITY|VALARRAY|VECTOR|
     |||||
 
-## Question 8: Why I get "LNK2001: unresolved external symbol 'symbol';" on iostream function calls when the project is built with Ignore Default Libraries
+## Question 8: Why I get message (LNK2001: unresolved external symbol 'symbol';) on iostream function calls when the project is built with Ignore Default Libraries
 
 The `iostream` functions have been removed from the C-Runtime library.
 
@@ -145,7 +145,7 @@ C4786 or C4788 is issued when a symbol's name exceeds 255 characters in length. 
 
 Ignoring this warning is safe. Use a `#pragma` warning (disable: 4786,4788) to suppress the messages.
 
-## Question 10: Why I get "C4530: C++ exception handler used, but unwind semantics aren't enabled. Specify -GX"
+## Question 10: Why I get message (C4530: C++ exception handler used, but unwind semantics aren't enabled. Specify -GX)
 
 Programs that use the Standard C++ library must be compiled with C++ exception handling enabled. C++ exception handling can be enabled by one of the following methods:
 

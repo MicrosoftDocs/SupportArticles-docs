@@ -27,4 +27,4 @@ Settings other than above aren't tested or supported, and other settings may cau
 
 ## References
 
-For other articles on configuration above, visit the PlatformToolset Property section on [MSBuild (Visual C++) Overview](/cpp/build/reference/msbuild-visual-cpp-overview).
+For other articles on configuration above, visit the PlatformToolset Property section on [MSBuild internals for C++ projects](/cpp/build/reference/msbuild-visual-cpp-overview).
