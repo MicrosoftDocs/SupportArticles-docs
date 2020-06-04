@@ -319,7 +319,9 @@
       href: ../web-parts/something-went-wrong-error-configuring-spfx-component.md
     - name: Unable to drag and drop web parts onto classic pages in SharePoint Online
       href: ../web-parts/unable-to-drag-drop-web-parts.md
-  - name: Workflows
+    - name: Unable to create alerts for views in SharePoint
+      href: ../web-parts/unable-to-create-view-alerts.md
+      - name: Workflows
     items:
     - name: '"Access denied" error with an Approval Workflow task'
       href: ../workflows/access-denied-when-approve-workflow-task.md
