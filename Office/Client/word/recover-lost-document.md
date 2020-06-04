@@ -28,7 +28,9 @@ ms.date: 5/28/2020
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
-If you're looking for recent Word document recovery info, see:
+This article suggests ways in which you can recover a lost Microsoft Word document.
+
+If you're looking for recent Office document recovery information, see:
 
 - [Recover your Office files](https://support.office.com/article/recover-your-office-files-dc901de2-acae-47f2-9175-fb5a91e9b3c8) (For versions through Office 2019)
 - [Find lost files after the upgrade to Windows 10](https://support.microsoft.com/help/12386/)
@@ -39,7 +41,7 @@ For more information on recovering documents in earlier versions of Word, see:
 
 ## Quick resolution
 
-*Try the following options to help recover your document. Select the image at the left or the title to see more detailed instructions about that option.*
+*Try the following options to help recover your Word document. Select the image at the left or the title to see more detailed instructions about that option.*
 
 <table align="left">
 <tr>
