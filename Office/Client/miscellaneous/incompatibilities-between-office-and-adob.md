@@ -78,10 +78,12 @@ You can run the following Fix-it, which will automatically disable the add-in fo
 - If you're not on the computer that has the problem, save the easy fix solution to a flash drive or a CD, and then run it on the computer that has the problem.   
 
 #### For a Windows 10, Windows 8.1, or Windows 8-based computer
-select the Download button to disable the PDFMaker add-in.
+
+Download the [Fix-it](http://go.microsoft.com/?linkid=9824891) to disable the PDFMaker add-in.
 
 #### For a Windows 7, Windows Vista, Windows XP, Windows Server 2008, or Windows Server 2003-based computer
-Select the Download button to disable the PDFMaker add-in.
+
+Download the [Fix-it](http://go.microsoft.com/?linkid=9827636) to disable the PDFMaker add-in.
 
 #### Method 3: Manually disable Acrobat PDFMaker Office COM Add-in 
 If you have administrative permissions, you can also disable the add-in by following these steps in each Office program:
