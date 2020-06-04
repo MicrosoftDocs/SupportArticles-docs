@@ -19,7 +19,7 @@ _Original KB number:_ &nbsp; 304430
 [How to do basic file I/O in Visual Basic 2005 or in Visual Basic .NET](https://support.microsoft.com/help/304427/how-to-do-basic-file-i-o-in-visual-basic-2005-or-in-visual-basic-net).
 > - For a Visual C++ .NET version of this article, see
 [How to do basic file I/O in Visual C++ or in Visual C++ .NET](https://support.microsoft.com/help/307398/how-to-do-basic-file-i-o-in-visual-c-or-in-visual-c-net).  
-> - This article refers to the Microsoft .NET Framework Class Library namespaces `System.I` and `System.Collections`.
+> - This article refers to the Microsoft .NET Framework Class Library namespaces `System.IO` and `System.Collections`.
 
 This step-by-step article shows you how to do six basic file input/output (I/O) operations in Microsoft Visual C#. If you are new to the Microsoft .NET Framework, you will find that the object model for file operations in Microsoft .NET is similar to the `FileSystemObject` (FSO) that is popular with many Microsoft Visual Studio 6.0 developers. To make the transition easier, the functionality that is demonstrated in [How To Use FileSystemObject with Visual Basic](https://support.microsoft.com/help/186118/how-to-use-filesystemobject-with-visual-basic).
 

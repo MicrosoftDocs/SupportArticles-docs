@@ -127,7 +127,7 @@ Empty list
 
 ## References
 
-For more information about `list::remove` and `list::remove_if`, visit the following MSDN web sites:
+For more information about `list::remove` and `list::remove_if`, visit the following web sites:
 
 - [list::remove (STL/CLR)](/previous-versions/bb386133(v=vs.140))
 - [list::remove_if (STL/CLR)](/previous-versions/bb398083(v=vs.140))
