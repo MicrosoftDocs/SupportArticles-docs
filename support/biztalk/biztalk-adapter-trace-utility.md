@@ -27,7 +27,7 @@ To install the BizTalk Adapter Trace Utility on Windows Server 2008, follow thes
 3. Clear the other check boxes, and then continue the installation.
 
 4. Find the following folder, and then copy the Tracelog.exe file to the BizTalk Server installation folder:  
-    *Drive*:\MicrosoftSDKInstallationFolder\Bin
+    *Drive*:\MicrosoftSDKInstallationFolder\Bin.
 
 By default, the Tracelog.exe file is in the C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin folder. The BizTalk Server installation folder also contains the Trace.cmd file.
 
@@ -53,13 +53,13 @@ To enable the BizTalk Adapter Trace Utility, follow these steps:
     trace -tools "Path of the BizTalk Adapter Trace Utility"
     ```
 
-By default on Windows Server 2003, the Trace Utilities are in the following directory:  
+By default on Windows Server 2003, the BizTalk Adapter Trace Utility is in the following directory:  
 C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Bin.
 
-By default on Windows Server 2008, the Trace Utilities are in the following directory:  
+By default on Windows Server 2008, the BizTalk Adapter Trace Utility is in the following directory:  
 C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin.
 
-You must enclose the path of the Trace Utilities in quotation marks.
+You must enclose the path of the BizTalk Adapter Trace Utility in quotation marks.
 
 For example, enter the following command on Windows Server 2003:
 
