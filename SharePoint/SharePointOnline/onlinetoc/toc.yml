@@ -321,7 +321,7 @@
       href: ../web-parts/unable-to-drag-drop-web-parts.md
     - name: Unable to create alerts for views in SharePoint
       href: ../web-parts/unable-to-create-view-alerts.md
-      - name: Workflows
+  - name: Workflows
     items:
     - name: '"Access denied" error with an Approval Workflow task'
       href: ../workflows/access-denied-when-approve-workflow-task.md

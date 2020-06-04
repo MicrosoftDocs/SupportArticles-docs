@@ -1,23 +1,23 @@
 ---
-title: "Title goes here"
+title: Can't create alerts for views in SharePoint
 ms.author: v-todmc
 author: todmccoy
 manager: dcscontentpm
-ms.date: xx/xx/xxxx
-audience: Admin|ITPro|Developer
+ms.date: 6/4/2020
+audience: Admin
 ms.topic: article
-ms.service OR ms.prod: see https://docsmetadatatool.azurewebsites.net/allowlists
+ms.prod: sharepoint
 localization_priority: Normal
 search.appverid:
 - SPO160
 - MET150
 appliesto:
-- ADD PRODUCT
+- SharePoint
 ms.custom: 
-- CI ID
+- CI 119396
 - CSSTroubleshoot 
-ms.reviewer: MS aliases for tech reviewers and CI requestor, without "@microsoft.com".  
-description: "How to resolve the error "Virus Found" in SharePoint Server 2013 when the antivirus scanner is unavailable ."
+ms.reviewer: prbalusu
+description: Describes a resolution to an issue where a view doesn't appear in the option "Someone changes an item that appears in the following view". 
 ---
 
 # Unable to create alerts for views in SharePoint
