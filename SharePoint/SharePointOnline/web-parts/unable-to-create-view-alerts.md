@@ -30,13 +30,13 @@ When creating an alert in SharePoint, the option "Someone changes an item that a
  
 ## Cause
 
-This option and view shows up ONLY if you have custom views that are created with filters based on the Choice column.
+This option and view shows up ONLY if you have custom views that are created with filters based on the **Choice** column.
 
-The choice column should be a custom column, not a system-generated column such as “approval status”.
+The **Choice** column must be a custom column, not a system-generated column such as **Approval Status**.
 
 ## Resolution
 
-In your custom view, create a filter for items based on a custom choice column.
+In your custom view, create a filter for items based on a custom **Choice** column.
 
 ## More information
 
