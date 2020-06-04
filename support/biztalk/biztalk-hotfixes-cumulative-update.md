@@ -57,7 +57,7 @@ A BizTalk Server hotfix might update .dll files, and it might run SQL scripts. 
 
 If the hotfix contains an SQL script, it will run the script against a BizTalk Server database or databases. In this case, uninstalling doesn't roll back the hotfix. Uninstalling by using Add or Remove Programs won't roll back the database changes, and it might leave the BizTalk Server environment in an inconsistent state.
 
-## Backing up the BizTalk Server databases
+## Backing up the BizTalk Server databases
 
 > [!NOTE]
 > Before you apply a hotfix that includes an SQL script, you must back up all the BizTalk Server databases.
