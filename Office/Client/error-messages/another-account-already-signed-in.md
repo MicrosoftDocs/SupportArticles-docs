@@ -37,40 +37,50 @@ Sign out of the first account that signed in, then restart that computer. If thi
 ## Workaround
 
 > [!IMPORTANT]
-> The method in this section contains steps that explain how to modify the registry. However, serious problems may occur if the registry is modified incorrectly. Follow these steps carefully. For added protection, back up the registry before you begin so that the registry can be restored it if a problem occurs. For more information about how to back up and restore the registry, see the following Microsoft Knowledge Base article: [322756 How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
+> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
 > [!NOTE]
 > This workaround may cause some account settings to be lost.
 
 To work around this behavior, remove the existing user account and all connected services from your Office 2013 profile, and then clear cached credentials that may be on the computer:
 
-### Step 1: Remove the user account from your Office 2013 profile
+### Step 1: Sign out of Office and then sign back in
+
+Sign out of Microsoft Office using any Office product: Word, Excel, PowerPoint, Outlook, etc.
+ 
+   1. Select **File**, and then select **Account**. 
+   2. Select **Sign out**. 
+   3. Close the Office product and then restart it.
+   4. Select **File**, and then select **Account**.
+   5. Select **Sign in** and use your credentials to sign back in. 
+
+### Step 2: Remove the user account from your Office 2013 profile
  
 1. In the upper-right corner of an Office 2013 app (Word, Excel, PowerPoint), select your name, and then select **Switch Account**.
-1. On the **Accounts** screen, click **Sign out**.
+1. On the **Accounts** screen, select **Sign out**.
 
    ![Sign out on the Accounts page](./media/another-account-already-signed-in/2750229-4.png)
 
-1. Locate the account that you want to remove, and then click **Sign out**.
+1. Locate the account that you want to remove, and then select **Sign out**.
 
-### Step 2: Remove connected services from your Office 2013 profile
+### Step 3: Remove connected services from your Office 2013 profile
  
-1. Go to **File**, and then click **Account**.
+1. Go to **File**, and then select **Account**.
 1. Under **Connected Services**, remove all the services for the existing account.
  
    ![Under Connected Services, remove all the services for the existing account.](./media/another-account-already-signed-in/2750229-5.png)
 
-### Step 3: Clear cached credentials on the computer
+### Step 4: Clear cached credentials on the computer
  
 1. Edit the registry to remove cached credentials:
 
-   1. Select **Start**, click **Run**, type **regedit**, and then click **OK**.
+   1. Select **Start**, select **Run**, type **regedit**, and then select **OK**.
    1. In Registry Editor, locate the following registry subkey:
 
       **HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\Identity\Identities**
 
-   1. Select the Office account that you want to delete, and then click **Delete**.
-   1. In the Identity subkey, locate **Profiles**, right-click the same Office account that you located in **Step 1** of this procedure, and then click **Delete**.
+   1. Select the Office account that you want to delete, and then select **Delete**.
+   1. In the Identity subkey, locate **Profiles**, right-click the same Office account that you located in **Step 1** of this procedure, and then select **Delete**.
    1. Select **File** and then **Exit** Registry Editor.
     
 1. Remove the cached credentials in Credentials Manager:  
@@ -80,7 +90,7 @@ To work around this behavior, remove the existing user account and all connected
       > [!NOTE]
       > You may have to use the search field in the Control Panel to find the Credential Manager.
 
-   1. Under the **Windows Credentials** tab, locate the account that you want to remove and then click **Remove**.
+   1. Under the **Windows Credentials** tab, locate the account that you want to remove and then select **Remove**.
 
       > [!NOTE]
       > In Windows 7, this is listed as **Generic Credentials**. 
@@ -90,6 +100,8 @@ To work around this behavior, remove the existing user account and all connected
 1. Log off, and then log back in to the computer.
 
 ## More information
+
+For more information, see [Recommendations on resolving common sign-in issues](https://docs.microsoft.com/office365/troubleshoot/administration/disabling-adal-wam-not-recommended#recommendations-on-resolving-common-sign-in-issues).
 
 In Office 2013 apps, you can access Office 365 content in SharePoint Online by providing your Office 365 user ID and password. If you have multiple Office 365 user IDs from different organizations, you can access content from the SharePoint Online deployments of each organization.
 
