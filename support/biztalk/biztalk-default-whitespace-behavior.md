@@ -8,8 +8,8 @@ ms.prod-support-area-path:
 
 This article describes the change in default whitespace behavior in BizTalk Server due to hotfix 2492255, and how to revert to the previous behavior.
 
-_Original product version:_&nbsp;BizTalk Server 2009  
-_Original KB number:_&nbsp;2786241
+_Original product version:_ &nbsp; BizTalk Server 2009  
+_Original KB number:_ &nbsp; 2786241
 
 ## Installing updates will change default behavior
 

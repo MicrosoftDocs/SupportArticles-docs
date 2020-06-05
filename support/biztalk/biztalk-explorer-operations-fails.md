@@ -8,8 +8,8 @@ ms.prod-support-area-path:
 
 This article provides information about resolving the failure of BizTalk Explorer operations when you're using the BizTalk Explorer Object Model to manipulate service instances and messages.
 
-_Original product version:_&nbsp;BizTalk Server 2013, 2010  
-_Original KB number:_&nbsp;3054335
+_Original product version:_ &nbsp; BizTalk Server 2013, 2010  
+_Original KB number:_ &nbsp; 3054335
 
 ## Symptoms
 

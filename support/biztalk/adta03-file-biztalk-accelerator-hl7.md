@@ -9,8 +9,8 @@ ms.reviewer: mquian
 
 This article helps you resolve the problem that you can't use the ADT^A03.txt file in the Microsoft BizTalk Server Accelerator for HL7 1.3 tutorial.
 
-_Original product version:_&nbsp;BizTalk Server  
-_Original KB number:_&nbsp;931817
+_Original product version:_ &nbsp; BizTalk Server  
+_Original KB number:_ &nbsp; 931817
 
 ## Symptoms
 

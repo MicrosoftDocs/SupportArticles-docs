@@ -9,8 +9,8 @@ ms.reviewer: MandiA
 
 This article gives information about Microsoft BizTalk Server hotfixes, cumulative updates, and service packs, including support.
 
-_Original product version:_&nbsp;BizTalk Server  
-_Original KB number:_&nbsp;2003907
+_Original product version:_ &nbsp; BizTalk Server  
+_Original KB number:_ &nbsp; 2003907
 
 When you install a hotfix, cumulative update, or service pack for BizTalk Server, consider the following variables.
 

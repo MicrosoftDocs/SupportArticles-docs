@@ -8,8 +8,8 @@ ms.prod-support-area-path:
 
 This article explains that after you change the configuration file in BizTalk Server, a failure might occur and the BizTalk Server host instance can't start.
 
-_Original product version:_&nbsp;BizTalk Server 2009  
-_Original KB number:_&nbsp;2411668
+_Original product version:_ &nbsp; BizTalk Server 2009  
+_Original KB number:_ &nbsp; 2411668
 
 ## Symptoms
 

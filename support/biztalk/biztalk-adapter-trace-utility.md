@@ -8,8 +8,8 @@ ms.prod-support-area-path:
 
 This step-by-step article describes how to install the Microsoft BizTalk Adapter Trace Utility. It also discusses how to run the BizTalk Adapter Trace Utility and how to have the generated trace file analyzed.
 
-_Original product version:_&nbsp;BizTalk Server 2009  
-_Original KB number:_&nbsp;835451
+_Original product version:_ &nbsp; BizTalk Server 2009  
+_Original KB number:_ &nbsp; 835451
 
 ## Install the BizTalk Adapter Trace Utility
 

@@ -6,8 +6,8 @@ ms.prod-support-area-path:
 ---
 # BizTalk Adapter for TIBCO EMS supports only the text message type
 
-_Original product version:_&nbsp;BizTalk Server 2013, 2010  
-_Original KB number:_&nbsp;2925887
+_Original product version:_ &nbsp; BizTalk Server 2013, 2010  
+_Original KB number:_ &nbsp; 2925887
 
 TIBCO Enterprise Message Service (EMS) accepts all messages enumerated in the Java Message Service (JMS) specification (text, byte, stream, map, and object). However, the BizTalk Adapter for TIBCO EMS supports only the text message type.
 

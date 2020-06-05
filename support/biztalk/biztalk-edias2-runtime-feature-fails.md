@@ -9,8 +9,8 @@ ms.reviewer: EnriqueP
 
 This article describes how the BizTalk Server EDI/AS2 runtime configuration can fail with the error "DTS package BAM_DM_InterchangeStatusActivity already exists."
 
-_Original product version:_&nbsp;BizTalk Server 2009, 2010, 2013, 2013 R2  
-_Original KB number:_&nbsp;2269514
+_Original product version:_ &nbsp; BizTalk Server 2009, 2010, 2013, 2013 R2  
+_Original KB number:_ &nbsp; 2269514
 
 ## Symptoms
 

@@ -9,8 +9,8 @@ ms.reviewer: rickcau
 
 This article discusses a problem in a Microsoft BizTalk Server project where the Add Generated Items Wizard doesn't generate an XML Schema Definition (XSD) schema.
 
-_Original product version:_&nbsp;BizTalk Server 2006, 2004  
-_Original KB number:_&nbsp;911771
+_Original product version:_ &nbsp; BizTalk Server 2006, 2004  
+_Original KB number:_ &nbsp; 911771
 
 ## Symptoms
 
