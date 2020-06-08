@@ -5,7 +5,7 @@ ms.date: 03/18/2020
 ms.prod-support-area-path: 
 ms.reviewer: EnriqueP
 ---
-# The BizTalk EDI/AS2 Runtime configuration may fail with error: DTS package BAM_DM_InterchangeStatusActivity already exists
+# BizTalk EDI/AS2 Runtime configuration fails with error: DTS package BAM_DM_InterchangeStatusActivity already exists
 
 This article describes the BizTalk EDI/AS2 Runtime configuration may fail with the error: DTS package BAM_DM_InterchangeStatusActivity already exists.
 
