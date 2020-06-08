@@ -4,7 +4,7 @@ description: Describes a workaround for System.Data.SqlClient.SQLException error
 ms.date: 03/16/2020
 ms.prod-support-area-path:
 ---
-# BizTalk Explorer operations fail with a System.Data.SqlClient.SQLException error
+# BizTalk Explorer operations fail with System.Data.SqlClient.SQLException
 
 This article provides information about resolving the issue that BizTalk Explorer operations fail when using the BizTalk Explorer Object Model to manipulate service instances and messages.
 

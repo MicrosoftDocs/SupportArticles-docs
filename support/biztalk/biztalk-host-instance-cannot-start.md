@@ -32,7 +32,7 @@ BizTalk Host instance can't start after changing the config file in BizTalk Serv
 
 ## Cause
 
-The `btsntsvc.exe.config` or `btsntsvc64.exe.config` file had been modified with an `xlang` section.  No Configuration section handler was present for `xlang`.
+The *btsntsvc.exe.config* or *btsntsvc64.exe.config* file had been modified with an `xlang` section. No Configuration section handler was present for `xlang`.
 
 ## Resolution
 

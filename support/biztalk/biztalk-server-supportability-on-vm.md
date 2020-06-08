@@ -38,7 +38,7 @@ The following table indicates the supportability of hosting a BizTalk Server vir
 
 For more information on the operating systems that are supported by BizTalk Server, see [Summary of operating systems and SQL Server versions supported by different versions of BizTalk Server](https://support.microsoft.com/help/926628).
 
-## More Information
+## More information
 
 Product support for a BizTalk Server VM hosted on a virtualization program that's not listed in the **Supportability of hosting a BizTalk Server VM** section is provided as commercially reasonable support. Commercially reasonable support is defined as all reasonable support efforts by Microsoft Customer Service and Support that don't require BizTalk Server code fixes.
 
@@ -52,15 +52,13 @@ For more information about SQL Server support in a virtualization environment or
 
 ## Frequently Asked Questions
 
-**Question 1**: What level of technical support will I receive if my non-Microsoft vendor configuration is certified through SVVP?
+- **What level of technical support will I receive if my non-Microsoft vendor configuration is certified through SVVP?**
 
-**Answer 1**: Customer Service and Support will work together with you and the SVVP certified vendor to investigate the problem. Customer Service and Support or the SVVP vendor will  use the TSANet program together with your permission in an attempt to resolve the problem.
+    Customer Service and Support will work together with you and the SVVP certified vendor to investigate the problem. Customer Service and Support or the SVVP vendor will  use the TSANet program together with your permission in an attempt to resolve the problem.
 
-**Question 2**: What if the non-Microsoft vendor virtualization configuration is not certified through SVVP?
+- **What if the non-Microsoft vendor virtualization configuration is not certified through SVVP?**
 
-**Answer 2**: Customer Service and Support will follow the support policies that are documented in Microsoft Knowledge Base article 897615.
-
-For more information, see [Support policy for Microsoft software running in non-Microsoft hardware virtualization software](https://support.microsoft.com/help/897615).
+    Customer Service and Support will follow the support policies that are documented in Microsoft Knowledge Base article 897615. For more information, see [Support policy for Microsoft software running in non-Microsoft hardware virtualization software](https://support.microsoft.com/help/897615).
 
 If Customer Service and Support determine that the problem may be related to the vendor virtualization software, Customer Service and Support may require that you try to reproduce the problem outside the virtualization environment. It's important to carefully read about the configurations that are supported for SVVP.
 

@@ -7,7 +7,7 @@ ms.reviewer: EnriqueP
 ---
 # The BizTalk EDI/AS2 Runtime configuration may fail with error: DTS package BAM_DM_InterchangeStatusActivity already exists
 
-This article describes the BizTalk EDI/AS2 Runtime configuration may fail with the error `DTS package BAM_DM_InterchangeStatusActivity already exists`.
+This article describes the BizTalk EDI/AS2 Runtime configuration may fail with the error: DTS package BAM_DM_InterchangeStatusActivity already exists.
 
 _Original product version:_ &nbsp; BizTalk Server 2009, 2010, 2013, 2013 R2  
 _Original KB number:_ &nbsp; 2269514
@@ -18,12 +18,9 @@ Consider the following scenario:
 
 You install and configure a BizTalk Server group. You install BizTalk on a second server. In the **Configuration Wizard**, you create a new BizTalk Server group using the same SQL Server with unique database names. The BizTalk EDI/AS2 Runtime configuration fails and you may see any one of the following error messages:
 
-> Failed to configure EDI/AS2 Status Reporting functionalities.
-
-> Failed to deploy BAM activity definitions. Please make sure that all BAM related Data Transformation Services (DTS) packages are removed along with the BAM databases.
-
-> Failed to execute process:drive :\Program Files (x86)\Microsoft BizTalk Server 2009\Tracking\bm.exe.
-
+> Failed to configure EDI/AS2 Status Reporting functionalities.  
+> Failed to deploy BAM activity definitions. Please make sure that all BAM related Data Transformation Services (DTS) packages are removed along with the BAM databases.  
+> Failed to execute process:drive :\Program Files (x86)\Microsoft BizTalk Server 2009\Tracking\bm.exe.  
 > ERROR: The BAM deployment failed. DTS package BAM_DM_InterchangeStatusActivity already exists on server \<SQL Server Name>.
 
 ## Cause

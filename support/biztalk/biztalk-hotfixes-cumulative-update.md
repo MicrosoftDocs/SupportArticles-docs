@@ -38,7 +38,7 @@ If the hotfix includes an SQL script (.sql), you must stop the BizTalk Services 
 If the hotfix doesn't include an SQL script (.sql), you must restart the BizTalk Host Instance after the hotfix installation is complete.
 
 > [!NOTE]
-> You can review the `Setup.xml` file to determine which files will be updated.
+> You can review the *Setup.xml* file to determine which files will be updated.
 
 ## Install in a BizTalk group
 
@@ -53,7 +53,7 @@ When multiple BizTalk servers are configured in a group, you must install the ho
 
 ## Uninstall and rollback
 
-A BizTalk hotfix may update .dll files, and it may execute SQL scripts. If the hotfix contains only .dll files, and if it doesn't include an SQL script (.sql), it can be rolled back by using the uninstall command in Add or Remove Programs. You can review the `Setup.xml` file to determine which files will be updated.
+A BizTalk hotfix may update .dll files, and it may execute SQL scripts. If the hotfix contains only .dll files, and if it doesn't include an SQL script (.sql), it can be rolled back by using the uninstall command in Add or Remove Programs. You can review the *Setup.xml* file to determine which files will be updated.
 
 If the hotfix contains an SQL script (.sql), it will execute the SQL script against a BizTalk database or databases. In this case, the hotfix can't be rolled back by uninstalling. If you uninstall by using **Add or Remove Programs**, this won't roll back the database changes, and it may leave the BizTalk environment in an inconsistent state.
 
@@ -67,7 +67,9 @@ To force a full Backup of the data and log files, execute the `BizTalkMgmtDb.dbo
 For more information about how to back up and restore the BizTalk Server databases in BizTalk Server, visit the following websites:
 
 - [BizTalk Server 2010](https://www.microsoft.com/download/details.aspx?id=56420)
+
 - [BizTalk Server 2006 R2 and BizTalk Server 2006](https://www.microsoft.com/download/details.aspx?id=56495)
+
 - [BizTalk Server 2004](https://www.microsoft.com/download/details.aspx?id=56488)
 
 To roll back a hotfix that includes an SQL script (.sql), follow these steps:
