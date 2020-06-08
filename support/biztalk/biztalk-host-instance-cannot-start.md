@@ -1,19 +1,19 @@
 ---
 title: BizTalk Host instance can't start
-description: Describes the problem after you change the config file in BizTalk Server, a failure may occur and BizTalk Host instance can't start.
+description: This article describes the problem that after you change the configuration file in BizTalk Server, a failure might occur and the BizTalk Server host instance can't start.
 ms.date: 03/04/2020
 ms.prod-support-area-path:
 ---
-# BizTalk Host instance fails to start after config file change
+# BizTalk Host instance fails to start after a configuration file change
 
-This article introduces the problem that after changing the config file in BizTalk Server, a failure may occur and BizTalk Host instance can't start.
+This article explains that after you change the configuration file in BizTalk Server, a failure might occur and the BizTalk Server host instance can't start.
 
 _Original product version:_ &nbsp; BizTalk Server 2009  
 _Original KB number:_ &nbsp; 2411668
 
 ## Symptoms
 
-BizTalk Host instance can't start after changing the config file in BizTalk Server. You may receive the following error:
+The BizTalk Server host instance can't start after you changed the configuration file in BizTalk Server. You might get the following error:
 
 > A failure occurred when executing a Windows service request.  
 > Service request: Start  
@@ -32,7 +32,7 @@ BizTalk Host instance can't start after changing the config file in BizTalk Serv
 
 ## Cause
 
-The `btsntsvc.exe.config` or `btsntsvc64.exe.config` file had been modified with an `xlang` section.  No Configuration section handler was present for `xlang`.
+The btsntsvc.exe.config or btsntsvc64.exe.config file had been modified with an `xlangs` section. No configuration section handler was present for `xlangs`.
 
 ## Resolution
 
