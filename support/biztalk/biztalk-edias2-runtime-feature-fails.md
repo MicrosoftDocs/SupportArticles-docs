@@ -18,12 +18,9 @@ Consider the following scenario:
 
 You install and configure a BizTalk Server group. You install BizTalk Server on a second server. In the Configuration Wizard, you create a new BizTalk Server group by using the same SQL Server instance with unique database names. The EDI/AS2 runtime configuration fails, and you see any of the following messages:
 
-> Failed to configure EDI/AS2 Status Reporting functionalities.
-
-> Failed to deploy BAM activity definitions. Please make sure that all BAM related Data Transformation Services (DTS) packages are removed along with the BAM databases.
-
-> Failed to execute process:drive :\Program Files (x86)\Microsoft BizTalk Server 2009\Tracking\bm.exe.
-
+> Failed to configure EDI/AS2 Status Reporting functionalities.  
+> Failed to deploy BAM activity definitions. Please make sure that all BAM related Data Transformation Services (DTS) packages are removed along with the BAM databases.  
+> Failed to execute process:drive :\Program Files (x86)\Microsoft BizTalk Server 2009\Tracking\bm.exe.  
 > ERROR: The BAM deployment failed. DTS package BAM_DM_InterchangeStatusActivity already exists on server \<SQL Server Name>.
 
 ## Cause

@@ -96,16 +96,15 @@ The Microsoft .NET Framework 2.0 and the .NET Framework 1.1 have different memor
 
 The common language runtime (CLR) has the following garbage collectors (GCs):
 
-- Workstation (`Mscorwks.dll`)
-- Server (`Mscorsvr.dll`)
+- Workstation (*Mscorwks.dll*)
+- Server (*Mscorsvr.dll*)
 
 If the computer that is running BizTalk Server is a multiprocessor system, the .NET Framework uses the Server version of the execution engine. This is the default behavior. The Server garbage collector is designed for maximum throughput. Additionally, the Server garbage collector scales to provide high performance. This garbage collector allocates memory and then later frees memory to provide high performance on the system. Therefore, a computer that is running BizTalk Server together with some .NET Framework components seems to have a memory leak. However, in this scenario, high memory usage is the expected behavior. If the computer runs out of system memory, or if the process stops working because of insufficient addressable memory, a memory leak condition may exist.
 
 If the computer that is running BizTalk Server is a single processor system, the .NET Framework uses the Workstation version of the execution engine. It is the default behavior. The Workstation garbage collector allocation algorithm is not designed for scaling or for maximum throughput. This garbage collector uses concurrent garbage collector methods. These methods are designed for applications that have complex user interfaces. Such applications may require more aggressive garbage collection.
 
 > [!IMPORTANT]
-> This section, method, or task contains steps that tell you how to modify the registry. But serious problems might occur if you modify the registry incorrectly. Thus make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, click the following article number to view the article in the Microsoft Knowledge Base:  
-[322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows
+> This section, method, or task contains steps that tell you how to modify the registry. But serious problems might occur if you modify the registry incorrectly. Thus make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
 
 Sometimes, it may be appropriate to run the Workstation version of the execution engine on a multiprocessor system. You can use the following registry key to switch to the Workstation version of the execution engine.
 
@@ -129,7 +128,7 @@ For more information, visit [Performance Considerations for Run-Time Technologie
 
 The following are common causes and resolutions:
 
-## Process memory usage and Physical memory usage throttling thresholds
+## Process and physical memory usage throttling thresholds
 
 The Process memory usage and Physical memory usage throttling thresholds can be changed in BizTalk Server 2006 and in later versions.
 
@@ -148,20 +147,24 @@ On equivalent hardware in a 32-bit host instance, observed dehydration is nomina
 
 Because 64-bit architecture provides expanded memory address space (16 TB instead of 4 GB), 64-bit host instances are allocated more memory than 32-bit host instances. This can cause the default memory throttling thresholds to be exceeded.
 
-To work around this behavior, change the **VirtualMemoryThrottlingCriteria** and **PrivateMemoryThrottlingCriteria** values in the `BTSNTSvc64.exe.config` file. Use the \Process\Virtual Bytes and the \Process\Private Bytes Performance Monitor counters to determine the largest amount of memory that is being allocated by an orchestration instance.
+To work around this behavior, change the **VirtualMemoryThrottlingCriteria** and **PrivateMemoryThrottlingCriteria** values in the BTSNTSvc64.exe.config file. Use the \Process\Virtual Bytes and the \Process\Private Bytes Performance Monitor counters to determine the largest amount of memory that is being allocated by an orchestration instance.
 
 - Set the **OptimalUsage** value for both properties based on the following:
 
-    - **VirtualMemoryThrottlingCriteria**: \Process\Virtual Bytes value + 10%
-    - **PrivateMemoryThrottlingCriteria**: \Process\Private Bytes value + 10%
+  - **VirtualMemoryThrottlingCriteria**: \Process\Virtual Bytes value + 10%
+  - **PrivateMemoryThrottlingCriteria**: \Process\Private Bytes value + 10%
 
 - Set **MaximalUsage** for both properties to the **OptimalUsage** value + 30%
 
-For example, if the \Process\Virtual Byte Performance Monitor counter value for an orchestration instance is 5,784,787,695 bytes (5,517 MB), set the **OptimalUsage** value for **VirtualMemoryThrottlingCriteria** to 6,069 MB (5,784,787,695 * 1.10 = 6,363,266,464.5 bytes). Set the **MaximalUsage** value for **VirtualMemoryThrottlingCriteria** to 7,889 MB (6,363,266,464.5 * 1.30 = 8,272,246,403.85 bytes).
+For example, if the \Process\Virtual Byte Performance Monitor counter value for an orchestration instance is 5,784,787,695 bytes (5,517 MB), set the **OptimalUsage** value for **VirtualMemoryThrottlingCriteria** to 6,069 MB (5,784,787,695 * 1.10 = 6,363,266,464.5 bytes).
 
-If the \Process\Private Bytes Performance Monitor counter value is 435689400 bytes (415 MB), set the **OptimalUsage** value for **PrivateMemoryThrottlingCriteria** to 457 MB (435689400 * 1.10 = 479258340 bytes). Set the **MaximalUsage** value for **PrivateMemoryThrottlingCriteria** to 594 MB (479258340 * 1.30 = 623035842).
+Set the **MaximalUsage** value for **VirtualMemoryThrottlingCriteria** to 7,889 MB (6,363,266,464.5 * 1.30 = 8,272,246,403.85 bytes).
 
-For this example, the following values would be specified in the `BTSNTSvc64.exe.config` file to reduce throttling.
+If the \Process\Private Bytes Performance Monitor counter value is 435689400 bytes (415 MB), set the **OptimalUsage** value for **PrivateMemoryThrottlingCriteria** to 457 MB (435689400 * 1.10 = 479258340 bytes).
+
+Set the **MaximalUsage** value for **PrivateMemoryThrottlingCriteria** to 594 MB (479258340 * 1.30 = 623035842).
+
+For this example, the following values would be specified in the BTSNTSvc64.exe.config file to reduce throttling.
 
 |Performance Monitor counter|Memory allocated|OptimalUsage|MaximalUsage|
 |---|---|---|---|
@@ -169,7 +172,7 @@ For this example, the following values would be specified in the `BTSNTSvc64.exe
 |\Process\Private Bytes|435,689,400 bytes (415 MB)|457|594|
 |||||
 
-These values would then be represented in the `BTSNTSvc64.exe.config` file as follows:
+These values would then be represented in the BTSNTSvc64.exe.config file as follows:
 
 ```xml
 <xlangs>
@@ -185,11 +188,11 @@ These values would then be represented in the `BTSNTSvc64.exe.config` file as fo
 To determine which host instance is running the orchestration, you can match the ID Process from the \BizTalk: Messaging\ID Process and \Process\ID Process Performance Monitor counters. Then, check the Average value displayed for the corresponding \Process\Virtual Bytes and \Process\Private Bytes Performance Monitor counters.
 
 > [!NOTE]
-> Information the user should notice even if skimmingThe high dehydration may cause a significant decrease in performance when the BizTalkMsgBoxDb database is running on SQL Server 2008.
+> Information the user should notice even if skimmingThe high dehydration may cause a significant decrease in performance when the `BizTalkMsgBoxDb` database is running on SQL Server 2008.
 
-## BizTalk Server Service Packs and Cumulative Updates
+## BizTalk Server service packs and cumulative updates
 
-BizTalk Server service packs and cumulative updates include the latest fixes. These include those that affect known **System.OutOfMemoryException** issues.
+BizTalk Server service packs and cumulative updates include the latest fixes. These include those that affect known `System.OutOfMemoryException` issues.
 
 ## HeapDeCommitFreeBlockThreshold
 
@@ -279,7 +282,9 @@ Send hosts run out of memory when they operate under heavy stress. BizTalk Serve
 
 The behavior of BizTalk Server is affected because the engine loads a pre-configured number of messages. The number of messages that the engine loads is based on the values that appear in the **LowWaterMark** field and the **HighWaterMark** field of the `Adm_serviceClass` table. The `Adm_serviceClass` table is in the BizTalk Management Database. These values control the number of messages that BizTalk Server processes or sends at the same time.
 
-The **HighWaterMark** value is the total number of messages that the engine processes at the same time. The default value is 200 messages per CPU. Therefore, on an 8-processor server, the send host will try to process 1,600 messages (200 * 8) at the same time. If you assume that each message is 50 KB, the messages equal 80 MB (1,600 * 50=80,000 KB).
+The **HighWaterMark** value is the total number of messages that the engine processes at the same time. The default value is 200 messages per CPU. Therefore, on an 8-processor server, the send host will try to process 1,600 messages (200 * 8) at the same time.
+
+If you assume that each message is 50 KB, the messages equal 80 MB (1,600 * 50=80,000 KB).
 
 To resolve this issue, you can change the **HighWaterMark** value and the **LowWaterMark** value in the database. The values that you use depend on the size of the messages. For BizTalk Server 2006 and later versions, you can change the default host throttling settings.
 
@@ -289,7 +294,7 @@ If you have identified a memory leak, try to determine the cause by removing cus
 
 ## Troubleshooting steps
 
-To troubleshoot an out-of-memory condition, use the Debug Diagnostics tool to monitor memory allocations over time. The Debug Diagnostics tool can create and analyze a memory leak dump file (.dmp). When you troubleshoot memory leaks, the goal is to attach `Leaktrack.dll` before the high memory condition reproduces to capture memory growth over time. `Leaktrack.dll` is included with the Debug Diagnostics tool.
+To troubleshoot an out-of-memory condition, use the Debug Diagnostics tool to monitor memory allocations over time. The Debug Diagnostics tool can create and analyze a memory leak dump file (.dmp). When you troubleshoot memory leaks, the goal is to attach *Leaktrack.dll* before the high memory condition reproduces to capture memory growth over time. *Leaktrack.dll* is included with the Debug Diagnostics tool.
 
 1. Install the Debug Diagnostics Tool.
 
@@ -320,20 +325,20 @@ To select the data to log, use the method that is appropriate for your operating
   7. Right-click **System Monitor Log**, and then click **Properties**.
   8. Click **Add** on the **Performance Counters** tab. Select the following objects, and then click **Add** after you select each object:
 
-     -  **.Net CLR Exceptions**
-     -  **.Net CLR Memory**
-     -  **BizTalk: Messaging**
-     -  **BizTalk: TDDS**
-     -  **Memory**
-     -  **Process**
-     -  **Processor**
-     -  **XLANG/s Orchestrations**
+     - **.Net CLR Exceptions**
+     - **.Net CLR Memory**
+     - **BizTalk: Messaging**
+     - **BizTalk: TDDS**
+     - **Memory**
+     - **Process**
+     - **Processor**
+     - **XLANG/s Orchestrations**
 
      If SQL Server is local, also add the following objects:
 
-     -  **SQLServer: Databases**
-     -  **SQLServer: General Statistics**
-     -  **SQLServer: Memory Manager**
+     - **SQLServer: Databases**
+     - **SQLServer: General Statistics**
+     - **SQLServer: Memory Manager**
 
   9. Click **OK**.
   10. Change the **Sample Interval value** box to **5 seconds**.
@@ -355,15 +360,15 @@ To stop collecting data, click **Stop** on the **Action** menu.
     6. Select **All counters** and **All instances**.
     7. In the **Performance object** list, select the following objects. Click **Add** after you select each object.
 
-        -  **.Net CLR Exceptions**
-        -  **.Net CLR Memory**
-        -  **BizTalk: Messaging**
-        -  **BizTalk: TDDS**
-        -  **Memory**
-        -  **Process**
-        -  **Processor**
-        -  **XLANG/s Orchestrations**
-        
+        - **.Net CLR Exceptions**
+        - **.Net CLR Memory**
+        - **BizTalk: Messaging**
+        - **BizTalk: TDDS**
+        - **Memory**
+        - **Process**
+        - **Processor**
+        - **XLANG/s Orchestrations**
+
         If SQL Server is local, also add the following objects:
 
         - **SQLServer: Databases**
@@ -384,18 +389,18 @@ To obtain the dump file, use one of the following methods:
 
 #### Method 1: Automatic
 
-Creating a Memory and Handle Leak rule with DebugDiag is the recommended approach to capture a memory dump. The Memory and Handle Leak rule automatically attaches `Leaktrack.dll`. This is used to track memory allocations. To create the Memory and Handle Leak rule, follow these steps:
+Creating a Memory and Handle Leak rule with DebugDiag is the recommended approach to capture a memory dump. The Memory and Handle Leak rule automatically attaches *Leaktrack.dll*. This is used to track memory allocations. To create the Memory and Handle Leak rule, follow these steps:
 
 1. Start Debug Diagnostics Tool 1.1.
 2. Select **Memory and Handle Leak**, and then click **Next**.
-3. Select the **Btsntsvc.exe** process, and then click **Next**.
+3. Select the Btsntsvc.exe process, and then click **Next**.
 4. On the **Configure Leak Rule** page, follow these steps:
 
-   1. Click to select the **Start memory tracking immediately when rule is activated** check box. Otherwise, you can specify a warm-up time before `LeakTrack.dll` is injected in the **BTSNTSvc.exe** process.
+   1. Click to select the **Start memory tracking immediately when rule is activated** check box. Otherwise, you can specify a warm-up time before *LeakTrack.dll* is injected in the BTSNTSvc.exe process.
 
    2. Click **Configure**, and then do the following:
 
-      - Confirm that **Autocreate a crash rule** is selected. By selecting this option, a memory dump will be created automatically if the **BTSNTSvc.exe** process stops.
+      - Confirm that **Autocreate a crash rule** is selected. By selecting this option, a memory dump will be created automatically if the BTSNTSvc.exe process stops.
 
       - Click to select the **Generate a userdump when virtual bytes reach** check box, and keep the default value of **1024**.
 
@@ -415,24 +420,24 @@ Creating a Memory and Handle Leak rule with DebugDiag is the recommended approac
 
 #### Method 2: Manual
 
-You can also manually attach `Leaktrack.dll` and manually obtain the memory dump file. This enables you to control when the memory dump is created. To do this, follow these steps:
+You can also manually attach Leaktrack.dll and manually obtain the memory dump file. This enables you to control when the memory dump is created. To do this, follow these steps:
 
 1. Start Debug Diagnostics Tool 1.1.
 2. Click the **Processes** tab.
-3. Right-click the **Btsntsvc.exe** process, and then click **Monitor For Leaks**.
+3. Right-click the Btsntsvc.exe process, and then click **Monitor For Leaks**.
 4. In the **Debug Diagnostics Tool** dialog box, click **Yes**, and then click **OK**.
 
-Create a crash rule to monitor the same **Btsntsvc.exe** process in case the process stops before you can create the memory dump:
+Create a crash rule to monitor the same Btsntsvc.exe process in case the process stops before you can create the memory dump:
 
 1. Start Debug Diagnostics Tool 1.1.
 2. Select **Crash**, and then click **Next**.
-3. Select **A specific process**, and then click **Next**.
-4. Select the same **Btsntsvc.exe** process, and then click **Next**.
+3. Select a specific process, and then click **Next**.
+4. Select the same Btsntsvc.exe process, and then click **Next**.
 5. On the **Advanced Configuration (Optional)** page, click **Next**.
 6. In the **Select Dump Location And Rule Name (Optional)** dialog box, click **Next**.
 7. Select **Activate the rule now**, and then click **Finish**.
 
-When the process reaches 60 percent to 80 percent of RAM, right-click the **Btsntsvc.exe** process, and then click **Create Full Userdump**. If the BizTalk process stops before you can create the user dump, the Crash rule should take effect and create the memory dump.
+When the process reaches 60 percent to 80 percent of RAM, right-click the Btsntsvc.exe process, and then click **Create Full Userdump**. If the BizTalk process stops before you can create the user dump, the Crash rule should take effect and create the memory dump.
 
 ### Stop Performance Monitor logging
 

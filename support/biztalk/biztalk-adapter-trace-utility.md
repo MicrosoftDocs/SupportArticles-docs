@@ -20,7 +20,7 @@ To install the BizTalk Adapter Trace Utility on Windows Server 2008, follow thes
     > [!NOTE]
     > The Tracelog.exe file is not included with the Windows SDK for Windows Server 2008 and the Microsoft .NET Framework 3.5. So, install the Windows Vista SDK on Windows Server 2008.
 
-    For more information, see [Windows Software Development Kit (SDK) for Windows Server 2008 and .NET Framework 3.5 Release Notes](https://docs.microsoft.com/previous-versions/bb986638(v=msdn.10)).
+    For more information, see [Windows Software Development Kit (SDK) for Windows Server 2008 and .NET Framework 3.5 Release Notes](/previous-versions/bb986638(v=msdn.10)).
 
 2. When the **Installation Options window** appears, expand **Developer Tools** and expand **Windows Development Tools**. Then select the **Win32 Development Tools** check box.
 
@@ -73,7 +73,7 @@ On Windows Server 2008, enter the following command:
 trace -tools "C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin"
 ```
 
-The `tools` switch indicates to the Trace.cmd file the location of the Tracelog.exe file.
+The `-tools` switch indicates to the location of the Tracelog.exe file to the *Trace.cmd* file.
 
 ### Run the BizTalk Adapter Trace Utility
 

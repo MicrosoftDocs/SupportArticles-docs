@@ -4,7 +4,7 @@ description: Fixes a System.EnterpriseServices.TransactionProxyException issue i
 ms.date: 03/06/2020
 ms.prod-support-area-path: 
 ---
-# Exception of type System.EnterpriseServices.TransactionProxyException was thrown when you configure BizTalk Server
+# System.EnterpriseServices.TransactionProxyException was thrown when you configure BizTalk Server
 
 This article provides information about resolving a `System.EnterpriseServices.TransactionProxyException` issue when you configure BizTalk Server.
 
@@ -66,7 +66,7 @@ To resolve this issue, configure the MSDTC service correctly both on the compute
 
     After you configure the properties page, the properties page settings resemble the settings in the following image.
 
-    :::image type="content" source="./media/cannot-configure-biztalk-server/local-dtc-property-setting.jpg" alt-text="local DTC properties configure screenshot" border="false":::
+    ![local DTC properties configure screenshot](./media/cannot-configure-biztalk-server/local-dtc-property-setting.jpg)
 
 3. Save the configurations, and then wait for the MSDTC service to restart.
 
@@ -76,7 +76,7 @@ To resolve this issue, configure the MSDTC service correctly both on the compute
 
 - [Installing BizTalk Server 2010 in a Basic Multi-Computer Environment](https://social.technet.microsoft.com/wiki/contents/articles/6845.installing-biztalk-server-2010-in-a-basic-multi-computer-environment.aspx)
 
-## More Information
+## More information
 
 For more information about this issue, visit the following Microsoft websites:
 

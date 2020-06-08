@@ -30,8 +30,7 @@ BizTalk Server 2013 uses the .NET `XslCompiledTransform` class for better transf
   
   > Method 'MyPrivateFunct' of extension object 'http://schemas.microsoft.com/BizTalk/2003/userCSharp' cannot be called because it is not public.
 
-  > [!NOTE]
-  > The `XslCompiledTransform` class only supports calling public methods. This limitation is documented at [Migrating From the XslTransform Class](https://msdn.microsoft.com/library/66f54faw.aspx).
+  The `XslCompiledTransform` class only supports calling public methods. This limitation is documented at [Migrating From the XslTransform Class](https://msdn.microsoft.com/library/66f54faw.aspx).
 
   **Resolution**
 
@@ -51,8 +50,7 @@ BizTalk Server 2013 uses the .NET `XslCompiledTransform` class for better transf
   
   > Exception has been thrown by the target of an invocation. Extension functions cannot return null values.
 
-  > [!NOTE]
-  > The XslCompiledTransform class doesn't support returning null values from functions that are called within the transform.
+  The XslCompiledTransform class doesn't support returning null values from functions that are called within the transform.
 
   **Resolution**
 
@@ -68,19 +66,19 @@ BizTalk Server 2013 uses the .NET `XslCompiledTransform` class for better transf
   ```csharp
   public static bool WriteNode(XPathNodeIterator node)
   {
-      node.MoveNext(); //needs to be added in BizTalk Server 2013 to avoid error
-      XPathNavigator xpn = node.Current;
-      XmlDocument xdoc = new XmlDocument();
-      xdoc.LoadXml(xpn.OuterXml);
-      return true;
+    node.MoveNext(); //needs to be added in BizTalk Server 2013 to avoid error
+    XPathNavigator xpn = node.Current;
+    XmlDocument xdoc = new XmlDocument();
+    xdoc.LoadXml(xpn.OuterXml);
+    return true;
   }
   ```
 
   **Resolution**
 
-  Call the MoveNext() function.
+  Call the `MoveNext()` function.
 
-- Function overloads are differentiated by number of parameters instead of by types
+- Function overloads are differentiated by number of parameters instead of by types.
 
   **Symptom**
 
@@ -95,8 +93,7 @@ BizTalk Server 2013 uses the .NET `XslCompiledTransform` class for better transf
   
   > Ambiguous method call. Extension object 'http://schemas.microsoft.com/BizTalk/2003/ScriptNS0' contains multiple 'MyOverloadedFunction' methods that have 1 parameter(s).
 
-  > [!NOTE]
-  > The `XslCompiledTransform` class only differentiates between functions based on the number of arguments. This limitation is documented at [Migrating From the XslTransform Class](https://msdn.microsoft.com/library/66f54faw.aspx).
+  The `XslCompiledTransform` class only differentiates between functions based on the number of arguments. This limitation is documented at [Migrating From the XslTransform Class](https://msdn.microsoft.com/library/66f54faw.aspx).
 
   **Resolution**
 
@@ -134,7 +131,7 @@ The followings are some known issues that are specific to SSO on BizTalk Server 
 
   This issue is resolved in later releases of the BizTalk Server 2013 media. Therefore, make sure that you upgrade by using the latest available media.
 
-- Can't load `Microsoft.BizTalk.Interop.SSOClient.dll version 5.0.1.0`
+- Can't load `Microsoft.BizTalk.Interop.SSOClient.dll` version 5.0.1.0
 
   **Symptom**
 
@@ -146,7 +143,7 @@ The followings are some known issues that are specific to SSO on BizTalk Server 
 
     **Resolution**
 
-     If the version of `Microsoft.BizTalk.Adapter.Wcf.Runtime.dll` is earlier than 3.10.229.0, copy the correct version of the file from the BizTalk Server 2013 installation media (located in `<DVD-Drive>\BizTalk Server\MSI\Program Files`), put it in the BizTalk Server installation folder, and then install it into the Global Assembly Cache (GAC). You can install the .dll file into the GAC by using the `gacutil.exe` tool as following:
+     If the version of `Microsoft.BizTalk.Adapter.Wcf.Runtime.dll` is earlier than 3.10.229.0, copy the correct version of the file from the BizTalk Server 2013 installation media (located in `<DVD-Drive>\BizTalk Server\MSI\Program Files`), put it in the BizTalk Server installation folder, and then install it into the Global Assembly Cache (GAC). You can install the .dll file into the GAC by using the gacutil.exe tool as following:
 
      ```console
      gacutil.exe /if Microsoft.BizTalk.Adapter.Wcf.Runtime.dll
@@ -175,7 +172,7 @@ The followings are some known issues that are specific to SSO on BizTalk Server 
 
     For how to obtain the latest cumulative update to resolve it, see [Service Pack and cumulative update list for BizTalk Server](https://support.microsoft.com/help/2555976).
 
-- Failed to load `SSOPSServer.dll`
+- Failed to load *SSOPSServer.dll*
 
   **Symptom**
 
@@ -185,7 +182,7 @@ The followings are some known issues that are specific to SSO on BizTalk Server 
 
   **Resolution**
 
-  This error is harmless and can be ignored. In order to prevent this error from continuing to occur, copy the `SSOPSServer.dll` file from the original installation media into the `\Program Files\Common Files\Enterprise Single Sign-On` folder on the computer. For 64-bit installations of SSO, use the `SSOPSServer.dll` file from `\Platforms\SSO64\Files` on the installation media. For 32-bit installations of SSO, use the file from `\Platforms\SSO\Files`.
+  This error is harmless and can be ignored. In order to prevent this error from continuing to occur, copy the *SSOPSServer.dll* file from the original installation media into the `\Program Files\Common Files\Enterprise Single Sign-On` folder on the computer. For 64-bit installations of SSO, use the *SSOPSServer.dll* file from `\Platforms\SSO64\Files` on the installation media. For 32-bit installations of SSO, use the file from `\Platforms\SSO\Files`.
 
 - BizTalk SSO Master Secret cannot be used by Host Integration Server 2013 SSO
 
@@ -199,7 +196,7 @@ The followings are some known issues that are specific to SSO on BizTalk Server 
 
   Host Integration Server 2013 includes version 9.0.2096.0 of SSO. However, BizTalk Server 2013 includes version 9.0.1865.0. Because of this, in a mixed environment in which SSO services on both Host Integration Server and BizTalk servers access a shared Master Secret Server, the server must run the Host Integration Server 2013 SSO service. Be aware that installing Host Integration Server on a BizTalk server will upgrade the existing SSO service to version 9.0.2096.0, and will require that the remote Master Secret SSO server also be upgraded to 9.0.2096.0.
 
-## Other Known Issues
+## Other known issues
 
 - Upgrade to BizTalk Server 2013 doesn't deploy new `Microsoft.BizTalk.GlobalPropertySchemas.dll`
 
@@ -207,26 +204,16 @@ The followings are some known issues that are specific to SSO on BizTalk Server 
 
   An in-place upgrade from BizTalk Server 2009 or BizTalk Server 2010 to BizTalk Server 2013 does not correctly deploy the new `Microsoft.BizTalk.GlobalPropertySchemas.dll` file into the `BizTalkMgmtDb` database. This can result in errors when any of the new global properties are accessed by BizTalk. This can occur when you use `WCF.HttpHeaders`, any property associated with the `SB-Messaging Adapter`, or any other new property. The error messages that the `SB-Messaging Adapter` fails together with are following:
   
-  > The adapter "SB-Messaging" raised an error message. Details "System.Runtime.InteropServices.COMException (0xC0C01620): Exception from HRESULT: 0xC0C01620
-  >
-  > at Microsoft.BizTalk.TransportProxy.Interop.IBTTransportBatch.MoveToSuspendQ(IBaseMessage msg)
-  >
-  > at Microsoft.BizTalk.Adapter.Wcf.Runtime.Batch2.MoveToSuspendQ(IBaseMessage message, Object userData)
-  >
-  > at Microsoft.BizTalk.Adapter.Wcf.Runtime.BizTalkReceiveBatch.SuspendMessageIfNeeded(IBaseMessage message, StreamAndUserData streamAndUserData, Int32 messageStatus)".
-  >
-  > The adapter "SB-Messaging" raised an error message. Details "System.Exception: Loading property information list by namespace failed or property not found in the list. Verify that the schema is deployed properly.
-  >
-  > at Microsoft.BizTalk.Adapter.Wcf.Runtime.BizTalkServiceInstance.EndOperation(IAsyncResult result)
-  >
-  > at AsyncInvokeEndEndTwoWayMethod(Object , Object[] , IAsyncResult )
-  >
-  > at System.ServiceModel.Dispatcher.AsyncMethodInvoker.InvokeEnd(Object instance, Object[]& outputs, IAsyncResult result)
-  >
-  > at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeEnd(MessageRpc& rpc)
-  >
-  > at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage7(MessageRpc& rpc)
-  >
+  > The adapter "SB-Messaging" raised an error message. Details "System.Runtime.InteropServices.COMException (0xC0C01620): Exception from HRESULT: 0xC0C01620  
+  > at Microsoft.BizTalk.TransportProxy.Interop.IBTTransportBatch.MoveToSuspendQ(IBaseMessage msg)  
+  > at Microsoft.BizTalk.Adapter.Wcf.Runtime.Batch2.MoveToSuspendQ(IBaseMessage message, Object userData)  
+  > at Microsoft.BizTalk.Adapter.Wcf.Runtime.BizTalkReceiveBatch.SuspendMessageIfNeeded(IBaseMessage message, StreamAndUserData streamAndUserData, Int32 messageStatus)".  
+  > The adapter "SB-Messaging" raised an error message. Details "System.Exception: Loading property information list by namespace failed or property not found in the list. Verify that the schema is deployed properly.  
+  > at Microsoft.BizTalk.Adapter.Wcf.Runtime.BizTalkServiceInstance.EndOperation(IAsyncResult result)  
+  > at AsyncInvokeEndEndTwoWayMethod(Object , Object[] , IAsyncResult)  
+  > at System.ServiceModel.Dispatcher.AsyncMethodInvoker.InvokeEnd(Object instance, Object[]& outputs, IAsyncResult result)  
+  > at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeEnd(MessageRpc& rpc)  
+  > at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage7(MessageRpc& rpc)  
   > at System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)"
   
   **Resolution**
@@ -244,7 +231,7 @@ The followings are some known issues that are specific to SSO on BizTalk Server 
 
   **Symptom**
 
-  ESB Toolkit 2.2 uses Unity 2.0 that requires modifications to the default `esb.config` file. Without these modifications, the following issues can occur:
+  ESB Toolkit 2.2 uses Unity 2.0 that requires modifications to the default esb.config file. Without these modifications, the following issues can occur:
 
   - ESB 2.2 configuration fails, and you receive the following error message:
   
@@ -252,30 +239,18 @@ The followings are some known issues that are specific to SSO on BizTalk Server 
 
   - When the `ItinerarySelectReceiveXML` receive pipeline is used to call the Business Rules Engine to dynamically select an itinerary (by using the ESB BRI Resolver), the following error is thrown:
   
-    > Exception has been thrown by the target of an invocation.
-    >
-    > Source: Microsoft.Practices.ESB.Resolver.ResolverMgr
-    >
-    > Method: System.Collections.Generic.Dictionary`2[System.String,System.String] Resolve(Microsoft.Practices.ESB.Resolver.ResolverInfo, Microsoft.BizTalk.Message.Interop.IBaseMessage, Microsoft.BizTalk.Component.Interop.IPipelineContext)
-    >
-    > Error Source: mscorlib
-    >
-    > Error TargetSite: System.Object InvokeMethod(System.Object, System.Object[], System.Signature, Boolean)
-    >
-    > Error StackTrace: at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
-    >
-    > at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-    >
-    > at System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes, StackCrawlMark& stackMark)
-    >
-    > at System.Activator.CreateInstance(Type type, BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes)
-    >
-    > at System.Activator.CreateInstance(Type type, Object[] args)
-    >
-    > at Microsoft.Practices.ESB.Resolver.ResolverFactory.Create(String key)
-    >
-    > at Microsoft.Practices.ESB.Resolver.ResolverMgr.GetResolver(ResolverInfo info)
-    >
+    > Exception has been thrown by the target of an invocation.  
+    > Source: Microsoft.Practices.ESB.Resolver.ResolverMgr  
+    > Method: System.Collections.Generic.Dictionary`2[System.String,System.String] Resolve(Microsoft.Practices.ESB.Resolver.ResolverInfo, Microsoft.BizTalk.Message.Interop.IBaseMessage, Microsoft.BizTalk.Component.Interop.IPipelineContext)  
+    > Error Source: mscorlib  
+    > Error TargetSite: System.Object InvokeMethod(System.Object, System.Object[], System.Signature, Boolean)  
+    > Error StackTrace: at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)  
+    > at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)  
+    > at System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes, StackCrawlMark& stackMark)  
+    > at System.Activator.CreateInstance(Type type, BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes)  
+    > at System.Activator.CreateInstance(Type type, Object[] args)  
+    > at Microsoft.Practices.ESB.Resolver.ResolverFactory.Create(String key)  
+    > at Microsoft.Practices.ESB.Resolver.ResolverMgr.GetResolver(ResolverInfo info)  
     > at Microsoft.Practices.ESB.Resolver.ResolverMgr.Resolve(ResolverInfo info, IBaseMessage message, IPipelineContext pipelineContext)
 
   **Resolution**
@@ -284,15 +259,15 @@ The followings are some known issues that are specific to SSO on BizTalk Server 
 
 - `EDIFACT` message that has UNB 3.3 segment is suspended
 
-  **Symptom**
+    **Symptom**
 
-  After the upgrade to BizTalk Server 2013, an `EDIFACT` message that contains a UNB 3.3 segment fails, and you receive the following error message. This same `EDIFACT` message processed without issue in BizTalk Server 2010:
-  
-  > Loading property information list by namespace failed or property not found in the list. Verify that the schema is deployed properly.
+    After the upgrade to BizTalk Server 2013, an `EDIFACT` message that contains a UNB 3.3 segment fails, and you receive the following error message. This same `EDIFACT` message processed without issue in BizTalk Server 2010:
 
-  **Resolution**
+    > Loading property information list by namespace failed or property not found in the list. Verify that the schema is deployed properly.
 
-  Restart the relevant host instance by using the following steps:
+    **Resolution**
+
+    Restart the relevant host instance by using the following steps:
 
   - In BizTalk Server Administration Console, navigate to **BizTalk Group** > **Applications** > **BizTalk EDI Applications** > **Resources**.
   - Right-click **Resources**, and then click **Add** > **BizTalk Assemblies**.

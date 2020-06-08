@@ -9,8 +9,8 @@ ms.reviewer: shaheera
 
 This article describes why you must install the MQSAgent or MQSAgent2 COM+ application on each cluster node to provide high availability in a clustered environment.
 
-_Original product version: _&nbsp; BizTalk Server 2006 and later versions  
-_Original KB number: _&nbsp; 936125
+_Original product version:_ &nbsp; BizTalk Server 2006 and later versions  
+_Original KB number:_ &nbsp; 936125
 
 ## Summary
 
