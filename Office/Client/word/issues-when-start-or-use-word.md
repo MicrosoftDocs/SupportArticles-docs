@@ -610,4 +610,5 @@ To change the default printer, follow these steps:
 3. Right-click **Microsoft XPS Document Writer**, and then select **Set as default printer**.    
 4. Start Word.
 
-If the problem is resolved after you start Word, you have determined that the printer is causing the problem. If this is the case, contact the vendor to see whether there is an update for the printer driver. 
+If the problem is resolved after you start Word, you have determined that the printer is causing the problem. If this is the case, contact the vendor to see whether there is an update for the printer driver.
+
