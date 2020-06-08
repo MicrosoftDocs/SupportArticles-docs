@@ -1,6 +1,6 @@
 ---
 title: Listing some issues for Teams
-description: This article lists Teams related issues.
+description: This article lists Microsoft Teams related issues.
 author: AmandaAZ
 manager: dcscontentpm
 audience: ITPro
@@ -18,7 +18,7 @@ appliesto:
 
 # Teams Troubleshooting
 
-Welcome to Teams troubleshooting! Here's a collection of known issues and information on how to identify and fix errors you may experience when using this product.
+Welcome to Teams troubleshooting! If you're looking for known issues, you're in the right place. We have organized each known issue into its own article and grouped them in categories to make it easier to find. You'll also find information on how to identify and fix errors you may experience when using Microsoft Teams.
 
 Browse the table of contents or use the search box on the left to find an issue.
 
