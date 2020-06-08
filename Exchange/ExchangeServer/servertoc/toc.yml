@@ -43,7 +43,7 @@
       href: ../client-connectivity/calendar-shows-organizer-name.md
   - name: Compliance
     - name: Audit Log searches fail with ErrorInvalidServerVersion
-      href: ../administration/mailbox-audit-log-searches-fail-errorinvalidserverversion.md
+      href: ../compliance/mailbox-audit-log-searches-fail-errorinvalidserverversion.md
   - name: Client Access
     items:
     - name: IMAP clients fail to logon
@@ -59,21 +59,15 @@
   - name: Public Folders
     items:
     - name: No active public folder mailboxes were found
-      href: ../migration/migrationbatch-fails-no-public-folder-mailboxes.md
+      href: ../public-folders/migrationbatch-fails-no-public-folder-mailboxes.md
     - name: Public folder migration stops at 95%
-      href: ../migration/public-folder-migration-fails.md
+      href: ../public-folders/public-folder-migration-fails.md
   - name: OWA
     items:
     - name: Can't search people in OWA
       href: ../owa/can't-connect-error-searching-people-owa.md
-
-
   - name: Setup
     items:
     - name: Exchange Server 2019 setup does not run correctly using PowerShell
       href: ../setup/ex2019-setup-does-not-run-correctly-started-powershell.md
-  - name: Shared Mailboxes
-    items:
-
-
 
