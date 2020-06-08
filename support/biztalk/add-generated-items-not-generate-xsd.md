@@ -1,37 +1,37 @@
 ---
-title: Add Generated Items can't generate XSD schema
-description: Discusses a problem in a BizTalk Server project where the Add Generated Items Wizard fails to generate an XSD schema and you may receive an error message.
+title: Add Generated Items Wizard can't generate an XSD schema
+description: This article discusses a problem in a BizTalk Server project where the Add Generated Items Wizard fails to generate an XSD schema and you might get an error message.
 ms.date: 03/16/2020
 ms.prod-support-area-path: 
 ms.reviewer: rickcau
 ---
 # Add Generated Items Wizard fails to generate an XSD schema
 
-This article discusses a problem in a BizTalk Server project where the **Add Generated Items Wizard** may not generate an XSD schema.
+This article discusses a problem in a Microsoft BizTalk Server project where the Add Generated Items Wizard doesn't generate an XML Schema Definition (XSD) schema.
 
 _Original product version:_ &nbsp; BizTalk Server 2006, 2004  
 _Original KB number:_ &nbsp; 911771
 
 ## Symptoms
 
-On a computer that is running Microsoft Visual Studio, you try to use the **Add Generated Items Wizard** in a Microsoft BizTalk Server 2006 or Microsoft BizTalk Server 2004 project to generate an XML Schema definition language (XSD) schema. When you have a try, the **Add Generated Items Wizard** may not generate an XSD schema and you may receive an error message that is similar to the one:
+On a computer that's running Microsoft Visual Studio, you try to use the Add Generated Items Wizard in a BizTalk Server 2006 or BizTalk Server 2004 project to generate an XSD schema. The wizard doesn't generate an XSD schema, and you might get an error message like this one:
 
 > There were some errors generated during schema generation. Go to task list to view errors. Task list may be filtered, enable showing of all task list items to see schema generation errors.
 
 ## Cause
 
-The problem may occur when you try to convert a complex Document Type Definition (DTD) schema or a complex XML-Data Reduced (XDR) schema to an XSD schema.
+The problem might happen when you try to convert a complex Document Type Definition (DTD) schema or a complex XML-Data Reduced (XDR) schema to an XSD schema.
 
 ## Resolution
 
 To resolve the problem, use one of the following methods:
 
 - Manually create an XSD schema.
-- Use a third-party program to convert the complex DTD schema or the complex XDR schema to an XSD schema.
+- Use a partner program to convert the complex DTD schema or the complex XDR schema to an XSD schema.
 
 ## Status
 
-Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the **Original product version** at the beginning of this article.
+Microsoft has confirmed that this is a problem in the Microsoft products that are listed as the original product version at the beginning of this article.
 
 ## More information
 
