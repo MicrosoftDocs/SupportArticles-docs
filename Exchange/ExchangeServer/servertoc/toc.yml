@@ -42,6 +42,7 @@
     - name: Show organizer name instead of subject
       href: ../client-connectivity/calendar-shows-organizer-name.md
   - name: Compliance
+    items:
     - name: Audit Log searches fail with ErrorInvalidServerVersion
       href: ../compliance/mailbox-audit-log-searches-fail-errorinvalidserverversion.md
   - name: Client Access
