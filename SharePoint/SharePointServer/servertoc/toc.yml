@@ -227,7 +227,7 @@
       href: ../../SharePointOnline/Workflows/publishing-approval-workflow-fails-starting.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Replace List Item Permissions action fails
       href: ../../SharePointOnline/Workflows/replace-list-item-permission-fail.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
-    - name: Workflow can't send email to groupfrom initiation form
+    - name: Workflow can't send email to groups from initiation form
       href: ../workflows/workflow-cannot-send-email-to-group.md
     - name: Workflow contains blank values in output
       href: ../../SharePointOnline/Workflows/workflow-contains-blank-values.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
