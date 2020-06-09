@@ -547,7 +547,7 @@
       href: ../excel/format-cells-settings.md
     - name: Formatted text is limited to 240 characters per line
       href: ../excel/prn-file-limited-to-240-characters.md
-    - name: Formula errors when list separater isn't set
+    - name: Formula errors when list separator isn't set
       href: ../excel/formula-errors.md
     - name: Formulas to count text occurrences in Excel
       href: ../excel/formulas-to-count-occurrences-in-excel.md
@@ -619,7 +619,7 @@
       href: ../excel/network-mapped-drive-hyperlinks-unc.md
     - name: Office 365 users can't open or synchronize files
       href: ../excel/cannot-operate-files.md
-    - name: Operation Must Use an Updateable Query
+    - name: Operation Must Use an Updatable Query
       href: ../excel/fails-accessing-excel-through-odbc.md
     - name: Parts of Excel turn white or gray
       href: ../excel/parts-of-excel-turn-white-or-gray.md
@@ -783,7 +783,7 @@
       href: ../office/no-default-mail-client-error.md
     - name: "\"Your system is low on virtual memory\" error"
       href: ../office/your-system-is-low-on-virtual-memory.md
-    - name: Applications crash when opening IRM doccument
+    - name: Applications crash when opening IRM document
       href: ../office/office-applications-crash-when-open-irm-doc.md
     - name: Can't change the number of places in Recent Places
       href: ../office/change-number-of-recent-places.md
@@ -818,7 +818,7 @@
     - name: Issues when you click hyperlink to SSO Web site in a document
       href: ../office/click-hyperlink-to-sso-website.md
     - name: Loss of image quality occurs in a document
-      href: ../office/office-docuemnt-image-quality-loss.md
+      href: ../office/office-document-image-quality-loss.md
     - name: Manage templates in Office program
       href: ../office/manage-office-program-templates.md
     - name: Missing fonts issue in documents
@@ -837,7 +837,7 @@
       href: ../office/office-end-user-license-agreement.md
     - name: Office files with RMS protection crash
       href: ../office/rms-protected-files-crash.md
-    - name: Office installtion Error 1401, 1402 or 1406
+    - name: Office installation Error 1401, 1402 or 1406
       href: ../office/office-install-error-1401-1402-1406.md
     - name: Office stops responding when you open a file
       href: ../office/office-stops-responding.md
@@ -1193,6 +1193,3 @@
       href: ../word/save-changes-to-global-template.md
   - name: Office Developer
     href: /previous-versions/office/troubleshoot/office-developer/add-button-in-word
-    
-
-    
