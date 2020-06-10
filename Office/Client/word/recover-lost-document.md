@@ -30,8 +30,10 @@ ms.date: 5/28/2020
 > This article suggests ways in which you can recover a lost Microsoft Word document.<br /><br />
 > If you're looking for information about how to recover recent Office documents, see the following articles:
 > - [Recover your Office files](https://support.office.com/article/recover-your-office-files-dc901de2-acae-47f2-9175-fb5a91e9b3c8) (for Word versions through Office 2019)
-> - [Find lost files after the upgrade to Windows 10](https://support.microsoft.com/help/12386/)<br /><br />
-For more information about earlier versions of Word, see the following Knowledge Base article:
+> - [Find lost files after the upgrade to Windows 10](https://support.microsoft.com/help/12386/)
+
+> [!NOTE]
+> For more information about earlier versions of Word, see the following Knowledge Base article:
 > - [How Word creates and recovers the auto-recover files](https://support.microsoft.com/help/107686)
 
 ## Quick resolution
