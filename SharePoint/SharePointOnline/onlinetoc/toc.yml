@@ -184,7 +184,7 @@
     - name: Can't force Modern Authentication with using Connect-SPOService
       href: ../security/cannot-force-modern-authentication.md
     - name: Documents deleted by retention policy after workloads are removed
-      url: ../security/retention-policies-deleting-documents-after-workload-removal.md
+      href: ../security/retention-policies-deleting-documents-after-workload-removal.md
     - name: Handling ransomware in SharePoint Online
       href: ../security/handling-ransomware-in-sharepoint-online.md
     - name: Migrated accounts aren't resolved
@@ -356,4 +356,3 @@
     - name: Workflow platform creates Word files that can't be opened
       href: ../Workflows/workflow-platform-created-word-fails-opening.md
 
-      
