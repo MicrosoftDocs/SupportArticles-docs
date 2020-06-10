@@ -181,16 +181,18 @@
       href: ../search/search-results-dont-appear-for-group-owners.md
   - name: Security
     items:
-    - name: '"Session has expired" when opening a document'
-      href: ../Security/session-has-expired.md
     - name: Can't force Modern Authentication with using Connect-SPOService
       href: ../security/cannot-force-modern-authentication.md
+    - name: Documents deleted by retention policy after workloads are removed
+      url: ../security/retention-policies-deleting-documents-after-workload-removal.md
     - name: Handling ransomware in SharePoint Online
       href: ../security/handling-ransomware-in-sharepoint-online.md
     - name: Migrated accounts aren't resolved
       href: ../Security/migrated-user-name-resolution-fails.md
     - name: Online cross-domain iframe requests are blocked
       href: ../security/cross-domain-iframe-requests-are-blocked.md
+    - name: '"Session has expired" when opening a document'
+      href: ../Security/session-has-expired.md
     - name: There is a problem with your account when opening documents
       href: ../Security/problem-with-your-account.md
   - name: Sharing and Permissions
