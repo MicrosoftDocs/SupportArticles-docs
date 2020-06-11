@@ -184,7 +184,7 @@
     - name: Can't force Modern Authentication with using Connect-SPOService
       href: ../security/cannot-force-modern-authentication.md
     - name: Documents deleted by retention policy after workloads are removed
-      href: ../security/retention-policies-deleting-documents-after-workload-removal.md
+      href: ../../OneDrive/sync/retention-policies-deleting-documents-after-workload-removal.md?toc=/OneDrive/troubleshoot/sharepointtoc/toc.json&bc=/OneDrive/troubleshoot/breadcrumb/toc.json
     - name: Handling ransomware in SharePoint Online
       href: ../security/handling-ransomware-in-sharepoint-online.md
     - name: Migrated accounts aren't resolved

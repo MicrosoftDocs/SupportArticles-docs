@@ -10,7 +10,7 @@
   - name: Security
     items:
     - name: Documents deleted by retention policy after workloads are removed
-      href: ../../SharePointOnline/security/retention-policies-deleting-documents-after-workload-removal.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
+      href: ../sync/retention-policies-deleting-documents-after-workload-removal.md
     - name: There is a problem with your account when opening documents
       href: ../../SharePointOnline/Security/problem-with-your-account.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
   - name: Search

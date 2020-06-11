@@ -7,7 +7,7 @@ localization_priority: Normal
 ms.date: 06/10/2020
 ms.audience: Admin
 ms.topic: article
-ms.service: sharepoint-online
+ms.prod: onedrive
 localization_priority: Normal
 ms.custom: 
 - CSSTroubleshoot
@@ -18,7 +18,6 @@ search.appverid:
 ms.assetid: 
 description: A retention policy continues to delete documents even after workloads are removed from the policy
 appliesto:
-- SharePoint Online
 - OneDrive for Business
 ---
 
