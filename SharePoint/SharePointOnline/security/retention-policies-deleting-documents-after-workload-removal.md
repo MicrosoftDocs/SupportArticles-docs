@@ -23,18 +23,15 @@ appliesto:
 
 # A retention policy deletes documents after workload is removed from the policy
 
-## Scenario
+## Summary
 
-The Security and Compliance Administrator sets up a deletion policy to particular locations (workloads), such as SharePoint, OneDrive, and EXO. The admin later removes the SharePoint and OneDrive locations from the policy. However, we continue to run the generated list of actions.
+If a retention policy is set up for specific workloads such as SharePoint, OneDrive, and or Exchange Online, but SharePoint and OneDrive workloads are removed from it at a later time, the actions that are generated to comply with the policy continue to run until they are finished. 
 
-## How it works
+For example, a deletion policy is enabled to move all SharePoint documents that are created before a specific date to the Recycle Bin. If this policy is later disabled for SharePoint, it will not stop the documents from continuing to be moved to the Recycle Bin. 
 
-We first generate a full list of all tasks at a particular location when the policy is enabled, and then we run the tasks. This process can take anywhere from several days to a week, depending on the data.
-
-If the policy is disabled or deleted before it's fully run, we still process the tasks as requested.
-
-If items were set to move into the Recycle Bin, they will still move as expected in this scenario.
 
 ## More Information
 
-We are aware of this problem, and currently plan to create additional checks to validate whether the workload is removed from the policy and, if it is removed, top the policy from running.
+Microsoft is researching ways to improve this experience and will post more information in this article when the information becomes available. 
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
