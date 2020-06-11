@@ -28,9 +28,8 @@ If a retention policy is set up for specific workloads such as SharePoint Online
 
 For example, a retention policy is enabled to move all OneDrive for Business documents that are created before a specific date to the Recycle Bin. If this policy is later disabled for OneDrive for Business, it will not stop the documents from continuing to be moved to the Recycle Bin. 
 
+Microsoft is researching ways to improve this experience and will post more information in this article when the information becomes available. 
 
 ## More information
-
-Microsoft is researching ways to improve this experience and will post more information in this article when the information becomes available. 
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
