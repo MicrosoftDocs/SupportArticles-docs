@@ -55,7 +55,7 @@
       },
 
       "manager": {
-        "**/*.md": "ramakoni"
+        "**/*.md": "dcscontentpm"
       },
       "audience": {
         "**/*.md": "itpro"
@@ -76,18 +76,15 @@
         "**/*.md": "kb-support"
       },
 
-
-
       "ms.prod": {
-        "sql/**/*.md": "sql"
+        "biztalk/**/*.md": "biztalk-server"
       },
       "ms.technology": {
-        "sql/**/*.md": ""
+        "biztalk/**/*.md": ""
       },
 
-
       "titleSuffix": {
-        "sql/**/*.md": "SQL Server"
+        "biztalk/**/*.md": "Biztalk Server"
       }
 
     },

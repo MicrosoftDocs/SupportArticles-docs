@@ -1,7 +1,7 @@
 ### YamlMime:Hub
 title: Microsoft Support articles
 
-summary: Find support articles about work-arounds, hotfixes, and other knowledge base (KB) information, for several commercial server products from Microsoft.
+summary: Find support articles about work-arounds, in-depth explanations for troubleshooting, and other knowledge base (KB) information, for several commercial server products from Microsoft.
 
 # TODO - Identify a generic Microsoft brand code, from Kurtis. (Gene)
 brand: sql-server
@@ -9,7 +9,7 @@ brand: sql-server
 
 metadata:
    title: Support articles | Microsoft Docs
-   description: Find support articles about work-arounds, hotfixes, and other knowledge base (KB) information, for several commercial server products from Microsoft.
+   description: Find support articles about work-arounds, in-depth explanations for troubleshooting, and other knowledge base (KB) information, for several commercial server products from Microsoft.
    ms.topic: hub-page
 
 
@@ -20,19 +20,14 @@ metadata:
 
 productDirectory:
   items:
-
-  - title: SQL Server 
-    imageSrc: media/hub-landing/database-design.svg
+  - title: Biztalk Server
+    imageSrc: "media/hub-landing/biztalk.svg"
     links:
-      - url: sql/welcome-support-sql-server.md
-        text: SQL Server
-
-  - title: Visual Studio (under construction)
-    imageSrc: media/hub-landing/vs-ide-2019.svg
-
+    - url: biztalk/welcome-support-biztalk.md
+      text: Support for Biztalk Server
 
 # conceptualContent:
 
 
-# additionalContent: 
+# additionalContent:
 

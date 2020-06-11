@@ -1,5 +1,5 @@
 - name: Index
   href: index.yml
 
-- name: SQL Server support
-  href: sql/welcome-support-sql-server.md
+- name: Biztalk Server support
+  href: biztalk/welcome-support-biztalk.md

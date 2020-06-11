@@ -8,6 +8,6 @@
     topicHref: /support/index
     items:
 
-    - name: SQL
-      tocHref: /support/sql/index.md
-      topicHref: /support/sql/welcome-support-sql-server
+    - name: Biztalk
+      tocHref: /support/biztalk/
+      topicHref: /support/biztalk/welcome-support-biztalk
