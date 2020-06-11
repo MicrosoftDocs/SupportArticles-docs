@@ -20,21 +20,22 @@ ms.reviewer: mmaxey
 description: Describes how to troubleshoot problems when printing documents from Word for Office 365 running on Windows 10.
 ---
 
-# Troubleshoot print failures in Word for Office 365 on Windows 10
+# Troubleshoot printing failures in Word for Office 365 on Windows 10
+
+This article provides steps to diagnose and resolve issues that occur when you cannot print a Microsoft Word for Office 365 document on Windows 10.
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 > [!NOTE]
 > To troubleshoot previous versions of Word, see [Troubleshoot print failures in Word](https://docs.microsoft.com/office/troubleshoot/word/print-failures-in-word). 
 
-## Summary
+## Quick resolution
 
-This article suggests ways in which you can diagnose and resolve issues when you cannot print a Microsoft Word for Office 365 document on Windows 10.
 
-*Try the following options to help determine the cause of your printing failure. Select the  image or title to see more detailed instructions about that option.*
+Try the following options to help determine the root cause of your problem in Word. Select the image at the left or the option heading to see more detailed instructions about that option.
 
 > [!NOTE]
-> Before you begin, make sure that [Windows is up to date](https://support.microsoft.com/help/4027667/windows-10-update) and then try to print again.
+> Before you begin, make sure that [Windows is up-to-date](https://support.microsoft.com/help/4027667/windows-10-update) and then try to print again.
 
 <table align="left">
 <tr>
@@ -48,7 +49,7 @@ This article suggests ways in which you can diagnose and resolve issues when you
 <ol>
 <li>Open a new blank document.</li>
 <li>Type the following text: <b>=rand(10)</b>.</li>
-<li>Press <b>Enter</b>.</li>
+<li>Press Enter.</li>
 <li>Try to print again.</li>
 </ol>
 </td>
@@ -81,8 +82,8 @@ This article suggests ways in which you can diagnose and resolve issues when you
 <td><b><a href="#option3">Repair the Word program files</a></b>
 <ol>
 <li>Exit all Office programs.</li>
-<li>Select <b>Start</b>, then type <b>uninstall</b>.</li>
-<li>Open <b>Add or Remove Programs</b>.</li>
+<li>Select <b>Start</b>, and then type <b>add</b>.</li>
+<li>Select <b>Add or Remove Programs</b>.</li>
 <li>Under <b>Apps & features</b>, select <b>Microsoft Office Word</b>.</li>
 <li>Select <b>Modify</b>.</li>
 <li>Select <b>Online Repair</b>, then follow instructions to repair the programs.</li>
@@ -103,10 +104,10 @@ This article suggests ways in which you can diagnose and resolve issues when you
 <ol>
 <li>
 Remove all media (USB drive, DVD, CD) from your computer.</li>
-<li>Select <b>Start</b>, then the <b>Power button</b>, then select <b>Restart</b>.</li>
+<li>Select <b>Start</b>, select the <b>Power</b> button, and then select <b>Restart</b>.</li>
  <li>Press and hold <b>F8</b> key as your computer restarts.</li>
-<li>On the <b>Advanced Boot Options</b> screen, select <b>Safe Mode</b>, then <b>Enter</b>.</li>
- <li>Sign in to your computer using administrative credentials.</li>
+<li>On the <b>Advanced Boot Options</b> screen, select <b>Safe Mode</b>, and then press Enter.</li>
+ <li>Sign in to your computer by using administrative credentials.</li>
  <li>Try printing again.</li>
 </ol>
 
@@ -122,20 +123,23 @@ Remove all media (USB drive, DVD, CD) from your computer.</li>
 </td>
 <td><b><a href="#option5">Test printing with different print drivers</a></b>
 <ol>
-<li>Select <b>Start</b>, then <b>Settings</b>.
-<li>Select <b>Devices</b>, then <b>Printers & scanners</b>.</li>
+<li>Select <b>Start</b> > <b>Settings</b>.
+<li>Select <b>Devices</b> > <b>Printers & scanners</b>.</li>
 <li>Select <b>Add a printer or scanner</b>.</li>
 <li>Select <b>The printer that I wanted isn't listed.</b></li>
-<li>In the "Find a printer by other options" screen, select <b>Add a local printer or network printer with manual settings.</b>    Select <b>Next</b>.</li>
-<li>Make sure that the check box <b>Use an existing port</b> is selected, then change the dropdown option to <b>File: (Print to file)</b>. Select <b>Next</b>.</li>
-<li>Under Manufacturer, select <b>Generic</b>. Under Printers, select <b>Generic/Text Only</b> and select <b>Next</b>.</li>
-<li>In the screen "Type a printer name," leave the name as <b>Generic/Text Only</b> and select <b>Next</b>.</li>
-<li>In the "Printer Sharing" screen, select <b>Share this printer so that others on your network can find and use it.</b></li>
-<li>Leave the default Share name. Select <b>Next</b>.</li>
+<li>On the **Find a printer by other options** screen, select <b>Add a local printer or network printer with manual settings.</b>    Select <b>Next</b>.</li>
+<li>Make sure that the <b>Use an existing port</b> check box is selected, then change the list option to <b>File: (Print to file)</b>.</li>
+<li>Select <b>Next</b>.</li>
+<li>Under Manufacturer, select <b>Generic</b>.</li>
+<li>Under <b>Printers</b>, select <b>Generic/Text Only</b>, and then select <b>Next</b>.</li>
+<li>On the <b>Type a printer name</b> screen, leave the name as <b>Generic/Text Only</b>, and select <b>Next</b>.</li>
+<li>On the <b>Printer Sharing</b> screen, select <b>Share this printer so that others on your network can find and use it.</b></li>
+<li>Leave the default <b>Share</b> name, and select <b>Next</b>.</li>
 <li>Select <b>Finish</b>.</li>
-<li>When the driver installation is complete, open a document in Word. On the <b>File</b> menu, select <b>Print</b>.</li>
-<li>Select <b>Generic/Text Only</b>, then select <b>Print</b>.</li>
-<li>Change the location to <b>My Documents</b> and name the file Test.prn</li>
+<li>When the driver installation is finished, open a document in Word.</li>
+<li>Select <b>File</b> > <b>Print</b>.</li>
+<li>Select <b>Generic/Text Only</b> > <b>Print</b>.</li>
+<li>Change the location to <b>My Documents</b>, and name the file <b>Test.prn</b></li>
 <li>Select <b>OK</b>.</li>
 </ol>
 
@@ -143,15 +147,16 @@ Remove all media (USB drive, DVD, CD) from your computer.</li>
 </tr>
 </table>
 
-## More Information
+## More information
 
-Examples of print failure are as follows:
+The following are examples of print failure:
+
 - You receive error messages and other messages when you try to print a file.
 - The printer does not respond.
 - Files print as meaningless symbols.
 
 > [!NOTE]
-> This article does not discuss printer output issues, such as envelope-positioning problems, missing graphics, and inaccurate page numbers.
+> This article does not discuss printer output issues, such as envelope-positioning problems, missing graphics, or inaccurate page numbers.
 
 To resolve a print failure in Word, you must determine its cause. Causes typically fit into one of the following categories:
 - Damaged documents or damaged content in documents.
@@ -160,9 +165,10 @@ To resolve a print failure in Word, you must determine its cause. Causes typical
 - The Windows operating system.
 - Connectivity or hardware.
 
-## Detailed view of the Options
+## Detailed view of the options
 
-Outlined below are more detailed descriptions of the Options above.
+The following section provides more detailed descriptions of these options.
+
 <a id="option1">
 
 ### Option 1: Test printing of other documents
@@ -171,17 +177,20 @@ Outlined below are more detailed descriptions of the Options above.
 Damaged documents or documents that contain damaged graphics or damaged fonts can cause print errors in Word. Before you reinstall drivers or software, test the Word program's ability to print. To do this, follow these steps.
 
 1.    Open a new blank document in Word.
-2.    On the first line of the document, type the following text: **=rand(10)**.
-3.    Press **Enter**. This inserts 10 paragraphs of sample text.
-4.    Try to print the document.
-5.    If the document prints successfully, change to a different font, or insert clip art, a table, or a drawing object.
+2.    On the first line of the document, type the following text: **=rand(10)**, and then press Enter. 
+
+      > [!NOTE]
+      > This inserts 10 paragraphs of sample text.
+
+1.    Try to print the document.
+1.    If the document prints successfully, change to a different font, or insert clip art, a table, or a drawing object.
 
    - To change the font, follow these steps:
       1.    Select a section of the sample text.
-      2.    In the **Home** menu, use the font drop-down box to select a different font.
+      2.    On the **Home** menu, use the font box to select a different font.
    - To insert clip art, follow these steps:
       1. Select the **Insert** tab, and then select **Online Pictures**.
-      2. Type any term in the search box, and then press **Enter** or select **Search**.
+      2. Type any term in the search box, and then press Enter or select **Search**.
       3. Select one of the pictures, and then select **Insert**.
       4. Close the task pane.
    - To insert a table, follow these steps:
@@ -190,45 +199,45 @@ Damaged documents or documents that contain damaged graphics or damaged fonts ca
    - To insert a drawing object, follow these steps:
       1. Select **Insert**, and then select **Shapes**.
       2. Select one of the shapes.
-      3. Click and drag your cursor across the document to place the shape. 
+      3. Click and drag your cursor across the document to insert the shape. 
 6.    Test the print function again.
 
 The success or failure of these tests shows whether Word is functionally able to print. These tests may also give you clues about certain fonts or graphics that Word cannot print.
 
-If you do not receive errors in the test document but still cannot print your original document, your original document may be damaged. This may be true even if you can print the same document on another computer, because there are many situations in which the symptoms of file damage appear on some computers and not on other computers.
+If you do not receive errors in the test document but you still cannot print your original document, your original document may be damaged. This may be true even if you can print the same document on another computer. This is because the symptoms of file damage that appear on some computers may not appear on other computers.
 
 For more information about how to troubleshoot damaged Word documents, see [How to troubleshoot damaged Word documents](https://docs.microsoft.com/office/troubleshoot/word/damaged-documents-in-word). 
 
-If Word cannot print at all, or if Word cannot print a certain font or a certain kind of graphic, go to the next Option.
+If Word cannot print at all, or if Word cannot print a certain font or a certain kind of graphic, go to the next option.
 
 <a id="option2">
 
 ### Option 2: Test printing in other programs
 
 </a>
-The scope of the printing problem may reveal its cause. For example, some printing problems affect only Word, whereas other printing problems affect several of or all Windows-based programs.
+The scope of the printing problem may reveal its cause. For example, some printing problems affect only Word, whereas other printing problems affect several or all Windows-based programs.
 
 The following tests can help determine whether this problem involves programs other than Word.
 
 #### Test in WordPad
 
-1. In the **Windows** menu, search for and start WordPad. 
+1. Select **Start**, type word, and then select  **WordPad**. 
 2. In the blank WordPad document, type **This is a test**.
-3. On the **File** menu, select **Print**.
+3. Select **File** menu > **Print** > **Print**.
    > [!NOTE] 
-   > Make sure that your printer is selected. If your printer is not listed, select **Add Printer…** from the **Printer** drop-down box and add your printer.  
+   > Make sure that your printer is selected. If your printer is not listed, select **Find Printer** in the **Printer** in the print dialog box, and add your printer.  
 
 4. Select **OK** or **Print** to print the file.
 
-If you found in "Step 3: Test printing in other documents" that the print problem occurs only with certain fonts or certain graphics images, try to reproduce this problem in WordPad. To do this, apply the same font, or insert the same kind of graphics image. (To select a different font in WordPad, use the same method that you used in Word.) Then try printing the same document again. 
+If you found in "Step 3: Test printing in other documents" that the print problem occurs only for certain fonts or certain graphics images, try to reproduce this problem in WordPad. To do this, apply the same font, or insert the same kind of image. (To select a different font in WordPad, use the same method that you used in Word.) Then try to print the same document again. 
 
-To insert a graphics image in WordPad, follow these steps:
+To insert an image in WordPad, follow these steps:
 
 1.    On the **Home** tab, select **Insert object**.
-2.    Follow one or both of the following steps:
+2.    Use one or both of the following methods:
     
-   - To create a new graphics image, select **Create New**, and then select one of the object types from the list. For example, select **Paintbrush Picture** to create a test bitmap in the Microsoft Paint program.
-   - To insert a graphics image from a file, select **Create from File**, and then select **Browse** to select the file.
+   - To create an image, select **Create New**, and then select one of the object types from the list. For example, select **Paintbrush Picture** to create a test bitmap in the Microsoft Paint program.
+   - To insert an image from a file, select **Create from File**, and then select **Browse** to select the file.
 
 #### Test printing from other programs
 
@@ -239,26 +248,25 @@ After you finish creating the document in WordPad, you can test the print functi
 3.    Under **Manage your device**, select **Print Test Page**.
     
    - If you cannot print a test page, or if you cannot print in several (or all) Windows-based programs, you have a printer driver problem, a Windows problem, a hardware problem, or a connectivity problem.
-   - If the problem is limited to a particular font, a damaged font file may be the cause. For more information about how to test and reinstall fonts, see KB [314960](https://support.microsoft.com/help/314960/how-to-install-or-remove-a-font-in-windows) "How to install or remove a font in Windows."
+   - If the problem is limited to a particular font, a damaged font file may be the cause. For more information about how to test and reinstall fonts, see [How to install or remove a font in Windows](https://support.microsoft.com/help/314960/how-to-install-or-remove-a-font-in-windows).
    - If you can print without problems in all programs except Word, go to Option 4.
 
-You might be able to use the Windows 10 printing help and troubleshooting wizard to resolve the printing problem. Select **Start**, type **printing**, and then select **Find and fix problems with printing**.
+You might be able to use the Windows 10 printer troubleshooting wizard to resolve the printing problem. Select **Start**, type **printing**, and then select **Find and fix problems with printing**.
 
 <a id="option3">
 
 ### Option 3: Repair the Word program files 
 
 </a>
-After you verify that the printing problem is not limited to a particular document or to a particular printer driver, and that the problem is limited to the Word program, test the Word program by using only the default settings.
+After you verify that the printing problem is not limited document or to a particular printer driver, and that the problem is limited to Word, test the Word program by using only the default settings.
 
 For more information about how to start by using the default settings, see KB [921541](https://docs.microsoft.com/office/troubleshoot/word/issues-when-start-or-use-word) "How to troubleshoot problems that occur when you start or use Word."
 
-If the printing problem continues to occur, run the repair program to reinstall the missing or damaged program files. To run the repair program, follow these steps.
+If the printing problem persists, run the repair program to reinstall the missing or damaged program files. To run the repair program, follow these steps.
 
 1.    Exit all Office programs.
-2.    In Windows 10, select **Start**, and then type **uninstall**.
-3.    Open **Add or Remove Programs**.
-4.    Under the "Apps & features" list, find and select your version of Microsoft Office Word you have installed.
+2.    In Windows 10, select **Start**, type **add**, and then select **Add or Remove Programs**.
+4.    Under the **Apps & features** list, locate and select the version of Microsoft Office Word that you have installed.
 5.    Select **Modify**.
 6.    Select **Online Repair**, and then follow the onscreen instructions to repair the program.
 
@@ -270,15 +278,15 @@ If the printing problem continues to occur, run the repair program to reinstall 
 To look for device drivers or memory-resident programs that might be interfering with the Word print function, start Windows in safe mode, and then test printing to a file in Word. To start Windows in safe mode, follow the steps below.
 
 1.    Remove all floppy disks, CDs, DVDs, and USB devices from your computer, and then restart your computer.
-2.    Select **Start**, then the **Power button**, and then select **Restart**.
+2.    Select **Start**, select the **Power** button, and then select **Restart**.
 3. Press and hold the F8 key as your computer restarts.
    > [!NOTE]
-   > You must press F8 before the Windows logo appears. If the Windows logo appears, restart your computer and try again. To do this, wait until the Windows logon prompt appears, and then shut down and restart your computer.
-4. On the "Advanced Boot Options" screen, use the arrow keys to select the **Safe Mode** option, and then press **Enter**.
+   > You must press F8 before the Windows logo appears. If the Windows logo appears, wait until the Windows logon prompt appears, then shut down and restart your computer, and try again.
+4. On the **Advanced Boot Options** screen, use the arrow keys to select the **Safe Mode** option, and then press Enter.
 5. Log on to your computer by using a user account that has administrative credentials. 
 6.    Try printing from Word again.
 
-If the Word printing problem does not occur when you start Windows in safe mode, use the same steps to troubleshoot after performing a [clean-boot](https://support.microsoft.com/help/929135/how-to-perform-a-clean-boot-in-windows) to help determine the source of the problem.
+If the Word printing problem does not occur when you start Windows in safe mode, use the same steps to troubleshoot after you do a [clean](https://support.microsoft.com/help/929135/how-to-perform-a-clean-boot-in-windows) start to help determine the source of the problem.
 
 <a id="option5">
 
@@ -288,9 +296,9 @@ If the Word printing problem does not occur when you start Windows in safe mode,
 
 To determine whether the printer driver is the cause of the problem, you can test different drivers. If the Word printing problem occurs only when you print documents that use a certain font or a certain kind of graphics image, try to print to another printer.
 
-If no other printer is available, contact the manufacturer to determine whether there is an updated version of the driver or a different driver that works with your printer model. 
+If no other printer is available, contact the manufacturer to determine whether there is an updated version of the driver or a different driver that works for your printer model. 
 
-If the Word printing problem occurs even when you print documents that are made up only of text, you can use a generic, text-only printer driver to test printing from Word. To do this, follow these steps:
+If the Word printing problem occurs even when you print documents that contain only text, you can use a generic, text-only printer driver to test printing from Word. To do this, follow these steps:
 
 1. Select **Start**, and then **Settings**.
 2. Select **Devices**, and then **Printers & scanners**.
@@ -299,18 +307,18 @@ If the Word printing problem occurs even when you print documents that are made 
    > [!NOTE]
    > You may have to search for a printer first to see this option.
 5. In the "Find a printer by other options" screen, select **Add a local printer or network printer with manual settings**, and then select **Next**.
-6. Make sure that the check box **Use an existing port** is selected, then change the dropdown option to **File: (Print to file)**, and select **Next**.
-7. Under Manufacturer, select **Generic**. Under Printers, select **Generic/Text Only**, and then select **Next**.
-8. In the screen "Type a printer name," leave the name as **Generic/Text Only** and select **Next**.
-9. In the "Printer Sharing" screen, select **Share this printer so that others on your network can find and use it**. 
+6. Make sure that the **Use an existing port** check box is selected,  change the list option to **File: (Print to file)**, and then select **Next**.
+7. Under Manufacturer, select **Generic**. Under Printers, select **Generic/Text Only**. Then, select **Next**.
+8. On the **Type a printer name** screen, leave the name set as **Generic/Text Only**, and then select **Next**.
+9. On the **Printer Sharing** screen, select **Share this printer so that others on your network can find and use it**. 
 10. Leave the default Share name, and then select **Next**. 
 11. Select **Finish**.
-12. When the driver installation is complete, open a document in Word, and on the **File** menu, select **Print**. 
+12. When the driver installation is finished, open a document in Word, and select **File** > **Print**. 
 13. Select **Generic/Text Only**, and then select **Print**. 
 14. Change the location to **My Documents**, and then name the file **Test.prn**.
 15. Select **OK**.
 
-If you receive an error message in Word when you print files that contain only text but do not receive the error message when you print with the generic, text-only printer driver, your printer driver may be damaged. In this case, contact the manufacturer for help in removing the printer driver and installing an updated version. 
+If you receive an error message in Word when you print files that contain only text but you do not receive the error message when you print with the generic, text-only printer driver, your printer driver may be damaged. In this case, contact the manufacturer for help to remove the printer driver and install an updated version. 
 
 ## Need more help?
 
