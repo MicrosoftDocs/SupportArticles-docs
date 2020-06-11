@@ -39,7 +39,7 @@
       href: ../access-management/your-session-has-expired-error.md
   - name: Active Directory
     items:
-    - name: '"AADSTS65005" error when signning in to cloud services'
+    - name: '"AADSTS65005" error when signing in to cloud services'
       href: ../active-directory/aadsts65005-error-when-sign-in-cloud.md
     - name: '"Duplicate" is displayed in the ERROR column'
       href: ../active-directory/run-idfix-dirsync-error-remediation-tool.md
@@ -289,7 +289,7 @@
     items:
     - name: Automatic updating for Office 2016 and 2013
       href: ../updates/automatic-updates.md
-    - name: Can't activate or sign in after upgrating to version 15.33
+    - name: Can't activate or sign in after upgrading to version 15.33
       href: ../updates/cant-activate-sign-in-after-update.md
     - name: Control the blocking of OLE/COM
       href: ../updates/control-block-ole-com.md

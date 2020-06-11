@@ -41,6 +41,8 @@
       href: ./known-issues/phone-number-blocked-in-teams.md
     - name: Attendee maximum for meetings capped at 250
       href: ./known-issues/teams-meetings-capped-at-250.md
+    - name: Can't open PowerPoint presentations after disabling TLS 1.0/1.1
+      href: ./teams-conferencing/teams-room-cant-open-powerpoint-presentations-tls.md
     - name: CVI information does not auto-populate in a Meet Now instance 
       href: ./known-issues/cvi-info-does-not-populate-in-meet-now.md
     - name: Dialing out in Teams requires five or more digits 
