@@ -1,5 +1,5 @@
 ---
-title: Documents deleted by retention policy after workloads are removed
+title: Documents deleted by retention policy after workload is removed
 ms.author: v-todmc
 author: todmccoy
 manager: dcscontentpm
