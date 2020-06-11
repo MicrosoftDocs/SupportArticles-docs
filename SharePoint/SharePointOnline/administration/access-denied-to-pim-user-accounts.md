@@ -32,13 +32,14 @@ Access to a user account is not immediately available in SPO when you request th
 
 ## Workaround
 
-Because of the expected delay, we recommend that you provide access to an account by using PIM for a minimum of 24 hours.
+The potential delay can vary between server farms. Therefore, we recommend that you provide account access by setting the PIM access period to 24 hours instead of setting it to a shorter duration.
  
 Microsoft is researching this problem and will post more information in this article when the information becomes available.
 
 ## More information
 
-How PIM and SharePoint admin role works
+### How PIM and SharePoint admin role works
+
 If an administrator enables the SharePoint Administrator role In AAD by using PIM at 7 A.M. for four hours, PIM disables the role assignment at 11 A.M. The user then loses access to the SPO admin center.
 
 After the role is activated in PIM, it must be synchronized with SPO. This synchronization may take some time to finish. This means that the user will not have complete four-hour access. For example, if activation in PIM ends at 7 A.M. and SPO synchronization ends at 9 A.M., the user will have access for two hours only (assuming that the duration is four hours).
