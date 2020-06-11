@@ -25,7 +25,7 @@ appliesto:
 
 ## Summary
 
-If a retention policy is set up for specific workloads such as SharePoint, OneDrive, and or Exchange Online, but SharePoint and OneDrive workloads are removed from it at a later time, the actions that are generated to comply with the policy continue to run until they are finished. 
+If a retention policy is set up for specific workloads such as SharePoint, OneDrive, or Exchange Online, but SharePoint and OneDrive workloads are removed from it at a later time, the actions that are generated to comply with the policy continue to run until they are finished. 
 
 For example, a retention policy is enabled to move all SharePoint documents that are created before a specific date to the Recycle Bin. If this policy is later disabled for SharePoint, it will not stop the documents from continuing to be moved to the Recycle Bin. 
 
