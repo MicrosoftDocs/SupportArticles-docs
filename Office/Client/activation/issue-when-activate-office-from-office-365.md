@@ -61,8 +61,7 @@ Are you behind a firewall? If you're not sure, ask your administrator. If you're
 - https://crl.microsoft.com/pki/crl/products/MicrosoftProductSecureCommunicationsPCA.crl    
 - https://www.microsoft.com/pki/crl/products/MicrosoftProductSecureCommunicationsPCA.crl    
 - go.microsoft.com    
-- office15client.microsoft.com    
-- sls.microsoft.com - This endpoint is required for successful ProPlus activation based on [Office 365 URLs and IP address ranges](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges).
+- office15client.microsoft.com
  
 Each firewall will have a different method for enable access to these URIs. Check your software's documentation for instructions or ask your administrator to do this for you. 
 
