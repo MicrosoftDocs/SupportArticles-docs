@@ -9,6 +9,8 @@
       href: ../sync/cant-open-online-only-file.md
   - name: Security
     items:
+    - name: Documents deleted by retention policy after workload is removed
+      href: ../sync/retention-policies-deleting-documents-after-workload-removal.md
     - name: There is a problem with your account when opening documents
       href: ../../SharePointOnline/Security/problem-with-your-account.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
   - name: Search
@@ -39,3 +41,5 @@
       href: ../sync/onedrive-for-business-sync-returns-error.md
     - name: Enable co-authoring for OneDrive-synced files
       href: ../sync/enable-co-authoring-for-onedrive-synced-file.md
+
+      
