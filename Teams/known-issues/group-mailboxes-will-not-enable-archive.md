@@ -1,5 +1,5 @@
 ---
-title: Cannot enable archiving or increase mailbox quota for O365 Group mailbox
+title: Cannot enable archiving or increase mailbox quota for O365 Group mailboxes
 ms.author: v-todmc
 author: todmccoy
 ms.date: 4/9/2020
