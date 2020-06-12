@@ -32,7 +32,7 @@ Access to a user account is not immediately available in SPO when you request th
 
 ## Workaround
 
-The potential delay can vary between server farms. Therefore, we recommend that you provide account access by setting the PIM access period to 24 hours instead of setting it to a shorter duration.
+The potential delay can vary. Therefore, we recommend that you provide account access by setting the PIM access period to 24 hours instead of setting it to a shorter duration.
  
 Microsoft is researching this problem and will post more information in this article when the information becomes available.
 
