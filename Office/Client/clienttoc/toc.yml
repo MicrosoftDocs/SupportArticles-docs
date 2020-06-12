@@ -1030,7 +1030,7 @@
   - name: Third party add-ins
     items:
     - name: Incompatibilities between Office and Adobe
-      href: ../third-party-add-ins/incompatibilities-between-office-and-adob.md
+      href: ../third-party-add-ins/incompatibilities-between-office-and-adobe.md
     - name: Office crash with SendToBluetooth add-in installed
       href: ../third-party-add-ins/office-crash-with-sendtobluetooth.md
   - name: End of Support
