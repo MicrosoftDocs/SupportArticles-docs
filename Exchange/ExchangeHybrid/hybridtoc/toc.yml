@@ -27,6 +27,8 @@
       href: ../federation/attribute-not-written-to-azure-ad.md
   - name: Move Mailboxes
     items:
+    - name: Error when you move mailboxes to or from Office 365
+      href: ../move-mailboxes/error-move-mailboxes-to-from-o365.md
     - name: LitigationHoldEnabled property mismatch
       href: ../move-mailboxes/litigationholdenabled-property-differs-onpremises-cloud.md
     - name: Mailbox exists in both Exchange Online and on-premises
