@@ -281,6 +281,12 @@
       href: ../activation/office-2010-product-key-change-error.md
     - name: We can't sign you into your company portal
       href: ../activation/something-configured-fails-activating-office.md
+  - name: End of Support
+    items:
+    - name: Office 2007 has reached end of extended support
+      href: ../support/office-2007-not-support.md
+    - name: Support for 2013 versions of Microsoft 365 Apps for enterprise ends
+      href: ../support/2013-versions-of-office-365.md
   - name: Excel
     items:
     - name: "\"Center Across Columns\" does not appear on the toolbar"
@@ -1033,12 +1039,6 @@
       href: ../third-party-add-ins/incompatibilities-between-office-and-adobe.md
     - name: Office crash with SendToBluetooth add-in installed
       href: ../third-party-add-ins/office-crash-with-sendtobluetooth.md
-  - name: End of Support
-    items:
-    - name: Office 2007 has reached end of extended support
-      href: ../support/office-2007-not-support.md
-    - name: Support for 2013 versions of Microsoft 365 Apps for enterprise ends
-      href: ../support/2013-versions-of-office-365.md
   - name: Visio
     items:
     - name: "\"Fit to Drawing\" not working"
