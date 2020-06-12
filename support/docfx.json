@@ -76,7 +76,7 @@
         "**/*.md": "DEV_Triage, DaleChe, RamaKoni, DelHan, SureshKa, SueHar"
       },
       "ms.topic": {
-        "**/*.md": "kb-support"
+        "**/*.md": "troubleshooting"
       },
 
       "ms.prod": {
