@@ -22,11 +22,11 @@ description: Explains why you can't hear the sound from shared content during a 
 
 # No audio while sharing content during a live event in Microsoft Teams
 
-## Summary
+## Symptoms
 
-When sharing content during a live event in Teams, audio from the shared content (such as a YouTube link or a saved video file) cannot be heard by participants. 
+When you share content during a live event in Teams, audio from the shared content (such as a YouTube link or a saved video file) cannot be heard by participants.
 
-## More information
+## Resolution
 
 To share your system audio during a live event:
 
@@ -36,6 +36,8 @@ To share your system audio during a live event:
 > [!NOTE]
 > - You won't be able to include your computer's audio while you share a PowerPoint presentation or Whiteboard.
 > - Currently, we support this feature on Windows devices only.
+
+## More information
 
 For more information, see [Share system audio in a Teams meeting or live event](https://support.microsoft.com/office/share-system-audio-in-a-teams-meeting-or-live-event-dddede9f-e3d0-4330-873a-fa061a0d8e3b).
 
