@@ -281,90 +281,12 @@
       href: ../activation/office-2010-product-key-change-error.md
     - name: We can't sign you into your company portal
       href: ../activation/something-configured-fails-activating-office.md
-  - name: Error Messages
+  - name: End of Support
     items:
-    - name: "\"Missing file\" error with a web page file"
-      href: ../error-messages/web-page-missing-file-error.md
-    - name: "\"This file can’t be previewed\" error"
-      href: ../error-messages/this-file-cant-be-previewed.md
-    - name: "\"0x80004005: General Error Unable to Open Registry Key\""
-      href: ../error-messages/fails-accessing-page-connected-access-database.md
-    - name: 0x80041015 when starting an Office application
-      href: ../error-messages/0x80041015-start-office-program.md
-    - name: Another account is already signed in
-      href: ../error-messages/another-account-already-signed-in.md
-    - name: Apps for Office don't start
-      href: ../error-messages/apps-for-office-not-start.md
-    - name: Background task activation is spurious
-      href: ../error-messages/background-task-activation-spurious.md
-    - name: Can't create user name that contains special characters
-      href: ../error-messages/username-contains-special-character.md
-    - name: Can't install 64-bit version of Office with Click-to-Run
-      href: ../error-messages/64-bit-cant-install-with-click-to-run.md
-    - name: Can't locate proxy server when clicking hyperlink
-      href: ../error-messages/cannot-locate-server-when-click-hyperlink.md
-    - name: Can't open a file from UNC share
-      href: ../error-messages/file-not-found-when-open-file-from-unc.md
-    - name: Can't open Click-to-run version of Office on terminal server
-      href: ../error-messages/click-to-run-office-on-terminal-server.md
-    - name: Can't open Excel, Word or PowerPoint file
-      href: ../error-messages/cannot-open-excel-word-or-powerpoint-file.md
-    - name: Can't open this add-in from localhost when loading an add-in
-      href: ../error-messages/cannot-open-add-in-from-localhost.md
-    - name: Can't start an Office Starter program
-      href: ../error-messages/cannot-be-opened-error-when-start.md
-    - name: Can't uninstall Office
-      href: ../error-messages/error-when-uninstall-office.md
-    - name: Error 25090 with an Office application
-      href: ../error-messages/error-25090-starting-office-program.md
-    - name: Error when edit an equation in Office
-      href: ../error-messages/issue-when-edit-equation-in-office.md
-    - name: Error when you install Office 2013
-      href: ../error-messages/office-2013-installation-error.md
-    - name: Error when you install VS2010 Toos for Office Runtime
-      href: ../error-messages/generic-trust-failure-(0x800b010b)-error.md
-    - name: Error when you open a presentation
-      href: ../error-messages/error-when-you-open-presentation.md
-    - name: Excel cannot complete this task
-      href: ../error-messages/excel-cannot-complete-task-with-available.md
-    - name: Files necessary to run the Office Customization Tool were not found
-      href: ../error-messages/fails-running-office-customization-tool.md
-    - name: Incorrect function with saving to a CD-RW or DVD/CD-RW drive
-      href: ../error-messages/incorrect-function-saving-office-file.md
-    - name: Installing Office 2010 from Office 365 Subscription fails
-      href: ../error-messages/install-office-from-office-365-subscription.md
-    - name: Invalid product key or license mismatch
-      href: ../error-messages/invalid-product-key-or-license-mismatch-error.md
-    - name: Issue when launching Office in Microsoft Store app
-      href: ../error-messages/windows-cannot-access-device.md
-    - name: Issue when Office 365 activates Skype for Business
-      href: ../error-messages/office-365-activates-skype.md
-    - name: Issue when opening a file with a long folder name
-      href: ../error-messages/fails-opening-long-folder-name-files.md
-    - name: Issue with starting Office applications
-      href: ../error-messages/microsoft-program-cannot-be-opened.md
-    - name: Issue with updating a data connection or change PivotTable fields
-      href: ../error-messages/connection-failed-to-refresh.md
-    - name: Mobile viewing PDF files with Office Web Apps
-      href: ../error-messages/mobile-viewing-pdf-files.md
-    - name: Office 2010 installation doesn't finish
-      href: ../error-messages/install-and-use-this-product-error.md
-    - name: Office has detected a problem with this file
-      href: ../error-messages/office-file-fails-validation.md
-    - name: Office file previews in Windows Explorer may not show after switching from 64-bit Office to 32-bit Office
-      href: ../error-messages/no-file-previews-file-explorer-switching-to-32-bit.md
-    - name: Repair process of click-to-run app
-      href: ../error-messages/click-to-run-app-repair-process.md
-    - name: "\"Run-time Error 13: Type Mismatch\""
-      href: ../error-messages/run-time-error-13-type-mismatch.md
-    - name: Selected a single-byte font to replace a double-byte font with Japanese
-      href: ../error-messages/single-byte-font-replace-error.md
-    - name: The document caused a serious error the last time it was opened
-      href: ../error-messages/error-open-word-excel.md
-    - name: The password you supplied is not correct
-      href: ../error-messages/incorrectly-password-fails-verifying.md
-    - name: View error signatures for Office
-      href: ../error-messages/view-error-signatures.md
+    - name: Office 2007 has reached end of extended support
+      href: ../support/office-2007-not-support.md
+    - name: Support for 2013 versions of Microsoft 365 Apps for enterprise ends
+      href: ../support/2013-versions-of-office-365.md
   - name: Excel
     items:
     - name: "\"Center Across Columns\" does not appear on the toolbar"
@@ -511,6 +433,8 @@
       href: ../excel/excel-word-crash-on-close.md
     - name: Excel 2016 for Mac crashes
       href: ../excel/excel-2016-for-mac-crashes.md
+    - name: Excel cannot complete this task
+      href: ../excel/excel-cannot-complete-task-with-available.md
     - name: Excel crashes when moving Excel sheet tab
       href: ../excel/crash-when-move-excel-sheet-tab.md
     - name: Excel crashes when working on multiple workbooks
@@ -547,7 +471,7 @@
       href: ../excel/format-cells-settings.md
     - name: Formatted text is limited to 240 characters per line
       href: ../excel/prn-file-limited-to-240-characters.md
-    - name: Formula errors when list separater isn't set
+    - name: Formula errors when list separator isn't set
       href: ../excel/formula-errors.md
     - name: Formulas to count text occurrences in Excel
       href: ../excel/formulas-to-count-occurrences-in-excel.md
@@ -585,6 +509,8 @@
       href: ../excel/fails-starting-excel-mac.md
     - name: Issue when updating external links
       href: ../excel/update-external-links.md
+    - name: Issue with updating a data connection or change PivotTable fields
+      href: ../excel/connection-failed-to-refresh.md
     - name: Issue with using different print quality for sheets
       href: ../excel/different-print-quality.md
     - name: Large Address Aware capability change
@@ -619,7 +545,7 @@
       href: ../excel/network-mapped-drive-hyperlinks-unc.md
     - name: Office 365 users can't open or synchronize files
       href: ../excel/cannot-operate-files.md
-    - name: Operation Must Use an Updateable Query
+    - name: Operation Must Use an Updatable Query
       href: ../excel/fails-accessing-excel-through-odbc.md
     - name: Parts of Excel turn white or gray
       href: ../excel/parts-of-excel-turn-white-or-gray.md
@@ -679,6 +605,8 @@
       href: ../excel/control-startup-message.md
     - name: STEYX statistical functions
       href: ../excel/statistical-functions-steyx.md
+    - name: The password you supplied is not correct
+      href: ../excel/incorrectly-password-fails-verifying.md
     - name: Too many different cell formats in Excel
       href: ../excel/too-many-different-cell-formats-in-excel.md
     - name: Toolbar missing or reset menus in Excel for Mac
@@ -753,114 +681,22 @@
       href: ../installation/error-1935-when-install-office-2010.md
     - name: Error when uninstalling O365 Pro Plus
       href: ../installation/something-went-wrong-30016-4-error.md
+    - name: Error when you install an Office program
+      href: ../installation/error-run-office-setup-program.md
     - name: How to download and run Office 2019 installation files not in VLSC
       href: ../installation/how-to-download-office-install-not-in-vlsc.md
     - name: Install Office Pro 2013 on a Terminal Server
       href: ../installation/install-and-activate-office-2013.md
+    - name: Office 2010 Installation failure
+      href: ../installation/office-installation-failure.md
+    - name: Office 2010 installation requires MSXML
+      href: ../installation/office-installtion-need-msxml.md
     - name: Office setup issues
       href: ../installation/office-setup-issues.md
-  - name: Miscellaneous
-    items:
-    - name: Document Information Panel is deprecated
-      href: ../miscellaneous/document-information-panel-deprecate.md
-    - name: Enable Office 2010 to run on a terminal server
-      href: ../miscellaneous/office-pro-plus-2010-terminal-server.md
-    - name: Features to enable collaboration
-      href: ../miscellaneous/enable-collaboration.md
-    - name: Incompatibilities between Office and Adob
-      href: ../miscellaneous/incompatibilities-between-office-and-adob.md
-    - name: Numbering Schema for Office 2016
-      href: ../miscellaneous/numbering-scheme-for-product-guid.md
-    - name: Numbering Schema for Office 2013
-      href: ../miscellaneous/numbering-scheme-product-code-guids.md
-    - name: Updates are offered for nonexistent Office programs
-      href: ../miscellaneous/updates-provided-for-nonexistent-office.md
-    - name: Use different versions of Office on the same PC
-      href: ../miscellaneous/use-multiple-versions-of-office.md
-  - name: Office
-    items:
-    - name: "\"No default mail client\" error"
-      href: ../office/no-default-mail-client-error.md
-    - name: "\"Your system is low on virtual memory\" error"
-      href: ../office/your-system-is-low-on-virtual-memory.md
-    - name: Applications crash when opening IRM doccument
-      href: ../office/office-applications-crash-when-open-irm-doc.md
-    - name: Can't change the number of places in Recent Places
-      href: ../office/change-number-of-recent-places.md
-    - name: Can't embed Adobe OpenType fonts
-      href: ../office/fails-embedding-adobe-opentype-font.md
-    - name: Can't install 64-bit Office with 32-bit
-      href: ../office/cannot-install-64-bit-office-with-32-bit.md
-    - name: Can't install Office Starter 2010 on Windows 8
-      href: ../office/cant-install-office-on-windows-8.md
-    - name: Can't use "Convert bibliography to static text"
-      href: ../office/convert-bibliography-to-static-text.md
-    - name: "\"Compile Error: Procedure too large\""
-      href: ../office/compile-error-procedure-too-large.md
-    - name: AD FS sites are slow to open
-      href: ../office/slow-open-adfs-sites.md
-    - name: Connection to a network document is lost
-      href: ../office/connect-to-network-document-lost.md
-    - name: Document files in Office Document Cache not deleted
-      href: ../office/office-temporary-files-not-delete.md
-    - name: Edit OLE document property with Dsofile.dll
-      href: ../office/dsofile.dll-allow-edit-document-property.md
-    - name: Error when you install an Office program
-      href: ../office/error-run-office-setup-program.md
-    - name: Error when you move mailboxes to or from Office 365
-      href: ../office/error-move-mailboxes-to-from-o365.md
-    - name: FAQ about Office Activation Wizard
-      href: ../office/faq-about-office-activation-wizard.md
-    - name: Information about Office Click-to-Run installation
-      href: ../office/office-click-to-run-installation.md
-    - name: Introduce Click-to-Run for Office 2010
-      href: ../office/office-click-to-run-faq.md
-    - name: Issues when you click hyperlink to SSO Web site in a document
-      href: ../office/click-hyperlink-to-sso-website.md
-    - name: Loss of image quality occurs in a document
-      href: ../office/office-docuemnt-image-quality-loss.md
-    - name: Manage templates in Office program
-      href: ../office/manage-office-program-templates.md
-    - name: Missing fonts issue in documents
-      href: ../office/missing-fonts-opening-documents.md
-    - name: No Office entitlement found on device
-      href: ../office/office-not-entitled-on-device.md
-    - name: Office 2010 Installation failure
-      href: ../office/office-installation-failure.md
-    - name: Office 2010 installation requires MSXML
-      href: ../office/office-installtion-need-msxml.md
-    - name: Office 2010 Setup program not restart
-      href: ../office/office-suite-setup-not-restart.md
-    - name: Office crash with SendToBluetooth add-in installed
-      href: ../office/office-crash-with-sendtobluetooth.md
-    - name: Office End User License Agreement always appears
-      href: ../office/office-end-user-license-agreement.md
-    - name: Office files with RMS protection crash
-      href: ../office/rms-protected-files-crash.md
-    - name: Office installtion Error 1401, 1402 or 1406
-      href: ../office/office-install-error-1401-1402-1406.md
-    - name: Office stops responding when you open a file
-      href: ../office/office-stops-responding.md
-    - name: Prevent Office 2010 from disabling printers
-      href: ../office/prevent-office-from-disabling-printers.md
-    - name: Saving documents to network server is slow
-      href: ../office/saving-file-to-network-server-slow.md
-    - name: Services display incorrectly in Research pane
-      href: ../office/duplicate-service-listed.md
-    - name: Set default font for Office apps
-      href: ../office/set-default-font.md
-    - name: Some VB Editor settings disabled in Office 2010
-      href: ../office/vb-editor-settings-disabled.md
     - name: The ability to uninstall Office updates
-      href: ../office/ability-to-uninstall-office.md
-    - name: Unable to create DSN for Office System Driver
-      href: ../office/cant-create-dsn-for-office-system-driver.md
-    - name: Use GetObject and CreateObject with automation server
-      href: ../office/getobject-createobject-behavior.md
-    - name: Win32API_PtrSafe with 64-bit Support
-      href: ../office/win32api_ptrsafe-with-64-bit-support.md
+      href: ../installation/ability-to-uninstall-office.md
     - name: Windows Installer service could not be accessed
-      href: ../office/windows-installer-service-not-be-accesse.md
+      href: ../installation/windows-installer-service-not-be-accesse.md
   - name: Office for Mac
     items:
     - name: "\"wkresources\" files in Trash"
@@ -879,6 +715,164 @@
       href: ../office-for-mac/o365-e3-setup-incomplete.md
     - name: PowerPoint for Mac is closed unexpectedly
       href: ../office-for-mac/powerpoint-mac-closes-unexpectedly.md
+  - name: Office Suite Issues
+    items:
+    - name: "\"0x80004005: General Error Unable to Open Registry Key\""
+      href: ../office-suite-issues/fails-accessing-page-connected-access-database.md
+    - name: "\"Compile Error: Procedure too large\""
+      href: ../office-suite-issues/compile-error-procedure-too-large.md
+    - name: "\"Missing file\" error with a web page file"
+      href: ../office-suite-issues/web-page-missing-file-error.md
+    - name: "\"No default mail client\" error"
+      href: ../office-suite-issues/no-default-mail-client-error.md
+    - name: "\"Run-time Error 13: Type Mismatch\""
+      href: ../office-suite-issues/run-time-error-13-type-mismatch.md
+    - name: "\"This file can’t be previewed\" error"
+      href: ../office-suite-issues/this-file-cant-be-previewed.md
+    - name: "\"Your system is low on virtual memory\" error"
+      href: ../office-suite-issues/your-system-is-low-on-virtual-memory.md
+    - name: 0x80041015 when starting an Office application
+      href: ../office-suite-issues/0x80041015-start-office-program.md
+    - name: AD FS sites are slow to open
+      href: ../office-suite-issues/slow-open-adfs-sites.md
+    - name: Another account is already signed in
+      href: ../office-suite-issues/another-account-already-signed-in.md
+    - name: Applications crash when opening IRM document
+      href: ../office-suite-issues/office-applications-crash-when-open-irm-doc.md
+    - name: Apps for Office don't start
+      href: ../office-suite-issues/apps-for-office-not-start.md
+    - name: Background task activation is spurious
+      href: ../office-suite-issues/background-task-activation-spurious.md
+    - name: Can't change the number of places in Recent Places
+      href: ../office-suite-issues/change-number-of-recent-places.md
+    - name: Can't embed Adobe OpenType fonts
+      href: ../office-suite-issues/fails-embedding-adobe-opentype-font.md
+    - name: Can't install 64-bit Office with 32-bit
+      href: ../office-suite-issues/cannot-install-64-bit-office-with-32-bit.md
+    - name: Can't install Office Starter 2010 on Windows 8
+      href: ../office-suite-issues/cant-install-office-on-windows-8.md
+    - name: Can't use "Convert bibliography to static text"
+      href: ../office-suite-issues/convert-bibliography-to-static-text.md
+    - name: Can't create user name that contains special characters
+      href: ../office-suite-issues/username-contains-special-character.md
+    - name: Can't install 64-bit version of Office with Click-to-Run
+      href: ../office-suite-issues/64-bit-cant-install-with-click-to-run.md
+    - name: Can't locate proxy server when clicking hyperlink
+      href: ../office-suite-issues/cannot-locate-server-when-click-hyperlink.md
+    - name: Can't open a file from UNC share
+      href: ../office-suite-issues/file-not-found-when-open-file-from-unc.md
+    - name: Can't open Click-to-run version of Office on terminal server
+      href: ../office-suite-issues/click-to-run-office-on-terminal-server.md
+    - name: Can't open Excel, Word or PowerPoint file
+      href: ../office-suite-issues/cannot-open-excel-word-or-powerpoint-file.md
+    - name: Can't open this add-in from localhost when loading an add-in
+      href: ../office-suite-issues/cannot-open-add-in-from-localhost.md
+    - name: Can't start an Office Starter program
+      href: ../office-suite-issues/cannot-be-opened-error-when-start.md
+    - name: Can't uninstall Office
+      href: ../office-suite-issues/error-when-uninstall-office.md
+    - name: Connection to a network document is lost
+      href: ../office-suite-issues/connect-to-network-document-lost.md
+    - name: Document files in Office Document Cache not deleted
+      href: ../office-suite-issues/office-temporary-files-not-delete.md
+    - name: Document Information Panel is deprecated
+      href: ../office-suite-issues/document-information-panel-deprecate.md
+    - name: Edit OLE document property with Dsofile.dll
+      href: ../office-suite-issues/dsofile.dll-allow-edit-document-property.md
+    - name: Enable Office 2010 to run on a terminal server
+      href: ../office-suite-issues/office-pro-plus-2010-terminal-server.md
+    - name: Error 25090 with an Office application
+      href: ../office-suite-issues/error-25090-starting-office-program.md
+    - name: Error when edit an equation in Office
+      href: ../office-suite-issues/issue-when-edit-equation-in-office.md
+    - name: Error when you install Office 2013
+      href: ../office-suite-issues/office-2013-installation-error.md
+    - name: Error when you install VS2010 Toos for Office Runtime
+      href: ../office-suite-issues/generic-trust-failure-(0x800b010b)-error.md
+    - name: FAQ about Office Activation Wizard
+      href: ../office-suite-issues/faq-about-office-activation-wizard.md
+    - name: Features to enable collaboration
+      href: ../office-suite-issues/enable-collaboration.md
+    - name: Files necessary to run the Office Customization Tool were not found
+      href: ../office-suite-issues/fails-running-office-customization-tool.md
+    - name: Incorrect function with saving to a CD-RW or DVD/CD-RW drive
+      href: ../office-suite-issues/incorrect-function-saving-office-file.md
+    - name: Information about Office Click-to-Run installation
+      href: ../office-suite-issues/office-click-to-run-installation.md
+    - name: Installing Office 2010 from Office 365 Subscription fails
+      href: ../office-suite-issues/install-office-from-office-365-subscription.md
+    - name: Introduce Click-to-Run for Office 2010
+      href: ../office-suite-issues/office-click-to-run-faq.md
+    - name: Invalid product key or license mismatch
+      href: ../office-suite-issues/invalid-product-key-or-license-mismatch-error.md
+    - name: Issue when launching Office in Microsoft Store app
+      href: ../office-suite-issues/windows-cannot-access-device.md
+    - name: Issue when Office 365 activates Skype for Business
+      href: ../office-suite-issues/office-365-activates-skype.md
+    - name: Issue when opening a file with a long folder name
+      href: ../office-suite-issues/fails-opening-long-folder-name-files.md
+    - name: Issue with starting Office applications
+      href: ../office-suite-issues/microsoft-program-cannot-be-opened.md
+    - name: Issues when you click hyperlink to SSO Web site in a document
+      href: ../office-suite-issues/click-hyperlink-to-sso-website.md
+    - name: Loss of image quality occurs in a document
+      href: ../office-suite-issues/office-docuemnt-image-quality-loss.md
+    - name: Manage templates in Office program
+      href: ../office-suite-issues/manage-office-program-templates.md
+    - name: Missing fonts issue in documents
+      href: ../office-suite-issues/missing-fonts-opening-documents.md
+    - name: Mobile viewing PDF files with Office Web Apps
+      href: ../office-suite-issues/mobile-viewing-pdf-files.md
+    - name: No Office entitlement found on device
+      href: ../office-suite-issues/office-not-entitled-on-device.md
+    - name: Numbering Schema for Office 2013
+      href: ../office-suite-issues/numbering-scheme-product-code-guids.md
+    - name: Numbering Schema for Office 2016
+      href: ../office-suite-issues/numbering-scheme-for-product-guid.md
+    - name: Office 2010 Setup program not restart
+      href: ../office-suite-issues/office-suite-setup-not-restart.md
+    - name: Office End User License Agreement always appears
+      href: ../office-suite-issues/office-end-user-license-agreement.md
+    - name: Office files with RMS protection crash
+      href: ../office-suite-issues/rms-protected-files-crash.md
+    - name: Office installation Error 1401, 1402 or 1406
+      href: ../office-suite-issues/office-install-error-1401-1402-1406.md
+    - name: Office stops responding when you open a file
+      href: ../office-suite-issues/office-stops-responding.md
+    - name: Office 2010 installation doesn't finish
+      href: ../office-suite-issues/install-and-use-this-product-error.md
+    - name: Office file previews in Windows Explorer may not show after switching from 64-bit Office to 32-bit Office
+      href: ../office-suite-issues/no-file-previews-file-explorer-switching-to-32-bit.md
+    - name: Office has detected a problem with this file
+      href: ../office-suite-issues/office-file-fails-validation.md
+    - name: Prevent Office 2010 from disabling printers
+      href: ../office-suite-issues/prevent-office-from-disabling-printers.md
+    - name: Repair process of click-to-run app
+      href: ../office-suite-issues/click-to-run-app-repair-process.md
+    - name: Saving documents to network server is slow
+      href: ../office-suite-issues/saving-file-to-network-server-slow.md
+    - name: Selected a single-byte font to replace a double-byte font with Japanese
+      href: ../office-suite-issues/single-byte-font-replace-error.md
+    - name: Services display incorrectly in Research pane
+      href: ../office-suite-issues/duplicate-service-listed.md
+    - name: Set default font for Office apps
+      href: ../office-suite-issues/set-default-font.md
+    - name: Some VB Editor settings disabled in Office 2010
+      href: ../office-suite-issues/vb-editor-settings-disabled.md
+    - name: The document caused a serious error the last time it was opened
+      href: ../office-suite-issues/error-open-word-excel.md
+    - name: Unable to create DSN for Office System Driver
+      href: ../office-suite-issues/cant-create-dsn-for-office-system-driver.md
+    - name: Updates are offered for nonexistent Office programs
+      href: ../office-suite-issues/updates-provided-for-nonexistent-office.md
+    - name: Use different versions of Office on the same PC
+      href: ../office-suite-issues/use-multiple-versions-of-office.md
+    - name: Use GetObject and CreateObject with automation server
+      href: ../office-suite-issues/getobject-createobject-behavior.md
+    - name: View error signatures for Office
+      href: ../office-suite-issues/view-error-signatures.md
+    - name: Win32API_PtrSafe with 64-bit Support
+      href: ../office-suite-issues/win32api_ptrsafe-with-64-bit-support.md
   - name: OneNote
     items:
     - name: "\"Open new side note\" missing from  Windows notification"
@@ -925,6 +919,8 @@
       href: ../powerpoint/create-powerpoint-mailto-hyperlink.md
     - name: Embedded videos don't play
       href: ../powerpoint/embedded-video-not-play.md
+    - name: Error when you open a presentation
+      href: ../powerpoint/error-when-you-open-presentation.md
     - name: File size of an existing presentation increases
       href: ../powerpoint/presentation-file-size-increases.md
     - name: Hlink.dll Can't Be Loaded
@@ -1037,12 +1033,12 @@
       href: ../settings/office-program-task-panes.md
     - name: Use registry to clear the most recently used files list
       href: ../settings/clear-most-recently-used-file.md
-  - name: End of Support
+  - name: Third party add-ins
     items:
-    - name: Office 2007 has reached end of extended support
-      href: ../support/office-2007-not-support.md
-    - name: Support for 2013 versions of Microsoft 365 Apps for enterprise ends
-      href: ../support/2013-versions-of-office-365.md
+    - name: Incompatibilities between Office and Adobe
+      href: ../third-party-add-ins/incompatibilities-between-office-and-adobe.md
+    - name: Office crash with SendToBluetooth add-in installed
+      href: ../third-party-add-ins/office-crash-with-sendtobluetooth.md
   - name: Visio
     items:
     - name: "\"Fit to Drawing\" not working"
@@ -1193,6 +1189,3 @@
       href: ../word/save-changes-to-global-template.md
   - name: Office Developer
     href: /previous-versions/office/troubleshoot/office-developer/add-button-in-word
-    
-
-    

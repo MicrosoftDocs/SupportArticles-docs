@@ -1,5 +1,5 @@
 ---
-title: Cannot hear sound when sharing content during a Teams meeting
+title: Cannot hear sound when sharing content during a Teams live event
 ms.author: v-todmc
 author: todmccoy
 ms.date: 4/9/2020
@@ -17,14 +17,14 @@ ms.custom:
 - CI 113425
 - CSSTroubleshoot 
 ms.reviewer: scapero
-description: Explains why you can't hear the sound from shared content during a meeting. 
+description: Explains why you can't hear the sound from shared content during a live event. 
 ---
 
-# No audio while sharing content during a broadcast meeting in Microsoft Teams
+# No audio while sharing content during a live event in Microsoft Teams
 
 ## Summary
 
-When sharing content during a broadcast meeting in Teams, audio from the shared content (such as a YouTube link or a saved video file) cannot be heard by participants. 
+When sharing content during a live event in Teams, audio from the shared content (such as a YouTube link or a saved video file) cannot be heard by participants. 
 
 ## More information
 
@@ -32,4 +32,4 @@ This is by design. Teams does not currently support audio from content sharing.
 
 ## More information
 
-Still need help? Go to [Microsoft Community](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fanswers.microsoft.com%2F&data=02%7C01%7Cv-todmc%40microsoft.com%7C98910814456c474880f108d7cf62d97d%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637205895885805857&sdata=9%2FYStDGvrU5ZIYXB7guowmaPlKazab0U%2BTpiBIItDaQ%3D&reserved=0).
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

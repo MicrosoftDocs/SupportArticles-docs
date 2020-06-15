@@ -77,4 +77,4 @@ To change the sender’s display name that message recipients will see, you can 
 
 For more information about the change, see the following Microsoft Exchange Team Blog article: 
  
-[Changes coming to the SMTP Authenticated Submission client protocol](https://blogs.technet.microsoft.com/exchange/2018/04/20/changes-coming-to-the-smtp-authenticated-submission-client-protocol/)
+[Changes coming to the SMTP Authenticated Submission client protocol](https://techcommunity.microsoft.com/t5/exchange-team-blog/changes-coming-to-the-smtp-authenticated-submission-client/ba-p/607825) 

@@ -9,7 +9,7 @@
       href: ./known-issues/eaf-in-emet-ids-chrome-optimizations-as-threats.md
     - name: Error "We couldn't add member" when adding users to Teams 
       href: ./known-issues/couldnt-add-member-error.md
-    - name: Group mailboxes in Teams will not enable for archival purposes 
+    - name: Cannot enable archiving or increase mailbox quota in O365 Group mailbox
       href: ./known-issues/group-mailboxes-will-not-enable-archive.md
     - name: Include or exclude Teams from antivirus or DLP applications
       href: ./teams-administration/include-exclude-teams-from-antivirus-dlp.md
@@ -41,6 +41,8 @@
       href: ./known-issues/phone-number-blocked-in-teams.md
     - name: Attendee maximum for meetings capped at 250
       href: ./known-issues/teams-meetings-capped-at-250.md
+    - name: Can't open PowerPoint presentations after disabling TLS 1.0/1.1
+      href: ./teams-conferencing/teams-room-cant-open-powerpoint-presentations-tls.md
     - name: CVI information does not auto-populate in a Meet Now instance 
       href: ./known-issues/cvi-info-does-not-populate-in-meet-now.md
     - name: Dialing out in Teams requires five or more digits 
@@ -61,12 +63,10 @@
       href: ./known-issues/static-conference-id-not-supported.md
     - name: Microsoft Teams meetings are not available 
       href: ./known-issues/teams-meetings-not-available.md
-    - name: No audio while sharing content during a broadcast meeting in Microsoft Teams
+    - name: No audio while sharing content during a live event in Microsoft Teams
       href: ./known-issues/no-audio-when-sharing-content-in-meeting.md
     - name: Team member maximum of 5000 in Microsoft Teams
       href: ./known-issues/teams-member-max-5000.md
-    - name: Teams Rooms app doesn't start after update to version 4.4.41.0
-      href: ./teams-administration/teams-rooms-app-wont-start-after-update.md
     - name: '"The following application instance is not present in BVD" error when assigning a phone number to a resource accounts'
       href: ./known-issues/following-application-instance-not-present-error.md
     - name: Users with Exchange Online mailboxes can't access Meetings or Connectors 

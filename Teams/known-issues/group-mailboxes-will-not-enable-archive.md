@@ -1,5 +1,5 @@
 ---
-title: Unable to flag Group mailboxes for archival purposes in Teams
+title: Cannot enable archiving or increase mailbox quota for O365 Group mailboxes
 ms.author: v-todmc
 author: todmccoy
 ms.date: 4/9/2020
@@ -17,23 +17,13 @@ ms.custom:
 - CI 113425
 - CSSTroubleshoot 
 ms.reviewer: scapero
-description: Describes why you may be unable to enable Group mailboxes for archiving or extra storage in Teams. 
+description: Describes why you may be unable to enable archiving or increase quota for Group mailboxes in Teams. 
 ---
 
-# Teams group mailboxes will not enable for archival purposes 
+# You can’t enable archiving or increase the mailbox quota for an Office 365 Group mailbox used by Microsoft Teams
 
-## Summary
-
-Group mailboxes in Teams will not enable for archival purposes (or for creating extra storage).
-
-## Cause
-
-In the Office 365 Security and Compliance Center, global admins can only enable archival flags on user mailboxes, not group mailboxes. 
-
-## Resolution
-
-If the group mailbox is at or near capacity, [contact Microsoft Office Support](https://support.microsoft.com/contactus/) to extend the mailbox size.
+Messages for every channel within a Microsoft Teams team are stored in the Office 365 Group mailbox that’s associated with that team. Enabling archiving and increasing the mailbox quota for the Office 365 Group mailbox are not supported.
 
 ## More information
 
-Still need help? Go to [Microsoft Community](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fanswers.microsoft.com%2F&data=02%7C01%7Cv-todmc%40microsoft.com%7C98910814456c474880f108d7cf62d97d%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637205895885805857&sdata=9%2FYStDGvrU5ZIYXB7guowmaPlKazab0U%2BTpiBIItDaQ%3D&reserved=0).
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

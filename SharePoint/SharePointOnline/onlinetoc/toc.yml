@@ -3,6 +3,8 @@
   items:
   - name: Administration
     items:
+    - name: '"Access denied" error for PIM-managed accounts in SharePoint or OneDrive admin center'
+      href: ../administration/access-denied-to-pim-user-accounts.md
     - name: Temporary changes in process schedule for SharePoint Online services 
       href: ../administration/temporary-adjustments-in-sharepoint-online.md
     - name: '"Sync to Outlook" button and "Task" link are missing'
@@ -153,7 +155,7 @@
     items:
     - name: Can't reach the server when sharing files
       href: ../Performance/share-file-unable-reach-the-server.md
-    - name: Performance troublehsooter for SharePoint Online
+    - name: Performance troubleshooter for SharePoint Online
       href: ../Performance/sharepoint-online-performance-troubleshooter.md
     - name: Publishing pages take longer than expected to load
       href: ../Performance/publishing-pages-take-longer-to-load.md
@@ -181,16 +183,18 @@
       href: ../search/search-results-dont-appear-for-group-owners.md
   - name: Security
     items:
-    - name: '"Session has expired" when opening a document'
-      href: ../Security/session-has-expired.md
     - name: Can't force Modern Authentication with using Connect-SPOService
       href: ../security/cannot-force-modern-authentication.md
-    - name: Handling ransomware in Sharepoint Online
+    - name: Documents deleted by retention policy after workload is removed
+      href: ../../OneDrive/sync/retention-policies-deleting-documents-after-workload-removal.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
+    - name: Handling ransomware in SharePoint Online
       href: ../security/handling-ransomware-in-sharepoint-online.md
     - name: Migrated accounts aren't resolved
       href: ../Security/migrated-user-name-resolution-fails.md
     - name: Online cross-domain iframe requests are blocked
       href: ../security/cross-domain-iframe-requests-are-blocked.md
+    - name: '"Session has expired" when opening a document'
+      href: ../Security/session-has-expired.md
     - name: There is a problem with your account when opening documents
       href: ../Security/problem-with-your-account.md
   - name: Sharing and Permissions
@@ -269,17 +273,17 @@
       href: ../sites/error-when-changing-o365-site-logo.md
     - name: Issue when activating Announcement Tiles feature
       href: ../Sites/announcement-tiles-not-supported.md
-    - name: Issue when creating an onilne site
+    - name: Issue when creating an online site
       href: ../Sites/site-names-cant-contain-reserved-word.md
     - name: Issue when saving a site as a template
       href: ../Sites/fails-saving-site-as-template.md
-    - name: Issue when saving an onilne site as template
+    - name: Issue when saving an online site as template
       href: ../Sites/save-site-as-template.md
     - name: Issue with "New Navigation Link" or "Save site as template" option
       href: ../Sites/new-navigation-link-save-site-as-template.md
     - name: Modified dates on the SharePoint site contents page are not accurate
       href: ../../SharePointServer/lists-and-libraries/modified-date-site-contents-not-accurate.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
-    - name: Public websites is discountinued
+    - name: Public websites is discontinued
       href: ../Sites/public-websites-be-discontinued.md
     - name: Rich Text fields don't respond
       href: ../Sites/rich-text-fields-fails-responding.md
@@ -319,6 +323,8 @@
       href: ../web-parts/something-went-wrong-error-configuring-spfx-component.md
     - name: Unable to drag and drop web parts onto classic pages in SharePoint Online
       href: ../web-parts/unable-to-drag-drop-web-parts.md
+    - name: Unable to create alerts for views in SharePoint
+      href: ../web-parts/unable-to-create-view-alerts.md
   - name: Workflows
     items:
     - name: '"Access denied" error with an Approval Workflow task'
@@ -351,3 +357,5 @@
       href: ../Workflows/connecting-site-workflow-problems.md
     - name: Workflow platform creates Word files that can't be opened
       href: ../Workflows/workflow-platform-created-word-fails-opening.md
+
+
