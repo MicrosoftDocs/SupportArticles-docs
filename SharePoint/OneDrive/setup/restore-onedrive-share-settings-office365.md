@@ -39,14 +39,14 @@ This problem occurs if a user navigates to **User details** > **OneDrive** > **S
 To restore the **OneDrive Sharing** option, follow these steps:
 
 1.	Find the user MySite URL. For example:
-    > https://m365x328152-my.sharepoint.com/personal/meganb_m365x328152_onmicrosoft_com
+    > https://m365x328152-my.sharepoint.com/personal/meganb_m365x328152_contoso_com
  
 2.	Run the following commands in the [SharePoint Online Management Shell](https://www.microsoft.com/download/details.aspx?id=35588):
 
      ```powershell
      Connect-SPOService -Url https://m365x328152-admin.sharepoint.com/
 
-     Set-SPOSite -Identity https://m365x328152-my.sharepoint.com/personal/meganb_m365x328152_onmicrosoft_com  -SharingCapability ExternalUserSharingOnly
+     Set-SPOSite -Identity https://m365x328152-my.sharepoint.com/personal/meganb_m365x328152_contoso_com  -SharingCapability ExternalUserSharingOnly
      ```
 
      > [!NOTE]
