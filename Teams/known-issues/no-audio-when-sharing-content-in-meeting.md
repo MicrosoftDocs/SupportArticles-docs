@@ -34,8 +34,8 @@ To share your system audio during a live event:
 2.	Select **Include system audio**.
 
 > [!NOTE]
-> - You won't be able to include your computer's audio while sharing a PowerPoint file or Whiteboard.
-> - For now, we only support this feature on Windows devices.
+> - You won't be able to include your computer's audio while you share a PowerPoint presentation or Whiteboard.
+> - Currently, we support this feature on Windows devices only.
 
 For more information, see [Share system audio in a Teams meeting or live event](https://support.microsoft.com/office/share-system-audio-in-a-teams-meeting-or-live-event-dddede9f-e3d0-4330-873a-fa061a0d8e3b).
 
