@@ -88,5 +88,4 @@ Use the following PnP PowerShell command to obtain the OneDrive URL of the user:
      Get-PnPUserProfileProperty -Account $UserAccount | Select PersonalUrl
      ```
 
-
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
