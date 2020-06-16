@@ -20,11 +20,11 @@ metadata:
 
 productDirectory:
   items:
-  - title: Biztalk Server
+  - title: BizTalk Server
     imageSrc: "media/hub-landing/biztalk.svg"
     links:
     - url: biztalk/welcome-support-biztalk.md
-      text: Support for Biztalk Server
+      text: Support for BizTalk Server
 
 # conceptualContent:
 
