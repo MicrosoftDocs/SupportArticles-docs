@@ -6,7 +6,7 @@ ms.date: 03/09/2020
 ---
 # Welcome to Support articles for BizTalk Server
 
-The articles in the table of contents (TOC) provide support for Biztalk Server.
+The articles in the table of contents (TOC) provide support for BizTalk Server.
 
 Many of these Support articles are what Microsoft informally calls _Knowledge Base_ (KB) articles.
 
