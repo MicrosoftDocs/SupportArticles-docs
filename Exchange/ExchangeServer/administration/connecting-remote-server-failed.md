@@ -100,6 +100,6 @@ To install the EMT shooter, follow these steps:
 
 For more information about the problems that are processed by EMTshooter and the causes of some of those problems, see the following Exchange Team Blog articles:
 
-[Troubleshooting Exchange 2010 Management Tools startup issues](https://blogs.technet.com/b/exchange/archive/2010/02/04/3409289.aspx)
+[Troubleshooting Exchange 2010 Management Tools startup issues](https://techcommunity.microsoft.com/t5/exchange-team-blog/troubleshooting-exchange-2010-management-tools-startup-issues/ba-p/595608)
 
-[Resolving WinRM errors and Exchange 2010 Management tools startup failures](https://blogs.technet.com/b/exchange/archive/2010/12/07/3411644.aspx)
+[Resolving WinRM errors and Exchange 2010 Management tools startup failures](https://techcommunity.microsoft.com/t5/exchange-team-blog/resolving-winrm-errors-and-exchange-2010-management-tools/ba-p/588661)
