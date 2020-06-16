@@ -18,10 +18,10 @@ appliesto:
 - SharePoint Server 2010
 ---
 
-# Preparing for TLS 1.2 in Office 365 and Office 365 GCC 
+# Preparing for TLS 1.2 in Office 365 and Office 365 GCC
 
 > [!IMPORTANT]
-> The world is in the middle of a pandemic, and we at Microsoft are aware of the impact on our customers and partners. To lighten the burden on our commercial customers, we have temporarily halted any deprecation enforcement of TLS 1.0 and 1.1. An update will be sent on a revised timeline after the current crisis stabilizes. (This article is revised to reflect the change.) 
+> The world is in the middle of a pandemic, and we at Microsoft are aware of the impact on our customers and partners. To lighten the burden on our commercial customers, we have temporarily halted any deprecation enforcement of TLS 1.0 and 1.1. An update will be sent on a revised timeline after the current crisis stabilizes. (This article is revised to reflect the change.)
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
@@ -78,7 +78,7 @@ The following resources provide guidance to help make sure that your clients are
 - [Enable TLS 1.1 and TLS 1.2 support in SharePoint Server 2016](https://docs.microsoft.com/SharePoint/security-for-sharepoint-server/enable-tls-1-1-and-tls-1-2-support-in-sharepoint-server-2016)
 - [Enable TLS and SSL support in SharePoint 2013](https://docs.microsoft.com/SharePoint/security-for-sharepoint-server/enable-tls-and-ssl-support-in-sharepoint-2013)
 - [Enable TLS 1.1 and TLS 1.2 support in SharePoint Server 2010](https://docs.microsoft.com/previous-versions/office/sharepoint-server-2010/mt773992%28v=office.14%29)
-- [Preparing for TLS 1.0/1.1 Deprecation - O365 Skype for Business](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Preparing-for-TLS-1-0-1-1-Deprecation-O365-Skype-for-Business/ba-p/222247)
+- [Preparing for TLS 1.0/1.1 Deprecation - Office 365 Skype for Business](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Preparing-for-TLS-1-0-1-1-Deprecation-O365-Skype-for-Business/ba-p/222247)
 - [Exchange Server TLS guidance, part 1: Getting Ready for TLS 1.2](https://techcommunity.microsoft.com/t5/exchange-team-blog/exchange-server-tls-guidance-part-1-getting-ready-for-tls-1-2/ba-p/607649)
 - [Exchange Server TLS guidance Part 2: Enabling TLS 1.2 and Identifying Clients Not Using It](https://techcommunity.microsoft.com/t5/exchange-team-blog/exchange-server-tls-guidance-part-2-enabling-tls-1-2-and/ba-p/607761)
 - [Exchange Server TLS guidance Part 3: Turning Off TLS 1.0/1.1](https://techcommunity.microsoft.com/t5/exchange-team-blog/exchange-server-tls-guidance-part-3-turning-off-tls-1-0-1-1/ba-p/607898)
