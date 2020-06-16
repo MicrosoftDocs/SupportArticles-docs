@@ -55,10 +55,6 @@ The Global.mpt file has read-only permissions when any of the following conditio
  Project searches for the Global.mpt file in the following locations:
 
 
-- The current folder
-
-  If the user has a shortcut that specifies the "Start In" folder, and if a Global.mpt file resides there, Project opens that Global.mpt file. If the user double-clicks a project in Windows Explorer when Project is not already open, Project uses the Global.mpt file if it is saved in that particular folder, 
-
 - The user's profile folder
 
   Project looks in the "Application Data" folder under the user's profile. For example, on a computer that is running Microsoft Windows 98 with User Profiles turned on, this location is as follows: 
