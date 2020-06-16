@@ -1,6 +1,7 @@
 ---
-title: Troubleshoot Excel opening blank when double-click a file icon or file name
-description: Discusses that you see a blank screen when you try to open an Excel workbook by double-clicking its icon or file name. Provides multiple resolutions.
+title: Excel opens a blank screen when you double-click a file icon or file name
+description: Offers resolutions to an issue where you see a blank screen when you try to open an Excel workbook by double-clicking its icon or file name.
+ms.date: 6/16/2020
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -28,7 +29,7 @@ appliesto:
 
 When you double-click an icon or file name for a Microsoft Excel workbook, Excel starts and then displays a blank screen instead of the file that you expect to see.
 
-Try the following options to help recover your document. Select the image to see more detailed instructions about that option.
+Try the following options to help recover your document. Select the image or header to see more detailed instructions about that option.
 
 
 > [!IMPORTANT]
@@ -42,7 +43,7 @@ Try the following options to help recover your document. Select the image to see
 ![Option 1](../word/media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-1.png)
 
 </a>
-</td><td><b>Ignore DDE</b>
+</td><td><a href="#option1"><b>Ignore DDE</b></a>
 
 
 > [!NOTE]
@@ -64,7 +65,7 @@ Try the following options to help recover your document. Select the image to see
 
 </a>
 </td>
-<td><b>Repair User Experience Virtualization (UE-V)</b>
+<td><a href="#option2"><b>Repair User Experience Virtualization (UE-V)</b></a>
 
 If you are running Update User Experience Virtualization (UE-V), install Hotfix 2927019. To do this, see the following Knowledge Base article:
 
@@ -79,7 +80,7 @@ If you are running Update User Experience Virtualization (UE-V), install Hotfix 
 
 </a>
 </td>
-<td><b>Reset file associations</b>
+<td><a href="#option3"><b>Reset file associations</b></a>
 
 <b>Windows 10</b>
 
@@ -106,7 +107,7 @@ To open this type of file in a different app:
 
 </a>
 </td>
-<td><b>Delete the Word Options registry key</b>
+<td><a href="#option4"><b>Delete the Word Options registry key</b></a>
 
 *For an Office 365 or Office 2019 Click-to-Run installation*
 
@@ -129,7 +130,7 @@ To open this type of file in a different app:
 
 </a>
 </td>
-<td><b>Turn off add-ins</b>
+<td><a href="#option5"><b>Turn off add-ins</b></a>
 
 1. On the **File** menu, select **Options**, then select **Add-Ins**.
 1. In the **Manage** list at the bottom of the screen, select **COM Add-Ins** item, then select **Go**.
@@ -148,7 +149,7 @@ To open this type of file in a different app:
 
 </a>
 </td>
-<td><b>Disable hardware acceleration</b>
+<td><a href="#option6"><b>Disable hardware acceleration</b></a>
 
 
 1. Start any Office 2013, 2016, 2019, or O365 program.
@@ -167,7 +168,7 @@ To open this type of file in a different app:
 
 </a>
 </td>
-<td><b>Minimizing and maximizing the window</b>
+<td><a href="#option7"><b>Minimizing and maximizing the window</b></a>
 
 1.    Select the minimize button in the top-right corner of the Excel spreadsheet.
 2.    In the task tray, right-click Excel, and then select your spreadsheet. (Or double click the Excel icon.)
@@ -182,7 +183,7 @@ To open this type of file in a different app:
 
 </a>
 </td>
-<td><b>Check for hidden sheets</b>
+<td><a href="#option8"><b>Check for hidden sheets</b></a>
 
 1.    Select the minimize button in the top-right corner of the Excel spreadsheet.
 2.    In the task tray, right-click Excel, and then select your spreadsheet. (Or double click the Excel icon.)
