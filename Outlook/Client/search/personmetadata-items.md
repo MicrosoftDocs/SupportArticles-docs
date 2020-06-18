@@ -31,8 +31,8 @@ The PersonMetadata folder is created and used by the [Outlook Customer Manager (
 
 Although these items have a blank subject, they are actively used by OCM and should not be deleted or modified. It is a search folder limitation to include mail items from hidden folders.
 
-[!NOTE]
-OCM is being deprecated in June 2020. See [Export or delete your Outlook Customer Manager data](https://support.office.com/article/export-or-delete-your-outlook-customer-manager-data-1a421cb4-e8de-4b44-bfb8-710b92820439) for more information.
+>[!NOTE]
+>OCM is being deprecated in June 2020. See [Export or delete your Outlook Customer Manager data](https://support.office.com/article/export-or-delete-your-outlook-customer-manager-data-1a421cb4-e8de-4b44-bfb8-710b92820439) for more information.
 
 Even after the deprecation, the PersonMetaData folder and the items in it will be available for a limited time.  If you change or delete the items in this folder, they may be recreated or new ones might appear.  
 
