@@ -55,4 +55,4 @@ Reproduce the issue and collect the logs for review. The logs are stored under %
 > [!NOTE]
 > Note the time stamp when you run the repro so that you can collect the correct logs.
 
-After you collect the logs, turn off the Office ULS verbose logging settings. Otherwise, this continues to collect verbose data and use more dive space.
+After you collect the logs, turn off the Office ULS verbose logging settings. Otherwise, this continues to collect verbose data and use more drive space.
