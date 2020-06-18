@@ -3,11 +3,11 @@
   topicHref: /
   items:
 
-  - name: Support
-    tocHref: /support/
-    topicHref: /support/index
+  - name: Troubleshoot
+    tocHref: /troubleshoot/
+    topicHref: /troubleshoot/index
     items:
 
     - name: Biztalk
-      tocHref: /support/biztalk/
-      topicHref: /support/biztalk/welcome-support-biztalk
+      tocHref: /troubleshoot/biztalk/
+      topicHref: /troubleshoot/biztalk/welcome-support-biztalk
