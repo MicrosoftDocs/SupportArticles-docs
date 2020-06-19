@@ -27,6 +27,8 @@
     items:
     - name: Credential prompts after resting mouse pointer over a user name
       href: ../../SharePointOnline/sharing-and-permissions/rest-mouse-pointer-on-user-name.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
+    - name: Restore OneDrive Sharing settings in O365 admin center
+      href: ../setup/restore-onedrive-share-settings-office365.md
   - name: Sites
     items:
     - name: Top navigation bar displays either Sites or Newsfeed instead of OneDrive

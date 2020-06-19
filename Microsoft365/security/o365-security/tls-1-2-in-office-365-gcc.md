@@ -1,5 +1,5 @@
 ---
-title: Deprecating TLS 1.0 and 1.1 and preparing for TLS 1.2 in 365 GCC
+title: Deprecating TLS 1.0 and 1.1 in Office 365 GCC High and DoD
 description: Discusses how Microsoft is moving the date forward to discontinue support for TLS 1.1 and 1.0 in GCC High and DoD environments in Office 365 and preparing to use TLS 1.2.
 author: simonxjx
 manager: dcscontentpm
@@ -19,13 +19,16 @@ appliesto:
 - SharePoint Server 2010
 ---
 
-# Deprecating TLS 1.0 and 1.1 in O365 GCC High and DoD and preparing for TLS 1.2
+# Deprecating TLS 1.0 and 1.1 in Office 365 GCC High and DoD
+
+> [!IMPORTANT]
+> The world is in the middle of a pandemic, and we at Microsoft are aware of the impact on our customers and partners. To lighten the burden on our commercial customers, we have temporarily halted any deprecation enforcement of TLS 1.0 and 1.1. An update will be sent on a revised timeline after the current crisis stabilizes. (This article is revised to reflect the change.)
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 
-In order to comply with the latest compliance standards for the Federal Risk and Authorization Management Program (FedRAMP), we are moving to deprecate Transport Layer Security (TLS) versions 1.1 and 1.0 in Microsoft Office 365 for GCC High and DoD environments. This change was previously announced through Microsoft Support in [Preparing for the mandatory use of TLS 1.2 in Office 365](https://support.microsoft.com/help/4057306/preparing-for-tls-1-2-in-office-365). 
+In order to comply with the latest compliance standards for the Federal Risk and Authorization Management Program (FedRAMP), we are moving to deprecate Transport Layer Security (TLS) versions 1.1 and 1.0 in Microsoft Office 365 for GCC High and DoD environments. This change was previously announced through Microsoft Support in [Preparing for the mandatory use of TLS 1.2 in Office 365](https://support.microsoft.com/help/4057306/preparing-for-tls-1-2-in-office-365).
 
 We understand that the security of your data is important, and we are committed to transparency about changes that could affect your use of the service. 
 
@@ -33,7 +36,7 @@ Although the [Microsoft TLS 1.0 implementation](https://support.microsoft.com/he
 
 [Solving the TLS 1.0 problem](https://www.microsoft.com/download/details.aspx?id=55266) 
 
-In preparing for this change for TLS 1.1 and 1.0, we recommend that you use TLS version 1.2 instead. For more information, see [Preparing for the mandatory use of TLS 1.2 in Office 365](https://support.microsoft.com/help/4057306/preparing-for-tls-1-2-in-office-365). 
+In preparing for this change for TLS 1.1 and 1.0, we recommend that you use TLS version 1.2 instead. For more information, see [Preparing for the mandatory use of TLS 1.2 in Office 365](https://support.microsoft.com/help/4057306/preparing-for-tls-1-2-in-office-365).
 
 ## More information
 
