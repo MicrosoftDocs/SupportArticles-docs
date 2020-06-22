@@ -187,7 +187,7 @@ The following list describes optional parameters that generate different results
   For example, the following cmdlet searches the "Test User 1" mailbox and includes all operations:
 
     ```powershell
-    .\Run-MailboxAuditLogSearcher.ps1 -IncludeFolderBind -Mailbox "&ltTest User 1gt;" -StartDate "&lt04/10/17gt;" -EndDate "&lt04/27/17gt;&quot
+    .\Run-MailboxAuditLogSearcher.ps1 -IncludeFolderBind -Mailbox "<Test User 1gt;" -StartDate "<04/10/17gt;" -EndDate "<04/27/17gt;&quot
     ```
 
 - **Subject**: When you use this switch, you can specify the subject of an item in order to limit the search for operations that are performed on that item.
@@ -195,7 +195,7 @@ The following list describes optional parameters that generate different results
   For example, the following cmdlet filters out all output except items that have the subject set as 'Good News':
 
     ```powershell
-    .\Run-MailboxAuditLogSearcher.ps1 -Subject "<Good News>" -Mailbox "&lttest1@contoso.comgt;" -StartDate "&lt04/10/17gt;" -EndDate "&lt04/27/17gt;&quot
+    .\Run-MailboxAuditLogSearcher.ps1 -Subject "<Good News>" -Mailbox "<test1@contoso.comgt;" -StartDate "<04/10/17gt;" -EndDate "<04/27/17gt;&quot
     ```
 
 - **ReturnObject**: When you use this switch, the result is displayed on the screen, but it is not exported to a .csv file.
@@ -203,7 +203,7 @@ The following list describes optional parameters that generate different results
   For example, the following cmdlet displays the output on the screen:
 
     ```powershell
-    .\Run-MailboxAuditLogSearcher.ps1 -ReturnObject -Mailbox "&ltTest User 1gt;" -StartDate "&lt04/10/17gt;" -EndDate "&lt04/27/17gt;&quot
+    .\Run-MailboxAuditLogSearcher.ps1 -ReturnObject -Mailbox "<Test User 1gt;" -StartDate "<04/10/17gt;" -EndDate "<04/27/17gt;&quot
     ```
 
 ### Exported columns from the .csv file
