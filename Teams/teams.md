@@ -29,9 +29,11 @@ Browse the table of contents or use the search box on the left to find an issue.
 - [Microsoft Teams user cannot send a message in Skype for Business](https://docs.microsoft.com/microsoftteams/troubleshoot/teams-im-presence/teams-user-not-send-message-in-sfb)
 - [Unable to create a team in Teams](https://docs.microsoft.com/microsoftteams/troubleshoot/known-issues/users-cant-create-team)
 - [Removed user appears as "Unknown user" in Microsoft Teams](https://docs.microsoft.com/microsoftteams/troubleshoot/known-issues/removed-user-appears-as-unknown)
+- [Dial pad is missing in Microsoft Teams](https://docs.microsoft.com/microsoftteams/troubleshoot/teams-conferencing/ev-user-have-no-dial-pad)
 
 ## More Teams content
 
+- [Remote teaching and learning in Office 365 Education](https://support.microsoft.com/office/remote-teaching-and-learning-in-office-365-education-f651ccae-7b65-478b-8366-51bb884025c4)
 - [Teams end user documentation](https://support.office.com/teams)
 - [Teams administrator documentation](https://docs.microsoft.com/MicrosoftTeams/teams-overview)
 - [Teams training](https://docs.microsoft.com/MicrosoftTeams/training-microsoft-teams-landing-page)
