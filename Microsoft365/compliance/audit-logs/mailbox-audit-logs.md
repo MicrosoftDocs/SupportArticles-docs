@@ -166,7 +166,7 @@ To enable owner audit logging, follow these steps:
 1. Enable the owner audit logging. To do this, run the following cmdlet:
 
     ```powershell
-    Set-Mailbox <useridentity> -AuditOwner "Create,HardDelete,Move,MoveToDeletedItems,SoftDelete,Update&quot
+    Set-Mailbox <useridentity> -AuditOwner "Create,HardDelete,Move,MoveToDeletedItems,SoftDelete,Update"
     ```
 
 1. Rerun the **Run-MailboxAuditLogSearcher.ps1**, and review the data.
