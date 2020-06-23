@@ -41,12 +41,12 @@ dfshim.dll: 4.0.31106.0 (Main.031106-0000)
 
 SOURCES
 
-Deployment url: https://bposast.vo.msecnd.net/ClickOnceConnector/Office365DesktopSetup.application
+Deployment url: `https://bposast.vo.msecnd.net/ClickOnceConnector/Office365DesktopSetup.application`
 Server: Microsoft-IIS/7.0
 
 ERROR SUMMARY
 
-Below is a summary of the errors, details of these errors are listed later in the log.* Activation of https://bposast.vo.msecnd.net/ClickOnceConnector/Office365DesktopSetup.application resulted in exception. Following failure messages were detected:
+Below is a summary of the errors, details of these errors are listed later in the log.* Activation of `https://bposast.vo.msecnd.net/ClickOnceConnector/Office365DesktopSetup.application` resulted in exception. Following failure messages were detected:
 - Your Web browser settings do not allow you to run unsigned applications.
 
   COMPONENT STORE TRANSACTION FAILURE SUMMARY
@@ -56,7 +56,7 @@ Below is a summary of the errors, details of these errors are listed later in th
   There were no warnings during this operation.
 
   OPERATION PROGRESS STATUS
-- [9/1/2011 6:23:51 PM]: Activation of https://bposast.vo.msecnd.net/ClickOnceConnector/Office365DesktopSetup.application has started.
+- [9/1/2011 6:23:51 PM]: Activation of `https://bposast.vo.msecnd.net/ClickOnceConnector/Office365DesktopSetup.application` has started.
 
   ERROR DETAILS
 

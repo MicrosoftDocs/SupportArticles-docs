@@ -109,7 +109,7 @@ Use Chrome Beta version 80 to test the scenarios:
 2. Start Chrome by using the following additional command line flag:
    `--enable-features=SameSiteDefaultChecksMethodRigorously`
 
-3. Enable the **SameSite** flags. To do this, type **Chrome://flags** in the **Address** bar, search for **SameSite**, and then select **Enabled** for the following options.
+3. Enable the **SameSite** flags. To do this, type `Chrome://flags` in the **Address** bar, search for **SameSite**, and then select **Enabled** for the following options.
  
 ![Enable SameSite settings](./media/chrome-behavior-affects-applications/picture1.png)
 
@@ -121,11 +121,11 @@ The Chrome team had announced plans to roll out [a change in the default behavio
 
 ## Checking the Chrome version
 
-If you suspect that your users are using a Chrome version 76 or a later version that has SameSite enabled, you can check the version number by navigating to [chrome://settings/help](chrome://settings/help) or by selecting the Chrome settings icon, and then selecting **Help** > **About Google Chrome**.
+If you suspect that your users are using a Chrome version 76 or a later version that has SameSite enabled, you can check the version number by navigating to `chrome://settings/help` or by selecting the Chrome settings icon, and then selecting **Help** > **About Google Chrome**.
 
 ![Checking Chrome version in About Google Chrome](./media/chrome-behavior-affects-applications/picture2.png)
 
-For the 77–79 versions of Chrome, check the [Chrome://flags](Chrome://flags) in the browser to see whether they have the flags enabled. The setting default will begin to change in Chrome version 80 on a graduated release.
+For the 77–79 versions of Chrome, check the `Chrome://flags` in the browser to see whether they have the flags enabled. The setting default will begin to change in Chrome version 80 on a graduated release.
 
 **Third-party information disclaimer**
 

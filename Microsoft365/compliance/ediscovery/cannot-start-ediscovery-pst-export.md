@@ -49,19 +49,19 @@ To resolve this issue, do one or more of the following, as appropriate for your 
 
 ### Scenario 2: Local intranet zone settings aren't set up correctly in Internet Explorer
 
-Make sure that **<https://*.outlook.com>**  is added to the Local intranet zone in Internet Explorer. To do this, follow these steps:
+Make sure that `https://*.outlook.com` is added to the Local intranet zone in Internet Explorer. To do this, follow these steps:
 
 1. In Internet Explorer, click **Internet Options** on the **Tool** menu.
 1. On the **Security** tab, select **Local intranet**.
 1. Click **Site**, and then click **Advanced**.
-1. Add **<https://*.outlook.com>** (if it's not already listed).
+1. Add `https://*.outlook.com` (if it's not already listed).
 1. Click **Close**.
 
 Additionally, make sure that the following URLs are not listed as Trusted zone sites:
 
-- <https://*.outlook.com>
-- <https://r4.res.outlook.com>
-- <https://*.res.outlook.com>
+- `https://*.outlook.com`
+- `https://r4.res.outlook.com`
+- `https://*.res.outlook.com`
 
 ### Scenario 3: You're using a third-party (non-Microsoft) browser, and you don't have the ClickOnce browser extension installed
 

@@ -87,7 +87,7 @@ The following process occurs when the Lync 2013 desktop client tries to locate t
 
     For example, the Lync 2013 desktop client sends the following requests:
 
-    http://LyncdiscoverInternal.contoso.com and https://LyncdiscoverInternal.contoso.com 
+    `http://LyncdiscoverInternal.contoso.com` and `https://LyncdiscoverInternal.contoso.com` 
 
     > [!NOTE]
     > "LyncdiscoverInternal.contoso.com" is resolved to the FQDN or IP address of the Internal Lync Web Service.
