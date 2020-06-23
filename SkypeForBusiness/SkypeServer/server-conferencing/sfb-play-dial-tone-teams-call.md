@@ -36,6 +36,7 @@ Set **PlayAbbreviatedDialTone** to "true" in the client policy. If PlayAbbreviat
 ```powershell
 Set-CsClientPolicy -Identity RedmondClientPolicy  -PlayAbbreviatedDialTone $True
 ```
+Another option is to enable HID interop features in the Skype for Business client. To learn how to do that, see [EnableTeamsHIDInterop for coordination of HID device usage in Microsoft Teams and Skype for Business 2016 in Islands mode](https://support.microsoft.com/help/4559449).
 
 ## More information
 
