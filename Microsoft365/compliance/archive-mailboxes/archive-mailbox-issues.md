@@ -54,7 +54,7 @@ Get-Mailbox alias |fl Name, Archive*
 ```
 
 > [!NOTE]
-> You can use either the on-premises Exchange Management Shell or Exchange Online PowerShell to run the cmdlet. For more info about how to use Exchange Online PowerShell, go to [Connect Windows PowerShell to the Service](https://support.microsoft.com/office/06a743bb-ceb6-49a9-a61d-db4ffdf54fa6?ui=en-us&rs=en-us&ad=us).
+> You can use either the on-premises Exchange Management Shell or Exchange Online PowerShell to run the cmdlet. For more info about how to use Exchange Online PowerShell, go to [Connect Windows PowerShell to the Service](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 When you run the cmdlet, the result resembles the following:
 

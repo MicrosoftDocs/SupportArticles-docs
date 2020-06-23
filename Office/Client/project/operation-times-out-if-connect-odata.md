@@ -39,7 +39,8 @@ To work around this issue, edit the .NET Framework Machine.config files to inc
 
    %windir%\Microsoft.NET\Framework64\[version]\config\machine.config
 
-   **Note** For the [version] folder placeholder, the correct value is typically the most recent version of the .NET Framework, such as 4.0.*xxxxx*. However, if you have configured your SSIS package to use a different .NET Framework version, update this value accordingly.
+   > [!NOTE]
+   > For the Version folder placeholder, the correct value is typically the most recent version of the .NET Framework, such as 4.0.*xxxxx*. However, if you have configured your SSIS package to use a different .NET Framework version, update this value accordingly.
 
    ![4043105](./media/operation-times-out-if-connect-odata/version-of-.net.png)     
 2. Make a copy of both Machine.config files as a Backup.    
@@ -53,7 +54,7 @@ To work around this issue, edit the .NET Framework Machine.config files to inc
     ```
    **Notes**
 
-   - You must replace the address with your SharePoint domain. For example, if your PWA site is "https://contoso.sharepoint.com/sites/pwa," the address should be as follows: https://contoso.sharepoint.com     
+   - You must replace the address with your SharePoint domain. For example, if your PWA site is "https://contoso.sharepoint.com/sites/pwa," the address should be as follows: `https://contoso.sharepoint.com`.     
    - Consider increasing or decreasing the **maxconnection** value in this step, depending on how your SSIS package is configured. For example, if you have a larger number of feeds that you're pulling concurrently, you may need a larger number of connections. For only a few feeds, you can use a smaller value. For more information about the .NET Framework Connection Management setting, see [Element for connectionManagement (Network Settings)](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/network/add-element-for-connectionmanagement-network-settings).    
    - After you're done adding the snippet, the edited file should resemble the following:
 

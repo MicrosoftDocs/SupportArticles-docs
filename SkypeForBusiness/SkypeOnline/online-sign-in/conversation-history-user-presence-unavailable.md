@@ -64,8 +64,8 @@ For the best experience, add your Exchange email account to Outlook and then set
 
 1. Press and hold Ctrl, right-click the Lync icon in the notification area, and then click **Configuration Information**. Look for the Exchange Web Services (EWS) setting at **EWS External URL**.   
 2. Use the value that you found in the **EWS External URL** setting, and then change it so that it ends with Exchange.asmx. For example: 
-   1. Default **EWS External URL**: https://mail.outlook.com/EWS/Exchange.asmx/WSSecurity   
-   2. Changed **EWS External URL**: https://mail.outlook.com/EWS/Exchange.asmx
+   1. Default **EWS External URL**: `https://mail.outlook.com/EWS/Exchange.asmx/WSSecurity`   
+   2. Changed **EWS External URL**: `https://mail.outlook.com/EWS/Exchange.asmx`
 3. Enter the changed **EWS External URL** address into a browser. If you're prompted, enter your Exchange mailbox credentials. You should see the EWS XML document displayed in the web browser as shown in the following picture. This indicates that EWS can be accessed and that you shouldn't be experiencing any issues. If the page doesn't display or if you're denied access, contact your Support Team.
 
     ![Screen shot of the EWS XML document ](./media/conversation-history-user-presence-unavailable/ews-xml-document.jpg)

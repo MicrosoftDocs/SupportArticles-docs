@@ -51,11 +51,11 @@ If you want to continue using your **Tasks** page, you have to manually restore 
 
 1. In the Address box, type the following URL. Replace the placeholder text by using information that's specific to your account.
 
-    https://**CompanyName**-my.sharepoint.com/personal/UserName_**CompanyName**_onmicrosoft_com/AllTasks.aspx
+    `https://CompanyName-my.sharepoint.com/personal/UserName_CompanyName_onmicrosoft_com/AllTasks.aspx`
     
     For example, the URL for user SaraD at Contoso will resemble the following:
     
-    https://contoso-my.sharepoint.com/personal/sarad_contoso_onmicrosoft_com/AllTasks.aspx
+    `https://contoso-my.sharepoint.com/personal/sarad_contoso_onmicrosoft_com/AllTasks.aspx`
     
     ![Add a link dialog box](./media/sync-to-outlook-tasks-link-missing/add-link-dialog.png)
 

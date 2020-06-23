@@ -31,7 +31,7 @@ When a federated user tries to sign in to a Microsoft cloud service such as Offi
 
 When this error occurs, the address that's displayed in the web browser resembles the following address:
 
-**https://sts.domain.tld/adfs/ls/auth/integrated/?wa=wsignin1.0&wtrealm=uri:WindowsLiveID&wctx=MEST%3D0%26LoginOptions%3D2%26wa%3Dwsignin1.0%26rpsnv%3D11%26ct%3D1283354771%26rver%3D6.0.5286.0%26wp%3DMCMBI%26wreply%3Dhttps:%252F%252Fportal.office.com%252Flanding.aspx%253Ftarget%253D%25252fDefault.aspx%26lc%3D1033%26id%3D271346%26bk%3D1283354772**
+`https://sts.domain.tld/adfs/ls/auth/integrated/?wa=wsignin1.0&wtrealm=uri:WindowsLiveID&wctx=MEST%3D0%26LoginOptions%3D2%26wa%3Dwsignin1.0%26rpsnv%3D11%26ct%3D1283354771%26rver%3D6.0.5286.0%26wp%3DMCMBI%26wreply%3Dhttps:%252F%252Fportal.office.com%252Flanding.aspx%253Ftarget%253D%25252fDefault.aspx%26lc%3D1033%26id%3D271346%26bk%3D1283354772`
 
 ## Cause 
 
