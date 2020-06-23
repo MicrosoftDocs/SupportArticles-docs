@@ -31,11 +31,17 @@ This issue occurs because new changes have been made in the HID feature for Isla
 
 ## Workaround
 
+### Method 1
+
 Set **PlayAbbreviatedDialTone** to "true" in the client policy. If PlayAbbreviatedDialTone is set to True, a 3-seconds dial tone will be played when a Skype for Business-compatible handset is taken off the hook. To learn more, read [Set-CsClientPolicy](https://docs.microsoft.com/powershell/module/skype/set-csclientpolicy?view=skype-ps). To set the value, run the following command:
 
 ```powershell
 Set-CsClientPolicy -Identity RedmondClientPolicy  -PlayAbbreviatedDialTone $True
 ```
+
+### Method 2
+
+Another option is to enable HID interop features in the Skype for Business client. To learn how to do that, see [EnableTeamsHIDInterop for coordination of HID device usage in Microsoft Teams and Skype for Business 2016 in Islands mode](https://support.microsoft.com/help/4559449).
 
 ## More information
 
