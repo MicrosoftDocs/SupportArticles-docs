@@ -39,7 +39,8 @@ To work around this issue, edit the .NET Framework Machine.config files to inc
 
    %windir%\Microsoft.NET\Framework64\[version]\config\machine.config
 
-   **Note** For the [version] folder placeholder, the correct value is typically the most recent version of the .NET Framework, such as 4.0.*xxxxx*. However, if you have configured your SSIS package to use a different .NET Framework version, update this value accordingly.
+   > [!NOTE]V
+   > For the Version folder placeholder, the correct value is typically the most recent version of the .NET Framework, such as 4.0.*xxxxx*. However, if you have configured your SSIS package to use a different .NET Framework version, update this value accordingly.
 
    ![4043105](./media/operation-times-out-if-connect-odata/version-of-.net.png)     
 2. Make a copy of both Machine.config files as a Backup.    
