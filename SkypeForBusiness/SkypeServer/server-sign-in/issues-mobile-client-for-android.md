@@ -57,11 +57,11 @@ Android smartphone devices that are supported for use with Lync 2010 for Android
 
     If **Autodetect server** is turned on but you still can’t sign in, try manually entering the internal and external discovery addresses. This doesn’t resolve the issue. However, if you can successfully sign in manually, this indicates that the **Autodetect server** option isn’t set up correctly by your administrator.  
       - For Skype for Business Online (formerly Lync Online) users in Office 365:  
-         - Internal discovery address: https://webdir.online.lync.com/Autodiscover/autodiscoverservice.svc/Root    
-         - External discovery address: https://webdir.online.lync.com/Autodiscover/autodiscoverservice.svc/Root         
+         - Internal discovery address: `https://webdir.online.lync.com/Autodiscover/autodiscoverservice.svc/Root`    
+         - External discovery address: `https://webdir.online.lync.com/Autodiscover/autodiscoverservice.svc/Root`         
       - For Lync on-premises users, contact your support team or system administrator for help with determining your internal and external discovery address. In most cases, the internal and external discovery address should resemble the following:  
-         - Internal discovery address: https://lyncdiscover.lyncFE01.contoso.local/Autodiscover/autodiscoverservice.svc/Root    
-         - External discovery address: https://lyncdiscover.contoso.com/Autodiscover/autodiscoverservice.svc/Root     
+         - Internal discovery address: `https://lyncdiscover.lyncFE01.contoso.local/Autodiscover/autodiscoverservice.svc/Root`    
+         - External discovery address: `https://lyncdiscover.contoso.com/Autodiscover/autodiscoverservice.svc/Root`     
  
         > [!NOTE]
         > To access the **User name**, **Domain**, **Internal discovery address**, and **External discovery address** fields, click **Server Settings** on the sign-in screen.    
@@ -91,7 +91,7 @@ For a feature comparison of Lync 2010 mobile clients, go to the following Micros
  
 When users experience an issue that affects the Lync 2010 mobile client for Google Android, they can send logs by email to the support team or administrator. To do this, follow these steps:
 
-1. On the Google Android device, after a user is signed in, tap **Options on the **Signing in** tab. On the Options screen, tap **Diagnostic logging**, sign out, and then sign in again. (The screenshot for this step is listed below).
+1. On the Google Android device, after a user is signed in, tap **Options** on the **Signing in** tab. On the Options screen, tap **Diagnostic logging**, sign out, and then sign in again. (The screenshot for this step is listed below).
  
     ![Diagnostic logging](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4041556_en_1)
 
@@ -105,7 +105,7 @@ When users experience an issue that affects the Lync 2010 mobile client for Goog
 
  
 > [!NOTE]
-> Make sure that **Logging **is set to **ON **before you try to reproduce the issue and send logs.    
+> Make sure that **Logging **is set to **ON** before you try to reproduce the issue and send logs.    
 
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
 
