@@ -123,6 +123,8 @@
       href: ./known-issues/teams-doesnt-automatically-update.md
     - name: Using a symlink or mapping a drive to C:\users causes Teams to start with a white screen
       href: ./known-issues/symlink-or-drivemap-causes-white-screen.md
+    - name: You're missing out
+      href: ./teams-sign-in/error-missing-out-sign-in-teams.md
   - name: Tabs
     items:
     - name: Can't rename legacy OneNote tabs in Teams
