@@ -47,12 +47,12 @@
       href: ./known-issues/cvi-info-does-not-populate-in-meet-now.md
     - name: Dialing out in Teams requires five or more digits 
       href: ./known-issues/teams-call-requires-five-or-more-digits.md
+    - name: Dial pad is missing
+      href: ./teams-conferencing/no-dial-pad.md
     - name: Error "You need a phone system license" when assigning a toll service number from the admin center
       href: ./known-issues/need-a-license-error-when-assigning-a-number.md
     - name: '"Give Control" does not work'
       href: ./teams-conferencing/give-control-doesn’t-work-sharescreen.md
-    - name: No dial pad for Enterprise Voice user
-      href: ./teams-conferencing/ev-user-have-no-dial-pad.md
     - name: Organizer unable to start Outlook meeting and stuck in virtual lobby
       href: ./known-issues/organizer-cant-start-teams-meeting.md
     - name: PSTN callers with the same "From" number are shown as the same user
