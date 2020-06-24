@@ -1,5 +1,5 @@
 ---
-title: Listing some issues for Teams
+title: Information about Teams known issues
 description: This article lists Microsoft Teams related issues.
 author: AmandaAZ
 manager: dcscontentpm
