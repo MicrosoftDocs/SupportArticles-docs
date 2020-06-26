@@ -80,7 +80,7 @@ To work around this issue, follow these steps:
     End Sub
     ```
 
-9. On the **View **menu, click **Immediate Window**.   
+9. On the **View** menu, click **Immediate Window**.   
 10. Type the following command, and then press ENTER: 
 
     PrepareBDCTables
