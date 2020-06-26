@@ -22,9 +22,7 @@ appliesto:
 You're unable to change the default language setting for a site collection (**Site Settings** > **Language Settings**) for one the following site collections:
 
 - My Site Host 
-    
 - OneDrive for Business personal site
-    
 - Search Center
 
 ## Cause
@@ -46,7 +44,6 @@ For more information about how to do this, see
 This issue occurs because the default language for the My Site Host and Search Center site collections is defined by the following settings when you selected the link to create the subscription:
 
 - The country that was selected on the office.microsoft.com page.
-
 - The language preference that's specified by your browser settings.
 
 For more information about multilingual features and about configuring your display language, go to the following Microsoft websites:
