@@ -15,8 +15,6 @@
       href: ../../SharePointOnline/Security/problem-with-your-account.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
   - name: Search
     items:
-    - name: Near-duplicate items aren't listed in SharePoint Online or SharePoint Server 2013 on-premises search results
-      href: ../../SharePointOnline/search/near-duplicate-items-are-not-listed-in-search-results.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Search doesn't provide results from another language
       href: ../../SharePointOnline/Search/no-search-results-from-another-language.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
   - name: Set up
