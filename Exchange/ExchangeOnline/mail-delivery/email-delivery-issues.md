@@ -22,6 +22,7 @@ audience: Admin
 ms.custom:
 - MiniMaven
 - CSSTroubleshoot
+- SaRASetup
 ms.service: exchange-online
 manager: dcscontentpm
 appliesto:
