@@ -56,7 +56,7 @@ A recent change (made in October 2018) requires one additional step when you con
 
 Add the Cloud Service IP addresses listed below in an SPF record. Alternatively, create a transport rule to bypass the spam filtering for Cloud Voicemail coming from them.
 
-|APAC  |NOAM  |EMEA  |
+|APAC (Asia Pacific)|NOAM (North America)|EMEA (Europe, Middle-East and Africa)|
 |---------|---------|---------|
 |52.114.7.28     |52.114.128.68  |52.114.75.27 |
 |52.114.15.0     |52.114.159.40  |52.114.76.82 |
