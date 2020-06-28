@@ -29,7 +29,7 @@ Browse the table of contents or use the search box on the left to find an issue.
 - [Microsoft Teams user cannot send a message in Skype for Business](./teams-im-presence/teams-user-not-send-message-in-sfb.md)
 - [Unable to create a team in Microsoft Teams](./known-issues/users-cant-create-team.md)
 - [Removed user appears as "Unknown user" in Microsoft Teams](./known-issues/removed-user-appears-as-unknown.md)
-- [Dial pad is missing in Microsoft Teams](./teams-conferencing/ev-user-have-no-dial-pad)
+- [Dial pad is missing in Microsoft Teams](./teams-conferencing/no-dial-pad.md)
 - [Error when signing in Teams: You're missing out! Ask your admin to enable Microsoft Teams for \<CompanyName>](./teams-sign-in/error-missing-out-sign-in-teams.md)
 
 ## More Teams content
