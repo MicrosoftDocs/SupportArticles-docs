@@ -43,16 +43,16 @@ Try the following options to help recover your document. Select the image or hea
 ![Option 1](../word/media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-1.png)
 
 </a>
-</td><td><a href="#option1"><b>Ignore DDE</b></a>
+</td><td><a href="#option1">**Ignore DDE**</a>
 
 
 > [!NOTE]
 > This step can be skipped for Excel 2019 and Excel O365.
 <ol>
-<li>In the upper-left corner of the Excel window, select <b>File</b> > <b>Options</b>.</li>
-<li>On the left side of the <b>Options</b> window, select <b>Advanced</b>.</li>
-<li>In the <b>Advanced</b> window, scroll down to the <b>General</b> section.</li>
-<li>Clear the <b>Ignore other applications that use Dynamic Data Exchange (DDE)</b> check box, and then select the <b>OK</b> button at the bottom of the window.
+<li>In the upper-left corner of the Excel window, select **File** > **Options**.</li>
+<li>On the left side of the **Options** window, select **Advanced**.</li>
+<li>In the **Advanced** window, scroll down to the **General** section.</li>
+<li>Clear the **Ignore other applications that use Dynamic Data Exchange (DDE)** check box, and then select the **OK** button at the bottom of the window.
 </li>
 </ol>
 </td>
@@ -65,7 +65,7 @@ Try the following options to help recover your document. Select the image or hea
 
 </a>
 </td>
-<td><a href="#option2"><b>Repair User Experience Virtualization (UE-V)</b></a>
+<td><a href="#option2">**Repair User Experience Virtualization (UE-V)**</a>
 
 If you are running Update User Experience Virtualization (UE-V), install Hotfix 2927019. To do this, see the following Knowledge Base article:
 
@@ -80,22 +80,22 @@ If you are running Update User Experience Virtualization (UE-V), install Hotfix 
 
 </a>
 </td>
-<td><a href="#option3"><b>Reset file associations</b></a>
+<td><a href="#option3">**Reset file associations**</a>
 
-<b>Windows 10</b>
+**Windows 10**
 
 1. Locate the file that is opening incorrectly, and copy it to your desktop.
-2. Right-click the file, and select <b>Properties</b>.
-3. On the <b>General</b> tab, next to <b>Type of file</b>, the type of file will be indicated within parentheses. For example, (.docx), (.pdf), or (.csv).
+2. Right-click the file, and select **Properties**.
+3. On the **General** tab, next to **Type of file**, the type of file will be indicated within parentheses. For example, (.docx), (.pdf), or (.csv).
 
-The <b>Opens with</b> command shows you which app the file is currently associated with.
+The **Opens with** command shows you which app the file is currently associated with.
 
 To open this type of file in a different app:
 
-1. Select <b>Change</b>.
-1. Select <b>More apps</b>.
-1. Select the desired app, then select the to <b>Always use this app</b> checkbox.
-1. Select the <b>OK</b> button.
+1. Select **Change**.
+1. Select **More apps**.
+1. Select the desired app, then select the to **Always use this app** checkbox.
+1. Select the **OK** button.
 
 </td>
 </tr>
@@ -107,18 +107,18 @@ To open this type of file in a different app:
 
 </a>
 </td>
-<td><a href="#option4"><b>Delete the Word Options registry key</b></a>
+<td><a href="#option4">**Delete the Word Options registry key**</a>
 
 *For an Office 365 or Office 2019 Click-to-Run installation*
 
 ##### Windows 10
 
-1. On the <b>Start</b> screen, type <b>Settings</b>.
-1. Select or tap <b>Settings</b>.
-1. In the <b>Settings</b> window, select or tap <b>Apps</b>.
-1. In the <b>Apps & features</b> window, scroll down to your <b>Office</b> program, and then select or tap it.
-1. Select or tap the <b>Modify</b> button.
-1. In the <b>How would you like to repair your Office programs</b> window, select or tap the <b>Online Repair</b> radio button, then select or tap the <b>Repair</b> button.
+1. On the **Start** screen, type **Settings**.
+1. Select or tap **Settings**.
+1. In the **Settings** window, select or tap **Apps**.
+1. In the **Apps & features** window, scroll down to your **Office** program, and then select or tap it.
+1. Select or tap the **Modify** button.
+1. In the **How would you like to repair your Office programs** window, select or tap the **Online Repair** radio button, then select or tap the **Repair** button.
 
 </td>
 </tr>
@@ -130,7 +130,7 @@ To open this type of file in a different app:
 
 </a>
 </td>
-<td><a href="#option5"><b>Turn off add-ins</b></a>
+<td><a href="#option5">**Turn off add-ins**</a>
 
 1. On the **File** menu, select **Options**, then select **Add-Ins**.
 1. In the **Manage** list at the bottom of the screen, select **COM Add-Ins** item, then select **Go**.
@@ -149,7 +149,7 @@ To open this type of file in a different app:
 
 </a>
 </td>
-<td><a href="#option6"><b>Disable hardware acceleration</b></a>
+<td><a href="#option6">**Disable hardware acceleration**</a>
 
 
 1. Start any Office 2013, 2016, 2019, or O365 program.
@@ -168,7 +168,7 @@ To open this type of file in a different app:
 
 </a>
 </td>
-<td><a href="#option7"><b>Minimizing and maximizing the window</b></a>
+<td><a href="#option7">**Minimizing and maximizing the window**</a>
 
 1.    Select the minimize button in the top-right corner of the Excel spreadsheet.
 2.    In the task tray, right-click Excel, and then select your spreadsheet. (Or double click the Excel icon.)
@@ -183,7 +183,7 @@ To open this type of file in a different app:
 
 </a>
 </td>
-<td><a href="#option8"><b>Check for hidden sheets</b></a>
+<td><a href="#option8">**Check for hidden sheets**</a>
 
 1.    Select the minimize button in the top-right corner of the Excel spreadsheet.
 2.    In the task tray, right-click Excel, and then select your spreadsheet. (Or double click the Excel icon.)
