@@ -15,13 +15,16 @@
                         "VOICE_GUIDANCE"
                         ]
   "termSetNames" ["Microsoft"]
- }
+  }
  
  :template-header
  "
 ## Acrolinx Scorecards
+
 **A minimum Acrolinx score of 80 is recommended. We will enforce this score in the future.**
+
 Click the scorecard links for each article to review the Acrolinx feedback on grammar, spelling, punctuation, writing style, and terminology.
+
 | Article | Acrolinx<br>score | Lowest<br>category<br>score | Spelling<br>issues | Scorecard | Processed |
 |---------|:--------------:|:--------------------:|:------:|:---------:|:---------:|
 "
@@ -33,7 +36,9 @@ Click the scorecard links for each article to review the Acrolinx feedback on gr
  :template-footer
  "
 **More information about Acrolinx**
+ 
 - [Install Acrolinx locally for VSCode](https://review.docs.microsoft.com/help/contribute/contribute-acrolinx-vscode)
 - [Troubleshooting issues with Acrolinx](https://review.docs.microsoft.com/help/contribute/acrolinx-error-messages)
+
 "
 }
