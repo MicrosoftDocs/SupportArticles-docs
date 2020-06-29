@@ -1,4 +1,4 @@
-{:allowed-branchname-matches ["^master$" "^release..*"]
+{:allowed-branchname-matches ["^master$"]
  :allowed-filename-matches ["support"]
 
  :acrolinx-new-api false ;; New in GH 2.0
