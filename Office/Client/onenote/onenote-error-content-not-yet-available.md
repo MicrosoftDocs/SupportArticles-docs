@@ -61,7 +61,7 @@ Check to see whether the page (or section) is in one of the following states:
 
 ## More information
 
-**Why this error occurs**
+### Why this error occurs
 
 When you use OneNote, it is important that you give each page and section adequate time to reach our servers. The status of this operation for a given page is indicated by the cloud icon on the ribbon. If not enough time has passed, the customer may receive the “Content Not Yet Available” error message for the page. This can occur when you view the page from another device, from the OneNote app, or in a browser window.
 
