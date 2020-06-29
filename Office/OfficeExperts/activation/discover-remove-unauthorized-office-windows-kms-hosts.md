@@ -71,7 +71,7 @@ For more information, see the following articles:
 
 ## Remove unauthorized Office KMS hosts
 
-It's not common to create an Office KMS host unintentionally, because setting up an Office KMS requires a specific product key and the installation of the [Microsoft Office 2010 KMS Host License Pack](https://www.microsoft.com/download/details.aspx?displaylang=en&id=25095).
+It's not common to create an Office KMS host unintentionally, because setting up an Office KMS requires a specific product key and the installation of the [Microsoft Office 2010 KMS Host License Pack](https://www.microsoft.com/download/details.aspx?id=25095).
 
 To determine whether a computer has the Office 2010 KMS Host License Pack installed and has an active Office KMS host, run the following command:
 
