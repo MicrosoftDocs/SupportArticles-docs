@@ -121,6 +121,8 @@
       href: ./teams-sign-in/sign-in-loop.md
     - name: Teams does not automatically update
       href: ./known-issues/teams-doesnt-automatically-update.md
+    - name: Teams owner cannot create Planner tab
+      href: ./teams-sign-in/teams-owner-cannot-create-planner-tab.md
     - name: Using a symlink or mapping a drive to C:\users causes Teams to start with a white screen
       href: ./known-issues/symlink-or-drivemap-causes-white-screen.md
     - name: You're missing out
