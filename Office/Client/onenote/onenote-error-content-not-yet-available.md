@@ -23,7 +23,7 @@ ms.custom:
 ms.reviewer: Describes resolutions to the OneNote error message "Content Not Yet Available."
 ---
 
-# OneNote error: (Content Not Yet Available)
+# OneNote error: "Content Not Yet Available"
 
 ## Symptom
 
