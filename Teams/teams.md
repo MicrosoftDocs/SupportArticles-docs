@@ -30,7 +30,7 @@ Browse the table of contents or use the search box on the left to find an issue.
 - [Unable to create a team in Microsoft Teams](./known-issues/users-cant-create-team.md)
 - [Removed user appears as "Unknown user" in Microsoft Teams](./known-issues/removed-user-appears-as-unknown.md)
 - [Dial pad is missing in Microsoft Teams](./teams-conferencing/no-dial-pad.md)
-- [Error when signing in Teams: You're missing out! Ask your admin to enable Microsoft Teams for \<CompanyName>](./teams-sign-in/error-missing-out-sign-in-teams.md)
+- [Error when signing into Teams: You're missing out! Ask your admin to enable Microsoft Teams for \<CompanyName>](./teams-sign-in/error-missing-out-sign-in-teams.md)
 
 ## More Teams content
 
