@@ -1,2 +1,2 @@
 
-- [Back up to the Support hub page](../index.yml)
+- [Back up to the troubleshoot hub page](../index.yml)
