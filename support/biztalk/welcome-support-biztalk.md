@@ -4,11 +4,11 @@ description: This table of contents (TOC) lists Knowledge Base (KB) and other Su
 ms.topic: article
 ms.date: 03/09/2020
 ---
-# Welcome to Support articles for BizTalk Server
+# BizTalk Server troubleshooting
 
-The articles in the table of contents (TOC) provide support for BizTalk Server.
+Welcome to BizTalk Server troubleshooting! If you're looking for known issues and troubleshooting solutions, you're in the right place. Here's a collection of informative articles about how to identify and troubleshoot issues that you might encounter when you use BizTalk Server.
 
-Many of these Support articles are what Microsoft informally calls _Knowledge Base_ (KB) articles.
+In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
 
 &nbsp;
 
