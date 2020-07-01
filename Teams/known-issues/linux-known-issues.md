@@ -22,11 +22,13 @@ description: Known issues for Teams when run on a Linux system.
 
 # Teams known issues on Linux
 
-This article lists known issues for Teams when operating on a Linux system.
+## Known issues
 
-|**Issue title**|**Behavior / Symptom**|**Known workaround**|**Discovery date**|	
+This article lists known issues in Teams when operating on a Linux system.
+
+| **Issue title** | **Behavior / Symptom** | **Known workaround** | **Discovery date** |	
 |:-----|:-----|:-----|:-----|	
-|AutoStart on Linux is not working. <br/> |AutoStart on Linux does not start the Teams application. <br/> | <br/> |12/05/19  <br/>|	
+|AutoStart on Linux is not working.  |AutoStart on Linux does not start the Teams application.  |  |12/05/19 |
 
 |**Issue title**|**Behavior / Symptom**|**Known workaround**|**Discovery date**|	
 |:-----|:-----|:-----|:-----|	

@@ -85,7 +85,7 @@
       href: ./known-issues/deleted-messages-send-notifications-with-link.md
   - name: Linux
     items: 
-    - name: Linux known issues
+    - name: Known issues in Linux
       href: ./known-issues/linux-known-issues.md
   - name: Mobile
     items:
