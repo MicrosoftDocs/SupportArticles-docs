@@ -29,15 +29,15 @@ This article lists known issues in Teams when operating on a Linux system.
 
  | <div style="column-width: 25%"> **Issue title** </div> |  **Behavior / Symptom**  |  **Known workaround**  |  **Discovery date**  | 
  | :-------- | :----- | :----- | :----- | 
- |  AutoStart on Linux is not working.   | AutoStart on Linux does not start the Teams application.   |  None.  |  12/05/19  | 
+ |  AutoStart on Linux is not working.   | AutoStart on Linux does not start the Teams application.   |   Not applicable  |  12/05/19  | 
  |  White screen when resuming from sleep/suspend. | When your computer resumes/wakes from sleep or suspend mode, there can be a network change (especially when the computer is connected to VPN before put to sleep/suspended) and that takes some time for the computer to reobtain the connection. The combination of these things can lead to a Teams white screen. |  Restarting Teams client will help. | 12/05/19   | 
- |  Cursor missing when screen sharing. |  While sharing your screen, the other party does not see the cursor of the person sharing the screen. |  None. | 12/05/19  | 
- | Issue running in parallel with VMWare workstation.   | The Teams application experiences issues when running in parallel with a VMWare workstation. |  None.  | 12/05/19   | 
- | KDE notifications create new taskbar.  | A notification on KDE creates a new window in the taskbar.   |  None.  | 12/05/19   | 
- | Package managers not showing change list.   | The package manager does not show a change list as expected.   |  None.  | 12/05/19   | 
- | Cannot launch Teams client in offline mode.   | Unable to launch Teams Offline in a Linux client.   |  None.  | 12/05/19   | 
- | Device settings while in meeting/No microphone input.   | When in a meeting and changing device settings, the microphone indicator doesn't register any sound being picked up. |  None.  | 12/05/19   | 
- | Can't close Teams application using keyboard. | Can't close the Teams application using the default `$mod + shift + q` or by selecting  **Close**  in the app. |  None.  | 12/05/19   | 
+ |  Cursor missing when screen sharing. |  While sharing your screen, the other party does not see the cursor of the person sharing the screen. |   Not applicable | 12/05/19  | 
+ | Issue running in parallel with VMWare workstation.   | The Teams application experiences issues when running in parallel with a VMWare workstation. |   Not applicable  | 12/05/19   | 
+ | KDE notifications create new taskbar.  | A notification on KDE creates a new window in the taskbar.   |   Not applicable  | 12/05/19   | 
+ | Package managers not showing change list.   | The package manager does not show a change list as expected.   |   Not applicable  | 12/05/19   | 
+ | Cannot launch Teams client in offline mode.   | Unable to launch Teams Offline in a Linux client.   |   Not applicable  | 12/05/19   | 
+ | Device settings while in meeting/No microphone input.   | When in a meeting and changing device settings, the microphone indicator doesn't register any sound being picked up. |   Not applicable  | 12/05/19   | 
+ | Can't close Teams application using keyboard. | Can't close the Teams application using the default `$mod + shift + q` or by selecting  **Close**  in the app. |   Not applicable  | 12/05/19   | 
 
 ## Resolution
 
