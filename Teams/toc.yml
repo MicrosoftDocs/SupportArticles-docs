@@ -86,7 +86,7 @@
   - name: Linux
     items: 
     - name: Linux known issues
-      href: ./linux-known-issues.md
+      href: ./known-issues/linux-known-issues.md
   - name: Mobile
     items:
     - name: A website with Conditional Access does not display when viewed in the Website tab 
