@@ -13,10 +13,14 @@ ms.custom:
 - CSSTroubleshoot
 ms.reviewer:
 appliesto:
+- Access 2019
+- Access 2016
+- Access 2013
+- Access 2010
 - Microsoft Office Access 2007
 search.appverid: MET150
 ---
-# "Action Failed Error Number: 2950" error when running a macro that calls a VBA function in an Access 2007 database
+# "Action Failed Error Number: 2950" error when running a macro that calls a VBA function in an Access database
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
@@ -27,7 +31,7 @@ _Original KB number:_ &nbsp; 931407
 
 ## Symptoms
 
-When you run a macro that calls a Microsoft Visual Basic for Applications (VBA) function in a Microsoft Office Access 2007 database, you receive the following error message:
+When you run a macro that calls a Microsoft Visual Basic for Applications (VBA) function in a Microsoft Office Access 2007 or later database, you receive the following error message:
 
 > Action Failed<br/>
 > Macro Name: **MacroName**<br/>
@@ -38,35 +42,35 @@ When you run a macro that calls a Microsoft Visual Basic for Applications (VBA) 
 
 ## Cause
 
-This issue occurs if the database is not trusted by Access 2007. By default, Access 2007 opens databases that are not trusted in Disabled mode. In Disabled mode, executable content is disabled.
+This issue occurs if the database is not trusted by Access. By default, recent versions of Access open databases that are not trusted in Disabled mode. In Disabled mode, executable content is disabled.
 
 ## Resolution
 
-If you trust the author of the Access 2007 database, and if you want to enable the database, use one of the following methods.
+If you trust the author of the database, and if you want to enable the database, use one of the following methods.
 
 ### Method 1: Enable the database for the current session
 
-When you use this method, Access 2007 enables the database until you close the database. To enable the database for the current session, follow these steps:
+When you use this method, Access enables the database until you close the database. To enable the database for the current session, follow these steps:
 
 1. On the Message Bar, click **Options**.
 2. In the **Microsoft Office Security Options** dialog box, click **Enable this content**, and then click **OK**.
 
 > [!NOTE]
-> You must repeat these steps every time that you open the database.
+> Depending on your Access version, you may need to repeat these steps every time that you open the database.
 
 ### Method 2: Move the database to a trusted location
 
 To do this, follow these steps:
 
 1. Determine trusted locations to which you can move the database. To do this, follow these steps:
-   1. Click the **Microsoft Office Button**, and then click **Access Options**.
+   1. Click **File**, and then click **Options**.
    2. Click **Trust Center**, and then click **Trust Center Settings** under **Microsoft Office Access Trust Center**.
    3. Click **Trusted Locations**, and then use one of the following procedures:
 
       - Note the paths of the trusted locations that are listed.
       - Add a new trusted location. To do this, click **Add new location**, and then specify the path of the location that you want to add.
 
-2. Move the Access 2007 database to the trusted location that you want.
+2. Move the Access database to the trusted location that you specified.
 
 ## More Information
 
@@ -88,8 +92,5 @@ To create the AutoExec macro and the form, follow these steps:
 9. Save and then close the macro.
 
 When the database opens, the AutoExec macro starts and then tests the
-`IsTrusted` condition. If the database is not trusted by Access 2007, the macro opens the form that you specified in the "OpenForm" action of the macro.
+`IsTrusted` condition. If the database is not trusted by Access, the macro opens the form that you specified in the "OpenForm" action of the macro.
 
-## References
-
-For more information, see the Help files in Access 2007. To do this, click **Microsoft Office Access Help**, type how database objects behave when trusted and untrusted in the **Type words to search for** box, and then click **Search**.
