@@ -3,6 +3,8 @@
   items:
   - name: Access
     items:
+    - name: "\"ActiveX component can't create object\" error"
+      href: ../access/activex-component-cannot-create-object.md
     - name: "\"Ambiguous name detected\" error"
       href: ../access/ambiguous-name-detected.md
     - name: "\"Enter Parameter Value\" dialog box appears"
@@ -231,6 +233,8 @@
       href: ../access/manually-split-database.md
     - name: SQL Server Native Client drivers used by Access
       href: ../access/sql-server-native-client-drivers.md
+    - name: Stop responding when creating MDE, ACCDE, or ADE files
+      href: ../access/stop-responding-when-create-mde-accde-ade-files.md
     - name: Store items from multiple selection list box as comma-delimited string
       href: ../access/retrieve-items-in-multiple-selection-list-box.md
     - name: Store, calculate, and compare Date/Time data
