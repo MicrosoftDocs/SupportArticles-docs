@@ -87,7 +87,7 @@
       },
 
       "titleSuffix": {
-        "biztalk/**/*.md": "Biztalk Server"
+        "biztalk/**/*.md": "BizTalk Server"
       }
 
     },
