@@ -43,7 +43,7 @@ This article lists known issues in Teams when operating on a Linux system.
 |Issue running in parallel with VMWare workstation. <br/> |The Teams application experiences issues when running in parallel with VMWare workstation. <br/> | <br/> |12/05/19  <br/>|
 
 |**Issue title**|**Behavior / Symptom**|**Known workaround**|**Discovery date**|
-|:-----|:-----|:-----|:-----|	
+|:-----|:-----|:-----|:-----|
 |KDE notifications create new taskbar.<br/> |Notification on KDE creates new window in taskbar. <br/> | <br/> |12/05/19  <br/>|
 
 |**Issue title**|**Behavior / Symptom**|**Known workaround**|**Discovery date**|
