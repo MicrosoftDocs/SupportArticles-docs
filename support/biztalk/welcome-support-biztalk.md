@@ -1,6 +1,6 @@
 ---
-title: Welcome Support articles BizTalk Server
-description: This table of contents (TOC) lists Knowledge Base (KB) and other Support articles for BizTalk Server.
+title: Troubleshooting documentation
+description: This article lists Knowledge Base (KB) and other Support articles for BizTalk Server.
 ms.topic: article
 ms.date: 03/09/2020
 ---
