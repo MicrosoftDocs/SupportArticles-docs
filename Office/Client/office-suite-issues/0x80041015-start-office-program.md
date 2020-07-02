@@ -15,9 +15,6 @@ appliesto:
 - Microsoft 365 Apps for enterprise
 - Office 365 Home
 - Office 365 Personal
-- Office Home and Student 2013
-- Office Home and Business 2013
-- Office Professional 2013
 ---
 
 # You receive a "0x80041015" error message when you try to start an Office program
@@ -26,7 +23,7 @@ appliesto:
 
 ## Symptoms
 
-When you try to start a Microsoft Office 2013 or Microsoft Office 365 program, you receive the following error message:
+When you try to start a Microsoft Office 365 program, you receive the following error message:
 
 ```adoc
 Sorry, we ran into a problem While trying to install the product key.
