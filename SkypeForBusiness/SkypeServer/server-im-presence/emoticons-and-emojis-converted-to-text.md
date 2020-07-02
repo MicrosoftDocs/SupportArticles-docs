@@ -30,15 +30,15 @@ In this scenario, the emoticons or emojis are converted to text, as shown in the
 
 **Example 1:** Three messages in a single message block that contain a total of nine emoticons or emojis. 
 
-![Three messages](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4481021_en_1) 
+![Three messages](./media/emoticons-and-emojis-converted-to-text/three-messages.png) 
 
 **Example 2:** Four messages in a single message block that contain a total of 12 emoticons or emojis. 
 
-![Four messages](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4481023_en_1) 
+![Four messages](./media/emoticons-and-emojis-converted-to-text/four-messages.png) 
 
 **Example 3:** One message that contains 11 emoticons or emojis. 
 
-![Single message](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4481028_en_1) 
+![Single message](./media/emoticons-and-emojis-converted-to-text/single-message.png) 
 
 After this behavior occurs, successive messages may also not render emoticons in some scenarios. 
 
