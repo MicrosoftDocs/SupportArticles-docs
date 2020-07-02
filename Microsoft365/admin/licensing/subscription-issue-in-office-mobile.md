@@ -46,13 +46,13 @@ To resolve this issue, follow these steps:
    1. Sign in to the [Office 365 portal](https://portal.office.com/account/#subscriptions).
    2. In the left pane, select **Subscriptions**.
 
-      ![assigned licenses](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4058714_en_1)
+      ![assigned licenses](./media/subscription-issue-in-office-mobile/assigned-licenses.png)
    3. In the list of subscriptions and licenses, scroll down to the **Office 365 \<edition>** section, and then look for **The latest desktop version of Office**. If you see this entry in the list, you have an Office subscription that's assigned correctly.
 
         > [!NOTE]
         > If you don't see a vertical scroll bar, hover the pointer over the list, press and hold the left mouse button, and then scroll.
 
-        ![Office status](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4058715_en_3)    
+        ![Office status](./media/subscription-issue-in-office-mobile/office-status.png)    
    4. If an entry for **The latest desktop version of Office** does not appear in the list, contact your administrator or go to the following website:
 
         - [Assign or remove licenses, or view a list of unlicensed users](https://docs.microsoft.com/office365/admin/subscriptions-and-billing/assign-licenses-to-users?redirectSourcePath=%252fen-us%252farticle%252fassign-licenses-to-users-in-office-365-for-business-997596b5-4173-4627-b915-36abac6786dc&view=o365-worldwide)         

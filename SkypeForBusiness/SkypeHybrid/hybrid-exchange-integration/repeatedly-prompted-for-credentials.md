@@ -29,7 +29,7 @@ After you successfully sign in to Skype for Business Online (formerly Lync Onli
    
     Credentials are required 
 
-    ![Credentials are required](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4055057_en_1) 
+    ![Credentials are required](./media/repeatedly-prompted-for-credentials/credentials.png) 
 
 > [!NOTE]
 > The message that you receive may vary, depending on which service Lync is trying to connect to. You may be prompted for credentials when Lync tries to connect to any of the following services:

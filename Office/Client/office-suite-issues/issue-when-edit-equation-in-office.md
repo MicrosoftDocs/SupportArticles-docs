@@ -25,7 +25,7 @@ When you try to edit an equation that was inserted using Equation Editor 3.0 in 
 
 **Microsoft Equation is not available**
 
-![Equation editor error](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4057881_en_1) 
+![Equation editor error](./media/issue-when-edit-equation-in-office/equation-editor-error.png) 
 
 ## Cause
 
