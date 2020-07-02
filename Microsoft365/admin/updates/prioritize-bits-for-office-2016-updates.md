@@ -74,7 +74,7 @@ Enabled Value: 1 (default)
 2. Set up a local HTTP server (by using IIS, Apache, or other software).    
 3. Add the .dat MIME type as **application/octet-stream**. 
 
-    ![A screenshot of the IIS page to edit the .dat Mime Type](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4042611_en_2)    
+    ![A screenshot of the IIS page to edit the .dat Mime Type](./media/prioritize-bits-for-office-2016-updates/iis-page.png)    
 4. Copy the root directory from step 1 to the HTTP server. Then, the server can be accessed from the site: 
 
     https://servername/directory1/directory2/office/xxx

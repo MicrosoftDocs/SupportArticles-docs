@@ -116,7 +116,7 @@ To print a document with comments showing, follow these steps:
 5. Under **Settings**, click the arrow next to **Print All Pages**.    
 6. Click **Print Markup**.
   
-   ![Print Markup](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4341086_en_1)
+   ![Print Markup](./media/faq-about-comments-feature-in-word/print-markup.png)
 
 **Word 2007** 
  
@@ -159,7 +159,7 @@ Method 2
 1. On the **File** tab, click **Print**.    
 2. Under **Settings**, click the arrow next to **Print All Pages**.    
 3. Click **Print Markup**.
- ![Print Markup](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4341086_en_1)
+ ![Print Markup](./media/faq-about-comments-feature-in-word/print-markup.png)
 
 **Word 2007**
 

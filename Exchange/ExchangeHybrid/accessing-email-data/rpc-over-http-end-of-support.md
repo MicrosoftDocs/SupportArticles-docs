@@ -101,7 +101,7 @@ To retrieve this information, enable owner access auditing for each mailbox, and
 ### How can I identify which users in my organization are connecting through RPC over HTTP?
 
 Microsoft provides reporting on email application usage against Exchange Online in the Microsoft 365 admin center, as shown in the following screen shot. This reporting includes an exportable view of connections from clients that use RPC over HTTP.   
-![A screenshot of the Email app usage page in Office 365 Admin center](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4046320_en_2) 
+![A screenshot of the Email app usage page in Office 365 Admin center](./media/rpc-over-http-end-of-support/email-app-usage-page.png) 
 
 ### Why is MAPI over HTTP not backported to Outlook 2007?
 
