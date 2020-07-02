@@ -8,6 +8,6 @@
     topicHref: /troubleshoot/index
     items:
 
-    - name: BizTalk
+    - name: BizTalk Server
       tocHref: /troubleshoot/biztalk/
       topicHref: /troubleshoot/biztalk/welcome-support-biztalk
