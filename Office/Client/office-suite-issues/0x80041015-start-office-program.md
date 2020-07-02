@@ -40,7 +40,6 @@ System error: 0x80041015
 
 This problem can occur when all the following conditions are true:
 
-- Office was installed before the May Public Update (KB 2964042, May 13, 2014) was installed.
 - An Office product was activated before the May Public Update was installed.
 - There was an attempt to add another Office product (such as Microsoft Visio, OneDrive for Business, or Office 365) or to reinstall an Office product on the same computer after the May Public Update was installed.
 
