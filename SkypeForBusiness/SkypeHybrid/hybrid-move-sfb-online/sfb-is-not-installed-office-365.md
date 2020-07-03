@@ -39,7 +39,7 @@ To fix this issue, manually install Skype for Business 2016. To do this, follow 
     [Ways to upgrade if you have Office 365 for business](https://support.office.com/article/how-do-i-get-the-new-office-2016-apps-using-office-365-for-business-35d332d7-ee81-40e3-99d2-1a4eed2efb52#bkmk_upgrade)
 1. Sign in to the Microsoft 365 admin center, and then, on the Home page, click the **Install Skype for Business** link in the **Get Skype for Business** section.
 
-    ![Screen shot of the Office 365 admin center ](https://internal.support.services.microsoft.com/Library/Images/3122584.jpg)    
+    ![Screen shot of the Office 365 admin center](./media/sfb-is-not-installed-office-365/admin-center.png)    
   
 
 ## More information

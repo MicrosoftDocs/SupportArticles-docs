@@ -46,9 +46,9 @@ After OneDrive.exe is installed, you will see shortcuts to the product added to 
    
    In Windows 10 and Windows 7, the views of Windows Explorer and the Start menu should resemble the following screen shots after you install Office 2016.  
 
-   ![OneDrive shortcuts in Windows 10](https://support.microsoft.com/Library/Images/3109956.jpg)
+   ![OneDrive shortcuts in Windows 10](./media/how-to-block-onedrive.exe-from-being-advertised-after-install-office-2016/windows-10.png)
 
-   ![OneDrive shortcuts in Windows 7](https://support.microsoft.com/Library/Images/3109964.jpg)  
+   ![OneDrive shortcuts in Windows 7](./media/how-to-block-onedrive.exe-from-being-advertised-after-install-office-2016/windows-7.png)  
 
 ### Method 2: Uninstall OneDrive.exe
 
@@ -63,11 +63,11 @@ OneDriveSetup.exe /uninstall
 
 For example, see the following screen shot:  
 
-![Command to uninstall OneDrive](https://support.microsoft.com/Library/Images/3109965.jpg)  
+![Command to uninstall OneDrive](./media/how-to-block-onedrive.exe-from-being-advertised-after-install-office-2016/command.png)  
 
 To download OneDriveSetup.exe, make sure that you use the link under the OneDrive client heading on the [home page of OneDrive](https://onedrive.live.com/about/download/), as shown in the following screen shot.  
 
-![home page of OneDrive](https://support.microsoft.com/Library/Images/3109966.jpg)  
+![home page of OneDrive](./media/how-to-block-onedrive.exe-from-being-advertised-after-install-office-2016/home-page.png)  
 
 If you aren't running Windows 10, [uninstall OneDrive.exe by using Control Panel](https://windows.microsoft.com/windows/uninstall-change-program#uninstall-change-program=windows-7).   
 

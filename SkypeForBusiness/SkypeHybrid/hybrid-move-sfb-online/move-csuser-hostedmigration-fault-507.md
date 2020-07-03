@@ -23,7 +23,7 @@ In a Lync hybrid deployment, when you try to move a user to Skype for Business O
 
 **Move-CsUser: HostedMigration fault: Error=(507), Description=(User must has an assigned license to use Skype for Business Online.)**
 
-![Screenshot of the error message after you run Move-CsUser cmdlet in Skype for Business Online PowerShell ](https://support.microsoft.com/Library/Images/2832980.jpg)
+![Screenshot of the error message after you run Move-CsUser cmdlet in Skype for Business Online PowerShell](./media/move-csuser-hostedmigration-fault-507/powershell.png)
 
 ## Solution 
 

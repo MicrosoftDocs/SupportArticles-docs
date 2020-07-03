@@ -90,7 +90,7 @@ To use Remote Connectivity Analyzer to test whether Exchange Autodiscover is wor
     [Remote Connectivity Analyzer](https://www.testconnectivity.microsoft.com/?testid=o365easautodiscover)
 1. Complete all the required fields on the form, and then click **Perform Test**.
 
-    ![Screen shot of enter test credentials ](https://support.microsoft.com/Library/Images/2882809.png)    
+    ![Screen shot of enter test credentials](./media/cannot-set-up-profile-autodiscover/credentials.png)    
 3. When the test is finished, determine whether it's successful.
 
    - If the test is successful, Autodiscover is working correctly.    

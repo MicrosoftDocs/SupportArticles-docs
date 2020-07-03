@@ -111,7 +111,7 @@ If you do not see the Lync Meeting Add-in for Microsoft Office 2013 entry in the
 
 To determine whether you are using a Click-to-Run or MSI installation of Office 2013, click the Filetab in Outlook, and then click Office Account.
 
-![determine Office version](https://support.microsoft.com/Library/Images/2996449.JPG)
+![determine Office version](./media/lync-meeting-control-not-displayed/office-version.png)
 
 If you see **Office Updates** under **Product Information**, you have a Click-to-Run installation of Office 2013.
 

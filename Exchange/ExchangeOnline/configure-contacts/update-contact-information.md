@@ -80,7 +80,7 @@ This procedure must be applied to all user role policies in an organization.
 2. Click **Admin**, and then click **Exchange**.   
 3. In the left navigation pane, click **permissions**, and then click **user roles**.   
 4. Select the role that's assigned to the user. By default, the Default Role Assignment Policy is assigned to all users.   
-5. Click **Edit** (![A screen shot of the Edit icon ](https://support.microsoft.com/Library/Images/2797930.png)).   
+5. Click **Edit** (![A screen shot of the Edit icon ](./media/update-contact-information/edit.png)).   
 6. In the **Role Assignment Policy** window, under **Contact Policy**, make sure that the **MyContactInformation** and the **MyProfileInformation** check boxes are cleared.
 
     > [!NOTE]

@@ -100,7 +100,7 @@ To determine whether your Office installation is Click-to-Run or MSI-based, foll
 
 |Office 2016 Click-to-Run installation|MSI-based Office 2016|
 |-|-|
-|![The screenshot for Word click to run ](https://internal.support.services.microsoft.com/Library/Images/3099590.png)|![The screenshot for Word MSI ](https://internal.support.services.microsoft.com/Library/Images/2971882.png)|
+|![The screenshot for Word click to run](./media/cannot-connect-conferencing-modalities/click-to-run.png)|![The screenshot for Word MSI](./media/cannot-connect-conferencing-modalities/word-msi.png)|
 
 > [!IMPORTANT]
 > After the clients are updated, remove any previously installed workarounds in Lync Server 2013 and Skype for Business 2015. To do this, delete the added registry keys.
@@ -111,7 +111,7 @@ To determine whether your Office installation is Click-to-Run or MSI-based, foll
 > These workarounds may make a computer or a network more vulnerable to attack by malicious users or by malicious software such as viruses. We do not recommend these workarounds. However, we are providing this information so that you can implement these workarounds at your own discretion. Use these workarounds at your own risk.
 
 > [!IMPORTANT]
-> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration ](https://support.microsoft.com/help/322756) in case problems occur.
+> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
 To work around the conferencing modality connection issues in Lync Server 2010, Lync Server 2013, and Skype for Business 2015, you must add an application exception for the Web Conferencing Service (DATAMCUSVC.exe).
 Use the following examples to set the exceptions in your environment. 

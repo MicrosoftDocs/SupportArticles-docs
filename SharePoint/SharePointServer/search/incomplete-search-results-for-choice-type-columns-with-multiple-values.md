@@ -56,7 +56,7 @@ Here are the steps to reproduce this problem:
    6. For Title you enter Item6  
     For MyChoiceColumn  you select Choice2  and Choice3  
 
-     ![Six new list items](https://support.microsoft.com/Library/Images/3032760.jpg)      
+     ![Six new list items](./media/incomplete-search-results-for-choice-type-columns-with-multiple-values/list-items.png)      
 
 4. After the next continuous-, incremental- or full-crawl finished, you execute the following three keyword queries from your search center or a search box:  
 
