@@ -72,7 +72,7 @@ The troubleshooter runs in two stages. First, it examines the IIS Default Web Si
 
 The following screen shot shows how this display might appear.
 
-![EMT shooter ](https://support.microsoft.com/Library/Images/3063914.jpg)
+![EMT shooter](./media/connecting-remote-server-failed/emt-shooter.png)
 
 The EMTshooter logs events in the "Microsoft-Exchange-Troubleshooters/Operational" event log. All results that are displayed in the CMD window are also logged in the event log to create a record.
 

@@ -44,10 +44,10 @@ To manually enable the Conferencing Add-in for Outlook, follow the steps for the
 1. Start Outlook 2007.   
 2. On the **Tools** menu, click **Trust Center**. The screen shot for this step is listed below.
 
-    ![The screen shot for this step ](https://support.microsoft.com/Library/Images/2718750.png)   
+    ![The screen shot for this step](./media/enable-conferencing-add-in-for-outlook/trust-center.png)   
 3. In the **Trust Center** dialog box, click the **Add-ins** tab. The screen shot for this step is listed below.
     
-    ![The screen shot for this step ](https://support.microsoft.com/Library/Images/2718752.png)   
+    ![The screen shot for this step](./media/enable-conferencing-add-in-for-outlook/add-ins.png)   
 4. On the **Manage** menu, click **COM Add-ins**, and then click **Go**.   
 5. In the **COM Add-Ins** dialog box, select the **Microsoft Conferencing Add-in for Microsoft Office Outlook** check box, and then click **OK**.   
 
@@ -70,7 +70,7 @@ To do this, follow these steps:
 
 1. Click **Start**, click **Run**, type regedit, and then click **OK**.   
 2. In Registry Editor, locate the following registry subkey:  
-3. ![The screen shot for the Registry Editor ](https://support.microsoft.com/Library/Images/2718753.png)**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\Outlook\Addins\Microsoft.LiveMeeting.Addins**   
+3. ![The screen shot for the Registry Editor](./media/enable-conferencing-add-in-for-outlook/registry-editor.png)**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\Outlook\Addins\Microsoft.LiveMeeting.Addins**   
 4. In the details pane, double-click LoadBehavior. If the value is 3 in the Value data box, the Conferencing Add-in for Outlook is enabled.   
 
 ### Control the loading of the Conferencing Add-in for Outlook
