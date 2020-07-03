@@ -80,7 +80,7 @@ To use the Domain Troubleshooting Wizard in Office 365, follow these steps.
 1. Sign in to the Office 365 portal ([https://portal.office.com](https://portal.office.com)) by using an administrator account.    
 2. Click **Admin** to open the Microsoft 365 admin center.    
 3. In the left navigation pane, click **Domains**, select the domain name that's used by the affected user, and then click **Troubleshoot** to start the wizard.    
- 
+
 **Use Microsoft Remote Connectivity Analyzer** 
 
 To use Remote Connectivity Analyzer to test whether Exchange Autodiscover is working correctly, follow these steps:
