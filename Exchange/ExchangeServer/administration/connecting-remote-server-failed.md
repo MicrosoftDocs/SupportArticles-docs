@@ -92,7 +92,7 @@ The EMTshooter logs events in the "Microsoft-Exchange-Troubleshooters/Operationa
 
 To install the EMT shooter, follow these steps:
 
-1. Download the troubleshooter compressed file that has a .zip filename extension from [here](https://gallery.technet.microsoft.com/exchange-management-b9d918b1).   
+1. Download the troubleshooter compressed file that has a .zip filename extension from [here](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/Exchange/4274/1/EMTshooter.zip).   
 2. Extract the four files that are included in the .zip file into a folder, and then rename the file extensions to .ps1.   
 3. Run EMTshooter.ps1 from a standard (and local) Windows PowerShell window.   
 
