@@ -1,5 +1,5 @@
 - name: Index
   href: index.yml
 
-- name: BizTalk Server troubleshooting
+- name: Welcome
   href: biztalk/welcome-biztalk-server.md
