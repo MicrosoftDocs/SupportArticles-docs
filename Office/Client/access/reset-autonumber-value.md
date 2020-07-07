@@ -11,7 +11,7 @@ localization_priority: Normal
 ms.custom: 
 - CI 114797
 - CSSTroubleshoot
-ms.reviewer: 
+ms.reviewer:
 appliesto:
 - Access 2019
 - Access 2016
