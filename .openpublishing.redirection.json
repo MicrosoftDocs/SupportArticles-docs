@@ -2,7 +2,12 @@
   "redirections": [
     {
       "source_path": "support/biztalk/index.md",
-      "redirect_url": "/support/biztalk/welcome-support-biztalk",
+      "redirect_url": "/support/biztalk/welcome-biztalk-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/biztalk/welcome-support-biztalk.md",
+      "redirect_url": "/support/biztalk/welcome-biztalk-server",
       "redirect_document_id": false
     },
     {
