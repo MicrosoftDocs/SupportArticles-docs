@@ -1,5 +1,5 @@
-- name: Welcome to BizTalk Server Support
-  href: welcome-support-biztalk.md
+- name: BizTalk Server troubleshooting
+  href: welcome-biztalk-server.md
   
 - name: Accelerators
   items:

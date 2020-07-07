@@ -23,7 +23,7 @@ productDirectory:
   - title: BizTalk Server
     imageSrc: "media/hub-landing/biztalk.svg"
     links:
-    - url: biztalk/welcome-support-biztalk.md
+    - url: biztalk/welcome-biztalk-server.md
       text: Support for BizTalk Server
 
 # conceptualContent:
