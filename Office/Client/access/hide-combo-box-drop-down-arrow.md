@@ -13,6 +13,9 @@ ms.custom:
 - CSSTroubleshoot
 ms.reviewer: 
 appliesto:
+- Access 2019
+- Access 2016
+- Access 2013
 - Access 2010
 - Microsoft Office Access 2007
 - Microsoft Office Access 2003
