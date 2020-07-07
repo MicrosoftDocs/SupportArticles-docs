@@ -119,6 +119,8 @@
       href: ../lists-and-libraries/fails-saving-list-as-template.md
     - name: Issue when sorting or filtering a column
       href: ../lists-and-libraries/fails-filtering-sharepoint-column.md
+    - name: Issues with Open with Explorer
+      href: ../lists-and-libraries/troubleshoot-issues-using-open-with-explorer.md
     - name: Minimal Download Strategy feature isn't used for a list or library
       href: ../lists-and-libraries/mds-functionality-unaffect-library.md
     - name: Modified time isn't displayed correctly for an online list item
@@ -143,8 +145,6 @@
       href: ../lists-and-libraries/template-generated-list-incorrect-data.md
     - name: The URL <file name> is invalid when uploading a file
       href: ../lists-and-libraries/url-invalid-upload-file-to-list.md
-    - name: Use "Open with Explorer" command to troubleshoot issues
-      href: ../lists-and-libraries/troubleshoot-issues-using-open-with-explorer.md
   - name: Migration Tool
     items:
     - name: Information about manual migration
