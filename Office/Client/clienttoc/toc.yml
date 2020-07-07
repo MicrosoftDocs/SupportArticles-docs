@@ -169,6 +169,8 @@
       href: ../access/lock-files-introduction.md
     - name: Issue when loading an Access web app
       href: ../access/load-access-web-app-in-ie.md
+    - name: Issue with ForEachRecord data macro
+      href: ../access/foreachrecord-issue.md
     - name: Issues when you retrieve SharePoint list data
       href: ../access/retrieve-sharepoint-list-in-access.md
     - name: Jet compact utility is available in download center
