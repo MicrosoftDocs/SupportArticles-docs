@@ -107,37 +107,37 @@ For complete information about app deployment by using Microsoft Intune, see the
             - **Operator**: Equals
             - **Value**: 1
  
-                :::image type="content" source="media/install-sara-from-intune/install-sara-from-intune-14.png" alt-text="Enter values.":::
+            :::image type="content" source="media/install-sara-from-intune/install-sara-from-intune-14.png" alt-text="Enter values.":::
     10.	For **Dependencies**, select **Next** without adding any dependencies.
  
-                :::image type="content" source="media/install-sara-from-intune/install-sara-from-intune-15.png" alt-text="Select Next without entering dependencies.":::
+            :::image type="content" source="media/install-sara-from-intune/install-sara-from-intune-15.png" alt-text="Select Next without entering dependencies.":::
     11.	No **Scope tags** are required. Select **Next**.
  
-                :::image type="content" source="media/install-sara-from-intune/install-sara-from-intune-16.png" alt-text="No Scope tags are required.":::
+            :::image type="content" source="media/install-sara-from-intune/install-sara-from-intune-16.png" alt-text="No Scope tags are required.":::
     12.	For **Assignments**, see [Assign apps to groups with Microsoft Intune](https://docs.microsoft.com/mem/intune/apps/apps-deploy) for information about how to assign the app to users or devices.
  
-                :::image type="content" source="media/install-sara-from-intune/install-sara-from-intune-17.png" alt-text="Add Assignments.":::
+            :::image type="content" source="media/install-sara-from-intune/install-sara-from-intune-17.png" alt-text="Add Assignments.":::
         Once you have made your assignments, select **Next**.
 
     13.	On the **Review + create** section, review your settings, and then select **Create**.
  
-                :::image type="content" source="media/install-sara-from-intune/install-sara-from-intune-18.png" alt-text="Review your settings and select Create.":::
+            :::image type="content" source="media/install-sara-from-intune/install-sara-from-intune-18.png" alt-text="Review your settings and select Create.":::
     14.	Review your **Notifications**.
  
-                :::image type="content" source="media/install-sara-from-intune/install-sara-from-intune-19.png" alt-text="Review Notifications.":::
+            :::image type="content" source="media/install-sara-from-intune/install-sara-from-intune-19.png" alt-text="Review Notifications.":::
         After you see the SaRA upload finished notification, the app is ready for deployment.
  
-                :::image type="content" source="media/install-sara-from-intune/install-sara-from-intune-20.png" alt-text="Add Assignments.":::
+            :::image type="content" source="media/install-sara-from-intune/install-sara-from-intune-20.png" alt-text="Add Assignments.":::
         You can now review the **Device install status** or **User install status** reports to see the status of your app deployment.
  
-                :::image type="content" source="media/install-sara-from-intune/install-sara-from-intune-21.png" alt-text="Review status reports.":::
+            :::image type="content" source="media/install-sara-from-intune/install-sara-from-intune-21.png" alt-text="Review status reports.":::
     On the computers on which SaRA has been installed, follow these steps to verify that the software is installed.
     1.	Select **Settings** > **Apps** > **Apps & features**.
  
-                :::image type="content" source="media/install-sara-from-intune/install-sara-from-intune-22.png" alt-text="Select Apps & features.":::
+            :::image type="content" source="media/install-sara-from-intune/install-sara-from-intune-22.png" alt-text="Select Apps & features.":::
     2.	In the **Search this list** box, type **Support**.
  
-                :::image type="content" source="media/install-sara-from-intune/install-sara-from-intune-23.png" alt-text="Type support.":::
+            :::image type="content" source="media/install-sara-from-intune/install-sara-from-intune-23.png" alt-text="Type support.":::
         > [!NOTE]
         > The SaRA tool requires access to network endpoints needed for connectivity from a user of Office 365 across an enterprise perimeter network. The current list of endpoint is provided in [Additional endpoints not included in the Office 365 IP Address and URL Web service](https://docs.microsoft.com/office365/enterprise/additional-office365-ip-addresses-and-urls).
 
