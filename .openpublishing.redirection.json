@@ -29,6 +29,16 @@
       "source_path": "support/windowsdeveloper/index.md",
       "redirect_url": "/support/windowsdeveloper/welcome-windowsdeveloper",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/end-support-sql-server-2008.md",
+      "redirect_url": "https://support.microsoft.com/help/4456242",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/resource-monitor-nonyielding-condition.md",
+      "redirect_url": "https://support.microsoft.com/help/2216485",
+      "redirect_document_id": false
     }
   ]
 }
