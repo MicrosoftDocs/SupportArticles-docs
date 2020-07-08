@@ -60,7 +60,7 @@ To set the `ClearAfter` property, use Windows Management Instrumentation Tester 
 3. Click the **Query** button and type `select * from __CacheControl`. Click **Apply**.
 4. Double-click each item and select the `ClearAfter` property. Confirm they have the following values:
 
-    |||
+    |Item|Value|
     |---|---|
     |__EventConsumerProviderCacheControl=@|00000000000030.000000:000|
     |__EventProviderCacheControl=@|00000000000030.000000:000|
