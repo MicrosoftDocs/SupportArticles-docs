@@ -1,6 +1,6 @@
 ---
-title: Install and maintain SaRA tool from a network share
-description: Learn how to install SaRA from a network share and update the SaRA files so that SaRA installations use the latest files.
+title: Deploy the SaRA tool using Microsoft Intune
+description: Learn how to deploy SaRA to multiple users using Microsoft Intune.
 author: todmccoy
 ms.author: v-maqiu
 manager: dcscontentpm 

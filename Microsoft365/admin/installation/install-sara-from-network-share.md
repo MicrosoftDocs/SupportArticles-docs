@@ -52,7 +52,7 @@ If you want to install and start Microsoft Support and Recovery Assistant (SaRA)
 To manually install the SaRA tool, follow these steps:
 
 1. On the computer on which you want to install SaRA, browse to the shared folder.
-1. Double-click **Setup.exe**.
+1. Double-click **SaraSetup.exe**.
 1. Select **Install**.
    ![SaRA setup screen.](media/install-sara-from-network-share/120760-5.png)
 1.	Wait for the download and installation process to finish.
