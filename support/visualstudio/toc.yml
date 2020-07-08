@@ -1,0 +1,14 @@
+- name: Welcome
+  href: welcome-visual-studio.md
+- name: C++ in Visual Studio
+  href: ../cpp/toc.yml
+- name: C#
+  href: ../dotnet/csharp/toc.yml
+- name: General
+  href: ./general/toc.yml
+- name: Installation
+  href: ./install/toc.yml
+- name: Silverlight
+  href: ./silverlight/toc.yml
+- name: Visual Basic
+  href: ../dotnet/visual-basic/toc.yml

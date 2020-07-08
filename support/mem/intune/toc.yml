@@ -1,0 +1,184 @@
+- name: Welcome
+  href: welcome-intune.md
+- name: App management
+  items:
+  - name: Access denied configuring MAM
+    href: configure-app-protection-access-denied.md
+  - name: Access denied for Intune app protection options
+    href: app-protection-options-access-denied.md
+  - name: Apps don't appear as Available
+    href: apps-appear-unavailable.md
+  - name: Can't attach photos due to IO error
+    href: android-enterprise-enrolled-devices-fails-attaching-photo.md
+  - name: Can't create messages in Outlook for Android
+    href: creating-message-action-not-allowed.md
+  - name: Can't sync apps to Intune
+    href: apps-fail-sync-to-intune.md
+  - name: Can't uninstall apps installed from the App Store
+    href: cannot-uninstall-apple-app-store-apps.md
+  - name: Can't wrap an LOB app with Intune App Wrapping Tool
+    href: application-could-not-be-wrapped.md
+  - name: Error when you open a web app on iOS 
+    href: invalid-address-open-web-app.md
+  - name: Fingerprint authentication not prompted for policy-managed apps
+    href: no-prompt-for-fingerprint-identity.md
+  - name: macOS LOB apps aren't deployed
+    href: macos-lob-apps-not-deployed.md
+  - name: Managed Browser policy triggers error 0x87D1FDE8
+    href: managed-browser-policy-triggers-error-0x87d1fde8.md
+  - name: Mismatch between value type and configuration value
+    href: mismatch-error-configuration-value-ampersand.md
+  - name: OneDrive supports Open-in protection on unenrolled devices
+    href: open-in-protection-unenrolled-devices.md
+  - name: Only one app configuration policy applied to Edge or Managed Browser
+    href: only-one-app-policy-applied-edge-managed-browser.md
+  - name: Personal apps listed in Discovered apps list
+    href: discovered-apps-list-personal-apps.md
+  - name: Protected data is attached to an iMessage
+    href: onedrive-attaches-corporate-protected-data-imessage.md
+  - name: Saving images locally not restricted
+    href: saving-images-locally-not-restricted.md
+  - name: Set up and validate app protection policies
+    href: set-up-app-protection-policies-ios-device.md
+- name: Co-management with Configuration Manager
+  items:
+  - name: Troubleshoot co-management auto-enroll
+    href: troubleshoot-co-management-auto-enrolling.md
+  - name: Troubleshoot co-management bootstrap
+    href: troubleshoot-co-management-bootstrap.md
+  - name: Troubleshoot co-management workloads
+    href: troubleshoot-co-management-workloads.md
+- name: Device configuration
+  items:
+  - name: 2016341112 -iOS device is currently busy
+    href: 2016341112-ios-device-is-currently-busy.md
+  - name: Connectivity issues due to root certificates
+    href: fix-connectivity-issues.md
+  - name: Device configuration profile error 2016281112
+    href: device-configuration-profile-reports-error-2016281112.md
+  - name: Device restriction policy doesn't block iOS Personal Hotspot
+    href: restriction-policy-not-blocking-personal-hotspot.md
+  - name: Enterprise Mode site list not deployed
+    href: enterprise-mode-site-list-not-deployed-win10.md
+  - name: Factory reset protection emails setting doesn't work
+    href: factory-reset-protection-emails-not-enforced.md
+  - name: Error 403 inspecting Intune objects in Graph Explorer
+    href: 403-error-graph-explorer-query.md
+  - name: No password prompt after email password change
+    href: no-password-prompt-after-password-change.md
+  - name: Password expiration setting doesn't work
+    href: password-expiration-setting-not-working.md
+  - name: Troubleshoot CSP custom settings
+    href: troubleshoot-csp-custom-settings.md
+  - name: Windows feature updates are not offered
+    href: windows-feature-updates-never-offered.md
+- name: Device enrollment
+  items:
+  - name: Can't update enrollment
+    href: cannot-update-enrollment.md
+  - name: iOS/iPadOS enrollment
+    items:
+    - name: Auto-enrollment doesn't start on Apple DEP devices
+      href: apple-dep-device-fails-auto-enrollment.md
+    - name: DEP enrollment error XPC_TYPE_ERROR
+      href: dep-enrollment-xpc-type-error.md
+    - name: Keychain error -25244 during enrollment
+      href: keychain-error-enrolling-macos-devices.md
+  - name: Windows enrollment
+    items:
+    - name: 80180002b during Windows 10 Group Policy-based auto-enrollment
+      href: windows10-enroll-error-80180002b.md
+    - name: Cannot delete autopilot deployment profile
+      href: cannot-delete-autopilot-deployment-profile.md
+    - name: Error 0xcaa9001f in MDM enrollment
+      href: mdm-enrollment-error-0xcaa9001f.md
+    - name: Intune Connector for AD doesn't appear
+      href: intune-connector-for-ad-not-appear.md
+    - name: Unexpected error signing in to Intune Connector
+      href: intune-connector-signin-unexpected-error.md
+    - name: Windows failed to apply the MDM Policy settings
+      href: windows-failed-to-apply-mdm-policy.md
+- name: Device management
+  items:
+  - name: Help desk operators can't perform remote tasks
+    href: help-desk-operator-fails-remote-tasks.md
+  - name: iTunes automatically turns on backup encryption
+    href: intune-managed-ios-device-backup-encrypted.md
+  - name: RemoteWipe CSP fails to send a doWipe command
+    href: remotewipe-fails-sending-dowipe-command.md
+  - name: UPN listed as None for orphaned devices
+    href: orphaned-device-upn-shown-as-none.md
+- name: Device protection
+  items:
+  - name: BitLocker-encrypted device displays as Not compliant
+    href: bitlocker-encrypted-device-not-compliant.md
+  - name: Can't access company resources on DEP devices
+    href: cannot-access-company-resources-on-dep.md
+  - name: Can't assign SCEP certificates to devices
+    href: cannot-assign-scep-certificates.md
+  - name: CertificateRegistrationSvc verify request error
+    href: certificateregistrationsvc-verify-request-error.md
+  - name: Conditional Access
+    items:
+    - name: Can't move an Intune Exchange connector
+      href: fails-moving-intune-exchange-connector.md
+    - name: Could not retrieve access token for Graph API
+      href: could-not-retrieve-access-token.md
+    - name: Intune Exchange Connector version is not supported
+      href: exchange-connector-version-not-supported.md
+    - name: Unable to connect or send inventory information
+      href: unable-to-connect-send-inventory-information.md
+  - name: Devices fail to obtain SCEP certificates
+    href: devices-receive-scep-certificates-error-0x80094800.md
+  - name: Error -2016281112 deploying a password policy
+    href: error-deploying-password-policy.md
+  - name: Intune Connector Setup Wizard ended prematurely
+    href: connector-setup-wizard-ends-prematurely.md
+  - name: NDES certificate not installed
+    href: error-0x80090014-installing-ndes-certificate.md
+  - name: SCEP certificate deployment fails after CA renewal
+    href: scep-deployment-to-win10-devices-fails.md
+  - name: SCEP certificate request fails on CRP
+    href: scep-certificate-request-fails.md
+  - name: Secure boot enabled device shows as Not Compliant
+    href: secure-boot-enabled-device-shows-not-compliant.md
+  - name: Sign in to Intune NDES Connector error 0x80004003
+    href: ndes-connector-signin-error-80004003.md
+  - name: Troubleshoot PKCS certificate deployment
+    href: troubleshooting-pkcs-certificate-deployment.md
+  - name: Users are prompted to enroll when accessing Office 365 resources
+    href: intune-licensed-users-prompted-to-enroll.md
+  - name: Verify NDES configuration on-premises
+    href: verify-ndes-configuration.md
+  - name: Windows 10 devices show incorrect compliance status
+    href: win10-devices-show-incorrect-compliance-status.md
+- name: General guidance or advisory
+  items:
+  - name: Attributes synced by Intune
+    href: intune-synced-attributes-list.md
+  - name: Device-only subscription
+    href: device-licenses-introduction.md
+  - name: Help and support blade doesn't load
+    href: cannot-load-help-and-support-blade.md
+  - name: Intune account portal retired
+    href: intune-account-portal-retired.md
+  - name: Set the MDM authority
+    href: set-mdm-authority.md
+  - name: Things to try before calling Intune support
+    href: before-you-call-intune-support.md
+  - name: Troubleshooting blade fails to load
+    href: troubleshooting-blade-fails-loading.md
+  - name: Use PowerShell to look up licenses
+    href: look-up-intune-licenses.md
+- name: Migration to the Azure Portal
+  items:
+  - name: Migration blockers for grouping and targeting
+    href: grouping-targeting-migration-blockers.md
+- name: Reporting
+  items:
+  - name: AADSTS50011 query the Intune Data Warehouse
+    href: error-query-intune-data-warehouse.md
+- name: Software distribution
+  items:
+  - name: Software distribution tips and practices
+    href: software-distribution-best-practices.md

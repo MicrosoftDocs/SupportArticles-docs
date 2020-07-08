@@ -25,6 +25,31 @@ productDirectory:
     links:
     - url: biztalk/welcome-biztalk-server.md
       text: Support for BizTalk Server
+  - title: .NET
+    imageSrc: "media/hub-landing/dot-net-framework.svg"
+    links:
+    - url: dotnet/welcome-dotnet.md
+      text: Support for .NET
+  - title: Visual Studio
+    imageSrc: "media/hub-landing/vs-ide-2019.svg"
+    links:
+    - url: visualstudio/welcome-visual-studio.md
+      text: Support for Visual Studio
+  - title: Web Apps
+    imageSrc: "media/hub-landing/app-service-web.svg"
+    links:
+    - url: webapps/welcome-webapps.md
+      text: Support for Web Apps
+  - title: Windows Developer
+    imageSrc: "media/hub-landing/windows.svg"
+    links:
+    - url: windowsdeveloper/welcome-windowsdeveloper.md
+      text: Support for Windows Developer
+  - title: Microsoft Endpoint Manager
+    imageSrc: "media/hub-landing/MEM.jpg"
+    links:
+    - url: mem/index.yml
+      text: Support for Microsoft Endpoint Manager
 
 # conceptualContent:
 

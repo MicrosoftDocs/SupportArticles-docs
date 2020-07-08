@@ -1,0 +1,18 @@
+### YamlMime:Hub
+title: Microsoft Endpoint Manager documentation
+summary: Support articles for Microsoft Endpoint Manager
+
+metadata:
+   ms.topic: hub-page
+   services: service
+   ms.service: microsoft-intune
+   ms.author: luche
+
+productDirectory:
+  items:
+  - title: Microsoft Intune
+    imageSrc: "../media/hub-landing/logo-intune.png"
+    links:
+    - url: intune/welcome-intune.md
+      text: Support for Microsoft Intune
+  
