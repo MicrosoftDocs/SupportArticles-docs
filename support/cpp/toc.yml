@@ -1,0 +1,109 @@
+- name: C and C++ Libraries
+  items:
+  - name: ATL service with _ATL_NO_COM_SUPPORT doesn't start
+    href: atl-service-not-start.md
+  - name: C2653 or C2039 error when you reference a STD function
+    href: c2653-c2039-error-reference-function.md
+  - name: Call the Run() method of a Script control
+    href: call-script-control-run-method-cpp.md
+  - name: Change the mouse pointer for a window in MFC
+    href: change-mouse-pointer-window-mfc.md
+  - name: C++ Runtime packages for Desktop Bridge
+    href: c-runtime-packages-desktop-bridge.md
+  - name: Error at thread exit if FLS callback isn't freed
+    href: fatal-error-thread-exit-fls-callback.md
+  - name: FAQs about Standard C++ library
+    href: faq-standard-cpp-library.md
+  - name: Know when you click a Check box in a TreeView
+    href: click-check-box-treeview.md
+  - name: The_CRTDBG_MAP_ALLOC macro doesn't work
+    href: crtdbg-map-alloc-macro-not-work.md
+  - name: Use functions of the STL queue class
+    href: stl-queue-member-functions.md
+  - name: Use map STL functions
+    href: use-map-stl-functions-visual-cpp.md
+  - name: Use PageHeap to detect memory errors of C++ projects
+    href: pageheap-detect-memory-errors-cpp.md
+  - name: Use priority_queue STL functions
+    href: use-priority-queue-stl-function-cpp.md
+  - name: Use stack::top and stack::empty methods
+    href: stack-top-empty-stl-function-visual-cpp.md
+  - name: Use STL sqrt and pow functions
+    href: stl-sqrt-pow-functions-visual-cpp.md
+  - name: Use string arrays
+    href: use-string-arrays-visual-cpp.md
+  - name: Use the list::list STL function
+    href: use-list-list-stl-visual-cpp.md
+  - name: Use the list::remove STL function
+    href: use-list-stl-function-visual-cpp.md
+  - name: Use the random_shuffle STL function
+    href: use-random-shuffle-stl-visual-cpp.md
+  - name: Use the set::find STL function
+    href: use-setfind-stl-function-visual-cpp.md
+  - name: Use the STL PRIORITY_QUEUE class with custom type
+    href: stl-priority-queue-class-custom-type.md
+  - name: Use trigonometry STL functions
+    href: trigonometry-stl-functions-visual-cpp.md
+  - name: Use vector functions
+    href: vectorerase-vectorempty-vectorpush-back.md
+
+- name: General
+  items:
+  - name: Add references to managed C++ projects
+    href: add-references-managed-cpp.md
+  - name: Send HTML code to clipboard
+    href: add-html-code-clipboard-visual-cpp.md
+  - name: Declare an array of points to functions
+    href: declare-pointers-to-functions.md
+  - name: Expand a pointer in Viusal C++ debugger Watch window
+    href: expand-pointer-vc-debugger-watch.md
+  - name: Start the default browser programmatically
+    href: use-visual-cpp-start-internet-browser.md
+  - name: Use SqlDataAdapter to update SQL databases
+    href: update-database-sqldataadapter-visual-cpp.md
+
+- name: Installation
+  items:
+  - name: Minimum service pack levels for VC++ Redistributable
+    href: minimum-service-pack-levels-cpp.md
+  - name: Visual C++ Redistributable Package installation fails
+    href: vc-runtime-installation-fails.md
+
+- name: Integrated Development Environment (IDE)
+  items:
+  - name: Visual C++ crashes at startup because of CLR settings
+    href: vc-2013-crashes-startup.md
+
+- name: Language or Compilers
+  items:
+  - name: ASP.NET error CS0433
+    href: cs0433-error-when-building-asp-net-project.md
+  - name: C2491 error when you define data members as dllimport
+    href: c2491-define-data-member-dllimport.md
+  - name: Catch exceptions in Visual C++
+    href: catch-exceptions-visual-cpp.md
+  - name: CDatabase::GetConnect returns an empty string
+    href: cdatabase-getconnect-returnn-empty.md
+  - name: Do basic file I/O
+    href: visual-cpp-basic-file-io.md
+  - name: Enable Tablet press-and-hold gesture in MFC
+    href: mfc-enable-tablet-press-and-hold-gesture.md
+  - name: Error LNK1000 when you use the /WHOLEARCHIVE switch
+    href: lnk1000-error-wholearchive-switch.md
+  - name: Linker warnings when you build managed extensions
+    href: linker-warning-managed-extension-c-dll-project.md
+  - name: MFC applications can't redraw controls
+    href: mfc-application-fail-redraw-control.md
+  - name: ReadFromStream() returns Access Denied
+    href: readfromstream-return-access-denied.md
+  - name: Unnested loops cause C1061 compiler error
+    href: unnested-loops-cause-c1061-error.md
+  - name: Write entries to an event log
+    href: visual-cpp-write-entry-to event-log.md
+
+- name: Project/Build System
+  items:
+  - name: Can't save file settings in Visual C++ 2013 project
+    href: file-setting-not-save-visual-cpp-2013.md
+  - name: Visual C++ 2010 supports only .NET 4 as target
+    href: cpp-2010-support-dot-net-4-target.md

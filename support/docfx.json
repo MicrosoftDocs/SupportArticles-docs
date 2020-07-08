@@ -86,10 +86,59 @@
         "biztalk/**/*.md": ""
       },
 
+      "ms.prod": {
+        "dotnet/**/*.md": ".net"
+      },
+      "ms.technology": {
+        "dotnet/**/*.md": ""
+      },
+
+      "ms.prod": {
+        "visualstudio/**/*.md": "visual-studio-family"
+      },
+      "ms.technology": {
+        "visualstudio/**/*.md": ""
+      },
+
+      "ms.prod": {
+        "webapps/**/*.md": "web-apps-server"
+      },
+      "ms.technology": {
+        "webapps/**/*.md": ""
+      },
+
+      "ms.prod": {
+        "windowsdeveloper/**/*.md": "windows-dev-apps"
+      },
+      "ms.technology": {
+        "windowsdeveloper/**/*.md": ""
+      },
+
+      "ms.prod": {
+        "mem/intune/**/*.md": "intune"
+      },
+      "ms.technology": {
+        "mem/intune/**/*.md": "microsoft-graph"
+      },
+
       "titleSuffix": {
         "biztalk/**/*.md": "BizTalk Server"
+      },      
+      "titleSuffix": {
+        "dotnet/**/*.md": ".NET"
+      },
+      "titleSuffix": {
+        "visualstudio/**/*.md": "Visual Studio"
+      },
+      "titleSuffix": {
+        "webapps/**/*.md": "Web Apps"
+      },
+      "titleSuffix": {
+        "windowsdeveloper/**/*.md": "Windows Developer"
+      },
+      "titleSuffix": {
+        "mem/intune/**/*.md": "Intune"
       }
-
     },
 
     "template": [],

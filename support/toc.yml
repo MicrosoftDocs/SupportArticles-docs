@@ -2,4 +2,19 @@
   href: index.yml
 
 - name: Welcome
+  href: dotnet/welcome-dotnet.md
+
+- name: Welcome
+  href: visualstudio/welcome-visual-studio.md
+
+- name: Welcome
+  href: webapps/welcome-webapps.md
+
+- name: Welcome
+  href: windowsdeveloper/welcome-windowsdeveloper.md
+
+- name: Microsoft Endpoint Manager support
+  href: mem/index.yml
+  
+- name: Welcome
   href: biztalk/welcome-biztalk-server.md

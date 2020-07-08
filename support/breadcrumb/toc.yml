@@ -11,3 +11,27 @@
     - name: BizTalk Server
       tocHref: /troubleshoot/biztalk/
       topicHref: /troubleshoot/biztalk/welcome-biztalk-server
+      
+    - name: .NET
+      tocHref: /troubleshoot/dotnet/
+      topicHref: /troubleshoot/dotnet/welcome-support-dotnet
+
+    - name: Visual Studio
+      tocHref: /troubleshoot/visualstudio/
+      topicHref: /troubleshoot/visualstudio/welcome-support-visual-studio
+
+    - name: Web Apps
+      tocHref: /troubleshoot/webapps/
+      topicHref: /troubleshoot/webapps/welcome-support-webapps
+
+    - name: Windows Developer
+      tocHref: /troubleshoot/windowsdeveloper/
+      topicHref: /troubleshoot/windowsdeveloper/welcome-support-windowsdeveloper
+
+    - name: Microsoft Endpoint Manager
+      tocHref: /troubleshoot/mem/
+      topicHref: /troubleshoot/mem/
+      items:
+      - name: Intune
+        tocHref: /troubleshoot/mem/intune/
+        topicHref: /troubleshoot/mem/intune/welcome-intune
