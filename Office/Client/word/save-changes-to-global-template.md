@@ -206,7 +206,7 @@ To lock the global template, follow these steps:
     1. Click the **File** button and then click **Options**.   
     2. Click **Customize Ribbon**.   
     3. Check **Developer** from the list on the right.    
-2. In Visual Basic Editor, click **This Document ** in the **Project** window.
+2. In Visual Basic Editor, click **This Document** in the **Project** window.
 
    **Note** If the **Project** window does not appear, click **Project Explorer** on the **View** menu.   
 3. On the **Tools** menu, click **Project Properties**.   

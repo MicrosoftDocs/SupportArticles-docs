@@ -18,11 +18,11 @@ search.appverid:
 - MET150
 ---
 
-# Error when signing in Teams: You're missing out! Ask your admin to enable Microsoft Teams for \<CompanyName>
+# Error when signing into Teams: You're missing out! Ask your admin to enable Microsoft Teams for \<CompanyName>
 
 ## Symptoms
 
-When you sign in Microsoft Teams, you receive this error message:
+When you sign into Microsoft Teams, you receive this error message:
 
 > "You're missing out! Ask your admin to enable Microsoft Teams for \<CompanyName>"
 

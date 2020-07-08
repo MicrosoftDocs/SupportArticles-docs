@@ -137,6 +137,8 @@
       href: ./known-issues/tabs-dont-work-after-enabling-conditional-access.md
     - name: Task buckets do not appear in Teams Planner online 
       href: ./known-issues/task-buckets-do-not-appear-in-planner.md
+    - name: Teams owner cannot create Planner tab
+      href: ./known-issues/teams-owner-cannot-create-planner-tab.md
     - name: Teams website tabs leads to customer confusion 
       href: ./known-issues/website-tabs-cause-confusion-teams.md
   - name: Third-party programs

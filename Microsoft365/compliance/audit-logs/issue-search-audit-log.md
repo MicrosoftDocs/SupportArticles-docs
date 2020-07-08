@@ -37,11 +37,11 @@ The user isn't assigned to the View-Only Audit Logs role or the Audit Logs role 
 Create a custom role group in the Exchange admin center, add the View-Only Audit Logs or Audit Logs role, and then add the user as a member of the new role group. To do this, follow these steps:
 
 1. Open the Exchange admin center. For more information, see [Exchange admin center in Exchange Online](https://technet.microsoft.com/library/jj200743%28v=exchg.150%29.aspx).
-2. Click **Permission**, click **admin role**, and then click **New** (![button icon](https://internal.support.services.microsoft.com/Library/Images/3194988.jpg)) to create a new role group.
+2. Click **Permission**, click **admin role**, and then click **New** (![button icon](./media/issue-search-audit-log/button.png)) to create a new role group.
 3. On the 'New role group' page, do the following:
    1. Specify a name for the role group.
-   1. In the **Role** box, click **Add** (![button icon](https://internal.support.services.microsoft.com/Library/Images/3194988.jpg)), add the **View-Only Audit Log** or **Audit Log** role, and then click **OK**.
-   1. In the **Member** box, click **Add** (![button icon](https://internal.support.services.microsoft.com/Library/Images/3194988.jpg)), add the user, and then click **Save**.
+   1. In the **Role** box, click **Add** (![button icon](./media/issue-search-audit-log/button.png)), add the **View-Only Audit Log** or **Audit Log** role, and then click **OK**.
+   1. In the **Member** box, click **Add** (![button icon](./media/issue-search-audit-log/button.png)), add the user, and then click **Save**.
 
 ## More information
 

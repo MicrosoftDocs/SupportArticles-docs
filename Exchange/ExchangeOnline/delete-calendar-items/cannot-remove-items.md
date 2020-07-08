@@ -84,17 +84,17 @@ The following steps show how to remove a meeting reminder that still appears eve
 4. Double-click the MFCMapi.exe file to start the MFCMAPI editor.    
 5. On the **Session** menu, click **Logon and Display Store Table**.
 
-    ![A screen shot of MFCMAPI x86 Build windows, showing the Sessio tab and Logon and Display Store Table option ](https://support.microsoft.com/Library/Images/2637080.jpg)    
+    ![A screen shot of MFCMAPI x86 Build windows, showing the Session tab and Logon and Display Store Table option ](./media/cannot-remove-items/session.png)    
 6. Right-click the mail profile that you want to change, and then click **Open Store**.
 
-    ![A screen shot of mail profiles ](https://support.microsoft.com/Library/Images/2637082.jpg)    
+    ![A screen shot of mail profiles](./media/cannot-remove-items/mail-profiles.png)    
 7. Expand **Root-Mailbox**, expand **Finder**, and then double-click **Reminders**.
 
-    ![A screen shot after expanding Root - Mailbox ](https://support.microsoft.com/Library/Images/2637083.jpg)    
+    ![A screen shot after expanding Root - Mailbox](./media/cannot-remove-items/mailbox.png)    
 8. Locate the recurring appointment by sorting the **Subject** column or the **To** column.    
 9. Right-click the appointment, and then click **Delete Message**.
 
-    ![A screen shot of appointment, showing the Delete Message ](https://support.microsoft.com/Library/Images/2637084.jpg)    
+    ![A screen shot of appointment, showing the Delete Message](./media/cannot-remove-items/delete-message.png)    
 10. In the **Delete Item **dialog box, select one of the permanent deletion options, and then click **OK**.    
 11. Click **Start**, type **outlook.exe /cleanreminders** in the search box, and then press Enter.    
 12. If you're prompted, select your profile to start Outlook.    

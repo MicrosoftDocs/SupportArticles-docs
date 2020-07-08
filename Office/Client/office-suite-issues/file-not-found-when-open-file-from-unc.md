@@ -14,7 +14,7 @@ search.appverid:
 - MET150
 appliesto:
 - Office Web Apps Server 2013
-- Office Online Server - duplicate (do not use)
+- Office Online Server
 ---
 
 # "File not found" error when you try to open an Office file from a UNC share
