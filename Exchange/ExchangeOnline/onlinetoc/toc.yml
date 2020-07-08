@@ -173,6 +173,8 @@
     items:
     - name: Changes in message store
       href: ../send-emails/smtp-submission-improvements.md
+    - name: OOF replies are not sent
+      href: ../send-emails/understand-troubleshoot-oof-replies.md
   - name: Shared Mailboxes
     items:
     - name: Sent items aren't saved
