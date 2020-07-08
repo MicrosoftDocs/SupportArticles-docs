@@ -71,7 +71,7 @@ To run the script, follow these steps:
         elseif ($SearchResults.count -gt 0)
         {
         $Date = get-date -Format yyMMdd_HHmmss
-        $OutFileName = 'AuditLogResults$Date.csv'
+        $OutFileName = "AuditLogResults$Date.csv"
         write-host
         write-host -fore green 'Posting results to file: $OutfileName'
         $SearchResults | export-csv $OutFileName -notypeinformation -encoding UTF8
