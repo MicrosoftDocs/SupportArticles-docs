@@ -73,7 +73,7 @@ To run the script, follow these steps:
         $Date = get-date -Format yyMMdd_HHmmss
         $OutFileName = "AuditLogResults$Date.csv"
         write-host
-        write-host -fore green 'Posting results to file: $OutfileName'
+        write-host -fore green "Posting results to file: $OutfileName"
         $SearchResults | export-csv $OutFileName -notypeinformation -encoding UTF8
         }
         }
