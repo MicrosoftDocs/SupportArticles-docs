@@ -102,3 +102,5 @@ The following table provides the versions of SaRA that were made available on th
 |December 9, 2019|17.00.3891.009|
 |December 2, 2019|17.00.3711.012|
 |||
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
