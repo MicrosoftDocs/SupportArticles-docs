@@ -107,11 +107,11 @@ Many common tasks like creating a BizTalk host or stopping a send port require s
 
 A SQL Server configured to listen on a port other than 1433 may cause the following behaviors:
 
-    - Expanding BizTalk Group takes longer than expected and shows a red circle.
-    - Expanding Applications takes longer than expected.
-    - Adding a Resource takes longer than expected.
-    - Selecting Send Ports takes longer than expected for them to display.
-    - Expanding All Artifacts shows a red circle.
+- Expanding BizTalk Group takes longer than expected and shows a red circle.
+- Expanding Applications takes longer than expected.
+- Adding a Resource takes longer than expected.
+- Selecting Send Ports takes longer than expected for them to display.
+- Expanding All Artifacts shows a red circle.
 
 To resolve these issues, confirm the SQL Server Browser service is started on all the BizTalk servers in the group. Also on all BizTalk servers in the group, open SQL Server Configuration Manager and create an alias:
 
