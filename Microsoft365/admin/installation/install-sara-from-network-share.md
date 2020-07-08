@@ -36,16 +36,16 @@ If you want to install and start Microsoft Support and Recovery Assistant (SaRA)
       
 1. Select **Start**, type **cmd**, and then press Enter to open a Command Prompt window.
 2. Type the path to SaraSetup.exe, and then press **Enter**.
-> [!NOTE]
-> - You can use the quiet switch (**/q** or **/quiet**) to run Setup without any user interaction or user interface. For example, see the following screenshot.
-> ![SaRA cmd line setup.](media/install-sara-from-network-share/120760-1.png)
-> If the **/q** (or **/quiet**) switch is used, SaraSetup.exe runs in the background.
-> ![SaRA runs in quiet mode.](media/install-sara-from-network-share/120760-2.png)
-> - To run the installation and see output from the setup process in the Command Prompt window, use **/d** or **/debug** instead of **/q** (or **/quiet**) at the command prompt. For example, see the following screenshot.
-> ![SaRA installation using debug mode.](media/install-sara-from-network-share/120760-3.png)
-> - Use the **/?**, **/h**, or **/help** switches to display the following window that shows all available command-line switches for SaraSetup.exe.
-> ![Command line switches for the SaRA setup.](media/install-sara-from-network-share/120760-4.png)
-If SaRA is installed by using the /q, /quiet, /d, or /debug switches, the End User License Agreement (EULA) is displayed when the Support and Recovery Assistant is started for the first time.
+    > [!NOTE]
+    > - You can use the quiet switch (**/q** or **/quiet**) to run Setup without any user interaction or user interface. For example, see the following screenshot.<br />
+    > ![SaRA cmd line setup.](media/install-sara-from-network-share/120760-1.png)<br />
+    > If the **/q** (or **/quiet**) switch is used, SaraSetup.exe runs in the background.
+    > ![SaRA runs in quiet mode.](media/install-sara-from-network-share/120760-2.png)
+    > - To run the installation and see output from the setup process in the Command Prompt window, use **/d** or **/debug** instead of **/q** (or **/quiet**) at the command prompt. For example, see the following screenshot.
+    > ![SaRA installation using debug mode.](media/install-sara-from-network-share/120760-3.png)
+    > - Use the **/?**, **/h**, or **/help** switches to display the following window that shows all available command-line switches for SaraSetup.exe.
+    > ![Command line switches for the SaRA setup.](media/install-sara-from-network-share/120760-4.png)
+    If SaRA is installed by using the /q, /quiet, /d, or /debug switches, the End User License Agreement (EULA) is displayed when the Support and Recovery Assistant is started for the first time.
 
 ### Manual installation
 
