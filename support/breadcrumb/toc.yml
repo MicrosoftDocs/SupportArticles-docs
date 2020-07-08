@@ -14,19 +14,19 @@
       
     - name: .NET
       tocHref: /troubleshoot/dotnet/
-      topicHref: /troubleshoot/dotnet/welcome-support-dotnet
+      topicHref: /troubleshoot/dotnet/welcome-dotnet
 
     - name: Visual Studio
       tocHref: /troubleshoot/visualstudio/
-      topicHref: /troubleshoot/visualstudio/welcome-support-visual-studio
+      topicHref: /troubleshoot/visualstudio/welcome-visual-studio
 
     - name: Web Apps
       tocHref: /troubleshoot/webapps/
-      topicHref: /troubleshoot/webapps/welcome-support-webapps
+      topicHref: /troubleshoot/webapps/welcome-webapps
 
     - name: Windows Developer
       tocHref: /troubleshoot/windowsdeveloper/
-      topicHref: /troubleshoot/windowsdeveloper/welcome-support-windowsdeveloper
+      topicHref: /troubleshoot/windowsdeveloper/welcome-windowsdeveloper
 
     - name: Microsoft Endpoint Manager
       tocHref: /troubleshoot/mem/
