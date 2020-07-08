@@ -34,9 +34,11 @@ For complete information about app deployment by using Microsoft Intune, see the
 
    To download a copy of SaraSetup.exeby, follow these steps:
 
-   1.	Go to [About the Microsoft Support and Recovery Assistant](https://aka.ms/SaRA_Home).
-   2.	Select **Download**.
-   3.	Save the file to your local hard disk.
+    1. Go to [About the Microsoft Support and Recovery Assistant](https://aka.ms/SaRA_Home).
+    2. Select **Download**.
+    3. Save the file to your local hard disk.
+
+    The steps to save the download will vary based on your browser.
 
 2.	**Prepare SaraSetup.exe as a Win32 app for upload to Microsoft Intune**
 
@@ -57,7 +59,7 @@ For complete information about app deployment by using Microsoft Intune, see the
     3.	Under **Select app type**, select **Windows app (Win32)**.
 
         :::image type="content" source="media/install-sara-from-intune/install-sara-from-intune-3.png" alt-text="Select Windows app (Win32).":::
-    4.	Select Select app package file.
+    4.	Select **Select app package file**.
 
         :::image type="content" source="media/install-sara-from-intune/install-sara-from-intune-4.png" alt-text="Select app package file.":::
 
@@ -81,7 +83,7 @@ For complete information about app deployment by using Microsoft Intune, see the
         :::image type="content" source="media/install-sara-from-intune/install-sara-from-intune-8.png" alt-text="Enter the publisher name and select Next.":::
 
         > [!NOTE]
-        > The uninstall command to remove SaRA cannot be run together with the **/q** (**/quiet**) flag. User interaction is required to complete the removal of SaRA. This user interaction is shown in the following screenshot.<br />
+        > The uninstall command provided above requires user interaction to complete the removal of SaRA. This user interaction is shown in the following screenshot.<br />
         > ![text](media/install-sara-from-intune/install-sara-from-intune-9.png)
  
     8.	For **Requirements**:
