@@ -1,10 +1,7 @@
-- name: Internet Explorer troubleshoot articles
+- name: Welcome
   href: welcome-browsers.md
 
-- name: (Back up to Support hub page)
-  href: ../index.yml
-
-- name: Administration
+  - name: Administration
   items:
     - name: Add favorites and protected mode are failed
       href: cannot-add-favorites-and-protected-ie.md
