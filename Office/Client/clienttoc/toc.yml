@@ -211,8 +211,6 @@
       href: ../access/error-run-query-in-access.md
     - name: Query must have at least one destination field
       href: ../access/query-must-have-at-least-one-destination-field.md
-    - name: Query to filter unique data
-      href: ../access/query-filter-unique-data.md
     - name: Register or unregister ActiveX controls
       href: ../access/register-activex-controls.md
     - name: Reset an AutoNumber field value
