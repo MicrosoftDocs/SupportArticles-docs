@@ -8,6 +8,10 @@
     topicHref: /troubleshoot/index
     items:
 
+    - name: Browsers
+      tocHref: /troubleshoot/browsers/
+      topicHref: /troubleshoot/browsers/welcome-browsers
+
     - name: BizTalk Server
       tocHref: /troubleshoot/biztalk/
       topicHref: /troubleshoot/biztalk/welcome-biztalk-server
