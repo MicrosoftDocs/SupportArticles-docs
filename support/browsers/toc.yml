@@ -1,40 +1,40 @@
 - name: Welcome
   href: welcome-browsers.md
 
-  - name: Administration
+- name: Administration
   items:
-    - name: Add favorites and protected mode are failed
-      href: cannot-add-favorites-and-protected-ie.md
+  - name: Add favorites and protected mode are failed
+    href: cannot-add-favorites-and-protected-ie.md
 
-    - name: Automatically detect settings not working
-      href: automatically-detect-settings-enabled.md
+  - name: Automatically detect settings not working
+    href: automatically-detect-settings-enabled.md
 
-    - name: Check IE version
-      href: check-ie-version.md
+  - name: Check IE version
+    href: check-ie-version.md
 
-    - name: Can't change home page
-      href: cannot-change-home-page-in-ie.md
+  - name: Can't change home page
+    href: cannot-change-home-page-in-ie.md
 
-    - name: Change IE's homepage and search provider
-      href: change-homepage-and-search-ie.md
+  - name: Change IE's homepage and search provider
+    href: change-homepage-and-search-ie.md
 
-    - name: Delete IEM content not affect extension
-      href: empty-ie-policy-as-winning.md
+  - name: Delete IEM content not affect extension
+    href: empty-ie-policy-as-winning.md
 
-    - name: How to disable password caching
-      href: disable-ie-password-caching.md
+  - name: How to disable password caching
+    href: disable-ie-password-caching.md
 
-    - name: IEAK 9 supported languages
-      href: ieak-9-supported-languages.md
+  - name: IEAK 9 supported languages
+    href: ieak-9-supported-languages.md
 
-    - name: Non-secure content can‘t be displayed in ie
-      href: only-display-secure-content-ie9.md
+  - name: Non-secure content can‘t be displayed in ie
+    href: only-display-secure-content-ie9.md
 
-    - name: PAC file isn't read
-      href: cannot-read-pac-file.md
+  - name: PAC file isn't read
+    href: cannot-read-pac-file.md
 
-    - name: Set advanced settings via GPOs
-      href: advanced-settings-in-ie.md
+  - name: Set advanced settings via GPOs
+    href: advanced-settings-in-ie.md
 
 - name: Connectivity and Navigation
   items:
