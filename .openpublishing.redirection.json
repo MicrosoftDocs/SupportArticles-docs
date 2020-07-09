@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "support/browsers/index.md",
+      "redirect_url": "/support/browsers/welcome-browsers",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/biztalk/index.md",
       "redirect_url": "/support/biztalk/welcome-biztalk-server",
       "redirect_document_id": false
