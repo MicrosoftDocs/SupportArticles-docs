@@ -1,5 +1,5 @@
 ---
-title: Text-overlow ellipsis not working in IE11
+title: Text-overlow ellipsis not working in Internet Explorer 11
 description: Describes a display problem in Internet Explorer 11. This issue occurs when you use the text-overlow ellipsis attribute.
 ms.date: 04/26/2020
 ms.prod-support-area-path: 

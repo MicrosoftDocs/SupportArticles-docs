@@ -1,5 +1,5 @@
 ---
-title: Collected data by IE Diagnostics
+title: Collected data by Internet Explorer Diagnostics
 description: This article describes the information that may be collected from a computer when running Internet Explorer Diagnostics.
 ms.prod-support-area-path: 
 ms.date: 02/29/2020
@@ -9,7 +9,7 @@ ms.reviewer: louiss
 
 This article lists the information that can be collected by running Internet Explorer Diagnostics.
 
-_Original product version:_ &nbsp; Internet Explorer  
+_Original product version:_ &nbsp; Internet Explorer 
 _Original KB number:_ &nbsp; 2547213
 
 ## System information
@@ -68,11 +68,11 @@ _Original KB number:_ &nbsp; 2547213
 |GP Computer (.htm):|{Computername}_GPResult_Computer.htm|
 |||
 
-### IE Setup Log
+### Internet Explorer Setup Log
 
 |Name|Value|
 |---|---|
-|IE Setup Log (.log):| {Computername}_IE9_main.log|
+| Internet Explorer Setup Log (.log):| {Computername}_IE9_main.log|
 |||
 
 ### Installed updates/hotfixes

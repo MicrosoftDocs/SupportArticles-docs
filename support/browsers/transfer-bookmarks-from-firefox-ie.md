@@ -1,6 +1,6 @@
 ---
-title: Transfer Firefox bookmarks to IE
-description: This article describes how to transfer bookmarks from Mozilla Firefox to Windows Internet Explorer.
+title: Transfer Firefox bookmarks to Internet Explorer
+description: This article describes how to transfer bookmarks from Mozilla Firefox to Internet Explorer .
 ms.date: 06/09/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
@@ -9,7 +9,7 @@ ms.reviewer:
 
 This article helps you solve the problem of importing bookmarks from third-party browsers to Internet Explorer.
 
-_Original product version:_ &nbsp; Internet Explorer  
+_Original product version:_ &nbsp; Internet Explorer 
 _Original KB number:_ &nbsp; 2525573
 
 ## Summary

@@ -34,7 +34,7 @@ This migration procedure is controlled by the state of the `MigrateProxy` DWORD 
 By default, the value is **0**, which indicates that the procedure has not yet been executed. The value will be changed to **1** when the procedure completes.
 
 > [!NOTE]
-> The application of an IE Maintenance connection settings group policy will not affect the state of this procedure.
+> The application of an Internet Explorer Maintenance connection settings group policy will not affect the state of this procedure.
 
 ## Resolution
 

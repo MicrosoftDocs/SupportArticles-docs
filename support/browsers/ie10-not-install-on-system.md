@@ -1,5 +1,5 @@
 ---
-title: Install IE 10 on hybrid graphics systems
+title: Install Internet Explorer 10 on hybrid graphics systems
 description: Discusses that an Internet Explorer 10 for Windows 7 installation fails because of an incompatible driver for a hybrid video card, and you receive an error message.
 ms.date: 06/09/2020
 ms.prod-support-area-path: 

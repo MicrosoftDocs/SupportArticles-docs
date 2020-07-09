@@ -1,5 +1,5 @@
 ---
-title: Required updates for IE 11
+title: Required updates for Internet Explorer 11
 description: Describes the prerequisite updates for Internet Explorer 11.
 ms.date: 06/09/2020
 ms.prod-support-area-path: 

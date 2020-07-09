@@ -1,6 +1,6 @@
 ---
 title: Install internet explorer 11 failed
-description: Discusses how to troubleshoot a Windows Internet Explorer installation that fails. Provides instructions and resources for various issues.
+description: Discusses how to troubleshoot a Internet Explorer installation that fails. Provides instructions and resources for various issues.
 ms.date: 04/24/2020
 ms.prod-support-area-path: 
 ---
@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 2872074
 
 ## Summary
 
-When you try to install Windows Internet Explorer 11, the installation may fail and generate an error message. This can occur for various reasons. To resolve common installation issues, try one or more of the following troubleshooting methods. Here is the checklist before you install Internet Explorer 11:
+When you try to install Internet Explorer 11, the installation may fail and generate an error message. This can occur for various reasons. To resolve common installation issues, try one or more of the following troubleshooting methods. Here is the checklist before you install Internet Explorer 11:
 
 ## Make sure that your system meets the minimum operating system requirements
 

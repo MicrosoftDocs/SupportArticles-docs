@@ -1,5 +1,5 @@
 ---
-title: Connect to a running instance of IE
+title: Connect to a running instance of Internet Explorer
 description: This article describes how to connect to a running instance of Internet Explorer through C++ code.
 ms.date: 06/03/2020
 ms.prod-support-area-path: 
@@ -9,7 +9,7 @@ ms.reviewer: scotrobe
 
 It is possible to connect to a running instance of Internet Explorer using the **SHDocVw.ShellWindows** collection.
 
-_Original product version:_ &nbsp; Internet Explorer  
+_Original product version:_ &nbsp; Internet Explorer 
 _Original KB number:_ &nbsp; 176792
 
 ## More information

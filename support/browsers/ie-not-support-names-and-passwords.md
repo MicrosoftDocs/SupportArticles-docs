@@ -9,12 +9,12 @@ ms.reviewer: josborne, ericlaw, gsilva
 
 This article is intended to notify Web site administrators and IT professionals about the behavior of Internet Explorer when user information is included in a Web site address (HTTP or HTTPS URL).
 
-_Original product version:_ &nbsp; Internet Explorer  
+_Original product version:_ &nbsp; Internet Explorer 
 _Original KB number:_ &nbsp; 834489
 
 ## Summary
 
-By default, versions of Windows Internet Explorer that were released starting with the release of security update 832894 do not support handling user names and passwords in HTTP and HTTP with Secure Sockets Layer (SSL) or HTTPS URLs. The following URL syntax is not supported in Internet Explorer or in Windows Explorer:
+By default, versions of Internet Explorer that were released starting with the release of security update 832894 do not support handling user names and passwords in HTTP and HTTP with Secure Sockets Layer (SSL) or HTTPS URLs. The following URL syntax is not supported in Internet Explorer or in Windows Explorer:
 
 `http(s)://username:password@server/resource.ext`
 

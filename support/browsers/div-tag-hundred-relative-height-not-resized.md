@@ -21,7 +21,7 @@ In Internet Explorer 9 or a later version, you are using a table with an absolut
 This behavior is by design, and applies to Standard Mode for all supported versions of Internet Explorer 9 and later versions.
 
 > [!NOTE]
-> The behavior may be different in Quirks Mode and in Quirks Mode Emulation (QME) when using Windows Internet Explorer 9 or a later version.
+> The behavior may be different in Quirks Mode and in Quirks Mode Emulation (QME) when using Internet Explorer 9 or a later version.
 
 Following is an example of the behavior outlined above:
 

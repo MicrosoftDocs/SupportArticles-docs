@@ -1,11 +1,11 @@
 ---
-title: Sysprep may fail after IE10 is installed
-description: After installing IE10 on Windows 7, Sysprep may fail to execute, since iesysprep.dll registry configurations are point to SysWOW64, instead of System32.
+title: Sysprep may fail after Internet Explorer 10 is installed
+description: After installing Internet Explorer 10 on Windows 7, Sysprep may fail to execute, since iesysprep.dll registry configurations are point to SysWOW64, instead of System32.
 ms.date: 06/09/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
 ---
-# Sysprep in Windows 7 may fail after IE10 is installed
+# Sysprep in Windows 7 may fail after Internet Explorer 10 is installed
 
 This article provides information on how to change the registry to ensure that **Sysprep** can be successfully executed after installing Internet Explorer 10 on Windows 7.
 
@@ -14,12 +14,12 @@ _Original KB number:_ &nbsp; 2868126
 
 ## Symptoms
 
-After installing IE10 on Windows 7, executing **Sysprep** may fail with the following error:
+After installing Internet Explorer 10 on Windows 7, executing **Sysprep** may fail with the following error:
 > SYSPRP LaunchDll:Could not load DLL C:\Windows\SysWOW64\iesysprep.dll[gle=0x000000c1]
 
 ## Cause
 
-This occurs error because the relevant **Sysprep** registry entries point to the wrong location, for **iesysprep.dll**, after installing IE10.
+This occurs error because the relevant **Sysprep** registry entries point to the wrong location, for **iesysprep.dll**, after installing Internet Explorer 10.
 
 ## Resolution
 

@@ -1,5 +1,5 @@
 ---
-title: AutoComplete not working in IE
+title: AutoComplete not working in Internet Explorer
 description: Provides the resolution to make sure you can save passwords in a web site if the AutoComplete feature is enabled in Internet Explorer InPrivate Browsing mode.
 ms.date: 03/16/2020
 ms.prod-support-area-path: 
@@ -9,7 +9,7 @@ ms.reviewer: joelba
 
 You cannot save passwords in a web site by using the InPrivate Browsing functionality of Internet Explorer. This article introduces a method to solve the issue.
 
-_Original product version:_ &nbsp;  Internet Explorer  
+_Original product version:_ &nbsp; Internet Explorer 
 _Original KB number:_ &nbsp; 2026295
 
 ## Symptoms

@@ -8,7 +8,7 @@ ms.prod-support-area-path:
 
 This article provides steps to help describing the issue that a CSS styles webpage does not render correctly in Internet Explorer.
 
-_Original product version:_ &nbsp; Internet Explorer  
+_Original product version:_ &nbsp; Internet Explorer 
 _Original KB number:_ &nbsp; 262161
 
 ## Symptoms
