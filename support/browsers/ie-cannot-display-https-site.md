@@ -1,6 +1,6 @@
 ---
-title: HTTPS site can‘t be display in IE
-description: This article describes the situation where https sites can't be displayed in IE when SSL 2.0 and TLS 1.2 are loaded.
+title: HTTPS site can‘t be display in Internet Explorer
+description: This article describes the situation where https sites can't be displayed in Internet Explorer when SSL 2.0 and TLS 1.2 are loaded.
 ms.date: 06/09/2020
 ms.reviewer: 
 ---

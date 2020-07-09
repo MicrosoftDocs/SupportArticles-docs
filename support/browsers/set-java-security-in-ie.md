@@ -9,7 +9,7 @@ ms.reviewer: juanf
 
 This step-by-step article describes how to set Java security in Internet Explorer. You can configure Internet Explorer with default security settings or with custom security settings. The custom security settings explicitly define Java permissions for signed and unsigned applets. The Microsoft Virtual Machine must be installed to configure the custom Java permissions.
 
-_Original product version:_ &nbsp; Internet Explorer  
+_Original product version:_ &nbsp; Internet Explorer 
 _Original KB number:_ &nbsp; 315674
 
 ## View and change Java custom settings for each security zone

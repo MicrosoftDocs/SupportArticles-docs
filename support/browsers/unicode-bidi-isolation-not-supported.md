@@ -9,7 +9,7 @@ ms.reviewer: saziz
 
 This article discusses a by design behavior that Unicode BiDi isolation in CSS `dir` property does not work Internet Explorer and Microsoft Edge.
 
-_Original product version:_ &nbsp; Microsoft Edge, Internet Explorer  
+_Original product version:_ &nbsp; Microsoft Edge, Internet Explorer 
 _Original KB number:_ &nbsp; 4459265
 
 ## Symptom

@@ -9,13 +9,13 @@
     - name: Automatically detect settings not working
       href: automatically-detect-settings-enabled.md
 
-    - name: Check IE version
+    - name: Check version
       href: check-ie-version.md
 
     - name: Can't change home page
       href: cannot-change-home-page-in-ie.md
 
-    - name: Change IE's homepage and search provider
+    - name: Change Internet Explorer homepage and search provider
       href: change-homepage-and-search-ie.md
 
     - name: Delete IEM content not affect extension
@@ -41,7 +41,7 @@
     - name: Change keep-alive time-out
       href: change-keep-alive-time-out.md
 
-    - name: Close ie result in permanent cookie loss
+    - name: Permanent cookie loss after you close Internet Explorer
       href: permanent-cookies-for-weboc-lost.md
 
     - name: Download html file via download manager
@@ -59,7 +59,7 @@
     - name: Page Cannot be Displayed error
       href: page-cannot-be-displayed.md
 
-    - name: Persistent cookies lost between ie and office app
+    - name: Persistent cookies lost between Internet Explorer and office app
       href: cookies-not-shared-ie-and-office.md
 
     - name: Session variables not persist if install patch
@@ -100,7 +100,7 @@
     - name: RSS feeds not listed or subscribed
       href: rss-feeds-not-listed-or-cannot-subscribe.md
 
-    - name: Set ie start full-screen mode
+    - name: Set Internet Explorer start full-screen mode
       href: set-fullscreen-ie.md
 
     - name: Win7 not support spellcheck and autocorrect
@@ -156,16 +156,16 @@
     - name: How connect a running instance in ie
       href: connect-a-running-instance-in-ie.md
 
-    - name: Ie can’t open a hyperlink on a webpage
+    - name: Internet Explorer can’t open a hyperlink on a webpage
       href: nothing-happens-click-link-in-ie.md
 
-    - name: Ie start as published app but named window not exist
+    - name: Internet Explorer start as published app but named window not exist
       href: named-browser-window-cannot-be-found-ie.md
 
     - name: Iframe content should be rendered in standard mode
       href: an-iframe-content-on-top-scrollbar.md
 
-    - name: Invalid HTML in IE
+    - name: Invalid HTML in Internet Explorer
       href: ie-creates-invalid-html-design-mode.md
 
     - name: Isolation values don't take effect
@@ -245,7 +245,7 @@
 
 - name: General
   items:
-    - name: Collected data by IE Diagnostics
+    - name: Collected data by Internet Explorer Diagnostics
       href: ie-diagnostics-collected-data.md
 
     - name: Collected data by Data collector
@@ -254,7 +254,7 @@
     - name: Different versions information of ie
       href: information-about-ie-version.md
 
-    - name: IE WPAD data collection
+    - name: Internet Explorer WPAD data collection
       href: ie-wpad-diagnostic.md
 
 - name: Installation
@@ -297,7 +297,7 @@
     - name: Https site cannot be displayed
       href: ie-cannot-display-https-site.md
 
-    - name: Java security setup in IE
+    - name: Java security setup in Internet Explorer
       href: set-java-security-in-ie.md
 
     - name: Prompt a password when use authentication
@@ -320,7 +320,7 @@
     - name: Characters typed in the webpage are missing
       href: typed-characters-slow-or-fail-ie.md
 
-    - name: Ie no response if smartscreen enabled
+    - name: Internet Explorer no response if smartscreen enabled
       href: ie-stop-when-access-smartscreen.md
 
     - name: Quirks mode affect page zoom

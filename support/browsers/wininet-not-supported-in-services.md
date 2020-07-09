@@ -9,7 +9,7 @@ ms.reviewer: leonbr
 
 The Microsoft Win32 Internet Functions (exported from WinInet.dll) are not supported when run from a service or an Internet Information Server (IIS) application (also a service). This article discusses using the WinInet.dll in a service or in IIS applications.
 
-_Original product version:_ &nbsp; Internet Explorer  
+_Original product version:_ &nbsp; Internet Explorer 
 _Original KB number:_ &nbsp; 238425
 
 ## More Information

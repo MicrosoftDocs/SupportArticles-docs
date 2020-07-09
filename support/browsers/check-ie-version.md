@@ -1,5 +1,5 @@
 ---
-title: How to check IE version on computers
+title: How to check Internet Explorer version on computers
 description: This article provides you the ways to check the Internet Explorer version on a local computer or a remote computer.
 ms.date: 03/05/2020
 ms.prod-support-area-path: 
@@ -8,7 +8,7 @@ ms.prod-support-area-path:
 
 This article explains the methods you can use to check the Internet Explorer version on local and remote computers.
 
-_Original product version:_ &nbsp; Internet Explorer  
+_Original product version:_ &nbsp; Internet Explorer 
 _Original KB number:_ &nbsp; 556019
 
 ## Check settings on local computer

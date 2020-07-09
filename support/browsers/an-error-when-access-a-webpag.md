@@ -1,6 +1,6 @@
 ---
-title: IE can't display the webpage
-description: This article describes that IE cannot open any webpage and provides troubleshooting solutions。
+title: Internet Explorer can't display the webpage
+description: This article describes that Internet Explorer cannot open any webpage and provides troubleshooting solutions。
 ms.date: 06/09/2020
 ms.prod-support-area-path: 
 ms.reviewer: 

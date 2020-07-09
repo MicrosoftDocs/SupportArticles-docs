@@ -8,7 +8,7 @@ ms.prod-support-area-path:
 
 This article describes the use of HTTP headers to control the caching of Web pages in Internet Explorer.
 
-_Original product version:_ &nbsp; Internet Explorer  
+_Original product version:_ &nbsp; Internet Explorer 
 _Original KB number:_ &nbsp; 234067
 
 ## Summary

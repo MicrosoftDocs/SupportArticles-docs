@@ -1,5 +1,5 @@
 ---
-title: IE data collector collected data
+title: Internet Explorer data collector collected data
 description: Provides the information that's collected by the Internet Explorer Data Collector and the interactive troubleshooting tasks performed in Internet Explorer 9.
 ms.date: 04/21/2020
 ms.prod-support-area-path: 
@@ -87,11 +87,11 @@ When selecting the **Internet Explorer Data Collector** option, the following in
 |IEDiagcmd:|{Computername}_IEDiag.cab|
 |||
 
-### IE Setup Log
+### Internet Explorer Setup Log
 
 |Description|File Name|
 |-|-|
-|IE Setup Log (.log):|{Computername}_IE9_main.log|
+| Internet Explorer Setup Log (.log):|{Computername}_IE9_main.log|
 |||
 
 ### Installed updates/hotfixes
@@ -309,7 +309,7 @@ This task will allow you to collect process dump of Internet Explorer or any oth
   > [!NOTE]
   > It will prompt and open browser to NM3.4 download on Vista/2k8 if not already installed.
 
-- Prompt that includes information on the deletion of the contents of IE's Connections registry keys
+- Prompt that includes information on the deletion of the contents of Internet Explorer Connections registry keys
 
 - Save connections keys to user's desktop.
 
@@ -317,9 +317,9 @@ This task will allow you to collect process dump of Internet Explorer or any oth
 
 - Release and renew IP address
 
-- Launch IE as selected user
+- Launch Internet Explorer as selected user
 
-- Stop and collect network traces. For more information on what is collected by the IE WPAD task, see the IE WPAD SDP [KB2668985](https://support.microsoft.com/help/2668985).
+- Stop and collect network traces. For more information on what is collected by the Internet Explorer WPAD task, see the Internet Explorer WPAD SDP [KB2668985](https://support.microsoft.com/help/2668985).
 
 ### Internet Explorer Simultaneous Fiddler and Netmon
   
@@ -327,27 +327,27 @@ The Internet Explorer Simultaneous Fiddler and Netmon data collection will perfo
 
 User dialog prompt to choose data collection options including:
 
-- Initial address for IE to access upon launch
+- Initial address for Internet Explorer to access upon launch
 - Select affected user
-- Run IE as selected user
+- Run Internet Explorer as selected user
 - Collect Network Monitor trace
 - Collect Fiddler trace
 - Clear Temporary Internet Files
 - Set `TabProcGrowth` to **0** for testing
 - Reset Connection settings:
 
-  - Prompt that includes information on the deletion of the contents of IE's Connections registry keys.
+  - Prompt that includes information on the deletion of the contents of Internet Explorer Connections registry keys.
 
   - Save connections keys to user's desktop.
 
   - Delete Connections key contents under HKCU, HKLM and under the `Wow6432Nodes` keys for HKCU and HKLM if they exist.
 
 - Release and renew the IP address
-- Launch IE without extensions (`-extoff`)
+- Launch Internet Explorer without extensions (`-extoff`)
 
-Upon acceptance of the dialog, IE will launch to the specified address.
+Upon acceptance of the dialog, Internet Explorer will launch to the specified address.
 
-At this time reproduce the issue and upon closing IE tracing will stop, TabProcGrowth, and proxy settings will be restored. The Fiddler trace, Network Monitor trace, and any log files associated with the tracing will be collected.
+At this time reproduce the issue and upon closing Internet Explorer tracing will stop, TabProcGrowth, and proxy settings will be restored. The Fiddler trace, Network Monitor trace, and any log files associated with the tracing will be collected.
 
 #### Data collected
 

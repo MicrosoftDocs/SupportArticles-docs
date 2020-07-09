@@ -24,16 +24,16 @@ Internet Explorer WPAD Data Collection will perform the following actions:
   > [!NOTE]
   > It will prompt and open browser to NM3.4 download on Vista/2k8 if not already installed.
 
-- Prompt that includes information on the deletion of the contents of IE's Connections registry keys
+- Prompt that includes information on the deletion of the contents of Internet Explorer Connections registry keys
 - Save connections keys to user's desktop
 - Delete HKLM/HKCU/, HKLM\Wow6432Node, and HKCU\Wow6432Node Connections key contents if they exist
 - Release and renew IP address
-- Launch IE as selected user
+- Launch Internet Explorer as selected user
 - Stop and collect network traces
 
 ## Information collected by Internet Explorer WPAD Data Collection
 
-*IE Connections Key Activity Log*
+* Internet Explorer Connections Key Activity Log*
 
 |Description|File Name|
 |---|---|
@@ -89,7 +89,7 @@ Internet Explorer WPAD Data Collection will perform the following actions:
 
 In addition to the files collected as part of this diagnostic, the following files are also saved to the selected user's desktop if the related registry keys are present:
 
-*IE Connections Key Exported Registry Keys Saved to User's Desktop*
+* Internet Explorer Connections Key Exported Registry Keys Saved to User's Desktop*
 
 |Description|File Name|
 |---|---|

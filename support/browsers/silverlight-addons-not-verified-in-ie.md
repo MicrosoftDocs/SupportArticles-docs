@@ -7,7 +7,7 @@ ms.reviewer: yechen
 ---
 # The Microsoft Silverlight add-on is listed as not verified in Microsoft Internet Explorer
 
-_Original product version:_ &nbsp; Internet Explorer  
+_Original product version:_ &nbsp; Internet Explorer 
 _Original KB number:_ &nbsp; 2406108
 
 ## Symptoms

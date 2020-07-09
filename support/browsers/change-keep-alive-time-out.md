@@ -1,5 +1,5 @@
 ---
-title: How to change keep-alive time-out in IE
+title: How to change keep-alive time-out in Internet Explorer
 description: Provides the steps to change the default time-out value for persistent HTTP connections in Internet Explorer.
 ms.date: 03/26/2020
 ms.prod-support-area-path: 

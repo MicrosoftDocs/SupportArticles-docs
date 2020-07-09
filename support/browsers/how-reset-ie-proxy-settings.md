@@ -1,5 +1,5 @@
 ---
-title: Reset IE proxy settings
+title: Reset Internet Explorer proxy settings
 description: This article describes the situation that the user must reset Internet Explorer’s proxy settings.
 ms.date: 06/09/2020
 ms.prod-support-area-path: 
@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 2289942
 
 ## Summary
 
-Malicious software may change Windows Internet Explorer proxy settings, and these changes can prevent you from accessing Windows Update or any Microsoft Security sites.
+Malicious software may change Internet Explorer proxy settings, and these changes can prevent you from accessing Windows Update or any Microsoft Security sites.
 
 ## Cause
 

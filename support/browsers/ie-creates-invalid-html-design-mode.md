@@ -1,5 +1,5 @@
 ---
-title: Invalid HTML in IE design mode
+title: Invalid HTML in Internet Explorer design mode
 description: Internet Explorer 9 or a later version creates invalid HTML in design mode. A workaround is provided.
 ms.date: 04/21/2020
 ms.prod-support-area-path: 

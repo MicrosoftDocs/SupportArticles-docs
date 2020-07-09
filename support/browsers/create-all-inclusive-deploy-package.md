@@ -39,7 +39,7 @@ Complete each section fully before you continue.
 > [!NOTE]
 > The following command-line example would be used to extract the x64 version of the Internet Explorer 11 prerequisite updates. (To process the x86 version of the component, replace the x64 (.msu) package name with the x86 (.msu) package name.)
 
-:::image type="content" source="media/create-all-inclusive-deploy-package/extract-prerequisites.png" alt-text="Extract Prerequisites IE 11":::
+:::image type="content" source="media/create-all-inclusive-deploy-package/extract-prerequisites.png" alt-text="Extract Prerequisites Internet Explorer 11":::
 
 Repeat these steps to extract all the prerequisites for Internet Explorer 11, and save the *.cab* files in the `C:\Temp\Cabfiles` folder.
 
@@ -95,7 +95,7 @@ For Example, to install French Language pack for Internet Explorer 11, we must h
 >
 > The following command-line example would be used for extracting an x64 version of the Afrikaans language pack. (To process the x86 version of the component, replace the x64 package name with the x86 package name.)
 >
-> :::image type="content" source="media/create-all-inclusive-deploy-package/extract-language-pack.png" alt-text="IE 11 Language Pack":::
+> :::image type="content" source="media/create-all-inclusive-deploy-package/extract-language-pack.png" alt-text=" Internet Explorer 11 Language Pack":::
 
 ## Internet Explorer 11 spelling dictionaries
 
@@ -110,7 +110,7 @@ For Example, to install French Language pack for Internet Explorer 11, we must h
 > [!NOTE]
 > The following command-line example would be used to extract the x64 or x86 version of the Spelling Dictionaries package.
 >
-> :::image type="content" source="media/create-all-inclusive-deploy-package/extract-spelling-dictionary.png" alt-text="Extract IE 11 Spelling Dictionary":::
+> :::image type="content" source="media/create-all-inclusive-deploy-package/extract-spelling-dictionary.png" alt-text="Extract Internet Explorer 11 Spelling Dictionary":::
 
 ## Internet Explorer 11 cumulative security update
 
@@ -125,7 +125,7 @@ For Example, to install French Language pack for Internet Explorer 11, we must h
 > [!NOTE]
 > The following command-line example would be used to extract the x64 version of Internet Explorer 11 Cumulative Security Updates. (To process the x86 version of the component, replace the x64 package name with the x86 package name.)
 >
-> :::image type="content" source="media/create-all-inclusive-deploy-package/extract-ie-csu.png" alt-text="Extract IE 11 CSU":::
+> :::image type="content" source="media/create-all-inclusive-deploy-package/extract-ie-csu.png" alt-text="Extract Internet Explorer 11 CSU":::
 
 ## Complete the package
 

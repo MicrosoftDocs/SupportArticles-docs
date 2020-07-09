@@ -1,5 +1,5 @@
 ---
-title: Online games error in IE
+title: Online games error in Internet Explorer
 description: Troubleshoot online game by updating your add-ons in Internet Explorer. Some sites that may be affected are Yahoo games, Facebook games, MSN games, and online games with other sites.
 ms.prod-support-area-path: 
 ms.reviewer: 

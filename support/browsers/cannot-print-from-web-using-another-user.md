@@ -1,5 +1,5 @@
 ---
-title: Can't print from the web if running IE 11 as another user
+title: Can't print from the web if running Internet Explorer 11 as another user
 description: Describes an issue that occurs when you try to print from Internet Explorer 11 through a different user account. A workaround is provided.
 ms.date: 03/26/2020
 ms.prod-support-area-path: 
