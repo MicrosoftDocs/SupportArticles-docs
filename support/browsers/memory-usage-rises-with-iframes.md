@@ -1,5 +1,5 @@
 ---
-title: Memory usage in IE8 rises due to iframes
+title: Memory usage in Internet Explorer 8 rises due to iframes
 description: Memory isn't released when leaving iframe pages in Internet Explorer 8 (and likely earlier versions as well) that dynamically create an element with a circular reference. The memory gets released only if you navigate the top page.
 ms.date: 03/23/2020
 ms.prod-support-area-path: 

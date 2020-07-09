@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 2667114
 
 ## Symptoms
 
-A user loads the following code in Internet Explorer (IE) 9 or a later version and renders it in IE9 Standards mode:
+A user loads the following code in Internet Explorer 9 or a later version and renders it in Internet Explorer 9 Standards mode:
 
 ```aspx-csharp
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -39,4 +39,4 @@ To work around this problem, use one of the following options:
 
 1. Insert a mouse-click inside of the element before typing.
 2. Place another element, such as a `<div>` or a `<span>`, directly before the `<hr>` element.
-3. Render the page using any other document mode besides IE9 or a later version Standards mode.
+3. Render the page using any other document mode besides Internet Explorer 9 or a later version Standards mode.

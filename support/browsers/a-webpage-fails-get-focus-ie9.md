@@ -43,4 +43,4 @@ There are several ways to work around this problem:
 
 ## More information
 
-For more information about how Hang Resistance Feature works in Internet Explorer 9, see [Hang Resistance in IE9](/archive/blogs/ie/hang-resistance-in-ie9).
+For more information about how Hang Resistance Feature works in Internet Explorer 9, see [Hang Resistance in Internet Explorer 9](/archive/blogs/ie/hang-resistance-in-ie9).

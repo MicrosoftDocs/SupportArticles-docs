@@ -265,7 +265,7 @@
     - name: How to create all-inclusive deployment package
       href: create-all-inclusive-deploy-package.md
 
-    - name: IE11 installation fails
+    - name: Internet Explorer 11 installation fails
       href: ie-installation-fails.md
 
     - name: No icons or customizations after installing ie9

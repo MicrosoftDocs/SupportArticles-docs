@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 2961083
 
 ## Symptoms
 
-When navigating a URL with a target window (such as a form post, a hyperlink, or a `window.open` call) and the target window exists, a new window might open instead or the originating window might perform the navigation instead of the target window. The behavior exists on IE8 and above.
+When navigating a URL with a target window (such as a form post, a hyperlink, or a `window.open` call) and the target window exists, a new window might open instead or the originating window might perform the navigation instead of the target window. The behavior exists on Internet Explorer 8 and above.
 
 ## Cause
 
