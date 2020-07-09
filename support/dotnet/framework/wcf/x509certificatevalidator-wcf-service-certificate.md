@@ -8,7 +8,7 @@ ms.topic: how-to
 ---
 # Use a custom X509CertificateValidator with an IIS hosted WCF service and self-signed client certificate
 
-This article describes how to use a custom `X509CertificateValidator` with an Internet Information Services (IIS) hosted Windows Communication Foundation (WCF) service and self-signed client certificate.
+This article describes how to use a custom `X509CertificateValidator` with a Microsoft Internet Information Services (IIS) hosted Windows Communication Foundation (WCF) service and self-signed client certificate.
 
 _Original product version:_ &nbsp; Windows Communication Foundation  
 _Original KB number:_ &nbsp; 2480671

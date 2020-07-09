@@ -7,7 +7,7 @@ ms.reviewer: amymcel
 ---
 # WCF service that is invoked asynchronously in ASP.NET uses the wrong impersonation
 
-This article helps you resolve the problem that Microsoft Windows Communication Foundation (WCF) service that is invoked asynchronously in ASP.NET uses the wrong impersonation.
+This article helps you resolve the problem that a Windows Communication Foundation (WCF) service that is invoked asynchronously in ASP.NET uses the wrong impersonation.
 
 _Original product version:_ &nbsp; Windows Communication Foundation  
 _Original KB number:_ &nbsp; 2890435
@@ -18,7 +18,7 @@ Consider the following scenario:
 
 - A WCF service uses impersonation and Windows authentication.
 - A WCF client invokes the service asynchronously.
-- The client code runs under the ASP.NET environment in Internet Information Services (IIS).
+- The client code runs under the ASP.NET environment in Microsoft Internet Information Services (IIS).
 
 In this scenario, you may encounter an issue in which the service operation doesn't run under the intended impersonation context. Instead, you may find the service operation running under the identity of the process, such as an IIS Application Pool.
 
