@@ -68,8 +68,6 @@
     href: error-0x80004005-register-webclass-dll.md
   - name: Make application configuration in ASP.NET
     href: application-directory-configuration-asp-net.md
-  - name: Pre-compiled WCF workflow service activation fails
-    href: pre-compiled-wcf-workflow-activation-fails.md
   - name: Register assembly to use custom control
     href: register-assembly-webform-custom-control.md
   - name: Request.ServerVariables() returns empty
@@ -180,8 +178,6 @@
     href: iis-events-not-detected-scom.md
   - name: No cs-username data in Advanced Logging
     href: no-cs-username-data-advanced-logging.md
-  - name: Use X509CertificateValidator with WCF service
-    href: x509certificatevalidator-wcf-service-certificate.md
 
 - name: IISAdmin Service and Inetinfo Process Operation
   items:
@@ -202,8 +198,6 @@
     href: 0-byte-file-compression-enabled.md
   - name: Application Initialization module not working
     href: application-fail-ssl-web.md
-  - name: Async WCF service uses wrong impersonation
-    href: asynchronous-wcf-service-use-wrong-impersonation.md
   - name: Authorization for requests to default document fails
     href: authorization-fails-default-documents.md
   - name: Can't transfer control to Active Server Pages
@@ -244,8 +238,6 @@
     href: internet-printing-fails-iis.md
   - name: ThreadAbortException when you use Server.Transfer
     href: system-threading-threadabortexception.md
-  - name: WCF REST service generates metadata in WSDL
-    href: wcf-rest-generate-metadata-wsdl.md
 
 - name: WWW Administration and Management
   items:
