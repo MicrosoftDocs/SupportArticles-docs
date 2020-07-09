@@ -3,3 +3,6 @@
 
 - name: .NET Framework
   href: ./framework/toc.yml
+
+- name: WCF
+  href: ./framework/wcf/toc.yml
