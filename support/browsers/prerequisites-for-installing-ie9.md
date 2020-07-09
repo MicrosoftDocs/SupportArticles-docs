@@ -1,5 +1,5 @@
 ---
-title: Manually install prerequisites of IE 9
+title: Manually install prerequisites of Internet Explorer 9
 description: Describes the additional software and components that are bundled with Internet Explorer when you install Internet Explorer 9. These items are prerequisites for installing and running Internet Explorer 9.
 ms.date: 06/09/2020
 ms.prod-support-area-path: 
@@ -12,7 +12,7 @@ This article helps you resolve the problem that some prerequisites of Internet E
 _Original product version:_ &nbsp; Internet Explorer 9  
 _Original KB number:_ &nbsp; 2399238
 
-When you install Windows Internet Explorer 9, additional software and components are also installed as part of the process. These are Internet Explorer 9 prerequisites, and their details vary, depending on the operating system that your computer is running. However, if some of these prerequisites can't be installed automatically, the Internet Explorer 9 installation process will not finish. In that case, you have to manually install the prerequisite software and components that are described later in this article.
+When you install Internet Explorer 9, additional software and components are also installed as part of the process. These are Internet Explorer 9 prerequisites, and their details vary, depending on the operating system that your computer is running. However, if some of these prerequisites can't be installed automatically, the Internet Explorer 9 installation process will not finish. In that case, you have to manually install the prerequisite software and components that are described later in this article.
 
 ## Things to consider before you go the manual install route
 

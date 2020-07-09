@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 2701897
 
 Consider the following scenario:
 
-- You are using Windows Internet Explorer 9 and later versions.
+- You are using Internet Explorer 9 and later versions.
 - You have a webpage that launches a modal dialog box.
 - From this modal dialog box, a SmartCard PIN prompt is shown for the user to type in their password.
 In these conditions, the SmartCard prompt appears behind the modal dialog box and no user interaction is possible at this point.

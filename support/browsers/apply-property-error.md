@@ -1,5 +1,5 @@
 ---
-title: Apply Property Error in IE
+title: Apply Property Error in Internet Explorer
 description: Describes the error message that occurs when you modify either the Rating, Description, or Notes fields of a Favorite shortcut on Windows 7. Also provides the workaround to solve this issue.
 ms.date: 03/23/2020
 ms.prod-support-area-path: 
@@ -10,7 +10,7 @@ This article provides the workaround to help you to solve the problem that an er
 
 Microsoft has confirmed this to be a problem with Microsoft Windows 7 including Microsoft Windows 7 with Service Pack 1.
 
-_Original product version:_ &nbsp; Internet Explorer  
+_Original product version:_ &nbsp; Internet Explorer 
 _Original KB number:_ &nbsp; 2568750
 
 ## Symptoms

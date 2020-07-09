@@ -9,7 +9,7 @@ ms.reviewer: heikom
 
 This article introduces the resolution to solve the issue that Compatibility View instead of standards mode is used for Trusted sites in Internet Explorer.
 
-_Original product version:_ &nbsp; Internet Explorer  
+_Original product version:_ &nbsp; Internet Explorer 
 _Original KB number:_ &nbsp; 2701047
 
 ## Symptoms
@@ -19,7 +19,7 @@ In Internet Explorer, you have configured the following options:
 - Set the **Display intranet websites in Compatibility View** option as **yes**.
 - Set the **Intranet Sites: Include all sites that bypass the proxy server** option as **yes**.
 
-Additionally, you have a website that is accessed by Fully Qualified Domain name (FQDN) and is configured as part of the Trusted Sites zone. However, the site is rendered in Compatibility View instead of the expected IE Standards Mode.
+Additionally, you have a website that is accessed by Fully Qualified Domain name (FQDN) and is configured as part of the Trusted Sites zone. However, the site is rendered in Compatibility View instead of the expected Internet Explorer Standards Mode.
 
 ## Cause
 
@@ -33,11 +33,11 @@ The second check with the exclusion of the zone mappings then takes care of the 
 
 ## Resolution
 
-Choose one of the following options to ensure the site is opened in IE Standards Mode:
+Choose one of the following options to ensure the site is opened in Internet Explorer Standards Mode:
 
 1. Disable the **Display intranet websites in Compatibility View** option.
 
-2. Disable the **Intranet Sites: Include all sites that bypass the proxy server** option, and configure all websites that bypass the proxy server to be in the security zone **Local Intranet** manually. Then, put the websites that should use the IE Standards Mode into Trusted Sites zone.
+2. Disable the **Intranet Sites: Include all sites that bypass the proxy server** option, and configure all websites that bypass the proxy server to be in the security zone **Local Intranet** manually. Then, put the websites that should use the Internet Explorer Standards Mode into Trusted Sites zone.
 
 3. Add the HTTP-header name `X-UA-Compatible` with a value of **IE=EDGE** to the websites that should run in Standards Mode.
 

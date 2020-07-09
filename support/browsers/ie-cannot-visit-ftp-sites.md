@@ -1,5 +1,5 @@
 ---
-title: Cannot visit FTP sites via Web proxies in IE
+title: Cannot visit FTP sites via Web proxies in Internet Explorer
 description: This article describes the issue that occurs when you use Internet Explorer to access File Transfer Protocol (FTP) sites through Web proxies in internal clients. And also provides the resolution that helps you to solve this problem.
 ms.date: 03/05/2020
 ms.prod-support-area-path: 

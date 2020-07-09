@@ -28,7 +28,7 @@ Add additional padding to the height. This will resolve most situations if the s
 
 It is not exactly known all of the conditions required for this problem to appear. In some situations, the problem only appears at other zoom levels besides 100%.
 
-Below is an example where the **scrollHeight** is not large enough to use as the **pixelHeight** even though the **padding**, **margin**, and **border** are all **0px** in the iframe's `html` and `body` element. When the iframe is larger than the content, it gives a **scrollHeight** of **491** even though **491** is not enough to prevent the scrollbars from appearing. This particular example only reproduces in IE 8 standards mode. Other examples may reproduce for IE 9 and later versions standards mode and/or Quirks mode.
+Below is an example where the **scrollHeight** is not large enough to use as the **pixelHeight** even though the **padding**, **margin**, and **border** are all **0px** in the iframe's `html` and `body` element. When the iframe is larger than the content, it gives a **scrollHeight** of **491** even though **491** is not enough to prevent the scrollbars from appearing. This particular example only reproduces in Internet Explorer 8 standards mode. Other examples may reproduce for Internet Explorer 9 and later versions standards mode and/or Quirks mode.
 
 - test.htm
 

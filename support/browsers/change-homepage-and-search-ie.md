@@ -1,5 +1,5 @@
 ---
-title: Change home page and search provider in IE
+title: Change home page and search provider in Internet Explorer
 description: Describes how to change the home page in Internet Explore and how to change the search provider in Internet Explore.
 ms.date: 06/09/2020
 ms.prod-support-area-path: 
@@ -9,12 +9,12 @@ ms.reviewer:
 
 This article provides a solution to change the homepage and search provider in Internet Explorer.
 
-_Original product version:_ &nbsp; Internet Explorer  
+_Original product version:_ &nbsp; Internet Explorer 
 _Original KB number:_ &nbsp; 2607234
 
 ## Summary
 
-To change the home page or the search provider in Windows Internet Explorer, visit the website that is appropriate for your operating system and the version of Internet Explorer that you are running. About how to find out which version of Internet Explorer you're using, refer to **More information** section.
+To change the home page or the search provider in Internet Explorer , visit the website that is appropriate for your operating system and the version of Internet Explorer that you are running. About how to find out which version of Internet Explorer you're using, refer to **More information** section.
 
 1. How to change the home page in Internet Explorer
 

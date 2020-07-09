@@ -1,6 +1,6 @@
 ---
-title: Memory usage in IE8 rises due to iframes
-description: Memory isn't released when leaving iframe pages in IE 8 (and likely earlier versions as well) that dynamically create an element with a circular reference. The memory gets released only if you navigate the top page.
+title: Memory usage in Internet Explorer 8 rises due to iframes
+description: Memory isn't released when leaving iframe pages in Internet Explorer 8 (and likely earlier versions as well) that dynamically create an element with a circular reference. The memory gets released only if you navigate the top page.
 ms.date: 03/23/2020
 ms.prod-support-area-path: 
 ms.reviewer: adamki
@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 2714930
 
 ## Symptoms
 
-Consider the following scenario. You are using Windows Internet Explorer 8 (IE8) to view an HTML page that contains an iframe. In Internet Explorer, you navigate away from the iframe. As a result, memory levels of the corresponding iexplorer.exe process aren't returned, causing an accumulation of memory if the iframe page is visited multiple times. This problem will appear as a memory leak in IE to the user. The memory is returned only if you navigate away from the top page.
+Consider the following scenario. You are using Internet Explorer 8 to view an HTML page that contains an iframe. In Internet Explorer, you navigate away from the iframe. As a result, memory levels of the corresponding iexplorer.exe process aren't returned, causing an accumulation of memory if the iframe page is visited multiple times. This problem will appear as a memory leak in Internet Explorer to the user. The memory is returned only if you navigate away from the top page.
 
 ## Cause
 
@@ -53,7 +53,7 @@ iframe.htm
         <script src="test.js" type="text/javascript"></script>
     </head>
     <body>
-        <div style="font-size: 9pt">In IE 8, click the link 10x and you'll see private bytes increase.<br/>
+        <div style="font-size: 9pt">In Internet Explorer 8, click the link 10x and you'll see private bytes increase.<br/>
         Note: Leaving the main page won't clear the memory right away. However, if the top page includes the same test.js file, it will clear the memory right away.<br/>
         </div>
         </br>

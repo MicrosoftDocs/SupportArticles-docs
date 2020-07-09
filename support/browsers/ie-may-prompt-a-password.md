@@ -9,12 +9,12 @@ ms.reviewer: clinth
 
 This article provides information on the situation where several types of Windows authentication cause internet explorer to prompt for a username and password.
 
-_Original product version:_ &nbsp; Internet Explorer  
+_Original product version:_ &nbsp; Internet Explorer 
 _Original KB number:_ &nbsp; 258063
 
 ## Summary
 
-Passing your user name and password to an Internet Information Services (IIS) Web server is the responsibility of the Web browser. The following scenarios describe the relationship between Microsoft Internet Explorer or Windows Internet Explorer and IIS regarding authentication.
+Passing your user name and password to an Internet Information Services (IIS) Web server is the responsibility of the Web browser. The following scenarios describe the relationship between Microsoft Internet Explorer or Internet Explorer and IIS regarding authentication.
 
 ## More information
 
@@ -33,7 +33,7 @@ Passing your user name and password to an Internet Information Services (IIS) We
 
   - Internet Explorer must consider the requested URL to be on the intranet (local). If the computer name portion of the requested URL contains periods (such as `http://www.microsoft.com` and `http://10.0.0.1`), Internet Explorer assumes that the requested address exists on the Internet and does not pass any credentials automatically. Addresses without periods (such as `http://webserver`) are considered to be on the intranet (local); Internet Explorer passes credentials automatically. The only exception is addresses included in the Intranet zone in Internet Explorer.
 
-  - Internet Explorer's Intranet zone security setting must be set to **Automatic logon only in Intranet zone**. This is the default setting for Internet Explorer. For more information about Internet Explorer security zones, see [IE Security Zones](/archive/blogs/ie/ie-security-zones).
+  - Internet Explorer's Intranet zone security setting must be set to **Automatic logon only in Intranet zone**. This is the default setting for Internet Explorer. For more information about Internet Explorer security zones, see [ Internet Explorer Security Zones](/archive/blogs/ie/ie-security-zones).
 
   - The user requesting the Web page must have appropriate file system (NTFS) permissions to the Web page as well as all of the objects referenced in the Web page. For example, a user may have Full Control rights to a Web page, but is prompted for a password if the Web page refers to graphics that are in a secure folder.
 

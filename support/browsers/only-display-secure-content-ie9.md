@@ -1,5 +1,5 @@
 ---
-title: Display non-secure content in IE
+title: Display non-secure content in Internet Explorer
 description: This article describes that when you access a website that contains non-secure content or mixed content, you will receive a **only secure content is displayed** notification. 
 ms.date: 06/09/2020
 ms.prod-support-area-path: 

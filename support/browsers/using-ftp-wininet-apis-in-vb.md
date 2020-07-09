@@ -9,7 +9,7 @@ ms.reviewer: sangchoe
 
 This article provides the sample file that demonstrates how to use WinInet FTP APIs in a Visual Basic (VB) application.
 
-_Original product version:_ &nbsp; Internet Explorer  
+_Original product version:_ &nbsp; Internet Explorer 
 _Original KB number:_ &nbsp; 195653
 
 ## More Information

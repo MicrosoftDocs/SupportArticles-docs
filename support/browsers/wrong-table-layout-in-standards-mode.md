@@ -1,5 +1,5 @@
 ---
-title: Unexpected table height calculation in IE standards mode
+title: Unexpected table height calculation in Internet Explorer standards mode
 description: Different table layout behaviors for standard and quirks mode in Internet Explorer.
 ms.date: 03/23/2020
 ms.prod-support-area-path: 
@@ -9,7 +9,7 @@ ms.reviewer: jeanr
 
 This article discusses a by design behavior that a table is resized if you use relative height for a `<div>` tag within a table cell in Internet Explorer.
 
-_Original product version:_ &nbsp; Internet Explorer  
+_Original product version:_ &nbsp; Internet Explorer 
 _Original KB number:_ &nbsp; 2778473
 
 ## Summary

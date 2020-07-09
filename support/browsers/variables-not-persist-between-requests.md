@@ -1,5 +1,5 @@
 ---
-title: Session variables in IE are missing
+title: Session variables in Internet Explorer are missing
 description: This article describes the reasons and solutions for variables that cannot be saved after the security patch is installed in Internet Explorer 5.5 or 6.0.
 ms.date: 06/03/2020
 ms.prod-support-area-path: 

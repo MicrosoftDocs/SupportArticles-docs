@@ -1,5 +1,5 @@
 ---
-title: IE 9 cannot load VBD documents
+title: Internet Explorer 9 cannot load VBD documents
 description: Provides the resolution to allow VBD documents to load in Internet Explorer 9.
 ms.date: 03/23/2020
 ms.prod-support-area-path:
@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 2556013
 
 ## Symptoms
 
-When you try to load VBD documents using Internet Explorer 9 (IE9), a prompt to download the .vbd file is shown instead of properly rendering the content as expected.
+When you try to load VBD documents using Internet Explorer 9, a prompt to download the .vbd file is shown instead of properly rendering the content as expected.
 
 ## Cause
 
@@ -26,7 +26,7 @@ To solve this problem, the following conditions need to be in place:
 - Have the URL action `URLACTION_ALLOW_STRUCTURED_STORAGE_SNIFFING` enabled in the relevant security zone (this is enabled by default in the Local Intranet and Trusted sites zones);
 - Disable the sniffing restriction for the relevant process, by specifying the `FEATURE_RESTRICT_CDL_CLSIDSNIFF` feature key.
 
-As an example, to allow VBD documents to load in IE9 for the Local Intranet zone, take the following steps:
+As an example, to allow VBD documents to load in Internet Explorer 9 for the Local Intranet zone, take the following steps:
 
 Step1: Make sure the URL action is in place
 
@@ -38,7 +38,7 @@ Step 2: Set the feature key accordingly
 
 :::image type="content" source="media/ie-fails-to-load-vbd-documents/clsidsniff.png" alt-text="screenshot of clsidsniff" border="false":::
 
-The above key is created in a 64-bit system and targets the IE9 32-bit version. The following variations need to be considered:
+The above key is created in a 64-bit system and targets the Internet Explorer 9 32-bit version. The following variations need to be considered:
 
 - To define the feature in a 32-bit Windows, we have to create the feature key under `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Internet Explorer\MAIN\FeatureControl`.
 
@@ -48,7 +48,7 @@ The above key is created in a 64-bit system and targets the IE9 32-bit version. 
 
  Finally, the respective DWORD created for this feature key is not tied to only iexplore.exe. If an application that implements the WebBrowser control loads VBD content, the DWORD has to be created to match the name of the application (name_of_app.exe=0).
 
- After following the above steps, VBD documents will load successfully in IE9.
+ After following the above steps, VBD documents will load successfully in Internet Explorer 9.
 
 ## More Information
 

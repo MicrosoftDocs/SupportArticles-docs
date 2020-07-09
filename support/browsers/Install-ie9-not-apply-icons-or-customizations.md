@@ -1,5 +1,5 @@
 ---
-title: Icons or customizations are missing of IE9
+title: Icons or customizations are missing of Internet Explorer 9
 description: This article describes the problem that icons and user-defined aren't displayed when the ie9 is installed but the system isn't restarted, here a solution is provided for this.
 ms.date: 06/09/2020
 ms.prod-support-area-path: 
@@ -35,7 +35,7 @@ C:\Windows\System32\reg.exe DELETE HKLM\SOFTWARE\Microsoft\Windows\CurrentVersio
 ```
 
 > [!NOTE]
-> If you have a current Internet Explorer Administration Kit(IEAK) package installed you should run the following command prior to the IE9 install: `Rundll32.exe iedkcs32.dll,BrandCleanInstallStubs`
+> If you have a current Internet Explorer Administration Kit(IEAK) package installed you should run the following command prior to the Internet Explorer 9 install: `Rundll32.exe iedkcs32.dll,BrandCleanInstallStubs`
 
 ## More information
 

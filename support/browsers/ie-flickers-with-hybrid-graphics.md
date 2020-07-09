@@ -1,5 +1,5 @@
 ---
-title: IE flickers on computers with hybrid graphics
+title: Internet Explorer flickers on computers with hybrid graphics
 description: Describes a problem with flickering that may be seen on certain notebook POCs, and describes a workaround.
 ms.date: 03/16/2020
 ms.prod-support-area-path: 
@@ -8,7 +8,7 @@ ms.prod-support-area-path:
 
 This article provides steps to solve the flickering issue that occurs on certain computers with *hybrid graphics*.
 
-_Original product version:_ &nbsp; Internet Explorer  
+_Original product version:_ &nbsp; Internet Explorer 
 _Original KB number:_ &nbsp; 2387811
 
 ## Symptoms

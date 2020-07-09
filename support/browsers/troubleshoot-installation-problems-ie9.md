@@ -1,5 +1,5 @@
 ---
-title: Installation problems of IE 9
+title: Installation problems of Internet Explorer 9
 description: Describes how to diagnose and repair installation problems in Internet Explorer 9.
 ms.date: 06/09/2020
 ms.prod-support-area-path: 
@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 2409098
 
 ## Summary
 
-When you are installing Windows Internet Explorer 9, you may receive an error message such as **0x800F081E**. In this situation, the installation process doesn't finish. To troubleshoot this problem, go to the following section.
+When you are installing Internet Explorer 9, you may receive an error message such as **0x800F081E**. In this situation, the installation process doesn't finish. To troubleshoot this problem, go to the following section.
 
 ## How to successfully install Internet Explorer 9
 

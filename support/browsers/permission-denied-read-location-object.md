@@ -9,7 +9,7 @@ ms.reviewer: v-vmaru
 
 This article provides many methods for you to solve the **Permission denied** error message that occurs if you read properties of the Location object that is inside an HTML Application (HTA).
 
-_Original version:_ &nbsp; Internet Explorer  
+_Original version:_ &nbsp; Internet Explorer 
 _Original KB number:_ &nbsp; 816885
 
 ## Symptoms

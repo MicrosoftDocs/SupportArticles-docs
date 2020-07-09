@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 932118
 
 ## Symptoms
 
-Beginning with Windows Vista, if you use hyperlinks to open Microsoft Office documents in Windows Internet Explorer (beginning with version 7), you may experience the following symptoms.
+Beginning with Windows Vista, if you use hyperlinks to open Microsoft Office documents in Internet Explorer (beginning with version 7), you may experience the following symptoms.
 
 ### Missing persistent cookies
 
