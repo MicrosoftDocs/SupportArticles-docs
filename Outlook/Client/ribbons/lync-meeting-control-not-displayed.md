@@ -22,7 +22,7 @@ appliesto:
 
 After you install the Lync Meeting Add-in for Microsoft Office 2013 in Microsoft Outlook, the Lync Meetingcontrol may not appear on the ribbon of a meeting request in Outlook. The following figure shows the expected appearance of the control on the ribbon:
 
-![Skype Meeting control screenshot](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4010745_en_1)
+![Skype Meeting control screenshot](./media/lync-meeting-control-not-displayed/skype-meeting-control.png)
 
 If this behavior occurs, you can manually enable the Lync Meeting Add-in for Microsoft Office 2013 in Outlook.
 
@@ -38,7 +38,7 @@ To manually enable the Lync Meeting Add-in for Microsoft Office 2013 in Outlook,
 
     The following figure shows the COM Add-Insdialog box with the Lync Meeting Add-in for Microsoft Office 2013 add-in enabled:
 
-    ![Add-in screenshot](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4010748_en_1)
+    ![Add-in screenshot](./media/lync-meeting-control-not-displayed/add-in.png)
 
 > [!NOTE]
 > If you receive the following error message during step 5, make sure that you are logged on to the local computer through an administrator account.
@@ -111,7 +111,7 @@ If you do not see the Lync Meeting Add-in for Microsoft Office 2013 entry in the
 
 To determine whether you are using a Click-to-Run or MSI installation of Office 2013, click the Filetab in Outlook, and then click Office Account.
 
-![determine Office version](https://support.microsoft.com/Library/Images/2996449.JPG)
+![determine Office version](./media/lync-meeting-control-not-displayed/office-version.png)
 
 If you see **Office Updates** under **Product Information**, you have a Click-to-Run installation of Office 2013.
 

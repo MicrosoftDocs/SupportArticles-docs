@@ -33,13 +33,13 @@ To work around this issue, create send connectors for the affected remote domain
 2. Create a new send connector for this domain. Make sure that you configure the following settings:
   1. In the **Address space** section, add the affected remote domain such as contoso.com.
 
-   ![Address space](https://support.microsoft.com/Library/Images/3059027.jpg)   
+   ![Address space](./media/dns-query-failed/address-space.png)   
   2. In the **Network setting** section, select **Route mail through the following smart hosts**. Add the IP address of the MX record that you checked in step 1.
 
-   ![Network setting](https://support.microsoft.com/Library/Images/3059028.png)   
+   ![Network setting](./media/dns-query-failed/network-setting.png)   
   3. Set **Smart host authentication settings** to **None**.
 
-   ![The screenshot for step C ](https://support.microsoft.com/Library/Images/3060536.jpg)
+   ![The screenshot for step C](./media/dns-query-failed/step-c.png)
 
    For other settings, you can use the default value. For more information, see [Configure a Dedicated Send Connector for a Specific Domain](https://technet.microsoft.com/library/jj657457%28v=exchg.160%29.aspx).   
 
@@ -53,7 +53,7 @@ To resolve this issue, fix the issues in your local DNS server, or configure the
 
 1. Open the Proprieties page of the Exchange server that hosts the send connector, and then add the IP address of [public DNS servers](https://www.bing.com/search?q=public+dns+server&go=submit+query&qs=bs&form=qbre) in the **External DNS Lookups** setting.
 
-   ![The screenshot for step 1 ](https://support.microsoft.com/Library/Images/3060537.png)   
+   ![The screenshot for step 1](./media/dns-query-failed/step-1.png)   
 2. Select the **Use the external DNS lookup settings on servers with the transport roles** option in the send connector that is responsible for remote mail routing.
 
-   ![The screenshot for step 2 ](https://support.microsoft.com/Library/Images/3060538.png)
+   ![The screenshot for step 2](./media/dns-query-failed/step-2.png)
