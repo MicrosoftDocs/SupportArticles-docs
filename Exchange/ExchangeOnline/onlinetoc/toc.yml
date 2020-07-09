@@ -173,6 +173,8 @@
     items:
     - name: Changes in message store
       href: ../send-emails/smtp-submission-improvements.md
+    - name: EWS API cannot access Teams data 
+      href: ../send-emails/ews-not-support-access-teams-data.md
     - name: OOF replies are not sent
       href: ../send-emails/understand-troubleshoot-oof-replies.md
   - name: Shared Mailboxes
