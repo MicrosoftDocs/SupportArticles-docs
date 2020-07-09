@@ -18,29 +18,23 @@ _Original KB number:_ &nbsp; 2547207
 
 When selecting the **Internet Explorer Data Collector** option, the following information is collected:
 
-*Operating System*
+### Operating System
 
-||
-|-|
-|Machine Name:|
-|OS Name:|
-|Last Reboot/Uptime:|
-|AntiMalware:|
-|User Account Control:|
-|Username:|
-||
+* Machine Name
+* OS Name
+* Last Reboot/Uptime
+* AntiMalware
+* User Account Control
+* Username
 
-*Computer System*
+### Computer System
 
-||
-|-|
-|Computer Model:|
-|Processor(s):|
-|Machine Domain:|
-|Role:|
-||
+* Computer Model
+* Processor(s)
+* Machine Domain
+* Role
 
-*Environment Variables*
+### Environment Variables
 
 |||
 |-|-|
@@ -49,7 +43,7 @@ When selecting the **Internet Explorer Data Collector** option, the following in
 |Target User:|{Computername}_EnvironmentVariables_{Username}.txt|
 |||
 
-*Event Logs*
+### Event Logs
 
 |||
 |-|-|
@@ -58,7 +52,7 @@ When selecting the **Internet Explorer Data Collector** option, the following in
 |Filtered Event Logs (.csv):|{Computername}_SystemLog.csv|
 |||
 
-*Group Policy and IEAK*
+### Group Policy and IEAK
 
 |||
 |-|-|
@@ -81,7 +75,7 @@ When selecting the **Internet Explorer Data Collector** option, the following in
 |GP Computer (.htm):|{Computername}_GPResult_Computer.htm|
 |||
 
-*Hardware:DXDiag*
+### Hardware:DXDiag
 
 |||
 |-|-|
@@ -89,7 +83,7 @@ When selecting the **Internet Explorer Data Collector** option, the following in
 |DXDiag:|{Computername}_DXDiag.txt|
 |||
 
-*IEDiag*
+### IEDiag
 
 |||
 |-|-|
@@ -97,7 +91,7 @@ When selecting the **Internet Explorer Data Collector** option, the following in
 |IEDiagcmd:|{Computername}_IEDiag.cab|
 |||
 
-*IE Setup Log*
+### IE Setup Log
 
 |||
 |-|-|
@@ -105,7 +99,7 @@ When selecting the **Internet Explorer Data Collector** option, the following in
 |IE Setup Log (.log):|{Computername}_IE9_main.log|
 |||
 
-*Installed updates/hotfixes*
+### Installed updates/hotfixes
 
 |||
 |-|-|
@@ -115,7 +109,7 @@ When selecting the **Internet Explorer Data Collector** option, the following in
 |Update/Hotfix history:|{Computername}_Hotfixes.TXT|
 |||
 
-*Internet Explorer Core*
+### Internet Explorer Core
 
 |||
 |-|-|
@@ -131,7 +125,7 @@ When selecting the **Internet Explorer Data Collector** option, the following in
 |HKLM:|{Computername}_reg_HKLM_FeatureControl.TXT|
 |||
 
-*Internet Explorer File Versions*
+### Internet Explorer File Versions
 
 |||
 |-|-|
@@ -139,7 +133,7 @@ When selecting the **Internet Explorer Data Collector** option, the following in
 |Version Info:|{Computername}_IE_File_Version_Info.txt|
 |||
 
-*Internet Explorer Zones*
+### Internet Explorer Zones
 
 |||
 |-|-|
@@ -189,7 +183,7 @@ When selecting the **Internet Explorer Data Collector** option, the following in
 |HKLM:|{Computername}_reg_HKLM_TemplatePolicies_MedLow.TXT|
 |||
 
-*Networking Information*
+### Networking Information
 
 |||
 |-|-|
@@ -199,7 +193,7 @@ When selecting the **Internet Explorer Data Collector** option, the following in
 |SMB Basic Information:|{Computername}_SMB-Info.txt|
 |||
 
-*Operating System Registry*
+### Operating System Registry
 
 |||
 |-|-|
@@ -227,7 +221,7 @@ When selecting the **Internet Explorer Data Collector** option, the following in
 |HKLM:|{Computername}_reg_HKLM_Ext_PreApproved.TXT|
 |||
 
-*REG Export*
+### REG Export
 
 |||
 |-|-|
@@ -245,7 +239,7 @@ When selecting the **Internet Explorer Data Collector** option, the following in
 |HKLM Wow64:|{Computername}_HKLM_Wow6432Node_Classes.REG.txt|
 |||
 
-*Registry - IEAK*
+### Registry - IEAK
 
 |||
 |-|-|
@@ -253,7 +247,7 @@ When selecting the **Internet Explorer Data Collector** option, the following in
 |HKLM Wow64:|{Computername}_reg_HKLM_Wow6432Node_IEAK.TXT|
 |||
 
-*Windows Setup API Logs*
+### Windows Setup API Logs
 
 |||
 |-|-|
@@ -261,7 +255,7 @@ When selecting the **Internet Explorer Data Collector** option, the following in
 |Windows Setup API Log:|{Computername}_SetupAPI.app.Log|
 |||
 
-*Windows update log*
+### Windows update log
 
 |||
 |-|-|
