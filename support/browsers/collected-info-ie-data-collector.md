@@ -36,27 +36,25 @@ When selecting the **Internet Explorer Data Collector** option, the following in
 
 ### Environment Variables
 
-|||
-|-|-|
 |Description|File Name|
+|-|-|
 |Elevated User:|{Computername}_EnvironmentVariables_MSDT.txt|
 |Target User:|{Computername}_EnvironmentVariables_{Username}.txt|
 |||
 
 ### Event Logs
 
-|||
-|-|-|
+
 |Description|File Name|
+|-|-|
 |Filtered Event Logs (.csv):|{Computername}_ApplicationLog.csv|
 |Filtered Event Logs (.csv):|{Computername}_SystemLog.csv|
 |||
 
 ### Group Policy and IEAK
 
-|||
-|-|-|
 |Description|File Name|
+|-|-|
 |IEAK Logs (.zip):|{Computername}_{Username}_IEAK_Brand.zip|
 |HKU:|{Computername}_{Username}_HKU_Policies.TXT|
 |HKLM Wow64:|{Computername}_reg_HKLM_Wow6432Node_Policies.TXT|
@@ -77,33 +75,29 @@ When selecting the **Internet Explorer Data Collector** option, the following in
 
 ### Hardware:DXDiag
 
-|||
-|-|-|
 |Description|File Name|
+|-|-|
 |DXDiag:|{Computername}_DXDiag.txt|
 |||
 
 ### IEDiag
 
-|||
-|-|-|
 |Description|File Name|
+|-|-|
 |IEDiagcmd:|{Computername}_IEDiag.cab|
 |||
 
 ### IE Setup Log
 
-|||
-|-|-|
 |Description|File Name|
+|-|-|
 |IE Setup Log (.log):|{Computername}_IE9_main.log|
 |||
 
 ### Installed updates/hotfixes
 
-|||
-|-|-|
 |Description|File Name|
+|-|-|
 |Update/Hotfix history:|{Computername}_Hotfixes.CSV|
 |Update/Hotfix history:|{Computername}_Hotfixes.htm|
 |Update/Hotfix history:|{Computername}_Hotfixes.TXT|
@@ -111,9 +105,8 @@ When selecting the **Internet Explorer Data Collector** option, the following in
 
 ### Internet Explorer Core
 
-|||
-|-|-|
 |Description|File Name|
+|-|-|
 |HKU:|{Computername}_{Username}_HKU_InternetExplorer.txt|
 |HKU:|{Computername}_{Username}_HKU_InternetSettings.txt|
 |HKU:|{Computername}_{Username}_HKU_FTP.txt|
@@ -127,17 +120,15 @@ When selecting the **Internet Explorer Data Collector** option, the following in
 
 ### Internet Explorer File Versions
 
-|||
-|-|-|
 |Description|File Name|
+|-|-|
 |Version Info:|{Computername}_IE_File_Version_Info.txt|
 |||
 
 ### Internet Explorer Zones
 
-|||
-|-|-|
 |Description|File Name|
+|-|-|
 |HKU:|{Computername}_{Username}_HKU_Zones_ZoneMap.txt|
 |HKU:|{Computername}_{Username}_HKU_Zones_0_YourComputer.txt|
 |HKU:|{Computername}_{Username}_HKU_Zones_1_LocalIntranet.txt|
@@ -185,9 +176,8 @@ When selecting the **Internet Explorer Data Collector** option, the following in
 
 ### Networking Information
 
-|||
-|-|-|
 |Description|File Name|
+|-|-|
 |Host File:|{Computername}_hosts|
 |TCP/IP Basic Information:|{Computername}_TcpIp-Info.txt|
 |SMB Basic Information:|{Computername}_SMB-Info.txt|
@@ -195,9 +185,8 @@ When selecting the **Internet Explorer Data Collector** option, the following in
 
 ### Operating System Registry
 
-|||
-|-|-|
 |Description|File Name|
+|-|-|
 |HKU:|{Computername}_{Username}_HKU_ActiveSetup_All.txt|
 |HKU Wow64:|{Computername}_{Username}_HKU_ActiveSetup_ALL_Wow6432Node.txt|
 |HKU:|{Computername}_{Username}_HKU_Wintrust.txt|
@@ -223,9 +212,8 @@ When selecting the **Internet Explorer Data Collector** option, the following in
 
 ### REG Export
 
-|||
-|-|-|
 |Description|File Name|
+|-|-|
 |HKU:|{Computername}_{Username}_HKU_Internet_Explorer.REG.txt|
 |HKU:|{Computername}_{Username}_HKU_Internet_Settings.REG.txt|
 |HKU:|{Computername}_{Username}_HKU_Policies.REG.txt|
@@ -241,25 +229,22 @@ When selecting the **Internet Explorer Data Collector** option, the following in
 
 ### Registry - IEAK
 
-|||
-|-|-|
 |Description|File Name|
+|-|-|
 |HKLM Wow64:|{Computername}_reg_HKLM_Wow6432Node_IEAK.TXT|
 |||
 
 ### Windows Setup API Logs
 
-|||
-|-|-|
 |Description|File Name|
+|-|-|
 |Windows Setup API Log:|{Computername}_SetupAPI.app.Log|
 |||
 
 ### Windows update log
 
-|||
-|-|-|
 |Description|File Name|
+|-|-|
 |Windows Update Log File:|{Computername}_WindowsUpdate.log|
 |||
 
@@ -283,9 +268,8 @@ From the STRACE LOG, you can 'replay' a full navigation scenario using the HTTPR
 
 *Strace network logs*
 
-|||
-|-|-|
 |Description|File Name|
+|-|-|
 |Strace Logs (.strace):|STRACE_IEXPLORE_PID_{ProcessID}_{date}_{time}.STRACE|
 |||
 
@@ -306,9 +290,8 @@ This task will allow you to collect process dump of Internet Explorer or any oth
 
 *Memory Dump Files*
 
-|||
-|-|-|
 |Description|File Name|
+|-|-|
 |Hangdump file(.out):|{computername}_{processname}.out|
 |MemoryDump Files:|{computername}_DumpFile_Information.txt|
 |MemoryDump Files:|{computername}_{processname}_{date}_{time}.zip|
@@ -370,25 +353,22 @@ At this time reproduce the issue and upon closing IE tracing will stop, TabProcG
 
 *Autoproxy Files*
 
-|||
-|-|-|
 |Description|File Name|
+|-|-|
 |Autoproxy File:|{computername}_{username}_Autoproxy_file_log__Date_{date}_{time}.txt|
 |||
 
 *Fiddler Capture*
 
-|||
-|-|-|
 |Description|File Name|
+|-|-|
 |Fiddler Capture File \[Password Protected](.zip):|{computername}_{username}_Fiddler__Date_{date}_{time}.zip|
 |||
 
 *Network Trace*
 
-|||
-|-|-|
 |Description|File Name|
+|-|-|
 |NMCap Trace Log:|{computername}_{username}_NMcap_Trace_DisplayNet__Date_{date}_{time}.txt|
 |Network Monitor trace file:|{computername}_{username}_NMcap_Date_{date}_{time}.cap|
 |||
@@ -403,8 +383,7 @@ See [Implementing and Administering the ActiveX Installer Service](/previous-ver
 
 *AxtiveX Installer Service Logging*
 
-|||
-|-|-|
 |Description|File Name|
+|-|-|
 |AXIS Event Log:|{computername}_Run_Date_{month}_{day}_{year}_Time_{time}_AxisServiceLog.evt|
 |||
