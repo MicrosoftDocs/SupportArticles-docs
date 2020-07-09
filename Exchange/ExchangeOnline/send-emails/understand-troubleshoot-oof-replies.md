@@ -20,7 +20,9 @@ search.appverid:
 
 # Understanding and troubleshooting Out of Office (OOF) replies
 
-Out of Office (OOF) replies can be a bit of a mystery. How do they work? Why do they sometimes not get delivered to other users, and what do you do if they don't? This article discusses the bits and pieces of OOF replies from the perspective of an Exchange Online configuration. However, much of this discussion also applies to an on-premises configuration. If you've ever wondered why "Out of Office" is abbreviated as "OOF" instead of as "OOO," see
+Out of Office (OOF) replies can be a bit of a mystery. How do they work? Why do they sometimes not get delivered to other users, and what do you do if they don't? This article discusses the bits and pieces of OOF replies from the perspective of an Exchange Online configuration. However, much of this discussion also applies to an on-premises configuration. 
+
+If you've ever wondered why "Out of Office" is abbreviated as "OOF" instead of as "OOO," see
 [this blog post](https://techcommunity.microsoft.com/t5/exchange-team-blog/why-is-oof-an-oof-and-not-an-ooo/ba-p/610191).
 
 ## What is an Out of Office reply?
