@@ -4,7 +4,7 @@
   items:
   - name: Access denied configuring MAM
     href: configure-app-protection-access-denied.md
-  - name: Access denied for Intune app protection options
+  - name: Access denied for app protection options
     href: app-protection-options-access-denied.md
   - name: Apps don't appear as Available
     href: apps-appear-unavailable.md
@@ -114,10 +114,28 @@
     href: bitlocker-encrypted-device-not-compliant.md
   - name: Can't access company resources on DEP devices
     href: cannot-access-company-resources-on-dep.md
-  - name: Can't assign SCEP certificates to devices
-    href: cannot-assign-scep-certificates.md
-  - name: CertificateRegistrationSvc verify request error
-    href: certificateregistrationsvc-verify-request-error.md
+  - name: Certificates
+    items:
+    - name: Can't assign SCEP certificates to devices
+      href: cannot-assign-scep-certificates.md
+    - name: CertificateRegistrationSvc verify request error
+      href: certificateregistrationsvc-verify-request-error.md
+    - name: Devices fail to obtain SCEP certificates
+      href: devices-receive-scep-certificates-error-0x80094800.md
+    - name: Intune Connector Setup Wizard ended prematurely
+      href: connector-setup-wizard-ends-prematurely.md
+    - name: NDES certificate not installed
+      href: error-0x80090014-installing-ndes-certificate.md
+    - name: SCEP certificate deployment fails after CA renewal
+      href: scep-deployment-to-win10-devices-fails.md
+    - name: SCEP certificate request fails on CRP
+      href: scep-certificate-request-fails.md
+    - name: Sign in to Intune NDES Connector error 0x80004003
+      href: ndes-connector-signin-error-80004003.md
+    - name: Troubleshoot PKCS certificate deployment
+      href: troubleshooting-pkcs-certificate-deployment.md
+    - name: Verify NDES configuration on-premises
+      href: verify-ndes-configuration.md
   - name: Conditional Access
     items:
     - name: Can't move an Intune Exchange connector
@@ -128,28 +146,12 @@
       href: exchange-connector-version-not-supported.md
     - name: Unable to connect or send inventory information
       href: unable-to-connect-send-inventory-information.md
-  - name: Devices fail to obtain SCEP certificates
-    href: devices-receive-scep-certificates-error-0x80094800.md
   - name: Error -2016281112 deploying a password policy
     href: error-deploying-password-policy.md
-  - name: Intune Connector Setup Wizard ended prematurely
-    href: connector-setup-wizard-ends-prematurely.md
-  - name: NDES certificate not installed
-    href: error-0x80090014-installing-ndes-certificate.md
-  - name: SCEP certificate deployment fails after CA renewal
-    href: scep-deployment-to-win10-devices-fails.md
-  - name: SCEP certificate request fails on CRP
-    href: scep-certificate-request-fails.md
   - name: Secure boot enabled device shows as Not Compliant
     href: secure-boot-enabled-device-shows-not-compliant.md
-  - name: Sign in to Intune NDES Connector error 0x80004003
-    href: ndes-connector-signin-error-80004003.md
-  - name: Troubleshoot PKCS certificate deployment
-    href: troubleshooting-pkcs-certificate-deployment.md
   - name: Users are prompted to enroll when accessing Office 365 resources
     href: intune-licensed-users-prompted-to-enroll.md
-  - name: Verify NDES configuration on-premises
-    href: verify-ndes-configuration.md
   - name: Windows 10 devices show incorrect compliance status
     href: win10-devices-show-incorrect-compliance-status.md
 - name: General guidance or advisory
