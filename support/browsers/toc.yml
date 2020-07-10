@@ -3,49 +3,52 @@
 
 - name: Administration
   items:
-  - name: Add favorites and protected mode are failed
-    href: cannot-add-favorites-and-protected-ie.md
+    - name: Can't add favorites and protected mode
+      href: cannot-add-favorites-and-protected-ie.md
 
-  - name: Automatically detect settings not working
-    href: automatically-detect-settings-enabled.md
+    - name: Automatically detect settings not working
+      href: automatically-detect-settings-enabled.md
 
-  - name: Check Internet Explorer version
-    href: check-ie-version.md
+    - name: Can't change home page
+      href: cannot-change-home-page-in-ie.md
 
-  - name: Can't change home page
-    href: cannot-change-home-page-in-ie.md
+    - name: Empty IEM is reported as winning
+      href: empty-ie-policy-as-winning.md
 
-  - name: Change the homepage and search provider
-    href: change-homepage-and-search-ie.md
+    - name: How to change homepage and search provider
+      href: change-homepage-and-search-in-ie.md
 
-  - name: Delete IEM content not affect extension
-    href: empty-ie-policy-as-winning.md
+    - name: How to check IE version
+      href: check-ie-version.md
 
-  - name: How to disable password caching
-    href: disable-ie-password-caching.md
+    - name: How to set advanced settings via GPOs
+      href: advanced-settings-in-ie.md
 
-  - name: IEAK 9 supported languages
-    href: ieak-9-supported-languages.md
+    - name: How to disable password caching
+      href: disable-ie-password-caching.md
 
-  - name: Non-secure content can't be displayed in ie
-    href: only-display-secure-content-ie9.md
+    - name: IEAK 9 supported languages
+      href: ieak-9-supported-languages.md
 
-  - name: PAC file isn't read
-    href: cannot-read-pac-file.md
+    - name: Non-secure content can't be displayed
+      href: only-display-secure-content-ie9.md
 
-  - name: Set advanced settings via GPOs
-    href: advanced-settings-in-ie.md
+    - name: PAC file isn't read
+      href: cannot-read-pac-file.md
 
 - name: Connectivity and Navigation
   items:
-    - name: Change keep-alive time-out
+    - name: Can't access some websites
+      href: can't-access-websites-in-ie.md
+
+    - name: Download html files via download manager
+      href: how-ie-downloads-html-files.md
+
+    - name: How to change keep-alive time-out value
       href: change-keep-alive-time-out.md
 
-    - name: Permanent cookie loss after you close Internet Explorer
-      href: permanent-cookies-for-weboc-lost.md
-
-    - name: Download html file via download manager
-      href: how-ie-downloads-html-files.md
+    - name: How to reset proxy settings
+      href: how-reset-ie-proxy-settings.md
 
     - name: How to prevent caching
       href: prevent-caching-in-ie.md
@@ -53,16 +56,22 @@
     - name: Intranet options are enabled automatically
       href: intranet-options-enabled-automatically.md
 
-    - name: Nearly 49.7 days will trigger timeout events
+    - name: Can't display the webpage
+      href: an-error-when-access-a-webpage.md
+
+    - name: Nearly 49.7 days trigger timeout events
       href: timeout-events-in-ie-get-fired.md
 
-    - name: Page Cannot be Displayed error
+    - name: Permanent cookies loss after closing IE
+      href: permanent-cookies-for-weboc-lost.md
+
+    - name: Page cannot be displayed error
       href: page-cannot-be-displayed.md
 
-    - name: Persistent cookies lost between Internet Explorer and office app
+    - name: Persistent cookies lost between IE and Office
       href: cookies-not-shared-ie-and-office.md
 
-    - name: Session variables not persist if install patch
+    - name: Session variables are missing
       href: variables-not-persist-between-requests.md
 
     - name: Use one-word to access intranet sites
@@ -70,7 +79,7 @@
 
 - name: Core Features
   items:
-    - name: Apply Property Error when changing shortcut
+    - name: Apply property error when changing shortcut
       href: apply-property-error.md
 
     - name: AutoComplete not working
@@ -88,22 +97,22 @@
     - name: Date is wrong when converting to DST
       href: error-dst-time-zones.md
 
-    - name: Hidden text can be copied as well
+    - name: Hidden text can be copied
       href: hidden-text-can-copy-from-ie.md
 
     - name: How to set zoom level
       href: set-zoom-level-in-ie.md
 
-    - name: Reset zoom level isn't respected
+    - name: How to set full-screen mode
+      href: set-fullscreen-ie.md
+
+    - name: Reset zoom level not respected
       href: new-window-not-respect-zoom-level.md
 
     - name: RSS feeds not listed or subscribed
       href: rss-feeds-not-listed-or-cannot-subscribe.md
 
-    - name: Set Internet Explorer start full-screen mode
-      href: set-fullscreen-ie.md
-
-    - name: Win7 not support spellcheck and autocorrect
+    - name: Win7 doesn't support spell check and AutoCorrect
       href: spellcheck-and-autocorrect-not-available-win7.md
 
 - name: Development and Website Issues
@@ -111,13 +120,13 @@
     - name: Add-in window appears behind the main window
       href: add-in-shows-behind-main-window.md
 
-    - name: ActiveX controls stop receiving focus in ie9
+    - name: ActiveX controls stop receiving focus
       href: a-webpage-fails-get-focus-ie9.md
 
     - name: BHOs and toolbars not working
       href: third-party-products-break.md
 
-    - name: CSS styles renders incorrectly in webpage
+    - name: CSS styles webpage renders incorrectly
       href: css-styles-webpage-renders-wrongly.md
 
     - name: Can't access FTP sites
@@ -132,20 +141,29 @@
     - name: Can't read location object
       href: permission-denied-read-location-object.md
 
+    - name: Can't open hyperlinks on a webpage
+      href: nothing-happens-click-link-in-ie.md
+
     - name: Delay for visiting pages or page elements
       href: updatepanel-async-postbacks-slow-in-ie.md
 
-    - name: DIV tag with 100% relative height isn't resized
+    - name: DIV tag with 100% relative height not resized
       href: div-tag-hundred-relative-height-not-resized.md
 
     - name: Enable file download for MIME types
       href: raise-file-download-for-mime-types.md
 
-    - name: Existing named window can’t be navigated
+    - name: Event doesn't fire if autocomplete is enabled
+      href: text-changed-event-not-fire-with-autocomplete.md
+
+    - name: Existing named window can't be navigated
       href: named-window-fail-navigate-existing-window.md
 
     - name: Files couldn't be downloaded error
       href: cannot-download-files-secure-websites.md
+
+    - name: FormData can't be sent by XMLHttpRequest
+      href: xmlhttprequest-not-correctly-send-formdata.md
 
     - name: FTP WinInet APIs in VB application
       href: using-ftp-wininet-apis-in-vb.md
@@ -153,35 +171,26 @@
     - name: Global settings of activeX shared on client
       href: webbrowser-clients-share-global-settings.md
 
-    - name: How connect a running instance in ie
+    - name: How to connect a running instance
       href: connect-a-running-instance-in-ie.md
 
-    - name: Internet Explorer can’t open a hyperlink on a webpage
-      href: nothing-happens-click-link-in-ie.md
-
-    - name: Internet Explorer start as published app but named window not exist
-      href: named-browser-window-cannot-be-found-ie.md
+    - name: How to hide the Clear button
+      href: how-to-hide-clear-button-ie10.md
 
     - name: Iframe content should be rendered in standard mode
       href: an-iframe-content-on-top-scrollbar.md
 
-    - name: Invalid HTML in Internet Explorer
+    - name: Invalid HTML is created in design mode
       href: ie-creates-invalid-html-design-mode.md
 
     - name: Isolation values don't take effect
       href: unicode-bidi-isolation-not-supported.md
 
-    - name: Listed silverlight add-ons not verified in ie
+    - name: Listed Silverlight add-ons not verified
       href: silverlight-addons-not-verified-in-ie.md
 
-    - name: Methods of migrating bookmarks to ie
-      href: transfer-bookmarks-from-firefox-ie.md
-
-    - name: Use FTP with CERN-based proxy using WinInet API
-      href: ftp-with-cern-based-proxy-using-wininet-api.md
-
-    - name: FormData can't be sent by XMLHttpRequest
-      href: xmlhttprequest-not-correctly-send-formdata.md
+    - name: Methods of migrating bookmarks
+      href: transfer-bookmarks-from-firefox-to-ie.md
 
     - name: Missing inner text containing block elements
       href: table-text-overlaps-borders-or-missing.md
@@ -189,13 +198,13 @@
     - name: Modified codebase not loaded in activeX
       href: activex-not-loaded-modified-codebase.md
 
-    - name: Not display clear button in ie10
-      href: how-to-hide-clear-button-ie10.md
+    - name: Named window doesn't exist
+      href: named-browser-window-cannot-be-found-ie.md
 
     - name: Open in new tab or window doesn't work
       href: cannot-open-in-new-tab-or-window.md
 
-    - name: Onload event not show if back
+    - name: Onload event not shown if back
       href: onload-event-not-occur-if-back.md
 
     - name: Runtime errors
@@ -204,13 +213,13 @@
     - name: Script error causes webpage not displayed
       href: troubleshoot-script-errors-in-ie.md
 
-    - name: Services not support WinInet
+    - name: Services doesn't support WinInet
       href: wininet-not-supported-in-services.md
 
     - name: Same DISPID can't be returned
       href: ie-dispid-property.md
 
-    - name: Specified size and position not reflected in ie
+    - name: Specified size and position not reflected
       href: value-of-windowopen-not-reflected-ie.md
 
     - name: Standards mode not used for trusted sites
@@ -222,19 +231,19 @@
     - name: Troubleshoot online gaming issues
       href: troubleshoot-online-games-ie.md
 
-    - name: Event does not fire if autocomplete is enabled
-      href: text-changed-event-not-fire-with-autocomplete.md
-
-    - name: Text overlow ellipsis not working
+    - name: Text-overlow ellipsis not working
       href: text-overlow-ellipsis-not-working.md
+
+    - name: Use FTP with CERN-based proxy using WinInet API
+      href: ftp-with-cern-based-proxy-using-wininet-api.md
 
     - name: VBD documents can't be loaded
       href: ie-fails-to-load-vbd-documents.md
 
-    - name: VML isn't displayed in strict standards-compliant
+    - name: VML not displayed in strict standards-compliant
       href: vml-not-shown-in-strict-standards-compliant.md
 
-    - name: Wrong calculation of scrollheight in ie
+    - name: Wrong calculation of scrollHeight
       href: scrollheight-return-incorrect-values-ie.md
 
     - name: Wrong character set used for html page
@@ -245,39 +254,39 @@
 
 - name: General
   items:
-    - name: Collected data by Internet Explorer Diagnostics
+    - name: Collected data by diagnostics
       href: ie-diagnostics-collected-data.md
 
-    - name: Collected data by Data collector
+    - name: Collected data by data collector
       href: collected-info-ie-data-collector.md
 
-    - name: Different versions information of ie
+    - name: Different versions information
       href: information-about-ie-version.md
 
-    - name: Internet Explorer WPAD data collection
+    - name: WPAD data collection
       href: ie-wpad-diagnostic.md
 
 - name: Installation
   items:
-    - name: A list of prerequisite updates for ie11
-      href: prerequisite-updates-for-ie11.md
-
     - name: How to create all-inclusive deployment package
       href: create-all-inclusive-deploy-package.md
 
-    - name: Internet Explorer 11 installation fails
+    - name: IE 11 installation fails
       href: ie-installation-fails.md
 
-    - name: No icons or customizations after installing ie9
+    - name: No icons or customizations
       href: Install-ie9-not-apply-icons-or-customizations.md
 
-    - name: Prerequisite software and components of ie9
+    - name: Prerequisite software and components of IE 9
       href: prerequisites-for-installing-ie9.md
 
-    - name: Sysprep failes when ie10 is installed
+    - name: Prerequisite updates for IE 11
+      href: prerequisite-updates-for-ie11.md
+
+    - name: Sysprep fails when IE 10 is installed
       href: sysprep-fail-after-ie10-installed.md
 
-    - name: Troubleshoot ie9 installation issues
+    - name: Troubleshoot IE 9 installation issues
       href: troubleshoot-installation-problems-ie9.md
 
 - name: Security and Privacy
@@ -288,49 +297,49 @@
     - name: Can't sign in to VSTS
       href: cannot-sign-in-to-vsts.md
 
-    - name: CRL from distribution point to describe the cryptography api
-      href: description-of-cryptography-api-proxy-from-crl.md
+    - name: CSP shows Loading for a certificate request
+      href: csp-as-loading-when-submit-certificate-request.md
 
     - name: Error occurs when opening files
       href: cannot-open-certain-files.md
 
-    - name: Https site cannot be displayed
+    - name: Https site can't be displayed
       href: ie-cannot-display-https-site.md
 
-    - name: Java security setup in Internet Explorer
+    - name: Java security setup
       href: set-java-security-in-ie.md
 
-    - name: Prompt a password when use authentication
+    - name: Prompt a password when using authentication
       href: ie-may-prompt-a-password.md
 
-    - name: Smartcard pin prompt appears in ie9
+    - name: Smart card pin prompt appears in IE 9
       href: smartcard-pin-behind-dialog-box.md
 
-    - name: User names and passwords not be supported in ie
-      href: ie-not-support-names-and-passwords.md
+    - name: Troubleshoot network retrieval of CRLs
+      href: description-of-cryptography-api-proxy-from-crl.md
 
-    - name: Use certificate request page appears loading of csp
-      href: csp-as-loading-when-submit-certificate-request.md
+    - name: User names and passwords not supported
+      href: ie-not-support-names-and-passwords.md
 
 - name: Stability and Performance
   items:
-    - name: Can’t install ie11 on windows
+    - name: Can't install IE 11 on Windows
       href: ie10-not-install-on-system.md
 
-    - name: Characters typed in the webpage are missing
+    - name: Characters typed in webpage are missing
       href: typed-characters-slow-or-fail-ie.md
-
-    - name: Internet Explorer no response if smartscreen enabled
-      href: ie-stop-when-access-smartscreen.md
-
-    - name: Quirks mode affect page zoom
-      href: ie-rendering-performance-decreased.md
-
-    - name: Slow rendering for document mode
-      href: document-modes-slow-rendering.md
 
     - name: Flickers when showing animated content
       href: ie-flickers-with-hybrid-graphics.md
 
     - name: Memory usage rises due to iframes
       href: memory-usage-rises-with-iframes.md
+
+    - name: No response if SmartScreen is enabled
+      href: ie-stop-when-access-smartscreen.md
+
+    - name: Quirks mode affects page zoom
+      href: ie-rendering-performance-decreased.md
+
+    - name: Slow rendering for document mode
+      href: document-modes-slow-rendering.md
