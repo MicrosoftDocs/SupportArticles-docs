@@ -6,31 +6,31 @@
     href: failed-download-error-jdk-vs.md
   - name: Known issues when you install Release Management
     href: issue-release-management-vs-2013.md
-  - name: Known issues for Visual Studio 2010 SP1 in Windows 8
+  - name: Visual Studio 2010 SP1 known issues
     href: known-issues-vs-2010-sp1-windows-8.md
-  - name: Visual Studio 2013 known issues
+  - name: Visual Studio 2013 known issues
     href: known-issues-visual-studio-2013.md
 
 - name: Installation
   items:
-  - name: Fix Visual Studio DIA SDK install location
+  - name: Fix DIA SDK install location
     href: fix-vs-dia-sdk-install-location.md
-  - name: Issues and workarounds in Visual Studio 2012 setup
+  - name: Issues and workarounds in Visual Studio 2012 setup
     href: issues-workarounds-vs-2012-setup.md
-  - name: Issues and workarounds in Visual Studio 2013 setup
+  - name: Issues and workarounds in Visual Studio 2013 setup
     href: issues-workarounds-vs-2013-setup.md
-  - name: MsiApplyMultiplePatches returns 1601 error
+  - name: MsiApplyMultiplePatches returns 1601 error
     href: msiapplymultiplepatches-error-1601.md
   - name: Secondary Installer uninstall instructions
     href: vs-secondary-installer-third-party-app.md
+  - name: Setup crashes due to certain fonts
+    href: fonts-cause-vs-setup-crash.md
   - name: Uninstall third-party applications
     href: uninstall-third-party-app-vs-2015.md
   - name: Uninstall Visual Studio 2012
     href: uninstall-visual-studio-2012.md
-  - name: Visual Studio setup crashes due to certain fonts
-    href: fonts-cause-vs-setup-crash.md
 
 - name: Third Party Tools installed with Visual Studio
   items:
-  - name: Can't install Visual Studio Tools for Apache Cordova CTP 3.1
+  - name: Can't install Visual Studio Tools for Apache Cordova CTP 3.1
     href: cannot-install-vs-tools-ctp-3-dot-1.md

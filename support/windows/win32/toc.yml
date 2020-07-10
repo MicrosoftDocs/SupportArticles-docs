@@ -103,7 +103,7 @@
     items:
     - name: Can't print to XPS Document Writer
       href: print-app-xps-document-writer.md
-    - name: Get status of a printer and print job
+    - name: Get status of printer and print job
       href: printer-print-job-status.md
     - name: Printer device fonts
       href: printer-device-fonts.md
