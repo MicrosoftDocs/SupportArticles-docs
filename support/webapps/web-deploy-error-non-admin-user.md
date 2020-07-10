@@ -1,12 +1,12 @@
 ---
 title: Web Deployment error with non-admin user
-description: Provides a resolution to error message when performing a Web Deploy operation that requires administrative permissions.
+description: This article provides a resolution to error message when performing a Web Deploy operation that requires administrative permissions.
 ms.date: 03/23/2020
 ms.prod-support-area-path:
 ---
-# Error when using the Web Deployment tool as a non-administrative user
+# Error when you use the Web Deployment tool as a non-administrative user
 
-This article provides resolutions to error messages when you use the Web Deployment Tool (Web Deploy) as a non-administrative user.
+This article helps you resolve the problem that error occurs when you use the Web Deployment Tool (Web Deploy) as a non-administrative user.
 
 _Original product version:_ &nbsp; Internet Information Services  
 _Original KB number:_ &nbsp; 2023852

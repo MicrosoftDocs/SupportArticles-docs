@@ -1,12 +1,12 @@
 ---
 title: Can't create Object when running ASP
-description: Describes errors when APS applications run, and provide a solution.
+description: This article provides resolutions for the Cannot create object error that occurs when APS applications run.
 ms.date: 02/27/2020
 ms.prod-support-area-path:
 ---
 # Can't create Object when browsing ASP pages
 
-This article provides information about resolving **Cannot create object** errors when an Active Server Pages (ASP) applications run.
+This article helps you resolve the problem that an error (Cannot create object) occurs when an Active Server Pages (ASP) applications run.
 
 _Original product version:_ &nbsp; Active Server Pages  
 _Original KB number:_ &nbsp; 201740
@@ -43,4 +43,4 @@ This problem is related to the permissions granted to your DLLs. The *IUSR_compu
 
 ## Resolution
 
-The *IUSR_computer* and *IWAM_computer* account must be granted read permissions to the \<drive letter>: \Program Files\Common Files\System\ADO directory.
+The *IUSR_computer* and *IWAM_computer* account must be granted read permissions to the `\<drive letter>: \Program Files\Common Files\System\ADO` directory.

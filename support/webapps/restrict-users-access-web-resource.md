@@ -1,10 +1,11 @@
 ---
 title: Restrict users from accessing to web resources
-description: Describes methods about restricting specific users from gaining access to specified web resources.
+description: This article describes some methods about restricting specific users from gaining access to specified web resources.
 ms.date: 03/26/2020
 ms.prod-support-area-path:
+ms.topic: how-to
 ---
-# How to restrict specific users from gaining access to specified web resources
+# Restrict specific users from gaining access to specified web resources
 
 This article describes methods about how to restrict specific users from gaining access to specified web resources.
 
@@ -22,7 +23,7 @@ For ASP.NET web applications where you use Windows authentication and you enable
 - To require authentication, remove the ASPNET user account's access permissions for the file or folder.
 - To restrict access to specific Windows user accounts or group accounts, grant or deny Read NTFS file permissions to files or folders.
 
-## Control authorization by modifying Web.config file
+## Control authorization by modifying the Web.config file
 
 To restrict access to ASP.NET applications that use forms authentication, edit the `<authorization>` element in the application's *Web.config* file. To do this, follow these steps:
 

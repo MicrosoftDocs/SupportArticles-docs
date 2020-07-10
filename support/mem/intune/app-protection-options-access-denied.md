@@ -2,7 +2,7 @@
 title: Access denied error in Intune App Protection tool
 description: Describes an issue in which an Intune Service Administrator has no permission to access the Exchange Online and SharePoint Online options in the Intune mobile application management tool. Provides a resolution to grant the administrator Contributor permissions.
 ms.date: 05/11/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: App management
 ms.reviewer: cbrito, mcopm
 ---
 # Access Denied error when accessing Exchange Online and SharePoint Online options in Intune MAM tool

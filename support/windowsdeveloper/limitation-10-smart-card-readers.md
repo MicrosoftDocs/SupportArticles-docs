@@ -3,6 +3,7 @@ title: Limitation of 10 smart card readers
 description: Explains that Windows Server 2012, Windows 8, and later versions of Windows Server and Windows are limited to using 10 smartcard readers.
 ms.date: 03/16/2020
 ms.prod-support-area-path: 
+ms.topic: article
 ---
 # Limitation of 10 smartcard readers in Windows Server 2012 R2, Windows 8, and later
 

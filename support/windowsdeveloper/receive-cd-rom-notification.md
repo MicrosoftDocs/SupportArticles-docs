@@ -1,8 +1,9 @@
 ---
-title: How to receive CD-ROM notification
+title: Receive CD-ROM notification
 description: This article explains how to handle the WM_DEVICECHANGE message to detect CD-ROM or DVD media changes.
 ms.date: 03/16/2020
 ms.prod-support-area-path: 
+ms.topic: how-to
 ---
 # How to receive notification of CD-ROM insertion or removal
 

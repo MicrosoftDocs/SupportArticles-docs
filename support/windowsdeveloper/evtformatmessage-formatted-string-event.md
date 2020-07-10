@@ -1,6 +1,6 @@
 ---
 title: Format message strings by EvtFormatMessage
-description: Discusses obtaining formatted strings associated with an event using EvtFormatMessage and handling errors that may occur if the formatted strings can't be retrieved.
+description: This article discusses obtaining formatted strings associated with an event using EvtFormatMessage and handling errors that may occur if the formatted strings can't be retrieved.
 ms.date: 04/29/2020
 ms.prod-support-area-path:
 ms.reviewer: davean, franki

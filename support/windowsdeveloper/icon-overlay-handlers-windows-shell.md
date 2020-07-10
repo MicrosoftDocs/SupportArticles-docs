@@ -7,7 +7,7 @@ ms.reviewer: davean
 ---
 # Registered icon overlay handlers aren't used by Windows Shell
 
-This article provides information about resolving the issue that Windows Shell doesn't display some icon overlays.
+This article helps you resolve the problem that Windows Shell doesn't display some icon overlays.
 
 _Original product version:_ &nbsp; Windows 10, 8.1, 8  
 _Original KB number:_ &nbsp; 3106961

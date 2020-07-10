@@ -1,6 +1,6 @@
 ---
 title: Call shell functions from multithreaded apartment
-description: Introduces why calling shell functions from a thread that has been initialized as a multithreaded apartment may cause the functions fail.
+description: This article introduces why calling shell functions from a thread that has been initialized as a multithreaded apartment may cause the functions fail.
 ms.date: 03/10/2020
 ms.prod-support-area-path:
 ms.reviewer: DAVEAN

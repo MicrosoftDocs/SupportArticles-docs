@@ -2,7 +2,7 @@
 title: Best practices for Intune software distribution to Windows PC
 description: Describes tips and best practices for distributing a software or update package to Windows PC clients by using Microsoft Intune.
 ms.date: 05/11/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: Software distribution
 ---
 # Best practices for Intune software distribution to Windows PC
 

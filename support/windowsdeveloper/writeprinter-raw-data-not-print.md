@@ -6,7 +6,7 @@ ms.prod-support-area-path:
 ---
 # WritePrinter() with RAW data fails to print with TS Easy Print
 
-This article provides information about resolving the failure with Terminal Services Easy Print when you call to the `WritePrinter()` API to write RAW data directly to a printer.
+This article helps you resolve the failure with Terminal Services Easy Print when you call to the `WritePrinter()` API to write RAW data directly to a printer.
 
 _Original product version:_ &nbsp; Windows  
 _Original KB number:_ &nbsp; 2827141

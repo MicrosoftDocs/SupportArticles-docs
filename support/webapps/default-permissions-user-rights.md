@@ -1,28 +1,29 @@
 ---
 title: Default permissions and user rights in IIS
-description: Describes the default permissions and user rights that are set on certain folders and files. These folders and files are installed in IIS 7.0 and later.
+description: This article describes the default permissions and user rights that are set on certain folders and files. These folders and files are installed in IIS 7.0 and later.
 ms.date: 04/01/2020
 ms.prod-support-area-path: 
 ms.reviewer: mlaing
+ms.topic: article
 ---
-# Description of default permissions and user rights for IIS 7.0 and later
+# Default permissions and user rights for IIS 7.0 and later
 
-This article describes the default permissions and user rights that are set on certain folders and files. These folders and files are installed with Internet Information Services (IIS) 7.0 and later.
+This article describes the default permissions and user rights that are set on certain folders and files. These folders and files are installed with Microsoft Internet Information Services (IIS) 7.0 and later.
 
 _Original product version:_ &nbsp; Internet Information Services 8.0  
 _Original KB number:_ &nbsp; 981949
 
 ## Changes in permissions between IIS 6.0 and IIS 7.0/7.5/8.0/8.5
 
-In IIS 6.0, a local account (`IUSR_MachineName`) is created when IIS is installed. The `IUSR_MachineName` account is the default identity that is used by IIS when Anonymous authentication is enabled. Anonymous authentication is used by both the File Transfer Protocol (FTP) service and the HyperText Transfer Protocol (HTTP) service. IIS 6.0 also contains a group that is named `IIS_WPG`. The `IIS_WPG` group is used as a container for all `Application Pool Identities`.
+In IIS 6.0, a local account (`IUSR_MachineName`) is created when IIS is installed. The `IUSR_MachineName` account is the default identity that is used by IIS when Anonymous authentication is enabled. Anonymous authentication is used by both the File Transfer Protocol (FTP) service and the HyperText Transfer Protocol (HTTP) service. IIS 6.0 also contains a group that is named `IIS_WPG`. The `IIS_WPG` group is used as a container for all Application Pool Identities.
 
 In IIS 7.0 and later, a built-in account (IUSR) replaces the `IUSR_MachineName` account. Additionally, a group that is named `IIS_IUSRS` replaces the `IIS_WPG` group. Because the IUSR account is a built-in account, the IUSR account no longer requires a password. The IUSR account resembles a network or local service account. The `IUSR_MachineName` account is created and used only when the FTP 6 server that is included on the Windows Server 2008 DVD is installed. If the FTP 6 server isn't installed, the account isn't created.
 
-Beginning in IIS 7.5, a new security feature is added that is called `Application Pool Identities`. This feature lets you run Application Pools under a unique account without having to create and manage domain or local accounts. The name of the Application Pool account corresponds to the name of the Application Pool.
+Beginning in IIS 7.5, a new security feature is added that is called *Application Pool Identities*. This feature lets you run Application Pools under a unique account without having to create and manage domain or local accounts. The name of the Application Pool account corresponds to the name of the Application Pool.
 
 For more information about IIS 7.0 accounts and groups, visit [Understanding built-in user and group accounts in IIS 7](/iis/get-started/planning-for-security/understanding-built-in-user-and-group-accounts-in-iis).
 
-For more information about `Application Pool Identities`, visit [Application Pool Identities](/iis/manage/configuring-security/application-pool-identities).
+For more information about Application Pool Identities, visit [Application Pool Identities](/iis/manage/configuring-security/application-pool-identities).
 
 ## Default NTFS file system permissions
 

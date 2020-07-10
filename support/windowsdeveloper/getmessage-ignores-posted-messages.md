@@ -1,13 +1,13 @@
 ---
 title: GetMessage ignores posted messages
-description: Discuss an issue that GetMessage doesn't receive messages posted while a WinEvent callback function is being executed. Provides resolutions.
+description: This article discusses an issue that GetMessage doesn't receive messages posted while a WinEvent callback function is being executed. Provides resolutions.
 ms.date: 03/10/2020
 ms.prod-support-area-path:
 ms.reviewer: davean
 ---
 # GetMessage ignores posted messages received during the execution of a WinEvent callback
 
-This article provides information about resolving an issue that the `GetMessage` API doesn't receive messages that are posted while a `WinEvent` callback function is being executed.
+This article helps you resolve the problem that the `GetMessage` API doesn't receive messages that are posted while a `WinEvent` callback function is being executed.
 
 _Original product version:_ &nbsp; Windows Server 2008, Windows 7, Windows Server 2003 R2, Windows Vista  
 _Original KB number:_ &nbsp; 2682659

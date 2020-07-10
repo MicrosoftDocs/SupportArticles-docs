@@ -1,31 +1,33 @@
 ---
 title: Modify printer settings by SetPrinter API
-description: Introduces that you should do some preparations to properly call SetPrinter API.
+description: This article introduces that you should do some preparations to properly call SetPrinter API.
 ms.date: 03/09/2020
-ms.reviewer: kayda 
+ms.prod-support-area-path:
+ms.reviewer: kayda
+ms.topic: how-to
 ---
-# How to modify printer settings by using SetPrinter
+# Modify printer settings by using the SetPrinter function
 
 The `SetPrinter` function allows applications to change various printer attributes. However, as the code in this article demonstrates, a certain amount of preparation is necessary to correctly call `SetPrinter`.
 
 _Original product version:_ &nbsp; Windows  
 _Original KB number:_ &nbsp; 140285
 
-## hPrinter parameter for SetPrinter function
+## hPrinter parameter for SetPrinter
 
 The first parameter is a handle to the printer whose settings are to be changed. This parameter should be retrieved from `OpenPrinter()`.
 
-## dwLevel parameter for SetPrinter function
+## dwLevel parameter for SetPrinter
 
 The second parameter specifies the structure of the data being passed to `SetPrinter()`. The parameter value can be **0**, **2**, **3**, **4**,**5**, **6**, **7**, **8**, or **9**.
 
-## lpbPrinter parameter for SetPrinter function
+## lpbPrinter parameter for SetPrinter
 
 The third parameter is a `PRINTER_INFO_n` structure where `n` corresponds to the number in the second parameter. This structure can cause confusion because it isn't simply a buffer of the size of the structure. These structures contain device-independent information but are immediately followed in memory by some variable amount of device-dependent information, which is given by the device driver. Therefore, a little work is involved to determine how significant this buffer should be. This is achieved by calling `GetPrinter()`, which will set `pcbNeeded` to the total size needed.
 
 Also, the buffer typically has a large amount of device-independent and device-dependent information in it. Your application is not going to know or care about the values in most of these structure members. So, when you make the changes in which you are interested, you must plug in the correct values for all of these other pieces of data. These other pieces of data are set when you call `GetPrinter()` a second time.
 
-## DwCommand parameter for SetPrinter function
+## DwCommand parameter for SetPrinter
 
 The fourth parameter is used to pause printing, resume printing, or clear all print jobs. This parameter is typically not used at the same time as `lpbPrinter` is used. This article is not concerned with setting the printer state, so the sample code sets this parameter to zero.
 

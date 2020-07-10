@@ -1,12 +1,13 @@
 ---
 title: Use app .resx to create a ASP.NET web app
-description: Provides instructions for how to use resource files (.resx) to efficiently create a localizable ASP.NET Web application.
+description: This article provides instructions that how to use resource files (.resx) to efficiently create a localizable ASP.NET Web application.
 ms.date: 04/09/2020
 ms.prod-support-area-path: 
+ms.topic: how-to
 ---
-# How to use application resource files (.resx) to efficiently create a localizable ASP.NET Web application
+# Use application resource files (.resx) to efficiently create a localizable ASP.NET Web application
 
-This article describes how to use the resource file to create a localizable ASP.NET Web application that you can view in two languages. The method in this article uses Microsoft Visual Studio to populate the resource file by using values that are based on control properties for each page.
+This article describes that how to use the resource file to create a localizable ASP.NET Web application that you can view in two languages. The method in this article uses Microsoft Visual Studio to populate the resource file by using values that are based on control properties for each page.
 
 _Original product version:_ &nbsp; ASP.NET  
 _Original KB number:_ &nbsp; 917414
@@ -31,21 +32,21 @@ To prepare a new ASP.NET Web application to use localized values, follow these s
 
 1. Create a Web application by using Visual Studio. Follow these steps:
     1. Start Visual Studio.
-    2. On the **File** menu, click **Web Site**.
-    3. Click **ASP.NET Web Site**, click **Visual Basic** in the **Language** list, and then click **OK**.
+    2. On the **File** menu, select **Web Site**.
+    3. Select **ASP.NET Web Site**, select **Visual Basic** in the **Language** list, and then select **OK**.
   
         > [!NOTE]
         > A new Web site is created, and the *Default.aspx* file is displayed in Source view.
 
-    4. To switch to Design view, click **Design**.
+    4. To switch to Design view, select **Design**.
 
 2. To display static text, add controls to the page. Follow these steps:
     1. In the Toolbox, double-click the **Label** control to add a Label control to the page.
-    2. Click **Label**.
+    2. Select **Label**.
     3. In the **Properties** window, type *Date* in the **Text** box.
     4. In the **Toolbox**, double-click the **Label** control to add a Label control to the page.
     5. Arrange this control to appear under the **Date** label.
-    6. Click **Label**.
+    6. Select **Label**.
     7. In the **Properties** window, type Time in the **Text** box.
 
 3. To display dynamic text, add controls to the page. Follow these steps:
@@ -69,16 +70,16 @@ To generate the resource files automatically, follow these steps:
     > [!NOTE]
     > The *Default.aspx* file opens in Design view.
 
-2. On the **Tools** menu, click **Generate Local Resources**.
+2. On the **Tools** menu, select **Generate Local Resources**.
 
     > [!NOTE]
     > By default, a new folder that is named *App_LocalResources* is created. Additionally, a resource file that is named *Default.aspx.resx* is created. This file contains information about each Label control on the page. The values in the resource file match the values that you entered for each Label control in Design view.
 
-3. In Solution Explorer, right-click the *Default.aspx.resx* file, and then click **Copy**.
+3. In Solution Explorer, right-click the *Default.aspx.resx* file, and then select **Copy**.
 
-4. In Solution Explorer, right-click the **App_LocalResources** folder, and then click **Paste**.
+4. In Solution Explorer, right-click the **App_LocalResources** folder, and then select **Paste**.
 
-5. In Solution Explorer, right-click the *Copy of Default.aspx.resx* file, and then click **Rename**.
+5. In Solution Explorer, right-click the *Copy of Default.aspx.resx* file, and then select **Rename**.
 
 6. Type *Default.aspx.es-mx.resx*, and then press **ENTER**.
 
@@ -90,24 +91,24 @@ To generate the resource files automatically, follow these steps:
 
 To test the application, follow these steps:
 
-1. On the **Debug** menu, click **Start Debugging**.
+1. On the **Debug** menu, select **Start Debugging**.
 
     > [!NOTE]
     > By default, Microsoft Internet Explorer starts, and the *Default.aspx* file of the ASP.NET web application is displayed.
 
-2. On the **Tools** menu in Internet Explorer, click **Internet Options**.
+2. On the **Tools** menu in Internet Explorer, select **Internet Options**.
 
-3. In the **Internet Options** dialog box, click the **General** tab, and then click **Languages**.
+3. In the **Internet Options** dialog box, select the **General** tab, and then select **Languages**.
 
-4. In the **Language Preferences** dialog box, click **Add**.
+4. In the **Language Preferences** dialog box, select **Add**.
 
-5. In the **Add Language** dialog box, click **Spanish (Mexico) [es-mx]**, and then click **OK**.
+5. In the **Add Language** dialog box, select **Spanish (Mexico) [es-mx]**, and then click **OK**.
 
-6. In the **Language Preferences** dialog box, click **Spanish (Mexico) [es-mx]**, click **Move Up**, and then click **OK**.
+6. In the **Language Preferences** dialog box, select **Spanish (Mexico) [es-mx]**, select **Move Up**, and then select **OK**.
 
-7. To close the **Internet Options** dialog box, click **OK**.
+7. To close the **Internet Options** dialog box, select **OK**.
 
-8. To view the localized content on the page by using the new language settings, click **Refresh** on the **View** menu.
+8. To view the localized content on the page by using the new language settings, select **Refresh** on the **View** menu.
 
 ## References
 

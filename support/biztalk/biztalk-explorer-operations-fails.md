@@ -1,19 +1,19 @@
 ---
 title: BizTalk Explorer operations fail
-description: Describes a workaround for System.Data.SqlClient.SQLException error message while performing BizTalk Explorer operations.  
+description: This article describes a workaround for a System.Data.SqlClient.SQLException error message while you're performing BizTalk Explorer operations.  
 ms.date: 03/16/2020
 ms.prod-support-area-path:
 ---
-# BizTalk Explorer operations fail with a System.Data.SqlClient.SQLException error
+# BizTalk Explorer operations fail with System.Data.SqlClient.SQLException
 
-This article provides information about resolving the issue that BizTalk Explorer operations fail when using the BizTalk Explorer Object Model to manipulate service instances and messages.
+This article provides information about resolving the failure of BizTalk Explorer operations when you're using the BizTalk Explorer Object Model to manipulate service instances and messages.
 
 _Original product version:_ &nbsp; BizTalk Server 2013, 2010  
 _Original KB number:_ &nbsp; 3054335
 
 ## Symptoms
 
-The BizTalk Explorer Object Model allows users to manipulate service instances and messages like shown in the example below:
+The BizTalk Explorer Object Model allows users to manipulate service instances and messages, as shown in the following example:
 
 ```csharp
 using System;
@@ -38,11 +38,11 @@ namespace TestSus
 }
 ```
 
-You receive the following exception message:
+You might receive the following message:
 
-> Exception:  
+> Exeption:
 > An unhandled exception of type 'System.Data.SqlClient.SqlException' occurred in Microsoft.BizTalk.Operations.dll: Conversion failed when converting from a character string to unique identifier.
 
 ## Workaround
 
-To work around this problem, create two separate `BizTalkOperations` objects. Use one `BizTalkOperations` object to call `GetMessage()` and the other to call `TerminateInstance()`. Generally, you should create two `BizTalkOperations` objects: use one for read operations and the other for write operations.
+To work around this problem, create two `BizTalkOperations` objects. Use one `BizTalkOperations` object to call `GetMessage()` and the other to call `TerminateInstance()`. Generally, you should create two `BizTalkOperations` objects: use one for read operations and the other for write operations.

@@ -2,7 +2,7 @@
 title: Set up app protection policies for iOS devices
 description: Describes how to set up and validate Intune app protection policies for managed iOS devices.
 ms.date: 05/13/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: App management
 ---
 # Set up and validate app protection policies for managed iOS devices
 

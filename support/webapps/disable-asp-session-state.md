@@ -1,10 +1,11 @@
 ---
 title: Disable ASP session state in ASP.NET
-description: Demonstrates how to disable session state in ASP.NET.
+description: This article demonstrates how to disable session state in ASP.NET.
 ms.date: 04/03/2020
 ms.prod-support-area-path:
+ms.topic: how-to
 ---
-# How to disable ASP session state in ASP.NET  
+# Disable ASP session state in ASP.NET  
 
 This article demonstrates how to disable session state in ASP.NET.
 
@@ -30,9 +31,9 @@ The following steps demonstrate how to disable session state at the application 
 
 The following steps demonstrate how to disable session state at the page level, which affects only the specific pages that enable these changes:
 
-1. Start Microsoft Visual Studio .NET, and create a new ASP.NET Web Application.
+1. Start Visual Studio .NET, and create a new ASP.NET Web Application.
 2. In **Solution Explorer**, double-click the Web Form for which you want to disable session state.
-3. Click the **HTML** tab.
+3. Select the **HTML** tab.
 4. At the top of the page, add `EnableSessionState="false"` in the @ Page directive. The modified attribute should appear similar to the following:
 
     ```aspx-csharp
@@ -52,4 +53,4 @@ If you try to set or retrieve information when session state is disabled, you re
 ## References
 
 - [ASP.NET Session State](/previous-versions/dotnet/articles/ms972429(v=msdn.10))
-- [\<sessionState> Section](https://msdn2.microsoft.com/library/h6bb9cz9%28vs.71%29.aspx)
+- [\<sessionState> Section](/previous-versions/dotnet/netframework-1.1/h6bb9cz9(v=vs.71))

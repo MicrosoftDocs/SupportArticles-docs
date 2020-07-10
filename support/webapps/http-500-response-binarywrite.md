@@ -1,6 +1,6 @@
 ---
 title: HTTP 500 or Response buffer limit exceeded
-description: Describes an issue in which the client receives an 'HTTP 500' or 'Response buffer limit exceeded' error when you send a file by using a web server that has IIS 7 or a later version installed.
+description: This article describes a problem that the client receives an 'HTTP 500' or 'Response buffer limit exceeded' error occurs when you send a file by using a web server that has IIS 7 or a later version installed.
 ms.date: 04/15/2020
 ms.prod-support-area-path: 
 ms.technology: iis
@@ -8,7 +8,7 @@ ms.reviewer: mlaing, v-jayc
 ---
 # HTTP 500 or Response buffer limit exceeded error when using Response.BinaryWrite in IIS
 
-This article provides information about resolving the **HTTP 500** or the **Response buffer limit exceeded** error that occurs when you use the `Response.BinaryWrite` method to send a file.
+This article helps you resolve the problem that an error (HTTP 500 or Response buffer limit exceeded) occurs when you use the `Response.BinaryWrite` method to send a file.
 
 _Original product version:_ &nbsp; Internet Information Services 7 and later versions  
 _Original KB number:_ &nbsp; 944886
@@ -60,7 +60,7 @@ If you must increase the buffer limit, select a buffer limit that allows for the
 
 To increase the buffering limit in IIS 7 and later versions, follow these steps:
 
-1. Click **Start**, click **Run**, type *cmd*, and then click **OK**.
+1. Select **Start**, select **Run**, type *cmd*, and then select **OK**.
 2. Type the `cd /d %systemdrive%\inetpub\adminscripts` command, and then press Enter.
 3. Type the `cscript.exe adsutil.vbs SET w3svc/aspbufferinglimit LimitSize` command, and then press Enter.
 
@@ -69,7 +69,7 @@ To increase the buffering limit in IIS 7 and later versions, follow these steps:
 
 To confirm that the buffer limit is set correctly, follow these steps:
 
-1. Click **Start**, click **Run**, type *cmd*, and then click **OK**.
+1. Select **Start**, select **Run**, type *cmd*, and then select **OK**.
 2. Type the `cd /d %systemdrive%\inetpub\adminscripts` command, and then press Enter.
 3. Type the `cscript.exe adsutil.vbs GET w3svc/aspbufferinglimit` command, and then press Enter.
 

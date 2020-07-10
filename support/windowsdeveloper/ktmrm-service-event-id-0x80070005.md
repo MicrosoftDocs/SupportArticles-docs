@@ -6,7 +6,7 @@ ms.prod-support-area-path:
 ---
 # KTMRM service failed with event ID 4448 and 0x80070005 (Access Denied)
 
-This article provides information about resolving the issue that Kernel Transaction Manager Resource Manager (KTMRM) service fails when you run a distributed transaction from a process (for example, w3wp.exe) under a domain account on Windows.
+This article helps you resolve the problem that Kernel Transaction Manager Resource Manager (KTMRM) service fails when you run a distributed transaction from a process (for example, w3wp.exe) under a domain account on Windows.
 
 _Original product version:_ &nbsp; Windows Server 2008  
 _Original KB number:_ &nbsp; 2607379
@@ -15,13 +15,13 @@ _Original KB number:_ &nbsp; 2607379
 
 When you run a distributed transaction from a process (for example, w3wp.exe) under a domain account on Windows Server 2008 and above, the transaction may fail. An access denied error (0x80070005) is logged in the application log:
 
-> Log Name:      Application<br/>
-> Source:        Microsoft-Windows-MSDTC Client<br/>
-> Event ID:      4448<br/>
-> Task Category: KTMRM<br/>
-> Level:         Error<br/>
-> Keywords:      Classic<br/>
-> Description:<br/>
+> Log Name:      Application  
+> Source:        Microsoft-Windows-MSDTC Client  
+> Event ID:      4448  
+> Task Category: KTMRM  
+> Level:         Error  
+> Keywords:      Classic  
+> Description:  
 > KTMRM service failed to load the system restore information. As a result, the service is exiting. Please try restarting the service, if the service fails to start, contact product support. Error Specifics: hr = 0x80070005, xxxx, CmdLine: xxxx, Pid: xxxx
 
 ## Cause

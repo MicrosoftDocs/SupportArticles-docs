@@ -2,7 +2,7 @@
 title: Can't prevent saving images locally using app protection policy
 description: Describes an issue in which images in Outlook for iOS can be saved to local storage even if you use app protection policy to prevent such behavior.
 ms.date: 05/11/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: App management
 ms.reviewer: joelste, andcerat
 ---
 # Saving images locally in Outlook for iOS isn't restricted by app protection policy

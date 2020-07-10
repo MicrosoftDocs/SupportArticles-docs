@@ -1,13 +1,13 @@
 ---
 title: Event ID 1072 or 1076 on state servers
-description: Resolution to state server log Event ID 1072 or 1076
+description: This article provides resolutions for the state server log Event ID 1072 or 1076.
 ms.date: 03/25/2020
 ms.prod-support-area-path: 
 ms.reviewer: V-KIMWA, VENKATC
 ---
 # State server logs Event ID 1072 or Event ID 1076
 
-This article describes log Events ID 1072 or 1076 on State servers and provides a resolution to the issue.
+This article helps you resolve the problem that log Events ID 1072 or 1076 on State servers.
 
 _Original product version:_ &nbsp; Microsoft .NET Framework  
 _Original KB number:_ &nbsp; 308097
@@ -28,7 +28,7 @@ One of the events below appears in the Application Event log of the state server
 > An error occurred in while processing a request in state server. Major callstack: EndOfRequest. Error code: 0x80072746
 
 > [!NOTE]
-> The version of the Microsoft .NET Framework that is mentioned in the previous event message is a pre-release version of the .NET Framework 1.0.  
+> The version of the .NET Framework that is mentioned in the previous event message is a pre-release version of the .NET Framework 1.0.  
 
 > Event Type:Error  
 > Event Source:ASP.NET 1.0.3306.0  
@@ -73,7 +73,7 @@ To modify the TCP/IP operation time-out value for the ASP.NET Web server process
 Here's how to modify the TCP/IP operation time-out value for the state server:
 
 1. Stop the ASP.NET state server service.
-2. Click **Start**, click **Run**, type *Regedt32.exe*, and then click **OK** to start Registry Editor.
+2. Select **Start**, select **Run**, type *Regedt32.exe*, and then select **OK** to start Registry Editor.
 3. Locate the following key in the registry:  `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\aspnet_state\Parameter`
 4. Add a DWORD value that is named *SocketTimeout*. Set a positive integer to represent the new TCP/IP timeout in seconds.
 5. Quit the Registry Editor.

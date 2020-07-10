@@ -1,10 +1,12 @@
 ---
 title: Enable diagnostic tracing for MS DTC
-description: Describes how to enable diagnostic tracing for MS DTC on a Windows 10 computer.
+description: This article describes how to enable diagnostic tracing for MS DTC on a Windows 10 computer.
 ms.date: 03/13/2020
 ms.reviewer: johngil
+ms.prod-support-area-path:
+ms.topic: how-to
 ---
-# How to enable diagnostic tracing for MS DTC on a Windows 10 computer
+# Enable diagnostic tracing for MS DTC on a Windows 10 computer
 
 This article discusses how to enable diagnostic tracing for the Microsoft Distributed Transaction Coordinator (MS DTC) on a Windows 10 computer.
 
@@ -31,10 +33,10 @@ _Original KB number:_ &nbsp; 926099
 
 You can use the Component Services Microsoft Management Console (MMC) snap-in to enable transaction manager tracing. To do this, follow these steps:
 
-1. Click **Start**, click **All Programs**, click **Accessories**, and then click **Run**.
-2. Type *comexp.msc*, and then click **OK**.
-3. Expand **Component Services**, expand **Computers**, expand **My Computer**, expand **Distributed Transaction Manager**, right-click **Local DTC**, and then click **Properties**.
-4. Click the **Tracing** tab.
+1. Select **Start**, select **All Programs**, select **Accessories**, and then select **Run**.
+2. Type *comexp.msc*, and then select **OK**.
+3. Expand **Component Services**, expand **Computers**, expand **My Computer**, expand **Distributed Transaction Manager**, right-click **Local DTC**, and then select **Properties**.
+4. Select the **Tracing** tab.
 5. On the **Tracing** tab, you can modify the following TM tracing options:
 
     - **Trace Output**
@@ -62,28 +64,26 @@ Additionally, in Windows 10 and Windows Server Technical Preview, the tracing lo
 > [!WARNING]
 > Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system. Microsoft can't guarantee that these problems can be solved. Modify the registry at your own risk.
 
-Trace configuration is located on the local node, in a registry key that is named Tracing under the MS DTC registry key. The Tracing registry key includes connection manager tracing. Previously, you used the `TraceCMErr` registry key to configure connection manager tracing. The Tracing registry key contains the following two sub keys:
+Trace configuration is located on the local node, in a registry key that is named `Tracing` under the MS DTC registry key. The `Tracing` registry key includes connection manager tracing. Previously, you used the `TraceCMErr` registry key to configure connection manager tracing. The `Tracing` registry key contains the following two sub keys:
 
-- Sources  
-  The `Sources` sub key configures the kind of tracing.
-- Output  
-  The `Output` sub key configures where the tracing output is sent.
+- `Sources`: This sub key configures the kind of tracing.
+- `Output`: This sub key configures where the tracing output is sent.
 
 > [!NOTE]
-> Make sure that the process can access the Tracing registry key. By default, the Windows configuration doesn't create this key and doesn't grant permissions to this key. You can use Registry Editor to configure tracing functionality.
+> Make sure that the process can access the `Tracing` registry key. By default, the Windows configuration doesn't create this key and doesn't grant permissions to this key. You can use Registry Editor to configure tracing functionality.
 
 To create tracing functionality registry entries, follow these steps:
 
-1. Click **Start**, click **All Programs**, click **Accessories**, click **Run**, type *regedit*, and then click **OK**.
-2. Locate and then click one of the following sub keys:
+1. Select **Start** > **All Programs** > **Accessories** > **Run**, type *regedit*, and then select **OK**.
+2. Locate and then select one of the following sub keys:
 
     - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDTC\Tracing\Sources`
     - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDTC\Tracing\Output`
 
-3. On the **Edit** menu, click **New**, and then click the data type of the entry. For example, click **DWORD (32-bit) Value**.
+3. On the **Edit** menu, select **New**, and then select the data type of the entry. For example, select **DWORD (32-bit) Value**.
 4. Type the name of the desired source, and then press ENTER. For more information about the source names, see the table in the **Configure sources** section.
-5. Right-click the new registry entry, click **Modify**, type the value that you want in the **Value data** box, and then click **OK**.
-6. On the **File** menu, click **Exit**.
+5. Right-click the new registry entry, select **Modify**, type the value that you want in the **Value data** box, and then select **OK**.
+6. On the **File** menu, select **Exit**.
 
 ### Configure sources
 
@@ -179,11 +179,11 @@ Alternatively, you can create a .reg file, and then you can use Registry Editor 
     "TRACE_VSSBACKUP"=dword:00000000
     ```
 
-2. Click **Start**, click **All Programs**, click **Accessories**, click **Run**, type *regedit*, and then click **OK**.
-3. On the **File** menu, click **Import**.
-4. Locate the file that you created in step 1, and then click **Open**. The **Registry Editor** dialog box appears.
-5. Click **OK**.
-6. On the **File** menu, click **Exit**.
+2. Select **Start** > **All Programs** > **Accessories** > **Run**, type *regedit*, and then click **OK**.
+3. On the **File** menu, select **Import**.
+4. Locate the file that you created in step 1, and then select **Open**. The **Registry Editor** dialog box appears.
+5. Select **OK**.
+6. On the **File** menu, select **Exit**.
 
 ## Performance effect
 

@@ -1,13 +1,13 @@
 ---
-title: Applications receive errors when creating COM+ component
-description: Describes a problem that may occur when a client application tries to create a COM+ component, and the client application receives an error message.
+title: Application receive error when creating COM+
+description: This article describes a problem that might occur when a client application tries to create a COM+ component, and the client application receives an error message.
 ms.date: 05/12/2020
 ms.prod-support-area-path:
 ms.reviewer: wmascia, wmascia
 ---
 # A client application may intermittently receive an error message when it tries to create a COM+ component
 
-This article provides information about resolving the issue that the client application may intermittently receive an error message when it creates a COM+ component.
+This article helps you resolve the problem that the client application might intermittently receive an error message when it creates a COM+ component.
 
 _Original product version:_ &nbsp; Windows  
 _Original KB number:_ &nbsp; 911359
@@ -56,7 +56,7 @@ For more information about the `DllMain` function, see [DllMain entry point](/wi
 
 To determine which COM component contains the affected code, use the Microsoft Internet Information Services (IIS) Debug Diagnostic Tool (DebugDiag). To do this, follow these steps:
 
-1. [Download and install DebugDiag](https:///www.debugdiag.com).
+1. [Download and install DebugDiag](https://www.microsoft.com/download/details.aspx?id=58210).
 2. Create a crash rule in DebugDiag. To do this, follow these steps:
 
    1. Click **Start**, point to **Programs**, point to **IIS Diagnostics (32bit)**, point to **Debug Diagnostics Tool**, and then click **Debug Diagnostics Tool 1.0**.
@@ -79,14 +79,14 @@ To determine which COM component contains the affected code, use the Microsoft I
    18. In the **Rule Completed** dialog box, click **Activate the rule now**, and then click **Finish**.
 
 DebugDiag monitors the selected COM+ application when the application runs. Every time that DebugDiag experiences one of the selected breakpoints, DebugDiag adds data to a log file. By default, the log file will be named:  
-C:\Program Files\IIS Resources\DebugDiag\Logs\dllhost__PID__\<pid>\__Date__\<date> __Time\_\<time> Log.txt
+`C:\Program Files\IIS Resources\DebugDiag\Logs\dllhost__PID__\<pid>\__Date__\<date> __Time\_\<time> Log.txt`
 
 When an error occurs in the application, review the appropriate log file to find the affected DLL. In the following example, the affected COM component is *Mybaddll.dll*. The following call stacks are examples of expected API calls that are directly from the COM+ runtime:
 
 ```console
 [10/27/2005 10:03:42 AM] Breakpoint at ole32!CoInitializeEx caused by 3500
 [10/27/2005 10:03:42 AM] Stack Trace
-ChildEBP RetAddr Args to Child 
+ChildEBP RetAddr Args to Child
 0097ff38 7668c062 00000000 00000002 7c910732 ole32!CoInitializeEx
 0097ff80 77c3a3b0 000de370 7c910732 00000005 COMSVCS!CSTAThread::WorkerLoop+0x6c
 0097ffb4 7c80b50b 0003e018 7c910732 00000005 msvcrt!_endthreadex+0xa9
@@ -103,7 +103,7 @@ ChildEBP RetAddr Args to Child
 
 [10/27/2005 10:13:29 AM] Breakpoint at ole32!CoUninitialize caused by 2188
 [10/27/2005 10:13:29 AM] Stack Trace
-ChildEBP RetAddr Args to Child 
+ChildEBP RetAddr Args to Child
 0007fd98 0100128e 00092388 00000000 0007fdbc ole32!CoUninitialize
 0007ff1c 010015b0 01000000 00000000 00092388 dllhost!WinMain+0xd0
 0007ffc0 7c816d4f 00098610 005df0fc 7ffdb000 dllhost!WinMainCRTStartup+0x174
@@ -115,7 +115,7 @@ The following call stacks are examples of unexpected API calls from a custom DLL
 ```console
 [10/27/2005 10:03:49 AM] Breakpoint at ole32!CoInitializeEx caused by 3500
 [10/27/2005 10:03:42 AM] Stack Trace
-ChildEBP RetAddr Args to Child 
+ChildEBP RetAddr Args to Child
 0097e684 1001349c 00000000 00000001 0097e7cc ole32!CoInitialize
 0097e76c 100293ca 10000000 00000001 00000000 MyBadDLL!DllMain+0x4c
 0097e7b8 7c9011a7 10000000 00000001 00000000 MyBadDLL!_DllMainCRTStartup+0xca
@@ -167,7 +167,7 @@ ChildEBP RetAddr Args to Child
 
 [10/27/2005 10:08:42 AM] Breakpoint at ole32!CoUninitialize caused by 628
 [10/27/2005 10:08:42 AM] Stack Trace
-ChildEBP RetAddr Args to Child 
+ChildEBP RetAddr Args to Child
 0097f9f4 100134e5 0097fb7c 0097fb38 10011712 ole32!CoUninitialize
 0097fad8 100293ca 10000000 00000000 00000000 MyBadDLL!DllMain+0x95
 0097fb24 7c9011a7 10000000 00000000 00000000 MyBadDLL!_DllMainCRTStartup+0xca

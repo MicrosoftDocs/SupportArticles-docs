@@ -1,10 +1,11 @@
 ---
 title: Command-line arguments for Screen Savers 
-description: Description of command-line arguments for Win32 Screen Savers marked 4.0 or higher. 
+description: This article description of command-line arguments for Win32 Screen Savers marked 4.0 or higher. 
 ms.date: 02/28/2020
 ms.prod-support-area-path:
+ms.topic: article
 ---
-# Info: Screen Saver command-line arguments
+# Screen Saver command-line arguments
 
 This article introduces command-line arguments for Win32 Screen Savers marked 4.0 or higher.
 

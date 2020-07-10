@@ -1,12 +1,12 @@
 ---
-title: Exception when using Server.Transfer
-description: System.Threading.ThreadAbortException when you use Server.Transfer in HTTPHandler in an ASP.NET application.
+title: Exception when you use Server.Transfer
+description: This article provides resolutions for System.Threading.ThreadAbortException error that occurs when you use Server.Transfer in HTTPHandler in an ASP.NET application.
 ms.date: 04/09/2020
 ms.prod-support-area-path: 
 ---
 # System.Threading.ThreadAbortException when you use Server.Transfer in HTTPHandler in an ASP.NET application
 
-This article provides information about resolving an issue that an error may be thrown when you use a `Server.Transfer` method in `HTTPHandler` to transfer the control from one page to another in an ASP.NET web application.
+This article helps you resolve the problem that an error might be thrown when you use a `Server.Transfer` method in `HTTPHandler` to transfer the control from one page to another in an ASP.NET web application.
 
 _Original product version:_ &nbsp; ASP.NET  
 _Original KB number:_ &nbsp; 817266
@@ -65,7 +65,7 @@ This behavior is by design.
 ## Steps to reproduce the behavior
 
 1. In Microsoft Visual Studio .NET, use Visual Basic .NET or Visual C# .NET to create a new ASP.NET Web Application project. By default, *WebForm1.aspx* is created. Name the project *ServerTransferTest*.
-2. Right-click **WebForm1.aspx** and then click **View HTML Source**.
+2. Right-click **WebForm1.aspx** and then select **View HTML Source**.
 3. Replace the existing code with the following sample code:
 
     ```html
@@ -153,8 +153,8 @@ This behavior is by design.
     End Class
     ```
 
-5. On the **File** menu, click **Add New Item**.
-6. Under **Add New Item**, click **Class**. In the **Name** text box under **Add New Item**, rename the class `HelloWorldHandler`, and then click **Open**.
+5. On the **File** menu, select **Add New Item**.
+6. Under **Add New Item**, select **Class**. In the **Name** text box under **Add New Item**, rename the class `HelloWorldHandler`, and then click **Open**.
 7. Replace the existing code in the `HelloWorldHandler` class file with the following sample code:
 
     Visual C# .NET sample code
@@ -206,7 +206,7 @@ This behavior is by design.
        End Sub
        ' Override the IsReusable property.
        Public ReadOnly Property IsReusable() As Boolean _
-       Implements IHttpHandler.IsReusable
+           Implements IHttpHandler.IsReusable
           Get
              Return True
           End Get
@@ -282,7 +282,7 @@ This behavior is by design.
     </configuration>
     ```
 
-11. On the **Debug** menu, click **Start**, and then click the following hyperlink on *WebForm1.aspx*:  
+11. On the **Debug** menu, select **Start**, and then click the following hyperlink on *WebForm1.aspx*:  
     `http://localhost/ServerTransferTest/test.ashx`
 
 ## References

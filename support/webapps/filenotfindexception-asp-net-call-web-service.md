@@ -1,12 +1,12 @@
 ---
-title: FileNotFoundException when calling web service
-description: Provides information about resolving the issue that you receive the System.IO.FileNotFoundException error when a Microsoft ASP.NET Web application calls a web service.
+title: FileNotFoundException when you call web service
+description: This article provides resolutions for the System.IO.FileNotFoundException error that occurs when a Microsoft ASP.NET Web application calls a web service.
 ms.date: 03/26/2020
 ms.prod-support-area-path:
 ---
 # You receive a System.IO.FileNotFoundException error when the client application calls a web service
 
-This article provides information about resolving and reproducing the **System.IO.FileNotFoundException** error when an Microsoft ASP.NET Web application calls a web service.
+This article helps you resolve the problem that an error (System.IO.FileNotFoundException) occurs when an Microsoft ASP.NET Web application calls a web service.
 
 _Original product version:_ &nbsp; ASP.NET  
 _Original KB number:_ &nbsp; 823196
@@ -36,16 +36,16 @@ To resolve this problem, the ASP.NET worker process account (the ASPNET account 
 
 To assign required permissions to the worker process account on the Temp directory, follow these steps:
 
-1. In Microsoft Windows Explorer, locate the `%windir%\temp directory`.
-2. Right-click `%windir%\temp`, and then click **Properties**.
-3. In the **Properties** window, click the **Security** tab.
-4. Click **Add**, type *ServerName\ASPNET*, and then click **OK**.
+1. In Windows Explorer, locate the `%windir%\temp directory`.
+2. Right-click `%windir%\temp`, and then select **Properties**.
+3. In the **Properties** window, select the **Security** tab.
+4. Select **Add**, type *ServerName\ASPNET*, and then select **OK**.
 
     > [!NOTE]
     > Replace *ServerName* with the name of the web server.
 
     Replace *ASPNET* with *NETWORK SERVICE* if you deployed your application on IIS 6.0.
-5. Under **Allow**, click to select the **Full Control** check box, and then click **OK**.
+5. Under **Allow**, select the **Full Control** check box, and then select **OK**.
 
 ## Resolution 2: Find compiler errors in the code that XmlSerializer generated
 
@@ -84,23 +84,23 @@ The following sections provide information about steps to reproduce the behavior
 
 ### Create a web service
 
-1. Start Microsoft Visual Studio .NET.
-2. Create a new ASP.NET Web service project by using Microsoft Visual C# .NET or Microsoft Visual Basic .NET.
+1. Start Visual Studio .NET.
+2. Create a new ASP.NET Web service project by using Visual C# .NET or Visual Basic .NET.
 
     By default, *Service1.asmx* is created.
 3. Name the project *WebServiceTemp*.
-4. In Solution Explorer, right-click *Service1.asmx*, and then click **View Code**.
+4. In Solution Explorer, right-click *Service1.asmx*, and then select **View Code**.
 5. In the *Service1.asmx.cs* file (or the *Service1.asmx.vb* file if you are using Visual Basic .NET), uncomment the default `HelloWorld()` web method.
-6. On the **Build** menu, click **Build Solution**.
+6. On the **Build** menu, select **Build Solution**.
 
 ### Create a client web application
 
 1. Create a new ASP.NET Web application by using Visual C# .NET or Visual Basic .NET.
 2. Name the project *WebAppTemp*.
-3. In Solution Explorer, right-click **References**, and then click **Add Web Reference**.
+3. In Solution Explorer, right-click **References**, and then select **Add Web Reference**.
 4. In the **Address** text box, type the following URL for **WebServiceTemp**:  
     `http://localhost/WebServiceTemp/Service1.asmx`
-5. Click **Go**, and then click **Add Reference**.
+5. Select **Go**, and then select **Add Reference**.
 6. Double-click WebForm1 to open the `Page_Load` event code.
 7. Append the following code to the `Page_Load` event handler.
 
@@ -120,17 +120,17 @@ The following sections provide information about steps to reproduce the behavior
         Response.Write(myProxy.HelloWorld())
         ```
 
-8. On the **Build** menu, click **Build Solution**.
+8. On the **Build** menu, select **Build Solution**.
 
 ## Set permissions on the Temp directory
 
 To assign required permissions to the worker process account on the Temp directory, follow these steps:
 
-1. In Microsoft Windows Explorer, locate the `%windir%` directory.
-2. Right-click `%windir%\temp`, and then click **Properties**.
-3. On the **Properties** window, click the **Security** tab.
-4. Click **Add**, type *ServerName\ASPNET*, and then click **OK**.
-5. Make sure that the **Write** check box is not selected under **Allow**, and then click **OK**.
+1. In Windows Explorer, locate the `%windir%` directory.
+2. Right-click `%windir%\temp`, and then select **Properties**.
+3. On the **Properties** window, select the **Security** tab.
+4. Select **Add**, type *ServerName\ASPNET*, and then select **OK**.
+5. Make sure that the **Write** check box is not selected under **Allow**, and then select **OK**.
 6. Run the web application.
 
     You may receive the error that is mentioned in the [Symptoms](#symptoms) section of this article.

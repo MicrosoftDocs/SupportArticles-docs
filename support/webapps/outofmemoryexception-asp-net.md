@@ -1,13 +1,13 @@
 ---
-title: How to troubleshoot OutOfMemoryException
-description: Describes Out of Memory issues occurred in ASP.NET.
+title: Troubleshoot Out of Memory issues
+description: This article describes Out of Memory issues that occur in ASP.NET.
 ms.date: 03/26/2020
-ms.prod-support-area-path: 
-ms.reviewer: bretb; kaorif
+ms.prod-support-area-path:
+ms.reviewer: bretb, kaorif
 ---
-# How to troubleshoot Out of Memory issues (System.OutOfMemoryException) in ASP.NET
+# Troubleshoot Out of Memory issues (System.OutOfMemoryException) in ASP.NET
 
-This article provides information about troubleshooting **Out of Memory** error messages in ASP.NET.
+This article helps you troubleshoot **Out of Memory** errors in ASP.NET.
 
 _Original product version:_ &nbsp; ASP.NET  
 _Original KB number:_ &nbsp; 2020006
@@ -45,7 +45,7 @@ The following information outlines common causes of OOM conditions and the resol
 
 ## String concatenation
 
-Strings in a managed application (an application written using the .NET Framework) are immutable. When a new value is assigned to a string, a copy is made of the existing string and the new value is assigned to the new string. It doesn't typically cause any problems, but when a large number of strings are concatenated, it ends up causing many more string allocations than a developer might realize, and which can lead to memory growth and OOM conditions.
+Strings in a managed application (an application written by using the .NET Framework) are immutable. When a new value is assigned to a string, a copy is made of the existing string and the new value is assigned to the new string. It doesn't typically cause any problems, but when a large number of strings are concatenated, it ends up causing many more string allocations than a developer might realize, and which can lead to memory growth and OOM conditions.
 
 To avoid OOM due to string concatenation, make sure that you're using the `StringBuilder` class. For more information, see [How to improve string concatenation performance in Visual C#](https://support.microsoft.com/help/306822).
 
@@ -72,7 +72,7 @@ Fragmentation in the VA space is often caused by one or more of the following sc
 
   In this case, dynamic assemblies caused by Extensible Style sheet Language Transformations (XSLT) scripting or `XmlSerializers`.
 
-## Returning large sets of data
+## Return large sets of data
 
 When using data from a database or other data source, it's important to limit the amount of data returned. For example, caching the result of a query that returns an entire database table in order to avoid the cost of retrieving parts of data from the database when needed is not a good approach. Doing so can easily cause high memory and lead to an OOM condition. Allowing a user to initiate a similar query (for example, return all employees in a company or all customers in the state of Texas with a last name starting with the letter S) is another common way to create a high memory situation.
 
@@ -80,13 +80,13 @@ Always limit the amount of data that can be returned from a database. Don't allo
 
 It's equally important to ensure that you're not displaying a large data result in UI elements such as the GridView control. In addition to the memory required for the returned data, you'll also be consuming large amounts of data in strings and in UI elements required to render the results. By implementing paging and validating input so that large sets of data aren't returned, you can avoid this problem.
 
-## Running in a production environment with tracing enabled
+## Run in a production environment with tracing enabled
 
 ASP.NET tracing is a powerful feature for troubleshooting applications, but it should never be left on in a production environment. ASP.NET tracing uses data structures such as `DataTables` to store trace information, and over time, these can cause a high memory condition that can lead to OOM.
 
 Tracing should be disabled in a production environment. You can do so by setting the `enabled` attribute of the `<trace>` element to false in your *web.config* file. Enabling retail deployment by using `<deploy retail="true" />` also disables tracing in your applications.
 
-## Leaking native resources
+## Leak native resources
 
 Many managed resources will also make use of native resources. Because the GC doesn't clean up native resources, a developer is responsible for implementing (and calling) the Dispose method in order to clean up native resources. If you're using a type that implements the `IDisposable` interface and you don't call the `Dispose` method, you risk leaking native resources and causing an OOM condition.
 

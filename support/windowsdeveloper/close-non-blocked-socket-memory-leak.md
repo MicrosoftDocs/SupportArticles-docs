@@ -7,7 +7,7 @@ ms.reviewer: atuck
 ---
 # Closing a non-blocking socket with linger enabled may cause leak
 
-This article provides information about resolving leak issues when closing a non-blocking socket with linger enabled and the linger timeout set to 0.
+This article helps you resolve the leak problem when closing a non-blocking socket with linger enabled and the linger timeout set to 0.
 
 _Original product version:_ &nbsp; Winsock  
 _Original KB number:_ &nbsp; 2770054

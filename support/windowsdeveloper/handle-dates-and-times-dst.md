@@ -1,11 +1,12 @@
 ---
-title: Guidelines for dates and times handling
-description: Describes developer guidelines for date handling and for time handling. Includes guidelines to handle daylight saving time (DST).
+title: Guidelines for handling dates and times
+description: This article describes developer guidelines for date and time handling and includes guidelines to handle daylight saving time (DST).
 ms.date: 03/12/2020
 ms.prod-support-area-path:
 ms.reviewer: jhornick, djanson
+ms.topic: how-to
 ---
-# How to handle dates and times that include DST
+# Handle dates and times that include DST
 
 This article describes how to handle dates and times that include the daylight saving time (DST) and the effect of DST 2007 changes on certain products and technologies.
 
@@ -30,11 +31,11 @@ For more information about DST 2007, see [Daylight saving time help and support]
 
 On Windows Update and on Microsoft Update, updates are available that enable Windows to correctly apply the changes for DST 2007 and for the following years. After these updates are applied, Windows correctly calculates the current offsets from UTC time to local time as the computer passes through DST. The offsets include the offsets for the base APIs and for the networking time-related APIs.
 
-For more information, see [December 2007 cumulative time zone update for Microsoft Windows operating systems](https://support.microsoft.com/help/942763).
+For more information, see [December 2007 cumulative time zone update for Windows operating systems](https://support.microsoft.com/help/942763).
 
 ## DST 2007 effects on C runtime (CRT)
 
-The CRT also performs date translations and time translations. Therefore, the CRT must also be updated to include the new rules for DST 2007. The CRT performs its own time handling only when the TZ environment variable is set or when an underlying operating system API time call fails. Updates are available for the CRTs that are included with each version of Microsoft Visual Studio and also for the CRTs that are included with Windows. These updates enable the CRT to continue to correctly handle DST conversions in United States time zones.
+The CRT also performs date translations and time translations. Therefore, the CRT must also be updated to include the new rules for DST 2007. The CRT performs its own time handling only when the TZ environment variable is set or when an underlying operating system API time call fails. Updates are available for the CRTs that are included with each version of Visual Studio and also for the CRTs that are included with Windows. These updates enable the CRT to continue to correctly handle DST conversions in United States time zones.
 
 ## DST 2007 effects on the .NET Framework
 
@@ -42,11 +43,11 @@ The .NET Framework relies on the underlying operating system calls. Therefore, t
 
 ## DST 2007 effects on Visual Studio .NET IDEs
 
-The Visual Studio .NET Integrated Development Environments (IDEs) include versions 2002, 2003, and 2005 of Microsoft Visual C++, Microsoft Visual C#, and Microsoft Visual Basic. These products are affected only because they include the CRT. No IDE-specific update is required.
+The Visual Studio .NET Integrated Development Environments (IDEs) include versions 2002, 2003, and 2005 of Visual C++, Visual C#, and Visual Basic. These products are affected only because they include the CRT. No IDE-specific update is required.
 
 ## DST 2007 effects on Visual Studio 2005 Team Foundation Server
 
-Visual Studio 2005 Team Foundation Server relies on the underlying operating system for date and time conversions. Therefore, Visual Studio 2005 Team Foundation Server exhibits the same behavior as the operating system. Visual Studio 2005 Team Foundation Server also relies on Microsoft SQL Server, SQL Server Reporting Services, and Windows SharePoint Services. Computers should be updated with the relevant updates for the operating system, for SQL Server, and for Windows SharePoint Services. All relevant updates should be applied on all affected computers at the same time. No separate Visual Studio 2005 Team Foundation Server update is required.
+Visual Studio 2005 Team Foundation Server relies on the underlying operating system for date and time conversions. Therefore, Visual Studio 2005 Team Foundation Server exhibits the same behavior as the operating system. Visual Studio 2005 Team Foundation Server also relies on SQL Server, SQL Server Reporting Services, and Windows SharePoint Services. Computers should be updated with the relevant updates for the operating system, for SQL Server, and for Windows SharePoint Services. All relevant updates should be applied on all affected computers at the same time. No separate Visual Studio 2005 Team Foundation Server update is required.
 
 ## DST 2007 effects on Visual Studio 2005 Team System
 
@@ -66,7 +67,7 @@ This Software Development Kit (SDK) includes a version of the CRT that is affect
 
 The Windows SDK for Windows Vista also installs a set of merge modules (.msm files) for the Visual Studio 2005 CRT for redistribution of the CRT as part of custom C++ applications. An application that deploys the redistributable CRT to the installation folder of the application must deploy the updated CRT from the Visual Studio 2005 CRT update instead of the CRT .msm files from the Windows SDK for Windows Vista. An application that deploys the redistributable Visual Studio 2005 CRT update to the Windows installation folder must apply the Visual Studio 2005 CRT redistributable update to those computers.
 
-## DST 2007 effects on Platform SDK for Microsoft Windows Server 2003 R2
+## DST 2007 effects on platform SDK for Windows Server 2003 R2
 
 This SDK includes a version of the CRT that is affected by the DST 2007 changes. Customers must follow the release notes for this SDK and use the Visual Studio 2005 CRT updates if they're necessary.
 

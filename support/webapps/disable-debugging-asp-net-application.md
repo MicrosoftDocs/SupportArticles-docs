@@ -1,12 +1,13 @@
 ---
 title: Disable debugging for ASP.NET application
-description: Discusses how to disable debugging for ASP.NET applications
+description: This article discusses how to disable debugging for ASP.NET applications
 ms.date: 03/27/2020
 ms.prod-support-area-path:
+ms.topic: how-to
 ---
-# How to disable debugging for ASP.NET applications
+# Disable debugging for ASP.NET applications
 
-This step-by-step article discusses how to disable debugging for ASP.NET applications.
+This article discusses how to disable debugging for ASP.NET applications.
 
 _Original product version:_ &nbsp; ASP.NET  
 _Original KB number:_ &nbsp; 815157
@@ -21,9 +22,9 @@ To disable debugging, modify the *Web.config* file or the *Machine.config* file,
 
 To disable debugging, add the compilation element to the *Web.config* file of the application. The *Web.config* file is located in the application directory. To do this, follow these steps:
 
-1. Open the *Web.config* file in a text editor such as Notepad.exe. *Web.config* file is typically located in the application directory.
-2. In the *Web.config* file, locate the compilation element. Debugging is enabled when the debug attribute in the compilation element is set to **true**.
-3. Modify the debug attribute to **false**, and then save the *Web.config file* to disable debugging for that application.
+1. Open the *Web.config* file in a text editor such as Notepad.exe. Web.config file is typically located in the application directory.
+2. In the Web.config file, locate the compilation element. Debugging is enabled when the debug attribute in the compilation element is set to **true**.
+3. Modify the debug attribute to **false**, and then save the Web.config file to disable debugging for that application.
 
     The following code sample shows the compilation element with debug set to **false**:
 
@@ -33,13 +34,13 @@ To disable debugging, add the compilation element to the *Web.config* file of th
     />
     ```
 
-4. Save the *Web.config* file. The ASP.NET application automatically restarts.
+4. Save the Web.config file. The ASP.NET application automatically restarts.
 
 ## Method 2: Modify the Machine.config file
 
-You can also disable debugging for all applications on a system by modifying the *Machine.config* file. To confirm that debugging hasn't been enabled in the *Machine.config* file, follow these steps.
+You can also disable debugging for all applications on a system by modifying the *Machine.config* file. To confirm that debugging hasn't been enabled in the Machine.config file, follow these steps.
 
-1. Open the *Machine.config* file in a text editor such as Notepad.exe. The *Machine.config* file is typically located in the following folder:  
+1. Open the Machine.config file in a text editor such as Notepad.exe. The Machine.config file is typically located in the following folder:  
 
     `%SystemRoot%\Microsoft.NET\Framework\%VersionNumber%\CONFIG\`
 2. In the `Machine.config` file, locate the compilation element. Debugging is enabled when the debug attribute in the compilation element is set to **true**.
@@ -53,4 +54,4 @@ You can also disable debugging for all applications on a system by modifying the
     />
     ```
 
-4. Save the *Machine.config* file.
+4. Save the Machine.config file.

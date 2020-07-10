@@ -1,11 +1,12 @@
 ---
-title: Impersonation in ASP.NET application
-description: Describes ways to implement impersonation in an ASP.NET application. This article introduces how to implement impersonation by modifying Web.config and running a particular section of code.
+title: Impersonation in ASP.NET applications
+description: This article introduces how to implement impersonation by modifying Web.config and running a particular section of code.
 ms.date: 03/26/2020
 ms.prod-support-area-path:
 ms.reviewer: jallen
+ms.topic: how-to
 ---
-# How to implement impersonation in an ASP.NET application
+# Implement impersonation in an ASP.NET application
 
 This article describes different ways to implement impersonation in an ASP.NET application.
 
@@ -14,7 +15,7 @@ _Original KB number:_ &nbsp; 306158
 
 ## Summary
 
-This article introduces how to implement impersonation by modifying Web.config and running a particular section of code.
+This article introduces how to implement impersonation by modifying the Web.config file and running a particular section of code.
 
 It refers to the following Microsoft .NET Framework Class Library namespaces:
 
@@ -30,7 +31,7 @@ System.Security.Principal.WindowsIdentity.GetCurrent().Name
 
 ## Impersonate IIS authenticated account or user
 
-To impersonate the Internet Information Services (IIS) authenticating user on every request for every page in an ASP.NET application, you must include an `<identity>` tag in the *Web.config* file of this application and set the impersonate attribute to true. For example:
+To impersonate the Internet Information Services (IIS) authenticating user on every request for every page in an ASP.NET application, you must include an `<identity>` tag in the Web.config file of this application and set the impersonate attribute to true. For example:
 
 ```xml
 <identity impersonate="true" />
@@ -38,7 +39,7 @@ To impersonate the Internet Information Services (IIS) authenticating user on ev
 
 ## Impersonate a specific user for all requests of an ASP.NET application
 
-To impersonate a specific user for all the requests on all pages of an ASP.NET application, you can specify the `userName` and `password` attributes in the `<identity>` tag of the *Web.config* file for that application. For example:
+To impersonate a specific user for all the requests on all pages of an ASP.NET application, you can specify the `userName` and `password` attributes in the `<identity>` tag of the Web.config file for that application. For example:
 
 ```xml
 <identity impersonate="true" userName="accountname" password="password" />
@@ -54,7 +55,7 @@ To work around this problem, use one of the following methods:
     > [!NOTE]
     > Although you can use this method to work around the problem, Microsoft doesn't recommend this method.
 
-- Change the account that the Aspnet_wp.exe process runs under to the System account in the `<processModel>` configuration section of the  Machine.config file.
+- Change the account that the Aspnet_wp.exe process runs under to the System account in the `<processModel>` configuration section of the Machine.config file.
 
 ## Impersonate the authenticating user in code
 
@@ -84,7 +85,7 @@ To impersonate the authenticating user (`User.Identity`) only when you run a par
 
 To impersonate a specific user only when you run a particular section of code, use the following code:
 
-Visual Basic .NET
+**Visual Basic .NET**
 
 ```vbscript
 <%@ Page Language="VB" %>
@@ -156,7 +157,7 @@ End Sub
 </script>
 ```
 
-Visual C# .NET
+**Visual C# .NET**
 
 ```csharp
 <%@ Page Language="C#"%>
@@ -240,7 +241,7 @@ private void undoImpersonation()
 </script>
 ```
 
-The identity of the process that impersonates a specific user on a thread must have the **Act as part of the operating system** privilege if the Aspnet_wp.exe process is running on a Microsoft Windows 2000-based computer. The **Act as part of the operating system** privilege isn't required if the Aspnet_wp.exe process is running on a Windows XP-based computer or on a Windows Server 2003-based computer. By default, the Aspnet_wp.exe process runs under a computer account named ASPNET. However, this account doesn't have the required privileges to impersonate a specific user. You receive an error message if you try to impersonate a specific user.
+The identity of the process that impersonates a specific user on a thread must have the **Act as part of the operating system** privilege if the Aspnet_wp.exe process is running on a Windows 2000-based computer. The **Act as part of the operating system** privilege isn't required if the Aspnet_wp.exe process is running on a Windows XP-based computer or on a Windows Server 2003-based computer. By default, the Aspnet_wp.exe process runs under a computer account named ASPNET. However, this account doesn't have the required privileges to impersonate a specific user. You receive an error message if you try to impersonate a specific user.
 
 To work around this problem, use one of the following methods:
 

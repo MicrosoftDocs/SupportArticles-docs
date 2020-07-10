@@ -1,32 +1,20 @@
 - name: Index
   href: index.yml
 
-- name: .NET
-  href: dotnet/welcome-support-dotnet.md
+- name: Welcome
+  href: dotnet/welcome-dotnet.md
 
-- name: Biztalk Server support
-  href: biztalk/welcome-support-biztalk.md
-  
-- name: Browsers, Edge, IE support
-  href: browsers/welcome-support-browsers.md
+- name: Welcome
+  href: visualstudio/welcome-visual-studio.md
 
-- name: Host Integration Server
-  href: host-integration-server/welcome-support-his.md
+- name: Welcome
+  href: webapps/welcome-webapps.md
 
-- name: SQL Server support
-  href: sql/welcome-support-sql-server.md
-
-- name: Visual Studio support
-  href: visualstudio/welcome-support-visual-studio.md
-
-- name: Web Apps support
-  href: webapps/welcome-support-webapps.md
-
-- name: Windows Developer support
-  href: windowsdeveloper/welcome-support-windowsdeveloper.md
+- name: Welcome
+  href: windowsdeveloper/welcome-windowsdeveloper.md
 
 - name: Microsoft Endpoint Manager support
   href: mem/index.yml
-
-- name: System Center support
-  href: system-center/index.yml
+  
+- name: Welcome
+  href: biztalk/welcome-biztalk-server.md

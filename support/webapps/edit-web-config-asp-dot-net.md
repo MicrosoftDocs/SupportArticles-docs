@@ -1,10 +1,11 @@
 ---
-title: Edit configuration of ASP.NET Application
-description: Describes how to edit the Web.config file of an ASP.NET application.
+title: Edit configuration of an ASP.NET application
+description: This article describes how to edit the Web.config file of an ASP.NET application.
 ms.date: 03/27/2020
 ms.prod-support-area-path:
+ms.topic: how-to
 ---
-# How to edit the configuration of an ASP.NET application
+# Edit the configuration of an ASP.NET application
 
 This article describes how to edit the *Web.config* file of an ASP.NET application.
 
@@ -13,7 +14,7 @@ _Original KB number:_ &nbsp; 815178
 
 ## Summary
 
-The *Web.config* file defines the behavior of ASP.NET applications. The .NET Framework, including ASP.NET, uses XML-formatted .config text files to configure applications. This is a departure from conventional registry and metabase configuration mechanisms. Currently there's no Microsoft Management Console (MMC) snap-in or other Microsoft-provided administration tool for creating and for modifying .config files.
+The *Web.config* file defines the behavior of ASP.NET applications. The Microsoft .NET Framework, including ASP.NET, uses XML-formatted .config text files to configure applications. This is a departure from conventional registry and metabase configuration mechanisms. Currently there's no Microsoft Management Console (MMC) snap-in or other Microsoft-provided administration tool for creating and for modifying .config files.
 
 ## Add configuration settings to Web.config
 

@@ -1,13 +1,13 @@
 ---
 title: Exceptions cause ASP.NET apps to quit
-description: Describes a problem that occurs when an unhandled exception is thrown in an ASP.NET-based application on a computer that is running the .NET Framework 2.0 or a later version.
+description: This article describes a problem that occurs when an unhandled exception is thrown in an ASP.NET-based application on a computer that is running the .NET Framework 2.0 or a later version.
 ms.date: 04/09/2020
 ms.prod-support-area-path: 
 ms.reviewer: tmarq
 ---
 # Unhandled exceptions cause ASP.NET-based applications to quit unexpectedly in the .NET Framework
 
-This article provides information about resolving an issue that unhandled exceptions cause ASP.NET-based applications to quit unexpectedly in the .NET Framework.
+This article helps you resolve the problem that unhandled exceptions cause ASP.NET-based applications to quit unexpectedly in the .NET Framework.
 
 _Original product version:_ &nbsp; .NET Framework 4.5  
 _Original KB number:_ &nbsp; 911816
@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 911816
 
 ## Symptoms
 
-When an unhandled exception is thrown in a Microsoft ASP.NET-based application that is built on the Microsoft .NET Framework 2.0 and later versions, the application unexpectedly quits. When this problem occurs, no exception information that you must have to understanding the issue is logged in the application log.
+When an unhandled exception is thrown in a ASP.NET-based application that is built on the .NET Framework 2.0 and later versions, the application unexpectedly quits. When this problem occurs, no exception information that you must have to understanding the issue is logged in the application log.
 
 However, an event message that is similar to the following example may be logged in the System log. Additionally, an event message that is similar to the following example may be logged in the application log.
 
@@ -25,7 +25,7 @@ However, an event message that is similar to the following example may be logged
 
 This problem occurs because the default policy for unhandled exceptions has changed in the .NET Framework 2.0 and later versions. By default, the policy for unhandled exceptions is to end the worker process.
 
-In the Microsoft .NET Framework 1.1 and in the Microsoft .NET Framework 1.0, unhandled exceptions on managed threads were ignored. Unless you attached a debugger to catch the exception, you wouldn't realize that anything was wrong.
+In the .NET Framework 1.1 and in the .NET Framework 1.0, unhandled exceptions on managed threads were ignored. Unless you attached a debugger to catch the exception, you wouldn't realize that anything was wrong.
 
 ASP.NET uses the default policy for unhandled exceptions in the .NET Framework 2.0 and later versions. When an unhandled exception is thrown, the ASP.NET-based application unexpectedly quits.
 
@@ -150,7 +150,7 @@ To modify the `IHttpModule` object, follow these steps.
     ```
 
 2. Save the *UnhandledExceptionModule.cs* file to the `C:\Program Files\Microsoft Visual Studio 8\VC` folder.
-3. Open the Microsoft Visual Studio Command Prompt.
+3. Open the Visual Studio Command Prompt.
 4. Type `sn.exe -k key.snk`, and then press **ENTER**.
 5. Type `csc /t:library /r:system.web.dll,system.dll /keyfile:key.snk UnhandledExceptionModule.cs`, and then press **ENTER**.
 6. Type `gacutil.exe /if UnhandledExceptionModule.dll`, and then press **ENTER**.

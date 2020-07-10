@@ -1,6 +1,6 @@
 ---
-title: Session data is lost if using InProc
-description: Provides the workaround to solve the issue that session data is lost when you use ASP.NET InProc session state mode.
+title: Session data is lost if you use InProc
+description: This article provides workarounds for the problem that session data is lost when you use ASP.NET InProc session state mode.
 ms.date: 04/15/2020
 ms.prod-support-area-path: 
 ms.technology: iis
@@ -8,7 +8,7 @@ ms.reviewer: josborne
 ---
 # Session data is lost when you use ASP.NET InProc session state mode
 
-This article provides information about resolving the issue that session data is lost when you use ASP.NET InProc session state mode.
+This article helps you resolve the problem that session data is lost when you use ASP.NET InProc session state mode.
 
 _Original product version:_ &nbsp; ASP.NET  
 _Original KB number:_ &nbsp; 324772

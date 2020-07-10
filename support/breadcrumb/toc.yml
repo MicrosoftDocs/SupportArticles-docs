@@ -3,70 +3,35 @@
   topicHref: /
   items:
 
-  - name: Support
-    tocHref: /support/
-    topicHref: /support/index
+  - name: Troubleshoot
+    tocHref: /troubleshoot/
+    topicHref: /troubleshoot/index
     items:
 
-    - name: Biztalk
-      tocHref: /support/biztalk/
-      topicHref: /support/biztalk/welcome-support-biztalk
+    - name: BizTalk Server
+      tocHref: /troubleshoot/biztalk/
+      topicHref: /troubleshoot/biztalk/welcome-biztalk-server
       
     - name: .NET
-      tocHref: /support/dotnet/
-      topicHref: /support/dotnet/welcome-support-dotnet
-
-    - name: Edge and IE browsers
-      tocHref: /support/browsers/
-      topicHref: /support/browsers/welcome-support-browsers
-
-    - name: Host Integration Server
-      tocHref: /support/host-integration-server/
-      topicHref: /support/host-integration-server/welcome-support-his
-
-    - name: SQL
-      tocHref: /support/sql/
-      topicHref: /support/sql/welcome-support-sql-server
+      tocHref: /troubleshoot/dotnet/
+      topicHref: /troubleshoot/dotnet/welcome-dotnet
 
     - name: Visual Studio
-      tocHref: /support/visualstudio/
-      topicHref: /support/visualstudio/welcome-support-visual-studio
+      tocHref: /troubleshoot/visualstudio/
+      topicHref: /troubleshoot/visualstudio/welcome-visual-studio
 
     - name: Web Apps
-      tocHref: /support/webapps/
-      topicHref: /support/webapps/welcome-support-webapps
+      tocHref: /troubleshoot/webapps/
+      topicHref: /troubleshoot/webapps/welcome-webapps
 
     - name: Windows Developer
-      tocHref: /support/windowsdeveloper/
-      topicHref: /support/windowsdeveloper/welcome-support-windowsdeveloper
+      tocHref: /troubleshoot/windowsdeveloper/
+      topicHref: /troubleshoot/windowsdeveloper/welcome-windowsdeveloper
 
     - name: Microsoft Endpoint Manager
-      tocHref: /support/mem/
-      topicHref: /support/mem/
+      tocHref: /troubleshoot/mem/
+      topicHref: /troubleshoot/mem/
       items:
       - name: Intune
-        tocHref: /support/mem/intune/
-        topicHref: /support/mem/intune/welcome-support-intune
-      - name: Configuration Manager
-        tocHref: /support/mem/configmgr/
-        topicHref: /support/mem/configmgr/welcome-support-configmgr
-
-    - name: System Center
-      tocHref: /support/system-center/
-      topicHref: /support/system-center/
-      items:
-      - name: Data Protection Manager
-        tocHref: /support/system-center/dpm/
-        topicHref: /support/system-center/dpm/welcome-support-dpm
-      - name: Operations Manager
-        tocHref: /support/system-center/scom/
-        topicHref: /support/system-center/scom/welcome-support-scom
-      - name: Orchestrator
-        tocHref: /support/system-center/orchestrator/
-        topicHref: /support/system-center/orchestrator/welcome-support-orchestrator
-      - name: Service Manager
-        tocHref: /support/system-center/scsm/
-        topicHref: /support/system-center/scsm/welcome-support-scsm
-      - name: Virtual Machine Manager
-        tocHref: /support/system-center/vmm/
-        topicHref: /support/system-center/vmm/welcome-support-vmm
+        tocHref: /troubleshoot/mem/intune/
+        topicHref: /troubleshoot/mem/intune/welcome-intune

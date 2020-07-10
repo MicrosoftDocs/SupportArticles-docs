@@ -1,6 +1,6 @@
 ---
 title: IIS events not detected by Management Pack
-description: Certain IIS events are not detected by System Center Operations Manager. A resolution is provided.
+description: This article provides resolutions for the problem that Certain IIS events are not detected by System Center Operations Manager.
 ms.date: 04/15/2020
 ms.prod-support-area-path: 
 ms.technology: iis
@@ -8,7 +8,7 @@ ms.reviewer: dougste
 ---
 # Some IIS events are not detected by the IIS Management Pack
 
-This article provides information about resolving the issue that certain Internet Information Services (IIS) events are not detected by the IIS Management Pack.
+This article helps you resolve the problem that certain Microsoft Internet Information Services (IIS) events are not detected by the IIS Management Pack.
 
 _Original product version:_ &nbsp; Internet Information Services 7.5, 7.0  
 _Original KB number:_ &nbsp; 2635429

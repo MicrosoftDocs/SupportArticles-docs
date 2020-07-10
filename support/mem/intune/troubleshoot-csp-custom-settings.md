@@ -2,7 +2,7 @@
 title: Troubleshoot CSP custom settings
 description: Introduces configuration service provider and how to troubleshoot CSP custom setting issues for Windows 10 computers.
 ms.date: 05/11/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: Device configuration
 ---
 # Troubleshoot CSP custom settings for Windows 10 computers enrolled in Intune
 

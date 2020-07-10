@@ -1,13 +1,13 @@
 ---
 title: Can't write to event log from ASP.NET 
-description: Describes you fail to write to the Windows event log from an ASP.NET or ASP application.
+description: This article describes that you fail to write to the Windows event log from an ASP.NET or ASP application.
 ms.date: 04/10/2020
 ms.prod-support-area-path: 
 ms.reviewer: Isha
 ---
 # Fail to write to the Windows event log from an ASP.NET or ASP application
 
-This article provides information about resolving an issue that an unexpected error may be thrown when you write to the Windows event log from an ASP.NET or application service provider (ASP) application.
+This article helps you resolve the problem that an unexpected error might be thrown when you write to the Windows event log from an ASP.NET or application service provider (ASP) application.
 
 _Original product version:_ &nbsp; Internet Information Services 8.0 and later versions  
 _Original KB number:_ &nbsp; 2028427

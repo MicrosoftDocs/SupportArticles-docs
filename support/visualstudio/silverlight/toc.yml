@@ -1,0 +1,10 @@
+- name: General
+  items:
+  - name: Silverlight 5 applications crash with 0xC0000094 exception
+    href: exception-0xc0000094-silverlight-5.md
+  - name: Run Silverlight Configuration tool
+    href: run-silverlight-configuration-tool.md
+  - name: Silverlight doesn't show DRM protected subtitles
+    href: silverlight-not-support-drm-protected-subtitles.md
+  - name: Slsvcutil.exe crashes when Silverlight 5 is installed
+    href: slsvcutil-tool-crash-silverlight-5.md

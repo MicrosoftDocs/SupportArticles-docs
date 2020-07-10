@@ -2,7 +2,7 @@
 title: Connectivity issues when root certificate isn't updated
 description: To fix connectivity issues, install the latest root certificate updates to make sure that the client computer is up to date and secure.
 ms.date: 05/11/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: Device configuration
 ms.reviewer: franknov
 ---
 # Connectivity issues may occur when the Baltimore CyberTrust root certificate is not installed

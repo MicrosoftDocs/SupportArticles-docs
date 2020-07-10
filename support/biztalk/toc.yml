@@ -1,12 +1,9 @@
-- name: Welcome to Biztalk Server Support
-  href: welcome-support-biztalk.md
-
-- name: (Back up to Support hub page)
-  href: ../index.yml
+- name: Welcome
+  href: welcome-biztalk-server.md
   
 - name: Accelerators
   items:
-  - name: ADT^A03 issues in BizTalk Accelerator for HL7
+  - name: ADT^A03 issue in BizTalk Accelerator for HL7
     href: adta03-file-biztalk-accelerator-hl7.md
   - name: Can't call HL7 pipelines from Orchestration
     href: call-hl7-pipelines-orchestration-fail.md
@@ -14,7 +11,7 @@
     href: biztalk-edias2-runtime-feature-fails.md
   - name: MessagesToLOB and MessageContent in BTARN
     href: messagestolob-messagecontent-btarn.md
-  - name: Override EDI Header for outgoing X12 997
+  - name: Override EDI header for outgoing X12 997
     href: override-edi-header-values.md
   - name: Set up filters to send the EDI Interchange
     href: send-edi-interchange.md
@@ -34,13 +31,13 @@
 
 - name: BizTalk Server Setup and Configuration
   items:
-  - name: BizTalk Server supportability on a VM
+  - name: Supportability on a VM
     href: biztalk-server-supportability-on-vm.md
-  - name: BizTalk Server SQL Server Agent jobs
+  - name: SQL Server Agent jobs
     href: sql-server-agent-jobs-biztalk.md
   - name: Change default whitespace behavior in BizTalk
     href: biztalk-default-whitespace-behavior.md
-  - name: Exceptions when you configure BizTalk Server
+  - name: Exception when you configure BizTalk Server
     href: cannot-configure-biztalk-server.md
   - name: High availability for MQSAgent COM+
     href: availability-for-mqsagent-com-plus.md
@@ -48,7 +45,7 @@
     href: biztalk-host-instance-cannot-start.md
   - name: Hotfixes and Cumulative Updates support
     href: biztalk-hotfixes-cumulative-update.md
-  - name: Set Message Queuing configuration options
+  - name: Configuration options can't be changed
     href: biztalk-message-queuing-configuration.md
 
 - name: Development and Deployment
@@ -62,7 +59,7 @@
   items:
   - name: Call into PipelineObjects fails
     href: call-into-pipelineobjects-fails.md
-  - name: ESB Configuration fails
+  - name: ESB configuration fails
     href: esb-configuration-fails.md
 
 - name: Management and Operations

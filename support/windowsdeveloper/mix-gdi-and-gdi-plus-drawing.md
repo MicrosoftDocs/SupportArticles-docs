@@ -4,6 +4,7 @@ description: Explains how to mix GDI and GDI+ drawing operations in the same cod
 ms.date: 03/10/2020
 ms.prod-support-area-path:
 ms.reviewer: V-JEFFBO, jhornick
+ms.topic: article
 ---
 # Interoperability between GDI and GDI+
 

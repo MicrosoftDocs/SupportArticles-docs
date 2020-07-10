@@ -1,9 +1,10 @@
 ---
 title: Change hard error popup handling
-description: Describes how to change the hard error popup mode and give example code.
+description: This article describes how to change the hard error popup mode and give example code.
 ms.date: 03/13/2020
 ms.prod-support-area-path: 
 ms.reviewer: kayda
+ms.topic: article
 ---
 # How to change hard error popup handling in Windows
 
@@ -69,7 +70,7 @@ BOOL SetGlobalErrorMode(
                             0,
                             REG_DWORD,
                             (CONST BYTE *) &dwErrorMode,
-                            sizeof(DWORD) );
+                            sizeof(DWORD));
 
     RegCloseKey(hKey);
     if (lRetCode != ERROR_SUCCESS)
@@ -104,7 +105,7 @@ BOOL GetGlobalErrorMode(
                             0,
                             NULL,
                             (LPBYTE) dwErrorMode,
-                            &cbData );
+                            &cbData);
 
     RegCloseKey(hKey);
     if (lRetCode != ERROR_SUCCESS)

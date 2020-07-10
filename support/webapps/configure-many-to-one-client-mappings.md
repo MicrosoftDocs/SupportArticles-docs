@@ -1,12 +1,13 @@
 ---
 title: Configure Many-to-One client mappings
-description: Talks about using the Configuration Editor feature of IIS to configure Many-to-One client certificate mappings.
+description: This article introduces about using the Configuration Editor feature of IIS to configure Many-to-One client certificate mappings.
 ms.date: 04/02/2020
 ms.prod-support-area-path: 
+ms.topic: how-to
 ---
 # Configuring Many-to-One client certificate mappings for IIS 7.0 and 7.5
 
-This article introduces how to use the Configuration Editor feature in Internet Information Services (IIS) to configure Many-to-One client certificate mappings.
+This article introduces how to use the Configuration Editor feature in Microsoft Internet Information Services (IIS) to configure Many-to-One client certificate mappings.
 
 _Original product version:_ &nbsp; Internet Information Services 7.0, 7.5  
 _Original KB number:_ &nbsp; 2026113
@@ -92,13 +93,13 @@ Here are the prerequisites needed for this walk-through:
 
     - Set **enabled** to **True**.
     - Set **manyToOneCertificateMappingsEnabled** to **True**.
-    - Select **manyToOneMappings** and click on the ellipsis button to launch a new window for configuring mappings.
+    - Select **manyToOneMappings** and select on the ellipsis button to launch a new window for configuring mappings.
 
-5. Under this new window, click to add a new item. You can modify the properties from within the window as shown below:
+5. Under this new window, select to add a new item. You can modify the properties from within the window as shown below:
 
     :::image type="content" source="./media/configure-many-to-one-client-mappings/modify-properties.jpg" alt-text="modify-properties.jpg":::
 
-6. Click on the ellipsis button for **rules**, which will give you the option to add multiple patterns for matching based on the certificate properties.
+6. Select on the ellipsis button for **rules**, which will give you the option to add multiple patterns for matching based on the certificate properties.
 
     :::image type="content" source="./media/configure-many-to-one-client-mappings/add-multiple-patterns-example-1.jpg" alt-text="Screenshot 1 for adding multiple patterns":::
 

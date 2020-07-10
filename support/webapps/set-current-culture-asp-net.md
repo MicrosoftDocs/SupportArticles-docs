@@ -1,13 +1,14 @@
 ---
 title: Set current culture in ASP.NET
-description: Describes how to change the current culture and CurrentUICulture in an ASP.NET application.
+description: This article describes that how to change the current culture and CurrentUICulture in an ASP.NET application.
 ms.date: 04/07/2020
 ms.prod-support-area-path: 
 ms.reviewer: cissyh
+ms.topic: how-to
 ---
-# How to set current culture programmatically in an ASP.NET application
+# Set current culture programmatically in an ASP.NET application
 
-This article describes how to change the current culture and current UI culture in an ASP.NET application.
+This article describes that how to change the current culture and current UI culture in an ASP.NET application.
 
 _Original product version:_ &nbsp; ASP.NET  
 _Original KB number:_ &nbsp; 306162

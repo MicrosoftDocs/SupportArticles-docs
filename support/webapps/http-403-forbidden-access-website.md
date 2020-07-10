@@ -1,13 +1,13 @@
 ---
-title: HTTP Error 403.16 when accessing a website
-description: Describes a problem that triggers an HTTP 403.16 error when you try to access a website that's hosted by IIS 7.0.
+title: HTTP Error 403.16 when you access a website
+description: This article describes the problem that an HTTP 403.16 error occurs when you try to access a website that's hosted by IIS 7.0.
 ms.date: 03/26/2020
 ms.prod-support-area-path: 
 ms.reviewer: mlaing
 ---
 # HTTP Error 403.16 when you try to access a website that's hosted on IIS 7.0
 
-This article provides information about resolving an **HTTP 403.16 - Forbidden** error when you access a website that's hosted by Internet Information Services (IIS) 7.0.
+This article helps you resolve the problem that an **HTTP 403.16 - Forbidden** error occurs when you access a website that's hosted on Internet Information Services (IIS) 7.0.
 
 _Original product version:_ &nbsp; Internet Information Services 7.0  
 _Original KB number:_ &nbsp; 942061
@@ -41,20 +41,20 @@ There are one or more non-self-signed certificates in the Trusted Root Certifica
 
 ## Resolution for cause 1
 
-1. On the IIS Web server, click **Start**, type *mmc.exe* in the **Start Search** box, right-click mmc.exe, and then click **Run as administrator**.
+1. On the IIS Web server, select **Start**, type *mmc.exe* in the **Start Search** box, right-click mmc.exe, and then select **Run as administrator**.
 
     > [!NOTE]
-    > If you are prompted for an administrator password or for a confirmation, type the password, or click **Continue**.
+    > If you are prompted for an administrator password or for a confirmation, type the password, or select **Continue**.
 
-2. On the **File** menu, click **Add/Remove Snap-in**.
-3. Under **Available snap-ins**, click **Certificates**, and then click **Add**.
-4. Click **Computer account**, and then click **Next**.
-5. Click **Local computer**, click **Finish**, and then click **Close**.
-6. To exit the wizard, click **OK**.
-7. Expand **Certificates**, expand **Trusted Root Certification Authorities**, right-click **Certificates**, point to **All Tasks**, and then click **Import**.
-8. In the Certificate Import Wizard, click **Next**.
-9. In the **File name** box, type the location of the root certificate of the certification authority, and then click **Next**.
-10. Click **Next**, and then click **Finish**.
+2. On the **File** menu, select **Add/Remove Snap-in**.
+3. Under **Available snap-ins**, select **Certificates**, and then select **Add**.
+4. Select **Computer account**, and then select **Next**.
+5. Select **Local computer**, select **Finish**, and then select **Close**.
+6. To exit the wizard, select **OK**.
+7. Expand **Certificates**, expand **Trusted Root Certification Authorities**, right-click **Certificates**, point to **All Tasks**, and then select **Import**.
+8. In the Certificate Import Wizard, select **Next**.
+9. In the **File name** box, type the location of the root certificate of the certification authority, and then select **Next**.
+10. Select **Next**, and then select **Finish**.
 
 ## Resolution for cause 2
 

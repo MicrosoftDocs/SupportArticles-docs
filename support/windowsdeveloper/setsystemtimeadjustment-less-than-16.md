@@ -4,6 +4,7 @@ description: SetSystemTimeAdjustment behaves differently in Vista and Windows 7 
 ms.date: 03/10/2020
 ms.prod-support-area-path:
 ms.reviewer: Franki, jlambert
+ms.topic: article
 ---
 # SetSystemTimeAdjustment may lose adjustments less than 16
 

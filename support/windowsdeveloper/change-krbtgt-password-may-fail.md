@@ -1,13 +1,13 @@
 ---
 title: Changing krbtgt password may fail
-description: Changing the krbtgt password may fail with STATUS_PASSWORD_RESTRICTION if a custom password filter is installed.
+description: Changing the krbtgt password may fail with STATUS_PASSWORD_RESTRICTION if a custom password filter is installed. This article provides a workaround for this problem.
 ms.date: 03/16/2020
 ms.prod-support-area-path: 
 ms.reviewer: msmall
 ---
 # Changing the Krbtgt password may fail when a custom password filter is installed
 
-When a custom password filter is installed, changing the key Distribution Center Service Account (krbtgt) password may fail with `STATUS_PASSWORD_RESTRICTION`. This article provides information about resolving this issue.
+When a custom password filter is installed, changing the key Distribution Center Service Account (krbtgt) password may fail with `STATUS_PASSWORD_RESTRICTION`. This article helps you resolve this problem.
 
 _Original product version:_ &nbsp; Windows  
 _Original KB number:_ &nbsp; 2549833
@@ -19,7 +19,7 @@ If a custom password filter (for example, passfilt.dll) is installed on a domain
 > 0xc000006  
 > STATUS_PASSWORD_RESTRICTION
 
-The password does not meet the password policy requirements. Check the minimum password length, password complexity, and password history requirements.
+The password doesn't meet the password policy requirements. Check the minimum password length, password complexity, and password history requirements.
 
 ## Cause
 

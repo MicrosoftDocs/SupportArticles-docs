@@ -1,13 +1,13 @@
 ---
 title: Exclude folders from antivirus scanning
-description: In ASP.NET applications, certain folders must be excluded from antivirus scanning. If they are not, this may cause AppDomain to unload and then trigger performance issues.
+description: This article discusses a problem that In ASP.NET applications, certain folders must be excluded from antivirus scanning. If they are not, this might cause AppDomain to unload and then trigger performance issues.
 ms.date: 04/15/2020
 ms.prod-support-area-path: 
 ms.technology: asp.net
 ---
 # Folders to exclude from antivirus scanning in ASP.NET apps
 
-This article provides information about the issue that the `AppDomain` in ASP.NET applications may be unloaded when some folders aren't excluded by antivirus software.
+This article provides information about the problem that the `AppDomain` in ASP.NET applications might be unloaded when some folders aren't excluded by antivirus software.
 
 _Original product version:_ &nbsp; ASP.NET，.NET Framework 4.8, 4.7, 4.6, 4.5.2, 3.5 Service Pack 1  
 _Original KB number:_ &nbsp; 3126034

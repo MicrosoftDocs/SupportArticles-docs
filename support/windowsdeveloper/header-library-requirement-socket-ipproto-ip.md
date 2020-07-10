@@ -1,5 +1,5 @@
 ---
-title: Header and Library at IPPROTO_IP Level
+title: Header and Library at IPPROTO_IP level
 description: Introduces the Header and Library requirement When setting or getting socket options at the IPPROTO_IP level in a C/C++ Winsock application that's targeted for Windows NT.
 ms.date: 03/09/2020
 ms.prod-support-area-path:
@@ -31,18 +31,18 @@ The `IPPROTO_IP` level socket options are defined differently in `Winsock.h` tha
 ```cpp
 /*
  * Options for use with [gs]etsockopt at the IP level.
- */ 
-#define IP_OPTIONS          1           /* set/get IP per-packet options    */ 
-#define IP_MULTICAST_IF     2           /* set/get IP multicast interface   */ 
-#define IP_MULTICAST_TTL    3           /* set/get IP multicast timetolive  */ 
-#define IP_MULTICAST_LOOP   4           /* set/get IP multicast loopback    */ 
-#define IP_ADD_MEMBERSHIP   5           /* add  an IP group membership      */ 
-#define IP_DROP_MEMBERSHIP  6           /* drop an IP group membership      */ 
-#define IP_TTL              7           /* set/get IP Time To Live          */ 
-#define IP_TOS              8           /* set/get IP Type Of Service       */ 
-#define IP_DONTFRAGMENT     9           /* set/get IP Don't Fragment flag   */ 
-#define IP_DEFAULT_MULTICAST_TTL   1    /* normally limit m'casts to 1 hop  */ 
-#define IP_DEFAULT_MULTICAST_LOOP  1    /* normally hear sends if a member  */ 
+ */
+#define IP_OPTIONS          1           /* set/get IP per-packet options    */
+#define IP_MULTICAST_IF     2           /* set/get IP multicast interface   */
+#define IP_MULTICAST_TTL    3           /* set/get IP multicast timetolive  */
+#define IP_MULTICAST_LOOP   4           /* set/get IP multicast loopback    */
+#define IP_ADD_MEMBERSHIP   5           /* add  an IP group membership      */
+#define IP_DROP_MEMBERSHIP  6           /* drop an IP group membership      */
+#define IP_TTL              7           /* set/get IP Time To Live          */
+#define IP_TOS              8           /* set/get IP Type Of Service       */
+#define IP_DONTFRAGMENT     9           /* set/get IP Don't Fragment flag   */
+#define IP_DEFAULT_MULTICAST_TTL   1    /* normally limit m'casts to 1 hop  */
+#define IP_DEFAULT_MULTICAST_LOOP  1    /* normally hear sends if a member  */
 #define IP_MAX_MEMBERSHIPS         20   /* per socket; must fit in one mbuf */
 ```
 
@@ -52,18 +52,18 @@ The options at this level are defined in `Ws2tcpip.h` as:
 
 ```cpp
 /*
- * Option to use with [gs]etsockopt at the IPPROTO_IP level. 
-*/ 
-#define IP_OPTIONS             1     /* set/get IP options */ 
-#define IP_HDRINCL             2     /* header is included with data */ 
-#define IP_TOS                 3     /* IP type of service and preced*/ 
-#define IP_TTL                 4     /* IP time to live */ 
-#define IP_MULTICAST_IF        9     /* set/get IP multicast i/f  */ 
-#define IP_MULTICAST_TTL       10     /* set/get IP multicast ttl */ 
-#define IP_MULTICAST_LOOP      11     /*set/get IP multicast loopback */ 
-#define IP_ADD_MEMBERSHIP      12     /* add an IP group membership */ 
-#define IP_DROP_MEMBERSHIP     13    /* drop an IP group membership */ 
-#define IP_DONTFRAGMENT        14     /* don't fragment IP datagrams */ 
+ * Option to use with [gs]etsockopt at the IPPROTO_IP level.
+*/
+#define IP_OPTIONS             1     /* set/get IP options */
+#define IP_HDRINCL             2     /* header is included with data */
+#define IP_TOS                 3     /* IP type of service and preced*/
+#define IP_TTL                 4     /* IP time to live */
+#define IP_MULTICAST_IF        9     /* set/get IP multicast i/f  */
+#define IP_MULTICAST_TTL       10     /* set/get IP multicast ttl */
+#define IP_MULTICAST_LOOP      11     /*set/get IP multicast loopback */
+#define IP_ADD_MEMBERSHIP      12     /* add an IP group membership */
+#define IP_DROP_MEMBERSHIP     13    /* drop an IP group membership */
+#define IP_DONTFRAGMENT        14     /* don't fragment IP datagrams */
 ```
 
 ## Setsockopt or getsockopt runtime error
@@ -89,10 +89,10 @@ Assume that you intend to join a multicast group by running code that's similar 
 int main(int argc, char* argv[])
 {
    ...
-   if (setsockopt(sock, 
-                  IPPROTO_IP, 
-                  IP_ADD_MEMBERSHIP, 
-                  (char FAR *)&mreq, 
+   if (setsockopt(sock,
+                  IPPROTO_IP,
+                  IP_ADD_MEMBERSHIP,
+                  (char FAR *)&mreq,
                   sizeof (mreq)) == SOCKET_ERROR)
    {
       printf ("setsockopt failed: %d"), WSAGetLastError());
@@ -131,8 +131,8 @@ int main(int argc, char* argv[])
    source_sin.sin_addr.s_addr = htonl (INADDR_ANY);
 
     if (bind(sock,
-                (struct sockaddr FAR *)&source_sin, 
-                sizeof(source_sin)) == SOCKET_ERROR) 
+                (struct sockaddr FAR *)&source_sin,
+                sizeof(source_sin)) == SOCKET_ERROR)
     {
         printf ("bind() failed: %d"), WSAGetLastError());
         closesocket (sock);

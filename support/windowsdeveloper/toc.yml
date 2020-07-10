@@ -1,8 +1,5 @@
-- name: Welcome to Windows Developer Support
-  href: welcome-support-windowsdeveloper.md
-
-- name: (Back up to Support hub page)
-  href: ../index.yml
+- name: Welcome
+  href: welcome-windowsdeveloper.md
 
 - name: Routing Windows SDK
   items:
@@ -46,7 +43,7 @@
       href: header-library-requirement-socket-ipproto-ip.md
     - name: Memory leaks when closing non-blocking socket
       href: close-non-blocked-socket-memory-leak.md
-    - name: Send small data packets over TCP with Winsock
+    - name: Send small data packets over TCP by using Winsock
       href: data-segment-tcp-winsock.md
   - name: Security Development
     items:
@@ -73,7 +70,7 @@
   items:
   - name: Devices and Sensors Development
     items:
-    - name: Win32 code for sending raw data to printer
+    - name: Win32 code for sending raw data to printers
       href: win32-raw-data-to-printer.md
   - name: Graphics and Multimedia development
     items:
@@ -95,7 +92,7 @@
       href: handle-dates-and-times-dst.md
     - name: SetSystemTimeAdjustment loses adjustments
       href: setsystemtimeadjustment-less-than-16.md
-    - name: Troubleshoot "Event Message Not Found" error
+    - name: Troubleshoot the error - Event Message Not Found
       href: troubleshoot-event-message-not-found.md
     - name: VarI8FromCy produces incorrect value
       href: vari8fromcy-produces-incorrect-value.md
@@ -104,11 +101,11 @@
   items:
   - name: Print Driver
     items:
-    - name: Can't print from app to XPS Document Writer
+    - name: Can't print from an app to XPS Document Writer
       href: print-app-xps-document-writer.md
-    - name: Get printer and print job status
+    - name: Get status of a printer and print job
       href: printer-print-job-status.md
-    - name: Printer Device Fonts
+    - name: Printer device fonts
       href: printer-device-fonts.md
     - name: XPSDrv isn't compatible with RAW database
       href: v4-print-driver-raw-mode-pcl-postscript.md
@@ -118,7 +115,7 @@
       href: receive-cd-rom-notification.md
   - name: System Services Development
     items:
-    - name: Asynchronous Disk I/O appears synchronous
+    - name: Asynchronous disk I/O appears synchronous
       href: asynchronous-disk-io-synchronous.md
 
 - name: Windows Administration and Management Development

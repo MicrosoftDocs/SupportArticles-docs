@@ -1,10 +1,11 @@
 ---
 title: Disable documentation protocol for ASP.NET
-description: Describes how to disable the documentation protocol for ASP.NET web services.
+description: This article describes how to disable the documentation protocol for ASP.NET web services.
 ms.date: 04/08/2020
 ms.prod-support-area-path: 
+ms.topic: how-to
 ---
-# How to disable the documentation protocol for ASP.NET web services
+# Disable the documentation protocol for ASP.NET web services
 
 This article describes how to disable the documentation protocol for ASP.NET web services.
 

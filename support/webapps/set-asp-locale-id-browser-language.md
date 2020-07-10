@@ -1,13 +1,14 @@
 ---
-title: How to set ASP locale ID
-description: Lists how to set the Locale ID for the ASP application.
+title: Set ASP locale ID
+description: This article provide the information that how to set the Locale ID for the ASP application.
 ms.date: 03/23/2020
 ms.prod-support-area-path: 
 ms.reviewer: mcai
+ms.topic: how-to
 ---
-# How to set the ASP locale ID per the browser's language settings
+# Set the ASP locale ID per the browser's language settings
 
-This article describes how to set the Active Server Pages (ASP) locale ID according to the browser's language settings.
+This article describes that how to set the Active Server Pages (ASP) locale ID according to the browser's language settings.
 
 _Original product version:_ &nbsp;  Active Server Pages  
 _Original KB number:_ &nbsp; 229690

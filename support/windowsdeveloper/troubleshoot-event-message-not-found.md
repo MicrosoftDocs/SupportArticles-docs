@@ -1,13 +1,13 @@
 ---
-title: Troubleshoot Event Message Not Found error
+title: Troubleshoot the error - Event Message Not Found
 description: This article helps to troubleshoot the Event Message Not Found error.
 ms.date: 03/20/2020
 ms.prod-support-area-path: Developer Tools
 ms.reviewer: garypelu 
 ---
-# How to troubleshoot the Event Message Not Found error
+# Troubleshoot the error: Event Message Not Found
 
-This article describes possible reasons and solutions about the **Event Message Not Found** error in Event Viewer.
+This article helps you troubleshoot the error in Event Viewer: Event Message Not Found.
 
 _Original product version:_ &nbsp; Windows  
 _Original KB number:_ &nbsp; 166902
@@ -18,7 +18,7 @@ The following error message may appear for events in Event Viewer:
 
 > The description for Event ID ( <####> ) in Source (\<application name>) could not be found. It contains the following insertion string(s): \<the text of the message logged by ReportEvent>.
 
-Listed below are the possible causes and more information on how to correct the problem. The cause may be one or more of the following:
+Listed below are the possible causes and more information on how to resolve the problem. The cause may be one or more of the following:
 
 ## Incorrect source name parameter is passed to RegisterEventSource
 

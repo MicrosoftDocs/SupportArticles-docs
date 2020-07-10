@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 2282810
 
 ## Symptoms
 
-An application using the `VariantChangeType`, `VariantChangeTypeEx`, or `VarI8FromCy` to convert a large (> 429497.0) or negative currency value into a 64-bit integer (for example, I8, `long` or `int64`) may get a resulting integer value that is off by one.
+An application using the `VariantChangeType`, `VariantChangeTypeEx`, or `VarI8FromCy` to convert a large (> 429497.0) or negative currency value into a 64-bit integer (for example, I8, `long` or `int64`) might get a resulting integer value that is off by one.
 
 ## Cause
 

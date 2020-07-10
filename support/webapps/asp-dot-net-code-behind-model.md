@@ -1,8 +1,9 @@
 ---
 title: ASP.NET Code-behind model overview
-description: Provides information about the code-behind model, which is introduced in ASP.NET.
+description: This article provides information about the code-behind model that is introduced in ASP.NET.
 ms.date: 04/02/2020
 ms.prod-support-area-path: 
+ms.topic: article
 ---
 # ASP.NET Code-behind model overview
 
@@ -112,7 +113,7 @@ In this case, ASP.NET compiles the code-behind page on the fly. This compilation
 
 ## Code-behind support in Visual Studio .NET
 
-When you use Microsoft Visual Studio .NET to create ASP.NET Web Forms, code-behind pages are the default method. In addition, Visual Studio .NET automatically performs pre-compilation for you when you build your solution.
+When you use Visual Studio .NET to create ASP.NET Web Forms, code-behind pages are the default method. In addition, Visual Studio .NET automatically performs pre-compilation for you when you build your solution.
 
 > [!NOTE]
 > Code-behind pages that are created in Visual Studio .NET include a special `page` attribute, `Code-behind`, which Visual Studio .NET uses.

@@ -2,7 +2,7 @@
 title: DEP enrollment error XPC_TYPE_ERROR
 description: Fixes an issue in which you receive error 'XPC_TYPE_ERROR Connection invalid' during enrolling an Apple DEP device.
 ms.date: 03/30/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: iOS/iPadOS enrollment
 ---
 # DEP enrollment error 'XPC_TYPE_ERROR Connection invalid'
 

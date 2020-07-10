@@ -1,13 +1,13 @@
 ---
 title: Request.ServerVariables() returns empty
-description: Describes an issue that Request.ServerVariables() returns empty string in ASP.NET. Provides a resolution.
+description: This article describes an problem that Request.ServerVariables() returns empty string in ASP.NET. Provides a resolution.
 ms.date: 04/03/2020
 ms.prod-support-area-path:
 ms.reviewer: anandh
 ---
 # Request.ServerVariables("LOGON_USER") returns empty string in ASP.NET
 
-This article provides information about resolving an issue that the `Request.ServerVariables("LOGON_USER")` variable returns empty string in ASP.NET.
+This article provides resolutions for the problem that the `Request.ServerVariables("LOGON_USER")` variable returns empty string in ASP.NET.
 
 _Original product version:_ &nbsp; ASP.NET  
 _Original KB number:_ &nbsp; 306359
@@ -53,11 +53,11 @@ If you are using Windows authentication, you can also use the following steps to
     <authentication mode="Windows" />
     ```
 
-2. In the **Internet Services Manager**, right-click the .aspx file or the **Web Project** folder, and then click **Properties**.
-3. If you clicked **Properties** for the **Web Project** folder, click the **Directory Security** tab. If you clicked **Properties** for the .aspx file, click the **File Security** tab.
-4. Under **Anonymous Access and authentication control**, click **Edit**.
+2. In the **Internet Services Manager**, right-click the .aspx file or the **Web Project** folder, and then select **Properties**.
+3. If you select **Properties** for the **Web Project** folder, select the **Directory Security** tab. If you select **Properties** for the .aspx file, select the **File Security** tab.
+4. Under **Anonymous Access and authentication control**, select **Edit**.
 5. In the **Authentication methods** dialog box, clear the **Anonymous Access** check box, and then select the **Basic**, the **Digest**, or the **Integrated (NT Challenge/Response)** check box.
-6. Click **OK** to close both dialog boxes.
+6. Select **OK** to close both dialog boxes.
 
 ## Status
 

@@ -1,13 +1,13 @@
 ---
 title: EndpointConfigurationName isn't updated
-description: Describes the issue that EndpointConfigurationName properties in the activities that are added to the workflow aren't updated when you use Update Service Reference feature to update the client proxy and the configuration file.
+description: This article describes the problem that EndpointConfigurationName properties in the activities that are added to the workflow aren't updated when you use Update Service Reference feature to update the client proxy and the configuration file.
 ms.date: 03/24/2020
 ms.prod-support-area-path:
 ms.reviewer: weixi, lezha, smason
 ---
 # An update to a service reference doesn't update the EndpointConfigurationName property setting in the activities in a Windows Workflow Foundation 4.0 application
 
-This article provides information about resolving the issue that changes to a service reference don't update the `EndpointConfigurationName` property setting in the activities of in a Windows Workflow Foundation 4.0 application.
+This article helps you resolve the problem that changes to a service reference don't update the `EndpointConfigurationName` property setting in the activities of in a Windows Workflow Foundation 4.0 application.
 
 _Original product version:_ &nbsp; Windows Workflow Foundation 4.0  
 _Original KB number:_ &nbsp; 2015763

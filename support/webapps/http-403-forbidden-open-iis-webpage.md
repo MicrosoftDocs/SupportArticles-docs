@@ -1,13 +1,13 @@
 ---
-title: HTTP error 403.7 when opening an IIS webpage
-description: Describes an HTTP error 403 when you open an IIS webpage.
+title: HTTP error 403.7 when you open an IIS webpage
+description: This article describes an HTTP error 403 that occurs when you open an IIS webpage, and provides a resolution.
 ms.date: 03/30/2020
 ms.prod-support-area-path: 
 ms.reviewer: Anahith
 ---
-# 403.7 Forbidden: Client certificate required error when you open an IIS webpage
+# Error when you open an IIS webpage: 403.7 Forbidden: Client certificate required
 
-This article provides information about resolving an issue that an unexpected runtime error may be thrown when you open an Internet Information Services (IIS) webpage.
+This article helps you resolve the problem that an unexpected runtime error may be thrown when you open an Internet Information Services (IIS) webpage.
 
 _Original product version:_ &nbsp; Internet Information Services  
 _Original KB number:_ &nbsp; 186812
@@ -54,18 +54,18 @@ Depending on the cause of your problem, try one of the following resolutions:
 
 To resolve this issue, install the root certification authority certificate manually. Follow the following steps:
 
-1. Click **Start**, click **Run**, type **mmc**, and then click **OK**.
-2. On the **File** menu, click **Add/Remove Snap-in**.
-3. In the **Add or Remove Snap-ins dialog box**, select **Certificates** under **Available Snap-ins**, and then click **Add**.
-4. In the **Certificates snap-in**, select **Computer account**, click **Finish** twice, and then click **OK**.
+1. Select **Start**, select **Run**, type **mmc**, and then select **OK**.
+2. On the **File** menu, select **Add/Remove Snap-in**.
+3. In the **Add or Remove Snap-ins dialog box**, select **Certificates** under **Available Snap-ins**, and then select **Add**.
+4. In the **Certificates snap-in**, select **Computer account**, select **Finish** twice, and then select **OK**.
 5. Under **Console Root**, expand **Certificates (Local Computer)**.
 6. Expand **Trusted Root Certification Authorities**, and then right-click **Certificates**.
-7. Select **All Tasks**, and then click **Import...**.
-8. Click **Next**, and then navigate to the location where the Root CA certificate file is stored.
-9. After the certificate has been selected, click **Next** two times, and then click **Finish**.
+7. Select **All Tasks**, and then select **Import...**.
+8. Select **Next**, and then navigate to the location where the Root CA certificate file is stored.
+9. After the certificate has been selected, select **Next** two times, and then select **Finish**.
 
 > [!NOTE]
-> *Intermediate CA* certificates should be installed in the Intermediate Certification Authorities store rather than in the Trusted Roots store. Any certification authority certificate whose `Issued by` and `Issued to` values are not the same (and therefore the certificate is not at the top of the hierarchy) is known as an *Intermediate CA*.
+> *Intermediate CA* certificates should be installed in the Intermediate Certification Authorities store rather than in the Trusted Roots store. Any certification authority certificate whose `Issued by` and `Issued to` values are not the same (and therefore the certificate is not at the top of the hierarchy) is known as an Intermediate CA.
 
 ## References
 

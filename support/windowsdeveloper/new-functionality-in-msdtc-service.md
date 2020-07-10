@@ -1,13 +1,15 @@
 ---
 title: New functionality in MS DTC service
-description: Describes security-related changes to the Distributed Transaction Coordinator service.
+description: This article describes security-related changes to the Distributed Transaction Coordinator service.
 ms.date: 03/16/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path:
+ms.topic: article
 ---
 # New functionality in the Distributed Transaction Coordinator service in Windows
 
-This article describes that some security-related updates and changes are introduced to Windows and affect the Microsoft Distributed Transaction Coordinator (MS DTC) service.
+This article describes some Windows security-related updates and changes, and how they affect the Microsoft Distributed Transaction Coordinator (MS DTC) service.
 
+_Original product version:_ &nbsp; Windows  
 _Original KB number:_ &nbsp; 899191
 
 ## Summary
@@ -22,8 +24,8 @@ By modifying the settings in the **Security Configuration** dialog box, you can 
 
 This article describes new functionality in the MS DTC service in the following operating systems:
 
-- Microsoft Windows Server 2003 Service Pack 1 (SP1)
-- Microsoft Windows XP Service Pack 2 (SP2)
+- Windows Server 2003 Service Pack 1 (SP1)
+- Windows XP Service Pack 2 (SP2)
 - Windows Vista
 - Windows Server 2008
 - Windows 7
@@ -35,13 +37,13 @@ This article describes new functionality in the MS DTC service in the following 
 
 The DTC service coordinates transactions that update two or more transaction-protected resources. Transaction-protected resources include databases, message queues, and file systems. These transaction-protected resources may be located on a single computer or may be distributed between many networked computers.
 
-## Manage network communication using Security Configuration
+## Manage network communication by using Security Configuration
 
 In Windows, the DTC service gives you more control over the network communication between computers. By default, all network communication is disabled. The DTC **Security Configuration** dialog box has been enhanced so that you can manage these communication settings. To view the **Security Configuration** dialog box, follow these steps:
 
-1. Start the Component Services administrative tool. To do this, click **Start**, click **Run**, type **dcomcnfg.exe**, and then click **OK**.
-2. In the console tree of the Component Services administrative tool, expand **Component Services**, expand **Computers**, right-click **My Computer**, and then click **Properties**.
-3. Click the **MSDTC** tab, and then click **Security Configuration**.
+1. Start the Component Services administrative tool. To do this, select **Start**, select **Run**, type **dcomcnfg.exe**, and then select **OK**.
+2. In the console tree of the Component Services administrative tool, expand **Component Services**, expand **Computers**, right-click **My Computer**, and then select **Properties**.
+3. Select the **MSDTC** tab, and then select **Security Configuration**.
 
 ## New options in Security Configuration
 
@@ -54,7 +56,7 @@ The **Network DTC Access** check box lets you determine whether the DTC service 
 The **Network DTC Access** check box affects the following registry entry:
 
 - Registry path: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDTC\Security`
-- Value name: NetworkDtcAccess
+- Value name: `NetworkDtcAccess`
 - Value type: REG_DWORD
 - Value data: 0 (default)
 
@@ -68,30 +70,30 @@ By default, the value of the `NetworkDtcAccess` registry entry is set to 0. A va
 The **Allow Inbound** check box lets you determine whether to allow a distributed transaction that originates from a remote computer to run on the local computer. By default, this setting is turned off. To enable this setting, click to select the **Network DTC Access** check box to set the following registry entry to 1:
 
 - Registry path: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDTC\Security`
-- Value name: NetworkDtcAccess
+- Value name: `NetworkDtcAccess`
 - Value type: REG_DWORD
 
 To disable this setting, click to clear the **Network DTC Access** check box to set this registry entry to 0.
 
 The **Allow Inbound** check box affects both of the following REG_DWORD registry entries under `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDTC\Security`:
 
-- NetworkDtcAccessTransactions
-- NetworkDtcAccessInbound
+- `NetworkDtcAccessTransactions`
+- `NetworkDtcAccessInbound`
 
 ### Allow Outbound
 
-The **Allow Outbound** check box lets you determine whether to allow the local computer to initiate a transaction and run that transaction on a remote computer. To enable this setting, click to select the **Network DTC Access** check box to set the following registry entry to 1:
+The **Allow Outbound** check box lets you determine whether to allow the local computer to initiate a transaction and run that transaction on a remote computer. To enable this setting, select the **Network DTC Access** check box to set the following registry entry to 1:
 
 - Registry path: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDTC\Security`
-- Value name: NetworkDtcAccess
+- Value name: `NetworkDtcAccess`
 - Value type: REG_DWORD
 
-To disable this setting, click to clear the **Network DTC Access** check box to set this registry entry to 0.
+To disable this setting, clear the **Network DTC Access** check box to set this registry entry to 0.
 
 The **Allow Outbound** check box affects both of the following REG_DWORD registry entries under `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDTC\Security`:
 
-- NetworkDtcAccessTransactions
-- NetworkDtcAccessOutbound
+- `NetworkDtcAccessTransactions`
+- `NetworkDtcAccessOutbound`
 
 ### Mutual Authentication Required
 
@@ -99,23 +101,23 @@ The **Mutual Authentication Required** option adds support for mutual authentica
 
 **Mutual Authentication Required** affects the following registry entries under `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDTC`:
 
-Registry key 1
+- Registry key 1
 
-- Value name: AllowOnlySecureRpcCalls
-- Value type: REG_DWORD
-- Value data: 1
+  - Value name: `AllowOnlySecureRpcCalls`
+  - Value type: REG_DWORD
+  - Value data: 1
 
-Registry key 2
+- Registry key 2
 
-- Value name: FallbackToUnsecureRPCIfNecessary
-- Value type: REG_DWORD
-- Value data: 0
+  - Value name: `FallbackToUnsecureRPCIfNecessary`
+  - Value type: REG_DWORD
+  - Value data: 0
 
-Registry key 3
+- Registry key 3
 
-- Value name : TurnOffRpcSecurity
-- Value type: REG_DWORD
-- Value data: 0
+  - Value name: `TurnOffRpcSecurity`
+  - Value type: REG_DWORD
+  - Value data: 0
 
 The functionality that is set by using **Mutual Authentication Required** differs from the functionality that is set by using **Incoming Caller Authentication Required**. The three options that are listed under **Transaction Manager Communication** behave as follows:
 
@@ -141,23 +143,23 @@ Use the **No Authentication Required** transaction mode where one or more of the
 
 **Incoming Caller Authentication Required** affects the following registry entries under `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDTC`:
 
-Registry key 1
+- Registry key 1
 
-- Value name: AllowOnlySecureRpcCalls
-- Value type: REG_DWORD
-- Value data: 0
+  - Value name: AllowOnlySecureRpcCalls
+  - Value type: REG_DWORD
+  - Value data: 0
 
-Registry key 2
+- Registry key 2
 
-- Value name: FallbackToUnsecureRPCIfNecessary
-- Value type: REG_DWORD
-- Value data: 1
+  - Value name: FallbackToUnsecureRPCIfNecessary
+  - Value type: REG_DWORD
+  - Value data: 1
 
-Registry key 3
+- Registry key 3
 
-- Value name: TurnOffRpcSecurity
-- Value type: REG_DWORD
-- Value data: 0
+  - Value name: TurnOffRpcSecurity
+  - Value type: REG_DWORD
+  - Value data: 0
 
 For more information about **Incoming Caller Authentication Required**, see the **Mutual Authentication Required** section.
 
@@ -172,23 +174,23 @@ You can also use **No Authentication Required** to resolve a situation where the
 
 **No Authentication Required** affects the following registry entries under `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDTC`:
 
-Registry key 1
+- Registry key 1
 
-- Value name: AllowOnlySecureRpcCalls
-- Value type: REG_DWORD
-- Value data: 0
+  - Value name: AllowOnlySecureRpcCalls
+  - Value type: REG_DWORD
+  - Value data: 0
 
-Registry key 2
+- Registry key 2
 
-- Value name: FallbackToUnsecureRPCIfNecessary
-- Value type: REG_DWORD
-- Value data: 0
+  - Value name: FallbackToUnsecureRPCIfNecessary
+  - Value type: REG_DWORD
+  - Value data: 0
 
-Registry key 3
+- Registry key 3
 
-- Value name: TurnOffRpcSecurity
-- Value type: REG_DWORD
-- Value data: 1
+  - Value name: TurnOffRpcSecurity
+  - Value type: REG_DWORD
+  - Value data: 1
 
 > [!NOTE]
 > On a server cluster, these registry entries are located in the shared cluster registry.
@@ -227,10 +229,10 @@ We recommend that you do not manually modify the registry to change these settin
 
 If you use Windows Firewall, you must add the DTC service to the exception list in the Windows Firewall settings. To do this, follow these steps:  
 
-1. Click **Start**, click **Run**, type **firewall.cpl**, and then click **OK**.
-2. In the **Windows Firewall** dialog box, click the **Exceptions** tab, and then click **Add Program**.
-3. Click **Browse**, locate and then click `C:\Windows\System32\msdtc.exe`, and then click **Open**.
-4. Click **OK**, click to select the **msdtc.exe** check box in the **Programs and Services** list if this check box is not already selected, and then click **OK**.
+1. Select **Start**, select **Run**, type **firewall.cpl**, and then select **OK**.
+2. In the **Windows Firewall** dialog box, select the **Exceptions** tab, and then select **Add Program**.
+3. Select **Browse**, locate and then select `C:\Windows\System32\msdtc.exe`, and then select **Open**.
+4. Select **OK**, select the **msdtc.exe** check box in the **Programs and Services** list if this check box is not already selected, and then select **OK**.
 
 ## Settings that are changed or added
 
@@ -252,21 +254,21 @@ The following table describes the registry entries that are changed since Window
 
 ## Error codes that are associated with the DTC service changes
 
-ou may receive one of the following error codes when you run DTC transactions between computers:
+You may receive one of the following error codes when you run DTC transactions between computers:
 
-Error code 1
+- Error code 1
 
-> MessageId: XACT_E_NETWORK_TX_DISABLED  
-> MessageText:  
-> The transaction manager has disabled its support for remote/network transactions.  
-> #define XACT_E_NETWORK_TX_DISABLED       _HRESULT_TYPEDEF_(0x8004D024L)
+    > MessageId: XACT_E_NETWORK_TX_DISABLED  
+    > MessageText:  
+    > The transaction manager has disabled its support for remote/network transactions.  
+    > #define XACT_E_NETWORK_TX_DISABLED       _HRESULT_TYPEDEF_(0x8004D024L)
 
-Error code 2
+- Error code 2
 
-> MessageId: XACT_E_PARTNER_NETWORK_TX_DISABLED  
-> MessageText:  
-> The partner transaction manager has disabled its support for remote/network transactions.  
-> #define XACT_E_PARTNER_NETWORK_TX_DISABLED _HRESULT_TYPEDEF_(0x8004D025L)
+    > MessageId: XACT_E_PARTNER_NETWORK_TX_DISABLED  
+    > MessageText:  
+    > The partner transaction manager has disabled its support for remote/network transactions.  
+    > #define XACT_E_PARTNER_NETWORK_TX_DISABLED _HRESULT_TYPEDEF_(0x8004D025L)
 
 ## Applies to
 

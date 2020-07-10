@@ -1,12 +1,12 @@
 ---
 title: Can't start a transaction in MS DTC
-description: Describes a problem that may occur intermittently when you try to start a transaction in the MS DTC. A resolution is provided.
+description: This article describes a problem that may occur intermittently when you try to start a transaction in the MS DTC. A resolution is provided.
 ms.date: 03/20/2020
 ms.prod-support-area-path: Developer Tools
 ---
 # New transaction can't enlist in the specified transaction coordinator when you try to start a transaction in MS DTC
 
-This article provides information about resolving errors that occur when you start a transaction in Microsoft Distributed Transaction Coordinator (MS DTC).
+This article helps you resolve a problem when you start a transaction in Microsoft Distributed Transaction Coordinator (MS DTC).
 
 _Original product version:_ &nbsp; Windows  
 _Original KB number:_ &nbsp; 922430
@@ -21,9 +21,9 @@ Consider the following scenario:
 - You have a client computer that communicates with a server computer.
 - MS DTC is installed on both computers.
 - One or more of the following conditions are true:
-    - You restart either of the computers.
-    - You restart MS DTC on either of the computers.
-    - The computers are in different domains.
+  - You restart either of the computers.
+  - You restart MS DTC on either of the computers.
+  - The computers are in different domains.
 
 In this scenario, you receive the following error message when you try to start a transaction in MS DTC:
 
@@ -61,17 +61,17 @@ To make sure that you're experiencing the problem that is described in this arti
 
 If the MS DTC transaction trace log file contains this data, follow these steps:
 
-1. Click **Start**, click **Run**, type *regedit*, and then click **OK**.
+1. Select **Start**, select **Run**, type *regedit*, and then select **OK**.
 2. Locate the following registry subkey:  
    `HKEY_LOCAL_MACHINE\Software\Microsoft\MSDTC`
-3. Right-click **MSDTC**, point to **New**, and then click **DWORD Value**.
+3. Right-click **MSDTC**, point to **New**, and then select **DWORD Value**.
 4. Type *CmMaxNumberBindRetries*, and then press ENTER.
-5. Right-click **CmMaxNumberBindRetries**, and then click **Modify**.
-6. Click **Decimal**.
+5. Right-click **CmMaxNumberBindRetries**, and then select **Modify**.
+6. Select **Decimal**.
 7. In the **Value data** box, type *60*.
 
     This value increases the length of time that the client computer waits for the bind packet response from the server computer. This value is double the number of seconds before the client computer stops the transaction if the client computer doesn't receive the bind packet response. For example, a value of 60 equals 30 seconds. The value of 60 is only a recommended value. Additional testing on your configuration may be required.
-8. Click **OK**.
+8. Select **OK**.
 9. Restart MS DTC.
 
 > [!NOTE]

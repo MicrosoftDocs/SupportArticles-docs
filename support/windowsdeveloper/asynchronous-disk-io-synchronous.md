@@ -1,12 +1,13 @@
 ---
 title: Asynchronous disk I/O appears synchronous
-description: Describes an issue that asynchronous disk I/O appears as synchronous on Windows.
+description: This article describes a problem that asynchronous disk I/O appears as synchronous on Windows.
 ms.date: 03/13/2020
+ms.prod-support-area-path:
 ms.reviewer: allend
 ---
 # Asynchronous disk I/O appears as synchronous on Windows
 
-This article provides information about resolving an issue that the default behavior for I/O is synchronous, but it appears as asynchronous.
+This article helps you resolve the problem that the default behavior for I/O is synchronous, but it appears as asynchronous.
 
 _Original product version:_ &nbsp; Windows  
 _Original KB number:_ &nbsp; 156932
@@ -106,7 +107,7 @@ One obstruction to asynchronous operation is New Technology File System (NTFS) c
 
 Similar to compression, file encryption causes the system driver to convert asynchronous I/O to synchronous. If the files are decrypted, the I/O requests will be asynchronous.
 
-### Extending a file
+### Extend a file
 
 Another reason that I/O operations are completed synchronously is the operations themselves. On Windows, any write operation to a file that extends its length will be synchronous.
 
@@ -161,7 +162,7 @@ You can expect to see results similar to one of the following:
         500 requests queued and completed in 4.495806 seconds.
     ```
 
-    This test demonstrates that this program spent 4.495880 seconds calling ReadFile to complete its operations, but the test 1 spent only 0.224264 seconds to issue the same requests. In test 2, there was no extra time for the program to do any background work.
+    This test demonstrates that this program spent 4.495880 seconds calling ReadFile to complete its operations, but the test 1 spent only 0.224264 second to issue the same requests. In test 2, there was no extra time for the program to do any background work.
 
 - Test 3
 

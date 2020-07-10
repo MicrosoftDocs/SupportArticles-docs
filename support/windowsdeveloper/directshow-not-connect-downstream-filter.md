@@ -7,7 +7,7 @@ ms.reviewer: dbristol
 ---
 # DirectShow filter does not connect to the downstream filter on Windows 8 and Windows 7 SP1 with KB 2670838
 
-This article provides information about resolving the issue that the DirectShow filter will not connect to the downstream filter after you install [KB 2670838](https://support.microsoft.com/help/2670838) on Windows 8 or Windows 7 SP1.
+This article helps you resolve the problem that the DirectShow filter will not connect to the downstream filter after you install [KB 2670838](https://support.microsoft.com/help/2670838) on Windows 8 or Windows 7 SP1.
 
 _Original product version:_ &nbsp; Windows 8, Windows 7  
 _Original KB number:_ &nbsp; 2841589

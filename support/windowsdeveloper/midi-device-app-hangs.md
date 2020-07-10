@@ -1,13 +1,13 @@
 ---
 title: MIDI device app hangs when using MIDI API
-description: Describes that you can't use the legacy MIDI API in the MIDI device application, the application may freeze in Windows 10.
+description: This article describes that you can't use the legacy MIDI API in the MIDI device application, the application may freeze in Windows 10.
 ms.date: 03/10/2020
 ms.prod-support-area-path:
 ms.reviewer: daleche, davean, jadailey
 ---
 # MIDI device application hangs when you use former MIDI API in Windows 10
 
-This article provides information about resolving an issue that MIDI device application hangs in Windows 10 when you use the legacy MIDI API.
+This article helps you resolve the problem that MIDI device application hangs in Windows 10 when you use the legacy MIDI API.
 
 _Original product version:_ &nbsp; Windows 10  
 _Original KB number:_ &nbsp; 4460006
@@ -52,7 +52,7 @@ To fix this issue, use the new Windows Runtime (WinRT) API functions to replac
 >
 > - The API functions are primarily available to be called from a modern/UWP app.
 > - Such modern APPs can be developed by using C++ language.
-> - There's an option to develop classic user-mode desktop application that consumes WinRT APIs by using the *DualApiPartitionAttribute* attribute. For example, the [MidiInPort Class](/uwp/api/Windows.Devices.Midi.MidiInPort#Windows_Devices_Midi_MidiInPort_GetDeviceSelector) lists it.
+> - There's an option to develop classic user-mode desktop application that consumes WinRT APIs by using the `DualApiPartitionAttribute` attribute. For example, the [MidiInPort Class](/uwp/api/Windows.Devices.Midi.MidiInPort#Windows_Devices_Midi_MidiInPort_GetDeviceSelector) lists it.
 
 ## Status
 
