@@ -1,5 +1,5 @@
 ---
-title: ASP.NET 2.0 and 3.5 don't work
+title: ASP.NET 2.0 and 3.5 not working
 description: This article describes an issue in which uninstalling ASP.NET 4.5 from Windows 8 or Windows Server 2012 causes ASP.NET 2.0 and ASP.NET 3.5 to not work.
 ms.date: 04/07/2020
 ms.prod-support-area-path: 
@@ -7,7 +7,7 @@ ms.reviewer: meyoun
 ---
 # ASP.NET 2.0 and 3.5 not working after you uninstall ASP.NET 4.5 in Windows 8 or Windows Server 2012
 
-This article helps you resolve the problem that uninstalling ASP.NET 4.5 from Windows 8 or Windows Server 2012 causes ASP.NET 2.0 and ASP.NET 3.5 to not work.
+This article helps you resolve the problem that uninstalling ASP.NET 4.5 from Windows 8 or Windows Server 2012 causes ASP.NET 2.0 and ASP.NET 3.5 not working.
 
 _Original product version:_ &nbsp; Windows Server 2012, Hyper-V Server 2012, .NET Framework 4.5  
 _Original KB number:_ &nbsp; 2748719

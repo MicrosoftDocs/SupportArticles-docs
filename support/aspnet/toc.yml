@@ -91,7 +91,7 @@
     href: request-timed-out-dataadapter.md
   - name: Error-logging capabilities of HTTP APIs
     href: error-logging-http-apis.md
-  - name: Exceptions cause apps to quit
+  - name: Exceptions cause applications to quit
     href: exceptions-cause-asp-net-apps-quit.md
   - name: FileNotFoundException when an application calls a web service
     href: filenotfindexception-asp-net-call-web-service.md
