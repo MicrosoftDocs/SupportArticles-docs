@@ -84,7 +84,7 @@
     href: catch-exceptions-visual-cpp.md
   - name: CDatabase::GetConnect returns empty string
     href: cdatabase-getconnect-returnn-empty.md
-  - name: Do basic file I/O
+  - name: Do basic file I/O operations
     href: visual-cpp-basic-file-io.md
   - name: Enable Tablet press-and-hold gesture in MFC
     href: mfc-enable-tablet-press-and-hold-gesture.md
@@ -105,5 +105,5 @@
   items:
   - name: Can't save file settings in a project
     href: file-setting-not-save-visual-cpp-2013.md
-  - name: Visual C++ 2010 supports only .NET 4 as target
+  - name: Visual C++ 2010 supports .NET 4 as target
     href: cpp-2010-support-dot-net-4-target.md
