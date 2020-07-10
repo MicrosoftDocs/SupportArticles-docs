@@ -15,15 +15,15 @@ _Original KB number:_ &nbsp; 957939
 
 ## Summary
 
-In Silverlight 3 or an earlier version of Silverlight, you start the Silverlight Configuration tool by right-clicking Silverlight content and then clicking **Silverlight**. In Silverlight 4, you can directly run the Silverlight Configuration tool.
+In Silverlight 3 or an earlier version of Silverlight, you start the Silverlight Configuration tool by right-clicking Silverlight content and then select **Silverlight**. In Silverlight 4, you can directly run the Silverlight Configuration tool.
 
 To run the Silverlight Configuration tool in Silverlight 4, follow the procedure as appropriate for your operating system.
 
 ## For Windows operating systems
 
-Click the **Windows** button, click **All Programs**, click **Microsoft Silverlight**, and then click **Microsoft Silverlight**.
+Select the **Windows** button, select **All Programs**, select **Microsoft Silverlight**, and then select **Microsoft Silverlight**.
 
 ## For Apple Macintosh operating systems
 
-1. Click **Finder**.
-2. In the **Finder** window, click **Applications**, and then double-click **Microsoft Silverlight**.
+1. Select **Finder**.
+2. In the **Finder** window, select **Applications**, and then double-click **Microsoft Silverlight**.
