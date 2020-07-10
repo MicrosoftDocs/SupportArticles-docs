@@ -7,10 +7,10 @@
 - name: WCF
   items:
   - name: Async services use wrong impersonation
-    href: ../framework/wcf/asynchronous-wcf-service-use-wrong-impersonation.md
+    href: ./framework/wcf/asynchronous-wcf-service-use-wrong-impersonation.md
   - name: Pre-compiled workflow service activation fails
-    href: ../framework/wcf/pre-compiled-wcf-workflow-activation-fails.md
+    href: ./framework/wcf/pre-compiled-wcf-workflow-activation-fails.md
   - name: Use X509CertificateValidator with services
-    href: ../framework/wcf/x509certificatevalidator-wcf-service-certificate.md
+    href: ./framework/wcf/x509certificatevalidator-wcf-service-certificate.md
   - name: REST services generate metadata in WSDL
-    href: ../framework/wcf/wcf-rest-generate-metadata-wsdl.md
+    href: ./framework/wcf/wcf-rest-generate-metadata-wsdl.md
