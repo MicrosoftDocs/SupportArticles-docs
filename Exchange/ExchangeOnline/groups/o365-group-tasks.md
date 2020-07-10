@@ -28,11 +28,12 @@ search.appverid: MET150
   - [Control user access to specific group resources](#control-user-access-to-specific-group-resources)
   - [Prevent group members from changing a group calendar](#prevent-group-members-from-changing-a-group-calendar)
   - [Office 365 group limits](#office-365-group-limits)
-- Office 365 Groups email management
+- Office 365 Groups email address management
   - [Remove the onmicrosoft.com email address](#remove-the-email-address)
   - [Customize email addresses stamped onto new Office 365 groups](#customize-email-addresses-stamped-onto-new-office-365-groups)
   - [Change email addresses of existing groups after adding a domain to a tenant](#change-email-addresses-of-existing-groups-after-adding-a-domain-to-a-tenant)
   - [Add or remove a secondary email address from an Office 365 Group](#add-or-remove-a-secondary-email-address-from-an-office-365-group)
+- Office 365 Groups mail flow
   - [Control delivery of group email messages to new members](#control-delivery-of-group-email-messages-to-new-members)
   - [Get a copy of group email messages you send](#get-a-copy-of-group-email-messages-you-send)
   - [Email issues in Office 365 Groups](#email-issues-in-office-365-groups)
