@@ -1,74 +1,82 @@
 - name: General
   items:
-  - name: .NET applications crash at startup
+  - name: 501 Syntax error when you use FtpWebRequest
+    href: ftpwebrequest-ftp-error-dot-net-4.md
+  - name: A ClickOnce application fails to run
+    href: manifest-definitions-dont-match-reference.md
+  - name: Applications crash at startup
     href: dot-net-app-crash-at-startup.md
-  - name: .NET Framework patching fails
+  - name: Patching fails
     href: patching-framework-fails.md
-  - name: .NET Framework 4.6.1 Developer Pack and language packs
+  - name: Developer Pack and language packs
     href: dot-net-4-6-1-developer-language-pack.md
-  - name: .NET Runtime Optimization Service Event 1101 error
+  - name: Event ID 1101 after Domain Controller promotion
     href: net-runtime-event-1101-error-occur.md
-  - name: Access Violation when you call Ping.send
+  - name: Access Violation exception
     href: access-violation-call-ping-send-repeatedly.md
-  - name: ArgumentException when selecting rows in WPF DataGrid
+  - name: ArgumentException when you select rows
     href: argumentexception-select-row-wpf-datagrid.md
-  - name: Break on Memory Leaks runtime check fails in WPF
+  - name: Break on Memory Leaks runtime check fails
     href: break-memory-leak-debugbreak-wpf.md
-  - name: Can't run .NET programs after .NET is upgraded to 4.6
+  - name: Can't consume web services
+    href: error-dot-net-client-web-service-http.md
+  - name: Can't run programs after an upgrade
     href: cannot-run-application-upgrade-4-dot-6.md
-  - name: Changes in the TSAware behavior in .NET 3.5 SP1
+  - name: Changes in the TSAware behavior
     href: change-tsaware-dotnet-3-5-sp1.md
-  - name: Citrix Memory Optimization causes 80131506 error
+  - name: Memory corruption in the managed process
     href: citrix-virtual-memory-optimization-80131506-error.md
-  - name: COMException in WPF application after you install .NET 4.7
+  - name: COMException in WPF applications
     href: comexception-error-from-wpf-app.md
   - name: COMException when you create WeakReference<T> object
     href: comexception-weakreference-object.md
   - name: Compatibility when you use RIA V1.0 SP2 and EF 5
     href: compatibility-issue-ria-sp2-ef-5.md
-  - name: Computer stops responding because of mscorsvw.exe
+  - name: Computer stops responding
     href: computer-stops-responding-mscorsvw.md
-  - name: Create summary row for DataGrid using VB .NET
+  - name: Create a summary row for DataGrid
     href: create-summary-row-datagrid-asp-net-vb.md
-  - name: Custom WCF extensions force concurrent operations to run sequentially
+  - name: Concurrent operations are forced to run sequentially
     href: wcf-extensions-concurrent-request-run sequentially.md
-  - name: Confusing DefaultValueAttribute documentation
-    href: confusing-defaultvalueattribute-docs.md
-  - name: Data on clipboard from Windows Forms app unavailable
+  - name: Data on the clipboard is unavailable
     href: data-clipboard-from-winform-app-unavailable.md
-  - name: Determine .NET versions and service pack levels
+  - name: Determine versions and service pack levels
     href: determine-net-versions-service-pack-levels.md
   - name: Different WebExceptionStatus are thrown
     href: httpwebrequest-different-webexceptionstatus.md
-  - name: Endpoints of an arc are not drawn correctly
+  - name: Endpoints of an arc aren't drawn correctly
     href: endpoints-of-arc-not-be-drawn-correctly.md
+  - name: Explain DefaultValueAttribute
+    href: confusing-defaultvalueattribute-docs.md
   - name: Build error MC6017 when you define a class
     href: error-mc6017-define-class-xaml.md
-  - name: Error when you build .NET 3.5 projects on .NET 4.0 MSBuild
+  - name: Can't build projects on MSBuild
     href: sgen-mixed-mode-assembly-built-v2-0-50727.md
-  - name: Error when you call COM with multiple AppDomains
+  - name: Can't call COM with multiple AppDomains
     href: fatalexecutionengineerror-call-com-multilpe-appdomains.md
-  - name: Errors when you use FtpWebRequest to perform FTP commands
-    href: ftpwebrequest-ftp-error-dot-net-4.md
-  - name: Event handle leaks in a .NET Framework 4 application
-    href: event-handle-leaks-net-framework-4.md
-  - name: Exceptions when you install PFX files by using X509Certificate
-    href: install-pfx-file-using-x509certificate.md
-  - name: ExecutionEngineException when another WPF window is displayed
-    href: executionengine-exception-wpf-window.md
-  - name: Fail to get security descriptor of a class from native image module
+  - name: Can't get security descriptor of a class
     href: error-security-descriptor-native-image-module.md
-  - name: Fail to publish ClickOnce apps
+  - name: Can't install PFX files by using X509Certificate
+    href: install-pfx-file-using-x509certificate.md
+  - name: Can't parse XML that special characters
+    href: xml-parser-invalid-character.md
+  - name: Event handle leaks in an application
+    href: event-handle-leaks-net-framework-4.md
+  - name: Exception when you instantiate a WPF Window
+    href: executionengine-exception-wpf-window.md
+  - name: Exception when you applications with UI automation
+    href: exception-run-net-app-ui-automation.md
+  - name: Fail to publish ClickOnce applications
     href: fail-publish-clickonce-vs-2010-net-4-dot-5.md
-  - name: Form height and width changes in Visual Studio 2012
+  - name: Form height and width changes
     href: wrong-winform-height-width-vs-2012.md
-  - name: Full-screen WPF apps don't receive touch input events
+  - name: Full-screen applications don't receive touch input events
     href: full-screen-wpf-apps-not-receive-touch-input-events.md
   - name: High memory usage when you use EnlistDurable
     href: high-memory-usage-enlistdurable.md
   - name: Information collected by PerfView
     href: perfview-diagnostic-information.md
-  - name: Initialize WinForm controls before accessing LocalDataStore
+  - name: Initialize controls before accessing LocalDataStore
     href: initialize-winform-control-access-localdatastore.md
   - name: Install an assembly in global assembly cache
     href: install-assembly-global-assembly-cache.md
@@ -76,85 +84,77 @@
     href: invokemember-ambigousmatchexception.md
   - name: Known issues for .NET Framework 4.5.1 Preview
     href: known-issues-dot-net-4-5-1-preview.md
-  - name: Manifest definitions don't match reference
-    href: manifest-definitions-dont-match-reference.md
   - name: MSDTC transaction requires Full Trust
     href: msdtc-transaction-requires-full-trust.md
-  - name: Nested TableLayoutPanel is displayed with large spaces
-    href: nested-tablelayoutpanel-large-empty-spaces.md
-  - name: New Japanese era updates for .NET Framework
+  - name: New Japanese era updates
     href: new-japanese-era-updates-dot-net.md
-  - name: No events received from COM when .NET CF app loses focus
+  - name: No events are received from COM
     href: net-cf-lose-focus-no-events-from-com-object.md
-  - name: Null reference exception when running .NET app with UI automation
-    href: exception-run-net-app-ui-automation.md
-  - name: Open databases by SQL Server .NET Data Provider with VB .NET
+  - name: Open databases by using Visual Basic .NET
     href: open-sql-database-by-net-data-provider-vb.md
-  - name: OutOfMemory when applications target to .NET 4.6.1
+  - name: OutOfMemory exception in a managed application
     href: out-memory-dot-net-4-6-1.md
-  - name: Password in ICredentials can't be passed to WCF service
+  - name: Password can't be passed to a WCF service
     href: password-icredentials-cannot-pass-wcf-service.md
-  - name: Password field is empty when NetworkCredential is deserialized
+  - name: Password field is empty
     href: password-empty-networkcredential-deserialized-wcf.md
-  - name: Ports run out when you use ConnectionGroupName property
+  - name: Ports run out when you use ConnectionGroupName
     href: ports-run-out-use-connectiongroupname.md
-  - name: POST/PUT requests fail when you use HttpWebRequest to send data
+  - name: POST and PUT requests fail
     href: post-put-request-fail-httpwebrequest.md
-  - name: Query XPathDocument with XPath expression by Visual C#
+  - name: Query XPathDocument with an XPath expression
     href: query-xpathdocument-xpath-visual-c-sharp.md
-  - name: RemotingException when using binary format to serialize messages
+  - name: RemotingException when you use binary format
     href: net-remotingexception-binary-format-message.md
-  - name: Repair an installation of .NET Framework
+  - name: Repair an installation
     href: repair-installation-dot-net-framework.md
-  - name: RSS20FeedFormatter throws exception
+  - name: RSS20FeedFormatter throws an exception
     href: rss20feedformatter-throw-exception.md
-  - name: Secure applications built on .NET Framework
+  - name: Secure applications
     href: secure-application-built-dot-net-framework.md
-  - name: Serialization on OnAssemblyResolve handler causes recursion
+  - name: Serialization causes recursion
     href: serialization-onassemblyresolve-event-causes-recursion.md
-  - name: StackOverflowException in DataGridView control on Tablet PC
+  - name: StackOverflowException in DataGridView
     href: stackoverflowexception-datagridview-tablet.md
   - name: System.Net SDP package information
     href: system-dot-net-sdp-package-information.md
   - name: System.Net and WCF diagnostics
     href: system-dot-net-wcf-diagnostics.md
+  - name: TableLayoutPanel is displayed with large spaces
+    href: nested-tablelayoutpanel-large-empty-spaces.md
   - name: Text is lost when you render an XPS DocumentPage
     href: far-eastern-fonts-text-lost-on-images-xps.md
-  - name: Can't consume web services via an HTTP proxy server
-    href: error-dot-net-client-web-service-http.md
-  - name: Warning when adding service reference to Silverlight project
+  - name: Warning when service references are added
     href: warning-add-service-reference-silverlight.md
-  - name: Windows Forms app that uses ToolTip doesn't release memory
+  - name: Windows Forms applications don't release memory
     href: winform-app-use-settooltip-not-release-memory.md
   - name: WCF net.tcp services stop responding
     href: wcf-net-tcp-service-stop-response.md
   - name: Windows Forms applications throw SecurityException
     href: securityexception-winform-net-framework-3-dot-5.md
-  - name: WPF XBAPs may crash during start-up
+  - name: WPF XBAPs crash during startup
     href: wpf-browser-hosted-applications-xbaps-crash.md
-  - name: Wrong time on past dates when using TimeZoneInfo
+  - name: Wrong time on past dates
     href: 2998527-incorrect-time-timezoneinfo.md
-  - name: Invalid character was found in text content
-    href: xml-parser-invalid-character.md
 
 - name: Installation
   items:
-  - name: Can't use ClickOnce to deploy apps in Terminal Server
+  - name: Can't deploy applications in Terminal Server
     href: clickonce-cannot-deploy-app-terminal-server.md
   - name: ClickOnce applications fail to update
     href: clickonce-application-fails-update.md
   - name: ClickOnce deployment isn't supported with Roaming Profiles
     href: clickonce-not-support-roaming-profiles.md
-  - name: Deploy applications built on .NET Framework
+  - name: Deploy applications
     href: deploy-application-built-dot-net-framework.md
-  - name: Diagnosis for .NET Framework setup
-    href: net-framework-setup-diagnostics.md
-  - name: Enable rollback to continue with setup
-    href: enable-rollback-continue-dot-net-setup.md
-  - name: Framework 4.0 requires ClickOnce Manifest signing
+  - name: ClickOnce Manifest signing is required
     href: framework-4-clickonce-manifest-signing.md
-  - name: Installation of published ClickOnce app fails
+  - name: Published ClickOnce applications fail to install
     href: clickonce-app-install-launch-fail.md
+  - name: Setup diagnostics
+    href: net-framework-setup-diagnostics.md
+  - name: Setup fails when rollback is disabled
+    href: enable-rollback-continue-dot-net-setup.md
 
 - name: Language or Compilers
   items:
