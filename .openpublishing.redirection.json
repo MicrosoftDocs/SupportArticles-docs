@@ -37,7 +37,7 @@
     },
     {
       "source_path": "support/windowsdeveloper/index.md",
-      "redirect_url": "/support/windowsdeveloper/welcome-windowsdeveloper",
+      "redirect_url": "/support/windows/win32/welcome-windowsdeveloper",
       "redirect_document_id": false
     },
     {
