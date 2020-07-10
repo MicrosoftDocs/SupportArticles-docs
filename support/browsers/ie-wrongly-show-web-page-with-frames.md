@@ -9,7 +9,7 @@ ms.reviewer: davidg
 
 This article introduces the resolution to fix the issue that a web page that contains frames is shown as a blank page in Internet Explorer.
 
-_Original product version:_ &nbsp; Internet Explorer 
+_Original product version:_ &nbsp; Internet Explorer  
 _Original KB number:_ &nbsp; 169522
 
 ## Symptoms

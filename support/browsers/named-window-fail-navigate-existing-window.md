@@ -9,7 +9,7 @@ ms.reviewer: bachoang
 
 This article helps you resolve the problem that you make sure that the target URL and the URL in the target window have the same protection mode setting when calling `window.open`.
 
-_Original product version:_ &nbsp; Internet Explorer 
+_Original product version:_ &nbsp; Internet Explorer  
 _Original KB number:_ &nbsp; 2961083
 
 ## Symptoms

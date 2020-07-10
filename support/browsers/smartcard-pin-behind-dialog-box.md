@@ -25,7 +25,9 @@ In these conditions, the SmartCard prompt appears behind the modal dialog box an
 
 To work around this issue, disable Hang Resistance in Internet Explorer by creating the following registry key:
 
-`HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main\
- Type: REG_DWORD
- Name: HangRecovery
- Value: 0`
+```console
+HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main\  
+Type: REG_DWORD  
+Name: HangRecovery  
+Value: 0`
+```

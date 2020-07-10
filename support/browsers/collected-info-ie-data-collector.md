@@ -44,7 +44,6 @@ When selecting the **Internet Explorer Data Collector** option, the following in
 
 ### Event Logs
 
-
 |Description|File Name|
 |-|-|
 |Filtered Event Logs (.csv):|{Computername}_ApplicationLog.csv|
@@ -322,7 +321,7 @@ This task will allow you to collect process dump of Internet Explorer or any oth
 - Stop and collect network traces. For more information on what is collected by the Internet Explorer WPAD task, see the Internet Explorer WPAD SDP [KB2668985](https://support.microsoft.com/help/2668985).
 
 ### Internet Explorer Simultaneous Fiddler and Netmon
-  
+
 The Internet Explorer Simultaneous Fiddler and Netmon data collection will perform the following items.
 
 User dialog prompt to choose data collection options including:

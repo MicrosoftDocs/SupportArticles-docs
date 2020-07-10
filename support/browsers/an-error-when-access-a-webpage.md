@@ -1,26 +1,20 @@
 ---
 title: Internet Explorer can't display the webpage
-description: This article describes that Internet Explorer cannot open any webpage and provides troubleshooting solutions。
+description: This article describes that Internet Explorer cannot open any webpage and provides troubleshooting solutions.
 ms.date: 06/09/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
 ---
-# Error (Internet Explorer cannot display the webpage) when you try to access a webpage
+# Internet Explorer cannot display the webpage error when you try to access a webpage
 
-This article helps you solve the problem that Internet Explorer can't display the webpage。
+This article helps you solve the problem that Internet Explorer can't display the webpage. If you're successfully connected to the Internet but can‘t view any webpages in Internet Explorer, use one of the following troubleshooting procedures, as appropriate for your operating system.
 
 _Original product version:_ &nbsp; Internet Explorer, Windows 10  
 _Original KB number:_ &nbsp; 956196
 
-## Summary
+## Troubleshooting for Windows 8 and Windows 10
 
-If you're successfully connected to the Internet but can‘t view any webpages in Internet Explorer, use one of the following troubleshooting procedures, as appropriate for your operating system.
-
-## Troubleshooting
-
-### Windows 8 and Windows 10
-
-#### Check Proxy and DNS Settings
+### Check Proxy and DNS settings
 
 Proxy settings are used to tell Internet Explorer the network address of an intermediary server (known as a proxy server) that is used between the browser and the Internet on some networks. Changing proxy settings is something you only have to do if you are connecting to the Internet through a corporate network. By default, Internet Explorer automatically detects proxy settings. However, if this setting has been changed and you are not trying to connect to a corporate network, you may experience connection issues. To verify that Internet Explorer is automatically detecting your proxy settings, follow the steps below:
 
@@ -28,35 +22,35 @@ Proxy settings are used to tell Internet Explorer the network address of an inte
 (If you're using a mouse, point to the upper-right corner of the screen, move the mouse pointer down, click **Start**, and then type *Internet options*.)
 2. Tap or click the **Connections** tab, and then tap or click the **LAN settings**.
 
-    ![connections.](./media/an-error-when-access-a-webpag/4054711_en_1.png)
+    :::image type="content" source="media/an-error-when-access-a-webpage/connections-tab.png" alt-text="screenshot of the Connections tab in Internet Properties" border="false":::
 
 3. Tap or click **Automatically detect settings** and verify that there is check mark in the box beside it.
 
-    ![lan settings.](./media/an-error-when-access-a-webpag/4054712_en_1.png)
+    :::image type="content" source="media/an-error-when-access-a-webpage/automatically-detect-settings.png" alt-text="screenshot of Automatically detect settings option" border="false":::
 
 4. Tap or click **OK** to close the windows. Restart Internet Explorer and verify the issue is resolved.
 
-#### Reset Internet Explorer
+### Reset Internet Explorer
 
 To reset Internet Explorer to the default settings, follow these steps:
 
 1. Start Internet Explorer, and then on the **Tools** menu, click **Internet Options**.
 2. Click the **Advanced** tab, and then click **Reset**. (The screenshot for this step is listed below).
 
-    ![advanced.](./media/an-error-when-access-a-webpag/4054714_en_1.png)
+    :::image type="content" source="media/an-error-when-access-a-webpage/advanced-tab.png" alt-text="screenshot of the Advanced tab in Internet Options" border="false":::
 
 3. In the **Internet Explorer Default Settings** dialog box, click **Reset**.
 4. In the **Reset Internet Explorer Settings** dialog box, click **Reset**. (The screenshot for this step is listed below).
 
-    ![Reset Internet Explorer Settings.](./media/an-error-when-access-a-webpag/4054715_en_1.png)
+    :::image type="content" source="media/an-error-when-access-a-webpage/reset-internet-explorer-settings.png" alt-text="screenshot of Reset Internet Explorer Settings" border="false":::
 
 5. Click **Close**, and then click **OK** two times. (The screenshot for this step is listed below).
 
-    ![Reset Internet Explorer Settings.](./media/an-error-when-access-a-webpag/4054716_en_1.png)
+    :::image type="content" source="media/an-error-when-access-a-webpage/reset-internet-explorer-settings-checklist.png" alt-text="screenshot of Reset Internet Explorer Settings" border="false":::
 
 6. Exit and then restart Internet Explorer. The changes take effect the next time that you start Internet Explorer.
 
-#### Delete your browser history
+### Delete your browser history
 
 To delete the browsing history in Internet Explorer 11, follow these steps:
 
@@ -65,15 +59,15 @@ To delete the browsing history in Internet Explorer 11, follow these steps:
 3. On the **Tools** menu, tap or click **Internet options**.
 4. Under **Browsing history**, click **Delete**. (The screenshot for this step is listed below).
 
-    ![internet options.](./media/an-error-when-access-a-webpag/4054708_en_1.png)
+    :::image type="content" source="media/an-error-when-access-a-webpage/general-tab.png" alt-text="screenshot of the General tab of Internet Options" border="false":::
 
 5. Select all the **applicable** check boxes, and then tap or click **Delete**. (The screenshot for this step is listed below).
 
-    ![delete browsing history.](./media/an-error-when-access-a-webpag/4054710_en_1.png)
+    :::image type="content" source="media/an-error-when-access-a-webpage/delete-browsing-history.png" alt-text="screenshot of the Delete Browsing History page" border="false":::
 
 6. Tap or click **Exit**, and then restart Internet Explorer.
 
-#### Disabling Enhanced Protected Mode
+### Disabling Enhanced Protected Mode
 
 Enhanced Protected Mode is a new feature in Internet Explorer 10. It works by extending the existing Protected Mode functionality to help prevent attackers from installing software, accessing personal information, accessing information from corporate Intranets, and from modifying system settings. To do this, Enhanced Protected Mode must reduce some of the capabilities available to Internet Explorer. These restrictions may cause issues with your browsing experience when using Internet Explorer. By disabling Enhance Protected Mode, your performance in Internet Explorer may improve but could leave you at risk for possible attacks.
 
@@ -83,15 +77,15 @@ How to disable Enhanced Protected Mode:
 (If you're using a mouse, point to the upper-right corner of the screen, move the mouse pointer down, click **Start**, and then type **Internet options**.)
 2. Tap or click **Settings** located under the search box to the right of the screen. Then, tap or click the **Internet Options** icon located under the search results.
 
-    ![settings.](./media/an-error-when-access-a-webpag/4054706_en_1.png)
+     :::image type="content" source="media/an-error-when-access-a-webpage/internet-options.png" alt-text="screenshot of the Internet Options" border="false":::
 
 3. In the **Internet Options** windows, tap or click the **Advanced** tab. Locate the check box **Enable Enhanced Protected Mode**. Tap or click to **uncheck** the box.
 
-    ![internet options.](./media/an-error-when-access-a-webpag/4054707_en_1.png)
+    :::image type="content" source="media/an-error-when-access-a-webpage/enable-enhanced-protected-mode.png" alt-text="screenshot of the Enable Enhanced Protected Mode option" border="false":::
 
 4. Tap or click the **Apply** button, and then tap or click **OK**. Restart Internet Explorer and check to see if the issue is resolved.
 
-#### Disable add-ons in Internet Explorer
+### Disable add-ons in Internet Explorer
 
 Internet Explorer 10 is designed to provide an add-on free experience, and it plays HTML5 and many Adobe Flash Player videos without having to install a separate add-on. Add-ons and toolbars work only in Internet Explorer for the desktop. To view a page that requires add-ons in Internet Explorer, swipe down or right-click to bring up the Address bar, tap or click the Page tools button, and then tap or click **View** on the desktop.
 
@@ -105,7 +99,7 @@ To manage add-ons:
 4. Tap or click **Close**.
 5. Restart Internet Explorer and test it. If you can successfully access the Internet, the issue involves an installed add-on. Re-enable each add-on one at a time, and test to determine which add-on is causing the issue.
 
-#### Check whether a third-party service, program, or anti-virus is conflicting with Internet Explorer
+### Check whether a third-party service, program, or anti-virus is conflicting with Internet Explorer
 
 Some third-party anti-virus programs may cause issues for Internet Explorer getting connected to the network. Remove any third party anti-virus from your system per the instructions given by the developers of those programs.
 
@@ -137,7 +131,7 @@ You are prompted to restart your computer. After the restart, test Internet Expl
   3. Tap or click the **Startup** tab, enable all the programs, and then click **OK**.
   4. Restart the computer.
 
-#### Updating older drivers and editing registry keys
+### Updating older drivers and editing registry keys
 
 - Checking Windows Updates for drivers
 
@@ -155,13 +149,13 @@ You are prompted to restart your computer. After the restart, test Internet Expl
 
   1. Open Registry Editor by swiping in from the right edge of the screen, tapping **Search** (or, if you're using a mouse, pointing to the upper-right corner of the screen, moving the mouse pointer down, and then clicking **Search**), entering *regedit* in the search box, and then tapping or clicking **regedit.exe** in the search results.
 
-      ![search.](./media/an-error-when-access-a-webpag/4054717_en_1.png)
+      :::image type="content" source="media/an-error-when-access-a-webpage/regedit-exe.png" alt-text="screenshot of regedit.exe" border="false":::
 
   2. Navigate to `HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main`. No need to click on the dropdown for **Main**. The key we are looking for is located there. Tap or click on **Main**.
   3. Locate the key named **TabProcGrowth**. Right-click the key and tap or click **Modify**.
   4. The key value will be listed. If the key value is **1**, do not change it. If the value is *0*, change it to **1**, and then click **OK**.
 
-#### Restore or refresh your PC
+### Restore or refresh your PC
 
 To restore your PC by using System Restore
 
@@ -175,11 +169,11 @@ If you think that an app or driver that you recently installed has caused proble
 1. Swipe in from the right edge of the screen, tap **Settings**, and then tap **Change PC settings**. (If you're using a mouse, point to the upper-right corner of the screen, move the mouse pointer down, click **Settings**, and then click **Change PC settings**. )
 2. Under PC settings, tap or click **General**.
 3. Under Refresh your PC without affecting your files, tap or click **Get started**.
-4. Follow the instructions on the screen.  
+4. Follow the instructions on the screen.
 
-### Windows 7
+## Troubleshooting for Windows 7
 
-#### Delete your browser history
+### Delete your browser history
 
 - Internet Explorer 8, Internet Explorer 9, Internet Explorer 10, or Internet Explorer 11
 
@@ -190,15 +184,15 @@ If you think that an app or driver that you recently installed has caused proble
   3. On the **Tools** menu, click **Internet options**.
   4. Under **Browsing history**, click **Delete**. (The screenshot for this step is listed below).
 
-      ![options.](./media/an-error-when-access-a-webpag/4054719_en_1.png)
+      :::image type="content" source="media/an-error-when-access-a-webpage/delete-browsing-history-in-internet-options.png" alt-text="screenshot of how to delete browsing history" border="false":::
 
   5. Select all the check boxes, and then tap or click **Delete**. (The screenshot for this step is listed below).
 
-      ![history.](./media/an-error-when-access-a-webpag/4054720_en_1.png)
+       :::image type="content" source="media/an-error-when-access-a-webpage/delete-browsing-history.png" alt-text="screenshot of the Delete Browsing History page" border="false":::
 
   6. Tap or click **Exit**, and then restart Internet Explorer.
 
-#### Disable add-ons in Internet Explorer
+### Disable add-ons in Internet Explorer
 
 - Internet Explorer 10 and Internet Explorer 11
 
@@ -244,7 +238,7 @@ If you think that an app or driver that you recently installed has caused proble
   4. Click the add-on you want to disable, and then click **Disable**.
   5. Repeat step 4 for every add-on you want to disable. When you're finished, click **Close**.
 
-#### Reset Internet Explorer
+### Reset Internet Explorer
 
 - Internet Explorer 8, Internet Explorer 9, Internet Explorer 10, or Internet Explorer 11
 
@@ -253,20 +247,20 @@ If you think that an app or driver that you recently installed has caused proble
   1. Start Internet Explorer, click **Tools**, and then click **Internet Options**.
   2. Click the **Advanced** tab, and then click **Reset**. (The screenshot for this step is listed below).
 
-      ![options.](./media/an-error-when-access-a-webpag/4054722_en_1.png)
+      :::image type="content" source="media/an-error-when-access-a-webpage/advanced-tab.png" alt-text="screenshot of the Advanced tab in Internet Options" border="false":::
 
   3. In the Internet Explorer Default Settings dialog box, click **Reset**.
   4. In the Reset Internet Explorer Settings dialog box, click **Reset**. (The screenshot for this step is listed below).
 
-      ![Reset.](./media/an-error-when-access-a-webpag/4054723_en_1.png)
+       :::image type="content" source="media/an-error-when-access-a-webpage/reset-internet-explorer-settings.png" alt-text="screenshot of the Reset Internet Explorer Settings page" border="false":::
 
   5. Click **Close** and then click **OK** two times. (The screenshot for this step is listed below).
 
-      ![Reset.](./media/an-error-when-access-a-webpag/4054725_en_1.png)
+      :::image type="content" source="media/an-error-when-access-a-webpage/reset-internet-explorer-settings-checklist.png" alt-text="screenshot of the Reset Internet Explorer Settings page" border="false":::
 
   6. Exit and then restart Internet Explorer. The changes take effect the next time that you open Internet Explorer.
 
-#### Check whether a third-party service or program is conflicting with Internet Explorer
+### Check whether a third-party service or program is conflicting with Internet Explorer
 
 To determine whether a third-party program or service conflicts with Internet Explorer, follow these steps:
 
@@ -294,7 +288,7 @@ To determine whether a third-party program or service conflicts with Internet Ex
   3. Click the **Startup** tab, enable all the programs, and then click **OK**.
   4. Restart the computer.
 
-#### Install Windows Updates and disable the PreBinding feature
+### Install Windows Updates and disable the PreBinding feature
 
 - Check Windows Updates
 
@@ -315,17 +309,17 @@ To determine whether a third-party program or service conflicts with Internet Ex
   5. On the **Edit** menu, select **Modify**.
   6. Type *0*, and then select **OK**.
 
-#### Restore your PC to an earlier point in time
+### Restore your PC to an earlier point in time
 
 If you think an app or driver that you recently installed caused problems with your PC, you can restore it back to an earlier point in time, called a restore point. System Restore doesn't change your personal files, but it might remove recently installed apps and drivers.
 
 To restore your PC using System Restore
 
-Open System Restore by clicking the **Start** button. In the search box, type *System Restore*, and then, in the list of results, click **System Restore**. If you're prompted for an administrator password or confirmation, type the *password* or provide confirmation.  
+Open System Restore by clicking the **Start** button. In the search box, type *System Restore*, and then, in the list of results, click **System Restore**. If you're prompted for an administrator password or confirmation, type the *password* or provide confirmation.
 
-### Windows Vista
+## Troubleshooting for Windows Vista
 
-#### Delete your browser history
+### Delete your browser history
 
 - Internet Explorer 8 or Internet Explorer 9
 
@@ -336,11 +330,11 @@ Open System Restore by clicking the **Start** button. In the search box, type *S
   3. On the **Tools** menu, click **Internet options**.
   4. Under **Browsing history**, click **Delete**. (The screenshot for this step is listed below).
 
-      ![options.](./media/an-error-when-access-a-webpag/4054726_en_1.png)
+      :::image type="content" source="media/an-error-when-access-a-webpage/delete-browsing-history-in-internet-options.png" alt-text="screenshot of the General Tab in Internet options" border="false":::
 
   5. Select all the check boxes, and then tap or click **Delete**. (The screenshot for this step is listed below).
 
-      ![history.](./media/an-error-when-access-a-webpag/4054729_en_1.png)
+      :::image type="content" source="media/an-error-when-access-a-webpage/delete-browsing-history.png" alt-text="screenshot of the Delete Browsing History page" border="false":::
 
   6. Tap or click **Exit**, and then restart Internet Explorer.
 
@@ -356,7 +350,7 @@ Open System Restore by clicking the **Start** button. In the search box, type *S
   4. Click **Delete**.
   5. Exit and then restart Internet Explorer, and then try to access the webpage.
 
-#### Disable add-ons in Internet Explorer
+### Disable add-ons in Internet Explorer
 
 - Internet Explorer 9
 
@@ -397,7 +391,7 @@ Open System Restore by clicking the **Start** button. In the search box, type *S
   3. Click an add-on, and then click **Disable**.
   4. Repeat step 4 for each add-on that you want to turn off. When you're finished, click **Close**.
 
-#### Reset Internet Explorer
+### Reset Internet Explorer
 
 - Internet Explorer8 or Internet Explorer 9
 
@@ -406,16 +400,16 @@ Open System Restore by clicking the **Start** button. In the search box, type *S
   1. Start Internet Explorer, click **Tools**, and then click **Internet Options**.
   2. Click the **Advanced** tab, and then click **Reset**. (The screenshot for this step is listed below).
 
-      ![advanced.](./media/an-error-when-access-a-webpag/4054730_en_1.png)
+      :::image type="content" source="media/an-error-when-access-a-webpage/advanced-tab.png" alt-text="screenshot of the Advanced tab in Internet Options" border="false":::
 
   3. In the Internet Explorer Default Settings dialog box, click **Reset**.
   4. In the Reset Internet Explorer Settings dialog box, click **Reset**. (The screenshot for this step is listed below).
 
-      ![Reset Internet Explorer.](./media/an-error-when-access-a-webpag/4054731_en_1.png)
+       :::image type="content" source="media/an-error-when-access-a-webpage/reset-internet-explorer-settings.png" alt-text="screenshot of the Reset Internet Explorer settings page" border="false":::
 
   5. Click **Close** and then click **OK** two times. (The screenshot for this step is listed below).
 
-      ![ok.](./media/an-error-when-access-a-webpag/4054732_en_1.png)
+      :::image type="content" source="media/an-error-when-access-a-webpage/reset-internet-explorer-settings-checklist.png" alt-text="screenshot of the Reset Internet Explorer settings page" border="false":::
 
   6. Exit and then restart Internet Explorer. The changes take effect the next time that you open Internet Explorer.
 
@@ -434,14 +428,14 @@ Open System Restore by clicking the **Start** button. In the search box, type *S
 
   Your changes will take effect the next time you open Internet Explorer.
 
-#### Check whether a third-party service or program is conflicting with Internet Explorer
+### Check whether a third-party service or program is conflicting with Internet Explorer
 
 To determine whether a third-party program or service conflicts with Internet Explorer, follow these steps:
 
 1. Click **Start**, type *config* in the search box, and then click the displayed **System Configuration** icon.
 2. Click the **Services** tab and check the box beside **Hide all Microsoft services**, and then click **Disable** all.
 3. Next, click the Startup tab.
-4. Click **Disable all** in the bottom right and then click **OK**. You will be prompted to reboot your computer. After the reboot, test Internet Explorer for connection. Depending on the result, go to the **The connection works** section or to the **The connection still does not work** section.  
+4. Click **Disable all** in the bottom right and then click **OK**. You will be prompted to reboot your computer. After the reboot, test Internet Explorer for connection. Depending on the result, go to the **The connection works** section or to the **The connection still does not work** section.
 
 - The connection works
 
@@ -461,21 +455,20 @@ To determine whether a third-party program or service conflicts with Internet Ex
   3. Click the **Startup** tab, enable all the programs, and then click **OK**.
   4. Restart the computer.
 
-#### Restore your PC to an earlier point in time
+### Restore your PC to an earlier point in time
 
 If you think an app or driver that you recently installed caused problems with your PC, you can restore it back to an earlier point in time, called a restore point. System Restore doesn't change your personal files, but it might remove recently installed apps and drivers.
 
 To restore your PC using System Restore
 
-1. Click **Start**, type system restore in the Start Search box, and then click **System Restore** in the Programs list.  
-     If you are prompted for an administrator password or confirmation, type your *password* or click **Continue**.
+1. Click **Start**, type system restore in the Start Search box, and then click **System Restore** in the Programs list. If you are prompted for an administrator password or confirmation, type your *password* or click **Continue**.
 2. In the **System Restore** dialog box, click **Choose a different restore point**, and then click **Next**.
 3. In the list of restore points, click a restore point that was created before you began to experience the issue, and then click **Next**.
-4. Click **Finish**.  
+4. Click **Finish**.
 
-### Windows XP
+## Troubleshooting for Windows XP
 
-#### Delete your browser history
+### Delete your browser history
 
 - Internet Explorer 8
 
@@ -486,11 +479,11 @@ To restore your PC using System Restore
   3. On the **Tools** menu, click Internet options.
   4. Under **Browsing history**, click **Delete**. (The screenshot for this step is listed below).
 
-      ![Browsing history.](./media/an-error-when-access-a-webpag/4054733_en_1.png)
+      :::image type="content" source="media/an-error-when-access-a-webpage/delete-browsing-history-in-internet-options.png" alt-text="screenshot of deleting browsing history in internet options" border="false":::
 
   5. Select all the check boxes, and then tap or click **Delete**. (The screenshot for this step is listed below).
 
-      ![Delete.](./media/an-error-when-access-a-webpag/4054720_en_1.png)
+      :::image type="content" source="media/an-error-when-access-a-webpage/delete-browsing-history-in-internet-options.png" alt-text="screenshot of deleting browsing history" border="false":::
 
   6. Tap or click **Exit**, and then restart Internet Explorer.
 
@@ -515,7 +508,7 @@ To restore your PC using System Restore
   5. In the **History** section, click **Clear** history, and then click **Yes**.
   6. Exit and then restart Internet Explorer, and then try to access the webpage.
 
-#### Disable add-ons in Internet Explorer
+### Disable add-ons in Internet Explorer
 
 - Internet Explorer 8
 
@@ -543,7 +536,7 @@ To restore your PC using System Restore
   3. Click an add-on, and then click **Disable**.
   4. Repeat step 4 for each add-on that you want to turn off. When you're finished, click **Close**.
 
-#### Reset Internet Explorer
+### Reset Internet Explorer
 
 - Internet Explorer 8
 
@@ -552,16 +545,16 @@ To restore your PC using System Restore
   1. Start Internet Explorer, click **Tools**, and then click **Internet Options**.
   2. Click the **Advanced** tab, and then click **Reset**. (The screenshot for this step is listed below).
 
-      ![Advanced.](./media/an-error-when-access-a-webpag/4054722_en_1.png)
+      :::image type="content" source="media/an-error-when-access-a-webpage/advanced-tab.png" alt-text="screenshot of the Advanced tab" border="false":::
 
   3. In the Internet Explorer Default Settings dialog box, click **Reset**.
   4. In the Reset Internet Explorer Settings dialog box, click **Reset**. (The screenshot for this step is listed below).
 
-      ![Reset Internet Explorer.](./media/an-error-when-access-a-webpag/4054723_en_1.png)
+      :::image type="content" source="media/an-error-when-access-a-webpage/reset-internet-explorer-settings.png" alt-text="screenshot of Reset Internet Explorer Settings" border="false":::
 
   5. Click **Close** and then click **OK** two times. (The screenshot for this step is listed below).
 
-      ![OK.](./media/an-error-when-access-a-webpag/4054725_en_1.png)
+      :::image type="content" source="media/an-error-when-access-a-webpage/reset-internet-explorer-settings-checklist.png" alt-text="screenshot of Reset Internet Explorer Settings" border="false":::
 
   6. Exit and then restart Internet Explorer. The changes take effect the next time that you open Internet Explorer.
 
@@ -581,7 +574,7 @@ To restore your PC using System Restore
 
   Your changes will take effect the next time you open Internet Explorer.
 
-#### Check whether a third-party service or program is conflicting with Internet Explorer
+### Check whether a third-party service or program is conflicting with Internet Explorer
 
 To determine whether a third-party program or service conflicts with Internet Explorer, follow these steps:
 
@@ -609,7 +602,7 @@ To determine whether a third-party program or service conflicts with Internet Ex
   3. Click the **Startup** tab, enable all the programs, and then click **OK**.
   4. Restart the computer.
 
-#### Restore your PC to an earlier point in time
+### Restore your PC to an earlier point in time
 
   If you think an app or driver that you recently installed caused problems with your PC, you can restore it back to an earlier point in time, called a restore point. System Restore doesn't change your personal files, but it might remove recently installed apps and drivers.
 
@@ -618,23 +611,23 @@ To determine whether a third-party program or service conflicts with Internet Ex
   1. Log on to Windows as an administrator.
   2. Click **Start**, point to **All Programs**, point to **Accessories**, point to **System Tools**, and then click **System Restore**. (The screenshot for this step is listed below).
 
-        ![Start.](./media/an-error-when-access-a-webpag/4054734_en_1.png)
+        :::image type="content" source="media/an-error-when-access-a-webpage/system-restore.png" alt-text="screenshot of finding System Restore" border="false":::
 
   3. On the **Welcome to System Restore** page, click to select the **Restore my computer to an earlier time** option, and then click **Next**. (The screenshot for this step is listed below).
 
-        ![Welcome to System Restore page.](./media/an-error-when-access-a-webpag/4054735_en_1.png)
+        :::image type="content" source="media/an-error-when-access-a-webpage/welcome-to-system-restore.png" alt-text="screenshot of Welcome to System Restore page" border="false":::
 
   4. On the **Select a Restore Point** page, click the most recent system restore point On this list, click a **restore point** list, and then click **Next**.
 
       > [!NOTE]
       > A System Restore message may appear that lists configuration changes that System Restore will make. Click **OK**. (The screenshot for this step is listed below).
 
-      ![restore point list.](./media/an-error-when-access-a-webpag/4054736_en_1.png)
+      :::image type="content" source="media/an-error-when-access-a-webpage/select-a-restore-point.png" alt-text="screenshot of Select a Restore Point":::
 
   5. On the **Confirm Restore Point Selection** page, click **Next**. System Restore restores the previous Windows XP configuration, and then restarts the computer.
   6. Log on to the computer as an administrator. Then, click **OK** on the **System Restore Restoration Complete** page. (The screenshot for this step is listed below).
 
-      ![Restoration Complete page.](./media/an-error-when-access-a-webpag/4054737_en_1.png)
+      :::image type="content" source="media/an-error-when-access-a-webpage/restoration-complete.png" alt-text="screenshot of the Restoration Complete page":::
 
   If you successfully restored your computer to a previous state and the computer runs as expected, you are finished.
 
@@ -642,4 +635,4 @@ If the procedure that corresponds to your operating system does not resolve your
 
 After you click this link, verify that the steps that are provided correspond to your operating system. To do this, click the drop-down arrow, and then select your operating system. (The screenshot for this step is listed below).
 
-![click the drop-down arrow.](./media/an-error-when-access-a-webpag/4054738_en_1.png)
+:::image type="content" source="media/an-error-when-access-a-webpage/select-your-operating-system.png" alt-text="screenshot of selecting your operating system":::

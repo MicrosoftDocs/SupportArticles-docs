@@ -8,7 +8,7 @@ ms.date: 02/29/2020
 
 Microsoft identified an issue with how server connection failures can affect proxy server use by the web browser. You may receive a **Page Cannot be Displayed** error message in a corporate network. This article provides temporary workarounds to restore connectivity.
 
-_Original product version:_ &nbsp; Internet Explorer 
+_Original product version:_ &nbsp; Internet Explorer  
 _Original KB number:_ &nbsp; 2551554
 
 ## Symptoms
@@ -37,6 +37,6 @@ Also, you can set a registry key to prevent Internet Explorer from adding proxy 
 
 2. Create a **DWORD** value in this key named `BadProxyExpiresTime`, and assign a value of **0**. This value is in seconds. Setting this value to **0** prevents proxy servers from being added to the bad proxy list.
 
-## More Information
+## More information
 
 The `BadProxyExpiresTime` registry key was introduced with Internet Explorer 5.01, around April 2002. For more information, see [Internet Explorer does not retry bad proxy server for 30 minutes](https://support.microsoft.com/help/320507).

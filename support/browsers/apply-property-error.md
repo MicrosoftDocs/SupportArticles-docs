@@ -10,7 +10,7 @@ This article provides the workaround to help you to solve the problem that an er
 
 Microsoft has confirmed this to be a problem with Microsoft Windows 7 including Microsoft Windows 7 with Service Pack 1.
 
-_Original product version:_ &nbsp; Internet Explorer 
+_Original product version:_ &nbsp; Internet Explorer  
 _Original KB number:_ &nbsp; 2568750
 
 ## Symptoms
@@ -136,7 +136,7 @@ After manually modified with the description text **Add Text Here for Descripti
 
 :::image type="content" source="media/apply-property-error/modified-file.jpg" alt-text="modified file" border="false":::
 
-## More Information
+## More information
 
 Here is all the manual settings that are introduced above:
 

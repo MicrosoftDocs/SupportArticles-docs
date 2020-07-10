@@ -27,7 +27,7 @@ This message is telling you that there may be both secure and non-secure content
 
 ### Windows 10
 
-To Disable/Enable/Prompt the **Only secure content is displayed** message:  
+To Disable/Enable/Prompt the **Only secure content is displayed** message:
 
 1. Open Internet Explorer from the Start screen.
 2. On the **Tool** menu, click **Internet Options**.
@@ -40,7 +40,7 @@ To Disable/Enable/Prompt the **Only secure content is displayed** message:
 
 ### Windows 8
 
-To Disable/Enable/Prompt the **Only secure content is displayed** message:  
+To Disable/Enable/Prompt the **Only secure content is displayed** message:
 
 1. From the start screen, type **Internet Options**.
 2. Tap or click the **Settings option** below the Search box, and then tap or click **Internet Options**.

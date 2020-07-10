@@ -84,14 +84,10 @@ After you set the registry key, you can configure the proxy with Internet Proper
 
 ## More information
 
-For more information, please see the following resources:
+For more information, see:
 
 - [Cryptography](/windows/win32/seccrypto/cryptography-portal)
-
 - [Netsh Commands for Windows Hypertext Transfer Protocol (WINHTTP)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731131(v=ws.10)?redirectedfrom=MSDN)
-
 - [Windows HTTP Services](/windows/win32/winhttp/winhttp-start-page)
-
 - [WinHttpGetDefaultProxyConfiguration function](/windows/win32/api/winhttp/nf-winhttp-winhttpgetdefaultproxyconfiguration)
-
 - [WinHttpGetIEProxyConfigForCurrentUser function](/windows/win32/api/winhttp/nf-winhttp-winhttpgetieproxyconfigforcurrentuser)

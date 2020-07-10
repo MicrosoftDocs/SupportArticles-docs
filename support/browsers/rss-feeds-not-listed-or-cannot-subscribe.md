@@ -9,7 +9,7 @@ ms.reviewer: bchee
 
 This article provides you the steps to solve the issue that the Really Simple Syndication (RSS) feeds are not listed or you cannot subscribe the RSS feeds in Internet Explorer.
 
-_Original product version:_ &nbsp; Internet Explorer 
+_Original product version:_ &nbsp; Internet Explorer  
 _Original KB number:_ &nbsp; 926448
 
 ## Symptoms

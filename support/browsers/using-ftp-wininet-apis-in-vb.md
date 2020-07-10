@@ -9,7 +9,7 @@ ms.reviewer: sangchoe
 
 This article provides the sample file that demonstrates how to use WinInet FTP APIs in a Visual Basic (VB) application.
 
-_Original product version:_ &nbsp; Internet Explorer 
+_Original product version:_ &nbsp; Internet Explorer  
 _Original KB number:_ &nbsp; 195653
 
 ## More Information
@@ -54,5 +54,4 @@ SimpleFtp.vbw           118
 For more information, see the following articles:
 
 - [How to FTP with CERN-Based Proxy Using WinInet API](https://support.microsoft.com/help/166961/how-to-ftp-with-cern-based-proxy-using-wininet-api)
-
 - [WinInet Error Codes (12001 through 12156)](https://support.microsoft.com/help/193625/info-wininet-error-codes-12001-through-12156)

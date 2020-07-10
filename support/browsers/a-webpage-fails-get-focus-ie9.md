@@ -1,6 +1,6 @@
 ---
 title: Failed to get focus in Internet Explorer 9
-description: This article describes some known problems with Internet Explorer9's Hang Resistance Feature.
+description: This article describes some known problems with Internet Explorer 9's Hang Resistance Feature.
 ms.date: 06/09/2020
 ms.prod-support-area-path: 
 ms.reviewer: bachoang
@@ -22,7 +22,7 @@ The problem happens because the Tab Window is detached from the Frame Window's I
 
 ## Resolution
 
-The fix for this issue is available in [ Internet Explorer Cumulative Update MS11-099 (KB 2618444)](/security-updates/Securitybulletins/2011/ms11-099) or any Internet Explorer Cumulative Update onwards.
+The fix for this issue is available in [Internet Explorer Cumulative Update MS11-099 (KB 2618444)](/security-updates/Securitybulletins/2011/ms11-099) or any Internet Explorer Cumulative Update onwards.
 
 There are several ways to work around this problem:
 

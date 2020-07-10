@@ -10,7 +10,7 @@ Sometimes, Internet Explorer may not open in full-screen mode. This happens afte
 
 This article helps you make Internet Explorer always open in full-screen mode or never open in full-screen mode, regardless of how it was closed previously.
 
-_Original product version:_ &nbsp; Internet Explorer 
+_Original product version:_ &nbsp; Internet Explorer  
 _Original KB number:_ &nbsp; 968870
 
 ## Always start Internet Explorer in full-screen mode

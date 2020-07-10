@@ -30,7 +30,7 @@ This issue may occur because the following conditions are true:
 To reset Internet Explorer security zone settings to their default level, follow these steps:
 
 1. Start Internet Explorer.
-2. Click **Tool**, and then click **Internet options**.  
+2. Click **Tool**, and then click **Internet options**.
 3. Click the **Security** tab.
 4. Click **Reset all zones to default level**, and then click **OK**.
 
@@ -39,7 +39,7 @@ To reset Internet Explorer security zone settings to their default level, follow
 > [!NOTE]
 > The steps in this article may not fully resolve the issue. For example, if the current Internet Explorer settings are being enforced by a Group Policy object (GPO), these steps may not resolve the issue. If you want further assistance in resolving the problem that is described in this article, contact Microsoft Customer Support.
 
-## More Information
+## More information
 
 When files are downloaded to a local computer that is running Windows XP Service Pack 2 or a later version, a security zone identifier is stored together with the file properties. This identifier corresponds to the Internet Explorer security zone for where the file was obtained.
 
@@ -48,7 +48,6 @@ When a downloaded file is identified as an unsafe file type, the **Launching app
 For more information about unsafe file types, see:
 
 - [Information about the Unsafe File List in Internet Explorer 6, 7, or 8](https://support.microsoft.com/help/291369)
-
 - [An overview of unsafe file types in Microsoft products](https://support.microsoft.com/help/925330)
 
 For more information about the process that is used to apply zone identifiers to files, see [Information about the Attachment Manager in Microsoft Windows](https://support.microsoft.com/help/883260).

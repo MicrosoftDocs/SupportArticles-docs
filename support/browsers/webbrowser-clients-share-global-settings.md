@@ -9,7 +9,7 @@ ms.reviewer: scotrobe
 
 This article provides methods on implementing global settings for sharing WebBrowser control clients by overriding the OnAmbientProperty method of the hosting CWnd- based class.
 
-_Original product version:_ &nbsp; Internet Explorer 
+_Original product version:_ &nbsp; Internet Explorer  
 _Original KB number:_ &nbsp; 183412
 
 ## Symptoms

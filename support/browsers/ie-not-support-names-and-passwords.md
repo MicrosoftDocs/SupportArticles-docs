@@ -9,7 +9,7 @@ ms.reviewer: josborne, ericlaw, gsilva
 
 This article is intended to notify Web site administrators and IT professionals about the behavior of Internet Explorer when user information is included in a Web site address (HTTP or HTTPS URL).
 
-_Original product version:_ &nbsp; Internet Explorer 
+_Original product version:_ &nbsp; Internet Explorer  
 _Original KB number:_ &nbsp; 834489
 
 ## Summary
@@ -30,7 +30,7 @@ You can use this URL syntax to automatically send user information to a Web site
 
 A malicious user might use this URL syntax to create a hyperlink that appears to open a legitimate Web site but actually opens a deceptive (spoofed) Web site. For example, the following URL appears to open `http://www.wingtiptoys.com` but actually opens `http://example.com`:
 
-http://www.wingtiptoys.com@example.com
+`http://www.wingtiptoys.com@example.com`
 
 > [!NOTE]
 > In this case, Internet Explorer 6 Service Pack 1 (SP1) and Internet Explorer 6 for Microsoft Windows Server 2003 only display `http://example.com` in the Address bar. However, earlier versions of Internet Explorer display `http://www.wingtiptoys.com@example.com` in the Address bar.
@@ -48,9 +48,7 @@ To mitigate the issues that are discussed in the **Background information** sect
 
 This change in the default behavior is also implemented by security updates, service packs, and versions of Internet Explorer that were released starting with the release of security update 832894.
 
-## Workaround
-
-### Workarounds for users
+## Workarounds for users
 
 1. URLs that are opened by users who type the URL in the Address bar or click a link
 
@@ -61,7 +59,7 @@ This change in the default behavior is also implemented by security updates, ser
 
     If the Web site uses the basic authentication method, Internet Explorer automatically prompts users for a user name and a password. In some cases, users can click the **Remember my password** box in the dialog box to save their credentials for later visits to that Web site.
 
-### Workarounds for application and Web site developers
+## Workarounds for application and Web site developers
 
 1. URLs that are opened by objects that call WinInet or Urlmon functions
 
@@ -76,20 +74,20 @@ This change in the default behavior is also implemented by security updates, ser
 
     For more information about how to use these functions, visit the following Microsoft Web sites:
 
-    - [InternetConnectA function](/windows/win32/api/wininet/nf-wininet-internetconnecta?redirectedfrom=MSDN)
-    - [HttpOpenRequestA function](/windows/win32/api/wininet/nf-wininet-httpopenrequesta?redirectedfrom=MSDN)
-    - [HttpSendRequestA function](/windows/win32/api/wininet/nf-wininet-httpsendrequesta?redirectedfrom=MSDN)
+    - [InternetConnectA function](/windows/win32/api/wininet/nf-wininet-internetconnecta)
+    - [HttpOpenRequestA function](/windows/win32/api/wininet/nf-wininet-httpopenrequesta)
+    - [HttpSendRequestA function](/windows/win32/api/wininet/nf-wininet-httpsendrequesta)
 
     For more information about how to use the **IAuthenticate** Interface, visit the following Microsoft Web site:
 
-    - [IAuthenticate interface](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775080(v=vs.85)?redirectedfrom=MSDN)
+    - [IAuthenticate interface](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775080(v=vs.85))
 
     > [!NOTE]
     > With this workaround, you can open Web sites that the URL-spoofing technique redirects. The whole URL appears, including the redirected location.
 
     For example, the following URL appears:
 
-    http://www.wingtiptoys.com@www.example.com
+    `http://www.wingtiptoys.com@www.example.com`
 
     The user still arrives at the redirected Web site. In this example, the user arrives at `http://www.example.com`.
 
@@ -99,7 +97,7 @@ This change in the default behavior is also implemented by security updates, ser
 
     To see an example of how to use Visual Basic to read and write HTTP cookies in an ASP.NET Web program, see [HttpCookie Class](/dotnet/api/system.web.httpcookie?view=netframework-4.8).
 
-### How to disable the new behavior or to use it in other programs
+## How to disable the new behavior or to use it in other programs
 
 You can set registry values to use this new behavior in other programs that host the Web browser control or to disable this new behavior for Windows Explorer and Internet Explorer.
 
@@ -132,9 +130,7 @@ You can set registry values to use this new behavior in other programs that host
 For an explanation of the standard URL syntax for HTTP or HTTPS URLs, visit the following Internet Engineering Task Force (IETF) Web sites:
 
 - [RFC 1738: Uniform Resource Locators (URL)](http://www.ietf.org/rfc/rfc1738.txt)
-
 - [RFC 2396: Uniform Resource Identifiers (URI): Generic Syntax](http://www.ietf.org/rfc/rfc2396.txt)
-
 - [RFC 2616: Hypertext Transfer Protocol--HTTP/1.1](http://www.ietf.org/rfc/rfc2616.txt)
 
 Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.

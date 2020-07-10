@@ -50,10 +50,9 @@ The above key is created in a 64-bit system and targets the Internet Explorer 9 
 
  After following the above steps, VBD documents will load successfully in Internet Explorer 9.
 
-## More Information
+## More information
 
 More information about the relevant URL Action and Feature control key can be found here:
 
 - [URL Action flags](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537178(v=vs.85))
-
 - [GetClassFileOrMime Function](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775108(v=vs.85))

@@ -27,9 +27,6 @@ This behavior is by design when Quirks Mode gets used. Recommended to use the mo
 More information on Internet Explorer document modes can be found at the following locations:
 
 - [Creating Standards-Enabled Websites](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/samples/hh273394(v=vs.85))
-
 - [Defining Document Compatibility](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/compatibility/cc288325(v=vs.85))
-
 - [Optical Zooming in Legacy Document Modes](https://blogs.msdn.com/b/ie/archive/2012/08/28/optical-zooming-in-legacy-document-modes.aspx)
-
 - [Interoperable Html5 Quirks Mode in Internet Explorer 10](https://blogs.msdn.com/b/ie/archive/2011/12/14/interoperable-html5-quirks-mode-in-ie10.aspx)
