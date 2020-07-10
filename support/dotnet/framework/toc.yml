@@ -1,6 +1,6 @@
 - name: General
   items:
-  - name: 501 Syntax error when you use FtpWebRequest
+  - name: 501 syntax error when you use FtpWebRequest
     href: ftpwebrequest-ftp-error-dot-net-4.md
   - name: A ClickOnce application fails to run
     href: manifest-definitions-dont-match-reference.md
@@ -12,20 +12,30 @@
     href: dot-net-4-6-1-developer-language-pack.md
   - name: Event ID 1101 after Domain Controller promotion
     href: net-runtime-event-1101-error-occur.md
-  - name: Access Violation exception
+  - name: Access violation when you call Ping
     href: access-violation-call-ping-send-repeatedly.md
   - name: ArgumentException when you select rows
     href: argumentexception-select-row-wpf-datagrid.md
+  - name: Build error MC6017 when you define a class
+    href: error-mc6017-define-class-xaml.md
   - name: Break on Memory Leaks runtime check fails
     href: break-memory-leak-debugbreak-wpf.md
+  - name: Can't build projects on MSBuild
+    href: sgen-mixed-mode-assembly-built-v2-0-50727.md
   - name: Can't consume web services
     href: error-dot-net-client-web-service-http.md
+  - name: Can't call COM with multiple AppDomains
+    href: fatalexecutionengineerror-call-com-multilpe-appdomains.md
+  - name: Can't get security descriptor of a class
+    href: error-security-descriptor-native-image-module.md
+  - name: Can't install PFX files by using X509Certificate
+    href: install-pfx-file-using-x509certificate.md
+  - name: Can't parse XML that contains special characters
+    href: xml-parser-invalid-character.md
   - name: Can't run programs after an upgrade
     href: cannot-run-application-upgrade-4-dot-6.md
   - name: Changes in the TSAware behavior
     href: change-tsaware-dotnet-3-5-sp1.md
-  - name: Memory corruption in the managed process
-    href: citrix-virtual-memory-optimization-80131506-error.md
   - name: COMException in WPF applications
     href: comexception-error-from-wpf-app.md
   - name: COMException when you create WeakReference<T> object
@@ -48,21 +58,9 @@
     href: endpoints-of-arc-not-be-drawn-correctly.md
   - name: Explain DefaultValueAttribute
     href: confusing-defaultvalueattribute-docs.md
-  - name: Build error MC6017 when you define a class
-    href: error-mc6017-define-class-xaml.md
-  - name: Can't build projects on MSBuild
-    href: sgen-mixed-mode-assembly-built-v2-0-50727.md
-  - name: Can't call COM with multiple AppDomains
-    href: fatalexecutionengineerror-call-com-multilpe-appdomains.md
-  - name: Can't get security descriptor of a class
-    href: error-security-descriptor-native-image-module.md
-  - name: Can't install PFX files by using X509Certificate
-    href: install-pfx-file-using-x509certificate.md
-  - name: Can't parse XML that special characters
-    href: xml-parser-invalid-character.md
   - name: Event handle leaks in an application
     href: event-handle-leaks-net-framework-4.md
-  - name: Exception when you instantiate a WPF Window
+  - name: Exception when you instantiate a WPF window
     href: executionengine-exception-wpf-window.md
   - name: Exception when you applications with UI automation
     href: exception-run-net-app-ui-automation.md
@@ -74,6 +72,8 @@
     href: full-screen-wpf-apps-not-receive-touch-input-events.md
   - name: High memory usage when you use EnlistDurable
     href: high-memory-usage-enlistdurable.md
+  - name: Incorrect code lookups on past dates
+    href: 2998527-incorrect-time-timezoneinfo.md
   - name: Information collected by PerfView
     href: perfview-diagnostic-information.md
   - name: Initialize controls before accessing LocalDataStore
@@ -84,6 +84,8 @@
     href: invokemember-ambigousmatchexception.md
   - name: Known issues for .NET Framework 4.5.1 Preview
     href: known-issues-dot-net-4-5-1-preview.md
+  - name: Memory corruption in the managed process
+    href: citrix-virtual-memory-optimization-80131506-error.md
   - name: MSDTC transaction requires Full Trust
     href: msdtc-transaction-requires-full-trust.md
   - name: New Japanese era updates
@@ -94,7 +96,7 @@
     href: open-sql-database-by-net-data-provider-vb.md
   - name: OutOfMemory exception in a managed application
     href: out-memory-dot-net-4-6-1.md
-  - name: Password can't be passed to a WCF service
+  - name: Passwords can't be passed to a WCF service
     href: password-icredentials-cannot-pass-wcf-service.md
   - name: Password field is empty
     href: password-empty-networkcredential-deserialized-wcf.md
@@ -134,8 +136,6 @@
     href: securityexception-winform-net-framework-3-dot-5.md
   - name: WPF XBAPs crash during startup
     href: wpf-browser-hosted-applications-xbaps-crash.md
-  - name: Wrong time on past dates
-    href: 2998527-incorrect-time-timezoneinfo.md
 
 - name: Installation
   items:
