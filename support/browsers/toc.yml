@@ -160,7 +160,7 @@
       href: named-window-fail-navigate-existing-window.md
 
     - name: Files couldn't be downloaded error
-      href: cannot-download-files-secure-websites.md
+      href: cannot-download-files-from-secure-websites.md
 
     - name: FormData can't be sent by XMLHttpRequest
       href: xmlhttprequest-not-correctly-send-formdata.md
@@ -232,7 +232,7 @@
       href: troubleshoot-online-games-ie.md
 
     - name: Text-overlow ellipsis not working
-      href: text-overlow-ellipsis-not-working.md
+      href: textoverlow-ellipsis-not-working.md
 
     - name: Use FTP with CERN-based proxy using WinInet API
       href: ftp-with-cern-based-proxy-using-wininet-api.md
