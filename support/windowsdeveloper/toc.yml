@@ -3,11 +3,11 @@
 
 - name: Routing Windows SDK
   items:
-  - name: Component Development
+  - name: Component development
     items:
     - name: An application fails to create a COM+ component
       href: ../windows/win32/client-application-error-create-com-plus-component.md
-    - name: Two DLL hosts start a COM+ object is enabled
+    - name: Two DLL hosts start when a COM+ object is enabled
       href: ../windows/win32/two-dll-hosts-start-com-plus-enabled.md
   - name: Desktop app UI development
     items:
@@ -21,13 +21,13 @@
       href: ../windows/win32/icon-overlay-handlers-windows-shell.md
     - name: Screen Saver command line arguments
       href: ../windows/win32/screen-saver-command-line.md
-  - name: Distributed Transactions
+  - name: Distributed transactions
     items:
     - name: Can't start transactions
       href: ../windows/win32/cannot-start-transaction-ms-dtc.md
     - name: Enable diagnostic tracing
       href: ../windows/win32/enable-diagnostic-tracing-ms-dtc.md
-  - name: Graphics and Multimedia development
+  - name: Graphics and multimedia development
     items:
     - name: DirectShow doesn't connect to a downstream filter
       href: ../windows/win32/directshow-not-connect-downstream-filter.md
@@ -35,27 +35,27 @@
       href: ../windows/win32/dwm-drop-direct3d-10-application-frame.md
     - name: WIA 2.0 doesn't support duplex scan
       href: ../windows/win32/wia-2-not-support-duplex.md
-  - name: Networking Development
+  - name: Networking development
     items:
     - name: The BeginRead method causes exceptions
       href: ../windows/win32/beginread-causes-invalidoperationexception.md
-    - name: Header and Library requirement at the IPPROTO_IP level
+    - name: Header and library requirement at the IPPROTO_IP level
       href: ../windows/win32/header-library-requirement-socket-ipproto-ip.md
     - name: Memory leaks when you close a non-blocking socket
       href: ../windows/win32/close-non-blocked-socket-memory-leak.md
     - name: Send small data packets over TCP by using Winsock
       href: ../windows/win32/data-segment-tcp-winsock.md
-  - name: Security Development
+  - name: Security development
     items:
     - name: Changing krbtgt password fails
       href: ../windows/win32/change-krbtgt-password-may-fail.md
     - name: Limitation of 10 smart card readers in Windows
       href: ../windows/win32/limitation-10-smart-card-readers.md
-  - name: System Services Development
+  - name: System services development
     items:
     - name: CreateProcess can't eliminate duplicated variables
       href: ../windows/win32/createprocess-cannot-eliminate-duplicate-variables.md
-    - name: GetMessage ignores messages when you execute callbacks
+    - name: GetMessage ignores messages
       href: ../windows/win32/getmessage-ignores-posted-messages.md
     - name: Heap manager may not decommit memory
       href: ../windows/win32/heap-manager-may-not-decommit-memory.md
@@ -68,11 +68,11 @@
 
 - name: Routing Windows App Dev (UWP)
   items:
-  - name: Devices and Sensors Development
+  - name: Devices and sensors development
     items:
     - name: Send raw data to printers
       href: ../windows/win32/win32-raw-data-to-printer.md
-  - name: Graphics and Multimedia development
+  - name: Graphics and multimedia development
     items:
     - name: Former MIDI API causes applications to hang
       href: ../windows/win32/midi-device-app-hangs.md
@@ -82,7 +82,7 @@
       href: ../windows/win32/modify-printer-settings-setprinter-api.md
     - name: RAW data can't print
       href: ../windows/win32/writeprinter-raw-data-not-print.md
-  - name: System Services Development
+  - name: System services development
     items:
     - name: DXGI 1.2 API can't draw cursor to desktop images
       href: ../windows/win32/dxgi-cannot-draw-cursor.md
@@ -99,7 +99,7 @@
 
 - name: Routing WDK V2
   items:
-  - name: Print Driver
+  - name: Print driver
     items:
     - name: Can't print to XPS Document Writer
       href: ../windows/win32/print-app-xps-document-writer.md
@@ -109,16 +109,16 @@
       href: ../windows/win32/printer-device-fonts.md
     - name: XPSDrv isn't compatible with RAW databases
       href: ../windows/win32/v4-print-driver-raw-mode-pcl-postscript.md
-  - name: Storage Driver
+  - name: Storage driver
     items:
     - name: CD-ROM notifications
       href: ../windows/win32/receive-cd-rom-notification.md
-  - name: System Services Development
+  - name: System services development
     items:
     - name: Asynchronous disk I/O appears synchronous
       href: ../windows/win32/asynchronous-disk-io-synchronous.md
 
-- name: Windows Administration and Management Development
+- name: Windows administration and management development
   items:
   - name: Windows Management Instrumentation (WMI) API
     items:
