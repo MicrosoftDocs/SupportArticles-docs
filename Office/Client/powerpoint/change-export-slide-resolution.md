@@ -99,7 +99,7 @@ By default, the export resolution of a PowerPoint slide that you want to save as
 
 4. Select **Save**. You will be prompted with the following dialog box:
 
-    ![Select Current Slide Only.](https://support.microsoft.com/Library/Images/2881255.jpg)
+    ![Select Current Slide Only.](./media/change-export-slide-resolution/current-slide.png)
 
 
     Select **Current Slide Only**. The slide is saved in the new format and resolution, in the location that you specified in the **Save in** box.   

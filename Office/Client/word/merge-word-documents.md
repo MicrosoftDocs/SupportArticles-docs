@@ -23,18 +23,18 @@ If you need to cope with Word documents quite often during work, merger of multi
 
 The **Insert** tab allows you to subtly merge documents.
 
-!["Insert" tab](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4491213_en_1)
+!["Insert" tab](./media/merge-word-documents/insert-tab.png)
 
 Locate **Object**, press a small triangle next to it, and click **Text from File** from the dropdown menu.
 
-!["Text from File" of the dropdown menu of "Object"](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4491214_en_1)
+!["Text from File" of the dropdown menu of "Object"](./media/merge-word-documents/text-from-file.png)
 
 After that, you can select files to be merged into the current document. To select more than one document, pressing and holding **Ctrl**.
 
 > [!NOTE]
 > Documents placed at the top will be merged in the first place. Therefore, please sort and number each target document in case that you want to keep a certain sequence for your documents.
 
-!["Insert File" window](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4491215_en_1)
+!["Insert File" window](./media/merge-word-documents/insert-file.png)
 
 This method applies both to Word 2010 and Word 2007. Attention required: Formats will not be necessarily remained when you merge the documents. Please be careful of that.
 
