@@ -10,13 +10,22 @@
   href: ./install/toc.yml
 - name: Silverlight
   items:
-  - name: Silverlight 5 applications crash with 0xC0000094 exception
+  - name: Applications crash with 0xC0000094 exception
     href: ./silverlight/exception-0xc0000094-silverlight-5.md
   - name: Run Silverlight Configuration tool
     href: ./silverlight/run-silverlight-configuration-tool.md
-  - name: Silverlight doesn't show DRM protected subtitles
+  - name: Can't display DRM protected subtitles
     href: ./silverlight/silverlight-not-support-drm-protected-subtitles.md
-  - name: Slsvcutil.exe crashes when Silverlight 5 is installed
+  - name: Slsvcutil.exe crashes
     href: ./silverlight/slsvcutil-tool-crash-silverlight-5.md
 - name: Visual Basic
-  href: ../dotnet/visual-basic/toc.yml
+  items:
+  - name: Examine CheckBox values in a DataGrid column
+    href: ../dotnet/visual-basic/checkbox-control-values-datagrid-vb.md
+  - name: NullReferenceException when you use CommandBuilder
+    href: ../dotnet/visual-basic/nullreferenceexception-commandbuilder.md
+  - name: Race conditions and deadlocks
+    href: ../dotnet/visual-basic/race-conditions-deadlocks.md
+  - name: Use Trace and Debug classes
+    href: ../dotnet/visual-basic/trace-debug-visual-basic-net.md
+
