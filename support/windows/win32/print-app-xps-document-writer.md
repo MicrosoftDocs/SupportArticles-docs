@@ -49,4 +49,4 @@ To work around this issue, you can access the **Save As** dialog box through its
 
 Software developers can avoid this problem in their 32-bit applications by having these applications detect when the user is printing to the XPS Document Writer printer or to the Adobe PDF printer. The application then specifies the full path to a file in the `DOCINFO.lpszOutput` structure member when calling the `StartDoc` function. The printer driver will use the specified file instead of prompting the user for a file.
 
-[!INCLUDE [Third-party disclaimer](../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

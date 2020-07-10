@@ -29,8 +29,8 @@
       topicHref: /troubleshoot/webapps/welcome-webapps
 
     - name: Windows Developer
-      tocHref: /troubleshoot/windowsdeveloper/
-      topicHref: /troubleshoot/windowsdeveloper/welcome-windowsdeveloper
+      tocHref: /troubleshoot/windows/win32
+      topicHref: /troubleshoot/windows/win32/welcome-windowsdeveloper
 
     - name: Microsoft Endpoint Manager
       tocHref: /troubleshoot/mem/
