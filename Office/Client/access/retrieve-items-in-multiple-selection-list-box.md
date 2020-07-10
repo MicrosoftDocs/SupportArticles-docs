@@ -55,7 +55,7 @@ You can retrieve the selected items in a multiple selection list box and then st
     ----------------------------------------------------
     Name : NamesList
     Row Source Type : Table/Query
-    Row Source : SELECT FirstName FROM Employees
+    Row Source : SELECT First Name FROM Employees
     Multi Select : Extended
     Width : 3.5"
     Height : 0.75"
