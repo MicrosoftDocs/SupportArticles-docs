@@ -393,7 +393,7 @@ Open System Restore by clicking the **Start** button. In the search box, type *S
 
 ### Reset Internet Explorer
 
-- Internet Explorer8 or Internet Explorer 9
+- Internet Explorer 8 or Internet Explorer 9
 
   To reset Internet Explorer settings to the default setting, follow these steps:
 

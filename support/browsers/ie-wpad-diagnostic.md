@@ -18,7 +18,7 @@ Internet Explorer WPAD Data Collection will perform the following actions:
 
 - Prompt to choose the affected user
 - Prompt for user credentials
-- Clear Temporary Internet Files on IE7+, delete .pac/.dat files on IE6
+- Clear Temporary Internet Files on Internet Explorer+, delete .pac/.dat files on Internet Explorer 6
 - Start network trace (`netsh` for Win7/2k8r2, `nmcap` for Vista/2k8, `netcap` for XP 2k3)
 
   > [!NOTE]
@@ -78,11 +78,11 @@ Internet Explorer WPAD Data Collection will perform the following actions:
 |Network Trace File:|{ComputerName}_capture5.cap|
 |||
 
-*IE6 Autoproxy Files*
+*Internet Explorer 6 Autoproxy Files*
 
 |Description|File Name|
 |---|---|
-|IE6 Autoproxy File Log:|{ComputerName}_{UserName}_IE6_Autoproxy_file_log.txt|
+|Internet Explorer 6 Autoproxy File Log:|{ComputerName}_{UserName}_IE6_Autoproxy_file_log.txt|
 |||
 
 ### Additional information

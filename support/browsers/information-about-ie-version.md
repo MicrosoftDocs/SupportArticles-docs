@@ -108,9 +108,9 @@ Notes
 
 You can open the **About Internet Explorer** dialog box by clicking **Help** and then clicking **About Internet Explorer**. Or, press Alt+X and then press A.
 
-:::image type="content" source="media/information-about-ie-version/About-Internet-Explorer-1.png" alt-text="screenshot of the About Internet Explorer page for IE 9" border="false":::
+:::image type="content" source="media/information-about-ie-version/About-Internet-Explorer-1.png" alt-text="screenshot of the About Internet Explorer page for Internet Explorer 9" border="false":::
 
-:::image type="content" source="media/information-about-ie-version/About-Internet-Explorer-2.png" alt-text="screenshot of the About Internet Explorer page for IE 10" border="false":::
+:::image type="content" source="media/information-about-ie-version/About-Internet-Explorer-2.png" alt-text="screenshot of the About Internet Explorer page for Internet Explorer 10" border="false":::
 
 One change from previous versions of Internet Explorer is how we use the Update Versions field. The field is updated every time Internet Explorer 9 or Internet Explorer 10 is updated. The version number has the following components:
 
