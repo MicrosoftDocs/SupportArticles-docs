@@ -32,7 +32,7 @@ When you open or edit files in Office 365 Desktop applications, you receive the 
 
 ## Cause
 
-This message appears if two different accounts (for example, username@contoso.onmicrosoft.com being the primary account and username@fabrikam.onmicrosoft.com) are used to sync files on two different tenants (such as contoso.onmicrosoft.com and fabrikam.onmicrosoft.com). The Office application is trying to save the changes by using the primary account. However, the application does not have permissions on the second tenant.
+This message appears if two different accounts (for example, username@contoso.onmicrosoft.com being the primary account and username@fabrikam.onmicrosoft.com is the second) are used to sync files on two different tenants (such as contoso.onmicrosoft.com and fabrikam.onmicrosoft.com). The Office application is trying to save the changes by using the primary account. However, the application does not have permissions on the second tenant.
 
 ## Resolution
 
