@@ -1,13 +1,13 @@
 ---
 title: Async WCF service uses wrong impersonation
-description: Resolves an issue in which a WCF service that is invoked asynchronously in ASP.NET uses the wrong impersonation.
+description: This article resolves the problem that a WCF service that is invoked asynchronously in ASP.NET uses the wrong impersonation.
 ms.date: 03/23/2020
 ms.prod-support-area-path:
 ms.reviewer: amymcel
 ---
 # WCF service that is invoked asynchronously in ASP.NET uses the wrong impersonation
 
-This article provides information about resolving an issue that Microsoft Windows Communication Foundation (WCF) service that is invoked asynchronously in ASP.NET uses the wrong impersonation.
+This article helps you resolve the problem that a Windows Communication Foundation (WCF) service that is invoked asynchronously in ASP.NET uses the wrong impersonation.
 
 _Original product version:_ &nbsp; Windows Communication Foundation  
 _Original KB number:_ &nbsp; 2890435
@@ -18,7 +18,7 @@ Consider the following scenario:
 
 - A WCF service uses impersonation and Windows authentication.
 - A WCF client invokes the service asynchronously.
-- The client code runs under the Microsoft ASP.NET environment in Internet Information Services (IIS).
+- The client code runs under the ASP.NET environment in Microsoft Internet Information Services (IIS).
 
 In this scenario, you may encounter an issue in which the service operation doesn't run under the intended impersonation context. Instead, you may find the service operation running under the identity of the process, such as an IIS Application Pool.
 
@@ -50,11 +50,11 @@ To resolve this issue, follow these steps:
     ```
 
     > [!NOTE]
-    > - These settings must be made in the *aspnet.config*file, because these settings configure the CLR that will be used for the application pool. Settings made in *web.config*configure only the individual application, not the application pool.
-    > - Make sure that you change the appropriate *aspnet.config* for the installed framework, such as the `%WINDIR%\Microsoft.NET\Framework64\v4.0.30319\Aspnet.config`path.
+    > - These settings must be made in the *aspnet.config* file, because these settings configure the CLR that will be used for the application pool. Settings made in *web.config* configure only the individual application, not the application pool.
+    > - Make sure that you change the appropriate *aspnet.config* for the installed framework, such as the `%WINDIR%\Microsoft.NET\Framework64\v4.0.30319\Aspnet.config` path.
     > - If you cannot change the *aspnet.config* file(s) for the server, starting with IIS 7, you can associate a custom *aspnet.config* with each Application Pool. For more information, go to the [More information](#more-information) section.
 
-1. Add an explicit `Open()`  call to the client code. After you create an instance of a WCF client, call the `Open()` method before you invoke any operations asynchronously. For example, do the following:
+1. Add an explicit `Open()` call to the client code. After you create an instance of a WCF client, call the `Open()` method before you invoke any operations asynchronously. For example, do the following:
 
     ```csharp
     // Invoke a service operation asynchronously with impersonation.
@@ -81,7 +81,7 @@ To resolve this issue, follow these steps:
 
 - [\<alwaysFlowImpersonationPolicy> Element](/dotnet/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element)
 
-- [Adding Application Pools \<add>](/iis/configuration/system.applicationHost/applicationPools/add/) 
+- [Adding Application Pools \<add>](/iis/configuration/system.applicationHost/applicationPools/add/)
 
 - [add Element for applicationPools [IIS Settings Schema]](/previous-versions/iis/settings-schema/aa347554(v=vs.90))
 

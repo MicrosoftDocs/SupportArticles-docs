@@ -257,7 +257,7 @@ When you open a graphics log (.vsglog) file that is generated on Windows 8.1 Pre
 - Web Test
   - Issue 1:
 
-    You can't record or playback actions involving navigation on a page on Internet Explorer 10 or on Internet Explorer 11 together with the latest IE GDR updates installed.
+    You can't record or playback actions involving navigation on a page on Internet Explorer 10 or on Internet Explorer 11 together with the latest Internet Explorer GDR updates installed.
 
   - Issue 2:
 

@@ -18,3 +18,6 @@
   
 - name: Welcome
   href: biztalk/welcome-biztalk-server.md
+
+- name: Welcome
+  href: browsers/welcome-browsers.md
