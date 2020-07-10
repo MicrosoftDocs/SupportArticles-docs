@@ -1,4 +1,4 @@
-- name: Debuggers and Analyzers
+- name: Debuggers and analyzers
   items:
   - name: Source code debugging
     href: vs-dot-net-source-code-debug.md
@@ -48,7 +48,7 @@
   - name: Warnings about an untrusted certificate
     href: warnings-untrusted-certificate.md
 
-- name: Language or Compilers
+- name: Language or compilers
   items:
   - name: Can't use the Scale-140 logo
     href: cannot-use-scale-140-badge-logo-vs-2012.md
@@ -68,7 +68,7 @@
     href: vs-cannot-compile-32-bit-app-x64-machine.md
 
 
-- name: Integrated Development Environment (IDE)
+- name: Integrated development environment (IDE)
   items:
   - name: Adjust visual experience settings
     href: adjust-vs-visual-experience-settings.md
@@ -87,7 +87,7 @@
   - name: Screen Readers can't read tool windows
     href: screen-readers-not-read-vs-windows.md
 
-- name: Project/Build System
+- name: Project/Build system
   items:
   - name: Building a Windows 10 driver fails
     href: fail-building-windows-10-driver-vs-2015.md
@@ -95,7 +95,7 @@
     href: net-4-5-cause-setup-project-depend-on-net.md
 
 
-- name: Team Explorer/Version Control
+- name: Team explorer/Version control
   items:
   - name: Excel or Project can't connect to Team Foundation Server
     href: excel-project-cant-connect-tfs-2010.md
@@ -103,14 +103,14 @@
     href: invisible-solution-platform-drop-down-list.md
 
 
-- name: Third Party Tools installed with Visual Studio
+- name: Third-party tools installed with Visual Studio
   items:
   - name: Google Android 27 emulator fails to start
     href: android-27-emulator-not-start-vs-2017.md
   - name: Third-party dependencies
     href: third-party-dependencies-vs-2015.md
 
-- name: Tools and Utilities
+- name: Tools and utilities
   items:
   - name: Can't start Windows Simulator
     href: cannot-start-windows-simulator-vs-2012.md

@@ -30,7 +30,7 @@
   - name: Uninstall Visual Studio 2012
     href: uninstall-visual-studio-2012.md
 
-- name: Third Party Tools installed with Visual Studio
+- name: Third-party tools installed with Visual Studio
   items:
   - name: Can't install Visual Studio Tools for Apache Cordova CTP 3.1
     href: cannot-install-vs-tools-ctp-3-dot-1.md

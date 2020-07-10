@@ -1,4 +1,4 @@
-- name: Debuggers and Analyzers
+- name: Debuggers and analyzers
   items:
   - name: Visual Studio crashes when IDebugAddress.GetAddress() is invoked
     href: vs-crash-debug-address-getaddress-called.md
@@ -62,7 +62,7 @@
   - name: Write a web service
     href: write-web-service-visual-c-sharp.md
 
-- name: Language or Compilers
+- name: Language or compilers
   items:
   - name: Can't throw a warning for events
     href: vs-not-throw-warning-event-obsolete.md
