@@ -9,7 +9,7 @@ ms.reviewer:
 
 This article provides a solution to change the homepage and search provider in Internet Explorer.
 
-_Original product version:_ &nbsp; Internet Explorer 
+_Original product version:_ &nbsp; Internet Explorer  
 _Original KB number:_ &nbsp; 2607234
 
 ## Summary

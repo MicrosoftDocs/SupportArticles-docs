@@ -14,11 +14,11 @@ _Original KB number:_ &nbsp; 4013279
 
 ## Symptoms
 
-When you use Internet Explorer or Microsoft Edge to sign in to Visual Studio Team Services, you are blocked. This issue frequently occurs as an infinite loop of the browser redirects.  
+When you use Internet Explorer or Microsoft Edge to sign in to Visual Studio Team Services, you are blocked. This issue frequently occurs as an infinite loop of the browser redirects.
 
 ## Workaround
 
-To work around this issue, add `https://*.visualstudio.com` as a trusted site under **Internet Options**. To do this, follow these steps:  
+To work around this issue, add `https://*.visualstudio.com` as a trusted site under **Internet Options**. To do this, follow these steps:
 
 1. Navigate to **Internet Options**:
 

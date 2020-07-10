@@ -108,8 +108,9 @@ Notes
 
 You can open the **About Internet Explorer** dialog box by clicking **Help** and then clicking **About Internet Explorer**. Or, press Alt+X and then press A.
 
-![About Internet Explorer.](./media/information-about-ie-version/About-Internet-Explorer-1.png)
-![About Internet Explorer.](./media/information-about-ie-version/About-Internet-Explorer-2.png)
+:::image type="content" source="media/information-about-ie-version/About-Internet-Explorer-1.png" alt-text="screenshot of the About Internet Explorer page for IE 9" border="false":::
+
+:::image type="content" source="media/information-about-ie-version/About-Internet-Explorer-2.png" alt-text="screenshot of the About Internet Explorer page for IE 10" border="false":::
 
 One change from previous versions of Internet Explorer is how we use the Update Versions field. The field is updated every time Internet Explorer 9 or Internet Explorer 10 is updated. The version number has the following components:
 
@@ -117,13 +118,13 @@ One change from previous versions of Internet Explorer is how we use the Update 
 - The App Minor version field will remain **0**.
 - The **Update revision** field will increment by **1** for each Internet Explorer update that is released.
 
-![version.](./media/information-about-ie-version/Update-revision.png)
+:::image type="content" source="media/information-about-ie-version/Update-revision.png" alt-text="screenshot of the Update version field":::
 
 Every update has an associated Knowledge base article (for example, [KB2360131](https://support.microsoft.com/help/2360131) - MS10-071: Cumulative security update for Internet Explorer) associated with it. The article provides detailed information about what is included in the update, and it also provides detailed information about the binaries that are updated. The **About Internet Explorer** dialog box provides a link to the Microsoft Knowledge Base Article that is associated with the most recently installed update to Internet Explorer as an easy way to get more information.
 
 For example, if the first update for Internet Explorer 9 has been installed, the **About Internet Explorer** dialog box will have a link to **Update versions: 9.0.1 ([KB2530548](https://support.microsoft.com/help/2530548))**.
 
-![About Internet Explorer.](./media/information-about-ie-version/About-Internet-Explorer-3.png)
+:::image type="content" source="media/information-about-ie-version/About-Internet-Explorer-3.png" alt-text="screenshot of the About Internet Explorer page" border="false":::
 
 ### How to determine the version of Internet Explorer for Windows
 
@@ -133,7 +134,7 @@ To determine the version of Internet Explorer, use any of the following methods:
 - In all versions of Internet Explorer, click **About Internet Explorer** on the **Help** menu. The product and version information are displayed in the dialog box that appears.
 - Use the registry. You can determine the version of Internet Explorer by viewing the following registry key:
 
-    `HKEY_LOCAL_MACHINE\Software\Microsoft\Internet Explorer`  
+    `HKEY_LOCAL_MACHINE\Software\Microsoft\Internet Explorer`
 
   If a version value appears in this key, Internet Explorer 4.0 or a later version is installed. The version string value contains the version number of Internet Explorer 4.0 (or a later version) that is installed on your computer. (For example, the version string value for Internet Explorer 5 is 5.0.2014.0216). Only one zero is stored in the registry for the minor version number if the minor version number is 00. If the minor version number is not 00, the full version value is stored. (For example, 5.50.4807.2300 is stored in the registry as 5.50.4807.2300.)
 
@@ -142,7 +143,7 @@ To determine the version of Internet Explorer, use any of the following methods:
 
 Internet Explorer 3. x does not add the version value to the registry. Instead, it adds a **build** value to the same registry key and updates the **IVer** string value to **103**. For backward compatibility, Internet Explorer 4.0 and later versions change or add the build value. For Internet Explorer 3. x, the build value is a string that contains the four-character build number. (For example, **1300** is the build value for Internet Explorer 3.02). For Internet Explorer 4.0 and later versions, the build value is a string that contains a five-character value, followed by a period and four more characters, in the following format:
 
-**major version build number**. **subbuild number**  
+**major version build number**. **subbuild number**
 
 For example, the build value for Internet Explorer 5 is 52014.0216.
 
@@ -208,7 +209,7 @@ Notes
 
 - The minor version number, build number, and subbuild number may be displayed without trailing zeros. For example, version 7.00.5730.1100 may be displayed as 7.0.5730.11.
 - The Shdocvw.dll file is installed in the *%Windir%\System* folder in Windows 95, in Windows 98, and in Windows Millennium Edition. The Shdocvw.dll file is installed in the *%Windir%\System32* folder in Windows NT 4.0, in Windows 2000, in Windows XP, and in Windows Server 2003. If the Shdocvw.dll file does not exist, Internet Explorer is either incorrectly installed or is not installed.
-- If the version of the Shdocvw.dll file on your computer is not listed in this table, you have installed an Internet Explorer hotfix, an update, or a security update that contains a later version of the Shdocvw.dll file. For example, Shdocvw.dll version 6.0.2800.1170 for Internet Explorer 6 SP1 is included with the MS03-015: April  2003, Cumulative Patch for Internet Explorer (813489) package. If your version of Shdocvw.dll is not listed in this table, you are running the version of Internet Explorer that has the closest version number that is earlier than your version number. To determine which Internet Explorer hotfix, update, or security update is installed, search for the Shdocvw.dll version number on your computer and for Shdocvw.dll in the Microsoft Knowledge Base.
+- If the version of the Shdocvw.dll file on your computer is not listed in this table, you have installed an Internet Explorer hotfix, an update, or a security update that contains a later version of the Shdocvw.dll file. For example, Shdocvw.dll version 6.0.2800.1170 for Internet Explorer 6 SP1 is included with the MS03-015: April 2003, Cumulative Patch for Internet Explorer (813489) package. If your version of Shdocvw.dll is not listed in this table, you are running the version of Internet Explorer that has the closest version number that is earlier than your version number. To determine which Internet Explorer hotfix, update, or security update is installed, search for the Shdocvw.dll version number on your computer and for Shdocvw.dll in the Microsoft Knowledge Base.
 - Internet Explorer 6 Update v.01 and v.04 are prerelease versions of Internet Explorer 6 that change the behavior of Internet Explorer when the program loads ActiveX controls. These prerelease updates are installed in side-by-side mode and will not affect the installation or version number of Internet Explorer 6 SP1 (6.00.2800.1106). Internet Explorer 6 Update v.01 and v.04 require Windows XP Service Pack 1. For more information about these prerelease updates, see [Information for Developers about Internet Explorer](/previous-versions/bb969055(v=msdn.10)).
 
 - The version numbers of Internet Explorer in the list are based on the versions of Windows. The list numbers might be changed by the latest hotfix.

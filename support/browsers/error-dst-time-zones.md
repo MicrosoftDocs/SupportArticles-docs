@@ -39,7 +39,7 @@ This behavior conforms to the ECMAScript standard, and it is therefore by design
 
 When you are concerned only with the day, month, and year, you can work around this behavior by constructing date objects by using an hours value that is not zero-that is, an hours value that is safely larger than the daylight saving time adjustment.
 
-## More Information
+## More information
 
 The ECMAScript standard can be found at [ECMAScript® 2016 Language Specification](https://www.ecma-international.org/ecma-262/7.0/index.html).
 

@@ -9,7 +9,7 @@ ms.reviewer: louiss
 
 This article lists the information that can be collected by running Internet Explorer Diagnostics.
 
-_Original product version:_ &nbsp; Internet Explorer 
+_Original product version:_ &nbsp; Internet Explorer  
 _Original KB number:_ &nbsp; 2547213
 
 ## System information

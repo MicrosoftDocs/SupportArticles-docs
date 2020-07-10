@@ -9,7 +9,7 @@ ms.reviewer: joelba
 
 This article provides a solution to solve the problem of losing characters typed in web pages due to frequent calls to JavaScript to detect the connection status of the client.
 
-_Original product version:_ &nbsp; Internet Explorer 
+_Original product version:_ &nbsp; Internet Explorer  
 _Original KB number:_ &nbsp; 2665220
 
 ## Symptoms
@@ -28,17 +28,15 @@ If the content leverages this conditional check too frequently or the state of t
 
 The optimal recommendation is to modify the site content, which implements this function and lessen the frequency in which a check of `navigator.onLine` is invoked, or modify the code to leverage the on online and on offline events and callback handlers. If it is not possible to modify the content of the web site showing this problem, a client-side change can be implemented to block use of the new features of the `navigator.onLine` property, without impacting the original functionality.
 
-To make a client-side change to block,  use of the new features of the `navigator.onLine` property, without impacting the original functionality, follow these steps after taking the necessary precautions to export a copy of the registry key(s) to be modified:
+To make a client-side change to block, use of the new features of the `navigator.onLine` property, without impacting the original functionality, follow these steps after taking the necessary precautions to export a copy of the registry key(s) to be modified:
 
 1. Start Regedit.
 2. Based on the version of Internet Explorer impacted, navigate to the following feature control key. If it doesn't already exist, create it.
 
-    - For 32-bit Internet Explorer on 32-bit Windows or 64-bit Internet Explorer on 64-bit Windows installations:
-
+    - For 32-bit Internet Explorer on 32-bit Windows or 64-bit Internet Explorer on 64-bit Windows installations:  
         `HKEY_LOCAL_MACHINE (or HKEY_CURRENT_USER)\SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_AJAX_CONNECTIONEVENTS`
 
-    - For 32-bit Internet Explorer on 64-bit Windows installations:
-
+    - For 32-bit Internet Explorer on 64-bit Windows installations:  
         `HKEY_LOCAL_MACHINE (or HKEY_CURRENT_USER)\SOFTWARE\Wow6432Node\Microsoft\Internet Explorer\MAIN\FeatureControl\FEATURE_AJAX_CONNECTIONEVENTS`
 
 3. Create a new **DWORD** called *iexplore.exe* and set its value data to `0x00000000(0)`.
@@ -58,5 +56,4 @@ Starting in Internet Explorer 8, this property was complemented with an addition
 For more information about connectivity enhancements, see the following links:
 
 - [AJAX - Connectivity Enhancements in Internet Explorer 8](/previous-versions//cc304129(v=vs.85))
-
 - [Supporting Offline Browsing in Applications and Components](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768170(v=vs.85))

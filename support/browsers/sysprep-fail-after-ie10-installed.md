@@ -39,4 +39,4 @@ In order to successfully execute **Sysprep** in a machine in this state, please 
 
 3. Execute Sysprep again.
 
-    For step 1, you can use the **regini.exe** utility to change permissions on the mentioned registry keys. For more information, see [How to change registry values or permissions from a command line or a script](https://support.microsoft.com/help/264584/how-to-change-registry-values-or-permissions-from-a-command-line-or-a).
+    For step 1, you can use the **regini.exe** utility to change permissions on the mentioned registry keys. For more information, see [How to change registry values or permissions from a command line or a script](https://support.microsoft.com/help/264584).

@@ -9,7 +9,7 @@ ms.reviewer: joelba
 
 You cannot save passwords in a web site by using the InPrivate Browsing functionality of Internet Explorer. This article introduces a method to solve the issue.
 
-_Original product version:_ &nbsp; Internet Explorer 
+_Original product version:_ &nbsp; Internet Explorer  
 _Original KB number:_ &nbsp; 2026295
 
 ## Symptoms

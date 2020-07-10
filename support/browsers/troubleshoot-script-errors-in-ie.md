@@ -17,6 +17,7 @@ _Original KB number:_ &nbsp; 308260
 When you receive script errors, webpages may not be displayed or work correctly in Internet Explorer.
 
 When script errors occur in Internet Explorer, you may receive following error messages:
+
 > Problems with this Web page might prevent it from being displayed properly or functioning properly. In the future, you can display this message by double-clicking the warning icon displayed in the status bar.
 
 If you click **Show Details**, you may see detailed information about the following errors:
@@ -34,6 +35,7 @@ Error:<ErrorMessage>
 ```
 
 The following warning message may also appear in the Internet Explorer Status bar:
+
 > Done, but with errors on page.
 
 This problem occurs because the HTML source code for the webpage does not work correctly with client-side script such as Microsoft JScript or Microsoft Visual Basic script. This problem may occur for one or more of the following reasons:
@@ -49,7 +51,9 @@ This problem occurs because the HTML source code for the webpage does not work c
 > [!NOTE]
 > Server-side scripts such as Visual Basic scripts in Active Server Pages (ASP) run on a web server. Script errors that occur because of server-side script failures do not produce error messages in Internet Explorer, but they may create a webpage that does not display or work correctly. The troubleshooting information in this article applies to client-side script errors. Contact the administrator of the web server if you suspect that a problem affects a server-side script.
 
-These methods listed in this article may help you troubleshoot the script errors that are caused by files or settings on your computer. For quick visual instructions, watch this video: [How to troubleshoot script errors in Internet Explorer](https://www.microsoft.com/videoplayer/embed/cb2ff237-18e5-4db7-b89c-e1399dbce4b5).
+These methods listed in this article may help you troubleshoot the script errors that are caused by files or settings on your computer. For quick visual instructions about how to troubleshoot script errors in Internet Explorer, watch this video:
+
+> [!VIDEO <https://www.microsoft.com/videoplayer/embed/cb2ff237-18e5-4db7-b89c-e1399dbce4b5>]
 
 ## Resolution
 
@@ -69,7 +73,7 @@ To narrow down the source of the problem, use another user account, another brow
 
 If the script error does not occur when you view the webpage through another user account, in another browser, or on another computer, the problem may be caused by files or settings on your computer. In this situation, follow the methods in this article to resolve this problem:
 
-After you complete each method, try to open a webpage on which you previously received a scripting error. If you do not receive the error, the problem is resolved.  
+After you complete each method, try to open a webpage on which you previously received a scripting error. If you do not receive the error, the problem is resolved.
 
 #### Method 1: Verify that Active Scripting, ActiveX, and Java are not being blocked by Internet Explorer
 
@@ -78,12 +82,12 @@ Active scripting, ActiveX, and Java are all involved in shaping the way that inf
 1. Start Internet Explorer.
 2. On the **Tools** menu, click **Internet Options**. If you can't see the **Tools** menu, press Alt to display the menus.
 3. In the **Internet Options** dialog box, click the **Security** tab.
-4. Click **Default Level** > **OK**
+4. Click **Default Level** > **OK**.
 
     > [!NOTE]
     > ActiveX controls and Java programs are turned off in the High security level in Internet Explorer.
 
-    ![Internet Options.](./media/troubleshoot-script-errors-in-ie/4013610.jpg)
+    :::image type="content" source="media/troubleshoot-script-errors-in-ie/security-tab.jpg" alt-text="Internet Options - Security" border="false":::
 
 #### Method 2: Remove all temporary Internet files
 
@@ -96,17 +100,17 @@ To remove all the temporary Internet-related files for Internet Explorer.
 3. Click the **General** tab.
 4. Under **Browsing History**, click **Delete**.
 
-    ![Internet Options.](./media/troubleshoot-script-errors-in-ie/4013611.jpg)
+    :::image type="content" source="media/troubleshoot-script-errors-in-ie/general-tab.jpg" alt-text="Internet Options - General" border="false":::
 
 5. In the **Delete Browsing History** dialog box, click to select the following check boxes, and then click **Delete**:
 
-    - **Temporary Internet Files**  
-    - **Cookies**  
+    - **Temporary Internet Files**
+    - **Cookies**
     - **History**
 
-    ![Internet Options.](./media/troubleshoot-script-errors-in-ie/4013612.jpg)
+    :::image type="content" source="media/troubleshoot-script-errors-in-ie/options-in-delete-browsing-history.jpg" alt-text="Options in Delete Browsing History" border="false":::
 
-6. Click **Close**, and then click **OK** to close the **Internet Options** dialog box.  
+6. Click **Close**, and then click **OK** to close the **Internet Options** dialog box.
 
 #### Method 3: Install the latest software updates for Windows
 
@@ -120,14 +124,14 @@ This section is intended for more advanced computer users. It includes three met
 
 Scripts, ActiveX controls, and Java programs help shape the way a webpage is displayed. If these features are blocked, this may disrupt the display of webpages.
 
-To determine how to make sure that scripts, ActiveX controls, and Java programs are not blocked, see the documentation for the firewall or antivirus program that you use. Then, make any necessary changes.  
+To determine how to make sure that scripts, ActiveX controls, and Java programs are not blocked, see the documentation for the firewall or antivirus program that you use. Then, make any necessary changes.
 
 #### Method 2: Verify that your antivirus program is not set to scan the Temporary Internet Files or the Downloaded Program Files folders
 
 If an antivirus program interprets a script as a virus, and prevents it from running, a script error may occur. To prevent this, make sure that the antivirus program is not scanning the Temporary Internet Files folder or the Downloaded Program Files folder.
 
 To determine how to prevent the program from scanning these folders, see the documentation for the antivirus program that you use. Then, make any necessary changes.
-For adding exclusions to Windows Security in Windows 10 environments review, **Add an exclusion to Windows Security**.  
+For adding exclusions to Windows Security in Windows 10 environments review, **Add an exclusion to Windows Security**.
 
 #### Method 3: Turn off Smooth Scrolling
 
@@ -141,7 +145,7 @@ If you experience a video display problem, the Smooth Scrolling feature may caus
 > [!NOTE]
 > If this resolves the problem, check whether there is an updated driver available for your video adapter. To obtain an updated driver, contact the manufacturer of your video adapter or of your computer.
 
-## More information  
+## More information
 
 ### Procedure to turn off notification about every script error in Internet Explorer
 
@@ -149,10 +153,10 @@ If you experience a video display problem, the Smooth Scrolling feature may caus
 2. On the **Tools** menu, click **Internet Options**. If you can't see the **Tools** menu, press Alt to display the menus.
 3. On the **Advanced** tab, click to clear the **Display a notification about every script error** box, and then click **OK**.
 
-    ![Internet Options.](./media/troubleshoot-script-errors-in-ie/4013614.jpg)
+    :::image type="content" source="media/troubleshoot-script-errors-in-ie/advanced-tab.jpg" alt-text="Display a notification about every script error" border="false":::
 
 ### Troubleshooting Script Errors when printing from Internet Explorer
-  
+
 If you try to print a webpage in Internet Explorer, you may receive a script error that resembles the following:
 
 ```console

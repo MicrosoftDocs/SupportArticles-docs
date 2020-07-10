@@ -3,13 +3,13 @@ title: Internet Explorer uses wrong character set for an HTML page
 description: Describes an issue where Internet Explorer may render an HTML page using the wrong character set even though the correct charset is specified in the HTML page by using a META tag.
 ms.date: 03/08/2020
 ms.prod-support-area-path:
-ms.reviewer:  Adamki, pfazekas
+ms.reviewer: Adamki, pfazekas
 ---
 # Internet Explorer uses wrong character set when it renders an HTML page
 
 This article provides the methods for you to solve the issue that Internet Explorer renders an HTML page by using the incorrect character set.
 
-_Original product version:_ &nbsp; Internet Explorer 
+_Original product version:_ &nbsp; Internet Explorer  
 _Original KB number:_ &nbsp; 928847
 
 ## Symptoms

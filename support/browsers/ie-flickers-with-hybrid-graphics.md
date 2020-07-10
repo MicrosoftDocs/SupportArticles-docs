@@ -8,7 +8,7 @@ ms.prod-support-area-path:
 
 This article provides steps to solve the flickering issue that occurs on certain computers with *hybrid graphics*.
 
-_Original product version:_ &nbsp; Internet Explorer 
+_Original product version:_ &nbsp; Internet Explorer  
 _Original KB number:_ &nbsp; 2387811
 
 ## Symptoms
@@ -31,6 +31,6 @@ In many cases, you can easily return to the pages that were open when Internet E
 1. Click to create a new tab.
 2. Click the Reopen Last Browsing Session link. Internet Explorer will attempt to reopen tabs that were contained in the last Internet Explorer window to be closed.
 
-## More Information
+## More information
 
 *Hybrid graphics* typically consists of two graphics processors (GPUs). One GPU provides high performance, for example when a notebook computer is plugged in, and the other provides the option of operating with low power consumption. Such a system may, for example, switch to using the energy- saving GPU when a notebook PC is unplugged, and turn off the high-power GPU.

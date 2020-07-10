@@ -8,7 +8,7 @@ ms.prod-support-area-path:
 
 This article provides the steps that you can follow to solve the issue that you cannot change your home page in Internet Explorer.
 
-_Original product version:_ &nbsp; Internet Explorer 
+_Original product version:_ &nbsp; Internet Explorer  
 _Original KB number:_ &nbsp; 2493729
 
 ## Symptoms

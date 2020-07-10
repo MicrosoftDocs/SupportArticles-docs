@@ -27,7 +27,7 @@ If an update installation is in progress, let the installation finish before you
 
 Also note that if there's a restart pending, you may receive the following error message:
 
-> The updates were not applicable.  
+> The updates were not applicable.
 
 ### Make sure you're not running a prerelease version of Windows
 
@@ -37,11 +37,11 @@ If you're not sure which version of Windows is installed, follow these steps:
 
 1. Click **Start,** type *msinfo32* in the **Start Search** or **Search programs and files** box, and then press Enter.
 
-    :::image type="content" source="media/prerequisites-for-installing-ie9/2418428.png" alt-text="search":::
+    :::image type="content" source="media/prerequisites-for-installing-ie9/search.png" alt-text="screenshot of the Search box":::
 
 2. Locate your operating system next to **OS Name** and your system architecture type next to **System Type**.
 
-    :::image type="content" source="media/prerequisites-for-installing-ie9/2728929.png" alt-text="system information":::
+    :::image type="content" source="media/prerequisites-for-installing-ie9/system-information.png" alt-text="screenshot of System Information":::
   
 ## Manually install the Internet Explorer 9 prerequisites
 

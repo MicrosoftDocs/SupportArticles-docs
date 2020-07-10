@@ -9,7 +9,7 @@ ms.reviewer: v-jomcc, ericlaw
 
 A runtime error is a software or hardware problem that prevents Internet Explorer from working correctly. Runtime errors can be caused when a website uses HTML code that is not compatible with the web browser functionality.
 
-_Original product version:_ &nbsp; Internet Explorer 
+_Original product version:_ &nbsp; Internet Explorer  
 _Original KB number:_ &nbsp; 822521
 
 ## Which runtime error do you need to fix
@@ -48,6 +48,6 @@ To see whether the problem is fixed, open or refresh the Web site that caused th
 
 - If the Web site displays and works correctly, and if the runtime error message does not reappear, then you are finished. You may still receive a notification about the Web page error in the Internet Explorer status bar. However, you can just ignore the Web page error. If this computer has multiple users, you might also need to log on as another user and repeat these steps for other users.
 
-- If the Web site still does not display or work correctly, the problem may be with the Web site itself. But to test this, either you must have access to another computer, or your computer must be set up for multiple users. If you have access to another computer, try to view the page from that other computer. If your computer is set up for multiple users, log on as another user, and then try to view the page again.  
+- If the Web site still does not display or work correctly, the problem may be with the Web site itself. But to test this, either you must have access to another computer, or your computer must be set up for multiple users. If you have access to another computer, try to view the page from that other computer. If your computer is set up for multiple users, log on as another user, and then try to view the page again.
 
 If the Web site still does not display or work correctly, then the problem is likely with the Web page itself. So you might want to contact the owner of the Web page to ask them to fix the problem.

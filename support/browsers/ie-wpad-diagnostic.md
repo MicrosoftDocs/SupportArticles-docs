@@ -33,7 +33,7 @@ Internet Explorer WPAD Data Collection will perform the following actions:
 
 ## Information collected by Internet Explorer WPAD Data Collection
 
-* Internet Explorer Connections Key Activity Log*
+*Internet Explorer Connections Key Activity Log*
 
 |Description|File Name|
 |---|---|
@@ -85,11 +85,11 @@ Internet Explorer WPAD Data Collection will perform the following actions:
 |IE6 Autoproxy File Log:|{ComputerName}_{UserName}_IE6_Autoproxy_file_log.txt|
 |||
 
-### Additional Information
+### Additional information
 
 In addition to the files collected as part of this diagnostic, the following files are also saved to the selected user's desktop if the related registry keys are present:
 
-* Internet Explorer Connections Key Exported Registry Keys Saved to User's Desktop*
+*Internet Explorer Connections Key Exported Registry Keys Saved to User's Desktop*
 
 |Description|File Name|
 |---|---|

@@ -7,20 +7,14 @@ ms.reviewer:
 ---
 # Cannot access some websites in Internet Explorer
 
-This article provides information that the Internet Explorer can't access certain websites and provides solutions.
+This article provides methods to solve the issue that Internet Explorer can't access certain websites and provides solutions.
 
 _Original product version:_ &nbsp; Internet Explorer 10, Internet Explorer 9  
 _Original KB number:_ &nbsp; 967897
 
-## Summary
-
-When you try to view some websites, Internet Explorer crashes or hangs.
-
-## Resolution
-
 To resolve this problem, try the following methods, in the order in which they are given.
 
-### Manually enter the shortcut
+## Manually enter the shortcut
 
 Try to open a problem website by manually entering the shortcut (web address) instead of clicking the link for that site. To do this, follow these steps:
 
@@ -28,11 +22,11 @@ Try to open a problem website by manually entering the shortcut (web address) in
 2. Paste the shortcut into the Address bar of Internet Explorer.
 3. Press Enter.
 
-### Use the troubleshooter
+## Use the troubleshooter
 
 If none of the previous methods resolve the problem, try to run the Network and Internet Troubleshooter. To do this, right-click the network icon in the notification area, click Troubleshoot problems, and then click Internet Connections. The Troubleshooter might ask you some questions or reset some common settings during this process. If running the Network and Internet Troubleshooter does not resolve the problem, look for your specific problem in the following list.
 
-#### I can access some websites, but not all of them
+### I can access some websites, but not all of them
 
 1. Windows 8.1 and Windows 10
 
@@ -64,7 +58,7 @@ If you still can't access some websites, get help from the [Microsoft Community 
 
 For more information about How to reset settings in Internet Explorer, see [video](https://www.microsoft.com/videoplayer/embed/c989d6d8-f8f9-4cb5-a2f1-da6a7e89f18b).
 
-#### I can't access my bank and email websites or other secure websites  
+### I can't access my bank and email websites or other secure websites
 
 When you connect to a secure website, Internet Explorer uses an encrypted channel that uses Secure Sockets Layer (SSL) technology to encrypt transactions. Corrupted information in the SSL can cause websites not to load correctly. Clearing the SLL state may resolve this problem. To do this, follow these steps for your version of Windows.
 
@@ -121,7 +115,7 @@ If the Add-on Fix it does not resolve this problem, changes were made to your in
 
 If you still can't access secure websites, get help from the [Microsoft Community online](https://answers.microsoft.com/).
 
-#### I can't access any websites
+### I can't access any websites
 
 If you can't view any websites, you are probably disconnected from the Internet. Try to run the Network and Internet Troubleshooter. To do this, right-click the network icon in the notification area, click Troubleshoot problems, and then click Internet Connections. The Troubleshooter might ask you some questions or reset some common settings during this process.
 

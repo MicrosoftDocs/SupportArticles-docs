@@ -9,7 +9,7 @@ ms.reviewer: heikom
 
 This article introduces the resolution to solve the issue that Compatibility View instead of standards mode is used for Trusted sites in Internet Explorer.
 
-_Original product version:_ &nbsp; Internet Explorer 
+_Original product version:_ &nbsp; Internet Explorer  
 _Original KB number:_ &nbsp; 2701047
 
 ## Symptoms
@@ -41,6 +41,6 @@ Choose one of the following options to ensure the site is opened in Internet Exp
 
 3. Add the HTTP-header name `X-UA-Compatible` with a value of **IE=EDGE** to the websites that should run in Standards Mode.
 
-## More Information
+## More information
 
 For more information about defining document compatibility, see [Defining document compatibility](/previous-versions/windows/internet-explorer/ie-developer/compatibility/cc288325(v=vs.85)?).

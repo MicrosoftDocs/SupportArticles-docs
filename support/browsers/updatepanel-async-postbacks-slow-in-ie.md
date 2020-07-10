@@ -9,7 +9,7 @@ ms.reviewer: jamesche
 
 This article introduces a workaround to solve the issue that you experience a delay when you visit a page and select a page element.
 
-_Original product version:_ &nbsp; Internet Explorer 
+_Original product version:_ &nbsp; Internet Explorer  
 _Original KB number:_ &nbsp; 2000262
 
 ## Symptoms
@@ -71,7 +71,7 @@ Sys.WebForms.PageRequestManager.getInstance().add_pageLoading(disposeTree);
 </script>
 ```
 
-## More Information
+## More information
 
 This script uses the `getElementsByTagName` method, which is much faster in Internet Explorer than the original implementation.
 

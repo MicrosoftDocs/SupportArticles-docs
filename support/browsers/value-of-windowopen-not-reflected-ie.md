@@ -9,7 +9,7 @@ ms.reviewer:
 
 This article provides information about the value set by calling `window.open()` function will not be reflected in the new window of Microsoft Edge.
 
-_Original product version:_ &nbsp; Internet Explorer 
+_Original product version:_ &nbsp; Internet Explorer  
 _Original KB number:_ &nbsp; 3146494
 
 ## Symptoms

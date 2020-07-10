@@ -59,7 +59,7 @@ Reminder: There is no need to prepend `regsvr32` with `%SystemRoot%\System32` on
 > At the execution of each `regsvr32` command, you should receive a message box that indicates registration was successful. If you receive a message indicating a status other than successful, it is recommended that you contact Microsoft Product Support for further assistance. For more information on `regsvr32` usage, see the following article:  
 > [Explanation of Regsvr32 usage and error message](https://support.microsoft.com/help/249873)
 
-## More Information
+## More information
 
 Manual re-registration of these Internet Explorer files may be necessary in the following conditions:
 

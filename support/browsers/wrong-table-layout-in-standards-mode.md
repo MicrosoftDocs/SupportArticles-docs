@@ -9,7 +9,7 @@ ms.reviewer: jeanr
 
 This article discusses a by design behavior that a table is resized if you use relative height for a `<div>` tag within a table cell in Internet Explorer.
 
-_Original product version:_ &nbsp; Internet Explorer 
+_Original product version:_ &nbsp; Internet Explorer  
 _Original KB number:_ &nbsp; 2778473
 
 ## Summary

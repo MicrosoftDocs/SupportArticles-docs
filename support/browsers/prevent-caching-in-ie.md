@@ -8,7 +8,7 @@ ms.prod-support-area-path:
 
 This article describes the use of HTTP headers to control the caching of Web pages in Internet Explorer.
 
-_Original product version:_ &nbsp; Internet Explorer 
+_Original product version:_ &nbsp; Internet Explorer  
 _Original KB number:_ &nbsp; 234067
 
 ## Summary
@@ -74,7 +74,7 @@ When the Cache-Control header needs to be used on non-ASP pages, it may be neces
 - Bring up the Properties dialog for that directory.
 - Choose the HTTP Headers tab.
 - Click the Add button in the Custom HTTP Headers group and add Cache-Control for the header name and no-cache for the header value.
-  
+
 Remember that it is not a good idea to use this header globally across the entire Web server. Restrict its use purely to content that absolutely must not be cached on the client. Problem Checklist If you've applied the techniques in this article and you are still having problems with caching and Internet Explorer, review this handy checklist step by step before contacting Microsoft for technical support assistance:
 
 - Are you using the Cache-Control header with the ASP `Response.CacheControl` property or through a returned HTTP header? This is the only way to truly prevent caching in Internet Explorer.

@@ -8,7 +8,7 @@ ms.prod-support-area-path:
 
 This article explains the methods you can use to check the Internet Explorer version on local and remote computers.
 
-_Original product version:_ &nbsp; Internet Explorer 
+_Original product version:_ &nbsp; Internet Explorer  
 _Original KB number:_ &nbsp; 556019
 
 ## Check settings on local computer
@@ -45,6 +45,6 @@ Echo %Comp_name, %IE_Ver% >> Result.csv
 
 The preceding script checks the remote computer for one registry entry, for checking Internet Explorer version, and the results are saved in a CSV format file.
 
-## More Information
+## More information
 
 For more information, see [Which version of Internet Explorer am I using?](https://support.microsoft.com/help/17295) and [Information about Internet Explorer versions](https://support.microsoft.com/help/969393).

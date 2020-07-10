@@ -61,7 +61,7 @@ For games that require Java add-ons, issues can be resolved by updating the add-
 - In some cases, it may be necessary to uninstall Adobe Flash from your installed programs list and then reinstall the latest version
 - For help with Adobe Flash issues, visit the Adobe [Flash Help and Support](http://www.adobe.com/support/flash) website
 
-### Adobe Shockwave Player  
+### Adobe Shockwave Player
 
 For games that require Adobe Shockwave Player add-ons, issues can be resolved by updating the add-ons to the latest version. The following troubleshooting steps may help to resolve the issue:
 
@@ -69,7 +69,7 @@ For games that require Adobe Shockwave Player add-ons, issues can be resolved by
 - In some cases, it may be necessary to uninstall Adobe Shockwave Player from your installed programs list and then reinstall the latest version.
 - For help with Adobe Shockwave issues, visit the [Adobe Shockwave Player Help and Support](http://www.adobe.com/support/shockwave) website.
 
-### Make sure the add-ons are installed and enabled  
+### Make sure the add-ons are installed and enabled
 
 You will need to make sure that the necessary Add-ons are enabled in Internet Explorer, to do this follow the steps below:
 

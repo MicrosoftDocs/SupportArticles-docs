@@ -26,7 +26,7 @@ Error message 2
 This problem occurs if the **Do not save encrypted pages to disk** option in Internet Explorer is selected.
 
 > [!NOTE]
-> For Internet Explorer 8, see the article ['Internet Explorer Cannot Download' error message when you use an HTTPS URL to open an office document or PDF file](https://support.microsoft.com/help/812935).
+> For Internet Explorer 8, see ['Internet Explorer Cannot Download' error message when you use an HTTPS URL to open an office document or PDF file](https://support.microsoft.com/help/812935).
 
 ## Cause
 
@@ -38,7 +38,7 @@ To fix this issue, first try method 1. If method 1 fails, go to method 2.
 
 On the **Tools** menu in Internet Explorer 9 or a later version, click **Internet Options**, click the **Advanced** tab, click to clear the check mark from the **Do not save encrypted pages to disk** check box in the **Security** area, and then click **OK**. (This is the default Internet Explorer setting.)
 
-:::image type="content" source="media/cannot-download-files-secure-websites/do-not-save-encrypted-pages-to-disk.png" alt-text="Do not save encrypted pages to disk" border="false":::
+:::image type="content" source="media/cannot-download-files-from-secure-websites/do-not-save-encrypted-pages-to-disk.png" alt-text="Do not save encrypted pages to disk" border="false":::
 
 ## Resolution - Method 2
 
