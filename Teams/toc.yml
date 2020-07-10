@@ -83,10 +83,6 @@
       href: ./known-issues/cant-save-profile-picture.md
     - name: Deleted messages with an @ mention send notifications with a channel link
       href: ./known-issues/deleted-messages-send-notifications-with-link.md
-  - name: Linux
-    items: 
-    - name: Known issues on Linux
-      href: ./known-issues/linux-known-issues.md
   - name: Mobile
     items:
     - name: A website with Conditional Access does not display when viewed in the Website tab 
@@ -145,6 +141,10 @@
       href: ./known-issues/task-buckets-do-not-appear-in-planner.md
     - name: Teams website tabs leads to customer confusion 
       href: ./known-issues/website-tabs-cause-confusion-teams.md
+  - name: Teams on Linux
+    items: 
+    - name: Known issues on Linux
+      href: ./known-issues/linux-known-issues.md
   - name: Third-party programs
     items:
     - name: Dell Encryption prevents Teams from starting correctly 
