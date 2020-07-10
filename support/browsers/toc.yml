@@ -18,7 +18,7 @@
     - name: How to change homepage and search provider
       href: change-homepage-and-search-in-ie.md
 
-    - name: How to check IE version
+    - name: How to check version
       href: check-ie-version.md
 
     - name: How to set advanced settings via GPOs
@@ -68,7 +68,7 @@
     - name: Page cannot be displayed error
       href: page-cannot-be-displayed.md
 
-    - name: Persistent cookies lost between IE and Office
+    - name: Persistent cookies lost between Internet Explorer and Office
       href: cookies-not-shared-ie-and-office.md
 
     - name: Session variables are missing
@@ -271,22 +271,22 @@
     - name: How to create all-inclusive deployment package
       href: create-all-inclusive-deploy-package.md
 
-    - name: IE 11 installation fails
+    - name: Internet Explorer 11 installation fails
       href: ie-installation-fails.md
 
     - name: No icons or customizations
       href: Install-ie9-not-apply-icons-or-customizations.md
 
-    - name: Prerequisite software and components of IE 9
+    - name: Prerequisite software and components of Internet Explorer 9
       href: prerequisites-for-installing-ie9.md
 
-    - name: Prerequisite updates for IE 11
+    - name: Prerequisite updates for Internet Explorer 11
       href: prerequisite-updates-for-ie11.md
 
-    - name: Sysprep fails when IE 10 is installed
+    - name: Sysprep fails when Internet Explorer 10 is installed
       href: sysprep-fail-after-ie10-installed.md
 
-    - name: Troubleshoot IE 9 installation issues
+    - name: Troubleshoot Internet Explorer 9 installation issues
       href: troubleshoot-installation-problems-ie9.md
 
 - name: Security and Privacy
@@ -312,7 +312,7 @@
     - name: Prompt a password when using authentication
       href: ie-may-prompt-a-password.md
 
-    - name: Smart card pin prompt appears in IE 9
+    - name: Smart card pin prompt appears in Internet Explorer 9
       href: smartcard-pin-behind-dialog-box.md
 
     - name: Troubleshoot network retrieval of CRLs
@@ -323,7 +323,7 @@
 
 - name: Stability and Performance
   items:
-    - name: Can't install IE 11 on Windows
+    - name: Can't install Internet Explorer 11 on Windows
       href: ie10-not-install-on-system.md
 
     - name: Characters typed in webpage are missing

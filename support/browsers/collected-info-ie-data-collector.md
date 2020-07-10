@@ -302,7 +302,7 @@ This task will allow you to collect process dump of Internet Explorer or any oth
 
 - Prompt for user credentials
 
-- Clear Temporary Internet Files on IE7 and newer, delete .pac/.dat files on IE6
+- Clear Temporary Internet Files on Internet Explorer 7 and newer, delete .pac/.dat files on Internet Explorer 6
 
 - Start network trace (NetSh for Win7/2k8r2, NMCap for Vista/2k8, NetCap for XP 2k3)
   > [!NOTE]
