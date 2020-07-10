@@ -34,7 +34,7 @@ Lync cannot verify that the server is trusted for your sign-in address. Connect 
 
 For example, the following trust model dialog box is displayed:
 
-![Screenshot for Trust Model dialog box  ](https://support.microsoft.com/Library/Images/2834846.jpg)
+![Screenshot for Trust Model dialog box](./media/cannot-verify-the-server-is-trusted/trust-model.png)
 
 ### Scenario 2
 

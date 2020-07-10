@@ -27,7 +27,7 @@ When you try to sign in the first time to Microsoft Skype for Business in the Ge
 
 **We can't verify if the server should be trusted. Do you want to continue signing in?**
 
-![sign-in window](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4012363_en_2)
+![sign-in window](./media/issue-sign-in-german-environment/sign-in-window.png)
 
 ## Cause
 

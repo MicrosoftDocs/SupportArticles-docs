@@ -51,7 +51,7 @@ To work around this issue, you must manually select the **Embed characters that 
 ### PowerPoint 2007
 
 1. Open the PowerPoint 97 or PowerPoint 2000 presentation.
-2. Click the **Microsoft Office Button** ![Microsoft Office Button](https://support.microsoft.com/library/images/support/kbgraphics/public/en-us/office2007filebutton.jpg), and then click **PowerPoint Options**.
+2. Click the **Microsoft Office Button** ![Microsoft Office Button](./media/presentation-file-size-increases/office-button.png), and then click **PowerPoint Options**.
 3. Click **Save**, and then click to select the **Embed fonts in the file** check box.
 4. Click **Embed only the characters used the presentation**.
 5. Click **OK**.
@@ -77,7 +77,7 @@ If you have already saved the PowerPoint 97 or PowerPoint 2000 presentation in P
 ### PowerPoint 2007
 
 1. Open the presentation.
-2. Click the **Microsoft Office Button** ![Microsoft Office Button](https://support.microsoft.com/library/images/support/kbgraphics/public/en-us/office2007filebutton.jpg), and then click **PowerPoint Options**.
+2. Click the **Microsoft Office Button** ![Microsoft Office Button](./media/presentation-file-size-increases/office-button.png), and then click **PowerPoint Options**.
 3. Click **Save**, and then click to select the **Embed fonts in the file** check box.
 4. Click **Embed only the characters used the presentation**.
 5. Click **OK**.

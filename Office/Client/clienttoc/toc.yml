@@ -169,6 +169,8 @@
       href: ../access/lock-files-introduction.md
     - name: Issue when loading an Access web app
       href: ../access/load-access-web-app-in-ie.md
+    - name: Issue with ForEachRecord data macro
+      href: ../access/foreachrecord-issue.md
     - name: Issues when you retrieve SharePoint list data
       href: ../access/retrieve-sharepoint-list-in-access.md
     - name: Jet compact utility is available in download center
@@ -209,8 +211,6 @@
       href: ../access/error-run-query-in-access.md
     - name: Query must have at least one destination field
       href: ../access/query-must-have-at-least-one-destination-field.md
-    - name: Query to filter unique data
-      href: ../access/query-filter-unique-data.md
     - name: Register or unregister ActiveX controls
       href: ../access/register-activex-controls.md
     - name: Reset an AutoNumber field value
@@ -333,6 +333,8 @@
       href: ../excel/cannot-create-pivottable.md
     - name: Can't export to Excel from SharePoint Online
       href: ../excel/cannot-export-to-excel.md
+    - name: Can't modify oData connection in PowerPivot
+      href: ../excel/cannot-modify-odata-connection.md
     - name: Can't open .xls files
       href: ../excel/cannot-open-xls-file.md
     - name: Can't open a workbook saved in Excel version 1805
@@ -1039,10 +1041,14 @@
       href: ../settings/clear-most-recently-used-file.md
   - name: Third party add-ins
     items:
+    - name: Can't start the converter SSPDFCG_X64.cnv
+      href: ../third-party-add-ins/converter-sspdfcg-x64.cnv.md
     - name: Incompatibilities between Office and Adobe
       href: ../third-party-add-ins/incompatibilities-between-office-and-adobe.md
     - name: Office crash with SendToBluetooth add-in installed
       href: ../third-party-add-ins/office-crash-with-sendtobluetooth.md
+    - name: Third-party installed fonts isn't in the font list in Word for Mac
+      href: ../third-party-add-ins/third-party-installed-font-fails-appearing.md
   - name: Visio
     items:
     - name: "\"Fit to Drawing\" not working"
@@ -1085,14 +1091,10 @@
       href: ../word/cannot-edit-text-print-preview.md
     - name: Can't insert QuickTime media into presentations
       href: ../word/cannot-insert-quicktime-media.md
-    - name: Can't modify oData connection in PowerPivot
-      href: ../word/cannot-modify-odata-connection.md
     - name: Can't open documents with unsupported XML elements
       href: ../word/custom-xml-elements-not-supported.md
     - name: Can't open this file because it is larger than 512 Megabytes
       href: ../word/file-larger-than-512-megabytes.md
-    - name: Can't start the converter SSPDFCG_X64.cnv
-      href: ../word/converter-sspdfcg-x64.cnv.md
     - name: Can't use  mouse to draw selection rectangle
       href: ../word/cant-use-mouse-draw-selection-rectangle.md
     - name: Change default view to Draft view
@@ -1167,8 +1169,6 @@
       href: ../word/tabbing-form-fields-content-controls-not-work.md
     - name: Text is not copied from the Clipboard
       href: ../word/text-not-copied-from-clipboard.md
-    - name: Third-party installed fonts isn't in the font list in Word for Mac
-      href: ../word/third-party-installed-font-fails-appearing.md
     - name: Toolbars missing in Word for Mac
       href: ../word/word-mac-toolbars-missing.md
     - name: Track Changes functionality disabled when RMS is disabled

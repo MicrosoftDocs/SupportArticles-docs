@@ -29,7 +29,7 @@ Sorry, something went wrong
 An unexpected error has occurred.
 ```
 
-![Sorry, something went wrong error](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4493897_en_1)
+![Sorry, something went wrong error](./media/sorry-something-went-wrong-error-on-site-page-with-pages-library-web-part/error.png)
 
 The SharePoint Universal Logging System ( ULS) reports:
 

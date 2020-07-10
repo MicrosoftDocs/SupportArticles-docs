@@ -29,7 +29,7 @@ The first time that a user signs in to Outlook Web App, the user has to set his 
 
 The following screenshot shows the Outlook Web App sign-in screen in Office 365.
 
-![The following screenshot shows the Outlook Web App sign-in screen in Office 365.](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4055096_en_1) 
+![The following screenshot shows the Outlook Web App sign-in screen in Office 365.](./media/incorrect-setting/sign-in-screen.png) 
 
 ## Solution 
 

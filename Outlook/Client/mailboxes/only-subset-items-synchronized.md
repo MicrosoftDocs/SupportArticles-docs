@@ -45,7 +45,7 @@ In this scenario, the email folders for these mailboxes may show item counts tha
  
 This message is shown in the following screenshot.
 
-![message](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4052174_en_1)
+![message](./media/only-subset-items-synchronized/message.png)
 
 Additionally, if you search for email items in your mailbox, the search results may display the following text at the bottom of the results:
 
@@ -62,7 +62,7 @@ If you click the **More** link, additional items that meet your search criteria 
 
 This behavior occurs because the Cached Exchange mode **Mail to keep offline** setting is configured to a value other than **All**. For example, the following screenshot shows a profile that's configured to use Cached Exchange Mode and the **Mail to keep offline** setting is set to a default value of **12 months**.
 
-![Mail to keep offline](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4052177_en_1)
+![Mail to keep offline](./media/only-subset-items-synchronized/mail-to-keep-offline.png)
 
 > [!NOTE]
 > Outlook 2019, Outlook 2016, Outlook 2013 and Outlook for Office 365 provide the options of 1, 3, 6, 12, or 24 months, or All. Outlook 2019, Outlook 2016, and Outlook for Office 365 provide the additional options of 3 days, 1 week, and 2 weeks.
@@ -102,7 +102,7 @@ If you have to change the number of selected months of email to synchronize with
 3. On the **E-mail** tab, double-click your Microsoft Exchange account.    
 4. In the **Change Account** dialog box, drag the **Mail to keep offline** slider to the desired number of months or to **All** to synchronize all email messages.
 
-    ![Change Account](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4052178_en_1)    
+    ![Change Account](./media/only-subset-items-synchronized/change-account.png)    
 5. Click **Next**.    
 6. Click **OK** when you're prompted to restart Outlook to complete the configuration change.    
 7. Click **Finish**.    
@@ -118,7 +118,7 @@ If you don't have connectivity with the Exchange server, the following message i
 
 This message is shown in the following screenshot.
 
-![message](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4052179_en_1)
+![message](./media/only-subset-items-synchronized/message-2.png)
 
 Under similar conditions, if you search for items in your mailbox and you don't have connectivity with the Exchange server, the following message is displayed below the search results:
 
@@ -128,7 +128,7 @@ In this message, **\<x>** represents the value that's configured for the cached
 
 An example of this message is shown in the following screenshot.
 
-![message](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4052180_en_1)
+![message](./media/only-subset-items-synchronized/message-3.png)
 
 ### Feature Administration through Group Policy
  

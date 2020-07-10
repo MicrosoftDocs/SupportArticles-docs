@@ -21,7 +21,7 @@ appliesto:
 
 If your organization has a hybrid deployment (on-premises plus Microsoft Office 365), you frequently have to relay email messages to the Internet through Office 365. That is, messages that you send from your on-premises environment (mailboxes, applications, scanners, fax machines, and so on) to Internet recipients are first routed to Office 365, and then sent out. 
 
-![email routing](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4011992_en_3)
+![email routing](./media/office-365-notice/email-routing.png)
  
 Figure: Email relayed from your on-premises email servers to the Internet through Office 365
 
@@ -63,7 +63,7 @@ Additionally, you must meet the second condition ("certificate-based connector 
 
     From the point of view of Office 365, the message is sent from  john@fabrikam.com to  kate@tailspintoys.com. Because Kate’s mail is forwarded, neither the sender domain nor the recipient domain belongs to your organization.    
   
-![email forwarding](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4011993_en_2) 
+![email forwarding](./media/office-365-notice/email-forwarding.png) 
  
 Figure: A forwarded message from contoso.com that's allowed to be relayed through Office 365 because the step 3 "certificate-basedconnector configuration" condition is met 
 
@@ -77,22 +77,22 @@ To create or change a certificate-based connector, follow these steps:
 
 1. Sign in to the Office 365 portal ([https://portal.office.com](https://portal.office.com)), click **Admin**, and then open the Exchange admin center. For more information, see [Exchange admin center in Exchange Online](https://docs.microsoft.com/exchange/exchange-admin-center).
 
-    ![admin sign-in](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4011996_en_1)    
+    ![admin sign-in](./media/office-365-notice/admin-sign-in.png)    
 2. Click **mail flow**, click **connectors**, and then do one of the following:
 
-    - If there are no connectors, click ![Add icon like plus shape](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4492612_en_1) (**Add**) to create a connector.
+    - If there are no connectors, click ![Add icon like plus shape](./media/office-365-notice/plus-shape.png) (**Add**) to create a connector.
 
-        ![add a connector](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4011997_en_1)    
-     - If a connector already exists, select it, and then click ![Edit icon like pen shape](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4492614_en_1) (**Edit**).
+        ![add a connector](./media/office-365-notice/add-connector.png)    
+     - If a connector already exists, select it, and then click ![Edit icon like pen shape](./media/office-365-notice/pen-shape.png) (**Edit**).
 
-        ![edit a connector](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4011998_en_1)
+        ![edit a connector](./media/office-365-notice/edit-connector.png)
 
 3. On the **Select your mail flow scenario** page, select **Your organization’s email server **in the **From** box, and then select **Office 365** in the **To** box.
 
     > [!NOTE]
     > This creates a connector that indicates that your on-premises server is the sending source for your messages.
 
-    ![select mail flow scenario](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4011999_en_1)    
+    ![select mail flow scenario](./media/office-365-notice/mail-flow-scenario.png)    
 4. Enter the connector name and other information, and then click **Next**.    
 5. On the **New connector** or **Edit connector** page, select the first option to use a Transport Layer Security (TLS) certificate to identify the sender source of your organization’s messages. The domain name in the option should match the CN name or SAN in the certificate that you're using.
 
@@ -104,7 +104,7 @@ To create or change a certificate-based connector, follow these steps:
     > [!NOTE]
     > Existing hybrid customers who used the Hybrid Configuration Wizard to configure their connectors should check their existing connector to make sure that it uses, for example, ***.contoso.com** instead of **mail.contoso.com** or **\<hostname>.contoso.com**. This is because **mail.contoso.com** and **\<hostname>.contoso.com** may not be registered domains in Office 365.
 
-    ![new connector](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4012000_en_1) 
+    ![new connector](./media/office-365-notice/new-connector.png) 
  
     Figure: Setting up the connector to use the "contoso.com" format (for example)    
   
@@ -116,7 +116,7 @@ To register your domain, follow the steps in the following Office article:
 
 In the Microsoft 365 Admin Center, click **Setup**, and then click **Domains** to see the list of domains that are registered.
 
-![register domain](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4012001_en_1)
+![register domain](./media/office-365-notice/register-domain.png)
 
 ### Step 3: Configure your on-premises environment
 
