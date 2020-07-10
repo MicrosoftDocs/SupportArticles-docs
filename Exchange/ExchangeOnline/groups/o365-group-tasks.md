@@ -33,9 +33,6 @@ search.appverid: MET150
   - [Customize email addresses stamped onto new Office 365 groups](#customize-email-addresses-stamped-onto-new-office-365-groups)
   - [Change email addresses of existing groups after adding a domain to a tenant](#change-email-addresses-of-existing-groups-after-adding-a-domain-to-a-tenant)
   - [Add or remove a secondary email address from an Office 365 Group](#add-or-remove-a-secondary-email-address-from-an-office-365-group)
-  - [Control delivery of group email messages to new members](#control-delivery-of-group-email-messages-to-new-members)
-  - [Get a copy of group email messages you send](#get-a-copy-of-group-email-messages-you-send)
-  - [Email issues in Office 365 Groups](#email-issues-in-office-365-groups)
 - Office 365 Groups mail flow
   - [Control delivery of group email messages to new members](#control-delivery-of-group-email-messages-to-new-members)
   - [Get a copy of group email messages you send](#get-a-copy-of-group-email-messages-you-send)
