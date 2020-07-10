@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 971052
 
 ## Symptoms
 
-When you install update to an ClickOnce application, the application failed to run with clues of some older binaries are used with the following error message:
+When you install update to a ClickOnce application, the application failed to run with clues of some older binaries are used with the following error message:
 
 > System.IO.FileLoadException: Could not load file or assembly XXXX, Version=x.x.x.x, Culture=neutral, PublicKeyToken=... or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
 
