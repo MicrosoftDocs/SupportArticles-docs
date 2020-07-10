@@ -9,13 +9,13 @@
   - name: Automatically detect settings not working
     href: automatically-detect-settings-enabled.md
 
-  - name: Check IE version
+  - name: Check Internet Explorer version
     href: check-ie-version.md
 
   - name: Can't change home page
     href: cannot-change-home-page-in-ie.md
 
-  - name: Change IE's homepage and search provider
+  - name: Change the homepage and search provider
     href: change-homepage-and-search-ie.md
 
   - name: Delete IEM content not affect extension
@@ -27,7 +27,7 @@
   - name: IEAK 9 supported languages
     href: ieak-9-supported-languages.md
 
-  - name: Non-secure content can‘t be displayed in ie
+  - name: Non-secure content can't be displayed in ie
     href: only-display-secure-content-ie9.md
 
   - name: PAC file isn't read
