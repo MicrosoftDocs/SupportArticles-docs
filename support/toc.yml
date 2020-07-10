@@ -11,7 +11,7 @@
   href: webapps/welcome-webapps.md
 
 - name: Welcome
-  href: windowsdeveloper/welcome-windowsdeveloper.md
+  href: windows/win32/welcome-windowsdeveloper.md
 
 - name: Microsoft Endpoint Manager support
   href: mem/index.yml

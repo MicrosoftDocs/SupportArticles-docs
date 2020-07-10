@@ -48,7 +48,7 @@ productDirectory:
   - title: Windows Developer
     imageSrc: "media/hub-landing/windows.svg"
     links:
-    - url: windowsdeveloper/welcome-windowsdeveloper.md
+    - url: windows/win32/welcome-windowsdeveloper.md
       text: Support for Windows Developer
   - title: Microsoft Endpoint Manager
     imageSrc: "media/hub-landing/MEM.jpg"
