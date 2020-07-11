@@ -8,7 +8,10 @@ ms.topic: article
 ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- CSSTroubleshoot
+- SaRA-OutlookWontStart
+- OutlookAdvDiagnostics
 search.appverid: 
 - MET150
 appliesto:
