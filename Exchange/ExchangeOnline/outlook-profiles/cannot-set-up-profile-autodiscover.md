@@ -7,7 +7,9 @@ ms.service: exchange-online
 ms.topic: article
 ms.author: v-six
 manager: dcscontentpm
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- CSSTroubleshoot
+- OutlookSetupProfile
 localization_priority: Normal
 search.appverid: 
 - MET150
