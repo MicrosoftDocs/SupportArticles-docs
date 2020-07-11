@@ -141,6 +141,10 @@
       href: ./known-issues/teams-owner-cannot-create-planner-tab.md
     - name: Teams website tabs leads to customer confusion 
       href: ./known-issues/website-tabs-cause-confusion-teams.md
+  - name: Teams on Linux
+    items: 
+    - name: Known issues on Linux
+      href: ./known-issues/linux-known-issues.md
   - name: Third-party programs
     items:
     - name: Dell Encryption prevents Teams from starting correctly 

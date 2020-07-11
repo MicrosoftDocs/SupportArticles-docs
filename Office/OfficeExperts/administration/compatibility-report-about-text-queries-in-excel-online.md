@@ -21,15 +21,23 @@ This article was written by [Tom Schauer](https://social.technet.microsoft.com/p
 
 ## Symptoms
 
-When you try to edit a workbook that contains text queries in Microsoft Excel Online, you may receive a Compatibility Report:
+When you try to edit a workbook that contains text queries in Microsoft Excel Online, you may receive a Compatibility Report which states:
+
+> We can’t show these features in the browser:
+> - Text queries
+
 
 ![the compatibility report dialog box](./media/compatibility-report-about-text-queries-in-excel-online/text-query-error.png)
 
+## Cause
+
+This issue occurs because Excel Online doesn't support text queries. 
+
 ## Resolution
 
-This issue occurs because Excel Online doesn't support a text query. To resolve the issue, use either of the following workarounds:
+To resolve the issue, use one of the following workarounds:
 
-**Create a copy of the workbook in Excel Online to remove the unsupported feature**
+### Method 1: Create a copy of the workbook in Excel Online to remove the unsupported feature
 
 1. Select **Edit Workbook** > **Edit in Excel Online** in the workbook.
 1. In the prompt dialog box, select **Edit a Copy**.
@@ -44,7 +52,7 @@ A copied workbook that doesn't contain any unsupported features will be created 
 
 ![the new copy workbook dialog box](./media/compatibility-report-about-text-queries-in-excel-online/copy.PNG)
 
-**Remove the query definition directly**
+### Method 2: Remove the query definition directly
 
 1. Right-click the table and select **Data Range Properties**.
 1. Clear the **Save query definition** check box in the **External Data Range Properties** dialog box.
@@ -54,3 +62,11 @@ A copied workbook that doesn't contain any unsupported features will be created 
 1. On the **Data** tab, select **Properties**, and then clear the **Save query definition** check box in the **External Data Range Properties** dialog box.
 
    ![the clear option two dialog box](./media/compatibility-report-about-text-queries-in-excel-online/clear-option-two.PNG)
+
+### Method 3: Edit the Excel file in the desktop app
+
+If you have it available, open the Excel file in the desktop app, where you will be able to edit the workbook with the text query. 
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
