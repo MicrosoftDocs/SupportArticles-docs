@@ -2,43 +2,43 @@
   items:
   - name: ATL service doesn't start
     href: atl-service-not-start.md
-  - name: C2653 or C2039 error when you reference a STD function
+  - name: C2653 or C2039 error when you reference a STD function
     href: c2653-c2039-error-reference-function.md
   - name: Call Run() method of a Script control
     href: call-script-control-run-method-cpp.md
   - name: Change mouse pointer for a window in MFC
     href: change-mouse-pointer-window-mfc.md
-  - name: Click a Check box in a TreeView
+  - name: Click a Check box in a TreeView
     href: click-check-box-treeview.md
   - name: Error at thread exit if FLS callback isn't freed
     href: fatal-error-thread-exit-fls-callback.md
   - name: FAQs about Standard C++ library
     href: faq-standard-cpp-library.md
-  - name: Runtime packages for Desktop Bridge
+  - name: Runtime packages for Desktop Bridge
     href: c-runtime-packages-desktop-bridge.md
   - name: The _CRTDBG_MAP_ALLOC macro doesn't work
     href: crtdbg-map-alloc-macro-not-work.md
   - name: Use queue STL functions
     href: stl-queue-member-functions.md
-  - name: Use map STL functions
+  - name: Use map STL functions
     href: use-map-stl-functions-visual-cpp.md
-  - name: Use PageHeap to detect memory errors
+  - name: Use PageHeap to detect memory errors
     href: pageheap-detect-memory-errors-cpp.md
   - name: Use priority_queue STL functions
     href: use-priority-queue-stl-function-cpp.md
-  - name: Use stack::top and stack::empty methods
+  - name: Use stack::top and stack::empty methods
     href: stack-top-empty-stl-function-visual-cpp.md
-  - name: Use STL sqrt and pow functions
+  - name: Use STL sqrt and pow functions
     href: stl-sqrt-pow-functions-visual-cpp.md
   - name: Use string arrays
     href: use-string-arrays-visual-cpp.md
-  - name: Use list::list STL function
+  - name: Use list::list STL function
     href: use-list-list-stl-visual-cpp.md
-  - name: Use list::remove STL function
+  - name: Use list::remove STL function
     href: use-list-stl-function-visual-cpp.md
-  - name: Use random_shuffle STL function
+  - name: Use random_shuffle STL function
     href: use-random-shuffle-stl-visual-cpp.md
-  - name: Use set::find STL function
+  - name: Use set::find STL function
     href: use-setfind-stl-function-visual-cpp.md
   - name: Use STL PRIORITY_QUEUE class
     href: stl-priority-queue-class-custom-type.md
@@ -98,7 +98,7 @@
     href: catch-exceptions-visual-cpp.md
   - name: Warnings when you build managed extensions
     href: linker-warning-managed-extension-c-dll-project.md
-  - name: Write entries to an event log
+  - name: Write entries to an event log
     href: visual-cpp-write-entry-to event-log.md
 
 - name: Project/Build System
