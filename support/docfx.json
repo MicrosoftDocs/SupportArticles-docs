@@ -128,13 +128,22 @@
         "dotnet/**/*.md": ".NET"
       },
       "titleSuffix": {
+        "aspnet/**/*.md": "ASP.NET"
+      },
+      "titleSuffix": {
         "visualstudio/**/*.md": "Visual Studio"
+      },
+      "titleSuffix": {
+        "cpp/**/*.md": "Visual C++"
+      },
+      "titleSuffix": {
+        "iis/**/*.md": "Internet Information Services"
       },
       "titleSuffix": {
         "webapps/**/*.md": "Web Apps"
       },
       "titleSuffix": {
-        "windowsdeveloper/**/*.md": "Windows Developer"
+        "windows/win32/**/*.md": "Windows Developer"
       },
       "titleSuffix": {
         "mem/intune/**/*.md": "Intune"
