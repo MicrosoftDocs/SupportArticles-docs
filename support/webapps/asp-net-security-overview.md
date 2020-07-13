@@ -1,13 +1,14 @@
 ---
 title: ASP.NET security overview
-description: Talks about the ASP.NET security.
+description: This article provides information about the ASP.NET security.
 ms.date: 04/07/2020
 ms.prod-support-area-path:
 ms.reviewer: VENKATC, EARLB
+ms.topic: article
 ---
 # ASP.NET security overview
 
-This article provides an introduction to ASP.NET security. This article refers to the following Microsoft .NET Framework Class Library namespaces:
+This article provides an introduction to ASP.NET security, it refers to the following Microsoft .NET Framework Class Library namespaces:
 
 - `System.Web.Security`
 - `System.Web.Principal`
@@ -17,7 +18,7 @@ _Original KB number:_ &nbsp; 306590
 
 ## Summary
 
-ASP.NET gives you more control to implement security for your application. ASP.NET security works in conjunction with Microsoft Internet Information Services (IIS) security and includes authentication and authorization services to implement the ASP.NET security model. ASP.NET also includes a role-based security feature that you can implement for both Microsoft Windows and non-Windows user accounts.
+ASP.NET gives you more control to implement security for your application. ASP.NET security works in conjunction with Internet Information Services (IIS) security and includes authentication and authorization services to implement the ASP.NET security model. ASP.NET also includes a role-based security feature that you can implement for both Windows and non-Windows user accounts.
 
 This article is divided into the following sections:
 
@@ -40,7 +41,7 @@ The following steps outline the sequence of events when a client makes a request
 1. A client requests an .aspx page that resides on an IIS server.
 2. The client's credentials are passed to IIS.
 3. IIS authenticates the client and forwards the authenticated token along with the client's request to the ASP.NET worker process.
-4. Based on the authenticated token from IIS and the configuration settings for the web application, ASP.NET decides whether to impersonate a user on the thread that is processing the request. In a distinct difference between Microsoft Active Server Pages (ASP) and ASP.NET, ASP.NET no longer impersonates the authenticated user by default. To enable impersonation, you must set the impersonate attribute of the identity section in the *Web.config* file to true.
+4. Based on the authenticated token from IIS and the configuration settings for the web application, ASP.NET decides whether to impersonate a user on the thread that is processing the request. In a distinct difference between Active Server Pages (ASP) and ASP.NET, ASP.NET no longer impersonates the authenticated user by default. To enable impersonation, you must set the impersonate attribute of the identity section in the *Web.config* file to true.
 
 For more information about the security flow, see [ASP.NET Data Flow](/previous-versions/dotnet/netframework-1.1/xa68twcb(v=vs.71)).
 

@@ -2,7 +2,7 @@
 title: Runtime errors in Internet Explorer
 description: This article provides the solution for you to solve the runtime errors that occur in Internet Explorer.
 ms.date: 03/08/2020
-ms.prod-support-area-path: Internet Explorer
+ms.prod-support-area-path: 
 ms.reviewer: v-jomcc, ericlaw
 ---
 # How to fix runtime errors in Internet Explorer
@@ -24,9 +24,9 @@ Note that this article provides a resolution only for the following error messag
 > Line: line number  
 > Error: nature of script error
 
-![Runtime Error message box](./media/ie-runtime-errors/runtime-error-message-box.png)
+:::image type="content" source="media/ie-runtime-errors/runtime-error-message-box.png" alt-text="Runtime Error message box" border="false":::
 
-![Webpage Error message box](./media/ie-runtime-errors/webpage-error-message-box.png)
+:::image type="content" source="media/ie-runtime-errors/webpage-error-message-box.png" alt-text="Webpage Error message box" border="false":::
 
 ## Resolution
 
@@ -38,7 +38,7 @@ Because this type of error message does not apply to you, you can prevent it fro
 
 3. Click to select the **Disable script debugging (Internet Explorer)** and **Disable script debugging (Other)** check boxes, and then click to clear the **Display a notification about every script error** check box.
 
-   ![Internet Options - Advanced tab -  Disable script debugging (Internet Explorer) and Disable script debugging (Other) check boxes](./media/ie-runtime-errors/internet-options.png)
+   :::image type="content" source="media/ie-runtime-errors/internet-options.png" alt-text="Internet Options" border="false":::
 
 4. Click **OK** to close the **Internet Options** dialog box.
 
@@ -48,6 +48,6 @@ To see whether the problem is fixed, open or refresh the Web site that caused th
 
 - If the Web site displays and works correctly, and if the runtime error message does not reappear, then you are finished. You may still receive a notification about the Web page error in the Internet Explorer status bar. However, you can just ignore the Web page error. If this computer has multiple users, you might also need to log on as another user and repeat these steps for other users.
 
-- If the Web site still does not display or work correctly, the problem may be with the Web site itself. But to test this, either you must have access to another computer, or your computer must be set up for multiple users. If you have access to another computer, try to view the page from that other computer. If your computer is set up for multiple users, log on as another user, and then try to view the page again.  
+- If the Web site still does not display or work correctly, the problem may be with the Web site itself. But to test this, either you must have access to another computer, or your computer must be set up for multiple users. If you have access to another computer, try to view the page from that other computer. If your computer is set up for multiple users, log on as another user, and then try to view the page again.
 
 If the Web site still does not display or work correctly, then the problem is likely with the Web page itself. So you might want to contact the owner of the Web page to ask them to fix the problem.

@@ -1,13 +1,13 @@
 ---
 title: No cs-username data in Advanced Logging
-description: Provides information about resolving the issue that no data is logged in the cs-username field in the logs file when using the Advanced Logging feature of IIS.
+description: This article provides resolutions for the problem that no data is logged in the cs-username field in the logs file when you use the Advanced Logging feature of IIS.
 ms.date: 04/07/2020
 ms.prod-support-area-path:
 ms.reviewer: Mike
 ---
 # No data is logged in the cs-username field when using the Advanced Logging feature of IIS
 
-This article provides information about how to enable the cs-username data in the Advanced Logging logs when using the Advanced Logging feature of Internet Information Services (IIS).
+This article helps you resolve the problem that no data is logged in the cs-username field in the logs file when you use the Advanced Logging feature of Microsoft Internet Information Services (IIS).
 
 _Original product version:_ &nbsp; Internet Information Services  
 _Original KB number:_ &nbsp; 2529915

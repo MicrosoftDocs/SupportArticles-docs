@@ -1,13 +1,14 @@
 ---
 title: ASP.NET HTTP modules and handlers
-description: provides information about the HTTP modules and HTTP handlers.
+description: This article provides information about the HTTP modules and HTTP handlers.
 ms.date: 04/03/2020
 ms.prod-support-area-path:
 ms.reviewer: mdunner
+ms.topic: how-to
 ---
 # ASP.NET HTTP modules and HTTP handlers
 
-This article provides an introduction to the ASP.NET Hypertext Transfer Protocol (HTTP) modules and HTTP handlers.
+This article introduces the ASP.NET Hypertext Transfer Protocol (HTTP) modules and HTTP handlers.
 
 _Original product version:_ &nbsp; ASP.NET  
 _Original KB number:_ &nbsp; 307985
@@ -15,8 +16,6 @@ _Original KB number:_ &nbsp; 307985
 ## Summary
 
 HTTP modules and HTTP handlers are an integral part of the ASP.NET architecture. While a request is being processed, each request is processed by multiple HTTP modules (for example, the authentication module and the session module) and is then processed by a single HTTP handler. After the handler has processed the request, the request flows back through the HTTP modules.
-
-This article is divided into the following sections:
 
 ## HTTP modules overview
 

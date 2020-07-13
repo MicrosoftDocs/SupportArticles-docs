@@ -1,11 +1,12 @@
 ---
-title: ASP.NET Forms-based authentication by C#
-description: Demonstrates how to implement forms-based authentication in ASP.NET applications by using a database to store the users.
+title: Use ASP.NET forms-based authentication
+description: This article demonstrates how to implement forms-based authentication in ASP.NET applications by using a database to store the users.
 ms.date: 03/27/2020
 ms.prod-support-area-path:
 ms.reviewer: ARTHURYA
+ms.topic: how-to
 ---
-# How to implement Forms-based authentication in your ASP.NET application by using C#.NET
+# Implement forms-based authentication in an ASP.NET application by using C#.NET
 
 This article demonstrates how to implement forms-based authentication by using a database to store the users. It refers to the following Microsoft .NET Framework Class Library namespaces:
 
@@ -16,17 +17,17 @@ _Original product version:_ &nbsp; ASP.NET
 _Original KB number:_ &nbsp; 301240
 
 > [!NOTE]
-> For a Microsoft Visual Basic .NET version of this article, see [How To Implement Forms-Based Authentication in Your ASP.NET Application by Using Visual Basic .NET](https://support.microsoft.com/help/308157).
+> For a Visual Basic .NET version of this article, see [How To Implement Forms-Based Authentication in Your ASP.NET Application by Using Visual Basic .NET](https://support.microsoft.com/help/308157).
 
 ## Requirements
 
 The following list outlines the recommended hardware, software, network infrastructure, and service packs that you need:
 
-- Microsoft Visual Studio .NET
-- Microsoft Internet Information Services (IIS) version 5.0 or later
-- Microsoft SQL Server
+- Visual Studio .NET
+- Internet Information Services (IIS) version 5.0 or later
+- SQL Server
 
-## Create an ASP.NET application using C# .NET
+## Create an ASP.NET application by using C# .NET
 
 1. Open Visual Studio .NET.
 2. Create a new ASP.NET Web application, and specify the name and location.
@@ -37,7 +38,7 @@ This section demonstrates how to add and modify the `<authentication>` and `<aut
 
 1. In Solution Explorer, open the *Web.config* file.
 2. Change the authentication mode to **Forms**.
-3. Insert the `<Forms>` tag, and fill the appropriate attributes. Copy the following code, and then click **Paste as HTML** on the **Edit** menu to paste the code in the `<authentication>` section of the file:
+3. Insert the `<Forms>` tag, and fill the appropriate attributes. Copy the following code, and then select **Paste as HTML** on the **Edit** menu to paste the code in the `<authentication>` section of the file:
 
     ```xml
     <authentication mode="Forms">
@@ -59,8 +60,8 @@ This section demonstrates how to add and modify the `<authentication>` and `<aut
 
 This section demonstrates how to create a sample database to store the user name, password, and role for the users. You need the role column if you want to store user roles in the database and implement role-based security.
 
-1. On the **Start** menu, click **Run**, and then type notepad to open Notepad.
-2. Highlight the following SQL script code, right-click the code, and then click **Copy**. In Notepad, click **Paste** on the **Edit** menu to paste the following code:
+1. On the **Start** menu, select **Run**, and then type notepad to open Notepad.
+2. Highlight the following SQL script code, right-click the code, and then select **Copy**. In Notepad, select **Paste** on the **Edit** menu to paste the following code:
 
     ```sql
     if exists (select * from sysobjects where id =
@@ -85,39 +86,39 @@ This section demonstrates how to create a sample database to store the user name
     ```
 
 3. Save the file as *Users.sql*.
-4. On the Microsoft SQL Server computer, open *Users.sql* in Query Analyzer. From the list of databases, click **pubs**, and run the script. This creates a sample users table and populates the table in the Pubs database to be used with this sample application.
+4. On the SQL Server computer, open *Users.sql* in Query Analyzer. From the list of databases, select **pubs**, and run the script. This creates a sample users table and populates the table in the Pubs database to be used with this sample application.
 
 ## Create a Logon.aspx page
 
-1. Add a new Web Form to the project named Logon.aspx.
+1. Add a new Web Form to the project named *Logon.aspx*.
 2. Open the Logon.aspx page in the editor, and switch to HTML view.
 3. Copy the following code, and use the **Paste as HTML** option on the **Edit** menu to insert the code between the `<form>` tags:
 
     ```html
     <h3>
-      <font face="Verdana">Logon Page</font>
+        <font face="Verdana">Logon Page</font>
     </h3>
     <table>
-      <tr>
-         <td>Email:</td>
-         <td><input id="txtUserName" type="text" runat="server"></td>
-         <td><ASP:RequiredFieldValidator ControlToValidate="txtUserName"
-             Display="Static" ErrorMessage="*" runat="server" 
-             ID="vUserName" /></td>
-      </tr>
-      <tr>
-         <td>Password:</td>
-         <td><input id="txtUserPass" type="password" runat="server"></td>
-         <td><ASP:RequiredFieldValidator ControlToValidate="txtUserPass"
-           Display="Static" ErrorMessage="*" runat="server"
-           ID="vUserPass" />
-         </td>
-      </tr>
-      <tr>
-         <td>Persistent Cookie:</td>
-         <td><ASP:CheckBox id="chkPersistCookie" runat="server" autopostback="false" /></td>
-         <td></td>
-      </tr>
+        <tr>
+            <td>Email:</td>
+            <td><input id="txtUserName" type="text" runat="server"></td>
+            <td><ASP:RequiredFieldValidator ControlToValidate="txtUserName"
+                Display="Static" ErrorMessage="*" runat="server" 
+                ID="vUserName" /></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input id="txtUserPass" type="password" runat="server"></td>
+            <td><ASP:RequiredFieldValidator ControlToValidate="txtUserPass"
+            Display="Static" ErrorMessage="*" runat="server"
+            ID="vUserPass" />
+            </td>
+        </tr>
+        <tr>
+            <td>Persistent Cookie:</td>
+            <td><ASP:CheckBox id="chkPersistCookie" runat="server" autopostback="false" /></td>
+            <td></td>
+        </tr>
     </table>
     <input type="submit" Value="Logon" runat="server" ID="cmdLogin"><p></p>
     <asp:Label id="lblMsg" ForeColor="red" Font-Name="Verdana" Font-Size="10" runat="server" />

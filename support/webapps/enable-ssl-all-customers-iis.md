@@ -1,12 +1,13 @@
 ---
 title: Enable SSL for all customers
-description: Introduces how to enable SSL for all customers who interact with your Web site in IIS.
+description: This article introduces how to enable SSL for all customers who interact with your Web site in IIS.
 ms.date: 03/24/2020
 ms.prod-support-area-path:
+ms.topic: how-to
 ---
-# How to enable SSL for all customers who interact with your Web site in IIS
+# Enable SSL for all customers who interact with your Web site in IIS
 
-This article describes how to enable Secure Sockets Layer (SSL) for  all customers who interact with your Web site in Internet Information Services  (IIS).
+This article describes how to enable Secure Sockets Layer (SSL) for  all customers who interact with your Web site in Microsoft Internet Information Services  (IIS).
 
 _Original product version:_ &nbsp;  Internet Information Services  
 _Original KB number:_ &nbsp; 298805
@@ -49,21 +50,21 @@ Typically, the following information about your computer is included in the CSR 
 
 ### Generate the CSR
 
-1. Access the IIS Microsoft Management Console (MMC). To do this, right-click **My Computer** and click **Manage**. This opens the Computer Management Console. Expand the **Services and Application** section. Locate IIS and expand the IIS console.
-2. Select the specific Web site on which you want to install a server certificate. Right-click the site and click **Properties**.
-3. Click the **Directory Security** tab. In the **Secure Communication** section, click **Server Certificate**. This starts the Web Server Certificate Wizard. Click **Next**.
-4. Select **Create a New Certificate** and click **Next**.
-5. Select **Prepare the request now**, but send it later and click **Next**.
+1. Access the IIS Microsoft Management Console (MMC). To do this, right-click **My Computer** and select **Manage**. This opens the Computer Management Console. Expand the **Services and Application** section. Locate IIS and expand the IIS console.
+2. Select the specific Web site on which you want to install a server certificate. Right-click the site and select **Properties**.
+3. Select the **Directory Security** tab. In the **Secure Communication** section, select **Server Certificate**. This starts the Web Server Certificate Wizard. Select **Next**.
+4. Select **Create a New Certificate** and select **Next**.
+5. Select **Prepare the request now**, but send it later and select **Next**.
 6. In the **Name** field, enter a name that you can remember. It will default to the name of the Web site for which you're generating the CSR.
 
     > [!NOTE]
     > When you generate the CSR, you need to specify a bit length. The bit length of the encryption key determines the strength of the encrypted certificate which you send to the third-party CA. The higher the bit length, the stronger the encryption. Most third-party CAs prefer a minimum of 1024 bits.
 
-7. In the **Organization Information** section, enter your organization and organizational unit information. This must be accurate, because you are presenting these credentials to a third-party CA and you must comply with their licensing of the certificate. Click **Next** to access the **Your Site's Common Name** section.
-8. The **Your Site's Common Name** section is responsible for binding the certificate to your Web site. For SSL certificates, enter the host computer name with the domain name. For Intranet servers, you may use the NetBIOS name of the computer that is hosting the site. Click **Next** to access geographical information.
-9. Enter your country, state or province, and country or region information. Completely spell out your state or province and country or region; don't use abbreviations. Click **Next**.
+7. In the **Organization Information** section, enter your organization and organizational unit information. This must be accurate, because you are presenting these credentials to a third-party CA and you must comply with their licensing of the certificate. Select **Next** to access the **Your Site's Common Name** section.
+8. The **Your Site's Common Name** section is responsible for binding the certificate to your Web site. For SSL certificates, enter the host computer name with the domain name. For Intranet servers, you may use the NetBIOS name of the computer that is hosting the site. Select **Next** to access geographical information.
+9. Enter your country, state or province, and country or region information. Completely spell out your state or province and country or region; don't use abbreviations. Select **Next**.
 10. Save the file as a .txt file.
-11. Confirm your request details. Click **Next** to finish, and exit the Web Server Certificate Wizard.
+11. Confirm your request details. Select **Next** to finish, and exit the Web Server Certificate Wizard.
 
 ## Request the certificate
 
@@ -100,21 +101,21 @@ To install the certificate, follow these steps:
 1. Download or copy the certificate that you obtained from the CA to the Web server.
 2. Open the IIS MMC as described in the **Generating the CSR** section.
 3. Access the **Properties** dialog box for the Web site on which you are installing the certificate.
-4. Click the **Directory Security** tab, and then click **Server Certificate**. This starts the Web Server Certificate Wizard. Click **Next**.
-5. Select **Process the Pending Request and install the certificate**, and then click **Next**.
-6. Browse to the location of the certificate that you saved in step 1. Click **Next** twice, and then click **Finish**.
+4. Select the **Directory Security** tab, and then select **Server Certificate**. This starts the Web Server Certificate Wizard. Select **Next**.
+5. Select **Process the Pending Request and install the certificate**, and then select **Next**.
+6. Browse to the location of the certificate that you saved in step 1. Select **Next** twice, and then select **Finish**.
 
 ## Enforce SSL connections
 
 Now that the server certificate is installed, you can enforce SSL secure channel communications with clients of the Web server. First, you need to enable port 443 for secure communications with the Web site. To do this, follow these steps:
 
-1. From the Computer Management console, right-click the Web site on which you want to enforce SSL and click **Properties**.
-2. Click the **Web Site** tab. In the Web Site **Identification** section, verify that the SSL Port field is populated with the numeric value 443.
-3. Click **Advanced**. You should see two fields. The IP address and port of the Web site should already be listed in the **Multiple identities** for this web site field. Under the **Multiple SSL Identities** for this web site field, click **Add** if port 443 isn't already listed. Select the server's IP address, and type the numeric value *443* in the SSL Port field. Click **OK**.
+1. From the Computer Management console, right-click the Web site on which you want to enforce SSL and select **Properties**.
+2. Select the **Web Site** tab. In the Web Site **Identification** section, verify that the SSL Port field is populated with the numeric value 443.
+3. Select **Advanced**. You should see two fields. The IP address and port of the Web site should already be listed in the **Multiple identities** for this web site field. Under the **Multiple SSL Identities** for this web site field, select **Add** if port 443 isn't already listed. Select the server's IP address, and type the numeric value *443* in the SSL Port field. Select **OK**.
 
 Now that port 443 is enabled, you can enforce SSL connections. To do this, follow these steps:
 
-1. Click the **Directory Security** tab. In the **Secure Communication** section, **Edit** is now available. Click **Edit**.
+1. Select the **Directory Security** tab. In the **Secure Communication** section, **Edit** is now available. Select **Edit**.
 2. Select **Require Secure Channel (SSL)**.
 
     > [!NOTE]

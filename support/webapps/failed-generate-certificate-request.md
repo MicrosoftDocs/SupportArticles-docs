@@ -1,13 +1,13 @@
 ---
 title: Failed to generate the certificate request
-description: Discusses an error when you try to create a certificate request in IIS.
+description: This article discusses an error that occurs when you try to create a certificate request in IIS.
 ms.date: 03/30/2020
 ms.prod-support-area-path: 
 ms.reviewer: v-jomcc
 ---
 # Failed to generate the certificate request error message when you create a certificate request in IIS
 
-This article provides information about resolving an issue that an unexpected error may be thrown when you try to create a certificate request in Internet Information Services (IIS).
+This article helps you resolve the problem that an unexpected error might be thrown when you try to create a certificate request in Internet Information Services (IIS).
 
 _Original product version:_ &nbsp; Internet Information Services  
 _Original KB number:_ &nbsp; 908572
@@ -27,9 +27,9 @@ This issue occurs if the administrator who tries to create the certificate reque
 
 To resolve this issue, grant the administrator account Full Control on all files and sub folders in the `MachineKeys` folder. Follow these steps to resolve the issue:
 
-1. Click **Start**, click **Run**, type `\Documents and Settings\All Users\Application Data\Microsoft\Crypto\RSA\`, and then click **OK**.
-2. Right-click **MachineKeys**, and then click **Properties**.
-3. On the **Security** tab, click **Administrator** or click the administrator group account you want, click to select the check box to enable Full Control permissions, and then click **OK**.
+1. Select **Start**, select **Run**, type `\Documents and Settings\All Users\Application Data\Microsoft\Crypto\RSA\`, and then select **OK**.
+2. Right-click **MachineKeys**, and then select **Properties**.
+3. On the **Security** tab, select **Administrator** or select the administrator group account you want, select the check box to enable Full Control permissions, and then select **OK**.
 
 ## References
 

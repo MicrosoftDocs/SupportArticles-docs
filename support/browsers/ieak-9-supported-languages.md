@@ -1,7 +1,7 @@
 ---
-title: Supported languages for Internet Explorer Administration Kit 9
+title: Supported languages for IEAK 9
 description: Describes the supported languages for the Internet Explorer Administration Kit 9 packages.
-ms.prod-support-area-path: Internet Explorer
+ms.prod-support-area-path: 
 ms.date: 02/29/2020
 ---
 # Supported languages for the Internet Explorer Administration Kit 9 packages
@@ -10,8 +10,7 @@ The [Internet Explorer Administration Kit (IEAK) 9](https://www.microsoft.com/do
 
 The following tables list the languages for the supported platform and operating system configurations. The first table has the default set. The second table has the additional set. English US is available in both sets. Some of the languages will be available in late May 2011. Other languages aren't supported for creating custom browser packages on the platform and operating system configuration.
 
-[!INCLUDE[Visual eye catcher for legacy KB](../includes/kb-letters-blue.md)]  
-_Original product version:_ &nbsp; the Internet Explorer Administration Kit 9  
+_Original product version:_ &nbsp; Internet Explorer Administration Kit 9  
 _Original KB number:_ &nbsp; 2555560
 
 ## Default set
@@ -74,7 +73,7 @@ _Original KB number:_ &nbsp; 2555560
 
 ## Additional set
 
-To have access to these languages, you will have to replace your ieak.ini file. English US is available in both sets. 
+To have access to these languages, you will have to replace your ieak.ini file. English US is available in both sets.
 
 |Language|Windows Vista 32-bit Editions|Windows 7 32-bit Editions|
 |---|---|---|
@@ -137,11 +136,10 @@ To access the additional set of languages:
 1. Download the ieak.ini file for the [additional set](https://go.microsoft.com/fwlink/?linkid=219451) of languages.
 
 2. Replace the default ieak.ini file in the following directory:  
-     For x86 platforms:  C:\Program Files\Windows IEAK 9\  
-     For x64 platforms:  C:\Program Files (x86)\Windows IEAK 9\
+     For x86 platforms: C:\Program Files\Windows IEAK 9\  
+     For x64 platforms: C:\Program Files (x86)\Windows IEAK 9\
 
 > [!NOTE]
 > If you only need access to the default set of languages, you do not have to download and replace the ieak.ini file. The default ieak.ini is only needed if you already replaced the original ieak.ini to access the additional set of languages and you want to return to the default set of languages.
 
-For more information about how to use IEAK 9 to create custom Internet Explorer 9 packages, see
-[Internet Explorer 9 Administration Kit 9](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-it-pro/internet-explorer-9/gg598582(v=technet.10))
+For more information about how to use IEAK 9 to create custom Internet Explorer 9 packages, see [Internet Explorer 9 Administration Kit 9](/previous-versions/windows/internet-explorer/ie-it-pro/internet-explorer-9/gg598582(v=technet.10)).

@@ -1,36 +1,32 @@
 ---
-title: Collected data by IE Diagnostics
-description: This article describes the information that may be collected from a computer when running Internet Explorer 8 and later versions Diagnostics for Windows 7 and Windows Server 2008 R2.
+title: Collected data by Internet Explorer Diagnostics
+description: This article describes the information that may be collected from a computer when running Internet Explorer Diagnostics.
 ms.prod-support-area-path: 
 ms.date: 02/29/2020
 ms.reviewer: louiss
 ---
-# Collected information by Internet Explorer 8 and later versions Diagnostics
+# Collected information by Internet Explorer Diagnostics
 
-This article lists the information that can be collected by running Internet Explorer 8 or a later version Diagnostics, on Windows 7 and Windows Server 2008 R2.
+This article lists the information that can be collected by running Internet Explorer Diagnostics.
 
-[!INCLUDE [Visual eye catcher for legacy KB](../includes/kb-letters-blue.md)]
-
-_Original product version:_ &nbsp; Windows 2008 R2, Windows 7, Internet Explorer 8 and later versions  
+_Original product version:_ &nbsp; Internet Explorer  
 _Original KB number:_ &nbsp; 2547213
 
 ## System information
 
-*Operating System*
+- Operating System
+  - Machine Name
+  - OS Name
+  - Last Reboot/Uptime
+  - AntiMalware
+  - User Account Control
+  - Username
 
-* Machine Name
-* OS Name
-* Last Reboot/Uptime
-* AntiMalware
-* User Account Control
-* Username
-
-*Computer System*
-
-* Computer Model
-* Processor(s)
-* Machine Domain
-* Role
+- Computer System
+  - Computer Model
+  - Processor(s)
+  - Machine Domain
+  - Role
 
 ## Logs
 
@@ -72,11 +68,11 @@ _Original KB number:_ &nbsp; 2547213
 |GP Computer (.htm):|{Computername}_GPResult_Computer.htm|
 |||
 
-### IE Setup Log
+### Internet Explorer Setup Log
 
 |Name|Value|
 |---|---|
-|IE Setup Log (.log):| {Computername}_IE9_main.log|
+| Internet Explorer Setup Log (.log):| {Computername}_IE9_main.log|
 |||
 
 ### Installed updates/hotfixes

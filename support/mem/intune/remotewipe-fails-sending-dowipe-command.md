@@ -2,7 +2,7 @@
 title: RemoteWipe CSP fails to send a doWipe command
 description: Fixes an issue in which RemoteWipe fails to execute on Windows 10 client and an Event ID 400 error is generated.
 ms.date: 05/11/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: Device management
 ---
 # The request is not supported when RemoteWipe fails to execute on Windows 10 client
 

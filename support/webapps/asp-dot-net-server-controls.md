@@ -3,6 +3,7 @@ title: ASP.NET server controls overview
 description: This article describes the information of the ASP.NET server controls.
 ms.date: 04/02/2020
 ms.prod-support-area-path: 
+ms.topic: article
 ---
 # ASP.NET server controls overview
 
@@ -46,7 +47,7 @@ To use an HTML server control, use the following syntax (which uses the `HtmlInp
 <input type="text" value="hello world" runat=server />
 ```
 
-For more information about individual HTML server controls that are available in ASP.NET, see the following Microsoft Web sites:
+For more information about individual HTML server controls that are available in ASP.NET, see the following Web sites:
 
 - [HtmlAnchor Control](/previous-versions/dotnet/netframework-1.1/8ff86hxd(v=vs.71))
 
@@ -106,7 +107,7 @@ Web server controls can be divided into four categories:
 
 Basic Web controls provide the same functionality as their HTML server control counterparts. However, basic Web controls include additional methods, events, and properties against which you can program.
 
-For more information about individual Web controls that are available in ASP.NET, see the following Microsoft Web sites:
+For more information about individual Web controls that are available in ASP.NET, see the following Web sites:
 
 - [Button Web Server Control](/previous-versions/dotnet/netframework-1.1/dx5ybk93(v=vs.71))
 
@@ -148,7 +149,7 @@ Validation controls are used to validate the values that are entered into other 
 - The validation controls automatically detect whether validation should be performed on the client side or the server side.
 
 > [!NOTE]
-> A client-side validation catches errors before a postback operation is complete. Therefore, if you have combinations of client-side and server-side validation controls on a single page, the server-side validation will be preempted if a client-side validation fails.For more information about individual validation controls that are available in ASP.NET, refer to the following Microsoft Web sites:
+> A client-side validation catches errors before a postback operation is complete. Therefore, if you have combinations of client-side and server-side validation controls on a single page, the server-side validation will be preempted if a client-side validation fails.For more information about individual validation controls that are available in ASP.NET, refer to the following Web sites:
 
 - [RequiredFieldValidator Control](/previous-versions/visualstudio/design-tools/expression-studio-3/cc295489(v=expression.10))
 
@@ -166,7 +167,7 @@ Validation controls are used to validate the values that are entered into other 
 
 List controls are special Web server controls that support binding to collections. You can use list controls to display rows of data in a customized, template's format. All list controls expose DataSource and DataMember properties, which are used to bind to collections.
 
-List controls can bind only to collections that support the IEnumerable, ICollection, or IListSource interfaces. For example, a Microsoft Visual C# .NET sample page appears as follows:
+List controls can bind only to collections that support the IEnumerable, ICollection, or IListSource interfaces. For example, a Visual C# .NET sample page appears as follows:
 
 ```aspx-csharp
 <%@ Page Language="C#" %>
@@ -187,7 +188,7 @@ List controls can bind only to collections that support the IEnumerable, ICollec
 </html>
 ```
 
-A Microsoft Visual Basic .NET sample page appears as follows:
+A Visual Basic .NET sample page appears as follows:
 
 ```aspx-vb
 <%@ Page Language="vb" %>
@@ -214,7 +215,7 @@ The output appears as follows:
 - two
 - three
 
-For more information about individual list controls that are available in ASP.NET, see the following Microsoft Web sites:
+For more information about individual list controls that are available in ASP.NET, see the following Web sites:
 
 - [ListBox Web Server Control](/previous-versions/dotnet/netframework-1.1/z4d7ktzs(v=vs.71))
 
@@ -234,7 +235,7 @@ For more information about individual list controls that are available in ASP.NE
 
 In addition to the preceding controls, the ASP.NET page framework provides a few, task-specific controls called rich controls. Rich controls are built with multiple HTML elements and contain rich functionality. Examples of rich controls are the Calendar control and the AdRotator control.
 
-For more information about individual rich controls that are available in ASP.NET, see the following Microsoft Web sites:
+For more information about individual rich controls that are available in ASP.NET, see the following Web sites:
 
 - [AdRotator Web Server Control](/previous-versions/dotnet/netframework-1.1/s5z9ks4y(v=vs.71))
 

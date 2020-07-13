@@ -2,7 +2,7 @@
 title: Attributes list synced by Intune
 description: Describes a table that lists the attributes that are synced from the on-premises Active Directory Domain Services to Intune.
 ms.date: 05/11/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: General guidance or advisory
 ms.reviewer: colinfr
 ---
 # List of attributes that are synced by Microsoft Intune

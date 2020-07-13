@@ -1,11 +1,12 @@
 ---
-title: How to use the FTP Utility
-description: Explains how to use the FTP utility.
+title: Use the FTP Utility
+description: This article explains how to use the FTP utility.
 ms.date: 03/23/2020
 ms.prod-support-area-path: 
 ms.reviewer: kevinz
+ms.topic: how-to
 ---
-# How to use the FTP Utility in a typical session
+# Use the FTP Utility in a typical session
 
 This article explains how to use the File Transfer Protocol (FTP) utility, which is included with Windows, in a typical FTP session.
 
@@ -130,7 +131,7 @@ C:\>
 
 For a full list of the commands and parameters that can be used with the FTP utility, perform the following steps:
 
-1. From the **Start** menu, click **Help**.
-2. Click the **Index** tab, and then type *ftp utility*.
+1. From the **Start** menu, select **Help**.
+2. Select the **Index** tab, and then type *ftp utility*.
 3. In the list box, double-click the ftp utility entry.
 4. For a list of all FTP commands, double-click the **(untitled #0)** entry. For a list of parameters available when starting the ftp utility, double-click the **(untitled #0)** entry.

@@ -1,13 +1,13 @@
 ---
-title: Event 115 when connecting HTTPS website 
-description: Provides a workaround for Event ID 115 error when you connect to a Web site by using HTTPS.
+title: Event 115 when you connect HTTPS website 
+description: This article provides workarounds for the Event ID 115 error that occurs when you connect to a Web site by using HTTPS.
 ms.date: 03/23/2020
 ms.prod-support-area-path: 
 ms.reviewer: lauras, martinsm
 ---
-# Event ID 115 occurs when trying to connect to a HTTPS Website
+# Event ID 115 occurs when you try to connect to a HTTPS Website
 
-This article provides a workaround for Event ID 115. This error occurs when Microsoft Internet Information Services (IIS) is unable to bind to the port or IP address specified in the settings because they're used by another program or service.
+This article helps you resolve the problem that an error (Event ID 115) occurs when Microsoft Internet Information Services (IIS) is unable to bind to the port or IP address specified in the settings because they're used by another program or service.
 
 _Original product version:_ &nbsp; Internet Information Services  
 _Original KB number:_ &nbsp; 284984
@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 284984
 
 ## Symptoms
 
-Error message when attempting to connect to an Hypertext Transfer Protocol Secure (HTTPS) website with Microsoft Internet Explorer:
+Error message when attempting to connect to an Hypertext Transfer Protocol Secure (HTTPS) website with Internet Explorer:
 
 > This page cannot be displayed
 
@@ -74,7 +74,7 @@ Since IIS 8, the new feature `SNI` is provided to resolve such issue.
 
 ## Workaround 3
 
-If you have assigned each SSL website a unique IP address and you still receive an Event ID 115, there may be some Advanced settings on a website which are preventing the SSL portions of your websites from being unique. To view these settings go into the Properties for each website and click **Advanced** on the website tab. You will see a section called **Multiple SSL Identities for this website**. If only one IP address is assigned to the website, make sure there's a single SSL identity.
+If you have assigned each SSL website a unique IP address and you still receive an Event ID 115, there may be some Advanced settings on a website which are preventing the SSL portions of your websites from being unique. To view these settings go into the Properties for each website and select **Advanced** on the website tab. You will see a section called **Multiple SSL Identities for this website**. If only one IP address is assigned to the website, make sure there's a single SSL identity.
 
 Since IIS 8, the new feature `SNI` is provided to resolve such issue.
 

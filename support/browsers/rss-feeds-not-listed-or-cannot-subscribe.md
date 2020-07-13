@@ -1,8 +1,8 @@
 ---
-title: RSS feeds not listed or subscribed in IE
+title: RSS feeds not listed or subscribed in Internet Explorer
 description: Describes a solution for an issue in Internet Explorer in which RSS feeds are not listed or in which you cannot subscribe to RSS feeds.
 ms.date: 03/08/2020
-ms.prod-support-area-path: Internet Explorer
+ms.prod-support-area-path: 
 ms.reviewer: bchee
 ---
 # RSS feeds are not listed or you cannot subscribe to RSS feeds in Internet Explorer
@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 926448
 
 ## Symptoms
 
-In Windows Internet Explorer, you subscribe to Really Simple Syndication (RSS) feeds. Then, you may experience one or more of the following issues:
+In Internet Explorer , you subscribe to Really Simple Syndication (RSS) feeds. Then, you may experience one or more of the following issues:
 
 - The RSS feeds to which you subscribe are not listed in Internet Explorer.
 - You cannot subscribe to RSS feeds in Internet Explorer.
@@ -41,7 +41,6 @@ To resolve issues with missing feeds or to resolve issues when you try to subscr
 4. If the issue continues, test in the Internet Explorer (No Add-ons) mode. To do this, follow these steps:
 
    1. Click **Start**, point to **All Programs**, point to **Accessories**, and then point to **System Tools**.
-
    2. Click **Internet Explorer (No Add-ons)**.
 
    > [!NOTE]

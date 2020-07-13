@@ -2,7 +2,7 @@
 title: Error -2016281112 deploying password policy
 description: Describes error -2016281112 when you deploy a password policy in Microsoft Intune.
 ms.date: 05/11/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: Device protection
 ---
 # Error -2016281112 when you deploy password policy in Microsoft Intune
 

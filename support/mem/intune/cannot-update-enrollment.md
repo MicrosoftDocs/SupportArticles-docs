@@ -2,7 +2,7 @@
 title: Can't update enrollment error during enrollment in Company Portal
 description: Fixes an issue in which you can't update enrollment when you enroll devices in Intune.
 ms.date: 04/16/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: Device enrollment
 ---
 # Can't update enrollment when you enroll devices in the Intune Company Portal
 

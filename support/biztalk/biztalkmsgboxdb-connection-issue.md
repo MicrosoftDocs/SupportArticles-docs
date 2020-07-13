@@ -49,15 +49,14 @@ You can use the `DBCC DBREINDEX` SQL command to rebuild an index in the other Bi
 
 Microsoft only supports rebuilding database indexes during BizTalk Server downtime. You should stop all host instances and SQL Server Agent before you rebuild an index. When you run the `bts_RebuildIndexes` stored procedure in BizTalk Server 2006 and later versions, you may receive one of the following error messages:
 
-Error message 1
+- Error message 1
 
-> Msg 5239, Level 16, State 1, Procedure bts_RebuildIndexes, Line 4 Unable to process object ID 674101442 (object 'TrackingData')
->
-> This database consistency checker (DBCC) command does not support this kind of object.
+    > Msg 5239, Level 16, State 1, Procedure bts_RebuildIndexes, Line 4 Unable to process object ID 674101442 (object 'TrackingData')  
+    > This database consistency checker (DBCC) command does not support this kind of object.
 
-Error message 2
+- Error message 2
 
-> Msg 5239, Level 16, State 1, Procedure bts_RebuildIndexes, Line 4 Unable to process object ID 722101613 (object 'TrackingData') because this DBCC command does not support objects of this type.
+    > Msg 5239, Level 16, State 1, Procedure bts_RebuildIndexes, Line 4 Unable to process object ID 722101613 (object 'TrackingData') because this DBCC command does not support objects of this type.
 
 This problem occurs because the `TrackingData` object is a view in BizTalk Server 2006 and later versions. To resolve this problem, do the following and then execute the `bts_RebuildIndexes` stored procedure:
 

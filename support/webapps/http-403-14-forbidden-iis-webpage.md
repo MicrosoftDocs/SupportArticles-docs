@@ -1,12 +1,12 @@
 ---
-title: HTTP Error 403.14 with IIS webpages
-description: Describes the problem in which you may receive an HTTP Error 403.14 error message when you visit a Web site that is hosted on IIS 7.0.
+title: HTTP Error 403.14 when you open IIS webpages
+description: This article provides resolutions for HTTP Error 403.14 that occurs when you visit a Web site that is hosted on IIS 7.0.
 ms.date: 04/16/2020
 ms.prod-support-area-path:
 ---
 # HTTP Error 403.14 - Forbidden when you open an IIS Webpage
 
-This article provides information about resolving the **HTTP Error 403.14 - Forbidden** error when you open an Internet Information Services (IIS) Webpage.
+This article helps you resolve the problem that an error (HTTP Error 403.14 - Forbidden) occurs when you open a Microsoft Internet Information Services (IIS) Webpage.
 
 _Original product version:_ &nbsp; Internet Information Services 7.0 and later versions  
 _Original KB number:_ &nbsp; 942062
@@ -35,20 +35,20 @@ This problem occurs because the Web site does not have the Directory Browsing fe
 
 To resolve this problem, follow these steps:
 
-1. Start IIS Manager. To do this, click **Start**, click **Run**, type *inetmgr.exe*, and then click **OK**.
-2. In IIS Manager, expand **server name**, expand **Web sites**, and then click the website that you want to modify.
+1. Start IIS Manager. To do this, select **Start**, select **Run**, type *inetmgr.exe*, and then select **OK**.
+2. In IIS Manager, expand **server name**, expand **Web sites**, and then select the website that you want to modify.
 3. In the **Features** view, double-click **Directory Browsing**.
-4. In the **Actions** pane, click **Enable**.
+4. In the **Actions** pane, select **Enable**.
 
 ### Method 2: Add a default document
 
 To resolve this problem, follow these steps:
 
-1. Start IIS Manager. To do this, click **Start**, click **Run**, type *inetmgr.exe*, and then click **OK**.
-2. In IIS Manager, expand **server name**, expand **Web sites**, and then click the website that you want to modify.
+1. Start IIS Manager. To do this, select **Start**, select **Run**, type *inetmgr.exe*, and then select **OK**.
+2. In IIS Manager, expand **server name**, expand **Web sites**, and then select the website that you want to modify.
 3. In the **Features** view, double-click **Default Document**.
-4. In the **Actions** pane, click **Enable**.
-5. In the **File Name** box, type the name of the default document, and then click **OK**.
+4. In the **Actions** pane, select **Enable**.
+5. In the **File Name** box, type the name of the default document, and then select **OK**.
 
 ### Method 3: Enable the Directory Browsing feature in IIS Express
 

@@ -1,8 +1,8 @@
 ---
-title: How to check IE version on computers
+title: How to check Internet Explorer version on computers
 description: This article provides you the ways to check the Internet Explorer version on a local computer or a remote computer.
 ms.date: 03/05/2020
-ms.prod-support-area-path: Internet Explorer
+ms.prod-support-area-path: 
 ---
 # How to check Internet Explorer version on local and remote computer
 
@@ -21,8 +21,8 @@ You can use the following methods:
 The first method is easy but includes many efforts. You can navigate to the following location in the registry after connecting to the remote registry:  
 `HKLM\Software\Microsoft\Internet Explorer`
 
-The above registry includes the following values in right pane:  
-Version &nbsp; &nbsp; REG_SZ &nbsp; &nbsp;6.0.2900.2180
+The above registry includes the values in right pane， which resembles the following:  
+svcVersion &nbsp; &nbsp; REG_SZ &nbsp; &nbsp;11.778.18362.0
 
 ## Check settings on remote computer
 
@@ -45,9 +45,6 @@ Echo %Comp_name, %IE_Ver% >> Result.csv
 
 The preceding script checks the remote computer for one registry entry, for checking Internet Explorer version, and the results are saved in a CSV format file.
 
-## Applies To
+## More information
 
-- Microsoft Windows Server 2003 Datacenter Edition (32-bit x86)
-- Microsoft Windows Server 2003 Enterprise Edition (32-bit x86)
-- Microsoft Windows Server 2003 Standard Edition (32-bit x86)
-- Microsoft Windows Server 2003 Web Edition
+For more information, see [Which version of Internet Explorer am I using?](https://support.microsoft.com/help/17295) and [Information about Internet Explorer versions](https://support.microsoft.com/help/969393).

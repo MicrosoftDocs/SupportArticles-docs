@@ -1,13 +1,14 @@
 ---
 title: Register assembly to use custom control
-description: Explains how to register an assembly in a WebForm to use a custom control.
+description: This article explains how to register an assembly in a WebForm to use a custom control.
 ms.date: 03/25/2020
 ms.prod-support-area-path: 
 ms.reviewer: pattim
+ms.topic: how-to
 ---
 # Register an assembly in a WebForm to use a custom control  
 
-This article provides instructions to make and register an assembly available in a WebForm to use with ASP.NET custom server controls.
+This article provides information to make and register an assembly available in a WebForm to use with ASP.NET custom server controls.
 
 _Original product version:_ &nbsp; ASP.NET  
 _Original KB number:_ &nbsp; 321749
@@ -24,9 +25,9 @@ To make an assembly available for an ASP.NET application, you must place the ass
 
     To find out what the application project folder is:
 
-    1. In the .NET environment, under the **View** menu, click **Solution Explorer**.
-    2. Right-click a project main item in **Solution Explorer** and  click **Properties**.
-    3. In the **Project Properties** dialog box, click **Common Properties** and click **General**.
+    1. In the .NET environment, under the **View** menu, select **Solution Explorer**.
+    2. Right-click a project main item in **Solution Explorer** and  select **Properties**.
+    3. In the **Project Properties** dialog box, select **Common Properties** and select **General**.
 
     In the tree pane, you see the list with the **Project Folder** property. This is typically the root directory of the application.
 2. In a Web Application project folder, create a folder named *bin* if it doesn't exist.

@@ -2,7 +2,7 @@
 title: Look up free and used Intune licenses
 description: Describes how to use Windows PowerShell to determine the number of free and used Microsoft Intune licenses.
 ms.date: 03/27/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: General guidance or advisory
 ---
 # How to use PowerShell to look up licenses for a Microsoft Intune subscription
 

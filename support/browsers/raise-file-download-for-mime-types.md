@@ -22,7 +22,7 @@ You can use the content-disposition header to override this default behavior. It
 Content-disposition: attachment; filename=fname.ext
 ```
 
-## More Information
+## More information
 
 `Content-disposition` is an extension to the MIME protocol that instructs a MIME user agent on how it should display an attached file. The range of valid values for `content-disposition` are discussed in Request for Comment (RFC) 1806 (see the [References](#references) section of this article). This article focuses on the attachment argument, which instructs a user agent (in this case, Internet Explorer) to save a file to disk instead of saving it inline.
 

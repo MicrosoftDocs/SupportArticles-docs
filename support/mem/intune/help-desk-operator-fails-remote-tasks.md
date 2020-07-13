@@ -2,7 +2,7 @@
 title: Help desk operators can't perform remote tasks
 description: Describes an Initiating Factory reset failed error that occurs when Intune help desk operators perform remote tasks.
 ms.date: 05/11/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: Device management
 ---
 # Initiating Factory reset failed error when help desk operators perform remote tasks in Intune
 

@@ -38,6 +38,6 @@ Prevent the web pages from meeting any of these conditions, so that back navigat
   - Microsoft ActiveX controls.
 - The F12 Developer tools window is not open.
 
-## More Information
+## More information
 
 For more information, see [back navigation caching](/previous-versions/windows/internet-explorer/ie-developer/dev-guides/dn265017(v=vs.85)).

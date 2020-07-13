@@ -1,19 +1,19 @@
 ---
-title: System.Security.SecurityException
-description: Security error when the virtual directory points to a remote share in ASP.NET.
+title: Can't use a virtual directory to host applications
+description: Security error occurs when the virtual directory points to a remote share in ASP.NET. This article provides a resolution for this problem.
 ms.date: 04/08/2020
 ms.prod-support-area-path: 
 ---
-# System.Security.SecurityException: Security error when the virtual directory points to a remote share in ASP.NET
+# System.Security.SecurityException when the virtual directory points to a remote share in ASP.NET
 
-This article provides information about resolving an issue that an error may be thrown when you use a virtual directory that points to a remote share to host a Microsoft ASP.NET-based application.
+This article helps you resolve the problem that `System.Security.SecurityException` may be thrown when you use a virtual directory that points to a remote share to host a Microsoft ASP.NET-based application.
 
 _Original product version:_ &nbsp; ASP.NET  
 _Original KB number:_ &nbsp; 320268
 
 ## Symptoms
 
-When you use a virtual directory that points to a remote share to host a Microsoft ASP.NET-based application, you may receive an error message that is similar to one of the following examples:
+When you use a virtual directory that points to a remote share to host an ASP.NET-based application, you may receive an error message that is similar to one of the following examples:
 
 - Message 1
 
@@ -41,8 +41,8 @@ To resolve this behavior, grant the **FullTrust** right to the remote share:
 
 1. On the Web server, open Administrative Tools, and then double-click **Microsoft .NET Framework Configuration**.
 2. Expand **Runtime Security Policy**, expand **Machine**, and then expand **Code Groups**.
-3. Right-click **All_Code**, and then click **New**.
-4. Select **Create a new code group**. Give your code group a relevant name, such as the name of the applications share. Click **Next**.
+3. Right-click **All_Code**, and then select **New**.
+4. Select **Create a new code group**. Give your code group a relevant name, such as the name of the applications share. Select **Next**.
 5. In the **Choose the condition type for this code group** list, select **URL**.
 6. In the **URL** box, type the path of the share in the following format:  
     `file:////\\computername\\sharename\*`
@@ -50,9 +50,9 @@ To resolve this behavior, grant the **FullTrust** right to the remote share:
     > [!NOTE]
     > Replace *computername* with the name of the computer that is hosting the remote share. Replace *sharename* with the name of the share.
 
-7. Click **Next**. On the next page, select **Use an existing permission set**, and then select **FullTrust**.
-8. Click **Next**, and then click **Finish**.
-9. Restart Microsoft Internet Information Services (IIS) to restart the ASP.NET worker process.
+7. Select **Next**. On the next page, select **Use an existing permission set**, and then select **FullTrust**.
+8. Select **Next**, and then select **Finish**.
+9. Restart Internet Information Services (IIS) to restart the ASP.NET worker process.
 
 If **Microsoft .NET Framework Configuration** isn't displayed under **Administrative Tools**, you can install the .NET Framework Software Development Kit (SDK) to add **Microsoft .NET Framework Configuration**. Instead, you can run the following command to make the change:
 
@@ -84,6 +84,4 @@ In this configuration, the account under which the ASP.NET worker process runs m
 
 ## References
 
-- For more information about the permissions that the ASPNET account requires to run ASP.NET applications, see [Introduction to ASP.NET Identity](/aspnet/identity/overview/getting-started/introduction-to-aspnet-identity).
-
-- For more information about ASP.NET security, see [INFO: ASP.NET Security Overview](https://support.microsoft.com/help/306590).
+For more information about the permissions that the ASPNET account requires to run ASP.NET applications, see [Introduction to ASP.NET Identity](/aspnet/identity/overview/getting-started/introduction-to-aspnet-identity). For more information about ASP.NET security, see [INFO: ASP.NET Security Overview](https://support.microsoft.com/help/306590).

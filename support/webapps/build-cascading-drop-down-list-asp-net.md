@@ -1,13 +1,14 @@
 ---
 title: Build cascading drop-down list in ASP.NET
-description: Describes how to build a cascading drop-down list by using the standard DropDownList control in ASP.NET together with the ASP.NET AJAX framework.
+description: This article describes that how to build a cascading drop-down list by using the standard DropDownList control in ASP.NET together with the ASP.NET AJAX framework.
 ms.date: 04/09/2020
 ms.prod-support-area-path: 
 ms.reviewer: v-zhiqni
+ms.topic: how-to
 ---
 # Steps to create a cascading drop-down list by using the Microsoft ASP.NET AJAX framework
 
-This article shows how to build a cascading drop-down list by using the Microsoft ASP.NET AJAX framework.
+This article shows that how to build a cascading drop-down list by using the ASP.NET AJAX framework.
 
 _Original product version:_ &nbsp; .NET Framework 3.5  
 _Original KB number:_ &nbsp; 976156
@@ -15,7 +16,7 @@ _Original KB number:_ &nbsp; 976156
 ## Introduction
 
 > [!NOTE]
-> You must have the Microsoft .NET Framework 3.5 installed to use the ASP.NET AJAX features. If you want to incorporate ASP.NET AJAX features in the .NET Framework 2.0, you must have ASP.NET 2.0 AJAX Extensions 1.0 installed.
+> You must have the .NET Framework 3.5 installed to use the ASP.NET AJAX features. If you want to incorporate ASP.NET AJAX features in the .NET Framework 2.0, you must have ASP.NET 2.0 AJAX Extensions 1.0 installed.
 
 A cascading drop-down list is a series of dependent `DropDownList` controls in which one `DropDownList` control depends on the parent or previous `DropDownList` controls. The items in the `DropDownList` control are populated based on an item that is selected by the user from another `DropDownList` control. When the selection of a parent `DropDownList` control changes, the web page calls the AJAX Web service to retrieve the list of values for the child `DropDownList` control. The ASP.NET AJAX framework enables you to call Web services (.asmx files) from the browser by using client scripts. So when you call the Web service in the client-side `onchange` event of the parent `DropDownList` control, the Web page will be only partly refreshed to populate the items for the child `DropDownList` control.
 
@@ -24,7 +25,7 @@ A cascading drop-down list is a series of dependent `DropDownList` controls in w
 
 ## Steps to create a cascading drop-down list
 
-1. Create an ASP.NET Web Service application in Microsoft Visual Studio.
+1. Create an ASP.NET Web Service application in Visual Studio.
 
     > [!NOTE]
     > In the sample code that is provided, the project name of the C# sample project is *KB_CascadingDDL_CS*. The project name of the Visual Basic .NET sample project is *KB_CascadingDDL_VB*.

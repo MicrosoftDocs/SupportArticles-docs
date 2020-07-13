@@ -1,5 +1,5 @@
 ---
-title: Cannot change home page in IE
+title: Cannot change home page in Internet Explorer
 description: Provides a manual fix for home page problems in Internet Explorer.
 ms.date: 03/17/2020
 ms.prod-support-area-path: 
@@ -48,6 +48,6 @@ To fix this problem manually, follow these steps:
 
 6. Restart the computer.
 
-## More Information
+## More information
 
 For more information about how to change your browser home page in Microsoft Edge, see [Change your browser home page](https://support.microsoft.com/help/4027577).

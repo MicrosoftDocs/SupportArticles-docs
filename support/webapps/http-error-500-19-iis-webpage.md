@@ -1,13 +1,13 @@
 ---
-title: HTTP Error 500.19 on IIS webpage
-description: Describes the problem in which you may receive an HTTP 500.19 error message when you visit a Web site that is hosted on IIS 7.0 and later versions.
+title: HTTP Error 500.19 on IIS webpages
+description: This article provides resolutions for the HTTP 500.19 error that occurs when you visit a Web site that is hosted on IIS 7.0 and later versions.
 ms.date: 04/16/2020
 ms.prod-support-area-path:
 ms.reviewer: mlaing
 ---
 # HTTP Error 500.19 when you open an IIS Webpage
 
-This article describes HResult codes and provides solutions when you encounter the HTTP 500.19 error on a Web application on Internet Information Services (IIS) 7.0 and later versions.
+This article provides resolutions for the problem that you encounter the HTTP 500.19 error on a Web application on Internet Information Services (IIS) 7.0 and later versions.
 
 _Original product version:_ &nbsp; Internet Information Services 7.0 and later versions  
 _Original KB number:_ &nbsp; 942055
@@ -16,7 +16,7 @@ You can find more information about following error codes:
 
 ## HResult code 0x8007000d
 
-Error message
+Error message:
 
 > Server Error in Application "application name"  
 > HTTP Error 500.19 – Internal Server Error  
@@ -34,7 +34,7 @@ Delete the malformed XML element from the *ApplicationHost.config* file or from 
 
 ## HResult code 0x80070005
 
-Error message
+Error message:
 
 > Server Error in Application "application name"  
 > HTTP Error 500.19 – Internal Server Error  
@@ -53,13 +53,9 @@ This problem occurs for one of the following reasons:
 
 To resolve this problem, use one of the following methods:
 
-- Resolution 1
+- Do not configure the Web site to use UNC Pass-through authentication to access the remote UNC share. Instead, specify a user account that has the appropriate permissions to access the remote UNC share.
 
-    Do not configure the Web site to use UNC Pass-through authentication to access the remote UNC share. Instead, specify a user account that has the appropriate permissions to access the remote UNC share.
-
-- Resolution 2
-
-    Grant the Read permission to the IIS_IUSRS group for the *ApplicationHost.config* file or for the *Web.config* file. To do this, follow these steps:
+- Grant the Read permission to the IIS_IUSRS group for the *ApplicationHost.config* file or for the *Web.config* file. To do this, follow these steps:
 
     1. In Windows Explorer, locate the folder that contains the *ApplicationHost.config* file that is associated with the Web site, or locate the virtual directories or the application directories that contain the *Web.config* file that is associated with the Web site.
 
@@ -68,27 +64,27 @@ To resolve this problem, use one of the following methods:
 
     1. Right-click the folder that contains the *ApplicationHost.config* file, or right-click the virtual or application directories that may contain the *Web.config* file.
 
-    1. Click **Properties**.
+    1. Select **Properties**.
 
-    1. Click the **Security** tab, and then click **Edit**.
+    1. Select the **Security** tab, and then Select **Edit**.
 
-    1. Click **Add**.
+    1. Select **Add**.
 
-    1. In the **Enter the object names to select** box, type *computername\IIS_IUSRS*, click **Check Names**, and then click **OK**.
+    1. In the **Enter the object names to select** box, type *computername\IIS_IUSRS*, select **Check Names**, and then select **OK**.
 
         > [!NOTE]
         > *Computername* is a placeholder for the computer name.
 
-    1. Select the **Read** check box, and then click **OK**.
+    1. Select the **Read** check box, and then select **OK**.
 
-    1. In the **Properties** dialog box for the folder, click **OK**.
+    1. In the **Properties** dialog box for the folder, select **OK**.
 
         > [!NOTE]
         > Make sure the folder's properties are inherited by the *ApplicationHost.config* and *Web.config* files so that IIS_IUSRS has the Read permission for those files.
 
 ## HResult code 0x800700b7
 
-Error message
+Error message:
 
 > Server Error in Application "application name"  
 > HTTP Error 500.19 – Internal Server Error  
@@ -110,12 +106,12 @@ Examine the specified configuration file and compare it with its parent *Applica
 
 To resolve this problem, in the *ApplicationHost.config* file, delete the duplicate entry for the authorization rule. To do this, follow these steps:
 
-1. Click **Start**, type *Notepad* in the **Start Search** box, right-click **Notepad**, and then click **Run as administrator**.
+1. Select **Start**, type *Notepad* in the **Start Search** box, right-click **Notepad**, and then select **Run as administrator**.
 
     > [!NOTE]
-    > If you are prompted for an administrator password or for a confirmation, type the password, or click **Continue**.
+    > If you are prompted for an administrator password or for a confirmation, type the password, or select **Continue**.
 
-2. On the **File** menu, click **Open**, type *%windir%\System32\inetsrv\config\applicationHost.config* in the **File name** box, and then click **Open**.
+2. On the **File** menu, select **Open**, type *%windir%\System32\inetsrv\config\applicationHost.config* in the **File name** box, and then select **Open**.
 
 3. In the *ApplicationHost.config* file, delete the duplicate entry that resembles the following code:
 
@@ -125,7 +121,7 @@ To resolve this problem, in the *ApplicationHost.config* file, delete the duplic
 
 ## HResult code 0x8007007e
 
-Error message
+Error message:
 
 > Server Error in Application "application name"  
 > HTTP Error 500.19 – Internal Server Error  
@@ -143,7 +139,7 @@ In the *ApplicationHost.config* file or in the *Web.config* file, locate the mod
 
 ## HResult code 0x800700c1
 
-Error message
+Error message:
 
 > Server Error in Application "application name"  
 > HTTP Error 500.19 – Internal Server Error  
@@ -161,7 +157,7 @@ Ensure that the specified module's bitness is the same as the hosting applicatio
 
 ## HResult code 0x8007010b
 
-Error message
+Error message:
 
 > Server Error in Application "application name"  
 > HTTP Error 500.19 – Internal Server Error  
@@ -179,7 +175,7 @@ Verify that the file path exists, is properly named, has correct file-level perm
 
 ## HResult code 0x8007052e
 
-Error message
+Error message:
 
 > Server Error in Application "application name"  
 > HTTP Error 500.19 – Internal Server Error  
@@ -193,7 +189,7 @@ The default process identity in IIS does not have sufficient permissions to open
 
 ## HResult code 0x80070021
 
-Error message
+Error message:
 
 > Server Error in Application "application name"  
 > HTTP Error 500.19 – Internal Server Error  

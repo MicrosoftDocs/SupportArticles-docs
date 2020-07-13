@@ -1,12 +1,12 @@
 ---
 title: Error logging in HTTP APIs
-description: Describes the error-logging capabilities of HTTP APIs.
+description: This article describes the error-logging capabilities of HTTP APIs.
 ms.date: 05/28/2020
 ms.prod-support-area-path: 
 ---
 # Error logging in HTTP APIs
 
-This article describes the error-logging capabilities of  HyperText Transfer Protocol (HTTP) application programming interfaces (APIs).
+This article describes the error-logging capabilities of HyperText Transfer Protocol (HTTP) application programming interfaces (APIs).
 
 _Original product version:_ &nbsp; Windows Server 2008 R2, Windows Server 2008, Windows Server 2012 R2, Windows Server 2012, Windows 10, Windows 8.1  
 _Original KB number:_ &nbsp; 820729
@@ -30,8 +30,7 @@ The following methods describe the resolution of HTTP API error logging.
 
 ## Configure HTTP API error logging
 
-Three registry values under an HTTP \Parameters key control the HTTP API error logging. These keys are located at the following registry key:
-     `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\HTTP\Parameters`
+Three registry values under an HTTP \Parameters key control the HTTP API error logging. These keys are located at the registry key: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\HTTP\Parameters`.
 
 > [!NOTE]
 > The location and the form of the configuration values may change in later versions of the Windows operating system.

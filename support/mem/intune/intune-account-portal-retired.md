@@ -2,7 +2,7 @@
 title: Intune account portal was moved to Office 365 portal
 description: Describes that Intune account portal was retired and all functionalities were moved to the O365 portal. Also lists some common questions.
 ms.date: 03/30/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: General guidance or advisory
 ---
 # Manage Intune and EMS subscriptions in the Office 365 portal
 

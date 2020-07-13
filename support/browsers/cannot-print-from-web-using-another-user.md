@@ -1,5 +1,5 @@
 ---
-title: Can't print from the web if running IE 11 as another user
+title: Can't print from the web if running Internet Explorer 11 as another user
 description: Describes an issue that occurs when you try to print from Internet Explorer 11 through a different user account. A workaround is provided.
 ms.date: 03/26/2020
 ms.prod-support-area-path: 
@@ -30,7 +30,7 @@ This issue occurs because Internet Explorer 11 uses newer APIs to retrieve more 
 
 To work around this issue, determine whether you really have to run Internet Explorer 11 as another user. If not, remove this dependency.
 
-## More Information
+## More information
 
 If you make sure that the iexplore.exe process that's responsible for the printing procedure is a 64-bit process, printing should work correctly. You can do this by configuring Internet Explorer 11 to use a single process (`TabProcGrowth=0`), but this will reduce security and increase the chance of application compatibility issues.
 

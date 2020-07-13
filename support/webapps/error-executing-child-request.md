@@ -1,6 +1,6 @@
 ---
 title: Error when you use Server.Transfer
-description: Provides the resolution to solve the 'Error Executing Child Request' error.
+description: This article provides the resolution to solve the 'Error Executing Child Request' error.
 ms.date: 04/15/2020
 ms.prod-support-area-path: 
 ms.technology: iis
@@ -8,14 +8,14 @@ ms.reviewer: radomirz
 ---
 # Error Executing Child Request when you use Server.Transfer or Server.Execute in ASP.NET page
 
-This article provides information about resolving the issue that you receive the **Error executing child request** error when you transfer control from an ASP.NET page to an Active Server Pages (ASP) page in Internet Information Services (IIS).
+This article helps you resolve the problem that an error (executing child request) occurs when you transfer control from an ASP.NET page to an Active Server Pages (ASP) page in Internet Information Services (IIS).
 
 _Original product version:_ &nbsp; ASP.NET  
 _Original KB number:_ &nbsp; 320439
 
 ## Symptoms
 
-When you try to use the `Server.Transfer` or the `Server.Execute` method in your ASP.NET page to transfer control from an ASP.NET page to an ASP page, you may receive the following error message:
+When you try to use the `Server.Transfer` or the `Server.Execute` method in your ASP.NET page to transfer control from an ASP.NET page to an ASP page, you might receive the following error message:
 
 > Error executing child request for PageName.asp.
 

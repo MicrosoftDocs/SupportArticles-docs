@@ -1,10 +1,11 @@
 ---
 title: Store ASP.NET SQL Server mode session state
-description: Describes how to configure ASP.NET SQL Server mode session state management.
+description: This article describes how to configure ASP.NET SQL Server mode session state management.
 ms.date: 03/26/2020
 ms.prod-support-area-path:
+ms.topic: how-to
 ---
-# How to configure SQL Server to store ASP.NET session state  
+# Configure SQL Server to store ASP.NET session state  
 
 This article demonstrates how to configure Microsoft SQL Server for ASP.NET SQL Server mode session state management.
 
@@ -15,31 +16,31 @@ _Original KB number:_ &nbsp; 317604
 
 The following list outlines the recommended hardware, software, network infrastructure, and service packs that you need:
 
-- Microsoft Windows
-- Microsoft .NET Framework
-- Microsoft Internet Information Services (IIS)
-- Microsoft SQL Server
+- Windows
+- .NET Framework
+- Internet Information Services (IIS)
+- SQL Server
 
 ## Configure SQL Server for ASP.NET SQL Server session state
 
 The following steps describe how to run the *InstallSqlState.sql* and the *UninstallSqlState.sql* script files to configure SQL Server mode session state management.
 
-1. In SQL Query Analyzer, on the **File** menu, click **Open**.
-2. In the **Open Query File** dialog box, browse to the *InstallSqlState.sql* script file, and then click **Open**. By default, *InstallSqlState.sql* is located in one of the following folders:
+1. In SQL Query Analyzer, on the **File** menu, select **Open**.
+2. In the **Open Query File** dialog box, browse to the *InstallSqlState.sql* script file, and then select **Open**. By default, *InstallSqlState.sql* is located in one of the following folders:
 
     - `system drive\WINNT\Microsoft.NET\Framework\version\`
     - `system drive\Windows\Microsoft.NET\Framework\version\`
-3. After *InstallSqlState.sql* opens in SQL Query Analyzer, click **Execute** on the **Query** menu to run the script.
+3. After *InstallSqlState.sql* opens in SQL Query Analyzer, select **Execute** on the **Query** menu to run the script.
 4. Before you run the *UninstallSqlState.sql* script file to uninstall SQL Server mode session state management configuration, you must stop the w3svc process. To do this, follow these steps:
 
-    1. On the **Windows Start** menu, click **Run**, type **cmd**, and then click **OK** to open a command prompt.
+    1. On the **Windows Start** menu, select **Run**, type **cmd**, and then select **OK** to open a command prompt.
     2. At the command prompt, type `net stop w3svc`. You receive confirmation that the w3svc process is stopped.
-5. In SQL Query Analyzer, on the **File** menu, click **Open**.
-6. In the **Open Query File** dialog box, browse to the *UninstallSqlState.sql* script file, and then click **Open**. By default, *UninstallSqlState.sql* is located in one of the following folders:
+5. In SQL Query Analyzer, on the **File** menu, select **Open**.
+6. In the **Open Query File** dialog box, browse to the *UninstallSqlState.sql* script file, and then select **Open**. By default, *UninstallSqlState.sql* is located in one of the following folders:
 
     - `system drive\WINNT\Microsoft.NET\Framework\version\`
     - `system drive\Windows\Microsoft.NET\Framework\version\`  
-7. After *UninstallSqlState.sql* opens in SQL Query Analyzer, click **Execute** on the **Query** menu to run the script.
+7. After *UninstallSqlState.sql* opens in SQL Query Analyzer, select **Execute** on the **Query** menu to run the script.
 8. After you uninstall SQL Server mode session state management configuration, you must restart the w3svc service. To restart the w3svc process, type `net start w3svc` at a command prompt.
 
 ## Modify the Web.config file of your application

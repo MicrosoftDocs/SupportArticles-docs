@@ -1,11 +1,12 @@
 ---
-title: Descriptions of ASP.NET inline expressions
+title: ASP.NET inline expressions
 description: This article introduces the usage of ASP.NET inline expressions in the .NET Framework.
 ms.date: 03/26/2020
 ms.prod-support-area-path: 
 ms.reviewer: wawang
+ms.topic: article
 ---
-# Introduction to ASP.NET inline expressions in the .NET Framework
+# ASP.NET inline expressions in the .NET Framework
 
 This article contains an introduction to the following ASP.NET inline expressions:
 
@@ -16,7 +17,7 @@ This article contains an introduction to the following ASP.NET inline expression
 - <%$ ... %>
 - <%-- ... --%>
 
-_Original product version:_ &nbsp; Microsoft .NET Framework  
+_Original product version:_ &nbsp; .NET Framework  
 _Original KB number:_ &nbsp; 976112
 
 ## <% ... %> embedded code blocks
@@ -25,7 +26,7 @@ The embedded code block is used to preserve backward compatibility with classica
 
 The following example demonstrates an ASP.NET page that has sample Microsoft Visual Basic .NET code in an embedded code block to display the results of a loop:
 
-```aspx
+```aspx-vb
 <%@ Page Language="VB" %>
 <html>
 <body>
@@ -50,7 +51,7 @@ The `<%= ... %>` displaying expression is an equivalent of the embedded code blo
 
 For example, the following sample code displays the current time:
 
-```aspx
+```aspx-vb
 <%@ Page Language="VB" %>
 <html>
     <body>
@@ -71,20 +72,20 @@ The directive expression is the syntax that specifies settings that are used by 
 
 The ASP.NET page framework supports the following directives:
 
-|||
+|Directive|Description|
 |--|--|
-|@ Page|Defines page-specific attributes that are used by the ASP.NET page parser and compiler. Can be included only in .aspx files.<br/>This directive name can be used only in ASP.NET Web Form pages.|
-|@ Control|Defines control-specific attributes that are used by the ASP.NET page parser and compiler. Can be included only in .ascx files (user controls).<br/>The directive name can be used only in User Control files.|
-|@ Import|Explicitly imports a namespace into a page or into a user control.|
-|@ Implements|Declaratively indicates that a page or a user control implements a specified .NET Framework interface.|
-|@ Register|Associates aliases with namespaces and with class names. Which enables user controls and custom server controls to be rendered when they are included in a requested page or user control.|
-|@ Assembly|Links an assembly to the current page during compilation. It makes all the assembly's classes and interfaces available for use on the page.|
-|@ Master|Identifies an ASP.NET master page.|
-|@ WebHandler|Identifies an ASP.NET IHttpHandler page.|
-|@ PreviousPageType|Provides a way to obtain strong typing against the previous page as accessed through the PreviousPage property.|
-|@ MasterType|Assigns a class name to the Master property of an ASP.NET page. Provides a way to create a strongly typed reference to the ASP.NET master page.|
-|@ OutputCache|Declaratively controls the output caching policies of a page or of a user control.|
-|@ Reference|Declaratively links a page or user control to the current page or user control.|
+|`@ Page`|Defines page-specific attributes that are used by the ASP.NET page parser and compiler. Can be included only in .aspx files.<br/>This directive name can be used only in ASP.NET Web Form pages.|
+|`@ Control`|Defines control-specific attributes that are used by the ASP.NET page parser and compiler. Can be included only in .ascx files (user controls).<br/>The directive name can be used only in User Control files.|
+|`@ Import`|Explicitly imports a namespace into a page or into a user control.|
+|`@ Implements`|Declaratively indicates that a page or a user control implements a specified .NET Framework interface.|
+|`@ Register`|Associates aliases with namespaces and with class names. Which enables user controls and custom server controls to be rendered when they are included in a requested page or user control.|
+|`@ Assembly`|Links an assembly to the current page during compilation. It makes all the assembly's classes and interfaces available for use on the page.|
+|`@ Master`|Identifies an ASP.NET master page.|
+|`@ WebHandler`|Identifies an ASP.NET IHttpHandler page.|
+|`@ PreviousPageType`|Provides a way to obtain strong typing against the previous page as accessed through the PreviousPage property.|
+|`@ MasterType`|Assigns a class name to the Master property of an ASP.NET page. Provides a way to create a strongly typed reference to the ASP.NET master page.|
+|`@ OutputCache`|Declaratively controls the output caching policies of a page or of a user control.|
+|`@ Reference`|Declaratively links a page or user control to the current page or user control.|
 |||
 
 For more information about directive syntax, visit [Text Template Directive Syntax](/previous-versions/dotnet/netframework-4.0/xz702w3e(v=vs.100)).
@@ -95,7 +96,7 @@ The data-binding expression creates binding between a server control property an
 
 The following example shows how to use the data-binding expression to bind the string from a function to the Text property of a label:
 
-```aspx
+```aspx-vb
 <%@ Page Language="VB" %>
 <script runat="server">
     Protected Function SayHello() As String
@@ -150,7 +151,7 @@ The server-side comments block lets developers embed code comments in any locati
 
 The following code example shows how to use the server-side comments block in an ASP.NET page:
 
-```aspx
+```aspx-vb
 <%@ Page Language="VB" %>
 <script runat="server">
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs)

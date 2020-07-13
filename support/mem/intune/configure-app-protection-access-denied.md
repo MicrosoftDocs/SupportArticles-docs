@@ -2,7 +2,7 @@
 title: Access denied when configuring MAM
 description: Fixes an issue in which an administrator receives the Access Denied error when they configure Intune App Protection Conditional Access.
 ms.date: 05/11/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: App management
 ---
 # Intune Service Administrator gets Access Denied when trying to configure MAM
 

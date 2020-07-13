@@ -1,13 +1,13 @@
 ---
-title: Table text overlaps table borders or is missing
-description: Discusses an issue in which table text overlaps table borders or is missing in Internet Explorer 9 and later versions. Provides a resolution.
-ms.date: 04/26/2020
+title: Table text overlaps borders in Internet Explorer
+description: Discusses an issue in which table text overlaps table borders or is missing in Internet Explorer. Provides a resolution.
+ms.date: 06/09/2020
 ms.prod-support-area-path: 
 ms.reviewer: jeanr
 ---
 # Table text overlaps table borders or is missing in Internet Explorer
 
-This article provides the resolution to solve the issue that table text overlaps table borders or is missing in Internet Explorer 9 and later versions.
+This article provides solutions to solve the situation where the table text overlaps the border or is lost on the webpage because of the table height in Internet explorer can't adjust the block-level elements that have been set.
 
 _Original product version:_ &nbsp; Internet Explorer 11, Internet Explorer 10, Internet Explorer 9  
 _Original KB number:_ &nbsp; 3121136
@@ -34,14 +34,13 @@ To resolve this issue, we recommend that you do either of the following:
 
 - On Windows 10, use Microsoft Edge.
 - On other Windows versions, upgrade to Internet Explorer 11, and then render the page in Edge document mode.
+- Alternatively, you can change the HTML of the page. To do this, replace the DIV-tagged text by using an HTML table, as shown in the following example.
 
-Alternatively, you can change the HTML of the page. To do this, replace the DIV-tagged text by using an HTML table, as shown in the following example.
+    **Original code**
 
-### Original code
-
-```html
-<!DOCTYPE HTML>
-<html>
+    ```html
+    <!DOCTYPE HTML>
+    <html>
     <body>
         <table style="border: 1px solid blue; height: 50px">
             <tr>
@@ -56,19 +55,19 @@ Alternatively, you can change the HTML of the page. To do this, replace the DIV-
             </tr>
         </table>
     </body>
-</html>
-```
+    </html>
+    ```
 
-### Replacement code
+    **Replacement code**
 
-```html
-<!DOCTYPE HTML>
-<html>
+    ```html
+    <!DOCTYPE HTML>
+    <html>
     <body>
         <table style="border: 1px solid blue; height: 50px">
             <tr>
                 <td style="height: 100%">
-                    <table>
+                        <table>
                         <tr>
                             <td>
                                 This text fits within<br />
@@ -82,5 +81,5 @@ Alternatively, you can change the HTML of the page. To do this, replace the DIV-
             </tr>
         </table>
     </body>
-</html>
-```
+    </html>
+    ```

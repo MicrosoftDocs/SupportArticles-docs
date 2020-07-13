@@ -1,5 +1,5 @@
 ---
-title: How to change keep-alive time-out in IE
+title: How to change keep-alive time-out in Internet Explorer
 description: Provides the steps to change the default time-out value for persistent HTTP connections in Internet Explorer.
 ms.date: 03/26/2020
 ms.prod-support-area-path: 
@@ -19,7 +19,7 @@ If either the client browser (Internet Explorer) or the Web server has a lower `
 
 By default, Internet Explorer has a `KeepAliveTimeout` value of one minute and an additional limiting factor (`ServerInfoTimeout`) of two minutes. Either setting can cause Internet Explorer to reset the socket.
 
-## More Information
+## More information
 
 > [!IMPORTANT]
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Window](https://support.microsoft.com/help/322756).
@@ -40,7 +40,7 @@ To change the default time-out value for persistent HTTP connections in Internet
 
 6. Type the appropriate time-out value (in milliseconds), and then click **OK**. For example, to set the time-out value to two minutes, type *120000*.
 
-7. Restart Internet Explorer. If you set the `KeepAliveTimeout` value to less than 60,000 (one minute), you may have problems communicating with Web servers that require persistent HTTP connections. For example, you may receive a `Page cannot be displayed` error message.
+7. Restart Internet Explorer. If you set the `KeepAliveTimeout` value to less than 60,000 (one minute), you may have problems communicating with Web servers that require persistent HTTP connections. For example, you may receive a **Page cannot be displayed** error message.
 
 If you must have a `KeepAliveTimeout` value higher than 120000 (two minutes), you must create an additional registry key and set its value equal to the `KeepAliveTimeout` value that you want. The additional registry key is `ServerInfoTimeout`. It is a **DWORD** with a value (in milliseconds) and in the same location as `KeepAliveTimeout`.
 

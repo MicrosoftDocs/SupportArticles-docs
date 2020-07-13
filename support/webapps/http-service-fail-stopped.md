@@ -1,26 +1,25 @@
 ---
-title: Unable to stop HTTP service
-description: Describes an issue in which you can't stop the HTTP service using the NET STOP HTTP command when the Microsoft Web Deployment Service (MSDEPSVC) is installed. Provides a solution.
+title: HTTP services can't be stopped
+description: This article describes the problem that you can't stop the HTTP service by using the NET STOP HTTP command when the Microsoft Web Deployment Service (MSDEPSVC) is installed, and provides a solution.
 ms.date: 02/27/2020
 ms.reviewer: bretb
 ms.prod-support-area-path:
 ---
-# HTTP Service can's be stopped when the Microsoft Web Deployment Service is installed
+# HTTP services can't be stopped when the Microsoft Web Deployment Service is installed
 
-This article provides information about resolving an issue where you can't stop the HTTP service by using the NET STOP HTTP command when the Microsoft Web Deployment Service (MSDEPSVC) is installed.
+This article helps you resolve the problem that you can't stop HTTP services by using the NET STOP HTTP command when the Microsoft Web Deployment Service (MSDEPSVC) is installed.
 
 _Original product version:_ &nbsp; Microsoft Web Deployment Service  
 _Original KB number:_ &nbsp; 2597817
 
 ## Symptoms
 
-Consider the following scenario. You are attempting to stop the HTTP service on a server running Internet Information Services (IIS) 6, 7, or 7.5. The server also has the Microsoft Web Deployment Service (MSDEPSVC) installed. When you try to stop the HTTP service using the NET STOP HTTP command-line instruction, the following error message is displayed in the command prompt:
+Consider the following scenario. You are attempting to stop the HTTP service on a server running Internet Information Services (IIS) 6, 7, or 7.5. The server also has the Microsoft Web Deployment Service (MSDEPSVC) installed. When you try to stop the HTTP service by using the `NET STOP HTTP` command-line instruction, the following error message is displayed in the command prompt:
 
-> The HTTP service is stopping.....
->
+> The HTTP service is stopping.....  
 > The HTTP service could not be stopped.
 
-If you run the NET STOP HTTP command again, the following message is displayed:
+If you run the `NET STOP HTTP` command again, the following message is displayed:
 
 > The service is starting or stopping. Please try again later.
 
@@ -70,6 +69,4 @@ Check whether the problem is fixed. If the problem is fixed, you are finished wi
 
 ## References
 
-For information on how to use Windows PowerShell on Windows Server 2003, Windows Server 2008, and Windows Server 2008 R2, see [Windows PowerShell](https://technet.microsoft.com/library/bb978526.aspx).
-
-For more information on the Microsoft Web Deployment Tool, see [Web Deploy 3.6](https://www.iis.net/download/webdeploy).
+For more information about how to use Windows PowerShell on Windows Server 2003, Windows Server 2008, and Windows Server 2008 R2, see [Windows PowerShell](https://technet.microsoft.com/library/bb978526.aspx). For more information about the Web Deployment Tool, see [Web Deploy 3.6](https://www.iis.net/download/webdeploy).

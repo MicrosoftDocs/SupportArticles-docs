@@ -1,10 +1,11 @@
 ---
-title: Create Web.config for ASP.NET application
-description: Describes how to create the Web.config file for an ASP.NET application.
+title: Create Web.config for ASP.NET applications
+description: This article describes how to create the Web.config file for an ASP.NET application.
 ms.date: 03/27/2020
 ms.prod-support-area-path:
+ms.topic: how-to
 ---
-# How to create the Web.config file for an ASP.NET application
+# Create the Web.config file for an ASP.NET application
 
 This article describes how to create the *Web.config* file that's used to control the behavior of individual ASP.NET applications.
 
@@ -17,7 +18,7 @@ The Microsoft .NET Framework, and ASP.NET in particular, uses XML-formatted .con
 
 ## Hierarchy of .config files
 
-The Microsoft .NET Framework relies on .config files to define configuration options. The .config files are text-based XML files. Multiple .config files can, and typically do, exist on a single system.
+The .NET Framework relies on .config files to define configuration options. The .config files are text-based XML files. Multiple .config files can, and typically do, exist on a single system.
 
 System-wide configuration settings for the .NET Framework are defined in the *Machine.config* file. The *Machine.config* file is located in the `%SystemRoot%\Microsoft.NET\Framework\%VersionNumber%\CONFIG\` folder. The default settings that are contained in the *Machine.config* file can be modified to affect the behavior of Microsoft .NET applications on the whole system.
 

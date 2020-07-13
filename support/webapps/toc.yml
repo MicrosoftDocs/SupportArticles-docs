@@ -1,8 +1,5 @@
-- name: Welcome to Web Apps Support
-  href: welcome-support-webapps.md
-
-- name: (Back up to Support hub page)
-  href: ../index.yml
+- name: Welcome
+  href: welcome-webapps.md
 
 - name: Active Server Pages
   items:
@@ -35,7 +32,7 @@
     href: asp-net-2-3-dot-5-not-work.md
   - name: ASP.NET Code-behind model overview
     href: asp-dot-net-code-behind-model.md
-  - name: ASP.NET Forms-based authentication by C#
+  - name: Use ASP.NET forms-based authentication
     href: forms-based-authentication-asp-net-csharp.md
   - name: ASP.NET MVC3 NuGet Package Manager missing
     href: aspnet-mvc-nuget-missing.md
@@ -61,18 +58,16 @@
     href: build-cascading-drop-down-list-asp-net.md
   - name: DataGrid control not working
     href: datagrid-control-display-incorrectly.md
-  - name: Descriptions of ASP.NET inline expressions
+  - name: ASP.NET inline expressions
     href: asp-net-inline-expressions.md
   - name: Disable ASP session state in ASP.NET
     href: disable-asp-session-state.md
   - name: Duplicate events by child requests
     href: duplicate-asp-net-events.md
-  - name: Error 0x80004005 when registering WebClass
+  - name: Error 0x80004005 when you register WebClass
     href: error-0x80004005-register-webclass-dll.md
   - name: Make application configuration in ASP.NET
     href: application-directory-configuration-asp-net.md
-  - name: Pre-compiled WCF workflow service activation fails
-    href: pre-compiled-wcf-workflow-activation-fails.md
   - name: Register assembly to use custom control
     href: register-assembly-webform-custom-control.md
   - name: Request.ServerVariables() returns empty
@@ -109,9 +104,9 @@
     href: error-530-iis-7.md
   - name: FTP authorization rules not inherited with user isolation setting
     href: ftp-authorization-rules-not-inherited.md
-  - name: How to edit the Web.config file
+  - name: Edit the Web.config file
     href: edit-web-config-asp-dot-net.md
-  - name: Impersonation in ASP.NET application
+  - name: Impersonation in ASP.NET applications
     href: impersonation-asp-net.md
   - name: Use FTP Utility in a typical session
     href: how-to-use-ftp-utility.md
@@ -134,32 +129,32 @@
   items:
   - name: An application pool exceeds time limits
     href: application-pool-exceed-time-limits.md
-  - name: Create Web.config for ASP.NET applications
+  - name: Create Web.config for an ASP.NET application
     href: create-web-config-asp-dot-net.md
   - name: DebugDiag 1.2 Installation and Data Collector
     href: debugdiag-collected-information.md
   - name: Hidden static files return HTTP 404 errors
     href: hidden-static-files-http-404-access-denied.md
-  - name: How to troubleshoot OutOfMemoryException
+  - name: Troubleshoot OutOfMemoryException
     href: outofmemoryexception-asp-net.md
   - name: HTTP Bad Request error in CLM portal
     href: clm-http-bad-request.md
-  - name: HTTP error 403.16 when accessing a website
+  - name: HTTP error 403.16 when you access a website
     href: http-403-forbidden-access-website.md
   - name: HTTP Error 403.14 when you open a webpage
     href: http-403-14-forbidden-iis-webpage.md
   - name: HTTP error 403.7 when you run web applications
     href: http-error-403-7-forbidden-web-app.md
-  - name: HTTP Error 403/404 when accessing FRx WebPort 
+  - name: HTTP error 403/404 when you access FRx WebPort 
     href: http-error-403-404-frx-webport.md
-  - name: HTTP Error 404.13 when visiting a website
+  - name: HTTP error 404.13 when you visit a website
     href: http-404-13-iis-web-site.md
-  - name: HTTP Error 405.0 when you visit a website
+  - name: HTTP error 405.0 when you visit a website
     href: http-error-405-iis-website.md
   - name: HTTP Error 500.19 when you open a webpage
     href: http-error-500-19-iis-webpage.md
   - name: Http.sys registry settings for Windows
-    href: http.sys-registry-windows.md
+    href: httpsys-registry-windows.md
   - name: IIS ETW logs diagnostic
     href: iis-etw-log.md
   - name: IIS SSL Diagnostic tool for SDP
@@ -183,12 +178,10 @@
     href: iis-events-not-detected-scom.md
   - name: No cs-username data in Advanced Logging
     href: no-cs-username-data-advanced-logging.md
-  - name: Use X509CertificateValidator with WCF service
-    href: x509certificatevalidator-wcf-service-certificate.md
 
 - name: IISAdmin Service and Inetinfo Process Operation
   items:
-  - name: Can't stop HTTP service
+  - name: HTTP services can't be stopped
     href: http-service-fail-stopped.md
   - name: Disable documentation protocol for ASP.NET Web Services
     href: disable-documentation-protocol-asp-net.md
@@ -201,12 +194,10 @@
 
 - name: Site Behavior and Performance
   items:
-  - name: 0-byte file when enabling compression
+  - name: 0-byte file when you enable compression
     href: 0-byte-file-compression-enabled.md
   - name: Application Initialization module not working
     href: application-fail-ssl-web.md
-  - name: Async WCF service uses wrong impersonation
-    href: asynchronous-wcf-service-use-wrong-impersonation.md
   - name: Authorization for requests to default document fails
     href: authorization-fails-default-documents.md
   - name: Can't transfer control to Active Server Pages
@@ -217,13 +208,13 @@
     href: request-timed-out-dataadapter.md
   - name: Error logging in HTTP APIs
     href: error-logging-http-apis.md
-  - name: Error when calling MTS COM from ASP
+  - name: Error when you call MTS COM from ASP
     href: server-execution-fail-call-mts-com-asp.md
-  - name: Error when using VM to host ASP.NET application
+  - name: Can't use a virtual directory to host applications
     href: system-security-securityexception.md
   - name: Exceptions cause ASP.NET apps to quit
     href: exceptions-cause-asp-net-apps-quit.md
-  - name: Event 115 when connecting HTTPS website 
+  - name: Event 115 when you connect HTTPS website 
     href: event-115-connect-https-website.md
   - name: Event ID 1072 or 1076 on state servers
     href: state-server-event-1072-1076.md
@@ -237,9 +228,9 @@
     href: filenotfindexception-asp-net-call-web-service.md
   - name: FtpPutFile always returns success
     href: ftpputfile-success-451-status.md
-  - name: HTTP 500 error when using Response.BinaryWrite
+  - name: HTTP 500 error when you use Response.BinaryWrite
     href: http-500-response-binarywrite.md
-  - name: HTTP Error 404.2 when visiting a web page 
+  - name: HTTP Error 404.2 when you visit a web page 
     href: http-error-402-web-page.md
   - name: IIS Worker Process takes much memory
     href: iis-work-process-much-memory.md
@@ -247,32 +238,30 @@
     href: internet-printing-fails-iis.md
   - name: ThreadAbortException when you use Server.Transfer
     href: system-threading-threadabortexception.md
-  - name: WCF REST service generates metadata in WSDL
-    href: wcf-rest-generate-metadata-wsdl.md
 
 - name: WWW Administration and Management
   items:
-  - name: ASP.NET 4.5 in Windows 8 and Server 2012
+  - name: Install ASP.NET 4.5 in Windows 8
     href: asp-dot-net-4-dot-5-windows-8-server-2012.md
   - name: ASP.NET configuration files backup
     href: back-up-asp-net-configuration-files.md
   - name: Avoid AppDomain unload in antivirus scanning
     href: exclude-folders-antivirus-scanning.md
   - name: Configure IIS W3SVC in WSFC
-    href: configure-iis-wsfc-wsfc.md
+    href: configure-iis-w3svc-wsfc.md
   - name: Configure intermediate certificates in IIS
     href: configure-intermediate-certificates-iis.md
   - name: Default permissions and user rights in IIS
     href: default-permissions-user-rights.md
   - name: Enable SSL for all customers
     href: enable-ssl-all-customers-iis.md
-  - name: Error occurs when you install certificate
+  - name: Errors occur when you install certificates
     href: error-install-certificate.md
   - name: Error when you change identity of an application pool
     href: 0x80090016-change-application-pool-identity.md
   - name: Exporting configuration files fails
     href: configuration-files-cannot-exported.md
-  - name: HTTP 400 error when sending requests that need Kerberos
+  - name: HTTP 400 error when you send requests that need Kerberos
     href: http-bad-request-response-kerberos.md
   - name: Read and analyze a client certificate
     href: analyze-client-certificate.md
@@ -289,17 +278,17 @@
   items:
   - name: 401.1 error with pre-authentication header
     href: 401-error-pre-authentication-header.md
-  - name: Access Denied when calling web service
+  - name: Access Denied when you call web service
     href: access-denied-call-web-service.md
-  - name: Can't import SSL .pfx file to personal certificate store
+  - name: Can't import SSL .pfx files to personal certificate store
     href: cannot-import-ssl-pfx-local-certificate.md
   - name: Changing IP/port causes other sites fail
     href: change-ip-port-wildcard certificate-site-fail.md
   - name: Configure Many-to-One client mappings
     href: configure-many-to-one-client-mappings.md
-  - name: Control authorization permission in ASP.NET
+  - name: Control authorization permissions in ASP.NET
     href: authorization-permissions-asp-net.md
-  - name: HTTP error 403.7  when opening an IIS webpage
+  - name: HTTP error 403.7 when you open an IIS webpage
     href: http-403-forbidden-open-iis-webpage.md
   - name: Impersonation fails when UAC is enabled
     href: impersonation-fails-uac-enabled.md

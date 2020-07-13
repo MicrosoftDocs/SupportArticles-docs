@@ -1,6 +1,6 @@
 ---
 title: All Intranet options enabled automatically
-description: Provides the steps to solve the issue that all the three Intranet Options automatically will be enabled if "Automatically Detect Intranet Network" is enabled on a domain member computer.
+description: Provides the steps to solve the issue that all the three Intranet Options automatically will be enabled if Automatically Detect Intranet Network is enabled on a domain member computer.
 ms.date: 03/16/2020
 ms.prod-support-area-path: 
 ms.reviewer: wuth

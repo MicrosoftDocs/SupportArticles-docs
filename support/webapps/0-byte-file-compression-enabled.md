@@ -1,12 +1,12 @@
 ---
-title: 0-byte file when enabling compression
-description: A 0-byte file may be returned when compression is enabled on a server that is running IIS.
+title: 0-byte file when you enable compression
+description:  This article provides a resolution for the problem that A 0-byte file might be returned when compression is enabled on a server that is running IIS.
 ms.date: 03/30/2020
 ms.prod-support-area-path: 
 ---
-# A 0-byte file may be returned when compression is enabled on a server that is running IIS
+# A 0-byte file might be returned when compression is enabled on a server that is running IIS
 
-This article provides information about resolving an issue that a 0-byte file may be returned instead of the expected file when compression is enabled on a server that is running Internet Information Services (IIS).
+TThis article helps you resolve the problem that a 0-byte file might be returned instead of the expected file when compression is enabled on a server that is running Microsoft Internet Information Services (IIS).
 
 _Original product version:_ &nbsp; Internet Information Services 8.0, 8.5  
 _Original KB number:_ &nbsp; 817442
@@ -32,7 +32,7 @@ The default compression directory in IIS 6.0 is `%systemroot%\IIS Temporary Comp
 
 To verify the compression directory, follow these steps:
 
-1. Click **Start**, point to **Programs,** point to **Administrative Tools**, and then click **Internet Information Services (IIS) Manager**.
-2. In IIS Manager, right-click the **Web Sites** folder, and then click **Properties**.
-3. Click the **Service** tab.
+1. Select **Start**, point to **Programs,** point to **Administrative Tools**, and then select **Internet Information Services (IIS) Manager**.
+2. In IIS Manager, right-click the **Web Sites** folder, and then select **Properties**.
+3. Select the **Service** tab.
 4. Under **HTTP Compression**, make sure that **Compress static files** is selected, and then locate the path to the temporary directory.

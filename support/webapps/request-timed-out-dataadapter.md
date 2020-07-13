@@ -1,6 +1,6 @@
 ---
 title: Request timed out when using DataAdapter
-description: Provides the methods to solve the Request Timed Out error that occurs if you use the DataAdapter method or run a query that takes more than 90 seconds to process in an ASP.NET Web application.
+description: This article provides resolutions for Request Timed Out error that occurs when you use the DataAdapter method or run a query that takes more than 90 seconds to process in an ASP.NET Web application.
 ms.date: 04/15/2020
 ms.prod-support-area-path: 
 ms.technology: asp.net
@@ -8,7 +8,7 @@ ms.reviewer: koushikd
 ---
 # Request timed out error when you use the DataAdapter method in an ASP.NET application
 
-This article provides information about resolving the **Request Timed Out** error that occurs in an ASP.NET Web application.
+This article helps you resolve the problem that an error (Request Timed Out) occurs in an ASP.NET Web application.
 
 _Original product version:_ &nbsp; ASP.NET  
 _Original KB number:_ &nbsp; 825739
@@ -68,9 +68,9 @@ This behavior is by design.
 ## Steps to reproduce the behavior
 
 1. Start Microsoft Visual Studio .NET.
-2. On the **File** menu, point to **New**, and then click **Project**.
-3. Click **Visual Basic Projects** under **Project Types**, and then click **ASP.NET Web Application** under **Templates**. By default, `WebForm1.aspx` is created.
-4. In Design view, right-click **WebForm1**, and then click **View Code**.
+2. On the **File** menu, point to **New**, and then select **Project**.
+3. Select **Visual Basic Projects** under **Project Types**, and then select **ASP.NET Web Application** under **Templates**. By default, `WebForm1.aspx` is created.
+4. In Design view, right-click **WebForm1**, and then select **View Code**.
 5. To add the database connection and the `DataAdapter` method to fill the dataset, replace the existing code with the following code:
 
     ```vb
@@ -123,11 +123,11 @@ This behavior is by design.
 7. Set the application to build in release mode. To do this, follow these steps:
 
     1. In Solution Explorer, right-click your project.
-    2. Click **Properties**, and then click **Configuration Manager**.
-    3. Click **Release** under **Active Solution Configuration**, and then click **Close**.
-    4. Click **OK**.
+    2. Select **Properties**, and then select **Configuration Manager**.
+    3. Select **Release** under **Active Solution Configuration**, and then select **Close**.
+    4. Select **OK**.
 
-8. On the **Debug** menu, click **Start** to build and run the project. You may receive the error message that the [Symptoms](#symptoms) section describes.
+8. On the **Debug** menu, select **Start** to build and run the project. You may receive the error message that the [Symptoms](#symptoms) section describes.
 
 > [!NOTE]
 > The default value for the time-out as set in the *Machine.config* file is 90 seconds. If the process time is less than 90 seconds, increase the processing time by increasing the number of records to be fetched.

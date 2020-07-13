@@ -1,13 +1,13 @@
 ---
 title: 401.1 error with pre-authentication header
-description: An unexpected 401.1 status is returned when you use Pre-Authentication headers with IE and IIS.
+description: An unexpected 401.1 status is returned when you use Pre-Authentication headers with Internet Explorer and IIS.
 ms.date: 04/03/2020
 ms.prod-support-area-path: 
 ms.reviewer: bretb, mlaing
 ---
-# An unexpected 401.1 status is returned when using Pre-Authentication headers with IE and IIS
+# An unexpected 401.1 status is returned when using Pre-Authentication headers with Internet Explorer and IIS
 
-This article provides information about resolving an issue when you use Internet Explorer to browser to a web application hosted on Microsoft Internet Information Services (IIS), an unexpected 401.1 status is returned with Pre-Authentication headers.
+This article helps you resolve the problem that occurs when you use Internet Explorer to browser to a web application hosted on Microsoft Internet Information Services (IIS), an unexpected 401.1 status is returned with Pre-Authentication headers.
 
 _Original product version:_ &nbsp; Internet Information Services 8.0, Internet Explorer 10, 9  
 _Original KB number:_ &nbsp; 2749007
@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 2749007
 
 Consider the following scenario:
 
-- You use Windows Internet Explorer to browse to a web application hosted on IIS 7.0 or higher.
+- You use Internet Explorer to browse to a web application hosted on IIS 7.0 or higher.
 - The Internet Explorer browser is configured to use Pre-Authentication, and Kernel Mode Authentication is enabled in IIS.
 - Additionally, this web request being sent by Internet Explorer is the first request to be sent to the IIS application.
 
@@ -62,11 +62,11 @@ To modify this behavior in IIS, disable Kernel Mode Authentication for the IIS w
 
 4. In the **Authentication** pane, select **Windows Authentication**.
 
-5. Click **Advanced Settings** in the **Actions** pane.
+5. Select **Advanced Settings** in the **Actions** pane.
 
 6. When the **Advanced Settings** dialog box appears, clear the **Enable Kernel-mode authentication** checkbox.
 
-7. Click **OK** to close the **Advanced Settings** dialog box.
+7. Select **OK** to close the **Advanced Settings** dialog box.
 
 > [!IMPORTANT]
 > Disabling Kernel Mode Authentication may cause web applications that require Kerberos authentication and delegation to fail.

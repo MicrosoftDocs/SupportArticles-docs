@@ -1,14 +1,14 @@
 ---
 title: Create GUIDs by using Active Server Pages
-description: Introduction about how to create GUIDs in IIS by using Active Server Pages (ASP) pages.
+description: This article provides introduction about how to create GUIDs in IIS by using Active Server Pages (ASP) pages.
 ms.date: 04/15/2020
 ms.prod-support-area-path: 
 ms.technology: iis
 ms.reviewer: robmcm, jameshow
 ---
-# How to create GUIDs by using Active Server Pages in IIS
+# Create GUIDs by using Active Server Pages in IIS
 
-This article describes how to create several example pages by using various forms of GUIDs for Active Server Pages (ASP) pages to use. These values can be used to create unique data entries in a database, or anywhere else where a unique data field is required.
+This article provides information about how to create several example pages by using various forms of GUIDs for Active Server Pages (ASP) pages to use. These values can be used to create unique data entries in a database, or anywhere else where a unique data field is required.
 
 _Original product version:_ &nbsp; Internet Information Services  
 _Original KB number:_ &nbsp; 320375
@@ -20,7 +20,7 @@ _Original KB number:_ &nbsp; 320375
 
 This example creates a simple 14-character time-based GUID by using the current year, month, day, hour, minute, and seconds. This permits you to sort data based on the GUID.
 
-1. Click **Start**, point to **Programs**, click **Accessories**, and then click **Notepad** to open Notepad.
+1. Select **Start**, point to **Programs**, select **Accessories**, and then select **Notepad** to open Notepad.
 2. Type or paste the following ASP code in Notepad:
 
     ```vbs
@@ -47,19 +47,19 @@ This example creates a simple 14-character time-based GUID by using the current 
 
 3. Save the page:
 
-    1. On the **File** menu, click **Save**.
+    1. On the **File** menu, select **Save**.
     2. Locate the root folder for your Web site, which is typically the `C:\InetPub\Wwwroot` folder for the default Web site.
     3. Name the file *GuidTest0.asp*.
-    4. Click **Save**.
-    5. On the **File** menu, click **Exit**.
+    4. Select **Save**.
+    5. On the **File** menu, select **Exit**.
 
-4. Locate the page with Microsoft Internet Explorer. You see a GUID. As you refresh the page, you see the GUID increment.
+4. Locate the page with Internet Explorer. You see a GUID. As you refresh the page, you see the GUID increment.
 
 ## Create a simple time-offset GUID
 
 This example creates a 20-character time-based GUID by using the offset in seconds from 12:00 midnight on January 1, 2000. This permits you to sort data based on the GUID, and can be updated to use any other date as the base.
 
-1. Click **Start**, point to **Programs**, click **Accessories**, and then click **Notepad** to open Notepad.
+1. Select **Start**, point to **Programs**, select **Accessories**, and then select **Notepad** to open Notepad.
 2. Type or paste the following ASP code in Notepad:
 
     ```vbs
@@ -82,11 +82,11 @@ This example creates a 20-character time-based GUID by using the offset in secon
 
 3. Save the page:
 
-    1. On the **File** menu, click **Save**.
+    1. On the **File** menu, select **Save**.
     2. Locate the root folder for your Web site, which is typically the `C:\InetPub\Wwwroot` folder for the default Web site.
     3. Name the file *GuidTest1.asp*.
-    4. Click **Save**.
-    5. On the **File** menu, click **Exit**.
+    4. Select **Save**.
+    5. On the **File** menu, select **Exit**.
 
 4. Locate the page with Internet Explorer. You see a GUID. As you refresh the page, you see the GUID increment.
 
@@ -97,7 +97,7 @@ This example creates a 20-character time-based GUID by using the offset in secon
 
 This example, like the [Create a simple time-offset GUID](#create-a-simple-time-offset-guid) example, creates a time-based GUID, but it is 25 characters long. This example creates a 20-character value from the offset in seconds from 12:00 midnight on January 1, 2000, and appends an additional five random numbers to the end of that. This permits you to sort data based on the GUID, but permits much greater uniqueness. This can be updated to use any other date as the base.
 
-1. Click **Start**, point to **Programs**, click **Accessories**, and then click **Notepad** to open Notepad.
+1. Select **Start**, point to **Programs**, select **Accessories**, and then select **Notepad** to open Notepad.
 2. Type or paste the following ASP code in Notepad:
 
     ```vbs
@@ -122,11 +122,11 @@ This example, like the [Create a simple time-offset GUID](#create-a-simple-time-
 
 3. Save the page:
 
-    1. On the **File** menu, click **Save**.
+    1. On the **File** menu, select **Save**.
     2. Locate the root folder for your Web site, which is typically the `C:\InetPub\Wwwroot` folder for the default Web site.
     3. Name the file *GuidTest2.asp*.
-    4. Click **Save**.
-    5. On the **File** menu, click **Exit**.
+    4. Select **Save**.
+    5. On the **File** menu, select **Exit**.
 
 4. Locate the page with Internet Explorer. You see a GUID. As you refresh the page, you see the first 20 characters of the GUID increment, and the last five characters are random.
 
@@ -135,7 +135,7 @@ This example, like the [Create a simple time-offset GUID](#create-a-simple-time-
 
 ## Create a simple random GUID
 
-1. Click **Start**, point to **Programs**, click **Accessories**, and then click **Notepad** to open Notepad.
+1. Select **Start**, point to **Programs**, select **Accessories**, and then select **Notepad** to open Notepad.
 2. Type or paste the following ASP code in Notepad:
 
     ```vbs
@@ -161,11 +161,11 @@ This example, like the [Create a simple time-offset GUID](#create-a-simple-time-
 
 3. Save the page:
 
-    1. On the **File** menu, click **Save**.
+    1. On the **File** menu, select **Save**.
     2. Locate the root folder for your Web site, which is typically the *C:\InetPub\Wwwroot* folder for the default Web site.
     3. Name the file *GuidTest3.asp*.
-    4. Click **Save**.
-    5. On the **File** menu, click **Exit**.
+    4. Select **Save**.
+    5. On the **File** menu, select **Exit**.
   
 4. Locate the page with Internet Explorer. You see a 20-character random GUID. As you refresh the page, you see the value change randomly.
 
@@ -174,7 +174,7 @@ This example, like the [Create a simple time-offset GUID](#create-a-simple-time-
 
 ## Create a variable-length random GUID
 
-1. Click **Start**, point to **Programs**, click **Accessories**, and then click **Notepad** to open Notepad.
+1. Select **Start**, point to **Programs**, select **Accessories**, and then select **Notepad** to open Notepad.
 2. Type or paste the following ASP code in Notepad:
 
     ```vbs
@@ -202,22 +202,22 @@ This example, like the [Create a simple time-offset GUID](#create-a-simple-time-
 
 3. Save the page:
 
-    1. On the **File** menu, click **Save**.
+    1. On the **File** menu, select **Save**.
     2. Locate the root folder for your Web site, which is typically the *C:\InetPub\Wwwroot* folder for the default Web site.
     3. Name the file *GuidTest4.asp*.
-    4. Click **Save**.
-    5. On the **File** menu, click **Exit**.
+    4. Select **Save**.
+    5. On the **File** menu, select **Exit**.
 
 4. Locate the page with Internet Explorer. You see a 10-character, 25-character, and 50-character random GUID. As you refresh the page, you see the values change randomly.
 
 > [!NOTE]
-> This example and the [Create a simple random GUID](#create-a-simple-random-guid) example both create strings of concatenated random characters. The [Create a windows-style random GUID](#create-a-windows-style-random-guid) example expands on this functionality to create a GUID that is formatted like a Microsoft Windows GUID.
+> This example and the [Create a simple random GUID](#create-a-simple-random-guid) example both create strings of concatenated random characters. The [Create a windows-style random GUID](#create-a-windows-style-random-guid) example expands on this functionality to create a GUID that is formatted like a Windows GUID.
 
 ## Create a windows-style random GUID
 
 Windows primarily uses GUIDs when it registers Class IDs for components and other objects, but GUIDs can be used for anything. Windows GUIDs are long strings of formatted hexadecimal characters, meaning that they use the numbers 0 through 9 and the letters A through F. (Microsoft Access also has a built-in Replication ID in the same format.) This example shows how to use code that is similar to the [Create a variable-length random GUID](#create-a-variable-length-random-guid) example code to create a GUID like a Windows GUID.
 
-1. Click **Start**, point to **Programs**, click **Accessories**, and then click **Notepad** to open Notepad.
+1. Select **Start**, point to **Programs**, select **Accessories**, and then select **Notepad** to open Notepad.
 2. Type or paste the following ASP code in Notepad:
 
     ```vbs
@@ -251,11 +251,11 @@ Windows primarily uses GUIDs when it registers Class IDs for components and othe
 
 3. Save the page:
 
-    1. On the **File** menu, click **Save**.
+    1. On the **File** menu, select **Save**.
     2. Locate the root folder for your Web site, which is typically the `C:\InetPub\Wwwroot` folder for the default Web site.
     3. Name the file *GuidTest5.asp*.
-    4. Click **Save**.
-    5. On the **File** menu, click **Exit**.
+    4. Select **Save**.
+    5. On the **File** menu, select **Exit**.
 
 4. Locate the page with Internet Explorer. You see a random GUID that is formatted like a Windows GUID. As you refresh the page, you see the value change randomly.
 
@@ -263,7 +263,7 @@ Windows primarily uses GUIDs when it registers Class IDs for components and othe
 
 Because Windows GUIDs use hexadecimal numbers for each character, 16 values are possible per character in the GUID. If you expand the values to include the whole alphabet, 36 values are possible per character in the GUID. This example uses the function from the [Create a variable-length random GUID](#create-a-variable-length-random-guid) example to create a GUID in the same format as a Windows GUID.
 
-1. Click **Start**, point to **Programs**, click **Accessories**, and then click **Notepad** to open Notepad.
+1. Select **Start**, point to **Programs**, select **Accessories**, and then select **Notepad** to open Notepad.
 2. Type or paste the following ASP code in Notepad:
 
     ```vbs
@@ -297,10 +297,10 @@ Because Windows GUIDs use hexadecimal numbers for each character, 16 values are 
 
 3. Save the page:
 
-    1. On the **File** menu, click **Save**.
-    2. Locate the root folder for your Web site, which is typically the `C:\InetPub\Wwwroot`folder for the default Web site.
+    1. On the **File** menu, select **Save**.
+    2. Locate the root folder for your Web site, which is typically the `C:\InetPub\Wwwroot` folder for the default Web site.
     3. Name the file *GuidTest6.asp*.
-    4. Click **Save**.
-    5. On the **File** menu, click **Exit**.
+    4. Select **Save**.
+    5. On the **File** menu, select **Exit**.
 
 4. Locate the page with Internet Explorer. You see a random GUID that is formatted like a Windows GUID. As you refresh the page, you see the value change randomly.

@@ -1,10 +1,11 @@
 ---
 title: Application configuration in ASP.NET
-description: Describes how to use ASP.NET to make application-specific and directory-specific configuration settings.
+description: This article describes how to use ASP.NET to make application-specific and directory-specific configuration settings.
 ms.date: 04/03/2020
 ms.prod-support-area-path:
+ms.topic: how-to
 ---
-# How to make application and directory-specific configuration settings in an ASP.NET application
+# Make application and directory-specific configuration settings in an ASP.NET application
 
 This article describes how to make application-specific and directory-specific configuration settings in ASP.NET.
 

@@ -2,7 +2,7 @@
 title: Description of Intune migration blockers
 description: Discusses migration blockers that may be found by the pre-migration checker and the steps to take if your Intune stand-alone environment fails the pre-migration check.
 ms.date: 05/11/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Migration to the Azure Portal
 ms.reviewer: aaronmax, delhan
 ---
 # Intune migration blockers for grouping and targeting

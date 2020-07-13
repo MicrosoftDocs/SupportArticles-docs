@@ -1,12 +1,12 @@
 ---
 title: Can't print COM objects called from ASP
-description: Describes an issue that a COM object that sends output to a printer fails when called from Active Server Pages. Provides a solution.
+description: This article provides a resolution that a COM object sends output to a printer fails when called from Active Server Pages.
 ms.date: 02/27/2020
 ms.prod-support-area-path:
 ---
 # COM objects fail to print when called from ASP
 
-This article provides information about resolving an issue that a COM object that sends output to a printer fails when called from Active Server Pages.
+This article helps you resolve the problem that a COM object sends output to a printer fails when called from Active Server Pages.
 
 _Original product version:_ &nbsp; Active Server Pages  
 _Original KB number:_ &nbsp; 184291
@@ -67,7 +67,7 @@ To enable IIS to enumerate the network printers by using the SYSTEM account, fol
 
 4. On the **Registry** menu, select **Export Registry File**.
 5. In the **File Name** box, type **c:\printconns.reg**.
-6. To open the **printconns.reg** file in Notepad, click **Start**, click **Run**, type Notepad printconns.reg in the **Open** box, and then click **OK**.
+6. To open the **printconns.reg** file in Notepad, select **Start**, select **Run**, type Notepad printconns.reg in the **Open** box, and then select **OK**.
 7. Replace the text `HKEY_CURRENT_USER` with the text `HKEY_USERS\.DEFAULT`.
 8. Save the file.
 9. To import the file into the registry, double-click the file in Windows Explorer.

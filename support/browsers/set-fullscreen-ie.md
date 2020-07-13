@@ -20,14 +20,14 @@ _Original KB number:_ &nbsp; 968870
 > [!IMPORTANT]
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
 
-1. Click **Start** ![vista start button](./media/set-fullscreen-ie/vista-start-button.png), type regedit in the **Start Search** box, and then press ENTER. ![security shield](./media/set-fullscreen-ie/security-shield.png) If you are prompted for an administrator password or for confirmation, type your password, or click **Continue**. Then, click **OK**.
+1. Click **Start**, type regedit in the **Start Search** box, and then press ENTER. If you are prompted for an administrator password or for confirmation, type your password, or click **Continue**. Then, click **OK**.
 
 2. Locate and then click the following subkey in Registry Editor:  
    `HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main`
 
 3. Locate and then double-click **FullScreen** in the right pane.
 
-4. Type _yes_ in the **Data data** field, and then click **OK**.
+4. Type *yes* in the **Data data** field, and then click **OK**.
     > [!NOTE]
     > If the FullScreen value does not exist in the right pane, manually create a new string value with **Value name** as **FullScreen** and **Value data** set to **Yes**.
 
@@ -35,7 +35,7 @@ _Original KB number:_ &nbsp; 968870
 
 ### Method 2: Use the Group Policy Object Editor to make Internet Explorer always start in full-screen mode
 
-1. Click **Start**, click **Run**, type gpedit.msc in the **Open** box, and then click **OK**.
+1. Click **Start**, click **Run**, type *gpedit.msc* in the **Open** box, and then click **OK**.
 
 2. Expand **Computer Configuration**, expand **Administrative Templates**, expand **Windows Components**, and then click **Internet Explorer**.
 
@@ -52,7 +52,7 @@ _Original KB number:_ &nbsp; 968870
 > [!IMPORTANT]
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
 
-1. Click **Start** ![vista start button](./media/set-fullscreen-ie/vista-start-button.png), type regedit in the **Start Search** box, and then press ENTER. ![security shield](./media/set-fullscreen-ie/security-shield.png) If you are prompted for an administrator password or for confirmation, type your password, or click **Continue**. Then, click **OK**.
+1. Click **Start**, type regedit in the **Start Search** box, and then press ENTER. If you are prompted for an administrator password or for confirmation, type your password, or click **Continue**. Then, click **OK**.
 
 2. Locate and then click the following subkey in Registry Editor:  
    `HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main`

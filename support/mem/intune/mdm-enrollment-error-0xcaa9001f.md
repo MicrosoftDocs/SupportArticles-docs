@@ -2,7 +2,7 @@
 title: MDM enrollment error 0xcaa9001f 
 description: Describes an issue in which MDM enrollment fails and generates error 0xcaa9001f for co-managed Windows devices that are hybrid Azure AD-joined and managed by using Configuration Manager.
 ms.date: 04/16/2020
-ms.prod-support-area-path:  Windows enrollment
+ms.prod-support-area-path: Windows enrollment
 ms.reviewer: luche
 ---
 # MDM enrollment fails with error 0xcaa9001f for co-managed Windows devices

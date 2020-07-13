@@ -13,11 +13,6 @@ productDirectory:
   - title: Microsoft Intune
     imageSrc: "../media/hub-landing/logo-intune.png"
     links:
-    - url: intune/welcome-support-intune.md
+    - url: intune/welcome-intune.md
       text: Support for Microsoft Intune
-  - title: Microsoft Endpoint Configuration Manager
-    imageSrc: "../media/hub-landing/logo-configmgr.png"
-    links:
-    - url: configmgr/welcome-support-configmgr.md
-      text: Support for Microsoft Endpoint Configuration Manager
   

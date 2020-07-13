@@ -2,7 +2,7 @@
 title: Setting the Mobile Device Management authority
 description: Describes how to set the Mobile Device Management authority in Microsoft Intune.
 ms.date: 03/30/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: General guidance or advisory
 ---
 # Setting the Mobile Device Management authority in Microsoft Intune
 

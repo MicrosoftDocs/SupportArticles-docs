@@ -1,12 +1,12 @@
 ---
 title: Access denied when you call Web Service
-description: Describes Access Denied errors when you call a Web service application and Anonymous access authentication is turned off. Provides resolutions.
+description: This article provides resolutions for Access Denied errors that occur when you call a Web service application and Anonymous access authentication is turned off.
 ms.date: 02/27/2020
 ms.prod-support-area-path:
 ---
 # Access Denied When you call a Web Service while Anonymous Authentication is turned Off
 
-This article provides information about resolving **Access Denied** errors when you call a Web service application and Anonymous access authentication is turned off.
+This article helps you resolve the problem that errors (Access Denied) occur when you call a Web service application and Anonymous access authentication is turned off.
 
 _Original product version:_ &nbsp; Web Services Enhancements  
 _Original KB number:_ &nbsp; 811318
@@ -15,10 +15,8 @@ _Original KB number:_ &nbsp; 811318
 
 When you try to call a Web service application and Anonymous access authentication is turned off, you may receive the following error message:
 
-> The request failed with HTTP status 401: Access Denied.
->
-> Description: An unhandled exception occurred during the execution of the current Web request. Please review the stack trace for more information about the error and where it originated in the code.
->
+> The request failed with HTTP status 401: Access Denied.  
+> Description: An unhandled exception occurred during the execution of the current Web request. Please review the stack trace for more information about the error and where it originated in the code.  
 > Exception Details: System.Net.WebException: The request failed with HTTP status 401: Access Denied.
 
 ## Cause
@@ -99,23 +97,23 @@ DefaultCredentials represents the ASPNET user account (or NetworkService user ac
 2. Name the project **WebServiceTest**.
 3. By default, **Service1.asmx** is created.
 4. Uncomment the default WebMethod "HelloWorld()".
-5. On **Build** menu, click **Build Solution**.
+5. On **Build** menu, select **Build Solution**.
 6. Turn off Anonymous access to WebServiceTest. To do this, follow these steps:
 
      1. In Control Panel, double-click **Administrative Tools**.
      2. Double-click **Internet Information Services**.
      3. Expand **Internet Information Services**, and then locate the **WebServiceTest** virtual directory.
-     4. Right-click **WebServiceTest**, and then click **Properties**.
-     5. Click the **Directory Security** tab.
-     6. Under **Anonymous access and authentication control**, click **Edit**.
-     7. In the **Authentication Methods** dialog box, click to clear the **Anonymous access** check box.
-     8. Click to select the **Integrated Windows authentication** check box.
+     4. Right-click **WebServiceTest**, and then select **Properties**.
+     5. Select the **Directory Security** tab.
+     6. Under **Anonymous access and authentication control**, select **Edit**.
+     7. In the **Authentication Methods** dialog box, select to clear the **Anonymous access** check box.
+     8. Select to select the **Integrated Windows authentication** check box.
 
         > [!NOTE]
         > Verify that only **Integrated Windows authentication** is selected.
-     9. Click **OK** to close the **Authentication Methods** dialog box.
-     10. Click**OK**to close **Properties**.
-7. On the **Build** menu, click **Build Solution**.
+     9. Select **OK** to close the **Authentication Methods** dialog box.
+     10. Select**OK**to close **Properties**.
+7. On the **Build** menu, select **Build Solution**.
 8. Type the following address in the browser to view the **Service1** Web service description:
 
     http://localhost/WebServiceTest/Service1.asmx
@@ -125,13 +123,13 @@ DefaultCredentials represents the ASPNET user account (or NetworkService user ac
 
     1. Create a new **ASP.NET Web Application** by using Visual C# .NET or Visual Basic .NET. Name the project **WebServiceCaller**.
     1. By default, **WebForm1.aspx** is created.
-    2. In Solution Explorer, right-click **References**, and then click **Add Web Reference**.
+    2. In Solution Explorer, right-click **References**, and then select **Add Web Reference**.
     4. In the **Address** text box, type the URL for WebServiceTest as follows:
     
        http://localhost/WebServiceTest/Service1.asmx
        
-    5. Click **Go** or press ENTER, and then click **Add Reference**.
-11. In Solution Explorer, right-click **WebForm1.aspx**, and then click **View Code**.
+    5. Select **Go** or press ENTER, and then select **Add Reference**.
+11. In Solution Explorer, right-click **WebForm1.aspx**, and then select **View Code**.
 12. Append the following code to thePage_Loadevent:
 
     Visual C# .NET Sample:
@@ -150,7 +148,7 @@ DefaultCredentials represents the ASPNET user account (or NetworkService user ac
     Response.Write(myProxy.HelloWorld())
     ```
 
-13. On the **Debug** menu, click **Start**, and then view the application in the browser.
+13. On the **Debug** menu, select **Start**, and then view the application in the browser.
 14. The error message that is discussed in the "Symptoms" section appears in the browser.
 15. To resolve this problem, assign DefaultCredentials to the Credentials property of the Web service client-side proxy. To do this, insert the following code before the line "Response.Write( myProxy.HelloWorld())":
 
@@ -172,10 +170,10 @@ DefaultCredentials represents the ASPNET user account (or NetworkService user ac
 
 - [HOW TO: Write a Simple Web Service by Using Visual C# .NET](https://support.microsoft.com/help/308359)
 
-- [Building Secure ASP.NET Applications: Authentication, Authorization, and Secure Communication](https://msdn2.microsoft.com/library/aa302415.aspx)
+- [Building Secure ASP.NET Applications: Authentication, Authorization, and Secure Communication](/previous-versions/msp-n-p/ff649100(v=pandp.10))
 
-- [Securing XML Web Services Created Using ASP.NET](https://msdn2.microsoft.com/library/w67h0dw7%28vs.71%29.aspx)
+- [Securing XML Web Services Created Using ASP.NET](/previous-versions/dotnet/netframework-1.1/w67h0dw7(v=vs.71))
 
-- [CredentialCache Class](https://msdn2.microsoft.com/library/system.net.credentialcache%28vs.71%29.aspx)
+- [CredentialCache Class](/dotnet/api/system.net.credentialcache?view=netcore-3.1)
 
-- [CredentialCache.DefaultCredentials Property](https://msdn2.microsoft.com/library/system.net.credentialcache.defaultcredentials%28vs.71%29.aspx)
+- [CredentialCache.DefaultCredentials Property](/dotnet/api/system.net.credentialcache.defaultcredentials?view=netcore-3.1)

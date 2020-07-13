@@ -1,5 +1,5 @@
 ---
-title: Slow rendering for document modes from before IE9
+title: Slow rendering for document modes from before Internet Explorer 9
 description: Describes an issue that causes slow rendering in Internet Explorer 11. Occurs when websites are displayed in document mode from Internet Explorer 8 and earlier. A resolution is provided.
 ms.prod-support-area-path: 
 ms.date: 04/26/2020
@@ -33,6 +33,6 @@ To resolve this issue, use one of the following methods:
     "iexplore.exe"=dword:00000000
     ```
 
-## More Information
+## More information
 
 Using the `FeatureControl` key will disable **Natural Text Metrics** for all websites. If you want to change this feature for a particular website, put the site into the intranet zone instead of setting the feature control key.

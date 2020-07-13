@@ -1,13 +1,13 @@
 ---
-title: HTTP Error 404.2 when visiting a web page 
-description: Describes that you may receive an error message when you try to visit a web page that is hosted on IIS 7.0. 
+title: HTTP Error 404.2 when you visit a web page 
+description: This article describes a problem that you might receive an error message when you try to visit a web page that is hosted on IIS 7.0. 
 ms.date: 03/31/2020
 ms.prod-support-area-path: 
 ms.reviewer: cochen
 ---
 # HTTP Error 404.2 when you visit a web page that is hosted on a computer that is running IIS 7.0
 
-This article provides information about resolving an issue that an unexpected error may be thrown when visit a web page that is hosted on a computer that is running Internet Information Services (IIS) 7.0.
+This article helps you resolve the problem that an unexpected error may be thrown when you visit a web page that is hosted on a computer that is running Internet Information Services (IIS) 7.0.
 
 _Original product version:_ &nbsp; Internet Information Services 7.0  
 _Original KB number:_ &nbsp; 942040
@@ -29,9 +29,9 @@ This issue occurs because the requested Internet Server API (ISAPI) resource or 
 
 To resolve this issue, configure the restriction on the **ISAPI and CGI Restrictions** page to allow the requested ISAPI resource or the requested CGI resource. Follow these steps to resolve this issue:
 
-1. Click **Start**, type **Inetmgr** in the **Start Search** box, and then click **Inetmgr** in the **Programs** list.
+1. Select **Start**, type **Inetmgr** in the **Start Search** box, and then select **Inetmgr** in the **Programs** list.
 
-    If you're prompted for an administrator password or for confirmation, type the password, or click **Continue**.
+    If you're prompted for an administrator password or for confirmation, type the password, or select **Continue**.
 2. Locate the level that you want to configure.
 3. In **Features** view, double-click **ISAPI and CGI Restrictions**.
-4. Right-click the restriction that restricts the requested ISAPI resource or the requested CGI resource, and then click **Allow**.
+4. Right-click the restriction that restricts the requested ISAPI resource or the requested CGI resource, and then select **Allow**.

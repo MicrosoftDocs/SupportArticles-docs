@@ -1,12 +1,12 @@
 ---
-title: Error occurs when you install certificate
-description: Describes a problem in which you receive an error message when you try to install a certificate by using IIS Manager.
+title: Errors occur when you install a certificate
+description: This article describes the problem that you receive an error message when you try to install a certificate by using IIS Manager, and provides a resolution.
 ms.date: 03/31/2020
 ms.prod-support-area-path: 
 ---
-# Error message when you try to install a certificate by using IIS 7.0 Manager
+# Errors when you try to install a certificate by using IIS 7.0 Manager
 
-This article provides information about resolving an issue that an unexpected runtime error may be thrown when you try to install a certificate by using Internet Information Services (IIS) 7.0 Manager
+This article helps you resolve the problem that an unexpected runtime error may be thrown when you try to install a certificate by using Microsoft Internet Information Services (IIS) 7.0 Manager
 
 _Original product version:_ &nbsp; Windows Server 2008 Service Pack 2, Internet Information Services 7.0  
 _Original KB number:_ &nbsp; 959216
@@ -36,13 +36,13 @@ This issue occurs because IIS Manager performs a lookup operation to look for a 
 
 To resolve this problem, add a friendly name to the certificate. Follow these steps to resolve this problem:
 
-1. Click **Start**, click**Run**, type **certmgr.mmc**, and then click **OK**.
-2. Click **File**, click **Add/Remove Span-ins**.
-3. Select **Certificates**, and click **Add**, and then click **OK**.
-4. Select **Computer account**, and click **Next**, and then click **Finish**.
-5. Click **OK**.
+1. Select **Start**, select **Run**, type **certmgr.mmc**, and then select **OK**.
+2. Select **File**, select **Add/Remove Span-ins**.
+3. Select **Certificates**, and select **Add**, and then select **OK**.
+4. Select **Computer account**, and select **Next**, and then select **Finish**.
+5. Select **OK**.
 6. Expand **Certificates (Local Computer)**, and **Personal**, and then **Certificates**.
-7. Right-click the **certificate**, and then click **Properties**.
+7. Right-click the **certificate**, and then select **Properties**.
 8. Edit the **Friendly name** field.
 
 ## More information

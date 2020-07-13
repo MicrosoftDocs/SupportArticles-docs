@@ -1,8 +1,8 @@
 ---
-title: TextChanged event not fire with AutoComplete enabled in IE
+title: TextChanged event not fire with AutoComplete enabled in Internet Explorer
 description: Describes a behavior where the TextChanged event of a TextBox control does not fire when you select the text from the AutoComplete list in the Internet Explorer even if the text in the TextBox control changes.
 ms.date: 03/08/2020
-ms.prod-support-area-path: Internet Explorer
+ms.prod-support-area-path: 
 ---
 # TextChanged event of TextBox control may not fire if AutoComplete is enabled in Internet Explorer
 
@@ -81,15 +81,15 @@ To work around this behavior, disable the AutoComplete feature of the Web form. 
 
 2. On the **Debug** menu, click **Start**. The **WebForm1 - Microsoft Internet Explorer** Web page appears.
 
-3. In the text box, type text1, and then press ENTER. You notice that the debugger stops at the **TextBox1_TextChanged** procedure in the Code view of the WebForm1.aspx file.
+3. In the text box, type *text1*, and then press ENTER. You notice that the debugger stops at the **TextBox1_TextChanged** procedure in the Code view of the WebForm1.aspx file.
 
 4. On the **Debug** menu, click **Continue**.
 
-5. In the text box on the **WebForm1 - Microsoft Internet Explorer** Web page, type text2, and then press ENTER. You notice that the debugger stops again at the **TextBox1_TextChanged** procedure in the code view of the WebForm1.aspx file.
+5. In the text box on the **WebForm1 - Microsoft Internet Explorer** Web page, type *text2*, and then press ENTER. You notice that the debugger stops again at the **TextBox1_TextChanged** procedure in the code view of the WebForm1.aspx file.
 
 6. On the **Debug** menu, click **Continue**.
 
-7. In the text box on the **WebForm1 - Microsoft Internet Explorer** Web page, type t. You notice a drop-down list of words that you typed earlier.
+7. In the text box on the **WebForm1 - Microsoft Internet Explorer** Web page, type *t*. You notice a drop-down list of words that you typed earlier.
 
 8. Use the DOWN ARROW key to select **text1**, and then press ENTER.
 
@@ -97,4 +97,4 @@ To work around this behavior, disable the AutoComplete feature of the Web form. 
 
 ## References
 
-For more information, see [TextBox.AutoPostBack Property](https://docs.microsoft.com/dotnet/api/system.web.ui.webcontrols.textbox.autopostback).
+For more information, see [TextBox.AutoPostBack Property](/dotnet/api/system.web.ui.webcontrols.textbox.autopostback).

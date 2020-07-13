@@ -1,13 +1,13 @@
 ---
-title: HTTP Error 405.0 when visiting IIS website
-description: Describes a problem that occurs because a client request uses an HTTP verb that doesn't comply with the HTTP specifications or because a client uses the `POST` verb to send a request to a static HTML page.
+title: HTTP Error 405.0 when you visit IIS websites
+description: This article describes a problem that occurs because a client request uses an HTTP verb that doesn't comply with the HTTP specifications or because a client uses the POST methos to send a request to a static HTML page.
 ms.date: 04/16/2020
 ms.prod-support-area-path:
 ms.reviewer: mlaing
 ---
 # HTTP Error 405.0 when you visit a website that is hosted on a server that is running IIS
 
-This article provides information about resolving the **HTTP Error 405.0** error when you visit a website that is hosted on a server that is running Internet Information Services (IIS).
+This article helps you resolve the problem that **HTTP Error 405.0** occurs when you visit a website that is hosted on a server that is running Internet Information Services (IIS).
 
 _Original product version:_ &nbsp; Internet Information Services 7.0 and later versions  
 _Original KB number:_ &nbsp; 942051
@@ -24,7 +24,7 @@ Consider the following scenario. You have a website that is hosted on a server t
 
 ## Cause 1
 
-This problem occurs because the client makes a Hypertext Transfer Protocol (HTTP) request by using an HTTP method that does not comply with the HTTP specifications.
+This problem occurs because the client makes a Hypertext Transfer Protocol (HTTP) request by using an HTTP method that doesn't comply with the HTTP specifications.
 
 ## Cause 2
 
@@ -34,11 +34,11 @@ This problem occurs because a client makes an HTTP request by sending the `POST`
 
 Make sure that the client sends a request that contains a valid HTTP method. To do this, follow these steps:
 
-1. Click **Start**, type *Notepad* in the **Start Search** box, right-click **Notepad**, and then click **Run as administrator**.
+1. Select **Start**, type *Notepad* in the **Start Search** box, right-click **Notepad**, and then select **Run as administrator**.
 
     > [!NOTE]
     >  If you are prompted for an administrator password or for a confirmation, type the password, or provide confirmation.
-2. On the **File** menu, click **Open**. In the **File name** box, type `%windir%\system32\inetsrv\config\applicationhost.config`, and then click **Open**.
+2. On the **File** menu, click **Open**. In the **File name** box, type `%windir%\system32\inetsrv\config\applicationhost.config`, and then select **Open**.
 3. In the *ApplicationHost.config* file, locate the `<handlers>` tag.
 4. Make sure that all the handlers use valid HTTP methods.
 5. Save the *ApplicationHost.config* file.

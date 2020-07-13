@@ -1,12 +1,12 @@
 ---
 title: Can't change identity of application pool
-description: Fixes an issue in which you can't change the identity of an application pool by using Internet Information Services Manager from a remote computer.
+description: This article fixes an problem in which you can't change the identity of an application pool by using Internet Information Services Manager from a remote computer.
 ms.date: 03/23/2020
 ms.prod-support-area-path:
 ---
-# Keyset does not exist when you change the identity of an application pool
+# Error when you change the identity of an application pool by using IIS Manager from a remote computer: Keyset does not exist
 
-This article provides information about resolving the **Keyset does not exist** error when you change the identity of an application pool by using Internet Information Services (IIS) Manager from a remote computer.
+This article helps you resolve the problem that an error (Keyset does not exist) occurs when you change the identity of an application pool by using Microsoft Internet Information Services (IIS) Manager from a remote computer.
 
 _Original product version:_ &nbsp; Windows Server 2008, Windows Server 2008 R2  
 _Original KB number:_ &nbsp; 977754
@@ -38,13 +38,13 @@ The following is the file name of the `iisWasKey` key:
 To resolve this problem, follow these steps:
 
 1. Locate the `%ALLUSERSPROFILE%\Microsoft\Crypto\RSA\MachineKeys` folder.
-2. Right-click the *76944fb33636aeddb9590521c2e8815a_GUID* file, and then click **Properties**.
-3. Click the **Security** tab, and then click **Edit**. If you are asked whether you want to continue the operation, click **Continue**. Then, the list of group names and user names that have access to this key file appears in the **Permissions** dialog box.
-4. Click **Add**. Then, the **Select Users, Computers, Service Accounts, or Groups** dialog box appears.
-5. Type *LOCAL SERVICE*, and then click **Check Names**.
-6. Click **OK**.
-7. In the **Group or user names** list, click *LOCAL SERVICE*. Make sure that the **Read** check box is checked in the **Permissions for LOCAL SERVICE** list.
-8. Click **OK**.
+2. Right-click the *76944fb33636aeddb9590521c2e8815a_GUID* file, and then select **Properties**.
+3. Select the **Security** tab, and then select **Edit**. If you are asked whether you want to continue the operation, select **Continue**. Then, the list of group names and user names that have access to this key file appears in the **Permissions** dialog box.
+4. Select **Add**. Then, the **Select Users, Computers, Service Accounts, or Groups** dialog box appears.
+5. Type *LOCAL SERVICE*, and then select **Check Names**.
+6. Select **OK**.
+7. In the **Group or user names** list, select *LOCAL SERVICE*. Make sure that the **Read** check box is checked in the **Permissions for LOCAL SERVICE** list.
+8. Select **OK**.
 
 ## More information
 

@@ -1,13 +1,13 @@
 ---
-title: HTTP 400 error responses to HTTP request
-description: Works around an issue in which you can't receive expected webpage when you send an HTTP request that needs Kerberos authentication. 
+title: HTTP 400 error responses to HTTP requests
+description: This article provides workarounds for the problem that you can't receive expected webpage when you send an HTTP request that needs Kerberos authentication. 
 ms.date: 03/23/2020
 ms.prod-support-area-path:
 ms.reviewer: ivanpash
 ---
-# HTTP 400 Bad Request (Request Header too long) responses to HTTP request
+# HTTP 400 Bad Request (Request Header too long) responses to HTTP requests
 
-This article provides information about resolving the HTTP 400 error when an Hypertext Transfer Protocol (HTTP) request that needs Kerberos authentication is sent from a browser to a website that's hosted on Internet Information Services (IIS) and is configured to use Kerberos authentication.
+This article helps you resolve the problem that HTTP 400 error occurs when an Hypertext Transfer Protocol (HTTP) request that needs Kerberos authentication is sent from a browser to a website that's hosted on Microsoft Internet Information Services (IIS) and is configured to use Kerberos authentication.
 
 _Original product version:_ &nbsp; Windows Server 2016  
 _Original KB number:_ &nbsp; 2020943

@@ -1,11 +1,12 @@
 ---
 title: Configure intermediate certificates in IIS
-description: Describes how to configure intermediate certificates on a computer that is running Internet Information Services (IIS) for server authentication.
+description: This article describes how to configure intermediate certificates on a computer that is running Internet Information Services (IIS) for server authentication.
 ms.date: 03/27/2020
 ms.prod-support-area-path: 
 ms.reviewer: Mlaing, lprete
+ms.topic: how-to
 ---
-# How to configure intermediate certificates on a computer that is running IIS for server authentication
+# Configure intermediate certificates on a computer that is running IIS for server authentication
 
 This article describes how to configure intermediate certificates on a computer that is running Internet Information Services (IIS) for server authentication.
 
@@ -39,16 +40,16 @@ If a server operator installs an SSL certificate together with the relevant issu
 1. Open the Certificates Microsoft Management Console (MMC) snap-in. To do it, follow these steps:
     1. At a command prompt, type *Mmc.exe*.
     2. If you aren't running the program as the built-in Administrator, you'll be prompted for permission to run the program. In the **Windows Security** dialog box, click **Allow**.
-    3. On the **File** menu, click **Add/Remove Snap-in**.
-    4. In the **Add or Remove Snap-ins** dialog box, click the **Certificates** snap-in in the **Available snap-ins** list, click **Add**, and then click **OK**.
-    5. In the **Certificates snap-in** dialog box, click **Computer account**, and then click **Next**.
-    6. In the **Select computer** dialog box, click **Finish**.
-    7. In the **Add or Remove Snap-ins** dialog box, click **OK**.
+    3. On the **File** menu, select **Add/Remove Snap-in**.
+    4. In the **Add or Remove Snap-ins** dialog box, select the **Certificates** snap-in in the **Available snap-ins** list, select **Add**, and then select **OK**.
+    5. In the **Certificates snap-in** dialog box, select **Computer account**, and then select **Next**.
+    6. In the **Select computer** dialog box, select **Finish**.
+    7. In the **Add or Remove Snap-ins** dialog box, select **OK**.
 2. To add an intermediate certificate, follow these steps:
-    1. In the Certificates MMC snap-in, expand **Certificates**, right-click **Intermediate Certification Authorities**, point to **All Tasks**, and then click **Import**.
-    2. In the **Certificate Import Wizard**, click **Next**.
-    3. In the **File to Import** page, type the file name of the certificate that you want to import in the **File name** box, and then click **Next**.
-    4. Click **Next**, and then complete the **Certificate Import Wizard**.
+    1. In the Certificates MMC snap-in, expand **Certificates**, right-click **Intermediate Certification Authorities**, point to **All Tasks**, and then select **Import**.
+    2. In the **Certificate Import Wizard**, select **Next**.
+    3. In the **File to Import** page, type the file name of the certificate that you want to import in the **File name** box, and then select **Next**.
+    4. Select **Next**, and then complete the **Certificate Import Wizard**.
 
 ## References
 

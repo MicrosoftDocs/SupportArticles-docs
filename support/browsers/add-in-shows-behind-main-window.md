@@ -20,7 +20,7 @@ In Internet Explorer 9 and later versions, when an add-in creates a window, the 
 
 An architectural change in the address bar was introduced in Internet Explorer 9. The change establishes focus and foreground presence when web content loads completely.
 
-## More Information
+## More information
 
 Windows that are provided by an Internet Explorer add-in can share the same message input queue as the primary Internet Explorer window. In such scenarios, any component can use the [SetWindowsPos](/windows/win32/api/winuser/nf-winuser-setwindowpos) API to change the z-index order and request that its window is brought to the foreground.
 
