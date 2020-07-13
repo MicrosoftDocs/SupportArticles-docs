@@ -6,7 +6,7 @@
     href: c2653-c2039-error-reference-function.md
   - name: Call Run() method of a Script control
     href: call-script-control-run-method-cpp.md
-  - name: Change mouse pointer for a windows in MFC
+  - name: Change mouse pointer for a window in MFC
     href: change-mouse-pointer-window-mfc.md
   - name: Click a Check box in a TreeView
     href: click-check-box-treeview.md
