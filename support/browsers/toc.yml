@@ -62,7 +62,7 @@
     - name: Nearly 49.7 days trigger timeout events
       href: timeout-events-in-ie-get-fired.md
 
-    - name: Permanent cookies loss after closing IE
+    - name: Permanent cookies loss after closing Internet Explorer
       href: permanent-cookies-for-weboc-lost.md
 
     - name: Page cannot be displayed error

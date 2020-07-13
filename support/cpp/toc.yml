@@ -1,6 +1,6 @@
 - name: C and C++ Libraries
   items:
-  - name: ATL service with _ATL_NO_COM_SUPPORT doesn't start
+  - name: ATL service doesn't start
     href: atl-service-not-start.md
   - name: C2653 or C2039 error when you reference a STD function
     href: c2653-c2039-error-reference-function.md
@@ -8,21 +8,21 @@
     href: call-script-control-run-method-cpp.md
   - name: Change mouse pointer for a window in MFC
     href: change-mouse-pointer-window-mfc.md
-  - name: Runtime packages for Desktop Bridge
-    href: c-runtime-packages-desktop-bridge.md
+  - name: Click a Check box in a TreeView
+    href: click-check-box-treeview.md
   - name: Error at thread exit if FLS callback isn't freed
     href: fatal-error-thread-exit-fls-callback.md
   - name: FAQs about Standard C++ library
     href: faq-standard-cpp-library.md
-  - name: Know when you click a Check box in a TreeView
-    href: click-check-box-treeview.md
+  - name: Runtime packages for Desktop Bridge
+    href: c-runtime-packages-desktop-bridge.md
   - name: The _CRTDBG_MAP_ALLOC macro doesn't work
     href: crtdbg-map-alloc-macro-not-work.md
-  - name: Use member functions of the STL queue class
+  - name: Use queue STL functions
     href: stl-queue-member-functions.md
   - name: Use map STL functions
     href: use-map-stl-functions-visual-cpp.md
-  - name: Use PageHeap to detect memory errors in projects
+  - name: Use PageHeap to detect memory errors
     href: pageheap-detect-memory-errors-cpp.md
   - name: Use priority_queue STL functions
     href: use-priority-queue-stl-function-cpp.md
@@ -55,11 +55,11 @@
     href: add-html-code-clipboard-visual-cpp.md
   - name: Declare an array of points to functions
     href: declare-pointers-to-functions.md
-  - name: Expand a pointer in debugger Watch window
+  - name: Expand a pointer in Watch window
     href: expand-pointer-vc-debugger-watch.md
   - name: Start default browser programmatically
     href: use-visual-cpp-start-internet-browser.md
-  - name: Use SqlDataAdapter to update SQL databases
+  - name: Use SqlDataAdapter to update databases
     href: update-database-sqldataadapter-visual-cpp.md
 
 - name: Installation
@@ -80,8 +80,6 @@
     href: cs0433-error-when-building-asp-net-project.md
   - name: C2491 error when you define data members as dllimport
     href: c2491-define-data-member-dllimport.md
-  - name: Catch exceptions
-    href: catch-exceptions-visual-cpp.md
   - name: CDatabase::GetConnect returns empty string
     href: cdatabase-getconnect-returnn-empty.md
   - name: Do basic file I/O operations
@@ -90,14 +88,16 @@
     href: mfc-enable-tablet-press-and-hold-gesture.md
   - name: LNK1000 error when you use /WHOLEARCHIVE switch
     href: lnk1000-error-wholearchive-switch.md
-  - name: Linker warnings when you build managed extensions
-    href: linker-warning-managed-extension-c-dll-project.md
   - name: MFC applications can't redraw controls
     href: mfc-application-fail-redraw-control.md
   - name: ReadFromStream() returns Access Denied
     href: readfromstream-return-access-denied.md
   - name: Unnested loops cause C1061 compiler error
     href: unnested-loops-cause-c1061-error.md
+  - name: Use try-catch-finally to catch exceptions
+    href: catch-exceptions-visual-cpp.md
+  - name: Warnings when you build managed extensions
+    href: linker-warning-managed-extension-c-dll-project.md
   - name: Write entries to an event log
     href: visual-cpp-write-entry-to event-log.md
 
