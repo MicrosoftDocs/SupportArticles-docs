@@ -9,7 +9,7 @@
 
 - name: Application Request and Routing (ARR)
   items:
-  - name: SSL Common Names aren't enforced
+  - name: SSL Common Names aren't enforced
     href: affinity-not-honored-ssl-common-names-arr.md
 
 - name: Development
@@ -27,9 +27,9 @@
 
 - name: Deployment and migration
   items:
-  - name: Can't use Web Deploy as a delegated user
+  - name: Can't use Web Deploy as a delegated user
     href: error-occurs-you-use-the-web-deploy.md
-  - name: Can't use Web Deployment as a non-admin user
+  - name: Can't use Web Deployment as a non-admin user
     href: web-deploy-error-non-admin-user.md
   - name: WebDeploy publishing endpoint changes
     href: webdeploy-publishing-endpoint-wap.md
@@ -54,17 +54,17 @@
     href: asp-support-windows.md
   - name: Expression Web 4.0 FAQs
     href: expression-web-faq.md
-  - name: Instances where HTTP.sys doesn't cache
+  - name: Instances where HTTP.sys doesn't cache
     href: instances-http-sys-not-cache.md
 
 
 - name: Health, diagnostic, and performance features
   items:
-  - name: An application pool exceeds time limits
+  - name: An application pool exceeds time limits
     href: application-pool-exceed-time-limits.md
-  - name: DebugDiag 1.2 installation and data collector
+  - name: DebugDiag 1.2 installation and data collector
     href: debugdiag-collected-information.md
-  - name: ETW logs diagnostic
+  - name: ETW logs diagnostic
     href: iis-etw-log.md
   - name: Hidden static files return HTTP 404 error
     href: hidden-static-files-http-404-access-denied.md
@@ -86,20 +86,20 @@
     href: http-error-500-19-iis-webpage.md
   - name: Pages can't be displayed
     href: error-page-cant-displayed.md
-  - name: SSL Diagnostic tool for SDP
+  - name: SSL Diagnostic tool for SDP
     href: iis-ssl-diagnostic-tool-sdp.md
   - name: Time-taken field in IIS HTTP logging
     href: time-taken-iis-http-log.md
-  - name: Troubleshoot ABO Mapper errors
+  - name: Troubleshoot ABO Mapper errors
     href: troubleshoot-abo-mapper-errors.md
   - name: Windows Server AppFabric Cache diagnostic
     href: windows-server-appfabric-cache.md
 
 - name: IISAdmin service and Inetinfo process operation
   items:
-  - name: Admin cmdlets slow in PowerShell 4.0
+  - name: Admin cmdlets slow in PowerShell 4.0
     href: iis-administration-cmdlets-slow.md
-  - name: FIM is unable to reset passwords
+  - name: FIM is unable to reset passwords
     href: fim-password-reset-issue.md
   - name: HTTP services can't be stopped
     href: http-service-fail-stopped.md
@@ -130,21 +130,21 @@
     href: cannot-view-website-using-ssl.md
   - name: Can't call MTS COM from ASP
     href: server-execution-fail-call-mts-com-asp.md
-  - name: Event ID 115 when you connect HTTPS websites
+  - name: Event ID 115 when you connect HTTPS websites
     href: event-115-connect-https-website.md
   - name: Expression Encoder crashes
     href: expression-encoder-crash-live-broadcasting.md
-  - name: Fail to generate the certificate request
+  - name: Fail to generate the certificate request
     href: failed-generate-certificate-request.md
   - name: FtpPutFile always returns success
     href: ftpputfile-success-451-status.md
-  - name: HTTP error 404.2
+  - name: HTTP error 404.2
     href: http-error-402-web-page.md
   - name: HTTP error 500 when you use Response.BinaryWrite
     href: http-500-response-binarywrite.md
   - name: Internet printing fails
     href: internet-printing-fails-iis.md
-  - name: Worker Process takes much memory
+  - name: Worker Process takes much memory
     href: iis-work-process-much-memory.md
 
 - name: WWW administration and management
@@ -168,27 +168,27 @@
     href: configure-iis-w3svc-wsfc.md
   - name: Configure intermediate certificates
     href: configure-intermediate-certificates-iis.md
-  - name: Configure Many-to-One client mappings
+  - name: Configure Many-to-One client mappings
     href: configure-many-to-one-client-mappings.md
-  - name: Default permissions and user rights
+  - name: Default permissions and user rights
     href: default-permissions-user-rights.md
   - name: Digest authentication fails
     href: iis-digest-authentication.md
   - name: EndpointConfigurationName property isn't updated
     href: service-reference-endpointconfigurationname.md
-  - name: Errors when you install certificates
+  - name: Errors when you install certificates
     href: error-install-certificate.md
   - name: Exporting configuration files fails
     href: configuration-files-cannot-exported.md
-  - name: HTTP error 401.1 with pre-authentication headers
+  - name: HTTP error 401.1 with pre-authentication headers
     href: 401-error-pre-authentication-header.md
   - name: HTTP error 403.7
     href: http-403-forbidden-open-iis-webpage.md
-  - name: Impersonation fails when UAC is enabled
+  - name: Impersonation fails when UAC is enabled
     href: impersonation-fails-uac-enabled.md
   - name: Re-enabling shared configuration causes IIS can't start
     href: shared-configuration-iis-not-start.md
-  - name: Shared Configuration requires the same IIS version
+  - name: Shared Configuration requires the same IIS version
     href: shared-configuration-same-iis-version.md
   - name: ShutdownTimeLimit property doesn't work
     href: iis-not-apply-wcf.md
@@ -200,7 +200,7 @@
   items:
   - name: Add and remove global modules at server and child levels 
     href: add-remove-global-modules-iis.md
-  - name: Disable the Save Embedded Files dialog box
+  - name: Disable the Save Embedded Files dialog box
     href: disable-save-embedded-files-dialog.md
   - name: Request Restrictions can't set for a wildcard ISAPI
     href: request-restrictions-not-set-isapi.md
