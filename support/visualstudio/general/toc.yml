@@ -1,8 +1,8 @@
 - name: Debuggers and analyzers
   items:
-  - name: Source code debugging
+  - name: .NET source code debugging
     href: vs-dot-net-source-code-debug.md
-  - name: Can't use Windows Simulator after you upgrade to Windows 8.1
+  - name: Can't use Windows Simulator
     href: windows-simulator-needs-credentials-vs.md
   - name: Prevent lost kernel and user mode events
     href: concurrency-visualizer-lost-kernel-user-mode-event.md
@@ -14,7 +14,7 @@
 
 - name: General
   items:
-  - name: Alternate credentials doesn't work for Online accounts
+  - name: Alternate credentials don't work for Online accounts
     href: alternate-credentials-stop-working.md
   - name: BI projects don't open after an upgrade
     href: bi-project-not-open-upgrade-vs-2010-format.md
@@ -30,17 +30,17 @@
     href: vs-2012-resource-editor-cannot-save-file.md
   - name: Help Viewer Power Tool
     href: help-viewer-power-tool.md
-  - name: JDK is missing when you create a Xamarin-based app
+  - name: JDK is missing
     href: jdk-miss-xamarin-app-vs-2015.md
   - name: Microsoft.Vsa.tlb could not be loaded
     href: vsa-tlb-not-loaded-vs-2010.md
+  - name: Subscriptions administrator migration
+    href: vs-subscription-administrator-migration.md
   - name: Use AssemblyVersion and AssemblyFileVersion
     href: assembly-version-assembly-file-version.md
   - name: VBScript runtime error when you do a numeric comparison
     href: vbs-type-mismatch-error.md
-  - name: Visual Studio subscriptions administrator migration
-    href: vs-subscription-administrator-migration.md
-  - name: Windows Automation API 3.0 improves Visual Studio performance
+  - name: Windows Automation API 3.0 improves performance
     href: windows-automation-api-3-improve-vs-2010.md
   
 - name: Installation
@@ -52,13 +52,13 @@
   items:
   - name: Can't use the Scale-140 logo
     href: cannot-use-scale-140-badge-logo-vs-2012.md
-  - name: Deploy web applications with the Xcopy command
+  - name: Deploy web applications with Xcopy
     href: deploy-aspnet-app-xcopy-command.md
   - name: Help Viewer 2.0 crashes
     href: vs-2012-help-viewer-2-crashes.md
   - name: LNK1102 error when you build projects
     href: linker-fatal-error-out-of-memory.md
-  - name: Referenced project doesn't exist when you build a solution
+  - name: Referenced project doesn't exist
     href: vs-2010-build-fails.md
   - name: Single instance application crashes
     href: single-instance-application-crashes.md
@@ -76,7 +76,7 @@
     href: atl-control-font-stock-not-update-vs.md
   - name: Can't dismiss developer license notifications
     href: not-dismiss-developer-license-vs-2013.md
-  - name: Can't switch between different organizational accounts
+  - name: Can't switch between organizational accounts
     href: cannot-switch-different-accounts-vs-online.md
   - name: Overview of Visual Studio 2012 updates
     href: visual-studio-2012-updates.md
@@ -84,7 +84,7 @@
     href: performance-crash-issue-vs.md
   - name: Release Management Client crashes 
     href: release-management-client-crash-vs-2013.md
-  - name: Screen Readers can't read tool windows
+  - name: Screen readers can't read tool windows
     href: screen-readers-not-read-vs-windows.md
 
 - name: Project/Build system
