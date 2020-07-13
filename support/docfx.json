@@ -122,30 +122,14 @@
       },
 
       "titleSuffix": {
-        "biztalk/**/*.md": "BizTalk Server"
-      },      
-      "titleSuffix": {
-        "dotnet/**/*.md": ".NET"
-      },
-      "titleSuffix": {
-        "aspnet/**/*.md": "ASP.NET"
-      },
-      "titleSuffix": {
-        "visualstudio/**/*.md": "Visual Studio"
-      },
-      "titleSuffix": {
-        "cpp/**/*.md": "Visual C++"
-      },
-      "titleSuffix": {
-        "iis/**/*.md": "Internet Information Services"
-      },
-      "titleSuffix": {
-        "webapps/**/*.md": "Web Apps"
-      },
-      "titleSuffix": {
-        "windows/win32/**/*.md": "Windows Developer"
-      },
-      "titleSuffix": {
+        "biztalk/**/*.md": "BizTalk Server",
+        "dotnet/**/*.md": ".NET",
+        "aspnet/**/*.md": "ASP.NET",
+        "visualstudio/**/*.md": "Visual Studio",
+        "cpp/**/*.md": "Visual C++",
+        "iis/**/*.md": "Internet Information Services",
+        "webapps/**/*.md": "Web Apps",
+        "windows/win32/**/*.md": "Windows Developer",
         "mem/intune/**/*.md": "Intune"
       }
     },
