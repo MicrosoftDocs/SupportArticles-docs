@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 3060693
 
 If you installed Cross Platform Mobile Development features, you must use additional third-party software to work with those projects. For the dependencies between Visual Studio tools and third-party applications, see the following table.
 
-|Third-party software|Lets you ...| Required by Cross Platform Mobile Development for C#/.NET (Xamarin)| Required by Cross Platform Mobile Development for HTML/JavaScript (Apache Cordova)| Required by Cross Platform Mobile Development for Visual C++ Mobile Development||
+|Software|Lets you| Required by Cross Platform Mobile Development for C#/.NET (Xamarin)| Required by Cross Platform Mobile Development for HTML/JavaScript (Apache Cordova)| Required by Cross Platform Mobile Development for Visual C++ Mobile Development||
 |---|---|---|---|---|---|
 |**Android NDK**|Develop native dynamic shared libraries, static libraries, and native-activity applications for the Android platform.|Yes|No|Yes||
 |**Android SDK**|Build and create packages for the Android platform.|Yes|Yes|Yes||
