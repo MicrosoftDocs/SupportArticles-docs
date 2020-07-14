@@ -41,7 +41,7 @@ The following warning message may also appear in the Internet Explorer Status ba
 This problem occurs because the HTML source code for the webpage does not work correctly with client-side script such as Microsoft JScript or Microsoft Visual Basic script. This problem may occur for one or more of the following reasons:
 
 - A problem exists in the HTML source code of the webpage.
-- The web page is using newer technologies that are [not supported](https://developer.microsoft.com/microsoft-edge/status/) by Internet explorer.
+- The web page is using newer technologies that are [not supported](https://developer.microsoft.com/microsoft-edge/status/) by Internet Explorer.
 - The web page is using client-side visual basic script - that is deprecated.
 - Active scripting, ActiveX controls, or Java programs are blocked on your computer or on the network. Internet Explorer or another program, such as antivirus programs or firewalls, can be configured to block Active scripting, ActiveX controls, or Java programs.
 - Antivirus software is configured to scan your **Temporary Internet Files** or **Downloaded Program Files** folders.
@@ -53,7 +53,7 @@ This problem occurs because the HTML source code for the webpage does not work c
 
 These methods listed in this article may help you troubleshoot the script errors that are caused by files or settings on your computer. For quick visual instructions about how to troubleshoot script errors in Internet Explorer, watch this video:
 
-> [!VIDEO <https://www.microsoft.com/videoplayer/embed/cb2ff237-18e5-4db7-b89c-e1399dbce4b5>]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/cb2ff237-18e5-4db7-b89c-e1399dbce4b5]
 
 ## Resolution
 

@@ -64,7 +64,7 @@ The header file *use_ansi.h* contains `#pragma` statements that force the Standa
 
 Standard C++ headers
 
-|||||
+|Column 1|Column 2|Column 3|Column 4|
 |---|---|---|---|
 |ALGORITHM|BITSET|COMPLEX|DEQUE|
 |EXCEPTION|FSTREAM|FUNCTIONAL|IOMANIP|
@@ -104,7 +104,7 @@ In versions of Visual C++ that are earlier than Visual C++ 2005, mixing Standard
 
 - Old `iostream` headers:
 
-    |||
+    |Column 1|Column 2|
     |---|---|
     |FSTREAM.H|IOMANIP.H|
     |IOS.H|IOSTREAM.H|
@@ -115,7 +115,7 @@ In versions of Visual C++ that are earlier than Visual C++ 2005, mixing Standard
 
 - Standard C++ headers:
 
-    |||||
+    |Column 1|Column 2|Column 3|Column 4|
     |---|---|---|---|
     |ALGORITHM|BITSET|COMPLEX|DEQUE|
     |EXCEPTION|FSTREAM|FUNCTIONAL|IOMANIP|

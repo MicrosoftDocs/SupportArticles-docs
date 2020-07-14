@@ -30,7 +30,7 @@ If debugging tools are installed on your computer, you may receive the following
 
 If debugging tools are not installed on your computer, you may receive the following error message:
 
-> An error has occurred in the script on this page. Line: 13 Char: 2 Error: Permission denied Code: 0 URL: `http://WebServer/**FileName**.hta` Do you want to continue running scripts on this page?
+> An error has occurred in the script on this page. Line: 13 Char: 2 Error: Permission denied Code: 0 URL: `http://WebServer/FileName.hta` Do you want to continue running scripts on this page?
 
 > [!NOTE]
 > You may notice this problem only if your automatic configuration script has the DIRECT value.
@@ -98,10 +98,10 @@ To resolve this problem, use any of the following methods:
 12. Type the following command at a command prompt:
 
     ```console
-    mshta.exe http://**WebServer**/HTARepro/Default.hta
+    mshta.exe http://WebServer/HTARepro/Default.hta
     ```
 
-    > [!Note]
+    > [!NOTE]
     > Replace `WebServer` with the FQDN of the Web server that you are using.
 
 13. On the HTA application, click **Click me to reproduce the behavior**. You receive one of the error messages that are mentioned in the Symptoms section of this article.

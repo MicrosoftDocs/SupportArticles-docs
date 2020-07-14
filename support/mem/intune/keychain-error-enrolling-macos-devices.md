@@ -41,8 +41,10 @@ To fix this issue, follow these steps:
 
 1. Log on to the device as a local administrator.
 2. Open **Keychain Access** by typing **Keychain Access** in [Spotlight search](https://support.apple.com/HT204014), and then double-clicking **Keychain Access** in the search results.
-3. In the **Search** box at the upper-right corner, type **Microsoft**.
-4. Locate and delete the following keys:
+3. In the **Search** box at the upper-right corner, type **workplace**.
+4. Delete all keys in the results.
+5. In the **Search** box at the upper-right corner, type **Microsoft**.
+6. Locate and delete the following keys if present:
 
    - com.microsoft.CompanyPortal
    - com.microsoft.CompanyPortal.HockeySDK
@@ -50,11 +52,10 @@ To fix this issue, follow these steps:
    - <https://device.login.microsoftonline.com>
    - <https://device.login.microsoftonline.com/>
    - Microsoft Session Transport Key (public and private keys)
-   - Microsoft Workplace Join Key (public and private keys)
 
-5. In the **Keychains** pane, select **login**, and then select **All Items**  in the **Category** pane.
-6. Click the **Kind** column header to sort the items.
-7. Delete the items that meet any of the following conditions:
+7. In the **Keychains** pane, select **login**, and then select **All Items**  in the **Category** pane.
+8. Click the **Kind** column header to sort the items.
+9. Delete the items that meet any of the following conditions:
 
    - **Kind** is **Application password** and **Account** is `com.microsoft.workplacejoin.thumbprint`
    - **Kind** is **Application password** and **Account** is `com.microsoft.workplacejoin.registeredUserPrincipalName`
@@ -63,12 +64,12 @@ To fix this issue, follow these steps:
    - **Kind** is **Identity preference** and **Name** is `https://enterpriseregistration.windows.net`
    - **Kind** is **Identity preference** and **Name** is `https://enterpriseregistration.windows.net/`
 
-8. In the **Keychains** pane, select **System**.
-9. Delete the items that meet the following condition:
+10. In the **Keychains** pane, select **System**.
+11. Delete the items that meet the following condition:
 
-   **Kind** is **Certificate** and **Issued by** is **SC_Online_Issuing**
+    **Kind** is **Certificate** and **Issued by** is **SC_Online_Issuing**
 
-10. Uninstall the **Company Portal** app.
-11. Exit **Keychain Access**.
-12. Download the latest version of **Company Portal** from [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com/).
-13. [Re-enroll](/mem/intune/user-help/enroll-your-device-in-intune-macos-cp) the device.
+12. Uninstall the **Company Portal** app.
+13. Exit **Keychain Access**.
+14. Download the latest version of **Company Portal** from [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com/).
+15. [Re-enroll](/mem/intune/user-help/enroll-your-device-in-intune-macos-cp) the device.

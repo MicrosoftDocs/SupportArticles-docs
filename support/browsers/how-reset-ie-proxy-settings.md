@@ -21,7 +21,6 @@ Malicious software may change Internet Explorer proxy settings, and these change
 Certain strains of malicious software can prohibit a computer from being able to access Windows Updates or Microsoft Security Sites. For example, an attempt to access a Microsoft site, such as the following sites, results in being redirected to another page:
 
 - `https://www.update.microsoft.com`
-
 - `https://www.microsoft.com/security_essentials/`
 
 ## Resolution
