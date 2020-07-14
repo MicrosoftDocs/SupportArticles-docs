@@ -1,7 +1,7 @@
 - name: Welcome
   href: welcome-windowsdeveloper.md
 
-- name: Routing Windows SDK
+- name: Windows SDK
   items:
   - name: Component development
     items:
@@ -66,7 +66,7 @@
     - name: XA Transaction support requires registry entries
       href: xa-transaction-require-registry-entry.md
 
-- name: Routing Windows App Dev (UWP)
+- name: Windows App Dev (UWP)
   items:
   - name: Devices and sensors development
     items:
@@ -97,7 +97,7 @@
     - name: VarI8FromCy produces incorrect value
       href: vari8fromcy-produces-incorrect-value.md
 
-- name: Routing WDK V2
+- name: WDK V2
   items:
   - name: Print driver
     items:
