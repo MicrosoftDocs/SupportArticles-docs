@@ -138,5 +138,4 @@ If you still can't access websites, get help from the [Microsoft Community onlin
 If you still can't access some websites after you follow the steps in this article, you can try the following resources for more support.
 
 - Help from Microsoft Community online: [Microsoft Community](https://answers.microsoft.com).
-- Microsoft Support: [Online Assisted Support](/select/default.aspx?target=assistance).
 - More Microsoft online articles: [Perform a search to find more online articles about this specific error](/search).

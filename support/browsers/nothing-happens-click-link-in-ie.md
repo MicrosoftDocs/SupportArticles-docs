@@ -189,5 +189,3 @@ Check whether the problem is resolved. If the problem is resolved, you are finis
 - [Solution Centers](https://www.microsoft.com/solution-providers/home): View product-specific, frequently asked questions, and support highlights.
 - [Microsoft Community](https://answers.microsoft.com/#tab=1): Contact counterparts, peers, and Microsoft Most Valuable Professionals (MVPs).
 - [Other support options](https://support.microsoft.com/contactus/): Ask a question, contact Microsoft Customer Support Services, or provide feedback.
-
-If you continue to have problems with Internet Explorer or if you want to ask a question, contact Microsoft Support, or provide feedback, visit the [Microsoft Support](/https://support.microsoft.com/) website.

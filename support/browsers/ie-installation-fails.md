@@ -1,5 +1,5 @@
 ---
-title: Install internet explorer 11 failed
+title: Cannot install Internet Explorer 11
 description: Discusses how to troubleshoot a Internet Explorer installation that fails. Provides instructions and resources for various issues.
 ms.date: 04/24/2020
 ms.prod-support-area-path: 

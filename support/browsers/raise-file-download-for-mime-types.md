@@ -42,5 +42,4 @@ To apply the header statically, right-click the document in the **Internet Servi
 
 ## References
 
-For more information about `content-disposition`, see Request for Comments (RFC) 1806 at the following Internet Engineering Task Force (IETF) website:  
-[http://www.ietf.org/rfc/rfc1806.txt](https://www.ietf.org/rfc/rfc1806.txt)
+For more information about `content-disposition`, see [Request for Comments (RFC) 1806](https://www.ietf.org/rfc/rfc1806.txt).

@@ -7,7 +7,7 @@ ms.reviewer: clinth
 ---
 # Internet Explorer may prompt you for a password
 
-This article provides information on the situation where several types of Windows authentication cause internet explorer to prompt for a username and password.
+This article provides information on the situation where several types of Windows authentication cause Internet Explorer to prompt for a username and password.
 
 _Original product version:_ &nbsp; Internet Explorer  
 _Original KB number:_ &nbsp; 258063
