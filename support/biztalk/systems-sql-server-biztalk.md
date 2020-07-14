@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 926628
 
 The following tables list the operating systems, SQL Server, Visual Studio, and .NET Framework versions supported by BizTalk Server 2006 R2 and newer.
 
-||Product versionBizTalk Server 2013 R2| BizTalk Server 2013| BizTalk Server 2010| BizTalk Server 2009| BizTalk Server 2006 R2 |
+||BizTalk Server 2013 R2| BizTalk Server 2013| BizTalk Server 2010| BizTalk Server 2009| BizTalk Server 2006 R2 |
 |---|---|---|---|---|---|
 | **Windows XP**|No|No|No|Yes, with Windows XP Service Pack 3|Yes, with Windows XP Service Pack 2 or later service pack|
 | **Windows XP Professional, 64-Bit Edition**|No|No|No|Yes, with Windows XP Service Pack 3|Yes, with Windows XP Service Pack 2 or later service pack|
