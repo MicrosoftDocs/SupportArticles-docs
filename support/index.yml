@@ -31,7 +31,7 @@ productDirectory:
     - url: biztalk/welcome-biztalk-server.md
       text: Support for BizTalk Server
   - title: .NET
-    imageSrc: "media/hub-landing/dot-net-framework.svg"
+    imageSrc: "media/hub-landing/dotnet.svg"
     links:
     - url: dotnet/welcome-dotnet.md
       text: Support for .NET
