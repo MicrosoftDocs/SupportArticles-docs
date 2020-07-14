@@ -15,16 +15,16 @@ _Original KB number:_ &nbsp; 3060693
 
 If you installed Cross Platform Mobile Development features, you must use additional third-party software to work with those projects. For the dependencies between Visual Studio tools and third-party applications, see the following table.
 
-|Software|Lets you| Required by Cross Platform Mobile Development for C#/.NET (Xamarin)| Required by Cross Platform Mobile Development for HTML/JavaScript (Apache Cordova)| Required by Cross Platform Mobile Development for Visual C++ Mobile Development||
-|---|---|---|---|---|---|
-|**Android NDK**|Develop native dynamic shared libraries, static libraries, and native-activity applications for the Android platform.|Yes|No|Yes||
-|**Android SDK**|Build and create packages for the Android platform.|Yes|Yes|Yes||
-|**Apache Ant**|Create deployment packages for different platforms.|No|Yes|Yes||
-|**Git CLI**|Download and use custom plug-ins.|No|Yes|No||
-|**Joyent Node.js**|Download and manage dependent packages.|No|Yes|No||
-|**Oracle Java Development Kit**|Perform the build steps for Android.|No|Yes|No||
-|**Websocket4Net**|Enable debugging on Windows 7 computers.|No|Yes|No||
-|||||||
+|Third-party software|Lets you ...| Required by Cross Platform Mobile Development for C#/.NET (Xamarin)| Required by Cross Platform Mobile Development for HTML/JavaScript (Apache Cordova)| Required by Cross Platform Mobile Development for Visual C++ Mobile Development|
+|---|---|---|---|---|
+|**Android NDK**|Develop native dynamic shared libraries, static libraries, and native-activity applications for the Android platform.|Yes|No|Yes|
+|**Android SDK**|Build and create packages for the Android platform.|Yes|Yes|Yes|
+|**Apache Ant**|Create deployment packages for different platforms.|No|Yes|Yes|
+|**Git CLI**|Download and use custom plug-ins.|No|Yes|No|
+|**Joyent Node.js**|Download and manage dependent packages.|No|Yes|No|
+|**Oracle Java Development Kit**|Perform the build steps for Android.|No|Yes|No|
+|**Websocket4Net**|Enable debugging on Windows 7 computers.|No|Yes|No|
+||||||
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
 
