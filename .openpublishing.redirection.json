@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "support/browsers/index.md",
+      "redirect_url": "/support/browsers/welcome-browsers",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/biztalk/index.md",
       "redirect_url": "/support/biztalk/welcome-biztalk-server",
       "redirect_document_id": false
@@ -8,6 +13,31 @@
     {
       "source_path": "support/biztalk/welcome-support-biztalk.md",
       "redirect_url": "/support/biztalk/welcome-biztalk-server",
+      "redirect_document_id": false
+    }, 
+    {
+      "source_path": "support/dotnet/index.md",
+      "redirect_url": "/support/dotnet/welcome-dotnet",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/index.md",
+      "redirect_url": "/support/mem/intune/welcome-intune",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/visualstudio/index.md",
+      "redirect_url": "/support/visualstudio/welcome-visual-studio",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/webapps/index.md",
+      "redirect_url": "/support/webapps/welcome-webapps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windowsdeveloper/index.md",
+      "redirect_url": "/support/windows/win32/welcome-windowsdeveloper",
       "redirect_document_id": false
     },
     {
@@ -20,6 +50,5 @@
       "redirect_url": "https://support.microsoft.com/help/2216485",
       "redirect_document_id": false
     }
-
   ]
 }

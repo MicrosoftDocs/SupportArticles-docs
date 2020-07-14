@@ -86,10 +86,57 @@
         "biztalk/**/*.md": ""
       },
 
-      "titleSuffix": {
-        "biztalk/**/*.md": "BizTalk Server"
-      }
+      "ms.prod": {
+        "dotnet/**/*.md": ".net"
+      },
+      "ms.technology": {
+        "dotnet/**/*.md": ""
+      },
 
+      "ms.prod": {
+        "visualstudio/**/*.md": "visual-studio-family"
+      },
+      "ms.technology": {
+        "visualstudio/**/*.md": ""
+      },
+
+      "ms.prod": {
+        "webapps/**/*.md": "web-apps-server"
+      },
+      "ms.technology": {
+        "webapps/**/*.md": ""
+      },
+
+      "ms.prod": {
+        "windowsdeveloper/**/*.md": "windows-dev-apps"
+      },
+      "ms.technology": {
+        "windowsdeveloper/**/*.md": ""
+      },
+
+      "ms.prod": {
+        "mem/intune/**/*.md": "intune"
+      },
+      "ms.technology": {
+        "mem/intune/**/*.md": "microsoft-graph"
+      },
+
+      "titleSuffix": {
+        "biztalk/**/*.md": "BizTalk Server",
+        "dotnet/**/*.md": ".NET",
+        "dotnet/csharp/**/*.md": "C#",
+        "dotnet/framework/**/*.md": ".NET Framework",
+        "dotnet/framework/wcf/**/*.md": "Windows Communication Foundation",
+        "dotnet/visual-basic/**/*.md": "Visual Basic",        
+        "aspnet/**/*.md": "ASP.NET",        
+        "visualstudio/**/*.md": "Visual Studio",
+        "visualstudio/silverlight/**/*.md": "Silverlight",
+        "cpp/**/*.md": "Visual C++",
+        "iis/**/*.md": "Internet Information Services",
+        "webapps/**/*.md": "Web Apps",
+        "windows/win32/**/*.md": "Windows Developer",
+        "mem/intune/**/*.md": "Intune"
+      }
     },
 
     "template": [],
