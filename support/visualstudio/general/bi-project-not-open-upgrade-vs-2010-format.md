@@ -66,9 +66,9 @@ The following table lists the configurations that are supported so that you can 
 
 |Product version|Visual Studio 2005 (the release version and later service packs) with BIDS in SQL Server 2005|Visual Studio 2008 (Service Pack 1 and later service packs) with BIDS in SQL Server 2008|Visual Studio 2008 (Service Pack 1 and later service packs) with BIDS in SQL Server 2008 R2|Visual Studio 2010 (the release version and later service packs)|
 |---|---|---|---|---|
-|**SQL Server 2005 BI projects**|Supported|Supported after project upgrade|Supported after project upgrade|Not supported|
-|**SQL Server 2008 BI projects**|Not supported|Supported|Supported after project upgrade|Not supported|
-|**SQL Server 2008 R2 BI projects**|Not supported|Not supported|Supported|Not supported|
+|SQL Server 2005 BI projects|Supported|Supported after project upgrade|Supported after project upgrade|Not supported|
+|SQL Server 2008 BI projects|Not supported|Supported|Supported after project upgrade|Not supported|
+|SQL Server 2008 R2 BI projects|Not supported|Not supported|Supported|Not supported|
 ||||||
 
 ## Applies to

@@ -47,12 +47,12 @@ Visual C++ include the following libraries in addition to the Microsoft Foundati
 
 |Library types and related compiler switches|Basic C Runtime library / Standard C++ library|
 |---|---|
-|**Single-threaded (/ML)**|LIBC.LIB / LIBCP.LIB|
-|**Debug Single-threaded (/MLd)**|LIBCD.LIB / LIBCPD.LIB|
-|**Multithreaded (/MT)**|LIBCMT.LIB / LIBCPMT.LIB|
-|**Debug Multithreaded (/MTd)**|LIBCMTD.LIB / LIBCPMTD.LIB|
-|**Multithreaded DLL (/MD)**|MSVCRT.LIB / MSVCPRT.LIB|
-|**Debug Multithreaded /DLL (MDd)**|MSVCRTD.LIB / MSVCPRTD.LIB|
+|Single-threaded (/ML)|LIBC.LIB / LIBCP.LIB|
+|Debug Single-threaded (/MLd)|LIBCD.LIB / LIBCPD.LIB|
+|Multithreaded (/MT)|LIBCMT.LIB / LIBCPMT.LIB|
+|Debug Multithreaded (/MTd)|LIBCMTD.LIB / LIBCPMTD.LIB|
+|Multithreaded DLL (/MD)|MSVCRT.LIB / MSVCPRT.LIB|
+|Debug Multithreaded /DLL (MDd)|MSVCRTD.LIB / MSVCPRTD.LIB|
 |||
 
 > [!NOTE]

@@ -20,9 +20,9 @@ _Original KB number:_ &nbsp; 306572
 
     |Row number|A|B|
     |---|---|---|
-    |**1**|FirstName|LastName|
-    |**2**|Scott|Bishop|
-    |**3**|Katie|Jordan|
+    |1|FirstName|LastName|
+    |2|Scott|Bishop|
+    |3|Katie|Jordan|
     ||||
 
     > [!NOTE]
