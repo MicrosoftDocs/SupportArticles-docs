@@ -18,11 +18,11 @@ _Original KB number:_ &nbsp; 306572
 1. Start Microsoft Excel, and then create a new worksheet.
 2. Add the following information to the new worksheet to create an Excel database:
 
-    ||A|B|
+    |Line number|A|B|
     |---|---|---|
-    |1|FirstName|LastName|
-    |2|Scott|Bishop|
-    |3|Katie|Jordan|
+    |**1**|FirstName|LastName|
+    |**2**|Scott|Bishop|
+    |**3**|Katie|Jordan|
     ||||
 
     > [!NOTE]

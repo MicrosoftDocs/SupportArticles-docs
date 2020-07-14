@@ -64,11 +64,11 @@ You use Visual Studio 2010 to open a BI project that was created by using BIDS i
 
 The following table lists the configurations that are supported so that you can open and edit different BI projects by using different Visual Studio versions. BI projects that are created by using BIDS cannot be edited in Visual Studio 2010. If you have a solution that contains BI projects and other projects, we recommend that you back up the solution before you open the solution in Visual Studio 2010.
 
-||Visual Studio 2005 (the release version and later service packs) with BIDS in SQL Server 2005|Visual Studio 2008 (Service Pack 1 and later service packs) with BIDS in SQL Server 2008|Visual Studio 2008 (Service Pack 1 and later service packs) with BIDS in SQL Server 2008 R2|Visual Studio 2010 (the release version and later service packs)|
+|Product version|Visual Studio 2005 (the release version and later service packs) with BIDS in SQL Server 2005|Visual Studio 2008 (Service Pack 1 and later service packs) with BIDS in SQL Server 2008|Visual Studio 2008 (Service Pack 1 and later service packs) with BIDS in SQL Server 2008 R2|Visual Studio 2010 (the release version and later service packs)|
 |---|---|---|---|---|
-|SQL Server 2005 BI projects|Supported|Supported after project upgrade|Supported after project upgrade|Not supported|
-|SQL Server 2008 BI projects|Not supported|Supported|Supported after project upgrade|Not supported|
-|SQL Server 2008 R2 BI projects|Not supported|Not supported|Supported|Not supported|
+|**SQL Server 2005 BI projects**|Supported|Supported after project upgrade|Supported after project upgrade|Not supported|
+|**SQL Server 2008 BI projects**|Not supported|Supported|Supported after project upgrade|Not supported|
+|**SQL Server 2008 R2 BI projects**|Not supported|Not supported|Supported|Not supported|
 ||||||
 
 ## Applies to
