@@ -67,7 +67,7 @@ To fix this issue, follow these steps:
 10. In the **Keychains** pane, select **System**.
 11. Delete the items that meet the following condition:
 
-   **Kind** is **Certificate** and **Issued by** is **SC_Online_Issuing**
+    **Kind** is **Certificate** and **Issued by** is **SC_Online_Issuing**
 
 12. Uninstall the **Company Portal** app.
 13. Exit **Keychain Access**.
