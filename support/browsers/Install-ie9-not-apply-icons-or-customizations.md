@@ -28,7 +28,7 @@ Do one of the following steps:
 2. To reboot the machine as part of the installation process.
 3. To delete the following registry keys:
 
-```cmd
+```console
 C:\Windows\System32\reg.exe DELETE HKLM\SOFTWARE\Microsoft\Active Setup\Installed Components /v NoIE4StubProcessing /f
 
 C:\Windows\System32\reg.exe DELETE HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v NoIE4StubProcessing /f

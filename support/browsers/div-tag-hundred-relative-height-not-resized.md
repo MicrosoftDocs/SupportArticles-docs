@@ -50,6 +50,6 @@ Following is an example of the behavior outlined above:
 
 According to the W3 specification, a cell's content box height will not be impacted by the row's height, and any extra height should go towards the cell's padding. Then, the cell's child should resolve its percentage height against the cell's content box, which is unchanged by the row's height.
 
-According to [http://www.w3.org/TR/CSS21/tables.html#height-layout](http://www.w3.org/tr/css21/tables.html#height-layout), in CSS 2.1, the height of a cell box is the minimum height required by the content. The table cell's `height` property can influence the height of the row (see above), but it does not increase the height of the cell box. Cell boxes that are smaller than the height of the row receive extra top or bottom padding.
+According to [CSS 2.1](http://www.w3.org/tr/css21/tables.html#height-layout), the height of a cell box is the minimum height required by the content. The table cell's `height` property can influence the height of the row (see above), but it does not increase the height of the cell box. Cell boxes that are smaller than the height of the row receive extra top or bottom padding.
 
 For more information, see [Defining Document Compatibility](/previous-versions/windows/internet-explorer/ie-developer/compatibility/cc288325(v=vs.85)).
