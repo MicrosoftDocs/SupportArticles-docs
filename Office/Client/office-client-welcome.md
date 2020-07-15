@@ -37,4 +37,4 @@ appliesto:
 
 ## Still need help? 
 
-Go to [Office on Q&A ](https://docs.microsoft.com/answers/products/office) or [Microsoft Community](https://answers.microsoft.com)
+Go to [Office on Q&A ](https://docs.microsoft.com/answers/products/office) or [Microsoft Community](https://answers.microsoft.com).
