@@ -1,5 +1,5 @@
 ---
-title: "Modified dates on the SharePoint site contents page are not accurate"
+title: Modified dates on the SharePoint site contents page are not accurate
 ms.author: v-todmc
 author: todmccoy
 manager: dcscontentpm

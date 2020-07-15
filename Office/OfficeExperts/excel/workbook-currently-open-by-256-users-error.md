@@ -1,5 +1,5 @@
 ---
-title: "'The workbook is currently open by 256 users' error when opening an Excel workbook from SharePoint or OneDrive"
+title: Error (The workbook is currently open by 256 users) when opening an Excel workbook from SharePoint or OneDrive
 ms.author: v-todmc
 author: todmccoy
 manager: dcscontentpm
