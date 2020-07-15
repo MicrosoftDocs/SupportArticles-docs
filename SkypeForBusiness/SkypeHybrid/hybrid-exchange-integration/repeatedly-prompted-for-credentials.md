@@ -67,7 +67,7 @@ If you're repeatedly prompted to enter your credentials or receive the "Access 
 
 ### Solutions for Lync administrators
 
-#### Lync can’t connect to Outlook or EWS
+#### Lync can't connect to Outlook or EWS
 
 If the Exchange server or EWS is unavailable, this causes Lync to continuously prompt for credentials because it can't contact Exchange for authentication. To resolve this issue, verify that Outlook has connectivity to the mailbox. If Outlook can't connect to Exchange, troubleshoot the issue as an Exchange connectivity issue. For more information, see the following Microsoft Knowledge Base article:
 

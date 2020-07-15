@@ -39,10 +39,10 @@ The error always occurs when the script is performing the **Set** command.
 
 ## Causes
 
-The first issue occurs because there’s an object in Exchange Online with the same name as the MEPF. The conflicting object is reported in the error itself and can be retrieved with the following cmdlet in Exchange Online PowerShell:
+The first issue occurs because there's an object in Exchange Online with the same name as the MEPF. The conflicting object is reported in the error itself and can be retrieved with the following cmdlet in Exchange Online PowerShell:
 
 ```powershell
-Get-Recipient ‘<Distinguished Name reported in the error>’
+Get-Recipient '<Distinguished Name reported in the error>'
 ```
 
 For example:
@@ -67,7 +67,7 @@ For example:
 Get-MailPublicFolder \Marketing | Set-MailPublicFolder -Name Marketing_PF
 ```
 > [!NOTE]
-> Changing the name of MEPF doesn’t affect the email address or the actual name of the public folder it's associated with.
+> Changing the name of MEPF doesn't affect the email address or the actual name of the public folder it's associated with.
 
 To fix the second issue, follow these steps:
 
@@ -80,18 +80,18 @@ To fix the second issue, follow these steps:
     For example:
 
     ```powershell
-    Get-Recipient |?{$_.EmailAddresses -like "*X500:/O=BAT2/OU=EXCHANGE ADMINISTRATIVE GROUP (FYDIBOHF23SPDXX)/CN=RECIPIENTS/CN=E1DBD36E5BEF784A97A5CD66299952D8-00008991FDA8*”}
+    Get-Recipient |?{$_.EmailAddresses -like "*X500:/O=BAT2/OU=EXCHANGE ADMINISTRATIVE GROUP (FYDIBOHF23SPDXX)/CN=RECIPIENTS/CN=E1DBD36E5BEF784A97A5CD66299952D8-00008991FDA8*"}
     ```
-2. If the object returned isn't a MEPF, remove the object if you don’t want to keep it.
+2. If the object returned isn't a MEPF, remove the object if you don't want to keep it.
 3. If you only see the MEPF object returned with the same proxy, there are duplicate MEPFs in on-premises. Find the duplicate MEPFs and then remove them. To find the duplicate MEPFs, run the following cmdlet in on-premises:
 
     ```powershell
-    Get-MailPublicFolder | ?{ $_.EmailAddresses -like “<email of problem MEPF>”}
+    Get-MailPublicFolder | ?{ $_.EmailAddresses -like "<email of problem MEPF>"}
     ```
 
     For example:
 
     ```powershell
-    Get-MailPublicFolder | ?{ $_.EmailAddresses -like “*hr*”}
+    Get-MailPublicFolder | ?{ $_.EmailAddresses -like "*hr*"}
     ```
 4. If multiple objects are returned, make sure a single object is kept and remove the other objects.

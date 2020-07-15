@@ -36,8 +36,8 @@ ADAL enables sign-in features such as Multi-Factor Authentication (MFA), smart c
 
 Authentication issues during sign-in or activation typically manifest as one of the following symptoms:
 
-- Unable to sign in: Repeated password prompts, “Credentials Needed”, or ”Needs Password” statuses.
-- Sign-in window doesn’t show up, is blank, prematurely disappears, or gets stops working.
+- Unable to sign in: Repeated password prompts, "Credentials Needed", or "Needs Password" statuses.
+- Sign-in window doesn't show up, is blank, prematurely disappears, or gets stops working.
 - Specific errors are displayed in Office apps or the sign-in user interface.
 
 If you experience sign-in issues, consider the following recommendations: 

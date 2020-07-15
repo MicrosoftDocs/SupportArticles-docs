@@ -24,7 +24,7 @@ When you connect to Skype for Business Online (formerly Lync Online), you may e
 
 - Issue 1: You can't view your own contact photo in Lync 2010 or Lync 2013.   
 - Issue 2: Other contacts can't see your photo. This includes external contacts.   
-- Issue 3: High-resolution contact photos don’t display in conferences and online meetings in Lync 2013.   
+- Issue 3: High-resolution contact photos don't display in conferences and online meetings in Lync 2013.   
 
 ## Solution
 
@@ -50,8 +50,8 @@ These issues may occur for one of the following reasons:
 
 - Issue 1 usually occurs when one of the following conditions is true: 
   - No photo was uploaded.   
-  - The photo doesn’t meet the size or type requirements.    
-  - The user’s Exchange mailbox is unavailable.   
+  - The photo doesn't meet the size or type requirements.    
+  - The user's Exchange mailbox is unavailable.   
 - Issue 2 occurs when the photo is inaccessible to the contact. This can occur because the Exchange mailbox is unavailable or because the photo is stored in Active Directory and is inaccessible to external contacts.   
 - Issue 3 occurs when users are logged into Lync 2010 or when the user whose photo isn't displaying doesn't have an Exchange 2013 mailbox.   
 

@@ -67,7 +67,7 @@ For the best experience, add your Exchange email account to Outlook, and then se
 
 ### Solutions for Office 365 administrators
 
-To resolve this issue, make sure that the Exchange account in Outlook matches the account that's used to sign in to Skype for Business Online. If the Exchange mailbox and the Lync account are both hosted by Microsoft Office 365, make sure that the user’s Exchange primary SMTP address matches the user principal name (UPN). 
+To resolve this issue, make sure that the Exchange account in Outlook matches the account that's used to sign in to Skype for Business Online. If the Exchange mailbox and the Lync account are both hosted by Microsoft Office 365, make sure that the user's Exchange primary SMTP address matches the user principal name (UPN). 
 
 You can use the Set-MsolUserPrincipalName cmdlet from Microsoft Azure Active Directory Module for Windows PowerShell to set the UPN, SMTP, and Session Initiation Protocol (SIP) addresses to the same value. For more information, go to the following Microsoft websites:  
 
@@ -85,8 +85,8 @@ After the UPN, primary SMTP, and SIP address are configured correctly, repair or
 
 This error is typically caused by a mismatch between the accounts that are used in Outlook and Lync. The Exchange mailbox to which Outlook is connected must be associated with the same Office 365 user account to which Lync is connected. If Outlook is connected to a mailbox that's part of another Office 365 organization or another on-premises Exchange organization, you may experience this error. When Lync tries to make a connection with Outlook, it compares the SMTP (email) address in Outlook with the sign-in address that's used to connect to Skype for Business Online. If the SMTP and Lync sign-in addresses don't match, you may experience this error. 
 
-This error may also occur when Lync is expecting to integrate with a mailbox that's different from the mailbox that's configured in Outlook. For example, if Lync expects the user’s email address to be joe@contoso.com, but Outlook is connected to the mailbox for joe@fabrikam.com, you may experience this error.
+This error may also occur when Lync is expecting to integrate with a mailbox that's different from the mailbox that's configured in Outlook. For example, if Lync expects the user's email address to be joe@contoso.com, but Outlook is connected to the mailbox for joe@fabrikam.com, you may experience this error.
 
-Lync uses the **WindowsEmailAddress** or MAIL attribute to determine which Exchange server Outlook should connect to. If Lync makes that connection through Exchange Autodiscover and Exchange Web Services (EWS), and if Outlook is configured for another user’s mailbox, Lync registers that as a problem and returns this error.  
+Lync uses the **WindowsEmailAddress** or MAIL attribute to determine which Exchange server Outlook should connect to. If Lync makes that connection through Exchange Autodiscover and Exchange Web Services (EWS), and if Outlook is configured for another user's mailbox, Lync registers that as a problem and returns this error.  
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

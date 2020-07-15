@@ -26,7 +26,7 @@ Below is a collection of the top issues. If your issue isn't listed there, brows
 
 - ["There is a problem with your account, please try again later" when you open Office documents from OneDrive for Business or SharePoint Online](../SharePointOnline/Security/problem-with-your-account.md)
 - [OneDrive for Business sync returns the error "We can't connect to the specified SharePoint site"](./sync/enable-co-authoring-for-onedrive-synced-file.md)
-- ["Can’t open online-only file" error when opening a file in OneDrive](./sync/cant-open-online-only-file.md)
+- ["Can't open online-only file" error when opening a file in OneDrive](./sync/cant-open-online-only-file.md)
 - [Troubleshooting guide to OneDrive for Business sites stopped at provisioning stage](../SharePointOnline/sites/troubleshooting-guide-for-sites-stopped-at-provisioning.md)
 
 ## Other OneDrive for Business content

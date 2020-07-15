@@ -76,7 +76,7 @@ To apply the role assignment policy, use one of the following methods, as approp
   2. At the PowerShell prompt, type the following command, and then press Enter:
 
         ```powershell
-        Get-Mailbox | Set-Mailbox –RoleAssignmentPolicy “ <Name of Policy> ”
+        Get-Mailbox | Set-Mailbox –RoleAssignmentPolicy " <Name of Policy> "
         ```
 
 ## More information

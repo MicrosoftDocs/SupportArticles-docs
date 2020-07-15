@@ -21,7 +21,7 @@ appliesto:
 
 When Office 365 users try to open or view attachments in email messages in Outlook Web App, they experience the following symptoms: 
  
-- In Office 365, the attachment isn't displayed in the message. Instead, a generic placeholder, such as “1 Attachment” is displayed, and this can't be opened.    
+- In Office 365, the attachment isn't displayed in the message. Instead, a generic placeholder, such as "1 Attachment" is displayed, and this can't be opened.    
 - When users try to view attachments in Office 365, they receive the following error message:   Access to attachments has been blocked. Blocked attachments: <FileName>.      
   
 ## Cause 
@@ -39,8 +39,8 @@ The following is an example of the Windows PowerShell commands to remove the .xm
 ```powershell
 Get-OwaMailboxPolicy | Set-OwaMailboxPolicy -BlockedFileTypes @{Remove = ".xml"}
 Get-OwaMailboxPolicy | Set-OwaMailboxPolicy -AllowedFileTypes @{Add = ".xml"}
-Get-OwaMailboxPolicy | Set-OwaMailboxPolicy -BlockedMimeTypes @{Remove = "text/xml", "application/xml”}
-Get-OwaMailboxPolicy | Set-OwaMailboxPolicy –AllowedMimeTypes @{Add = "text/xml", "application/xml”} 
+Get-OwaMailboxPolicy | Set-OwaMailboxPolicy -BlockedMimeTypes @{Remove = "text/xml", "application/xml"}
+Get-OwaMailboxPolicy | Set-OwaMailboxPolicy –AllowedMimeTypes @{Add = "text/xml", "application/xml"} 
 ```
 
 Things to consider:

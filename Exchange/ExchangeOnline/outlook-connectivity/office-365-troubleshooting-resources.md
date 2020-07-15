@@ -53,7 +53,7 @@ Knowledge Base articles
 Knowledge Base articles
 
 - [2466333 ](https://support.microsoft.com/help/2466333) Federated users can't connect to an Exchange Online mailbox   
-- [2637629 ](https://support.microsoft.com/help/2637629) How to troubleshoot non-browser apps that can’t sign in to Office 365, Azure, or Intune    
+- [2637629 ](https://support.microsoft.com/help/2637629) How to troubleshoot non-browser apps that can't sign in to Office 365, Azure, or Intune    
 
 ## Cannot view free/busy information in the Outlook calendar
 

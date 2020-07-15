@@ -31,7 +31,7 @@ In Skype for Business Online, you experience one of the following issues:
 To fix this issue, take one of the following actions, depending on your situation: 
  
 - If a directory synchronization tool such as Azure Active Directory (Azure AD) Sync or Directory Sync (Microsoft Azure Active Directory Sync Tool) is being used to synchronize users from on-premises to Office 365, the administrator should follow these steps:  
-   1. On the **General** tab of the user in **Active Directory Users and Computers** in the on-premises Active Directory schema, edit the **Telephone Number** property so that it reflects the number that you want displayed in the user’s contact card.    
+   1. On the **General** tab of the user in **Active Directory Users and Computers** in the on-premises Active Directory schema, edit the **Telephone Number** property so that it reflects the number that you want displayed in the user's contact card.    
    2. Perform a directory synchronization by using Azure AD Sync or Microsoft Azure Active Directory Sync Tool.    
      
 - Users who aren't synchronized from an on-premises Active Directory schema can have an Office 365 administrator update their **Office phone** property in the Microsoft 365 admin center. Administrators should follow these steps. (For more information, see [Edit or change users in Office 365](https://support.office.com/article/edit-or-change-users-in-office-365-42bb3f17-8f9d-4182-b434-5f1c8024e614).)  
@@ -48,7 +48,7 @@ To fix this issue, take one of the following actions, depending on your situatio
      
 ## More information
 
-The contact card uses the **telephone number** schema attribute to populate the telephone number in a user’s contact card. After the user is moved to Office 365, is enabled for **Cloud PBX** and **Domestic/International Calling**, and then assigned a telephone number, the number must be edited in the on-premises active directory or added to the user properties in the Microsoft 365 admin center.
+The contact card uses the **telephone number** schema attribute to populate the telephone number in a user's contact card. After the user is moved to Office 365, is enabled for **Cloud PBX** and **Domestic/International Calling**, and then assigned a telephone number, the number must be edited in the on-premises active directory or added to the user properties in the Microsoft 365 admin center.
 
 For more information, go to the following Microsoft websites: 
  

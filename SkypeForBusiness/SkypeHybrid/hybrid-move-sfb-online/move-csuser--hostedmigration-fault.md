@@ -23,7 +23,7 @@ appliesto:
 In a Lync hybrid deployment, when you try to move users from the on-premises server that is running Lync to Skype for Business Online (formerly Lync Online) in Office 365, you receive the following error message in Skype for Business Online PowerShell:
 
 ```powershell
-Move-CsUser : HostedMigration fault: Error=(510), Description=(This user’s tenant is not enabled for shared sip address space.)
+Move-CsUser : HostedMigration fault: Error=(510), Description=(This user's tenant is not enabled for shared sip address space.)
 ```
 
 ## Solution
