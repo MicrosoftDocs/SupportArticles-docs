@@ -47,7 +47,7 @@ Disable the Internet Explorer Security setting **Do not save encrypted pages to 
 4. Select **OK**.
 5. Start Outlook.
 
-If you can't disable the option, it’s managed by a Group Policy. Contact your system administrator to determine the appropriate configuration for this setting.
+If you can't disable the option, it's managed by a Group Policy. Contact your system administrator to determine the appropriate configuration for this setting.
 
 ## More information
 

@@ -27,7 +27,7 @@
       href: ../access/access-2010-crashes.md
     - name: Access database engine cannot find input table
       href: ../access/database-engine-not-find-input-table.md
-    - name: Access error “Your network access was interrupted” when using a mapped drive
+    - name: Access error "Your network access was interrupted" when using a mapped drive
       href: ../access/your-network-access-was-interrupted-error.md
     - name: Access freezes when opening a linked table
       href: ../access/access-freezes-when-open-linked-table.md
@@ -739,7 +739,7 @@
       href: ../office-suite-issues/no-default-mail-client-error.md
     - name: "\"Run-time Error 13: Type Mismatch\""
       href: ../office-suite-issues/run-time-error-13-type-mismatch.md
-    - name: "\"This file can’t be previewed\" error"
+    - name: "\"This file can't be previewed\" error"
       href: ../office-suite-issues/this-file-cant-be-previewed.md
     - name: "\"Your system is low on virtual memory\" error"
       href: ../office-suite-issues/your-system-is-low-on-virtual-memory.md
@@ -893,7 +893,7 @@
       href: ../onenote/error-sync-notebook.md
     - name: Locate Onenote notebooks
       href: ../onenote/locate-onenote-notebooks.md
-    - name: 'OneNote error “Content Not Yet Available”'
+    - name: 'OneNote error "Content Not Yet Available"'
       href: ../onenote/onenote-error-content-not-yet-available.md
     - name: Temporary change to file size download limit in OneNote
       href: ../onenote/temp-change-onenote-file-size-download.md

@@ -28,9 +28,9 @@ Consider the following scenario:
 
 - A Resource mailbox is configured to AutoAccept in a Microsoft Exchange Server environment.   
 - You send a meeting request to the Resource mailbox.    
-- The meeting request is accepted automatically, and the meeting subject is displayed correctly in the organizer’s mailbox.   
+- The meeting request is accepted automatically, and the meeting subject is displayed correctly in the organizer's mailbox.   
 
-In this scenario, when you log on to the Resource mailbox, you see that the meeting subject is replaced with the organizer’s name.
+In this scenario, when you log on to the Resource mailbox, you see that the meeting subject is replaced with the organizer's name.
 
 ## Cause
 

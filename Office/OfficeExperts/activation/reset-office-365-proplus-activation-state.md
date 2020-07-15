@@ -87,7 +87,7 @@ Here's how to remove the Office 365 license:
 ## Step 2: Remove cached identities in HKCU registry
 
 > [!WARNING]
-> Follow this section’s steps carefully. Incorrect registry entries can cause serious system issues. As a precaution, [back up the registry for restoration](https://support.microsoft.com/help/322756/how-to-back-up-and-restore-the-registry-in-windows).
+> Follow this section's steps carefully. Incorrect registry entries can cause serious system issues. As a precaution, [back up the registry for restoration](https://support.microsoft.com/help/322756/how-to-back-up-and-restore-the-registry-in-windows).
 
 In Registry Editor, locate the following registry:
 

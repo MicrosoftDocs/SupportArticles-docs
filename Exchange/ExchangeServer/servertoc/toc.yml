@@ -17,7 +17,7 @@
       href: ../administration/fail-to-start-ems-canot-find-path.md
     - name: On-premises EAC link goes to product comparison
       href: ../administration/o365-link-eac-redirect-product-comparison.md
-    - name: MCDB status is Offline and SSDs aren’t formatted
+    - name: MCDB status is Offline and SSDs aren't formatted
       href: ../administration/mcdb-status-is-offline-ssds-aren’t-formatted.md
     - name: Self-Help portal
       href: ../administration/self-help-portal.md

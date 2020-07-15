@@ -43,7 +43,7 @@ You can resolve most sign-in issues in Lync Mobile 2013 by following these steps
 
 These errors may occur for one or more of the following reasons:
 
-- The user’s credentials aren't correct. Either the password is incorrect or the sign-in address was entered incorrectly.   
+- The user's credentials aren't correct. Either the password is incorrect or the sign-in address was entered incorrectly.   
 - The server is too busy or unreachable over your current connection.   
 - The server can't be found, based on the sign-in address. Either the domain was typed incorrectly or the necessary DNS records for mobile connectivity aren't set up.   
 - You installed updated OS software and resources or settings may have to be configured for Lync Mobile 2013 to work correctly.   

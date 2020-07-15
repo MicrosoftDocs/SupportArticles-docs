@@ -16,11 +16,11 @@ appliesto:
 - Skype for Business Online
 ---
 
-# Conversations and calls made on Lync Mobile devices are not synced with the user’s Exchange mailbox
+# Conversations and calls made on Lync Mobile devices are not synced with the user's Exchange mailbox
 
 ## Problem
 
-Conversations and calls on Lync Mobile devices are not synchronized with the user's Microsoft Exchange mailbox. Therefore, these conversations and calls don’t appear in the Outlook conversation history folder or on the **Conversations** tab in Lync 2013. Additionally, conversations on other clients and devices are not displayed on the **Conversations** tab in the Lync Mobile client.
+Conversations and calls on Lync Mobile devices are not synchronized with the user's Microsoft Exchange mailbox. Therefore, these conversations and calls don't appear in the Outlook conversation history folder or on the **Conversations** tab in Lync 2013. Additionally, conversations on other clients and devices are not displayed on the **Conversations** tab in the Lync Mobile client.
 
 ## Solution
 

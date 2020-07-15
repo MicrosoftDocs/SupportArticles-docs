@@ -26,7 +26,7 @@ Public folder entries still appear in the global address list (GAL) after removi
 
 ## Cause
 
-Mail enabled public folders weren’t removed properly. The mail enabled public folder (MEPF) objects may still be present.
+Mail enabled public folders weren't removed properly. The mail enabled public folder (MEPF) objects may still be present.
 
 ## Resolution
 
@@ -58,7 +58,7 @@ If the stale entry appears in OWA and Outlook online mode as well:
 
     After removing the entry, use OWA to verify if the entry appears in GAL.
 
-5. If Get-MailPublicFolder doesn’t show a stale entry, run this command to check if there's any other object with the same name or email address:
+5. If Get-MailPublicFolder doesn't show a stale entry, run this command to check if there's any other object with the same name or email address:
 
     Search by name:
 
@@ -72,7 +72,7 @@ If the stale entry appears in OWA and Outlook online mode as well:
     Get-Recipient |?{$_.EmailAddresses -like "*pub*"}
     ```
 
-    If you find another object with the same name or email address, remove it using the appropriate command, i.e. Remove-mailbox if it’s a mailbox object type.
+    If you find another object with the same name or email address, remove it using the appropriate command, i.e. Remove-mailbox if it's a mailbox object type.
 
 6. Use Outlook on the Web to verify if the entries have been removed.
     > [!NOTE]

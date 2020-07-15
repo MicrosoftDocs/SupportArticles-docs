@@ -1,5 +1,5 @@
 ---
-title: Skype Meeting Broadcast portal doesn’t load completely in the browser
+title: Skype Meeting Broadcast portal doesn't load completely in the browser
 description: Discusses an issue in which the Skype Meeting Broadcast portal doesn't load completely in the browser. Provides a solution.
 author: simonxjx
 manager: dcscontentpm
@@ -16,7 +16,7 @@ appliesto:
 - Skype for Business Online
 ---
 
-# Skype Meeting Broadcast portal doesn’t load completely in the browser
+# Skype Meeting Broadcast portal doesn't load completely in the browser
 
 ## Problem
 

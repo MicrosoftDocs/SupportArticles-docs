@@ -44,15 +44,15 @@ To deploy the ASA credential for Kerberos authentication, follow these steps.
 
 All computers in the Client Access server array must share the same service account. This includes any Client Access servers that may start as part of a datacenter switchover. Generally, one service account per forest is sufficient.
 
-Create a computer account instead of a user account for the alternate service account (ASA), because a computer account doesn’t allow interactive logon. Therefore, a computer account may have simpler security policies than a user account and is the preferred solution for the ASA credential. 
+Create a computer account instead of a user account for the alternate service account (ASA), because a computer account doesn't allow interactive logon. Therefore, a computer account may have simpler security policies than a user account and is the preferred solution for the ASA credential. 
 
 For more information about how to create a computer account, see [Create a new computer account](https://technet.microsoft.com/library/cc781364%28v=ws.10%29.aspx). 
 
 > [!NOTE]
-> When you create a computer account, the password doesn't expire. However, we recommend that you update the password periodically. The local Group Policy can specify a maximum account age for computer accounts, and network administrators may schedule scripts to periodically delete computer accounts that don’t meet current policies. To make sure that your computer accounts aren't deleted if they don't meet local policy, update the password for computer accounts periodically. Your local security policy will determine when you must change the password. 
+> When you create a computer account, the password doesn't expire. However, we recommend that you update the password periodically. The local Group Policy can specify a maximum account age for computer accounts, and network administrators may schedule scripts to periodically delete computer accounts that don't meet current policies. To make sure that your computer accounts aren't deleted if they don't meet local policy, update the password for computer accounts periodically. Your local security policy will determine when you must change the password. 
 
 > [!NOTE]
-> The password that you provide when you create the account is never actually used. Instead, the script resets the password. When you create the account, you can use any password that meets your organization’s password requirements.
+> The password that you provide when you create the account is never actually used. Instead, the script resets the password. When you create the account, you can use any password that meets your organization's password requirements.
 
 There are no particular requirements for the name of the ASA credential. You can use any name that follows your naming scheme. The ASA credential doesn't need special security privileges. If you are deploying a computer account for the ASA credential, this means that the account only needs to be a member of the Domain Computers security group. If you are deploying a user account for the ASA credential, this means that the account only needs to be a member of the Domain Users security group.
 
@@ -78,7 +78,7 @@ To determine the SPNs that you would use in this example, we must look at the f
 - exchangeAB/outlook.corp.contoso.com   
 
 > [!NOTE]
-> External or Internet-based clients that use Outlook Anywhere won’t use Kerberos authentication. Therefore, you don't have to add the FQDNs that these clients use as SPNs to the ASA credential. 
+> External or Internet-based clients that use Outlook Anywhere won't use Kerberos authentication. Therefore, you don't have to add the FQDNs that these clients use as SPNs to the ASA credential. 
 
 If your site is larger than a single Active Directory site, you can see more examples in the topic[ Configuring Kerberos Authentication for Load-Balanced Client Access Servers](https://technet.microsoft.com/library/ff808312.aspx) .
 
@@ -100,7 +100,7 @@ To use the script to push the credential to all Client Access servers in the for
     .\RollAlternateserviceAccountPassword.ps1 -ToEntireForest -GenerateNewPasswordFor "Your_Domain_Name\Computer_Account_Name$" -Verbose
     ```
 
-2. Run the following command to schedule a once-a-month automated password roll scheduled task called “Exchange-RollAsa.” This command-scheduled task will update the ASA credential for all Client Access servers in the forest with a new, script-generated password. The scheduled task is created, but the script is not run. When the scheduled task is run, the script runs in unattended mode.
+2. Run the following command to schedule a once-a-month automated password roll scheduled task called "Exchange-RollAsa." This command-scheduled task will update the ASA credential for all Client Access servers in the forest with a new, script-generated password. The scheduled task is created, but the script is not run. When the scheduled task is run, the script runs in unattended mode.
 
     ```powershell
     .\RollAlternateServiceAccountPassword.ps1 -CreateScheduledTask "Exchange-RollAsa" -ToEntireForest -GenerateNewPasswordFor "Your_Domain_Name\Computer_Account_Name$"
@@ -147,7 +147,7 @@ After you successfully configure Kerberos and deploy the RollAlternateServiceAcc
 
 Verify that the Microsoft Exchange Service Host service is running
 
-Make sure that you have installed Exchange Server 2010 SP1 Rollup 3 or a later version on all Client Access servers in your environment. The Microsoft Exchange Service Host service on the Client Access servers is responsible for managing the ASA credential. If this service isn’t running, Kerberos authentication won’t work. By default, the service is configured to start automatically when the computer starts. To verify that the service is running, follow these steps:
+Make sure that you have installed Exchange Server 2010 SP1 Rollup 3 or a later version on all Client Access servers in your environment. The Microsoft Exchange Service Host service on the Client Access servers is responsible for managing the ASA credential. If this service isn't running, Kerberos authentication won't work. By default, the service is configured to start automatically when the computer starts. To verify that the service is running, follow these steps:
 
 1. Open Services on the CAS. To open Services, click **Start**, click **Control Panel**, double-click **Administrative Tools**, and then double-click **Services**. 
 2. In the list of services, locate Microsoft Exchange Service Host service.   
@@ -158,7 +158,7 @@ To confirm that Outlook can use Kerberos authentication to connect to the Client
 
 1. Confirm that Outlook is configured to point to the correct load-balanced Client Access server array.    
 2. Configure the email account server security settings to use logon network security Negotiate Authentication. 
-NoteYou could configure the client to use Kerberos Password Authentication, but if the SPNs are ever removed, the client computers won’t be able to authenticate until you change the authentication mechanism back to Negotiate Authentication.   
+NoteYou could configure the client to use Kerberos Password Authentication, but if the SPNs are ever removed, the client computers won't be able to authenticate until you change the authentication mechanism back to Negotiate Authentication.   
 3. Make sure that Outlook Anywhere is not enabled for the client computer. If Outlook can't authenticate by using Kerberos Password Authentication, it will try to fall back to Outlook Anywhere, so Outlook Anywhere should be disabled for this test.    
 4. Restart Outlook.   
 5. If your desktop computer is running Windows 7, you can run klist.exe to see which Kerberos tickets are granted and are being used. If you aren't  running Windows 7, you can obtain klist.exe from the Windows Server 2003 Resource Kit.   
