@@ -155,11 +155,11 @@
       href: ../owa-time-zones/read-receipt-incorrect-timezone.md
   - name: Public Folders
     items:
-    - name: Can’t add reviewer permission to calendars
+    - name: Can't add reviewer permission to calendars
       href: ../public-folders/add-reviewer-permission-public-folder-calendar-powershell.md
-    - name: Can’t apply permissions to subfolders
+    - name: Can't apply permissions to subfolders
       href: ../public-folders/can’t-apply-permissions-public-folder-subfolders.md
-    - name: Can’t delete items
+    - name: Can't delete items
       href: ../public-folders/cannot-delete-items-public-folder.md
     - name: MEPF synchronization issues
       href: ../public-folders/mepf-sync-failures-script.md
