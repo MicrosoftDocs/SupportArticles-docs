@@ -13,12 +13,18 @@ ms.custom:
 - CSSTroubleshoot
 ms.reviewer: cathmill
 appliesto:
+- Access 365
+- Access 2019
+- Access 2016
+- Access 2013
 - Access 2010
 - Microsoft Office Access 2007
 - Microsoft Office Access 2003
 search.appverid: MET150
 ---
 # "Unable to create an MDE, ACCDE, or ADE database" error with a database that you can't compile
+
+This article fixes an issue in the VBA code that prevents you from compiling a database or project or there is a reference.
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
@@ -71,5 +77,3 @@ If you need to maintain a reference to a .mdb, .accdb, or .adp file, convert tha
 5. On the **File** menu, click **Save projectname**.
 6. Press ALT+F11 to return to Microsoft Access.
 7. On the **Tools** menu, point to **Database Utilities**, and then click **Make MDE File**.
-
-   You receive the error message that is mentioned in the "Symptoms" section of this article.

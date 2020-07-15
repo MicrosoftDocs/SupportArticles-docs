@@ -13,7 +13,6 @@ ms.custom:
 - CSSTroubleshoot
 ms.reviewer: rachelce
 appliesto:
-- Access 2010
 - Microsoft Office Access 2007
 - Microsoft Office Access 2003
 search.appverid: MET150
@@ -21,6 +20,8 @@ search.appverid: MET150
 # "No current record" error when you print or preview a report in Access
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+
+This article describes a problem that occurs when you try to print or preview the report, and then you move between the report pages.
 
 _Original KB number:_ &nbsp; 888635
 

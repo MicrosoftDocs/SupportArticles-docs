@@ -13,6 +13,7 @@ ms.custom:
 - CSSTroubleshoot
 ms.reviewer: 
 appliesto:
+- Access 365
 - Access 2019
 - Access 2016
 - Access 2013
@@ -24,6 +25,8 @@ search.appverid: MET150
 # How to hide the combo box drop-down arrow on a form in Access
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+
+This article describes the detailed steps to hide the drop-down arrow on a combo box until the combo box is selected.
 
 _Original KB number:_ &nbsp; 325233
 
