@@ -1,5 +1,5 @@
 - name: Exchange Online Troubleshooting
-  href: ../exchange-online.md
+  href: ../exchange-online-welcome.md
   items:
   - name: Active Sync
     items:
