@@ -1,5 +1,5 @@
 - name: Skype for Business Server Troubleshooting
-  href: ../server.md
+  href: ../skype-server-welcome.md
   items:
   - name: Conferencing
     items:

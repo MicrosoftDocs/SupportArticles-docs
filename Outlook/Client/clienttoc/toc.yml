@@ -1,5 +1,5 @@
 - name: Outlook for Windows Troubleshooting
-  href: ../client.md
+  href: ../outlook-client-welcome.md
   items:
   - name: Authentication
     items:

@@ -1,5 +1,5 @@
 - name: Microsoft 365 Security Troubleshooting
-  href: ../security.md
+  href: ../microsoft-365-security-welcome.md
   items:
   - name: Antispam
     items:
