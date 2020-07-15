@@ -1,6 +1,6 @@
 ---
-title: Can't change the default language for a site collection
-description: This article describes an issue where you can't change the default language for a SharePoint Online site collection, and provides a solution.
+title: Can't change the default language for a site 
+description: This article provides a solution for an issue where you can't change the default language for a SharePoint Online site.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -15,11 +15,11 @@ appliesto:
 - SharePoint Online
 ---
 
-# You can't change the default language for a SharePoint Online site collection
+# You can't change the default language for a SharePoint Online site 
 
 ## Symptoms
 
-You're unable to change the default language setting for a site collection (**Site Settings** > **Language Settings**) for one the following site collections:
+You're unable to change the default language setting for a site (**Site Settings** > **Language Settings**) for one the following sites:
 
 - My Site Host 
 - OneDrive for Business personal site
@@ -41,7 +41,7 @@ For more information about how to do this, see
 
 ## More information
 
-This issue occurs because the default language for the My Site Host and Search Center site collections is defined by the following settings when you selected the link to create the subscription:
+This issue occurs because the default language for the My Site Host and Search Center site is defined by the following settings when you selected the link to create the subscription:
 
 - The country that was selected on the office.microsoft.com page.
 - The language preference that's specified by your browser settings.
@@ -53,4 +53,3 @@ For more information about multilingual features and about configuring your disp
 - [Change your personal language and region settings](https://support.office.com/article/caa1fccc-bcdb-42f3-9e5b-45957647ffd7)
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).
-
