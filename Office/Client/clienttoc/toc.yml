@@ -1,5 +1,5 @@
 - name: Office Products Troubleshooting
-  href: ../client.md
+  href: ../office-client-welcome.md
   items:
   - name: Access
     items:
@@ -15,6 +15,8 @@
       href: ../access/linked-table-connection-failed.md
     - name: "\"No current record\" error"
       href: ../access/print-preview-error.md
+    - name: "\"ODBC--call failed\" error"
+      href: ../access/error-opening-sql-linked-table.md
     - name: .LDB files
       href: ../access/ldb-file-description.md
     - name: 0x80004005 Microsoft Jet Database Engine cannot open the file
@@ -123,6 +125,8 @@
       href: ../access/disable-database-startup-options.md
     - name: Error 2950 when running a macro
       href: ../access/error-running-macro.md
+    - name: Error when inserting table record
+      href: ../access/error-inserting-table-record-autonumber.md
     - name: Error loading DLL
       href: ../access/access-wizard-fails-loading-dll.md
     - name: Error running query with UniqueValues property
@@ -159,6 +163,8 @@
       href: ../access/table-analyzer-wizard.md
     - name: How to create a running totals query
       href: ../access/create-a-running-totals-query.md
+    - name: How to loop through references to view properties
+      href: ../access/how-to-loop-through-references-view-properties.md
     - name: ID is increment when adding a new field
       href: ../access/id-field-increment-by-one.md
     - name: Incorrect FirstDay property value

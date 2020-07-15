@@ -1,5 +1,5 @@
 - name: Office 365 Administration Troubleshooting
-  href: ../admin.md
+  href: ../o365-admin-welcome.md
   items:
   - name: Access Management
     items:

@@ -1,5 +1,5 @@
 - name: Microsoft 365 Compliance Troubleshooting
-  href: ../compliance.md
+  href: ../microsoft-365-compliance-welcome.md
   items:
   - name: Archive Mailboxes
     items:
