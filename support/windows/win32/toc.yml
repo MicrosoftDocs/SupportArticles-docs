@@ -9,10 +9,14 @@
       href: client-application-error-create-com-plus-component.md
     - name: Two DLL hosts start when a COM+ object is enabled
       href: two-dll-hosts-start-com-plus-enabled.md
+    - name: VarI8FromCy produces incorrect value
+      href: vari8fromcy-produces-incorrect-value.md
   - name: Desktop app UI development
     items:
     - name: Call Shell APIs from a multithreaded apartment
       href: shell-functions-multithreaded-apartment.md
+    - name: GetMessage ignores messages
+      href: getmessage-ignores-posted-messages.md
     - name: SystemParametersInfo works incorrectly
       href: calling-systemparametersinfo-work-incorrectly.md
     - name: Change hard error popup handling
@@ -27,12 +31,38 @@
       href: cannot-start-transaction-ms-dtc.md
     - name: Enable diagnostic tracing
       href: enable-diagnostic-tracing-ms-dtc.md
+    - name: KTMRM services fail with event ID 4448
+      href: ktmrm-service-event-id-0x80070005.md
+    - name: New functionality in the MSDTC service
+      href: new-functionality-in-msdtc-service.md
+    - name: XA Transaction support requires registry entries
+      href: xa-transaction-require-registry-entry.md
   - name: Graphics and multimedia development
     items:
+    - name: Can't print to XPS Document Writer
+      href: print-app-xps-document-writer.md
     - name: DirectShow doesn't connect to a downstream filter
       href: directshow-not-connect-downstream-filter.md
     - name: DWM drops frames of Direct3D applications
       href: dwm-drop-direct3d-10-application-frame.md
+    - name: DXGI 1.2 API can't draw cursor to desktop images
+      href: dxgi-cannot-draw-cursor.md
+    - name: Former MIDI API causes applications to hang
+      href: midi-device-app-hangs.md
+    - name: Get status of printer and print job
+      href: printer-print-job-status.md
+    - name: Interoperability between GDI and GDI+
+      href: mix-gdi-and-gdi-plus-drawing.md
+    - name: Modify printer settings by using SetPrinter
+      href: modify-printer-settings-setprinter-api.md
+    - name: Printer device fonts
+      href: printer-device-fonts.md
+    - name: RAW data can't print
+      href: writeprinter-raw-data-not-print.md
+    - name: Send raw data to printers
+      href: win32-raw-data-to-printer.md
+    - name: XPSDrv isn't compatible with RAW databases
+      href: v4-print-driver-raw-mode-pcl-postscript.md
     - name: WIA 2.0 doesn't support duplex scan
       href: wia-2-not-support-duplex.md
   - name: Networking development
@@ -53,39 +83,14 @@
       href: limitation-10-smart-card-readers.md
   - name: System services development
     items:
+    - name: Asynchronous disk I/O appears synchronous
+      href: asynchronous-disk-io-synchronous.md
+    - name: CD-ROM notifications
+      href: receive-cd-rom-notification.md
     - name: CreateProcess can't eliminate duplicated variables
       href: createprocess-cannot-eliminate-duplicate-variables.md
-    - name: GetMessage ignores messages
-      href: getmessage-ignores-posted-messages.md
     - name: Heap manager may not decommit memory
       href: heap-manager-may-not-decommit-memory.md
-    - name: KTMRM services fail with event ID 4448
-      href: ktmrm-service-event-id-0x80070005.md
-    - name: New functionality in the MSDTC service
-      href: new-functionality-in-msdtc-service.md
-    - name: XA Transaction support requires registry entries
-      href: xa-transaction-require-registry-entry.md
-
-- name: Windows App Dev (UWP)
-  items:
-  - name: Devices and sensors development
-    items:
-    - name: Send raw data to printers
-      href: win32-raw-data-to-printer.md
-  - name: Graphics and multimedia development
-    items:
-    - name: Former MIDI API causes applications to hang
-      href: midi-device-app-hangs.md
-    - name: Interoperability between GDI and GDI+
-      href: mix-gdi-and-gdi-plus-drawing.md
-    - name: Modify printer settings by using SetPrinter
-      href: modify-printer-settings-setprinter-api.md
-    - name: RAW data can't print
-      href: writeprinter-raw-data-not-print.md
-  - name: System services development
-    items:
-    - name: DXGI 1.2 API can't draw cursor to desktop images
-      href: dxgi-cannot-draw-cursor.md
     - name: Get formatted strings for an event
       href: evtformatmessage-formatted-string-event.md
     - name: Guidelines for dates and times handling
@@ -94,33 +99,7 @@
       href: setsystemtimeadjustment-less-than-16.md
     - name: Troubleshoot errors in Event Viewer
       href: troubleshoot-event-message-not-found.md
-    - name: VarI8FromCy produces incorrect value
-      href: vari8fromcy-produces-incorrect-value.md
-
-- name: WDK V2
-  items:
-  - name: Print driver
-    items:
-    - name: Can't print to XPS Document Writer
-      href: print-app-xps-document-writer.md
-    - name: Get status of printer and print job
-      href: printer-print-job-status.md
-    - name: Printer device fonts
-      href: printer-device-fonts.md
-    - name: XPSDrv isn't compatible with RAW databases
-      href: v4-print-driver-raw-mode-pcl-postscript.md
-  - name: Storage driver
-    items:
-    - name: CD-ROM notifications
-      href: receive-cd-rom-notification.md
-  - name: System services development
-    items:
-    - name: Asynchronous disk I/O appears synchronous
-      href: asynchronous-disk-io-synchronous.md
-
-- name: Windows administration and management development
-  items:
-  - name: Windows Management Instrumentation (WMI) API
+  - name: Windows administration and management development
     items:
     - name: MSI packages fail to run
       href: msi-packages-wmi-queries-cannot-run.md
