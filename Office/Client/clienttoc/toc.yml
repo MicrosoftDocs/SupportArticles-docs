@@ -265,8 +265,6 @@
       href: ../access/tabledef-attributes-usage.md
     - name: Use Common Dialog API
       href: ../access/use-common-dialog-api.md
-    - name: Use exclusive lock to save design changes
-      href: ../access/exclusive-lock-saving-design-changes.md
     - name: Use query by form (QBF) technique
       href: ../access/use-query-form-qbf-technique.md
     - name: Use SetOption to disable warning messages
