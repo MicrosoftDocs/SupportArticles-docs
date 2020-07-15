@@ -77,14 +77,14 @@ To do this, follow these steps:
 
 ## More Information
 
-You can use an AutoExec macro to test whether a database is trusted when you open the database. Additionally, the macro can open a form that displays a customized message to users if the database is not trusted. This message lets users know that the database must be enabled or trusted for the code to run successfully.
+You can use an `AutoExec` macro to test whether a database is trusted when you open the database. Additionally, the macro can open a form that displays a customized message to users if the database is not trusted. This message lets users know that the database must be enabled or trusted for the code to run successfully.
 
-To create the AutoExec macro and the form, follow these steps:
+To create the `AutoExec` macro and the form, follow these steps:
 
 1. Create a new form in Design view.
 2. Add a text box or a label to the form, and then type the information that you want to display to the user.
 3. Save and then close the form.
-4. Create a macro, and then name the macro AutoExec.
+4. Create a macro, and then name the macro `AutoExec`.
 5. Show the **Conditions** column.
 6. Type the following line in the **Conditions** column:
 
@@ -94,5 +94,5 @@ To create the AutoExec macro and the form, follow these steps:
 8. In the **Form Name** box under **Action Arguments**, click the form that you created in step 1.
 9. Save and then close the macro.
 
-When the database opens, the AutoExec macro starts and then tests the
-`IsTrusted` condition. If the database is not trusted by Access, the macro opens the form that you specified in the "OpenForm" action of the macro.
+When the database opens, the `AutoExec` macro starts and then tests the
+`IsTrusted` condition. If the database is not trusted by Access, the macro opens the form that you specified in the `OpenForm` action of the macro.
