@@ -22,7 +22,7 @@ appliesto:
 ## Summary
 
 > [!NOTE]
-> The RealTimeData (RTD) function is available in Excel M365 version 2002 or later. For more information, see [Excel Performance and Limits Improvements](https://docs.microsoft.com/office/vba/excel/concepts/excel-performance/excel-performance-and-limit-improvements).
+> The performance of the RealTimeData (RTD) function has been greatly enhanced in Excel M365 version 2002 or later. For more information, see [Excel Performance and Limits Improvements](https://docs.microsoft.com/office/vba/excel/concepts/excel-performance/excel-performance-and-limit-improvements).
 
 This article describes the functionality that the RealTimeData (RTD) function provides. Microsoft Office Excel provides a worksheet function, RealTimeData (RTD). This function enables you to call a Component Object Model (COM) Automation server to retrieve data in real time.
 
