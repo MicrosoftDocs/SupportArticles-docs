@@ -11,8 +11,13 @@ localization_priority: Normal
 ms.custom: 
 - CI 114797
 - CSSTroubleshoot
-ms.reviewer: 
+ms.reviewer:
 appliesto:
+- Access 365
+- Access 2019
+- Access 2016
+- Access 2013
+- Access 2010
 - Microsoft Office Access 2007
 - Microsoft Office Access 2003
 search.appverid: MET150
@@ -20,6 +25,8 @@ search.appverid: MET150
 # How to reset an AutoNumber field value in Access
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+
+This article provides step-by-step methods to reset an **AutoNumber** field value.
 
 _Original KB number:_ &nbsp; 812718
 
@@ -150,7 +157,7 @@ A table with referenced tables has a relationship with one or more tables. The s
    7. On the **Query** menu, click **Run**.
    8. When you are prompted by the "You are about to paste # row(s) into a new table" message, click **Yes** to insert the rows.
    9. On the **File** menu, click **Close**, and then click **No** to close the **Update Query** window.
-   
+
    Access 2007 and later versions
 
    1. Click the **Create** tab, and then click **Query Design** in the **Other** group. This creates the new query.

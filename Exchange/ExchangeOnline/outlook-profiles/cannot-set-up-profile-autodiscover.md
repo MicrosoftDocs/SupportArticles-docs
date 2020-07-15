@@ -7,7 +7,9 @@ ms.service: exchange-online
 ms.topic: article
 ms.author: v-six
 manager: dcscontentpm
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- CSSTroubleshoot
+- OutlookSetupProfile
 localization_priority: Normal
 search.appverid: 
 - MET150
@@ -80,7 +82,7 @@ To use the Domain Troubleshooting Wizard in Office 365, follow these steps.
 1. Sign in to the Office 365 portal ([https://portal.office.com](https://portal.office.com)) by using an administrator account.    
 2. Click **Admin** to open the Microsoft 365 admin center.    
 3. In the left navigation pane, click **Domains**, select the domain name that's used by the affected user, and then click **Troubleshoot** to start the wizard.    
- 
+
 **Use Microsoft Remote Connectivity Analyzer** 
 
 To use Remote Connectivity Analyzer to test whether Exchange Autodiscover is working correctly, follow these steps:
@@ -90,7 +92,7 @@ To use Remote Connectivity Analyzer to test whether Exchange Autodiscover is wor
     [Remote Connectivity Analyzer](https://www.testconnectivity.microsoft.com/?testid=o365easautodiscover)
 1. Complete all the required fields on the form, and then click **Perform Test**.
 
-    ![Screen shot of enter test credentials ](https://support.microsoft.com/Library/Images/2882809.png)    
+    ![Screen shot of enter test credentials](./media/cannot-set-up-profile-autodiscover/credentials.png)    
 3. When the test is finished, determine whether it's successful.
 
    - If the test is successful, Autodiscover is working correctly.    

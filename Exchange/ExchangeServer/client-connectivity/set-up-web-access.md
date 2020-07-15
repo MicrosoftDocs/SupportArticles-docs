@@ -42,11 +42,11 @@ To set up Outlook Web App to access Exchange Server, follow these steps:
     > [!NOTE]
     > This feature is available on Outlook 2010 and Outlook 2013. It depends on the server side settings. 
 
-    ![The screenshot for the step  ](https://support.microsoft.com/Library/Images/3075351.png)   
+    ![The screenshot for the step](./media/set-up-web-access/account-information.png)   
 2. Open a web browser such as Internet Explorer, type the Outlook Web App address in the address bar, and then press Enter.   
 3. If you receive the following certificate warning page, click **Continue to this website (not recommended)** to continue to open Outlook Web App.
 
-    ![A screenshot of the certificate warning page. ](https://support.microsoft.com/Library/Images/3021206.png)
+    ![A screenshot of the certificate warning page.](./media/set-up-web-access/certificate-warning.png)
 
     > [!NOTE]
     > This certificate warning is displayed if an incorrect certificate is being used in the Exchange server. Report this issue to the network administrator.    

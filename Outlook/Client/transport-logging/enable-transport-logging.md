@@ -58,9 +58,9 @@ To enable logging, follow the steps for your version of Outlook.
 
 #### Microsoft Outlook 2019, Microsoft Outlook 2016, Microsoft Outlook 2013, Microsoft Outlook 2010, and Outlook for Office 365
 
-1. On the **File **tab, click **Options**.    
-2. In the **Outlook Options **dialog box, click **Advanced**.    
-3. In the **Other **section, select the **Enable troubleshooting logging (requires restarting Outlook)** check box, and then click **OK**.    
+1. On the **File** tab, click **Options**.    
+2. In the **Outlook Options** dialog box, click **Advanced**.    
+3. In the **Other** section, select the **Enable troubleshooting logging (requires restarting Outlook)** check box, and then click **OK**.    
 4. Exit and then restart Outlook.    
  
 #### Microsoft Outlook 2007 and earlier versions

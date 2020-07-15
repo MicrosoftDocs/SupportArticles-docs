@@ -72,7 +72,7 @@ The troubleshooter runs in two stages. First, it examines the IIS Default Web Si
 
 The following screen shot shows how this display might appear.
 
-![EMT shooter ](https://support.microsoft.com/Library/Images/3063914.jpg)
+![EMT shooter](./media/connecting-remote-server-failed/emt-shooter.png)
 
 The EMTshooter logs events in the "Microsoft-Exchange-Troubleshooters/Operational" event log. All results that are displayed in the CMD window are also logged in the event log to create a record.
 
@@ -92,7 +92,7 @@ The EMTshooter logs events in the "Microsoft-Exchange-Troubleshooters/Operationa
 
 To install the EMT shooter, follow these steps:
 
-1. Download the troubleshooter compressed file that has a .zip filename extension from [here](https://gallery.technet.microsoft.com/exchange-management-b9d918b1).   
+1. Download the troubleshooter compressed file that has a .zip filename extension from [here](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/Exchange/4274/1/EMTshooter.zip).   
 2. Extract the four files that are included in the .zip file into a folder, and then rename the file extensions to .ps1.   
 3. Run EMTshooter.ps1 from a standard (and local) Windows PowerShell window.   
 

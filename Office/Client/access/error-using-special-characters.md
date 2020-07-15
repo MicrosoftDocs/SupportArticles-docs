@@ -13,12 +13,19 @@ ms.custom:
 - CSSTroubleshoot
 ms.reviewer: 
 appliesto:
+- Access 365
+- Access 2019
+- Access 2016
+- Access 2013
+- Access 2010
 - Microsoft Office Access 2007
 - Microsoft Office Access 2003
 search.appverid: MET150
 ---
 
 # Error message when you use special characters in Access databases
+
+This article lists the special characters to avoid using when you work with the database object names or the field names in all versions of Access.
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
@@ -44,7 +51,7 @@ You use one of the following special characters in the name of a table field:
 
 In this case, you receive the following error message:
 
-> The field name is not valid.<br/>
+> The field name is not valid.  
 > Make sure that the name doesn't contain a period(.), exclamation point(!), bracket([]), leading space, or non-printable character such as a carriage return. If you have pasted the name from another application, try pressing ESC and typing the name again.
 
 If you use these special characters in a table name, you receive the following error message:
@@ -57,12 +64,12 @@ You create a query expression. The query expression includes fields that contain
 
 - If the field name contains a space character, a question mark (?), or an at sign (@), you receive the following error message:
 
-  > The Expression you entered contains invalid syntax.<br/>
+  > The Expression you entered contains invalid syntax.  
   > You may have entered an operand without an operator
 
 - If the field name contains a quotation mark(") or an apostrophe('), you receive the following error message:
 
-  > The Expression you entered has an invalid string.<br/>
+  > The Expression you entered has an invalid string.  
   > A string can be up to 2048 characters long, including opening and closing quotation marks.
 
 - If the field name contains a number sign (#), you receive the following error message:
@@ -71,7 +78,7 @@ You create a query expression. The query expression includes fields that contain
 
 - If the field name contains a percent sign (%), a tilde (~), a semicolon (;), or a bracket ([]), you receive the following error message:
 
-  > The Expression you entered contains invalid syntax.<br/>
+  > The Expression you entered contains invalid syntax.  
   > You omitted an operand or operator, you entered an invalid character or comma, or you entered text without surrounding it in quotation marks.
 
 - If the field name contains a brace ({}), you receive the following error message:

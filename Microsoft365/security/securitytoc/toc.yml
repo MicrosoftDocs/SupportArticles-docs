@@ -1,5 +1,5 @@
 - name: Microsoft 365 Security Troubleshooting
-  href: ../security.md
+  href: ../microsoft-365-security-welcome.md
   items:
   - name: Antispam
     items:
@@ -33,10 +33,6 @@
       href: ../o365-security/invalid-security-code-office-365-azure.md
     - name: Issue with connect-MSOLService cmdlet
       href: ../o365-security/access-denied-office-365-azure.md
-    - name: TLS 1.0 and 1.1 deprecation
-      href: ../o365-security/tls-1-2-in-office-365-gcc.md
-    - name: TLS 1.2 in O365
-      href: ../o365-security/prepare-tls-1.2-in-office-365.md
   - name: Outlook
     items:
     - name: Junk E-mail Reporting Add-in

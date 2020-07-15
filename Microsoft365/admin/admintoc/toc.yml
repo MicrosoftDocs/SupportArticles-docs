@@ -1,5 +1,5 @@
 - name: Office 365 Administration Troubleshooting
-  href: ../admin.md
+  href: ../o365-admin-welcome.md
   items:
   - name: Access Management
     items:
@@ -191,6 +191,8 @@
       href: ../installation/blank-app-launcher-and-menu-bar.md
     - name: Can't start this app when installing an add-in
       href: ../installation/cannot-install-office-add-in.md
+    - name: Deploy SaRA using Intune
+      href: ../installation/install-sara-from-intune.md
     - name: Install Office 365 apps
       href: ../installation/install-apps.md
     - name: Install SaRA from network share

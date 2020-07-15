@@ -46,7 +46,7 @@ To resolve this issue, try the following general resolutions to change the File 
     > [!NOTE]
     > Clear the option means allow user to open or save the file. Check the option means block the file.
 
-    ![Trust Center window](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4013470_en_1)
+    ![Trust Center window](./media/file-blocked-in-office/trust-center-window.png)
 4. Select **OK** two times.
 5. Try to open or save the file that was blocked again.
 

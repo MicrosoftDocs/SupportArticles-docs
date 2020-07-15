@@ -1,5 +1,5 @@
 - name: Exchange Online Troubleshooting
-  href: ../exchange-online.md
+  href: ../exchange-online-welcome.md
   items:
   - name: Active Sync
     items:
@@ -173,6 +173,8 @@
     items:
     - name: Changes in message store
       href: ../send-emails/smtp-submission-improvements.md
+    - name: EWS API cannot access Teams data 
+      href: ../send-emails/ews-not-support-access-teams-data.md
   - name: Shared Mailboxes
     items:
     - name: Sent items aren't saved

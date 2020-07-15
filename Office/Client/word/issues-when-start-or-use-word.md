@@ -47,11 +47,11 @@ Try the following options to help determine the root cause of your problem in Wo
 ![Option 1](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-1.png)
 
 </a>
-</td><td><b><a href="#option1">Insert your document into another file</a></b>
+</td><td>**<a href="#option1">Insert your document into another file</a>**
 <ol>
-<li>On the <b>File</b> menu, select <b>New</b>, and then select <b>Blank Document</b>.</li>
-<li>On the <b>Insert tab</b>, select <b>Object</b> in the <b>Text</b> group, and then select <b>Text from File</b>.</li>
-<li>Select the file that you want to open and insert, and then select <b>Insert</b>.</li>
+<li>On the **File** menu, select **New**, and then select **Blank Document**.</li>
+<li>On the **Insert tab**, select **Object** in the **Text** group, and then select **Text from File**.</li>
+<li>Select the file that you want to open and insert, and then select **Insert**.</li>
 </ol>
 </td>
 </tr>
@@ -63,10 +63,10 @@ Try the following options to help determine the root cause of your problem in Wo
 
 </a>
 </td>
-<td><b><a href="#option2">Start Word by using the /a switch</a></b>
+<td>**<a href="#option2">Start Word by using the /a switch</a>**
 <ol>
-<li>Type <b>Run</b> in the <b>Search</b> box (in Windows 10, Windows 8.1, or Windows 8) or in the <b>Start Search</b> box on the <b>Start</b> menu (in earlier versions of Windows), and then press Enter.</li>
-<li>In the <b>Run</b> dialog box, type <b>winword /a</b>, and then press Enter.</li>
+<li>Type **Run** in the **Search** box (in Windows 10, Windows 8.1, or Windows 8) or in the **Start Search** box on the **Start** menu (in earlier versions of Windows), and then press Enter.</li>
+<li>In the **Run** dialog box, type **winword /a**, and then press Enter.</li>
 </ol>
 </td>
 </tr>
@@ -78,10 +78,10 @@ Try the following options to help determine the root cause of your problem in Wo
 
 </a>
 </td>
-<td><b><a href="#option3">Delete the Word Data registry subkey</a></b>
+<td>**<a href="#option3">Delete the Word Data registry subkey</a>**
 <ol>
 <li>Exit all Office programs.</li>
-<li>Type <b>regedit</b> in the <b>Search</b> box (in Windows 10, Windows 8.1, or Windows 8) or in the <b>Start Search</b> box on the <b>Start</b> menu (in earlier versions of Windows), and then press Enter.</li>
+<li>Type **regedit** in the **Search** box (in Windows 10, Windows 8.1, or Windows 8) or in the **Start Search** box on the **Start** menu (in earlier versions of Windows), and then press Enter.</li>
 <li>Locate the following registry subkey, as appropriate for the version of Word that you are using.
 
 |||
@@ -94,9 +94,9 @@ Try the following options to help determine the root cause of your problem in Wo
 
 
 </li>
-<li>Select <b>Data</b>, and then select <b>Export</b> on the <b>File</b> menu.</li>
+<li>Select **Data**, and then select **Export** on the **File** menu.</li>
 <li>Name the file Wddata.reg, and then save the file to the desktop.</li>
-<li>On the <b>Edit</b> menu, select <b>Delete</b>, and then select <b>Yes</b>.</li>
+<li>On the **Edit** menu, select **Delete**, and then select **Yes**.</li>
 <li>Exit Registry Editor.</li>
 <li>Start Word.</li>
 </ol>
@@ -111,11 +111,11 @@ Try the following options to help determine the root cause of your problem in Wo
 
 </a>
 </td>
-<td><b><a href="#option4">Delete the Word Options registry key</a></b>
+<td>**<a href="#option4">Delete the Word Options registry key</a>**
 
 <ol>
 <li>Exit all Office programs.</li>
-<li>Type <b>regedit</b> in the <b>Search</b> box (in Windows 10, Windows 8.1, or Windows 8) or in the <b>Start Search</b> box on the <b>Start</b> menu (in earlier versions of Windows), and then press Enter.</li>
+<li>Type **regedit** in the **Search** box (in Windows 10, Windows 8.1, or Windows 8) or in the **Start Search** box on the **Start** menu (in earlier versions of Windows), and then press Enter.</li>
 <li>Locate the following registry subkey, as appropriate for the version of Word that you are running.
 
 |||
@@ -128,9 +128,9 @@ Try the following options to help determine the root cause of your problem in Wo
 
 
 </li>
-<li>Select <b>Options</b>, and then select <b>Export</b> on the <b>File</b> menu.</li>
+<li>Select **Options**, and then select **Export** on the **File** menu.</li>
 <li>Name the file Wddata.reg, and then save the file to the desktop.</li>
-<li>On the <b>Edit</b> menu, select <b>Delete</b>, and then select <b>Yes</b>.</li>
+<li>On the **Edit** menu, select **Delete**, and then select **Yes**.</li>
 <li>Exit Registry Editor.</li>
 <li>Start Word.    </li>
 </ol>
@@ -145,10 +145,10 @@ Try the following options to help determine the root cause of your problem in Wo
 
 </a>
 </td>
-<td><b><a href="#option5">Replace the Normal.dot or Normal.dotm global template file</a></b>
+<td>**<a href="#option5">Replace the Normal.dot or Normal.dotm global template file</a>**
 <ol>
 <li>Exit all Office programs.</li>
-<li>Type <b>cmd</b> in the <b>Search</b> box (in Windows 10, Windows 8.1, or Windows 8) or in the <b>Start Search</b> box on the <b>Start</b> menu (in earlier versions of Windows), and then press Enter.</li>
+<li>Type **cmd** in the **Search** box (in Windows 10, Windows 8.1, or Windows 8) or in the **Start Search** box on the **Start** menu (in earlier versions of Windows), and then press Enter.</li>
 <li>At the command prompt, type the following command, as appropriate for the version of Word that you are running, and then press Enter:
 
    **Word 2016, Word 2013, Word 2010, or Word 2007**
@@ -163,7 +163,7 @@ Try the following options to help determine the root cause of your problem in Wo
 
 
 </li>
-<li>At the command prompt, type <b>exit</b>, and then press Enter.</li>
+<li>At the command prompt, type **exit**, and then press Enter.</li>
 <li>Start Word.</li>
 </ol>
 
@@ -177,11 +177,11 @@ Try the following options to help determine the root cause of your problem in Wo
 
 </a>
 </td>
-<td><b><a href="#option6">Disable the Startup folder add-ins</a></b>
+<td>**<a href="#option6">Disable the Startup folder add-ins</a>**
 
 <ol>
 <li>Exit all Office programs.</li>
-<li>Start Windows Explorer. To do this, type <b>windows ex</b> in the <b>Search</b> box (in Windows 10, Windows 8.1, or Windows 8) or in the <b>Start Search</b> box on the <b>Start</b> menu (in earlier versions of Windows), and then press Enter.</li>
+<li>Start Windows Explorer. To do this, type **windows ex** in the **Search** box (in Windows 10, Windows 8.1, or Windows 8) or in the **Start Search** box on the **Start** menu (in earlier versions of Windows), and then press Enter.</li>
 <li>Type the following command in the address bar, as appropriate for the version of Word that you're running and its installation type, and then press Enter.
 
 
@@ -201,8 +201,8 @@ Try the following options to help determine the root cause of your problem in Wo
 | **Word 2003** || %programfiles%\Microsoft\Office\Office11\Startup\ |
 
 </li>
-<li>Right-click one of the files in the folder, and then select <b>Rename</b>.</li>
-<li>After the file name, type <b>.old</b>, and then press Enter.
+<li>Right-click one of the files in the folder, and then select **Rename**.</li>
+<li>After the file name, type **.old**, and then press Enter.
 
    > [!IMPORTANT]
    >  Make a note of the original file name so that you can restore the file, if it is necessary.
@@ -212,7 +212,7 @@ Try the following options to help determine the root cause of your problem in Wo
 <li>If you can no longer reproduce the problem, you have found the specific add-in that causes the problem. If you must have the features that the add-in provides, contact the vendor of the add-in for an update.
 
    If the problem is not resolved, rename the add-in by using its original name, and then repeat steps 3 through 6 for each file in the Startup folder.</li>
-<li>If you can still reproduce the problem, type the following path in the address bar of Windows Explorer, and then select <b>OK</b>.
+<li>If you can still reproduce the problem, type the following path in the address bar of Windows Explorer, and then select **OK**.
 
 | Windows 10, Windows 8.1, Windows 8, Windows 7, or Windows Vista ||
 |---|---|
@@ -237,24 +237,24 @@ Try the following options to help determine the root cause of your problem in Wo
 
 </a>
 </td>
-<td><b><a href="#option7">Delete the COM add-ins registry keys</a></b>
+<td>**<a href="#option7">Delete the COM add-ins registry keys</a>**
 
 <ol>
 <li>Exit all Office programs.</li>
-<li>Type <b>regedit</b> in the <b>Search</b> box (in Windows 10, Windows 8.1, or Windows 8) or in the <b>Start Search</b> box on the <b>Start</b> menu (in earlier versions of Windows), and then press Enter.</li>
+<li>Type **regedit** in the **Search** box (in Windows 10, Windows 8.1, or Windows 8) or in the **Start Search** box on the **Start** menu (in earlier versions of Windows), and then press Enter.</li>
 <li>Locate the following registry subkey:<br/>
 HKEY_CURRENT_USER\Software\Microsoft\Office\Word\Addins
 
 </li>  
-<li>Select <b>Addins</b>, and then select <b>Export</b> on the <b>File</b> menu.</li>
+<li>Select **Addins**, and then select **Export** on the **File** menu.</li>
 <li>Name the file WdaddinHKCU.reg, and then save the file to the desktop.</li>
-<li>On the <b>Edit</b> menu, select <b>Delete</b>, and then select <b>Yes</b>.</li>
+<li>On the **Edit** menu, select **Delete**, and then select **Yes**.</li>
 <li>Locate the following registry subkey:<br/>
 HKEY_LOCAL_MACHINE\Software\Microsoft\Office\Word\Addins
 </li>
-<li>Select <b>Addins</b>, and then on the <b>File</b> menu, select <b>Export</b>.</li>
+<li>Select **Addins**, and then on the **File** menu, select **Export**.</li>
 <li>Name the file WdaddinHKLM.reg, and then save the file to the desktop.</li>
-<li>On the <b>Edit</b> menu, select <b>Delete</b>, and then select <b>Yes</b>.</li>
+<li>On the **Edit** menu, select **Delete**, and then select **Yes**.</li>
 <li>Exit Registry Editor.</li>
 <li>Start Word.</li>
 </ol>
@@ -270,12 +270,12 @@ HKEY_LOCAL_MACHINE\Software\Microsoft\Office\Word\Addins
 
 </a>
 </td>
-<td><b><a href="#option8">Change the default printer</a></b>
+<td>**<a href="#option8">Change the default printer</a>**
 
 <ol>
 <li>Exit all Office programs.</li>
-<li>Type <b>regedit</b> in the <b>Search</b> box (in Windows 10, Windows 8.1, or Windows 8) or in the <b>Start Search</b> box on the <b>Start</b> menu (in earlier versions of Windows), and then press Enter.</li>
-<li>Right-click <b>Microsoft XPS Document Writer</b>, and then select <b>Set as default printer</b>.</li>
+<li>Type **regedit** in the **Search** box (in Windows 10, Windows 8.1, or Windows 8) or in the **Start Search** box on the **Start** menu (in earlier versions of Windows), and then press Enter.</li>
+<li>Right-click **Microsoft XPS Document Writer**, and then select **Set as default printer**.</li>
 <li>Start Word.</li>
 </ol>
 
