@@ -92,7 +92,7 @@ To resolve this problem, use the System Update Readiness tool. Then, install the
 
 5. Reinstall the update or service pack you were trying to install previously.
 
-To manually fix corruption errors that the tool detects but can't be fixed, see [How to fix errors that are found in the CheckSUR.log](#how-to-fix-errors-that-are-found-in-the-CheckSURlog).
+To manually fix corruption errors that the tool detects but can't be fixed, see [How to fix errors that are found in the CheckSUR log file](#how-to-fix-errors-that-are-found-in-the-CheckSUR-log-file).
 
 ## Resolution - Download the package from Microsoft Update Catalog directly
 
@@ -181,7 +181,7 @@ The System Update Readiness tool creates a log file that captures any issues tha
 - %SYSTEMROOT%\Logs\CBS\CheckSUR.log
 - %SYSTEMROOT%\Logs\CBS\CheckSUR.persist.log
 
-## How to fix errors that are found in the CheckSUR.log
+## How to fix errors that are found in the CheckSUR log file
 
 To manually fix corruption errors that the System Update Readiness tool detects but can't fix, follow these steps:
 
