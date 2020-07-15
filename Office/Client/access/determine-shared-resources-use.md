@@ -13,6 +13,7 @@ ms.custom:
 - CSSTroubleshoot
 ms.reviewer: 
 appliesto:
+- Access 365
 - Access 2019
 - Access 2016
 - Access 2013
@@ -24,6 +25,8 @@ search.appverid: MET150
 # Determine who opened an Office Access database in the exclusive mode
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+
+This article describes how to use the OS utilities to determine who is using the shared resources on your computer when an Access database is opened in exclusive mode.
 
 _Original KB number:_ &nbsp; 824274
 

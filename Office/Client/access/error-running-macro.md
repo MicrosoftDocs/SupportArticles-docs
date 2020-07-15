@@ -1,6 +1,6 @@
 ---
 title: Unable to run macro in Access database
-description: Fixes an issue in which you can't run a macro that calls a VBA function in an Access 2007 database.
+description: Fixes an issue in which you can't run a macro that calls a VBA function in an Access database.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm 
@@ -13,6 +13,7 @@ ms.custom:
 - CSSTroubleshoot
 ms.reviewer:
 appliesto:
+- Access 365
 - Access 2019
 - Access 2016
 - Access 2013
@@ -24,6 +25,8 @@ search.appverid: MET150
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
+This article fixes an issue in which you can't run a macro that calls a VBA function.
+
 _Original KB number:_ &nbsp; 931407
 
 > [!NOTE]
@@ -33,11 +36,11 @@ _Original KB number:_ &nbsp; 931407
 
 When you run a macro that calls a Microsoft Visual Basic for Applications (VBA) function in a Microsoft Office Access 2007 or later database, you receive the following error message:
 
-> Action Failed<br/>
-> Macro Name: **MacroName**<br/>
-> Condition: **Condition**<br/>
-> Macro Name: RunCode<br/>
-> Arguments: **Arguments**<br/>
+> Action Failed  
+> Macro Name: **MacroName**  
+> Condition: **Condition**  
+> Macro Name: RunCode  
+> Arguments: **Arguments**  
 > Error Number: 2950
 
 ## Cause
@@ -93,4 +96,3 @@ To create the AutoExec macro and the form, follow these steps:
 
 When the database opens, the AutoExec macro starts and then tests the
 `IsTrusted` condition. If the database is not trusted by Access, the macro opens the form that you specified in the "OpenForm" action of the macro.
-
