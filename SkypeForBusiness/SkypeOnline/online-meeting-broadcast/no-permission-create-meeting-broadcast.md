@@ -27,7 +27,7 @@ When you try to create a new Skype Meeting Broadcast by using the [Skype Meeti
 ![Screen shot of the error message in Skype Meeting Broadcast ](./media/no-permission-create-meeting-broadcast/error-message.png)
 
 > [!NOTE]
-> Skype Meeting Broadcast isn't currently available for nonprofit, educational (.edu), and government (.gov) plans. When customers who have one of these plans click **New Meeting** in the Skype Meeting Broadcast portal, they see this error message. However, because Skype Meeting Broadcast isn’t currently available for these plans, the steps in the "Solution" section won’t correct this issue.
+> Skype Meeting Broadcast isn't currently available for nonprofit, educational (.edu), and government (.gov) plans. When customers who have one of these plans click **New Meeting** in the Skype Meeting Broadcast portal, they see this error message. However, because Skype Meeting Broadcast isn't currently available for these plans, the steps in the "Solution" section won't correct this issue.
 
 ## Solution
 
@@ -49,7 +49,7 @@ Assign one of the following Office 365 licenses to the meeting organizer, as app
 - Skype for Business Online Standalone Plan 2
 
     > [!NOTE]
-    > Skype for Business Online Standalone Plan 3 doesn’t include Skype Meeting Broadcast.   
+    > Skype for Business Online Standalone Plan 3 doesn't include Skype Meeting Broadcast.   
 
 For more information about how to assign licenses, see [Assign licenses to users](https://support.office.com/article/assign-or-unassign-licenses-for-office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
 

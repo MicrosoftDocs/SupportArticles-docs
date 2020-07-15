@@ -19,7 +19,7 @@ appliesto:
 
 # Hybrid Deployment Troubleshooting
 
-Welcome to a Hybrid deployment of an on-premises and a cloud solution! Here’s a collection of information on how to identify and fix errors that you may run into when you use a combination of the two products.
+Welcome to a Hybrid deployment of an on-premises and a cloud solution! Here's a collection of information on how to identify and fix errors that you may run into when you use a combination of the two products.
 
 ## Still need help? 
 

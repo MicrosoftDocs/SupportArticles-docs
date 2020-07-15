@@ -26,12 +26,12 @@ search.appverid:
 Internet Mail Access Protocol (IMAP) clients are repeatedly prompted for authentication credentials under the following conditions:
 
 - A Microsoft Exchange Server 2010 coexists with a Microsoft Exchange Server 2016 environment.
-- The affected user’s mailbox is hosted on Exchange 2010 servers, and the connectivity endpoint is in Exchange 2016 server.
+- The affected user's mailbox is hosted on Exchange 2010 servers, and the connectivity endpoint is in Exchange 2016 server.
 - A Windows Challenge/Response (NTLM) authentication method is used.
 
 ## Cause
 
-Exchange 2016 server doesn’t support NTLM or Kerberos authentication methods when authenticating proxy requests on Exchange 2010 servers.
+Exchange 2016 server doesn't support NTLM or Kerberos authentication methods when authenticating proxy requests on Exchange 2010 servers.
 
 ## Resolution
 
@@ -49,7 +49,7 @@ Exchange 2016 server doesn’t support NTLM or Kerberos authentication methods w
     - Microsoft Exchange IMAP4 Backend (MSExchangeIMAP4BE)
 
 > [!NOTE]
-> You might have to set the **LoginType** to **PlainTextAuthentication** if you’re using nonsecure (TCP 143) IMAP. This applies mostly to older IMAP clients. If **SecureLogin** is set, the IMAP client must do a **STARTTLS** before authentication. Clients that don't support **STARTTLS** need to set the **LoginType** to **PlainTextAuthentication**.
+> You might have to set the **LoginType** to **PlainTextAuthentication** if you're using nonsecure (TCP 143) IMAP. This applies mostly to older IMAP clients. If **SecureLogin** is set, the IMAP client must do a **STARTTLS** before authentication. Clients that don't support **STARTTLS** need to set the **LoginType** to **PlainTextAuthentication**.
 
 ### Method 2
 

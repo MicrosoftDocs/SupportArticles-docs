@@ -15,17 +15,17 @@ appliesto:
 - Skype for Business Online
 ---
 
-# Skype for Business Online users can’t manage voice mail or customize a greeting
+# Skype for Business Online users can't manage voice mail or customize a greeting
 
 ## Problem 
 
 Consider the following scenario:
 
-- You're assigned a license for Skype for Business Online, Cloud PBX, or PSTN calling, but you don’t have a license for Exchange Online (Plan 2) or later.    
+- You're assigned a license for Skype for Business Online, Cloud PBX, or PSTN calling, but you don't have a license for Exchange Online (Plan 2) or later.    
 - You can receive calls from Enterprise Voice or your Skype for Business phone number.   
 - By default, if the call isn't answered after 20 seconds, Azure Voice Mail accepts the call.   
 
-In this scenario, you can’t retrieve your voice mail by using the Skype for Business client. Additionally, you can’t configure your voice mail setup. This includes creating a voice mail greeting.
+In this scenario, you can't retrieve your voice mail by using the Skype for Business client. Additionally, you can't configure your voice mail setup. This includes creating a voice mail greeting.
 
 ## Workaround 
 

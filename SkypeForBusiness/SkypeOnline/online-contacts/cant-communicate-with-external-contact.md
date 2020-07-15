@@ -24,9 +24,9 @@ appliesto:
 
 Consider the following scenario: 
 
-- You add an external contact that uses a Microsoft account to a Skype for Business Online (formerly Lync Online) user’s contact list.    
-- The external contact uses a custom domain or an "email as sign in” (EASI) ID domain instead of a default @outlook.com address.    
-- You add the contact to Lync by using the contact’s email address. For example, you use the email address joe@live-contoso.com.    
+- You add an external contact that uses a Microsoft account to a Skype for Business Online (formerly Lync Online) user's contact list.    
+- The external contact uses a custom domain or an "email as sign in" (EASI) ID domain instead of a default @outlook.com address.    
+- You add the contact to Lync by using the contact's email address. For example, you use the email address joe@live-contoso.com.    
 
 In this scenario, you may experience the following issues: 
 
@@ -58,7 +58,7 @@ This method allows for a quick resolution if Skype for Business Online users are
 
 ### Alternative resolution by using DNS
 
-The Skype for Business Online administrator must add the correct Service (SRV) Federation records to the Domain Name System (DNS) host for the Skype for Business Online environment. The domain owner for the external contact’s custom domain must also add an SRV record that resembles the following example:
+The Skype for Business Online administrator must add the correct Service (SRV) Federation records to the Domain Name System (DNS) host for the Skype for Business Online environment. The domain owner for the external contact's custom domain must also add an SRV record that resembles the following example:
 
     sipfederationtls._tcp.live-contoso.com
     port = 5061
@@ -70,7 +70,7 @@ Administrators can let Skype for Business Online users add contacts without havi
 
 PIC in Skype for Business Online supports connectivity with Microsoft accounts (msn.com, live.com and outlook.com). However, when you add PIC contacts that use a Windows Live EASI domain such as live-contoso.com, Skype for Business Online can't resolve the Instant Messaging (IM) Federation server based on the domain suffix. 
 
-If you directly add a PIC contact by using the contact’s EASI ID (for example, you use JoeAndreshak.@live-contoso.com), a specific SRV record is required in the DNS for live-contoso.com. This SRV record is required because the Skype for Business Online server uses the domain suffix in the user's EASI ID to determine how to route messages. In this example, the Skype for Business Online server tries to use the live-contoso.com domain suffix. 
+If you directly add a PIC contact by using the contact's EASI ID (for example, you use JoeAndreshak.@live-contoso.com), a specific SRV record is required in the DNS for live-contoso.com. This SRV record is required because the Skype for Business Online server uses the domain suffix in the user's EASI ID to determine how to route messages. In this example, the Skype for Business Online server tries to use the live-contoso.com domain suffix. 
 
 For more info about how to troubleshoot Skype for Business Online federated contacts, see [Skype for Business Online users can't communicate with external contacts ](https://docs.microsoft.com/SkypeForBusiness/troubleshoot/online-im-presence/cannot-communicate-with-external-contacts).
 

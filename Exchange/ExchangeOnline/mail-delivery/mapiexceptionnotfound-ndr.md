@@ -27,7 +27,7 @@ For example, users may experience this issue when they send mail to a distributi
 
 ## Cause 
 
-This issue occurs if the Clutter feature is enabled for the user but the Clutter folder is missing in the user’s mailbox. 
+This issue occurs if the Clutter feature is enabled for the user but the Clutter folder is missing in the user's mailbox. 
 
 ## Workaround 
 

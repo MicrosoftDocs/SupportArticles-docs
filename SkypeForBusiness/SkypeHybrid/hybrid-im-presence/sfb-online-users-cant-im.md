@@ -1,6 +1,6 @@
 ---
 title: SFB Online users in an Office 365 domain can't IM or detect users
-description: Fixes a problem in which Skype for Business Online users in a domain that's not added to the on-premises Skype for Business Server or Lync Server 2013 hybrid deployment can’t see the presence of on-premises users or send them an IM.
+description: Fixes a problem in which Skype for Business Online users in a domain that's not added to the on-premises Skype for Business Server or Lync Server 2013 hybrid deployment can't see the presence of on-premises users or send them an IM.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -21,7 +21,7 @@ appliesto:
 - Lync Server 2013
 ---
 
-# Skype for Business Online users in an Office 365 domain can’t IM or detect users in an on-premises domain
+# Skype for Business Online users in an Office 365 domain can't IM or detect users in an on-premises domain
 
 ## Problem
 
@@ -38,7 +38,7 @@ In this scenario, users in the my.contoso.com domain can't see the presence stat
 You may also see the following detail recorded in the client logs: 
 
 ```adoc
-ms-diagnostics: 1017; reason="Cannot route From and To domains in this combination"; summary="Domain type analysis indicates that the ms-split-domain-info header in the message is the wrong type”
+ms-diagnostics: 1017; reason="Cannot route From and To domains in this combination"; summary="Domain type analysis indicates that the ms-split-domain-info header in the message is the wrong type"
 ```
 
 ## Solution
