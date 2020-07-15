@@ -13,6 +13,7 @@ ms.custom:
 - CSSTroubleshoot
 ms.reviewer: SUZANNEL
 appliesto:
+- Access 365
 - Access 2019
 - Access 2016
 - Access 2013
@@ -25,6 +26,8 @@ search.appverid: MET150
 ---
 
 # Access may stop responding when you try to create an MDE, ACCDE, or ADE file
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 Moderate: Requires basic macro, coding, and interoperability skills.  
 
