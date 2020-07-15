@@ -46,7 +46,7 @@ msdt.exe -ep WindowsHelp id SearchDiagnostic
 
 ## Restart Windows Search or your device
 
-End the SearchUI process to restart Windows Search. To do this, follow these steps:
+End the **SearchUI** process to restart Windows Search. To do this, follow these steps:
 
 1. Press Ctrl+Alt+Delete, and select **Task Manager**.
 2. In the **Task Manager** window, select the **Details** tab.
