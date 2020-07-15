@@ -1,6 +1,6 @@
 ---
 title: Unable to run macro in Access database
-description: Fixes an issue in which you can't run a macro that calls a VBA function in an Access 2007 database.
+description: Fixes an issue in which you can't run a macro that calls a VBA function in an Access database.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm 
@@ -13,6 +13,7 @@ ms.custom:
 - CSSTroubleshoot
 ms.reviewer:
 appliesto:
+- Access 365
 - Access 2019
 - Access 2016
 - Access 2013
@@ -24,6 +25,8 @@ search.appverid: MET150
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
+This article fixes an issue in which you can't run a macro that calls a VBA function.
+
 _Original KB number:_ &nbsp; 931407
 
 > [!NOTE]
@@ -33,11 +36,11 @@ _Original KB number:_ &nbsp; 931407
 
 When you run a macro that calls a Microsoft Visual Basic for Applications (VBA) function in a Microsoft Office Access 2007 or later database, you receive the following error message:
 
-> Action Failed<br/>
-> Macro Name: **MacroName**<br/>
-> Condition: **Condition**<br/>
-> Macro Name: RunCode<br/>
-> Arguments: **Arguments**<br/>
+> Action Failed  
+> Macro Name: **MacroName**  
+> Condition: **Condition**  
+> Macro Name: RunCode  
+> Arguments: **Arguments**  
 > Error Number: 2950
 
 ## Cause
@@ -74,14 +77,14 @@ To do this, follow these steps:
 
 ## More Information
 
-You can use an AutoExec macro to test whether a database is trusted when you open the database. Additionally, the macro can open a form that displays a customized message to users if the database is not trusted. This message lets users know that the database must be enabled or trusted for the code to run successfully.
+You can use an `AutoExec` macro to test whether a database is trusted when you open the database. Additionally, the macro can open a form that displays a customized message to users if the database is not trusted. This message lets users know that the database must be enabled or trusted for the code to run successfully.
 
-To create the AutoExec macro and the form, follow these steps:
+To create the `AutoExec` macro and the form, follow these steps:
 
 1. Create a new form in Design view.
 2. Add a text box or a label to the form, and then type the information that you want to display to the user.
 3. Save and then close the form.
-4. Create a macro, and then name the macro AutoExec.
+4. Create a macro, and then name the macro `AutoExec`.
 5. Show the **Conditions** column.
 6. Type the following line in the **Conditions** column:
 
@@ -91,6 +94,5 @@ To create the AutoExec macro and the form, follow these steps:
 8. In the **Form Name** box under **Action Arguments**, click the form that you created in step 1.
 9. Save and then close the macro.
 
-When the database opens, the AutoExec macro starts and then tests the
-`IsTrusted` condition. If the database is not trusted by Access, the macro opens the form that you specified in the "OpenForm" action of the macro.
-
+When the database opens, the `AutoExec` macro starts and then tests the
+`IsTrusted` condition. If the database is not trusted by Access, the macro opens the form that you specified in the `OpenForm` action of the macro.
