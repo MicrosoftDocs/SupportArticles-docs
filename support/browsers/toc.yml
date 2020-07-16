@@ -77,6 +77,9 @@
     - name: Use one-word to access intranet sites
       href: one-word-intranet-sites.md
 
+    - name: Use Proxy Servers with IE
+      href: use-proxy-servers-with-ie.md
+
 - name: Core Features
   items:
     - name: Apply property error when changing shortcut
@@ -96,6 +99,9 @@
 
     - name: Date is wrong when converting to DST
       href: error-dst-time-zones.md
+
+    - name: GPU hardware acceleration
+      href: gpu-hardware-acceleration.md
 
     - name: Hidden text can be copied
       href: hidden-text-can-copy-from-ie.md
@@ -177,6 +183,9 @@
     - name: How to hide the Clear button
       href: how-to-hide-clear-button-ie10.md
 
+    - name: IE document modes FAQ
+      href: ie-document-modes-faq.md
+
     - name: Iframe content should be rendered in standard mode
       href: an-iframe-content-on-top-scrollbar.md
 
@@ -230,6 +239,9 @@
 
     - name: Troubleshoot online gaming issues
       href: troubleshoot-online-games-ie.md
+
+    - name: Troubleshoot missing graphic icons
+      href: troubleshoot-missing-graphic-icons.md
 
     - name: Text-overlow ellipsis not working
       href: textoverlow-ellipsis-not-working.md
@@ -297,11 +309,17 @@
     - name: Can't sign in to VSTS
       href: cannot-sign-in-to-vsts.md
 
+    - name: Can't turn off Enhanced Security
+      href: cannot-turn-off-enhanced-security.md
+
     - name: CSP shows Loading for a certificate request
       href: csp-as-loading-when-submit-certificate-request.md
 
     - name: Error occurs when opening files
       href: cannot-open-certain-files.md
+
+    - name: FAQs about Enhanced Security
+      href: faq-ie-enhanced-security.md
 
     - name: Https site can't be displayed
       href: ie-cannot-display-https-site.md
