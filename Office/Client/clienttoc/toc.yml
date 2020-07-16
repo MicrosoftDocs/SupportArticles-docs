@@ -37,7 +37,7 @@
       href: ../access/automate-selecte-printer-for-report.md
     - name: Build a dynamic query with values from a search form
       href: ../access/build-dynamic-query-from-search-form.md
-    - name: Cannot update. Database or object is read-only
+    - name: Can't update. Database or object is read-only
       href: ../access/database-or-object-is-read-only.md
     - name: Can't add new records programmatically
       href: ../access/adding-new-record-fails.md
@@ -329,7 +329,7 @@
       href: ../excel/calculate-age-before-1-1-1900.md
     - name: Calculate interpolation step value
       href: ../excel/calculate-interpolation-step-value.md
-    - name: Cannot use object linking and embedding
+    - name: Can't use object linking and embedding
       href: ../excel/cant-use-object-linking-and-embedding-error.md
     - name: Can't add refedit control to VBA userform
       href: ../excel/cant-add-refedit-control-to-vba-userform..md
@@ -917,11 +917,11 @@
       href: ../powerpoint/add-section-not-available.md
     - name: Audio stops playback after you leave original slide
       href: ../powerpoint/audio-stops-playback.md
-    - name: Cannot edit the footer information in the Header and Footer
+    - name: Can't edit the footer information in the Header and Footer
       href: ../powerpoint/fails-editing-footer-information.md
-    - name: Cannot edit video or audio in a presentation
+    - name: Can't edit video or audio in a presentation
       href: ../powerpoint/cannot-edit-video-or-audio.md
-    - name: Cannot load an add-in with a low macro security level
+    - name: Can't load an add-in with a low macro security level
       href: ../powerpoint/powerpoint-fails-loading-add-in.md
     - name: Change the export resolution of PowerPoint slide
       href: ../powerpoint/change-export-slide-resolution.md
