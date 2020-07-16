@@ -6,20 +6,22 @@ ms.prod-support-area-path:
 ---
 # .NET Framework 4.0 requires ClickOnce Manifest signing
 
-This article helps you resolve the problem that ClickOnce deployed applications can't avoid some prompts to accept installation from unknown publishers when Microsoft .NET Framework 4.0 or a later version has been installed.
+This article helps you resolve the problem that ClickOnce deployed applications can't avoid some prompts to accept installation from unknown publishers.
 
 _Original product version:_ &nbsp; Microsoft .NET Framework 4.0 and later versions  
 _Original KB number:_ &nbsp; 2651504
 
 ## Symptoms
 
-In the past, it has been possible for Visual Studio-developed applications that are deployed using the ClickOnce technology to avoid some of the prompting to accept installation from unknown publishers. It's beyond the scope of this article to identify those steps, particularly since this wasn't an intended behavior.
+In the past, Visual Studio-developed applications that are deployed by using the ClickOnce technology can avoid some of the prompting to accept installation from unknown publishers.
+
+It's beyond the scope of the article to identify those steps, particularly since it wasn't an intended behavior.
 
 Once .NET Framework 4.0 or a later version has been installed, even those applications that have been developed and target .NET Framework versions less than 4.0 will no longer skip those user dialogs.
 
 ## Cause
 
-This change in behavior is an increase in security. It's expected behavior for computers that have .NET Framework 4.0 or greater installed. It isn't affected by the targeted version of the .NET Framework for which the application was developed. It isn't affected by having lower versions of the .NET Framework installed along with .NET Framework 4.0.
+This change in behavior is an increase in security. It's an expected behavior for computers that have .NET Framework 4.0 or greater installed. It isn't affected by the targeted version of the .NET Framework for which the application was developed. It isn't affected by having lower versions of the .NET Framework installed along with .NET Framework 4.0.
 
 ## Resolution
 
