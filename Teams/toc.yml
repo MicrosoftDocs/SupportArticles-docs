@@ -37,7 +37,7 @@
       href: ./known-issues/renaming-channel-does-not-rename-folder-sharepoint.md
   - name: Conferencing
     items:
-    - name: "You need a phone system license" error when assigning a toll service number from the admin center
+    - name: '"You need a phone system license" error when assigning a toll service number from the admin center'
       href: ./known-issues/need-a-license-error-when-assigning-a-number.md
     - name: A phone number is blocked
       href: ./known-issues/phone-number-blocked-in-teams.md
@@ -67,7 +67,7 @@
       href: ./known-issues/no-audio-when-sharing-content-in-meeting.md
     - name: Team member maximum of 5000
       href: ./known-issues/teams-member-max-5000.md
-    - name: "The following application instance is not present in BVD" error when assigning a phone number to a resource accounts
+    - name: '"The following application instance is not present in BVD" error when assigning a phone number to a resource accounts'
       href: ./known-issues/following-application-instance-not-present-error.md
     - name: Users with Exchange Online mailboxes can't access meetings or connectors 
       href: ./known-issues/exchange-users-cant-access-meetings.md
