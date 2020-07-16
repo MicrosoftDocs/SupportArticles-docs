@@ -41,7 +41,7 @@ During saving the resource file, it tries to save a file named *resource.hm*. Th
 
     1. If you aren't using context help ID, then turning that off for every control would be the easiest solution. Turning it off from the resource editor would be safest. In the resource editor, check for all the controls and one of the properties will be **Help ID**. Set it to **False** for every control where it's **True**.
 
-        :::image type="content" source="./media/vs-2012-resource-editor-cannot-save-file/set-help-id-to-false.png" alt-text="Control properties Help ID" :::
+        :::image type="content" source="./media/resource-editor-cannot-save-file/set-help-id-to-false.png" alt-text="Control properties Help ID" :::
 
     2. Instead you could edit the .rc file directly. For instance, removing the last parameter here for every control with a **Help ID** would turn off the feature:
 
