@@ -24,7 +24,7 @@ search.appverid:
 
 You experience one or more of the following problems when you use Outlook:
 
-- Outlook continuously displays a message such as “Sending message 4 of 6” in the Progress bar even though there are no email messages queued. Additionally, Outlook stops responding when you try to close it. For example, you see the following message in the Progress bar:
+- Outlook continuously displays a message such as "Sending message 4 of 6" in the Progress bar even though there are no email messages queued. Additionally, Outlook stops responding when you try to close it. For example, you see the following message in the Progress bar:
 
     ![outbox_error](../media/delete-nonexistent-messages/outbox-error.png)
 
@@ -55,9 +55,9 @@ Use the MFCMAPI tool to delete the stuck messages. To do this, follow these step
 2. Open the MFCMAPI tool, and then select **OK**.
 3. Select the **Session** tab, and then select the **Logon** option.
 4. In the window that opens, select the Outlook profile, and then select the **OK** button.
-5. Double-click the account that’s experiencing the problems (it shows a small cylindrical icon next to the name).
+5. Double-click the account that's experiencing the problems (it shows a small cylindrical icon next to the name).
 6. Right-click **Root Mailbox**, and select the **Open contents table** option.
-7. In the next window, examine the columns, such as **From**, **To**, and **Subject**. Under **Subject**, if you see something called **Read**, or if you see a message that has “Read” as the subject, select that item, and then select **Actions** > **Submit** > **Abort submit**.
+7. In the next window, examine the columns, such as **From**, **To**, and **Subject**. Under **Subject**, if you see something called **Read**, or if you see a message that has "Read" as the subject, select that item, and then select **Actions** > **Submit** > **Abort submit**.
 8. Right-click the **Delete message** option, select **Permanent delete passing DELETE_HARD_DELETE (unrecoverable)** option, and then select **OK**.
 9. If you cannot right-click the **Delete message** option, delete the message that contains the read receipt subject.
 10. Repeat steps 6–9 for each read receipt that you have to delete.

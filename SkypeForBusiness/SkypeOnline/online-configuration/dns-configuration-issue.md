@@ -29,7 +29,7 @@ One or more of the following features don't work as expected in Skype for Busine
 
 Or, you receive one of the following error messages when you sign in to Lync 2010 or Lync 2013:
 
-- *Lync couldn’t find a Lync Server for contoso.com. There might be an issue with the Domain Name System (DNS) configuration for your domain. Please contact your support team.* 
+- *Lync couldn't find a Lync Server for contoso.com. There might be an issue with the Domain Name System (DNS) configuration for your domain. Please contact your support team.* 
 - *Cannot sign in because the server is temporarily unavailable. If the problem continues, please contact your support team.*  
 
 ## Solution 
@@ -46,7 +46,7 @@ Type|Service|Protocol|Port|Weight|Priority|TTL|Name|Target|
 > [!NOTE]
 > SRV records are processed by ascending order of priority, i.e. lower numbers have a higher priority. For example, if a DNS SRV record has a weight of 20 and a priority of 40, and another has a weight of 10 and a priority of 50, the record with a priority of 40 will be picked first because 40<50.
 >
-> When two targets have the same priority, weight is considered. Larger weights have a higher probability of being selected. DNS administrators use a weight value of 0 if there’s no server selection. Records with a weight value of 0 have low chances of being selected in the presence of records with greater values.
+> When two targets have the same priority, weight is considered. Larger weights have a higher probability of being selected. DNS administrators use a weight value of 0 if there's no server selection. Records with a weight value of 0 have low chances of being selected in the presence of records with greater values.
 >
 > If you have multiple SRV records with equal priority and weight, the Access Edge service will choose the first SRV record it received from the DNS server.
 
@@ -81,7 +81,7 @@ If any issues are detected, check the DNS configuration with your domain registr
  
 Some DNS hosts can't host SRV records, or the DNS hosts don't have options to host SRV records. This condition blocks the ability to communicate with external users (Federated and PIC). In these cases, there is currently no workaround except to change DNS hosts or to manage DNS through an on-premises DNS host.
 
-Some UNIX or Linux OS servers that host DNS don’t require the underscore (_) when you add SRV records to the DNS host. If your DNS host is running UNIX or Linux and the SRV records aren’t resolving correctly, remove the underscore from the host name of the SRV record. 
+Some UNIX or Linux OS servers that host DNS don't require the underscore (_) when you add SRV records to the DNS host. If your DNS host is running UNIX or Linux and the SRV records aren't resolving correctly, remove the underscore from the host name of the SRV record. 
 
 ## References
 

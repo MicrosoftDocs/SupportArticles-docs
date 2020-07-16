@@ -88,7 +88,7 @@ When you run the Enable-MSOnlineRichCoexistence cmdlet, the cmdlet performs the 
 
 - Sets Write permissions on all attributes for the MSOL_AD_SYNC account that directory synchronization created in the on-premises environment.   
 - Loads the Source MA and metaverse configurations for the write-back option that was selected. To do this, the Set-MSOnlineWriteBack cmdlet runs the Import-MIISServerConfig [-file path] cmdlet, where **file path** represents the location of the MA and metaverse config files that are included with the directory synchronization installation.    
-- Sets the AD MA credentials because the cmdlet has installed a “new” Source MA by using the following cmdlet: 
+- Sets the AD MA credentials because the cmdlet has installed a "new" Source MA by using the following cmdlet: 
    
   ```powershell
   Set-MIISADMAconfiguration [-forest] [-login] [-password] [-MA Name]

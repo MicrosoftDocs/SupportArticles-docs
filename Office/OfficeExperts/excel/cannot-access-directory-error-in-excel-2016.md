@@ -27,7 +27,7 @@ When you try to change the default save location to a SharePoint location in Mic
 
 ## Cause
 
-For some unknown reasons, some Office 2016 installations can’t create a necessary directory.
+For some unknown reasons, some Office 2016 installations can't create a necessary directory.
 
 ## Workaround
 

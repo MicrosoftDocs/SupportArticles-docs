@@ -1,6 +1,6 @@
 ---
 title: Exchange Management Shell fails to start with error Cannot find path because it does not exist
-description: This article describes an issue that Exchange Management Shell fails to start with error “Cannot find path because it does not exist”
+description: This article describes an issue that Exchange Management Shell fails to start with error "Cannot find path because it does not exist"
 author: TobyTu
 audience: ITPro
 ms.prod: office-perpetual-itpro
@@ -16,7 +16,7 @@ appliesto:
 -  Exchange Server 2016
 ---
 
-# Exchange Management Shell fails to start with error “Cannot find path '' because it does not exist”
+# Exchange Management Shell fails to start with error "Cannot find path '' because it does not exist"
 
 ## Symptoms
 

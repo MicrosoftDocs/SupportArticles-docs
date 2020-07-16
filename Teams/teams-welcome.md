@@ -20,7 +20,7 @@ appliesto:
 
 Welcome to Teams troubleshooting! If you're looking for known issues, you're in the right place. We've organized each known issue into its own article and grouped them in categories to make them easier to find. You'll also find information on how to identify and fix errors you may experience when using Microsoft Teams.
 
-Check the list below for the top issues. You can also browse the table of contents or use the search box on the left to find others.
+Below is a collection of the top issues. If your issue isn't listed there, browse the table of contents or use the filter box on the left to locate the information about your specific issue.
 
 ## Top Teams troubleshooting articles
 

@@ -7,7 +7,7 @@
       href: ../archive-mailboxes/archive-mailbox-issues.md
     - name: ArchiveStatus shows None
       href: ../archive-mailboxes/archivestatus-set-none.md
-    - name: Cannot delete folders of an archive mailbox
+    - name: Can't delete folders of an archive mailbox
       href: ../archive-mailboxes/cannot-delete-folders-archive-mailbox.md
     - name: Can't migrate archive mailboxes
       href: ../archive-mailboxes/cannot-migrate-archive-mailboxes.md
