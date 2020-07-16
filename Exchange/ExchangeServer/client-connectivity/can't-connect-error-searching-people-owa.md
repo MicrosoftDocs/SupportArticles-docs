@@ -27,7 +27,7 @@ With Microsoft Exchange Server 2019 installed on a Windows Server 2019 (Server C
 
 ## Cause
 
-The default language and locale of Windows Server 2019 aren’t US English. The Advanced Query Syntax (AQS) Windows module requires the installation of the corresponding language pack on the server.
+The default language and locale of Windows Server 2019 aren't US English. The Advanced Query Syntax (AQS) Windows module requires the installation of the corresponding language pack on the server.
 
 ## Resolution
 
@@ -36,7 +36,7 @@ Install the language pack using the corresponding language .cab files from [Lang
 1. Open Command-Line as administrator and run these commands:
 
     ```
-    DISM/Online /Add-Package /PackagePath:"c:\temp\Microsoft-Windows-Client-Language-Pack_x64_fr-fr.cab”
+    DISM/Online /Add-Package /PackagePath:"c:\temp\Microsoft-Windows-Client-Language-Pack_x64_fr-fr.cab"
     ```
 
     ```

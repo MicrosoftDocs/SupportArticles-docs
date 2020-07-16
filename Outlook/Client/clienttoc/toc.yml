@@ -65,7 +65,7 @@
     items:
     - name: Meeting tracking tab isn't updated
       href: ../meetings/meeting-tracking-tab-not-updated.md
-    - name: Room Finder isn’t available on shared calendars
+    - name: Room Finder isn't available on shared calendars
       href: ../meetings/room-finder-is-not-available-shared-calendars-outlook.md
   - name: Ribbons
     items:

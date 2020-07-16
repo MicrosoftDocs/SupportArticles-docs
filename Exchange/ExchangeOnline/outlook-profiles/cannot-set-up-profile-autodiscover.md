@@ -35,7 +35,7 @@ This problem occurs for one of the following reasons:
 
 - The wrong email address was entered on the **Auto Account Setup** page of the Add New Account Wizard in Outlook.    
 - The required updates for Outlook to automatically connect to Exchange Online aren't installed for the version of Outlook that you're running.    
-- The Autodiscover CNAME record for your domain doesn’t exist or isn’t set up correctly.    
+- The Autodiscover CNAME record for your domain doesn't exist or isn't set up correctly.    
 - In organizations that use Active Directory synchronization, the **mail**, **mailNickname**, **displayName** , and **proxyAddresses** attributes are not set up correctly for the synced user in the on-premises Active Directory.    
  
 > [!NOTE]
@@ -69,7 +69,7 @@ For more information about how to set up Outlook for Office 365, see the followi
 - [Set up an email account in Outlook 2016 for Mac](https://support.office.com/article/set-up-an-email-account-in-outlook-2016-for-mac-86bd232e-0422-49b5-9b60-d1c5f1109f40)    
 
 > [!NOTE]
-> If this method doesn’t resolve the problem, go to Method 3.
+> If this method doesn't resolve the problem, go to Method 3.
 
 #### Method 3: Make sure that the Autodiscover CNAME record is set up correctly
 
@@ -121,7 +121,7 @@ After the correct values are set for these attributes, [force directory synchron
 
 #### Method 2: Use the Add New Account Wizard in Outlook
 
-If Method 1 doesn't resolve the problem, and you’re not using a custom domain together with Office 365, you can use the Add New Account Wizard in Outlook to set up your Outlook profile by using the default "onmicrosoft.com"-based email address that’s associated with users’ Exchange Online mailboxes when you signed up for Office 365. When you use the Add New Account Wizard to set up a new mail profile, you specify your Office 365 password and your default Office 365 email address in the form of \<user>@\<domain>.onmicrosoft.com (for example, kim@contoso.onmicrosoft.com).
+If Method 1 doesn't resolve the problem, and you're not using a custom domain together with Office 365, you can use the Add New Account Wizard in Outlook to set up your Outlook profile by using the default "onmicrosoft.com"-based email address that's associated with users' Exchange Online mailboxes when you signed up for Office 365. When you use the Add New Account Wizard to set up a new mail profile, you specify your Office 365 password and your default Office 365 email address in the form of \<user>@\<domain>.onmicrosoft.com (for example, kim@contoso.onmicrosoft.com).
 
 This method is supported and works for customers who may not plan to have their own vanity or custom domain. This method also supports Autodiscover. If your mailbox server location changes, Outlook is updated accordingly by using the new location of your mailbox server. 
 

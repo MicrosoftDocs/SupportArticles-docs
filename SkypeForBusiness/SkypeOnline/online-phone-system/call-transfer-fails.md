@@ -1,6 +1,6 @@
 ---
 title: Call transfer fails when you use Skype for Business Cloud Connector Edition
-description: Describes an issue that triggers a “Cannot complete the transfer” error when you try to transfer a call to another number in Skype for Business Cloud Connector Edition.
+description: Describes an issue that triggers a "Cannot complete the transfer" error when you try to transfer a call to another number in Skype for Business Cloud Connector Edition.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal

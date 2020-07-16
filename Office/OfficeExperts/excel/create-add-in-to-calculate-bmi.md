@@ -96,7 +96,7 @@ Now, we can use the custom function that we have created. To testing this BMI fu
 
 ### Step 5: Uninstall The Add-In
 
-However, every Add-In that has installed on Excel, will always running when Excel gets started. Excel load time may takes longer than Excel without Add-In. If you don’t need that Add-In anymore, you can uninstall one or more of them. The steps are almost same as installing Add-In, please following this step:
+However, every Add-In that has installed on Excel, will always running when Excel gets started. Excel load time may takes longer than Excel without Add-In. If you don't need that Add-In anymore, you can uninstall one or more of them. The steps are almost same as installing Add-In, please following this step:
 
 1. Open Add-Ins dialog box by clicking Add-Ins on the Developer tab.
 

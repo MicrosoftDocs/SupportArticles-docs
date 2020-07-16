@@ -94,7 +94,7 @@ For more information about the **Set-MailboxRegionalConfiguration** cmdlet, see 
 
 Use Outlook to select a new Archive folder. To do this, follow these steps:  
  
-1. Right-click the mailbox name at the top of the folder hierarchy in Outlook, select **New Folder**, and then create a folder that’s named **Archive01**.    
+1. Right-click the mailbox name at the top of the folder hierarchy in Outlook, select **New Folder**, and then create a folder that's named **Archive01**.    
 2. On the **File** menu, select **Tools** > **Set Archive Folder**, and then select the new Archive01 folder.    
 3. Run the **Outlook.exe /resetfoldernames** command.    
  
@@ -104,7 +104,7 @@ If this option is not available or does not work, use Option 2.
 
 Follow these steps:  
  
-1. Right-click the mailbox name at the top of the folder hierarchy in Outlook, select **New Folder**, and then create a folder that’s named **Archive01**.    
+1. Right-click the mailbox name at the top of the folder hierarchy in Outlook, select **New Folder**, and then create a folder that's named **Archive01**.    
 2. Start MFCMapi in Online mode. To make sure that MFCMapi is in Online mode, select **Tools** > **Options**, and then make sure that the **Use the MDB_ONLINE flag** and **Use the MAPI_NO_CACHE** check boxes are selected.    
 3. Expand **Root Container**, and then expand **Top of Information Store**.    
 4. Select the new Archive01 folder, and then find the property that's named **PR_ENTRYID**.  

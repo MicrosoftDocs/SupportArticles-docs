@@ -1,5 +1,5 @@
 ---
-title: “Something went wrong and your search couldn’t be completed” error message when searching from an additional mailbox in Outlook
+title: Error (Something went wrong and your search couldn't be completed) when searching from an additional mailbox in Outlook
 description: When you perform a search from a secondary mailbox that you have Full Access permissions in Outlook, the operation will fail. This is a known limitation of the Exchange Online search service. 
 author: TobyTu
 ms.author: aruiz
@@ -19,7 +19,7 @@ search.appverid:
 - MET150
 ---
 
-# “Something went wrong and your search couldn’t be completed” error message when searching from an additional mailbox in Outlook
+# "Something went wrong and your search couldn't be completed" error message when searching from an additional mailbox in Outlook
 
 ## Symptoms
 
@@ -31,15 +31,15 @@ Consider the following scenario:
 
 In this scenario, you receive an error message that resembles the following:
 
-*Something went wrong and your search couldn’t be completed.*
+*Something went wrong and your search couldn't be completed.*
 
-*It looks like there’s a problem with your network connection.*
+*It looks like there's a problem with your network connection.*
 
-When this error occurs, clicking the **Let’s look on your computer instead** option may display the expected search results.
+When this error occurs, clicking the **Let's look on your computer instead** option may display the expected search results.
 
 ## Cause
 
-This is a known limitation of the Exchange Online search service. The issue occurs if an Outlook client uses the primary mailbox user’s credentials to run a search from a secondary mailbox.
+This is a known limitation of the Exchange Online search service. The issue occurs if an Outlook client uses the primary mailbox user's credentials to run a search from a secondary mailbox.
 
 ## Workaround
 
@@ -48,7 +48,7 @@ This is a known limitation of the Exchange Online search service. The issue occu
 
 To work around this issue, use any of the following methods:
 
-- Select **Let’s look on your computer instead** to start a local Windows Desktop Search after every error.
+- Select **Let's look on your computer instead** to start a local Windows Desktop Search after every error.
 - Change Outlook settings to stop using the search function on the service. To do this, create a DisableServerAssistedSearch registry key. For more information, see this [Outlook Global Customer Service & Support Team Blog article](https://techcommunity.microsoft.com/t5/outlook-global-customer-service/how-outlook-2016-utilizes-exchange-server-2016-fast-search/ba-p/381195).
 
 | | |

@@ -30,7 +30,7 @@ To allow PSTN callers to join a Skype for Business Online dial-in conference cal
 
 ## More Information
 
-This issue occurs because the conference call is locked, and the organizer doesn't receive a notification that callers are waiting in the lobby. Conference calls are locked when the **These people don’t have to wait in the lobby** option is set to **Only me, the meeting organizer** in the Outlook invite meeting options or to **The meeting organizer **in the Skype meeting options during the meeting.  
+This issue occurs because the conference call is locked, and the organizer doesn't receive a notification that callers are waiting in the lobby. Conference calls are locked when the **These people don't have to wait in the lobby** option is set to **Only me, the meeting organizer** in the Outlook invite meeting options or to **The meeting organizer **in the Skype meeting options during the meeting.  
 
 For more information about Skype for Business dial-in conferencing, see the following Microsoft websites:
 
