@@ -21,11 +21,11 @@
 - name: Visual Basic
   items:
   - name: Examine CheckBox values in a DataGrid column
-    href: ../dotnet/visual-basic/checkbox-control-values-datagrid-vb.md
+    href: ../dotnet/visual-basic/checkbox-control-values-datagrid.md
   - name: NullReferenceException when you use CommandBuilder
     href: ../dotnet/visual-basic/nullreferenceexception-commandbuilder.md
   - name: Race conditions and deadlocks
     href: ../dotnet/visual-basic/race-conditions-deadlocks.md
   - name: Use Trace and Debug classes
-    href: ../dotnet/visual-basic/trace-debug-visual-basic-net.md
+    href: ../dotnet/visual-basic/trace-debug.md
 
