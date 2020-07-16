@@ -1,6 +1,6 @@
 ---
 title: HTTP Error 405.0 when you visit IIS websites
-description: This article describes a problem that occurs because a client request uses an HTTP verb that doesn't comply with the HTTP specifications or because a client uses the POST methos to send a request to a static HTML page.
+description: This article describes a problem that occurs because a client request uses an HTTP verb that doesn't comply with the HTTP specifications or because a client uses the POST methods to send a request to a static HTML page.
 ms.date: 04/16/2020
 ms.prod-support-area-path:
 ms.reviewer: mlaing
