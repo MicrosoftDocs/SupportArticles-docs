@@ -87,7 +87,7 @@ Active scripting, ActiveX, and Java are all involved in shaping the way that inf
     > [!NOTE]
     > ActiveX controls and Java programs are turned off in the High security level in Internet Explorer.
 
-    :::image type="content" source="media/troubleshoot-script-errors-in-ie/security-tab.jpg" alt-text="Internet Options - Security" border="false":::
+    :::image type="content" source="media/troubleshoot-script-errors/security-tab.jpg" alt-text="Internet Options - Security" border="false":::
 
 #### Method 2: Remove all temporary Internet files
 
@@ -100,7 +100,7 @@ To remove all the temporary Internet-related files for Internet Explorer.
 3. Click the **General** tab.
 4. Under **Browsing History**, click **Delete**.
 
-    :::image type="content" source="media/troubleshoot-script-errors-in-ie/general-tab.jpg" alt-text="Internet Options - General" border="false":::
+    :::image type="content" source="media/troubleshoot-script-errors/general-tab.jpg" alt-text="Internet Options - General" border="false":::
 
 5. In the **Delete Browsing History** dialog box, click to select the following check boxes, and then click **Delete**:
 
@@ -108,7 +108,7 @@ To remove all the temporary Internet-related files for Internet Explorer.
     - **Cookies**
     - **History**
 
-    :::image type="content" source="media/troubleshoot-script-errors-in-ie/options-in-delete-browsing-history.jpg" alt-text="Options in Delete Browsing History" border="false":::
+    :::image type="content" source="media/troubleshoot-script-errors/options-in-delete-browsing-history.jpg" alt-text="Options in Delete Browsing History" border="false":::
 
 6. Click **Close**, and then click **OK** to close the **Internet Options** dialog box.
 
@@ -153,7 +153,7 @@ If you experience a video display problem, the Smooth Scrolling feature may caus
 2. On the **Tools** menu, click **Internet Options**. If you can't see the **Tools** menu, press Alt to display the menus.
 3. On the **Advanced** tab, click to clear the **Display a notification about every script error** box, and then click **OK**.
 
-    :::image type="content" source="media/troubleshoot-script-errors-in-ie/advanced-tab.jpg" alt-text="Display a notification about every script error" border="false":::
+    :::image type="content" source="media/troubleshoot-script-errors/advanced-tab.jpg" alt-text="Display a notification about every script error" border="false":::
 
 ### Troubleshooting Script Errors when printing from Internet Explorer
 

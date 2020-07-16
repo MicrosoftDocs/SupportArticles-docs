@@ -1,5 +1,5 @@
 ---
-title: Internet Explorer can't display the webpage
+title: Internet Explorer cannot display the webpage
 description: This article describes that Internet Explorer cannot open any webpage and provides troubleshooting solutions.
 ms.date: 06/09/2020
 ms.prod-support-area-path: 
@@ -22,11 +22,11 @@ Proxy settings are used to tell Internet Explorer the network address of an inte
 (If you're using a mouse, point to the upper-right corner of the screen, move the mouse pointer down, click **Start**, and then type *Internet options*.)
 2. Tap or click the **Connections** tab, and then tap or click the **LAN settings**.
 
-    :::image type="content" source="media/an-error-when-access-a-webpage/connections-tab.png" alt-text="screenshot of the Connections tab in Internet Properties" border="false":::
+    :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/connections-tab.png" alt-text="screenshot of the Connections tab in Internet Properties" border="false":::
 
 3. Tap or click **Automatically detect settings** and verify that there is check mark in the box beside it.
 
-    :::image type="content" source="media/an-error-when-access-a-webpage/automatically-detect-settings.png" alt-text="screenshot of Automatically detect settings option" border="false":::
+    :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/automatically-detect-settings.png" alt-text="screenshot of Automatically detect settings option" border="false":::
 
 4. Tap or click **OK** to close the windows. Restart Internet Explorer and verify the issue is resolved.
 
@@ -37,16 +37,16 @@ To reset Internet Explorer to the default settings, follow these steps:
 1. Start Internet Explorer, and then on the **Tools** menu, click **Internet Options**.
 2. Click the **Advanced** tab, and then click **Reset**. (The screenshot for this step is listed below).
 
-    :::image type="content" source="media/an-error-when-access-a-webpage/advanced-tab.png" alt-text="screenshot of the Advanced tab in Internet Options" border="false":::
+    :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/advanced-tab.png" alt-text="screenshot of the Advanced tab in Internet Options" border="false":::
 
 3. In the **Internet Explorer Default Settings** dialog box, click **Reset**.
 4. In the **Reset Internet Explorer Settings** dialog box, click **Reset**. (The screenshot for this step is listed below).
 
-    :::image type="content" source="media/an-error-when-access-a-webpage/reset-internet-explorer-settings.png" alt-text="screenshot of Reset Internet Explorer Settings" border="false":::
+    :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/reset-internet-explorer-settings.png" alt-text="screenshot of Reset Internet Explorer Settings" border="false":::
 
 5. Click **Close**, and then click **OK** two times. (The screenshot for this step is listed below).
 
-    :::image type="content" source="media/an-error-when-access-a-webpage/reset-internet-explorer-settings-checklist.png" alt-text="screenshot of Reset Internet Explorer Settings" border="false":::
+    :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/reset-internet-explorer-settings-checklist.png" alt-text="screenshot of Reset Internet Explorer Settings" border="false":::
 
 6. Exit and then restart Internet Explorer. The changes take effect the next time that you start Internet Explorer.
 
@@ -59,11 +59,11 @@ To delete the browsing history in Internet Explorer 11, follow these steps:
 3. On the **Tools** menu, tap or click **Internet options**.
 4. Under **Browsing history**, click **Delete**. (The screenshot for this step is listed below).
 
-    :::image type="content" source="media/an-error-when-access-a-webpage/general-tab.png" alt-text="screenshot of the General tab of Internet Options" border="false":::
+    :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/general-tab.png" alt-text="screenshot of the General tab of Internet Options" border="false":::
 
 5. Select all the **applicable** check boxes, and then tap or click **Delete**. (The screenshot for this step is listed below).
 
-    :::image type="content" source="media/an-error-when-access-a-webpage/delete-browsing-history.png" alt-text="screenshot of the Delete Browsing History page" border="false":::
+    :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/delete-browsing-history.png" alt-text="screenshot of the Delete Browsing History page" border="false":::
 
 6. Tap or click **Exit**, and then restart Internet Explorer.
 
@@ -77,11 +77,11 @@ How to disable Enhanced Protected Mode:
 (If you're using a mouse, point to the upper-right corner of the screen, move the mouse pointer down, click **Start**, and then type **Internet options**.)
 2. Tap or click **Settings** located under the search box to the right of the screen. Then, tap or click the **Internet Options** icon located under the search results.
 
-     :::image type="content" source="media/an-error-when-access-a-webpage/internet-options.png" alt-text="screenshot of the Internet Options" border="false":::
+     :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/internet-options.png" alt-text="screenshot of the Internet Options" border="false":::
 
 3. In the **Internet Options** windows, tap or click the **Advanced** tab. Locate the check box **Enable Enhanced Protected Mode**. Tap or click to **uncheck** the box.
 
-    :::image type="content" source="media/an-error-when-access-a-webpage/enable-enhanced-protected-mode.png" alt-text="screenshot of the Enable Enhanced Protected Mode option" border="false":::
+    :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/enable-enhanced-protected-mode.png" alt-text="screenshot of the Enable Enhanced Protected Mode option" border="false":::
 
 4. Tap or click the **Apply** button, and then tap or click **OK**. Restart Internet Explorer and check to see if the issue is resolved.
 
@@ -149,7 +149,7 @@ You are prompted to restart your computer. After the restart, test Internet Expl
 
   1. Open Registry Editor by swiping in from the right edge of the screen, tapping **Search** (or, if you're using a mouse, pointing to the upper-right corner of the screen, moving the mouse pointer down, and then clicking **Search**), entering *regedit* in the search box, and then tapping or clicking **regedit.exe** in the search results.
 
-      :::image type="content" source="media/an-error-when-access-a-webpage/regedit-exe.png" alt-text="screenshot of regedit.exe" border="false":::
+      :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/regedit-exe.png" alt-text="screenshot of regedit.exe" border="false":::
 
   2. Navigate to `HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main`. No need to click on the dropdown for **Main**. The key we are looking for is located there. Tap or click on **Main**.
   3. Locate the key named **TabProcGrowth**. Right-click the key and tap or click **Modify**.
@@ -184,11 +184,11 @@ If you think that an app or driver that you recently installed has caused proble
   3. On the **Tools** menu, click **Internet options**.
   4. Under **Browsing history**, click **Delete**. (The screenshot for this step is listed below).
 
-      :::image type="content" source="media/an-error-when-access-a-webpage/delete-browsing-history-in-internet-options.png" alt-text="screenshot of how to delete browsing history" border="false":::
+      :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/delete-browsing-history-in-internet-options.png" alt-text="screenshot of how to delete browsing history" border="false":::
 
   5. Select all the check boxes, and then tap or click **Delete**. (The screenshot for this step is listed below).
 
-       :::image type="content" source="media/an-error-when-access-a-webpage/delete-browsing-history.png" alt-text="screenshot of the Delete Browsing History page" border="false":::
+       :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/delete-browsing-history.png" alt-text="screenshot of the Delete Browsing History page" border="false":::
 
   6. Tap or click **Exit**, and then restart Internet Explorer.
 
@@ -247,16 +247,16 @@ If you think that an app or driver that you recently installed has caused proble
   1. Start Internet Explorer, click **Tools**, and then click **Internet Options**.
   2. Click the **Advanced** tab, and then click **Reset**. (The screenshot for this step is listed below).
 
-      :::image type="content" source="media/an-error-when-access-a-webpage/advanced-tab.png" alt-text="screenshot of the Advanced tab in Internet Options" border="false":::
+      :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/advanced-tab.png" alt-text="screenshot of the Advanced tab in Internet Options" border="false":::
 
   3. In the Internet Explorer Default Settings dialog box, click **Reset**.
   4. In the Reset Internet Explorer Settings dialog box, click **Reset**. (The screenshot for this step is listed below).
 
-       :::image type="content" source="media/an-error-when-access-a-webpage/reset-internet-explorer-settings.png" alt-text="screenshot of the Reset Internet Explorer Settings page" border="false":::
+       :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/reset-internet-explorer-settings.png" alt-text="screenshot of the Reset Internet Explorer Settings page" border="false":::
 
   5. Click **Close** and then click **OK** two times. (The screenshot for this step is listed below).
 
-      :::image type="content" source="media/an-error-when-access-a-webpage/reset-internet-explorer-settings-checklist.png" alt-text="screenshot of the Reset Internet Explorer Settings page" border="false":::
+      :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/reset-internet-explorer-settings-checklist.png" alt-text="screenshot of the Reset Internet Explorer Settings page" border="false":::
 
   6. Exit and then restart Internet Explorer. The changes take effect the next time that you open Internet Explorer.
 
@@ -330,11 +330,11 @@ Open System Restore by clicking the **Start** button. In the search box, type *S
   3. On the **Tools** menu, click **Internet options**.
   4. Under **Browsing history**, click **Delete**. (The screenshot for this step is listed below).
 
-      :::image type="content" source="media/an-error-when-access-a-webpage/delete-browsing-history-in-internet-options.png" alt-text="screenshot of the General Tab in Internet options" border="false":::
+      :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/delete-browsing-history-in-internet-options.png" alt-text="screenshot of the General Tab in Internet options" border="false":::
 
   5. Select all the check boxes, and then tap or click **Delete**. (The screenshot for this step is listed below).
 
-      :::image type="content" source="media/an-error-when-access-a-webpage/delete-browsing-history.png" alt-text="screenshot of the Delete Browsing History page" border="false":::
+      :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/delete-browsing-history.png" alt-text="screenshot of the Delete Browsing History page" border="false":::
 
   6. Tap or click **Exit**, and then restart Internet Explorer.
 
@@ -400,16 +400,16 @@ Open System Restore by clicking the **Start** button. In the search box, type *S
   1. Start Internet Explorer, click **Tools**, and then click **Internet Options**.
   2. Click the **Advanced** tab, and then click **Reset**. (The screenshot for this step is listed below).
 
-      :::image type="content" source="media/an-error-when-access-a-webpage/advanced-tab.png" alt-text="screenshot of the Advanced tab in Internet Options" border="false":::
+      :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/advanced-tab.png" alt-text="screenshot of the Advanced tab in Internet Options" border="false":::
 
   3. In the Internet Explorer Default Settings dialog box, click **Reset**.
   4. In the Reset Internet Explorer Settings dialog box, click **Reset**. (The screenshot for this step is listed below).
 
-       :::image type="content" source="media/an-error-when-access-a-webpage/reset-internet-explorer-settings.png" alt-text="screenshot of the Reset Internet Explorer settings page" border="false":::
+       :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/reset-internet-explorer-settings.png" alt-text="screenshot of the Reset Internet Explorer settings page" border="false":::
 
   5. Click **Close** and then click **OK** two times. (The screenshot for this step is listed below).
 
-      :::image type="content" source="media/an-error-when-access-a-webpage/reset-internet-explorer-settings-checklist.png" alt-text="screenshot of the Reset Internet Explorer settings page" border="false":::
+      :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/reset-internet-explorer-settings-checklist.png" alt-text="screenshot of the Reset Internet Explorer settings page" border="false":::
 
   6. Exit and then restart Internet Explorer. The changes take effect the next time that you open Internet Explorer.
 
@@ -479,11 +479,11 @@ To restore your PC using System Restore
   3. On the **Tools** menu, click Internet options.
   4. Under **Browsing history**, click **Delete**. (The screenshot for this step is listed below).
 
-      :::image type="content" source="media/an-error-when-access-a-webpage/delete-browsing-history-in-internet-options.png" alt-text="screenshot of deleting browsing history in internet options" border="false":::
+      :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/delete-browsing-history-in-internet-options.png" alt-text="screenshot of deleting browsing history in internet options" border="false":::
 
   5. Select all the check boxes, and then tap or click **Delete**. (The screenshot for this step is listed below).
 
-      :::image type="content" source="media/an-error-when-access-a-webpage/delete-browsing-history-in-internet-options.png" alt-text="screenshot of deleting browsing history" border="false":::
+      :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/delete-browsing-history-in-internet-options.png" alt-text="screenshot of deleting browsing history" border="false":::
 
   6. Tap or click **Exit**, and then restart Internet Explorer.
 
@@ -545,16 +545,16 @@ To restore your PC using System Restore
   1. Start Internet Explorer, click **Tools**, and then click **Internet Options**.
   2. Click the **Advanced** tab, and then click **Reset**. (The screenshot for this step is listed below).
 
-      :::image type="content" source="media/an-error-when-access-a-webpage/advanced-tab.png" alt-text="screenshot of the Advanced tab" border="false":::
+      :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/advanced-tab.png" alt-text="screenshot of the Advanced tab" border="false":::
 
   3. In the Internet Explorer Default Settings dialog box, click **Reset**.
   4. In the Reset Internet Explorer Settings dialog box, click **Reset**. (The screenshot for this step is listed below).
 
-      :::image type="content" source="media/an-error-when-access-a-webpage/reset-internet-explorer-settings.png" alt-text="screenshot of Reset Internet Explorer Settings" border="false":::
+      :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/reset-internet-explorer-settings.png" alt-text="screenshot of Reset Internet Explorer Settings" border="false":::
 
   5. Click **Close** and then click **OK** two times. (The screenshot for this step is listed below).
 
-      :::image type="content" source="media/an-error-when-access-a-webpage/reset-internet-explorer-settings-checklist.png" alt-text="screenshot of Reset Internet Explorer Settings" border="false":::
+      :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/reset-internet-explorer-settings-checklist.png" alt-text="screenshot of Reset Internet Explorer Settings" border="false":::
 
   6. Exit and then restart Internet Explorer. The changes take effect the next time that you open Internet Explorer.
 
@@ -611,23 +611,23 @@ To determine whether a third-party program or service conflicts with Internet Ex
   1. Log on to Windows as an administrator.
   2. Click **Start**, point to **All Programs**, point to **Accessories**, point to **System Tools**, and then click **System Restore**. (The screenshot for this step is listed below).
 
-        :::image type="content" source="media/an-error-when-access-a-webpage/system-restore.png" alt-text="screenshot of finding System Restore" border="false":::
+        :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/system-restore.png" alt-text="screenshot of finding System Restore" border="false":::
 
   3. On the **Welcome to System Restore** page, click to select the **Restore my computer to an earlier time** option, and then click **Next**. (The screenshot for this step is listed below).
 
-        :::image type="content" source="media/an-error-when-access-a-webpage/welcome-to-system-restore.png" alt-text="screenshot of Welcome to System Restore page" border="false":::
+        :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/welcome-to-system-restore.png" alt-text="screenshot of Welcome to System Restore page" border="false":::
 
   4. On the **Select a Restore Point** page, click the most recent system restore point On this list, click a **restore point** list, and then click **Next**.
 
       > [!NOTE]
       > A System Restore message may appear that lists configuration changes that System Restore will make. Click **OK**. (The screenshot for this step is listed below).
 
-      :::image type="content" source="media/an-error-when-access-a-webpage/select-a-restore-point.png" alt-text="screenshot of Select a Restore Point":::
+      :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/select-a-restore-point.png" alt-text="screenshot of Select a Restore Point":::
 
   5. On the **Confirm Restore Point Selection** page, click **Next**. System Restore restores the previous Windows XP configuration, and then restarts the computer.
   6. Log on to the computer as an administrator. Then, click **OK** on the **System Restore Restoration Complete** page. (The screenshot for this step is listed below).
 
-      :::image type="content" source="media/an-error-when-access-a-webpage/restoration-complete.png" alt-text="screenshot of the Restoration Complete page":::
+      :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/restoration-complete.png" alt-text="screenshot of the Restoration Complete page":::
 
   If you successfully restored your computer to a previous state and the computer runs as expected, you are finished.
 
@@ -635,4 +635,4 @@ If the procedure that corresponds to your operating system does not resolve your
 
 After you click this link, verify that the steps that are provided correspond to your operating system. To do this, click the drop-down arrow, and then select your operating system. (The screenshot for this step is listed below).
 
-:::image type="content" source="media/an-error-when-access-a-webpage/select-your-operating-system.png" alt-text="screenshot of selecting your operating system":::
+:::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/select-your-operating-system.png" alt-text="screenshot of selecting your operating system":::

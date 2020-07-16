@@ -14,7 +14,9 @@ _Original KB number:_ &nbsp; 2831093
 
 ## Symptoms
 
-Consider the following scenario: You are using Windows 8 with Internet Explorer 10 and you have enabled Enhanced Protected Mode (EPM). In addition, the users favorites folder has been redirected to another location via GPO or Shell user interface. Then you browse to a website, which belongs to a security zone with enabled protected mode and you try to add this website with CTRL+D or the user interface to your favorites collection.
+Consider the following scenario:
+
+You are using Windows 8 with Internet Explorer 10 and you have enabled Enhanced Protected Mode (EPM). In addition, the users favorites folder has been redirected to another location via GPO or Shell user interface. Then you browse to a website, which belongs to a security zone with enabled protected mode and you try to add this website with CTRL+D or the user interface to your favorites collection.
 
 In this scenario, the operation fails. You will get no dialog at all or the favorites list in the dialog is empty.
 

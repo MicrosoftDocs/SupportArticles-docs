@@ -27,7 +27,7 @@ To temporarily set the zoom level in Internet Explorer 9 or a later version, use
 
 - In Internet Explorer, on the **View** menu, point to **Zoom**, and then select a different level.
 - If you have a mouse with a wheel, hold down the Ctrl key, and then scroll the wheel to zoom in or out.
-- If you click the **Change Zoom Level** button, ![Zoom Level](./media/set-zoom-level-in-ie/hundred-percent.png), it cycles through 100%, 125%, and 150%. This gives you a quick enlargement of the webpage.
+- If you click the **Change Zoom Level** button, ![Zoom Level](./media/how-to-set-zoom-level/hundred-percent.png), it cycles through 100%, 125%, and 150%. This gives you a quick enlargement of the webpage.
 - By using the keyboard, you can increase or decrease the zoom value in 10% increments. To zoom in, press Ctrl+Plus sign (+). To zoom out, press Ctrl+Minus sign (-). To restore the zoom to 100%, press Ctrl+0.
 
 ### To permanently set the zoom level
@@ -40,11 +40,11 @@ You can permanently set the default zoom in Internet Explorer 9 or a later versi
 
 3. In the details pane, double-click **ZoomFactor**.
 
-   :::image type="content" source="media/set-zoom-level-in-ie/zoomfactor.png" alt-text="zoom factor" border="false":::
+   :::image type="content" source="media/how-to-set-zoom-level/zoomfactor.png" alt-text="zoom factor" border="false":::
 
 4. Click **Decimal**.
 
-   :::image type="content" source="media/set-zoom-level-in-ie/decimal.png" alt-text="Decimal" border="false":::
+   :::image type="content" source="media/how-to-set-zoom-level/decimal.png" alt-text="Decimal" border="false":::
 
 5. If you want to set the default zoom level to 125%, type *125000*, and then click **OK**.
 6. Close Registry Editor.
