@@ -139,7 +139,14 @@
         "mem/intune/**/*.md": "Intune"
       },
       "searchScope": {
-        "biztalk/**/*.md": ["BizTalk Server"]
+        "biztalk/**/*.md": ["BizTalk Server"],
+        "dotnet/**/*.md": [".NET"],        
+        "visualstudio/**/*.md": ["Visual Studio"],
+        "cpp/**/*.md": ["Visual Studio"],
+        "iis/**/*.md": ["Web Apps"],
+        "aspnet/**/*.md": ["Web Apps"],        
+        "webapps/**/*.md": ["Web Apps"],
+        "windows/win32/**/*.md": ["Windows Developer"]
       }
     },
 
