@@ -47,7 +47,7 @@ For more information about this method, see [Use the Proxy Settings page in the 
 
 In earlier versions of the Windows operating system, Internet Explorer Maintenance (IEM) is used to configure Internet Explorer settings by using Group Policy. In Windows 8, the IEM settings have been deprecated in favor of Group Policy Preferences, Administrative Templates (.admx), and the Internet Explorer Administration Kit 10 (IEAK 10).
 
-To configure the proxy setting through a group policy, see [How to configure Proxy Settings for IE10 and IE11 as IEM is not available](/archive/blogs/askie/how-to-configure-proxy-settings-for-ie10-and-ie11-as-iem-is-not-available).
+To configure the proxy setting through a group policy, see [How to configure Proxy Settings for Internet Explorer 10 and Internet Explorer 11 as IEM is not available](/archive/blogs/askie/how-to-configure-proxy-settings-for-ie10-and-ie11-as-iem-is-not-available).
 
 ### More information
 

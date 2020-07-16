@@ -1,5 +1,5 @@
 ---
-title: IE document modes FAQ
+title: Internet Explorer document modes FAQ
 description: Provides answers to frequently asked questions about Internet Explorer document modes.
 ms.date: 07/14/2020
 ms.prod-support-area-path:
@@ -14,23 +14,23 @@ _Original KB number:_ &nbsp; 4551933
 
 ## How does Internet Explorer determine the document mode
 
-By default, Windows Internet Explorer 8 (IE 8) uses IE 8 mode, and Windows Internet Explorer 9 (IE 9) uses IE 9 mode, and so on. However, Windows Internet Explorer uses several criteria to determine which document mode to use. For example, if an HTML page contains a valid <!DOCTYPE> declaration (see [HTML5](https://html.spec.whatwg.org/multipage/)), Internet Explorer uses one of the standards-based document modes. But if there's no valid <!DOCTYPE> declaration, Internet Explorer uses Quirks mode. Only if there's no <!DOCTYPE> declaration does a page render in Quirks mode.
+By default, Windows Internet Explorer 8 uses Internet Explorer 8 mode, and Windows Internet Explorer 9 uses Internet Explorer 9 mode, and so on. However, Windows Internet Explorer uses several criteria to determine which document mode to use. For example, if an HTML page contains a valid <!DOCTYPE> declaration (see [HTML5](https://html.spec.whatwg.org/multipage/)), Internet Explorer uses one of the standards-based document modes. But if there's no valid <!DOCTYPE> declaration, Internet Explorer uses Quirks mode. Only if there's no <!DOCTYPE> declaration does a page render in Quirks mode.
 
 [Microsoft Edge Legacy](https://support.microsoft.com/help/4533505) is designed to be interoperable for the web, and is intended to run primarily in EdgeHTML mode.
 
 Microsoft Edge version 77 or a later version uses the Blink rendering engine. It won't render under EdgeHTML mode.
 
-The following rules determine how IE selects the document mode:
+The following rules determine how Internet Explorer selects the document mode:
 
 - The **Developer Tools** setting overrides any document mode that's specified by a webpage. The setting remains active for the lifetime of the tab.
-- In IE 9, if the document is hosted in an **iframe** element, the document mode is determined by the document mode of the top-level webpage. Subdocuments can't be rendered in IE 9 mode unless the top-level document is also in IE9 mode.
+- In Internet Explorer 9, if the document is hosted in an **iframe** element, the document mode is determined by the document mode of the top-level webpage. Subdocuments can't be rendered in Internet Explorer 9 mode unless the top-level document is also in Internet Explorer 9 mode.
 - A meta tag that has a value of **X-UA-Compatible** or an HTTP response header can override items in the **Compatibility View Settings** list and the doctype. This is true unless the **X-UA-Compatible** value is a Compatibility View setting, such as IE=EmulateIE7 or IE=EmulateIE8.
 - The Compatibility View settings can force a webpage to be displayed in a less-standard document mode.
 - The Local Compatibility Site list, the Microsoft Compatibility Site list, and the Enterprise Mode IE Compatibility Site list can force a webpage to be displayed in other document modes.
 - Group Policy settings override other settings and force all webpages to be displayed in the specified document mode.
 - If none of these rules apply, the <!DOCTYPE> declaration determines whether the webpage renders in Standards mode, Almost Standards mode, or Quirks mode.
 
-The sections (2.1.3.2 - 2.1.3.8) that are explained in the following article show that these rules affect how IE selects between document modes. Most of the sections don't apply to Microsoft Edge unless this is explicitly indicated:
+The sections (2.1.3.2 - 2.1.3.8) that are explained in the following article show that these rules affect how Internet Explorer selects between document modes. Most of the sections don't apply to Microsoft Edge unless this is explicitly indicated:
 
 - [2.1.3.1 How Internet Explorer Chooses Between Document Modes](/openspecs/ie_standards/ms-iedoco/3764531c-97c8-4bf2-bdc6-b3623738ea46)
 
@@ -45,39 +45,39 @@ For more information about how to configure document modes, see the following ar
 
 ## What is Enterprise mode
 
-The [Document mode selection flowchart](/internet-explorer/ie11-deploy-guide/img-ie11-docmode-lg) explains clearly how IE determines document modes.
+The [Document mode selection flowchart](/internet-explorer/ie11-deploy-guide/img-ie11-docmode-lg) explains clearly how Internet Explorer determines document modes.
 
-The Internet Explorer 11 (IE 11) Enterprise mode site list lets you specify document modes for specific websites. This helps you fix compatibility issues without changing a single line of code on the site. This addition to the site list is a continuation of our commitment to help you upgrade and stay up to date regarding the latest version of IE, while preserving your investments in existing apps.
+The Internet Explorer 11 Enterprise mode site list lets you specify document modes for specific websites. This helps you fix compatibility issues without changing a single line of code on the site. This addition to the site list is a continuation of our commitment to help you upgrade and stay up to date regarding the latest version of Internet Explorer, while preserving your investments in existing apps.
 
 ## When do I use document modes versus Enterprise node
 
-While the Enterprise mode functionality provides great compatibility for you on IE 8 or IE 7, the new document mode capabilities can help you stay up-to-date regardless of which versions of IE are running in your environment. Therefore, we recommend that you start your testing process as follows:
+While the Enterprise mode functionality provides great compatibility for you on Internet Explorer 8 or Internet Explorer 7, the new document mode capabilities can help you stay up-to-date regardless of which versions of Internet Explorer are running in your environment. Therefore, we recommend that you start your testing process as follows:
 
-- If your enterprise primarily uses IE 8 or IE 7, start testing by using Enterprise mode.
-- If your enterprise primarily uses IE 10 or IE 9, start testing by using the various document modes.
+- If your enterprise primarily uses Internet Explorer 8 or Internet Explorer 7, start testing by using Enterprise mode.
+- If your enterprise primarily uses Internet Explorer 10 or Internet Explorer 9, start testing by using the various document modes.
 
-Because you might have multiple versions of IE deployed, you might have to use both Enterprise mode and document modes to effectively move to IE 11.
+Because you might have multiple versions of Internet Explorer deployed, you might have to use both Enterprise mode and document modes to effectively move to Internet Explorer 11.
 
 > [!IMPORTANT]
 > Enterprise mode takes precedence over document modes.
 
 ## What is the difference between EmulateIE7 and Internet Explorer 7 document modes
 
-In IE 8, Microsoft introduced compatibility options to allow IE to act as if it were IE 7. This change lets users view both fully compliant sites and _compatibility views_ of web content that required IE 7.
+In Internet Explorer 8, Microsoft introduced compatibility options to allow Internet Explorer to act as if it were Internet Explorer 7. This change lets users view both fully compliant sites and _compatibility views_ of web content that required Internet Explorer 7.
 
-This has been extended up to and including IE 11 in order to support the Compatibility View feature - or, at least, document modes.
+This has been extended up to and including Internet Explorer 11 in order to support the Compatibility View feature - or, at least, document modes.
 
-**IE=7**: Display in IE 7 Standards mode.
+**IE=7**: Display in Internet Explorer 7 Standards mode.
 
-**IE=EmulateIE7**: Webpages are displayed in IE 7 Standards mode, regardless of the [declared !DOCTYPE directive](https://developer.mozilla.org/docs/Glossary/Doctype). Failing to declare a `!DOCTYPE` directive causes the page to load in Quirks.
+**IE=EmulateIE7**: Webpages are displayed in Internet Explorer 7 Standards mode, regardless of the [declared !DOCTYPE directive](https://developer.mozilla.org/docs/Glossary/Doctype). Failing to declare a `!DOCTYPE` directive causes the page to load in Quirks.
 
-When you specify the version (for example, IE 7), you set a requirement that the page must use the IE 7 Standards mode.
+When you specify the version (for example, Internet Explorer 7), you set a requirement that the page must use the Internet Explorer 7 Standards mode.
 
-Officially, the rules for rendering a webpage are evaluated in the following order by IE:
+Officially, the rules for rendering a webpage are evaluated in the following order by Internet Explorer:
 
-- Internet Explorer Developer Tools settings – Manually setting the browser mode (user agent string in IE 11) and Document mode overrides all other settings.
+- Internet Explorer Developer Tools settings – Manually setting the browser mode (user agent string in Internet Explorer 11) and Document mode overrides all other settings.
 - Web content/document is in an iframe – The rendering or compatibility mode for the page and for any contained iframes is set by the page. Iframe settings (for example, iframe specific X-UA-compatible.) are ignored.
-- X-UA-Compatible meta tag – This value can be specified in the web application generated page header or inserted by the web server or application server to select IE's Document mode.
+- X-UA-Compatible meta tag – This value can be specified in the web application generated page header or inserted by the web server or application server to select Internet Explorer's Document mode.
 - The **Compatibility View** setting – If **X-UA-compatible** is not specified, the user's local browser **Compatibility View** setting will apply. This is the equivalent (for non-standard pages) of the X-UA-Compatible **EmulateIE7** setting.
 - \<!DOCTYPE> setting – If none of the previous mechanisms are used, the <!DOCTYPE> tag selects the rendering of **Standards** (or **Almost Standards**) or IE 5 Quirks mode.
 
@@ -87,9 +87,9 @@ For more general information about document modes, see [Document Modes](/openspe
 
 ## How can I configure browser emulation for web browser controls in Internet Explorer
 
-By default, a WebOC Project will load in IE 7 Document mode.
+By default, a WebOC Project will load in Internet Explorer 7 Document mode.
 
-For IE 8 and later versions, the **FEATURE_BROWSER_EMULATION** feature defines the default emulation mode for IE, and supports the following values. To control the value of this feature by using the registry, add the name of your executable file to the following setting, and set the value to match the desired setting.
+For Internet Explorer 8 and later versions, the **FEATURE_BROWSER_EMULATION** feature defines the default emulation mode for Internet Explorer, and supports the following values. To control the value of this feature by using the registry, add the name of your executable file to the following setting, and set the value to match the desired setting.
 
 Registry key location:
 

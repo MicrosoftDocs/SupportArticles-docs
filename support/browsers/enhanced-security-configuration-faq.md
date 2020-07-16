@@ -50,13 +50,13 @@ To turn off Internet Explorer ESC, follow these steps:
 
 3. Navigate to the **IE Enhanced Security Configuration** property, select the current setting to open the property page, select the **Off** option button for the desired users, and then select **OK**.
 
-   :::image type="content" source="media/enhanced-security-configuration-faq/ie-esc-off-option-button.png" alt-text="IE ESC setting in server manager" border="false":::
+   :::image type="content" source="media/enhanced-security-configuration-faq/ie-esc-off-option-button.png" alt-text="Internet Explorer ESC setting in server manager" border="false":::
 
    :::image type="content" source="media/enhanced-security-configuration-faq/select-off-option.jpg" alt-text="select Off option screenshot" border="false":::
 
 4. Select the **Refresh** icon on the Server Manager toolbar to see the new settings reflected in the server manager.
 
-   :::image type="content" source="media/enhanced-security-configuration-faq/current-ie-esc-setting.png" alt-text="current IE ESC setting in server manager.":::
+   :::image type="content" source="media/enhanced-security-configuration-faq/current-ie-esc-setting.png" alt-text="current Internet Explorer ESC setting in server manager.":::
 
 The following video demonstrates this procedure:
 
