@@ -81,7 +81,7 @@
       href: ../email-alias/remove-an-email-alias.md
   - name: Groups
     items:
-    - name: Cannot determine group type
+    - name: Can't determine group type
       href: ../groups/cannot-determine-group-type-error.md
     - name: Common tasks to manage O365 groups
       href: ../groups/o365-group-tasks.md
