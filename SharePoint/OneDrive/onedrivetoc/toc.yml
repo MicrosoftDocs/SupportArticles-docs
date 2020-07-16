@@ -19,7 +19,7 @@
       href: ../../SharePointOnline/Search/no-search-results-from-another-language.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
   - name: Set up
     items:
-    - name: OneDrive for Business stopped at "Setting up..." screen
+    - name: Stop at "Setting up..." screen
       href: ../setup/onedrive-stopped-at-setting-up-screen.md
   - name: Sharing and Permissions
     items:
@@ -31,7 +31,7 @@
     items:
     - name: Top navigation bar displays either Sites or Newsfeed instead of OneDrive
       href: ../../SharePointOnline/sites/office-365-top-navigation-bar-displays-either-sites-or-newsfeed.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
-    - name: Troubleshooting guide to OneDrive for Business sites stopped at provisioning stage
+    - name: Troubleshooting guide stops at provisioning stage
       href: ../../SharePointOnline/sites/troubleshooting-guide-for-sites-stopped-at-provisioning.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
   - name: Sync
     items:
@@ -39,5 +39,3 @@
       href: ../sync/onedrive-for-business-sync-returns-error.md
     - name: Enable co-authoring for OneDrive-synced files
       href: ../sync/enable-co-authoring-for-onedrive-synced-file.md
-
-      
