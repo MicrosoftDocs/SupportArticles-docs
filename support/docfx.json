@@ -48,7 +48,8 @@
     "globalMetadata": {
       "breadcrumb_path": "/support/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "None"
+      "feedback_system": "None",
+      "searchScope": ["Troubleshoot"]
     },
 
     "fileMetadata": {
@@ -136,6 +137,21 @@
         "webapps/**/*.md": "Web Apps",
         "windows/win32/**/*.md": "Windows Developer",
         "mem/intune/**/*.md": "Intune"
+      },
+      "searchScope": {
+        "biztalk/**/*.md": ["Windows","UWP"],
+        "dotnet/**/*.md": ".NET",
+        "dotnet/csharp/**/*.md": "C#",
+        "dotnet/framework/**/*.md": ".NET Framework",
+        "dotnet/framework/wcf/**/*.md": "Windows Communication Foundation",
+        "dotnet/visual-basic/**/*.md": "Visual Basic",        
+        "aspnet/**/*.md": "ASP.NET",
+        "visualstudio/**/*.md": "Visual Studio",
+        "visualstudio/silverlight/**/*.md": "Silverlight",
+        "cpp/**/*.md": "Visual C++",
+        "iis/**/*.md": "Internet Information Services",
+        "webapps/**/*.md": "Web Apps",
+        "windows/win32/**/*.md": "Windows Developer"
       }
     },
 
