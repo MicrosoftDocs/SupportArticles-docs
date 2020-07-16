@@ -3,9 +3,9 @@
   items:
   - name: Administration
     items:
-    - name: ''"FAILED_TO_AUTO_DISCOVER_DOMAIN" error in admin center'
+    - name: '"FAILED_TO_AUTO_DISCOVER_DOMAIN" error in admin center'
       href: ./teams-administration/failed-to-auto-discover-domain-error-teams-admin-center.md
-    - name: ''"We couldn't add member" error when adding users'
+    - name: '"We couldn't add member" error when adding users'
       href: ./known-issues/couldnt-add-member-error.md
     - name: Activate guest users
       href: ./teams-administration/activate-guest-user-access-in-teams.md
