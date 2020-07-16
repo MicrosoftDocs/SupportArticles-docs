@@ -50,7 +50,7 @@ When you make a call into the `PipelineObjects` assembly from your own applicati
 
 ## Resolution
 
-Modify the `app.config` for the executable calling `PipelineObjects` to include the following `<startup>` element:
+Modify the *app.config* for the executable calling `PipelineObjects` to include the following `<startup>` element:
 
 ```xml
 <configuration>

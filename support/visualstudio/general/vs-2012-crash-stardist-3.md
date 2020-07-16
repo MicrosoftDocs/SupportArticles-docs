@@ -20,3 +20,5 @@ Stardict-3, cross-platform and international dictionary software, may cause Visu
 If you suspect that Stardict-3 is the cause, open Task Manager and verify that Stardict-3 is listed in the **Background process**. If so, stop the Stardict-3.exe process and launch Visual Studio 2012.
 
 If this method resolves the issue, you're advised to remove StarDict-3 from the **Programs and features** applet in the Control Panel.
+
+You can use StarDict-3.0.4 as the issue has not been seen with this version.

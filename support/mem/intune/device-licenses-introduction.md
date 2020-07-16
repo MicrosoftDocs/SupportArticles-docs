@@ -26,8 +26,6 @@ You can purchase device licenses based on your estimated usage. If the actual us
 
 All devices that are enrolled without user affinity will be assigned device licenses.
 
-Our product team is currently building a portal that will display your license usage information.
-
 ## Limitations
 
 When a device is enrolled by using a device license, the following Intune functions aren't supported:

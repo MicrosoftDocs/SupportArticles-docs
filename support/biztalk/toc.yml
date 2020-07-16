@@ -3,7 +3,7 @@
   
 - name: Accelerators
   items:
-  - name: ADT^A03 issue in BizTalk Accelerator for HL7
+  - name: ADT^A03 problem for HL7
     href: adta03-file-biztalk-accelerator-hl7.md
   - name: Can't call HL7 pipelines from Orchestration
     href: call-hl7-pipelines-orchestration-fail.md
@@ -13,20 +13,20 @@
     href: messagestolob-messagecontent-btarn.md
   - name: Override EDI header for outgoing X12 997
     href: override-edi-header-values.md
-  - name: Set up filters to send the EDI Interchange
+  - name: Set up filters to send the EDI Interchange
     href: send-edi-interchange.md
   - name: Segment terminator for X12 interchange
     href: segment-terminator-x12-encoded-interchange.md
 
 - name: Adapter
   items:
-  - name: BizTalk Adapter for TIBCO EMS only supports text
+  - name: Adapter for TIBCO EMS only supports text
     href: biztalk-adapter-tibco-ems-text-message-type.md
-  - name: How to use Adapter Trace Utility
+  - name: How to use Trace Utility
     href: biztalk-adapter-trace-utility.md
-  - name: HTTP 404 when connecting to alternate host headers
+  - name: HTTP 404 when connecting to alternate host headers
     href: http-error-biztalk-sharepoint-adapter.md
-  - name: Supported file systems in BizTalk
+  - name: Supported file systems
     href: file-system-in-biztralk-server.md
 
 - name: BizTalk Server Setup and Configuration
@@ -35,9 +35,9 @@
     href: biztalk-server-supportability-on-vm.md
   - name: SQL Server Agent jobs
     href: sql-server-agent-jobs-biztalk.md
-  - name: Change default whitespace behavior in BizTalk
+  - name: Change default whitespace behavior
     href: biztalk-default-whitespace-behavior.md
-  - name: Exception when you configure BizTalk Server
+  - name: Exception when you configure
     href: cannot-configure-biztalk-server.md
   - name: High availability for MQSAgent COM+
     href: availability-for-mqsagent-com-plus.md
@@ -52,7 +52,7 @@
   items:
   - name: Add Generated Items can't generate XSD schema
     href: add-generated-items-not-generate-xsd.md
-  - name: Supported OS, VS and SQL Server by BizTalk 
+  - name: Supported OS, VS and SQL Server 
     href: systems-sql-server-biztalk.md
 
 - name: ESB Toolkit
@@ -64,7 +64,7 @@
 
 - name: Management and Operations
   items:
-  - name: BizTalk Explorer operations fail
+  - name: Explorer operations fail
     href: biztalk-explorer-operations-fails.md
   - name: Connection issues with BizTalkMsgBoxDb database
     href: biztalkmsgboxdb-connection-issue.md

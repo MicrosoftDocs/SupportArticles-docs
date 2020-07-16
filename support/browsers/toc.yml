@@ -62,7 +62,7 @@
     - name: Nearly 49.7 days trigger timeout events
       href: timeout-events-in-ie-get-fired.md
 
-    - name: Permanent cookies loss after closing IE
+    - name: Permanent cookies loss after closing Internet Explorer
       href: permanent-cookies-for-weboc-lost.md
 
     - name: Page cannot be displayed error
@@ -112,7 +112,7 @@
     - name: RSS feeds not listed or subscribed
       href: rss-feeds-not-listed-or-cannot-subscribe.md
 
-    - name: Win7 doesn't support spell check and AutoCorrect
+    - name: Windows 7 doesn't support spell check and AutoCorrect
       href: spellcheck-and-autocorrect-not-available-win7.md
 
 - name: Development and Website Issues

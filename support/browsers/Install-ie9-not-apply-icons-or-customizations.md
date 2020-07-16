@@ -1,6 +1,6 @@
 ---
 title: Icons or customizations are missing of Internet Explorer 9
-description: This article describes the problem that icons and user-defined aren't displayed when the ie9 is installed but the system isn't restarted, here a solution is provided for this.
+description: This article describes the problem that icons and user-defined aren't displayed when the Internet Explorer 9 is installed but the system isn't restarted, here a solution is provided for this.
 ms.date: 06/09/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
@@ -28,7 +28,7 @@ Do one of the following steps:
 2. To reboot the machine as part of the installation process.
 3. To delete the following registry keys:
 
-```cmd
+```console
 C:\Windows\System32\reg.exe DELETE HKLM\SOFTWARE\Microsoft\Active Setup\Installed Components /v NoIE4StubProcessing /f
 
 C:\Windows\System32\reg.exe DELETE HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /v NoIE4StubProcessing /f
