@@ -1,7 +1,7 @@
 - name: Active Server Pages
   items:
   - name: Can't create objects when an application run
-    href: cannot-create-object-asp-run.md
+    href: cannot-create-object-asp-applications-run.md
   - name: Create GUIDs
     href: create-guids-asp.md
   - name: Set locale ID per the browser's language
@@ -28,7 +28,7 @@
 - name: Deployment and migration
   items:
   - name: Can't use Web Deploy as a delegated user
-    href: error-occurs-you-use-the-web-deploy.md
+    href: cannot-use-web-deploy.md
   - name: Can't use Web Deployment as a non-admin user
     href: web-deploy-error-non-admin-user.md
   - name: WebDeploy publishing endpoint changes
@@ -39,7 +39,7 @@
   - name: Authorization rules aren't inherited
     href: ftp-authorization-rules-not-inherited.md
   - name: Error 530 when you browse anonymous sites
-    href: error-530-iis-7.md
+    href: error-530-anonymous-ftp-sites.md
   - name: Use FTP in a typical session
     href: how-to-use-ftp-utility.md
 
@@ -55,7 +55,7 @@
   - name: Expression Web 4.0 FAQs
     href: expression-web-faq.md
   - name: Instances where HTTP.sys doesn't cache
-    href: instances-http-sys-not-cache.md
+    href: instances-httpsys-not-cache.md
 
 
 - name: Health, diagnostic, and performance features
@@ -65,7 +65,7 @@
   - name: DebugDiag 1.2 installation and data collector
     href: debugdiag-collected-information.md
   - name: ETW logs diagnostic
-    href: iis-etw-log.md
+    href: etw-log-diagnostic.md
   - name: Hidden static files return HTTP 404 error
     href: hidden-static-files-http-404-access-denied.md
   - name: HTTP error 400 in the CLM portal
@@ -75,21 +75,21 @@
   - name: HTTP error 403.7
     href: http-error-403-7-forbidden-web-app.md
   - name: HTTP error 404.13
-    href: http-404-13-iis-web-site.md
+    href: http-404-13-website.md
   - name: HTTP error 403.16
     href: http-403-forbidden-access-website.md
   - name: HTTP error 403.14
-    href: http-403-14-forbidden-iis-webpage.md
+    href: http-403-14-forbidden-webpage.md
   - name: HTTP error 405.0
-    href: http-error-405-iis-website.md
+    href: http-error-405-website.md
   - name: HTTP error 500.19
-    href: http-error-500-19-iis-webpage.md
+    href: http-error-500-19-webpage.md
   - name: Pages can't be displayed
-    href: error-page-cant-displayed.md
+    href: cannot-access-site-using-https.md
   - name: SSL Diagnostic tool for SDP
-    href: iis-ssl-diagnostic-tool-sdp.md
+    href: ssl-diagnostic-tool-sdp.md
   - name: Time-taken field in IIS HTTP logging
-    href: time-taken-iis-http-log.md
+    href: time-taken-field-http-log.md
   - name: Troubleshoot ABO Mapper errors
     href: troubleshoot-abo-mapper-errors.md
   - name: Windows Server AppFabric Cache diagnostic
@@ -98,7 +98,7 @@
 - name: IISAdmin service and Inetinfo process operation
   items:
   - name: Admin cmdlets slow in PowerShell 4.0
-    href: iis-administration-cmdlets-slow.md
+    href: administration-cmdlets-slow.md
   - name: FIM is unable to reset passwords
     href: fim-password-reset-issue.md
   - name: HTTP services can't be stopped
@@ -106,14 +106,14 @@
   - name: Http.sys registry settings for Windows
     href: httpsys-registry-windows.md
   - name: Processor affinity doesn't work on a NUMA server
-    href: iis-processor-affinity-not-work.md
+    href: processor-affinity-not-work.md
   - name: Set multiple site bindings and SSL
     href: ssl-multiple-web-sites-shared-configuration.md
 
 - name: IIS extensions, tools, and Add-ons
   items:
   - name: Management Pack doesn't detect events
-    href: iis-events-not-detected-scom.md
+    href: events-not-detected-scom.md
   - name: No data is logged in the cs-username field
     href: no-cs-username-data-advanced-logging.md
 
@@ -139,20 +139,20 @@
   - name: FtpPutFile always returns success
     href: ftpputfile-success-451-status.md
   - name: HTTP error 404.2
-    href: http-error-402-web-page.md
+    href: http-error-402-webpage.md
   - name: HTTP error 500 when you use Response.BinaryWrite
     href: http-500-response-binarywrite.md
   - name: Internet printing fails
-    href: internet-printing-fails-iis.md
+    href: internet-printing-fails.md
   - name: Worker Process takes much memory
-    href: iis-work-process-much-memory.md
+    href: work-process-takes-much-memory.md
 
 - name: WWW administration and management
   items:
   - name: HTTP error 400 when you send requests
     href: http-bad-request-response-kerberos.md
   - name: Enable SSL for all customers
-    href: enable-ssl-all-customers-iis.md
+    href: enable-ssl-all-customers.md
 
 - name: WWW authentication and authorization
   items:
@@ -167,13 +167,13 @@
   - name: Configure W3SVC in WSFC
     href: configure-iis-w3svc-wsfc.md
   - name: Configure intermediate certificates
-    href: configure-intermediate-certificates-iis.md
+    href: configure-intermediate-certificates.md
   - name: Configure Many-to-One client mappings
     href: configure-many-to-one-client-mappings.md
   - name: Default permissions and user rights
     href: default-permissions-user-rights.md
   - name: Digest authentication fails
-    href: iis-digest-authentication.md
+    href: digest-authentication.md
   - name: EndpointConfigurationName property isn't updated
     href: service-reference-endpointconfigurationname.md
   - name: Errors when you install certificates
@@ -181,26 +181,26 @@
   - name: Exporting configuration files fails
     href: configuration-files-cannot-exported.md
   - name: HTTP error 401.1 with pre-authentication headers
-    href: 401-error-pre-authentication-header.md
+    href: 401-error-preauthentication-header.md
   - name: HTTP error 403.7
-    href: http-403-forbidden-open-iis-webpage.md
+    href: http-403-forbidden-open-webpage.md
   - name: Impersonation fails when UAC is enabled
     href: impersonation-fails-uac-enabled.md
   - name: Read and analyze a client certificate
     href: analyze-client-certificate.md
   - name: Re-enabling shared configuration causes IIS can't start
-    href: shared-configuration-iis-not-start.md
+    href: not-start-reenable-shared-configuration.md
   - name: Shared Configuration requires the same IIS version
-    href: shared-configuration-same-iis-version.md
+    href: shared-configuration-require-same-version.md
   - name: ShutdownTimeLimit property doesn't work
-    href: iis-not-apply-wcf.md
+    href: shutdowntimelimit-not-apply-to-wcf.md
   - name: Troubleshoot Kerberos failures
     href: troubleshoot-kerberos-failures-ie.md
 
 - name: WWW modules and features
   items:
   - name: Add and remove global modules at server and child levels 
-    href: add-remove-global-modules-iis.md
+    href: add-remove-global-modules.md
   - name: Disable the Save Embedded Files dialog box
     href: disable-save-embedded-files-dialog.md
   - name: Request Restrictions can't set for a wildcard ISAPI

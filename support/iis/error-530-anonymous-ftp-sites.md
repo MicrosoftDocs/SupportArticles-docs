@@ -1,5 +1,5 @@
 ---
-title: Error 530 occurs in IIS 7.0 and 7.5
+title: Error 530 when you browse anonymous FTP sites
 description: This article provides resolutions for the error 530 that occurs when users browse an anonymous FTP site configured for Active Directory User Isolation in IIS 7.0 and 7.5.
 ms.date: 04/07/2020
 ms.prod-support-area-path: 
