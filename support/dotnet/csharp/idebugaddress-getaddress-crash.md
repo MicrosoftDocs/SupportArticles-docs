@@ -1,5 +1,5 @@
 ---
-title: VS crashes when GetAddress() is invoked
+title: Visual Studio crashes when GetAddress() is invoked
 description: Connect customer tries to use DEBUG_ADDRESS structure in a Managed EE implementation that crashes VS due to a member of DEBUG_ADDRESS_UNION size being specified incorrectly in the PIA (Microsoft.Visual Studio.Debugger.InteropA.dll).
 ms.date: 04/27/2020
 ms.prod-support-area-path:
