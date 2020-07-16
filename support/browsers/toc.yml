@@ -82,7 +82,7 @@
     - name: Apply property error when changing shortcut
       href: apply-property-error.md
 
-    - name: AutoComplete not working
+    - name: Autocomplete not working
       href: autocomplete-not-working.md
 
     - name: Can't add local pages to Favorites
