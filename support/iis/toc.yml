@@ -186,15 +186,16 @@
     href: http-403-forbidden-open-iis-webpage.md
   - name: Impersonation fails when UAC is enabled
     href: impersonation-fails-uac-enabled.md
+  - name: Read and analyze a client certificate
+    href: analyze-client-certificate.md
   - name: Re-enabling shared configuration causes IIS can't start
     href: shared-configuration-iis-not-start.md
   - name: Shared Configuration requires the same IIS version
     href: shared-configuration-same-iis-version.md
   - name: ShutdownTimeLimit property doesn't work
     href: iis-not-apply-wcf.md
-  - name: Read and analyze a client certificate
-    href: analyze-client-certificate.md
-
+  - name: Troubleshoot Kerberos failures
+    href: troubleshoot-kerberos-failures-ie.md
 
 - name: WWW modules and features
   items:
