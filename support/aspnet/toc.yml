@@ -6,31 +6,31 @@
 - name: Development
   items:
   - name: ASP.NET 2.0 and 3.5 don't work
-    href: asp-net-2-3-dot-5-not-work.md
+    href: asp-dotnet-2-3-dot-5-not-work.md
   - name: Can't debug web applications
-    href: cannot-debug-asp-net-web-application.md
+    href: cannot-debug-asp-dotnet-web-application.md
   - name: Can't write to event log
-    href: fail-write-event-log-asp-net.md
+    href: fail-write-event-log.md
   - name: COM objects can't be printed
     href: asp-com-objects-fail-to-print.md
   - name: Code-behind model
-    href: asp-dot-net-code-behind-model.md
+    href: code-behind-model.md
   - name: Create a cascading drop-down list in AJAX
-    href: build-cascading-drop-down-list-asp-net.md
+    href: build-cascading-drop-down-list.md
   - name: DataGrid controls don't work
     href: datagrid-control-display-incorrectly.md
   - name: Disable ASP session state
     href: disable-asp-session-state.md
   - name: HTTP modules and handlers
-    href: asp-dot-net-http-modules-handlers.md
+    href: http-modules-handlers.md
   - name: Inline expressions
-    href: asp-net-inline-expressions.md
+    href: inline-expressions.md
   - name: Make the application configuration
-    href: application-directory-configuration-asp-net.md
+    href: application-directory-configuration.md
   - name: MVC 3 installation fails
-    href: asp-dot-net-installation-failed.md
+    href: mvc-installation-failed.md
   - name: MVC3 NuGet Package Manager is missing
-    href: aspnet-mvc-nuget-missing.md
+    href: mvc-nuget-missing.md
   - name: Register assemblies to use custom controls
     href: register-assembly-webform-custom-control.md
   - name: Request.ServerVariables() returns empty
@@ -38,46 +38,46 @@
   - name: Response filtering and post-cache substitution isn't compatible
     href: response-filterer-post-cache-not-compatible.md
   - name: Security overview
-    href: asp-net-security-overview.md
+    href: security-overview.md
   - name: Server controls overview
-    href: asp-dot-net-server-controls.md
+    href: server-controls.md
   - name: Set the current culture programmatically
-    href: set-current-culture-asp-net.md
+    href: set-current-culture.md
   - name: Session data is lost for the InProc mode
     href: session-data-lost-inproc-mode.md
   - name: Support lifecycle for web stack
-    href: support-lifecycle-asp-net-web-stack.md
+    href: support-lifecycle-asp-dotnet-web-stack.md
   - name: Tilde notation maps to original urls
     href: tilde-notation-maps-original-url.md
   - name: Use a .resx file to create applications
-    href: use-app-resx-create-asp-net-web-app.md
+    href: use-app-resx-create-asp-dotnet-web-app.md
   - name: Use forms-based authentication
-    href: forms-based-authentication-asp-net-csharp.md
+    href: forms-based-authentication-asp-dotnet-csharp.md
 
 - name: FTP authentication and authorization
   items:
   - name: Configure SQL Server to store session state
-    href: configure-sql-store-asp-net-session-state.md
+    href: configure-sql-store-asp-dotnet-session-state.md
   - name: Disable debugging for web applications
-    href: disable-debugging-asp-net-application.md
+    href: disable-debugging-asp-dotnet-application.md
   - name: Edit the web.config file
-    href: edit-web-config-asp-dot-net.md
+    href: edit-web-config.md
   - name: Impersonation in web applications
-    href: impersonation-asp-net.md
+    href: impersonation-asp-dotnet.md
 
 - name: Health, diagnostic, and performance features
   items:
   - name: Create web.config for an application
-    href: create-web-config-asp-dot-net.md
+    href: create-web-config.md
   - name: Information diagnostic of IIS and ASP.NET
-    href: iis-and-asp-net-diagnostic.md
+    href: iis-and-asp-dotnet-diagnostic.md
   - name: Troubleshoot OutOfMemoryException
-    href: outofmemoryexception-asp-net.md
+    href: outofmemoryexception-asp-dotnet.md
 
 - name: IISAdmin service and Inetinfo process operation
   items:
   - name: Disable documentation protocol for web services
-    href: disable-documentation-protocol-asp-net.md
+    href: disable-documentation-protocol.md
 
 - name: Site behavior and performance
   items:
@@ -92,9 +92,9 @@
   - name: Error-logging capabilities of HTTP APIs
     href: error-logging-http-apis.md
   - name: Exceptions cause applications to quit
-    href: exceptions-cause-asp-net-apps-quit.md
+    href: exceptions-cause-asp-dotnet-apps-quit.md
   - name: FileNotFoundException when an application calls a web service
-    href: filenotfindexception-asp-net-call-web-service.md
+    href: filenotfindexception-call-web-service.md
   - name: State servers log event ID 1072 or 1076
     href: state-server-event-1072-1076.md
   - name: ThreadAbortException when you use Server.Transfer
@@ -106,15 +106,15 @@
   - name: AppDomain isn't loaded
     href: exclude-folders-antivirus-scanning.md
   - name: Back up configuration files
-    href: back-up-asp-net-configuration-files.md
+    href: back-up-configuration-files.md
   - name: Install and uninstall ASP.NET 4.5 in Windows 8
-    href: asp-dot-net-4-dot-5-windows-8-server-2012.md
+    href: install-asp-dotnet-windows-8-server-2012.md
   - name: Restrict users from accessing to web resources
     href: restrict-users-access-web-resource.md
 
 - name: WWW authentication and authorization
   items:
   - name: Control authorization permissions
-    href: authorization-permissions-asp-net.md
+    href: authorization-permissions.md
   - name: Web applications can't write data to App_Data
     href: applicationpoolidentity-write-app-data.md
