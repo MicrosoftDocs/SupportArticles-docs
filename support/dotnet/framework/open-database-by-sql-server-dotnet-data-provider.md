@@ -5,7 +5,7 @@ ms.date: 05/12/2020
 ms.prod-support-area-path:
 ms.topic: how-to
 ---
-# How to open SQL Server database by using SQL Server .NET Data Provider with Visual Basic .NET  
+# Open SQL Server database by using SQL Server .NET Data Provider with Visual Basic .NET  
 
 This article provides information about how to open SQL Server databases by using SQL Server .NET Data Provider with Visual Basic .NET.
 

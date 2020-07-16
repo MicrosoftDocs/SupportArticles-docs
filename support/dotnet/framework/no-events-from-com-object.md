@@ -6,7 +6,7 @@ ms.prod-support-area-path:
 ---
 # .NET CF application calls Unadvise on COM connection point when form loses focus
 
-This article helps you working around the problem that no events are received from the Component Object Model (COM) object when the .NET Compact Framework application that creates a COM object and connects to its source connection point loses focus.
+This article helps you work around the problem that no events are received from the Component Object Model (COM) object when the .NET Compact Framework application that creates a COM object and connects to its source connection point loses focus.
 
 _Original product version:_ &nbsp; Microsoft .NET Compact Framework 3.5  
 _Original KB number:_ &nbsp; 2300221
