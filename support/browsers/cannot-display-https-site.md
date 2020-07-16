@@ -1,5 +1,5 @@
 ---
-title: HTTPS site can‘t be display in Internet Explorer
+title: HTTPS site cannot be display in Internet Explorer
 description: This article describes the situation where https sites can't be displayed in Internet Explorer when SSL 2.0 and TLS 1.2 are loaded.
 ms.date: 06/09/2020
 ms.reviewer: 
@@ -14,6 +14,7 @@ _Original KB number:_ &nbsp; 2851628
 ## Symptoms
 
 Assume that you select SSL 2.0 and TLS 1.2 in the Internet Explorer 11 security settings. When you try to access an HTTPS website in Internet Explorer, you receive the following error message:
+
 > Internet Explorer cannot display the webpage
 
 ## Cause

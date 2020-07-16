@@ -15,6 +15,7 @@ _Original KB number:_ &nbsp; 2823483
 ## Symptoms
 
 Internet Explorer 10 for Windows 7 doesn't install correctly, and you receive error code **9C57** together with the following error message:
+
 > Internet Explorer needs an update before installing
 
 ## Cause
