@@ -18,6 +18,10 @@ appliesto:
 
 # Office Products Troubleshooting
 
+Welcome to Microsoft Office Products troubleshooting! In this page, you will find information on how to identify and fix errors you may experience when using Microsoft Office products.
+
+Check the list below for the top issues. You can also browse the table of contents or use the search box on the left to find others.
+
 ## Top Office Products troubleshooting articles
 
 - [Long numbers are displayed incorrectly in Excel](https://docs.microsoft.com/office/troubleshoot/excel/long-numbers-incorrectly-in-excel)
@@ -27,7 +31,7 @@ appliesto:
 - [An error occurred when sending commands to the program in Excel](https://docs.microsoft.com/office/troubleshoot/excel/error-when-send-commands-in-excel)
 - [How to change the export resolution of a PowerPoint slide](https://docs.microsoft.com/office/troubleshoot/powerpoint/change-export-slide-resolution)
 
-## More Office Online support content
+## More Office support content
 
 - [Known issues with Office and Windows 10](https://support.microsoft.com/office/known-issues-with-office-and-windows-10-28d56d84-c16c-4763-8eac-e51e05a37a16)
 - [Fixes for Office installation or activation issues](https://support.microsoft.com/office/fixes-or-workarounds-for-recent-office-installation-or-activation-issues-30453145-72e9-4061-a88c-cd74884f292f)
