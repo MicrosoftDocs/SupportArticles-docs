@@ -318,8 +318,8 @@
     - name: Error occurs when opening files
       href: cannot-open-certain-files.md
 
-    - name: FAQs about Enhanced Security
-      href: faq-ie-enhanced-security.md
+    - name: FAQs about Enhanced Security Configuration
+      href: enhanced-security-configuration-faq.md
 
     - name: Https site can't be displayed
       href: ie-cannot-display-https-site.md
