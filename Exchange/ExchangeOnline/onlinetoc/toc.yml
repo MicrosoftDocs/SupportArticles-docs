@@ -121,6 +121,8 @@
       href: ../meetings/conference-rooms-not-dispalyed.md
   - name: Modern Authentication
     items:
+    - name: Can't connect to Outlook using POP/IMAP
+      href: ../modern-authentication/cannot-connect-mailbox-pop-imap-outlook.md
     - name: Transition from D/ITAR to vNext
       href: ../modern-authentication/modern-authentication-configuration.md
   - name: Move Mailboxes
