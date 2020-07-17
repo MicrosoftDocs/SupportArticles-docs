@@ -1,5 +1,5 @@
 ---
-title: Can't connect to Exchange Online mailbox using POP/IMAP, and Modern authentication 
+title: Can't connect to Outlook with POP/IMAP and Modern authentication 
 description: Describes an issue in which you are not able to connect to Exchange Online mailbox using POP/IMAP, SMTP protocols and Modern authentication in Outlook.
 author: TobyTu
 ms.author: Agustin.Gallegos
@@ -18,7 +18,7 @@ search.appverid:
 - MET150
 ---
 
-# Can't connect to Exchange Online mailbox using POP/IMAP, and Modern authentication
+# Can't connect to Outlook with POP/IMAP and Modern authentication
 
 Microsoft recently announced the Exchange Online capability to use OAuth authentication for [POP](https://techcommunity.microsoft.com/t5/exchange-team-blog/announcing-oauth-support-for-pop-in-exchange-online/ba-p/1406600), [IMAP and SMTP](https://techcommunity.microsoft.com/t5/exchange-team-blog/announcing-oauth-2-0-support-for-imap-and-smtp-auth-protocols-in/ba-p/1330432) protocols. Also tenants are encouraged to disable [Basic authentication](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-april-2020-update/ba-p/1275508) and move to a [Modern authentication](https://techcommunity.microsoft.com/t5/exchange-team-blog/improving-security-together/ba-p/805892) tenant with modern clients.
 
