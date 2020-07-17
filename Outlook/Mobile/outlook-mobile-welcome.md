@@ -16,6 +16,6 @@ appliesto:
 - Microsoft Outlook for iOS and Android
 ---
 
-# Outlook for iOS and Android Troubleshooting
+# Outlook for iOS and Android troubleshooting
 
 Welcome to Outlook for iOS and Android! Here's a collection of information on how to identify and fix errors that you may run into when you use this product.

@@ -25,7 +25,7 @@ Check the list below for the top issues. You can also browse the table of conten
 ## Top Office products troubleshooting articles
 
 - [Long numbers are displayed incorrectly in Excel](./excel/long-numbers-incorrectly-in-excel.md)
-- [How to merge multiple Word documents into one?](./word/merge-word-documents.md)
+- [How to merge multiple Word documents into one](./word/merge-word-documents.md)
 - [How to troubleshoot damaged documents in Word](./word/damaged-documents-in-word.md)
 - [Error message in Office when a file is blocked by registry policy settings](./settings/file-blocked-in-office.md)
 - [An error occurred when sending commands to the program in Excel](./excel/error-when-send-commands-in-excel.md)

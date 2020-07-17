@@ -16,6 +16,6 @@ appliesto:
 - Microsoft Outlook for Mac
 ---
 
-# Outlook for Mac Troubleshooting
+# Outlook for Mac troubleshooting
 
 Welcome to Outlook for Mac! Here's a collection of information on how to identify and fix errors that you may run into when you use this product.
