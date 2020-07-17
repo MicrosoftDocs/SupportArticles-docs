@@ -24,6 +24,6 @@ The experts will be happy to answer any questions about their content. Bring the
 
 If you like their contribution, feel free to write an appreciative note to them for sharing their expertise.
 
-## Still need help? 
+## Still need help
 
 Go to [Microsoft Community](https://answers.microsoft.com) or [Skype for Business help center](https://support.office.com/skype-for-business).

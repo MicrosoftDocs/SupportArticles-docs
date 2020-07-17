@@ -16,6 +16,6 @@ appliesto:
 - Exchange Server
 ---
 
-# Exchange Server Troubleshooting
+# Exchange Server troubleshooting
 
 Welcome to Exchange Server! Here's a collection of information on how to identify and fix errors that you may run into when you use this product.
