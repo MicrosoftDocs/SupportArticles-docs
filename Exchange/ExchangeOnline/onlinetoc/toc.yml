@@ -122,7 +122,7 @@
   - name: Modern Authentication
     items:
     - name: Can't connect to mailbox using POP/IMAP
-      href: ../cannot-connect-mailbox-pop-imap-outlook.md
+      href: ../modern-authentication/cannot-connect-mailbox-pop-imap-outlook.md
     - name: Transition from D/ITAR to vNext
       href: ../modern-authentication/modern-authentication-configuration.md
   - name: Move Mailboxes
