@@ -51,7 +51,7 @@
   - name: Data on the clipboard is unavailable
     href: data-clipboard-from-winform-app-unavailable.md
   - name: Determine versions and service pack levels
-    href: determine-net-versions-service-pack-levels.md
+    href: determine-dotnet-versions-service-pack-levels.md
   - name: Different WebExceptionStatus are thrown
     href: httpwebrequest-different-webexceptionstatus.md
   - name: Endpoints of an arc aren't drawn correctly
@@ -67,7 +67,7 @@
   - name: Fail to publish ClickOnce applications
     href: fail-publish-clickonce-vs-2010-net-4-dot-5.md
   - name: Form height and width changes
-    href: wrong-winform-height-width-vs-2012.md
+    href: wrong-winform-height-width.md
   - name: Full-screen applications don't receive touch input events
     href: full-screen-wpf-apps-not-receive-touch-input-events.md
   - name: High memory usage when you use EnlistDurable
@@ -119,9 +119,9 @@
   - name: StackOverflowException in DataGridView
     href: stackoverflowexception-datagridview-tablet.md
   - name: System.Net SDP package information
-    href: system-dot-net-sdp-package-information.md
+    href: system-dotnet-sdp-package-information.md
   - name: System.Net and WCF diagnostics
-    href: system-dot-net-wcf-diagnostics.md
+    href: system-dotnet-wcf-diagnostics.md
   - name: TableLayoutPanel is displayed with large spaces
     href: nested-tablelayoutpanel-large-empty-spaces.md
   - name: Text is lost when you render an XPS DocumentPage
