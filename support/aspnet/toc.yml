@@ -1,14 +1,14 @@
 - name: Active Server Pages
   items:
   - name: Format DateTime and Date values in XML
-    href: format-datetime-values-xml-dataset-vb.md
+    href: format-datetime-values-xml-dataset.md
 
 - name: Development
   items:
   - name: ASP.NET 2.0 and 3.5 don't work
     href: aspnet-35-aspnet-2-not-work.md
   - name: Can't debug web applications
-    href: cannot-debug-aspnet-web-application.md
+    href: cannot-debug-application.md
   - name: Can't write to event log
     href: fail-write-event-log.md
   - name: COM objects can't be printed
@@ -50,20 +50,20 @@
   - name: Tilde notation maps to original urls
     href: tilde-notation-maps-original-url.md
   - name: Use a .resx file to create applications
-    href: use-app-resx-create-aspnet-web-app.md
+    href: use-app-resx-create-web-app.md
   - name: Use forms-based authentication
-    href: forms-based-authentication-aspnet-csharp.md
+    href: forms-based-authentication.md
 
 - name: FTP authentication and authorization
   items:
   - name: Configure SQL Server to store session state
-    href: configure-sql-store-aspnet-session-state.md
+    href: configure-sql-store-session-state.md
   - name: Disable debugging for web applications
-    href: disable-debugging-aspnet-application.md
+    href: disable-debugging-application.md
   - name: Edit the web.config file
     href: edit-web-config.md
   - name: Impersonation in web applications
-    href: impersonation-aspnet.md
+    href: implement-impersonation.md
 
 - name: Health, diagnostic, and performance features
   items:
@@ -72,7 +72,7 @@
   - name: Information diagnostic of IIS and ASP.NET
     href: iis-and-aspnet-diagnostic.md
   - name: Troubleshoot OutOfMemoryException
-    href: outofmemoryexception-aspnet.md
+    href: troubleshoot-outofmemoryexception.md
 
 - name: IISAdmin service and Inetinfo process operation
   items:
@@ -92,7 +92,7 @@
   - name: Error-logging capabilities of HTTP APIs
     href: error-logging-http-apis.md
   - name: Exceptions cause applications to quit
-    href: exceptions-cause-aspnet-apps-quit.md
+    href: exceptions-cause-apps-quit.md
   - name: FileNotFoundException when an application calls a web service
     href: filenotfindexception-call-web-service.md
   - name: State servers log event ID 1072 or 1076
@@ -108,7 +108,7 @@
   - name: Back up configuration files
     href: back-up-configuration-files.md
   - name: Install and uninstall ASP.NET 4.5 in Windows 8
-    href: install-aspnet-windows-8-server-2012.md
+    href: install-aspnet-45-windows-8-server-2012.md
   - name: Restrict users from accessing to web resources
     href: restrict-users-access-web-resource.md
 

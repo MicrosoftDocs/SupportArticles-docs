@@ -56,9 +56,9 @@
   - name: Declare an array of points to functions
     href: declare-pointers-to-functions.md
   - name: Expand a pointer in Watch window
-    href: expand-pointer-vc-debugger-watch.md
+    href: expand-pointer- debugger-watch-window.md
   - name: Start default browser programmatically
-    href: use-visual-cpp-start-internet-browser.md
+    href: start-internet-browser.md
   - name: Use SqlDataAdapter to update databases
     href: update-database-sqldataadapter.md
 
@@ -67,23 +67,23 @@
   - name: Minimum service pack levels for Redistributable packages
     href: minimum-service-pack-levels.md
   - name: Redistributable Package installation fails
-    href: vc-runtime-installation-fails.md
+    href: runtime-installation-fails.md
 
 - name: Integrated Development Environment (IDE)
   items:
   - name: Visual Studio crashes at startup
-    href: vc-2013-crashes-startup.md
+    href: visual-studio-2013- startup-crashes.md
 
 - name: Language or Compilers
   items:
   - name: CS0433 error in ASP.NET projects 
-    href: cs0433-error-when-building-asp-net-project.md
+    href: cs0433-error-when-building-aspnet-project.md
   - name: C2491 error when you define data members as dllimport
     href: c2491-define-data-member-dllimport.md
   - name: CDatabase::GetConnect returns empty string
     href: cdatabase-getconnect-returnn-empty.md
   - name: Do basic file I/O operations
-    href: visual-cpp-basic-file-io.md
+    href: basic-file-io-operation.md
   - name: Enable Tablet press-and-hold gesture in MFC
     href: mfc-enable-tablet-press-and-hold-gesture.md
   - name: LNK1000 error when you use /WHOLEARCHIVE switch
@@ -99,11 +99,11 @@
   - name: Warnings when you build managed extensions
     href: linker-warning-managed-extension-c-dll-project.md
   - name: Write entries to an event log
-    href: visual-cpp-write-entry-to event-log.md
+    href: write-entry-to-event-log.md
 
 - name: Project/Build System
   items:
   - name: Can't save file settings in a project
-    href: file-setting-not-save-visual-cpp-2013.md
+    href: file-setting-not-save.md
   - name: Visual C++ 2010 supports .NET 4 as target
-    href: cpp-2010-support-dot-net-4-target.md
+    href: cpp-2010-support-dotnet-4-target.md

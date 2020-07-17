@@ -69,4 +69,4 @@ Check whether the problem is fixed. If the problem is fixed, you are finished wi
 
 ## References
 
-For more information about how to use Windows PowerShell on Windows Server 2003, Windows Server 2008, and Windows Server 2008 R2, see [Windows PowerShell](https://technet.microsoft.com/library/bb978526.aspx). For more information about the Web Deployment Tool, see [Web Deploy 3.6](https://www.iis.net/download/webdeploy).
+For more information about the Web Deployment Tool, see [Web Deploy 3.6](https://www.iis.net/download/webdeploy).
