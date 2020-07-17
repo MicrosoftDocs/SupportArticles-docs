@@ -16,7 +16,7 @@ appliesto:
 - SharePoint Server
 ---
 
-# SharePoint Server Troubleshooting
+# SharePoint Server troubleshooting
 
 Welcome to SharePoint Server troubleshooting! Here's a collection of information on how to identify and fix errors that you may run into when using this product.
 
