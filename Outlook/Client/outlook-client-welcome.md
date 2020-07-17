@@ -16,6 +16,6 @@ appliesto:
 - Microsoft Outlook
 ---
 
-# Outlook for Windows Troubleshooting
+# Outlook for Windows troubleshooting
 
 Welcome to Outlook! Here's a collection of information on how to identify and fix errors that you may run into when you use this product.

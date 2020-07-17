@@ -16,10 +16,10 @@ appliesto:
 - Office 365
 ---
 
-# Office 365 Enterprise Troubleshooting
+# Office 365 Enterprise troubleshooting
 
 Welcome to Office 365! Here's a collection of information on how to identify and fix errors that you may run into when using this product.
 
-## Still need help? 
+## Still need help
 
 Go to [Microsoft Community](https://answers.microsoft.com) or the [Office 365 help center](https://docs.microsoft.com/Office365/Enterprise/).

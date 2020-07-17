@@ -16,6 +16,6 @@ appliesto:
 - Skype for Business Server
 ---
 
-# Skype for Business Server Troubleshooting
+# Skype for Business Server troubleshooting
 
 Welcome to Skype for Business Server! Here's a collection of information on how to identify and fix errors that you may run into when you use this product.

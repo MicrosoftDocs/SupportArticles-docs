@@ -16,6 +16,6 @@ appliesto:
 - Exchange Online
 ---
 
-# Exchange Online Troubleshooting
+# Exchange Online troubleshooting
 
-Welcome to Exchange Online! Here's a collection of information on how to identify and fix errors that you may run into when you use this product. 
+Welcome to Exchange Online! Here's a collection of information on how to identify and fix errors that you may run into when you use this product.

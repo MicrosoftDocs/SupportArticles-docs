@@ -16,6 +16,6 @@ appliesto:
 - Skype for Business Online
 ---
 
-# Skype for Business Online Troubleshooting
+# Skype for Business Online troubleshooting
 
-Welcome to Skype for Business Online! Here's a collection of information on how to identify and fix errors that you may run into when you use this product. 
+Welcome to Skype for Business Online! Here's a collection of information on how to identify and fix errors that you may run into when you use this product.
