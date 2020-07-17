@@ -48,7 +48,8 @@
     "globalMetadata": {
       "breadcrumb_path": "/support/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "None"
+      "feedback_system": "None",
+      "searchScope": ["Troubleshoot"]
     },
 
     "fileMetadata": {
@@ -136,6 +137,16 @@
         "webapps/**/*.md": "Web Apps",
         "windows/win32/**/*.md": "Windows Developer",
         "mem/intune/**/*.md": "Intune"
+      },
+      "searchScope": {
+        "biztalk/**/*.md": ["BizTalk Server"],
+        "dotnet/**/*.md": [".NET"],        
+        "visualstudio/**/*.md": ["Visual Studio"],
+        "cpp/**/*.md": ["Visual Studio"],
+        "iis/**/*.md": ["Web Apps"],
+        "aspnet/**/*.md": ["Web Apps"],        
+        "webapps/**/*.md": ["Web Apps"],
+        "windows/win32/**/*.md": ["Windows Developer"]
       }
     },
 

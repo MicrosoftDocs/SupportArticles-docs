@@ -11,21 +11,21 @@
 - name: Silverlight
   items:
   - name: Applications crash with 0xC0000094 exception
-    href: ./silverlight/exception-0xc0000094-silverlight-5.md
+    href: ./silverlight/application-exception-0xc0000094-vmware.md
   - name: Can't display DRM protected subtitles
-    href: ./silverlight/silverlight-not-support-drm-protected-subtitles.md
+    href: ./silverlight/drm-protected-subtitles-not-supported.md
   - name: Run Silverlight Configuration tool
-    href: ./silverlight/run-silverlight-configuration-tool.md
+    href: ./silverlight/run-configuration-tool.md
   - name: Slsvcutil.exe crashes
-    href: ./silverlight/slsvcutil-tool-crash-silverlight-5.md
+    href: ./silverlight/slsvcutil-tool-crashes.md
 - name: Visual Basic
   items:
   - name: Examine CheckBox values in a DataGrid column
-    href: ../dotnet/visual-basic/checkbox-control-values-datagrid-vb.md
+    href: ../dotnet/visual-basic/checkbox-control-values-datagrid.md
   - name: NullReferenceException when you use CommandBuilder
     href: ../dotnet/visual-basic/nullreferenceexception-commandbuilder.md
   - name: Race conditions and deadlocks
     href: ../dotnet/visual-basic/race-conditions-deadlocks.md
   - name: Use Trace and Debug classes
-    href: ../dotnet/visual-basic/trace-debug-visual-basic-net.md
+    href: ../dotnet/visual-basic/trace-debug.md
 
