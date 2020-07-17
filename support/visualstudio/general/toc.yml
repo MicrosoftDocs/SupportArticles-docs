@@ -91,8 +91,8 @@
   items:
   - name: Building a Windows 10 driver fails
     href: building-windows-10-driver-fails.md
-  - name: Setup projects have dependencies on .NET
-    href: setup-project-depend-on-dotnet-framework.md
+  - name: Setup projects have dependencies on .NET framework
+    href: setup-project-depend-dotnet-framework.md
 
 
 - name: Team explorer/Version control

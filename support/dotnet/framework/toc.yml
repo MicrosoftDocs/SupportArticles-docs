@@ -55,7 +55,7 @@
   - name: Different WebExceptionStatus are thrown
     href: httpwebrequest-different-webexceptionstatus.md
   - name: Endpoints of an arc aren't drawn correctly
-    href: endpoints-of-arc-not-be-drawn-correctly.md
+    href: arc-endpoints-not-be-drawn-correctly.md
   - name: Explain DefaultValueAttribute
     href: confusing-defaultvalueattribute-docs.md
   - name: Event handle leaks in an application
