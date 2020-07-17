@@ -19,7 +19,7 @@
   - name: Assign a private key to a new certificate
     href: assign-certificate-private-key.md
   - name: Child requests generate duplicate events
-    href: duplicate-asp-net-events.md
+    href: duplicate-aspnet-events.md
   - name: Cookies aren't available
     href: cookie-unavailable-ihttpmodules-ihttphandler.md
   - name: Error 0x80004005 when you register WebClass
@@ -159,13 +159,13 @@
   - name: Access is denied when you call web services
     href: access-denied-call-web-service.md
   - name: Changing IP/port causes sites to fail
-    href: change-ip-port-wildcard certificate-site-fail.md
+    href: change-ip-port-wildcard-certificate-site-fail.md
   - name: Can't import .pfx files to personal certificate store
     href: cannot-import-ssl-pfx-local-certificate.md
   - name: Can't change identity of an application pool
     href: 0x80090016-change-application-pool-identity.md
   - name: Configure W3SVC in WSFC
-    href: configure-iis-w3svc-wsfc.md
+    href: configure-w3svc-wsfc.md
   - name: Configure intermediate certificates
     href: configure-intermediate-certificates.md
   - name: Configure Many-to-One client mappings

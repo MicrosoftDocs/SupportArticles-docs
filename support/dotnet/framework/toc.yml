@@ -47,7 +47,7 @@
   - name: Create a summary row for DataGrid
     href: create-summary-row-datagrid.md
   - name: Concurrent operations are forced to run sequentially
-    href: wcf-extensions-concurrent-request-run sequentially.md
+    href: wcf-extensions-concurrent-request-run-sequentially.md
   - name: Data on the clipboard is unavailable
     href: data-clipboard-from-winform-app-unavailable.md
   - name: Determine versions and service pack levels
@@ -57,7 +57,7 @@
   - name: Endpoints of an arc aren't drawn correctly
     href: arc-endpoints-not-be-drawn-correctly.md
   - name: Explain DefaultValueAttribute
-    href: confusing-defaultvalueattribute-docs.md
+    href: confusing-defaultvalueattribute.md
   - name: Event handle leaks in an application
     href: event-handle-leaks.md
   - name: Exception when you instantiate a WPF window
@@ -83,7 +83,7 @@
   - name: InvokeMember throws AmbigousMatchException
     href: invokemember-ambigousmatchexception.md
   - name: Known issues for .NET Framework 4.5.1 Preview
-    href: issues-dotnet-framework-4-5-1-preview.md
+    href: issues-dotnet-framework-451-preview.md
   - name: Memory corruption in the managed process
     href: citrix-virtual-memory-optimization-80131506-error.md
   - name: MSDTC transaction requires Full Trust
@@ -95,7 +95,7 @@
   - name: Open databases by using Visual Basic .NET
     href: open-database-by-sql-server-dotnet-data-provider.md
   - name: OutOfMemory exception in a managed application
-    href: out-of-memory-dotnet-framework-4-6-1.md
+    href: out-of-memory-dotnet-framework-461.md
   - name: Passwords can't be passed to a WCF service
     href: password-icredentials-cannot-pass-wcf-service.md
   - name: Password field is empty
