@@ -25,7 +25,7 @@ To do it, following the steps below:
 1. Click **Start**, type *regedit* in the **Search programs and files** box (click **Run** and type *regedit* in the **Run** dialog box in Windows XP), and then press Enter.
 2. In the Registry Editor, locate the registry key name listed in the **Registry keys for different .NET Framework and service packs** section below, and check the value for the related .NET Framework.
 
-    :::image type="content" source="./media/determine-net-versions-service-pack-levels/registry-editor.png" alt-text="check the registry key in the Registry Editor":::
+    :::image type="content" source="./media/determine-dotnet-versions-service-pack-levels/registry-editor.png" alt-text="check the registry key in the Registry Editor":::
 
 ### Registry keys for different .NET Framework and service packs
 

@@ -20,7 +20,7 @@ When you create a Xamarin Android or Xamarin.Forms app in Visual Studio 2015, yo
 
 For example, you see an error message dialog box that's similar to the following screenshot:
 
-:::image type="content" source="./media/jdk-miss-xamarin-app-vs-2015/error-message-dialog.png" alt-text="error message dialog box":::
+:::image type="content" source="./media/jdk-missing-create-xamarin-app/error-message-dialog.png" alt-text="error message dialog box":::
 
 ## Cause
 

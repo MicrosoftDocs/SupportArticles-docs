@@ -18,11 +18,11 @@ Developers debugging existing WinForms applications (targeting .NET 4.0 or an ol
 
 *Example of original behavior:*
 
-![Running outside the Visual Studio debugger](./media/wrong-winform-height-width-vs-2012/original-form.png)
+![Running outside the Visual Studio debugger](./media/wrong-winform-height-width/original-form.png)
 
 *Example of new behavior*:
 
-![Running under the Visual Studio debugger ](./media/wrong-winform-height-width-vs-2012/new-form.png)
+![Running under the Visual Studio debugger ](./media/wrong-winform-height-width/new-form.png)
 
 ## Cause
 

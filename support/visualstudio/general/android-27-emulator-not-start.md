@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 4477609
 
 Assume that you have a Google Android 27 emulator image on a 32-bit computer that has Microsoft Visual Studio 2017 installed. When you try to start that emulator, it fails to start, and you receive an error (GPU Driver Issue). For example, you see an error message dialog box that's similar to the following screenshot:
 
-:::image type="content" source="./media/android-27-emulator-not-start-vs-2017/gpu-driver-issue-details.png" border="false" alt-text="Issue details in the GUP Driver Issue dialog box":::
+:::image type="content" source="./media/android-27-emulator-not-start/gpu-driver-issue-details.png" border="false" alt-text="Issue details in the GUP Driver Issue dialog box":::
 
 ## Workaround
 
