@@ -65,12 +65,10 @@
         "**/*.md": "itpro"
       },
       "author": {
-        "**/*.md": "ramakoni1",
-        "azure/active-directory/*.md": "genlin"
+        "**/*.md": "ramakoni1"
       },
       "ms.author": {
-        "**/*.md": "ramakoni",
-        "azure/active-directory/*.md": "genli"
+        "**/*.md": "ramakoni"
       },
       "ms.localizationpriority": {
         "**/*.md": "Normal"
@@ -130,12 +128,7 @@
       "ms.technology": {
         "mem/intune/**/*.md": "microsoft-graph"
       },
-      "ms.prod": {
-        "azure/**/*.md": "azure"
-    },
-        "ms.service": {
-        "azure/active-directory/*.md": "active-directory"
-    },
+
       "titleSuffix": {
         "biztalk/**/*.md": "BizTalk Server",
         "dotnet/**/*.md": ".NET",
@@ -151,9 +144,7 @@
         "iis/**/*.md": "Internet Information Services",
         "webapps/**/*.md": "Web Apps",
         "windows/win32/**/*.md": "Windows Developer",
-        "mem/intune/**/*.md": "Intune",
-        "azure/**/*.md": "Azure",
-        "azure/active-directory/*.md": "Active Directory"
+        "mem/intune/**/*.md": "Intune"
       },
       "searchScope": {
         "biztalk/**/*.md": ["BizTalk Server"],
