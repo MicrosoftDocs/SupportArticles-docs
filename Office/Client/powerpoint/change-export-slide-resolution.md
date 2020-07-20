@@ -28,16 +28,16 @@ You can change the export resolution in Microsoft PowerPoint by saving a slide i
 ## Step 1: Change the export resolution setting
 
 > [!IMPORTANT]
-> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration ](https://support.microsoft.com/help/322756) in case problems occur.
+> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
 By default, the export resolution of a PowerPoint slide that you want to save as a picture is 96 dots per inch (dpi). To change the export resolution, follow these steps:
 
-1. Exit all Windows-based programs.   
+1. Exit all Windows-based programs.
 2. Right-click the **Start** button and then **Run**. (In Windows 7, select **Start**, and then **Run**.)  
-3. In the **Open** box, type regedit, and then select **OK**.   
+3. In the **Open** box, type regedit, and then select **OK**.
 4. Locate one of the following registry subkeys, depending on the version of PowerPoint that you're using:
 
-    PowerPoint 2016
+    PowerPoint 2016, 2019, PowerPoint for Office 365
 
    **HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\PowerPoint\Options**
 
@@ -57,11 +57,10 @@ By default, the export resolution of a PowerPoint slide that you want to save as
 
    **HKEY_CURRENT_USER\Software\Microsoft\Office\11.0\PowerPoint\Options**
 
-
-5. Click the **Options** subkey, point to **New** on the **Edit** menu, and then click **DWORD Value**.   
+5. Click the **Options** subkey, point to **New** on the **Edit** menu, and then click **DWORD (32-bit) Value**.
 6. Type ExportBitmapResolution, and then press Enter.
-7. Make sure that **ExportBitmapResolution** is selected, and then click **Modify** on the **Edit** menu.   
-8. In the Edit DWORD Value dialog box, select **Decimal**.   
+7. Make sure that **ExportBitmapResolution** is selected, and then click **Modify** on the **Edit** menu.
+8. In the Edit DWORD Value dialog box, select **Decimal**.
 9. In the **Value data** box, type the value of the resolution that you want such as 300. Or, use the parameters in the following table.
 
     |Decimal value|Full-screen pixels (horizontal × vertical)|Widescreen pixels (horizontal × vertical)|Dots per inch (horizontal and vertical)|
@@ -77,33 +76,32 @@ By default, the export resolution of a PowerPoint slide that you want to save as
     > [!NOTE]
     > See the [Limitations](#limitations) section for more information when you set this value.
 
-10. Select **OK**.   
-11. On the **File** menu, select **Exit** to exit Registry Editor.   
+10. Select **OK**.
+11. On the **File** menu, select **Exit** to exit Registry Editor.
 
 ## Step 2: Export the slide as a picture
 
-1. In PowerPoint, open your slide presentation, and then open the slide that you want to export.   
-2. On the **File** menu, select **Save As**.   
+1. In PowerPoint, open your slide presentation, and then open the slide that you want to export.
+2. On the **File** menu, select **Save As**.
 3. In the **Save as type** box, select one of the following picture formats:
 
-   - GIF Graphics Interchange Format (.gif)   
-   - JPEG File Interchange Format (*.jpg)   
-   - PNG Portable Network Graphics Format (*.png)   
-   - TIFF Tag Image File Format (*.tif)   
-   - Device Independent Bitmap (*.bmp)   
-   - Windows Metafile (*.wmf)   
-   - Enhanced Windows Metafile (*.emf)   
+   - GIF Graphics Interchange Format (.gif)
+   - JPEG File Interchange Format (*.jpg)
+   - PNG Portable Network Graphics Format (*.png)
+   - TIFF Tag Image File Format (*.tif)
+   - Device Independent Bitmap (*.bmp)
+   - Windows Metafile (*.wmf)
+   - Enhanced Windows Metafile (*.emf)
 
-> [!NOTE]
-> You may want to change the picture's save location in the **Save in** box. You may also want to change the name of the picture in the **File name** box.   
+    > [!NOTE]
+    > You may want to change the picture's save location in the **Save in** box. You may also want to change the name of the picture in the **File name** box.
 
 4. Select **Save**. You will be prompted with the following dialog box:
 
     ![Select Current Slide Only.](./media/change-export-slide-resolution/current-slide.png)
 
-
-    Select **Current Slide Only**. The slide is saved in the new format and resolution, in the location that you specified in the **Save in** box.   
-5. To verify that the slide is saved in the resolution that you specified, right-click the picture, and then select **Properties**.   
+    Select **Current Slide Only**. The slide is saved in the new format and resolution, in the location that you specified in the **Save in** box.
+5. To verify that the slide is saved in the resolution that you specified, right-click the picture, and then select **Properties**.
 
 ## Limitations
 
@@ -115,11 +113,11 @@ maxdpi = (sqrt(100,000,000 / (slide with * slide height)), where slide width/hei
 For example, for a standard 13.3" x 7.5" slide, the equation would be:
 sqrt(100,000,000 / (13.333 * 7.5) ) = 1000.
 
-**PowerPoint 2019, 2016, 2013, and 365**
+### PowerPoint 2019, 2016, 2013, and 365
 
 There is no fixed DPI limit. Slide export is only limited by how big the resulting bitmap gets. PowerPoint can support creating bitmaps up to ~100,000,000 pixels (width x height). For standard widescreen slides (13.3" x 7.5") this means a maximum DPI of 1000. For the old style 10" x 7.5" slides this means a maximum of 1155 DPI, but depending on slide size, this can be more or less.
 
-**PowerPoint 2010 and older**
+### PowerPoint 2010 and older
 
 The maximum resolution that PowerPoint can export is 3072 pixels, based on the longest edge of the slide. For example, the standard 10" × 7.5" slide has a maximum effective DPI value of 307. The 3070-pixel result (10 × 307 = 3070) falls within the 3072 limit. However, any DPI setting that's greater than 307 for a standard slide reverts to the limit of 3072.
 
