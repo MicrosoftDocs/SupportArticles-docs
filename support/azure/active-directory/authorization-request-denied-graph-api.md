@@ -1,7 +1,7 @@
 ---
 title: Authorization_RequestDenied error message when you try to change a password if you use Graph API
 description: Discusses an Authorization_RequestDenied error message that you receive when you try to change a password if you use Graph API. Provides a resolution.
-ms.date: 05/11/2020
+ms.date: 07/20/2020
 ms.technology: 
 ms.reviewer: willfid, maxv, nmanis
 ---
