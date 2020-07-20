@@ -40,6 +40,11 @@ productDirectory:
     links:
     - url: visualstudio/welcome-visual-studio.md
       text: Support for Visual Studio
+  - title: Host Integration Server
+    imageSrc: "media/hub-landing/his.jpeg"
+    links:
+    - url: host-integration-server/welcome-host-integration-server.md
+      text: Support for Host Integration Server
   - title: Web Apps
     imageSrc: "media/hub-landing/app-service-web.svg"
     links:

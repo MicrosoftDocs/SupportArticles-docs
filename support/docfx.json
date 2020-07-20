@@ -95,6 +95,13 @@
       },
 
       "ms.prod": {
+        "host-integration-server/**/*.md": "host-integration-server"
+      },
+      "ms.technology": {
+        "host-integration-server/**/*.md": ""
+      },
+
+      "ms.prod": {
         "visualstudio/**/*.md": "visual-studio-family"
       },
       "ms.technology": {
@@ -129,6 +136,7 @@
         "dotnet/framework/**/*.md": ".NET Framework",
         "dotnet/framework/wcf/**/*.md": "Windows Communication Foundation",
         "dotnet/visual-basic/**/*.md": "Visual Basic",        
+        "host-integration-server/**/*.md": "Host Integration Server",
         "aspnet/**/*.md": "ASP.NET",        
         "visualstudio/**/*.md": "Visual Studio",
         "visualstudio/silverlight/**/*.md": "Silverlight",
@@ -141,6 +149,7 @@
       "searchScope": {
         "biztalk/**/*.md": ["BizTalk Server"],
         "dotnet/**/*.md": [".NET"],        
+        "host-integration-server/**/*.md": ["Host Integration Server"],
         "visualstudio/**/*.md": ["Visual Studio"],
         "cpp/**/*.md": ["Visual Studio"],
         "iis/**/*.md": ["Web Apps"],
