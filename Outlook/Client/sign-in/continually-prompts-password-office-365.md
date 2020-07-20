@@ -78,16 +78,13 @@ If you have an older version of Outlook, change the **Logon network security** 
 To locate and view the registry setting for Anonymous Authentication in the Outlook profile, follow these steps.
 
 > [!IMPORTANT]
-> Modifying the Outlook profile by using the "Profiles" registry path is not supported and may cause your Outlook profile to be in an unsupported state.
+> Modifying the Outlook profile by using the "Profiles" registry path is not supported and may cause your Outlook profile to be in an unsupported state. Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you access it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
-> [!IMPORTANT]
-> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you access it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
-
-1. Open Registry Editor. To do this, do one of the following:
+1. Open the Registry Editor. 
 
    - In Windows 10, Windows 8.1, or Windows 8, press the Windows logo key+R to open the **Run** dialog box, type regedit.exe, and then click **OK**.
    - In Windows 7, click **Start**, type regedit in the **Start Search** box, and then press Enter. If you're prompted for an administrator password or for confirmation, type the password, or click **Allow**.
-2. Locate the following registry path, as appropriate for your version of Outlook:
+2. Locate the registry path appropriate for your version of Outlook:
 
    - For Outlook 2013
 
