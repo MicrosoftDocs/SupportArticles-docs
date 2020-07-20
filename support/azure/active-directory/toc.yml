@@ -49,7 +49,7 @@
     href: cannot-work-automatic-upgrade.md
   - name: Azure AD Sync tool installation fails
     href: install-ad-sync-tool-fails.md
-  - name: Can't connect to Azure RMS using PowerShell
+  - name: Can't connect to Azure RMS
     href: fail-connect-azure-information-protection-PowerShell.md
   - name: Can't enable Device writeback
     href: Cannot-enable-device-writeback.md
@@ -59,8 +59,6 @@
     href: cannot-manage-objects.md
   - name: Can't run DirSyncConfigShell.psc1
     href: load-file-or-assembly-error.md
-  - name: Can't run scripts in Azure AD Module PowerShell
-    href: cannot-run-scripts-powershell.md
   - name: Can't sign in after converting domain
     href: cannot-signin-convert-domain-federated.md
   - name: Can't sync system mailbox
@@ -109,6 +107,8 @@
     href: pwd-hash-sync-stops-work.md
   - name: ProxyAddresses attribute populating
     href: proxyaddresses-attribute-populate.md
+  - name: Scripts cannot be loaded
+    href: cannot-run-scripts-powershell.md
   - name: Separate passwords required
     href: separate-pwds-required-computer-work-account.md
   - name: Slow performance and high CPU usage
