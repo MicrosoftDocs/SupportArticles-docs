@@ -5,7 +5,7 @@
   - name: C2653 or C2039 error when you reference a STD function
     href: c2653-c2039-error-reference-function.md
   - name: Call Run() method of a Script control
-    href: call-script-control-run-method-cpp.md
+    href: call-script-control-run-method.md
   - name: Change mouse pointer for a window in MFC
     href: change-mouse-pointer-window-mfc.md
   - name: Click a Check box in a TreeView
@@ -21,69 +21,69 @@
   - name: Use queue STL functions
     href: stl-queue-member-functions.md
   - name: Use map STL functions
-    href: use-map-stl-functions-visual-cpp.md
+    href: use-map-stl-functions.md
   - name: Use PageHeap to detect memory errors
-    href: pageheap-detect-memory-errors-cpp.md
+    href: pageheap-detect-memory-errors.md
   - name: Use priority_queue STL functions
-    href: use-priority-queue-stl-function-cpp.md
+    href: use-priority-queue-stl-function.md
   - name: Use stack::top and stack::empty methods
-    href: stack-top-empty-stl-function-visual-cpp.md
+    href: stack-top-empty-stl-function.md
   - name: Use STL sqrt and pow functions
-    href: stl-sqrt-pow-functions-visual-cpp.md
+    href: stl-sqrt-pow-functions.md
   - name: Use string arrays
-    href: use-string-arrays-visual-cpp.md
+    href: use-string-arrays.md
   - name: Use list::list STL function
-    href: use-list-list-stl-visual-cpp.md
+    href: use-list-list-stl.md
   - name: Use list::remove STL function
-    href: use-list-stl-function-visual-cpp.md
+    href: use-list-stl-function.md
   - name: Use random_shuffle STL function
-    href: use-random-shuffle-stl-visual-cpp.md
+    href: use-random-shuffle-stl.md
   - name: Use set::find STL function
-    href: use-setfind-stl-function-visual-cpp.md
+    href: use-setfind-stl-function.md
   - name: Use STL PRIORITY_QUEUE class
     href: stl-priority-queue-class-custom-type.md
   - name: Use trigonometry STL functions
-    href: trigonometry-stl-functions-visual-cpp.md
+    href: trigonometry-stl-functions.md
   - name: Use vector functions
     href: vectorerase-vectorempty-vectorpush-back.md
 
 - name: General
   items:
   - name: Add references to managed projects
-    href: add-references-managed-cpp.md
+    href: add-references-managed.md
   - name: Send HTML code to clipboard
-    href: add-html-code-clipboard-visual-cpp.md
+    href: add-html-code-clipboard.md
   - name: Declare an array of points to functions
     href: declare-pointers-to-functions.md
   - name: Expand a pointer in Watch window
-    href: expand-pointer-vc-debugger-watch.md
+    href: expand-pointer- debugger-watch-window.md
   - name: Start default browser programmatically
-    href: use-visual-cpp-start-internet-browser.md
+    href: start-internet-browser.md
   - name: Use SqlDataAdapter to update databases
-    href: update-database-sqldataadapter-visual-cpp.md
+    href: update-database-sqldataadapter.md
 
 - name: Installation
   items:
   - name: Minimum service pack levels for Redistributable packages
-    href: minimum-service-pack-levels-cpp.md
+    href: minimum-service-pack-levels.md
   - name: Redistributable Package installation fails
-    href: vc-runtime-installation-fails.md
+    href: runtime-installation-fails.md
 
 - name: Integrated Development Environment (IDE)
   items:
   - name: Visual Studio crashes at startup
-    href: vc-2013-crashes-startup.md
+    href: visual-studio-2013- startup-crashes.md
 
 - name: Language or Compilers
   items:
   - name: CS0433 error in ASP.NET projects 
-    href: cs0433-error-when-building-asp-net-project.md
+    href: cs0433-error-when-building-aspnet-project.md
   - name: C2491 error when you define data members as dllimport
     href: c2491-define-data-member-dllimport.md
   - name: CDatabase::GetConnect returns empty string
     href: cdatabase-getconnect-returnn-empty.md
   - name: Do basic file I/O operations
-    href: visual-cpp-basic-file-io.md
+    href: basic-file-io-operation.md
   - name: Enable Tablet press-and-hold gesture in MFC
     href: mfc-enable-tablet-press-and-hold-gesture.md
   - name: LNK1000 error when you use /WHOLEARCHIVE switch
@@ -95,15 +95,15 @@
   - name: Unnested loops cause C1061 compiler error
     href: unnested-loops-cause-c1061-error.md
   - name: Use try-catch-finally to catch exceptions
-    href: catch-exceptions-visual-cpp.md
+    href: catch-exceptions.md
   - name: Warnings when you build managed extensions
     href: linker-warning-managed-extension-c-dll-project.md
   - name: Write entries to an event log
-    href: visual-cpp-write-entry-to event-log.md
+    href: write-entry-to-event-log.md
 
 - name: Project/Build System
   items:
   - name: Can't save file settings in a project
-    href: file-setting-not-save-visual-cpp-2013.md
+    href: file-setting-not-save.md
   - name: Visual C++ 2010 supports .NET 4 as target
-    href: cpp-2010-support-dot-net-4-target.md
+    href: cpp-2010-support-dotnet-4-target.md

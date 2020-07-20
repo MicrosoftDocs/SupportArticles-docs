@@ -11,13 +11,13 @@
 - name: Silverlight
   items:
   - name: Applications crash with 0xC0000094 exception
-    href: ./silverlight/exception-0xc0000094-silverlight-5.md
+    href: ./silverlight/application-exception-0xc0000094-vmware.md
   - name: Can't display DRM protected subtitles
-    href: ./silverlight/silverlight-not-support-drm-protected-subtitles.md
+    href: ./silverlight/drm-protected-subtitles-not-supported.md
   - name: Run Silverlight Configuration tool
-    href: ./silverlight/run-silverlight-configuration-tool.md
+    href: ./silverlight/run-configuration-tool.md
   - name: Slsvcutil.exe crashes
-    href: ./silverlight/slsvcutil-tool-crash-silverlight-5.md
+    href: ./silverlight/slsvcutil-tool-crashes.md
 - name: Visual Basic
   items:
   - name: Examine CheckBox values in a DataGrid column

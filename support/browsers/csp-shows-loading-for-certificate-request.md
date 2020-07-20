@@ -1,11 +1,11 @@
 ---
-title: Failed to submit certificate application to Internet Explorer
+title: Failed to submit certificate application
 description: Describes a problem that occurs because active scripting is disabled for the security zone to which the application enterprise CA belongs. A resolution is provided.
 ms.date: 06/03/2020
 ms.prod-support-area-path: 
 ms.reviewer: okang
 ---
-# The value in the "CSP" field appears as "Loading" when you use the Advanced Certificate Request page to submit a certificate request to an enterprise CA in Internet Explorer
+# CSP shows Loading when using Advanced Certificate Request to submit a request to an enterprise CA
 
 This article provides a solution to enable active scripting in the Internet Explorer security zone so that the webpage can receive your instruction to issue a certificate request.
 

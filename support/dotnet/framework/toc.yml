@@ -1,17 +1,17 @@
 - name: General
   items:
   - name: 501 syntax error when you use FtpWebRequest
-    href: ftpwebrequest-ftp-error-dot-net-4.md
+    href: ftpwebrequest-behavior.md
   - name: A ClickOnce application fails to run
     href: manifest-definitions-dont-match-reference.md
   - name: Applications crash at startup
-    href: dot-net-app-crash-at-startup.md
+    href: applications-crash-at-startup.md
   - name: Patching fails
     href: patching-framework-fails.md
   - name: Developer Pack and language packs
-    href: dot-net-4-6-1-developer-language-pack.md
+    href: developer-language-pack.md
   - name: Event ID 1101 after Domain Controller promotion
-    href: net-runtime-event-1101-error-occur.md
+    href: runtime-event-1101.md
   - name: Access violation when you call Ping
     href: access-violation-call-ping-send-repeatedly.md
   - name: ArgumentException when you select rows
@@ -23,7 +23,7 @@
   - name: Can't build projects on MSBuild
     href: sgen-mixed-mode-assembly-built-v2-0-50727.md
   - name: Can't consume web services
-    href: error-dot-net-client-web-service-http.md
+    href: cannot-consume-web-service-via-http-proxy.md
   - name: Can't call COM with multiple AppDomains
     href: fatalexecutionengineerror-call-com-multilpe-appdomains.md
   - name: Can't get security descriptor of a class
@@ -33,9 +33,9 @@
   - name: Can't parse XML that contains special characters
     href: xml-parser-invalid-character.md
   - name: Can't run programs after an upgrade
-    href: cannot-run-application-upgrade-4-dot-6.md
+    href: cannot-run-programs-after-upgrade.md
   - name: Changes in the TSAware behavior
-    href: change-tsaware-dotnet-3-5-sp1.md
+    href: change-tsaware.md
   - name: COMException in WPF applications
     href: comexception-error-from-wpf-app.md
   - name: COMException when you create WeakReference<T> object
@@ -45,29 +45,29 @@
   - name: Computer stops responding
     href: computer-stops-responding-mscorsvw.md
   - name: Create a summary row for DataGrid
-    href: create-summary-row-datagrid-asp-net-vb.md
+    href: create-summary-row-datagrid.md
   - name: Concurrent operations are forced to run sequentially
-    href: wcf-extensions-concurrent-request-run sequentially.md
+    href: wcf-extensions-concurrent-request-run-sequentially.md
   - name: Data on the clipboard is unavailable
     href: data-clipboard-from-winform-app-unavailable.md
   - name: Determine versions and service pack levels
-    href: determine-net-versions-service-pack-levels.md
+    href: determine-dotnet-versions-service-pack-levels.md
   - name: Different WebExceptionStatus are thrown
     href: httpwebrequest-different-webexceptionstatus.md
   - name: Endpoints of an arc aren't drawn correctly
-    href: endpoints-of-arc-not-be-drawn-correctly.md
+    href: arc-endpoints-not-be-drawn-correctly.md
   - name: Explain DefaultValueAttribute
-    href: confusing-defaultvalueattribute-docs.md
+    href: confusing-defaultvalueattribute.md
   - name: Event handle leaks in an application
-    href: event-handle-leaks-net-framework-4.md
+    href: event-handle-leaks.md
   - name: Exception when you instantiate a WPF window
     href: executionengine-exception-wpf-window.md
   - name: Exception when you applications with UI automation
-    href: exception-run-net-app-ui-automation.md
+    href: exception-run-app-with-ui-automation.md
   - name: Fail to publish ClickOnce applications
-    href: fail-publish-clickonce-vs-2010-net-4-dot-5.md
+    href: publishing-clickonce-fails.md
   - name: Form height and width changes
-    href: wrong-winform-height-width-vs-2012.md
+    href: wrong-winform-height-width.md
   - name: Full-screen applications don't receive touch input events
     href: full-screen-wpf-apps-not-receive-touch-input-events.md
   - name: High memory usage when you use EnlistDurable
@@ -83,19 +83,19 @@
   - name: InvokeMember throws AmbigousMatchException
     href: invokemember-ambigousmatchexception.md
   - name: Known issues for .NET Framework 4.5.1 Preview
-    href: known-issues-dot-net-4-5-1-preview.md
+    href: issues-dotnet-framework-451-preview.md
   - name: Memory corruption in the managed process
     href: citrix-virtual-memory-optimization-80131506-error.md
   - name: MSDTC transaction requires Full Trust
     href: msdtc-transaction-requires-full-trust.md
   - name: New Japanese era updates
-    href: new-japanese-era-updates-dot-net.md
+    href: new-japanese-era-updates.md
   - name: No events are received from COM
-    href: net-cf-lose-focus-no-events-from-com-object.md
+    href: no-events-from-com-object.md
   - name: Open databases by using Visual Basic .NET
-    href: open-sql-database-by-net-data-provider-vb.md
+    href: open-database-by-sql-server-dotnet-data-provider.md
   - name: OutOfMemory exception in a managed application
-    href: out-memory-dot-net-4-6-1.md
+    href: out-of-memory-dotnet-framework-461.md
   - name: Passwords can't be passed to a WCF service
     href: password-icredentials-cannot-pass-wcf-service.md
   - name: Password field is empty
@@ -105,23 +105,23 @@
   - name: POST and PUT requests fail
     href: post-put-request-fail-httpwebrequest.md
   - name: Query XPathDocument with an XPath expression
-    href: query-xpathdocument-xpath-visual-c-sharp.md
+    href: query-xpathdocument-xpath-csharp.md
   - name: RemotingException when you use binary format
-    href: net-remotingexception-binary-format-message.md
+    href: remotingexception-binary-format-message.md
   - name: Repair an installation
-    href: repair-installation-dot-net-framework.md
+    href: repair-installation.md
   - name: RSS20FeedFormatter throws an exception
     href: rss20feedformatter-throw-exception.md
   - name: Secure applications
-    href: secure-application-built-dot-net-framework.md
+    href: secure-applications.md
   - name: Serialization causes recursion
     href: serialization-onassemblyresolve-event-causes-recursion.md
   - name: StackOverflowException in DataGridView
     href: stackoverflowexception-datagridview-tablet.md
   - name: System.Net SDP package information
-    href: system-dot-net-sdp-package-information.md
+    href: system-dotnet-sdp-package-information.md
   - name: System.Net and WCF diagnostics
-    href: system-dot-net-wcf-diagnostics.md
+    href: system-dotnet-wcf-diagnostics.md
   - name: TableLayoutPanel is displayed with large spaces
     href: nested-tablelayoutpanel-large-empty-spaces.md
   - name: Text is lost when you render an XPS DocumentPage
@@ -133,7 +133,7 @@
   - name: WCF net.tcp services stop responding
     href: wcf-net-tcp-service-stop-response.md
   - name: Windows Forms applications throw SecurityException
-    href: securityexception-winform-net-framework-3-dot-5.md
+    href: winform-app-securityexception.md
   - name: WPF XBAPs crash during startup
     href: wpf-browser-hosted-applications-xbaps-crash.md
 
@@ -146,15 +146,15 @@
   - name: ClickOnce deployment isn't supported with Roaming Profiles
     href: clickonce-not-support-roaming-profiles.md
   - name: Deploy applications
-    href: deploy-application-built-dot-net-framework.md
+    href: deploy-applications.md
   - name: ClickOnce Manifest signing is required
-    href: framework-4-clickonce-manifest-signing.md
+    href: require-clickonce-manifest-signing.md
   - name: Published ClickOnce applications fail to install
     href: clickonce-app-install-launch-fail.md
   - name: Setup diagnostics
-    href: net-framework-setup-diagnostics.md
+    href: setup-diagnostics.md
   - name: Setup fails when rollback is disabled
-    href: enable-rollback-continue-dot-net-setup.md
+    href: enable-rollback-continue-setup.md
 
 - name: Language or Compilers
   items:

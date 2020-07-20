@@ -1,15 +1,15 @@
 - name: Debuggers and analyzers
   items:
   - name: .NET source code debugging
-    href: vs-dot-net-source-code-debug.md
+    href: dotnet-source-code-debug.md
   - name: Can't use Windows Simulator
-    href: windows-simulator-needs-credentials-vs.md
+    href: windows-simulator-needs-credentials.md
   - name: Prevent lost kernel and user mode events
     href: concurrency-visualizer-lost-kernel-user-mode-event.md
   - name: Information collected by Remote Debugger
-    href: vs-remote-debugger-collect-information.md
+    href: remote-debugger-collect-information.md
   - name: Debugger doesn't stop on breakpoints
-    href: vs-debugger-not-stop-breakpoint.md
+    href: debugger-not-stop-breakpoint.md
 
 
 - name: General
@@ -17,31 +17,31 @@
   - name: Alternate credentials don't work for Online accounts
     href: alternate-credentials-stop-working.md
   - name: BI projects don't open after an upgrade
-    href: bi-project-not-open-upgrade-vs-2010-format.md
+    href: bi-project-not-open-after-upgrade.md
   - name: Can't find resources in XAML or WPF designer
     href: cannot-find-resource-named-error.md
   - name: Can't sign in when JavaScript is disabled
-    href: not-sign-in-to-vs-javascript-disabled.md
+    href: cannot-sign-in-javascript-disabled.md
   - name: Error when you build applications
     href: not-transform-license-file-to-binary-resource.md
   - name: Error when you use HTTPS protocol
-    href: use-https-protocol-vs-release-management.md
+    href: release-management-not-have-https-protocol.md
   - name: Files can't be saved when you use Resource Editor
-    href: vs-2012-resource-editor-cannot-save-file.md
+    href: resource-editor-cannot-save-file.md
   - name: Help Viewer Power Tool
     href: help-viewer-power-tool.md
   - name: JDK is missing
-    href: jdk-miss-xamarin-app-vs-2015.md
+    href: jdk-missing-create-xamarin-app.md
   - name: Microsoft.Vsa.tlb could not be loaded
-    href: vsa-tlb-not-loaded-vs-2010.md
+    href: vsa-tlb-not-loaded.md
   - name: Subscriptions administrator migration
-    href: vs-subscription-administrator-migration.md
+    href: subscription-administrator-migration.md
   - name: Use AssemblyVersion and AssemblyFileVersion
     href: assembly-version-assembly-file-version.md
   - name: VBScript runtime error when you do a numeric comparison
     href: vbs-type-mismatch-error.md
   - name: Windows Automation API 3.0 improves performance
-    href: windows-automation-api-3-improve-vs-2010.md
+    href: windows-automation-api-3-improve-visual-studio.md
   
 - name: Installation
   items:
@@ -51,54 +51,54 @@
 - name: Language or compilers
   items:
   - name: Can't use the Scale-140 logo
-    href: cannot-use-scale-140-badge-logo-vs-2012.md
+    href: cannot-use-scale-140-badge-logo.md
   - name: Deploy web applications with Xcopy
     href: deploy-aspnet-app-xcopy-command.md
   - name: Help Viewer 2.0 crashes
-    href: vs-2012-help-viewer-2-crashes.md
+    href: help-viewer-2-crashes.md
   - name: LNK1102 error when you build projects
     href: linker-fatal-error-out-of-memory.md
   - name: Referenced project doesn't exist
-    href: vs-2010-build-fails.md
+    href: building-solution-with-multiple-projects-fails.md
   - name: Single instance application crashes
     href: single-instance-application-crashes.md
   - name: Visual Studio 2012 crashes with StarDist-3
-    href: vs-2012-crash-stardist-3.md
+    href: crash-with-stardist-3.md
   - name: Fail to compile a 32-bit app on a x64 machine
-    href: vs-cannot-compile-32-bit-app-x64-machine.md
+    href: cannot-compile-32-bit-app-x64-machine.md
 
 
 - name: Integrated development environment (IDE)
   items:
   - name: Adjust visual experience settings
-    href: adjust-vs-visual-experience-settings.md
+    href: adjust-visual-experience-settings.md
   - name: ATL control font stock property doesn't update
-    href: atl-control-font-stock-not-update-vs.md
+    href: atl-control-font-stock-not-update.md
   - name: Can't dismiss developer license notifications
-    href: not-dismiss-developer-license-vs-2013.md
+    href: developer-license-notification-not-dismiss.md
   - name: Can't switch between organizational accounts
-    href: cannot-switch-different-accounts-vs-online.md
+    href: cannot-switch-accounts.md
   - name: Overview of Visual Studio 2012 updates
     href: visual-studio-2012-updates.md
   - name: Performance and crashes issues
-    href: performance-crash-issue-vs.md
+    href: performance-crash-issue.md
   - name: Release Management Client crashes 
-    href: release-management-client-crash-vs-2013.md
+    href: release-management-client-crash.md
   - name: Screen readers can't read tool windows
-    href: screen-readers-not-read-vs-windows.md
+    href: screen-readers-not-read-tool-windows.md
 
 - name: Project/Build system
   items:
   - name: Building a Windows 10 driver fails
-    href: fail-building-windows-10-driver-vs-2015.md
-  - name: Setup projects have dependencies on .NET
-    href: net-4-5-cause-setup-project-depend-on-net.md
+    href: building-windows-10-driver-fails.md
+  - name: Setup projects have dependencies on .NET Framework
+    href: setup-project-depend-dotnet-framework.md
 
 
 - name: Team explorer/Version control
   items:
   - name: Excel or Project can't connect to Team Foundation Server
-    href: excel-project-cant-connect-tfs-2010.md
+    href: excel-project-cannot-connect-tfs-2010.md
   - name: Solution Platform drop-down list isn't visible
     href: invisible-solution-platform-drop-down-list.md
 
@@ -106,15 +106,15 @@
 - name: Third-party tools installed with Visual Studio
   items:
   - name: Google Android 27 emulator fails to start
-    href: android-27-emulator-not-start-vs-2017.md
+    href: android-27-emulator-not-start.md
   - name: Third-party dependencies
-    href: third-party-dependencies-vs-2015.md
+    href: third-party-dependencies.md
 
 - name: Tools and utilities
   items:
   - name: Can't start Windows Simulator
-    href: cannot-start-windows-simulator-vs-2012.md
+    href: cannot-start-windows-simulator.md
   - name: Can't use Custom Report Items in SSDT
-    href: cannot-use-custom-report-items-ssdt-vs.md
+    href: cannot-use-custom-report-items-ssdt.md
   - name: NuGet-based Package Manager is missing
     href: nuget-based-package-manager-missing.md

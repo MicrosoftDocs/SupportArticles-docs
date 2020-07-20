@@ -45,7 +45,7 @@ To configure high availability for IIS 7.0 or a later version Web server using f
 1. Create a user that will access the share that will be used for the IIS shared configuration.
 2. Create the file share. This share will be used to store the IIS shared configuration that will be shared between IIS on all cluster nodes. There are multiple options:
    - On a standalone server that isn't part of any failover cluster, create a file share.
-   - On another Windows Server failover cluster, create a high availability file share. For details, visit [Failover Cluster Step-by-Step Guide: Configuring a Two-Node File Server Failover Cluster](/windows/it-pro/windows-server-2008-R2-and-2008/cc731844(v=ws.10)).
+   - On another Windows Server failover cluster, create a high availability file share. For details, visit [Failover Cluster Step-by-Step Guide: Configuring a Two-Node File Server Failover Cluster](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731844(v=ws.10)).
    - On the same failover cluster that will host the high availability website, create a high availability file share. For details, see [Failover Cluster Step-by-Step Guide: Configuring a Two-Node File Server Failover Cluster](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731844(v=ws.10)).
 3. Set the permissions on the share that you created in step 2. Give the user that you created in step 1 Full Control permissions to the file share and NTFS permissions.
 4. Confirm that all cluster nodes can browse to the file share. The path to the file share is `\\<fileserver>\<share>`.
