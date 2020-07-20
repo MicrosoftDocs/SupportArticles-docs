@@ -3,8 +3,8 @@
 
 - name: Application integration (Transaction Integrator)
   items:
-  - name: HIS 2013 doesn't work with VS 2013
-    href: no-template-vs-2013.md
+  - name: HIS 2013 doesn't work with Visual Studio 2013
+    href: no-template-visual-studio-2013.md
 
 - name: Data integration (DB2, host files)
   items:
