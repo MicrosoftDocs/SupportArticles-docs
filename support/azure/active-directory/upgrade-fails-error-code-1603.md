@@ -1,7 +1,7 @@
 ---
 title: Azure Active Directory Connect upgrade fails with error code 1603
 description: Error code 1603 and (Unable to install the synchronization service) error in event log when trying to upgrade Azure AD Connect.
-ms.date: 06/08/2020
+ms.date: 07/20/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
 ---
