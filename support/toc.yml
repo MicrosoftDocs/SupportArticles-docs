@@ -24,3 +24,7 @@
 
 - name: Welcome
   href: browsers/welcome-browsers.md
+
+- name: Welcome
+  href: azure/index.yml
+
