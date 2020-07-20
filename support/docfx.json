@@ -48,7 +48,8 @@
     "globalMetadata": {
       "breadcrumb_path": "/support/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "None"
+      "feedback_system": "None",
+      "searchScope": ["Troubleshoot"]
     },
 
     "fileMetadata": {
@@ -86,10 +87,76 @@
         "biztalk/**/*.md": ""
       },
 
-      "titleSuffix": {
-        "biztalk/**/*.md": "Biztalk Server"
-      }
+      "ms.prod": {
+        "dotnet/**/*.md": ".net"
+      },
+      "ms.technology": {
+        "dotnet/**/*.md": ""
+      },
 
+      "ms.prod": {
+        "host-integration-server/**/*.md": "host-integration-server"
+      },
+      "ms.technology": {
+        "host-integration-server/**/*.md": ""
+      },
+
+      "ms.prod": {
+        "visualstudio/**/*.md": "visual-studio-family"
+      },
+      "ms.technology": {
+        "visualstudio/**/*.md": ""
+      },
+
+      "ms.prod": {
+        "webapps/**/*.md": "web-apps-server"
+      },
+      "ms.technology": {
+        "webapps/**/*.md": ""
+      },
+
+      "ms.prod": {
+        "windowsdeveloper/**/*.md": "windows-dev-apps"
+      },
+      "ms.technology": {
+        "windowsdeveloper/**/*.md": ""
+      },
+
+      "ms.prod": {
+        "mem/intune/**/*.md": "intune"
+      },
+      "ms.technology": {
+        "mem/intune/**/*.md": "microsoft-graph"
+      },
+
+      "titleSuffix": {
+        "biztalk/**/*.md": "BizTalk Server",
+        "dotnet/**/*.md": ".NET",
+        "dotnet/csharp/**/*.md": "C#",
+        "dotnet/framework/**/*.md": ".NET Framework",
+        "dotnet/framework/wcf/**/*.md": "Windows Communication Foundation",
+        "dotnet/visual-basic/**/*.md": "Visual Basic",        
+        "host-integration-server/**/*.md": "Host Integration Server",
+        "aspnet/**/*.md": "ASP.NET",        
+        "visualstudio/**/*.md": "Visual Studio",
+        "visualstudio/silverlight/**/*.md": "Silverlight",
+        "cpp/**/*.md": "Visual C++",
+        "iis/**/*.md": "Internet Information Services",
+        "webapps/**/*.md": "Web Apps",
+        "windows/win32/**/*.md": "Windows Developer",
+        "mem/intune/**/*.md": "Intune"
+      },
+      "searchScope": {
+        "biztalk/**/*.md": ["BizTalk Server"],
+        "dotnet/**/*.md": [".NET"],        
+        "host-integration-server/**/*.md": ["Host Integration Server"],
+        "visualstudio/**/*.md": ["Visual Studio"],
+        "cpp/**/*.md": ["Visual Studio"],
+        "iis/**/*.md": ["Web Apps"],
+        "aspnet/**/*.md": ["Web Apps"],        
+        "webapps/**/*.md": ["Web Apps"],
+        "windows/win32/**/*.md": ["Windows Developer"]
+      }
     },
 
     "template": [],

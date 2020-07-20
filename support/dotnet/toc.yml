@@ -1,0 +1,16 @@
+- name: Welcome
+  href: welcome-dotnet.md
+
+- name: .NET Framework
+  href: ./framework/toc.yml
+
+- name: WCF
+  items:
+  - name: Async services use wrong impersonation
+    href: ./framework/wcf/asynchronous-service-use-wrong-impersonation.md
+  - name: Pre-compiled workflow service activation fails
+    href: ./framework/wcf/precompiled-workflow-activation-fails.md
+  - name: Use X509CertificateValidator with services
+    href: ./framework/wcf/x509certificatevalidator-service-certificate.md
+  - name: REST services generate metadata in WSDL
+    href: ./framework/wcf/rest-generate-metadata-wsdl.md

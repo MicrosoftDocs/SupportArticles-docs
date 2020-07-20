@@ -8,6 +8,38 @@
     topicHref: /troubleshoot/index
     items:
 
-    - name: Biztalk
+    - name: Browsers
+      tocHref: /troubleshoot/browsers/
+      topicHref: /troubleshoot/browsers/welcome-browsers
+
+    - name: BizTalk Server
       tocHref: /troubleshoot/biztalk/
-      topicHref: /troubleshoot/biztalk/welcome-support-biztalk
+      topicHref: /troubleshoot/biztalk/welcome-biztalk-server
+      
+    - name: .NET
+      tocHref: /troubleshoot/dotnet/
+      topicHref: /troubleshoot/dotnet/welcome-dotnet
+
+    - name: Host Integration Server
+      tocHref: /troubleshoot/host-integration-server/
+      topicHref: /troubleshoot/host-integration-server/welcome-host-integration-server
+
+    - name: Visual Studio
+      tocHref: /troubleshoot/visualstudio/
+      topicHref: /troubleshoot/visualstudio/welcome-visual-studio
+
+    - name: Web Apps
+      tocHref: /troubleshoot/webapps/
+      topicHref: /troubleshoot/webapps/welcome-webapps
+
+    - name: Windows Developer
+      tocHref: /troubleshoot/windows/win32
+      topicHref: /troubleshoot/windows/win32/welcome-windowsdeveloper
+
+    - name: Microsoft Endpoint Manager
+      tocHref: /troubleshoot/mem/
+      topicHref: /troubleshoot/mem/
+      items:
+      - name: Intune
+        tocHref: /troubleshoot/mem/intune/
+        topicHref: /troubleshoot/mem/intune/welcome-intune

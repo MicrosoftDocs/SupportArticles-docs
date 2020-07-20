@@ -1,5 +1,26 @@
 - name: Index
   href: index.yml
 
-- name: Biztalk Server support
-  href: biztalk/welcome-support-biztalk.md
+- name: Welcome
+  href: dotnet/welcome-dotnet.md
+
+- name: Welcome
+  href: host-integration-server/welcome-host-integration-server.md
+  
+- name: Welcome
+  href: visualstudio/welcome-visual-studio.md
+
+- name: Welcome
+  href: webapps/welcome-webapps.md
+
+- name: Welcome
+  href: windows/win32/welcome-windowsdeveloper.md
+
+- name: Microsoft Endpoint Manager support
+  href: mem/index.yml
+  
+- name: Welcome
+  href: biztalk/welcome-biztalk-server.md
+
+- name: Welcome
+  href: browsers/welcome-browsers.md

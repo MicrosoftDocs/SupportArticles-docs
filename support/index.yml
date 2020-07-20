@@ -20,11 +20,46 @@ metadata:
 
 productDirectory:
   items:
+  - title: Microsoft Edge and Internet Explorer
+    imageSrc: "media/hub-landing/Edge.jpg"
+    links:
+    - url: browsers/welcome-browsers.md
+      text: Support for Microsoft Edge and Internet Explorer
   - title: BizTalk Server
     imageSrc: "media/hub-landing/biztalk.svg"
     links:
-    - url: biztalk/welcome-support-biztalk.md
+    - url: biztalk/welcome-biztalk-server.md
       text: Support for BizTalk Server
+  - title: .NET
+    imageSrc: "media/hub-landing/dotnet.svg"
+    links:
+    - url: dotnet/welcome-dotnet.md
+      text: Support for .NET
+  - title: Visual Studio
+    imageSrc: "media/hub-landing/vs-ide-2019.svg"
+    links:
+    - url: visualstudio/welcome-visual-studio.md
+      text: Support for Visual Studio
+  - title: Host Integration Server
+    imageSrc: "media/hub-landing/his.jpeg"
+    links:
+    - url: host-integration-server/welcome-host-integration-server.md
+      text: Support for Host Integration Server
+  - title: Web Apps
+    imageSrc: "media/hub-landing/app-service-web.svg"
+    links:
+    - url: webapps/welcome-webapps.md
+      text: Support for Web Apps
+  - title: Windows Developer
+    imageSrc: "media/hub-landing/windows.svg"
+    links:
+    - url: windows/win32/welcome-windowsdeveloper.md
+      text: Support for Windows Developer
+  - title: Microsoft Endpoint Manager
+    imageSrc: "media/hub-landing/MEM.jpg"
+    links:
+    - url: mem/index.yml
+      text: Support for Microsoft Endpoint Manager
 
 # conceptualContent:
 
