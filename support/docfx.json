@@ -65,10 +65,12 @@
         "**/*.md": "itpro"
       },
       "author": {
-        "**/*.md": "ramakoni1"
+        "**/*.md": "ramakoni1",
+        "azure/active-directory/*.md": "genlin"
       },
       "ms.author": {
-        "**/*.md": "ramakoni"
+        "**/*.md": "ramakoni",
+        "azure/active-directory/*.md": "genli"
       },
       "ms.localizationpriority": {
         "**/*.md": "Normal"
