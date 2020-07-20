@@ -60,7 +60,11 @@ productDirectory:
     links:
     - url: mem/index.yml
       text: Support for Microsoft Endpoint Manager
-
+  - title: Azure
+    imageSrc: "https://static.docs.com/ui/media/product/azure/azure.svg"
+    links:
+    - url: azure/index.yml
+      text: Support for Azure 
 # conceptualContent:
 
 

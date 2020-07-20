@@ -43,3 +43,11 @@
       - name: Intune
         tocHref: /troubleshoot/mem/intune/
         topicHref: /troubleshoot/mem/intune/welcome-intune
+
+    - name: Azure
+      tocHref: /troubleshoot/azure/
+      topicHref: /troubleshoot/azure/
+      items:
+      - name: Active Directory
+        tocHref: /troubleshoot/azure/active-directory/
+        topicHref: /troubleshoot/azure/active-directory/welcome-azure-ad
