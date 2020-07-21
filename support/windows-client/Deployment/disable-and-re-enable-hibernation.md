@@ -48,13 +48,8 @@ The computer uses the Hiberfil.sys file to store a copy of the system memory on 
 ## Applies to
 
 - Windows 10 - all editions
-- Windows 8.1 Pro
-- Windows 8.1 Enterprise
 - Windows 7 Service Pack 1 (for ESU only)
 - Windows Server 2019
 - Windows Server 2016
-- Windows Server 2008 Service Pack 2 (for ESU only)
+- Windows Server 2012 R2
 - Windows Server 2008 R2 Service Pack 1 (for ESU only)
-- Windows Server 2012 R2 Standard
-- Windows Server 2012 R2 Datacenter
-- Windows Server 2012 R2 Essentials

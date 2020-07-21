@@ -23,7 +23,7 @@ When you try to access data on an external USB hard drive, you may receive the f
 
 > USB Device not recognized: One of the devices attached to this computer has malfunctioned and windows does not recognize it.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows 8.1 Enterprise, Windows 8.1 Pro, Windows 7 Service Pack 1 (for ESU only)  
+_Original product version:_ &nbsp; Windows 10 - all editions, Windows 7 Service Pack 1 (for ESU only)  
 _Original KB number:_ &nbsp; 2654149
 
 ## Cause
@@ -62,8 +62,8 @@ The hotfixes in this method can resolve a known conflict with a USB external har
 
 1. Under Update information, select **Download the update package now** that corresponds with your version of Windows 7.
    1. If you're unsure of which version of Windows 7 you are running, select the **Start** button, press and hold (or right-click) **Computer** > **Properties**.
-      - If 64-bit Operating System is listed next to System type, you're running the 64-bit version of Windows Vista or Windows 7.
-      - If 32-bit Operating System is listed next to System type, you're running the 32-bit (x86) version of Windows Vista or Windows 7.
+      - If 64-bit Operating System is listed next to System type, you're running the 64-bit version of Windows 7.
+      - If 32-bit Operating System is listed next to System type, you're running the 32-bit (x86) version of Windows 7.
 1. Select **Continue**. If a User Account Control permission prompt occurs, select **Yes**.
 1. Select **Download** > **Open**.
 1. The download should start in 30 seconds. If it does not, select **Start Download** > **Open**.

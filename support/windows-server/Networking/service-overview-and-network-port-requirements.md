@@ -33,13 +33,13 @@ _Original KB number:_ &nbsp; 832017
 >
 > What this means for you:
 >
-> - If your computer network environment uses only Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows 8, Windows 7, or Windows Vista, you must enable connectivity over the high port range of 49152 through 65535.
-> - If your computer network environment uses Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows 8, Windows 7, or Windows Vista together with versions of Windows earlier than Windows Server 2008 and Windows Vista, you must enable connectivity over both the following port ranges:  
+> - If your computer network environment uses only Windows Server 2012, you must enable connectivity over the high port range of 49152 through 65535.
+> - If your computer network environment uses Windows Server 2012 together with versions of Windows earlier than Windows Server 2008 and Windows Vista, you must enable connectivity over both the following port ranges:  
 > High port range 49152 through 65535  
 > Low port range 1025 through 5000
 > - If your computer network environment uses only versions of Windows earlier than Windows Server 2008 and Windows Vista, you must enable connectivity over the low port range of 1025 through 5000.
 >
-> For more information about the default dynamic port range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista, see [The default dynamic port range for TCP/IP has changed in Windows Vista and in Windows Server 2008](https://support.microsoft.com/help/929851).
+> For more information about the default dynamic port range, see [The default dynamic port range for TCP/IP has changed](https://support.microsoft.com/help/929851).
 
 You should not use the port information in this article to configure Windows Firewall. For information about how to configure Windows Firewall, see [Windows Firewall with Advanced Security](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754274(v=ws.11)).
 
@@ -267,7 +267,6 @@ System service name: **DFSR**
 ¹ For more information about how to customize this port, see Distributed File Replication Service in the [References](#references) section.
 
 ² This is the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
-
 ³ Port 5722 is only used on a Windows Server 2008 domain controller or on a Windows Server 2008 R2 domain controller. It is not used on a Windows Server 2012 domain controller.
 
 ### Distributed Link Tracking Server
@@ -363,7 +362,7 @@ System service name: **NtFrs**
 
 ¹ For more information about how to customize this port, see File Replication Service in the [References](#references) section.
 
-² This is the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and in Windows Vista.
+² This is the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
 ### FTP Publishing Service
 
@@ -384,7 +383,7 @@ System service name: **MSFTPSVC**
 
 To successfully apply Group Policy, a client computer must be able to contact a domain controller over the Kerberos, LDAP, SMB, and RPC protocols. Windows XP and Windows Server 2003 additionally require the ICMP protocol.
 
-If any one of these protocols is unavailable or blocked between the client and a relevant domain controller, Group Policy will not apply or update. For a cross-domain logon, where a computer is in one domain and the user account is in another domain, these protocols may be required for the client, the resource domain, and the account domain to communicate. ICMP is used for slow link detection. For more information about slow link detection, see [Group Policy Slow Link Detection Using Windows Vista and Server 2008](https://support.microsoft.com/help/2008977).
+If any one of these protocols is unavailable or blocked between the client and a relevant domain controller, Group Policy will not apply or update. For a cross-domain logon, where a computer is in one domain and the user account is in another domain, these protocols may be required for the client, the resource domain, and the account domain to communicate. ICMP is used for slow link detection. For more information about slow link detection, see [Group Policy Slow Link Detection](https://support.microsoft.com/help/2008977).
 
 System service name: **Group Policy**
 
@@ -404,9 +403,9 @@ System service name: **Group Policy**
 ³ This protocol is required only by Windows XP and Windows Server 2003 acting as clients.
 
 > [!NOTE]
-> When the Group Policy Microsoft Management Console (MMC) snap-in creates Group Policy Results reports and Group Policy Modeling reports, it uses DCOM and RPC to send and to receive information from the Resultant Set of Policy (RSoP) provider on the client or on the domain controller. The various binary files that make up the Group Policy Microsoft Management Console (MMC) snap-in features primarily use COM calls to send or to receive information. When you initiate remote group policy results reporting from a Windows 8 and Windows Server 2012 computer, access to the destination computer's event log is required. (See the [Event Log](#event-log) section in this article for port requirements.)
+> When the Group Policy Microsoft Management Console (MMC) snap-in creates Group Policy Results reports and Group Policy Modeling reports, it uses DCOM and RPC to send and to receive information from the Resultant Set of Policy (RSoP) provider on the client or on the domain controller. The various binary files that make up the Group Policy Microsoft Management Console (MMC) snap-in features primarily use COM calls to send or to receive information. When you initiate remote group policy results reporting from a Windows Server 2012 computer, access to the destination computer's event log is required. (See the [Event Log](#event-log) section in this article for port requirements.)
 >
-> Windows 8 and Windows Server 2012 support the initiation of remote group policy update against Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista computers. This requires RPC/WMI access through port 135 and ports 49152-65535 inbound to the computer on which the policy is being refreshed.
+> Windows Server 2012 support the initiation of remote group policy update against Windows Server 2012 computers. This requires RPC/WMI access through port 135 and ports 49152-65535 inbound to the computer on which the policy is being refreshed.
 
 ### HTTP SSL
 
@@ -628,7 +627,7 @@ Offline Files and Roaming User Profiles cache user data to computers for offline
 
 Folder Redirection redirects user data from the local computer to a remote file share, using SMB.
 
-The Primary Computer system for Windows is part of the Roaming User Profile and Offline Files services. Primary Computer provides a capability to prevent data caching to computers that are not authorized by administrators for specific users. Primary Computer uses LDAP to determine the configuration and does not perform any data transfer using SMB; it instead alters the default Offline Files and Roaming User Profile behaviors. This system was added in Windows 8 and Windows Server 2012.
+The Primary Computer system for Windows is part of the Roaming User Profile and Offline Files services. Primary Computer provides a capability to prevent data caching to computers that are not authorized by administrators for specific users. Primary Computer uses LDAP to determine the configuration and does not perform any data transfer using SMB; it instead alters the default Offline Files and Roaming User Profile behaviors. This system was added in Windows Server 2012.
 
 System service names: **ProfSvc**, **CscService**
 
@@ -733,7 +732,7 @@ System service name: **Remote_Storage_User_Link**
 
 ¹ For more information about how to customize this port, see Remote Procedure Calls and DCOM in the [References](#references) section.
 
-² This is the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and in Windows Vista.
+² This is the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
 ### Remote Storage
 
@@ -749,7 +748,7 @@ System service name: **Remote_Storage_Server**
 
 ¹ For more information about how to customize this port, see Remote Procedure Calls and DCOM in the [References](#references) section.
 
-² This is the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and in Windows Vista.
+² This is the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
 ### Routing and Remote Access
 
@@ -929,7 +928,7 @@ System service name: **TermServLicensing**
 
 ¹ For more information about how to customize this port, see Remote Procedure Calls and DCOM in the [References](#references) section.
 
-² This is the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and in Windows Vista.
+² This is the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
 > [!NOTE]
 > Terminal Services Licensing offers its services by using RPC over named pipes. This service has the same firewall requirements as the File and Printer Sharing feature.
@@ -948,7 +947,7 @@ System service name: **Tssdis**
 
 ¹ For more information about how to customize this port, see Remote Procedure Calls and DCOM in the [References](#references) section.
 
-² This is the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and in Windows Vista.
+² This is the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
 ### Trivial FTP Daemon
 
@@ -1246,7 +1245,7 @@ The following table summarizes the information from the [System services ports](
 |||||
 
 > [!NOTE]
-> Port 5722 is only used on a Windows Server 2008 domain controller or a Windows Server 2008R2 domain controller; it is not used on a Windows Server 2012 domain controller. Port 445 is used by DFSR only when creating a new empty replicated folder.
+> Port 5722 is only used on a Windows Server 2008 domain controller or a Windows Server 2008 R2 domain controller; it is not used on a Windows Server 2012 domain controller. Port 445 is used by DFSR only when creating a new empty replicated folder.
 
 Microsoft provides part of the information that is in this table in a Microsoft Excel worksheet. This worksheet is available for download from the Microsoft Download Center.
 
@@ -1411,6 +1410,4 @@ For information about the ports that are used by Windows Media Services, see [Al
 - Windows Server 2019
 - Windows Server 2016
 - Windows Server 2012 R2
-- Windows Server 2012
 - Windows 10 - all editions
-- Windows 8.1

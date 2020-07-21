@@ -24,7 +24,7 @@ Windows updates and service packs may fail to install if there are [corruption e
 
 This article is intended for Support agents and IT professionals. If you are home users and looking for more information about fixing Windows update errors, see [Fix Windows Update errors](https://support.microsoft.com/help/10164).
 
-## Resolution for Windows 10, Windows 8.1, Windows Server 2012 R2, or Windows Server 2012
+## Resolution for Windows 10 and Windows Server 2012 R2
 
 To resolve this problem, use the inbox Deployment Image Servicing and Management (DISM) tool. Then, install the Windows update or service pack again.
 
@@ -52,7 +52,7 @@ To resolve this problem, use the inbox Deployment Image Servicing and Management
 
 DISM creates a log file (%windir%/Logs/CBS/CBS.log) that captures any issues that the tool found or fixed. %windir% is the folder in which Windows is installed. For example, the %windir% folder is C:\Windows.
 
-## Resolution for Windows 7 Service Pack 1 (SP1), Windows Server 2008 SP2, and Windows Server 2008 R2 SP1
+## Resolution for Windows 7 Service Pack 1 (SP1) and Windows Server 2008 R2 SP1 (for ESU only)
 
 To resolve this problem, use the System Update Readiness tool. Then, install the Windows update or service pack again.
 
@@ -69,9 +69,6 @@ To resolve this problem, use the System Update Readiness tool. Then, install the
     |x64-based (64-bit) versions of Windows 7 SP1| [![Download icon](./media/fix-windows-update-errors/download-icon.gif)<br/>Download the package now.](https://www.microsoft.com/download/details.aspx?id=20858) |
     |x64-based (64-bit) versions of Windows Server 2008 R2 SP1| [![Download icon](./media/fix-windows-update-errors/download-icon.gif)<br/>Download the package now.](https://www.microsoft.com/download/details.aspx?id=14668) |
     |Itanium-based versions of Windows Server 2008 R2 SP1| [![Download icon](./media/fix-windows-update-errors/download-icon.gif)<br/>Download the package now.](https://www.microsoft.com/download/details.aspx?id=13833) |
-    |x86-based (32-bit) versions of Windows Server 2008 SP2| [![Download icon](./media/fix-windows-update-errors/download-icon.gif)<br/>Download the package now.](https://www.microsoft.com/download/details.aspx?id=22931) |
-    |x64-based (64-bit) versions of Windows Server 2008 SP2| [![Download icon](./media/fix-windows-update-errors/download-icon.gif)<br/>Download the package now.](https://www.microsoft.com/download/details.aspx?id=1593) |
-    |Itanium-based versions of Windows Server 2008 SP2| [![Download icon](./media/fix-windows-update-errors/download-icon.gif)<br/>Download the package now.](https://www.microsoft.com/download/details.aspx?id=3748) |
     |||
 
 2. Install and run the tool.
@@ -80,7 +77,7 @@ To resolve this problem, use the System Update Readiness tool. Then, install the
       - To install the tool later, select **Save**, and then download the installation file to your computer. When you're ready to install the tool, double-select the file.
    2. In the Windows Update Standalone Installer dialog box, select **Yes**.
 
-    :::image type="content" source="media/fix-windows-update-errors/windows-update-standalone-installer.png" alt-text="Windows Update Standalone Installer dialog box" border="false":::
+      :::image type="content" source="media/fix-windows-update-errors/windows-update-standalone-installer.png" alt-text="Windows Update Standalone Installer dialog box" border="false":::
 
 3. When the tool is being installed, it automatically runs. Although it typically takes less than 15 minutes to run, it might take much longer on some computers. Even if the progress bar seems to stop, the scan is still running, so don't select **Cancel**.
 
@@ -214,15 +211,6 @@ If you are a technical professional, see [How to fix errors found in the CheckSU
 ## Applies to
 
 - Windows 10 - all editions
-- Windows 8.1
 - Windows 7 Service Pack 1 (for ESU only)
-- Windows Server 2012 R2 Datacenter
-- Windows Server 2012 R2 Standard
-- Windows Server 2012 R2 Essentials
-- Windows Server 2012 R2 Foundation
-- Windows Server 2012 Datacenter
-- Windows Server 2012 Standard
-- Windows Server 2012 Essentials
-- Windows Server 2012 Foundation
+- Windows Server 2012 R2
 - Windows Server 2008 R2 Service Pack 1 (for ESU only)
-- Windows Server 2008 Service Pack 2 (for ESU only)
