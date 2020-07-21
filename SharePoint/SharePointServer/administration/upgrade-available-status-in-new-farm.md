@@ -23,9 +23,9 @@ Consider this scenario. SharePoint Server 2016 is installed. The SharePoint 2016
 
 - You browse to the SharePoint 2016 Central Administration website. In Central Administration, you follow the Manage Servers in this farm link. In the Status column, "Upgrade Available" is displayed.  
 
-- In Central Administration, you select Upgrade and Migration, then select Review Database Status. The SharePoint_AdminContent_<GUID>  database has the following status: "Database is in compatibility range and upgrade is recommended".  
+- In Central Administration, you select Upgrade and Migration, then select Review Database Status. The SharePoint_AdminContent_\<GUID>  database has the following status: "Database is in compatibility range and upgrade is recommended".  
 
-- You browse to the Central Administration website. You browse to Manage Content Databases. In the Web Application:  menu on the page, select SharePoint Central Administration v4. Then follow the link for the SharePoint_AdminContent_<GUID>  content database. The Database Schema Versions  area includes the following:  
+- You browse to the Central Administration website. You browse to Manage Content Databases. In the Web Application:  menu on the page, select SharePoint Central Administration v4. Then follow the link for the SharePoint_AdminContent_\<GUID>  content database. The Database Schema Versions  area includes the following:  
 
   ```
   Microsoft.Office.Project.Server.Database.Extension.Upgrade.PDEUpgradeSequence Current Schema Version: 4.0.0.0, Maximum Schema Version: 16.1.273.0

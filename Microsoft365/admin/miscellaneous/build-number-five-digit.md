@@ -34,7 +34,7 @@ In June, 2018, Microsoft Office 365 is changing its build numbers from a four-di
 |Old|4.4|build 1234.5678 |
 |New|5.5|build 12345.67890 |
 
-To locate the build number of an Office installation, start an Office application, select **File** > **Account**, and then look under **About \<ProgramName>**. 
+To locate the build number of an Office installation, start an Office application, select **File** > **Account**, and then look under **About \\\<ProgramName>**. 
 
 ## More Information
 
