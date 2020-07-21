@@ -42,7 +42,7 @@
     },    
     {
         "source_path": "support/azure/active-directory/index.md",
-        "redirect_url": "support/azure/active-directory/welcome-azure-ad",
+        "redirect_url": "/support/azure/active-directory/welcome-azure-ad",
         "redirect_document_id": false
       },
     {
