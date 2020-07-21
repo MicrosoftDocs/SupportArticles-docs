@@ -70,7 +70,7 @@ For more information about the Autoruns utility that is used to collect this inf
 
 |Description|File name|Formats|
 |---|---|---|
-|Autorun information|<**ComputerName**>_Autoruns.*| .xml, .htm|
+|Autorun information|<*ComputerName*>_Autoruns.*| .xml, .htm|
 
 #### Application and System logs
 
@@ -78,10 +78,10 @@ Events from the last 15 days are recorded in the full
 
 |Description|File name|Formats|
 |---|---|---|
-|Event log - Application|<**ComputerName**>_evt_Application.*|.txt, .csv, .evtx|
-|Event log - System|<**ComputerName**>_evt_System.*|.txt, .csv, .evtx|
+|Event log - Application|<*ComputerName*>_evt_Application.*|.txt, .csv, .evtx|
+|Event log - System|<*ComputerName*>_evt_System.*|.txt, .csv, .evtx|
 |Event log - OAlerts|<*ComputerName*>_evt_OAlerts.*|.txt, .csv, .evtx|
- - File created from the Application event logs: <ComputerName>_crash_events_applog.csv
+ - File created from the Application event logs: \<ComputerName>_crash_events_applog.csv
 
 #### Environment variables
 
