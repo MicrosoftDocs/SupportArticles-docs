@@ -29,6 +29,8 @@
       href: ../configure-mailboxes/cannot-remove-mailbox-permission-office-365.md
     - name: Enable or disable POP3, IMAP, MAPI, OWA or ActiveSync
       href: ../configure-mailboxes/pop3-imap-owa-activesync-office-365.md
+    - name: Provision mailbox or changes synchronization delays
+      href: ../configure-mailboxes/delays-provision-mailbox-sync-changes.md
     - name: Set automatic replies
       href: ../configure-mailboxes/set-automatic-replies.md
   - name: Connecting to the Service

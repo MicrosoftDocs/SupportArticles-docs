@@ -11,6 +11,8 @@
       href: ./teams-administration/activate-guest-user-access-in-teams.md
     - name: EMET EAF policy identifies Chromium sandbox optimizations as threats
       href: ./known-issues/eaf-in-emet-ids-chrome-optimizations-as-threats.md
+    - name: Can't access admin center
+      href: ./teams-administration/cannot-access-admin-center.md
     - name: Can't enable archiving or increase mailbox quota in O365 Group mailbox
       href: ./known-issues/group-mailboxes-will-not-enable-archive.md
     - name: Include or exclude Teams from antivirus or DLP applications
