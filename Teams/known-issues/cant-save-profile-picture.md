@@ -28,6 +28,8 @@ Users can't save their profile picture when the Teams Exchange Mailbox is hosted
 
 ## More information
 
-Microsoft is researching this problem and will post more information in this article when the information becomes available.
+At this time, Exchange Server 2016 (Cumulative Update 3), or later, is required for this feature. 
+See the following article for more detail
+https://docs.microsoft.com/en-us/MicrosoftTeams/exchange-teams-interact
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
