@@ -33,7 +33,3 @@
       href: ../o365-security/invalid-security-code-office-365-azure.md
     - name: Issue with connect-MSOLService cmdlet
       href: ../o365-security/access-denied-office-365-azure.md
-  - name: Outlook
-    items:
-    - name: Junk E-mail Reporting Add-in
-      href: ../antispam/junk-email-reporting-add-in.md
