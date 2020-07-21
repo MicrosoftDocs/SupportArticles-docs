@@ -70,6 +70,8 @@
     href: wrong-winform-height-width.md
   - name: Full-screen applications don't receive touch input events
     href: full-screen-wpf-apps-not-receive-touch-input-events.md
+  - name: High CPU or memory usage in applications on VMs
+    href: long-spin-wait-loops-high-cpu.md
   - name: High memory usage when you use EnlistDurable
     href: high-memory-usage-enlistdurable.md
   - name: Incorrect code lookups on past dates
