@@ -80,7 +80,7 @@ To locate and view the registry setting for Anonymous Authentication in the Outl
 > [!IMPORTANT]
 > Modifying the Outlook profile by using the "Profiles" registry path is not supported and may cause your Outlook profile to be in an unsupported state. Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you access it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
-1. Open the Registry Editor. 
+1. Open the Registry Editor.
 
    - In Windows 10, Windows 8.1, or Windows 8, press the Windows logo key+R to open the **Run** dialog box, type regedit.exe, and then click **OK**.
    - In Windows 7, click **Start**, type regedit in the **Start Search** box, and then press Enter. If you're prompted for an administrator password or for confirmation, type the password, or click **Allow**.
@@ -95,11 +95,11 @@ To locate and view the registry setting for Anonymous Authentication in the Outl
 3. Under this subkey, locate and expand the name of your Outlook profile.
 4. Under the profile, locate and expand the **9375CFF0413111d3B88A00104B2A6676** key.
 5. Under the **9375CFF0413111d3B88A00104B2A6676** key, you see a subkey for each account in your profile. Select the first subfolder (00000001), and then examine the data of the **Account Name** binary value by double-clicking the value. Repeat this process until you find the Account Name value that includes your SMTP address. For example, the Account Name value points to **guidopica@contoso.com** under the **\00000003** subkey.
-6. Under the **\0000000x** subkey, locate the Service UID binary value. It represent a GUID (for example, c3 d1 9a 7b 80 1b c4 4a 96 0a e5 b6 3b f9 7c 7e).
-7. Locate the subfolder in your profile that matches the GUID value that's identified in step 6 (for example, \c3d19a7b801bc44a960ae5b63bf97c7e).
-8. Under the subkey that you found in step 7, examine the **01023d0d** binary value. It represents a GUID (for example, 5f cf d5 f1 ba 5c 6f 45 b3 57 cc 5e 0d 16 94 58).
-9. Locate the subfolder in your profile that matches the GUID value that's identified in step 8 (for example, \5fcfd5f1ba5c6f45b357cc5e0d169458).
-10. Under the subkey that's found in step 9, examine the value of the **00036619** binary value. This value determines whether Outlook is using Anonymous Authentication.
+6. Under the **\0000000x** subkey, locate the Service UID binary value. It represents a GUID (for example, c3 d1 9a 7b 80 1b c4 4a 96 0a e5 b6 3b f9 7c 7e).
+7. Locate the subfolder in your profile that matches the GUID value identified in step 6 (for example, \c3d19a7b801bc44a960ae5b63bf97c7e).
+8. Under the subfolder that you found in step 7, examine the **01023d0d** binary value. It represents a GUID (for example, 5f cf d5 f1 ba 5c 6f 45 b3 57 cc 5e 0d 16 94 58).
+9. Locate the subfolder in your profile that matches the GUID value identified in step 8 (for example, \5fcfd5f1ba5c6f45b357cc5e0d169458).
+10. Under the subkey found in step 9, examine the value of the **00036619** binary value. This value determines whether Outlook is using Anonymous Authentication.
 
     Binary: **00036619**
 
