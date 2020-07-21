@@ -28,7 +28,7 @@ The sample demonstrates the following concepts:
 
 The following file is available for download from the Microsoft Download Center:
 
-[Vbsmpftp.exe](http://download.microsoft.com/download/ie4095/vbsmpftp/1/w9xnt4/en-us/vbsmpftp.exe)
+[Vbsmpftp.exe](https://download.microsoft.com/download/ie4095/vbsmpftp/1/w9xnt4/en-us/vbsmpftp.exe)
 
 For more information about how to download Microsoft Support files, see [How to Obtain Microsoft Support Files from Online Services](https://support.microsoft.com/help/119591/how-to-obtain-microsoft-support-files-from-online-services).
 
