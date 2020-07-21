@@ -46,12 +46,7 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "support/windows/index.md",
-      "redirect_url": "/support/windows/win32/welcome-windowsdeveloper",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/windows/win32/index.md",
+      "source_path": "support/windows/*/index.md",
       "redirect_url": "/support/windows/win32/welcome-windowsdeveloper",
       "redirect_document_id": false
     },
