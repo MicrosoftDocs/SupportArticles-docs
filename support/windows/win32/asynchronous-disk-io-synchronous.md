@@ -7,7 +7,7 @@ ms.reviewer: allend
 ---
 # Asynchronous disk I/O appears as synchronous on Windows
 
-This article helps you resolve the problem that the default behavior for I/O is synchronous, but it appears as asynchronous.
+This article helps you resolve the problem that the default behavior for I/O is synchronous, but it appears as asynchronous. 
 
 _Original product version:_ &nbsp; Windows  
 _Original KB number:_ &nbsp; 156932
