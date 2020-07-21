@@ -65,10 +65,12 @@
         "**/*.md": "itpro"
       },
       "author": {
-        "**/*.md": "ramakoni1"
+        "**/*.md": "ramakoni1",
+        "azure/active-directory/*.md": "genlin"
       },
       "ms.author": {
-        "**/*.md": "ramakoni"
+        "**/*.md": "ramakoni",
+        "azure/active-directory/*.md": "genli"
       },
       "ms.localizationpriority": {
         "**/*.md": "Normal"
@@ -92,6 +94,13 @@
       },
       "ms.technology": {
         "dotnet/**/*.md": ""
+      },
+
+      "ms.prod": {
+        "host-integration-server/**/*.md": "host-integration-server"
+      },
+      "ms.technology": {
+        "host-integration-server/**/*.md": ""
       },
 
       "ms.prod": {
@@ -121,6 +130,12 @@
       "ms.technology": {
         "mem/intune/**/*.md": "microsoft-graph"
       },
+      "ms.prod": {
+        "azure/**/*.md": "azure"
+      },
+      "ms.service": {
+        "azure/active-directory/*.md": "active-directory"
+      },
 
       "titleSuffix": {
         "biztalk/**/*.md": "BizTalk Server",
@@ -129,6 +144,7 @@
         "dotnet/framework/**/*.md": ".NET Framework",
         "dotnet/framework/wcf/**/*.md": "Windows Communication Foundation",
         "dotnet/visual-basic/**/*.md": "Visual Basic",        
+        "host-integration-server/**/*.md": "Host Integration Server",
         "aspnet/**/*.md": "ASP.NET",        
         "visualstudio/**/*.md": "Visual Studio",
         "visualstudio/silverlight/**/*.md": "Silverlight",
@@ -136,17 +152,21 @@
         "iis/**/*.md": "Internet Information Services",
         "webapps/**/*.md": "Web Apps",
         "windows/win32/**/*.md": "Windows Developer",
-        "mem/intune/**/*.md": "Intune"
+        "mem/intune/**/*.md": "Intune",
+        "azure/**/*.md": "Azure",
+        "azure/active-directory/*.md": "Active Directory"
       },
       "searchScope": {
         "biztalk/**/*.md": ["BizTalk Server"],
         "dotnet/**/*.md": [".NET"],        
+        "host-integration-server/**/*.md": ["Host Integration Server"],
         "visualstudio/**/*.md": ["Visual Studio"],
         "cpp/**/*.md": ["Visual Studio"],
         "iis/**/*.md": ["Web Apps"],
         "aspnet/**/*.md": ["Web Apps"],        
         "webapps/**/*.md": ["Web Apps"],
-        "windows/win32/**/*.md": ["Windows Developer"]
+        "windows/win32/**/*.md": ["Windows Developer"],
+        "azure/**/*.md": ["Azure"]
       }
     },
 

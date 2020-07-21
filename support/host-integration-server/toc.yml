@@ -1,0 +1,32 @@
+- name: Welcome
+  href: welcome-host-integration-server.md
+
+- name: Application integration (Transaction Integrator)
+  items:
+  - name: HIS 2013 doesn't work with Visual Studio 2013
+    href: no-template-visual-studio-2013.md
+
+- name: Data integration (DB2, host files)
+  items:
+  - name: Maximum number of statements has reached
+    href: maximum-number-statements-reach.md
+
+- name: Setup and configuration
+  items:
+  - name: Change Enterprise SSO service account
+    href: change-enterprise-sso-service-account.md
+
+- name: Network integration (SNA gateway)
+  items:
+  - name: Other
+    items:
+    - name: Troubleshoot Event 23 warnings
+      href: troubleshoot-event-23-warning.md
+    - name: Troubleshoot Event 230 warnings
+      href: troubleshoot-event-230-warning.md
+  - name: SNA Manager
+    items:
+    - name: SNA Manager version combinations
+      href: sna-manager-version-combination.md
+    - name: Unable to stop or start connections or service
+      href: unable-stop-start-connections-service.md
