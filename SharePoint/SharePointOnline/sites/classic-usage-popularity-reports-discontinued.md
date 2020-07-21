@@ -41,9 +41,11 @@ To see the page, select **Site settings** > **Popularity trends** > **Usage**. Y
 
 Usage data on the modern **Site Usage** page may not exactly match the classic popularity reports. Learn more about the modern [Site Usage](https://support.office.com/article/2fa8ddc2-c4b3-4268-8d26-a772dc55779e) page.
 
+In Office 365, modern site usage reports are supported for worldwide production environments and the reports are not supported for some special cloud deployments. Therefore, customers who use Gallatin (operated by 21Vianet), GCC High or DoD environments cannot access the modern site usage page or the GetItemAnalytics API.
+
 ## Have questions?
 
-Please submit your feedback or questions to Message Center post 195889 (MC195889), in the Message Center.
+Please submit your feedback or questions to Message Center post 217998 (MC217998), in the Message Center.
 
 ## More information
 
