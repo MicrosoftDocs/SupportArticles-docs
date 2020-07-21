@@ -7,7 +7,7 @@ ms.reviewer: kurta
 ---
 # Function calls of "_stat-family" do not support Symbolic Directory Links for C Runtime Library functions from Visual Studio 2013, 2012, or 2010
 
-This article helps you resolve the problem that function calls of `_stat-family` do not support Symbolic Directory Links for C Runtime Library functions from Visual Studio 2013, 2012, or 2010.
+This article helps you resolve the problem where function calls of `_stat-family` do not support Symbolic Directory Links for C Runtime Library functions from Visual Studio 2013, 2012, or 2010.
 
 _Original product version:_ &nbsp; Visual Studio 2013, Visual Studio 2012, Visual Studio 2010  
 _Original KB number:_ &nbsp; 4531963
