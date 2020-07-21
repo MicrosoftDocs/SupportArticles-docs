@@ -77,7 +77,7 @@
     - name: Use one-word to access intranet sites
       href: one-word-intranet-sites.md
 
-    - name: Use Proxy Servers with IE
+    - name: Use Proxy Servers with Internet Explorer
       href: use-proxy-servers-with-ie.md
 
 - name: Core Features
@@ -183,7 +183,7 @@
     - name: How to hide the Clear button
       href: how-to-hide-clear-button-ie-10.md
 
-    - name: IE document modes FAQ
+    - name: Internet Explorer document modes FAQ
       href: ie-document-modes-faq.md
 
     - name: Iframe content should be rendered in standard mode
