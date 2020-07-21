@@ -41,7 +41,7 @@ This diagnostic can be used on the following versions of Windows:
 |--|--|
 |Credentials cache|{**Computername**}_credcache.txt|
 |Compressed and encrypted Fiddler Trace .saz file|{**Computername**}_fiddler.zip|
-|Settings for the Windows Store apps (for Office). The data is retrieved from one or more files stored under the following folder(s): C:\Users\<username>\AppData\Local\Packages\Microsoft.Office.*|{Computername}_Microsoft.Office.*.RegKeyLogsData[_simple].txt|
+|Settings for the Windows Store apps (for Office). The data is retrieved from one or more files stored under the following folder(s): C:\Users\\\<username>\AppData\Local\Packages\Microsoft.Office.*|{Computername}_Microsoft.Office.*.RegKeyLogsData[_simple].txt|
 |Export of the following registry key (original) in .reg and .txt format:HKEY_CURRENT_USER\Software\Microsoft\Office\{Office version}.0\Common\Identity|{**Computername**}_officecommonidentity_Before.reg {**Computername**}_officecommonidentity_Before.txt|
 |Export of the following registry key (if user elects to delete it) in .reg and .txt format:HKEY_CURRENT_USER\Software\Microsoft\Office\{Office version}.0\Common\Identity|{**Computername**}_officecommonidentity_After.reg {**Computername**}_officecommonidentity_After.txt|
 |Compressed Office identity logging output (.etl) file|{**Computername**}_officeloggingliblet.zip|

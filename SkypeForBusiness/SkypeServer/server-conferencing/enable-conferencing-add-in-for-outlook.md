@@ -77,8 +77,8 @@ To do this, follow these steps:
 
 A COM add-in has to register itself with each Office application in which it runs. To register itself with a particular program, the add-in should create a subkey by using its ProgID as the name for the key, in the following registry locations:
 
-- HKEY_CURRENT_USER\Software\Microsoft\Office\<OfficeApp>\Addins\<ProgID>   
-- HKEY_LOCAL_MACHINE\Software\Microsoft\Office\<OfficeApp>\Addins\<ProgID>   
+- HKEY_CURRENT_USER\Software\Microsoft\Office\<OfficeApp>\Addins\\\<ProgID>   
+- HKEY_LOCAL_MACHINE\Software\Microsoft\Office\<OfficeApp>\Addins\\\<ProgID>   
 The add-in can provide values at these key locations for both a friendly display name and a full description. In addition, the add-in should specify its desired load behavior by using a DWORD value called LoadBehavior. This value determines how the add-in is loaded by the host program.
 
 The Conferencing Add-in for Outlook uses the LoadBehavior values of 2 for disabledand 3 for enabled.

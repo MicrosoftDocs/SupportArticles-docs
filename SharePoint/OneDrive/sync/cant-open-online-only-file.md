@@ -1,5 +1,5 @@
 ---
-title: Can’t open online-only file error when opening a file in OneDrive
+title: Can't open online-only file error when opening a file in OneDrive
 ms.author: v-todmc
 author: todmccoy
 manager: dcscontentpm
@@ -20,15 +20,15 @@ ms.reviewer: hdonald
 description: "Describes how to resolve an issue where you can't open a file in OneDrive."
 ---
 
-# “Can’t open online-only file” error when opening a file in OneDrive
+# "Can't open online-only file" error when opening a file in OneDrive
 
 ## Symptoms
 
 When opening an online-only file in your OneDrive folder, you receive the following error:
 
-> Can’t open online-only file<br />
-Make sure you’re connected to the internet, then try again.<br />
-We can download the file next time you’re online.
+> Can't open online-only file<br />
+Make sure you're connected to the internet, then try again.<br />
+We can download the file next time you're online.
 
 The error displays even when you are online.
 

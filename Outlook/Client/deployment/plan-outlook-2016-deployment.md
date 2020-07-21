@@ -1,5 +1,5 @@
 ---
-title: "Planning considerations for deploying Outlook 2016 for Windows"
+title: Planning considerations for deploying Outlook 2016 for Windows
 ms.author: dmaguire
 author: msdmaguire
 manager: dcscontentpm

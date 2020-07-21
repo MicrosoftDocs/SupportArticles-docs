@@ -41,7 +41,7 @@ To troubleshoot this issue, verify that incoming audio was active during the onl
 
 ### Scenario 3: Recording options in Lync 2010 or Lync 2013 are unavailable
 
-First, verify that recording is enabled for user having issues in the Skype for Business Admin Center. This setting can be enabled or disabled on a per-user basis. So, because one user can record, doesn’t mean that all users can.
+First, verify that recording is enabled for user having issues in the Skype for Business Admin Center. This setting can be enabled or disabled on a per-user basis. So, because one user can record, doesn't mean that all users can.
 
 ![Screenshot of Lync features settings ](./media/troubleshoot-recording-online-meetings/enable-recording.jpg)
 

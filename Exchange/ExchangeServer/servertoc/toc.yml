@@ -1,5 +1,5 @@
 - name: Exchange Server Troubleshooting
-  href: ../exchange-server.md
+  href: ../exchange-server-welcome.md
   items:
   - name: Administration
     items:
@@ -17,7 +17,7 @@
       href: ../administration/fail-to-start-ems-canot-find-path.md
     - name: On-premises EAC link goes to product comparison
       href: ../administration/o365-link-eac-redirect-product-comparison.md
-    - name: MCDB status is Offline and SSDs aren’t formatted
+    - name: MCDB status is Offline and SSDs aren't formatted
       href: ../administration/mcdb-status-is-offline-ssds-aren’t-formatted.md
     - name: Self-Help portal
       href: ../administration/self-help-portal.md
@@ -41,7 +41,7 @@
       href: ../client-connectivity/400-bad-request.md
     - name: Only one reply is sent to each sender
       href: ../client-connectivity/one-reply-sent-sender.md
-    - name: Set up Exchange on the web
+    - name: Set up Outlook on the web
       href: ../client-connectivity/set-up-web-access.md
     - name: Show organizer name instead of subject
       href: ../client-connectivity/calendar-shows-organizer-name.md

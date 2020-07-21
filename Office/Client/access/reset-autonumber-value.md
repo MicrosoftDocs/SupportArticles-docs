@@ -13,6 +13,7 @@ ms.custom:
 - CSSTroubleshoot
 ms.reviewer:
 appliesto:
+- Access for Office 365
 - Access 2019
 - Access 2016
 - Access 2013
@@ -24,6 +25,8 @@ search.appverid: MET150
 # How to reset an AutoNumber field value in Access
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+
+This article provides step-by-step methods to reset an **AutoNumber** field value.
 
 _Original KB number:_ &nbsp; 812718
 

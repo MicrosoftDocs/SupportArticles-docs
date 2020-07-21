@@ -36,7 +36,7 @@ In this scenario, the user receives one of the following error messages:
 To resolve this issue, determine which account accepted the invitation, remove the incorrect account and the correct account, and then re-invite the user to the resource.
 
 > [!NOTE]
-> Many examples in this article use *<contoso>* as a placeholder. In your scenario, replace <contoso> with the domain that you use for your organization.
+> Many examples in this article use \<contoso> as a placeholder. In your scenario, replace \<contoso> with the domain that you use for your organization.
 
 ### Determine which account has access as an external user
 
@@ -61,7 +61,7 @@ If you can't access the site as the incorrect external user, follow these steps:
 
 3. In the **Users and Permissions** section, click **People and groups**.
 
-4. At the end of the URL in your browser window, after the **people.aspx?** part of the URL, replace **MembershipGroupId=<number>** with **MembershipGroupId=0**, and then press Enter.
+4. At the end of the URL in your browser window, after the **people.aspx?** part of the URL, replace **MembershipGroupId=\<number>** with **MembershipGroupId=0**, and then press Enter.
 
 5. In the list of users, locate the name of the external user. Right-click the user name, and copy the shortcut.
 

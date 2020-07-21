@@ -23,7 +23,7 @@ This article was written by [Tom Schauer](https://social.technet.microsoft.com/p
 
 When you try to edit a workbook that contains text queries in Microsoft Excel Online, you may receive a Compatibility Report which states:
 
-> We can’t show these features in the browser:
+> We can't show these features in the browser:
 > - Text queries
 
 

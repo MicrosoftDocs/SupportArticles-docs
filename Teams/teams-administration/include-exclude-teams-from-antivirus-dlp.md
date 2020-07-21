@@ -1,5 +1,5 @@
 ---
-title: "How to include or exclude Teams from antivirus or DLP applications"
+title: How to include or exclude Teams from antivirus or DLP applications
 ms.author: v-todmc
 author: todmccoy
 manager: dcscontentpm

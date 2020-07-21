@@ -36,7 +36,8 @@ Although these items have a blank subject, they are actively used by OCM and sho
 
 Even after the deprecation, the PersonMetaData folder and the items in it will be available for a limited time.  If you change or delete the items in this folder, they may be recreated or new ones might appear.  
 
-Service changes coming in the near future will remove the PersonMetaData folder and its items from the service. Until then, use the following workaround to avoid including mail items from hidden folders in your search results.
+Service changes coming in the near future will remove the PersonMetaData folder and its items from the service. Until then, use the following workaround to avoid including mail items from hidden folders in your search results:
+
 1. Right-click the Search Folder and select **Customize This Search Folder**.
 2. Click **Browse**, and deselect the **Search Subfolders** option.
 3. Manually select the folders you wish to include.
