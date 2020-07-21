@@ -39,7 +39,12 @@
       "source_path": "support/host-integration-server/index.md",
       "redirect_url": "/support/host-integration-server/welcome-host-integration-server",
       "redirect_document_id": false
-    },
+    },    
+    {
+        "source_path": "support/azure/active-directory/index.md",
+        "redirect_url": "support/azure/active-directory/welcome-azure-ad",
+        "redirect_document_id": false
+      },
     {
       "source_path": "support/windowsdeveloper/index.md",
       "redirect_url": "/support/windows/win32/welcome-windowsdeveloper",
