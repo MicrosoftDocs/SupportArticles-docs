@@ -40,7 +40,3 @@ There are several ways to work around this problem:
     The Hang Resistance feature is enabled by default in Internet Explorer 9. Setting the `HangRecovery` value to `0` disables this feature; setting it to `1` enables it.
 
 3. Avoid calling AttachThreadInput or other APIs that can potentially result in changing the owner for the Tab window, since those APIs affect the Tab Thread's Input Queue. An example of an API that can end up changing the Tab Thread's Input Queue is SetWindowLong.
-
-## More information
-
-For more information about how Hang Resistance Feature works in Internet Explorer 9, see [Hang Resistance in Internet Explorer 9](/archive/blogs/ie/hang-resistance-in-ie9).
