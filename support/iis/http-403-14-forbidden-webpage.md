@@ -69,4 +69,4 @@ To do this, follow these steps:
     appcmd set config /section:directoryBrowse /enabled:true
     ```
 
-For more information about the appcmd.exe command lines, view [Getting Started with AppCmd.exe](/get-started/getting-started-with-iis/getting-started-with-appcmdexe).
+For more information about the appcmd.exe command lines, view [Getting Started with AppCmd.exe](/iis/get-started/getting-started-with-iis/getting-started-with-appcmdexe).

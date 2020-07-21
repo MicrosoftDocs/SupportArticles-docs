@@ -77,7 +77,7 @@ To resolve this issue, follow these steps:
 
 - [Run-time settings schema](/dotnet/framework/configure-apps/file-schema/runtime/)
 
-- [\<legacyImpersonationPolicy> Element](/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element)
+- [\<legacyImpersonationPolicy> Element](/dotnet/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element)
 
 - [\<alwaysFlowImpersonationPolicy> Element](/dotnet/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element)
 
