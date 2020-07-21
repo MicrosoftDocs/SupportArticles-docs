@@ -24,7 +24,7 @@ search.appverid:
 
 When you try to set up a Microsoft Teams account, you receive a "Someone has already setup Teams for your organization" error message.
 
-## Resolutions
+## Resolution
 
 This issue has multiple possible causes and resolutions, including the following.
 
@@ -40,7 +40,7 @@ This issue has multiple possible causes and resolutions, including the following
 
 **Cause 3:** You're trying to sign up for your work account by using a free tenant.
 
-**Resolution 3:** Use your organization's tenant instead for this account. For personal use, create a free Teams account by using a personal email address.
+**Resolution 3:** Use your organization's tenant for this account. For personal use, create a free Teams account by using a personal email address.
 
 ## More information
 
