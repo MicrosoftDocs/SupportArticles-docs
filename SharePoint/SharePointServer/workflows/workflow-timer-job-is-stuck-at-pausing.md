@@ -85,7 +85,7 @@ Check the ULS logs every five minutes to see whether the issue was reproduced, a
    ```       
 3. Clear all filters, and then apply the following filter:
 
-   Correlation  Equals  *<Correlation_ID>*  And  
+   Correlation  Equals  *\<Correlation_ID>*  And  
    Message  Contains proc_GetWorkflowAssociations And  
    [EventID  Contains b6p4  Or  
    EventID  Contains tzkv  ]  
