@@ -22,7 +22,7 @@
   - name: Diagnostics
     items:
     - name: Install SaRA from network share
-      href: /office365/troubleshoot/installation/install-sara-from-network-share?context=/outlook/troubleshoot/context/context
+      href: /office365/troubleshoot/installation/install-sara-from-network-share?context=/outlook/troubleshoot/context/client-context
   - name: Domain Management
     items:
     - name: Remove automapping for shared mailbox
@@ -67,12 +67,14 @@
       href: ../meetings/meeting-tracking-tab-not-updated.md
     - name: Room Finder isn't available on shared calendars
       href: ../meetings/room-finder-is-not-available-shared-calendars-outlook.md
-  - name: Ribbons
+  - name: Ribbon
     items:
     - name: Default Office Add-in icon is displayed
-      href: ../ribbons/default-office-addin-icon-displayed-outlook-ribbon.md
+      href: ../ribbon/default-office-addin-icon-displayed-outlook-ribbon.md
+    - name: Junk E-mail Reporting Add-in
+      href: /office365/troubleshoot/antispam/junk-email-reporting-add-in?context=/outlook/troubleshoot/context/client-context
     - name: Lync Meeting control isn't displayed
-      href: ../ribbons/lync-meeting-control-not-displayed.md
+      href: ../ribbon/lync-meeting-control-not-displayed.md
   - name: Search
     items:
     - name: Can't search from additional mailbox 
