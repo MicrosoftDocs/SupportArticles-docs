@@ -1,7 +1,0 @@
-- name: Welcome
-  href:
-
-- name: Shell Experience
-  items:
-    - name: Fix problems in Windows Search
-      href: fix-problems-in-windows-search.md

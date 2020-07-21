@@ -1,0 +1,17 @@
+- name: Welcome
+  href:
+
+- name: Backup and Storage
+  items:
+    - name: USB Device not recognized error
+      href: ./backupstorage/usb-device-not-recognized-error.md
+
+- name: Deployment
+  items:
+    - name: Fix Windows Update errors
+      href: ./deployment/fix-windows-update-errors.md
+
+- name: Networking
+  items:
+    - name: Service overview and network port requirements
+      href: ./networking/service-overview-and-network-port-requirements.md
