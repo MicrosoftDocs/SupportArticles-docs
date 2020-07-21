@@ -77,5 +77,7 @@
   items:
   - name: BizTalk Server 2013 known issues
     href: known-issues-biztalk-server-2013.md
+  - name: High CPU when you execute a BRE policy
+    href: high-cpu-execute-bre-policy.md
   - name: How to troubleshoot a memory leak
     href: troubleshoot-memory-leak.md
