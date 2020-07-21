@@ -37,4 +37,4 @@ This behavior is by design.
 
 The framing HTML document defines the frame regions to be displayed in the browser and the documents or objects that initially appear in the frames.
 
-For more information about the HTML syntax for frames, see [Implementing HTML Frames](https://www.w3.org/TR/wd-frames-970331).
+For more information about the HTML syntax for frames, see [Implementing HTML Frames](https://www.w3.org/TR/wd-frames-970331.html).
