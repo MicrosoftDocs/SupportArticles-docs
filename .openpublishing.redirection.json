@@ -14,7 +14,7 @@
       "source_path": "support/biztalk/welcome-support-biztalk.md",
       "redirect_url": "/support/biztalk/welcome-biztalk-server",
       "redirect_document_id": false
-    }, 
+    },
     {
       "source_path": "support/dotnet/index.md",
       "redirect_url": "/support/dotnet/welcome-dotnet",
@@ -36,13 +36,28 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "support/windowsdeveloper/index.md",
+      "source_path": "support/host-integration-server/index.md",
+      "redirect_url": "/support/host-integration-server/welcome-host-integration-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/active-directory/index.md",
+      "redirect_url": "/support/azure/active-directory/welcome-azure-ad",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/index.md",
       "redirect_url": "/support/windows/win32/welcome-windowsdeveloper",
       "redirect_document_id": false
     },
     {
       "source_path": "support/sql/end-support-sql-server-2008.md",
       "redirect_url": "https://support.microsoft.com/help/4456242",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/index.md",
+      "redirect_url": "/support/windows/win32/welcome-windowsdeveloper",
       "redirect_document_id": false
     },
     {

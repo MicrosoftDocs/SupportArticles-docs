@@ -14,6 +14,8 @@
 
 - name: General
   items:
+  - name: _stat-family function can't support Symbolic Directory Link
+    href: _stat-family-cannot-support-symbolic-directory-link.md
   - name: Alternate credentials don't work for Online accounts
     href: alternate-credentials-stop-working.md
   - name: BI projects don't open after an upgrade
