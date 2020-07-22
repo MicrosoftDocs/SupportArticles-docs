@@ -1,0 +1,12 @@
+- name: Welcome
+  href:
+
+- name: Deployment
+  items:
+    - name: How to disable and re-enable hibernation
+      href: ./deployment/disable-and-re-enable-hibernation.md
+
+- name: Shell Experience
+  items:
+    - name: Fix problems in Windows Search
+      href: ./shellexperience/fix-problems-in-windows-search.md
