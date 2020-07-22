@@ -2,12 +2,12 @@
 title: Tilde notation maps to original URL
 description: This article provides resolutions for the problem that tilde notation embedded in HTML elements in Web Pages Razor V3 maps to the original URLs by using the IIS URL rewrite. This behavior differs from the behavior of Web Pages Razor V2.
 ms.date: 04/07/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Development
 ms.reviewer: kanchanm
 ---
 # Tilde notation maps to the original URLs by using IIS URL rewrite in ASP.NET Web Pages Razor V3
 
-This article helps you resolve the problem that tilde (~) notation embedded in Hypertext Transfer Protocol (HTTP) elements in Web Pages Razor V3 maps to the original URLs by using the Internet Information Services (IIS) URL rewrite.
+This article helps you resolve the problem where tilde (~) notation embedded in Hypertext Transfer Protocol (HTTP) elements in Web Pages Razor V3 maps to the original URLs by using the Internet Information Services (IIS) URL rewrite.
 
 _Original product version:_ &nbsp; ASP.NET  
 _Original KB number:_ &nbsp; 2905164

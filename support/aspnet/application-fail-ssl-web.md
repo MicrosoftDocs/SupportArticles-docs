@@ -2,11 +2,11 @@
 title: Application Initialization fails with SSL
 description: This article provides resolutions for the problem that Application Initialization module isn't working for web site configured to require SSL.
 ms.date: 04/07/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Site behavior and performance
 ---
 # Application Initialization module fails when web site requires SSL
 
-This article helps you resolve the problem that Application Initialization module isn't working for web site configured to require Secure Sockets Layer (SSL).
+This article helps you resolve the problem where Application Initialization module isn't working for web site configured to require Secure Sockets Layer (SSL).
 
 _Original product version:_ &nbsp; ASP.NET  
 _Original KB number:_ &nbsp; 2843964

@@ -2,7 +2,7 @@
 title: ASP.NET HTTP modules and handlers
 description: This article provides information about the HTTP modules and HTTP handlers.
 ms.date: 04/03/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: Development
 ms.reviewer: mdunner
 ms.topic: how-to
 ---

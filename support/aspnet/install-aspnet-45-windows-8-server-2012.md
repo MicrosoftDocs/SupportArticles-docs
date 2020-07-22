@@ -2,7 +2,7 @@
 title: Install ASP.NET 4.5 in Windows 8
 description: This article explains the problem that you can't install ASP.NET feature by using Aspnet_regiis.exe. It also provides a resolution to install/uninstall ASP.NET in Windows 8 and Windows Server 2012.
 ms.date: 04/03/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: WWW administration and management
 ms.reviewer: pranavra
 ---
 # Install ASP.NET 4.5 in Windows 8 and Windows Server 2012

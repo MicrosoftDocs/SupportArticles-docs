@@ -2,11 +2,11 @@
 title: Cannot debug ASP.NET web applications
 description: This article provides resolutions for the problem that you can't debug an ASP.NET application in Microsoft Visual Studio .NET.
 ms.date: 04/07/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Development
 ---
 # Cannot debug ASP.NET web applications
 
-This article helps you resolve the problem that you can't debug an ASP.NET application in Microsoft Visual Studio .NET.
+This article helps you resolve the problem where you can't debug an ASP.NET application in Microsoft Visual Studio .NET.
 
 _Original product version:_ &nbsp; ASP.NET  
 _Original KB number:_ &nbsp; 318465
