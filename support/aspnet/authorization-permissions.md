@@ -2,7 +2,7 @@
 title: Control authorization permissions in ASP.NET
 description: This article introduces how to apply the \<location> tag to the Web.config file to configure access to a specific file and folder.
 ms.date: 04/03/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: WWW authentication and authorization
 ms.reviewer: NATHANE
 ms.topic: how-to
 ---

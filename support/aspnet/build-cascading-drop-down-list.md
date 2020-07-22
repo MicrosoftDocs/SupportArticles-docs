@@ -2,13 +2,13 @@
 title: Build cascading drop-down list in ASP.NET
 description: This article describes that how to build a cascading drop-down list by using the standard DropDownList control in ASP.NET together with the ASP.NET AJAX framework.
 ms.date: 04/09/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Development
 ms.reviewer: v-zhiqni
 ms.topic: how-to
 ---
 # Steps to create a cascading drop-down list by using the Microsoft ASP.NET AJAX framework
 
-This article shows that how to build a cascading drop-down list by using the ASP.NET AJAX framework.
+This article shows how to build a cascading drop-down list by using the ASP.NET AJAX framework.
 
 _Original product version:_ &nbsp; .NET Framework 3.5  
 _Original KB number:_ &nbsp; 976156

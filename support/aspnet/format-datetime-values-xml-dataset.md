@@ -2,7 +2,7 @@
 title: Format DateTime and Date Values in XML by VB .NET
 description: Describes how to format DateTime and Date values of DataTable columns in the XML extracted from an ADO.NET DataSet by using Visual Basic .NET.
 ms.date: 05/12/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: Active Server Pages
 ---
 # How to format DateTime and Date values in the XML extracted from an ADO.NET DataSet by using Visual Basic .NET
 
