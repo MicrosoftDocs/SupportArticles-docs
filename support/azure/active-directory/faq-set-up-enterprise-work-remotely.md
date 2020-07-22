@@ -179,3 +179,5 @@ The required licenses are listed in the following article:
 #### What are the required ports and URLs for password writeback and SSPR? 
 
 For an Azure Active Directory Connect server that is running behind a firewall or through a proxy, open the ports and URLs that are listed in [this article](https://docs.microsoft.com/azure/active-directory/authentication/active-directory-passwords-troubleshoot#confirm-network-connectivity).
+
+[!INCLUDE [Third-party information disclaimer](.../includes/third-party-disclaimer.md)]

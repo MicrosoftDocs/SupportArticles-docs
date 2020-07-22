@@ -5,7 +5,7 @@ ms.date: 07/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: maweeras, ntuttle, arpadg, takondo, cleng, hiyazawa, genli
 ---
-# Azure Active Directory Joined computers experience a three hours delay during boot if the workgroup name is the same as the on-premises AD domain NetBIOS name
+# Azure Active Directory Joined computers experience a three hours delay during boot
 
 _Original product version:_ &nbsp; Azure Active Directory  
 _Original KB number:_ &nbsp; 4565997
