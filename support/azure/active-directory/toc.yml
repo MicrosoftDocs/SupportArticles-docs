@@ -65,6 +65,8 @@
     href: unable-sync-system-discovery-mailbox.md
   - name: Changes to mail-enabled security group don't sync
     href: sg-mail-enabled-sync.md
+  - name: Computer startup delays
+    href: computers-3-hour-delay-boot.md
   - name: Directory sync to Azure stops
     href: directory-sync-stop-register.md
   - name: Email addresses aren't synced
@@ -171,6 +173,8 @@
     href: remove-msoluser-user-not-found-recyclebin.md
   - name: Request isn't processed when resetting password
     href: request-not-processed-reset-pwd.md
+  - name: Set up your enterprise for working remotely FAQ
+    href: faq-set-up-enterprise-work-remotely.md
   - name: The term is not recognized error in Azure PowerShell
     href: term-cmdlet-name-not-recognized-aad-cmdlet.md
   - name: Troubleshoot MFA issues
