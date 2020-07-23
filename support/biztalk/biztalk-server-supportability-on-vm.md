@@ -2,7 +2,7 @@
 title: BizTalk Server supportability on VM
 description: Discusses the support policy for running BizTalk Server in a virtualization environment.
 ms.date: 03/06/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: BizTalk Server Setup and Configuration
 ms.reviewer: larryfr
 ---
 # Microsoft BizTalk Server supportability on a virtual machine
