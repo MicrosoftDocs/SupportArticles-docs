@@ -2,12 +2,12 @@
 title: Event ID 1072 or 1076 on state servers
 description: This article provides resolutions for the state server log Event ID 1072 or 1076.
 ms.date: 03/25/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Site behavior and performance
 ms.reviewer: V-KIMWA, VENKATC
 ---
 # State server logs Event ID 1072 or Event ID 1076
 
-This article helps you resolve the problem that log Events ID 1072 or 1076 on State servers.
+This article helps you resolve the problem where log Events ID 1072 or 1076 on State servers.
 
 _Original product version:_ &nbsp; Microsoft .NET Framework  
 _Original KB number:_ &nbsp; 308097

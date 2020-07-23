@@ -2,7 +2,7 @@
 title: SQL Server Agent jobs in BizTalk Server
 description: Lists all the SQL Server Agent jobs in BizTalk Server. Also provides a description of each SQL Server Agent job.
 ms.date: 03/06/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: BizTalk Server Setup and Configuration
 ms.reviewer: rickcau
 ---
 # Description of the SQL Server Agent jobs in BizTalk Server

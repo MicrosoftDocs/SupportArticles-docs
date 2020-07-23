@@ -2,7 +2,7 @@
 title: Create Web.config for ASP.NET applications
 description: This article describes how to create the Web.config file for an ASP.NET application.
 ms.date: 03/27/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: Health, diagnostic, and performance features
 ms.topic: how-to
 ---
 # Create the Web.config file for an ASP.NET application

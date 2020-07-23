@@ -2,7 +2,7 @@
 title: ASP.NET security overview
 description: This article provides information about the ASP.NET security.
 ms.date: 04/07/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: Development
 ms.reviewer: VENKATC, EARLB
 ms.topic: article
 ---
