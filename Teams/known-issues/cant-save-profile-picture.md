@@ -22,14 +22,8 @@ description: Explains why a profile picture can't be saved in Teams.
 
 # Can't save profile picture in Microsoft Teams
 
-## Symptom
-""
-Users can't save their profile picture when the Teams Exchange Mailbox is hosted (homed) on-premises on Exchange 2016 CU2 or lower. 
+Users can't save their profile picture when the Teams Exchange Mailbox is hosted (homed) on-premises on Exchange 2016 CU2 or lower.
 
-## More information
-
-At this time, Exchange Server 2016 (Cumulative Update 3), or later, is required for this feature. 
-See the following article for more detail
-https://docs.microsoft.com/en-us/MicrosoftTeams/exchange-teams-interact
+At this time, Exchange Server 2016 (Cumulative Update 3), or later, is required for this feature. See [How Exchange and Microsoft Teams interact](https://docs.microsoft.com/MicrosoftTeams/exchange-teams-interact) for more information.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
