@@ -2,7 +2,7 @@
 title: Use vector STL functions in Visual C++
 description: Describes how to use the vector::erase, vector::empty, and vector::push_back STL functions in Visual C++. This article also provides a code sample to show how to perform this task.
 ms.date: 04/22/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: C and C++ Libraries
 ms.topic: how-to
 ---
 # Use the vector::erase, vector::empty, and vector::push_back STL functions in Visual C++

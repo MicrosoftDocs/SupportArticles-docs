@@ -2,7 +2,7 @@
 title: Use the set::find function in Visual C++
 description: Describes how to use the set::find STL function in Visual C++. This article includes a sample code.
 ms.date: 04/27/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: C and C++ Libraries
 ms.topic: how-to
 ---
 # Use the set::find STL function in Visual C++
