@@ -92,8 +92,6 @@
     href: time-taken-field-http-log.md
   - name: Troubleshoot ABO Mapper errors
     href: troubleshoot-abo-mapper-errors.md
-  - name: Windows Server AppFabric Cache diagnostic
-    href: windows-server-appfabric-cache.md
 
 - name: IISAdmin service and Inetinfo process operation
   items:
