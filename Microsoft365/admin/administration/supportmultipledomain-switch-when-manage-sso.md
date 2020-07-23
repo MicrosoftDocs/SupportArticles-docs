@@ -66,7 +66,7 @@ Convert-MsolDomainToFederated -DomainName <domain>-supportMultipleDomain
 ```
 
 Get-MsolFederationProperty -DomainName <domain> on the federated domains now shows that the "FederationServiceIdentifier" is different for ADFS and O365. Every federated domain will have the "FederationServiceIdentifier" as 
-http://<domainname>/adfs/services/trust/ whereas the ADFS configuration still has `http://STSname/adfs/Services/trust`
+http://\<domainname>/adfs/services/trust/ whereas the ADFS configuration still has `http://STSname/adfs/Services/trust`
 
 
 Due to this mismatch in configuration, we need to ensure that when a token is sent to O365 the issuer mentioned in it, is the same as one configured for the Domain in O365. If not you will get the error below:

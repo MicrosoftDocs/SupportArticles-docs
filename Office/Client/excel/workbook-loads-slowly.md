@@ -28,9 +28,10 @@ When you open a file in Microsoft Excel for the first time, the file may take mo
 
 Also, when you close the file, you may receive the following prompt: 
 
-    Do you want to save the changes you made to <Filename>?
+> Do you want to save the changes you made to \<Filename>?
 
-Note In this message, **Filename** represents the name of the file that you are closing.
+> [!NOTE]
+> In this message, **Filename** represents the name of the file that you are closing.
 
 Microsoft Excel recalculates formulas when it opens files that were last saved by an earlier version of Excel.
 

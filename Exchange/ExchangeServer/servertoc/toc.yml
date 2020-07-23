@@ -41,7 +41,7 @@
       href: ../client-connectivity/400-bad-request.md
     - name: Only one reply is sent to each sender
       href: ../client-connectivity/one-reply-sent-sender.md
-    - name: Set up Exchange on the web
+    - name: Set up Outlook on the web
       href: ../client-connectivity/set-up-web-access.md
     - name: Show organizer name instead of subject
       href: ../client-connectivity/calendar-shows-organizer-name.md
