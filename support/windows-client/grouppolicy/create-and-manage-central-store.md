@@ -33,6 +33,7 @@ _Original KB number:_ &nbsp; 3087759
 - [Administrative Templates (.admx) for Windows 10 and Windows 10, version 1511](https://www.microsoft.com/download/details.aspx?id=48257)
 - [Administrative Templates (.admx) for Windows Server 2012 R2 Update](https://www.microsoft.com/download/details.aspx?id=43413)
 - [Administrative Templates (.admx) for Windows Server 2012 R2](https://www.microsoft.com/download/details.aspx?id=41193)
+- [Administrative Templates (.admx) for Windows 7](https://www.microsoft.com/download/details.aspx?id=6243)
 
 To view ADMX spreadsheets of the new settings that are available in later operating system versions, see [Group Policy Settings Reference Spreadsheet Windows 1809](https://www.microsoft.com/download/details.aspx?id=57464)
 
@@ -121,5 +122,6 @@ You can also use this setting to:
 ## Applies to
 
 - Windows 10 - all editions
+- Windows 7 Service Pack 1
 - Windows Server 2019
 - Windows Server 2012 R2
