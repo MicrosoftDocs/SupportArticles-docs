@@ -88,7 +88,7 @@
     - name: Emails sent to Exchange Online appear external
       href: ../mailflow/email-sent-to-online-appears-external.md
     - name: Error 19738 when sending large emails using Outlook for Mac
-     href: ../mailflow/error-19738-send-large-email-outlook-mac.md
+      href: ../mailflow/error-19738-send-large-email-outlook-mac.md
     - name: Error when adding a large attachment in OWA
       href: ../mailflow/cannot-add-attachment-outlook-web.md
     - name: Error when sending S/MIME encrypted mails from OWA
