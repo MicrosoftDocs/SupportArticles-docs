@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp;4056664
 Consider the following scenarios:
 
 - You have more than one Active Directory site.
-- You configure the redirection for Exchange Control Panel (ECP) for those sites by adding the **ExternalURL** property for the /ECP virtual directories.
+- You configure the redirection for Exchange Control Panel (ECP) for those sites by adding the `ExternalURL` property for the /ECP virtual directories.
 
 In this scenario, redirection fails when you try to access ECP from a remote site, and you receive the following error message:
 
@@ -36,7 +36,7 @@ The virtual directory in the 302 response that's created by the Microsoft Exchan
 
 ## Workaround
 
-To work around this issue, remove the **ExternalURL** property from the ECP. Then, when a user accesses the ECP from the remote site, the user will be proxied to the ECP in the targeted Active Directory site. For more information, see [Understanding Proxying and Redirection](https://technet.microsoft.com/library/bb310763%28v=exchg.141%29.aspx).
+To work around this issue, remove the `ExternalURL` property from the ECP. Then, when a user accesses the ECP from the remote site, the user will be proxied to the ECP in the targeted Active Directory site. For more information, see [Understanding Proxying and Redirection](https://technet.microsoft.com/library/bb310763%28v=exchg.141%29.aspx).
 
 ## Status
 

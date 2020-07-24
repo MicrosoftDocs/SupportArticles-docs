@@ -79,7 +79,7 @@ This article describes information that the Exchange Server Client Connectivity 
 |Get-OwaVirtualDirectory cmdlet output|{ComputerName}_OwaVirtualDirectory_FL.txt|
 |Get-WebServicesVirtualDirectory cmdlet output|{ComputerName}_WebServicesVirtualDirectory_FL.txt|
 |Get-EcpVirtualDirectory cmdlet output|{ComputerName}_EcpVirtualDirectory_FL.txt|
-|HKLM:SOFTWARE\Microsoft\Rpc\RpcProxy* registry keys, values|{ComputerName}_REG_RPCPROXY.txt|
+|HKLM: SOFTWARE\Microsoft\Rpc\RpcProxy* registry keys, values|{ComputerName}_REG_RPCPROXY.txt|
 |||
 
 ### Exchange Client Access Web Configuration files

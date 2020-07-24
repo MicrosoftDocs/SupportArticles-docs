@@ -40,4 +40,4 @@ Microsoft is researching this issue and will post more information in this artic
 
 You can work around this issue by using [Microsoft Outlook for iOS](https://itunes.apple.com/us/app/microsoft-outlook/id951937596?mt=8).
 
-[!INCLUDE [Third-party disclaimer](../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-information-disclaimer.md)]

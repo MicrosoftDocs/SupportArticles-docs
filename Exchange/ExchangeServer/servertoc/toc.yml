@@ -54,7 +54,7 @@
     - name: Can't open OWA, ECP, or EMS after a self-signed certificate is removed
       href: ../client-connectivity/owa-ecp-ems-cannot-connect-after-self-signed-certificate-removed.md
     - name: Can't search people in OWA
-       href: ../client-connectivity/can't-connect-error-searching-people-owa.md
+      href: ../client-connectivity/can't-connect-error-searching-people-owa.md
     - name: Can't synchronize an Exchange ActiveSync device
       href: ../client-connectivity/event-1053-activesync-not-have-sufficient-permissions-to-create-container.md
     - name: Can't use EAS to connect Outlook to Exchange

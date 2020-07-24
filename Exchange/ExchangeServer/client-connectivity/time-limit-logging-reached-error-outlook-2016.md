@@ -43,7 +43,7 @@ This problem occurs in the following programs:
 - Office 2016 version 16.0.6925.1018 or a later version for Click-to-Run based installations
 - Outlook version 16.0.4351.1000 for MSI-based installations
 
-To determine whether your Office 2016 installation is Click-to-Run or MSI-based, see the ["More information" section](#More-information).
+To determine whether your Office 2016 installation is Click-to-Run or MSI-based, see the ["More information"](#more-information) section.
 
 ## Workaround 1: Update the Salesforce for Outlook add-in
 

@@ -36,13 +36,13 @@ In this scenario, User A can access User B's primary mailbox in Outlook, but U
 
 ## Cause
 
-The issue occurs because the auto-mapping feature doesn't work correctly in the scenario that is described in the Symptoms section. This is a limitation of the feature.
+The issue occurs because the automapping feature doesn't work correctly in the scenario that is described in the Symptoms section. This is a limitation of the feature.
 
 ## Workarounds - Method 1
 
-Use Outlook Web App (OWA) to access the delegated archive mailbox. To add the mailbox to OWA, follow these steps:
+Use Outlook Web App (Outlook Web App) to access the delegated archive mailbox. To add the mailbox to Outlook Web App, follow these steps:
 
-1. Sign in to your mailbox by using OWA.
+1. Sign in to your mailbox by using Outlook Web App.
 2. Right-click your name in the folder list, and then select **Add shared folder**.
 3. In the **Add shared folder** dialog box, type the name of the mailbox that you have been provided access to, and then select **Add**.
 

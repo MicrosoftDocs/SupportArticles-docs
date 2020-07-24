@@ -1,6 +1,6 @@
 ---
 title: EAS device is blocked by ABQ list
-description: Describes an issue in which the Allow/Block/Quarantine list unexpectedly blocks an ActiveSync client. In this situation, the ActiveSync device can no longer sync with Exchange Server after you restore or factory reset the device.
+description: Describes an issue in which the Allow/Block/Quarantine list unexpectedly blocks an Exchange ActiveSync client. In this situation, the Exchange ActiveSync device can no longer sync with Exchange Server after you restore or factory reset the device.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -30,21 +30,21 @@ _Original KB number:_ &nbsp; 3013802
 
 ## Symptoms
 
-After you perform a remote wipe or factory reset of an Exchange ActiveSync device, or after you restore the device from backup, the ActiveSync client on the device can no longer synchronize with Exchange Server.
+After you perform a remote wipe or factory reset of an Exchange ActiveSync device, or after you restore the device from Backup, the Exchange ActiveSync client on the device can no longer synchronize with Exchange Server.
 
 This issue occurs when one or more of the following conditions are true:
 
-- The ActiveSync organization setting for the default access level is set to **Block** or **Quarantine**.
-- There is an ActiveSync device access rule for which the access level set to **Block** or **Quarantine**.
+- The Exchange ActiveSync organization setting for the default access level is set to **Block** or **Quarantine**.
+- There is an Exchange ActiveSync device access rule for which the access level set to **Block** or **Quarantine**.
 - The mailbox has the `ActiveSyncAllowedDeviceID` setting configured.
 
 ## Cause
 
-The ActiveSync client on these devices has a process that generates a DeviceID when the first ActiveSync profile is created. By resetting the device, this removes any existing ActiveSync profiles and resets the DeviceID.
+The Exchange ActiveSync client on these devices has a process that generates a Device ID when the first Exchange ActiveSync profile is created. By resetting the device, this removes any existing Exchange ActiveSync profiles and resets the Device ID.
 
 ## Resolution
 
-This behavior is by design. The new DeviceID must be added to the mailbox's `ActiveSyncAllowedDeviceIDs` list.
+This behavior is by design. The new Device ID must be added to the mailbox's `ActiveSyncAllowedDeviceIDs` list.
 
 ## More information
 

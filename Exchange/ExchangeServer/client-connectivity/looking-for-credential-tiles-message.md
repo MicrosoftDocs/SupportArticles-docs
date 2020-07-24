@@ -43,4 +43,4 @@ If you are experiencing this issue, either disable or uninstall the third-party 
 
 If you are unable to locate the program in **Control Panel**, check the program's installation folder for an uninstalled program. By default, the Lenovo VeriFace program is installed in the `C:\Program Files\Lenovo\VeriFace` or `C:\Program Files (x86)\Lenovo\VeriFace` folder.
 
-[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-information-disclaimer.md)]

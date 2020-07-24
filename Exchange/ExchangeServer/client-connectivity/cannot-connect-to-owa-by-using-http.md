@@ -1,6 +1,6 @@
 ---
-title: Cannot connect to OWA via HTTP protocol
-description: Works around a problem in which users cannot connect to OWA by using the HTTP protocol after you apply Exchange Server 2010 SP2.
+title: Cannot connect to Outlook Web App via HTTP protocol
+description: Works around a problem in which users cannot connect to Outlook Web App by using the HTTP protocol after you apply Exchange Server 2010 SP2.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -15,25 +15,25 @@ appliesto:
 - Exchange Server 2010
 search.appverid: MET150
 ---
-# Users can't connect to OWA by using the HTTP protocol in Exchange Server 2010
+# Users can't connect to Outlook Web App by using the HTTP protocol in Exchange Server 2010
 
-This article provides a workaround for the issue that uses can't connect to OWA (OWA) through the HTTP protocol in Microsoft Exchange Server 2010.
+This article provides a workaround for the issue that uses can't connect to Outlook Web App (Outlook Web App) through the HTTP protocol in Microsoft Exchange Server 2010.
 
 _Original KB number:_ &nbsp; 2748253
 
 ## Symptoms
 
-After you apply Exchange Server 2010 Service Pack 2 (SP2), users can't connect to OWA by using the HTTP protocol. This problem occurs even if you disable the **Require secure channel (SSL)** option in the OWA virtual directory.
+After you apply Exchange Server 2010 Service Pack 2 (SP2), users can't connect to Outlook Web App by using the HTTP protocol. This problem occurs even if you disable the **Require secure channel (SSL)** option in the Outlook Web App virtual directory.
 
 ## Cause
 
-This problem occurs because Exchange Server 2010 SP2 uses the HTTPS protocol to connect to OWA.
+This problem occurs because Exchange Server 2010 SP2 uses the HTTPS protocol to connect to Outlook Web App.
 
 ## Workaround
 
 To work around this problem, follow these steps:
 
-1. In the Client Access Server (CAS) server that hosts the OWA, open the Web.config file by using Notepad. By default, the Web.config file is installed in the following location:  
+1. In the Client Access Server (CAS) server that hosts the Outlook Web App, open the Web.config file by using Notepad. By default, the Web.config file is installed in the following location:  
    C:\Program files\Microsoft\Exchange Server\V14\ClientAccess\OWA
 
 2. Locate the following code:

@@ -1,5 +1,5 @@
 ---
-title: FBA page shows when accessing OWA or EAC
+title: FBA page shows when accessing Outlook Web App or EAC
 description: Describes a problem in which the forms-based authentication page continues to appear even after the user provides valid credentials. Provides a workaround.
 author: simonxjx
 ms.author: v-six
@@ -18,13 +18,13 @@ appliesto:
 - Exchange Server 2013 Enterprise
 search.appverid: MET150
 ---
-# The FBA page is displayed when a user accesses OWA or EAC to sign in to Exchange Server 2016 and 2013
+# The FBA page is displayed when a user accesses Outlook Web App or EAC to sign in to Exchange Server 2016 and 2013
 
 _Original KB number:_ &nbsp; 2871485
 
 ## Symptoms
 
-In Microsoft Exchange Server 2013, you have forms-based authentication (FBA) disabled for Outlook Web App (OWA) and [Exchange admin center](/exchange/architecture/client-access/exchange-admin-center?view=exchserver-2019) (EAC). Additionally, you have either Windows Integrated or Basic Authentication enabled. After you upgrade Exchange Server 2013 to a newer build, the FBA page is displayed when a user accesses OWA or EAC. Additionally, the FBA page continues to appear even after the user provides valid credentials.
+In Microsoft Exchange Server 2013, you have forms-based authentication (FBA) disabled for Outlook Web App (Outlook Web App) and [Exchange admin center](/exchange/architecture/client-access/exchange-admin-center?view=exchserver-2019) (EAC). Additionally, you have either Windows Integrated or Basic Authentication enabled. After you upgrade Exchange Server 2013 to a newer build, the FBA page is displayed when a user accesses Outlook Web App or EAC. Additionally, the FBA page continues to appear even after the user provides valid credentials.
 
 This issue also occurs in Exchange Server 2016.
 
@@ -34,14 +34,14 @@ This problem occurs because the upgrade process copies the default Web.config fi
 
 ## Workaround
 
-To work around this problem, reconfigure the desired authentication mechanism on the OWA or EAC virtual directories. To do this, follow these steps:
+To work around this problem, reconfigure the desired authentication mechanism on the Outlook Web App or EAC virtual directories. To do this, follow these steps:
 
 > [!NOTE]
 > These steps will reconfigure Windows Integrated Authentication on OWA and EAC virtual directories by using the Exchange Management Shell.
 
 1. Review the authentication configuration. To do this, run the appropriate command:
 
-    For OWA, run the following command:
+    For Outlook Web App, run the following command:
 
     ```powershell
     Get-OwaVirtualDirectory -Server exch3 | fl *auth*
@@ -53,9 +53,9 @@ To work around this problem, reconfigure the desired authentication mechanism on
     Get-EcpVirtualDirectory -Server exch3 | fl *auth*
     ```
 
-2. Run the appropriate command to disable FBA and to enable Windows Integrated Authentication:
+2. Run the appropriate command to disable FBA and to enable Windows-Integrated Authentication:
 
-    For OWA, run the following command:
+    For Outlook Web App, run the following command:
 
     ```powershell
     Set-OwaVirtualDirectory -Identity "EXCH3\owa (Default Web Site)" -FormsAuthentication $false -WindowsAuthentication $true
@@ -69,7 +69,7 @@ To work around this problem, reconfigure the desired authentication mechanism on
 
 3. Run IISReset to restart Internet Information Services (IIS).
 
-See [View or Configure Outlook Web App Virtual Directories](/exchange/view-or-configure-outlook-web-app-virtual-directories-exchange-2013-help) for information about how to use the EAC or the Exchange Management Shell to view or configure the properties of an OWA virtual directory.
+See [View or Configure Outlook Web App Virtual Directories](/exchange/view-or-configure-outlook-web-app-virtual-directories-exchange-2013-help) for information about how to use the EAC or the Exchange Management Shell to view or configure the properties of an Outlook Web App virtual directory.
 
 ## More information
 

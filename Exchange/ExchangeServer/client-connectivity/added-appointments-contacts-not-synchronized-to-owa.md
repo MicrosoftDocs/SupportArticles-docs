@@ -1,6 +1,6 @@
 ---
-title: New appointments and contacts not synchronized to OWA
-description: In Outlook for Mac, you add appointments to Calendar and contacts in Contacts folder. These appointments and contacts do not synchronize to Outlook Web App (OWA) or your mobile devices and other mail clients.
+title: New appointments and contacts not synchronized to Outlook Web App
+description: In Outlook for Mac, you add appointments to Calendar and contacts in Contacts folder. These appointments and contacts do not synchronize to Outlook Web App (Outlook Web App) or your mobile devices and other mail clients.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -19,13 +19,13 @@ search.appverid: MET150
 ---
 # Added appointments and contacts in Outlook for Mac do not synchronize to Outlook Web App
 
-This article describes a by design behavior that added appointments and contacts in Microsoft Outlook for Mac do not synchronize to Outlook Web App (OWA) or to your mobile devices and other mail clients.
+This article describes a by design behavior that added appointments and contacts in Microsoft Outlook for Mac do not synchronize to Outlook Web App (Outlook Web App) or to your mobile devices and other mail clients.
 
 _Original KB number:_ &nbsp; 2744157
 
 ## Symptoms
 
-When you add appointments to your Calendar folder and add contacts to your Contacts folder in Outlook 2016 for Mac or Outlook for Mac 2011, the added appointments and contacts do not synchronize to OWA or to your mobile devices and other mail clients.
+When you add appointments to your Calendar folder and add contacts to your Contacts folder in Outlook 2016 for Mac or Outlook for Mac 2011, the added appointments and contacts do not synchronize to Outlook Web App or to your mobile devices and other mail clients.
 
 ## Cause
 
