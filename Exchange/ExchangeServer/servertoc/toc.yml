@@ -65,6 +65,39 @@
       href: ../public-folders/public-folder-migration-fails.md
   - name: Setup
     items:
+    - name: "\"Organization Preparation FAILED\" error"
+      href: ../setup/organization-preparation-failed.md
+    - name: "\"Please wait while Windows configures Office\" at start"
+      href: ../setup/wait-while-windows-configures-office-outlook.md
+    - name: "\"Your request cannot be completed right now\" error"
+      href: ../setup/owa-your-request-cannot-be-completed.md
+    - name: Can't get child of ADObjectId
+      href: ../setup/edge-transport-setup-fails-domain-joined-server.md
+    - name: Crashes after installing language packs
+      href: ../setup/outlook-2016-crash-event-1000.md
+    - name: Event ID 106 Performance counter updating error
+      href: ../setup/event-106-msexchange-common.md
     - name: Exchange Server 2019 setup does not run correctly using PowerShell
       href: ../setup/ex2019-setup-does-not-run-correctly-started-powershell.md
-
+    - name: Extensibility support for Outlook 2010
+      href: ../setup/applications-incompatible-c2r-outlook.md
+    - name: Instal Calendar Printing Assistant fails
+      href: ../setup/installing-calendar-printing-assistant-fails.md
+    - name: Instal PST Capture tool fails
+      href: ../setup/pst-capture-setup-wizard-ended-prematurely.md
+    - name: Install Exchange Server 2010 SP2 fails
+      href: ../setup/installing-exchange-2010-sp2-fails.md
+    - name: Install updates for Mailbox-role server fails
+      href: ../setup/error-occurred-while-configuring-search-foundation.md
+    - name: Installation in RecoverServer mode fails
+      href: ../setup/language-pack-bundle-not-found.md
+    - name: Installation of Edge Transport role fails
+      href: ../setup/process-execution-failed-with-exit-code-3.md
+    - name: Manually update scan engines
+      href: ../setup/manually-update-scan-engines.md
+    - name: Run Update cmdlet fails
+      href: ../setup/network-path-was-not-found-error.md
+    - name: Service Pack upgrade fails
+      href: ../setup/service-pack-upgrade-fails.md
+    - name: Upgrade to Office 2016 fails
+      href: ../setup/upgrade-errors-office-2016.md
