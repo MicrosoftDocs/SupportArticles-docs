@@ -51,4 +51,4 @@ To resolve this problem, use one of the following methods before you add the ser
 - Install the Failover Clustering component manually.
 - Ask the third-party vendor to help remove and reinstall Symantec Endpoint Protection.
 
-[!INCLUDE [Third-party disclaimer](../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-information-disclaimer.md)]

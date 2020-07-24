@@ -129,7 +129,7 @@ Because there are four possible causes of this problem, follow these steps to de
 
     If the `Max Extended Rule Size` registry value does not exist on your Exchange server, or if the value is correctly configured, go on to step 2.
 
-2. If there are many cumulative entries in the Safe Senders, Blocked Senders and Safe Recipients lists, you can probably isolate this problem to a small number of mailboxes. For example, if only a few users encounter the errors that are described in the [Symptoms](#Symptoms) section, you should examine the Safe Senders, Blocked Senders, and Safe Recipients lists in Outlook to determine whether there is a large number of entries in the lists (in total).
+2. If there are many cumulative entries in the Safe Senders, Blocked Senders and Safe Recipients lists, you can probably isolate this problem to a small number of mailboxes. For example, if only a few users encounter the errors that are described in the [Symptoms](#symptoms) section, you should examine the Safe Senders, Blocked Senders, and Safe Recipients lists in Outlook to determine whether there is a large number of entries in the lists (in total).
 
     If you have narrowed the problem to being caused by a large number of items in these lists, you can configure a larger limit by using the Max Extended Rule Size registry value on your Exchange server. This solution can be used on servers that are running Exchange Server 2003, Exchange Server 2007, and Exchange Server 2010.
 

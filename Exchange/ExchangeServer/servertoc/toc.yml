@@ -146,7 +146,7 @@
     - name: Get-VirtualDirectory cmdlets run slowly
       href: ../administration/get-virtualdirectory-run-slowly.md
     - name: HCW errors in Organization Configuration transfer
-      href: ../administration/hybrid-configuration wizard-errors-organization-configuration-transfer.md
+      href: ../administration/hybrid-configuration-wizard-errors-organization-configuration-transfer.md
     - name: How to define diagnostic logging levels
       href: ../administration/exchange-diagnostic-logging-levels.md
     - name: HTTP error 403 when starting EMS

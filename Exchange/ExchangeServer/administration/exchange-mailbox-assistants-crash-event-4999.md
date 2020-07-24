@@ -80,4 +80,4 @@ set-mailboxserver -OABGeneratorWorkCycleCheckpoint <value> -identity <servername
 
 Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section.
 
-[!INCLUDE [Third-party disclaimer](../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-information-disclaimer.md)]
