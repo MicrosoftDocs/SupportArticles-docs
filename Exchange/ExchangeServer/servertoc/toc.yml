@@ -62,7 +62,7 @@
     - name: Can't access archive mailbox in Outlook
       href: ../client-connectivity/cannot-access-archive-mailbox-in-outlook.md
     - name: Can't access Outlook on the web or EAC with expired OAuth certificate
-      href: ../client-connectivity/cannot-access-owa-or-eac-if-oauth-expired.md
+      href: ../client-connectivity/cannot-access-owa-or-ecp-if-oauth-expired.md
     - name: Can't connect to a mailbox from OWA
       href: ../client-connectivity/cannot-connect-to-mailbox-via-owa.md
     - name: Can't connect to OWA via HTTP protocol
