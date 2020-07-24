@@ -779,6 +779,8 @@
       href: ../office-suite-issues/cannot-open-add-in-from-localhost.md
     - name: Can't start an Office Starter program
       href: ../office-suite-issues/cannot-be-opened-error-when-start.md
+    - name: Can't start in Windows safe mode
+      href: ../office-suite-issues/office-not-start-safe-mode-windows.md
     - name: Can't uninstall Office
       href: ../office-suite-issues/error-when-uninstall-office.md
     - name: Connection to a network document is lost
