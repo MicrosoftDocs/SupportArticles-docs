@@ -2,12 +2,12 @@
 title: ESB configuration fails
 description: BizTalk ESB configuration fails because of problems in ESB.config.
 ms.date: 03/16/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: ESB Toolkit
 ms.reviewer: shaheera
 ---
 # ESB configuration fails with unrecognized element typeConfig
 
-This article describes the issue that the Enterprise Service Bus (ESB) 2.2 configuration fails.
+This article describes the issue where the Enterprise Service Bus (ESB) 2.2 configuration fails.
 
 _Original product version:_ &nbsp; BizTalk Server 2013  
 _Original KB number:_ &nbsp; 2887942

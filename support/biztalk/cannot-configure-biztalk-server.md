@@ -2,7 +2,7 @@
 title: Exception when you configure BizTalk Server
 description: Fixes a System.EnterpriseServices.TransactionProxyException issue in which you receive an error when you configure BizTalk Server. This issue occurs in BizTalk Server 2006, 2006 R2, 2009, or 2010.
 ms.date: 03/06/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: BizTalk Server Setup and Configuration
 ---
 # System.EnterpriseServices.TransactionProxyException was thrown when you configure BizTalk Server
 

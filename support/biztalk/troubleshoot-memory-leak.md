@@ -2,7 +2,7 @@
 title: How to troubleshoot a memory leak
 description: Describes troubleshooting steps, important memory usage considerations, and known memory-related issues in BizTalk Server.
 ms.date: 03/16/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: Performance
 ms.reviewer: mandia
 ---
 # How to troubleshoot a memory leak or an out-of-memory exception in the BizTalk Server process

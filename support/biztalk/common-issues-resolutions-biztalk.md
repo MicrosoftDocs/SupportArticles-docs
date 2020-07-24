@@ -2,7 +2,7 @@
 title: BizTalk server admin console issues
 description: Introduces common issues and resolutions with the BizTalk Server Administration console.
 ms.date: 03/04/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Management and Operations
 ms.reviewer: btstech
 ---
 # Common issues and resolutions with the BizTalk Server Administration console

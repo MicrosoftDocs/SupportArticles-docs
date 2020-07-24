@@ -2,12 +2,12 @@
 title: Request.ServerVariables() returns empty
 description: This article describes an problem that Request.ServerVariables() returns empty string in ASP.NET. Provides a resolution.
 ms.date: 04/03/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: Development
 ms.reviewer: anandh
 ---
 # Request.ServerVariables("LOGON_USER") returns empty string in ASP.NET
 
-This article provides resolutions for the problem that the `Request.ServerVariables("LOGON_USER")` variable returns empty string in ASP.NET.
+This article provides resolutions for the problem where the `Request.ServerVariables("LOGON_USER")` variable returns empty string in ASP.NET.
 
 _Original product version:_ &nbsp; ASP.NET  
 _Original KB number:_ &nbsp; 306359

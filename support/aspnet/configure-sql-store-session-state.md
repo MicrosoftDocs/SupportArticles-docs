@@ -2,7 +2,7 @@
 title: Store ASP.NET SQL Server mode session state
 description: This article describes how to configure ASP.NET SQL Server mode session state management.
 ms.date: 03/26/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: FTP authentication and authorization
 ms.topic: how-to
 ---
 # Configure SQL Server to store ASP.NET session state  
