@@ -47,7 +47,7 @@ To modify the registry subkey automatically, follow these steps:
 
 |Add LastProduct value|Remove LastProduct value|
 |---|---|
-|[Download](http://go.microsoft.com/?linkid=9840778)| [Download](http://go.microsoft.com/?linkid=9840780)|
+|[Download](https://go.microsoft.com/?linkid=9840778)| [Download](https://go.microsoft.com/?linkid=9840780)|
 |||
 
 ## Workaround 2: Let me fix it myself
