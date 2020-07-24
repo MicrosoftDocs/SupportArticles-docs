@@ -51,12 +51,58 @@
       href: ../compliance/mailbox-audit-log-searches-fail-errorinvalidserverversion.md
   - name: Mailflow
     items:
+    - name: "\"The operation failed\" when sending emails"
+      href: ../mailflow/operation-failed-send-email-outlook.md
     - name: 451 4.4.0 DNS query failed
       href: ../mailflow/dns-query-failed.md
     - name: 554 5.4.14 Hop count exceeded
       href: ../mailflow/hop-count-exceeded-possible-mail-loop.md
+    - name: Can't find .pst file
+      href: ../mailflow/outlook-2013-not-find-pst-file.md
+    - name: Can't resend a delayed delivery message
+      href: ../mailflow/send-button-missing-delayed-delivery-email-outbox.md
     - name: Can't send an email with full access
       href: ../mailflow/cannot-send-email-with-full-access.md
+    - name: Can't send emails from a distribution list
+      href: ../mailflow/outlook-mac-security-groups-cannot-send-emails.md
+    - name: Can't send files from an application through email
+      href: ../mailflow/error-send-file-from-application-through-email.md
+    - name: Can't send or receive emails behind a Cisco PIX or ASA firewall
+      href: ../mailflow/cannot-send-receive-email-behind-cisco-firewall.md
+    - name: Can't view Office 365 IRM-encrypted messages
+        href: ../mailflow/cannot-open-irm-email-dynamic-distribution-group.md
+    - name: Delayed mail delivery in Exchange
+      href: ../mailflow/mail-delivery-delay-exchange.md
+    - name: Edge Transport servers reject messages
+      href: ../mailflow/edge-transport-servers-reject-messages.md
+    - name: Email body part is shown incorrectly as an attachment
+      href: ../mailflow/message-body-shown-as-attachment.md
+    - name: Emails are stuck in Outbox in Outlook 2016 for Mac
+      href: ../mailflow/email-stuck-in-outbox-outlook-2016-mac.md
+    - name: Emails aren't delivered to all recipients
+      href: ../mailflow/emails-not-delivered-dynamic-distribution-group.md
+    - name: Emails remain in Outbox for at least one minute
+      href: ../mailflow/emails-remain-in-outbox-deferred-delivery-rule.md
+    - name: Emails sent by an .oft file aren't received
+      href: ../mailflow/sending-email-by-template-fails.md
+    - name: Emails sent to Exchange Online appear external
+      href: ../mailflow/email-sent-to-online-appears-external.md
+    - name: Error 19738 when sending large emails using Outlook for Mac
+     href: ../mailflow/error-19738-send-large-email-outlook-mac.md
+    - name: Error when adding a large attachment in OWA
+      href: ../mailflow/cannot-add-attachment-outlook-web.md
+    - name: Error when sending S/MIME encrypted mails from OWA
+      href: ../mailflow/cannot-send-smime-encrypted-mail-owa.md
+    - name: Event ID 7009 when users send or receive emails
+      href: ../mailflow/event-7009-send-receive-emails.md
+    - name: External users can't send emails to distribution group
+      href: ../mailflow/external-user-cannot-send-email-to-distribution-group.md
+    - name: Sending attachment outside of Outlook fails
+      href: ../mailflow/event-27-mapisentmail-error-send-attachments.md
+    - name: The front-end Microsoft Exchange Transport service stops and doesn't start
+      href: ../mailflow/front-end-microsoft-exchange-transport-service-stops.md
+    - name: Use nslookup to get MX records for SMTP domain
+      href: ../mailflow/get-internet-mx-record-smtp-domain-with-nslookup.md
   - name: Migration
     items:
     - name: Can't copy an appointment to an Outlook.com folder
