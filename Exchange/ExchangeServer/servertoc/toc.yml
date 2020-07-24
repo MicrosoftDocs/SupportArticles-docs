@@ -235,26 +235,150 @@
       href: ../administration/winrm-time-out-add-mailbox-server-to-existing-dag.md
   - name: Client Connectivity
     items:
+    - name: "\"Insecure connection\" error in Outlook for iOS or Android"
+      href: ../client-connectivity/insecure-connection-secure-connection-unavailable-outlook-ios-android.md
+    - name: "\"The time limit for logging on was reached\" error"
+      href: ../client-connectivity/time-limit-logging-reached-error-outlook-2016.md
+    - name: "\"There is a problem with the proxy server's security certificate\" error"
+      href: ../client-connectivity/error-when-outlook-uses-rpc-https-connect-server.md
+    - name: "\"You've exceeded the storage limit for your mailbox\" error"
+      href: ../client-connectivity/you-have-exceeded-the-storage-limit-for-your-mailbox.md
+    - name: 454 4.7.0 Temporary authentication failure
+      href: ../client-connectivity/454-4-7-0-temporary-authentication-failure.md
+    - name: ActiveSync clients can't connect
+      href: ../client-connectivity/activesync-clients-not-connect-sync-delay.md
+    - name: attendees get a meeting update without changes
+      href: ../client-connectivity/attendees-meeting-update-without-changes.md
+    - name: Cannot access archive mailboxes with Full Access permission
+      href: ../client-connectivity/cannot-access-archive-mailbox-with-full-access.md
+    - name: Cannot connect to POP3 or IMAP4
+      href: ../client-connectivity/cannot-connect-to-pop3-or-imap4.md
+    - name: Can't access calendar in OWA
+      href: ../client-connectivity/cannot-access-calendar-outlook-web-app.md
     - name: Can't access shared mailboxes via POP/IMAP
       href: ../client-connectivity/accessing-shared-mailboxes-fails.md
     - name: Can't create appointment or all day event
       href: ../client-connectivity/cannot-create-appointment.md
+    - name: Can't create Outlook Contact Groups
+      href: ../client-connectivity/cannot-create-contact-groups-eas-account.md
+    - name: Can't open OWA, ECP, or EMS after a self-signed certificate is removed
+      href: ../client-connectivity/owa-ecp-ems-cannot-connect-after-self-signed-certificate-removed.md
     - name: Can't search people in OWA
       href: ../client-connectivity/can't-connect-error-searching-people-owa.md
-    - name: Kerberos authentication for MAPI client connection
-      href: ../client-connectivity/kerberos-authentication-for-mapi-client.md
+    - name: Can't synchronize an Exchange ActiveSync device
+      href: ../client-connectivity/event-1053-activesync-not-have-sufficient-permissions-to-create-container.md
+    - name: Can't use EAS to connect Outlook to Exchange
+      href: ../client-connectivity/outlook-cannot-use-activesync-connect-exchange.md
+    - name: Can't access archive mailbox in Outlook
+      href: ../client-connectivity/cannot-access-archive-mailbox-in-outlook.md
+    - name: Can't access Outlook on the web or EAC with expired OAuth certificate
+      href: ../client-connectivity/cannot-access-owa-or-ecp-if-oauth-expired.md
+    - name: Can't connect to a mailbox from OWA
+      href: ../client-connectivity/cannot-connect-to-mailbox-via-owa.md
+    - name: Can't connect to OWA via HTTP protocol
+      href: ../client-connectivity/cannot-connect-to-owa-by-using-http.md
+    - name: Color categories aren't print in Outlook on the web
+      href: ../client-connectivity/color-categories-not-print-outlook-on-the-web.md
+    - name: Connection fails when certificate is required
+      href: ../client-connectivity/outlook-cannot-connect-to-exchange-certificate-validation.md
+    - name: Connection issues when MAPI is disabled
+      href: ../client-connectivity/connection-issues-mapi-disabled.md
+    - name: Dialog box not including the Connection tab
+      href: ../client-connectivity/dialog-box-does-not-include-connection-tab.md
+    - name: Disconnected if IPv6 is enabled
+      href: ../client-connectivity/outlook-shows-disconnected-if-ipv6-is-enabled.md
+    - name: Disconnected in status bar
+      href: ../client-connectivity/outlook-displays-disconnected-in-status.md
+    - name: Doesn't connect Exchange using MAPI over HTTP
+      href: ../client-connectivity/outlook-not-connect-exchange-use-mapi-over-http.md
+    - name: Doesn't use Modern Authentication to connect Office 365
+      href: ../client-connectivity/outlook-prompt-password-modern-authentication-enabled.md
+    - name: EAS not synchronizing some Outlook contact information
+      href: ../client-connectivity/eas-not-synchronizing-some-outlook-contact-information.md
+    - name: EAS still sync with a disabled account or an old password
+      href: ../client-connectivity/eas-devices-still-sync-with-disabled-account.md
+    - name: ECP redirection fails
+      href: ../client-connectivity/ecp-redirection-fails-exchange-2016-on-prem.md
+    - name: Error when using Chrome to manage EAC settings
+      href: ../client-connectivity/cannot-use-chrome-manage-eac-settings.md
+    - name: Errors in EMS, EAC, ECP, or OWA
+      href: ../client-connectivity/error-occur-ems-eac-owa.md
+    - name: Event ID 1309 and can't access OWA and ECP
+      href: ../client-connectivity/event-1309-code-3005-cannot-access-owa-ecp.md
+    - name: Exchange ActiveSync device is blocked by ABQ list
+      href: ../client-connectivity/eas-device-is-blocked-by-abq-list.md
+    - name: Exchange Server Client Connectivity Diagnostic
+      href: ../client-connectivity/exchange-server-client-connectivity-diagnostic.md
+    - name: FBA page shows when accessing OWA or EAC
+      href: ../client-connectivity/fba-page-shows-when-accessing-owa-or-eac.md
+    - name: HTTP clients are connected with disabled accounts
+      href: ../client-connectivity/http-clients-connect-diabled-account.md
+    - name: HTTP error 400 when opening another user's mailbox
+      href: ../client-connectivity/http-400-bad-request-open-user-mailbox.md
+    - name: iCloud crashes when synchronizing data
+      href: ../client-connectivity/icloud-crashes-sync-data.md
     - name: IMAP clients fail to logon
       href: ../client-connectivity/imap-clients-logon-fail-coexist-exchange.md
     - name: Incorrect Sent time stamp
       href: ../client-connectivity/incorrect-sent-time-stamp.md
     - name: Issue with proxying HTTP requests
       href: ../client-connectivity/400-bad-request.md
+    - name: Junk email settings aren't synchronized
+      href: ../client-connectivity/junk-email-setting-not-synchronized.md
+    - name: Kerberos authentication for MAPI client connection
+      href: ../client-connectivity/kerberos-authentication-for-mapi-client.md
+    - name: Looking for credential tiles message occurs
+      href: ../client-connectivity/looking-for-credential-tiles-message.md
+    - name: Mailbox that's re-enabled can't be accessed
+      href: ../client-connectivity/cannot-connect-to-re-enabled-mailbox.md
+    - name: Need a new app to open this osf-roaming.16 message
+      href: ../client-connectivity/you-ll-need-a-new-app-to-open-this-osf-roaming-16.md
+    - name: New appointments and contacts not synchronized to OWA
+      href: ../client-connectivity/added-appointments-contacts-not-synchronized-to-owa.md
+    - name: O365 credential prompts with AuthenticationService value
+      href: ../client-connectivity/o365-credential-prompts-with-authenticationservice.md
     - name: Only one reply is sent to each sender
       href: ../client-connectivity/one-reply-sent-sender.md
+    - name: Outlook 2010 connection delays or failures
+      href: ../client-connectivity/outlook-2010-connection-delay-failure.md
+    - name: Outlook Anywhere clients can't connect to server
+      href: ../client-connectivity/outlook-anywhere-clients-not-connect-to-server.md
+    - name: Outlook asks for password repeatedly when using MAPI over HTTP
+      href: ../client-connectivity/outlook-prompt-password-when-use-mapi-over-http.md
+    - name: Outlook Can't access public folders hosted on legacy Exchange servers
+      href: ../client-connectivity/outlook-cannot-access-legacy-public-folders.md
+    - name: Outlook Can't connect via firewall or proxy server
+      href: ../client-connectivity/outlook-not-connect-firewall-proxy-server.md
+    - name: Outlook connection issues caused by the RPC encryption requirement
+      href: ../client-connectivity/outlook-connection-issue-caused-by-rpc-encryption-requirement.md
+    - name: Outlook fails to start
+      href: ../client-connectivity/starting-outlook-displays-error.md
+    - name: Outlook for Mac repeatedly prompts for credentials
+      href: ../client-connectivity/prompted-for-credentials-modern-authentication.md
+    - name: OWA doesn't redirect to ADFS login
+      href: ../client-connectivity/owa-not-redirect-adfs-login.md
+    - name: Password expiration isn't notified
+      href: ../client-connectivity/owa-password-expiration-notification.md
+    - name: Performance issues on Exchange connection
+      href: ../client-connectivity/performance-issues-connect-to-exchange.md
+    - name: Prompts for credentials when using WAN
+      href: ../client-connectivity/outlook-prompts-for-credentials-if-using-wan.md
+    - name: Redirects to Exchange Server 2010 when connecting to Exchange Server 2016 or 2013
+      href: ../client-connectivity/exchange-server-2013-2016-redirect-to-2010-owa-ecp.md
+    - name: Repeatedly disconnects and reconnects
+      href: ../client-connectivity/outlook-repeatedly-disconnects-and-reconnects.md
+    - name: Security warning when accessing OWA or ECP
+      href: ../client-connectivity/owa-and-ecp-unavailable-users-get-security-warning.md
     - name: Set up Outlook on the web
       href: ../client-connectivity/set-up-web-access.md
     - name: Show organizer name instead of subject
       href: ../client-connectivity/calendar-shows-organizer-name.md
+    - name: Smart card PIN is blocked when using Outlook
+      href: ../client-connectivity/blocked-smart-card-pin-using-outlook.md
+    - name: Stops at the Loading Profile screen
+      href: ../client-connectivity/outlook-stops-at-the-loading-profile-screen.md
+    - name: Synchronization issues
+      href: ../client-connectivity/synchronization-issue-between-outlook-owa.md
   - name: Compliance
     items:
     - name: Audit Log searches fail with ErrorInvalidServerVersion
