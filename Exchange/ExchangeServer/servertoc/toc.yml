@@ -57,6 +57,32 @@
       href: ../mailflow/hop-count-exceeded-possible-mail-loop.md
     - name: Can't send an email with full access
       href: ../mailflow/cannot-send-email-with-full-access.md
+  - name: Migration
+    items:
+    - name: Can't copy an appointment to an Outlook.com folder
+      href: ../migration/error-copy-appointment-to-outlook-com-folder.md
+    - name: Can't move a mailbox to a database
+      href: ../migration/error-move-mailbox-to-database-exchange-2010.md
+    - name: Can't move items from Outlook 2013 to an EAS store
+      href: ../migration/error-move-items-from-outlook-to-eas-store.md
+    - name: Can't move mailboxes to Exchange Online
+      href: ../migration/user-is-already-being-moved-error‎.md
+    - name: Can't see free/busy info after a mailbox move
+      href: ../migration/no-free-busy-info-mailbox-move.md
+    - name: Category colors are changed in Outlook 2016 for Mac
+      href: ../migration/outlook-mac-category-colors-changed.md
+    - name: Issues if msExchMasterAccountSID is on a user account
+      href: ../migration/issue-msexchmasteraccountsid-on-user-account.md
+    - name: Moving migration mailbox fails
+      href: ../migration/moving-migration-mailbox-fails.md
+    - name: New move request remains in queued status
+      href: ../migration/new-move-request-remains-queued-status.md
+    - name: Public folder replication fails
+      href: ../migration/public-folders-not-replicate.md
+    - name: Search folders aren't populated in Online mode
+      href: ../migration/outlook-search-folders-issue-online-mode.md
+    - name: Send Update is missing when copying meetings
+      href: ../migration/send-update-missing-copy-meeting.md
   - name: Public Folders
     items:
     - name: No active public folder mailboxes were found
