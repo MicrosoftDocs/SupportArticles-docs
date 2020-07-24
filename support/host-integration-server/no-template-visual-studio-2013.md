@@ -1,12 +1,12 @@
 ---
 title: HIS 2013 doesn't work with Visual Studio
-description: This article provides resolutions for the problem that Host Integration Server 2013 doesn't work out-of-box with Visual Studio 2013.
+description: This article provides resolutions for the problem where Host Integration Server 2013 doesn't work out-of-box with Visual Studio 2013.
 ms.date: 05/11/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: Application integration (Transaction Integrator)
 ---
 # Host Integration Server 2013 doesn't work out-of-box with Visual Studio 2013
 
-This article helps you resolve the problem that there's no Host Integration Server 2013 templates in Visual Studio 2013.
+This article helps you resolve the problem where there's no Host Integration Server 2013 templates in Visual Studio 2013.
 
 _Original product version:_ &nbsp; Host Integration Server 2013  
 _Original KB number:_ &nbsp; 2970255
