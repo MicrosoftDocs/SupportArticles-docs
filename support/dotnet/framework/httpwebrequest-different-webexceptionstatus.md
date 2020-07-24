@@ -7,7 +7,7 @@ ms.reviewer: pphadke
 ---
 # System.Net.HttpWebRequest throws different WebExceptionStatus for SSL and non-SSL requests under special conditions
 
-This article helps you resolve the problem that different `WebExceptionStatus` is thrown when you use the `System.Net.HttpWebRequest` class.
+This article helps you resolve the problem where different `WebExceptionStatus` is thrown when you use the `System.Net.HttpWebRequest` class.
 
 _Original product version:_ &nbsp; .Net Framework  
 _Original KB number:_ &nbsp; 2007873

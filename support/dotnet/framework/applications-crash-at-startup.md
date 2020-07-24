@@ -6,7 +6,7 @@ ms.prod-support-area-path:
 ---
 # .NET applications may crash at startup for specific users if the user.config file is corrupt
 
-This article helps you resolve the crash issue when a user starts a .NET application.
+This article helps you resolve the crash problem when a user starts a .NET application.
 
 _Original product version:_ &nbsp; .NET Framework  
 _Original KB number:_ &nbsp; 956762

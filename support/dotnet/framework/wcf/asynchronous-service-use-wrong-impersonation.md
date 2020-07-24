@@ -1,13 +1,13 @@
 ---
 title: Async WCF service uses wrong impersonation
-description: This article resolves the problem that a WCF service that is invoked asynchronously in ASP.NET uses the wrong impersonation.
+description: This article resolves the problem where a WCF service that is invoked asynchronously in ASP.NET uses the wrong impersonation.
 ms.date: 03/23/2020
 ms.prod-support-area-path:
 ms.reviewer: amymcel
 ---
 # WCF service that is invoked asynchronously in ASP.NET uses the wrong impersonation
 
-This article helps you resolve the problem that a Windows Communication Foundation (WCF) service that is invoked asynchronously in ASP.NET uses the wrong impersonation.
+This article helps you resolve the problem where a Windows Communication Foundation (WCF) service that is invoked asynchronously in ASP.NET uses the wrong impersonation.
 
 _Original product version:_ &nbsp; Windows Communication Foundation  
 _Original KB number:_ &nbsp; 2890435

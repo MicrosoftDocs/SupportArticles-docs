@@ -7,7 +7,7 @@ ms.reviewer: davean
 ---
 # Full-screen WPF applications may not receive touch input events
 
-This article helps you resolve the problem that full-screen Windows Presentation Foundation (WPF) applications don't receive touch input events.
+This article helps you resolve the problem where full-screen Windows Presentation Foundation (WPF) applications don't receive touch input events.
 
 _Original product version:_ &nbsp; Windows Presentation Foundation  
 _Original KB number:_ &nbsp; 2652967

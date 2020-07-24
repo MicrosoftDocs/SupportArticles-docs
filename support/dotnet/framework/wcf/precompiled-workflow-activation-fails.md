@@ -6,7 +6,7 @@ ms.prod-support-area-path:
 ---
 # Service activation may fail when a pre-compiled WCF workflow service that is wrapped together with a .svc file is hosted
 
-This article helps you resolve the problem that the service activation may fail when a pre-compiled Windows Communication Foundation (WCF) workflow service that is wrapped together with a .svc file is hosted.
+This article helps you resolve the problem where the service activation may fail when a pre-compiled Windows Communication Foundation (WCF) workflow service that is wrapped together with a .svc file is hosted.
 
 _Original product version:_ &nbsp; Windows Workflow Foundation 4.0  
 _Original KB number:_ &nbsp; 2286155

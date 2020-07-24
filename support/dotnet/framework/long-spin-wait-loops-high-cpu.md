@@ -7,7 +7,7 @@ ms.reviewer: joelpell
 ---
 # High CPU or memory usage and increased spin-wait loops in .NET Framework on VMs by using Intel Skylake processors
 
-This article helps you resolve the problem that high CPU or memory usage occurs in Microsoft .NET Framework applications on Azure virtual machines (VMs) that are driven by Intel Skylake processors.
+This article helps you resolve the problem where high CPU or memory usage occurs in Microsoft .NET Framework applications on Azure virtual machines (VMs) that are driven by Intel Skylake processors.
 
 _Original product version:_ &nbsp; .NET Framework  
 _Original KB number:_ &nbsp; 4527212

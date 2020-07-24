@@ -2,12 +2,12 @@
 title: ClickOnce application fails to update
 description: ClickOnce depends on a file and registry cache to keep track of the present installed applications.
 ms.date: 05/06/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Installation
 ms.reviewer: nikolam
 ---
 # ClickOnce applications fail to update
 
-This article helps you resolve a problem that ClickOnce application fails to update.
+This article helps you resolve a problem where ClickOnce application fails to update.
 
 _Original product version:_ &nbsp; .NET Framework 3.5 Service Pack 1, 3.5.1  
 _Original KB number:_ &nbsp; 2713442
