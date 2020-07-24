@@ -59,8 +59,6 @@
       href: ../mailflow/cannot-send-email-with-full-access.md
   - name: Migration
     items:
-    - name: "\"Send Update\" is missing when copying meetings"
-      href: ../migration/send-update-missing-copy-meeting.md
     - name: Can't copy an appointment to an Outlook.com folder
       href: ../migration/error-copy-appointment-to-outlook-com-folder.md
     - name: Can't move a mailbox to a database
@@ -83,6 +81,8 @@
       href: ../migration/public-folders-not-replicate.md
     - name: Search folders aren't populated in Online mode
       href: ../migration/outlook-search-folders-issue-online-mode.md
+    - name: Send Update is missing when copying meetings
+      href: ../migration/send-update-missing-copy-meeting.md
   - name: Public Folders
     items:
     - name: No active public folder mailboxes were found
