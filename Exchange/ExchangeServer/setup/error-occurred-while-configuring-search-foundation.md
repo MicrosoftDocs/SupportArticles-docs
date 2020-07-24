@@ -66,7 +66,7 @@ In addition, you see errors in the following log files:
 
 This issue occurs because of a trailing space in the **PSModulePath** variable in the environment variables.
 
-![Screenshot of the PSModulePath Variable](.\media\error-occurred-while-configuring-search-foundation/show-trailing-space-in-psmodulepath-variable.png)
+![Screenshot of the PSModulePath Variable](./media/error-occurred-while-configuring-search-foundation/show-trailing-space-in-psmodulepath-variable.png)
 
 ## Resolution
 
