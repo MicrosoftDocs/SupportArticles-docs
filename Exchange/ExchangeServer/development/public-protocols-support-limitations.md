@@ -1,5 +1,5 @@
 ---
-title: Developer support limitations for open standards
+title: Developer Support limitations for open standards
 description: Explains that Microsoft Customer Service and Support don't support a custom-solution that uses open standards for mail and calendaring, such as vCalendar, iCalendar, IMAP, POP3, SMTP, and MIME.
 author: simonxjx
 ms.author: v-six
@@ -20,7 +20,7 @@ appliesto:
 - Exchange Server 2016 Standard Edition
 search.appverid: MET150 
 ---
-# Developer support limitations for public protocols
+# Developer Support limitations for public protocols
 
 _Original KB number:_ &nbsp;2269506
 
@@ -32,7 +32,7 @@ This article describes how Microsoft Customer Service and Support can help devel
 
 Microsoft Customer Service and Support don't support custom solutions that use open standards for mail and calendaring, such as vCalendar, Internet iCalendar protocol (iCalendar), Internet Message Access Protocol (IMAP), Post Office Protocol version 3 (POP3), Simple Mail Transfer Protocol (SMTP), and Multipurpose Internet Mail Extensions (MIME).
 
-Exchange and Outlook implement various open standards. But Microsoft provides developer support for those standards only when a Microsoft API implements the standard that's being used. For example, Microsoft supports sending SMTP messages by using the System.Net.Mail namespace in Microsoft .NET Framework. But Microsoft doesn't support customers who are trying to interpret an RFC to add an iCalendar body part by using System.Net.Mail.
+Exchange and Outlook implement various open standards. But Microsoft provides Developer Support for those standards only when a Microsoft API implements the standard that's being used. For example, Microsoft supports sending SMTP messages by using the System.Net.Mail namespace in Microsoft .NET Framework. But Microsoft doesn't support customers who are trying to interpret an RFC to add an iCalendar body part by using System.Net.Mail.
 
 If you meet problems when you use a third-party API or an open standard, contact the API vendor for support, or refer to the documentation for the open standards. When interoperability problems occur, you should inform the API vendor that to operate successfully with Microsoft products, the API vendor's products must follow the applicable interoperability specifications. If you believe that a Microsoft product isn't following an open specification correctly, Microsoft Customer Service and Support provide support for those scenarios.
 

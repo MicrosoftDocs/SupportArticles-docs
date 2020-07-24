@@ -116,6 +116,6 @@ To resolve this issue, follow these steps:
 
 ## More information
 
-For more information about the `HomeMDB` attribute, see [HomeMDB Property](http://msdn.microsoft.com/library/aa487565(v=exchg.65).aspx).
+For more information about the `HomeMDB` attribute, see [HomeMDB Property](https://msdn.microsoft.com/library/aa487565(v=exchg.65).aspx).
 
 For more information about an issue that can occur when the value for the `HomeMDB` attribute is missing on the System Attendant mailbox, see [The System Attendant homeMDB attribute is missing](https://technet.microsoft.com/library/dd535374%28exchg.80%29.aspx ).

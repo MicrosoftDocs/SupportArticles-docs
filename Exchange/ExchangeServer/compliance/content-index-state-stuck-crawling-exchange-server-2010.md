@@ -46,11 +46,11 @@ Message: CI troubleshooter exchange search service restart attempt 81.
 
 ## Cause
 
-This issue occurs when System Center Operations Manager (SCOM) is running the Toubleshoot-CI.ps1 script. This causes the Exchange Search service to restart before it completes the indexing process.
+This issue occurs when System Center Operations Manager is running the Toubleshoot-CI.ps1 script. This causes the Exchange Search service to restart before it completes the indexing process.
 
 ## Resolution
 
-To resolve this issue, prevent the SCOM server from running the Troubleshoot-CI.ps1 script as follows:
+To resolve this issue, prevent the System Center Operations Manager server from running the Troubleshoot-CI.ps1 script as follows:
 
 1. Open System Center Operations Manager.
 1. Click **Management Pack Objects** > **Monitor**.
@@ -61,7 +61,7 @@ To resolve this issue, prevent the SCOM server from running the Troubleshoot-CI.
 
 ## More information
 
-Typically, SCOM runs the Troubleshoot-CI.ps1 script every two hours. However, if the Troubleshoot-CI.ps1 script detects one of the following symptoms, it triggers a restart of the Exchange search service:
+Typically, System Center Operations Manager runs the Troubleshoot-CI.ps1 script every two hours. However, if the Troubleshoot-CI.ps1 script detects one of the following symptoms, it triggers a restart of the Exchange search service:
 
 - Deadlock: Exchange Search deadlocks while waiting on threads from MSSearch.
 - Corruption: One or more search indices are corrupted.
@@ -79,4 +79,4 @@ Machine: Mailboxserver.contoso.com
 Message: Indexing backlog reached a critical limit of 48 hours or the number of items in the retry queue is greater than 10000 for one or more databases: Database1 (0, 12572, 0)Database1 (0, 31859, 0)
 ```
 
-If the databases have large mailboxes or mailboxes with a high item count, it generally takes longer than two hours to complete the indexing process. And when the Exchange search service restarts, the mailboxes are put back into the list for re-indexing. In this situation, the crawling process may never get the chance to finish.
+If the databases have large mailboxes or mailboxes with a high item count, it generally takes longer than two hours to complete the indexing process. And when the Exchange search service restarts, the mailboxes are put back into the list for reindexing. In this situation, the crawling process may never get the chance to finish.
