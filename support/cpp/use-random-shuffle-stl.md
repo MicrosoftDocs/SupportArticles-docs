@@ -2,7 +2,7 @@
 title: Use the random_shuffle function in C++
 description: Describes how to use the random_shuffle STL function in Visual C++. Includes a code sample that demonstrates how to do the task.
 ms.date: 04/24/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: C and C++ Libraries
 ms.topic: how-to
 ---
 # Use the random_shuffle STL function in Visual C++

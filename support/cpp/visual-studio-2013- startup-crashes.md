@@ -2,12 +2,12 @@
 title: Visual Studio 2013 crashes at startup
 description: This article provides information about resolving a problem that Visual Studio 2013 crashes at startup because of CLR runtime settings repeatedly.
 ms.date: 04/27/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Integrated Development Environment (IDE)
 ms.reviewer: Selma Ikiz
 ---
 # Visual Studio 2013 crashes at startup because of CLR runtime settings
 
-This article helps you resolve a problem that Microsoft Visual Studio 2013 crashes at startup because of common language runtime (CLR) runtime settings.
+This article helps you resolve a problem where Microsoft Visual Studio 2013 crashes at startup because of common language runtime (CLR) runtime settings.
 
 _Original product version:_ &nbsp; Visual Studio 2013  
 _Original KB number:_ &nbsp; 2979939
