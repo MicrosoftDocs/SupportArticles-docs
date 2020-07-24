@@ -49,6 +49,30 @@
     items:
     - name: Audit Log searches fail with ErrorInvalidServerVersion
       href: ../compliance/mailbox-audit-log-searches-fail-errorinvalidserverversion.md
+    - name: Content index state is stuck in crawling
+      href: ../compliance/content-index-state-stuck-crawling-exchange-server-2010.md
+    - name: Error when doing a multi-mailbox search
+      href: ../compliance/cannot-perform-multi-mailbox-search.md
+    - name: Issues caused by update 2874216/MS13-061
+      href: ../compliance/mailbox-database-content-index-shows-failed.md
+    - name: Leave a copy of the message on the server is missing
+      href: ../compliance/enable-leave-a-copy-of-the-message-on-the-server-outlook.md
+    - name: MRM doesn't process items in the Sync Issues folder
+      href: ../compliance/mrm-not-process-sync-issues-folder.md
+    - name: Search doesn't work if NodeRunner.exe stops
+      href: ../compliance/noderunnersexe-stops-search-not-work.md
+    - name: Search-AdminAuditLog or Search-MailboxAuditLog returns empty result
+      href: ../compliance/search-adminauditlog-mailboxauditlog-return-no-result.md
+  - name: Development
+    items:
+    - name: "\"The macros in this project are disabled\" error"
+      href: ../development/macros-in-this-project-disabled-outlook.md
+    - name: How to manage multiple VBA projects
+      href: ../development/manage-distribute-outlook-vba-project.md
+    - name: Support limitations for open standards
+      href: ../development/public-protocols-support-limitations.md
+    - name: WebBrowser control content isn't displayed correctly
+      href: ../development/wpf-webbrowser-control-content-not-display-correctly.md
   - name: Mailflow
     items:
     - name: "\"The operation failed\" when sending emails"
