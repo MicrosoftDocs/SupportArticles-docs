@@ -31,30 +31,27 @@ When you double-click an icon or file name for a Microsoft Excel workbook, Excel
 
 Try the following options to help recover your document. Select the image or header to see more detailed instructions about that option.
 
-
 > [!IMPORTANT]
-> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration ](https://support.microsoft.com/help/322756) in case problems occur.
+> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
 <table align="left">
 <tr>
-<td valign="top"> 
+<td valign="top">
 <a href="#option1">
 
 ![Option 1](../word/media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-1.png)
 
 </a>
-</td><td><a href="#option1">**Ignore DDE**</a>
-
+</td><td><a href="#option1">Ignore DDE</a>
 
 > [!NOTE]
 > This step can be skipped for Excel 2019 and Excel O365.
-<ol>
-<li>In the upper-left corner of the Excel window, select **File** > **Options**.</li>
-<li>On the left side of the **Options** window, select **Advanced**.</li>
-<li>In the **Advanced** window, scroll down to the **General** section.</li>
-<li>Clear the **Ignore other applications that use Dynamic Data Exchange (DDE)** check box, and then select the **OK** button at the bottom of the window.
-</li>
-</ol>
+
+1. In the upper-left corner of the Excel window, select **File** > **Options**.</li>
+1. On the left side of the **Options** window, select **Advanced**.</li>
+1. In the **Advanced** window, scroll down to the **General** section.</li>
+1. Clear the **Ignore other applications that use Dynamic Data Exchange (DDE)** check box, and then select the **OK** button at the bottom of the window.
+
 </td>
 </tr>
 <tr>
@@ -65,7 +62,7 @@ Try the following options to help recover your document. Select the image or hea
 
 </a>
 </td>
-<td><a href="#option2">**Repair User Experience Virtualization (UE-V)**</a>
+<td><a href="#option2">Repair User Experience Virtualization (UE-V)</a>
 
 If you are running Update User Experience Virtualization (UE-V), install Hotfix 2927019. To do this, see the following Knowledge Base article:
 
@@ -80,13 +77,13 @@ If you are running Update User Experience Virtualization (UE-V), install Hotfix 
 
 </a>
 </td>
-<td><a href="#option3">**Reset file associations**</a>
+<td><a href="#option3">Reset file associations</a>
 
-**Windows 10**
+Windows 10
 
 1. Locate the file that is opening incorrectly, and copy it to your desktop.
-2. Right-click the file, and select **Properties**.
-3. On the **General** tab, next to **Type of file**, the type of file will be indicated within parentheses. For example, (.docx), (.pdf), or (.csv).
+1. Right-click the file, and select **Properties**.
+1. On the **General** tab, next to **Type of file**, the type of file will be indicated within parentheses. For example, (.docx), (.pdf), or (.csv).
 
 The **Opens with** command shows you which app the file is currently associated with.
 
@@ -107,11 +104,11 @@ To open this type of file in a different app:
 
 </a>
 </td>
-<td><a href="#option4">**Delete the Word Options registry key**</a>
+<td><a href="#option4">Delete the Word Options registry key</a>
 
-*For an Office 365 or Office 2019 Click-to-Run installation*
+For an Office 365 or Office 2019 Click-to-Run installation
 
-##### Windows 10
+Windows 10
 
 1. On the **Start** screen, type **Settings**.
 1. Select or tap **Settings**.
@@ -130,7 +127,7 @@ To open this type of file in a different app:
 
 </a>
 </td>
-<td><a href="#option5">**Turn off add-ins**</a>
+<td><a href="#option5">Turn off add-ins</a>
 
 1. On the **File** menu, select **Options**, then select **Add-Ins**.
 1. In the **Manage** list at the bottom of the screen, select **COM Add-Ins** item, then select **Go**.
@@ -149,15 +146,14 @@ To open this type of file in a different app:
 
 </a>
 </td>
-<td><a href="#option6">**Disable hardware acceleration**</a>
-
+<td><a href="#option6">Disable hardware acceleration</a>
 
 1. Start any Office 2013, 2016, 2019, or O365 program.
 1. On the **File** tab, select **Options**.
 1. In the **Options** dialog box, select **Advanced**.
 1. In the list of available options, select the **Disable hardware graphics acceleration** check box.
-
 1. Select the **OK** button.
+
 </td>
 </tr>
 <tr>
@@ -168,11 +164,10 @@ To open this type of file in a different app:
 
 </a>
 </td>
-<td><a href="#option7">**Minimizing and maximizing the window**</a>
+<td><a href="#option7">Minimizing and maximizing the window</a>
 
-1.    Select the minimize button in the top-right corner of the Excel spreadsheet.
-2.    In the task tray, right-click Excel, and then select your spreadsheet. (Or double click the Excel icon.)
-
+1. Select the minimize button in the top-right corner of the Excel spreadsheet.
+2. In the task tray, right-click Excel, and then select your spreadsheet. (Or double click the Excel icon.)
 
 </td></tr>
 <tr>
@@ -183,10 +178,10 @@ To open this type of file in a different app:
 
 </a>
 </td>
-<td><a href="#option8">**Check for hidden sheets**</a>
+<td><a href="#option8">Check for hidden sheets</a>
 
-1.    Select the minimize button in the top-right corner of the Excel spreadsheet.
-2.    In the task tray, right-click Excel, and then select your spreadsheet. (Or double click the Excel icon.)
+1. Select the minimize button in the top-right corner of the Excel spreadsheet.
+2. In the task tray, right-click Excel, and then select your spreadsheet. (Or double click the Excel icon.)
 
 </td>
 </tr>
@@ -381,8 +376,8 @@ To disable hardware acceleration, follow these steps:
 
 Minimizing and then maximizing the window can sometimes refresh the Excel page and cause any hidden data to appear.
 
-1.    In the top-right corner of the Excel spreadsheet, select the minimize button.
-2.    In the task tray, right-click Excel, and then select your spreadsheet. (Or double click the Excel icon.)
+1. In the top-right corner of the Excel spreadsheet, select the minimize button.
+2. In the task tray, right-click Excel, and then select your spreadsheet. (Or double click the Excel icon.)
 
 After your sheet is maximized, your data may appear.
 
@@ -394,10 +389,11 @@ After your sheet is maximized, your data may appear.
 
 An Excel sheet may inadvertently have been saved as a hidden document. To check this, follow these steps:
 
-1.    Go to the **View** tab.
-2.    Select **Unhide**.
-3.    Select a workbook from the list.
-4.    Select **OK**. 
-
+1. Go to the **View** tab.
+2. Select **Unhide**.
+3. Select a workbook from the list.
+4  Select **OK**.
 
 If you still experience this problem after you try all these options, contact [Microsoft Support](https://support.microsoft.com/) for additional troubleshooting help.
+
+If none of the above options works, please make sure Excel is not in Compatibility mode.
