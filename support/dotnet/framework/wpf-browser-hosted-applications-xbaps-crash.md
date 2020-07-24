@@ -1,13 +1,13 @@
 ---
 title: WPF XBAPs may crash during start-up
-description: This article describes an issue that XAML browser applications may crash during start-up, and provides a solution.
+description: This article describes a problem that XAML browser applications may crash during start-up, and provides a solution.
 ms.date: 05/07/2020
 ms.prod-support-area-path:
 ms.reviewer: davean
 ---
 # WPF browser-hosted applications (XBAPs) may crash during start-up
 
-This article helps you resolve the problem that WPF XBAPs may crash during start-up.
+This article helps you resolve the problem where WPF XBAPs may crash during start-up.
 
 _Original product version:_ &nbsp; Microsoft .NET Framework 3.5 Service Pack 1  
 _Original KB number:_ &nbsp; 972928

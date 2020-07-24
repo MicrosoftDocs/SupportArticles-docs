@@ -8,7 +8,7 @@ ms.topic: how-to
 ---
 # Use Visual C# to create a remote server
 
-This article helps you create a remote server that another application can access by using Visual C#.
+This article helps you create a remote server where another application can access by using Visual C#.
 
 _Original product version:_ &nbsp; Visual C#  
 _Original KB number:_ &nbsp; 307445

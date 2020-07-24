@@ -1,9 +1,9 @@
 ---
 title: .NET Framework 4 app leaks event handle
-description: Resolves an issue in which a .NET Framework 4 based application may leak event handles. This issue occurs even when the application is idle.
+description: Resolves a problem in which a .NET Framework 4 based application may leak event handles. This problem occurs even when the application is idle.
 ms.date: 05/08/2020
 ms.prod-support-area-path:
-ms.reviewer: jitheshn, raviuppa, jitheshn
+ms.reviewer: jitheshn, raviuppa
 ---
 # Event handle leaks in a .NET Framework 4 based application
 

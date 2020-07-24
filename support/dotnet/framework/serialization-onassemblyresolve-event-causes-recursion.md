@@ -6,7 +6,7 @@ ms.prod-support-area-path:
 ---
 # Serialization on an OnAssemblyResolve handler may cause recursion
 
-This article helps you resolve the problem that the serialization will cause the assembly resolver handler to be called recursively.
+This article helps you resolve the problem where the serialization will cause the assembly resolver handler to be called recursively.
 
 _Original product version:_ &nbsp; .NET Framework 3.5 Service Pack 1, 4.5  
 _Original KB number:_ &nbsp; 2756498

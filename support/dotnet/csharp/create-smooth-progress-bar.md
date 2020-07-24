@@ -7,7 +7,7 @@ ms.topic: how-to
 ---
 # Use Visual C# to create a smooth progress bar
 
-This article provides information that how to create a custom UserControl to create a smooth, scrolling ProgressBar control.
+This article provides information about how to create a custom UserControl to create a smooth, scrolling ProgressBar control.
 
 _Original product version:_ &nbsp; Visual C#  
 _Original KB number:_ &nbsp; 323116

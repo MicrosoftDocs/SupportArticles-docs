@@ -7,7 +7,7 @@ ms.reviewer: Tatkins
 ---
 # Memory not freed if Windows Forms application uses ToolTip.SetToolTip
 
-This article helps you resolve the problem that Windows Forms application might not release memory if using the `ToolTip.SetToolTip` method incorrectly.
+This article helps you resolve the problem where Windows Forms application might not release memory if using the `ToolTip.SetToolTip` method incorrectly.
 
 _Original product version:_ &nbsp; .NET Framework 4.5  
 _Original KB number:_ &nbsp; 2749543

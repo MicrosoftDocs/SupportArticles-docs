@@ -7,7 +7,7 @@ ms.reviewer: jcarley
 ---
 # You experience high memory usage when using EnlistDurable
 
-This article helps you resolve the problem that the managed heap in your .NET application experiences high memory consumption when you use `System.Transactions.Transaction.EnlistDurable`.
+This article helps you resolve the problem where the managed heap in your .NET application experiences high memory consumption when you use `System.Transactions.Transaction.EnlistDurable`.
 
 _Original product version:_ &nbsp; Microsoft .NET Framework 4.5  
 _Original KB number:_ &nbsp; 2859968

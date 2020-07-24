@@ -6,7 +6,7 @@ ms.prod-support-area-path:
 ---
 # COMException from WPF applications after .NET Framework 4.7 is installed on Windows 7 or Windows Server 2008 R2
 
-This article helps you resolve the problem that `System.Runtime.InteropServices.COMException` occurs in Windows Presentation Framework (WPF) applications.
+This article helps you resolve the problem where `System.Runtime.InteropServices.COMException` occurs in Windows Presentation Framework (WPF) applications.
 
 _Original product version:_ &nbsp; .NET Framework 4.7, Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 4033488

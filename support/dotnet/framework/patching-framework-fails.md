@@ -7,7 +7,7 @@ ms.reviewer: kelho
 ---
 # Patching of .NET Framework fails with an error: Access is denied or File in Use
 
-This article helps you resolve the problem that the Microsoft .NET Framework patching failures when assemblies are in use or locked when a patch is applied.
+This article helps you resolve the problem where the Microsoft .NET Framework patching failures when assemblies are in use or locked when a patch is applied.
 
 _Original product version:_ &nbsp; .NET Framework  
 _Original KB number:_ &nbsp; 2263996

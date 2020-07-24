@@ -2,12 +2,12 @@
 title: Visual Studio crashes when GetAddress() is invoked
 description: Connect customer tries to use DEBUG_ADDRESS structure in a Managed EE implementation that crashes VS due to a member of DEBUG_ADDRESS_UNION size being specified incorrectly in the PIA (Microsoft.Visual Studio.Debugger.InteropA.dll).
 ms.date: 04/27/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: Debuggers and analyzers
 ms.reviewer: raviuppa, ruisun, lukim
 ---
 # Visual Studio crashes when Microsoft.VisualStudio.Debugger.Interop.IDebugAddress.GetAddress() is invoked
 
-This article helps you resolve the problem that Visual Studio 2010 crashes when `Microsoft.VisualStudio.Debugger.Interop.IDebugAddress.GetAddress()` is invoked.
+This article helps you resolve the problem where Visual Studio 2010 crashes when `Microsoft.VisualStudio.Debugger.Interop.IDebugAddress.GetAddress()` is invoked.
 
 _Original product version:_ &nbsp; Visual Studio Professional 2010, Visual Studio Ultimate 2010  
 _Original KB number:_ &nbsp; 2529043
