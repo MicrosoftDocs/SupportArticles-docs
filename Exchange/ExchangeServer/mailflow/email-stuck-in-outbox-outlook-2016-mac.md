@@ -96,7 +96,7 @@ To do this, follow these steps:
    - Tag: 0x0FFF0102
    - Type: PT_BINARY
    - Name (s) of property: PR_ENTRYID, PR_MEMBER_ENTRYID, PidTagEntryId, PidTagMemberEntryId, ptagEntryId
-   - DASL: http://schemas.microsoft.com/mapi/proptag/0x0FFF0102
+   - DASL: `http://schemas.microsoft.com/mapi/proptag/0x0FFF0102`
 7. Delete the input ID, and then paste the ID that you copied in step 5.
 8. Close MFCMAPI.
 9. Run `Outlook.exe /resetfolders`.
