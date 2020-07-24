@@ -59,7 +59,7 @@
       href: ../mailflow/cannot-send-email-with-full-access.md
   - name: Migration
     items:
-    - name: "Send Update" is missing when copying meetings
+    - name: "\"Send Update\" is missing when copying meetings"
       href: ../migration/send-update-missing-copy-meeting.md
     - name: Can't copy an appointment to an Outlook.com folder
       href: ../migration/error-copy-appointment-to-outlook-com-folder.md
