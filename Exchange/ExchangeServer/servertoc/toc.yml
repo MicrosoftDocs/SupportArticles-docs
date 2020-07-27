@@ -470,7 +470,7 @@
     - name: Can't move items from Outlook 2013 to an EAS store
       href: ../migration/error-move-items-from-outlook-to-eas-store.md
     - name: Can't move mailboxes to Exchange Online
-      href: ../migration/user-is-already-being-moved-error‎.md
+      href: ../migration/user-is-already-being-moved-error.md
     - name: Can't see free/busy info after a mailbox move
       href: ../migration/no-free-busy-info-mailbox-move.md
     - name: Category colors are changed in Outlook 2016 for Mac
