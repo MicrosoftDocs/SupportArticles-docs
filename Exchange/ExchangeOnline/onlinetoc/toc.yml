@@ -93,6 +93,8 @@
       href: ../groups/no-sufficient-permissions-moving-dg.md
   - name: Mailbox Migration
     items:
+    - name: "\"MAPI provider is not supported\" error in Exchange Online"
+      href: ../mailbox-migration/new-migrationendpoint-returns-error.md
     - name: Issue with Add-RecipientPermission
       href: ../mailbox-migration/issue-with-add-recipientpermission-cmdlet.md
     - name: Migrate data with Admin Center
@@ -107,6 +109,8 @@
       href: ../mailflow/tenantattribution-ndr.md
     - name: Automatically forward email in transport rule
       href: ../mailflow/autoforward-mail-exclusions-not-honored-transport-rule.md
+    - name: Inbox rule to forward emails doesn't work
+      href: ../mailflow/inbox-rule-to-forward-messages-not-work.md
   - name: Mail Delivery
     items:
     - name: 554 5.2.0 STOREDRV.Deliver.Exception
