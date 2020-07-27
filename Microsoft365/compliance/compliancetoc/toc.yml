@@ -1,5 +1,5 @@
 - name: Microsoft 365 Compliance Troubleshooting
-  href: ../compliance.md
+  href: ../microsoft-365-compliance-welcome.md
   items:
   - name: Archive Mailboxes
     items:
@@ -7,7 +7,7 @@
       href: ../archive-mailboxes/archive-mailbox-issues.md
     - name: ArchiveStatus shows None
       href: ../archive-mailboxes/archivestatus-set-none.md
-    - name: Cannot delete folders of an archive mailbox
+    - name: Can't delete folders of an archive mailbox
       href: ../archive-mailboxes/cannot-delete-folders-archive-mailbox.md
     - name: Can't migrate archive mailboxes
       href: ../archive-mailboxes/cannot-migrate-archive-mailboxes.md
@@ -77,10 +77,6 @@
       href: ../office-message-encryption/cannot-display-message.md
     - name: Disable Encrypt-Only
       href: ../office-message-encryption/disable-encrypt-only.md
-  - name: OWA Mailbox
-    items:
-    - name: Missing search results items
-      href: ../owa-mailbox/items-missing-search-results.md
   - name: PST Import Service
     items:
     - name: Import job fails with MailboxAmbiguous

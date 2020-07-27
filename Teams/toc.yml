@@ -1,75 +1,77 @@
 - name: Teams Troubleshooting
-  href: teams.md
+  href: teams-welcome.md
   items:
   - name: Administration
     items:
-    - name: Activating guest users in Teams
+    - name: '"FAILED_TO_AUTO_DISCOVER_DOMAIN" error in admin center'
+      href: ./teams-administration/failed-to-auto-discover-domain-error-teams-admin-center.md
+    - name: "\"We couldn't add member\" error when adding users"
+      href: ./known-issues/couldnt-add-member-error.md
+    - name: Activate guest users
       href: ./teams-administration/activate-guest-user-access-in-teams.md
     - name: EMET EAF policy identifies Chromium sandbox optimizations as threats
       href: ./known-issues/eaf-in-emet-ids-chrome-optimizations-as-threats.md
-    - name: Error "We couldn't add member" when adding users to Teams 
-      href: ./known-issues/couldnt-add-member-error.md
-    - name: Cannot enable archiving or increase mailbox quota in O365 Group mailbox
+    - name: Can't access admin center
+      href: ./teams-administration/cannot-access-admin-center.md
+    - name: Can't enable archiving or increase mailbox quota in O365 Group mailbox
       href: ./known-issues/group-mailboxes-will-not-enable-archive.md
     - name: Include or exclude Teams from antivirus or DLP applications
       href: ./teams-administration/include-exclude-teams-from-antivirus-dlp.md
-    - name: FAILED_TO_AUTO_DISCOVER_DOMAIN error in Microsoft Teams admin center
-      href: ./teams-administration/failed-to-auto-discover-domain-error-teams-admin-center.md
-    - name: Organizations are unable to prevent users from changing profile photos
+    - name: Organizations can't prevent users from changing profile photos
       href: ./known-issues/cant-prevent-users-from-changing-profile-picture.md
-    - name: Public team list does not display all teams in Teams
+    - name: Public team list doesn't display all teams
       href: ./known-issues/public-team-list-doesnt-display-all.md
-    - name: User does not receive welcome email when added by an administrator
+    - name: User doesn't receive welcome email when added by an administrator
       href: ./known-issues/welcome-email-not-received-in-teams.md
   - name: Authentication
     items:
-    - name: Modern authentication failure in Microsoft Teams
-      href: ./known-issues/modern-authentication-failure-teams.md
-    - name: Teams stops working when joining from Edge or Internet Explorer 
-      href: ./known-issues/teams-stops-working-when-joining-from-edge.md
-    - name: Teams will always log into the domain-joined PC account
+    - name: Always log into the domain-joined PC account
       href: ./known-issues/teams-defaults-to-domain-joined-account.md
+    - name: Modern authentication failure
+      href: ./known-issues/modern-authentication-failure-teams.md
+    - name: Stops working when joining from Edge or Internet Explorer 
+      href: ./known-issues/teams-stops-working-when-joining-from-edge.md
   - name: Channels
     items:
-    - name: A channel cannot be recreated after deletion
+    - name: A channel can't be recreated after deletion
       href: ./known-issues/channel-cannot-be-recreated-after-deletion.md
-    - name: Renaming a Teams channel does not rename the corresponding folder in SharePoint Online
+    - name: Rename a channel doesn't rename the corresponding folder
       href: ./known-issues/renaming-channel-does-not-rename-folder-sharepoint.md
   - name: Conferencing
     items:
-    - name: A phone number is blocked in Microsoft Teams
+    - name: '"You need a phone system license" error when assigning a toll service number from the admin center'
+      href: ./known-issues/need-a-license-error-when-assigning-a-number.md
+    - name: A phone number is blocked
       href: ./known-issues/phone-number-blocked-in-teams.md
     - name: Attendee maximum for meetings capped at 250
       href: ./known-issues/teams-meetings-capped-at-250.md
     - name: Can't open PowerPoint presentations after disabling TLS 1.0/1.1
       href: ./teams-conferencing/teams-room-cant-open-powerpoint-presentations-tls.md
-    - name: CVI information does not auto-populate in a Meet Now instance 
+    - name: CVI information doesn't auto-populate in a Meet Now instance 
       href: ./known-issues/cvi-info-does-not-populate-in-meet-now.md
-    - name: Dialing out in Teams requires five or more digits 
+    - name: Dialing out requires five or more digits 
       href: ./known-issues/teams-call-requires-five-or-more-digits.md
-    - name: Error "You need a phone system license" when assigning a toll service number from the admin center
-      href: ./known-issues/need-a-license-error-when-assigning-a-number.md
-    - name: '"Give Control" does not work'
+    - name: Dial pad is missing
+      href: ./teams-conferencing/no-dial-pad.md
+    - name: Give Control doesn't work
       href: ./teams-conferencing/give-control-doesn’t-work-sharescreen.md
-    - name: No dial pad for Enterprise Voice user
-      href: ./teams-conferencing/ev-user-have-no-dial-pad.md
-    - name: Organizer unable to start Outlook meeting and stuck in virtual lobby
+    - name: Organizer can't start Outlook meeting and stuck in virtual lobby
       href: ./known-issues/organizer-cant-start-teams-meeting.md
     - name: PSTN callers with the same "From" number are shown as the same user
       href: ./known-issues/pstn-callers-shown-with-same-call-in-number.md
     - name: Skype for Business required for some meetings instead of Teams
       href: ./known-issues/meeting-requires-skype-instead-of-teams.md
-    - name: Static conference ID not supported for Microsoft Teams meetings
+    - name: Static conference ID not supported for Teams meetings
       href: ./known-issues/static-conference-id-not-supported.md
-    - name: Microsoft Teams meetings are not available 
+    - name: Meetings are unavailable 
       href: ./known-issues/teams-meetings-not-available.md
-    - name: No audio while sharing content during a live event in Microsoft Teams
+    - name: No audio while sharing content during a live event
       href: ./known-issues/no-audio-when-sharing-content-in-meeting.md
-    - name: Team member maximum of 5000 in Microsoft Teams
+    - name: Team member maximum of 5000
       href: ./known-issues/teams-member-max-5000.md
     - name: '"The following application instance is not present in BVD" error when assigning a phone number to a resource accounts'
       href: ./known-issues/following-application-instance-not-present-error.md
-    - name: Users with Exchange Online mailboxes can't access Meetings or Connectors 
+    - name: Users with Exchange Online mailboxes can't access meetings or connectors 
       href: ./known-issues/exchange-users-cant-access-meetings.md
   - name: Files
     items:
@@ -77,38 +79,38 @@
       href: ./known-issues/download-documents-open-in-protected-view.md
   - name: IM and Presence
     items:
-    - name: Cannot send message to Skype for Business
-      href: ./teams-im-presence/teams-user-not-send-message-in-sfb.md
-    - name: Can't save profile picture in Microsoft Teams
+    - name: Can't save profile picture
       href: ./known-issues/cant-save-profile-picture.md
+    - name: Can't send message to Skype for Business
+      href: ./teams-im-presence/teams-user-not-send-message-in-sfb.md
     - name: Deleted messages with an @ mention send notifications with a channel link
       href: ./known-issues/deleted-messages-send-notifications-with-link.md
   - name: Mobile
     items:
-    - name: A website with Conditional Access does not display when viewed in the Website tab 
-      href: ./known-issues/websites-with-conditional-access-dont-display.md
-    - name: Chrome version 80 users unable to sign in to some applications
-      href: ./known-issues/chrome-80-users-unable-to-sign-in-on-teams.md
-    - name: Notifications and preview issues using Microsoft Teams on iOS 13 Beta
-      href: ./known-issues/problems-using-teams-on-ios-13-beta.md
-    - name: Unable to see auto-favorited channels in the Teams mobile app
+    - name: Can't see auto-favorited channels in mobile app
       href: ./known-issues/cant-see-auto-favorited-channels-in-mobile.md
+    - name: A website with Conditional Access doesn't display when viewed on the Website tab 
+      href: ./known-issues/websites-with-conditional-access-dont-display.md
+    - name: Chrome version 80 users can't sign in to some applications
+      href: ./known-issues/chrome-80-users-unable-to-sign-in-on-teams.md
+    - name: Notifications and preview issues in iOS 13 Beta
+      href: ./known-issues/problems-using-teams-on-ios-13-beta.md
   - name: OneNote Integration
     items:
+    - name: Can't upload or download OneNote file
+      href: ./known-issues/cant-upload-download-onenote-file.md
     - name: Issue with accessing notebooks
       href: ./teams-onenote-integration/issue-access-notebook.md
     - name: Temporary change to file size download limit in OneNote
-      href: /office/troubleshoot/onenote/temp-change-onenote-file-size-download?toc=/MicrosoftTeams/troubleshoot/toc.json&bc=/MicrosoftTeams/troubleshoot/breadcrumb/toc.json
-    - name: Unable to upload or download OneNote file in Teams
-      href: ./known-issues/cant-upload-download-onenote-file.md
+      href: /office/troubleshoot/onenote/temp-change-onenote-file-size-download?context=/MicrosoftTeams/troubleshoot/context/context
   - name: Provisioning
     items:
-    - name: Deleting a team also deletes the group associated with it in Teams
+    - name: Can't create a team 
+      href: ./known-issues/users-cant-create-team.md
+    - name: Deleting a team also deletes the group associated with it
       href: ./known-issues/deleting-team-also-deletes-group.md
     - name: Incorrect user listed as SharePoint site creator
       href: ./known-issues/wrong-teams-user-listed-as-site-creator.md
-    - name: Users can't create a team 
-      href: ./known-issues/users-cant-create-team.md
   - name: Sign-in
     items:
     - name: Can't start Teams for Surface Hub from Microsoft Store
@@ -123,28 +125,36 @@
       href: ./known-issues/teams-doesnt-automatically-update.md
     - name: Using a symlink or mapping a drive to C:\users causes Teams to start with a white screen
       href: ./known-issues/symlink-or-drivemap-causes-white-screen.md
+    - name: You're missing out
+      href: ./teams-sign-in/error-missing-out-sign-in-teams.md
   - name: Tabs
     items:
-    - name: Can't rename legacy OneNote tabs in Teams
+    - name: Can't rename legacy OneNote tabs
       href: ./known-issues/unable-to-rename-legacy-onenote-tabs.md
-    - name: File download failure in Teams
+    - name: File download failure
       href: ./known-issues/file-download-failure-teams.md
+    - name: Owner can't create Planner tab
+      href: ./known-issues/teams-owner-cannot-create-planner-tab.md
     - name: Removed user appears as "Unknown user"
       href: ./known-issues/removed-user-appears-as-unknown.md
     - name: Tabs not working after enabling Conditional Access
       href: ./known-issues/tabs-dont-work-after-enabling-conditional-access.md
-    - name: Task buckets do not appear in Teams Planner online 
+    - name: Task buckets don't appear in Teams Planner online
       href: ./known-issues/task-buckets-do-not-appear-in-planner.md
-    - name: Teams website tabs leads to customer confusion 
+    - name: Teams website tabs leads to customer confusion
       href: ./known-issues/website-tabs-cause-confusion-teams.md
+  - name: Teams on Linux
+    items: 
+    - name: Known issues in Linux
+      href: ./known-issues/linux-known-issues.md
   - name: Third-party programs
     items:
-    - name: Dell Encryption prevents Teams from starting correctly 
+    - name: Dell Encryption prevents Teams from starting correctly
       href: ./known-issues/dell-encryption-prevents-teams-from-starting.md
-    - name: Microsoft Teams requires access to Google Gstatic
-      href: ./known-issues/unable-to-access-gstatic-in-teams.md
     - name: Problems with Safari Intelligent Tracking Prevention
       href: ./known-issues/safari-intelligent-tracking-prevention-problems.md
+    - name: Requires access to Google Gstatic
+      href: ./known-issues/unable-to-access-gstatic-in-teams.md
     - name: Symantec DLP interferes with Teams processes
       href: ./known-issues/symantec-dlp-interferes-with-teams.md
 

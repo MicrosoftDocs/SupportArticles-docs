@@ -13,12 +13,19 @@ ms.custom:
 - CSSTroubleshoot
 ms.reviewer: wouterst, tputt, jenl
 appliesto:
+- Access for Office 365
+- Access 2019
+- Access 2016
+- Access 2013
 - Access 2010
+- Access 2007
 search.appverid: MET150
 ---
 # Expression Builder doesn't display database's user-defined functions in the Functions node
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+
+This article provides a workaround for an issue in which the Expression Builder doesn't display a database's user-defined functions in the Functions node of Expression Elements.
 
 _Original KB number:_ &nbsp; 981241
 
@@ -26,7 +33,7 @@ _Original KB number:_ &nbsp; 981241
 
 Consider the following scenario:
 
-- You open a Microsoft Access 2010 database in Disabled mode.
+- You open a Microsoft Access database in Disabled mode.
 - You open the Expression Builder in a context that enables user-defined functions.
 - In the Expression Builder's **Expression Elements** tree view, you expand the **Functions** node.
 

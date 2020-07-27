@@ -19,7 +19,7 @@ appliesto:
 
 ## Introduction 
 
-The Lync 2010 mobile client for Google Android requires a Lync account from your company organization. If you aren’t sure whether you have a Lync account, contact your company system administrator or support team.
+The Lync 2010 mobile client for Google Android requires a Lync account from your company organization. If you aren't sure whether you have a Lync account, contact your company system administrator or support team.
 
 The Lync 2010 mobile client for Google Android smartphones isn't supported on Android tablets or on other non-phone Android devices. For more information, go to the following Microsoft Knowledge Base article:
 
@@ -40,7 +40,7 @@ Android smartphone devices that are supported for use with Lync 2010 for Android
 #### Verify your password, account information, server settings, and client version  
 
 1. If can't sign in to Lync Mobile 2010, visit the [Lync Sign-In Troubleshooter for Users](https://support.microsoft.com/help/10054) to be guided through a series of steps to help resolve the most common sign-in issues.    
-2. Make sure that you can sign in to Lync from a desktop by using Lync 2010, Microsoft Lync 2013, or Microsoft Lync for Mac 2011. If you can’t sign in from a regular desktop client, you probably can't sign in to a mobile client.    
+2. Make sure that you can sign in to Lync from a desktop by using Lync 2010, Microsoft Lync 2013, or Microsoft Lync for Mac 2011. If you can't sign in from a regular desktop client, you probably can't sign in to a mobile client.    
 3. Make sure that you enter the correct password. If the password is incorrect, you'll have to change it. 
 4. Make sure that you enter the correct account information. Unless your administrator has told you otherwise, you probably use the same account information to sign in to Microsoft Outlook, Microsoft SharePoint, and your work computer. If you can sign in to Lync from a desktop computer, use the same information to sign in to your mobile device.
 
@@ -55,13 +55,13 @@ Android smartphone devices that are supported for use with Lync 2010 for Android
 
 5. Verify whether **Autodetect server** is **On**. Lync tries to determine your Lync server based on your sign-in address. If it can't detect your Lync server, you may have to turn off **Autodetect server** and specify the Lync server manually.
 
-    If **Autodetect server** is turned on but you still can’t sign in, try manually entering the internal and external discovery addresses. This doesn’t resolve the issue. However, if you can successfully sign in manually, this indicates that the **Autodetect server** option isn’t set up correctly by your administrator.  
+    If **Autodetect server** is turned on but you still can't sign in, try manually entering the internal and external discovery addresses. This doesn't resolve the issue. However, if you can successfully sign in manually, this indicates that the **Autodetect server** option isn't set up correctly by your administrator.  
       - For Skype for Business Online (formerly Lync Online) users in Office 365:  
-         - Internal discovery address: https://webdir.online.lync.com/Autodiscover/autodiscoverservice.svc/Root    
-         - External discovery address: https://webdir.online.lync.com/Autodiscover/autodiscoverservice.svc/Root         
+         - Internal discovery address: `https://webdir.online.lync.com/Autodiscover/autodiscoverservice.svc/Root`    
+         - External discovery address: `https://webdir.online.lync.com/Autodiscover/autodiscoverservice.svc/Root`         
       - For Lync on-premises users, contact your support team or system administrator for help with determining your internal and external discovery address. In most cases, the internal and external discovery address should resemble the following:  
-         - Internal discovery address: https://lyncdiscover.lyncFE01.contoso.local/Autodiscover/autodiscoverservice.svc/Root    
-         - External discovery address: https://lyncdiscover.contoso.com/Autodiscover/autodiscoverservice.svc/Root     
+         - Internal discovery address: `https://lyncdiscover.lyncFE01.contoso.local/Autodiscover/autodiscoverservice.svc/Root`    
+         - External discovery address: `https://lyncdiscover.contoso.com/Autodiscover/autodiscoverservice.svc/Root`     
  
         > [!NOTE]
         > To access the **User name**, **Domain**, **Internal discovery address**, and **External discovery address** fields, click **Server Settings** on the sign-in screen.    
@@ -69,7 +69,7 @@ Android smartphone devices that are supported for use with Lync 2010 for Android
 
 #### Connecting over Wi-Fi through an authenticating proxy  
  
-If the Wi-Fi connection that's used requires authentication before you connect, Lync may not connect because it can't use the credentials to connect through a proxy. To work around this issue, connect through the mobile carrier’s data connection instead of through Wi-Fi.
+If the Wi-Fi connection that's used requires authentication before you connect, Lync may not connect because it can't use the credentials to connect through a proxy. To work around this issue, connect through the mobile carrier's data connection instead of through Wi-Fi.
 
 #### Connecting on a network that requires certificates  
  
@@ -91,21 +91,21 @@ For a feature comparison of Lync 2010 mobile clients, go to the following Micros
  
 When users experience an issue that affects the Lync 2010 mobile client for Google Android, they can send logs by email to the support team or administrator. To do this, follow these steps:
 
-1. On the Google Android device, after a user is signed in, tap **Options on the **Signing in** tab. On the Options screen, tap **Diagnostic logging**, sign out, and then sign in again. (The screenshot for this step is listed below).
+1. On the Google Android device, after a user is signed in, tap **Options** on the **Signing in** tab. On the Options screen, tap **Diagnostic logging**, sign out, and then sign in again. (The screenshot for this step is listed below).
  
-    ![Diagnostic logging](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4041556_en_1)
+    ![Diagnostic logging](./media/issues-mobile-client-for-android.md/diagnostic-logging.png)
 
 2. Reproduce the issue, return to the Options screen, and then tap **About Lync**.    
 3. Tap **Send diagnostic logs**, and then select a configured email account. (The screenshot for this step is listed below).
 
-    ![Send diagnostic logs](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4041557_en_1)    
+    ![Send diagnostic logs](./media/issues-mobile-client-for-android.md/send-diagnostic-logs.png)    
 4. In the **To** box, enter the recipient's email address. For example, your personal email address or your technical support team's alias. In the **Subject** box, enter a subject, and then tap **Send**. Logs are attached as a .zip file. (The screenshot for this step is listed below).
  
-    ![Subject](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4041558_en_1)
+    ![Subject](./media/issues-mobile-client-for-android.md/subject.png)
 
  
 > [!NOTE]
-> Make sure that **Logging **is set to **ON **before you try to reproduce the issue and send logs.    
+> Make sure that **Logging **is set to **ON** before you try to reproduce the issue and send logs.    
 
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
 

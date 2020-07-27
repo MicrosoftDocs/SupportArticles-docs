@@ -100,7 +100,7 @@ pendingDisposableContainer)] 645f0edc-7ec9-44c5-84b7-2adfba2f7f92
 
 15:54:30.25 w3wp.exe (0x9FCC) 0x5F78 SharePoint Foundation Claims Authentication af32v Verbose   
 Claims Windows Sign-In: Sending 401 for request  
-'http://&lt;servername&gt;:30079/_vti_bin/client.svc/web/lists/getbyid(guid'<GUID>')' because the request is not from a browser.   
+'http://<;servername>;:30079/_vti_bin/client.svc/web/lists/getbyid(guid'<GUID>')' because the request is not from a browser.   
 
 15:54:30.25 w3wp.exe (0x9FCC) 0x5F78 SharePoint Foundation Authentication Authorization alkvd   
 Medium Throw UnauthorizedAccessException instead of SPUtilityInternal.Send401 for client.svc request.      

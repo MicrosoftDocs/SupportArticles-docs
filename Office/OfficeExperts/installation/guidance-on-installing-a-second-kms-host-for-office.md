@@ -34,6 +34,6 @@ When you install a KMS host and install a key, your KMS host registers itself in
 - Method 1: Manually add a _VLMCS record to DNS for the second KMS host.
 - Method 2: Create a global security group that contains the accounts for your KMS hosts, and grant that group control over _VLMCS records in DNS (recommended).
 
-You can follow the steps in [this article](https://technet.microsoft.com/library/ff793405.aspx) to configure DNS for multiple KMS hosts. Be aware that the SRV resource record that you want to edit permissions in DNS is the _VLMCS record of your KMS host. Editing this record’s permissions to grant the global security control will enable additional _VLMCS records to be created by the other KMS hosts as needed.
+You can follow the steps in [this article](https://technet.microsoft.com/library/ff793405.aspx) to configure DNS for multiple KMS hosts. Be aware that the SRV resource record that you want to edit permissions in DNS is the _VLMCS record of your KMS host. Editing this record's permissions to grant the global security control will enable additional _VLMCS records to be created by the other KMS hosts as needed.
 
 We recommend Method 2 here to keep future administrative tasks to a minimum. If you ever change the host name, DNS will be updated automatically. Stale _VLMCS records in DNS can cause long delays in launching Office applications if they are requesting activation.

@@ -38,7 +38,9 @@ Synchronization goes the other way, too. If you have a SharePoint tasks list, th
 
 Managing a Project Site tasks list in this manner is also known as lightweight project management. Project Server is not required for this functionality. SharePoint Foundation 2013, SharePoint Foundation 2016, or SharePoint Foundation 2019 is the minimum requirement for using the **Sync to SharePoint**feature.
 
-When you use SharePoint Server, you can use the "All My Work in One Place" feature to display all tasks that are specifically assigned to you. From your "My site" personal tasks list, you can view, organize, and update all your work from this one location. The [URL](https://TenantName-my.sharepoint.com/personal/Name_TenantName_onmicrosoft_com/AllTasks.aspN) is for a SharePoint personal tasks list.
+When you use SharePoint Server, you can use the "All My Work in One Place" feature to display all tasks that are specifically assigned to you. From your "My site" personal tasks list, you can view, organize, and update all your work from this one location. The following URL is for a SharePoint personal tasks list:
+
+> `https://TenantName-my.sharepoint.com/personal/Name_TenantName_onmicrosoft_com/AllTasks.aspN`
 
 **Scenarios for using Project Professional with SharePoint Server or SharePoint Online**
 

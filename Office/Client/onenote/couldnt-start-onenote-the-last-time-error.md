@@ -1,5 +1,5 @@
 ---
-title: Error "We couldn't start OneNote the last time we tried” 
+title: Error "We couldn't start OneNote the last time we tried" 
 ms.author: v-todmc
 author: todmccoy
 manager: dcscontentpm
@@ -20,7 +20,7 @@ ms.reviewer: subhbasu
 description: How to resolve the error "We couldn't start OneNote the last time we tried".
 ---
 
-# "We couldn't start OneNote the last time we tried” error
+# "We couldn't start OneNote the last time we tried" error
 
 *Written and maintained by [Gaurav Singh](https://social.technet.microsoft.com/profile/gaurav0327/), Support Engineer Office Core*.
 
@@ -38,15 +38,15 @@ A sign-in prompt appears at the first launch:<br/>
 Error message:<br/>
 !["We couldn't start OneNote" error message.](./media/couldnt-start-onenote-the-last-time-error/couldnt-start-onenote-the-last-time-error-2.png)
 
-If you select **Delete Notebook Cache** or **Delete Settings**, OneNote will start, but displays the message “You don’t have any open notebooks.”<br/>
+If you select **Delete Notebook Cache** or **Delete Settings**, OneNote will start, but displays the message "You don't have any open notebooks."<br/>
 !["You don't have any open notebooks" error message.](./media/couldnt-start-onenote-the-last-time-error/couldnt-start-onenote-the-last-time-error-3.gif)
 
 ## Cause
 
 This issue might be caused by one of the following reasons:
 
-- Microsoft OneNote is a “freemium” product. The first time the user starts OneNote after it's installed, the license will update automatically to the same license as the version of Office that is already installed on the device and will create different registry entries at the following location: [HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\OneNote].
-- When OneNote starts for the first time, it will check the Office suite license to see whether it's a free version, the Home & Student version, or the Enterprise version, and will try to update OneNote to match the same license as the version of Office already installed. This situation will produce the “Sign-in” prompt in an attempt to validate the license.
+- Microsoft OneNote is a "freemium" product. The first time the user starts OneNote after it's installed, the license will update automatically to the same license as the version of Office that is already installed on the device and will create different registry entries at the following location: [HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\OneNote].
+- When OneNote starts for the first time, it will check the Office suite license to see whether it's a free version, the Home & Student version, or the Enterprise version, and will try to update OneNote to match the same license as the version of Office already installed. This situation will produce the "Sign-in" prompt in an attempt to validate the license.
 - Microsoft is only providing support for the free Home & Student version unless you upgrade to the Office Pro or Enterprise suites of the products through either Customer Service and Support (CSS) or Microsoft Premier.
 
 You may also receive this error if the subkey under this location is changed/corrupted or deleted.

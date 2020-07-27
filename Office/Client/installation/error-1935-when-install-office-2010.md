@@ -61,7 +61,7 @@ First, check installed programs to see if the latest version of .NET Framework i
 2. Type appwiz.cpl, and then press Enter. 
 3. Look for Microsoft .NET Framework 4 Client Profile in the list of installed programs. See image. 
 
-    ![Look for Microsoft .NET Framework 4 Client Profile in the list of installed programs](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4021779_en_1)
+    ![Look for Microsoft .NET Framework 4 Client Profile in the list of installed programs](./media/error-1935-when-install-office-2010/list-of-installed-programs.png)
  
 If you find Microsoft .NET Framework 4 Client Profile, follow these steps to repair it: 
  
@@ -70,10 +70,10 @@ If you find Microsoft .NET Framework 4 Client Profile, follow these steps to rep
 3. Type appwiz.cpl, and then press Enter. 
 4. Click Microsoft .NET Framework 4 Client Profile and click Uninstall/Change (or Change/Remove in Windows XP). See image. 
 
-    ![Click Microsoft .NET Framework 4 Client Profile and click Uninstall/Change (or Change/Remove in Windows XP).](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4021780_en_1)
+    ![Click Microsoft .NET Framework 4 Client Profile and click Uninstall/Change (or Change/Remove in Windows XP).](./media/error-1935-when-install-office-2010/uninstall-change.png)
 1. Choose the option to Repair .NET Framework 4 Client Profile to its original state, and then click Next. See image. 
 
-    ![Choose the option to Repair .NET Framework 4 Client Profile to its original state, and then click Next.](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4021782_en_1)
+    ![Choose the option to Repair .NET Framework 4 Client Profile to its original state, and then click Next.](./media/error-1935-when-install-office-2010/repair.png)
 1. When the repair is complete, click Finish, and then click Restart Nowto restart the computer.    
  
 If you can't find Microsoft .NET Framework 4 Client Profile, download and install it to update the computer. You can download the file from:

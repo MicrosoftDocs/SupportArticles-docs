@@ -36,7 +36,7 @@ To fix this problem, follow these steps:
 
     > [!NOTE]
     > If the domain was recently configured for full domain redelegation, you should wait for 72 hours before you run a query.   
-2. If you still can’t sign in after the NS resource records have been changed, there may be a delay in publishing the Skype for Business Online DNS records. If this occurs, test the DNS records. To do this, follow these steps:
+2. If you still can't sign in after the NS resource records have been changed, there may be a delay in publishing the Skype for Business Online DNS records. If this occurs, test the DNS records. To do this, follow these steps:
    1. Browse to the [Microsoft Remote Connectivity Analyzer](https://testconnectivity.microsoft.com/) website.   
    2. Click the **Office 365** tab.   
    3. Under **Microsoft Lync Tests**,  click **Office 365 Lync DNS Test**, and then click **Next**.   
@@ -44,7 +44,7 @@ To fix this problem, follow these steps:
 
     This test examines all four DNS records that are required by Skype for Business Online to determine whether they're correctly configured. The results of the test will resemble the following output.
 
-    ![Screen shot of the result for the Remote Connectivity Analyzer Test  ](https://support.microsoft.com/Library/Images/2799312.jpg)   
+    ![Screen shot of the result for the Remote Connectivity Analyzer Test](./media/cannot-sign-in-using-full-redelegation-domain/test.png)   
 
 If the NS records and the Lync Service (SRV) records are correct, perform standard Lync sign-in troubleshooting.
 

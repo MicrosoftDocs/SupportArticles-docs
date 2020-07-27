@@ -157,7 +157,7 @@ SharePoint workflow task buttons may be missing in Office documents for other re
 - User does not have Edit Items  permissions. They may also need Manage Lists  permissions depending on the workflow settings.    
 - The Server read-only bar with the [Edit Document ] or [Edit Workbook ] or [Edit Presentation ] button bar may be missing for other reasons when clicking on a hyperlink to an Office 2010 document stored on a SharePoint site for the first time. Subsequent clicks on the link will render the Server read-only bar.     
 
-   ![The screenshot for the Server read-only bar ](https://support.microsoft.com/Library/Images/2832165.png)  
+   ![The screenshot for the Server read-only bar](./media/message-bar-is-missing-when-open-office-documents-via-link-from-library/read-only.png)  
 
 To force the Server read-only bar to show on first click of the hyperlink, add the below registry key to the client machine.   
 

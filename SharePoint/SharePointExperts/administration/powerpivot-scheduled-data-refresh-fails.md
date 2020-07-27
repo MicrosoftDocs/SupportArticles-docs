@@ -30,7 +30,7 @@ If you expand the refresh history, you will notice that the failed data source r
 
 You may notice that some of your data sources succeed, or that the refresh succeeds intermittently if all the data sources refresh in less than 100 seconds.
 
-In the SharePoint Unified Logging Service (ULS) logs, you see the actual error, but it seems that it doesn’t relate to anything meaningful as far as a cause.
+In the SharePoint Unified Logging Service (ULS) logs, you see the actual error, but it seems that it doesn't relate to anything meaningful as far as a cause.
 ```
 DateTime w3wp.exe (0x00000) 0x59D4 PowerPivot Service Data Refresh 99 High EXCEPTION: System.Net.WebException: The operation has timed out at System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
 ```

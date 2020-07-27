@@ -39,7 +39,7 @@ This problem occurs if a user navigates to **User details** > **OneDrive** > **S
 To restore the **OneDrive Sharing** option, follow these steps:
 
 1.	Find the user MySite URL. For example:
-    > https://m365x328152-my.sharepoint.com/personal/meganb_m365x328152_contoso_com
+    > `https://m365x328152-my.sharepoint.com/personal/meganb_m365x328152_contoso_com`
  
 2.	Run the following commands in the [SharePoint Online Management Shell](https://www.microsoft.com/download/details.aspx?id=35588):
 
@@ -68,7 +68,7 @@ For more information, see the article about the [Set-SPOSite cmdlet](https://doc
 1.	Sign in to the **SharePoint Online admin center**, and then select **More features**.
 2.	Under **User profiles**, select **Open**.
 3.	Search for and select the user profile. 
-4.	Select the arrow at the end of the **Account name**, and then select **Manage Personal Site** to go to the user’s OneDrive site. 
+4.	Select the arrow at the end of the **Account name**, and then select **Manage Personal Site** to go to the user's OneDrive site. 
 
 #### Option 3
 

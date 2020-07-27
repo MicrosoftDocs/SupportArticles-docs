@@ -30,7 +30,7 @@ When you use Outlook Web App in Office 365, you may experience the following iss
 
 ## Solution 
 
-To resolve this issue, make sure that the DNS records for your domain’s DNS host are configured correctly. Specifically, the DNS SRV record for federation and the LyncDiscover DNS CNAME record are required for IM and online meeting functionality to work in Outlook Web App. For more information, see
+To resolve this issue, make sure that the DNS records for your domain's DNS host are configured correctly. Specifically, the DNS SRV record for federation and the LyncDiscover DNS CNAME record are required for IM and online meeting functionality to work in Outlook Web App. For more information, see
 [Troubleshooting Skype for Business Online DNS configuration issues in Office 365](https://support.microsoft.com/help/2566790).
 
 If the DNS record is created correctly but you continue to receive the error message, contact Office 365 technical support for additional assistance. Before you contact support, try to run the Get-Mailbox cmdlet and have the results available for the support tech. To do this, follow these steps:

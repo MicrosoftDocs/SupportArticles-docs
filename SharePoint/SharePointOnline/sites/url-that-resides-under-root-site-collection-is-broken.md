@@ -18,8 +18,8 @@ appliesto:
 
 > [!IMPORTANT]
 > Although the SharePoint Admin Center warns Admins of the consequences of deleting the root site, some Admins may still accidently delete the site or intentionally delete the site because they want to start over with the site. If the root site is deleted, users will experience the following problems immediately:
-> - Users will receive an error 404 when trying to access the root site because the root site (https://contoso.sharepoint.com) is no longer available.  
-> - All sites (https://contoso.sharepoint.com/sites or https://contoso.sharepoint.com/teams) that reside under the root site will be inaccessible for all users. 
+> - Users will receive an error 404 when trying to access the root site because the root site (`https://contoso.sharepoint.com`) is no longer available.  
+> - All sites (`https://contoso.sharepoint.com/sites` or `https://contoso.sharepoint.com/teams`) that reside under the root site will be inaccessible for all users. 
 Custom applications accessing sites or content may fail. 
 > 
 > **If you delete this site, all SharePoint sites in your organization will be inaccessible until you either restore the site or create a new site at \<Root URL>.**
@@ -28,7 +28,7 @@ Custom applications accessing sites or content may fail.
 
 ## Summary
 
-The root site URL for SharePoint Online is provisioned based off your input when setting up your Office 365 subscription. For example, if your organization name is Contoso, the root site for SharePoint Online will be https://contoso.sharepoint.com. The remainder of this document will utilize Contoso as the organization name for all examples.
+The root site URL for SharePoint Online is provisioned based off your input when setting up your Office 365 subscription. For example, if your organization name is Contoso, the root site for SharePoint Online will be `https://contoso.sharepoint.com`. The remainder of this document will utilize Contoso as the organization name for all examples.
 
 ## More information
 

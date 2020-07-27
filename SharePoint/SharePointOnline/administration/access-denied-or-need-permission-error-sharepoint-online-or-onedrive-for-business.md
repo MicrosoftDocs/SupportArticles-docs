@@ -50,125 +50,102 @@ Follow the steps below depending on which area you are receiving the error:
 
 ### When accessing a SharePoint site
 
-<ol>
-<li>Determine what <a href="https://docs.microsoft.com/sharepoint/understanding-permission-levels" target="_blank">permission level</a> the user should have to the site (member, owner, etc.) and verify the permission via the <b>Check Permissions</b> feature. 
+1. Determine what <a href="https://docs.microsoft.com/sharepoint/understanding-permission-levels" target="_blank">permission level</a> the user should have to the site (member, owner, etc.) and verify the permission via the **Check Permissions** feature.
 
-<ol>
-<li type=a>To use the <b>Check Permissions</b> feature, navigate to the User.aspx page by selecting the gear icon in the upper right corner, then <b>Site Settings</b> . Below <b>Users and Permissions</b> , select <b>Site Permissions</b> <br/>
-   For example, the full URL will resemble the following: <b>https://contoso.sharepoint.com/_layouts/15/user.aspx</b> </li>
-<li type=a>In the top ribbon, choose <b>Check Permissions</b> </li>
-<li type=a>In the <b>User/Group</b> field, type the user's name and select <b>Check Now</b> </li>
-<li type=a>The type of permissions the user has on a site and which security group it is derived from (if applicable) will be displayed.</li>
-</ol>
-<li>If the user does not have appropriate permissions, grant them permissions to the <a href="https://support.office.com/en-us/article/share-sharepoint-files-or-folders-1fe37332-0f9a-4719-970e-d2578da4941c" target="_blank">file</a> or <a href="https://support.office.com/en-us/article/share-a-site-958771a8-d041-4eb8-b51c-afea2eae3658?ui=en-US&rs=en-US&ad=US" target="_blank">site</a>.</li>
-<li>If the user continues to receive an error message, remove them from the site using the following steps: 
+   1. To use the **Check Permissions** feature, navigate to the User.aspx page by selecting the gear icon in the upper right corner, then **Site Settings** . Below **Users and Permissions** , select **Site Permissions**.
 
-> [!NOTE] 
-> This option is available only if the user previously browsed to the site collection. They won't be listed if they were granted access but never visited the site.
+      For example, the full URL will resemble the following: `https://contoso.sharepoint.com/_layouts/15/user.aspx`
+   1. In the top ribbon, choose **Check Permissions**.
+   1. In the **User/Group** field, type the user's name and select **Check Now**.
+   1. The type of permissions the user has on a site and which security group it is derived from (if applicable) will be displayed.
 
-</li>
-<ol>
-<li type=a>Browse to the site and edit the URL by adding the following string to the end of it: /_layouts/15/people.aspx?MembershipGroupId=0
-   For example, the full URL will resemble the following: <b>https://contoso.sharepoint.com/_layouts/15/people.aspx/membershipGroupId=0</b> </li>
-<li type=a>Select the person from the list, and then on the <b>Actions</b> menu, select <b>Delete Users from Site Collection</b> </li>
-<li type=a>Grant the user permissions back to the <a href="https://support.office.com/en-us/article/share-sharepoint-files-or-folders-1fe37332-0f9a-4719-970e-d2578da4941c" target="_blank">file</a> or <a href="https://support.office.com/en-us/article/share-a-site-958771a8-d041-4eb8-b51c-afea2eae3658?ui=en-US&rs=en-US&ad=US" target="_blank">site</a>.</li>
-</ol>
-</li></ol>
+1. If the user does not have appropriate permissions, grant them permissions to the <a href="https://support.office.com/en-us/article/share-sharepoint-files-or-folders-1fe37332-0f9a-4719-970e-d2578da4941c" target="_blank">file</a> or <a href="https://support.office.com/en-us/article/share-a-site-958771a8-d041-4eb8-b51c-afea2eae3658?ui=en-US&rs=en-US&ad=US" target="_blank">site</a>.
+1. If the user continues to receive an error message, remove them from the site using the following steps:
+
+   > [!NOTE]
+   > This option is available only if the user previously browsed to the site collection. They won't be listed if they were granted access but never visited the site.
+
+   1. Browse to the site and edit the URL by adding the following string to the end of it: `/_layouts/15/people.aspx?MembershipGroupId=0`
+
+      For example, the full URL will resemble the following: `https://contoso.sharepoint.com/_layouts/15/people.aspx/membershipGroupId=0`
+   1. Select the person from the list, and then on the **Actions** menu, select **Delete Users from Site Collection**.
+   1. Grant the user permissions back to the <a href="https://support.office.com/en-us/article/share-sharepoint-files-or-folders-1fe37332-0f9a-4719-970e-d2578da4941c" target="_blank">file</a> or <a href="https://support.office.com/en-us/article/share-a-site-958771a8-d041-4eb8-b51c-afea2eae3658?ui=en-US&rs=en-US&ad=US" target="_blank">site</a>.
 
 ### When accessing a OneDrive site 
 
-<ul>
-<li><b>If the user is the owner of the OneDrive site:</b>
-<ul>
-<li>This issue most frequently occurs when a user is deleted and re-created with the same user principal name (UPN). The new account is created by using a different Passport Unique ID (PUID) value. When the user tries to access a site collection or their OneDrive, the user has an incorrect PUID. A second scenario involves directory synchronization with an Active Directory organizational unit (OU). If users have already signed into SharePoint, are moved to a different OU that is not currently synchronized with Office365 and then resynced with SharePoint, they may experience this problem. 
-<ul>
-<li>To resolve this issue, you will need to delete the new UPN (if it exists) and restore the original UPN.
-<ul>
-<li>To delete the new UPN, follow the steps in <a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Factive-directory%2Ffundamentals%2Fadd-users-azure-active-directory%23delete-a-user&data=02%7C01%7Cv-todmc%40microsoft.com%7C164d36b01d8f4a9dfc8a08d716a7f974%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637002783015030189&sdata=phXCYadT6ZVtp4kUGyt7GoDye0H4TluhHrAX7vwmZ3o%3D&reserved=0" target="_blank">this article</a>.</li>
-<li>Once the new user has been deleted, you can restore the original user using <a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Factive-directory%2Ffundamentals%2Factive-directory-users-restore&data=02%7C01%7Cv-todmc%40microsoft.com%7C164d36b01d8f4a9dfc8a08d716a7f974%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637002783015030189&sdata=3wc2cwXYHPGnyzy5OvcpgZjCt0XA%2BAdDamDo5lwDFDA%3D&reserved=0" target="_blank">these steps</a>.</li></ul>
+- **If the user is the owner of the OneDrive site:**
+  - This issue most frequently occurs when a user is deleted and re-created with the same user principal name (UPN). The new account is created by using a different Passport Unique ID (PUID) value. When the user tries to access a site collection or their OneDrive, the user has an incorrect PUID. A second scenario involves directory synchronization with an Active Directory organizational unit (OU). If users have already signed into SharePoint, are moved to a different OU that is not currently synchronized with Office365 and then resynced with SharePoint, they may experience this problem.
+    - To resolve this issue, you will need to delete the new UPN (if it exists) and restore the original UPN.
+      - To delete the new UPN, follow the steps in [this article](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user).
+      - Once the new user has been deleted, you can restore the original user using [these steps](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-users-restore).
 
+    - If you cannot restore the original user and are still in this state,  create a support request using the following steps:
+      - Navigate to <a href="https://admin.microsoft.com" target="_blank">https://admin.microsoft.com</a>.
+      - In the left navigation pane, select **Support** and then **New Service Request**. This will activate the **Need Help?** pane on the right-hand side of your screen.
+      - In the **Briefly describe your issue** area, enter **"PUID Mismatch on OneDrive Site"**.
+      - Select **Contact Support**.
 
+        > [!NOTE]
+        > If you are using the old M365 admin center, you can skip the "Description" step listed below as that field will not exist.
 
-<li>If you cannot restore the original user and are still in this state,  create a support request using the following steps:
-<ul>
-<li>Navigate to <a href="https://admin.microsoft.com" target="_blank">https://admin.microsoft.com</a>.</li>
-<li>In the left navigation pane, select <b>Support</b> and then <b>New Service Request</b>. This will activate the <b>Need Help?</b> pane on the right-hand side of your screen.</li>
-<li>In the <b>Briefly describe your issue</b> area, enter <b>"PUID Mismatch on OneDrive Site"</b>.</li>
-<li>Select <b>Contact Support</b>.
+      - Under **Description** enter **"PUID Mismatch on OneDrive Site"**. Fill out the remaining information and select **Contact me**.
+      - Once the ticket has been opened please provide the support agent with the UPN and OneDrive URL that is having the issue.
 
-> [!NOTE]
-> If you are using the old M365 admin center, you can skip the "Description" step listed below as that field will not exist
+- **If the user is attempting to access another user's OneDrive site:**
 
-</li>
-<li>Under <b>Description</b> enter <b>"PUID Mismatch on OneDrive Site"</b>. Fill out the remaining information and select <b>Contact me</b>.</li>
-<li>Once the ticket has been opened please provide the support agent with the UPN and OneDrive URL that is having the issue.
-</ul>
-</ul>
-</li><ul>
-</li></ul>
-</li></ul>
+  - Determine what <a href="https://docs.microsoft.com/sharepoint/understanding-permission-levels" target="_blank">permission level</a> the user should have to the site (member, owner, etc.) and then verify the permissions via the **Check Permissions** feature.
+    - To use the **Check Permissions** feature, navigate to the User.aspx. For example, the full URL will resemble the following: `https://contoso-my.sharepoint.com/personal/admin_contoso_onmicrosoft_com/_layouts/15/user.aspx`.
+    - In the top ribbon, choose **Check Permissions**.
+    - In the **User/Group** field, type the user's name and select **Check Now**.
+    - The kind of permissions that the user has on a site and which security group it is derived from (if applicable) will be displayed.
 
-<li><b>If the user is attempting to access another user's OneDrive site:</b>
-<ul><li>Determine what <a href="https://docs.microsoft.com/sharepoint/understanding-permission-levels" target="_blank">permission level</a> the user should have to the site (member, owner, etc.) and then verify the permissions via the <b>Check Permissions</b> feature.
-<ul><li>To use the <b>Check Permissions</b> feature, navigate to the User.aspx.
-For example, the full URL will resemble the following: https://contoso-my.sharepoint.com/personal/admin_contoso_onmicrosoft_com/_layouts/15/user.aspx.</li>
-<li>In the top ribbon, choose <b>Check Permissions</b>. </li>
-<li>In the <b>User/Group</b> field, type the user's name and select <b>Check Now</b>. </li>
-<li>The kind of permissions that the user has on a site and which security group it is derived from (if applicable) will be displayed.</li></ul></li>
-<li>If the user does not have appropriate permissions, grant them permissions to the <a href="https://support.office.com/en-us/article/share-sharepoint-files-or-folders-1fe37332-0f9a-4719-970e-d2578da4941c" target="_blank">file</a> or <a href="https://support.office.com/en-us/article/share-a-site-958771a8-d041-4eb8-b51c-afea2eae3658?ui=en-US&rs=en-US&ad=US" target="_blank">site</a>.</li>
-<li>If the user continues to receive an error message, remove them from the site using the following steps:<br/> 
+   - If the user does not have appropriate permissions, grant them permissions to the <a href="https://support.office.com/en-us/article/share-sharepoint-files-or-folders-1fe37332-0f9a-4719-970e-d2578da4941c" target="_blank">file</a> or <a href="https://support.office.com/en-us/article/share-a-site-958771a8-d041-4eb8-b51c-afea2eae3658?ui=en-US&rs=en-US&ad=US" target="_blank">site</a>.
+   - If the user continues to receive an error message, remove them from the site using the following steps:<br/>
 
->[!NOTE] 
->This option is available only if the user previously browsed to the site collection. They won't be listed if they were granted access but never visited the site.
-<ul><li>Browse to the site and edit the URL by adding the following string to the end of it: /_layouts/15/people.aspx?MembershipGroupId=0<br/>
-For example, the full URL will resemble the following: <b>https://contoso-my.sharepoint.com/personal/admin_contoso_onmicrosoft_com/_layouts/15/people.aspx/membershipGroupId=0</b> </li>
-<li>Select the person from the list, and then on the <b>Actions</b> menu, select <b>Delete Users from Site Collection</b>. </li>
-<li>Grant the user permissions back to the <a href="https://support.office.com/en-us/article/share-sharepoint-files-or-folders-1fe37332-0f9a-4719-970e-d2578da4941c" target="_blank">file</a> or <a href="https://support.office.com/en-us/article/share-a-site-958771a8-d041-4eb8-b51c-afea2eae3658?ui=en-US&rs=en-US&ad=US" target="_blank">site</a>.</li></ul>
-</li></ul>
-</li></ul>
+     >[!NOTE] 
+     >This option is available only if the user previously browsed to the site collection. They won't be listed if they were granted access but never visited the site.
+     - Browse to the site and edit the URL by adding the following string to the end of it: `/_layouts/15/people.aspx?MembershipGroupId=0`<br/>
+For example, the full URL will resemble the following: `https://contoso-my.sharepoint.com/personal/admin_contoso_onmicrosoft_com/_layouts/15/people.aspx/membershipGroupId=0`
+     - Select the person from the list, and then on the **Actions** menu, select **Delete Users from Site Collection**. 
+     - Grant the user permissions back to the <a href="https://support.office.com/en-us/article/share-sharepoint-files-or-folders-1fe37332-0f9a-4719-970e-d2578da4941c" target="_blank">file</a> or <a href="https://support.office.com/en-us/article/share-a-site-958771a8-d041-4eb8-b51c-afea2eae3658?ui=en-US&rs=en-US&ad=US" target="_blank">site</a>.
 
 ### If an external user is accessing a site
 
-<ol>
-<li>Determine what <a href="https://docs.microsoft.com/sharepoint/understanding-permission-levels" target="_blank">permission level</a> the user should have to the site (member, owner, etc.) and verify the permission via the <b>Check Permissions</b> feature. 
-<ol>
-<li type=a>To use the <b>Check Permissions</b> feature, navigate to the User.aspx page by selecting the gear icon in the upper right corner and then <b>Site Settings</b>  Under <b>Users and Permissions</b>, select <b>Site Permissions</b> <br/>
-For example, the full URL will resemble the following: <b>https://contoso.sharepoint.com/_layouts/15/user.aspx</b></li>
-      <li type=a>In the top ribbon, choose <b>Check Permissions</b> </li>
-      <li type=a>In the <b>User/Group</b> field, type the user's name and select <b>Check Now</b> </li>
-      <li type=a>You will now see what kind of permissions the user has on a site and via which security group (if applicable).</li></ol></li>
-<li>If the user does not have appropriate permissions, grant them permissions to the <a href="https://support.office.com/en-us/article/share-sharepoint-files-or-folders-1fe37332-0f9a-4719-970e-d2578da4941c" target="_blank">file</a> or <a href="https://support.office.com/en-us/article/share-a-site-958771a8-d041-4eb8-b51c-afea2eae3658?ui=en-US&rs=en-US&ad=US" target="_blank">site</a>.</li>
-<li>If the user still receiving an error message, please remove them from the site using the following steps: 
+1. Determine what <a href="https://docs.microsoft.com/sharepoint/understanding-permission-levels" target="_blank">permission level</a> the user should have to the site (member, owner, etc.) and verify the permission via the **Check Permissions** feature. 
+   1. To use the **Check Permissions** feature, navigate to the User.aspx page by selecting the gear icon in the upper right corner and then **Site Settings**  Under **Users and Permissions**, select **Site Permissions** <br/>
+For example, the full URL will resemble the following: `https://contoso.sharepoint.com/_layouts/15/user.aspx`
+   1. In the top ribbon, choose **Check Permissions** 
+   1. In the **User/Group** field, type the user's name and select **Check Now**
+   1. You will now see what kind of permissions the user has on a site and via which security group (if applicable).
+1. If the user does not have appropriate permissions, grant them permissions to the <a href="https://support.office.com/en-us/article/share-sharepoint-files-or-folders-1fe37332-0f9a-4719-970e-d2578da4941c" target="_blank">file</a> or <a href="https://support.office.com/en-us/article/share-a-site-958771a8-d041-4eb8-b51c-afea2eae3658?ui=en-US&rs=en-US&ad=US" target="_blank">site</a>.
+1. If the user still receiving an error message, please remove them from the site using the following steps:
 
-> [!NOTE]
-> This option is available only if the user previously browsed to the site collection. They won't be listed if they were granted access but never visited the site.
+   > [!NOTE]
+   > This option is available only if the user previously browsed to the site collection. They won't be listed if they were granted access but never visited the site.
 
-   <ol>
-         <li type=a>Browse to the site and edit the URL by adding the following string to the end of it: /_layouts/15/people.aspx?MembershipGroupId=0<br/>
-         For example, the full URL will resemble the following: <b>https://contoso.sharepoint.com/_layouts/15/people.aspx/membershipGroupId=0</b></li>
-         <li type=a>Select the person from the list, and then on the Actions menu, select <b>Delete Users from Site Collection</b> </li>
-         <li type=a>Grant the user permissions back to the <a href="https://support.office.com/en-us/article/share-sharepoint-files-or-folders-1fe37332-0f9a-4719-970e-d2578da4941c" target="_blank">file</a> or <a href="https://support.office.com/en-us/article/share-a-site-958771a8-d041-4eb8-b51c-afea2eae3658?ui=en-US&rs=en-US&ad=US" target="_blank">site</a>.</li>
-   </ol></li>
-<li>If there are still errors with the account after the previous steps, we recommend that you completely remove the guest account from M365:
-<ol>
-      <li type=a>Sign in to https://admin.microsoft.com as a global or SharePoint admin.</li>
-      <li type=a>In the left pane, select <b>Users</b> > <b>Guest users</b> </li>
-      <li type=a>Select <b>Delete a user</b> </li>
-      <li type=a>Select the user, then <b>Select</b>, and then select <b>Delete</b> <br/>
-      Once the above action has been completed,  ensure the account is completely removed from the site collection you are sharing with the user.</li>
-      <li type=a>Browse to the site and edit the URL by adding the following string to the end of it: /_layouts/15/people.aspx?MembershipGroupId=0<br/>
-      For example, the full URL will resemble the following: <b>https://contoso.sharepoint.com/_layouts/15/people.aspx/membershipGroupId=0</b> </li>
-      <li type=a>Select the person from the list, and then on the <b>Actions</b> menu, select <b>Delete Users from Site Collection</b> </li>
-      <li type=a>Grant the user permissions back to the <a href="https://support.office.com/en-us/article/share-sharepoint-files-or-folders-1fe37332-0f9a-4719-970e-d2578da4941c" target="_blank">file</a> or <a href="https://support.office.com/en-us/article/share-a-site-958771a8-d041-4eb8-b51c-afea2eae3658?ui=en-US&rs=en-US&ad=US" target="_blank">site</a>.</li></ol>
-</li></ol>
-</li></ol>
+   1. Browse to the site and edit the URL by adding the following string to the end of it: `/_layouts/15/people.aspx?MembershipGroupId=0`
+
+      For example, the full URL will resemble the following: `https://contoso.sharepoint.com/_layouts/15/people.aspx/membershipGroupId=0`
+   1. Select the person from the list, and then on the Actions menu, select **Delete Users from Site Collection** 
+   1. Grant the user permissions back to the <a href="https://support.office.com/en-us/article/share-sharepoint-files-or-folders-1fe37332-0f9a-4719-970e-d2578da4941c" target="_blank">file</a> or <a href="https://support.office.com/en-us/article/share-a-site-958771a8-d041-4eb8-b51c-afea2eae3658?ui=en-US&rs=en-US&ad=US" target="_blank">site</a>.
+
+1. If there are still errors with the account after the previous steps, we recommend that you completely remove the guest account from M365:
+   1. Sign in to https://admin.microsoft.com as a global or SharePoint admin.
+   1. In the left pane, select **Users** > **Guest users** 
+   1. Select **Delete a user** 
+   1. Select the user, then **Select**, and then select **Delete** <br/>
+      Once the above action has been completed,  ensure the account is completely removed from the site collection you are sharing with the user.
+   1. Browse to the site and edit the URL by adding the following string to the end of it: `/_layouts/15/people.aspx?MembershipGroupId=0`<br/>
+      For example, the full URL will resemble the following: `https://contoso.sharepoint.com/_layouts/15/people.aspx/membershipGroupId=0`
+   1. Select the person from the list, and then on the **Actions** menu, select **Delete Users from Site Collection** 
+   1. Grant the user permissions back to the <a href="https://support.office.com/en-us/article/share-sharepoint-files-or-folders-1fe37332-0f9a-4719-970e-d2578da4941c" target="_blank">file</a> or <a href="https://support.office.com/en-us/article/share-a-site-958771a8-d041-4eb8-b51c-afea2eae3658?ui=en-US&rs=en-US&ad=US" target="_blank">site</a>.
 
 
 ### When an external user accepts a SharePoint Online invitation by using another account
 
 To resolve this issue, determine which account accepted the invitation, remove the incorrect account if this is necessary, and then re-invite the user to the resource.
 
-Note Many examples in this article use *<contoso>* as a placeholder. In your scenario, replace <contoso> with the domain that you use for your organization.
+Note Many examples in this article use \<contoso> as a placeholder. In your scenario, replace \<contoso> with the domain that you use for your organization.
 
 #### Determine which account has access as an external user
 
@@ -179,8 +156,8 @@ If you can access the site as the incorrect external user, follow these steps:
 2. Select the profile image in the upper-right corner, and then select My Settings.
 
 3. In the Account field, review the email address. For example, i:0#.f|membership|JonDoe@contoso.com.<br/>
-> [!NOTE]
-> In this example, JonDoe@contoso.com is the email account that accepted the user invitation.
+   > [!NOTE]
+   > In this example, JonDoe@contoso.com is the email account that accepted the user invitation.
 
 4. If the address is incorrect, go to the "Remove the incorrect external user account" section.
 
@@ -192,7 +169,7 @@ If you can't access the site as the incorrect external user, follow these steps:
 
 3. In the **Users and Permissions** section, select **People and groups**.
 
-4. At the end of the URL in your browser window, after the **people.aspx?** part of the URL, replace **MembershipGroupId=<number>** with **MembershipGroupId=0**, and then press Enter.
+4. At the end of the URL in your browser window, after the **people.aspx?** part of the URL, replace **MembershipGroupId=\<number>** with **MembershipGroupId=0**, and then press Enter.
 
 5. In the list of users, locate the name of the external user. Right-click the user name, and copy the shortcut.
 

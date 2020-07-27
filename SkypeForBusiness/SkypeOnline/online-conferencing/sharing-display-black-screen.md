@@ -1,6 +1,6 @@
 ---
 title: Share your desktop displays a black screen in Skype for Business
-description: When you use the “Share your desktop” feature after you switch to a second monitor in Windows 7, a Skype for Business user sees only a black screen, not the shared desktop. A workaround is provided.
+description: When you use the "Share your desktop" feature after you switch to a second monitor in Windows 7, a Skype for Business user sees only a black screen, not the shared desktop. A workaround is provided.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal

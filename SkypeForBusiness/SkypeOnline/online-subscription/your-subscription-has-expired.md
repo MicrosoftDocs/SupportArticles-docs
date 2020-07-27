@@ -23,7 +23,7 @@ When you use Skype for Business Online (formerly Lync Online), you receive the 
 
 **Your subscription has expired.**
 
-![Screen shot of the Your subscription has expired message ](https://support.microsoft.com/Library/Images/3008656.jpg)
+![Screen shot of the Your subscription has expired message](./media/your-subscription-has-expired/expired-message.png)
 
 ## Solution 
 
@@ -44,15 +44,15 @@ To resolve this issue, take one of the following actions:
 
 1. To reactivate Office, click **Sign In** in the **Your subscription has expired** dialog box. In the **Activate Office** dialog box, enter your Office 365 email address, as shown in the following screen shot:
  
-    ![Screen shot of the Activate Office dialog ](https://support.microsoft.com/Library/Images/3008531.jpg)    
+    ![Screen shot of the Activate Office dialog](./media/your-subscription-has-expired/active-office.png)    
 2. After you enter your email address and password, select a product from the list:
 
-    ![Screen shot of the Choose a Product dialog ](https://support.microsoft.com/Library/Images/3008532.jpg)    
+    ![Screen shot of the Choose a Product dialog](./media/your-subscription-has-expired/choose-product.png)    
 3. When you try to run Lync 2013, you receive the following message:  
 
     **The products we found in your account can't be used to activate Lync.**
  
-    ![Screen shot of the Products we found in your account can't be used to activate Lync message ](https://support.microsoft.com/Library/Images/3008657.jpg)
+    ![Screen shot of the Products we found in your account can't be used to activate Lync message](./media/your-subscription-has-expired/activate-lync-message.png)
 
     Click **Help** to be directed to the Office 365 Downloads page, where you can then install Lync Basic 2013.    
   

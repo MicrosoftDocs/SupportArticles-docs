@@ -24,6 +24,8 @@ search.appverid: MET150
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
+This article fixes errors when you update data in an Access form.
+
 _Original KB number:_ &nbsp; 328828
 
 > [!NOTE]
@@ -72,19 +74,5 @@ When you try to update data in a query or in a form, you may receive one of the 
 ## Troubleshooting information about problems that may occur when you update data in a form
 
 - You cannot update data in a form if the form is based on a stored procedure with more than one table.
-- You cannot update data in a form when you try to update data on a data access page, and one of the following conditions is true:
-
-  - The data source of the page does not have a primary key, a unique constraint, or a unique index.
-  - There is no primary key, no unique constraint, or no unique index in the schema of the page.
-  - The page does not have a RECORD NAVIGATION control.
-  
-  To resolve these problems, take the appropriate action from the following list:
-
-  - Add a primary key, a unique constraint, or a unique index to the data source of the page.
-  - Add a primary key, a unique constraint, or a unique index to the schema of the page.
-
-    To add one of these fields to the schema, add a primary key, a unique constraint, or a unique index field to the design of the page. This automatically adds the field to the schema of the page. If you do not want this field to appear on the page, delete it from the page. This permits the field to remain in the schema.
-
-  - Add a RECORD NAVIGATION control to the page.
 
 - You cannot update data in a form if the form is based on an ActiveX Data Objects (ADO) recordset. Access forms permit you to edit data from an ADO recordset if the ADO recordset is created by using a combination of the MSDataShape and the SQL Server OLEDB providers.

@@ -43,25 +43,25 @@ The Support and Recovery Assistant app runs on Windows PCs and can help you iden
 Are you behind a proxy server? If you're not sure, ask your administrator. If so, you (or your administrator) might have to change the proxy settings for Windows HTTP clients. To do this, follow these steps: 
  
 1. Open a Command Prompt window as an administrator. To do this, click **Start**, type cmd.exe in the search box, right-click **cmd.exe** in the list, and then click **Run as administrator**.    
-2. Type the following command, and then press Enter:   
+2. Type the following command, and then press Enter:
     ```powershell
     netsh winhttp set proxy < Address of proxy server >
     ```
 
 ### Step 3. Check whether you're behind a firewall  
 
-Are you behind a firewall? If you're not sure, ask your administrator. If you're behind a firewall, it might have to be configured to enable access to the following: 
- 
-- https://officecdn.microsoft.com    
-- https://ols.officeapps.live.com/olsc    
-- https://activation.sls.microsoft.com    
-- https://odc.officeapps.live.com    
-- https://crl.microsoft.com/pki/crl/products/MicrosoftProductSecureServer.crl    
-- https://crl.microsoft.com/pki/crl/products/MicrosoftRootAuthority.crl    
-- https://crl.microsoft.com/pki/crl/products/MicrosoftProductSecureCommunicationsPCA.crl    
-- https://www.microsoft.com/pki/crl/products/MicrosoftProductSecureCommunicationsPCA.crl    
-- go.microsoft.com    
-- office15client.microsoft.com
+Are you behind a firewall? If you're not sure, ask your administrator. If you're behind a firewall, it might have to be configured to enable access to the following:
+
+- `https://officecdn.microsoft.com`
+- `https://ols.officeapps.live.com/olsc`
+- `https://activation.sls.microsoft.com`
+- `https://odc.officeapps.live.com`
+- `https://crl.microsoft.com/pki/crl/products/MicrosoftProductSecureServer.crl`
+- `https://crl.microsoft.com/pki/crl/products/MicrosoftRootAuthority.crl`
+- `https://crl.microsoft.com/pki/crl/products/MicrosoftProductSecureCommunicationsPCA.crl`
+- `https://www.microsoft.com/pki/crl/products/MicrosoftProductSecureCommunicationsPCA.crl`
+- `go.microsoft.com`
+- `office15client.microsoft.com`
  
 Each firewall will have a different method for enable access to these URIs. Check your software's documentation for instructions or ask your administrator to do this for you. 
 
@@ -70,7 +70,7 @@ For more information about Microsoft 365 Apps for enterprise URLs and IP address
 ### Step 4. Check whether you have the appropriate license   
  
 1. Sign in to the Office 365 portal.     
-2. Click **Settings** (![setting](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4056030_en_1)), and then click **Office 365 settings**.    
+2. Click **Settings** (![setting](./media/issue-when-activate-office-from-office-365/setting-icon.png)), and then click **Office 365 settings**.    
 3. Locate the **Assigned licenses** area.    
 4. If you see **The latest desktop version of Office**, then you have an Office subscription assigned correctly.    
 5. If you don't see **The latest desktop version of Office**, contact your administrator or see the Office article [What Office 365 business product or license do I have?](https://support.office.com/article/What-Office-365-business-product-or-license-do-I-have-f8ab5e25-bf3f-4a47-b264-174b1ee925fd) 

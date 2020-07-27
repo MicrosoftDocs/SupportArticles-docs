@@ -18,7 +18,7 @@ search.appverid:
 - MET150
 ---
 
-# The value of “WhenCreated” is changed in Exchange Online
+# The value of "WhenCreated" is changed in Exchange Online
 
 ## Symptoms
 

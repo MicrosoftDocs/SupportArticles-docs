@@ -45,10 +45,10 @@ Try the following options to help determine the root cause of your problem in Wo
 ![Option 1](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-1.png)
 
 </a>
-</td><td><b><a href="#option1">Test printing in other documents</a></b>
+</td><td>**<a href="#option1">Test printing in other documents</a>**
 <ol>
 <li>Open a new blank document.</li>
-<li>Type the following text: <b>=rand(10)</b>.</li>
+<li>Type the following text: **=rand(10)**.</li>
 <li>Press Enter.</li>
 <li>Try to print again.</li>
 </ol>
@@ -62,12 +62,12 @@ Try the following options to help determine the root cause of your problem in Wo
 
 </a>
 </td>
-<td><b><a href="#option2">Test printing in other programs: WordPad</a></b>
+<td>**<a href="#option2">Test printing in other programs: WordPad</a>**
 <ol>
 <li>Open WordPad.</li>
-<li>In a new document, type <b>This is a test</b>.</li>
-<li>On the <b>File</b> menu, select <b>Print</b>.</li>
-<li>Select <b>OK</b> or <b>Print</b> to print the file.</li>
+<li>In a new document, type **This is a test**.</li>
+<li>On the **File** menu, select **Print**.</li>
+<li>Select **OK** or **Print** to print the file.</li>
 </ol>
 </td>
 </tr>
@@ -79,14 +79,14 @@ Try the following options to help determine the root cause of your problem in Wo
 
 </a>
 </td>
-<td><b><a href="#option3">Repair the Word program files</a></b>
+<td>**<a href="#option3">Repair the Word program files</a>**
 <ol>
 <li>Exit all Office programs.</li>
-<li>Select <b>Start</b>, and then type <b>add</b>.</li>
-<li>Select <b>Add or Remove Programs</b>.</li>
-<li>Under <b>Apps & features</b>, select <b>Microsoft Office Word</b>.</li>
-<li>Select <b>Modify</b>.</li>
-<li>Select <b>Online Repair</b>, then follow instructions to repair the programs.</li>
+<li>Select **Start**, and then type **add**.</li>
+<li>Select **Add or Remove Programs**.</li>
+<li>Under **Apps & features**, select **Microsoft Office Word**.</li>
+<li>Select **Modify**.</li>
+<li>Select **Online Repair**, then follow instructions to repair the programs.</li>
 </ol>
 
 </td>
@@ -99,14 +99,14 @@ Try the following options to help determine the root cause of your problem in Wo
 
 </a>
 </td>
-<td><b><a href="#option4">Test for problems in Windows</a></b>
+<td>**<a href="#option4">Test for problems in Windows</a>**
 
 <ol>
 <li>
 Remove all media (USB drive, DVD, CD) from your computer.</li>
-<li>Select <b>Start</b>, select the <b>Power</b> button, and then select <b>Restart</b>.</li>
- <li>Press and hold <b>F8</b> key as your computer restarts.</li>
-<li>On the <b>Advanced Boot Options</b> screen, select <b>Safe Mode</b>, and then press Enter.</li>
+<li>Select **Start**, select the **Power** button, and then select **Restart**.</li>
+ <li>Press and hold **F8** key as your computer restarts.</li>
+<li>On the **Advanced Boot Options** screen, select **Safe Mode**, and then press Enter.</li>
  <li>Sign in to your computer by using administrative credentials.</li>
  <li>Try printing again.</li>
 </ol>
@@ -121,26 +121,26 @@ Remove all media (USB drive, DVD, CD) from your computer.</li>
 
 </a>
 </td>
-<td><b><a href="#option5">Test printing with different print drivers</a></b>
+<td>**<a href="#option5">Test printing with different print drivers</a>**
 <ol>
-<li>Select <b>Start</b> > <b>Settings</b>.
-<li>Select <b>Devices</b> > <b>Printers & scanners</b>.</li>
-<li>Select <b>Add a printer or scanner</b>.</li>
-<li>Select <b>The printer that I wanted isn't listed.</b></li>
-<li>On the **Find a printer by other options** screen, select <b>Add a local printer or network printer with manual settings.</b>    Select <b>Next</b>.</li>
-<li>Make sure that the <b>Use an existing port</b> check box is selected, then change the list option to <b>File: (Print to file)</b>.</li>
-<li>Select <b>Next</b>.</li>
-<li>Under Manufacturer, select <b>Generic</b>.</li>
-<li>Under <b>Printers</b>, select <b>Generic/Text Only</b>, and then select <b>Next</b>.</li>
-<li>On the <b>Type a printer name</b> screen, leave the name as <b>Generic/Text Only</b>, and select <b>Next</b>.</li>
-<li>On the <b>Printer Sharing</b> screen, select <b>Share this printer so that others on your network can find and use it.</b></li>
-<li>Leave the default <b>Share</b> name, and select <b>Next</b>.</li>
-<li>Select <b>Finish</b>.</li>
+<li>Select **Start** > **Settings**.
+<li>Select **Devices** > **Printers & scanners**.</li>
+<li>Select **Add a printer or scanner**.</li>
+<li>Select **The printer that I wanted isn't listed.**</li>
+<li>On the **Find a printer by other options** screen, select **Add a local printer or network printer with manual settings.**    Select **Next**.</li>
+<li>Make sure that the **Use an existing port** check box is selected, then change the list option to **File: (Print to file)**.</li>
+<li>Select **Next**.</li>
+<li>Under Manufacturer, select **Generic**.</li>
+<li>Under **Printers**, select **Generic/Text Only**, and then select **Next**.</li>
+<li>On the **Type a printer name** screen, leave the name as **Generic/Text Only**, and select **Next**.</li>
+<li>On the **Printer Sharing** screen, select **Share this printer so that others on your network can find and use it.**</li>
+<li>Leave the default **Share** name, and select **Next**.</li>
+<li>Select **Finish**.</li>
 <li>When the driver installation is finished, open a document in Word.</li>
-<li>Select <b>File</b> > <b>Print</b>.</li>
-<li>Select <b>Generic/Text Only</b> > <b>Print</b>.</li>
-<li>Change the location to <b>My Documents</b>, and name the file <b>Test.prn</b></li>
-<li>Select <b>OK</b>.</li>
+<li>Select **File** > **Print**.</li>
+<li>Select **Generic/Text Only** > **Print**.</li>
+<li>Change the location to **My Documents**, and name the file **Test.prn**</li>
+<li>Select **OK**.</li>
 </ol>
 
 </td>

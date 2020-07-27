@@ -39,7 +39,7 @@ Certificate validation failures can be tracked by enabling the CAPI2 event loggi
   Event ID: 53  
   Task Category: Retrieve Object from Network  
 
-  URL (taken from event details): https://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab
+  URL (taken from event details): `https://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab`
 
 Please refer to the "More Information" section for information about how to enable CAPI2 logging.  
 

@@ -54,10 +54,6 @@ The following documents provide best practice guidance for getting maximize thro
 
 Some background processes that manage new media (such as images and videos) may now be processed during evening and weekend hours. 
 Modified processes include: 
-
-- **360-file views.** New file uploads will not be available until the process has run after hours. 
-- **Automatic metadata tagging of images and files that include metadata.** For example, if you upload an image or file and tag it with the word "tree," the item will not be tagged with metadata until the process has run after hours.  
-- **New documents in Office Online.** Recently edited Office documents may require additional loading time when you view the document in Office Online.
 - **Video resolution.** Users may experience reduced video resolution for playback videos. 
 - **Displaying large thumbnails.** Choosing to "display items by using large thumbnails" for OneDrive Files On-Demand will display generic icons instead.
   > [!NOTE]
