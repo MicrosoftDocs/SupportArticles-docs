@@ -52,7 +52,7 @@ Follow the steps below depending on which area you are receiving the error:
 
 1. Determine what <a href="https://docs.microsoft.com/sharepoint/understanding-permission-levels" target="_blank">permission level</a> the user should have to the site (member, owner, etc.) and verify the permission via the **Check Permissions** feature.
 
-   1. To use the **Check Permissions** feature, navigate to the User.aspx page by selecting the gear icon in the upper right corner, then **Site Settings** . Below **Users and Permissions** , select **Site Permissions**.
+   1. To use the **Check Permissions** feature, navigate to the User.aspx page by selecting the gear icon in the upper right corner, then **Site Permissions**. In the flyout select **Advanced permissions settings**.
 
       For example, the full URL will resemble the following: `https://contoso.sharepoint.com/_layouts/15/user.aspx`
    1. In the top ribbon, choose **Check Permissions**.
