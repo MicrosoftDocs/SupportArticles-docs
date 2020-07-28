@@ -21,10 +21,10 @@ appliesto:
 
 You receive one of the following error messages when trying to access an externally shared resource:
 
-- > Access Denied
-- > Let us know why you need access to this site.
-- > User is not found in the directory
-- > You need permission to access this site.
+- Access Denied
+- Let us know why you need access to this site.
+- User is not found in the directory
+- You need permission to access this site.
 
 ## Solution
 
