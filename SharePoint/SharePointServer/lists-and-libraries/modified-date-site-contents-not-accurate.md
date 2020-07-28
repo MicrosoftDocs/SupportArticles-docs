@@ -1,7 +1,7 @@
 ---
 title: Modified dates on the SharePoint site contents page are not accurate
 ms.author: v-todmc
-author: todmccoy
+author: McCoyBot
 manager: dcscontentpm
 ms.date: 9/25/2019
 ms.audience: Admin

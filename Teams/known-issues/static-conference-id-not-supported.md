@@ -1,7 +1,7 @@
 ---
 title: Teams call attempts to use static conference ID
 ms.author: v-todmc
-author: todmccoy
+author: McCoyBot
 ms.date: 4/9/2020
 audience: ITPro
 ms.topic: article

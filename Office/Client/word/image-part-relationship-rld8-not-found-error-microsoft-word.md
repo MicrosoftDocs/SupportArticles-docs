@@ -1,7 +1,7 @@
 ---
 title: The image part with relationship rID8 was not found in Microsoft Word
 description: 
-author: todmccoy
+author: McCoyBot
 ms.author: v-todmc, Shuvojit.Ray
 ms.reviewer: Shuvojit.Ray
 manager: dcscontentpm

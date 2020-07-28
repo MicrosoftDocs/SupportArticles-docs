@@ -1,7 +1,7 @@
 ---
 title: Documents deleted by retention policy after workload is removed
 ms.author: v-todmc
-author: todmccoy
+author: McCoyBot
 manager: dcscontentpm
 localization_priority: Normal
 ms.date: 06/10/2020

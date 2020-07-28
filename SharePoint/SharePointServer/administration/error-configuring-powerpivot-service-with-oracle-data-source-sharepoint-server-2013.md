@@ -1,7 +1,7 @@
 ---
 title: Error when configuring a PowerPivot service with an Oracle data source in SharePoint Server 2013
 description: Resolves an error when configuring a PowerPivot service with an Oracle data source in SharePoint Server 2013.
-author: todmccoy
+author: McCoyBot
 ms.author: v-todmc
 ms.reviewer: 
 manager: dcscontentpm
