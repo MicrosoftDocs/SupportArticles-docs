@@ -167,7 +167,7 @@ Windows 10
 <td><a href="#option7">Minimizing and maximizing the window</a>
 
 1. Select the minimize button in the top-right corner of the Excel spreadsheet.
-2. In the task tray, right-click Excel, and then select your spreadsheet. (Or double click the Excel icon.)
+1. In the task tray, right-click Excel, and then select your spreadsheet. (Or double click the Excel icon.)
 
 </td></tr>
 <tr>
@@ -181,7 +181,7 @@ Windows 10
 <td><a href="#option8">Check for hidden sheets</a>
 
 1. Select the minimize button in the top-right corner of the Excel spreadsheet.
-2. In the task tray, right-click Excel, and then select your spreadsheet. (Or double click the Excel icon.)
+1. In the task tray, right-click Excel, and then select your spreadsheet. (Or double click the Excel icon.)
 
 </td>
 </tr>
@@ -377,7 +377,7 @@ To disable hardware acceleration, follow these steps:
 Minimizing and then maximizing the window can sometimes refresh the Excel page and cause any hidden data to appear.
 
 1. In the top-right corner of the Excel spreadsheet, select the minimize button.
-2. In the task tray, right-click Excel, and then select your spreadsheet. (Or double click the Excel icon.)
+1. In the task tray, right-click Excel, and then select your spreadsheet. (Or double click the Excel icon.)
 
 After your sheet is maximized, your data may appear.
 
@@ -390,9 +390,9 @@ After your sheet is maximized, your data may appear.
 An Excel sheet may inadvertently have been saved as a hidden document. To check this, follow these steps:
 
 1. Go to the **View** tab.
-2. Select **Unhide**.
-3. Select a workbook from the list.
-4  Select **OK**.
+1. Select **Unhide**.
+1. Select a workbook from the list.
+1. Select **OK**.
 
 If you still experience this problem after you try all these options, contact [Microsoft Support](https://support.microsoft.com/) for additional troubleshooting help.
 
