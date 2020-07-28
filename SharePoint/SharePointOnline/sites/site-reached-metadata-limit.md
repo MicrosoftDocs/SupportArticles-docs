@@ -3,7 +3,7 @@ title: SharePoint site metadata is at or near limit error message
 ms.author: v-todmc
 author: McCoyBot
 manager: dcscontentpm
-ms.date: 5/282020
+ms.date: 5/28/2020
 audience: Admin
 ms.topic: article
 ms.service: sharepoint-online
