@@ -1,4 +1,4 @@
-﻿---
+---
 title: Error message when an external user accepts a SharePoint Online invitation by using another account
 description: Describes an issue in which you receive an error message when an external user accepts a SharePoint Online invitation by using another account.
 author: simonxjx
@@ -21,10 +21,10 @@ appliesto:
 
 You receive one of the following error messages when trying to access an externally shared resource:
 
-- > Access Denied
-- > Let us know why you need access to this site.
-- > User is not found in the directory
-- > You need permission to access this site.
+- Access Denied
+- Let us know why you need access to this site.
+- User is not found in the directory
+- You need permission to access this site.
 
 ## Solution
 
