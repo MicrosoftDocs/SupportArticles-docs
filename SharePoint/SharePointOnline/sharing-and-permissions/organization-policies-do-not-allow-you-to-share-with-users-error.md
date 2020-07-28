@@ -31,7 +31,7 @@ This error message generally means that external sharing is turned off for your 
 ## Resolution
 
 > [!NOTE]
-> In the steps below, if you see a message that indicates you don't have permission to access a page, you may not have permission for your organization and will have to contact your SharePoint Online administrator to perform them for you.
+> In the steps below, if you see a message that indicates you don't have permission to access a page, you may not have permission for your organization and will have to contact your SharePoint administrator or Office 365 administrator to perform them for you.
 
 To resolve the issue, follow these steps:
 
@@ -40,7 +40,7 @@ To resolve the issue, follow these steps:
 1.    Sign in to https://admin.microsoft.com as a global or SharePoint admin. 
 
       > [!NOTE]
-      > -    If you have Office 365 Germany, sign in at https://portal.office.de. 
+      > - If you have Office 365 Germany, sign in at https://portal.office.de. 
       > - If you have Office 365 operated by 21Vianet (China), sign in at https://login.partner.microsoftonline.cn/. Then select the Admin tile to open the admin center.
 
 2.    In the left pane, under **Admin centers**, select **SharePoint**. (You might need to select **Show all** to see the list of admin centers.)
