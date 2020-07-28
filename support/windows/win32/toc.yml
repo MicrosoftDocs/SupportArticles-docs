@@ -91,6 +91,8 @@
       href: receive-cd-rom-notification.md
     - name: CreateProcess can't eliminate duplicated variables
       href: createprocess-cannot-eliminate-duplicate-variables.md
+    - name: Custom virtual channel isn't supported
+      href: custom-virtual-channel-not-supported.md
     - name: Heap manager may not decommit memory
       href: heap-manager-may-not-decommit-memory.md
     - name: Get formatted strings for an event
