@@ -1,13 +1,13 @@
 ---
 title: Authorization fails for requests to the default document
-description: This article provides resolutions for the problem that authorization fails for requests to the default document even though the default document is allowed in the authorization tag.
+description: This article provides resolutions for the problem where authorization fails for requests to the default document even though the default document is allowed in the authorization tag.
 ms.date: 04/17/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Site behavior and performance
 ms.technology: iis
 ---
 # Authorization fails for requests to the default document in IIS 7.0 and later versions
 
-This article helps you resolve the problem that authorization doesn't work for the requests to a default document in Microsoft Internet Information Services (IIS) 7.0 and later versions.
+This article helps you resolve the problem where authorization doesn't work for the requests to a default document in Microsoft Internet Information Services (IIS) 7.0 and later versions.
 
 _Original product version:_ &nbsp; Internet Information Services 7.0 and later versions  
 _Original KB number:_ &nbsp; 2620604

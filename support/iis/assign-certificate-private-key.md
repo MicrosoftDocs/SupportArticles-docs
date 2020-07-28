@@ -2,7 +2,7 @@
 title: Assign a private key to a new certificate
 description: This article describes how to recover a private key after you use the Certificates Management Console snap-in to delete the original certificate in IIS.
 ms.date: 03/23/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: Development
 ms.topic: how-to
 ---
 # Assign a private key to a new certificate after deleting the original certificate in IIS

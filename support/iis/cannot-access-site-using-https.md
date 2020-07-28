@@ -1,12 +1,12 @@
 ---
 title: Error page can't be displayed
-description: This article describes a problem that an error (Page cannot be displayed) occurs when you try to access an IIS site by using HTTPS after an exported certificate is installed on a Web site.
+description: This article describes an error (Page cannot be displayed) that occurs when you try to access an IIS site by using HTTPS after an exported certificate is installed on a Web site.
 ms.date: 05/28/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Health, diagnostic, and performance features
 ---
 # Error when you try to access a site by using HTTPS: Page cannot be displayed
 
-This article helps you resolve the problem that an error (Page cannot be displayed) occurs when you try to access a site by using Hypertext Transfer Protocol Secure (HTTPS).
+This article helps you resolve the error (Page cannot be displayed) that occurs when you try to access a site by using Hypertext Transfer Protocol Secure (HTTPS).
 
 _Original product version:_ &nbsp; Internet Information Services  
 _Original KB number:_ &nbsp; 824035

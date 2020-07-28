@@ -2,7 +2,7 @@
 title: Add an HTTP response header to a web site
 description: This article explains how to add a custom HTTP response header to a Web site that is hosted by IIS 7.0, 6.0, or earlier versions of IIS.
 ms.date: 03/27/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: Development
 ms.topic: how-to
 ---
 # Add a custom HTTP response header to a web site that is hosted by IIS

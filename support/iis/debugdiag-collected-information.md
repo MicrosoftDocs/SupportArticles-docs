@@ -2,7 +2,7 @@
 title: Information collected by DebugDiag
 description: This article describes the information on what is collected in DebugDiag Diagnostic.
 ms.date: 03/19/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: Health, diagnostic, and performance features
 ms.topic: article
 ---
 # DebugDiag 1.2 installation and data collector

@@ -1,12 +1,12 @@
 ---
 title: FIM 2010 password reset issue
-description: This article provides resolutions for the problem that FIM is unable to reset passwords on a group of user objects.
+description: This article provides resolutions for the problem where FIM is unable to reset passwords on a group of user objects.
 ms.date: 03/24/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: IISAdmin service and Inetinfo process operation
 ---
 # Forefront Identity Manager 2010 password reset issue
 
-This article helps you resolve the problem that Forefront Identity Manager is unable to reset passwords on a group of user objects.
+This article helps you resolve the problem where Forefront Identity Manager is unable to reset passwords on a group of user objects.
 
 _Original product version:_ &nbsp; Forefront Identity Manager 2010  
 _Original KB number:_ &nbsp; 2028194

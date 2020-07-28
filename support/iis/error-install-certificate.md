@@ -1,12 +1,12 @@
 ---
 title: Errors occur when you install a certificate
-description: This article describes the problem that you receive an error message when you try to install a certificate by using IIS Manager, and provides a resolution.
+description: This article describes the problem where you receive an error message when you try to install a certificate by using IIS Manager, and provides a resolution.
 ms.date: 03/31/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: WWW authentication and authorization
 ---
 # Errors when you try to install a certificate by using IIS 7.0 Manager
 
-This article helps you resolve the problem that an unexpected runtime error may be thrown when you try to install a certificate by using Microsoft Internet Information Services (IIS) 7.0 Manager
+This article helps you resolve the problem where an unexpected runtime error may be thrown when you try to install a certificate by using Microsoft Internet Information Services (IIS) 7.0 Manager
 
 _Original product version:_ &nbsp; Windows Server 2008 Service Pack 2, Internet Information Services 7.0  
 _Original KB number:_ &nbsp; 959216

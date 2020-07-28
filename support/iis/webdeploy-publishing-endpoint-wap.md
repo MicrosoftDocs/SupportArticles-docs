@@ -1,8 +1,8 @@
 ---
 title: Web Deploy publishing endpoint is changed
-description: This article describes a change in functionality that"s provided by Windows Azure Pack.
+description: This article describes a change in functionality that's provided by Windows Azure Pack.
 ms.date: 03/19/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: Deployment and migration
 ms.topic: article
 ---
 # WebDeploy publishing endpoint is changed in WAP-Websites [UR6]

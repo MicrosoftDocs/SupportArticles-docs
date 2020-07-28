@@ -1,14 +1,14 @@
 ---
 title: Web browsers can't connect by using SSL
-description: This article provides resolutions for the problem that you cannot use a web browser to view a website by using SSL after KB2661254 is installed. 
+description: This article provides resolutions for the problem where you cannot use a web browser to view a website by using SSL after KB2661254 is installed. 
 ms.date: 04/07/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Site behavior and performance
 ms.technology: iis
 ms.reviewer: radomirz, bretb, mlaing, jtinder
 ---
 # Web browsers can't connect to a website by using SSL with KB2661254 installed
 
-This article helps you resolve the problem that web browsers can't connect to a website by using Secure Sockets Layer (SSL) in Internet Explorer.
+This article helps you resolve the problem where web browsers can't connect to a website by using Secure Sockets Layer (SSL) in Internet Explorer.
 
 _Original product version:_ &nbsp; Internet Information Services 8.0, Internet Explorer 10, Internet Explorer 9  
 _Original KB number:_ &nbsp; 2744241
