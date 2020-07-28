@@ -1,7 +1,7 @@
 ---
 title: Error when changing O365 site logo in SharePoint
 ms.author: v-todmc
-author: todmccoy
+author: McCoyBot
 manager: dcscontentpm
 ms.date: 4/16/2020
 audience: Admin

@@ -1,7 +1,7 @@
 ---
 title: Everyone except external users group is re-added to Visitors or Members group on Office 365 public group website 
 ms.author: v-todmc
-author: todmccoy
+author: McCoyBot
 manager: dcscontentpm
 ms.date: 11/7/2019
 audience: Admin

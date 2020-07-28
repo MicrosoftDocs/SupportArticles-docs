@@ -1,7 +1,7 @@
 ---
 title: Content Not Yet Available error in OneNote
 ms.author: v-todmc
-author: todmccoy
+author: McCoyBot
 manager: dcscontentpm
 ms.date: 4/24/2020
 audience: Admin

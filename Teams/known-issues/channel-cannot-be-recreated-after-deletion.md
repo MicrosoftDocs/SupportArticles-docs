@@ -1,7 +1,7 @@
 ---
 title: Teams channel can't be recreated after it's deleted
 ms.author: v-todmc
-author: todmccoy
+author: McCoyBot
 ms.date: 4/9/2020
 audience: ITPro
 ms.topic: article
