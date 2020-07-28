@@ -2,12 +2,12 @@
 title: HTTP error 401.1 with pre-authentication headers
 description: An unexpected 401.1 status is returned when you use Pre-Authentication headers with Internet Explorer and IIS.
 ms.date: 04/03/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: WWW authentication and authorization
 ms.reviewer: bretb, mlaing
 ---
 # An unexpected 401.1 status is returned when you use Pre-Authentication headers with Internet Explorer and IIS
 
-This article helps you resolve the problem that an unexpected 401.1 status is returned with Pre-Authentication headers when you use Internet Explorer to browser to a web application hosted on Microsoft Internet Information Services (IIS).
+This article helps you resolve the problem where an unexpected 401.1 status is returned with Pre-Authentication headers when you use Internet Explorer to browser to a web application hosted on Microsoft Internet Information Services (IIS).
 
 _Original product version:_ &nbsp; Internet Information Services 8.0, Internet Explorer 10, 9  
 _Original KB number:_ &nbsp; 2749007

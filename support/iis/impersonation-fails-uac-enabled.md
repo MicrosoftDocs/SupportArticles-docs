@@ -1,13 +1,13 @@
 ---
 title: Impersonation fails when UAC is enabled
-description: This article provides resolutions for the problem that an impersonation fails with IIS Express when UAC is enabled.
+description: This article provides resolutions for the problem where an impersonation fails with IIS Express when UAC is enabled.
 ms.date: 04/03/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: WWW authentication and authorization
 ms.reviewer: robmcm
 ---
 # Impersonation fails with IIS Express when User Account Control (UAC) is enabled
 
-This article helps you resolve the problem that an impersonation fails with Microsoft Internet Information Services (IIS) Express when User Account Control (UAC) is enabled.
+This article helps you resolve the problem where an impersonation fails with Microsoft Internet Information Services (IIS) Express when User Account Control (UAC) is enabled.
 
 _Original product version:_ &nbsp; Internet Information Services Express  
 _Original KB number:_ &nbsp; 2701070

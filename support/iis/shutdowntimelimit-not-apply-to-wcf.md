@@ -1,12 +1,12 @@
 ---
 title: ShutdownTimeLimit doesn't apply to WCF
-description: This article provides workarounds for the problem that IIS application pool ShutdownTimeLimit recycle property does not apply to WAS-hosted WCF services using net.tcp.
+description: This article provides workarounds for the problem where IIS application pool ShutdownTimeLimit recycle property does not apply to WAS-hosted WCF services using net.tcp.
 ms.date: 04/07/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: WWW authentication and authorization
 ---
 # IIS application pool ShutdownTimeLimit recycle property does not apply to WAS-hosted WCF services using net.tcp
 
-This article helps you resolve the problem that Microsoft Internet Information Services (IIS) application pool `ShutdownTimeLimit` recycle property doesn't apply to WAS-hosted Communication Foundation (WCF) services by using net.tcp.
+This article helps you resolve the problem where Microsoft Internet Information Services (IIS) application pool `ShutdownTimeLimit` recycle property doesn't apply to WAS-hosted Communication Foundation (WCF) services by using net.tcp.
 
 _Original product version:_ &nbsp; Internet Information Services  
 _Original KB number:_ &nbsp; 2819362
