@@ -1,7 +1,7 @@
 ---
 title: BVD error when assigning a phone number to a resource account in Teams
 ms.author: v-todmc
-author: todmccoy
+author: McCoyBot
 ms.date: 4/9/2020
 audience: ITPro
 ms.topic: article

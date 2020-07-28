@@ -1,7 +1,7 @@
 ---
 title: Unable to create or edit SharePoint 2013 workflow in SharePoint Designer
 description: Resolves a situation where you cannot create or edit a SharePoint 2013 workflow in SharePoint Designer. 
-author: todmccoy
+author: McCoyBot
 ms.author: v-todmc
 manager: dcscontentpm
 localization_priority: Normal

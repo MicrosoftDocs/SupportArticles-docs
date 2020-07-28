@@ -1,7 +1,7 @@
 ---
 title: Your organization's policies do not allow you to share with these users error when sharing an item or site in SharePoint Online or OneDrive for Business 
 description: Describes a resolution to the error "Your organization's policies do not allow you to share with these users" received in SharePoint Online or OneDrive for Business.
-author: todmccoy
+author: McCoyBot
 ms.author: v-todmc
 ms.reviewer: 
 manager: dcscontentpm

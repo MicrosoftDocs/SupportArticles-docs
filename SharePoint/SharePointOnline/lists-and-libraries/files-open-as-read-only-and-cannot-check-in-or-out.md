@@ -1,6 +1,6 @@
 ﻿---
 title: SharePoint files open as read-only 
-author: todmccoy
+author: McCoyBot
 ms.author: warrenr
 ms.reviewer: salarson
 manager: dcscontentpm

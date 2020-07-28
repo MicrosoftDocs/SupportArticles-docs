@@ -29,6 +29,8 @@
       href: ../configure-mailboxes/cannot-remove-mailbox-permission-office-365.md
     - name: Enable or disable POP3, IMAP, MAPI, OWA or ActiveSync
       href: ../configure-mailboxes/pop3-imap-owa-activesync-office-365.md
+    - name: Mailbox provision delays
+      href: ../configure-mailboxes/delays-provision-mailbox-sync-changes.md
     - name: Set automatic replies
       href: ../configure-mailboxes/set-automatic-replies.md
   - name: Connecting to the Service
@@ -91,6 +93,8 @@
       href: ../groups/no-sufficient-permissions-moving-dg.md
   - name: Mailbox Migration
     items:
+    - name: "\"MAPI provider is not supported\" error in Exchange Online"
+      href: ../mailbox-migration/new-migrationendpoint-returns-error.md
     - name: Issue with Add-RecipientPermission
       href: ../mailbox-migration/issue-with-add-recipientpermission-cmdlet.md
     - name: Migrate data with Admin Center
@@ -105,6 +109,8 @@
       href: ../mailflow/tenantattribution-ndr.md
     - name: Automatically forward email in transport rule
       href: ../mailflow/autoforward-mail-exclusions-not-honored-transport-rule.md
+    - name: Inbox rule to forward emails doesn't work
+      href: ../mailflow/inbox-rule-to-forward-messages-not-work.md
   - name: Mail Delivery
     items:
     - name: 554 5.2.0 STOREDRV.Deliver.Exception
@@ -129,32 +135,28 @@
     items:
     - name: Can't see free/busy information
       href: ../move-mailboxes/cannot-see-free-busy-information.md
-  - name: Outlook Connectivity
-    items:
-    - name: Resources to fix connection issues
-      href: ../outlook-connectivity/office-365-troubleshooting-resources.md
-    - name: Sending and receiving email
-      href: ../outlook-connectivity/outlook-connection-issues.md
-  - name: Outlook Profiles
+  - name: Outlook Issues
     items:
     - name: Can't set up profile with Autodiscover
-      href: ../outlook-profiles/cannot-set-up-profile-autodiscover.md
+      href: ../outlook-issues/cannot-set-up-profile-autodiscover.md
     - name: Encrypted connection unavailable
-      href: ../outlook-profiles/encrypted-connection-unavailable.md
-  - name: Outlook Crashes
-    items:
+      href: ../outlook-issues/encrypted-connection-unavailable.md
     - name: Issues with crash or stop responding
-      href: ../outlook-crashes/crash-issues.md
-  - name: OWA Attachments
+      href: ../outlook-issues/crash-issues.md
+    - name: Resources to fix connection issues
+      href: ../outlook-issues/office-365-troubleshooting-resources.md
+    - name: Sending and receiving email
+      href: ../outlook-issues/outlook-connection-issues.md
+  - name: OWA Issues
     items:
     - name: Can't open or view attachments
-      href: ../owa-attachments/cannot-open-attachments.md
-  - name: OWA Time Zones
-    items:
+      href: ../owa-issues/cannot-open-attachments.md
     - name: Incorrect time zone in OWA
-      href: ../owa-time-zones/incorrect-setting.md
+      href: ../owa-issues/incorrect-setting.md
     - name: Incorrect time zone in read receipt
-      href: ../owa-time-zones/read-receipt-incorrect-timezone.md
+      href: ../owa-issues/read-receipt-incorrect-timezone.md
+    - name: Missing search results items
+      href: ../owa-issues/items-missing-search-results.md
   - name: Public Folders
     items:
     - name: Can't add reviewer permission to calendars
