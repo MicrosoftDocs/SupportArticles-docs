@@ -1,7 +1,7 @@
 ---
 title: File won't download in Teams
 ms.author: v-todmc
-author: todmccoy
+author: McCoyBot
 ms.date: 4/9/2020
 audience: ITPro
 ms.topic: article

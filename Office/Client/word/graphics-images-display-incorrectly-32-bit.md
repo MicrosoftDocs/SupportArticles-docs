@@ -1,7 +1,7 @@
 ---
 title: Microsoft Word 32-bit version doesn't display graphics and images correctly
 ms.author: v-todmc
-author: todmccoy
+author: McCoyBot
 manager: dcscontentpm
 ms.date: 4/16/2020
 audience: Admin
