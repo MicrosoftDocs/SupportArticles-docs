@@ -77,3 +77,4 @@ For more information on external sharing settings, see [Turn external Sharing on
 For information on the various sharing settings within M365, see [Microsoft 365 guest sharing settings reference](https://docs.microsoft.com/Office365/Enterprise/microsoft-365-guest-settings). 
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).
+
