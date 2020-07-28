@@ -18,18 +18,13 @@ appliesto:
 # Error when an external user accepts a SharePoint Online invitation by using another account
 
 ## Problem
-Consider the following scenario:
 
-- You give an external user access to a Microsoft SharePoint Online or Microsoft OneDrive for Business resource.
-- The user accepts the invitation but is signed in by using another Microsoft account at the time.
-- The user browses to the shared resource.
+You receive one of the following error messages when trying to access an externally shared resource:
 
-In this scenario, the user receives one of the following error messages:
-
-- **Access Denied**
-- **Let us know why you need access to this site.**
-- **User is not found in the directory**
-- **You need permission to access this site.**
+- > Access Denied
+- > Let us know why you need access to this site.
+- > User is not found in the directory
+- > You need permission to access this site.
 
 ## Solution
 
