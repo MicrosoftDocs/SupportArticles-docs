@@ -2,7 +2,7 @@
 title: Uninstall Visual Studio 2012
 description: This article describes how to uninstall Visual Studio 2012 and its related packages, and how to perform a force uninstall.
 ms.date: 04/13/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Installation
 ms.reviewer: heaths, davguy, kelber
 ms.topic: how-to
 ---

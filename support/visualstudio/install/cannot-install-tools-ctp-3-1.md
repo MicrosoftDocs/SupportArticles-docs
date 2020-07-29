@@ -2,12 +2,12 @@
 title: Can't install tools for Apache Cordova CTP 3.1
 description: This article describes a problem in which you can't install Visual Studio Tools for Apache Cordova CTP 3.1 in Visual Studio 2013.
 ms.date: 04/27/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: Third-party tools installed with Visual Studio
 ms.reviewer: pchapman
 ---
 # You can't install Visual Studio Tools for Apache Cordova CTP 3.1 in Visual Studio 2013
 
-This article helps you resolve the problem that you can't install Visual Studio Tools for Apache Cordova community technology preview (CTP) 3.1 in Microsoft Visual Studio 2013.
+This article helps you resolve the problem where you can't install Visual Studio Tools for Apache Cordova community technology preview (CTP) 3.1 in Microsoft Visual Studio 2013.
 
 _Original product version:_ &nbsp; Visual Studio 2013  
 _Original KB number:_ &nbsp; 3014133

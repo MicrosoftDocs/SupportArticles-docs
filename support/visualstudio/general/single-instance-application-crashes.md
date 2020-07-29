@@ -2,12 +2,12 @@
 title: Single instance application crashes
 description: This article provides a resolution to solve the problem that single instance application crashes. This problem occurs if the application uses the WindowsFormsApplicationBase.
 ms.date: 04/27/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Language or compilers
 ms.reviewer: rachanr
 ---
 # Single instance application crashes
 
-This article helps you resolve the problem that single instance application crashes if the application uses `WindowsFormsApplicationBase`.
+This article helps you resolve the problem where single instance application crashes if the application uses `WindowsFormsApplicationBase`.
 
 _Original product version:_ &nbsp; Visual C#, Visual Basic.NET  
 _Original KB number:_ &nbsp; 2834636

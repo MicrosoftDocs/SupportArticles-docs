@@ -7,7 +7,7 @@ ms.reviewer: acabello, daleche
 ---
 # Alternate credentials stop working for existing Visual Studio Online account users
 
-This article helps you resolve a problem that alternate credentials don't work for existing Visual Studio Online account users that are connected to an Azure Active Directory (AAD).
+This article helps you resolve a problem where alternate credentials don't work for existing Visual Studio Online account users that are connected to an Azure Active Directory (AAD).
 
 _Original product version:_ &nbsp; Azure DevOps Services Premium  
 _Original KB number:_ &nbsp; 2991274

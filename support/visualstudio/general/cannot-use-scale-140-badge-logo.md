@@ -1,13 +1,13 @@
 ---
 title: Can't use the Scale-140 badge logo
-description: Works around issues in which you can't use the Scale-140 badge logo in Visual Studio 2012 Update 1.
+description: Works around problems in which you can't use the Scale-140 badge logo in Visual Studio 2012 Update 1.
 ms.date: 04/27/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Language or compilers
 ms.reviewer: pchapman, rezac, rilee
 ---
 # You can't use the Scale-140 badge logo in Visual Studio 2012 Update 1
 
-This article helps you resolve a problem that you can't use the Scale-140 badge logo in Microsoft Visual Studio 2012 Update 1.
+This article helps you resolve a problem where you can't use the Scale-140 badge logo in Microsoft Visual Studio 2012 Update 1.
 
 _Original product version:_ &nbsp; Visual Studio Express 2012 for Windows 8, Visual Studio Premium 2012, Visual Studio Ultimate 2012  
 _Original KB number:_ &nbsp; 2792380

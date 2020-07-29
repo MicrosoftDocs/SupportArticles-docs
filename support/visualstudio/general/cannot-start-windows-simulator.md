@@ -2,12 +2,12 @@
 title: Can't start Windows Simulator after an upgrade
 description: Resolves a problem in which you can't start Windows Simulator in Visual Studio 2012 after you upgrade to Windows 8.1.
 ms.date: 04/27/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Tools and utilities
 ms.reviewer: sbonev, meyoung
 ---
 # Can't start Windows Simulator after you upgrade to Windows 8.1 in Visual Studio 2012
 
-This article helps you resolve the problem that you can't start Windows Simulator in Microsoft Visual Studio 2012 after you upgrade to Windows 8.1.
+This article helps you resolve the problem where you can't start Windows Simulator in Microsoft Visual Studio 2012 after you upgrade to Windows 8.1.
 
 _Original product version:_ &nbsp; Visual Studio 2012  
 _Original KB number:_ &nbsp; 2892596

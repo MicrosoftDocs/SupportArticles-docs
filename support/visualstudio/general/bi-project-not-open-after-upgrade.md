@@ -1,13 +1,13 @@
 ---
 title: Can't open a BI project after an upgrade
-description: This article describes an issue in which you can't open a Business Intelligence project. This issue occurs after you upgrade the project to the Visual Studio 2010 format.
+description: This article describes a problem in which you can't open a Business Intelligence project. This problem occurs after you upgrade the project to the Visual Studio 2010 format.
 ms.date: 04/28/2020
 ms.prod-support-area-path:
 ms.reviewer: sivah
 ---
 # You can't open a BI project after you upgrade the project to the format that is used by Visual Studio 2010
 
-This article helps you resolve a problem that you can't open a Business Intelligence (BI) project after you upgrade the project to the Microsoft Visual Studio 2010 format.
+This article helps you resolve a problem where you can't open a Business Intelligence (BI) project after you upgrade the project to the Microsoft Visual Studio 2010 format.
 
 _Original product version:_ &nbsp; Visual Studio 2010  
 _Original KB number:_ &nbsp; 983332

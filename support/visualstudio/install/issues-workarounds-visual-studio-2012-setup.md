@@ -2,7 +2,7 @@
 title: Common issues in Visual Studio 2012 setup
 description: This article describes common problems during Visual Studio installation, and provides suggested workarounds.
 ms.date: 04/15/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Installation
 ---
 # Common issues and workarounds in Visual Studio 2012 setup
 

@@ -2,13 +2,13 @@
 title: Silverlight doesn't show DRM protected subtitles
 description: This article describes that Silverlight doesn't display DRM protected subtitles.
 ms.date: 04/30/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Silverlight
 ms.reviewer: ddixon
 ms.topic: article
 ---
 # Silverlight supports for DRM protected subtitles
 
-This article explains a problem that it doesn't show the subtitles when you play a Digital Rights Management (DRM) protected video in Microsoft Silverlight.
+This article explains a problem where it doesn't show the subtitles when you play a Digital Rights Management (DRM) protected video in Microsoft Silverlight.
 
 _Original product version:_ &nbsp; Silverlight  
 _Original KB number:_ &nbsp; 2831298

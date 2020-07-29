@@ -1,13 +1,13 @@
 ---
 title: VBScript type mismatch error
-description: Describes an issue that when using VBScript to perform a numeric comparison or calculation on an adNumeric (131) field type, type mismatch error occurs.
+description: Describes a problem that when using VBScript to perform a numeric comparison or calculation on an adNumeric (131) field type, type mismatch error occurs.
 ms.date: 04/13/2020
 ms.prod-support-area-path: 
 ms.reviewer: estraley, jayapst
 ---
 # VBScript runtime error (Type Mismatch) when you perform a numeric comparison on an adNumeric field type
 
-This article helps you to resolve an problem that an error (type mismatch) occurs when you use Visual Basic Scripting Edition (VBScript) to perform a numeric comparison or calculation on an `adNumeric` (131) field type.
+This article helps you to resolve an error (type mismatch) that occurs when you use Visual Basic Scripting Edition (VBScript) to perform a numeric comparison or calculation on an `adNumeric` (131) field type.
 
 _Original product version:_ &nbsp; Visual Basic Script  
 _Original KB number:_ &nbsp; 306916

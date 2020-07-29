@@ -1,8 +1,8 @@
 ---
 title: Warnings about an untrusted certificate
-description: Describes an issue that triggers warnings about an untrusted certificate after you install Visual Studio 2015 Update 3. Provides a resolution.
+description: Describes a problem that triggers warnings about an untrusted certificate after you install Visual Studio 2015 Update 3. Provides a resolution.
 ms.date: 04/22/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: Installation
 ms.reviewer: soshir, jarrettr
 ---
 # Warnings about an untrusted certificate after you install Visual Studio 2015 Update 3

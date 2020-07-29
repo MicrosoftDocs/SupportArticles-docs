@@ -2,12 +2,12 @@
 title: Can't start Windows Simulator in Windows 8.1
 description: This article resolves a problem in which you can't start the Windows Simulator in Visual Studio 2013 after you upgrade to Windows 8.1.
 ms.date: 04/27/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Debuggers and analyzers
 ms.reviewer: pchapman, leolee, meyoung, lukewest
 ---
 # Error when you debug an app in Visual Studio 2013: Windows Simulator needs your current credentials
 
-This article helps you resolve the problem that an error (Windows Simulator needs your current credentials) occurs when you debug an app in Microsoft Visual Studio 2013. This issue occurs after you upgrade to Windows 8.1.
+This article helps you resolve the error (Windows Simulator needs your current credentials) that occurs when you debug an app in Microsoft Visual Studio 2013. This problem occurs after you upgrade to Windows 8.1.
 
 _Original product version:_ &nbsp; Visual Studio Professional 2013  
 _Original KB number:_ &nbsp; 2898148
