@@ -13,7 +13,7 @@ Describes a scenario where an Input Method Editor (IME) crashes while processing
 
 An application using an IME crashes under one of these conditions:
 
-- A UI thread calls the `TranslateMessage` function as a part of the message loop.
+- A user interface (UI) thread calls the `TranslateMessage` function as a part of the message loop.
 - Another thread sends a window message to a window owned by the UI thread.
 - The window procedure handling the window message sent by the other thread calls an `Imm*` function, such as `ImmSetOpenStatus`.
 
