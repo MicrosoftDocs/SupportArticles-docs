@@ -31,7 +31,7 @@ This error message generally means that external sharing is turned off for your 
 ## Resolution
 
 > [!NOTE]
-> In the steps below, if you see a message that indicates you don't have permission to access a page, you may not have permission for your organization and will have to contact your SharePoint administrator or Office 365 administrator to perform them for you.
+> When following the below steps, if you see a message that indicates you don't have permission to proceed, you’ll have to contact your SharePoint administrator or Office 365 administrator to perform the resolution steps for you.
 
 To resolve the issue, follow these steps:
 
