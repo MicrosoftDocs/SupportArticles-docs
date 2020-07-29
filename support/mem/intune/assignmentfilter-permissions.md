@@ -21,8 +21,9 @@ The AssignmentFilter permissions include the following permissions:
 - Update
 
 These permissions apply to the following built-in roles:
+
 | Role | Permissions |
-| --- | --- |
+| --- | :---: |
 | Policy and Profile Manager | Create, Delete, Read, Update |
 | School Administrator | Create, Delete, Read, Update |
 | Help Desk Operator | Read |
