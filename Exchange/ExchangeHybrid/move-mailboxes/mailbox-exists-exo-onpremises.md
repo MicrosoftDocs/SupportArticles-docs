@@ -64,7 +64,17 @@ This scenario would be most applicable if the user mailbox was previously migrat
     Set-RemoteMailbox "user identity" -ExchangeGuid "Exchange guid value of Exchange Online mailbox"
     ```
 
-7. Restore the contents of the disconnected mailbox to Exchange Online.
+7. Restore the contents of the disconnected mailbox to Exchange Online. For the Credentials, you must specify an On-Premises Exchange admin account. To perform a remote restore,the administrator must be:
+
+A member of the Domain Admins group in Active Directory Domain Services (AD DS) in the on-premises organization.
+
+or
+
+A member of the Exchange Recipients Administrators group in Active Directory in the on-premises organization.
+
+or
+
+A member of the Organization Management or Recipient Management group in Exchange 2010 or above.
 
     ```powershell
     $cred = Get-Credential
