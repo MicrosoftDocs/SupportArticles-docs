@@ -30,19 +30,23 @@ This error message generally means that external sharing is turned off for your 
 
 ## Resolution
 
+> [!NOTE]
+> When following the below steps, if you see a message that indicates you don't have permission to proceed, you’ll have to contact your SharePoint administrator or Office 365 administrator to perform the resolution steps for you.
+
 To resolve the issue, follow these steps:
 
 ### Check the external sharing setting for your organization
 
-1.    Sign in to https://admin.microsoft.com as a global or SharePoint admin. (If you see a message that you don't have permission to access the page, you don't have Office 365 administrator permissions for your organization.)
+1.    Sign in to https://admin.microsoft.com as a global or SharePoint admin. 
 
-> [!NOTE]
-> -    If you have Office 365 Germany, sign in at https://portal.office.de. 
-> - If you have Office 365 operated by 21Vianet (China), sign in at https://login.partner.microsoftonline.cn/. Then select the Admin tile to open the admin center.
+      > [!NOTE]
+      > - If you have Office 365 Germany, sign in at https://portal.office.de. 
+      > - If you have Office 365 operated by 21Vianet (China), sign in at https://login.partner.microsoftonline.cn/. Then select the Admin tile to open the admin center.
 
 2.    In the left pane, under **Admin centers**, select **SharePoint**. (You might need to select **Show all** to see the list of admin centers.)
-> [!NOTE]
-> If the classic SharePoint admin center appears, select **Open it now** at the top of the page to open the new SharePoint admin center.
+
+      > [!NOTE]
+      > If the classic SharePoint admin center appears, select **Open it now** at the top of the page to open the new SharePoint admin center.
 
 3.    In the left pane of the new SharePoint admin center, under **Policies**, select **Sharing**.
 4.    Under **External sharing**, specify your sharing level for SharePoint and OneDrive. 
@@ -73,3 +77,4 @@ For more information on external sharing settings, see [Turn external Sharing on
 For information on the various sharing settings within M365, see [Microsoft 365 guest sharing settings reference](https://docs.microsoft.com/Office365/Enterprise/microsoft-365-guest-settings). 
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).
+
