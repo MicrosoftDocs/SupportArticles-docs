@@ -13,13 +13,13 @@ Describes a scenario where an Input Method Editor (IME) crashes while processing
 
 An application using an IME crashes under one of these conditions:
 
-- The window procedure associated with an IME window processes a window message.
-- A thread sends a window message to a window owned by the thread that owns the IME window.
+- A UI thread calls the `TranslateMessage` function as a part of the message loop.
+- Another thread sends a window message to a window owned by the UI thread.
 - The window procedure handling the window message sent by the other thread calls an `Imm*` function, such as `ImmSetOpenStatus`.
 
 ## Cause
 
-Some IMEs included with Windows 10 may call the `PeekMessage` function while processing another window message. `PeekMessage` will process any pending window messages sent by other threads. This can result in a reentrancy issue when the window procedure processing the sent message calls an `Imm*` function and leaves the IME in an unexpected state.
+An IME included with Windows 10 may call the `PeekMessage` function when the IME is called by the `TranslateMessage` function to process a keyboard input. `PeekMessage` will process any pending window messages sent by other threads. This can result in a reentrancy issue when the window procedure processing the sent message calls an `Imm*` function and leaves the IME in an unexpected state.
 
 ## Workaround
 
