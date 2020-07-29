@@ -2,7 +2,7 @@
 title: MsiApplyMultiplePatches returns 1601 error
 description: This article provides a resolution for an error 1601 that occurs when the UI mode is set to Basic or None.
 ms.date: 04/27/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Installation
 ms.reviewer: kelho
 ---
 # MsiApplyMultiplePatches returns error 1601

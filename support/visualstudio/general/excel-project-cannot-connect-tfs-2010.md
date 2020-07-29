@@ -2,11 +2,11 @@
 title: Excel or Project can't connect to TFS 2010
 description: After applying Update 3 to any edition of Visual Studio 2015, or installing TFS Office Integration 2015 Update 3, you may have problems connecting from Excel or Project to TFS 2010 or TFS 2012 servers.
 ms.date: 04/24/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Team explorer/Version control
 ---
 # Excel or Project can't connect to Team Foundation Server 2010 or 2012 servers
 
-This article helps you resolve connecting issues from Microsoft Excel or Project to Team Foundation Server 2010 or 2012 servers.
+This article helps you resolve connecting problems from Microsoft Excel or Project to Team Foundation Server 2010 or 2012 servers.
 
 _Original product version:_ &nbsp; Visual Studio 2015 Update 3, Team Foundation Server 2015  
 _Original KB number:_ &nbsp; 3181963

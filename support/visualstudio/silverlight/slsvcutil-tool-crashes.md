@@ -1,8 +1,8 @@
 ---
 title: SlSvcUtil tool crashes
-description: This article resolves a problem that an error may be thrown when you use the slsvcutil.exe command line tool to generate a proxy for Windows Phone.
+description: This article resolves an error that may be thrown when you use the slsvcutil.exe command line tool to generate a proxy for Windows Phone.
 ms.date: 04/30/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Silverlight
 ms.reviewer: kagatlin
 ---
 # The slsvcutil tool crashes when Silverlight 5 is installed

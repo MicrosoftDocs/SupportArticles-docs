@@ -2,12 +2,12 @@
 title: 0xC0000094 exception in Silverlight 5 app
 description: This article introduces that in the VMWare environment, Silverlight application that uses client network stack may crash due to an unhandled divide by zero exception.
 ms.date: 04/30/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: Silverlight
 ms.reviewer: enamulkh, tref, ppratap, huanchix
 ---
 # Integer divide by zero exception (0xC0000094) may occur in a Silverlight 5 application that's running in VMWare
 
-This article helps you resolve the problem that a Silverlight application that runs in a VMWare environment crashes with a divide by zero exception (0xC0000094) when you enable client HTTP handling in it.
+This article helps you resolve the problem where a Silverlight application that runs in a VMWare environment crashes with a divide by zero exception (0xC0000094) when you enable client HTTP handling in it.
 
 _Original product version:_ &nbsp; Silverlight 5  
 _Original KB number:_ &nbsp; 2756614
@@ -18,7 +18,7 @@ With Silverlight, you can specify whether the browser or the client provides HTT
 
 > Log Name: Application  
 > Source: Application Error  
-> Description:  
+> Description: 
 > Faulting application name: IEXPLORE.EXE, version: 8.0.7600.16930, time stamp: 0x4eeae23b  
 > Faulting module name: npctrl.dll, version: 5.1.10411.0, time stamp: 0x4f851e71  
 > Exception code: 0xc0000094  

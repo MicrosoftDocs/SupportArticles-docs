@@ -3,11 +3,11 @@ title: Can't use HTTPS protocol in Release Management
 description: This article describes the problem that can occur when you configure a Release Management server to use the HTTPS protocol, and provides a resolution.
 ms.date: 04/27/2020
 ms.prod-support-area-path:
-ms.reviewer: achand, achand, daleche, muthuk, sriramb, ronai, ans, leov
+ms.reviewer: achand, daleche, muthuk, sriramb, ronai, ans, leov
 ---
 # Deployment fails when you use the HTTPS protocol in Release Management
 
-This update helps you resolve the problem that you have no option to use the HTTPS protocol in the Release Management Server Configuration tool.
+This update helps you resolve the problem where you have no option to use the HTTPS protocol in the Release Management Server Configuration tool.
 
 _Original product version:_ &nbsp; Release Management Client for Visual Studio 2013, Release Management Visual Studio 2013, Release Management for Team Foundation Server 2013  
 _Original KB number:_ &nbsp; 2905743

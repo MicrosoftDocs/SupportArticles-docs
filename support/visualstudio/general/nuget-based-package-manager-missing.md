@@ -1,13 +1,13 @@
 ---
 title: NuGet-Based Package Manager is missing
-description: This article describes a problem that NuGet-Based Microsoft Package Manager 1.5 or later isn't installed on a computer, and provides a resolution.
+description: This article describes a problem where NuGet-Based Microsoft Package Manager 1.5 or later isn't installed on a computer, and provides a resolution.
 ms.date: 04/27/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Tools and utilities
 ms.reviewer: riande
 ---
 # NuGet-Based Microsoft Package Manager is missing or out of date
 
-This article helps you resolve a problem that NuGet-Based Package Manager 1.5 or later isn't installed on a computer that is running Visual Studio or Visual Web Developer Express.
+This article helps you resolve a problem where NuGet-Based Package Manager 1.5 or later isn't installed on a computer that is running Visual Studio or Visual Web Developer Express.
 
 _Original product version:_ &nbsp; Visual Studio  
 _Original KB number:_ &nbsp; 2635185
