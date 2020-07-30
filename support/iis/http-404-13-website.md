@@ -2,12 +2,12 @@
 title: HTTP Error 404.13 when you visit website
 description: This article describes a problem that occurs because a client request contains a Content-Length header that is larger than the value that is specified for this header in the ApplicationHost.config file.
 ms.date: 04/17/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: Health, diagnostic, and performance features
 ms.reviewer: mlaing
 ---
 # HTTP Error 404.13 - CONTENT_LENGTH_TOO_LARGE when you visit a web site that is hosted on a server that is running IIS 7.0
 
-This article helps you resolve the problem that an error (HTTP Error 404.13 - CONTENT_LENGTH_TOO_LARGE) occurs when you visit a website in Internet Information Services (IIS).
+This article helps you resolve the error (HTTP Error 404.13 - CONTENT_LENGTH_TOO_LARGE) that occurs when you visit a website in Internet Information Services (IIS).
 
 _Original product version:_ &nbsp; Internet Information Services 7.0  
 _Original KB number:_ &nbsp; 942074

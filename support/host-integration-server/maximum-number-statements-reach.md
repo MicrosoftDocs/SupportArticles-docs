@@ -1,12 +1,12 @@
 ---
 title: Maximum number of statements has reached
-description: This article provides resolutions for the problem that the maximum number of statements has been reached for the current connection.
+description: This article provides resolutions for the problem where the maximum number of statements has been reached for the current connection.
 ms.date: 03/18/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Data integration (DB2, host files)
 ---
 # The maximum number of statements has been reached for the current connection
 
-This article helps you resolve the problem that insert operation fails when BizTalk Server 2010 writes e-commerce order information to DB2/AS400 and the BizTalk orchestration uses the DB2 adapter to write the information to the DB2 tables.
+This article helps you resolve the problem where insert operation fails when BizTalk Server 2010 writes e-commerce order information to DB2/AS400 and the BizTalk orchestration uses the DB2 adapter to write the information to the DB2 tables.
 
 _Original product version:_ &nbsp; Host Integration Server 2010, 2009  
 _Original KB number:_ &nbsp; 2679772

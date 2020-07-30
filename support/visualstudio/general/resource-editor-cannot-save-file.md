@@ -7,7 +7,7 @@ ms.reviewer: ScotBren, NSuhas
 ---
 # Visual Studio 2012 can't save file while you use Resource Editor
 
-This article helps you resolve the problem that Microsoft Visual Studio 2012 can't save file while you edit a Visual C++ project.
+This article helps you resolve the problem where Microsoft Visual Studio 2012 can't save file while you edit a Visual C++ project.
 
 _Original product version:_ &nbsp; Visual Studio Premium 2012, Visual Studio Ultimate 2012  
 _Original KB number:_ &nbsp; 2839032

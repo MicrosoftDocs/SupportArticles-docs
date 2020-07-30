@@ -7,7 +7,7 @@ ms.reviewer: vyedin
 ---
 # JDK is missing when you create a Xamarin-based app in Visual Studio 2015
 
-This article helps you work around a problem that Java Development Kit (JDK) is missing when you create a Xamarin Android or Xamarin.Forms app in Microsoft Visual Studio 2015.
+This article helps you work around a problem where Java Development Kit (JDK) is missing when you create a Xamarin Android or Xamarin.Forms app in Microsoft Visual Studio 2015.
 
 _Original product version:_ &nbsp; Visual Studio 2015  
 _Original KB number:_ &nbsp; 4483429

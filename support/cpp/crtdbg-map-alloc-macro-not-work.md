@@ -2,7 +2,7 @@
 title: _CRTDBG_MAP_ALLOC macro doesn't work
 description: This article explains that allocation is reported as occurring in the Crtdbg.h file on line 512 when an object is allocated by using the new operator and is dumped by using the debugging routines in the C Run-Time Library.
 ms.date: 04/22/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: C and C++ Libraries
 ms.reviewer: kayda
 ---
 # The _CRTDBG_MAP_ALLOC macro doesn't work as expected

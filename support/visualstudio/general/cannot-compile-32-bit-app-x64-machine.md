@@ -1,13 +1,13 @@
 ---
 title: Can't compile 32-bit applications on a x64 machine
-description: Provides information about resolving the issue MSBuild 4.0 or Visual Studio 2010 can't compile a 32-bit application that's targeted for .NET Framework 3.5, 3.0 or 2.0 on x64 machine.
+description: Provides information about resolving the problem MSBuild 4.0 or Visual Studio 2010 can't compile a 32-bit application that's targeted for .NET Framework 3.5, 3.0 or 2.0 on x64 machine.
 ms.date: 04/22/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: Language or compilers
 ms.reviewer: prabhatt, scotbren
 ---
 # MSBuild 4.0 or Visual Studio 2010 may fail to compile a 32-bit application targeted for .NET Framework 3.5, 3.0 or 2.0 on a x64 machine
 
-This article helps you resolve the problem that MSBuild 4.0 or Microsoft Visual Studio 2010 can't compile a 32-bit application that's targeted for .NET Framework 3.5, 3.0 or 2.0 on x64 machine.
+This article helps you resolve the problem where MSBuild 4.0 or Microsoft Visual Studio 2010 can't compile a 32-bit application that's targeted for .NET Framework 3.5, 3.0 or 2.0 on x64 machine.
 
 _Original product version:_ &nbsp; Visual Studio 2010  
 _Original KB number:_ &nbsp; 2028833

@@ -1,12 +1,12 @@
 ---
 title: Data on clipboard from Windows Forms app unavailable
-description: This article provides information about resolving an issue that the data placed on clipboard from Windows Forms Application is unavailable.
+description: This article provides information about resolving a problem where the data placed on clipboard from Windows Forms Application is unavailable.
 ms.date: 05/11/2020
 ms.prod-support-area-path: 
 ---
 # Data placed on clipboard from Windows Forms Application is unavailable
 
-This article helps you resolve the problem that the data placed on clipboard from an Windows Forms application is unavailable.
+This article helps you resolve the problem where the data placed on clipboard from an Windows Forms application is unavailable.
 
 _Original product version:_ &nbsp; Microsoft .NET Framework 4.0  
 _Original KB number:_ &nbsp; 2843635

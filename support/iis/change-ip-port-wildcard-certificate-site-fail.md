@@ -1,14 +1,14 @@
 ---
 title: Changing IP/port causes other sites to fail
-description: This article provides resolutions for the problem that other sites on the same server don't work as expected when you change the IP/port binding of a site that is configured to use a wildcard certificate.
+description: This article provides resolutions for the problem where other sites on the same server don't work as expected when you change the IP/port binding of a site that is configured to use a wildcard certificate.
 ms.date: 03/23/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: WWW authentication and authorization
 ms.technology: iis-administration
 ms.reviewer: pattys
 ---
 # Change the IP/port binding of a site that is configured to use a wildcard certificate causes other sites on the same server to fail
 
-This article helps you resolve the problem that other sites on the same server don't work as expected when you change the IP/port binding of a site that is configured to use a wildcard certificate.
+This article helps you resolve the problem where other sites on the same server don't work as expected when you change the IP/port binding of a site that is configured to use a wildcard certificate.
 
 _Original product version:_ &nbsp; Internet Information Services 7.0  
 _Original KB number:_ &nbsp; 2405568

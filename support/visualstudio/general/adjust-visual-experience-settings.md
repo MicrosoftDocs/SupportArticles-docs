@@ -2,7 +2,7 @@
 title: Adjust visual experience settings
 description: This article describes how to make visual experience settings  adjustments in Visual Studio 2010.
 ms.date: 04/24/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Integrated development environment (IDE)
 ms.reviewer: jbartlet
 ms.topic: how-to
 ---

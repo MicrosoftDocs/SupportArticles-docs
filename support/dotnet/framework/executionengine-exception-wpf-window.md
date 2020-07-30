@@ -1,13 +1,13 @@
 ---
 title: Exception when a WPF window is displayed
-description: This article provides a resolution for the problem that attempting to instantiate another WPF Window results in an unhandled exception after closing one Windows Presentation Foundation (WPF) Window.
+description: This article provides a resolution for the problem where attempting to instantiate another WPF Window results in an unhandled exception after closing one Windows Presentation Foundation (WPF) Window.
 ms.date: 05/06/2020
 ms.prod-support-area-path:
 ms.reviewer: Tatkins
 ---
 # System.ExecutionEngineException occurs when displaying WPF window
 
-This article helps you resolve the problem that attempting to instantiate another WPF Window results in an unhandled exception after closing one Windows Presentation Foundation (WPF) Window.
+This article helps you resolve the problem where attempting to instantiate another WPF Window results in an unhandled exception after closing one Windows Presentation Foundation (WPF) Window.
 
 _Original product version:_ &nbsp; Visual Studio Professional 2010  
 _Original KB number:_ &nbsp; 2691806

@@ -2,12 +2,12 @@
 title: Use priority_queue STL functions
 description: This article describes how to use the priority_queue::push, priority_queue::pop, priority_queue::empty, priority_queue::top, and priority_queue::size STL functions in Visual C++.
 ms.date: 04/24/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: C and C++ Libraries
 ms.topic: how-to
 ---
 # Use priority_queue::(push, pop, empty, top) STL functions in Visual C++
 
-This article helps you resolve the problem that how to use the `priority_queue::push`, `priority_queue::pop`, `priority_queue::empty`, `priority_queue::top`, and `priority_queue::size` STL functions in Visual C++.
+This article helps you resolve the problem where how to use the `priority_queue::push`, `priority_queue::pop`, `priority_queue::empty`, `priority_queue::top`, and `priority_queue::size` STL functions in Visual C++.
 
 _Original product version:_ &nbsp; Visual C++  
 _Original KB number:_ &nbsp; 157623

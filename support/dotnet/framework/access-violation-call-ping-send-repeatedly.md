@@ -1,13 +1,13 @@
 ---
 title: Access Violation when you call Ping.send
-description: Describes an issue that Access Violation Exception may be thrown when you call the Ping.send method repeatedly. Provides workarounds.
+description: Describes a problem where Access Violation Exception may be thrown when you call the Ping.send method repeatedly. Provides workarounds.
 ms.date: 03/23/2020
 ms.prod-support-area-path:
 ms.reviewer: tomioy
 ---
 # Access Violation exception may be thrown when you call the Ping.send method repeatedly
 
-This article provides information about resolving an issue that an unexpected runtime error or **Access Violation** exception may be thrown when you call the `Ping.send` method repeatedly.
+This article provides information about resolving a problem where an unexpected runtime error or **Access Violation** exception may be thrown when you call the `Ping.send` method repeatedly.
 
 _Original product version:_ &nbsp; Visual Studio 2010  
 _Original KB number:_ &nbsp; 2533627

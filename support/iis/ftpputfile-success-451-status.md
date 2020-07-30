@@ -1,12 +1,12 @@
 ---
 title: FtpPutFile always returns success
-description: This article provides resolutions for the problem that the WinInet FtpPutFile returns TRUE even when the operation fails with 451 status.
+description: This article provides resolutions for the problem where the WinInet FtpPutFile returns TRUE even when the operation fails with 451 status.
 ms.date: 03/23/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: Site behavior and performance
 ---
 # WinINet FtpPutFile returns success when 451 status is returned
 
-This article helps you resolve the problem that the Windows Internet (WinINet) `FtpPutFile` function still returns **TRUE** even when the operation fails with the 451 status.
+This article helps you resolve the problem where the Windows Internet (WinINet) `FtpPutFile` function still returns **TRUE** even when the operation fails with the 451 status.
 
 _Original product version:_ &nbsp; Internet Explorer 10, 9  
 _Original KB number:_ &nbsp; 2790777

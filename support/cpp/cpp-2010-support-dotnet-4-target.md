@@ -2,7 +2,7 @@
 title: Visual C++ 2010 toolset supports only .NET 4
 description: Visual C++ 2010 toolset only supports .NET Framework 4 as a target framework version.
 ms.date: 04/30/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Project/Build System
 ---
 # Visual C++ 2010 toolset supports only .NET Framework 4 as a target
 

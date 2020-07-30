@@ -7,7 +7,7 @@ ms.reviewer: Brettl
 ---
 # Known issues when you upgrade .NET Framework from version 4.5.2 to 4.6 or 4.6.1 on Windows Server 2012
 
-This article helps you resolve the problem that Microsoft .NET Framework applications can't run when you upgrade .NET Framework 4.5.2 to .NET Framework 4.6 or 4.6.1.
+This article helps you resolve the problem where Microsoft .NET Framework applications can't run when you upgrade .NET Framework 4.5.2 to .NET Framework 4.6 or 4.6.1.
 
 _Original product version:_ &nbsp; Windows Server 2012, .NET Framework 4.6.1, 4.6, 4.5.2  
 _Original KB number:_ &nbsp; 4340191

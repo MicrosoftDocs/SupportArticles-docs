@@ -1,12 +1,12 @@
 ---
 title: IIS can't start when re-enabling shared configuration
-description: This article provides workarounds for the IIS problem that re-enabling shared configuration after making changes to applicationHost.config causes IIS to fail to start.
+description: This article provides workarounds for the IIS problem where re-enabling shared configuration after making changes to applicationHost.config causes IIS to fail to start.
 ms.date: 04/16/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: WWW authentication and authorization
 ---
 # Re-enabling shared configuration after making changes to applicationHost.config causes IIS to fail to start
 
-This article helps you resolve the problem that re-enabling shared configuration after making changes to *applicationHost.config* causes Microsoft Internet Information Services (IIS) can't start.
+This article helps you resolve the problem where re-enabling shared configuration after making changes to *applicationHost.config* causes Microsoft Internet Information Services (IIS) can't start.
 
 _Original product version:_ &nbsp; Internet Information Services 7.0, 7.5  
 _Original KB number:_ &nbsp; 2565028

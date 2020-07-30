@@ -2,8 +2,8 @@
 title: Run Silverlight Configuration tool
 description: This article describes how to run the Silverlight Configuration tool in Silverlight 4 for Microsoft Windows and Apple Macintosh operating systems.
 ms.date: 04/30/2020
-ms.prod-support-area-path:
-ms.reviewer: andyriv, andyriv
+ms.prod-support-area-path: Silverlight
+ms.reviewer: andyriv
 ms.topic: how-to
 ---
 # Run the Silverlight Configuration tool in Silverlight 4

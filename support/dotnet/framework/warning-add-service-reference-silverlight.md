@@ -1,9 +1,9 @@
 ---
 title: Fail to add service reference to Silverlight project
-description: Describes an issue that you see custom tool warning when adding a service reference to a Silverlight Project. Provides a solution.
+description: Describes a problem that you see custom tool warning when adding a service reference to a Silverlight Project. Provides a solution.
 ms.date: 05/08/2020
 ms.prod-support-area-path:
-ms.reviewer: bretb, bretb, tref, ppratap, jamesche
+ms.reviewer: bretb, tref, ppratap, jamesche
 ---
 # Custom tool warning when adding a service reference to a Silverlight Project
 

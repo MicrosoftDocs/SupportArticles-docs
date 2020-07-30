@@ -2,11 +2,11 @@
 title: HTTP Bad Request error in the CLM portal
 description: This article provides resolutions for HTTP 400 errors that occur when you perform operations in the CLM portal.
 ms.date: 03/24/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: Health, diagnostic, and performance features
 ---
 # HTTP Bad Request (Request header too long) in CLM
 
-This article helps you resolve the problem that Hypertext Transfer Protocol (HTTP) bad request error occurs in the CLM portal.
+This article helps you resolve the problem where Hypertext Transfer Protocol (HTTP) bad request error occurs in the CLM portal.
 
 _Original product version:_ &nbsp; Internet Information Services  
 _Original KB number:_ &nbsp; 955585

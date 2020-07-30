@@ -2,11 +2,11 @@
 title: Can't create Object when ASP applications run
 description: This article provides resolutions for the Cannot create object error that occurs when APS applications run.
 ms.date: 02/27/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: Active Server Pages
 ---
 # Can't create Object when browsing ASP pages
 
-This article helps you resolve the problem that an error (Cannot create object) occurs when an Active Server Pages (ASP) applications run.
+This article helps you resolve the error (Cannot create object) that occurs when an Active Server Pages (ASP) applications run.
 
 _Original product version:_ &nbsp; Active Server Pages  
 _Original KB number:_ &nbsp; 201740

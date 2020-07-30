@@ -1,13 +1,13 @@
 ---
 title: HTTP Error 403.16 when you access a website
-description: This article describes the problem that an HTTP 403.16 error occurs when you try to access a website that's hosted by IIS 7.0.
+description: This article describes the problem where an HTTP 403.16 error occurs when you try to access a website that's hosted by IIS 7.0.
 ms.date: 03/26/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Health, diagnostic, and performance features
 ms.reviewer: mlaing
 ---
 # HTTP Error 403.16 when you try to access a website that's hosted on IIS 7.0
 
-This article helps you resolve the problem that an **HTTP 403.16 - Forbidden** error occurs when you access a website that's hosted on Internet Information Services (IIS) 7.0.
+This article helps you resolve the **HTTP 403.16 - Forbidden** error that occurs when you access a website that's hosted on Internet Information Services (IIS) 7.0.
 
 _Original product version:_ &nbsp; Internet Information Services 7.0  
 _Original KB number:_ &nbsp; 942061

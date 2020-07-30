@@ -2,11 +2,11 @@
 title: Errors occur when you use Web Deploy
 description: This article provides resolutions for the unexpected error that occurs when you perform Web Deploy operations remotely through IIS Manager and use WMSVC.
 ms.date: 04/01/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Deployment and migration
 ---
 # Errors when you use the Web Deployment tool as a delegated user over a remote IIS manager connection
 
-This article helps you resolve the problem that an unexpected error occurs when you use the Web Deployment Tool (Web Deploy) as a delegated user over a remote Microsoft Internet Information Services (IIS) manager connection via the Web Management Service (WMSVC).
+This article helps you resolve an unexpected error that occurs when you use the Web Deployment Tool (Web Deploy) as a delegated user over a remote Microsoft Internet Information Services (IIS) manager connection via the Web Management Service (WMSVC).
 
 _Original product version:_ &nbsp; Internet Information Services  
 _Original KB number:_ &nbsp; 2023855

@@ -6,7 +6,7 @@ ms.prod-support-area-path:
 ---
 # The endpoints of an arc may not be drawn correctly
 
-This article helps you resolve the problem that starting point and endpoints may not be drawn in the correct position when you draw an arc that has a large radius.
+This article helps you resolve the problem where starting point and endpoints may not be drawn in the correct position when you draw an arc that has a large radius.
 
 _Original product version:_ &nbsp; .NET Framework 3.5 Service Pack 1, .NET Framework 3.5.1, .NET Framework 4.5  
 _Original KB number:_ &nbsp; 2984519

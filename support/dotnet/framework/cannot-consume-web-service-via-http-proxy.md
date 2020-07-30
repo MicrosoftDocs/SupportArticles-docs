@@ -7,7 +7,7 @@ ms.reviewer: ryankiv, sulabhs
 ---
 # Error occurs on a .NET client that consumes a Web service through an HTTP proxy server
 
-This article helps you resolve a problem that an error (The underlying connection was closed: The remote name could not be resolved) occurs when you use a .NET client to consume a Web service through an HTTP proxy server.
+This article helps you resolve a problem where an error (The underlying connection was closed: The remote name could not be resolved) occurs when you use a .NET client to consume a Web service through an HTTP proxy server.
 
 _Original product version:_ &nbsp; .NET Framework  
 _Original KB number:_ &nbsp; 318140

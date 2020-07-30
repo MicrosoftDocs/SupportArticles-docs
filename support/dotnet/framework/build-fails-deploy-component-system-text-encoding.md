@@ -2,11 +2,11 @@
 title: Build fails when you deploy a component
 description: In Visual Studio development environment where .NET Framework 4.5 is installed, the build may fail when deploying the component with a property of type System.Text.Encoding to the form.
 ms.date: 05/11/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Language or Compilers
 ---
 # Build may fail when you deploy the component with a property of type System.Text.Encoding to the form
 
-This article helps you resolve a problem that the build fails when you deploy the component with a property of type `System.Text.Encoding` to the form.
+This article helps you resolve a problem where the build fails when you deploy the component with a property of type `System.Text.Encoding` to the form.
 
 _Original product version:_ &nbsp; .NET Framework 4.5  
 _Original KB number:_ &nbsp; 2956445

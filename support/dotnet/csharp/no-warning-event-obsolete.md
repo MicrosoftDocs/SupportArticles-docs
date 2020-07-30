@@ -2,12 +2,12 @@
 title: No warning for events with Obsolete
 description: Describes Visual Studio does not throw a warning during build for events marked Obsolete.
 ms.date: 04/27/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Language or compilers
 ms.reviewer: irfanahm
 ---
 # Visual Studio does not throw a warning during build for events marked Obsolete
 
-This article describes the issue that Microsoft Visual Studio doesn't throw a warning during build for events marked `Obsolete`.
+This article describes the issue where Microsoft Visual Studio doesn't throw a warning during build for events marked `Obsolete`.
 
 _Original product version:_ &nbsp; Visual Studio Professional 2010, Visual Studio Premium 2012  
 _Original KB number:_ &nbsp; 2832705

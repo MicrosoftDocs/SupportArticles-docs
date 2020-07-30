@@ -2,12 +2,12 @@
 title: Error 0x80004005 when you register WebClass
 description: This article provides resolutions for the problem that occurs when you try to register the DLL on a computer.
 ms.date: 03/24/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Development
 ms.reviewer: MCLAY
 ---
 # Error 0x80004005 when you try to register a WebClass DLL
 
-This article helps you resolve the problem that an unexpected error might be thrown when you register a `WebClass` DLL.
+This article helps you resolve the problem where an unexpected error might be thrown when you register a `WebClass` DLL.
 
 _Original product version:_ &nbsp;  Internet Information Server  
 _Original KB number:_ &nbsp; 307495

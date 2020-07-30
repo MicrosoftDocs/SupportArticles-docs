@@ -1,12 +1,12 @@
 ---
 title: Cookies added by HttpModule are unusable 
-description: This article provides resolutions for the problem that cookie doesn't display in the native IHttpRequest object When you use the Cookies collection from either the managed HttpRequest or HttpResponse objects to add a cookie.
+description: This article provides resolutions for the problem where cookie doesn't display in the native IHttpRequest object When you use the Cookies collection from either the managed HttpRequest or HttpResponse objects to add a cookie.
 ms.date: 03/26/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Development
 ---
 # Cookies added by a managed HttpModule aren't available to native IHttpModules or IHttpHandlers
 
-This article helps you resolve the problem that cookies that are added by a managed isn't available to native `IHttpModules` or `IHttpHandlers`.
+This article helps you resolve the problem where cookies that are added by a managed isn't available to native `IHttpModules` or `IHttpHandlers`.
 
 _Original product version:_ &nbsp; Internet Information Services  
 _Original KB number:_ &nbsp; 2666571

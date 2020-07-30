@@ -2,7 +2,7 @@
 title: Use Visual C++ to do basic file I/O
 description: Describes some sample steps about how to do basic file I/O in Visual C++ or Visual C++ .NET.
 ms.date: 04/20/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Language or Compilers
 ms.reviewer: bobbym  
 ms.topic: how-to
 ---

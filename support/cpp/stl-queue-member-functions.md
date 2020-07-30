@@ -2,7 +2,7 @@
 title: Use member functions of the STL queue class
 description: Provides a Visual C++ code example that demonstrates how to use the STL queue class.
 ms.date: 04/27/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: C and C++ Libraries
 ms.topic: how-to
 ---
 # Use the member functions of the STL queue class in Visual C++

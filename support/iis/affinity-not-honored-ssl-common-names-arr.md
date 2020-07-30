@@ -1,12 +1,12 @@
 ---
 title: SSL Common Names aren't enforced by ARR
-description: This article provides resolutions for the two problems that Affinity isn't honored and SSL Common Names aren't enforced using ARR in IIS.
+description: This article provides resolutions for the two problems where Affinity isn't honored and SSL Common Names aren't enforced using ARR in IIS.
 ms.date: 04/17/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: Application Request and Routing (ARR)
 ---
 # Affinity is not honored and SSL Common Names aren't enforced using ARR in IIS
 
-This article helps you resolve the problems that Affinity isn't honored and SSL Common Names aren't enforced by using Application Request Routing (ARR) in Microsoft Internet Information Services (IIS).
+This article helps you resolve the problems where Affinity isn't honored and SSL Common Names aren't enforced by using Application Request Routing (ARR) in Microsoft Internet Information Services (IIS).
 
 _Original product version:_ &nbsp; Internet Information Services 8.0, 7.5, 7.0  
 _Original KB number:_ &nbsp; 2693489

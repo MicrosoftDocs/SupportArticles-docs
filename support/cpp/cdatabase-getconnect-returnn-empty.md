@@ -2,12 +2,12 @@
 title: CDatabase::GetConnect returns an empty string
 description: This article discusses that the GetConnect method returns an empty string in Visual Studio 2012, Visual Studio 2010, and Visual Studio 2008 after certain hotfixes are applied. Provides a resolution.
 ms.date: 04/27/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Language or Compilers
 ms.reviewer: aymans, scotbren
 ---
 # The CDatabase::GetConnect method returns an empty string in Visual Studio
 
-This article helps you resolve the problem that the `CDatabase::GetConnect()` method in Microsoft Foundation Class (MFC) Library always returns an empty string instead of the active database connection information in Visual Studio 2012.
+This article helps you resolve the problem where the `CDatabase::GetConnect()` method in Microsoft Foundation Class (MFC) Library always returns an empty string instead of the active database connection information in Visual Studio 2012.
 
 _Original product version:_ &nbsp; Visual Studio Ultimate 2012, Visual Studio Premium 2012  
 _Original KB number:_ &nbsp; 2915724

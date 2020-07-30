@@ -1,13 +1,13 @@
 ---
 title: Computer stops responding
-description: Provides information about resolving an issue that computer stops responding when the Mscorsvw.exe process starts executing.
+description: Provides information about resolving a problem where computer stops responding when the Mscorsvw.exe process starts executing.
 ms.date: 05/11/2020
 ms.prod-support-area-path: 
 ms.reviewer: gaurap
 ---
 # Computer stops responding when the mscorsvw.exe process starts executing
 
-This article helps you resolve the problem that your computer stops responding when the mscorsvw.exe process starts executing.
+This article helps you resolve the problem where your computer stops responding when the mscorsvw.exe process starts executing.
 
 _Original product version:_ &nbsp; .NET Framework  
 _Original KB number:_ &nbsp; 2698881

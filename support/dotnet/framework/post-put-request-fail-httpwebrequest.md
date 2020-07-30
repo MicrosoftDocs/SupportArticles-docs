@@ -6,7 +6,7 @@ ms.prod-support-area-path:
 ---
 # A POST or PUT request fails when you use the HttpWebRequest class to send lots of data
 
-This article helps you resolve a problem that an error may be thrown when you use the `HttpWebRequest` class to send lots of data on a computer that is running the Microsoft .NET Framework.
+This article helps you resolve a problem where an error may be thrown when you use the `HttpWebRequest` class to send lots of data on a computer that is running the Microsoft .NET Framework.
 
 _Original product version:_ &nbsp; .NET Framework  
 _Original KB number:_ &nbsp; 908573

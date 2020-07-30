@@ -7,7 +7,7 @@ ms.reviewer: teodoras
 ---
 # Mixed mode assembly is built against version v2.0.50727 of the runtime
 
-This article helps you resolve the problem that you fail to build Microsoft .NET Framework 3.5 or lower projects on .NET Framework 4.0 MSBuild or team build where references require Serializer Generator (SGEN).
+This article helps you resolve the problem where you fail to build Microsoft .NET Framework 3.5 or lower projects on .NET Framework 4.0 MSBuild or team build where references require Serializer Generator (SGEN).
 
 _Original product version:_ &nbsp; .NET Framework 3.5, 4.0  
 _Original KB number:_ &nbsp; 2572158

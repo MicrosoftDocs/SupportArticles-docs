@@ -2,11 +2,11 @@
 title: .NET Framework 4.0 requires ClickOnce Manifest signing
 description: .NET Framework 4.0 enforces Manifest Signature Validation for ClickOnce deployed applications.
 ms.date: 05/09/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: Installation
 ---
 # .NET Framework 4.0 requires ClickOnce Manifest signing
 
-This article helps you resolve the problem that ClickOnce deployed applications can't avoid some prompts to accept installation from unknown publishers.
+This article helps you resolve the problem where ClickOnce deployed applications can't avoid some prompts to accept installation from unknown publishers.
 
 _Original product version:_ &nbsp; Microsoft .NET Framework 4.0 and later versions  
 _Original KB number:_ &nbsp; 2651504

@@ -7,7 +7,7 @@ ms.reviewer: shorne, scotbren
 ---
 # Citrix Virtual Memory Optimization Service can lead to .NET application corruption
 
-This article helps you resolve the problem that having .NET Framework applications running along with the Citrix Virtual Memory Optimization Service can lead to memory corruption in the managed process.
+This article helps you resolve the problem where having .NET Framework applications running along with the Citrix Virtual Memory Optimization Service can lead to memory corruption in the managed process.
 
 _Original product version:_ &nbsp; .NET Framework 3.5 Service Pack 1  
 _Original KB number:_ &nbsp; 2480607
