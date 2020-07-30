@@ -15,7 +15,7 @@ ms.technology: Deployment
 ---
 # Fix Windows Update errors by using the DISM or System Update Readiness tool
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Original product version:_ &nbsp; Windows 10, version 1809 and later versions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 947821
 
 ## Symptom
@@ -52,7 +52,7 @@ To resolve this problem, use the inbox Deployment Image Servicing and Management
 
 DISM creates a log file (%windir%/Logs/CBS/CBS.log) that captures any issues that the tool found or fixed. %windir% is the folder in which Windows is installed. For example, the %windir% folder is C:\Windows.
 
-## Resolution for Windows 7 Service Pack 1 (SP1) and Windows Server 2008 R2 SP1 (for ESU only)
+## Resolution for Windows 7 Service Pack 1 (SP1) and Windows Server 2008 R2 SP1
 
 To resolve this problem, use the System Update Readiness tool. Then, install the Windows update or service pack again.
 
@@ -210,7 +210,7 @@ If you are a technical professional, see [How to fix errors found in the CheckSU
 
 ## Applies to
 
-- Windows 10 - all editions
-- Windows 7 Service Pack 1 (for ESU only)
+- Windows 10, version 1809 and later versions
+- Windows 7 Service Pack 1
 - Windows Server 2012 R2
-- Windows Server 2008 R2 Service Pack 1 (for ESU only)
+- Windows Server 2008 R2 Service Pack 1
