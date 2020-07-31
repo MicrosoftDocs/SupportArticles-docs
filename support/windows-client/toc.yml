@@ -9,9 +9,6 @@
     - name: How to get updates via Windows Update
       href: ./deployment/get-updates-through-windows-update.md
 
-    - name: How to keep Windows up to date
-      href: ./deployment/keep-windows-up-to-date.md
-
 - name: Group Policy
   items:
     - name: How to create and manage Central Store for registry-based policies
