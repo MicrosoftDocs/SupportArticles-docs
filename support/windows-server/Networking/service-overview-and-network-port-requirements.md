@@ -17,7 +17,7 @@ ms.technology: Networking
 
 This article discusses the required network ports, protocols, and services that are used by Microsoft client and server operating systems, server-based programs, and their subcomponents in the Microsoft Windows Server system. Administrators and support professionals may use this article as a roadmap to determine which ports and protocols Microsoft operating systems and programs require for network connectivity in a segmented network.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019  
+_Original product version:_ &nbsp; Windows 10, version 2004, Windows Server 2019  
 _Original KB number:_ &nbsp; 832017
 
 > [!IMPORTANT]
@@ -1410,4 +1410,7 @@ For information about the ports that are used by Windows Media Services, see [Al
 - Windows Server 2019
 - Windows Server 2016
 - Windows Server 2012 R2
-- Windows 10 - all editions
+- Windows 10, version 2004
+- Windows 10, version 1909
+- Windows 10, version 1903
+- Windows 7 Service Pack 1
