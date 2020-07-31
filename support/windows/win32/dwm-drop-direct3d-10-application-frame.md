@@ -2,7 +2,7 @@
 title: DWM drops frame of Direct3D 10 application
 description: This article describes that the DWM (Desktop Window Manager) can drop frames of Direct3D 10 applications, which are locked to the VSync without throttling back the application.
 ms.date: 03/16/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Graphics and multimedia development
 ---
 # The DWM can drop frames of Direct3D 10 applications that are locked to the VSync
 
