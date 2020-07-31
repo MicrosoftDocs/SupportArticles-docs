@@ -1,12 +1,12 @@
 ---
 title: Event ID 4448 with KTMRM service
-description: Describes an issue that a distributed transaction fails to run from a process (ex. w3wp.exe) under a domain account on Windows Server 2008 and above. Provides a workaround.
+description: Describes a problem that a distributed transaction fails to run from a process (ex. w3wp.exe) under a domain account on Windows Server 2008 and above. Provides a workaround.
 ms.date: 03/09/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: Distributed transactions
 ---
 # KTMRM service failed with event ID 4448 and 0x80070005 (Access Denied)
 
-This article helps you resolve the problem that Kernel Transaction Manager Resource Manager (KTMRM) service fails when you run a distributed transaction from a process (for example, w3wp.exe) under a domain account on Windows.
+This article helps you resolve the problem where Kernel Transaction Manager Resource Manager (KTMRM) service fails when you run a distributed transaction from a process (for example, w3wp.exe) under a domain account on Windows.
 
 _Original product version:_ &nbsp; Windows Server 2008  
 _Original KB number:_ &nbsp; 2607379

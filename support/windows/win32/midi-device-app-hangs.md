@@ -2,12 +2,12 @@
 title: MIDI device app hangs when using MIDI API
 description: This article describes that you can't use the legacy MIDI API in the MIDI device application, the application may freeze in Windows 10.
 ms.date: 03/10/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: Graphics and multimedia development
 ms.reviewer: daleche, davean, jadailey
 ---
 # MIDI device application hangs when you use former MIDI API in Windows 10
 
-This article helps you resolve the problem that MIDI device application hangs in Windows 10 when you use the legacy MIDI API.
+This article helps you resolve the problem where MIDI device application hangs in Windows 10 when you use the legacy MIDI API.
 
 _Original product version:_ &nbsp; Windows 10  
 _Original KB number:_ &nbsp; 4460006

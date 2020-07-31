@@ -2,11 +2,11 @@
 title: DXGI can't draw cursor to desktop image
 description: This article discusses that a Desktop Duplication application running on Windows Serve 2012 that uses the DXGI 1.2 desktop duplication APIs doesn't draw the cursor to the desktop image. Provides a workaround.
 ms.date: 03/10/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: Graphics and multimedia development
 ---
 # DXGI 1.2 desktop duplication APIs can't draw the cursor to the desktop image
 
-This article helps you resolve the problem that Microsoft DirectX Graphics Infrastructure (DXGI) 1.2 Desktop Duplication application can't draw the mouse pointer to the desktop image.
+This article helps you resolve the problem where Microsoft DirectX Graphics Infrastructure (DXGI) 1.2 Desktop Duplication application can't draw the mouse pointer to the desktop image.
 
 _Original product version:_ &nbsp; Windows 8.1, Windows Server 2012 R2, Windows Server 2012  
 _Original KB number:_ &nbsp; 2920206

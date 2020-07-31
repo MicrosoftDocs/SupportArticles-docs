@@ -2,12 +2,12 @@
 title: Icon overlay handlers aren't displayed
 description: Describes a product limitation in Windows that restricts the number of icon overlays, which means that some registered icon overlays aren't displayed as expected.
 ms.date: 03/12/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Desktop app UI development
 ms.reviewer: davean
 ---
 # Registered icon overlay handlers aren't used by Windows Shell
 
-This article helps you resolve the problem that Windows Shell doesn't display some icon overlays.
+This article helps you resolve the problem where Windows Shell doesn't display some icon overlays.
 
 _Original product version:_ &nbsp; Windows 10, 8.1, 8  
 _Original KB number:_ &nbsp; 3106961

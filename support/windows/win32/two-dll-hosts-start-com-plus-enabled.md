@@ -2,7 +2,7 @@
 title: Two DLL hosts start when a COM+ object is enabled
 description: A behavior in which two DLL hosts start when you create a COM+ object that has pooling enabled.
 ms.date: 03/12/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Component development
 ms.reviewer: earlb
 ---
 # Two DLL hosts start when a COM+ object enabled

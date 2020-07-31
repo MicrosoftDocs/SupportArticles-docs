@@ -1,13 +1,13 @@
 ---
 title: Asynchronous disk I/O appears synchronous
-description: This article describes a problem that asynchronous disk I/O appears as synchronous on Windows.
+description: This article describes a problem where asynchronous disk I/O appears as synchronous on Windows.
 ms.date: 03/13/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: System services development
 ms.reviewer: allend
 ---
 # Asynchronous disk I/O appears as synchronous on Windows
 
-This article helps you resolve the problem that the default behavior for I/O is synchronous, but it appears as asynchronous.
+This article helps you resolve the problem where the default behavior for I/O is synchronous, but it appears as asynchronous.
 
 _Original product version:_ &nbsp; Windows  
 _Original KB number:_ &nbsp; 156932
