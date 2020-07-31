@@ -1,6 +1,11 @@
 - name: Welcome
   href:
 
+- name: Active Directory
+  items:
+    - name: Well-known security identifiers
+      href: ./activedirectory/security-identifiers-in-windows.md
+
 - name: Backup and Storage
   items:
     - name: USB Device not recognized error
@@ -13,5 +18,8 @@
 
 - name: Networking
   items:
+    - name: Guest access in SMB2 is disabled by default
+      href: ./networking/guest-access-in-smb2-is-disabled-by-default.md
+
     - name: Service overview and network port requirements
       href: ./networking/service-overview-and-network-port-requirements.md

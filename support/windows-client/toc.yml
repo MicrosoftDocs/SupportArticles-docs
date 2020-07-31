@@ -6,6 +6,14 @@
     - name: How to disable and re-enable hibernation
       href: ./deployment/disable-and-re-enable-hibernation.md
 
+    - name: How to get updates via Windows Update
+      href: ./deployment/get-updates-through-windows-update.md
+
+- name: Group Policy
+  items:
+    - name: How to create and manage Central Store for registry-based policies
+      href: ./grouppolicy/create-and-manage-central-store.md
+
 - name: Shell Experience
   items:
     - name: Fix problems in Windows Search
