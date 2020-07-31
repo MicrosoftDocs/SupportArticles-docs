@@ -38,7 +38,7 @@ These issues may be caused by the following conditions:
 - When a conference isn't found, it may have been canceled, or the user may not have permissions to join the meeting. For example, an external user from another company may see this message if the online meeting is restricted to external users.   
 - Users may be disconnected for many reasons. These include a lack of network connectivity.    
 - Users may be disconnected if they're trying to join the meeting from multiple devices.   
-- If no meetings are listed on the **Meetings** page in Lync Mobile 2013, the connection to the user’s Exchange calendar could be down.    
+- If no meetings are listed on the **Meetings** page in Lync Mobile 2013, the connection to the user's Exchange calendar could be down.    
 - Bandwidth and network connectivity are the main causes of audio and video connection issues.    
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

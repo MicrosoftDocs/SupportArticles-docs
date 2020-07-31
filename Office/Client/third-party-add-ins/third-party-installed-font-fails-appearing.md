@@ -40,7 +40,7 @@ First, restart your computer, and then test the font again. Some installations a
 
 ### Method 1
 
-1. Clear the font caches. To do this, quit all Microsoft Office applications. On the **Home** menu, click **Go **> **Applications**, and then click Apple's Font Book.
+1. Clear the font caches. To do this, quit all Microsoft Office applications. On the **Home** menu, click **Go** > **Applications**, and then click Apple's Font Book.
 2. On the **Edit** menu, click **Select Duplicated Fonts**.
 3. On the **Edit** menu, click **Resolve Duplicates**.
 4. To remove all the fonts from the computer that Font Book just disabled, follow these steps:  
@@ -64,6 +64,6 @@ Create a new user account to determine whether the problem is associated with an
 
 ### The font is damaged, or the system is not reading the font
 
-If the font is not a custom font and does not appear in your Office program, the font may be damaged. To reinstall the font, see [Mac OS X: Font locations and their purposes](https://support.apple.com/ht201722).
+If the font is not a custom font and does not appear in your Office program, the font may be damaged. To reinstall the font, see [Mac OS X: Font locations and their purposes](https://support.apple.com/HT201749).
 
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, regarding the performance or reliability of these products.

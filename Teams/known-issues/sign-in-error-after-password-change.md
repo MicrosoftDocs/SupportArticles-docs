@@ -1,7 +1,7 @@
 ---
 title: After password change in Teams you receive a sign-in error
 ms.author: v-todmc
-author: todmccoy
+author: McCoyBot
 ms.date: 4/9/2020
 audience: ITPro
 ms.topic: article

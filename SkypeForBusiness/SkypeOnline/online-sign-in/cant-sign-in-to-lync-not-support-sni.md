@@ -16,7 +16,7 @@ appliesto:
 - Skype for Business Online
 ---
 
-# You can't sign in to Skype for Business or Lync clients on devices that don’t support Server Name Indication (SNI)
+# You can't sign in to Skype for Business or Lync clients on devices that don't support Server Name Indication (SNI)
 
 ## Problem
 

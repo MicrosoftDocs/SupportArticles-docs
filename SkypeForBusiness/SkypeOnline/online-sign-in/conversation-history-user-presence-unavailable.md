@@ -72,7 +72,7 @@ For the best experience, add your Exchange email account to Outlook and then set
 
 #### Are you entering the correct credentials to connect to Exchange?
 
-If your Exchange email address and your Skype for Business Online sign in address are the same, and you typically don't have any problems, you shouldn’t be prompted for additional credentials after you sign in to Lync. However, if Lync prompts you for additional credentials to connect to Exchange, make sure that you use the credentials for connecting to Exchange instead of your credentials to sign in to Skype for Business Online.
+If your Exchange email address and your Skype for Business Online sign in address are the same, and you typically don't have any problems, you shouldn't be prompted for additional credentials after you sign in to Lync. However, if Lync prompts you for additional credentials to connect to Exchange, make sure that you use the credentials for connecting to Exchange instead of your credentials to sign in to Skype for Business Online.
 
 If your credentials aren't accepted, and you're continuously prompted for credentials, see the following Microsoft Knowledge Base article: 
 
@@ -99,22 +99,22 @@ If the time on your computer differs from the time on the server that you're try
 
 #### Where are the users' mailboxes located?
 
-Many of the deployment requirements for Exchange and Lync integration depend on where the user’s mailbox is located.
+Many of the deployment requirements for Exchange and Lync integration depend on where the user's mailbox is located.
 
 The following articles cover deployment requirements. These include DNS configuration, Exchange Server configuration, and Lync Server configuration.
 
 Is the user part of an on-premises Exchange Server organization, or are they in Office 365 Exchange Online? 
 
 - If the user's mailbox is located in Exchange Online, see [How to integrate Exchange Server 2013 with Lync Server 2013, Skype for Business Online, or a Lync Server 2013 hybrid deployment](https://support.microsoft.com/help/2614242).
-- If the user’s mailbox is homed on an on-premises Exchange server, see [How to integrate Exchange Online with Skype for Business Online, Lync Server 2013, or a Lync Server 2013 hybrid deployment](https://support.microsoft.com/help/2614614).
+- If the user's mailbox is homed on an on-premises Exchange server, see [How to integrate Exchange Online with Skype for Business Online, Lync Server 2013, or a Lync Server 2013 hybrid deployment](https://support.microsoft.com/help/2614614).
 
 ## More Information
 
-These issues occur when Lync can't determine the user’s email address, can't locate the user’s Exchange server, or can't connect to the user’s Exchange server.
+These issues occur when Lync can't determine the user's email address, can't locate the user's Exchange server, or can't connect to the user's Exchange server.
 
-When the Lync client tries to discover the Exchange server of the Skype for Business Online user, the Lync client references the Active Directory **WindowsEmailAddress** attribute (or the MAIL attribute). Lync then tries to connect to the Exchange server through the Autodiscover process by using the domain suffix of the email address in the **WindowsEmailAddress** AD attribute. If the Skype for Business Online user doesn’t have an Exchange Online mailbox, or if the necessary attributes aren’t being synced from on-premises, Exchange integration with Lync fails.
+When the Lync client tries to discover the Exchange server of the Skype for Business Online user, the Lync client references the Active Directory **WindowsEmailAddress** attribute (or the MAIL attribute). Lync then tries to connect to the Exchange server through the Autodiscover process by using the domain suffix of the email address in the **WindowsEmailAddress** AD attribute. If the Skype for Business Online user doesn't have an Exchange Online mailbox, or if the necessary attributes aren't being synced from on-premises, Exchange integration with Lync fails.
 
-After Lync determines where it should look for the Exchange server, it uses Autodiscover to find the user’s mailbox server and connect to it. If the Autodiscover service on whichever Exchange server the user’s mailbox resides is unavailable, the integration between Exchange and Lync fails.
+After Lync determines where it should look for the Exchange server, it uses Autodiscover to find the user's mailbox server and connect to it. If the Autodiscover service on whichever Exchange server the user's mailbox resides is unavailable, the integration between Exchange and Lync fails.
 
 As soon as Lync has the correct mailbox server to connect to, it tries to authenticate by using the Skype for Business Online user credentials first. If those credentials fail, Lync prompts for credentials after you sign in. If the wrong credentials are entered, or the user clicks cancel, the integration between Exchange and Lync fails.
 

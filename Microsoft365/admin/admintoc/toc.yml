@@ -1,5 +1,5 @@
 - name: Office 365 Administration Troubleshooting
-  href: ../admin.md
+  href: ../o365-admin-welcome.md
   items:
   - name: Access Management
     items:
@@ -65,7 +65,7 @@
       href: ../active-directory/idfix-tool-running-error.md
     - name: Error when you run the IdFix tool in AD DS
       href: ../active-directory/idfix-not-display-objects-errors.md
-    - name: Erros when using Azure AD Graph API applications
+    - name: Errors when using Azure AD Graph API applications
       href: ../active-directory/errors-using-azure-ad-custom-apps.md
     - name: Exception Error when you run Directory Sync Configuration Wizard
       href: ../active-directory/exception-with-azure-ad-sync.md

@@ -2,7 +2,7 @@
 title: Quality of Service for Skype for Business/Lync - configuration and best practice guide
 description: Outlines best practices for Quality of Service configurations in Skype for Business and Lync.
 ms.author: v-todmc
-author: todmccoy
+author: McCoyBot
 manager: dcscontentpm
 ms.date: 8/27/2019
 audience: ITPro
@@ -34,7 +34,7 @@ Quality of Service (QoS) is a combination of networking technologies that enable
 
 QoS is commonly used when network bandwidth is limited and the network is congested. Because bandwidth limitation and network congestion are factors that are always present in a network, we must have QoS configured correctly to optimize the end-user experience. 
 
-As QoS can be configured end to end, it’s more useful that your media traffic traverse over a Wide Area Network (WAN) because a Local Area Network might not have the same network congestion and bandwidth issues. When we talk about WAN, most organizations that utilize WAN use a Multi-Protocol Label Switched (MPLS) network. This is an L3 WAN built by a service provider to sell its bandwidth to multiple customers and allows QoS to be  guaranteed QoS. With that said, QoS is always required. ☺ 
+As QoS can be configured end to end, it's more useful that your media traffic traverse over a Wide Area Network (WAN) because a Local Area Network might not have the same network congestion and bandwidth issues. When we talk about WAN, most organizations that utilize WAN use a Multi-Protocol Label Switched (MPLS) network. This is an L3 WAN built by a service provider to sell its bandwidth to multiple customers and allows QoS to be  guaranteed QoS. With that said, QoS is always required. ☺ 
 
 ### How does QoS work? 
 Basically, all port ranges are provided to the Skype for Business/Lync client via in-band provisioning. This means that once your Skype for Business/Lync client signs in, they will start using these locked down port ranges, which are configured on a Skype for Business/Lync Server and pushed down to Skype for Business/ Lync clients. When the client initiates media traffic using applications like lync.exe, communicator.exe, or attendeeconsole.exe, all applications that utilize the audio/video, app sharing, or file transfer ports will get Differentiated Services Code Point (DSCP) markings stamped by the operating system via Group Policy Object (GPO).  
@@ -70,7 +70,7 @@ Let us start with QoS configuration:
 
 1.	**Enable QoS for all clients, which are disabled by default:**<br/>
 QoS is not enabled by default on Skype for Business/Lync servers. <br/><br/>
-You can run the Get-CsMediaConfiguration command from PowerShell to see if “EnableQoS” shows “True” or “False”. By default, it shows as **False**.<br/><br/> 
+You can run the Get-CsMediaConfiguration command from PowerShell to see if "EnableQoS" shows "True" or "False". By default, it shows as **False**.<br/><br/> 
 To Enable QoS globally, run the following PowerShell command: 
 
 ```
@@ -180,7 +180,7 @@ After defining port ranges, you must also create QoS policies that specify the D
 
    <img alt="Select From this source port or range." src="media/103849-7.jpg">
    
-   9. Follow steps **e** through **h** to create new policy objects and label them “Lync2013-Signaling”, “Lync2013-AppShare”, “Lync2013-File Transfer”, and Lync2013-Video” with the above ports ranges and DSCP values.
+   9. Follow steps **e** through **h** to create new policy objects and label them "Lync2013-Signaling", "Lync2013-AppShare", "Lync2013-File Transfer", and Lync2013-Video" with the above ports ranges and DSCP values.
    10. After you have configured all policy objects, it will look like the image below:
    <img alt="Configured policy objects." src="media/103849-8.jpg">
    11. Open Group Policy Management and then right-click **OU (Server)**. Select **Create a GPO in this domain, and Link it here** to create a new GPO. (For example, SfBLync-Server-QoS.) You must then add your Skype for Business/Lync Server-to-Server OU. Repeat steps **d** through **i** to create a policy object for the server as well.  After configuring all policy objects for the server, it will look like the image below:
@@ -218,7 +218,7 @@ Restart the device for the changes to take effect.
 
 1. First, we need to test whether the GPO policy correctly applied or not, after the newly created GPO is applied and linked to the OU where Computer and Server objects are stored (separate OUs). Before testing, you can force the policy by running "*gpupdate.exe /force*" on a testing computer and server, which will refresh the policy. 
 2. After the policy refresh on the client computer, go to  **Start** > **Run** > **cmd** (open as administrator). Then type ***Gpresult /h result.htm***.
-3. The policy will output in HTML format with the name “result.htm”. Open this file to view your QoS policy.   
+3. The policy will output in HTML format with the name "result.htm". Open this file to view your QoS policy.   
 
 #### Test2: 
 Enable Skype for Business/ Lync client log. Sign in to Skype for
@@ -237,12 +237,12 @@ The screenshot below shows UDP traffic DSCP: FE (Expedited Forwarding (46)), whi
 ![UDP traffic DSCP: FE, the correct tagging.](media/103849-12.jpg)
 
 #### Test4:  
-1. On a Windows machine, open “regedit” and then browse to the folder: <br/><br/>
+1. On a Windows machine, open "regedit" and then browse to the folder: <br/><br/>
 HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\QoS<br/><br/>
 Here you can see all QoS policies applied to this machine: 
 ![All QoS policies applied to this computer.](media/103849-13.jpg)
-2. On the FE Server, you don’t have to define the application name because on this server, all applications are related to Skype and Lync.
-3. Open “regedit”  and then browse to:<br/><br/>
+2. On the FE Server, you don't have to define the application name because on this server, all applications are related to Skype and Lync.
+3. Open "regedit"  and then browse to:<br/><br/>
 HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\QoS<br/><br/> The Front-End Server should appear as in the image below:  
 ![How the Front-End Server should appear.](media/103849-14.jpg)
 

@@ -1,5 +1,5 @@
 - name: SharePoint Server Troubleshooting
-  href: ../server.md
+  href: ../sharepoint-server-welcome.md
   items:
   - name: Administration
     items:

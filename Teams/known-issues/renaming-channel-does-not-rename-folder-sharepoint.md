@@ -1,7 +1,7 @@
 ---
 title: Renamed Teams folder does not rename the same folder in SharePoint Online
 ms.author: v-todmc
-author: todmccoy
+author: McCoyBot
 ms.date: 4/9/2020
 audience: ITPro
 ms.topic: article

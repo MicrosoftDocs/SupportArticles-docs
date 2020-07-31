@@ -1,7 +1,7 @@
 ---
 title: SharePoint Online service process schedule temporary change 
 ms.author: v-todmc
-author: todmccoy
+author: McCoyBot
 manager: dcscontentpm
 ms.date: 2/5/2019
 audience: Admin

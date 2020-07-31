@@ -1,7 +1,7 @@
 ---
 title: Unable to configure and register a workflow manager
 ms.author: v-todmc
-author: todmccoy
+author: McCoyBot
 manager: dcscontentpm
 localization_priority: Normal
 ms.date: 8/1/2019

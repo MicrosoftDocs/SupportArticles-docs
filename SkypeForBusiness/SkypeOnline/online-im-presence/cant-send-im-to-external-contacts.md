@@ -30,13 +30,13 @@ You try to start an instant message (IM) conversation in Outlook Web App with an
 > [!NOTE]
 > This solution requires the assistance of an Office 365 administrator.
 
-To resolve this issue, create a Contact object in the Exchange Admin Center, and then add the external contact’s IM address to the **Proxy Address** field. Make sure that the IM address contains the **sip:** prefix for the IM address of the external contact.
+To resolve this issue, create a Contact object in the Exchange Admin Center, and then add the external contact's IM address to the **Proxy Address** field. Make sure that the IM address contains the **sip:** prefix for the IM address of the external contact.
 
 For more information about how to add the IM address as a proxy address to the external contact, use the instructions at the following Microsoft website, but make sure that you use the "sip:user2@sip-contoso.com" format for the address.
 
 [Add or remove email addresses for a mailbox](https://technet.microsoft.com/library/bb123794%28v=exchg.150%29.aspx)
 
-To send an IM to the newly created external contact, type the contact’s IM address, and then add **sip:** to the beginning of the IM address. The message should be sent successfully.
+To send an IM to the newly created external contact, type the contact's IM address, and then add **sip:** to the beginning of the IM address. The message should be sent successfully.
 
 ## More Information
 

@@ -1,7 +1,7 @@
 ---
 title: Top columns in an Excel spreadsheet pasted into PowerPoint are truncated by Surface Pro with docking station and external monitor 
 ms.author: v-todmc
-author: todmccoy
+author: McCoyBot
 manager: dcscontentpm
 ms.date: 2/21/2020
 audience: Admin

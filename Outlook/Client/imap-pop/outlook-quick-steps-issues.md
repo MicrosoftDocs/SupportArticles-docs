@@ -15,14 +15,14 @@ appliesto:
 - Outlook 2016
 ---
 
-# “The Calendar folder cannot be found” or “The Tasks folder cannot be found” error when you use Quick Steps in Outlook
+# "The Calendar folder cannot be found" or "The Tasks folder cannot be found" error when you use Quick Steps in Outlook
 
 ## Symptoms
 
 When you use an IMAP or POP account that's added as a secondary account to the Outlook profile and try to use any of the following **Quick Steps**, you receive one of two error messages:
 
 ```
-“The Calendar folder cannot be found” or “The Tasks folder cannot be found”.
+"The Calendar folder cannot be found" or "The Tasks folder cannot be found".
 ```
 
 ![quick step error message](media/folder-cannot-be-found.png)

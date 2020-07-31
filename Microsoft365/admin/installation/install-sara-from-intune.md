@@ -1,7 +1,7 @@
 ---
 title: Deploy the SaRA tool using Microsoft Intune
 description: Learn how to deploy SaRA to multiple users using Microsoft Intune.
-author: todmccoy
+author: McCoyBot
 ms.author: v-maqiu
 manager: dcscontentpm 
 audience: ITPro 

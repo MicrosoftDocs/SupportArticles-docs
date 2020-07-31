@@ -17,7 +17,7 @@ appliesto:
 - Access 2013
 - Access 2016
 - Access 2019
-- Access 365
+- Access for Office 365
 search.appverid: MET150
 ---
 # Switchboard Manager does not appear in the ribbon

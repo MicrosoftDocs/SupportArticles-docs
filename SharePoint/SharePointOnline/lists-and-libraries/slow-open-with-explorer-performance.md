@@ -1,7 +1,7 @@
 ---
 title: Slow "Open with Explorer" performance on Windows 8 or Windows Server 2012
 description: Discusses how to troubleshoot slow performance on Windows 8 or Windows Server 2012 when you use the "Open with Explorer" command.
-author: todmccoy
+author: McCoyBot
 manager: dcscontentpm
 ms.date: 02/14/2020
 localization_priority: Normal
