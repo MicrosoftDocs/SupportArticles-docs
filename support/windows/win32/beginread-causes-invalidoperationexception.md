@@ -2,12 +2,12 @@
 title: BeginRead method causes exception
 description: Lists the behavior that the NetworkStream.BeginRead method causes the InvalidOperationException exception.
 ms.date: 03/12/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Networking development
 ms.reviewer: koichm
 ---
 # The BeginRead method causes the InvalidOperationException
 
-This article helps you resolve the problem that the `NetworkStream.BeginRead` method causes the `InvalidOperationException` exception.
+This article helps you resolve the problem where the `NetworkStream.BeginRead` method causes the `InvalidOperationException` exception.
 
 _Original product version:_ &nbsp; Microsoft .NET Framework  
 _Original KB number:_ &nbsp; 2501751

@@ -2,7 +2,7 @@
 title: Use printer device fonts
 description: This article describes how to enumerate and then use printer device-resident fonts.
 ms.date: 02/27/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: Graphics and multimedia development
 ms.topic: how-to
 ---
 # Use printer device fonts

@@ -3,7 +3,7 @@ title: Enable diagnostic tracing for MS DTC
 description: This article describes how to enable diagnostic tracing for MS DTC on a Windows 10 computer.
 ms.date: 03/13/2020
 ms.reviewer: johngil
-ms.prod-support-area-path:
+ms.prod-support-area-path: Distributed transactions
 ms.topic: how-to
 ---
 # Enable diagnostic tracing for MS DTC on a Windows 10 computer
