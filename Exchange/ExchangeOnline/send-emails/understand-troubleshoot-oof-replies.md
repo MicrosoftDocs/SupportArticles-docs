@@ -35,8 +35,8 @@ There are several methods to set up automatic replies, as follows:
 - They can be configured by using other clients, such as Outlook on the web (OWA).
 - They can be configured by running a PowerShell command ([Set-MailboxAutoReplyConfiguration](https://docs.microsoft.com/powershell/module/exchange/set-mailboxautoreplyconfiguration?view=exchange-ps)).
 
-    > [!NOTE]
-    > Admins can set up OOF replies from the M365 Admin Portal on behalf of (forgetful) users.
+> [!NOTE]
+> Admins can set up OOF replies from the M365 Admin Portal on behalf of (forgetful) users.
 
 In addition to using built-in OOF functionality, people sometimes [use rules to create an Out of Office message](https://support.office.com/article/use-rules-to-create-an-out-of-office-message-9f124e4a-749e-4288-a266-2d009686b403) while they are away.
 
@@ -62,7 +62,7 @@ Apart from OOF rules, other rules (such as the Junk Email rule) also have the **
 
 ## OOF rule details
 
-All Inbox rules can be viewed by using the [MFCMapi](https://github.com/stephenegriffin/mfcmapi) tool:
+All Inbox rules can be viewed by using the [MFCMapi](https://github.com/stephenegriffin/mfcmapi) tool, as follows::
 
 1. Log on.
 1. Select the profile that you are accessing.
@@ -145,13 +145,11 @@ If the affected user mailbox has [SMTP forwarding](https://docs.microsoft.com/mi
 
 For more information, see the action in step 1 of [this article](https://support.microsoft.com/help/2866165/senders-don-t-receive-out-of-office-notifications-from-an-office-365-u).
 
-### OOF reply type set on remote domains
+### OOF reply type that is set on remote domains
 
 You have to pay attention to which OOF type you have set up because this will affect the OOF response. An OOF reply may not be generated at all if the configuration is incorrect.
 
 The OOF type can be checked from **Exchange Admin Center** > **Mail flow** > **Remote domains**.
-
-Alternatively, you can run the following PowerShell cmdlet:
 
 :::image type="content" source="media/understand-troubleshoot-oof-replies/OOF08.png" alt-text="Screenshot of checking OOF reply type using portal." border="false":::
 
