@@ -97,6 +97,61 @@ All versions of Windows use the following well-known SIDs.
 |S-1-5-80|NT Service|An NT Service account prefix.|
 ||||
 
+## SIDs added by Windows Server 2003 and later versions
+
+When you add a domain controller that runs Windows Server 2003 or a later version to a domain, Active Directory adds the security principals in the following table.
+
+> [!NOTE]
+> The Windows ACL editor may not display these security principles by name. Active Directory does not resolve these SIDs to their corresponding names until the [PDC Emulator FSMO Role](/openspecs/windows_protocols/ms-adts/f96ff8ec-c660-4d6c-924f-c0dbbcac1527) transfers to or is seized by a domain controller that runs Windows Server 2003 or later.
+
+|SID|Name|Description|
+|---|---|---|
+|S-1-3-2|Creator Owner Server|This SID is not used in Windows 2000.|
+|S-1-3-3|Creator Group Server|This SID is not used in Windows 2000.|
+|S-1-5-8|Proxy|This SID is not used in Windows 2000.|
+|S-1-5-15|This Organization|A group that includes all users from the same organization. Only included with AD accounts and only added by a Windows Server 2003 or later domain controller.|
+|S-1-5-32-554|Builtin\Pre-Windows 2000 Compatible Access|An alias added by Windows 2000. A backward compatibility group which allows read access on all users and groups in the domain.|
+|S-1-5-32-555|Builtin\Remote Desktop Users|An alias. Members in this group are granted the right to log on remotely.|
+|S-1-5-32-556|Builtin\Network Configuration Operators|An alias. Members in this group can have some administrative privileges to manage configuration of networking features.|
+|S-1-5-32-557|Builtin\Incoming Forest Trust Builders|An alias. Members of this group can create incoming, one-way trusts to this forest.|
+|S-1-5-32-558|Builtin\Performance Monitor Users|An alias. Members of this group have remote access to monitor this computer.|
+|S-1-5-32-559|Builtin\Performance Log Users|An alias. Members of this group have remote access to schedule logging of performance counters on this computer.|
+|S-1-5-32-560|Builtin\Windows Authorization Access Group|An alias. Members of this group have access to the computed tokenGroupsGlobalAndUniversal attribute on User objects.|
+|S-1-5-32-561|Builtin\Terminal Server License Servers|An alias. A group for Terminal Server License Servers. When Windows Server 2003 Service Pack 1 is installed, a new local group is created.|
+|S-1-5-32-562|Builtin\Distributed COM Users|An alias. A group for COM to provide computerwide access controls that govern access to all call, activation, or launch requests on the computer.|
+||||
+
+## SIDs added by Windows Server 2008 and later versions
+
+When you add a domain controller that runs Windows Server 2008 or a later version to a domain, Active Directory adds the security principals in the following table.
+
+> [!NOTE]
+> The Windows ACL editor may not display these security principles by name. Active Directory does not resolve these SIDs to their corresponding names until the PDC emulator FSMO role transfers to or is seized by a domain controller that runs Windows Server 2008 or later.
+
+|SID|Name|Description|
+|---|---|---|
+|S-1-2-1|Console Logon|A group that includes users who are logged on to the physical console.<br/><br/> **Note** <br/>Added in Windows 7 and Windows Server 2008 R2.|
+|S-1-5-21 *domain* -498|Enterprise Read-only Domain Controllers|A universal group. Members of this group are read-only domain controllers in the enterprise.|
+|S-1-5-21 *domain* -521|Read-only Domain Controllers|A global group. Members of this group are read-only domain controllers in the domain.|
+|S-1-5-21 *domain* -571|Allowed RODC Password Replication Group|A domain local group. Members in this group can have their passwords replicated to all read-only domain controllers in the domain.|
+|S-1-5-21 *domain* -572|Denied RODC Password Replication Group|A domain local group. Members in this group cannot have their passwords replicated to any read-only domain controllers in the domain.|
+|S-1-5-32-569|Builtin\Cryptographic Operators|A built-in local group. Members are authorized to perform cryptographic operations.|
+|S-1-5-32-573|Builtin\Event Log Readers|A built-in local group. Members of this group can read event logs from local computer.|
+|S-1-5-32-574|Builtin\Certificate Service DCOM Access|A built-in local group. Members of this group are allowed to connect to Certification Authorities in the enterprise.|
+|S-1-5-80-0|NT Services\All Services|A group that includes all service processes that are configured on the system. Membership is controlled by the operating system.<br/><br/> **Note** <br/>Added in Windows Server 2008 R2.|
+|S-1-5-80-0|All Services|A group that includes all service processes configured on the system. Membership is controlled by the operating system.<br/><br/> **Note** <br/>Added in Windows Vista and Windows Server 2008.|
+|S-1-5-83-0|NT Virtual Machine\Virtual Machines|A built-in group. The group is created when the Hyper-V role is installed. Membership in the group is maintained by the Hyper-V Management Service (VMMS). This group requires the **Create Symbolic Links** right (S **eCreateSymbolicLinkPrivilege**), and also the **Log on as a Service** right (**SeServiceLogonRight**).<br/><br/> **Note** <br/>Added in Windows 8 and Windows Server 2012.|
+|S-1-5-90-0|Windows Manager\Windows Manager Group|A built-in group that is used by the Desktop Window Manager (DWM). DWM is a Windows service that manages information display for Windows applications.<br/><br/> **Note** <br/>Added in Windows Vista.|
+|S-1-16-0|Untrusted Mandatory Level|An untrusted integrity level.<br/> **Note** <br/>Added in Windows Vista and Windows Server 2008.|
+|S-1-16-4096|Low Mandatory Level|A low integrity level.<br/><br/> **Note** <br/>Added in Windows Vista and Windows Server 2008.|
+|S-1-16-8192|Medium Mandatory Level|A medium integrity level.<br/><br/> **Note** Added in Windows Vista and Windows Server 2008.|
+|S-1-16-8448|Medium Plus Mandatory Level|A medium plus integrity level.<br/><br/> **Note** <br/>Added in Windows Vista and Windows Server 2008.|
+|S-1-16-12288|High Mandatory Level|A high integrity level.<br/><br/> **Note** <br/>Added in Windows Vista and Windows Server 2008.|
+|S-1-16-16384|System Mandatory Level|A system integrity level.<br/><br/> **Note** <br/>Added in Windows Vista and Windows Server 2008.|
+|S-1-16-20480|Protected Process Mandatory Level|A protected-process integrity level.<br/><br/> **Note** <br/>Added in Windows Vista and Windows Server 2008.|
+|S-1-16-28672|Secure Process Mandatory Level|A secure process integrity level.<br/><br/> **Note** <br/>Added in Windows Vista and Windows Server 2008.|
+||||
+
 ## SIDs added by Windows Server 2012 and later versions
 
 When you add a domain controller that runs Windows Server 2012 or a later version to a domain, Active Directory adds the security principals in the following table.

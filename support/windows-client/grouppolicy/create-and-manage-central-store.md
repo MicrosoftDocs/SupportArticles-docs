@@ -31,9 +31,9 @@ _Original KB number:_ &nbsp; 3087759
 - [Administrative Templates (.admx) for Windows 10, version 1703 (Creators Update)](https://www.microsoft.com/download/details.aspx?id=55080)
 - [Administrative Templates (.admx) for Windows 10, version 1607 and Windows Server 2016](https://www.microsoft.com/download/details.aspx?id=53430)
 - [Administrative Templates (.admx) for Windows 10 and Windows 10, version 1511](https://www.microsoft.com/download/details.aspx?id=48257)
-- [Administrative Templates (.admx) for Windows Server 2012 R2 Update](https://www.microsoft.com/download/details.aspx?id=43413)
-- [Administrative Templates (.admx) for Windows Server 2012 R2](https://www.microsoft.com/download/details.aspx?id=41193)
-- [Administrative Templates (.admx) for Windows 7](https://www.microsoft.com/download/details.aspx?id=6243)
+- [Administrative Templates (.admx) for Windows 8.1 Update and Windows Server 2012 R2 Update](https://www.microsoft.com/download/details.aspx?id=43413)
+- [Administrative Templates (.admx) for Windows 8.1 and Windows Server 2012 R2](https://www.microsoft.com/download/details.aspx?id=41193)
+- [Administrative Templates (.admx) for Windows 7 and Windows Server 2008 R2](https://www.microsoft.com/download/details.aspx?id=6243)
 
 To view ADMX spreadsheets of the new settings that are available in later operating system versions, see [Group Policy Settings Reference Spreadsheet Windows 1809](https://www.microsoft.com/download/details.aspx?id=57464)
 
@@ -61,7 +61,7 @@ When you already have such a folder that has a previously built Central Store, u
 
 Copy all files from the PolicyDefinitions folder on a source computer to the new PolicyDefinitions folder on the domain controller. The source location can be either of the following:
 
-- The `C:\Windows\PolicyDefinitions` folder on a Windows 10-based client computer
+- The `C:\Windows\PolicyDefinitions` folder on a Windows 8.1-based or Windows 10-based client computer
 - The `C:\Program Files (x86)\Microsoft Group Policy\<version-specific>\PolicyDefinitions` folder, if you have downloaded any of the Administrative Templates separately from the links above.
 
 The PolicyDefinitions folder on the Windows domain controller stores all .admx files and .adml files for all languages that are enabled on the client computer.
@@ -71,7 +71,7 @@ The .adml files are stored in a language-specific folder. For example, English (
 If .adml files for additional languages are required, you must copy the folder that contains the .adml files for that language to the Central Store. When you have copied all .admx and .adml files, the PolicyDefinitions folder on the domain controller should contain the .admx files and one or more folders that contain language-specific .adml files.
 
 > [!NOTE]
-> When you copy the .admx and .adml files from a Windows 10-based computer, verify that the most recent updates to these files are installed. Also, make sure that the most recent Administrative Templates files are replicated. This advice also applies to service packs, as applicable.
+> When you copy the .admx and .adml files from a Windows 8.1-based or Windows 10-based computer, verify that the most recent updates to these files are installed. Also, make sure that the most recent Administrative Templates files are replicated. This advice also applies to service packs, as applicable.
 
 When the operating system collection is completed, merge any OS extension or application ADMX/ADML files into the new PolicyDefinitions folder.
 
@@ -81,7 +81,7 @@ We suggest this approach as you can revert to the old folder in case you experie
 
 ## Group Policy administration
 
-Windows 10 do not include Administrative Templates that have an .adm extension. We recommend that you use computers that are running Windows 8.1 or later versions of Windows to perform Group Policy administration.
+Windows 8.1 and Windows 10 do not include Administrative Templates that have an .adm extension. We recommend that you use computers that are running Windows 8.1 or later versions of Windows to perform Group Policy administration.
 
 ## Updating the Administrative Templates files
 
