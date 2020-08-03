@@ -2,7 +2,7 @@
 title: Configure Many-to-One client mappings
 description: This article introduces about using the Configuration Editor feature of IIS to configure Many-to-One client certificate mappings.
 ms.date: 04/02/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: WWW authentication and authorization
 ms.topic: how-to
 ---
 # Configuring Many-to-One client certificate mappings for IIS 7.0 and 7.5

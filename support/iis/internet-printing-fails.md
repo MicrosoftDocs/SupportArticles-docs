@@ -1,13 +1,13 @@
 ---
 title: Internet Printing fails
-description: This article provides resolutions for the problem that Internet Printing fails if the document to be printed is larger than 29 MB.
+description: This article provides resolutions for the problem where Internet Printing fails if the document to be printed is larger than 29 MB.
 ms.date: 03/19/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Site behavior and performance
 ms.reviewer: mlaing
 ---
 # Internet Printing fails if the document to be printed is larger than 29 MB
 
-This article helps you resolve the problem that the Internet Printing fails if the document to be printed is larger than 29 MB.
+This article helps you resolve the problem where the Internet Printing fails if the document to be printed is larger than 29 MB.
 
 _Original product version:_ &nbsp; Internet Information Services 7.0, 7.5  
 _Original KB number:_ &nbsp; 2533472

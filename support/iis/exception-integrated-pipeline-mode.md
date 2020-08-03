@@ -1,13 +1,13 @@
 ---
 title: Application can't run in Integrated Pipeline mode
-description: This article provides resolutions for the problem that System.Web.HttpException occurs when an application runs in Integrated Pipeline mode.
+description: This article provides resolutions for the System.Web.HttpException that occurs when an application runs in Integrated Pipeline mode.
 ms.date: 03/23/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Site behavior and performance
 ms.reviewer: rakkim, mlaing
 ---
 # System.Web.HttpException in Internet Information Services
 
-This article helps you resolve the problem that the `System.Web.HttpException` occurs when an application runs in Integrated Pipeline mode, and provides a resolution.
+This article helps you resolve the `System.Web.HttpException` that occurs when an application runs in Integrated Pipeline mode, and provides a resolution.
 
 _Original product version:_ &nbsp; Internet Information Services 7.0 and later versions  
 _Original KB number:_ &nbsp; 2605401

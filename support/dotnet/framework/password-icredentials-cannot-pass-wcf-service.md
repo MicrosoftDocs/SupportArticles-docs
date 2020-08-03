@@ -7,7 +7,7 @@ ms.reviewer: amymcel
 ---
 # Password data in ICredentials can't be passed from a WCF client to the WCF service in the .NET Framework 4.5
 
-This article helps you resolve the problem that password data in `ICredentials` can't be passed from a Windows Communication Foundation (WCF) client to the WCF service.
+This article helps you resolve the problem where password data in `ICredentials` can't be passed from a Windows Communication Foundation (WCF) client to the WCF service.
 
 _Original product version:_ &nbsp; .NET Framework 4.5  
 _Original KB number:_ &nbsp; 3082119

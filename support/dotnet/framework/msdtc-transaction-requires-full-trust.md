@@ -7,7 +7,7 @@ ms.reviewer: jcarley; amymcel
 ---
 # MSDTC transaction requires Full Trust and can't run in a sandboxed solution
 
-This article helps you resolve the problem that a Microsoft Distributed Transaction Coordinator (MSDTC) transaction requires Full Trust and can't run in a sandboxed solution.
+This article helps you resolve the problem where a Microsoft Distributed Transaction Coordinator (MSDTC) transaction requires Full Trust and can't run in a sandboxed solution.
 
 _Original product version:_ &nbsp; .NET Framework 4.5  
 _Original KB number:_ &nbsp; 2998281

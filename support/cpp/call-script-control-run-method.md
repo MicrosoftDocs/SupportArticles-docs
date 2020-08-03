@@ -2,7 +2,7 @@
 title: Call the Run() method of a Script control in C++
 description: This article provides a sample code to tell users how to call Run() method of the Script control in Visual C++.
 ms.date: 04/22/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: C and C++ Libraries
 ms.topic: how-to
 ---
 # Call the Run() method of the Script control in C++

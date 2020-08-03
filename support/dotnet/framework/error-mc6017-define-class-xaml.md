@@ -7,7 +7,7 @@ ms.reviewer: shimada, davean
 ---
 # Build error MC6017 when you define a class that derives from a XAML-generated class
 
-This article helps you resolve the problem that the build error MC6017 occurs when you define a class that derives from an Extensible Application Markup Language (XAML) generated class.
+This article helps you resolve the problem where the build error MC6017 occurs when you define a class that derives from an Extensible Application Markup Language (XAML) generated class.
 
 _Original product version:_ &nbsp; .NET Framework  
 _Original KB number:_ &nbsp; 957231

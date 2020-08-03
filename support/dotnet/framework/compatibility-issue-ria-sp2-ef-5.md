@@ -1,13 +1,13 @@
 ---
 title: Compatibility when you use RIA V1.0 and EF 5
-description: Works around an issue in which your application may meet unpredictable behavior.
+description: Works around a problem in which your application may meet unpredictable behavior.
 ms.date: 05/11/2020
 ms.prod-support-area-path: 
 ms.reviewer: enamulkh
 ---
 # Compatibility issue when you use RIA Services V1.0 SP2 together with Entity Framework 5
 
-This article helps you resolve the compatibility problem that when you use Windows Communication Foundation (WCF) Rich Internet Applications (RIA) Services V1.0 SP2 and Entity Framework (EF) 5 together in an application.
+This article helps you resolve the compatibility problem that occurs when you use Windows Communication Foundation (WCF) Rich Internet Applications (RIA) Services V1.0 SP2 and Entity Framework (EF) 5 together in an application.
 
 _Original product version:_ &nbsp; Entity Framework 4.1  
 _Original KB number:_ &nbsp; 2975356

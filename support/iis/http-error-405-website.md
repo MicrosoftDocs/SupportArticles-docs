@@ -2,12 +2,12 @@
 title: HTTP Error 405.0 when you visit IIS websites
 description: This article describes a problem that occurs because a client request uses an HTTP verb that doesn't comply with the HTTP specifications or because a client uses the POST methods to send a request to a static HTML page.
 ms.date: 04/16/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: Health, diagnostic, and performance features
 ms.reviewer: mlaing
 ---
 # HTTP Error 405.0 when you visit a website that is hosted on a server that is running IIS
 
-This article helps you resolve the problem that **HTTP Error 405.0** occurs when you visit a website that is hosted on a server that is running Internet Information Services (IIS).
+This article helps you resolve the **HTTP Error 405.0** that occurs when you visit a website that is hosted on a server that is running Internet Information Services (IIS).
 
 _Original product version:_ &nbsp; Internet Information Services 7.0 and later versions  
 _Original KB number:_ &nbsp; 942051

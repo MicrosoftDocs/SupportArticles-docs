@@ -1,13 +1,13 @@
 ---
 title: Configuration files can't be exported
-description: This article provides resolutions for the problem that configuration files cannot be exported to a DFS share through the internet services manager.
+description: This article provides resolutions for the problem where configuration files cannot be exported to a DFS share through the internet services manager.
 ms.date: 04/07/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: WWW authentication and authorization
 ms.technology: iis
 ---
 # Configuration files can't be exported to a DFS share through the Internet Services Manager in IIS 7.0 and 7.5
 
-This article helps you resolve the problem that configuration files can't be exported to a DFS share through the Internet Services Manager.
+This article helps you resolve the problem where configuration files can't be exported to a DFS share through the Internet Services Manager.
 
 _Original product version:_ &nbsp; Internet Information Services 7.0, 7.5  
 _Original KB number:_ &nbsp; 2511835

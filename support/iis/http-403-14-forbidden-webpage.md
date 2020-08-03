@@ -2,11 +2,11 @@
 title: HTTP Error 403.14 when you open IIS webpages
 description: This article provides resolutions for HTTP Error 403.14 that occurs when you visit a Web site that is hosted on IIS 7.0.
 ms.date: 04/16/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: Health, diagnostic, and performance features
 ---
 # HTTP Error 403.14 - Forbidden when you open an IIS Webpage
 
-This article helps you resolve the problem that an error (HTTP Error 403.14 - Forbidden) occurs when you open a Microsoft Internet Information Services (IIS) Webpage.
+This article helps you resolve the error (HTTP Error 403.14 - Forbidden) that occurs when you open a Microsoft Internet Information Services (IIS) Webpage.
 
 _Original product version:_ &nbsp; Internet Information Services 7.0 and later versions  
 _Original KB number:_ &nbsp; 942062

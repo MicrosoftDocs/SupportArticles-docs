@@ -2,11 +2,11 @@
 title: An application pool exceeds time limits
 description: An application pool takes longer time and exceeds time limits during shutdown. This article provides resolutions for this problem.
 ms.date: 04/03/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Health, diagnostic, and performance features
 ---
 # An application pool exceeds time limits during shutdown in IIS
 
-This article helps you resolve the problem that an unexpected runtime error may be thrown when an application pool exceeds time limits during shutdown in Microsoft Internet Information Services (IIS).
+This article helps you resolve the problem where an unexpected runtime error may be thrown when an application pool exceeds time limits during shutdown in Microsoft Internet Information Services (IIS).
 
 _Original product version:_ &nbsp; Internet Information Services 7.0, 7.5  
 _Original KB number:_ &nbsp; 2634635

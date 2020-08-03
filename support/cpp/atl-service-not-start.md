@@ -2,12 +2,12 @@
 title: ATL service with _ATL_NO_COM_SUPPORT not start
 description: An ATL service created with the ATL Project Wizard will not start as a service.
 ms.date: 04/24/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: C and C++ Libraries
 ms.reviewer: shorne, scotbren
 ---
 # ATL service with _ATL_NO_COM_SUPPORT defined will not start
 
-This article helps you resolve the problem that Active Template Library (ATL) Project Wizard will not start as a service after you create a default ATL service project.
+This article helps you resolve the problem where Active Template Library (ATL) Project Wizard will not start as a service after you create a default ATL service project.
 
 _Original product version:_ &nbsp; Visual Studio 2010  
 _Original KB number:_ &nbsp; 2480736

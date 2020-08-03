@@ -1,13 +1,13 @@
 ---
 title: KB2998527 causes wrong code lookups on past dates
-description: This article explains the problem that update 2998527 causes incorrect code lookups on past dates when the application use TimeZoneInfo.
+description: This article explains the problem where update 2998527 causes incorrect code lookups on past dates when the application use TimeZoneInfo.
 ms.date: 05/08/2020
 ms.prod-support-area-path:
 ms.reviewer: leecow
 ---
 # Update 2998527 causes incorrect code lookups on past dates
 
-This article explains the problem that [KB 2998527](https://support.microsoft.com/help/2998527) causes incorrect code lookups on past dates when you use the `TimeZoneInfo` class in an application.
+This article explains the problem where [KB 2998527](https://support.microsoft.com/help/2998527) causes incorrect code lookups on past dates when you use the `TimeZoneInfo` class in an application.
 
 _Original product version:_ &nbsp; .NET Framework 4.6, 4.5  
 _Original KB number:_ &nbsp; 3012229

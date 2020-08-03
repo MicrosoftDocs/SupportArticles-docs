@@ -2,11 +2,11 @@
 title: Shared Configuration requires the same IIS version
 description: This article describes the Shared Configuration feature in IIS. Emphasizes that you cannot mix and match IIS versions in the same server farm.
 ms.date: 04/03/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: WWW authentication and authorization
 ---
 # IIS Shared Configuration feature requires all servers to run the same version of IIS
 
-This article helps you resolve the problem that you can't mix and match Microsoft Internet Information Services (IIS) versions in the same server farm when you use the Shared Configuration feature in IIS.
+This article helps you resolve the problem where you can't mix and match Microsoft Internet Information Services (IIS) versions in the same server farm when you use the Shared Configuration feature in IIS.
 
 _Original product version:_ &nbsp; Internet Information Services 8.0, 8.5  
 _Original KB number:_ &nbsp; 3151973

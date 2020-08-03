@@ -2,12 +2,12 @@
 title: Worker Process takes much memory
 description: This article provides resolutions for the problem that Worker Process may allocate a large amount of memory when you have a complex directory structure on IIS.
 ms.date: 04/07/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Site behavior and performance
 ms.reviewer: robmcm, romanf
 ---
 # Worker Process may allocate a large amount of memory when you have a complex directory structure on IIS
 
-This article provides resolutions for the problem that Worker Process may allocate large amounts of memory when you have a complex content directory structure on Microsoft Internet Information Services (IIS).
+This article provides resolutions for the problem where Worker Process may allocate large amounts of memory when you have a complex content directory structure on Microsoft Internet Information Services (IIS).
 
 _Original product version:_ &nbsp; Windows Server 2008, 2008 R2, 2012, 2012 R2  
 _Original KB number:_ &nbsp; 3020858

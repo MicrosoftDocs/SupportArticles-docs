@@ -2,12 +2,12 @@
 title: Fail to generate the certificate request
 description: This article discusses an error that occurs when you try to create a certificate request in IIS.
 ms.date: 03/30/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Site behavior and performance
 ms.reviewer: v-jomcc
 ---
 # Error when you create a certificate request in IIS: Failed to generate the certificate request
 
-This article helps you resolve the problem that an unexpected error might be thrown when you try to create a certificate request in Internet Information Services (IIS).
+This article helps you resolve the problem where an unexpected error might be thrown when you try to create a certificate request in Internet Information Services (IIS).
 
 _Original product version:_ &nbsp; Internet Information Services  
 _Original KB number:_ &nbsp; 908572

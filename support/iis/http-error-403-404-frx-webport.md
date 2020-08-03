@@ -2,11 +2,11 @@
 title: HTTP Error 403 and 404
 description: This article provides resolutions for the HTTP Error 403 and 404 errors that occur when accessing WebView or WebPort.
 ms.date: 04/17/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: Health, diagnostic, and performance features
 ---
 # HTTP Error 403 - Forbidden or HTTP Error 404 - File Not Found
 
-This article helps you resolve the problem that errors (HTTP Error 403 and 404) occur when you access WebView or WebPort.
+This article helps you resolve the errors (HTTP Error 403 and 404) that occur when you access WebView or WebPort.
 
 _Original product version:_ &nbsp; Microsoft FRx WebPort  
 _Original KB number:_ &nbsp; 965174

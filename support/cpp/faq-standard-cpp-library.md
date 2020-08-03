@@ -2,7 +2,7 @@
 title: FAQs about C++ library
 description: Answers common questions about the Standard C++ library.
 ms.date: 04/20/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: C and C++ Libraries
 ms.reviewer: JIANGES
 ---
 # Frequently asked questions about the Standard C++ library

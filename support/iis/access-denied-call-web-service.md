@@ -2,11 +2,11 @@
 title: Access denied when you call Web Service
 description: This article provides resolutions for Access Denied errors that occur when you call a Web service application and Anonymous access authentication is turned off.
 ms.date: 02/27/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: WWW authentication and authorization
 ---
 # Access Denied When you call a Web Service while Anonymous Authentication is turned Off
 
-This article helps you resolve the problem that errors (Access Denied) occur when you call a Web service application and Anonymous access authentication is turned off.
+This article helps you resolve errors (Access Denied) that occur when you call a Web service application and Anonymous access authentication is turned off.
 
 _Original product version:_ &nbsp; Web Services Enhancements  
 _Original KB number:_ &nbsp; 811318

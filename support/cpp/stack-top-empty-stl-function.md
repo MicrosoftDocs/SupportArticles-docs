@@ -2,7 +2,7 @@
 title: Use stack::top and stack::empty STL functions
 description: Introduces how to use the stack::top and stack::empty STL functions in Visual C++.
 ms.date: 04/27/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: C and C++ Libraries
 ms.reviewer: derekj
 ms.topic: how-to
 ---

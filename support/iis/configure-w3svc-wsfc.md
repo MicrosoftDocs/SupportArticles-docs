@@ -2,7 +2,7 @@
 title: Configuring IIS World Wide Web Publishing Service
 description: This article describes how to configure IIS World Wide Web Publishing Service in a Windows Server failover cluster.
 ms.date: 03/31/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: WWW authentication and authorization
 ms.reviewer: bretb, ahmedb, ctimon, mlaing
 ---
 # Configuring IIS World Wide Web Publishing Service in a Windows Server failover cluster

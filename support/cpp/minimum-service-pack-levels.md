@@ -2,7 +2,7 @@
 title: Service pack levels for VC++ Redistributable
 description: Lists the minimum service pack levels for Microsoft VC++ Redistributable Packages. These levels aren't described consistently on the related Microsoft Download Center pages.
 ms.date: 04/15/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Installation
 ms.reviewer: myamada
 ---
 # Minimum service pack levels for Visual C++ Redistributable Packages

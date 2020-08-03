@@ -2,12 +2,12 @@
 title: Error 530 when you browse anonymous FTP sites
 description: This article provides resolutions for the error 530 that occurs when users browse an anonymous FTP site configured for Active Directory User Isolation in IIS 7.0 and 7.5.
 ms.date: 04/07/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: FTP authentication and authorization
 ms.reviewer: Robmcm, MLaing
 ---
 # Error 530 when you browse anonymous FTP sites configured for Active Directory User Isolation in IIS 7.0 and 7.5
 
-This article helps you resolve the problem that an error 530 occurs when you browse an anonymous FTP site configured for Active Directory User Isolation in Microsoft Internet Information Services (IIS) 7.0 or 7.5.
+This article helps you resolve the error 530 that occurs when you browse an anonymous FTP site configured for Active Directory User Isolation in Microsoft Internet Information Services (IIS) 7.0 or 7.5.
 
 _Original product version:_ &nbsp; Internet Information Services 7.0, 7.5  
 _Original KB number:_ &nbsp; 2649659

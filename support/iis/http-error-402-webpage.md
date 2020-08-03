@@ -1,13 +1,13 @@
 ---
 title: HTTP Error 404.2 when you visit a web page 
-description: This article describes a problem that you might receive an error message when you try to visit a web page that is hosted on IIS 7.0. 
+description: This article describes a problem where you might receive an error message when you try to visit a web page that is hosted on IIS 7.0. 
 ms.date: 03/31/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Site behavior and performance
 ms.reviewer: cochen
 ---
 # HTTP Error 404.2 when you visit a web page that is hosted on a computer that is running IIS 7.0
 
-This article helps you resolve the problem that an unexpected error may be thrown when you visit a web page that is hosted on a computer that is running Internet Information Services (IIS) 7.0.
+This article helps you resolve the problem where an unexpected error may be thrown when you visit a web page that is hosted on a computer that is running Internet Information Services (IIS) 7.0.
 
 _Original product version:_ &nbsp; Internet Information Services 7.0  
 _Original KB number:_ &nbsp; 942040

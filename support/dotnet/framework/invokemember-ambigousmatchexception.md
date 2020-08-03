@@ -6,7 +6,7 @@ ms.prod-support-area-path:
 ---
 # InvokeMember throws an AmbigousMatchException
 
-This article helps you resolve the problem that an `AmbigousMatchException` may be thrown when you call `System.Type.InvokeMember` using the `DefaultBinder` to invoke the non-generic version of the function `Check`.
+This article helps you resolve the problem where an `AmbigousMatchException` may be thrown when you call `System.Type.InvokeMember` using the `DefaultBinder` to invoke the non-generic version of the function `Check`.
 
 _Original product version:_ &nbsp; Microsoft .NET Framework 4.5  
 _Original KB number:_ &nbsp; 2843607

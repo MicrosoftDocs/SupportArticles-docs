@@ -2,7 +2,7 @@
 title: Expression Web frequently asked questions
 description: This article provides some frequently asked question (FAQ) of Microsoft Expression Web 4.0.
 ms.date: 03/24/2020
-ms.prod-support-area-path:  
+ms.prod-support-area-path: 
 ---
 # Expression Web 4.0 frequently asked questions
 

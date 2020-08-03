@@ -1,6 +1,6 @@
 ---
 title: FtpWebRequest behavior in .NET Framework 4
-description: When you use the System.Net.FtpWebRequest class on .Net 4.0 to perform the FTP STOR/RETR command, the class throws an FTP error 5xx. This article provides a resolution for this issue.
+description: When you use the System.Net.FtpWebRequest class on .Net 4.0 to perform the FTP STOR/RETR command, the class throws an FTP error 5xx. This article provides a resolution for this problem.
 ms.date: 05/06/2020
 ms.prod-support-area-path:
 ms.reviewer: pphadke, dshulman
