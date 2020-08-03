@@ -27,7 +27,7 @@ By default, Active Directory replication remote procedure calls (RPC) occur dyna
 When you specify ports to use by using the registry entries that are mentioned in the More information section of this article, both Active Directory server-side replication traffic and client RPC traffic are sent to these ports by the endpoint mapper. This configuration is possible because all RPC interfaces that are supported by Active Directory are running on all ports on which it's listening.
 
 > [!NOTE]
-> This article doesn't describe how to configure AD replication for a firewall. Additional ports must be opened to make replication work through a firewall. For example, ports may need to be opened for the Kerberos protocol. To obtain a complete list of the required ports for services across a firewall, see [Service overview and network port requirements for Windows](service-overview-and-network-port-requirements.md).  
+> This article doesn't describe how to configure AD replication for a firewall. Additional ports must be opened to make replication work through a firewall. For example, ports may need to be opened for the Kerberos protocol. To obtain a complete list of the required ports for services across a firewall, see [Service overview and network port requirements for Windows](../networking/service-overview-and-network-port-requirements.md).  
 
 ## More information
 

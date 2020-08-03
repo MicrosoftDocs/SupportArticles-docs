@@ -30,7 +30,7 @@
     - name: How to troubleshoot high Lsass.exe CPU utilization
       href: ./activedirectory/troubleshoot-high-lsass.exe-cpu-utilization.md
     - name: Known issues for managing Group Policy clients
-      href: ./activedirectory/known-issues-for-group-policy-clients
+      href: ./activedirectory/known-issues-for-group-policy-clients.md
     - name: Syskey.exe utility is no longer supported
       href: ./activedirectory/syskey-exe-utility-is-no-longer-supported.md
     - name: Troubleshoot domain controller replication error 1727

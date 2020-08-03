@@ -843,7 +843,7 @@ To manually undelete objects in a deleted object's container, follow these steps
 
 When users are deleted because of a bulk deletion, you may want to learn where the deletion originated. To do so, follow these steps:
 
-1. To locate deleted security principals, follow steps 1 to 7 in the [How to manually undelete objects in a deleted object's container](#how-to-manually-undelete-objects-in-a-deleted-object's-container) section. If a tree was deleted, follow these steps to locate a parent container of the deleted object.
+1. To locate deleted security principals, follow steps 1 to 7 in the [How to manually undelete objects in a deleted object's container](#how-to-manually-undelete-objects-in-a-deleted-objects-container) section. If a tree was deleted, follow these steps to locate a parent container of the deleted object.
 2. Copy the value of the `objectGUID` attribute to the Windows clipboard.
 You can paste this value when you enter the `Repadmin` command in step 4.
 3. At the command line, run the following command:
