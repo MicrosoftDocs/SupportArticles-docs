@@ -2,12 +2,12 @@
 title: WIA 2.0 doesn't support duplex scan
 description: When scanning documents using an application that uses the Windows Image Acquisition (WIA) Automation Library 2.0, the application will fail to perform a duplex scan.
 ms.date: 03/16/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Graphics and multimedia development
 ms.reviewer: dbristol
 ---
 # WIA Automation Library 2.0 does not support duplex scan
 
-This article helps you resolve the problem that When you scan documents using an application that uses Windows Image Acquisition (WIA) Automation Library 2.0, the application will fail to perform a duplex scan.
+This article helps you resolve the problem that when you scan documents using an application that uses Windows Image Acquisition (WIA) Automation Library 2.0, the application will fail to perform a duplex scan.
 
 _Original product version:_ &nbsp; Windows  
 _Original KB number:_ &nbsp; 2709992

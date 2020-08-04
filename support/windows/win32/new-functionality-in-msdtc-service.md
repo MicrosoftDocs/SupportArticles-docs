@@ -2,7 +2,7 @@
 title: New functionality in MS DTC service
 description: This article describes security-related changes to the Distributed Transaction Coordinator service.
 ms.date: 03/16/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: Distributed transactions
 ms.topic: article
 ---
 # New functionality in the Distributed Transaction Coordinator service in Windows

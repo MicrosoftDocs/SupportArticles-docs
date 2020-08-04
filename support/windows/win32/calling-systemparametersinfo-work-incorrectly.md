@@ -1,13 +1,13 @@
 ---
 title: SystemParametersInfo works incorrectly
-description: This article describes an issue in which Windows Explorer overrides changes to work area made by applications calling SystemParametersInfo (SPI_SETWORKAREA) on Windows 10.
+description: This article describes a problem in which Windows Explorer overrides changes to work area made by applications calling SystemParametersInfo (SPI_SETWORKAREA) on Windows 10.
 ms.date: 03/16/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Desktop app UI development
 ms.reviewer: christys, delhan
 ---
 # Applications calling SystemParametersInfo function with SPI_SETWORKAREA flag might not work correctly in Windows 10
 
-This article describes an issue that when you use an application to call the `SystemParametersInfo` function with the `SPI_SETWORKAREA` flag, the application may not work correctly in Windows 10.
+This article describes a problem that when you use an application to call the `SystemParametersInfo` function with the `SPI_SETWORKAREA` flag, the application may not work correctly in Windows 10.
 
 _Original product version:_ &nbsp; Windows 10  
 _Original KB number:_ &nbsp; 4014104

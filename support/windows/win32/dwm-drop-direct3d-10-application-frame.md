@@ -2,7 +2,7 @@
 title: DWM drops frame of Direct3D 10 application
 description: This article describes that the DWM (Desktop Window Manager) can drop frames of Direct3D 10 applications, which are locked to the VSync without throttling back the application.
 ms.date: 03/16/2020
-ms.prod-support-area-path: 
+ms.prod-support-area-path: Graphics and multimedia development
 ---
 # The DWM can drop frames of Direct3D 10 applications that are locked to the VSync
 
@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 2532720
 
 ## Symptoms
 
-The Desktop Window Manager (DWM) can drop frames of Direct3D 10 applications that are locked to the VSync without throttling back the application. This can make it so the application doesn't know frames were dropped. For example, you set up your primary monitor to run at 60 Hz or greater. You set up your secondary monitor to run at 30 Hz. In your Direct3D 10 code, you specify that we should sync to the VSync when you call `Present()`. This means we should run at 30 frames per second when on the secondary monitor:
+The Desktop Window Manager (DWM) can drop frames of Direct3D 10 applications that are locked to the VSync without throttling back the application. This operation can make it so the application doesn't know frames were dropped. For example, you set up your primary monitor to run at 60 Hz or greater. You set up your secondary monitor to run at 30 Hz. In your Direct3D 10 code, you specify that we should sync to the VSync when you call `Present()`. It means we should run at 30 frames per second when on the secondary monitor:
 
 ```cpp
 pSwapChain->Present( 1, 0 );

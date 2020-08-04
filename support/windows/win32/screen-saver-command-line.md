@@ -2,7 +2,7 @@
 title: Command-line arguments for Screen Savers 
 description: This article description of command-line arguments for Win32 Screen Savers marked 4.0 or higher. 
 ms.date: 02/28/2020
-ms.prod-support-area-path:
+ms.prod-support-area-path: Desktop app UI development
 ms.topic: article
 ---
 # Screen Saver command-line arguments
