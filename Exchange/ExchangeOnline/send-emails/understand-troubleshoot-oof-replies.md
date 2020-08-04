@@ -215,7 +215,8 @@ When you create, configure, or manage OOF replies, you might also experience the
 
 ### An old or duplicate OOF message is sent
 
-1. If an old or duplicate OOF reply is sent, check for a duplicate Inbox rule. This issue may also occur if the OOF history limit is reached. The OOF history has a limit of 10,000 entries. If this threshold is reached, new users can't be added to the history list and OOF replies will continue to be sent to recipients who are not already in that list. All users who are already in the list will not receive duplicate OOF replies. For more information, see [this article](https://support.microsoft.com/help/3106609) or follow these steps: Remove the OOF rules and the OOF rules templates from the mailbox. To locate the rules, see the [OOF rule details](#oof-rule-details) section.
+If an old or duplicate OOF reply is sent, check for a duplicate Inbox rule. This issue may also occur if the OOF history limit is reached. The OOF history has a limit of 10,000 entries. If this threshold is reached, new users can't be added to the history list and OOF replies will continue to be sent to recipients who are not already in that list. All users who are already in the list will not receive duplicate OOF replies. For more information, see [this article](https://support.microsoft.com/help/3106609) or follow these steps: 
+1. Remove the OOF rules and the OOF rules templates from the mailbox. To locate the rules, see the [OOF rule details](#oof-rule-details) section.
 2. Disable and then re-enable the OOF feature for the mailbox.
 3. Check again whether the OOF feature works as expected and the symptoms do not occur.
 
