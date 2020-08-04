@@ -62,7 +62,7 @@ These rules are set individually in the user's mailbox. Each rule has an associa
 
 ## OOF rule details
 
-All Inbox rules can be viewed by using the [MFCMapi](https://github.com/stephenegriffin/mfcmapi) tool, as follows::
+All Inbox rules can be viewed by using the [MFCMapi](https://github.com/stephenegriffin/mfcmapi/releases) tool, as follows::
 
 1. Log on to the tool .
 2. Select the profile that is associated with the mailbox that has the OOF rules
