@@ -9,11 +9,11 @@ ms.prod-support-area-path: Administrator roles
 ---
 # AssignmentFilter permissions in Endpoint Manager admin center
 
-In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), when you select **Tenant administration**, you may notice a new set of permissions, which is called **AssignmentFilter**. These permissions are included in support of an in-development preview feature. They don't impact any production capabilities in Endpoint Manager and can be safely ignored.
+In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you may notice a new permissions set that is named **AssignmentFilter** when you select **Tenant administration** > **Roles** > a supported role > **Properties**. The AssignmentFilter permissions are included to support an in-development preview feature. They don't affect any production capabilities in Endpoint Manager. Therefore, you can safely ignore them.
 
 ## Summary
 
-The AssignmentFilter permissions include the following permissions:
+The AssignmentFilter set includes the following permissions:
 
 - Create
 - Delete
@@ -29,6 +29,6 @@ These permissions apply to the following built-in roles:
 | Help Desk Operator | Read |
 | Application Manager | Create, Delete, Read, Update |
 | Endpoint Security Manager | Read |
-| Read Only Operator | Read |
+| read-only Operator | Read |
 
-These permissions can also be added to any new or existing custom roles.
+You can also add these permissions to any new or existing custom roles.
