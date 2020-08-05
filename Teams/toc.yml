@@ -77,6 +77,10 @@
     items:
     - name: Downloaded documents open in protected view
       href: ./known-issues/download-documents-open-in-protected-view.md
+  - name: Forms
+    items:
+    - name: Can't send or respond a poll
+      href: ./known-issues/cannot-send-poll.md
   - name: IM and Presence
     items:
     - name: Can't save profile picture
