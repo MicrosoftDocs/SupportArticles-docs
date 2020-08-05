@@ -33,7 +33,7 @@ How do you want to join the Teams meeting?
 
 - If you want to use a computer or laptop, see [Join with a computer or laptop](#join-with-a-computer-or-laptop).
 - If you want to use a smartphone or tablet, see [Install Teams on your mobile device](#install-teams-on-your-mobile-device).
-- If you want to call in by phone, see [Join a meeting by phone: check meeting request for dial-in numbers](#join-a-meeting-by-phone:-check-meeting-request-for-dial-in-numbers).
+- If you want to call in by phone, see [Join a meeting by phone: check meeting request for dial-in numbers](#join-a-meeting-by-phone-check-meeting-request-for-dial-in-numbers).
 - [Troubleshooting meeting join](#troubleshooting-meeting-join)
 
 ### Join with a computer or laptop
@@ -193,7 +193,7 @@ Does it contain dial-in information similar to this?
 :::image type="content" source="media/how-to-join-a-teams-meeting/join-by-phone.png" alt-text="Join a meeting by phone":::
 
 - If yes, see [Join a meeting by phone](#join-a-meeting-by-phone).
-- If no, see [Join a meeting by phone: no dial-in numbers available](#join-a-meeting-by-phone:-no-dial-in-numbers-available).
+- If no, see [Join a meeting by phone: no dial-in numbers available](#join-a-meeting-by-phone-no-dial-in-numbers-available).
 
 ### Join a meeting by phone: no dial-in numbers available
 
@@ -203,7 +203,7 @@ What do you want to do?
 
 - [Join with a computer](#join-with-a-computer-or-laptop)
 - [Join with a mobile device](#install-teams-on-your-mobile-device)
-- If you're done for now, see [Join a Teams meeting: walkthrough complete](#join-a-teams-meeting:-walkthrough-complete).
+- If you're done for now, see [Join a Teams meeting: walkthrough complete](#join-a-teams-meeting-walkthrough-complete).
 
 ### Join a meeting by phone
 

@@ -46,7 +46,7 @@ In most cases, both your sign-in address and user name look like one of these ex
 Can you sign in to Microsoft 365 Web Scheduler at [https://sched.lync.com](https://sched.lync.com/)?
 
 - If yes, see [Sign in with your corrected sign-in address](#sign-in-with-your-corrected-sign-in-address).
-- If no, see [Can't sign in to Microsoft 365 Web Scheduler](#can't-sign-in-to-microsoft-365-web-scheduler).
+- If no, see [Can't sign in to Microsoft 365 Web Scheduler](#cant-sign-in-to-microsoft-365-web-scheduler).
 - If you forgot your password, see [Contact your workplace technical support for a new password](#contact-your-workplace-technical-support-for-a-new-password).
 
 ### Sign in with your corrected sign-in address
@@ -57,7 +57,7 @@ If you're able to successfully sign in to Microsoft 365 Web Scheduler, try signi
 
 Were you able to sign in?
 
-- If yes, congratulations, you’ve resolved your sign-in issue!
+- If yes, congratulations, you've resolved your sign-in issue!
 - If no and you need both a sign-in address and user ID, see [Enter your user ID](#enter-your-user-id).
 - If no, and you got some other error, see [Contact your workplace technical support for a new password](#contact-your-workplace-technical-support-for-a-new-password).
 
@@ -72,7 +72,7 @@ Once you have a new password, try signing in again.
 
 Did this solve your problem?
 
-- If yes, congratulations, you’ve resolved your sign-in issue!
+- If yes, congratulations, you've resolved your sign-in issue!
 - If no, see [Sign in on another device](#sign-in-on-another-device).
 
 ### Sign in on another device
@@ -87,16 +87,16 @@ Are you able to sign in on another computer, or on a tablet or smartphone?
 
 Can you sign in on a different network-for example, at home, or at a public wireless access point?
 
-- If yes, see [Contact your workplace technical support](#contact-your-workplace-technical-support.)
+- If yes, see [Contact your workplace technical support](#contact-your-workplace-technical-support)
 - If no, see [Type of device that you use to sign in](#type-of-device-that-you-use-to-sign-in).
-- If you don't have access to a different network right now, see [Contact your workplace technical support](#contact-your-workplace-technical-support.)
+- If you don't have access to a different network right now, see [Contact your workplace technical support](#contact-your-workplace-technical-support)
 
 ### Type of device
 
 What type of devices are you using to sign in?
 
-- For Windows computer, laptop, or tablet, see [Synchronize your system clock with the network (Windows computer or laptop)](#synchronize-your-system-clock-with-the-network-(windows-computer-or-laptop)).
-- For Mac computer or laptop, see [Synchronize your system clock with the network (Mac computer or laptop)](#synchronize-your-system-clock-with-the-network-(mac-computer-or-laptop)).
+- For Windows computer, laptop, or tablet, see [Synchronize your system clock with the network (Windows computer or laptop)](#synchronize-your-system-clock-with-the-network-windows-computer-or-laptop).
+- For Mac computer or laptop, see [Synchronize your system clock with the network (Mac computer or laptop)](#synchronize-your-system-clock-with-the-network-mac-computer-or-laptop).
 - For Smartphone, see [Update Skype for Business on the smartphone or tablet](#update-skype-for-business-on-the-smartphone-or-tablet).
 - For iPad or Android tablet, see [Update Skype for Business on the smartphone or tablet](#update-skype-for-business-on-the-smartphone-or-tablet).
 
@@ -108,8 +108,8 @@ What type of devices are you using to sign in?
 
 - For Windows computer, laptop, or tablet, see [- If no, see [Delete Skype for Business sign-in information](#delete-skype-for-business-sign-in-information).
 - For Mac computer or laptop, see [Delete Skype for Business for Mac sign-in information](#delete-skype-for-business-for-mac-sign-in-information).
-- For Smartphone, see [Configure Skype for Business Online connection settings manually (Skype for Business for mobile devices)](#configure-skype-for-business-online-connection-settings-manually-(skype-for-business-for-mobile-devices)).
-- For iPad or Android tablet, see [Configure Skype for Business Online connection settings manually (Skype for Business for mobile devices)](#configure-skype-for-business-online-connection-settings-manually-(skype-for-business-for-mobile-devices)).
+- For Smartphone, see [Configure Skype for Business Online connection settings manually (Skype for Business for mobile devices)](#configure-skype-for-business-online-connection-settings-manually-skype-for-business-for-mobile-devices).
+- For iPad or Android tablet, see [Configure Skype for Business Online connection settings manually (Skype for Business for mobile devices)](#configure-skype-for-business-online-connection-settings-manually-skype-for-business-for-mobile-devices).
 
 ### Synchronize your system clock with the network (Windows computer or laptop)
 
@@ -145,7 +145,7 @@ If you need to update your device's time:
 
 Did this solve your problem?
 
-- If yes, congratulations, you’ve resolved your sign-in issue!
+- If yes, congratulations, you've resolved your sign-in issue!
 - If no, see [Delete Skype for Business sign-in information](#delete-skype-for-business-sign-in-information).
 
 ### Desktop Setup
@@ -154,7 +154,7 @@ Make sure you have the most current version of the [Microsoft Online Services Si
 
 Did this solve your problem?
 
-- If yes, congratulations, you’ve resolved your sign-in issue!
+- If yes, congratulations, you've resolved your sign-in issue!
 - If no, see [Delete Skype for Business sign-in information](#delete-skype-for-business-sign-in-information).
 
 ### Update Skype for Business
@@ -163,7 +163,7 @@ Make sure the user has the [most current version of Skype for Business](https://
 
 Did this solve your problem?
 
-- If yes, congratulations, you’ve resolved your sign-in issue!
+- If yes, congratulations, you've resolved your sign-in issue!
 - If no, see [Delete Skype for Business sign-in information](#delete-skype-for-business-sign-in-information).
 
 ### Delete Skype for Business sign-in information
@@ -172,8 +172,8 @@ For more information, see [How to troubleshoot being unable to sign in to Skype 
 
 Did this solve your problem?
 
-- If yes, congratulations, you’ve resolved your sign-in issue!
-- If no, see [Configure connection settings manually](#configure-connection-settings-manually).
+- If yes, congratulations, you've resolved your sign-in issue!
+- If no, see [Configure connection settings manually](#configure-skype-for-business-connection-settings-manually).
 
 ### Synchronize your system clock with the network (Mac computer or laptop)
 
@@ -191,7 +191,7 @@ Follow these steps:
 
 Did this solve your problem?
 
-- If yes, congratulations, you’ve resolved your sign-in issue!
+- If yes, congratulations, you've resolved your sign-in issue!
 - If no, see [Update Skype for Business](#update-skype-for-business).
 
 ### Update Skype for Business
@@ -200,7 +200,7 @@ Make sure your computer has the [most recent version](https://www.microsoft.com/
 
 Did this solve your problem?
 
-- If yes, congratulations, you’ve resolved your sign-in issue!
+- If yes, congratulations, you've resolved your sign-in issue!
 - If no, see [Delete Skype for Business sign-in information](#delete-skype-for-business-sign-in-information).
 
 ### Delete Skype for Business for Mac sign-in information
@@ -224,8 +224,8 @@ Then delete any corrupted or cached certificates:
 
 Did this solve your problem?
 
-- If yes, congratulations, you’ve resolved your sign-in issue!
-- If no, see [Configure connection settings manually](#configure-connection-settings-manually).
+- If yes, congratulations, you've resolved your sign-in issue!
+- If no, see [Configure connection settings manually](#configure-skype-for-business-connection-settings-manually).
 
 ### Update Skype for Business on the smartphone or tablet
 
@@ -233,8 +233,8 @@ Go to the app store for your device and check for updates to the currently insta
 
 Did this solve your problem?
 
-- If yes, congratulations, you’ve resolved your sign-in issue!
-- If no, see [Configure Skype for Business Online connection settings manually (Skype for Business for mobile devices)](#configure-skype-for-business-online-connection-settings-manually-(skype-for-business-for-mobile-devices)).
+- If yes, congratulations, you've resolved your sign-in issue!
+- If no, see [Configure Skype for Business Online connection settings manually (Skype for Business for mobile devices)](#configure-skype-for-business-online-connection-settings-manually-skype-for-business-for-mobile-devices).
 
 ### Configure Skype for Business connection settings manually
 
@@ -254,7 +254,7 @@ Manually add Skype for Business server settings:
 
 Did this solve your problem?
 
-- If yes, see [Issue temporarily resolved (Clients and devices)](#issue-temporarily-resolved-(clients-and-devices)).
+- If yes, see [Issue temporarily resolved (Clients and devices)](#issue-temporarily-resolved-clients-and-devices).
 - If no, see [Contact your workplace technical support](#contact-your-workplace-technical-support).
 
 ### Configure Skype for Business connection settings manually
@@ -273,7 +273,7 @@ Ask the user to follow these steps:
 
 Did this solve your problem?
 
-- If yes, see [Issue temporarily resolved (Clients and devices)](#issue-temporarily-resolved-(clients-and-devices)).
+- If yes, see [Issue temporarily resolved (Clients and devices)](#issue-temporarily-resolved-clients-and-devices).
 - If no, see [Contact your workplace technical support](#contact-your-workplace-technical-support).
 
 ### Issue temporarily resolved (Clients and devices)
@@ -297,8 +297,8 @@ Manually add Skype for Business server settings:
 
 Did this solve your problem?
 
-- If yes, see [Issue temporarily resolved (Clients and devices)](#issue-temporarily-resolved-(clients-and-devices)).
-- If no, see [Configure Skype for Business Server connection settings manually (Skype for Business for mobile devices)](#configure-skype-for-business-server-connection-settings-manually-(skype-for-business-for-mobile-devices)).
+- If yes, see [Issue temporarily resolved (Clients and devices)](#issue-temporarily-resolved-clients-and-devices).
+- If no, see [Configure Skype for Business Server connection settings manually (Skype for Business for mobile devices)](#configure-skype-for-business-server-connection-settings-manually-skype-for-business-for-mobile-devices).
 
 ### Contact your workplace technical support
 
@@ -312,7 +312,7 @@ If that doesn't work, try the same credentials you use when signing in to your o
 
 Did this solve your problem?
 
-- If yes, congratulations, you’ve resolved your sign-in issue!
+- If yes, congratulations, you've resolved your sign-in issue!
 - If no, see [Sign in on another device](#sign-in-on-another-device).
 
 ### Update Skype for Business Windows Store app
@@ -328,7 +328,7 @@ Make sure you have the most current version of Skype for Business Windows Store 
 
 Did this solve your problem?
 
-- If yes, congratulations, you’ve resolved your sign-in issue!
+- If yes, congratulations, you've resolved your sign-in issue!
 - If no, see [Delete Skype for Business sign-in information](#delete-skype-for-business-sign-in-information).
 
 ### Clear the DNS cache
@@ -359,8 +359,8 @@ Make sure that previously save network information is not blocking your sign-in 
 
 Did this solve your problem?
 
-- If yes, congratulations, you’ve resolved your sign-in issue!
-- If no, see [Configure connection settings manually](#configure-connection-settings-manually).
+- If yes, congratulations, you've resolved your sign-in issue!
+- If no, see [Configure connection settings manually](#configure-skype-for-business-connection-settings-manually).
 
 ### Can't sign in to Microsoft 365 Web Scheduler
 
@@ -389,5 +389,5 @@ Manually add Skype for Business server settings:
 
 Did this solve your problem?
 
-- If yes, see [Issue temporarily resolved (Clients and devices)](#issue-temporarily-resolved-(clients-and-devices)).
+- If yes, see [Issue temporarily resolved (Clients and devices)](#issue-temporarily-resolved-clients-and-devices).
 - If no, see [Contact your workplace technical support](#contact-your-workplace-technical-support).

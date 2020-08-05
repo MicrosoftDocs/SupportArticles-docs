@@ -30,14 +30,14 @@ This article is for anyone who can't sync OneDrive for Business. You'll find det
 
 ## Update OneDrive for Business to the current release
 
-If you come from the article [Fix OneDrive sync problems](https://support.microsoft.com/office/fix-onedrive-sync-problems-0899b115-05f7-45ec-95b2-e4cc8c4670b2), see [Is the library configured to be available offline?](#is-the-library-configured-to-be-available-offline?) to begin at the next step.
+If you come from the article [Fix OneDrive sync problems](https://support.microsoft.com/office/fix-onedrive-sync-problems-0899b115-05f7-45ec-95b2-e4cc8c4670b2), see [Is the library configured to be available offline?](#is-the-library-configured-to-be-available-offline) to begin at the next step.
 
 OneDrive for Business is updated frequently. If you don't have the most current version of the groove.exe sync app, you might have problems syncing. [Follow these steps](https://support.office.microsoft.com/article/49771c73-e7ad-4d26-bff1-50bb12a83817) to make sure you have the latest version.
 
 Before we are starting to troubleshoot OneDrive for Business sync issue, we'd better to do some basic checking at first.
 
 - [Restriction and limitations](#restrictions-and-limitations)
-- [Is the library configured to be available offline?](#is-the-library-configured-to-be-available-offline?)
+- [Is the library configured to be available offline?](#is-the-library-configured-to-be-available-offline)
 
 ### Review conflicts
 
@@ -95,7 +95,7 @@ Try clearing cached files from Upload Center. To do this, follow these steps:
 Did this solve your problem?
 
 - If yes, we’re glad that your issue is resolved.
-- If no, see [Stop and resync your libraries](#stop-and-re-sync-your-libraries).
+- If no, see [Stop and resync your libraries](#stop-and-resync-your-libraries).
 
 ### Stop and resync your libraries
 
