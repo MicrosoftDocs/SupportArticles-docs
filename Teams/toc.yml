@@ -73,10 +73,14 @@
       href: ./known-issues/following-application-instance-not-present-error.md
     - name: Users with Exchange Online mailboxes can't access meetings or connectors 
       href: ./known-issues/exchange-users-cant-access-meetings.md
-  - name: Files
+ - name: Files
     items:
     - name: Downloaded documents open in protected view
       href: ./known-issues/download-documents-open-in-protected-view.md
+ - name: Forms
+    items:
+    - name: Can't send or respond a poll
+      href: ./known-issues/cannot-send-poll.md
   - name: IM and Presence
     items:
     - name: Can't save profile picture
