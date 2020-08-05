@@ -86,6 +86,7 @@
     - name: Deleted messages with an @ mention send notifications with a channel link
       href: ./known-issues/deleted-messages-send-notifications-with-link.md
   - name: Meetings
+    items:
     - name: How to join a Microsoft Teams meeting
       href: ./meetings/how-to-join-a-teams-meeting.md
   - name: Mobile

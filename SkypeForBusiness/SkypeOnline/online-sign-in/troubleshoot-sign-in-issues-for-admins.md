@@ -132,7 +132,7 @@ Make sure that previously saved sign-in information isn’t blocking your curren
 
 - Windows 7, Windows Vista, Windows XP, Windows Server 2008, or Windows Server 2003
 
-  Download the [easy fix 50935](http://go.microsoft.com/?linkid=9818930), and then click **Run**.
+  Download the [easy fix 50935](https://go.microsoft.com/?linkid=9818930), and then click **Run**.
 
 If the issue still exists, clear the [Clear the DNS cache (Lync 2010)](#clear-the-dns-cache-lync-2010) section.
 
@@ -236,7 +236,7 @@ If the issue isn't solved, go to the [Update Lync for Mac 2011](#update-lync-for
 
 ###### Update Lync for Mac 2011
 
-Make sure the user's computer has the [most recent version](http://go.microsoft.com/fwlink/p/?linkid=328618) of Lync for Mac 2011.
+Make sure the user's computer has the [most recent version](https://go.microsoft.com/fwlink/p/?linkid=328618) of Lync for Mac 2011.
 
 If this method doesn't solve this issue, go to the [Delete Lync for Mac 2011 sign-in information](#delete-lync-for-mac-2011-sign-in-information) section.
 
