@@ -39,3 +39,5 @@
       href: ../sync/onedrive-for-business-sync-returns-error.md
     - name: Enable co-authoring for OneDrive-synced files
       href: ../sync/enable-co-authoring-for-onedrive-synced-file.md
+    - name: Troubleshoot sync issues
+      href: ../sync/troubleshoot-sync-issues.md
