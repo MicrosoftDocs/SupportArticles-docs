@@ -29,11 +29,11 @@ Out of Office (OOF) replies can be a bit of a mystery. How do they work? Why do 
 
 OOF — or automatic — replies are Inbox rules that are set in the user's mailbox by the client. OOF rules are server-side rules. Therefore, they are triggered regardless of whether the client is running.
 
-There are several methods to set up automatic replies, as follows:
+Automatic replies can be configured:
 
-- They can be set up as an automatic reply feature from within Outlook, [like this](https://support.office.com/article/Send-automatic-out-of-office-replies-from-Outlook-9742f476-5348-4f9f-997f-5e208513bd67).
-- They can be configured by using other clients, such as Outlook on the web (OWA).
-- They can be configured by running a PowerShell command ([Set-MailboxAutoReplyConfiguration](https://docs.microsoft.com/powershell/module/exchange/set-mailboxautoreplyconfiguration?view=exchange-ps)).
+- as an automatic reply feature from within Outlook, [like this](https://support.office.com/article/Send-automatic-out-of-office-replies-from-Outlook-9742f476-5348-4f9f-997f-5e208513bd67).
+- by using other clients, such as Outlook on the web (OWA).
+- by running a PowerShell command ([Set-MailboxAutoReplyConfiguration](https://docs.microsoft.com/powershell/module/exchange/set-mailboxautoreplyconfiguration?view=exchange-ps)).
 
 Admins can set up OOF replies from the M365 Admin Portal on behalf of (forgetful) users.
 
@@ -251,5 +251,6 @@ To locate the rules, see the [OOF rule details](#oof-rule-details) section. Afte
 
 ### An automatic reply is sent even if OOF is disabled
 
-In some scenarios, OOF messages are still sent even though the feature is disabled. This might occur if the rule is created manually by using the [out-of-office template](https://support.office.com/article/use-rules-to-create-an-out-of-office-message-9f124e4a-749e-4288-a266-2d009686b403). For more information, see the [OOF rule details](#oof-rule-details) section.
+In some scenarios, OOF messages are still sent even though the feature is disabled. This might occur if the rule is created manually by using the [out-of-office template](https://support.office.com/article/use-rules-to-create-an-out-of-office-message-9f124e4a-749e-4288-a266-2d009686b403).
+
 
