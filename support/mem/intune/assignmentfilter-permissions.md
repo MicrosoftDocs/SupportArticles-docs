@@ -29,6 +29,6 @@ These permissions apply to the following built-in roles:
 | Help Desk Operator | Read |
 | Application Manager | Create, Delete, Read, Update |
 | Endpoint Security Manager | Read |
-| read-only Operator | Read |
+| Read Only Operator | Read |
 
 You can also add these permissions to any new or existing custom roles.
