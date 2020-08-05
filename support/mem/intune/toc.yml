@@ -20,7 +20,7 @@
     href: application-could-not-be-wrapped.md
   - name: Data associated with an app is removed
     href: removed-data-associated-with-app-error.md
-  - name: Deploy Windows Update packages as Win32 apps
+  - name: Deploy Windows update packages as Win32 apps
     href: deploy-windows-update-packages-as-win32-apps.md
   - name: Error when you open a web app on iOS 
     href: invalid-address-open-web-app.md
@@ -98,6 +98,8 @@
     items:
     - name: 80180002b during Windows 10 Group Policy-based auto-enrollment
       href: windows10-enroll-error-80180002b.md
+    - name: Can't enroll devices with a non-administrator account
+      href: no-permission-to-enroll-windows-devices.md
     - name: Cannot delete autopilot deployment profile
       href: cannot-delete-autopilot-deployment-profile.md
     - name: Error 806 or 808 when importing CSV files
@@ -106,8 +108,6 @@
       href: mdm-enrollment-error-0xcaa9001f.md
     - name: Intune Connector for AD doesn't appear
       href: intune-connector-for-ad-not-appear.md
-    - name: No permissions to enroll Windows devices
-      href: no-permission-to-enroll-windows-devices.md
     - name: Unexpected error signing in to Intune Connector
       href: intune-connector-signin-unexpected-error.md
     - name: Windows failed to apply the MDM Policy settings

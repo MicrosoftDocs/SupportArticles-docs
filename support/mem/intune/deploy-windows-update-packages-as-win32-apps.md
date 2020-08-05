@@ -80,7 +80,7 @@ _Original KB number:_ &nbsp; 4550832
 
     **Sample script file (DetectKB.ps1)**:
 
-    ```sql
+    ```powershell
     $result = systeminfo.exe | findstr KB<KB number>
 
     if ($result)
