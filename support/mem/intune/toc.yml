@@ -18,6 +18,10 @@
     href: cannot-uninstall-apple-app-store-apps.md
   - name: Can't wrap an LOB app with Intune App Wrapping Tool
     href: application-could-not-be-wrapped.md
+  - name: Data associated with an app is removed
+    href: removed-data-associated-with-app-error.md
+  - name: Deploy Windows update packages as Win32 apps
+    href: deploy-windows-update-packages-as-win32-apps.md
   - name: Error when you open a web app on iOS 
     href: invalid-address-open-web-app.md
   - name: Fingerprint authentication not prompted for policy-managed apps
@@ -36,6 +40,8 @@
     href: discovered-apps-list-personal-apps.md
   - name: Protected data is attached to an iMessage
     href: onedrive-attaches-corporate-protected-data-imessage.md
+  - name: Save application failed error
+    href: save-application-failed-error.md
   - name: Saving images locally not restricted
     href: saving-images-locally-not-restricted.md
   - name: Set up and validate app protection policies
@@ -74,6 +80,10 @@
     href: windows-feature-updates-never-offered.md
 - name: Device enrollment
   items:
+  - name: Android enrollment
+    items:
+    - name: Device ownership is changed to Corporate
+      href: device-ownership-changed-to-corporate.md
   - name: Can't update enrollment
     href: cannot-update-enrollment.md
   - name: iOS/iPadOS enrollment
@@ -88,8 +98,12 @@
     items:
     - name: 80180002b during Windows 10 Group Policy-based auto-enrollment
       href: windows10-enroll-error-80180002b.md
+    - name: Can't enroll devices with a non-administrator account
+      href: no-permission-to-enroll-windows-devices.md
     - name: Cannot delete autopilot deployment profile
       href: cannot-delete-autopilot-deployment-profile.md
+    - name: Error 806 or 808 when importing CSV files
+      href: import-windows-autopilot-device-csv-files-errors.md
     - name: Error 0xcaa9001f in MDM enrollment
       href: mdm-enrollment-error-0xcaa9001f.md
     - name: Intune Connector for AD doesn't appear
