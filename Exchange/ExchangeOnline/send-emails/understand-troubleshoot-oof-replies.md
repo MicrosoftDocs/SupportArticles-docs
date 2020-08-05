@@ -252,5 +252,3 @@ To locate the rules, see the [OOF rule details](#oof-rule-details) section. Afte
 ### An automatic reply is sent even if OOF is disabled
 
 In some scenarios, OOF messages are still sent even though the feature is disabled. This might occur if the rule is created manually by using the [out-of-office template](https://support.office.com/article/use-rules-to-create-an-out-of-office-message-9f124e4a-749e-4288-a266-2d009686b403).
-
-
