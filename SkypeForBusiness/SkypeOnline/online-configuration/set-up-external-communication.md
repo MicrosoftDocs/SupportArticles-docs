@@ -159,7 +159,7 @@ To communicate with external Skype for Business users:
 
 Can you now communicate with external Skype for Business or Skype contacts?
 
-- If yes, congratulations, you’re now set up for Skype for Business Online external communications.
+- If yes, congratulations, you're now set up for Skype for Business Online external communications.
 - If no, see [What to do if external communications still doesn't work](#what-to-do-if-external-communications-still-doesnt-work).
 
 ### What to do if external communications still doesn't work
@@ -290,5 +290,5 @@ The last step:
 
 Can you now communicate with external Skype for Business or Skype contacts?
 
-- If yes, congratulations, you’re now set up for Skype for Business Online external communications.
+- If yes, congratulations, you're now set up for Skype for Business Online external communications.
 - If no, see [What to do if external communications still doesn't work](#what-to-do-if-external-communications-still-doesnt-work).
