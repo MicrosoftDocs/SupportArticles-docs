@@ -10,7 +10,6 @@ audience: Admin
 ms.topic: article
 ms.custom: CSSTroubleshoot
 ms.prod: office-perpetual-itpro
-localization_priority: Normal 
 search.appverid:
 - SPO160
 - MET150
