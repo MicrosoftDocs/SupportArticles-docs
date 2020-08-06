@@ -47,7 +47,7 @@ Follow these steps:
 
 Are you able to join the meeting?
 
-- If yes, congratulations, you’ve successfully joined a Teams meeting.
+- If yes, congratulations, you've successfully joined a Teams meeting.
 - If yes but you're having trouble with the meeting audio, see [Troubleshoot audio](#troubleshoot-audio).
 - If the meeting opened in Teams Web Access instead of in the desktop version of Teams, see [Check your default browser](#check-your-default-browser).
 - If you are not able to join the meeting, see [Join with Teams Web App when Teams is installed](#join-with-teams-web-app-when-teams-is-installed).
@@ -79,8 +79,8 @@ You don't have to download anything, just follow these steps:
 
 Are you able to join the meeting?
 
-- If yes, congratulations, you’ve successfully joined a Teams meeting.
-- If you can’t connect to meeting audio or see the meeting content, see [Troubleshoot using the Teams Web App](#troubleshoot-using-the-teams-web-app).
+- If yes, congratulations, you've successfully joined a Teams meeting.
+- If you can't connect to meeting audio or see the meeting content, see [Troubleshoot using the Teams Web App](#troubleshoot-using-the-teams-web-app).
 - If you are not able to join the meeting, or an error occurred, see [Troubleshoot joining a meeting with Teams Web App](#troubleshoot-joining-a-meeting-with-teams-web-app).
 
 ### Check your default browser
@@ -240,7 +240,7 @@ For more information, see [Call in to a Teams meeting](https://support.microsoft
 
 Did this solve your problem?
 
-- If yes, congratulations, you’ve successfully joined a Teams meeting.
+- If yes, congratulations, you've successfully joined a Teams meeting.
 - If no, see [Troubleshoot meeting join](#troubleshoot-meeting-join).
 
 ### Join a Teams meeting: walkthrough complete
@@ -370,7 +370,7 @@ If your problem is not resolved, see [Not able to join a Teams meeting](#not-abl
 
 What do you need help with?
 
-- [Teams: can’t join the meeting](#join-with-teams-web-app-when-teams-is-installed)
-- [Teams Web App: can’t connect to meeting audio or see meeting content](#troubleshoot-using-the-teams-web-app)
-- [Teams Web App: can’t join the meeting](#troubleshoot-joining-a-meeting-with-teams-web-app)
-- [Mobile devices: can’t join the meeting](#troubleshoot-joining-a-teams-meeting-on-a-mobile-device)
+- [Teams: can't join the meeting](#join-with-teams-web-app-when-teams-is-installed)
+- [Teams Web App: can't connect to meeting audio or see meeting content](#troubleshoot-using-the-teams-web-app)
+- [Teams Web App: can't join the meeting](#troubleshoot-joining-a-meeting-with-teams-web-app)
+- [Mobile devices: can't join the meeting](#troubleshoot-joining-a-teams-meeting-on-a-mobile-device)

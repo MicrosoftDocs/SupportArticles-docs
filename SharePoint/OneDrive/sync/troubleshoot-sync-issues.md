@@ -78,7 +78,7 @@ When you see this happen, it's up to you to decide how to treat these file versi
 
 Did this solve your problem?
 
-- If yes, we’re glad that your issue is resolved.
+- If yes, we're glad that your issue is resolved.
 - If no, see [Clear cached files](#clear-cached-files).
 
 ### Clear cached files
@@ -94,7 +94,7 @@ Try clearing cached files from Upload Center. To do this, follow these steps:
 
 Did this solve your problem?
 
-- If yes, we’re glad that your issue is resolved.
+- If yes, we're glad that your issue is resolved.
 - If no, see [Stop and resync your libraries](#stop-and-resync-your-libraries).
 
 ### Stop and resync your libraries
@@ -111,7 +111,7 @@ When you stop syncing a folder, this simply disconnects the folder from the libr
 
 Did this solve your problem?
 
-- If yes, we’re glad that your issue is resolved.
+- If yes, we're glad that your issue is resolved.
 - If no, see [Reset the OneDrive for Business cache](#reset-the-onedrive-for-business-cache).
 
 ### Restrictions and limitations
@@ -122,7 +122,7 @@ Sometimes the content you try to sync may not be supported. There are several re
 
 Did this solve your problem?
 
-- If yes, we’re glad that your issue is resolved.
+- If yes, we're glad that your issue is resolved.
 - If not, see [Repair a sync connection](#repair-a-sync-connection).
 
 ### Is the library configured to be available offline
@@ -157,7 +157,7 @@ If you are an administrator of the library, use the following steps to confirm t
 
 Did this solve your problem?
 
-- If yes, we’re glad that your issue is resolved.
+- If yes, we're glad that your issue is resolved.
 - If no, see [Confirm or correct your credentials](#confirm-or-correct-your-credentials).
 
 ### Confirm or correct your credentials
@@ -168,7 +168,7 @@ When you supply credentials, be sure to use the credentials associated with the 
 
 Did this solve your problem?
 
-- If yes, we’re glad that your issue is resolved.
+- If yes, we're glad that your issue is resolved.
 - If no, see [Review conflicts](#review-conflicts).
 
 ### Repair OneDrive for Business or Office installation
@@ -177,7 +177,7 @@ Before you try uninstalling and reinstalling, try repairing OneDrive for Busines
 
 Did this solve your problem?
 
-- If yes, we’re glad that your issue is resolved.
+- If yes, we're glad that your issue is resolved.
 - If no, see [Uninstall and reinstall OneDrive for Business or Office](#uninstall-and-reinstall-onedrive-for-business-or-office).
 
 ### Reset Internet Explorer
@@ -240,5 +240,5 @@ If you installed the OneDrive for Business sync app through a setup program (MSI
 
 Did this solve your problem?
 
-- If yes, we’re glad that your issue is resolved.
+- If yes, we're glad that your issue is resolved.
 - If no, see [Reset Internet Explorer](#reset-internet-explorer).

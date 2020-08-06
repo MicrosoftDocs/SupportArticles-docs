@@ -124,7 +124,7 @@ If the issue still exists, go to the [Delete Lync 2010 sign-in information](#del
 
 ###### Delete Lync 2010 sign-in information
 
-Make sure that previously saved sign-in information isn’t blocking your current sign-in attempt.
+Make sure that previously saved sign-in information isn't blocking your current sign-in attempt.
 
 - Windows 8
 
