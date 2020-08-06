@@ -283,15 +283,9 @@ HKEY_LOCAL_MACHINE\Software\Microsoft\Office\Word\Addins
 </tr>
 </table>
 
-## Resolution
+## Verify or install the latest updates
 
-### Verify or install the latest updates
-
-For list of the latest Office updates, see [Office Updates](https://technet.microsoft.com/library/dn789213%28v=office.14%29.aspx). If your issue is not resolved after you install the latest Windows and Office updates, go to Option 2.
-
-## Microsoft Support options
-
-If you can't resolve this problem, you can use Microsoft Support to search the Microsoft Knowledge Base and other technical resources for answers. You can also customize the site to control your search. To start your search, go to the [Microsoft Support](https://www.microsoft.com/support/) website. 
+For list of the latest Office updates, see [Office Updates](https://technet.microsoft.com/library/dn789213%28v=office.14%29.aspx). If your issue is not resolved after you install the latest Windows and Office updates, go to Option 1.
 
 ## Additional resources
  
@@ -299,13 +293,13 @@ If you experience specific issues when you use Word, go to the following website
 
 [Microsoft Office Support search: Word](https://support.office.com/search/results?query=word)
 
-### Detailed view of the options
+## Detailed view of the options
 
 The following section provides more detailed descriptions of these options.
 
 <a id="option1">
 
-#### Option 1: Insert your document into another file
+## Option 1: Insert your document into another file
 
 </a>
  
@@ -319,7 +313,7 @@ To access a document but leave its final paragraph mark behind, follow these ste
  
 <a id="option2">
 
-#### Option 2: Start Word by using the /a switch
+### Option 2: Start Word by using the /a switch
 
 </a>
 
