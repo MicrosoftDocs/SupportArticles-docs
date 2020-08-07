@@ -9,7 +9,7 @@ ms.prod-support-area-path: Administrator roles
 ---
 # AssignmentFilter permissions in Endpoint Manager admin center
 
-In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you may notice a new permissions set that is named **AssignmentFilter** when you select **Tenant administration** > **Roles** > a supported role > **Properties**. The AssignmentFilter permissions are included to support an in-development preview feature. They don't affect any production capabilities in Endpoint Manager. Therefore, you can safely ignore them.
+In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you may notice a new permissions set that is named **AssignmentFilter** when you select **Tenant administration** > **Roles** > *select a supported role* > **Properties**. The AssignmentFilter permissions are included to support an in-development preview feature. They don't affect any production capabilities in Endpoint Manager. Therefore, you can safely ignore them.
 
 ## Summary
 
