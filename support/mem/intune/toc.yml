@@ -170,6 +170,8 @@
     href: win10-devices-show-incorrect-compliance-status.md
 - name: General guidance or advisory
   items:
+  - name: AssignmentFilter permissions in Endpoint Manager admin center
+    href: assignmentfilter-permissions.md
   - name: Attributes synced by Intune
     href: intune-synced-attributes-list.md
   - name: Device-only subscription
