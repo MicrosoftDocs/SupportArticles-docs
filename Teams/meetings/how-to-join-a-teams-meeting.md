@@ -190,7 +190,7 @@ Go to your calendar, and open the meeting you want to join.
 
 Does it contain dial-in information similar to this?
 
-:::image type="content" source="media/how-to-join-a-teams-meeting/join-by-phone.png" alt-text="Join a meeting by phone":::
+:::image type="content" source="media/how-to-join-a-teams-meeting/join-teams-meeting.png" alt-text="Join a meeting by phone":::
 
 - If yes, see [Join a meeting by phone](#join-a-meeting-by-phone).
 - If no, see [Join a meeting by phone: no dial-in numbers available](#join-a-meeting-by-phone-no-dial-in-numbers-available).
@@ -211,7 +211,7 @@ To join a meeting by phone:
 
 - Dial the conference call number.
 
-  :::image type="content" source="media/how-to-join-a-teams-meeting/join-by-phone.png" alt-text="Join a meeting by phone":::
+  :::image type="content" source="media/how-to-join-a-teams-meeting/join-teams-meeting.png" alt-text="Join a meeting by phone":::
 
 Enter the **Conference ID**.
 
@@ -234,7 +234,7 @@ Look for the link in the meeting request you received from the organizer. Go to 
 
 You can connect to the meeting audio by phone if the meeting request contains information similar to this:
 
-:::image type="content" source="media/how-to-join-a-teams-meeting/join-by-phone.png" alt-text="Join a meeting by phone":::
+:::image type="content" source="media/how-to-join-a-teams-meeting/join-teams-meeting.png" alt-text="Join a meeting by phone":::
 
 For more information, see [Call in to a Teams meeting](https://support.microsoft.com/office/call-in-to-a-meeting-in-teams-44607421-aeae-4481-8c39-d6b40bc5d554).
 
