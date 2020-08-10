@@ -44,7 +44,7 @@ Date: *DateTime*
 
 After the user selects the refresh the page link, they can sign in to Outlook Web App successfully.
 
-This article is intended for use by support agents and IT professionals. If you're looking for more information about Outlook.com errors, see [Frequently Asked Questions for Outlook.com](https://answers.microsoft.com/outlook_com/forum/oemail-osend/frequently-asked-questions-for-outlookcom/806676a2-ec0b-4fb9-bdfe-fc23c5596738).
+This article is intended for use by support agents and IT professionals. If you're looking for more information about Outlook.com errors, see [Frequently Asked Questions for Outlook.com](https://answers.microsoft.com/outlook_com/forum/opreview-opemail/frequently-asked-questions-for-outlookcom-preview/bfba4529-2ca3-4b50-895d-03eac9fa83bd).
 
 ## Cause
 
