@@ -8,7 +8,6 @@ ms.date: 7/18/2019
 ms.audience: Admin
 ms.topic: article
 ms.service: sharepoint-online
-localization_priority: Normal
 ms.custom: CSSTroubleshoot
 search.appverid:
 - SPO160
@@ -22,6 +21,7 @@ appliesto:
 # "Access Denied", "You need permission to access this site", or "User not found in the directory" errors in SharePoint Online and OneDrive for Business
 
 ## Symptoms
+
 When using SharePoint Online or OneDrive for Business, you receive one of the following error messages:
 
 - Access Denied
@@ -29,14 +29,16 @@ When using SharePoint Online or OneDrive for Business, you receive one of the fo
 - User not found in the directory
 
 ## Cause
+
 There are many scenarios which can prompt one of these messages. The most frequent cause is that permissions for the user or administrator are configured incorrectly or not configured at all. 
 
 ## Resolution
+
 Follow the steps below depending on which area you are receiving the error:
 
 [When accessing a SharePoint site](#when-accessing-a-sharepoint-site)
 
-[When accessing a OneDrive site ](#when-accessing-a-onedrive-site)
+[When accessing a OneDrive site](#when-accessing-a-onedrive-site)
 
 [When an external user is accessing a site](#if-an-external-user-is-accessing-a-site)
 
@@ -102,7 +104,7 @@ Follow the steps below depending on which area you are receiving the error:
    - If the user does not have appropriate permissions, grant them permissions to the <a href="https://support.office.com/en-us/article/share-sharepoint-files-or-folders-1fe37332-0f9a-4719-970e-d2578da4941c" target="_blank">file</a> or <a href="https://support.office.com/en-us/article/share-a-site-958771a8-d041-4eb8-b51c-afea2eae3658?ui=en-US&rs=en-US&ad=US" target="_blank">site</a>.
    - If the user continues to receive an error message, remove them from the site using the following steps:<br/>
 
-     >[!NOTE] 
+     >[!NOTE]
      >This option is available only if the user previously browsed to the site collection. They won't be listed if they were granted access but never visited the site.
      - Browse to the site and edit the URL by adding the following string to the end of it: `/_layouts/15/people.aspx?MembershipGroupId=0`<br/>
 For example, the full URL will resemble the following: `https://contoso-my.sharepoint.com/personal/admin_contoso_onmicrosoft_com/_layouts/15/people.aspx/membershipGroupId=0`
@@ -135,14 +137,13 @@ For example, the full URL will resemble the following: `https://contoso-my.share
 
 1. If there are still errors with the account after the previous steps, we recommend that you completely remove the guest account from M365:
    1. Sign in to https://admin.microsoft.com as a global or SharePoint admin.
-   1. In the left pane, select **Users** > **Guest users**. 
-   1. Select **Delete a user**. 
-   1. Select the user, then **Select**, and then select **Delete**. <br/>
-      Once the above action has been completed,  ensure the account is completely removed from the site collection you are sharing with the user.
+   1. In the left pane, select **Users** > **Guest users**.
+   1. Select **Delete a user**.
+   1. Select the user, then **Select**, and then select **Delete**. Once the above action has been completed,  ensure the account is completely removed from the site collection you are sharing with the user.
    1. Browse to the site and edit the URL by adding the following string to the end of it: `/_layouts/15/people.aspx?MembershipGroupId=0`
 
       For example, the full URL will resemble the following: `https://contoso.sharepoint.com/_layouts/15/people.aspx/membershipGroupId=0`
-   1. Select the person from the list, and then on the **Actions** menu, select **Delete Users from Site Collection**. 
+   1. Select the person from the list, and then on the **Actions** menu, select **Delete Users from Site Collection**.
    1. Grant the user permissions back to the <a href="https://support.office.com/en-us/article/share-sharepoint-files-or-folders-1fe37332-0f9a-4719-970e-d2578da4941c" target="_blank">file</a> or <a href="https://support.office.com/en-us/article/share-a-site-958771a8-d041-4eb8-b51c-afea2eae3658?ui=en-US&rs=en-US&ad=US" target="_blank">site</a>.
 
 
@@ -160,7 +161,8 @@ If you can access the site as the incorrect external user, follow these steps:
 
 2. Select the profile image in the upper-right corner, and then select My Settings.
 
-3. In the Account field, review the email address. For example, i:0#.f|membership|JonDoe@contoso.com.<br/>
+3. In the Account field, review the email address. For example, i:0#.f|membership|JonDoe@contoso.com.
+
    > [!NOTE]
    > In this example, JonDoe@contoso.com is the email account that accepted the user invitation.
 
@@ -180,9 +182,10 @@ If you can't access the site as the incorrect external user, follow these steps:
 
 6. In a new browser window or tab, paste the URL that you copied in the previous step into the address box. Add **&force=1** to the end of the URL, and then press Enter.
 
-7. In the **Account** field, review the email address. For example, **i:0#.f|membership|JonDoe\@contoso.com**.<br/>
-> [!NOTE]
-> In this example, **JonDoe\@contoso.com** is the email account that accepted the user invitation.
+7. In the **Account** field, review the email address. For example, **i:0#.f|membership|JonDoe\@contoso.com**.
+
+    > [!NOTE]
+    > In this example, **JonDoe\@contoso.com** is the email account that accepted the user invitation.
 
 8. If the address is incorrect, go to the "Remove the incorrect external user account" section.
 
@@ -192,7 +195,7 @@ External users are managed from a site collection by site collection basis. An e
 
 For Office 365 Small Business subscriptions, use the SharePoint Online UI. To do this, follow these steps:
 
-1. Browse to the Office 365 admin center at https://portal.office.com.
+1. Browse to the Office 365 admin center at `https://portal.office.com`.
 
 2. In **service settings**, select **Manage Organization-wide settings**.
 
@@ -200,7 +203,8 @@ For Office 365 Small Business subscriptions, use the SharePoint Online UI. To do
 
 4. Select the external user who has to be removed, and then select the **Delete** icon.
 
-All other subscriptions must use the SharePoint Online Management Shell by following these steps:<br/>
+All other subscriptions must use the SharePoint Online Management Shell by following these steps:
+
 > [!NOTE]
 > This option doesn't apply to Office Small Business (P) organizations.
 
@@ -210,7 +214,7 @@ All other subscriptions must use the SharePoint Online Management Shell by follo
 
 3. Type the following cmdlet:
 
-   ```
+   ```powershell
    $cred = Get-Credential
    ```
 
@@ -218,19 +222,20 @@ All other subscriptions must use the SharePoint Online Management Shell by follo
 
 5. Connect to SharePoint Online, and then type the following cmdlet:
 
-   ```
+   ```powershell
    Connect-SPOService -Url https://<contoso>-admin.sharepoint.com -Credential $cred
    ```
 
 6. Remove the user from each site collection. Type the following cmdlet, and then press Enter:
 
-   ```
+   ```powershell
    $ExtUser = Get-SPOExternalUser -filter <account@contoso.com>
    ```
+
 > [!NOTE]
 > In this cmdlet, replace <account@contoso.com> with the affected account. Then, to remove the user, type the following cmdlet, and then press Enter:
 
-   ```
+   ```powershell
     Remove-SPOExternalUser -UniqueIDs @($ExtUser.UniqueId)
    ```
 
@@ -262,7 +267,7 @@ The steps below remove the external user's ability to access SharePoint Online. 
 
    2. Type the following cmdlet:
  
-      ```
+      ```powershell
       $cred = Get-Credential
       ```
 
@@ -270,23 +275,24 @@ The steps below remove the external user's ability to access SharePoint Online. 
 
    3. Connect to SharePoint Online, and then type the following cmdlet:
 
-      ```
+      ```powershell
       Connect-SPOService -Url https://<contoso>-admin.sharepoint.com -Credential $cred
       ```
 
    4. Remove the user from each site collection. To do this, type the following cmdlet:
   
-      ```
+      ```powershell
       Get-SPOUser -Site https://<contoso>.sharepoint.com | FT –a
       ```
 
-    Notice the external user's Login Name in the returned results. As an external user, it might have a "live.com#" prefix if it's a Microsoft Account.
+      Notice the external user's Login Name in the returned results. As an external user, it might have a "live.com#" prefix if it's a Microsoft Account.
 
-    Type the following cmdlet:
+      Type the following cmdlet:
 
-     ```
-     Remove-SPOUser -Site https://<contoso>.sharepoint.com -LoginName live.com#jondoe@company.com
-     ```
+      ```powershell
+      Remove-SPOUser -Site https://<contoso>.sharepoint.com -LoginName live.com#jondoe@company.com
+      ```
+
 > [!NOTE]
 > Replace live.com#jondoe@company.com with the user in your scenario.
 
@@ -296,21 +302,22 @@ Next, you have to remove the account from Azure Active Directory. To do this, fo
 
 2. Open the Azure Active Directory PowerShell Module, and then run the following commands:
 
-   ```
+   ```powershell
    Connect-MSOLService
    ```
 
    Enter your administrator credentials in the dialog box:
 
-   ```
+   ```powershell
    Get-MsolUser -ReturnDeletedUsers -UnlicensedUsersOnly | ft -a
    ```
 
 3. Locate the external user who you just deleted, and then confirm they're listed.
 
-   ```
+   ```powershell
    Remove-MsolUser -RemoveFromRecycleBin -UserPrincipalName 'jondoe_contoso.com#EXT#@yourdomaint.onmicrosoft.com'
    ```
+
 > [!NOTE]
 > Replace **jondoe_contoso.com#EXT#\@yourdomain.onmicrosoft.com** with the specific user in your scenario.
 
@@ -381,15 +388,15 @@ If the Owners group is changed or was removed from the **Access requests** list,
 
 1. Copy the GUID that follows the pageListId. The GUID will be between an opening brace ( { ) character and a closing brace ( } ) character as follows:
 
-    {GUID}    
+    {GUID}
 
     > [!NOTE]
     > Include the opening and closing brace characters when you copy the GUID. This GUID is the identifier for the **SharePoint Online Access Requests** list for your organization.
 
-1. In the browser address bar, enter https://<URL of affected site, or site collection>/_layouts/15/ListEdit.aspx?List=<{GUID}>, and then press Enter.
+1. In the browser address bar, enter `https://<URL of affected site, or site collection>/_layouts/15/ListEdit.aspx?List=<{GUID}>`, and then press Enter.
 
     > [!NOTE]
-    > In this address, <URL of affected site or site collection> represents the URL for the site collection in which you want to change the access requests (for example, https://contoso.sharepoint.com). And <{GUID}> represents the GUID that you copied in step 8.
+    > In this address, \<URL of affected site or site collection> represents the URL for the site collection in which you want to change the access requests (for example, `https://contoso.sharepoint.com`). And <{GUID}> represents the GUID that you copied in step 8.
 
 1. On the **Settings** page, select **Permissions for this list**.
 
