@@ -42,7 +42,6 @@ To resolve the issue, try the following:
 
 - If the recipient messaging system uses the CASA CBL, contact the recipient mail administrator to have the following Exchange Online Protection outgoing edge server IP addresses added to an allow list to bypass the CASA CBL checks:
   > [Exchange Online Protection IP Addresses](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges)
-- Request removal of the Exchange Online Protection IP address from the CASA CBL at the following CASA website: [http://anti-spam.org.cn/Rbl/Getout/ShowForm](http://anti-spam.org.cn/rbl/getout/showform)
 
 ## More information
 

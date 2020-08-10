@@ -44,5 +44,3 @@ To enable (or disable) the **Leave a copy of the message on the server** option,
 1. Check the box to enable **Leave a copy of the message on the server**.
     > [!NOTE]
     > Enabling **Leave a copy of the message on the server** will allow you to access your email from multiple computers.
-
-If you would like to know more about different email account types, see [Introduction to e-mail account types](https://office.microsoft.com/outlook-help/introduction-to-e-mail-account-types-ha001231667.aspx).
