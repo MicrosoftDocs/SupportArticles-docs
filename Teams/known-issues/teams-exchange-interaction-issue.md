@@ -23,13 +23,13 @@ This article provides steps to help you troubleshoot the interaction issues betw
 
 ## Symptoms
 
-### Problem 1: A delegate fails to schedule a Teams meeting on behalf of a delegator
+#### Problem 1: A delegate fails to schedule a Teams meeting on behalf of a delegator
 
 A user whose mailbox is hosted on Exchange Server adds another user as a delegate to manage Outlook calendar. The delegate fails to schedule a Teams meeting on behalf of the user using the Teams Add-in for Outlook and the Add-in returns this error message:
 
 > Looks like you don't have permission to schedule meetings for this account. Talk to the owner to get permission and try again.
 
-### Problem 2: Having issues using Teams Calendar App
+#### Problem 2: Having issues using Teams Calendar App
 
 Either Calendar icon isn't showing in Teams client or Calendar App displays "Sorry, we couldn't get your meeting details" when using Teams desktop client or Web client.
 
@@ -62,7 +62,7 @@ To integrate the Microsoft Teams service with your Exchange Server, ensure that 
 > [!NOTE]
 > The troubleshooting steps below apply to both issues.
 
-### Step 1: Verify that the Autodiscover to your Exchange Server works well
+#### Step 1: Verify that the Autodiscover to your Exchange Server works well
 
 Microsoft Teams service uses the Exchange Autodiscover service to locate the EWS URL that is published by the on-premises. To verify that the Autodiscover process is working well, follow these steps:
 
@@ -77,7 +77,7 @@ You need to resolve the Autodiscover issue first if the test fails.
 > [!NOTE]
 > For the Teams delegation issue, the target mailbox to test is the delegator's mailbox. For the Teams calendar App issue, the target mailbox to test is the affected user's mailbox.
 
-### Step 2: Verify that the Office 365 Autodiscover V2 service is able to route the Autodiscover requests to the on-premises
+#### Step 2: Verify that the Office 365 Autodiscover V2 service is able to route the Autodiscover requests to the on-premises
 
 Open the Windows PowerShell and run the following command.
 
@@ -98,7 +98,7 @@ For a mailbox hosted on-premises, EWS Url should point to the on-premises extern
 
 If this test fails or EWS Url is incorrect, review the prerequisites section as this is likely an Exchange Hybrid configuration issue or firewall or reverse proxy blocking external requests.
 
-### Step 3: Verify that the Exchange OAuth authentication protocol is enabled and functional
+#### Step 3: Verify that the Exchange OAuth authentication protocol is enabled and functional
 
 To verify Exchange OAuth authentication is enabled and functional, run the `Test-OAuthCOnnectivity` command as described in [Configure OAuth authentication between Exchange and Exchange Online organizations.](https://docs.microsoft.com/exchange/configure-oauth-authentication-between-exchange-and-exchange-online-organizations-exchange-2013-help#how-do-you-know-this-worked)
 
@@ -117,7 +117,7 @@ Additionally, the **Free/Busy** connectivity test that is available in **Microso
 > [!NOTE]
 > The troubleshooting steps below only apply to the Teams delegation issue.
 
-### Step 1: Verify that the delegate has been granted the Editor permission to access the delegator's calendar
+#### Step 1: Verify that the delegate has been granted the Editor permission to access the delegator's calendar
 
 Open the Exchange Management Shell on one of the Exchange servers then run the Exchange PowerShell command below to verify that the **Editor** access right has been granted to the delegate:
 
@@ -133,7 +133,7 @@ Set-MailboxFolderPermission -Identity \<delegator's UserPrincipalName\>\\Calenda
 
 Alternatively, ask the delegator to follow the steps in [this article](https://support.microsoft.com/office/allow-someone-else-to-manage-your-mail-and-calendar-41c40c04-3bd1-4d22-963a-28eafec25926) to reconfigure the delegation in the Outlook client.
 
-### Step 2: Verify that the delegate has been granted the 'GrantSendOnBehalfTo' permission by the delegator
+#### Step 2: Verify that the delegate has been granted the 'GrantSendOnBehalfTo' permission by the delegator
 
 Run the command below to verify that the 'GrantSendOnBehalfTo' permission has been granted to the delegate.
 
@@ -149,7 +149,7 @@ Set-Mailbox "\<delegator's UserPrincipalName\>" -Grantsendonbehalfto @{add="\<de
 
 Alternatively, ask the delegator to follow the steps [this article](https://support.microsoft.com/office/allow-someone-else-to-manage-your-mail-and-calendar-41c40c04-3bd1-4d22-963a-28eafec25926) to reconfigure the delegation in the Outlook client.
 
-### Step 3: Verify that Teams is not blocked from accessing EWS for the entire organization
+#### Step 3: Verify that Teams is not blocked from accessing EWS for the entire organization
 
 Run the Exchange PowerShell command below to check if the parameter **EwsApplicationAccessPolicy** has been set to **EnforceAllowList** for the entire organization. If it has been set to **EnforceAllowList**, that means the administrator only allows the clients that are listed in **EwsAllowList** to access EWS.
 
@@ -195,7 +195,7 @@ If you could confirm there is nothing wrong with the prerequisites and configura
 > [!NOTE]
 > The troubleshooting steps below only apply to the Teams calendar App issue.
 
-### Step 1: Verify that Teams Calendar App is enabled
+#### Step 1: Verify that Teams Calendar App is enabled
 
 1. Open Microsoft Teams admin center, go to **Users** and select **View policies** for the affected user.
 
@@ -207,7 +207,7 @@ If you could confirm there is nothing wrong with the prerequisites and configura
 
     If the calendar App is missing, add it back. For more information, see [Manage app setup policies in Microsoft Teams](https://docs.microsoft.com/microsoftteams/teams-app-setup-policies).
 
-### Step 2: Verify Teams upgrade coexisting mode allows Teams meetings
+#### Step 2: Verify Teams upgrade coexisting mode allows Teams meetings
 
 1. Open Microsoft Teams admin center.
 2. Go to **Users** and select affected user.
@@ -221,7 +221,7 @@ If you could confirm there is nothing wrong with the prerequisites and configura
 
     :::image type="content" source="media/teams-exchange-interaction-issue/image5.png" alt-text="Screenshot of teams users island.":::
 
-### Step 3: Verify that Teams is not blocked from accessing EWS for the entire organization
+#### Step 3: Verify that Teams is not blocked from accessing EWS for the entire organization
 
 Run the Exchange PowerShell command below to check if the parameter **EwsApplicationAccessPolicy** has been set to **EnforceAllowList** for the entire organization. If it has been set to **EnforceAllowList**, that means the administrator only allows the clients that are listed in **EwsAllowList** to access EWS.
 
@@ -237,7 +237,7 @@ Set-OrganizationConfig -EwsAllowList @{Add="MicrosoftNinja/\*","\*Teams/\*","Sky
 
 If the parameter **EwsEnabled** is set to **False**, you need to set it to **True** or **Null** (blank), otherwise the Teams service will be blocked from accessing EWS as well.
 
-### Step 4: Verify that Teams is not blocked from accessing EWS for the affected user
+#### Step 4: Verify that Teams is not blocked from accessing EWS for the affected user
 
 Run the Exchange PowerShell command below to check if the parameter **EwsApplicationAccessPolicy** has been set to **EnforceAllowList** for the user mailbox. If it has been set to **EnforceAllowList**, that means the administrator only allows the clients that are listed in **EwsAllowList** to access EWS.
 
@@ -253,7 +253,7 @@ Set-CASMailbox \<UserPincipalName\> -EwsAllowList @{Add="MicrosoftNinja/\*","\*T
 
 If the **EwsEnabled** parameter is set to **False**, you need either to set to **'True'** or **'Null'** (blank), otherwise the Teams service will be blocked from accessing EWS as well.
 
-### Step 5: Escalate the issue
+#### Step 5: Escalate the issue
 
 If you could confirm there is nothing wrong with the prerequisites and configurations mentioned above, create a service request to Microsoft Support with the following information attached:
 
