@@ -35,7 +35,7 @@ productDirectory:
     - title: Microsoft Teams
       imageSrc: https://docs.microsoft.com/media/logos/logo_MSTeams.svg
       links:
-        - url: /MicrosoftTeams/troubleshoot/teams-welcome
+        - url: /microsoftteams/troubleshoot/teams-welcome
           text: Microsoft Teams
     - title: Office
       # imageSrc should be square in ratio with no whitespace
@@ -71,13 +71,13 @@ productDirectory:
     - title: Skype for Business
       imageSrc: https://docs.microsoft.com/media/logos/logo_Skype_for_Business.svg
       links:
-        - url: /SkypeForBusiness/troubleshoot/skype-server-welcome
+        - url: /skypeforbusiness/troubleshoot/skype-server-welcome
           text: Skype for Business Server
-        - url: /SkypeForBusiness/troubleshoot/skype-online-welcome
+        - url: /skypeforbusiness/troubleshoot/skype-online-welcome
           text: Skype for Business Online
-        - url: /SkypeForBusiness/troubleshoot/skype-hybrid-welcome
+        - url: /skypeforbusiness/troubleshoot/skype-hybrid-welcome
           text: Skype for Business Hybrid
-        - url: /SkypeForBusiness/troubleshoot/skype-experts-welcome
+        - url: /skypeforbusiness/troubleshoot/skype-experts-welcome
           text: From the Skype for Business Experts
     # Card
     - title: Microsoft Outlook
