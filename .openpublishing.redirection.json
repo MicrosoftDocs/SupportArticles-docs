@@ -47,7 +47,7 @@
     },
     {
         "source_path": "support/azure/cloud-services/index.md",
-        "redirect_url": "/support/azure/cloud-services/welcome-cloud-services.md",
+        "redirect_url": "/support/azure/cloud-services/welcome-cloud-services",
         "redirect_document_id": false
       },
     {
