@@ -4,7 +4,6 @@ description: Describes support for Linux images in Microsoft Azure.
 ms.date: 07/06/2020
 ms.prod-support-area-path: 
 ms.reviewer: patcatun
-ms.reviewer: 
 author: genlin
 ms.author: genli
 ms.service: cloud-services
