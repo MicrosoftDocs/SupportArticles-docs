@@ -13,6 +13,7 @@ ms.custom:
 - CSSTroubleshoot
 ms.reviewer: 
 appliesto:
+- Access for Office 365
 - Access 2019
 - Access 2016
 - Access 2013
@@ -25,6 +26,8 @@ search.appverid: MET150
 # The data in a linked Excel spreadsheet column is truncated to 255 characters in an Access database
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+
+This article fixes an issue in which the data in the linked table appears truncated after the 255th character.
 
 _Original KB number:_ &nbsp; 839785
 

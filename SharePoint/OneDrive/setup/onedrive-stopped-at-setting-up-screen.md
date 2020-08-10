@@ -1,7 +1,7 @@
 ---
 title: OneDrive for Business stopped at "Setting up..." screen
 ms.author: v-todmc
-author: todmccoy
+author: McCoyBot
 manager: dcscontentpm
 ms.date: 2/20/2020
 audience: Admin
@@ -25,8 +25,8 @@ description: Ways to resolve an issue where provisioning OneDrive for Business s
 ## Symptoms
 
 When initializing OneDrive for Business, the app might stop for more than 24 hours with one of the following error messages:
-- “Setting up..”
-- “We’re still setting up a few things, but feel free to get started.”
+- "Setting up.."
+- "We're still setting up a few things, but feel free to get started."
 
 ![When initializing OneDrive, you may be stopped at the "Setting up..." screen.](../media/one-drive-stopped-at-setting-up-screen/one-drive-stopped-at-setting-up-screen-1.png)
 
@@ -36,7 +36,7 @@ Listed below are ways to resolve this issue.
 
 ### Verify the health of services 
 
-See the Microsoft Knowledge Base article ["Setting up..." messages in the Microsoft 365 admin center](https://support.microsoft.com/help/2635238/setting-up-messages-in-the-office-365-admin-center) to verify if any of Microsoft’s services (in this case OneDrive and SharePoint Online) are experiencing problems.
+See the Microsoft Knowledge Base article ["Setting up..." messages in the Microsoft 365 admin center](https://support.microsoft.com/help/2635238/setting-up-messages-in-the-office-365-admin-center) to verify if any of Microsoft's services (in this case OneDrive and SharePoint Online) are experiencing problems.
 
 If the health of all affected services appears valid, and if more than 24 hours have passed since you first saw this issue, contact Office 365 Technical Support after performing the other actions in this article.
 

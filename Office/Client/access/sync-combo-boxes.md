@@ -13,12 +13,18 @@ ms.custom:
 - CSSTroubleshoot
 ms.reviewer: tado
 appliesto:
+- Access for Office 365
+- Access 2019
+- Access 2016
+- Access 2013
 - Access 2010
 - Microsoft Office Access 2007
 - Microsoft Office Access 2003
 search.appverid: MET150
 ---
 # How to synchronize two combo boxes on a form in Microsoft Access
+
+This article describes the AfterUpdate property runs an event procedure when you select a category in the first combo box.
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
@@ -42,7 +48,7 @@ Microsoft provides programming examples for illustration only, without warranty 
 
 1. Open the sample database Northwind.mdb.
 2. Create a new form that is not based on any table or query with the following combo boxes, and then save the form as Categories And Products.
-   
+
    ```console
    Combo Box 1
    -------------------------------
@@ -75,7 +81,7 @@ Microsoft provides programming examples for illustration only, without warranty 
    ```
 
 4. View the Categories And Products form in Form view.
-   
+
    > [!NOTE]
    > When you select a category in the first combo box, the second combo box is updated to list only the available products for the selected category.
 

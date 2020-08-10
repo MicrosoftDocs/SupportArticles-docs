@@ -1,7 +1,7 @@
 ---
 title: Chat app in Outlook for Mac defaults to Teams instead of Skype for Business
 ms.author: v-todmc
-author: todmccoy
+author: McCoyBot
 manager: dcscontentpm
 ms.date: 12/12/2019
 audience: Admin

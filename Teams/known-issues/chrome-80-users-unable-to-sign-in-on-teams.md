@@ -1,7 +1,7 @@
 ---
 title: Teams members unable to sign in to some apps in Chrome version 80
 ms.author: v-todmc
-author: todmccoy
+author: McCoyBot
 ms.date: 4/9/2020
 audience: ITPro
 ms.topic: article

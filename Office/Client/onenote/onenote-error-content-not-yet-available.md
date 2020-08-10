@@ -1,7 +1,7 @@
 ---
 title: Content Not Yet Available error in OneNote
 ms.author: v-todmc
-author: todmccoy
+author: McCoyBot
 manager: dcscontentpm
 ms.date: 4/24/2020
 audience: Admin
@@ -53,7 +53,7 @@ Check to see whether the page (or section) is in one of the following states:
 - **Opened and accessed across different devices.** Check whether the content is visible on another device. 
 - **Shared with multiple users.** Check whether other users experience the same problem. 
     - If "no" (content is visible), move the available content to a new section.
-    - If "yes" (content isn’t visible), consider the next two options.
+    - If "yes" (content isn't visible), consider the next two options.
 - **Stored in OneDrive for Business.** Follow the steps in [Restore your OneDrive](https://support.office.com/article/restore-your-onedrive-fa231298-759d-41cf-bcd0-25ac53eb8a15) to restore the content to a previous state.
 - **Stored in SharePoint Online**. If so, follow the steps in [Restore your OneDrive](https://support.office.com/article/restore-your-onedrive-fa231298-759d-41cf-bcd0-25ac53eb8a15) to identify whether the content is in a restorable state. 
     > [!NOTE]
@@ -63,7 +63,7 @@ Check to see whether the page (or section) is in one of the following states:
 
 ### Why this error occurs
 
-When you use OneNote, it is important that you give each page and section adequate time to reach our servers. The status of this operation for a given page is indicated by the cloud icon on the ribbon. If not enough time has passed, the customer may receive the “Content Not Yet Available” error message for the page. This can occur when you view the page from another device, from the OneNote app, or in a browser window.
+When you use OneNote, it is important that you give each page and section adequate time to reach our servers. The status of this operation for a given page is indicated by the cloud icon on the ribbon. If not enough time has passed, the customer may receive the "Content Not Yet Available" error message for the page. This can occur when you view the page from another device, from the OneNote app, or in a browser window.
 
 The speed at which notes can be retrieved might be affected by poor network connections, organizational traffic, and geographic location. In these situations, the error should resolve itself within a few hours, at most, after the underlying cause is corrected.
 
@@ -74,7 +74,7 @@ To make sure that your data is synced to the cloud, you must see the successful 
 
 > [!NOTE]
 > OneNote Online (OneNote on the Web) and the OneNote on Teams client have no local caches. Using either app in offline mode may cause unrecoverable data loss, if the sync does not connect to the server.<br/><br/>
-OneNote 2016 and OneNote for Win 10 each keep a cached copy of your pages on your device. We recommend that you use them offline until the next time that you connect to the internet. By that time, all the changes that you made will be synced to OneDrive so that you’ll be able to see the changes on other devices.
+OneNote 2016 and OneNote for Win 10 each keep a cached copy of your pages on your device. We recommend that you use them offline until the next time that you connect to the internet. By that time, all the changes that you made will be synced to OneDrive so that you'll be able to see the changes on other devices.
 
 A "successful sync" icon can appear in either of the following user interface locations:
 

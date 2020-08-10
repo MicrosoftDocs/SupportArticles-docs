@@ -44,7 +44,7 @@ To have us enable the mail logging option for you, go to the "Here's an easy fix
 To enable the mail logging option automatically, click the **Download** button. In the **File Download** dialog box, click **Run** or **Open**, and then follow the steps in the easy fix wizard. 
  
 - This wizard may be in English only. However, the automatic fix also works for other language versions of Windows.    
-- If you’re not on the computer that has the problem, save the easy fix solution to a flash drive or a CD, and then run it on the computer that has the problem.    
+- If you're not on the computer that has the problem, save the easy fix solution to a flash drive or a CD, and then run it on the computer that has the problem.    
  
 #### For Windows 10, Windows 8.1, Windows 8, Windows 7
 

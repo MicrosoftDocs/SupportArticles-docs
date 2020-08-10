@@ -1,7 +1,7 @@
 ---
 title: Install and maintain SaRA tool from a network share
 description: Learn how to install SaRA from a network share and update the SaRA files so that SaRA installations use the latest files.
-author: todmccoy
+author: McCoyBot
 ms.author: v-maqiu
 manager: dcscontentpm 
 audience: ITPro 
@@ -11,6 +11,7 @@ localization_priority: Normal
 ms.custom: 
 - CI 110828, CI 114761, CI 115829, CI 116348, CI 117120
 - CSSTroubleshoot
+- SaRANetworkInstallFiles
 ms.reviewer: gregmans
 appliesto:
 - Microsoft 365 Apps for enterprise
@@ -89,6 +90,7 @@ The following table provides the versions of SaRA that were made available on th
 
 |Release date|SaRA version|
 |--------|--------|
+|July 24, 2020|17.00.5057.004|
 |July 2, 2020|17.00.4949.009|
 |June 11, 2020|17.00.4840.008|
 |May 28, 2020|17.00.4732.006|

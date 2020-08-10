@@ -18,7 +18,7 @@ appliesto:
 - Lync 2010
 ---
 
-# You can't sign in to Skype for Business Online because the certificate can’t be acquired or validated
+# You can't sign in to Skype for Business Online because the certificate can't be acquired or validated
 
 ## Problem
 
@@ -111,7 +111,7 @@ If the steps earlier in this article don't resolve the issue, try the following 
 
 #### Resolution for Skype for Business Online administrators: Validate the certificate chain
 
-End-users may receive an error stating that the certificate can’t be validated, and this usually happens because one of the certificates in the chain is untrusted and can’t be validated. This typically occurs for customers who use single sign-on in Office 365 or for customers who have Lync hybrid deployments.
+End-users may receive an error stating that the certificate can't be validated, and this usually happens because one of the certificates in the chain is untrusted and can't be validated. This typically occurs for customers who use single sign-on in Office 365 or for customers who have Lync hybrid deployments.
 
 For more information about certificate validation with Lync, see [Lync Mobile users cannot sign in after they update to client version 5.4](https://support.microsoft.com/help/2965499).
 

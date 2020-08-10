@@ -1,7 +1,7 @@
 ---
 title: How to restore Office 365 admin center Sharing settings for OneDrive
 ms.author: v-todmc
-author: todmccoy
+author: McCoyBot
 manager: dcscontentpm
 ms.date: 6/12/2020
 audience: Admin
@@ -68,7 +68,7 @@ For more information, see the article about the [Set-SPOSite cmdlet](https://doc
 1.	Sign in to the **SharePoint Online admin center**, and then select **More features**.
 2.	Under **User profiles**, select **Open**.
 3.	Search for and select the user profile. 
-4.	Select the arrow at the end of the **Account name**, and then select **Manage Personal Site** to go to the user’s OneDrive site. 
+4.	Select the arrow at the end of the **Account name**, and then select **Manage Personal Site** to go to the user's OneDrive site. 
 
 #### Option 3
 

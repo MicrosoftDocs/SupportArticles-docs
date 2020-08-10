@@ -35,7 +35,7 @@ The information in this article helps IT and Office 365 administrators in the fo
 In these scenarios, the available functionality in the previous environment is as follows: 
  
 - The Skype for Business Desktop and Lync 2013 clients connect to Skype for Business Server by using NTLM or the Kerberos authentication protocol, a user name and password, or Windows Integrated Authentication.     
-- After you sign in, Skype for Business or Lync 2013 connects to the user’s mailbox in Exchange Online by using Exchange Web Services (EWS). Although the EWS service advertises OAuth settings (the authorization URI), the client ignores this and falls back to a non-MFA sign-in by using an OrgID channel. This limits sign-in protocols to a user name and password or to Windows Integrated Authentication.    
+- After you sign in, Skype for Business or Lync 2013 connects to the user's mailbox in Exchange Online by using Exchange Web Services (EWS). Although the EWS service advertises OAuth settings (the authorization URI), the client ignores this and falls back to a non-MFA sign-in by using an OrgID channel. This limits sign-in protocols to a user name and password or to Windows Integrated Authentication.    
  
 The new **AllowAdalForNonLyncIndependentOfLync** setting lets Skype for Business Desktop or Lync 2013 clients unblock MFA in Exchange Online in situations in which the IT administrator must enforce MFA on Exchange Online. You can apply this new setting by using Group Policy in the Windows registry or as an in-band endpoint policy setting on the Skype for Business server.
 

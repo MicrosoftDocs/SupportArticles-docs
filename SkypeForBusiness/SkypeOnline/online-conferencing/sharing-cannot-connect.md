@@ -15,7 +15,7 @@ appliesto:
 - Skype for Business Online
 ---
 
-# Desktop or Application sharing can’t connect in a Skype for Business Online conference
+# Desktop or Application sharing can't connect in a Skype for Business Online conference
 
 ## Problem 
 

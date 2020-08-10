@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot OneDrive for Business sites that stop at provisioning stage
 ms.author: v-todmc
-author: todmccoy
+author: McCoyBot
 manager: dcscontentpm
 ms.date: 12/18/2019
 audience: Admin

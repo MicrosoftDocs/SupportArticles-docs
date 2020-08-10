@@ -1,5 +1,5 @@
 - name: Skype for Business Online Troubleshooting
-  href: ../online.md
+  href: ../skype-online-welcome.md
   items:
   - name: Attachments
     items:
@@ -41,6 +41,8 @@
       href: ../online-configuration/dns-configuration-issue.md
     - name: Issue when Office 365 administrator disables a user
       href: ../online-configuration/license-validation-error.md
+    - name: How to set up external communication
+      href: ../online-configuration/set-up-external-communication.md
     - name: msRTCSIP-PrimaryUserAddress or SIP address not unique
       href: ../online-configuration/msrtcsip-primaryuseraddress-proxyaddaddress.md
     - name: Outlook email address not match sign-in address
@@ -211,8 +213,12 @@
       href: ../online-sign-in/cannot-sign-in-to-lync.md
     - name: Sign-in errors when settings are incorrect
       href: ../online-sign-in/sfb-online-sign-in-error.md
-    - name: Troubleshoot Lync for Mac sign in issues 
+    - name: Troubleshoot admin sign-in issues
+      href: ../online-sign-in/troubleshoot-sign-in-issues-for-admins.md
+    - name: Troubleshoot Lync for Mac sign in issues
       href: ../online-sign-in/sign-in-issues-lync-for-mac.md
+    - name: Troubleshoot user sign-in issues
+      href: ../online-sign-in/troubleshoot-sign-in-issues-for-users.md
   - name: Subscription
     items:
     - name: Your subscription has expired

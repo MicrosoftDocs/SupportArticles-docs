@@ -1,6 +1,6 @@
 ---
 title: DLP Policy Tip notifications are not displayed in Outlook for Windows
-description: This article describes an issue in which Outlook for Windows can’t display DLP Policy Tip notification messages. Provides a solution.
+description: This article describes an issue in which Outlook for Windows can't display DLP Policy Tip notification messages. Provides a solution.
 author: TobyTu
 ms.author: aruiz
 manager: dcscontentpm
@@ -23,7 +23,7 @@ appliesto:
 
 ## Symptoms
 
-After you configure some data loss prevention (DLP) policies that include Policy Tip notification messages, you notice that the Outlook for Windows clients don’t display the notification messages or that they display the wrong messages. However, Outlook on the Web (OWA) displays the expected notification messages.
+After you configure some data loss prevention (DLP) policies that include Policy Tip notification messages, you notice that the Outlook for Windows clients don't display the notification messages or that they display the wrong messages. However, Outlook on the Web (OWA) displays the expected notification messages.
 
 ## Cause
 

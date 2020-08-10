@@ -283,15 +283,9 @@ HKEY_LOCAL_MACHINE\Software\Microsoft\Office\Word\Addins
 </tr>
 </table>
 
-## Resolution
+## Verify or install the latest updates
 
-### Verify or install the latest updates
-
-For list of the latest Office updates, see [Office Updates](https://technet.microsoft.com/library/dn789213%28v=office.14%29.aspx). If your issue is not resolved after you install the latest Windows and Office updates, go to Option 2.
-
-## Microsoft Support options
-
-If you can't resolve this problem, you can use Microsoft Support to search the Microsoft Knowledge Base and other technical resources for answers. You can also customize the site to control your search. To start your search, go to the [Microsoft Support](https://www.microsoft.com/support/) website. 
+For list of the latest Office updates, see [Office Updates](https://technet.microsoft.com/library/dn789213%28v=office.14%29.aspx). If your issue is not resolved after you install the latest Windows and Office updates, go to Option 1.
 
 ## Additional resources
  
@@ -299,13 +293,13 @@ If you experience specific issues when you use Word, go to the following website
 
 [Microsoft Office Support search: Word](https://support.office.com/search/results?query=word)
 
-### Detailed view of the options
+## Detailed view of the options
 
 The following section provides more detailed descriptions of these options.
 
 <a id="option1">
 
-#### Option 1: Insert your document into another file
+## Option 1: Insert your document into another file
 
 </a>
  
@@ -319,7 +313,7 @@ To access a document but leave its final paragraph mark behind, follow these ste
  
 <a id="option2">
 
-#### Option 2: Start Word by using the /a switch
+## Option 2: Start Word by using the /a switch
 
 </a>
 
@@ -336,7 +330,7 @@ If the problem does not occur when you start Word by using the /a switch, try th
 
 <a id="option3">
 
-#### Option 3: Delete the Word Data registry subkey
+## Option 3: Delete the Word Data registry subkey
 
 </a>
 
@@ -385,7 +379,7 @@ If restoring the Word Data registry subkey doesn't work, go to the next option.
 
 <a id="option4">
 
-#### Option 4: Delete the Word Options registry key
+## Option 4: Delete the Word Options registry key
 
 </a>
 
@@ -425,7 +419,7 @@ To restore the original Word Options registry key, follow these steps:
 
 <a id="option5">
 
-#### Option 5: Replace the Normal.dot or Normal.dotm global template file
+## Option 5: Replace the Normal.dot or Normal.dotm global template file
 
 </a>
  
@@ -482,7 +476,7 @@ To restore the original global template file, follow these steps:
  
 <a id="option6">
 
-#### Option 6: Disable the Startup folder add-ins
+## Option 6: Disable the Startup folder add-ins
 
 </a>
 
@@ -533,7 +527,7 @@ If the problem is not resolved after you disable the Startup folder add-ins, go 
 
 <a id="option7">
 
-#### Option 7: Delete the COM add-ins registry keys
+## Option 7: Delete the COM add-ins registry keys
 
 </a>
  
@@ -598,7 +592,7 @@ To restore the COM add-ins, repeat step 4, but select the check box for each COM
 
 <a id="option8">
 
-#### Option 8: Change the default printer
+## Option 8: Change the default printer
 
 </a>
  
