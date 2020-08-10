@@ -3,6 +3,9 @@ title: Azure Cloud Services troubleshooting documentation
 description: This article lists Knowledge Base (KB) and other Support articles for Azure Cloud Services.
 ms.topic: article
 ms.date: 07/15/2020
+author: genlin
+ms.author: genli
+ms.service: cloud-services
 ---
 # Azure Cloud Services troubleshooting
 
