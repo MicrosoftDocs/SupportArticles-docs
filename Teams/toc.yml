@@ -75,6 +75,10 @@
       href: ./known-issues/following-application-instance-not-present-error.md
     - name: Users with Exchange Online mailboxes can't access meetings or connectors 
       href: ./known-issues/exchange-users-cant-access-meetings.md
+  - name: Exchange integration
+    items:
+    - name: Teams and Exchange interaction issues
+      href: ./known-issues/teams-exchange-interaction-issue.md
   - name: Files
     items:
     - name: Downloaded documents open in protected view
