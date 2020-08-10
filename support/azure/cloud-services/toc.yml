@@ -19,15 +19,12 @@
     href: asp-net-signair-app-cannot-access.md
   - name: Webapp can't work when "TryWebSockets" is disabled
     href: asp-net-signair-app-cannot-access.md
-
+- name: Can't RDP to classic Cloud Services resource
+  href: rdp-not-working-cloud-service.md
 
 - name: Reference
   items:
-  - name: Enable trace for Online Services Sign-in Assistant
-    href: enable-disable-trace-online-services.md
-  - name: IdFix.exe is not a valid Win32 application
-    href: idfix-not-valid-win32-application.md
-  - name: Security context is not associated in IdFix
+  - name: Install .NET Core with Azure Batch start task
+    href: install-dotnet-core-linux.md
+  - name: Support for Linux and open-source technology in Azure
     href: security-context-not-associate-domian.md
-  - name: Support data collection
-    href: support-data-collection-diagnostic-logs.md
