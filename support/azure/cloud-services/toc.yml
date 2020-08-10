@@ -13,11 +13,11 @@
     href: dev-processorengine-role-stuck-busy-state.md
   - name: Website throws HTTP Error 503 with default cloud services url
     href: dev-http-error-503-cannot-access-website.md
-  - name: Cannot RDP to "HealthMonitor" role
+  - name: Cannot RDP to HealthMonitor role
     href: dev-connect-healthmonitor-worker-role-rdp.md
   - name: Cannot access the website although all role instances are running
     href: dev-asp-net-signair-app-cannot-access.md
-  - name: Webapp can't work when "TryWebSockets" is disabled
+  - name: Webapp can't work when TryWebSockets is disabled
     href: dev-asp-net-signair-app-cannot-access.md
 - name: Can't RDP to classic Cloud Services resource
   href: rdp-not-working-cloud-service.md
