@@ -41,3 +41,5 @@
       href: ../sync/enable-co-authoring-for-onedrive-synced-file.md
     - name: Troubleshoot sync issues
       href: ../sync/troubleshoot-sync-issues.md
+    - name: Upload blocked error in OneDrive
+      href: ../sync/upload-blocked-error-in-o365.md
