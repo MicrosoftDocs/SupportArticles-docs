@@ -3,6 +3,38 @@
 
 - name: Active Directory
   items:
+    - name: Active Directory FSMO roles
+      href: ./activedirectory/active-directory-fsmo-roles.md
+    - name: Active Directory replication error 8452
+      href: ./activedirectory/active-directory-replication-error-8452.md
+    - name: AD replication error 5 - Access is denied
+      href: ./activedirectory/active-directory-replication-error-5.md
+    - name: FSMO placement and optimization
+      href: ./activedirectory/fsmo-placement-and-optimization-on-ad-dcs.md
+    - name: How to configure AD and LDS diagnostic event logging
+      href: ./activedirectory/configure-ad-and-lds-event-logging.md
+    - name: How to configure authoritative time server
+      href: ./activedirectory/configure-authoritative-time-server.md
+    - name: How to configure firewall for domains and trusts
+      href: ./activedirectory/config-firewall-for-ad-domains-and-trusts.md
+    - name: How to enable Kerberos event logging
+      href: ./activedirectory/enable-kerberos-event-logging.md
+    - name: How to enable LDAP signing in Windows Server
+      href: ./activedirectory/enable-ldap-signing-in-windows-server.md
+    - name: How to restore deleted user accounts and their groups
+      href: ./activedirectory/retore-deleted-accounts-and-groups-in-ad.md
+    - name: How to transfer or seize FSMO roles
+      href: ./activedirectory/transfer-or-seize-fsmo-roles-in-ad-ds.md
+    - name: How to restrict RPC traffic to a specific port
+      href: ./activedirectory/restrict-ad-rpc-traffic-to-specific-port.md
+    - name: How to troubleshoot high Lsass.exe CPU utilization
+      href: ./activedirectory/troubleshoot-high-lsass.exe-cpu-utilization.md
+    - name: Known issues for managing Group Policy clients
+      href: ./activedirectory/known-issues-for-group-policy-clients.md
+    - name: Syskey.exe utility is no longer supported
+      href: ./activedirectory/syskey-exe-utility-is-no-longer-supported.md
+    - name: Troubleshoot domain controller replication error 1727
+      href: ./activedirectory/remote-procedure-call-failed-and-did-not-execute-error.md
     - name: Well-known security identifiers
       href: ./activedirectory/security-identifiers-in-windows.md
 
