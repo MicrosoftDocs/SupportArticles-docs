@@ -35,6 +35,8 @@
     items:
     - name: A channel can't be recreated after deletion
       href: ./known-issues/channel-cannot-be-recreated-after-deletion.md
+    - name: Channel notifications settings don't update
+      href: ./known-issues/notifications-cannot-manage.md
     - name: Rename a channel doesn't rename the corresponding folder
       href: ./known-issues/renaming-channel-does-not-rename-folder-sharepoint.md
   - name: Conferencing
@@ -77,6 +79,10 @@
     items:
     - name: Downloaded documents open in protected view
       href: ./known-issues/download-documents-open-in-protected-view.md
+  - name: Forms
+    items:
+    - name: Can't send or respond a poll
+      href: ./known-issues/cannot-send-poll.md
   - name: IM and Presence
     items:
     - name: Can't save profile picture
@@ -85,6 +91,10 @@
       href: ./teams-im-presence/teams-user-not-send-message-in-sfb.md
     - name: Deleted messages with an @ mention send notifications with a channel link
       href: ./known-issues/deleted-messages-send-notifications-with-link.md
+  - name: Meetings
+    items:
+    - name: How to join a Microsoft Teams meeting
+      href: ./meetings/how-to-join-a-teams-meeting.md
   - name: Mobile
     items:
     - name: Can't see auto-favorited channels in mobile app

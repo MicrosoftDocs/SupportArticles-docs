@@ -42,10 +42,6 @@ Additionally, if you want to automatically empty the Sync Issues folder, you mus
 
 ### Synchronization errors folders
 
-For more information about the synchronization issues folders, go to the following Microsoft Office website:
-
-[Synchronization error folders](https://office.microsoft.com/outlook-help/synchronization-error-folders-hp001040042.aspx)
-
 Here is an excerpt from the Synchronization error folders webpage:
 
 ```console

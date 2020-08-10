@@ -26,7 +26,7 @@ Below is a collection of top issues. If your issue isn't listed there, browse th
 
 - [Lync or Skype for Business client does not start when you click a meeting link if the default browser is Google Chrome](./server-sign-in/client-not-start-click-meeting-link.md)
 - [Skype for Business plays a dial tone while a user is active on a Teams call](./server-conferencing/sfb-play-dial-tone-teams-call.md)
-- [Skype for Business 2016 MSI client doesn’t display emoticons or emojis](https://support.microsoft.com/help/4475760)
+- [Skype for Business 2016 MSI client doesn't display emoticons or emojis](https://support.microsoft.com/help/4475760)
 
 ## Other Skype for Business Server content
 
