@@ -25,7 +25,7 @@ Log Name: Microsoft-Windows-Workplace Join/Admin
 Source: Microsoft-Windows-Workplace Join  
 Level: Error  
 Description: Workplace Join discovery failed. Server returned http status 404.  
-https://EnterpriseRegistration.domain.com:443/EnrollmentServer/contract?api-version=1.0
+`https://EnterpriseRegistration.domain.com:443/EnrollmentServer/contract?api-version=1.0`
 
 ## Cause
 
