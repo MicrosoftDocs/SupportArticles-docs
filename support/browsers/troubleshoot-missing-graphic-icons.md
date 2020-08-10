@@ -63,10 +63,9 @@ The following registry key set to **1000000000000**:
 
 To test whether the problem of missing fonts is resolved by disabling the Block Untrusted Fonts feature, you can use the appropriate settings to turn off this feature, as documented in [Turn on and use the Blocking Untrusted Fonts feature](/windows/security/threat-protection/block-untrusted-fonts-in-enterprise#turn-on-and-use-the-blocking-untrusted-fonts-feature).
 
-For more information, review the following documents:
+For more information, review the following document:
 
 - [Untrusted Font Blocking policy](https://gpsearch.azurewebsites.net/#10949)
-- [Dropping the "Untrusted Font Blocking" setting](/archive/blogs/secguide/dropping-the-untrusted-font-blocking-setting)
 
 ## Cause 2 - Allow Font Downloads GPO is disabled
 
