@@ -156,11 +156,9 @@ By default, the PIX, or ASA firewall blocks all outside connections from accessi
 
 For more information about firewall products that have SMTP Proxy capabilities, visit the following websites:
 
-[WatchGuard Resources](http://www.watchguard.com)
-
-[Check Point](http://www.checkpoint.com)
-
-[Symantec](http://www.symantec.com/business/index.jsp)
+- [WatchGuard Resources](http://www.watchguard.com)
+- [Check Point](http://www.checkpoint.com)
+- [Symantec](https://www.broadcom.com/)
 
 [!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
 
