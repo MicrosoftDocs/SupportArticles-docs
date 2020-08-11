@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business
 ---
@@ -26,7 +27,7 @@ When you try to sign in the first time to Microsoft Skype for Business in the Ge
 
 **We can't verify if the server should be trusted. Do you want to continue signing in?**
 
-![sign-in window](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4012363_en_2)
+![sign-in window](./media/issue-sign-in-german-environment/sign-in-window.png)
 
 ## Cause
 
@@ -41,3 +42,7 @@ To work around this issue on your Windows client computer, use the workarounds t
 ## Status
 
 Information about this issue will be released soon for mobile clients.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

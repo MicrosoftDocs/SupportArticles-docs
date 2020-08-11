@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - SharePoint Online
@@ -42,4 +43,4 @@ After you upload a file that's missing the required information, when you open t
 
 In the Microsoft Office application message, click **Edit Properties** or **Go to Document Properties**. Then type a value for the required column so that you're able to save any changes.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

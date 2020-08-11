@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: article
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft Excel
 ---
@@ -59,7 +60,7 @@ The only option to have a PowerPoint workbook larger than 2GB is to upsize or on
 ## Steps to upsize a PowerPivot workbook
 
 1. Have your administrator set up a tabular instance of SSAS in your network.
-   1. Use the SQL Server 2012 to install [SQL Server Analysis Service](https://msdn.microsoft.com/en-us/library/hh231722.aspx) that hosts Tabular models.
+   1. Use the SQL Server 2012 to install [SQL Server Analysis Service](https://msdn.microsoft.com/library/hh231722.aspx) that hosts Tabular models.
    1. Have the SSAS service run under a domain account. It will need to access the file share that's made in the step 2 below.
    1. Install [SQL Server 2012 Service Pack 1](https://www.microsoft.com/en-us/download/details.aspx?id=35575) if you are using Excel 2013 workbook as the data source.
    1. Enable the "SQL Server Browser" service.

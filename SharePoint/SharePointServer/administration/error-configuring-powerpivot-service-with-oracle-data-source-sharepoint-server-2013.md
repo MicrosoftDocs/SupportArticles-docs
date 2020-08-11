@@ -1,7 +1,7 @@
 ---
 title: Error when configuring a PowerPivot service with an Oracle data source in SharePoint Server 2013
 description: Resolves an error when configuring a PowerPivot service with an Oracle data source in SharePoint Server 2013.
-author: todmccoy
+author: McCoyBot
 ms.author: v-todmc
 ms.reviewer: 
 manager: dcscontentpm
@@ -10,6 +10,7 @@ search.appverid:
 - MET150
 audience: Admin
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
 appliesto:
@@ -56,4 +57,7 @@ Perform the following steps to see the error:
 Since the farm account is different from the PowerPivot account, the error appears due to a lack of permission.
 
 ## More information
-The target ID created in the SSS should be a “Group” type.
+
+The target ID created in the SSS should be a "Group" type.
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

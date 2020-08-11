@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft Exchange Server
 - Microsoft Outlook
@@ -19,7 +20,7 @@ appliesto:
 
 ## Symptoms
 
-Extended MAPI solutions that try to connect to mailboxes that require Modern Authentication receive repeated password prompts and canadministrationt connect. 
+Extended MAPI solutions that try to connect to mailboxes that require Modern Authentication receive repeated password prompts and cannot connect. 
 
 Additionally, you can't connect by using OAuth credentials unless an initial connection is established by using the Outlook client.
 

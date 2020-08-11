@@ -8,6 +8,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.service: o365-administration
+ms.custom: CSSTroubleshoot
 ms.topic: article
 ms.author: v-six
 appliesto:
@@ -18,6 +19,8 @@ appliesto:
 ---
 
 # A child domain doesn't inherit parent domain changes in Office 365, Azure, or Intune
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## PROBLEM
 

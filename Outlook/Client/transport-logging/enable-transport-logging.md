@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Outlook 2019
 - Outlook 2016
@@ -43,7 +44,7 @@ To have us enable the mail logging option for you, go to the "Here's an easy fix
 To enable the mail logging option automatically, click the **Download** button. In the **File Download** dialog box, click **Run** or **Open**, and then follow the steps in the easy fix wizard. 
  
 - This wizard may be in English only. However, the automatic fix also works for other language versions of Windows.    
-- If you’re not on the computer that has the problem, save the easy fix solution to a flash drive or a CD, and then run it on the computer that has the problem.    
+- If you're not on the computer that has the problem, save the easy fix solution to a flash drive or a CD, and then run it on the computer that has the problem.    
  
 #### For Windows 10, Windows 8.1, Windows 8, Windows 7
 
@@ -57,9 +58,9 @@ To enable logging, follow the steps for your version of Outlook.
 
 #### Microsoft Outlook 2019, Microsoft Outlook 2016, Microsoft Outlook 2013, Microsoft Outlook 2010, and Outlook for Office 365
 
-1. On the **File **tab, click **Options**.    
-2. In the **Outlook Options **dialog box, click **Advanced**.    
-3. In the **Other **section, select the **Enable troubleshooting logging (requires restarting Outlook)** check box, and then click **OK**.    
+1. On the **File** tab, click **Options**.    
+2. In the **Outlook Options** dialog box, click **Advanced**.    
+3. In the **Other** section, select the **Enable troubleshooting logging (requires restarting Outlook)** check box, and then click **OK**.    
 4. Exit and then restart Outlook.    
  
 #### Microsoft Outlook 2007 and earlier versions

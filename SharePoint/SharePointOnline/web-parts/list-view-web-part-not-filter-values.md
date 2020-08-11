@@ -9,9 +9,11 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - SharePoint Online
+- SharePoint Server
 ---
 
 # A list view Web Part for a tasks list doesn't filter values from a connected Web Part
@@ -48,4 +50,4 @@ To work around this issue, enable server rendering on the list view Web Part for
 
 ## More information
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

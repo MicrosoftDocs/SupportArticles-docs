@@ -11,6 +11,7 @@ ms.service: skype-for-business-online
 ms.topic: article
 ms.author: v-six
 ms.reviewer: dahans
+ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Online
 ---
@@ -62,7 +63,7 @@ Verify that connectivity to the Address Book web service is available. To do thi
 2. Copy the ABS External Server URL.   
 3. Start Internet Explorer, and then paste the URL into the address bar.   
 4. The message that you receive from Internet Explorer indicates whether the URL can be accessed from the computer. If you can't access the URL, this indicates there's something blocking communication to or from the URL, such as a firewall or proxy:
-   - If the URL can be accessed, you’ll see one of these error messages (even though a page isn't displayed):
+   - If the URL can be accessed, you'll see one of these error messages (even though a page isn't displayed):
 
      - 401 Unauthorized: Access Denied   
      - Internet Explorer cannot display the webpage.   

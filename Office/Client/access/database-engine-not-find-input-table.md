@@ -10,12 +10,15 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 ms.reviewer: wouterst, tputt, krislill, jenl
 appliesto:
 - Access 2010
 ---
 
 # "The Microsoft Office Access database engine cannot find the input table" when you try to open a table in an Access 2010 template
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 
@@ -77,7 +80,7 @@ To work around this issue, follow these steps:
     End Sub
     ```
 
-9. On the **View **menu, click **Immediate Window**.   
+9. On the **View** menu, click **Immediate Window**.   
 10. Type the following command, and then press ENTER: 
 
     PrepareBDCTables

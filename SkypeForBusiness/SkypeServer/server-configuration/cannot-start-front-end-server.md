@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 ms.reviewer: daveh
 appliesto:
 - Lync Server 2013
@@ -44,3 +45,7 @@ SQL_9002_severity_17                              
 ## Workaround
 
 To work around this issue, truncate the transaction logs that reach maximum capacity by performing a SQL Server backup on them. This reduces the file size of the transaction logs.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

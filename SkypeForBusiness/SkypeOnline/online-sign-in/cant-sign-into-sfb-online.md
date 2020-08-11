@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 ms.reviewer: dahans
 appliesto:
 - Skype for Business Online
@@ -17,7 +18,7 @@ appliesto:
 - Lync 2010
 ---
 
-# You can't sign in to Skype for Business Online because the certificate can’t be acquired or validated
+# You can't sign in to Skype for Business Online because the certificate can't be acquired or validated
 
 ## Problem
 
@@ -58,7 +59,7 @@ During the sign in process, Lync 2013 caches your credentials and other informat
 ### Resolution for Lync 2010
 
 1. Update the Lync client to the latest version that's available on the Downloads page of the Office 365 portal.    
-2. Update the [Microsoft Online Services Sign-In Assistant](https://www.microsoft.com/download/details.aspx?id=28177) to the latest version.    
+2. Update the [Microsoft Online Services Sign-In Assistant](https://www.microsoft.com/download/details.aspx?id=41950) to the latest version.    
 3. Clear your cached certificates, credentials and connections.
 
 #### Additional troubleshooting steps for Lync 2013 and Lync 2010
@@ -110,7 +111,7 @@ If the steps earlier in this article don't resolve the issue, try the following 
 
 #### Resolution for Skype for Business Online administrators: Validate the certificate chain
 
-End-users may receive an error stating that the certificate can’t be validated, and this usually happens because one of the certificates in the chain is untrusted and can’t be validated. This typically occurs for customers who use single sign-on in Office 365 or for customers who have Lync hybrid deployments.
+End-users may receive an error stating that the certificate can't be validated, and this usually happens because one of the certificates in the chain is untrusted and can't be validated. This typically occurs for customers who use single sign-on in Office 365 or for customers who have Lync hybrid deployments.
 
 For more information about certificate validation with Lync, see [Lync Mobile users cannot sign in after they update to client version 5.4](https://support.microsoft.com/help/2965499).
 
@@ -127,7 +128,7 @@ Did this fix the problem?
 
 - Check whether the problem is fixed. 
   - If the problem is fixed, you are finished with these steps.    
-  - If the problem isn't fixed, go to [Microsoft Community](https://answers.microsoft.com/), or [contact support](https://support.microsoft.com/contactus/).   
-- We'd appreciate your feedback. To provide feedback or to report any issues with this solution, please leave a comment on the "[Fix it for me](http://blogs.technet.com/fixit4me/)" blog or send us an [email](mailto:fixit4me@microsoft.com?subject=kb) message.
+  - If the problem isn't fixed, go to [Microsoft Community](https://answers.microsoft.com/), or [contact support](https://support.microsoft.com/contactus/).
+- We'd appreciate your feedback. To provide feedback or to report any issues with this solution, please send us an [email](mailto:fixit4me@microsoft.com?subject=kb) message.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

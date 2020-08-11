@@ -8,6 +8,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.prod: sharepoint-server-itpro
+ms.custom: CSSTroubleshoot
 ms.topic: article
 ms.author: v-six
 appliesto:
@@ -50,11 +51,11 @@ If you want to continue using your **Tasks** page, you have to manually restore 
 
 1. In the Address box, type the following URL. Replace the placeholder text by using information that's specific to your account.
 
-    https://**CompanyName**-my.sharepoint.com/personal/UserName_**CompanyName**_onmicrosoft_com/AllTasks.aspx
+    `https://CompanyName-my.sharepoint.com/personal/UserName_CompanyName_onmicrosoft_com/AllTasks.aspx`
     
     For example, the URL for user SaraD at Contoso will resemble the following:
     
-    https://contoso-my.sharepoint.com/personal/sarad_contoso_onmicrosoft_com/AllTasks.aspx
+    `https://contoso-my.sharepoint.com/personal/sarad_contoso_onmicrosoft_com/AllTasks.aspx`
     
     ![Add a link dialog box](./media/sync-to-outlook-tasks-link-missing/add-link-dialog.png)
 
@@ -68,4 +69,4 @@ The **Tasks** menu option has been removed from SharePoint Online. Additionally,
 
 The personal **Tasks** page will also continue to be available for one year following the announcement that was made on September 4, 2014. After that time, this functionality will be removed and will no longer be available or supported. 
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

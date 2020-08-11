@@ -8,6 +8,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -17,6 +18,8 @@ appliesto:
 ---
 
 # How to force Excel to open in a new instance by default
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 
@@ -34,7 +37,7 @@ By opening each spreadsheet in its own instance, the spreadsheet has a dedicated
 
 ## Resolution
 
-To change the default setting, install the latest version of Office (build numbers referenced in the following table), and then add the key to the registry. The versions of Office that have the update include the following:
+To change the default setting, install the latest version of Office (build numbers referenced in the following table are the minimum builds required for that version), and then add the key to the registry. The versions of Office that have the update include the following:
 
 |Version|Release date|Build number|
 |----|---|---|
@@ -48,11 +51,11 @@ To change the default setting, install the latest version of Office (build numbe
 
 1. Exit all instances of Excel.   
 2. Start Registry Editor: 
-   - In Windows 10, click Start, type regeditin the Search box, and then select regedit.exe in the search results.   
+   - In Windows 10, click Start, type regedit in the Search box, and then select regedit.exe in the search results.   
    - In Windows 8 or Windows 8.1, move the pointer to the upper-right corner, select Search, enter regeditin the search box, and then select regedit.exein the search results.     
 3. Locate and select the following registry subkey:
 
-   **HKCU\Software\Microsoft\Office\16.0\Excel\Options**   
+   **HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Excel\Options**   
 4. On the **Edit** menu, point to **New**, and then select **DWORD Value**.   
 5. Enter DisableMergeInstance, and then press Enter.   
 6. In the Detailspane, press and hold (or right-click) DisableMergeInstance, and then select Modify.   

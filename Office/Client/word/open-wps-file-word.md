@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Word for Office 365
@@ -18,6 +19,8 @@ appliesto:
 ---
 
 # "Do you want to download the new converter?" error when you try to open a .wps file in Word
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

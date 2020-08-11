@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business 2016
 ---
@@ -76,3 +77,5 @@ If users experience this issue in a peer-to-peer scenario without any involvemen
 For more information about how to judge the value of VbSS, see the "Planning" section of the following TechNet topic:
 
 [Video based Screen Sharing for Skype for Business Server 2015](https://technet.microsoft.com/library/mt756736.aspx)
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

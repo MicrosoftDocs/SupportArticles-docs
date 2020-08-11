@@ -8,6 +8,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.service: office 365
+ms.custom: CSSTroubleshoot
 ms.topic: article
 ms.author: v-six
 appliesto:
@@ -16,11 +17,13 @@ appliesto:
 
 # Domain shows a status of "Setup in progress" in the Office 365 portal
 
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+
 ## Problem
 
 You experience one of the following problems in the Microsoft Office 365 portal:
 
-- When you add a new domain to Office 365, you see a status of **Setup in progress **or **Fix Issues**.   
+- When you add a new domain to Office 365, you see a status of **Setup in progress** or **Fix Issues**.   
 - The status of your primary domain changes from **Active** to **Setup in progress** or **Fix Issues**.    
 
 ## Solution 

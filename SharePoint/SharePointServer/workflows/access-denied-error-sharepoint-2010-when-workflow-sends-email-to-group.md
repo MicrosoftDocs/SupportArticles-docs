@@ -1,5 +1,5 @@
 ---
-title: “Access Denied” error when a SharePoint 2010 workflow sends an email to a group
+title: Access Denied error when a SharePoint 2010 workflow sends an email to a group
 ms.author: v-todmc
 author: simonxjx
 manager: dcscontentpm
@@ -8,6 +8,7 @@ ms.audience: Admin
 ms.topic: article
 ms.service: sharepoint-2010
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 search.appverid:
 - SPO160
 - MET150
@@ -21,10 +22,10 @@ appliesto:
 - SharePoint Designer 2013
 - SharePoint Designer 2010
 ---
-# “Access Denied” error when a SharePoint 2010 workflow sends an email to a group
+# "Access Denied" error when a SharePoint 2010 workflow sends an email to a group
 
 ## Symptoms
-When a SharePoint 2010 workflow sends an email to a SharePoint group which contains multiple valid users, it fails to complete and you receive an “Access Denied” error.
+When a SharePoint 2010 workflow sends an email to a SharePoint group which contains multiple valid users, it fails to complete and you receive an "Access Denied" error.
 
 ## Cause
 This error might be caused when the owner of the SharePoint group to which Workflow is attempting to send the email falls under one of the following scenarios:
@@ -62,4 +63,4 @@ Original error: System.UnauthorizedAccessException: Access is denied. (Exception
 
 ```
 
-
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

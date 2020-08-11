@@ -1,7 +1,7 @@
 ---
 title: Unable to create or edit SharePoint 2013 workflow in SharePoint Designer
 description: Resolves a situation where you cannot create or edit a SharePoint 2013 workflow in SharePoint Designer. 
-author: todmccoy
+author: McCoyBot
 ms.author: v-todmc
 manager: dcscontentpm
 localization_priority: Normal
@@ -9,6 +9,7 @@ audience: Admin
 ms.topic: article
 ms.prod: office-perpetual-itpro
 localization_priority: Normal 
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -34,7 +35,7 @@ To resolve this issue, identify and remove the feature with the duplicate ID.
    - Find the search error message mentioned above.
    - Search for a correlation ID or a SPRequestGUID, both of which are part of the Server Response in the HTTP trace captured in Fiddler or the browser developer tool.
 
-2. When reviewing the ULS log, you will see a list of all features installed in the farm that were queried. Find the last feature that was queried before the error occurred and make a note of the feature’s ID.
+2. When reviewing the ULS log, you will see a list of all features installed in the farm that were queried. Find the last feature that was queried before the error occurred and make a note of the feature's ID.
 
 3. Run the command Get-SPFeature *Feature ID* to get the name of the feature.
 
@@ -59,7 +60,7 @@ When you attempt to create or edit a SharePoint 2013 Workflow using SharePoint D
 Microsoft.SharePoint.WorkflowServices.StoreWorkflowDeploymentProvider.GetActivitySignatures(DateTime lastChanged).
 ```
 
-To provide all the workflow activities available in SharePoint farm (GetActivitySignatures), SharePoint must list out all features present in the farm and build a dictionary. In a situation where a particular feature is added with a second, duplicate ID, SharePoint will encounter problem while building the dictionary and error out as “An item with the same key has already been added.”
+To provide all the workflow activities available in SharePoint farm (GetActivitySignatures), SharePoint must list out all features present in the farm and build a dictionary. In a situation where a particular feature is added with a second, duplicate ID, SharePoint will encounter problem while building the dictionary and error out as "An item with the same key has already been added."
 
 Note that the DateTime, lastChanged value is dependent on whether Designer already has a cache of Workflow activities or not for a particular site. When Designer is building a workflow activities cache for the first time for a site, the value of the DateTime lastChanged parameter will be 0000. From that point onward, the value will contain the last time that the cache was built. Using this method, Designer will pull down only new added workflow activities.
 
@@ -68,3 +69,5 @@ To view the GetActivitySignature cache created by SharePoint Designer, browse to
 ```
 %USERPROFILE%\AppData\Local\Microsoft\WebsiteCache\SharePoint Site name\SharePoint Build version\Activity.xml
 ```
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

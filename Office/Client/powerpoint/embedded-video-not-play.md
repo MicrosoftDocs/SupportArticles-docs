@@ -8,6 +8,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 ms.reviewer: khutch, arykhus, kemille, richpo, debbiery
 search.appverid: 
 - MET150
@@ -18,6 +19,8 @@ appliesto:
 ---
 
 # Embedded videos don't play when you export a presentation as a video 
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

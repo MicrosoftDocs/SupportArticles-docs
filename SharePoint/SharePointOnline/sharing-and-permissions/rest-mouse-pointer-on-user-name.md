@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 - OneDrive for Business
@@ -44,3 +45,5 @@ To work around this issue, disable the **NameCtrl Class** add-on in Internet Exp
 ## More information
 
 Microsoft Office Contact Retriever tries to retrieve the contact when you rest the mouse pointer on the name of a user in SharePoint Online or OneDrive for Business. However, the Microsoft Office Contact Retriever doesn't support Modern Authentication.
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

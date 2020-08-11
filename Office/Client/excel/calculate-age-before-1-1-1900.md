@@ -7,6 +7,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.service: office-perpetual-itpro
+ms.custom: CSSTroubleshoot
 ms.topic: article
 ms.author: v-six
 appliesto:
@@ -14,6 +15,8 @@ appliesto:
 ---
 
 # How to calculate ages before 1/1/1900 in Excel
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

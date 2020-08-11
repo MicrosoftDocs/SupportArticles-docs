@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Access 2010
@@ -16,6 +17,8 @@ appliesto:
 ---
 
 # You cannot use the mouse wheel to scroll through records in an Access 2007 or Access 2010 form
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 
@@ -59,9 +62,3 @@ You can continue to use your mouse wheel in Form View in Access 2007 and in Acce
 4. Save and then open your form in Form View.   
 
 This code forces the user to save a record in which changes were made before the user scrolls to another record. One of the main reasons for the change in the scroll behavior was that users would use the mouse wheel to scroll through records and automatically and unexpectedly save their changes to their record.
-
-## More Information
-
-For more information about scroll records and the mouse wheel, visit the following website:
-
-[https://www.allenbrowne.com/ser-70.html](https://www.allenbrowne.com/ser-70.html)

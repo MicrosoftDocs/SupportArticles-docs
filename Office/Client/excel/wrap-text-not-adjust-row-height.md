@@ -9,6 +9,7 @@ ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
 ms.reviewer: clayj 
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -18,6 +19,8 @@ appliesto:
 ---
 
 # Wrap text does not adjust row height in Excel
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

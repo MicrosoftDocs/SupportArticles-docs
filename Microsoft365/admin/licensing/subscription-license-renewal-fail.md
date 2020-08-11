@@ -9,14 +9,17 @@ search.appverid:
 audience: ITPro
 ms.prod: Office 365
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
-- Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
 - Office 365 Business
 - Office 365 Home
 ---
 
 # Office 365 subscription automatic license renewal fails when sppcext.dll is missing
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

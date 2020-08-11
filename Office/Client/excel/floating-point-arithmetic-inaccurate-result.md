@@ -9,6 +9,7 @@ ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
 ms.reviewer: clayj 
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -20,6 +21,8 @@ appliesto:
 ---
 
 # Floating-point arithmetic may give inaccurate results in Excel
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

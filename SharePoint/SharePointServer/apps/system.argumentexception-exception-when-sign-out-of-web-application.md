@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Server 2013
 ---
@@ -69,3 +70,7 @@ To resolve this issue, replace the **Sign Out**  link with the **Sign-in As Diff
    ```  
 
    **Note** The text and description attributes are changed to mimic the logoff button.     
+
+## More information
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

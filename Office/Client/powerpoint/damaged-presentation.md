@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - PowerPoint 2019
@@ -19,6 +20,8 @@ appliesto:
 ---
 
 # How to troubleshoot a damaged presentation in PowerPoint
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

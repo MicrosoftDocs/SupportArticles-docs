@@ -9,6 +9,7 @@ ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
 ms.reviewer: lorist 
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -18,6 +19,8 @@ appliesto:
 ---
 
 # Troubleshooting guide for unwanted page breaks
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - SharePoint Online
@@ -64,4 +65,4 @@ For more information about copy-and-paste support of workflow contents in ShareP
 
 In this scenario, even though it seems that you have created two separate workflows, the workflows are actually the same and are incomplete. This issue occurs because the Ctrl+C and Ctrl+V keyboard shortcuts aren't supported in the **Workflows** section of **Site Objects** for SharePoint workflows. This functionality is available only for a reusable workflow by using the **Copy & Modify** button in the SharePoint Designer ribbon.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

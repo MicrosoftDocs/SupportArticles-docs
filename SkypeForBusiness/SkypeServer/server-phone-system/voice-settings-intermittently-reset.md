@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Server 2015
 - Skype for Business for iOS
@@ -29,8 +30,12 @@ In this scenario, when you join a Skype for Business meeting, the **Voice Settin
 
 ## Cause
 
-The issue occurs because the user isn’t recognized as enabled for Enterprise Voice under some conditions. 
+The issue occurs because the user isn't recognized as enabled for Enterprise Voice under some conditions. 
 
 ## Resolution
 
 To fix this issue, install the [July 2018 cumulative update 6.0.9319.534 for Skype for Business Server 2015, Web Components Server](https://support.microsoft.com/help/4340906).
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

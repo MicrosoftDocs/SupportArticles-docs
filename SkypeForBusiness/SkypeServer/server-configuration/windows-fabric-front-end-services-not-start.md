@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Skype for Business Server 2015
@@ -136,3 +137,5 @@ For more information about 4k sector disks, see the following articles:
 
 - [Advanced format (4K) disk compatibility update](https://msdn.microsoft.com/windows/compatibility/advanced-format-disk-compatibility-update) 
 - [Microsoft support policy for 4K sector hard drives in Windows](https://support.microsoft.com/help/2510009)
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

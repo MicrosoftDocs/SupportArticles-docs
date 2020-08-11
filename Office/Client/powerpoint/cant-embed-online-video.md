@@ -1,6 +1,6 @@
 ---
 title: You can't embed an online video in a PowerPoint 2013 presentation
-description: Describes an issue in which you receive a PowerPoint cant insert a video from this embed code error message when you try to embed an online video in PowerPoint 2013.
+description: Describes an issue in which you receive a PowerPoint cannot insert a video from this embed code error message when you try to embed an online video in PowerPoint 2013.
 author: lucciz
 ms.author: v-zolu
 manager: dcscontentpm
@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: article 
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 ms.reviewer: lauraho, dkuy
 search.appverid: 
 - MET150
@@ -16,6 +17,8 @@ appliesto:
 ---
 
 # Fixed: You can't embed an online video in a PowerPoint 2013 presentation
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ##  Symptoms
 
@@ -38,7 +41,7 @@ This has been resolved with the April Updates, please download the updates here:
 - [2837627 ](https://support.microsoft.com/help/2837627) Description of the PowerPoint 2013 update 2837627: April 8, 2014
 - [2817636 ](https://support.microsoft.com/help/2817636) Description of the Office 2013 update 2817636: April 8, 2014
 
-Please note that the **YouTube** and **From a Video Embed Code** options appear in the **Online Video** dialog box regardless of whether you have the updates installed. However, you must install these two updates in order to insert or play back YouTube videos correctly. In addition, the **Bing Video Search** section will no longer appear in the **Online Video** dialog box.
+The **YouTube** and **From a Video Embed Code** options appear in the **Online Video** dialog box regardless of whether you have the updates installed. However, you must install these two updates in order to insert or play back YouTube videos correctly. In addition, the **Bing Video Search** section will no longer appear in the **Online Video** dialog box.
 
 For more information, please see the following blog: 
 

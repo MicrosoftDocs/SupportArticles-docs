@@ -1,6 +1,6 @@
 ---
 title: Create An Excel Add-In to Calculate Body Mass Index (BMI)
-description: This article describes how to create a custom function to calculate BMI (Body Mass Index), save Excel Add-In file, install the Add-In and unistall the Add-In.
+description: This article describes how to create a custom function to calculate BMI (Body Mass Index), save Excel Add-In file, install the Add-In and uninstall the Add-In.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Excel for Office 365
 - Excel 2019
@@ -25,7 +26,7 @@ This article was written by [Raddini Rahayu](https://mvp.microsoft.com/en-us/mvp
 
 ## Introduction 
 
-Excel Add-In is a file that contains code of VBA to adds additional Excel function which doesn't exist in Excel function by default.This file is saved in .xlam format and always loaded when Excel starts up. The additional or custom Excel function can also be called a UDF (User Defined Function)that is a custom function which is created by user.
+Excel Add-In is a file that contains code of VBA to adds additional Excel function that doesn't exist in Excel function by default. This file is saved in .xlam format and always loaded when Excel starts up. The additional or custom Excel function can also be called a UDF (User-Defined Function) that is a custom function that is created by user.
 
 In using Add-In, at first you must install it on your computer then it will always be used for all workbook. In this article, you will be shown how to create custom function in the Add-In using VBA code, save file that contains Add-In, install the Add-In, using custom function from Add-In and uninstall the Add-In.
 
@@ -33,7 +34,7 @@ In using Add-In, at first you must install it on your computer then it will alwa
 
 In this case below, I will share about how to create a custom function to calculate BMI (Body Mass Index).
 
-Body Mass Index is a simple index of weight and height that is commonly used to classify underweight, overweight and obesity in adults. BMI values ​​are age-independent and same for both sexes. The classifications of BMI are showed in the following table: 
+Body Mass Index is a simple index of weight and height that is commonly used to classify underweight, overweight, and obesity in adults. BMI values ​​are age-independent and same for both sexes. The classifications of BMI are shown in the following table: 
 
 ![classifications of BMI ](./media/create-add-in-to-calculate-bmi/classifications-of-bmi.png)
 
@@ -44,7 +45,7 @@ The BMI scale used here is only suitable for adults aged 20-65 and here is the c
 
 ### Step 1: Coding VBA Code
 
-1. Open Microsoft Excel, then press Alt+F11on keyboard, so VBE ( Visual Basic Editor) window is displayed.
+1. Open Microsoft Excel, then press Alt+F11on keyboard, so VBE (Visual Basic Editor) window is displayed.
 
 2. Open a module by selecting Module on Insert menu and write this script:
     ```vb
@@ -66,7 +67,7 @@ The BMI scale used here is only suitable for adults aged 20-65 and here is the c
     > You can save your Add-In file anywhere you want. But if you want it to be listed on Excel bulit-in, you should save it into the default location. On my computer with Windows 7 operating system, the default location for any versions of Microsoft Excel is:
     C:\Users\RADDINI\AppData\Roaming\Microsoft\AddIns
 
-Until this step, we have finished create a custom function that is saved in Excel Add-In file. Next we need to install it and then we can use the Add-In.
+Until this step, we have finished creating a custom function that is saved in Excel Add-In file. Next we need to install it and then we can use the Add-In.
 
 ### Step 3: Install The Add-In
 
@@ -89,13 +90,13 @@ Now, BMI calculation custom function has installed and ready to use.
 
 ### Step 4: Use The Function
 
-Now, we can use the custom function that we have created. To testing this BMI function, write on the cell B1: =BMI(55,170) , then Press Enter. If the Result is 19.03, it means our custom function is working well. Also you can try calculate your BMI then find out your BMI classification by looking at BMI Classification table.
+Now, we can use the custom function that we have created. To testing this BMI function, write on the cell B1: =BMI(55,170), then Press Enter. If the Result is 19.03, it means our custom function is working well. Also you can try calculate your BMI then find out your BMI classification by looking at BMI Classification table.
 
 ![use the function](./media/create-add-in-to-calculate-bmi/use-the-function.png)
 
 ### Step 5: Uninstall The Add-In
 
-However, every Add-In which have installed on Excel, will always running when Excel get started. Excel load time may takes longer than Excel without Add-In. If you don’t need that Add-In anymore, you can uninstall one or more of them. The steps are almost same as installing Add-In, please following this steps:
+However, every Add-In that has installed on Excel, will always running when Excel gets started. Excel load time may takes longer than Excel without Add-In. If you don't need that Add-In anymore, you can uninstall one or more of them. The steps are almost same as installing Add-In, please following this step:
 
 1. Open Add-Ins dialog box by clicking Add-Ins on the Developer tab.
 

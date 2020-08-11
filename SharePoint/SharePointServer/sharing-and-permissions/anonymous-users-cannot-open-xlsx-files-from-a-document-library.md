@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft SharePoint
 ---
@@ -82,3 +83,5 @@ $site.Dispose();
 ## More Information  
 
 [Plan security for an external anonymous access environment (Office SharePoint Server)](https://technet.microsoft.com/library/cc263468%28office.12%29.aspx)
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 ms.reviewer: jasco, landerl, corbinm, dougl
 appliesto:
 - Skype for Business Online
@@ -39,3 +40,5 @@ Skype Meeting Broadcast automatically adjusts the resolution based on available 
 
 > [!NOTE]
 > This is the maximum amount of bandwidth that can be consumed. The amount of bandwidth that Skype Meeting Broadcast consumes is directly related to the type of media (for example, PPT, audio, video) that is being used and how frequently the page loads. For example, a PowerPoint presentation that is just being displayed and for which slides aren't being advanced consumes far less bandwidth than a video in which the presenter is moving and the background is constantly changing.
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

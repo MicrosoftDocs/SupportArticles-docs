@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Word for Office 365
 - Word 2019
@@ -19,6 +20,8 @@ appliesto:
 ---
 
 # Operating parameter limitations and specifications in Word
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 
@@ -46,6 +49,7 @@ Note 3 To invoke AutoComplete tips for AutoText, at least four characters of the
 |---|---|
 | Maximum number of bookmarks| 2,147,483,647 |
 |(Style Definition) maximum number of styles| 4,079
+| Maximum number of lists| 2,047 |
 | Maximum number of comments| 2,147,483,647 |
 | Maximum number of fields| 2,147,483,647 |
 |Number of subdocuments in a master document|255|
@@ -63,6 +67,7 @@ Note 3 To invoke AutoComplete tips for AutoText, at least four characters of the
 |----|---|
 | Maximum number of bookmarks| 16,380 |
 |(Style Definition) maximum number of styles| 4,079
+| Maximum number of lists| 2,047 |
 | Maximum number of comments| 16,380 |
 |Number of subdocuments in a master document|255|
 | Maximum number of fields| 2,147,483,647 |

@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: article 
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 ms.reviewer: Keiko Sewake (Intl Agency) 
 search.appverid: 
 - MET150
@@ -16,6 +17,8 @@ appliesto:
 ---
 
 # PowerPoint 2013 does not print in Pure Black and White mode
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ##  Symptoms
 

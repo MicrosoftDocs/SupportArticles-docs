@@ -1,6 +1,6 @@
 ---
 title: Error occurs when accessing Project Web App
-description: Introduces how give access to PWA and permissions.
+description: Introduces how to give access to PWA and permissions.
 author: lucciz
 ms.author: v-zolu
 manager: dcscontentpm
@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: article 
 ms.prod: project-server-itpro
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -16,6 +17,8 @@ appliesto:
 ---
 
 # Error occurs when accessing Project Web App
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ##  Symptoms
 
@@ -33,10 +36,10 @@ You do not have permissions to the root PWA site and/or you do not have group pe
 
 ##  Resolution
 
-In order for a user name to appear in the available users list, the user must already have permissions on the PWA root site or they are a Global administrator. To Share the root PWA site using SharePoint Permissions mode:
+In order for a user name to appear in the available users' list, the user must already have permissions on the PWA root site or they are a Global administrator. To Share the root PWA site using SharePoint Permissions mode:
 
 1. As the PWA Admin, log into the PWA site that the user is having access issues.   
-2. In the upper right hand corner, underneath the account name click on the SHARE icon.    
+2. In the upper right-hand corner, underneath the account name click on the SHARE icon.    
 3. Add the user (user@domain.com). The user will receive the Contribute permissions and be added to the group called "Team Members for Project Web App" on the root PWA site. You can change the default by clicking the SHOW OPTIONS link in the dialog.    
 4. Give the synchronization about 2 minutes and then test access to the PWA site. 
 
@@ -45,7 +48,7 @@ Resolution when using Project Server Permissions mode:
 
 1. As the PWA Admin, log into the PWA site that the user is having access issues.    
 2. Go to Server Settings and click Manage Groups. Click on the group that you wish to modify.   
-3. User accounts can be added by synchronizing with an Active Directory Group or added manually from the available users list   
+3. User accounts can be added by synchronizing with an Active Directory Group or added manually from the available users' list   
 
 
 ##  More Information
@@ -60,9 +63,9 @@ Using Active Directory group synchronization, users are added to the Project Ser
 
 To check which permissions mode your PWA site is using:
 
-Visual Check - as PWA Admin click the gear in the upper right corner of the PWA home page and click PWA Settings. If you see the Security section heading, then you are in Project Server permissions mode. If you do not see this section then you are in SharePoint permissions mode. 
+Visual Check - as PWA Admin click the gear in the upper right corner of the PWA home page and click PWA Settings. If you see the Security section heading, then you are in Project Server permissions mode. If you do not see this section, then you are in SharePoint permissions mode. 
 
-SharePoint Admin Check - The SharePoint Admin can go to the Admin menu and click SharePoint. Then click the check box to the left of the Project Web App instance you want to investigate. On the ribbon click Project Web Appand click Settings. The current permissions mode in use is displayed.
+SharePoint Admin Check - The SharePoint Admin can go to the Admin menu and click SharePoint. Then click the check box to the left of the Project Web App instance you want to investigate. On the ribbon, click Project Web App and click Settings. The current permissions mode in use is displayed.
 
 Project Web App can use either Project Server permission mode or SharePoint permission mode to control user access. New Project Web App instances use the SharePoint permission mode by default. SharePoint permissions mode does not synchronize users with the root site or the project sites, this is only done when Project Server permissions mode is in use and configured to synchronize. 
 
@@ -72,7 +75,7 @@ Switching between Project Server permission mode and SharePoint permission mode 
 
 **Group Names**
 
-When using SharePoint Permissions mode the group name is appended with For Project Web App . when using Project Server permission mode the group name is appended with (Project Web App Synchronized)
+When using SharePoint Permissions mode the group name is appended with For Project Web App. When using Project Server permission mode the group name is appended with (Project Web App Synchronized)
 
 Enterprise Resource Pool - User accounts added to the Enterprise Resource Pool are not automatically given permissions to log into the Project Web App home page. This is new behavior in 2013 from earlier versions of Project Server, regardless of security mode. This prevents users from having access to Project Web App home page automatically. The PWA Admin must "Share" the site with specific users or groups for users to have access. To get more information and best practices see the following article:
 

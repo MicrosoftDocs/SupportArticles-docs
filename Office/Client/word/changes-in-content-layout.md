@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.reviewer: Tomol, DK Pfeiffer, Dan Vasquez
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -16,6 +17,8 @@ appliesto:
 ---
 
 # Changes in content layout between Word 2013 and earlier versions of Word
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ##  Summary
 

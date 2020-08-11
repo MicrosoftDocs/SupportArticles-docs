@@ -1,6 +1,6 @@
 ---
 title: This doesn't look like a valid user ID error when a user signs in
-description: Resolves an issue that occurs if the user's UPN in the on-premises Active Directory environment and the user's UPN in Windows Azure AD don't match.
+description: Resolves an issue that occurs if the user's UPN in the on-premises Active Directory environment and the user's UPN in Microsoft Azure Active Directory don't match.
 author: lucciz
 ms.author: v-zolu
 manager: dcscontentpm
@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: article 
 ms.prod: office 365
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -16,6 +17,8 @@ appliesto:
 ---
 
 # "This doesn't look like a valid user ID" error when a user tries to sign in to Office 365
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Problem
 

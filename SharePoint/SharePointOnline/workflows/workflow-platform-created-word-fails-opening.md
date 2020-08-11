@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 - SharePoint Server 2013
@@ -50,4 +51,4 @@ To work around this issue, change the document template that's used for the affe
 
 This behavior is by design. The **Create List Item** action in the **SharePoint 2010 Workflow** platform can't convert Word content type file templates to the correct .docx format.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

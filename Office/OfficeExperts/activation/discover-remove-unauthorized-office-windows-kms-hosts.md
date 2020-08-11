@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: ericspli
+ms.custom: CSSTroubleshoot
 appliesto:
 - Office 2010
 ---
@@ -70,7 +71,7 @@ For more information, see the following articles:
 
 ## Remove unauthorized Office KMS hosts
 
-It's not common to create an Office KMS host unintentionally, because setting up an Office KMS requires a specific product key and the installation of the [Microsoft Office 2010 KMS Host License Pack](https://www.microsoft.com/download/details.aspx?displaylang=en&id=25095).
+It's not common to create an Office KMS host unintentionally, because setting up an Office KMS requires a specific product key and the installation of the [Microsoft Office 2010 KMS Host License Pack](https://www.microsoft.com/download/details.aspx?id=25095).
 
 To determine whether a computer has the Office 2010 KMS Host License Pack installed and has an active Office KMS host, run the following command:
 
@@ -148,6 +149,6 @@ Then, follow these steps to remove an Office KMS host in your environment:
 
 For more information, see the following articles:
 
-- [KMS activation of Office 2013](https://technet.microsoft.com/en-us/library/ee624357.aspx)
-- [Troubleshoot volume activation for Office 2013](https://technet.microsoft.com/en-us/library/ee624355.aspx)
+- [KMS activation of Office 2013](https://technet.microsoft.com/library/ee624357.aspx)
+- [Troubleshoot volume activation for Office 2013](https://technet.microsoft.com/library/ee624355.aspx)
 - [KMS Activation of Office 2016/2019](https://docs.microsoft.com/deployoffice/vlactivation/activate-office-by-using-kms)

@@ -7,6 +7,7 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
+ms.custom: CSSTroubleshoot
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
@@ -20,6 +21,8 @@ appliesto:
 ---
 
 # Error messages or Access crashes after you install security update MS16-004
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Excel 2019
 - Excel 2016
@@ -17,6 +18,8 @@ appliesto:
 ---
 
 # How to prevent files from opening automatically in Excel
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

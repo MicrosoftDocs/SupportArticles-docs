@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Server
 - Skype for Business Online
@@ -28,7 +29,7 @@ Online hosted users report that they receive the following error message when th
 
 ## Cause
 
-This issue occurs because the user’s Skype for Business client can't resolve the DNS entry for the Edge server’s web conferencing service FQDN. This issue typically occurs because a split DNS has been configured for the sip domain, and there is no entry in the internal DNS zone for the Edge server’s external DNS A records for the web conferencing service. 
+This issue occurs because the user's Skype for Business client can't resolve the DNS entry for the Edge server's web conferencing service FQDN. This issue typically occurs because a split DNS has been configured for the sip domain, and there is no entry in the internal DNS zone for the Edge server's external DNS A records for the web conferencing service. 
 
 ## Resolution
 

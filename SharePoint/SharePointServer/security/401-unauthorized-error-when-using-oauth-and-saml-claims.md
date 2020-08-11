@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Microsoft SharePoint
@@ -99,7 +100,7 @@ pendingDisposableContainer)] 645f0edc-7ec9-44c5-84b7-2adfba2f7f92
 
 15:54:30.25 w3wp.exe (0x9FCC) 0x5F78 SharePoint Foundation Claims Authentication af32v Verbose   
 Claims Windows Sign-In: Sending 401 for request  
-'http://&lt;servername&gt;:30079/_vti_bin/client.svc/web/lists/getbyid(guid'<GUID>')' because the request is not from a browser.   
+'http://<;servername>;:30079/_vti_bin/client.svc/web/lists/getbyid(guid'<GUID>')' because the request is not from a browser.   
 
 15:54:30.25 w3wp.exe (0x9FCC) 0x5F78 SharePoint Foundation Authentication Authorization alkvd   
 Medium Throw UnauthorizedAccessException instead of SPUtilityInternal.Send401 for client.svc request.      
@@ -112,3 +113,5 @@ Microsoft has confirmed that this is a problem in the SharePoint farm versions t
 ## References  
 
 [SharePoint Updates](https://technet.microsoft.com/library/4b32dfba-1af6-4077-9a92-7cec8f220f20)
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

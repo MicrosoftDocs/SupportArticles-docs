@@ -10,10 +10,12 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Foundation 2013
 - SharePoint Server 2013
 - SharePoint Server 2010
+- SharePoint Online
 ---
 
 # Permissions required for managing the Secure Store Service app
@@ -44,3 +46,5 @@ If the user is added to the Central Administration server's Local Administrators
 ### Scenario 2
 
 Even though the user is explicitly listed in Central Administration's Farm Administrators group, after the August 2013 Cumulative Update for SharePoint 2010 is applied, the account cannot administer the Secure Store without additional permissions.
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

@@ -8,6 +8,7 @@ search.appverid:
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 appliesto:
@@ -18,6 +19,8 @@ appliesto:
 ---
 
 # Delete cells by using a "For Each...Next" loop in Excel
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

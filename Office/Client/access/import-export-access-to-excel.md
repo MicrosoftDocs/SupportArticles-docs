@@ -8,6 +8,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -15,11 +16,13 @@ appliesto:
 - Access 2013
 ---
 
-# Access: Errors during import/export to Excel xls
+# Access: Errors during Import/Export to Excel xls
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 
-Access encounters import/export errors when working with Excel *.xls files that have cells which contain more than 8224 bytes of data.
+Access encounters Import/Export errors when working with Excel *.xls files that have cells, which contain more than 8224 bytes of data.
 
 ```adoc
 Import Error: The wizard is unable to access information in the file '<filename>'. Please check that the file exists and is in the correct format.
@@ -37,4 +40,4 @@ You may use one of the following methods to prevent the issue.
 1. Use the *.xlsx format instead 
 2. Restrict any memo/long text fields to a length less than 8224 bytes
 3. When exporting, delete the existing .xls file before performing the export using the same file name
-4. Open the .xls file in Excel before performing the import/export from Access
+4. Open the .xls file in Excel before performing the Import/Export from Access

@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 ---
@@ -30,4 +31,4 @@ To work around this behavior, use **Check In** for individual items.
 
 This is the expected behavior in SharePoint Online when a workflow is associated with the document library. 
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

@@ -8,35 +8,56 @@ audience: ITPro
 ms.topic: article 
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
-ms.reviewer: hgkim， gaberry
-search.appverid: 
-- MET150
+ms.reviewer: hgkim，gaberry, akeeler
+ms.custom: 
+- CI 114484
+- CSSTroubleshoot
+search.appverid: MET150
 appliesto:
 - Excel 2016
 - Excel 2013Excel 2010
 - Microsoft Office Excel 2007
 ---
 
-# "This document contains invalid signatures" error when opening Excel files that are digitally signed in a newer version
+# "This document contains invalid signatures" error when opening Excel workbooks that were digitally signed in an earlier version
 
-##  Symptoms
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
-You open an Excel workbook that has been digitally signed in a higher version of Excel than the one used to apply the digital signature. In this case the signature is no longer valid and a warning is displayed in the trust bar:
+## Symptoms
+
+You open a Microsoft Excel workbook that was digitally signed in an earlier version of Excel than the one that you are using. In this situation, the signature is no longer valid, and the following warning message is displayed in the Trust Bar:
 
     This document contains invalid signatures. [View Signatures]
 
-**Note** When you open the digitally signed workbook in same version it was created in, the workbook opens as usual and without an error message.
+> [!NOTE]
+> When you open the digitally signed workbook in same program version that it was created in, the workbook opens as expected without an error message.
 
-##  Cause
+## Cause
 
-When Excel opens a workbook that was last recalculated in a different version (either a different product version or an update that introduces changes in the recalculation behavior), it updates the internal recalculation data to the actual version. As this data is part of the file content, the digital signature is then no longer valid because of this change in the content.
+When Excel opens a workbook that was last recalculated in a different version (either a different product version or an update that introduced changes in the recalculation behavior), it updates the internal recalculation data to the current version. Because this data is part of the file content, the digital signature is no longer valid because of this change in the content.
 
-##  Workaround
+## Workaround
 
-Before signing the workbook, switch the calculation mode to Manual. To do this, switch to the "Formulas" ribbon tab and select the "Manual" option from the "Calculation Options" button drop down list.
+### Workaround 1
 
-Note that the calculation option is saved per workbook, but it can affect the setting for other workbooks that are opened in the same instance of Excel.
+Before you sign the workbook, switch the calculation mode to **Manual**. To do this, select the **Formulas** tab on the ribbon, and then select **Manual** on the **Calculation Options** list.
 
-##  Status
+> [!NOTE]
+> Although the calculation option is saved per workbook, it can affect the setting for other workbooks that are opened in the same instance of Excel.
+
+### Workaround 2
+
+If the workbook is already signed, follow these steps:
+
+1. Before you open the workbook, start Excel through the **Start** menu.
+2. Change the calculation mode to **Manual**. To do this, select the **Formulas** tab on the ribbon, and then select **Manual** on the **Calculation Options** list.
+3. To open the signed file, select **Open** on the **File** menu.
+
+The signature should be displayed as valid.
+
+> [!NOTE]
+> If the calculation in any workbook is made when the workbook is open, the signatures will be invalidated because they are updated even if they return the same value.
+
+## Status
 
 Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section.

@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 ms.reviewer: miadkins
 appliesto:
 - Lync Server 2013
@@ -50,3 +51,5 @@ If the issue occurs when you try to update Lync Server 2013, make sure that the 
 For more information about Lync Server 2013 Standard Edition database deployment, see [Install Standard Edition server database for Lync Server 2013](https://technet.microsoft.com/library/gg398167.aspx).
 
 For more information about Lync Server 2013 Enterprise Edition database deployment, see [Configure SQL Server for Lync Server 2013](https://technet.microsoft.com/library/gg425848%28v=ocs.15%29).
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

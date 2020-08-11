@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - SharePoint Online
@@ -18,13 +19,13 @@ appliesto:
 
 ## Problem
 
-Assume that you try to grant an external user permissions to an External Content Type in the Office 365 SharePoint admin center. However, when you try to locate the user by using the Check Names feature or the **Select People and Groups** dialog box, the process doesn't work.
+Assume that you try to grant an external user permission to an External Content Type in the Office 365 SharePoint admin center. However, when you try to locate the user by using the Check Names feature or the **Select People and Groups** dialog box, the process doesn't work.
 
 Specifically, when you try to add the external user, you may receive one of the following messages, depending on your specific scenario:
 
 - No exact match was found. Click the item(s) that did not resolve for more options.
 
-- No results were found to match your search item. Please enter a new term or less specific term.
+- No results were found to match your search item. Enter a new term or less specific term.
 
 ## Solution
 
@@ -46,11 +47,11 @@ To resolve this issue, grant access to the **Everyone** or **All Users (membersh
 
 7. Select the **BDC Model** that's used for the external content, and then click **Set Metadata Store Permissions**.
 
-8. In the **set metadata store permissions** dialog box, add **Everyone** to the permissions box, and then click Add.
+8. In the **set Metadata Store permissions** dialog box, add **Everyone** to the permissions box, and then click Add.
 
-   ![set metadata store permissions](./media/cannot-add-external-users-to-sharepoint-online-external-content-type/set-metadata-store-permissions.jpg)
+   ![set Metadata Store permissions](./media/cannot-add-external-users-to-sharepoint-online-external-content-type/set-metadata-store-permissions.jpg)
 
-9. In the list of available accounts for the metadata store, select the **Everyone** group, and then make sure that the **Execute** check box is selected.
+9. In the list of available accounts for the Metadata Store, select the **Everyone** group, and then make sure that the **Execute** check box is selected.
 
 10. At the bottom of the dialog box, click to select the **Propagate permissions to all BDC Models, External Systems and External Content Types in the BDC Metadata Store** check box, and then click **OK**.
 
@@ -60,4 +61,4 @@ After you've completed these steps, manage access to the external list by using 
 
 This is expected behavior in SharePoint Online.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

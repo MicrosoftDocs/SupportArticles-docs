@@ -7,6 +7,7 @@ localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 ms.reviewer: jdang, arykhus, kemille, richpo, debbiery
 search.appverid: 
@@ -18,6 +19,8 @@ appliesto:
 ---
 
 # An audio file that is set to repeat and play across a set number of slides in PowerPoint stops playback after you leave the original slide
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

@@ -10,12 +10,15 @@ audience: ITPro
 ms.service: project-online
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Project Online
 - Project Server 2013
 ---
 
 # Users removed from the Enterprise Resource Pool group sync are not inactivated
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

@@ -9,6 +9,7 @@ search.appverid:
 - MET150
 ms.prod: skype-for-business-itpro
 ms.topic: conceptual
+ms.custom: CSSTroubleshoot
 ms.date: 04/17/2019
 appliesto:
 - Skype for Business
@@ -18,54 +19,48 @@ appliesto:
 
 ## Overview
 
-Microsoft Skype for Business caches files locally on your computer. This may prevent you from being able to sign in to Skype for Business. If you suspect that this issue is affecting you, try the following method:
-
-1. Sign out of the Skype for Business client.
-2. Delete all cached sign-in credentials.
-3. Sign in to Skype for Business again.
+Microsoft Skype for Business caches files locally on your computer. This may prevent you from being able to sign in to Skype for Business. 
 
 ## Resolution
 
-To delete cached sign in credentials, follow the Skype for Business troubleshooter scenario in the Support and [Recovery Assistant for Office 365](https://aka.ms/SaRA-SkypeForBusinessSignIn) (SaRA) tool. Or, manually clear the cached information.
+To delete cached sign in credentials, use the Skype for Business scenario in the [Microsoft Support and Recovery Assistant](https://diagnostics.office.com) (SaRA) tool or manually clear the cached information.
 
 To manually fix this issue, follow these steps.
 
-### Step 1. Clear your Skype for Business cache
+### Step 1. Delete your Skype for Business sign-in info
 
-1. Click the gear icon in the upper-right corner of the Skype for Business client, click **File** menu, and then click **Sign Out**.
+1. In Skype for Business, click the down arrow next to the gear icon, select **File**, and then **Sign Out**.
 2. Click **Delete my sign-in info**.
 
    ![Delete my sign-in info](./media/unable-to-sign-in-to-sfb/delete-sign-in-info.png)
-3. Locate your local AppData folder:
-   - If you're using Skype for Business 2016, the folder is located here:
-    **%LOCALAPPDATA%\Microsoft\Office\16.0\Lync**
-   - If you are using Skype for Business 2013, the folder is located here:
-   **%LOCALAPPDATA%\Microsoft\Office\15.0\Lync**
-4. Delete the folders that contain your sign-in information. The folder name resembles sip_user@contoso.com.
-5. Delete all files in the Tracing folder.
-6. Sign in to Skype for Business again.
+3. Click **Sign In**.
 
-If you still cannot sign in, go to Step 2 to clear the registry keys.
+If the issue persists, continue to remove the cache.
 
-### Step 2: Clear the Skype for Business registry keys
+### Step 2: Remove Skype for Business cache
 
-1. Start Registry Editor. To do this, right-click **Start**, click **Run**, type *regedit* in the **Open** box, and then press **OK**.
-2. Locate the following subkey:
+1. Exit Skype for Business. For example, click the down arrow next to the gear icon, select **File**, and then **Exit**.
+2. Start Registry Editor. To do this, right-click **Start**, click **Run**, type *regedit* in the **Open** box, and then press **OK**.
+3. Locate the following subkey:
 
-    - If you are using Skype for Business 2016, locate: **HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Lync**
-    - If you are using Skype for Business 2013, locate: **HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Lync**
-3. Delete the folder has the name of your sip address. For example: user@contoso.com.
+   - Skype for Business 2016: **HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Lync**
+   - Lync 2013/Skype for Business 2015: **HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Lync**
 
-If the issue persists, go to Step 3 to remove the cache.
+4. Delete the registry key with the name matching your sip address. For example: user@contoso.com.
+5. Start File Explorer and locate the Local application data folder:
+   
+   - Skype for Business 2016: **%LocalAppData%\Microsoft\Office\16.0\Lync**
+   - Lync 2013/Skype for Business 2015: **%LocalAppData%\Microsoft\Office\15.0\Lync**
 
-### Step 3: Remove Skype for Business cache
+6. Delete the folder with the name matching your SIP address. For example: sip_user@contoso.com.
+7. Delete the Tracing folder. In case of error, verify Skype for Business and Outlook processes are stopped before deleting the folder.
+8. Locate the Roaming application data folder:
+   - Skype for Business 2016: **%UserProfile%\AppData\Roaming\Microsoft\Office\16.0\Lync**
+   - Lync 2013/Skype for Business 2015: **%UserProfile%\AppData\Roaming\Microsoft\Office\15.0\Lync**
 
-1. Locate your local and roaming AppData folder:
-   - If you are using Skype for Business 2016, locate the following subkey:
-**%LOCALAPPDATA%\Microsoft\Office\16.0\Lync**
-**%userprofile%\appdata\roaming\Microsoft\Office\16.0\Lync**
-   - If you are using Skype for Business 2013, locate the following subkey:
-**%LOCALAPPDATA%\Microsoft\Office\15.0\Lync**
-**%userprofile%\appdata\roaming\Microsoft\Office\15.0\Lync**
-2. Delete the folders that have the name of your sip address.
-3. Delete the AccountProfiles.dat file.
+9. Delete the AccountProfiles.dat file.
+10. Restart Skype for Business and sign-in.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

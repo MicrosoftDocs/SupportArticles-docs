@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Outlook 2016
 - Excel 2016
@@ -33,6 +34,8 @@ appliesto:
 ---
 
 # Display issues in Office client applications
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 
@@ -66,29 +69,29 @@ If your symptom is "Poorly Displayed Text in Office Documents," try the followin
 
 #### Step 1: Use the "ClearType Text Tuner" Setting
  
-1.	Search for **ClearType**.
+1.    Search for **ClearType**.
 
     Windows 10, Windows 8.1, and Windows 8: On the Start Screen, search for **ClearType**.
 
     Windows 7: Click **Start**, and then enter **ClearType** in the **Search Programs and Files** box.
-2.	Select **Adjust ClearType Text**.
-3.	In the **ClearType Text Tuner**, enable the **Turn on ClearType** option, and then click **Next**.
-4.	Tune your monitor by following the steps in the **ClearType Text Tuner**, and then click **Finish**.
+2.    Select **Adjust ClearType Text**.
+3.    In the **ClearType Text Tuner**, enable the **Turn on ClearType** option, and then click **Next**.
+4.    Tune your monitor by following the steps in the **ClearType Text Tuner**, and then click **Finish**.
 
 If you are still experiencing a problem after you adjust the ClearType settings, go to Step 2.
 
 #### Step 2: Disable the Sub-Pixel Positioning Feature
 
-Word 2016 and Word 2013 use sub-pixel text rendering by default. While this provides optimal spacing, you may prefer the appearance of pixel-snapped text for a minor improvement in contrast. To disable the sub-pixel positioning feature in Word 2016 or Word 2013, follow these steps.
+Word 2016 and Word 2013 use subpixel text rendering by default. While this provides optimal spacing, you may prefer the appearance of pixel-snapped text for a minor improvement in contrast. To disable the subpixel positioning feature in Word 2016 or Word 2013, follow these steps.
  
-1.	On the **File** tab, click **Options**.
-2.	Click **Advanced**.
-3.	Under the **Display** group, clear the **Use the subpixel positioning to smooth fonts on screen** option.
-4.	Click **OK**.
+1.    On the **File** tab, click **Options**.
+2.    Click **Advanced**.
+3.    Under the **Display** group, clear the **Use the subpixel positioning to smooth fonts on-screen** option.
+4.    Click **OK**.
 
-If you are still experiencing a problem after you turn off the sub-pixel text rendering setting, re-enable the Use the subpixel positioning to smooth fonts on screen setting, and then go to Step 3.
+If you are still experiencing a problem after you turn off the subpixel text rendering setting, re-enable the Use the subpixel positioning to smooth fonts on-screen setting, and then go to Step 3.
 
-#### Step 3: On Windows 7 clients, install the Windows 8 Inter-operatibility Pack
+#### Step 3: On Windows 7 clients, install the Windows 8 Interoperatibility Pack
 
 If you are using Windows10, Windows 8.1 or Windows 8, skip this section and go to the steps under the For All Other Symptoms section.
 
@@ -108,18 +111,18 @@ To run Windows Update based on your version of Windows, follow these steps:
 
 **Windows 10, Windows 8.1 and Windows 8**
 
-1.	On the Start Screen, click **Settings** on the Charms Bar.
-2.	Click **Change PC Settings**.
-3.	In the **PC settings** app, click **Windows Update**.
-4.	Click **Check for updates now**.
-5.	If updates are available, click the driver that you want to install, and then click **Install**.
+1.    On the Start Screen, click **Settings** on the Charms Bar.
+2.    Click **Change PC Settings**.
+3.    In the **PC settings** app, click **Windows Update**.
+4.    Click **Check for updates now**.
+5.    If updates are available, click the driver that you want to install, and then click **Install**.
 
 **Windows 7**
 
-1.	Click **Start**.
-2.	Type Windows Update in the **Search programs and files** box.
-3.	In the search results, click **Check for updates**.
-4.	If updates are available, click the driver that you want to install, and then click **Install**.
+1.    Click **Start**.
+2.    Type Windows Update in the **Search programs and files** box.
+3.    In the search results, click **Check for updates**.
+4.    If updates are available, click the driver that you want to install, and then click **Install**.
 
 If your video-related problems in Office were fixed by when you updated your video driver, you do not have to take any further steps. Go to step 2 if updating the video driver does not fix the problems.
 

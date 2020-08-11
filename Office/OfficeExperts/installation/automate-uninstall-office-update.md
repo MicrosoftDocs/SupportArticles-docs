@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: ericspli
 localization_priority: Normal 
 appliesto:
@@ -41,8 +42,8 @@ To determine the GUID of the installed Office version, follow these steps:
 
 1. Refer to the following articles to find the GUID in the Office version, as appropriate for your situation:
  
-   - [Description of the numbering scheme for product code GUIDs in Office 2016](https://support.microsoft.com/help/3120274/description-of-the-numbering-scheme-for-product-code-guids-in-office-2)
-   - [Description of the numbering scheme for product code GUIDs in Office 2013](https://support.microsoft.com/help/2786054)
+   - [Description of the numbering scheme for product code GUIDs in Office 2016](https://docs.microsoft.com/office/troubleshoot/miscellaneous/numbering-scheme-for-product-guid)
+   - [Description of the numbering scheme for product code GUIDs in Office 2013](https://docs.microsoft.com/office/troubleshoot/miscellaneous/numbering-scheme-product-code-guids)
    - [Description of the numbering scheme for product code GUIDs in Office 2010](https://support.microsoft.com/help/2186281/description-of-the-numbering-scheme-for-product-code-guids-in-office-2)
 
    > [!NOTE]

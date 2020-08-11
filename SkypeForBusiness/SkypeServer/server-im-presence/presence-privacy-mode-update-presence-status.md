@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.reviewer: miadkins
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Lync Server 2013
@@ -84,3 +85,7 @@ For more information about how to use the Lync Server enhanced presence privacy 
 - [Configuring enhanced presence privacy mode in Lync Server 2013](https://docs.microsoft.com/lyncserver/lync-server-2013-configuring-enhanced-presence-privacy-mode)
 - [Get-CsPrivacyConfiguration](https://docs.microsoft.com/powershell/module/skype/Get-CsPrivacyConfiguration?view=skype-ps)
 - [Set-CsPrivacyConfiguration](https://docs.microsoft.com/powershell/module/skype/Set-CsPrivacyConfiguration?view=skype-ps)
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

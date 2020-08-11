@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 ---
@@ -24,7 +25,7 @@ Consider the following scenario:
 
 - The external user receives the email invitation and then clicks the link to the shared resource.
 
-- On the **Welcome to SharePoint Online** page, the external user clicks the **Create a Microsoft account, it’s quick and easy!** link.
+- On the **Welcome to SharePoint Online** page, the external user clicks the **Create a Microsoft account, it's quick and easy!** link.
 
 - The user finishes and submits the form to create a new Microsoft account.
 
@@ -53,4 +54,4 @@ To work around this issue, advise the user to use the new Microsoft account that
 
 This is a known issue that occurs when an external user accepts an invitation to a SharePoint Online resource and then selects the option to create a new Microsoft account. 
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

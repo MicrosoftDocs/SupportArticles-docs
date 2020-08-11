@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 ---
@@ -27,10 +28,14 @@ However, when you view the library by using the new look and navigation experien
 
 ## Solution
 
-To resolve this issue, click the ellipsis (...) for an item in the list, select **more**, and then click **Edit** to edit the item.
+To Edit Properties of the file/item you can 
+
+click the ellipsis (...) for an item in the list, select **more**, and then click **Properties** to edit the item.
+or
+Select the item in the select and click on Information Panel(i) 
 
 ## More information
 
 For more information about the new look and navigation experience for document libraries, see [Switch the default for document libraries from new or classic](https://support.office.com/article/switch-the-default-experience-for-lists-or-document-libraries-from-new-or-classic-66dac24b-4177-4775-bf50-3d267318caa9?ui=en-US&rs=en-US&ad=US).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

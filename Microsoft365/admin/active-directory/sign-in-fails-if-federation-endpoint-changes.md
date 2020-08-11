@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: office 365
 localization_priority: Normal
 ms.reviewer: v-jocomf
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -20,6 +21,8 @@ appliesto:
 ---
 
 # Sign in to Office 365, Azure, or Intune fails after you change the federation service endpoint
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Problem 
 
@@ -51,23 +54,23 @@ To resolve this issue, use one of the following methods, as appropriate for your
 
    |URL Path|Enabled|Proxy enabled |
    |--|--|--|
-   |/adfs/ls/|Yes|Yes |
-   |/adfs/services/trust/2005/windowstransport/|Yes|No |
-   |/adfs/services/trust/2005/certificatemixed|Yes|Yes |
-   |/adfs/services/trust/2005/certificatetransport|Yes|Yes |
-   |/adfs/services/trust/2005/usernamemixed|Yes|Yes |
-   |/adfs/services/trust/2005/kerberosmixed|Yes|No |
-   |/adfs/services/trust/2005/issuedtokenmixedasymmetricbasic256|Yes|Yes |
-   |/adfs/services/trust/2005/issuedtokenmixedsymmetricbasic256|Yes|Yes |
-   |/adfs/services/trust/13/kerberosmixed|Yes|No |
-   |/adfs/services/trust/13/certificatemixed|Yes|Yes |
-   |/adfs/services/trust/13/usernamemixed|Yes|Yes |
-   |/adfs/services/trust/13/ issuedtokenmixedasymmetricbasic256|Yes|Yes |
-   |/adfs/services/trust/13/ issuedtokenmixedsymmetricbasic256|Yes|Yes |
-   |/adfs/services/trsuttcp/windows|Yes|No |
-   |/adfs/services/trust/mex|Yes|Yes |
-   |/FederationMetadat/2007-06/FederationMetadata.xml|Yes|Yes |
-   |/adfs/ls/federationserverservice.asmx|Yes|No |
+   |/adfs/ls/|True|True |
+   |/adfs/services/trust/2005/windowstransport|True|False |
+   |/adfs/services/trust/2005/certificatemixed|True|True |
+   |/adfs/services/trust/2005/certificatetransport|True|True |
+   |/adfs/services/trust/2005/usernamemixed|True|True |
+   |/adfs/services/trust/2005/kerberosmixed|True|False |
+   |/adfs/services/trust/2005/issuedtokenmixedasymmetricbasic256|True|True |
+   |/adfs/services/trust/2005/issuedtokenmixedsymmetricbasic256|True|True |
+   |/adfs/services/trust/13/kerberosmixed|True|False |
+   |/adfs/services/trust/13/certificatemixed|True|True |
+   |/adfs/services/trust/13/usernamemixed|True|True |
+   |/adfs/services/trust/13/issuedtokenmixedasymmetricbasic256|True|True |
+   |/adfs/services/trust/13/issuedtokenmixedsymmetricbasic256|True|True |
+   |/adfs/services/trusttcp/windows|True|False |
+   |/adfs/services/trust/mex|True|True |
+   |/FederationMetadata/2007-06/FederationMetadata.xml|True|True |
+   |/adfs/ls/federationserverservice.asmx|True|False |
 
 3. If an item in the list doesn't match the default settings in the previous table, right-click the entry, and then select **Enable** or **Enable on Proxy** as necessary.
 

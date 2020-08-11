@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business for Android
 ---
@@ -27,13 +28,11 @@ Make sure that you have the latest version of the app installed. The Skype for B
 > [!NOTE]
 > The current release for Android smartphones isn't supported on Android media tablets or on other non-phone Android form factors (hardware models). For more information, click the following article number to view the article in the Microsoft Knowledge Base:
 
-[2829747](https://support.microsoft.com/help/en-us) Android smartphone devices that are supported for use with Skype for Business for Android.
-
 ### Sign-in requirements for Google Android
 
 When users sign in to the Skype for Business for Android, the sign-in information that's required to successfully authenticate depends on the following scenarios:
 
-- Whether a user’s Session Initiation Protocol (SIP) address is the same as the user’s user principal name (UPN)   
+- Whether a user's Session Initiation Protocol (SIP) address is the same as the user's user principal name (UPN)   
 - Whether users are hosted on an on-premises Skype for Business (Lync server) or on Skype for Business Online   
 
 The following table describes the sign-in fields required for Android users: 
@@ -68,7 +67,7 @@ The Skype for Business for Android looks for different DNS records than the Skyp
 To troubleshoot, use one or more of the following methods, as appropriate for your situation:
 
 - Use the nslookup command and a public DNS server to determine whether the DNS CNAME record is configured correctly.   
-- If the user has the option, have the user switch between Wi-Fi and 3G to determine whether the issue can be scoped to one kind of connection. If sign in continues to fail on a 3G data connection, although the CNAME DNS records are configured, it may be an issue with the cellular service provider’s data connection.   
+- If the user has the option, have the user switch between Wi-Fi and 3G to determine whether the issue can be scoped to one kind of connection. If sign in continues to fail on a 3G data connection, although the CNAME DNS records are configured, it may be an issue with the cellular service provider's data connection.   
 - The user receives the following error message:
 Cannot connect to the server. It might be unavailable. Also please check your network connection, sign-in address and server addresses.
 
@@ -78,7 +77,7 @@ Cannot connect to the server. It might be unavailable. Also please check your ne
     - The Auto-Detect CNAME records are configured incorrectly or aren't configured at all.   
 
 - The user receives the following error message when the user tries to sign in:
-Can’t sign in. Please check your account information and try again.
+Can't sign in. Please check your account information and try again.
 
    This error message indicates one of the following conditions:
 
@@ -87,7 +86,7 @@ Can’t sign in. Please check your account information and try again.
    
 **Connecting over Wi-Fi through an authenticating proxy**
 
-If the Wi-Fi connection that's used requires authentication before connecting, Skype for Business may not connect because it can't use the credentials to connect through a proxy. To work around this, connect through the mobile carrier’s data connection instead of Wi-Fi.
+If the Wi-Fi connection that's used requires authentication before connecting, Skype for Business may not connect because it can't use the credentials to connect through a proxy. To work around this, connect through the mobile carrier's data connection instead of Wi-Fi.
 
 **Contact lists**
 
@@ -97,7 +96,7 @@ Contact photos are displayed only if they're stored in the global address list (
 
 **Chats tab and conversation history**
 
-The Chats tab on the Lync mobile client for Google Android only keeps track of the conversations that occurred on the mobile device. It won't display chats from desktop clients. Chats on mobile devices aren't displayed in the conversation history folder in the user’s Exchange mailbox.
+The Chats tab on the Lync mobile client for Google Android only keeps track of the conversations that occurred on the mobile device. It won't display chats from desktop clients. Chats on mobile devices aren't displayed in the conversation history folder in the user's Exchange mailbox.
 
 **Security**
 
@@ -125,5 +124,6 @@ Assume that a new operating system update is released for your device. After yo
 
 ## More Information
 
-- [We can't sign you in error when you use an Android device to sign in to Lync Mobile](https://support.microsoft.com/help/2973873)   
-- [How to troubleshoot the Lync mobile client in Office 365 dedicated](https://support.microsoft.com/help/2837185)   
+[We can't sign you in error when you use an Android device to sign in to Lync Mobile](https://support.microsoft.com/help/2973873)   
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

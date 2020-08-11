@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 ms.reviewer: mahesha, miadkins, rdubois, premgan, landerl, bwilson, brandber, dahans
 appliesto:
 - Lync Server 2013
@@ -23,11 +24,11 @@ A user in a routing group may experience the following issues in a Microsoft Lyn
 
 ### Issue 1
 
-When a primary replica of the routing group is unavailable, the user cannot sign in to a Lync client. This may be because one or more servers in a pool shut down or have connectivity problems.
+When a primary replica of the routing group is unavailable, the user cannot sign in to a Lync client. This may be because one or more servers in a pool shutdown or have connectivity problems.
 
 ### Issue 2
 
-Assume that the primary replica is available, but a secondary replica and a backup secondary replica are unavailable. In this situation, the user will sign in to a Lync client in limited functionality mode. 
+Assume that the primary replica is available, but a secondary replica and a Backup secondary replica are unavailable. In this situation, the user will sign in to a Lync client in limited functionality mode. 
 
 This issue occurs because the operation data that requires Windows Fabric writes cannot be replicated to a secondary replica. 
 
@@ -66,3 +67,7 @@ Reset-CsPoolRegistrarState -PoolFqdn -ResetType QuorumLossRecovery
 
 > [!NOTE]
 > This command will finish within 30 minutes. After that, replicas will be put on available servers in the pool.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

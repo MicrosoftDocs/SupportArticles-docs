@@ -10,8 +10,10 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
+- SharePoint Server
 ---
 
 # Content Organizer doesn't comply with specified interval for sending alerts to rule managers
@@ -38,4 +40,4 @@ For example, consider the case of a document that's in the Drop Off Library but 
 
 ## More information
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

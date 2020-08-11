@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: article 
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 ms.reviewer: lauraho
 search.appverid: 
 - MET150
@@ -18,6 +19,8 @@ appliesto:
 ---
 
 # How to locate your OneNote notebooks
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ##  Symptoms
 
@@ -32,7 +35,7 @@ This issue occurs if you are not logged in with the correct Microsoft account or
 ### Step 1: Locate your notebooks by using OneNote Online
 
 1. Go to [https://www.onenote.com](https://www.onenote.com/).   
-2. Click the Sign In button at the top-right corner of the screen. If you don’t see the Sign In button, click the Sign out link, and you will be directed to Sign In. 
+2. Click the Sign In button at the top-right corner of the screen. If you don't see the Sign In button, click the Sign out link, and you will be directed to Sign In. 
 
    ![onenote sign in](./media/locate-onenote-notebooks/onenote-sign-in.png)
 
@@ -46,7 +49,7 @@ This issue occurs if you are not logged in with the correct Microsoft account or
 
 You should now see your notebooks on OneDrive or OneDrive for Business, depending on which account you signed in with. Note which account you used to access your notebooks so that you can make sure you're signed in with the correct account in OneNote on your other devices.
 
-   I can’t get signed into my Microsoft account – what next?
+   I can't get signed into my Microsoft account – what next?
 
    Try signing in to your Microsoft account directly by going to [https://account.microsoft.com](https://account.microsoft.com/) and then selecting Sign in. If you cannot sign in, this means you're using the incorrect email or password for your Microsoft account, or that you don't have a Microsoft account.   
 
@@ -56,7 +59,7 @@ Now that you know which account contains your notebooks, sign out of the account
 
 #### Win32 OneNote:
 
-1. Start OneNote 2016 for Windows. If you haven’t signed into a Microsoft account or to a work or school account, you will be prompted to sign in when you start OneNote. Use the account that you used in step 1 at the top of the "Resolution" section.
+1. Start OneNote 2016 for Windows. If you haven't signed into a Microsoft account or to a work or school account, you will be prompted to sign in when you start OneNote. Use the account that you used in step 1 at the top of the "Resolution" section.
 
    If you do not see your notebooks, go on to step 2.
 
@@ -83,7 +86,7 @@ Now that you know which account contains your notebooks, sign out of the account
 #### OneNote Universal
 
 
-1. Start OneNote Universal. If you haven’t signed in to a Microsoft account or to a work or school account, you will be prompted to sign in when you start OneNote. Use the account that you used in step 1 at the top of the "Resolution" section.
+1. Start OneNote Universal. If you haven't signed in to a Microsoft account or to a work or school account, you will be prompted to sign in when you start OneNote. Use the account that you used in step 1 at the top of the "Resolution" section.
 
    If you do not see your notebooks, go on to step 2.   
 2. On the File menu in OneNote, click Settings, and then click Accounts. Click each account that's listed, and then click **Sign out**.
@@ -100,7 +103,7 @@ Now that you know which account contains your notebooks, sign out of the account
 
 #### OneNote for Android:
 
-1. Start OneNote for Android. If you haven’t signed into a Microsoft account or work or school account, you will be prompted to sign in when you start OneNote. Use the account that you used in step 1 at the top of the "Resolution" section.
+1. Start OneNote for Android. If you haven't signed into a Microsoft account or work or school account, you will be prompted to sign in when you start OneNote. Use the account that you used in step 1 at the top of the "Resolution" section.
 
    If you do not see your notebooks, go on to step 2.
 
@@ -113,7 +116,7 @@ Now that you know which account contains your notebooks, sign out of the account
    ![sign out 1](./media/locate-onenote-notebooks/sign-out-1.JPG)
 
 4. Add your account back by tapping Add your personal Microsoft accountor Add your work or school account.Use the account that you used in step 1 at the top of the "Resolution" section.   
-5. If you don’t see the notebook that you want, click Open Notebook on the home screen in OneNote. OneNote will show you the notebooks that are stored in that location. If you are signed in to more than one account, such as to both a Microsoft account and a work or school account, you will see notebooks from all the listed locations.
+5. If you don't see the notebook that you want, click Open Notebook on the home screen in OneNote. OneNote will show you the notebooks that are stored in that location. If you are signed in to more than one account, such as to both a Microsoft account and a work or school account, you will see notebooks from all the listed locations.
 
    You can click a notebook to open it, or you can add a work or school account to connect to your work or school notebooks.
 
@@ -121,7 +124,7 @@ Now that you know which account contains your notebooks, sign out of the account
 
 #### OneNote for iPhone or iPad
 
-1. Start OneNote for iPhone or iPad. If you haven’t signed in to a Microsoft account or to a work or school account, you will be prompted to sign in when you start OneNote. Use the account that you used in step 1 at the top of the "Resolution" section.
+1. Start OneNote for iPhone or iPad. If you haven't signed in to a Microsoft account or to a work or school account, you will be prompted to sign in when you start OneNote. Use the account that you used in step 1 at the top of the "Resolution" section.
 
    If you do not see your notebooks, go on to step 2.
 
@@ -139,7 +142,7 @@ Now that you know which account contains your notebooks, sign out of the account
 
 5. Enter your Microsoft account or your work or school account.
 
-6. If you don’t see the notebook that you want, click the File icon on the OneNote home screen, and click then the Open folder icon in the lower-left corner.
+6. If you don't see the notebook that you want, click the File icon on the OneNote home screen, and click then the Open folder icon in the lower-left corner.
 
    ![create new notebook](./media/locate-onenote-notebooks/create-new-notebook.png)
 

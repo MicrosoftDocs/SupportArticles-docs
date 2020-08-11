@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - SharePoint Server 2013
@@ -44,3 +45,7 @@ To resolve this issue, assign the Manage Auditing And Security Log permission to
 
    > [!NOTE]
    > If you assign the Manage Auditing And Security Log permission by using a Group Policy Object (GPO), add the crawl account to the GPO.
+
+## More information
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 ---
@@ -119,3 +120,7 @@ The **SecondaryQueryResults** element contains three query result rows from your
 For more information about the SharePoint search API, see [Using the SharePoint search Query APIs](https://docs.microsoft.com/sharepoint/dev/general-development/using-the-sharepoint-search-query-apis).
 
 For more information about the query parameters that are supported by the SharePoint search REST API, see [SharePoint Search REST API overview](https://docs.microsoft.com/sharepoint/dev/general-development/sharepoint-search-rest-api-overview).
+
+## More information
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

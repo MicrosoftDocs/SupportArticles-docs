@@ -11,6 +11,7 @@ ms.service: skype-for-business-online
 ms.topic: article
 ms.author: v-six
 ms.reviewer: dahans
+ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Online
 ---
@@ -35,14 +36,14 @@ You can resolve most sign-in issues in Lync Mobile 2013 by following these steps
 
    For more information, see [Troubleshooting Skype for Business Online DNS configuration issues in Office 365](https://support.microsoft.com/help/2566790).   
 4. Switch between Wi-Fi and carrier data to try to isolate the issue. Verify connectivity to other websites and services over both kinds of connections.   
-5. Try to sign in by using other clients and computers. If you can't sign in on any device, see [How to troubleshoot sign-in issues in Skype for Business Online](https://support.microsoft.com/help/2541980).    
+5. Try to sign in by using other clients and computers.
 6. You recently updated the Operating System (OS) software for your device. Before you applied the update, the Lync Mobile 2013 client worked as expected. After you installed the update, the Lync Mobile 2013 client fails. Be aware that after you contact Microsoft technical support for help, you may have to contact the manufacturer of your device to obtain the correct resources for the issue.   
 
 ## More Information
 
 These errors may occur for one or more of the following reasons:
 
-- The user’s credentials aren't correct. Either the password is incorrect or the sign-in address was entered incorrectly.   
+- The user's credentials aren't correct. Either the password is incorrect or the sign-in address was entered incorrectly.   
 - The server is too busy or unreachable over your current connection.   
 - The server can't be found, based on the sign-in address. Either the domain was typed incorrectly or the necessary DNS records for mobile connectivity aren't set up.   
 - You installed updated OS software and resources or settings may have to be configured for Lync Mobile 2013 to work correctly.   

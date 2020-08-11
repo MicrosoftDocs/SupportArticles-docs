@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Server 2013
 - SharePoint Foundation 2013
@@ -49,9 +50,9 @@ To resolve this problem, follow these steps:
 
 2. Download the compressed (.zip) file that contains the fix that matches the product you're installing:  
 
-   - [SharePoint Foundation 2013 with Service Pack 1 fix](https://download.microsoft.com/download/3/6/2/362c4a9c-4afe-425e-825f-369d34d64f4e/wsssetup_15-0-4709-1000_x64.zip)   
-   - [SharePoint Server 2013 with Service Pack 1 fix](https://download.microsoft.com/download/3/6/2/362c4a9c-4afe-425e-825f-369d34d64f4e/svrsetup_15-0-4709-1000_x64.zip)   
-   - [Project Server 2013 with Service Pack 1 fix](https://download.microsoft.com/download/3/6/2/362c4a9c-4afe-425e-825f-369d34d64f4e/svrsetup_15-0-4709-1000_x64.zip)     
+   - [SharePoint Foundation 2013 with Service Pack 1 fix](https://www.microsoft.com/download/details.aspx?id=42039)   
+   - [SharePoint Server 2013 with Service Pack 1 fix](https://www.microsoft.com/download/details.aspx?id=42544)   
+   - [Project Server 2013 with Service Pack 1 fix](https://www.microsoft.com/download/details.aspx?id=42545)     
 
 3. Open the .zip file.   
 4. Copy the following Setup support file, as appropriate, from the .zip file into the "updates" folder in your writable location.   
@@ -91,3 +92,5 @@ Although you receive the error message during installation, SharePoint Foundatio
 ## Status  
 
 Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section.
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

@@ -7,6 +7,7 @@ localization_priority: Normal
 audience: ITPro
 ms.prod: office 365
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 search.appverid: 
 - MET150
@@ -19,6 +20,8 @@ appliesto:
 ---
 
 # "Connect-MsolService: Exception of type was thrown" when you use the connect-MSOLService to connect to Office 365, Azure, or Intune
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Problem
 
@@ -39,7 +42,7 @@ This issue may occur for one or more of the following reasons:
 
 To resolve this issue, follow these steps:
 
-1. Troubleshoot Office 365 rich client connectivity. For more information, see [How to troubleshoot non-browser apps that can’t sign in to Office 365, Azure, or Intune](https://support.microsoft.com/help/2637629).     
+1. Troubleshoot Office 365 rich client connectivity. For more information, see [How to troubleshoot non-browser apps that can't sign in to Office 365, Azure, or Intune](https://support.microsoft.com/help/2637629).     
 2. Troubleshoot common client configuration issues that limit SSO authentication. For more information, see [Signing in to Office 365, Azure, or Intune by using single sign-on doesn't work from some devices](https://support.microsoft.com/help/2530713).    
 
 ## More information

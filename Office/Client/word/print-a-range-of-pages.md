@@ -8,6 +8,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -17,6 +18,8 @@ appliesto:
 ---
 
 # How to print a range of pages in a multiple-section document in Word 2013, Word 2010, Word 2007, and Word 2003
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

@@ -1,7 +1,7 @@
 ---
-title: Search results don’t appear for group owners after creating a new Office 365 group
+title: Search results don't appear for group owners after creating a new Office 365 group
 ms.author: v-todmc
-author: todmccoy
+author: McCoyBot
 manager: dcscontentpm
 ms.date: 10/18/2019
 ms.audience: Admin
@@ -13,12 +13,14 @@ search.appverid:
 - MET150
 appliesto:
 - SharePoint Online 
-ms.custom: 108412
+ms.custom: 
+- CI 108412
+- SSTroubleshoot
 ms.reviewer: snarra, anundlie, knutb
 description: Describes how to get search results to appear for a group owner after creating a new Office 365 group. 
 ---
 
-# Search results don’t appear for group owners after creating a new Office 365 group
+# Search results don't appear for group owners after creating a new Office 365 group
 
 ## Symptoms
 
@@ -26,14 +28,14 @@ When the owner of an Office 365 group conducts a SharePoint Online search by way
 
 - Microsoft 365 search box
 - Enterprise Search Center
-- Customized search web parts
+- Design customization search web parts
 - Queries via the CSOM/REST search API
 
 The owner fails to find content in the search results.
 
 ## Cause
 
-The issue is caused by the security trimming of the query (filtering based on user’s access rights and memberships) which only relates to the  security group membership, not the group ownership.  Office 365 groups can have an owner that is not a member.  
+The issue is caused by the security trimming of the query (filtering based on user's access rights and memberships) which only relates to the  security group membership, not the group ownership.  Office 365 groups can have an owner that is not a member.  
 
 ## Resolution
 
@@ -43,7 +45,7 @@ If you create a group from the admin portal, this is the dialogue you will see:
 
 ![The admin portal dialogue box.](media/search-results-dont-appear/search-results-dont-appear-1.png)
 
-Here you can define owner of the group. Note that the owner is not automatically added as a member. 
+Here you can define owner of the group. The owner is not automatically added as a member. 
 
 For the owner to be a first-class member of the group, and be able to search for all the content, you must explicitly add the owner as member of the group via the configuration dialogue:
  
@@ -57,3 +59,5 @@ In certain cases, this may be the expected behavior. If an admin creates a group
 
 In other cases, this may be unintentional and cause issues because the group admin is also a participant of the group but failed to add himself/herself as a group member.
 If you create the group from a user interface in Outlook or SharePoint, this is not an issue. The group creator automatically becomes a member.
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

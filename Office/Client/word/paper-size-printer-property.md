@@ -8,6 +8,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 ms.reviewer: azhiruta, tonyca
 search.appverid: 
 - MET150
@@ -17,6 +18,8 @@ appliesto:
 ---
 
 # The paper size for a document in Word 2010 does not match the paper size in the Printer Properties dialog box
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

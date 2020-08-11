@@ -7,6 +7,7 @@ localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 search.appverid: 
 - MET150
@@ -16,6 +17,8 @@ appliesto:
 ---
 
 # "The file contains custom XML elements which are no longer supported by Word" when you try to open a document in Word
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 
@@ -58,7 +61,7 @@ The following features of Word are not affected by the update.
 - Open XML standards (all ECMA and ISO versions) are not affected.   
 - Custom XML markup that is stored within Word 97-2003 document (.DOC) files is not affected.   
 - Ribbon XML and Ribbon Extensibility are not affected.   
-- Custom XML Parts are not affected. For more information about custom XML Parts, visit the following MSDN Website: http://msdn.microsoft.com/en-us/library/bb608618.aspx.   
+- Custom XML Parts are not affected. For more information about custom XML Parts, visit the following MSDN Website: https://msdn.microsoft.com/library/bb608618.aspx.   
 - The Word object model is not affected. However, some object model methods that deal with custom XML markup may produce different results. 
 
   - The TransformDocument method will continue to work, but any custom XML markup within the results of the transform will be removed.    

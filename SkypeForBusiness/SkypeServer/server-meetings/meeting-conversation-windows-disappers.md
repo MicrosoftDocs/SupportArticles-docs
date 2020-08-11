@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business 2016
 ---
@@ -45,3 +46,7 @@ To work around this issue and restore the conversation window, follow these step
 ## Resolution
 
 This issue has been resolved in Office. If you are experiencing this issue, restart all open Office applications, or restart your computer.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

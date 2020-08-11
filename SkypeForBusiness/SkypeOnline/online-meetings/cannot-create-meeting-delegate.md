@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
 ms.author: v-zht
+ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Online
 ---
@@ -24,7 +25,7 @@ In Skype for Business Online, you are granted delegate permission for another us
 
 ## Cause
 
-This issue occurs because the delegate and delegator’s data location aren't located in a same region. By default, Office 365 resources for your users are in the same geographical location as your Azure AD tenant.
+This issue occurs because the delegate and delegator's data location aren't located in a same region. By default, Office 365 resources for your users are in the same geographical location as your Azure AD tenant.
 
 ## Resolution
 
@@ -74,3 +75,5 @@ Server: RTC/7.0
 - <Fault>
 <Faultcode>Client.Delegate.Operation.NotAuthorized</Faultcode>
 ```
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

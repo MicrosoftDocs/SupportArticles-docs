@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Skype for Business Online
@@ -29,9 +30,9 @@ In Skype for Business Online, you experience one of the following issues:
 
 To fix this issue, take one of the following actions, depending on your situation: 
  
-- If a directory synchronization tool such as Azure Active Directory (Azure AD) Sync or Directory Sync (DirSync) is being used to synchronize users from on-premises to Office 365, the administrator should follow these steps:  
-   1. On the **General** tab of the user in **Active Directory Users and Computers** in the on-premises Active Directory schema, edit the **Telephone Number** property so that it reflects the number that you want displayed in the user’s contact card.    
-   2. Perform a directory synchronization by using Azure AD Sync or DirSync.    
+- If a directory synchronization tool such as Azure Active Directory (Azure AD) Sync or Directory Sync (Microsoft Azure Active Directory Sync Tool) is being used to synchronize users from on-premises to Office 365, the administrator should follow these steps:  
+   1. On the **General** tab of the user in **Active Directory Users and Computers** in the on-premises Active Directory schema, edit the **Telephone Number** property so that it reflects the number that you want displayed in the user's contact card.    
+   2. Perform a directory synchronization by using Azure AD Sync or Microsoft Azure Active Directory Sync Tool.    
      
 - Users who aren't synchronized from an on-premises Active Directory schema can have an Office 365 administrator update their **Office phone** property in the Microsoft 365 admin center. Administrators should follow these steps. (For more information, see [Edit or change users in Office 365](https://support.office.com/article/edit-or-change-users-in-office-365-42bb3f17-8f9d-4182-b434-5f1c8024e614).)  
    1. Sign in to Office 365 by using your work or school account. For more information, go to the following Microsoft website: [Where to sign in to Office 365](https://support.office.com/article/sign-in-to-office-365-e9eb7d51-5430-4929-91ab-6157c5a050b4)     
@@ -41,18 +42,18 @@ To fix this issue, take one of the following actions, depending on your situatio
    5. Click **Additional Details**.    
    6. In the **Office phone** field, enter the new telephone number.    
      
-- End-users can edit their own telephone numbers in Skype for Business. To this, they should follow these steps:  
+- End users can edit their own telephone numbers in Skype for Business. To this, they should follow these steps:  
    1. Click **Tools**, click **Options**, and then click **Phones**.    
    2. Update the **Work Phone** to the new telephone number, and then make sure that **Include in my contact card** displays the new telephone number to your contacts. For more information, go to the following Microsoft website: [Set Phones options](https://support.office.com/article/set-phones-options-20e03cc1-c023-4e5d-bafd-064ddb59ed5e)     
      
 ## More information
 
-The contact card uses the **telephone number** schema attribute to populate the telephone number in a user’s contact card. After the user is moved to Office 365, is enabled for **Cloud PBX** and **Domestic/International Calling**, and then assigned a telephone number, the number must be edited in the on-premises active directory or added to the user properties in the Microsoft 365 admin center.
+The contact card uses the **telephone number** schema attribute to populate the telephone number in a user's contact card. After the user is moved to Office 365, is enabled for **Cloud PBX** and **Domestic/International Calling**, and then assigned a telephone number, the number must be edited in the on-premises active directory or added to the user properties in the Microsoft 365 admin center.
 
 For more information, go to the following Microsoft websites: 
  
 - [Active Directory Users and Computers](https://technet.microsoft.com/library/cc754217.aspx?f=255&mspperror=-2147217396)
-- [Deploy Office 365 Directory Synchronization (DirSync) in Microsoft Azure](https://technet.microsoft.com/library/dn635310.aspx)    
+- [Deploy Office 365 Directory Synchronization (Microsoft Azure Active Directory Sync Tool) in Microsoft Azure](https://technet.microsoft.com/library/dn635310.aspx)    
 - [Deploy Azure Active Directory Sync tool with Office 365](https://technet.microsoft.com/library/dn509521.aspx)    
 - [Use the contact card](https://support.office.com/article/use-the-contact-card-aee867d7-fb39-4101-a386-e93008c8c6a1)    
   

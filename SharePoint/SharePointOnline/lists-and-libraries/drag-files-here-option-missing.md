@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 ---
@@ -32,4 +33,4 @@ When Office 2013 or SharePoint Designer 2013 is installed on the client computer
 
 For more information, see [Upload files to a library](https://support.office.com/article/upload-files-to-a-library-da549fb1-1fcb-4167-87d0-4693e93cb7a0?ocmsassetID=HA102803549&CorrelationId=1ddf2bde-436a-4f5e-8cea-ef35150f11b4&ui=en-US&rs=en-US&ad=US).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

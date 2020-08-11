@@ -1,0 +1,11 @@
+- name: Outlook for Mac Troubleshooting
+  href: ../outlook-mac-welcome.md
+  items:
+  - name: Sign-in
+    items:
+    - name: Kerberos authentication for Mac
+      href: ../sign-in/kerberos-authentication-outlook-2016-for-mac.md
+    - name: Repeated authentication prompts
+      href: ../sign-in/repeated-prompts-authentication.md
+    - name: Set delay and renew a Kerberos ticket
+      href: ../sign-in/set-delay-renew-kerberos-ticket.md

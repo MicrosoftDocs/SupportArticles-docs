@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Foundation 2010
 - SharePoint Server 2010
@@ -22,13 +23,13 @@ appliesto:
 
 ## Symptoms  
 
-Users of Office 2007 or Office 2010 on any client Operating System click a hyperlink that points to an Office document which is located in a SharePoint Server 2010 document library. The hyperlink itself is located in an Outlook email message. Instead of opening the document from the server in the Office client application, the document opens in the Office application from the Temporary Internet Files cache of the local machine. Therefore it is not treated as a server document. The following symptoms are seen by the user:  
+Users of Office 2007 or Office 2010 on any client Operating System click a hyperlink that points to an Office document, which is located in a SharePoint Server 2010 document library. The hyperlink itself is located in an Outlook email message. Instead of opening the document from the server in the Office client application, the document opens in the Office application from the Temporary Internet Files cache of the local machine. Therefore it is not treated as a server document. The following symptoms are seen by the user:  
 
 - Word: There is no server bar with an "Edit Document" button    
 - Excel: There is no server bar with an "Edit Workbook" button   
 - PowerPoint: There is no server bar with an "Edit Presentation" button      
 
-Or, if the document library requires a check out:   
+Or, if the document library requires a checkout:   
 
 - Word: there is no server bar with a "Check out Document" button   
 - Excel: There is no server bar with a "Check out Workbook" button   
@@ -36,7 +37,7 @@ Or, if the document library requires a check out:
 
 Additionally, the document cannot be saved back to the SharePoint site while it is open in the Office application. Users may be able to save changes, but the changes are being saved to the file in the Temporary Internet Files folder, not back to the SharePoint server.   
 
-Also, if the document is part of a workflow, the Edit this Task  or Open this Task  buttons and any other buttons associated with the workflow will be missing, causing the workflow not to be started. Typically users will receive workflow tasks in email and the email will contain a hyperlink to the document located on the SharePoint server.   
+Also, if the document is part of a workflow, the Edit this Task  or Open this Task  button and any other buttons associated with the workflow will be missing, causing the workflow not to be started. Typically users will receive workflow tasks in email and the email will contain a hyperlink to the document located on the SharePoint server.   
 
 This only occurs with the newer Office file formats: .docx, .pptx and .xlsx. It does not occur with the older, legacy Office file formats: .doc, .ppt and .xls. In addition, this only occurs when:  
 
@@ -52,7 +53,7 @@ NOTE: This only happens when opening the Office document BY CLICKING ON A HYPERL
 
 ## Cause  
 
-SharePoint 2010 implements a new security feature called 'Permissive or Strict browser file handling'. Each type of file delivered from a web server has an associated MIME type (also called a “content-type”) that describes the nature of the content (e.g. image, text, application, etc). Internet Explorer (IE) has a MIME-sniffing feature that will attempt to determine the content-type for each downloaded resource. For Office files, if the Content-Type sent by the server is not found in the MIME database in the registry of the client machine, IE "sniffs" the MIME content types to see if there is another similar MIME type in the client machine's MIME database and will open the file using the similar MIME type. However, Strict browser file handling is enabled on each web application in SharePoint 2010 by default and this disallows the sniffing of Content-Types, so if no exact match of the Content-Type sent in the server response is found in the client's MIME database in the registry, the file will open from the Temporary Internet Files of the client machine instead of being opened from the server. MIME-sniffing also can lead to security problems for servers hosting untrusted content.
+SharePoint 2010 implements a new security feature called 'Permissive or Strict browser file handling'. Each type of file delivered from a web server has an associated MIME type (also called a "content-type") that describes the nature of the content (for example, image, text, application, etc.). Internet Explorer (IE) has a MIME-sniffing feature that will attempt to determine the content-type for each downloaded resource. For Office files, if the Content-Type sent by the server is not found in the MIME database in the registry of the client machine, IE "sniffs" the MIME content types to see if there is another similar MIME type in the client machine's MIME database and will open the file using the similar MIME type. However, Strict browser file handling is enabled on each web application in SharePoint 2010 by default and this disallows the sniffing of Content-Types, so if no exact match of the Content-Type sent in the server response is found in the client's MIME database in the registry, the file will open from the Temporary Internet Files of the client machine instead of being opened from the server. MIME-sniffing also can lead to security problems for servers hosting untrusted content.
 
 For example: When opening a .docx file from a hyperlink that points to a document located in a SharePoint 2010 document library, the Content Type sent by the SharePoint 2010 server in the response is "vnd.ms-word.document.12" along with a header "X-Content-Type-Options: nosniff" which looks like this:   
 
@@ -76,11 +77,11 @@ Use one of the following solutions:
 
 Eliminate the no-sniff header sent from SharePoint 2010  
 
-- Browse to the Central Administration site, click Manage Web Applications  under Application Management .    
+- Browse to the Central Administration site, click Manage Web Applications  under Application Management.    
 - Select the web application  and click onGeneral Settings  from the ribbon   
-- Scroll down to Browser File Handling , and choose Permissive  instead of Strict .  
+- Scroll down to Browser File Handling, and choose Permissive  instead of Strict.  
 
-NOTE: This reduces security. Browser File Handling  specifies whether additional security headers are added to documents served to web browsers. These headers specify that a browser should show a download prompt for certain types of files (for example, .html) and to use the server’s specified MIME type for other types of files. "Permissive" specifies no headers are added, which provides a more compatible user experience. "Strict" adds headers that force the browser to download certain types of files. The forced download improves security for the server by disallowing the automatic execution of Web content that contributors upload.  
+NOTE: This reduces security. Browser File Handling  specifies whether additional security headers are added to documents served to web browsers. These headers specify that a browser should show a download prompt for certain types of files (for example, .html) and to use the server's specified MIME type for other types of files. "Permissive" specifies no headers are added, which provides a more compatible user experience. "Strict" adds headers that force the browser to download certain types of files. The forced download improves security for the server by disallowing the automatic execution of Web content that contributors upload.  
 
 ### Client-side Workarounds
 
@@ -144,7 +145,7 @@ Update the registry of the Office client computer to install the needed content 
 To fix this problem automatically, click [Download](https://download.microsoft.com/download/6/B/4/6B42815C-DA94-4B64-8E83-4B90DADC676E/MicrosoftEasyFix50832.msi). In the **File Download ** dialog box, click **Run** or **Open**, and then follow the steps in the easy fix wizard.  
 
 - This wizard may be in English only. However, the automatic fix also works for other language versions of Windows.   
-- If you’re not on the computer that has the problem, save the easy fix solution to a flash drive or a CD, and then run it on the computer that has the problem.     
+- If you're not on the computer that has the problem, save the easy fix solution to a flash drive or a CD, and then run it on the computer that has the problem.     
 
 ## More Information  
 
@@ -154,9 +155,9 @@ SharePoint workflow task buttons may be missing in Office documents for other re
 - You are using a low-value license of Office (Home and Business, Home and Student) or other product from retail channel. See [All about Approval workflows](https://office.microsoft.com/powerpoint-help/manage-the-document-approval-process-using-a-workflow-ha010220203.aspx).   
 - Workflow for the document you have open has not been started yet.   
 - User does not have Edit Items  permissions. They may also need Manage Lists  permissions depending on the workflow settings.    
-- The Server read-only bar with the [Edit Document ] or [Edit Workbook ] or [Edit Presentation ] button bar may be missing for other reasons when clicking on a hyperlink to a Office 2010 document stored on a SharePoint site for the first time . Subsequent clicks on the link will render the Server read-only bar.     
+- The Server read-only bar with the [Edit Document ] or [Edit Workbook ] or [Edit Presentation ] button bar may be missing for other reasons when clicking on a hyperlink to an Office 2010 document stored on a SharePoint site for the first time. Subsequent clicks on the link will render the Server read-only bar.     
 
-   ![The screen shot for the Server read-only bar ](https://support.microsoft.com/Library/Images/2832165.png)  
+   ![The screenshot for the Server read-only bar](./media/message-bar-is-missing-when-open-office-documents-via-link-from-library/read-only.png)  
 
 To force the Server read-only bar to show on first click of the hyperlink, add the below registry key to the client machine.   
 
@@ -167,4 +168,6 @@ Type: DWORD
 Value: 1  
 ```
 
-If the the Server bar still does not appear with the [Edit Document] button even after the OptimisticBHO key is enabled, make sure that the "Office Document Cache Handler" Add-on is Enabled in Internet Explorer's Tools>Manage Add-ons.
+If the Server bar still does not appear with the [Edit Document] button even after the OptimisticBHO key is enabled, make sure that the "Office Document Cache Handler" Add-on is Enabled in Internet Explorer's Tools>Manage Add-ons.
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

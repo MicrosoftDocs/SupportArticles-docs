@@ -8,6 +8,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 ms.reviewer: V-RHOWAR
 search.appverid: 
 - MET150
@@ -18,6 +19,8 @@ appliesto:
 ---
 
 # How to use the INDIRECT function to create references in Excel
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

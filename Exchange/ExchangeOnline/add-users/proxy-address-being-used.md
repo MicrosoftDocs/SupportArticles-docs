@@ -5,6 +5,7 @@ author: simonxjx
 audience: ITPro
 ms.service: exchange-online
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal
@@ -25,7 +26,7 @@ When you try to create a new user in Exchange Online or when you try to assign a
 However, the mailbox creation process doesn't complete successfully. If you try to access the properties of this user, you receive an error message that resembles the following:
 
 **The proxy address "SMTP:\<user>@contoso.com" is already being used by "\<domain>.prod.outlook.com/Microsoft Exchange Hosted Organizations/contoso.onmicrosoft.com/\<forest>".
-Please choose another proxy address.**
+Choose another proxy address.**
 
 ## Cause 
 
@@ -37,7 +38,7 @@ Check for objects have the same proxy address, and then remove or change the pro
 To determine which objects share the proxy address of a specified user, follow these steps:
 
 1. Connect to Exchange Online by using a remote Windows PowerShell session. For more information about how to do this, see [Connect to Exchange Online using remote PowerShell](https://technet.microsoft.com/library/jj984289%28v=exchg.150%29.aspx).   
-2. Run the following command:Run Get-Recipient | where {$_.EmailAddresses -match "user@contoso.onmicrosoft.com"} | fL Name, RecipientType,emailaddresses This command lists all mail recipients that have a type that matches the proxy address of a specified user. The duplicate proxy address may be associated with any of the following:
+2. Run the following command: Run Get-Recipient | where {$_.EmailAddresses -match "user@contoso.onmicrosoft.com"} | fL Name, RecipientType, emailaddresses. This command lists all mail recipients that have a type that matches the proxy address of a specified user. The duplicate proxy address may be associated with any of the following:
    - Site mailbox   
    - Mail contact   
    - Mail user   

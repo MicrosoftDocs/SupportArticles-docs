@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 - SharePoint Server 2013
@@ -40,4 +41,4 @@ To resolve this problem, configure the **Return field as** value within the impe
 
 This problem occurs if the person or group column allows multiple selections and if the value in that column is returned as something other than **As a string**. This configuration causes the workflow to fail.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

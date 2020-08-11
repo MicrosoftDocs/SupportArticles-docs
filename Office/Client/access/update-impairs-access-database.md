@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Access 2010
@@ -17,6 +18,8 @@ appliesto:
 ---
 
 # Security Update MS12-060 Impairs Functionality of Access Database
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 
@@ -124,7 +127,7 @@ Microsoft Toolbar Control 6.0 (SP6)
 
 Microsoft TreeView Control 6.0 (SP6)
 
-**Note**: The version number and service pack level may be something other than “6.0 (SP6)”.
+**Note**: The version number and service pack level may be something other than "6.0 (SP6)".
 
 Problems have also surfaced in other Office products after adding the patch, though symptoms may be different than those seen in Access. Removal of the registry key as noted above may not be necessary to address issues in those cases. 
 

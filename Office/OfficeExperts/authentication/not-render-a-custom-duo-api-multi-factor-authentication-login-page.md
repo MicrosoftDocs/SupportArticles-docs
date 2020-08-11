@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: article
 ms.prod: office-perpetual-itpro
+ms.custom: CSSTroubleshoot
 localization_priority: Normal
 appliesto:
 - Microsoft Office
@@ -42,5 +43,5 @@ Because data is not based on HTTPS, Office can't allow such navigation to occur.
 
 To resolve this issue, specify the src attribute for the Iframe element as follows. Then the "about:blank" page will no longer load and this issue will no longer occur.
 ```html
-<iframe id="duo_iframe" src="images/TempImage.gif” width="100%" height="350px" frameborder="0">
+<iframe id="duo_iframe" src="images/TempImage.gif" width="100%" height="350px" frameborder="0">
 ```

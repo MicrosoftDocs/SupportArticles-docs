@@ -7,6 +7,7 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
+ms.custom: CSSTroubleshoot
 ms.service: office 365
 ms.topic: article
 ms.author: v-six
@@ -19,6 +20,8 @@ appliesto:
 ---
 
 # How to troubleshoot AD FS endpoint connection issues when users sign in to Office 365, Intune, or Azure
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Problem 
 

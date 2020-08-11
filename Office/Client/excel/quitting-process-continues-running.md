@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Office Excel 2007
@@ -16,6 +17,8 @@ appliesto:
 ---
 
 # An active Excel process continues to run after using a VBA macro to programmatically quit Excel
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

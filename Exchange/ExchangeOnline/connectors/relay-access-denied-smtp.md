@@ -7,6 +7,7 @@ ms.service: exchange-online
 ms.topic: article
 ms.author: v-six
 manager: dcscontentpm
+ms.custom: CSSTroubleshoot
 localization_priority: Normal
 search.appverid: 
 - MET150
@@ -44,7 +45,7 @@ When the Wizard has successfully completed, the value for the **TLSSenderCertif
 
 ### Option 2: Change the inbound connector without running HCW
 
-Make sure that the new certificate is sent from on-premises Exchange to Exchange Online Protection (EOP) when users send external mail. If the new certificate isn’t sent from on-premises Exchange to EOP, there may be a certificate configuration issue on-premises. Confirm the issue by enabling logging on the send connector that is used for routing mail to Office 365 and checking those logs. To find the location of the send connector logs, run the following cmdlet against the source servers that are listed in that send connector. (Here we assume that the send connector name that's used for relaying to external domains through EOP is "outbound to Office 365.")
+Make sure that the new certificate is sent from on-premises Exchange to Exchange Online Protection (EOP) when users send external mail. If the new certificate isn't sent from on-premises Exchange to EOP, there may be a certificate configuration issue on-premises. Confirm the issue by enabling logging on the send connector that is used for routing mail to Office 365 and checking those logs. To find the location of the send connector logs, run the following cmdlet against the source servers that are listed in that send connector. (Here we assume that the send connector name that's used for relaying to external domains through EOP is "outbound to Office 365.")
 
 **For Exchange 2010**
 

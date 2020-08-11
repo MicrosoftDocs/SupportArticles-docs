@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft Excel 2016 for Mac 
 - Outlook 2016 for Mac
@@ -18,6 +19,8 @@ appliesto:
 ---
 
 # Excel/Outlook for Mac: Border missing when pasting table in email
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

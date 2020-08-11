@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Lync 2010
@@ -24,7 +25,7 @@ You may experience one or more of the following symptoms:
 
     **Microsoft Lync 2010 must be installed by running the appropriate Lync setup executable**   
 - The Active Directory Domain Services (AD DS) Software Installation Group Policy setting for MSI deployment methods will not complete when Lync.msi is deployed to supported Windows clients.   
-- The Microsoft Systems Management Server (SMS) 2003 or Microsoft System Center Configuration Manager (Configuration Manager) 2007 R2 automated deployments of the Lync.msi may not complete, or errors that are specific to the SMS environment or to the Configuration Manager environment may occur.   
+- The Microsoft Systems Management Server (SMS) 2003 or Configuration Manager 2007 R2 automated deployments of the Lync.msi may not complete, or errors that are specific to the SMS environment or to the Configuration Manager environment may occur.   
 
 ## Cause
 
@@ -61,7 +62,7 @@ To have us enable MSI deployments for Lync.msi, go to the "Here's an easy fix" s
 To enable MSI deployments for Lync.msi automatically, click the **[Download](https://download.microsoft.com/download/A/4/E/A4E6DA1F-9832-4501-9F5C-983464A3E92E/MicrosoftEasyFix50872.msi)** button. In the **File Download** dialog box, click **Run** or **Open**, and then follow the steps in the easy fix wizard.
 
 - This wizard may be in English only. However, the automatic fix also works for other language versions of Windows.   
-- If you’re not on the computer that has the problem, save the easy fix solution to a flash drive or a CD, and then run it on the computer that has the problem.   
+- If you're not on the computer that has the problem, save the easy fix solution to a flash drive or a CD, and then run it on the computer that has the problem.   
 
 ### Let me fix it myself
 
@@ -96,3 +97,5 @@ The definition of the UseMSIForLyncInstallation Lync 2010 Group Policy setting i
 For detailed information about how to automate the Lync 2010 deployment methods, visit the following Microsoft TechNet website:
 
 [IT-Managed Installation of Lync 2010](https://technet.microsoft.com/library/gg425733.aspx)
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

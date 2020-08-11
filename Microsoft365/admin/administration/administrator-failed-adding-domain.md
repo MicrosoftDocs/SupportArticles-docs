@@ -8,6 +8,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.service: o365-administration
+ms.custom: CSSTroubleshoot
 ms.topic: article
 ms.author: v-six
 appliesto:
@@ -17,6 +18,8 @@ appliesto:
 ---
 
 # An administrator can't add a domain to Office 365, Azure, or Intune
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## PROBLEM
 

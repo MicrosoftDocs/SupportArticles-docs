@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Lync Server 2013
 ---
@@ -109,3 +110,5 @@ For more information about how to back up and restore the registry, click the fo
 For more information about how to disable TLS session ticket optimization in Server 2012 R2, see the following Microsoft TechNet topic:
 
 [Release Notes: Important Issues in Windows Server 2012 R2 Preview](https://technet.microsoft.com/library/dn303413.aspx)
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

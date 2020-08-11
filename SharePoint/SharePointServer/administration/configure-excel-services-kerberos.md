@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Excel Services in SharePoint Server 2010
 ---
@@ -30,14 +31,14 @@ For more information about how to configure Kerberos constrained delegation to e
 
     |SharePoint Server Service|IIS App Pool Identity|
     |-|-|
-    |SharePoint Server Service|	IIS App Pool Identity|
-    |Excel Services|	vmlab\svcExcel|
+    |SharePoint Server Service|    IIS App Pool Identity|
+    |Excel Services|    vmlab\svcExcel|
 
 1. Configure a service principal name (SPN) on the Excel Services service account.
 
-    You must configure Kerberos constrained delegation if Excel Services will delegate the client’s identity to a back-end data source. For example, if Excel Services queries data from a SQL transactional database, you must have Kerberos delegation. 
+    You must configure Kerberos constrained delegation if Excel Services will delegate the client's identity to a back-end data source. For example, if Excel Services queries data from a SQL transactional database, you must have Kerberos delegation. 
 
-    The Active Directory Users and Computers MMC snap-in is typically used to configure Kerberos delegation. To configure the delegation settings within the snap-in, the Active Directory object that is being configured must have an SPN applied. Otherwise, the delegation tab for the object will not be visible in the object’s properties dialog box. Although Excel Services does not require an SPN to function, you must configure one for this purpose. 
+    The Active Directory Users and Computers MMC snap-in is typically used to configure Kerberos delegation. To configure the delegation settings within the snap-in, the Active Directory object that is being configured must have an SPN applied. Otherwise, the delegation tab for the object will not be visible in the object's properties dialog box. Although Excel Services does not require an SPN to function, you must configure one for this purpose. 
 
     To do this, type the following command at the command line, and then press Enter:
 
@@ -56,11 +57,11 @@ For more information about how to configure Kerberos constrained delegation to e
 
     For example, you define the following delegation paths:
 
-    |Principal Type	|Principal Name	|Delegates To Service|
+    |Principal Type    |Principal Name    |Delegates To Service|
     |-|-|-|
-    |User	|svcExcel|	MSSQLSVC/MySqlCluster.vmlab.local:1433|
-    |*User|	svcC2WTS	|MSSQLSVC/MySqlCluster.vmlab.local:1433|
-    |**Computer|	VMSP10APP01	MSSQLSVC/|MySqlCluster.vmlab.local:1433|
+    |User    |svcExcel|    MSSQLSVC/MySqlCluster.vmlab.local:1433|
+    |*User|    svcC2WTS    |MSSQLSVC/MySqlCluster.vmlab.local:1433|
+    |**Computer|    VMSP10APP01    MSSQLSVC/|MySqlCluster.vmlab.local:1433|
 
     \* Configured later in this scenario
     
@@ -68,7 +69,7 @@ For more information about how to configure Kerberos constrained delegation to e
 
     To configure constrained delegation, follow these steps:
 
-    1. Open the Active Directory Object’s properties in Active Directory Users and Computers.
+    1. Open the Active Directory Object's properties in Active Directory Users and Computers.
     1. Browse to the Delegation tab.
     1. Select Trust this user for delegation to specified services only.
     1. Select Use any authentication protocol. This action enables protocol transition, and is required for the service account to use the C2WTS.
@@ -123,7 +124,7 @@ For more information about how to configure Kerberos constrained delegation to e
        > In a production environment you must configure a cache setting that is larger than 0. Setting the cache to 0 is for testing only.
 1. Grant the Excel Services service account permissions on the web application content database.
 
-    You must enable the web application’s service account access to the content databases for a given web application in order to configure SharePoint Server 2010 Office Web Applications. For example, grant the Excel Services service account access to the "portal" web application’s content database by using Windows PowerShell.
+    You must enable the web application's service account access to the content databases for a given web application in order to configure SharePoint Server 2010 Office Web Applications. For example, grant the Excel Services service account access to the "portal" web application's content database by using Windows PowerShell.
 
     To do this, run the following command from the SharePoint 2010 Management Shell:
 
@@ -137,3 +138,5 @@ For more information about how to configure Kerberos constrained delegation to e
 > For more information about Identity delegation for Excel Services, go to the following Microsoft TechNet website:
 
 [Identity delegation for Excel Services (SharePoint Server 2010)](https://docs.microsoft.com/previous-versions/office/sharepoint-server-2010/gg502605(v=office.14))
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.reviewer: wdkbprem, ctrword
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -18,6 +19,8 @@ appliesto:
 ---
 
 # You cannot use the mouse to draw a selection rectangle around multiple AutoShape objects in Microsoft Word
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ##  Symptoms
 

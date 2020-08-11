@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - SharePoint Online
@@ -34,4 +35,4 @@ For more information about security groups in Office 365, see [Create, edit, or 
 
 This issue occurs because search results aren't available for a resource when more than 2,000 users are in a SharePoint group, and the group is used to define permissions for the resource.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

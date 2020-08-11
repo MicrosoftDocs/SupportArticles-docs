@@ -10,12 +10,15 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft Office Excel 2007
 - Microsoft Office Excel 2003
 ---
 
 # Excel statistical functions: INTERCEPT
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 
@@ -62,7 +65,7 @@ You may want to format cells B2:B7 as Number with 0 decimal places and cells A9:
 
 Cells A2:A7 and B2:B7 contain the **y**-values and **x**-values that call INTERCEPT in cell A10.
 
-In versions of Excel that are earlier than Excel 2003, INTERCEPT can exhibit round off errors. Excel 2003 and later versions of Excel improve the behavior of INTERCEPT. INTERCEPT(**known_y's**, **known_x's**) is the result of evaluating AVERAGE(**known_y's**) – SLOPE(**known_y's**, **known_x's**) * AVERAGE(**known_x’s**). While the code for INTERCEPT has not been directly changed for Excel 2003 and for later versions of Excel, the behavior of INTERCEPT is improved because of improved code for SLOPE.
+In versions of Excel that are earlier than Excel 2003, INTERCEPT can exhibit round off errors. Excel 2003 and later versions of Excel improve the behavior of INTERCEPT. INTERCEPT(**known_y's**, **known_x's**) is the result of evaluating AVERAGE(**known_y's**) – SLOPE(**known_y's**, **known_x's**) * AVERAGE(**known_x's**). While the code for INTERCEPT has not been directly changed for Excel 2003 and for later versions of Excel, the behavior of INTERCEPT is improved because of improved code for SLOPE.
 
 If you have an earlier version of Excel, you can use the worksheet you created earlier to run an experiment to discover when round off errors occur. Adding a positive constant to each of the observations in B2:B7 should not affect the value of SLOPE. If you plot **x**,**y** pairs with **x** on the horizontal axis and **y** on the vertical axis, and then add a positive constant to each **x** value, data just shifts to the right. The best-fit regression line still has the same slope. However, the shifted data has a different intercept.
 

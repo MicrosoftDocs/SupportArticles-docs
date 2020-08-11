@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Windows SharePoint Services 3.0
 ---
@@ -70,7 +71,6 @@ To increase the connection time-out setting, follow these steps:
 4. Under **Connections**, type the number of seconds that you want in the **Connection time-out** box, and then click **OK**.     
 
 ### Method 3: Add the executionTimeout value  
-
 
 1. Open the Web.config file in Notepad.   
 
@@ -161,3 +161,7 @@ To work around this problem, edit the <configuration> section in the Web.config 
 For more information about the maxAllowedContentLength setting, see the following article in the Microsoft Knowledge Base:  
 
 [942074](https://support.microsoft.com/help/942074) Error message when you visit a Web site that is hosted on a server that is running Internet Information Services 7.0: "HTTP Error 404.13 - CONTENT_LENGTH_TOO_LARGE"
+
+## More information
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

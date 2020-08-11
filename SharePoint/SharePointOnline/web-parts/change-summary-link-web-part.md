@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 ---
@@ -48,4 +49,4 @@ To work around this issue, delete and then re-create the Web Part on the page. A
 
 This issue occurs because SharePoint doesn't support **Save Site as Template** functionality when the **SharePoint Server Publishing Infrastructure** option is enabled.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

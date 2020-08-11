@@ -7,6 +7,7 @@ audience: Admin
 ms.topic: troubleshooting
 ms.service: o365-administration
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 ms.collection: 
 - M365-subscription-management 
 - Adm_O365
@@ -20,6 +21,8 @@ description: Learn how to install Office 365 apps.
 ---
 
 # Install Office 365 apps
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 Sometimes, things just aren't working. Here's some help for fixing administrative problems with Office 365.
   

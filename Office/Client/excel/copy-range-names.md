@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Excel 2007
 - Excel 2003
@@ -18,6 +19,8 @@ appliesto:
 ---
 
 # Copy all range names programmatically in Excel
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

@@ -10,11 +10,14 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Excel 2007
 ---
 
 # How to convert Excel column numbers into alphabetical characters
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Introduction 
 
@@ -25,43 +28,65 @@ For example, the column number 30 is converted into the equivalent alphabetical 
 ## More Information
 
 Microsoft provides programming examples for illustration only, without warranty either expressed or implied. This includes, but is not limited to, the implied warranties of merchantability or fitness for a particular purpose. This article assumes that you are familiar with the programming language that is being demonstrated and with the tools that are used to create and to debug procedures. Microsoft support engineers can help explain the functionality of a particular procedure, but they will not modify these examples to provide added functionality or construct procedures to meet your specific requirements.
+
 The ConvertToLetter function works by using the following algorithm: 
 
-1. Divide the column number by 27, and then put the resulting integer in the variable "i".   
-2. Subtract the column number from "i" multiplied by 26, and then put the result in the variable "j".   
-3. Convert the integer values into their corresponding alphabetical characters, "i" and "j" will range from 0 to 26 respectively.
+1. Let `iCol` be the column number. Stop if `iCol` is less than 1.
+2. Calculate the quotient and remainder on division of `(iCol - 1)` by 26, and store in variables `a` and `b`.
+3. Convert the integer value of `b` into the corresponding alphabetical character (0 => A, 25 => Z) and tack it on at the front of the result string.
+4. Set `iCol` to the divisor `a` and loop.
 
 For example: The column number is 30. 
 
-1. The column number is divided by 27: 30 / 27 = 1.1111, rounded down by the Int function to "1". 
+* (Loop 1, step 1) The column number is at least 1, proceed.
 
-   i = 1   
+* (Loop 1, step 2) The column number less one is divided by 26:
 
-1. Next Column number - (i * 26) = 30 -(1 * 26) = 30 - 26 = 4.
+   29 / 26 = 1 remainder 3.
+   `a = 1, b = 3`
 
-   j = 4   
+* (Loop 1, step 3) Tack on the `(b+1)` letter of the alphabet:
 
-3. Convert the values to alphabetical characters separately,
+   3 + 1 = 4, fourth letter is "D".
+   Result = "D"
 
-   i = 1 = "A"
-   j = 4 = "D"    
+* (Loop 1, step 4) Go back to step 1 with `iCol = a`
 
-4. Combined together, they form the column designator "AD".   
+   `iCol = 1`
+
+* (Loop 2, step 1) The column number is at least 1, proceed.
+
+* (Loop 2, step 2) The column number less one is divided by 26:
+
+   0 / 26 = 0 remainder 0.
+   `a = 0, b = 0`
+
+* (Loop 2, step 3) Tack on the `b+1` letter of the alphabet:
+
+   0 + 1 = 1, first letter is "A"
+   Result = "AD"
+
+* (Loop 2, step 4) Go back to step 1 with `iCol = a`
+
+   `iCol = 0`
+
+* (Loop 3, step 1) The column number is less than 1, stop.
+
 
 The following VBA function is just one way to convert column number values into their equivalent alphabetical characters:
 
 ```vb
-Function ConvertToLetter(iCol As Integer) As String
-   Dim iAlpha As Integer
-   Dim iRemainder As Integer
-   iAlpha = Int(iCol / 27)
-   iRemainder = iCol - (iAlpha * 26)
-   If iAlpha > 0 Then
-      ConvertToLetter = Chr(iAlpha + 64)
-   End If
-   If iRemainder > 0 Then
-      ConvertToLetter = ConvertToLetter & Chr(iRemainder + 64)
-   End If
+Function ConvertToLetter(iCol As Long) As String
+   Dim a As Long
+   Dim b As Long
+   a = iCol
+   ConvertToLetter = ""
+   Do While iCol > 0
+      a = Int((iCol - 1) / 26)
+      b = (iCol - 1) Mod 26
+      ConvertToLetter = Chr(b + 65) & ConvertToLetter
+      iCol = a
+   Loop
 End Function
 ```
 

@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Online
 ---
@@ -22,11 +23,11 @@ In Skype for Business Online, the **LastActive** attribute occasionally shows ou
 
 ## Status
 
-This issue is known to occur in rare scenarios in Skype for Business Online.  Due to the highly available architecture of Skype for Business Online, in some rare occasions due to internal failovers that are transparent to users of the service, the **LastActive** state may not be replicated and some user accounts could end up in this state.  This issue impacts a very small percentage of Skype for Business Online users, and typically self-corrects when those users sign-out and sign back into the service.  
+This issue is known to occur in rare scenarios in Skype for Business Online.  Due to the highly available architecture of Skype for Business Online, in some rare occasions due to internal failovers that are transparent to users of the service, the **LastActive** state may not be replicated and some user accounts could end up in this state.  This issue impacts a small percentage of Skype for Business Online users, and typically self-corrects when those users sign out and sign back into the service.  
 
 ## Resolution
 
-To resolve inaccurate **LastActive** data for a given user, have them sign-out and sign back into Skype for Business Online.
+To resolve inaccurate **LastActive** data for a given user, have them sign out and sign back into Skype for Business Online.
 
 ## Workarounds
 

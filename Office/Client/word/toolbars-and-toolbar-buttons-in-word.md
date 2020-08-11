@@ -9,12 +9,15 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Microsoft Word
 ---
 
 # How to work with toolbars and toolbar buttons: add, create, edit, delete, restore, and more in Word
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 
@@ -87,7 +90,7 @@ To assign a hyperlink to a toolbar button or menu command, follow these steps:
 1. Make sure the toolbar that you want to change is visible. To do this, pointing to **Toolbars** on the **View** menu, and then click the toolbar that you want to display.   
 2. Do one of the following:
 
-   - On the **View **menu, point to **Toolbars**, and then click **Customize**.    
+   - On the **View** menu, point to **Toolbars**, and then click **Customize**.    
    - On the **Tools** menu, click **Customize**.   
    
 3. Right-click the toolbar button, point to **Assign Hyperlink** on the menu that appears, and then click **Open**. Under **Link to**, click the source that you want to link to, and then select the options that you want.   

@@ -11,6 +11,7 @@ ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
 ms.reviewer: miadkins
+ms.custom: CSSTroubleshoot
 appliesto:
 - Lync Server 2013
 ---
@@ -149,3 +150,5 @@ To resolve this issue, follow these steps.
 ##  More Information
 
 For more information about the Model database, see [model Database](https://technet.microsoft.com/library/ms186388.aspx).
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

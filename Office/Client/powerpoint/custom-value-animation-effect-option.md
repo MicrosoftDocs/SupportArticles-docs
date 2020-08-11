@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Office PowerPoint 2007
@@ -17,6 +18,8 @@ appliesto:
 ---
 
 # Add custom values to animation effect options in PowerPoint
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Introduction 
 

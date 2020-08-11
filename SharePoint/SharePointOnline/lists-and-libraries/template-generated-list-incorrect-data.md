@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 ---
@@ -38,4 +39,4 @@ Or, you can save the site as a template and then create a subsite by using the s
 
 This issue occurs when you save a list that contains **Lookup** columns, **Managed Metadata** columns, or **Person or Group** columns as a template, and then you create a list on another subsite or site collection. List templates that contain these columns are supported only on the same site where they were created.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

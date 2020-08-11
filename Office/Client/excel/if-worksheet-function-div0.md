@@ -9,6 +9,7 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Excel 2007
 - Excel 2003
@@ -16,6 +17,8 @@ appliesto:
 ---
 
 # How to use the IF worksheet function to suppress the #DIV/0! error value in Excel
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 For a Microsoft Excel 2000 version of this article, see [Hide error values and error indicators in cells](https://support.microsoft.com/help/182188).
 

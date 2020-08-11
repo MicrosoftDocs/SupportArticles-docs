@@ -8,6 +8,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
+ms.custom: CSSTroubleshoot
 ms.topic: article
 ms.author: v-six
 appliesto:
@@ -18,6 +19,8 @@ appliesto:
 ---
 
 # "Word cannot open this file because it is larger than 512 Megabytes" when opening a document in Word 
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

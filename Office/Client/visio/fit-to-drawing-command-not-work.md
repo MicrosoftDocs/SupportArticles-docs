@@ -8,6 +8,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 ms.reviewer: timda, arykhus, kevinmil, barbway
 search.appverid: 
 - MET150
@@ -17,6 +18,8 @@ appliesto:
 ---
 
 # In Visio, the "Fit to Drawing" command does not resize the page to fit the drawing's dimensions
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

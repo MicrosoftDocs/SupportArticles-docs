@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: article 
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -15,6 +16,8 @@ appliesto:
 ---
 
 # Excel macros that protect and unprotect worksheets may run slowly
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ##  Symptoms
 
@@ -26,7 +29,7 @@ Because of a new, stronger hashing algorithm (SHA-512) for encryption in Micr
 
 ##  Resolution
 
-This behavior is by design. It's not noticeable when you’re manually protecting a worksheet. However, if you have code that protects or unprotects work sheets repeatedly, this behavior can cause a performance issue.
+This behavior is by design. It's not noticeable when you're manually protecting a worksheet. However, if you have code that protects or unprotects work sheets repeatedly, this behavior can cause a performance issue.
 
 ##  More Information
 

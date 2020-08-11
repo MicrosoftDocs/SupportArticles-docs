@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: office 365
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Exchange Online
@@ -17,6 +18,8 @@ appliesto:
 ---
 
 # Office 365 email address contains an underscore character after directory synchronization
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 
@@ -40,7 +43,7 @@ This occurs if the user account in your on-premises environment has a **proxyadd
 |/|forward slash |
 |%|percent |
     
-In this scenario, after directory synchronization is run, the special character is replaced by an underscore character. Therefore, the user’s Office 365 email address contains an underscore character instead of the special character. 
+In this scenario, after directory synchronization is run, the special character is replaced by an underscore character. Therefore, the user's Office 365 email address contains an underscore character instead of the special character. 
 
 ## Resolution
 

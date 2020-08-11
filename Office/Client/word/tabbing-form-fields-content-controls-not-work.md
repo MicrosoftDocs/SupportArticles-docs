@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.reviewer: tomol, larryt, aldox, brandes, clatonh, almah, kfishe, saunderg, dkuy
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -18,6 +19,8 @@ appliesto:
 ---
 
 # Tabbing between form fields and content controls does not work correctly in Word
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ##  Symptoms
 

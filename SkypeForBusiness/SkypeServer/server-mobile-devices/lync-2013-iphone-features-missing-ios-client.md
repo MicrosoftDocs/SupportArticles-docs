@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business for iOS
 ---
@@ -38,7 +39,7 @@ The following features that are currently available in Microsoft Lync 2013 for i
 
 - Visually identify meetings that are currently in the Tentative acceptance state.    
 - Access the meeting organizer's Contact Card from the Meeting detail view.
-  - The ability to access the meeting organizer’s Contact Card from the Meeting detail view is available in version 6.4. Users can download the latest version of Skype for Business for iOS at [Skype for Business is now on iOS](https://support.office.com/article/skype-for-business-is-now-on-ios-1a2cf653-955b-4329-b289-db7a67d32bfd).     
+  - The ability to access the meeting organizer's Contact Card from the Meeting detail view is available in version 6.4. Users can download the latest version of Skype for Business for iOS at [Skype for Business is now on iOS](https://support.office.com/article/skype-for-business-is-now-on-ios-1a2cf653-955b-4329-b289-db7a67d32bfd).     
    
 ### Voice Mail screen
 
@@ -70,3 +71,7 @@ We are working to address this difference in feature sets and to update the capa
 **Third-party information disclaimer**
 
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

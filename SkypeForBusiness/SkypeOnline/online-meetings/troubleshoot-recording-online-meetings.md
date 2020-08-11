@@ -11,6 +11,7 @@ ms.service: skype-for-business-online
 ms.topic: article
 ms.author: v-six
 ms.reviewer: dahans
+ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Online
 ---
@@ -36,15 +37,15 @@ You experience one or more of the following symptoms in Lync 2010 or Lync 2013 w
 
 ### Scenario 2: Audio is missing from the whole recording, or audio is missing in the final 10 minutes of the recording
 
-To troubleshoot this issue, verify that incoming audio was active during the online meeting. Perhaps outgoing audio was active, but incoming audio may have been disabled. This can occur if the users join the audio from the public switched telephone network (PSTN), and Voice over Internet Protocol (VoIP) audio isn't enabled. In this scenario, a notification is displayed to inform the user that audio isn't being recorded.
+To troubleshoot this issue, verify that incoming audio was active during the online meeting. Outgoing audio was active, but incoming audio may have been disabled. This can occur if the users join the audio from the public switched telephone network (PSTN), and Voice over Internet Protocol (VoIP) audio isn't enabled. In this scenario, a notification is displayed to inform the user that audio isn't being recorded.
 
 ### Scenario 3: Recording options in Lync 2010 or Lync 2013 are unavailable
 
-First, verify that recording is enabled for user having issues in the Skype for Business Admin Center. This setting can be enabled or disabled on a per-user basis. So, because one user can record, doesn’t mean that all users can.
+First, verify that recording is enabled for user having issues in the Skype for Business Admin Center. This setting can be enabled or disabled on a per-user basis. So, because one user can record, doesn't mean that all users can.
 
-![Screen shot of Lync features settings ](./media/troubleshoot-recording-online-meetings/enable-recording.jpg)
+![Screenshot of Lync features settings ](./media/troubleshoot-recording-online-meetings/enable-recording.jpg)
 
-Lync 2010 and Lync 2013 includes features that allow users to record conferences, audio/video (A/V) conferences and desktop sharing sessions, as long as the session is converted to an online meeting or conference. Recording peer-to-peer IM, Audio, or Video sessions isn't supported.
+Lync 2010 and Lync 2013 include features that allow users to record conferences, audio/video (A/V) conferences and desktop sharing sessions, as long as the session is converted to an online meeting or conference. Recording peer-to-peer IM, Audio, or Video sessions aren't supported.
 
 Users who have started a two-person A/V call won't have recording features available to them until they invite a third participant. This converts the peer-to-peer conversation to a Skype for Business Online conference where recording is allowed.
 
@@ -54,10 +55,10 @@ If you want to distribute the IM conversations together with your recording, mak
 
 1. When you are finished recording, click **Stop Recording**. In the **Stop Recording** dialog box, click **Options**.
 
-    ![Screen shot of the Stop Recording dialog box ](./media/troubleshoot-recording-online-meetings/stop-recording.png)   
+    ![Screenshot of the Stop Recording dialog box ](./media/troubleshoot-recording-online-meetings/stop-recording.png)   
 2. In the **Save and Publish Options** dialog box, click to select the **Instant message** check box, and then click **OK**.
 
-    ![Screen shot of the Save and Publish Options dialog box ](./media/troubleshoot-recording-online-meetings/instant-message.png)
+    ![Screenshot of the Save and Publish Options dialog box ](./media/troubleshoot-recording-online-meetings/instant-message.png)
 
     When you publish the recording, the IM conversations will be included.   
 

@@ -8,6 +8,7 @@ ms.topic: article
 ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -31,7 +32,35 @@ In Office 365, shared mailboxes don't require a license and can't be added to Ou
 
 To work around this issue, use one of the following methods. 
 
-### Method 1: Set the DelegateSentItemsStyle registry value on the Outlook client
+### Method 1: Configure the mailbox to save a copy of the message to the Sent Items folder of the shared mailbox in Exchange Online or in on-premises Exchange Server
+
+#### Exchange Online in Office 365 or Exchange Server 2013 Cumulative Update 9 or later update
+ 
+Cumulative Update 9 for Exchange Server 2013 introduced a new feature that lets administrators configure the Sent Items folder to which a message is copied. For more information, see [Exchange Blog - Want more control over Sent Items when using shared mailboxes?](https://techcommunity.microsoft.com/t5/exchange-team-blog/want-more-control-over-sent-items-when-using-shared-mailboxes/ba-p/611106)
+
+Using Exchange PowerShell, for emails Sent As the shared mailbox, run the following cmdlet:
+
+```powershell
+set-mailbox <mailbox name> -MessageCopyForSentAsEnabled $True
+```
+Using Exchange PowerShell, for emails Sent On Behalf of the shared mailbox, run the following cmdlet:
+
+```powershell
+set-mailbox <mailbox name> -MessageCopyForSendOnBehalfEnabled $True
+```
+
+#### Exchange Server 2010 Service Pack 2 Update Rollup 4 or later update
+ 
+Update Rollup 4 for Exchange Server 2010 Service Pack 2 introduced a new Exchange PowerShell cmdlet to configure the Sent Items folder to which a message is copied. Because this new feature is handled by the server that's running Exchange Server, Outlook can be configured in online mode or cached Exchange mode. However, this feature works only if the Outlook DelegateSentItemsStyleregistry (Method 2 below) value is disabled.
+
+For more information about the Set-MailboxSentItemsConfiguration cmdlet, see the following Microsoft Knowledge Base article:
+
+[2632409](https://support.microsoft.com/help/2632409) Messages sent by using the "Send As" and "Send on behalf" permissions are only copied to the Sent Items folder of the sender in an Exchange Server 2010 environment  
+
+> [!NOTE]
+> The **MessageCopyForSentAsEnabled** and **MessageCopyForSendOnBehalfEnabled** settings are not supported if the user mailbox and shared mailbox are located in different environments (cloud and on-premises). The settings are supported only if both mailboxes are in the same environment (cloud or on-premises).
+
+### Method 2: Set the DelegateSentItemsStyle registry value on the Outlook client
  
 > [!NOTE]
 > Outlook must be configured to run in cached mode for this option to work correctly. For more information, see the following Microsoft Knowledge Base article:
@@ -59,23 +88,6 @@ For more information about this hotfix package, see the following Microsoft Know
 5. Right-click **DelegateSentItemsStyle**, and then click **Modify**.    
 6. In the **Value data** box, type 1, and then click **OK**.    
 7. Exit Registry Editor.    
- 
-### Method 2: Configure the mailbox to save a copy of the message to the Sent Items folder of the shared mailbox in Exchange Online or in on-premises Exchange Server
-
-#### Exchange Online in Office 365 or Exchange Server 2013 Cumulative Update 9 or later update
- 
-Cumulative Update 9 for Exchange Server 2013 introduced a new feature that lets administrators configure the Sent Items folder to which a message is copied. For more information, see [Exchange Blog - Want more control over Sent Items when using shared mailboxes?](https://blogs.technet.com/b/exchange/archive/2015/03/03/want-more-control-over-sent-items-when-using-shared-mailboxes.aspx)
-
-#### Exchange Server 2010 Service Pack 2 Update Rollup 4 or later update
- 
-Update Rollup 4 for Exchange Server 2010 Service Pack 2 introduced a new Exchange PowerShell cmdlet to configure the Sent Items folder to which a message is copied. Because this new feature is handled by the server that's running Exchange Server, Outlook can be configured in online mode or cached Exchange mode. However, this feature works only if the Outlook DelegateSentItemsStyleregistry value is disabled.
-
-For more information about the Set-MailboxSentItemsConfiguration cmdlet, see the following Microsoft Knowledge Base article:
-
-[2632409](https://support.microsoft.com/help/2632409) Messages sent by using the "Send As" and "Send on behalf" permissions are only copied to the Sent Items folder of the sender in an Exchange Server 2010 environment  
-
-> [!NOTE]
-> The **MessageCopyForSentAsEnabled** and **MessageCopyForSendOnBehalfEnabled** settings are not supported if the user mailbox and shared mailbox are located in different environments (cloud and on-premises). The settings are supported only if both mailboxes are in the same environment (cloud or on-premises).
 
 ## More information
 

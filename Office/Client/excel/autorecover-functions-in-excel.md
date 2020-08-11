@@ -1,6 +1,6 @@
 ---
-title: Description of the AutoRecover functions in Excel
-description: Describes the AutoRecover functions in Excel. The AutoRecover feature saves copies of all open Excel workbooks at a fixed interval that you define. You can use this feature to recover the file when Excel closes unexpectedly.
+title: Description of the Auto-Recover functions in Excel
+description: Describes the Auto-Recover functions in Excel. The Auto-Recover feature saves copies of all open Excel workbooks at a fixed interval that you define. You can use this feature to recover the file when Excel closes unexpectedly.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Excel 2010
@@ -16,31 +17,33 @@ appliesto:
 - Microsoft Office Excel 2003
 ---
 
-# Description of the AutoRecover functions in Excel
+# Description of the Auto-Recover functions in Excel
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 
-Microsoft Excel now has a built-in AutoRecover feature that has replaced the AutoSave add-in that exists in versions of Excel that are earlier than Microsoft Excel 2002. The AutoRecover feature saves copies of all open Excel files at a user-definable fixed interval. The files can be recovered if Excel closes unexpectedly, for example, during a power failure.
+Microsoft Excel now has a built-in Auto-Recover feature that has replaced the Auto-Save add-in that exists in versions of Excel that are earlier than Microsoft Excel 2002. The Auto-Recover feature saves copies of all open Excel files at a user-definable fixed interval. The files can be recovered if Excel closes unexpectedly, for example, during a power failure.
 
-This article contains an overview of the AutoRecover feature. 
+This article contains an overview of the Auto-Recover feature. 
 
 ## More Information
 
-### How to configure the AutoRecover settings
+### How to configure the Auto-Recover settings
 
 #### Microsoft Office Excel 2007 and Excel 2010
  
-The controls to configure the AutoRecover feature are in the **Save** settings in Excel Options.
+The controls to configure the Auto-Recover feature are in the **Save** settings in Excel Options.
 
-Note To open the **Save** settings, click the Microsoft Office Button in Excel 2007 or the File menu in Excel 2010, clickExcel Optionsin 2007 or Options in Excel 2010, and then click **Save**.
+Note To open the **Save** settings, click the Microsoft Office Button in Excel 2007 or the File menu in Excel 2010, clickExcel Options in 2007 or Options in Excel 2010, and then click **Save**.
 
-To configure the AutoRecover settings, follow these steps: 
+To configure the Auto-Recover settings, follow these steps: 
  
-1. Under **Save Workbooks**, click to select the **Save AutoRecover info every**check box to turn on the AutoRecover feature.    
+1. Under **Save Workbooks**, click to select the **Save Auto-Recover info every check box to turn on the Auto-Recover feature.    
 2. In the **minutes** box, you can type any integer from 1 through 120. This box sets the number of minutes that will occur between saves.
 
     The default is 10 minutes.    
-3. In the **AutoRecover file location** box, you can type the path and the folder name of the location in which you want the AutoRecover files to stay.
+3. In the **Auto-Recover file location** box, you can type the path and the folder name of the location in which you want the Auto-Recover files to stay.
 
     The default location is as follows: 
 
@@ -54,25 +57,25 @@ To configure the AutoRecover settings, follow these steps:
         To determine the unique number that is associated with the message that you receive, press CTRL+SHIFT+I. The following number appears in the lower-right corner of this message: 
 
         100100     
-      - If you click to clear the **AutoRecover file location** box but do not enter a new location, AutoRecover files will continue to be saved to the location that you cleared. This will occur until you type a new location.
+      - If you click to clear the **Auto-Recover file location** box but do not enter a new location, Auto-Recover files will continue to be saved to the location that you cleared. This will occur until you type a new location.
 
-        The **AutoRecover file location** box remains empty until you type a new location.    
+        The **Auto-Recover file location** box remains empty until you type a new location.    
      
-4. You can turn off the AutoRecover feature in an individual workbook. To do this, click to select the **Disable AutoRecover for this workbook only** check box under the **AutoRecover exceptions for** box. Make sure that the workbook name is selected in the **AutoRecover exceptions for** box.    
+4. You can turn off the Auto-Recover feature in an individual workbook. To do this, click to select the **Disable Auto-Recover for this workbook only** check box under the **Auto-Recover exceptions for** box. Make sure that the workbook name is selected in the **Auto-Recover exceptions for** box.    
  
 #### Microsoft Office Excel 2003 and earlier versions of Excel
  
-The controls to configure the AutoRecover dialog box are on the Save tab of the Options dialog box.
+The controls to configure the Auto-Recover dialog box are on the Save tab of the Options dialog box.
 
 Note To open the Options dialog box, click Options on the Tools menu.
 
-To configure the AutoRecover dialog box, follow these steps: 
+To configure the Auto-Recover dialog box, follow these steps: 
  
-1. Under Settings, click to select the **Save AutoRecover info every**check box to turn on the AutoRecover feature.    
+1. Under Settings, click to select the **Save Auto-Recover info every check box to turn on the Auto-Recover feature.    
 2. In the **minutes** box, you can type any integer from 1 through 120. This box sets the number of minutes that will occur between saves.
 
     The default is 10 minutes.    
-3. In the **AutoRecover file location** box, you can type the path and the folder name of the location in which you want the AutoRecover files to stay.
+3. In the **Auto-Recover file location** box, you can type the path and the folder name of the location in which you want the Auto-Recover files to stay.
 
     The default location is as follows: 
 
@@ -82,38 +85,38 @@ To configure the AutoRecover dialog box, follow these steps:
       - If the location that you type is local (on your hard drive) and if the location does not exist, you receive the following error message: 
 
         Cannot access directory **path**.     
-      - If the location that you type is on a network drive, you will not receive an alert until your first AutoRecover attempt. You receive the following error message: 
+      - If the location that you type is on a network drive, you will not receive an alert until your first Auto-Recover attempt. You receive the following error message: 
 
-        Microsoft cannot save AutoRecover info to **path**. Please check the network connection or change the location on the Save tab of the Tools, Options dialog.     
-      - If you clear the **AutoRecover file location** box but do not enter a new location, AutoRecover files will continue to be saved to the location that you cleared. This occurs until you type a new location.
+        Microsoft cannot save Auto-Recover info to **path**. Please check the network connection or change the location on the Save tab of the Tools, Options dialog.     
+      - If you clear the **Auto-Recover file location** box but do not enter a new location, Auto-Recover files will continue to be saved to the location that you cleared. This occurs until you type a new location.
 
-        The **AutoRecover file location** box remains empty until you type a new location.    
+        The **Auto-Recover file location** box remains empty until you type a new location.    
      
-4. You can turn off the AutoRecover feature in an individual workbook. To do this, click to select the Disable AutoRecover check box under **Workbook options**.    
+4. You can turn off the Auto-Recover feature in an individual workbook. To do this, click to select the Disable Auto-Recover check box under **Workbook options**.    
  
-### When an AutoRecover event is triggered
+### When an Auto-Recover event is triggered
  
-When an Excel file is open and AutoRecover is turned on, AutoRecover does not save the file until the first change is made to the file, the AutoRecover save time interval passes, and Excel has been idle for some time (the default is 30 seconds). After AutoRecover saves the file, the file is only saved at subsequent save intervals if further changes are made.
+When an Excel file is open and Auto-Recover is turned on, Auto-Recover does not save the file until the first change is made to the file, the Auto-Recover save time interval passes, and Excel has been idle for some time (the default is 30 seconds). After Auto-Recover saves the file, the file is only saved at subsequent save intervals if further changes are made.
  
-### When AutoRecover files are deleted
+### When Auto-Recover files are deleted
  
-To keep from filling up your AutoRecover location with unneeded files, AutoRecover files are automatically deleted in the following situations:
+To keep from filling up your Auto-Recover location with unneeded files, Auto-Recover files are automatically deleted in the following situations:
 
 - When the file is manually saved.    
 - The file is saved with a new file name using Save As.    
 - You close the file.    
 - You quit Excel, whether you choose to save the file or not.    
-- You turn off AutoRecover for the current workbook.    
-- You turn off AutoRecover by clearing the **Save AutoRecover info every** check box.    
+- You turn off Auto-Recover for the current workbook.    
+- You turn off Auto-Recover by clearing the **Save Auto-Recover info every** check box.    
  
-### AutoRecover save timing
+### Auto-Recover save timing
  
-The AutoRecover timer checks for changed Excel files at the interval you set in the minutes box on the Save tab in the Options dialog box. The timer starts when you start Excel.
+The Auto-Recover timer checks for changed Excel files at the interval you set in the minutes box on the Save tab in the Options dialog box. The timer starts when you start Excel.
 
 > [!NOTE]
 > In Excel 2007, the minutes box is in the **Save** category in the Excel Option dialog box. In Excel 2010, the minutes box is in the Save category under File, Options.
 
-When the first save interval passes, Excel checks to see whether any open files have been changed. If Excel locates changed files, an idle timer starts. The purpose of the idle timer is to make sure that the user does not make entries in the worksheet while the save operation occurs. The idle timer restarts each time that the user makes an entry into the worksheet so the AutoRecover save file is not created until both the save interval passes and no entries are made for the duration of the idle time.
+When the first save interval passes, Excel checks to see whether any open files have been changed. If Excel locates changed files, an idle timer starts. The purpose of the idle timer is to make sure that the user does not make entries in the worksheet while the save operation occurs. The idle timer restarts each time that the user makes an entry into the worksheet so the Auto-Recover save file is not created until both the save interval passes and no entries are made for the duration of the idle time.
 
 The default idle time is 30 seconds. To change the default idle time, use the AutoRecoverDelay registry key. To do this, follow these steps.
 
@@ -146,28 +149,28 @@ Important This section, method, or task contains steps that tell you how to modi
     AutoRecoverDelay
 1. Press ENTER.    
 1. Right-click the **AutoRecoverDelay** registry key, and then click Modify.    
-1. In the Value data box, type a number between 1 and 600. This is the number of seconds before AutoRecover tries to save.    
+1. In the Value data box, type a number between 1 and 600. This is the number of seconds before Auto-Recover tries to save.    
 1. When you are finished, click OK.   
 1. Quit Registry Editor.    
  
 > [!NOTE]
 > Only manually performed actions in the program affect the idle timer. Formulas that automatically update the file do not affect the idle timer. Excel saves the file when the idle time is reached, between the automatic updates to the formulas.
  
-### File formats that are saved by AutoRecover
+### File formats that are saved by Auto-Recover
  
-AutoRecover saves all file formats that can be opened in Excel. To maintain speed and simplicity, AutoRecover saves all files as the current Excel file format, regardless of the original file format opened. The file is saved as a hidden file with an arbitrary filename with the extension .xar (for example, ~ar18a.xar). 
+Auto-Recover saves all file formats that can be opened in Excel. To maintain speed and simplicity, Auto-Recover saves all files as the current Excel file format, regardless of the original file format opened. The file is saved as a hidden file with an arbitrary filename with the extension ".xar" (for example, ~ar18a.xar). 
 
-When you try to save a recovered file upon reopening Excel after it closed unexpectedly, the original file format and name is suggested as the Save file type. Excel stores the original file name and its related .xar file name in the registry for the purpose of recovery. 
+When you try to save a recovered file upon reopening Excel after it closed unexpectedly, the original file format and name is suggested as the Save file type. Excel stores the original file name and it's related ".xar" file name in the registry for the purpose of recovery. 
 
-### AutoRecover and multiple instances of Excel
+### Auto-Recover and multiple instances of Excel
  
-When more than one instance of Excel is running and one instance closes unexpectedly, a new instance of Excel is automatically started and the AutoRecover files are opened. If all instances of Excel close unexpectedly, but the computer is still running, a single instance of Excel is started and all AutoRecover files are opened. In the case of a power outage, all recovered files are opened when you start Excel again. 
+When more than one instance of Excel is running and one instance closes unexpectedly, a new instance of Excel is automatically started and the Auto-Recover files are opened. If all instances of Excel close unexpectedly, but the computer is still running, a single instance of Excel is started and all Auto-Recover files are opened. In the case of a power outage, all recovered files are opened when you start Excel again. 
 
 ### Compatibility
  
-All AutoRecover settings, except the Disable AutoRecover workbook option, are stored in the system registry. AutoRecover settings are compatible with files from previous versions of Excel is not an issue.
+All Auto-Recover settings, except the Disable Auto-Recover workbook option, are stored in the system registry. Auto-Recover settings are compatible with files from previous versions of Excel is not an issue.
 
-When the Disable AutoRecover workbook option is set, and the file is opened in an earlier version of Excel, saved, and then reopened in a later version of Excel, the Disable AutoRecover workbook option is not affected. 
+When the Disable Auto-Recover workbook option is set, and the file is opened in an earlier version of Excel, saved, and then reopened in a later version of Excel, the Disable Auto-Recover workbook option is not affected. 
 
 ## References
 

@@ -8,6 +8,7 @@ ms.topic: article
 ms.author: chris.mcgurk
 manager: dcscontentpm
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -30,8 +31,8 @@ In this situation, the Exchange Server 2019 Setup program starts, and may indica
 
 When you run a command in PowerShell, the paths in the System environment variable "Path" are first checked to verify the command being executed, before the current path in PowerShell is checked, unless:
 
-- “.\” is entered in front of the command or program being executed, or
-- the Tab key is used to automatically add the “.\” in front of the command or program being executed
+- ".\" is entered in front of the command or program being executed, or
+- the Tab key is used to automatically add the ".\" in front of the command or program being executed
 
 A setup.exe file located in `C:\Program Files\Microsoft\Exchange Server\V15\bin` is found and executed by PowerShell, instead of the setup.exe in the current path.
 

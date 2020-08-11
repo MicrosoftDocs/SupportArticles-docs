@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 ---
@@ -40,5 +41,4 @@ To work around this issue, disable automatic updating of the workflow status to 
 
 The status of the item changes when the workflow is run and when the **Automatically update the workflow status to the current stage name** is enabled for the workflow. This starts the approval process for the affected item.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
-
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

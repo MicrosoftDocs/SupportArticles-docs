@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Outlook 2019
 - Outlook 2016
@@ -30,7 +31,7 @@ You experience the following issues that affect folder names in Microsoft Outlo
 
     > [!NOTE]
     > This issue occurs if a mobile device or a third-party server application synchronizes the Exchange Server mailbox. To resolve this issue, try Method 1 first. If that doesn't work, try Method 2 or 3.    
-- Folder names are changed unexpectedly (for example, the **Inbox **folder and the **Outbox **folder are switched).
+- Folder names are changed unexpectedly (for example, the **Inbox** folder and the **Outbox** folder are switched).
 
     > [!NOTE]
     > This issue may occur after Exchange Server mailbox maintenance. To resolve this issue, try Method 1 first. If that doesn't work, try Method 2 or 3.
@@ -80,12 +81,11 @@ Use Outlook Web App to reset the default folder names:
 If you are an administrator, run the following cmdlet to reset the default folder names for the user:   
 
 ```powershell
-set-MailboxRegionalConfiguration -id <**alias**> -LocalizeDefaultFolderName:$true -Language <**Language_code_to_switch_to**> -DateFormat <**your_preferred_DateFormat**>
+set-MailboxRegionalConfiguration -id <alias> -LocalizeDefaultFolderName:$true -Language <Language_code_to_switch_to> -DateFormat <your_preferred_DateFormat>
 ```
-   
-For more information about the possible language codes and the **Set-MailboxRegionalConfiguration** cmdlet, see the following MSDN websites: 
+
+For more information about the **Set-MailboxRegionalConfiguration** cmdlet, see the following MSDN websites: 
  
-- [Language Codes](https://msdn.microsoft.com/library/ms533052%28v=vs.85%29.aspx)
 - [Set-MailboxRegionalConfiguration](https://msdn.microsoft.com/subscriptions/dd351103%28v=exchg.141%29.aspx)
 
 ### Method 4
@@ -94,7 +94,7 @@ For more information about the possible language codes and the **Set-MailboxRegi
 
 Use Outlook to select a new Archive folder. To do this, follow these steps:  
  
-1. Right-click the mailbox name at the top of the folder hierarchy in Outlook, select **New Folder**, and then create a folder that’s named **Archive01**.    
+1. Right-click the mailbox name at the top of the folder hierarchy in Outlook, select **New Folder**, and then create a folder that's named **Archive01**.    
 2. On the **File** menu, select **Tools** > **Set Archive Folder**, and then select the new Archive01 folder.    
 3. Run the **Outlook.exe /resetfoldernames** command.    
  
@@ -104,7 +104,7 @@ If this option is not available or does not work, use Option 2.
 
 Follow these steps:  
  
-1. Right-click the mailbox name at the top of the folder hierarchy in Outlook, select **New Folder**, and then create a folder that’s named **Archive01**.    
+1. Right-click the mailbox name at the top of the folder hierarchy in Outlook, select **New Folder**, and then create a folder that's named **Archive01**.    
 2. Start MFCMapi in Online mode. To make sure that MFCMapi is in Online mode, select **Tools** > **Options**, and then make sure that the **Use the MDB_ONLINE flag** and **Use the MAPI_NO_CACHE** check boxes are selected.    
 3. Expand **Root Container**, and then expand **Top of Information Store**.    
 4. Select the new Archive01 folder, and then find the property that's named **PR_ENTRYID**.  

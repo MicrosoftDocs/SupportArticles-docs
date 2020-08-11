@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Access for Office 365
 - Access 2019
@@ -18,6 +19,8 @@ appliesto:
 ---
 
 # "Not a valid Teradata SQL token" error when you run outer join queries
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 
@@ -38,7 +41,7 @@ To fix the issue, use one of the following methods:
 
 ### Method 1
 
-When you use the Teradata ODBC driver (15.10 or a later version), you can use the **EnableLegacyParser** option to continue using the previous SQL parser. For more information, see [Teradata DSN Options](http://www.info.teradata.com/HTMLPubs/DB_TTU_15_10/index.html#page/Connectivity/B035_2509_035K/2509ch05.07.09.html).
+When you use the Teradata ODBC driver (15.10 or a later version), you can use the **EnableLegacyParser** option to continue using the previous SQL parser.
 
 > [!NOTE]
 > Teradata plans to remove the **EnableLegacyParser** option beginning in driver version 18.
@@ -47,7 +50,7 @@ When you use the Teradata ODBC driver (15.10 or a later version), you can use th
 
 Prevent Access from using outer joins in queries, or run outer joins within pass-through queries. For more information, see the following Knowledge Base and Office articles:
 
-- [How to create an SQL pass-through query in Access](http://support.microsoft.com/help/303968)
+- [How to create an SQL pass-through query in Access](https://support.microsoft.com/help/303968)
 
 - [Process SQL on a database server by using a pass-through query](https://support.office.com/article/Process-SQL-on-a-database-server-by-using-a-pass-through-query-B775AC23-8A6B-49B2-82E2-6DAC62532A42)
 

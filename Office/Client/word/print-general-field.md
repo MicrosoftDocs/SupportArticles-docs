@@ -9,12 +9,15 @@ search.appverid:
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Microsoft Word
 ---
 
 # How to print a general field by using Word and Visual FoxPro 9.0 or earlier versions
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

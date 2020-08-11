@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: article 
 ms.prod: office 365
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -16,6 +17,8 @@ appliesto:
 ---
 
 # "Can't verify domain" error message when you try to verify a domain in Office 365
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Problem 
 

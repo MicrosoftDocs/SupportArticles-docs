@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Microsoft SharePoint
@@ -106,3 +107,5 @@ HTTP::path [string map {.https ""} [HTTP::path]]
 }  
 }  
 ```
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Server 2019
 - SharePoint Server 2016
@@ -32,7 +33,7 @@ Large enterprise SharePoint deployments must have database maintenance plans to 
 When database statistics become outdated, SharePoint Server installations may experience one or more of the following symptoms:  
 
 - Slow load times and decreased performance that may generate an HTTP 500 error when you open a site page   
-- Slower performance that generates error messages such as the following:  
+- Slower performance that generates error messages such as the following sample:  
 
    ```
    Service unavailable  
@@ -53,13 +54,13 @@ When database statistics become outdated, SharePoint Server installations may ex
 
 ## Cause  
 
-These issues may be caused by outdated database statistics. SharePoint runs a timer job daily to update database statistics by using the proc_updatestatistics SQL procedure. However, for various reasons, this timer job may not be completed or may not update all tables consistently. For example, if a backup is running against the content database from SQL Server concurrently with the SharePoint timer job, the job won't continue.  
+These issues may be caused by outdated database statistics. SharePoint runs a timer job daily to update database statistics by using the proc_updatestatistics SQL procedure. However, for various reasons, this timer job may not be completed or may not update all tables consistently. For example, if a Backup is running against the content database from SQL Server concurrently with the SharePoint timer job, the job won't continue.  
 
 When the SharePoint timer job that updates statistics is completed, the followings events may be written to the ULS logs:  
 
 - e9bf "An error occurred while updating statistics in the database, {0}"   
 - cm1y "Updating statistics in the database, {0}"   
-- dbl2 "Skipping statistics update of the database {0} because it's status is {1}"   
+- dbl2 "Skipping statistics update of the database {0} because its status is {1}"   
 - cm1x "Updating statistics in all databases on {0}"     
 
 If these conditions aren't monitored closely and if corrective actions aren't taken, database statistics become outdated, and SharePoint performance issues eventually occur.  
@@ -97,7 +98,7 @@ To update database statistics on a single database that uses the FULLSCAN option
 EXEC sp_MSforeachtable 'UPDATE STATISTICS ? WITH FULLSCAN'  
 ```  
 
-Important note  The “sp_MSforeachtable” option is an undocumented procedure that's provided “as is” and should only be used to mitigate the immediate issue. We do not recommended that you use this procedure as part of a regular maintenance plan. Instead, see our [UPDATE STATISTICS (Transact-SQL)](https://msdn.microsoft.com/library/ms187348.aspx) documentation about how to implement a plan to UPDATE STATISTICS, using the FULLSCAN option.   
+Important note  The "sp_MSforeachtable" option is an undocumented procedure that's provided "as is" and should only be used to mitigate the immediate issue. We do not recommended that you use this procedure as part of a regular maintenance plan. Instead, see our [UPDATE STATISTICS (Transact-SQL)](https://msdn.microsoft.com/library/ms187348.aspx) documentation about how to implement a plan to UPDATE STATISTICS, using the FULLSCAN option.   
 
 Depending on how outdated the database statistics have become, you may have to clear the query plan cache by running the [DBCC FREEPROCCACHE](https://msdn.microsoft.com/library/ms174283.aspx) command after you update the database statistics. You'll find the syntax and arguments for this procedure in [DBCC FREEPROCCACHE (Transact-SQL)](https://msdn.microsoft.com/library/ms174283.aspx). Doing this makes sure that new queries use the optimal execution plan after the database statistics are updated. For example, see the following query:  
 
@@ -117,4 +118,6 @@ GO
 sp_recompile proc_getwebnavstruct  
 ```  
 
-Running the [sp_recompile](https://msdn.microsoft.com/library/ms181647.aspx) command together with procedure, function, or table parameters targets a single element in the cache for removal without affecting the instance.
+Running the [sp_recompile](https://msdn.microsoft.com/library/ms181647.aspx) command together with procedure, function, or table parameters target a single element in the cache for removal without affecting the instance.
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

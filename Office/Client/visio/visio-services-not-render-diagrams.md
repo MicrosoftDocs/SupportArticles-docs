@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 ms.reviewer: parida, Arykhus, kevinmil, barbway, emilcico
 appliesto:
@@ -19,6 +20,8 @@ appliesto:
 ---
 
 # Visio Services does not render diagrams that are hosted on servers that have IDNs
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

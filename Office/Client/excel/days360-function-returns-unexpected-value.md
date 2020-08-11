@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Excel 2003
 - Excel 2002
@@ -17,6 +18,8 @@ appliesto:
 ---
 
 # An unexpected value is returned when you use the DAYS360 function in Excel
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

@@ -1,6 +1,6 @@
 ---
 title: Incoming call fails when you use Skype for Business Cloud Connector Edition
-description: Describes an issue that triggers a “We’re sorry, we cannot complete your call at this time” error when you use Skype for Business Cloud Connector Edition. Provides a solution.
+description: Describes an issue that triggers a "We're sorry, we cannot complete your call at this time" error when you use Skype for Business Cloud Connector Edition. Provides a solution.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Online
 ---
@@ -27,7 +28,7 @@ Consider the following scenario:
 - The **InternetDNSIPAddress** property is configured by using the correct public DNS server IP address in the CloudConnector.ini file.   
 
 In this scenario, an incoming call fails and you receive either a fast busy signal or a recording whose content resembles the following:
- We’re sorry, we cannot complete your call at this time.
+ We're sorry, we cannot complete your call at this time.
 
 ## Solution 
 
@@ -37,7 +38,7 @@ Use one of the following methods, as appropriate for your situation.
  
 Configure the external network interface on the Cloud Connector Edge server to use a public DNS server.
 
-Note Make sure that you modify the Advanced settings on this interface to remove the **Register this connection’s addresses in DNS** option.
+Note Make sure that you modify the Advanced settings on this interface to remove the **Register this connection's addresses in DNS** option.
 
 ### Method 2
  
@@ -45,7 +46,7 @@ For Cloud Connector Edition 1.4.1, modify the Cloud Connector DNS server to use 
 
 ## More information
 
-The Cloud Connector Edition Edge Server cannot resolve the **sipfederationtls** DNS SRV record for the user’s SIP domain (or domains). A Skype for Business Server logging trace on the Edge server shows the following errors:
+The Cloud Connector Edition Edge Server cannot resolve the **sipfederationtls** DNS SRV record for the user's SIP domain (or domains). A Skype for Business Server logging trace on the Edge server shows the following errors:
 
 - **SIP/2.0 504 Server time-out error**   
 - **ms-diagnostics error 1008 "Unable to resolve DNS SRV record"**   

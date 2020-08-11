@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Excel for Office 365
 - Excel 2019
@@ -17,6 +18,8 @@ appliesto:
 ---
 
 # VBA code writes to cells slowly when many ActiveX controls are invisible in Excel 2016
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

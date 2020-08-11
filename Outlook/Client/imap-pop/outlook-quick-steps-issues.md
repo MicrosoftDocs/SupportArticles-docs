@@ -10,18 +10,19 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: gabesl
+ms.custom: CSSTroubleshoot
 appliesto:
 - Outlook 2016
 ---
 
-# “The Calendar folder cannot be found” or “The Tasks folder cannot be found” error when you use Quick Steps in Outlook
+# "The Calendar folder cannot be found" or "The Tasks folder cannot be found" error when you use Quick Steps in Outlook
 
 ## Symptoms
 
 When you use an IMAP or POP account that's added as a secondary account to the Outlook profile and try to use any of the following **Quick Steps**, you receive one of two error messages:
 
 ```
-“The Calendar folder cannot be found” or “The Tasks folder cannot be found”.
+"The Calendar folder cannot be found" or "The Tasks folder cannot be found".
 ```
 
 ![quick step error message](media/folder-cannot-be-found.png)
@@ -30,8 +31,8 @@ When you use an IMAP or POP account that's added as a secondary account to the O
 
 * Create a task with attachment
 * Create a task with text of message
-* Cre ate an appointment with attachment
-* Cre ate  an appointment with text of message
+* Create an appointment with attachment
+* Create an appointment with text of message
 
 ## Cause
 

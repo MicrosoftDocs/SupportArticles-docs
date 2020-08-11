@@ -8,6 +8,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.service: office-perpetual-itpro
+ms.custom: CSSTroubleshoot
 ms.topic: article 
 ms.author: v-six
 appliesto:
@@ -15,6 +16,8 @@ appliesto:
 ---
 
 # Can't edit footer information in the "Header and Footer" dialog in a PowerPoint presentation
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

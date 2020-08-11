@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: article 
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -17,6 +18,8 @@ appliesto:
 ---
 
 # "end tag" error occurs when you open a DOCX file in Word 2013, 2010, or 2007
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 
@@ -69,7 +72,7 @@ Incorrect tags:
 
 <mc:AlternateContent>
 
-<mc:Choice Requires=”wps”>
+<mc:Choice Requires="wps">
 
 <m:oMath>
 
@@ -85,7 +88,7 @@ Correct tags:
 
 <mc:AlternateContent>
 
-<mc:Choice Requires=”wps”>
+<mc:Choice Requires="wps">
 
 …
 
@@ -99,7 +102,7 @@ Correct tags:
 **Did this fix the problem?**
 
 - Check whether the problem is fixed. If the problem is fixed, you are finished with this section. If the problem is not fixed, you can [contact support](https://support.microsoft.com/contactus).   
-- We would appreciate your feedback. To provide feedback or to report any issues with this solution, please leave a comment on the "[Fix it for me](https://blogs.technet.com/fixit4me/)" blog or send us an [email](mailto:fixit4me@microsoft.com?subject=kb) message.   
+- We would appreciate your feedback. To provide feedback or to report any issues with this solution, please send us an [email](mailto:fixit4me@microsoft.com?subject=kb) message.   
 
 
 ##  More Information
@@ -135,4 +138,4 @@ The steps provided work for both Word 2007, Word 2010 and Word 2013:
 2. In the **Save As** dialog box, click "Save as type:" dropdown and select **Rich Text format (*.rtf)**.   
 3. Click **Save**.   
 
-Click to view  [Error when opening a Word 2007 or 2010 document "The name in the end tag of the element must match the element type in the start tag"](https://blogs.technet.com/b/wordonenotesupport/archive/2011/03/24/error-when-opening-a-word-2007-or-2010-document.aspx) for more information about this issue.
+Click to view  [Error when opening a Word 2007 or 2010 document "The name in the end tag of the element must match the element type in the start tag"](https://cybertext.wordpress.com/2011/12/21/word-error-opening-a-word-2010-document-in-word-2007) for more information about this issue.

@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Exchange Online
 - Microsoft Lync Online
@@ -64,3 +65,7 @@ To resolve this issue, follow these steps:
 ## Status
 
 Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

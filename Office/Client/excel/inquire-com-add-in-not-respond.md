@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 ms.reviewer: xl15beta, brampson, jenl
 appliesto:
@@ -16,6 +17,8 @@ appliesto:
 ---
 
 # Inquire COM add-in options do not respond in Excel 2013
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

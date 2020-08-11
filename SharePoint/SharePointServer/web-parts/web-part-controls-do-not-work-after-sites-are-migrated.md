@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Server 2016
 - SharePoint Server 2013
@@ -54,11 +55,11 @@ Add the following entry to the **SafeControls** section:
 Add the following entry to the **assemblyBinding** section of the web.config file:  
 
 ```
-< dependentAssembly>   
- < assemblyIdentity name="Microsoft.Office.Excel.WebUI" publicKeyToken="71e9bce111e9429c" />   
- < !-- Assembly versions can be redirected in application, publisher policy, or machine configuration files. -->   
- < bindingRedirect oldVersion="15.0.0.0" newVersion="16.0.0.0"/>   
- < /dependentAssembly>   
+<dependentAssembly>   
+ <assemblyIdentity name="Microsoft.Office.Excel.WebUI" publicKeyToken="71e9bce111e9429c" />   
+ <!-- Assembly versions can be redirected in application, publisher policy, or machine configuration files. -->   
+ <bindingRedirect oldVersion="15.0.0.0" newVersion="16.0.0.0"/>   
+ </dependentAssembly>   
 ```
 
 **ReportViewerWebPart**
@@ -68,3 +69,7 @@ Add the following entry to the **SafeControls** section:
 ```
 <SafeControl Assembly="Microsoft.ReportingServices.SharePoint.UI.WebParts, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" Namespace="Microsoft.ReportingServices.SharePoint.UI.WebParts" TypeName="*" Safe="True" />
 ```
+
+## More information
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

@@ -10,8 +10,10 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
+- SharePoint Server
 ---
 
 # Workflow that uses the SharePoint 2013 Workflow Platform Type contains blank values in output from the "Multiple lines of text" column
@@ -44,4 +46,4 @@ To work around this issue, disable automatic updating of the workflow status to 
 
 This issue occurs because the **Multiple lines of text** column that has the **Append Changes to Existing Text** setting applied to it updates itself internally with an empty value when you update another column in the list item by using a workflow. When the workflow updates the **Status** column during execution in this scenario, the value of the **Multiple lines of text** becomes blank in the output.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

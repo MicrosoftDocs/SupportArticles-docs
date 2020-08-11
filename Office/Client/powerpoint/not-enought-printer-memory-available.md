@@ -7,6 +7,7 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
+ms.custom: CSSTroubleshoot
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
@@ -15,6 +16,8 @@ appliesto:
 ---
 
 # "Not enough printer memory available to print page" when you print a presentation in PowerPoint
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

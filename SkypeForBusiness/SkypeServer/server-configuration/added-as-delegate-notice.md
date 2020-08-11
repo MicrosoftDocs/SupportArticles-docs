@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft Lync 2013
 - Skype for Business 2016
@@ -73,9 +74,11 @@ Lync 2013 (Skype for Business) MSI and Click-to-Run clients and Skype for Busine
 To determine whether your Office installation is Click-to-Run or MSI-based, follow these steps:
 
 1. Start an Office 2016 application.    
-2. On the **File **menu, select **Account**.   
-3. For Office 2016 Click-to-Run installations, an **Update Options **item is displayed. For MSI-based installations, the **Update Options **item isn't displayed.   
+2. On the **File** menu, select **Account**.   
+3. For Office 2016 Click-to-Run installations, an **Update Options** item is displayed. For MSI-based installations, the **Update Options** item isn't displayed.   
 
 |Office 2016 Click-to-Run installation|MSI-based Office 2016|
 |-|-|
-|![The screenshot for Word click to run ](https://support.microsoft.com/Library/Images/3099590.png)|![The screenshot for Word MSI ](https://support.microsoft.com/Library/Images/2971882.png)|
+|![The screenshot for Word click to run](./media/added-as-delegate-notice/click-to-run.png)|![The screenshot for Word MSI](./media/added-as-delegate-notice/about-word.png)|
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Lync Server 2013
 ---
@@ -31,7 +32,7 @@ Additionally, users may see the following entry or entries in the logs if the is
 2014-04-23 15:18:31.230 Lync[247:3b2ae18c] INFO APPLICATION CTransportRequestRetrialQueue.cpp/822:Req. completed, Stopping timer.
 2014-04-23 15:18:31.230 Lync[247:3b2ae18c] ERROR APPLICATION CUcwaAutoDiscoveryGetUserUrlOperation.cpp/325:Request failed. Error - E_SslError (E2-2-2)
 2014-04-23 15:18:31.351 Lync[247:3b2ae18c] INFO UI CMUIUtil.mm/409:Mapping error code = 0x22020002, context = , type = 201
-2014-04-23 15:18:31.351 Lync[247:3b2ae18c] INFO UI CMUIUtil.mm/1722:Mapped error message is 'We can’t verify the certificate from the server. Please contact your support team.
+2014-04-23 15:18:31.351 Lync[247:3b2ae18c] INFO UI CMUIUtil.mm/1722:Mapped error message is 'We can't verify the certificate from the server. Please contact your support team.
 ```
 
 ## Resolution
@@ -48,3 +49,5 @@ For more information, go to the following Apple website:
 Or, contact [Apple Enterprise Support](https://www.apple.com/support/enterprise/) for help with managing your iOS devices.
 
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

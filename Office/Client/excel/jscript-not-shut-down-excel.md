@@ -6,6 +6,7 @@ manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
 - MET150
+ms.custom: CSSTroubleshoot
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
@@ -16,6 +17,8 @@ appliesto:
 ---
 
 # BUG: Excel Does Not Shut Down After Calling the Quit Method When Automating from JScript
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

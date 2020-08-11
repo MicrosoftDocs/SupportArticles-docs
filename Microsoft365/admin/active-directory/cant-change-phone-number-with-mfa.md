@@ -1,6 +1,6 @@
 ---
 title: Can't change office phone number when setting up Azure Multi-Factor Authentication
-description: Describes a scenario that prevents a user from changing her office phone number when she sets up Azure Multi-Factor Authentication. A solution is provided.
+description: Describes a scenario that prevents a user from changing his office phone number when he sets up Azure Multi-Factor Authentication. A solution is provided.
 author: lucciz
 ms.author: v-zolu
 manager: dcscontentpm
@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: article 
 ms.prod: office 365
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -20,13 +21,15 @@ appliesto:
 
 # Users can't change their office phone number when they set up Azure Multi-Factor Authentication
 
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+
 ## Problem
 
-When a user tries to set up Azure Multi-Factor Authentication, she can't select or change the **Office Phone** option. The user can't edit the phone number because the text box is unavailable (appears dimmed). Additionally, she can't set the office phone as the preferred contact method. 
+When a user tries to set up Azure Multi-Factor Authentication, the user can't select or change the **Office Phone** option. The user can't edit the phone number because the text box is unavailable (appears dimmed). Additionally, the user can't set the office phone as the preferred contact method. 
 
 ## Cause 
 
-This problem occurs for on-premises users who are synchronized from the on-premises Active Directory environment to Azure Active Directory (Azure AD). 
+This problem occurs for on-premises users who are synchronized from the on-premises Active Directory environment to Azure Active Directory. 
 
 ## Solution 
 

@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Online
 ---
@@ -31,4 +32,4 @@ For more information, go to the following Microsoft websites:
 - [What are emergency locations, addresses and call routing?](https://support.office.com/article/what-are-emergency-locations-addresses-and-call-routing-589bf5f5-490a-4215-8588-99bab7d33e31)   
 - [Add or remove an emergency address for your organization](https://support.office.com/article/add-or-remove-an-emergency-address-for-your-organization-f954c67c-b73c-4473-b6cd-a0fbcd0fd4c9)
 
-
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

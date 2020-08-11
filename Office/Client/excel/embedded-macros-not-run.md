@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Excel for Office 365
 - Excel 2019
@@ -17,6 +18,8 @@ appliesto:
 ---
 
 # Macros in embedded Excel workbook are blocked from running
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptom
 
@@ -32,7 +35,7 @@ Macros in this document have been disabled by your enterprise administrator for 
 
 ## Cause
 
-This issue occurs if the embedded Excel workbook isn’t from a trusted location, or the new workbook isn't saved to a trusted location. 
+This issue occurs if the embedded Excel workbook isn't from a trusted location, or the new workbook isn't saved to a trusted location. 
 
 ## Resolution
 

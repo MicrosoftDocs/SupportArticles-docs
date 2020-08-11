@@ -8,6 +8,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.service: sharepoint-online
+ms.custom: CSSTroubleshoot
 ms.topic: article
 ms.author: v-six
 appliesto:
@@ -41,8 +42,8 @@ To resolve this issue, grant permissions to the **Everyone except external users
 
 ## More information
 
-This is a known issue when you use the Hybrid Picker. This issue occurs when users don’t have permissions to create sites and the administrator doesn’t have a OneDrive for Business site provisioned for their account.
+This is a known issue when you use the Hybrid Picker. This issue occurs when users don't have permissions to create sites and the administrator doesn't have a OneDrive for Business site provisioned for their account.
 
 For more information about the Hybrid Picker, see [Hybrid picker in the SharePoint Online admin center](https://docs.microsoft.com/SharePoint/hybrid/hybrid-picker-in-the-sharepoint-online-admin-center).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Server 2016
 ---
@@ -30,13 +31,9 @@ This error occurs because the Microsoft SharePoint Foundation administration too
 
 You can safely ignore this message because the error does not affect the integrity of the SharePoint slipstream installation.
 
-  
-
 ## Workaround  
 
 To avoid this error, run a non-slipstream installation of SharePoint Server 2016. After the SharePoint Server 2016 installation is complete, install the SharePoint updates.
-
-  
 
 ## More information  
 
@@ -87,3 +84,5 @@ Report Id: 00000000-0000-0000-0000-000000000000
 Faulting package full name:  
 Faulting package-relative application ID:
 ```
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

@@ -1,0 +1,7 @@
+- name: Outlook for iOS and Android Troubleshooting
+  href: ../outlook-mobile-welcome.md
+  items:
+  - name: Exchange connectivity
+    items:
+    - name: ActiveSync v12.0 is out of support
+      href: ../exchange-connectivity/activesync-v12.0-out-of-support.md

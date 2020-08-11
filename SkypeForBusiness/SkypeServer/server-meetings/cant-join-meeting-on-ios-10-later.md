@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 ms.reviewer: jaredgo, pmaloo, jasco, rischwen, amitpeer, mirung, corbinm, landerl  
 appliesto:
@@ -47,7 +48,7 @@ To work around this issue if you have Lync 2013 for iPhone, Lync 2013 for iPad, 
 3. Tap **Join Meeting**.   
 
 > [!NOTE]
-> This workaround applies only to organizers and attendees who have Lync 2013 for iPhone, Lync 2013 for iPad, or Skype for Business for iOS installed. If you don’t have any of these apps installed, if you're on a Lync Server 2010 environment, or if you're a federated or anonymous attendee who is external to the organization, follow these steps to join the meeting:
+> This workaround applies only to organizers and attendees who have Lync 2013 for iPhone, Lync 2013 for iPad, or Skype for Business for iOS installed. If you don't have any of these apps installed, if you're on a Lync Server 2010 environment, or if you're a federated or anonymous attendee who is external to the organization, follow these steps to join the meeting:
 > 1. Copy the meeting URL from the meeting invitation.    
 > 2. Go to https://aka.ms/skypemeetingjoin-ios, and then paste the URL that you copied in step 1 into the text box on that webpage.  
 > 3. Tap **Join Meeting**.   
@@ -60,3 +61,5 @@ To work around this issue if you have Lync 2013 for iPhone, Lync 2013 for iPad, 
 **Third-party information disclaimer**
 
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

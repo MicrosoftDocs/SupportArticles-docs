@@ -10,8 +10,10 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
+- SharePoint Server
 ---
 
 # InfoPath Forms Services differences between SharePoint Online (DvNext/MT) and SharePoint On-Premises
@@ -90,3 +92,7 @@ When you use an InfoPath form in the browser through Office 365, UDCX connection
 ## Difference in account encoding
 
 If a form is migrated from an on-premises SharePoint environment, it may contain hard-coded references to on-premises accounts in the form of the **i:0#.w|domain\user** or **domain\user accounts**. These accounts notations no longer work in the DvNext/MT environment. They should be replaced by using the **i:0#.f|membership|user@domain** notation.
+
+## More information
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

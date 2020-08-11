@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Server 2013
 - SharePoint Online
@@ -72,10 +73,10 @@ To do this, follow these steps in the SharePoint Management Shell.
 
    ```
    $proxy = get-spenterprisesearchserviceapplicationproxy
-   $proxy.Properties[“Microsoft.Office.Server.Utilities.SPPartitionOptions”] = 0
+   $proxy.Properties["Microsoft.Office.Server.Utilities.SPPartitionOptions"] = 0
    $proxy.Update()
    $ssa = get-spenterprisesearchserviceapplication
-   $ssa.SetProperty(“IgnoreTenantization”,1)
+   $ssa.SetProperty("IgnoreTenantization",1)
    $ssa.Update()
    ```
 
@@ -99,3 +100,4 @@ After you follow these steps, the SharePoint 2013 on-premises search farm should
 
 For more information, go to [Understanding multi-tenancy in SharePoint Server 2013](https://docs.microsoft.com/SharePoint/administration/understanding-multi-tenancy).
 
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

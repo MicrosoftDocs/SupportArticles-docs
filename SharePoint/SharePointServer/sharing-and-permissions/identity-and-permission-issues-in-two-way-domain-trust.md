@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft SharePoint
 ---
@@ -38,3 +39,7 @@ This scenario is unsupported. SharePoint can't reside in a domain that's part of
 
 - Disable the source account.     
 - Delete the source account's objectSid attribute from the SID history of the destination account.       
+
+## More information
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

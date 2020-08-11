@@ -11,6 +11,7 @@ ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
 ms.reviewer: adam
+ms.custom: CSSTroubleshoot
 appliesto:
 - Lync 2010 for Android
 ---
@@ -52,3 +53,5 @@ The following Android smartphone devices have been specifically evaluated and ar
 |Kyocera|Echo|480 X 800|1 GB|Virtual Keyboard, double screen|
 |Samsung|Android 4.0 on Nexus S|480 X 800|16 GB|Virtual Keyboard|
 |Samsung|Galaxy Nexus|1280 X 720||Virtual Keyboard|
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

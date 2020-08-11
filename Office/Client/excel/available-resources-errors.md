@@ -8,6 +8,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
+ms.custom: CSSTroubleshoot
 ms.topic: article
 ms.author: v-six
 appliesto:
@@ -20,6 +21,8 @@ appliesto:
 ---
 
 # How to troubleshoot "available resources" errors in Excel
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 
@@ -39,9 +42,9 @@ There isn't enough memory to complete this action. Try using less data or closin
 
 ## Cause
 
-The above memory error messages can be very generic and don't always identify the real cause of the issue. However, if your file is large or contains a large amount of features, it is possible you are running low on available memory resources. 
+The above memory error messages can be generic and don't always identify the real cause of the issue. However, if your file is large or contains a large number of features, it is possible you are running low on available memory resources. 
 
-Before we explore the more common reasons for the memory errors, it good to understand Excel's limitations. Please see the following resources for more information:
+Before we explore the more common reasons for the memory errors, it good to understand Excel's limitations. See the following resources for more information:
 
 - [Excel specifications and limits](https://support.office.com/article/excel-specifications-and-limits-ca36e2dc-1f09-4620-b726-67c00b05040f)
 - [Excel 2010 Performance: Performance and Limit Improvements](https://msdn.microsoft.com/library/office/ff700514.aspx) 
@@ -72,7 +75,7 @@ If you are inserting rows and columns, performing calculations, or copying and 
 
 Consider this scenario:
 
-You have a spreadsheet with 1 million formulas on a sheet and you insert a new column. This will force Excel to recalculate all the formulas in the spreadsheet adjusting for the new column that you inserted. It is very possible, depending on the complexity of your spreadsheet, bitness of Excel, and how the spreadsheet is built, and what formulas are used, that you receive the out of resources error.
+You have a spreadsheet with 1 million formulas on a sheet and you insert a new column. This will force Excel to recalculate all the formulas in the spreadsheet adjusting for the new column that you inserted. It is possible, depending on the complexity of your spreadsheet, bitness of Excel, and how the spreadsheet is built, and what formulas are used, that you receive the out of resources error.
 
 The following articles address how to optimize performance with calculations:
 
@@ -87,7 +90,7 @@ Other areas that can cause the memory issues are excess shapes, complex PivotTab
 
 #### Custom Views in a Shared Workbook
 
-If you are using the feature Shared Workbook. (Review Ribbon>Share Workbook) Cleaning out the Custom Views may help with available memory. To do this;
+If you are using the feature Shared Workbook (Review Ribbon > Share Workbook), cleaning out the Custom Views may help with available memory. To do this;
 
 1. On the **View Ribbon**
 2. **Custom Views** on the dialog choose **Delete**
@@ -149,22 +152,22 @@ When Excel launches, it uses the default printer to help render the file. Try t
  
 1. Close Excel    
 2. Open the printer and faxes window (XP) or Devices and Printers (Vista, 7, 8, 10)    
-3. Right click the "Microsoft XPS Document Writer" printer 
+3. Right-click the "Microsoft XPS Document Writer" printer 
 4. Click Set as Default    
 
 If your issue is not resolved after you change your default printer, go to method 6.
 
 ### Method 6: Test without Antivirus 
 
-Antivirus can sometimes cause problems by continuously trying to scan the Excel file or something in the file. Many times the memory error will be random and will be found with any spreadsheet. Test this by shutting off the antivirus temporarily, or by not having Excel files scanned. In some cases the AV will need to be removed.  
+Antivirus can sometimes cause problems by continuously trying to scan the Excel file or something in the file. Many times the memory error will be random and will be found with any spreadsheet. Test this by shutting off the antivirus temporarily, or by not having Excel files scanned. In some cases, the AV will need to be removed.  
 
 If your issue is not resolved after you turn off antivirus, go to method 7.
 
-### Method 7: Test with 64 bit version of Excel
+### Method 7: Test with 64-bit version of Excel
 
-Working with large Excel files can use the memory available to the 32 bit Excel application. In any 32 bit application there is a 2 GB limitation.
+Working with large Excel files can use the memory available to the 32-bit Excel application. In any 32-bit application there is a 2-GB limitation.
 
-If your processes need to use more than 2 GB's, then you need to carefully consider moving to Microsoft Excel 64 bit version. The 64 bit version will allow all available physical RAM on the machine to be used. If you are interested in researching 64 bit versions, see [64-bit editions of Office 2013](https://technet.microsoft.com/library/ee681792.aspx).
+If your processes need to use more than 2 GB's, then you need to carefully consider moving to Microsoft Excel 64-bit version. The 64-bit version will allow all available physical RAM on the machine to be used. If you are interested in researching 64-bit versions, see [64-bit editions of Office 2013](https://technet.microsoft.com/library/ee681792.aspx).
 
 If your issue is not resolved after testing on 64 bit, go to method 8.
 

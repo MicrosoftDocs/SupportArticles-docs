@@ -7,6 +7,7 @@ localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 search.appverid: 
 - MET150
@@ -17,6 +18,8 @@ appliesto:
 ---
 
 # Sounds missing after a PowerPoint presentation is saved as video
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business server 2015
 - Exchange Server 2013
@@ -57,3 +58,7 @@ Wildcard domains are not supported for server-to-server communication under Acce
 ## Resolution
 
 The only solution is to explicitly define all accepted domains on the Exchange server and not use any wildcards.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

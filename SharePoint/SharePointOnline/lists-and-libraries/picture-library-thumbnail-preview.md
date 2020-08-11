@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 ---
@@ -18,7 +19,7 @@ appliesto:
 
 ## Problem
 
-You have a picture library that's using the classic experience for lists and libraries in SharePoint Online. You add a large image to the Picture Library. However, when you use the **Thumbnails** view for the library, the thumbnail image isn’t displayed. Additionally, when you click the image, the Preview field displays a broken image-link icon and the text "Picture."
+You have a picture library that's using the classic experience for lists and libraries in SharePoint Online. You add a large image to the Picture Library. However, when you use the **Thumbnails** view for the library, the thumbnail image isn't displayed. Additionally, when you click the image, the Preview field displays a broken image-link icon and the text "Picture."
 
 ## Solution/Workaround
 
@@ -35,4 +36,4 @@ For more information about the new look and navigation experience for document l
 
 For more information about how to work with photos in a picture library, go to [Work with photos in a picture library](https://support.office.com/article/work-with-photos-in-a-picture-library-84e938f3-b578-41a3-ba31-4d3847ec21aa).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

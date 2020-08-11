@@ -8,12 +8,15 @@ search.appverid:
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Microsoft Excel
 ---
 
 # Using a worksheet function in a Visual Basic macro in Excel
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

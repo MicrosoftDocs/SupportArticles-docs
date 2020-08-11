@@ -6,6 +6,7 @@ manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
 - MET150
+ms.custom: CSSTroubleshoot
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
@@ -16,6 +17,8 @@ appliesto:
 ---
 
 # When you try to optimize a presentation, some videos are listed as "Unsupported" in the Compress Media dialog box in PowerPoint 2010
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

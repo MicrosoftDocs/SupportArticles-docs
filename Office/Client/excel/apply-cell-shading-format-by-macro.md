@@ -10,11 +10,14 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft Excel
 ---
 
 # Use a macro to apply cell shading format to every other row in a selected range in Excel
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 
@@ -28,7 +31,7 @@ To see the patterns available in Microsoft Office Excel 2003 and in earlier vers
 
 To see the patterns available in Microsoft Office Excel 2007, follow these steps:
 
-1. On the **Home** tab, click **Format** in the **Cells** group . Then, click **Format Cells.**.   
+1. On the **Home** tab, click **Format** in the **Cells** group. Then, click **Format Cells.**.   
 2. In the **Format Cells** dialog box, click the **Fill** tab.   
 
 The **Pattern** drop-down list displays the available patterns. The pattern that is used in the following macro, referred to by its constant name, xlGray16, is the fifth one from the right in the first row.
@@ -58,11 +61,11 @@ End Sub
 
 This process can also be done manually by using conditional formatting. 
 
-For additional information about how to format every other row by using conditional formatting, see [Apply shading to alternate rows in a worksheet](https://support.microsoft.com/help/268568).
+For more information about how to format every other row by using conditional formatting, see [Apply shading to alternate rows in a worksheet](https://support.microsoft.com/help/268568).
 
-You can also format a list by using the **AutoFormat** menu command. In Excel 2003 and in Microsoft Excel 2002, the **AutoFormat** menu command is on the **Format** menu. In Excel 2007, you have to add the **AutoFormat** menu command to the Quick Access Toolbar. To do this, follow these steps:
+You can also format a list by using the **Auto-Format** menu command. In Excel 2003 and in Microsoft Excel 2002, the **Auto-Format** menu command is on the **Format** menu. In Excel 2007, you have to add the **Auto-Format** menu command to the Quick Access Toolbar. To do this, follow these steps:
 
 1. Click **Microsoft Office Button**, and then click **Excel Options**.    
-2. Click **Customize**.   
+2. Click **Design customization**.   
 3. Click to select the **All Commands** under the **Choose commands from**.   
-4. Click **AutoFormat**, click **Add**, and then click **OK**.   
+4. Click **Auto-Format**, click **Add**, and then click **OK**.   

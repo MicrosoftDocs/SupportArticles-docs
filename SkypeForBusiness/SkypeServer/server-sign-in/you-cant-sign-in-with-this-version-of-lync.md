@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 ms.reviewer: corbinm， mirung， daveh， msp， jasco， rischwen， amitpeer， landerl 
 appliesto:
@@ -76,3 +77,5 @@ The third-party products that this article discusses are manufactured by compani
 ## References
 
 [3097592 You can't join a meeting from outside Lync 2013, Lync 2010, or Skype for Business on iOS 9 or 9.1](https://support.microsoft.com/help/3097592)
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

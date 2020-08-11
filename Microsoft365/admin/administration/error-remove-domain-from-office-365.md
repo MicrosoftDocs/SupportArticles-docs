@@ -7,6 +7,7 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
+ms.custom: CSSTroubleshoot
 ms.service: office 365
 ms.topic: article
 ms.author: v-six
@@ -15,6 +16,8 @@ appliesto:
 ---
 
 # You get an error message when you try to remove a domain from Office 365
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Problem
 

@@ -1,7 +1,7 @@
 ---
 title: SharePoint app "Import Spreadsheet" fails with error "An unexpected error has occurred. (-2147352567)"
 description: Describes what to do if you receive an unexpected error (-2147352567) when using the Import Spreadsheet app in SharePoint.
-author: todmccoy
+author: McCoyBot
 ms.author: v-todmc
 ms.reviewer: 
 manager: dcscontentpm
@@ -10,6 +10,7 @@ search.appverid:
 - MET150
 audience: Admin
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
 appliesto:
@@ -63,3 +64,7 @@ If you enable this policy setting, you can choose from three options for control
 - **Disable macros by default** - All macros are disabled in the programmatically opened application.
 
 If this policy setting is disabled or not set, any separate program used to launch Microsoft Excel, PowerPoint, or Word programmatically can run macros without being blocked.
+
+## More information
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

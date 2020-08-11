@@ -7,6 +7,7 @@ ms.prod: office 365 ATP
 ms.topic: article
 ms.author: Scott.Landry
 manager: dcscontentpm
+ms.custom: CSSTroubleshoot
 localization_priority: Normal
 search.appverid: 
 - MET150
@@ -22,7 +23,7 @@ You set up an Office 365 Advanced Threat Protection (ATP) [anti-phishing policy]
 
 ## Cause
 
-When a message is processed, it may have more than one malicious indicator. When this occurs, the action taken on the message is based on the order in which policies are applied. For more information about the ordering of policies, see [What policy applies when multiple protection methods and detection scans run on your email](https://docs.microsoft.com/office365/securitycompliance/how-policies-and-protections-are-combined).
+When a message is processed, it may have more than one malicious indicator. When this occurs, the action taken on the message is based on the order in which policies are applied. For more information about the ordering of policies, see [What policy applies when multiple protection methods and detection scans run on your email](https://docs.microsoft.com/microsoft-365/security/office-365-security/how-policies-and-protections-are-combined).
 
 ## Workaround
 
@@ -32,4 +33,4 @@ To work around this problem, change the actions of your anti-spam and anti-phish
 2. Under **Default spam filter policy**, select **Edit policy**
 3. Under **Spam and bulk actions**, select **Quarantine message** for **Spam**, **High confidence spam**, and **Phishing email**
 
-    ![edit spam filter policy](../media/user-impersonation-messages-are-classified-as-phishing/edit-spam-filter-policy.png)
+    ![edit spam filter policy](./media/user-impersonation-messages-are-classified-as-phishing/edit-spam-filter-policy.png)

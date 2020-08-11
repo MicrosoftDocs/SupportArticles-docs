@@ -4,6 +4,7 @@ description: Resolves a problem that Access 2010 databases randomly crash after 
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 audience: ITPro
@@ -15,6 +16,8 @@ appliesto:
 ---
 
 # Access 2010 crashes after you install Office 2010 Service Pack 1, and the error signature in Event Viewer points to the Vbe7.dll file
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

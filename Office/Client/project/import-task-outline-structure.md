@@ -1,6 +1,6 @@
 ---
-title: Importing an Task Outline Structure into Project
-description: Introduces how to import an task outline structure into Project.
+title: Importing a Task Outline Structure into Project
+description: Introduces how to import a task outline structure into Project.
 author: lucciz
 ms.author: v-zolu
 manager: dcscontentpm
@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.reviewer: Plammer
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -20,7 +21,9 @@ appliesto:
 - Project 2013 Standard
 ---
 
-# Importing an Task Outline Structure into Project
+# Importing a Task Outline Structure into Project
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ##  Summary
 
@@ -32,25 +35,25 @@ You cannot directly import the Outline Number field from a file saved in a forma
 
 Microsoft Project uses a task field called "Outline Level", in conjunction with the order tasks are imported, to determine where tasks fall in a project outline structure. Tasks with Outline Level=1 are at the highest level in the project outline. Tasks with Outline Level=2 are subordinate to level 1 tasks, level 3 tasks are subordinate to level 2 tasks, and so on, for example:
 
-A comma separated values (CSV) file contains the following text:
+A comma-separated values (CSV) file contains the following text:
 
- 1,Summary Task 1
+ 1, Summary Task 1
 
- 2,Task A
+ 2, Task A
 
- 2,Task B
+ 2, Task B
 
- 2,Summary Task 2
+ 2, Summary Task 2
 
- 3,Task C
+ 3, Task C
 
- 3,Task D
+ 3, Task D
 
- 1,Summary Task 3
+ 1, Summary Task 3
 
- 2,Task E
+ 2, Task E
 
- 2,Task F
+ 2, Task F
 
  If this file is imported into Microsoft Project using a task table with Outline Level and Name as its first two fields, the tasks will be imported with the following outline structure:
 

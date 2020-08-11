@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft SharePoint
 ---
@@ -60,3 +61,7 @@ The issues occur because there are comments in the web.config file of the ShareP
 ## Resolution  
 
 To resolve the issue, find and remove all comments from the web.config files for all SharePoint Web applications.
+
+## More information
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

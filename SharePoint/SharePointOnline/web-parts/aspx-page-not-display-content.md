@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 ---
@@ -48,5 +49,4 @@ To resolve the issue, remove the **My Tasks** Web Part from the page. To do this
 
 This issue occurs because editing the Sites.aspx page isn't supported.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
-
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

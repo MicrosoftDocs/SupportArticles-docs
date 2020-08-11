@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business
 ---
@@ -41,7 +42,7 @@ To work around this issue, follow these steps:
 3. Configure a new hosting provider in your on-premises configuration that enables communication to the Azure services that function as part of the OrgAA and call queue infrastructure. To do this, run the following cmdlet in Remote PowerShell:
 
     ```powershell
-    New-CSHostingProvider -Identity SFBOnlineResources -ProxyFqdn "sipfed.resources.lync.com" -Enabled $true -EnabledSharedAddressSpace $true -HostsOCSUsers $true -VerificationLevel AlwayVerifiable -IsLocal $false
+    New-CSHostingProvider -Identity SFBOnlineResources -ProxyFqdn "sipfed.resources.lync.com" -Enabled $true -EnabledSharedAddressSpace $true -HostsOCSUsers $true -VerificationLevel AlwaysVerifiable -IsLocal $false
     ```
 4. Make sure that domain that's specified for the call queue is the sip domain of the agents. Also, make sure that all agents in the queue are in the same sip domain. Do not specify "contoso.mail.onmicrosoft.com" or "onmicrosoft.com." If the domain was selected incorrectly when you created the call queue, you must re-create the call queue or OrgAA by using the correct domain.   
 

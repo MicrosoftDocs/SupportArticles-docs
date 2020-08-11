@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.reviewer: lisyu
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -18,7 +19,9 @@ appliesto:
 - Microsoft Office Publisher 2003
 ---
 
-# ”Publisher cannot open the file” error in Windows 7 or Windows 8
+# "Publisher cannot open the file" error in Windows 7 or Windows 8
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 If you are a Small Business customer, find additional troubleshooting and learning resources at the [Support for Small Business](https://smallbusiness.support.microsoft.com) site.
 
@@ -30,7 +33,7 @@ This issue occurs in a Windows 7 or Windows 8 environment when a Microsoft Publi
 
 ##  More Information
 
-Windows 7 and Windows 8 use a new validation process for OLE objects. This process triggers the “Publisher cannot open the file” error message when you try to open a file that contains corrupted OLE objects. 
+Windows 7 and Windows 8 use a new validation process for OLE objects. This process triggers the "Publisher cannot open the file" error message when you try to open a file that contains corrupted OLE objects. 
 ### What is OLE?
 OLE is a program-integration technology that you can use to share information between programs. OLE objects in Publisher can range from an Excel spreadsheet to a PowerPoint presentation to a bitmap image.
 

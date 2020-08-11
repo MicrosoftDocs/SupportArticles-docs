@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - SharePoint Online
@@ -96,4 +97,4 @@ regedit /s %TEMP%\94cf28e9-3a0e-4d3d-8161-d4b1d7bc94c0.reg
 del %TEMP%\94cf28e9-3a0e-4d3d-8161-d4b1d7bc94c0.reg
 ```
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

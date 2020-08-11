@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: o365-administration
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Cloud Services (Web roles/Worker roles)
@@ -19,6 +20,8 @@ appliesto:
 ---
 
 # 0x800488EE when connecting to Office 365, Azure, or Intune in the Azure AD Module for PowerShell
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## PROBLEM
 
@@ -42,7 +45,7 @@ rosoftOnlineException
 
 ## SOLUTION
 
-Restart the Microsoft Online Services Sign-In Assistant service. To do this, follow these steps:
+Restart the Online Services Sign-In Assistant service. To do this, follow these steps:
 
 1. Open Control Panel, click **Administrative Tools**, and then click **Services**.
 2. In the list of services, right-click **Microsoft Online Services Sign-In Assistant**, and then click **Restart**.

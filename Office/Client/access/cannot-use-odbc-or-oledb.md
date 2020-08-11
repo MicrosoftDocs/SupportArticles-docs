@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Access 2016
 - Access 2013
@@ -22,6 +23,8 @@ appliesto:
 ---
 
 # Can't use the Access ODBC driver or OLEDB provider outside Office Click-to-Run applications
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 
@@ -75,6 +78,6 @@ You must install an MSI installation of the Microsoft Access Database Engine fro
 >
 > For example: C:\AccessDatabaseEngine.exe /quiet
  
-[Microsoft Access 2013 Runtime](http://www.microsoft.com/download/details.aspx?id=39358)
+[Microsoft Access 2013 Runtime](https://www.microsoft.com/download/details.aspx?id=39358)
  
 [Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/download/details.aspx?id=13255)

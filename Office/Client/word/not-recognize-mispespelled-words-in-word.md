@@ -10,11 +10,14 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Word 2010
 ---
 
 # Spell Checker does not recognize misspelled words in Word 2010
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 
@@ -58,11 +61,11 @@ To install the proofing tools, follow these steps:
     > In this step and in the following step, the placeholder **Edition **represents the Microsoft Office edition that is installed on the computer.    
 5. In the **Microsoft Office **Edition**** dialog box, click **Add or Remove Features**, and then click **Continue**.
      
-    ![In the Microsoft Office Edition dialog box, click Add or Remove Features, and then click Continue.](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4024897_en_1)
+    ![In the Microsoft Office Edition dialog box, click Add or Remove Features, and then click Continue.](./media/not-recognize-mispespelled-words-in-word/features.png)
 
 6. Expand **Office Shared Features**, click the icon to the left of **Proofing Tools**, and then click **Run all from My Computer**.
  
-    ![Expand Office Shared Features, click the icon to the left of Proofing Tools, and then click Run all from My Computer.](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4024898_en_1)
+    ![Expand Office Shared Features, click the icon to the left of Proofing Tools, and then click Run all from My Computer.](./media/not-recognize-mispespelled-words-in-word/run-all-from-my-computer.png)
 
 ### Method 2: Enable the speller EN-US add-in  
  
@@ -72,7 +75,7 @@ To enable the add-in, follow these steps:
 2. On the left, click **Add-Ins**.    
 3. At the bottom of the **Word Options** dialog box, click the drop-down arrow under **Manage**, change the selection from **COM Add-ins** to **Disabled items**, and then click **Go**.
  
-    ![At the bottom of the Word Options dialog box, click the drop-down arrow under Manage, change the selection from COM Add-ins to Disabled items, and then click Go.](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4024899_en_1)
+    ![At the bottom of the Word Options dialog box, click the drop-down arrow under Manage, change the selection from COM Add-ins to Disabled items, and then click Go.](./media/not-recognize-mispespelled-words-in-word/disabled-items.png)
 
 4. In the **Disabled Items** dialog box, check whether **Speller EN-US (nlsdata0009.dll)** is available in the **Select the ones you which to re-enable** box.    
 5. If **Speller EN-US (nlsdata0009.dll)** is listed, click it, and then click **Enable**.    
@@ -86,11 +89,11 @@ To enable spell check as you type, follow these steps:
 2. In the **Word Options** dialog box, click **Proofing**.    
 3. Make sure that the **Check spelling as you type** check box is selected in the **When correcting spelling and grammar in Word** section.
  
-    ![Make sure that the Check spelling as you type check box is selected in the When correcting spelling and grammar in Word section.](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4024900_en_1)
+    ![Make sure that the Check spelling as you type check box is selected in the When correcting spelling and grammar in Word section.](./media/not-recognize-mispespelled-words-in-word/check-spelling.png)
 
 4. Make sure that all check boxes are cleared in the **Exception for** section.
  
-    ![Make sure that all check boxes are cleared in the Exception for section.](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4024901_en_1)
+    ![Make sure that all check boxes are cleared in the Exception for section.](./media/not-recognize-mispespelled-words-in-word/cleared-boxes.png)
 
 5. Click **OK**.    
 
@@ -103,10 +106,10 @@ To clear the "Do not check spelling or grammar check box, follow these steps:
 3. In the **Language** dialog box, select the language that you want.    
 4. If the **Do not check spelling or grammar** check box is selected, click to clear the check box.
 
-    ![If the Do not check spelling or grammar check box is selected, click to clear the check box.](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4024902_en_1)    
+    ![If the Do not check spelling or grammar check box is selected, click to clear the check box.](./media/not-recognize-mispespelled-words-in-word/language-window.png)    
 5. Click **OK**.
  
-    ![Click OK.](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4024903_en_1)    
+    ![Click OK.](./media/not-recognize-mispespelled-words-in-word/language-window-2.png)    
  
     > [!NOTE]
     > If this method fixes the problem, repeat steps 1 through 3 to reopen to the **Language** dialog box, and then click **Set As Default**

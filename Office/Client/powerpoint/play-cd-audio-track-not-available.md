@@ -7,6 +7,7 @@ manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
 ms.prod: office-perpetual-itpro
+ms.custom: CSSTroubleshoot
 localization_priority: Normal
 ms.reviewer: sandy, arykhus, kemille, richpo, debbiery
 search.appverid: 
@@ -18,6 +19,8 @@ appliesto:
 ---
 
 # The "Play CD Audio Track" command is not available on the ribbon in PowerPoint 2010
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ##  Summary
 

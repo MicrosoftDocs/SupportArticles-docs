@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Server 2013
 ---
@@ -59,3 +60,5 @@ The following SharePoint Server 2013 installation scenarios are not supported:
 - You install SharePoint Server 2013 on Windows Web Server.   
 - You install SharePoint Server 2013 on a virtual machine (VM) that uses the Microsoft Hyper-V Dynamic Memory feature.   
 - You disable Distributed Cache in a farm configuration.     
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

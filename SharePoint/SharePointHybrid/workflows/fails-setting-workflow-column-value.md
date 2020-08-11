@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - SharePoint Online
@@ -19,7 +20,7 @@ appliesto:
 
 ## Problem
 
-When you set a value for the **Hyperlink with formatting and constraints for publishing** column in Microsoft SharePoint Online, a SharePoint 2013 workflow is cancelled. Additionally, you receive the following error message:
+When you set a value for the **Hyperlink with formatting and constraints for publishing** column in Microsoft SharePoint Online, a SharePoint 2013 workflow is canceled. Additionally, you receive the following error message:
 
 **The property PropertyName does not exist on type 'SP.Data.ListNameListItem'. Make sure to only use property names that are defined by the type.**
 
@@ -27,7 +28,7 @@ When you set a value for the **Hyperlink with formatting and constraints for pub
 
 The REST endpoint that the workflow uses is the following:
 
-https://tenant.sharepoint.com/sites/SiteCol/_api/web/lists(guid'GUID')/Items(N)
+`https://tenant.sharepoint.com/sites/SiteCol/_api/web/lists(guid'GUID')/Items(N)`
 
 But it doesn't return the field value—for the **Hyperlink with formatting and constraints for publishing** field type.
 
@@ -42,4 +43,4 @@ To work around this issue, use one of the following methods:
 
 ## More information
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: office 365
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Cloud Services (Web roles/Worker roles)
 - Azure Active Directory
@@ -19,6 +20,8 @@ appliesto:
 ---
 
 # Supported scenarios for using AD FS to set up single sign-on in Office 365, Azure, or Intune
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Introduction 
 

@@ -1,5 +1,5 @@
 ---
-title: Spell checker doesn’t check text in the form fields in Word
+title: Spell checker doesn't check text in the form fields in Word
 description: Describes how to use a macro to spell check the form fields in Word.
 author: simonxjx
 manager: dcscontentpm
@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Word for Office 365
@@ -19,6 +20,8 @@ appliesto:
 ---
 
 # Spell checker doesn't check text in the form fields in Word
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptom
 

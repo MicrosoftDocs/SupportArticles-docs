@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - SharePoint Online
@@ -26,4 +27,4 @@ Microsoft uses the Unified Logging System (ULS) in the SharePoint Online environ
 
 For a list of features to support developers who want to build apps and solutions to extend SharePoint functionality, see the [SharePoint Online Service Description](https://technet.microsoft.com/library/sharepoint-online-developer-service-description.aspx).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

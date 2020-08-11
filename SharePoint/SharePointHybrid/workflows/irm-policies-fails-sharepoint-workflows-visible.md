@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - SharePoint Online
@@ -29,4 +30,4 @@ To work around this issue, use the SharePoint 2010 Workflow Platform content typ
 
 SharePoint 2010 workflow associations are the only kind of workflow that's surfaced by the IRM Retention Policy. The **SPWorkflowAssociation** class is the only class that's enumerated on the list or content type level that's displayed on the workflow drop-down menu.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

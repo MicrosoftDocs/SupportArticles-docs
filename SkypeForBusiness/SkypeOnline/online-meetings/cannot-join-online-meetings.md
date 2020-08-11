@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 ms.reviewer: dahans
 appliesto:
 - Skype for Business Online
@@ -104,7 +105,7 @@ To resolve this issue, change the user name of one of the users who has the dupl
 If external users (and only external users) can't join a Skype for Business Online meeting, first determine whether they're trying to join as authenticated users or as anonymous users.
 
 - If the user is trying to join as an authenticated user from another Lync or OCS organization:
-  - Your Skype for Business Online organization must have External Communications enabled, and external communication must be completely open. Or, the external user’s domain must be in the **Allow** list.
+  - Your Skype for Business Online organization must have External Communications enabled, and external communication must be completely open. Or, the external user's domain must be in the **Allow** list.
   - The external organization must have federation configured correctly from their side, too.   
   - For more information about federating with a Skype for Business Online organization, go to the following Microsoft TechNet website: [Configuring Federation support for a Skype for Business Online customer](https://technet.microsoft.com/library/hh202193.aspx)   
   - If authenticated join doesn't work, Lync should automatically try to join as an anonymous or guest user.
@@ -124,6 +125,6 @@ If these troubleshooting steps don't resolve the issue, and if joining the meeti
 
 ### Troubleshooting issues with third-party software
 
-If you’re using third-party software, you may be asked to update, disable, or remove the software as a troubleshooting step. If the issue is resolved after you take one of these actions, you may be referred to the third-party manufacturer for more help or to perform additional troubleshooting.  
+If you're using third-party software, you may be asked to update, disable, or remove the software as a troubleshooting step. If the issue is resolved after you take one of these actions, you may be referred to the third-party manufacturer for more help or to perform additional troubleshooting.  
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

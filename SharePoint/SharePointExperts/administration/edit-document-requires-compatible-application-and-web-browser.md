@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 appliesto:
 - Office Web Apps
 ---
@@ -36,7 +37,7 @@ The registry key that toggles this on or off is **EnableDynamicVirtualization**.
 
 Dynamic Virtualization has a limited scope of interaction designed for features that are introduced in App-V SP 2.
 
-This leads to an important statement: Just because the application is hooked, it doesn’t always mean that it's running virtualized if it's displayed as a process under the **ProcessesUsingVirtualComponents** registry key. This will be done at the thread level. When an ActiveX OCX or a DLL that implements a shell extension is loaded from a native process or a process from another virtual application, App-V generates an additional virtual environment on demand linking the package that contains the OCX or DLL with the process. Then dynamic virtualization is turned on for that particular thread. As soon as the thread exits, dynamic virtualization is turned off. If the said thread with dynamic virtualization spawns another thread, that thread will also be virtualized.
+This leads to an important statement: Just because the application is hooked, it doesn't always mean that it's running virtualized if it's displayed as a process under the **ProcessesUsingVirtualComponents** registry key. This will be done at the thread level. When an ActiveX OCX or a DLL that implements a shell extension is loaded from a native process or a process from another virtual application, App-V generates an additional virtual environment on demand linking the package that contains the OCX or DLL with the process. Then dynamic virtualization is turned on for that particular thread. As soon as the thread exits, dynamic virtualization is turned off. If the said thread with dynamic virtualization spawns another thread, that thread will also be virtualized.
 
 > [!NOTE]
 > When you turn off the Dynamic Virtualization and remove the executable paths from the previous configuration, you will lose the functionality described above.

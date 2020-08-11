@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 ---
@@ -38,5 +39,5 @@ This issue occurs because a site content type that's published to a subscriber s
 
 For more information about how to enable site collection features, see [Enable or disable site collection features](https://support.office.com/article/enable-or-disable-site-collection-features-a2f2a5c2-093d-4897-8b7f-37f86d83df04
 ).
- 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

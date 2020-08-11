@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - SharePoint Online
@@ -44,4 +45,4 @@ To work around this issue, use the SharePoint 2010 Workflow Platform Type to cre
 
 This issue occurs when workflows that use the SharePoint 2013 Workflow Platform Type create a document in a list that's based on a template from a content type.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

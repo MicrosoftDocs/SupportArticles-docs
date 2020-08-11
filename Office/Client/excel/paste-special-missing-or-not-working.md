@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: article 
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -15,6 +16,8 @@ appliesto:
 ---
 
 # Paste Special option is missing or not working in Microsoft Office
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 If you have Skype installed, please read: [Text has incorrect format when using paste in Microsoft Office](https://support.microsoft.com/help/2697462).
 Paste Special can make the task of pasting text go more smoothly by letting you choose which formatting you want to keep (source or destination) or by stripping all the formatting and just pasting the text. If you are having issues with Paste Special, continue on to the resolutions below:

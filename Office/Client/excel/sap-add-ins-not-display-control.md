@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Excel for Office 365
 - PowerPoint for Office 365
@@ -17,6 +18,8 @@ appliesto:
 ---
 
 # SAP add-ins don't display controls after update to Office 1806 or higher
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

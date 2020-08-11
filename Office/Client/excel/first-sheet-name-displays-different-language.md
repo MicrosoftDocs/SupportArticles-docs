@@ -8,7 +8,9 @@ audience: ITPro
 ms.topic: article 
 ms.prod: office 365
 localization_priority: Normal
-ms.custom: CI 106750
+ms.custom: 
+- CI 106750
+- CSSTroubleshoot
 ms.reviewer: iuliam
 appliesto:
 - Excel for Office 365
@@ -16,9 +18,12 @@ appliesto:
 - Excel 2016
 - Excel 2013
 - Excel 2010
+search.appverid: MET150 
 ---
 
 # The first worksheet name in a new Excel workbook displays in a language other than the Office display language
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

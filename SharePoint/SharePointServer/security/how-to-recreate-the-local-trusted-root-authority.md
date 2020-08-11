@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Foundation 2013
 - SharePoint Server 2013
@@ -54,3 +55,7 @@ New-SPTrustedRootAuthority -Name  "localNew" -Certificate  $rootCert
 ```
 
 After running the above commands, perform an IISReset on all servers in the farm.
+
+## More information
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

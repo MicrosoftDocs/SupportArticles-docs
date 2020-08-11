@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 - SharePoint Foundation 2013
@@ -61,3 +62,5 @@ To activate the tree view for the whole site collection (so that it's always dis
 For more information about how to configure the views that are available for specific folders in a site hierarchy, go to the following Microsoft website:
 
 [Configure the availability of views for a location in the site hierarchy](https://support.office.com/article/configure-the-availability-of-views-for-a-location-in-the-site-hierarchy-7930b539-55af-4b2f-8d6e-4e0cf263193c)
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

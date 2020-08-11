@@ -11,6 +11,7 @@ ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
 ms.reviewer: premgan
+ms.custom: CSSTroubleshoot
 appliesto:
 - Lync Server 2010 Enterprise Edition
 - Lync Server 2010 Standard Edition
@@ -83,3 +84,5 @@ For more information about how Windows Server 2012 manages SSL and TLS cypher su
 For more information about how Windows Server computers and Windows client computers manage SSL and TLS cypher suites, review the Microsoft TechNet documentation listed here:
 
 [245030](https://support.microsoft.com/help/245030) How to restrict the use of certain cryptographic algorithms and protocols in Schannel.dll
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

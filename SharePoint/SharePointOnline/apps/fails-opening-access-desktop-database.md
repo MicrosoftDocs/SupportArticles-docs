@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 ---
@@ -26,16 +27,16 @@ When you try to open a Microsoft Access desktop database in Microsoft SharePoint
 
 To resolve this issue, follow these steps:
 
-1. In the Microsoft Access app, create a new connection.
+1. In the Microsoft Access web app, create a new connection.
 1. In your Access desktop database, delete all linked tables.
-1. Relink the tables in the Access desktop database by using the information about the new connection for the Access app.
+1. Relink the tables in the Access desktop database by using the information about the new connection for the Access web app.
 
-To create a new connection in the Access app and view the new connection information, follow these steps:
+To create a new connection in the Access web app and view the new connection information, follow these steps:
 
-1. Open the Access app in the Access client. To do this, follow these steps:
+1. Open the Access web app in the Access client. To do this, follow these steps:
 
-   1. Browse to the SharePoint Online site where the Access app exists.
-   1. Click the gear icon for the settings menu, and then click **Customize in Access**.
+   1. Browse to the SharePoint Online site where the Access webapp exists.
+   1. Click the gear icon for the settings menu, and then click **Design customization in Access**.
 
 1. In the Access client, click **File** on the ribbon, and then click Info.
 1. Click **Manage** in the **Connections** section of the **Info** page.
@@ -45,7 +46,7 @@ To create a new connection in the Access app and view the new connection informa
    - Enable Read Write Connection
 
 1. Close the Access client.
-1. Reopen the Access app in the Access client.
+1. Reopen the Access web app in the Access client.
 1. Click **File** on the ribbon, and then click **Info**.
 1. Click **Manage** in the **Connections** section of the **Info** page.
 1. Check to activate the following settings, as appropriate for your situation:
@@ -60,15 +61,15 @@ To create a new connection in the Access app and view the new connection informa
 
 1. Re-create the linked tables in your Access database by using the new connection information that's listed.
 
-If other users are connected to the same data in the Access app, you'll have to give them information about the new connection that you created in the previous steps.
+If other users are connected to the same data in the Access web app, you'll have to give them information about the new connection that you created in the previous steps.
 
 > [!NOTE]
-> If you don't have the client version of the Access app, open the Access app in the Access client. To do this, follow these steps:
-> 1. Browse to the SharePoint Online site where the Access app exists.
+> If you don't have the client version of the Access web app, open the Access web app in the Access client. To do this, follow these steps:
+> 1. Browse to the SharePoint Online site where the Access web app exists.
 > 1. Click the gear icon for the settings menu, and then click **Customize in Access**.
 
 ## More information
 
-This issue may occur when you open an Access desktop database that has tables that are linked to an Access app in SharePoint Online.
+This issue may occur when you open an Access desktop database that has tables that are linked to an Access web app in SharePoint Online.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

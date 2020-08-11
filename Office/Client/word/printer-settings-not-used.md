@@ -8,6 +8,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 ms.reviewer: v-jomcc
 search.appverid: 
 - MET150
@@ -16,6 +17,8 @@ appliesto:
 ---
 
 # The printer settings are ignored when you print a Word document
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

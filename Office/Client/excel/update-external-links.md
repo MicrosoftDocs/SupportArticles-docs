@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Excel for Office 365
@@ -18,6 +19,8 @@ appliesto:
 ---
 
 # Error message when you update external links that contain a three-dimensional reference
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 
@@ -38,7 +41,7 @@ There are two possible reasons: The name you specified may not be defined. The n
 ```
 
 ```adoc
-We can’t update some of the links in your workbook right now. You can continue without updating their values, or edit the links you think are wrong.
+We can't update some of the links in your workbook right now. You can continue without updating their values, or edit the links you think are wrong.
 ```
 
 ## Workaround

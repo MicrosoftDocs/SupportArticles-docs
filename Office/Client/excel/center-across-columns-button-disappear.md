@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Microsoft Excel 2000
@@ -17,6 +18,8 @@ appliesto:
 ---
 
 # The "Center Across Columns" button doesn't appear on the toolbar or on the Ribbon in Excel
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

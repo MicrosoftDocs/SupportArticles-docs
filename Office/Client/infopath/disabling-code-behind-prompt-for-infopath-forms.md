@@ -1,11 +1,12 @@
 ---
 title: Disabling code-behind prompt for InfoPath forms
 description: Describes how to resolve an InfoPath issue where you are prompted for confirmation before running code in a form. 
-author: todmccoy
+author: McCoyBot
 ms.author: v-todmc, dmahugh
 ms.reviewer: dmahugh
 manager: dcscontentpm
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 audience: Admin
@@ -16,6 +17,8 @@ appliesto:
 - Microsoft InfoPath
 ---
 # Disabling code-behind prompt for InfoPath forms
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 When a domain-trusted InfoPath form with code behind is launched, a dialog appears and prompt for confirmation before the code runs. This prompt interferes with automated solutions, such as a server-side process that prints InfoPath forms.
@@ -32,7 +35,7 @@ The registry key is at this location:
 HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\InfoPath\Security\AllowFormCodeExec
 ```
 
-When the key’s value is 0 (the default value), the dialog will appear to prompt for confirmation before running code-behind InfoPath forms in domain-trusted solutions. Changing this key to a non-zero value will prevent the dialog from appearing.
+When the key's value is 0 (the default value), the dialog will appear to prompt for confirmation before running code-behind InfoPath forms in domain-trusted solutions. Changing this key to a non-zero value will prevent the dialog from appearing.
 
 ## More information
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

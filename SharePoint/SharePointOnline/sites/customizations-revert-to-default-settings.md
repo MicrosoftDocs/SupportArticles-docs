@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - SharePoint Online
@@ -39,4 +40,4 @@ For more information about Office 365 themes, go to [Personalize your Office 365
 
 This issue occurs because overriding .css classes that begin with ".0365cs-" isn't supported. These classes are frequently updated across the Office 365 service as new functionality is deployed. When this kind of updating occurs, changes may be overwritten.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

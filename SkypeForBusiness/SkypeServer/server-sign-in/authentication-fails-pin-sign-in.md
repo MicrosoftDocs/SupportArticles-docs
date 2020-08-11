@@ -11,6 +11,7 @@ ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
 ms.reviewer: jefzhang
+ms.custom: CSSTroubleshoot
 appliesto:
 - Lync Phone Edition
 ---
@@ -93,7 +94,7 @@ To locate the matched Trusted Root Certification Authorities certificate and eac
 5. Click the **Certificate Path** tab to view the Trusted Root Certification Authorities certificate chain.   
 6. Select the Trusted Root Certification Authorities certificate at the top of the chain.   
 7. Click **View certificate**, and then click the **Details** tab:
-   - Locate the certificate’s Issuer attribute, and note the certificate's Issuer name for future reference.   
+   - Locate the certificate's Issuer attribute, and note the certificate's Issuer name for future reference.   
    - Locate the certificate's Serial Number attribute, and note the certificate's serial number for future reference.   
    
 8. Click **OK** to return to the **Certificate Path** tab   
@@ -124,7 +125,7 @@ To export and remove any mismatched Trusted Root Certification Authorities certi
 11. Compare the **Serial number** and **Valid from** attributes to the information that you noted in step 7 of the "Using the Lync Server Deployment Wizard" section.
 
     > [!NOTE]
-    > If the **Serial number** and **Valid from** attributes match the recorded values, this certificate should not be removed from the local computer’s Trusted Root Certification Authorities certificate store. Use steps 9–11 listed in the current section to locate a certificate that has mismatched **Serial number** and **Valid from** attributes. If the **Serial number** and **Valid from** attributes do not match the recorded values, this certificate will have to be first exported to a folder and then deleted from the local computer's Trusted Root Certification Authorities certificates store.
+    > If the **Serial number** and **Valid from** attributes match the recorded values, this certificate should not be removed from the local computer's Trusted Root Certification Authorities certificate store. Use steps 9–11 listed in the current section to locate a certificate that has mismatched **Serial number** and **Valid from** attributes. If the **Serial number** and **Valid from** attributes do not match the recorded values, this certificate will have to be first exported to a folder and then deleted from the local computer's Trusted Root Certification Authorities certificates store.
 
 12. Right-click the mismatched certificate, click **All Tasks**, and then click **Export**.   
 13. Click **Next** in the Certificates Export Wizard.   
@@ -155,7 +156,7 @@ To export and remove any mismatched Intermediate Certification Authorities certi
 11. Compare the **Serial number** and **Valid from** attributes to the information that you noted in steps 7 of the "Using the Lync Server Deployment Wizard" section.
 
     > [!NOTE]
-    > If the **Serial number** and **Valid from** attributes match the recorded values, this certificate should not be removed from the local computer’s Trusted Root Certification Authorities certificate store. Use steps 9–11 listed in the current section to locate a certificate that has mismatched **Serial number** and **Valid from** attributes. If the **Serial number** and **Valid from** attributes do not match the recorded values, this certificate will have to be first exported to a folder and then deleted from the local computer's Trusted Root Certification Authorities certificates store.
+    > If the **Serial number** and **Valid from** attributes match the recorded values, this certificate should not be removed from the local computer's Trusted Root Certification Authorities certificate store. Use steps 9–11 listed in the current section to locate a certificate that has mismatched **Serial number** and **Valid from** attributes. If the **Serial number** and **Valid from** attributes do not match the recorded values, this certificate will have to be first exported to a folder and then deleted from the local computer's Trusted Root Certification Authorities certificates store.
 
 12. Right-click the mismatched certificate, click **All Tasks**, and then click **Export**.   
 13. Click **Next** in the Certificates Export Wizard.   
@@ -173,4 +174,6 @@ For more information about Lync Server certificate requirements, see the followi
 
 [Certificate requirements for internal servers in Lync Server 2013](https://docs.microsoft.com/lyncserver/lync-server-2013-certificate-requirements-for-internal-servers)
 
-[Certificate requirements for external user access in Lync Server 2013](https://docs.microsoft.com/en-us/lyncserver/lync-server-2013-certificate-requirements-for-external-user-access)
+[Certificate requirements for external user access in Lync Server 2013](https://docs.microsoft.com/lyncserver/lync-server-2013-certificate-requirements-for-external-user-access)
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

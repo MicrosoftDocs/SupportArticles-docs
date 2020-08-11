@@ -8,6 +8,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 ms.reviewer: jennc, offspmna
 search.appverid: 
 - MET150
@@ -17,6 +18,8 @@ appliesto:
 ---
 
 # Legacy UML features are missing when you edit a UML or database diagram in Visio 2013
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Introduction 
 

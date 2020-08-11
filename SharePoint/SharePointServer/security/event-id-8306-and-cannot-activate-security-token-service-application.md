@@ -9,6 +9,7 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Foundation 2010
 ---
@@ -19,7 +20,7 @@ appliesto:
 
 In SharePoint Foundation 2010, you may experience one or more of the following symptoms:  
 
-- You will see the message "The requested service, '[http://localhost:32843/SecurityTokenServiceApplication/securitytoken.svc/actas](http://localhost:32843/securitytokenserviceapplication/securitytoken.svc/actas)' could not be activated" in the application event logs of the servers.   
+- You will see the message "The requested service, `http://localhost:32843/SecurityTokenServiceApplication/securitytoken.svc/actas` could not be activated" in the application event logs of the servers.   
 - Users will not be able to log in to SharePoint sites that are using claims authentication.   
 - SharePoint internal operations that rely on claims authentication will not function correctly.     
 
@@ -36,3 +37,7 @@ This problem can be caused if one or more of the following conditions are true:
 
 - From IIS Manager, click on the SecureTokenServiceApplication. In the "Features View", double click on .NET Trust Levels. Ensure that the trust level is set to "Full"   
 - From IIS Manager, ensure that the application pool for SecureTokenServiceApplication is running. By default, the name of the application pool is SecureTokenServiceApplicationPool.  
+
+## More information
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

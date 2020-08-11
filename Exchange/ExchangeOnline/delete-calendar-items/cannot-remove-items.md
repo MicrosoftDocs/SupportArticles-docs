@@ -6,6 +6,7 @@ audience: ITPro
 ms.service: exchange-online
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -52,7 +53,7 @@ Depending on the kind of item that you're trying to remove, you can use the foll
 
 Caution Exit Outlook before you run any of these switches.
 
-- Click **Start**, enter outlook /cleanremindersin the search box, and then press Enter.   
+- Click **Start**, enter outlook /cleanreminders in the search box, and then press Enter.   
 - Click **Start**, enter outlook /cleandmrecords in the search box, and then press Enter.   
 After you run the applicable switches, start Outlook, and then try to delete the message again. 
 
@@ -61,9 +62,9 @@ For more information about these switches, see [Command-line switches for Outloo
 #### Method 4: Delete the message after you edit it
 
 1. In Outlook, double-click the email message.   
-2. In the **Move **group in the message ribbon, click **Actions**, and then click **Edit Message**. 
+2. In the **Move** group in the message ribbon, click **Actions**, and then click **Edit Message**. 
 3. Remove some characters from the message, or add characters to it.   
-4. Click **File, **and then save the message.   
+4. Click **File**, and then save the message.   
 5. Try to delete the message again.   
 
 #### Method 5: Empty the Deleted Items folder
@@ -78,22 +79,22 @@ The following steps show how to remove a meeting reminder that still appears eve
 > Although the MFCMAPI editor is supported by Exchange Online, use caution when you make changes to mailboxes by using this tool. Using the MFCMAPI editor incorrectly can cause permanent damage to a mailbox. The exact steps may vary, depending on the version of MFCMAPI that you're using.
 
 1. Download **MFCMAPI** from [github](https://github.com/stephenegriffin/mfcmapi) (scroll down and then click **Latest release**).    
-2. In Outlook, click the **Send/Receive**tab.    
-3. In the **Preferences**group, click **Work Offline**, and then exit Outlook.    
+2. In Outlook, click the **Send/Receive** tab.    
+3. In the **Preferences** group, click **Work Offline**, and then exit Outlook.    
 4. Double-click the MFCMapi.exe file to start the MFCMAPI editor.    
-5. On the **Session **menu, click **Logon and Display Store Table**.
+5. On the **Session** menu, click **Logon and Display Store Table**.
 
-    ![A screen shot of MFCMAPI x86 Build windows, showing the Sessio tab and Logon and Display Store Table option ](https://support.microsoft.com/Library/Images/2637080.jpg)    
+    ![A screen shot of MFCMAPI x86 Build windows, showing the Session tab and Logon and Display Store Table option ](./media/cannot-remove-items/session.png)    
 6. Right-click the mail profile that you want to change, and then click **Open Store**.
 
-    ![A screen shot of mail profiles ](https://support.microsoft.com/Library/Images/2637082.jpg)    
+    ![A screen shot of mail profiles](./media/cannot-remove-items/mail-profiles.png)    
 7. Expand **Root-Mailbox**, expand **Finder**, and then double-click **Reminders**.
 
-    ![A screen shot after expanding Root - Mailbox ](https://support.microsoft.com/Library/Images/2637083.jpg)    
-8. Locate the recurring appointment by sorting the **Subject **column or the **To **column.    
+    ![A screen shot after expanding Root - Mailbox](./media/cannot-remove-items/mailbox.png)    
+8. Locate the recurring appointment by sorting the **Subject** column or the **To** column.    
 9. Right-click the appointment, and then click **Delete Message**.
 
-    ![A screen shot of appointment, showing the Delete Message ](https://support.microsoft.com/Library/Images/2637084.jpg)    
+    ![A screen shot of appointment, showing the Delete Message](./media/cannot-remove-items/delete-message.png)    
 10. In the **Delete Item **dialog box, select one of the permanent deletion options, and then click **OK**.    
 11. Click **Start**, type **outlook.exe /cleanreminders** in the search box, and then press Enter.    
 12. If you're prompted, select your profile to start Outlook.    

@@ -1,12 +1,13 @@
 ---
-title: Performance issues with AutoRecover location on network share
-description: If the AutoRecover file location points to a network share, a general performance degradation is visible after an AutoSave operation. This includes sluggish typing and slow refresh when scrolling.
+title: Performance issues with Auto-Recover location on network share
+description: If the Auto-Recover file location points to a network share, a general performance degradation is visible after an Auto-Save operation. This includes sluggish typing and slow refresh when scrolling.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
+ms.custom: CSSTroubleshoot
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
@@ -15,24 +16,26 @@ appliesto:
 - Word 2013
 ---
 
-# Performance issues with AutoRecover location on network share
+# Performance issues with Auto-Recover location on network share
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 
-You're working with a complex Word document. After an AutoSave operation (the default interval is 10 minutes) you notice a general performance degradation when editing the document:
+You're working with a complex Word document. After an Auto-Save operation (the default interval is 10 minutes), you notice a general performance degradation when editing the document:
 
 - sluggish typing   
-- slow screen refresh when scrolling   
+- slow screen refreshes when scrolling   
 
 ## Cause
 
-The AutoRecover file location points to a network share. This will force Word to use files located on a network share as temporary or scratch files. 
+The Auto-Recover file location points to a network share. This will force Word to use files located on a network share as temporary or scratch files. 
 
 ## Resolution
 
-In order to resolve this problem you need to set the AutoRecover file location to a local path. The default path is %APPDATA%\Microsoft\Word. Please also ensure that %APPDATA% (or Roaming Application Data) points to a local folder.
+In order to resolve this problem, you need to set the Auto-Recover file location to a local path. The default path is %APPDATA%\Microsoft\Word. Also ensure that %APPDATA% (or Roaming Application Data) points to a local folder.
 
-To change this setting, please go to File - Options - Save and modify the Text Box "AutoRecover file location:". Type in a valid local path.
+To change this setting, please go to File - Options - Save and modify the Text Box "Auto-Recover file location:". Type in a valid local path.
 
 ## More Information
 

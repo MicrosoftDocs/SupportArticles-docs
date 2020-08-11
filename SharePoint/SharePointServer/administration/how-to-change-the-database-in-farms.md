@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Server 2019
 - SharePoint Server 2016
@@ -77,7 +78,7 @@ You should receive a result that's similar to the following example:
 
 ### Step 3: Point the default database instance for the web applications to the new SQL Server instance  
 
-This step is required so that when you create databases without specifying the database server, they won’t connect to the old SQL Server instance.  
+This step is required so that when you create databases without specifying the database server, they won't connect to the old SQL Server instance.  
 
 The following action plan is going to point all databases to the same SQL Server instance (the one that serves the configuration database). Modify this script to match your requirements.   
 
@@ -206,4 +207,4 @@ You should receive a result that resembles the following example:
 
 ## More Information  
 
-If you still need help, go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

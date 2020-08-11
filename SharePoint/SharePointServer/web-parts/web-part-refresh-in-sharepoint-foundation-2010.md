@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Foundation 2010
 ---
@@ -33,3 +34,7 @@ To work around this problem, configure the Web Part or the regular list in Micro
 3. Click the Web part.   
 4. On the **Options** tab, click to select the **Asynchronous Update** check box.   
 5. Click the **Refresh Interval** drop-down list, select an interval, and then save the settings.   
+
+## More information
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

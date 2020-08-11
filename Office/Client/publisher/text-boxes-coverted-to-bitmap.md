@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 ms.reviewer: lisyu, RichPo, ARykhus, debbiery
 appliesto:
 - Publisher 2010
@@ -17,6 +18,8 @@ appliesto:
 ---
 
 # Text boxes in a Publisher 2010 and 2013-created email message are converted to bitmap images when the email is sent
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

@@ -1,7 +1,7 @@
 ---
 title: Sorry, something went wrong error on a Site Page with a Pages library web part added
 description: Describes how to resolve a 'Sorry, something went wrong' error on a Site Page with a Pages library web part added.
-author: todmccoy
+author: McCoyBot
 ms.author: v-todmc
 manager: dcscontentpm
 localization_priority: Normal
@@ -11,6 +11,7 @@ audience: Admin
 ms.topic: article
 ms.prod: office-perpetual-itpro
 localization_priority: Normal 
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 - SharePoint Designer
@@ -18,7 +19,7 @@ appliesto:
 - SharePoint Server
 ---
 
-# “Sorry, something went wrong” error on a Site Page with a Pages library web part added
+# "Sorry, something went wrong" error on a Site Page with a Pages library web part added
 
 ## Symptoms
 You see the following error when selecting **Show Related Resources** within the Site Content and Structure page (sitemanager.aspx):
@@ -28,7 +29,7 @@ Sorry, something went wrong
 An unexpected error has occurred.
 ```
 
-![Sorry, something went wrong error](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4493897_en_1)
+![Sorry, something went wrong error](./media/sorry-something-went-wrong-error-on-site-page-with-pages-library-web-part/error.png)
 
 The SharePoint Universal Logging System ( ULS) reports:
 
@@ -37,7 +38,7 @@ w3wp.exe (0x192C) 0x14AC SharePoint Foundation General 8nca Medium Application e
 ```
 
 ## Cause
-This might happen if a list view web part that is consuming a publishing or pages library has the option ”Require Content Approval” checked.
+This might happen if a list view web part that is consuming a publishing or pages library has the option "Require Content Approval" checked.
 
 ## Resolution
 Beginning in October 2018, the Site Content and Structure options were deprecated in SharePoint Online. The UI entry point to SiteManager.aspx was removed from SharePoint Online and direct access is restricted to Site Collection Admins until March 2019.
@@ -68,3 +69,5 @@ The steps to reproduce the error are as follows:
 7. Navigate back to the Site Page created in step 2.
 8. Place the page in **Edit** mode, then place the **Pages Library web part** in edit mode.
 9. Select **OK** in the **web part properties** box without making any changes, then **Save and check-in** the page.
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

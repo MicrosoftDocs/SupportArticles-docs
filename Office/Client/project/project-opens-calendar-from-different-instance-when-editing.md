@@ -1,7 +1,7 @@
 ---
 title: Microsoft Project opens a calendar from a different instance when editing
 description: "Describes what to do if Microsoft Project opens a calendar from a PWA instance other than the one currently being edited."
-author: todmccoy
+author: McCoyBot
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,6 +9,7 @@ search.appverid:
 ms.date: 2/5/2019
 audience: ITPro
 ms.prod: office-perpetual-itpro
+ms.custom: CSSTroubleshoot
 ms.topic: article
 ms.author: v-todmc
 appliesto:
@@ -16,6 +17,8 @@ appliesto:
 ---
 
 # Microsoft Project opens a calendar from a different instance when editing
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 When you open a calendar created from a Project Work App (PWA) instance in a Microsoft Project client, a calendar from a different PWA instance opens instead.
@@ -28,15 +31,15 @@ Project client uses a site ID when opening a calendar. If both instances of the 
 
 ## Resolution
 To resolve this issue, designate one account in the Project client as the default account by using the following steps:
-1.	Select **Info**, select **Manage Accounts**, then select **Configure Accounts**.
+1.    Select **Info**, select **Manage Accounts**, then select **Configure Accounts**.
 ![In the Accounts screen, select one to be the default.](media/project-opens-calendar-from-different-instance-when-editing/95806-1.png)
-2.	Select an account and click **Set as Default**.
+2.    Select an account and click **Set as Default**.
  
-3.	Select **OK**.
+3.    Select **OK**.
 
 >    [!Note] To edit the calendar of a production environment PWA, select the Production account and then select **OK**.
 
-4.	Close the Project client and open the calendar again.
+4.    Close the Project client and open the calendar again.
 
 ## More information
 ### How to check the Site ID

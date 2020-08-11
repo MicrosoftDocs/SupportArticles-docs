@@ -11,6 +11,7 @@ ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
 ms.reviewer: seemarah 
+ms.custom: CSSTroubleshoot
 appliesto:
 - Lync Server 2010 Enterprise Edition
 - Lync Server 2010 Standard Edition
@@ -55,13 +56,13 @@ For detailed information on how the MaxCategorySubscription value of the Lync cl
 
 ## Resolution
 
-The following step by step information describes how to analyze and update the current presence policy settings for the Lync user's MaxCategorySubscription 
+The following step-by-step information describes how to analyze and update the current presence policy settings for the Lync user's MaxCategorySubscription 
 
 **Using Server 2008**
 
 Perform the following steps from a computer that has the Lync Server Administrative Tools installed:
 1. Click on the Start button, then click on All Programs   
-2. Click on Microsoft Lync Server , then select Lync Server Management Shell   
+2. Click on Microsoft Lync Server, then select Lync Server Management Shell   
 3. In the Lync Server Management Shell enter the following PowerShell command:
 
    **Get-CsPresencePolicy**   
@@ -98,3 +99,5 @@ For detailed information on Lync Server user models and capacity planning, revie
 - [Lync Server 2010 User Models](https://technet.microsoft.com/library/gg398811%28v=ocs.14%29.aspx)
 - [User models in Skype for Business Server](https://technet.microsoft.com/library/gg398811.aspx)
 - [Capacity Planning Requirements and Recommendations](https://technet.microsoft.com/library/gg425715%28v=ocs.14%29.aspx)
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

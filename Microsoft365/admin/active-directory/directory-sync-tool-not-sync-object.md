@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office 365
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Cloud Services (Web roles/Worker roles)
@@ -19,6 +20,8 @@ appliesto:
 ---
 
 # Microsoft Online Services Directory Synchronization tool stops syncing objects and triggers event ID 0
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Problem
 
@@ -36,7 +39,7 @@ Description: This version of the Microsoft Online Services Directory Sync tool i
 
 ## Cause
 
-This issue occurs if you're using the 32-bit version of the Microsoft Online Services Directory Synchronization tool. We no longer accept connections to Azure Active Directory (Azure AD) if you’re using a 32-bit version of the Microsoft Online Services Directory Synchronization tool. 
+This issue occurs if you're using the 32-bit version of the Microsoft Online Services Directory Synchronization tool. We no longer accept connections to Azure Active Directory (Azure AD) if you're using a 32-bit version of the Microsoft Online Services Directory Synchronization tool. 
 
 ## Solution
 
@@ -44,6 +47,10 @@ Upgrade to the latest version of the Directory Sync tool. This is now called the
 
 ## More information
 
-To learn about the system and software requirements for the Directory Sync tool, see [Prepare for directory synchronization](https://technet.microsoft.com/library/jj151831.aspx). 
+To learn about the system and software requirements for the Directory Sync tool, see [Prepare for directory synchronization](https://technet.microsoft.com/library/jj151831.aspx).
+
+For a list of attributes that are synchronized by the Azure Active Directory Sync tool, see the following wiki article:
+
+[Azure AD Connect sync: Attributes synchronized to Azure Active Directory](https://docs.microsoft.com/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.

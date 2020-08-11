@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 ms.reviewer: pankajr， genli 
 appliesto:
@@ -80,3 +81,7 @@ To work around this issue, you must configure registry settings for these protoc
 
    **HKEY_CURRENT_USER\Software\Classes\sip\shell\open\command**   
 7. Make sure that the value in in the DisabledProtocolHandlerRegistrations registry entry is correct. For example, the value for SIP should be 0x0004.   
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

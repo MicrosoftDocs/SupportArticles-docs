@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 ---
@@ -20,7 +21,7 @@ appliesto:
 
 When you click **new site** on the **Followed Sites** page in Microsoft SharePoint Online, you receive the following error message:
 
-**You are not allowed to create team sites at https://yourdomain.sharepoint.com/.**
+> You are not allowed to create team sites at `https://yourdomain.sharepoint.com/`.
 
 > [!NOTE]
 > The yourdomain placeholder represents the domain that you use for your organization.
@@ -36,7 +37,7 @@ To determine the location at which a site is created after a user clicks the **n
 
 1. Log on to the SharePoint admin center, and then click settings.
 
-2. In the **Start a Site** option, review the URL that's listed in the **Create sites under** field. For example, the value may be *https://contoso.sharepoint.com*, where *contoso* is the domain name that you use for your organization.
+2. In the **Start a Site** option, review the URL that's listed in the **Create sites under** field. For example, the value may be `https://contoso.sharepoint.com`, where *contoso* is the domain name that you use for your organization.
 
 To create a new permission level, you must be an administrator of the site that's been specified to have sites created under it. In this situation, follow these steps:
 
@@ -69,4 +70,4 @@ Add and remove users from the new group in order to grant or deny the permission
 
 This issue occurs because the user who is trying to create the site doesn't have **Create Subsites** permissions for the site collection where he or she is trying to create the site. 
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

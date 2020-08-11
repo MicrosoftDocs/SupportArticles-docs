@@ -5,6 +5,7 @@ author: simonxjx
 audience: ITPro
 ms.prod: exchange-server-it-pro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal
@@ -55,7 +56,7 @@ MAPI over HTTP offers the following benefits:
 
 Make sure that you use Outlook for Windows clients that are updated to work with MAPI over HTTP.
 
-The best and recommended option is to move to the latest version of Office 2016 as part of Office 365 ProPlus. If you cannot move to Office 365 ProPlus by October 31, 2017, make sure that Office applications in your organization are updated by having the most recent cumulative update.
+The best and recommended option is to move to the latest version of Office 2016 as part of Microsoft 365 Apps for enterprise. If you cannot move to Microsoft 365 Apps for enterprise by October 31, 2017, make sure that Office applications in your organization are updated by having the most recent cumulative update.
 
 You should have at least the currently recommended minimum installation of Outlook updates installed for connecting to Exchange Online that uses MAPI over HTTP. To verify the current list, see the following Office article: 
 
@@ -100,7 +101,7 @@ To retrieve this information, enable owner access auditing for each mailbox, and
 ### How can I identify which users in my organization are connecting through RPC over HTTP?
 
 Microsoft provides reporting on email application usage against Exchange Online in the Microsoft 365 admin center, as shown in the following screen shot. This reporting includes an exportable view of connections from clients that use RPC over HTTP.   
-![A screenshot of the Email app usage page in Office 365 Admin center](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4046320_en_2) 
+![A screenshot of the Email app usage page in Office 365 Admin center](./media/rpc-over-http-end-of-support/email-app-usage-page.png) 
 
 ### Why is MAPI over HTTP not backported to Outlook 2007?
 

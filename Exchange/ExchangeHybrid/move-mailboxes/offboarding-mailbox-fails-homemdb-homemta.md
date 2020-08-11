@@ -7,6 +7,7 @@ ms.prod: office 365
 ms.topic: article
 ms.author: rrajan
 manager: dcscontentpm
+ms.custom: CSSTroubleshoot
 localization_priority: Normal
 search.appverid: 
 - MET150
@@ -21,7 +22,7 @@ appliesto:
 Assume that you are in a Microsoft Exchange hybrid environment. When you try to offboard Exchange Online mailboxes to the on-premises organization by using the migration batch in Office 365 Exchange Admin Center (EAC), the attempt fails, and you receive an error message that resembles the following:
 
 ```
-‘Error: MigrationPermanentException: Target user ‎'User‎' already has a primary mailbox.’.
+'Error: MigrationPermanentException: Target user ‎'User‎' already has a primary mailbox.'.
 ```
 
 ## Cause

@@ -1,7 +1,7 @@
 ---
-title: "Modified dates on the SharePoint site contents page are not accurate"
+title: Modified dates on the SharePoint site contents page are not accurate
 ms.author: v-todmc
-author: todmccoy
+author: McCoyBot
 manager: dcscontentpm
 ms.date: 9/25/2019
 ms.audience: Admin
@@ -13,12 +13,14 @@ search.appverid:
 - MET150
 appliesto:
 - SharePoint Online 
-- SharePoint 2019
-- SharePoint 2016
-- SharePoint 2013
-ms.custom: 108026
+- SharePoint Server 2019
+- SharePoint Server 2016
+- SharePoint Server 2013
+ms.custom: 
+- CI 108026
+- CSSTroubleshoot
 ms.reviewer: lvaznis
-description: "Explains why the modified dates in a SharePoint site contents page does not reflect the correct dates."
+description: "Explains why the modified dates in a SharePoint site contents page do not reflect the correct dates."
 ---
 
 # Modified dates on the SharePoint site contents page are not accurate
@@ -31,3 +33,7 @@ In SharePoint 2016 and prior versions of the product, the modified date on the s
 
 ## Resolution
 This is expected behavior for SharePoint 2016 and prior versions. This behavior has been modified in SharePoint 2019 and SharePoint Online by introducing a new attribute (<code>LastItemUserModifiedDate</code>) to track changes that are the result of the user events. Items on the site contents page now reflect the value of this property.
+
+## More information
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

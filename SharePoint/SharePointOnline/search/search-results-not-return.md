@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 ---
@@ -43,7 +44,7 @@ In this scenario, you experience one of the following symptoms:
 
 ## Solution
 
-To resolve this issue, make sure that your result sources (both at the site collection and at the site level) are configured by using the same out-of-the-box result source, such as Local SharePoint Results, or that you use the same custom result source that’s copied from an out-of-the-box result source. We recommend that you do this because this issue is usually observed when you use certain custom result sources, such as Bing Result Source. 
+To resolve this issue, make sure that your result sources (both at the site collection and at the site level) are configured by using the same out-of-the-box result source, such as Local SharePoint Results, or that you use the same custom result source that's copied from an out-of-the-box result source. We recommend that you do this because this issue is usually observed when you use certain custom result sources, such as Bing Result Source. 
 
 To resolve this issue, follow these steps. 
 
@@ -73,4 +74,4 @@ To resolve this issue, follow these steps.
 
 This issue occurs when SharePoint Online is configured to obtain search results from a source other than Local SharePoint Results. When the **Local SharePoint Results** setting isn't the default, results are returned from other sources instead. This issue doesn't affect Enterprise Search. (This is the option when you search by using the Everything scope.)
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

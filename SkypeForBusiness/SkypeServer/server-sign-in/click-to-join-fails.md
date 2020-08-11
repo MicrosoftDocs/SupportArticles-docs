@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 ms.reviewer: kkodali
 appliesto:
 - Office Professional 2013
@@ -47,7 +48,7 @@ Install the [latest Hotfix for App-V](https://blogs.technet.microsoft.com/appv/2
 
 What is the Dynamic Virtualization feature?
 
-App-V 5.0 Service Pack 2 and later versions have enhanced “Dynamic Virtualization” by extending support to Shell Extensions, Browser Helper Objects, and Active X controls to be virtualized and run with virtual applications. The registry values under the HKLM\Software\Microsoft\AppV\Client\Virtualization subkey are used to control this feature.
+App-V 5.0 Service Pack 2 and later versions have enhanced "Dynamic Virtualization" by extending support to Shell Extensions, Browser Helper Objects, and Active X controls to be virtualized and run with virtual applications. The registry values under the HKLM\Software\Microsoft\AppV\Client\Virtualization subkey are used to control this feature.
 
 Why is Office C2R and SharePoint Integration broken when App-V 5.0 SP2 or later is installed on the system?
 
@@ -55,4 +56,6 @@ The ProcessesUsingVirtualComponents registry value specifies a list of process 
 
 By default, Explorer.exe and Internet Explorer are listed there. Therefore, when the iexplore.exe process runs, it has the APPVEntsubsystem32.dllloaded in Internet Explorer. When Office C2R detects that APPVEntsubsystem32.dll is loaded into Internet Explorer, it does not load jitv.dll or APPVISVSubsystem32.dll into Internet Explorer. As a result, there is no registry redirection support. 
 
-When the JavaScript that's running in Internet Explorer tries to create any ActiveX objects that are part of the Office C2R package, that operation fails and the Office C2R and SharePoint integration are broken. Office C2R and App-V dynamic virtualization aren’t designed to co-exist; therefore, Office C2R disables Dynamic Virtualization when it detects that AppV client binaries are loaded in Internet Explorer to prevent double hooking.
+When the JavaScript that's running in Internet Explorer tries to create any ActiveX objects that are part of the Office C2R package, that operation fails and the Office C2R and SharePoint integration are broken. Office C2R and App-V dynamic virtualization aren't designed to co-exist; therefore, Office C2R disables Dynamic Virtualization when it detects that AppV client binaries are loaded in Internet Explorer to prevent double hooking.
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

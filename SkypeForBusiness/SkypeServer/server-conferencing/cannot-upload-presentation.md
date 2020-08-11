@@ -11,6 +11,7 @@ ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
 ms.reviewer: kkodali
+ms.custom: CSSTroubleshoot
 appliesto:
 - Lync Server 2013
 - Lync Server 2010 Enterprise Edition
@@ -68,4 +69,6 @@ For more details on using the Set-CsConferencingConfiguration PowerShell Command
 
 For more details on Lync Server 2010 Web Conferencing:
 
-[Features and Functionality of Web Conferencing and A/V Conferencing](http://technet.microsoft.com/library/gg425913%28v=ocs.14%29.aspx)
+[Features and Functionality of Web Conferencing and A/V Conferencing](https://technet.microsoft.com/library/gg425913%28v=ocs.14%29.aspx)
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

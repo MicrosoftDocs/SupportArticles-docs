@@ -9,6 +9,8 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
+ms.custom: 
+- CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - SharePoint Foundation 2010
@@ -37,7 +39,7 @@ Certificate validation failures can be tracked by enabling the CAPI2 event loggi
   Event ID: 53  
   Task Category: Retrieve Object from Network  
 
-  URL (taken from event details): https://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab
+  URL (taken from event details): `https://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab`
 
 Please refer to the "More Information" section for information about how to enable CAPI2 logging.  
 
@@ -106,3 +108,5 @@ The main aspect to consider is for other certificates that are used on the compu
    - For CAPI2 Diagnostics, the log can grow in size quickly, and we recommend that you increase the log size to at least 4 megabytes (MB) to capture relevant events. To increase the log size, right-click **Operational**, and then select **Properties**. In the log properties, increase the maximum log size.  
 
      **Note** The default size for the event log is 1 MB.     
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

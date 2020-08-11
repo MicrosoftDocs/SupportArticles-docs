@@ -1,5 +1,5 @@
 ---
-title: "Planning considerations for deploying Outlook 2016 for Windows"
+title: Planning considerations for deploying Outlook 2016 for Windows
 ms.author: dmaguire
 author: msdmaguire
 manager: dcscontentpm
@@ -7,13 +7,14 @@ ms.reviewer:
 audience: ITPro
 ms.topic: get-started-article
 ms.prod: office-perpetual-itpro
+ms.custom: CSSTroubleshoot
 localization_priority: Normal
 ms.collection: Ent_Office_Outlook
 description: Helps IT Pros learn about what they should consider when they deploy Outlook 2016 for Windows to users in their organization
 search.appverid: 
 - MET150
 appliesto:
-- Outlook 2016
+- Outlook 2010, Outlook 2013, Outlook 2016, Office 365
 ---
 
 # Planning considerations for deploying Outlook 2016 for Windows
@@ -30,7 +31,7 @@ The organization's messaging environment helps shape the Outlook 2016 deployment
   
 ### MSI versus Click-to-Run deployment methods
 
-There are two primary installation technologies for Office: Windows Installer (MSI) and Click-to-Run. Volume licensed versions of Office, such as Office Standard 2016, use Windows Installer (MSI). Office that comes with Office 365 enterprise plans uses Click-to-Run. For example, Outlook that's included in [Office 365 ProPlus](https://docs.microsoft.com/DeployOffice/about-office-365-proplus-in-the-enterprise) uses Click-to-Run.
+There are two primary installation technologies for Office: Windows Installer (MSI) and Click-to-Run. Volume licensed versions of Office, such as Office Standard 2016, use Windows Installer (MSI). Office that comes with Office 365 enterprise plans uses Click-to-Run. For example, Outlook that's included in [Microsoft 365 Apps for enterprise](https://docs.microsoft.com/DeployOffice/about-office-365-proplus-in-the-enterprise) uses Click-to-Run.
   
 The MSI and Click-to-Run versions of Office and Outlook 2016 have different configuration options and administration tools. For MSI-based deployments, use the [Office Customization Tool (OCT)](https://docs.microsoft.com/deployoffice/oct/oct-2016-help-overview) before installation to set your users' default settings, install Outlook 2016, then enforce those settings and prevent users changing them after installation by using [Group Policy](https://www.microsoft.com/download/details.aspx?id=49030). For Click-to-Run deployments, first use the [Office Deployment Tool](https://docs.microsoft.com/DeployOffice/overview-of-the-office-2016-deployment-tool) to set a small number of settings, install Outlook, then set the full range of customization settings and prevent users changing them after installation by using [Group Policy](https://www.microsoft.com/download/details.aspx?id=49030).
 
@@ -38,7 +39,7 @@ The MSI and Click-to-Run versions of Office and Outlook 2016 have different conf
 
 If you are upgrading to Outlook 2016 from an earlier version of Outlook, consider whether you will migrate previous settings, change user profiles, and use new customization options. By default, user settings are migrated automatically, except for security settings. Customization of Outlook settings is optional and only needed if you want to change the default settings. Also Outlook can automatically create a new Outlook profile by using the [Autodiscover service](https://docs.microsoft.com/Exchange/architecture/client-access/autodiscover). 
   
-If you are deploying a volume-licensed version of Office 2016, which uses Windows Installer (MSI), the [Office Customization Tool (OCT)](https://docs.microsoft.com/deployoffice/oct/oct-2016-help-overview) enables you to migrate users' current settings and make other customizations. For example, you can define new Microsoft Exchange servers or customize new features. If you are deploying Office 365 ProPlus and must change settings from the default configuration, you can use Group Policy or the registry. 
+If you are deploying a volume-licensed version of Office 2016, which uses Windows Installer (MSI), the [Office Customization Tool (OCT)](https://docs.microsoft.com/deployoffice/oct/oct-2016-help-overview) enables you to migrate users' current settings and make other customizations. For example, you can define new Microsoft Exchange servers or customize new features. If you are deploying Microsoft 365 Apps for enterprise and must change settings from the default configuration, you can use Group Policy or the registry. 
     
 ### Migrating data
 
@@ -80,7 +81,7 @@ You have options for when and how you install Outlook 2016. For example, conside
     
 Each organization has a different environment and might make a different choice about timing Outlook 2016 upgrades. For example, you might have a messaging group that is responsible for upgrading Outlook and a separate group that plans deployment for other Office applications. In this case, it might be easier to upgrade Outlook separately from the rest of Office instead of trying to coordinate deployment between the two groups.
   
-Note that an MSI version of Outlook 2016, such as Office Standard 2016, cannot coexist with earlier MSI versions of Outlook on the same computer. However, you can install a Click-to-Run version of Outlook 2016, such as with Office 365 ProPlus, to run side-by-side with MSI versions of Outlook prior to Outlook 2016. However, you can't have Click-to-Run versions of Outlook 2013 and Outlook 2016 installed on the same computer. If you have two versions of Outlook installed on the same computer, you can't run them at the same time.
+Note that an MSI version of Outlook 2016, such as Office Standard 2016, cannot coexist with earlier MSI versions of Outlook on the same computer. However, you can install a Click-to-Run version of Outlook 2016, such as with Microsoft 365 Apps for enterprise, to run side-by-side with MSI versions of Outlook prior to Outlook 2016. However, you can't have Click-to-Run versions of Outlook 2013 and Outlook 2016 installed on the same computer. If you have two versions of Outlook installed on the same computer, you can't run them at the same time.
   
 > [!NOTE]
 > As a best practice, you should have only one version of Office installed on a computer. For migration scenarios, you might need multiple versions of Office on the same computer for a short period of time. However, we recommend that you uninstall the earlier version of Office as soon as possible after you've migrated to the latest version of Office. 
@@ -91,7 +92,7 @@ You can customize an MSI installation of Outlook to handle Outlook user settings
   
 When you use the OCT to customize Outlook, you save choices and other installation preferences in the customization .msp file that is applied during setup. Later, you update settings by opening the file in the OCT and saving a new copy of the file.
   
-For Click-to-Run installations of Outlook 2016, such as with Office 365 ProPlus, you can use Group Policy or registry keys to customize Outlook settings.
+For Click-to-Run installations of Outlook 2016, such as with Microsoft 365 Apps for enterprise, you can use Group Policy or registry keys to customize Outlook settings.
   
 > [!NOTE]
 >  PRF files do not work and are no longer needed in Outlook 2016 because accounts should be configured automatically in the account wizard when you use AutoDiscover. 
@@ -182,7 +183,7 @@ Users can use the Contacts, Tasks, and Calendar features in Outlook 2016 without
 
 You can install Outlook 2016 over any previous installation of Outlook. User settings that are stored in the registry are migrated when you upgrade from Office Outlook 2003 or later versions to Outlook 2016. If a MAPI profile already exists on a user's computer, you typically can configure a deployment to continue to use the profile.
   
-Note that an MSI version of Outlook 2016, such as Office Standard 2016, cannot coexist with earlier MSI versions of Outlook on the same computer. However, you can install a Click-to-Run version of Outlook 2016, such as with Office 365 ProPlus, to run side-by-side with MSI versions of Outlook prior to Outlook 2016. However, you can't have Click-to-Run versions of Outlook 2013 and Outlook 2016 installed on the same computer. If you have two versions of Outlook installed on the same computer, you can't run them at the same time.
+Note that an MSI version of Outlook 2016, such as Office Standard 2016, cannot coexist with earlier MSI versions of Outlook on the same computer. However, you can install a Click-to-Run version of Outlook 2016, such as with Microsoft 365 Apps for enterprise, to run side-by-side with MSI versions of Outlook prior to Outlook 2016. However, you can't have Click-to-Run versions of Outlook 2013 and Outlook 2016 installed on the same computer. If you have two versions of Outlook installed on the same computer, you can't run them at the same time.
   
 > [!NOTE]
 > As a best practice, you should have only one version of Office installed on a computer. For migration scenarios, you might need multiple versions of Office on the same computer for a short period of time. However, we recommend that you uninstall the earlier version of Office as soon as possible after you've migrated to the latest version of Office. 
@@ -199,7 +200,7 @@ For additional Cached Exchange Mode planning considerations, see [Plan and confi
   
 ## Installing multiple versions of Outlook on the same computer
 
-With Outlook, if you're using the volume licensed version (MSI-based installation), such as Office Standard 2016, you cannot have two versions of Outlook installed. The upgrade process will, by default, remove the earlier version. But if you are moving from volume licensed to a subscription license version such as with Office 365 ProPlus, which uses Click-to-Run installation, it is possible to have two versions of Outlook installed on the same computer.
+With Outlook, if you're using the volume licensed version (MSI-based installation), such as Office Standard 2016, you cannot have two versions of Outlook installed. The upgrade process will, by default, remove the earlier version. But if you are moving from volume licensed to a subscription license version such as with Microsoft 365 Apps for enterprise, which uses Click-to-Run installation, it is possible to have two versions of Outlook installed on the same computer.
   
 > [!NOTE]
 > As a best practice, you should have only one version of Office installed on a computer. For migration scenarios, you might need multiple versions of Office on the same computer for a short period of time. However, we recommend that you uninstall the earlier version of Office as soon as possible after you've migrated to the latest version of Office. 

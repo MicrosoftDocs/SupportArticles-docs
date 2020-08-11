@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 ---
@@ -57,6 +58,6 @@ You can also clear the setting to add new pages to navigation automatically from
 
 ## More information
 
-This issue may occur if you have many Publishing Pages in your Pages Library. By default, new Publishing Pages are added to the Pages Library, and user permissions for all pages in the Pages Library are validated for the navigation menu when a page loads. The page may be performing many unnecessary security checks for pages that you don’t have to include on the navigation menu.
+This issue may occur if you have many Publishing Pages in your Pages Library. By default, new Publishing Pages are added to the Pages Library, and user permissions for all pages in the Pages Library are validated for the navigation menu when a page loads. The page may be performing many unnecessary security checks for pages that you don't have to include on the navigation menu.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

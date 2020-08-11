@@ -10,19 +10,24 @@ ms.prod: office 365
 localization_priority: Normal
 search.appverid: 
 - MET150
-ms.custom: CI 105558
+ms.custom: 
+- CI 105558
+- CSSTroubleshoot
 ms.reviewer: sulobr
 appliesto:
 - Exchange Online
+- Office 365
 ---
 
 # "Can't add you to the Outlook Customer Manager group" error after you assign licenses to users
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 
 After you assign Microsoft Office 365 Business licenses that include the Outlook Customer Manager (OCM) feature, the OCM feature is still not available to users. Additionally, you receive the following error message when you try to click the OCM icon:
 
-**Something went wrong. We can’t add you to the Outlook Customer Manager group right now. Please close this pane and try again later.**
+**Something went wrong. We can't add you to the Outlook Customer Manager group right now. Please close this pane and try again later.**
 
 ## Resolution
 

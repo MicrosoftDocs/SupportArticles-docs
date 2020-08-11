@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.reviewer: sthorn, HeidiMu, Arykhus, kevinmil, barbway
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -20,6 +21,8 @@ appliesto:
 ---
 
 # You cannot add the Microsoft Visio 2010 or 2013 drawing control to a Windows Form application in Visual Studio if you have the 64-bit version of Visio installed
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ##  Symptoms
 

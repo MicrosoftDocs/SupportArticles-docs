@@ -1,6 +1,6 @@
 ---
-title: Office Web Apps 2013 and VMWare
-description: This article describes some issues that occur occur when installing Office Web Apps 2013 or Office Online Server on a nonsystem Drive by using VMWare, and provide solutions.
+title: Microsoft Offices Online 2013 and VMWare
+description: This article describes some issues that occur when installing Microsoft Offices Online 2013 or Office Online Server on a nonsystem Drive by using VMWare, and provide solutions.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -10,21 +10,22 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: arhinesm
+ms.custom: CSSTroubleshoot
 appliesto:
 - Office Online Server
 ---
 
-# Office Web Apps 2013 and VMWare
+# Microsoft Offices Online 2013 and VMWare
 
 This article was written by [Tom Schauer](https://social.technet.microsoft.com/profile/Tom+Schauer+-+MSFT), Technical Specialist.
 
-Several issues occur when installing Office Web Apps 2013 or Office Online Server on a nonsystem Drive by using VMWare. The problem lies in setting the Office Web Apps CacheLocation or RenderingCacheLocation to a nonsystem drive location with the HotAdd/HotPlug capability in VMWare.
+Several issues occur when installing Microsoft Offices Online 2013 or Office Online Server on a nonsystem Drive by using VMWare. The problem lies in setting the Microsoft Offices Online CacheLocation or RenderingCacheLocation to a nonsystem drive location with the HotAdd/HotPlug capability in VMWare.
 
 There are numerous possible symptoms for this issue, most visibly when viewing/editing documents. For example, you might see the following error in the SharePoint Unified Logging Service (ULS) logs.
 
 Here is one example (with the ULS entry) of the unusual behavior you are seeing:
 
-**"Microsoft Word Web App"**
+**"Microsoft Word Online"**
 
 **"Sorry, there was a problem and we can't open this document.  If this happens again, try opening the document in Microsoft Word."**
 
@@ -38,7 +39,7 @@ Here is an example of what you are seeing in the ULS logs:
 
 ## Resolution
 
-The most reliable resolution is to uninstall Office Web Apps or Office Online Server, then reinstall (on the drive C), apply updates and rebuild the farm.
+The most reliable resolution is to uninstall Microsoft Offices Online or Office Online Server, then reinstall (on the drive C), apply updates and rebuild the farm.
 
 You can also use the method that is provided in the following article to work around the issue:
 

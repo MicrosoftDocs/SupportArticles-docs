@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business
 ---
@@ -62,3 +63,7 @@ Follow these steps:
 1. Open **Outlook Options**.   
 2. On the **Mail** tab, locate the **Send messages** section.   
 3. Clear the **Use Auto-Complete List to suggest names when typing in the To, CC, and Bcc lines** check box. The, click the **Empty Auto-Complete List** button.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

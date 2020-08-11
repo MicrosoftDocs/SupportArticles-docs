@@ -10,6 +10,7 @@ search.appverid:
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Access for Office 365
 - Access 2019
@@ -18,6 +19,8 @@ appliesto:
 ---
 
 # "An error has occurred" message when you load an Access web app in Internet Explorer
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

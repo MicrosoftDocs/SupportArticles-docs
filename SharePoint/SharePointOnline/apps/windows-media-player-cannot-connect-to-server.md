@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - SharePoint Online
@@ -48,7 +49,7 @@ To add the affected SharePoint Online URL or URLs to your **Trusted sites** zone
 
     ![The Security tab in Internet Options](./media/windows-media-player-cannot-connect-to-server/internet-options.jpg)
 
-1. In the **Add this website to the zone** box, type the URL for the SharePoint Online site that you want to add to the **Trusted sites** zone, and then click **Add**. For example, type https://contoso.sharepoint.com. (Here, the **contoso** placeholder represents the domain that you use for your organization.) Repeat this step for any additional sites that you want to add to this zone.
+1. In the **Add this website to the zone** box, type the URL for the SharePoint Online site that you want to add to the **Trusted sites** zone, and then click **Add**. For example, type `https://contoso.sharepoint.com`. (Here, the **contoso** placeholder represents the domain that you use for your organization.) Repeat this step for any additional sites that you want to add to this zone.
 
    ![Trusted sites dialog box](./media/windows-media-player-cannot-connect-to-server/trusted-sites.jpg)
 
@@ -81,4 +82,4 @@ This article doesn't apply to Office 365 Video or Microsoft Stream scenarios. Fo
 > [!NOTE]
 > Office 365 Video will be replaced by Microsoft Stream. To learn more about the new enterprise video service that adds intelligence to video collaboration, go to https://stream.microsoft.com. 
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

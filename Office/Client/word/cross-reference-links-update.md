@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Word for Office 365
 - Word 2019
@@ -20,6 +21,8 @@ appliesto:
 ---
 
 # Cross-reference links do not update to the correct heading number after you insert a new heading
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

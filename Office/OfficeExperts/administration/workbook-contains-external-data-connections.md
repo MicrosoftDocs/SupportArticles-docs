@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 appliesto:
 - Excel Online
 ---

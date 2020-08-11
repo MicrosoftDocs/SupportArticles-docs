@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 ---
@@ -60,7 +61,7 @@ The following checks are performed by the Office 365 SharePoint Online diagnosti
 
 |Rule ID|Title|Reference|
 |----------|----------|----------|
-|4C7B890F-F367-4719-B5D2-85AB4200B144|Checks whether Receive Window Auto-Tuning Level is disabled|[Ensuring your Office 365 network connection isn’t throttled by your Proxy](https://blogs.technet.microsoft.com/onthewire/2014/03/28/ensuring-your-office-365-network-connection-isnt-throttled-by-your-proxy/)|
+|4C7B890F-F367-4719-B5D2-85AB4200B144|Checks whether Receive Window Auto-Tuning Level is disabled|[Ensuring your Office 365 network connection isn't throttled by your Proxy](https://blogs.technet.microsoft.com/onthewire/2014/03/28/ensuring-your-office-365-network-connection-isnt-throttled-by-your-proxy/)|
 |8D1F2D6E-07FF-462C-9EBE-02E44CCAE5A5|Checks whether round-trip time between client and server isn't greater than 300 ms.|[How to measure the Network Round Trip Time to Office 365](https://blogs.technet.microsoft.com/onthewire/2014/05/08/how-to-measure-the-network-round-trip-time-to-office-365/)|
 |1750D57E-FD44-4A83-8FCF-56B7DB0124BB|Checks whether Minimal Download Strategy is disabled.|[Minimal Download Strategy overview](https://docs.microsoft.com/sharepoint/dev/general-development/minimal-download-strategy-overview)|
 |AB374115-9DCE-4977-BE87-22DD321E6737|Checks whether Structural Navigation is turned on for a SharePoint Online publishing site.|[Managed navigation in SharePoint](https://docs.microsoft.com/sharepoint/dev/general-development/managed-navigation-in-sharepoint)|
@@ -69,4 +70,4 @@ The following checks are performed by the Office 365 SharePoint Online diagnosti
 
 For more information about which operating systems can run Microsoft Support's diagnostic packages, go to [Information about Microsoft Automated Troubleshooting Services and Support Diagnostic Platform](https://support.microsoft.com/help/2598970/information-about-microsoft-automated-troubleshooting-services-and-sup#q4).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

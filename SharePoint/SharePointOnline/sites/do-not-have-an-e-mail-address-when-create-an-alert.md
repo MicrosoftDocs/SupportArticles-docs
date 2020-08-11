@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - SharePoint Online
@@ -57,4 +58,4 @@ Users can now edit their My Site profile to configure the **Work email** field a
 
 This error occurs because there's no email address associated with the SharePoint Online user profile. This error occurs most frequently when the user doesn't have a Exchange Online license assigned to their account.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 ---
@@ -26,7 +27,7 @@ Consider the following scenario:
 
 - The Single line of text column contains an apostrophe (').
 
-When you run the workflow, the workflow doesn’t update the Person or Group column with the value from the Single line of text column.
+When you run the workflow, the workflow doesn't update the Person or Group column with the value from the Single line of text column.
 
 ## Solution/Workaround
 
@@ -40,4 +41,4 @@ To work around this issue, do one of the following:
 
 This is a known issue in SharePoint Online. This issue occurs when you update a **Person or Group** column by using a value from a **Single line of text** column that contains an apostrophe (').
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

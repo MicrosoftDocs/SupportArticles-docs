@@ -7,6 +7,7 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
+ms.custom: CSSTroubleshoot
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
@@ -17,6 +18,8 @@ appliesto:
 ---
 
 # How to use Draw Border tools and Draw Border Grid tools to apply and remove Excel cell borders
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

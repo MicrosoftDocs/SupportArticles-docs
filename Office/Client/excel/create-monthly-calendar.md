@@ -8,6 +8,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.prod: office-perpetual-itpro
+ms.custom: CSSTroubleshoot
 ms.topic: article
 ms.author: v-six
 appliesto:
@@ -21,6 +22,8 @@ appliesto:
 ---
 
 # How to create a monthly calendar in Excel
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

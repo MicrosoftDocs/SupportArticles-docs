@@ -19,7 +19,10 @@ search.appverid:
 - MBS150
 - MET150
 audience: Admin
-ms.custom: MiniMaven
+ms.custom:
+- MiniMaven
+- CSSTroubleshoot
+- SaRASetup
 ms.service: exchange-online
 manager: dcscontentpm
 appliesto:
@@ -46,7 +49,7 @@ If a single user in your organization is having trouble receiving email, it coul
 
 |||
 |:-----|:-----|
-|![Get started](../media/email-delivery-issues/8226d576-eac7-40df-89cb-28c1634067c5.png)|**Let us fix your issue** [Download and run Microsoft Support and Recovery Assistant](https://AKA.MS/SaRASetup)|
+|![Get started](./media/email-delivery-issues/8226d576-eac7-40df-89cb-28c1634067c5.png)|**Let us fix your issue** [Download and run Microsoft Support and Recovery Assistant](https://AKA.MS/SaRASetup)|
 
 ## If the Support and Recovery Assistant app doesn't fix the email delivery issue, try these admin tools
 
@@ -71,7 +74,7 @@ The service health page lists the status of Office 365 services and indicates if
 
 3. Under **Service health**, go to **View the service health**.
 
-    ![Screenshot showing the View the service health option selected in the admin center](../media/email-delivery-issues/9a865800-f56a-4c1d-a5cb-adfcb3b4902e.png)
+    ![Screenshot showing the View the service health option selected in the admin center](./media/email-delivery-issues/9a865800-f56a-4c1d-a5cb-adfcb3b4902e.png)
 
 If there is an indication that ExchangeOnline service is degraded, email delivery might be delayed for your organization, and CompanyName service engineers are already working to restore service. Check the service health page for progress updates. In this case, you don't need to open a service request because CompanyName is already working to resolve the issue.
 
@@ -94,7 +97,7 @@ If you're an Office 365 Midsize Business, Office 365 Business, or Office 365 Ent
 
 3. Go to **Exchange**.
 
-    ![Sceenshot of the admin center with Exchange selected.](../media/email-delivery-issues/239c294e-4f04-4c52-bd87-bbf343cb66b9.png)
+    ![Sceenshot of the admin center with Exchange selected.](./media/email-delivery-issues/239c294e-4f04-4c52-bd87-bbf343cb66b9.png)
 
 4. Under **mail flow**, go to **message trace**.
 
@@ -108,7 +111,7 @@ If you're an Office 365 Small Business admin, do the following to find message t
 
 By default, message trace is set to search for all messages sent or received by your organization in the past 48 hours. You can choose **Search** at the bottom of the page to generate this report. This report can give you a general idea about what is happening with mail flow in your organization. However, to troubleshoot a specific user's mail delivery issue, you want to scope the message trace results to that user's mailbox and the time frame that they expected to receive the message.
 
-![Screenshot showing the options available in message trace](../media/email-delivery-issues/bcfda44e-be7b-4864-a6cc-85a36b4570c7.png)
+![Screenshot showing the options available in message trace](./media/email-delivery-issues/bcfda44e-be7b-4864-a6cc-85a36b4570c7.png)
 
 1. From the **Date range** menu, choose the date range that is closest to the time that the missing message was sent.
 
@@ -118,13 +121,13 @@ By default, message trace is set to search for all messages sent or received by 
 
 4. The **message trace results** page shows all the messages that match the criteria that you selected. Typical messages are marked **Delivered** under the status column.
 
-    ![Screenshot showing an example of messge trace resuls.](../media/email-delivery-issues/3be193fe-9c71-4525-aea7-e154ea412533.png)
+    ![Screenshot showing an example of messge trace resuls.](./media/email-delivery-issues/3be193fe-9c71-4525-aea7-e154ea412533.png)
 
-5. To see details about a message, choose the message and select ![Pencil icon](../media/email-delivery-issues/ebd57d01-04da-4dfd-b232-1015d627dc91.png) ( **Details**).
+5. To see details about a message, choose the message and select ![Pencil icon](./media/email-delivery-issues/ebd57d01-04da-4dfd-b232-1015d627dc91.png) ( **Details**).
 
 6. Details appear with an explanation of what happened to the message. To fix the problem, follow the instructions in the **How to fix it** section.
 
-    ![Screenshot of the message trace details page showing an example of what message trace details look like.](../media/email-delivery-issues/45f04c88-37a8-48aa-b9e9-85e580223754.png)
+    ![Screenshot of the message trace details page showing an example of what message trace details look like.](./media/email-delivery-issues/45f04c88-37a8-48aa-b9e9-85e580223754.png)
 
 To search for a different message, you can click the **Clear** button on the **message trace** page, and then specify new search criteria.
 
@@ -136,7 +139,7 @@ Message traces for items more than 7 days old are only available as a downloadab
 
 - To view a list of traces that were run for items that are more than 7 days old, click **View pending or completed traces** in the message trace tool.
 
-    ![Screenshot of the message trace tool with a cursor hovering over the "View pending or completed traces" link.](../media/email-delivery-issues/57ceaf75-a6c9-4f83-b158-a59026bb8bd4.png)
+    ![Screenshot of the message trace tool with a cursor hovering over the "View pending or completed traces" link.](./media/email-delivery-issues/57ceaf75-a6c9-4f83-b158-a59026bb8bd4.png)
 
     In the resulting UI, the list of traces is sorted based on the date and time that they were submitted, with the most recent submissions appearing first.
 

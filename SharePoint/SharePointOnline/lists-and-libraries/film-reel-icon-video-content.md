@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - SharePoint Online
@@ -25,15 +26,18 @@ Consider the following scenario:
 - You create a folder in the Asset Library.
 
 - You change the properties of the folder and then change the Content Type setting from Folder to Video.
+  In classic UI, the thumbnail image will have film reel icon 
+  In Modern UI, the thumbnail image will have folder icon still
 
 - You change the properties and then change the Content Type setting back to Folder from Video.
-
-When you view the thumbnail image for the folder, it still displays the film reel icon for a video.
+  In classic UI, the thumbnail image will have film reel icon still
+  In Modern UI, the thumbnail image will have folder icon 
 
 ## Solution
 
-This is a known issue in SharePoint Online. Although the film reel icon appears, the Content Type will function as a folder.
+This is a known issue in SharePoint Online.
+Although the film reel icon appears in classic UI, the Content Type will function as a folder.
 
 ## More information
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

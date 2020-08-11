@@ -10,6 +10,7 @@ search.appverid:
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Excel 2007
 - Excel 2003
@@ -19,6 +20,8 @@ appliesto:
 ---
 
 # Sample user-defined function to hide formula errors in Excel
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

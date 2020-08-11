@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Lync Server 2013
 ---
@@ -226,3 +227,5 @@ The following information should be returned to the console to confirm the updat
  <cpu />
 </add>
 ```
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

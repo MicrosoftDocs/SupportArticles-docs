@@ -6,6 +6,7 @@ manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
+ms.custom: CSSTroubleshoot
 ms.topic: article
 ms.author: v-six
 ms.reviewer: Jenl
@@ -20,6 +21,8 @@ appliesto:
 ---
 
 # F4 keyboard shortcut does not work as expected in Excel 2013, Excel 2010, and Excel 2007
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

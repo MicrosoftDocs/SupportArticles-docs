@@ -7,6 +7,7 @@ localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 ms.reviewer: mmaxey, rtaylor, akeeler
 search.appverid: 
@@ -16,6 +17,8 @@ appliesto:
 ---
 
 # "We found a problem with some content" error when trying to open a workbook
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

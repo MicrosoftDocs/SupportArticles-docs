@@ -8,6 +8,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 ms.reviewer: dkuy, nathanad
 search.appverid: 
 - MET150
@@ -17,6 +18,8 @@ appliesto:
 ---
 
 # Error message when you open a file type that is blocked by registry policy settings in Visio 2013
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

@@ -11,6 +11,7 @@ ms.service: skype-for-business-online
 ms.topic: article
 ms.author: v-six
 ms.reviewer: dahans
+ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Online
 - Lync for Mac 2011
@@ -46,14 +47,14 @@ For more information about the **Invoke-CsUcsRollback** cmdlet, see [Roll back m
 
 To work around this issue, use Lync 2013, Outlook Web Access 2013, or Outlook to change your contact list.
 
-Or, you can roll back the user’s contacts to Lync Server and users will then be able to change their contact list. To do this, see [Lync contact list is empty or read-only after a user's Exchange mailbox is disconnected, unlicensed, or moved](https://support.microsoft.com/help/2811654). 
+Or, you can roll back the user's contacts to Lync Server and users will then be able to change their contact list. To do this, see [Lync contact list is empty or read-only after a user's Exchange mailbox is disconnected, unlicensed, or moved](https://support.microsoft.com/help/2811654). 
 
 ## More Information
 
 On Windows, to confirm if a user is enabled for the UCS, right-click the Lync icon in the notification area to open the **Lync Configuration Information** screen. Look for the **Contact List Provider** line. Either **UCS** or **Lync Server** appears.
 
-This issue occurs because the user's contact list was migrated to the Exchange UCS. This is a new integration feature of Exchange Server 2013 and Lync Server 2013. After the migration, the user’s contact list provider changes from **Lync Server** to **UCS**.
+This issue occurs because the user's contact list was migrated to the Exchange UCS. This is a new integration feature of Exchange Server 2013 and Lync Server 2013. After the migration, the user's contact list provider changes from **Lync Server** to **UCS**.
 
-Even though Lync 2010 and Lync for Mac 2011 can read the UCS contact list, they can’t change contacts or groups in the UCS. Therefore, users who are enabled for the UCS can't change their contacts list from Lync 2010 and Lync for Mac 2011.
+Even though Lync 2010 and Lync for Mac 2011 can read the UCS contact list, they can't change contacts or groups in the UCS. Therefore, users who are enabled for the UCS can't change their contacts list from Lync 2010 and Lync for Mac 2011.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

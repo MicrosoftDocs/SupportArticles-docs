@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 ms.reviewer: v-six, genli, christys, UPKUMAR
 appliesto:
 - Skype for Business Server 2015
@@ -71,3 +72,5 @@ Get-ChildItem -Path Registry::"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framewo
 In the output, make sure that the **Release** dword value is 379893 or greater.
 
 For more information, see [How to: Determine Which .NET Framework Versions Are Installed](https://msdn.microsoft.com/library/hh925568%28v=vs.110%29.aspx?cs-save-lang=1&cs-lang=csharp#code-snippet-4).
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

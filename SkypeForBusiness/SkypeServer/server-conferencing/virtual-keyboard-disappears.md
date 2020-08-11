@@ -11,6 +11,7 @@ ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
 ms.reviewer: chanh
+ms.custom: CSSTroubleshoot
 appliesto:
 - Skype Room System v2
 ---
@@ -48,3 +49,7 @@ To resolve this issue, create a "EnableDesktopModeAutoInvoke"=dword:00000001regi
 3. Tap and hold the **1.7** folder, tap **New** > **DWORD (32-bit) Value**.    
 4. Enter the name **EnableDesktopModeAutoInvoke** and then tap **Enter **on the virtual keyboard.    
 5. Double-tap the **EnableDesktopModeAutoInvoke** registry entry, enter **1** under "Value data", and then tap **OK**.    
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

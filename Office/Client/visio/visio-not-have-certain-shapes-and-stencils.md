@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: article 
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 ms.reviewer: poyant, Arykhus, Kemille, barbway
 search.appverid: 
 - MET150
@@ -17,6 +18,8 @@ appliesto:
 ---
 
 # Visio 2010 or 2013 does not have certain shapes and stencils included with the product
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Introduction 
 

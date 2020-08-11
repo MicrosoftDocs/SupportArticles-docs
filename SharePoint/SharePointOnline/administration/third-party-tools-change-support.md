@@ -8,6 +8,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.service: sharepoint-online
+ms.custom: CSSTroubleshoot
 ms.topic: article
 ms.author: v-six
 appliesto:
@@ -29,3 +30,5 @@ If you have problems in SharePoint Online that are caused by using third-party t
 After a thorough analysis, if the third-party tool vendor believes that the problem is caused by SharePoint, they can contact Microsoft Support on your behalf to provide a summary of their findings and an explanation of why they believe that the responsibility for resolving your problem belongs to Microsoft.
 
 Microsoft Support will do a full investigation of the problem after we are contacted by the third-party vendor. If the problem is determined to be related to using the third-party tool, Microsoft will advise the tool vendor of their responsibility to resolve the problem. If the problem is determined to be unrelated to the use of the third-party tool, Microsoft will work directly with you to resolve the problem.
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

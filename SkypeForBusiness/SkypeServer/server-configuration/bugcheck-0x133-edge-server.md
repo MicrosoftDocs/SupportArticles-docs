@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Lync Server 2013
 - Skype for Business Server 2015
@@ -38,10 +39,12 @@ This issue occurs because low-level Edge server code is specifically designed to
 
 ## Resolution
 
-To avoid this issue, disable the “processor groups” feature in the Edge server's BIOS.
+To avoid this issue, disable the "processor groups" feature in the Edge server's BIOS.
 
 ## More Information
 
 For more information about this error, see [Bug Check 0x133 DPC_WATCHDOG_VIOLATION](https://msdn.microsoft.com/library/windows/hardware/jj154556%28v=vs.85%29.aspx). 
 
-To disable multiple processor groups, go to the “Numa Configuration” section in the BIOS. By default, Numa Configuration is set to **Clustered** on some modern systems, which creates multiple processor groups. Set this option to **flat**.
+To disable multiple processor groups, go to the "Numa Configuration" section in the BIOS. By default, Numa Configuration is set to **Clustered** on some modern systems, which creates multiple processor groups. Set this option to **flat**.
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

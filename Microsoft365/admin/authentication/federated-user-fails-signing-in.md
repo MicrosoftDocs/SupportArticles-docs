@@ -1,6 +1,6 @@
 ---
 title: A federated user has trouble signing in with error code 80048163
-description: Describes an issue in which a federated users receive an error message when they try to sign in to Office 365, Azure, or Microsoft Intune from a sign-in webpage whose URL starts with "https://login.microsoftonline.com/login."
+description: Describes an issue in which a federated users receive an error message when they try to sign in to Office 365, Azure, or Microsoft Intune from a sign-in webpage whose URL starts with "https://login.microsoftonline.com."
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: o365-administration
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Cloud Services (Web roles/Worker roles) 
@@ -21,9 +22,11 @@ appliesto:
 
 # Error 80048163 when a federated user tries to sign in to Office 365, Azure, or Intune
 
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+
 ## Problem
 
-When a federated user tries to sign in to a Microsoft cloud service such as Office 365, Microsoft Azure, or Microsoft Intune from a sign-in webpage whose URL starts with https://login.microsoftonline.com/login, authentication for that user is unsuccessful. The user gets the following error message:
+When a federated user tries to sign in to a Microsoft cloud service such as Office 365, Microsoft Azure, or Microsoft Intune from a sign-in webpage whose URL starts with https://login.microsoftonline.com, authentication for that user is unsuccessful. The user gets the following error message:
 
 ```asciidoc
 Sorry, but we're having trouble signing you in
@@ -50,7 +53,7 @@ You can update the LSA cache time-out setting on the AD FS server to disable cac
 
 To resolve this issue, follow these steps:
 
-1. Make sure that the changes to the user’s UPN are synced through directory synchronization.
+1. Make sure that the changes to the user's UPN are synced through directory synchronization.
 1. Direct the user to log off the computer and then log on again.
 1. If steps 1 and 2 don't resolve the issue, follow these steps:
 

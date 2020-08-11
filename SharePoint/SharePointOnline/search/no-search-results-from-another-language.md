@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 - OneDrive for Business
@@ -52,6 +53,6 @@ To resolve this issue, specify your **Language and Region** settings, and then s
 
 This issue occurs because in a multilanguage environment, the normalization of some of characters or keywords for some words might differ for each language. 
 
-For more information about the language for the site interface, see [Choose the languages you want to make available for a site’s user interface](https://support.office.com/article/choose-the-languages-you-want-to-make-available-for-a-site-s-user-interface-16d3a83c-05ab-4b50-8fbb-ff576a3351e8?correlationid=397c322a-25a2-4c7a-a391-2aae4b0b4509).
+For more information about the language for the site interface, see [Choose the languages you want to make available for a site's user interface](https://support.office.com/article/choose-the-languages-you-want-to-make-available-for-a-site-s-user-interface-16d3a83c-05ab-4b50-8fbb-ff576a3351e8?correlationid=397c322a-25a2-4c7a-a391-2aae4b0b4509).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

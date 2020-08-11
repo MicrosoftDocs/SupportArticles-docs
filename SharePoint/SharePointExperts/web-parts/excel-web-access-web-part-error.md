@@ -1,6 +1,6 @@
 ---
 title: We couldn't find the file you wanted
-description: This article describes SharePoint 2016 Excel Web Access Web Part error We couldn't find the file you wanted, and provides a solution.
+description: This article describes SharePoint 2016 Microsoft Excel Online Web Part error. We couldn't find the file you wanted, and provides a solution.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -10,21 +10,22 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: randring
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Server 2016
 ---
 
-# SharePoint 2016 Excel Web Access Web Part error "We couldn't find the file you wanted"
+# SharePoint 2016 Microsoft Excel Online Web Part error "We couldn't find the file you wanted"
 
 This article was written by [Rick Andring](https://social.technet.microsoft.com/profile/Rick+A.+-+MSFT), Support Escalation Engineer.
 
 ## Scenario
 
-You are trying to render Excel workbooks in the Excel Web Access web part in SharePoint 2016 and are encountering the following error inside the web part when it attempts to load: "We couldn't find the file you wanted".
+You are trying to render Excel workbooks in the Microsoft Excel Online web part in SharePoint 2016 and are encountering the following error inside the web part when it attempts to load: "We couldn't find the file you wanted".
 
 ![error-message](./media/excel-web-access-web-part-error/error.png)
 
-You will notice that workbooks are rendering in the browser (view, edit and preview) are all working fine assuming that there are no other issues.
+You will notice that workbooks are rendering in the browser (view, edit, and preview) are all working fine assuming that there are no other issues.
 
 The Unified Logging Service (ULS) logging won't have anything helpful, but you may see errors that resemble the following while SharePoint is trying to engage the workbook:
 

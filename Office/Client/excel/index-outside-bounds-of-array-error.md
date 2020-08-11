@@ -7,6 +7,7 @@ manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
 ms.prod: office-perpetual-itpro
+ms.custom: CSSTroubleshoot
 localization_priority: Normal
 search.appverid: 
 - MET150 
@@ -18,6 +19,8 @@ appliesto:
 ---
 
 # "Index was outside the bounds of the array" error when you import data from multiple tables in a SQL Server database to an Excel 2013 workbook
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ##  Symptoms
 

@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Microsoft SharePoint
@@ -93,3 +94,5 @@ Please note that this method will detach the page from the site definition, and 
 ## More Information  
 
 Please note that it not possible to overwrite the Html View of the Organization Browser web part from the client. If you need to have a non-Silverlight control available, you will need to write a custom web part to achieve this goal with Windows Claims.
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

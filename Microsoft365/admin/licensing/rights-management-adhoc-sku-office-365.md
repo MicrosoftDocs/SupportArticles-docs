@@ -10,11 +10,14 @@ audience: ITPro
 ms.service: office 365
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Azure Active Directory
 ---
 
 # 50,000 seats are assigned to the RIGHTSMANAGEMENT_ADHOC SKU in your Office 365 organization
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 > [!NOTE]
 > Microsoft Azure Information Protection was previously known as Microsoft Azure Rights Management. 
@@ -52,6 +55,6 @@ If Azure Rights Management is disabled in your organization, Azure Rights Manage
 
 ## More information
 
-For more information about Azure Rights Management for individuals, see [https://blogs.technet.com/b/rms/archive/2013/07/31/introducing-rms-for-individuals.aspx](http://blogs.technet.com/b/rms/archive/2013/07/31/introducing-rms-for-individuals.aspx).
+For more information about Azure Rights Management for individuals, see [Introducing Microsoft Rights Management for individuals](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/introducing-microsoft-rights-management-for-individuals/ba-p/247832).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

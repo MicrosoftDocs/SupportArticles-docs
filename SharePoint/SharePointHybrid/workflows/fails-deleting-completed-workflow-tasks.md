@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 - SharePoint Server
@@ -24,7 +25,7 @@ Consider the following scenario:
 - In SharePoint Online or SharePoint Server, you have a workflow that uses the SharePoint 2013 Workflow Platform Type.
 - The workflow uses the **Assign a Task** or **Start a task** action.
 
-However, after the workflow is completed, the completed task isn’t deleted as expected.
+However, after the workflow is completed, the completed task isn't deleted as expected.
 
 ## Solution
 
@@ -32,4 +33,4 @@ This is the expected behavior for workflows that use the SharePoint 2013 Workflo
 
 ## More information
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

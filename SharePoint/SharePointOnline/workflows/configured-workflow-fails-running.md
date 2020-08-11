@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 ---
@@ -45,6 +46,6 @@ To work around this issue, configure your workflow to send email messages withou
 
 ## More information
 
-This issue occurs when you exceed the Exchange Online message limits. For more information, see [Exchange Online Limits](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#recipientlimits).
+This issue occurs when you exceed the Exchange Online message limits configured for SharePoint Online outgoing emails. 
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

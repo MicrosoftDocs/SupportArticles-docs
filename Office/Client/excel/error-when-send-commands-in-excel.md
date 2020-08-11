@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Excel 2016
@@ -18,6 +19,8 @@ appliesto:
 ---
 
 # "An error occurred when sending commands to the program" in Excel
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 
@@ -53,7 +56,7 @@ If these steps do not resolve the problem, go to Method 2.
  
 If you are running Update User Experience Virtualization (UE-V), install [Hotfix Package 1 for Microsoft User Experience Virtualization 2.0 (KB2927019)](https://support.microsoft.com/help/2927019).
 
-If you are not sure whether you are running UE-V, examine the program list in the **Programs and Features** item in Control Panel. An entry for “Company Settings Center” indicates that you are running UE-V.
+If you are not sure whether you are running UE-V, examine the program list in the **Programs and Features** item in Control Panel. An entry for "Company Settings Center" indicates that you are running UE-V.
 
 If these steps do not resolve the problem, go to Method 3.
 
@@ -70,18 +73,18 @@ To check whether the file associations in the system are performing correctly, r
  
 1. On the Start screen, type Control Panel.    
 2. Select **Control Panel**.    
-3. Select **Default Programs **> **Set your default programs**.    
-4. Select **Excel **> **Choose default for this program**.    
-5. On the **Set Program Associations** screen, select **Select All **> **Save**.    
+3. Select **Default Programs** > **Set your default programs**.    
+4. Select **Excel** > **Choose default for this program**.    
+5. On the **Set Program Associations** screen, select **Select All** > **Save**.    
  
 **Windows 7**  
  
-1. Select **Start **> **Control Panel**.    
+1. Select **Start** > **Control Panel**.    
 2. Select **Default Programs**.    
 3. Select **Associate a file type or protocol with a specific program**.   
 4. Select **Microsoft Excel Worksheet**, and then select change program.    
 5. Under **Recommended Programs**, select **Microsoft Excel**.    
-6. If Excel does not appear in this list, select **Browse**, locate the Excel installation folder, select **Excel.exe **> **Excel**.    
+6. If Excel does not appear in this list, select **Browse**, locate the Excel installation folder, select **Excel.exe** > **Excel**.    
     
 If these steps do not resolve the problem, go to Method 4.
 
@@ -93,9 +96,9 @@ Try to repair your Office programs. To do this, follow the steps for your instal
 
 Windows 10  
  
-1. In the search box, type **Control Panel**, and then click** Control Panel **in the search results.    
+1. In the search box, type **Control Panel**, and then click **Control Panel** in the search results.    
 2. Under **Programs**, click **Uninstall a program**.    
-3. Click **Microsoft Office 365 **> **Change**.    
+3. Click **Microsoft Office 365** > **Change**.    
 4. Click **Online Repair** > **Repair**.    
  
 > [!NOTE]
@@ -105,22 +108,22 @@ Windows 10
 2. Select **Control Panel**.    
 3. Under **Programs**, select **Uninstall a program**.    
 4. Select **Microsoft Office 365 **> **Change**.    
-5. Select **Online Repair **> **Repair**.
+5. Select **Online Repair** > **Repair**.
 
 > [!NOTE]
 > You may have to restart your computer after the repair process is finished.    
  
 Windows 7  
 
-1. Select **Start **>**Control Panel**.    
+1. Select **Start** >**Control Panel**.    
 2. Double-click **Programs and Features**.    
 3. Select **Microsoft Office 365 **> **Change**.    
-4. Select **Online Repair **> **Repair**.
+4. Select **Online Repair** > **Repair**.
 
 > [!NOTE]
 > You may have to restart your computer after the repair process is complete.
 
-![You may have to restart your computer after the repair process is complete](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4019648_en_1)    
+![You may have to restart your computer after the repair process is complete](./media/error-when-send-commands-in-excel/note.png)    
     
 **For an Office 2016, 2013, Office 2010, or Office 2007 installation**
 
@@ -134,14 +137,14 @@ If these steps do not resolve the problem, go to Method 5.
  
 Excel and COM add-in programs can also cause this problem. These two kinds of add-ins are located in different folders. For testing, disable and isolate the conflict by turning off each add-in one at a time. To do this, follow these steps: 
  
-1. On the **File** menu, select **Options **> **Add-Ins**.    
+1. On the **File** menu, select **Options** > **Add-Ins**.    
 2. In the **Manage** list at the bottom of the screen, select **COM Add-Ins** > **Go**.    
 3. Clear one of the add-ins in the list, and then select **OK**.    
 4. Restart Excel by double-clicking the icon or file name for the workbook that you are trying to open. 
 5. If the problem persists, repeat steps 1-4, except select a different add-in in step 3.    
 6. If the problem persists after you clear all the COM Add-ins, repeat steps 1-4, except select **Excel Add-Ins** in step 2, and then try each of the Excel add-ins one at a time in step 3.    
  
-If Excel loads the file, the add-in you last turned off is causing the problem. If this is the case, we recommend that you visit the manufacturer's website for the add-in to learn whether an updated version of the add-in is available. If a newer version of the add-in is not available, or if you don’t have to use the add-in, you can leave it turned off.
+If Excel loads the file, the add-in you last turned off is causing the problem. If this is the case, we recommend that you visit the manufacturer's website for the add-in to learn whether an updated version of the add-in is available. If a newer version of the add-in is not available, or if you don't have to use the add-in, you can leave it turned off.
 
 If Excel does not open the file after you turn off all the add-ins, the problem has a different cause.
 
@@ -160,7 +163,7 @@ To disable hardware acceleration, follow these steps:
 
     The following screen shot shows this option in Excel.
     
-    ![The following screen shot shows this option in Excel.](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4019649_en_1)    
+    ![The following screen shot shows this option in Excel.](./media/error-when-send-commands-in-excel/screenshot.png)    
 5. Select **OK**.    
  
 > [!NOTE]

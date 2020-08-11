@@ -10,11 +10,14 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft Access
 ---
 
 # Microsoft OLE DB Provider for Jet and Jet ODBC driver are available in 32-bit versions only
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## INTRODUCTION
 

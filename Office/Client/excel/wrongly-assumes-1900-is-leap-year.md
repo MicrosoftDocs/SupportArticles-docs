@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.reviewer: bradthor 
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -22,6 +23,8 @@ appliesto:
 ---
 
 # Excel incorrectly assumes that the year 1900 is a leap year
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ##  Symptoms
 
@@ -55,4 +58,4 @@ NOTE: Microsoft Excel correctly handles all other leap years, including century 
 
 For additional information about determining whether a given year is a leap year, click the article number below to view the article in the Microsoft Knowledge Base:
 
-   [214019](/help/214019) XL2000: Method to Determine Whether a Year Is a Leap Year
+   [Method to Determine Whether a Year Is a Leap Year](https://docs.microsoft.com/office/troubleshoot/excel/determine-a-leap-year)

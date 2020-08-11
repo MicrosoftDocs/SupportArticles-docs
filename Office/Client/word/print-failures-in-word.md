@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot print failures in Word
+title:  Print failure troubleshooting in Word
 description: Describes how to diagnose print failures in Word 2013, Word 2010, Word 2007, and Word 2003. Explains how to isolate the cause of the print failure and how to resolve the issue.
 author: simonxjx
 manager: dcscontentpm
@@ -7,6 +7,7 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
+ms.custom: CSSTroubleshoot
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
@@ -19,15 +20,14 @@ appliesto:
 
 # Troubleshoot print failures in Word
 
+> [!NOTE]
+> If you are using Microsoft 365 (Microsoft Word for Office 365 with Windows 10), see [Troubleshoot print failures in Word for Office 365 on Windows 10](https://docs.microsoft.com/office/troubleshoot/word/print-failures-word-for-office-365-on-win-10).
+
 ## Summary
 
 This article suggests ways in which you can diagnose and resolve issues when you cannot print a Microsoft Word document.
 
 ## More Information
-
-For more information about printing problems in Word, click the following article number to view the article in the Microsoft Knowledge Base: 
-
-[826862](https://support.microsoft.com/help/826862) How to troubleshoot printing problems in Word 
 
 Examples of print failure are as follows: 
  
@@ -72,9 +72,9 @@ Damaged documents or documents that contain damaged graphics or damaged fonts ca
    3. In the **Font** list, click to select a different font.    
  
    To insert clip art, follow these steps:  
-   1. Click the **Insert** tab, and then click **Clip Art**. (In Word 2013, click the **Insert** tab, and then click **Online Pictures**.)    
-   2. On the **Clip Art** task pane, leave the **Search text** box blank, and then click **Go**. (In Word 2013, type a term in the **Office.com Clip Art** search box, and then click **Search**.)    
-   3. Right-click one of the pictures, and then click **Insert**.    
+   1. Click the **Insert** tab, and then click **Clip Art**. (In Word 2013, click the **Insert** tab, and then click **Online Pictures**.)    
+   2. On the **Clip Art** task pane, leave the **Search text** box blank, and then click **Go**. (In Word 2013, type a term in the **Office.com Clip Art** search box, and then click **Search**.)    
+   3. Right-click one of the pictures, and then click **Insert**.    
    4. Close the Clip Art task pane.    
    
    To insert a table, follow these steps:  
@@ -98,21 +98,21 @@ Damaged documents or documents that contain damaged graphics or damaged fonts ca
 
    To change the font, follow these steps:  
    1. Use your pointing device to select your sample text.    
-   2. On the **Format** menu, click **Font**.    
+   2. On the **Format** menu, click **Font**.    
    3. In the **Font** list, click to select a different font, and then click **OK**.    
   
    To insert clip art, follow these steps:  
-   1. On the **Insert** menu, point to **Picture**, and then click **Clip Art**.    
-   2. On the **Insert Clip Art** task pane, leave the **Search text** box blank, and then click **Search**.    
-   3. Right-click one of the pictures, and then click **Insert**.    
+   1. On the **Insert** menu, point to **Picture**, and then click **Clip Art**.    
+   2. On the **Insert Clip Art** task pane, leave the **Search text** box blank, and then click **Search**.    
+   3. Right-click one of the pictures, and then click **Insert**.    
    4. Close the Insert Clip Art task pane.    
   
    To insert a table, follow these steps:  
-   1. On the **Table** menu, point to **Insert**, and then click **Table**.    
+   1. On the **Table** menu, point to **Insert**, and then click **Table**.    
    2. Click **OK**.    
   
    To insert a drawing object, follow these steps:  
-   1. On the **View** menu, point to **Toolbars**, and then click **Drawing**.    
+   1. On the **View** menu, point to **Toolbars**, and then click **Drawing**.    
    2. On the **Drawing** toolbar, select one of the drawing shapes.    
    3. Click anywhere in the document, drag the mouse pointer, and then release the button.    
      
@@ -136,35 +136,35 @@ The following tests can help determine whether this problem involves programs ot
 
 #### Test in WordPad
 
-1. Click **Start**, point to **Programs** (in Windows XP, point to **All Programs**), point to **Accessories**, and then click
+1. Click **Start**, point to **Programs** (in Windows XP, point to **All Programs**), point to **Accessories**, and then click
  **WordPad**. (In Windows 8, press the Windows key to go to the Start Screen, type WordPad, and then click the icon.)  
 2. In the blank WordPad document, type This is a test.    
-3. On the **File **menu, click **Print**. 
+3. On the **File** menu, click **Print**. 
 4. Click **OK** or **Print** to print the file.    
  
 If you found in Step 1: Test printing in other documents" that the print problem occurs only with certain fonts or certain graphics images, try to reproduce this problem in WordPad. To do this, apply the same font, or insert the same kind of graphics image. (To select a different font in WordPad, use the same method that you use in Word.)
 
 To insert a graphics image in WordPad, follow these steps: 
  
-1. On the **Insert** menu, click **Object**.
+1. On the **Insert** menu, click **Object**.
 
    **Note** In Windows 8 and Windows 7, click **Insert Object** on the **Home** tab.  
   
 2. Follow one or both of the following steps: 
    - To create a new graphics image, click **Create New**, and then select one of the object types from the list. For example, click **Paintbrush Picture** to create a test bitmap in the Microsoft Paint program.    
-   - To insert a graphics image from a file, click **Create from File**, and then click **Browse** to select the file.    
+   - To insert a graphics image from a file, click **Create from File**, and then click **Browse** to select the file.    
      
 After you finish your testing in WordPad, you can test the print functions in your web browser or your other Office programs. You can also try to print a test page for your printer. To print a text page, follow these steps: 
  
-1. Click **Start**, point to **Settings**, and then click **Printers**.
+1. Click **Start**, point to **Settings**, and then click **Printers**.
 
    Notes  
-   - In Windows XP, click **Start**, and then click **Printers and Faxes**.    
-   - In Windows Vista, click **Start**, and then click **Printers**.    
-   - In Windows 7, click **Start**, and then click **Devices and Printers**. 
-   - In Windows 8, press the Windows key to go to the Start Screen, type Printers, click **Settings**, and then click **Devices and Printers**.    
+   - In Windows XP, click **Start**, and then click **Printers and Faxes**.    
+   - In Windows Vista, click **Start**, and then click **Printers**.    
+   - In Windows 7, click **Start**, and then click **Devices and Printers**. 
+   - In Windows 8, press the Windows key to go to the Start Screen, type Printers, click **Settings**, and then click **Devices and Printers**.    
   
-2. Right-click the icon for your printer, and then click **Properties**.    
+2. Right-click the icon for your printer, and then click **Properties**.    
 3. On the **General** tab, click **Print Test Page**.    
 
 If you cannot print a test page, or if you cannot print in several or all Windows-based programs, you have a printer driver problem, a Windows problem, a hardware problem, or a connectivity problem.
@@ -177,9 +177,9 @@ If you can print without problems in all programs except Word, go to "Step 3: Te
 
 You may be able to use Windows printing help and troubleshooters to resolve the printing problem. 
  
-- In Windows 8 and Windows 7, you can run the printing troubleshooting wizard by clicking **Start**, typing printing, and then selecting **Find and fix printing problems**.    
+- In Windows 8 and Windows 7, you can run the printing troubleshooting wizard by clicking **Start**, typing printing, and then selecting **Find and fix printing problems**.    
 - In Windows Vista or Windows XP, click **Start**, select **Help and Support**, and search on printingor printing troubleshoot.    
-   
+   
 ### Step 3: Test printing with different printer drivers
  
 If Word is the only program on your computer that cannot print, you may think that Word is the cause of the problem. Be aware that Word is a very printer-intensive program. Therefore, a minor problem with the printer driver affects Word before it affects other programs.
@@ -195,15 +195,15 @@ Note On some versions of Windows, these steps may require access to the Windows 
 #### Windows 8, Windows 7, and Windows Vista
 
 1. Take one of the following actions, as appropriate for your situation:  
-   - For Windows Vista: Click **Start**, and then click **Printers**.    
-   - For Windows 7: Click **Start**, and then click **Devices and Printers**.
+   - For Windows Vista: Click **Start**, and then click **Printers**.    
+   - For Windows 7: Click **Start**, and then click **Devices and Printers**.
 2. Click **Add a printer**.
 3. Click **Add a local printer** on the first screen of the Add Printer Wizard.
 4. Make sure that the **Use an existing port** check box is selected, change the dropdown option to **File: (Print to file)**, and then click **Next**.    
-5. In the **Manufacturers** list, click **Generic**, and then click **Next**.    
+5. In the **Manufacturers** list, click **Generic**, and then click **Next**.    
 6. Leave the default printer name, click **Next**, and then click **Finish**.    
 7. When the driver installation is complete, open a document in Word, and then do the following, as appropriate for your situation:  
-   - For Word 2007: Click the **Microsoft Office Button**, and then click **Print**.    
+   - For Word 2007: Click the **Microsoft Office Button**, and then click **Print**.    
    - For other versions: On the **File**menu, click **Print**.    
      
 8. Do the following, as appropriate for your situation:  
@@ -215,14 +215,14 @@ Note On some versions of Windows, these steps may require access to the Windows 
  
 #### Windows XP
  
-1. Click **Start**, and then click **Printers and Faxes**.    
+1. Click **Start**, and then click **Printers and Faxes**.    
 2. Click **Add a printer** under **Printer Tasks**.    
 3. Click **Next** on the first screen of the Add Printer Wizard.    
 4. Click **Local printer attached to this computer**, make sure that the **Automatically detect and install my Plug and Play printer** check box is cleared, and then click **Next**.    
 5. Click **FILE** for the port, and then click **Next**.    
-6. In the **Manufacturers** list, click **Generic**, and then click **Next**.    
-7. Click **FILE** for the port, and then click **Next**.    
-8. Click **Yes** when you are prompted for whether Windows will use the printer as the default, and then click **Next**.    
+6. In the **Manufacturers** list, click **Generic**, and then click **Next**.    
+7. Click **FILE** for the port, and then click **Next**.    
+8. Click **Yes** when you are prompted for whether Windows will use the printer as the default, and then click **Next**.    
 9. Click **No** when you are prompted to print a test page, and then click **Finish**.    
 10. When the driver installation is complete, open a document in Word, and then click **Print** on the **File**menu.    
 11. When the **Print to file** dialog box appears, click **My Documents** for the location of the file, and then type the following file name: Test.prn     
@@ -230,14 +230,14 @@ Note On some versions of Windows, these steps may require access to the Windows 
  
 #### Windows 2000
  
-1. Click **Start**, point to **Settings**, and then click **Printers**.    
-2. Double-click the **Add Printer **icon.
+1. Click **Start**, point to **Settings**, and then click **Printers**.    
+2. Double-click the **Add Printer** icon.
 3. Click **Next** on the first screen of the Add Printer Wizard.    
-4. Click **Local printer**, and then click **Next**.    
-5. Click **FILE** for the port, and then click **Next**.    
-6. In the **Manufacturers** list, click **Generic**.    
-7. In the **Printers** list, click **Generic/Text Only**, and then click **Next**.    
-8. Click **Yes** when you are prompted for whether Windows will use the printer as the default, and then click **Next**.    
+4. Click **Local printer**, and then click **Next**.    
+5. Click **FILE** for the port, and then click **Next**.    
+6. In the **Manufacturers** list, click **Generic**.    
+7. In the **Printers** list, click **Generic/Text Only**, and then click **Next**.    
+8. Click **Yes** when you are prompted for whether Windows will use the printer as the default, and then click **Next**.    
 9. Click **Do not share this printer**, and then click **Next**.    
 10. Click **No** when you are prompted to print a test page, and then click **Finish**.    
 11. When the driver installation is complete, open a document in Word, and then click **Print**.    
@@ -264,11 +264,11 @@ If the printing problem continues to occur, run Detect and Repair to reinstall t
 2. Use one of the following procedures, depending on your version of Windows:  
    - In Windows 7 or Windows Vista, click **Start**, and then type add remove.    
    - In Windows XP or Windows Server 2003, click **Start**, and then click **Control Panel**.    
-   - In Windows 2000, click **Start**, point to **Setting**, and then click** Control Panel**.    
+   - In Windows 2000, click **Start**, point to **Setting**, and then click **Control Panel**.    
      
 3. Open **Add or Remove Programs**.    
 4. Click **Change or Remove Programs**, click **Microsoft Office (Microsoft Office Word)** or the version of Office or Word that you have in the **Currently installed programs** list, and then click **Change**.    
-5. Click **Repair or Repair Word (Repair Office)**, and then click **Continue **or **Next**.    
+5. Click **Repair or Repair Word (Repair Office)**, and then click **Continue** or **Next**.    
  
 #### Word 2007
 
@@ -278,7 +278,7 @@ If the printing problem continues to occur, run Detect and Repair to reinstall t
  
 #### Word 2003
 
-1. On the **Help** menu in Word, click **Detect and Repair**.    
+1. On the **Help** menu in Word, click **Detect and Repair**.    
 2. Click **Start**.    
 3. Insert the Word CD-ROM or Office CD-ROM if you are prompted, and then click **OK**.    
  If the printing problem continues to occur after you repair the Word installation or the Office installation, look for problems in Windows.
@@ -312,10 +312,10 @@ For more information about how to use the System Restore utility to restore the 
 
 1. Click **Start**, click **Run**, and then type the following command in the **Open** box: msconfig     
 2. Click **OK**.    
-3. On the **General** tab, click **Selective Startup**, and then click to clear all the successive check boxes.
+3. On the **General** tab, click **Selective Startup**, and then click to clear all the successive check boxes.
 
    **Note** You cannot click to clear the **Use Original BOOT.INI** check box.    
-4. Click **OK**, and then click **Restart** to restart your computer.    
+4. Click **OK**, and then click **Restart** to restart your computer.    
   
 For more information about how to perform a clean restart in Windows XP, click the following article number to view the article in the Microsoft Knowledge Base:
 
@@ -327,8 +327,8 @@ For more information about how to perform a clean restart in Windows XP, click t
 2. Press F8 when you receive the following message:    
 3. On the **Windows 2000 Advanced Options** menu, click **Safe mode**, and then press ENTER.    
 4. After Windows starts in safe mode, start Word, and then type some text in a new document.    
-5. On the **File** menu, click **Print**. 
-6. In the **Print** dialog box, click to select the **Print to file** check box, and then click **OK**.    
+5. On the **File** menu, click **Print**. 
+6. In the **Print** dialog box, click to select the **Print to file** check box, and then click **OK**.    
 7. When the **Print to file** dialog box appears, click **My Documents** for the location of the file, and then type the following file name: Test.prn     
 8. Click **OK**.    
   

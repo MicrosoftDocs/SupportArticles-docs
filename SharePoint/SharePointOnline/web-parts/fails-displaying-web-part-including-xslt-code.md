@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 ---
@@ -30,7 +31,7 @@ Additionally, a member of the DataFormWebPart class may intermittently not displ
 
 To work around this issue, take one or more of the following actions in Microsoft SharePoint Designer 2013 to decrease the probability that the Web Part will reach the throttling limit:
 
-- Reduce the size of the code by replacing the existing value of **ddwrt:EscapeDelims(string(@ID))** with the new value **@ID**.
+- Reduce the size of the code by replacing the existing value of **ddwrt:EscapeDelims(string(\@ID))** with the new value **\@ID**.
 - Remove all <**SharePoint:FieldDescription**> strings.
 - For an edit form page, break the XSL template for <**xsl:template name="dvt_1.rowedit"**> into multiple XSL templates by dividing the table rows into multiple XSL templates. You can do this by using SharePoint Designer 2013 to edit and add the strings.
 
@@ -41,4 +42,4 @@ This issue occurs when the XSLT code is throttled by SharePoint Online. In order
 - The custom XSLT causes a stack overflow.
 - The XSLT execution time exceeds one second.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

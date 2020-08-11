@@ -10,11 +10,14 @@ audience: ITPro
 ms.service: o365-administration
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Office 365 User and Domain Management
 ---
 
 # "A user with this name could not be found" when resetting a password for a user in Office 365
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Problem
 

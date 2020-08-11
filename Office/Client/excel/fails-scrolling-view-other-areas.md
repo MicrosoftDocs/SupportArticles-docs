@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Excel 2007
@@ -18,6 +19,8 @@ appliesto:
 ---
 
 # You cannot scroll to view the other areas of an Excel worksheet
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

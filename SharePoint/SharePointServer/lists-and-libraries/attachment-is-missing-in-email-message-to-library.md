@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Windows SharePoint Services 3.0
 ---
@@ -51,3 +52,7 @@ To resolve this issue, you must use Active Directory Service Interfaces (ADSI) t
 ## Workaround  
 
 In the Exchange Management Console, you can add a new Message Format under the Global Settings, set the domain to the Fully Qualified Domain Name of the SharePoint server, and set it to never use Exchange Rich-Text Format.   
+
+## More information
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

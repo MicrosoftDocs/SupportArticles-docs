@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office 365
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-maqiu
 localization_priority: Normal
 appliesto:
@@ -17,6 +18,8 @@ appliesto:
 ---
 
 # Access ADODB code errors when you use the adBigInt data type
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

@@ -11,6 +11,7 @@ ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
 ms.reviewer: miadkins
+ms.custom: CSSTroubleshoot
 appliesto:
 - Lync Server 2010 Enterprise Edition
 - Lync Server 2010 Standard Edition
@@ -71,4 +72,6 @@ Use the following steps to update the host name and primary DNS suffix of the Wi
 
 ## More Information
 
-[Configure the DNS Suffix for Edge Servers](http://technet.microsoft.com/en-us/library/gg398488.aspx)
+[Configure the DNS Suffix for Edge Servers](https://technet.microsoft.com/library/gg398488.aspx)
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

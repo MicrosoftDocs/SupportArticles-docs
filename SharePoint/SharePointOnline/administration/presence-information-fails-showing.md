@@ -10,9 +10,11 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Server 2019
 - SharePoint Server 2016
+- SharePoint Online
 ---
 
 # Presence information does not show on a SharePoint page
@@ -29,3 +31,7 @@ Use one of the following two workarounds, and then open the page again:
 ## Why this issue occurs
 
 The Office add-on for Internet Explorer loops though all the processes on the computer to look for the Skype for Business process so that it can use a handle to the process to communicate with it.  When Internet Explorer runs in Protected Mode, Windows security restricts the process list that is sent back to the Office add-on, and the Skype for Business handle is inaccessible.
+
+## More information
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

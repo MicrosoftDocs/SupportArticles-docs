@@ -7,6 +7,7 @@ ms.service: exchange-online
 ms.topic: article
 ms.author: v-six
 manager: dcscontentpm
+ms.custom: CSSTroubleshoot
 localization_priority: Normal
 search.appverid: 
 - MET150
@@ -43,6 +44,6 @@ Run the following cmdlet in Exchange Online PowerShell:
 ```powershell
 Set-MailboxAutoReplyConfiguration
 ```
-For more information about this cmdlet, see [Set-MailboxAutoReplyConfiguration](https://support.office.com/en-us/article/Automatic-replies-formerly-Out-of-office-assistant-48D40166-0129-4653-98F1-EB85F9BD8C20).
+For more information about this cmdlet, see [Set-MailboxAutoReplyConfiguration](https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-mailboxautoreplyconfiguration?view=exchan).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

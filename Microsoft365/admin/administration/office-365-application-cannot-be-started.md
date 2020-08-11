@@ -7,17 +7,20 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
+ms.custom: CSSTroubleshoot
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
 appliesto:
-- Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
 - Microsoft Windows XP Professional
 - Microsoft Windows XP Home Edition
 - Office 365 User and Domain Management
 ---
 
 # "Application cannot be started. Contact the application vendor" when run Office 365 Desktop Setup
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Problem
 

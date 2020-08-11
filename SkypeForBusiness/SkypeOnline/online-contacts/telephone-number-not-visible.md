@@ -11,6 +11,7 @@ ms.service: skype-for-business-online
 ms.topic: article
 ms.author: v-six
 ms.reviewer: v-ernord, dahans
+ms.custom: CSSTroubleshoot
 appliesto: 
 - Skype for Business Online
 ---
@@ -28,7 +29,7 @@ To resolve this issue, change the telephone number in the Office 365 portal or t
 If you're using Directory Synchronization together with an on-premises AD DS, populate the telephoneNumberattribute that uses the E.164 formatted telephone number, and let the attribute sync to Microsoft Office 365.
 
 > [!NOTE]
-> It can take up to 24 hours for changes that you make in the portal or on-premises to be visible in a user’s Lync contact card.
+> It can take up to 24 hours for changes that you make in the portal or on-premises to be visible in a user's Lync contact card.
 
 ## More information
 

@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 ---
@@ -29,5 +30,5 @@ To work around this issue, review the recommendations, techniques, and tips outl
 ## More information
 
 This issue occurs because SharePoint Online uses the Large List Resource Throttling feature. By default, the list view threshold is configured at 5,000 items. When the defined item limit in a list is exceeded, the message is displayed.
- 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

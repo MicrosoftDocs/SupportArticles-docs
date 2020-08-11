@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - SharePoint Server 2016
@@ -144,3 +145,7 @@ To effectively remove the **Authorization: Bearer** header for requests, use a U
 Repeat all the steps from the previous section on every SharePoint Web Front End (WFE) server in the farm to make sure that all servers are configured identically. If you have already used rewrite rules, the two rules from the previous section need to be set as the last two in the list because the HEAD rule will disable subsequent rules.
 
 Because of limitations in the IIS URL Rewrite extension, the rules can't currently be combined in a way that lets them work correctly. This situation may change in a future revision of the extension, or an alternative configuration may be found in the future. For now, these methods are the best confirmed way to resolve this issue by using URL Rewrite.
+
+## More information
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

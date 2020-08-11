@@ -7,6 +7,7 @@ manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
 ms.prod: office 365
+ms.custom: CSSTroubleshoot
 localization_priority: Normal
 search.appverid: 
 - MET150
@@ -17,6 +18,8 @@ appliesto:
 
 # "AADSTS65005" error when you try to sign in to Microsoft Cloud services
 
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+
 ##  Symptoms
 
 When you use a company app to sign in to or authenticate to one of the Microsoft Cloud Services, such as Microsoft Office 365, Microsoft Intune, Microsoft Dynamics, Microsoft Power BI, or Microsoft Azure, or Azure Active Directory (Azure AD) Federated Gallery Apps, you receive the following error message: 
@@ -25,7 +28,7 @@ When you use a company app to sign in to or authenticate to one of the Microsoft
 
 ##  Cause
 
-This issue occurs because the company’s app may not be registered with Azure AD, or it may not have the correct permissions applied. 
+This issue occurs because the company's app may not be registered with Azure AD, or it may not have the correct permissions applied. 
 
 ##  Resolution
 

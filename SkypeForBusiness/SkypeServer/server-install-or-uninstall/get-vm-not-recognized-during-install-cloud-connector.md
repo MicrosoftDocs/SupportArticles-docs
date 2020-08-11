@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Cloud Connector Edition
 ---
@@ -37,3 +38,7 @@ The Hyper-V Module for Windows PowerShell is not installed.
 ## Resolution
 
 If you upgraded Windows Server Host from a prior version to 2012 R2 or you removed this Hyper-V feature, you need to install the Hyper-V Module for Windows PowerShell in the Hyper-V Management Tools, under "Features."
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

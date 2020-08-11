@@ -6,6 +6,7 @@ ms.author: v-zolu
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
+ms.custom: CSSTroubleshoot
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.reviewer: chadmat, jenl
@@ -16,6 +17,8 @@ appliesto:
 ---
 
 # Excel 2013 takes a very long time to insert or delete rows after a custom sort on many named columns
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ##  Symptoms
 

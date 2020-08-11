@@ -1,6 +1,6 @@
 ---
 title: Users are redirected when browsing to a SharePoint or OneDrive site
-description: Users are redirected in SharePoint with an waring message saying "Access to Microsoft SharePoint Online is monitored."
+description: Users are redirected in SharePoint with a warning message saying "Access to Microsoft SharePoint Online is monitored."
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
@@ -9,6 +9,8 @@ search.appverid:
 audience: ITPro
 ms.service: o365-solutions
 ms.topic: article
+ms.custom: CSSTroubleshoot
+ms.collection: SPO_Content
 ms.author: v-maqiu
 appliesto:
 - SharePoint Online
@@ -33,7 +35,7 @@ https://*tenant*.sharepoint.com.us2.case.ms/sitepages/home.aspx
 This issue occurs if a Microsoft Cloud App Security policy applies to the user's session.
 
 > [!NOTE]
-> When you create a session policy, each user session that matches the policy is redirected to session control instead of to the app directly. For example, if the app returns a page that uses links whose domains end in *myapp.com*, Conditional Access App Control replaces the links with domains that end in something that resembles *myapp.com.us.cas.ms*. In this case, all the sessions are monitored by Microsoft Cloud App Security.
+> When you create a session policy, each user session that matches the policy is redirected to session control instead of to the app directly. For example, if the app returns a page that uses links whose domains end in *myapp.com*, Conditional Access Web App Control replaces the links with domains that end in something that resembles *myapp.com.us.cas.ms*. In this case, all the sessions are monitored by Microsoft Cloud App Security.
 
 ## Resolution
 
@@ -42,10 +44,12 @@ If you don't want to notify users that they're being monitored, you can disable 
 1. Select the **Settings** icon (cog), and then select **General settings**.
 1. Under **Conditional Access App Control**, select **User monitoring**, and then clear the **Notify users** check box.
 
-To keep users within the session, Conditional Access App Control replaces all the relevant URLs, Java scripts, and cookies within the app session with Microsoft Cloud App Security URLs.
+To keep users within the session, Conditional Access Web App Control replaces all the relevant URLs, Java scripts, and cookies within the app session with Microsoft Cloud App Security URLs.
 
 To disable monitoring, you have to browse to the Microsoft Cloud App Security page, select the activity log, and then search for the affected users. After you locate the policy, you can either disable the policy or remove the users from the group so that the policy no longer affects them.
 
 ## More information
 
 For more information, see [Session policies](https://docs.microsoft.com/cloud-app-security/session-policy-aad).
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

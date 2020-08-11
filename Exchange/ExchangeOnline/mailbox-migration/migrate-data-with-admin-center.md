@@ -8,6 +8,7 @@ ms.topic: article
 ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -66,7 +67,7 @@ To create a migration batch, follow these steps:
  
 1. Sign in to the Office 365 portal ([https://portal.office.com](https://portal.office.com/)).    
 2. Click **Admin**, and then click **Exchange**.    
-3. Click **Migration**, click **New** (![A screen shot of the cross icon](https://support.microsoft.com/Library/Images/2799237.jpg)), and then click **Onboarding**.    
+3. Click **Migration**, click **New** (![A screen shot of the cross icon](./media/migrate-data-with-admin-center/cross.png)), and then click **Onboarding**.    
 4. Select the migration option that you want, and then click **Next**. Migration options are as follows:  
    - Remote move    
    - Staged migration    
@@ -75,7 +76,7 @@ To create a migration batch, follow these steps:
  
    The following screen shot shows the migration options:
 
-    ![A screen shot of the Select migration type page ](https://support.microsoft.com/Library/Images/2799293.jpg)    
+    ![A screen shot of the Select migration type page](./media/migrate-data-with-admin-center/select-migration-type.png)    
  
 #### Remote move walkthrough
  
@@ -92,27 +93,27 @@ To create a staged migration batch, follow these steps:
     Each row in the CSV file that you use to migrate on-premises Exchange mailboxes to the cloud in a staged Exchange migration should contain information about the on-premises mailbox. 
 2. On the "Select the mailboxes" screen, locate the CSV file that you created in step 1, and then click **Next**. The following screen shot shows an example:
  
-    ![A screen shot of the Select the mailboxes page ](https://support.microsoft.com/Library/Images/2799294.jpg)    
+    ![A screen shot of the Select the mailboxes page](./media/migrate-data-with-admin-center/mailboxes-page.png)    
 3. Enter the credentials of your on-premises admin account, and then click **Next**. The following screen shot shows an example:
 
-    ![A screen shot of the Enter the Windows user account credential page](https://support.microsoft.com/Library/Images/2799295.jpg)
+    ![A screen shot of the Enter the Windows user account credential page](./media/migrate-data-with-admin-center/user-account.png)
 4. If the Autodiscover service can't detect the connection settings for the on-premises Exchange server, you're prompted to enter the following information:  
    - The fully qualified domain name (FQDN) of the Exchange server that hosts the mailbox that you're migrating    
    - The FQDN of the proxy server for the Exchange server    
  
     If the Autodiscover service can detect the connection settings for the on-premises Exchange server, you're prompted to confirm the entries. The following screen shot shows an example:
 
-    ![A screen shot of the Confirm the Remote MRS Proxy Server page](https://support.microsoft.com/Library/Images/2799296.jpg)
+    ![A screen shot of the Confirm the Remote MRS Proxy Server page](./media/migrate-data-with-admin-center/mrs-proxy.png)
  
     Click **Next**.    
 5. Enter a name for the migration batch, and then click **Next**.
 
-    ![A screen shot of the Migration configuration page](https://support.microsoft.com/Library/Images/2799297.jpg)    
+    ![A screen shot of the Migration configuration page](./media/migrate-data-with-admin-center/configuration-page.png)    
 6. Specify the admins in your Office 365 organization who should receive the migration report, select one of the following migration methods, and then click** New**:  
    - Automatically start the migration    
    - Manually start the migration later    
 
-    ![A screen shot of the Start migration page](https://support.microsoft.com/Library/Images/2799310.jpg)    
+    ![A screen shot of the Start migration page](./media/migrate-data-with-admin-center/migration-page.png)    
  
 #### Cutover migration walkthrough
  
@@ -120,24 +121,24 @@ To create a cutover migration batch, follow these steps:
  
 1. Specify the Windows admin user account credentials for the Exchange server.
 
-    ![A screen shot of the Enter the Windows user account credential page](https://support.microsoft.com/Library/Images/2799298.jpg)    
+    ![A screen shot of the Enter the Windows user account credential page](./media/migrate-data-with-admin-center/credential.png)    
 2. If the Autodiscover service can't detect the connection settings for the on-premises Exchange server, you're prompted to enter the following information:  
    - The FQDN of the Exchange server that hosts the mailboxes that you're migrating    
    - The FQDN of the proxy server for the Exchange server    
  
     If the Autodiscover service can detect the connection settings for the on-premises Exchange server, you're prompted to confirm the entries. The following screen shot shows an example:
 
-    ![A screen shot of the Confirm the Remote MRS Proxy Server page](https://support.microsoft.com/Library/Images/2799299.jpg)
+    ![A screen shot of the Confirm the Remote MRS Proxy Server page](./media/migrate-data-with-admin-center/server-page.png)
 
     Click **Next**.    
 3. Enter a name for the migration batch, and then click **Next**.
 
-    ![A screen shot of the Migration configuration page](https://support.microsoft.com/Library/Images/2799300.jpg)    
+    ![A screen shot of the Migration configuration page](./media/migrate-data-with-admin-center/configuration-page-2.png)    
 4. Specify the admins in your Office 365 organization who should receive the migration report, select one of the following migration methods, and then click **New**:  
    - Automatically start the migration    
    - Manually start the migration later    
  
-    ![A screen shot of the Start migration page](https://support.microsoft.com/Library/Images/2799302.jpg)    
+    ![A screen shot of the Start migration page](./media/migrate-data-with-admin-center/migration-page-2.png)    
  
 #### IMAP migration - Walkthrough
  
@@ -148,28 +149,28 @@ To create an IMAP migration batch, follow these steps:
     The CSV file that you use to migrate the content of user's mailboxes should contain a row for each user. Each row contains information about the user's cloud-based mailbox and IMAP mailbox that are used to process the migration.
 2. On the "Select the mailboxes" screen, locate the CSV file that you created in step 1, and then click **Next**. The following screen shot shows an example:
 
-    ![A screen shot of the Select the mailboxes page](https://support.microsoft.com/Library/Images/2799303.jpg)    
+    ![A screen shot of the Select the mailboxes page](./media/migrate-data-with-admin-center/mailboxes-page-2.png)    
 3. On the IMAP Configuration screen, enter the connection settings for the server from which you want to migrate mailbox data. The following screen shot shows an example:
 
-    ![A screen shot of the IMAP Configuration page](https://support.microsoft.com/Library/Images/2799304.jpg)    
+    ![A screen shot of the IMAP Configuration page](./media/migrate-data-with-admin-center/configuration-page-3.png)    
 4. Enter a name for the migration batch, and then click **Next**.
 
-    ![A screen shot of Migration configuration page](https://support.microsoft.com/Library/Images/2799305.jpg)    
+    ![A screen shot of Migration configuration page](./media/migrate-data-with-admin-center/configuration-page-4.png)    
 5. Specify the admins in your Office 365 organization who should receive the migration report, select one of the following migration methods, and then click **New**:  
    - Automatically start the migration    
    - Manually start the migration later    
  
-    ![A screen shot of the Start migration page](https://support.microsoft.com/Library/Images/2799306.jpg)    
+    ![A screen shot of the Start migration page](./media/migrate-data-with-admin-center/migration-page-3.png)    
  
 ### How to manage migration batches by using the Exchange Admin Center
  
 After admins create the migration batch, they can create additional migration batches. Additionally, admins can change, delete, pause, or start an existing migration batch. They can use the following controls to perform these actions:
 
-![The icons to change, delete, pause, or start an existing migration batch](https://support.microsoft.com/Library/Images/2798127.png)
+![The icons to change, delete, pause, or start an existing migration batch](./media/migrate-data-with-admin-center/existing-migration.png)
 
 Admins can also change the associated endpoint of a migration batch by using controls on the **Migration** tab. If more than one batch is started, admins can select the migration batch that has the highest priority.
 
-![A screen shot of the Associated endpoint page ](https://support.microsoft.com/Library/Images/2799307.jpg) 
+![A screen shot of the Associated endpoint page](./media/migrate-data-with-admin-center/associated-endpoint.png) 
 
 ### Migration endpoints
  
@@ -177,11 +178,11 @@ Migration endpoints are management objects that describe the remote server infor
 
 The following screen shot shows migration endpoint properties that are accessed through migration batch properties:
 
-![A screen shot of the Example Cutover Migration page](https://support.microsoft.com/Library/Images/2799308.jpg)
+![A screen shot of the Example Cutover Migration page](./media/migrate-data-with-admin-center/cutover-migration.png)
 
 The following screen shot shows migration endpoint properties that are accessed from the **More **button on the **Migration **screen:
 
-![A screen shot shows migration endpoint properties](https://support.microsoft.com/Library/Images/2799309.jpg)
+![A screen shot shows migration endpoint properties](./media/migrate-data-with-admin-center/migration-endpoint-properties.png)
 
 ### How to manage migration batches by using Exchange Online PowerShell
  

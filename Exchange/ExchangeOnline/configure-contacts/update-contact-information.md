@@ -5,6 +5,7 @@ author: simonxjx
 audience: ITPro
 ms.service: exchange-online
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal
@@ -55,7 +56,7 @@ Contact numbers:
 ### How to update contact information
 
 1. Sign in to Outlook Web App.   
-2. Click **Settings **, and then click **Options**. 
+2. Click **Settings**, and then click **Options**. 
 3. In the left navigation pane, click **Account**, and then click **Edit Information**.   
 4. Make the changes that you want, and then click **Save**.   
 
@@ -68,7 +69,7 @@ Contact numbers:
 2. Click **Admin**, and then click **Exchange**.   
 3. In the left navigation pane, click **Recipients**, and then click **Mailboxes**.   
 4. Double-click the user whose contact information you want to change.   
-5. In the **User Mailbox **window, click **Contact Information**.   
+5. In the **User Mailbox** window, click **Contact Information**.   
 6. Make the changes that you want, and then click **Save**.   
 
 ### How administrators can limit users' ability to update their own contact information
@@ -79,8 +80,8 @@ This procedure must be applied to all user role policies in an organization.
 2. Click **Admin**, and then click **Exchange**.   
 3. In the left navigation pane, click **permissions**, and then click **user roles**.   
 4. Select the role that's assigned to the user. By default, the Default Role Assignment Policy is assigned to all users.   
-5. Click **Edit** (![A screen shot of the Edit icon ](https://support.microsoft.com/Library/Images/2797930.png)).   
-6. In the **Role Assignment Policy **window, under **Contact Policy**, make sure that the **MyContactInformation **and the **MyProfileInformation **check boxes are cleared.
+5. Click **Edit** (![A screen shot of the Edit icon ](./media/update-contact-information/edit.png)).   
+6. In the **Role Assignment Policy** window, under **Contact Policy**, make sure that the **MyContactInformation** and the **MyProfileInformation** check boxes are cleared.
 
     > [!NOTE]
     > You can also control the level of access for the user by clicking to select the two check boxes and then clicking to clear specific options that are listed under the two check boxes.   

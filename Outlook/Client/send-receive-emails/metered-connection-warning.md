@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Outlook 2016
 - Outlook 2013
@@ -37,7 +38,7 @@ In Microsoft Outlook 2016 or Outlook 2013, you experience the following symptoms
     Your mailbox is currently being optimized as part of upgrading to Outlook 2016. This one-time process may take more than 15 minutes and performance may be affected while the optimization is in progress.**
 
 
-    ![account information ](https://support.microsoft.com/Library/Images/3161103.png)
+    ![account information](./media/metered-connection-warning/account-information.png)
 
 ## Resolution
 
@@ -102,4 +103,4 @@ To determine whether your Office installation is Click-to-Run or MSI-based, foll
 2. On the File menu, click Office Account.   
 3. For Office Click-to-Run installations, an Update Options item is displayed. For MSI-based installations, the Update Options item is not displayed.
 
-![Determine office version](https://support.microsoft.com/Library/Images/3075576.png)
+![Determine office version](./media/metered-connection-warning/office-version.png)

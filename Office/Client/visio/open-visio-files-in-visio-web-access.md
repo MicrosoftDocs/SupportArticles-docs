@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 ms.reviewer: elzhou, genli, christys
 appliesto:
@@ -21,6 +22,8 @@ appliesto:
 ---
 
 # You can't open Visio files in Visio Web Access even if Visio Viewer is installed
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

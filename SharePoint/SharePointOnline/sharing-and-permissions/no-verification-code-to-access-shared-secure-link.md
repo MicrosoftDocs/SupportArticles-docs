@@ -8,7 +8,9 @@ audience: ITPro
 ms.topic: article 
 ms.service: sharepoint-online
 localization_priority: Normal
-ms.custom: CI 105797
+ms.custom: 
+- CI 105797
+- CSSTroubleshoot
 ms.reviewer: salarson, CLAKE
 search.appverid: MET150
 appliesto:
@@ -22,3 +24,7 @@ Assume that you share a [secure link](https://docs.microsoft.com/sharepoint/what
 ![Enter Verification Code](./media/no-verification-code-to-access-shared-secure-link/type-verification-code.png)
 
 However, users can't respond to the prompt because they don't receive the indicated email message that contains the verification code. In this situation, users should check their Junk Email or Spam folder to locate the verification message.
+
+## More information
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

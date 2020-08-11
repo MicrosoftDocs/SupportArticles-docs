@@ -9,12 +9,16 @@ search.appverid:
 audience: ITPro
 ms.prod: office 365
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Exchange Online
+- Office 365
 ---
 
 # You receive a "One or more users need an assigned license in order to retain an Exchange Online mailbox or archive" message on the Users page of the Office 365 portal
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Problem 
 
@@ -37,7 +41,7 @@ Create a view in the Office 365 portal to display a list of users who have mailb
 
 1. Sign in to the Office 365 portal ([https://portal.office.com](https://portal.office.com)) as an admin.   
 2. Click **users and groups**, and then click **active users**.   
-3. Click **Filter** (![Screen shot of the Filter icon](https://support.microsoft.com/Library/Images/2982974.jpg)), and then in the drop-down box, click **Unlicensed users**.   
+3. Click **Filter** (![Screen shot of the Filter icon](./media/license-issue-when-retain-online-mailbox/filter.png)), and then in the drop-down box, click **Unlicensed users**.   
 NoteTo assign a license to a user, double-click the user. On the "Assign licenses" page, click to select the check boxes next to the items that you want to assign, and then click save. 
 
 ## More information

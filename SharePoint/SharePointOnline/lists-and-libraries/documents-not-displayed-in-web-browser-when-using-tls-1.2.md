@@ -1,6 +1,6 @@
 ﻿---
 title: Documents aren't displayed in web browser when you're using TLS 1.2
-description: Describes an issue that blocks Office web app documents from being displayed in a web browser. Occurs because Office Online Server does not support TLS 1.2 when rendering documents on HTTPS SharePoint sites. A resolution is offered.
+description: Describes an issue that blocks Microsoft Office Online documents from being displayed in a web browser. Occurs because Office Online Server does not support TLS 1.2 when rendering documents on HTTPS SharePoint sites. A resolution is offered.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Office Online Server
 ---
@@ -22,13 +23,13 @@ When you use web apps in Microsoft Office Online Server, documents are not displ
 
 **We're sorry, we ran into a problem completing your request...**
 
-Additionally, you learn that TLS 1.0 has been disabled on the SharePoint web front end servers through the registry entry that's provided in the following Microsoft Knowledge Base article:   
+Additionally, you learn that TLS 1.0 has been disabled on the SharePoint web front-end servers through the registry entry that's provided in the following Microsoft Knowledge Base article:   
 
 [How to disable PCT 1.0, SSL 2.0, SSL 3.0, or TLS 1.0 in Internet Information Services](https://support.microsoft.com/help/187498)  
 
 ## Cause  
 
-TLS 1.2 is not currently supported because Office Online Server (and Office Web Apps) uses .NET Framework 4.*x* to establish network connections. By default, .NET Framework 4.*x* doesn’t support TLS 1.2.    
+TLS 1.2 is not currently supported because Office Online Server (and Microsoft Offices Online) uses .NET Framework 4.*x* to establish network connections. By default, .NET Framework 4.*x* doesn't support TLS 1.2.    
 
 ## Resolution  
 
@@ -38,7 +39,7 @@ Microsoft released the following optional security update to .NET Framework 4.*x
 
 This update changes the default encryption protocols from **SSL 3.0 or TLS 1.0** to the following: **TLS 1.0 or TLS 1.1 or TLS 1.2**  
 
-**Note** This security update won’t be released for Windows Server 2016 or later. Starting with Windows 2016, the registry keys that the optional security update automatically sets will have to be manually configured on each Office Online Server computer. Those registry keys and settings are as follows:  
+**Note** This security update won't be released for Windows Server 2016 or later. Starting with Windows 2016, the registry keys that the optional security update automatically sets will have to be manually configured on each Office Online Server computer. Those registry keys and settings are as follows:  
 
 ```
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319]  
@@ -47,3 +48,7 @@ This update changes the default encryption protocols from **SSL 3.0 or TLS 1.0**
 [HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432N ode\Microsoft\.NETFramework\v4.0.30319]  
 "SchUseStrongCrypto"=dword:00000001
 ```
+
+## More information
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

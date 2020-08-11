@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 ---
@@ -42,7 +43,7 @@ The SharePoint Online Public Websites feature is primarily used by a small perce
 
 1. Scroll to Postpone deletion of SharePoint Online public websites.
 
-1. Select the I’d like to keep my public website until March 31, 2018 option.
+1. Select the I'd like to keep my public website until March 31, 2018 option.
 
    > [!NOTE]
    > Depending on your existing SharePoint experience, the steps may be slightly different. For example, you may not see the option to select Admin Centers.
@@ -60,7 +61,7 @@ The SharePoint Online Public Websites feature is primarily used by a small perce
        > [!NOTE]
        > In the URL path, replace \<DomainName> with your domain name.
 
-     - On October 2, 2017, when Microsoft deletes the public site collection in SharePoint Online, customers will no longer have access to the content, images, pages, or any other files that reside on their public website. Before October 2, 2017, customers should make a backup copy of all their public website content, images, pages, and files, so that they don’t lose this content permanently. 
+     - On October 2, 2017, when Microsoft deletes the public site collection in SharePoint Online, customers will no longer have access to the content, images, pages, or any other files that reside on their public website. Before October 2, 2017, customers should make a backup copy of all their public website content, images, pages, and files, so that they don't lose this content permanently. 
 
        > [!NOTE]
        > Microsoft previously cited September 1, 2017, as the date when public site collections in SharePoint Online would be deleted. However, this has been postponed to October 2, 2017, and communicated to customers accordingly.
@@ -94,7 +95,7 @@ No.
 
 ### Why is Microsoft making this change?
 
-As part of the evolution of the Office 365 service, we periodically evaluate the capabilities of the service to make sure that we’re delivering the utmost value to customers. After careful consideration, we concluded that for public websites, Office 365 customers would be better served by third-party providers whose core competency is public websites. Therefore, we’ve made the difficult decision to discontinue the SharePoint Online Public Website feature so that we can focus our efforts and investments on delivering capabilities in Office 365 that will bring more value to our customers.
+As part of the evolution of the Office 365 service, we periodically evaluate the capabilities of the service to make sure that we're delivering the utmost value to customers. After careful consideration, we concluded that for public websites, Office 365 customers would be better served by third-party providers whose core competency is public websites. Therefore, we've made the difficult decision to discontinue the SharePoint Online Public Website feature so that we can focus our efforts and investments on delivering capabilities in Office 365 that will bring more value to our customers.
 
 ### Overview of third-party offerings
 
@@ -121,7 +122,7 @@ Most of the Office 365 customer base and underlying markets are supported. For m
 
 ### Whom do I contact for support for the third-party solutions?
 
-Support is provided by the third-party solution providers and can be accessed by following your selected partner’s existing support contact information. Review your selected partner’s support page for contact details.
+Support is provided by the third-party solution providers and can be accessed by following your selected partner's existing support contact information. Review your selected partner's support page for contact details.
 
 ### Will the price for affected Office 365 offers be reduced?
 
@@ -133,10 +134,10 @@ Customers can use any website hosting service and aren't limited to the third-pa
 
 ### What if I'm using my Public Website to share content with anonymous users?
 
-If you’re using your Public Website for anonymous access to content and need an alternative solution for the future, go to [Share SharePoint files or folders](https://support.office.com/article/1fe37332-0f9a-4719-970e-d2578da4941c) for more information about sharing content anonymously from your SharePoint Online sites.
+If you're using your Public Website for anonymous access to content and need an alternative solution for the future, go to [Share SharePoint files or folders](https://support.office.com/article/1fe37332-0f9a-4719-970e-d2578da4941c) for more information about sharing content anonymously from your SharePoint Online sites.
 
 ### Third-party disclaimer information
 
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Access for Office 365
@@ -18,6 +19,8 @@ appliesto:
 ---
 
 # Access linked table to a SharePoint list returns #Deleted
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptom
 
@@ -37,4 +40,4 @@ To work around this issue, use one of the following methods:
 - Change the caching options to one of the following:  
   - Clear the option **Use the cache format that is compatible with Microsoft Access 2010 and later**.    
   - Select both the **Use the cache format that is compatible with Microsoft Access 2010 and later** and **Never Cache** options.    
-- Use the [ImportSharePointList macro action](https://docs.microsoft.com/office/client-developer/access/desktop-database-reference/importsharepointlist-macro-action) to link to a SharePoint view of the list that doesn’t contain the Memo fields.
+- Use the [ImportSharePointList macro action](https://docs.microsoft.com/office/client-developer/access/desktop-database-reference/importsharepointlist-macro-action) to link to a SharePoint view of the list that doesn't contain the Memo fields.

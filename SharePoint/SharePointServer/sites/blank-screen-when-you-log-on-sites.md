@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - SharePoint Server 2019
@@ -23,7 +24,7 @@ appliesto:
 
 You see a blank screen when you sign in to a SharePoint site other than the Central Administration site. Additionally, you experience the following issues:   
  
-- When an error occurs, the error message doesn’t contain the correlation ID for the request.    
+- When an error occurs, the error message doesn't contain the correlation ID for the request.    
 - The following error message is logged in the Unified Logging System (ULS) Log:     
 
   ```
@@ -82,3 +83,5 @@ To resolve the issue, disable FIPS by following these steps on the computer that
 ## More Information  
 
 SharePoint Server uses several Windows encryption algorithms for computing hash values that do not comply with Federal Information Processing Standard (FIPS) 140-2, Security Requirements for Cryptographic Modules. These algorithms are not used for security purposes. They are used for internal processing. For example, SharePoint Server uses MD5 to create hash values that are used as unique identifiers. Because SharePoint Server uses these algorithms, the program doesn't support the Windows security policy setting that requires FIPS-compliant algorithms for encryption and hashing.
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

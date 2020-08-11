@@ -7,6 +7,7 @@ audience: ITPro
 ms.topic: get-started-article
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 ms.collection: Ent_Office_Outlook
 description: Helps IT Pros learn about planning and configuring Cached Exchange Mode in Outlook 2016 for Windows
 search.appverid: 
@@ -42,7 +43,7 @@ Online mode is useful in the following situations:
 
 - Kiosk scenarios, where a particular computer has many users who access different Outlook accounts—and the delay to download email messages to a local cache is unacceptable.
 - Heavily regulated compliance or secure environments where it is a risk to store data locally. In addition, we recommend that you consider using Encrypting File System (EFS) or BitLocker as a robust solution.
-- Large mailboxes on computers that don’t have sufficient hard disk space for a local copy of the mailbox.
+- Large mailboxes on computers that don't have sufficient hard disk space for a local copy of the mailbox.
 
 Even when it is configured in Cached Exchange Mode, Outlook 2016 must contact the server directly to do certain operations. These operations won't function when Outlook is not connected and can take longer to complete on high-latency connections. These operations include the following:
 
@@ -57,7 +58,7 @@ Even when it is configured in Cached Exchange Mode, Outlook 2016 must contact th
 
 Delayed delivery options are client side in cached mode and server side in online mode. So, when you use Cached Exchange Mode, Outlook must be connected and open at the assigned delivery time for the delayed delivery message to be sent.
 
- Outlook 2016 supports running in Cached Exchange Mode in a Remote Desktop Services (RDS), formerly known as Terminal Services, environment that has multiple users. When you configure a computer running RDS to use Cached Exchange Mode, be sure to consider the additional storage space and disk I/O that are required for multiple client access. New Exchange accounts set up on computers running RDS use Online Mode by default. At setup, the user can decide to enable Cached Exchange Mode.
+ Outlook 2016 supports running in Cached Exchange Mode in a Remote Desktop Services (RDS), formerly known as Terminal Services, environment that has multiple users. When you configure a computer running RDS to use Cached Exchange Mode, be sure to consider the additional storage space and disk I/O that are required for multiple client accesses. New Exchange accounts set up on computers running RDS use Online Mode by default. At setup, the user can decide to enable Cached Exchange Mode.
 
 
 ## Planning considerations for Cached Exchange Mode for Outlook 2016
@@ -66,19 +67,19 @@ In some cases, you can improve the performance of Cached Exchange Mode for your 
   
 ### Outlook data file (.ost) recommendations
 
-When you use Cached Exchange Mode, be aware that users' local .ost files are 50 percent to 80 percent larger than the mailbox size reported in Exchange Server. The format that Outlook uses to store data locally for Cached Exchange Mode is less space-efficient than the server data file format. 
+When you use Cached Exchange Mode, be aware that users' local ".ost" files are 50 percent to 80 percent larger than the mailbox size reported in Exchange Server. The format that Outlook uses to store data locally for Cached Exchange Mode is less space-efficient than the server data file format. 
   
-The maximum size for .ost files is configurable. The default is 50 GB of data storage. Make sure that users' .ost files are located in a folder that has sufficient disk space to accommodate users' mailboxes. 
+The maximum size for ".ost" files are configurable. The default is 50 GB of data storage. Make sure that users' ".ost" files are located in a folder that has sufficient disk space to accommodate users' mailboxes. 
   
-- For more information about how to deploy .ost files to a location other than the default location, see [To configure a default .ost location by using Group Policy](#to-configure-a-default-ost-location-by-using-group-policy)
+- For more information about how to deploy ".ost" files to a location other than the default location, see [To configure a default .ost location by using Group Policy](#to-configure-a-default-ost-location-by-using-group-policy)
     
-- For more information about how to configure .ost file size, see [How to configure the size limit for both (.pst) and (.ost) files in Outlook](https://support.microsoft.com/help/832925).
+- For more information about how to configure ".ost" file size, see [How to configure the size limit for both (.pst) and (.ost) files in Outlook](https://support.microsoft.com/help/832925).
     
 ### Upgrading existing Cached Exchange Mode users to Outlook 2016
 
 When upgrading, if you do not change Cached Exchange Mode settings, the same settings are kept for Outlook 2016. 
   
-However, by default, when Outlook 2016 is installed and Cached Exchange Mode is enabled, a new compressed version of the Outlook data file (.ost) is created. The earlier version of the .ost file is kept and, if it is necessary, can be opened by Outlook 2016. If you must keep Outlook 2016 from creating a new compressed Outlook data file (.ost), use the Group Policy template for Outlook (Outlk16.admx) to enable the **Do not create new OST file on upgrade** policy setting.
+However, by default, when Outlook 2016 is installed and Cached Exchange Mode is enabled, a new compressed version of the Outlook data file (.ost) is created. The earlier version of the ".ost" file is kept and, if it is necessary, can be opened by Outlook 2016. If you must keep Outlook 2016 from creating a new compressed Outlook data file (.ost), use the Group Policy template for Outlook (Outlk16.admx) to enable the **Do not create new OST file on upgrade** policy setting.
 
 For more information about how to configure this and other settings, see [Using Group Policy and the Office Customization Tool (OCT)](#using-group-policy-and-the-office-customization-tool-oct).
 
@@ -87,7 +88,7 @@ For more information about how to configure this and other settings, see [Using 
 
 ### Managing performance issues in Outlook
 
-Most users find that Cached Exchange Mode performs faster than online mode. However, several factors can influence a user's perception of Cached Exchange Mode performance, like hard disk size and speed, CPU speed, .ost file size, and the expected level of performance. 
+Most users find that Cached Exchange Mode performs faster than online mode. However, several factors can influence a user's perception of Cached Exchange Mode performance, like hard disk size and speed, CPU speed, ".ost" file size, and the expected level of performance. 
   
 For troubleshooting tips about diagnosing and addressing performance issues in Outlook, see [How to troubleshoot performance issues in Outlook](https://support.microsoft.com/help/2695805).
   
@@ -95,7 +96,7 @@ For troubleshooting tips about diagnosing and addressing performance issues in O
 
 By default, when Cached Exchange Mode is enabled, shared mail and nonmail folders that users access in other mailboxes are downloaded and cached in the user's local .ost file. Similarly, if a manager delegates access to his or her Inbox to a team member, when the team member accesses the folder, Outlook 2016 also starts caching the Inbox folder locally. 
   
-You can disable caching of all shared folders for profiles that have Cached Exchange Mode enabled. To do this, configure the **Download shared non-mail folders** option in the Office Customization Tool (OCT) when you customize your Cached Exchange Mode deployment. Note that this setting applies to both mail and nonmail folders in Outlook 2016. 
+You can disable caching of all shared folders for profiles that have Cached Exchange Mode enabled. To do this, configure the **Download shared non-mail folders** option in the Office Customization Tool (OCT) when you customize your Cached Exchange Mode deployment. This setting applies to both mail and nonmail folders in Outlook 2016. 
   
 If you want to disable caching of shared mail folders (like a delegated Inbox) but not shared nonmail folders (like Calendar), see [By default, shared mail folders are downloaded in Cached mode in Outlook 2010 and later versions](https://support.microsoft.com/help/982697/).
 
@@ -104,7 +105,7 @@ For more information about how to configure these settings, see [Using Group Pol
   
 ### Site mailboxes
 
-As an alternative to Public Folders, consider Site Mailboxes. Site mailboxes improve collaboration and user productivity by allowing access to both SharePoint Server documents and Exchange email that are in the same client interface. A site mailbox consists of SharePoint Server site membership (owners and members), shared storage through an Exchange Server mailbox for email messages and a SharePoint Server site for documents, and a management interface that addresses provisioning and life-cycle needs. SharePoint Server  documents that are viewed in the site mailbox are stored only on SharePoint Server. For more information, see [Configure site mailboxes in SharePoint Server](https://docs.microsoft.com/SharePoint/administration/configure-site-mailboxes-in-sharepoint).
+As an alternative to Public Folders, consider Site Mailboxes. Site mailboxes improve collaboration and user productivity by allowing access to both SharePoint Server documents and Exchange email that is in the same client interface. A site mailbox consists of SharePoint Server site membership (owners and members), shared storage through an Exchange Server mailbox for email messages and a SharePoint Server site for documents, and a management interface that addresses provisioning and life-cycle needs. SharePoint Server  documents that are viewed in the site mailbox are stored only on SharePoint Server. For more information, see [Configure site mailboxes in SharePoint Server](https://docs.microsoft.com/SharePoint/administration/configure-site-mailboxes-in-sharepoint).
 
 ### Managing Outlook behavior for slow connections
 
@@ -134,17 +135,17 @@ For more information about how to configure these settings, see [Using Group Pol
 
 ### Offline data file (.ost file) and Offline Address Book (OAB)
 
-When an Outlook 2016 account is configured to use Cached Exchange Mode, there's always a local copy of a user's Exchange mailbox ready in an offline data file (.ost file) on the user's computer. By default, the .ost file is in the C:\Users\\<username\>\AppData\Local\Microsoft\Outlook folder.)
+When an Outlook 2016 account is configured to use Cached Exchange Mode, there's always a local copy of a user's Exchange mailbox ready in an offline data file (.ost file) on the user's computer. By default, the ".ost" file is in the C:\Users\\<username\>\AppData\Local\Microsoft\Outlook folder.)
 
 Whenever the user is offline and using Outlook 2016, the program works from this local copy and with the Offline Address Book (OAB). When the user is online, the cached mailbox and OAB are periodically updated from Exchange Server in the background. Any email messages the user drafted while offline are automatically sent when that user is back online.
 
-If a user upgrades from an earlier version of Outlook to Outlook 2016 and you previously configured Outlook for Cached Exchange Mode, those old Cached Exchange Mode settings are automatically applied, including a new synchronization control for shared mailboxes. The default location for new .ost or OAB files is: %userprofile%\AppData\Local\Microsoft\Outlook\Offline Address Books. As an administrator, you can configure a different .ost file location for users in your organization who do not already have .ost files. If you do not specify a different .ost file location, Outlook creates an .ost file in the default location when users start Outlook in Cached Exchange Mode.
+If a user upgrades from an earlier version of Outlook to Outlook 2016 and you previously configured Outlook for Cached Exchange Mode, those old Cached Exchange Mode settings are automatically applied, including a new synchronization control for shared mailboxes. The default location for new ".ost" or OAB files is: %userprofile%\AppData\Local\Microsoft\Outlook\Offline Address Books. As an administrator, you can configure a different ".ost" file location for users in your organization who do not already have ".ost" files. If you do not specify a different ".ost" file location, Outlook creates an ".ost" file in the default location when users start Outlook in Cached Exchange Mode.
 
 ### "Mail to keep offline" setting
 
 The **Mail to keep offline** slider in the Server Settings dialog box in Outlook 2016 has been updated to apply to shared folders and lets you set a smaller synchronization window, available by default with Cached Exchange Mode in Outlook 2016. 
 
-The slider allows an Outlook 2016 user to limit the email messages that are locally synchronized in an Microsoft Outlook data file (.ost). By default, if Cached Exchange Mode is enabled, Outlook 2016 caches email messages only from the last 12 months and removes anything older from the *local* cache for the PC. These default settings depend on the device, with mobile devices having smaller default settings. The email messages that are removed from the local cache are still available for users to view, but they’ll need to be connected to Exchange Server to view them. Users can view messages that were removed from the local cache by scrolling to the end of a message list in a folder and clicking the message **Click here to view more on Microsoft Exchange**. Users can also change how much email to keep offline. You, the administrator, can change the default age or enforce the age of email messages that are removed from the local cache.
+The slider allows an Outlook 2016 user to limit the email messages that are locally synchronized in a Microsoft Outlook data file (.ost). By default, if Cached Exchange Mode is enabled, Outlook 2016 caches email messages only from the last 12 months and removes anything older from the *local* cache for the PC. These default settings depend on the device, with mobile devices having smaller default settings. The email messages that are removed from the local cache are still available for users to view, but they'll need to be connected to Exchange Server to view them. Users can view messages that were removed from the local cache by scrolling to the end of a message list in a folder and clicking the message **Click here to view more on Microsoft Exchange**. Users can also change how much email to keep offline. You, the administrator, can change the default age or enforce the age of email messages that are removed from the local cache.
 
 ### Using Group Policy and the Office Customization Tool (OCT)
 
@@ -166,11 +167,11 @@ Use the following procedures to configure Cached Exchange Mode settings by using
     
 5. Choose a default download option on the **Cached Mode** tab: 
     
-  - **Download only headers** Users see header information and the beginning of the message. They can download the full message in several ways—for example, by double-clicking to open the message or by clicking **Download the rest of this message now** in the reading pane. 
+  - **Download only headers**: Users see header information and the beginning of the message. They can download the full message in several ways—for example, by double-clicking to open the message or by clicking **Download the rest of this message now** in the reading pane. 
     
-  - **Download headers followed by the full item** All headers are downloaded first, and then full items are downloaded. The download order might not be chronological, but that shouldn't be noticeable to the user. Microsoft Outlook downloads headers followed by full items in the folder that the user is currently accessing, and then it downloads headers followed by full items in folders that the user has recently viewed. 
+  - **Download headers followed by the full item**: All headers are downloaded first, and then full items are downloaded. The download order might not be chronological, but that shouldn't be noticeable to the user. Microsoft Outlook downloads headers followed by full items in the folder that the user is currently accessing, and then it downloads headers followed by full items in folders that the user has recently viewed. 
     
-  - **Download full items** Full items are downloaded. We recommend this option unless you have a slow network connection. The download order might not be chronological, but that shouldn't be noticeable to the user. Microsoft Outlook downloads full items in the folder that the user is currently accessing, and then it downloads full items in folders that the user has recently viewed. You might want to pair this with the **On slow connections, download only headers** option. 
+  - **Download full items**: Full items are downloaded. We recommend this option unless you have a slow network connection. The download order might not be chronological, but that shouldn't be noticeable to the user. Microsoft Outlook downloads full items in the folder that the user is currently accessing, and then it downloads full items in folders that the user has recently viewed. You might want to pair this with the **On slow connections, download only headers** option. 
     
 ### To configure Cached Exchange Mode settings using Group Policy
 
@@ -202,13 +203,13 @@ Use the following procedures to configure Cached Exchange Mode settings by using
     
 6. Click **Enabled** to enable the policy setting. 
     
-7. In the **Default location for OST files** text box, enter the default location for .ost files. For example: 
+7. In the **Default location for OST files** text box, enter the default location for ".ost" files. For example: 
     
     %userprofile%\Local Settings\Application Data\Microsoft\ _newfolder_.
     
 8. Click **OK**.
     
-    You can define a new default location for both Personal Microsoft Outlook data files (.pst) and .ost files. After you click **PST Settings** in the tree view, double-click to open the **Default location for PST files** setting in the reading pane. 
+    You can define a new default location for both Personal Microsoft Outlook data files (.pst) and ".ost" files. After you click **PST Settings** in the tree view, double-click to open the **Default location for PST files** setting in the reading pane. 
     
 ### To prevent a new .ost file from being created
 
@@ -250,7 +251,7 @@ The following table shows some additional settings that you can configure for Ex
 |:-----|:-----|:-----|
 |Configure Outlook Anywhere (RPC over HTTP) user interface options  |Enable to let users view and change user interface (UI) options for Outlook Anywhere (RPC over HTTP).  |
 |Do not allow an OST file to be created  |Enable to prevent offline folder use.   |
-|Do not create new OST file on upgrade  |Enable to force Outlook 2016 to use the existing .ost file that was created by an earlier version of Outlook. If you disable or do not configure this setting (recommended), a new .ost file is created when you upgrade to Outlook 2016.  |
+|Do not create new OST file on upgrade  |Enable to force Outlook 2016 to use the existing ".ost" file that was created by an earlier version of Outlook. If you disable or do not configure this setting (recommended), a new ".ost" file is created when you upgrade to Outlook 2016.  |
 |Synchronizing data in shared folders  |Enable to control the number of days that elapses without a user accessing an Outlook folder before Outlook stops synchronizing the folder with Exchange.  |
 
 ## Related topics

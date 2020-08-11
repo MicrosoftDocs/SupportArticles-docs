@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 ms.reviewer: v-tain, corbinm, dahans
 appliesto:
@@ -42,7 +43,7 @@ There is a duplicate key sequence "LYNCONLINE" for the 'urn:schema:Microsoft.Rtc
 
 ## Solution
 
-To resolve this issue, remove the existing LyncOnline provider, and then run the original cmdlet again.  Run both **Get-CSHostingProvider** and **Get-CSPublicProvider** cmdlets to see all existing providers and determine whether any providers have the same name as the name that you’re trying to create. (For example, determine whether any providers have the name "LyncOnline.")
+To resolve this issue, remove the existing LyncOnline provider, and then run the original cmdlet again.  Run both **Get-CSHostingProvider** and **Get-CSPublicProvider** cmdlets to see all existing providers and determine whether any providers have the same name as the name that you're trying to create. (For example, determine whether any providers have the name "LyncOnline.")
 
 If the existing LyncOnline connector is a hosting provider, use the following command to remove it: 
 

@@ -7,6 +7,7 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
+ms.custom: CSSTroubleshoot
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
@@ -21,11 +22,13 @@ appliesto:
 
 # Access cache formats for SharePoint lists and document libraries
 
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+
 ## Summary
 
 Both Microsoft Access 2010 and Microsoft Office Access 2007 make significant improvements over earlier versions in how they work together with linked Microsoft SharePoint lists and document libraries to deliver a better user experience.
 
-Beginning in Access 2010, you can choose which caching format best suits your needs. To do this, you can adjust the **Caching Web Service and SharePoint tables** options in the **File** > **Options** > **Current Database** dialog base. Unless you’re experiencing one of the known issues that are listed in the following sections, we recommend that you select the option to **Use the cache format that is compatible with Microsoft Access 2010 and later**.
+Beginning in Access 2010, you can choose which caching format best suits your needs. To do this, you can adjust the **Caching Web Service and SharePoint tables** options in the **File** > **Options** > **Current Database** dialog base. Unless you're experiencing one of the known issues that are listed in the following sections, we recommend that you select the option to **Use the cache format that is compatible with Microsoft Access 2010 and later**.
 
 ## Improvements in Access 2007
 
@@ -43,7 +46,7 @@ When data is loaded into a datasheet or form, the first page of data or a single
 
 Fetch incremental data changes
 
-Although data must be fetched from the server when a link is first used within an session of Access, changes that were to the web service infrastructure enable the program to fetch incremental data changes. Access 2007 caches the data rowsets in memory after they are first opened. Therefore, later use of the SharePoint links becomes significantly faster. In cases of large datasets, there is contention for RAM on the client computer. In this case, rowsets are released, and this frees RAM for the rest of the system.
+Although data must be fetched from the server when a link is first used within a session of Access, changes that were to the web service infrastructure enable the program to fetch incremental data changes. Access 2007 caches the data rowsets in memory after they are first opened. Therefore, later use of the SharePoint links become faster. In cases of large datasets, there is contention for RAM on the client computer. In this case, rowsets are released, and this frees RAM for the rest of the system.
 
 Cache lists in XML
 
@@ -63,9 +66,9 @@ The following improvements in Access 2010 increase SharePoint performance:
 
 Cache data in local tables
 
-Access 2010 enhances the connected SharePoint list experience by caching data in local tables that persist across Access sessions. This enables Access to parse the bulk of the SharePoint XML data only one time. Later use of the links fetches only incremental data changes from the server. An additional benefit of using local tables internally instead of the in-memory rowsets is that multi-valued lookups and value list use in a SharePoint list becomes much faster.
+Access 2010 enhances the connected SharePoint list experience by caching data in local tables that persist across Access sessions. This enables Access to parse the bulk of the SharePoint XML data only one time. Later use of the links fetch only incremental data changes from the server. An additional benefit of using local tables internally instead of the in-memory rowsets is that multi-valued lookups and value list use in a SharePoint list becomes much faster.
 
-The first time that a link is opened, Access must still download all the data from SharePoint and parse it into the local tables. In some cases, all the data may be required immediately. For example, all the data must be read before you can move to the last record in the datasheet or run a query that has a join. In these cases, the time that is required to use the data is about the same as in Access 2007. The real-time savings occurs the next time that the link is used. This occurs either after you start a new session of Access or if many SharePoint links are used within a session. 
+The first time that a link is opened, Access must still download all the data from SharePoint and parse it into the local tables. In some cases, all the data may be required immediately. For example, all the data must be read before you can move to the last record in the datasheet or run a query that has a join. In these cases, the time that is required to use the data is about the same as in Access 2007. The real-time savings occur the next time that the link is used. This occurs either after you start a new session of Access or if many SharePoint links are used within a session. 
 
 Using Access 2010 Cached mode
 
@@ -87,13 +90,13 @@ Access 2010 Cache mode should not be selected if that database will be shared to
 
 [Access: "Cannot update. Database or object is read-only" error in linked SharePoint list](https://support.microsoft.com/help/3200680) (about a hidden taxonomy list)
 
-[Access: “Cannot update. Database or object is read-only” error when executing update query against the linked SharePoint view](https://support.microsoft.com/help/3200677) (about lookup data that is missing)
+[Access: "Cannot update. Database or object is read-only" error when executing update query against the linked SharePoint view](https://support.microsoft.com/help/3200677) (about lookup data that is missing)
 
 [Access: Troubleshooting errors opening linked SharePoint lists/document libraries](https://support.microsoft.com/help/2702762)
 
 [Synchronize a SharePoint 2010 list with Access 2010](https://support.office.com/article/synchronize-a-sharepoint-2010-list-with-access-2010-975bfb97-c799-4fce-b7cc-3db3b397f116)
 
-[Access: “Cannot update. Database or object is read-only” error when executing update query against the linked SharePoint list](https://support.microsoft.com/help/3200674) (because the record exceeds the MaxSize property)
+[Access: "Cannot update. Database or object is read-only" error when executing update query against the linked SharePoint list](https://support.microsoft.com/help/3200674) (because the record exceeds the MaxSize property)
 
 [You cannot download data from a SharePoint list to Access 2010](https://support.microsoft.com/help/2553007)
 

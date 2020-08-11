@@ -7,6 +7,7 @@ localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 ms.reviewer: v-dahedm
 search.appverid: 
@@ -19,6 +20,8 @@ appliesto:
 ---
 
 # How to troubleshoot damaged drawings in Visio
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 
@@ -37,7 +40,7 @@ If you experience unexpected behavior when you work with a Visio drawing, the Vi
 
   "An error (100) occurred during the action Open"
 
-  "Visio cannot open the file because it’s not a Visio file or it has become corrupted."
+  "Visio cannot open the file because it's not a Visio file or it has become corrupted."
 
 - "Out of memory" error messages or error messages that indicate low system resources   
 
@@ -191,7 +194,7 @@ To open the temporary copy of the drawing file, do the following:
 
 Install Microsoft Office Visio Viewer 2010, and then use Visio Viewer to open and view your drawing. When you install Visio Viewer 2010, you can use Microsoft Internet Explorer 5.0 or a later version of Internet Explorer to view Visio drawings and diagrams that are created with Visio 2010, Visio 2007, Visio 2003, Visio 2002, Microsoft Visio 2000, or Microsoft Visio 5. For more information about Visio Viewer 2010, visit the following Microsoft website:
 
-[https://www.microsoft.com/download/details.aspx?displaylang=en&id=21701](https://www.microsoft.com/download/details.aspx?displaylang=en&id=21701)
+[https://www.microsoft.com/download/details.aspx?id=21701](https://www.microsoft.com/download/details.aspx?id=21701)
 
 If you can open your drawing in the Visio Viewer, the installation of Visio on your computer may be damaged, or your drawing may contain one or more objects that may be damaged. 
 

@@ -8,6 +8,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 ms.reviewer: nathanad, jennc
 search.appverid: 
 - MET150
@@ -19,6 +20,8 @@ appliesto:
 ---
 
 # Enable the Windows Search service if you want to use the Search for Shapes feature in Visio 2010 or in Visio 2013
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Introduction 
 

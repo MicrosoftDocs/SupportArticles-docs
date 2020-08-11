@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 ms.reviewer: seemarah; corbinm; mshaikh  
 appliesto:
 - Exchange Online
@@ -58,3 +59,7 @@ To work around this issue, use the following methods in the given order.
 ## Status
 
 This is a known issue that affects the O365 Exchange UM service. Microsoft is researching this problem and will post more information in this article when the information becomes available.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

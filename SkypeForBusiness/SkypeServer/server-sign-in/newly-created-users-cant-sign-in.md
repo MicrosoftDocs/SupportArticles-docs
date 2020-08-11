@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 ms.reviewer: lynccic, corbinm, abgm
 appliesto:
@@ -77,3 +78,5 @@ This forces the user replicator to query all the available domains.
 ## References
 
 For information about User Replicator configuration settings, see [Set-CsUserReplicatorConfiguration](https://technet.microsoft.com/library/gg398540.aspx).
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

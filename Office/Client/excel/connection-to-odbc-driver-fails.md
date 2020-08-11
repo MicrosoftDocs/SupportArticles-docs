@@ -7,6 +7,7 @@ localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 ms.reviewer: haidongh, lauraho
 search.appverid: 
@@ -17,6 +18,8 @@ appliesto:
 ---
 
 # Connection to ODBC driver fails in PowerPivot for Excel 2010 or PowerPivot for Excel 2013
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

@@ -10,6 +10,7 @@ audience:  Admin|ITPro|Developer
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-tea
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 ---
@@ -41,3 +42,7 @@ If you cannot use an account from the Farm Administrators group to open the form
 1. Navigate to **Site Settings** > **People and Groups**, and then select the group that you want to edit.
 1. On the group page, select **Settings** > **Group Settings**.
 1. Under **Who can view the membership of a group?**, select **Everyone**.
+
+## More information
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

@@ -7,6 +7,7 @@ localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 search.appverid: 
 - MET150
@@ -18,6 +19,8 @@ appliesto:
 ---
 
 # Issues when you retrieve SharePoint list data in Access
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 
@@ -35,7 +38,7 @@ Or, you may experience one of the following issues:
  
 ## Cause
 
-When Access requests list items from a SharePoint list, Access waits a finite period of time for that data to be returned. Specifically, if Access doesn’t receive the data for the given batch after 30 seconds, it aborts the request and may resend the batch as a new request. If Access encounters failures when sending these batches, the program may give up and return an error message.
+When Access requests list items from a SharePoint list, Access waits a finite period of time for that data to be returned. Specifically, if Access doesn't receive the data for the given batch after 30 seconds, it aborts the request and may resend the batch as a new request. If Access encounters failures when sending these batches, the program may give up and return an error message.
  
 Some conditions that may cause this issue are: 
  

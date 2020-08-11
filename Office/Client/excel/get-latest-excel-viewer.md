@@ -9,6 +9,7 @@ ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
 ms.reviewer: lauraho 
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -18,6 +19,8 @@ appliesto:
 ---
 
 # How to obtain the latest Excel Viewer
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Notice
 
@@ -31,7 +34,7 @@ appliesto:
 
 ## Summary
 
-The Microsoft Excel Viewer is a small, freely redistributable program that lets you view and print Microsoft Excel spreadsheets if you don’t have Excel installed. In addition, the Excel Viewer can open workbooks that were created in Microsoft Excel for the Macintosh.
+The Microsoft Excel Viewer is a small, freely redistributable program that lets you view and print Microsoft Excel spreadsheets if you don't have Excel installed. In addition, the Excel Viewer can open workbooks that were created in Microsoft Excel for the Macintosh.
 
 The Excel Viewer can open the latest version of Excel workbooks, but it will not display newer features. 
 

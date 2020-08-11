@@ -7,6 +7,7 @@ ms.service: o365-administration
 ms.topic: article
 ms.author: v-six
 manager: dcscontentpm
+ms.custom: CSSTroubleshoot
 localization_priority: Normal
 search.appverid: 
 - MET150
@@ -44,7 +45,7 @@ Microsoft.Exchange.MailboxReplicationService.CommonUtils.CallService
 (Action serviceCall, String epAddress, VersionInformation 
 serverVersion)_x000A_ at 
 Microsoft.Exchange.MailboxReplicationService.MailboxReplicationProxyClient.CallServiceWithTimeout
-(TimeSpan timeout, Action serviceCall)_x000A_ at Microsoft.Exchange.MailboxReplicationService.RemoteDestinationFolder.Microsoft.Exchange.MailboxReplicationService.IDestinationFolder.SetRules(RuleData[] rules)_x000A_ at Microsoft.Exchange.MailboxReplicationService.DestinationFolderWrapper.&lt;&gt;c__DisplayClass31.&lt;Microsoft.Exchange.MailboxReplicationService.IDestinationFolder.SetRules&gt;b__30()_x000A_ 
+(TimeSpan timeout, Action serviceCall)_x000A_ at Microsoft.Exchange.MailboxReplicationService.RemoteDestinationFolder.Microsoft.Exchange.MailboxReplicationService.IDestinationFolder.SetRules(RuleData[] rules)_x000A_ at Microsoft.Exchange.MailboxReplicationService.DestinationFolderWrapper.<;>;c__DisplayClass31.<;Microsoft.Exchange.MailboxReplicationService.IDestinationFolder.SetRules>;b__30()_x000A_ 
 at Microsoft.Exchange.MailboxReplicationService.ExecutionContext.Execute
 (Action operation)_x000A_ at Microsoft.Exchange.MailboxReplicationService.DestinationFolderWrapper.Microsoft.Exchange.MailboxReplicationService.IDestinationFolder.SetRules(RuleData[] rules)_x000A_ at 
 Microsoft.Exchange.MailboxReplicationService.FolderRecWrapper.WriteRules
@@ -53,14 +54,14 @@ _x000A_ at
 Microsoft.Exchange.MailboxReplicationService.MailboxCopierBase.CopyFolderProperties
 (FolderRecWrapper folderRec, ISourceFolder sourceFolder, 
 IDestinationFolder destFolder, FolderRecDataFlags dataToCopy)
-_x000A_ at Microsoft.Exchange.MailboxReplicationService.MailboxMover.&lt;&gt;c__DisplayClass2.&lt;&gt;c__DisplayClass4.&lt;FinalSyncCopyAllFolders&gt;b__1()_x000A_ at 
+_x000A_ at Microsoft.Exchange.MailboxReplicationService.MailboxMover.<;>;c__DisplayClass2.<;>;c__DisplayClass4.<;FinalSyncCopyAllFolders>;b__1()_x000A_ at 
 Microsoft.Exchange.MailboxReplicationService.ExecutionContext.Execute
-(Action operation)_x000A_ at Microsoft.Exchange.MailboxReplicationService.MailboxMover.&lt;&gt;c__DisplayClass2.&lt;FinalSyncCopyAllFolders&gt;b__0
+(Action operation)_x000A_ at Microsoft.Exchange.MailboxReplicationService.MailboxMover.<;>;c__DisplayClass2.<;FinalSyncCopyAllFolders>;b__0
 (FolderRecWrapper folderRec, EnumFolderContext ctx)_x000A_ at 
 Microsoft.Exchange.MailboxReplicationService.FolderMap.EnumSingleFolder
 (FolderRecWrapper folderRec, EnumFolderContext ctx, EnumFolderCallback callback, EnumHierarchyFlags flags)_x000A_ at Microsoft.Exchange.MailboxReplicationService.FolderMap.EnumSingleFolder(FolderRecWrapper folderRec, EnumFolderContext ctx, EnumFolderCallback callback, EnumHierarchyFlags flags)_x000A_ at Microsoft.Exchange.MailboxReplicationService.FolderMap.EnumSingleFolder(FolderRecWrapper folderRec, EnumFolderContext ctx, EnumFolderCallback callback, EnumHierarchyFlags flags)_x000A_ at Microsoft.Exchange.MailboxReplicationService.MailboxMover.FinalSyncCopyAllFolders()
 _x000A_ at 
-Microsoft.Exchange.MailboxReplicationService.MoveBaseJob.&lt;FinalSync&gt;b__4d
+Microsoft.Exchange.MailboxReplicationService.MoveBaseJob.<;FinalSync>;b__4d
 (MailboxMover mbxCtx)_x000A_ at 
 Microsoft.Exchange.MailboxReplicationService.MoveBaseJob.ForeachMailboxContext
 (Action`1 del)_x000A_ at 

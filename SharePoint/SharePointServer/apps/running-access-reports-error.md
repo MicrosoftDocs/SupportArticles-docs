@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - SharePoint Server
@@ -36,4 +37,4 @@ This issue occurs because SQL Server Reporting Services (SSRS) is currently not 
 
 The client reports are located in an .accdb file on the local client. On a local intranet, you can share the folder where the .accdb file is stored so that multiple users can view the reports. You can also right-click a client report and export it to several formats for distribution.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

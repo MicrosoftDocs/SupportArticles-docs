@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: article
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft Excel
 ---

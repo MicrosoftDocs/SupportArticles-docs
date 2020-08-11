@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 ms.reviewer: landerl, jasco, corbinm, lynnroe, cbland
 appliesto:
 - Skype for Business Online
@@ -19,7 +20,7 @@ appliesto:
 
 ## Symptoms
 
-Assume that you have 100 licenses for PSTN Calling in a Skype for Business Online environment. Because you’ve acquired more than 100 phone numbers for your organization, you appear to require additional licenses.
+Assume that you have 100 licenses for PSTN Calling in a Skype for Business Online environment. Because you've acquired more than 100 phone numbers for your organization, you appear to require additional licenses.
 
 ## More Information
 

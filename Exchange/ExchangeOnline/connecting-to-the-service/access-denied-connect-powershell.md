@@ -5,6 +5,7 @@ author: simonxjx
 audience: ITPro
 ms.service: exchange-online
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal
@@ -57,7 +58,7 @@ To resolve this issue, use the Exchange admin center in Office 365 to add the us
 2. Click **Admin**, and then click **Exchange**.    
 3. Click **permissions**, and then click  **admin roles**.    
 4. Double-click the role group to which you want to add the user. For example, if you want the user to have full access that includes Windows PowerShell, double-click **Organization Management**.    
-5. To add the user to the list, click **Add** (![Add icon](https://support.microsoft.com/Library/Images/2982855.jpg)) under **Members**.   
+5. To add the user to the list, click **Add** (![Add icon](./media/access-denied-connect-powershell/add.png)) under **Members**.   
 6. Click **Save**.   
 
 ## More information

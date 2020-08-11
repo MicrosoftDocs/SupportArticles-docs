@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: article 
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 ms.reviewer: Jenl
 search.appverid: 
 - MET150
@@ -17,6 +18,8 @@ appliesto:
 ---
 
 # Cell content is displayed as #N/A! after you enable editing in a workbook in Protected View in Excel 2010 or Excel 2013
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 Assume that you open a workbook in protected view in Microsoft Excel 2010 or Excel 2013. The workbook contains the Cell function. After you click **Enable Editing**, the content in each cell in the workbook is displayed as #N/A!.

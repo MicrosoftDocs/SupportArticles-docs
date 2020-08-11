@@ -11,6 +11,7 @@ ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
 ms.reviewer: miadkins 
+ms.custom: CSSTroubleshoot
 appliesto:
 - Lync 2010
 - Lync 2013
@@ -140,7 +141,7 @@ If this process takes more than 10 minutes, follow these steps to make sure that
 4. Click **Configuration information**.   
 5. Scroll down to locate the **MAPI Information** entry in the list that is displayed.   
 6. If the connection is valid, the **MAPI Status** area will display **MAPI Status Ok**. This means that the failure to establish the Lync meeting delegation relationship is not caused by network connectivity issues between the Lync client and the Exchange server MAPI service.   
-7. If the Lync client’s **MAPI Status** reads area contains the following text, there may be connectivity issues between the Lync client and the Exchange MAPI service:
+7. If the Lync client's **MAPI Status** reads area contains the following text, there may be connectivity issues between the Lync client and the Exchange MAPI service:
 
     ```adoc
     Lync is in the process of connecting to the Exchange server. This process may take a few minutes. Some features will not be available until the connection is complete.;MAPI unavailable; retrying connection;
@@ -152,3 +153,5 @@ If this process takes more than 10 minutes, follow these steps to make sure that
 > Lync Basic does not include any Delegate functionality, and problems may occur for Lync Basic client users who have delegates.
 
 For more information, see [Client comparison tables for Lync Server 2013](https://technet.microsoft.com/library/gg425836%28v=ocs.15%29.aspx).
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

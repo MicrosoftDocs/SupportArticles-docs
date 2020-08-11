@@ -1,0 +1,85 @@
+- name: Microsoft 365 Compliance Troubleshooting
+  href: ../microsoft-365-compliance-welcome.md
+  items:
+  - name: Archive Mailboxes
+    items:
+    - name: Archive mailbox issues
+      href: ../archive-mailboxes/archive-mailbox-issues.md
+    - name: ArchiveStatus shows None
+      href: ../archive-mailboxes/archivestatus-set-none.md
+    - name: Can't delete folders of an archive mailbox
+      href: ../archive-mailboxes/cannot-delete-folders-archive-mailbox.md
+    - name: Can't migrate archive mailboxes
+      href: ../archive-mailboxes/cannot-migrate-archive-mailboxes.md
+    - name: Can't provision or deprovision
+      href: ../archive-mailboxes/cannot-provision-deprovision.md
+    - name: Can't see Calendar folder
+      href: ../archive-mailboxes/cannot-see-calendar-folder.md
+    - name: Can't use archive mailbox in Outlook for Mac 2011
+      href: ../archive-mailboxes/cannot-use-archive-mailbox-mac.md
+    - name: Can't view items
+      href: ../archive-mailboxes/cannot-view-items.md
+    - name: Cloud-based archive mailbox is unavailable
+      href: ../archive-mailboxes/cloud-based-archive-unavailable.md
+    - name: Enable and disable issue
+      href: ../archive-mailboxes/enable-disable-issue.md
+    - name: Issue when enabling mailbox archiving
+      href: ../archive-mailboxes/issue-when-enable-mailbox-archiving.md
+    - name: Items are duplicated
+      href: ../archive-mailboxes/items-duplicated.md
+    - name: Mail access issues
+      href: ../archive-mailboxes/mail-access-issues.md
+    - name: Messages aren't moved to archive mailboxes
+      href: ../archive-mailboxes/message-not-moved-to-archive.md
+  - name: Audit Logs
+    items:
+    - name: BOXServiceAccount is added
+      href: ../audit-logs/boxserviceaccount-is-added-to-role.md
+    - name: Issue when searching audit log
+      href: ../audit-logs/issue-search-audit-log.md
+    - name: Mailbox audit logs
+      href: ../audit-logs/mailbox-audit-logs.md
+    - name: UserAgent property
+      href: ../audit-logs/useragent-property.md
+  - name: Data Loss Prevention (DLP)
+    items:
+    - name: Common scenarios for tips
+      href: ../data-loss-prevention/data-loss-prevention-policy-tips.md
+    - name: Data loss prevention not working
+      href: ../data-loss-prevention/data-loss-prevention-not-work.md
+    - name: DLP tips not working
+      href: ../data-loss-prevention/dlp-tips-not-work.md
+    - name: Issues for tips
+      href: ../data-loss-prevention/data-loss-prevention-tips.md
+  - name: eDiscovery
+    items:
+    - name: Can't run In-Place eDiscovery search in EAC
+      href: ../ediscovery/cannot-run-ediscovery-search-cloud-mailbox.md
+    - name: Can't start eDiscovery PST Export Tool
+      href: ../ediscovery/cannot-start-ediscovery-pst-export.md
+    - name: eDiscovery search results export fails
+      href: ../ediscovery/ediscovery-results-export-fails.md
+  - name: Holds
+    items:
+    - name: Can't delete messages
+      href: ../holds/cannot-delete-messages.md
+    - name: Changes to IgnoreLegalHold
+      href: ../holds/ignorelegalhold-not-available.md
+    - name: Restore In-Place and Litigation Hold
+      href: ../holds/restore-in-place-litigation-hold.md
+    - name: Search logic change for Title property
+      href: ../holds/change-to-search-logic-for-title-property.md
+  - name: MRM & Retention Policies
+    items:
+    - name: MRM and retention policies
+      href: ../mrm-rentention-policies/mrm-and-retention-policy.md
+  - name: Office Message Encryption (OME)
+    items:
+    - name: Can't display message
+      href: ../office-message-encryption/cannot-display-message.md
+    - name: Disable Encrypt-Only
+      href: ../office-message-encryption/disable-encrypt-only.md
+  - name: PST Import Service
+    items:
+    - name: Import job fails with MailboxAmbiguous
+      href: ../pst-import-service/import-fails-mailboxambiguous.md

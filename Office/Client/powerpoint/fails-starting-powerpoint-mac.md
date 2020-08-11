@@ -9,12 +9,15 @@ search.appverid:
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - PowerPoint for Mac
 ---
 
 # "Microsoft PowerPoint has encountered a problem and needs to close" in PowerPoint for Mac startup
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 
@@ -84,7 +87,7 @@ If the problem continues to occur, go to the next step.
 
 For information how to "clean start" your computer, click the following article number to view the article in the Microsoft Knowledge Base:
 
-[2398596](http://support.microsoft.com/help/2398596) How to use a "clean startup" to determine whether background programs are interfering with Office for Mac
+[2398596](https://support.microsoft.com/help/2398596) How to use a "clean startup" to determine whether background programs are interfering with Office for Mac
 
 If the problem continues to occur, go to the next step.
 
@@ -92,7 +95,7 @@ If the problem continues to occur, go to the next step.
 
 Sometimes, a specific user's information may become corrupted, and this may prevent installation, startup, or use of some applications. To determine whether this is the case, you can log on to the computer by using a different or new user account, and then test the application.
 
-If the problem no longer occurs, the cause exists within the user’s home folder. If you think that the user account was responsible, you can continue to troubleshoot by using the new user account.
+If the problem no longer occurs, the cause exists within the user's home folder. If you think that the user account was responsible, you can continue to troubleshoot by using the new user account.
 
 > [!NOTE]
 > For help moving your user files to the new account, contact Apple.

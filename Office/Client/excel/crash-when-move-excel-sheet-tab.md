@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: article 
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -15,6 +16,8 @@ appliesto:
 ---
 
 # Excel 2013 crashes when moving Excel sheet tab
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ##  Symptoms
 
@@ -50,7 +53,7 @@ MSI installation
 
 Click-to-Run installation
 
-[https://support.microsoft.com/gp/office-2013-click-to-run](/gp/office-2013-click-to-run)
+[https://support.microsoft.com/gp/office-2013-click-to-run](https://docs.microsoft.com/office/troubleshoot/office/office-click-to-run-installation)
 
 ##  More Information
 

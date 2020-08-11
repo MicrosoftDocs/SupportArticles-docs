@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Word for Office 365
 - Word 2019
@@ -24,6 +25,8 @@ appliesto:
 ---
 
 # "The document caused a serious error the last time it was opened" when you open a file in Excel or Word
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 
@@ -55,7 +58,7 @@ If the program starts successfully, the add-in for which you cleared the check b
 
 If the program doesn't start after you have tested all the listed add-ins, the problem isn't related to the add-ins. To learn about other reasons why this may problem may occur, go to the "References" section.
 
-If the problematic add-in is a third-party product, we recommend that you go to the company website to get a newer version of the add-in. If there's no newer version available or if you don’t have to use the add-in, you can leave that check box cleared in the **COM Add-Ins** list.
+If the problematic add-in is a third-party product, we recommend that you go to the company website to get a newer version of the add-in. If there's no newer version available or if you don't have to use the add-in, you can leave that check box cleared in the **COM Add-Ins** list.
 
 > [!NOTE]
 > If these steps do not work, the file may be damaged and not repairable. For more information about corrupted files, see the following articles:

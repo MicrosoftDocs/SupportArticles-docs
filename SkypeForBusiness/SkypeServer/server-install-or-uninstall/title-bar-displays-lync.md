@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business 2015
 ---
@@ -82,7 +83,7 @@ Follow these steps for the following setups:
 
     **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\15.0\Registration\{90150000-012D-0000-0000-0000000FF1CE}**   
 3. In the details pane, right-click the **REG_SZ <LyncNameVersion>** entry, and then click **Modify**.   
-4. Type Microsoft® Skype for Business® 2015 to change the name, and then click **OK**.   
+4. Type Microsoft&reg; Skype for Business&reg; 2015 to change the name, and then click **OK**.   
 5. Restart the Lync 2013 (Skype for Business 2015) client.   
 
 Follow the same steps for the following setups, except use the indicated values:
@@ -109,3 +110,5 @@ For more information about how to configure the Skype for Business user interfac
 - [Why do I see Skype for Business when I'm using Lync?](https://support.office.com/article/why-do-i-see-skype-for-business-when-i-m-using-lync-50935112-4978-46b8-b2ad-9dd7b81365bf)   
 - [Switching between the Skype for Business and the Lync client user interfaces](https://support.office.com/article/switching-between-the-skype-for-business-and-the-lync-client-user-interfaces-a2394a4c-7522-484c-a047-7b3289742be0)   
 - [Configure the client experience with Skype for Business 2015](https://technet.microsoft.com/library/dn951355.aspx)   
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

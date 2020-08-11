@@ -9,6 +9,7 @@ ms.prod: offic 365
 ms.topic: article
 ms.author: v-six
 ms.reviewer: v-chblod
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -20,6 +21,8 @@ appliesto:
 ---
 
 # "You first must install one of the following versions of .NET Framework" when you run the IdFix tool
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Problem
 

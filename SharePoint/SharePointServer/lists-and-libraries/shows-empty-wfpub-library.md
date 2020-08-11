@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Designer 2013
 ---
@@ -44,3 +45,7 @@ To resolve this issue, follow these steps:
    - If the feature is Deactivated, select **Activate**.       
 
 The issue is now resolved. You can safely remove the Repair2010 workflow from the site collection through SharePoint Designer 2013: Open the site collection in SharePoint Designer, go to **Site Objects** > **Workflows**, select **Repair2010**, and then select **Delete**.
+
+## More information
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

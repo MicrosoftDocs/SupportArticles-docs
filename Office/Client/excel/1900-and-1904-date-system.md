@@ -6,17 +6,24 @@ manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
+ms.custom: CSSTroubleshoot
 ms.topic: article
 ms.author: v-six
 ms.reviewer: mikestow
 search.appverid: 
 - MET150 
 appliesto:
+- Excel 2019
+- Excel 2016
+- Excel 2013
 - Excel 2010
 - Office Excel 2007
+- Excel for Macintosh
 ---
 
 # Differences between the 1900 and the 1904 date system in Excel
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 
@@ -26,15 +33,15 @@ Microsoft Excel supports two different date systems. These systems are the 1900 
 
 ### The 1900 Date System
  
-In the 1900 date system, the first day that is supported is January 1, 1900. When you enter a date, the date is converted into a serial number that represents the number of elapsed days since January 1, 1900. For example, if you enter July 5, 1998, Excel converts the date to the serial number 35981. 
+In the 1900 date system, the first day that is supported is January 1, 1900. When you enter a date, the date is converted into a serial number that represents the number of elapsed days starting with 1 for January 1, 1900. For example, if you enter July 5, 1998, Excel converts the date to the serial number 35981. 
 
 By default, Microsoft Excel for Windows uses the 1900 date system. The 1900 date system enables better compatibility between Excel and other spreadsheet programs, such as Lotus 1-2-3, that are designed to run under MS-DOS or Microsoft Windows. 
 
 ### The 1904 Date System
 
-In the 1904 date system, the first day that is supported is January 1, 1904. When you enter a date, the date is converted into a serial number that represents the number of elapsed days since January 1, 1904. For example, if you enter July 5, 1998, Excel converts the date to the serial number 34519. 
+In the 1904 date system, the first day that is supported is January 1, 1904. When you enter a date, the date is converted into a serial number that represents the number of elapsed days since January 1, 1904, starting with 0 for January 1, 1904. For example, if you enter July 5, 1998, Excel converts the date to the serial number 34519. 
 
-By default, Microsoft Excel for the Macintosh uses the 1904 date system. Because of the design of early Macintosh computers, dates before January 1, 1904 were not supported. This design was intended to prevent problems related to the fact that 1900 was not a leap year. If you switch to the 1900 date system, Excel for the Macintosh does support dates as early as January 1, 1900.
+Because of the design of early Macintosh computers, dates before January 1, 1904, were not supported. This design was intended to prevent problems related to the fact that 1900 was not a leap year. In the past, Excel for Macintosh defaulted to using the 1904 date system for workbooks originating on a Macintosh. However, Excel for  Macintosh now defaults to the 1900 date system and supports dates as early as January 1, 1900.
  
 ### The Difference Between the Date Systems
 

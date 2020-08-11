@@ -10,12 +10,15 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 ms.reviewer: cochen, mattbum
 appliesto:
 - Access 2010
 ---
 
 # You receive an error message when you run a query in Microsoft Access because of a double-byte Arabic number
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

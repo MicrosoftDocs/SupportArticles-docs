@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: office 365
 localization_priority: Normal
 ms.reviewer: dahans
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -17,33 +18,35 @@ appliesto:
 
 # "Cannot continue" error when you start the Office 365 Desktop Setup Tool: 
 
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+
 ## Problem
 
 When you try to start the Office 365 Desktop Setup Tool, you receive the following error message: 
 
     Cannot continue. The application is improperly formatted. Contact the application vendor for assistance.
 
-![Screen shot of Cannot continue. The application is improperly formatted. Contact the application vendor for assistance error message ](./media/error-when-start-desktop-setup-tool/cannot-start-app.jpg)
+![Screenshot of Cannot continue. The application is improperly formatted. Contact the application vendor for assistance error message ](./media/error-when-start-desktop-setup-tool/cannot-start-app.jpg)
 
 If you click **Details** in the dialog box, you receive a detailed error message that's like the following: 
 
 PLATFORM VERSION INFO
 
-Windows : 6.0.6002.131072 (Win32NT)
-Common Language Runtime : 2.0.50727.4214
-System.Deployment.dll : 2.0.50727.4016 (NetFxQFE.050727-4000)
-mscorwks.dll : 2.0.50727.4214 (VistaSP2GDR.050727-4200)
-dfdll.dll : 2.0.50727.4016 (NetFxQFE.050727-4000)
-dfshim.dll : 4.0.31106.0 (Main.031106-0000)
+Windows: 6.0.6002.131072 (Win32NT)
+Common Language Runtime: 2.0.50727.4214
+System.Deployment.dll: 2.0.50727.4016 (NetFxQFE.050727-4000)
+mscorwks.dll: 2.0.50727.4214 (VistaSP2GDR.050727-4200)
+dfdll.dll: 2.0.50727.4016 (NetFxQFE.050727-4000)
+dfshim.dll: 4.0.31106.0 (Main.031106-0000)
 
 SOURCES
 
-Deployment url : https://bposast.vo.msecnd.net/ClickOnceConnector/Office365DesktopSetup.application
-Server : Microsoft-IIS/7.0
+Deployment url: `https://bposast.vo.msecnd.net/ClickOnceConnector/Office365DesktopSetup.application`
+Server: Microsoft-IIS/7.0
 
 ERROR SUMMARY
 
-Below is a summary of the errors, details of these errors are listed later in the log.* Activation of https://bposast.vo.msecnd.net/ClickOnceConnector/Office365DesktopSetup.application resulted in exception. Following failure messages were detected:
+Below is a summary of the errors, details of these errors are listed later in the log.* Activation of `https://bposast.vo.msecnd.net/ClickOnceConnector/Office365DesktopSetup.application` resulted in exception. Following failure messages were detected:
 - Your Web browser settings do not allow you to run unsigned applications.
 
   COMPONENT STORE TRANSACTION FAILURE SUMMARY
@@ -53,7 +56,7 @@ Below is a summary of the errors, details of these errors are listed later in th
   There were no warnings during this operation.
 
   OPERATION PROGRESS STATUS
-- [9/1/2011 6:23:51 PM] : Activation of https://bposast.vo.msecnd.net/ClickOnceConnector/Office365DesktopSetup.application has started.
+- [9/1/2011 6:23:51 PM]: Activation of `https://bposast.vo.msecnd.net/ClickOnceConnector/Office365DesktopSetup.application` has started.
 
   ERROR DETAILS
 
@@ -92,7 +95,7 @@ To do this, follow these steps:
 2. Click the **Security** tab, and then click the **Internet** zone.   
 3. Set the security level to **Medium-high** (the default setting), and then click ****OK****.
 
-    ![Screen shot of Securtiy table of Internet Options, highlighed Medium-high option ](./media/error-when-start-desktop-setup-tool/internet-options.jpg)   
+    ![Screenshot of Security table of Internet Options, highlighted Medium-high option ](./media/error-when-start-desktop-setup-tool/internet-options.jpg)   
 
 ### Method 2: Enable Internet Explorer to run signed programs, and then add the Office 365 application server to the Trusted sites list 
 

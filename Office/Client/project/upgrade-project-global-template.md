@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: article 
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -16,6 +17,8 @@ appliesto:
 ---
 
 # How to upgrade your Project global template after you install Project 2013
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 Warning Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require you to reinstall the operating system. Microsoft cannot guarantee that these problems can be resolved. Modify the registry at your own risk.
 
@@ -28,7 +31,7 @@ Assume that you install Microsoft Project 2013 on a computer on which an earlier
 ### Project 2007 is already installed on the computer
 When a user starts Project for the first time after it is installed and Project 2007 is already installed on the computer, the user is presented with the Planning Wizard. The wizard presents the following options: 
 
-- **Upgrade automatically. Customized items will be copied to Microsoft Project automatically**. If the user selects this option, the global template will be upgraded. The user is then presented with the Welcome to Project screen.
+- **Upgrade automatically. Design customization items will be copied to Microsoft Project automatically**. If the user selects this option, the global template will be upgraded. The user is then presented with the Welcome to Project screen.
 
   If the user clicks Start, the user will be walked through each section of the wizard that is listed at the top of the window. When the user finishes the walk-through, the user sees a screen that displays a dummy project plan.
 
@@ -37,19 +40,19 @@ When a user starts Project for the first time after it is installed and Project 
   In either case, the user should close the dummy project plan, either through File/Close or by pressing the "X" in the upper-right corner. After the user does this, the user will be presented with the usual first screen whenever he or she starts Project.   
 - **Upgrade manually. You can choose which items you want to copy to Microsoft Project.** If the user selects this option and then clicks **OK**, the user is presented with the **Organizer** dialog box. This gives the user the opportunity to select the items that the user wants to upgrade. 
 
-  Should the user click **Cancel** at any time, the user is presented with the same screens that were described earlier and should follow the same actions. However, the user’s global template will not yet be upgraded with the user's previous customizations.
+  Should the user click **Cancel** at any time, the user is presented with the same screens that were described earlier and should follow the same actions. However, the user's global template will not yet be upgraded with the user's previous customizations.
 
-  The next time that the user starts Project, the user will again be presented with the initial Planning Wizard. This behavior will continue until the option to automatically upgrade is selected or a manual upgrade is performed or until the user selects the **Don’t tell me about this again** check box.   
-- **Cancel. Don’t perform the upgrade at this time.** If the user selects this option and then clicks **OK**, the user will be presented with the same screens that were described earlier and should follow the same actions. However, the user’s global template will not be upgraded with the user's previous customizations.
+  The next time that the user starts Project, the user will again be presented with the initial Planning Wizard. This behavior will continue until the option to automatically upgrade is selected or a manual upgrade is performed or until the user selects the **Don't tell me about this again checks box.   
+- **Cancel. Don't perform the upgrade at this time.** If the user selects this option and then clicks **OK**, the user will be presented with the same screens that were described earlier and should follow the same actions. However, the user's global template will not be upgraded with the user's previous customizations.
 
   The next time that the user starts Project, the user will again be presented with the initial Planning Wizard. This behavior will continue until ether the option to automatically upgrade is selected or a manual upgrade is performed.
 
-  If the user clicks **Cancel**, this has the same effect as selecting the **Cancel. Don’t perform the upgrade at this time** option.   
-- Don’t tell me about this again.If a user selects this option together with any one of the previous options, the user will not be presented with the Planning Wizard dialog again. This option is most frequently used when a user does not want to upgrade the Global.mpt file of the user's earlier version but instead wants to start by using a completely new, default Global.mpt file.    
+  If the user clicks **Cancel**, this has the same effect as selecting the **Cancel. Don't perform the upgrade at this time** option.   
+- Don't tell me about this again. If a user selects this option together with any one of the previous options, the user will not be presented with the Planning Wizard dialog again. This option is most frequently used when a user does not want to upgrade the Global.mpt file of the user's earlier version but instead wants to start by using a new, default Global.mpt file.    
 Notes
 
-- Whichever option the user selects, the user's previously used Global.mpt file will still be present on the user’s system. It is located in the file share as stated in the Planning Wizard. The user can upgrade the Global.mpt file at any time after the installation of Project 2013.    
-- If a user wants to have a completely clean Global.mpt file at any time, the user's existing Global.mpt file can be deleted from the file system. (However, Project must not be running at the time.) In this situation, the next time that Project is started, it creates a new default template. However, all previous customizations will be lost. This includes any custom VBA macros. It may be prudent for the user to make a backup copy of any Global.mpt file before deletion.   
+- Whichever option the user selects, the user's previously used Global.mpt file will still be present on the user's system. It is located in the file share as stated in the Planning Wizard. The user can upgrade the Global.mpt file at any time after the installation of Project 2013.    
+- If a user wants to have a clean Global.mpt file at any time, the user's existing Global.mpt file can be deleted from the file system. (However, Project must not be running at the time.) In this situation, the next time that Project is started, it creates a new default template. However, all previous customizations will be lost. This includes any custom VBA macros. It may be prudent for the user to make a Backup copy of any Global.mpt file before deletion.   
 
 ### Project 2010 is already installed on the computer
 When a user starts Project the first time after it is installed and Project 2010 is already installed on the computer, the user is presented with the Planning Wizard.
@@ -62,7 +65,7 @@ Important Follow the steps in this section carefully. Serious problems might occ
 
 If a user is not sure whether he or she followed the instructions correctly during the first use of Project 2013, the user can force Project to start in such a way that it gives the user the same initial options that were originally presented. The user can then be guided through the Planning Wizard process. 
 
-To force the Planning Wizard to reappear when Microsoft Project is started, enable or add the following registry key or registry value on the user’s computer. To do this, follow these steps. 
+To force the Planning Wizard to reappear when Microsoft Project is started, enable or add the following registry key or registry value on the user's computer. To do this, follow these steps. 
 
 Note These steps are the same regardless of whether this is an upgrade from Project 2007 or from Project 2010.
 

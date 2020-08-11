@@ -7,6 +7,7 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
+ms.custom: CSSTroubleshoot
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
@@ -19,6 +20,8 @@ appliesto:
 ---
 
 # Frequently asked questions about hyperlinks in Word
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 For a Microsoft Word 98 Macintosh Edition version of this article, see [211955](https://support.microsoft.com/help/211955).
 

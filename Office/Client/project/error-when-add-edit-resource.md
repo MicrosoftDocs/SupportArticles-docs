@@ -1,6 +1,6 @@
 ---
 title: Error when you add or edit a resource in Enterprise Resource Pool
-description: Explanation and resolution stpes if you receive an error when you attempt to Add or Edit a resource in Project Enterprise Resource Pool.
+description: Explanation and resolution steps if you receive an error when you attempt to Add or Edit a resource in Project Enterprise Resource Pool.
 author: lucciz
 ms.author: v-zolu
 manager: dcscontentpm
@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: article 
 ms.prod: project-server-itpro
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -16,6 +17,8 @@ appliesto:
 ---
 
 # Error occurs when you add or edit a Resource in Enterprise Resource Pool
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ##  Symptoms
 
@@ -27,7 +30,7 @@ When you attempt to Save a resource to the Enterprise Resource Pool, you may re
 
 You receive this message when all three conditions listed below are met:
 
-1. The Project Web App site has been shared with the user (Sharepoint Permisisons Mode) or a user account created for them (Project Server Permissions Mode).
+1. The Project Web App site has been shared with the user (Sharepoint Permissions Mode) or a user account created for them (Project Server Permissions Mode).
 2. They have logged into PWA successfully. 
 3. The user name has been entered into the Enterprise Resource Pool without a User Logon Account.
 
@@ -40,7 +43,7 @@ You will delete the user and then modify the resource to include the User Logon 
 1. Click Resources to take you to the Resource Center. Put a check mark next to the resource that has the issue (No User Logon Account).    
 2. On the Resources ribbon click Edit. Select "Inactive" from the Account Status drop down menu, click OK and Save. This account you will keep and modify once we delete the user account.   
 3. Go to Server Settings and click Delete Enterprise Objects.   
-4. Select the radio button for Resource and Users. Check the box next to the duplicate resource name where the value is Yes for Active and click Delete. Click OK to verify you want to delete this user. You are deleting the active user and will then modify the inactive resource to also be a user.   
+4. Select the radio button for Resource and Users. Check the box next to the duplicate resource name where the value is Yes for Active and clicks Delete. Click OK to verify you want to delete this user. You are deleting the active user and will then modify the inactive resource to also be a user.   
 5. Click Resources, check the box next to the inactive resource if it is not already checked.    
 6. On the Resources ribbon click Edit. Check the box for Associate resource with a user account.    
 7. Change Account Status to "Active". Enter the user's name in the User logon account field. Click Save.    

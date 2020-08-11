@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: article 
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -27,6 +28,8 @@ appliesto:
 
 # Network Mapped Drive Hyperlinks resolve as UNC in Office Products
 
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+
 ##  Symptoms
 
 After a user inserts a hyperlink to a file residing on a network mapped drive within an Office product, the hyperlink's text displays the network mapped drive path, however the link is resolved as the UNC path. 
@@ -43,6 +46,6 @@ There is no resolution for this. Microsoft recommends that users insert hyperlin
 
 ##  More Information
 
-An example of where how a file is opened is important can be found listed in this KB article under the section "Scenarios that may cause links to not work as expected."
+An example of where how a file is opened can be found listed in this KB article under the section "Scenarios that may cause links to not work as expected."
 
  [328440](https://support.microsoft.com/help/328440) Description of link management and storage in Excel

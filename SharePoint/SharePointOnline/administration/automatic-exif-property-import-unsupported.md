@@ -8,6 +8,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.service: o365-solutions
+ms.custom: CSSTroubleshoot
 ms.topic: article
 ms.author: v-maqiu
 appliesto:
@@ -27,3 +28,7 @@ The Automatic EXIF property import feature in SharePoint relied on an underlying
 ## Resolution
 
 You can import EXIF property fields into a SharePoint library column by running the CSOM script. However, you have to run the script every time that you upload new images to the library.
+
+## More information
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

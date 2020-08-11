@@ -10,8 +10,10 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
+- SharePoint Server
 ---
 
 # Rich Text fields don't respond when you use Internet Explorer to access a SharePoint site
@@ -54,5 +56,4 @@ To enable the **HtmlDlgSafeHelper Class** add-on, follow these steps:
 
 Be aware that the first time the **Font** control is clicked, it may not display anything, and you might have to click it again. After the client-side cache contains the Rich Text controls, it should work consistently. This behavior is caused by a disabled ActiveX control in Internet Explorer that prevents ActiveX controls from running. Or, it may occur after the cache for Internet Explorer is cleared.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com
-).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

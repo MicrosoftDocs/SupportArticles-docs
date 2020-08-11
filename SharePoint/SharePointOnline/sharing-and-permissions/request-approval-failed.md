@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 ---
@@ -62,34 +63,30 @@ If the user should be a site owner, you must add the user to the Owners group fo
 
 If the Owners group is changed or was removed from the **Access requests** list, you must add the Owners group permissions for the list. You must also make sure that the affected user is included in the Owners list. To do this, follow these steps:
 
-1. As a user who has the **Manage Permissions Permission Level** on the affected site and who also has access to the **Access Requests** list (for example, a Site Collection administrator), browse to the **Access Requests** list in Internet Explorer.
+1. As a user who has the **Manage Permissions Permission Level** on the affected site and who also has access to the **Access Requests** list (for example, a Site Collection administrator), browse to the **Access Requests** list in **Internet Explorer**.
 
 1. Press F12 to open the F12 Developer Tools window.
 
-1. Click the **Network** tab, and then press F5 to enable network traffic capturing.
+1. Press Ctrl + F5 to refresh the page.
 
-1. Refresh the Access Requests page in Internet Explorer. After the page has loaded, press Shift+F5 to stop capturing network traffic.
+1. Click the **Debugger tab**.
 
-1. In the Developer Tools window, double-click the first result in the URL list. This URL ends in "pendingreq.aspx."
+    ![The debugger tab](./media/request-approval-failed/debugger-tab.png)
 
-1. In the Developer Tools window, click **Response body**.
+1. In the search box on the right hand side of the page, type **pagelistid:**, and then press Enter.
 
-1. In the search box, type **pagelistid:**, and then press Enter.
+    ![pagelistid](./media/request-approval-failed/pagelistid.png)
 
-    > [!NOTE]
-    > The search highlights the pageListId text.
+1. Copy the GUID that follows the pageListId located in the listedit.aspx page. The GUID will be between an opening brace ( { ) character and a closing brace ( } ) character as follows:
 
-1. Copy the GUID that follows the pageListId. The GUID will be between an opening brace ( { ) character and a closing brace ( } ) character as follows:
+    ![guid](./media/request-approval-failed/guid.png)
 
-    {GUID}    
+1. In the browser address bar, enter **https://contoso.sharepoint.com>/_layouts/15/ListEdit.aspx?List=<{GUID}>**.
 
-    > [!NOTE]
-    > Include the opening and closing brace characters when you copy the GUID. This GUID is the identifier for the **SharePoint Online Access Requests** list for your organization.
-
-1. In the browser address bar, enter https://<URL<URL of affected site, or site collection>/_layouts/15/ListEdit.aspx?List=<{GUID}>, and then press Enter.
+    Example: `https://contoso.sharepoint.com/_layouts/15/listedit.aspx?List=d078a4df-3c52-4b23-8c28-e9561a243f0c`
 
     > [!NOTE]
-    > In this address, <URL of affected site or site collection> represents the URL for the site collection in which you want to change the access requests (for example, https://contoso.sharepoint.com). And <{GUID}> represents the GUID that you copied in step 8.
+    > In this address, represents the URL for the site collection in which you want to change the access requests (for example, `https://contoso.sharepoint.com`). And <{GUID}> represents the GUID that you copied in step 6.
 
 1. On the **Settings** page, click **Permissions for this list**.
 
@@ -105,5 +102,4 @@ For more information about how to set up and manage access requests, go to [Set 
 
 For more information about how to use the F12 developer tools, go to [Using the F12 developer tools](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/samples/bg182326(v=vs.85)).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
-
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

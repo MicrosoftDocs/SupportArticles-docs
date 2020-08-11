@@ -8,16 +8,21 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
-ms.reviewer: v-raddis
-search.appverid: 
-- MET150
+ms.reviewer: v-raddis, akeeler
+ms.custom: 
+- CI 116037
+- CSSTroubleshoot
+search.appverid: MET150
 appliesto:
-- Microsoft Office Excel 2003
-- Microsoft Office Excel 2007
 - Excel 2010
+- Excel 2013
+- Excel 2016
+- Excel 2019
+- Excel for Office 365
 ---
-
 # How to control the startup message about updating linked workbooks in Excel
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 
@@ -27,60 +32,42 @@ When you open a workbook that contains links to cells in other workbooks, you ma
 
 By default, Excel displays this message. You can control if it appears, and if Excel updates the links manually or automatically. To make these changes, use the following methods.
 
-**Notes**
+> [!NOTE]
+>
+> - Regardless of the options that you choose, Excel still displays a message if the workbook contains links that are not valid or links that are broken.
+> - To find information about the links in a workbook in Excel 2010 and later versions, select **Edit Links** in the **Queries & Connections** group on the **Data** tab.
 
-Regardless of the options that you choose, Excel still displays a message if the workbook contains links that are not valid or links that are broken.
+Additionally, the following options apply only when the workbook that contains the basic data is closed. If the workbook with the basic data is already open when you open the workbook that contains the links, the links are updated.
 
-To find information about the links in a workbook in Microsoft Excel 2002 or in Microsoft Office Excel 2003, click **Links** on the **Edit** menu.
+## Automatic update and no message
 
-To find information about the links in a workbook in Microsoft Office Excel 2007/2010, click **Edit Links** in the **Connections** group on the **Data** tab.
+To suppress the message and to automatically update the links when you open a workbook in Excel, follow these steps:
 
-Additionally, the following options apply only when the workbook that contains the basic data is closed. If the workbook with the basic data is already open when you open the workbook that contains the links, the links are updated. 
+1. Select **File** > **Options** > **Advanced**.
+2. Under **General**, click to clear the **Ask to update automatic links** check box.
 
-### Automatic update and no message
- 
-To suppress the message and to automatically update the links when you open a workbook in Excel 2002 or in Excel 2003, follow these steps: 
- 
-1. On the **Tools** menu, click **Options**, and then click the **Edit** tab.  
-2. Click to clear the **Ask to update automatic links** check box.    
- 
-To suppress the message and to automatically update the links when you open a workbook in Excel 2007, follow these steps: 
- 
-1. Click **Microsoft Office Button**, and then click **Excel Options**.    
-2. Click **Advanced**.    
-3. Under **General**, click to clear the **Ask to update automatic links** check box.    
- 
-**Notes**
+> [!NOTE]
+>
+> - When the **Ask to update automatic links** check box is cleared, the links are automatically updated. Additionally, no message appears.
+> - This option applies to the current user only and affects every workbook that the current user opens. Other users of the same workbooks are not affected.
 
-When the **Ask to update automatic links** check box is cleared, the links are automatically updated. Additionally, no message appears.
+## Manual update and no message
 
-This option applies to the current user only and affects every workbook that the current user opens. Other users of the same workbooks are not affected.
- 
-### Manual update and no message
+If you are sharing this workbook with other people who will not have access to the sources of the updated links, you can turn off updating and the prompt for updating. To suppress the message and leave the links (not updated) until you choose to update them, follow these steps:
 
-If you are sharing this workbook with other people who will not have access to the sources of the updated links, you can turn off updating and the prompt for updating. To suppress the message and leave the links (not updated) until you choose to update them, follow these steps: 
- 
-1. On **Edit** menu, click **Links**.
+1. In Excel, select **Edit Links** in the **Queries & Connections** group on the **Data** tab.
+2. Click **Startup Prompt**.
+3. Click the **Don't display the alert and don't update automatic links** option.
 
-   **Note** In Excel 2007/2010, click **Edit Links** in the **Connections** group on the **Data** tab.    
-2. Click **Startup Prompt**.    
-3. Click the **Don't display the alert and don't update automatic links** option.    
- 
    > [!WARNING]
    > If you choose not to update the links and not to receive the message, users of the workbook will not know that the data is out of date. This choice affects all users of the workbook. However, this choice applies only to that particular workbook.
 
-To update the links manually, follow these steps: 
- 
-1. On **Edit** menu, click **Links**.
+To update the links manually, follow these steps:
 
-   **Note** In Excel 2007/2010, click **Edit Links** in the **Connections** group on the **Data** tab.    
-2. Click **Update Values**.    
-3. Click **Close**.    
- 
+1. Select **Edit Links** in the **Queries & Connections** group on the **Data** tab.
+2. Select **Update Values**.
+3. Select **Close**.
+
 ### Do not display the alert and update links
- 
-If you select the option **Don't display the alert and update links** on a workbook, this choice affects all users of the workbook. However, this choice applies only to that particular workbook. If the person who opens the workbook has the **Ask to update automatic links** check box selected, the message appears. The users who set in the options page override the workbook setting. 
 
-### Let users choose to display links
- 
-If you select the option **Don't display the alert and update links** on a workbook, this choice is ignored. If the person who opens the workbook has the **Ask to update automatic links** check box selected, the message appears. Otherwise, the links are updated automatically. 
+When the **Don't display the alert and update links** option is selected on a workbook, the selection is ignored. If the person opening the workbook selected the **Ask to update automatic links** check box, the message appears. If not, links are automatically updated.

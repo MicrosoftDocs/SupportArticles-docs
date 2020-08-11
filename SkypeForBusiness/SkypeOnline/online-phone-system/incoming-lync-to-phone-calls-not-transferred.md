@@ -11,6 +11,7 @@ ms.service: skype-for-business-online
 ms.topic: article
 ms.author: v-six
 ms.reviewer: dahans
+ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Online
 - Exchange Online
@@ -33,12 +34,12 @@ To resolve this issue, use the [Lync Remote Connectivity Analyzer](https://www.t
 3. Type the sign-in address that you use for Skype for Business Online, type the CAPTCHA text, click to select the check box to agree to the terms, and then click **Perform Test**.   
 4. Review the results, and make sure that the _sipfederationtls._tcp.<**domain**>.com DNS SRV record resolves successfully and is configured correctly. 
 
-    The following is an example screen shot of the results of the test:
+    The following is an example screenshot of the results of the test:
 
-    ![Screen shot of the Connectivity Test Successful result ](./media/incoming-lync-to-phone-calls-not-transferred/connectivity-test.jpg)   
+    ![Screenshot of the Connectivity Test Successful result ](./media/incoming-lync-to-phone-calls-not-transferred/connectivity-test.jpg)   
 
 ## More Information
 
-For calls to be transferred to voice mail, all DNS records must be configured correctly. Be aware that the _sipfederationstls._tcp.domain.com DNS SRV record must be added, even if you do not federate with any other domains. This is because of how the Skype for Business Online servers communicate with the Exchange Online servers
+For calls to be transferred to voice mail, all DNS records must be configured correctly. Be aware that the _sipfederationstls._tcp.domain.com DNS SRV record must be added, even if you do not federate with any other domains. This is because of how the Skype for Business Online servers communicates with the Exchange Online servers
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

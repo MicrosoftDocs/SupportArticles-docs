@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 ---
@@ -18,7 +19,7 @@ appliesto:
 
 ## Problem
 
-When you try to search the new or changed properties of the people categories in the following scenarios in Microsoft SharePoint Online, the search results don’t contain updated values.
+When you try to search the new or changed properties of the people categories in the following scenarios in Microsoft SharePoint Online, the search results don't contain updated values.
 
 ### Scenario 1
 
@@ -76,4 +77,4 @@ When you change the search schema in the people categories, the change is applie
 
 ## More information
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

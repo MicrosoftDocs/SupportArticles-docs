@@ -9,12 +9,15 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Word 2010
 ---
 
 # A picture or an object may not appear in a Word 2010 or Word 2007 document
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 For a Microsoft Word 2000 and Microsoft Office Word 2003 version of this article, see [285957 ](https://support.microsoft.com/help/285957).
 

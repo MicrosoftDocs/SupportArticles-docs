@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: article 
 ms.prod: project-server-itpro
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 ms.reviewer: v-dahedm
 search.appverid: 
 - MET150
@@ -16,6 +17,8 @@ appliesto:
 ---
 
 # "Iexplorer.exe has encountered a problem and needs to close" error when you try to view a timesheet in Project Web Access
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ##  Symptoms
 

@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Lync Server 2010 Enterprise Edition 
 - Lync Server 2010 Standard Edition 
@@ -185,3 +186,7 @@ For step by step information about moving Lync Server 2010 file storage, see the
 
 - [Move the file store for Lync Server 2010 pool](https://technet.microsoft.com/library/gg195761%28v=ocs.14%29.aspx)
 - [Reassign a server to a different file store](https://technet.microsoft.com/library/gg195633%28v=ocs.14%29.aspx)
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

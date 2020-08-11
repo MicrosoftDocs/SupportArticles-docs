@@ -11,6 +11,7 @@ ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
 ms.reviewer: miadkins
+ms.custom: CSSTroubleshoot
 appliesto:
 - Lync Server
 ---
@@ -19,7 +20,7 @@ appliesto:
 
 ## Symptoms
 
-There are two Lync Server migration scenarios where a inter-pool user move can fail:
+There are two Lync Server migration scenarios where an inter-pool user move can fail:
 - The Move-CsUser is used to move Lync Server enabled users between two Lync Server pools   
 - The Move-CsLegacyUser is used to move legacy Communications Server enabled users to the Lync Server pool   
 
@@ -30,7 +31,7 @@ Move-CsUser : SetMoveResourceData failed because the user is not provisioned.
 At line:1 char:12 + Move-CsUser <<<<  -Target pool01.contoso.com -Identity bill@contoso.com -Verbose + CategoryInfo: InvalidOperation: (CN=Bill Ander...DC=com:OCSADUser) [Move-CsUser], MoveUserException + FullyQualifiedErrorId :MoveError,Microsoft.Rtc.Management.AD.Cmdlets.MoveOcsUserCmdlet
 ```
 
-The Move-CsLegacyUser Lync Server Powershell cmdlet will fail with the following error:
+The Move-CsLegacyUser Lync Server PowerShell cmdlet will fail with the following error:
 
 ```adoc
 Move-CsLegacyUser : SetMoveResourceData failed because the user is not provisioned.
@@ -39,16 +40,16 @@ At line:1 char:18 + Move-CsLegacyUser <<<<  -Identity "jeff@contoso.com" -Targe
 
 ## Cause
 
-The Lync Server User Replicator Service has not completed the initial replication of user information between the Windows Active Directory, directory services Lync Server enabled domain and the Lync Server databases. The Lync Server User Replicator initial synchronization process will occur one time by default when the Lync Server front end server is started for the first time.The Lync Server User Replicator Service will perform an initial synchronization with the domain controller in each Windows Active Directory, directory services Lync Server enabled domain. This process will synchronize each Lync Server enabled Active Directory, directory services user object with the Lync Server pool databases. The initial synchronization process's time to completion can vary depending on the design of the Active Directory, directory services forest that hosts the Lync server pool. The time it takes for the successful completion of the Lync Server User Replicator Service's initial synchronization depends on:
+The Lync Server User Replicator Service has not completed the initial replication of user information between the Windows Active Directory, directory services Lync Server enabled domain and the Lync Server databases. The Lync Server User Replicator initial synchronization process will occur one time by default when the Lync Server front-end server is started for the first time. The Lync Server User Replicator Service will perform an initial synchronization with the domain controller in each Windows Active Directory, directory services Lync Server enabled domain. This process will synchronize each Lync Server enabled Active Directory, directory services user object with the Lync Server pool databases. The initial synchronization process's time to completion can vary depending on the design of the Active Directory, directory services forest that hosts the Lync server pool. The time it takes for the successful completion of the Lync Server User Replicator Service's initial synchronization depends on:
 
 - The number of domain controllers that are hosted in the Active Directory, directory services forest that hosts the Lync Server pool   
  
 ## Resolution
 
 1. Use the following steps to locate the migration user information in the Lync Server database:   
-2. Install the Lync Server Resource Kit tools locally on one of the Lync Server Pool front end servers   
-3. Open a an administrative command prompt window   
-4. Browse to** %ProgramFiles%\Microsoft Lync Server 2010\ResKit **or **%ProgramFiles%\Microsoft Lync Server 2013\ResKit**    
+2. Install the Lync Server Resource Kit tools locally on one of the Lync Server Pool front-end servers   
+3. Open an administrative command prompt window   
+4. Browse to **%ProgramFiles%\Microsoft Lync Server 2010\ResKit** or **%ProgramFiles%\Microsoft Lync Server 2013\ResKit**    
 5. Use the following Dbanalyze command to verify that the user information has been migrated into the Lync target pool:
 
     ```powershell
@@ -58,7 +59,7 @@ The Lync Server User Replicator Service has not completed the initial replicatio
     > [!NOTE]
     > Lync 2010 Server 2010 Standard Edition uses the following syntax for the dbanalyze command listed above: dbanalyze /report:user /user:sipuri@contoso.com
 
-1. If the following error is returned then the specific user information has not been added to the Lync Server database yet:
+1. If the following error is returned, then the specific user information has not been added to the Lync Server database yet:
 
     ```adoc
     There was an error communicating with the database:
@@ -67,7 +68,7 @@ The Lync Server User Replicator Service has not completed the initial replicatio
 
 Use the following steps to make sure that the Lync Server User Replicator initial synchronization process has completed:
 
-1. On the desktop of a Lync Server pool front end server   
+1. On the desktop of a Lync Server pool front-end server   
 2. Click on Run from the Start menu   
 3. Type in eventvwr.exe and Click on the OK button   
 4. Expand the Applications and Services logs   
@@ -93,4 +94,6 @@ Use the following steps to make sure that the Lync Server User Replicator initia
 
 ## More Information
 
-After the Lync Server User Replicator initial synchronization has completed, the Lync Server User Replicator will check all the domain controllers in each Lync Server enabled domain of the Active Directory, directory services Forest at a default 60 second interval. If the Lync Server User Replicator locates any user information that has been updated since the completion of the initial synchronization then it will synchronize the newly updated Lync Server user information with the Lync Server user information that exists in the Lync Server back end database.
+After the Lync Server User Replicator initial synchronization has completed, the Lync Server User Replicator will check all the domain controllers in each Lync Server enabled domain of the Active Directory, directory services Forest at a default 60-second interval. If the Lync Server User Replicator locates any user information that has been updated since the completion of the initial synchronization, then it will synchronize the newly updated Lync Server user information with the Lync Server user information that exists in the Lync Server back-end database.
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

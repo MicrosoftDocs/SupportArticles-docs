@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.reviewer: carlsh
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -16,6 +17,8 @@ appliesto:
 ---
 
 # Download Microsoft Office Web Apps Server
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ##  Summary
 

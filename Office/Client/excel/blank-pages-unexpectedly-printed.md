@@ -8,6 +8,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 ms.reviewer: V-RHOWAR
 search.appverid: 
 - MET150
@@ -19,6 +20,8 @@ appliesto:
 ---
 
 # Blank pages are unexpectedly printed in Excel
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

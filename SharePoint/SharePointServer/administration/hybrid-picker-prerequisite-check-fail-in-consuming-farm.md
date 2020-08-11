@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Server 2016
 ---
@@ -45,8 +46,10 @@ Get-SPO365LinkSettings : UserProfileApplicationNotAvailableException_Logging :: 
 
 ## Cause  
 
-The issue occurs because running Hybrid Picker from a consuming farm that consumes the User Profile service application from a publishing farm isn’t supported yet.   
+The issue occurs because running Hybrid Picker from a consuming farm that consumes the User Profile service application from a publishing farm isn't supported yet.   
 
 ## More Information  
 
 Microsoft is aware of this issue and will address it in a future update.
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

@@ -9,11 +9,13 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - SharePoint Server 2016
 - SharePoint Server 2013
 - SharePoint Server 2010
+- SharePoint Online
 ---
 
 # User accounts migrated with their SID history across forests are not resolved in SharePoint
@@ -49,3 +51,7 @@ To work around the issue, don't have both accounts enabled at the same time.
 [SharePoint People Picker shows old domain account during Active Directory migration](https://blogs.technet.microsoft.com/rgullick/2010/05/15/sharepoint-people-picker-shows-old-domain-account-during-active-directory-migration/)
 
 [SharePoint and SID History not playing well together](https://blogs.technet.microsoft.com/craigf/2012/10/15/sharepoint-and-sid-history-not-playing-well-together/)
+
+## More information
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

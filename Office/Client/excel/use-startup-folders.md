@@ -10,12 +10,15 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft Office Excel 2007
 - Microsoft Office Excel 2003
 ---
 
 # Use startup folders in Excel
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 For a Microsoft Excel 2001 for Mac version of this article, see [259921](https://support.microsoft.com/help/259921).
 

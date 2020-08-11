@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 ---
@@ -50,4 +51,4 @@ To set the Enterprise Social Collaboration feature, follow these steps:
 
 - If you select **Use SharePoint Newsfeed (default)**, and if you have never set the **Use Yammer.com service** option, the top navigation bar displays **Newsfeed** on some OneDrive for Business pages.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

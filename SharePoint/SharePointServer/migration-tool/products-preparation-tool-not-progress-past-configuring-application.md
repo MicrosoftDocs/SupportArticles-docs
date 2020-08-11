@@ -7,6 +7,7 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
+ms.custom: CSSTroubleshoot
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
@@ -68,7 +69,7 @@ Use this method only if you cannot install hotfix 2771431 as described in the "M
    - If the server does not have an Internet connection, the PrerequisiteInstaller.exe cannot continue past the "Configuring Application Server Role, Web Server (IIS Role)" phase, and you may receive the following error message:  
 
      **Add-WindowsFeature: The request to add or remove features on the specified server failed.
-   Installation of one or more roles, role services, or features failed. The source files could not be downloaded. Use the “source” option to specify the location of the files that are required to restore the feature. For more information on specifying a source location, see [https://go.microsoft.com/fwlink/?LinkId=243077](https://go.microsoft.com/fwlink/?linkid=243077). Error: 0x800f0906**
+   Installation of one or more roles, role services, or features failed. The source files could not be downloaded. Use the "source" option to specify the location of the files that are required to restore the feature. For more information on specifying a source location, see [https://go.microsoft.com/fwlink/?LinkId=243077](https://go.microsoft.com/fwlink/?linkid=243077). Error: 0x800f0906**
 
      The 0x800F0906 error code indicates that the computer cannot download the required files from Windows Update.  
 
@@ -123,7 +124,7 @@ Software prerequisites that are required for the installation of SharePoint Serv
 - [Microsoft .NET Framework version 4.5](https://go.microsoft.com/fwlink/p/?linkid=250950)   
 - [Windows Management Framework 3.0](https://go.microsoft.com/fwlink/p/?linkid=273961)   
 - Application Server Role and Web Server (IIS) Role: Enable the Web Server (IIS) role and the Application Server role in Server Manager   
-- [Microsoft SQL Server 2008 R2 SP1 Native Client](https://go.microsoft.com/fwlink/p/?linkid=254815)   
+- Microsoft SQL Server 2008 R2 SP1 Native Client   
 - [Windows Identity Foundation (KB974405)](https://go.microsoft.com/fwlink/p/?linkid=226830)   
 - [Microsoft Sync Framework Runtime v1.0 SP1 (x64)](https://go.microsoft.com/fwlink/p/?linkid=224449)   
 - [Microsoft AppFabric 1.1 for Windows Server](https://www.microsoft.com/download/details.aspx?id=27115)   
@@ -143,3 +144,7 @@ Microsoft has confirmed that this is a problem in the Microsoft products that ar
 [Download and Install SharePoint 2013 Prerequisites on Windows Server 2012 with PowerShell](https://social.technet.microsoft.com/wiki/contents/articles/14538.download-and-install-sharepoint-2013-prerequisites-on-windows-server-2012-with-powershell.aspx)  
 
 **Note** These scripts apply only to Windows Server 2012. Do not use them on a server that is running Windows Server 2008 R2 SP1.
+
+## More information
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

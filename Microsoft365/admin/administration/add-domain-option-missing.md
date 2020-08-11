@@ -8,6 +8,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.service: o365-administration
+ms.custom: CSSTroubleshoot
 ms.topic: article
 ms.author: v-six
 appliesto:
@@ -15,6 +16,8 @@ appliesto:
 ---
 
 # "Add domain" option is missing from the Microsoft 365 admin center
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## PROBLEM
 

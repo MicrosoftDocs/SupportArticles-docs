@@ -8,6 +8,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 ms.reviewer: jeffhuan
 search.appverid: 
 - MET150
@@ -18,6 +19,8 @@ appliesto:
 ---
 
 # A PowerPoint Show .pps file is saved as a PowerPoint .pptx file when you save changes after you edit it in your web browser
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

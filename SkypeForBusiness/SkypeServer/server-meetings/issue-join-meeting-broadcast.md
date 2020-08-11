@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Skype for Business Online
@@ -35,3 +36,7 @@ To fix this issue, see the following articles to configure your environment for 
 
 - If you have an Office 365 tenant and no on-premises infrastructure, see [Set up Skype for Business Online for Skype Meeting Broadcast](https://support.office.com/article/set-up-skype-for-business-online-for-skype-meeting-broadcast-dfa736b9-4920-4f48-b8c0-b5487ec6086f).   
 - For hybrid customers, follow the appropriate steps in [Configure your on-premises deployment for Skype Meeting Broadcast](https://technet.microsoft.com/library/mt243953.aspx).   
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

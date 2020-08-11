@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - SharePoint Server 2016
@@ -48,3 +49,7 @@ The servers have incompatible builds. The IsURLMappingCached that's used to conv
 ## Resolution  
 
 To fix this issue, make sure that both farms and all servers in the farms have the same build. Make sure that all servers have the same cumulative update installed and that the Psconfig command-line tool can be run successfully.
+
+## More information
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

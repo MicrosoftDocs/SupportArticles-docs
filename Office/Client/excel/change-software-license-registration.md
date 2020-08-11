@@ -8,6 +8,7 @@ search.appverid:
 audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Office for Mac 2011
@@ -16,6 +17,8 @@ appliesto:
 ---
 
 # Change the Software License Registration Information (Company, Name) for Office for Mac
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 
@@ -128,7 +131,7 @@ Before you start, make sure that you have Office 2004 product key in hand.
     - If it is a wireless connection; turn off AirPort at the top of the screen next to the clock.
     
        ![turn off airport](./media/change-software-license-registration/airport.jpg)
-    - If it’s a wired connection, physically unplug the Ethernet cable, and quit all Office applications (Including MSN Messenger).
+    - If it's a wired connection, physically unplug the Ethernet cable, and quit all Office applications (Including MSN Messenger).
 2. On the Go menu, click Home.
 3. Open Library.
     > [!NOTE]
@@ -140,7 +143,7 @@ Before you start, make sure that you have Office 2004 product key in hand.
 
     > [!NOTE]
     > The Continue command label changes to Remove Licensing Information Only when you press the Option key.
-8. When finished, close out the "Welcome to Remove Office" screen by clicking on the red dot, you will get a “Nothing was Removed” message, just click Quit.
+8. When finished, close out the "Welcome to Remove Office" screen by clicking on the red dot, you will get a "Nothing was Removed" message, just click Quit.
 9. Launch Word/Excel/PowerPoint/Entourage and click Next on the first window.
 10.  Click Accept and enter your personal information on the Setup Assistant window. Only the first name is required and click Next. See screenshot below. Enter your Product Key on the next screen and click Finish and OK.
 

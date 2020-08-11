@@ -1,0 +1,119 @@
+- name: Office Experts
+  href: ../office-experts-welcome.md
+  items:
+  - name: Activation
+    items:
+    - name: Activate Office 2010 KMS host through phone
+      href: ../activation/activate-office-2010-kms-host-via-phone-activation.md
+    - name: Discover Office and Windows KMS hosts
+      href: ../activation/discover-remove-unauthorized-office-windows-kms-hosts.md
+    - name: Reset Microsoft 365 Apps for enterprise activation state
+      href: ../activation/reset-office-365-proplus-activation-state.md
+  - name: Administration
+    items:
+    - name: 0xC004F038 computer could not be activated in KMS
+      href: ../administration/0xc004f038-computer-not-activate.md
+    - name: Can't open file from recently used document list
+      href: ../administration/cant-open-files-most-recently-used-list.md
+    - name: Check the size of this month's Office ProPlus update
+      href: ../administration/how-big-was-this-months-office-proplus-update.md
+    - name: Compatibility report in Excel Online
+      href: ../administration/compatibility-report-about-text-queries-in-excel-online.md
+    - name: Determine build version of Online Server
+      href: ../administration/how-to-determine-build-version-of-office-online-server.md
+    - name: Errors when accessing documents in Online Server
+      href: ../administration/errors-when-access-documents-in-office-online-server.md
+    - name: Issue with Office viewers or Office Web Apps
+      href: ../administration/office-viewers-or-web-apps-shows-this-page-cannot-be-displayed.md
+    - name: Issue with using guest links to Excel Online workbook
+      href: ../administration/workbook-contains-external-data-connections.md
+    - name: lookup-multi select not work on Office backstage
+      href: ../administration/sharepoint-properties-backstage-file-info.md
+    - name: Manage the First Run screens for Office 2013
+      href: ../administration/manage-office-2013-first-run-screens.md
+    - name: Office Online limitations and features with IRM
+      href: ../administration/office-online-limitations-and-features-with-information-rights-management.md
+    - name: Office Web Apps 2013 and VMWare
+      href: ../administration/office-web-apps-and-vmware.md
+    - name: Online Server authentication configuration
+      href: ../administration/configuration-for-office-online-server-authentication-with-external-users.md
+    - name: Rebuild an Office Web Apps 2013 farm
+      href: ../administration/rebuild-an-office-web-apps-2013-farm-easily.md
+    - name: Test viewing Office documents
+      href: ../administration/test-viewing-documents-by-using-office-online-server-viewer.md
+    - name: Use custom fonts with Online Server
+      href: ../administration/use-custom-fonts-with-office-online-server.md
+  - name: Authentication
+    items:
+    - name: Office not render DUO API multi-factor authentication login page
+      href: ../authentication/not-render-a-custom-duo-api-multi-factor-authentication-login-page.md
+    - name: HTML login page not render correctly in Office
+      href: ../authentication/custom-html-login-page-not-render-correctly.md
+  - name: Diagnostic Logs
+    items:
+    - name: Enable Microsoft 365 Apps for enterprise ULS logging
+      href: ../diagnostic-logs/how-to-enable-office-365-proplus-uls-logging.md
+    - name: Office Lens icons display incorrectly 
+      href: ../diagnostic-logs/office-lens-icons-incorrectly-display.md
+  - name: Excel
+    items:
+    - name: '"Cannot access directory" error in Excel 2016'
+      href: ../excel/cannot-access-directory-error-in-excel-2016.md
+    - name: '"Request Was Taking Too Long" in Excel Online'
+      href: ../excel/request-too-long-opening-excel-workbook.md
+    - name: '"PivotTable Operation Failed" in Excel Online'
+      href: ../excel/excel-online-pivottable-operation-failed.md
+    - name: '"The workbook is currently open by 256 users" error when opening an Excel workbook from SharePoint or OneDrive'
+      href: ../excel/workbook-currently-open-by-256-users-error.md
+    - name: Can't refresh data connections in Excel Online
+      href: ../excel/excel-online-external-users-cannot-refresh-data-connections.md
+    - name: Create An Excel Add-In to Calculate Body Mass Index
+      href: ../excel/create-add-in-to-calculate-bmi.md
+    - name: Excel Online cross KCD data refresh not supported
+      href: ../excel/excel-online-cross-forest-kcd-data-refresh-is-not-supported.md
+    - name: Issue when refresh Project Online data in Excel Online
+      href: ../excel/excel-online-refresh-fails-project-online-using-timebyday.md
+    - name: Refresh SQL Azure database data in Excel Online
+      href: ../excel/excel-online-refreshing-data-to-a-sql-azure-database.md
+    - name: Rename Excel Sheet with Cell Contents by Using Macro
+      href: ../excel/use-macro-rename-sheet.md
+  - name: Installation
+    items:
+    - name: Automate the update uninstallation for Office 
+      href: ../installation/automate-uninstall-office-update.md
+    - name: Deploy Online Server to security hardened drives
+      href: ../installation/deploy-office-online-server-to-security-hardened-drive.md
+    - name: Install a second KMS host for Office
+      href: ../installation/guidance-on-installing-a-second-kms-host-for-office.md
+    - name: Office installation failures
+      href: ../installation/troubleshooting-office-installation-failures.md
+  - name: Microsoft Forms
+    items:
+    - name: Forms response columns are out of order
+      href: ../microsoft-forms/forms-response-columns-out-of-order.md
+    - name: No email notification for response to Group Forms
+      href: ../microsoft-forms/no-email-notifications-for-responses-to-group-forms.md
+  - name: PowerPivot
+    items:
+    - name: '"The workbook must be checked out" error for PowerPivot'
+      href: ../powerpivot/powerpivot-workbook-checked-out.md
+    - name: PowerPivot data model not refresh
+      href: ../powerpivot/powerpivot-data-model-does-not-refresh.md
+    - name: PowerPivot not work with .atomsvc files
+      href: ../powerpivot/powerpivot-does-not-work-with-atomsvc-files.md
+    - name: Third-party PowerPivot data refresh tools not supported
+      href: ../powerpivot/third-party-powerpivot-data-refresh-tools-are-not-supported.md
+    - name: Upsize PowerPivot 2013 workbooks to SSAS
+      href: ../powerpivot/upsize-powerpivot-2013-workbooks-to-sql-server-analysis-services.md
+  - name: Project
+    items:
+    - name: Issue when refresh Project Online data in Excel Online
+      href: ../excel/excel-online-refresh-fails-project-online-using-timebyday.md
+  - name: Sway
+    items:
+    - name: File size limit error when upload files to Sway
+      href: ../sway/sway-file-size-limit-error.md
+  - name: Word
+    items:
+    - name: Force Word document open in edit mode from email link
+      href: ../word/force-word-document-to-open-in-edit-mode.md

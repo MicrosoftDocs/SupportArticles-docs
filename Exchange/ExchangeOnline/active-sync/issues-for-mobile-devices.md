@@ -6,6 +6,7 @@ audience: ITPro
 ms.prod: office 365
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -26,13 +27,12 @@ To capture ActiveSync device log information, use one of the following methods.
 
 ### Method 1: Use Outlook on the web
 
-1. Sign in to the Office 365 portal (https://portal.office.com/).
-1. Click **Mail** to open Outlook on the web (formerly known as Outlook Web App).
-In the upper-right area of the page, click **Settings**, and then click **Options**.
+1. Sign in to the Office 365 portal (https://outlook.office.com)
+In the upper-right area of the page, click **Settings**, and then click **View all outlook settings**.
 1. In the navigation pane on the left, expand **General**, and then click **Mobile Devices**.
 1. In the list of devices, select the device that you want to track, and then click **Start Logging**.
-1. In the **Information** dialog box, click **Yes**.
-1. Reproduce the behavior that you want to capture, and then click **Retrieve Log**.
+1. In the **Information** dialog box, click **Save**.
+1. Reproduce the behavior that you want to capture.
 
     An email message that contains the log file (EASMailboxLog.txt) as an attachment is sent to your mailbox.
 

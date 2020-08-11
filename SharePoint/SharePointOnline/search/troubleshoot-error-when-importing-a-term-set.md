@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 ---
@@ -36,4 +37,4 @@ To work around this issue, only use the term store tool to import term sets that
 
 This issue occurs when you try to import more than 5,000 terms by using the term store tool in the SharePoint admin center. This is a known issue in SharePoint Online.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online
+ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft SharePoint
 ---
@@ -41,7 +42,7 @@ This means that the Performance Counters for PowerPivot haven't been loaded. Che
 
 **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\MSOLAP$POWERPIVOT\Performance\Disable Performance Counters**
 
-If it is set to **1**, the Performance Counters for PowerPivot Analysis Services is disabled. To fix this error, set the value of this registry key to **2** to enable the Performance Counters.
+If it is set to **1**, the Performance Counters for PowerPivot Analysis Services are disabled. To fix this error, set the value of this registry key to **2** to enable the Performance Counters.
 
 ![the registry editor dialog box](./media/powerpivot-performance-counter-errors/registry-editor.png)
 

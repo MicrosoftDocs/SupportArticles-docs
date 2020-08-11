@@ -8,6 +8,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.service: sharepoint-powershell
+ms.custom: CSSTroubleshoot
 ms.topic: article
 ms.author: v-six
 appliesto:
@@ -26,7 +27,6 @@ In SharePoint Central Administration, a workflow timer job shows the status as "
 - Workflows can't run after a pause.    
 - Random processing of workflows occurs.    
 - Workflows don't function over extended periods of time.      
-
 
 ## Cause  
 
@@ -85,7 +85,7 @@ Check the ULS logs every five minutes to see whether the issue was reproduced, a
    ```       
 3. Clear all filters, and then apply the following filter:
 
-   Correlation  Equals  *<Correlation_ID>*  And  
+   Correlation  Equals  *\<Correlation_ID>*  And  
    Message  Contains proc_GetWorkflowAssociations And  
    [EventID  Contains b6p4  Or  
    EventID  Contains tzkv  ]  
@@ -134,3 +134,7 @@ $workflowId =  [GUID]$WorkflowInstanceID
 $workflow = New-Object Microsoft.SharePoint.Workflow.SPWorkflow($web, $workflowId);  
 [Microsoft.SharePoint.Workflow.SPWorkflowManager]::CancelWorkflow($workflow)
 ```
+
+## More information
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

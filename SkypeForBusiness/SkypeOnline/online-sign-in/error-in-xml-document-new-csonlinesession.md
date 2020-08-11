@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Online
 ---
@@ -33,7 +34,7 @@ However, the connection to **Get-CsPowerShellEndpoin**t fails, and you receive 
 This is a known issue in Skype for Business Online that Microsoft is working to resolve. To work around this issue, include the **OverridePowerShellUri** parameter, and specify the fully qualified domain name (FQDN) of the Skype for Business Administration center URL, as in the following example:
 
 ```powershell
-$O365Session = New-CsOnlineSession -Credential $credential –OverridePowershellUri "https://admin1a.online.lync.com/OcsPowershellLiveid”
+$O365Session = New-CsOnlineSession -Credential $credential –OverridePowershellUri "https://admin1a.online.lync.com/OcsPowershellLiveid"
 ```
 
 > [!NOTE]
@@ -42,3 +43,5 @@ $O365Session = New-CsOnlineSession -Credential $credential –OverridePowershell
 ## More Information
 
 For more information, see [Using Windows PowerShell to manage Skype for Business Online](https://technet.microsoft.com/library/dn362831%28v=ocs.15%29.aspx).
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

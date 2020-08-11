@@ -10,12 +10,15 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Office apps for the web
 - Word for the web
 ---
 
 # On-screen keyboard opens repeatedly in Word Online
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Skype for Business 2016
@@ -33,7 +34,7 @@ By default, there is no AGC option displayed in the UI. To display and set the o
 2. In Skype for Business, click **Tools** > **Options** > **Audio Device**.    
 3. Click to clear the **Automatically adjust microphone volume on calls** check box.
 
-    ![the Automatically adjust microphone volume on calls checkbox](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4055907_en_1)    
+    ![The Automatically adjust microphone volume on calls checkbox](./media/disable-automatic-gain-control/checkbox.png)    
  
 ## Method 2: Disable the feature in the registry
 
@@ -80,3 +81,7 @@ In Registry Editor, create and set the following registry entry:
     **Value data:** 1
 
     **Base:** Decimal    
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

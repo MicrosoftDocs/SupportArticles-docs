@@ -10,11 +10,14 @@ audience: ITPro
 ms.service: o365-administration
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Azure Active Directory
 ---
 
 # Error messages when using Azure Active Directory Graph API custom applications in Office 365
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

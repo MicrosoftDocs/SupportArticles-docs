@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Skype for Business Web App
@@ -26,7 +27,7 @@ Consider the following scenario.
  
 In this scenario, you see only a black screen instead of the shared desktop. 
 
-This problem occurs when the meeting is hosted in Skype for Business Server 2015 or Lync Server 2013. This problem doesn’t occur if the meeting is hosted in Skype for Business Online. 
+This problem occurs when the meeting is hosted in Skype for Business Server 2015 or Lync Server 2013. This problem doesn't occur if the meeting is hosted in Skype for Business Online. 
 
 ## Workaround
 
@@ -35,7 +36,7 @@ This problem occurs when the meeting is hosted in Skype for Business Server 2015
 To work around this issue for Skype for Business Web App, use the Skype Meetings App instead. To do this, the system administrator must follow these steps: 
  
 1. Install [the May 2017 update for Skype for Business Server 2015](https://support.microsoft.com/help/3061064/updates-for-skype-for-business-server-2015).    
-2. Enable the Skype Meetings App by following the instructions in the "Enable Skype Meetings App" section of [Deploy Web downloadable clients in Skype for Business Server 2015](https://technet.microsoft.com/EN-US/library/jj205190.aspx).    
+2. Enable the Skype Meetings App by following the instructions in the "Enable Skype Meetings App" section of [Deploy Web downloadable clients in Skype for Business Server 2015](https://technet.microsoft.com/library/jj205190.aspx).    
  
 After these steps are done, web app users will automatically use the Skype Meetings App when they join a meeting.
 
@@ -46,3 +47,13 @@ There is no workaround yet for this problem for Lync Web App.
 ## Status
 
 Microsoft is working closely with Apple to resolve this problem.
+
+## More information
+
+This issue can also occur when the camera isn't granted access permission to Skype for Business. 
+
+1. Select Apple menu > **System Preferences**, select **Security & Privacy**, and then **Privacy**.
+2. Grant Skype for Business access to the camera. You will be prompted to restart Skype for Business.  
+3. Check if the issue is resolved after the restart.
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

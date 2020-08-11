@@ -1,11 +1,12 @@
 ---
 title: Cannot Resize the Chart Area of a chart
-description: Describe an issue where you can't resize the Chart Area of a chart located on a Chartsheet. This is designed.
+description: Describe an issue where you can't resize the Chart Area of a chart located on a Chart sheet. This is designed.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
+ms.custom: CSSTroubleshoot
 ms.topic: article
 ms.author: v-six
 search.appverid: 
@@ -16,7 +17,9 @@ appliesto:
 - Excel 2016
 ---
 
-# Cannot Resize the Chart Area of a chart located on a Chartsheet
+# Cannot Resize the Chart Area of a chart located on a Chart sheet
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 
@@ -29,7 +32,7 @@ Consider this scenario:
 
 ## More Information
 
-This behavior was changed in Excel 2010 and later versions, which is the intended design. 
+This behavior was changed in Excel 2010 and later versions, which are the intended design. 
 
 Alternatives to resizing the chart area on the chart sheet include:
 
@@ -37,7 +40,7 @@ Alternatives to resizing the chart area on the chart sheet include:
 - Embed the chart in the worksheet instead of a chart sheet. To do this, follow these steps: 
 
     1. Highlight the chart.   
-    2. On the Chart Toolsribbon choose Design   
+    2. On the Chart Tools ribbon choose Design   
     3. Click on Move Chart   
     4. Choose where you want the chart to be placed: Object in: Choose the worksheet tab you want to place it.    
     5. Click OK.   

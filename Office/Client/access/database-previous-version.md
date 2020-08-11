@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Access for Office 365
 - Access 2019
@@ -18,6 +19,8 @@ appliesto:
 ---
 
 # "Cannot Open a database created with a previous version of your application" in Access 2013 and Access 2016
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 This issue occurs when you try to use Access 2013 or later version of Microsoft Access to open an Access 97 database. To work around this issue, use a pre-Access 2013 version of Access to save the Access 97 database as an .accdb file: 
 

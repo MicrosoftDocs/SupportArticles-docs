@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 - SharePoint Server 2013
@@ -55,15 +56,15 @@ To resolve these issues, install [SharePoint Designer 2013](https://www.microsof
 
 ## More information
 
-If you're experiencing the message "This web site has been configured to disallow editing with SharePoint Designer” in an on-premises installation of SharePoint Foundation 2013 or SharePoint Server 2013, be aware that a site definition configuration may be responsible for the message. For more information, go to [Project Element (Site)](https://docs.microsoft.com/sharepoint/dev/schema/project-element-site).
+If you're experiencing the message "This web site has been configured to disallow editing with SharePoint Designer" in an on-premises installation of SharePoint Foundation 2013 or SharePoint Server 2013, be aware that a site definition configuration may be responsible for the message. For more information, go to [Project Element (Site)](https://docs.microsoft.com/sharepoint/dev/schema/project-element-site).
 
 If changes were made to the site by using SharePoint Designer 2010 before you installed SharePoint Designer 2013, you may continue to experience one or more of the symptoms in the "Problem" section. If you're still experiencing these issues, follow these steps:
 
 1. Exit SharePoint Designer 2013. If you're using the Click-to-Run version of SharePoint Designer 2013, go to step 4. Otherwise, go to step 2.
-1. Install the SharePoint Designer 2013 hotfix that’s dated June 11, 2013. For more information, see the [Description of the SharePoint Designer 2013 hotfix package (Spd-x-none.msp): June 11, 2013](https://support.microsoft.com/help/2768343).
+1. Install the SharePoint Designer 2013 hotfix that's dated June 11, 2013. For more information, see the [Description of the SharePoint Designer 2013 hotfix package (Spd-x-none.msp): June 11, 2013](https://support.microsoft.com/help/2768343).
 
    > [!NOTE]
-   > This step doesn’t apply if you’re using the Click-to-Run version of SharePoint 2013.
+   > This step doesn't apply if you're using the Click-to-Run version of SharePoint 2013.
 
 1. Start SharePoint Designer 2013, and then connect to your SharePoint site. If the issue persists, go to the next step.
 1. On the local computer, browse to the following folder:
@@ -86,4 +87,4 @@ If changes were made to the site by using SharePoint Designer 2010 before you in
 1. Delete all the files and folders that are present.
 1. Start SharePoint Designer 2013, and proceed with your original intentions.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

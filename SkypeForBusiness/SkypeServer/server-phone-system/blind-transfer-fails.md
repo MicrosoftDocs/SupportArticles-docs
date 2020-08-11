@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 ms.reviewer: acorman, miadkins 
 appliesto:
 - Lync Server 2010 Enterprise Edition
@@ -46,3 +47,7 @@ To work around this issue, follow these steps after the anonymous response group
 5. Click the **Lync Call** feature from the list.   
 
 The anonymous transfer for the call will succeed.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

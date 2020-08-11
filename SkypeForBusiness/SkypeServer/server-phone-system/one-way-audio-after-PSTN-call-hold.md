@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 ms.reviewer: seemarah 
 appliesto:
 - Lync 2013
@@ -34,4 +35,8 @@ This issue may occur when the following conditions are true:
 ## Resolution
 
 To resolve this issue, install [Description of the Lync 2013 update 15.0.4551.1005: November 7, 2013](https://support.microsoft.com/help/2825630).
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
 

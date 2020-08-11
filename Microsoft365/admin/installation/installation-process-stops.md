@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 ms.reviewer: mmaxey, tomol, doakm, trevormc, bobbied, swebster, andyfel
 appliesto:
@@ -16,6 +17,8 @@ appliesto:
 ---
 
 # Office 365 or Office 2013 installation process stops at the "10% - Configuring" stage
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

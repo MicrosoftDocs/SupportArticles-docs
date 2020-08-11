@@ -8,6 +8,7 @@ ms.topic: article
 ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -24,7 +25,7 @@ When you send email messages to an internal user in Microsoft Office 365, you re
 
 This issue occurs because the value for the LegacyExchangeDN attribute changed. The auto-complete cache in Microsoft Outlook and in Microsoft Outlook Web App (OWA) uses the value of the LegacyExchangeDN attribute to route email messages internally. If the value changes, the delivery of email messages may fail with a 5.1.1 NDR. For example, the recipient address in the NDR resembles the following:
 
-**IMCEAEX-_O=MMS_OU=EXCHANGE+20ADMINISTRATIVE+20GROUP+20+28FYDIBOHF23SPDLT+29_CN=RECIPIENTS_CN=User6ed4e168-addd-4b03-95f5-b9c9a421957358d@mgd.domain.com**
+**IMCEAEX-_O=MMS_OU=EXCHANGE+20ADMINISTRATIVE+20GROUP+20+28FYDIBOHF23SPDLT+29_CN=RECIPIENTS_CN=User6ed4e168-addd-4b03-95f5-b9c9a421957358d\@mgd.domain.com**
 
 ## Resolution
 

@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 ---
@@ -58,3 +59,7 @@ In some situations, when you try to share files or folders with users, you may r
 **You cannot break inheritance for this items because there are too many items with unique permission in this lists.**
 
 This occurs when you use the classic experience. This message means that you are reaching the unique security scopes in the list or library. For more information about the unique security scopes in the list or library, see [SharePoint Online Limits](https://support.office.com/article/8f34ff47-b749-408b-abc0-b605e1f6d498).
+
+## More information
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

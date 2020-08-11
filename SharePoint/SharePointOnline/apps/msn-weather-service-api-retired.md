@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - SharePoint Online
@@ -25,3 +26,5 @@ http://weather.service.msn.com/data.aspx?weadegreetype=F&culture=en-US&weasearch
 ```
 
 There are third-party alternative providers that offer API-based weather information.
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

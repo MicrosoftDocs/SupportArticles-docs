@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: project-server-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - SharePoint Server 2019
@@ -23,6 +24,8 @@ appliesto:
 
 # Sync with SharePoint tasks list from Project Professional
 
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+
 ## Summary
 
 ### Overview
@@ -35,7 +38,9 @@ Synchronization goes the other way, too. If you have a SharePoint tasks list, th
 
 Managing a Project Site tasks list in this manner is also known as lightweight project management. Project Server is not required for this functionality. SharePoint Foundation 2013, SharePoint Foundation 2016, or SharePoint Foundation 2019 is the minimum requirement for using the **Sync to SharePoint**feature.
 
-When you use SharePoint Server, you can use the "All My Work in One Place" feature to display all tasks that are specifically assigned to you. From your "My site" personal tasks list, you can view, organize, and update all your work from this one location. The [URL](https://TenantName-my.sharepoint.com/personal/Name_TenantName_onmicrosoft_com/AllTasks.aspN) is for a SharePoint personal tasks list.
+When you use SharePoint Server, you can use the "All My Work in One Place" feature to display all tasks that are specifically assigned to you. From your "My site" personal tasks list, you can view, organize, and update all your work from this one location. The following URL is for a SharePoint personal tasks list:
+
+> `https://TenantName-my.sharepoint.com/personal/Name_TenantName_onmicrosoft_com/AllTasks.aspN`
 
 **Scenarios for using Project Professional with SharePoint Server or SharePoint Online**
 
@@ -45,7 +50,7 @@ When you use SharePoint Server, you can use the "All My Work in One Place" featu
 
 The following Office article describes how to synchronize a Project plan with SharePoint, and how to sync to create a New Project site and an Existing Project site:
 
-- [Sync with a SharePoint tasks list](http://office.microsoft.com/en-us/project-help/sync-with-a-sharepoint-tasks-list-ha102828524.aspx)
+- [Sync with a SharePoint tasks list](https://office.microsoft.com/project-help/sync-with-a-sharepoint-tasks-list-ha102828524.aspx)
 
 ## More Information
 

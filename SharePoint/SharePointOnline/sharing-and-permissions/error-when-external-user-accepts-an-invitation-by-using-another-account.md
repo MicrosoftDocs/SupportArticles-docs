@@ -1,4 +1,4 @@
-﻿---
+---
 title: Error message when an external user accepts a SharePoint Online invitation by using another account
 description: Describes an issue in which you receive an error message when an external user accepts a SharePoint Online invitation by using another account.
 author: simonxjx
@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: sharepoint-online
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 ---
@@ -17,29 +18,20 @@ appliesto:
 # Error when an external user accepts a SharePoint Online invitation by using another account
 
 ## Problem
-Consider the following scenario:
 
-- You give an external user access to a Microsoft SharePoint Online or Microsoft OneDrive for Business resource.
+You receive one of the following error messages when trying to access an externally shared resource:
 
-- The user accepts the invitation but is signed in by using another Microsoft account at the time.
-
-- The user browses to the shared resource.
-
-In this scenario, the user receives one of the following error messages:
-
-- **Access Denied**
-
-- **Let us know why you need access to this site.**
-
-- **User is not found in the directory**
-
-- **You need permission to access this site.**
+- Access Denied
+- Let us know why you need access to this site.
+- User is not found in the directory
+- You need permission to access this site.
 
 ## Solution
 
-To resolve this issue, determine which account accepted the invitation, remove the incorrect account if this is necessary, and then re-invite the user to the resource.
+To resolve this issue, determine which account accepted the invitation, remove the incorrect account and the correct account, and then re-invite the user to the resource.
 
-Note Many examples in this article use *<contoso>* as a placeholder. In your scenario, replace <contoso> with the domain that you use for your organization.
+> [!NOTE]
+> Many examples in this article use \<contoso> as a placeholder. In your scenario, replace \<contoso> with the domain that you use for your organization.
 
 ### Determine which account has access as an external user
 
@@ -51,7 +43,8 @@ If you can access the site as the incorrect external user, follow these steps:
 
 3. In the Account field, review the email address. For example, i:0#.f|membership|JonDoe@contoso.com.
 
-   **NOTE** In this example, JonDoe@contoso.com is the email account that accepted the user invitation.
+   > [!NOTE]
+   > In this example, JonDoe@contoso.com is the email account that accepted the user invitation.
 
 4. If the address is incorrect, go to the "Remove the incorrect external user account" section.
 
@@ -63,15 +56,16 @@ If you can't access the site as the incorrect external user, follow these steps:
 
 3. In the **Users and Permissions** section, click **People and groups**.
 
-4. At the end of the URL in your browser window, after the **people.aspx?** part of the URL, replace **MembershipGroupId=<number>** with **MembershipGroupId=0**, and then press Enter.
+4. At the end of the URL in your browser window, after the **people.aspx?** part of the URL, replace **MembershipGroupId=\<number>** with **MembershipGroupId=0**, and then press Enter.
 
 5. In the list of users, locate the name of the external user. Right-click the user name, and copy the shortcut.
 
 6. In a new browser window or tab, paste the URL that you copied in the previous step into the address box. Add **&force=1** to the end of the URL, and then press Enter.
 
-7. In the **Account** field, review the email address. For example, **i:0#.f|membership|JonDoe@contoso.com**.
+7. In the **Account** field, review the email address. For example, **i:0#.f|membership|JonDoe\@contoso.com**.
 
-   **NOTE** In this example, **JonDoe@contoso.com** is the email account that accepted the user invitation.
+   > [!NOTE]
+   > In this example, **JonDoe\@contoso.com** is the email account that accepted the user invitation.
 
 8. If the address is incorrect, go to the "Remove the incorrect external user account" section.
 
@@ -91,7 +85,8 @@ For Office 365 Small Business subscriptions, use the SharePoint Online UI. To do
 
 All other subscriptions must use the SharePoint Online Management Shell by following these steps:
 
-**NOTE** This option doesn't apply to Office Small Business (P) organizations.
+> [!NOTE]
+> This option doesn't apply to Office Small Business (P) organizations.
 
 1. Download and install the SharePoint Online Management Shell. For more information, go to [Introduction to the SharePoint Online Management Shell](https://support.office.com/article/introduction-to-the-sharepoint-online-management-shell-c16941c3-19b4-4710-8056-34c034493429?ocmsassetID=HA102915057&CorrelationId=6f224f8f-1905-463f-8999-9dc7feec8d8a&ui=en-US&rs=en-US&ad=US).
 
@@ -99,7 +94,7 @@ All other subscriptions must use the SharePoint Online Management Shell by follo
 
 3. Type the following cmdlet:
 
-   ```
+   ```powershell
    $cred = Get-Credential
    ```
 
@@ -107,35 +102,36 @@ All other subscriptions must use the SharePoint Online Management Shell by follo
 
 5. Connect to SharePoint Online, and then type the following cmdlet:
 
-   ```
+   ```powershell
    Connect-SPOService -Url https://-admin.sharepoint.com -Credential $cred
    ```
 
 6. Remove the user from each site collection. Type the following cmdlet, and then press Enter:
 
-   ```
+   ```powershell
    $ExtUser = Get-SPOExternalUser -filter <account@contoso.com>
    ```
 
-   **NOTE** In this cmdlet, replace <account@contoso.com> with the affected account. Then, to remove the user, type the following cmdlet, and then press Enter:
+   > [!NOTE]
+   > In this cmdlet, replace <account@contoso.com> with the affected account. Then, to remove the user, type the following cmdlet, and then press Enter:
 
-   ```
-    Remove-SPOExternalUser -UniqueIDs @($ExtUser.UniqueId)
+   ```powershell
+   Remove-SPOExternalUser -UniqueIDs @($ExtUser.UniqueId)
    ```
 
-The steps below remove the external user’s ability to access SharePoint Online. However, the user will still appear in any people searches and within the SharePoint Online Management Shell Get-SPOUser cmdlet. To remove the user completely from SharePoint Online, you'll have to remove the user from the UserInfo list. There are two ways to achieve this.
+The steps below remove the external user's ability to access SharePoint Online. However, the user will still appear in any people searches and within the SharePoint Online Management Shell Get-SPOUser cmdlet. To remove the user completely from SharePoint Online, you'll have to remove the user from the UserInfo list. There are two ways to achieve this.
 
 1. Use the SharePoint Online UI. To do this, browse to each site collection to which the user previously had access, and then follow these steps:
 
    1. At the site collection, edit the URL by adding the following string to the end of the URL:
 
-      ```
+      ```powershell
       _layouts/15/people.aspx/membershipGroupId=0
       ```
 
       For example, the full URL will resemble the following:
 
-      ```
+      ```powershell
       https://<contoso>.sharepoint.com/_layouts/15/people.aspx/membershipGroupId=0
       ```
 
@@ -145,13 +141,14 @@ The steps below remove the external user’s ability to access SharePoint Online
 
 2. Use the SharePoint Online Management Shell. For more information about how to use the SharePoint Online Management Shell, go to [Introduction to the SharePoint Online Management Shell](https://support.office.com/article/introduction-to-the-sharepoint-online-management-shell-c16941c3-19b4-4710-8056-34c034493429).
 
-   **NOTE** This option doesn't apply to Small Business subscriptions.
+   > [!NOTE]
+   > This option doesn't apply to Small Business subscriptions.
 
    1. Start the SharePoint Online Management Shell.
 
    2. Type the following cmdlet:
  
-      ```
+      ```powershell
       $cred = Get-Credential
       ```
 
@@ -159,25 +156,26 @@ The steps below remove the external user’s ability to access SharePoint Online
 
    3. Connect to SharePoint Online, and then type the following cmdlet:
 
-      ```
+      ```powershell
       Connect-SPOService -Url https://<contoso>-admin.sharepoint.com -Credential $cred
       ```
 
    4. Remove the user from each site collection. To do this, type the following cmdlet:
   
-      ```
+      ```powershell
       Get-SPOUser -Site https://<contoso>.sharepoint.com | FT –a
       ```
 
-    Notice the external user’s Login Name in the returned results. As an external user, it might have a "live.com#" prefix if it's a Microsoft Account.
+    Notice the external user's Login Name in the returned results. As an external user, it might have a "live.com#" prefix if it's a Microsoft Account.
 
     Type the following cmdlet:
 
-     ```
+     ```powershell
      Remove-SPOUser -Site https://<contoso>.sharepoint.com -LoginName live.com#jondoe@company.com
      ```
 
-    **NOTE** Replace live.com#jondoe@company.com with the user in your scenario.
+   > [!NOTE]
+   > Replace live.com#jondoe@company.com with the user in your scenario.
 
 Next, you have to remove the account from Azure Active Directory. To do this, follow these steps:
 
@@ -185,23 +183,24 @@ Next, you have to remove the account from Azure Active Directory. To do this, fo
 
 2. Open the Azure Active Directory PowerShell Module, and then run the following commands:
 
-   ```
+   ```powershell
    Connect-MSOLService
    ```
 
    Enter your administrator credentials in the dialog box:
 
-   ```
+   ```powershell
    Get-MsolUser -ReturnDeletedUsers -UnlicensedUsersOnly | ft -a
    ```
 
 3. Locate the external user who you just deleted, and then confirm they're listed.
 
-   ```
+   ```powershell
    Remove-MsolUser -RemoveFromRecycleBin -UserPrincipalName 'jondoe_contoso.com#EXT#@yourdomaint.onmicrosoft.com'
    ```
 
-   **NOTE** Replace **jondoe_contoso.com#EXT#@yourdomain.onmicrosoft.com** with the specific user in your scenario.
+   > [!NOTE]
+   > Replace **jondoe_contoso.com#EXT#\@yourdomain.onmicrosoft.com** with the specific user in your scenario.
 
 ### Clear the browser cache
 
@@ -221,4 +220,4 @@ For example, a user is signed in through a browser by using a Microsoft account,
 
 When the user signs in to the resource by using the user's external user account, the user receives the error that the user isn't found in the directory.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

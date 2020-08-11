@@ -1,6 +1,6 @@
 ---
 title: This is not a valid win32 application
-description: Discusses an issue that occurs when you try to install Office 365 ProPlus, Visio Pro for Office 365, or Project for Office 365.
+description: Discusses an issue that occurs when you try to install Microsoft 365 Apps for enterprise, Visio Pro for Office 365, or Project for Office 365.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -9,18 +9,21 @@ search.appverid:
 audience: ITPro
 ms.prod: Office 365
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
-- Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
 - Visio Pro for Office 365
 - Project for Office 365
 ---
 
-# "This is not a valid win32 application" when you install Office 365 ProPlus, Visio Pro for Office 365, or Project for Office 365
+# "This is not a valid win32 application" when you install Microsoft 365 Apps for enterprise, Visio Pro for Office 365, or Project for Office 365
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Problem
 
-When you try to install Office 365 ProPlus, Visio Pro for Office 365, or Project for Office 365, you receive the following error message:
+When you try to install Microsoft 365 Apps for enterprise, Visio Pro for Office 365, or Project for Office 365, you receive the following error message:
 
 **This is not a valid win32 application.** 
 

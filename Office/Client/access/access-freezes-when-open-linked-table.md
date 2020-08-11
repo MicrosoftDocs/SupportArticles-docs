@@ -7,6 +7,7 @@ manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
 ms.prod: office-perpetual-itpro
+ms.custom: CSSTroubleshoot
 localization_priority: Normal
 ms.reviewer: suesch
 search.appverid: 
@@ -19,6 +20,8 @@ appliesto:
 ---
 
 # Access freezes when you open a linked table to a SharePoint list
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ##  Symptoms
 
@@ -91,8 +94,8 @@ To relink the list, follow these steps:
 
 ```vb
 Public Function TableRelinkSample()
- 	      CurrentDb.TableDefs("<TableName>").RefreshLink
- 	End Function
+           CurrentDb.TableDefs("<TableName>").RefreshLink
+     End Function
 ```
 
 **Note** If you have multiple linked SharePoint lists, you have to call **RefreshLink** only one time for any one of the tables.

@@ -8,6 +8,7 @@ ms.topic: article
 ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -62,18 +63,18 @@ If you cannot accept this change, you have several options:
 
 ## New behavior when submitting messages
 
-These changes to the protocol will cause messages to take a new route through our service. Therefore, minor changes to submission behavior could occur because some printers and devices send messages that don’t fully comply with the industry standard for email, RFC 5322.
+These changes to the protocol will cause messages to take a new route through our service. Therefore, minor changes to submission behavior could occur because some printers and devices send messages that don't fully comply with the industry standard for email, RFC 5322.
 
 For example, submission behavior could change if the Reply or Mail From address isn't surrounded by angle brackets ("<" and ">") or if the sender display name contains an invalid character, such as the at sign (@), that isn't surrounded by quotation marks. Printers or devices that don't fully adhere to the RFC standard can generate sending errors. 
 
 This can often be fixed by updating the settings on the device or printer by adding angle brackets ("<" and ">") around the Reply or Mail From address. 
 
-Additionally, messages might arrive at the recipient with a different display name than they did before the change. Messages that are sent by using SMTP Authenticated Submission protocol will now behave in the same way as other submission protocols in Office 365, such as the protocol that is used when emails are sent by using Outlook on the web. As a result, the sender’s Office 365 display name will now be shown as part of the **From** address. 
+Additionally, messages might arrive at the recipient with a different display name than they did before the change. Messages that are sent by using SMTP Authenticated Submission protocol will now behave in the same way as other submission protocols in Office 365, such as the protocol that is used when emails are sent by using Outlook on the web. As a result, the sender's Office 365 display name will now be shown as part of the **From** address. 
 
-To change the sender’s display name that message recipients will see, you can change the Display Name setting on the sender’s mailbox to the desired display name. 
+To change the sender's display name that message recipients will see, you can change the Display Name setting on the sender's mailbox to the desired display name. 
 
 ## Reference
 
 For more information about the change, see the following Microsoft Exchange Team Blog article: 
  
-[Changes coming to the SMTP Authenticated Submission client protocol](https://blogs.technet.microsoft.com/exchange/2018/04/20/changes-coming-to-the-smtp-authenticated-submission-client-protocol/)
+[Changes coming to the SMTP Authenticated Submission client protocol](https://techcommunity.microsoft.com/t5/exchange-team-blog/changes-coming-to-the-smtp-authenticated-submission-client/ba-p/607825) 

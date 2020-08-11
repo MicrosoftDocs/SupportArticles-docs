@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Server 2015
 ---
@@ -32,23 +33,23 @@ Assume that you perform a force failover because one of the pools is unavailable
 
 This issue occurs when you perform the second failover immediately after the previous failover, and the pool isn't yet in a consistent state. When you try to run the **Invoke-CsManagementServerFailover** cmdlet, you receive the following error messages: 
 
-**Invoke-CsManagementServerFailover : Cannot fail over the Central Management Server. The new Central Management Store located at "skypepool.contoso.com" is not in backup mode.**
+**Invoke-CsManagementServerFailover: Cannot fail over the Central Management Server. The new Central Management Store located at "skypepool.contoso.com" is not in Backup mode.**
 
 **Invoke-CSManagementServerFailover: Central Management Server cannot be moved to pool skypepool.contoso.com because either a previous failover attempt failover or there is already a failover in progress. If the central management server was recently moved to another pool this condition might be caused by a delay in Active Directory Replication** 
 
 ### Scenario 3
 
-The ActiveMasterFqdn status is blank when you run the **[Get-CsManagementStoreReplicationStatus –CentralManagementStoreStatus](https://technet.microsoft.com/library/gg399052.aspx) **cmdlet. 
+The ActiveMasterFqdn status is blank when you run the **[Get-CsManagementStoreReplicationStatus –CentralManagementStoreStatus](https://technet.microsoft.com/library/gg399052.aspx)** cmdlet. 
 
 ## Cause
 
 ### Scenario 1
 
-If the main pool is unavailable, the CMS status that's persisted into databases will still be set as active. When pool functionality is restored, backup services may take longer to mark the CMS as in backup mode, CMS replication may fail, and a failover may be blocked. 
+If the main pool is unavailable, the CMS status that's persisted into databases will still be set as active. When pool functionality is restored, Backup services may take longer to mark the CMS as in Backup mode, CMS replication may fail, and a failover may be blocked. 
 
 ### Scenario 2
 
-If a failover isn't completed and another failover is performed immediately after, the CMS could be marked either as in active or backup mode due a race condition issue. 
+If a failover isn't completed and another failover is performed immediately after, the CMS could be marked either as in active or Backup mode due to a race condition issue. 
 
 ### Scenario 3
 
@@ -73,3 +74,7 @@ To fix this issue, follow these steps:
     > After the process is complemented, the configuration.zip file can be deleted, although we recommend that you keep a copy of the file for disaster recovery.    
 5. On each server of the previously identified pool, run the **[Invoke-CsManagementStoreReplication](https://technet.microsoft.com/library/gg413060.aspx)** cmdlet in the Skype for Business Server Management Shell.     
 6. Run the Invoke-CsManagementServerFailover cmdlet to perform a CMS failover again.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

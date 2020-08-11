@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Lync 2010
 - Lync 2010 Attendee
@@ -42,34 +43,34 @@ This issue can occur using Microsoft Lync 2013 or Microsoft Lync 2010.
 
 ### Scenario 2
 
-This issue can also occur using Microsoft Outllook 2013, Microsoft Outlook 2010or Microsoft Outlook 2007:
+This issue can also occur using Microsoft Outlook 2013, Microsoft Outlook 2010or Microsoft Outlook 2007:
 
 #### Microsoft Outlook 2013 or Microsoft Outlook 2010
 
-1. Open Microsoft Outlook on the Windows client based computer.   
+1. Open Microsoft Outlook on the Windows client-based computer.   
 2. Choose Calendar from the Outlook Navigation menu   
 3. On the Outlook Calendar toolbar click on the New Lync Meeting or Lync Online Meeting button.
 
     The following error information will be displayed in a Microsoft Lync 2013 dialog:
 
-    **Create Lync meeting failed. Please make sure that Lync is running and signed-in and try again**
+    **Create Lync meeting failed. Make sure that Lync is running and signed-in and try again**
 
     The following error information will be displayed in a Microsoft Lync 2010 dialog:
 
-    **Create online meeting failed. Please make sure that Lync is running and signed-in and try again**
+    **Create online meeting failed. Make sure that Lync is running and signed-in and try again**
 
 #### Microsoft Outlook 2007
 
-1. Open Microsoft Outlook 2007 on the Windows client based computer.   
+1. Open Microsoft Outlook 2007 on the Windows client-based computer.   
 2. Choose the Lync Online Meeting button from the Outlook 2007 Online meeting toolbar.
 
     The following error information will be displayed in a Microsoft Lync 2013 Dialog:
 
-    **Create Lync meeting failed. Please make sure that Lync is running and signed-in and try again**
+    **Create Lync meeting failed. Make sure that Lync is running and signed-in and try again**
 
     The following error information will be displayed in a Microsoft Lync 2010 Dialog:
 
-    **Create online meeting failed. Please make sure that Lync is running and signed-in and try again**   
+    **Create online meeting failed. Make sure that Lync is running and signed-in and try again**   
 
 
 ## Cause
@@ -82,11 +83,13 @@ Do not sign into the Lync client using a Windows Active Directory Domain Servic
 
 ## More Information
 
-For detailed information on using Mandatory profiles with Windows server and client based computers:
+For detailed information on using Mandatory profiles with Windows server and client-based computers:
 
-[Customize the default local user profile when preparing an image of Windows](https://support.microsoft.com/kb/973289)
+[Design customization the default local user profile when preparing an image of Windows](https://support.microsoft.com/kb/973289)
 
 For more detailed information on Crypto API functionality with Mandatory profiles:
 
 [RSACryptoServiceProvider fails when used with mandatory profiles](
 https://blogs.msdn.com/b/alejacma/archive/2007/10/23/rsacryptoserviceprovider-fails-when-used-with-mandatory-profiles.aspx)
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

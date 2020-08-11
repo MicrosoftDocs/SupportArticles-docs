@@ -7,6 +7,7 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
+ms.custom: CSSTroubleshoot
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
@@ -23,6 +24,8 @@ appliesto:
 ---
 
 # Office applications open blank from SharePoint WebDAV or sites
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 When this problem occurs, you may also experience the following additional symptoms: 
  

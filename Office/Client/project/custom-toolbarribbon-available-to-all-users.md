@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: article 
 ms.prod: project-server-itpro
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 ms.reviewer:  v-jomcc
 search.appverid: 
 - MET150
@@ -21,6 +22,8 @@ appliesto:
 ---
 
 # Make a custom toolbar/ribbon available to all users in Project client
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Introduction
 

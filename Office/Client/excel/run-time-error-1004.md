@@ -1,5 +1,5 @@
 ---
-title: Unable to make changes to legend entries in an chart in Excel
+title: Unable to make changes to legend entries in a chart in Excel
 description: Explains that you may receive a runtime error message when you use a VBA macro to change legend entries in an Excel chart. You must reduce the font size of the chart legend text before you change the legend entries.
 author: simonxjx
 manager: dcscontentpm
@@ -10,11 +10,14 @@ audience: ITPro
 ms.service: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft Excel
 ---
 
-# "Run-time Error 1004" when you make changes to legend entries in an chart in Excel
+# "Run-time Error 1004" when you make changes to legend entries in a chart in Excel
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

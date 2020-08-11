@@ -7,6 +7,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.service: office 365
+ms.custom: CSSTroubleshoot
 ms.topic: article
 ms.author: v-six
 appliesto:
@@ -32,6 +33,8 @@ appliesto:
 ---
 
 # An Office program is slow or may stop responding (hang) when you open a file from a network location
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

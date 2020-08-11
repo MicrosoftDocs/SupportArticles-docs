@@ -9,6 +9,7 @@ ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
 ms.reviewer: akeeler
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -22,6 +23,8 @@ appliesto:
 
 # Method to determine whether a year is a leap year
 
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+
 ## Summary
 
 This article describes how to determine whether the year in a date that is used in a Microsoft Excel document is a leap year. 
@@ -30,7 +33,7 @@ This article describes how to determine whether the year in a date that is used 
 
 The date system that is used by Excel is based on the Gregorian calendar, first established in 1582 by Pope Gregory XIII. This calendar was designed to correct the errors introduced by the less accurate Julian calendar.
 
-In the Gregorian calendar, a normal year consists of 365 days. Because the actual length of a sidereal year (the time required for the Earth to revolve once about the Sun) is actually 365.25635 days, a "leap year" of 366 days is used once every four years to eliminate the error caused by three normal (but short) years. Any year that is evenly divisible by 4 is a leap year: for example, 1988, 1992, and 1996 are leap years.
+In the Gregorian calendar, a normal year consists of 365 days. Because the actual length of a sidereal year (the time required for the Earth to revolve once about the Sun) is actually 365.2425 days, a "leap year" of 366 days is used once every four years to eliminate the error caused by three normal (but short) years. Any year that is evenly divisible by 4 is a leap year: for example, 1988, 1992, and 1996 are leap years.
 
 However, there is still a small error that must be accounted for. To eliminate this error, the Gregorian calendar stipulates that a year that is evenly divisible by 100 (for example, 1900) is a leap year only if it is also evenly divisible by 400.
 

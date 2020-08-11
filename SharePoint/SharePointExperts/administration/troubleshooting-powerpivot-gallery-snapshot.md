@@ -9,6 +9,7 @@ audience: ITPro
 ms.service: sharepoint
 ms.topic: article
 ms.service: sharepoint-online
+ms.custom: CSSTroubleshoot
 ms.author: randring
 appliesto:
 - SharePoint Server 2016
@@ -20,27 +21,27 @@ This article was written by [Rick Andring](https://social.technet.microsoft.com/
 
 If you have been following the multiple threads on issues and changes to the PowerPivot for SharePoint 2016 Gallery Snapshots, you may be aware of an issue where gallery snapshots do not function properly (infinite "hourglass") for SSL sites when there are multiple sites bound to the same port. While not limited to port 443 we will use a generic port 443 site as an example here as it is the most common usage.
 
-This issue was discovered back in December 2016 during testing and again in a really well researched blog post by [Brian Laws](https://social.technet.microsoft.com/profile/Brian+H+Laws)
+This issue was discovered back in December 2016 during testing and again in a well-researched blog post by [Brian Laws](https://social.technet.microsoft.com/profile/Brian+H+Laws)
 (<https://info.summit7systems.com/blog/bug-report-powerpivot-for-sharepoint-2016-thumbnails-not-generating>) in February of 2017.
 
 
 ![Display of the issue in PowerPivot Gallery](media/troubleshooting-powerpivot-gallery-snapshot/issue.png)
 
-Extensive detail on the snapshot process or the log entries is not covered in this post (you can see Brian's blog above for most of it or follow along in the ULS logs), but here is the 10,000 foot view:
+Extensive detail on the snapshot process or the log entries is not covered in this post (you can see Brian's blog above for most of it or follow along in the ULS logs). Here is the 10,000 foot view:
 
 1.  A user uploads a new PowerPivot workbook to the Gallery.
-2.  Event receiver detects the file and whether or not it is a file valid for a snapshot.
-3.  SharePoint calls the ExcelRest.aspx for each relevant item in the workbook via a URL similar to the following:
+2.  Event receiver detects the file, and whether or not it is a file valid for a snapshot.
+3.  SharePoint calls the ExcelRest.aspx for each relevant item in the workbook via a URL similar to the following sample:
     
     https://**localhost**/\_vti\_bin/ExcelRest.aspx/PowerPivot%20Gallery/GenericWorkbook.xlsx/Model/Sheets('Sheet1')
 
-4.  As part of the above call the full URL of the document is sent with the request to OOS on behalf of the user that uploaded the document. (Obviously "localhost" is not a valid URL for OOS, so we also send the full URL as part of the request so OOS knows where to go to retrieve the snapshots.)
+4.  As part of the above call, the full URL of the document is sent with the request to OOS on behalf of the user that uploaded the document. (Obviously "localhost" is not a valid URL for OOS, so we also send the full URL as part of the request and OOS knows where to go to retrieve the snapshots.)
 5.  Office Online Server loads the workbook, retrieves the snapshots, and returns them to the SharePoint WFE server. 
 6.  The snapshots are applied to the document.
 
 ## The Issue
 
-The new snapshot process causes an issue for SSL sites that share a port **and** use unique certificates. When you combine multiple unique URLs, each with their own unique SSL certificates and localhost calls, you wind up with IIS getting very confused on what certificate to pin to the request (since it is localhost, it takes the first one in line generally). In an effort to avoid an authentication double hop in a scenario where more than one SharePoint web front end (WFE) is involved, the product team opted to utilize localhost. If this was not in place, Kerberos Constrained Delegation (KCD) would need to be configured between the SharePoint WFE servers to avoid an overcomplicated configuration just for gallery snapshots to function properly.
+The new snapshot process causes an issue for SSL sites that share a port **and** use unique certificates. When you combine multiple unique URLs, each with their own unique SSL certificates and localhost calls, you wind up with IIS getting confused on what certificate to pin to the request (since it is localhost, it takes the first one in line generally). In an effort to avoid an authentication double hop in a scenario where more than one SharePoint web front end (WFE) is involved, the product team opted to utilize localhost. If this was not in place, Kerberos Constrained Delegation (KCD) would need to be configured between the SharePoint WFE servers to avoid an overcomplicated configuration, just for gallery snapshots to function properly.
 
 In the SharePoint ULS logs, you will see a set of entries similar to the following detailing the failure:
 
@@ -74,7 +75,7 @@ During our multiple attempts to narrow this down, we could see the snapshot proc
 
 ## The Workaround
 
-  - You can use a wildcard certificate. This is the only possible workaround we have found so far. With a wildcard certificate for your sites, you can utilize multiple SSL host header sites and your gallery snapshots will function (this has been tested and confirmed working). Again, this is assuming that everything else is configured properly for snapshots to function. We realize this is not viable for everyone, but at this point it is only option to keep sites SSL and have functional snapshots.
+  - You can use a wildcard certificate. This is the only possible workaround we have found so far. With a wildcard certificate for your sites, you can utilize multiple SSL host header sites and your gallery snapshots will function (this has been tested and confirmed working). Again, this is assuming that everything else is configured properly for snapshots to function. We realize that it is not viable for everyone, but it is only option to keep sites SSL and have functional snapshots at this point.
     
   > [!NOTE]
   > 
@@ -82,7 +83,7 @@ During our multiple attempts to narrow this down, we could see the snapshot proc
 
 ## Other Options
 
-  - You can restrict your usage to one SSL site  with host header and certificate and no IP specific bindings (site specific SSL certs and IP specific bindings usually go hand-in-hand).
+  - You can restrict your usage to one SSL site  with host header and certificate and no IP-specific bindings (site-specific SSL certs and IP-specific bindings usually go hand-in-hand).
   - Stop using the PowerPivot Gallery all together. You can schedule data refreshes for PowerPivot workbooks in any document library as
     long as the PowerPivot solution is deployed to the web app and the features are activated on the site.
   - Convert your SSL sites to HTTP. (Maybe even just the sites that host
@@ -92,11 +93,11 @@ During our multiple attempts to narrow this down, we could see the snapshot proc
     
     1.  Navigate to the list a site owner.    
     2.  Click "Library" \> "Library Settings" from the ribbon menu.  
-        ![SharePoint menu showing Libary Settings menu item](media/troubleshooting-powerpivot-gallery-snapshot/LibSettings2.png)    
-    3.  Scroll down to the "Views" section and click "All Documents"  
+        ![SharePoint menu showing Library Settings menu item](media/troubleshooting-powerpivot-gallery-snapshot/LibSettings2.png)    
+    3.  Scroll down to the **Views** section and click **All Documents**.  
         ![SharePoint Library Settings options](media/troubleshooting-powerpivot-gallery-snapshot/ClickAllDocs.png)    
-    4.  Check the "Make this the default view" box and click "OK"  
-        ![SharePoint Make this the default setting checkbox](media/troubleshooting-powerpivot-gallery-snapshot/AllDocsDefault.png)
+    4.  Check the **Make the default view** box and click "OK"  
+        ![The default setting checkbox](media/troubleshooting-powerpivot-gallery-snapshot/AllDocsDefault.png)
 
   - You can take the above a step further by deleting the Silverlight views in the PowerPivot Gallery:
     
@@ -104,8 +105,8 @@ During our multiple attempts to narrow this down, we could see the snapshot proc
         
         1.  Navigate to the list a site owner.        
         2.  Click "Library" \> "Library Settings" from the ribbon menu.  
-            ![SharePoint menu showing Libary Settings menu item](media/troubleshooting-powerpivot-gallery-snapshot/LibSettings2.png)        
-        3.  Scroll down to the "Views" section and click on any of the 3 PowerPivot Silverlight views "Gallery", "Theatre" and Carousel".  
+            ![SharePoint menu showing Library Settings menu item](media/troubleshooting-powerpivot-gallery-snapshot/LibSettings2.png)        
+        3.  Scroll down to the "Views" section and click on any of the 3 PowerPivot Silverlight views "Gallery", "Theatre" and "Carousel".  
             ![SharePoint Library Settings options](media/troubleshooting-powerpivot-gallery-snapshot/ClickPPIVViews.png)        
         4.  Click "Delete".  
             ![SharePoint Delete button image](media/troubleshooting-powerpivot-gallery-snapshot/ClickDelete.png)
@@ -119,4 +120,4 @@ During our multiple attempts to narrow this down, we could see the snapshot proc
         > For your current PowerPivot Galleries, they will continue to attempt to take snapshots even if you disable/delete the views. The only way to stop them from attempting to create snapshots is to replace the gallery with a normal document library. As long as you keep the PowerPivot features deployed to the site, you will still be able to schedule data refreshes as usual. We STRONGLY recommend that you test these scripts extensively in a development environment before using them on a farm that matters.
         >
 
-This article covers an issue specific to PowerPivot Gallery Snapshots in SharePoint 2016 and does not refer to or reference any other products.  If you see similar errors in other versions of SharePoint, the solutions/recommendations list here will not help you and are not relevant to your issue. The PowerShell scripts provided in this article are provided as samples for testing with no guarantee or warrantee by Microsoft.
+This article covers an issue specific to PowerPivot Gallery Snapshots in SharePoint 2016, and it does not refer to or reference any other products. If you see similar errors in other versions of SharePoint, the solutions/recommendations list here will not help you and are not relevant to your issue. The PowerShell scripts provided in this article are provided as samples for testing with no guarantee or warrantee by Microsoft.

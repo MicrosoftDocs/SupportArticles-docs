@@ -9,6 +9,7 @@ ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
 ms.reviewer: akeeler
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -18,6 +19,8 @@ appliesto:
 ---
 
 # How Excel determines the current mode of calculation
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 
@@ -60,7 +63,7 @@ There are four modes of calculation that you can select in Excel. They are as fo
 |Automatic|When you make any change to the document. All affected parts of the document are recalculated.|
 |Automatic except tables|When you make any change to the document. All affected parts of the document except tables are recalculated. A table is recalculated only when a change is made to it.|
 |Manual|When you press F9, click **Options** on the **Tools** menu, click the **Calculation** tab, and then click **Calc Sheet**.|
-|Manual / Recalculate before saving|When you press F9 or click **Calc Sheet** on the **Calculation** tab on the **Tools/Options** menu. Calculation also occurs every time that you save the file.|
+|Manual / Recalculate before saving|When you press F9 or click **Calc Sheet** on the **Calculation** tab on the **Tools/Options** menu. Calculation also occurs every time that you save the file if you have the checkbox "Recalculate workbook before saving" checked under **File** > **Options** > **Formulas**.<br/>!["Recalculate workbook before saving" checkbox.](./media/current-mode-of-calculation/current-mode-of-calculation.png)|
 
 ### Recalculate the active sheet
 

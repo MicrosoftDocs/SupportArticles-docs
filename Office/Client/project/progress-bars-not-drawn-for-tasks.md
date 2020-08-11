@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: article 
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 ms.reviewer: timj
 search.appverid: 
 - MET150 
@@ -21,6 +22,8 @@ appliesto:
 ---
 
 # Progress bars not drawn for tasks that are in progress in Project
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ##  Symptoms
 

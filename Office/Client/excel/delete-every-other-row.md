@@ -8,6 +8,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 ms.reviewer: clarkmc 
 search.appverid: 
 - MET150
@@ -19,6 +20,8 @@ appliesto:
 ---
 
 # How to delete every other row on an Excel worksheet
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

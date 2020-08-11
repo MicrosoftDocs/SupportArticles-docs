@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Lync Server 2013
 ---
@@ -57,14 +58,18 @@ Event Xml:
 </Event> 
 ```
 
-We see that Lync server finds the Exchange server and umdialplan but get a TLS error when the call gets reroutes to 3rd call manager which pulls up the auto attendant setting.
+We see that Lync server finds the Exchange server and umdialplan but get a TLS error when the call gets reroutes to third call manager that pulls up the auto attendant setting.
 
 ## Workaround
 
 So recommendation is: 
 
-1. Change the dial plan to use wildcard and change UM service start up mode to use TLS
-1. Re-assign the certificate on server to set FQDN as subject name but unable to assign the cert on UM and UM call router service. unable to deleted the old certificate 
-1. Disabled the Start up mode to use TCP 4) Now remove the old cert and assigned a new certificate for UM & UM callrouterservice 
+1. Change the dial plan to use wildcard and change UM service startup mode to use TLS
+1. Reassign the certificate on server to set FQDN as subject name but unable to assign the cert on UM and UM call router service. unable to delete the old certificate 
+1. Disabled the Startup mode to use TCP 4) Now remove the old cert and assigned a new certificate for UM & UM callrouterservice 
 1. Assign the certificate with UM services 
 1. Change start up mode back to TLS
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

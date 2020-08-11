@@ -9,6 +9,7 @@ audience: ITPro
 ms.service: office 365
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Word for Office 365
 - Word 2019
@@ -18,6 +19,8 @@ appliesto:
 ---
 
 # Mail merge error when a data source is accessed by multiple users in Word
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

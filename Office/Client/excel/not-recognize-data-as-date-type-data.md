@@ -10,12 +10,15 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 ms.reviewer: jenl
 appliesto:
 - Excel 2013
 ---
 
 # Excel 2013 does not recognize data as Date type data after you import the data from a SQL Server data source to an Excel workbook
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

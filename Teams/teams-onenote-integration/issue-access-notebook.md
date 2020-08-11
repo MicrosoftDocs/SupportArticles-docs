@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: msteams
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Microsoft Teams
@@ -58,3 +59,5 @@ To determine the item count, use one of the following methods:
     File Type:True
     HTML File Type:True 
     ```
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

@@ -7,6 +7,7 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
+ms.custom: CSSTroubleshoot
 ms.prod: office 365
 ms.topic: article
 ms.author: v-six
@@ -16,6 +17,8 @@ appliesto:
 ---
 
 # An update is available for Office to support migrations from AD RMS to Azure RMS
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 
@@ -38,7 +41,7 @@ The update is available for the following versions of Office:
 
 - Office 2013 version 15.0.4849.1000, or later versions
 - Office 2016 MSI version 16.0.4496.1000, or later versions.
-- Office 2017 C2R version 16.0.7407.1000, or later versions
+- Office 2016 C2R version 16.0.7407.1000, or later versions
 
 To set AD RMS in read-only mode after you install the fix on Windows clients that are running Office 2013, Office 2016, or other applications developed by using the MSIPC SDK, you have to deny access to the Publish.asmx page. To do this, follow these steps: 
 
@@ -74,6 +77,6 @@ Among these artifacts, Windows clients obtain the Client Licensor Certificate (C
 
 By denying access to these APIs, a client that has this fix installed and that is configured to use Azure RMS can consume content from AD RMS without receiving a CLC from AD RMS. This enables the client to continue using Azure RMS to protect all new content while keeping access to content previously protected with AD RMS, even if the AD RMS key has not been imported into Azure RMS.
 
-This allows for a gradual phase-out of the AD RMS infrastructure because new content is protected by using Azure RMS until the content that’s protected by AD RMS is re-protected by the new keys in Azure RMS or it is no longer relevant. Then, the AD RMS cluster and its SLC can be decommissioned.
+This allows for a gradual phase-out of the AD RMS infrastructure because new content is protected by using Azure RMS until the content that's protected by AD RMS is re-protected by the new keys in Azure RMS or it is no longer relevant. Then, the AD RMS cluster and its SLC can be decommissioned.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

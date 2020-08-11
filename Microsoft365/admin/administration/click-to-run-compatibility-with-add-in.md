@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.reviewer: gquintin
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -16,6 +17,8 @@ appliesto:
 ---
 
 # Office 2010 Click-to-Run compatibility with add-ins
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ##  Summary
 
@@ -31,9 +34,7 @@ How does Click-to-Run work?
 
 Click-to-Run products use streaming. Think of this just as you think about how to stream video. You can watch the first part of the video before the whole file is downloaded. Similarly, with Click-to-Run, you can start using Office 2010 before the whole suite or product is downloaded. When you are using your application, the rest of the Office 2010 suite or product is being downloaded quietly in the background. 
 
-Another aspect of Office Click-to-Run is the unique way that Office 2010 is stored after it is downloaded onto your computer. Click-to-Run uses Microsoft virtualization technology to contain Office 2010 inside a virtualized application space. This virtual “bubble” separates Office 2010 from the regular file system and applications on your computer. This lets Office 2010 Click-to-Run coexist side-by-side with any existing version of Office that is already installed on your computer. There are also other benefits to Office 2010 Click-to-Run. For more information about Office 2010 Click-to-Run, visit the following Microsoft website:
-
-[Click-to-Run: Delivering Office in the 21st Century](https://blogs.technet.com/office2010/archive/2009/11/06/click-to-run-delivering-office-in-the-21st-century.aspx)
+Another aspect of Office Click-to-Run is the unique way that Office 2010 is stored after it is downloaded onto your computer. Click-to-Run uses Microsoft virtualization technology to contain Office 2010 inside a virtualized application space. This virtual "bubble" separates Office 2010 from the regular file system and applications on your computer. This lets Office 2010 Click-to-Run coexist side-by-side with any existing version of Office that is already installed on your computer. There are also other benefits to Office 2010 Click-to-Run.
 
 What products use Click-to-Run?
 

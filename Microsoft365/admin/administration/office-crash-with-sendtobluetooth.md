@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: article 
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -46,6 +47,8 @@ appliesto:
 ---
 
 # Office programs may crash with the SendToBluetooth add-in installed
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ##  Resolution
 

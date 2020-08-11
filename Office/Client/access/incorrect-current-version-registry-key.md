@@ -1,6 +1,6 @@
 ---
-title: Incorrect registry key for Current Version Access
-description: Describes an issue in which Access may not detect/repair the registry key which specifies the currently configured version of Access. Provides a solution.
+title: Incorrect registry key for Access
+description: Describes an issue in which Access may not detect/repair the registry key that specifies the configured version of Access. Provides a solution.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Access 2010
@@ -16,11 +17,13 @@ appliesto:
 - Microsoft Office Access 2007
 ---
 
-# Access: Incorrect Current Version registry key
+# Access: Incorrect version registry key
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 
-In some instances Access may not detect/repair the registry key which specifies the currently configured version of Access. In this scenario, when double-clicking on the database file, you receive the following error:
+In some instances Access may not detect/repair the registry key that specifies the configured version of Access. In this scenario, when double-clicking on the database file, you receive the following error:
 
 ```adoc
 Windows can't open this file: 
@@ -44,8 +47,8 @@ Registry DISCLAIMER: Modifying REGISTRY settings incorrectly can cause serious p
 
 1. Click **Start** then **Run**, type **regedit** and then click **OK**.
 2. Navigate to **HKEY_CLASSES_ROOT\Access.Application\CurVer**.
-3. In the right pane, double click on the default key.
-4. Change the Value data from accdb_auto_file to the appropriate Access.Application item below based on your version of Access:
+3. In the right pane, double-click on the default key.
+4. Change the Value data from accdb_auto_file to the appropriate **Access.Application** item below based on your version of Access:
 
    Access 2007 - Access.Application.12
 

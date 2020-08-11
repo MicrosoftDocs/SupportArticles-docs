@@ -7,6 +7,7 @@ localization_priority: Normal
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 search.appverid: 
 - MET150
@@ -16,6 +17,8 @@ appliesto:
 ---
 
 # "File path you entered is too long" when saving Excel file in OneDrive
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptom
 

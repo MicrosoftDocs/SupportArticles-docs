@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business 2016
 ---
@@ -33,7 +34,7 @@ To disable the contextual tips feature, you can use Skype for Business or Lync S
 **To set the policy for all users:**
 
 ```powershell
-$a = New-CsClientPolicyEntry –Name “EnableContextualMessages” –Value $False
+$a = New-CsClientPolicyEntry –Name "EnableContextualMessages" –Value $False
 
 Set-CsClientPolicy –Identity Global –PolicyEntry @{Add=$a}
 ```
@@ -41,7 +42,7 @@ Set-CsClientPolicy –Identity Global –PolicyEntry @{Add=$a}
 **To set for specific users:**
 
 ```powershell
-$a = New-CsClientPolicyEntry –Name “EnableContextualMessages” –Value $Falsenew-CsCLientPolicy -Identity NoContextualMessages
+$a = New-CsClientPolicyEntry –Name "EnableContextualMessages" –Value $Falsenew-CsCLientPolicy -Identity NoContextualMessages
 
 Set-CsClientPolicy –Identity NoContextualMessages–PolicyEntry @{Add=$a}Grant-CsClientPolicy -Identity userX
 ```
@@ -55,3 +56,5 @@ You can verify in the uccapi logs of the client that the new policy is populated
 
 <property name="EnableContextualMessages" >False</property>
 ```
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

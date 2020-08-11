@@ -7,6 +7,7 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
+ms.custom: CSSTroubleshoot
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
@@ -18,6 +19,8 @@ appliesto:
 ---
 
 # Office 365 users cannot open or synchronize SharePoint files after the Office 2013: March 12, 2013 update is installed
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 
@@ -32,7 +35,7 @@ In this scenario, users may be prompted for credentials multiple times.
 
 This issue occurs because of a problem in the Office 2013 update for March 12, 2013.
 
-**Note** To verify the file versions, and to determine whether this issue applies to your situation, see the “How to determine whether the update is installed” section in the following article in the Microsoft Knowledge Base:
+**Note** To verify the file versions, and to determine whether this issue applies to your situation, see the "How to determine whether the update is installed" section in the following article in the Microsoft Knowledge Base:
 
 [2768349 ](https://support.microsoft.com/help/2768349) Description of the Office 2013 update: March 12, 2013
 

@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 ms.reviewer: nichburk
 appliesto:
 - Lync 2013
@@ -71,3 +72,5 @@ These settings can also be confirmed by using the Snooper tool to analyze the cl
 
 - EnableExchangeDelegateSyncUp   
 - EnableDelegation   
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

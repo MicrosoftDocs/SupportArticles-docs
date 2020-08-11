@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business 2015
 ---
@@ -32,3 +33,7 @@ To fix this issue, install the [January 12, 2016 update (KB3114502)](https://sup
 
 > [!NOTE]
 > Lync 2013 was upgraded to Skype for Business in April 2015.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

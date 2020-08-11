@@ -10,15 +10,17 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
+- SharePoint Server
 ---
 
 # Remove the assembly reference from your Sandbox solution created in Visual Studio
 
 ## Introduction
 
-By default, the Visual Studio 2015 and 2013 templates for SharePoint Sandbox solutions automatically include an assembly-to-Sandbox solution file (wsp). This is true regardless of whether you have added any actual code in the solution. This process can be controlled by the **Include Assembly In Package** setting in the Visual Studio Project Properties view. The default value for this property is **True**. If you have created your Sandbox solution in Visual Studio and it doesn't contain actual code, you should change this setting to **False**. This makes sure that your Sandbox solution is fully declarative and doesn’t contain any actual code.
+By default, the Visual Studio 2015 and 2013 templates for SharePoint Sandbox solutions automatically include an assembly-to-Sandbox solution file (wsp). This is true regardless of whether you have added any actual code in the solution. This process can be controlled by the **Include Assembly In Package** setting in the Visual Studio Project Properties view. The default value for this property is **True**. If you have created your Sandbox solution in Visual Studio and it doesn't contain actual code, you should change this setting to **False**. This makes sure that your Sandbox solution is fully declarative and doesn't contain any actual code.
 
 ## Procedure
 
@@ -36,4 +38,4 @@ To change an existing Sandbox solution that's created in Visual Studio, follow t
 
 For more information, see [Removing Code-Based Sandbox Solutions in SharePoint Online](https://developer.microsoft.com/office/blogs/removing-code-based-sandbox-solutions-in-sharepoint-online/).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

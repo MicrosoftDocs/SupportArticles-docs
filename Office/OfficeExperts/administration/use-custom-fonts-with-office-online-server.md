@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
+ms.custom: CSSTroubleshoot
 appliesto:
 - Office Online Server
 ---
@@ -18,9 +19,9 @@ appliesto:
 
 This article was written by [Taylor Hempel](https://social.technet.microsoft.com/profile/Taylor+H+-+MSFT), Premier Field Engineer.
 
-You can use custom fonts with Microsoft Office Online Server (OOS) by using .otf files. Font files must be .otf files. The .ttf files don't work with OOS.
+You can use custom fonts with Microsoft Office Online Server (OOS) by using ".otf" files. Font files must be ".otf" files. The .ttf files don't work with OOS.
 
-To apply custom fonts in web apps, install the .otf file on your local computers and every OOS server in the farm.
+To apply custom fonts in web apps, install the ".otf" file on your local computers and every OOS server in the farm.
 The font file must be installed by an administrator, and it must be installed by right-clicking the font file and clicking **Install**. You may not just drag the font file into the fonts folder.
 
 OOS uses the Windows Font Cache for its fonts. After the font file is installed, each Office Web Apps machine in the farm will have to be fully restarted before the font takes effect in the web apps.

@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: office 365
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Azure Active Directory
@@ -17,6 +18,8 @@ appliesto:
 ---
 
 # "Exception has been thrown by the target of an invocation" with Directory Sync Configuration Wizard
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Problem
 

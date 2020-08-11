@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
 ---
@@ -38,3 +39,5 @@ To work around this issue, publish your app to the Office Store. Or, provide an 
 This error occurs because the guest user has access to the content that uses the app, but he or she does not have access to the app catalog.
 
 For more information about apps for Office and SharePoint, go to the [Getting Started with Office Development](https://developer.microsoft.com/office/docs).
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

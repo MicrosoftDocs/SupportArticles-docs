@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - SharePoint Online
@@ -39,4 +40,4 @@ For more information, go to the following Microsoft website:
 > [!NOTE]
 > While the **Everyone** or **Everyone except external users** groups are most common, other groups are also affected by this scenario. Groups that are created in the Microsoft 365 admin center and security groups that are imported from local Active Directory by using Directory Synchronization will also experience this behavior.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

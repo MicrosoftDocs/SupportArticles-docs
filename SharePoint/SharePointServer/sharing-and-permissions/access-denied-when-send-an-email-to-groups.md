@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: sharepoint-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Server 2013
 - SharePoint Designer 2013
@@ -68,3 +69,7 @@ There are a few solutions to this problem.
 - Allow everybody to see the members of the SharePoint group.
 - Remove the SharePoint group from the To or CC line of the email.
 - Explicitly add the users to the To or CC line if the membership visibility cannot be changed for the SharePoint group.
+
+## More information
+
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

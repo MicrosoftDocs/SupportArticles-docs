@@ -9,12 +9,15 @@ search.appverid:
 audience: ITPro
 ms.service: office 365
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Office Professional Plus 2010
 ---
 
 # "Unlicensed Product" error when you open an Office Professional Plus 2010 application
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 For an Office 2013 version of this article, see [Unlicensed Product and activation errors in Office](https://support.office.com/article/Unlicensed-Product-and-activation-errors-in-Office-0d23d3c0-c19c-4b2f-9845-5344fedc4380). 
 
@@ -59,7 +62,7 @@ To resolve this problem, use one or more of the following methods, as necessary.
  
 To fix this problem automatically, open https://go.microsoft.com/?linkid=9843239. In the **File Download** dialog box, click **Run** or **Open**, and then follow the steps in the easy fix wizard. 
 - This wizard may be in English only. However, the automatic fix also works for other language versions of Windows.    
-- If you’re not on the computer that has the problem, save the easy fix solution to a flash drive or a CD, and then run it on the computer that has the problem.    
+- If you're not on the computer that has the problem, save the easy fix solution to a flash drive or a CD, and then run it on the computer that has the problem.    
 
 #### Let me fix it myself   
  

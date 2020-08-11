@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Word for Office 365
@@ -19,6 +20,8 @@ appliesto:
 ---
 
 # "Word could not create the work file" error message when you save a document in Microsoft Word
+
+[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 
@@ -33,7 +36,7 @@ The Temporary Internet Files folder for Windows Internet Explorer is set to be i
 To resolve this issue, create a new folder on your computer.
 
 1. Start Windows Explorer
-2. Locatethe folder location C:\Users\\*userprofile*\AppData\Local\Microsoft\Windows   
+2. Locate the folder location C:\Users\\*userprofile*\AppData\Local\Microsoft\Windows   
 3. Create the folder labeled INetCacheContent.Word. 
 
     > [!NOTE]

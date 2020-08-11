@@ -9,9 +9,11 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - SharePoint Online
+- SharePoint Server
 ---
 
 # The document preview and content type icon aren't displayed when you change the search result types display template
@@ -42,4 +44,4 @@ For more information about result types and templates, see [About configuring re
 
 This behavior is by design, depending on which template is used. For example, the **Default Item** template is usually used when a file of unknown type (such as source-code instead of a PowerPoint deck) is encountered. Therefore, this template doesn't show document previews.
 
-Still need help? Go to the [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

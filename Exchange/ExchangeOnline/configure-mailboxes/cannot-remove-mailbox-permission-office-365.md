@@ -6,6 +6,7 @@ manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.service: office 365
+ms.custom: CSSTroubleshoot
 ms.topic: article
 ms.author: v-six
 search.appverid: 
@@ -26,7 +27,7 @@ For example, you try to use the following cmdlet to remove mailbox permissions:
 Remove-MailboxPermission -Identity MailboxAccount -User UserAccount -AccessRights FullAccess -Confirm:$false
 ```
 
-When you run the cmdlet, you recieve the following error message:
+When you run the cmdlet, you receive the following error message:
 
 ```asciidoc 
 WARNING

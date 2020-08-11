@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business
 ---
@@ -25,12 +26,12 @@ Assume that you use the Microsoft Skype for Business client in a Citrix VDI envi
 > [!IMPORTANT]
 > Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur. 
 
-To fix this issue, install the April 2, 2019 update for Skype for Business for a Click-to-Run installation. To do this, open an Office program, such as Word, and then select **File **> **Account **> **Update Options **> **Update Now**.
+To fix this issue, install the April 2, 2019 update for Skype for Business for a Click-to-Run installation. To do this, open an Office program, such as Word, and then select **File** > **Account** > **Update Options** > **Update Now**.
 
 > [!NOTE]
 > If "Update Options" does not exist in the client, this is an .msi installation.
  
-![The screenshot for Update Options ](https://support.microsoft.com/Library/Images/2999585.png) 
+![The screenshot for Update Options](./media/not-responding-receive-toast-notification/update-options.png) 
 
 Don't see your Skype for Business client in the list? Click [here](https://technet.microsoft.com/office/dn788954) for a complete list of clients. You can download the Click-to-Run client from the [Office365 Portal](https://portal.office.com/ols/mysoftware.aspx).  
 
@@ -58,3 +59,7 @@ Lync 2013 was upgraded to Skype for Business in April 2015.
 **Third-party information disclaimer**
 
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

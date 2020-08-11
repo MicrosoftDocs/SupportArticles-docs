@@ -1,0 +1,106 @@
+- name: Outlook for Windows Troubleshooting
+  href: ../outlook-client-welcome.md
+  items:
+  - name: Authentication
+    items:
+    - name: Outlook prompts for credentials
+      href: ../authentication/outlook-prompts-credentials.md
+    - name: Prevent saving credentials policy doesn't work
+      href: ../authentication/prevent-saving-credentials.md
+  - name: Calendars
+    items:
+    - name: Items for next year display at incorrect time
+      href: ../calendars/calendar-items-display-incorrect-time.md
+  - name: Deployment
+    items:
+    - name: Cached Exchange Mode
+      href: ../deployment/cached-exchange-mode.md
+    - name: Install Outlook latest applicable updates
+      href: ../deployment/install-outlook-latest-updates.md
+    - name: Planning considerations
+      href: ../deployment/plan-outlook-2016-deployment.md
+  - name: Diagnostics
+    items:
+    - name: Install SaRA from network share
+      href: /office365/troubleshoot/installation/install-sara-from-network-share?context=/outlook/troubleshoot/context/client-context
+  - name: Domain Management
+    items:
+    - name: Remove automapping for shared mailbox
+      href: ../domain-management/remove-automapping-for-shared-mailbox.md
+    - name: Unexpected autodiscover behavior
+      href: ../domain-management/unexpected-autodiscover-behavior.md
+  - name: Email Messages
+    items:
+    - name: Create recurring reminder email
+      href: ../email-messages/create-recurring-email.md
+    - name: Error when you copy MSG email message files in Outlook containing multiple attachments or recipients
+      href: ../email-messages/error-when-copying-msg-with-many-attachments-or-recipients.md
+    - name: Multiple slashes are changed to one slash
+      href: ../email-messages/url-multiple-slashes-become-single-slash.md
+  - name: Extended MAPI Solutions
+    items:
+    - name: Permission isn't exposed to OAuth tokens
+      href: ../extended-mapi-solutions/expose-permissions-issue-with-mapi-oauth-tokens.md
+  - name: Folders
+    items:
+    - name: Focused Inbox disappears
+      href: ../folders/focused-inbox-disappears-switch-folder.md
+    - name: Incorrect folder names
+      href: ../folders/incorrect-folder-names.md
+    - name: Insufficient memory to display a folder
+      href: ../folders/outlook-folder-fails-displaying.md
+    - name: Remove duration from retention tags
+      href: ../folders/remove-duration-retention-policy-tag.md
+  - name: IMAP/POP
+    items:
+    - name: Can't use Quick Steps
+      href: ../imap-pop/outlook-quick-steps-issues.md
+  - name: Mailboxes
+    items:
+    - name: Calling OpenMsgStore opens the archive mailbox
+      href: ../mailboxes/calling-openmsgstore-opens-archive-mailbox.md
+    - name: Only subset of items are synchronized
+      href: ../mailboxes/only-subset-items-synchronized.md
+  - name: Meetings
+    items:
+    - name: Meeting tracking tab isn't updated
+      href: ../meetings/meeting-tracking-tab-not-updated.md
+    - name: Room Finder isn't available on shared calendars
+      href: ../meetings/room-finder-is-not-available-shared-calendars-outlook.md
+  - name: Ribbon
+    items:
+    - name: Default Office Add-in icon is displayed
+      href: ../ribbon/default-office-addin-icon-displayed-outlook-ribbon.md
+    - name: Junk E-mail Reporting Add-in
+      href: /office365/troubleshoot/antispam/junk-email-reporting-add-in?context=/outlook/troubleshoot/context/client-context
+    - name: Lync Meeting control isn't displayed
+      href: ../ribbon/lync-meeting-control-not-displayed.md
+  - name: Search
+    items:
+    - name: Can't search from additional mailbox 
+      href: ../search/can't-search-additional-mailbox.md
+    - name: Unexpected mail items
+      href: ../search/personmetadata-items.md
+
+  - name: Send/Receive Emails
+    items:
+    - name: Can't send email with Metered Connection Warning
+      href: ../send-receive-emails/metered-connection-warning.md
+    - name: Create or modify Outlook client-only rule
+      href: ../send-receive-emails/create-modify-client-only-rule-with-error.md
+    - name: Delete nonexistent messages by using MFCMAPI
+      href: ../send-receive-emails/delete-nonexistent-messages.md
+    - name: DLP Policy Tip notifications are not displayed
+      href: ../send-receive-emails/can't-display-dlp-policytip.md
+  - name: Sign-in
+    items:
+    - name: Additional RSS feeds appear
+      href: ../sign-in/additional-rss-feeds-appear.md
+    - name: Continually password prompts
+      href: ../sign-in/continually-prompts-password-office-365.md
+    - name: Use policy to control credential prompts
+      href: ../sign-in/policy-control-credential-prompts.md
+  - name: Transport Logging
+    items:
+    - name: Enable transport logging
+      href: ../transport-logging/enable-transport-logging.md

@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: sharepoint-server-itpro
 ms.topic: article
+ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - SharePoint Online
@@ -38,4 +39,4 @@ To work around this issue, do one of the following:
 
 When you start the workflow by using **All at once (parallel)** for the **Order** setting and when **Enforce unique values** is set to **Yes**, the workflow does not start because the values for the column aren't unique.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

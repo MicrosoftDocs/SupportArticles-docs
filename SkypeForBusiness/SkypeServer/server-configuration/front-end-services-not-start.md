@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Lync Server 2013
 ---
@@ -56,10 +57,10 @@ This issue may occur under the following circumstances:
 
 ## Cause
 
-In Lync Server 2013, the architecture of the Enterprise Edition (EE) Front-End pools has changed to a distributed systems architecture. Information about a particular user is kept on three Front-End servers in the pool. For each user, one Front-End server acts as the master for that user’s information, and two other Front-End servers serve as replicas. If a Front-End server goes down, another Front-End server which served as a replica is automatically promoted to master. This eliminates the single point of failure of a single back end server. However this design has its limitations. For a Lync Server 2013 pool to remain in a working quorum state the Lync Server 2013 Front-End server services that are used to manage the pool’s quorum must not be under 85% of the Lync Server 2013 pool’s capacity or quorum state could be lost.
+In Lync Server 2013, the architecture of the Enterprise Edition (EE) Front-End pools has changed to a distributed systems architecture. Information about a particular user is kept on three Front-End servers in the pool. For each user, one Front-End server acts as the master for that user's information, and two other Front-End servers serve as replicas. If a Front-End server goes down, another Front-End server which served as a replica is automatically promoted to master. This eliminates the single point of failure of a single back end server. However this design has its limitations. For a Lync Server 2013 pool to remain in a working quorum state the Lync Server 2013 Front-End server services that are used to manage the pool's quorum must not be under 85% of the Lync Server 2013 pool's capacity or quorum state could be lost.
 
 > [!NOTE]
-> Complete quorum loss will occur if a Lync Server 2013 Front-End server pool loses 50% or more of its Lync Server 2013 Front-End server services that are used to manage the pool’s quorum.
+> Complete quorum loss will occur if a Lync Server 2013 Front-End server pool loses 50% or more of its Lync Server 2013 Front-End server services that are used to manage the pool's quorum.
 
 ## Resolution
 
@@ -107,3 +108,5 @@ For more information about how to use the **Reset-CsPoolRegistrarState** Lync Se
 Microsoft does not recommend deploying a Lync Server 2013 Front-End pool that contains only two Front-End servers. For more information about this topic review the following Microsoft TechNet deployment documentation:
 
 [Topologies and Components for Front End Servers, Instant Messaging, and Presence](https://technet.microsoft.com/library/gg412996.aspx)
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

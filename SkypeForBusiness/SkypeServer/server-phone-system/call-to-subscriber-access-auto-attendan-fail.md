@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: skype-for-business-itpro
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Server 2019
 ---
@@ -55,3 +56,7 @@ To work around this problem, move the Subscriber Access or Auto Attendant contac
 ## Status
 
 Microsoft is aware of this problem and is currently investigating it.
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

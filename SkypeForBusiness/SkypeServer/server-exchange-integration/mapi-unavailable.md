@@ -10,6 +10,7 @@ audience: ITPro
 ms.service: skypeforbusiness-powershell
 ms.topic: article
 ms.author: v-six
+ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business 2016
 ---
@@ -25,11 +26,11 @@ In certain situations, the MAPI connection to Exchange Server may not be availab
 
 This issue may occur for Office 365 Exchange Online or Exchange On-Premises users. When this issue occurs, the MAPI connection is unavailable to Skype for Business 2016 clients. Additionally, you may experience the following symptoms:
 
-- The Skype for Business Configuration Information feature (hold down the Ctrl key and right-click the Skype for Business 2016 system tray icon) shows a “MAPI unavailable” status, as shown.
+- The Skype for Business Configuration Information feature (hold down the Ctrl key and right-click the Skype for Business 2016 system tray icon) shows a "MAPI unavailable" status, as shown.
 
-    ![The screenshot for MAPI status ](https://internal.support.services.microsoft.com/Library/Images/3147146.png)
+    ![The screenshot for MAPI status](./media/mapi-unavailable/mapi-status.png)
 
-    If you click the Conversations tab (![the conversations tab ](https://internal.support.services.microsoft.com/Library/Images/3147148.png)), and then you click **View more in Outlook**, you receive the following error message:
+    If you click the Conversations tab (![the conversations tab](./media/mapi-unavailable/conversations.png)), and then you click **View more in Outlook**, you receive the following error message:
 
     **Your Outlook profile is not configured correctly. Contact your support team with this information.**   
 - Delegate functionality may be broken. For example, you cannot schedule a meeting on behalf of someone else. When you try to create the online meeting, you receive the following error message: 
@@ -115,7 +116,7 @@ To work around this issue in a Click-to-Run version of Skype for Business 2016, 
 
 10. In this location, create a string value that's named 001e6603, as shown.
 
-    ![String value ](https://internal.support.services.microsoft.com/Library/Images/3186666.png)
+    ![String value](./media/mapi-unavailable/string-value.png)
 
 11. Find the user's Legacy Exchange domain name (DN).
 
@@ -125,13 +126,13 @@ To work around this issue in a Click-to-Run version of Skype for Business 2016, 
 
 14. After the test is complete, select the **XML** tab, and then locate the Legacy DN value, as shown.
 
-    ![Auto-configure ](https://internal.support.services.microsoft.com/Library/Images/3186667.jpg)
+    ![Auto-configure](./media/mapi-unavailable/auto-configure.png)
 
     Copy the legacy DN information. Although the entire tagged entry is highlighted in this screen shot, the value that you want to copy is everything between the <LegacyDN> tags. In this example, it is **/o=Contoso /ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Recipients/cn=4ef0d05da334258afda34a7ce08a430-TestDir1**. 
 
 15. In the registry, populate the **Value data** field by using the legacy DN information that you just copied, as shown. Then click **OK**.
 
-    ![MAPI string value ](https://internal.support.services.microsoft.com/Library/Images/3186887.png)   
+    ![MAPI string value](./media/mapi-unavailable/string-value-2.png)   
 
 ### Workaround (supported)
 
@@ -140,58 +141,58 @@ To work around this issue in a Click-to-Run version of Skype for Business 2016, 
     [https://mfcmapi.codeplex.com/](https://mfcmapi.codeplex.com/)   
 1. Start the tool on the affected user's computer.
 
-    ![MFCMapi](https://internal.support.services.microsoft.com/Library/Images/3186669.png)
+    ![MFCMapi](./media/mapi-unavailable/mfcmapi.png)
 
 3. Click **Profile**, and then click **Show Profiles**.
 
-4. Double-click the affected user’s profile. In this situation, there is only the default profile that's named “Outlook.” If the user has multiple profiles, select the one that represents their primary user account that is experiencing this issue.
+4. Double-click the affected user's profile. In this situation, there is only the default profile that's named "Outlook." If the user has multiple profiles, select the one that represents their primary user account that is experiencing this issue.
 
-    ![Outlook profiles](https://internal.support.services.microsoft.com/Library/Images/3186670.png)
+    ![Outlook profiles](./media/mapi-unavailable/outlook-profiles.png)
 
 5. In the **Services** table that opens, locate the service that has the Display Name of "Microsoft Exchange," and then double-click that service to open it.
 
-    ![Services](https://internal.support.services.microsoft.com/Library/Images/3186671.png)
+    ![Services](./media/mapi-unavailable/services.png)
 
 6. In the Providers table that opens. locate and select the provider that has the SMTP address of the affected user that has no entries for "PR_PROVIDER_DISPLAY."
 
-    ![Providers ](https://internal.support.services.microsoft.com/Library/Images/3186672.png)
+    ![Providers](./media/mapi-unavailable/providers.png)
 
-7. In the MFCMapi tool, examine the Providers window to make sure that the user’s SMTP address provider is selected. Then, look for the property that's named PR_PROFILE_USER. If this property exists, go to step 10. If this property does not exist, click **Additional Properties** on the **Property** menu, and then click the **Add** button.
+7. In the MFCMapi tool, examine the Providers window to make sure that the user's SMTP address provider is selected. Then, look for the property that's named PR_PROFILE_USER. If this property exists, go to step 10. If this property does not exist, click **Additional Properties** on the **Property** menu, and then click the **Add** button.
 
-    ![Providers property ](https://internal.support.services.microsoft.com/Library/Images/3186673.png)
+    ![Providers property](./media/mapi-unavailable/providers-property.png)
 
 8. In the **Property Tag** dialog box, type PR_PROFILE_USER.
 
     > [!NOTE]
     > MFCMapi translates the named Property Tag into the correct values, as shown. 
 
-    ![Property tag editor ](https://internal.support.services.microsoft.com/Library/Images/3186674.png)
+    ![Property tag editor](./media/mapi-unavailable/property-tag-editor.png)
 
 9. Click **OK**. Then, click **OK** in the Additional Properties window.
 
-    ![Additional properties ](https://internal.support.services.microsoft.com/Library/Images/3186675.png)
+    ![Additional properties](./media/mapi-unavailable/additional-properties.png)
 
-10. Run Test Autodiscovery from the Preliminary steps procedure to get the affected user’s Legacy Exchange DN (LegDN). Copy this information to the clipboard.
+10. Run Test Autodiscovery from the Preliminary steps procedure to get the affected user's Legacy Exchange DN (LegDN). Copy this information to the clipboard.
 
 11. In the Providers window, right-click the PR_PROFILE_USER property, and then click **Edit**. 
 
-    ![Properties editor ](https://internal.support.services.microsoft.com/Library/Images/3186638.png)
+    ![Properties editor](./media/mapi-unavailable/properties-editor.png)
 
-12. Paste the user’s LegDN information in the **Ansi** text box, and then click **OK**.
+12. Paste the user's LegDN information in the **Ansi** text box, and then click **OK**.
 
-    ![Property Editor completed ](https://internal.support.services.microsoft.com/Library/Images/3186639.png)
+    ![Property Editor completed](./media/mapi-unavailable/property-editor-completed.png)
 
     > [!NOTE]
     > MFCMapi may now show two entries for **PR_PROFILE_USER**. This is a known display issue that can be safely ignored.
 
 13. Optional: Use the method that is described in Workaround 1 to examine the new registry value that was created by MFCMapi and verify that it's in the correct Outlook Profile for the affected user.
 
-    ![Outlook profiles](https://internal.support.services.microsoft.com/Library/Images/3186640.png)
+    ![Outlook profiles](./media/mapi-unavailable/outlook-profiles-2.png)
 
 14. Close all MFCMapi windows and Registry Editor, and then test MAPI connectivity. Also, completely log off from Skype, and verify that the program is not running.   
 15. Log back on to Skype, wait a minute or two, and then check the Skype configuration. You should now see **MAPI Status** displayed as **OK**.
 
-    ![MAPI Status](https://internal.support.services.microsoft.com/Library/Images/3186916.png)
+    ![MAPI Status](./media/mapi-unavailable/mapi-status-2.png)
 
     > [!NOTE]
     > It can take some time for the change to take effect. You may have to log out of Outlook and Skype for Business and then sign back in to see the change.   
@@ -207,6 +208,8 @@ To determine whether your Office installation is Click-to-Run or MSI-based, foll
 
 |Office 2016 Click-to-Run installation|MSI-based Office 2016|
 |-|-|
-|![The screenshot for Word click to run ](https://internal.support.services.microsoft.com/Library/Images/3099590.png)|![The screenshot for Word MSI ](https://internal.support.services.microsoft.com/Library/Images/2971882.png)|
+|![The screenshot for Word click to run](./media/mapi-unavailable/click-to-run.png)|![The screenshot for Word MSI](./media/mapi-unavailable/word-msi.png)|
 
 Third-party information disclaimerThe third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
