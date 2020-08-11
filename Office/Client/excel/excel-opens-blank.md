@@ -193,7 +193,7 @@ To resolve this problem, try the following options, as appropriate, in the given
 
 <a id="option1">
 
-### Option 1: Ignore DDE
+## Option 1: Ignore DDE
 
 </a>
 
@@ -220,7 +220,7 @@ If these steps do not resolve the problem, continue to **Option 2**.
 
 <a id="option2">
 
-### Option 2: Repair User Experience Virtualization (UE-V)
+## Option 2: Repair User Experience Virtualization (UE-V)
 
 </a>
 
@@ -234,7 +234,7 @@ If these steps do not resolve the problem, continue to **Option 3**.
 
 <a id="option3">
 
-### Option 3: Reset file associations
+## Option 3: Reset file associations
 
 </a>
 
@@ -276,7 +276,7 @@ If these steps do not resolve the problem, continue to **Option 4**.
 
 <a id="option4">
 
-### Option 4: Repair Office
+## Option 4: Repair Office
 
 </a>
 
@@ -323,7 +323,7 @@ If these steps do not resolve the problem, continue to **Option 5**.
 
 <a id="option5">
 
-### Option 5: Turn off add-ins
+## Option 5: Turn off add-ins
 
 </a>
 
@@ -344,7 +344,7 @@ If these steps do not resolve the problem, continue to **Option 6**.
 
 <a id="option6">
 
-### Option 6: Disable hardware acceleration
+## Option 6: Disable hardware acceleration
 
 </a>
 
@@ -370,7 +370,7 @@ To disable hardware acceleration, follow these steps:
 
 <a id="option7">
 
-### Option 7: Minimizing and maximizing the window
+## Option 7: Minimizing and maximizing the window
 
 </a>
 
@@ -383,7 +383,7 @@ After your sheet is maximized, your data may appear.
 
 <a id="option8">
 
-### Option 8: Check for hidden sheets
+## Option 8: Check for hidden sheets
 
 </a>
 
