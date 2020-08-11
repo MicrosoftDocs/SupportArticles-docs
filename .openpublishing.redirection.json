@@ -46,6 +46,11 @@
       "redirect_document_id": false
     },
     {
+        "source_path": "support/azure/cloud-services/index.md",
+        "redirect_url": "/support/azure/cloud-services/welcome-cloud-services",
+        "redirect_document_id": false
+      },
+    {
       "source_path": "support/windows/index.md",
       "redirect_url": "/support/windows/win32/welcome-windowsdeveloper",
       "redirect_document_id": false

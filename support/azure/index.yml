@@ -15,3 +15,8 @@ productDirectory:
     links:
     - url: active-directory/welcome-azure-ad.md
       text: Support for Azure Active Directory
+  - title: Cloud Services
+    imageSrc: "https://static.docs.com/ui/media/product/azure/cloud-services.svg"
+    links:
+    - url: cloud-services/welcome-cloud-services.md
+      text: Support for Cloud Services

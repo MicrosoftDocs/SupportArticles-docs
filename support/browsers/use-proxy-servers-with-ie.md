@@ -100,7 +100,6 @@ function FindProxyForURL(url, host)
 For more information, see the following articles:
 
 - [Browser Is Slow to Respond When You Use an Automatic Configuration Script](https://support.microsoft.com/help/315810)
-- [Optimizing Performance with automatic Proxy configuration scripts PAC](/archive/blogs/askie/optimizing-performance-with-automatic-proxyconfiguration-scripts-pac)
 
 ## References
 
