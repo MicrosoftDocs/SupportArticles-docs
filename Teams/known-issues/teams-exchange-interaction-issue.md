@@ -263,7 +263,7 @@ Make sure that **MicrosoftNinja/\***, **\*Teams/\***, and **SkypeSpaces/\*** are
 Set-CASMailbox <UserPincipalName> -EwsAllowList @{Add="MicrosoftNinja/*","*Teams/*","SkypeSpaces/*"}
 ```
 
-If the **EwsEnabled** parameter is set to **False**, you have to set it to either **'True'** or **'Null'** (blank). Otherwise, the Teams service will also be blocked from accessing EWS.
+If the **EwsEnabled** parameter is set to **False**, you have to set it to either **True** or **Null** (blank). Otherwise, the Teams service will also be blocked from accessing EWS.
 
 #### Step 5: Escalate the issue
 
