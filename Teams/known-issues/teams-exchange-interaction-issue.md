@@ -100,7 +100,7 @@ For a mailbox hosted on-premises, the EWS URL should point to the on-premises ex
 >
 > EWS <https://mail.contoso.com/EWS/Exchange.asmx>
 
-If this test fails, or if the EWS URL is incorrect, review the [Prerequisites](#Prerequisites) section. This is because the problem is likely caused by an Exchange hybrid configuration issue, or by a firewall or reverse proxy that is blocking external requests.
+If this test fails, or if the EWS URL is incorrect, review the [Prerequisites](#prerequisites) section. This is because the problem is likely caused by an Exchange hybrid configuration issue, or by a firewall or reverse proxy that is blocking external requests.
 
 #### Step 3: Verify that the Exchange OAuth authentication protocol is enabled and functional
 
