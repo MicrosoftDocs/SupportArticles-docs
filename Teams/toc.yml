@@ -35,6 +35,8 @@
     items:
     - name: A channel can't be recreated after deletion
       href: ./known-issues/channel-cannot-be-recreated-after-deletion.md
+    - name: Channel notifications settings don't update
+      href: ./known-issues/notifications-cannot-manage.md
     - name: Rename a channel doesn't rename the corresponding folder
       href: ./known-issues/renaming-channel-does-not-rename-folder-sharepoint.md
   - name: Conferencing
@@ -73,6 +75,10 @@
       href: ./known-issues/following-application-instance-not-present-error.md
     - name: Users with Exchange Online mailboxes can't access meetings or connectors 
       href: ./known-issues/exchange-users-cant-access-meetings.md
+  - name: Exchange integration
+    items:
+    - name: Teams and Exchange interaction issues
+      href: ./known-issues/teams-exchange-interaction-issue.md
   - name: Files
     items:
     - name: Downloaded documents open in protected view
