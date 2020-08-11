@@ -154,6 +154,7 @@
         "windows/win32/**/*.md": "Windows Developer",
         "mem/intune/**/*.md": "Intune",
         "azure/**/*.md": "Azure",
+        "azure/cloud-services/*.md": "Cloud Services",
         "azure/active-directory/*.md": "Active Directory"
       },
       "searchScope": {
