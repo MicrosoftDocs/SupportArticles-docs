@@ -239,7 +239,7 @@ Get-OrganizationConfig | Select-Object Ews*
 
 If parameter was set to **EnforceAllowList**, that means that the administrator allows only the clients that are listed in **EwsAllowList** to access EWS.
 
-Make sure that **MicrosoftNinja/\***, **\*Teams/\***, and **\*SkypeSpaces/\*** are listed as array members of the **EwsAllowList** parameter. If they aren't, run the following command to add them:
+Make sure that **MicrosoftNinja/\***, **\*Teams/\***, and **SkypeSpaces/\*** are listed as array members of the **EwsAllowList** parameter. If they aren't, run the following command to add them:
 
 ```powershell
 Set-OrganizationConfig -EwsAllowList @{Add="MicrosoftNinja/*","*Teams/*","SkypeSpaces/*"}
@@ -257,7 +257,7 @@ Get-CASMailbox <UserPincipalName> | Select-Object Ews*
 
 If the parameter was set to **EnforceAllowList**, this means that the administrator allows only the clients that are listed in **EwsAllowList** to access EWS.
 
-Make sure that **MicrosoftNinja/\***, **\*Teams/\***, and **\*SkypeSpaces/\*** are listed as array members of the **EwsAllowList** parameter. If they aren't, run the following Exchange PowerShell command to add them:
+Make sure that **MicrosoftNinja/\***, **\*Teams/\***, and **SkypeSpaces/\*** are listed as array members of the **EwsAllowList** parameter. If they aren't, run the following Exchange PowerShell command to add them:
 
 ```powershell
 Set-CASMailbox <UserPincipalName> -EwsAllowList @{Add="MicrosoftNinja/*","*Teams/*","SkypeSpaces/*"}
