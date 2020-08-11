@@ -148,11 +148,6 @@ For information about how to troubleshoot damaged Word documents, see [How to tr
 
 </table>
 
-
-## Microsoft Support options
-
-If you can't resolve this problem, you can use Microsoft Support to search the Microsoft Knowledge Base and other technical resources for answers. You can also customize the site to control your search. To start your search, go to the [Microsoft Support](https://www.microsoft.com/support/) website. 
-
 ## Additional resources
  
 If you experience specific issues when you use Word, go to the following website to search for more information about your program version:
@@ -165,7 +160,7 @@ The following section provides more detailed descriptions of these options.
 
 <a id="option1">
 
-### Option 1: Search for the original document
+## Option 1: Search for the original document
 
 </a>
 
@@ -177,7 +172,7 @@ Type the document name, in the **Search** box (in Windows 10, Windows 8.1, or Wi
 
 <a id="option2">
 
-### Option 2: Search for Word Backup files
+## Option 2: Search for Word Backup files
 
 </a>
 
@@ -221,7 +216,7 @@ If you find any files that have the name "Backup of" followed by the name of the
 
 <a id="option3">
 
-### Option 3: Search for AutoRecover files
+## Option 3: Search for AutoRecover files
 
 </a>
 
@@ -276,7 +271,7 @@ Type **.asd** in the **Search** box (in Windows 10, Windows 8.1, or Windows 8) o
 
 <a id="option4">
 
-### Option 4: Search for temporary files
+## Option 4: Search for temporary files
 
 </a>
 
@@ -288,7 +283,7 @@ Temporary file names end in a .tmp extension. To find these files, follow these 
 
 <a id="option5">
 
-### Option 5: Search for "~" files
+## Option 5: Search for "~" files
 
 </a>
 
@@ -305,7 +300,7 @@ For more information about how Word creates and uses temporary files, see [Descr
 
 <a id="option6">
 
-### Option 6: How to troubleshoot damaged documents
+## Option 6: How to troubleshoot damaged documents
 
 </a>
 
