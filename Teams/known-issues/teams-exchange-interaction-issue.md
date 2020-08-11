@@ -59,7 +59,7 @@ To integrate the Microsoft Teams service with your installation of Exchange Serv
 
 - You should configure your internet-facing firewall or reverse proxy server to allow Microsoft Teams to access the server that's running Exchange Server by adding the URLs and IP address ranges for Skype for Business Online and Microsoft Teams into the allow list. For more information, se the "Skype for Business Online and Microsoft Teams" section of [Office 365 URLs and IP address ranges](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges#skype-for-business-online-and-microsoft-teams).
 
-- Autodiscover is required to allow the Teams service to perform an unauthenticated discovery against the user's mailbox that's located in Exchange Server. Autodiscover V2 is fully supported in Exchange Server 2013 Cumulative Update 19 or later. This is good enough to enable Teams delegation to work correctly. However, Teams Calendar App requires Exchange Server 2016 Cumulative Update 3 or later to be installed. Therefore, for full feature support, Exchange Server 2016 Cumulative Update 3 or later is required.
+- Exchange Autodiscover V2 is required to allow the Teams service to perform an unauthenticated discovery against the user's mailbox that's located in Exchange Server. Autodiscover V2 is fully supported in Exchange Server 2013 Cumulative Update 19 or later. This is good enough to enable Teams delegation to work correctly. However, Teams Calendar App requires Exchange Server 2016 Cumulative Update 3 or later to be installed. Therefore, for full feature support, Exchange Server 2016 Cumulative Update 3 or later is required.
 
 ## Common troubleshooting steps
 
