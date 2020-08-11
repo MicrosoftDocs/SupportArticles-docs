@@ -59,7 +59,7 @@ To integrate the Microsoft Teams service with your installation of Exchange Serv
 
 - You should configure your internet-facing firewall or reverse proxy server to allow Microsoft Teams to access the server that's running Exchange Server by adding the URLs and IP address ranges for Skype for Business Online and Microsoft Teams into the allow list. For more information, se the "Skype for Business Online and Microsoft Teams" section of [Office 365 URLs and IP address ranges](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges#skype-for-business-online-and-microsoft-teams).
 
-- Auto Discover (AutoD) V2 is required to allow the Teams service to perform an unauthenticated discovery against the user's mailbox that's located in Exchange Server. AutoD V2 is fully supported in Exchange Server 2013 Cumulative Update 19 or later. This is good enough to enable Teams delegation to work correctly. However, Teams Calendar App requires Exchange Server 2016 Cumulative Update 3 or later to be installed. Therefore, for full feature support, Exchange Server 2016 Cumulative Update 3 or later is required.
+- Autodiscover is required to allow the Teams service to perform an unauthenticated discovery against the user's mailbox that's located in Exchange Server. Autodiscover V2 is fully supported in Exchange Server 2013 Cumulative Update 19 or later. This is good enough to enable Teams delegation to work correctly. However, Teams Calendar App requires Exchange Server 2016 Cumulative Update 3 or later to be installed. Therefore, for full feature support, Exchange Server 2016 Cumulative Update 3 or later is required.
 
 ## Common troubleshooting steps
 
@@ -81,12 +81,12 @@ If the test fails, you must first resolve the Autodiscover issue.
 > [!NOTE]
 > For the Teams delegation issue, the delegator's mailbox is the target mailbox to test. For the Teams calendar App issue, the affected user's mailbox is the target mailbox to test.
 
-#### Step 2: Verify that the Office 365 Autodiscover V2 service can route the Autodiscover requests to on-premises
+#### Step 2: Verify that the Autodiscover service can route the Autodiscover requests to on-premises
 
 In Windows PowerShell, run the following command:
 
 ```powershell
-Invoke-RestMethod -Uri "<https://outlook.office365.com/autodiscover/autodiscover.json?Email=onpremisemailbox@contoso.com&Protocol=EWS&RedirectCount=5>" -Agent Teams
+Invoke-RestMethod -Uri "https://outlook.office365.com/autodiscover/autodiscover.json?Email=onpremisemailbox@contoso.com&Protocol=EWS&RedirectCount=5" -Agent Teams
 ```
 
 > [!NOTE]
@@ -100,7 +100,7 @@ For a mailbox hosted on-premises, the EWS URL should point to the on-premises ex
 >
 > EWS <https://mail.contoso.com/EWS/Exchange.asmx>
 
-If this test fails, or if the EWS URL is incorrect, review the [Prerequisites](#prerequisites) section. This is because the problem is likely caused by an Exchange hybrid configuration issue, or by a firewall or reverse proxy that is blocking external requests.
+If this test fails, or if the EWS URL is incorrect, review the [Prerequisites](#prerequisites) section. This is because the problem is likely caused by an Exchange hybrid configuration issue, or a firewall or reverse proxy that is blocking external requests.
 
 #### Step 3: Verify that the Exchange OAuth authentication protocol is enabled and functional
 
@@ -132,7 +132,7 @@ Open the Exchange Management Shell on one of the Exchange-based servers, and the
 Check whether the **AccessRights** parameter contains a value of **Editor**. If not, run the following command to grant the permission:
 
 ```powershell
-Set-MailboxFolderPermission -Identity <delegator's UserPrincipalName>\\Calendar -User <delegate's UserPrincipalName> -AccessRights Editor | Format-List
+Set-MailboxFolderPermission -Identity <delegator's UserPrincipalName>\Calendar -User <delegate's UserPrincipalName> -AccessRights Editor | Format-List
 ```
 
 Alternatively, ask the delegator to follow the steps in [this article](https://support.microsoft.com/office/allow-someone-else-to-manage-your-mail-and-calendar-41c40c04-3bd1-4d22-963a-28eafec25926) to reconfigure the delegation in the Outlook client.
@@ -142,13 +142,13 @@ Alternatively, ask the delegator to follow the steps in [this article](https://s
 Run the following command to verify that the **GrantSendOnBehalfTo** permission was granted to the delegate:
 
 ```powershell
-Get-Mailbox -Identity <delegator's UserPrincipalName> | Format-List \*grant\*
+Get-Mailbox -Identity <delegator's UserPrincipalName> | Format-List *grant*
 ```
 
 Verify that the **GrantSendOnBehalfTo** parameter contains the delegate's alias. If not, run the following command to grant the permission:
 
 ```powershell
-Set-Mailbox <delegator's UserPrincipalName> -Grantsendonbehalfto @{add="\<delegate's UPN\>"}
+Set-Mailbox <delegator's UserPrincipalName> -Grantsendonbehalfto @{add="<delegate's UPN>"}
 ```
 
 Alternatively, ask the delegator to follow the steps in [this article](https://support.microsoft.com/office/allow-someone-else-to-manage-your-mail-and-calendar-41c40c04-3bd1-4d22-963a-28eafec25926) to reconfigure the delegation in the Outlook client.
@@ -158,7 +158,7 @@ Alternatively, ask the delegator to follow the steps in [this article](https://s
 Run the following Exchange PowerShell command to check whether the **EwsApplicationAccessPolicy** parameter was set to **EnforceAllowList** for the entire organization:
 
 ```powershell
-Get-OrganizationConfig | Select-Object Ews\*
+Get-OrganizationConfig | Select-Object Ews*
 ```
 
 If the parameter was set to **EnforceAllowList**, this means that the administrator allows only the clients that are listed in **EwsAllowList** to access EWS.
@@ -166,7 +166,7 @@ If the parameter was set to **EnforceAllowList**, this means that the administra
 Make sure that **SchedulingService** is listed as an array member of the **EwsAllowList** parameter. If not, run the following command to add it:
 
 ```powershell
-Set-OrganizationConfig -EwsAllowList @{Add="\*SchedulingService\*"}
+Set-OrganizationConfig -EwsAllowList @{Add="*SchedulingService*"}
 ```
 
 If the **EwsEnabled**  parameter is set to **False**, you have to set it to **True** or **Null** (blank). Otherwise, the Teams service will also be blocked from accessing the EWS.
@@ -176,7 +176,7 @@ If the **EwsEnabled**  parameter is set to **False**, you have to set it to **Tr
 Run the following Exchange PowerShell command to check whether the **EwsApplicationAccessPolicy** parameter was set to **'EnforceAllowList'** for the delegator's mailbox:
 
 ```powershell
-Get-CasMailbox <delegator's UserPrincipalName> | Select-Object Ews\*
+Get-CasMailbox <delegator's UserPrincipalName> | Select-Object Ews*
 ```
 
 If the parameter was set to **'EnforceAllowList'**, this means that the administrator allows only the clients that are listed in **EwsAllowList** to access EWS.
@@ -184,7 +184,7 @@ If the parameter was set to **'EnforceAllowList'**, this means that the administ
 Make sure that **SchedulingService** is listed as an array member of the **EwsAllowList**  parameter. If not, run the following Exchange PowerShell command to add it:
 
 ```powershell
-Set-CASMailbox <delegator's UserPrincipalName> -EwsAllowList @{Add="\*SchedulingService\*"}
+Set-CASMailbox <delegator's UserPrincipalName> -EwsAllowList @{Add="*SchedulingService*"}
 ```
 
 If the **EwsEnabled** parameter is set to **False**, you have to set it to either **True** or **Null** (blank). Otherwise, the Teams service will also be blocked from accessing the EWS.
@@ -234,15 +234,15 @@ If you can verify that no problems affect the prerequisites or configurations th
 Run the following Exchange PowerShell command to check whether the parameter **EwsApplicationAccessPolicy** was set to **EnforceAllowList** for the entire organization:
 
 ```powershell
-Get-OrganizationConfig | Select-Object Ews\*
+Get-OrganizationConfig | Select-Object Ews*
 ```
 
 If parameter was set to **EnforceAllowList**, that means that the administrator allows only the clients that are listed in **EwsAllowList** to access EWS.
 
-Make sure that **MicrosoftNinja/\***, **\*Teams/\***, and **SkypeSpaces/\*** are listed as array members of the **EwsAllowList** parameter. If they aren't, run the following command to add them:
+Make sure that **MicrosoftNinja/\***, **\*Teams/\***, and **\*SkypeSpaces/\*** are listed as array members of the **EwsAllowList** parameter. If they aren't, run the following command to add them:
 
 ```powershell
-Set-OrganizationConfig -EwsAllowList @{Add="MicrosoftNinja/\*","\*Teams/\*","SkypeSpaces/\*"}
+Set-OrganizationConfig -EwsAllowList @{Add="MicrosoftNinja/*","*Teams/*","SkypeSpaces/*"}
 ```
 
 If the **EwsEnabled** parameter is set to **False**, you have to set it to **True** or **Null** (blank). Otherwise, the Teams service will also be blocked from accessing EWS.
@@ -252,15 +252,15 @@ If the **EwsEnabled** parameter is set to **False**, you have to set it to **Tru
 Run the following Exchange PowerShell command to check whether the **EwsApplicationAccessPolicy** parameter was set to **EnforceAllowList** for the user mailbox:
 
 ```powershell
-Get-CasMailbox <UserPincipalName> | Select-Object Ews\*
+Get-CASMailbox <UserPincipalName> | Select-Object Ews*
 ```
 
 If the parameter was set to **EnforceAllowList**, this means that the administrator allows only the clients that are listed in **EwsAllowList** to access EWS.
 
-Make sure that **MicrosoftNinja/\***, **\*Teams/\***, and **SkypeSpaces/\*** are listed as array members of the **EwsAllowList** parameter. If they aren't, run the following Exchange PowerShell command to add them:
+Make sure that **MicrosoftNinja/\***, **\*Teams/\***, and **\*SkypeSpaces/\*** are listed as array members of the **EwsAllowList** parameter. If they aren't, run the following Exchange PowerShell command to add them:
 
 ```powershell
-Set-CASMailbox <UserPincipalName> -EwsAllowList @{Add="MicrosoftNinja/\*","\*Teams/\*","SkypeSpaces/\*"}
+Set-CASMailbox <UserPincipalName> -EwsAllowList @{Add="MicrosoftNinja/*","*Teams/*","SkypeSpaces/*"}
 ```
 
 If the **EwsEnabled** parameter is set to **False**, you have to set it to either **'True'** or **'Null'** (blank). Otherwise, the Teams service will also be blocked from accessing EWS.
