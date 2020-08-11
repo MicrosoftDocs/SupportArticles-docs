@@ -64,7 +64,7 @@ To integrate the Microsoft Teams service with your installation of Exchange Serv
 ## Common troubleshooting steps
 
 > [!NOTE]
-> The following troubleshooting steps apply to both [Teams delegation issue](#symptoms) and [Teams calendar App issue](#symptoms).
+> The following troubleshooting steps apply to both [Issue 1](#symptoms) and [Issue 2](#symptoms).
 
 #### Step 1: Verify that the Autodiscover service works well
 
@@ -119,7 +119,7 @@ Additionally, run the **Free/Busy** connectivity test that is available in the M
 ## Troubleshoot the Teams delegation issue
 
 > [!NOTE]
-> These troubleshooting steps apply to only the [Teams delegation issue](#symptoms).
+> These troubleshooting steps apply to only the [Issue 1](#symptoms).
 
 #### Step 1: Verify that the delegate has been granted the Editor permission to access the delegator's calendar
 
@@ -163,7 +163,7 @@ Get-OrganizationConfig | Select-Object Ews*
 
 If the parameter was set to **EnforceAllowList**, this means that the administrator allows only the clients that are listed in **EwsAllowList** to access EWS.
 
-Make sure that **\*SchedulingService*** is listed as an array member of the **EwsAllowList** parameter. If not, run the following command to add it:
+Make sure that **\*SchedulingService\*** is listed as an array member of the **EwsAllowList** parameter. If not, run the following command to add it:
 
 ```powershell
 Set-OrganizationConfig -EwsAllowList @{Add="*SchedulingService*"}
@@ -181,7 +181,7 @@ Get-CasMailbox <delegator's UserPrincipalName> | Select-Object Ews*
 
 If the parameter was set to **EnforceAllowList**, this means that the administrator allows only the clients that are listed in **EwsAllowList** to access EWS.
 
-Make sure that **\*SchedulingService*** is listed as an array member of the **EwsAllowList**  parameter. If not, run the following Exchange PowerShell command to add it:
+Make sure that **\*SchedulingService\*** is listed as an array member of the **EwsAllowList**  parameter. If not, run the following Exchange PowerShell command to add it:
 
 ```powershell
 Set-CASMailbox <delegator's UserPrincipalName> -EwsAllowList @{Add="*SchedulingService*"}
@@ -201,7 +201,7 @@ If you can verify that no problems affect the prerequisites or configurations th
 ## Troubleshoot the Teams calendar App issue
 
 > [!NOTE]
-> The troubleshooting steps below only apply to the [Teams calendar App issue](#symptoms).
+> The troubleshooting steps below only apply to the [Issue 2](#symptoms).
 
 #### Step 1: Verify that Teams Calendar App is enabled
 
