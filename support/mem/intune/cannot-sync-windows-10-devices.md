@@ -21,6 +21,7 @@ After a Windows 10 device is enrolled in Microsoft Intune for some time (rando
 ## Cause
 
 This issue occurs if the [Dmwappushservice](/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server#dmwappushsvc) service is disabled. For example, you have a PowerShell script that is deployed to the device, and the script contains a command that disables this service.
+
 The `Dmwappushservice` service is required on client devices for Intune management. If this service is disabled, the device can't sync with Intune.
 
 ## Resolution
