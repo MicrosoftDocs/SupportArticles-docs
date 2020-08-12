@@ -305,8 +305,6 @@
       href: ../client-connectivity/454-4-7-0-temporary-authentication-failure.md
     - name: ActiveSync clients can't connect
       href: ../client-connectivity/activesync-clients-not-connect-sync-delay.md
-    - name: ActiveSync clients can't connect or delayed
-      href: ../client-connectivity/activesync-clients-cannot-connect-or-delayed.md
     - name: Attendees get a meeting update without changes
       href: ../client-connectivity/attendees-meeting-update-without-changes.md
     - name: Cannot access archive mailboxes with Full Access permission
@@ -465,6 +463,8 @@
       href: ../compliance/cannot-perform-multi-mailbox-search.md
     - name: Issues caused by update 2874216/MS13-061
       href: ../compliance/mailbox-database-content-index-shows-failed.md
+    - name: Items are removed by MRM 2.0 unexpectedly
+      href: ../compliance/items-are-removed-by-mrm-2-0-unexpectedly.md
     - name: Leave a copy of the message on the server is missing
       href: ../compliance/enable-leave-a-copy-of-the-message-on-the-server-outlook.md
     - name: MRM doesn't process items in the Sync Issues folder
@@ -477,6 +477,8 @@
     items:
     - name: "\"The macros in this project are disabled\" error"
       href: ../development/macros-in-this-project-disabled-outlook.md
+    - name: Develop apps via Exchange Powershell and .NET Framework
+      href: ../development/develop-apps-by-using-exchange-powershell.md
     - name: How to manage multiple VBA projects
       href: ../development/manage-distribute-outlook-vba-project.md
     - name: Support limitations for open standards
@@ -491,6 +493,14 @@
       href: ../mailflow/dns-query-failed.md
     - name: 554 5.4.14 Hop count exceeded
       href: ../mailflow/hop-count-exceeded-possible-mail-loop.md
+    - name: Apps for Outlook 2013 can't activate in email
+      href: ../mailflow/apps-for-outlook-2013-do-not-activate-as-expected.md
+    - name: Assertion Failed when editing a transport rule
+      href: ../mailflow/cannot-edit-transport-rule.md
+    - name: Attachments are dropped during IMAIL conversion
+      href: ../mailflow/attachments-dropped-during-imail-conversion.md
+    - name: Blank emails after installing ESET NOD32 4.x
+      href: ../mailflow/empty-email-body-esetnod32-4x-installed.md
     - name: Can't find .pst file
       href: ../mailflow/outlook-2013-not-find-pst-file.md
     - name: Can't resend a delayed delivery message
@@ -507,6 +517,8 @@
       href: ../mailflow/cannot-open-irm-email-dynamic-distribution-group.md
     - name: Delayed mail delivery in Exchange
       href: ../mailflow/mail-delivery-delay-exchange.md
+    - name: DNS query failed error when email stuck in Draft
+      href: ../mailflow/dns-query-failed-error-when-email-stuck-in-draft.md
     - name: Edge Transport servers reject messages
       href: ../mailflow/edge-transport-servers-reject-messages.md
     - name: Email body part is shown incorrectly as an attachment
@@ -521,6 +533,8 @@
       href: ../mailflow/sending-email-by-template-fails.md
     - name: Emails sent to Exchange Online appear external
       href: ../mailflow/email-sent-to-online-appears-external.md
+    - name: Emails with images delivery is delayed
+      href: ../mailflow/delivery-emails-with-pictures-delayed.md
     - name: Error 19738 when sending large emails using Outlook for Mac
       href: ../mailflow/error-19738-send-large-email-outlook-mac.md
     - name: Error when adding a large attachment in OWA
@@ -529,8 +543,12 @@
       href: ../mailflow/cannot-send-smime-encrypted-mail-owa.md
     - name: Event ID 7009 when users send or receive emails
       href: ../mailflow/event-7009-send-receive-emails.md
+    - name: External or app created emails not delivered
+      href: ../mailflow/external-or-application-created-emails-cannot-be-delivered.md
     - name: External users can't send emails to distribution group
       href: ../mailflow/external-user-cannot-send-email-to-distribution-group.md
+    - name: Messages aren't evenly distributed
+      href: ../mailflow/uneven-distribution-messages-basicauth-basicauthrequiretls.md
     - name: Sending attachment outside of Outlook fails
       href: ../mailflow/event-27-mapisentmail-error-send-attachments.md
     - name: The front-end Microsoft Exchange Transport service stops and doesn't start
@@ -547,12 +565,22 @@
       href: ../migration/error-move-items-from-outlook-to-eas-store.md
     - name: Can't move mailboxes to Exchange Online
       href: ../migration/user-is-already-being-moved-error.md
+    - name: Can't replicate public folder
+      href: ../migration/cannot-replicate-public-folder-to-exchange-server.md
     - name: Can't see free/busy info after a mailbox move
       href: ../migration/no-free-busy-info-mailbox-move.md
     - name: Category colors are changed in Outlook 2016 for Mac
       href: ../migration/outlook-mac-category-colors-changed.md
+    - name: Error when you move a mailbox
+      href: ../migration/cannot-set-folder-security-descriptor-non-canonical-acl.md
     - name: Issues if msExchMasterAccountSID is on a user account
       href: ../migration/issue-msexchmasteraccountsid-on-user-account.md
+    - name: Mailbox move request isn't showing in EAC
+      href: ../migration/eac-not-show-mailbox-move-request.md
+    - name: MapiExceptionPartialCompletion error when moving a mailbox
+      href: ../migration/Mapiexceptionpartialcompletion-error-new-moverequest.md
+    - name: Migration Workflow doesn't start
+      href: ../migration/msexchange-migration-workflow-not-start.md
     - name: Moving migration mailbox fails
       href: ../migration/moving-migration-mailbox-fails.md
     - name: New move request remains in queued status
@@ -561,6 +589,8 @@
       href: ../migration/public-folders-not-replicate.md
     - name: Search folders aren't populated in Online mode
       href: ../migration/outlook-search-folders-issue-online-mode.md
+    - name: Special characters in mailbox folder names
+      href: ../migration/weird-folder-names-after-pst-migration.md
     - name: Send Update is missing when copying meetings
       href: ../migration/send-update-missing-copy-meeting.md
   - name: Public Folders
@@ -577,10 +607,18 @@
       href: ../setup/wait-while-windows-configures-office-outlook.md
     - name: "\"Your request cannot be completed right now\" error"
       href: ../setup/owa-your-request-cannot-be-completed.md
+    - name: Active Directory wasn't prepared using hosting mode error
+      href: ../setup/active-directory-wasnt-prepared-using-hosting-mode-error.md
     - name: Can't get child of ADObjectId
       href: ../setup/edge-transport-setup-fails-domain-joined-server.md
+    - name: Can't install Exchange from unattended installation
+      href: ../setup/cannot-install-exchange-server-from-unattended-installation.md
+    - name: Can't use Setup.exe to uninstall server role
+      href: ../setup/cannot-uninstall-server-role-via-setup-exe.md
     - name: Crashes after installing language packs
       href: ../setup/outlook-2016-crash-event-1000.md
+    - name: Cumulative Update 20 shown instead of CU22
+      href: ../setup/cumulative-update-20-is-shown-not-22.md
     - name: Event ID 106 Performance counter updating error
       href: ../setup/event-106-msexchange-common.md
     - name: Exchange Server 2019 setup does not run correctly using PowerShell
@@ -599,11 +637,15 @@
       href: ../setup/language-pack-bundle-not-found.md
     - name: Installation of Edge Transport role fails
       href: ../setup/process-execution-failed-with-exit-code-3.md
+    - name: Issues occur if arbitration mailbox isn't upgraded
+      href: ../setup/issues-occur-if-arbitration-mailbox-not-upgraded.md
     - name: Manually update scan engines
       href: ../setup/manually-update-scan-engines.md
     - name: Run Update cmdlet fails
       href: ../setup/network-path-was-not-found-error.md
     - name: Service Pack upgrade fails
       href: ../setup/service-pack-upgrade-fails.md
+    - name: Setup of Mailbox role fails
+      href: ../setup/setup-of-mailbox-role-fails-with-error.md
     - name: Upgrade to Office 2016 fails
       href: ../setup/upgrade-errors-office-2016.md

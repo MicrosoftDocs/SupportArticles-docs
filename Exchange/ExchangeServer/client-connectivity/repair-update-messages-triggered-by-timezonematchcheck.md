@@ -96,4 +96,4 @@ Meeting repair update messages may appear in the attendee's Inbox 12-48 hours af
 
 This issue has been addressed in the iOS 8.3 update.
 
-[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-information-disclaimer.md)]
