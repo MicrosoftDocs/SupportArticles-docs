@@ -22,8 +22,8 @@ appliesto:
 
 Overall Teams performance on laptops may be affected during meetings that use video. This can occur if a laptop is docked to an external 4K or ultra-high-definition (also known as high-dynamic range or HDR) display.
 
-## Workarounds
-  
+## Workaround
+
 Reduce the resource requirements for your laptop to improve the Teams experience during the meeting. To do this, try one or more of the following methods:
 
 - Close any other applications that are running video.  
