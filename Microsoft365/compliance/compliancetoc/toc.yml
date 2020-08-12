@@ -63,10 +63,12 @@
     items:
     - name: Can't delete messages
       href: ../holds/cannot-delete-messages.md
-    - name: Search logic change for Title property
-      href: ../holds/change-to-search-logic-for-title-property.md
+    - name: Changes to IgnoreLegalHold
+      href: ../holds/ignorelegalhold-not-available.md
     - name: Restore In-Place and Litigation Hold
       href: ../holds/restore-in-place-litigation-hold.md
+    - name: Search logic change for Title property
+      href: ../holds/change-to-search-logic-for-title-property.md
   - name: MRM & Retention Policies
     items:
     - name: MRM and retention policies

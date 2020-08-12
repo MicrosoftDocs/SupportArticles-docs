@@ -21,7 +21,7 @@ appliesto:
 
 This article helps you resolve the problem that Exchange ActiveSync clients can't connect or they experience delays when synchronizing in a Microsoft Exchange Server environment.
 
-_Original KB number:_ &nbsp; 4456227
+_Original KB number:_ &nbsp; 4456227, 4337638
 
 ## Symptoms
 
@@ -32,7 +32,7 @@ In an Exchange Server 2016 or Exchange Server 2013 environment, Exchange ActiveS
 - The **.NET CLR Memory/% Time in GC** counter for the **w3wp** instance that corresponds to the Exchange ActiveSync application pool is unusually high.
 - TCP port exhaustion occurs because of the large number of requests in Exchange ActiveSync.
 - The **W3SVC_W3WP/Active Requests** counter for the **MSExchangeSyncAppPool** instance shows a steadily increasing value over several days or weeks.
-- The **netstat -anob** command may show many connections in a **CLOSE_WAIT** state.
+- The `netstat -anob` command may show many connections in a **CLOSE_WAIT** state.
 
 ## Cause
 

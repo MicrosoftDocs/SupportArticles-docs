@@ -171,7 +171,7 @@ The following section provides more detailed descriptions of these options.
 
 <a id="option1">
 
-### Option 1: Test printing of other documents
+## Option 1: Test printing of other documents
 
 </a>
 Damaged documents or documents that contain damaged graphics or damaged fonts can cause print errors in Word. Before you reinstall drivers or software, test the Word program's ability to print. To do this, follow these steps.
@@ -212,7 +212,7 @@ If Word cannot print at all, or if Word cannot print a certain font or a certain
 
 <a id="option2">
 
-### Option 2: Test printing in other programs
+## Option 2: Test printing in other programs
 
 </a>
 The scope of the printing problem may reveal its cause. For example, some printing problems affect only Word, whereas other printing problems affect several or all Windows-based programs.
@@ -255,7 +255,7 @@ You might be able to use the Windows 10 printer troubleshooting wizard to resolv
 
 <a id="option3">
 
-### Option 3: Repair the Word program files 
+## Option 3: Repair the Word program files 
 
 </a>
 After you verify that the printing problem is not limited document or to a particular printer driver, and that the problem is limited to Word, test the Word program by using only the default settings.
@@ -272,7 +272,7 @@ If the printing problem persists, run the repair program to reinstall the missin
 
 <a id="option4">
 
-### Option 4: Test for problems in Windows
+## Option 4: Test for problems in Windows
 
 </a>
 To look for device drivers or memory-resident programs that might be interfering with the Word print function, start Windows in safe mode, and then test printing to a file in Word. To start Windows in safe mode, follow the steps below.
@@ -290,7 +290,7 @@ If the Word printing problem does not occur when you start Windows in safe mode,
 
 <a id="option5">
 
-### Option 5: Test printing with different printer drivers
+## Option 5: Test printing with different printer drivers
 
 </a>
 

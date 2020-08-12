@@ -75,6 +75,10 @@
       href: ./known-issues/following-application-instance-not-present-error.md
     - name: Users with Exchange Online mailboxes can't access meetings or connectors 
       href: ./known-issues/exchange-users-cant-access-meetings.md
+  - name: Exchange integration
+    items:
+    - name: Teams and Exchange interaction issues
+      href: ./known-issues/teams-exchange-interaction-issue.md
   - name: Files
     items:
     - name: Downloaded documents open in protected view
@@ -121,6 +125,10 @@
       href: ./known-issues/deleting-team-also-deletes-group.md
     - name: Incorrect user listed as SharePoint site creator
       href: ./known-issues/wrong-teams-user-listed-as-site-creator.md
+  - name: Rooms
+    items:
+    - name: Support Teams in your organization
+      href: ./teams-rooms/known-issues.md
   - name: Sign-in
     items:
     - name: Can't start Teams for Surface Hub from Microsoft Store
