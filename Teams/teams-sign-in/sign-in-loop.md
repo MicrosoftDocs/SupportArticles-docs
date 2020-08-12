@@ -30,27 +30,10 @@ This issue occurs if your organization uses **Trusted Sites** in Internet Explor
 
 Change Microsoft Internet Explorer or Edge settings using administrator rights or a Group Policy object (GPO).
 
-### Internet Explorer
-
-1. In the Internet Options window, select **Privacy** and **Advanced**.
-2. Select **Accept** for **First-party Cookies** and **Third-party Cookies**, and select the **Always allow session cookies** check box. 
-
-    ![IE](media/sign-in-loop/ie.png)
-
-3. In the Internet Options window, select **Security** > **Trusted Sites** > **Sites**.
-4. Add the following sites:
-
-    - https://*.microsoft.com
-    - https://*.microsoftonline.com
-    - https://*.teams.skype.com
-    - https://*.teams.microsoft.com
-    - https://*.sfbassets.com
-    - https://*.skypeforbusiness.com
-
 ### Microsoft Edge
 
 1. In the Edge **Settings** window, select **Site permissions** and **Cookies and site data**.
-2. Turn on **Allow sites to save and read cookie data (recommended)** and make sure **Block third-party cookies** is turned off.
+2. Turn on **Allow sites to save and read cookie data (recommended)** and make sure **Block third-party cookies** is turned off. Alternatively, follow step 3 if you need to keep third-party cookies blocked.
 3. In the same window, under **Allow**, select **Add** to add the following sites:
 
     - [*.]microsoft.com
@@ -61,6 +44,24 @@ Change Microsoft Internet Explorer or Edge settings using administrator rights o
     - [*.]skypeforbusiness.com
 
     ![edge](media/sign-in-loop/edge.png)
+
+### Internet Explorer
+
+1. In the Internet Options window, select **Privacy** and **Advanced**.
+2. Select **Accept** for **First-party Cookies** and **Third-party Cookies**, and select the **Always allow session cookies** check box. 
+
+    ![IE](media/sign-in-loop/ie.png)
+
+    Alternatively, follow steps 3 and 4 if you need to keep third-party cookies blocked.
+3. In the Internet Options window, select **Security** > **Trusted Sites** > **Sites**.
+4. Add the following sites:
+
+    - https://*.microsoft.com
+    - https://*.microsoftonline.com
+    - https://*.teams.skype.com
+    - https://*.teams.microsoft.com
+    - https://*.sfbassets.com
+    - https://*.skypeforbusiness.com
 
 > [!NOTE]
 > It's always good to validate and enable all trusted URLs for Teams and review the requirements in this article: [Office 365 URLs and IP address ranges](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges?redirectSourcePath=%252farticle%252fOffice-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2#bkmk_teams).
