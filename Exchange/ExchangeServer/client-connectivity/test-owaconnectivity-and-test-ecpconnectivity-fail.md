@@ -1,0 +1,38 @@
+---
+title: Test-OwaConnectivity and Test-EcpConnectivity fail
+description: Describes a problem in which the external mode of the Test-OwaConnectivity and Test-EcpConnectivity cmdlet tests fails when an Exchange Server 2013 server acts as a front door for Exchange Server 2010 servers.
+ms.date: 08/10/2020
+author: simonxjx
+ms.author: v-six
+manager: dcscontentpm
+audience: ITPro
+ms.topic: troubleshooting
+ms.prod: exchange-server-it-pro
+localization_priority: Normal
+ms.custom: 
+  - CSSTroubleshoot
+ms.reviewer: dkling, vidhyab, serdars, jarrettr
+appliesto:
+- Exchange Server 2013 Enterprise
+- Exchange Server 2013 Standard Edition
+search.appverid: MET150
+---
+# Test-OwaConnectivity and Test-EcpConnectivity cmdlet tests fail in external mode
+
+This article provides a workaround to solve the issue that the [Test-OwaConnectivity](/powershell/module/exchange/test-owaconnectivity) and [Test-EcpConnectivity](/powershell/module/exchange/test-ecpconnectivity) cmdlet tests fail in external mode when a Microsoft Exchange Server 2013 server acts as a front door for Exchange Server 2010 servers.
+
+_Original KB number:_ &nbsp; 2814954
+
+## Symptoms
+
+When you have an Exchange Server 2013 server that is running a Client Access server, the server functions much like a front door. It admits all client requests and routs them to the correct active Mailbox database in a group of Client Access servers that are running Exchange Server 2010.
+
+When you run the `Test-OwaConnectivity` and `Test-EcpConnectivity` cmdlets in external mode on the Exchange Server 2010 Client Access server, the cmdlets try to test the Exchange Server 2013 server first. However, the cmdlet tests fail.
+
+## Cause
+
+This problem occurs because the `Test-OwaConnectivity` and `Test-EcpConnectivity` cmdlets in external mode cannot sign in successfully to the Exchange Server 2013 server.
+
+## Workaround
+
+To work around this problem, run the `Test-OwaConnectivity` and `Test-EcpConnectivity` cmdlets in internal mode on the Exchange Server 2010 Client Access server.

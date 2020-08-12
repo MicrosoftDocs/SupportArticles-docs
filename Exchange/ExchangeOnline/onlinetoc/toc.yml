@@ -13,6 +13,8 @@
     items:
     - name: Can't manage Send on Behalf permissions
       href: ../administration/send-on-behalf-for-shared-mailbox.md
+    - name: GetFolder requests return wrong TotalCount values
+      href: ../administration/getfolder-requests-return-wrong-totalcount-values.md
   - name: Antispam
     items:
     - name: Cautions against bypassing spam filters
