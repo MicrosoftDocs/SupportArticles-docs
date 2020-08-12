@@ -35,4 +35,4 @@ This behavior is by design. It occurs because the Microsoft Exchange Search Host
 
 To resolve this issue, disable the Microsoft Exchange Search Host Controller service, and then restore the volume or LUN.
 
-[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-contact-disclaimer.md)]

@@ -24,7 +24,7 @@
     - name: Can't back up a passive database copy in DAG
       href: ../administration/vss-e-writererror-retryable-error.md
     - name: Can't create a DLP policy
-      href: ../administration/cannot-create-dlp-policy
+      href: ../administration/cannot-create-dlp-policy.md
     - name: Can't download or update OAB
       href: ../administration/outlook-unable-download-offline-address-book.md
     - name: Can't export to PST with EAC
@@ -210,11 +210,11 @@
     - name: MAPI is the only way to change profiles
       href: ../administration/mapi-is-the-only-way-to-change-profiles.md
     - name: MCDB status is Offline and SSDs aren't formatted
-      href: ../administration/mcdb-status-is-offline-ssds-aren't-formatted.md
+      href: ../administration/mcdb-status-is-offline-ssds-aren’t-formatted.md
     - name: Modern attachment doesn't work with web proxy
       href: ../administration/modern-attachment-not-work-with-web-proxy.md
     - name: MRSProxyConfiguration settings aren't honored
-      href: ../administration/mrsproxyconfiguration-settings-not-honored
+      href: ../administration/mrsproxyconfiguration-settings-not-honored.md
     - name: MSExchangeMailboxAssistants crashes and event ID 4999
       href: ../administration/exchange-mailbox-assistants-crash-event-4999.md
     - name: MSExchangeServicesAppPool crashes
@@ -286,7 +286,7 @@
     - name: Use event ID 2080 to help solve AD  access issues
       href: ../administration/msexchangedsaccess-event-id-2080.md
     - name: W3wp.exe process causes high memory usage
-      href: ../administration/high-memory-usage-by-w3wp-process-of-default-app
+      href: ../administration/high-memory-usage-by-w3wp-process-of-default-app.md
     - name: Warning when running Exchange 2010 Best Practices Analyzer
       href: ../administration/best-practices-analyzer-returns-no-paging-file-info.md
     - name: WinRM times out when adding a mailbox server to an existing DAG
@@ -305,7 +305,9 @@
       href: ../client-connectivity/454-4-7-0-temporary-authentication-failure.md
     - name: ActiveSync clients can't connect
       href: ../client-connectivity/activesync-clients-not-connect-sync-delay.md
-    - name: attendees get a meeting update without changes
+    - name: ActiveSync clients can't connect or delayed
+      href: ../client-connectivity/activesync-clients-cannot-connect-or-delayed.md
+    - name: Attendees get a meeting update without changes
       href: ../client-connectivity/attendees-meeting-update-without-changes.md
     - name: Cannot access archive mailboxes with Full Access permission
       href: ../client-connectivity/cannot-access-archive-mailbox-with-full-access.md
@@ -335,6 +337,12 @@
       href: ../client-connectivity/cannot-connect-to-mailbox-via-owa.md
     - name: Can't connect to OWA via HTTP protocol
       href: ../client-connectivity/cannot-connect-to-owa-by-using-http.md
+    - name: Can't sign in or sees the wrong interface
+      href: ../client-connectivity/cannot-sign-in-or-see-wrong-interface-after-moving-mailbox.md
+    - name: Can't use Autodiscover to connect to mailbox
+      href: ../client-connectivity/cannot-use-autodiscover-to-connect-to-mailbox.md
+    - name: Can't run Test-OutlookConnectivity
+      href: ../client-connectivity/test-outlookconnectivity-fails.md
     - name: Color categories aren't print in Outlook on the web
       href: ../client-connectivity/color-categories-not-print-outlook-on-the-web.md
     - name: Connection fails when certificate is required
@@ -387,6 +395,8 @@
       href: ../client-connectivity/kerberos-authentication-for-mapi-client.md
     - name: Looking for credential tiles message occurs
       href: ../client-connectivity/looking-for-credential-tiles-message.md
+    - name: Meetings are off by one hour
+      href: ../client-connectivity/meetings-are-off-by-one-hour-in-certain-time-zones.md
     - name: Mailbox that's re-enabled can't be accessed
       href: ../client-connectivity/cannot-connect-to-re-enabled-mailbox.md
     - name: Need a new app to open this osf-roaming.16 message
@@ -423,6 +433,8 @@
       href: ../client-connectivity/outlook-prompts-for-credentials-if-using-wan.md
     - name: Redirects to Exchange Server 2010 when connecting to Exchange Server 2016 or 2013
       href: ../client-connectivity/exchange-server-2013-2016-redirect-to-2010-owa-ecp.md
+    - name: Repair update messages due to TimeZoneMatchCheck failures
+      href: ../client-connectivity/repair-update-messages-triggered-by-timezonematchcheck.md
     - name: Repeatedly disconnects and reconnects
       href: ../client-connectivity/outlook-repeatedly-disconnects-and-reconnects.md
     - name: Security warning when accessing OWA or ECP
@@ -437,6 +449,12 @@
       href: ../client-connectivity/outlook-stops-at-the-loading-profile-screen.md
     - name: Synchronization issues
       href: ../client-connectivity/synchronization-issue-between-outlook-owa.md
+    - name: Test-OwaConnectivity and Test-EcpConnectivity tests fail
+      href: ../client-connectivity/test-owaconnectivity-and-test-ecpconnectivity-fail.md
+    - name: User culture can't be set
+      href: ../client-connectivity/user-culture-cannot-be-set.md
+    - name: You've tried to select too many rows error
+      href: ../client-connectivity/cannot-select-many-items-in-owa.md
   - name: Compliance
     items:
     - name: Audit Log searches fail with ErrorInvalidServerVersion
