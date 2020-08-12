@@ -35,4 +35,4 @@ Reduce the resource requirements for your laptop to improve the Teams experience
 
 ## Resolution
 
-Microsoft is actively working to resolve these issues over the next several months. We’ll post more information in this article as it becomes available.
+Microsoft is actively working to resolve these issues, and will be releasing updates over the next several months. We’ll post more information in this article as it becomes available.
