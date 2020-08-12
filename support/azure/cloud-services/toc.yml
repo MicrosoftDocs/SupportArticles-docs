@@ -2,6 +2,7 @@
   href: welcome-cloud-services.md
   
 - name: Troubleshooting series for developers
+  href: dev-troubleshoot-series.md
   items:
   - name: ZipEngine role throws Could not load file or assembly
     href: dev-zipengine-role-stuck-busy-restart.md
@@ -18,7 +19,7 @@
   - name: Cannot access the website although all role instances are running
     href: dev-asp-net-signair-app-cannot-access.md
   - name: Webapp can't work when TryWebSockets is disabled
-    href: dev-asp-net-signair-app-cannot-access.md
+    href: dev-aspnet-signalr-application-not-work.md
 - name: Can't RDP to classic Cloud Services resource
   href: rdp-not-working-cloud-service.md
 
