@@ -30,7 +30,7 @@ _Original KB number:_ &nbsp; 4550832
 
     `wusa.exe <full path of the .msu file> /quiet /norestart -Wait`
 
-    For example, if the windows10.0-kb4532693-x64_e22f60a077a0ec5896266a18cc3daf26bfc29e16.msu file is in the current  folder, type the following command in **Install command**:
+    For example, if the windows10.0-kb4532693-x64_e22f60a077a0ec5896266a18cc3daf26bfc29e16.msu file is in the current folder, type the following command in **Install command**:
 
     `wusa.exe .\windows10.0-kb4532693-x64_e22f60a077a0ec5896266a18cc3daf26bfc29e16.msu /quiet /norestart -Wait`
 
