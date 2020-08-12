@@ -30,7 +30,7 @@ Reduce the resource requirements for your laptop to improve the Teams experience
 - Close browser tabs that you don’t need during the meeting.  
 - Change the resolution of your 4K or HDR monitor temporarily to 1920 x 1080. Instructions for doing this on Windows are located at [Change desktop icon size or screen resolution](https://support.microsoft.com/help/4026956/windows-10-change-screen-resolution).  
 - Turn off your own video during the meeting. To do this, select **Turn camera off** in the meeting controls.  
-- Turn off incoming video during the meeting. To do this, select  **(More actions)** > **Turn off incoming video** in the meeting controls.  
+- Turn off incoming video during the meeting. To do this, select  **More actions …** > **Turn off incoming video** in the meeting controls.  
 - Restart your laptop.
 
 ## Resolution
