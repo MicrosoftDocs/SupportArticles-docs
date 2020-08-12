@@ -125,6 +125,10 @@
       href: ./known-issues/deleting-team-also-deletes-group.md
     - name: Incorrect user listed as SharePoint site creator
       href: ./known-issues/wrong-teams-user-listed-as-site-creator.md
+  - name: Rooms
+    items:
+    - name: Support Teams in your organization
+      href: ./teams-rooms/known-issues.md
   - name: Sign-in
     items:
     - name: Can't start Teams for Surface Hub from Microsoft Store
