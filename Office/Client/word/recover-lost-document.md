@@ -227,6 +227,7 @@ AutoRecover file names end in the .asd file name extension. By default, Word sea
    1. Right-click the taskbar, and select **Task Manager**.
 
    :::image type="content" source="media/recover-lost-document/Contextual_Menu_md.png" alt-text="Select Task Manager." lightbox="media/recover-lost-document/Contextual_Menu.png":::
+
    2. On the **Processes** tab, select any instance of **Winword.exe** or **Microsoft Word**, and then select **End Task** or **End Process**. Repeat this step until you have exited all instances of Winword.exe and Word.
 
    :::image type="content" source="media/recover-lost-document/Task_Mgr_md.png" alt-text="Select an instance of Word and then select End Task or End Process." lightbox="media/recover-lost-document/Task_Mgr.png":::
