@@ -12,9 +12,9 @@
 - name: Group Policy
   items:
     - name: How to create and manage Central Store for registry-based policies
-      href: ./grouppolicy/create-and-manage-central-store.md
+      href: ./group-policy/create-and-manage-central-store.md
 
 - name: Shell Experience
   items:
     - name: Fix problems in Windows Search
-      href: ./shellexperience/fix-problems-in-windows-search.md
+      href: ./shell-experience/fix-problems-in-windows-search.md
