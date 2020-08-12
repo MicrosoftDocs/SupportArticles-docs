@@ -1,0 +1,41 @@
+---
+title: SendAs permission not shown in Send As Permission
+description: SendAs permission granted to users in forests trusted by Exchange forest aren't visible in the SendAs wizard in Exchange Management Console (EMC).
+ms.date: 08/05/2020
+author: simonxjx
+ms.author: v-six
+manager: dcscontentpm
+audience: ITPro
+ms.topic: troubleshooting
+ms.prod: exchange-server-it-pro
+localization_priority: Normal
+ms.custom: 
+  - CSSTroubleshoot
+ms.reviewer: jcoiffin
+appliesto:
+- Exchange Server 2010
+search.appverid: MET150
+---
+# SendAs permissions granted to users in forests are not visible in Send As Permission Wizard in EMC
+
+This article provides a workaround to solve the issue that the Send As permissions that are granted to users in forests trusted by Microsoft Exchange Server 2010 aren't visible.
+
+_Original KB number:_ &nbsp; 2401524
+
+## Symptoms
+
+The Send As permissions that are granted to users in forests trusted by Exchange Server forest aren't visible in the Send As Permission Wizard in Exchange Management Console (EMC).
+
+## Cause
+
+It is the current design in Exchange Server 2010.
+
+## Workaround
+
+To view all accounts that have SendAs rights on a mailbox, you can use the following PowerShell command instead:
+
+```powershell
+Get-ADPermission <mailboxname> | where {($_.extendedrights -like "*send-as*") -or ($_.accessrights -like "*Generical*")} |fl *
+```
+
+For more information, see [Manage Send As Permissions for a Mailbox](/previous-versions/office/exchange-server-2010/bb676368(v=exchg.141)).

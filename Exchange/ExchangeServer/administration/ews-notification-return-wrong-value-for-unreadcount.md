@@ -1,0 +1,46 @@
+---
+title: EWS notification return UnreadCount of -1
+description: EWS push notification always returns incorrect value of UnreadCount property of notification, the issue is under investigation.
+ms.date: 08/10/2020
+author: simonxjx
+ms.author: v-six
+manager: dcscontentpm
+audience: ITPro
+ms.topic: troubleshooting
+ms.prod: exchange-server-it-pro
+localization_priority: Normal
+ms.custom: 
+  - CSSTroubleshoot
+ms.reviewer: catagh
+appliesto:
+- Exchange Server
+- Exchange Online
+search.appverid: MET150
+---
+# Exchange Web Services notification events can sometimes return an UnreadCount of -1
+
+This article provides a workaround to solve the issue that Exchange Web Services (EWS) push notifications sometimes return incorrect value for the `UnreadCount` property.
+
+_Original KB number:_ &nbsp; 4490422
+
+## Symptoms
+
+EWS push notifications sometimes return a value of **-1** for `UnreadCount`.
+
+## Status
+
+Microsoft is currently investigating this issue.
+
+## Workaround
+
+To work around this limitation, use a [GetFolder](/exchange/client-developer/web-service-reference/getfolder) request and include [PR_UNREAD_COUNT](/office/client-developer/outlook/mapi/pidtagcontentunreadcount-canonical-property) in the requested set of properties.
+
+To include the `PR_UNREAD_COUNT` property, set the property tag to `PropertyTag="0x3603"` and the property type to `PropertyType="Integer"`.
+
+\<ExtendedFieldURI PropertyTag="0x3603" PropertyType=" Integer"/>  
+
+If you're using the EWS Managed API or EWS Java API, use the [ExtendedPropertyDefinition](/dotnet/api/microsoft.exchange.webservices.data.extendedpropertydefinition?view=exchange-ews-api) class to request the `PR_UNREAD_COUNT` property.
+
+## More information
+
+For more information on properties and extended properties in EWS, see [Properties and extended properties in EWS in Exchange](/exchange/client-developer/exchange-web-services/properties-and-extended-properties-in-ews-in-exchange).
