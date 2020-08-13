@@ -58,7 +58,7 @@ For more information about permission levels in SharePoint Online, go to [Unders
 
 For more information about "Access Denied" errors in SharePoint or OneDrive for Business, see the following articles: 
 
-- [Error message when trying to access SharePoint Online or OneDrive for Business](access-denied-or-need-permission-error-sharepoint-online-or-onedrive-for-business.md)
+- [Error message when trying to access SharePoint Online or OneDrive for Business](access-denied-sharepoint-error.md)
 - [Error message when an external user tries to access SharePoint Online or OneDrive for Business](error-when-external-user-tries-to-access-sharepoint-onedrive.md)
 - [Access Denied error when trying to approve a SharePoint Approval Workflow task](approval-workflow-access-denied-error.md)
 
