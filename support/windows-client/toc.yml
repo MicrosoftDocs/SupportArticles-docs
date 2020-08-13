@@ -23,10 +23,28 @@
 
 - name: Deployment
   items:
+    - name: Customize default local user profile
+      href: ./deployment/customize-default-local-user-profile.md
+    - name: Error after you enter BitLocker PIN at startup 
+      href: ./deployment/bitlocker-too-many-pin-entry-attempts.md
+    - name: Event ID 10 is logged in Application log
+      href: ./deployment/event-10-is-logged-in-application-log.md
     - name: How to disable and re-enable hibernation
       href: ./deployment/disable-and-re-enable-hibernation.md
+    - name: How to enable Wake on LAN
+      href: ./deployment/wake-on-lan-feature.md
     - name: How to get updates via Windows Update
       href: ./deployment/get-updates-through-windows-update.md
+    - name: How to keep Windows up to date
+      href: ./deployment/keep-windows-up-to-date.md
+    - name: How to solve disk space issues caused by WinSxS directory
+      href: ./deployment/address-disk-space-issues-caused-by-winsxs.md
+    - name: How to validate the OEM activation key
+      href: ./deployment/validate-oem-activation-key.md
+    - name: Standard terminology that defines software updates
+      href: ./deployment/standard-terminology-software-updates.md
+    - name: Sysprep fails after you remove or update Microsoft Store apps
+      href: ./deployment/sysprep-fails-remove-or-update-store-apps.md
 
 - name: Group Policy
   items:
@@ -84,9 +102,9 @@
 - name: User Profiles and Logon
   items:
     - name: Can't set a convenience PIN
-      href: ./userprofiles-and-logon/cannot-configure-a-convenience-pin.md
+      href: ./user-profiles-and-logon/cannot-configure-a-convenience-pin.md
     - name: Renaming user account doesn't change profile path
-      href: ./userprofiles-and-logon/renaming-user-account-not-change-profile-path.md
+      href: ./user-profiles-and-logon/renaming-user-account-not-change-profile-path.md
 
 - name: Virtualization
   items:
