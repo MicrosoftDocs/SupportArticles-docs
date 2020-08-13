@@ -25,7 +25,7 @@ description: Learn how to help your users troubleshoot centralized add-ins, if t
 
 Now that you've deployed the add-in, your end users can start using it in their Office applications. The add-in will appear on all platforms that the add-in supports.
   
-## For Word, PowerPoint, and Excel 2016
+## For Word, PowerPoint, Excel (2016, 2019 or for Microsoft 365)
 
 If the add-in supports add-in commands, the commands appear on the Office ribbon. In the following example, the command appears for the People Graph add-in in the **Insert** tab. The add-in command can appear on any tab. 
   
@@ -39,7 +39,7 @@ Then select the **Admin Managed** tab along the top in the Office Add-ins window
   
 ![Refresh if your Add-in is not present](./media/user-not-seeing-add-ins/528df843-448c-48c9-8c82-10f2cb632174.png)
   
-## For Outlook 2016
+## For Outlook 2016, Outlook 2019 and Outlook for Microsoft 365
 
 On the **Home** ribbon, select **Store**, as shown here. Select **Admin-managed** in the left nav. 
   
@@ -53,7 +53,7 @@ Users can't see add-in? Try one of these:
     
 - **Check Office version requirements**
     
-  - The user might be on an older, incompatible version of Office. For add-ins to be deployed the user must have Office ProPlus 2016. You can check this out for any member of your organization. To find out how, see [Office 365 reports](https://support.office.com/article/office-365-reports-in-the-admin-center-microsoft-office-activations-87c24ae2-82e0-4d1e-be01-c3bcc3f18c60?ui=en-US&amp;rs=en-US&amp;ad=US).
+  - The user might be on an older, incompatible version of Office. For add-ins to be deployed the user must have Office ProPlus or Microsoft 365. You can check this out for any member of your organization. To find out how, see [Office 365 reports](https://support.office.com/article/office-365-reports-in-the-admin-center-microsoft-office-activations-87c24ae2-82e0-4d1e-be01-c3bcc3f18c60?ui=en-US&amp;rs=en-US&amp;ad=US).
     
   - Alternatively, you can check this manually by going to the application, such as Word, then select **File \> Account**. Under **Product Information**, you should see **Microsoft 365 Apps for enterprise**. 
     
@@ -62,6 +62,8 @@ Users can't see add-in? Try one of these:
   - Microsoft Exchange stores the add-in manifests within your organization's tenant. The admin deploying add-ins and the users receiving those add-ins must be on a version of Exchange Server that supports OAuth authentication. By default, Exchange Multi-Tenant and Dedicated VNext deployments support OAuth. Exchange Dedicated Legacy and hybrid on-premises deployments can be configured to support OAuth; however, it isn't the default configuration.
     
   - Check with your organization's Exchange admin to find out which configuration is in use. OAuth connectivity per user can be verified by using the [Test-OAuthConnectivity](https://docs.microsoft.com/powershell/module/exchange/organization/Test-OAuthConnectivity?view=exchange-ps) PowerShell cmdlet. 
+ 
+- For more information on requirements, see [Determine if Centralized Deployment of add-ins works for your organization](https://docs.microsoft.com/en-us/microsoft-365/admin/manage/centralized-deployment-of-add-ins?view=o365-worldwide#requirements)
     
 - **See regulations surrounding minors using add-ins**
     
