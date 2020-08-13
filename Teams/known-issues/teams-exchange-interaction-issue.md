@@ -24,7 +24,7 @@ This article provides steps to help you troubleshoot interaction issues that occ
 
 #### Getting Started
 
-Bear in mind that you should have already given the main Exchange and Microsoft Teams interaction article to validate versioning, and assure environment compatibility [Exchange and Teams Interact](https://docs.microsoft.com/en-us/MicrosoftTeams/exchange-teams-interact)
+Bear in mind that you should have already given the main Exchange and Microsoft Teams interaction article to validate versioning, and assure environment compatibility [Exchange and Teams Interact](https://docs.microsoft.com/MicrosoftTeams/exchange-teams-interact)
 
 ## Symptoms
 
