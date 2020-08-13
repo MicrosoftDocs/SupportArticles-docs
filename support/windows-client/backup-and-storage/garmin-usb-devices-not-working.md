@@ -42,7 +42,7 @@ This issue is documented by Garmin at [Device is not detected in Windows 10 afte
 
 To download the latest Garmin Express tool, go to [Garmin Express](https://software.garmin.com/express.html).
 
-[!INCLUDE [Third-party disclaimer](../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
 
 ## Applies to
 
