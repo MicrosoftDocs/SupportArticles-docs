@@ -14,11 +14,17 @@
     - name: Microsoft Store app package updates are available
       href: ./application-management/windows-81-microsoft-store-app-package-updates.md
 
+- name: Backup and Storage
+  items:
+    - name: Event ID 158 is logged for identical disk GUIDs
+      href: ./backup-and-storage/event-id-158-for-identical-disk-guids.md
+    - name: Garmin USB devices don't work
+      href: ./backup-and-storage/garmin-usb-devices-not-working.md
+
 - name: Deployment
   items:
     - name: How to disable and re-enable hibernation
       href: ./deployment/disable-and-re-enable-hibernation.md
-
     - name: How to get updates via Windows Update
       href: ./deployment/get-updates-through-windows-update.md
 
