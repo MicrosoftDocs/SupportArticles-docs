@@ -1,6 +1,19 @@
 - name: Welcome
   href:
 
+- name: Application Management
+  items:
+    - name: .NET Framework 3.5 installation errors
+      href: ./application-management/dotnet-framework-35-installation-error.md
+    - name: Availability and description of FCIV
+      href: ./application-management/virtualization-apps-not-work-with-hyper-v.md
+    - name: Enable Windows Installer logging
+      href: ./application-management/enable-windows-installer-logging.md
+    - name: Event 10016 when accessing DCOM components
+      href: ./application-management/event-10016-logged-when-accessing-dcom.md
+    - name: Microsoft Store app package updates are available
+      href: ./application-management/windows-81-microsoft-store-app-package-updates.md
+
 - name: Deployment
   items:
     - name: How to disable and re-enable hibernation
