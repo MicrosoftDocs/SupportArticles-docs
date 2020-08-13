@@ -74,4 +74,4 @@ To disable Hyper-V by using Windows PowerShell, follow these steps:
 
 Disable Device Guard and Credential Guard by using registry keys or group policy. To do this, see [Manage Windows Defender Credential Guard](/windows/security/identity-protection/credential-guard/credential-guard-manage).
 
-[!INCLUDE [Third-party disclaimer](../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
