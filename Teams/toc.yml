@@ -71,6 +71,8 @@
       href: ./known-issues/no-audio-when-sharing-content-in-meeting.md
     - name: Team member maximum of 5000
       href: ./known-issues/teams-member-max-5000.md
+    - name: Teams is slow during video meetings on laptops docked to 4K/HDR monitors
+      href: ./known-issues/teams-slow-video-meetings-laptops-4k.md
     - name: '"The following application instance is not present in BVD" error when assigning a phone number to a resource accounts'
       href: ./known-issues/following-application-instance-not-present-error.md
     - name: Users with Exchange Online mailboxes can't access meetings or connectors 
