@@ -59,7 +59,7 @@ To disable or enable the network adapter power management setting automatically,
 
 |Disable network adapter power management setting|Enable network adapter power management setting|
 |---|---|
-|[Download](http://go.microsoft.com/?linkid=9820158)|[Download](http://go.microsoft.com/?linkid=9820157)|
+|[Download](https://go.microsoft.com/?linkid=9820158)|[Download](https://go.microsoft.com/?linkid=9820157)|
 |||
 
 ### Let me fix it myself

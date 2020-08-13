@@ -52,7 +52,31 @@
     - name: System error 85 with NET USE command
       href: ./networking/system-error-85-net-use-command.md
 
+- name: Performance
+  items:
+    - name: How to speed up your computer
+      href: ./performance/speed-up-your-computer.md
+    - name: Running an.exe file starts different program
+      href: ./performance/running-exe-starts-another-program.md
+
 - name: Shell Experience
   items:
+    - name: Can't start Windows Search service and error occurs
+      href: ./shell-experience/windows-search-service-not-starting.md
+    - name: Can't remove, uninstall, or reinstall Microsoft Store app
+      href: ./shell-experience/cannot-remove-uninstall-or-reinstall-microsoft-store-app.md
     - name: Fix problems in Windows Search
       href: ./shell-experience/fix-problems-in-windows-search.md
+    - name: How to modify the command line string limitation
+      href: ./shell-experience/command-line-string-limitation.md
+    - name: Microsoft Store Apps fail to start
+      href: ./shell-experience/microsoft-store-apps-fail-to-start.md
+
+- name: System Management Components
+  items:
+    - name: DNS server tool is missing for RSAT client
+      href: ./system-management-components/rsat-client-missing-dns-server-tool.md
+    - name: How to configure WINRM for HTTPS
+      href: ./system-management-components/configure-winrm-for-https.md
+    - name: WMI-Activity Event ID 5858 logged with ResultCode = 0x80041032
+      href: ./system-management-components/wmi-activity-event-5858-logged-with-resultcode-0x80041032.md
