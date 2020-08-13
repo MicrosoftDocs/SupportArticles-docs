@@ -80,3 +80,20 @@
       href: ./system-management-components/configure-winrm-for-https.md
     - name: WMI-Activity Event ID 5858 logged with ResultCode = 0x80041032
       href: ./system-management-components/wmi-activity-event-5858-logged-with-resultcode-0x80041032.md
+
+- name: User Profiles and Logon
+  items:
+    - name: Can't set a convenience PIN
+      href: ./userprofiles-and-logon/cannot-configure-a-convenience-pin.md
+    - name: Renaming user account doesn't change profile path
+      href: ./userprofiles-and-logon/renaming-user-account-not-change-profile-path.md
+
+- name: Virtualization
+  items:
+    - name: Can't create a Hyper-V virtual switch
+      href: ./virtualization/cannot-create-hyper-v-virtual-switch.md
+
+- name: Windows Security
+  items:
+    - name: TPM isn't recognized as a compatible device
+      href: ./windows-security/tpm-is-not-recognized.md

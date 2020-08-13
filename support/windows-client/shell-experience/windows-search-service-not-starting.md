@@ -26,11 +26,11 @@ Windows Search service doesn't start and when you try to start the service manua
 
 > ========  
 Services  
-========  
+\========  
 "The Windows Search service on local computer started and then stopped. Some services stop automatically if they are not in use by other services or programs"  
-===  
+\===  
 OK  
-===
+\===
 
 ## Cause
 
