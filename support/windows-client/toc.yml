@@ -32,6 +32,25 @@
   items:
     - name: How to create and manage Central Store for registry-based policies
       href: ./group-policy/create-and-manage-central-store.md
+    - name: Use Settings app Group Policy
+      href: ./group-policy/use-settings-app-group-policy.md
+
+- name: Networking
+  items:
+    - name: Can't turn on Network Discovery
+      href: ./networking/cannot-turn-on-network-discovery.md
+    - name: Configure client proxy server settings
+      href: ./networking/configure-client-proxy-server-settings-by-registry-file.md
+    - name: How to disable network adapter power management
+      href: ./networking/power-management-on-network-adapter.md
+    - name: Mapped drive connection to network share is lost
+      href: ./networking/mapped-drive-connection-to-network-share-lost.md
+    - name: Mapped drives not available in elevated command prompt
+      href: ./networking/mapped-drives-not-available-from-elevated-command.md
+    - name: Move the CSC folder to a new location
+      href: ./networking/move-client-side-caching-folder.md
+    - name: System error 85 with NET USE command
+      href: ./networking/system-error-85-net-use-command.md
 
 - name: Shell Experience
   items:
