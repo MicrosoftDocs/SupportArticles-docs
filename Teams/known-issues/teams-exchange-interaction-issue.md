@@ -22,6 +22,10 @@ search.appverid:
 
 This article provides steps to help you troubleshoot interaction issues that occur between Microsoft Teams and Microsoft Exchange Server.
 
+#### Getting Started
+
+Bear in mind that you should have already given the main Exchange and Microsoft Teams interaction article to validate versioning, and assure environment compatibility [Exchange and Teams Interact](https://docs.microsoft.com/MicrosoftTeams/exchange-teams-interact)
+
 ## Symptoms
 
 #### Issue 1: A delegate can not schedule a Teams meeting on behalf of a delegator
