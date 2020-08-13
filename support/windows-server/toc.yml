@@ -3,7 +3,7 @@
 
 - name: Active Directory
   items:
-    - name: Active Directory FSMO role
+    - name: Active Directory FSMO roles
       href: ./active-directory/active-directory-fsmo-roles.md
     - name: Active Directory replication error 8452
       href: ./active-directory/active-directory-replication-error-8452.md
