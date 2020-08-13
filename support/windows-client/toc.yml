@@ -41,6 +41,8 @@
       href: ./deployment/address-disk-space-issues-caused-by-winsxs.md
     - name: How to validate the OEM activation key
       href: ./deployment/validate-oem-activation-key.md
+    - name: 'Running Sysprep /generalize returns error'
+      href: ./deployment/error-occurs-when-running-sysprep-generalize.md
     - name: Standard terminology that defines software updates
       href: ./deployment/standard-terminology-software-updates.md
     - name: Sysprep fails after you remove or update Microsoft Store apps
