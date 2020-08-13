@@ -198,7 +198,7 @@
   - name: Sharing and Permissions
     items:
     - name: '"Access Denied", "You need permission to access this site", or "User not found in the directory" errors in SharePoint Online and OneDrive for Business'
-      href: ../administration/access-denied-sharepoint-error.md
+      href: ../sharing-and-permissions/access-denied-sharepoint-error.md
     - name: '"Everyone except external users" group is re-added to Visitors or Members group on Office 365 public group website'
       href: ../sharing-and-permissions/everyone-except-external-users-group-readded.md
     - name: '"Everyone except external users" group is removed'
