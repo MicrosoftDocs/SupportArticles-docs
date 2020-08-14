@@ -24,11 +24,11 @@ description: Addresses an issue in Teams on the MacOS where the Virtual Camera s
 
 ## Summary
 
-The Virtual Camera app on the Teams MacOS desktop client stops functioning after security updates are installed.
+The Virtual Camera app on the Microsoft Teams MacOS desktop client stops functioning after security updates are installed.
 
 ## More information
 
-Microsoft is working to re-enable secure support for the Virtual Camera app on the Mac client. Until an update is released, you can use the virtual camera in Teams in a web browser on your Mac.   
+Microsoft is working to re-enable secure support for the Virtual Camera app on the Mac client. Until an update is released, you can use the native virtual camera in Teams in a web browser on your Mac.   
 
 Microsoft is researching this problem and will post more information in this article when the information becomes available.
 
