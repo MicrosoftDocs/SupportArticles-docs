@@ -378,7 +378,7 @@ Permissions are defined at the top of each directory partition (*NC head*) and
 
 Use the Active Directory ACL editor in ADSIEDIT.MSC to add the missing DACLS.
 
-### <a id="grant" />Grant non-domain admins permissions
+### <a id="grant"></a>Grant non-domain admins permissions 
 
 Grant non-domain admins permissions to replicate between domain controllers in the same domain for non-enterprise administrators and to replicate between domain controllers in different domains
 
