@@ -63,7 +63,7 @@ Users can't see add-in? Try one of these:
     
   - Check with your organization's Exchange admin to find out which configuration is in use. OAuth connectivity per user can be verified by using the [Test-OAuthConnectivity](https://docs.microsoft.com/powershell/module/exchange/organization/Test-OAuthConnectivity?view=exchange-ps) PowerShell cmdlet. 
  
-- For more information on requirements, see [Determine if Centralized Deployment of add-ins works for your organization](https://docs.microsoft.com/en-us/microsoft-365/admin/manage/centralized-deployment-of-add-ins?view=o365-worldwide#requirements)
+- For more information on requirements, see [Determine if Centralized Deployment of add-ins works for your organization](https://docs.microsoft.com/en-us/microsoft-365/admin/manage/centralized-deployment-of-add-ins?view=o365-worldwide#requirements).
     
 - **See regulations surrounding minors using add-ins**
     
@@ -79,4 +79,4 @@ Users can't see add-in? Try one of these:
     
 ## See also
 
-[Manage deployment of Office 365 add-ins in the Microsoft 365 admin center](https://docs.microsoft.com/office365/admin/manage/manage-deployment-of-add-ins)
+[Manage deployment of Office 365 add-ins in the Microsoft 365 admin center](https://docs.microsoft.com/office365/admin/manage/manage-deployment-of-add-ins).
