@@ -12,7 +12,6 @@ search.appverid:
 audience: Admin
 ms.topic: article
 ms.prod: office-perpetual-itpro
-localization_priority: Normal
 appliesto:
 - Microsoft InfoPath
 ---

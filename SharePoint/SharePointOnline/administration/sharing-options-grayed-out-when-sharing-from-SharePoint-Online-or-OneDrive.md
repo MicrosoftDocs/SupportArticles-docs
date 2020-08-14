@@ -8,7 +8,6 @@ ms.date: 4/15/2020
 ms.audience: Admin
 ms.topic: article
 ms.service: sharepoint-online
-localization_priority: Normal
 ms.custom: CSSTroubleshoot
 search.appverid:
 - SPO160
