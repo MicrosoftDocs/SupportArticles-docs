@@ -28,7 +28,7 @@ After security fixes are applied in the Teams client for MacOS, virtual camera a
 
 ## More information
 
-Microsoft is working to re-enable secure support for virtual camera apps on the Mac client. Until an update is released, you can use the virtual camera in Teams in a web browser on your Mac.  
+Microsoft is working to re-enable secure support for virtual camera apps on the Mac client. Until an update is released, you can use the virtual camera in Teams in a web browser (such as Edge or Chrome) on your Mac.  
 
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
