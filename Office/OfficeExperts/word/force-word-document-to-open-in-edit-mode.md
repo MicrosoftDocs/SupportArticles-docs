@@ -10,7 +10,6 @@ audience: ITPro
 ms.topic: article
 ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
-localization_priority: Normal
 appliesto:
 - Microsoft Word
 ---

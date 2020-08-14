@@ -7,7 +7,6 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
 ms.custom: CSSTroubleshoot

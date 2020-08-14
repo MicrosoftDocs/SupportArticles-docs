@@ -10,7 +10,6 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
-ms.custom: CSSTroubleshoot
 ms.reviewer: adrianp, v-yilia
 ms.custom: CSSTroubleshoot
 appliesto:

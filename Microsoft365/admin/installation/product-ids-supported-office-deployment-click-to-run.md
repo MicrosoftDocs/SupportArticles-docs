@@ -14,7 +14,6 @@ ms.custom:
 - CI 114638
 ms.service: o365-solutions
 ms.topic: article
-localization_priority: Normal
 ms.reviewer: vikkarti
 appliesto:
 - Microsoft Office Deployment Tool

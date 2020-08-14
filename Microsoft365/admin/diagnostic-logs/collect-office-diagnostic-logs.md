@@ -11,7 +11,6 @@ ms.prod: office 365
 ms.topic: article
 ms.custom: CSSTroubleshoot
 ms.author: v-maqiu
-localization_priority: Normal
 appliesto:
 - Microsoft 365 Apps for enterprise
 ---
