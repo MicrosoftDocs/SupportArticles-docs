@@ -11,7 +11,6 @@ ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: ericspli
 ms.custom: CSSTroubleshoot
-localization_priority: Normal
 appliesto:
 - Microsoft Office
 ---

@@ -10,7 +10,6 @@ audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online
 ms.custom: CSSTroubleshoot
-localization_priority: Normal
 appliesto:
 - Office Web Apps 2013
 ---

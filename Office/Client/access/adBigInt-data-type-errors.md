@@ -11,7 +11,6 @@ ms.prod: office 365
 ms.topic: article
 ms.custom: CSSTroubleshoot
 ms.author: v-maqiu
-localization_priority: Normal
 appliesto:
 - Access for Office 365
 - Access 2019 
