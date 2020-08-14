@@ -9,8 +9,16 @@
       href: ./active-directory/active-directory-replication-error-8452.md
     - name: AD replication error 5 - Access is denied
       href: ./active-directory/active-directory-replication-error-5.md
+    - name: DCPROMO demotion fails
+      href: ./active-directory/dcpromo-demotion-fails.md
+    - name: Diagnose Active Directory replication failures
+      href: ./active-directory/diagnose-active-directory-replication-failures.md
+    - name: Enable LDAP over SSL
+      href: ./active-directory/enable-ldap-over-ssl-3rd-certification-authority.md
     - name: FSMO placement and optimization
       href: ./active-directory/fsmo-placement-and-optimization-on-ad-dcs.md
+    - name: Host AD DCs in virtual hosting environments
+      href: ./active-directory/ad-dc-in-virtual-hosting-environment.md
     - name: How to configure AD and LDS diagnostic event logging
       href: ./active-directory/configure-ad-and-lds-event-logging.md
     - name: How to configure authoritative time server
@@ -31,10 +39,26 @@
       href: ./active-directory/troubleshoot-high-lsass.exe-cpu-utilization.md
     - name: Known issues for managing Group Policy clients
       href: ./active-directory/known-issues-for-group-policy-clients.md
+    - name: Name computers, domains, sites, and OUs
+      href: ./active-directory/naming-conventions-for-computer-domain-site-ou.md
+    - name: Redirect users and computers containers
+      href: ./active-directory/redirect-users-computers-containers.md
+    - name: Remove orphaned domains
+      href: ./active-directory/remove-domains-from-ad.md
     - name: Syskey.exe utility is no longer supported
       href: ./active-directory/syskey-exe-utility-is-no-longer-supported.md
+    - name: Troubleshoot AD replication error 2146893022
+      href: ./active-directory/active-directory-replication-error-2146893022.md
+    - name: Troubleshoot AD replication error 8453
+      href: ./active-directory/active-directory-replication-error-8453.md
+    - name: Troubleshoot replication error 1722
+      href: ./active-directory/replication-error-1722-rpc-server-unavailable.md
     - name: Troubleshoot domain controller replication error 1727
       href: ./active-directory/remote-procedure-call-failed-and-did-not-execute-error.md
+    - name: UserAccountControl property flags
+      href: ./active-directory/useraccountcontrol-manipulate-account-properties.md
+    - name: View and set LDAP policy by using Ntdsutil
+      href: ./active-directory/view-set-ldap-policy-using-ntdsutil.md
     - name: Well-known security identifiers
       href: ./active-directory/security-identifiers-in-windows.md
 
@@ -50,8 +74,68 @@
 
 - name: Networking
   items:
+    - name: Avoid registering unwanted NIC in DNS
+      href: ./networking/unwanted-nic-registered-dns-mulithomed-dc.md
+    - name: Can't modify the Hosts or Lmhosts file
+      href: ./networking/cannot-modify-hosts-lmhosts-files.md
+    - name: Can't use different credentials for a network share
+      href: ./networking/cannot-connect-to-network-share.md
+    - name: Certificate requirements when you use EAP-TLS
+      href: ./networking/certificate-requirements-eap-tls-peap.md
+    - name: DNS CNAME alias fails to connect a SMB file server share
+      href: ./networking/dns-chame-alias-cannot-access-smb-file-server-share.md
+    - name: Event ID 4000 and 4007 when DNS zones not loaded
+      href: ./networking/dns-zones-do-not-load-event-4000-4007.md
     - name: Guest access in SMB2 is disabled by default
       href: ./networking/guest-access-in-smb2-is-disabled-by-default.md
-
+    - name: How to configure IPv6 for advanced users
+      href: ./networking/configure-ipv6-in-windows.md
+    - name: How to configure RPC dynamic port allocation to work with firewalls
+      href: ./networking/configure-rpc-dynamic-port-allocation-with-firewalls.md
+    - name: IPC$ share and null session behavior
+      href: ./networking/inter-process-communication-share-null-session.md
+    - name: 'LT2P/IPsec RAS VPN connections fail'
+      href: ./networking/lt2p-ipsec-ras-vpn-connections-fail.md
+    - name: Portqry.exe command-line utility
+      href: ./networking/portqry-exe-command-line-utility.md
     - name: Service overview and network port requirements
       href: ./networking/service-overview-and-network-port-requirements.md
+    - name: The Automatic Metric feature for IPv4 routes
+      href: ./networking/automatic-metric-for-ipv4-routes.md
+    - name: Troubleshoot DNS Event ID 4013
+      href: ./networking/troubleshoot-dns-event-id-4013.md
+    - name: Troubleshoot missing SYSVOL and Netlogon shares
+      href: ./networking/troubleshoot-missing-sysvol-and-netlogon-shares.md
+    - name: Use netsh advfirewall firewall context
+      href: ./networking/netsh-advfirewall-firewall-control-firewall-behavior.md
+    - name: Use BurFlags to reinitialize FRS
+      href: ./networking/use-burflags-to-reinitialize-frs.md
+
+- name: Windows Security
+  items:
+    - name: Add SAN to secure LDAP certificate
+      href: ./windows-security/add-san-to-secure-ldap-certificate.md
+    - name: CA doesn't publish certificates in trusted domain
+      href: ./windows-security/cannot-publish-certificate-trusted-domain.md
+    - name: Can't copy files from mapped drive to local directory
+      href: ./windows-security/cannot-copy-files-from-mapped-drive-to-local-directory.md
+    - name: Disable Hyper-V to use virtualization software
+      href: ./windows-security/fciv-availability-and-description.md
+    - name: Error 1079 when services fail to start
+      href: ./windows-security/services-fail-to-start-error-1079.md
+    - name: Event ID 4107 or Event ID 11 is logged
+      href: ./windows-security/event-id-4107-or-event-id-11-is-logged.md
+    - name: How to decommission Windows enterprise CA and remove related objects
+      href: ./windows-security/decommission-enterprise-certification-authority-and-remove-objects.md
+    - name: How to import third-party CAs into Enterprise NTAuth store
+      href: ./windows-security/import-third-party-ca-to-enterprise-ntauth-store.md
+    - name: How to disable User Account Control
+      href: ./windows-security/disable-user-account-control.md
+    - name: Kerberos authentication fails when a user belongs to many groups
+      href: ./windows-security/kerberos-authentication-problems-if-user-belongs-to-groups.md
+    - name: Reset domain controller's password with Netdom.exe
+      href: ./windows-security/use-netdom-reset-domain-controller-password.md
+    - name: Restrict cryptographic algorithms and protocols
+      href: ./windows-security/restrict-cryptographic-algorithms-protocols-schannel.md
+    - name: Security certificate validation fails
+      href: ./windows-security/secured-website-certificate-validation-fails.md
