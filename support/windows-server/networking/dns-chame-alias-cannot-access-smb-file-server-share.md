@@ -214,7 +214,7 @@ Additionally, apply the following hotfixes:
 - [DisableStrictNameChecking; server alias does not work from the actual server](https://social.technet.microsoft.com/forums/windowsserver/94f9b04f-e0a4-41a7-bbf3-b68e9a4c98db/disablestrictnamechecking-server-alias-does-not-work-from-the-actual-server)
 - [Why do we need SPN for File Server (NAS / RAS / File Share System) DNS Alias (Cname)](/archive/blogs/sqlserverfaq/why-do-we-need-spn-for-file-server-nas-ras-file-share-system-dns-alias-cname)
 
-[!INCLUDE [Third-party disclaimer](../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
 
 ## Applies to
 

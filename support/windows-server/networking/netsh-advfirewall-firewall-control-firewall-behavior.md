@@ -43,10 +43,9 @@ Additionally, the `netsh advfirewall` commands that you can use to obtain detail
 
 |Old command|New command|
 |---|---|
-| `netsh firewall add allowedprogram C:\MyApp\MyApp.exe "My Application" ENABLE`| `netsh advfirewall firewall add rule name="My Application" dir=in action=allow program="C:\MyApp\MyApp.exe" enable=yes` |
+|`netsh firewall add allowedprogram C:\MyApp\MyApp.exe "My Application" ENABLE`| `netsh advfirewall firewall add rule name="My Application" dir=in action=allow program="C:\MyApp\MyApp.exe" enable=yes`|
 | `netsh firewall add allowedprogram program=C:\MyApp\MyApp.exe name="My Application" mode=ENABLE scope=CUSTOM addresses=157.60.0.1,172.16.0.0/16,LocalSubnet profile=Domain`| `netsh advfirewall firewall add rule name="My Application" dir=in action=allow program= "C:\MyApp\MyApp.exe" enable=yes remoteip=157.60.0.1,172.16.0.0/16,LocalSubnet profile=domain` |
-| `netsh firewall add allowedprogram program=C:\MyApp\MyApp.exe name="My Application" mode=ENABLE scope=CUSTOM addresses=157.60.0.1,172.16.0.0/16,LocalSubnet profile=ALL`|Run the following commands:<br/><br/> `netsh advfirewall firewall add rule name="My Application" dir=in action=allow program= "C:\MyApp\MyApp.exe" enable=yes remoteip=157.60.0.1,172.16.0.0/16,LocalSubnet profile=domain`<br/><br/>`netsh advfirewall firewall add rule name="My Application" dir=in action=allow program="C:\MyApp\MyApp.exe" enable=yes remoteip=157.60.0.1,172.16.0.0/16,LocalSubnet profile=private` |
-|||
+|`netsh firewall add allowedprogram program=C:\MyApp\MyApp.exe name="My Application" mode=ENABLE scope=CUSTOM addresses=157.60.0.1,172.16.0.0/16,LocalSubnet profile=ALL`|Run the following commands:<br/>`netsh advfirewall firewall add rule name="My Application" dir=in action=allow program= "C:\MyApp\MyApp.exe" enable=yes remoteip=157.60.0.1,172.16.0.0/16,LocalSubnet profile=domain`<br/>`netsh advfirewall firewall add rule name="My Application" dir=in action=allow program="C:\MyApp\MyApp.exe" enable=yes remoteip=157.60.0.1,172.16.0.0/16,LocalSubnet profile=private`|
 
 For more information about how to add firewall rules, run the following command:
 
@@ -58,8 +57,8 @@ netsh advfirewall firewall add rule ?
 
 |Old command|New command|
 |---|---|
-| `netsh firewall add portopening TCP 80 "Open Port 80"`| `netsh advfirewall firewall add rule name= "Open Port 80" dir=in action=allow protocol=TCP localport=80` |
-|||
+|`netsh firewall add portopening TCP 80 "Open Port 80"`|`netsh advfirewall firewall add rule name= "Open Port 80" dir=in action=allow protocol=TCP localport=80`|
+
 For more information about how to add firewall rules, run the following command:
 
 ```console
@@ -70,9 +69,9 @@ netsh advfirewall firewall add rule ?
 
 |Old command|New command|
 |---|---|
-| `netsh firewall delete allowedprogram C:\MyApp\MyApp.exe`| `netsh advfirewall firewall delete rule name= rule name program="C:\MyApp\MyApp.exe"` |
-| `delete portopening protocol=UDP port=500`| `netsh advfirewall firewall delete rule name= rule name protocol=udp localport=500` |
-|||
+|`netsh firewall delete allowedprogram C:\MyApp\MyApp.exe`|`netsh advfirewall firewall delete rule name= rule name program="C:\MyApp\MyApp.exe"`|
+|`delete portopening protocol=UDP port=500`|`netsh advfirewall firewall delete rule name= rule name protocol=udp localport=500`|
+
 For more information about how to delete firewall rules, run the following command:
 
 ```cosnole
@@ -83,10 +82,10 @@ netsh advfirewall firewall delete rule ?
 
 |Old command|New command|
 |---|---|
-| `netsh firewall set icmpsetting 8`| `netsh advfirewall firewall add rule name="ICMP Allow incoming V4 echo request" protocol=icmpv4:8,any dir=in action=allow` |
-| `netsh firewall set icmpsetting type=ALL mode=enable`| `netsh advfirewall firewall add rule name= "All ICMP V4" protocol=icmpv4:any,any dir=in action=allow` |
-| `netsh firewall set icmpsetting 13 disable all`| `netsh advfirewall firewall add rule name="Block Type 13 ICMP V4" protocol=icmpv4:13,any dir=in action=block` |
-|||
+|`netsh firewall set icmpsetting 8`| `netsh advfirewall firewall add rule name="ICMP Allow incoming V4 echo request" protocol=icmpv4:8,any dir=in action=allow`|
+| `netsh firewall set icmpsetting type=ALL mode=enable`| `netsh advfirewall firewall add rule name= "All ICMP V4" protocol=icmpv4:any,any dir=in action=allow`|
+| `netsh firewall set icmpsetting 13 disable all`| `netsh advfirewall firewall add rule name="Block Type 13 ICMP V4" protocol=icmpv4:13,any dir=in action=block`|
+
 For more information about how to configure ICMP settings, run the following command:
 
 ```console
@@ -97,8 +96,7 @@ netsh advfirewall firewall add rule ?
 
 |Old command|New command|
 |---|---|
-| `netsh firewall set logging %systemroot%\system32\LogFiles\Firewall\pfirewall.log 4096 ENABLE ENABLE`|Run the following commands:<br/><br/> `netsh advfirewall set currentprofile logging filename %systemroot%\system32\LogFiles\Firewall\pfirewall.log`<br/><br/>`netsh advfirewall set currentprofile logging maxfilesize 4096`<br/>`netsh advfirewall set currentprofile logging droppedconnections enable`<br/><br/>`netsh advfirewall set currentprofile logging allowedconnections enable` |
-|||
+| `netsh firewall set logging %systemroot%\system32\LogFiles\Firewall\pfirewall.log 4096 ENABLE ENABLE`|Run the following commands:<br/>`netsh advfirewall set currentprofile logging filename %systemroot%\system32\LogFiles\Firewall\pfirewall.log`<br/>`netsh advfirewall set currentprofile logging maxfilesize 4096`<br/>`netsh advfirewall set currentprofile logging droppedconnections enable`<br/>`netsh advfirewall set currentprofile logging allowedconnections enable` |
 
 For more information, run the following command:
 
@@ -117,10 +115,10 @@ If you want to set logging for a particular profile, use one of the following op
 |Old command|New command|
 |---|---|
 | `netsh firewall set opmode ENABLE`| `netsh advfirewall set currentprofile state on` |
-| `netsh firewall set opmode mode=ENABLE exceptions=enable`|Run the following commands:<br/><br/> `Netsh advfirewall set currentprofile state on`<br/><br/>`netsh advfirewall set currentprofile firewallpolicy blockinboundalways,allowoutbound`|
-| `netsh firewall set opmode mode=enable exceptions=disable profile=domain`|Run the following commands:<br/><br/> `Netsh advfirewall set domainprofile state on`<br/><br/><br/>`netsh advfirewall set domainprofile firewallpolicy blockinbound,allowoutbound`|
-| `netsh firewall set opmode mode=enable profile=ALL`|Run the following commands:<br/><br/> `netsh advfirewall set domainprofile state on`<br/><br/>`netsh advfirewall set privateprofile state on`<br/> |
-|||
+| `netsh firewall set opmode mode=ENABLE exceptions=enable`|Run the following commands:<br/>`Netsh advfirewall set currentprofile state on`<br/>`netsh advfirewall set currentprofile firewallpolicy blockinboundalways,allowoutbound`|
+| `netsh firewall set opmode mode=enable exceptions=disable profile=domain`|Run the following commands:<br/> `Netsh advfirewall set domainprofile state on`<br/>`netsh advfirewall set domainprofile firewallpolicy blockinbound,allowoutbound`|
+| `netsh firewall set opmode mode=enable profile=ALL`|Run the following commands:<br/> `netsh advfirewall set domainprofile state on`<br/>`netsh advfirewall set privateprofile state on`|
+
 For more information, run the following command:
 
 ```console
@@ -137,8 +135,7 @@ If you want to set the firewall state for a particular profile, use one of the f
 
 |Old command|New command|
 |---|---|
-| `netsh firewall reset`| `netsh advfirewall reset` |
-|||
+|`netsh firewall reset`|`netsh advfirewall reset`|
 
 For more information, run the following command:
 
@@ -150,7 +147,6 @@ netsh advfirewall reset ?
 
 |Old command|New command|
 |---|---|
-| `netsh firewall set service FileAndPrint`| `netsh advfirewall firewall set rule group="File and Printer Sharing" new enable=Yes` |
-| `netsh firewall set service RemoteDesktop enable`| `netsh advfirewall firewall set rule group="remote desktop" new enable=Yes` |
-| `netsh firewall set service RemoteDesktop enable profile=ALL`|Run the following commands:<br/><br/> `netsh advfirewall firewall set rule group="remote desktop" new enable=Yes profile=domain`<br/><br/>`netsh advfirewall firewall set rule group="remote desktop" new enable=Yes profile=private` |
-|||
+| `netsh firewall set service FileAndPrint`|`netsh advfirewall firewall set rule group="File and Printer Sharing" new enable=Yes`|
+| `netsh firewall set service RemoteDesktop enable`|`netsh advfirewall firewall set rule group="remote desktop" new enable=Yes`|
+| `netsh firewall set service RemoteDesktop enable profile=ALL`|Run the following commands:<br/><br/> `netsh advfirewall firewall set rule group="remote desktop" new enable=Yes profile=domain`<br/><br/>`netsh advfirewall firewall set rule group="remote desktop" new enable=Yes profile=private`|

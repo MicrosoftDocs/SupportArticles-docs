@@ -125,7 +125,7 @@ To learn which component each bit (from low to high) controls, refer to the foll
 
 For each bit, 0 means false and one means true. Refer to the following table for an example.
 
-||Prefer IPv4 over IPv6 in prefix policies|Disable IPv6 on all nontunnel interfaces|Disable IPv6 on all tunnel interfaces|Disable IPv6 on nontunnel interfaces (except the loopback) and on IPv6 tunnel interface|
+|Prefer IPv4 over IPv6 in prefix policies|Disable IPv6 on all nontunnel interfaces|Disable IPv6 on all tunnel interfaces|Disable IPv6 on nontunnel interfaces (except the loopback) and on IPv6 tunnel interface|
 |---|---|---|---|---|
 |Disable tunnel interfaces|0|0|1|1|
 |Disable 6to4 interfaces|0|0|0|0|

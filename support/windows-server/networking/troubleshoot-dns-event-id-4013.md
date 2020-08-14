@@ -41,7 +41,7 @@ _Original KB number:_ &nbsp; 2001093
     server is still waiting for the directory to start.
     >
     > For more information, see Help and Support Center at
-    http://go.microsoft.com/fwlink/events.asp.  
+    https://go.microsoft.com/fwlink/events.asp.  
     Data:  
     0000: <%status code%>
 
