@@ -24,7 +24,7 @@ description: Addresses an issue in Teams on the MacOS where the Virtual Camera s
 
 ## Summary
 
-After security fixes are applied in the Teams client for MacOS, virtual camera applications may stop functioning.
+After security fixes are applied in the Teams client for MacOS, virtual camera apps may stop functioning.
 
 ## More information
 
