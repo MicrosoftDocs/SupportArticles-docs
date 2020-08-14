@@ -9,7 +9,6 @@ search.appverid:
 audience: ITPro
 ms.topic: article
 ms.prod: office-perpetual-itpro
-localization_priority: Normal
 ms.custom: CSSTroubleshoot
 appliesto:
 - Excel 2016

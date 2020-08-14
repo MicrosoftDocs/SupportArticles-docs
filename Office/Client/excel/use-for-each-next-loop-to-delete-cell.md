@@ -11,7 +11,6 @@ ms.topic: article
 ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto:
-appliesto:
 - Microsoft Office Excel 2007
 - Microsoft Office Excel 2003
 - Microsoft Office Excel 2002

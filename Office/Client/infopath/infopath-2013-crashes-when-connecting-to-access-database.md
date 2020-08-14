@@ -10,7 +10,6 @@ audience: ITPro
 ms.topic: article
 ms.custom: CSSTroubleshoot
 ms.prod: office-perpetual-itpro
-localization_priority: Normal
 appliesto:
 - InfoPath 2013
 ---
