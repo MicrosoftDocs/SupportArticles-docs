@@ -9,8 +9,7 @@ search.appverid:
 - MET150
 audience: Admin
 ms.topic: article
-ms.prod: office-perpetual-itpro
-localization_priority: Normal 
+ms.prod: office-perpetual-itpro 
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online

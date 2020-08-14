@@ -14,8 +14,7 @@ ms.custom:
 - CI 100405
 ms.reviewer: doug.mahugh
 ms.topic: article
-ms.prod: office-perpetual-itpro
-localization_priority: Normal 
+ms.prod: office-perpetual-itpro 
 appliesto:
 - Microsoft InfoPath 2013
 ---
