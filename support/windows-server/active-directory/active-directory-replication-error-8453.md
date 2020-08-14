@@ -333,7 +333,7 @@ Permissions are defined at the top of each directory partition (*NC head*) and
 
 - **Verify that default permissions exist in the top of each directory partition that is failing and returning replication access was denied**  
 
-    If ad-hoc replication is failing between domain controllers in different domains, or between domain controllers in the same domain for non-domain administrators, see the [Grant non-domain admins permissions](#grant-non-domain-admins-permissions) section.
+    If ad-hoc replication is failing between domain controllers in different domains, or between domain controllers in the same domain for non-domain administrators, see the [Grant non-domain admins permissions](#grant) section.
 
     If ad-hoc replication is failing for members of the Enterprise Administrators group, focus on NC head permissions that are granted to the Enterprise Administrators group.
 
@@ -378,7 +378,7 @@ Permissions are defined at the top of each directory partition (*NC head*) and
 
 Use the Active Directory ACL editor in ADSIEDIT.MSC to add the missing DACLS.
 
-### Grant non-domain admins permissions
+### <a id="grant" />Grant non-domain admins permissions
 
 Grant non-domain admins permissions to replicate between domain controllers in the same domain for non-enterprise administrators and to replicate between domain controllers in different domains
 
