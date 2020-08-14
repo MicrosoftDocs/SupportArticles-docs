@@ -27,11 +27,11 @@ OOS uses the Windows Font Cache for its fonts. After the font file is installed,
 
 ## More information
 
-If you are viewing a document in the web apps that already has the custom font, the custom font will show in preview, view and edit mode in the browser. Additionally, the custom font will show in the font drop-down menu within the web app.
+If you are viewing a document in the web apps that already has the custom font, the custom font will show in preview, view, and edit mode in the browser. Additionally, the custom font will show in the font drop-down menu within the web app.
 
 When you create a new document in the web apps, the custom font won't show in the default list of fonts.  However, you can search for the font by using the search feature within the font drop-down menu.  
 
 > [!NOTE]
 > You must spell the font name exactly as it appears, or the font won't be used.  For example, if the actual custom font name is "Fonts", and the user searches for "Font", the custom won't be used.
 
-Office Web Apps Server 2013 and Office Online Server don't officially support custom fonts. It is the best chance for you to use custom fonts with Office Web Apps Server 2013 by using the previous method.
+Office Online Server 2013 and Office Online Server don't officially support custom fonts. It is the best chance for you to use custom fonts with Office Online Server 2013 by using the previous method.
