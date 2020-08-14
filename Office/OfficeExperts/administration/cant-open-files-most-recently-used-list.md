@@ -10,7 +10,6 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.topic: article
-localization_priority: Normal
 ms.service: o365-solutions
 appliesto:
 - Office 365
