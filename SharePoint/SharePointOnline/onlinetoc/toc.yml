@@ -197,8 +197,16 @@
       href: ../Security/problem-with-your-account.md
   - name: Sharing and Permissions
     items:
-    - name: '"Access Denied", "You need permission to access this site", or "User not found in the directory" errors in SharePoint Online and OneDrive for Business'
+    - name: Error message when trying to access SharePoint Online or OneDrive for Business
       href: ../sharing-and-permissions/access-denied-sharepoint-error.md
+    - name: Access Denied error when an external user tries to access SharePoint Online or OneDrive for Business
+      href: ../sharing-and-permissions/error-when-external-user-tries-to-access-sharepoint-onedrive.md
+    - name: 'Access Denied error when trying to access an "Access Requests" list'
+      href: ../sharing-and-permissions/access-requests-list-shared-folder-error-access-denied.md
+    - name: Access Denied error when trying to access a shared folder
+      href: ../sharing-and-permissions/shared-folder-sharepoint-error.md
+    - name: Access Denied error when trying to approve a SharePoint Approval Workflow task
+      href: ../sharing-and-permissions/approval-workflow-access-denied-error.md
     - name: '"Everyone except external users" group is re-added to Visitors or Members group on Office 365 public group website'
       href: ../sharing-and-permissions/everyone-except-external-users-group-readded.md
     - name: '"Everyone except external users" group is removed'
