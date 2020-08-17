@@ -7,6 +7,8 @@
       href: ../access/activex-component-cannot-create-object.md
     - name: "\"Ambiguous name detected\" error"
       href: ../access/ambiguous-name-detected.md
+    - name: "\"Database or object is read-only\" error"
+      href: ../access/error-query-against-linked-sharepoint-view.md
     - name: "\"Enter Parameter Value\" dialog box appears"
       href: ../access/enter-parameter-value-when-run-query.md
     - name: "\"File already in use\" error"
@@ -127,6 +129,8 @@
       href: ../access/error-running-macro.md
     - name: Error when inserting table record
       href: ../access/error-inserting-table-record-autonumber.md
+    - name: Error when using built-in wizards
+      href: ../access/error-using-built-in-wizards.md
     - name: Error loading DLL
       href: ../access/access-wizard-fails-loading-dll.md
     - name: Error running query with UniqueValues property
@@ -365,6 +369,8 @@
       href: ../excel/change-formular-reference-type-.md
     - name: Change the Software License Registration Information for Mac
       href: ../excel/change-software-license-registration.md
+    - name: Chart trendline formula is inaccurate
+      href: ../excel/inaccurate-chart-trendline-formula.md
     - name: CHIINV statistical functions
       href: ../excel/statistical-functions-chiinv.md
     - name: Clean up workbooks with less memory
@@ -429,6 +435,8 @@
       href: ../excel/embedded-macros-not-run.md
     - name: Endlessly loop calculating cells when inserting several subtotals
       href: ../excel/endlessly-loop-calculating.md
+    - name: Error when saving a file
+      href: ../excel/error-saving-file.md
     - name: Error when sending commands in Excel
       href: ../excel/error-when-send-commands-in-excel.md
     - name: Error when you copy formulas over large area
@@ -525,6 +533,8 @@
       href: ../excel/different-print-quality.md
     - name: Large Address Aware capability change
       href: ../excel/laa-capability-change.md
+    - name: Last digits are changed to zeros
+      href: ../excel/last-digits-changed-to-zeros.md
     - name: Legacy UML features are missing
       href: ../excel/legacy-uml-features-missing.md
     - name: Limitations for working with arrays
@@ -795,18 +805,22 @@
       href: ../office-suite-issues/office-pro-plus-2010-terminal-server.md
     - name: Error 25090 with an Office application
       href: ../office-suite-issues/error-25090-starting-office-program.md
-    - name: Error when edit an equation in Office
+    - name: Error when editing an equation in Office
       href: ../office-suite-issues/issue-when-edit-equation-in-office.md
-    - name: Error when you install Office 2013
+    - name: Error when installing Office 2013
       href: ../office-suite-issues/office-2013-installation-error.md
-    - name: Error when you install VS2010 Toos for Office Runtime
+    - name: Error when installing VS2010 Toos for Office Runtime
       href: ../office-suite-issues/generic-trust-failure-(0x800b010b)-error.md
+    - name: Error when opening a document
+      href: ../office-suite-issues/error-open-document.md
     - name: FAQ about Office Activation Wizard
       href: ../office-suite-issues/faq-about-office-activation-wizard.md
     - name: Features to enable collaboration
       href: ../office-suite-issues/enable-collaboration.md
     - name: Files necessary to run the Office Customization Tool were not found
       href: ../office-suite-issues/fails-running-office-customization-tool.md
+    - name: How to determine retail or volume license
+      href: ../office-suite-issues/determine-retail-volume-license.md
     - name: Incorrect function with saving to a CD-RW or DVD/CD-RW drive
       href: ../office-suite-issues/incorrect-function-saving-office-file.md
     - name: Information about Office Click-to-Run installation
@@ -937,6 +951,8 @@
       href: ../powerpoint/presentation-file-size-increases.md
     - name: Hlink.dll Can't Be Loaded
       href: ../powerpoint/viewing-presentation-fails.md
+    - name: Fonts aren't embedded
+      href: ../powerpoint/fonts-not-embedded.md
     - name: Not enough printer memory available to print page
       href: ../powerpoint/not-enought-printer-memory-available.md
     - name: Office opens blank from SharePoint
@@ -955,6 +971,8 @@
       href: ../powerpoint/fails-starting-powerpoint-mac.md
     - name: PowerPoint stops responding (spinning wheel)
       href: ../powerpoint/powerpoint-stops-responding.md
+    - name: Save presentation as webpage is unavailable
+      href: ../powerpoint/save-presentation-as-webpage-unavailable.md
     - name: Shortcuts to control display of grid and guides
       href: ../powerpoint/grid-guides-keyboard-shortcuts.md
     - name: Slide transition sounds are missing
@@ -1067,6 +1085,8 @@
       href: ../visio/file-blocked-by-registry-policy.md
     - name: Can't open Visio files in Visio Web Access
       href: ../visio/open-visio-files-in-visio-web-access.md
+    - name: Data graphics aren't displayed
+      href: ../visio/data-graphics-not-displayed.md
     - name: Enable Windows Search service to use Search for Shapes
       href: ../visio/search-for-shapes-use-windows-search.md
     - name: Search for Shapes feature is discontinued
@@ -1113,6 +1133,8 @@
       href: ../word/change-to-print-setting-not-update.md
     - name: Configure the default search engine
       href: ../word/configure-search-engine-in-word.md
+    - name: Create TOC entries without page numbers
+      href: ../word/create-toc-entries-no-page-number.md
     - name: Cross-reference links don't update to the correct heading number
       href: ../word/cross-reference-links-update.md
     - name: Custom XML markup is removed
