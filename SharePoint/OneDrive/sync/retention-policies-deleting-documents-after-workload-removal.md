@@ -8,7 +8,6 @@ ms.date: 06/10/2020
 ms.audience: Admin
 ms.topic: article
 ms.prod: onedrive
-localization_priority: Normal
 ms.custom: 
 - CSSTroubleshoot
 - CI 119743

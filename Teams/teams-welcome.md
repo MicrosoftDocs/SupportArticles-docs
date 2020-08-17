@@ -24,9 +24,10 @@ Below is a collection of the top issues. If your issue isn't listed there, brows
 
 ## Top Teams troubleshooting articles
 
+- [Virtual cameras stop working on MacOS Teams desktop client](teams-on-mac/virtual-camera-doesnt-work-macos.md)
 - [Microsoft Teams is stuck in a login loop in Edge or Internet Explorer](./teams-sign-in/sign-in-loop.md)
 - [Issue when you access a notebook for Microsoft Teams](./teams-onenote-integration/issue-access-notebook.md)
-- [Microsoft Teams user cannot send a message in Skype for Business](./teams-im-presence/teams-user-not-send-message-in-sfb.md)
+- [Teams is slow during video meetings on laptops docked to 4K/HDR monitors](./known-issues/teams-slow-video-meetings-laptops-4k.md)
 - [Unable to create a team in Microsoft Teams](./known-issues/users-cant-create-team.md)
 - [Removed user appears as "Unknown user" in Microsoft Teams](./known-issues/removed-user-appears-as-unknown.md)
 - [Dial pad is missing in Microsoft Teams](./teams-conferencing/no-dial-pad.md)

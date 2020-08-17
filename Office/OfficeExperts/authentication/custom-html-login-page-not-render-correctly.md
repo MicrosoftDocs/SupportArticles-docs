@@ -10,7 +10,6 @@ audience: ITPro
 ms.topic: article
 ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
-localization_priority: Normal
 appliesto:
 - Microsoft Office
 ---
@@ -25,7 +24,7 @@ If a custom HTML login page(like Active Directory Federated Services) doesn't re
 
 ## Cause
 
-Microsoft 365 Apps for enterprise and Office 2016 use Internet Explorer document mode 7 (aka IE7 mode) when rendering HTML login pages in an Office application for Forms Based Authentication.
+Microsoft 365 Apps for enterprise and Office 2016 use Internet Explorer document mode 7 (also known as IE7 mode) when rendering HTML login pages in an Office application for Forms-Based Authentication.
 
 ## Workaround
 

@@ -11,8 +11,7 @@ search.appverid:
 audience: Admin
 ms.custom: CSSTroubleshoot
 ms.topic: article
-ms.prod: office-perpetual-itpro
-localization_priority: Normal 
+ms.prod: office-perpetual-itpro 
 appliesto:
 - Microsoft Project
 ---

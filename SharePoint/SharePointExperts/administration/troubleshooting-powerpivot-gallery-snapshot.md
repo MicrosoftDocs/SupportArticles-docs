@@ -8,7 +8,6 @@ search.appverid:
 audience: ITPro
 ms.service: sharepoint
 ms.topic: article
-ms.service: sharepoint-online
 ms.custom: CSSTroubleshoot
 ms.author: randring
 appliesto:

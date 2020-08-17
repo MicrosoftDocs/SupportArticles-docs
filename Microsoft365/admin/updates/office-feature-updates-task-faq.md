@@ -9,7 +9,6 @@ ms.service: o365-solutions
 ms.topic: article
 ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
-localization_priority: Normal
 search.appverid: 
 - MET150
 appliesto:
