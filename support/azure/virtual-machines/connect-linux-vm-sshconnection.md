@@ -38,7 +38,7 @@ This problem may occur if the /var/empty/sshd file is not owned by the root dire
 To change the permissions on a Linux file if you don't have SSH access, use one of the following methods:
 
 - [Azure portal](#azure-portal): Run a Linux custom script on the VM that issues the Linux chmod commands on the file that you have to change.
-- [Manual attachment](#manually-attach-your-vm-disks-to-a-temporary-vm): Delete the VM, keep the disks, mount the system disk to another temporary VM, and then update the files on the temporary VM. Then, re-create the VM from the system disk.
+- [Manual attachment](#manually-attach-your-vmdisks-to-a-temporary-vm): Delete the VM, keep the disks, mount the system disk to another temporary VM, and then update the files on the temporary VM. Then, re-create the VM from the system disk.
 - [CLI](#cli): Use the command-Line interface to run BASH commands on the VM.
 
 ### Azure portal
