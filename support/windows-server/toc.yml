@@ -7,6 +7,8 @@
       href: ./active-directory/active-directory-fsmo-roles.md
     - name: Active Directory replication error 8452
       href: ./active-directory/active-directory-replication-error-8452.md
+    - name: AD operations fail with Win32 error 8524
+      href: ./active-directory/replication-error-8524.md
     - name: AD replication error 5 - Access is denied
       href: ./active-directory/active-directory-replication-error-5.md
     - name: DCPROMO demotion fails
@@ -29,6 +31,8 @@
       href: ./active-directory/enable-kerberos-event-logging.md
     - name: How to enable LDAP signing in Windows Server
       href: ./active-directory/enable-ldap-signing-in-windows-server.md
+    - name: How to remove orphaned domains
+      href: ./active-directory/remove-orphaned-domains.md
     - name: How to restore deleted user accounts and their groups
       href: ./active-directory/retore-deleted-accounts-and-groups-in-ad.md
     - name: How to transfer or seize FSMO roles
@@ -43,6 +47,8 @@
       href: ./active-directory/naming-conventions-for-computer-domain-site-ou.md
     - name: Redirect users and computers containers
       href: ./active-directory/redirect-users-computers-containers.md
+    - name: Required trusted root certificates
+      href: ./active-directory/trusted-root-certificates-are-required.md
     - name: Syskey.exe utility is no longer supported
       href: ./active-directory/syskey-exe-utility-is-no-longer-supported.md
     - name: Troubleshoot AD replication error 2146893022
@@ -60,15 +66,55 @@
     - name: Well-known security identifiers
       href: ./active-directory/security-identifiers-in-windows.md
 
+- name: Application Management
+  items:
+    - name: How to configure DTC to work through firewalls
+      href: ./application-management/configure-dtc-to-work-through-firewalls.md
+
 - name: Backup and Storage
   items:
+    - name: Can't delete files on NTFS file system
+      href: ./backup-storage/cannot-delete-file-folder-on-ntfs-file-system.md
+    - name: Can't start a computer from a FAT32 file system USB flash drive
+      href: ./backup-storage/cannot-start-computer-from-usb-flash-drive.md
+    - name: How to restore a Windows 7 installation
+      href: ./backup-storage/how-to-restore-windows-installation.md
+    - name: How to run the Disk Cleanup tool (Cleanmgr.exe)
+      href: ./backup-storage/automating-disk-cleanup-tool.md
+    - name: Information about Event ID 51
+      href: ./backup-storage/event-id-51-information.md
+    - name: Support policy for 4K sector hard drives
+      href: ./backup-storage/support-policy-4k-sector-hard-drives.md
     - name: USB Device not recognized error
       href: ./backup-storage/usb-device-not-recognized-error.md
+    - name: Windows support for hard disks exceeding 2 TB
+      href: ./backup-storage/support-for-hard-disks-exceeding-2-tb.md
 
 - name: Deployment
   items:
+    - name: Error 0x8007000D when you activate a machine
+      href: ./deployment/0x8007000d-activate-machine.md
+    - name: Event ID 307 and 304 logged for deploying Windows
+      href: ./deployment/event-307-and-304-logged-for-deploying.md
     - name: Fix Windows Update errors
       href: ./deployment/fix-windows-update-errors.md
+    - name: How to perform an in-place/repair upgrade
+      href: ./deployment/repair-or-in-place-upgrade.md
+
+- name: Group Policy
+  items:
+    - name: Description of group policy restricted groups
+      href: ./networking/description-of-group-policy-restricted-groups.md
+    - name: How to enable the Group Policy loopback feature
+      href: ./networking/loopback-processing-of-group-policy.md
+    - name: How to force synchronization for DFSR-replicated sysvol replication
+      href: ./networking/force-authoritative-non-authoritative-synchronization.md
+    - name: How to set event log security locally or via Group Policy
+      href: ./networking/set-event-log-security-locally-or-via-group-policy.md
+    - name: Netlogon event ID 5719 or Group Policy event 1129
+      href: ./networking/netlogon-event-id-5719-or-group-policy-event-1129.md
+    - name: Use Group Policy to remotely install softwares
+      href: ./networking/use-group-policy-to-install-software.md
 
 - name: Networking
   items:
