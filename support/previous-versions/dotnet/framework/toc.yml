@@ -1,0 +1,15 @@
+- name: General
+  items:
+  - name: 64-bit managed applications fail with access violation
+    href: 64-bit-app-fails-access-violation-clr-marshaling.md
+  - name: .NET Framework 2.0 updates cause applications to crash
+    href: dotnet-2-updates-cause-applications-crash.md
+  - name: Calling the Graphics.MeasureString method hangs
+    href: graphics-measurestring-hangs.md
+  - name: The Socket.Select method doesn't block as expected
+    href: socket-select-not-block.md
+
+- name: Installation
+  items:
+  - name: Installing a .NET Framework patch fails
+    href: dotnet-framework-patch-install-fails.md

@@ -31,12 +31,12 @@ productDirectory:
     - url: biztalk/welcome-biztalk-server.md
       text: Troubleshooting articles for BizTalk Server
   - title: .NET
-    imageSrc: "media/hub-landing/dotnet.svg"
+    imageSrc: "media/hub-landing/logo_NET.svg"
     links:
     - url: dotnet/welcome-dotnet.md
       text: Troubleshooting articles for .NET
   - title: Visual Studio
-    imageSrc: "media/hub-landing/vs-ide-2019.svg"
+    imageSrc: "media/hub-landing/logo_vs-ide.svg"
     links:
     - url: visualstudio/welcome-visual-studio.md
       text: Troubleshooting articles for Visual Studio
@@ -51,7 +51,7 @@ productDirectory:
     - url: webapps/welcome-webapps.md
       text: Troubleshooting articles for Web Apps
   - title: Windows Developer
-    imageSrc: "media/hub-landing/windows.svg"
+    imageSrc: "media/hub-landing/logo_windows.svg"
     links:
     - url: windows/win32/welcome-windowsdeveloper.md
       text: Troubleshooting articles for Windows Developer
