@@ -19,9 +19,9 @@ When you try to create a Linux VM with Ed25519 SSH keys in Microsoft Azure, or w
 This issue occurs in Azure portal, Azure PowerShell, and JSON. The following is a sample of the Ed25519 SSH public key:
 
 ```
-**---- BEGIN SSH2 PUBLIC KEY ----**  
-**ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJtYkeI+Apm1CjhzwUoV2+1O94ccDsDYKX2ltKcisADy**  
-**---- END SSH2 PUBLIC KEY ----**  
+---- BEGIN SSH2 PUBLIC KEY ---- 
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJtYkeI+Apm1CjhzwUoV2+1O94ccDsDYKX2ltKcisADy
+---- END SSH2 PUBLIC KEY ---- 
 ```
 
 ## Cause

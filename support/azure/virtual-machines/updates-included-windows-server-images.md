@@ -19,9 +19,11 @@ The .NET Framework 4.7 was released in May and was made available on Windows U
 **Was there any notification of the change?**
 
 The Windows Server images include the latest Important and Recommended updates that were available at the time that the image was created. Because the included updates align with what is available on Windows Update (Important and Recommended updates), there was no notification about changes to the Windows Server images.
+
 For information about the support policy for running Microsoft server software in the Azure virtual machine environment, see [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines).
 
 ## More information
 
 Windows Update on Windows 8, Windows Server 2012, and later Windows operating system has a new automatic restart setting. After installing updates, by default Windows Update will force the computer to restart in three days instead of 15 minutes.
+
 For more information, see [Allow configuration of Automatic Updates in Windows 8 and Windows Server 2012](https://support.microsoft.com/help/2885694/allow-configuration-of-automatic-updates-in-windows-8-and-windows-serv).
