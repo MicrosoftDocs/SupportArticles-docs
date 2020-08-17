@@ -68,6 +68,6 @@ If the problem is not fixed, you can [contact support](https://support.microsoft
 
 ## References
 
-- [Error message when you run a compiled Microsoft Access MDE, ACCDE, or ADE file in Access 2010: "The database cannot be opened because the VBA project contained in it cannot be read" (64-bit only).](http://support.microsoft.com/help/2533794)
+- [Error message when you run a compiled Microsoft Access MDE, ACCDE, or ADE file in Access 2010: "The database cannot be opened because the VBA project contained in it cannot be read" (64-bit only).](https://support.microsoft.com/help/2533794)
 - ["Cannot update. Database or object is read-only" error in a query against a linked SharePoint view if there are unlinked lookup fields in Access.](https://support.microsoft.com/help/3200677)
 - [Common file name extensions in Windows](https://support.microsoft.com/help/4479981)

@@ -149,7 +149,7 @@ To recover an item that was deleted from the on-premises Active Directory schema
 > [!WARNING]
 > Make sure that only the user objects that you want to restore are marked as authoritative. Active Directory objects that are marked as authoritative in the restore process may cause many Active Directory service issues.
 
-For more information about how to perform an authoritative restore of Active Directory objects, follow [Performing an Authoritative Restore of Active Directory Objects](http://technet.microsoft.com/library/cc779573(ws.10).aspx).
+For more information about how to perform an authoritative restore of Active Directory objects, follow [Performing an Authoritative Restore of Active Directory Objects](https://technet.microsoft.com/library/cc779573(ws.10).aspx).
 
 > [!WARNING]
 > After restoring the object using Resolution 3, they may not have all service attributes (Exchange Online, Skype for Business Online etc.) automatically restored.
