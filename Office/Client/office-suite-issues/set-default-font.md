@@ -34,10 +34,10 @@ This article provides detailed steps for administrators to set the default font 
 
 1. Create a blank file that is configured by using the font and styles that you want to set as the default.
 2. Select **File** > **Save As**.
-3. Select the .dotm file name extension.
+3. Select the **.dotm** file name extension.
 4. Save the file to **%Appdata%\Microsoft\Templates**.
-5. Replace the Normal.dotm file.
-6. After the Normal.dotm file is created on the administrator's computer, you can deploy the same file to the **%Appdata%\Microsoft\Template** location on users' computers.
+5. Replace the **Normal.dotm** file.
+6. After the **Normal.dotm** file is created on the administrator's computer, you can deploy the same file to the **%Appdata%\Microsoft\Templates** location on users' computers.
 
 For more information, see [Change the default settings for new documents](https://support.office.com/article/Change-the-default-settings-for-new-documents-430B4132-E129-46E4-97D2-19C326352C7F).
 
@@ -54,7 +54,7 @@ For more information, see [Change the default settings for new documents](https:
 
   |File name|Policy setting name|Scope|Policy path|Category|Registry information|Part|Default setting|Possible settings|Supported on|Help text|
   |---|---|---|---|---|---|---|---|---|---|---|
-  |excel16.admx|Font|User|Microsoft Excel 2016\Excel Options\General|General|`HKEY_CURRENT_USER\software\policies\microsoft\office\16.0\excel\options!font`|Name, Size<br/>Arial, 10||[ ]|At least Windows Server 2008 R2 or Windows 7|Specifies the "Standard font" font name and size.|
+  |excel16.admx|Font|User|Microsoft Excel 2016\Excel Options\General|General|`HKEY_CURRENT_USER\software\policies\microsoft\office\16.0\excel\options\font`|Name, Size<br/>Arial, 10||[ ]|At least Windows Server 2008 R2 or Windows 7|Specifies the "Standard font" font name and size.|
 
   ![Set Font Group Policy Object](./media/set-default-font/gpo.png)
 
@@ -65,7 +65,7 @@ To set default font for PowerPoint, set a default theme, and save it as a .potx 
 > [!NOTE]
 > Setting the default template requires the following items:
 > - The correct file name: **Default Theme.potx**
-> - The correct location: **%appdata%\Microsoft\Template\Document Themes**
+> - The correct location: **%Appdata%\Microsoft\Templates\Document Themes**
 
 To set the default theme, follow these steps:
 
@@ -77,7 +77,7 @@ To set the default theme, follow these steps:
    > [!NOTE]
    > Don't save it here because this enables you to view your template under **Custom Office Templates**.
 
-5. Select **More options** to opens a file name dialog box, replace the whole file name with **%appdata%\Microsoft\Templates\\**, and then press Enter.
+5. Select **More options** to opens a file name dialog box, replace the whole file name with **%Appdata%\Microsoft\Templates\\**, and then press Enter.
 6. In the **Templates** folder, open the **Document Themes** folder. If you see a **Default Theme.potx** file existing in the folder, you can also make a backup of the file. To do this, select the file, press Ctrl+C, and then press Ctrl+V.
 7. Enter the name "**Default Theme**" to manually name the file, and then save it. If a Default Theme.potx file exists, you can also select the Default Theme.potx file, and then select **Save** to overwrite it.
 8. Close PowerPoint, and then select **File** > **New**. Now, you see the default template that's displayed as an option. 
