@@ -42,10 +42,6 @@ To work around this problem, use one of the following methods:
     %WINDIR%\Microsoft.NET\Framework64\v2.0.50727\ngen update
     ```
 
-## Status
-
-Microsoft has confirmed that it's a problem.
-
 ## More information
 
 For more information about the Ngen.exe tool, visit [Native Image Generator (Ngen.exe)](/previous-versions/dotnet/netframework-2.0/6t9t5wcf(v=vs.80))

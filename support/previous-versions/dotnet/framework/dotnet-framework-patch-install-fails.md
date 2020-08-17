@@ -1,6 +1,6 @@
 ---
 title: Installing a .NET Framework patch fails
-description: This article lists expected updates for .NET Framework. It also provides informatin about resolving the .NET Framework patch installation failure.
+description: This article lists expected updates for .NET Framework. It also provides information about resolving the .NET Framework patch installation failure.
 ms.date: 05/07/2020
 ms.prod-support-area-path:
 ms.reviewer: kelho
@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 2549353
 
 The information for Microsoft .NET Framework updates in the **Add and Remove Programs** or **Programs and Features** for Windows Vista and later operation system might be missing or they might be named *Update*. See the [More information](#more-information) section for the full list of expected updates.
 
-you might see the following log snippet of an error when installing a patch for the .NET Framework or when repairing the .Net Framework.
+You might see the following log snippet of an error when installing a patch for the .NET Framework or when repairing the .NET Framework.
 
 > MSI (s) (8C:14) [15:32:57:584]: Couldn't find local patch 'C:\WINDOWS\Installer\459e775f.msp'. Looking for it at its source.  
 > MSI (s) (8C:14) [15:32:57:584]: Resolving Patch source.....  
@@ -46,17 +46,17 @@ Registry information or files from the Installer Cache may be missing.
 
 2. Extract .NET Framework files.
 
-    The .NET Framework 2.0 and 3.0 can be refreshed by repairing the framework. The .MSI and .MSP source files need to be extracted. The 32 or 64 bit command line will be used to match the bitness of the target operating system.
+    The .NET Framework 2.0 and 3.0 can be refreshed by repairing the framework. The .MSI and .MSP source files need to be extracted. The 32 bit or 64 bit command line will be used to match the bitness of the target operating system.
 
     The steps for extracting the files:
 
     To download the full package, rather than the bootstrapper, .NET Framework 3.5 Service Pack 1 is available at [here](https://download.microsoft.com/download/2/0/e/20e90413-712f-438c-988e-fdaa79a8ac3d/dotnetfx35.exe).
 
-    .NET Framework 2.0, 3.0, both 32 and 64 bit are included in this download. We won't be using the 3.5 or the itanium (ia64) files.
+    .NET Framework 2.0, 3.0, both 32 bit and 64 bit are included in this download. We won't be using the 3.5 or the itanium (ia64) files.
 
     *dotnetfx35.exe /x*  
 
-    To address each of the framework version and 32 verses 64 bit target computers, extract the files into four separate directories. Here is the list of files.
+    To address each of the framework version and 32 verses 64-bit target computers, extract the files into four separate directories. Here is the list of files.
 
     - .NET Framework 3.0 32 bit
 
@@ -122,37 +122,21 @@ Registry information or files from the Installer Cache may be missing.
         - winforms.msp
         - winforms_64.msp
 
-3. Run windows installer command line.
+3. Run Windows Installer command line.
 
-    Run the following commands to repair the framework. You will need to replace `<FullPathToFiles>` with the path to the files. The double quotes ("") are required. This is a single command line and shouldn't contain any return characters. The order of the patches are significant. The properties are case sensitive.
+    Run the following commands to repair the framework. You will need to replace `<FullPathToFiles>` with the path to the files. The double quotes ("") are required. This is a single command line and shouldn't contain any return characters. The order of the patches are significant. The properties are case-sensitive.
 
-    - .NET Framework 2.0 32 bit
+    - .NET Framework 2.0 32-bit
 
-        ```console
-        msiexec /i <FullPathToFiles>\Netfx20a_x86.msi PATCH="<FullPathToFiles>\NetFX_CA.msp;<FullPathToFiles>\crt.msp;<FullPathToFiles>\NetFX_Core.msp;<FullPathToFiles>\CLR.msp;<FullPathToFiles>\ASPNET.msp;<FullPathToFiles>\NetFX_Other.msp;<FullPathToFiles>\prexp.msp;<FullPathToFiles>\winforms.msp;<FullPathToFiles>\dw.msp" REINSTALLMODE=vomus REINSTALL=ALL VSEXTUI=1 /l*v %temp%\patchs.2.0.txt
-        ```
+    - .NET Framework 2.0 64-bit 
 
-    - .NET Framework 2.0 64 bit
+    - .NET Framework 3.0 32-bit 
 
-        ```console
-        msiexec /i <FullPathToFiles>\Netfx20a_x64.msi PATCH="<FullPathToFiles>\ASPNET.msp;<FullPathToFiles>\ASPNET_64.msp;<FullPathToFiles>\clr.msp;<FullPathToFiles>\clr_64.msp;<FullPathToFiles>\crt.msp;<FullPathToFiles>\crt_64.msp;<FullPathToFiles>\dw.msp;<FullPathToFiles>\dw_64.msp;<FullPathToFiles>\NetFX_CA.msp;<FullPathToFiles>\NetFX_Core.msp;<FullPathToFiles>\NetFX_Core_64.msp;<FullPathToFiles>\NetFX_Other.msp;<FullPathToFiles>\NetFX_Other_64.msp;<FullPathToFiles>\prexp.msp;<FullPathToFiles>\winforms.msp;<FullPathToFiles>\winforms_64.msp" REINSTALLMODE=vomus REINSTALL=ALL VSEXTUI=1 /l*v %temp%\patchs.2.0.txt
-        ```
-
-    - .NET Framework 3.0 32 bit
-
-        ```console
-        msiexec /i <FullPathToFiles>\Netfx30a_x86.msi PATCH="<FullPathToFiles>\WCF.msp;<FullPathToFiles>\WCS.msp;<FullPathToFiles>\WF.msp;<FullPathToFiles>\WF_32.msp;<FullPathToFiles>\WPF1.msp;<FullPathToFiles>\WPF_Other.msp;<FullPathToFiles>\XPS.msp;<FullPathToFiles>\WPF2_32.msp;<FullPathToFiles>\WPF_Other_32.msp" REINSTALLMODE=vomus REINSTALL=ALL VSEXTUI=1 /l*v %temp%\patchs.3.0.TXT
-        ```
-
-    - .NET Framework 3.0 64 bit
-
-        ```console
-        msiexec /i <FullPathToFiles>\Netfx30a_x64.msi PATCH="<FullPathToFiles>\WCF.msp;<FullPathToFiles>\WCF_64.msp;<FullPathToFiles>\WCS.msp;<FullPathToFiles>\WCS_64.msp;<FullPathToFiles>\WF.msp;<FullPathToFiles>\WF_32.msp;<FullPathToFiles>\WF_64.msp;<FullPathToFiles>\WPF1.msp;<FullPathToFiles>\WPF1_64.msp;<FullPathToFiles>\WPF2.msp;<FullPathToFiles>\WPF2_32.msp;<FullPathToFiles>\WPF2_64.msp;<FullPathToFiles>\WPF_Other.msp;<FullPathToFiles>\WPF_Other_32.msp;<FullPathToFiles>\WPF_Other_64.msp;<FullPathToFiles>\XPS.msp" REINSTALLMODE=vomus REINSTALL=ALL VSEXTUI=1 /l*v %temp%\patchs.3.0.TXT
-        ```
+    - .NET Framework 3.0 64-bit 
 
 ## More information
 
-The following list are the expected framework updates.
+The following list is the expected framework updates.
 
 - .NET Framework 2.0 Service Pack 2
   - .NET Framework CA

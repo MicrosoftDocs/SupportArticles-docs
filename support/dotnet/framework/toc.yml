@@ -2,7 +2,7 @@
   items:
   - name: 501 syntax error when you use FtpWebRequest
     href: ftpwebrequest-behavior.md
-  - name: 64-bit managed applications fail with access violation 
+  - name: 64-bit managed applications fail with access violation
     href: ../../previous-versions/dotnet/framework/64-bit-app-fails-access-violation-clr-marshaling.md
   - name: .NET Framework 2.0 updates cause applications to crash
     href: ../../previous-versions/dotnet/framework/dotnet-2-updates-cause-applications-crash.md
@@ -134,7 +134,7 @@
     href: nested-tablelayoutpanel-large-empty-spaces.md
   - name: Text is lost when you render an XPS DocumentPage
     href: far-eastern-fonts-text-lost-on-images-xps.md
-  - name: The Socket.Select method doesn't block as expected
+  - name: The Socket.Select method doesn't block as expected
     href: ../../previous-versions/dotnet/framework/socket-select-not-block.md
   - name: Warning when service references are added
     href: warning-add-service-reference-silverlight.md

@@ -31,6 +31,4 @@ It's a known bug in 64-bit CLR marshaling where it tries to write to a readonly 
 
 ## Resolution
 
-A supported hotfix KB2589943 is now available from Microsoft. However, it's intended to correct only the problem that this article describes. Apply it only to systems that are experiencing this specific problem.
-
 To resolve this problem, contact Microsoft Customer Support Services to obtain the hotfix. For a complete list of Microsoft Customer Support Services telephone numbers and information about support costs, visit [Microsoft Support](https://support.microsoft.com/contactus/?ws=support).
