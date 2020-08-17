@@ -1,20 +1,117 @@
 - name: Welcome
   href:
 
+- name: Application Management
+  items:
+    - name: .NET Framework 3.5 installation errors
+      href: ./application-management/dotnet-framework-35-installation-error.md
+    - name: Availability and description of FCIV
+      href: ./application-management/virtualization-apps-not-work-with-hyper-v.md
+    - name: Enable Windows Installer logging
+      href: ./application-management/enable-windows-installer-logging.md
+    - name: Event 10016 when accessing DCOM components
+      href: ./application-management/event-10016-logged-when-accessing-dcom.md
+    - name: Microsoft Store app package updates are available
+      href: ./application-management/windows-81-microsoft-store-app-package-updates.md
+
+- name: Backup and Storage
+  items:
+    - name: Event ID 158 is logged for identical disk GUIDs
+      href: ./backup-and-storage/event-id-158-for-identical-disk-guids.md
+    - name: Garmin USB devices don't work
+      href: ./backup-and-storage/garmin-usb-devices-not-working.md
+
 - name: Deployment
   items:
+    - name: Customize default local user profile
+      href: ./deployment/customize-default-local-user-profile.md
+    - name: Error after you enter BitLocker PIN at startup 
+      href: ./deployment/bitlocker-too-many-pin-entry-attempts.md
+    - name: Event ID 10 is logged in Application log
+      href: ./deployment/event-10-is-logged-in-application-log.md
     - name: How to disable and re-enable hibernation
       href: ./deployment/disable-and-re-enable-hibernation.md
-
+    - name: How to enable Wake on LAN
+      href: ./deployment/wake-on-lan-feature.md
     - name: How to get updates via Windows Update
       href: ./deployment/get-updates-through-windows-update.md
+    - name: How to keep Windows up to date
+      href: ./deployment/keep-windows-up-to-date.md
+    - name: How to solve disk space issues caused by WinSxS directory
+      href: ./deployment/address-disk-space-issues-caused-by-winsxs.md
+    - name: How to validate the OEM activation key
+      href: ./deployment/validate-oem-activation-key.md
+    - name: 'Running Sysprep /generalize returns error'
+      href: ./deployment/error-occurs-when-running-sysprep-generalize.md
+    - name: Standard terminology that defines software updates
+      href: ./deployment/standard-terminology-software-updates.md
+    - name: Sysprep fails after you remove or update Microsoft Store apps
+      href: ./deployment/sysprep-fails-remove-or-update-store-apps.md
 
 - name: Group Policy
   items:
     - name: How to create and manage Central Store for registry-based policies
       href: ./group-policy/create-and-manage-central-store.md
+    - name: Use Settings app Group Policy
+      href: ./group-policy/use-settings-app-group-policy.md
+
+- name: Networking
+  items:
+    - name: Configure client proxy server settings
+      href: ./networking/configure-client-proxy-server-settings-by-registry-file.md
+    - name: How to disable network adapter power management
+      href: ./networking/power-management-on-network-adapter.md
+    - name: Mapped drive connection to network share is lost
+      href: ./networking/mapped-drive-connection-to-network-share-lost.md
+    - name: Mapped drives not available in elevated command prompt
+      href: ./networking/mapped-drives-not-available-from-elevated-command.md
+    - name: Move the CSC folder to a new location
+      href: ./networking/move-client-side-caching-folder.md
+    - name: System error 85 with NET USE command
+      href: ./networking/system-error-85-net-use-command.md
+
+- name: Performance
+  items:
+    - name: How to speed up your computer
+      href: ./performance/speed-up-your-computer.md
+    - name: Running an.exe file starts different program
+      href: ./performance/running-exe-starts-another-program.md
 
 - name: Shell Experience
   items:
+    - name: Can't start Windows Search service and error occurs
+      href: ./shell-experience/windows-search-service-not-starting.md
+    - name: Can't remove, uninstall, or reinstall Microsoft Store app
+      href: ./shell-experience/cannot-remove-uninstall-or-reinstall-microsoft-store-app.md
     - name: Fix problems in Windows Search
       href: ./shell-experience/fix-problems-in-windows-search.md
+    - name: How to modify the command line string limitation
+      href: ./shell-experience/command-line-string-limitation.md
+    - name: Microsoft Store Apps fail to start
+      href: ./shell-experience/microsoft-store-apps-fail-to-start.md
+
+- name: System Management Components
+  items:
+    - name: DNS server tool is missing for RSAT client
+      href: ./system-management-components/rsat-client-missing-dns-server-tool.md
+    - name: How to configure WINRM for HTTPS
+      href: ./system-management-components/configure-winrm-for-https.md
+    - name: WMI-Activity Event ID 5858 logged with ResultCode = 0x80041032
+      href: ./system-management-components/wmi-activity-event-5858-logged-with-resultcode-0x80041032.md
+
+- name: User Profiles and Logon
+  items:
+    - name: Can't set a convenience PIN
+      href: ./user-profiles-and-logon/cannot-configure-a-convenience-pin.md
+    - name: Renaming user account doesn't change profile path
+      href: ./user-profiles-and-logon/renaming-user-account-not-change-profile-path.md
+
+- name: Virtualization
+  items:
+    - name: Can't create a Hyper-V virtual switch
+      href: ./virtualization/cannot-create-hyper-v-virtual-switch.md
+
+- name: Windows Security
+  items:
+    - name: TPM isn't recognized as a compatible device
+      href: ./windows-security/tpm-is-not-recognized.md
