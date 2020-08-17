@@ -167,6 +167,10 @@
     items: 
     - name: Known issues in Linux
       href: ./known-issues/linux-known-issues.md
+  - name: Teams on Mac
+    items:
+    - name: Virtual Camera stops working on MacOS desktop client
+      href: ./teams-on-mac/virtual-camera-doesnt-work-macos.md
   - name: Third-party programs
     items:
     - name: Dell Encryption prevents Teams from starting correctly
