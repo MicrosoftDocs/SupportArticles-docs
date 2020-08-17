@@ -71,7 +71,7 @@ Here is more information on these scenarios:
 
   - There should be a two-way trust between these domains/forests. It can be either Forest Trust or External Trust.
 
-  - All the required ports should be opened on the firewall. If you have any questions about the ports that need to be opened, see [Service overview and network port requirements for Windows](service-overview-and-network-port-requirements.md).
+  - All the required ports should be opened on the firewall. If you have any questions about the ports that need to be opened, see [Service overview and network port requirements for Windows](../networking/service-overview-and-network-port-requirements.md).
 
   - To issue RDS Per User CALs to users in other domains, there must be a two-way trust between the domains, and the license server must be a member of the Terminal Server License Servers group in those domains.
 
