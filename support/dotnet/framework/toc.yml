@@ -2,10 +2,6 @@
   items:
   - name: 501 syntax error when you use FtpWebRequest
     href: ftpwebrequest-behavior.md
-  - name: 64-bit managed applications fail with access violation
-    href: ../../previous-versions/dotnet/framework/64-bit-app-fails-access-violation-clr-marshaling.md
-  - name: .NET Framework 2.0 updates cause applications to crash
-    href: ../../previous-versions/dotnet/framework/dotnet-2-updates-cause-applications-crash.md
   - name: A ClickOnce application fails to run
     href: manifest-definitions-dont-match-reference.md
   - name: Applications crash at startup
@@ -24,8 +20,6 @@
     href: error-mc6017-define-class-xaml.md
   - name: Break on Memory Leaks runtime check fails
     href: break-memory-leak-debugbreak-wpf.md
-  - name: Calling the Graphics.MeasureString method hangs
-    href: ../../previous-versions/dotnet/framework/graphics-measurestring-hangs.md
   - name: Can't build projects on MSBuild
     href: sgen-mixed-mode-assembly-built-v2-0-50727.md
   - name: Can't consume web services
@@ -134,8 +128,6 @@
     href: nested-tablelayoutpanel-large-empty-spaces.md
   - name: Text is lost when you render an XPS DocumentPage
     href: far-eastern-fonts-text-lost-on-images-xps.md
-  - name: The Socket.Select method doesn't block as expected
-    href: ../../previous-versions/dotnet/framework/socket-select-not-block.md
   - name: Warning when service references are added
     href: warning-add-service-reference-silverlight.md
   - name: Windows Forms applications don't release memory
@@ -159,8 +151,6 @@
     href: deploy-applications.md
   - name: ClickOnce Manifest signing is required
     href: require-clickonce-manifest-signing.md
-  - name: Installing a .NET Framework patch fails
-    href: ../../previous-versions/dotnet/framework/dotnet-framework-patch-install-fails.md
   - name: Published ClickOnce applications fail to install
     href: clickonce-app-install-launch-fail.md
   - name: Setup diagnostics
