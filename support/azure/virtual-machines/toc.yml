@@ -16,7 +16,6 @@
   - name: Fail to create a VM with Ed25519 SSH keys
     href: ed25519-ssh-keys.md
 
-
 - name: VM is not booting
   items:
   - name: Boot error 0xc000000f
@@ -50,8 +49,6 @@
   - name: OS isn't found
     href: os-not-found.md
 
-
-
 - name: VM restart issues
   items:
   - name: Can't restart after applying kernel changes
@@ -73,14 +70,12 @@
       href: cannot-connect-linux-network.md
     - name: SSH connection
       href: connect-linux-vm-sshconnection.md
-  items:
   - name: Windows
     items:
     - name: CredSSP encryption oracle remediation
       href: credssp-encryption-oracle-remediation.md
     - name: No Internet access
       href: no-internet-access-multi-ip.md
-
 
 - name: VM extension issues
   items:
@@ -101,13 +96,10 @@
   - name: Supported operating systems
     href: extension-supported-os.md
 
-
-
 - name: VM performance issues
   items:
   - name: Poor performance on Windows Server 2012 R2
     href: poor-performance-emulated-storage-stack.md
-
 
 - name: Other common issues
   items:
@@ -119,8 +111,6 @@
     href: failed-get-contents-log-error.md
   - name: Out of memory error in Linux VM
     href: oom-swap-file-linux-vm.md
-
-
 
 - name: Support statements
   items:
