@@ -109,6 +109,60 @@
     - name: Use BurFlags to reinitialize FRS
       href: ./networking/use-burflags-to-reinitialize-frs.md
 
+- name: Performance
+  items:
+    - name: Computer keeps booting into safe mode
+      href: ./performance/cannot-boot-into-normal-mode.md
+    - name: Description of Windows registry
+      href: ./performance/windows-registry-advanced-users.md
+    - name: Desktop heap limitation causes out of memory error
+      href: ./performance/desktop-heap-limitation-out-of-memory.md
+    - name: Error occurs while deleting registry keys
+      href: ./performance/error-while-deleting-key.md
+    - name: ESENT Event ID 327 and 326
+      href: ./performance/esent-event-327-326.md
+    - name: How to use Driver Verifier to identify issues
+      href: ./performance/use-driver-verifier-to-identify-issues.md
+    - name: Memory dump file options
+      href: ./performance/memory-dump-file-options.md
+    - name: Rebuild Performance Counter Library values
+      href: ./performance/rebuild-performance-counter-library-values.md
+    - name: Use WinRE to troubleshoot startup issues
+      href: ./performance/use-winre-to-troubleshoot-startup-issue.md
+    - name: Virtual memory in 32-bit version of Windows
+      href: ./performance/ram-virtual-memory-pagefile-management.md
+
+
+- name: Remote Desktop Services
+  items:
+    - name: Changes to Remote Connection Manager
+      href: ./remote-desktop-services/remote-connection-manager-changes.md
+    - name: Configure RDP listener certificates
+      href: ./remote-desktop-services/remote-desktop-listener-certificate-configurations.md
+    - name: Copying files exceeding 2 GB fails
+      href: ./remote-desktop-services/copying-2-gb-file-by-clipboard-redirection-fails.md
+    - name: How to remove entries from the Remote Desktop Connection Computer box
+      href: ./remote-desktop-services/remove-entries-from-remote-desktop-connection-computer.md
+    - name: Install RDS role service without Connection Broker
+      href: ./remote-desktop-services/install-rds-host-role-service-without-connection-broker.md
+    - name: RDS Connection Broker or RDMS fails
+      href: ./remote-desktop-services/rds-connection-broker-or-rdms-fails-caused-by-disabled-tls-10.md
+    - name: Remote desktop connection is stuck
+      href: ./remote-desktop-services/rdc-stuck-on-src-screen.md
+    - name: Remote Desktop Protocol introduction
+      href: ./remote-desktop-services/understanding-remote-desktop-protocol.md
+    - name: Set up RD licensing across domains forests or workgroups
+      href: ./remote-desktop-services/set-up-remote-desktop-licensing-across-domains-forests-workgroups.md
+    - name: Troubleshoot Remote desktop disconnected errors
+      href: ./remote-desktop-services/troubleshoot-remote-desktop-disconnected-errors.md
+
+- name: Virtualization
+  items:
+    - name: Antivirus exclusions for Hyper-V hosts
+      href: ./virtualization/antivirus-exclusions-for-hyper-v-hosts.md
+    - name: Starting or live migrating Hyper-V VMs fails
+      href: ./virtualization/starting-or-live-migrating-hyper-v-vms-fails.md
+
 - name: Windows Security
   items:
     - name: Add SAN to secure LDAP certificate
