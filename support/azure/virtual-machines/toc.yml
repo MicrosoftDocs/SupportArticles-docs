@@ -5,6 +5,8 @@
   items:
   - name: GPU is disabled
     href: gpu-disabled-upgrade-ubuntu.md
+  - name: Fail to create a VM with Ed25519 SSH keys
+    href: ed25519-ssh-keys.md
   - name: In-place system upgrade is not supported
     href: in-place-system-upgrade.md
   - name: Upgrade VM to contain more than 64 vCPUs
@@ -13,52 +15,6 @@
     href: upload-existing-hyperv-dc-azure-ps.md
   - name: Uploaded VHD is not supported
     href: uploaded-vhd-not-support.md
-  - name: Fail to create a VM with Ed25519 SSH keys
-    href: ed25519-ssh-keys.md
-
-- name: VM is not booting
-  items:
-  - name: Boot error 0xc000000f
-    href: error-code-0xc000000f.md
-  - name: Error code 0xc000000f
-    href: boot-error-0xc000000f.md
-  - name: Error code 0xc00000ba
-    href: boot-error-0xc00000ba.md
-  - name: Error code 0xc0000011
-    href: boot-error-0xc0000011.md
-  - name: Error code 0xc000014c
-    href: boot-error-0xc000014c.md
-  - name: Error code 0xc0000034
-    href: boot-error-0xc0000034.md
-  - name: Error code 0xc0000098
-    href: boot-error-0xc0000098.md
-  - name: Error code 0xc0000225
-    href: boot-error-0xc0000225.md
-  - name: Error code 0xc0000359
-    href: boot-error-0xc0000359.md
-  - name: Error code 0xc000000e
-    href: error-code-0xc000000e.md
-  - name: Error code 0xc0000605
-    href: error-code-0xc0000605.md
-  - name: Error code 0xc0000221
-    href: boot-error-0xc0000221.md
-  - name: Error code INACCESSIBLE_BOOT_DEVICE
-    href: windows-boot-failure.md
-  - name: Host node upgrade
-    href: linux-kernel-panics-upgrade.md
-  - name: OS isn't found
-    href: os-not-found.md
-
-- name: VM restart issues
-  items:
-  - name: Can't restart after applying kernel changes
-    href: kernel-related-boot issues.md
-  - name: Fails to restart or be provisioned
-    href: linux-kernel-fails-restart-provision.md
-  - name: Start VM with Last Known Good Configuration
-    href: start-vm-last-known-good.md
-
-
 
 - name: Cannot connect to my VM
   items:
@@ -76,6 +32,50 @@
       href: credssp-encryption-oracle-remediation.md
     - name: No Internet access
       href: no-internet-access-multi-ip.md
+
+- name: VM is not booting
+  items:
+  - name: Boot failure with error INACCESSIBLE_BOOT_DEVICE
+    href: windows-boot-failure.md
+  - name: Can't boot after a host node upgrade
+    href: linux-kernel-panics-upgrade.md
+  - name: Error code
+    items:
+    - name: Can't boot with 0xc000000f
+      href: error-code-0xc000000f.md
+    - name: Error code 0xc000000f
+      href: boot-error-0xc000000f.md
+    - name: Error code 0xc00000ba
+      href: boot-error-0xc00000ba.md
+    - name: Error code 0xc0000011
+      href: boot-error-0xc0000011.md
+    - name: Error code 0xc000014c
+      href: boot-error-0xc000014c.md
+    - name: Error code 0xc0000034
+      href: boot-error-0xc0000034.md
+    - name: Error code 0xc0000098
+      href: boot-error-0xc0000098.md
+    - name: Error code 0xc0000225
+      href: boot-error-0xc0000225.md
+    - name: Error code 0xc0000359
+      href: boot-error-0xc0000359.md
+    - name: Error code 0xc000000e
+      href: error-code-0xc000000e.md
+    - name: Error code 0xc0000605
+      href: error-code-0xc0000605.md
+    - name: Error code 0xc0000221
+      href: boot-error-0xc0000221.md
+  - name: OS isn't found
+    href: os-not-found.md
+
+- name: VM restart issues
+  items:
+  - name: Can't restart after applying kernel changes
+    href: kernel-related-boot issues.md
+  - name: Fails to restart or be provisioned
+    href: linux-kernel-fails-restart-provision.md
+  - name: Start VM with Last Known Good Configuration
+    href: start-vm-last-known-good.md
 
 - name: VM extension issues
   items:
@@ -126,7 +126,7 @@
     href: retirement-hybrid-use-benefit-images.md
   - name: Software support for VM
     href: server-software-support.md
-  - name: Updates to Windows Server images on Azure Marketplace
+  - name: Updates to Windows Server images
     href: updates-included-windows-server-images.md
   - name: Windows Server 2003 on Azure
     href: run-win-server-2003.md
