@@ -7,7 +7,7 @@ ms.reviewer: craigw
 ---
 # Run Windows Server 2003 on Microsoft Azure
 
-This article provides information about Windows Server 2003 support and answers some of the [most common questions](#faq) about running Windows Server 2003 on Microsoft Azure.
+This article provides information about Windows Server 2003 support and answers some of the [most common questions](#frequently-asked-questions) about running Windows Server 2003 on Microsoft Azure.
 
 _Original product version:_ &nbsp; Microsoft Windows Server 2003 R2 Datacenter Edition (32-Bit x86), Microsoft Windows Server 2003 R2 Datacenter x64 Edition, Microsoft Windows Server 2003 R2 Enterprise Edition (32-Bit x86), Microsoft Windows Server 2003 R2 Enterprise x64 Edition,
 Microsoft Windows Server 2003 R2 Standard Edition (32-bit x86), Microsoft Windows Server 2003 R2 Standard x64 Edition, Microsoft Windows Server 2003 Datacenter Edition (32-bit x86), Microsoft Windows Server 2003 Datacenter x64 Edition, Microsoft Windows Server 2003 Enterprise Edition (32-bit x86), Microsoft Windows Server 2003 Enterprise x64 Edition, Microsoft Windows Server 2003 Standard Edition (32-bit x86), Microsoft Windows Server 2003 Standard x64 Edition  

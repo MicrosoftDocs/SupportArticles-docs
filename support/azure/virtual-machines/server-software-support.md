@@ -179,5 +179,4 @@ The following significant features are not supported:
 - Supplemental guidance is available to help you use the following technologies on Azure virtual machines:
 
   - Active Directory Domain Services: [Guidelines for deploying Windows Server Active Directory in Azure virtual machines](/windows-server/identity/ad-ds/introduction-to-active-directory-domain-services-ad-ds-virtualization-level-100?redirectedfrom=MSDN).
-  - Windows SharePoint: [SharePoint on Azure Infrastructure Services](previous-versions/azure/dn275955(v=azure.100)?redirectedfrom=MSDN).
   - For information about Office activation on Azure virtual machines, see [Microsoft Office prompts for activation in Azure](https://support.microsoft.com/help/956893).

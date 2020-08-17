@@ -101,7 +101,7 @@ To resolve the issue, install CredSSP updates for both client and server so that
 
 2. In the Azure portal, configure **Network Security Groups** on the VM to allow traffic to port 5986. 
 3. In the Azure portal, select **Virtual Machine** > < **your VM** >, scroll down to the **OPERATIONS** section, click the **Run command**, and then run **EnableRemotePS**. 
-4. On the Windows-based computer, [run the Remote PowerShell script](#remote-powershell-script) for the appropriate system version of your VM. This script does the following: 
+4. On the Windows-based computer, [run the Remote PowerShell script](#remote-powershell-scripts) for the appropriate system version of your VM. This script does the following: 
    - Connect to Remote PowerShell on the VM. 
    - Create a folder to which to save the download file. 
    - Download the Credssp update. 
