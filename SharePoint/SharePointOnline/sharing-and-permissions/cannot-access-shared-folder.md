@@ -1,5 +1,5 @@
 ---
-title: Users can't access a shared folder in SharePoint Online
+title: Users cannot access a shared folder in SharePoint Online
 description: This article fixes a problem in which users can't access a shared folder in SharePoint Online.
 author: simonxjx
 manager: dcscontentpm
@@ -12,11 +12,9 @@ ms.topic: article
 ms.author: v-six
 editor: v-jesits
 ms.custom: CSSTroubleshoot
-ms.date: 08/17/2020
+ms.date: 8/17/2020
 appliesto:
 - SharePoint Online
-- search.appverid: 
-- MET150
 ---
 
 # Users can't access a shared folder in SharePoint Online
@@ -32,11 +30,11 @@ You select **Activate** to enable **Limited-access user permission lockdown mode
 
 When users browse to the shared folder, or to a file or a folder that's within the shared folder, they receive one of the following messages:
 
-    ```adoc
-    Access Denied
+```adoc
+Access Denied
         
-    You need permission to access this site.
-    ```
+You need permission to access this site.
+```
 
 ## Workaround
 
