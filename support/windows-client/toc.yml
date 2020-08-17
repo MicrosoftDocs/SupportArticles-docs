@@ -1,12 +1,19 @@
 - name: Welcome
   href:
 
+- name: Active Directory
+  items:
+    - name: W32Time doesn't start automatically
+      href: ./active-directory/w32time-not-start-on-workgroup.md
+
 - name: Application Management
   items:
     - name: .NET Framework 3.5 installation errors
       href: ./application-management/dotnet-framework-35-installation-error.md
     - name: Availability and description of FCIV
       href: ./application-management/virtualization-apps-not-work-with-hyper-v.md
+    - name: Can't uninstall an application
+      href: ./application-management/error-opening-installation-log-file.md
     - name: Enable Windows Installer logging
       href: ./application-management/enable-windows-installer-logging.md
     - name: Event 10016 when accessing DCOM components
@@ -57,6 +64,10 @@
 
 - name: Networking
   items:
+    - name: Access Denied when you access SMB file share
+      href: ./networking/access-denied-access-smb-file-share.md
+    - name: Can't turn on Network Discovery
+      href: ./networking/cannot-turn-on-network-discovery.md
     - name: Configure client proxy server settings
       href: ./networking/configure-client-proxy-server-settings-by-registry-file.md
     - name: How to disable network adapter power management
@@ -110,6 +121,8 @@
   items:
     - name: Can't create a Hyper-V virtual switch
       href: ./virtualization/cannot-create-hyper-v-virtual-switch.md
+    - name: Hyper-V can't start VM after upgrade
+      href: ./virtualization/hyper-v-not-start-vm-after-upgrade.md
 
 - name: Windows Security
   items:
