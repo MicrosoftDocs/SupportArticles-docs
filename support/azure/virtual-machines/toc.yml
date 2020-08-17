@@ -1,7 +1,7 @@
 - name: Welcome
   href: welcome-virtual-machine.md
 
-- name:Troubleshoot deployment issues
+- name: Troubleshoot deployment issues
   items:
   - name: GPU is disabled
     href: gpu-disabled-upgrade-ubuntu.md
@@ -17,7 +17,7 @@
     href: ed25519-ssh-keys.md
 
 
-- name:VM is not booting
+- name: VM is not booting
   items:
   - name: Boot error 0xc000000f
     href: error-code-0xc000000f.md
@@ -52,7 +52,7 @@
 
 
 
-- name:VM restart issues
+- name: VM restart issues
   items:
   - name: Can't restart after applying kernel changes
     href: kernel-related-boot issues.md
@@ -63,7 +63,7 @@
 
 
 
-- name:Cannot connect to my VM
+- name: Cannot connect to my VM
   items:
   - name: Linux
     items:
@@ -81,7 +81,7 @@
       href: no-internet-access-multi-ip.md
 
 
-- name:VM extension issues
+- name: VM extension issues
   items:
   - name: Can't enable Azure Disk Encryption
     href: extension-version-2.2-not-supported.md
@@ -102,13 +102,13 @@
 
 
 
-- name:VM performance issues
+- name: VM performance issues
   items:
   - name: Poor performance on Windows Server 2012 R2
     href: poor-performance-emulated-storage-stack.md
 
 
-- name:Other common issues
+- name: Other common issues
   items:
   - name: Computer names are missing
     href: computer-names-missing-blank.md
@@ -121,7 +121,7 @@
 
 
 
-- name:Support statements
+- name: Support statements
   items:
   - name: Citrix services support policy
     href: support-policy-citrix-services.md
@@ -139,21 +139,3 @@
     href: updates-included-windows-server-images.md
   - name: Windows Server 2003 on Azure
     href: run-win-server-2003.md
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
