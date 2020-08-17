@@ -47,6 +47,7 @@ The follow certificates are necessary and trusted in Windows XP and in Windows S
 |Thawte Timestamping CA|Thawte Timestamping CA|00|12/31/2020|Time Stamping|Thawte Timestamping CA|R|
 |Microsoft Root Certificate Authority|Microsoft Root Certificate Authority|79ad16a14aa0a5ad4c7358f407132e65|5/9/2021|All|Microsoft Root Certificate Authority|R|
 ||||||||
+
 The follow certificates are necessary and trusted in Microsoft Windows 2000:
 
 |Issued to|Issued by|Serial number|Expiration date|Intended purposes|Friendly name|Status|
