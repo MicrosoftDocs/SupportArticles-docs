@@ -43,8 +43,6 @@
       href: ./active-directory/naming-conventions-for-computer-domain-site-ou.md
     - name: Redirect users and computers containers
       href: ./active-directory/redirect-users-computers-containers.md
-    - name: Remove orphaned domains
-      href: ./active-directory/remove-domains-from-ad.md
     - name: Syskey.exe utility is no longer supported
       href: ./active-directory/syskey-exe-utility-is-no-longer-supported.md
     - name: Troubleshoot AD replication error 2146893022
