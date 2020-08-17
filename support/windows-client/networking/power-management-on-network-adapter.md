@@ -17,7 +17,7 @@ ms.technology: Networking
 
 This article provides a resolution to disable network adapter power management on a single computer.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1 (for ESU only), Windows Server 2008 R2 Service Pack 1 (for ESU only)  
+_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2740020
 
 ## Summary

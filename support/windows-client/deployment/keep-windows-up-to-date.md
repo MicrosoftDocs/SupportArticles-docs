@@ -17,7 +17,7 @@ ms.technology: Deployment
 
 This article helps your computer obtain the latest updates to protect the computer and make it run smoothly.
 
-_Original product version:_ &nbsp; Windows  
+_Original product version:_ &nbsp; Windows XP  
 _Original KB number:_ &nbsp; 311047
 
 ## Install high priority updates

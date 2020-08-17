@@ -17,7 +17,7 @@ ms.technology: ApplicationCompatibility
 
 This article provides solutions to disable Hyper-V, Device Guard, and Credential Guard to help you use virtualized applications.
 
-_Original product version:_ &nbsp; Windows
+_Original product version:_ &nbsp; Windows 10  
 _Original KB number:_ &nbsp; 3204980
 
 ## Symptoms

@@ -17,7 +17,7 @@ ms.technology: SysManagementComponents
 
 This article provides a solution to configuring WINRM for HTTPS.
 
-_Original product version:_ &nbsp; Windows  
+_Original product version:_ &nbsp; Windows 10  
 _Original KB number:_ &nbsp; 2019527
 
 ## Summary

@@ -57,8 +57,6 @@
 
 - name: Networking
   items:
-    - name: Can't turn on Network Discovery
-      href: ./networking/cannot-turn-on-network-discovery.md
     - name: Configure client proxy server settings
       href: ./networking/configure-client-proxy-server-settings-by-registry-file.md
     - name: How to disable network adapter power management

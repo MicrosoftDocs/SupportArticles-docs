@@ -17,7 +17,7 @@ ms.technology: Deployment
 
 This article provides a resolution to solve the disk space issues that are caused by a large Windows component store (WinSxS) directory.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1 (for ESU only), Windows Server 2008 R2 Service Pack 1 (for ESU only), Windows Server 2008 Service Pack 2 (for ESU only)  
+_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2795190
 
 ## Symptoms
