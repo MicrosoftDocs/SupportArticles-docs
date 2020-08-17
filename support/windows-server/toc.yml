@@ -3,22 +3,16 @@
 
 - name: Active Directory
   items:
-    - name: Active Directory FSMO roles
-      href: ./active-directory/active-directory-fsmo-roles.md
-    - name: Active Directory replication error 8452
-      href: ./active-directory/active-directory-replication-error-8452.md
-    - name: AD operations fail with Win32 error 8524
-      href: ./active-directory/replication-error-8524.md
-    - name: AD replication error 5 - Access is denied
-      href: ./active-directory/active-directory-replication-error-5.md
     - name: DCPROMO demotion fails
       href: ./active-directory/dcpromo-demotion-fails.md
-    - name: Diagnose Active Directory replication failures
-      href: ./active-directory/diagnose-active-directory-replication-failures.md
+    - name: Diagnose replication failures
+      href: ./active-directory/diagnose-replication-failures.md
     - name: Enable LDAP over SSL
       href: ./active-directory/enable-ldap-over-ssl-3rd-certification-authority.md
     - name: FSMO placement and optimization
       href: ./active-directory/fsmo-placement-and-optimization-on-ad-dcs.md
+    - name: FSMO roles
+      href: ./active-directory/fsmo-roles.md
     - name: Host AD DCs in virtual hosting environments
       href: ./active-directory/ad-dc-in-virtual-hosting-environment.md
     - name: How to configure AD and LDS diagnostic event logging
@@ -45,18 +39,24 @@
       href: ./active-directory/known-issues-for-group-policy-clients.md
     - name: Name computers, domains, sites, and OUs
       href: ./active-directory/naming-conventions-for-computer-domain-site-ou.md
+    - name: Operations fail with Win32 error 8524
+      href: ./active-directory/replication-error-8524.md
     - name: Redirect users and computers containers
       href: ./active-directory/redirect-users-computers-containers.md
+    - name: Replication error 1722
+      href: ./active-directory/replication-error-1722-rpc-server-unavailable.md
+    - name: Replication error 2146893022
+      href: ./active-directory/replication-error-2146893022.md
+    - name: Replication error 8452
+      href: ./active-directory/replication-error-8452.md
+    - name: Replication error 8453
+      href: ./active-directory/replication-error-8453.md
+    - name: Replication error 5 - Access is denied
+      href: ./active-directory/replication-error-5.md
     - name: Required trusted root certificates
       href: ./active-directory/trusted-root-certificates-are-required.md
     - name: Syskey.exe utility is no longer supported
       href: ./active-directory/syskey-exe-utility-is-no-longer-supported.md
-    - name: Troubleshoot AD replication error 2146893022
-      href: ./active-directory/active-directory-replication-error-2146893022.md
-    - name: Troubleshoot AD replication error 8453
-      href: ./active-directory/active-directory-replication-error-8453.md
-    - name: Troubleshoot replication error 1722
-      href: ./active-directory/replication-error-1722-rpc-server-unavailable.md
     - name: Troubleshoot domain controller replication error 1727
       href: ./active-directory/remote-procedure-call-failed-and-did-not-execute-error.md
     - name: UserAccountControl property flags
@@ -104,17 +104,17 @@
 - name: Group Policy
   items:
     - name: Description of group policy restricted groups
-      href: ./networking/description-of-group-policy-restricted-groups.md
+      href: ./group-policy/description-of-group-policy-restricted-groups.md
     - name: How to enable the Group Policy loopback feature
-      href: ./networking/loopback-processing-of-group-policy.md
+      href: ./group-policy/loopback-processing-of-group-policy.md
     - name: How to force synchronization for DFSR-replicated sysvol replication
-      href: ./networking/force-authoritative-non-authoritative-synchronization.md
+      href: ./group-policy/force-authoritative-non-authoritative-synchronization.md
     - name: How to set event log security locally or via Group Policy
-      href: ./networking/set-event-log-security-locally-or-via-group-policy.md
+      href: ./group-policy/set-event-log-security-locally-or-via-group-policy.md
     - name: Netlogon event ID 5719 or Group Policy event 1129
-      href: ./networking/netlogon-event-id-5719-or-group-policy-event-1129.md
+      href: ./group-policy/netlogon-event-id-5719-or-group-policy-event-1129.md
     - name: Use Group Policy to remotely install softwares
-      href: ./networking/use-group-policy-to-install-software.md
+      href: ./group-policy/use-group-policy-to-install-software.md
 
 - name: Networking
   items:

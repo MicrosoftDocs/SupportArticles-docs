@@ -29,7 +29,7 @@ Source: User Device Registration
 Event ID: 307  
 Level: Error  
 Description:  
-Automatic registration failed. Failed to lookup the registration service information from Active Directory. Exit code: Unknown HResult Error code: 0x801c001d. See http://go.microsoft.com/fwlink/?LinkId=623042
+Automatic registration failed. Failed to lookup the registration service information from Active Directory. Exit code: Unknown HResult Error code: 0x801c001d. See https://go.microsoft.com/fwlink/?LinkId=623042
 
 > Log Name: Microsoft-Windows-User Device Registration/Admin  
 Source: Microsoft-Windows-User Device Registration  
