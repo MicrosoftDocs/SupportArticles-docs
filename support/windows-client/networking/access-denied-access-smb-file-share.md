@@ -81,4 +81,4 @@ You can use the following methods to verify and troubleshoot the issue.
 
     See the [behavior of the SYNCHRONIZE bit](/openspecs/windows_protocols/ms-smb2/a64e55aa-1152-48e4-8206-edd96444e7f7) on Windows SMB2 clients.
 
-[!INCLUDE [Third-party disclaimer](../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
