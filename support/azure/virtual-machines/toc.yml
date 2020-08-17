@@ -35,36 +35,36 @@
 
 - name: VM is not booting
   items:
-  - name: Boot failure with error INACCESSIBLE_BOOT_DEVICE
-    href: windows-boot-failure.md
-  - name: Can't boot after a host node upgrade
-    href: linux-kernel-panics-upgrade.md
   - name: Error code
     items:
     - name: Can't boot with 0xc000000f
       href: error-code-0xc000000f.md
-    - name: Error code 0xc000000f
+    - name: Unable to boot with 0xc000000f
       href: boot-error-0xc000000f.md
-    - name: Error code 0xc00000ba
+    - name: Can't boot with 0xc00000ba
       href: boot-error-0xc00000ba.md
-    - name: Error code 0xc0000011
+    - name: Can't boot with 0xc0000011
       href: boot-error-0xc0000011.md
-    - name: Error code 0xc000014c
+    - name: Can't boot with 0xc000014c
       href: boot-error-0xc000014c.md
-    - name: Error code 0xc0000034
+    - name: Can't boot with 0xc0000034
       href: boot-error-0xc0000034.md
-    - name: Error code 0xc0000098
+    - name: Can't boot with 0xc0000098
       href: boot-error-0xc0000098.md
-    - name: Error code 0xc0000225
+    - name: Can't boot with 0xc0000225
       href: boot-error-0xc0000225.md
-    - name: Error code 0xc0000359
+    - name: Can't boot with 0xc0000359
       href: boot-error-0xc0000359.md
-    - name: Error code 0xc000000e
+    - name: Can't boot with 0xc000000e
       href: error-code-0xc000000e.md
-    - name: Error code 0xc0000605
+    - name: Can't boot with 0xc0000605
       href: error-code-0xc0000605.md
-    - name: Error code 0xc0000221
+    - name: Can't boot with 0xc0000221
       href: boot-error-0xc0000221.md
+  - name: Boot failure with error INACCESSIBLE_BOOT_DEVICE
+    href: windows-boot-failure.md
+  - name: Can't boot after a host node upgrade
+    href: linux-kernel-panics-upgrade.md
   - name: OS isn't found
     href: os-not-found.md
 
