@@ -17,7 +17,7 @@ ms.technology: WindowsSecurity
 
 The File Checksum Integrity Verifier (FCIV) is a command-prompt utility that computes and verifies cryptographic hash values of files. FCIV can compute MD5 or SHA-1 cryptographic hash values. These values can be displayed on the screen or saved in an XML file database for later use and verification.
 
-_Original product version:_ &nbsp; Windows Server
+_Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 841290
 
 ## Introduction

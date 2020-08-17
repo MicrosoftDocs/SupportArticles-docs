@@ -17,7 +17,7 @@ ms.technology: ActiveDirectory
 
 This article describes how to troubleshoot a problem in which Active Directory replication fails and generates an error (-2146893022: The target principal name is incorrect).
 
-_Original product version:_ &nbsp; Windows Server  
+_Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2090913
 
 > [!NOTE]

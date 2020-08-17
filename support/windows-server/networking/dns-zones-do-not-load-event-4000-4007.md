@@ -17,7 +17,7 @@ ms.technology: Networking
 
 This article provides a resolution to solve the event ID 4000 and 4007 that are logged when the DNS zones are not loaded on the DNS console.
 
-_Original product version:_ &nbsp; Windows Server  
+_Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2751452
 
 ## Symptoms

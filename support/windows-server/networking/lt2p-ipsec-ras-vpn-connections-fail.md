@@ -17,7 +17,7 @@ ms.technology: Networking
 
 This article provides a resolution for the issue that L2TP/IPsec VPN connections to a Windows RAS Server fail when using the MS-CHAPv2 authentication.
 
-_Original product version:_ &nbsp; Windows Server  
+_Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2811487
 
 ## Symptoms

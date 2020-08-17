@@ -17,7 +17,7 @@ ms.technology: Networking
 
 This article provides a resolution for the event ID 4013 that is logged in the DNS event log of domain controllers that are hosting the DNS server role after Windows starts.
 
-_Original product version:_ &nbsp; Windows Server  
+_Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2001093
 
 ## Symptoms

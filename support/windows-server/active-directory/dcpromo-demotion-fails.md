@@ -17,7 +17,7 @@ ms.technology: ActiveDirectory
 
 This article provides help to solve an issue where the demotion of a Microsoft Windows Server computer hosting the Active Directory Domain Services (AD DS) or domain controller server role fails.
 
-_Original product version:_ &nbsp; Windows Server  
+_Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2694933
 
 ## Symptoms
