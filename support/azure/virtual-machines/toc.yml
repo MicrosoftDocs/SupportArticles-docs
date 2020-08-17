@@ -75,6 +75,7 @@
       href: connect-linux-vm-sshconnection.md
   items:
   - name: Windows
+    items:
     - name: CredSSP encryption oracle remediation
       href: credssp-encryption-oracle-remediation.md
     - name: No Internet access
