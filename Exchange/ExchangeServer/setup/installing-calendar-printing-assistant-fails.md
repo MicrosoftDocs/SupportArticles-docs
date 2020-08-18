@@ -37,20 +37,7 @@ This issue occurs because the Calendar Print Assistant installation process look
 
 To work around this issue, use one of the following methods.
 
-## Workaround 1: Here's an easy fix
-
-To modify the registry subkey automatically, follow these steps:
-
-1. Run the **Add LastProduct value** easy fix by clicking the **Download** button or link.
-2. In the **File Download** dialog box, click **Run** or **Open**, and then follow the steps in the easy fix wizard.
-3. Install the Calendar Printing Assistant for Outlook, and then run the **Remove LastProduct value** easy fix solution to remove the **LastProduct** value.
-
-|Add LastProduct value|Remove LastProduct value|
-|---|---|
-|[Download](https://go.microsoft.com/?linkid=9840778)| [Download](https://go.microsoft.com/?linkid=9840780)|
-|||
-
-## Workaround 2: Let me fix it myself
+## Workaround
 
 > [!IMPORTANT]
 > Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.

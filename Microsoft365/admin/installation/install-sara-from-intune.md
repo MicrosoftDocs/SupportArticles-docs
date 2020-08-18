@@ -141,6 +141,6 @@ For complete information about app deployment by using Microsoft Intune, see the
  
         :::image type="content" source="media/install-sara-from-intune/install-sara-from-intune-23.png" alt-text="Type support.":::
         > [!NOTE]
-        > The SaRA tool requires access to network endpoints needed for connectivity from a user of Office 365 across an enterprise perimeter network. The current list of endpoint is provided in [Additional endpoints not included in the Office 365 IP Address and URL Web service](https://docs.microsoft.com/office365/enterprise/additional-office365-ip-addresses-and-urls).
+        > The SaRA tool requires access to network endpoints needed for connectivity from a user of Office 365 across an enterprise perimeter network. The current list of endpoint is provided in [Additional endpoints not included in the Office 365 IP Address and URL Web service](https://docs.microsoft.com/microsoft-365/enterprise/additional-office365-ip-addresses-and-urls?view=o365-worldwide).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

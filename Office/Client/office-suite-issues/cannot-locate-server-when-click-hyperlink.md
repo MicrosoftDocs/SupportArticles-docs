@@ -68,11 +68,11 @@ This problem occurs when the following conditions are true:
 
 - The ForceShellExecuteregistry key is not present in the following location or is not set to 1:
 
-    For 32-bit Office Versions installed on 64-bit OperatingSystems
+    For 32-bit Office Versions installed on 64-bit OperatingSystems
 
     `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\9.0\Common\Internet`
 
-    For 32 Bit Office Versions installed on 32 bit Operating Systems or 64 Bit Office Versions installed on 64-bit Operating Systems
+    For 32 Bit Office Versions installed on 32 bit Operating Systems or 64 Bit Office Versions installed on 64-bit Operating Systems
 
     `HKEY_LOCAL_MACHINE \Software\Microsoft\Office\9.0\Common\Internet`
 
@@ -112,7 +112,7 @@ To work around this issue, either add the ForceShellExecute subkey, if it is not
 
 ### Did this fix the problem
 
-Check whether the problem is fixed. If the problem is fixed, you are finished with this section. If the problem is not fixed, you can [contact support](https://support.microsoft.com/contactus/).
+Check whether the problem is fixed. If the problem is fixed, you are finished with this section. If the problem is not fixed, you can [contact support](https://support.microsoft.com/contactus/).
 
 ## More Information
 

@@ -129,7 +129,7 @@ Software prerequisites that are required for the installation of SharePoint Serv
 - [Microsoft Sync Framework Runtime v1.0 SP1 (x64)](https://go.microsoft.com/fwlink/p/?linkid=224449)   
 - [Microsoft AppFabric 1.1 for Windows Server](https://www.microsoft.com/download/details.aspx?id=27115)   
 - [Windows Identity Extensions](https://go.microsoft.com/fwlink/p/?linkid=252368)   
-- [Microsoft Information Protection and Control Client (MSIPC)](https://go.microsoft.com/fwlink/p/?linkid=219568) MSIPC.dll - Microsoft Active Directory Rights Management Services Client. See [AD RMS Client 2.0 Deployment Notes](https://technet.microsoft.com/library/jj159267%28v=ws.10%29.aspx) for more information.  
+- [Microsoft Information Protection and Control Client (MSIPC)](https://www.microsoft.com/download/details.aspx?id=38396) MSIPC.dll - Microsoft Active Directory Rights Management Services Client. See [AD RMS Client 2.0 Deployment Notes](https://technet.microsoft.com/library/jj159267%28v=ws.10%29.aspx) for more information.  
 - [Microsoft WCF Data Services 5.0 for OData V3](https://www.microsoft.com/download/details.aspx?id=29306)   
 - [Cumulative Update Package 1 for Microsoft AppFabric 1.1 for Windows Server (KB 2671763)](https://support.microsoft.com/help/2671763)     
 
