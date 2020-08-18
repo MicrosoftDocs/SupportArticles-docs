@@ -27,7 +27,7 @@ In this scenario, you receive the following error message:
 
 Check the **update history** for the following updates, or check the version of TSpkg.dll.
 
-| **Operating system**| **TSpkg.dll version with CredSSP update**| **CredSSP update** |
+|Operating system|TSpkg.dll version with CredSSP update|CredSSP update|
 |---|---|---|
 |Windows 7 Service Pack 1 / Windows Server 2008 R2 Service Pack 1|6.1.7601.24117| [KB4103718 (Monthly Rollup)](https://support.microsoft.com/kb/4103718) |
 | [KB4103712 (Security-only update)](https://support.microsoft.com/kb/4103712) |
@@ -46,13 +46,13 @@ This error occurs if you are trying to establish an insecure RDP connection, an
 
 See the following interoperability matrix for scenarios that are either vulnerable to this exploit or cause operational failures. 
 
-|Client|Server| ||||
-|---|---|---|---|---|---|
-||**Updated**|**Force updated clients**| **Mitigated**| **Vulnerable** |
-| **Updated**|Allowed|Blocked <sup> **2** </sup> |Allowed|Allowed||
-| **Force updated clients**|Blocked|Allowed|Allowed|Allowed|
-| **Mitigated**|Blocked <sup> **1** </sup>|Allowed|Allowed|Allowed|
-| **Vulnerable**|Allowed|Allowed|Allowed|Allowed|
+|        |               |Server            |                       |           |            |
+|--------|-----------------------|----------|-----------------------|-----------|------------|
+|        |                       | Updated  | Force updated clients | Mitigated | Vulnerable |
+| **Client** | Updated               | Allowed  | Blocked<sup> **2** </sup>             | Allowed   | Allowed    |
+|        | Force updated clients | Blocked  | Allowed               | Allowed   | Allowed    |
+|        | Mitigated             | Blocked <sup> **1** </sup> | Allowed               | Allowed   | Allowed    |
+|        | Vulnerable            | Allowed  | Allowed               | Allowed   | Allowed    |
 
 **Examples**  
 
