@@ -38,7 +38,7 @@ appliesto:
 
 ---
 
-# Error message when selecting hyperlink in Office: "Cannot locate the Internet server or proxy server"
+# Error message when selecting hyperlink in Office: (Cannot locate the Internet server or proxy server)
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
@@ -46,11 +46,11 @@ appliesto:
 
 When you create a hyperlink in an Office document and then select the link, you may receive one of these error messages:
 
-**Unable to open \<URL>. Cannot locate the Internet server or proxy server.**
+> Unable to open \<URL>. Cannot locate the Internet server or proxy server.
 
-**Unable to open \<URL>. Cannot open the specified file.**
+> Unable to open \<URL>. Cannot open the specified file.
 
-**\<URL> = the hyperlink you inserted.**
+> \<URL> = the hyperlink you inserted.
 
 > [!NOTE]
 > The hyperlink does work if you type it directly in the browser or in the Open box of the Run dialog box (select Start, and then select Run).
@@ -70,11 +70,11 @@ This problem occurs when the following conditions are true:
 
     For 32-bit Office Versions installed on 64-bit OperatingSystems
 
-    HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\9.0\Common\Internet
+    `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\9.0\Common\Internet`
 
     For 32 Bit Office Versions installed on 32 bit Operating Systems or 64 Bit Office Versions installed on 64-bit Operating Systems
 
-    HKEY_LOCAL_MACHINE \Software\Microsoft\Office\9.0\Common\Internet
+    `HKEY_LOCAL_MACHINE \Software\Microsoft\Office\9.0\Common\Internet`
 
 ## Workaround
 
@@ -93,19 +93,19 @@ To work around this issue, either add the ForceShellExecute subkey, if it is not
 
     For a 32-Bit version of Office on 64-bit version of Windows
 
-    HKLM\SOFTWARE\Wow6432Node\Microsoft\Office\9.0\Common\Internet\
+    `HKLM\SOFTWARE\Wow6432Node\Microsoft\Office\9.0\Common\Internet\`
 
     For a 32-Bit version of Office on 32-bit version of Windows
 
-    HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\9.0\Common\Internet
+    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\9.0\Common\Internet`
 
     For a 64-Bit version of Office on 64-bit version of Windows
 
-    HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\9.0\Common\Internet
+    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\9.0\Common\Internet`
 
 4. Make sure the Internet subkey is selected. On the Edit menu, point to New, and then select DWORD Value. Add the following registry value:
 
-    Value Name: ForceShellExecute
+    `Value Name: ForceShellExecute`
 
 5. Double-click ForceShellExecute, and then set the Value data to 1. Select OK.
 6. On the Registry menu, select Exit.
@@ -120,7 +120,7 @@ A hyperlink may not go to a Microsoft Word document or a Microsoft Excel workshe
 
 Office uses the Urlmon.dll file to handle all Internet transitions.
 
-In this case, the Urlmon.dll file sends a request to get a file via http:// through the proxy server. The proxy server sees that the request came from Internet Explorer, based upon the HTTP User Agent field of the `http://request`. It then gives an error 403, basically saying "Access Denied."
+In this case, the Urlmon.dll file sends a request to get a file via `http://` through the proxy server. The proxy server sees that the request came from Internet Explorer, based upon the HTTP User Agent field of the `http://request`. It then gives an error 403, basically saying "Access Denied."
 
 The Urlmon.dll file gets this and simply returns the error message mentioned earlier. The error means that the request failed, but it never states why it failed.
 
