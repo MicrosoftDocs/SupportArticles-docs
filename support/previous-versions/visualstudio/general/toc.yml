@@ -2,8 +2,8 @@
   items:
   - name: Redistribution of shared C runtime component in Visual C++
     href: redistribution-shared-c-runtime-component.md
- 
- - name: General
+
+- name: General
   items:
   - name: Visual Studio 2005 Service Pack 1 release notes
     href: vs-2005-service-pack-1-release-notes.md

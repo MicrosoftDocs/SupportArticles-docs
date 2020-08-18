@@ -137,7 +137,7 @@ To demonstrate Silverlight accessing WCF, you may need a WCF service and a Silve
     ```
 
     > [!NOTE]
-    > Only a few ports that are from 4502 to 4534 are allowed to be accessed by Silverlight, and you need a client access policy file to permit Silverlight access. For more information about how to permit Silverlight access, please refer to [Step 3](#step-3).
+    > Only a few ports that are from 4502 to 4534 are allowed to be accessed by Silverlight, and you need a client access policy file to permit Silverlight access. For more information about how to permit Silverlight access, please refer to [Step 3](#step-3-deploying-cross-domain-policy-file).
 
 6. Open a *Program.cs* file, add a namespace `System.ServiceModel`. Run the following code to start a `ServiceHost` service in `Main` method:
 
