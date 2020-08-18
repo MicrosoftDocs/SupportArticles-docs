@@ -34,9 +34,7 @@ The root site URL for SharePoint Online is provisioned based off your input when
 
 To address issues caused by deleting a root site, and to continue to allow the admins to manage what site is at the root, Microsoft has introduced the following conditions: 
 
-- Admins are no longer able to delete the root site from the SharePoint Modern Admin Center or the Manage Site Collections page in the SharePoint Admin Center. After selecting the site from the SharePoint Modern Admin Active Sites, Admins will see the **Delete** button greyed out, and hovering over the **Delete** button will inform the admin that **"The root site can't be deleted."** 
-   > [!IMPORTANT]
-   > Additional changes will soon be introduced to further prevent the root site from being deleted. This will include turning off the capability from PowerShell, Classic Admin Center, and Site Information. 
+- The root (top-level) site for your organization can't be deleted. Admins are no longer able to delete the root site from the SharePoint Modern Admin Center or the Manage Site Collections page in the SharePoint Admin Center. After selecting the site from the SharePoint Modern Admin Active Sites, Admins will see the **Delete** button greyed out, and hovering over the **Delete** button will inform the admin that **"The root site can't be deleted."** If you're a global or SharePoint admin in Microsoft 365, you can replace the root site with a different site.
 
 - To allow admins to manage which site is at the root, [Site Swap](https://docs.microsoft.com/sharepoint/modern-root-site#swap-your-root-site) has been introduced. Site Swap will allow admins to replace the root site with either a modern communication site or a classic team site. 
    > [!IMPORTANT]
