@@ -3,6 +3,7 @@ title: Redistribution of shared C runtime component
 description: Describes how to redistribute the shared C runtime component in Visual C++.
 ms.date: 06/11/2020
 ms.prod-support-area-path: 
+ms.topic: how-to
 ---
 # Redistribution of the shared C runtime component in Visual C++
 

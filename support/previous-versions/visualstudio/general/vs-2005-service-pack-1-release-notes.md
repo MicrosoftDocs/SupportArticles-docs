@@ -3,6 +3,7 @@ title: VS 2005 Service Pack 1 release notes
 description: Contains the contents of the release notes from Visual Studio 2005 Service Pack 1 (SP1).
 ms.date: 06/11/2020
 ms.prod-support-area-path: 
+ms.topic: article
 ---
 # Visual Studio 2005 Service Pack 1 release notes  
 
@@ -360,13 +361,13 @@ To resolve this issue, refer to [Error message when you try to install a large W
     class A
     {
         public:
-            typedef int N_A;
+        typedef int N_A;
     };
     template <class T>
     class B : public A<T>
     {
         public:
-            typename A<T>::N_A test();
+        typename A<T>::N_A test();
     };
     template <class T>
     typename A<T>::N_A B<T>::test()    /* 1 */
@@ -382,14 +383,14 @@ To resolve this issue, refer to [Error message when you try to install a large W
     class A
     {
         public:
-            typedef int N_A;
+        typedef int N_A;
     };
     template <class T>
     class B : public A<T>
     {
         public:
-            typedef A<T>::N_A N_B;  // typedef definition
-            typename N_B test(); // use of the typedef in the return type
+        typedef A<T>::N_A N_B;  // typedef definition
+        typename N_B test(); // use of the typedef in the return type
     };
     template <class T>
     typename B<T>::N_B B<T>::test()    // use of the typedef in the return type
@@ -407,7 +408,6 @@ To resolve this issue, refer to [Error message when you try to install a large W
     ```vb
     Namespace My
     ' The follow events are available for MyApplication:
-    '
     ' Startup: Raised when the application starts, before
     ' the startup form is created.
     ' Shutdown: Raised after all application forms are closed.

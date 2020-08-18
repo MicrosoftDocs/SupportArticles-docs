@@ -3,6 +3,7 @@ title: JLCA is available now
 description: Tell users that the Java Language Conversion Assistant (JLCA) is now available for download.
 ms.date: 06/11/2020
 ms.prod-support-area-path: 
+ms.topic: article
 ---
 # Java Language Conversion Assistant (JLCA) is now available
 
