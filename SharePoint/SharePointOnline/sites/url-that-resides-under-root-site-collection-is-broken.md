@@ -24,7 +24,7 @@ Custom applications accessing sites or content may fail.
 > 
 > **If you delete this site, all SharePoint sites in your organization will be inaccessible until you either restore the site or create a new site at \<Root URL>.**
 >
-> If users are experiencing any of these issues, the fastest resolution is to restore the root site from Deleted Sites (Recycle Bin). For more info about how to restore a root site, see [Restore a deleted site collection](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fsharepoint%2Frestore-deleted-site-collection%3FredirectSourcePath%3D%25252fen-us%25252farticle%25252frestore-a-deleted-site-collection-91c18651-c017-47d1-9c27-3a22f325d6f1&data=04%7c01%7cClaudia.Lake%40microsoft.com%7cefd613f51010438115e308d75703cf7e%7c72f988bf86f141af91ab2d7cd011db47%7c1%7c0%7c637073546195911174%7cUnknown%7cTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7c-1&sdata=6dAtTbo6%2FsxXD6DRhDkKR%2Fn82%2BuylVCE8%2FtADjnqcg4%3D&reserved=0).
+> If users are experiencing any of these issues, the fastest resolution is to restore the root site from Deleted Sites (Recycle Bin). For more info about how to restore a root site, see [Restore a deleted site collection](https://docs.microsoft.com/sharepoint/restore-deleted-site-collection?redirectSourcePath=%252fen-us%252farticle%252frestore-a-deleted-site-collection-91c18651-c017-47d1-9c27-3a22f325d6f1).
 
 ## Summary
 
@@ -38,8 +38,8 @@ To address issues caused by deleting a root site, and to continue to allow the a
    > [!IMPORTANT]
    > Additional changes will soon be introduced to further prevent the root site from being deleted. This will include turning off the capability from PowerShell, Classic Admin Center, and Site Information. 
 
-- To allow admins to manage which site is at the root, [Site Swap](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fsharepoint%2Fmodern-root-site%23swap-your-root-site&data=04%7c01%7cClaudia.Lake%40microsoft.com%7cefd613f51010438115e308d75703cf7e%7c72f988bf86f141af91ab2d7cd011db47%7c1%7c0%7c637073546195921169%7cUnknown%7cTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7c-1&sdata=GQPve6lSCJukoFM5UsAdYG22lNEsQzsrhci02YnHIyE%3D&reserved=0) has been introduced. Site Swap will allow admins to replace the root site with either a modern communication site or a classic team site. 
+- To allow admins to manage which site is at the root, [Site Swap](https://docs.microsoft.com/sharepoint/modern-root-site#swap-your-root-site) has been introduced. Site Swap will allow admins to replace the root site with either a modern communication site or a classic team site. 
    > [!IMPORTANT]
-   > Site Swap is available as a PowerShell cmdlet only. For more info about using this cmdlet and what happens with the previous root site, see [Invoke-SPOSiteSwap](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fpowershell%2Fmodule%2Fsharepoint-online%2Finvoke-spositeswap&data=02%7C01%7Cv-todmc%40microsoft.com%7Cb838e9fa97e44029b75208d758b1e83f%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637075393627150492&sdata=613RMNKp7kmUyftj4VYvzZ1vEbgEuFPQNxh6cY96oKc%3D&reserved=0). Site Swap will be available in the Modern SharePoint Admin Center as a **Replace** button in future versions. 
+   > Site Swap is available as a PowerShell cmdlet only. For more info about using this cmdlet and what happens with the previous root site, see [Invoke-SPOSiteSwap](https://docs.microsoft.com/powershell/module/sharepoint-online/invoke-spositeswap?view=sharepoint-ps). Site Swap will be available in the Modern SharePoint Admin Center as a **Replace** button in future versions. 
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).
