@@ -46,7 +46,7 @@ Local or Domain Administrators can configure this setting by using Group Policy.
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [322756](https://support.microsoft.com/help/322756).
 
 1. Click **Start**, click **Run**, type *regedit*, and then click **OK**.
-2. Locate and then click the registry subkey: `HKEY_CURRENT_USER\ Software\Microsoft\Internet Explorer\Main`
+2. Locate and then click the registry subkey: `HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main`
 
 3. On the **Edit** menu, point to **New**, click **DWORD Value**, and then add the following registry value:  
     Value Name: `GotoIntranetSiteForSingleWordEntry`  

@@ -44,12 +44,12 @@ _Original KB number:_ &nbsp; 2002013
 
     `REPADMIN` commands that commonly cite the status 5 include but are not limited to:  
 
-    - REPADMIN / KCC
-    - REPADMIN / REPLICATE
-    - REPADMIN / REPLSUM
-    - REPADMIN / SHOWREPL
-    - REPADMIN / SHOWREPS
-    - REPADMIN / SYNCALL
+    - `REPADMIN /KCC`
+    - `REPADMIN /REPLICATE`
+    - `REPADMIN /REPLSUM`
+    - `REPADMIN /SHOWREPL`
+    - `REPADMIN /SHOWREPS`
+    - `REPADMIN /SYNCALL`
 
     Sample output from `REPADMIN /SHOWREPS` depicting inbound replication from CONTOSO-DC2 to CONTOSO-DC1 failing with the **replication access was denied** error is shown below:
 
@@ -122,11 +122,11 @@ Active Directory errors and events like those cited in the symptoms section of t
 1. NC head not permitted with the **replicating directory changes** permission.
 2. The security principal initiating replication not a member of a group that has been granted **replicating directory changes**.
 3. Missing flags in the `UserAccountControl` attribute including `SERVER_TRUST_ACCOUNT` and `TRUSTED_FOR_DELEGATION`.
-4. RODC promoted into domain without having first run `ADPREP / RODCPREP`.
+4. RODC promoted into domain without having first run `ADPREP /RODCPREP`.
 
 ## Resolution
 
-AD Replication failing with error 5 has multiple root causes. Attack the problem initially using tools like DCDIAG, DCDIAG / TEST: CheckSecurityError, and NETDIAG that exposes common problems. If still unresolved, walk the list of known causes in most common, least complex, least disruptive order to least common, most complex, most disruptive order.
+AD Replication failing with error 5 has multiple root causes. Attack the problem initially using tools like `DCDIAG`, `DCDIAG /TEST`: CheckSecurityError, and NETDIAG that exposes common problems. If still unresolved, walk the list of known causes in most common, least complex, least disruptive order to least common, most complex, most disruptive order.
 
 ### Run DCDIAG, DCDIAG /TEST:CheckSecurityError, and NETDIAG
 
@@ -183,7 +183,7 @@ DCDIAG /TEST:CheckSecurityErrors was written to perform specific tests (includin
     - **Deny Access this computer from network** user right has not been enabled or does not reference failing direct or nested groups.
     - Policy precedence, blocked inheritance, WMI filtering, or the like, is NOT preventing the policy setting from applying to DC role computers.
 
-    Policy settings can be validated with RSOP.MSC but `GPRESULT / Z` is the preferred tool because it is more accurate.
+    Policy settings can be validated with RSOP.MSC but `GPRESULT /Z` is the preferred tool because it is more accurate.
 
     > [!NOTE]
     > Local policy takes precedence over policy defined in Sites, Domains, and OU.
@@ -221,13 +221,13 @@ DCDIAG /TEST:CheckSecurityErrors was written to perform specific tests (includin
     Two methods to check time accuracy include  
 
     ```console
-    C:\> DCDIAG / TEST: CheckSecurityError
+    C:\> DCDIAG /TEST: CheckSecurityError
     ```
 
     AND
 
     ```console
-    C:\> W32TM / MONITOR
+    C:\> W32TM /MONITOR
     ```
 
     Look for LSASRV 40960 events on the destination DC at the time of the failing replication request that cites a GUIDed CNAME record of the source DC with extended error:
@@ -242,7 +242,7 @@ DCDIAG /TEST:CheckSecurityErrors was written to perform specific tests (includin
     The **TKE_NYV** response indicates that the date range on the **TGS** ticket is newer than time on the target, indicating excessive time skew.
 
     > [!NOTE]
-    > `W32TM / MONITOR` only checks time on DCs in the test computers domain so you'll need to run this in each domain and compare time between the domains.
+    > `W32TM /MONITOR` only checks time on DCs in the test computers domain so you'll need to run this in each domain and compare time between the domains.
 
     > [!NOTE]
     > If system time was found to be inaccurate, make an effort to figure out why and what can be done to prevent inaccurate time going forward. Was the forest root PDC configured with an external time source? Are reference time sources online and available on the network? Was the time service running? Are DC role computers configured to use NT5DS hierarchy to source time?
@@ -326,7 +326,7 @@ DCDIAG /TEST:CheckSecurityErrors was written to perform specific tests (includin
 
     If a short cut trust exists between the destination domains, the trust path chain does not have to be validated. Instead validate the short cut trust between the destination and source domain.
 
-    Check for recent password changes to the trust with **Repadmin /showobjmeta * \<DN path for TDO in question>** Trusted Domain Object (TDO) verify that the destination DC is transitively inbound replicating the writable domain directory partition where trust password changes may take place.
+    Check for recent password changes to the trust with `Repadmin /showobjmeta * \<DN path for TDO in question>` Trusted Domain Object (TDO) verify that the destination DC is transitively inbound replicating the writable domain directory partition where trust password changes may take place.
 
     Commands to reset trusts:
 
