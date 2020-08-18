@@ -23,5 +23,5 @@ productDirectory:
   - title: Virtual Machines
     imageSrc: "https://static.docs.com/ui/media/product/azure/virtual-machine.svg"
     links:
-    - url: virtual-machine/welcome-virtual-machine.md
+    - url: virtual-machines/welcome-virtual-machine.md
       text: Support for Virtual Machines
