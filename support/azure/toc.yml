@@ -1,5 +1,11 @@
 - name: Microsoft Azure
   href: index.yml
-
+  items:
+  - name: Azure Active Directory
+    href: active-directory/welcome-azure-ad.md
+  - name: Cloud Services
+    href: cloud-services/welcome-cloud-services.md
+  - name: Virtual Machines
+    href: virtual-machine/welcome-virtual-machine.md
 - name: (Back up to Support hub page)
   href: ../index.yml
