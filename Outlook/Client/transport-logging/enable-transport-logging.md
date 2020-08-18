@@ -39,19 +39,6 @@ Warning Serious problems might occur if you modify the registry incorrectly by u
  
 To have us enable the mail logging option for you, go to the "Here's an easy fix" section. If you prefer to enable the mail logging option yourself, go to the "Let me fix it myself" section.
 
-### Here's an easy fix
- 
-To enable the mail logging option automatically, click the **Download** button. In the **File Download** dialog box, click **Run** or **Open**, and then follow the steps in the easy fix wizard. 
- 
-- This wizard may be in English only. However, the automatic fix also works for other language versions of Windows.    
-- If you're not on the computer that has the problem, save the easy fix solution to a flash drive or a CD, and then run it on the computer that has the problem.    
- 
-#### For Windows 10, Windows 8.1, Windows 8, Windows 7
-
-[download](https://download.microsoft.com/download/3/E/0/3E0EC269-4B00-4A85-94F8-EB871E4B5C50/MicrosoftEasyFix20094.mini.diagcab)
-
-### Let me fix it myself
-
 #### Enable logging
  
 To enable logging, follow the steps for your version of Outlook. 
