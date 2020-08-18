@@ -27,7 +27,7 @@ In this scenario, you receive the following error message:
 
 Check the **update history** for the following updates, or check the version of TSpkg.dll.
 
-| **Operating system**| **TSpkg.dll version with CredSSP update**| **CredSSP update** |
+|Operating system|TSpkg.dll version with CredSSP update|CredSSP update|
 |---|---|---|
 |Windows 7 Service Pack 1 / Windows Server 2008 R2 Service Pack 1|6.1.7601.24117| [KB4103718 (Monthly Rollup)](https://support.microsoft.com/kb/4103718) |
 | [KB4103712 (Security-only update)](https://support.microsoft.com/kb/4103712) |
