@@ -82,8 +82,6 @@ Use the IdFix Microsoft Azure Active Directory Synchronization Tool Error Remedi
 
 [2857385](https://support.microsoft.com/help/2857385) "Duplicate" is displayed in the ERROR column for two or more objects after you run the IdFix tool
 
-For more information about the IdFix tool, go to [IdFix Microsoft Azure Active Directory Synchronization Tool Error Remediation Tool](https://www.microsoft.com/download/details.aspx?id=36832).
-
 ### Method 2: Map an existing on-premises user to an Azure AD user
 
 To do this, see the following Microsoft Knowledge Base article:

@@ -53,7 +53,7 @@ This issue occurs with tests in the Microsoft Cloud Germany (MCG) (also called M
 
 If SharePoint Designer is experiencing connection issues to SharePoint sites, try the following common solutions.
 
-1. Verify that SharePoint Designer 2013 is updated with [SharePoint Designer Service Pack 1](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsupport.microsoft.com%2Fen-us%2Fhelp%2F2817441%2Fdescription-of-microsoft-sharepoint-designer-2013-service-pack-1-sp1&data=02%7C01%7Cv-todmc%40microsoft.com%7C61653ab0d1ad4dff583908d771dfd9bd%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637103078547623035&sdata=V%2FbGTcY9w1pNxUD4YJ%2FkA91WFQTzXqpxzOkFyDWEro4%3D&reserved=0) and the [August 2, 2016, Update for SharePoint Designer 2013](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsupport.microsoft.com%2Fen-us%2Fhelp%2F3114721%2Faugust-2-2016-update-for-sharepoint-designer-2013-kb3114721&data=02%7C01%7Cv-todmc%40microsoft.com%7C61653ab0d1ad4dff583908d771dfd9bd%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637103078547633035&sdata=3GXQpEjlg4eW5R578kCfx3GZI%2BKSG8yByor15QyWPf4%3D&reserved=0).
+1. Verify that SharePoint Designer 2013 is updated with [SharePoint Designer Service Pack 1](https://support.microsoft.com/help/2817441) and the [August 2, 2016, Update for SharePoint Designer 2013](https://support.microsoft.com/help/3114721).
 
 2. Clear the local cache files:
 
@@ -67,9 +67,9 @@ If SharePoint Designer is experiencing connection issues to SharePoint sites, tr
 
    3. Open SharePoint Designer 2013 and enter the account again to see if it works.
 
-3. [Enable Modern Authentication for Office 2013 on Windows Devices](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Foffice365%2Fadmin%2Fsecurity-and-compliance%2Fenable-modern-authentication%3FredirectSourcePath%3D%2Farticle%2FEnable-Modern-Authentication-for-Office-2013-on-Windows-devices-7dc1c01a-090f-4971-9677-f1b192d6c910%26view%3Do365-worldwide&data=02%7C01%7Cv-todmc%40microsoft.com%7C61653ab0d1ad4dff583908d771dfd9bd%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637103078547633035&sdata=jzYI8CAZa5PtUl4Jblv%2FpopBc2eWvABUulC1RcevvJc%3D&reserved=0).
+3. [Enable Modern Authentication for Office 2013 on Windows Devices](https://docs.microsoft.com/microsoft-365/admin/security-and-compliance/enable-modern-authentication?redirectSourcePath=%2Farticle%2FEnable-Modern-Authentication-for-Office-2013-on-Windows-devices-7dc1c01a-090f-4971-9677-f1b192d6c910&view=o365-worldwide).
 
-4. Administrators will need to **Allow Custom Script** in the SharePoint Admin Center settings to allow the SharePoint Designer connection. See [Allow or prevent custom script](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fsharepoint%2Fallow-or-prevent-custom-script&data=02%7C01%7Cv-todmc%40microsoft.com%7C61653ab0d1ad4dff583908d771dfd9bd%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637103078547643024&sdata=xKXHncZeN8VWXxv1auCY%2BDF0S1arTdJ%2FB%2BmRh%2BHzFyg%3D&reserved=0) for more information.
+4. Administrators will need to **Allow Custom Script** in the SharePoint Admin Center settings to allow the SharePoint Designer connection. See [Allow or prevent custom script](https://docs.microsoft.com/sharepoint/allow-or-prevent-custom-script) for more information.
 
 ## More information
 

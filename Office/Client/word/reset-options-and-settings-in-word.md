@@ -37,16 +37,8 @@ When you troubleshoot unusual behavior in the program or in a document, first de
 
 To have us reset user options and registry settings in Microsoft Word for you, go to the "Here's an easy fix" section. If you prefer to reset user options and registry settings in Microsoft Word yourself, go to the "Let me fix it myself" section.
 
-#### Here's an easy fix
- 
-To fix this problem automatically, click the [**Download**](https://download.microsoft.com/download/6/2/A/62A1385F-513F-4DCB-8F38-E4CB730A334D/MicrosoftEasyFix25011.mini.diagcab) button. In the **File Download** dialog box, click **Run** or **Open**, and then follow the steps in the easy fix wizard.
-
-- This wizard may be in English only. However, the automatic fix also works for other language versions of Windows.   
-- If you're not on the computer that has the problem, save the easy fix solution to a flash drive or a CD, and then run it on the computer that has the problem.   
-
-#### Let me fix it myself
-
-Warning Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall your operating system. Microsoft cannot guarantee that these problems can be solved. Modify the registry at your own risk.
+> [!WARNING]
+> Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall your operating system. Microsoft cannot guarantee that these problems can be solved. Modify the registry at your own risk.
 
 To manually reset a registry key, you must first delete it. To do this, follow these steps.
 

@@ -140,13 +140,6 @@ Update the registry of the Office client computer to install the needed content 
 
 2. To install the content types into the registry's MIME database on Office computers automatically, go to the "Here's an easy fix" section.   
 
-### Here's an easy fix
-
-To fix this problem automatically, click [Download](https://download.microsoft.com/download/6/B/4/6B42815C-DA94-4B64-8E83-4B90DADC676E/MicrosoftEasyFix50832.msi). In the **File Download ** dialog box, click **Run** or **Open**, and then follow the steps in the easy fix wizard.  
-
-- This wizard may be in English only. However, the automatic fix also works for other language versions of Windows.   
-- If you're not on the computer that has the problem, save the easy fix solution to a flash drive or a CD, and then run it on the computer that has the problem.     
-
 ## More Information  
 
 SharePoint workflow task buttons may be missing in Office documents for other reasons than those described in this article. Some other reasons may be:  
