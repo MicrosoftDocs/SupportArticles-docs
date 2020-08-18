@@ -30,10 +30,10 @@ appliesto:
 > **This article only addresses the crash scenario where mso30win32client.dll is the module name in a crash signature.**
 >
 > For other scenarios, see the following articles:
-> - [Excel not responding, hangs, freezes, or stops working](https://nam06.safelinks.protection.outlook.com/?url=https://support.office.com/article/excel-not-responding-hangs-freezes-or-stops-working-37e7d3c9-9e84-40bf-a805-4ca6853a1ff4&data=02%7c01%7cjoselr%40microsoft.com%7c3a3f46085a8d4c03952f08d7aaaca267%7c72f988bf86f141af91ab2d7cd011db47%7c1%7c0%7c637165530791689887&sdata=v5zjf5w2W2oN2J8e3CBlXLS8qz6ZfsQTY9AFwJpT%2BP4%3D&reserved=0)
-> - [PowerPoint isn't responding, hangs, or freezes](https://nam06.safelinks.protection.outlook.com/?url=https://support.office.com/article/powerpoint-isn-t-responding-hangs-or-freezes-652ede6e-e3d2-449a-a07f-8c800dfb948d&data=02%7c01%7cjoselr%40microsoft.com%7c3a3f46085a8d4c03952f08d7aaaca267%7c72f988bf86f141af91ab2d7cd011db47%7c1%7c0%7c637165530791689887&sdata=qhPEpBkXpZh5p5bIDfGIdVDdpwujPgsl%2BG8AGDlH7cc%3D&reserved=0)
-> - [I get a "stopped working" error when I start Office applications on my PC](https://nam06.safelinks.protection.outlook.com/?url=https://support.office.com/article/i-get-a-stopped-working-error-when-i-start-office-applications-on-my-pc-52bd7985-4e99-4a35-84c8-2d9b8301a2fa&data=02%7c01%7cjoselr%40microsoft.com%7c3a3f46085a8d4c03952f08d7aaaca267%7c72f988bf86f141af91ab2d7cd011db47%7c1%7c0%7c637165530791699886&sdata=9yFar2ROCjZbAI5bEU0fH3dfWTq2zbcJVGOs8S8rhSo%3D&reserved=0)
-> - [Help protect your files in case of a crash](https://nam06.safelinks.protection.outlook.com/?url=https://support.office.com/article/help-protect-your-files-in-case-of-a-crash-551c29b1-6a4b-4415-a3ff-a80415b92f99&data=02%7c01%7cjoselr%40microsoft.com%7c3a3f46085a8d4c03952f08d7aaaca267%7c72f988bf86f141af91ab2d7cd011db47%7c1%7c0%7c637165530791699886&sdata=O8DX3XwuVwBgaP9oqzAITClLhXcsN6iUXuOmt32Cy/0%3D&reserved=0)
+> - [Excel not responding, hangs, freezes, or stops working](https://support.microsoft.com/office/37e7d3c9-9e84-40bf-a805-4ca6853a1ff4)
+> - [PowerPoint isn't responding, hangs, or freezes](https://support.microsoft.com/office/652ede6e-e3d2-449a-a07f-8c800dfb948d)
+> - [I get a "stopped working" error when I start Office applications on my PC](https://support.microsoft.com/office/52bd7985-4e99-4a35-84c8-2d9b8301a2fa)
+> - [Help protect your files in case of a crash](https://support.microsoft.com/office/551c29b1-6a4b-4415-a3ff-a80415b92f99)
 >
 > If you still couldn't find a solution with Office Applications crashing or not starting, you might check the [Microsoft Community Office Commercial Admin Center Forums](https://techcommunity.microsoft.com/t5/admin-center/bd-p/AdminCenter).
 

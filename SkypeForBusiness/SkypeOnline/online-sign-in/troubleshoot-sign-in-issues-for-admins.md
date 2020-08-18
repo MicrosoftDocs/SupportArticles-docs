@@ -120,19 +120,9 @@ If the issue still exists, go to the [Office 365 Desktop Setup (Lync 2010)](#off
 
 Make sure that you have the most current version of the [Microsoft Online Services Sign-in Assistant](https://www.microsoft.com/download/details.aspx?id=28177).
 
-If the issue still exists, go to the [Delete Lync 2010 sign-in information](#delete-lync-2010-sign-in-information) section.
-
 ###### Delete Lync 2010 sign-in information
 
 Make sure that previously saved sign-in information isn't blocking your current sign-in attempt.
-
-- Windows 8
-
-  Download the [easy fix 20045](https://go.microsoft.com/?linkid=9824106), and then click **Run**.
-
-- Windows 7, Windows Vista, Windows XP, Windows Server 2008, or Windows Server 2003
-
-  Download the [easy fix 50935](https://go.microsoft.com/?linkid=9818930), and then click **Run**.
 
 If the issue still exists, clear the [Clear the DNS cache (Lync 2010)](#clear-the-dns-cache-lync-2010) section.
 
