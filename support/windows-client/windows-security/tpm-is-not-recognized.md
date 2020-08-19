@@ -17,7 +17,7 @@ ms.technology: WindowsSecurity
 
 This article provides a resolution for the issue that a Trusted Platform Module (TPM) isn't recognized as a compatible device on some Windows 7-based devices.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Original product version:_ &nbsp; Windows 10  
 _Original KB number:_ &nbsp; 2895212
 
 ## Symptoms
