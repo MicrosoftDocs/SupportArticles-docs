@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 815811
 - [Summary](#summary)
 - [Requirements](#requirements)
 - [Write to and read from MSMQ](#write-to-and-read-from-msmq)
-- [Complete code listing (Form1.cs)](#complete-code-listing-%28form1.cs%29)
+- [Complete code listing (Form1.cs)](#complete-code-listing-form1cs)
 - [Verify the code](#verify-the-code)
 - [Troubleshoot](#troubleshoot)
 
@@ -119,7 +119,8 @@ The `System.Messaging` namespace in the .NET Framework has the classes that you 
 
     3. To send a message to MSMQ, create an instance of the `MessageQueue` class and call the `Send` method that passes in the `Message` object. The `MessageQueue` class is the wrapper that manages the interaction with MSMQ.
 
-        Notice the syntax for setting the path of the private queue that you created in the Computer Management console. Private queues take the form `machinename\Private$\queuename`. Local host machines are referenced with a dot or a period (shown as ".").
+        > [!NOTE]
+        > The syntax for setting the path of the private queue that you created in the Computer Management console. Private queues take the form `machinename\Private$\queuename`. Local host machines are referenced with a dot or a period (shown as *.*).
 
         ```csharp
         MessageQueue msgQ =new MessageQueue(".\\Private$\\billpay");

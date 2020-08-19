@@ -8,7 +8,7 @@ ms.prod-support-area-path:
 
 This article demonstrates how to manually remove the necessary Microsoft Message Queue (MSMQ) components to allow a clean reinstallation of MSMQ Server without any conflicts with a previous installation.
 
-_Original product version:_ &nbsp; Microsoft Message Queue  
+_Original product version:_ &nbsp; Microsoft Message Queuing  
 _Original KB number:_ &nbsp; 202124
 
 ## Introduction

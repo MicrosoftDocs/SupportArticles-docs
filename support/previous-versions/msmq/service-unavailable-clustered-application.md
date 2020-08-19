@@ -8,7 +8,7 @@ ms.prod-support-area-path:
 
 This article helps to fix the Microsoft Message Queuing (MSMQ) service unavailable error that occurs when clustered application uses MSMQ to send or receive messages.
 
-_Original product version:_ &nbsp; Message Queuing (MSMQ)  
+_Original product version:_ &nbsp; Microsoft Message Queuing  
 _Original KB number:_ &nbsp; 2658108
 
 ## Symptoms

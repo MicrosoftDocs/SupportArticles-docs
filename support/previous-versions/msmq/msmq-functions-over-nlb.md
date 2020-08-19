@@ -27,7 +27,7 @@ MSMQ is supported in an NLB environment for both sending and receiving messages 
 - Non-transactional messaging by using Direct=TCP
 - Non-transactional messaging by using Direct=OS with validation disabled
 - Non-transactional messaging by using Direct=HTTP
-- Transactional messaging by using a specific configuration that uses store and forward servers and a single back-end server
+- Transactional messaging by using a specific configuration that uses store and forward servers and a single back-end server.
 
 > [!NOTE]
 > Only private queues are supported destinations in any one of these configurations. Because the virtual network name will not have a corresponding Active Directory directory service object, the properties of the destination queue cannot be queried. You may be able to send messages to public queues as long as the public queues are accessed by using a direct format name instead of by using the standard path.
@@ -47,9 +47,9 @@ This configuration only works when validation is disabled. To disable validation
 2. Locate and then click the following key in the registry:  
  `HKEY_LOCAL_MACHINE\Software\Microsoft\MSMQ\Parameters`
 3. On the **Edit** menu, point to **New**, and then click **DWORD Value**.
-4. Type `IgnoreOSNameValidation`, and then press **ENTER**.
+4. Type *IgnoreOSNameValidation*, and then press **ENTER**.
 5. On the **Edit** menu, click **Modify**.
-6. Type **1**, and then click **OK**.
+6. Type *1*, and then click **OK**.
 
 By default, MSMQ verifies the message that it receives to determine whether the message is intended for the local computer. If the message is not intended for the local computer, the message is rejected.
 
