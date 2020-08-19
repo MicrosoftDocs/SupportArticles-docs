@@ -1,0 +1,22 @@
+- name: General
+  items:
+  - name: Clustering support for MSMQ
+    href: clustering-support-msmq.md
+  - name: Error when RAM exceeds allocated memory
+    href: error-ram-exceeds-allocated-memory.md
+  - name: Cluster resource takes long time to fail over
+    href: msmq-cluster-takes-long-to-fail-over.md
+  - name: MSMQ functions over Network Load Balancing
+    href: msmq-functions-over-nlb.md
+  - name: Optimize Message Queuing performance
+    href: optimize-message-queuing-performance.md
+  - name: Service is unavailable for clustered application
+    href: service-unavailable-clustered-application.md
+  - name: Stored Procedures are executed in reverse order
+    href: stored-procedures-reverse-order-db2.md
+  - name: Access Denied when you perform transaction remote receive
+    href: transaction-remote-receive-access-denied.md
+  - name: Manually  uninstall Message Queue Server
+    href: uninstall-message-queue-server.md
+  - name: Write and read  Message Queuing in Visual C#
+    href: write-read-msmq-visual-csharp.md
