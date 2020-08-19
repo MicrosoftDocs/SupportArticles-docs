@@ -1,5 +1,5 @@
 ### YamlMime:Hub
-title: Microsoft commercial troubleshooting
+title: Microsoft troubleshooting documentation
 
 summary: Find the documentation you need to troubleshoot issues and apply workarounds for the following commercial products from Microsoft.
 
@@ -8,7 +8,7 @@ brand: sql-server
 
 
 metadata:
-   title: Microsoft commercial troubleshooting | Microsoft Docs
+   title: Microsoft troubleshooting documentation | Microsoft Docs
    description: Find the documentation you need to troubleshoot issues and apply workarounds for the following commercial products from Microsoft.
    ms.topic: hub-page
 
