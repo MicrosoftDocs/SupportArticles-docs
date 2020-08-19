@@ -54,8 +54,8 @@ To mount the database again, and to prevent the database from being automaticall
     Get-MailboxDatabase -Identity "<database name>" | Format-Table Name, GUID
     ```
 
-3. If the `Database Size Limit` in GB DWORD value exists for the subkey, change it to the size that you want, in GB.
-4. If the `Database Size Limit` in GB DWORD value does not exist for the subkey, create a new DWORD value with that name, and then set its value to the size that you want, in GB.
+3. If the `Database Size Limit in GB` DWORD value exists for the subkey, change it to the size that you want, in GB.
+4. If the `Database Size Limit in GB` DWORD value does not exist for the subkey, create a new DWORD value with that name, and then set its value to the size that you want, in GB.
 5. Mount the database on the server by using Exchange Management Shell and the `-Force` switch.
 
 > [!NOTE]
