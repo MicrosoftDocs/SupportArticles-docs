@@ -47,8 +47,6 @@ This option lets users who have successfully authenticated through multi-factor 
 
 This is true even if the app is set to **Require multi-factor authentication,** **Require multi-factor authentication when not at work**, or **Block access when not at work**, and the user's device isn't on a trusted network.
 
-For more information, see [Suspend Multi-Factor Authentication for remembered devices and browsers (Public Preview)](/documentation/articles/multi-factor-authentication-whats-next/#suspend-multi-factor-authentication-for-remembered-devices-and-browsers-public-preview).
-
 **For Scenario 2**:
 
 For users who are members of the exception group, the requirement for multi-factor authentication on the user account is overridden.

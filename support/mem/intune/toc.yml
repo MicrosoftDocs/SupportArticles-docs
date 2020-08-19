@@ -122,6 +122,8 @@
     href: remotewipe-fails-sending-dowipe-command.md
   - name: UPN listed as None for orphaned devices
     href: orphaned-device-upn-shown-as-none.md
+  - name: Windows 10 devices can't sync with Intune
+    href: cannot-sync-windows-10-devices.md
 - name: Device protection
   items:
   - name: BitLocker-encrypted device displays as Not compliant

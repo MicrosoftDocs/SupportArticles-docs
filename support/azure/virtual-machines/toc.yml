@@ -1,0 +1,132 @@
+- name: Welcome
+  href: welcome-virtual-machines.md
+
+- name: Troubleshoot deployment issues
+  items:
+  - name: GPU is disabled
+    href: gpu-disabled-upgrade-ubuntu.md
+  - name: Fail to create a VM with Ed25519 SSH keys
+    href: ed25519-ssh-keys.md
+  - name: In-place system upgrade is not supported
+    href: in-place-system-upgrade.md
+  - name: Upgrade VM to contain more than 64 vCPUs
+    href: vm-cannot-upgrade-64-vcpu.md
+  - name: Upload Hyper-V DC to Azure
+    href: upload-existing-hyperv-dc-azure-ps.md
+  - name: Uploaded VHD is not supported
+    href: uploaded-vhd-not-support.md
+
+- name: Cannot connect to my VM
+  items:
+  - name: Linux
+    items:
+    - name: Debian Linux VM
+      href: cannot-connect-debian-linux.md
+    - name: Network issues
+      href: cannot-connect-linux-network.md
+    - name: SSH connection
+      href: connect-linux-vm-sshconnection.md
+  - name: Windows
+    items:
+    - name: CredSSP encryption oracle remediation
+      href: credssp-encryption-oracle-remediation.md
+    - name: No Internet access
+      href: no-internet-access-multi-ip.md
+
+- name: VM is not booting
+  items:
+  - name: Error code
+    items:
+    - name: Can't boot with 0xc000000f
+      href: error-code-0xc000000f.md
+    - name: Unable to boot with 0xc000000f
+      href: boot-error-0xc000000f.md
+    - name: Can't boot with 0xc00000ba
+      href: boot-error-0xc00000ba.md
+    - name: Can't boot with 0xc0000011
+      href: boot-error-0xc0000011.md
+    - name: Can't boot with 0xc000014c
+      href: boot-error-0xc000014c.md
+    - name: Can't boot with 0xc0000034
+      href: boot-error-0xc0000034.md
+    - name: Can't boot with 0xc0000098
+      href: boot-error-0xc0000098.md
+    - name: Can't boot with 0xc0000225
+      href: boot-error-0xc0000225.md
+    - name: Can't boot with 0xc0000359
+      href: boot-error-0xc0000359.md
+    - name: Can't boot with 0xc000000e
+      href: error-code-0xc000000e.md
+    - name: Can't boot with 0xc0000605
+      href: error-code-0xc0000605.md
+    - name: Can't boot with 0xc0000221
+      href: boot-error-0xc0000221.md
+  - name: Boot failure with error INACCESSIBLE_BOOT_DEVICE
+    href: windows-boot-failure.md
+  - name: Can't boot after a host node upgrade
+    href: linux-kernel-panics-upgrade.md
+  - name: OS isn't found
+    href: os-not-found.md
+
+- name: VM restart issues
+  items:
+  - name: Can't restart after applying kernel changes
+    href: kernel-related-boot issues.md
+  - name: Fails to restart or be provisioned
+    href: linux-kernel-fails-restart-provision.md
+  - name: Start VM with Last Known Good Configuration
+    href: start-vm-last-known-good.md
+
+- name: VM extension issues
+  items:
+  - name: Can't enable Azure Disk Encryption
+    href: extension-version-2.2-not-supported.md
+  - name: Can't process extensions
+    href: linux-agent-cannot-process-extensions.md
+  - name: Extension status isn't reported
+    href: linux-vm-extension-status-not-reported.md
+  - name: Linux VM extensions stop running
+    href: extensions-stop-running.md
+  - name: Minimum version support for agents
+    href: support-extensions-agent-version.md
+  - name: Previous command is rerun
+    href: customscript-reruns-previous-command.md
+  - name: Supported extensions
+    href: support-agent-extensions.md
+  - name: Supported operating systems
+    href: extension-supported-os.md
+
+- name: VM performance issues
+  items:
+  - name: Poor performance on Windows Server 2012 R2
+    href: poor-performance-emulated-storage-stack.md
+
+- name: Other common issues
+  items:
+  - name: Computer names are missing
+    href: computer-names-missing-blank.md
+  - name: Fail to ping a Clustered Name
+    href: ping-clustered-name-fail.md
+  - name: Failed to get log in Boot Diagnostics
+    href: failed-get-contents-log-error.md
+  - name: Out of memory error in Linux VM
+    href: oom-swap-file-linux-vm.md
+
+- name: Support statements
+  items:
+  - name: Citrix services support policy
+    href: support-policy-citrix-services.md
+  - name: Changes to Windows Server images default size
+    href: default-size-images-changed-30-gb.md
+  - name: IaaS VM logs
+    href: iaas-logs.md
+  - name: Maximum RAM memory of Linux VM
+    href: max-linux-ram-limited-64-gb.md
+  - name: Retirement of the Hybrid Use Benefit images
+    href: retirement-hybrid-use-benefit-images.md
+  - name: Software support for VM
+    href: server-software-support.md
+  - name: Updates to Windows Server images
+    href: updates-included-windows-server-images.md
+  - name: Windows Server 2003 on Azure
+    href: run-win-server-2003.md

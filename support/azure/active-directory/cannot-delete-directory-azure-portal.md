@@ -43,9 +43,7 @@ To learn more about how to add a guest user, see [Create or edit users](/previou
 - A user who has an existing Microsoft account
 - A user in another Azure AD directory
 
-This user must also be an admin of your Azure subscription. To learn more about how to add an admin, go to the following Azure website:
-
-[How to add or change Azure administrator roles](/documentation/articles/billing-add-change-azure-subscription-administrator/)
+This user must also be an admin of your Azure subscription.
 
 ## Delete all users except yourself
 
