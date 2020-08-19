@@ -17,7 +17,7 @@ ms.technology: ActiveDirectory
 
 This article provides a resolution to solve the high Lsass.exe CPU utilization on an Active Directory Domain Controllers.
 
-_Original product version:_ &nbsp; Windows Server  
+_Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2550044
 
 ## Symptoms

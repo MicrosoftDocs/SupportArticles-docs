@@ -17,7 +17,7 @@ ms.technology: Performance
 
 This article describes the Windows registry and provides information about how to edit and back up it.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Original product version:_ &nbsp; Windows 10, Windows Server 2012 R2
 _Original KB number:_ &nbsp; 256986
 
 ## Description of the registry
