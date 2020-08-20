@@ -19,11 +19,11 @@ appliesto:
 - OneDrive for Business
 ---
 
-# Access Denied error when trying to approve a SharePoint Approval Workflow task
+# Error when trying to approve a SharePoint Approval Workflow task
 
 ## Symptoms
 
-You receive one of the following messages when trying to approve an Approval Workflow task in SharePoint Online or OneDrive for Business:
+You receive one of the following messages when you try to approve an Approval Workflow task in SharePoint Online or OneDrive for Business:
 
 - Access Denied
 - You need permission to access this site
@@ -31,7 +31,7 @@ You receive one of the following messages when trying to approve an Approval Wor
 
 ## Cause
 
-There are many scenarios which can prompt one of these messages. The most frequent cause is that permissions for the user or administrator are configured incorrectly or not configured at all.
+Many scenarios can generate these error messages. The most frequent cause is that permissions for the user or administrator are configured incorrectly or not configured at all.
 
 ## Resolution
 
@@ -47,10 +47,12 @@ For more information about approval workflows, go to [Understand approval workfl
 
 For more information about permission levels in SharePoint Online, go to [Understanding permission levels](https://support.office.com/article/understanding-permission-levels-in-sharepoint-87ecbb0e-6550-491a-8826-c075e4859848?ocmsassetID=HA102772294&CorrelationId=8cb2ee53-10d3-48ec-baee-588885e94ba3&ui=en-US&rs=en-US&ad=US).
 
-For more information about "Access Denied" errors in SharePoint or OneDrive for Business, see the following articles: 
+For more information about "Access Denied" errors in SharePoint or OneDrive for Business, see the following articles:
 
-- [Error message when trying to access SharePoint Online or OneDrive for Business](access-denied-sharepoint-error.md)
-- [Error message when an external user tries to access SharePoint Online or OneDrive for Business](error-when-external-user-tries-to-access-sharepoint-onedrive.md)
-- [Access Denied error when trying to access a shared folder or "Access Requests" list](access-requests-list-error-access-denied.md)
+
+- [Error when trying to access SharePoint Online or OneDrive for Business](access-denied-sharepoint-error.md)
+- [Error when an external user tries to access SharePoint Online or OneDrive for Business](error-when-external-user-tries-to-access-sharepoint-onedrive.md)
+- [Error when trying to access a shared folder or "Access Requests" list](access-requests-list-error-access-denied.md)
+- [Error when trying to access a shared folder](shared-folder-sharepoint-error.md)
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).
