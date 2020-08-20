@@ -68,24 +68,8 @@ If you're an advanced user and want to check the PDFMOfficeAddin.dll version com
 |2016 (32-bit)|11.0.16 and later|
 |2016 (64-bit)|11.0.16 and later|
 
-#### Method 2: Use the Fix-it to automatically disable Acrobat PDFMaker Office COM add-in
-You can run the following Fix-it, which will automatically disable the add-in for you. 
+#### Method 2: Manually disable Acrobat PDFMaker Office COM Add-in
 
-> [!IMPORTANT]
-> To download the troubleshooter, select the **Download** button. In the **File Download** dialog box, select **Run** or **Open**, and then follow the steps in the easy fix wizard.
-
-- This wizard may be in English only. However, the automatic fix also works for other language versions of Windows.   
-- If you're not on the computer that has the problem, save the easy fix solution to a flash drive or a CD, and then run it on the computer that has the problem.   
-
-#### For a Windows 10, Windows 8.1, or Windows 8-based computer
-
-Download the [Fix-it](https://go.microsoft.com/?linkid=9824891) to disable the PDFMaker add-in.
-
-#### For a Windows 7, Windows Vista, Windows XP, Windows Server 2008, or Windows Server 2003-based computer
-
-Download the [Fix-it](https://go.microsoft.com/?linkid=9827636) to disable the PDFMaker add-in.
-
-#### Method 3: Manually disable Acrobat PDFMaker Office COM Add-in 
 If you have administrative permissions, you can also disable the add-in by following these steps in each Office program:
 
 
@@ -102,6 +86,7 @@ If you cannot disable the add-in by following these steps, use one of the follow
 First, exit the Office program that you're having issues with when the PDFMaker add-in is loaded, and then use one of the following methods to start Registry Editor. 
 
 #### Windows 8
+
 From the Start screen, type CMD. In the results pane, swipe down on Command Prompt to reveal the charm bar, then select **Run as administrator** on the charm bar. If you are using a mouse, right-click the **Command Prompt** to reveal the charm bar.
 
 #### Windows 7, Windows Vista, or Windows XP

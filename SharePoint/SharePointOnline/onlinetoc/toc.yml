@@ -169,8 +169,6 @@
       href: ../search/near-duplicate-items-are-not-listed-in-search-results.md
     - name: No updated results when searching people categories properties
       href: ../search/updated-results-are-not-returned-when-searching-people-properties.md
-    - name: Private OneDrive for Business results aren't included
-      href: ../Search/private-onedrive-results-not-included.md
     - name: Search doesn't provide results from another language
       href: ../Search/no-search-results-from-another-language.md
     - name: Search results are missing
