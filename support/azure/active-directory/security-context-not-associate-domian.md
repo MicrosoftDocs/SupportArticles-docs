@@ -24,6 +24,6 @@ Log on to the computer by using a user account that's a member of the domain in 
 
 ## More information
 
-For more information about the IdFix tool, see [IdFix DirSync Error Remediation Tool](https://github.com/microsoft/idfix).
+For more information about the IdFix tool, see [IdFix DirSync Error Remediation Tool](https://www.microsoft.com/download/details.aspx?id=36832).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowsazuread) website.

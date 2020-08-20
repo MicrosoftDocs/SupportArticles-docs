@@ -20,7 +20,7 @@ _Original KB number:_ &nbsp; 4464854
 
 ## Symptoms
 
-You are getting HTTP Error 503 response while browsing your cloud service application url (`http://cloudservicelabs.cloudapp.net/`), although your web role 'SuperConvertor' is in running state. Rebooting or Reimaging the role instance is not resolving the issue.
+You are getting HTTP Error 503 response while browsing your cloud service application url (http://cloudservicelabs.cloudapp.net/), although your web role 'SuperConvertor' is in running state. Rebooting or Reimaging the role instance is not resolving the issue.
 
 > Service Unavailable
 >

@@ -13,14 +13,14 @@ ms.service: cloud-services
 _Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), MSfC Azure-Azure Apps (IaaS)  
 _Original KB number:_ &nbsp; 2941892
 
-This article describes the support policies for [Endorsed Linux distributions](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros) and [open source technologies](https://azure.microsoft.com/overview/open-source/) in Azure.
+This article describes the support policies for [Endorsed Linux distributions](https://azure.microsoft.com/documentation/articles/virtual-machines-linux-endorsed-distributions/) and [open source technologies](https://azure.microsoft.com/overview/open-source/) in Azure.
 
 > [!NOTE]
 > The supported Linux distributions for Azure Stack Hub can be found in [this article](https://docs.microsoft.com/azure-stack/operator/azure-stack-supported-os?view=azs-2002#linux).
 
 ## Linux in Azure
 
-The endorsed Linux distributions are created and published by Linux partners for use in Azure environments. It's recommended to use an [Endorsed Linux distribution](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros) because they are maintained by some of the most well-known Linux vendors in the world. However, you are welcome to bring your distributions of Linux into Azure. All distributions are welcome.
+The endorsed Linux distributions are created and published by Linux partners for use in Azure environments. It's recommended to use an [Endorsed Linux distribution](https://azure.microsoft.com/documentation/articles/virtual-machines-linux-endorsed-distributions/) because they are maintained by some of the most well-known Linux vendors in the world. However, you are welcome to bring your distributions of Linux into Azure. All distributions are welcome.
 
 ## Linux support matrix
 
@@ -39,7 +39,7 @@ The endorsed Linux distributions are created and published by Linux partners for
 
 ## Linux support scope
 
-Microsoft offers Linux support for [endorsed Linux distributions](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros) in Azure. The Linux vendor may need to be engaged depending on the scenario.
+Microsoft offers Linux support for [endorsed Linux distributions](https://azure.microsoft.com/documentation/articles/virtual-machines-linux-endorsed-distributions/) in Azure. The Linux vendor may need to be engaged depending on the scenario.
 
 - Microsoft will assist you with commercially viable support in the form of break-fix issues for Linux. The Linux vendor may have to be engaged by the customer to troubleshoot specific system-related problems. Microsoft may be able to collaborate with the vendor for those issues.
 - Have your Linux administrator engaged when working with Azure support. Any consulting work may be referred to Microsoft Services if that type of guidance is needed.

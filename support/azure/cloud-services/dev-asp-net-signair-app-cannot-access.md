@@ -20,7 +20,7 @@ _Original KB number:_ &nbsp; 4464839
 
 ## Symptoms
 
-Visitor Tracker is an ASP.NET SignalR application that tracks the number of visitors accessing the website. But suddenly for some reason you are unable to access the application over default cloud service url (`http://cloudservicelabs.cloudapp.net/`) and getting an error on the IE browser stating that "Can't reach this page", although the role instances are in running state.
+Visitor Tracker is an ASP.NET SignalR application that tracks the number of visitors accessing the website. But suddenly for some reason you are unable to access the application over default cloud service url ([http://cloudservicelabs.cloudapp.net/](http://cloudservicelabs.cloudapp.net/)) and getting an error on the IE browser stating that "Can't reach this page", although the role instances are in running state.
 
 :::image type="content" source="media/asp-net-signair-app-cannot-access/4464835_en_1.png" alt-text="Screenshot of application state.":::
 
@@ -58,7 +58,7 @@ Visitor Tracker is an ASP.NET SignalR application that tracks the number of visi
 
     You can see the **Portqry.exe** reports the status of a TCP/IP port 80 as Filtered which means it is blocked as per [this](https://support.microsoft.com/help/310099/description-of-the-portqry-exe-command-line-utility) documentation. To check how the application responds over localhost, enable the RDP for the role and log into the instance to browse the application locally. When opening the IIS, you may find that there is an http binding over port 81 and not on default http port 80. So the request was not reaching the IIS and subsequently you were getting the error "Can't reach this page", whereas locally the website spawned up as expected.
 
-3. Browse the cloud service url over port 81 - (`http://cloudservicelabs.cloudapp.net:81/`) and check the result. If it fails, run the following `psping` commands.
+3. Browse the cloud service url over port 81 - [http://cloudservicelabs.cloudapp.net:81/](http://cloudservicelabs.cloudapp.net:81/) and check the result. If it fails, run the following `psping` commands.
 
     ```console
     psping cloudservicelabs.cloudapp.net:81
