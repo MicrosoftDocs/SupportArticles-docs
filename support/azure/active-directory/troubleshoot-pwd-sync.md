@@ -45,7 +45,7 @@ To resolve this issue, follow these steps:
 
 Possible causes of this issue are duplicate user names or email addresses.
 
-To resolve this issue, use the IdFix DirSync Error Remediation Tool (IdFix) to help identify potential object-related issues in the on-premises AD DS. You can install IdFix at the following Microsoft website: [IdFix DirSync Error Remediation Tool](https://www.microsoft.com/download/details.aspx?id=36832)
+To resolve this issue, use the IdFix DirSync Error Remediation Tool (IdFix) to help identify potential object-related issues in the on-premises AD DS. You can install IdFix at the following Microsoft website: [IdFix DirSync Error Remediation Tool](https://github.com/microsoft/idfix)
 
 For more info about how to troubleshoot this issue, see [One or more objects don't sync when using the Azure Active Directory Sync tool](https://support.microsoft.com/help/2643629)
 
