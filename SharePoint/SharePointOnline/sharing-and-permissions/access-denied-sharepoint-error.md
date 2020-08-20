@@ -35,7 +35,7 @@ Many scenarios can generate these error messages. The most frequent cause is tha
 
 ## Resolution
 
-Use the appropriate method for the [SharePoint](#when-accessing-a-sharepoint-site) or [OneDrive](#when-accessing-a-onedrive-site) site on which the user receives the error message.
+Use the appropriate method for the [SharePoint](#accessing-a-sharepoint-site) or [OneDrive](#accessing-a-onedrive-site) site on which the user receives the error message.
 
 ### Accessing a SharePoint site
 
