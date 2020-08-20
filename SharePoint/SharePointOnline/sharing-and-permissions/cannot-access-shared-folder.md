@@ -52,13 +52,13 @@ To work around this problem, use the method that's appropriate for your situatio
 
 ## More information
 
-When you share a folder with a user who can't access the parent folder or site, SharePoint assigns to the user limited access to the parent items. Specifically, SharePoint grants to the user permission to access the folder without having to obtain permission (other than limited access) to access the parent folder and other items. However, after **Limited-access user permission lockdown mode** is enabled, the user no longer has access to the folder. This is because the necessary limited access permission on other items no longer works correctly.
+When you share a folder with a user who can't access the parent folder or site, SharePoint assigns to the user limited access to the parent items. Specifically, SharePoint grants to the user permission to access the folder without having to obtain additional permission to access the parent folder and other items. However, after **Limited-access user permission lockdown mode** is enabled, the user no longer has access to the folder. This is because the necessary limited access permission on other items no longer works correctly.
 
 ### About "Limited Access" permission
 
-The **Limited Access** permission level is unusual. It grants all the permissions that a user or group must have to access specific content without seeing other content. By granting this permission, you can share a single item in a list or library with a user who doesn't have permission to open or edit any other items in the library. In this situation, SharePoint automatically grants limited access to the parent list. This enables the user see the specific item that you shared.
+The **Limited Access** permission level enables a user or group to access specific content without seeing other content. By granting this permission, you can share a single item in a list or library with a user who doesn't have permission to open or edit any other library items. In this situation, SharePoint automatically grants limited access to the parent list. This enables the user see the specific item that you shared.
 
-For more information about the site collection features that includes **Limited-access user permission lockdown mode**, see [Enable or disable site collection features](https://support.office.microsoft.com/article/enable-or-disable-site-collection-features-a2f2a5c2-093d-4897-8b7f-37f86d83df04?correlationid=3fa0f19c-84e4-403d-9046-3c25d66fd867).
+For more information about site collection features that include **Limited-access user permission lockdown mode**, see [Enable or disable site collection features](https://support.office.microsoft.com/article/enable-or-disable-site-collection-features-a2f2a5c2-093d-4897-8b7f-37f86d83df04?correlationid=3fa0f19c-84e4-403d-9046-3c25d66fd867).
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).
 
