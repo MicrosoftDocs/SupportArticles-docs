@@ -129,7 +129,7 @@
       href: ./known-issues/wrong-teams-user-listed-as-site-creator.md
   - name: Rooms
     items:
-    - name: Support Teams in your organization
+    - name: Known issues in Rooms
       href: ./teams-rooms/known-issues.md
   - name: Sign-in
     items:
