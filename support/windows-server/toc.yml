@@ -66,6 +66,11 @@
     - name: Well-known security identifiers
       href: ./active-directory/security-identifiers-in-windows.md
 
+- name: Admin Development
+  items:
+    - name: Event collector doesn't forward events
+      href: ./admin-development/events-not-forwarded-by-windows-server-collector.md
+
 - name: Application Management
   items:
     - name: How to configure DTC to work through firewalls
@@ -126,6 +131,8 @@
       href: ./networking/cannot-connect-to-network-share.md
     - name: Certificate requirements when you use EAP-TLS
       href: ./networking/certificate-requirements-eap-tls-peap.md
+    - name: Configure remote access client account lockout
+      href: ./networking/configure-remote-access-client-account-lockout.md
     - name: DNS CNAME alias fails to connect a SMB file server share
       href: ./networking/dns-chame-alias-cannot-access-smb-file-server-share.md
     - name: Event ID 4000 and 4007 when DNS zones not loaded
@@ -154,6 +161,8 @@
       href: ./networking/netsh-advfirewall-firewall-control-firewall-behavior.md
     - name: Use BurFlags to reinitialize FRS
       href: ./networking/use-burflags-to-reinitialize-frs.md
+    - name: Virtual machines lose network connectivity
+      href: ./networking/vm-lose-network-connectivity-broadcom.md
 
 - name: Performance
   items:
@@ -178,7 +187,6 @@
     - name: Virtual memory in 32-bit version of Windows
       href: ./performance/ram-virtual-memory-pagefile-management.md
 
-
 - name: Remote Desktop Services
   items:
     - name: Changes to Remote Connection Manager
@@ -202,6 +210,31 @@
     - name: Troubleshoot Remote desktop disconnected errors
       href: ./remote-desktop-services/troubleshoot-remote-desktop-disconnected-errors.md
 
+- name: Shell Experience
+  items:
+    - name: TEMP folder with logon session ID is deleted
+      href: ./shell-experience/temp-folder-with-logon-session-id-deleted.md
+    - name: Windows Search is disabled by default
+      href: ./shell-experience/windows-search-is-disabled-by-default.md
+
+- name: System Management Components
+  items:
+    - name: Remote Server Administration Tools
+      href: ./system-management-components/remote-server-administration-tools.md
+
+- name: User Profiles and Logon
+  items:
+    - name: Cached domain logon information
+      href: ./user-profiles-and-logon/cached-domain-logon-information.md
+    - name: How to delete a user profile
+      href: ./user-profiles-and-logon/delete-user-profile.md
+    - name: Relocation of Users and ProgramData directories
+      href: ./user-profiles-and-logon/relocation-of-users-and-programdata-directories.md
+    - name: Roaming user profiles versioning
+      href: ./user-profiles-and-logon/roaming-user-profiles-versioning.md
+    - name: Turn on automatic logon
+      href: ./user-profiles-and-logon/turn-on-automatic-logon.md
+
 - name: Virtualization
   items:
     - name: Antivirus exclusions for Hyper-V hosts
@@ -213,6 +246,8 @@
   items:
     - name: Add SAN to secure LDAP certificate
       href: ./windows-security/add-san-to-secure-ldap-certificate.md
+    - name: Audit use of NTLMv1 on a domain controller
+      href: ./windows-security/audit-domain-controller-ntlmv1.md
     - name: CA doesn't publish certificates in trusted domain
       href: ./windows-security/cannot-publish-certificate-trusted-domain.md
     - name: Can't copy files from mapped drive to local directory
@@ -231,6 +266,10 @@
       href: ./windows-security/disable-user-account-control.md
     - name: Kerberos authentication fails when a user belongs to many groups
       href: ./windows-security/kerberos-authentication-problems-if-user-belongs-to-groups.md
+    - name: Logging on a user account fails
+      href: ./windows-security/logging-on-user-account-fails.md
+    - name: Registry keys about Kerberos protocol and KDC
+      href: ./windows-security/kerberos-protocol-registry-kdc-configuration-keys.md
     - name: Reset domain controller's password with Netdom.exe
       href: ./windows-security/use-netdom-reset-domain-controller-password.md
     - name: Restrict cryptographic algorithms and protocols
