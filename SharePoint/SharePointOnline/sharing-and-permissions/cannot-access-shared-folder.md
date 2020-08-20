@@ -21,7 +21,7 @@ appliesto:
 
 ## Problem
 
-In SharePoint Online, you share a folder on a site collection with a user.
+In SharePoint Online, you share a folder in a site collection with a user.
 
 You select **Activate** to enable **Limited-access user permission lockdown mode** for a SharePoint Online site collection.
 
@@ -40,9 +40,12 @@ You need permission to access this site.
 
 To work around this problem, use the method that's appropriate for your situation:
 
-- Share individual files but not folders.
+- Share individual files but not folders. For more information, see [Share SharePoint files or folders](https://support.microsoft.com/en-us/office/share-sharepoint-files-or-folders-1fe37332-0f9a-4719-970e-d2578da4941c).
 
-- If your site doesn't require **Limited-access user permission lockdown mode**, deactivate this site collection feature.
+- If your site doesn't require **Limited-access user permission lockdown mode**, deactivate this site collection feature. To do this, follow these steps:
+    > 1. As a Site Collection Administrator, select the gear icon in the upper-right corner of the screen.
+    > 1. Select **Site Settings**.
+    > 1. Under **Site Collection Administrator** > **Site Collection Features**, locate **Limited-access user permission lockdown mode**, and then select the **Deactivate** button.
 
     > [!NOTE]
     > Other features, such as publishing, may require this feature in order to work correctly.
