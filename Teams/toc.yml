@@ -130,7 +130,7 @@
   - name: Rooms
     items:
     - name: Known issues in Rooms
-      href: ./teams-rooms/rooms-known-issues.md
+      href: ./known-issues/rooms-known-issues.md
   - name: Sign-in
     items:
     - name: Can't start Teams for Surface Hub from Microsoft Store
