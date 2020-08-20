@@ -1,5 +1,5 @@
 ---
-title: Known issues
+title: Known issues in Rooms 
 ms.author: v-lanac
 author: lanachin
 ms.reviewer: sohailta
@@ -20,7 +20,7 @@ ms.custom:
 search.appverid: 
 - MET150
 ---
-# Known issues
+# Known issues in Rooms 
 
 This article lists the known issues for Microsoft Teams Rooms, by feature area.
 <!-- If we get word that one of these issues no longer applies, contact meerak@microsoft.com or msmets@microsoft.com and let them know to EoL the corresponding KB  -->
