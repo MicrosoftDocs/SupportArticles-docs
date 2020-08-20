@@ -21,7 +21,7 @@ appliesto:
 
 ## Problem
 
-In SharePoint Online, you share a folder on a site collection with a user.
+In SharePoint Online, you share a folder in a site collection with a user.
 
 You select **Activate** to enable **Limited-access user permission lockdown mode** for a SharePoint Online site collection.
 
