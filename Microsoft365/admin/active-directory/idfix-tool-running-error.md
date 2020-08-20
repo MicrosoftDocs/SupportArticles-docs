@@ -38,8 +38,4 @@ This issue occurs if the Microsoft .NET Framework 4 isn't installed on the compu
 
 To resolve this issue, install the .NET Framework 4 on the computer on which the IdFix tool is installed. The .NET Framework 4 is available from [Microsoft .NET Framework 4 (Web Installer)](https://www.microsoft.com/download/details.aspx?id=17851).
 
-## More information 
-
-For more information about the IdFix tool, see [IdFix DirSync Error Remediation Tool](https://www.microsoft.com/en-ca/download/details.aspx?id=36832).
-
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.
