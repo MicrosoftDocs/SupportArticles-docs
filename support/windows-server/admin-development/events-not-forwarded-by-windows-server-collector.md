@@ -49,7 +49,7 @@ To view the URL permissions, open an elevated Command Prompt window and run the 
 
 To fix the URL permissions, use the elevated Command Prompt window and run the following commands:
 
-```console
+```cmd
 netsh http delete urlacl url=http://+:5985/wsman/
 netsh http add urlacl url=http://+:5985/wsman/ sddl=D:(A;;GX;;;S-1-5-80-569256582-2953403351-2909559716-1301513147-412116970)(A;;GX;;;S-1-5-80-4059739203-877974739-1245631912-527174227-2996563517)
 netsh http delete urlacl url=https://+:5986/wsman/
@@ -58,40 +58,36 @@ netsh http add urlacl url=https://+:5986/wsman/ sddl=D:(A;;GX;;;S-1-5-80-5692565
 
 ### Default URL permissions used by Windows Server 2019 and Windows Server 2016
 
-```console
-Reserved URL: http://+:5985/wsman/
-‎User: NT SERVICE\WinRM
-‎Listen: Yes
-‎Delegate: No
+> Reserved URL: `http://+:5985/wsman/`  
+> User: NT SERVICE\WinRM  
+> Listen: Yes  
+‎Delegate: No  
 SDDL: D:(A;;GX;;;S-1-5-80-569256582-2953403351-2909559716-1301513147-412116970)
-
-Reserved URL: https://+:5986/wsman/
-User: NT SERVICE\WinRM
-Listen: Yes
-Delegate: No SDDL: D:(A;;GX;;;S-1-5-80-569256582-2953403351-2909559716-1301513147-412116970)
-```
+>
+> Reserved URL: `https://+:5986/wsman/`  
+> User: NT SERVICE\WinRM  
+> Listen: Yes  
+> Delegate: No SDDL: D:(A;;GX;;;S-1-5-80-569256582-2953403351-2909559716-1301513147-412116970)
 
 ### Default URL permissions used by Windows Server 2012 R2
 
-```console
-Reserved URL: http://+:5985/wsman/
-‎User: NT SERVICE\WinRM
-‎Listen: Yes
-‎Delegate: No
-User: NT SERVICE\Wecsvc
-‎Listen: Yes
-Delegate: No
+> Reserved URL: `http://+:5985/wsman/`  
+‎User: NT SERVICE\WinRM  
+‎Listen: Yes  
+‎Delegate: No  
+User: NT SERVICE\Wecsvc  
+‎Listen: Yes  
+Delegate: No  
+SDDL: D:(A;;GX;;;S-1-5-80-569256582-2953403351-2909559716-1301513147-412116970)(A;;GX;;;S-1-5-80-4059739203-877974739-1245631912-527174227-2996563517)  
+>
+> Reserved URL: `https://+:5986/wsman/`  
+User: NT SERVICE\WinRM  
+Listen: Yes  
+Delegate: No  
+User: NT SERVICE\Wecsvc  
+Listen: Yes  
+Delegate: No  
 SDDL: D:(A;;GX;;;S-1-5-80-569256582-2953403351-2909559716-1301513147-412116970)(A;;GX;;;S-1-5-80-4059739203-877974739-1245631912-527174227-2996563517)
-
-Reserved URL: https://+:5986/wsman/
-User: NT SERVICE\WinRM
-Listen: Yes
-Delegate: No
-User: NT SERVICE\Wecsvc
-Listen: Yes
-Delegate: No
-SDDL: D:(A;;GX;;;S-1-5-80-569256582-2953403351-2909559716-1301513147-412116970)(A;;GX;;;S-1-5-80-4059739203-877974739-1245631912-527174227-2996563517)
-```
 
 ## Applies to
 

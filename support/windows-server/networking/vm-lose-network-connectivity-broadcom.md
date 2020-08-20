@@ -42,8 +42,10 @@ This issue is resolved in Broadcom driver b57nd60a.sys version 16.8 and newer. I
 
 If you are unable to update your network adapter driver to resolve the issue, you can work around the issue by disabling VMQ on each affected Broadcom network adapter by using the `Set-NetAdapterVmq` Windows PowerShell command. For example, if you have a dual-port network adapter, and if the ports are named NIC 1 and NIC 2 in Windows, you would disable VMQ on each adapter by using the following commands:
 
-- `Set-NetAdapterVmq -Name "NIC 1" -Enabled $False`
-- `Set-NetAdapterVmq -Name "NIC 2" -Enabled $False`
+```powershell
+Set-NetAdapterVmq -Name "NIC 1" -Enabled $False
+Set-NetAdapterVmq -Name "NIC 2" -Enabled $False
+```
 
 You can confirm that VMQ is disabled on the correct network adapters by using the [Get-NetAdapterVmq](https://technet.microsoft.com/library/jj130881.aspx)  Windows PowerShell command.
 
