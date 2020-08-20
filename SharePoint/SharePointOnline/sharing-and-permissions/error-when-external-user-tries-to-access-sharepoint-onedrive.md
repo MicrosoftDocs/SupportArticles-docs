@@ -37,9 +37,9 @@ Many scenarios can generate these messages. The most frequent cause is that perm
 
 Use the appropriate method for the situation in which the user receives the error message.
 
-[An external user is accessing a site](#if-an-external-user-is-accessing-a-site)
+[An external user is accessing a site](#an-external-user-is-accessing-a-site)
 
-[An external user accepts a SharePoint Online invitation by using another account](#when-an-external-user-accepts-a-sharepoint-online-invitation-by-using-another-account)
+[An external user accepts a SharePoint Online invitation by using another account](#an-external-user-accepts-a-sharepoint-online-invitation-by-using-another-account)
 
 ### An external user is accessing a site
 
