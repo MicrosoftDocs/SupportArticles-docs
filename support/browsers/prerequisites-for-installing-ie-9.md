@@ -51,32 +51,19 @@ If you've ruled out the automatic installation issues we asked you to consider i
 
 - A performance and functionality update is available for Windows 7 and Windows Server 2008 R2 ([KB2454826](https://support.microsoft.com/help/2454826))
 
-    [Download the x86 package now.](https://go.microsoft.com/fwlink/?linkid=207219)
-
-    [Download the x64 package now.](https://go.microsoft.com/fwlink/?linkid=207220)
+  - [Download the x86 package now.](https://go.microsoft.com/fwlink/?linkid=207219)
+  - [Download the x64 package now.](https://go.microsoft.com/fwlink/?linkid=207220)
 
 ### For Windows Vista or Windows Server 2008
 
 - Information about Service Pack 2 for Windows Vista and Windows Server 2008 ([KB948465](https://support.microsoft.com/help/948465))
 
-    [Download the x86 package now.](https://download.microsoft.com/download/e/7/7/e77cba41-0b6b-4398-bbbf-ee121eec0535/windows6.0-kb948465-x86.exe)
-
-    [Download the x64 package now.](https://download.microsoft.com/download/4/7/3/473b909b-7b52-49fe-a443-2e2985d3dfc3/windows6.0-kb948465-x64.exe)
-
 - Description of the Windows Graphics, Imaging, and XPS Library ([KB971512](https://support.microsoft.com/help/971512))
-
-    [Download the x86 package now.](https://go.microsoft.com/fwlink/?linkid=194467)
-
-    [Download the x64 package now.](https://go.microsoft.com/fwlink/?linkid=194466)
 
 - Platform update supplement for Windows Vista and Windows Server 2008 ([KB2117917](https://support.microsoft.com/help/2117917))
 
     > [!NOTE]
     > You must install update 971512 before you install this update.
-
-    [Download the x86 package now.](https://go.microsoft.com/fwlink/?linkid=192581)
-
-    [Download the x64 package now.](https://go.microsoft.com/fwlink/?linkid=194465)
 
 ## Known issues
 
