@@ -26,14 +26,6 @@ For more information about the Windows Automation API, see [Overview of Windows 
 
 The following file is available for download from the Microsoft Download Center:  
 
-- Update for all supported x86-based versions of Windows Server 2003
-
-    [Download the Update for Windows Server 2003 for x86-based systems package now.](https://www.microsoft.com/download/details.aspx?FamilyId=05101d13-1bbf-407e-80bd-4a538d96590e)
-
-- Update for all supported x64-based versions of Windows Server 2003
-
-    [Download the Update for Windows Server 2003 for x64-based systems package now.](https://www.microsoft.com/download/details.aspx?FamilyId=199333ad-a9af-4ccd-839a-4d526c6457c5)
-
 - Update for all supported x86-based versions of Windows Server 2008
 
     [Download the Update for Windows Server 2008 for x86-based systems package now.](https://www.microsoft.com/download/details.aspx?FamilyId=468e4f78-d411-4932-8719-76a0b2eb1443)
@@ -41,14 +33,6 @@ The following file is available for download from the Microsoft Download Center:
 - Update for all supported x64-based versions of Windows Server 2008
 
     [Download the Update for Windows Server 2008 for x64-based systems package now.](https://www.microsoft.com/download/details.aspx?FamilyId=5cc9aaae-9f7a-442a-8af6-113fa0068c48)
-
-- Update for all supported x86-based versions of Windows Vista
-
-    [Download the Update for Windows Vista for x86-based systems package now.](https://www.microsoft.com/download/details.aspx?FamilyId=6936fcf6-a63b-4b0c-afa4-ec90ed4caee6)
-
-- Update for all supported x64-based versions of Windows Vista
-
-    [Download the Update for Windows Vista for x64-based systems package now.](https://www.microsoft.com/download/details.aspx?FamilyId=ed01a526-82d8-49a3-b6c0-2722586b1c12)
 
 ## More information
 
