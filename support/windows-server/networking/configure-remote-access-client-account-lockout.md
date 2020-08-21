@@ -1,0 +1,94 @@
+---
+title: Configure remote access client account lockout
+description: This step-by-step article describes how to configure the remote access client account lockout feature.
+ms.date: 08/13/2020
+author: delhan
+ms.author: Deland-Han
+manager: dscontentpm
+audience: itpro
+ms.topic: troubleshooting
+ms.prod: windows-server
+localization_priority: medium
+ms.reviewer: kaushika
+ms.prod-support-area-path: Remote access
+ms.technology: Networking 
+---
+# Configure remote access client account lockout
+
+This article describes how to configure the remote access client account lockout feature.
+
+_Original product version:_ &nbsp; Windows Server 2019, Windows 10 - all editions  
+_Original KB number:_ &nbsp; 816118
+
+> [!IMPORTANT]
+> This article contains information about modifying the registry. Before you modify the registry, make sure to back it up and make sure that you understand how to restore the registry if a problem occurs. For information about how to back up, restore, and edit the registry, see [Windows registry information for advanced users](https://support.microsoft.com/help/256986).
+
+## Summary
+
+Remote access clients include direct dial-in and virtual private network (VPN) clients.
+
+You can use the remote access account lockout feature to specify how many times a remote access authentication has to fail against a valid user account before the user is denied access. An attacker can try to access an organization through remote access by sending credentials (valid user name, guessed password) during the VPN connection authentication process. During a dictionary attack, the attacker sends hundreds or thousands of credentials by using a list of passwords based on common words or phrases.
+
+The advantage of activating account lockout is that brute force attacks, such as a dictionary attack, are unlikely to be successful because statistically at least, the account is locked out long before a randomly issued password is likely to be correct. An attacker can still create a denial of service condition that intentionally locks out user accounts.
+
+## Configure remote access client account lockout feature
+
+The remote access account lockout feature is managed separately from the account lockout settings that are maintained in Active Directory Users and Computers. Remote access lockout settings are controlled by manually editing the registry. These settings do not distinguish between a legitimate user who mistypes a password and an attacker that is trying to *crack* an account.
+
+Remote access server administrators control two features of remote access lockout:
+
+- The number of failed attempts before future attempts are denied.
+- How frequently the failed attempts counter is reset.
+
+If you use Windows Authentication on the remote access server, configure the registry on the remote access server. If you use RADIUS for remote access authentication, configure the registry on the Internet Authentication Server (IAS).
+
+## Activate remote access client account lockout
+
+> [!WARNING]
+> If you use Registry Editor incorrectly, you may cause serious problems that may require you to reinstall your operating system. Microsoft cannot guarantee that you can solve problems that result from using Registry Editor incorrectly. Use Registry Editor at your own risk.
+
+The failed attempts counter is periodically reset to zero (0). If an account is locked out after the maximum number of failed attempts, the failed attempts counter is automatically reset to zero after the reset time. To activate remote access client account lockout and reset time, follow these steps:
+
+1. Click **Start**, click **Run**, type *regedit* in the **Open** box, and then press ENTER.
+
+2. Locate and then click the following registry key:
+
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RemoteAccess\Parameters\AccountLockout`
+
+3. Double-click the **MaxDenials** value.
+
+    The default value is zero, which indicates that account lockout is turned off. Type the number of failed attempts before you want the account to be locked out.
+
+4. Click **OK**.
+5. Double-click the **ResetTime (mins)** value.
+
+    The default value is **0xb40** that is hexadecimal for 2,880 minutes (two days). Modify this value to meet your network security requirements.
+
+6. Click **OK**.
+
+7. Quit Registry Editor.
+
+## Manually unlock a remote access client
+
+If the account is locked out, the user can try to log on again after the lockout timer has run out, or you can delete the
+ **DomainName:UserName** value in the following registry key:
+
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RemoteAccess\Parameters\AccountLockout`
+
+To manually unlock an account, follow these steps:
+
+1. Click **Start**, click **Run**, type regedit in the **Open** box, and then press ENTER.
+
+2. Locate and then click the following registry key:
+
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RemoteAccess\Parameters\AccountLockout`
+
+3. Find the **Domain Name:User Name** value, and then delete the entry.
+
+4. Quit Registry Editor.
+
+5. Test the account to confirm that it is no longer locked out.
+
+## References
+
+For more information about the remote access client lockout feature, see [Account Lockout Policy](/windows/security/threat-protection/security-policy-settings/account-lockout-policy).
