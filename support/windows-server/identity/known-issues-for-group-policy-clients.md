@@ -119,94 +119,94 @@ To manage this situation, an administrator could delete the Group policy, if it'
 
 ### Appendix 1 Windows Defender
 
-:::image type="content" source="media/known-issues-for-group-policy-clients/windows-defender-1.png" alt-text="Windows Defender setting":::
+:::image type="content" source="media/known-issues-for-group-policy-clients/windows-defender-1.png" alt-text="Windows Defender setting 1":::
 
 The same setting (without editing the policy) after an ADMX upgrade to 1607d
 
-:::image type="content" source="media/known-issues-for-group-policy-clients/windows-defender-2.png" alt-text="Windows Defender setting":::
+:::image type="content" source="media/known-issues-for-group-policy-clients/windows-defender-2.png" alt-text="Windows Defender setting 2":::
 
 ### Appendix 2 Windows Explorer
 
 If the SmartScreen setting is enabled, and the **Require approval from an administrator before running downloaded unknown software** option is selected, you see:
 
-:::image type="content" source="media/known-issues-for-group-policy-clients/windows-explorer-1.png" alt-text="Windows Explorer setting":::
+:::image type="content" source="media/known-issues-for-group-policy-clients/windows-explorer-1.png" alt-text="Windows Explorer setting 1":::
 
 After you upgrade the templates directly without changing the policy, you see:
 
-:::image type="content" source="media/known-issues-for-group-policy-clients/windows-explorer-2.png" alt-text="Windows Explorer setting":::
+:::image type="content" source="media/known-issues-for-group-policy-clients/windows-explorer-2.png" alt-text="Windows Explorer setting 2":::
 
 If you select the second option ("Give a warning"), you see:
 
-:::image type="content" source="media/known-issues-for-group-policy-clients/windows-explorer-3.png" alt-text="Windows Explorer setting":::
+:::image type="content" source="media/known-issues-for-group-policy-clients/windows-explorer-3.png" alt-text="Windows Explorer setting 3":::
 
 However, in the settings tab of GPMC, you see:
 
-:::image type="content" source="media/known-issues-for-group-policy-clients/windows-explorer-4.png" alt-text="Windows Explorer setting":::
+:::image type="content" source="media/known-issues-for-group-policy-clients/windows-explorer-4.png" alt-text="Windows Explorer setting 4":::
 
 > [!NOTE]
 > No items are listed under **Pick one of the following settings**.
 
 After the templates are upgraded, you see:
 
-:::image type="content" source="media/known-issues-for-group-policy-clients/windows-explorer-5.png" alt-text="Windows Explorer setting":::
+:::image type="content" source="media/known-issues-for-group-policy-clients/windows-explorer-5.png" alt-text="Windows Explorer setting 5":::
 
 You now enable the policy and select to disable the smart screen, as shown:
 
-:::image type="content" source="media/known-issues-for-group-policy-clients/windows-explorer-6.png" alt-text="Windows Explorer setting":::
+:::image type="content" source="media/known-issues-for-group-policy-clients/windows-explorer-6.png" alt-text="Windows Explorer setting 6":::
 
 After you make this setting, you see the following in the report:
 
-:::image type="content" source="media/known-issues-for-group-policy-clients/windows-explorer-7.png" alt-text="Windows Explorer setting":::
+:::image type="content" source="media/known-issues-for-group-policy-clients/windows-explorer-7.png" alt-text="Windows Explorer setting 7":::
 
 After you upgrade the templates to build 1607, the settings report reads as follows:
 
-:::image type="content" source="media/known-issues-for-group-policy-clients/windows-explorer-8.png" alt-text="Windows Explorer setting":::
+:::image type="content" source="media/known-issues-for-group-policy-clients/windows-explorer-8.png" alt-text="Windows Explorer setting 8":::
 
 If you now edit the setting, you see:
 
-:::image type="content" source="media/known-issues-for-group-policy-clients/windows-explorer-9.png" alt-text="Windows Explorer setting":::
+:::image type="content" source="media/known-issues-for-group-policy-clients/windows-explorer-9.png" alt-text="Windows Explorer setting 9":::
 
 ### Appendix 3 Windows Update
 
 After the policy definitions are upgraded to at least the Windows 10 RTM build, and you configure the Windows Update settings to defer upgrades, you see:
 
-:::image type="content" source="media/known-issues-for-group-policy-clients/windows-update-1.png" alt-text="Windows Update":::
+:::image type="content" source="media/known-issues-for-group-policy-clients/windows-update-1.png" alt-text="Windows Update 1":::
 
 After the PolicyDefinitions folder is upgraded to build 1611, the settings become extra registry settings, as shown:
 
-:::image type="content" source="media/known-issues-for-group-policy-clients/windows-update-2.png" alt-text="Windows Update":::
+:::image type="content" source="media/known-issues-for-group-policy-clients/windows-update-2.png" alt-text="Windows Update 2":::
 
 ### Appendix 4 WinStoreUI upgrade to WindowsStore
 
 Enabling the Microsoft Store options by using the Windows Server 2012 R2 build of ADMX provides the report:
 
-:::image type="content" source="media/known-issues-for-group-policy-clients/winstoreui-upgrade-to-windowsstore-1.png" alt-text="WinStoreUI upgrade to WindowsStore":::
+:::image type="content" source="media/known-issues-for-group-policy-clients/winstoreui-upgrade-to-windowsstore-1.png" alt-text="WinStoreUI upgrade to WindowsStore 1":::
 
 After the ADMX files are replaced in the central store by build 1511, you see:
 
-:::image type="content" source="media/known-issues-for-group-policy-clients/winstoreui-upgrade-to-windowsstore-2.png" alt-text="WinStoreUI upgrade to WindowsStore":::
+:::image type="content" source="media/known-issues-for-group-policy-clients/winstoreui-upgrade-to-windowsstore-2.png" alt-text="WinStoreUI upgrade to WindowsStore 2":::
 
 ### Appendix 5 Error reporting
 
 In Windows Server 2012 R2, you receive the following report if you enable **Configure Default consent**:
 
-:::image type="content" source="media/known-issues-for-group-policy-clients/error-reporting-1.png" alt-text="Error reporting":::
+:::image type="content" source="media/known-issues-for-group-policy-clients/error-reporting-1.png" alt-text="Error reporting 1":::
 
 If errorreporting.admx is replaced, the report becomes as follows:
 
-:::image type="content" source="media/known-issues-for-group-policy-clients/error-reporting-2.png" alt-text="Error reporting":::
+:::image type="content" source="media/known-issues-for-group-policy-clients/error-reporting-2.png" alt-text="Error reporting 2":::
 
 You can also see the image:
 
-:::image type="content" source="media/known-issues-for-group-policy-clients/error-reporting-3.png" alt-text="Error reporting":::
+:::image type="content" source="media/known-issues-for-group-policy-clients/error-reporting-3.png" alt-text="Error reporting 3":::
 
 After WinStoreUI is removed and WindowsStore is added, you see:
 
-:::image type="content" source="media/known-issues-for-group-policy-clients/error-reporting-4.png" alt-text="Error reporting":::
+:::image type="content" source="media/known-issues-for-group-policy-clients/error-reporting-4.png" alt-text="Error reporting 4":::
 
 After both ADMX/L templates are present in the policy definitions folder, you see:
 
-:::image type="content" source="media/known-issues-for-group-policy-clients/error-reporting-5.png" alt-text="Error reporting":::
+:::image type="content" source="media/known-issues-for-group-policy-clients/error-reporting-5.png" alt-text="Error reporting 5":::
 
 ## Applies to
 

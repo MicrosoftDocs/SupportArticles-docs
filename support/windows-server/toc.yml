@@ -4,67 +4,67 @@
 - name: Active Directory
   items:
     - name: DCPROMO demotion fails
-      href: ./active-directory/dcpromo-demotion-fails.md
+      href: ./identity/dcpromo-demotion-fails.md
     - name: Diagnose replication failures
-      href: ./active-directory/diagnose-replication-failures.md
+      href: ./identity/diagnose-replication-failures.md
     - name: Enable LDAP over SSL
-      href: ./active-directory/enable-ldap-over-ssl-3rd-certification-authority.md
+      href: ./identity/enable-ldap-over-ssl-3rd-certification-authority.md
     - name: FSMO placement and optimization
-      href: ./active-directory/fsmo-placement-and-optimization-on-ad-dcs.md
+      href: ./identity/fsmo-placement-and-optimization-on-ad-dcs.md
     - name: FSMO roles
-      href: ./active-directory/fsmo-roles.md
+      href: ./identity/fsmo-roles.md
     - name: Host AD DCs in virtual hosting environments
-      href: ./active-directory/ad-dc-in-virtual-hosting-environment.md
+      href: ./identity/ad-dc-in-virtual-hosting-environment.md
     - name: How to configure AD and LDS diagnostic event logging
-      href: ./active-directory/configure-ad-and-lds-event-logging.md
+      href: ./identity/configure-ad-and-lds-event-logging.md
     - name: How to configure authoritative time server
-      href: ./active-directory/configure-authoritative-time-server.md
+      href: ./identity/configure-authoritative-time-server.md
     - name: How to configure firewall for domains and trusts
-      href: ./active-directory/config-firewall-for-ad-domains-and-trusts.md
+      href: ./identity/config-firewall-for-ad-domains-and-trusts.md
     - name: How to enable Kerberos event logging
-      href: ./active-directory/enable-kerberos-event-logging.md
+      href: ./identity/enable-kerberos-event-logging.md
     - name: How to enable LDAP signing in Windows Server
-      href: ./active-directory/enable-ldap-signing-in-windows-server.md
+      href: ./identity/enable-ldap-signing-in-windows-server.md
     - name: How to remove orphaned domains
-      href: ./active-directory/remove-orphaned-domains.md
+      href: ./identity/remove-orphaned-domains.md
     - name: How to restore deleted user accounts and their groups
-      href: ./active-directory/retore-deleted-accounts-and-groups-in-ad.md
+      href: ./identity/retore-deleted-accounts-and-groups-in-ad.md
     - name: How to transfer or seize FSMO roles
-      href: ./active-directory/transfer-or-seize-fsmo-roles-in-ad-ds.md
+      href: ./identity/transfer-or-seize-fsmo-roles-in-ad-ds.md
     - name: How to restrict RPC traffic to a specific port
-      href: ./active-directory/restrict-ad-rpc-traffic-to-specific-port.md
+      href: ./identity/restrict-ad-rpc-traffic-to-specific-port.md
     - name: How to troubleshoot high Lsass.exe CPU utilization
-      href: ./active-directory/troubleshoot-high-lsass.exe-cpu-utilization.md
+      href: ./identity/troubleshoot-high-lsass.exe-cpu-utilization.md
     - name: Known issues for managing Group Policy clients
-      href: ./active-directory/known-issues-for-group-policy-clients.md
+      href: ./identity/known-issues-for-group-policy-clients.md
     - name: Name computers, domains, sites, and OUs
-      href: ./active-directory/naming-conventions-for-computer-domain-site-ou.md
+      href: ./identity/naming-conventions-for-computer-domain-site-ou.md
     - name: Operations fail with Win32 error 8524
-      href: ./active-directory/replication-error-8524.md
+      href: ./identity/replication-error-8524.md
     - name: Redirect users and computers containers
-      href: ./active-directory/redirect-users-computers-containers.md
+      href: ./identity/redirect-users-computers-containers.md
     - name: Replication error 1722
-      href: ./active-directory/replication-error-1722-rpc-server-unavailable.md
+      href: ./identity/replication-error-1722-rpc-server-unavailable.md
     - name: Replication error 2146893022
-      href: ./active-directory/replication-error-2146893022.md
+      href: ./identity/replication-error-2146893022.md
     - name: Replication error 8452
-      href: ./active-directory/replication-error-8452.md
+      href: ./identity/replication-error-8452.md
     - name: Replication error 8453
-      href: ./active-directory/replication-error-8453.md
+      href: ./identity/replication-error-8453.md
     - name: Replication error 5 - Access is denied
-      href: ./active-directory/replication-error-5.md
+      href: ./identity/replication-error-5.md
     - name: Required trusted root certificates
-      href: ./active-directory/trusted-root-certificates-are-required.md
+      href: ./identity/trusted-root-certificates-are-required.md
     - name: Syskey.exe utility is no longer supported
-      href: ./active-directory/syskey-exe-utility-is-no-longer-supported.md
+      href: ./identity/syskey-exe-utility-is-no-longer-supported.md
     - name: Troubleshoot domain controller replication error 1727
-      href: ./active-directory/remote-procedure-call-failed-and-did-not-execute-error.md
+      href: ./identity/remote-procedure-call-failed-and-did-not-execute-error.md
     - name: UserAccountControl property flags
-      href: ./active-directory/useraccountcontrol-manipulate-account-properties.md
+      href: ./identity/useraccountcontrol-manipulate-account-properties.md
     - name: View and set LDAP policy by using Ntdsutil
-      href: ./active-directory/view-set-ldap-policy-using-ntdsutil.md
+      href: ./identity/view-set-ldap-policy-using-ntdsutil.md
     - name: Well-known security identifiers
-      href: ./active-directory/security-identifiers-in-windows.md
+      href: ./identity/security-identifiers-in-windows.md
 
 - name: Admin Development
   items:
