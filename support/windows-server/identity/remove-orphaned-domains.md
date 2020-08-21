@@ -15,7 +15,7 @@ ms.technology: ActiveDirectory
 ---
 # How to remove orphaned domains from Active Directory  
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Original product version:_ &nbsp;Windows  
 _Original KB number:_ &nbsp;230306
 
 ## Summary
