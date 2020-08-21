@@ -30,6 +30,8 @@
 
 - name: Deployment
   items:
+    - name: Create a user-defined service
+      href: ./deployment/create-user-defined-service.md
     - name: Customize default local user profile
       href: ./deployment/customize-default-local-user-profile.md
     - name: Error after you enter BitLocker PIN at startup 
@@ -70,6 +72,8 @@
       href: ./networking/cannot-turn-on-network-discovery.md
     - name: Configure client proxy server settings
       href: ./networking/configure-client-proxy-server-settings-by-registry-file.md
+    - name: Error when accessing an administrative share
+      href: ./networking/cannot-logon-access-administrative-share.md
     - name: How to disable network adapter power management
       href: ./networking/power-management-on-network-adapter.md
     - name: Mapped drive connection to network share is lost
@@ -85,6 +89,8 @@
 
 - name: Performance
   items:
+    - name: Can't refresh or reset your PC
+      href: ./performance/cannot-refresh-reset-pc-automatic-repair-fail.md
     - name: How to speed up your computer
       href: ./performance/speed-up-your-computer.md
     - name: Running an.exe file starts different program
@@ -92,10 +98,17 @@
     - name: Troubleshooting slow file copying in Windows
       href: ./performance/troubleshooting-slow-file-copying-in-windows.md
 
+- name: Printing
+  items:
+    - name: Error 0x00000709 when using CNAME record
+      href: ./printing/error-0x00000709-use-cname-record.md
+
 - name: Shell Experience
   items:
     - name: Can't start Windows Search service and error occurs
       href: ./shell-experience/windows-search-service-not-starting.md
+    - name: Can't start Microsoft Store apps
+      href: ./shell-experience/error-start-store-apps.md
     - name: Can't remove, uninstall, or reinstall Microsoft Store app
       href: ./shell-experience/cannot-remove-uninstall-or-reinstall-microsoft-store-app.md
     - name: Fix problems in Windows Search
@@ -118,6 +131,8 @@
   items:
     - name: Can't set a convenience PIN
       href: ./user-profiles-and-logon/cannot-configure-a-convenience-pin.md
+    - name: First sign-in fails after deploying an image
+      href: ./user-profiles-and-logon/first-logon-fails-deploy-image.md
     - name: Renaming user account doesn't change profile path
       href: ./user-profiles-and-logon/renaming-user-account-not-change-profile-path.md
 
