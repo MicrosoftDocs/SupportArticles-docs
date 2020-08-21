@@ -97,7 +97,7 @@ _Original KB number:_ &nbsp; 2002013
 
     Buttons in Dialog: **OK**
 
-    :::image type="content" source="media/replication-error-5/replicate-now.png" alt-text="Replicate Now" border="false":::
+    :::image type="content" source="media/active-directory-replication-error-5/replicate-now.png" alt-text="Replicate Now" border="false":::
 
 ## Cause
 

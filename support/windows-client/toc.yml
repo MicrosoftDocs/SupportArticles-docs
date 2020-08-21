@@ -4,7 +4,7 @@
 - name: Active Directory
   items:
     - name: W32Time doesn't start automatically
-      href: ./identity/w32time-not-start-on-workgroup.md
+      href: ./active-directory/w32time-not-start-on-workgroup.md
 
 - name: Application Management
   items:
