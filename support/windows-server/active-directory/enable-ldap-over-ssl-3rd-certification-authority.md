@@ -94,7 +94,7 @@ To request a Server Authentication certificate that is suitable for LDAPS, follo
 
     > Subject="E=admin@contoso.com, CN=<DC fqdn>, OU=Servers, O=Contoso, L=Redmond, S=Washington, C=US."
 
-1. Create the request file. To do this, type the following command at the command prompt, and then press ENTER:
+2. Create the request file. To do this, type the following command at the command prompt, and then press ENTER:
 
     ```console
     certreq -new request.inf request.req
@@ -102,9 +102,9 @@ To request a Server Authentication certificate that is suitable for LDAPS, follo
 
     A new file called *Request.req* is created. This is the base64-encoded request file.
 
-1. Submit the request to a CA. You can submit the request to a Microsoft CA or to a third-party CA.
+3. Submit the request to a CA. You can submit the request to a Microsoft CA or to a third-party CA.
 
-1. Retrieve the certificate that is issued, and then save the certificate as Certnew.cer in the same folder as the request file. To do this, follow these steps:
+4. Retrieve the certificate that is issued, and then save the certificate as Certnew.cer in the same folder as the request file. To do this, follow these steps:
 
     1. Create a new file called *Certnew.cer*.
     2. Open the file in Notepad, paste the encoded certificate into the file, and then save the file.
@@ -112,19 +112,19 @@ To request a Server Authentication certificate that is suitable for LDAPS, follo
     > [!NOTE]
     > The saved certificate must be encoded as base64. Some third-party CAs return the issued certificate to the requestor as base64-encoded text in an e-mail message.
 
-1. Accept the issued certificate. To do this, type the following command at the command prompt, and then press ENTER:
+5. Accept the issued certificate. To do this, type the following command at the command prompt, and then press ENTER:
 
     ```console
     certreq -accept certnew.cer
     ```
 
-1. Verify that the certificate is installed in the computer's Personal store. To do this, follow these steps:
+6. Verify that the certificate is installed in the computer's Personal store. To do this, follow these steps:
 
     1. Start Microsoft Management Console (MMC).
     2. Add the Certificates snap-in that manages certificates on the local computer.
     3. Expand **Certificates (Local Computer)**, expand **Personal**, and then expand **Certificates**. A new certificate should exist in the Personal store. In the **Certificate Properties** dialog box, the intended purpose displayed is **Server Authentication**. This certificate is issued to the computer's fully qualified host name.
 
-1. Restart the domain controller.
+7. Restart the domain controller.
 
 For more information about creating the certificate request, see the following Advanced Certificate Enrollment and Management white paper. To view this white paper, see [Advanced Certificate Enrollment and Management](/previous-versions/windows/it-pro/windows-server-2003/cc782583(v=ws.10)).
 
