@@ -25,7 +25,7 @@ There are several reasons why Microsoft SharePoint or Microsoft OneDrive might b
 
 - Check whether users have the appropriate permissions to access the [site](https://support.office.com/article/share-a-site-958771a8-d041-4eb8-b51c-afea2eae3658) or [file](https://support.office.com/article/share-sharepoint-files-or-folders-1fe37332-0f9a-4719-970e-d2578da4941c
 ). If they don't have the necessary permissions, grant the permissions to them.
-- If the users were granted permissions to the site or file but they still receive an error message such as "Access Denied" or "You need permission to access this site," see [this troubleshooting guide](https://docs.microsoft.com/sharepoint/troubleshoot/administration/access-denied-or-need-permission-error-sharepoint-online-or-onedrive-for-business).
+- If the users were granted permissions to the site or file but they still receive an error message such as "Access Denied" or "You need permission to access this site," see [this troubleshooting guide](https://docs.microsoft.com/sharepoint/troubleshoot/administration/access-denied-sharepoint-error).
 
 ## Are users receiving "503" or "Server is busy" error messages?
 
