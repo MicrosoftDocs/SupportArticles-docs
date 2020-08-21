@@ -57,7 +57,7 @@ To fix this issue, follow these steps:
 
 1. The next time that you try to access Graph Explorer by using the same account, you are prompted by a **Permissions requested** dialog box that resembles the following.
 
-    :::image type="content" source="media/403-error-graph-explorer-query/permissions-requested-1.png" alt-text="screenshot of Permissions requested":::
+    :::image type="content" source="media/403-error-graph-explorer-query/permissions-requested-1.png" alt-text="Permissions requested":::
 
 1. Select **Accept** to apply the changes that you made in step 3. If you want other Intune administrators to also be granted access to the site, select **Consent on behalf of your organization**.
 
