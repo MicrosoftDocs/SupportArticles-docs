@@ -69,6 +69,8 @@
       href: ./networking/move-client-side-caching-folder.md
     - name: System error 85 with NET USE command
       href: ./networking/system-error-85-net-use-command.md
+    - name: Set up your small business network
+      href: ./networking/set-up-your-small-business-network.md
 
 - name: Performance
   items:
@@ -76,6 +78,8 @@
       href: ./performance/speed-up-your-computer.md
     - name: Running an.exe file starts different program
       href: ./performance/running-exe-starts-another-program.md
+    - name: Troubleshooting slow file copying in Windows
+      href: ./performance/troubleshooting-slow-file-copying-in-windows.md
 
 - name: Shell Experience
   items:
