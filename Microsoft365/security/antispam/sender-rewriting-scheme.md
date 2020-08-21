@@ -38,7 +38,7 @@ SRS rewrites the **P1 From** address in the following scenario:
   - Mail User forwarding
 - Messages that are autoforwarded (or redirected) from our customer's on-premises environments and relayed through Office 365.
 
-*Some messages forwarded with SMTP Forwarding will not be rewritten with SRS as they have already been rewritten 
+*Some messages forwarded with SMTP Forwarding will not be rewritten with SRS as they have already been rewritten.
 
 > [!NOTE]
 > SRS rewriting does not fix the issue of DMARC passing for forwarded messages. Although an SPF check will now pass by using a rewritten **P1 From** address, DMARC also requires an alignment check for the message to pass. For forwarded messages, DKIM always fails because the signed DKIM domain does not match the **From** header domain. If an original sender sets their DMARC policy to reject forwarded messages, the forwarded messages are rejected by Message Transfer Agents (MTAs) that honor DMARC policies.  
