@@ -200,7 +200,7 @@ When this problem occurs, you experience one or more of the following symptoms:
     Buttons in Dialog: OK
     ```
 
-    ![Screenshot of the error message](./media/active-directory-replication-error-8453/error-message-dialog-box.png)
+    ![Screenshot of the error message](./media/replication-error-8453/error-message-dialog-box.png)
 
 - NTDS KCC, NTDS General or Microsoft-Windows-ActiveDirectory_DomainService events that have the 8453 status are logged in the Active Directory Directive Services (AD DS) event log.
 
@@ -312,7 +312,7 @@ The typical **UserAccountControl** attribute value for a read-only domain contro
     3. Click the **Delegation** tab.
     4. On the domain controller machine account, select the **Trusted this computer for delegation to any service (Kerberos only)** option.
 
-        :::image type="content" source="./media/active-directory-replication-error-8453/trusted-computer-for-delegation-to-service.png" alt-text="Screenshot of the Trusted this computer for delegation to any service option.":::
+        :::image type="content" source="./media/replication-error-8453/trusted-computer-for-delegation-to-service.png" alt-text="Screenshot of the Trusted this computer for delegation to any service option.":::
 
 ### Fix invalid default security descriptors
 
