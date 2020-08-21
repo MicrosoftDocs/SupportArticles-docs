@@ -110,6 +110,8 @@
       href: ./backup-storage/automating-disk-cleanup-tool.md
     - name: Information about Event ID 51
       href: ./backup-storage/event-id-51-information.md
+    - name: 'Restore system/boot drive letter'
+      href: ./backup-storage/restore-system-boot-drive-letter.md
     - name: Support policy for 4K sector hard drives
       href: ./backup-storage/support-policy-4k-sector-hard-drives.md
     - name: USB Device not recognized error
