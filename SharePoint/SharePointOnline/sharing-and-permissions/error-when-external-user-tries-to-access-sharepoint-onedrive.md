@@ -95,7 +95,7 @@ If you can access the site as the incorrect external user, follow these steps:
 2. Select the profile image in the upper-right corner, and then select **My Settings**.
 3. In the **Account** field, review the email address. For example, i:0#.f|membership|JonDoe@contoso.com.<br/>
    > [!NOTE]
-   > In this example, \<*JonDoe@contoso.com*> is the email account that accepted the user invitation.
+   > In this example, \<*JonDoe\@contoso.com*> is the email account that accepted the user invitation.
 4. If the address is incorrect, go to the "Remove the incorrect external user account" section.
 
 If you can't access the site as the incorrect external user, follow these steps:
@@ -156,7 +156,7 @@ All other subscriptions must use the SharePoint Online Management Shell by follo
 
 
     > [!NOTE]
-    > In the first cmdlet, replace \<*account@contoso.com*> with the affected account. 
+    > In the first cmdlet, replace \<*account\@contoso.com*> with the affected account. 
 
 The following steps remove the external user's ability to access SharePoint Online. However, the user will still appear in any people searches and within the SharePoint Online Management Shell **Get-SPOUser** cmdlet. To remove the user completely from SharePoint Online, you must remove the user from the UserInfo list. To do this, you can use either of the following methods.
 
@@ -211,7 +211,7 @@ For more information about how to use this tool, see [Introduction to the ShareP
 
       > [!NOTE]
       > In the first cmdlet, notice the external user's **Login Name** in the returned results. As an external user, it might have a "live.com#" prefix if it's a Microsoft account.<br/><br/>
-      > In the second cmdlet, replace \<*live.com#jondoe@company.com*> with the user in your scenario.
+      > In the second cmdlet, replace \<*live.com#jondoe\@company.com*> with the user in your scenario.
 
 Next, you have to remove the account from Azure Active Directory. To do this, follow these steps:
 
@@ -262,6 +262,6 @@ For more information about "Access Denied" errors in SharePoint or OneDrive for 
 - [Error when trying to access SharePoint Online or OneDrive for Business](access-denied-sharepoint-error.md)
 - [Error when trying to approve a SharePoint Approval Workflow task](approval-workflow-access-denied-error.md)
 - [Error when trying to access a shared folder or "Access Requests" list](access-requests-list-error-access-denied.md)
-- [Error when trying to access a shared folder](shared-folder-sharepoint-error.md)
+- [Users can't access a shared folder in SharePoint Online](cannot-access-shared-folder.md)
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

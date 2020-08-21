@@ -53,6 +53,6 @@ For more information about "Access Denied" errors in SharePoint or OneDrive for 
 - [Error when trying to access SharePoint Online or OneDrive for Business](access-denied-sharepoint-error.md)
 - [Error when an external user tries to access SharePoint Online or OneDrive for Business](error-when-external-user-tries-to-access-sharepoint-onedrive.md)
 - [Error when trying to access a shared folder or "Access Requests" list](access-requests-list-error-access-denied.md)
-- [Error when trying to access a shared folder](shared-folder-sharepoint-error.md)
+- [Users can't access a shared folder in SharePoint Online](cannot-access-shared-folder.md)
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).
