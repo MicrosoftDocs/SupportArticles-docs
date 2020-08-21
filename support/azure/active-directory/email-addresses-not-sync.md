@@ -38,7 +38,7 @@ Use the IdFix DirSync Error Remediation Tool to identify duplicate or invalid at
 
 To resolve duplicate attributes by using the IdFix Tool, see ["Duplicate" is displayed in the ERROR column](/office365/troubleshoot/active-directory/run-idfix-dirsync-error-remediation-tool).
 
-For more information about the IdFix tool, go to [IdFix DirSync Error Remediation Tool](https://www.microsoft.com/en-ca/download/details.aspx?id=36832).
+For more information about the IdFix tool, go to [IdFix DirSync Error Remediation Tool](https://github.com/microsoft/idfix).
 
 ### Step 2: Check Azure AD
 
