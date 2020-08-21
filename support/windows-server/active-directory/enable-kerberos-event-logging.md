@@ -66,7 +66,7 @@ Other scenarios or errors require the attention of the System or Domain Administ
     Value Data: 0x1
     ```
 
-    If the `Parameters` subkey does not exist, create it.
+    If the **Parameters** subkey does not exist, create it.
 
     > [!NOTE]
     > Remove this registry value when it is no longer needed so that performance is not degraded on the computer. Also, you can remove this registry value to disable Kerberos event logging on a specific computer.
