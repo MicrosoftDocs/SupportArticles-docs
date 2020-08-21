@@ -42,9 +42,9 @@ _Original KB number:_ &nbsp; 2023704
 
     `REPADMIN` commands that commonly cite the 5 status include but aren't limited to:
 
-    - REPADMIN /SHOWREPS
-    - REPADMIN /REPLSUM
-    - REPADMIN /SYNCALL
+    - `REPADMIN /SHOWREPS`
+    - `REPADMIN /REPLSUM`
+    - `REPADMIN /SYNCALL`
 
     Sample output from `REPADMIN /SHOWREPS` depicting inbound replication from CONTOSO-DC2 to CONTOSO-DC1 failing with the **replication access was denied** error is shown below:
 

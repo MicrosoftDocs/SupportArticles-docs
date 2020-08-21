@@ -144,7 +144,7 @@ public void test(Uri URL)
     WRequest.Method = "POST";
     WRequest.AllowWriteStreamBuffering = false;
     WRequest.Timeout = 10000;
-    FileStream ReadIn = new FileStream("c:\\ testuploadfile.txt ", FileMode.Open, FileAccess.Read);
+    FileStream ReadIn = new FileStream("c:\\testuploadfile.txt ", FileMode.Open, FileAccess.Read);
     ReadIn.Seek(0, SeekOrigin.Begin); // Move to the start of the file.
     WRequest.ContentLength = ReadIn.Length; // Set the content length header to the size of the file.
     Byte[] FileData = new Byte[ReadIn.Length]; // Read the file in 2 KB segments.

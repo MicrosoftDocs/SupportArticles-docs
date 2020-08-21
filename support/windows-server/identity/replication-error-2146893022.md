@@ -135,15 +135,15 @@ When this problem occurs, you experience one or more of the following symptoms:
 
 ## Cause
 
-The **-2146893022 \ 0x80090322 \ SEC_E_WRONG_PRINCIPAL** error code is not an Active Directory error but may be returned by lower layer components, including RPC, Kerberos, SSL, LSA, and NTLM for different root causes.
+The **-2146893022**\\**0x80090322**\\**SEC_E_WRONG_PRINCIPAL** error code is not an Active Directory error but may be returned by lower layer components, including RPC, Kerberos, SSL, LSA, and NTLM for different root causes.
 
-Kerberos errors that are mapped by Windows code to **-2146893022 \ 0x80090322 \ SEC_E_WRONG_PRINCIPAL** include:
+Kerberos errors that are mapped by Windows code to **-2146893022**\\**0x80090322**\\**SEC_E_WRONG_PRINCIPAL** include:
 
-- **KRB_AP_ERR_MODIFIED (0x29 / 41 decimal / KRB_APP_ERR_MODIFIED)**
-- **KRB_AP_ERR_BADMATCH (0x24h / 36 decimal / "Ticket and authenticator don't match")**
-- **KRB_AP_ERR_NOT_US (0x23h / 35 decimal /  "The ticket isn't for us")**
+- **KRB_AP_ERR_MODIFIED** (**0x29**/**41 decimal**/**KRB_APP_ERR_MODIFIED**)
+- **KRB_AP_ERR_BADMATCH** (**0x24h**/**36 decimal**/**"Ticket and authenticator don't match"**)
+- **KRB_AP_ERR_NOT_US** (**0x23h**/**35 decimal**/**"The ticket isn't for us"**)
 
-Some specific root causes for **-2146893022 \ 0x80090322 \ SEC_E_WRONG_PRINCIPAL** include:
+Some specific root causes for **-2146893022**\\**0x80090322**\\**SEC_E_WRONG_PRINCIPAL** include:
 
 - A bad name-to-IP mapping in DNS, WINS, HOST, or LMHOST file caused the destination domain controller to connect to the wrong source domain controller in a different Kerberos realm.
 

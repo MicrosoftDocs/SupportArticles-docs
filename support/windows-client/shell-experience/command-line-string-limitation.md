@@ -67,7 +67,7 @@ To work around the limitation, use one or more of the following methods (as appr
   For example, instead of using the `ExecutableFile.exe Parameter1 Parameter2... ParameterN` command line in a batch file, modify the program to use a command line that is similar to the following command line, where *ParameterFile* is a file that contains the required parameters (parameter1 parameter2... ParameterN):
 
   ```console
-  ExecutableFile.exe c:\temp\ ParameterFile.txt
+  ExecutableFile.exe c:\temp\ParameterFile.txt
   ```
 
 - Modify programs that use large environment variables so that the environment variables contain less than 2047 characters (as appropriate to your operating system).
