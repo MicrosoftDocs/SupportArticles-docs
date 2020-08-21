@@ -57,7 +57,7 @@ This issue occurs because the SIP domain name of the user does not match the dom
 
 ## Resolution
 
-To prevent display of the Trust Model dialog box, use the** Trusted Domain List (TrustModelData) Group Policy**. After you set this policy, Lync will exclusively trust the domains that are specified in the policy. Supported values: 
+To prevent display of the Trust Model dialog box, use the **Trusted Domain List (TrustModelData) Group Policy**. After you set this policy, Lync will exclusively trust the domains that are specified in the policy. Supported values: 
  
 - Not Configured (Default)/Disabled
 
