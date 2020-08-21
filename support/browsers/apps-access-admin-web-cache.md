@@ -1,6 +1,6 @@
 ---
 title: Applications attempt to access web cache content that belongs to the local Administrator account
-description: 
+description: in progress
 ms.date: 08/28/2020
 ms.prod-support-area-path: 
 ms.reviewer: joelba;DEV_Triage
@@ -14,22 +14,22 @@ ms.custom:
 # Applications attempt to access web cache content that belongs to the local Administrator account
 
 _Original product version:_ &nbsp; Internet Explorer, Windows 10;Microsoft Edge, Windows 10  
-_Original KB number:_ &nbsp; 
 
 ## Symptoms
 
-Users of Internet Explorer, Microsoft Edge, or applications that leverage the modules of either browser, may report the following symptoms:
+Enterprise users of Internet Explorer, Microsoft Edge, or applications that leverage the modules of either browser report the following symptoms:
 
-- Long delays to logon to the Windows desktop
-- Failure to save content to the Internet Explorer / Microsoft Edge browser cache
-- Failure to access content from the Internet Explorer / Microsoft Edge browser cache
+- Long delays when signing in to the Windows desktop
+- The browser cannot save content to the browser cache
+- The browser cannot access content from the browser cache
 
-If a Process Monitor log is collected of the problem and reviewed, impacted users may find attempts to access files and folders from the C:\Users\Administrator profile location in addition to their own:
+If you analyze a Process Monitor log that was recorded on and affected computer while the user experienced this issue, you notice that the browsers or applications attempt to access files and folders in the C:\Users\Administrator profile location in addition to files and folders in the user's profile location.
 
 image 1
 
 ## Cause
 
+When 
 The impacted user has a cache container that was originally created for the local Administrator account and the C:\Users\Administrator profile location. The user likely received this cache from the local machine Default User profile during the first logon of the user.  
 
 In enterprise environments, the inclusion of the C:\Users\Administrator cache content may be the result of intended or unintended Default user profile customization.
@@ -38,7 +38,7 @@ For example, an administrator may have intended to create a customized Default u
 
 In some circumstances, the unintended cache inclusion can be the result of imaging or deployment utilities that copy some or all of the Administrator profile content to the Default user profile location.
 
-## Resolution:
+## Resolution
 
 On impacted machines, there will need to be separate procedures performed to address the problem for an impacted user profile as well as for the Default user profile.
 
