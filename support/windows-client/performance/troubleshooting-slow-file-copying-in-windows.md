@@ -44,7 +44,7 @@ How to determine the UNC path of the DFS shared folder:
 2. On the **DFS** tab, you see the UNC path in **Referral list**.  
    ![3860_image4](./media/troubleshooting-slow-file-copying-in-windows/18542_en_1.png)
 
-If it is still slow when you use the UNC path, see [slow performance when you copy a single file, a folder or multiple files](#slow-performance-when-you-copy-a-single-file-a-folder-or-multiple-files).
+If it is still slow when you use the UNC path, see [slow performance when you copy a single file, a folder or multiple files](#slow-performance-occurs-when-you-copy-a-single-file-a-folder-or-multiple-files).
 
 If the issue does not occur when you use the UNC path, follow these steps to verify the DFS referrals.
 

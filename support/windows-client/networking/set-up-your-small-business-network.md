@@ -76,6 +76,7 @@ Wireless networks can transfer data anywhere from 10-600 megabytes per second (M
 |Wireless network adapter<br/>An adapter connects devices to a network so that they can communicate.|One for each device on your network. Portable devices usually have them built in.|
 |Wireless router<br/>A router helps you share a single Internet connection among several devices. You don't require a router to set up a wired network, but you should use one if you want multiple devices to share an Internet connection.|One.|
 |||
+
 If your device has built-in wireless capabilities, then you don't need a wireless network adapter.
 
 ### Hybrid networks
@@ -1715,7 +1716,8 @@ The network map is available in the Network and Sharing Center on Windows Vista.
 ### Sharing options that turn on automatically
 
 In Windows XP, password-protected file sharing is turned on by default.
-> [!Note] Windows XP only detects and accesses devices that are in the same workgroup.
+> [!Note] 
+> Windows XP only detects and accesses devices that are in the same workgroup.
 
 ### Sharing options that need to be turned on manually
 
