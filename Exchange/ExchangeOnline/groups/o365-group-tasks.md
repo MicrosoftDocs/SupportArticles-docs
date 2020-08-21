@@ -268,21 +268,24 @@ By default, when you send an email message to an Outlook group that you're a mem
 
    ![Select the send me a copy of email I send to a group checkbox](./media/o365-group-tasks/checkbox.png)
 
-Administrators can enable the setting from EXO PowerShell using following command:
+Administrators can enable the setting from Exchange Online PowerShell using the following command:
 
-Invidual mailbox:
+**Individual mailbox:**
 
+```powershell
 Set-MailboxMessageConfiguration <MailboxName> -EchoGroupMessageBackToSubscribedSender $True
+```
 
-All mailboxes:
+**All mailboxes:**
 
-To enable the setting for all mailboxes at once:
+To enable the setting for all mailboxes at once, use the following command:
 
-Get-Mailbox -ResultSize Unlimited | ForEach {Set-MailboxMessageConfiguration -Identity $_.UserPrincipalName -EchoGroupMessageBackToSubscribedSender $true}  
+```powershell
+Get-Mailbox -ResultSize Unlimited | ForEach {Set-MailboxMessageConfiguration -Identity $_.UserPrincipalName -EchoGroupMessageBackToSubscribedSender $true}
+```
 
 > [!NOTE]
->
-> - This setting takes up to an hour to take effect.
+> This setting takes up to an hour to take effect.
 
 [Back to top](#top)
 
