@@ -55,20 +55,6 @@ This problem may occur if the following registry key is corrupted:
 
 ## Resolution
 
-To have us resolve this problem for you, go to the "[Fix it for me](#fix-it-for-me)" section. If you prefer to fix this problem yourself, go to the "[Let me fix it myself](#let-me-fix-it-myself)" section.
-
-### Fix it for me
-
-To fix this problem automatically, click the **Fix it** button or link. Click **Run** in the **File Download** dialog box, and follow the steps in the Fix it wizard.
-
-> [!NOTE]
->
-> - This wizard may be in English only. However, the automatic fix also works for other language versions of Windows.
-> - If you aren't using the computer that has the problem, save the Fix it solution to a flash drive or a CD and then run it on the computer that has the problem.
-Then, go to the "Did this fix the problem?" section.
-
-### Let me fix it myself
-
 > [!IMPORTANT]
 > This article is not for use with Windows Vista, with Windows Server 2008, or with later Windows operating systems. Starting with Windows Vista and with Windows Server 2008, Windows component installation is manifest-based. Trying to manually register specific components, as described in the following steps, can have unexpected results that may require you to reinstall Windows to resolve.
 
@@ -114,6 +100,4 @@ To resolve this problem, follow these steps:
 
 #### Did this fix the problem?
 
-- Check whether the problem is fixed. If the problem is fixed, you're finished with this section. If the problem isn't fixed, you can [contact support](/contactus).
-- We would appreciate your feedback. To provide feedback or to report any issues with this solution, please leave a comment on the "[Fix it for me](https://blogs.technet.com/fixit4me/)" blog or send us an
- [email](mailto:fixit4me@microsoft.com?subject=kb).
+Check whether the problem is fixed. If the problem is fixed, you're finished with this section. If the problem isn't fixed, you can [contact support](https://support.microsoft.com/contactus/).
