@@ -414,7 +414,7 @@ PortQry displays extended information that some ports may return. PortQry looks 
 For example, by default, the FTP service listens on TCP port 21. When PortQry determines that TCP port 21 on the destination computer is **LISTENING**, it uses the information from the Services file to determine that the FTP service is listening on this port.
 
 > [!NOTE]
-> You can change the service that PortQry determines is listening on a port by editing the Services file. For more information, see the "[Customize ports that queries use](#Customize-ports-that-queries-use)" section of this article.
+> You can change the service that PortQry determines is listening on a port by editing the Services file. For more information, see the "[Customize ports that queries use](#customize-ports-that-queries-use)" section of this article.
 
 In this scenario, PortQry tries to use the Anonymous user account to log on to the FTP server. The result of this logon attempt indicates whether the destination FTP server accepts anonymous logons. PortQry returns the server's response.
 
@@ -457,7 +457,7 @@ You can use the following command-line options with PortQry:
   
     portqry -n **myserver**  
   
-    portqry -n `**www.widgets.microsoft.com**
+    portqry -n `www.widgets.microsoft.com`
   
     portqry -n **192.168.1.10**  
   
@@ -477,7 +477,7 @@ You can use the following command-line options with PortQry:
   
     portqry -n **192.168.1.20** -p both
   
-    portqry -n **www.widgets.microsoft.com** (This command uses the default parameter tcp. )
+    portqry -n `www.widgets.microsoft.com` (This command uses the default parameter tcp. )
 
 - **-e** (endpoint): This parameter is optional. Use this parameter to specify the end point (or the port number) on the destination computer. This must be a valid port number between 1 and 65535 inclusive. You can't use this parameter together with the -o parameter or the -r parameter. If you don't specify a port number, PortQry queries port 80.
 
@@ -507,7 +507,7 @@ You can use the following command-line options with PortQry:
   
     portqry -n **myserver** -p udp -r 135;139
   
-    portqry-n **www.widgets.microsoft.com** -p tcp -r 10;20
+    portqry-n `www.widgets.microsoft.com` -p tcp -r 10;20
   
     portqry -n **192.168.1.20** -p both -r 25;120
 
@@ -591,7 +591,7 @@ You can use the following command-line options with PortQry:
   
     portqry -n **myserver** -p udp -e 161 -l **myserver.txt** -cn ! **snmp string**!
   
-    portqry -n **www.widgets.microsoft.com** -p both -r 150:170 -sl -cn ! **my_snmp_community_name**!
+    portqry -n `www.widgets.microsoft.com` -p both -r 150:170 -sl -cn ! **my_snmp_community_name**!
 
 - **-sp** (source port): This parameter is optional. Use this parameter to specify the initial source port to use when you connect to the specified TCP and UDP ports on the destination computer. This functionality is useful to help you test firewall or router rules that filter ports based on their source ports.
 
@@ -1342,4 +1342,4 @@ For additional information about how to use PortQry, click the following article
 
 [https://download.microsoft.com/download/3/f/4/3f4c6a54-65f0-4164-bdec-a3411ba24d3a/PortQryUI.exe](https://download.microsoft.com/download/3/f/4/3f4c6a54-65f0-4164-bdec-a3411ba24d3a/portqryui.exe)
 
- [back to the top](#Introduction)
+ [back to the top](#introduction)

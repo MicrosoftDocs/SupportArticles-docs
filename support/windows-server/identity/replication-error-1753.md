@@ -148,7 +148,7 @@ This article describes symptoms, cause, and resolution steps for AD operations t
 
 The diagram below shows the RPC workflow starting with the registration of the server application with the RPC Endpoint Mapper (EPM) in step 1 to the passing of data from the RPC client to the client application in step 7.
 
-![RPC workflow](./media/active-directory-replication-error-1753/prc-workflow.jpg)
+![RPC workflow](./media/replication-error-1753/prc-workflow.jpg)
 
 Steps 1 through 7 map to the following operations:
 
@@ -280,12 +280,12 @@ ncacn_http:CONTOSO-DC01[6004]
 
     In addition, ensure that the service context matches default settings.
 
-    || **Startup Value**| **Service Status** |
+    |**Windows 2000**| **Startup Value**| **Service Status** |
     |---|---|---|
-    | **Windows 2000**|| |
     | Remote Procedure Call (RPC)| Automatic|Started|
     | Remote Procedure Call (RPC) Locator| Automatic|Started|
-    | **Windows Server 2003, Server 2008, Server 2008 R2**|| |
+    |
+    | **Windows Server 2003, Server 2008, Server 2008 R2**|**Startup Value**| **Service Status** 
     | Remote Procedure Call (RPC)|Automatic|Started|
     | Remote Procedure Call (RPC) Locator|Manual|Null or Stopped|
     ||||

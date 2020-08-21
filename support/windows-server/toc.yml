@@ -110,8 +110,6 @@
       href: ./backup-storage/automating-disk-cleanup-tool.md
     - name: Information about Event ID 51
       href: ./backup-storage/event-id-51-information.md
-    - name: Hyper-V virtual machine fails to start
-      href: ./backup-storage/hyper-v-virtual-machine-not-start-0x80070005.md
     - name: Support policy for 4K sector hard drives
       href: ./backup-storage/support-policy-4k-sector-hard-drives.md
     - name: USB Device not recognized error

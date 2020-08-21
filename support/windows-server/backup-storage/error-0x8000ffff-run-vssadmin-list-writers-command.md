@@ -55,7 +55,7 @@ This problem may occur if the following registry key is corrupted:
 
 ## Resolution
 
-To have us resolve this problem for you, go to the "[Fix it for me](###fix-it-for-me)" section. If you prefer to fix this problem yourself, go to the "[Let me fix it myself](###let-me-fix-it-myself)" section.
+To have us resolve this problem for you, go to the "[Fix it for me](#fix-it-for-me)" section. If you prefer to fix this problem yourself, go to the "[Let me fix it myself](#let-me-fix-it-myself)" section.
 
 ### Fix it for me
 
@@ -65,7 +65,7 @@ To fix this problem automatically, click the **Fix it** button or link. Click **
 >
 > - This wizard may be in English only. However, the automatic fix also works for other language versions of Windows.
 > - If you aren't using the computer that has the problem, save the Fix it solution to a flash drive or a CD and then run it on the computer that has the problem.
-Then, go to the "[Did this fix the problem?](#fixedalways)" section.
+Then, go to the "Did this fix the problem?" section.
 
 ### Let me fix it myself
 
@@ -115,5 +115,5 @@ To resolve this problem, follow these steps:
 #### Did this fix the problem?
 
 - Check whether the problem is fixed. If the problem is fixed, you're finished with this section. If the problem isn't fixed, you can [contact support](/contactus).
-- We would appreciate your feedback. To provide feedback or to report any issues with this solution, please leave a comment on the "[Fix it for me](http://blogs.technet.com/fixit4me/)" blog or send us an
+- We would appreciate your feedback. To provide feedback or to report any issues with this solution, please leave a comment on the "[Fix it for me](https://blogs.technet.com/fixit4me/)" blog or send us an
  [email](mailto:fixit4me@microsoft.com?subject=kb).

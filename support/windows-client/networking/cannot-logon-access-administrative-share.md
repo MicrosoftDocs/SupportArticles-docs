@@ -66,7 +66,7 @@ To share a folder on a Windows Vista-based computer that has file sharing enable
 
 ## Workaround
 
-To allow administrative share access in a workgroup for Windows, use the following workaround. To have us perform this workaround for you, go to the ["Fix it for me"](###fix-it-for-me) section. If you would rather do this yourself, go to the ["Let me fix it myself"](###let-me-fix-it-myself) section.
+To allow administrative share access in a workgroup for Windows, use the following workaround. To have us perform this workaround for you, go to the ["Fix it for me"](#fix-it-for-me) section. If you would rather do this yourself, go to the ["Let me fix it myself"](#let-me-fix-it-myself) section.
 
 ### Fix it for me
 
@@ -77,7 +77,7 @@ To perform this workaround automatically, click the **Fix this problem** link. N
 >
 > If you're not using the computer that has the problem, you can save the automatic fix to a flash drive or to a CD, and then you can run it on the computer that has the problem.
 
-Now go to the ["Did this fix the problem?"](##did-this-fix-the-problem) section.
+Now go to the ["Did this fix the problem?"](#did-this-fix-the-problem) section.
 
 ### Let me fix it myself
 

@@ -49,8 +49,6 @@ Multiple root causes exist, and they're listed in the following table:
 
 Scavenging is the most common culprit when DNS records go missing from DNS zones where. Even Windows-based computers that have statically assigned servers register their records every 24 hours. Verify that the NoRefresh and Refresh intervals are too low. For example, if these values are both less than 24 hours, then you'll lose DNS records.
 
-Microsoft TechNet blog: [Don't be afraid of DNS scavenging. Just be patient.](http://blogs.technet.com/b/networking/archive/2008/03/19/don-t-be-afraid-of-dns-scavenging-just-be-patient.aspx)
-
 TechNet: [Using DNS aging and scavenging](https://technet.microsoft.com/library/cc757041%28ws.10%29.aspx)
 
 [KB2211826](https://support.microsoft.com/help/2211826) DNS Aging and Scavenging not removing records AND how to scavenge them as quickly as possible
