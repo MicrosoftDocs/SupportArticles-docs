@@ -182,8 +182,6 @@
           href: not-enough-memory-resources-create-media.md
         - name: Scheduled Updates fails to unmount image
           href: scheduled-updates-fails-error-0x800700a1.md
-    - name: Boot images
-      items:
         - name: Unable to manage boot images
           href: error-managing-boot-images.md
     - name: Configure OS deployment in System Center 2012 Configuration Manager
