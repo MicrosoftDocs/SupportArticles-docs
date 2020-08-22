@@ -43,6 +43,9 @@
       - name: Intune
         tocHref: /troubleshoot/mem/intune/
         topicHref: /troubleshoot/mem/intune/welcome-intune
+      - name: Configuration Manager
+        tocHref: /troubleshoot/mem/configmgr/
+        topicHref: /troubleshoot/mem/configmgr/welcome-configuration-manager
 
     - name: Azure
       tocHref: /troubleshoot/azure/
