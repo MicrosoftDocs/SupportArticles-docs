@@ -140,7 +140,7 @@ To make this change, use either of the following methods.
 
 8. Immediately after the **Load Registry SOFTWARE Hive** task, add another **Run Command Line** task. To do this, open the **Add** menu, and select **General** > **Run Command Line**.
 
-   ![Add another Run Command Line task.](./media/no-mouse-cursor-during-osd-task-sequence/add-another-task.png)
+   ![Add a Run Command Line task.](./media/no-mouse-cursor-during-osd-task-sequence/add-another-task.png)
 
 9. Select the newly created **Run Command Line** task, and specify the following values:
 

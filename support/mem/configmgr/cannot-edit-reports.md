@@ -1,6 +1,6 @@
 ---
 title: Editing reports fails if Internet Explorer isn't the default browser
-description: 
+description: Solves an issue that you can't edit reports in System Center 2012 Configuration Manager if the default browser isn't Internet Explorer.
 ms.date: 06/16/2020
 ms.prod-support-area-path: 
 ---

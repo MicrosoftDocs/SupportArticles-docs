@@ -1,6 +1,6 @@
 ---
 title: Useful logs and queries
-description: Describes how to some other useful logs and queries for advanced troubleshooting content distribution related issues.
+description: Describes how to some other useful logs and queries for advanced troubleshooting content distribution-related issues.
 ms.date: 03/30/2020
 ms.prod-support-area-path: 
 ---
@@ -177,7 +177,7 @@ After resetting the `SourceVersion` to **0** for the Type 1 row, redistributing 
   |Column|Values|
   |---|---|
   |Action|0 - NONE<br/>1 - UPDATE<br/>2 - ADD<br/>3 - DELETE<br/>4 - VALIDATE<br/>5 - CANCEL|
-  |State|0 - PENDING<br/>1 - READY<br/>2 - STARTED<br/>3 - INPROGRESS<br/>4 - PENDING RESTART<br/>5 - COMPLETE<br/>6 - FAILED<br/>7 - CANCELLED<br/>8 - SUSPENDED|
+  |State|0 - PENDING<br/>1 - READY<br/>2 - STARTED<br/>3 - INPROGRESS<br/>4 - PENDING RESTART<br/>5 - COMPLETE<br/>6 - FAILED<br/>7 - CANCELED<br/>8 - SUSPENDED|
   |||
 
 - `DistributionPoints` - Contains a list of all the distribution points.
@@ -195,7 +195,7 @@ After resetting the `SourceVersion` to **0** for the Type 1 row, redistributing 
 
   |Column|Values|
   |---|---|
-  |ActionState|1 - SUCCESS<br/>2 - WARNING<br/>4 - ERROR<br/>8 - DOWNLOAD STARTED<br/>16 - DOWNLOAD IN PROGRESS<br/>32 - DOWNLOADED<br/>64 - CANCELLED<br/>128 - CANCELLATION REQUESTED|
+  |ActionState|1 - SUCCESS<br/>2 - WARNING<br/>4 - ERROR<br/>8 - DOWNLOAD STARTED<br/>16 - DOWNLOAD IN PROGRESS<br/>32 - DOWNLOADED<br/>64 - CANCELED<br/>128 - CANCELLATION REQUESTED|
   |||
 
 - `PkgNotification` - Notification table monitored by SMSDBMON to trigger DistMgr to process a package. Type column defines the type of package notification. Rows in this table are removed after SMSDBMON triggers DistMgr.
@@ -213,7 +213,7 @@ After resetting the `SourceVersion` to **0** for the Type 1 row, redistributing 
 
   |Column|Values|
   |---|---|
-  |State ID|1  -  SUCCESS<br/>2  -  WARNING<br/>4  -  FAILURE<br/>8  -  DOWNLOAD STARTED<br/>16 - DOWNLOAD IN PROGRESS<br/>32 - DOWNLOADED<br/>64 - CANCELLED|
+  |State ID|1  -  SUCCESS<br/>2  -  WARNING<br/>4  -  FAILURE<br/>8  -  DOWNLOAD STARTED<br/>16 - DOWNLOAD IN PROGRESS<br/>32 - DOWNLOADED<br/>64 - CANCELED|
   |||
 
   Sample State Message Report:
