@@ -65,7 +65,7 @@ To resolve this issue, use one of the following methods, as appropriate for your
 
 ### Run IdFix to check for duplicates, missing attributes, and rule violations
 
-Use the [IdFix DirSync Error Remediation Tool](https://www.microsoft.com/download/details.aspx?id=36832) to find objects and errors that prevent synchronization to Azure AD.
+Use the [IdFix DirSync Error Remediation Tool](https://github.com/microsoft/idfix) to find objects and errors that prevent synchronization to Azure AD.
 
 - If you see "Blank" in the **ERROR** column after you run IdFix, see ["Blank" is displayed in the ERROR column for one or more objects after you run the IdFix tool](https://docs.microsoft.com/office365/troubleshoot/active-directory/idfix-not-display-objects-errors).
 
