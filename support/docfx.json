@@ -134,6 +134,14 @@
       "ms.technology": {
         "mem/intune/**/*.md": "microsoft-graph"
       },
+
+      "ms.prod": {
+        "mem/configmgr/**/*.md": "configuration-manager"
+      },
+      "ms.technology": {
+        "mem/configmgr/**/*.md": ""
+      },
+
       "ms.prod": {
         "azure/**/*.md": "azure"
       },
@@ -159,6 +167,7 @@
         "webapps/**/*.md": "Web Apps",
         "windows/win32/**/*.md": "Windows Developer",
         "mem/intune/**/*.md": "Intune",
+        "mem/configmgr/**/*.md": "Configuration Manager",
         "azure/**/*.md": "Azure",
         "azure/cloud-services/*.md": "Cloud Services",
         "azure/virtual-machines/*.md": "Virtual Machines",
@@ -174,7 +183,9 @@
         "aspnet/**/*.md": ["Web Apps"],        
         "webapps/**/*.md": ["Web Apps"],
         "windows/win32/**/*.md": ["Windows Developer"],
-        "azure/**/*.md": ["Azure"]
+        "azure/**/*.md": ["Azure"],
+        "mem/intune/**/*.md": ["Intune"],
+        "mem/configmgr/**/*.md": ["Configuration Manager"]
       }
     },
 

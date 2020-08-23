@@ -26,6 +26,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/mem/configmgr/index.md",
+      "redirect_url": "/support/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/visualstudio/index.md",
       "redirect_url": "/support/visualstudio/welcome-visual-studio",
       "redirect_document_id": false
