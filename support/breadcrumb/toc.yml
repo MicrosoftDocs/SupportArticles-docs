@@ -38,7 +38,7 @@
 
     - name: Microsoft Identity Manager
       tocHref: /troubleshoot/microsoft-identity-manager/
-      topicHref: /troubleshoot/microsoft-identity-manager/toc.yml
+      topicHref: /troubleshoot/microsoft-identity-manager/welcome-identity-manager
 
     - name: Microsoft Endpoint Manager
       tocHref: /troubleshoot/mem/
