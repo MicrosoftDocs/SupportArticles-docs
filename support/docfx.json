@@ -169,6 +169,13 @@
       "ms.technology": {
         "system-center/vmm/**/*.md": "virtual-machine-manager"
       },
+ 
+      "ms.prod": {
+        "microsoft-identity-manager/*.md": "microsoft-identity-manager"
+      },
+      "ms.technology": {
+        "microsoft-identity-manager/*.md": ""
+      },      
 
       "ms.prod": {
         "azure/**/*.md": "azure"
@@ -200,6 +207,7 @@
         "system-center/orchestrator/**/*.md": "Orchestrator",    
         "system-center/scsm/**/*.md": "Service Manager",
         "system-center/vmm/**/*.md": "Virtual Machine Manager",
+        "microsoft-identity-manager/*.md": "Microsoft Identity Manager",
         "azure/**/*.md": "Azure",
         "azure/cloud-services/*.md": "Cloud Services",
         "azure/virtual-machines/*.md": "Virtual Machines",

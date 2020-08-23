@@ -51,6 +51,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/microsoft-identity-manager/index.md",
+      "redirect_url": "/support/microsoft-identity-manager/toc.yml",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/visualstudio/index.md",
       "redirect_url": "/support/visualstudio/welcome-visual-studio",
       "redirect_document_id": false
