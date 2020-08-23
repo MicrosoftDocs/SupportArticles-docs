@@ -1,0 +1,8 @@
+- name: System Center Essentials 2010
+  items:
+    - name: Error 2912 designating a host
+      href: designating-host-fails-error-2912.md
+    - name: The web recorder bar doesn't display
+      href: web-recorder-bar-not-displayed.md
+    - name: Unhandled exception running tasks
+      href: unhandled-exception-running-task.md
