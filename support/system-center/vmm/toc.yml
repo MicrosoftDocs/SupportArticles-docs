@@ -38,7 +38,7 @@
     href: adding-cluster-error-2912.md
   - name: Error 2927 when adding a managed host
     href: add-managed-host-error-2927.md
-  - name: Error 10434 putting a host into Maintenance Mode
+  - name: Error 10434 putting a host into maintenance mode
     href: error-10434-put-host-maintenance-mode.md
   - name: Error 25310 creating a cluster
     href: creating-cluster-error-25310.md
@@ -46,12 +46,14 @@
     href: manage-hyper-v-hosts-error-0x8033803b.md
   - name: Incorrect status in VMM library share
     href: incorrect-agent-status.md
+  - name: IP Address page is missing in the cluster creation wizard
+    href: ip-address-page-missing.md
   - name: Needs Attention host status
     href: report-needs-attention-host-status.md
   - name: Recommended antivirus exclusions
     href: antivirus-exclusions-for-managed-hosts.md
-  - name: IP Address page is missing in the cluster creation wizard
-    href: ip-address-page-missing.md
+  - name: Reinstall a VMM agent on a host
+    href: reinstall-vmm-agent.md
   - name: Troubleshoot Needs Attention, Not Responding and Access Denied hosts
     href: troubleshoot-host-status-errors.md
   - name: Troubleshoot issues when adding a Hyper-V host
@@ -86,6 +88,10 @@
     href: vm-templates-list-missing.md
 - name: Server Application Virtualization
   items:
+  - name: Server App-V Agent custom actions
+    href: server-app-v-agent-custom-actions.md
+  - name: Server App-V Sequencer custom actions
+    href: server-app-v-sequencer-custom-actions.md
   - name: Support policy for Microsoft applications
     href: microsoft-application-support-policy.md
   - name: Support policy for third-party applications
@@ -104,14 +110,8 @@
     href: vmm-installation-hostagentbadsharepathname-error.md
   - name: Install and configure SQL Analysis Server
     href: install-configure-sql-analysis-server.md
-  - name: Reinstall a VMM agent on a host
-    href: reinstall-vmm-agent.md
   - name: Removing VMM service account from db_owner causes login failures
     href: remove-service-account-db-owner-role-causes-login-failure.md
-  - name: Server App-V Agent custom actions
-    href: server-app-v-agent-custom-actions.md
-  - name: Server App-V Sequencer custom actions
-    href: server-app-v-sequencer-custom-actions.md
   - name: Setup fails when server NetBIOS name exceeds 15 characters
     href: setup-crashes-when-server-name-exceeds-15-characters.md
 - name: Site recovery
@@ -134,7 +134,7 @@
     href: wap-tenant-portal-empty-vm-list.md
   - name: Error 12700 attaching ISO files
     href: attaching-iso-file-error-12700.md
-  - name: Error 13206 when installing guest services
+  - name: Error 13206 installing guest services
     href: guest-services-installation-error-13206.md
   - name: Error 22528 deploying a DAC pack
     href: deploying-dac-pack-error-22528.md
@@ -192,7 +192,7 @@
     href: start-new-job-error-2606.md
   - name: Error ID 1602 when starting the VMM console
     href: vmm-console-start-error-1602.md
-  - name: Troubleshoot VMM 801 errors
+  - name: Troubleshoot 801 errors
     href: fix-scvmm-801-errors.md
   - name: Use ProcDump to troubleshoot VMM service issues
     href: troubleshoot-vmm-service-issues-with-procdump.md
