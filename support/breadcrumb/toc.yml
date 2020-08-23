@@ -47,6 +47,23 @@
         tocHref: /troubleshoot/mem/configmgr/
         topicHref: /troubleshoot/mem/configmgr/welcome-configuration-manager
 
+    - name: System Center
+      tocHref: /troubleshoot/system-center/
+      topicHref: /troubleshoot/system-center/
+      items:
+      - name: Data Protection Manager
+        tocHref: /troubleshoot/system-center/dpm/
+        topicHref: /troubleshoot/system-center/dpm/welcome-dpm
+      - name: Orchestrator
+        tocHref: /troubleshoot/system-center/orchestrator/
+        topicHref: /troubleshoot/system-center/orchestrator/welcome-orchestrator
+      - name: Service Manager
+        tocHref: /troubleshoot/system-center/scsm/
+        topicHref: /troubleshoot/system-center/scsm/welcome-scsm
+      - name: Virtual Machine Manager
+        tocHref: /troubleshoot/system-center/vmm/
+        topicHref: /troubleshoot/system-center/vmm/welcome-vmm
+
     - name: Azure
       tocHref: /troubleshoot/azure/
       topicHref: /troubleshoot/azure/

@@ -1,0 +1,60 @@
+- name: Welcome
+  href: welcome-scsm.md
+- name: Administrator console issues
+  items:
+    - name: Can't view deleted items
+      href: cannot-view-deleted-items.md
+    - name: Console fails to launch in Windows 7 32-bit
+      href: console-cannot-launch.md
+    - name: Slow performance after SQL Server upgrade
+      href: slow-performance-after-sql-server-upgrade.md
+- name: Authoring
+  items:
+    - name: The management pack could not be verified
+      href: management-pack-not-verified.md
+- name: Configuration and performance
+  items:
+    - name: Can't install the SharePoint portal
+      href: error-occurred-executing-custom-action.md
+    - name: Configure antivirus exclusions
+      href: configure-antivirus-exclusions.md
+    - name: Disable diagnostic and connectivity data
+      href: disable-diagnostics-connectivity-data.md
+    - name: The Get-SCDWJob cmdlet is slow or times out
+      href: get-scdwjob-cmdlet-slow-times-out.md
+    - name: Update rollups and build versions
+      href: update-rollups-and-build-versions.md
+- name: Connectors
+  items:
+    - name: An object of type MonitoringClass was not found
+      href: object-type-monitoringclass-not-found.md
+    - name: Connector doesn't transfer uninstalled software information
+      href: connector-not-transfer-uninstalled-software-information.md
+    - name: Error Could not load type when creating an Exchange Connector
+      href: could-not-load-type-error.md
+    - name: Logical disks and network adapters incorrectly marked as deleted
+      href: logical-disks-network-adapters-marked-deleted.md
+- name: Data warehouse and reporting
+  items:
+    - name: Cannot impersonate user for data source
+      href: cannot-impersonate-user-data-source.md
+    - name: Data warehouse jobs fail with event 33502
+      href: data-warehouse-jobs-fail-event-33502.md
+    - name: Data warehouse jobs stuck or fail with error
+      href: data-warehouse-jobs-stuck-error.md
+    - name: The Data Warehouse Base Library management pack deployment fails
+      href: data-warehouse-base-library-mp-shows-failed-status.md
+    - name: Troubleshoot stuck data warehouse jobs
+      href: troubleshoot-stuck-data-warehouse-jobs.md
+- name: Setup and disaster recovery
+  items:
+    - name: Can't upgrade to System Center 2012 R2 Service Manager
+      href: cannot-upgrade-to-system-center-2012-r2-service-manager.md
+    - name: Installation fails with SQL Server version-related error
+      href: installation-fails-with-sql-server-version-related-error.md
+- name: Workflows
+  items:
+    - name: A change request can't be closed
+      href: change-requests-remain-in-progress-status.md
+    - name: Workflows don't execute
+      href: workflows-display-needing-attention.md

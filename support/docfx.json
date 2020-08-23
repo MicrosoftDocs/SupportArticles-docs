@@ -143,6 +143,34 @@
       },
 
       "ms.prod": {
+        "system-center/dpm/**/*.md": "system-center"
+      },
+      "ms.technology": {
+        "system-center/dpm/**/*.md": "data-protection-manager"
+      },
+
+      "ms.prod": {
+        "system-center/orchestrator/**/*.md": "system-center"
+      },
+      "ms.technology": {
+        "system-center/orchestrator/**/*.md": "orchestrator"
+      },
+
+      "ms.prod": {
+        "system-center/scsm/**/*.md": "system-center"
+      },
+      "ms.technology": {
+        "system-center/scsm/**/*.md": "service-manager"
+      },
+
+      "ms.prod": {
+        "system-center/vmm/**/*.md": "system-center"
+      },
+      "ms.technology": {
+        "system-center/vmm/**/*.md": "virtual-machine-manager"
+      },
+
+      "ms.prod": {
         "azure/**/*.md": "azure"
       },
       "ms.service": {
@@ -168,6 +196,10 @@
         "windows/win32/**/*.md": "Windows Developer",
         "mem/intune/**/*.md": "Intune",
         "mem/configmgr/**/*.md": "Configuration Manager",
+        "system-center/dpm/**/*.md": "Data Protection Manager",
+        "system-center/orchestrator/**/*.md": "Orchestrator",    
+        "system-center/scsm/**/*.md": "Service Manager",
+        "system-center/vmm/**/*.md": "Virtual Machine Manager",
         "azure/**/*.md": "Azure",
         "azure/cloud-services/*.md": "Cloud Services",
         "azure/virtual-machines/*.md": "Virtual Machines",
@@ -185,7 +217,8 @@
         "windows/win32/**/*.md": ["Windows Developer"],
         "azure/**/*.md": ["Azure"],
         "mem/intune/**/*.md": ["Intune"],
-        "mem/configmgr/**/*.md": ["Configuration Manager"]
+        "mem/configmgr/**/*.md": ["Configuration Manager"],
+        "system-center/**/*.md": ["System Center"]
       }
     },
 
