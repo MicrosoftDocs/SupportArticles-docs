@@ -1,6 +1,6 @@
 - name: Welcome
   href: welcome-dpm.md
-- name: Agent installation
+- name: Agents
   items:
     - name: Agent communication issues
       href: agent-communication-errors.md
@@ -24,10 +24,10 @@
       href: restore-database-error-470.md
     - name: Some disks aren't enumerated
       href: disks-not-enumeratd-fail-to-add.md
-- name: DPM console crashes, hangs, or performance
+- name: DPM console issues
   items:
-    - name: DPM error codes
-      href: vnext-dpm-error-codes.md
+    - name: DPM service crashes with Event ID 917
+      href: dpm-service-crashes-event-917.md
     - name: Sub menu items appear more than once
       href: sub-menu-items-show-more-than-once.md
 - name: File protection
@@ -36,7 +36,7 @@
       href: work-with-efs-encrypted-files.md
     - name: Job status failure messages
       href: job-status-failure-messages.md
-- name: Hyper-V and Virtual Server protection
+- name: Hyper-V protection
   items:
     - name: A host level backup fails with error 0x8007173D
       href: host-level-backup-error-0x8007173d.md
@@ -54,12 +54,12 @@
       href: deduplicated-volumes-backup-fails.md
     - name: Can't upgrade to DPM 2012
       href: cannot-run-sql-instance-to-upgrade-dpm.md
+    - name: DPM error codes
+      href: vnext-dpm-error-codes.md
     - name: DPM 2010 consistency check fails
       href: consistency-check-error-0x80070005.md
     - name: DPM 2012 SP1 error codes
       href: list-dpm-2012-sp1-error-codes.md
-    - name: DPM service crashes with Event ID 917
-      href: dpm-service-crashes-event-917.md
     - name: Error 2013 configuring SMTP server information
       href: configure-smtp-server-information-error-2013.md
     - name: Error 832 installing DPM 2016
