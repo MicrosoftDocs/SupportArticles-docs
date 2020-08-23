@@ -36,6 +36,10 @@
       tocHref: /troubleshoot/windows/win32
       topicHref: /troubleshoot/windows/win32/welcome-windowsdeveloper
 
+    - name: Microsoft Identity Manager
+      tocHref: /troubleshoot/microsoft-identity-manager/
+      topicHref: /troubleshoot/microsoft-identity-manager/welcome-identity-manager
+
     - name: Microsoft Endpoint Manager
       tocHref: /troubleshoot/mem/
       topicHref: /troubleshoot/mem/
