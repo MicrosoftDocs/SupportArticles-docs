@@ -17,13 +17,13 @@ _Original product version:_ &nbsp; Internet Explorer, Windows 10;Microsoft Edge,
 
 ## Symptoms
 
-Enterprise users of Internet Explorer, Microsoft Edge, or applications that leverage the modules of either browser report the following symptoms:
+Enterprise users of Internet Explorer, Microsoft Edge, or applications that use the modules of either browser report the following symptoms:
 
 - Long delays when signing in to the Windows desktop
 - The browser cannot save content to the browser cache
 - The browser cannot access content from the browser cache
 
-If you analyze a Process Monitor log that was recorded on and affected computer while the user experienced this issue, you notice that the browsers or applications attempt to access files and folders in the C:\Users\Administrator profile location in addition to files and folders in the user's profile location.
+An affected user records a Process Monitor log while experiencing the issue. When you analyze this log, you notice that the browsers or applications attempt to access files and folders that are located in the C:\Users\Administrator folder in addition to files and folders that are located in the user's profile folder.
 
 :::image type="content" source="./media/apps-access-admin-web-cache/ie-mse-procmon-log.png" alt-text="Procmon log that shows attempts to access the Administrator folders":::
 
