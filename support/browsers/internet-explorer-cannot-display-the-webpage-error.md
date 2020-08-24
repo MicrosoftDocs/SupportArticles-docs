@@ -252,11 +252,11 @@ If you think that an app or driver that you recently installed has caused proble
   3. In the Internet Explorer Default Settings dialog box, click **Reset**.
   4. In the Reset Internet Explorer Settings dialog box, click **Reset**. (The screenshot for this step is listed below).
 
-       :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/reset-internet-explorer-settings.png" alt-text="screenshot of the Reset Internet Explorer Settings page" border="false":::
+       :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/reset-internet-explorer-settings.png" alt-text="Reset Internet Explorer Settings page" border="false":::
 
   5. Click **Close** and then click **OK** two times. (The screenshot for this step is listed below).
 
-      :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/reset-internet-explorer-settings-checklist.png" alt-text="screenshot of the Reset Internet Explorer Settings page" border="false":::
+      :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/reset-internet-explorer-settings-checklist.png" alt-text="Reset Internet Explorer Settings page output" border="false":::
 
   6. Exit and then restart Internet Explorer. The changes take effect the next time that you open Internet Explorer.
 
@@ -405,11 +405,11 @@ Open System Restore by clicking the **Start** button. In the search box, type *S
   3. In the Internet Explorer Default Settings dialog box, click **Reset**.
   4. In the Reset Internet Explorer Settings dialog box, click **Reset**. (The screenshot for this step is listed below).
 
-       :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/reset-internet-explorer-settings.png" alt-text="screenshot of the Reset Internet Explorer settings page" border="false":::
+       :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/reset-internet-explorer-settings.png" alt-text="Internet Explorer 8 Reset Internet Explorer settings page" border="false":::
 
   5. Click **Close** and then click **OK** two times. (The screenshot for this step is listed below).
 
-      :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/reset-internet-explorer-settings-checklist.png" alt-text="screenshot of the Reset Internet Explorer settings page" border="false":::
+      :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/reset-internet-explorer-settings-checklist.png" alt-text="Internet Explorer 8 Reset Internet Explorer settings page output" border="false":::
 
   6. Exit and then restart Internet Explorer. The changes take effect the next time that you open Internet Explorer.
 
