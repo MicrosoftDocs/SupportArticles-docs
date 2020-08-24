@@ -144,7 +144,7 @@ For Example: `C:\Temp\Cabfiles\SampleScript.bat`
 
 As soon as you customize and save the script file, you should double-click *Samplescript.bat* to execute it. A command prompt window displays the commands that are being executed by the script. The output resembles the following:
 
-:::image type="content" source="media/create-all-inclusive-deploy-package/script.png" alt-text="SCRIPT":::
+:::image type="content" source="media/create-all-inclusive-deploy-package/script.png" alt-text="script output":::
 
 This script will install all the extracted .cab files without a prompt to restart. These files include prerequisites for Internet Explorer 11, the Internet Explorer 11 setup file, the Internet Explorer 11 language pack, the Internet Explorer 11 spelling package, and the Internet Explorer 11 cumulative security update.
 

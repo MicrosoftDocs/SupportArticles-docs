@@ -44,7 +44,7 @@ You can permanently set the default zoom in Internet Explorer 9 or a later versi
 
 4. Click **Decimal**.
 
-   :::image type="content" source="media/how-to-set-zoom-level/decimal.png" alt-text="Decimal" border="false":::
+   :::image type="content" source="media/how-to-set-zoom-level/decimal.png" alt-text="edit value" border="false":::
 
 5. If you want to set the default zoom level to 125%, type *125000*, and then click **OK**.
 6. Close Registry Editor.
