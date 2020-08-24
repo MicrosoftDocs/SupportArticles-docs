@@ -17,7 +17,7 @@ ms.technology: UserProfilesAndLogon
 
 This article describes how to configure Windows to automate the logon process by storing your password and other pertinent information in the registry database. By using this feature, other users can start your computer and use the account that you establish to automatically log on.
 
-_Original product version:_ &nbsp; Windows Server 2019  
+_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 324737
 
 > [!IMPORTANT]
@@ -63,9 +63,3 @@ To use Registry Editor to turn on automatic logon, follow these steps:
 > - When Exchange Active Sync (EAS) password restrictions are active, the autologon feature does not work. This behavior is by design. This behavior is caused by a change in Windows 8.1 and does not affect Windows 8 or earlier versions. To work around this behavior in Windows 8.1 and later versions, remove the EAS policies in Control Panel.
 > - An interactive console logon that has a different user on the server changes the **DefaultUserName** registry entry as the last logged-on user indicator. AutoAdminLogon relies on the **DefaultUserName** entry to match the user and password. Therefore, AutoAdminLogon may fail. You can configure a shutdown script to set the correct **DefaultUserName**.
 > - You can use the Sysinternals tool [AutoLogon](/sysinternals/downloads/autologon) to enable this functionality easier. This tool also helps you to use an encrypted version of password.
-
-## Applies to
-
-- Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012 R2

@@ -17,7 +17,7 @@ ms.technology: RDS
 
 This article provides methods to make sure Remote Desktop service (RDS) Connection Broker and Remote Desktop Management service (RDMS) can work as expected.
 
-_Original product version:_ &nbsp; Windows Server 2016  
+_Original product version:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4036954
 
 ## Symptoms
@@ -54,8 +54,3 @@ To fix this issue, use one of the following methods:
 
 > [!NOTE]
 > Microsoft has released [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/help/3135244) to enable SQL Server communication to use TLS 1.2.
-
-## Applies to
-
-- Windows Server 2016
-- Windows Server 2012 R2

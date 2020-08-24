@@ -17,7 +17,7 @@ ms.technology: BackupStorage
 
 This article provides a resolution to solve the event ID 158 that's logged for identical disk GUIDs in Windows 10.
 
-_Original product version:_ &nbsp; Windows 10, version 2004  
+_Original product version:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2983588
 
 ## Symptoms
@@ -43,13 +43,3 @@ To resolve this problem if multiple paths are available to the physical disk dev
 For more information about how to enable MPIO, see [Installing and Configuring MPIO](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee619752(v=ws.10)).
 
 If multiple VHDs are identified as duplicates, use the `ResetDiskIdentifier` parameter of the `Set-VHD` Windows PowerShell cmdlet. For more information about the `Set-VHD` cmdlet, see [Set-VHD](/powershell/module/hyper-v/set-vhd?redirectedfrom=MSDN&view=win10-ps).
-
-## Applies to
-
-- Windows 10, version 2004
-- Windows 10, version 1909
-- Windows 10, version 1809
-- Windows 10, version 1803
-- Windows 10, version 1709
-- Windows 10, version 1703
-- Windows 10, version 1607

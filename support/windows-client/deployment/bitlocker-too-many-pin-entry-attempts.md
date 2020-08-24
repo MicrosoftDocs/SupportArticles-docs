@@ -17,7 +17,7 @@ ms.technology: Depolyment
 
 This article helps fix an error (Too many PIN entry attempts) that occurs after you enter a BitLocker PIN at Windows startup.
 
-_Original product version:_ &nbsp; Windows 10, version 1809 and later versions, Windows Server 2012 R2
+_Original product version:_ &nbsp; Windows 10, version 1809 and later versions, Windows Server 2012 R2, Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 4009797
 
 ## Symptoms
@@ -66,13 +66,3 @@ To work around this issue, try the following methods, in no particular order:
 ## More information
 
 For more information about how to reset the TPM chip, see [Reset the TPM Lockout](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd851452(v=ws.11)).
-
-## Applies to
-
-- Windows 10, version 2004
-- Windows 10, version 1909
-- Windows 10, version 1903
-- Windows 10, version 1809
-- Windows 7 Service Pack 1
-- Windows Server 2012 R2
-- Windows Server 2008 R2 Service Pack 1

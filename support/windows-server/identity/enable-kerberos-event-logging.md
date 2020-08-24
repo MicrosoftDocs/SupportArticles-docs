@@ -17,7 +17,7 @@ ms.technology: ActiveDirectory
 
 This article describes how to enable Kerberos event logging.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows 10, version 1809 and later versions  
+_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10, version 1809 and later versions, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 262177
 
 ## Summary
@@ -81,11 +81,3 @@ Kerberos event logging is intended only for troubleshooting purpose when you exp
 From a general point of view, you may receive additional errors that are correctly handled by the receiving client without user or admin intervention. Restated, some errors captured by Kerberos logging don't reflect a severe problem that must be solved or even can be solved.
 
 For example, an event log 3 about a Kerberos error that has the error code **0x7 KDC_ERR_S_PRINCIPAL_UNKNOWN** for Server Name cifs/<**IP address**> will be logged when a share access is made against a server IP address and no server name. If this error is logged, the Windows client automatically tries to fail back to NTLM authentication for the user account. If this operation works, receive no error.
-
-## Applies to
-
-- Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012 R2
-- Windows 10, version 1809 and later versions
-- Windows 7 Service Pack 1

@@ -17,7 +17,7 @@ ms.technology: Performance
 
 This article provides a solution to an issue where ESENT Event ID 327 and 326 are filled up the Application log file.
 
-_Original product version:_ &nbsp; Windows Server 2019  
+_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 2900773
 
 ## Symptoms
@@ -75,8 +75,3 @@ After stopping the service, do one of the following.
 - [User Access Logging Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh849634(v=ws.11))
 
 - [Manage User Access Logging](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574126(v=ws.11))
-
-## Applies to
-
-- Windows Server 2019
-- Windows Server 2016

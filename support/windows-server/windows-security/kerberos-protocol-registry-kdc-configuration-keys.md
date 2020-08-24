@@ -17,7 +17,7 @@ ms.technology: WindowsSecurity
 
 This article describes registry entries about Kerberos version 5 authentication protocol and Key Distribution Center (KDC) configuration.
 
-_Original product version:_ &nbsp; Windows 10, version 2004, Windows Server 2019  
+_Original product version:_ &nbsp; Windows 10, version 2004, Windows 7 Service Pack 1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 837361
 
 ## Summary
@@ -305,11 +305,3 @@ The registry entries that are listed in this section must be added to the follow
     This value indicates whether debug logging is on (1) or off (0).
 
     If the value is set to **0x10000000** (hexadecimal) or **268435456** (decimal), specific file or line information will be returned in the **edata** field of **KERB_ERRORS** as **PKERB_EXT_ERROR** errors during a KDC processing failure.
-
-## Applies to
-
-- Windows 10, version 2004
-- Windows 7 Service Pack 1
-- Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012 R2

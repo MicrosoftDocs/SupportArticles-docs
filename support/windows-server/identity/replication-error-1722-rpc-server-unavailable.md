@@ -17,7 +17,7 @@ ms.technology: ActiveDirectory
 
 This article helps fix the error 1722 of Active Directory replication.
 
-_Original product version:_ &nbsp; Windows Server 2019  
+_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, WIndows Server 2012 R2  
 _Original KB number:_ &nbsp; 2102154
 
 ## Symptoms
@@ -392,9 +392,3 @@ If the above don't provide a solution to the 1722, then you can use the followin
 - [Enabling Extended error information](/windows/win32/rpc/enabling-extended-error-information)
 
 - [Network Connectivity](/previous-versions/windows/it-pro/windows-2000-server/cc961803(v=technet.10))
-
-## Applies to
-
-- Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012 R2

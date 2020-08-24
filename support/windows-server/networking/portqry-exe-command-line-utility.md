@@ -17,7 +17,7 @@ ms.technology: Networking
 
 Portqry.exe is a command-line utility that you can use to help troubleshoot TCP/IP connectivity issues. The utility reports the port status of TCP and UDP ports on a computer that you select.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019  
+_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 310099
 
 > [!NOTE]
@@ -69,13 +69,3 @@ Portqry.exe is available for download from the Microsoft Download Center. To dow
 For more information about PortQry version 2.0, see [New features and functionality in PortQry version 2.0](https://support.microsoft.com/help/832919).
 
 For more information about Port requirements for the Microsoft Windows Server System, see [Service overview and network port requirements for Windows](https://support.microsoft.com/help/832017).
-
-## Applies to
-
-- Windows 10 - all editions
-- Windows 8.1 Enterprise
-- Windows Server 2019
-- Windows Server 2012 Standard
-- Windows Server 2012 R2 Standard
-- Windows Server 2012 R2 Datacenter
-- Windows Server 2012 Datacenter

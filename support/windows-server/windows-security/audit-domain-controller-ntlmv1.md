@@ -17,7 +17,7 @@ ms.technology: WindowsSecurity
 
 This article introduces the steps to test any application that is using NT LAN Manager (NTLM) version 1 on a Microsoft Windows Server-based domain controller.
 
-_Original product version:_ &nbsp; Windows Server 2016  
+_Original product version:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4090105
 
 ## Summary
@@ -85,8 +85,3 @@ Common sources of anonymous logon sessions are:
 - SID-Name mapping: It can use anonymous sessions. See [Network access: Allow anonymous SID/Name translation](/windows/security/threat-protection/security-policy-settings/network-access-allow-anonymous-sidname-translation). We recommend that you require authentication for this functionality.
 
 - Client applications that do not authenticate: The application server may still create a logon session as anonymous. This is also done when there are empty strings passed for user name and password in NTLM authentication.
-
-## Applies to
-
-- Windows Server 2016
-- Windows Server 2012 R2

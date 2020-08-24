@@ -17,7 +17,7 @@ ms.technology: HyperV
 
 This article helps fix an issue where Windows 10 Hyper-V can't start virtual machines after a Windows 10 upgrade.
 
-_Original product version:_ &nbsp; Windows 10, version 1909  
+_Original product version:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4052082
 
 ## Symptoms
@@ -103,11 +103,3 @@ To do this, you may use some tools such as process explorer. Follow these steps:
 4. Select the Vmcompute.exe process, and check for non-Microsoft DLLs in the lower pane. It is fine for some entries to be blank.
 
     :::image type="content" source="./media/hyper-v-not-start-vm-after-upgrade/vmcompute-running-result.png" alt-text="Screenshot of Process monitor results.":::
-
-## Applies to
-
-- Windows 10, version 1909
-- Windows 10, version 1903
-- Windows 10, version 1809
-- Windows 10, version 1803
-- Windows 10, version 1709

@@ -76,14 +76,3 @@ For more information about MSI logging, see Windows Help. To do this, search by 
 
 > [!NOTE]
 > The addition of the x flag is available natively in Windows Server 2003 and later operating systems, on the MSI redistributable version 3.0, and on later versions of the MSI redistributable.
-
-## Applies to
-
-- Windows 10, version 2004
-- Windows 10, version 1909
-- Windows 10, version 1903
-- Windows 10, version 1809
-- Windows 10, version 1803
-- Windows 10, version 1709
-- Windows Server 2012 R2 Datacenter
-- Windows Server 2012 R2 Standard

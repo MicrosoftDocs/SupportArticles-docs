@@ -15,7 +15,7 @@ ms.technology: ActiveDirectory
 ---
 # Known issues managing a Windows 10 Group Policy client in Windows Server 2012 R2
 
-_Original product version:_ &nbsp; Windows 10, version 2004, Windows Server 2019  
+_Original product version:_ &nbsp; Window 10 - all editions, Windows Server 2019, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4015786
 
 ## Summary
@@ -207,16 +207,3 @@ After WinStoreUI is removed and WindowsStore is added, you see:
 After both ADMX/L templates are present in the policy definitions folder, you see:
 
 :::image type="content" source="media/known-issues-for-group-policy-clients/error-reporting-5.png" alt-text="Error reporting 5":::
-
-## Applies to
-
-- Windows 10, version 2004
-- Windows 10, version 1909
-- Windows 10, version 1809
-- Windows 10, version 1803
-- Windows 10, version 1709
-- Windows 10, version 1703
-- Windows 10, version 1607
-- Windows 10, version 1511
-- Windows Server 2019
-- Windows Server 2012 R2

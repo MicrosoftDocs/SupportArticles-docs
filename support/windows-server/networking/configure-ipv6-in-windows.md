@@ -17,7 +17,7 @@ ms.technology: Networking
 
 This article provides solutions to configure Internet Protocol version 6 (IPv6) for advanced users in Windows.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019  
+_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 929852
 
 ## Summary
@@ -162,17 +162,3 @@ For more information about tools to help with network trace, see:
 
 > [!WARNING]
 > Netmon 3.4 is not compatible with Windows Server 2012 or newer OS when LBFO NIC teaming is enabled. Instead, use **Message Analyzer**.
-
-## Applies to
-
-- Windows 10 - all editions
-- Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012 R2 Standard
-- Windows Server 2012 R2 Datacenter
-- Windows Server 2012 R2 Essentials
-- Windows Server 2012 R2 for Embedded Systems
-- Windows Server 2012 R2 Foundation
-- Windows Server 2012 Standard
-- Windows Server 2012 Datacenter
-- Windows Server 2012 Essentials

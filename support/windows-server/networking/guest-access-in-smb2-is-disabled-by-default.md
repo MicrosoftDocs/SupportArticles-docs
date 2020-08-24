@@ -17,7 +17,7 @@ ms.technology: Networking
 
 This article describes information about Windows disabling guest access in SMB2 by default, and provides settings to enable insecure guest logons in Group Policy. However, this is generally not recommended.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019  
+_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 4046019
 
 ## Symptoms
@@ -111,9 +111,3 @@ This setting has no effect on SMB1 behavior. SMB1 continues to use guest access 
 
 > [!NOTE]
 > SMB1 is uninstalled by default in latest Windows 10 and Windows Server configurations. For more information, see [SMBv1 is not installed by default in Windows 10 version 1709, Windows Server version 1709 and later versions](/windows-server/storage/file-server/troubleshoot/smbv1-not-installed-by-default-in-windows).
-
-## Applies to
-
-- Windows 10 - all editions
-- Windows Server 2019
-- Windows Server 2016

@@ -17,7 +17,7 @@ ms.technology: BackupStorage
 
 This article discusses the manner in which Windows supports hard disks that have a storage capacity of more than 2 TB and explains how to initialize and partition disks to maximize space usage.
 
-_Original product version:_ &nbsp; Windows Server 2019  
+_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2581408
 
 ## Summary
@@ -186,9 +186,3 @@ To this point, the following incorrect behavior is known to occur when Windows h
 When a disk encounters errors that are related to unreadable or unwritable sectors, it reports those errors and the relevant SCSI sense data to the operating system. SCSI sense data may contain information about LBA for sectors that were found to be unreadable or unwritable.
 
 For LBA address space that is greater than 2 TB, the disk requires SCSI sense data in Descriptor format. This format is not supported by Windows 7 or Windows Server 2008 R2, which retrieves SCSI sense data in Fixed format. Therefore, the retrieved SCSI sense data either does not contain information about bad sectors or it contains incorrect information about bad sectors. Administrators should note this limitation when they look for bad sector LBA information that is recorded in the Windows event log.
-
-## Applies to
-
-- Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012 R2
