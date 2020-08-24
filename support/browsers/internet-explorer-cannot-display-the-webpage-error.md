@@ -46,7 +46,7 @@ To reset Internet Explorer to the default settings, follow these steps:
 
 5. Click **Close**, and then click **OK** two times. (The screenshot for this step is listed below).
 
-    :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/reset-internet-explorer-settings-checklist.png" alt-text="screenshot of Reset Internet Explorer Settings" border="false":::
+    :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/reset-internet-explorer-settings-checklist.png" alt-text="screenshot of Reset Internet Explorer Settings output" border="false":::
 
 6. Exit and then restart Internet Explorer. The changes take effect the next time that you start Internet Explorer.
 
@@ -550,11 +550,11 @@ To restore your PC using System Restore
   3. In the Internet Explorer Default Settings dialog box, click **Reset**.
   4. In the Reset Internet Explorer Settings dialog box, click **Reset**. (The screenshot for this step is listed below).
 
-      :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/reset-internet-explorer-settings.png" alt-text="screenshot of Reset Internet Explorer Settings" border="false":::
+      :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/reset-internet-explorer-settings.png" alt-text="Internet Explorer 8 Reset Internet Explorer Settings" border="false":::
 
   5. Click **Close** and then click **OK** two times. (The screenshot for this step is listed below).
 
-      :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/reset-internet-explorer-settings-checklist.png" alt-text="screenshot of Reset Internet Explorer Settings" border="false":::
+      :::image type="content" source="media/internet-explorer-cannot-display-the-webpage-error/reset-internet-explorer-settings-checklist.png" alt-text="Internet Explorer 8 Reset Internet Explorer Settings output" border="false":::
 
   6. Exit and then restart Internet Explorer. The changes take effect the next time that you open Internet Explorer.
 
