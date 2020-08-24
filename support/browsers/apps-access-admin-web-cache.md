@@ -1,6 +1,6 @@
 ---
 title: Applications attempt to access web cache content that belongs to the local Administrator account
-description: in progress
+description: Describes an issue where IE or Edge does not function correctly because the user's profile is configured to use the Administrator cache.
 ms.date: 08/28/2020
 ms.prod-support-area-path: 
 ms.reviewer: joelba;DEV_Triage
@@ -13,7 +13,7 @@ ms.custom:
 
 # Applications attempt to access web cache content that belongs to the local Administrator account
 
-_Original product version:_ &nbsp; Internet Explorer, Windows 10;Microsoft Edge, Windows 10  
+_Original product version:_&nbsp;Internet Explorer, Windows 10; Microsoft Edge, Windows 10  
 
 ## Symptoms
 
