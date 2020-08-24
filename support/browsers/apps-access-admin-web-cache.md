@@ -25,63 +25,61 @@ Enterprise users of Internet Explorer, Microsoft Edge, or applications that leve
 
 If you analyze a Process Monitor log that was recorded on and affected computer while the user experienced this issue, you notice that the browsers or applications attempt to access files and folders in the C:\Users\Administrator profile location in addition to files and folders in the user's profile location.
 
-image 1
+:::image type="content" source="./media/apps-access-admin-web-cache/ie-mse-procmon-log.png" alt-text="Procmon log that shows attempts to access the Administrator folders":::
 
 ## Cause
 
-When 
-The impacted user has a cache container that was originally created for the local Administrator account and the C:\Users\Administrator profile location. The user likely received this cache from the local machine Default User profile during the first logon of the user.  
+A Windows computer has an Administrator profile and a Default user profile. Each profile has an associated cache container. The first time that the user signs in to Windows, Windows uses the information from the Default user profile to configure the user's profile. The user's profile includes the cache container that was defined for the Default user profile.
 
-In enterprise environments, the inclusion of the C:\Users\Administrator cache content may be the result of intended or unintended Default user profile customization.
+In the case of this issue, the Default User profile uses the cache container that was originally created for the Administrator profile, in the C:\Users\Administrator folder. In other words, the user's profile is configured to use the Administrator's cache container.
 
-For example, an administrator may have intended to create a customized Default user profile to be used as the basis for all new users to log on to Windows machine.
-
-In some circumstances, the unintended cache inclusion can be the result of imaging or deployment utilities that copy some or all of the Administrator profile content to the Default user profile location.
+This issue may occur if the Default user profile has been modified to create custom settings for new user profiles. For example, some imaging or deployment utilities copy some or all of the Administrator profile content to the Default user profile.
 
 ## Resolution
 
-On impacted machines, there will need to be separate procedures performed to address the problem for an impacted user profile as well as for the Default user profile.
+On affected computers, you need to separately fix the affected user profile and the Default user profile.
 
-CAUTION:  Microsoft strongly recommends making a backup of any folder or registry locations before making any modifications.
+> [!CAUTION]  
+> Microsoft strongly recommends that you back up any profile folder locations or registry entries before you make any modifications.
 
-NOTE:  By default, these profile files and folders will be hidden from view.  To enable them to be seen, you will need to temporarily modify the Folder Options View of each profile location using the following steps:
+> [!NOTE]  
+> By default, these profile files and folders are hidden from view. To make them visible, you have to temporarily modify the folder view options of the C:\Users\Default folder and the C:\Users\\<*user name*> folder (where \<*user name*> is the name of the affected user's profile). To do this, follow these steps:
+>  
+> 1. Open Windows File Explorer, and go to the appropriate profile folder location.
+> 1. Select **View** > **Options** > **View**.
+> 1. In the **Advanced settings** list, select **Show hidden files, folders, and drives**.
+> 1. In the same list, clear the **Hide protected operating system files (Recommended)** checkbox, and then select **Yes**.
+>   :::image type="content" source="./media/apps-access-admin-web-cache/ie-mse-show-hidden-files.png" alt-text="An alert appears when you clear the option to hide protected files":::
+> 1. Select **Apply**, and then select **OK**.
 
-1. Open Windows File Explorer to the appropriate profile folder location
-1. From the ribbon at the top of the window, select the ‘View’ tab
-1. Click the Options button to open the Folder Options dialog
-1. Click the View tab and then locate the ‘Hidden Files and Folders’ radio-button options.
-1. Select the radio-button option to ‘Show hidden files, folders, and drives’
-1. Now locate the checkbox option to ‘Hide protected operating system files (Recommended)’
-1. Uncheck the box.  A warning dialog should appear.  Read the warning, and then choose Yes
-1. Click Apply and then click OK to close the folder options.
+### Step 1 - Repair the Default user profile
 
-image
-
-### For the Default User Profile
-
-To prevent new user profiles from receiving a copy of a Default user profile cache, delete the 
-following file and folders if they exist:
+To prevent new user profiles from receiving a copy the cache container from the Default user profile, delete the following file and folders (if they exist):
 
 - C:\Users\Default\AppData\Local\Microsoft\Windows\WebCacheLock.dat
 - C:\Users\Default\AppData\Local\Microsoft\Windows\WebCache
 - C:\Users\Default\AppData\Local\Microsoft\Windows\INetCache
 - C:\Users\Default\AppData\Local\Microsoft\Windows\INetCookies
 
-### For each impacted user profile
+:::image type="content" source="./media/apps-access-admin-web-cache/ie-mse-delete-folders-and-files.png" alt-text="File and folders to delete to repair the Default user profile":::
 
-While the user is logged on to Windows, a number of their files and folders cannot be deleted or renamed while in use.  To correct this issue, the user will need to log off of Windows completely and then have an administrator delete the following file and folders if they exist:
+### Step 2 - Repair each impacted user profile
 
-- C:\Users\username\AppData\Local\Microsoft\Windows\WebCacheLock.dat
-- C:\Users\username\AppData\Local\Microsoft\Windows\WebCache
-- C:\Users\username\AppData\Local\Microsoft\Windows\INetCache
-- C:\Users\username\AppData\Local\Microsoft\Windows\INetCookies
-  \* where username is the impacted profile user name
+A number of the files and folders that are part of the user profile cannot be deleted while the user is signed in to Windows. Because of this, the user has to sign out of Windows before an administrator can sign in and fix the profile. To fix the profile, delete the following file and folders (if they exist):
 
-Once these files and folders are deleted, perform the following recommended steps:
+- C:\Users\\<*user name*>\AppData\Local\Microsoft\Windows\WebCacheLock.dat
+- C:\Users\\<*user name*>\AppData\Local\Microsoft\Windows\WebCache
+- C:\Users\\<*user name*>\AppData\Local\Microsoft\Windows\INetCache
+- C:\Users\\<*user name*>\AppData\Local\Microsoft\Windows\INetCookies
+..
+  > [!NOTE]  
+  > In these file paths, \<*user name*> is the name of the affected user's profile.
 
-- Revert the Folder Options View settings to their prior values
-- Restart the machine, before logging onto Windows as either a new or impacted user.
+After you delete these items, follow these steps:
+
+- Restore the folder view options to their previous values
+- Restart the computer, and then have the affected user sign in (or sign in by using a new user account).
 
 ## More information
 
-The files and folders identified above, make up part of the Internet Explorer and Microsoft Edge browser cache. As these content locations are designed to be created for each user individually, Microsoft does not support nor recommend attempts to customize, modify, or re-locate them.
+The files and folders that are listed in this article comprise part of the Internet Explorer and Microsoft Edge browser cache. These content locations are designed to be created for each user individually. Therefore, Microsoft recommends that you do not attempt to customize, modify, or re-locate them, and Microsoft does not support such attempts.
