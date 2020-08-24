@@ -26,6 +26,36 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/mem/configmgr/index.md",
+      "redirect_url": "/support/mem/configmgr/welcome-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/index.md",
+      "redirect_url": "/support/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/orchestrator/index.md",
+      "redirect_url": "/support/system-center/orchestrator/welcome-orchestrator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scsm/index.md",
+      "redirect_url": "/support/system-center/scsm/welcome-scsm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/index.md",
+      "redirect_url": "/support/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/microsoft-identity-manager/index.md",
+      "redirect_url": "/support/microsoft-identity-manager/welcome-identity-manager",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/visualstudio/index.md",
       "redirect_url": "/support/visualstudio/welcome-visual-studio",
       "redirect_document_id": false

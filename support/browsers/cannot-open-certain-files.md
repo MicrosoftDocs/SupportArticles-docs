@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 2588679
 
 When you try to open a file by using Internet Explorer in Windows 7, you receive the following error message:
 
-:::image type="content" source="media/cannot-open-certain-files/error.png" alt-text="error" border="false":::
+:::image type="content" source="media/cannot-open-certain-files/error.png" alt-text="error message" border="false":::
 
 ## Cause
 

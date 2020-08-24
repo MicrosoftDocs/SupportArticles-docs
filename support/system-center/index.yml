@@ -1,0 +1,32 @@
+### YamlMime:Hub
+title: Microsoft System Center documentation
+summary: Troubleshooting articles for Microsoft System Center
+
+metadata:
+   ms.topic: hub-page
+   services: service
+   ms.service: system-center
+   ms.author: luche
+
+productDirectory:
+  items:
+  - title: Data Protection Manager
+    imageSrc: "../media/hub-landing/system-center-dpm.png"
+    links:
+    - url: dpm/welcome-dpm.md
+      text: Troubleshooting articles for Data Protection Manager
+  - title: Orchestrator
+    imageSrc: "../media/hub-landing/system-center-orchestrator.png"
+    links:
+    - url: orchestrator/welcome-orchestrator.md
+      text: Troubleshooting articles for Orchestrator
+  - title: Service Manager
+    imageSrc: "../media/hub-landing/system-center-service-manager.png"
+    links:
+    - url: scsm/welcome-scsm.md
+      text: Troubleshooting articles for Service Manager
+  - title: Virtual Machine Manager
+    imageSrc: "../media/hub-landing/system-center-vmm.png"
+    links:
+    - url: vmm/welcome-vmm.md
+      text: Troubleshooting articles for Virtual Machine Manager
