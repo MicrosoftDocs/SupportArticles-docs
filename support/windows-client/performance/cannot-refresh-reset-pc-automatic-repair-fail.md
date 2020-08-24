@@ -41,15 +41,15 @@ To attempt to resolve this issue, follow the steps below.
 > These steps should only be used if you're attempting to use the **Refresh your PC** or **Reset your PC** options in Windows RE because your system is in a non-bootable state.
 
 1. After Automatic Repair fails to repair your PC, select **Advanced options** and then **Troubleshoot**.
-1. Select **Advanced options** and then select Command Prompt.
-1. If prompted, enter in the password for the user name.
-1. At the Command Prompt, go to the \windows\system32\config folder by typing the following command:
+2. Select **Advanced options** and then select Command Prompt.
+3. If prompted, enter in the password for the user name.
+4. At the Command Prompt, go to the \windows\system32\config folder by typing the following command:
 
     ```console
     cd %windir%\system32\config
     ```
 
-1. Rename the System and Software registry hives to System.001 and Software.001 by using the following commands:
+5. Rename the System and Software registry hives to System.001 and Software.001 by using the following commands:
 
     ```console
     ren system system.001  
@@ -58,8 +58,8 @@ To attempt to resolve this issue, follow the steps below.
 
     > [!NOTE]
     > Renaming the Software hive won't allow you to use the "Refresh your PC" option. If you want to use the "Refresh your PC" option, only rename the System hive. If the Software hive is also corrupt, you may not be able to use the "Refresh your PC" option.
-1. Type *exit* without the quotes to exit the Command Prompt and reboot the PC back to the Automatic Repair screen.
-1. After selecting **Advanced options** and then **Troubleshoot**, select either **Refresh your PC** or **Reset your PC**.
+6. Type *exit* without the quotes to exit the Command Prompt and reboot the PC back to the Automatic Repair screen.
+7. After selecting **Advanced options** and then **Troubleshoot**, select either **Refresh your PC** or **Reset your PC**.
 
 ## More information
 

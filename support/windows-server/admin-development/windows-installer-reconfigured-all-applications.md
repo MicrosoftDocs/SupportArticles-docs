@@ -24,49 +24,45 @@ _Original KB number:_ &nbsp; 974524
 
 You may experience slow system startup or slow login issues. Additionally in the Application Event log you may see the following event:
 
-```console
-Log Name: Application
-Source: MsiInstaller
-Date: mmddyyy hh:mm:ss
-Event ID: 1035
-Task Category: None
-Level: Information
-Keywords: Classic
-User: SYSTEM
-Computer:
-Description:
-Windows Installer reconfigured the product. Product Name: <ProductName>. Product Version: <VersionNumber>. Product Language: <languageID>. Reconfiguration success or error status: 0.
-```
+> Log Name: Application  
+Source: MsiInstaller  
+Date: mmddyyy hh:mm:ss  
+Event ID: 1035  
+Task Category: None  
+Level: Information  
+Keywords: Classic  
+User: SYSTEM  
+Computer:  
+Description:  
+Windows Installer reconfigured the product. Product Name: \<ProductName>. Product Version: \<VersionNumber>. Product Language: \<languageID>. Reconfiguration success or error status: 0.
 
 You will see this previous event for each of the installed application on the computer.
 
 The system Event log will show that the Windows Installer Service is starting and stopping automatically.
 
-```console
-Event Type: Information
-Event Source: Service Control Manager
-Event Category: None
-Event ID: 7035
-Date: mmddyyyy
-Time: hh:mm:ss
-User: NT AUTHORITY\SYSTEM
-Computer: <ComputerName>
-Description:
+> Event Type: Information  
+Event Source: Service Control Manager  
+Event Category: None  
+Event ID: 7035  
+Date: mmddyyyy  
+Time: hh:mm:ss  
+User: NT AUTHORITY\SYSTEM  
+Computer: \<ComputerName>  
+Description:  
 The Windows Installer service was successfully sent a start control.
-For more information, see Help and Support Center at <http://go.microsoft.com/fwlink/events.asp>.
-
-Event Type: Information
-Event Source: Service Control Manager
-Event Category: None
-Event ID: 7036
-Date: mmddyyyy
-Time: hh:mm:ss
-User: N/A
-Computer: <ComputerName>
-Description:
-The Windows Installer service entered the stopped state.
-For more information, see Help and Support Center at <http://go.microsoft.com/fwlink/events.asp>.
-```
+For more information, see Help and Support Center at <`http://go.microsoft.com/fwlink/events.asp`>.
+>
+> Event Type: Information  
+Event Source: Service Control Manager  
+Event Category: None  
+Event ID: 7036  
+Date: mmddyyyy  
+Time: hh:mm:ss  
+User: N/A  
+Computer: \<ComputerName>  
+Description:  
+The Windows Installer service entered the stopped state.  
+For more information, see Help and Support Center at <`http://go.microsoft.com/fwlink/events.asp`>.
 
 ## Cause
 

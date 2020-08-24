@@ -76,14 +76,14 @@ To allow administrative share access in a workgroup for Windows, use the followi
 1. Click **Start**, type *regedit* in the **Start Search** box, and then press Enter.
     > [!NOTE]
     > If you're prompted for an administrator password or for confirmation, type the password or provide confirmation.
-1. Locate and then click the following registry subkey:
+2. Locate and then click the following registry subkey:
 
     `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System`
-1. On the **Edit** menu, point to **New**, and then click **DWORD (32-bit) Value**.
-1. Type LocalAccountTokenFilterPolicy to name the new entry, and then press Enter.
-1. Right-click **LocalAccountTokenFilterPolicy**, and then click **Modify**.
-1. In the **Value data** box, type *1*, and then click **OK**.
-1. Exit Registry Editor.
+3. On the **Edit** menu, point to **New**, and then click **DWORD (32-bit) Value**.
+4. Type LocalAccountTokenFilterPolicy to name the new entry, and then press Enter.
+5. Right-click **LocalAccountTokenFilterPolicy**, and then click **Modify**.
+6. In the **Value data** box, type *1*, and then click **OK**.
+7. Exit Registry Editor.
 
 The LocalAccountTokenFilterPolicy entry in the registry can have a value of 0 or 1. These values set the behavior of the entry as follows:
 

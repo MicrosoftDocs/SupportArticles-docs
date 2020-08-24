@@ -94,39 +94,37 @@ PortQry then performs the following actions:
 
 #### Sample output
 
-```console
-UDP port 389 (unknown service): LISTENING or FILTERED
-Sending LDAP query to UDP port 389...
-
-LDAP query response:
-
-currentdate: 12/13/2003 05:42:40 (unadjusted GMT)
-subschemaSubentry: CN=Aggregate,CN=Schema,CN=Configuration,DC=domain,DC=example,DC=com
-dsServiceName: CN=NTDS Settings,CN=myserver,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=domain,DC=example,DC=com
-namingContexts: DC=domain,DC=example,DC=com
-defaultNamingContext: DC=domain,DC=example,DC=com
-schemaNamingContext: CN=Schema,CN=Configuration,DC=domain,DC=example,DC=com
-configurationNamingContext: CN=Configuration,DC=domain,DC=example,DC=com
-rootDomainNamingContext: DC=domain,DC=example,DC=com
-supportedControl: 1.2.840.113556.1.4.319
-supportedLDAPVersion: 3
-supportedLDAPPolicies: MaxPoolThreads
-highestCommittedUSN: 4259431
-supportedSASLMechanisms: GSSAPI
-dnsHostName: myserver.domain.example.com
-ldapServiceName: domain.example.com:myserver$@domain.EXAMPLE.COM
-serverName: CN=myserver,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=domain,DC=example,DC=com
-supportedCapabilities: 1.2.840.113556.1.4.800
-isSynchronized: TRUE
-isGlobalCatalogReady: TRUE
-domainFunctionality: 0
-forestFunctionality: 0
-domainControllerFunctionality: 2
-
-======== End of LDAP query response ========
-
-UDP port 389 is LISTENING
-```
+> UDP port 389 (unknown service): LISTENING or FILTERED  
+Sending LDAP query to UDP port 389...  
+>
+> LDAP query response:  
+>
+> currentdate: 12/13/2003 05:42:40 (unadjusted GMT)  
+subschemaSubentry: CN=Aggregate,CN=Schema,CN=Configuration,DC=domain,DC=example,DC=com  
+dsServiceName: CN=NTDS Settings,CN=myserver,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=domain,DC=example,DC=com  
+namingContexts: DC=domain,DC=example,DC=com  
+defaultNamingContext: DC=domain,DC=example,DC=com  
+schemaNamingContext: CN=Schema,CN=Configuration,DC=domain,DC=example,DC=com  
+configurationNamingContext: CN=Configuration,DC=domain,DC=example,DC=com  
+rootDomainNamingContext: DC=domain,DC=example,DC=com  
+supportedControl: 1.2.840.113556.1.4.319  
+supportedLDAPVersion: 3  
+supportedLDAPPolicies: MaxPoolThreads  
+highestCommittedUSN: 4259431  
+supportedSASLMechanisms: GSSAPI  
+dnsHostName: myserver.domain.example.com  
+ldapServiceName: domain.example.com:myserver$@domain.EXAMPLE.COM  
+serverName: CN=myserver,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=domain,DC=example,DC=com  
+supportedCapabilities: 1.2.840.113556.1.4.800  
+isSynchronized: TRUE  
+isGlobalCatalogReady: TRUE  
+domainFunctionality: 0  
+forestFunctionality: 0  
+domainControllerFunctionality: 2  
+>
+> ======== End of LDAP query response ========
+>
+> UDP port 389 is LISTENING
 
 In this example, you determine that port 389 is listening. Additionally, you can determine which LDAP service is listening on port 389 and certain details about that service.
 
@@ -149,35 +147,33 @@ PortQry then performs the following actions:
 
 #### Sample output
 
-```console
-UDP port 135 (epmap service): LISTENING or FILTERED
-Querying Endpoint Mapper Database...
-Server's response:
-
-UUID: 50abc2a4-574d-40b3-9d66-ee4fd5fba076
-ncacn_ip_tcp:169.254.12.191[4144]
-
-UUID: ecec0d70-a603-11d0-96b1-00a0c91ece30 NTDS Backup Interface
-ncacn_np:\\\\MYSERVER[\\PIPE\\lsass]
-
-UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface
-ncacn_ip_tcp:169.254.12.191[1030]
-
-UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface
-ncadg_ip_udp:169.254.12.191[1032]
-
-UUID: 12345678-1234-abcd-ef00-01234567cffb
-ncacn_np:\\\\MYSERVER[\\PIPE\\lsass]
-
-UUID: 12345678-1234-abcd-ef00-01234567cffb
-ncacn_np:\\\\MYSERVER[\\PIPE\\POLICYAGENT]
-
-Total endpoints found: 6
-
-==== End of RPC Endpoint Mapper query response ====
-
-UDP port 135 is LISTENING
-```
+> UDP port 135 (epmap service): LISTENING or FILTERED  
+Querying Endpoint Mapper Database...  
+Server's response:  
+>
+> UUID: 50abc2a4-574d-40b3-9d66-ee4fd5fba076
+> ncacn_ip_tcp:169.254.12.191[4144]
+>
+> UUID: ecec0d70-a603-11d0-96b1-00a0c91ece30 NTDS Backup Interface
+> ncacn_np:\\\\MYSERVER[\\PIPE\\lsass]
+>
+> UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface
+> ncacn_ip_tcp:169.254.12.191[1030]
+>
+> UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface
+> ncadg_ip_udp:169.254.12.191[1032]
+>
+> UUID: 12345678-1234-abcd-ef00-01234567cffb
+> ncacn_np:\\\\MYSERVER[\\PIPE\\lsass]
+>
+> UUID: 12345678-1234-abcd-ef00-01234567cffb
+> ncacn_np:\\\\MYSERVER[\\PIPE\\POLICYAGENT]
+>
+> Total endpoints found: 6
+>
+> ==== End of RPC Endpoint Mapper query response ====
+>
+> UDP port 135 is LISTENING
 
 In this example, you determine that port 135 is listening. Additionally, you can determine which services or programs are registered with the RPC endpoint mapper database on the destination computer. The output includes the universal unique identifier (UUID) for each program, the annotated name (if one exists), the protocol that each program uses, the network address that the program is bound to, and the program's endpoint in square brackets.
 
@@ -210,23 +206,21 @@ SNMP support is a new feature in PortQry version 2.0. By default, the SNMP servi
 
 #### Sample output
 
-```console
-Querying target system called:
-
-127.0.0.1
-
-querying...
-
-UDP port 161 (snmp service): LISTENING or FILTERED
-
-community name for query:
-
-secure123
-
-Sending SNMP query to UDP port 161...
-
-UDP port 161 is LISTENING
-```
+> Querying target system called:
+>
+> 127.0.0.1
+>
+> querying...
+>
+> UDP port 161 (snmp service): LISTENING or FILTERED
+>
+> community name for query:
+>
+> secure123
+>
+> Sending SNMP query to UDP port 161...
+>
+> UDP port 161 is LISTENING
 
 ### ISA Server support
 
@@ -238,63 +232,58 @@ For example, you type a command that's similar to the following command: `portqr
 
 You receive the following output:
 
-```console
-Querying target system called:
-
-myproxy-server
-
-Attempting to resolve name to IP address...
-
-Name resolved to 169.254.24.86
-
-querying...
-
-UDP port 1745 (unknown service): LISTENING or FILTERED
-
-Sending ISA query to UDP port 1745...
-
-UDP port 1745 is LISTENING
-
-```
+> Querying target system called:
+>
+> myproxy-server
+>
+> Attempting to resolve name to IP address...
+>
+> Name resolved to 169.254.24.86
+>
+> querying...
+>
+> UDP port 1745 (unknown service): LISTENING or FILTERED
+>
+> Sending ISA query to UDP port 1745...
+>
+> UDP port 1745 is LISTENING
 
 When PortQry queries TCP port 1745, PortQry downloads the Mspclnt.ini file from the ISA Server if the Mspclnt.ini file is available on that port. The Mspclnt.ini file contains configuration information that Winsock proxy clients and Firewall clients use.
 
 #### Sample output
 
-```console
-TCP port 1745 (unknown service): LISTENING
-
-Sending ISA query to TCP port 1745...
-
-ISA query response:
-
-10.0.0.0 10.255.255.255
-127.0.0.1 127.0.0.1
-169.254.0.0 169.254.255.255
-192.168.0.0 192.168.255.255
-127.0.0.0 127.255.255.255
-
-;
-; This file should not be edited.
-; Changes to the client configuration should only be made using ISA Management.
-;
-[Common]
-myproxy-server.example.com
-Set Browsers to use Auto Detect=1
-AutoDetect ISA Servers=1
-WebProxyPort=8080
-Port=1745
-Configuration Refresh Time (Hours)=2
-Re-check Inaccessible Server Time (Minutes)=10
-Refresh Give Up Time (Minutes)=15
-Inaccessible Servers Give Up Time (Minutes)=2
-[Servers Ip Addresses]
-Name=myproxy-server
-[My Config]
-Path1=\\myproxy-server\mspclnt\
-
-======== End of ISA query response ========
-```
+> TCP port 1745 (unknown service): LISTENING
+>
+> Sending ISA query to TCP port 1745...
+>
+> ISA query response:
+>
+> 10.0.0.0 10.255.255.255  
+> 127.0.0.1 127.0.0.1  
+> 169.254.0.0 169.254.255.255  
+> 192.168.0.0 192.168.255.255  
+> 127.0.0.0 127.255.255.255  
+>
+> ;  
+> ; This file should not be edited.  
+> ; Changes to the client configuration should only be made using ISA Management.  
+> ;  
+> [Common]  
+> myproxy-server.example.com  
+> Set Browsers to use Auto Detect=1  
+> AutoDetect ISA Servers=1  
+> WebProxyPort=8080  
+> Port=1745  
+> Configuration Refresh Time (Hours)=2  
+> Re-check Inaccessible Server Time (Minutes)=10  
+> Refresh Give Up Time (Minutes)=15  
+> Inaccessible Servers Give Up Time (Minutes)=2  
+> [Servers Ip Addresses]  
+> Name=myproxy-server  
+> [My Config]  
+> Path1=\\myproxy-server\mspclnt\  
+>
+> ======== End of ISA query response ========
 
 ### SQL Server 2000 support
 
@@ -306,30 +295,28 @@ For example, you type a command that's similar to the following command: `portqr
 
 You receive the following output:
 
-```console
-Querying target system called:
-
-192.168.1.20
-
-querying...
-
-UDP port 1434 (ms-sql-m service): LISTENING or FILTERED
-
-Sending SQL Server query to UDP port 1434...
-
-Server's response:
-
-ServerName SQL-Server1
-InstanceName MSSQLSERVER
-IsClustered No
-Version 8.00.194
-tcp 1433
-np \\SQL-Server1\pipe\sql\query
-
-==== End of SQL Server query response ====
-
-UDP port 1434 is LISTENING
-```
+> Querying target system called:
+>
+> 192.168.1.20
+>
+> querying...
+>
+> UDP port 1434 (ms-sql-m service): LISTENING or FILTERED
+>
+> Sending SQL Server query to UDP port 1434...
+>
+> Server's response:
+>
+> ServerName SQL-Server1  
+> InstanceName MSSQLSERVER  
+> IsClustered No  
+> Version 8.00.194  
+> tcp 1433  
+> np \\SQL-Server1\pipe\sql\query
+>
+> ==== End of SQL Server query response ====
+>
+> UDP port 1434 is LISTENING
 
 ### TFTP support
 
@@ -341,23 +328,21 @@ For example, you type a command that's similar to the following command: `portqr
 
 You receive the following output:
 
-```console
-Querying target system called:
-
-myserver.example.com
-
-Attempting to resolve name to IP address...
-
-Name resolved to 169.254.23.4
-
-querying...
-
-UDP port 69 (tftp service): LISTENING or FILTERED
-
-Sending TFTP query to UDP port 69...
-
-UDP port 69 is LISTENING
-```
+> Querying target system called:
+>
+> myserver.example.com
+>
+> Attempting to resolve name to IP address...
+>
+> Name resolved to 169.254.23.4
+>
+> querying...
+>
+> UDP port 69 (tftp service): LISTENING or FILTERED
+>
+> Sending TFTP query to UDP port 69...
+>
+> UDP port 69 is LISTENING
 
 ### L2TP support
 
@@ -369,37 +354,31 @@ For example, you type a command that's similar to the following command: `portqr
 
 You receive the following output:
 
-```console
-Querying target system called:
-
-vpnserver
-
-Attempting to resolve name to IP address...
-
-Name resolved to 169.254.12.225
-
-querying...
-
-UDP port 1701 (l2tp service): LISTENING or FILTERED
-
-Sending L2TP query to UDP port 1701...
-
-UDP port 1701 is LISTENING
-```
+> Querying target system called:
+>
+> vpnserver
+>
+> Attempting to resolve name to IP address...
+>
+> Name resolved to 169.254.12.225
+>
+> querying...
+>
+> UDP port 1701 (l2tp service): LISTENING or FILTERED
+>
+> Sending L2TP query to UDP port 1701...
+>
+> UDP port 1701 is LISTENING
 
 ### Customize ports that queries use
 
 By default, every Windows Server 2003, Windows XP, and Windows 2000-based computer has a Services file that's located in the %SYSTEMROOT%\System32\Drivers\Etc folder. PortQry uses this file to resolve port numbers to their corresponding service names. The content of this file dictates the ports where PortQry sends formatted messages when you use the `PortQry.exe` command. You can edit this file to direct PortQry to send formatted messages to an alternative port. For example, the following entry appears in a typical Services file:
 
-```console
-ldap              389/tcp                           #Lightweight Directory Access Protocol
-```
+> ldap              389/tcp                           #Lightweight Directory Access Protocol
 
 You can edit this port entry or add an additional entry. To cause PortQry to send LDAP queries to port 1025, modify the entry to the following entry:
 
-```console
-ldap              1025/tcp                           #Lightweight Directory Access Protocol
-```
+> ldap              1025/tcp                           #Lightweight Directory Access Protocol
 
 ### Additional service information returned
 
@@ -422,14 +401,12 @@ In this scenario, PortQry tries to use the Anonymous user account to log on to t
 
 You receive a response that's similar to the following response:
 
-```console
-TCP port 21 (ftp service): LISTENING
-
-Data returned from port:
-220 Microsoft FTP Service
-
-331 Anonymous access allowed, send identity (e-mail name) as password.
-```
+> TCP port 21 (ftp service): LISTENING
+>
+> Data returned from port:  
+> 220 Microsoft FTP Service
+>
+> 331 Anonymous access allowed, send identity (e-mail name) as password.
 
 In Example 1, you can determine the type of FTP server that's listening on the target port and whether the FTP server is configured to permit anonymous user logons.
 
@@ -437,13 +414,10 @@ In Example 1, you can determine the type of FTP server that's listening on the t
 
 You receive a response that's similar to the following response:
 
-```console
-TCP port 25 (smtp service): LISTENING
-
-Data returned from port:
-220 MyMailServer.domain.example.com Microsoft ESMTP MAIL Service, Version: 6.0.3790.0 ready at Mon, 15 Dec 2003 10:24:50 -0800
-
-```
+> TCP port 25 (smtp service): LISTENING
+>
+> Data returned from port:  
+> 220 MyMailServer.domain.example.com Microsoft ESMTP MAIL Service, Version: 6.0.3790.0 ready at Mon, 15 Dec 2003 10:24:50 -0800
 
 In Example 2, you can determine the type of SMTP server that's listening on the target port.
 
@@ -640,37 +614,32 @@ With PortQry version 1.22, users can query ports from the command line in a comm
 
 To start PortQry in interactive mode, use the **-i** option. For example, type portqry **-i**. When you do so, you receive the following output:
 
-```console
-Portqry Interactive Mode
-
-Type 'help' for a list of commands
-
-Default Node: 127.0.0.1
-
-Current option values:
- end port= 80
- protocol= TCP
- source port= 0 (ephemeral)
+> Portqry Interactive Mode
 >
-
-```
+> Type 'help' for a list of commands
+>
+> Default Node: 127.0.0.1
+>
+> Current option values:  
+> end port= 80  
+> protocol= TCP  
+> source port= 0 (ephemeral)
+>
 
 You can use other parameters together with the **-i** parameter to change the settings that PortQry uses. For example, you type a command that's similar to the following command, and then press Enter: `portqry -i -e 53 -n 192.168.1.20 -p both -sp 2030`.
 
 You receive the following output:
 
-```console
-Portqry Interactive Mode
-
-Type 'help' for a list of commands
-
-Default Node: 192.168.1.20
-
-Current option values:
- end port= 53
- protocol= BOTH
- source port= 2300
-```
+> Portqry Interactive Mode
+>
+> Type 'help' for a list of commands
+>
+> Default Node: 192.168.1.20
+>
+> Current option values:
+> end port= 53
+> protocol= BOTH
+> source port= 2300
 
 ## PortQry local mode
 
