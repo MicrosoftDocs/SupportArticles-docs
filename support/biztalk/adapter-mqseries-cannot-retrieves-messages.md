@@ -1,13 +1,13 @@
 ---
 title: Adapter for MQSeries 2.0 doesn't retrieves messages
-description: This article provides workarounds for the problem that MQSeries Adapter no longer retrieves messages from a clustered MQSeries queue manager when the queue manager fails over to a different cluster node.
+description: This article provides workarounds for the problem where MQSeries Adapter no longer retrieves messages from a clustered MQSeries queue manager when the queue manager fails over to a different cluster node.
 ms.date: 08/25/2020
 ms.prod-support-area-path: Adapter
 ms.reviewer: xuehongg, v-paulsh
 ---
 # The MQSeries Adapter no longer retrieves messages from a clustered MQSeries queue manager when the queue manager fails over to a different cluster node
 
-This article helps you work around the problem that MQSeries Adapter no longer retrieves messages from a clustered MQSeries queue manager when the queue manager fails over to a different cluster node.
+This article helps you work around the problem where MQSeries Adapter no longer retrieves messages from a clustered MQSeries queue manager when the queue manager fails over to a different cluster node.
 
 _Original product version:_ &nbsp; BizTalk Server 2020, BizTalk Server 2016, BizTalk Server 2013, BizTalk Server 2010, BizTalk Server 2009  
 _Original KB number:_ &nbsp; 893059
@@ -39,14 +39,12 @@ To work around this issue, create a scheduled task on both nodes. To do this, fo
     sc queryex | find /I "Transaction"
     ```
 
-    The command output contains the GUID that you must use for the script in this procedure. The GUID should resemble the following:
-
-    `Distributed Transaction Coordinator (01234567-89ab-cdef-0123-456789abcdef)`
+    The command output contains the GUID that you must use for the script in this procedure. The GUID: `Distributed Transaction Coordinator (01234567-89ab-cdef-0123-456789abcdef)`
 
 3. Save the following code to a file, and name the file *Shutdownmqadapter.vbs*. You can save the file to any disk other than the quorum disk.
 
     > [!NOTE]
-    > In this code, the indicated GUID `(01234567-89ab-cdef-0123-456789abcdef)` is a placeholder. Replace this GUID with the actual clustered MSDTC GUID that you noted in step 2.
+    > In this code, the indicated GUID (`01234567-89ab-cdef-0123-456789abcdef`) is a placeholder. Replace this GUID with the actual clustered MSDTC GUID that you noted in step 2.
 
     ```vbscript
     Option Explicit
