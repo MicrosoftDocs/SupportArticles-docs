@@ -8,9 +8,25 @@
   items:
   - name: Async services use wrong impersonation
     href: ./framework/wcf/asynchronous-service-use-wrong-impersonation.md
+  - name: Calls timed out in ASP.NET MVC controller
+    href: call-timed-out-aspnet-mvc-controller.md
+  - name: Disconnects HTTP bindings for services
+    href: disconnects-http-bindings.md
+  - name: Error occurs when you create performance counters
+    href: error-create-performance-counters.md
+  - name: Error occurs when you remove a server
+    href: error-occurs-remove-an-appfabric-cluster-server.md
   - name: Pre-compiled workflow service activation fails
     href: ./framework/wcf/precompiled-workflow-activation-fails.md
   - name: Use X509CertificateValidator with services
     href: ./framework/wcf/x509certificatevalidator-service-certificate.md
   - name: REST services generate metadata in WSDL
     href: ./framework/wcf/rest-generate-metadata-wsdl.md
+  - name: Service does not start automatically
+    href: service-does-not-start-automatically.md
+  - name: Service using a non-default ETW provider ID
+    href: service-use-a-non-default-etw-provider-id.md
+  - name: Service uses wrong impersonation context
+    href: service-operations-use-wrong-impersonation-context.md
+  - name: Workflow service may not receive messages in order
+    href: workflow-service-cannot-receive-messages-in-order.md
