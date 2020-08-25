@@ -84,7 +84,7 @@ Use the method appropriate for your specific configuration
     9. In the browser address bar, enter **https://*\<URL of affected site, or site collection>*/_layouts/15/ListEdit.aspx?List={*\<GUID>*}**, and then press Enter.
 
        > [!NOTE]
-       > In this address, *\<URL of affected site or site collection>* represents the URL for the site collection in which you want to change the access requests (for example, https://contoso.sharepoint.com). Also, *{\<GUID>}* represents the GUID that you copied in step 8.
+       > In this address, *\<URL of affected site or site collection>* represents the URL for the site collection in which you want to change the access requests (for example, `https://contoso.sharepoint.com`). Also, *{\<GUID>}* represents the GUID that you copied in step 8.
 
     10. On the **Settings** page, select **Permissions for this list**.
     11. Make sure that the Owners group for the site is included in the list of permissions for the Access Requests list. If the Owners group for the site collection does not exist, select **Grant Permissions**, enter the name of the Owners group for the site in the **Share** dialog box, and then select **Share**.
