@@ -31,10 +31,10 @@ To manually enable the Conferencing Add-in for Outlook, follow the steps for the
 1. Start Outlook 2007.   
 2. On the **Tools** menu, click **Trust Center**. The screen shot for this step is listed below.
 
-    ![The screen shot for this step](./media/enable-conferencing-add-in-for-outlook/trust-center.png)   
+    ![The screen shot for this step 2](./media/enable-conferencing-add-in-for-outlook/trust-center.png)   
 3. In the **Trust Center** dialog box, click the **Add-ins** tab. The screen shot for this step is listed below.
     
-    ![The screen shot for this step](./media/enable-conferencing-add-in-for-outlook/add-ins.png)   
+    ![The screen shot for this step 3](./media/enable-conferencing-add-in-for-outlook/add-ins.png)   
 4. On the **Manage** menu, click **COM Add-ins**, and then click **Go**.   
 5. In the **COM Add-Ins** dialog box, select the **Microsoft Conferencing Add-in for Microsoft Office Outlook** check box, and then click **OK**.   
 

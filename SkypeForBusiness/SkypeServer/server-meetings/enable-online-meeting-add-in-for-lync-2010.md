@@ -28,16 +28,16 @@ To manually enable the Online Meeting Add-in for Lync 2010 in Outlook 2010, foll
 1. Start Outlook 2010.   
 2. On the File menu, click Options. The screen shot for this step is listed below.
 
-    ![The screen shot for this step](./media/enable-online-meeting-add-in-for-lync-2010/options.png)   
+    ![The screen shot for this step 2](./media/enable-online-meeting-add-in-for-lync-2010/options.png)   
 3. In the navigation pane, click **Add-Ins**. The screen shot for this step is listed below.
 
-    ![The screen shot for this step](./media/enable-online-meeting-add-in-for-lync-2010/add-ins.png)   
+    ![The screen shot for this step 3](./media/enable-online-meeting-add-in-for-lync-2010/add-ins.png)   
 4. In the Manage menu, click COM Add-ins, and then click Go. The screen shot for this step is listed below.
 
-    ![The screen shot for this step](./media/enable-online-meeting-add-in-for-lync-2010/add-ins-2.png)   
+    ![The screen shot for this step 4](./media/enable-online-meeting-add-in-for-lync-2010/add-ins-2.png)   
 5. In the COM Add-Ins dialog box, select the Online Meeting Add-in for Microsoft Lync 2010check box, and then click OK. The screen shot for this step is listed below.
 
-    ![The screen shot for this step](./media/enable-online-meeting-add-in-for-lync-2010/add-ins-3.png)   
+    ![The screen shot for this step 5](./media/enable-online-meeting-add-in-for-lync-2010/add-ins-3.png)   
 
     > [!NOTE]
     > If you receive the message "The add-in is installed for all users of the computer, and can only be connected or disconnected by an administrator" during step 5, make sure that you are signed in to the local computer by using an administrator account.
