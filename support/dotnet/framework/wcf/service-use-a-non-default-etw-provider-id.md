@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 2120508
 
 ## Summary
 
-WCF 4.0 emits traces to ETW. See [Analytic Tracing with ETW](dotnet/framework/wcf/diagnostics/etw/) for more details. By default the ETW traces are emitted using the default provider ID ({`C651F5F6-1C0D-492E-8AE1-B4EFD7C9D503`}). The .NET Framework 4 registers an ETW manifest for this provider ID. If a manifest is registered, the ETW events can be decoded and viewed in the Windows Event viewer.
+WCF 4.0 emits traces to ETW. See [Analytic Tracing with ETW](/dotnet/framework/wcf/diagnostics/etw/) for more details. By default the ETW traces are emitted using the default provider ID ({`C651F5F6-1C0D-492E-8AE1-B4EFD7C9D503`}). The .NET Framework 4 registers an ETW manifest for this provider ID. If a manifest is registered, the ETW events can be decoded and viewed in the Windows Event viewer.
 
 WCF allows events to be emitted on a non-default provider ID by changing the provider ID in the config. In this case, the events are non-decodable in the event viewer since a manifest is not registered for this provider ID.
 
