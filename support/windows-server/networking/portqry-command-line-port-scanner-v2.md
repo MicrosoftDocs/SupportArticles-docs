@@ -927,9 +927,8 @@ The PortQry local mode of operation is designed to give you detailed information
     > TCP ports in a LISTENING state: 1 = 100.00%
     >
     > Loaded modules:  
-    C:\WINDOWS\system32\lsass.exe (0x01000000)
-    >
-    > C:\WINDOWS\system32\ntdll.dll (0x77F40000)  
+    C:\WINDOWS\system32\lsass.exe (0x01000000)  
+    C:\WINDOWS\system32\ntdll.dll (0x77F40000)  
     C:\WINDOWS\system32\kernel32.dll (0x77E40000)  
     C:\WINDOWS\system32\ADVAPI32.dll (0x77DA0000)  
     C:\WINDOWS\system32\RPCRT4.dll (0x77C50000)  
@@ -971,9 +970,8 @@ The PortQry local mode of operation is designed to give you detailed information
     > TCP ports in a LISTENING state: 1 = 100.00%
     >
     > Loaded modules:  
-    C:\WINDOWS\system32\svchost.exe (0x01000000)
-    >
-    > C:\WINDOWS\system32\ntdll.dll (0x77F40000)  
+    C:\WINDOWS\system32\svchost.exe (0x01000000)  
+    C:\WINDOWS\system32\ntdll.dll (0x77F40000)  
     C:\WINDOWS\system32\kernel32.dll (0x77E40000)  
     C:\WINDOWS\system32\ADVAPI32.dll (0x77DA0000)  
     C:\WINDOWS\system32\RPCRT4.dll (0x77C50000)  
@@ -1132,10 +1130,9 @@ The PortQry local mode of operation is designed to give you detailed information
         > TCP ports in a LISTENING state: 1 = 100.00%
         >
         > Loaded modules:  
-        D:\WINDOWS\system32\svchost.exe (0x01000000)
-        >
-        > D:\WINDOWS\System32\ntdll.dll (0x77F50000)  
-        > D:\WINDOWS\system32\kernel32.dll (0x77E60000)  
+        D:\WINDOWS\system32\svchost.exe (0x01000000)  
+        D:\WINDOWS\System32\ntdll.dll (0x77F50000)  
+        D:\WINDOWS\system32\kernel32.dll (0x77E60000)  
         D:\WINDOWS\system32\ADVAPI32.dll (0x77DD0000)  
         D:\WINDOWS\system32\RPCRT4.dll (0x78000000)  
         d:\windows\system32\rpcss.dll (0x75850000)  
@@ -1218,9 +1215,8 @@ The PortQry local mode of operation is designed to give you detailed information
     > TCP ports in a LISTENING state: 2 = 100.00%
     >
     > Loaded modules:  
-    C:\WINDOWS\System32\dns.exe (0x01000000)
-    >
-    > C:\WINDOWS\system32\ntdll.dll (0x77F40000)  
+    C:\WINDOWS\System32\dns.exe (0x01000000)  
+    C:\WINDOWS\system32\ntdll.dll (0x77F40000)  
     C:\WINDOWS\system32\kernel32.dll (0x77E40000)  
     C:\WINDOWS\system32\msvcrt.dll (0x77BA0000)  
     C:\WINDOWS\system32\ADVAPI32.dll (0x77DA0000)  
