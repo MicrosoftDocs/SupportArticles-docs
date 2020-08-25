@@ -20,6 +20,8 @@
 
 - name: Adapter
   items:
+  - name: Adapter for MQSeries 2.0 doesn't retrieves messages
+    href: adapter-mqseries-cannot-retrieves-messages.md
   - name: Adapter for TIBCO EMS only supports text
     href: biztalk-adapter-tibco-ems-text-message-type.md
   - name: How to use Trace Utility
@@ -70,6 +72,8 @@
     href: biztalkmsgboxdb-connection-issue.md
   - name: Issues and resolutions with Administration console
     href: common-issues-resolutions-biztalk.md
+  - name: Time-out expired error when you use the UDDI tool
+    href: time-out-expired-error-when-you-use-uddi-tool.md
   - name: Wrong behavior of tracking profiles
     href: tracking-profiles-global-tracking-enabled.md
 
