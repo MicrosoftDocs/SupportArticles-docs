@@ -893,7 +893,8 @@ The PortQry local mode of operation is designed to give you detailed information
     \SystemRoot\System32\smss.exe (0x48580000)
     >
     > C:\WINDOWS\system32\ntdll.dll (0x77F40000)  
-    ======================================================
+    >
+    > ======================================================
     >
     > Process ID: 484 (lsass.exe)
     >
@@ -1134,7 +1135,7 @@ The PortQry local mode of operation is designed to give you detailed information
         D:\WINDOWS\system32\svchost.exe (0x01000000)
         >
         > D:\WINDOWS\System32\ntdll.dll (0x77F50000)  
-        D:\WINDOWS\system32\kernel32.dll (0x77E60000)  
+        > D:\WINDOWS\system32\kernel32.dll (0x77E60000)  
         D:\WINDOWS\system32\ADVAPI32.dll (0x77DD0000)  
         D:\WINDOWS\system32\RPCRT4.dll (0x78000000)  
         d:\windows\system32\rpcss.dll (0x75850000)  
