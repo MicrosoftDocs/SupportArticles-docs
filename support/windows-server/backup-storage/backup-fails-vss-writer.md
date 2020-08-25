@@ -52,7 +52,7 @@ SQLSTATE: 42000, Native Error: 3271
 Error state: 1, Severity: 16  
 Source: Microsoft SQL Server Native Client 10.0  
 Error message: A nonrecoverable I/O error occurred on file "  {DF1DD65F-F8AD-4946-A764-F62166C541E2}22:" 995(The I/O operation has been aborted because of either a thread exit or an application request.).  
->
+
 > Log Name: Application  
 Source: SQLVDI  
 Event ID: 1  

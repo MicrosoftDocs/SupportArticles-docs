@@ -51,7 +51,7 @@ Computer: \<ComputerName>
 Description:  
 The Windows Installer service was successfully sent a start control.
 For more information, see Help and Support Center at <`http://go.microsoft.com/fwlink/events.asp`>.
->
+
 > Event Type: Information  
 Event Source: Service Control Manager  
 Event Category: None  

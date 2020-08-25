@@ -536,28 +536,26 @@ You can use the following command-line options with PortQry:
 
     Sample batch file
 
-    ```console
-    :Top
-    portqry -n 169.254.18.22 -e 135 -p tcp -q
-    if errorlevel = 2 goto filtered
-    if errorlevel = 1 goto failed
-    if errorlevel = 0 goto success
+    > :Top  
+    portqry -n 169.254.18.22 -e 135 -p tcp -q  
+    if errorlevel = 2 goto filtered  
+    if errorlevel = 1 goto failed  
+    if errorlevel = 0 goto success  
     goto end
-
-    :filtered
-    Echo Port is listening or filtered
-    goto end
-
-    :failed
-    Echo Port is not listening
-    Goto end
-
-    :success
-    Echo Port is listening
-    goto end
-
-    :end
-    ```
+    >
+    > :filtered  
+    Echo Port is listening or filtered  
+    goto end  
+    >
+    > :failed  
+    Echo Port is not listening  
+    Goto end  
+    >
+    > :success  
+    Echo Port is listening  
+    goto end  
+    >
+    > :end
 
 - **-cn** (community name): This parameter is optional. Use this parameter to specify a community string or community name to use when you send an SNMP query. With this parameter, you must enclose the community string with exclamation marks (!). This parameter is ignored if you don't query a port where SNMP is listening.
 
@@ -649,369 +647,363 @@ The PortQry local mode of operation is designed to give you detailed information
 
     Sample output
 
-    ```console
-    TCP/UDP Port Usage
-
-    96 active ports found
-
-    Port Local IPState Remote IP:Port
-    TCP 80 0.0.0.0 LISTENING 0.0.0.0:18510
-    TCP 80 169.254.149.9 TIME WAIT 169.254.74.55:3716
-    TCP 80 169.254.149.9 TIME WAIT 169.254.200.222:3885
-    TCP 135 0.0.0.0 LISTENING 0.0.0.0:10280
-    UDP 135 0.0.0.0 *:*
-    UDP 137 169.254.149.9 *:*
-    UDP 138 169.254.149.9 *:*
-    TCP 139 169.254.149.9 LISTENING 0.0.0.0:43065
-    TCP 139 169.254.149.9 ESTABLISHED 169.254.4.253:4310
-    TCP 139 169.254.149.9 ESTABLISHED 169.254.74.55:3714
-    UDP 161 0.0.0.0 *:*
-    TCP 445 0.0.0.0 LISTENING 0.0.0.0:34836
-    TCP 445 169.254.149.9 ESTABLISHED 169.254.53.54:4443
-    TCP 445 169.254.149.9 ESTABLISHED 169.254.112.122:2111
-    TCP 445 169.254.149.9 ESTABLISHED 169.254.112.199:1188
-    TCP 445 169.254.149.9 ESTABLISHED 169.254.113.96:1221
-    TCP 445 169.254.149.9 ESTABLISHED 169.254.200.222:3762
-    UDP 445 0.0.0.0 *:*
-    UDP 500 169.254.149.9 *:*
-    TCP 593 0.0.0.0 LISTENING 0.0.0.0:59532
-    UDP 1029 0.0.0.0 *:*
-    TCP 1040 127.0.0.1 LISTENING 0.0.0.0:18638
-    UDP 1045 0.0.0.0 *:*
-    TCP 1048 127.0.0.1 LISTENING 0.0.0.0:2240
-    TCP 1053 127.0.0.1 LISTENING 0.0.0.0:26649
-    TCP 1061 127.0.0.1 LISTENING 0.0.0.0:26874
-    TCP 1067 127.0.0.1 LISTENING 0.0.0.0:2288
-    TCP 1068 0.0.0.0 LISTENING 0.0.0.0:2048
-    TCP 1088 127.0.0.1 LISTENING 0.0.0.0:35004
-    UDP 1089 0.0.0.0 *:*
-    TCP 1091 127.0.0.1 LISTENING 0.0.0.0:43085
-    TCP 1092 0.0.0.0 LISTENING 0.0.0.0:2096
-    TCP 1094 127.0.0.1 LISTENING 0.0.0.0:51268
-    TCP 1097 127.0.0.1 LISTENING 0.0.0.0:2104
-    TCP 1098 0.0.0.0 LISTENING 0.0.0.0:43053
-    TCP 1108 0.0.0.0 LISTENING 0.0.0.0:2160
-    TCP 1108 169.254.149.9 ESTABLISHED 169.254.12.210:1811
-    TCP 1117 127.0.0.1 LISTENING 0.0.0.0:26819
-    TCP 1118 0.0.0.0 LISTENING 0.0.0.0:43121
-    TCP 1119 0.0.0.0 LISTENING 0.0.0.0:26795
-    TCP 1121 0.0.0.0 LISTENING 0.0.0.0:26646
-    UDP 1122 0.0.0.0 *:*
-    TCP 1123 0.0.0.0 LISTENING 0.0.0.0:35013
-    UDP 1126 0.0.0.0 *:*
-    TCP 1137 127.0.0.1 LISTENING 0.0.0.0:34820
-    TCP 1138 0.0.0.0 LISTENING 0.0.0.0:26696
-    TCP 1138 169.254.149.9 CLOSE WAIT 169.254.5.103:80
-    TCP 1170 127.0.0.1 LISTENING 0.0.0.0:34934
-    TCP 1179 127.0.0.1 LISTENING 0.0.0.0:59463
-    TCP 1228 127.0.0.1 LISTENING 0.0.0.0:2128
-    UDP 1352 0.0.0.0 *:*
-    TCP 1433 0.0.0.0 LISTENING 0.0.0.0:2064
-    UDP 1434 0.0.0.0 *:*
-    TCP 1670 0.0.0.0 LISTENING 0.0.0.0:2288
-    TCP 1670 169.254.149.9 ESTABLISHED 169.254.233.87:445
-    TCP 1686 127.0.0.1 LISTENING 0.0.0.0:51309
-    UDP 1687 127.0.0.1 *:*
-    TCP 1688 0.0.0.0 LISTENING 0.0.0.0:2135
-    TCP 1688 169.254.149.9 CLOSE WAIT 169.254.113.87:80
-    TCP 1689 0.0.0.0 LISTENING 0.0.0.0:51368
-    TCP 1689 169.254.149.9 CLOSE WAIT 169.254.113.87:80
-    TCP 1693 169.254.149.9 TIME WAIT 169.254.121.106:445
-    UDP 1698 0.0.0.0 *:*
-    TCP 1728 127.0.0.1 LISTENING 0.0.0.0:2077
-    TCP 1766 127.0.0.1 LISTENING 0.0.0.0:35061
-    TCP 2605 127.0.0.1 LISTENING 0.0.0.0:2069
-    TCP 3302 127.0.0.1 LISTENING 0.0.0.0:2048
-    TCP 3372 0.0.0.0 LISTENING 0.0.0.0:18612
-    TCP 3389 0.0.0.0 LISTENING 0.0.0.0:18542
-    TCP 3389 169.254.149.9 ESTABLISHED 169.254.112.67:2796
-    TCP 3389 169.254.149.9 ESTABLISHED 169.254.113.96:4603
-    TCP 3389 169.254.149.9 ESTABLISHED 169.254.201.100:3917
-    UDP 3456 0.0.0.0 *:*
-    TCP 3970 0.0.0.0 LISTENING 0.0.0.0:35012
-    TCP 3970 169.254.149.9 CLOSE WAIT 169.254.5.138:80
-    TCP 3972 0.0.0.0 LISTENING 0.0.0.0:51245
-    TCP 3972 169.254.149.9 CLOSE WAIT 169.254.5.138:80
-    TCP 4166 127.0.0.1 LISTENING 0.0.0.0:2208
-    UDP 4447 0.0.0.0 *:*
-    TCP 4488 127.0.0.1 LISTENING 0.0.0.0:10358
-    UDP 4500 169.254.149.9 *:*
-    TCP 4541 127.0.0.1 LISTENING 0.0.0.0:10442
-    TCP 4562 0.0.0.0 LISTENING 0.0.0.0:2192
-    TCP 4562 169.254.149.9 ESTABLISHED 169.254.0.40:1025
-    UDP 4563 0.0.0.0 *:*
-    UDP 4564 0.0.0.0 *:*
-    TCP 4566 0.0.0.0 LISTENING 0.0.0.0:51257
-    TCP 4566 169.254.149.9 ESTABLISHED 169.254.12.18:1492
-    TCP 4568 127.0.0.1 LISTENING 0.0.0.0:26665
-    TCP 4569 0.0.0.0 LISTENING 0.0.0.0:43186
-    TCP 4569 169.254.149.9 CLOSE WAIT 169.254.4.38:80
-    TCP 4756 0.0.0.0 LISTENING 0.0.0.0:51268
-    UDP 4758 0.0.0.0 *:*
-    TCP 8953 0.0.0.0 LISTENING 0.0.0.0:26667
-    TCP 42510 0.0.0.0 LISTENING 0.0.0.0:51323
-    UDP 43508 169.254.149.9 *:*
-
-    Port Statistics
-
-    TCP mappings: 74
+    > TCP/UDP Port Usage
+    >
+    > 96 active ports found
+    >
+    > Port Local IPState Remote IP:Port  
+    TCP 80 0.0.0.0 LISTENING 0.0.0.0:18510  
+    TCP 80 169.254.149.9 TIME WAIT 169.254.74.55:3716  
+    TCP 80 169.254.149.9 TIME WAIT 169.254.200.222:3885  
+    TCP 135 0.0.0.0 LISTENING 0.0.0.0:10280  
+    UDP 135 0.0.0.0 *:*  
+    UDP 137 169.254.149.9 *:*  
+    UDP 138 169.254.149.9 *:*  
+    TCP 139 169.254.149.9 LISTENING 0.0.0.0:43065  
+    TCP 139 169.254.149.9 ESTABLISHED 169.254.4.253:4310  
+    TCP 139 169.254.149.9 ESTABLISHED 169.254.74.55:3714  
+    UDP 161 0.0.0.0 *:*  
+    TCP 445 0.0.0.0 LISTENING 0.0.0.0:34836  
+    TCP 445 169.254.149.9 ESTABLISHED 169.254.53.54:4443  
+    TCP 445 169.254.149.9 ESTABLISHED 169.254.112.122:2111  
+    TCP 445 169.254.149.9 ESTABLISHED 169.254.112.199:1188  
+    TCP 445 169.254.149.9 ESTABLISHED 169.254.113.96:1221  
+    TCP 445 169.254.149.9 ESTABLISHED 169.254.200.222:3762  
+    UDP 445 0.0.0.0 *:*  
+    UDP 500 169.254.149.9 *:*  
+    TCP 593 0.0.0.0 LISTENING 0.0.0.0:59532  
+    UDP 1029 0.0.0.0 *:*  
+    TCP 1040 127.0.0.1 LISTENING 0.0.0.0:18638  
+    UDP 1045 0.0.0.0 *:*  
+    TCP 1048 127.0.0.1 LISTENING 0.0.0.0:2240  
+    TCP 1053 127.0.0.1 LISTENING 0.0.0.0:26649  
+    TCP 1061 127.0.0.1 LISTENING 0.0.0.0:26874  
+    TCP 1067 127.0.0.1 LISTENING 0.0.0.0:2288  
+    TCP 1068 0.0.0.0 LISTENING 0.0.0.0:2048  
+    TCP 1088 127.0.0.1 LISTENING 0.0.0.0:35004  
+    UDP 1089 0.0.0.0 *:*  
+    TCP 1091 127.0.0.1 LISTENING 0.0.0.0:43085  
+    TCP 1092 0.0.0.0 LISTENING 0.0.0.0:2096  
+    TCP 1094 127.0.0.1 LISTENING 0.0.0.0:51268  
+    TCP 1097 127.0.0.1 LISTENING 0.0.0.0:2104  
+    TCP 1098 0.0.0.0 LISTENING 0.0.0.0:43053  
+    TCP 1108 0.0.0.0 LISTENING 0.0.0.0:2160  
+    TCP 1108 169.254.149.9 ESTABLISHED 169.254.12.210:1811  
+    TCP 1117 127.0.0.1 LISTENING 0.0.0.0:26819  
+    TCP 1118 0.0.0.0 LISTENING 0.0.0.0:43121  
+    TCP 1119 0.0.0.0 LISTENING 0.0.0.0:26795  
+    TCP 1121 0.0.0.0 LISTENING 0.0.0.0:26646  
+    UDP 1122 0.0.0.0 *:*  
+    TCP 1123 0.0.0.0 LISTENING 0.0.0.0:35013  
+    UDP 1126 0.0.0.0 *:*  
+    TCP 1137 127.0.0.1 LISTENING 0.0.0.0:34820  
+    TCP 1138 0.0.0.0 LISTENING 0.0.0.0:26696  
+    TCP 1138 169.254.149.9 CLOSE WAIT 169.254.5.103:80  
+    TCP 1170 127.0.0.1 LISTENING 0.0.0.0:34934  
+    TCP 1179 127.0.0.1 LISTENING 0.0.0.0:59463  
+    TCP 1228 127.0.0.1 LISTENING 0.0.0.0:2128  
+    UDP 1352 0.0.0.0 *:*  
+    TCP 1433 0.0.0.0 LISTENING 0.0.0.0:2064  
+    UDP 1434 0.0.0.0 *:*  
+    TCP 1670 0.0.0.0 LISTENING 0.0.0.0:2288  
+    TCP 1670 169.254.149.9 ESTABLISHED 169.254.233.87:445  
+    TCP 1686 127.0.0.1 LISTENING 0.0.0.0:51309  
+    UDP 1687 127.0.0.1 *:*  
+    TCP 1688 0.0.0.0 LISTENING 0.0.0.0:2135  
+    TCP 1688 169.254.149.9 CLOSE WAIT 169.254.113.87:80  
+    TCP 1689 0.0.0.0 LISTENING 0.0.0.0:51368  
+    TCP 1689 169.254.149.9 CLOSE WAIT 169.254.113.87:80  
+    TCP 1693 169.254.149.9 TIME WAIT 169.254.121.106:445  
+    UDP 1698 0.0.0.0 *:*  
+    TCP 1728 127.0.0.1 LISTENING 0.0.0.0:2077  
+    TCP 1766 127.0.0.1 LISTENING 0.0.0.0:35061  
+    TCP 2605 127.0.0.1 LISTENING 0.0.0.0:2069  
+    TCP 3302 127.0.0.1 LISTENING 0.0.0.0:2048  
+    TCP 3372 0.0.0.0 LISTENING 0.0.0.0:18612  
+    TCP 3389 0.0.0.0 LISTENING 0.0.0.0:18542  
+    TCP 3389 169.254.149.9 ESTABLISHED 169.254.112.67:2796  
+    TCP 3389 169.254.149.9 ESTABLISHED 169.254.113.96:4603  
+    TCP 3389 169.254.149.9 ESTABLISHED 169.254.201.100:3917  
+    UDP 3456 0.0.0.0 *:*  
+    TCP 3970 0.0.0.0 LISTENING 0.0.0.0:35012  
+    TCP 3970 169.254.149.9 CLOSE WAIT 169.254.5.138:80  
+    TCP 3972 0.0.0.0 LISTENING 0.0.0.0:51245  
+    TCP 3972 169.254.149.9 CLOSE WAIT 169.254.5.138:80  
+    TCP 4166 127.0.0.1 LISTENING 0.0.0.0:2208  
+    UDP 4447 0.0.0.0 *:*  
+    TCP 4488 127.0.0.1 LISTENING 0.0.0.0:10358  
+    UDP 4500 169.254.149.9 *:*  
+    TCP 4541 127.0.0.1 LISTENING 0.0.0.0:10442  
+    TCP 4562 0.0.0.0 LISTENING 0.0.0.0:2192  
+    TCP 4562 169.254.149.9 ESTABLISHED 169.254.0.40:1025  
+    UDP 4563 0.0.0.0 *:*  
+    UDP 4564 0.0.0.0 *:*  
+    TCP 4566 0.0.0.0 LISTENING 0.0.0.0:51257  
+    TCP 4566 169.254.149.9 ESTABLISHED 169.254.12.18:1492  
+    TCP 4568 127.0.0.1 LISTENING 0.0.0.0:26665  
+    TCP 4569 0.0.0.0 LISTENING 0.0.0.0:43186  
+    TCP 4569 169.254.149.9 CLOSE WAIT 169.254.4.38:80  
+    TCP 4756 0.0.0.0 LISTENING 0.0.0.0:51268  
+    UDP 4758 0.0.0.0 *:*  
+    TCP 8953 0.0.0.0 LISTENING 0.0.0.0:26667  
+    TCP 42510 0.0.0.0 LISTENING 0.0.0.0:51323  
+    UDP 43508 169.254.149.9 *:*  
+    >
+    > Port Statistics
+    >
+    > TCP mappings: 74  
     UDP mappings: 22
-
-    TCP ports in a LISTENING state: 51 = 68.92%
-    TCP ports in a ESTABLISHED state: 14 = 18.92%
-    TCP ports in a CLOSE WAIT state: 6 = 8.11%
-    TCP ports in a TIME WAIT state: 3 = 4.05%
-
-    ```
+    >
+    > TCP ports in a LISTENING state: 51 = 68.92%  
+    TCP ports in a ESTABLISHED state: 14 = 18.92%  
+    TCP ports in a CLOSE WAIT state: 6 = 8.11%  
+    TCP ports in a TIME WAIT state: 3 = 4.05%  
 
     On computers that support Process ID (PID) to port mappings, the output includes the process ID of the process that's using the port on the local computer. If the verbose option is used (**-v**), the output also includes the names of the services that the process ID belongs to and lists all the modules that the process has loaded. Access to some information is restricted. For example, access to module information for the Idle and CSRSS processes is prohibited because their access restrictions prevent user-level code from opening them. PortQry reports as much information as it can access for each process. For best results, run the `Portqry -local` command in the context of the local Administrator or an account that has similar credentials. The following example log file excerpt illustrates the level of reporting that you may receive when you run the `Portqry -local` command:
 
-    ```console
-    TCP/UDP Port to Process Mappings
-
-    55 mappings found
-
-    PID:ProcessPortLocal IPState Remote IP:Port
-    0:System IdleTCP 4442 169.254.113.96 TIME WAIT 169.254.5.136:80
-    0:System IdleTCP 4456 169.254.113.96 TIME WAIT 169.254.5.44:445
-    4:SystemTCP 445 0.0.0.0 LISTENING 0.0.0.0:2160
-    4:SystemTCP 139 169.254.113.96 LISTENING 0.0.0.0:24793
-    4:SystemTCP 1475 169.254.113.96 ESTABLISHED 169.254.8.176:445
-    4:SystemUDP 445 0.0.0.0 *:*
-    4:SystemUDP 137 169.254.113.96 *:*
-    4:SystemUDP 138 169.254.113.96 *:*
-    424:winlogon.exeTCP 1200 169.254.113.96 CLOSE WAIT 169.254.5.44:389
-    424:winlogon.exeUDP 1100 0.0.0.0 *:*
-    484:lsass.exeTCP 1064 0.0.0.0 LISTENING 0.0.0.0:2064
-    484:lsass.exeUDP 500 0.0.0.0 *:*
-    484:lsass.exeUDP 1031 0.0.0.0 *:*
-    484:lsass.exeUDP 4500 0.0.0.0 *:*
-    668:svchost.exeTCP 135 0.0.0.0 LISTENING 0.0.0.0:16532
-    728:svchost.exeTCP 3389 0.0.0.0 LISTENING 0.0.0.0:45088
-    800UDP 1026 0.0.0.0 *:*
-    800UDP 1027 0.0.0.0 *:*
-    836:svchost.exeTCP 1025 0.0.0.0 LISTENING 0.0.0.0:43214
-    836:svchost.exeTCP 1559 169.254.113.96 CLOSE WAIT 169.254.5.44:389
-    836:svchost.exeUDP 1558 0.0.0.0 *:*
-    836:svchost.exeUDP 123 127.0.0.1 *:*
-    836:svchost.exeUDP 3373 127.0.0.1 *:*
-    836:svchost.exeUDP 123 169.254.113.96 *:*
-    1136:mstsc.exeTCP 2347 169.254.113.96 ESTABLISHED 172.30.137.221:3389
-    1136:mstsc.exeUDP 2348 0.0.0.0 *:*
-    1276:dns.exeTCP 53 0.0.0.0 LISTENING 0.0.0.0:2160
-    1276:dns.exeTCP 1087 0.0.0.0 LISTENING 0.0.0.0:37074
-    1276:dns.exeUDP 1086 0.0.0.0 *:*
-    1276:dns.exeUDP 2126 0.0.0.0 *:*
-    1276:dns.exeUDP 53 127.0.0.1 *:*
-    1276:dns.exeUDP 1085 127.0.0.1 *:*
-    1276:dns.exeUDP 53 169.254.113.96 *:*
-    1328:InoRpc.exeTCP 42510 0.0.0.0 LISTENING 0.0.0.0:220
-    1328:InoRpc.exeUDP 43508 169.254.113.96 *:*
-    1552:CcmExec.exeUDP 1114 0.0.0.0 *:*
-    1896:WINWORD.EXETCP 3807 169.254.113.96 CLOSE WAIT 169.254.237.37:3268
-    1896:WINWORD.EXEUDP 3806 0.0.0.0 *:*
-    1896:WINWORD.EXEUDP 1510 127.0.0.1 *:*
-    2148:IEXPLORE.EXETCP 4446 169.254.113.96 ESTABLISHED 169.254.113.92:80
-    2148:IEXPLORE.EXEUDP 4138 127.0.0.1 *:*
-    3200:program.exeTCP 1906 169.254.113.96 ESTABLISHED 169.254.0.40:1025
-    3200:program.exeTCP 4398 169.254.113.96 ESTABLISHED 169.254.209.96:1433
-    3200:program.exeTCP 4438 169.254.113.96 ESTABLISHED 169.254.209.96:1433
-    3592:OUTLOOK.EXETCP 1256 169.254.113.96 ESTABLISHED 169.254.1.105:1025
-    3592:OUTLOOK.EXETCP 2214 169.254.113.96 CLOSE WAIT 169.254.237.37:3268
-    3592:OUTLOOK.EXETCP 2971 169.254.113.96 ESTABLISHED 169.254.5.216:1434
-    3592:OUTLOOK.EXETCP 4439 169.254.113.96 ESTABLISHED 169.254.47.242:1788
-    3592:OUTLOOK.EXEUDP 1307 0.0.0.0 *:*
-    3592:OUTLOOK.EXEUDP 1553 0.0.0.0 *:*
-    3660:IEXPLORE.EXETCP 4452 169.254.113.96 ESTABLISHED 169.254.9.74:80
-    3660:IEXPLORE.EXETCP 4453 169.254.113.96 ESTABLISHED 169.254.9.74:80
-    3660:IEXPLORE.EXETCP 4454 169.254.113.96 ESTABLISHED 169.254.230.88:80
-    3660:IEXPLORE.EXEUDP 4451 127.0.0.1 *:*
-    4048:program2.exeUDP 3689 127.0.0.1 *:*
-
-    Port Statistics
-
-    TCP mappings: 27
-    UDP mappings: 28
-
-    TCP ports in a LISTENING state: 9 = 33.33%
-    TCP ports in a ESTABLISHED state: 12 = 44.44%
-    TCP ports in a CLOSE WAIT state: 4 = 14.81%
-    TCP ports in a TIME WAIT state: 2 = 7.41%
-
-    Port and Module Information by Process
-
-    Note: restrictions applied to some processes may
-     prevent Portqry from accessing more information
-
-    For best results run Portqry in the context of
-     the local administrator
-
-    ======================================================
+    > TCP/UDP Port to Process Mappings
+    >
+    > 55 mappings found
+    >
+    > PID:ProcessPortLocal IPState Remote IP:Port  
+    0:System IdleTCP 4442 169.254.113.96 TIME WAIT 169.254.5.136:80  
+    0:System IdleTCP 4456 169.254.113.96 TIME WAIT 169.254.5.44:445  
+    4:SystemTCP 445 0.0.0.0 LISTENING 0.0.0.0:2160  
+    4:SystemTCP 139 169.254.113.96 LISTENING 0.0.0.0:24793  
+    4:SystemTCP 1475 169.254.113.96 ESTABLISHED 169.254.8.176:445  
+    4:SystemUDP 445 0.0.0.0 *:*  
+    4:SystemUDP 137 169.254.113.96 *:*  
+    4:SystemUDP 138 169.254.113.96 *:*  
+    424:winlogon.exeTCP 1200 169.254.113.96 CLOSE WAIT 169.254.5.44:389  
+    424:winlogon.exeUDP 1100 0.0.0.0 *:*  
+    484:lsass.exeTCP 1064 0.0.0.0 LISTENING 0.0.0.0:2064  
+    484:lsass.exeUDP 500 0.0.0.0 *:*  
+    484:lsass.exeUDP 1031 0.0.0.0 *:*  
+    484:lsass.exeUDP 4500 0.0.0.0 *:*  
+    668:svchost.exeTCP 135 0.0.0.0 LISTENING 0.0.0.0:16532  
+    728:svchost.exeTCP 3389 0.0.0.0 LISTENING 0.0.0.0:45088  
+    800UDP 1026 0.0.0.0 *:*  
+    800UDP 1027 0.0.0.0 *:*  
+    836:svchost.exeTCP 1025 0.0.0.0 LISTENING 0.0.0.0:43214  
+    836:svchost.exeTCP 1559 169.254.113.96 CLOSE WAIT 169.254.5.44:389  
+    836:svchost.exeUDP 1558 0.0.0.0 *:*  
+    836:svchost.exeUDP 123 127.0.0.1 *:*  
+    836:svchost.exeUDP 3373 127.0.0.1 *:*  
+    836:svchost.exeUDP 123 169.254.113.96 *:*  
+    1136:mstsc.exeTCP 2347 169.254.113.96 ESTABLISHED 172.30.137.221:3389  
+    1136:mstsc.exeUDP 2348 0.0.0.0 *:*  
+    1276:dns.exeTCP 53 0.0.0.0 LISTENING 0.0.0.0:2160  
+    1276:dns.exeTCP 1087 0.0.0.0 LISTENING 0.0.0.0:37074  
+    1276:dns.exeUDP 1086 0.0.0.0 *:*  
+    1276:dns.exeUDP 2126 0.0.0.0 *:*  
+    1276:dns.exeUDP 53 127.0.0.1 *:*  
+    1276:dns.exeUDP 1085 127.0.0.1 *:*  
+    1276:dns.exeUDP 53 169.254.113.96 *:*  
+    1328:InoRpc.exeTCP 42510 0.0.0.0 LISTENING 0.0.0.0:220  
+    1328:InoRpc.exeUDP 43508 169.254.113.96 *:*  
+    1552:CcmExec.exeUDP 1114 0.0.0.0 *:*  
+    1896:WINWORD.EXETCP 3807 169.254.113.96 CLOSE WAIT 169.254.237.37:3268  
+    1896:WINWORD.EXEUDP 3806 0.0.0.0 *:*  
+    1896:WINWORD.EXEUDP 1510 127.0.0.1 *:*  
+    2148:IEXPLORE.EXETCP 4446 169.254.113.96 ESTABLISHED 169.254.113.92:80  
+    2148:IEXPLORE.EXEUDP 4138 127.0.0.1 *:*  
+    3200:program.exeTCP 1906 169.254.113.96 ESTABLISHED 169.254.0.40:1025  
+    3200:program.exeTCP 4398 169.254.113.96 ESTABLISHED 169.254.209.96:1433  
+    3200:program.exeTCP 4438 169.254.113.96 ESTABLISHED 169.254.209.96:1433  
+    3592:OUTLOOK.EXETCP 1256 169.254.113.96 ESTABLISHED 169.254.1.105:1025  
+    3592:OUTLOOK.EXETCP 2214 169.254.113.96 CLOSE WAIT 169.254.237.37:3268  
+    3592:OUTLOOK.EXETCP 2971 169.254.113.96 ESTABLISHED 169.254.5.216:1434  
+    3592:OUTLOOK.EXETCP 4439 169.254.113.96 ESTABLISHED 169.254.47.242:1788  
+    3592:OUTLOOK.EXEUDP 1307 0.0.0.0 *:*  
+    3592:OUTLOOK.EXEUDP 1553 0.0.0.0 *:*  
+    3660:IEXPLORE.EXETCP 4452 169.254.113.96 ESTABLISHED 169.254.9.74:80  
+    3660:IEXPLORE.EXETCP 4453 169.254.113.96 ESTABLISHED 169.254.9.74:80  
+    3660:IEXPLORE.EXETCP 4454 169.254.113.96 ESTABLISHED 169.254.230.88:80  
+    3660:IEXPLORE.EXEUDP 4451 127.0.0.1 *:*  
+    4048:program2.exeUDP 3689 127.0.0.1 *:*  
+    >
+    > Port Statistics
+    >
+    > TCP mappings: 27
+    > UDP mappings: 28
+    >
+    > TCP ports in a LISTENING state: 9 = 33.33%  
+    TCP ports in a ESTABLISHED state: 12 = 44.44%  
+    TCP ports in a CLOSE WAIT state: 4 = 14.81%  
+    TCP ports in a TIME WAIT state: 2 = 7.41%  
+    >
+    > Port and Module Information by Process
+    >
+    > Note: restrictions applied to some processes may
+    > prevent Portqry from accessing more information
+    >
+    > For best results run Portqry in the context of
+    > the local administrator
+    >
+    > ======================================================  
     Process ID: 0 (System Idle Process)
-
-    PIDPortLocal IPState Remote IP:Port
-    0TCP 4442 169.254.113.96 TIME WAIT 169.254.5.136:80
-    0TCP 4456 169.254.113.96 TIME WAIT 169.254.5.44:445
-
-    Port Statistics
-
-    TCP mappings: 2
+    >
+    > PIDPortLocal IPState Remote IP:Port  
+    0TCP 4442 169.254.113.96 TIME WAIT 169.254.5.136:80  
+    0TCP 4456 169.254.113.96 TIME WAIT 169.254.5.44:445  
+    >
+    > Port Statistics
+    >
+    > TCP mappings: 2  
     UDP mappings: 0
-
-    TCP ports in a TIME WAIT state: 2 = 100.00%
-
-    Could not access module information for this process
-
-    ======================================================
-
-    Process ID: 4 (System Process)
-
-    PIDPortLocal IPState Remote IP:Port
-    4TCP 445 0.0.0.0 LISTENING 0.0.0.0:2160
-    4TCP 139 169.254.113.96 LISTENING 0.0.0.0:24793
-    4TCP 1475 169.254.113.96 ESTABLISHED 169.254.8.176:445
-    4UDP 445 0.0.0.0 *:*
-    4UDP 137 169.254.113.96 *:*
-    4UDP 138 169.254.113.96 *:*
-
-    Port Statistics
-
-    TCP mappings: 3
+    >
+    > TCP ports in a TIME WAIT state: 2 = 100.00%
+    >
+    > Could not access module information for this process
+    >
+    > ======================================================
+    >
+    > Process ID: 4 (System Process)
+    >
+    > PIDPortLocal IPState Remote IP:Port  
+    4TCP 445 0.0.0.0 LISTENING 0.0.0.0:2160  
+    4TCP 139 169.254.113.96 LISTENING 0.0.0.0:24793  
+    4TCP 1475 169.254.113.96 ESTABLISHED 169.254.8.176:445  
+    4UDP 445 0.0.0.0 *:*  
+    4UDP 137 169.254.113.96 *:*  
+    4UDP 138 169.254.113.96 *:*  
+    >
+    > Port Statistics
+    >
+    > TCP mappings: 3  
     UDP mappings: 3
-
-    TCP ports in a LISTENING state: 2 = 66.67%
+    >
+    > TCP ports in a LISTENING state: 2 = 66.67%  
     TCP ports in a ESTABLISHED state: 1 = 33.33%
-
-    Could not access module information for this process
-
-    ======================================================
-
-    Process ID: 352 (smss.exe)
-
-    Process doesn't appear to be a service
-
-    Port Statistics
-
-    TCP mappings: 0
+    >
+    > Could not access module information for this process
+    >
+    > ======================================================
+    >
+    > Process ID: 352 (smss.exe)
+    >
+    > Process doesn't appear to be a service
+    >
+    > Port Statistics
+    >
+    > TCP mappings: 0  
     UDP mappings: 0
-
-    Loaded modules:
+    >
+    > Loaded modules:  
     \SystemRoot\System32\smss.exe (0x48580000)
-
-    C:\WINDOWS\system32\ntdll.dll (0x77F40000)
+    >
+    > C:\WINDOWS\system32\ntdll.dll (0x77F40000)  
     ======================================================
-
-    Process ID: 484 (lsass.exe)
-
-    Service Name: Netlogon
-    Display Name: Net Logon
+    >
+    > Process ID: 484 (lsass.exe)
+    >
+    > Service Name: Netlogon  
+    Display Name: Net Logon  
     Service Type: shares a process with other services
-
-    Service Name: PolicyAgent
-    Display Name: IPSEC Services
+    >
+    > Service Name: PolicyAgent  
+    Display Name: IPSEC Services  
     Service Type: shares a process with other services
-
-    Service Name: ProtectedStorage
+    >
+    > Service Name: ProtectedStorage  
     Display Name: Protected Storage
-
-    Service Name: SamSs
-    Display Name: Security Accounts Manager
+    >
+    > Service Name: SamSs  
+    Display Name: Security Accounts Manager  
     Service Type: shares a process with other services
-
-    PIDPortLocal IPState Remote IP:Port
-    484TCP 1064 0.0.0.0 LISTENING 0.0.0.0:2064
-    484UDP 500 0.0.0.0 *:*
-    484UDP 1031 0.0.0.0 *:*
+    >
+    > PIDPortLocal IPState Remote IP:Port  
+    484TCP 1064 0.0.0.0 LISTENING 0.0.0.0:2064  
+    484UDP 500 0.0.0.0 *:*  
+    484UDP 1031 0.0.0.0 *:*  
     484UDP 4500 0.0.0.0 *:*
-
-    Port Statistics
-
-    TCP mappings: 1
+    >
+    > Port Statistics
+    >
+    > TCP mappings: 1  
     UDP mappings: 3
-
-    TCP ports in a LISTENING state: 1 = 100.00%
-
-    Loaded modules:
+    >
+    > TCP ports in a LISTENING state: 1 = 100.00%
+    >
+    > Loaded modules:  
     C:\WINDOWS\system32\lsass.exe (0x01000000)
-
-    C:\WINDOWS\system32\ntdll.dll (0x77F40000)
-    C:\WINDOWS\system32\kernel32.dll (0x77E40000)
-    C:\WINDOWS\system32\ADVAPI32.dll (0x77DA0000)
-    C:\WINDOWS\system32\RPCRT4.dll (0x77C50000)
-    C:\WINDOWS\system32\LSASRV.dll (0x742C0000)
-    C:\WINDOWS\system32\msvcrt.dll (0x77BA0000)
-    C:\WINDOWS\system32\Secur32.dll (0x76F50000)
-    C:\WINDOWS\system32\USER32.dll (0x77D00000)
-    C:\WINDOWS\system32\GDI32.dll (0x77C00000)
-    C:\WINDOWS\system32\SAMSRV.dll (0x741D0000)
-    C:\WINDOWS\system32\cryptdll.dll (0x766E0000)
-    C:\WINDOWS\system32\DNSAPI.dll (0x76ED0000)
-    C:\WINDOWS\system32\WS2_32.dll (0x71C00000)
-    C:\WINDOWS\system32\WS2HELP.dll (0x71BF0000)
-    C:\WINDOWS\system32\MSASN1.dll (0x76190000)
-    C:\WINDOWS\system32\NETAPI32.dll (0x71C40000)
-    C:\WINDOWS\system32\SAMLIB.dll (0x5CCF0000)
-    C:\WINDOWS\system32\MPR.dll (0x71BD0000)
-    C:\WINDOWS\system32\NTDSAPI.dll (0x766F0000)
-    C:\WINDOWS\system32\WLDAP32.dll (0x76F10000)
-    C:\WINDOWS\system32\IMM32.DLL (0x76290000)
-    C:\WINDOWS\system32\LPK.DLL (0x62D80000)
-
-    ======================================================
-
-    Process ID: 668 (svchost.exe)
-
-    Service Name: RpcSs
-    Display Name: Remote Procedure Call (RPC)
+    >
+    > C:\WINDOWS\system32\ntdll.dll (0x77F40000)  
+    C:\WINDOWS\system32\kernel32.dll (0x77E40000)  
+    C:\WINDOWS\system32\ADVAPI32.dll (0x77DA0000)  
+    C:\WINDOWS\system32\RPCRT4.dll (0x77C50000)  
+    C:\WINDOWS\system32\LSASRV.dll (0x742C0000)  
+    C:\WINDOWS\system32\msvcrt.dll (0x77BA0000)  
+    C:\WINDOWS\system32\Secur32.dll (0x76F50000)  
+    C:\WINDOWS\system32\USER32.dll (0x77D00000)  
+    C:\WINDOWS\system32\GDI32.dll (0x77C00000)  
+    C:\WINDOWS\system32\SAMSRV.dll (0x741D0000)  
+    C:\WINDOWS\system32\cryptdll.dll (0x766E0000)  
+    C:\WINDOWS\system32\DNSAPI.dll (0x76ED0000)  
+    C:\WINDOWS\system32\WS2_32.dll (0x71C00000)  
+    C:\WINDOWS\system32\WS2HELP.dll (0x71BF0000)  
+    C:\WINDOWS\system32\MSASN1.dll (0x76190000)  
+    C:\WINDOWS\system32\NETAPI32.dll (0x71C40000)  
+    C:\WINDOWS\system32\SAMLIB.dll (0x5CCF0000)  
+    C:\WINDOWS\system32\MPR.dll (0x71BD0000)  
+    C:\WINDOWS\system32\NTDSAPI.dll (0x766F0000)  
+    C:\WINDOWS\system32\WLDAP32.dll (0x76F10000)  
+    C:\WINDOWS\system32\IMM32.DLL (0x76290000)  
+    C:\WINDOWS\system32\LPK.DLL (0x62D80000)  
+    >
+    > ======================================================
+    >
+    > Process ID: 668 (svchost.exe)
+    >
+    > Service Name: RpcSs  
+    Display Name: Remote Procedure Call (RPC)  
     Service Type: shares a process with other services
-
-    PIDPortLocal IPState Remote IP:Port
+    >
+    > PIDPortLocal IPState Remote IP:Port  
     668TCP 135 0.0.0.0 LISTENING 0.0.0.0:16532
-
-    Port Statistics
-
-    TCP mappings: 1
+    >
+    > Port Statistics
+    >
+    > TCP mappings: 1  
     UDP mappings: 0
-
-    TCP ports in a LISTENING state: 1 = 100.00%
-
-    Loaded modules:
+    >
+    > TCP ports in a LISTENING state: 1 = 100.00%
+    >
+    > Loaded modules:  
     C:\WINDOWS\system32\svchost.exe (0x01000000)
-
-    C:\WINDOWS\system32\ntdll.dll (0x77F40000)
-    C:\WINDOWS\system32\kernel32.dll (0x77E40000)
-    C:\WINDOWS\system32\ADVAPI32.dll (0x77DA0000)
-    C:\WINDOWS\system32\RPCRT4.dll (0x77C50000)
-    c:\windows\system32\rpcss.dll (0x75700000)
-    C:\WINDOWS\system32\msvcrt.dll (0x77BA0000)
-    c:\windows\system32\WS2_32.dll (0x71C00000)
-    c:\windows\system32\WS2HELP.dll (0x71BF0000)
-    C:\WINDOWS\system32\USER32.dll (0x77D00000)
-    C:\WINDOWS\system32\GDI32.dll (0x77C00000)
-    c:\windows\system32\Secur32.dll (0x76F50000)
-    C:\WINDOWS\system32\IMM32.DLL (0x76290000)
-    C:\WINDOWS\system32\LPK.DLL (0x62D80000)
-    C:\WINDOWS\system32\USP10.dll (0x73010000)
-    C:\WINDOWS\system32\mswsock.dll (0x71B20000)
-    C:\Program Files\Microsoft Firewall Client\wspwsp.dll (0x55600000)
-    C:\WINDOWS\system32\iphlpapi.dll (0x76CF0000)
-    C:\WINDOWS\System32\wshqos.dll (0x57B60000)
-    C:\WINDOWS\system32\wshtcpip.dll (0x71AE0000)
-    C:\WINDOWS\system32\CLBCatQ.DLL (0x76F90000)
-    C:\WINDOWS\system32\OLEAUT32.dll (0x770E0000)
-    C:\WINDOWS\system32\ole32.dll (0x77160000)
-    C:\WINDOWS\system32\COMRes.dll (0x77010000)
-    C:\WINDOWS\system32\VERSION.dll (0x77B90000)
-    C:\WINDOWS\system32\msi.dll (0x76300000)
-    C:\WINDOWS\system32\WTSAPI32.dll (0x76F00000)
-    C:\WINDOWS\system32\WINSTA.dll (0x76260000)
-    C:\WINDOWS\system32\NETAPI32.dll (0x71C40000)
-    C:\WINDOWS\system32\USERENV.dll (0x75970000)
+    >
+    > C:\WINDOWS\system32\ntdll.dll (0x77F40000)  
+    C:\WINDOWS\system32\kernel32.dll (0x77E40000)  
+    C:\WINDOWS\system32\ADVAPI32.dll (0x77DA0000)  
+    C:\WINDOWS\system32\RPCRT4.dll (0x77C50000)  
+    c:\windows\system32\rpcss.dll (0x75700000)  
+    C:\WINDOWS\system32\msvcrt.dll (0x77BA0000)  
+    c:\windows\system32\WS2_32.dll (0x71C00000)  
+    c:\windows\system32\WS2HELP.dll (0x71BF0000)  
+    C:\WINDOWS\system32\USER32.dll (0x77D00000)  
+    C:\WINDOWS\system32\GDI32.dll (0x77C00000)  
+    c:\windows\system32\Secur32.dll (0x76F50000)  
+    C:\WINDOWS\system32\IMM32.DLL (0x76290000)  
+    C:\WINDOWS\system32\LPK.DLL (0x62D80000)  
+    C:\WINDOWS\system32\USP10.dll (0x73010000)  
+    C:\WINDOWS\system32\mswsock.dll (0x71B20000)  
+    C:\Program Files\Microsoft Firewall Client\wspwsp.dll (0x55600000)  
+    C:\WINDOWS\system32\iphlpapi.dll (0x76CF0000)  
+    C:\WINDOWS\System32\wshqos.dll (0x57B60000)  
+    C:\WINDOWS\system32\wshtcpip.dll (0x71AE0000)  
+    C:\WINDOWS\system32\CLBCatQ.DLL (0x76F90000)  
+    C:\WINDOWS\system32\OLEAUT32.dll (0x770E0000)  
+    C:\WINDOWS\system32\ole32.dll (0x77160000)  
+    C:\WINDOWS\system32\COMRes.dll (0x77010000)  
+    C:\WINDOWS\system32\VERSION.dll (0x77B90000)  
+    C:\WINDOWS\system32\msi.dll (0x76300000)  
+    C:\WINDOWS\system32\WTSAPI32.dll (0x76F00000)  
+    C:\WINDOWS\system32\WINSTA.dll (0x76260000)  
+    C:\WINDOWS\system32\NETAPI32.dll (0x71C40000)  
+    C:\WINDOWS\system32\USERENV.dll (0x75970000)  
     ======================================================
-
-    ========= end of log file =========
-
-    ```
+    >
+    > ========= end of log file =========
 
     You can use this information to determine which ports are associated with a particular program or service that's running on the computer. In some cases, Portqry may report that the System Idle process (PID 0) is using some TCP ports. This behavior may occur if a local program connects to a TCP port, and then stops. The program's TCP connection to the port may be left in a "Timed Wait" state even though the program is no longer running. In this case, Portqry may detect that the port is in use. However, Portqry can't identify the program that's using the port because the program has stopped. The PID was released. The port may be in a "Timed Wait" state for several minutes even though the process that was using the port has stopped. By default, the port remains in a "Timed Wait" state for twice as long as the maximum segment lifetime.
 
@@ -1049,245 +1041,241 @@ The PortQry local mode of operation is designed to give you detailed information
 
         As a result, a log file that's similar to the following log file is generated:
 
-        ```console
-        Portqry Version 2.0 Log File
-
-        System Date: Sat Oct 04 08:54:06 2003
-
-        Command run:
+        > Portqry Version 2.0 Log File
+        >
+        > System Date: Sat Oct 04 08:54:06 2003
+        >
+        > Command run:  
          portqry -wport 135 -v -l test.txt
-
-        Local computer name:
-
-        host123
-
-        Watching port: 135
-
-        Checking for changes every 60 seconds
-
-        verbose output requested
-
-        ============
+        >
+        > Local computer name:
+        >
+        > host123
+        >
+        > Watching port: 135
+        >
+        > Checking for changes every 60 seconds
+        >
+        > verbose output requested
+        >
+        > ============  
         System Date: Sat Oct 04 08:54:07 2003
-
-        ======================================================
-
-        Process ID: 952 (svchost.exe)
-
-        Service Name: RpcSs
-        Display Name: Remote Procedure Call (RPC)
+        >
+        > ======================================================
+        >
+        > Process ID: 952 (svchost.exe)
+        >
+        > Service Name: RpcSs  
+        Display Name: Remote Procedure Call (RPC)  
         Service Type: shares a process with other services
-
-        PIDPortLocal IPState Remote IP:Port
-        952TCP 135 0.0.0.0 LISTENING 0.0.0.0:45198
+        >
+        > PIDPortLocal IPState Remote IP:Port  
+        952TCP 135 0.0.0.0 LISTENING 0.0.0.0:45198  
         952UDP 135 0.0.0.0 *:*
-
-        Port Statistics
-
-        TCP mappings: 1
+        >
+        > Port Statistics
+        >
+        > TCP mappings: 1  
         UDP mappings: 1
-
-        TCP ports in a LISTENING state: 1 = 100.00%
-
-        Loaded modules:
+        >
+        > TCP ports in a LISTENING state: 1 = 100.00%
+        >
+        > Loaded modules:  
         D:\WINDOWS\system32\svchost.exe (0x01000000)
-
-        D:\WINDOWS\System32\ntdll.dll (0x77F50000)
-        D:\WINDOWS\system32\kernel32.dll (0x77E60000)
-        D:\WINDOWS\system32\ADVAPI32.dll (0x77DD0000)
-        D:\WINDOWS\system32\RPCRT4.dll (0x78000000)
-        d:\windows\system32\rpcss.dll (0x75850000)
-        D:\WINDOWS\system32\msvcrt.dll (0x77C10000)
-        d:\windows\system32\WS2_32.dll (0x71AB0000)
-        d:\windows\system32\WS2HELP.dll (0x71AA0000)
-        D:\WINDOWS\system32\USER32.dll (0x77D40000)
-        D:\WINDOWS\system32\GDI32.dll (0x77C70000)
-        d:\windows\system32\Secur32.dll (0x76F90000)
-        D:\WINDOWS\system32\userenv.dll (0x75A70000)
-        D:\WINDOWS\system32\mswsock.dll (0x71A50000)
-        D:\WINDOWS\System32\wshtcpip.dll (0x71A90000)
-        D:\WINDOWS\system32\DNSAPI.dll (0x76F20000)
-        D:\WINDOWS\system32\iphlpapi.dll (0x76D60000)
-        D:\WINDOWS\System32\winrnr.dll (0x76FB0000)
-        D:\WINDOWS\system32\WLDAP32.dll (0x76F60000)
-        D:\WINDOWS\system32\rasadhlp.dll (0x76FC0000)
-        D:\WINDOWS\system32\CLBCATQ.DLL (0x76FD0000)
-        D:\WINDOWS\system32\ole32.dll (0x771B0000)
-        D:\WINDOWS\system32\OLEAUT32.dll (0x77120000)
-        D:\WINDOWS\system32\COMRes.dll (0x77050000)
-        D:\WINDOWS\system32\VERSION.dll (0x77C00000)
-        ============
+        >
+        > D:\WINDOWS\System32\ntdll.dll (0x77F50000)  
+        D:\WINDOWS\system32\kernel32.dll (0x77E60000)  
+        D:\WINDOWS\system32\ADVAPI32.dll (0x77DD0000)  
+        D:\WINDOWS\system32\RPCRT4.dll (0x78000000)  
+        d:\windows\system32\rpcss.dll (0x75850000)  
+        D:\WINDOWS\system32\msvcrt.dll (0x77C10000)  
+        d:\windows\system32\WS2_32.dll (0x71AB0000)  
+        d:\windows\system32\WS2HELP.dll (0x71AA0000)  
+        D:\WINDOWS\system32\USER32.dll (0x77D40000)  
+        D:\WINDOWS\system32\GDI32.dll (0x77C70000)  
+        d:\windows\system32\Secur32.dll (0x76F90000)  
+        D:\WINDOWS\system32\userenv.dll (0x75A70000)  
+        D:\WINDOWS\system32\mswsock.dll (0x71A50000)  
+        D:\WINDOWS\System32\wshtcpip.dll (0x71A90000)  
+        D:\WINDOWS\system32\DNSAPI.dll (0x76F20000)  
+        D:\WINDOWS\system32\iphlpapi.dll (0x76D60000)  
+        D:\WINDOWS\System32\winrnr.dll (0x76FB0000)  
+        D:\WINDOWS\system32\WLDAP32.dll (0x76F60000)  
+        D:\WINDOWS\system32\rasadhlp.dll (0x76FC0000)  
+        D:\WINDOWS\system32\CLBCATQ.DLL (0x76FD0000)  
+        D:\WINDOWS\system32\ole32.dll (0x771B0000)  
+        D:\WINDOWS\system32\OLEAUT32.dll (0x77120000)  
+        D:\WINDOWS\system32\COMRes.dll (0x77050000)  
+        D:\WINDOWS\system32\VERSION.dll (0x77C00000)  
+        ============  
         System Date: Sat Oct 04 08:56:08 2003
-
-        ======================================================
-
-        Process ID: 952 (svchost.exe)
-
-        Service Name: RpcSs
-        Display Name: Remote Procedure Call (RPC)
+        >
+        > ======================================================
+        >
+        > Process ID: 952 (svchost.exe)
+        >
+        > Service Name: RpcSs  
+        Display Name: Remote Procedure Call (RPC)  
         Service Type: shares a process with other services
-
-        PIDPortLocal IPState Remote IP:Port
-        952TCP 135 0.0.0.0 LISTENING 0.0.0.0:45198
+        >
+        > PIDPortLocal IPState Remote IP:Port  
+        952TCP 135 0.0.0.0 LISTENING 0.0.0.0:45198  
+        952UDP 135 0.0.0.0 *:*  
         952UDP 135 0.0.0.0 *:*
-        952UDP 135 0.0.0.0 *:*
-
-        Port Statistics
-
-        TCP mappings: 1
+        >
+        > Port Statistics
+        >
+        > TCP mappings: 1  
         UDP mappings: 2
-
-        TCP ports in a LISTENING state: 1 = 100.00%
-
-        Loaded modules:
+        >
+        > TCP ports in a LISTENING state: 1 = 100.00%
+        >
+        > Loaded modules:  
         D:\WINDOWS\system32\svchost.exe (0x01000000)
-
-        D:\WINDOWS\System32\ntdll.dll (0x77F50000)
-        D:\WINDOWS\system32\kernel32.dll (0x77E60000)
-        D:\WINDOWS\system32\ADVAPI32.dll (0x77DD0000)
-        D:\WINDOWS\system32\RPCRT4.dll (0x78000000)
-        d:\windows\system32\rpcss.dll (0x75850000)
-        D:\WINDOWS\system32\msvcrt.dll (0x77C10000)
-        d:\windows\system32\WS2_32.dll (0x71AB0000)
-        d:\windows\system32\WS2HELP.dll (0x71AA0000)
-        D:\WINDOWS\system32\USER32.dll (0x77D40000)
-        D:\WINDOWS\system32\GDI32.dll (0x77C70000)
-        d:\windows\system32\Secur32.dll (0x76F90000)
-        D:\WINDOWS\system32\userenv.dll (0x75A70000)
-        D:\WINDOWS\system32\mswsock.dll (0x71A50000)
-        D:\WINDOWS\System32\wshtcpip.dll (0x71A90000)
-        D:\WINDOWS\system32\DNSAPI.dll (0x76F20000)
-        D:\WINDOWS\system32\iphlpapi.dll (0x76D60000)
-        D:\WINDOWS\System32\winrnr.dll (0x76FB0000)
-        D:\WINDOWS\system32\WLDAP32.dll (0x76F60000)
-        D:\WINDOWS\system32\rasadhlp.dll (0x76FC0000)
-        D:\WINDOWS\system32\CLBCATQ.DLL (0x76FD0000)
-        D:\WINDOWS\system32\ole32.dll (0x771B0000)
-        D:\WINDOWS\system32\OLEAUT32.dll (0x77120000)
-        D:\WINDOWS\system32\COMRes.dll (0x77050000)
-        D:\WINDOWS\system32\VERSION.dll (0x77C00000)
+        >
+        > D:\WINDOWS\System32\ntdll.dll (0x77F50000)  
+        D:\WINDOWS\system32\kernel32.dll (0x77E60000)  
+        D:\WINDOWS\system32\ADVAPI32.dll (0x77DD0000)  
+        D:\WINDOWS\system32\RPCRT4.dll (0x78000000)  
+        d:\windows\system32\rpcss.dll (0x75850000)  
+        D:\WINDOWS\system32\msvcrt.dll (0x77C10000)  
+        d:\windows\system32\WS2_32.dll (0x71AB0000)  
+        d:\windows\system32\WS2HELP.dll (0x71AA0000)  
+        D:\WINDOWS\system32\USER32.dll (0x77D40000)  
+        D:\WINDOWS\system32\GDI32.dll (0x77C70000)  
+        d:\windows\system32\Secur32.dll (0x76F90000)  
+        D:\WINDOWS\system32\userenv.dll (0x75A70000)  
+        D:\WINDOWS\system32\mswsock.dll (0x71A50000)  
+        D:\WINDOWS\System32\wshtcpip.dll (0x71A90000)  
+        D:\WINDOWS\system32\DNSAPI.dll (0x76F20000)  
+        D:\WINDOWS\system32\iphlpapi.dll (0x76D60000)  
+        D:\WINDOWS\System32\winrnr.dll (0x76FB0000)  
+        D:\WINDOWS\system32\WLDAP32.dll (0x76F60000)  
+        D:\WINDOWS\system32\rasadhlp.dll (0x76FC0000)  
+        D:\WINDOWS\system32\CLBCATQ.DLL (0x76FD0000)  
+        D:\WINDOWS\system32\ole32.dll (0x771B0000)  
+        D:\WINDOWS\system32\OLEAUT32.dll (0x77120000)  
+        D:\WINDOWS\system32\COMRes.dll (0x77050000)  
+        D:\WINDOWS\system32\VERSION.dll (0x77C00000)  
         ============
-
-        escape key pressed: stopped watching port 135
+        >
+        > escape key pressed: stopped watching port 135  
         System Date: Sat Oct 04 09:09:12 2003
-
-        ========= end of log file =========
-        ```
+        >
+        > ========= end of log file =========
 
 - **portqry.exe -wpid process_number** (watch PID): With the watch PID command, PortQry watches the specified process ID (PID) for changes. These changes may include an increase or a decrease in the number of connections to the port or a change in the connection state of any one of the existing connections. This command supports the same optional parameters as the watch port command. For example, you type the following command, and then press Enter: `portqry.exe -wpid 1276 -wt 2 -v -l pid.txt`.  
 
     As a result, a log file that's similar to the following log file is generated:
 
-    ```console
-    PortQry Version 2.0 Log File
-
-    System Date: Tue Oct 07 14:01:13 2003
-
-    Command run:
+    > PortQry Version 2.0 Log File
+    >
+    > System Date: Tue Oct 07 14:01:13 2003
+    >
+    > Command run:  
      portqry -wpid 1276 -wt 2 -v -l pid.txt
-
-    Local computer name:
-
-    host123
-
-    Watching PID: 1276
-
-    Checking for changes every 2 seconds
-
-    verbose output requested
-
-    Service Name: DNS
-    Display Name: DNS Server
+    >
+    > Local computer name:
+    >
+    > host123
+    >
+    > Watching PID: 1276
+    >
+    > Checking for changes every 2 seconds
+    >
+    > verbose output requested
+    >
+    > Service Name: DNS  
+    Display Name: DNS Server  
     Service Type: runs in its own process
-
-    ============
+    >
+    > ============  
     System Date: Tue Oct 07 14:01:14 2003
-
-    ======================================================
-
-    Process ID: 1276 (dns.exe)
-
-    Service Name: DNS
-    Display Name: DNS Server
+    >
+    > ======================================================
+    >
+    > Process ID: 1276 (dns.exe)
+    >
+    > Service Name: DNS  
+    Display Name: DNS Server  
     Service Type: runs in its own process
-
-    PIDPortLocal IPState Remote IP:Port
-    1276TCP 53 0.0.0.0 LISTENING 0.0.0.0:2160
-    1276TCP 1087 0.0.0.0 LISTENING 0.0.0.0:37074
-    1276UDP 1086 0.0.0.0 *:*
-    1276UDP 2126 0.0.0.0 *:*
-    1276UDP 53 127.0.0.1 *:*
-    1276UDP 1085 127.0.0.1 *:*
+    >
+    > PIDPortLocal IPState Remote IP:Port  
+    1276TCP 53 0.0.0.0 LISTENING 0.0.0.0:2160  
+    1276TCP 1087 0.0.0.0 LISTENING 0.0.0.0:37074  
+    1276UDP 1086 0.0.0.0 *:*  
+    1276UDP 2126 0.0.0.0 *:*  
+    1276UDP 53 127.0.0.1 *:*  
+    1276UDP 1085 127.0.0.1 *:*  
     1276UDP 53 169.254.11.96 *:*
-
-    Port Statistics
-
-    TCP mappings: 2
+    >
+    > Port Statistics
+    >
+    > TCP mappings: 2  
     UDP mappings: 5
-
-    TCP ports in a LISTENING state: 2 = 100.00%
-
-    Loaded modules:
+    >
+    > TCP ports in a LISTENING state: 2 = 100.00%
+    >
+    > Loaded modules:  
     C:\WINDOWS\System32\dns.exe (0x01000000)
-
-    C:\WINDOWS\system32\ntdll.dll (0x77F40000)
-    C:\WINDOWS\system32\kernel32.dll (0x77E40000)
-    C:\WINDOWS\system32\msvcrt.dll (0x77BA0000)
-    C:\WINDOWS\system32\ADVAPI32.dll (0x77DA0000)
-    C:\WINDOWS\system32\RPCRT4.dll (0x77C50000)
-    C:\WINDOWS\System32\WS2_32.dll (0x71C00000)
-    C:\WINDOWS\System32\WS2HELP.dll (0x71BF0000)
-    C:\WINDOWS\system32\USER32.dll (0x77D00000)
-    C:\WINDOWS\system32\GDI32.dll (0x77C00000)
-    C:\WINDOWS\System32\NETAPI32.dll (0x71C40000)
-    C:\WINDOWS\system32\WLDAP32.dll (0x76F10000)
-    C:\WINDOWS\System32\DNSAPI.dll (0x76ED0000)
-    C:\WINDOWS\System32\NTDSAPI.dll (0x766F0000)
-    C:\WINDOWS\System32\Secur32.dll (0x76F50000)
-    C:\WINDOWS\system32\SHLWAPI.dll (0x77290000)
-    C:\WINDOWS\System32\iphlpapi.dll (0x76CF0000)
-    C:\WINDOWS\System32\MPRAPI.dll (0x76CD0000)
-    C:\WINDOWS\System32\ACTIVEDS.dll (0x76DF0000)
-    C:\WINDOWS\System32\adsldpc.dll (0x76DC0000)
-    C:\WINDOWS\System32\credui.dll (0x76B80000)
-    C:\WINDOWS\system32\SHELL32.dll (0x77380000)
-    C:\WINDOWS\System32\ATL.DLL (0x76A80000)
-    C:\WINDOWS\system32\ole32.dll (0x77160000)
-    C:\WINDOWS\system32\OLEAUT32.dll (0x770E0000)
-    C:\WINDOWS\System32\rtutils.dll (0x76E30000)
-    C:\WINDOWS\System32\SAMLIB.dll (0x5CCF0000)
-    C:\WINDOWS\System32\SETUPAPI.dll (0x765A0000)
-    C:\WINDOWS\system32\IMM32.DLL (0x76290000)
-    C:\WINDOWS\System32\LPK.DLL (0x62D80000)
-    C:\WINDOWS\System32\USP10.dll (0x73010000)
-    C:\WINDOWS\System32\netman.dll (0x76D80000)
-    C:\WINDOWS\System32\RASAPI32.dll (0x76E90000)
-    C:\WINDOWS\System32\rasman.dll (0x76E40000)
-    C:\WINDOWS\System32\TAPI32.dll (0x76E60000)
-    C:\WINDOWS\System32\WINMM.dll (0x76AA0000)
-    C:\WINDOWS\system32\CRYPT32.dll (0x761B0000)
-    C:\WINDOWS\system32\MSASN1.dll (0x76190000)
-    C:\WINDOWS\System32\WZCSvc.DLL (0x76D30000)
-    C:\WINDOWS\System32\WMI.dll (0x76CC0000)
-    C:\WINDOWS\System32\DHCPCSVC.DLL (0x76D10000)
-    C:\WINDOWS\System32\WTSAPI32.dll (0x76F00000)
-    C:\WINDOWS\System32\WINSTA.dll (0x76260000)
-    C:\WINDOWS\System32\ESENT.dll (0x69750000)
-    C:\WINDOWS\System32\WZCSAPI.DLL (0x730A0000)
-    C:\WINDOWS\system32\mswsock.dll (0x71B20000)
-    C:\WINDOWS\System32\wshtcpip.dll (0x71AE0000)
-    C:\WINDOWS\System32\winrnr.dll (0x76F70000)
-    C:\WINDOWS\System32\rasadhlp.dll (0x76F80000)
-    C:\WINDOWS\system32\kerberos.dll (0x71CA0000)
-    C:\WINDOWS\System32\cryptdll.dll (0x766E0000)
-    C:\WINDOWS\system32\msv1_0.dll (0x76C90000)
+    >
+    > C:\WINDOWS\system32\ntdll.dll (0x77F40000)  
+    C:\WINDOWS\system32\kernel32.dll (0x77E40000)  
+    C:\WINDOWS\system32\msvcrt.dll (0x77BA0000)  
+    C:\WINDOWS\system32\ADVAPI32.dll (0x77DA0000)  
+    C:\WINDOWS\system32\RPCRT4.dll (0x77C50000)  
+    C:\WINDOWS\System32\WS2_32.dll (0x71C00000)  
+    C:\WINDOWS\System32\WS2HELP.dll (0x71BF0000)  
+    C:\WINDOWS\system32\USER32.dll (0x77D00000)  
+    C:\WINDOWS\system32\GDI32.dll (0x77C00000)  
+    C:\WINDOWS\System32\NETAPI32.dll (0x71C40000)  
+    C:\WINDOWS\system32\WLDAP32.dll (0x76F10000)  
+    C:\WINDOWS\System32\DNSAPI.dll (0x76ED0000)  
+    C:\WINDOWS\System32\NTDSAPI.dll (0x766F0000)  
+    C:\WINDOWS\System32\Secur32.dll (0x76F50000)  
+    C:\WINDOWS\system32\SHLWAPI.dll (0x77290000)  
+    C:\WINDOWS\System32\iphlpapi.dll (0x76CF0000)  
+    C:\WINDOWS\System32\MPRAPI.dll (0x76CD0000)  
+    C:\WINDOWS\System32\ACTIVEDS.dll (0x76DF0000)  
+    C:\WINDOWS\System32\adsldpc.dll (0x76DC0000)  
+    C:\WINDOWS\System32\credui.dll (0x76B80000)  
+    C:\WINDOWS\system32\SHELL32.dll (0x77380000)  
+    C:\WINDOWS\System32\ATL.DLL (0x76A80000)  
+    C:\WINDOWS\system32\ole32.dll (0x77160000)  
+    C:\WINDOWS\system32\OLEAUT32.dll (0x770E0000)  
+    C:\WINDOWS\System32\rtutils.dll (0x76E30000)  
+    C:\WINDOWS\System32\SAMLIB.dll (0x5CCF0000)  
+    C:\WINDOWS\System32\SETUPAPI.dll (0x765A0000)  
+    C:\WINDOWS\system32\IMM32.DLL (0x76290000)  
+    C:\WINDOWS\System32\LPK.DLL (0x62D80000)  
+    C:\WINDOWS\System32\USP10.dll (0x73010000)  
+    C:\WINDOWS\System32\netman.dll (0x76D80000)  
+    C:\WINDOWS\System32\RASAPI32.dll (0x76E90000)  
+    C:\WINDOWS\System32\rasman.dll (0x76E40000)  
+    C:\WINDOWS\System32\TAPI32.dll (0x76E60000)  
+    C:\WINDOWS\System32\WINMM.dll (0x76AA0000)  
+    C:\WINDOWS\system32\CRYPT32.dll (0x761B0000)  
+    C:\WINDOWS\system32\MSASN1.dll (0x76190000)  
+    C:\WINDOWS\System32\WZCSvc.DLL (0x76D30000)  
+    C:\WINDOWS\System32\WMI.dll (0x76CC0000)  
+    C:\WINDOWS\System32\DHCPCSVC.DLL (0x76D10000)  
+    C:\WINDOWS\System32\WTSAPI32.dll (0x76F00000)  
+    C:\WINDOWS\System32\WINSTA.dll (0x76260000)  
+    C:\WINDOWS\System32\ESENT.dll (0x69750000)  
+    C:\WINDOWS\System32\WZCSAPI.DLL (0x730A0000)  
+    C:\WINDOWS\system32\mswsock.dll (0x71B20000)  
+    C:\WINDOWS\System32\wshtcpip.dll (0x71AE0000)  
+    C:\WINDOWS\System32\winrnr.dll (0x76F70000)  
+    C:\WINDOWS\System32\rasadhlp.dll (0x76F80000)  
+    C:\WINDOWS\system32\kerberos.dll (0x71CA0000)  
+    C:\WINDOWS\System32\cryptdll.dll (0x766E0000)  
+    C:\WINDOWS\system32\msv1_0.dll (0x76C90000)  
     C:\WINDOWS\System32\security.dll (0x71F60000)
-
-    escape key pressed: stopped watching PID 1276
+    >
+    > escape key pressed: stopped watching PID 1276  
     System Date: Tue Oct 07 14:01:16 2003
-
-    ========= end of log file =========
-    ```
+    >
+    > ========= end of log file =========
 
     With the `-wport` command, you can watch a single port for changes, but with the `-wpid` command, you can watch all the ports that the specified PID is using for changes. A process may be using many ports, and PortQry watches all of them for changes.
 

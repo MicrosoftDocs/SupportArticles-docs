@@ -15,6 +15,8 @@ ms.technology: Performance
 ---
 # Unable to refresh or reset PC after Automatic Repair fails in Windows 8
 
+This article fixes an issue in which you cannot refresh or reset the PC after Automatic Repair fails.
+
 _Original product version:_ &nbsp;Windows 8  
 _Original KB number:_ &nbsp;2823223
 

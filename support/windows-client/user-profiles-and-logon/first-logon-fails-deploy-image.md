@@ -55,7 +55,7 @@ Add a restart to the end of the task sequence list for the image build. Modify t
 
 Separate the Group Policy service into a separate SVCHOST instance. Implement the following command in the System Center Configuration Manager task sequence to set the corresponding registry entry:
 
-```cmd
+```console
 cmd /c reg add "HKLM\SYSTEM\CurrentControlSet\Services\gpsvc" /v Type /t REG_DWORD /d 0x10 /f
 ```
 
