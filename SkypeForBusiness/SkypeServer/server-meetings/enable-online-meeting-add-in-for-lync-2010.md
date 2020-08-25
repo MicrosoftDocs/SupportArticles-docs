@@ -23,18 +23,6 @@ After you install the Online Meeting Add-in for Microsoft Lync 2010 in Microsoft
 
 ### How to enable the Online Meeting Add-in for Microsoft Lync 2010
 
-#### Fix it for me
-
-To [enable the Online Meeting Add-in for Lync 2010](https://download.microsoft.com/download/C/7/7/C7728197-260C-4D35-8AC6-B655BBAFE33F/MicrosoftEasyFix50760.msi) automatically, click the **Fix it **button or link. Then click **Run** in the **File Download** dialog box, and follow the steps in the **Fix it** wizard.
-
-> [!NOTE]
-> - This wizard may be in English only, but the automatic fix also works for other language versions of Windows.    
-> - If you are not on the computer that has the problem, save the Fix it solution to a flash drive or a CD and then run it on the computer that has the problem.   
-
-Then, go to the "Did this fix the problem?" section.
-
-#### Let me fix it myself
-
 To manually enable the Online Meeting Add-in for Lync 2010 in Outlook 2010, follow these steps: 
 
 1. Start Outlook 2010.   

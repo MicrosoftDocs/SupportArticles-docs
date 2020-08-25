@@ -24,20 +24,7 @@ After you install the Conferencing Add-in for Outlook in Microsoft Office Outloo
 
 ### How to enable the Conferencing Add-in for Outlook
 
-To have us enable or disable the Conferencing Add-in for Outlook automatically, go to the "Here's an easy fix" section. If you prefer to do this manually, go to the "Let me fix it myself" section.
-
-#### Here's an easy fix 
-
-To fix this problem automatically, click the **Download** button. In the **File Download** dialog box, click **Run** or **Open**, and then follow the steps in the easy fix wizard.
-
-- This wizard may be in English only. However, the automatic fix also works for other language versions of Windows.   
-- If you're not on the computer that has the problem, save the easy fix solution to a flash drive or a CD, and then run it on the computer that has the problem.   
-
-[Enable the Conferencing Add-in for Outlook](https://download.microsoft.com/download/C/7/7/C7728197-260C-4D35-8AC6-B655BBAFE33F/MicrosoftEasyFix50760.msi)
-
-#### Let me fix it myself
-
-To manually enable the Conferencing Add-in for Outlook, follow the steps for the version of Outlook that you are running. 
+To manually enable the Conferencing Add-in for Outlook, follow the steps for the version of Outlook that you are running.
 
 ##### Outlook 2007
 
@@ -77,8 +64,8 @@ To do this, follow these steps:
 
 A COM add-in has to register itself with each Office application in which it runs. To register itself with a particular program, the add-in should create a subkey by using its ProgID as the name for the key, in the following registry locations:
 
-- HKEY_CURRENT_USER\Software\Microsoft\Office\<OfficeApp>\Addins\\\<ProgID>   
-- HKEY_LOCAL_MACHINE\Software\Microsoft\Office\<OfficeApp>\Addins\\\<ProgID>   
+- HKEY_CURRENT_USER\Software\Microsoft\Office\\\<OfficeApp>\Addins\\\<ProgID>   
+- HKEY_LOCAL_MACHINE\Software\Microsoft\Office\\\<OfficeApp>\Addins\\\<ProgID>   
 The add-in can provide values at these key locations for both a friendly display name and a full description. In addition, the add-in should specify its desired load behavior by using a DWORD value called LoadBehavior. This value determines how the add-in is loaded by the host program.
 
 The Conferencing Add-in for Outlook uses the LoadBehavior values of 2 for disabledand 3 for enabled.
