@@ -20,10 +20,10 @@ _Original product version:_&nbsp;Internet Explorer, Windows 10; Microsoft Edge, 
 Enterprise users of Internet Explorer, Microsoft Edge, or applications that use the modules of either browser report the following symptoms:
 
 - Long delays when signing in to the Windows desktop
-- The browser cannot save content to the browser cache
-- The browser cannot access content from the browser cache
+- The browser can't save content to the browser cache
+- The browser can't access content from the browser cache
 
-An affected user records a Process Monitor log while experiencing the issue. When you analyze this log, you notice that the browsers or applications attempt to access files and folders that are located in the C:\Users\Administrator folder in addition to files and folders that are located in the user's profile folder.
+An affected user records a Process Monitor log while experiencing the issue. When you analyze this log, you notice that the browsers or applications attempt to access files and folders that are located in the C:\Users\Administrator folder as well as files and folders that are located in the user's profile folder.
 
 :::image type="content" source="./media/apps-access-admin-web-cache/ie-mse-procmon-log.png" alt-text="Procmon log that shows attempts to access the Administrator folders":::
 
@@ -31,7 +31,7 @@ An affected user records a Process Monitor log while experiencing the issue. Whe
 
 A Windows computer has an Administrator profile and a Default user profile. Each profile has an associated cache container. The first time that the user signs in to Windows, Windows uses the information from the Default user profile to configure the user's profile. The user's profile includes the cache container that was defined for the Default user profile.
 
-In the case of this issue, the Default User profile uses the cache container that was originally created for the Administrator profile, in the C:\Users\Administrator folder. In other words, the user's profile is configured to use the Administrator's cache container.
+In the case of this issue, the Default User profile uses the cache container that was originally created for the Administrator profile. In other words, the user's profile is configured to use the Administrator's cache container.
 
 This issue may occur if the Default user profile has been modified to create custom settings for new user profiles. For example, some imaging or deployment utilities copy some or all of the Administrator profile content to the Default user profile.
 
@@ -63,15 +63,15 @@ To prevent new user profiles from receiving a copy the cache container from the 
 
 :::image type="content" source="./media/apps-access-admin-web-cache/ie-mse-delete-folders-and-files.png" alt-text="File and folders to delete to repair the Default user profile":::
 
-### Step 2 - Repair each impacted user profile
+### Step 2 - Repair each affected user profile
 
-A number of the files and folders that are part of the user profile cannot be deleted while the user is signed in to Windows. Because of this, the user has to sign out of Windows before an administrator can sign in and fix the profile. To fix the profile, delete the following file and folders (if they exist):
+A number of the files and folders that are part of the user profile can't be deleted while the user is signed in to Windows. Because of this restriction, the user has to sign out of Windows, and then an administrator can sign in and fix the profile. To fix the profile, delete the following file and folders (if they exist):
 
-- C:\Users\\<*user name*>\AppData\Local\Microsoft\Windows\WebCacheLock.dat
-- C:\Users\\<*user name*>\AppData\Local\Microsoft\Windows\WebCache
-- C:\Users\\<*user name*>\AppData\Local\Microsoft\Windows\INetCache
-- C:\Users\\<*user name*>\AppData\Local\Microsoft\Windows\INetCookies
-..
+- C:\Users\\<*user name*>\AppData\Local\Microsoft\Windows\WebCacheLock.dat  
+- C:\Users\\<*user name*>\AppData\Local\Microsoft\Windows\WebCache  
+- C:\Users\\<*user name*>\AppData\Local\Microsoft\Windows\INetCache  
+- C:\Users\\<*user name*>\AppData\Local\Microsoft\Windows\INetCookies  
+  
   > [!NOTE]  
   > In these file paths, \<*user name*> is the name of the affected user's profile.
 
