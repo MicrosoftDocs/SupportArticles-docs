@@ -153,6 +153,8 @@
       href: ../online-phone-system/call-transfer-fails.md
     - name: Calls to international phone number fail 
       href: ../online-phone-system/calls-to-international-phone-number-fail.md
+    - name: Can't add a new derived SBC
+      href: ../online-phone-system/add-new-derived-sbc-direct-routing.md
     - name: Can't locate city name for PSTN caller
       href: ../online-phone-system/cant-locate-city-name.md
     - name: Can't manage voice mail or customize a greeting
