@@ -20,8 +20,8 @@ _Original product version:_&nbsp;Internet Explorer, Windows 10; Microsoft Edge, 
 Enterprise users of Internet Explorer, Microsoft Edge, or applications that use the modules of either browser report the following symptoms:
 
 - Long delays when signing in to the Windows desktop
-- The browser can't save content to the browser cache
-- The browser can't access content from the browser cache
+- The application can't save content to the browser cache
+- The application can't access content from the browser cache
 
 An affected user records a Process Monitor log while experiencing the issue. When you analyze this log, you notice that the browsers or applications attempt to access files and folders that are located in the C:\Users\Administrator folder as well as files and folders that are located in the user's profile folder.
 
