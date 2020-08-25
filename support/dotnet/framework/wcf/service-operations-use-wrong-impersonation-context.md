@@ -33,9 +33,9 @@ One way to diagnose this issue has occurred is to check the contents of `Service
 
 ## Cause
 
-Before a client proxy can invoke an operation, it must be opened. It can be opened explicitly from your own code or you can rely on WCF to auto-open for you.
+Before a client proxy can invoke an operation, it must be opened. It can be opened explicitly from your own code or you can rely on WCF to **auto-open** for you.
 
-The problem occurs because the auto-open required for asynchronous operations is itself done asynchronously. And when the same proxy is used for multiple asynchronous operations, all but the first must wait for the initial asynchronous operation to succeed. Depending on the threads that invoke these operations and timing, it is possible for the impersonation context present for the first auto-open to be lost.
+The problem occurs because the **auto-open** required for asynchronous operations is itself done asynchronously. And when the same proxy is used for multiple asynchronous operations, all but the first must wait for the initial asynchronous operation to succeed. Depending on the threads that invoke these operations and timing, it is possible for the impersonation context present for the first **auto-open** to be lost.
 
 ## Resolution
 

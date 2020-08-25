@@ -1,13 +1,13 @@
 ---
 title: WCF calls timed out in ASP.NET MVC controller
-description: This article provides resolutions for the WCF problem that calls timed out if you create the WCF service host inside ASP.NET MVC controller.
+description: This article provides resolutions for the WCF problem where calls timed out if you create the WCF service host inside ASP.NET MVC controller.
 ms.date: 08/24/2020
 ms.prod-support-area-path: 
 ms.reviewer: wzhao, amitap
 ---
 # The WCF calls timed out if you create the WCF service host inside ASP.NET MVC controller
 
-This article helps you resolve the Windows Communication Foundation (WCF) problem that calls timed out if you create the WCF service host inside ASP.NET Model View Controller (MVC) controller.
+This article helps you resolve the Windows Communication Foundation (WCF) problem where calls timed out if you create the WCF service host inside ASP.NET Model View Controller (MVC) controller.
 
 _Original product version:_ &nbsp; Windows Communication Foundation 4.0, Microsoft .NET Framework 4.0  
 _Original KB number:_ &nbsp; 2621732
@@ -67,8 +67,8 @@ There are several workarounds available:
 
 ## More information
 
-- ASP.NET MVC, see [ASP.NET MVC Pattern](https://dotnet.microsoft.com/apps/aspnet/mvc).
+- [ASP.NET MVC Pattern](https://dotnet.microsoft.com/apps/aspnet/mvc).
 
-- `ServiceBehaviorAttribute.UseSynchronizationContext` Property, see [ServiceBehaviorAttribute.UseSynchronizationContext Property](/dotnet/api/system.servicemodel.servicebehaviorattribute.usesynchronizationcontext).
+- [ServiceBehaviorAttribute.UseSynchronizationContext Property](/dotnet/api/system.servicemodel.servicebehaviorattribute.usesynchronizationcontext).
 
-- Default Service Behavior, see [Default Service Behavior](/dotnet/framework/wcf/samples/default-service-behavior).
+- [Default Service Behavior](/dotnet/framework/wcf/samples/default-service-behavior).

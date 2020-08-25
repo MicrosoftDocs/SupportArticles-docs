@@ -1,12 +1,12 @@
 ---
 title: WCF service using a non-default ETW provider ID
-description: This article discusses a problem that WCF service using a non-default ETW provider ID when you view ETW traces.
+description: This article discusses a problem where WCF service using a non-default ETW provider ID when you view ETW traces.
 ms.date: 08/24/2020
 ms.prod-support-area-path: 
 ---
 # Viewing ETW traces for WCF service using a non-default ETW provider ID
 
-This article describes a problem that Windows Communication Foundation (WCF) service using a non-default Event Tracing for Windows (ETW) provider ID when you view ETW traces.
+This article describes a problem where Windows Communication Foundation (WCF) service using a non-default Event Tracing for Windows (ETW) provider ID when you view ETW traces.
 
 _Original product version:_ &nbsp; Windows Communication Foundation  
 _Original KB number:_ &nbsp; 2120508
