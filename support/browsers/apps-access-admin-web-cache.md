@@ -25,7 +25,7 @@ Enterprise users of Internet Explorer, Microsoft Edge, or applications that use 
 
 An affected user records a Process Monitor log while experiencing the issue. When you analyze this log, you notice that the browsers or applications attempt to access files and folders that are located in the C:\Users\Administrator folder as well as files and folders that are located in the user's profile folder.
 
-:::image type="content" source="./media/apps-access-admin-web-cache/ie-mse-procmon-log.png" alt-text="Procmon log that shows attempts to access the Administrator folders":::
+:::image type="content" source="./media/apps-access-admin-web-cache/ie-mse-procmon-log.png" alt-text="Process Monitor log that shows attempts to access the Administrator folders":::
 
 ## Cause
 
