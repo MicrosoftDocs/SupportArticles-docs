@@ -1,6 +1,6 @@
 - name: Welcome
   href: welcome-configuration-manager.md
-- name: Alerts, reporting and queries
+- name: Alerts, reporting, and queries
   items:
     - name: A log with a long line is truncated in CMTrace
       href: long-line-causes-log-truncated.md
@@ -262,7 +262,7 @@
           href: debug-deployment-not-displayed.md
     - name: Versions required for Windows deployment
       href: required-versions-windows-deployment.md
-- name: Setup, migration, backup and recovery
+- name: Setup, migration, backup, and recovery
   items:
     - name: Backup
       items:

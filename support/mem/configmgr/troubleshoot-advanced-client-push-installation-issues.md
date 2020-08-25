@@ -53,7 +53,7 @@ In this article, the SMS Advanced Client Push Installation process is divided in
 
 5. The Client Configuration Manager verifies that the Ccmsetup service started successfully before disconnecting. The CCR file is added to the SMS\Inboxes\Ccrretry.box folder for verification that the installation succeeded. On a second verification pass, SMS determines that the SMS Agent Host is running, and then deletes the CCR file.
 
-6. If the Client Configuration Manager encounters any errors during this process, the CCR file is renamed to the name of the target client computer and is put in the SMS\Inboxes\Ccrretry.box folder. The Client Configuration Manager checks for files in this inbox folder every 60 minutes and tries to reprocess them 168 times (7 days) before they are discarded. This information is logged in the Ccm.log.
+6. If the Client Configuration Manager encounters any errors during this process, the CCR file is renamed to the name of the target client computer and is put in the SMS\Inboxes\Ccrretry.box folder. The Client Configuration Manager checks for files in this inbox folder every 60 minutes and tries to reprocess them 168 times (seven days) before they are discarded. This information is logged in the Ccm.log.
 
 ## Troubleshooting pre-installation issues
 
@@ -151,7 +151,7 @@ In this configuration, the SMS Advanced Client network access account resembles 
 
 1. Ccmsetup.exe starts, and then scans the MobileClient.tcf file. This file is a configuration file from which Ccmsetup.exe obtains information that is required to locate the Client.msi file on the site server. The MobileClient.tcf file also provides the SMS site code, the management point server name, the site boundary, and other information.
 
-2. Ccmsetup.exe downloads the client.msi file from the SMSClient\i386 shared folder on the SMS management point or from the Client\i386 folder in the SMS_ **sitecode** shared folder on the SMS site server. The Advanced Client Installer runs the Client.msi Setup program by using the parameters that the administrator specifies in the SMS Administrator console.
+2. Ccmsetup.exe downloads the client.msi file from the SMSClient\i386 shared folder on the SMS management point or from the Client\i386 folder in the SMS_<*site code*> shared folder on the SMS site server. The Advanced Client Installer runs the Client.msi Setup program by using the parameters that the administrator specifies in the SMS Administrator console.
 
 ## Troubleshooting installation issues
 
