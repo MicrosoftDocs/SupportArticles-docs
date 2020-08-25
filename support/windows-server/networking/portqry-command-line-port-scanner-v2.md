@@ -1000,7 +1000,6 @@ The PortQry local mode of operation is designed to give you detailed information
     C:\WINDOWS\system32\WINSTA.dll (0x76260000)  
     C:\WINDOWS\system32\NETAPI32.dll (0x71C40000)  
     C:\WINDOWS\system32\USERENV.dll (0x75970000)  
-    ======================================================
     >
     > ========= end of log file =========
 
