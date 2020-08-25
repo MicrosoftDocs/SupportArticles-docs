@@ -36,8 +36,6 @@
       href: client-installation-fails-without-bits.md
     - name: Client piloting package fails after a site expansion
       href: client-piloting-package-fails-after-site-expansion.md
-    - name: Clients are assigned to the wrong site code
-      href: some-clients-assigned-wrong-site-code.md
     - name: Clients reinstall every five hours
       href: configmgr-clients-reinstall-every-five-hours.md
     - name: Error 80041002 when installing client agent
@@ -52,20 +50,14 @@
       href: software-update-installations-stop-responding.md
     - name: Support for Mac, Linux and UNIX clients
       href: support-for-mac-linux-and-unix-clients.md
-    - name: The Advanced Client doesn't work
-      href: advanced-client-not-work.md
     - name: There was a problem starting PolicyAgentProvider.dll
       href: client-installation-fails-with-policyagentprovider-dll.md
-    - name: Troubleshoot Advanced Client Push Installation issues
-      href: troubleshoot-advanced-client-push-installation-issues.md
 - name: Client management
   items:
-    - name: Clients become inactive
-      href: inactive-clients-not-send-inventory.md
-    - name: Clients fail to load policies with error 80040217
-      href: client-load-policy-error-80040217.md
     - name: Client remains in provisioning mode after upgrade
       href: configmgr-client-left-in-provisioning-mode.md
+    - name: Clients become inactive
+      href: inactive-clients-not-send-inventory.md
     - name: Cloud management gateway
       items:
         - name: WINHTTP_CALLBACK_STATUS_FLAG_CERT_CN_INVALID
@@ -76,8 +68,6 @@
       items:
         - name: Multiple instances of the Unknown computers collection
           href: multiple-instances-of-unknown-computers-collection.md
-        - name: Unexpected reboot after removing computers from a collection
-          href: unexpected-reboot-after-removing-computers-from-collection.md
     - name: Inventory and asset intelligence
       items:
         - name: Can't import the Sms_def.mof file
@@ -242,8 +232,6 @@
           href: get-network-captures-from-task-sequence.md
         - name: No mouse cursor during an OSD task sequence
           href: no-mouse-cursor-during-osd-task-sequence.md
-        - name: OSD and task sequences fail
-          href: osd-task-sequences-fail.md
         - name: OSDResults doesn't display installed applications
           href: osdresults-not-display-installed-applications.md
         - name: Slow task sequences with earlier client versions
@@ -264,24 +252,14 @@
       href: required-versions-windows-deployment.md
 - name: Setup, migration, backup, and recovery
   items:
-    - name: Backup
-      items:
-        - name: Backups fail with Win32 Error = 145
-          href: backups-fail-with-vss-provider-issue.md
     - name: BitLocker and MBAM
       items:
         - name: MBAM 2.0 setup prerequisite checker fails
           href: mbam-setup-fails-with-prerequisite-check.md
-    - name: Site Component Manager
-      items:
-        - name: Site Component Manager log status messages
-          href: site-component-manager-log-status-messages.md
     - name: Site installation
       items:
         - name: A central administration site setup fails
           href: central-administration-site-setup-fails.md
-        - name: ConfigMgr 2007 setup fails with incorrect WebDAV settings
-          href: setup-fails-with-incorrect-webdav-settings.md
     - name: Site system roles installation and operations
       items:
         - name: Enable MFA for SMS Provider calls
