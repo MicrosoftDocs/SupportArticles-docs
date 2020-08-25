@@ -1106,7 +1106,6 @@ The PortQry local mode of operation is designed to give you detailed information
         D:\WINDOWS\system32\OLEAUT32.dll (0x77120000)  
         D:\WINDOWS\system32\COMRes.dll (0x77050000)  
         D:\WINDOWS\system32\VERSION.dll (0x77C00000)  
-        ============  
         System Date: Sat Oct 04 08:56:08 2003
         >
         > ======================================================
@@ -1127,9 +1126,8 @@ The PortQry local mode of operation is designed to give you detailed information
         > TCP mappings: 1  
         UDP mappings: 2
         >
-        > TCP ports in a LISTENING state: 1 = 100.00%
-        >
-        > Loaded modules:  
+        > TCP ports in a LISTENING state: 1 = 100.00%  
+        Loaded modules:  
         D:\WINDOWS\system32\svchost.exe (0x01000000)  
         D:\WINDOWS\System32\ntdll.dll (0x77F50000)  
         D:\WINDOWS\system32\kernel32.dll (0x77E60000)  
@@ -1155,7 +1153,6 @@ The PortQry local mode of operation is designed to give you detailed information
         D:\WINDOWS\system32\OLEAUT32.dll (0x77120000)  
         D:\WINDOWS\system32\COMRes.dll (0x77050000)  
         D:\WINDOWS\system32\VERSION.dll (0x77C00000)  
-        ============
         >
         > escape key pressed: stopped watching port 135  
         System Date: Sat Oct 04 09:09:12 2003
