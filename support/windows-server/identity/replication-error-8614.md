@@ -29,19 +29,17 @@ _Original KB number:_ &nbsp; 2020053
 
 1. DCDIAG reports that Active Directory Replications test failed with error status code 8614: Active Directory can't replicate with this server because the time since the last replication with this server has exceeded the tombstone lifetime.
 
-    ```console
-    Testing server: <site name>\<destination dc name>  
+    > Testing server: \<site name>\<destination dc name>  
         Starting test: Replications  
         * Replications Check  
-        [Replications Check,<destination DC name] A recent replication attempt failed:  
-        From <source DC> to <destination DC>  
-        Naming Context: <directory partition DN path>  
+        [Replications Check,\<destination DC name] A recent replication attempt failed:  
+        From \<source DC> to \<destination DC>  
+        Naming Context: \<directory partition DN path>  
          The replication generated an error (8614):
          Active Directory cannot replicate with this server because the time since the last replication with this server has exceeded the tombstone lifetime.  
-        The failure occurred at <date> <time>.  
-        The last success occurred at <date> <time>.  
+        The failure occurred at \<date> \<time>.  
+        The last success occurred at \<date> \<time>.  
         3 failures have occurred since the last success.  
-    ```
 
 2. REPADMIN.EXE reports that the last replication attempt failed with status 8614. REPADMIN commands that commonly cite the 8614 status include but aren't limited to:
 
@@ -52,23 +50,21 @@ _Original KB number:_ &nbsp; 2020053
 
     Sample output from `REPADMIN /SHOWREPS` depicting inbound replication from CONTOSO-DC2 to CONTOSO-DC1 failing with the **replication access was denied** error is shown below:
 
-    ```console
-     Default-First-Site-Name\CONTOSO-DC1  
+     > Default-First-Site-Name\CONTOSO-DC1  
      DSA Options: IS_GC  
      Site Options: (none)  
-     DSA object GUID: b6dc8589-7e00-4a5d-b688-045aef63ec01  
-     DSA invocationID: b6dc8589-7e00-4a5d-b688-045aef63ec01  
-
-    ==== INBOUND NEIGHBORS ======================================  
-
-    DC=contoso,DC=com  
+     DSA object GUID:  
+     DSA invocationID:  
+    >
+    > ==== INBOUND NEIGHBORS ======================================  
+    >
+    > DC=contoso,DC=com  
     Default-First-Site-Name\CONTOSO-DC2 via RPC  
-    DSA object GUID: 74fbe06c-932c-46b5-831b-af9e31f496b2  
-    Last attempt @ <date> <time> failed, result 8614(0x21a6):
+    DSA object GUID:  
+    Last attempt @ \<date> \<time> failed, result 8614(0x21a6):
     The Active Directory cannot replicate with this server because the time since the last replication with this server has exceeded the tombstone lifetime.  
     <#> consecutive failure(s).  
-    Last success @ <date> <time>.  
-    ```
+    Last success @ \<date> \<time>.  
 
 3. NTDS KCC, NTDS General, or Microsoft-Windows-ActiveDirectory_DomainService events with the 5 status are logged in the Directory Service event log.
 
@@ -81,28 +77,26 @@ _Original KB number:_ &nbsp; 2020053
 
 4. NTDS Replication Event 2042 may be logged in the Directory Service event log:
 
-    ```console
-    Event Type: Error
-    Event Source: NTDS Replication
-    Event Category: Replication
-    Event ID: 2042
-    User: NT AUTHORITY\ANONYMOUS LOGON
-    Computer: <name of DC that logged event>
-
-    Description:
+    > Event Type: Error  
+    Event Source: NTDS Replication  
+    Event Category: Replication  
+    Event ID: 2042  
+    User: NT AUTHORITY\ANONYMOUS LOGON  
+    Computer: \<name of DC that logged event>
+    >
+    > Description:  
     It has been too long since this machine last replicated with the named source
     machine. The time between replications with this source has exceeded the tombstone
     lifetime. Replication has been stopped with this source.
-
-    The reason that replication is not allowed to continue is that the two machine's views of deleted objects may now be different. The source machine may still have copies of objects that have been deleted (and garbage collected) on this machine. If they were allowed to replicate, the source machine might return objects which have already been deleted.
-
-    Time of last successful replication: YYYY-MM-DD HH:MM:SS
-    Invocation ID of source: <32 character GUID for source DC>
-    Name of source: <fully qualified cname record of source DC>
-    Tombstone lifetime (days): <current TSL value. Default = 60 or 180 days>
-
-    The replication operation has failed.
-    ```
+    >
+    > The reason that replication is not allowed to continue is that the two machine's views of deleted objects may now be different. The source machine may still have copies of objects that have been deleted (and garbage collected) on this machine. If they were allowed to replicate, the source machine might return objects which have already been deleted.
+    >
+    > Time of last successful replication: YYYY-MM-DD HH:MM:SS  
+    Invocation ID of source: \<32 character GUID for source DC>  
+    Name of source: \<fully qualified cname record of source DC>  
+    Tombstone lifetime (days): \<current TSL value. Default = 60 or 180 days>
+    >
+    > The replication operation has failed.
 
     User Action:
 

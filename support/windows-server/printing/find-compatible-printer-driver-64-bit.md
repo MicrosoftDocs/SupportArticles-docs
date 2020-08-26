@@ -15,12 +15,12 @@ ms.technology: PrintFaxScan
 ---
 # How to find a compatible printer driver for a computer that's running a 64-bit version of Windows
 
+This article describes how to find a compatible printer driver for your computer that's running a 64-bit version of Microsoft Windows.
+
 _Original product version:_ &nbsp;Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp;895612
 
-## Introduction
-
-This article describes how to find a compatible printer driver for your computer that's running a 64-bit version of Microsoft Windows. The information in this article may be useful if you can't obtain a WHQL signed printer driver from the printer manufacturer or from the Microsoft Windows Update Web site. This article also provides a method that you can use if you need a printer driver for a printer that's not supported on your computer that's running a 64-bit version of Windows.
+The information in this article may be useful if you can't obtain a WHQL signed printer driver from the printer manufacturer or from the Microsoft Windows Update Web site. This article also provides a method that you can use if you need a printer driver for a printer that's not supported on your computer that's running a 64-bit version of Windows.
 
 > [!NOTE]
 > To print from a computer that's running a 64-bit version of Windows, you must have a 64-bit printer driver. You can't use a 32-bit printer driver on a computer that's running a 64-bit version of Windows.
@@ -101,21 +101,21 @@ There may be differences in the way some printer manufacturers interpret differe
 > When you use the following method, the print job is printed locally and the print job is then redirected to the network path. If you use this procedure, you do not receive printer updates from the print server when you update the printer driver on the print server.
 
 1. Check to see if the correct printer drivers for your printer are located on the computer that's running a 64-bit version of Windows. You can also visit the Windows Update Web site or the printer manufacturer's Web site. If you can't find the correct driver, continue to the next step.
-1. Log on to the computer that's running a 64-bit version of Windows by using an account that has administrative permissions.
-1. On the physical printer, use the device menus to print a configuration page. The printed configuration page typically lists the supported printer emulations. For example, the configuration page might list PostScript, PCLXL, or PCL as supported printer emulations.
-1. On the computer that's running a 64-bit version of Windows, click **Start**, point to **Settings**, and then click **Printers and Faxes**.
-1. Double-click **Add Printer**.
-1. Click **Next**.
-1. Click **Local printer**, click to clear the **Automatically detect and install** check box, and then click **Next**.
-1. Click **Create a new port**, and then click **Local Port** next to **Type of Port**.
-1. In the **Port Name** dialog box, type the path of the printer by using the following syntax:
+2. Log on to the computer that's running a 64-bit version of Windows by using an account that has administrative permissions.
+3. On the physical printer, use the device menus to print a configuration page. The printed configuration page typically lists the supported printer emulations. For example, the configuration page might list PostScript, PCLXL, or PCL as supported printer emulations.
+4. On the computer that's running a 64-bit version of Windows, click **Start**, point to **Settings**, and then click **Printers and Faxes**.
+5. Double-click **Add Printer**.
+6. Click **Next**.
+7. Click **Local printer**, click to clear the **Automatically detect and install** check box, and then click **Next**.
+8. Click **Create a new port**, and then click **Local Port** next to **Type of Port**.
+9. In the **Port Name** dialog box, type the path of the printer by using the following syntax:
 
     \\\ **print server name**\\**printer name**
-1. Click **Next**.
-1. In the **Install Printer Software** page, click the correct manufacturer under the **Manufacturer** column, click the name of a printer that supports the same printer emulation as your printer, click **Next**, and then click **Finish**. For example, if you have an HP LaserJet printer that supports Post Script (PS) emulation, try to locate another HP LaserJet printer model that has a similar model number and that supports PS emulation.
-1. In Printers and Faxes, right-click the printer that you added, and then click **Properties**.
-1. Click the **General** tab, and then click **Print Test Page**.
-1. If the test page prints correctly, you have found a matching printer driver. If the test page is unreadable, you must find another printer driver or try another emulation type.
+10. Click **Next**.
+11. In the **Install Printer Software** page, click the correct manufacturer under the **Manufacturer** column, click the name of a printer that supports the same printer emulation as your printer, click **Next**, and then click **Finish**. For example, if you have an HP LaserJet printer that supports Post Script (PS) emulation, try to locate another HP LaserJet printer model that has a similar model number and that supports PS emulation.
+12. In Printers and Faxes, right-click the printer that you added, and then click **Properties**.
+13. Click the **General** tab, and then click **Print Test Page**.
+14. If the test page prints correctly, you have found a matching printer driver. If the test page is unreadable, you must find another printer driver or try another emulation type.
 
 ### Tips for locating a compatible printer driver
 

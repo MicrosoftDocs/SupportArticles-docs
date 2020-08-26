@@ -26,23 +26,21 @@ When you use the Performance Monitor tool, some counters may be missing or don't
 
 You may see the following errors in the application log:
 
-```console
-Log Name: Application
-Source: Microsoft-Windows-IIS-W3SVC-PerfCounters
-Event ID: 2002
-Level: Error
-Keywords: Classic
-Description:
+> Log Name: Application  
+Source: Microsoft-Windows-IIS-W3SVC-PerfCounters  
+Event ID: 2002  
+Level: Error  
+Keywords: Classic  
+Description:  
 Setting up Web Service counters failed, please make sure your Web Service counters are registered correctly.
 
-Log Name: Application
-Source: IISInfoCtrs
-Event ID: 1001
-Level: Error
-Keywords: Classic
-Description:
+> Log Name: Application  
+Source: IISInfoCtrs  
+Event ID: 1001  
+Level: Error  
+Keywords: Classic  
+Description:  
 Unable to read the first counter index value from the registry. The error code returned by the registry is data DWORD 0.
-```
 
 ## Cause
 
@@ -98,23 +96,21 @@ For a number of counters, the location of the ini files to install perf counters
 
 If you see the following errors:
 
-```console
-Log Name: Application
-Source: Microsoft-Windows-IIS-W3SVC-PerfCounters
-Event ID: 2002
-Level: Error
-Keywords: Classic
-Description:
+> Log Name: Application  
+Source: Microsoft-Windows-IIS-W3SVC-PerfCounters  
+Event ID: 2002  
+Level: Error  
+Keywords: Classic  
+Description:  
 Setting up Web Service counters failed, please make sure your Web Service counters are registered correctly.
 
-Log Name: Application
-Source: IISInfoCtrs
-Event ID: 1001
-Level: Error
-Keywords: Classic
-Description:
+> Log Name: Application  
+Source: IISInfoCtrs  
+Event ID: 1001  
+Level: Error  
+Keywords: Classic  
+Description:  
 Unable to read the first counter index value from the registry. The error code returned by the registry is data DWORD 0.
-```
 
 You will need to use the counter install ini files in the directory `c:\Windows\winsxs`.
 
@@ -130,14 +126,12 @@ In this example, try installing the infoctrs.ini from each folder using:
 
 When it is successful, you will see the following entry in the application log:
 
-```console
-Log Name: Application
-Source: Microsoft-Windows-LoadPerf
-Event ID: 1000
-Level: Information
-Description:
+> Log Name: Application  
+Source: Microsoft-Windows-LoadPerf  
+Event ID: 1000  
+Level: Information  
+Description:  
 Performance counters for the inetinfo (inetinfo) service were loaded successfully. The Record Data in the data section contains the new index values assigned to this service.
-```
 
 You need do the same for the following counters:
 
@@ -147,14 +141,12 @@ amd64_microsoft-windows-iis-w3svc*
 
 After which you will see:
 
-```console
-Log Name: Application
-Source: Microsoft-Windows-LoadPerf
-Event ID: 1000
-Level: Information
-Description:
+> Log Name: Application  
+Source: Microsoft-Windows-LoadPerf  
+Event ID: 1000  
+Level: Information  
+Description:  
 Performance counters for the W3SVC (World Wide Web Publishing Service) service were loaded successfully. The Record Data in the data section contains the new index values assigned to this service.
-```
 
 Following these steps, rerun `WINMGMT /RESYNCPERF`.
 

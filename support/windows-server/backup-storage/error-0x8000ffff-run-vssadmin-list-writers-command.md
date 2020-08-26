@@ -35,15 +35,10 @@ When you run the `vssadmin list writers` command on a Windows Server 2003-based 
 
 - The following event may be logged in the Application log:
 
-    ```console
-    Event Type: Error
-
-    Event Source: VSS
-
-    Event ID: 12302
-
+    > Event Type: Error  
+    Event Source: VSS  
+    Event ID: 12302  
     Description: Volume Shadow Copy Service error: An internal inconsistency was detected in trying to contact shadow copy service writers. Please check to see that the Event Service and Volume Shadow Copy Service are operating properly.
-    ```
 
 - The list is blank.
 
@@ -98,6 +93,6 @@ To resolve this problem, follow these steps:
 10. At the command prompt, type *vssadmin list writers*, and then press Enter.
 11. Confirm that the VSS writers are now listed.
 
-#### Did this fix the problem?
+### Did this fix the problem
 
 Check whether the problem is fixed. If the problem is fixed, you're finished with this section. If the problem isn't fixed, you can [contact support](https://support.microsoft.com/contactus/).

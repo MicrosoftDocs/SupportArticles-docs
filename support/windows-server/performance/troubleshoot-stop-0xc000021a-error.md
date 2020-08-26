@@ -28,11 +28,9 @@ This article is intended for advanced computer users. If you're not comfortable 
 
 When you use a server or a workstation that's running one of the operating systems that's listed in the "Applies to" section, you may receive the following error message:
 
-```console
-STOP: c000021a {Fatal System Error}
-The Windows Logon Process system process terminated unexpectedly with a status of 0xc0000034 (0x00000000 0x0000000)
+> STOP: c000021a {Fatal System Error}  
+The Windows Logon Process system process terminated unexpectedly with a status of 0xc0000034 (0x00000000 0x0000000)  
  The system has been shut down.
-```
 
 > [!NOTE]
 > The parameters in parentheses are specific to your computer configuration and may be different for each occurrence.

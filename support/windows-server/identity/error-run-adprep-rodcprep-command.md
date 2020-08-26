@@ -26,23 +26,17 @@ _Original KB number:_ &nbsp;949257
 
 When you run the `Adprep /rodcprep` command on Windows Server 2008, you receive the following error message:
 
-```console
-dprep could not contact a replica for partition DC=DomainDnsZones,DC=Contoso,DC=com
-
-Adprep failed the operation on partition DC=DomainDnsZones,DC=Contoso,DC=com Skipping to next partition.
-
-
-
-Adprep could not contact a replica for partition DC=ForestDnsZones,DC=Contoso,DC=com
-
-Adprep encountered an LDAP error. Error code: 0x0. Server extended error code: 0x0, Server error message: (null).
-
-
-
-Adprep failed the operation on partition DC=ForestDnsZones,DC=Contoso,DC=com Skipping to next partition.
-
-Adprep completed with errors. Not all partitions are updated.
-```
+> dprep could not contact a replica for partition DC=DomainDnsZones,DC=Contoso,DC=com
+>
+> Adprep failed the operation on partition DC=DomainDnsZones,DC=Contoso,DC=com Skipping to next partition.
+>
+> Adprep could not contact a replica for partition DC=ForestDnsZones,DC=Contoso,DC=com
+>
+> Adprep encountered an LDAP error. Error code: 0x0. Server extended error code: 0x0, Server error message: (null).
+>
+> Adprep failed the operation on partition DC=ForestDnsZones,DC=Contoso,DC=com Skipping to next partition.
+>
+> Adprep completed with errors. Not all partitions are updated.
 
 ## Cause
 
@@ -63,11 +57,11 @@ If the specified partition exists, specify an infrastructure role owner that is 
 
 The following script sample modifies the **fSMORoleOwner** attribute on the infrastructure object of the specified Non-Domain Naming Context (NDNC) to an active, or contactable, server. The NDNC in this sample is the **DomainDnsZones,DC=contoso,DC=com NDNC** naming context. The script uses the following command:
 
-```console
+```vb
 cscript fixfsmo.vbs DC=DomainDnsZones,DC=contoso,DC=com
 ```
 
-```console
+```vb
 '-------fixfsmo.vbs------------------
 const ADS_NAME_INITTYPE_GC = 3
 const ADS_NAME_TYPE_1779 = 1

@@ -26,20 +26,18 @@ _Original KB number:_ &nbsp;2832204
 
 When you install Active Directory Federation Services (ADFS) by using the Add Roles and Features Wizard in Windows Server 2012, the Windows Internal Database (WID) installation fails, and you receive the following error message:
 
-```console
-The MSSQL$MICROSOFT##WID service was unable to log on as NT SERVICE\MSSQL$MICROSOFT##WID with the currently configured password due to the following error:
-Logon failure: the user has not been granted the requested logon type at this computer.
+> The MSSQL$MICROSOFT##WID service was unable to log on as NT SERVICE\MSSQL$MICROSOFT##WID with the currently configured password due to the following error:  
+Logon failure: the user has not been granted the requested logon type at this computer.  
 Service: MSSQL$MICROSOFT##WID
-
-Domain and account: NT SERVICE\MSSQL$MICROSOFT##WID
-
-This service account does not have the required user right "Log on as a service."
-
-User Action
-
-Assign "Log on as a service" to the service account on this computer. You can use Local Security Settings (Secpol.msc) to do this. If this computer is a node in a cluster, check that this user right is assigned to the Cluster service account on all nodes in the cluster.
+>
+> Domain and account: NT SERVICE\MSSQL$MICROSOFT##WID
+>
+> This service account does not have the required user right "Log on as a service."
+>
+> User Action
+>
+> Assign "Log on as a service" to the service account on this computer. You can use Local Security Settings (Secpol.msc) to do this. If this computer is a node in a cluster, check that this user right is assigned to the Cluster service account on all nodes in the cluster.
 If you have already assigned this user right to the service account, and the user right appears to be removed, check with your domain administrator to find out if a Group Policy object associated with this node might be removing the right.
-```
 
 ## Cause
 

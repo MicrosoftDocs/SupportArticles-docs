@@ -32,44 +32,40 @@ This article describes symptoms, cause, and resolution steps for AD operations t
 
 1. DCDIAG reports that the Connectivity test, Active Directory Replications test, or KnowsOfRoleHolders test has failed with error 1753: "There are no more endpoints available from the endpoint mapper."
 
-    ```console
-    Testing server: <site>\<DC Name>
-          Starting test: Connectivity
-             * Active Directory LDAP Services Check
-             * Active Directory RPC Services Check
-             [<DC Name>] DsBindWithSpnEx() failed with error 1753,
-             There are no more endpoints available from the endpoint mapper..
-             Printing RPC Extended Error Info:
-             Error Record 1, ProcessID is <process ID> (DcDiag)
-                System Time is: <date> <time>
-                Generating component is 2 (RPC runtime)
-                Status is 1753: There are no more endpoints available from the endpoint mapper.             Detection location is 500
-                NumberOfParameters is 4
-                Unicode string: ncacn_ip_tcp
-                Unicode string: <source DC object GUID>._msdcs.contoso.com
-                Long val: -481213899
-                Long val: 65537
-             Error Record 2, ProcessID is 700 (DcDiag)
-                System Time is: <date> <time>
-                Generating component is 2 (RPC runtime)
-                Status is 1753: There are no more endpoints available from the endpoint mapper.
-                NumberOfParameters is 1
+    > Testing server: \<site>\<DC Name>  
+          Starting test: Connectivity  
+             * Active Directory LDAP Services Check  
+             * Active Directory RPC Services Check  
+             [<DC Name>] DsBindWithSpnEx() failed with error 1753,  
+             There are no more endpoints available from the endpoint mapper..  
+             Printing RPC Extended Error Info:  
+             Error Record 1, ProcessID is <process ID> (DcDiag)  
+                System Time is: \<date> \<time>  
+                Generating component is 2 (RPC runtime) 
+                Status is 1753: There are no more endpoints available from the endpoint mapper. Detection location is 500
+                NumberOfParameters is 4  
+                Unicode string: ncacn_ip_tcp  
+                Unicode string: \<source DC object GUID>._msdcs.contoso.com  
+                Long val: -481213899  
+                Long val: 65537  
+             Error Record 2, ProcessID is 700 (DcDiag)  
+                System Time is: \<date> \<time>  
+                Generating component is 2 (RPC runtime)  
+                Status is 1753: There are no more endpoints available from the endpoint mapper.  
+                NumberOfParameters is 1  
                 Unicode string: 1025
-    ```
 
-    ```console
-    [Replications Check,<DC Name>] A recent replication attempt failed:
-                From <source DC> to <destination DC>
-                Naming Context: <DN path of directory partition>
-                The replication generated an error (1753):
-                There are no more endpoints available from the endpoint mapper.
-                The failure occurred at <date> <time>.
-                The last success occurred at <date> <time>.
-                3 failures have occurred since the last success.
-                The directory on <DC name> is in the process.
-                of starting up or shutting down, and is not available.
+    > [Replications Check,\<DC Name>] A recent replication attempt failed:  
+                From \<source DC> to \<destination DC>  
+                Naming Context: \<DN path of directory partition>  
+                The replication generated an error (1753):  
+                There are no more endpoints available from the endpoint mapper.  
+                The failure occurred at \<date> \<time>.  
+                The last success occurred at \<date> \<time>.  
+                3 failures have occurred since the last success.  
+                The directory on \<DC name> is in the process.  
+                of starting up or shutting down, and is not available.  
                 Verify machine is not hung during boot.
-    ```
 
 2. REPADMIN.EXE reports that replication attempt has failed with status 1753.
 
@@ -82,56 +78,43 @@ This article describes symptoms, cause, and resolution steps for AD operations t
 
     Sample output from "REPADMIN /SHOWREPS" depicting inbound replication from CONTOSO-DC2 to CONTOSO-DC1 failing with the "replication access was denied" error is shown below:
 
-    ```console
-    Default-First-Site-Name\CONTOSO-DC1
-    DSA Options: IS_GC
-    Site Options: (none)
-    DSA object GUID: b6dc8589-7e00-4a5d-b688-045aef63ec01
-    DSA invocationID: b6dc8589-7e00-4a5d-b688-045aef63ec01
-
-
-    ==== INBOUND NEIGHBORS ======================================
-
-
-    DC=contoso,DC=com
-        Default-First-Site-Name\CONTOSO-DC2 via RPC
-            DSA object GUID: 74fbe06c-932c-46b5-831b-af9e31f496b2
-            Last attempt @ <date> <time> failed, result 1753 (0x6d9):
-                There are no more endpoints available from the endpoint mapper.
-            <#> consecutive failure(s).
+    > Default-First-Site-Name\CONTOSO-DC1  
+    DSA Options: IS_GC  
+    Site Options: (none)  
+    DSA object GUID:  
+    DSA invocationID:  
+    >
+    > DC=contoso,DC=com  
+        Default-First-Site-Name\CONTOSO-DC2 via RPC  
+            DSA object GUID:  
+            Last attempt @ <date> <time> failed, result 1753 (0x6d9):  
+                There are no more endpoints available from the endpoint mapper.  
+            <#> consecutive failure(s).  
             Last success @ <date> <time>.
-    ```
 
 3. The "Check Replication Topology" command in Active Directory Sites and Services returns "there are no more endpoints available from the endpoint mapper."
 
     Right-clicking on the connection object from a source DC and choosing "Check Replication Topology" fails with "There are no more endpoints available from the endpoint mapper. The on-screen error message is shown below:
 
-    ```console
-    Dialog Title Text: Check Replication Topology
-    ---------------------------
-    Dialog Message text:
-
-    The following error occurred during the attempt to contact the domain controller: There are no more endpoints available from the endpoint mapper.
-
-    ---------------------------
-    OK
-    ```
+    > Dialog Title Text: Check Replication Topology  
+    Dialog Message text:  
+    >
+    > The following error occurred during the attempt to contact the domain controller: There are no more endpoints available from the endpoint mapper.
+    >
+    > OK
 
 4. The "replicate now" command in Active Directory Sites and Services returns "there are no more endpoints available from the endpoint mapper."
 
     Right-clicking on the connection object from a source DC and choosing "replicate now" fails with "There are no more endpoints available from the endpoint mapper. The on-screen error message is shown below:  
 
-    ```console
-
-    Dialog title text: Replicate Now
-
-    Dialog message text: The following error occurred during the attempt to synchronize naming context <%directory partition name%> from Domain Controller <Source DC> to Domain Controller <Destination DC>:
+    > Dialog title text: Replicate Now
+    >
+    > Dialog message text: The following error occurred during the attempt to synchronize naming context \<directory partition name> from Domain Controller \<Source DC> to Domain Controller \<Destination DC>:
     There are no more endpoints available from the endpoint mapper
-
-    The operation will not continue
-
-    Buttons in Dialog: OK
-    ```
+    >
+    > The operation will not continue
+    >
+    > Buttons in Dialog: OK
 
 5. NTDS KCC, NTDS General, or Microsoft-Windows-ActiveDirectory_DomainService events with the 1753 status are logged in the directory service event log.
 
@@ -208,13 +191,13 @@ c:\>nslookup -type=cname \<fully qualified cname of source DC> <destination DCs 
 
 Verify that the IP address returned by NSLOOKUP "owns" the host name / security identity of the source DC.
 
- a) C:\\>NBTSTAT -A \\<IP address *returned* by NSLOOKUP in the step above>
+a) C:\\>NBTSTAT -A \\<IP address *returned* by NSLOOKUP in the step above>
 
 OR
 
- b) Sign in to the console of the source DC, run "IPCONFIG" from the CMD prompt and verify that the source DC owns the IP address returned by the NSLOOKUP command above
+b) Sign in to the console of the source DC, run "IPCONFIG" from the CMD prompt and verify that the source DC owns the IP address returned by the NSLOOKUP command above.
 
-Check for stale / duplicate host to IP mappings in DNS
+Check for stale / duplicate host to IP mappings in DNS.
 
 ```console
 NSLOOKUP -type=hostname \<single label hostname of source DC> \<primary DNS Server IP on destination DC>
@@ -257,18 +240,16 @@ c:\>portquery -n \<source DC> -e 135 >file.txt
 
 In the  portqry output, note the port numbers dynamically registered by the "MS NT Directory DRS Interface" (UUID = 351...) for the **ncacn_ip_tcp protocol**. The snippet below shows sample portquery output from a Windows Server 2008 R2 DC and the UUID / protocol pair used by Active Directory highlighted in **bold:**  
 
-```console
-UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface
-ncacn_np:CONTOSO-DC01[\\pipe\\lsass]
-UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface
-ncacn_np:CONTOSO-DC01[\\PIPE\\protected_storage]
- **UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface
-ncacn_ip_tcp:CONTOSO-DC01[49156]**  
-UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface
-ncacn_http:CONTOSO-DC01[49157]
-UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface
+> UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface
+ncacn_np:CONTOSO-DC01[\\pipe\\lsass]  
+UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface  
+ncacn_np:CONTOSO-DC01[\\PIPE\\protected_storage]  
+UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface  
+ncacn_ip_tcp:CONTOSO-DC01[49156]  
+UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface  
+ncacn_http:CONTOSO-DC01[49157]  
+UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface  
 ncacn_http:CONTOSO-DC01[6004]
-```
 
 ### Other causes
 
@@ -319,20 +300,18 @@ ncacn_http:CONTOSO-DC01[6004]
 
 The `contoso.com` domain consists of \\\DC1 and \\\DC2 with IP addresses x.x.1.1 and x.x.1.2. The host "A" / "AAAA" records for \\\DC2 are correctly registered on all of the DNS Servers configured for \\\DC1. In addition, the HOSTS file on \\\DC1 contains an entry-mapping DC2s fully qualified hostname to IP address x.x.1.2. Later, DC2's IP address changes from X.X.1.2 to X.X.1.3 and a new member computer is joined to the domain with IP address x.x.1.2. AD Replication attempts triggered by the "replicate now" command in Active Directory Sites and Services snap-in fails with error 1753 as shown in the trace below:
 
-```console
-F# SRC       DEST      Operation
- 1  x.x.1.1   x.x.1.2   ARP:Request, x.x.1.1 asks for x.x.1.2
- 2  x.x.1.2   x.x.1.1   ARP:Response, x.x.1.2 at 00-13-72-28-C8-5E
- 3  x.x.1.1   x.x.1.2   TCP:Flags=......S., SrcPort=50206, DstPort=DCE endpoint resolution(135)
- 4  x.x.1.2   x.x.1.1   ARP:Request, x.x.1.2 asks for x.x.1.1
- 5  x.x.1.1   x.x.1.2   ARP:Response, x.x.1.1 at 00-15-5D-42-2E-00
- 6  x.x.1.2   x.x.1.1   TCP:Flags=...A..S., SrcPort=DCE endpoint resolution(135)
- 7  x.x.1.1   x.x.1.2   TCP:Flags=...A...., SrcPort=50206, DstPort=DCE endpoint resolution(135)
- 8  x.x.1.1   x.x.1.2   MSRPC:c/o Bind:  UUID{E1AF8308-5D1F-11C9-91A4-08002B14A0FA} EPT(EPMP)
- 9  x.x.1.2   x.x.1.1   MSRPC:c/o Bind Ack:  Call=0x2  Assoc Grp=0x5E68  Xmit=0x16D0  Recv=0x16D0
-10  x.x.1.1   x.x.1.2   EPM:Request: ept_map: NDR, DRSR(DRSR) {E3514235-4B06-11D1-AB04-00C04FC2DCD2}  [DCE endpoint resolution(135)]
+> F# SRC       DEST      Operation  
+ 1  x.x.1.1   x.x.1.2   ARP:Request, x.x.1.1 asks for x.x.1.2  
+ 2  x.x.1.2   x.x.1.1   ARP:Response, x.x.1.2 at 00-13-72-28-C8-5E  
+ 3  x.x.1.1   x.x.1.2   TCP:Flags=......S., SrcPort=50206, DstPort=DCE endpoint resolution(135)  
+ 4  x.x.1.2   x.x.1.1   ARP:Request, x.x.1.2 asks for x.x.1.1  
+ 5  x.x.1.1   x.x.1.2   ARP:Response, x.x.1.1 at 00-15-5D-42-2E-00  
+ 6  x.x.1.2   x.x.1.1   TCP:Flags=...A..S., SrcPort=DCE endpoint resolution(135)  
+ 7  x.x.1.1   x.x.1.2   TCP:Flags=...A...., SrcPort=50206, DstPort=DCE endpoint resolution(135)  
+ 8  x.x.1.1   x.x.1.2   MSRPC:c/o Bind:  UUID{E1AF8308-5D1F-11C9-91A4-08002B14A0FA} EPT(EPMP)  
+ 9  x.x.1.2   x.x.1.1   MSRPC:c/o Bind Ack:  Call=0x2  Assoc Grp=0x5E68  Xmit=0x16D0  Recv=0x16D0  
+10  x.x.1.1   x.x.1.2   EPM:Request: ept_map: NDR, DRSR(DRSR) {E3514235-4B06-11D1-AB04-00C04FC2DCD2}  [DCE endpoint resolution(135)]  
 11  x.x.1.2   x.x.1.1   EPM:Response: ept_map: 0x16C9A0D6 - EP_S_NOT_REGISTERED
-```
 
 At frame **10**, the destination DC queries the source DCs' end-point mapper over port 135 for the Active Directory replication service class UUID E351...
 
