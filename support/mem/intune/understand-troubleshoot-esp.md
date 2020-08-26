@@ -19,7 +19,7 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
 
 - **EnrollmentStatusTracking CSP**: ./Vendor/MSFT/EnrollmentStatusTracking
   
-  The EnrollmentStatusTracking CSP is supported in Windows 10 version 1903 and later versions. It's used to track the  installation of the SideCar agent (Intune Management Extension) and Win32 apps.
+  The `EnrollmentStatusTracking` CSP is supported in Windows 10 version 1903 and later versions. It's used to track the  installation of the SideCar agent (Intune Management Extension) and Win32 apps.
 - **FirstSyncStatus CSP**: ./Vendor/MSFT/DMClient/Provider/*ProviderID*/FirstSyncStatus
 
   The `FirstSyncStatus` CSP is supported in Windows 10 versions 1709 and later versions. It's responsible for delivering the ESP payload configured from Intune. The payload includes ESP settings such as the timeout period, applications required to be installed and so on. It also delivers the expected MSI (LOB) applications, Microsoft Store for Business apps, Wi-Fi profiles and SCEP certificate profile.
