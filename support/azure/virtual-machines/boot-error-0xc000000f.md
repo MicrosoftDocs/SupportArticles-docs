@@ -53,7 +53,7 @@ To fix the issue, try the one of following resolutions:
 #### Step 1: Attach the OS disk of the VM to another VM (troubleshooting VM) as a data disk
 
 1. Delete the virtual machine (VM). Make sure that you select the **Keep the disks** option when you do this.
-2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-attach-disk-portal).
+2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](https://docs.microsoft.com/azure/virtual-machines/windows/attach-managed-disk-portal).
 3. Connect to the troubleshooting VM. Open **Computer management** > **Disk management**. Make sure that the OS disk is online and that its partitions have drive letters assigned.
 4. Identify the Boot partition and the Windows partition. If there's only one partition on the OS disk, this partition is the Boot partitionandthe Windows partition.
 
@@ -123,4 +123,4 @@ To fix the issue, try the one of following resolutions:
     - The screenshot shows volume E. However, the actual letter will appropriately reflect the one of the faulty drives (the OS disk attached as a data disk on the troubleshooting VM). 
     - If the latest binary doesn't work, you can try the previous file version to obtain an earlier system update level on that component.
     - If the only binary that's returned in this step matches the file that you're trying to replace on the affected VM, and if both files have the same size and time stamp, you can replace the corrupted file by copying it from another working VM that has the same OS and, if possible, the same system update level.
-5. Detach the repaired disk from the troubleshooting VM. Then, [create a VM from the OS disk](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-create-vm-specialized).
+5. Detach the repaired disk from the troubleshooting VM. Then, [create a VM from the OS disk](https://docs.microsoft.com/azure/virtual-machines/windows/create-vm-specialized-portal).

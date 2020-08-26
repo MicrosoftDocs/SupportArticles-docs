@@ -22,7 +22,7 @@ Consider the following scenario:
   - CentOS 7.1 and 7.0
   - Oracle Linux 7.1 and 7.0 with Red Hat-compatible kernel
 
-- A [Memory preserving update](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-planned-maintenance#memory-preserving-updates)  operation occurs on an Azure host node.
+- A [Memory preserving update](https://docs.microsoft.com/azure/virtual-machines/maintenance-and-updates?toc=/azure/virtual-machines/windows/toc.json&bc=/azure/virtual-machines/windows/breadcrumb/toc.json#maintenance-that-doesnt-require-a-reboot) operation occurs on an Azure host node.
 
 In this scenario, the VM becomes unresponsive, and a VM panic that resembles the following is logged in the Linux serial log:
 
@@ -85,6 +85,6 @@ To avoid this problem in the future, update to kernel version 3.10.0-327.10.1 or
 
 ## More Information
 
-For more information about [Endorsed Linux distributions](https://azure.microsoft.com/documentation/articles/virtual-machines-linux-endorsed-distributions/) and open-source technologies in Azure, see [Support for Linux and open source technology in Azure](https://support.microsoft.com/help/2941892).
+For more information about [Endorsed Linux distributions](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros) and open-source technologies in Azure, see [Support for Linux and open source technology in Azure](https://support.microsoft.com/help/2941892).
 
 [!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]
