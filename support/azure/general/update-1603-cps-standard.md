@@ -75,7 +75,7 @@ It's important that you avoid installing Windows Server, Windows Azure Pack, Sys
 - MS16-014: Description of the security update for Windows Vista, Windows Server 2008, Windows 7, Windows Server 2008 R2, Windows Server 2012, Windows 8.1, and Windows Server 2012 R2: February 9, 2016 - [https://support.microsoft.com/kb/3126593](https://support.microsoft.com/help/3126593) 
 - MS16-021: Security update for NPS RADIUS server to address denial of service: February 9, 2016 - [https://support.microsoft.com/kb/3133043](https://support.microsoft.com/help/3133043) 
 - MS16-018: Description of the security update for Windows kernel-mode drivers: February 9, 2016 - [https://support.microsoft.com/kb/3134214](https://support.microsoft.com/help/3134214) 
-- MS16-020: Security update for Active Directory Federation Services to address denial of service: February 9, 2016 - [https://support.microsoft.com/kb/3134222](https://support.microsoft.com/help/3134222)  [](https://github.com/justinincarnato/cloudplatformsystempu/wiki/update-1603-for-cloud-platform-system-standard-%28kb3145162%29#updates-for-system-center-2012-r2-and-the-windows-azure-pack) 
+- MS16-020: Security update for Active Directory Federation Services to address denial of service: February 9, 2016 - [https://support.microsoft.com/kb/3134222](https://support.microsoft.com/help/3134222)
 
 ### Updates for System Center 2012 R2 and the Windows Azure Pack
 
