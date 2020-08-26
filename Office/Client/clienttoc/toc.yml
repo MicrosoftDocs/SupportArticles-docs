@@ -699,8 +699,6 @@
       href: ../installation/access-denied-error-when-starting-third-party-apps.md
     - name: Error 1935 when install Office 2010
       href: ../installation/error-1935-when-install-office-2010.md
-    - name: Error when uninstalling O365 Pro Plus
-      href: ../installation/something-went-wrong-30016-4-error.md
     - name: Error when you install an Office program
       href: ../installation/error-run-office-setup-program.md
     - name: How to download and run Office 2019 installation files not in VLSC
@@ -1009,6 +1007,8 @@
       href: ../project/error-when-click-on-project-links.md
     - name: Errors when you access PWA
       href: ../project/error-accessing-project-web-app.md
+    - name: Expect when calling into paid support
+      href: ../project/expect-when-calling-into-paid-support.md
     - name: File size increases when inserting picture
       href: ../project/file-size-increase-when-insert-picture.md
     - name: Gantt Chart or Usage views print on too many pages
