@@ -33,7 +33,7 @@ An affected user records a Process Monitor log while experiencing the issue. Whe
 
 A Windows computer has an Administrator profile and a Default user profile. Each profile has an associated cache container. The first time that the user signs in to Windows, Windows uses the information from the Default user profile to configure the user's profile. The user's profile includes the cache container that was defined for the Default user profile.
 
-In the case of this issue, the Default User profile uses the cache container that was originally created for the Administrator profile. In other words, the user's profile is configured to use the Administrator's cache container.
+In the case of this issue, the cache container of the Default user profile is a copy of the cache container of the Administrator profile. As a result, the Administrator account owns the Default user cache container. That ownership persists when Windows configures a new user profile that is based on the Default user profile. In other words, the user's cache container belongs to the Administrator.
 
 This issue may occur if the Default user profile has been modified to create custom settings for new user profiles. For example, some imaging or deployment utilities copy some or all of the Administrator profile content to the Default user profile.
 
