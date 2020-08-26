@@ -99,7 +99,7 @@ The device creates the tracking policy for this phase, calculates all apps and p
   If the time it takes to install applications in the device setup phase isn't long enough for Azure AD Connect to sync the device, we recommend that you send a custom CSP to disable the account setup phase to avoid the potential timeout.
 - Security policies
 
-  Similar to the **Device setup** phase, ESP doesn't track any security policies such as device restriction. However, these policies are installed in the background. You will always see **(1 of 1) completed** on the UI.
+  Similar to the device setup phase, ESP doesn't track any security policies such as device restriction. However, these policies are installed in the background. You will always see **(1 of 1) completed** on the UI.
 
 - Certificates
 
@@ -167,7 +167,7 @@ You can find the ESP settings under the following registry key in the `MDMDiagRe
 :::image type="content" source="media/understand-troubleshoot-esp/firstsync.png" alt-text="The FirstSync key":::
 
 > [!NOTE]
-> In some cases, you may notice that the **Account setup** or **Device setup** phase is skipped. This occurs if one the following custom CSPs is configured to skip that phase:
+> In some cases, you may notice that the account setup or device setup phase is skipped. This occurs if one the following custom CSPs is configured to skip that phase:
 >
 > - ./Vendor/MSFT/DMClient/Provider/*ProviderID*/FirstSyncStatus/SkipUserStatusPage
 > - ./Vendor/MSFT/DMClient/Provider/*ProviderID*/FirstSyncStatus/SkipDeviceStatusPage
@@ -195,13 +195,13 @@ The EnrollmentStatusTracking registry key contains the following subkeys:
 
 - Device
 - ESPTrackingInfo
-- The security identifier (SID) of the logged-in user. This key is created in the **Account setup** phase. It won't be created if the **Device setup** phase fails.
+- The security identifier (SID) of the logged-in user. This key is created in the account setup phase. It won't be created if the device setup phase fails.
 
 :::image type="content" source="media/understand-troubleshoot-esp/enrollmentstatustracking.png" alt-text="The EnrollmentStatusTracking key":::
 
 #### The Device subkey
 
-This key contains information about the last step in the **Device preparation** phase and the Win32 apps deployment information in the **Device setup** phase.
+This key contains information about the last step in the device preparation phase and the Win32 apps deployment information in the device setup phase.
 
 :::image type="content" source="media/understand-troubleshoot-esp/device.png" alt-text="The device key":::
 
@@ -225,7 +225,7 @@ This key contains the following subkeys:
   :::image type="content" source="media/understand-troubleshoot-esp/trackedresourcetypes.png" alt-text="Tracked resource types":::
 - `Setup`
   
-  When the **Device setup** phase starts, this subkey contains the creation status of the tracking policy and the Win32 apps being tracked by the SideCar provider. It also contains the final installation state of each app and whether a restart is required.
+  When the device setup phase starts, this subkey contains the creation status of the tracking policy and the Win32 apps being tracked by the SideCar provider. It also contains the final installation state of each app and whether a restart is required.
 
   :::image type="content" source="media/understand-troubleshoot-esp/setup.png" alt-text="The Setup key":::
 
@@ -233,7 +233,7 @@ This key contains the following subkeys:
 
   :::image type="content" source="media/understand-troubleshoot-esp/locked.png" alt-text="The Locked value":::
 
-  The `TrackingPoliciesCreated` value under the `Apps\PolicyProviders\Sidecar` subkey shows the status of tracking policies created for the **Device setup** phase.
+  The `TrackingPoliciesCreated` value under the `Apps\PolicyProviders\Sidecar` subkey shows the status of tracking policies created for the device setup phase.
 
   :::image type="content" source="media/understand-troubleshoot-esp/trackingpoliciescreated.png" alt-text="The TrackingPoliciesCreated value":::
 
@@ -278,6 +278,6 @@ This subkey contains diagnostics information for all applications and policies t
 
 #### The {*User_SID*} subkey
 
-This subkey is created during the **Account setup** phase if the **Device setup** phase is completed successfully. It  contains the installation state of Win32 apps deployed in user context, and the creation status of the tracking policy for the **Account setup** phase.
+This subkey is created during the account setup phase if the device setup phase is completed successfully. It  contains the installation state of Win32 apps deployed in user context, and the creation status of the tracking policy for the account setup phase.
 
 :::image type="content" source="media/understand-troubleshoot-esp/usersid.png" alt-text="The user SID subkey":::
