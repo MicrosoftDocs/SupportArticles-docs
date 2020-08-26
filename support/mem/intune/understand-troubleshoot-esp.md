@@ -55,8 +55,8 @@ The device preparation phase contains the following steps:
 
    If this step fails with error **0x801c0003**, it may be caused by one of the following reasons:
 
-   - The user or device is not authorized
-   - In self-deploying mode and white glove deployment, the TPM doesn't meet the minimum requirements. For example, the TPM version isn't 2.0 or the TPM EK certificate is missing.
+    - The user or device is not authorized
+    - In self-deploying mode and white glove deployment, the TPM doesn't meet the minimum requirements. For example, the TPM version isn't 2.0 or the TPM EK certificate is missing.
   
    In case you receive the error, check the User Device Registration event logs. Also check the MDM diagnostic log file for any TPM-related error in CertReq_Enrollaik.txt and TpmHliInfo.txt.
 4. Prepare the device for MDM
@@ -97,6 +97,7 @@ The device creates the tracking policy for this phase, calculates all apps and p
   It usually takes Azure AD Connect up to 40 minutes to sync the device from on-prem Active Directory to Azure AD. If the device hasn't been synced, the user can still authenticate but the PRT isn't obtained. Therefore, the user can't communicate with the service to evaluate the targeted apps and policies. As the result, the account setup stuck on **Identifying** until the ESP times out and fails.
   
   If the time it takes to install applications in the device setup phase isn't long enough for Azure AD Connect to sync the device, we recommend that you send a custom CSP to disable the account setup phase to avoid the potential timeout.
+
 - Security policies
 
   Similar to the device setup phase, ESP doesn't track any security policies such as device restriction. However, these policies are installed in the background. You will always see **(1 of 1) completed** on the UI.
@@ -129,13 +130,13 @@ Enter the command based on your scenario:
 
   On Windows 10 version 1809 and later versions:
 
-  - For user-driven mode, enter the following command:
+    - For user-driven mode, enter the following command:
 
     ```console
     mdmdiagnosticstool.exe -area Autopilot -cab <pathToOutputCabFile>
     ```
   
-  - For self-deploying, white glove and any other scenarios where physical device is used, enter the following command:
+    - For self-deploying, white glove and any other scenarios where physical device is used, enter the following command:
 
     ```console
     mdmdiagnosticstool.exe -area Autopilot;TPM -cab <pathToOutputCabFile>
@@ -145,9 +146,9 @@ Enter the command based on your scenario:
 
   On Windows 10 versions earlier than 1809, collect the following logs:
 
-  - `%windir%\System32\winevt\Logs\Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider%4Admin.evtx`
-  - `%windir%\System32\winevt\Logs\Microsoft-Windows-Provisioning-Diagnostics-Provider%4Admin.evtx`
-  - `%windir%\System32\winevt\Logs\Microsoft-Windows-AAD%4Operational.evtx`
+    - `%windir%\System32\winevt\Logs\Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider%4Admin.evtx`
+    - `%windir%\System32\winevt\Logs\Microsoft-Windows-Provisioning-Diagnostics-Provider%4Admin.evtx`
+    - `%windir%\System32\winevt\Logs\Microsoft-Windows-AAD%4Operational.evtx`
 
   > [!NOTE]
   > Depending on the nature of the error, all files under `%windir%\system32\winevt\logs` may be useful.
@@ -187,15 +188,15 @@ Starting with Windows 10 version 1903, a new CSP [EnrollmentStatusTracking](/win
 - Win32 apps installation status during the **Device setup** and **Account setup** phases
 - Installation status of LOB and Microsoft Store for Business apps, Wi-Fi profiles, SCEP certificate profile during the **Device setup** and **Account setup** phases
 
-You can find the EnrollmentStatusTracking settings under the following registry key:
+You can find the `EnrollmentStatusTracking` settings under the following registry key:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Autopilot\EnrollmentStatusTracking`
 
-The EnrollmentStatusTracking registry key contains the following subkeys:
+The `EnrollmentStatusTracking` registry key contains the following subkeys:
 
-- Device
-- ESPTrackingInfo
-- The security identifier (SID) of the logged-in user. This key is created in the account setup phase. It won't be created if the device setup phase fails.
+- [Device](#the-device-subkey)
+- [ESPTrackingInfo](#the-esptrackinginfo-subkey)
+- [The security identifier (SID) of the logged-in user](#the-user_sid-subkey). This key is created in the account setup phase. It won't be created if the device setup phase fails.
 
 :::image type="content" source="media/understand-troubleshoot-esp/enrollmentstatustracking.png" alt-text="The EnrollmentStatusTracking key":::
 
@@ -215,10 +216,10 @@ This key contains the following subkeys:
 
   The following are available values of the installation state:
 
-  - 1 (NotInstalled)
-  - 2 (NotRequired)
-  - 3 (Completed)
-  - 4 (Error)
+    - 1 (NotInstalled)
+    - 2 (NotRequired)
+    - 3 (Completed)
+    - 4 (Error)
 
   During ESP, SideCar only tracks Win32 apps (no PowerShell scripts).
 
@@ -243,10 +244,10 @@ This key contains the following subkeys:
 
   Available values for `InstallationState` are:
 
-  - 1 (NotInstalled)
-  - 2 (NotRequired)
-  - 3 (Completed)
-  - 4 (Error)
+    - 1 (NotInstalled)
+    - 2 (NotRequired)
+    - 3 (Completed)
+    - 4 (Error)
 
   If the value of `InstallationState` for any app is 4, ESP stops installing applications. In this case, check the Intune Management Extension log file for the cause.
 
@@ -259,13 +260,17 @@ This subkey contains diagnostics information for all applications and policies t
 - For each LOB (MSI) app, a subkey is created under `ESPTrackingInfo\Diagnostics\ExpectedMSIAppPackages` to record the installation status. The name of the subkey is the date and time when the status of the app is logged. If no MSI app is targeted, the subkey only contains the state of the Intune Management Extension application package.
 
   :::image type="content" source="media/understand-troubleshoot-esp/msiapp.png" alt-text="MSI app status":::
+
 - For each Wi-Fi profile, a subkey is created under `ESPTrackingInfo\Diagnostics\ExpectedNetworkProfiles` to record the installation status. The name of the subkey is the date and time when the status of the Wi-Fi profile is logged.
 
   :::image type="content" source="media/understand-troubleshoot-esp/wifiprofile.png" alt-text="Wi-Fi profile status":::
+
 - For each SCEP certificate profile, a subkey is created under `ESPTrackingInfo\Diagnostics\ExpectedCertificateProfiles` to record the installation status. The name of the subkey is the date and time when the status of the SCEP certificate profile is logged.
+
 - Since ESP doesn't track security policies, only one subkey is created under `ESPTrackingInfo\Diagnostics\ExpectedPolicies` for the dummy policy.
 
   :::image type="content" source="media/understand-troubleshoot-esp/securitypolicies.png" alt-text="Security policy status":::
+  
 - For each Microsoft Store for Business app deployed in device context, a subkey is created under `ESPTrackingInfo\Diagnostics\ExpectedModernAppPackages` to record the installation status. The name of the subkey is the date and time when the status of the app is logged. If the app is deployed in user context, this subkey is created under `ESPTrackingInfo\Diagnostics\{User_SID}\ExpectedModernAppPackages`.
 
   In the following example, the registry value is 0, which means the app isn't installed at 16:17:42.430Z.
