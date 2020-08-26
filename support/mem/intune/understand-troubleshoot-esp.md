@@ -257,7 +257,7 @@ This key contains the following subkeys:
 
 #### The `ESPTrackingInfo` subkey
 
-This subkey contains diagnostics information for all applications and policies tracked by ESP and the status of each app and policy during specific timestamps of the **Device setup** and **Account setup** phases.
+This subkey contains diagnostics information for all applications and policies tracked by ESP and the status of each app and policy during specific timestamps for the device setup and account setup phases.
 
 :::image type="content" source="media/understand-troubleshoot-esp/diagnostics.png" alt-text="The diagnostics information":::
 
