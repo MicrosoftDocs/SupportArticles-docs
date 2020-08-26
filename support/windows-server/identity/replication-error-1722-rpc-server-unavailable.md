@@ -30,7 +30,7 @@ This article describes the symptoms, cause, and resolution for resolving Active 
 
     Dialog Message text:
 
-    > The operation failed because: Active Directory Domain Services could not create the NTDS Settings object for this Active Directory Domain Controller CN=NTDS Settings,CN=\<Name of DC being promoted),CN=Servers,CN=<site name>,CN=Sites,CN=Configuration,DC=\<forest root domain> on the remote AD DC \<helper DC>.\<domain name>.\<top level domain>. Ensure the provided network credentials have sufficient permissions. "The RPC server is unavailable."
+    > The operation failed because: Active Directory Domain Services could not create the NTDS Settings object for this Active Directory Domain Controller CN=NTDS Settings,CN=\<Name of DC being promoted),CN=Servers,CN=\<site name>,CN=Sites,CN=Configuration,DC=\<forest root domain> on the remote AD DC \<helper DC>.\<domain name>.\<top level domain>. Ensure the provided network credentials have sufficient permissions. "The RPC server is unavailable."
 
 1. DCDIAG reports that the Active Directory Replications test has failed with error 1722: The RPC Server is unavailable.
 
@@ -58,26 +58,30 @@ This article describes the symptoms, cause, and resolution for resolving Active 
 
     Sample output from `REPADMIN /SHOWREPS` and `REPADMIN /SYNCALL` depicting **The RPC server is unavailable** error is shown below:
 
-    > c:\> repadmin /showreps  
-    \<site name>\<destination DC>  
-    DC Options: \<list of flags>  
+    ```console
+    c:\> repadmin /showreps  
+    <site name><destination DC>  
+    DC Options: <list of flags>  
     Site Options: (none)  
-    DC object GUID: \<NTDS settings object object GUID>  
-    DC invocationID: \<invocation ID string>  
-    > ==== INBOUND NEIGHBORS ======================================  
-    DC=\<DN path for directory partition>  
-        \<site name>\<source DC via RPC  
-            DC object GUID: \<source DCs ntds settings object object guid>  
-            Last attempt @ \<date> \<time> failed, result **1722 (0x6ba):  
+    DC object GUID: <NTDS settings object object GUID>  
+    DC invocationID: <invocation ID string>  
+    ==== INBOUND NEIGHBORS ======================================  
+    DC=<DN path for directory partition>  
+        <site name><source DC via RPC  
+            DC object GUID: <source DCs ntds settings object object guid>  
+            Last attempt @ <date> <time> failed, result **1722 (0x6ba):  
     The RPC server is unavailable.  
-            \<X #> consecutive failure(s).  
-            Last success @ \<date> \<time>
+            <X #> consecutive failure(s).  
+            Last success @ <date> <time>
+   ```
 
     Sample output of `REPADMIN /SYNCALL` depicting **The RPC server is unavailable** error is shown below:
 
-    > C:\>repadmin /syncall  
-    > CALLBACK MESSAGE: Error contacting server \<object guid of NTDS Settings object>._msdcs.\<forest root domain>.\<top level domain> (network error): 1722 (0x6ba):  
-    > The RPC server is unavailable.
+   ```console
+    C:\>repadmin /syncall  
+    CALLBACK MESSAGE: Error contacting server \<object guid of NTDS Settings object>._msdcs.\<forest root domain>.\<top level domain> (network error): 1722 (0x6ba):  
+    The RPC server is unavailable.
+   ```
 
 1. The **replicate now** command in Active Directory Sites and Services returns **The RPC server is unavailable**.
 

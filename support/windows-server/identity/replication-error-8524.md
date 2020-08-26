@@ -223,7 +223,8 @@ Destination DCs resolve source DCs in DNS by their fully qualified CNAME records
 
      REPADMIN /SHOWREPL output is shown below. The "DSA Object GUID" field is listed for each source DC the destination DC inbound replicates from.
 
-    > c:\>repadmin /showreps `contoso-dc1.contoso.com`  
+   ```console
+    c:\>repadmin /showreps `contoso-dc1.contoso.com`  
     Default-First-Site-Name\CONTOSO-DC1  
     DSA Options: IS_GC  
     Site Options: (none)  
@@ -236,6 +237,7 @@ Destination DCs resolve source DCs in DNS by their fully qualified CNAME records
                 The DSA operation is unable to proceed because of a DNS lookup failure.
             23 consecutive failure(s).  
             Last success @ YYYY-MM-DD HH:MM:SS.
+   ```
 
 1. Compare the object GUID from #2 and #3.
 
@@ -245,11 +247,11 @@ Destination DCs resolve source DCs in DNS by their fully qualified CNAME records
 
     From the console of the destination DC, test Active Directory's name resolution with a PING of the source DCs fully qualified CNAME record
 
-     c:\>ping \<ObjectGUID from source DCs NTDS Settings object._msdcs.<DNS name for Active Directory forest root domain>
+     `c:\>ping <ObjectGUID> from source DCs NTDS Settings object._msdcs.<DNS name for Active Directory forest root domain>`
 
      Using our example of the **8a7baee5...** objectGUID from the repadmin /showreps output above from the contoso-dc1 DC in the contoso.com domain, the PING syntax would be:
 
-     c:\>ping **8a7baee5-cd81-4c8c-9c0f-b10030574016.** _msdcs.contoso.com
+     `c:\>ping 8a7baee5-cd81-4c8c-9c0f-b10030574016. _msdcs.contoso.com`
 
      If ping works, retry the failing operation in Active Directory. If PING fails, proceed to the "Resolve the 8524 DNS lookup failure" but retrying the PING test after each step until it resolves.  
 
