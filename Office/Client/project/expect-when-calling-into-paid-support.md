@@ -104,7 +104,7 @@ The following Examples Are Beyond Guidelines for ODBC/OLEDB Support:
 The following examples are within guidelines for Internet, Web, and SharePoint support:
 
 - Demonstrate creation of a hyperlink field in a document.
-- Verify that the customer can get to a generic URL (www.microsoft.com) by typing it in the address line of the customer's browser.
+- Verify that the customer can get to a generic URL (`https://www.microsoft.com`) by typing it in the address line of the customer's browser.
 - Assist with installation of SharePoint Server Services. Including extending web sites, setting up configuration and content databases and running Configuration Wizards.
 - Creating new web sites and extending them for use with SharePoint.
 
