@@ -211,7 +211,8 @@
         "azure/**/*.md": "Azure",
         "azure/cloud-services/*.md": "Cloud Services",
         "azure/virtual-machines/*.md": "Virtual Machines",
-        "azure/active-directory/*.md": "Active Directory"
+        "azure/active-directory/*.md": "Active Directory",
+        "azure/devops/*.md": "Active DevOps"
       },
       "searchScope": {
         "biztalk/**/*.md": ["BizTalk Server"],
