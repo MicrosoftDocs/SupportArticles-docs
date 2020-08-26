@@ -1291,5 +1291,3 @@ For additional information about how to use PortQry, click the following article
 > The PortQueryUI tool provides a graphical user interface and is available for download. PortQueryUI has several features that can make using PortQry easier. To obtain the PortQueryUI tool, visit the following Microsoft Web site:
 
 [https://download.microsoft.com/download/3/f/4/3f4c6a54-65f0-4164-bdec-a3411ba24d3a/PortQryUI.exe](https://download.microsoft.com/download/3/f/4/3f4c6a54-65f0-4164-bdec-a3411ba24d3a/portqryui.exe)
-
- [back to the top](#introduction)
