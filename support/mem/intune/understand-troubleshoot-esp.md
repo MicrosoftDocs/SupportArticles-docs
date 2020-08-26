@@ -119,7 +119,7 @@ To troubleshoot ESP issues, it's important to get more information about the ESP
 
 ### Collect logs
 
-To collect log, open a Command Prompt window on the device. On non-S mode devices, if you are in OOBE, press Shift+F10.
+To collect logs, open a Command Prompt window on the device. On non-S mode devices, if you are in OOBE, press Shift+F10.
 
 Enter the command based on your scenario:
 
@@ -128,6 +128,7 @@ Enter the command based on your scenario:
   On Windows 10 versions earlier than 1809, enter the `licensingdiag.exe` command.
 
   On Windows 10 version 1809 and later versions:
+
   - For user-driven mode, enter the following command:
 
     ```console
@@ -275,7 +276,7 @@ This subkey contains diagnostics information for all applications and policies t
 
   :::image type="content" source="media/understand-troubleshoot-esp/msfbapp2.png" alt-text="Microsoft Store for Business app status two":::
 
-### The {*User_SID*} subkey
+#### The {*User_SID*} subkey
 
 This subkey is created during the **Account setup** phase if the **Device setup** phase is completed successfully. It  contains the installation state of Win32 apps deployed in user context, and the creation status of the tracking policy for the **Account setup** phase.
 
