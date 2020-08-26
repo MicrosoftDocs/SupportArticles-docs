@@ -188,9 +188,9 @@ However, ESP timeout during app deployment usually occurs because the timeout va
 Starting with Windows 10 version 1903, a new CSP [EnrollmentStatusTracking](/windows/client-management/mdm/enrollmentstatustracking-csp) is added. This CSP adds the following tracking information and installation status to the device's registry:
 
 - Intune Management Extension installation status
-- Policies creation status during the **Device setup** and **Account setup** phases
-- Win32 apps installation status during the **Device setup** and **Account setup** phases
-- Installation status of LOB and Microsoft Store for Business apps, Wi-Fi profiles, SCEP certificate profile during the **Device setup** and **Account setup** phases
+- Tracking policies creation status for the device setup and account setup phases
+- Win32 apps installation status during the device setup and account setup phases
+- Installation status of LOB and Microsoft Store for Business apps, Wi-Fi profiles, SCEP certificate profile during the device setup and account setup phases
 
 You can find the `EnrollmentStatusTracking` settings under the following registry key:
 
