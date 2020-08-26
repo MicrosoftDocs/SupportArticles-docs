@@ -253,7 +253,7 @@ This key contains the following subkeys:
 
 This subkey contains diagnostics information for all applications and policies tracked by ESP and the status of each app and policy during specific timestamps of the **Device setup** and **Account setup** phases.
 
-:::image type="content" source="media/understand-troubleshoot-esp/diagnostics.png" alt-text="Diagnostics":::
+:::image type="content" source="media/understand-troubleshoot-esp/diagnostics.png" alt-text="The diagnostics information":::
 
 - For each LOB (MSI) app, a subkey is created under `ESPTrackingInfo\Diagnostics\ExpectedMSIAppPackages` to record the installation status. The name of the subkey is the date and time when the status of the app is logged. If no MSI app is targeted, the subkey only contains the state of the Intune Management Extension application package.
 
