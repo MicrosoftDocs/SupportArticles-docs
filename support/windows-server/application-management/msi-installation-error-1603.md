@@ -17,7 +17,7 @@ ms.technology: ApplicationCompatibility
 
 This article helps fix the error 1603 that occurs when you install a Microsoft Windows Installer package.
 
-_Original product version:_ &nbsp; Windows 10  
+_Original product version:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 834484
 
 ## Symptoms
