@@ -21,7 +21,7 @@ This article presents advanced troubleshooting steps for the STOP 0xC000021A err
 
 **Home users**: This article is intended for use by support agents and IT professionals. If you're looking for more information about a blue-screen error code while using your computer, see [Troubleshoot blue-screen errors](https://windows.microsoft.com/windows-10/troubleshoot-blue-screen-errors).
 
-_Original product version:_ &nbsp;Windows 10,  Windows Server 2012 R2  
+_Original product version:_ &nbsp;Windows 10 - all editions,  Windows Server 2012 R2  
 _Original KB number:_ &nbsp;156669
 
 This article is intended for advanced computer users. If you're not comfortable with advanced troubleshooting, you might want to ask someone for help or contact Technical Support.

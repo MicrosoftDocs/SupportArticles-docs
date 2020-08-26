@@ -19,7 +19,7 @@ ms.technology: WindowsSecurity
 
 This article describes a tool that you can use to locate and view BitLocker recovery passwords.
 
-_Original product version:_ &nbsp;Windows 10, Windows Server 2012 R2  
+_Original product version:_ &nbsp;Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp;928202
 
 ## Notice

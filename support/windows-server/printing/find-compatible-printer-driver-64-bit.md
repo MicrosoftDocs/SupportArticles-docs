@@ -15,7 +15,7 @@ ms.technology: PrintFaxScan
 ---
 # How to find a compatible printer driver for a computer that's running a 64-bit version of Windows
 
-_Original product version:_ &nbsp;Windows 10, Windows Server 2012 R2  
+_Original product version:_ &nbsp;Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp;895612
 
 ## Introduction

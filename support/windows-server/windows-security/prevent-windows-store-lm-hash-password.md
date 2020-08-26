@@ -19,7 +19,7 @@ ms.technology: WindowsSecurity
 
 This article provides three methods to prevent Windows from storing an LM hash of your password in Active Directory and local SAM databases.
 
-_Original product version:_ &nbsp;Windows 10, Windows Server 2012 R2  
+_Original product version:_ &nbsp;Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp;299656
 
 ## Summary
