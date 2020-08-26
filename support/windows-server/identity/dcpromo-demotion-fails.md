@@ -40,27 +40,25 @@ The relevant part of the DCPROMO.LOG file contains the following text:
 
 A review of the infrastructure object and attributes for the DNS application partition referenced in the on-screen DCPROMO error and DCPROMO.LOG:
 
-```console
-Expanding base 'CN=Infrastructure,DC=DomainDnsZones,DC=contoso,DC=com'...  
+> Expanding base 'CN=Infrastructure,DC=DomainDnsZones,DC=contoso,DC=com'...  
 Getting 1 entries:  
 Dn: CN=Infrastructure,DC=DomainDnsZones,DC=contoso,DC=com  
 cn: Infrastructure;  
 distinguishedName: CN=Infrastructure,DC=DomainDnsZones,DC=contoso,DC=corp,DC=microsoft,DC=com;  
 dSCorePropagationData: 0x0 = (  );  
-fSMORoleOwner: CN=NTDS Settings\0ADEL:<NTDS Settings objet GUID>,CN=<hostname of last DC to host the partition infrastructure role>,CN=Servers,CN=<active directory site name>,CN=Sites,CN=Configuration,DC=contoso,DC=com;  
+fSMORoleOwner: CN=NTDS Settings\0ADEL:\<NTDS Settings objet GUID>,CN=\<hostname of last DC to host the partition infrastructure role>,CN=Servers,CN=\<active directory site name>,CN=Sites,CN=Configuration,DC=contoso,DC=com;  
 instanceType: 0x4 = ( WRITE );  
 isCriticalSystemObject: TRUE;  
 name: Infrastructure;  
 objectCategory: CN=Infrastructure-Update,CN=Schema,CN=Configuration,DC=contoso,DC=com;  
 objectClass (2): top; infrastructureUpdate;  
-objectGUID: <object guid>;  
+objectGUID: \<object guid>;  
 showInAdvancedViewOnly: TRUE;  
 systemFlags: 0x8C000000 = ( DISALLOW_DELETE | DOMAIN_DISALLOW_RENAME | DOMAIN_DISALLOW_MOVE );  
-uSNChanged: <some USN #>;  
-uSNCreated: <some USN #>;  
-whenChanged: <date> <time>;  
-whenCreated: <date> <time>;  
-```
+uSNChanged: \<some USN #>;  
+uSNCreated: \<some USN #>;  
+whenChanged: \<date> \<time>;  
+whenCreated: \<date> \<time>;  
 
 Where distinguishing elements in the LDAP output taken from the sample domain `CONTOSO.COM` include:
 

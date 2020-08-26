@@ -17,7 +17,7 @@ ms.technology: BackupStorage
 
 This article provides information on how to fix the problem that Garmin wearable devices aren't recognized on Windows 10.
 
-_Original product version:_ &nbsp; Windows 10, version 1709  
+_Original product version:_ &nbsp; Windows 10, version 1709, Windows 10, version 1607  
 _Original KB number:_ &nbsp; 3183365
 
 ## Symptoms
@@ -43,8 +43,3 @@ This issue is documented by Garmin at [Device is not detected in Windows 10 afte
 To download the latest Garmin Express tool, go to [Garmin Express](https://software.garmin.com/express.html).
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
-
-## Applies to
-
-- Windows 10, version 1709
-- Windows 10, version 1607

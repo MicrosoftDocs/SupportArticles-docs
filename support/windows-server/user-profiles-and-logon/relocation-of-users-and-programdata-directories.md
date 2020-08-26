@@ -17,7 +17,7 @@ ms.technology: UserProfilesAndLogon
 
 This article describes the changes in policy for the relocation of the Users directory and the `ProgramData` directory to a drive other than the %systemdrive% drive in Windows operating systems.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows 10 - all editions  
+_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 949977
 
 > [!CAUTION]
@@ -77,11 +77,3 @@ The `ProgramData` setting specifies the path of the program data folder.
 
 > [!NOTE]
 > If you use the unattend settings to set up the operating systems that are listed in this article, we will provide commercially reasonable efforts to support your scenario.
-
-## Applies to
-
-- Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012 R2
-- Windows 10 - all editions
-- Windows 8.1

@@ -17,7 +17,7 @@ ms.technology: ApplicationCompatibility
 
 This article helps fix Microsoft .NET Framework 3.5 installation errors.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019  
+_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2734782
 
 > [!NOTE]
@@ -246,14 +246,3 @@ When you install .NET Framework 3.5, you may encounter other error codes that ar
 - [Install the .NET Framework 3.5 in Windows 10](/dotnet/framework/install/dotnet-35-windows-10)
 
 - [Microsoft .NET Framework 3.5 Deployment Considerations](/previous-versions/windows/it-pro/windows-8.1-and-8/dn482066(v=win.10))
-
-## Applies to
-
-- Windows 10, version 2004
-- Windows 10, version 1909
-- Windows 10, version 1903
-- Windows 10, version 1809
-- Windows 10, version 1803
-- Windows 10, version 1709
-- Windows Server 2019
-- Windows Server 2012 R2

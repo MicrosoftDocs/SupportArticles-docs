@@ -17,7 +17,7 @@ ms.technology: Performance
 
 This article describes how to start WinRE from Windows installation media to troubleshoot common startup issues.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4026030
 
 ## Summary
@@ -87,15 +87,3 @@ When a Windows operating system fails to start or restarts unexpectedly, the [Wi
 - [System File Checker](/windows/win32/wfp/system-file-checker)
 
 - [Repair a Windows Image](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824869(v=win.10))
-
-## Applies to
-
-- Windows 10, version 2004
-- Windows 10, version 1909
-- Windows 10, version 1903
-- Windows 10, version 1809
-- Windows 10, version 1803
-- Windows 10, version 1709
-- Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012 R2

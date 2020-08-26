@@ -17,7 +17,7 @@ ms.technology: ActiveDirectory
 
 This article describes how to use the redirusr and redircmp utilities to redirect user, computer, and group accounts that are created by earlier-version APIs so that they are put in admin-specified organizational unit containers.
 
-_Original product version:_ &nbsp; Windows Server 2016  
+_Original product version:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 324949
 
 ## Summary
@@ -213,8 +213,3 @@ The following data appears in the Exchange Server 2000 Setup log that is parsed 
 [HH:MM:SS] CComExchSetupComponent::Install (K:\admin\src\udog\BO\comboifaces.cxx:694) Error code 0X80072030 (8240): There is no such object on the server.
 [HH:MM:SS] Setup completed
 ```
-
-## Applies to
-
-- Windows Server 2016
-- Windows Server 2012 R2

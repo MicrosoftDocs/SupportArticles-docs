@@ -17,7 +17,7 @@ ms.technology: Networking
 
 This article provides solutions for the issue that DNS CNAME alias can't access SMB file servers.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019  
+_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 3181029
 
 ## Symptoms
@@ -53,8 +53,7 @@ Scenarios
 
   However, if you examine the network trace when the SMB Session Setup is unsuccessful, the session fails with a Kerberos KRB_AP_ERR_MODIFIED error. The following is an example of an unsuccessful SMB Session Setup request in a network trace:
 
-  ```console
-  MessageNumber DiagnosisTypes Timestamp Source Destination Module Summary  
+  > MessageNumber DiagnosisTypes Timestamp Source Destination Module Summary  
   112 None DateTime Client Server SMB2 Negotiate, Status: Success, 2780879Guid: {12f74af4-be82-11e5-b5c2-005056890096}, DialectRevision: SMB 2.  
   112 None DateTime Client Server SMB2 NegotiateRequest, Dialects: [SMB 2.0.2, SMB 2.1], Capabilities: , 2780879Guid: {12f74af4-be82-11e5-b5c2-  
   115 None DateTime Server Client SMB2 NegotiateResponse, Status: Success, DialectRevision: SMB 2.1, Capabilities: SMB2GlobalCapDfs|SMB2GlobalC  
@@ -64,7 +63,6 @@ Scenarios
   135 None DateTime Client Server SMB2 SessionSetup, Status: STATUS_MORE_PROCESSING_REQUIRED, Kerberos, Flags: 0  
   135 None DateTime Client Server SMB2 SessionSetupRequest, Kerberos, Flags: Unknown(0), PreviousSessionId: 0x0000000000000000  
   143 None DateTime Server Client SMB2 SessionSetupResponse, Status: STATUS_MORE_PROCESSING_REQUIRED, Kerberos, SessionId: 0x000004030800006D
-  ```
 
   In an unsuccessful SMB Session Setup request, the client forwards an incorrect CNAME SPN. The SPN may be incorrect because it's registered for an old server. However in a successful SMB Session Setup request such as in the Windows Server 2008 R2 client case, the client forwards the SPN for the actual server name.
 
@@ -87,11 +85,9 @@ Scenarios
 
 To resolve this issue on a file server that is running the SMB version 1 protocol, add the `DisableStrictNameChecking` value to the registry:
 
-```console
-Registry location: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters
-DWORD name: DisableStrictNameChecking
+> Registry location: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters  
+DWORD name: DisableStrictNameChecking  
 DWORD value: 1
-```
 
 > [!IMPORTANT]
 > Do not use DNS CNAMEs in the future for file servers. If you want to still give alternate names to servers, you can do so with the following command:  
@@ -215,11 +211,3 @@ Additionally, apply the following hotfixes:
 - [Why do we need SPN for File Server (NAS / RAS / File Share System) DNS Alias (Cname)](/archive/blogs/sqlserverfaq/why-do-we-need-spn-for-file-server-nas-ras-file-share-system-dns-alias-cname)
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
-
-## Applies to
-
-- Windows 10 - all editions
-- Windows 7 Service Pack 1
-- Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012 R2

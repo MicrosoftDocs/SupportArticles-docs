@@ -17,7 +17,7 @@ ms.technology: Networking
 
 This article describes the requirements that your client certificates and your server certificates must meet when you use Extensible Authentication Protocol-Transport Layer Security (EAP-TLS) or Protected Extensible Authentication Protocol (PEAP) with EAP-TLS.
 
-_Original product version:_ &nbsp; Windows 10  
+_Original product version:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 814394
 
 ## Summary

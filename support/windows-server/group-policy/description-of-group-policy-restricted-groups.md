@@ -17,7 +17,7 @@ ms.technology: GroupPolicy
 
 This article provides a description of group policy restricted groups in Windows Server 2016, Windows Server 2012 R2, and Windows Server 2008 R2 Service Pack 1.
 
-_Original product version:_ &nbsp; Windows Server 2016  
+_Original product version:_ &nbsp; Windows Server 2016, Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 279301
 
 ## More information
@@ -40,9 +40,3 @@ Only inclusion is enforced in this portion of a restricted group policy. The res
 ### Manage membership of domain groups by using restricted groups
 
 Microsoft does not support using restricted groups in this scenario. Restricted Groups is a client configuration means and cannot be used with domain groups. Restricted Groups is designed specifically to work with local groups. Domain objects have to be managed within traditional AD tools. Therefore, we do not plan currently to add or support using restricted groups as a way to manage domain groups.
-
-## Applies to
-
-- Windows Server 2016
-- Windows Server 2012 R2
-- Windows Server 2008 R2 Service Pack 1

@@ -17,7 +17,7 @@ ms.technology: BackupStorage
 
 This article describes the support information for the large-sector (4K) drives when they are used with Windows and other Microsoft products.
 
-_Original product version:_ &nbsp; Windows 10, version 1809 and later versions, Windows Server 2019  
+_Original product version:_ &nbsp; Windows 10, version 1809 and later versions, Windows Server 2019, Windows 7 Service Pack 1, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2510009
 
 ## Summary
@@ -146,14 +146,3 @@ If there's no solution to the problem, Microsoft Support may recommend some cons
 
 - Asking the customer to reproduce the problem on a supported storage device
 - Asking the customer to work with the storage provider for a solution
-
-## Applies to
-
-- Windows 10, version 2004
-- Windows 10, version 1909
-- Windows 10, version 1903
-- Windows 10, version 1809
-- Windows 7 Service Pack 1
-- Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012 R2

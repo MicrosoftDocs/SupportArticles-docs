@@ -17,7 +17,7 @@ ms.technology: HyperV
 
 This article describes the recommended antivirus exclusions for Hyper-V hosts for optimal operation of Hyper-V and the running virtual machines.
 
-_Original product version:_ &nbsp; Windows 10, version 2004, Windows Server 2019  
+_Original product version:_ &nbsp; Windows 10, version 2004, Windows 10, version 1909, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3105657
 
 ## Summary
@@ -122,11 +122,3 @@ All directories that contain the following files:
 
     > [!NOTE]
     > Starting with Windows Server 2019
-
-## Applies to
-
-- Windows 10, version 2004
-- Windows 10, version 1909
-- Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012 R2

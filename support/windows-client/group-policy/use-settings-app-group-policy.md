@@ -58,11 +58,3 @@ For example, if you must control access to the Mobile hotspot settings, locate t
 
 If you must restrict more than one page, you must use a semicolon between each URI. For example, to restrict access to Mobile hotspot and Proxy, you would specify the following string:  
 **Hide:network-mobilehotspot; network-proxy**
-
-## Applies to
-
-- Windows 10, version 2004
-- Windows 10, version 1909
-- Windows 10, version 1903
-- Windows 10, version 1809
-- Windows 10, version 1803

@@ -24,19 +24,17 @@ _Original KB number:_ &nbsp; 2002013
 
 1. DCDIAG reports that Active Directory Replications test has failed with error status code (5): **access is denied**.
 
-    ```console
-    Testing server: <site name>\<destination dc name>  
+    > Testing server: \<site name>\<destination dc name>  
     Starting test: Replications  
-    * Replications Check  
-    [Replications Check,<destination DC name] A recent replication attempt failed:  
-    From <source DC> to <destination DC>  
-    Naming Context: <directory partition DN path>  
+    Replications Check  
+    [Replications Check,\<destination DC name] A recent replication attempt failed:  
+    From \<source DC> to \<destination DC>  
+    Naming Context: \<directory partition DN path>  
     The replication generated an error (5):  
     Access is denied.  
-    The failure occurred at <date> <time>.  
-    The last success occurred at <date> <time>.
+    The failure occurred at \<date> \<time>.  
+    The last success occurred at \<date> \<time>.
     3 failures have occurred since the last success.
-    ```
 
 2. DCDIAG reports that DsBindWithSpnEx() failed with error 5.
 
@@ -53,23 +51,21 @@ _Original KB number:_ &nbsp; 2002013
 
     Sample output from `REPADMIN /SHOWREPS` depicting inbound replication from CONTOSO-DC2 to CONTOSO-DC1 failing with the **replication access was denied** error is shown below:
 
-    ```console
-    Default-First-Site-Name\CONTOSO-DC1
-    DSA Options: IS_GC
-    Site Options: (none)
-    DSA object GUID: b6dc8589-7e00-4a5d-b688-045aef63ec01
-    DSA invocationID: b6dc8589-7e00-4a5d-b688-045aef63ec01
-
-    ==== INBOUND NEIGHBORS ======================================  
-
-    DC=contoso, DC=com
-    Default-First-Site-Name\CONTOSO-DC2 via RPC
-    DSA object GUID: 74fbe06c-932c-46b5-831b-af9e31f496b2
-    Last attempt @ <date> <time> failed, result 5 (0x5):
-    Access is denied.
-    <#> consecutive failure(s).
-    Last success @ <date> <time>.
-    ```
+    > Default-First-Site-Name\CONTOSO-DC1  
+    DSA Options: IS_GC  
+    Site Options: (none)  
+    DSA object GUID: b6dc8589-7e00-4a5d-b688-045aef63ec01  
+    DSA invocationID: b6dc8589-7e00-4a5d-b688-045aef63ec01  
+    >
+    > ==== INBOUND NEIGHBORS ======================================  
+    >
+    > DC=contoso, DC=com  
+    Default-First-Site-Name\CONTOSO-DC2 via RPC  
+    DSA object GUID: 74fbe06c-932c-46b5-831b-af9e31f496b2  
+    Last attempt @ \<date> \<time> failed, result 5 (0x5):  
+    Access is denied.  
+    <#> consecutive failure(s).  
+    Last success @ \<date> \<time>.
 
 4. NTDS KCC, NTDS General, or Microsoft-Windows-ActiveDirectory_DomainService events with the status 5 are logged in the directory service event log.
 
@@ -318,9 +314,7 @@ DCDIAG /TEST:CheckSecurityErrors was written to perform specific tests (includin
 
     When able, use the **NETDIAG Trust Relationship** test to check for broken trusts. NETDIAG identifies broken trusts with the following text:  
 
-    ```console
-    Trust relationship test. . . . . . : Failed Test to ensure DomainSid of domain <domainname> is correct. [FATAL] Secure channel to domain <domainname> is broken. [<%variable status code%>]
-    ```
+    > Trust relationship test. . . . . . : Failed Test to ensure DomainSid of domain \<domainname> is correct. [FATAL] Secure channel to domain \<domainname> is broken. [<%variable status code%>]
 
     For example, if you have a multi-domain forest containing, root domain `Contoso.COM`, child domain `B.Contoso.COM`, grand child domain `C.B.Contoso.COM` and **tree domain in same forest** `Fabrikam.COM` where replication is failing between DCs in grand child domain `C.B.Contoso.COM` and tree domain `Fabrikam.COM`, then verify trust health between `C.B.Contoso.COM` and `B.Contoso.COM`, `B.Contoso.COM` and `Contoso.COM` then finally `Contoso.COM` and `Fabrikam.COM`.
 

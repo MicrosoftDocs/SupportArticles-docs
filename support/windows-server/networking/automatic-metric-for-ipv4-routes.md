@@ -17,7 +17,7 @@ ms.technology: Networking
 
 This article describes the Automatic Metric feature that is used in Windows for Internet Protocol IPv4 routes.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019  
+_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 299540
 
 ## More information
@@ -107,17 +107,3 @@ To configure the Automatic Metric feature:
 3. Click Internet Protocol (TCP/IP), and then select **Properties**.
 4. On the **General** tab, select **Advanced**.
 5. To specify a metric, on the **IP Settings** tab, select to clear the **Automatic metric** check box, and then enter the metric that you want in the **Interface Metric** field.
-
-## Applies to
-
-- Windows 10 - all editions
-- Windows 8.1 Enterprise
-- Windows 8.1 Pro
-- Windows Server 2019
-- Windows Server 2012 R2 Standard
-- Windows Server 2012 R2 Datacenter
-- Windows Server 2012 Datacenter
-- Windows Server 2012 Standard
-- Windows Server 2012 Essentials
-- Windows Server 2008 R2 Service Pack 1 (for ESU only)
-- Windows Server 2008 Service Pack 2 (for ESU only)

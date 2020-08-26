@@ -17,7 +17,7 @@ ms.technology: Networking
 
 This article describes how to move the client-side caching (CSC) folder in Windows and how to delete the old cache folder after you move the CSC cache folder to a new location.
 
-_Original product version:_ &nbsp; Windows 10, version 2004  
+_Original product version:_ &nbsp; Windows 10, version 2004, Windows 10, version 1909, Windows 10, version 1709, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 942960
 
 > [!IMPORTANT]
@@ -133,10 +133,3 @@ When all the files are moved, delete the old cache from a Windows Vista Release 
 ## References
 
 For more information about how to change the location of the CSC folder, see [How to change the location of the CSC folder by configuring the CacheLocation registry value in Windows Vista](https://support.microsoft.com/help/937475).
-
-## Applies to
-
-- Windows 10, version 2004
-- Windows 10, version 1909
-- Windows 10, version 1709
-- Windows 7 Service Pack 1

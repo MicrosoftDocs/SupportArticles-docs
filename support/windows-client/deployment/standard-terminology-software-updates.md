@@ -17,7 +17,7 @@ ms.technology: Deployment
 
 This article describes the standard terminology that defines the software updates for the Windows Update and Microsoft Update services.
 
-_Original product version:_ &nbsp; Windows 10  
+_Original product version:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 824684
 
 ## Critical update

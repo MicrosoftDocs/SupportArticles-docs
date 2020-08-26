@@ -19,7 +19,7 @@ ms.technology: ActiveDirectory
 
 This article describes an issue where Active Directory Replications fail with Win32 error 8524: "The DSA operation is unable to proceed because of a DNS lookup failure."
 
-_Original product version:_ &nbsp;Windows 10, Windows Server 2012 R2  
+_Original product version:_ &nbsp;Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp;2021446
 
 ## Notice
@@ -32,16 +32,14 @@ This article describes symptoms, cause, and resolution steps for AD operations t
 
 1. DCDIAG reports that Active Directory Replications test has failed with status 8524:
 
-    ```console
-    Testing server: <sitename>\<destination DC>
-    Starting test: Replications
-    [Replications Check,<destination DC>] A recent replication attempt failed:
-    From <source DC> to <destination dc>
-    Naming Context:
-    CN=<DN path for failing directory partition>,DC=Contoso,DC=Com
-    The replication generated an error (8524):
+    > Testing server: \<sitename>\<destination DC>  
+    Starting test: Replications  
+    [Replications Check,\<destination DC>] A recent replication attempt failed:
+    From \<source DC> to \<destination DC>  
+    Naming Context:  
+    CN=\<DN path for failing directory partition>,DC=Contoso,DC=Com  
+    The replication generated an error (8524):  
     The DSA operation is unable to proceed because of a DNS lookup failure.
-    ```
 
 2. REPADMIN reports that a replication attempt has failed with status 8524.
 
@@ -53,23 +51,18 @@ This article describes symptoms, cause, and resolution steps for AD operations t
 
     A sample of 8524 failures from REPADMIN /SHOWREPL is shown below:
 
-    ```console
-    Default-First-Site-Name\CONTOSO-DC1
-    DSA Options: IS_GC
-    Site Options: (none)
-    DSA object GUID: e15fc9a1-82f8-4a99-97f2-8e715f06e747
-    DSA invocationID: e15fc9a1-82f8-4a99-97f2-8e715f06e747
-
-    ==== INBOUND NEIGHBORS ======================================
-
-    DC=contoso,DC=com
-        Default-First-Site-Name\CONTOSO-DC2 via RPC
-            DSA object GUID: 8a7baee5-cd81-4c8c-9c0f-b10030574016
-            Last attempt @ YYYY-MM-DD HH:MM:SS failed, result 8524 (0x214c):
-                The DSA operation is unable to proceed because of a DNS lookup failure.
-            1 consecutive failure(s).
+    > Default-First-Site-Name\CONTOSO-DC1  
+    DSA Options: IS_GC  
+    Site Options: (none)  
+    DSA object GUID:
+    DSA invocationID:  
+    DC=contoso,DC=com  
+        Default-First-Site-Name\CONTOSO-DC2 via RPC  
+            DSA object GUID:  
+            Last attempt @ YYYY-MM-DD HH:MM:SS failed, result 8524 (0x214c):  
+                The DSA operation is unable to proceed because of a DNS lookup failure.  
+            1 consecutive failure(s).  
             Last success @ YYYY-MM-DD HH:MM:SS.
-    ```
 
     Rest of /showrepl output truncated
 
@@ -89,35 +82,31 @@ This article describes symptoms, cause, and resolution steps for AD operations t
 
 4. Domain controllers log NTDS Replication event 2087 and/or NTDS Replication event 2088 in their Directory Service event log:
 
-    ```console
-    Log Name: Directory Service
-    Source: Microsoft-Windows-ActiveDirectory_DomainService
-    Date: <date> <time>
-    Event ID: 2087
-    Task Category: DS RPC Client
-    Level: Error
-    Keywords: Classic
-    User: ANONYMOUS LOGON
-    Computer: <dc name>.<domain name>
+    > Log Name: Directory Service  
+    Source: Microsoft-Windows-ActiveDirectory_DomainService  
+    Date: \<date> \<time>  
+    Event ID: 2087  
+    Task Category: DS RPC Client  
+    Level: Error  
+    Keywords: Classic  
+    User: ANONYMOUS LOGON  
+    Computer: \<dc name>.\<domain name>  
     Description:
-    ```
 
     Active Directory Domain Services couldn't resolve the following DNS host name of the source domain controller to an IP address. This error prevents additions, deletions, and changes in Active Directory Domain Services from replicating between one or more domain controllers in the forest. Security groups, group policy, users, and computers and their passwords will be inconsistent between domain controllers until this error is resolved, potentially affecting logon authentication and access to network resources.
 
     Rest of event truncated, see MSKB [824449](https://support.microsoft.com/?kbid=824449) for full text.
 
-    ```console
-    Log Name:      Directory Service
-    Source:        Microsoft-Windows-ActiveDirectory_DomainService
-    Date:          <date> <time>
-    Event ID:      2088
-    Task Category: DS RPC Client
-    Level:         Warning
-    Keywords:      Classic
-    User:          ANONYMOUS LOGON
-    Computer:      <dc name>.<domain name>
+    > Log Name:      Directory Service  
+    Source:        Microsoft-Windows-ActiveDirectory_DomainService  
+    Date:          \<date> \<time>  
+    Event ID:      2088  
+    Task Category: DS RPC Client  
+    Level:         Warning  
+    Keywords:      Classic  
+    User:          ANONYMOUS LOGON  
+    Computer:      \<dc name>.\<domain name>  
     Description:
-    ```
 
     Active Directory Domain Services couldn't use DNS to resolve the IP address of the source domain controller listed below. To maintain the consistency of Security groups, group policy, users, and computers and their passwords, Active Directory Domain Services successfully replicated using the NetBIOS or fully qualified computer name of the source domain controller.
 
@@ -215,14 +204,12 @@ Destination DCs resolve source DCs in DNS by their fully qualified CNAME records
 
      The "DSA Object GUID" field in the header of the remoted /SHOWREPl command contains the objectGUID of the source DCs *current* NTDS settings object. Use the source DCs' view of its NTDS Settings Object in case replication is slow / failing. The header of the repadmin output will look something like:
 
-    ```console
-    Default-First-Site-Name\CONTOSO-DC1
-    DSA Options: IS_GC
-    Site Options: (none)
-    DSA object GUID: 8a7baee5-cd81-4c8c-9c0f-b10030574016   <- right click + copy this string to the Windows
-                                                                                                     <- clipboard & paste into it the PING command in
-                                                                                                     <- step 4
-    ```
+    > Default-First-Site-Name\CONTOSO-DC1  
+    DSA Options: IS_GC  
+    Site Options: (none)  
+    DSA object GUID: 8a7baee5-cd81-4c8c-9c0f-b10030574016   <- right click + copy this string to the Windows  
+    <- clipboard & paste into it the PING command in  
+    <- step 4  
 
 2. Locate the ObjectGUID of the source DC in the *destination* DCs' copy of Active Directory.
 
@@ -236,25 +223,21 @@ Destination DCs resolve source DCs in DNS by their fully qualified CNAME records
 
      REPADMIN /SHOWREPL output is shown below. The "DSA Object GUID" field is listed for each source DC the destination DC inbound replicates from.
 
-    ```console
-    c:\>repadmin /showreps contoso-dc1.contoso.com
-
-    Default-First-Site-Name\CONTOSO-DC1
-    DSA Options: IS_GC
-    Site Options: (none)
-    DSA object GUID: e15fc9a1-82f8-4a99-97f2-8e715f06e747
-    DSA invocationID: e15fc9a1-82f8-4a99-97f2-8e715f06e747
-
-    ==== INBOUND NEIGHBORS ======================================
-
-     DC=contoso,DC=com
-        Default-First-Site-Name\CONTOSO-DC2 via RPC
-            DSA object GUID: 8a7baee5-cd81-4c8c-9c0f-b10030574016      <- Object GUID for source DC derived from
-            Last attempt @ 2010-03-24 15:45:15 failed, result 8524 (0x214c):        \ destination DCs copy of Active Directory
+   ```console
+    c:\>repadmin /showreps `contoso-dc1.contoso.com`  
+    Default-First-Site-Name\CONTOSO-DC1  
+    DSA Options: IS_GC  
+    Site Options: (none)  
+    DSA object GUID:  
+    DSA invocationID:  
+     DC=contoso,DC=com  
+        Default-First-Site-Name\CONTOSO-DC2 via RPC  
+            DSA object GUID: 8a7baee5-cd81-4c8c-9c0f-b10030574016      <- Object GUID for source DC derived from  
+            Last attempt @ 2010-03-24 15:45:15 failed, result 8524 (0x214c):        \ destination DCs copy of Active Directory  
                 The DSA operation is unable to proceed because of a DNS lookup failure.
-            23 consecutive failure(s).
+            23 consecutive failure(s).  
             Last success @ YYYY-MM-DD HH:MM:SS.
-    ```
+   ```
 
 3. Compare the object GUID from #2 and #3.
 
@@ -264,11 +247,11 @@ Destination DCs resolve source DCs in DNS by their fully qualified CNAME records
 
     From the console of the destination DC, test Active Directory's name resolution with a PING of the source DCs fully qualified CNAME record:
 
-     c:\\>ping \<ObjectGUID from source DCs NTDS Settings object._msdcs.<DNS name for Active Directory forest root domain>
+     `c:\>ping <ObjectGUID> from source DCs NTDS Settings object._msdcs.<DNS name for Active Directory forest root domain>`
 
      Using our example of the **8a7baee5...** objectGUID from the repadmin /showreps output above from the contoso-dc1 DC in the `contoso.com` domain, the PING syntax would be:
 
-     c:\\>ping **8a7baee5-cd81-4c8c-9c0f-b10030574016.** _msdcs.contoso.com
+     `c:\>ping 8a7baee5-cd81-4c8c-9c0f-b10030574016. _msdcs.contoso.com`
 
      If ping works, retry the failing operation in Active Directory. If PING fails, proceed to the "Resolve the 8524 DNS lookup failure" but retrying the PING test after each step until it resolves.  
 
@@ -311,7 +294,7 @@ The error message text in DS RPC Client event 2087 documents a user action for r
         Run the following NSLOOKUP queries:
 
         ```console
-              c:\>nslookup -type=soa  <Source DC DNS domain name> <source DCs primary DNS Server IP >
+        c:\>nslookup -type=soa  <Source DC DNS domain name> <source DCs primary DNS Server IP >
         c:\>nslookup -type=soa  < Source DC DNS domain name > <source DCs secondary DNS Server IP >
         c:\>nslookup -type=soa  <_msdcs.<forest root DNS domain> <source DCs primary DNS Server IP >
         c:\>nslookup -type=soa  <_msdcs.<forest root DNS domain> <source DCs secondary DNS Server IP >
@@ -320,7 +303,7 @@ The error message text in DS RPC Client event 2087 documents a user action for r
         For example, if a DC in the `CHILD.CONTOSO.COM` domain of the `contoso.com` forest is configured with the primary and secondary DNS Server IPs "10.45.42.99" and "10.45.42.101", the NSLOOKUP syntax would be:
 
         ```console
-              c:\>nslookup -type=soa  child.contoso.com 10.45.42.99
+        c:\>nslookup -type=soa  child.contoso.com 10.45.42.99
         c:\>nslookup -type=soa  child.contoso.com 10.45.42.101
         c:\>nslookup -type=soa  _msdcs.contoso.com 10.45.42.99
         c:\>nslookup -type=soa  _msdcs.contoso.com 10.45.42.101

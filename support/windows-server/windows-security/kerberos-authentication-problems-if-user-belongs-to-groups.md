@@ -17,7 +17,7 @@ ms.technology: WindowsSecurity
 
 This article helps you solve the problems of Kerberos authentication failure when a user belongs to many groups.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows 10 - all editions  
+_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 327825
 
 ## Symptoms
@@ -121,10 +121,3 @@ A `MaxTokenSize` value of 48,000 bytes should be sufficient for most implementat
   Previous versions of this article discussed values of up to 100,000 bytes for `MaxTokenSize`. However, we have found that versions of SMS Administrator have problems when the `MaxTokenSize` is 100,000 bytes or larger.
 
   We have also identified that the IPSEC IKE protocol does not allow a security BLOB to become larger than 66,536 bytes, and it would also fail when `MaxTokenSize` is set to a larger value.
-
-## Applies to
-
-- Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012 R2
-- Windows 10 - all editions

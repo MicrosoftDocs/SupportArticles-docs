@@ -24,23 +24,21 @@ _Original KB number:_ &nbsp; 244780
 
 When you write information to the physical disk, the following event message may be logged in the System log:
 
-```console
-Event ID: 51
-Event Type: Warning
-Event Source: Disk
-Description: An error was detected on device \Device\Harddisk3\DR3 during a paging operation.
-Data:
-0000: 04 00 22 00 01 00 72 00
-0008: 00 00 00 00 33 00 04 80
-0010: 2d 01 00 00 00 00 00 00
-0018: 00 00 00 00 00 00 00 00
-0020: 00 52 ea 04 15 00 00 00
-0028: 01 00 00 00 04 00 00 00
-0030: 03 00 00 00 2a 00 00 00
-0038: 02 84 00 00 00 29 06 00
-0040: 2a 60 0a 82 75 29 00 00
+> Event ID: 51  
+Event Type: Warning  
+Event Source: Disk  
+Description: An error was detected on device \Device\Harddisk3\DR3 during a paging operation.  
+Data:  
+0000: 04 00 22 00 01 00 72 00  
+0008: 00 00 00 00 33 00 04 80  
+0010: 2d 01 00 00 00 00 00 00  
+0018: 00 00 00 00 00 00 00 00  
+0020: 00 52 ea 04 15 00 00 00  
+0028: 01 00 00 00 04 00 00 00  
+0030: 03 00 00 00 2a 00 00 00  
+0038: 02 84 00 00 00 29 06 00  
+0040: 2a 60 0a 82 75 29 00 00  
 0048: 80 00
-```
 
 > [!NOTE]
 > The device in the description and the specific hexadecimal data may vary.

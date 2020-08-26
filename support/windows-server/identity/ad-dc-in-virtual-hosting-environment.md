@@ -17,7 +17,7 @@ ms.technology: ActiveDirectory
 
 This article describes the issues that affect a Microsoft Windows Server-based domain controller (DC) that runs as a guest operating system in virtual hosting environments, and the things to consider when a DC runs in a virtual hosting environment.
 
-_Original product version:_ &nbsp; Windows Server 2019  
+_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 888794
 
 ## Summary
@@ -90,9 +90,3 @@ When you deploy an Active Directory DC on a physical computer, certain requireme
 ## Support for Active Directory DCs in virtual hosting environments
 
 For more information about the supportability of hosting DCs in Microsoft and third-party virtual hosting environments, see [Support policy for Microsoft software that runs on non-Microsoft hardware virtualization software](https://support.microsoft.com/help/897615/support-policy-for-microsoft-software-that-runs-on-non-microsoft-hardw).
-
-## Applies to
-
-- Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012 R2

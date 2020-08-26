@@ -17,7 +17,7 @@ ms.technology: Networking
 
 This article describes information about Windows disabling guest access in SMB2 by default, and provides settings to enable insecure guest logons in Group Policy. However, this is generally not recommended.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019  
+_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 4046019
 
 ## Symptoms
@@ -41,20 +41,18 @@ Also, if a remote server tries to force you to use guest access, or if an admini
 
 ### Log entry 1
 
-```console
-Log Name: Microsoft-Windows-SmbClient/Security
-Source: Microsoft-Windows-SMBClient
-Date: Date/Time
-Event ID: 31017
-Task Category: None
-Level: Error
-Keywords: (128)
-User: NETWORK SERVICE
-Computer: ServerName.contoso.com
-Description: Rejected an insecure guest logon.
-User name: Ned
+> Log Name: Microsoft-Windows-SmbClient/Security  
+Source: Microsoft-Windows-SMBClient  
+Date: Date/Time  
+Event ID: 31017  
+Task Category: None  
+Level: Error  
+Keywords: (128)  
+User: NETWORK SERVICE  
+Computer: ServerName.contoso.com  
+Description: Rejected an insecure guest logon.  
+User name: Ned  
 Server name: ServerName
-```
 
 #### Guidance
 
@@ -62,18 +60,16 @@ This event indicates that the server tried to log on the user as an unauthentica
 
 ### Log entry 2
 
-```console
-Log Name: Microsoft-Windows-SmbClient/Security
-Source: Microsoft-Windows-SMBClient
-Date: Date/Time
-Event ID: 31018
-Task Category: None
-Level: Warning
-Keywords: (128)
-User: NETWORK SERVICE
-Computer: ServerName.contoso.com
+> Log Name: Microsoft-Windows-SmbClient/Security  
+Source: Microsoft-Windows-SMBClient  
+Date: Date/Time  
+Event ID: 31018  
+Task Category: None  
+Level: Warning  
+Keywords: (128)  
+User: NETWORK SERVICE  
+Computer: ServerName.contoso.com  
 Description: The AllowInsecureGuestAuth registry value is not configured with default settings.
-```
 
 Default registry value:  
 `[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters] "AllowInsecureGuestAuth"=dword:0`
@@ -111,9 +107,3 @@ This setting has no effect on SMB1 behavior. SMB1 continues to use guest access 
 
 > [!NOTE]
 > SMB1 is uninstalled by default in latest Windows 10 and Windows Server configurations. For more information, see [SMBv1 is not installed by default in Windows 10 version 1709, Windows Server version 1709 and later versions](/windows-server/storage/file-server/troubleshoot/smbv1-not-installed-by-default-in-windows).
-
-## Applies to
-
-- Windows 10 - all editions
-- Windows Server 2019
-- Windows Server 2016

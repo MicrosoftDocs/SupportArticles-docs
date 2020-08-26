@@ -17,7 +17,7 @@ ms.technology: GroupPolicy
 
 This article describes how to use the new .admx and .adml files to create and administer registry-based policy settings in Windows. This article also explains how the Central Store is used to store and to replicate Windows-based policy files in a domain environment.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019  
+_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2012 R2, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 3087759
 
 ## Links to download the Administrative Templates files based on the operating system version
@@ -118,10 +118,3 @@ You can also use this setting to:
   Updated ADMX/L files for Windows 10, version1803 contain only SearchOCR.ADML. This is not compatible with an older release of SearchOCR.ADMX that you still have in the Central Store. Details on the problem, see ["Resource '$(string ID=Win7Only)' referenced in attribute displayName could not be found" error when you open gpedit.msc in Windows](https://support.microsoft.com/help/4292332).
   
   Both of these problems can be avoided by building a pristine PolicyDefinitions folder from a base OS release folder as described above.
-
-## Applies to
-
-- Windows 10 - all editions
-- Windows 7 Service Pack 1
-- Windows Server 2019
-- Windows Server 2012 R2

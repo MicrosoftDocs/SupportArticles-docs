@@ -17,7 +17,7 @@ ms.technology: ActiveDirectory
 
 This article provides information on how to restore deleted user accounts and group memberships in Active Directory.
 
-_Original product version:_ &nbsp; Windows Server 2019  
+_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, WIndows Server 2012 R2  
 _Original KB number:_ &nbsp; 840001
 
 ## Introduction
@@ -956,9 +956,3 @@ The third-party products that this article discusses are manufactured by compani
 For more information, see [Description of the standard terminology that is used to describe Microsoft software updates](https://support.microsoft.com/help/824684).
 
 For more information on how to use the AD Recycle Bin feature included in Windows Server 2008 R2, see [Active Directory Recycle Bin Step-by-Step Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd392261(v=ws.10)).
-
-## Applies to
-
-- Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012 R2

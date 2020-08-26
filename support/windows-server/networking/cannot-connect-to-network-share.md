@@ -17,7 +17,7 @@ ms.technology: Networking
 
 This article provides workarounds to solve the error messages that occur when you try to use different user credentials to connect to the other network share.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2
+_Original product version:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 938120
 
 ## Symptoms
@@ -49,15 +49,3 @@ Use the IP address of the remote server when you try to connect to the network s
 Create a different Domain Name System (DNS) alias for the remote server, and then use this alias to connect to the network share.
 
 After you use one of these methods, you can use different user credentials to connect to the network share. In this situation, the computer behaves as if it is connecting to a different server.
-
-## Applies to
-
-- Windows 8.1
-- Windows 7 Service Pack 1
-- Windows Server 2012 R2 Essentials
-- Windows Server 2012 R2 Standard
-- Windows Server 2012 R2 Datacenter
-- Windows Server 2012 Standard
-- Windows Server 2012 Essentials
-- Windows Server 2012 Datacenter
-- Windows Server 2008 R2 Service Pack 1 (for ESU only)

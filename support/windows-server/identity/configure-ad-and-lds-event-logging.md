@@ -17,7 +17,7 @@ ms.technology: ActiveDirectory
 
 This step-by-step article describes how to configure Active Directory diagnostic event logging in Microsoft Windows Server operating systems.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows 7 Service Pack 1  
+_Original product version:_ &nbsp; Windows Server 2019, , Windows Server 2016, Windows Server 2012 R2, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 314980
 
 ## Summary
@@ -100,10 +100,3 @@ To configure Active Directory diagnostic event logging, follow these steps.
     >
     > - Logging levels should be set to the default value of 0 (None) unless you are investigating an issue.
     > - When you increase the logging level, the detail of each message and the number of messages that are written to the event log also increase. A diagnostic level of 3 or greater is not recommended, because logging at these levels requires more system resources and can degrade the performance of your server. Make sure that you reset the entries to 0 after you finish investigating the problem.
-
-## Applies to
-
-- Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012 R2
-- Windows 7 Service Pack 1
