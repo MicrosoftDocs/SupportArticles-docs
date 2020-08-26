@@ -15,8 +15,6 @@ ms.technology: Deployment
 ---
 # Error when you install WID in Windows Server 2012: MSSQL$MICROSOFT##WID service was unable to log on as NT SERVICE\MSSQL$MICROSOFT##WID
 
-## Introduction
-
 This article provides workarounds for an issue in which installation of WID fails on a computer that's running Windows Server 2012.
 
 _Original product version:_ &nbsp;Windows Server 2012 R2  

@@ -15,8 +15,6 @@ ms.technology: ActiveDirectory
 ---
 # Error when you run the Adprep /rodcprep command in Windows Server 2008: Adprep could not contact a replica for partition DC=DomainDnsZones,DC=Contoso,DC=com
 
-## Introduction
-
 This article provides a resolution for a problem in which the `Adprep /rodcprep` command isn't completed successfully because the infrastructure master for one or more active directory NDNCs isn't reachable.
 
 _Original product version:_ &nbsp;Windows Server 2012 R2  

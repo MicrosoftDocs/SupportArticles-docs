@@ -15,8 +15,6 @@ ms.technology: Networking
 ---
 # Cumulative list of reasons that DNS records disappear from DNS zones
 
-## Introduction
-
 This article lists the causes of the issue where DNS records don't show in a DNS zone.
 
 _Original product version:_ &nbsp;Windows Server 2012 R2  

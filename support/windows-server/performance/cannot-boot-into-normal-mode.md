@@ -15,8 +15,6 @@ ms.technology: Performance
 ---
 # Unable to boot into normal mode, machine keeps booting into safe mode
 
-## Introduction
-
 This article provides steps to fix an issue in which machines can't boot into the normal mode and keep on restarting into the safe mode.
 
 _Original product version:_ &nbsp;Windows 10 - all editions, Windows Server 2012 R2  

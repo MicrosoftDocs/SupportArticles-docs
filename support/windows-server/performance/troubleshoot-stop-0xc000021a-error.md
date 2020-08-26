@@ -15,8 +15,6 @@ ms.technology: Performance
 ---
 # How to troubleshoot a STOP 0xC000021A error in Windows XP or Windows Server 2003
 
-## Introduction
-
 This article presents advanced troubleshooting steps for the STOP 0xC000021A error.
 
 **Home users**: This article is intended for use by support agents and IT professionals. If you're looking for more information about a blue-screen error code while using your computer, see [Troubleshoot blue-screen errors](https://windows.microsoft.com/windows-10/troubleshoot-blue-screen-errors).

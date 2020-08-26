@@ -15,8 +15,6 @@ ms.technology: BackupStorage
 ---
 # Error 0x8000FFFF when you run the vssadmin list writers command on a Windows Server 2003-based computer
 
-## Introduction
-
 This article resolves a problem that occurs when you use the `vssadmin list writers` command on a Windows Server 2003-based computer. when the issue occurs, you may receive an error message, an event, or the list may be blank.
 
 _Original product version:_ &nbsp;Windows Server 2003  

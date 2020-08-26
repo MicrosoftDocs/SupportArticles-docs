@@ -15,8 +15,6 @@ ms.technology: UserProfilesAndLogon
 ---
 # First logon fails with error: The universal unique identifier (UUID) type is not supported
 
-## Introduction
-
 This article describes a situation in which a user receives a UUID error message at the first logon of a Windows 8 or Windows 8.1 image. This issue occurs when the image was deployed by using System Center 2012 Configuration Manager or System Center 2012 R2 Configuration Manager.
 
 _Original product version:_ &nbsp;Windows 10 - all editions  

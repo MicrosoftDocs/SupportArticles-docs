@@ -15,8 +15,6 @@ ms.technology: Networking
 ---
 # New features and functionality in PortQry version 2.0  
 
-## Introduction
-
 This article discusses the new features and functionality that are available in PortQry Command Line Port Scanner version 2.0.
 
 _Original product version:_ &nbsp;Windows 10 - all editions, Windows Server 2012 R2  
@@ -536,26 +534,28 @@ You can use the following command-line options with PortQry:
 
     Sample batch file
 
-    > :Top  
+   ```console
+    :Top  
     portqry -n 169.254.18.22 -e 135 -p tcp -q  
     if errorlevel = 2 goto filtered  
     if errorlevel = 1 goto failed  
     if errorlevel = 0 goto success  
     goto end
-    >
-    > :filtered  
+
+    :filtered  
     Echo Port is listening or filtered  
     goto end  
-    >
-    > :failed  
+
+    :failed  
     Echo Port is not listening  
     Goto end  
-    >
-    > :success  
+
+    :success  
     Echo Port is listening  
     goto end  
-    >
-    > :end
+
+    :end
+   ```
 
 - **-cn** (community name): This parameter is optional. Use this parameter to specify a community string or community name to use when you send an SNMP query. With this parameter, you must enclose the community string with exclamation marks (!). This parameter is ignored if you don't query a port where SNMP is listening.
 
