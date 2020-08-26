@@ -71,9 +71,9 @@ The device creates the tracking policy for this phase, calculates all apps and p
 
   ESP doesn't track any security policies such as device restriction. However, these policies are installed in the background. You will always see **(1 of 1) completed** on the UI.
 
-- Certificates
+- Certificates profiles
 
-   Only SCEP certificate deployed in device context is installed. If the device is unable to get the certificate, it will keep trying until timeout occurs. In this case, ESP fails.
+   Only SCEP certificate profiles deployed in device context are installed. If the device is unable to get the certificate profile, it will keep trying until timeout occurs. In this case, ESP fails.
 
 - Network profiles
 
@@ -102,9 +102,9 @@ The device creates the tracking policy for this phase, calculates all apps and p
 
   Similar to the device setup phase, ESP doesn't track any security policies such as device restriction. However, these policies are installed in the background. You will always see **(1 of 1) completed** on the UI.
 
-- Certificates
+- Certificate profiles
 
-   Only SCEP certificate deployed in user context is installed. If the device is unable to get the certificate, it will keep trying until timeout occurs. In this case, ESP fails.
+   Only SCEP certificate profiles deployed in user context are installed. If the device is unable to get the certificate profile, it will keep trying until timeout occurs. In this case, ESP fails.
 
 - Network profiles
 
