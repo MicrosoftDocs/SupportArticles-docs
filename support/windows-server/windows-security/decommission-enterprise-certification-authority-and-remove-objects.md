@@ -64,31 +64,29 @@ By default, an enterprise CA does not store certificate requests. However, an ad
 
     This command will display the names of all the installed cryptographic service providers (CSP) and the key stores that are associated with each provider. Listed among the listed key stores will be the name of your CA. The name will be listed several times, as shown in the following example:
 
-    ```console
-    (1)Microsoft Base Cryptographic Provider v1.0:
-     1a3b2f44-2540-408b-8867-51bd6b6ed413
-     MS IIS DCOM ClientSYSTEMS-1-5-18
-     MS IIS DCOM Server
-     Windows2000 Enterprise Root CA
-     MS IIS DCOM ClientAdministratorS-1-5-21-436374069-839522115-1060284298-500
-
-     afd1bc0a-a93c-4a31-8056-c0b9ca632896
-     Microsoft Internet Information Server
-     NetMon
+    > (1)Microsoft Base Cryptographic Provider v1.0:  
+     1a3b2f44-2540-408b-8867-51bd6b6ed413  
+     MS IIS DCOM ClientSYSTEMS-1-5-18  
+     MS IIS DCOM Server  
+     Windows2000 Enterprise Root CA  
+     MS IIS DCOM  ClientAdministratorS-1-5-21-436374069-839522115-1060284298-500
+    >
+    > afd1bc0a-a93c-4a31-8056-c0b9ca632896  
+     Microsoft Internet Information Server  
+     NetMon  
+     MS IIS DCOM   ClientAdministratorS-1-5-21-842925246-1715567821-839522115-500
+    >
+    > (5)Microsoft Enhanced Cryptographic Provider v1.0:  
+     1a3b2f44-2540-408b-8867-51bd6b6ed413  
+     MS IIS DCOM ClientSYSTEMS-1-5-18  
+     MS IIS DCOM Server  
+     Windows2000 Enterprise Root CA  
+     MS IIS DCOM   ClientAdministratorS-1-5-21-436374069-839522115-1060284298-500
+    >
+    > afd1bc0a-a93c-4a31-8056-c0b9ca632896  
+     Microsoft Internet Information Server  
+     NetMon  
      MS IIS DCOM ClientAdministratorS-1-5-21-842925246-1715567821-839522115-500
-
-    (5)Microsoft Enhanced Cryptographic Provider v1.0:
-     1a3b2f44-2540-408b-8867-51bd6b6ed413
-     MS IIS DCOM ClientSYSTEMS-1-5-18
-     MS IIS DCOM Server
-     Windows2000 Enterprise Root CA
-     MS IIS DCOM ClientAdministratorS-1-5-21-436374069-839522115-1060284298-500
-
-     afd1bc0a-a93c-4a31-8056-c0b9ca632896
-     Microsoft Internet Information Server
-     NetMon
-     MS IIS DCOM ClientAdministratorS-1-5-21-842925246-1715567821-839522115-500
-    ```
 
 4. Delete the private key that is associated with the CA. To do this, at a command prompt, type the following command, and then press Enter:
 

@@ -56,24 +56,20 @@ To resolve this problem, modify the desktop heap size. To do this, follow these 
 
 By default, the Windows registry entry contains the following data in an x86-based version of Windows 7 Service Pack 1.
 
-```console
-%SystemRoot%\system32\csrss.exe
-ObjectDirectory=\Windows
-SharedSection=1024, 12288,512
-Windows=On
-SubSystemType=Windows
-ServerDll=basesrv,1
-ServerDll=winsrv:UserServerDllInitialization,3
-ServerDll=winsrv:ConServerDllInitialization,2
-ProfileControl=Off
+> %SystemRoot%\system32\csrss.exe  
+ObjectDirectory=\Windows  
+SharedSection=1024, 12288,512  
+Windows=On  
+SubSystemType=Windows  
+ServerDll=basesrv,1  
+ServerDll=winsrv:UserServerDllInitialization,3  
+ServerDll=winsrv:ConServerDllInitialization,2  
+ProfileControl=Off  
 MaxRequestThreads=16
-```
 
 Windows 7 Service Pack 1 (64 bit) / Windows Server 2008 R2, 2012 R2 (64 bit)
 
-```console
-SharedSection=1024, 20480,768
-```
+> SharedSection=1024, 20480,768
 
 In later operating systems, memory allocations are dynamic. Therefore, there is no limitation for memory allocation. However, if you allocate too much memory to the desktop heap, negative performance may occur. This is the reason why we don't recommend that you set a value that is over **20480**.
 

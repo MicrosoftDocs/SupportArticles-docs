@@ -43,46 +43,44 @@ Additionally, you see the following entry in the System log:
 
 And you see the following entry in the Application log:
 
-```console
-Faulting application name: vmcompute.exe, version: 10.0.16299.15, time stamp: 0x1a906fe6
-Faulting module name: vmcompute.exe, version: 10.0.16299.15, time stamp: 0x1a906fe6
-Exception code: 0xc0000005
-Fault offset: 0x000000000000474b
-Faulting process id: 0x3d78
-Faulting application start time: 0x01d34d80559647e6
-Faulting application path: C:\WINDOWS\system32\vmcompute.exe
-Faulting module path: C:\WINDOWS\system32\vmcompute.exe
-Report Id: ReportID
-Faulting package full name:
-Faulting package-relative application ID:
-Response: Not available
-Cab Id: 0
-Problem signature:
-P1: vmcompute.exe
-P2: 10.0.16299.15
-P3: 1a906fe6
-P4: vmcompute.exe
-P5: 10.0.16299.15
-P6: 1a906fe6
-P7: c0000005
-P8: 000000000000474b
-P9:
-P10:
-Attached files:
-\\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER98A7.tmp.mdmp
-\\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER9974.tmp.WERInternalMetadata.xml
-\\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER9981.tmp.csv
-\\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER99C1.tmp.txt
-\\?\C:\Windows\Temp\WER99C3.tmp.appcompat.txt
-C:\ProgramData\Microsoft\Windows\WER\ReportQueue\AppCrash_vmcompute.exe_101d36662442e0c1debf6dea58c1dd187cc5_51a43a19_cab_332099df\memory.hdmp \
-These files may be available here:
-C:\ProgramData\Microsoft\Windows\WER\ReportQueue\AppCrash_vmcompute.exe_101d36662442e0c1debf6dea58c1dd187cc5_51a43a19_cab_332099df
-Analysis symbol:
-Rechecking for solution: 0
-Report Id:ReportID
-Report Status: 4
+> Faulting application name: vmcompute.exe, version: 10.0.16299.15, time stamp: 0x1a906fe6  
+Faulting module name: vmcompute.exe, version: 10.0.16299.15, time stamp: 0x1a906fe6  
+Exception code: 0xc0000005  
+Fault offset: 0x000000000000474b  
+Faulting process id: 0x3d78  
+Faulting application start time: 0x01d34d80559647e6  
+Faulting application path: C:\WINDOWS\system32\vmcompute.exe  
+Faulting module path: C:\WINDOWS\system32\vmcompute.exe  
+Report Id: ReportID  
+Faulting package full name:  
+Faulting package-relative application ID:  
+Response: Not available  
+Cab Id: 0  
+Problem signature:  
+P1: vmcompute.exe  
+P2: 10.0.16299.15  
+P3: 1a906fe6  
+P4: vmcompute.exe  
+P5: 10.0.16299.15  
+P6: 1a906fe6  
+P7: c0000005  
+P8: 000000000000474b  
+P9:  
+P10:  
+Attached files:  
+\\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER98A7.tmp.mdmp  
+\\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER9974.tmp.WERInternalMetadata.xml  
+\\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER9981.tmp.csv  
+\\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER99C1.tmp.txt  
+\\?\C:\Windows\Temp\WER99C3.tmp.appcompat.txt  
+C:\ProgramData\Microsoft\Windows\WER\ReportQueue\AppCrash_vmcompute.  exe_101d36662442e0c1debf6dea58c1dd187cc5_51a43a19_cab_332099df\memory.hdmp \  
+These files may be available here:  
+C:\ProgramData\Microsoft\Windows\WER\ReportQueue\AppCrash_vmcompute.  exe_101d36662442e0c1debf6dea58c1dd187cc5_51a43a19_cab_332099df  
+Analysis symbol:  
+Rechecking for solution: 0  
+Report Id:ReportID  
+Report Status: 4  
 Hashed bucket: \
-```
 
 ## Cause
 

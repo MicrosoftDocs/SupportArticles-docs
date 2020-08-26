@@ -55,21 +55,17 @@ Follow these steps to control RPC dynamic port allocation. You will have to do t
 
 10. Follow steps 6 through 9 to add another key for Internet, by using these values:
 
-    ```console
-    Value: PortsInternetAvailable
-    Data Type: REG_SZ
+    > Value: PortsInternetAvailable  
+    Data Type: REG_SZ  
     Data: Y
-    ```
 
     This signifies that the ports listed under the Ports value are to be made Internet-available.
 
 11. Follow steps 6 through 9 to add another key for Internet, by using these values:
 
-    ```console
-    Value: UseInternetPorts
-    Data Type: REG_SZ
+    > Value: UseInternetPorts  
+    Data Type: REG_SZ  
     Data: Y
-    ```
 
     This signifies that RPC should dynamically assign ports from the list of Internet ports.
 
@@ -77,10 +73,8 @@ Follow these steps to control RPC dynamic port allocation. You will have to do t
 
 13. Restart the computer. When RPC restarts, it will assign incoming ports dynamically, based on the registry values that you have specified. For example, to open ports 5000 through 5020 inclusive, create these named values:
 
-    ```console
-    Ports : REG_MULTI-SZ : 5000-5020
-    PortsInternetAvailable : REG_SZ : Y
+    > Ports : REG_MULTI-SZ : 5000-5020  
+    PortsInternetAvailable : REG_SZ : Y  
     UseInternetPorts : REG_SZ : Y
-    ```
 
 DTC also requires that you are able to resolve computer names by way of NetBIOS or DNS. You can test whether or not NetBIOS can resolve the names by using ping and the server name. The client computer must be able to resolve the name of the server, and the server must be able to resolve the name of the client. If NetBIOS cannot resolve the names, you can add entries to the LMHOSTS files on the computers.

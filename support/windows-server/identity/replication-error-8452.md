@@ -24,19 +24,17 @@ _Original KB number:_ &nbsp; 2023704
 
 1. DCDIAG reports that Active Directory Replications test has failed with error status code (8452): **The naming context is in the process of being removed or is not replicated from the specified server**.
 
-    ```console
-    Testing server: <site name>\<destination dc name>
-    Starting test: Replications
-    * Replications Check
-    [Replications Check,<destination DC name>] A recent replication attempt failed:
-    From <source DC> to <destination DC>
-    Naming Context: <directory partition DN path>
-    The replication generated an error (8452):
-    The naming context is in the process of being removed or is not replicated from the specified server.
-    The failure occurred at <date> <time>.
-    The last success occurred at <date> <time>.
-    3 failures have occurred since the last success.
-    ```
+    > Testing server: \<site name>\<destination dc name>  
+    > Starting test: Replications  
+    > Replications Check  
+    > [Replications Check,\<destination DC name>] A recent replication attempt failed:  
+    > From \<source DC> to \<destination DC>  
+    > Naming Context: \<directory partition DN path>  
+    > The replication generated an error (8452):  
+    > The naming context is in the process of being removed or is not replicated from the specified server.  
+    > The failure occurred at \<date> \<time>.  
+    > The last success occurred at \<date> \<time>.  
+    > 3 failures have occurred since the last success.
 
 2. REPADMIN.EXE reports that the last replication attempt has failed with status 8452.
 

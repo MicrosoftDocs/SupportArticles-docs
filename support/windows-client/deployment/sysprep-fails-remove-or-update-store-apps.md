@@ -66,18 +66,16 @@ A fatal error occurred while trying to sysprep the machine
 
 Additionally, in the SetupErr.log, you may notice the following error entries:
 
-```console
-<Date> <Time>, Error SYSPRP Package \<PackageFullName> was installed for a user, but not provisioned for all users. This package will not function properly in the sysprep image.
-<Date> <Time>, Error SYSPRP Failed to remove apps for the current user: 0x80073cf2.
-<Date> <Time>, Error SYSPRP Exit code of RemoveAllApps thread was 0x3cf2.
-<Date> <Time>, Error [0x0f0082] SYSPRP ActionPlatform::LaunchModule: Failure occurred while executing 'SysprepGeneralize' from C:\Windows\System32\AppxSysprep.dll; dwRet = 0x3cf2
-<Date> <Time>, Error SYSPRP ActionPlatform::ExecuteAction: Error in executing action; dwRet = 0x3cf2
-<Date> <Time>, Error SYSPRP ActionPlatform::ExecuteActionList: Error in execute actions; dwRet = 0x3cf2
-<Date> <Time>, Error SYSPRP SysprepSession::Execute: Error in executing actions from C:\Windows\System32\Sysprep\ActionFiles\Generalize.xml; dwRet = 0x3cf2
-<Date> <Time>, Error SYSPRP RunPlatformActions:Failed while executing SysprepSession actions; dwRet = 0x3cf2
-<Date> <Time>, Error [0x0f0070] SYSPRP RunExternalDlls:An error occurred while running registry sysprep DLLs, halting sysprep execution. dwRet = 0x3cf2
-<Date> <Time>, Error [0x0f00a8] SYSPRP WinMain:Hit failure while processing sysprep generalize internal providers; hr = 0x80073cf2
-```
+> \<Date> \<Time>, Error SYSPRP Package \<PackageFullName> was installed for a user, but not provisioned for all users. This package will not function properly in the sysprep image.  
+\<Date> \<Time>, Error SYSPRP Failed to remove apps for the current user: 0x80073cf2.  
+\<Date> \<Time>, Error SYSPRP Exit code of RemoveAllApps thread was 0x3cf2.  
+\<Date> \<Time>, Error [0x0f0082] SYSPRP ActionPlatform::LaunchModule: Failure occurred while executing 'SysprepGeneralize' from C:\Windows\System32\AppxSysprep.dll; dwRet = 0x3cf2  
+\<Date> \<Time>, Error SYSPRP ActionPlatform::ExecuteAction: Error in executing action; dwRet = 0x3cf2  
+\<Date> \<Time>, Error SYSPRP ActionPlatform::ExecuteActionList: Error in execute actions; dwRet = 0x3cf2  
+\<Date> \<Time>, Error SYSPRP SysprepSession::Execute: Error in executing actions from C:\Windows\System32\Sysprep\ActionFiles\Generalize.xml; dwRet = 0x3cf2  
+\<Date> \<Time>, Error SYSPRP RunPlatformActions:Failed while executing SysprepSession actions; dwRet = 0x3cf2  
+\<Date> \<Time>, Error [0x0f0070] SYSPRP RunExternalDlls:An error occurred while running registry sysprep DLLs, halting sysprep execution. dwRet = 0x3cf2  
+\<Date> \<Time>, Error [0x0f00a8] SYSPRP WinMain:Hit failure while processing sysprep generalize internal providers; hr = 0x80073cf2
 
 ## Cause
 

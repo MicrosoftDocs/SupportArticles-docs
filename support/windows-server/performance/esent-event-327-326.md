@@ -24,31 +24,26 @@ _Original KB number:_ &nbsp; 2900773
 
 While using Windows Server 2012 and later versions, events as shown below are logged in the application event log at high frequency (about 5 times/sec) regarding SystemIdentity.mdb.
 
-```console
-------------------------------------------------------------------------------
-Source: ESENT
-Event ID: 327
-Task category: General
-Level: Information
-Keyword: Classic
-Description:
-svchost (2576) database engine has attached database (2, C:\Windows\system32\LogFiles\Sum\SystemIdentity.mdb). (Time=0 sec)
-
-Internal timing sequence: [1] 0.000, [2] 0.000, [3] 0.000, [4] 0.000, [5] 0.000, [6] 0.032, [7] 0.000, [8] 0.000, [9] 0.000, [10] 0.000, [11] 0.000, [12] 0.015.
-Recovery cache: 0
-------------------------------------------------------------------------------
-Source: ESENT
-Event ID: 326
-Task category: General
-Level: Information
-Keyword: Classic
-Description:
-svchost (2576) database engine has attached database (2, C:\Windows\system32\LogFiles\Sum\SystemIdentity.mdb). (Time=0 sec)
-
-Internal timing sequence: [1] 0.000, [2] 0.000, [3] 0.281, [4] 0.000, [5] 0.000, [6] 0.000, [7] 0.000, [8] 0.000, [9] 0.000, [10] 0.000, [11] 0.000, [12] 0.000.
+> Source: ESENT  
+Event ID: 327  
+Task category: General  
+Level: Information  
+Keyword: Classic  
+Description:  
+svchost (2576) database engine has attached database (2, C:\Windows\system32\LogFiles\Sum\SystemIdentity.mdb). (Time=0 sec)  
+>
+> Internal timing sequence: [1] 0.000, [2] 0.000, [3] 0.000, [4] 0.000, [5] 0.000, [6] 0.032, [7] 0.000, [8] 0.000, [9] 0.000, [10] 0.000, [11] 0.000, [12] 0.015.
+Recovery cache: 0  
+Source: ESENT  
+Event ID: 326  
+Task category: General  
+Level: Information  
+Keyword: Classic  
+Description:  
+svchost (2576) database engine has attached database (2, C:\Windows\system32\LogFiles\Sum\SystemIdentity.mdb). (Time=0 sec)  
+>
+> Internal timing sequence: [1] 0.000, [2] 0.000, [3] 0.281, [4] 0.000, [5] 0.000, [6] 0.000, [7] 0.000, [8] 0.000, [9] 0.000, [10] 0.000, [11] 0.000, [12] 0.000.  
 Storage cache: 1
-------------------------------------------------------------------------------
-```
 
 As a result, the application event log will be filled up and other events may be difficult to confirm.
 

@@ -135,13 +135,11 @@ The File Checksum Integrity Verifier (FCIV) utility can store entries in an XML 
 
 The following example shows how FCIV computes the MD5 hash value for Ntdll.dll and displays it at the command prompt:
 
-```console
-C:\WINDOWS\system32>fciv -add ntdll.dll
-//
-// File Checksum Integrity Verifier version 2.05.
-//
-6cbfd919baa7c9e03c8471ae4d8f8bb0 ntdll.dll
-```
+> C:\WINDOWS\system32>fciv -add ntdll.dll  
+> //  
+> // File Checksum Integrity Verifier version 2.05.  
+> //  
+> 6cbfd919baa7c9e03c8471ae4d8f8bb0 ntdll.dll
 
 Here is the hash value for the same file that is base64 encoded and stored in an XML file by using the following command:
 
@@ -164,18 +162,14 @@ Here is the value that appears in the XML file that uses FCIV to list the conten
 > [!NOTE]
 > It matches the value that was computed in the first example.
 
-```console
-C:\WINDOWS\system32>fciv -list -XML c:\temp\ntdll.XML
-//
-// File Checksum Integrity Verifier version 2.05.
-//
-Listing entries in database:
-----------------------------
-               MD5                             Filename
--------------------------------------------------------------------------
-6cbfd919baa7c9e03c8471ae4d8f8bb0 ntdll.dll
+> C:\WINDOWS\system32>fciv -list -XML c:\temp\ntdll.XML  
+> //  
+> // File Checksum Integrity Verifier version 2.05.  
+> //  
+> Listing entries in database:
+> MD5 Filename  
+6cbfd919baa7c9e03c8471ae4d8f8bb0 ntdll.dll  
 Number of entries found: 1
-```
 
 ## Verification
 

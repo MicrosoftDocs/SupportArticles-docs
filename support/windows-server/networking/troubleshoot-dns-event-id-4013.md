@@ -116,12 +116,10 @@ In Windows Server 2003 and in Windows 2000 Server SP3 or later, the domain contr
 
 Some Microsoft and external content have recommended setting the registry value `Repl Perform Initial Synchronizations` to **0** in order to bypass initial synchronization requirements in Active Directory. The specific registry subkey and the values for that setting are as follows:
 
-```console
-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters
-Value name:  Repl Perform Initial Synchronizations
-Value type:  REG_DWORD
+> HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters  
+Value name:  Repl Perform Initial Synchronizations  
+Value type:  REG_DWORD  
 Value data: 0
-```
 
 This configuration change isn't recommended for use in production environments or in any environment on an ongoing basis. The use of `Repl Perform Initial Synchronizations` should be used only in critical situations to resolve temporary and specific problems. The default setting should be restored after such problems are resolved.
 
@@ -217,106 +215,100 @@ Several tests were performed to validate the above behavior.
 
 - Reboot domain controller when DNS server is a third domain controller that is online. For each naming context each source, we have two DNS queries and they finished almost instantaneously:
 
-    ```console
-    in I_DRSGetNCChanges, NC = CN=Configuration,DC=contoso,DC=com
-    in getContextBindingHelper, pszAddress = dded5a29-fc25-4fd8-aa98-7f472fc6f09b._msdcs.contoso.com
-    in resolveDnsAddressWithFallback
-    GUID based DNS name
-    in GetIpVxAddrByDnsNameW
-    in GetIpAddrByDnsNameHelper
-    start GetAddrInfoW: 22:31:40.534
+    > in I_DRSGetNCChanges, NC = CN=Configuration,DC=contoso,DC=com
+    in getContextBindingHelper, pszAddress = dded5a29-fc25-4fd8-aa98-7f472fc6f09b._msdcs.contoso.com  
+    in resolveDnsAddressWithFallback  
+    GUID based DNS name  
+    in GetIpVxAddrByDnsNameW  
+    in GetIpAddrByDnsNameHelper  
+    start GetAddrInfoW: 22:31:40.534  
+    end   GetAddrInfoW: 22:31:40.534  
+    in GetIpAddrByDnsNameHelper  
+    start GetAddrInfoW: 22:31:40.534  
     end   GetAddrInfoW: 22:31:40.534
-    in GetIpAddrByDnsNameHelper
-    start GetAddrInfoW: 22:31:40.534
-    end   GetAddrInfoW: 22:31:40.534
-    ```
 
 - Reboot DC1 and DC2 simultaneously. DC1 is using DC2 for DNS DC2 is using DC1 for DNS. For each naming context each source, we have 10 DNS queries and each query takes about 12 seconds:
 
-    ```console
-    in I_DRSGetNCChanges, NC = CN=Configuration,DC=contoso,DC=com
-    in getContextBindingHelper, pszAddress = dded5a29-fc25-4fd8-aa98-7f472fc6f09b._msdcs.contoso.microsoft.com
-    in resolveDnsAddressWithFallback
-    GUID based DNS name
-    in GetIpVxAddrByDnsNameW
-    in GetIpAddrByDnsNameHelper
-    start GetAddrInfoW: 22:37:43.066
-    end   GetAddrInfoW: 22:37:55.113
-    in GetIpAddrByDnsNameHelper
-    start GetAddrInfoW: 22:37:55.113
-    end   GetAddrInfoW: 22:38:07.131
-    in GetIpAddrByDnsNameHelper
-    start GetAddrInfoW: 22:38:07.131
-    end   GetAddrInfoW: 22:38:19.161
-    in GetIpAddrByDnsNameHelper
-    start GetAddrInfoW: 22:38:19.176
-     end   GetAddrInfoW: 22:38:31.185
-    FQDN
-    in GetIpVxAddrByDnsNameW
-    in GetIpAddrByDnsNameHelper
-    start GetAddrInfoW: 22:38:31.200
-    end   GetAddrInfoW: 22:38:43.182
-    in GetIpAddrByDnsNameHelper
-    start GetAddrInfoW: 22:38:43.182
-    end   GetAddrInfoW: 22:38:55.191
-    in GetIpAddrByDnsNameHelper
-    start GetAddrInfoW: 22:38:55.191
-    end   GetAddrInfoW: 22:39:07.216
-    in GetIpAddrByDnsNameHelper
-    start GetAddrInfoW: 22:39:07.216
-    end   GetAddrInfoW: 22:39:19.286
-    NetBios
-    in GetIpVxAddrByDnsNameW
-    in GetIpAddrByDnsNameHelper
-    start GetAddrInfoW: 22:39:19.286
-    end   GetAddrInfoW: 22:39:31.308d
-    in GetIpAddrByDnsNameHelper
-    start GetAddrInfoW: 22:39:31.308
+    > in I_DRSGetNCChanges, NC = CN=Configuration,DC=contoso,DC=com  
+    in getContextBindingHelper, pszAddress = dded5a29-fc25-4fd8-aa98-7f472fc6f09b._msdcs.contoso.microsoft.com  
+    in resolveDnsAddressWithFallback  
+    GUID based DNS name  
+    in GetIpVxAddrByDnsNameW  
+    in GetIpAddrByDnsNameHelper  
+    start GetAddrInfoW: 22:37:43.066  
+    end   GetAddrInfoW: 22:37:55.113  
+    in GetIpAddrByDnsNameHelper  
+    start GetAddrInfoW: 22:37:55.113  
+    end   GetAddrInfoW: 22:38:07.131  
+    in GetIpAddrByDnsNameHelper  
+    start GetAddrInfoW: 22:38:07.131  
+    end   GetAddrInfoW: 22:38:19.161  
+    in GetIpAddrByDnsNameHelper  
+    start GetAddrInfoW: 22:38:19.176  
+     end   GetAddrInfoW: 22:38:31.185  
+    FQDN  
+    in GetIpVxAddrByDnsNameW  
+    in GetIpAddrByDnsNameHelper  
+    start GetAddrInfoW: 22:38:31.200  
+    end   GetAddrInfoW: 22:38:43.182  
+    in GetIpAddrByDnsNameHelper  
+    start GetAddrInfoW: 22:38:43.182  
+    end   GetAddrInfoW: 22:38:55.191  
+    in GetIpAddrByDnsNameHelper  
+    start GetAddrInfoW: 22:38:55.191  
+    end   GetAddrInfoW: 22:39:07.216  
+    in GetIpAddrByDnsNameHelper  
+    start GetAddrInfoW: 22:39:07.216  
+    end   GetAddrInfoW: 22:39:19.286  
+    NetBios  
+    in GetIpVxAddrByDnsNameW  
+    in GetIpAddrByDnsNameHelper  
+    start GetAddrInfoW: 22:39:19.286  
+    end   GetAddrInfoW: 22:39:31.308d  
+    in GetIpAddrByDnsNameHelper  
+    start GetAddrInfoW: 22:39:31.308  
     end   GetAddrInfoW: 22:39:43.324
-    ```
 
 - To further study the relationship between DNSQueryTimeouts and the slow startup, DNSQueryTimeouts were set to **1 1 2 4 4** to make DNS client wait for 31 (1 + 1 + 2 + 4 + 4) seconds. In this test, 31 seconds were spent waiting:
 
-    ```console
-    in I_DRSGetNCChanges, NC = CN=Configuration,DC=contoso,DC=com
-    in getContextBindingHelper, pszAddress = dded5a29-fc25-4fd8-aa98-7f472fc6f09b._msdcs.contoso.com
-    in resolveDnsAddressWithFallback
-    GUID based DNS name
-    in GetIpVxAddrByDnsNameW
-    in GetIpAddrByDnsNameHelper
-    start GetAddrInfoW: 18:06:48.143
-    end   GetAddrInfoW: 18:07:19.158
-    in GetIpAddrByDnsNameHelper
-    start GetAddrInfoW: 18:07:19.158
-    end   GetAddrInfoW: 18:07:50.162
-    in GetIpAddrByDnsNameHelper
-    start GetAddrInfoW: 18:07:50.162
-    end   GetAddrInfoW: 18:08:21.161
-    in GetIpAddrByDnsNameHelper
-    start GetAddrInfoW: 18:08:21.161
-    end   GetAddrInfoW: 18:08:52.158
-    FQDN
-    in GetIpVxAddrByDnsNameW
-    in GetIpAddrByDnsNameHelper
-    start GetAddrInfoW: 18:08:52.221
-    end   GetAddrInfoW: 18:09:23.231
-    in GetIpAddrByDnsNameHelper
-    start GetAddrInfoW: 18:09:23.231
-    end   GetAddrInfoW: 18:09:54.243
-    in GetIpAddrByDnsNameHelper
-    start GetAddrInfoW: 18:09:54.243
-    end   GetAddrInfoW: 18:10:25.239
-     in GetIpAddrByDnsNameHelper
-    start GetAddrInfoW: 18:10:25.239
-    end   GetAddrInfoW: 18:10:56.243
-    NetBios
-    in GetIpVxAddrByDnsNameW
-    in GetIpAddrByDnsNameHelper
-    start GetAddrInfoW: 18:10:56.243
-    end   GetAddrInfoW: 18:11:27.244
-    in GetIpAddrByDnsNameHelper
-    start GetAddrInfoW: 18:11:27.244
+    > in I_DRSGetNCChanges, NC = CN=Configuration,DC=contoso,DC=com  
+    in getContextBindingHelper, pszAddress = dded5a29-fc25-4fd8-aa98-7f472fc6f09b._msdcs.contoso.com  
+    in resolveDnsAddressWithFallback  
+    GUID based DNS name  
+    in GetIpVxAddrByDnsNameW  
+    in GetIpAddrByDnsNameHelper  
+    start GetAddrInfoW: 18:06:48.143  
+    end   GetAddrInfoW: 18:07:19.158  
+    in GetIpAddrByDnsNameHelper  
+    start GetAddrInfoW: 18:07:19.158  
+    end   GetAddrInfoW: 18:07:50.162  
+    in GetIpAddrByDnsNameHelper  
+    start GetAddrInfoW: 18:07:50.162  
+    end   GetAddrInfoW: 18:08:21.161  
+    in GetIpAddrByDnsNameHelper  
+    start GetAddrInfoW: 18:08:21.161  
+    end   GetAddrInfoW: 18:08:52.158  
+    FQDN  
+    in GetIpVxAddrByDnsNameW  
+    in GetIpAddrByDnsNameHelper  
+    start GetAddrInfoW: 18:08:52.221  
+    end   GetAddrInfoW: 18:09:23.231  
+    in GetIpAddrByDnsNameHelper  
+    start GetAddrInfoW: 18:09:23.231  
+    end   GetAddrInfoW: 18:09:54.243  
+    in GetIpAddrByDnsNameHelper  
+    start GetAddrInfoW: 18:09:54.243  
+    end   GetAddrInfoW: 18:10:25.239  
+     in GetIpAddrByDnsNameHelper  
+    start GetAddrInfoW: 18:10:25.239  
+    end   GetAddrInfoW: 18:10:56.243  
+    NetBios  
+    in GetIpVxAddrByDnsNameW  
+    in GetIpAddrByDnsNameHelper  
+    start GetAddrInfoW: 18:10:56.243  
+    end   GetAddrInfoW: 18:11:27.244  
+    in GetIpAddrByDnsNameHelper  
+    start GetAddrInfoW: 18:11:27.244  
     end   GetAddrInfoW: 18:11:58.265
-    ```
 
 For more information, see [Initial synchronization requirements for Windows 2000 Server and Windows Server 2003 operations master role holders](https://support.microsoft.com/help/305476).

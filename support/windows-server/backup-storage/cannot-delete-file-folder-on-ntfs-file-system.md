@@ -107,8 +107,7 @@ The cause of this issue is similar to [Cause 4](#cause-4-files-exist-in-paths-th
 
 Sometimes, you may experience combinations of these causes, which can make the procedure to delete a file more complex. For example, if you log on as the computer's administrator, you may experience a combination of [Cause 1](#cause-1-the-file-uses-an-acl) (you do not have permissions to delete a file) and [Cause 5](#cause-5-the-file-name-includes-a-reserved-name-in-the-win32-name-space) (the file name contains a trailing character that causes file access to be redirected to a different or nonexistent file) and you may not be able to delete the file. If you try to resolve [Cause 1](#cause-1-the-file-uses-an-acl) by taking ownership of the file and adding permissions, you still may not be able to delete the file because the ACL editor in the user interface cannot access the appropriate file because of [Cause 6](#cause-6-the-file-name-includes-an-invalid-name-in-the-win32-name-space).
 
-In this situation, you can use the Subinacl utility with the
- `/onlyfile` switch (this utility is included in the Resource Kit) to change ownership and permissions on a file that is otherwise inaccessible, for example:
+In this situation, you can use the Subinacl utility with the `/onlyfile` switch (this utility is included in the Resource Kit) to change ownership and permissions on a file that is otherwise inaccessible, for example:
 
 ```console
 subinacl /onlyfile "\\?\c:\<path_to_problem_file>" /setowner= domain\administrator /grant= domain\administrator=F

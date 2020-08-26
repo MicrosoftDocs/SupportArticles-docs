@@ -65,13 +65,11 @@ To automatically disable or re-enable IPv6 or its components, follow these steps
 
 To configure IPv6, modify the following registry value based on the following table.
 
-```CONSOLE
-Location:    HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters\
-Name:        DisabledComponents
-Type:        REG_DWORD
-Min Value:   0x00
+> Location:    HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters\  
+Name:        DisabledComponents  
+Type:        REG_DWORD  
+Min Value:   0x00  
 Max Value:   0xFF (IPv6 disabled)
-```
 
 |IPv6 Functionality|Registry value|Comments|
 |---|---|---|

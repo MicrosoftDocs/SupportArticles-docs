@@ -45,7 +45,7 @@ To resolve the issue, run a script to stop the Event ID 10 messages. To run the 
 1. In Notepad, create a new document named *Workaround.txt*.
 2. Copy the following script into notepad:
 
-    ```console
+    ```vb
     strComputer = "."
     Set objWMIService = GetObject("winmgmts:" _
     & "{impersonationLevel=impersonate}!\\" _

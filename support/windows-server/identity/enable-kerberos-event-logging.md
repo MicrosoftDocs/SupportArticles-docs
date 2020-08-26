@@ -59,12 +59,10 @@ Other scenarios or errors require the attention of the System or Domain Administ
 1. Start Registry Editor.
 2. Add the following registry value:
 
-    ```console
-    HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\Parameters
-    Registry Value: LogLevel
-    Value Type: REG_DWORD
+    > HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\Parameters  
+    Registry Value: LogLevel  
+    Value Type: REG_DWORD  
     Value Data: 0x1
-    ```
 
     If the **Parameters** subkey does not exist, create it.
 
