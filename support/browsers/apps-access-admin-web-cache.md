@@ -31,11 +31,11 @@ An affected user records a Process Monitor log while experiencing the issue. Whe
 
 ## Cause
 
-A Windows computer has an Administrator profile and a Default user profile. Each profile has an associated cache container. The first time that the user signs in to Windows, Windows uses the information from the Default user profile to configure the user's profile. The user's profile includes the cache container that was defined for the Default user profile.
+The first time that the user signs in to Windows, Windows uses the information from the Default user profile to configure the user's profile. Windows also creates a cache container as part of the user profile, for browsers and other applications to use.
 
-In the case of this issue, the cache container of the Default user profile is a copy of the cache container of the Administrator profile. As a result, the Administrator account owns the Default user cache container. That ownership persists when Windows configures a new user profile that is based on the Default user profile. In other words, the user's cache container belongs to the Administrator.
+This access issue may occur if the Default user profile has been modified to create custom settings for new user profiles, especially if the modification process includes copying profile information from the Administrator profile. In particular, some imaging or deployment utilities copy some or all of the Administrator profile content to the Default user profile.
 
-This issue may occur if the Default user profile has been modified to create custom settings for new user profiles. For example, some imaging or deployment utilities copy some or all of the Administrator profile content to the Default user profile.
+The Administrator profile has its own cache container. If this part of the Administrator profile is copied to the Default user profile, new users get a copy of the Administrator cache container instead of a new cache container. The Administrator account owns the cache container instead of the user account, and the user does not have full access to the cache container.
 
 ## Resolution
 
