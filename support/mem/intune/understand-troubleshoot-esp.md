@@ -65,7 +65,7 @@ The device preparation phase contains the following steps:
 
 ### Device setup
 
-The device creates the tracking policy for this phase, calculates all apps and policies targeted to the device context and starts the installation. At the beginning of this phase, you will see all subtasks in the **Identifying** state.
+The device creates the tracking policy for this phase, calculates all apps and policies targeted to the device context and starts the installation. Before the tracking policy is created, you will see all subtasks in the **Identifying** state.
 
 - Security policies
 
@@ -88,7 +88,7 @@ The device creates the tracking policy for this phase, calculates all apps and p
 
 ### Account setup
 
-The device creates the tracking policy for this phase, calculates all apps and policies targeted to the user context and starts the installation. At the beginning of this phase, you will see all subtasks in the **Identifying** state.
+The device creates the tracking policy for this phase, calculates all apps and policies targeted to the user context and starts the installation. Before the tracking policy is created, you will see all subtasks in the **Identifying** state.
 
 - Join the organization
 
