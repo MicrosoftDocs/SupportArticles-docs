@@ -158,7 +158,7 @@ context = (null), targetName = WCFService/ContosoService, inFlags = Connection, 
 DateTime=2014-05-09T12:57:42.1254728Z
 
 > [!IMPORTANT]
-> Even though identity is necessary in the endpoint alongside the configuration of the Service Principal Name (SPN) to enable Kerberos delegation in net.tcp, this article will not resolve this. It will assume Kerberos configuration has finished correctly. See this blog post for more information about [setting identity for a WCF Service by using net.tcp binding](http://blogs.msdn.com/b/tiche/archive/2011/07/13/wcf-on-intranet-with-windows-authentication-kerberos-or-ntlm-part-1.aspx).
+> Even though identity is necessary in the endpoint alongside the configuration of the Service Principal Name (SPN) to enable Kerberos delegation in net.tcp, this article will not resolve this. It will assume Kerberos configuration has finished correctly.
 
 ## Cause
 

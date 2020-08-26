@@ -1,6 +1,6 @@
 ---
 title: SocketException when WCF use connection pooling
-description: This article describes you receive a SocketException when when Windows Communication Foundation application uses connection pooling.
+description: This article describes you receive a SocketException when Windows Communication Foundation application uses connection pooling.
 ms.date: 08/24/2020
 ms.prod-support-area-path: 
 ms.reviewer: broder, jasonpa
@@ -28,9 +28,9 @@ A WCF application that uses connection pooling may experience socket exceptions 
 
 ## More information
 
-When a WCF client tries to open a new connection the `System.ServiceModel` code attempts to get a connection from the connection pool. In some cases the connection pool connection may have timed out. A graceful exit is attempted by trying to read from the connection. If the WCF server connection has timed out and its connection reset, then when the WCF client tries to read from the connection it will get an error and a `SocketException` is raised. This `SocketException` is raised in `Sytem.Net` code and is handled by the `System.ServiceModel` code. The client connection is then closed. Because this exception is handled in the `System.ServiceModel` code and does not get rethrown back to application code this exception can be ignored.
+When a WCF client tries to open a new connection the `System.ServiceModel` code attempts to get a connection from the connection pool. In some cases, the connection pool connection may have timed out. A graceful exit is attempted by trying to read from the connection. If the WCF server connection has timed out and its connection reset, then when the WCF client tries to read from the connection it will get an error and a `SocketException` is raised. This `SocketException` is raised in `Sytem.Net` code and is handled by the `System.ServiceModel` code. The client connection is then closed. Because this exception is handled in the `System.ServiceModel` code and does not get rethrown back to application code this exception can be ignored.
 
-If you attach a debugger and break when the `SocketException` gets raised you will observer a managed call stack similar to the following:
+If you attach a debugger and break when the  gets raised, you will observer a managed call stack similar to the following:
 
 > 0:040> !clrstack
 OS Thread Id: 0x16a8 (40)
