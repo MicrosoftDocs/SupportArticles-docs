@@ -1,3 +1,6 @@
+- name: Welcome
+  href: welcome-azure-devops.md
+
 - name: Boards
   items:
   - name: Error when you add link to work item
