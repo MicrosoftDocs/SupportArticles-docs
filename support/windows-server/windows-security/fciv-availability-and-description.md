@@ -46,7 +46,7 @@ To obtain the FCIV utility, follow these steps:
 1. In Windows Explorer, create a new folder that is named FCIV.
 2. The following file is available for download from the Microsoft Download Center:
 
-    ![Download](./media/fciv-availability-and-description/download.png)[Download the File Checksum Integrity Verifier utility package now](https://download.microsoft.com/download/c/f/4/cf454ae0-a4bb-4123-8333-a1b6737712f7/windows-kb841290-x86-enu.exe)
+    ![Download icon](./media/fciv-availability-and-description/download.png)[Download the File Checksum Integrity Verifier utility package now](https://download.microsoft.com/download/c/f/4/cf454ae0-a4bb-4123-8333-a1b6737712f7/windows-kb841290-x86-enu.exe)
   
     Release Date: May 17, 2004
 
