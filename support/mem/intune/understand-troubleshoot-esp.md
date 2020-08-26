@@ -94,7 +94,7 @@ The device creates the tracking policy for this phase, calculates all apps and p
 
   In hybrid Azure AD Autopilot deployment, the device should have been hybrid Azure AD joined at this time. In user-driven mode for hybrid Azure AD join, the user is redirected to the Windows sign-in screen to enter the on-premises credentials to obtain the Primary Refresh Token (PRT). After authentication is completed, the user is brought back to the ESP to finish the remaining subtasks. By using the PRT, the user is able to communicate with the service and start installing the targeted policies and apps.
   
-  It usually takes Azure AD Connect up to 40 minutes to sync the device from on-prem Active Directory to Azure AD. If the device hasn't been synced, the user can still authenticate but the PRT isn't obtained. Therefore, the user can't communicate with the service to evaluate the targeted apps and policies. As the result, the account setup stuck on **Identifying** until the ESP times out and fails.
+  It usually takes Azure AD Connect up to 40 minutes to sync the device from on-prem Active Directory to Azure AD. If the device hasn't been synced, the user can still authenticate but the PRT isn't obtained. Therefore, the user can't communicate with the service to evaluate the targeted apps and policies. As the result, the account setup is stuck on **Identifying** until the ESP times out and fails.
   
   If the time it takes to install applications in the device setup phase isn't long enough for Azure AD Connect to sync the device, we recommend that you send a custom CSP to disable the account setup phase to avoid the potential timeout.
 
