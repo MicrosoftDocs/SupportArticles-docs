@@ -13,6 +13,8 @@ ms.custom:
 
 # Applications attempt to access web cache content that belongs to the local Administrator account
 
+This article describes how to resolve an issue in which browsers or applications that use browser modules attempt to access files that belong to a computer's Administrator profile as well as files that belong to the current user's profile.
+
 _Original product version:_&nbsp;Internet Explorer, Windows 10; Microsoft Edge, Windows 10  
 
 ## Symptoms
@@ -46,11 +48,11 @@ On affected computers, you need to separately fix the affected user profile and 
 > By default, these profile files and folders are hidden from view. To make them visible, you have to temporarily modify the folder view options of the C:\Users\Default folder and the C:\Users\\<*user name*> folder (where \<*user name*> is the name of the affected user's profile). To do this, follow these steps:
 >  
 > 1. Open Windows File Explorer, and go to the appropriate profile folder location.
-> 1. Select **View** > **Options** > **View**.
-> 1. In the **Advanced settings** list, select **Show hidden files, folders, and drives**.
-> 1. In the same list, clear the **Hide protected operating system files (Recommended)** checkbox, and then select **Yes**.
+> 2. Select **View** > **Options** > **View**.
+> 3. In the **Advanced settings** list, select **Show hidden files, folders, and drives**.
+> 4. In the same list, clear the **Hide protected operating system files (Recommended)** checkbox, and then select **Yes**.
 >   :::image type="content" source="./media/apps-access-admin-web-cache/ie-mse-show-hidden-files.png" alt-text="An alert appears when you clear the option to hide protected files":::
-> 1. Select **Apply**, and then select **OK**.
+> 5. Select **Apply**, and then select **OK**.
 
 ### Step 1 - Repair the Default user profile
 
