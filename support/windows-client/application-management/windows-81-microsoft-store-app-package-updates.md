@@ -17,7 +17,7 @@ ms.technology: ApplicationCompatibility
 
 This article outlines the release cycle for administrators to update the Microsoft Store apps installed by default on Windows 8.1-based computers.
 
-_Original product version:_ &nbsp; Windows 10  
+_Original product version:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2971128
 
 ## More information
