@@ -46,23 +46,19 @@ Member servers do have the Netlogon RPC Interface, but it is rarely used. Some e
 
 ### Registry key 1
 
-```console
-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters
-Registry value: TCP/IP Port
-Value type: REG_DWORD
-Value data: (available port)
-```
+> HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters  
+> Registry value: TCP/IP Port  
+> Value type: REG_DWORD  
+> Value data: (available port)
 
 Restart the computer for the new setting to become effective.
 
 ### Registry key 2
 
-```console
-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters
-Registry value: DCTcpipPort
-Value type: REG_DWORD
-Value data: (available port)
-```
+> HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters  
+> Registry value: DCTcpipPort  
+> Value type: REG_DWORD  
+> Value data: (available port)
 
 Restart the Netlogon service for the new setting to become effective.
 

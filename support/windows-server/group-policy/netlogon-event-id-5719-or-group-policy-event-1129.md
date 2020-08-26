@@ -102,13 +102,11 @@ Configure the `Netlogon` registry setting to a value that is safely beyond the t
 > [!NOTE]
 > This is only effective if the machine already has an IP address. This applies to scenarios where a NAP solution puts the machine into a quarantine network. Use the following settings as guidelines.
 
-```console
-Registry subkey: HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Netlogon\Parameters
-Value Name: ExpectedDialupDelay
-Data Type: REG_DWORD
-Data Value is in seconds (default= 0 )
+> Registry subkey: HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Netlogon\Parameters  
+Value Name: ExpectedDialupDelay  
+Data Type: REG_DWORD  
+Data Value is in seconds (default= 0 )  
 Data Range is between 0 and 600 seconds (10 minutes)
-```
 
 For more information, see [Settings for minimizing periodic WAN traffic](https://support.microsoft.com/help/819108).
 
@@ -148,13 +146,11 @@ Configure the `Kerberos` registry setting to a value that is safely beyond the t
 > [!NOTE]
 > This setting applies only to Windows XP and Windows Server 2003 or earlier versions of these systems. Windows Vista and Windows Server 2008 and later versions use a default value of **0**. This value turns off User Datagram Protocol (UDP) functionality for the Kerberos client.
 
-```console
-Registry subkey: HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa\Kerberos\Parameters
-Value name: MaxPacketSize
-Data Type: REG_DWORD
-Value Data: 1
+> Registry subkey: HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa\Kerberos\Parameters  
+Value name: MaxPacketSize  
+Data Type: REG_DWORD  
+Value Data: 1  
 Default: (depends on the system version)
-```
 
 For more information, see [How to force Kerberos to use TCP instead of UDP in Windows](https://support.microsoft.com/help/244474).
 
@@ -162,14 +158,12 @@ For more information, see [How to force Kerberos to use TCP instead of UDP in Wi
 
 Disable media sense for TCP/IP. To do this, add the following value to the `Tcpip` registry subkey:
 
-```console
-Registry subkey: HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Tcpip\Parameters
-Value Name: DisableDHCPMediaSense
-Data Type: REG_DWORD
-Value Data: 1
-Value Range: Boolean ( 0 =False, 1 =True)
+> Registry subkey: HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Tcpip\Parameters  
+Value Name: DisableDHCPMediaSense  
+Data Type: REG_DWORD  
+Value Data: 1  
+Value Range: Boolean ( 0 =False, 1 =True)  
 Default: 0 (False)
-```
 
 For more information, see [How to disable the Media Sensing feature for TCP/IP in Windows](https://support.microsoft.com/help/239924).
 

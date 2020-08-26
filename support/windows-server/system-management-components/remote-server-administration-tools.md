@@ -17,7 +17,7 @@ ms.technology: SysManagementComponents
 
 This article describes the tools that are available in Remote Server Administration Tools (RSAT) for Windows.
 
-_Original product version:_ &nbsp; Windows 10, version 1909, Windows Server 2019  
+_Original product version:_ &nbsp; Windows 10, version 1909, Windows 10, version 1903, Windows 10, version 1809. Windows 7 Service Pack 1. Windows Server 2019. Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2693643
 
 ## Introduction
@@ -88,12 +88,3 @@ If you have to install management tools in Windows Server 2012 R2 for specific r
 - [Screencast: How to Install and Enable Microsoft RSAT (Remote Server Administration Tools) for Windows Vista](http://www.netometer.com/video/tutorials/vista-remote-server-administration-tools/)
 
 - [Using MMC Snap-ins and RSAT](/previous-versions/tn-archive/dd163507(v=technet.10))
-
-## Applies to
-
-- Windows 10, version 1909
-- Windows 10, version 1903
-- Windows 10, version 1809
-- Windows 7 Service Pack 1
-- Windows Server 2019
-- Windows Server 2012 R2

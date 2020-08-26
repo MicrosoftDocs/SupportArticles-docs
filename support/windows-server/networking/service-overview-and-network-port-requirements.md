@@ -17,7 +17,7 @@ ms.technology: Networking
 
 This article discusses the required network ports, protocols, and services that are used by Microsoft client and server operating systems, server-based programs, and their subcomponents in the Microsoft Windows Server system. Administrators and support professionals may use this article as a roadmap to determine which ports and protocols Microsoft operating systems and programs require for network connectivity in a segmented network.
 
-_Original product version:_ &nbsp; Windows 10, version 2004, Windows Server 2019  
+_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10, version 2004, Windows 10, version 1909, Windows 10, version 1903, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 832017
 
 > [!IMPORTANT]
@@ -63,7 +63,7 @@ This article does not specify which services rely on other services for network 
 
 When you use RPC with TCP/IP or with UDP/IP as the transport, incoming ports are frequently dynamically assigned to system services as required; TCP/IP and UDP/IP ports that are higher than port 1024 are used. These are also informally known as *random RPC ports*. In these cases, RPC clients rely on the RPC endpoint mapper to tell them which dynamic port or ports were assigned to the server. For some RPC-based services, you can configure a specific port instead of letting RPC dynamically assign a port. You can also restrict the range of ports that RPC dynamically assigns to a small range, regardless of the service. For more information about this topic, see the [References](#references) section.
 
-This article includes information about the system services roles and the server roles for the Microsoft products that are listed in the [Applies to](#applies-to) section. Although this information may also apply to Windows XP and to Microsoft Windows 2000 Professional, this article is focused on server-class operating systems. Therefore, this describes the ports that a service listens on instead of the ports that client programs use to connect to a remote system.
+This article includes information about the system services roles and the server roles for the Microsoft products that are listed in the Applies to section. Although this information may also apply to Windows XP and to Microsoft Windows 2000 Professional, this article is focused on server-class operating systems. Therefore, this describes the ports that a service listens on instead of the ports that client programs use to connect to a remote system.
 
 ## System services ports
 
@@ -1404,13 +1404,3 @@ For more information, see the [Using Windows Server 2003 with Service Pack 1 in 
 ### Windows Media Services
 
 For information about the ports that are used by Windows Media Services, see [Allocating Ports for Windows Media Services](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee126118(v=ws.10)).
-
-## Applies to
-
-- Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012 R2
-- Windows 10, version 2004
-- Windows 10, version 1909
-- Windows 10, version 1903
-- Windows 7 Service Pack 1

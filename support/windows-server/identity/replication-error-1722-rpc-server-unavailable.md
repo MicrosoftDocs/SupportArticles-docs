@@ -17,7 +17,7 @@ ms.technology: ActiveDirectory
 
 This article helps fix the error 1722 of Active Directory replication.
 
-_Original product version:_ &nbsp; Windows Server 2019  
+_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, WIndows Server 2012 R2  
 _Original KB number:_ &nbsp; 2102154
 
 ## Symptoms
@@ -30,7 +30,7 @@ This article describes the symptoms, cause, and resolution for resolving Active 
 
     Dialog Message text:
 
-    > The operation failed because: Active Directory Domain Services could not create the NTDS Settings object for this Active Directory Domain Controller CN=NTDS Settings,CN=\<Name of DC being promoted),CN=Servers,CN=<site name>,CN=Sites,CN=Configuration,DC=\<forest root domain> on the remote AD DC \<helper DC>.\<domain name>.\<top level domain>. Ensure the provided network credentials have sufficient permissions. "The RPC server is unavailable."
+    > The operation failed because: Active Directory Domain Services could not create the NTDS Settings object for this Active Directory Domain Controller CN=NTDS Settings,CN=\<Name of DC being promoted),CN=Servers,CN=\<site name>,CN=Sites,CN=Configuration,DC=\<forest root domain> on the remote AD DC \<helper DC>.\<domain name>.\<top level domain>. Ensure the provided network credentials have sufficient permissions. "The RPC server is unavailable."
 
 1. DCDIAG reports that the Active Directory Replications test has failed with error 1722: The RPC Server is unavailable.
 
@@ -60,26 +60,28 @@ This article describes the symptoms, cause, and resolution for resolving Active 
 
     ```console
     c:\> repadmin /showreps  
-    <site name>\<destination DC>
-    DC Options: <list of flags>
-    Site Options: (none)
-    DC object GUID: <NTDS settings object object GUID>
-    DC invocationID: <invocation ID string>
-    ==== INBOUND NEIGHBORS ======================================
-    DC=<DN path for directory partition>
-        <site name>\<source DC via RPC
-            DC object GUID: <source DCs ntds settings object object guid>
-            Last attempt @ <date> <time> failed, result **1722 (0x6ba):
-    The RPC server is unavailable.
-            <X #> consecutive failure(s).
+    <site name><destination DC>  
+    DC Options: <list of flags>  
+    Site Options: (none)  
+    DC object GUID: <NTDS settings object object GUID>  
+    DC invocationID: <invocation ID string>  
+    ==== INBOUND NEIGHBORS ======================================  
+    DC=<DN path for directory partition>  
+        <site name><source DC via RPC  
+            DC object GUID: <source DCs ntds settings object object guid>  
+            Last attempt @ <date> <time> failed, result **1722 (0x6ba):  
+    The RPC server is unavailable.  
+            <X #> consecutive failure(s).  
             Last success @ <date> <time>
-    ```
+   ```
 
     Sample output of `REPADMIN /SYNCALL` depicting **The RPC server is unavailable** error is shown below:
 
-    > C:\>repadmin /syncall  
-    > CALLBACK MESSAGE: Error contacting server \<object guid of NTDS Settings object>._msdcs.\<forest root domain>.\<top level domain> (network error): 1722 (0x6ba):  
-    > The RPC server is unavailable.
+   ```console
+    C:\>repadmin /syncall  
+    CALLBACK MESSAGE: Error contacting server \<object guid of NTDS Settings object>._msdcs.\<forest root domain>.\<top level domain> (network error): 1722 (0x6ba):  
+    The RPC server is unavailable.
+   ```
 
 1. The **replicate now** command in Active Directory Sites and Services returns **The RPC server is unavailable**.
 
@@ -172,50 +174,47 @@ There are a few tools to use to help identify DNS errors:
 
     Sample output:
 
-    ```console
-    TEST: Authentication (Auth)
+    > TEST: Authentication (Auth)  
     Authentication test: Successfully completed
-
-    TEST: Basic (Basc)
-    Microsoft(R) Windows(R) Server 2003, Enterprise Edition (Service Pack level: 2.0) is supported
-    NETLOGON service is running
-    kdc service is running
-    DNSCACHE service is running
-    DNS service is running
-    DC is a DNS server
-    Network adapters information:
-    Adapter [00000009] Microsoft Virtual Machine Bus Network Adapter:
-    MAC address is 00:15:5D:40:CF:92
-    IP address is static
-    IP address: <IP Address
-    DNS servers:
-    <DNS IP Address> (DC.domain.com.) [Valid]
-    The A record for this DC was found
-    The SOA record for the Active Directory zone was found
-    The Active Directory zone on this DC/DNS server was found (primary)
-    Root zone on this DC/DNS server was not found
-    <omitted other tests for readability>
-    ```
+    >
+    > TEST: Basic (Basc)  
+    Microsoft(R) Windows(R) Server 2003, Enterprise Edition (Service Pack level: 2.0) is supported  
+    NETLOGON service is running  
+    kdc service is running  
+    DNSCACHE service is running  
+    DNS service is running  
+    DC is a DNS server  
+    Network adapters information:  
+    Adapter [00000009] Microsoft Virtual Machine Bus Network Adapter:  
+    MAC address is 00:15:5D:40:CF:92  
+    IP address is static  
+    IP address: \<IP Address>  
+    DNS servers:  
+    \<DNS IP Address> (DC.domain.com.) [Valid]  
+    The A record for this DC was found  
+    The SOA record for the Active Directory zone was found  
+    The Active Directory zone on this DC/DNS server was found (primary)  
+    Root zone on this DC/DNS server was not found  
+    \<omitted other tests for readability>
 
     Summary of DNS test results:
 
-    ```console
-                                    Auth Basc Forw Del  Dyn  RReg Ext
-                   ________________________________________________________________
-                Domain: fragale.contoso.com
-                   DC1                        PASS PASS FAIL PASS PASS PASS n/a
-                Domain: child.fragale.contoso.com
-                   DC2                        PASS PASS n/a  n/a  n/a  PASS n/a
-
-                Enterprise DNS infrastructure test results:
-                For parent domain domain.com and subordinate domain child:
-                   Forwarders or root hints are not misconfigured from parent domain to subordinate domain
-                   Error: Forwarders are configured from subordinate to parent domain but some of them failed DNS server tests
-
-                (See DNS servers section for error details)
-                   Delegation is configured properly from parent to subordinate domain
-             ......................... domain.com failed test DNS
-    ```
+    > Auth Basc Forw Del  Dyn  RReg Ext
+    >
+    >
+    > Domain: `fragale.contoso.com`
+    > DC1 PASS PASS FAIL PASS PASS PASS n/a  
+    > Domain: `child.fragale.contoso.com`  
+    > DC2 PASS PASS n/a  n/a  n/a  PASS n/a  
+    >
+    > Enterprise DNS infrastructure test results:  
+    > For parent domain domain.com and subordinate domain child:  
+    > Forwarders or root hints are not misconfigured from parent domain to subordinate domain  
+    > Error: Forwarders are configured from subordinate to parent domain but some of them failed DNS server tests  
+    >
+    > (See DNS servers section for error details)  
+    > Delegation is configured properly from parent to subordinate domain  
+    > ......................... domain.com failed test DNS
 
     The summary provides remediation steps for the more common failures from this test.
 
@@ -227,17 +226,15 @@ There are a few tools to use to help identify DNS errors:
 
     Sample output:
 
-    ```console
-               DC: [\\DC.fabrikam.com](file://dc.fabrikam.com/)
-          Address: \\<IP Address>
-         Dom Guid: 5499c0e6-2d33-429d-aab3-f45f6a06922b
-         Dom Name: fabrikam.com
-      Forest Name: fabrikam.com
-     Dc Site Name: Default-First-Site-Name
-    Our Site Name: Default-First-Site-Name
-            Flags: PDC GC DS LDAP KDC TIMESERV WRITABLE DNS_DC DNS_DOMAIN DNS_FOREST CLOSE_SITE
-    The command completed successfully
-    ```
+    > DC: [\\`DC.fabrikam.com`](file://dc.fabrikam.com/)  
+    > Address: \\<IP Address>  
+    > Dom Guid: 5499c0e6-2d33-429d-aab3-f45f6a06922b  
+    > Dom Name: `fabrikam.com`  
+    > Forest Name: `fabrikam.com`  
+    > Dc Site Name: Default-First-Site-Name  
+    > Our Site Name: Default-First-Site-Name  
+    > Flags: PDC GC DS LDAP KDC TIMESERV WRITABLE DNS_DC DNS_DOMAIN DNS_FOREST CLOSE_SITE  
+    > The command completed successfully
 
 - `Netdiag -v`
 
@@ -245,22 +242,20 @@ There are a few tools to use to help identify DNS errors:
 
     Sample output for the DNS test:
 
-    ```console
-    DNS test . . . . . . . . . . . . . : Passed
-          Interface {34FDC272-55DC-4103-B4B7-89234BC30C4A}
-            DNS Domain:
-            DNS Servers: <DNS Server Ip address >
-            IP Address:         Expected registration with PDN (primary DNS domain name):
-              Hostname: DC.fabrikam.com.
-              Authoritative zone: fabrikam.com.
-              Primary DNS server: DC.fabrikam.com <Ip Adress>
-              Authoritative NS:<Ip Adress>
-    Check the DNS registration for DCs entries on DNS server <DNS Server Ip address >
-    The Record is correct on DNS server '<DNS Server Ip address >'.
-    (You will see this line repeated several times for every entry for this DC.  Including srv records.)
-    The Record is correct on DNS server '<DNS Server Ip address >'.
-    PASS - All the DNS entries for DC are registered on DNS server '<DNS Server Ip address >'.
-    ```
+    > DNS test . . . . . . . . . . . . . : Passed  
+    >       Interface {34FDC272-55DC-4103-B4B7-89234BC30C4A}  
+    >         DNS Domain:  
+    >         DNS Servers: \<DNS Server Ip address>  
+    >         IP Address:         Expected registration with PDN (primary DNS domain name):  
+    >           Hostname: `DC.fabrikam.com`.  
+    >           Authoritative zone: `fabrikam.com`.  
+    >           Primary DNS server: `DC.fabrikam.com` \<Ip Address>  
+    >           Authoritative NS:\<Ip Address>  
+    > Check the DNS registration for DCs entries on DNS server \<DNS Server Ip address>  
+    > The Record is correct on DNS server '\<DNS Server Ip address>'.  
+    > (You will see this line repeated several times for every entry for this DC.  Including srv records.)  
+    > The Record is correct on DNS server '\<DNS Server Ip address>'.  
+    > PASS - All the DNS entries for DC are registered on DNS server '\<DNS Server Ip address>'.
 
 - `ping -a <IP_of_problem_server>`
 
@@ -392,9 +387,3 @@ If the above don't provide a solution to the 1722, then you can use the followin
 - [Enabling Extended error information](/windows/win32/rpc/enabling-extended-error-information)
 
 - [Network Connectivity](/previous-versions/windows/it-pro/windows-2000-server/cc961803(v=technet.10))
-
-## Applies to
-
-- Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012 R2

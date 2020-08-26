@@ -15,7 +15,7 @@ ms.technology: Deployment
 ---
 # Fix Windows Update errors by using the DISM or System Update Readiness tool
 
-_Original product version:_ &nbsp; Windows 10, version 1809 and later versions, Windows Server 2012 R2  
+_Original product version:_ &nbsp; Windows 10, version 1809 and later versions, Windows Server 2012 R2, Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 947821
 
 ## Symptom
@@ -207,10 +207,3 @@ To manually fix corruption errors that the System Update Readiness tool detects 
 5. Rerun the System Update Readiness tool.
 
 If you are a technical professional, see [How to fix errors found in the CheckSUR.log](https://support.microsoft.com/help/2700601) for a more option on fixing errors in the CheckSUR.log.
-
-## Applies to
-
-- Windows 10, version 1809 and later versions
-- Windows 7 Service Pack 1
-- Windows Server 2012 R2
-- Windows Server 2008 R2 Service Pack 1

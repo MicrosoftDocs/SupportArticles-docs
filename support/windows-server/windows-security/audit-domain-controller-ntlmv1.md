@@ -17,7 +17,7 @@ ms.technology: WindowsSecurity
 
 This article introduces the steps to test any application that is using NT LAN Manager (NTLM) version 1 on a Microsoft Windows Server-based domain controller.
 
-_Original product version:_ &nbsp; Windows Server 2016  
+_Original product version:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4090105
 
 ## Summary
@@ -33,44 +33,42 @@ To find applications that use NTLMv1, enable Logon Success Auditing on the domai
 
 You will receive event logs that resemble the following:
 
-```console
-Sample Event ID: 4624
-Source: Microsoft-Windows-Security-Auditing
-Event ID: 4624
-Task Category: Logon
-Level: Information
-Keywords: Audit Success
-Description:
-An account was successfully logged on.
-Subject:
-Security ID: NULL SID
-Account Name: -
-Account Domain: -
-Logon ID: 0x0
-Logon Type: 3
-
-New Logon:
-Security ID: ANONYMOUS LOGON
-Account Name: ANONYMOUS LOGON
-Account Domain: NT AUTHORITY
-Logon ID: 0xa2226a
+> Sample Event ID: 4624  
+Source: Microsoft-Windows-Security-Auditing  
+Event ID: 4624  
+Task Category: Logon  
+Level: Information  
+Keywords: Audit Success  
+Description:  
+An account was successfully logged on.  
+Subject:  
+Security ID: NULL SID  
+Account Name: -  
+Account Domain: -  
+Logon ID: 0x0  
+Logon Type: 3  
+>
+> New Logon:  
+Security ID: ANONYMOUS LOGON  
+Account Name: ANONYMOUS LOGON  
+Account Domain: NT AUTHORITY  
+Logon ID: 0xa2226a  
 Logon GUID: {00000000-0000-0000-0000-000000000000}
-
-Process Information:
-Process ID: 0x0
-Process Name: -
-Network Information:
-Workstation Name: Workstation1
-Source Network Address:<ip address>
+>
+> Process Information:  
+Process ID: 0x0  
+Process Name: -  
+Network Information:  
+Workstation Name: Workstation1  
+Source Network Address:\<ip address>  
 Source Port: 49194
-
-Detailed Authentication Information:
-Logon Process: NtLmSsp
-Authentication Package: NTLM
-Transited Services: -
-Package Name (NTLM only): NTLM V1
+>
+> Detailed Authentication Information:  
+Logon Process: NtLmSsp  
+Authentication Package: NTLM  
+Transited Services: -  
+Package Name (NTLM only): NTLM V1  
 Key Length: 128
-```
 
 ## More information
 
@@ -85,8 +83,3 @@ Common sources of anonymous logon sessions are:
 - SID-Name mapping: It can use anonymous sessions. See [Network access: Allow anonymous SID/Name translation](/windows/security/threat-protection/security-policy-settings/network-access-allow-anonymous-sidname-translation). We recommend that you require authentication for this functionality.
 
 - Client applications that do not authenticate: The application server may still create a logon session as anonymous. This is also done when there are empty strings passed for user name and password in NTLM authentication.
-
-## Applies to
-
-- Windows Server 2016
-- Windows Server 2012 R2

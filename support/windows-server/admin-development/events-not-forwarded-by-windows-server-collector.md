@@ -17,7 +17,7 @@ ms.technology: WindowsAdministrationManagementDevelopment
 
 This article helps fix an issue that occurs when you use source-initiated event forwarding to send events to a Microsoft Windows Server event collector.
 
-_Original product version:_ &nbsp; Windows Server 2019  
+_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 4494462
 
 ## Symptoms
@@ -88,8 +88,3 @@ User: NT SERVICE\Wecsvc
 Listen: Yes  
 Delegate: No  
 SDDL: D:(A;;GX;;;S-1-5-80-569256582-2953403351-2909559716-1301513147-412116970)(A;;GX;;;S-1-5-80-4059739203-877974739-1245631912-527174227-2996563517)
-
-## Applies to
-
-- Windows Server 2019
-- Windows Server 2016

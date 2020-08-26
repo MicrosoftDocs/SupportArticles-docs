@@ -17,7 +17,7 @@ ms.technology: ActiveDirectory
 
 This article provides a resolution to solve the error message **The remote procedure call failed and did not execute** that occurs during domain controller (DC) replication on Windows Server.
 
-_Original product version:_ &nbsp; Windows 10, version 2004, Windows Server 2019  
+_Original product version:_ &nbsp; Windows 10, version 2004, Windows 10, version 1909, Windows Server 2019, Windows Server 2012 R2, Windows Server 2016  
 _Original KB number:_ &nbsp; 4019721
 
 ## Symptoms
@@ -115,11 +115,3 @@ Follow these steps on the destination DC:
 ### Test the destination DC connectivity from the source DC
 
 Repeat step 1 through 3 on the source DC.
-
-## Applies to
-
-- Windows 10, version 2004
-- Windows 10, version 1909
-- Windows Server 2019
-- Windows Server 2012 R2
-- Windows Server 2016

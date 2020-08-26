@@ -24,19 +24,17 @@ _Original KB number:_ &nbsp; 2023704
 
 1. DCDIAG reports that Active Directory Replications test has failed with error status code (8452): **The naming context is in the process of being removed or is not replicated from the specified server**.
 
-    ```console
-    Testing server: <site name>\<destination dc name>
-    Starting test: Replications
-    * Replications Check
-    [Replications Check,<destination DC name>] A recent replication attempt failed:
-    From <source DC> to <destination DC>
-    Naming Context: <directory partition DN path>
-    The replication generated an error (8452):
-    The naming context is in the process of being removed or is not replicated from the specified server.
-    The failure occurred at <date> <time>.
-    The last success occurred at <date> <time>.
-    3 failures have occurred since the last success.
-    ```
+    > Testing server: \<site name>\<destination dc name>  
+    > Starting test: Replications  
+    > Replications Check  
+    > [Replications Check,\<destination DC name>] A recent replication attempt failed:  
+    > From \<source DC> to \<destination DC>  
+    > Naming Context: \<directory partition DN path>  
+    > The replication generated an error (8452):  
+    > The naming context is in the process of being removed or is not replicated from the specified server.  
+    > The failure occurred at \<date> \<time>.  
+    > The last success occurred at \<date> \<time>.  
+    > 3 failures have occurred since the last success.
 
 2. REPADMIN.EXE reports that the last replication attempt has failed with status 8452.
 
@@ -48,7 +46,8 @@ _Original KB number:_ &nbsp; 2023704
 
     Sample output from `REPADMIN /SHOWREPS` depicting inbound replication from CONTOSO-DC2 to CONTOSO-DC1 failing with the **replication access was denied** error is shown below:
 
-    > Default-First-Site-Name\CONTOSO-DC1  
+   ```console
+    Default-First-Site-Name\CONTOSO-DC1  
      DSA Options: IS_GC  
      Site Options: (none)  
      DSA object GUID: b6dc8589-7e00-4a5d-b688-045aef63ec01  
@@ -56,13 +55,14 @@ _Original KB number:_ &nbsp; 2023704
 
     ==== INBOUND NEIGHBORS ======================================
 
-    > DC=contoso,DC=com  
+    DC=contoso,DC=com  
     Default-First-Site-Name\CONTOSO-DC2 via RPC  
     DSA object GUID: 74fbe06c-932c-46b5-831b-af9e31f496b2  
-    Last attempt @ \<date> \<time> failed, result 8452 (0x2104):  
+    Last attempt @ <date> <time> failed, result 8452 (0x2104):  
     The naming context is in the process of being removed or is not replicated from the specified server.  
     <#> consecutive failure(s).  
-    Last success @ \<date> \<time>.
+    Last success @ <date> <time>.
+   ```
 
 3. The **replicate now** command in Active Directory Sites and Services returns the error **The naming context is in the process of being removed or is not replicated from the specified server**.
 

@@ -71,17 +71,13 @@ For example, the first ACE denies Anonymous Users read, write, and clear access 
 3. Scroll to the middle of file, and then put the pointer immediately before [Strings].
 4. Insert the following lines:
 
-   ```console
-   MACHINE\System\CurrentControlSet\Services\Eventlog\Application\CustomSD,1,%AppLogSD%,2  
+   > MACHINE\System\CurrentControlSet\Services\Eventlog\Application\CustomSD,1,%AppLogSD%,2  
    MACHINE\System\CurrentControlSet\Services\Eventlog\System\CustomSD,1,%SysLogSD%,2
-   ```
 
 5. Scroll to the end of the file, and then insert the following lines:
 
-   ```console
-   AppLogSD="Event log: Specify the security of the application log in Security Descriptor Definition Language (SDDL) syntax"  
+   > AppLogSD="Event log: Specify the security of the application log in Security Descriptor Definition Language (SDDL) syntax"  
    SysLogSD="Event log: Specify the security of the System log in Security Descriptor Definition Language (SDDL) syntax"
-   ```
 
 6. Save and then close the file.
 
@@ -104,25 +100,21 @@ For example, the first ACE denies Anonymous Users read, write, and clear access 
 1. Use a text editor such as Notepad to open the Sceregvl.inf in the %Windir%\Inf folder.
 2. Add the following lines to the [Register Registry Values] section:
 
-   ```console
-   MACHINE\System\CurrentControlSet\Services\Eventlog\Application\CustomSD,1,%AppCustomSD%,2  
+   > MACHINE\System\CurrentControlSet\Services\Eventlog\Application\CustomSD,1,%AppCustomSD%,2  
    MACHINE\System\CurrentControlSet\Services\Eventlog\Security\CustomSD,1,%SecCustomSD%,2  
    MACHINE\System\CurrentControlSet\Services\Eventlog\System\CustomSD,1,%SysCustomSD%,2  
    MACHINE\System\CurrentControlSet\Services\Eventlog\Directory Service\CustomSD,1,%DSCustomSD%,2  
    MACHINE\System\CurrentControlSet\Services\Eventlog\DNS Server\CustomSD,1,%DNSCustomSD%,2  
    MACHINE\System\CurrentControlSet\Services\Eventlog\File Replication Service\CustomSD,1,%FRSCustomSD%,2
-   ```
 
 3. Add the following lines to the [Strings] section:
 
-   ```console
-    AppCustomSD="Eventlog: Security descriptor for Application event log"  
-    SecCustomSD="Eventlog: Security descriptor for Security event log"  
-    SysCustomSD="Eventlog: Security descriptor for System event log"  
-    DSCustomSD="Eventlog: Security descriptor for Directory Service event log"  
-    DNSCustomSD="Eventlog: Security descriptor for DNS Server event log"  
-    FRSCustomSD="Eventlog: Security descriptor for File Replication Service event log"
-   ```
+   > AppCustomSD="Eventlog: Security descriptor for Application event log"  
+   SecCustomSD="Eventlog: Security descriptor for Security event log"  
+   SysCustomSD="Eventlog: Security descriptor for System event log"  
+   DSCustomSD="Eventlog: Security descriptor for Directory Service event log"  
+   DNSCustomSD="Eventlog: Security descriptor for DNS Server event log"  
+   FRSCustomSD="Eventlog: Security descriptor for File Replication Service event log"
 
 4. Save the changes you made to the Sceregvl.inf file, and then run the `regsvr32 scecli.dll` command.
 5. Start Gpedit.msc, and then double-click the following branches to expand them:

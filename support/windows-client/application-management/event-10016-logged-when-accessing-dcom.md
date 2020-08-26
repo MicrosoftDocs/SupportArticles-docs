@@ -17,7 +17,7 @@ ms.technology: ApplicationCompatibility
 
 This article provides a workaround to solve the event 10016 that's logged in Windows when accessing DCOM components.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019  
+_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 4022522
 
 ## Symptoms
@@ -108,13 +108,3 @@ In this query, **param4** corresponds to the COM Server application CLSID, **par
 For more information about manually constructing Event Viewer queries, see [Consuming Events](/windows/win32/wes/consuming-events).
 
 You can also work around this issue by modifying the permissions on DCOM components to prevent this error from being logged. However, we do not recommend this method because these errors do not adversely affect functionality and modifying the permissions can have unintended side effects.
-
-## Applies to
-
-- Windows 10 - all editions
-- Windows Server 2019
-- Windows Server Standard 2016
-- Windows Server Datacenter 2016
-- Windows Server 2016 Standard edition, Nano Server installation option
-- Windows Server 2016 Datacenter edition, Nano Server installation option
-- Windows Server Essentials 2016

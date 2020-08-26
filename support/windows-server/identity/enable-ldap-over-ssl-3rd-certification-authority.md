@@ -55,38 +55,36 @@ To request a Server Authentication certificate that is suitable for LDAPS, follo
 
 1. Create the .inf file. Following is an example .inf file that can be used to create the certificate request.
 
-    ```console
-    ;----------------- request.inf -----------------
-
-    [Version]
-
-    Signature="$Windows NT$
-
-    [NewRequest]
-
-    Subject = "CN=<DC fqdn>" ; replace with the FQDN of the DC
-    KeySpec = 1
-    KeyLength = 1024
-    ; Can be 1024, 2048, 4096, 8192, or 16384.
-    ; Larger key sizes are more secure, but have
-    ; a greater impact on performance.
-    Exportable = TRUE
-    MachineKeySet = TRUE
-    SMIME = False
-    PrivateKeyArchive = FALSE
-    UserProtected = FALSE
-    UseExistingKeySet = FALSE
-    ProviderName = "Microsoft RSA SChannel Cryptographic Provider"
-    ProviderType = 12
-    RequestType = PKCS10
+    > ;----------------- request.inf -----------------  
+    >
+    > [Version]
+    >
+    > Signature="$Windows NT$
+    >
+    > [NewRequest]
+    >
+    > Subject = "CN=\<DC fqdn>" ; replace with the FQDN of the DC  
+    KeySpec = 1  
+    KeyLength = 1024  
+    ; Can be 1024, 2048, 4096, 8192, or 16384.  
+    ; Larger key sizes are more secure, but have  
+    ; a greater impact on performance.  
+    Exportable = TRUE  
+    MachineKeySet = TRUE  
+    SMIME = False  
+    PrivateKeyArchive = FALSE  
+    UserProtected = FALSE  
+    UseExistingKeySet = FALSE  
+    ProviderName = "Microsoft RSA SChannel Cryptographic Provider"  
+    ProviderType = 12  
+    RequestType = PKCS10  
     KeyUsage = 0xa0
-
-    [EnhancedKeyUsageExtension]
-
-    OID=1.3.6.1.5.5.7.3.1 ; this is for Server Authentication
-
-    ;-----------------------------------------------
-    ```
+    >
+    > [EnhancedKeyUsageExtension]
+    >
+    > OID=1.3.6.1.5.5.7.3.1 ; this is for Server Authentication
+    >
+    > ;-----------------------------------------------
 
     Cut and paste the sample file into a new text file named *Request.inf*. Provide the fully qualified DNS name of the domain controller in the request.
 

@@ -17,7 +17,7 @@ ms.technology: Deployment
 
 This article describes how to disable and then re-enable hibernation on a computer that is running Windows.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows 10 - all editions  
+_Original product version:_ &nbsp; Windows Server 2019, Windows 10 - all editions, Windows Server 2016, Windows 7 Service Pack 1, Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 920730
 
 > [!WARNING]
@@ -44,12 +44,3 @@ _Original KB number:_ &nbsp; 920730
 The Hiberfil.sys hidden system file is located in the root folder of the drive where the operating system is installed. The Windows Kernel Power Manager reserves this file when you install Windows. The size of this file is approximately equal to how much random access memory (RAM) is installed on the computer.
 
 The computer uses the Hiberfil.sys file to store a copy of the system memory on the hard disk when the hybrid sleep setting is turned on. If this file is not present, the computer cannot hibernate.
-
-## Applies to
-
-- Windows 10 - all editions
-- Windows 7 Service Pack 1
-- Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012 R2
-- Windows Server 2008 R2 Service Pack 1

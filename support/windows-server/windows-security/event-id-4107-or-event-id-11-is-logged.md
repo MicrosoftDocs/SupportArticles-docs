@@ -17,7 +17,7 @@ ms.technology: WindowsSecurity
 
 This article provides steps to solve the event 4107 and event 11 that are logged in the Application log.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 7 Service Pack 1  
+_Original product version:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2328240
 
 ## Symptoms
@@ -105,15 +105,3 @@ Additionally, event ID 4107 can also be logged with a **The data is invalid** er
 This error **Data is invalid** indicates the object returned from the network was not a valid cab file and hence Windows could not parse it correctly. Instances of such an error can occur when the network retrieval attempt for the cab file fails to go through a proxy. If the proxy returns some data or message instead of a standard HTTP error code, Windows will try to parse the message received from the proxy expecting it to be the cab. This will fail with the **data is invalid** error.
 
 To address this error, you need to remove the invalid entry in the cache by clearing the cache following the steps outlined in the [Resolution](#resolution) section.
-
-## Applies to
-
-- Windows Server 2012 Standard
-- Windows Server 2012 Standard
-- Windows Server 2012 Essentials
-- Windows Server 2008 R2 Service Pack 1 (for ESU only)
-- Windows Server 2012 R2 Datacenter
-- Windows Server 2012 R2 Standard
-- Windows 8.1 Enterprise
-- Windows 8.1 Pro
-- Windows 8.1 Pro N

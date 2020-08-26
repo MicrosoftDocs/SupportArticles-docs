@@ -17,7 +17,7 @@ ms.technology: ActiveDirectory
 
 This article describes how to enable LDAP signing in Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and Windows 10.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows 10  
+_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 935834
 
 ## Summary
@@ -122,10 +122,3 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\\<*InstanceName>*\Paramete
 
 - [ADV190023: Microsoft Guidance for Enabling LDAP Channel Binding and LDAP Signing](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV190023)
 - [2020 LDAP channel binding and LDAP signing requirement for Windows](https://support.microsoft.com/help/4520412)
-
-## Applies to
-
-- Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012 R2
-- Windows 10

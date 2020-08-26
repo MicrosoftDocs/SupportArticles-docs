@@ -17,7 +17,7 @@ ms.technology: ActiveDirectory
 
 This article provides information about well-known SIDs in all versions of Windows.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows 10 - all editions  
+_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 243330
 
 ## Summary
@@ -188,9 +188,3 @@ This subkey also contains any capability SID that is added by first-party or thi
 - [Security identifiers](/windows/security/identity-protection/access-control/security-identifiers)
 - [2.4.2.4 Well-Known SID Structures](/openspecs/windows_protocols/ms-dtyp/81d92bba-d22b-4a8c-908a-554ab29148ab)
 - [AD DS Deployment](/windows-server/identity/ad-ds/deploy/ad-ds-deployment)
-
-## Applies to
-
-- Windows 10 - all editions
-- Windows Server 2019
-- Windows Server 2016

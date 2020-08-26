@@ -17,7 +17,7 @@ ms.technology: Networking
 
 This article provides the steps to troubleshoot the missing SYSVOL and Netlogon shares in Windows Server 2012 R2.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original product version:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2958414
 
 ## Symptoms
@@ -172,12 +172,3 @@ Check whether the Application and System event logs are frequently reporting ESE
 The Service Control Manager (SCM) uses the default time-out time of 20 seconds for stopping a service. In some complex DFS Replication implementations, this time-out value may be too short, and DFS Replication stops before the appropriate database is closed. At service restart, DFS Replication detects this condition, and then does the database recovery. WaitToKillServiceTimeout may be used to grant DFS Replication more time to commit changes to the database during shutdown. For more information, go to article [You receive DFSR event ID 2212 after you restart the DFSR service](https://support.microsoft.com/help/977518).
 
 After you have restored DFS Replication of SYSVOL, DFS Replication health must be carefully monitored in the environment to prevent this scenario. Regular review of DFS Replication event logs, collecting of DFS Replication health reports, and collecting of replication state (by using the WMI query in the Check DFS Replication state section under [Step 1 - Evaluate the state of DFS Replication on all domain controllers](#step-1---evaluate-the-state-of-dfs-replication-on-all-domain-controllers)) are recommended.
-
-## Applies to
-
-- Windows Server 2012 R2 Standard
-- Windows Server 2012 R2 Datacenter
-- Windows Server 2012 Standard,
-- Windows Server 2012 Datacenter
-- Windows Server 2008 Service Pack 2 (for ESU only)
-- Windows Server 2008 R2 Service Pack 1 (for ESU only)

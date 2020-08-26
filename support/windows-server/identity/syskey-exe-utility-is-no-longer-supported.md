@@ -17,7 +17,7 @@ ms.technology: ActiveDirectory
 
 Windows 10, version 1709, Windows Server, version 2004 and later versions of Windows no longer support the syskey.exe utility.
 
-_Original product version:_ &nbsp; Windows 10, version 2004, Windows Server 2019  
+_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 4025993
 
 ## Changes detail
@@ -49,14 +49,3 @@ Active Directory previously supported the use of an externally encrypted syskey 
 ## Reference
 
 The syskey.exe utility and its underlying support in the Windows OS was first introduced in Windows 2000 and backported to Windows NT 4.0. For more information, see [How to use the SysKey utility to help secure the Windows Security Accounts Manager database](https://support.microsoft.com/help/310105).
-
-## Applies to
-
-- Windows 10, version 2004
-- Windows 10, version 1909
-- Windows 10, version 1903
-- Windows 10, version 1809
-- Windows 10, version 1803
-- Windows 10, version 1709
-- Windows Server 2019
-- Windows Server 2016

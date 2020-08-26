@@ -69,17 +69,3 @@ Map the required drives again in the elevated session, for example, by using a .
 4. Double-click the **EnableLinkedConnections** registry entry.
 5. In the **Edit DWORD Value** dialog box, type *1* in the **Value data** field, and then select **OK**.
 6. Exit Registry Editor, and then restart the computer.
-
-## Applies to
-
-- Windows Server 2012 R2 Datacenter
-- Windows Server 2012 R2 Standard
-- Windows Server 2012 R2 Essentials
-- Windows Server 2012 R2 Foundation
-- Windows Server 2012 Datacenter
-- Windows Server 2012 Standard
-- Windows Server 2012 Essentials
-- Windows Server 2012 Foundation
-- Windows 8.1 Enterprise
-- Windows 8.1 Pro
-- Windows 8.1

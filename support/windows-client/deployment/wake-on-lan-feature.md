@@ -17,7 +17,7 @@ ms.technology: Deployment
 
 This article provides information on how to enable Wake on LAN behavior in different versions of Windows.
 
-_Original product version:_ &nbsp; Windows 10, version 1903, Windows 7 Service Pack 1  
+_Original product version:_ &nbsp; Windows 10, version 1903, , Windows 10, version 1809, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2776718
 
 ## Summary
@@ -55,10 +55,3 @@ For more information, see:
 
 - [System Power Actions](/windows-hardware/drivers/kernel/system-power-actions)
 - [System Power States](/windows/win32/power/system-power-states)
-
-## Applies to
-
-- Windows 10, version 1903
-- Windows 10, version 1809
-- Windows 10, version 1511
-- Windows 7 Service Pack 1

@@ -17,7 +17,7 @@ ms.technology: WindowsSecurity
 
 This step-by-step article describes how to use Netdom.exe to reset machine account passwords of a domain controller in Windows Server.
 
-_Original product version:_ &nbsp; Windows Server 2019  
+_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, WIndows Server 2012 R2  
 _Original KB number:_ &nbsp; 325850
 
 ## Summary
@@ -67,9 +67,3 @@ You must run the tool locally, from the Windows-based computer whose password yo
        ```
 
 5. Restart the server whose password was changed. In this example, this is Server1.
-
-## Applies to
-
-- Windows Server 2019
-- Windows Server 2016 Standard
-- Windows Server 2012 R2 Standard
