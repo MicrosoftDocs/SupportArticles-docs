@@ -18,11 +18,9 @@ search.appverid: MET150
 ---
 # Enable the Hierarchical Address Book feature in Microsoft Exchange Server 2010
 
-_Original KB number:_ &nbsp;973994
-
 This article provides steps to enable the Hierarchical Address Book feature in Exchange Server 2010.
 
-## Introduction
+_Original KB number:_ &nbsp;973994
 
 This step-by-step article describes how to enable the Hierarchical Address Book (HAB) feature in Microsoft Exchange Server 2010. HAB is a feature in Exchange Server 2010 and an Office Outlook address book. HAB lets end users browse for recipients in the organizational hierarchy that they belong to.
 
