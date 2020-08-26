@@ -25,3 +25,8 @@ productDirectory:
     links:
     - url: virtual-machines/welcome-virtual-machines.md
       text: Support for Virtual Machines
+  - title: Azure DevOps
+    imageSrc: "https://docs.microsoft.com/en-us/azure/devops/media/index/devopsiconboards96.svg"
+    links:
+    - url: devops/welcome-azure-devops.md
+      text: Troubleshooting articles for Azure DevOps
