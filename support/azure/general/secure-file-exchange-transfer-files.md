@@ -2,6 +2,9 @@
 title: How to use Secure File Exchange to exchange files with Microsoft Support
 description: Provides information to help you fast and secure transfer files with Microsoft Support using Secure File Exchange.
 ms.date: 08/14/2020
+author: genlin
+ms.author: genli
+ms.service: storage
 ms.prod-support-area-path: 
 ms.reviewer: 
 ---

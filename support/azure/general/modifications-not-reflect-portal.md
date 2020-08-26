@@ -2,6 +2,9 @@
 title: Modifications to the configuration mode of an Azure Automation Configuration Node aren't reflected in the portal
 description: When a DSC Node is registered for the first time, the Configuration Mode appears correctly in the Azure portal. But if a change is made to Configuration Mode on the DSC Node, the Configuration Mode is not updated in the Azure portal.
 ms.date: 08/14/2020
+author: genlin
+ms.author: genli
+ms.service: automation
 ms.prod-support-area-path: 
 ms.reviewer: pfreitas
 ---

@@ -2,6 +2,9 @@
 title: Update 1603 for Cloud Platform System Standard
 description: Describes Update 1603 for Cloud Platform System Standard. Includes updates for Windows Server 2012 R2, System Center 2012 R2, and Windows Azure Pack.
 ms.date: 08/14/2020
+author: genlin
+ms.author: genli
+ms.service: cps
 ms.prod-support-area-path: 
 ms.reviewer: 
 ---

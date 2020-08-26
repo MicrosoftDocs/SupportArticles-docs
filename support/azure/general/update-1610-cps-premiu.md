@@ -2,6 +2,9 @@
 title: Update 1610 for Cloud Platform System (CPS) Premium
 description: Describes Update 1610 for Cloud Platform System (CPS) Premium and provides detailed steps to install Update 1610 for CPS Premium.
 ms.date: 08/14/2020
+author: genlin
+ms.author: genli
+ms.service: cps
 ms.prod-support-area-path: 
 ms.reviewer: ashtons
 ---

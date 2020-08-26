@@ -1,10 +1,10 @@
 ---
 title: Data restore scenarios for Azure Storage service
 description: This article describes the data restore scenarios for Azure Storage service.
+ms.date: 08/14/2020
 author: genlin
 ms.author: genli
 ms.service: storage
-ms.date: 08/14/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
 ---

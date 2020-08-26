@@ -1,6 +1,9 @@
 ---
 title: Firmware version matrix for Cloud Platform System (CPS) Premium
 description: Provides a table that lists the file paths for firmware updates on Cloud Platform System (CPS) Premium. The table also describes the latest firmware version that's supported by the 1607 release of CPS Premium.
+author: genlin
+ms.author: genli
+ms.service: csp
 ms.date: 08/14/2020
 ms.prod-support-area-path: 
 ms.reviewer: 

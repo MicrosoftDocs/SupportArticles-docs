@@ -2,6 +2,9 @@
 title: Request body is too large error when you write more than 4 MB of data to Azure Storage
 description: Describes an issue that triggers a "Request body is too large" error in Microsoft Azure. Occurs when you try to write more than 4 megabytes (MB) of data to Azure file storage.
 ms.date: 08/14/2020
+author: genlin
+ms.author: genli
+ms.service: storage
 ms.prod-support-area-path: 
 ms.reviewer: 
 ---
