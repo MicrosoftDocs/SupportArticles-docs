@@ -43,7 +43,7 @@ This article describes symptoms, cause, and resolution steps for AD operations t
     The DSA operation is unable to proceed because of a DNS lookup failure.
     ```
 
-1. REPADMIN reports that a replication attempt has failed with status 8524.
+2. REPADMIN reports that a replication attempt has failed with status 8524.
 
     REPADMIN commands that commonly cite the 8524 status include but aren't limited to:
 
@@ -73,7 +73,7 @@ This article describes symptoms, cause, and resolution steps for AD operations t
 
     Rest of /showrepl output truncated
 
-1. NTDS KCC, NTDS General, or Microsoft-Windows-ActiveDirectory_DomainService events with the 8524 status are logged in the directory service event log.
+3. NTDS KCC, NTDS General, or Microsoft-Windows-ActiveDirectory_DomainService events with the 8524 status are logged in the directory service event log.
 
     Active Directory events that commonly cite the 8524 status include but aren't limited to:
 
@@ -87,7 +87,7 @@ This article describes symptoms, cause, and resolution steps for AD operations t
     |NTDS KCC|1926|The attempt to establish a replication link to a read-only directory partition with the following parameters failed<br/><br/>|
     ||||
 
-1. Domain controllers log NTDS Replication event 2087 and/or NTDS Replication event 2088 in their Directory Service event log:
+4. Domain controllers log NTDS Replication event 2087 and/or NTDS Replication event 2088 in their Directory Service event log:
 
     ```console
     Log Name: Directory Service
@@ -224,7 +224,7 @@ Destination DCs resolve source DCs in DNS by their fully qualified CNAME records
                                                                                                      <- step 4
     ```
 
-1. Locate the ObjectGUID of the source DC in the *destination* DCs' copy of Active Directory.
+2. Locate the ObjectGUID of the source DC in the *destination* DCs' copy of Active Directory.
 
      From the console of the destination DC logging the 8524 error/event, type:
 
@@ -256,11 +256,11 @@ Destination DCs resolve source DCs in DNS by their fully qualified CNAME records
             Last success @ YYYY-MM-DD HH:MM:SS.
     ```
 
-1. Compare the object GUID from #2 and #3.
+3. Compare the object GUID from #2 and #3.
 
     If the object GUIDS are the same, then the source DC and destination DC know about the same instantiation (the same promotion) of the source DC. If they're different, then figure which one was created later. The NTDS setting object with the earlier create date is likely stale and should be removed.
 
-1. PING the source DC by its fully qualified CNAME.  
+4. PING the source DC by its fully qualified CNAME.  
 
     From the console of the destination DC, test Active Directory's name resolution with a PING of the source DCs fully qualified CNAME record:
 
@@ -336,7 +336,7 @@ The error message text in DS RPC Client event 2087 documents a user action for r
 
     ISP DNS Servers typically don't accept dynamic DNS updates so CNAME, Host, and SRV records may have to be manually registered.
 
-1. **Verify that the source DC has registered its CNAME record**  
+2. **Verify that the source DC has registered its CNAME record**  
 
     Use step 1 from "Check Active Directory Name Resolution using PING" to locate the current CNAME of the source DC.
 
@@ -383,7 +383,7 @@ The error message text in DS RPC Client event 2087 documents a user action for r
 
     If the CNAME record registration is failing on the DNS servers that the source DC points to for name resolution, review NETLOGN events in the SYSTEM event log for DNS registration failures.
 
-1. **Verify that the source DC has registered its host records**
+3. **Verify that the source DC has registered its host records**
 
     From the console of the source DC, run ipconfig /all to determine which DNS Servers the source DC points to for name resolution.
 
@@ -430,7 +430,7 @@ The error message text in DS RPC Client event 2087 documents a user action for r
 
     It isn't supported to disable the IPv6 protocol by unchecking the IPv6 checkbox in the network card properties.
 
-1. **Verify that the destination DC points to valid DNS Servers**  
+4. **Verify that the destination DC points to valid DNS Servers**  
 
     On the destination DC, verify that DNS Client settings point exclusively to currently online DNS Severs that either host, forward and delegate the _msdcs.\<forest root domain> zone  (that is, all DCs in the contoso.com forest register CNAME records in the_msdcs.contoso.com zone).
 
@@ -491,7 +491,7 @@ The error message text in DS RPC Client event 2087 documents a user action for r
 
     Configuring the DNS client of a DC or member computer to point to an ISP DNS Server for name resolution is invalid unless that ISP has been contracted (that is, paid) to host, forward or delegate DNS queries for your Active Directory forest.
 
-1. **Verify that the DNS Server used by the destination DC can resolve the source DCs CNAME and HOST records**  
+5. **Verify that the DNS Server used by the destination DC can resolve the source DCs CNAME and HOST records**  
 
     From the console of the destination DC, run "ipconfig /all" to determine which DNS Servers that destination DC points to for name resolution:
 
@@ -522,7 +522,7 @@ The error message text in DS RPC Client event 2087 documents a user action for r
     c:\>nslookup -type=A+AAAA contoso-dc1.contoso.com 10.45.42.102  
     ```
 
-1. **Review the relationship between the DNS Servers used by the source and destination DCs**  
+6. **Review the relationship between the DNS Servers used by the source and destination DCs**  
 
     If the DNS Servers used by the source and destination host AD-integrated copies of the _msdcs.\<forest root> and \<primary DNS suffix> zones, check for:
 
