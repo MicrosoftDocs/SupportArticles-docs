@@ -3,8 +3,18 @@
 
 - name: Active Directory
   items:
+    - name: "\"The account is not authorized to login from this station\" error"
+      href: ./identity/account-not-authorized-login-from-this-station.md
     - name: "\"Adprep could not contact a replica\"  error when running \"Adprep /rodcprep\" command"
       href: ./identity/error-run-adprep-rodcprep-command.md
+    - name: Access denied after logging on to a local administrator account
+      href: ./identity/access-denied-log-on-administrator-domain-account.md
+    - name: ADFS 2.0 error 401
+      href: ./identity/adfs-error-401-requested-resource-requires-authentication.md
+    - name: Can't add user or object to directory service
+      href: ./identity/cannot-add-user-object-differ-by-diacritic-mark-character.md
+    - name: DC promotion stops responding
+      href: ./identity/dc-promotion-not-respond-netbios-disabled.md
     - name: DCPROMO demotion fails
       href: ./identity/dcpromo-demotion-fails.md
     - name: Default limit to workstation numbers
@@ -13,12 +23,18 @@
       href: ./identity/diagnose-replication-failures.md
     - name: Enable LDAP over SSL
       href: ./identity/enable-ldap-over-ssl-3rd-certification-authority.md
+    - name: Errors when you run DCDIAG commands
+      href: ./identity/dcdiag-commands-running-errors.md
+    - name: ESENT event IDs 1000, 1202, 412, and 454
+      href: ./identity/esent-events-1000-1202-412-454.md
     - name: FSMO placement and optimization
       href: ./identity/fsmo-placement-and-optimization-on-ad-dcs.md
     - name: FSMO roles
       href: ./identity/fsmo-roles.md
     - name: Host AD DCs in virtual hosting environments
       href: ./identity/ad-dc-in-virtual-hosting-environment.md
+    - name: Hotfixes for DFS technologies
+      href: ./identity/distributed-file-system-hotfixes.md
     - name: How to configure AD and LDS diagnostic event logging
       href: ./identity/configure-ad-and-lds-event-logging.md
     - name: How to configure authoritative time server
@@ -41,38 +57,60 @@
       href: ./identity/troubleshoot-high-lsass.exe-cpu-utilization.md
     - name: Known issues for managing Group Policy clients
       href: ./identity/known-issues-for-group-policy-clients.md
+    - name: LDAP and Kerberos servers reset TCP sessions
+      href: ./identity/ldap-kerberos-server-reset-tcp-sessions.md
     - name: LDAPS connection problems
       href: ./identity/ldap-over-ssl-connection-issues.md
+    - name: Let non-administrators view deleted objects container
+      href: ./identity/non-administrators-view-deleted-object-container.md
+    - name: Lingering objects still remain
+      href: ./identity/lingering-objects-remain.md
+    - name: Move Windows Server to a domain fails
+      href: ./identity/wizard-not-gain-access-to-domain.md
     - name: Name computers, domains, sites, and OUs
       href: ./identity/naming-conventions-for-computer-domain-site-ou.md
-    - name: Operations fail with Win32 error 1753
-      href: ./identity/replication-error-1753.md
+    - name: Netlogon service doesn't keep settings after in-place upgrade
+      href: ./identity/netlogon-service-not-start-automatically.md
+    - name: NTFRS deprecation blocks installation of replica DCs
+      href: ./identity/ntfrs-deprecation-blocks-replic-dc-installation.md
     - name: Operations fail with Win32 error 8524
       href: ./identity/replication-error-8524.md
+    - name: Operations fail with Win32 error 1753
+      href: ./identity/replication-error-1753.md
+    - name: Optimize domain controller location
+      href: ./identity/optimize-dc-location-global-catalog.md
     - name: Redirect users and computers containers
       href: ./identity/redirect-users-computers-containers.md
+    - name: Relocate a SYSVOL tree
+      href: ./identity/relocate-sysvol-tree-frs-for-replication.md
     - name: Replication error 1722
       href: ./identity/replication-error-1722-rpc-server-unavailable.md
     - name: Replication error 2146893022
       href: ./identity/replication-error-2146893022.md
     - name: Replication error 5 - Access is denied
       href: ./identity/replication-error-5.md
-    - name: Replication error 8452
-      href: ./identity/replication-error-8452.md
     - name: Replication error 8453
       href: ./identity/replication-error-8453.md
-    - name: Rreplication error 8614
-      href: ./identity/replication-error-8614.md
+    - name: Replication error 8452
+      href: ./identity/replication-error-8452.md
     - name: Required trusted root certificates
       href: ./identity/trusted-root-certificates-are-required.md
+    - name: Rreplication error 8614
+      href: ./identity/replication-error-8614.md
     - name: Syskey.exe utility is no longer supported
       href: ./identity/syskey-exe-utility-is-no-longer-supported.md
+    - name: Troubleshoot replication error 8418
+      href: ./identity/replication-error-8418.md
+    - name: Troubleshoot replication error 8606
+      href: ./identity/replication-error-8606.md
+    - name: Troubleshoot sIDHistory migration with ADMTv2
+      href: ./identity/inter-forest-sidhistory-migration-with-admt.md
     - name: Troubleshoot domain controller replication error 1727
       href: ./identity/remote-procedure-call-failed-and-did-not-execute-error.md
-    - name: UserAccountControl property flags
-      href: ./identity/useraccountcontrol-manipulate-account-properties.md
     - name: Use Directory Service to manage AD objects
       href: ./identity/directory-service-manage-objects.md
+    - name: UserAccountControl property flags
+      href: ./identity/useraccountcontrol-manipulate-account-properties.md
     - name: View and set LDAP policy by using Ntdsutil
       href: ./identity/view-set-ldap-policy-using-ntdsutil.md
     - name: Well-known security identifiers
@@ -87,6 +125,8 @@
 
 - name: Application Management
   items:
+    - name: Dial-in is unavailable in MMC snap-in
+      href: ./application-management/dial-in-tab-unavailable-mmc-snap-in.md
     - name: How to configure DTC to work through firewalls
       href: ./application-management/configure-dtc-to-work-through-firewalls.md
     - name: MSI installation fails with error 1603
@@ -94,48 +134,76 @@
 
 - name: Backup and Storage
   items:
-    - name: Backup fails because of VSS writer
-      href: ./backup-storage/backup-fails-vss-writer.md
-    - name: Can't delete files on NTFS file system
-      href: ./backup-storage/cannot-delete-file-folder-on-ntfs-file-system.md
-    - name: Can't start a computer from a FAT32 file system USB flash drive
-      href: ./backup-storage/cannot-start-computer-from-usb-flash-drive.md
     - name: "Error 0x8000FFFF when running \"vssadmin list writers\" command"
-      href: ./backup-storage/error-0x8000ffff-run-vssadmin-list-writers-command.md
+      href: ./backup-and-storage/error-0x8000ffff-run-vssadmin-list-writers-command.md
+    - name: Backup fails because of VSS writer
+      href: ./backup-and-storage/backup-fails-vss-writer.md
+    - name: Can't add an additional disk to a scheduled backup
+      href: ./backup-and-storage/fail-to-add-disk-to-schedule-backup.md
+    - name: Can't delete files on NTFS file system
+      href: ./backup-and-storage/cannot-delete-file-folder-on-ntfs-file-system.md
+    - name: Can't start a computer from a FAT32 file system USB flash drive
+      href: ./backup-and-storage/cannot-start-computer-from-usb-flash-drive.md
     - name: Extend a data volume
-      href: ./backup-storage/extend-data-volume.md
+      href: ./backup-and-storage/extend-data-volume.md
+    - name: File shares on iSCSI devices aren't re-created
+      href: ./backup-and-storage/file-shares-on-iscsi-devices-not-recreated.md
+    - name: Full garbage collection causes performance issues
+      href: ./backup-and-storage/full-garbage-collection-performance-issue.md
+    - name: How NTFS reserves space for MFT
+      href: ./backup-and-storage/ntfs-reserves-space-for-mft.md
     - name: How to restore a Windows 7 installation
-      href: ./backup-storage/how-to-restore-windows-installation.md
+      href: ./backup-and-storage/how-to-restore-windows-installation.md
     - name: How to run the Disk Cleanup tool (Cleanmgr.exe)
-      href: ./backup-storage/automating-disk-cleanup-tool.md
+      href: ./backup-and-storage/automating-disk-cleanup-tool.md
     - name: Information about Event ID 51
-      href: ./backup-storage/event-id-51-information.md
+      href: ./backup-and-storage/event-id-51-information.md
     - name: 'Restore system/boot drive letter'
-      href: ./backup-storage/restore-system-boot-drive-letter.md
+      href: ./backup-and-storage/restore-system-boot-drive-letter.md
     - name: Support policy for 4K sector hard drives
-      href: ./backup-storage/support-policy-4k-sector-hard-drives.md
+      href: ./backup-and-storage/support-policy-4k-sector-hard-drives.md
     - name: USB Device not recognized error
-      href: ./backup-storage/usb-device-not-recognized-error.md
+      href: ./backup-and-storage/usb-device-not-recognized-error.md
     - name: Windows support for hard disks exceeding 2 TB
-      href: ./backup-storage/support-for-hard-disks-exceeding-2-tb.md
+      href: ./backup-and-storage/support-for-hard-disks-exceeding-2-tb.md
 
 - name: Deployment
   items:
+    - name: "\"Windows is not genuine\" error"
+      href: ./deployment/windows-not-genuine-error.md
+    - name: Add OEM PnP drivers to Windows installations
+      href: ./deployment/add-oem-plug-play-drivers.md
+    - name: Chinese (Simplified) input method doesn't work
+      href: ./deployment/chinese-simplified-input-method-not-working.md
+    - name: Create an ISO image for UEFI platforms
+      href: ./deployment/create-iso-image-for-uefi-platforms.md
+    - name: Enable logging and tracing for WDS components
+      href: ./deployment/enable-logging-windows-deployment-service.md
     - name: Error 0x8007000D when you activate a machine
       href: ./deployment/0x8007000d-activate-machine.md
     - name: Event ID 307 and 304 logged for deploying Windows
       href: ./deployment/event-307-and-304-logged-for-deploying.md
+    - name: Fail to run applications on Windows Server Core
+      href: ./deployment/subsystem-needed-support-image-type-not-present.md
     - name: Fix Windows Update errors
       href: ./deployment/fix-windows-update-errors.md
     - name: How to perform an in-place/repair upgrade
       href: ./deployment/repair-or-in-place-upgrade.md
+    - name: Unknown devices in Device manager
+      href: ./deployment/unknown-device-vmbus-virtual-machine.md
     - name: Windows Internal Database (WID) installation fails
       href: ./deployment/error-install-windows-internal-database.md
 
 - name: Group Policy
   items:
+    - name: "\"Namespace is already defined\" error when editing a policy"
+      href: ./group-policy/microsoft-policies-sensors-windowslocationprovider-defined.md
     - name: Description of group policy restricted groups
       href: ./group-policy/description-of-group-policy-restricted-groups.md
+    - name: Fail to run Group Policy Modeling Wizard
+      href: ./group-policy/cannot-run-group-policy-modeling-wizard.md
+    - name: Group Policy errors when unknown environment variable is used
+      href: ./group-policy/group-policy-error-7016-1091-1202.md
     - name: How to enable the Group Policy loopback feature
       href: ./group-policy/loopback-processing-of-group-policy.md
     - name: How to force synchronization for DFSR-replicated sysvol replication
@@ -144,10 +212,29 @@
       href: ./group-policy/set-event-log-security-locally-or-via-group-policy.md
     - name: Netlogon event ID 5719 or Group Policy event 1129
       href: ./group-policy/netlogon-event-id-5719-or-group-policy-event-1129.md
+    - name: Password policy changes aren't applied
+      href: ./group-policy/password-policy-changes-not-applied.md
+    - name: Printer Preferences can't set default printer
+      href: ./group-policy/group-policy-printer-preferences-not-set-default-printer.md
     - name: Troubleshoot SCECLI 1202 events
       href: ./group-policy/scecli-1202-events.md
     - name: Use Group Policy to remotely install softwares
       href: ./group-policy/use-group-policy-to-install-software.md
+    - name: WMI Group Policy filters don't work
+      href: ./group-policy/wmi-group-policy-filters-not-working.md
+
+- name: High Availability
+  items:
+    - name: Configure volume mount points on a server cluster
+      href: ./high-availability/configure-volume-mount-points-server-cluser.md
+    - name: How Cluster service reserves and brings online disks
+      href: ./high-availability/cluster-service-reserves-brings-disk.md
+    - name: How to update failover clusters
+      href: ./high-availability/windows-server-failover-clusters-service-packs-hotfixes.md
+    - name: Physical disk resource doesn't come online
+      href: ./high-availability/physical-disk-resource-not-come-online.md
+    - name: SMB 3.0 features in Windows Server 2012 file server
+      href: ./high-availability/smb-3- file-server-features.md
 
 - name: Networking
   items:
