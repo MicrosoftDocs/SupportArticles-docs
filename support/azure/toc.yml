@@ -7,5 +7,5 @@
     href: cloud-services/welcome-cloud-services.md
   - name: Virtual Machines
     href: virtual-machines/welcome-virtual-machines.md
-- name: (Back up to Support hub page)
-  href: ../index.yml
+  - name: Azure DevOps
+    href: devops/welcome-azure-devops.md
