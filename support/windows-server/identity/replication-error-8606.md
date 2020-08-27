@@ -124,11 +124,8 @@ See the "Tombstone lifetime and replication of deletions" section in the followi
 
 | Object DN path| Object GUID| Source DC| Host partition| Live or deleted?| LastKnownParent| IsDeleted value |
 |---|---|---|---|---|---|---|
-||||||| |
-||||||| |
-||||||| |
-||||||| |
-||||||||
+| | | | | | | |
+
  Columns 1 through 5 of this table can be populated by reading values directly from fields in the NTDS Replication 1988 events that are logged in the Directory Service event logs of the destination domain controllers that are logging either the 1988 event or the 8606 replication status.
 
 The date stamps for LastKnownParent and IsDeleted columns can be determined by running "repadmin /showobjmeta" and referencing the objectguid of the object that is cited in the NTDS replication 1988 event. To do this, use the following syntax:
@@ -187,7 +184,7 @@ If the lingering object that is reported in the 1988 event is not removed by rep
 #### Repldiag
 
 > [!NOTE]
-> Lingering objects can also be removed by using [repldiag.exe.](http://activedirectoryutils.codeplex.com/releases/view/13664)  This tool automates the repadmin /removelingeringobjects process. Removing lingering objects from a forest with repldiag is as simple as running repldiag /removelingeringobjects.  However, it is usually best to exercise some control over the process in larger environments.  The option /OverRideReferenceDC allows you to select which DC is used for cleanup.  The option /outputrepadmincommandlinesyntax allows you to see what a forest-wide cleanup looks like using repadmin.
+> Lingering objects can also be removed by using [repldiag.exe.](https://activedirectoryutils.codeplex.com/releases/view/13664)  This tool automates the repadmin /removelingeringobjects process. Removing lingering objects from a forest with repldiag is as simple as running repldiag /removelingeringobjects.  However, it is usually best to exercise some control over the process in larger environments.  The option /OverRideReferenceDC allows you to select which DC is used for cleanup.  The option /outputrepadmincommandlinesyntax allows you to see what a forest-wide cleanup looks like using repadmin.
 
 Launch the following TechNet on-demand lab for guided troubleshooting practice of this and other AD replication errors:
 
@@ -219,7 +216,7 @@ Microsoft Support teams have seen system time on production domain controllers i
 - Was time rollback protection that is described in Microsoft Knowledge Base article [884776](/default.aspx?scid=kb;en-us;884776) in place?
 - Do system clocks have good batteries and accurate time in the BIOS on domain controllers on virtual host computers? 
 - Are virtual host and guest computers configured to source time according to the hosting manufacturer's recommendations? 
-Microsoft Knowledge Base article [884776](/default.aspx?scid=kb;en-us;884776) documents steps to help protect domain controllers from "listening" to invalid time samples. More information about MaxPosPhaseCorrection and MaxNegPhaseCorrection is available in the [W32Time Blog](http://blogs.msdn.com/w32time/default.aspx) post [Configuring the Time Service: Max[Pos/Neg]PhaseCorrection](http://blogs.msdn.com/w32time/archive/2008/02/28/configuring-the-time-service-max-pos-neg-phasecorrection.aspx). Microsoft Knowledge Base article [961027](/default.aspx?scid=kb;en-us;961027) describes some helpful precision updates when you're configuring time-based settings in policy.
+Microsoft Knowledge Base article [884776](/default.aspx?scid=kb;en-us;884776) documents steps to help protect domain controllers from "listening" to invalid time samples. More information about MaxPosPhaseCorrection and MaxNegPhaseCorrection is available in the [W32Time Blog](https://blogs.msdn.com/w32time/default.aspx) post [Configuring the Time Service: Max[Pos/Neg]PhaseCorrection](http://blogs.msdn.com/w32time/archive/2008/02/28/configuring-the-time-service-max-pos-neg-phasecorrection.aspx). Microsoft Knowledge Base article [961027](/default.aspx?scid=kb;en-us;961027) describes some helpful precision updates when you're configuring time-based settings in policy.
 
 Check for lingering objects by using "repadmin /removelingeringobjects /advisorymode," and then remove them as required.
 

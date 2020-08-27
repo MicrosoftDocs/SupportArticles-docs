@@ -24,11 +24,11 @@ _Original KB number:_ &nbsp;2704233
 
 When you log on to a computer that is running Windows 7 or Windows Server 2008 R2, you receive the following Windows Activation message:
 
-![Screenshot of the error](./media/windows-not-genuine-error/windows-not-genuine.png)
+![Screenshot of the error 1](./media/windows-not-genuine-error/windows-not-genuine.png)
 
 Additionally, the desktop background is black, and you receive the following error message in the lower-right corner of the screen:
 
-![Screenshot of the error](./media/windows-not-genuine-error/copy-windows-not-genuine-error.png)
+![Screenshot of the error 2](./media/windows-not-genuine-error/copy-windows-not-genuine-error.png)
 
 Advanced error message information 
 
@@ -178,7 +178,7 @@ One or more of the following registry subkeys is missing:
 - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Profilelist\S-1-5-19
 - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Profilelist\S-1-5-20
 
-If you prefer to fix this problem yourself, go to the "[Let me fix it myself](#letmefixitmyselfalways)" section.
+If you prefer to fix this problem yourself, go to the "Let me fix it myself" section.
 
 #### Let me fix it myself
 
@@ -220,7 +220,7 @@ Windows Registry Editor Version 5.00
 #### Did this fix the problem?
 
 - Check whether the problem is fixed. If the problem is fixed, you're finished with this section. If the problem isn't fixed, you can [contact support](https://support.microsoft.com/contactus/).
-- We would appreciate your feedback. To provide feedback or to report any issues with this solution, please leave a comment on the "[Fix it for me](http://blogs.technet.com/fixit4me/)" blog or send us an [email](mailto:fixit4me@microsoft.com?subject=kb).
+- We would appreciate your feedback. To provide feedback or to report any issues with this solution, please leave a comment on the "[Fix it for me](https://blogs.technet.com/fixit4me/)" blog or send us an [email](mailto:fixit4me@microsoft.com?subject=kb).
 
 #### Advanced information
 

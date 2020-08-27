@@ -78,24 +78,24 @@ Domain controller-specific records
 
 |Mnemonic|Type|DNS Record|
 |---|---|---|
-|LdapIpAddress|A|<DnsDomainName>|
+|LdapIpAddress|A|\<DnsDomainName>|
 |Ldap|SRV|_ldap._tcp.<DnsDomainName>|
-|DcByGuid|SRV|_ldap._tcp.<DomainGuid>.domains._msdcs.<DnsForestName>|
-|Kdc|SRV|_kerberos._tcp.dc._msdcs.<DnsDomainName>|
-|Dc|SRV|_ldap._tcp.dc._msdcs.<DnsDomainName>|
-|Rfc1510Kdc|SRV|_kerberos._tcp.<DnsDomainName>|
-|Rfc1510UdpKdc|SRV|_kerberos._udp.<DnsDomainName>|
-|Rfc1510Kpwd|SRV|_kpasswd._tcp.<DnsDomainName>|
-|Rfc1510UdpKpwd|SRV|_kpasswd._udp.<DnsDomainName>|
-||||
+|DcByGuid|SRV|_ldap._tcp.\<DomainGuid>.domains._msdcs.\<DnsForestName>|
+|Kdc|SRV|_kerberos._tcp.dc._msdcs.\<DnsDomainName>|
+|Dc|SRV|_ldap._tcp.dc._msdcs.\<DnsDomainName>|
+|Rfc1510Kdc|SRV|_kerberos._tcp.\<DnsDomainName>|
+|Rfc1510UdpKdc|SRV|_kerberos._udp.\<DnsDomainName>|
+|Rfc1510Kpwd|SRV|_kpasswd._tcp.\<DnsDomainName>|
+|Rfc1510UdpKpwd|SRV|_kpasswd._udp.\<DnsDomainName>|
+
  Global catalog-specific records 
 
 |Mnemonic|Type|DNS Record|
 |---|---|---|
-|Gc|SRV|_ldap._tcp.gc._msdcs.<DnsForestName>|
-|GcIpAddress|A|gc._msdcs.<DnsForestName>|
-|GenericGc|SRV|_gc._tcp.<DnsForestName>|
-||||
+|Gc|SRV|_ldap._tcp.gc._msdcs.\<DnsForestName>|
+|GcIpAddress|A|gc._msdcs.\<DnsForestName>|
+|GenericGc|SRV|_gc._tcp.\<DnsForestName>|
+
 For the complete list of the domain controller locator DNS records, see the Windows 2000 Server Resource Kit, "Distributed Systems Guide" book, Chapter 3: "Name Resolution in Active Directory." For the complete list of the domain controller locator DNS records, refer to KB article Q267855 that is referenced in this article.
 
 ### Section II: Other topologies

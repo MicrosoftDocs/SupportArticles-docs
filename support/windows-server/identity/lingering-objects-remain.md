@@ -57,17 +57,17 @@ This article describes how to remove lingering objects that have already appeare
 This procedure requires the **objectGUID** of a DC that has a read/write copy of the object, and the **objectGUID** of the object itself. If you must remove more than one object, determine whether any of the objects are in a parent/child relationship (you can determine this from the objects' distinguished names). If this is the case, order the deletions so that all of the child objects are deleted before their parent objects.
 
 This procedure has three mains steps, which you have to perform on a computer that has access to the forest (and you have to use a user account that has administrative permissions on the forest):
-1. [Obtain the distinguished name and ObjectGUID of the lingering object](#step1) 
-2. [Identify a DC in the object domain](#step2) 
+1. Obtain the distinguished name and ObjectGUID of the lingering object.
+2. Identify a DC in the object domain.
 3. Delete the lingering objects. Select one of the following methods:
-   - [Delete a few lingering objects](#step3a) 
-   - [Delete a large number of lingering objects](#step3b) 
+   - Delete a few lingering objects. 
+   - Delete a large number of lingering objects.
 Important
 Each global catalog server on which you intend to run the delete operations (step 3) must have network connectivity to the domain controller that you identified (step 2).
 
 For troubleshooting information, see the following sections:
-- [Error message when running Walkservers.cmd to modify many lingering objects in the environment](#Error1) 
-- [Error message 87 when removing lingering objects in the environment](#Error2) 
+- Error message when running Walkservers.cmd to modify many lingering objects in the environment.
+- Error message 87 when removing lingering objects in the environment.
 
 ### 1 Obtain the distinguished name and ObjectGUID of the lingering object
 

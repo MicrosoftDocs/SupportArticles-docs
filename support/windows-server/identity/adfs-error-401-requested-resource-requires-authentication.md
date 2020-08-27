@@ -61,7 +61,7 @@ To resolve this problem, follow these steps, in the order given. These steps wil
 
 ### Step 1: Assign the correct AD FS Federation service name record
 
-Make sure that the DNS has a HOST (A) record for the AD FS Federation service name, and avoid using a CNAME record. For more information, see [Internet Explorer behaviors with Kerberos Authentication](http://blogs.technet.com/b/askds/archive/2009/06/22/internet-explorer-behaviors-with-kerberos-authentication.aspx).
+Make sure that the DNS has a HOST (A) record for the AD FS Federation service name, and avoid using a CNAME record. For more information, see [Internet Explorer behaviors with Kerberos Authentication](https://blogs.technet.com/b/askds/archive/2009/06/22/internet-explorer-behaviors-with-kerberos-authentication.aspx).
 
 ### Step 2: Check Federation Service name registration
 
@@ -96,7 +96,7 @@ If the Federation Service name doesn't already exist, run the following command 
 SetSPN -a host/<Federation service name> <username of service account>
 ```  
 
-![The screenshot for setspn command ](./media/adfs-2.0-error-401-requested-resource-requires-authentication/setspn-command.png)
+![The screenshot for setspn command ](./media/adfs-error-401-requested-resource-requires-authentication/setspn-command.png)
 
 ### Step 3: Check for duplicate SPNs
 

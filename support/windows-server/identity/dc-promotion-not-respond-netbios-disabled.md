@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 2948052
 
 When you use Active Directory Domain Services Configuration Wizard to promote a computer to domain controller in Windows Server 2012 R2, the wizard stops responding. When the issue occurs, Active Directory Domain Services Configuration Wizard indicates the promotion is in process and displays the following text: Windows Server 2012 R2 domain controllers have a default for the security setting named "Allow cryptography algorithms compatible with Windows NT 4.0" that prevents weaker cryptography algorithms when establishing security channel sessions.
 
-For more information about this setting, see Knowledge Base article 942564 (http://go.microsoft.com/fwlink/?Linkid=104751).
+For more information about this setting, see Knowledge Base article 942564 (https://go.microsoft.com/fwlink/?Linkid=104751).
 When the issue occurs, the Dcpromo.log file correctly indicates that the promotion operation has stopped:
 ```
 [INFO] DnsDomainName chilld contoso.local

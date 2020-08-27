@@ -54,13 +54,15 @@ When you add drivers to unattended Setup, follow these steps. If the OEM-supplie
 
 2. Create a $oem$\$1\Drivers folder in the I386 folder. You may want to create additional folders in the Drivers subfolder, depending on the hardware that you want to install. For example, you may install a network adapter, a modem, or a video. The $1 folder resolves to %SystemDrive%. During text-mode Setup, these folders and files are copied to the %SystemDrive%\Drivers folders as follows:
 
-   >     \i386  
-   >     \$oem$  
-   >     - - \$1  
-   >     - - - \Drivers  
-   >     - - - - - \network adapter  
-   >     - - - - - \MODEM  
-   >     - - - - - \VIDEO
+    ```console
+    \i386  
+    \$oem$  
+    - - \$1  
+    - - - \Drivers  
+    - - - - - \network adapter  
+    - - - - - \MODEM  
+    - - - - - \VIDEO
+    ```
 
 3. Copy all the OEM-supplied driver files for the device in the folders that you created in the previous step.
 4. Add the OemPnPDriversPath = Driver_Paths entry in the [Unattended] section of the Setup answer file. You can list multiple paths in this key by separating them with a semicolon (;). For example, add the following entry.
@@ -82,11 +84,13 @@ The steps to add OEM-supplied drivers to a Windows Sysprep Setup resemble the st
 
 1. On the root of the volume where the %WinDir% folder is located, create a folder structure to hold the OEM-supplied drivers as follows:
 
-    >     \Drivers
-    >     - - \network adapter
-    >     - - \VIDEO
-    >     \Sysprep
-    >     \WINNT
+    ```console
+    \Drivers
+    - - \network adapter
+    - - \VIDEO
+    \Sysprep
+    \WINNT
+    ```
 
 2. Copy the OEM-supplied drivers to their appropriate subfolders.
 3. Add the OemPnPDriversPath = Driver_Paths entry in the [Unattended] section of the Sysprep.inf file. You can list multiple paths in this key by separating them with a semicolon (;) as shown in the following example.
@@ -151,11 +155,13 @@ Riprep and Sysprep share much of the same functionality. Therefore, adding OEM P
 1. Create a folder named Sysprep on the %SystemDrive% folder. (This is most likely drive C because Riprep.exe can only copy one volume/partition.)
 2. On the root of the same volume, create a folder structure to hold the OEM-supplied drivers as follows:
 
-   >     \Drivers
-   >     - - \network adapter
-   >     - - \VIDEO
-   >     \Sysprep
-   >     \WINNT
+    ```console
+    \Drivers
+    - - \network adapter
+    - - \VIDEO
+    \Sysprep
+    \WINNT
+    ```
 
 3. Copy the OEM-supplied drivers to their appropriate subfolders.
 4. Create a Sysprep.inf file in the Sysprep folder, and then add the [Unattended] and OemPnPDriversPath = Driver_Path entries. You can list multiple paths in this key by separating them with a semicolon (;). For example:
@@ -227,13 +233,15 @@ When you add drivers to unattended Setup, follow these steps. If the OEM-supplie
 1. Create your distribution share on a server by copying the contents of the Windows installation CD-ROM I386 folder. You can use Setupmgr.exe to create this share and your Unattended.txt file. You can find Setupmgr.exe on the Windows or service pack CD-ROM in the Support\Tools folder in the Deploy.cab file and the deploy.chm and ref.chm Help files that contain information about Windows unattended Setup. You can also download the latest files from the Microsoft Web site.
 2. Create a $oem$\$1\Drivers folder in the I386 folder. You may want to create additional folders in the Drivers subfolder, depending on the hardware that you want to install (for example, network adapter, modem, or video). The $1 folder resolves to %SystemDrive%. During text-mode Setup, these folders and files are copied to the %SystemDrive%\Drivers folders. For example:
 
-   >     \i386
-   >     \$oem$
-   >     - - \$1
-   >     - - - \Drivers
-   >     - - - - - \network adapter
-   >     - - - - - \MODEM
-   >     - - - - - \VIDEO
+    ```console
+    \i386
+    \$oem$
+    - - \$1
+    - - - \Drivers
+    - - - - - \network adapter
+    - - - - - \MODEM
+    - - - - - \VIDEO
+    ```
 
 3. Copy all the OEM-supplied driver files for the device in the folders that you created in the previous step.
 4. Add the OemPnPDriversPath = Driver_Paths entry in the [Unattended] section of the Setup answer file. You can list multiple paths in this key by separating them with a semicolon (;). For example:
@@ -255,11 +263,13 @@ The steps to add OEM-supplied drivers to a Windows Sysprep Setup resemble the st
 
 1. On the root of the volume where the %WinDir% folder is located, create a folder structure to hold the OEM-supplied drivers. For example:
 
-   >     \Drivers
-   >     - - \network adapter
-   >     - - \VIDEO
-   >     \Sysprep
-   >     \WINNT
+    ```console
+    \Drivers
+    - - \network adapter
+    - - \VIDEO
+    \Sysprep
+    \WINNT
+    ```
 
 2. Copy the OEM-supplied drivers to their appropriate subfolders.
 3. Add the OemPnPDriversPath = Driver_Paths entry in the [Unattended] section of the Sysprep.inf file. You can list multiple paths in this key by separating them with a semicolon (;). For example:
@@ -321,11 +331,13 @@ Riprep and Sysprep share much of the same functionality. Therefore, adding OEM P
 1. Create a folder named Sysprep on the %SystemDrive% folder. (This is most likely drive C because Riprep.exe can only copy one volume or partition.)
 2. On the root of the same volume, create a folder structure to hold the OEM-supplied drivers as follows:
 
-   >     \Drivers
-   >     - - \network adapter
-   >     - - \VIDEO
-   >     \Sysprep
-   >     \WINNT
+    ```console
+    \Drivers
+    - - \network adapter
+    - - \VIDEO
+    \Sysprep
+    \WINNT
+    ```
 
 3. Copy the OEM-supplied drivers to their appropriate subfolders.
 4. Create a Sysprep.inf file in the Sysprep folder, and then add the [Unattended] and OemPnPDriversPath = Driver_Path entries. You can list multiple paths in this key by separating them with a semicolon (;) as follows:
