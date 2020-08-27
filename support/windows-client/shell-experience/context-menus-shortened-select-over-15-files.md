@@ -1,0 +1,48 @@
+---
+title: Context menus are shortened when more than 15 files are selected
+description: Fixes an issue where the Open, Print, and Edit items are missing from the context menu when you select multiple items in Windows Explorer.
+ms.date: 08/21/2020
+author: delhan
+ms.author: Deland-Han
+manager: dscontentpm
+audience: itpro
+ms.topic: troubleshooting
+ms.prod: windows-client
+localization_priority: medium
+ms.reviewer: kaushika
+ms.prod-support-area-path: File Explorer/Windows Explorer
+ms.technology: ShellExperience
+---
+# Context menus are shortened when more than 15 files are selected
+
+_Original product version:_ &nbsp;Windows 7 Service Pack 1  
+_Original KB number:_ &nbsp; 2022295
+
+## Symptoms
+
+The following items may be missing from the context (right-click) menu when multiple items are selected in Windows Explorer.
+
+- Open
+- Print
+- Edit
+
+## Cause
+
+This is by design. These context menu items won't appear if selecting more than 15 items to avoid accidentally performing these actions on a large number of files.
+
+## Resolution
+
+The following registry value may be modified to choose the number of files that may be selected while maintaining the context menu options.
+
+```console
+HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer
+Name : MultipleInvokePromptMinimum
+Type : DWORD
+Default : 15 (decimal)
+```
+
+## More information
+
+The registry change will go into effect after logging off and back on, or after terminating Windows Explorer (Explorer.exe) and relaunching the process.
+
+**Note:** A value of 16 is interpreted as "unlimited" for showing the options from the context menu, however it doesn't allow the actual opening of the documents selected if selecting more than 16. To allow the opening of more than 16 documents, set this key to a decimal value greater than the number of documents you wish to open. Microsoft recommends only increasing this value to a reasonable number in a controlled environment and only where users really need this value increased.
