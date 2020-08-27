@@ -1,0 +1,63 @@
+- name: Welcome
+  href: welcome-azure-devops.md
+
+- name: Boards
+  items:
+  - name: Error when you add link to work item
+    href: error-add-link-work-item.md
+  - name: Explorer work item form doesn't display images
+    href: explorer-work-item-form-doesnt-display-image.md
+
+- name: Client Connectivity
+  items:
+  - name: Office Integration add-in does not run
+    href: office-add-in-not-run.md
+  - name: Rename the Azure DevOps Service URL
+    href: rename-service-url.md
+  - name: Server specified can't be reached error
+    href: server-specified-could-not-be-reached-error-occurs.md
+
+- name: Installation, Migration, and Move
+  items:
+  - name: Antivirus scanning exclusions
+    href: antivirus-scanning-exclusions.md
+  - name: Console shows projects in Deleting state
+    href: administration-console-shows-projects-deleting-state.md
+  - name: Disabling SQL Server Data Compression
+    href: disable-sql-data-compression.md
+  - name: Performance decreases in Update 2
+    href: performance-decreases-tfs-2013-update-2.md
+  - name: Verification check fails
+    href: verification-check-fails.md
+
+- name: Pipelines
+  items:
+  - name: Access denied when you connect to Source Control
+    href: access-denied-error-when-connect-source-control.md
+  - name: Release Management component doesn't work
+    href: other-release-management-component-no-work.md
+
+- name: Repos
+  items:
+  - name: Pushing large files by Git client hangs
+    href: push-large-files-git-hangs.md
+  - name: Version control download returns incorrect files
+    href: version-control-incorrect-files.md
+
+- name: Server Administration
+  items:
+  - name: Can't create CMMI team project in Chinese or Italian
+    href: cannot-create-cmmi-team-project-chinese-italian.md
+  - name: Default project administrator permissions are incorrect 
+    href: incorrect-default-project-administrator-permission.md
+  - name: Deployment agents rely on shadow don't work
+    href: deployment-agents-rely-shadow-accounts-not-work.md
+  - name: Team Foundation Server 2015 known issues
+    href: team-foundation-server-2015-known-issues.md
+  - name: Selecting distinct users in identity fields
+    href: client-support-select-distinct-users-identity-fields.md
+
+- name: Test Plans
+  items:
+  - name: Test agent configuration fails
+    href: test-agent-configuration-fails.md

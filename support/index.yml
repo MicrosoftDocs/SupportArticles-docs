@@ -60,6 +60,11 @@ productDirectory:
     links:
     - url: mem/index.yml
       text: Troubleshooting articles for Microsoft Endpoint Manager
+  - title: System Center
+    imageSrc: "media/hub-landing/logo-systemcenter.png"
+    links:
+    - url: system-center/index.yml
+      text: Troubleshooting articles for System Center
   - title: Azure
     imageSrc: "https://static.docs.com/ui/media/product/azure/azure.svg"
     links:

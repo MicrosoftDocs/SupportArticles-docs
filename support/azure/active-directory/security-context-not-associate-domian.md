@@ -1,6 +1,6 @@
 ---
 title: Current security context is not associated with an Active Directory domain or forest error when you run the IdFix tool
-description: Describes how to resolve a scenario in which you receive an error when you run the IdFix DirSync Error Remediation Tool.
+description: Describes how to resolve a scenario in which you receive an error (Current security context is not associated with an Active Directory domain or forest) when you run the IdFix DirSync Error Remediation Tool.
 ms.date: 07/06/2020
 ms.prod-support-area-path: 
 ms.reviewer: willfid

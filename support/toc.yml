@@ -16,8 +16,11 @@
 - name: Welcome
   href: windows/win32/welcome-windowsdeveloper.md
 
-- name: Microsoft Endpoint Manager support
+- name: Microsoft Endpoint Manager
   href: mem/index.yml
+
+- name: System Center
+  href: system-center/index.yml
   
 - name: Welcome
   href: biztalk/welcome-biztalk-server.md

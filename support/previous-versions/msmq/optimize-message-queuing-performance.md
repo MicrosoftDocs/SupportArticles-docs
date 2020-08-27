@@ -8,7 +8,7 @@ ms.prod-support-area-path:
 
 This article describes how to optimize Microsoft Message Queuing (MSMQ) performance through the operating system.
 
-_Original product version:_ &nbsp; Message Queuing (MSMQ)  
+_Original product version:_ &nbsp; Microsoft Message Queuing  
 _Original KB number:_ &nbsp; 199428
 
 ## Summary

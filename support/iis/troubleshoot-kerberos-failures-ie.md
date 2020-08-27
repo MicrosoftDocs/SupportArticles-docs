@@ -84,7 +84,7 @@ Using Kerberos requires a domain because a Kerberos ticket is delivered by the d
 
 You should always run this check for sites that are matched to the Local Intranet zone of the browser or for sites in the Trusted Sites zone. You can check in which zone your browser decides to include the site. To do this, open to the **File** menu of Internet Explorer, and then select **Properties**. The **Properties** window will display the zone in which the browser has decided to include the site that you're browsing to.
 
-![properties](./media/troubleshoot-kerberos-failures-ie/properties.png)
+![ie properties](./media/troubleshoot-kerberos-failures-ie/properties.png)
 
 You can check whether the zone in which the site is included allows Automatic logon by opening the **Internet options** menu of Internet Explorer, and selecting the **Security** tab. After you select the desired zone, select the **Custom level** button to display the settings and make sure that **Automatic logon** is selected. (Typically, this feature is turned on by default for the Intranet and Trusted Sites zones).
 
