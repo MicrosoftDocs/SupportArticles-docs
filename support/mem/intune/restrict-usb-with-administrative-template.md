@@ -98,36 +98,32 @@ To fix this issue, follow these steps:
 
    In the example, the following class GUIDs need to be added to the device profile:
 
-     - {36fc9e60-c465-11cf-8056-444553540000}: USB Bus Devices (hubs and host controllers)
+     - {36fc9e60-c465-11cf-8056-444553540000}: USB Bus devices (hubs and host controllers)
      - {745a17a0-74d3-11d0-b6fe-00a0c90f57da}: Human Interface Devices (HID)
-     - {ca3e7ab9-b4c3-4ae6-8251-579ef933890f}: Camera Device
-     - {6bdd1fc6-810f-11d0-bec7-08002be2092f}: Imaging Device
+     - {ca3e7ab9-b4c3-4ae6-8251-579ef933890f}: Camera devices
+     - {6bdd1fc6-810f-11d0-bec7-08002be2092f}: Imaging devices
 
-### Additional class GUIDs to allow certain USB devices
+### Class GUIDs to allow certain USB devices
 
 To allow keyboard and mouse, add the following GUIDs to the device profile:
 
 - {4d36e96b-e325-11ce-bfc1-08002be10318}: Keyboard
-- {4d36e96f-e325-11ce-bfc1-08002be10318}: Mouse
+- {4d36e96f-e325-11ce-bfc1-08002be10318}：Mouse
 
 To allow camera devices, headphones and microphones, add the following GUIDs to the device profile:
 
-- {36fc9e60-c465-11cf-8056-444553540000}: USB Bus Devices (hubs and host
-controllers)
+- {36fc9e60-c465-11cf-8056-444553540000}: USB Bus devices (hubs and host controllers)
 - {745a17a0-74d3-11d0-b6fe-00a0c90f57da}: Human Interface Devices (HID)
-- {4d36e96c-e325-11ce-bfc1-08002be10318}: Multimedia (Audio and video
-device)
-- {ca3e7ab9-b4c3-4ae6-8251-579ef933890f}: Camera
-- {6bdd1fc6-810f-11d0-bec7-08002be2092f}: Devices, digital cameras, and
-scanners
-- {4D36E97D-E325-11CE-BFC1-08002BE10318}: System buses, bridges
-- {53d29ef7-377c-4d14-864b-eb3a85769359}: Biometric
-- {62f9c741-b25a-46ce-b54c-9bccce08b6f2}: Generic software device
+- {4d36e96c-e325-11ce-bfc1-08002be10318}: Multimedia devices
+- {ca3e7ab9-b4c3-4ae6-8251-579ef933890f}: Camera devices
+- {6bdd1fc6-810f-11d0-bec7-08002be2092f}: Imaging devices
+- {4D36E97D-E325-11CE-BFC1-08002BE10318}: System devices
+- {53d29ef7-377c-4d14-864b-eb3a85769359}: Biometric devices
+- {62f9c741-b25a-46ce-b54c-9bccce08b6f2}: Generic software devices
 
 To allow 3.5 mm headphones, add the following GUIDs to the device profile:
 
-- {4d36e96c-e325-11ce-bfc1-08002be10318}: Multimedia (Audio and video
-device)
+- {4d36e96c-e325-11ce-bfc1-08002be10318}: Multimedia devices
 - {c166523c-fe0c-4a94-a586-f1a80cfbbf3e}: Audio endpoint
 
 > [!NOTE]
