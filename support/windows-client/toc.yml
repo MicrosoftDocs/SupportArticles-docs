@@ -34,52 +34,52 @@
 
 - name: Deployment
   items:
-    - name: Automate regional and language settings
-      href: ./deployment/automate-regional-language-settings.md
-    - name: Can't activate Windows 7 with ./deployment/item-with-same-key-has-been-added.md
-      href: ./deployment/cannot-activate-windows-from-oem.md
-    - name: Can't turn off a computer from Audit mode
-      href: ./deployment/fail-to-turn-off-computer-from-audit-mode.md
-    - name: Create a user-defined service
-      href: ./deployment/create-user-defined-service.md
-    - name: Customize default local user profile
-      href: ./deployment/customize-default-local-user-profile.md
-    - name: Error 87 when a Windows 10 image is applied
-      href: ./deployment/dism-error-87-apply-windows-10-image.md
-    - name: Error after you enter BitLocker PIN at startup 
-      href: ./deployment/bitlocker-too-many-pin-entry-attempts.md
-    - name: Error when BIOS is in legacy mode with TPM 2.0
-      href: ./deployment/tpm-is-ready-for-use-with-reduced-functionality.md
-    - name: Event ID 10 is logged in Application log
-      href: ./deployment/event-10-is-logged-in-application-log.md
-    - name: Event ID 15 when a computer resumes from sleep
-      href: ./deployment/event-id-15-computer-resume-from-sleep.md
-    - name: Event ID 7000 or 7026 after starting a computer
-      href: ./deployment/system-log-event-id-7000-7026.md
-    - name: Fail to open a list in VAMT 2.0
-      href: ./deployment/item-with-same-key-has-been-added.md
-    - name: Hide Devices in Devices and Printers
-      href: ./deployment/disable-devices-in-devices-and-printers.md
-    - name: How to disable and re-enable hibernation
-      href: ./deployment/disable-and-re-enable-hibernation.md
-    - name: How to enable Wake on LAN
-      href: ./deployment/wake-on-lan-feature.md
-    - name: How to get updates via Windows Update
-      href: ./deployment/get-updates-through-windows-update.md
-    - name: How to keep Windows up to date
-      href: ./deployment/keep-windows-up-to-date.md
-    - name: How to solve disk space issues caused by WinSxS directory
-      href: ./deployment/address-disk-space-issues-caused-by-winsxs.md
-    - name: How to validate the OEM activation key
-      href: ./deployment/validate-oem-activation-key.md
-    - name: MBAM client fails with error 0x8004100E
-      href: ./deployment/mbam-client-fails-event-id-4-0x8004100e.md
-    - name: 'Running Sysprep /generalize returns error'
-      href: ./deployment/error-occurs-when-running-sysprep-generalize.md
-    - name: Standard terminology that defines software updates
-      href: ./deployment/standard-terminology-software-updates.md
-    - name: Sysprep fails after you remove or update Microsoft Store apps
-      href: ./deployment/sysprep-fails-remove-or-update-store-apps.md
+    - name: Automate regional and language settings
+      href: ./deployment/automate-regional-language-settings.md
+    - name: Can't activate Windows 7 with KMS
+      href: ./deployment/cannot-activate-windows-from-oem.md
+    - name: Can't turn off a computer from Audit mode
+      href: ./deployment/fail-to-turn-off-computer-from-audit-mode.md
+    - name: Create a user-defined service
+      href: ./deployment/create-user-defined-service.md
+    - name: Customize default local user profile
+      href: ./deployment/customize-default-local-user-profile.md
+    - name: Error 87 when a Windows 10 image is applied
+      href: ./deployment/dism-error-87-apply-windows-10-image.md
+    - name: Error after you enter BitLocker PIN at startup 
+      href: ./deployment/bitlocker-too-many-pin-entry-attempts.md
+    - name: Error when BIOS is in legacy mode with TPM 2.0
+      href: ./deployment/tpm-is-ready-for-use-with-reduced-functionality.md
+    - name: Event ID 10 is logged in Application log
+      href: ./deployment/event-10-is-logged-in-application-log.md
+    - name: Event ID 15 when a computer resumes from sleep
+      href: ./deployment/event-id-15-computer-resume-from-sleep.md
+    - name: Event ID 7000 or 7026 after starting a computer
+      href: ./deployment/system-log-event-id-7000-7026.md
+    - name: Fail to open a list in VAMT 2.0
+      href: ./deployment/item-with-same-key-has-been-added.md
+    - name: Hide Devices in Devices and Printers
+      href: ./deployment/disable-devices-in-devices-and-printers.md
+    - name: How to disable and re-enable hibernation
+      href: ./deployment/disable-and-re-enable-hibernation.md
+    - name: How to enable Wake on LAN
+      href: ./deployment/wake-on-lan-feature.md
+    - name: How to get updates via Windows Update
+      href: ./deployment/get-updates-through-windows-update.md
+    - name: How to keep Windows up to date
+      href: ./deployment/keep-windows-up-to-date.md
+    - name: How to solve disk space issues caused by WinSxS directory
+      href: ./deployment/address-disk-space-issues-caused-by-winsxs.md
+    - name: How to validate the OEM activation key
+      href: ./deployment/validate-oem-activation-key.md
+    - name: MBAM client fails with error 0x8004100E
+      href: ./deployment/mbam-client-fails-event-id-4-0x8004100e.md
+    - name: 'Running Sysprep /generalize returns error'
+      href: ./deployment/error-occurs-when-running-sysprep-generalize.md
+    - name: Standard terminology that defines software updates
+      href: ./deployment/standard-terminology-software-updates.md
+    - name: Sysprep fails after you remove or update Microsoft Store apps
+      href: ./deployment/sysprep-fails-remove-or-update-store-apps.md
 
 - name: Group Policy
   items:
