@@ -9,11 +9,11 @@ ms.prod-support-area-path: Device configuration
 ---
 # Restrict USB devices with administrative templates
 
-To prevent malware infections or data loss in your organization, you may want to block certain USB devices such as USB flash drive, camera, and allow USB mouse and keyboard. Or you want to allow USB devices by devices IDs.
+To prevent malware infections or data loss in your organization, you may want to block certain USB devices such as USB flash drive, camera, and allow USB mouse and keyboard. Or you want to allow USB devices by device IDs.
 
 This article shows how to configure such controls using the Intune Administrative Templates.
 
-## Create the template
+## Create the profile
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
@@ -38,7 +38,7 @@ This article shows how to configure such controls using the Intune Administrativ
 
 After the device configuration profile is deployed to targeted Windows 10 devices, you can verify if it works correctly.
 
-If a USB device is not allowed, you will see the following error message:
+If a USB device is not allowed to be installed, you will see the following message:
 
 :::image type="content" source="./media/restrict-usb-with-administrative-template/installation-forbidden.png" alt-text="The installation of the device is forbidden by system policy":::
 
@@ -48,7 +48,7 @@ In the following example, the iPad is blocked because its device ID isn't in the
 
 ## A device is incorrectly blocked
 
-Sometimes you may find that USB devices that belong to the allowed device classes are blocked incorrectly. For example, a camera is blocked although the Multimedia ClassGuid {4d36e96c-e325-11ce-bfc1-08002be10318} was added to the **Allow installation of devices using drivers that match these device setup classes** setting.
+Sometimes you may find that USB devices that match the allowed device classes are incorrectly blocked. For example, a camera is blocked although the Multimedia class GUID {4d36e96c-e325-11ce-bfc1-08002be10318} was specified in the **Allow installation of devices using drivers that match these device setup classes** setting.
 
 :::image type="content" source="./media/restrict-usb-with-administrative-template/camera-blocked.png" alt-text="Cannot find your camera":::
 
@@ -57,7 +57,7 @@ Sometimes you may find that USB devices that belong to the allowed device classe
 To fix this issue, follow these steps:
 
 1. On the Windows 10 device, open the `%windir%\inf\setupapi.dev.log` file.
-2. Look for **Restricted installation of devices not described by policy** in the file, then locate a line that says **Class GUID of device changed to: {GUID}** within the same device install section. 
+2. Look for **Restricted installation of devices not described by policy** in the file, then locate a line that says **Class GUID of device changed to: {GUID}** within the same device install section.
 
    In the following example, locate the line **Class GUID of device changed to: {36fc9e60-c465-11cf-8056-444553540000}**.
 
@@ -94,7 +94,7 @@ To fix this issue, follow these steps:
    ```
 
 3. Add the class GUID to the **Allow installation of devices using drivers that match these device setup classes** setting in the device configuration profile.
-4. If the issue persists, repeat step 1 to 3 to add the additional class GUID until the issue is fixed.
+4. If the issue persists, repeat step 1 to 3 to add the additional class GUIDs until the device can be installed.
 
    In the example, the following class GUIDs need to be added to the device profile:
 
