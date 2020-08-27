@@ -74,6 +74,8 @@
     href: no-password-prompt-after-password-change.md
   - name: Password expiration setting doesn't work
     href: password-expiration-setting-not-working.md
+  - name: Restrict USB devices with administrative templates
+    href: restrict-usb-with-administrative-template.md
   - name: Troubleshoot CSP custom settings
     href: troubleshoot-csp-custom-settings.md
   - name: Windows feature updates are not offered
