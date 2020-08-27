@@ -1,23 +1,23 @@
 ---
-title: "Title goes here"
+title: Event ID 4769 errors in SharePoint OnPrem audit log
 ms.author: v-todmc
 author: mccoybot
 manager: dcscontentpm
-ms.date: xx/xx/xxxx
-audience: Admin|ITPro|Developer
+ms.date: 8/27/2020
+audience: ITPro
 ms.topic: article
-ms.service OR ms.prod: see https://docsmetadatatool.azurewebsites.net/allowlists
+ms.prod: sharepoint
 localization_priority: Normal
 search.appverid:
 - SPO160
 - MET150
 appliesto:
-- ADD PRODUCT
+- SharePoint Server
 ms.custom: 
-- CI ID
+- CI 122278
 - CSSTroubleshoot 
-ms.reviewer: MS aliases for tech reviewers and CI requestor, without "@microsoft.com".  
-description: "How to resolve the error "Virus Found" in SharePoint Server 2013 when the antivirus scanner is unavailable ."
+ms.reviewer: flaviuc
+description: How to resolve an issue where Event ID 4769 appears multiple times in the SharePoint audit log.
 ---
 
 # Multiple Event ID 4769 errors in SharePoint OnPrem audit log
