@@ -238,22 +238,36 @@
 
 - name: Networking
   items:
+    - name: "\"Content file download failed\" error when downloading a file by BITS"
+      href: ./networking/cannot-download-file-background-intelligent-transfer-service.md
     - name: Avoid registering unwanted NIC in DNS
       href: ./networking/unwanted-nic-registered-dns-mulithomed-dc.md
+    - name: Can't delete a record from a DNS zone
+      href: ./networking/record-cannot-deleted-access-denied.md
     - name: Can't modify the Hosts or Lmhosts file
       href: ./networking/cannot-modify-hosts-lmhosts-files.md
     - name: Can't use different credentials for a network share
       href: ./networking/cannot-connect-to-network-share.md
     - name: Certificate requirements when you use EAP-TLS
       href: ./networking/certificate-requirements-eap-tls-peap.md
+    - name: Configure proxy server settings
+      href: ./networking/configure-proxy-server-settings.md
     - name: Configure remote access client account lockout
       href: ./networking/configure-remote-access-client-account-lockout.md
-    - name: DNS records don't show in DNS zones
-      href: ./networking/dns-records-not-present.md
+    - name: DFSR can't replicate files after restoring a virtualized server
+      href: ./networking/distributed-file-system-replication-not-replicate-files.md
+    - name: DFSR databases crash on primary member
+      href: ./networking/recover-from-dfsr-database-crash.md
+    - name: Disable Media Sensing feature for TCP/IP
+      href: ./networking/disable-media-sensing-feature-for-tcpip.md
     - name: DNS CNAME alias fails to connect a SMB file server share
       href: ./networking/dns-chame-alias-cannot-access-smb-file-server-share.md
+    - name: DNS records don't show in DNS zones
+      href: ./networking/dns-records-not-present.md
     - name: DNS Servers can't resolve queries for top-level domains
       href: ./networking/dns-not-resolve-query-for-top-level-domain.md
+    - name: Event ID 1056 after installing DHCP
+      href: ./networking/event-1056-install-dhcp-server-service.md
     - name: Event ID 4000 and 4007 when DNS zones not loaded
       href: ./networking/dns-zones-do-not-load-event-4000-4007.md
     - name: Guest access in SMB2 is disabled by default
@@ -262,18 +276,34 @@
       href: ./networking/configure-ipv6-in-windows.md
     - name: How to configure RPC dynamic port allocation to work with firewalls
       href: ./networking/configure-rpc-dynamic-port-allocation-with-firewalls.md
+    - name: How to disable stealth mode
+      href: ./networking/disable-stealth-mode.md
+    - name: How to manually decommission a root server
+      href: ./networking/decommission-root-server-hosting-dfs.md
     - name: IPC$ share and null session behavior
       href: ./networking/inter-process-communication-share-null-session.md
     - name: 'LT2P/IPsec RAS VPN connections fail'
       href: ./networking/lt2p-ipsec-ras-vpn-connections-fail.md
-    - name: Portqry.exe command-line utility
-      href: ./networking/portqry-exe-command-line-utility.md
+    - name: Name of redirected folder isn't user name
+      href: ./networking/redirected-documents-folder-name-not-user-name.md
     - name: PortQry version 2.0 features and functions
       href: ./networking/portqry-command-line-port-scanner-v2.md
+    - name: Portqry.exe command-line utility
+      href: ./networking/portqry-exe-command-line-utility.md
+    - name: PXE clients don't start
+      href: ./networking/pxe-clients-not-start-dhcp-60-66-67-option.md
     - name: Service overview and network port requirements
       href: ./networking/service-overview-and-network-port-requirements.md
+    - name: Support policy about Single Label Domains
+      href: ./networking/single-label-domains-support-policy.md
+    - name: System error 1331 when you connect to a share
+      href: ./networking/account-currently-disabled-system-error-1331.md
+    - name: The host's A record is registered in DNS
+      href: ./networking/a-record-registered-host-dns.md
     - name: The Automatic Metric feature for IPv4 routes
       href: ./networking/automatic-metric-for-ipv4-routes.md
+    - name: Troubleshoot DNS name resolution on the Internet
+      href: ./networking/troubleshoot-dns-name-resolution.md
     - name: Troubleshoot DNS Event ID 4013
       href: ./networking/troubleshoot-dns-event-id-4013.md
     - name: Troubleshoot missing SYSVOL and Netlogon shares
@@ -289,12 +319,20 @@
 
 - name: Performance
   items:
+    - name: "Troubleshoot the \"STOP 0xC000021A\" error"
+      href: ./performance/troubleshoot-stop-0xc000021a-error.md
+    - name: Compress large registry hives
+      href: ./performance/compress-bloated-registry.md
     - name: Computer keeps booting into safe mode
       href: ./performance/cannot-boot-into-normal-mode.md
+    - name: Create performance counter alert
+      href: ./performance/create-performance-counter-alert-send-email.md
     - name: Description of Windows registry
       href: ./performance/windows-registry-advanced-users.md
     - name: Desktop heap limitation causes out of memory error
       href: ./performance/desktop-heap-limitation-out-of-memory.md
+    - name: Error 0x00000007B after you reconfigure hardware devices
+      href: ./performance/inaccessible-boot-device-stop-error.md
     - name: Error occurs while deleting registry keys
       href: ./performance/error-while-deleting-key.md
     - name: ESENT Event ID 327 and 326
@@ -307,8 +345,16 @@
       href: ./performance/memory-dump-file-options.md
     - name: Rebuild Performance Counter Library values
       href: ./performance/rebuild-performance-counter-library-values.md
-    - name: "Troubleshoot the \"STOP 0xC000021A\" error"
-      href: ./performance/troubleshoot-stop-0xc000021a-error.md
+    - name: Registry troubleshooting for advanced users
+      href: ./performance/registry-troubleshooting-advanced-users.md
+    - name: Service using gMSA account doesn't start
+      href: ./performance/service-using-gmsa-account-not-start.md
+    - name: Switch options for Boot.ini files
+      href: ./performance/switch-options-for-boot-files.md
+    - name: Troubleshoot startup problems
+      href: ./performance/troubleshoot-startup-problems.md
+    - name: Use Userdump.exe to create a dump file
+      href: ./performance/use-userdump-create-dump-file.md
     - name: Use WinRE to troubleshoot startup issues
       href: ./performance/use-winre-to-troubleshoot-startup-issue.md
     - name: Virtual memory in 32-bit version of Windows
@@ -316,23 +362,39 @@
 
 - name: Printing
   items:
+    - name: Back up and restore printers when upgrading
+      href: ./printing/back-up-restore-printers.md
     - name: How to find a compatible printer driver
       href: ./printing/find-compatible-printer-driver-64-bit.md
+    - name: The printer spooler crashes randomly
+      href: ./printing/printer-spooler-crashes-hp-printer-installed.md
     - name: Use Group Policy to control printers
       href: ./printing/use-group-policy-to-control-ad-printer.md
 
 - name: Remote Desktop Services
   items:
+    - name: Applications crash if another user logs off
+      href: ./remote/applications-crash-if-another-user-logs-off-session.md
     - name: Changes to Remote Connection Manager
       href: ./remote/remote-connection-manager-changes.md
+    - name: Clients are disconnected during Group Policy update
+      href: ./remote/client-disconnected-group-policy-updates.md
     - name: Configure RDP listener certificates
       href: ./remote/remote-desktop-listener-certificate-configurations.md
     - name: Copying files exceeding 2 GB fails
       href: ./remote/copying-2-gb-file-by-clipboard-redirection-fails.md
+    - name: Fail to log on to a terminal server 
+      href: ./remote/error-log-on-to-terminal-server.md
     - name: How to remove entries from the Remote Desktop Connection Computer box
       href: ./remote/remove-entries-from-remote-desktop-connection-computer.md
+    - name: Incorrect TLS is displayed
+      href: ./remote/incorrect-tls-use-rdp-with-ssl-encryption.md
     - name: Install RDS role service without Connection Broker
       href: ./remote/install-rds-host-role-service-without-connection-broker.md
+    - name: Limit connections on a terminal server
+      href: ./remote/limit-connections-terminal-server.md
+    - name: RDS client can't connect to RD Session Host server
+      href: ./remote/rds-client-not-connect-to-rd-session-host-server.md
     - name: RDS Connection Broker or RDMS fails
       href: ./remote/rds-connection-broker-or-rdms-fails-caused-by-disabled-tls-10.md
     - name: Remote desktop connection is stuck
@@ -341,13 +403,24 @@
       href: ./remote/understanding-remote-desktop-protocol.md
     - name: Remove Terminal Server licenses from RDP client
       href: ./remote/remove-terminal-server-licenses-from-rdp.md
+    - name: Set up logon script only for Terminal Server users
+      href: ./remote/set-up-logon-script-terminal-server-users.md
     - name: Set up RD licensing across domains forests or workgroups
       href: ./remote/set-up-remote-desktop-licensing-across-domains-forests-workgroups.md
     - name: Troubleshoot Remote desktop disconnected errors
       href: ./remote/troubleshoot-remote-desktop-disconnected-errors.md
+    - name: Updates for Remote Desktop Services 
+      href: ./remote/remote-desktop-services-updates.md
+
+- name: Security and Malware
+  items:
+    - name: User accounts are unexpectedly locked
+      href: ./security-and-malware/user-accounts-locked-event-id-12294.md
 
 - name: Shell Experience
   items:
+    - name: Remote Assistance connection doesn't work with FIPS encryption
+      href: ./shell-experience/fips-encryption-not-allow-remote-assistance-connection.md
     - name: TEMP folder with logon session ID is deleted
       href: ./shell-experience/temp-folder-with-logon-session-id-deleted.md
     - name: Windows Search is disabled by default
@@ -355,6 +428,10 @@
 
 - name: System Management Components
   items:
+    - name: Error 1783 when you open Services.msc
+      href: ./system-management-components/error-1783-services-msc.md
+    - name: Fail to enable analytic or debug event log
+      href: ./system-management-components/error-when-enabling-analytic-debug-event-log.md
     - name: Remote Server Administration Tools
       href: ./system-management-components/remote-server-administration-tools.md
 
@@ -362,6 +439,8 @@
   items:
     - name: Cached domain logon information
       href: ./user-profiles-and-logon/cached-domain-logon-information.md
+    - name: Description of Windows Identity Foundation
+      href: ./user-profiles-and-logon/windows-identity-foundation.md
     - name: How to delete a user profile
       href: ./user-profiles-and-logon/delete-user-profile.md
     - name: Relocation of Users and ProgramData directories
@@ -375,10 +454,18 @@
   items:
     - name: Antivirus exclusions for Hyper-V hosts
       href: ./virtualization/antivirus-exclusions-for-hyper-v-hosts.md
+    - name: Fail to start selected virtual machine
+      href: ./virtualization/fail-to-start-selected-virtual-machine.md
+    - name: Hyper-V Time Synchronization doesn't adjust the VM system clock
+      href: ./virtualization/virtual-machine-time-not-synced.md
     - name: Hyper-V virtual machine fails to start
       href: ./virtualization/hyper-v-virtual-machine-not-start-0x80070005.md
+    - name: Microsoft server software and supported virtualization environments
+      href: ./virtualization/microsoft-server-software-support-policy.md
     - name: Starting or live migrating Hyper-V VMs fails
       href: ./virtualization/starting-or-live-migrating-hyper-v-vms-fails.md
+    - name: Virtual machines are missing
+      href: ./virtualization/vm-missing-0x800704c8-0x80070033-0x800703e3.md
 
 - name: Windows Security
   items:
@@ -412,6 +499,10 @@
       href: ./windows-security/kerberos-authentication-problems-if-user-belongs-to-groups.md
     - name: Logging on a user account fails
       href: ./windows-security/logging-on-user-account-fails.md
+    - name: Mark an attribute as confidential
+      href: ./windows-security/mark-attribute-as-confidential.md
+    - name: New setting modifies NTLM network authentication
+      href: ./windows-security/new-setting-modifies-ntlm-network-authentication.md
     - name: Registry keys about Kerberos protocol and KDC
       href: ./windows-security/kerberos-protocol-registry-kdc-configuration-keys.md
     - name: Reset domain controller's password with Netdom.exe
@@ -420,7 +511,11 @@
       href: ./windows-security/restrict-cryptographic-algorithms-protocols-schannel.md
     - name: Security certificate validation fails
       href: ./windows-security/secured-website-certificate-validation-fails.md
+    - name: SeImpersonatePrivilege and SeCreateGlobalPrivilege
+      href: ./windows-security/seImpersonateprivilege-secreateglobalprivilege.md
     - name: Use Cipher.exe to overwrite deleted data
       href: ./windows-security/use-cipher-to-overwrite-deleted-data.md
     - name: User Account Control and remote restrictions
       href: ./windows-security/user-account-control-and-remote-restriction.md
+    - name: Users and groups can't be added to trusted forest
+      href: ./windows-security/rpc-endpoint-mapper-prevents-users-added-to-trust-forest.md

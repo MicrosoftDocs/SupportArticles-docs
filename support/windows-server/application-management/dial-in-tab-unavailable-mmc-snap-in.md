@@ -38,7 +38,6 @@ On the computer that is running Windows 7, use Remote Desktop Services to connec
 
 ### Workaround 2 (Windows Server 2008)
 
-
 1. On a server that is running Windows Server 2008, install the **Terminal Services** role, and then install the **Terminal Server** role service to enable the use of RemoteApp Manager.
 
 2. Add Active Directory Users and Computers (DSA.MSC) as a remote application.
@@ -46,7 +45,6 @@ On the computer that is running Windows 7, use Remote Desktop Services to connec
 3. On the computer that is running Windows 7, access the RemoteApp DSA.MSC.
 
 ### Workaround 2 (Windows Server 2008 R2)
-
 
 1. On the server that is running Windows Server 2008 R2, install the **Remote Desktop Services** role, and then install the **Remote Desktop Session Host** role service to enable use of RemoteApp Manager.
 
@@ -56,10 +54,10 @@ On the computer that is running Windows 7, use Remote Desktop Services to connec
 
 ## Status
 
-Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section. 
+Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section.
 
 ## More information
 
-To download Remote Server Administration Tools for Windows 7, visit the following Microsoft Web site: [https://www.microsoft.com/download/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d](https://www.microsoft.com/download/details.aspx?familyid=7d2f6ad7-656b-4313-a005-4e344e43997d) 
-For more information about Windows Server 2008 Terminal Services, visit the following Microsoft Web site: [https://technet.microsoft.com/library/cc268349.aspx](https://technet.microsoft.com/library/cc268349.aspx) 
+To download Remote Server Administration Tools for Windows 7, visit the following Microsoft Web site: [https://www.microsoft.com/download/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d](https://www.microsoft.com/download/details.aspx?familyid=7d2f6ad7-656b-4313-a005-4e344e43997d)
+For more information about Windows Server 2008 Terminal Services, visit the following Microsoft Web site: [https://technet.microsoft.com/library/cc268349.aspx](https://technet.microsoft.com/library/cc268349.aspx)
 For more information about Windows Server 2008 R2 Remote Desktop Services, visit the following Microsoft Web site: [https://technet.microsoft.com/library/dd647502(WS.10).aspx](https://technet.microsoft.com/library/dd647502%28ws.10%29.aspx)
