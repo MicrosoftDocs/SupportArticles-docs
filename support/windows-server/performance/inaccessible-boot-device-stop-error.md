@@ -52,7 +52,7 @@ For more information about how to start in safe mode, see the following Microsof
 
 For more information about how to troubleshoot Stop error 0x7B, go to the following Server and Tools Team blog article:
 
-[Troubleshooting a Stop 0x7B in Windows](http://blogs.technet.com/b/askcore/archive/2013/08/05/troubleshooting-a-stop-0x7b-in-windows.aspx) 
+[Troubleshooting a Stop 0x7B in Windows](https://blogs.technet.com/b/askcore/archive/2013/08/05/troubleshooting-a-stop-0x7b-in-windows.aspx) 
 
 ## Status
 

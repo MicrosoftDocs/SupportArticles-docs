@@ -29,7 +29,7 @@ On a Windows-based computer that uses TCP/IP, you can use the Media Sensing feat
 
 ## More information
 
-To have us prevent the network adapter from detecting a link state for you, go to the "[Fix it for me](#fixitformealways)" section. If you prefer to fix this problem yourself, go to the "[Let me fix it myself](#letmefixitmyselfalways)" section.
+To have us prevent the network adapter from detecting a link state for you, go to the "Fix it for me" section. If you prefer to fix this problem yourself, go to the "Let me fix it myself" section.
 
 #### Fix it for me
 

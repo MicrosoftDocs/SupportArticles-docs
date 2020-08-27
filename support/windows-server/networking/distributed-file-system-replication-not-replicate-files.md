@@ -47,7 +47,6 @@ You notice the following behaviors on the restored server:
     > Additional Information:  
     Volume: C:  
     GUID: 92404560-E6C8-11DF-BCA2-806E6F6E6963  
-    ==  
     Log Name:      DFS Replication  
     Source:        DFSR  
     Date:          3/2/2011 10:19:07 AM  
@@ -64,7 +63,6 @@ You notice the following behaviors on the restored server:
     Error: 9214 (Internal database error (-1605))  
     Volume: 92404560-E6C8-11DF-BCA2-806E6F6E6963  
     Database: C:\System Volume Information\DFSR  
-    ===  
     Log Name:      DFS Replication  
     Source:        DFSR  
     Date:          3/2/2011 10:19:07 AM  
@@ -80,7 +78,6 @@ You notice the following behaviors on the restored server:
     > Additional Information:  
     Error: 9014 (Database failure)  
     Volume: 92404560-E6C8-11DF-BCA2-806E6F6E6963  
-    ===  
     Log Name:      DFS Replication  
     Source:        DFSR  
     Date:          3/2/2011 10:51:08 AM  
@@ -96,7 +93,6 @@ You notice the following behaviors on the restored server:
     > Additional Information:  
     Volume: 92404560-E6C8-11DF-BCA2-806E6F6E6963  
     Database: C:\System Volume Information\DFSR  
-    ===  
 
 Any servers that replicate with the restored computer will repeatedly show in their %systemroot%\debug\dfsr*.log files:
 

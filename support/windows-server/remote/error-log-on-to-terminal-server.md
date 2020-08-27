@@ -27,9 +27,9 @@ When you try to log on to a Microsoft Windows Server 2003-based terminal server,
 Detail: Insufficient system resources exist to complete the requested service.
 When this problem occurs, the following events are logged in the Application log on the terminal server.
 
-#### Event ID 1505
+> Event ID 1505
 
-#### Event ID 1508
+> Event ID 1508
 
 ### Cause
 
@@ -40,7 +40,7 @@ You experience this problem if many users are logged on to the terminal server.
 > [!IMPORTANT]
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, click the following article number to view the article in the Microsoft Knowledge Base: [322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows  
 
-To have us fix the problem for you, go to the "[Fix it for me](#fixitformealways)" section. If you prefer to fix this problem yourself, go to the "[Let me fix it myself](#letmefixitmyselfalways)" section.
+To have us fix the problem for you, go to the "Fix it for me" section. If you prefer to fix this problem yourself, go to the "Let me fix it myself" section.
 
 #### Fix it for me
 
@@ -49,11 +49,12 @@ To fix this problem automatically, click the **Fix it** button or link. Click **
 Notes 
 - This wizard may be in English only. However, the automatic fix also works for other language versions of Windows.
 - If you are not using the computer that has the problem, save the Fix it solution to a flash drive or a CD and then run it on the computer that has the problem.
-Then, go to the "[Did this fix the problem?](#fixedalways)" section.
+Then, go to the "Did this fix the problem?" section.
 
 #### Let me fix it myself
 
 To resolve this problem, modify the registry to increase the PoolUsageMaximum value and the PagedPoolSize value. To do this, follow these steps:
+
 1. Click **Start**, click **Run**, type regedit, and then click **OK**.
 2. Locate and then click the following registry subkey: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management` 
 

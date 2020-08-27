@@ -26,7 +26,7 @@ This article discusses the support policy for running Microsoft server software 
 - Microsoft Hyper-V Server 2008 and later versions
 - Server Virtualization Validation Program (SVVP)
 
-For more information, see the following Microsoft website: [http://www.windowsservercatalog.com/svvp/](http://www.windowsservercatalog.com/svvp/) 
+For more information, see the following Microsoft website: [https://www.windowsservercatalog.com/svvp/](https://www.windowsservercatalog.com/svvp/) 
 Microsoft supports Microsoft server software that is running in the supported virtualization environments that are listed in the "More Information" section. This support is subject to the Microsoft Support Lifecycle policy. For more information, see the following Microsoft website: [https://support.microsoft.com/?pr=lifecycle](/?pr=lifecycle) 
 
 In some cases, specific versions of Microsoft server software are required for support. These versions are noted in this article, and the supported versions may be updated as appropriate.

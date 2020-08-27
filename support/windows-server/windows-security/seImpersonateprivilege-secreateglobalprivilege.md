@@ -20,21 +20,6 @@ This article discusses the **Impersonate a client after authentication** and **C
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 821546
 
-### IN THIS TASK
-
-
-- [SUMMARY](#SUMMARY) 
-- [The "Impersonate a Client AfterAuthentication" User Right (SeImpersonatePrivilege)](#The-"Impersonate-a-Client-AfterAuthentication"-User-Right-%28SeImpersonatePrivilege%29) 
-
-- [Troubleshooting](#-Troubleshooting) 
-
-- [The "Create Global Objects" User Right (SeCreateGlobalPrivilege)](#The-"Create-Global-Objects"-User-Right-%28SeCreateGlobalPrivilege%29) 
-
-- [Troubleshooting](#-Troubleshooting) 
-
-- [REFERENCES](#REFERENCES) 
-This article applies to Windows 2000. Support for Windows 2000 ends on July 13, 2010. The [Windows 2000 End-of-Support Solution Center](/win2000) is a starting point for planning your migration strategy from Windows 2000. For more information, see the [Microsoft Support Lifecycle Policy](/lifecycle/).
-
 ## Summary
 
 This article discusses the "Impersonate a client after authentication" and "Create global objects" user rights. These new security settings were first introduced in Windows 2000 Service Pack 4 (SP4) and help to increase security in Windows 2000. This article describes the new security settings and also contains information about some known issues that may occur and how to troubleshoot them.
@@ -52,7 +37,7 @@ This article discusses the "Impersonate a client after authentication" and "Crea
 - If either or both of these new security settings are targeted at Windows 2000 or Windows 2000 Service Pack 1 (SP1) devices, the local MMC security snap-in on those devices cannot correctly display any security settings. However, all security settings that are applied to the targeted devices from other domain-side Group Policy Objects (that do not contain the new settings) will still apply to those targeted devices.
 
 
-- Similarly, you can use the Default Domain Controller security policy to apply the "Impersonate a client after authentication" and "Create global objects" security settings to domain controllers in your environment if the domain controllers are running Windows 2000 SP2 or later. Note that although you can deploy the security settings in an environment that contains Windows 2000 SP2 and Windows 2000 SP3-based domain controllers, the security settings *only* apply to Windows 2000 SP4-based domain controllers. The settings do not apply to domain controllers that are running either Windows 2000 SP2 or Windows 2000 SP3. [back to the top](#back-to-the-top) 
+- Similarly, you can use the Default Domain Controller security policy to apply the "Impersonate a client after authentication" and "Create global objects" security settings to domain controllers in your environment if the domain controllers are running Windows 2000 SP2 or later. Note that although you can deploy the security settings in an environment that contains Windows 2000 SP2 and Windows 2000 SP3-based domain controllers, the security settings *only* apply to Windows 2000 SP4-based domain controllers. The settings do not apply to domain controllers that are running either Windows 2000 SP2 or Windows 2000 SP3.
 
 ### The "Impersonate a Client AfterAuthentication" User Right (SeImpersonatePrivilege)
 
@@ -63,7 +48,6 @@ The "Impersonate a client after authentication" user right (SeImpersonatePrivile
 
 When you assign the "Impersonate a client after authentication" user right to a user, you permit programs that run on behalf of that user to impersonate a client. This security setting helps to prevent unauthorized servers from impersonating clients that connect to it through methods such as remote procedure calls (RPC) or named pipes. For more information about the SeImpersonatePrivilege function, visit the following Microsoft Web site: [https://msdn2.microsoft.com/library/aa375728.aspx](https://msdn2.microsoft.com/library/aa375728.aspx) 
 For more information about Impersonate functions (such as ImpersonateClient, ImpersonateLoggedOnUser, and ImpersonateNamedPipeClient ), search for SeImpersonatePrivilege in the Microsoft Platform SDK documentation. To view this documentation, visit the following Microsoft Web site: [https://msdn2.microsoft.com/library/aa375728.aspx](https://msdn2.microsoft.com/library/aa375728.aspx) 
- [back to the top](#back-to-the-top) 
 
 #### Troubleshooting
 
@@ -91,13 +75,10 @@ To resolve this issue, identify the user account that is used to run the program
 
 For additional information about how to resolve this issue, click the following article number to view the article in the Microsoft Knowledge Base:
  [821255](/EN-US/help/821255)"Error While Trying to Run Project" Error Message When You Debug a Web Application in Visual Studio .NET  
- [back to the top](#back-to-the-top) 
 
 ### The "Create Global Objects" User Right (SeCreateGlobalPrivilege)
 
 The "Create global objects" user right (SeCreateGlobalPrivilege) is a Windows 2000 security setting that was first introduced in Windows 2000 SP4. The user right is required for a user account to create global objects in a Terminal Services session. Note that users can still create session-specific objects without being assigned this user right. By default, members of the Administrators group, the System account, and Services that are started by the Service Control Manager are assigned the "Create global objects" user right.
-
-[back to the top](#back-to-the-top) 
 
 #### Troubleshooting
 
@@ -119,16 +100,14 @@ To resolve this issue, identify the user account that is used to run the program
 - You Receive a "Not Enough Memory" Error Message When You Search for Clips in an Office XP Document in a Terminal Services Session 
 
 For additional information about this issue, click the following article number to view the article in the Microsoft Knowledge Base:
- [821257](/EN-US/help/821257)"Not Enough Memory" Error Message When You Search for Clips in an Office XP Document in a Terminal Services Session  
+ [821257](https://support.microsoft.com/help/821257)"Not Enough Memory" Error Message When You Search for Clips in an Office XP Document in a Terminal Services Session  
 
 - Computer Stops Responding (Hangs) When You Restart a Windows 2000 Server-Based Computer After You Install McAfee Parental Control 
 
 For additional information about this issue, click the following article number to view the article in the Microsoft Knowledge Base:
- [823043](/EN-US/help/823043) Windows 2000 Server-Based Computer Stops Responding When You Restart After You Install McAfee Parental Controls  
- [back to the top](#back-to-the-top) 
+ [823043](https://support.microsoft.com/help/823043) Windows 2000 Server-Based Computer Stops Responding When You Restart After You Install McAfee Parental Controls  
 
 ## References
 
 For additional information about how to obtain the latest service pack for Windows 2000, click the following article number to view the article in the Microsoft Knowledge Base:
- [260910](/EN-US/help/260910) How to Obtain the Latest Windows 2000 Service Pack  
- [back to the top](#back-to-the-top)
+ [260910](https://support.microsoft.com/help/260910) How to Obtain the Latest Windows 2000 Service Pack  

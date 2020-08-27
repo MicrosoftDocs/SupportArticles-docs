@@ -43,4 +43,4 @@ See the below article to know more about Time Sync settings and how to configure
 
 ## More information
 
-[Time Synchronization in Hyper-V](http://blogs.msdn.com/b/virtual_pc_guy/archive/2010/11/19/time-synchronization-in-hyper-v.aspx)
+[Time Synchronization in Hyper-V](https://blogs.msdn.com/b/virtual_pc_guy/archive/2010/11/19/time-synchronization-in-hyper-v.aspx)

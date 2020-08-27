@@ -60,7 +60,7 @@ To work around this issue, use one of the following methods:
 - Compile the application by using the **Swap run from network** linker setting:
 
 - This setting is described here: [https://msdn.microsoft.com/library/chzz5ts6(v=vs.71).aspx](https://msdn.microsoft.com/library/chzz5ts6%28v=vs.71%29.aspx) 
-  - If the application is a managed app, use the Shadow Copy feature that's described here: [http://blogs.msdn.com/b/junfeng/archive/2004/02/09/69919.aspx](http://blogs.msdn.com/b/junfeng/archive/2004/02/09/69919.aspx) > 
+  - If the application is a managed app, use the Shadow Copy feature that's described here: [https://blogs.msdn.com/b/junfeng/archive/2004/02/09/69919.aspx](http://blogs.msdn.com/b/junfeng/archive/2004/02/09/69919.aspx) > 
 
 > [!NOTE]
 > We don't recommend that you run binaries remotely. In situations such as this, we recommend that you use the first workaround.
