@@ -36,4 +36,4 @@ To revert display resolution settings back to the previous setting. Use the Pres
 ## More information
 
 Windows 7 Keyboard shortcuts
-http://windows.microsoft.com/en-US/windows7/Keyboard-shortcuts
+https://windows.microsoft.com/en-US/windows7/Keyboard-shortcuts

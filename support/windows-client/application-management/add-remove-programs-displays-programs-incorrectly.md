@@ -40,7 +40,7 @@ This problem may occur if the uninstaller for a program incorrectly removes regi
 > [!IMPORTANT]
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, click the following article number to view the article in the Microsoft Knowledge Base: [322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows  
 
-To have us fix this problem for you, go to the "[Fix it for me](#fixitformealways)" section. If you prefer to fix this problem yourself, go to the "[Let me fix it myself](#letmefixitmyselfalways)" section.
+To have us fix this problem for you, go to the "Fix it for me" section. If you prefer to fix this problem yourself, go to the "Let me fix it myself" section.
 
 #### Fix it for me
 
@@ -50,7 +50,7 @@ Notes
 - If the Add/Remove Programs tool still does not function properly after you run the Fix it solution, perform an in-place upgrade. For more information about how to perform an in-place upgrade, see the "More Information" section.
 - This wizard may be in English only. However, the automatic fix also works for other language versions of Windows.
 - If you are not on the computer that has the problem, save the Fix it solution to a flash drive or a CD and then run it on the computer that has the problem.
-Then, go to the "[Did this fix the problem?](#fixedalways)" section.
+Then, go to the "Did this fix the problem?" section.
 
 #### Let me fix it myself
 
@@ -215,4 +215,4 @@ For more information, click the following article numbers to view the articles i
 
 
 - Check whether the problem is fixed. If the problem is fixed, you are finished with this section. If the problem is not fixed, you can [contact support](/contactus).
-- We would appreciate your feedback. To provide feedback or to report any issues with this solution, please leave a comment on the "[Fix it for me](http://blogs.technet.com/fixit4me/)" blog or send us an [email](mailto:fixit4me@microsoft.com?subject=kb).
+- We would appreciate your feedback. To provide feedback or to report any issues with this solution, please leave a comment on the "[Fix it for me](https://blogs.technet.com/fixit4me/)" blog or send us an [email](mailto:fixit4me@microsoft.com?subject=kb).

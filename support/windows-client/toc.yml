@@ -33,10 +33,10 @@
       href: ./backup-and-storage/garmin-usb-devices-not-working.md
 
 - name: Deployment
-  items:    
-    - name: Automate regional and language settings
+  items:
+    - name: Automate regional and language settings
       href: ./deployment/automate-regional-language-settings.md
-    - name: Can't activate Windows 7 with ./deployment/item-with-same-key-has-been-added.md
+    - name: Can't activate Windows 7 with ./deployment/item-with-same-key-has-been-added.md
       href: ./deployment/cannot-activate-windows-from-oem.md
     - name: Can't turn off a computer from Audit mode
       href: ./deployment/fail-to-turn-off-computer-from-audit-mode.md

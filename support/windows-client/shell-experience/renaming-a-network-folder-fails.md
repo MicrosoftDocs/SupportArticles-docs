@@ -57,7 +57,7 @@ To have us edit the registry folders for you, go to the "[Fix it for me](https
 
 To fix this problem automatically, click the **Fix this problem** link. Then click **Run** in the **File Download** dialog box, and follow the steps in this wizard.
 
-[![fixitbtn.jpg](http://support.microsoft.com//library/images/support/KBGraphics/PUBLIC/EN-US/2297543/fixitbtn.jpg)
+[![fixit](https://support.microsoft.com//library/images/support/KBGraphics/PUBLIC/EN-US/2297543/fixitbtn.jpg)
 ](https://go.microsoft.com/?linkid=9790365) 
 <!--a.x_x_x_x_button{width:139px;display:block;height:56px}--> [](https://go.microsoft.com/?linkid=9763740) [Fix this problem](https://go.microsoft.com/?linkid=9763740) 
 Microsoft Fix it 50790  

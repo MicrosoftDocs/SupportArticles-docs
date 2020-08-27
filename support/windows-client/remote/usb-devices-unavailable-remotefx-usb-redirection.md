@@ -55,7 +55,7 @@ To enable a device type for RemoteFX USB redirection, follow these steps:
 |---|---|
 |Hard Drive|{53F5630 7 -B6BF-11D0-94F2-00A0C91EFB8B}|
 |CD-ROM|{53F5630 8 -B6BF-11D0-94F2-00A0C91EFB8B}|
-|||
+
 For a complete listing of all system-defined device interface classes, please go to the following Microsoft Developer Network website: [System-Defined Device Interface Classes](https://msdn.microsoft.com/library/ff553412%28v=vs.85%29.aspx <!--ERROR-->) 
 
 > [!NOTE]
@@ -94,4 +94,4 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Serv
 
 For step-by-step instructions on configuring an evaluation deployment of RemoteFX USB redirection for Windows 7 SP1, go to the following Microsoft Technet website: [Configuring USB Device Redirection with Microsoft RemoteFX Step-by-Step Guide](https://technet.microsoft.com/library/ff817581%28ws.10%29.aspx) 
 
-For more information about RemoteFX USB redirection, review the following article on the Remote Desktop Services Blog: [Introducing Microsoft RemoteFX USB Redirection: Part 3](http://blogs.msdn.com/b/rds/archive/2010/11/08/introducing-microsoft-remotefx-usb-redirection-part-3.aspx)
+For more information about RemoteFX USB redirection, review the following article on the Remote Desktop Services Blog: [Introducing Microsoft RemoteFX USB Redirection: Part 3](https://blogs.msdn.com/b/rds/archive/2010/11/08/introducing-microsoft-remotefx-usb-redirection-part-3.aspx)
