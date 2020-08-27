@@ -23,14 +23,14 @@ _Original KB number:_ &nbsp; 3119213
 ## Symptoms
 
 Consider the following scenario:
- 
-- You want Group Policy to apply to Windows 8.1 and later versions of Windows. 
-- You want to use Win32_OperatingSystem BuildNumber to do this.
-- You create the following WMI filter, based on known build numbers of Windows versions: 
 
-```
-"Select BuildNumber from Win32_OperatingSystem WHERE BuildNumber >= 9200 "
-```
+- You want Group Policy to apply to Windows 8.1 and later versions of Windows.
+- You want to use Win32_OperatingSystem BuildNumber to do this.
+- You create the following WMI filter, based on known build numbers of Windows versions:
+
+    ```console
+    "Select BuildNumber from Win32_OperatingSystem WHERE BuildNumber >= 9200 "
+    ```
 
 |Build number|Windows version|
 |---|---|
@@ -55,9 +55,9 @@ This issue occurs because the data type for **BuildNumber**  is String and not 
 
 To fix this issue, use a filter that resembles the following example.
 
-> **[!NOTE]
->** There are several ways to force the string compare to return the result that you want. You can use any method that you prefer. The example is fully functional.
+> [!NOTE]
+> There are several ways to force the string compare to return the result that you want. You can use any method that you prefer. The example is fully functional.
 
-```
+```console
 Select BuildNumber from Win32_OperatingSystem WHERE BuildNumber >= 10000 AND BuildNumber LIKE "%[123456789][0123456789][0123456789][0123456789][0123456789]%" OR BuildNumber >= 9200 AND BuildNumber LIKE "%[123456789][0123456789][0123456789][0123456789]%"
 ```
