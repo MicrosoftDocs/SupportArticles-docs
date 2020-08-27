@@ -39,7 +39,7 @@ Listed below are some recommendations to help resolve the issue.
 
 1. Navigate to the [Office 365 Admin Center](https://admin.microsoft.com/AdminPortal/Home#/homepage). 
 2. Under **Users**, select **Active users**.
-3. Search for and select the user account experiencing the issue. Select **OK** in the dialog box that opens.  
+3. Search for a user account. When you select the user account, a panel opens on the right with the user's information. Select **OK** in the dialog box that opens.  
 4. If the message "Sign in blocked" is displayed, unblock the user by selecting the "blocked"  icon (![Blocked icon.](media/troubleshooting-guide-for-sites/blocked-icon.jpg)).
 !["Sign in blocked" message.](media/troubleshooting-guide-for-sites/troubleshooting-sign-in-blocked.jpg)<br/>
    > [!NOTE]
