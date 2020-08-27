@@ -20,14 +20,14 @@
       href: ./application-management/event-10016-logged-when-accessing-dcom.md
     - name: Installed programs are incorrectly displayed
       href: ./application-management/add-remove-programs-displays-programs-incorrectly.md
-    - name: Microsoft Store app package updates are available
+    - name: Microsoft Store app package updates are available
       href: ./application-management/windows-81-microsoft-store-app-package-updates.md
     - name: Registry key WOW6432Node is listed on x86 machines
       href: ./application-management/wow6432node-registry-key-present-32-bit-machine.md
 
 - name: Backup and Storage
   items:
-    - name: Event ID 158 is logged for identical disk GUIDs
+    - name: Event ID 158 is logged for identical disk GUIDs
       href: ./backup-and-storage/event-id-158-for-identical-disk-guids.md
     - name: Garmin USB devices don't work
       href: ./backup-and-storage/garmin-usb-devices-not-working.md
@@ -87,7 +87,7 @@
       href: ./group-policy/fail-to-apply-group-policy-at-startup.md
     - name: How to create and manage Central Store for registry-based policies
       href: ./group-policy/create-and-manage-central-store.md
-    - name: Use Settings app Group Policy
+    - name: Use Settings app Group Policy
       href: ./group-policy/use-settings-app-group-policy.md
 
 - name: High Availability
@@ -99,17 +99,17 @@
   items:
     - name: Access Denied when you access SMB file share
       href: ./networking/access-denied-access-smb-file-share.md
-    - name: Can't turn on Network Discovery
+    - name: Can't turn on Network Discovery
       href: ./networking/cannot-turn-on-network-discovery.md
     - name: Configure client proxy server settings
       href: ./networking/configure-client-proxy-server-settings-by-registry-file.md
     - name: Error when accessing an administrative share
       href: ./networking/cannot-logon-access-administrative-share.md
-    - name: How to disable network adapter power management
+    - name: How to disable network adapter power management
       href: ./networking/power-management-on-network-adapter.md
     - name: Mapped drive connection to network share is lost
       href: ./networking/mapped-drive-connection-to-network-share-lost.md
-    - name: Mapped drives not available in elevated command prompt
+    - name: Mapped drives not available in elevated command prompt
       href: ./networking/mapped-drives-not-available-from-elevated-command.md
     - name: Move the CSC folder to a new location
       href: ./networking/move-client-side-caching-folder.md
@@ -126,22 +126,22 @@
 
 - name: Performance
   items:
-    - name: Can't refresh or reset your PC 
-      href: ./performance/cannot-refresh-reset-pc-automatic-repair-fail.md
-    - name: Command prompt and PowerShell don't Start
-      href: ./performance/command-prompt-powershell-not-start.md
-    - name: CPU usage exceeds 100%
-      href: ./performance/cpu-usage-exceeds-100.md
-    - name: Flight Simulator X hangs on loading screen
-      href: ./performance/flight-simulator-x-stops-responding.md
-    - name: High CPU usage in the LSAISO process
-      href: ./performance/lsaiso-process-high-cpu-usage.md
-    - name: How to speed up your computer 
-      href: ./performance/speed-up-your-computer.md
-    - name: Running an.exe file starts different program 
-      href: ./performance/running-exe-starts-another-program.md
-    - name: Troubleshooting slow file copying in Windows 
-      href: ./performance/troubleshooting-slow-file-copying-in-windows.md
+    - name: Can't refresh or reset your PC 
+      href: ./performance/cannot-refresh-reset-pc-automatic-repair-fail.md
+    - name: Command prompt and PowerShell don't Start
+      href: ./performance/command-prompt-powershell-not-start.md
+    - name: CPU usage exceeds 100%
+      href: ./performance/cpu-usage-exceeds-100.md
+    - name: Flight Simulator X hangs on loading screen
+      href: ./performance/flight-simulator-x-stops-responding.md
+    - name: High CPU usage in the LSAISO process
+      href: ./performance/lsaiso-process-high-cpu-usage.md
+    - name: How to speed up your computer 
+      href: ./performance/speed-up-your-computer.md
+    - name: Running an.exe file starts different program 
+      href: ./performance/running-exe-starts-another-program.md
+    - name: Troubleshooting slow file copying in Windows 
+      href: ./performance/troubleshooting-slow-file-copying-in-windows.md
 
 - name: Printing
   items:
@@ -160,30 +160,30 @@
 
 - name: Shell Experience
   items:
-    - name: Blank screen with no Start Menu
-      href: ./shell-experience/windows-logon-process-failed-spawn-user-app.md
-    - name: Can't open high resolution file in Photo Gallery
-      href: ./shell-experience/cannot-open-high-resolution-file-photo-gallery.md
-    - name: Can't remove, uninstall, or reinstall Microsoft Store app
-      href: ./shell-experience/cannot-remove-uninstall-or-reinstall-microsoft-store-app.md
-    - name: Can't start Microsoft Store apps
-      href: ./shell-experience/error-start-store-apps.md
-    - name: Can't start Windows Search service and error occurs
-      href: ./shell-experience/windows-search-service-not-starting.md
-    - name: Context menu items are missing
-      href: ./shell-experience/context-menus-shortened-select-over-15-files.md
-    - name: Display resolution changes to a lower resolution
-      href: ./shell-experience/display-resolution-changes-win-p-key.md
-    - name: Fix problems in Windows Search
-      href: ./shell-experience/fix-problems-in-windows-search.md
-    - name: How to modify the command line string limitation
-      href: ./shell-experience/command-line-string-limitation.md
-    - name: Microsoft Store Apps fail to start
-      href: ./shell-experience/microsoft-store-apps-fail-to-start.md
-    - name: Renaming a network folder fails
-      href: ./shell-experience/renaming-a-network-folder-fails.md
-    - name: Video resolution limit for H.264 and stabilization
-      href: ./shell-experience/video-stabilization-resolution-limits-h-264.md
+    - name: Blank screen with no Start Menu
+      href: ./shell-experience/windows-logon-process-failed-spawn-user-app.md
+    - name: Can't open high resolution file in Photo Gallery
+      href: ./shell-experience/cannot-open-high-resolution-file-photo-gallery.md
+    - name: Can't remove, uninstall, or reinstall Microsoft Store app
+      href: ./shell-experience/cannot-remove-uninstall-or-reinstall-microsoft-store-app.md
+    - name: Can't start Microsoft Store apps
+      href: ./shell-experience/error-start-store-apps.md
+    - name: Can't start Windows Search service and error occurs
+      href: ./shell-experience/windows-search-service-not-starting.md
+    - name: Context menu items are missing
+      href: ./shell-experience/context-menus-shortened-select-over-15-files.md
+    - name: Display resolution changes to a lower resolution
+      href: ./shell-experience/display-resolution-changes-win-p-key.md
+    - name: Fix problems in Windows Search
+      href: ./shell-experience/fix-problems-in-windows-search.md
+    - name: How to modify the command line string limitation
+      href: ./shell-experience/command-line-string-limitation.md
+    - name: Microsoft Store Apps fail to start
+      href: ./shell-experience/microsoft-store-apps-fail-to-start.md
+    - name: Renaming a network folder fails
+      href: ./shell-experience/renaming-a-network-folder-fails.md
+    - name: Video resolution limit for H.264 and stabilization
+      href: ./shell-experience/video-stabilization-resolution-limits-h-264.md
 
 - name: System Management Components
   items:
@@ -191,7 +191,7 @@
       href: ./system-management-components/rsat-client-missing-dns-server-tool.md
     - name: How to configure WINRM for HTTPS
       href: ./system-management-components/configure-winrm-for-https.md
-    - name: WMI-Activity Event ID 5858 logged with ResultCode = 0x80041032
+    - name: WMI-Activity Event ID 5858 logged with ResultCode = 0x80041032
       href: ./system-management-components/wmi-activity-event-5858-logged-with-resultcode-0x80041032.md
 
 - name: User Profiles and Logon
@@ -207,7 +207,7 @@
 
 - name: Virtualization
   items:
-    - name: Can't create a Hyper-V virtual switch
+    - name: Can't create a Hyper-V virtual switch
       href: ./virtualization/cannot-create-hyper-v-virtual-switch.md
     - name: Hyper-V can't start VM after upgrade
       href: ./virtualization/hyper-v-not-start-vm-after-upgrade.md
