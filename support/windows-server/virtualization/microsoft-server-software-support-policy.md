@@ -207,7 +207,7 @@ Identity Lifecycle Manager (ILM) 2007 Feature Pack 1 (FP1) (with the latest upda
 
 ### Microsoft Office Online 
 
-Office Online is supported. For more information, visit the following Microsoft Office website: [http://office.com/webapps](http://office.com/webapps)  
+Office Online is supported. For more information, visit the following Microsoft Office website: [https://office.com/webapps](https://office.com/webapps)  
 
 ### Opalis Integration Server 
 
