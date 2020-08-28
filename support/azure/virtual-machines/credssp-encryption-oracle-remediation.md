@@ -46,9 +46,9 @@ This error occurs if you are trying to establish an insecure RDP connection, an
 
 See the following interoperability matrix for scenarios that are either vulnerable to this exploit or cause operational failures. 
 
-|        |               |Server            |                       |           |            |
+|    -    |        -       |Server            |   -                    |           |       -     |
 |--------|-----------------------|----------|-----------------------|-----------|------------|
-|        |                       | Updated  | Force updated clients | Mitigated | Vulnerable |
+|    -    |        -               | Updated  | Force updated clients | Mitigated | Vulnerable |
 | **Client** | Updated               | Allowed  | Blocked<sup> **2** </sup>             | Allowed   | Allowed    |
 |        | Force updated clients | Blocked  | Allowed               | Allowed   | Allowed    |
 |        | Mitigated             | Blocked <sup> **1** </sup> | Allowed               | Allowed   | Allowed    |
