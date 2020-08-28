@@ -233,6 +233,8 @@
       href: ../access/resolve-vb-application-references.md
     - name: Runtime error 2147319779 (8002801d) library not registered
       href: ../access/library-unregistered-runtime-error.md
+    - name: Save Password checkbox is unavailable
+      href: ../access/save-password-checkbox-unavailable.md
     - name: Scroll records with mouse wheel
       href: ../access/scroll-records-with-mouse-wheel.md
     - name: Security Update impairs Access Database
