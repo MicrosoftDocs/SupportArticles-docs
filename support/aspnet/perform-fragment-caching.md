@@ -185,9 +185,9 @@ You can now create the Web Form (.aspx) to contain the newly developed user cont
 
     ```csharp
     private void Page_Load(object sender, System.EventArgs e)
-     {
-     Time.Text = "WebFormTime: " + DateTime.Now.TimeOfDay.ToString();
-     }
+    {
+        Time.Text = "WebFormTime: " + DateTime.Now.TimeOfDay.ToString();
+    }
     ```
 
 10. From the **File** menu, click **Save All** to save the user controls, the Web Form, and other associated project files.
@@ -202,17 +202,19 @@ This section demonstrates how to view the code at run time to witness the cachin
 
 2. After the page appears in the browser, right-click the page, and then click **Refresh** to refresh the page. You can also press the **F5** key to refresh the page if you are viewing the page in a browser that is external to the **Visual Studio .NET IDE**.
 
-    Notice that the time on the Web Form has been updated, but the user controls still display the time when their associated cache entry was made.
+    > [!NOTE]
+    > The time on the Web Form has been updated, but the user controls still display the time when their associated cache entry was made.
 
 3. In the second control, click **Submit**. Notice that the control displays an updated time. This is in response to the **VaryByControl** attribute setting for the user control that references the RadioButtonList control.
 
 4. Click **No**, and then click **Submit** again.
 
-    Notice that the time is updated again in the user control's display. This is because a new cache entry is made for the control based on this **No** value setting. Repeat this step except with the **Maybe** option. You see the same behavior.
+    > [!NOTE]
+    > The time is updated again in the user control's display. This is because a new cache entry is made for the control based on this **No** value setting. Repeat this step except with the **Maybe** option. You see the same behavior.
 
 5. Click **Yes**, and then click **Submit** again. Repeat this operation with the **No** and **Maybe** options.
 
-    Notice that these selections for the control are cached and that they display the previous cache entry time. If you continue to click **Submit** past the **@ OutputCache** directive's duration setting, the user control's time is updated for each specific value selection for the RadioButtonList control.
+    These selections for the control are cached and that they display the previous cache entry time. If you continue to click **Submit** past the **@ OutputCache** directive's duration setting, the user control's time is updated for each specific value selection for the RadioButtonList control.
 
 > [!NOTE]
 > It is not the goal of this article to cover all of the possible settings and scenarios for fragment caching.

@@ -96,7 +96,7 @@ In the **HTML** window of *WebForm1*, add the following code between the opening
 
 ```aspx
 <asp:Panel ID="frmConfirmation" Visible="False" Runat="server">
-<asp:Label id="lblUploadResult" Runat="server"></asp:Label>
+    <asp:Label id="lblUploadResult" Runat="server"></asp:Label>
 </asp:Panel>
 ```
 
@@ -176,116 +176,116 @@ The code in this section retrieves the file from the local file system, checks t
 
 ## Complete code listing
 
-WebForm1.aspx
+- WebForm1.aspx
 
-```aspx
-<%@ Page language="c#" Codebehind="WebForm1.aspx.cs" AutoEventWireup="false"
-   Inherits="Howto.WebForm1" %>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
-<HTML>
-   <HEAD>
-      <title>WebForm1</title>
-      <meta name="GENERATOR" Content="Microsoft Visual Studio .NET 7.1">
-      <meta name="CODE_LANGUAGE" Content="C#">
-      <meta name="vs_defaultClientScript" content="JavaScript">
-      <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
-   </HEAD>
-   <body MS_POSITIONING="GridLayout">
-      <form id="Form1" method="post" runat="server" EncType="multipart/form-data" action="WebForm1.aspx">
-         Image file to upload to the server: <INPUT id="oFile" type="file" runat="server" NAME="oFile">
-         <asp:button id="btnUpload" type="submit" text="Upload" runat="server"></asp:button>
-         <asp:Panel ID="frmConfirmation" Visible="False" Runat="server">
-            <asp:Label id="lblUploadResult" Runat="server"></asp:Label>
-         </asp:Panel>
-      </form>
-   </body>
-</HTML>
-```
+    ```aspx
+    <%@ Page language="c#" Codebehind="WebForm1.aspx.cs" AutoEventWireup="false"
+       Inherits="Howto.WebForm1" %>
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+    <HTML>
+       <HEAD>
+          <title>WebForm1</title>
+          <meta name="GENERATOR" Content="Microsoft Visual Studio .NET 7.1">
+          <meta name="CODE_LANGUAGE" Content="C#">
+          <meta name="vs_defaultClientScript" content="JavaScript">
+          <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+       </HEAD>
+       <body MS_POSITIONING="GridLayout">
+          <form id="Form1" method="post" runat="server" EncType="multipart/form-data" action="WebForm1.aspx">
+             Image file to upload to the server: <INPUT id="oFile" type="file" runat="server" NAME="oFile">
+             <asp:button id="btnUpload" type="submit" text="Upload" runat="server"></asp:button>
+             <asp:Panel ID="frmConfirmation" Visible="False" Runat="server">
+                <asp:Label id="lblUploadResult" Runat="server"></asp:Label>
+             </asp:Panel>
+          </form>
+       </body>
+    </HTML>
+    ```
 
-WebForm1.aspx.cs
+- WebForm1.aspx.cs
 
-```csharp
-using System;
-using System.Collections;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Web;
-using System.Web.SessionState;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Web.UI.HtmlControls;
-using System.IO;
-namespace **ApplicationName** {
-/// <summary>
-/// Summary description for WebForm1.
-/// </summary>
-public class WebForm1 : System.Web.UI.Page
-{
-    protected System.Web.UI.WebControls.Button btnUpload;
-    protected System.Web.UI.WebControls.Label lblUploadResult;
-    protected System.Web.UI.WebControls.Panel frmConfirmation;
-    protected System.Web.UI.HtmlControls.HtmlInputFile oFile;
-
-    private void Page_Load(object sender, System.EventArgs e)
-    {
-    // Put user code to initialize the page here
-    }
-    #region Web Form Designer generated code
-    override protected void OnInit(EventArgs e)
-    {
-    // CODEGEN: This call is required by the ASP.NET Web Form Designer.
-        InitializeComponent();
-        base.OnInit(e);
-    }
+    ```csharp
+    using System;
+    using System.Collections;
+    using System.ComponentModel;
+    using System.Data;
+    using System.Drawing;
+    using System.Web;
+    using System.Web.SessionState;
+    using System.Web.UI;
+    using System.Web.UI.WebControls;
+    using System.Web.UI.HtmlControls;
+    using System.IO;
+    namespace **ApplicationName** {
     /// <summary>
-    /// Required method for Designer support - do not modify
-    /// the contents of this method with the code editor.
+    /// Summary description for WebForm1.
     /// </summary>
-    private void InitializeComponent()
+    public class WebForm1 : System.Web.UI.Page
     {
-        this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
-        this.Load += new System.EventHandler(this.Page_Load);
-    }
-    #endregion
+        protected System.Web.UI.WebControls.Button btnUpload;
+        protected System.Web.UI.WebControls.Label lblUploadResult;
+        protected System.Web.UI.WebControls.Panel frmConfirmation;
+        protected System.Web.UI.HtmlControls.HtmlInputFile oFile;
 
-    private void btnUpload_Click(object sender, System.EventArgs e)
-    {
-        string strFileName;
-        string strFilePath;
-        string strFolder;
-        strFolder = Server.MapPath("./");
-        // Get the name of the file that is posted.
-        strFileName = oFile.PostedFile.FileName;
-        strFileName = Path.GetFileName(strFileName);
-        if(oFile.Value != "")
+        private void Page_Load(object sender, System.EventArgs e)
         {
-            // Create the directory if it does not exist.
-            if(!Directory.Exists(strFolder))
+        // Put user code to initialize the page here
+        }
+        #region Web Form Designer generated code
+        override protected void OnInit(EventArgs e)
+        {
+        // CODEGEN: This call is required by the ASP.NET Web Form Designer.
+            InitializeComponent();
+            base.OnInit(e);
+        }
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
+            this.Load += new System.EventHandler(this.Page_Load);
+        }
+        #endregion
+
+        private void btnUpload_Click(object sender, System.EventArgs e)
+        {
+            string strFileName;
+            string strFilePath;
+            string strFolder;
+            strFolder = Server.MapPath("./");
+            // Get the name of the file that is posted.
+            strFileName = oFile.PostedFile.FileName;
+            strFileName = Path.GetFileName(strFileName);
+            if(oFile.Value != "")
             {
-                Directory.CreateDirectory(strFolder);
-            }
-            // Save the uploaded file to the server.
-            strFilePath = strFolder + strFileName;
-            if(File.Exists(strFilePath))
-            {
-                lblUploadResult.Text = strFileName + " already exists on the server!";
+                // Create the directory if it does not exist.
+                if(!Directory.Exists(strFolder))
+                {
+                    Directory.CreateDirectory(strFolder);
+                }
+                // Save the uploaded file to the server.
+                strFilePath = strFolder + strFileName;
+                if(File.Exists(strFilePath))
+                {
+                    lblUploadResult.Text = strFileName + " already exists on the server!";
+                }
+                else
+                {
+                    oFile.PostedFile.SaveAs(strFilePath);
+                    lblUploadResult.Text = strFileName + " has been successfully uploaded.";
+                }
             }
             else
             {
-                oFile.PostedFile.SaveAs(strFilePath);
-                lblUploadResult.Text = strFileName + " has been successfully uploaded.";
+                lblUploadResult.Text = "Click 'Browse' to select the file to upload.";
             }
+            // Display the result of the upload.
+            frmConfirmation.Visible = true;
         }
-        else
-        {
-            lblUploadResult.Text = "Click 'Browse' to select the file to upload.";
-        }
-        // Display the result of the upload.
-        frmConfirmation.Visible = true;
     }
-}
-```
+    ```
 
 > [!NOTE]
 > The code generated in Visual Studio is different from the code generated in Visual Studio .NET.

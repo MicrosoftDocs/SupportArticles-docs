@@ -9,7 +9,7 @@ ms.topic: how-to
 
 This article describes how to write binary files to the browser by using ASP.NET and Visual Basic .NET.
 
-_Original product version:_ &nbsp; ASP.NET
+_Original product version:_ &nbsp; ASP.NET  
 _Original KB number:_ &nbsp; 307603
 
 ## Summary
@@ -35,12 +35,14 @@ This section demonstrates how to create a new ASP.NET Web Application named *Bin
 
 ### Add the pdf file to the project
 
-To set up your project so that you can add and run the code in the [Create an ASPX Page](#Create-an-ASPX-Page) section to follow, you must first add an Adobe Acrobat (.pdf) file to your current project. To do this in **Visual Studio .NET**, follow these steps:
+To set up your project so that you can add and run the code in the [Create an ASPX Page](#create-the-aspx-page) section to follow, you must first add an Adobe Acrobat (.pdf) file to your current project. To do this in **Visual Studio .NET**, follow these steps:
 
 1. In **Solution Explorer**, right-click the **project** node, click **Add**, and then click **Add Existing Item**.
 2. Browse to the location of a .pdf file on your system.
 3. Click to highlight the file, and then click **Open**.
-4. In **Visual Studio .NET Solution Explorer**, right-click the file, and then click **Rename**. Rename the .pdf file so that it matches the file name *Acrobat.pdf* that is used in the code that follows. In addition, ensure that Adobe Acrobat Reader is installed on the client computer from which the .aspx page is viewed so that the browser can properly read and render the binary data. You can download the Adobe Acrobat Reader from the [Adobe Web site](https://www.adobe.com/).
+4. In **Visual Studio .NET Solution Explorer**, right-click the file, and then click **Rename**. Rename the .pdf file so that it matches the file name *Acrobat.pdf* that is used in the code that follows.
+
+In addition, ensure that Adobe Acrobat Reader is installed on the client computer from which the .aspx page is viewed so that the browser can properly read and render the binary data. You can download the Adobe Acrobat Reader from the [Adobe Web site](https://www.adobe.com/).
 
 ### Create the aspx page
 

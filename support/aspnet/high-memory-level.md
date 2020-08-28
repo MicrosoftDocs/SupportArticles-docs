@@ -9,7 +9,7 @@ ms.reviewer: mgraham
 
 This article describes the quick things to check when you experience high memory in Microsoft ASP.NET.
 
-_Original product version:_ &nbsp; ASP.NET
+_Original product version:_ &nbsp; ASP.NET  
 _Original KB number:_ &nbsp; 893660
 
 ## Introduction
@@ -64,15 +64,10 @@ This code seems harmless enough, but here's what you are storing in memory:
 
 ```html
 <html>
-   <html>
-      <table>
-      <tr>
-         <td>
-            <html>
-               <table>
-      <tr><td>First Cell
-      <html><table><tr><td>First Cell</td></tr></table>
-      <html><table><tr><td>First Cell</td></tr></table></html>
+<html><table><tr><td>
+<html><table><tr><td>First Cell
+<html><table><tr><td>First Cell</td></tr></table>
+<html><table><tr><td>First Cell</td></tr></table></html>
 ```
 
 You may think that you are just storing the last line, but you are storing *all* of these lines. You can see how this could get out of hand, especially when you are building a large table, perhaps by looping through a large recordset. If this is what you are doing, use our `System.Text.StringBuilder` class, so that you just store the one large string. See [Use Visual C# to improve string concatenation performance](/troubleshoot/dotnet/csharp/string-concatenation)

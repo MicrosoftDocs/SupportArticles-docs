@@ -58,7 +58,7 @@ To successfully resolve these problems, take the following actions:
 > [!NOTE]
 > The recommendation to limit the number of ASP.NET requests to 12 per CPU is a little arbitrary. However, this limit has proved to work well for most applications.
 
-### maxWorkerThreads and maxIoThreads
+### MaxWorkerThreads and maxIoThreads
 
 ASP.NET uses the following two configuration settings to limit the maximum number of worker threads and completion threads that are used:
 
@@ -68,7 +68,7 @@ ASP.NET uses the following two configuration settings to limit the maximum numbe
 
 The `maxWorkerThreads` parameter and the `maxIoThreads` parameter are implicitly multiplied by the number of CPUs. For example, if you have two processors, the maximum number of worker threads is 2 \* `maxWorkerThreads`.
 
-### minFreeThreads and minLocalRequestFreeThreads
+### MinFreeThreads and minLocalRequestFreeThreads
 
 ASP.NET also contains the following configuration settings that determine how many worker threads and completion port threads must be available to start a remote request or a local request:
 
@@ -83,7 +83,7 @@ If there are not sufficient threads available, the request is queued until suffi
 > [!NOTE]
 > The `minFreeThreads` parameter and the `minLocalRequestFreeThreads` parameter are not implicitly multiplied by the number of CPUs.
 
-### minWorkerThreads
+### MinWorkerThreads
 
 ASP.NET also contains the following configuration setting that determines how many worker threads may be made available immediately to service a remote request.
 
@@ -101,7 +101,7 @@ The default value for the `minWorkerThreads` parameter is 1. We recommend that y
 
 By default, the `minWorkerThreads` parameter is not present in either the *Web.config* file or the *Machine.config* file. This setting is implicitly multiplied by the number of CPUs.
 
-### maxconnection
+### Maxconnection
 
 The `maxconnection` parameter determines how many connections can be made to a specific IP address. The parameter appears as follows:
 
@@ -132,7 +132,7 @@ Finally, if the application is hosted on a port other than 80, the parameter has
 
 The settings for the parameters that are discussed earlier in this article are all at the process level. However, the `maxconnection` parameter setting applies to the AppDomain level. By default, because this setting applies to the AppDomain level, you can create a maximum of two connections to a specific IP address from each AppDomain in your process.
 
-### executionTimeout
+### ExecutionTimeout
 
 ASP.NET uses the following configuration setting to limit the request execution time:
 
@@ -191,10 +191,6 @@ However, when you use this configuration, scenarios that involve one of the belo
 - Requests are made from multiple AppDomains.
 
 In these scenarios, it is a good idea to use a lower value for the `maxconnection` parameter and higher values for the `minFreeThreads` parameter and the `minLocalRequestFreeThreads` parameter.
-
-## Status
-
-This behavior is by design.
 
 ## More information
 

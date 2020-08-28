@@ -179,16 +179,16 @@ If your code-behind class files will be compiled on demand instead of precompile
 
 ## References
 
-For more information about assemblies, see [Assemblies](/previous-versions/dotnet/netframework-1.1/hk5f40ct(v=vs.71)).
+- For more information about assemblies, see [Assemblies](/previous-versions/dotnet/netframework-1.1/hk5f40ct(v=vs.71)).
 
-For more articles, samples, and other resources that are related to ASP.NET programming, see [ASP.NET](/previous-versions/dotnet/articles/aa286485(v=msdn.10)).
+- For more articles, samples, and other resources that are related to ASP.NET programming, see [ASP.NET](/previous-versions/dotnet/articles/aa286485(v=msdn.10)).
 
-For more information about the @ Page directive and its various attributes, see [@ Page](/previous-versions/dotnet/netframework-1.1/ydy4x04a(v=vs.71)).
+- For more information about the @ Page directive and its various attributes, see [@ Page](/previous-versions/dotnet/netframework-1.1/ydy4x04a(v=vs.71)).
 
-For more information about general Web Forms syntax, see [Web Forms Syntax](/previous-versions/dotnet/netframework-1.1/fy30at8h(v=vs.71)).
+- For more information about general Web Forms syntax, see [Web Forms Syntax](/previous-versions/dotnet/netframework-1.1/fy30at8h(v=vs.71)).
 
-For additional information, visit the following websites:
+- For additional information, visit the following websites:
 
-- [ASP.NET Code-behind model overview](/troubleshoot/aspnet/code-behind-model)
+  - [ASP.NET Code-behind model overview](/troubleshoot/aspnet/code-behind-model)
 
-- [How to create a virtual folder (subweb) in IIS 4.0 or in IIS 5.0](https://support.microsoft.com/help/301392)
+  - [How to create a virtual folder (subweb) in IIS 4.0 or in IIS 5.0](https://support.microsoft.com/help/301392)

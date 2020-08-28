@@ -116,7 +116,7 @@
   - name: State servers log event ID 1072 or 1076
     href: state-server-event-1072-1076.md
   - name: Things to check when high memory occurs
-    href: things-to-check-high-memory.md
+    href: high-memory-level.md
   - name: ThreadAbortException when you use Server.Transfer
     href: system-threading-threadabortexception.md
 

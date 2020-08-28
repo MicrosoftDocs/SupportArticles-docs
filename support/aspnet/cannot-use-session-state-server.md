@@ -40,6 +40,13 @@ Since the `X-AspNet-Version: 2.0.50727` header is sent by the state server, sett
 
 A better way to monitor the network traffic is to set just `<httpRuntime enableVersionHeader ="true"/>` in the master web.config and then you will see in a network trace the below snippet with the frame details being sent from the state server to IIS by ASPNET.
 
-00 15 5D F4 C0 6D 00 15 5D F1 3E 65 08 00 45 00 00 7A 79 D2 40 00 80 06 00 00 AC 16 F2 11 AC 16 F2 2F A5 B8 12 E4 2E 55 75 CA 57 D4 A3 18 50 18 FF 15 3C DB 00 00 32 30 30 20 4F 4B 0D 0A 58 2D 41 73 70 4E 65 74 2D 56 65 72 73 69 6F 6E 3A 20 32 2E 30 2E 35 30 37 32 37 0D 0A 43 61 63 68 65 2D 43 6F 6E 74 72 6F 6C 3A 20 70 72 69 76 61 74 65 0D 0A 43 6F 6E 74 65 6E 74 2D 4C 65 6E 67 74 68 3A 20 30 0D 0A 0D 0A
+```console
+00 15 5D F4 C0 6D 00 15 5D F1 3E 65 08 00 45 00 00 7A 79 D2 40 00 80 06 00 00 AC 16 F2 11 AC 16
+F2 2F A5 B8 12 E4 2E 55 75 CA 57 D4 A3 18 50 18 FF 15 3C DB 00 00 32 30 30 20 4F 4B 0D 0A 58 2D
+41 73 70 4E 65 74 2D 56 65 72 73 69 6F 6E 3A 20 32 2E 30 2E 35 30 37 32 37 0D 0A 43 61 63 68 65
+2D 43 6F 6E 74 72 6F 6C 3A 20 70 72 69 76 61 74 65 0D 0A 43 6F 6E 74 65 6E 74 2D 4C 65 6E 67 74
+68 3A 20 30 0D 0A 0D 0A
 
-..]ôÀm..]ñ>e..E..zyÒ@.?...¬.ò.¬.ò/¥¸.ä.UuÊWÔ£.P.ÿ.<Û..200 OK..X-AspNet-Version: 2.0.50727..Cache-Control: private..Content-Length: 0....
+..]ôÀm..]ñ>e..E..zyÒ@.?...¬.ò.¬.ò/¥¸.ä.UuÊWÔ£.P.ÿ.<Û..200 OK..X-AspNet-Version: 2.0.50727..
+Cache-Control: private..Content-Length: 0....
+```
