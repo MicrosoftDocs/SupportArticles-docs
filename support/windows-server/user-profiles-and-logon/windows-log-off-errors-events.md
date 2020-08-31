@@ -110,7 +110,7 @@ For more information about how to install the latest run-time components for Vis
 
 ### Verification
 
-To verify that this method worked, log off Windows. Windows should log off immediately. Open the Application log and determine if any event messages indicate that there were user profile errors. For more information about the event messages in the Application log, see the [Event messages in the Application log](##event-messages-in-the-application-log) section.
+To verify that this method worked, log off Windows. Windows should log off immediately. Open the Application log and determine if any event messages indicate that there were user profile errors. For more information about the event messages in the Application log, see the [Event messages in the Application log](#event-messages-in-the-application-log) section.
 
 If this method worked: If you can log off Windows, and there are no event messages that indicate that there were user profile unloading errors, you've successfully corrected the problem.
 
