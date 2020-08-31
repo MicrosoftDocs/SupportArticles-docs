@@ -71,23 +71,6 @@ Based on code SCHED_E_SERVICE_TOO_BUSY, this is logged when the queue is full. 
 
 ## Resolution
 
-To have us fix this problem for you, go to the "Fix it for me" section. If you prefer to fix this problem yourself, go to the "Let me fix it myself" section.
-
-#### Fix it for me
-
-To fix this problem automatically, click the **Fix this problem** link. Then click **Run** in the **File Download** dialog box, and follow the steps in this wizard.
-
-[![fixitbtn.jpg](http://support.microsoft.com//library/images/support/KBGraphics/PUBLIC/EN-US/2297543/fixitbtn.jpg)
-](https://go.microsoft.com/?linkid=9808301) 
-A.x_x_x_button{width:139px;display:block;height:56px;} [](https://go.microsoft.com/?linkid=9808301) [Fix this problem](https://go.microsoft.com/?linkid=9808301) 
-Microsoft Fix it 50863  
-
-**Note** This wizard may be in English only. However, the automatic fix also works for other language versions of Windows.
-
-**Note** If you are not on the computer that has the problem, you can save the automatic fix to a flash drive or to a CD so that you can run it on the computer that has the problem.
-
-#### **Let me fix it myself**  
-
 To resolve this particular issue, increase the value for the quota keys to maximum.
  **Caution** This section contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs.
 

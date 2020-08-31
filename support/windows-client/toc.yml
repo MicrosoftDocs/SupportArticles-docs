@@ -218,8 +218,12 @@
 
 - name: System Management Components
   items:
+    - name: Delete saved logs from Event Viewer
+      href: ./system-management-components/delete-saved-log-from-event-viewer.md
     - name: DNS server tool is missing for RSAT client
       href: ./system-management-components/rsat-client-missing-dns-server-tool.md
+    - name: Error 0x80041323 when you run Scheduled tasks
+      href: ./system-management-components/0x80041323-running-scheduled-tasks.md
     - name: How to configure WINRM for HTTPS
       href: ./system-management-components/configure-winrm-for-https.md
     - name: WMI-Activity Event ID 5858 logged with ResultCode = 0x80041032
@@ -229,10 +233,6 @@
   items:
     - name: Can't set a convenience PIN
       href: ./user-profiles-and-logon/cannot-configure-a-convenience-pin.md
-    - name: Delete saved logs from Event Viewer
-      href: ./user-profiles-and-logon/delete-saved-log-from-event-viewer.md
-    - name: Error 0x80041323 when you run Scheduled tasks
-      href: ./user-profiles-and-logon/0x80041323-running-scheduled-tasks.md
     - name: First sign-in fails after deploying an image
       href: ./user-profiles-and-logon/first-logon-fails-deploy-image.md
     - name: Logon fails when using cached credentials

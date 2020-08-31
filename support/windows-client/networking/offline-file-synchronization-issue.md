@@ -83,8 +83,8 @@ The Client Side Cache intercepts requests that are channeled to the network redi
 
 The behavior is outlined in detail on the following links:
 
-https://msdn.microsoft.com/en-us/library/ff556761(v=vs.85).aspx
+- [Support for UNC Naming and MUP](https://msdn.microsoft.com/library/ff556761(v=vs.85).aspx)
 
-https://msdn.microsoft.com/en-us/library/ff548313(v=vs.85).aspx
+- [IOCTL_REDIR_QUERY_PATH IOCTL](https://msdn.microsoft.com/library/ff548313(v=vs.85).aspx)
 
-https://msdn.microsoft.com/en-us/library/ff538979(v=vs.85).aspx
+- [Basic Architecture of a Network Redirector](https://msdn.microsoft.com/library/ff538979(v=vs.85).aspx)
