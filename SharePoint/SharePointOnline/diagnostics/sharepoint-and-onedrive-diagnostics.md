@@ -53,13 +53,13 @@ There are currently nine diagnostics covering various areas within Sharepoint an
 
 Currently, these diagnostics are only available for administrators and can be accessed through the service request section of the M365 Admin Center. To access this area, follow the steps below.
 
-1.	Go to https://admin.microsoft.com.
-2.	On the left navigation pane, select **Support**.
-3.	Select **New service request**.
+1. Go to https://admin.microsoft.com.
+2. On the left navigation pane, select **Support**.
+3. Select **New service request**.
  
     :::image type="content" source="media/sharepoint-and-onedrive-diagnostics/sharepoint-and-onedrive-diagnostics-2.jpg" alt-text="Select New service request. ":::
  
-4.	This will activate the “Need help?” pane on the right-hand side of your screen.
+4. This will activate the “Need help?” pane on the right-hand side of your screen.
  
     :::image type="content" source="media/sharepoint-and-onedrive-diagnostics/sharepoint-and-onedrive-diagnostics-3.jpg" alt-text="The Need Help? screen.":::
 
@@ -78,7 +78,7 @@ Currently, these diagnostics are only available for administrators and can be ac
     - Diag: Classic View to Modern
     - Diag: Access Denied to Site
 
-## Feedback
+## Location of diagnostics 
 
 Microsoft would like to store these diagnostics in a new area and realize that having them behind the “Service Request” section is not ideal. We look forward to any and all feedback regarding these scenarios. Feel free to leave a comment on the current state of these tools or any features you would like to see.
 
