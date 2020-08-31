@@ -126,7 +126,7 @@
   - name: Meetings
     items:
     - name: No conference rooms with Room Finders
-      href: ../meetings/conference-rooms-not-dispalyed.md
+      href: ../meetings/conference-rooms-not-displayed.md
   - name: Modern Authentication
     items:
     - name: Can't connect to Outlook using POP/IMAP
