@@ -48,7 +48,7 @@ Share level (SMB) Permissions for the offline files share ShareName$:
 |---|---|---|
 |Everyone|Read|No Permissions|
 |Security group of users needing to put data on share.|N/A|Change|
-||||
+
 In this example Everyone is removed from the share permissions and a global group containing the user account is used to set share level permissions.
 
 NTFS permissions needed for the root folder ShareName$ for offline file synchronization: 
@@ -60,7 +60,7 @@ NTFS permissions needed for the root folder ShareName$ for offline file synchron
 |Security group of users that need to put data on share|List Folder/Read Data - This Folder, Subfolders and Files|
 |Everyone|No Permissions|
 |Local System|Full Control, This Folder, Subfolders and Files|
-|||
+
 
 On the subfolders \dir1 and \dir2, the following permissions are required:
  NTFS permissions needed for the folders dir1 and dir2 for offline file synchronization: 
@@ -71,7 +71,7 @@ On the subfolders \dir1 and \dir2, the following permissions are required:
 |Local System|Full Control|Full Control|
 |Administrators|No Permissions|No Permissions|
 |Everyone|No Permissions|No Permissions|
-||||
+
 
 ## More information
 
