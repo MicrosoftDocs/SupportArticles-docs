@@ -1,6 +1,11 @@
 - name: Welcome
   href:
 
+- name: Admin Development
+  items:
+    - name: User authentication issues with ADSI WinNT provider
+      href: ./admin-development/adsi-winnt-provider-user-authentication-issues.md
+
 - name: Active Directory
   items:
     - name: W32Time doesn't start automatically
@@ -31,9 +36,13 @@
       href: ./backup-and-storage/event-id-158-for-identical-disk-guids.md
     - name: Garmin USB devices don't work
       href: ./backup-and-storage/garmin-usb-devices-not-working.md
+    - name: System Image Recovery fails with 0x80070002 error
+      href: ./backup-and-storage/system-image-restore-failed-error-0x80070002.md
 
 - name: Deployment
   items:
+    - name: 80072EE6 error when downloading an update from WSUS
+      href: ./deployment/error-80072ee6-downlaod-wsus-update.md
     - name: Automate regional and language settings
       href: ./deployment/automate-regional-language-settings.md
     - name: Can't activate Windows 7 with KMS
@@ -58,6 +67,8 @@
       href: ./deployment/system-log-event-id-7000-7026.md
     - name: Fail to open a list in VAMT 2.0
       href: ./deployment/item-with-same-key-has-been-added.md
+    - name: Get the latest Skype version by Microsoft Update
+      href: ./deployment/skype-for-microsoft-update.md
     - name: Hide Devices in Devices and Printers
       href: ./deployment/disable-devices-in-devices-and-printers.md
     - name: How to disable and re-enable hibernation
@@ -76,10 +87,16 @@
       href: ./deployment/mbam-client-fails-event-id-4-0x8004100e.md
     - name: 'Running Sysprep /generalize returns error'
       href: ./deployment/error-occurs-when-running-sysprep-generalize.md
+    - name: Running TPM Management console fails
+      href: ./deployment/cannot-load-tpm-management-console.md
     - name: Standard terminology that defines software updates
       href: ./deployment/standard-terminology-software-updates.md
+    - name: Sysprep and capture task sequence fails
+      href: ./deployment/sysprep-capture-task-sequence-fails.md
     - name: Sysprep fails after you remove or update Microsoft Store apps
       href: ./deployment/sysprep-fails-remove-or-update-store-apps.md
+    - name: Windows Update hangs
+      href: ./deployment/windows-update-hangs-updates-uninstalled.md
 
 - name: Group Policy
   items:
@@ -101,6 +118,8 @@
       href: ./networking/access-denied-access-smb-file-share.md
     - name: Can't turn on Network Discovery
       href: ./networking/cannot-turn-on-network-discovery.md
+    - name: Code 31 error for WAN Miniport device
+      href: ./networking/code-31-error-device-manager-for-wan-miniport.md
     - name: Configure client proxy server settings
       href: ./networking/configure-client-proxy-server-settings-by-registry-file.md
     - name: Error when accessing an administrative share
@@ -113,6 +132,10 @@
       href: ./networking/mapped-drives-not-available-from-elevated-command.md
     - name: Move the CSC folder to a new location
       href: ./networking/move-client-side-caching-folder.md
+    - name: Offline file synchronization issues
+      href: ./networking/offline-file-synchronization-issue.md
+    - name: Security alert when connecting to wireless network
+      href: ./networking/windows-security-alert-wireless-network.md
     - name: System error 85 with NET USE command
       href: ./networking/system-error-85-net-use-command.md
     - name: Set up your small business network
@@ -128,6 +151,8 @@
   items:
     - name: Can't refresh or reset your PC 
       href: ./performance/cannot-refresh-reset-pc-automatic-repair-fail.md
+    - name: Changing ATA drive setting causes reboot loop
+      href: ./performance/changing-bios-ata-drive-causes-reboot-loop.md
     - name: Command prompt and PowerShell don't Start
       href: ./performance/command-prompt-powershell-not-start.md
     - name: CPU usage exceeds 100%
@@ -138,6 +163,8 @@
       href: ./performance/lsaiso-process-high-cpu-usage.md
     - name: How to speed up your computer 
       href: ./performance/speed-up-your-computer.md
+    - name: NMI_HARDWARE_FAILURE error
+      href: ./performance/nmi-hardware-failure-error.md
     - name: Running an.exe file starts different program 
       href: ./performance/running-exe-starts-another-program.md
     - name: Troubleshooting slow file copying in Windows 
@@ -145,6 +172,8 @@
 
 - name: Printing
   items:
+    - name: Can't install a Secure WSD printer from Print Management Console
+      href: ./printing/cannot-install-secure-web-services-on-devices.md
     - name: Error 0x00000709 when using CNAME record
       href: ./printing/error-0x00000709-use-cname-record.md
 
@@ -180,6 +209,8 @@
       href: ./shell-experience/command-line-string-limitation.md
     - name: Microsoft Store Apps fail to start
       href: ./shell-experience/microsoft-store-apps-fail-to-start.md
+    - name: Mouse input in games is incorrectly scaled
+      href: ./shell-experience/mouse-input-incorrectly-scaled.md
     - name: Renaming a network folder fails
       href: ./shell-experience/renaming-a-network-folder-fails.md
     - name: Video resolution limit for H.264 and stabilization
@@ -198,6 +229,10 @@
   items:
     - name: Can't set a convenience PIN
       href: ./user-profiles-and-logon/cannot-configure-a-convenience-pin.md
+    - name: Delete saved logs from Event Viewer
+      href: ./user-profiles-and-logon/delete-saved-log-from-event-viewer.md
+    - name: Error 0x80041323 when you run Scheduled tasks
+      href: ./user-profiles-and-logon/0x80041323-running-scheduled-tasks.md
     - name: First sign-in fails after deploying an image
       href: ./user-profiles-and-logon/first-logon-fails-deploy-image.md
     - name: Logon fails when using cached credentials
@@ -214,5 +249,7 @@
 
 - name: Windows Security
   items:
+    - name: Enable NTLM 2 authentication
+      href: ./windows-security/enable-ntlm-2-authentication.md
     - name: TPM isn't recognized as a compatible device
       href: ./windows-security/tpm-is-not-recognized.md
