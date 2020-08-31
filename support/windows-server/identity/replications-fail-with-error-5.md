@@ -133,7 +133,7 @@ Solution
 
 2. Delete the RestrictRemoteClients  registry setting, and then restart.
 
-See [Restrictions for Unauthenticated RPC Clients: The group policy that punches your domain in the face](http://blogs.technet.com/b/askds/archive/2011/04/08/restrictions-for-unauthenticated-rpc-clients-the-group-policy-that-punches-your-domain-in-the-face.aspx).  
+See [Restrictions for Unauthenticated RPC Clients: The group policy that punches your domain in the face](https://blogs.technet.com/b/askds/archive/2011/04/08/restrictions-for-unauthenticated-rpc-clients-the-group-policy-that-punches-your-domain-in-the-face.aspx).  
 
 Cause 2: The CrashOnAuditFail setting in the registry of the destination domain controller has a value of 2
 

@@ -33,7 +33,6 @@ This article describes the symptoms, cause, and resolution steps when Active Dir
 | Decimal| Hex| Symbolic| Error string |
 |---|---|---|---|
 | 8333| 0x208d| ERROR_DS_OBJ_NOT_FOUND| Directory object not found. |
-|||||
 
 **2.** The following events could be logged  
 
@@ -41,7 +40,7 @@ This article describes the symptoms, cause, and resolution steps when Active Dir
 |---|---|---|
 | NTDS Replication| 2108| This event contains REPAIR PROCEDURES for the 1084 event that has previously been logged. This message indicates a specific issue with the consistency of the Active Directory database on this replication destination. A database error occurred while applying replicated changes to the following object. The database had unexpected contents, preventing the change from being made. Object: OU=TestOU,DC=contoso,DC=com Object GUID: 1284b336-6e2a-4b80-86ce-d48f558e9aa2 Source domain controller: A52b57e3-92b9-4264-822b-72963eaf1030._msdcs.contoso.com Additional Data Primary Error value: 8333 Directory object not found. Secondary Error value: -1601 JET_errRecordNotFound, The key was not found |
 | <br/>NTDS General| 2031| The DS Service Configuration object is not found. It might have been accidentally deleted. The Active Directory will be able to operate normally, but you will not be able to set certain service parameters, such as LDAP limits, default query policies, and SPN mappings. DS Service Configuration object: CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=contoso,DC=com Error: 8333 (Directory object not found.) User Action: Try to restore the DS Service Configuration object. |
-||||
+
  **3.** There may be output from "repadmin /replsum"  
 
 DC-1-03 03h:14m:11s 1 / 52 1 (8333) Directory object not found.  
@@ -224,7 +223,7 @@ b. Directory Synchronization
 
 Lingering Objects:  
 
-[Clean that Active Directory forest of lingering objects](http://blogs.technet.com/b/glennl/archive/2007/07/26/clean-that-active-directory-forest-of-lingering-objects.aspx)  
+[Clean that Active Directory forest of lingering objects](https://blogs.technet.com/b/glennl/archive/2007/07/26/clean-that-active-directory-forest-of-lingering-objects.aspx)  
 
 Database Corruption:  
 

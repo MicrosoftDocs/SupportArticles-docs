@@ -78,7 +78,7 @@ The Windows Server 2003 Administration Tools Pack is located in the I386 folder 
 |Windows Server 2003 32-bit family|Yes|Yes|Yes|Yes|
 |Windows Server 2003 64-bit family|Yes|Yes|Yes|Yes|
 |Windows 2000 Server family|Yes|Yes|Yes|Yes|
-||||||
+
 To download the Adminpak installation file, visit the following Microsoft Web site: [https://www.microsoft.com/downloads](https://www.microsoft.com/downloads) 
 
 ### Windows Server 2003 Administration Tools Pack installation and compatibility overview

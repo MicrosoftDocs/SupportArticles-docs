@@ -43,7 +43,7 @@ With the release of Service Pack 1 for Windows 7 and Windows Server 2008 R2, a n
 
 For more information on Microsoft RemoteFX, visit the following Microsoft Web site:
 
-[Microsoft RemoteFX](https://technet.microsoft.com/en-in/library/ff817578%28v=ws.10%29.aspx) 
+[Microsoft RemoteFX](https://technet.microsoft.com/library/ff817578%28v=ws.10%29.aspx) 
 
 ## Resolution
 

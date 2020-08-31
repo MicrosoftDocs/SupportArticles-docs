@@ -134,13 +134,13 @@ To back up a DFS Namespace server, a system-state backup is required. The backup
 For additional details about system-state backups and restorations, please see the following articles:
 
 Windows Server 2003
-http://technet.microsoft.com/en-us/library/cc759141.aspx
+https://technet.microsoft.com/library/cc759141.aspx
 
 Windows Server 2008
-http://technet.microsoft.com/en-us/library/cc770266.aspx
+https://technet.microsoft.com/library/cc770266.aspx
 
 Note the typical shelf life of a system-state backup of Active Directory is only 60 days:
-http://support.microsoft.com/kb/216993
+https://support.microsoft.com/kb/216993
 
 An alternate method to save the DFS configuration data is via the DFSUtil.exe utility. The output created via the "export" option may be used to recreate the missing DFS configuration information lost through accidental deletion.
 
@@ -160,12 +160,12 @@ The authoritative restoration process is detailed in the following article:
 
 Performing an Authoritative Restore of Active Directory Objects
 
-http://technet.microsoft.com/en-us/library/cc779573.aspx
+https://technet.microsoft.com/library/cc779573.aspx
 
 Restoring Active Directory: 
 
 Windows Server 2003:  
-http://technet.microsoft.com/en-us/library/cc758435.aspx  
+https://technet.microsoft.com/library/cc758435.aspx  
 a. Start the computer in Directory Services Restore Mode.
 b. To start the Windows Server 2003 backup utility, click Start, point to All Programs, point to Accessories, point to System Tools, and then click Backup.
 c. On the Welcome to the Backup or Restore Wizard page, click Next.
@@ -180,7 +180,7 @@ j. When the restore process is complete, click Close, and then click No to remai
 NOTE: Do not reboot when prompted by the backup program. If a reboot is performed and Active Directory replication takes place, the domain controller will replicate the deletions again.
 
 Windows Server 2008: 
-http://technet.microsoft.com/en-us/library/cc730683.aspx
+https://technet.microsoft.com/library/cc730683.aspx
 
 1. At the Windows logon screen, click Switch User, and then click Other User.
 

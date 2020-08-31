@@ -1,6 +1,6 @@
 ---
 title: Backup fails with VSS event ID 12292 and 11 on Windows Server 2008 and Windows Server 2008 R2
-description: 
+description: Fixes an issue in which backup operation using Windows Server Backup or a third-party backup application fails.
 ms.date: 08/25/2020
 author: delhan
 ms.author: Deland-Han
