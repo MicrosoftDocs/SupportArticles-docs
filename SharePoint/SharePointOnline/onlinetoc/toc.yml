@@ -41,6 +41,10 @@
       href: ../administration/uncompiled-audiences-are-present-in-office-365-for-enterprises.md
     - name: Using relative URLs isn't supported
       href: ../administration/using-relative-urls-not-supported.md
+  - name: Diagnostics
+    items:
+    - name: Use diagnostics to troubleshoot issues in SharePoint Online and OneDrive 
+      href: ../diagnostics/sharepoint-and-onedrive-diagnostics.md
   - name: Apps
     items:
     - name: Issue when clicking .mov or .mp4 files

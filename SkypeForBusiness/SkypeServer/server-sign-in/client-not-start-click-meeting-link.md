@@ -53,7 +53,7 @@ To work around this problem, use one of the following methods.
 
 ### Option 1: Change the default browser
 
-Set Internet Explorer or another supported browser as the user's default browser.
+Set the [Microsoft Edge browser](https://www.microsoft.com/edge) or another supported browser as the user's default browser.
 
 ### Option 2: Set GPO settings
 

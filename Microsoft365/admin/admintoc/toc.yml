@@ -199,6 +199,10 @@
       href: ../installation/cannot-install-office-add-in.md
     - name: Deploy SaRA using Intune
       href: ../installation/install-sara-from-intune.md
+    - name: Desktop Setup Tool logging errors description
+      href: ../installation/desktop-setup-tool-logging-errors.md
+    - name: Error when uninstalling O365 Pro Plus
+      href: ../installation/something-went-wrong-30016-4-error.md
     - name: Install Office 365 apps
       href: ../installation/install-apps.md
     - name: Install SaRA from network share

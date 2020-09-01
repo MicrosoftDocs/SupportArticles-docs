@@ -9,6 +9,8 @@
       href: ../authentication/prevent-saving-credentials.md
   - name: Calendars
     items:
+    - name: Delegate can't create Skype or Teams meeting
+      href: ../calendars/operation-cannot-be-performed-error.md
     - name: Items for next year display at incorrect time
       href: ../calendars/calendar-items-display-incorrect-time.md
   - name: Deployment

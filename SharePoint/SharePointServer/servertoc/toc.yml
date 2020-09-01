@@ -115,6 +115,8 @@
       href: ../migration-tool/products-preparation-tool-not-progress-past-configuring-application.md
   - name: Performance
     items:
+    - name: Multiple Event ID 4769 errors
+      href: ../performance/event-id-4769-error.md
     - name: Outdated database statistics decrease performance
       href: ../performance/outdated-database-statistics.md
   - name: Search
