@@ -9,22 +9,22 @@ ms.prod-support-area-path:
 ms.technology:
 ms.reviewer: 
 ---
-# [SDP3][52ef8720-e3ee-4a12-a37e-cc3b0870f359] Microsoft Azure VM Logs
+#  &#91;SDP3&#93; &#91;52ef8720-e3ee-4a12-a37e-cc3b0870f359] Microsoft Azure VM Logs
 
-_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles)  
+_Original product version:_ &nbsp; Windows Virtual Machine  
 _Original KB number:_ &nbsp; 2772488
 
 ## Summary
 
-Gather the most common log files and diagnostics information from an Azure PaaS VM ,Collect data used to troubleshoot most of issues related to Microsoft Azure.
+Gather the most common log files and diagnostics information from an Azure VM, Collect data used to troubleshoot most of issues related to Microsoft Azure.
 
-## More information
+## Add to trusted websites
 
-You will be prompted by IE to Add a trusted website .
-- Click add and add https://*.support.microsoft.com . Note that you must put a *. in front of support.microsoft.com.
+You will be prompted by Internet Explorer to Add a trusted website.
+- Click add, and then add https://*.support.microsoft.com. Note that you must put a *. in front of support.microsoft.com.
 - Or, save the following as a .reg file and import it:
 Windows Registry Editor Version 5.00
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\EscDomains\microsoft.com\*.support]If you receive an IE Security Alert saying Your current security settings do not allow this file to be downloaded. " then you did not add https://*.support.microsoft.com to the list of trusted sites.
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\EscDomains\microsoft.com\*.support]If you receive an Internet Explorer Security Alert saying Your current security settings do not allow this file to be downloaded. " then you did not add https://*.support.microsoft.com to the list of trusted sites.
 
 ### Information Collected
 
