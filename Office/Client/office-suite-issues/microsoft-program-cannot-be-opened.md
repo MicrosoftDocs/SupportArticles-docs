@@ -16,7 +16,7 @@ appliesto:
 - Office for Mac 2011
 ---
 
-# "Microsoft  cannot be opened because of a problem" error when you start an Office program
+# "Microsoft program cannot be opened because of a problem" error when you start an Office program
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
