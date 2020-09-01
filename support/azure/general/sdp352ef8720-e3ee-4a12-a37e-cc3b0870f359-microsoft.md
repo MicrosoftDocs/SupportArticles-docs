@@ -9,7 +9,7 @@ ms.prod-support-area-path:
 ms.technology:
 ms.reviewer: 
 ---
-#  &#91;SDP3&#93; &#91;52ef8720-e3ee-4a12-a37e-cc3b0870f359] Microsoft Azure VM Logs
+# &#91;SDP3&#93; &#91;52ef8720-e3ee-4a12-a37e-cc3b0870f359] Microsoft Azure VM Logs
 
 _Original product version:_ &nbsp; Windows Virtual Machine  
 _Original KB number:_ &nbsp; 2772488
