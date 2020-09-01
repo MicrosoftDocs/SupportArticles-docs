@@ -549,6 +549,8 @@
       href: ../mailflow/external-user-cannot-send-email-to-distribution-group.md
     - name: Messages aren't evenly distributed
       href: ../mailflow/uneven-distribution-messages-basicauth-basicauthrequiretls.md
+    - name: Outbound email messages aren't sent
+      href: ../mailflow/outbound-email-messages-are-not-sent.md
     - name: Sending attachment outside of Outlook fails
       href: ../mailflow/event-27-mapisentmail-error-send-attachments.md
     - name: The front-end Microsoft Exchange Transport service stops and doesn't start
