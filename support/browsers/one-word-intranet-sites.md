@@ -22,7 +22,7 @@ Internet Explorer 9 or a later version introduces the OneBox feature, which comb
 
 ## Resolution
 
-If users want to go directly to the intranet site, then they can either type *<http://>* before the intranet site name or append / to the site name.
+If users want to go directly to the intranet site, then they can either type `http://` before the intranet site name or append / to the site name.
 
 Alternatively, you can configure Internet Explorer to go to the intranet site directly by using one of the following methods.
 

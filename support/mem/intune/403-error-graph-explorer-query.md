@@ -19,7 +19,7 @@ When you try to run queries in [Graph Explorer](https://developer.microsoft.com
 > {  
     "error": {  
         "code": "Forbidden",  
-        "message": "{\r\n  \\"_version\\": 3,\r\n  \\"Message\\": \\"Application is not authorized to perform this operation. Application must have one of the following scopes: DeviceManagementConfiguration.Read.All, DeviceManagementConfiguration.ReadWrite.All - Operation ID (for customer support): 00000000-0000-0000-0000-000000000000 - Activity ID: 5c977c7f-ae03-4be0-82c2-408eafb65caf - Url: <https://fef.msub05.manage.microsoft.com/DeviceConfiguration_1911/StatelessDeviceConfigurationFEService/deviceManagement?api-version=5019-09-20>\\",\r\n  \\"CustomApiErrorPhrase\\": \\"\\",\r\n  \\"RetryAfter\\": null,\r\n  \\"ErrorSourceService\\": \\"\\",\r\n  \\"HttpHeaders\\": \\"{}\\"\r\n}",  
+        "message": "{\r\n  \\"_version\\": 3,\r\n  \\"Message\\": \\"Application is not authorized to perform this operation. Application must have one of the following scopes: DeviceManagementConfiguration.Read.All, DeviceManagementConfiguration.ReadWrite.All - Operation ID (for customer support): 00000000-0000-0000-0000-000000000000 - Activity ID: 5c977c7f-ae03-4be0-82c2-408eafb65caf - Url: <`https://fef.msub05.manage.microsoft.com/DeviceConfiguration_1911/StatelessDeviceConfigurationFEService/deviceManagement?api-version=5019-09-20`>\\",\r\n  \\"CustomApiErrorPhrase\\": \\"\\",\r\n  \\"RetryAfter\\": null,\r\n  \\"ErrorSourceService\\": \\"\\",\r\n  \\"HttpHeaders\\": \\"{}\\"\r\n}",  
         "innerError": {  
             "request-id": "5c977c7f-ae03-4be0-82c2-408eafb65caf",  
             "date": "2019-11-15T18:53:00"  
@@ -57,7 +57,7 @@ To fix this issue, follow these steps:
 
 1. The next time that you try to access Graph Explorer by using the same account, you are prompted by a **Permissions requested** dialog box that resembles the following.
 
-    :::image type="content" source="media/403-error-graph-explorer-query/permissions-requested-1.png" alt-text="screenshot of Permissions requested":::
+    :::image type="content" source="media/403-error-graph-explorer-query/permissions-requested-1.png" alt-text="Permissions requested":::
 
 1. Select **Accept** to apply the changes that you made in step 3. If you want other Intune administrators to also be granted access to the site, select **Consent on behalf of your organization**.
 

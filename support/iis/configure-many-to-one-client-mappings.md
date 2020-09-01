@@ -97,7 +97,7 @@ Here are the prerequisites needed for this walk-through:
 
 5. Under this new window, select to add a new item. You can modify the properties from within the window as shown below:
 
-    :::image type="content" source="./media/configure-many-to-one-client-mappings/modify-properties.jpg" alt-text="modify-properties.jpg":::
+    :::image type="content" source="./media/configure-many-to-one-client-mappings/modify-properties.jpg" alt-text="property rule":::
 
 6. Select on the ellipsis button for **rules**, which will give you the option to add multiple patterns for matching based on the certificate properties.
 

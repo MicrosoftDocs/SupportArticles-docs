@@ -59,8 +59,13 @@ productDirectory:
     imageSrc: "media/hub-landing/MEM.jpg"
     summary: Troubleshooting articles for Microsoft Endpoint Manager
     url: mem/index.yml
-      
-  - title: Azure
+
+  - title: System Center
+    imageSrc: "media/hub-landing/logo-systemcenter.png"
+    summary: Troubleshooting articles for System Center
+    url: system-center/index.yml
+
+- title: Azure
     imageSrc: "https://static.docs.com/ui/media/product/azure/azure.svg"
     summary: Troubleshooting articles for Azure 
     url: azure/index.yml
