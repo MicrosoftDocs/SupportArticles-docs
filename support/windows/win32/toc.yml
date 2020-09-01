@@ -27,6 +27,8 @@
       href: ime-crash-processing-cross-thread-sent-message.md
     - name: Screen Saver command line arguments
       href: screen-saver-command-line.md
+    - name: Warning 1946 when you install an Installer package
+      href: warning-1946-when-you-install-installer-package.md
   - name: Distributed transactions
     items:
     - name: Can't start transactions
@@ -35,6 +37,8 @@
       href: enable-diagnostic-tracing-ms-dtc.md
     - name: KTMRM services fail with event ID 4448
       href: ktmrm-service-event-id-0x80070005.md
+    - name: MSDTC Service must run under NetworkService account
+      href: msdtc-service-run-under-networkservice-account.md
     - name: New functionality in the MSDTC service
       href: new-functionality-in-msdtc-service.md
     - name: XA Transaction support requires registry entries
@@ -93,6 +97,8 @@
       href: createprocess-cannot-eliminate-duplicate-variables.md
     - name: Custom virtual channel isn't supported
       href: custom-virtual-channel-not-supported.md
+    - name: Debug Windows services
+      href: debug-windows-services.md
     - name: Heap manager may not decommit memory
       href: heap-manager-may-not-decommit-memory.md
     - name: Get formatted strings for an event
