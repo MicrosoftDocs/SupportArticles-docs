@@ -1,5 +1,5 @@
 ---
-title: [SDP3][52ef8720-e3ee-4a12-a37e-cc3b0870f359] Microsoft Azure VM Logs
+title: Microsoft Azure VM Logs that are collected by support tools
 description: Microsoft Azure SDP Package.
 author: genlin
 ms.author:genli
