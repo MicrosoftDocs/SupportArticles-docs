@@ -100,36 +100,36 @@ After you have made the registry changes, you must restart the MSDTC service. To
 
 ## Applies to
 
-Windows Server 2012 R2 Datacenter
-Windows Server 2012 R2 Standard
-Windows Server 2012 R2 Essentials
-Windows 8.1 Enterprise
-Windows 8.1 Pro
-Windows 8.1
-Windows Server 2012 Datacenter
-Windows Server 2012 Datacenter
-Windows Server 2012 Standard
-Windows Server 2012 Standard
-Windows Server 2012 Essentials
-Windows 8 Enterprise
-Windows 8 Pro
-Windows 8
-Windows Server 2008 R2 Datacenter
-Windows Server 2008 R2 Standard
-Windows Server 2008 R2 Enterprise
-Windows 7 Enterprise
-Windows 7 Professional
-Windows Server 2008 Datacenter
-Windows Server 2008 Standard
-Windows Server 2008 Enterprise
-Windows Vista Enterprise
-Windows Vista Business
-Microsoft Windows Server 2003 Enterprise Edition (32-bit x86)
-Microsoft Windows Server 2003 Standard Edition (32-bit x86)
-Microsoft Windows Server 2003 Datacenter Edition (32-bit x86)
-Microsoft Windows Server 2003 Web Edition
-Microsoft Windows Server 2003 Standard x64 Edition
-Microsoft Windows Server 2003 Enterprise x64 Edition
-Microsoft Windows Server 2003 Datacenter x64 Edition
-Microsoft Windows XP Professional
-Microsoft Windows XP Professional x64 Edition
+- Windows Server 2012 R2 Datacenter
+- Windows Server 2012 R2 Standard
+- Windows Server 2012 R2 Essentials
+- Windows 8.1 Enterprise
+- Windows 8.1 Pro
+- Windows 8.1
+- Windows Server 2012 Datacenter
+- Windows Server 2012 Datacenter
+- Windows Server 2012 Standard
+- Windows Server 2012 Standard
+- Windows Server 2012 Essentials
+- Windows 8 Enterprise
+- Windows 8 Pro
+- Windows 8
+- Windows Server 2008 R2 Datacenter
+- Windows Server 2008 R2 Standard
+- Windows Server 2008 R2 Enterprise
+- Windows 7 Enterprise
+- Windows 7 Professional
+- Windows Server 2008 Datacenter
+- Windows Server 2008 Standard
+- Windows Server 2008 Enterprise
+- Windows Vista Enterprise
+- Windows Vista Business
+- Microsoft Windows Server 2003 Enterprise Edition (32-bit x86)
+- Microsoft Windows Server 2003 Standard Edition (32-bit x86)
+- Microsoft Windows Server 2003 Datacenter Edition (32-bit x86)
+- Microsoft Windows Server 2003 Web Edition
+- Microsoft Windows Server 2003 Standard x64 Edition
+- Microsoft Windows Server 2003 Enterprise x64 Edition
+- Microsoft Windows Server 2003 Datacenter x64 Edition
+- Microsoft Windows XP Professional
+- Microsoft Windows XP Professional x64 Edition

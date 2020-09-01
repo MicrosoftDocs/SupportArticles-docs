@@ -9,7 +9,7 @@ ms.reviewer: viveksi
 
 This article introduces a problem in which you receive a Warning 1946 message when you install a Windows Installer package in Windows 7.
 
-_Original product version:_ &nbsp; Windows 7 Enterprise, Windows 7 Home Basic, Windows 7 Home Premium, Windows 7 Professional, Windows 7 Starter, Windows 7 Ultimate  
+_Original product version:_ &nbsp; Windows 7  
 _Original KB number:_ &nbsp; 2745126
 
 ## Symptoms
@@ -59,3 +59,12 @@ When you create a .msi package to run both in Windows 8 and in Windows 7, do not
 - For more information about the MSI installation and logging options, see [Command-Line Options](/windows/win32/msi/command-line-options).
 - For more information about the `MsiShortcutPropertyTable`, see [MsiShortcutProperty table](/windows/win32/msi/msishortcutproperty-table).
 - For more information about the Shortcut table, see [Shortcut table](/windows/win32/msi/shortcut-table).
+
+## Applies to
+
+- Windows 7 Enterprise
+- Windows 7 Home Basic
+- Windows 7 Home Premium
+- Windows 7 Professional
+- Windows 7 Starter
+- Windows 7 Ultimate

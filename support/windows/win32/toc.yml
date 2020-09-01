@@ -97,8 +97,6 @@
       href: createprocess-cannot-eliminate-duplicate-variables.md
     - name: Custom virtual channel isn't supported
       href: custom-virtual-channel-not-supported.md
-    - name: Debug Windows services
-      href: debug-windows-services.md
     - name: Heap manager may not decommit memory
       href: heap-manager-may-not-decommit-memory.md
     - name: Get formatted strings for an event
