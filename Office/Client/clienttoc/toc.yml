@@ -1207,6 +1207,8 @@
       href: ../word/print-failures-word-for-office-365-on-win-10.md
     - name: Troubleshooting guide for unwanted page breaks
       href: ../word/troubleshoot-unwanted-page-breaks.md
+    - name: Using printer fonts in Word
+      href: ../word/printer-fonts-in-word.md
     - name: Word could not create the work file
       href: ../word/word-could-not-create-the-work-file.md
     - name: Word for Mac crashes with saving
