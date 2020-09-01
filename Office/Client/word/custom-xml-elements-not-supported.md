@@ -76,9 +76,9 @@ For more information about content controls, visit the following Microsoft webpa
 - [Building Word 2007 Document Templates Using Content Controls](https://msdn.microsoft.com/library/bb264571%28office.12%29.aspx)
 - [Mapping Word 2007 Content Controls to Custom XML Using the XMLMapping Object](https://msdn.microsoft.com/library/bb510135%28office.12%29.aspx)
 - [How to: Bind a Content Control to a Node in the Data Store](https://msdn.microsoft.com/library/bb243814%28office.12%29.aspx)
-- [Taking Advantage of Bound Content Controls](https://blogs.msdn.com/b/brian_jones/archive/2009/01/05/taking-advantage-of-bound-content-controls.aspx)
-- [The Easy Way to Assemble Multiple Word Documents](https://blogs.msdn.com/b/brian_jones/archive/2008/12/08/the-easy-way-to-assemble-multiple-word-documents.aspx)
-- [Creating Data-Bound Content Controls using the Open XML SDK and LINQ to XML](https://blogs.msdn.com/b/ericwhite/archive/2008/10/19/creating-data-bound-content-controls-using-the-open-xml-sdk-and-linq-to-xml.aspx)
+- [Taking Advantage of Bound Content Controls](https://docs.microsoft.com/archive/blogs/brian_jones/taking-advantage-of-bound-content-controls)
+- [The Easy Way to Assemble Multiple Word Documents](https://docs.microsoft.com/archive/blogs/brian_jones/the-easy-way-to-assemble-multiple-word-documents)
+- [Creating Data-Bound Content Controls using the Open XML SDK and LINQ to XML](https://docs.microsoft.com/archive/blogs/ericwhite/creating-data-bound-content-controls-using-the-open-xml-sdk-and-linq-to-xml)
 
 ## References
 

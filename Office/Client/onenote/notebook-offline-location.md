@@ -47,7 +47,7 @@ When OneNote 2013 detects that the notebook is in an offline folder location, yo
 
 For more information, see item 4 of the "Troubleshooting steps" section of the following blog post: 
 
-[OneNote Shared Notebooks - Options and Troubleshooting - Part 1: Windows File Shares](https://blogs.msdn.com/b/david_rasmussen/archive/2007/12/10/onenote-shared-notebooks-options-and-troubleshooting-part-1-windows-file-shares.aspx)
+[OneNote Shared Notebooks - Options and Troubleshooting - Part 1: Windows File Shares](https://docs.microsoft.com/archive/blogs/david_rasmussen/onenote-shared-notebooks-options-and-troubleshooting-part-1-windows-file-shares)
 
 ## Resolution
 

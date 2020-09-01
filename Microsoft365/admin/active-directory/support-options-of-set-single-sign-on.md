@@ -54,6 +54,6 @@ To request professional support over the web, follow these steps:
 
 For more info about consulting services, see the following:
 
-- [Microsoft Consulting Services](https://www.microsoft.com/msservices/consulting)
+- [Microsoft Consulting Services](https://www.microsoft.com/en-US/msservices/consulting)
 - [Microsoft Store Support Page](https://support.microsoft.com/help/28808/microsoft-store-contact-support?ocid=MSCOMStoreFooter-ContactUs)
 - [Microsoft Certified Solution Providers](https://www.microsoft.com/solution-providers/home)
