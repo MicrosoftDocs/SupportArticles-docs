@@ -65,7 +65,7 @@ productDirectory:
     summary: Troubleshooting articles for System Center
     url: system-center/index.yml
 
-- title: Azure
+  - title: Azure
     imageSrc: "https://static.docs.com/ui/media/product/azure/azure.svg"
     summary: Troubleshooting articles for Azure 
     url: azure/index.yml
