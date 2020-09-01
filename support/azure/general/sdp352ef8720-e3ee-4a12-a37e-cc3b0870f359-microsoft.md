@@ -18,15 +18,16 @@ _Original KB number:_ &nbsp; 2772488
 
 Gather the most common log files and diagnostics information from an Azure VM, Collect data used to troubleshoot most of issues related to Microsoft Azure.
 
-## Add to trusted websites
+## Add trusted websites to Internet Explorer
 
-You will be prompted by Internet Explorer to Add a trusted website.
-- Click add, and then add https://*.support.microsoft.com. Note that you must put a *. in front of support.microsoft.com.
-- Or, save the following as a .reg file and import it:
+You will be prompted by Internet Explorer to add the trusted website. To resolve this issue, use of the following methods:
+
+- Click **Add**, and then add https://*.support.microsoft.com. Note that you must put a *. in front of support.microsoft.com.
+- Or, save the following content as a .reg file and import it:
 `Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\EscDomains\microsoft.com\*.support]`
 
-If you receive an Internet Explorer Security Alert that states the current security settings do not allow this file to be downloaded.  then you did not add https://*.support.microsoft.com to the list of trusted sites successfully.
+If you receive an Internet Explorer Security Alert that states the current security settings do not allow this file to be downloaded, then you did not add https://*.support.microsoft.com to the list of trusted sites successfully.
 
 ### Information Collected
 
