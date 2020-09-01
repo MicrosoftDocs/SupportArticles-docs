@@ -75,6 +75,8 @@
       href: /office365/troubleshoot/antispam/junk-email-reporting-add-in?context=/outlook/troubleshoot/context/client-context
     - name: Lync Meeting control isn't displayed
       href: ../ribbon/lync-meeting-control-not-displayed.md
+    - name: Manage Room Finder
+      href: ../ribbon/room-finder.md
   - name: Search
     items:
     - name: Can't search from additional mailbox 
