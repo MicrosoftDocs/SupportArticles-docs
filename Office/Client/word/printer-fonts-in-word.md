@@ -44,6 +44,4 @@ Printer fonts can still be used in Office apps, but you must first install the f
 For more information about using printer fonts in Word, see [Use printer device fonts](https://docs.microsoft.com/troubleshoot/windows/win32/printer-device-fonts). 
 
 
-## More information
-
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
