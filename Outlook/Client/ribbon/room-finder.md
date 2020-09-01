@@ -38,9 +38,7 @@ In Outlook for Office 365, the Room Finder control button can be found next to t
 :::image type="content" source="./media/room-finder/image4.png" alt-text="A screenshot of a computer Description automatically generated.":::
 
 By clicking the **Room Finder** control in the **Options** group of the Ribbon, you can hide the Room Finder. However, the Room Finder remains hidden only if you hide it on the **Appointment** screen. If you try to hide it on the **Scheduling Assistant** screen, and then you switch to the **Appointment** screen and then back to the **Scheduling Assistant** screen, the Room Finder is visible again.  
-  
-For more information about how to manage the Room Finder, see the "More Information" section.  
-  
+
 > [!NOTE]
 > There is a known issue in which no available rooms are displayed in the Room Finder pane when you start a meeting outside your working hours.  
   
