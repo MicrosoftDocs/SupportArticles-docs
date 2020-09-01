@@ -90,6 +90,6 @@ For detailed information on using Mandatory profiles with Windows server and cli
 For more detailed information on Crypto API functionality with Mandatory profiles:
 
 [RSACryptoServiceProvider fails when used with mandatory profiles](
-https://blogs.msdn.com/b/alejacma/archive/2007/10/23/rsacryptoserviceprovider-fails-when-used-with-mandatory-profiles.aspx)
+https://docs.microsoft.com/archive/blogs/alejacma/rsacryptoserviceprovider-fails-when-used-with-mandatory-profiles)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
