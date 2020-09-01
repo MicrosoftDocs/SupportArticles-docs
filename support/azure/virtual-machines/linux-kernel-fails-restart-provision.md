@@ -68,7 +68,7 @@ To resolve this problem, try [manually restarting](https://docs.microsoft.com/cl
 
 ## More information
 
-For more information about [Endorsed Linux distributions](https://azure.microsoft.com/documentation/articles/virtual-machines-linux-endorsed-distributions/) and open-source technologies in Azure, see [Support for Linux and open source technology in Azure](../cloud-services/support-linux-open-source-technology.md).  
+For more information about [Endorsed Linux distributions](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros) and open-source technologies in Azure, see [Support for Linux and open source technology in Azure](../cloud-services/support-linux-open-source-technology.md).  
 
 **Third-party information disclaimer**
   
