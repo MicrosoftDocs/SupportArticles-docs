@@ -2,7 +2,7 @@
 title: Microsoft Azure VM Logs that are collected by support tools
 description: Microsoft Azure SDP Package.
 author: genlin
-ms.author:genli
+ms.author: genli
 ms.service: virtual-machines-windows
 ms.date: 08/14/2020
 ms.prod-support-area-path: 
