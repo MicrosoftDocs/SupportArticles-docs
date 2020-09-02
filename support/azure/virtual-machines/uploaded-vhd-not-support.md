@@ -20,7 +20,7 @@ When you create a virtual machine in Microsoft Azure by using an uploaded VHD, t
 > 
 > ErrorCode: InvalidVhd 
 >
-> ErrorMessage: The specified cookie value in VHD footer indicates that disk 'diskname' with blob https://xxxxxx.blob.core.windows.net/vhds/samplename.vhd is not a supported VHD. Disk is expected to have cookie value 'conectix'. 
+> ErrorMessage: The specified cookie value in VHD footer indicates that disk 'diskname' with blob `https://xxxxxx.blob.core.windows.net/vhds/samplename.vhd` is not a supported VHD. Disk is expected to have cookie value 'conectix'. 
 
 ## Cause  
 
