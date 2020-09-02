@@ -196,7 +196,7 @@ cd
 umount /mnt
 ```
 
-For more information about how to attach a data disk to the gallery VM, see [How to attach a data disk to a Windows VM in the Azure portal](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-attach-disk-portal).
+For more information about how to attach a data disk to the gallery VM, see [How to attach a data disk to a Windows VM in the Azure portal](https://docs.microsoft.com/azure/virtual-machines/windows/attach-managed-disk-portal).
 
 ## Reference: network files for operating systems  
 

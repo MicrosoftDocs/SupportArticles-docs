@@ -31,7 +31,7 @@ To fix the issue, follow these steps.
 ### Step 1
 
 1. Delete the virtual machine (VM). Make sure that you select the **Keep the disks** option when you do this.
-2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-attach-disk-portal).
+2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](https://docs.microsoft.com/azure/virtual-machines/windows/attach-managed-disk-portal).
 3. Connect to the troubleshooting VM, and then open **Computer management** > **Disk management**. Make sure that the OS disk is online and that its partitions have drive letters assigned.
 4. Use the WinRE image located in every Windows installation (Recover console image) as a repository to try to fix the corruption. Volume G is the drive of the broken OS disk:
 

@@ -303,6 +303,9 @@
 
 - name: Security and Privacy
   items:
+    - name: Applications attempt to access the Admin web cache
+      href: apps-access-admin-web-cache.md
+
     - name: Can't view secure web sites
       href: cannot-view-secure-web-sites.md
 
@@ -338,9 +341,6 @@
 
     - name: User names and passwords not supported
       href: name-and-password-not-supported-in-website-address.md
-
-    - name: Applications attempt to access the Admin web cache
-      href: apps-access-admin-web-cache.md
 
 - name: Stability and Performance
   items:

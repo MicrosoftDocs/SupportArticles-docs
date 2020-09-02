@@ -28,7 +28,7 @@ Add a swap file to increase the virtual memory in Linux Azure virtual machines. 
 
 > [!NOTE]
 > - The following commands are executed as root.
-> - You should set the swap file in compliance with the guidance from your Linux vendor: [Ubuntu](https://help.ubuntu.com/community/SwapFaq), [Red Hat](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/3/html/System_Administration_Guide/ch-swapspace.html#S1-SWAP-WHAT-IS).
+> - You should set the swap file in compliance with the guidance from your Linux vendor: [Ubuntu](https://help.ubuntu.com/community/SwapFaq), [Red Hat](https://access.redhat.com/documentation/en-US/red_hat_enterprise_linux/4/html/system_administration_guide/swap_space).
 > - Before you create a swap file, you can run the following command to learn how much space is available under `/mnt/resource` or `/mnt`: `df -h`.
 
 1. To create a swap file in the directory that's defined by the **ResourceDisk.MountPoint** parameter, you can update the **/etc/waagent.conf** file by setting the following three parameters:
