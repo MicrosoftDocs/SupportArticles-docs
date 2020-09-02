@@ -179,6 +179,10 @@ You can find the ESP settings under the following registry key in the `MDMDiagRe
 >
 > In this case, the value of `SkipUserStatusPage` or `SkipDeviceStatusPage` is set to `0xffffffff` under `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Enrollments\{EnrollmentGUID}\FirstSync`.
 
+Here is a short video that shows how to collect Windows Autopilot MDM logs:
+
+> [!VIDEO https://www.youtube.com/embed/ry88Vur6dhE]
+
 ### Check the registry for app deployment failures during ESP
 
 App deployment failures can cause ESP to time out. These failures can occur because of incorrect app configuration, network connectivity issues or device-specific issues.
@@ -290,6 +294,22 @@ This subkey contains diagnostics information for all applications and policies t
 This subkey is created during the account setup phase if the device setup phase is completed successfully. It  contains the installation state of Win32 apps deployed in user context, and the creation status of the tracking policy for the account setup phase.
 
 :::image type="content" source="media/understand-troubleshoot-esp/usersid.png" alt-text="The user SID subkey":::
+
+### Collect ESP tracking information using PowerShell
+
+Use the [Get-AutopilotDiagnostics](https://www.powershellgallery.com/packages/Get-AutopilotDiagnostics/5.6) script to collect information tracked through the ESP.
+
+To install the script, use the following PowerShell command:
+
+```powershell
+Install-Script -Name Get-AutopilotDiagnostics -Force
+```
+
+To use the script to examine the generated log file, use the following PowerShell command:
+
+```powershell
+Get-AutopilotDiagnostics -CABFile <pathToOutputCabFile>
+```
 
 ### Common questions for troubleshooting ESP related issues
 
