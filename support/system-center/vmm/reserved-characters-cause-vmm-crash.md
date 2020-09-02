@@ -27,7 +27,7 @@ Do not use any folder or share that contains reserved characters.
 
 A carmine trace will show an error similar to the following. Note the name of the share in the top line:
 
-> 00000035 4.64445496 [5600] 15E0.1740::07/29-02:36:09.104#14:ImgLibTask.cs(814): Start adding Library Share [\\\servername\\???|TaskID=9C23BAC8-CB92-46A8-BFC4-E16889A25936](`file://<servername>???|TaskID=9C23BAC8-CB92-46A8-BFC4-E16889A25936`)  
+> 00000035 4.64445496 [5600] 15E0.1740::07/29-02:36:09.104#14:ImgLibTask.cs(814): Start adding Library Share [\\\<servername>\\???|TaskID=9C23BAC8-CB92-46A8-BFC4-E16889A25936](`file://\\<servername>???|TaskID=9C23BAC8-CB92-46A8-BFC4-E16889A25936`)  
 > 00000036 4.70877552 [5600] 15E0.1740::07/29-02:36:09.167#19:Auditor.cs(224): Auditor: Committing audit record changes Count=1.|TaskID=9C23BAC8-CB92-46A8-BFC4-E16889A25936  
 > 00000037 4.71668673 [5600] 15E0.1740::07/29-02:36:09.175#20:UserRoleAuthorizationHelper.cs(113): Get: Running GetAssociatedUR SP prc_TR_Task_GetUserRolesForTask, ObjectID: 9c23bac8-cb92-46a8-bfc4-e16889a25936  
 > 00000038 4.71875620 [5600] 15E0.1740::07/29-02:36:09.178#20:UserRoleAuthorizationHelper.cs(113): Get: Running GetAssociatedUR SP prc_IL_GetUserRolesForLibraryShareID, ObjectID: ec3cf570-7547-4957-a51d-dae9b142cf7f  
@@ -55,4 +55,4 @@ A carmine trace will show an error similar to the following. Note the name of t
 > 00000060 6.42078829 [5600]    at Microsoft.VirtualManager.Engine.Deployment.FCHBAHelper.GetFCHBAAdapters(WsmanAPIWrapper wrapper) in i:\bt\160\private\product\engine\Deployment\HBAHelper.cs:line 64  
 > 00000061 6.42078829 [5600]    at Microsoft.VirtualManager.Engine.Deployment.FCHBAHelper.TryGetFCHBAAdpaters(WsmanAPIWrapper wrapper, MSFC_FCAdapterHBAAttributes[]& adapters, ErrorInfo& error) in i:\bt\160\private\product\engine\Deployment\HBAHelper.cs:line 52  
 > 00000062 6.42078829 [5600] *** Carmine error was: HostAgentWSManError (2927); HR: 0x80338102  
-> 00000063 6.42078829 [5600] *** [\\\servername\\](`file://<servername>`)??? ** dcmrrxp16n24.dcmanager.lab **  **  **
+> 00000063 6.42078829 [5600] *** [\\\<servername>\\](`file://\\<servername>`)??? ** dcmrrxp16n24.dcmanager.lab **  **  **
