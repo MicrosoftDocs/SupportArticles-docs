@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 2772488
 
 ## Summary
 
-Gather the most common log files and diagnostics information from an Azure VM, Collect data used to troubleshoot most of issues related to Microsoft Azure.
+Gather the most common log files and diagnostics information from an Azure VM. Collect data used to troubleshoot most of issues related to Microsoft Azure.
 
 ## Add trusted websites to Internet Explorer
 
