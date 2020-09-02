@@ -10,21 +10,21 @@ metadata:
 
 productDirectory:
   items:
-  - title: Azure Active Directory
+  - title:  Azure Active Directory
     imageSrc: "https://static.docs.com/ui/media/product/azure/active-directory.svg"
     links:
     - url: active-directory/welcome-azure-ad.md
-      text: Support for Azure Active Directory
+      text: Troubleshooting articles for Azure Active Directory
   - title: Cloud Services
     imageSrc: "https://static.docs.com/ui/media/product/azure/cloud-services.svg"
     links:
     - url: cloud-services/welcome-cloud-services.md
-      text: Support for Cloud Services
+      text: Troubleshooting articles for Cloud Services
   - title: Virtual Machines
     imageSrc: "https://static.docs.com/ui/media/product/azure/virtual-machine.svg"
     links:
     - url: virtual-machines/welcome-virtual-machines.md
-      text: Support for Virtual Machines
+      text: Troubleshooting articles for Virtual Machines
   - title: Azure DevOps
     imageSrc: "https://docs.microsoft.com/en-us/azure/devops/media/index/devopsiconboards96.svg"
     links:
