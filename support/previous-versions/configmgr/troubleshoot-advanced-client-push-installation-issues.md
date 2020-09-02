@@ -371,7 +371,8 @@ When you enable the Advanced Client Push Installation method, SMS automatically 
 1. Click **Start**, click **Run**, type notepad, and then click **OK**.
 2. In Notepad, type the following two lines:
 
-   [NT Client Configuration Request] Machine Name=*NetBIOSName*
+   [NT Client Configuration Request]  
+   Machine Name=*NetBIOSName*
 
     > [!NOTE]
     > In this example, *NetBIOSName* is the name of the computer where you want to install the SMS Advanced Client.
