@@ -1,13 +1,13 @@
 ---
 title: OSD and task sequences fail after a restoration
-description: Provides a solution to an issue in which OSD and task sequences no longer function when after restoring System Center Configuration Manager 2007 from a backup.
+description: Provides a solution to an issue in which OSD and task sequences no longer function after restoring System Center Configuration Manager 2007 from a backup.
 ms.date: 08/18/2020
 ms.prod-support-area-path: 
 ms.reviewer: frankroj, timhe
 ---
 # OSD and task sequences fail after restoring a Configuration Manager 2007 central site from a backup
 
-This article provides a solution to an issue in which operating system deployment (OSD) and task sequences no longer function when after restoring System Center Configuration Manager 2007 from a backup.
+This article provides a solution to an issue in which operating system deployment (OSD) and task sequences no longer function after restoring System Center Configuration Manager 2007 from a backup.
 
 _Original product version:_ &nbsp; System Center Configuration Manager 2007  
 _Original KB number:_ &nbsp; 2509330

@@ -76,7 +76,7 @@ Policy state for CCM_Policy_Policy4.PolicyID="{2f76229b-385a-43f3-b281-d29509869
 > DateTime = "20100505191228.388000+000";  
 > DownloadMethod = "HTTP";  
 > DownloadSource = "http:///SMS_MP/.sms_pol?{2f76229b-385a-43f3-b281-d295098693ed}.2_00";  
-> PolicyNamespace = "\\\\\\\\\\\ROOT\\ccm\\\\Policy\\\\Machine\\\\RequestedConfig";  
+> PolicyNamespace = "\\\\\\\\\\\ROOT\\\ccm\\\\Policy\\\\Machine\\\\RequestedConfig";  
 > PolicyPath = "CCM_Policy_Policy4.PolicyID=\\"{2f76229b-385a-43f3-b281-d295098693ed}\\",  PolicySource=\\"SMS:P01\\",PolicyVersion=\\"2.00\\"";  
 > ProcessID = 1804;  
 > ThreadID = 5016;  

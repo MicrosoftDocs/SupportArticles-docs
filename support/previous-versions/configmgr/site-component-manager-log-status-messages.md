@@ -1,11 +1,11 @@
 ---
-title: Site Component Manager log status messages
+title: Site Component Manager logs error status messages
 description: Describes how to grant permissions to Systems Management Server 2003 or Configuration Manager 2007 to create or change the System Management container in Active Directory.
 ms.date: 08/20/2020
 ms.prod-support-area-path:
 ms.reviewer: clintk, v-jomcc
 ---
-# Site Component Manager may log status messages after installing SMS 2003 or Configuration Manager 2007
+# Site Component Manager may log error status messages after installing SMS 2003 or Configuration Manager 2007
 
 This article helps you fix an issue in which Site Component Manager may log status messages 4909, 4912, 4913, and 4915 after you install Systems Management Server 2003 or System Center Configuration Manager 2007.
 
@@ -76,7 +76,9 @@ To grant the appropriate permissions to the System container, follow these steps
 
 7. In **Group or user names**, select the account that you added in step 6.
 
-8. In **Permissions for Enterprise Admins**, select the **Full Control** check box, and then click **OK**. Restart the Site Component Manager service to start updating Active Directory. You can monitor the Sitecomp.log file to see the status of the update.
+8. In **Permissions for Enterprise Admins**, select the **Full Control** check box, and then click **OK**.
+
+Restart the Site Component Manager service to start updating Active Directory. You can monitor the Sitecomp.log file to see the status of the update.
 
 You can use the ADSIEdit.exe utility to manually create the System Management container in the Active Directory System container. However, SMS or Configuration Manager must have permissions to manage the objects in the container.
 

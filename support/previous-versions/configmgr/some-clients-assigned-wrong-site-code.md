@@ -19,7 +19,8 @@ When using System Center Configuration Manager 2007, some clients may be assign
 > DhcpGetOriginalSubnetMask entry point not supported.  
 > Current AD site of machine is *ADSite1*  
 > This client might be within the boundaries of more than one site - AD SiteCode search matched 2 entries  
-> The client will be assigned to the first valid site LSGetAssignedSiteFromAD : Trying to Assign to the Site \<*P04*>  
+> The client will be assigned to the first valid site  
+> LSGetAssignedSiteFromAD : Trying to Assign to the Site \<*P04*>  
 > LSVerifySiteVersion : Verifying Site Version for \<*P04*>  
 > LSGetSiteVersionFromAD : Successfully retrieved version '4.00.6221.0000' for site '<*P04*>'  
 > LSVerifySiteVersion : Verified Client Version '4.00.6221.1000' is not greater than Site Version '4.00.6221.0000'. Client can be assigned to site \<*P04*>.  
@@ -37,7 +38,7 @@ Remove or correct the site that contains objects using the same boundaries. To i
 
 ## More information
 
-In many cases, this situation occurs because a site is deleted instead of being deinstalled. Doing this leaves the AD objects behind which results in a duplicate boundary if another site is later added that contains the boundary used in the previously deleted site.  
+In many cases, this situation occurs because a site is deleted instead of being deinstalled. Doing this leaves the Active Directory objects behind which results in a duplicate boundary if another site is later added that contains the boundary used in the previously deleted site.  
 
 - [How to Verify That Site Information Is Published to Active Directory Domain Services](/previous-versions/system-center/configuration-manager-2007/bb693614(v=technet.10))
 

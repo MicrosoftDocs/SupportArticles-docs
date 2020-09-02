@@ -1,5 +1,5 @@
 ---
-title: ConfigMgr 2007 backups with Win32 Error = 145
+title: ConfigMgr 2007 backups fail with Win32 Error = 145
 description: Fixes an issue in which System Center Configuration Manager 2007 backups fail if the VSS provider is in use by another process.
 ms.date: 08/18/2020
 ms.prod-support-area-path: markstan
@@ -29,4 +29,4 @@ These errors can occur if the Volume Shadow Copy Service (VSS) provider is in us
 
 ## Resolution
 
-To prevent these errors, configure Configuration Manager backup to start at a time outside the window for other backup jobs on the server. The schedule for this can be found in the **Configuration Manager Console** under **Site Management** > **Site Code** > **Site Settings** > **Site Maintenance** > **Tasks** > **Backup ConfigMgr Site Server**.
+To prevent these errors, configure Configuration Manager backup to start at a time outside the window for other backup jobs on the server. The schedule for this can be found in the Configuration Manager console under **Site Management** > **Site Code** > **Site Settings** > **Site Maintenance** > **Tasks** > **Backup ConfigMgr Site Server**.

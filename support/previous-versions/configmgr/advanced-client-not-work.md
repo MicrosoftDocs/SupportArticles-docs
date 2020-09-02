@@ -1,13 +1,13 @@
 ---
 title: The Advanced Client no longer works
-description: Describes a problem that occurs if a Group Policy object is configured to set the startup mode of the SMS Agent Host service to Automatic.
+description: Describes a problem that occurs if a Group Policy Object is configured to set the startup mode of the SMS Agent Host service to Automatic.
 ms.date: 08/20/2020
 ms.prod-support-area-path:
 ms.reviewer: v-jomcc
 ---
 # The Advanced Client in SMS 2003 and Configuration Manager 2007 no longer works after deploying Windows XP SP2
 
-This article helps you fix an issue in which the Advanced Client no longer works if a Group Policy object is configured to set the startup mode of the SMS Agent Host service to **Automatic**.
+This article helps you fix an issue in which the Advanced Client no longer works if a Group Policy Object (GPO) is configured to set the startup mode of the SMS Agent Host service to **Automatic**.
 
 _Original product version:_ &nbsp; Systems Management Server 2003, System Center Configuration Manager 2007  
 _Original KB number:_ &nbsp; 919592
@@ -27,14 +27,14 @@ After you deploy Microsoft Windows XP Service Pack 2 (SP2) to client computers t
 
     In the %WINDIR%\System32\CCM\Logs\CcmExec.log file on the client computer
 
-    > Error calling CoResumeClassObjects.CcmExec\<date> \<time>3304 (0x0CE8)
+    > Error calling CoResumeClassObjects.CcmExec\<date> \<time>3304 (0x0CE8)  
     > Phase 1 initialization failed (0x80004015).CcmExec\<date> \<time>3304 (0x0CE8)  
     > Phase 1 initialization failed (0x80004015).CcmExec\<date> \<time>3304 (0x0CE8)
 
     In the %WINDIR%\System32\CCM\Logs\execmgr.log file on the client computer
 
     > Command line = "\\\\\<server>\\\<share>$\\\<folder>\update\update.exe" /q /f /forcerestart,  
-    > Working Directory = \\<server>\<share>$\<folder>\execmgr<date> <time>3292 (0x0CDC)  
+    > Working Directory = \\\\\<server>\\\<share>$\\\<folder>\execmgr\<date> \<time>3292 (0x0CDC)  
     > Created Process for the passed command lineexecmgr\<date> \<time>3292 (0x0CDC)  
     > Raising event:  
     > [SMS_CodePage(437), SMS_LocaleID(1033)]  
@@ -42,7 +42,7 @@ After you deploy Microsoft Windows XP Service Pack 2 (SP2) to client computers t
     > {  
     > AdvertisementId = "\<ID>";  
     > ClientID = "GUID:\<GUID>";  
-    > CommandLine = "\\"\\\\\\\\\<servre>\\\\\<share>$\\\\\<folder>\\\\update\\\\update.exe\\" /q /f /forcerestart";  
+    > CommandLine = "\\"\\\\\\\\\<server>\\\\\<share>$\\\\\<folder>\\\\update\\\\update.exe\\" /q /f /forcerestart";  
     > DateTime = "\<date and time>.572000+000";  
     > MachineName = "\<computername>";  
     > PackageName = "\<packagename>";  
@@ -50,7 +50,7 @@ After you deploy Microsoft Windows XP Service Pack 2 (SP2) to client computers t
     > ProgramName = "Automated upgrade from XP or XPSP1";  
     > SiteCode = "\<siteCode>";  
     > ThreadID = 3292;  
-    > UserContext = "NT AUTHORITY\\SYSTEM";  
+    > UserContext = "NT AUTHORITY\\\SYSTEM";  
     > WorkingDirectory = "\\\\\\\\\<server>\\\\\<share>$\\\\\<folder>\\\\";  
     > };  
     > execmgr\<date> \<time>3292 (0x0CDC)  
@@ -93,20 +93,20 @@ After you deploy Microsoft Windows XP Service Pack 2 (SP2) to client computers t
 
 ## Cause
 
-This problem occurs if a Group Policy object is configured to set the SMS Agent Host service (CcmExec.exe) startup mode to **Automatic**.
+This problem occurs if a GPO is configured to set the SMS Agent Host service (CcmExec.exe) startup mode to **Automatic**.
 
 > [!NOTE]
 > By default, the SMS Agent Host service is not configured by using Group Policy.
 
 ## Resolution 1: Don't define the SMS Agent Host service in Group Policy
 
-Modify the Group Policy object to no longer define the startup mode for the SMS Agent Host service. To do this, follow these steps:
+Modify the GPO to no longer define the startup mode for the SMS Agent Host service. To do this, follow these steps:
 
 1. Log on to a domain controller, and then start the Active Directory Users and Computers tool. To do this, click **Start** > **Run**, type `dsa.msc` in the **Open** box, and then click **OK**.
 
-2. Right-click the container in which the Group Policy object was created, and then select **Properties**. For example, right-click the domain container or right-click an organizational unit, and then select **Properties**.
+2. Right-click the container in which the GPO was created, and then select **Properties**. For example, right-click the domain container or right-click an organizational unit, and then select **Properties**.
 
-3. Select the **Group Policy** tab, select the Group Policy object in which the **SMS Agent Host** service is defined, and then select **Edit**.
+3. Select the **Group Policy** tab, select the GPO in which the **SMS Agent Host** service is defined, and then select **Edit**.
 
 4. In the Group Policy Object Editor tool, expand **Computer Configuration** > **Windows Settings** > **Security Settings**, and then select **System Services**.
 
@@ -116,18 +116,18 @@ Modify the Group Policy object to no longer define the startup mode for the SMS 
 
 7. Restart the Windows XP SP2-based client computers.
 
-## Resolution 2: Assign the NETWORK SERVICE account Full Control permissions to the SMS Agent Host object
+## Resolution 2: Assign the NetworkService account Full Control permissions to the SMS Agent Host object
 
 > [!WARNING]
 > This workaround may make your computer or your network more vulnerable to attack by malicious users or by malicious software such as viruses. We don't recommend this workaround but are providing this information so that you can implement this workaround at your own discretion. Use this workaround at your own risk.
 
-You can keep the SMS Agent Host service automatic startup Group Policy if you assign the NETWORK SERVICE account Full Control permissions to the SMS Agent Host object in Group Policy. To do this, follow these steps:
+You can keep the SMS Agent Host service automatic startup Group Policy if you assign the NetworkService account Full Control permissions to the SMS Agent Host object in Group Policy. To do this, follow these steps:
 
 1. Log on to a domain controller, and then start the Active Directory Users and Computers tool. To do this, click **Start** > **Run**, type `dsa.msc` in the **Open** box, and then click **OK**.
 
-2. Right-click the container in which the Group Policy object was created, and then select **Properties**. For example, right-click the domain container or right-click an organizational unit, and then select **Properties**.
+2. Right-click the container in which the GPO was created, and then select **Properties**. For example, right-click the domain container or right-click an organizational unit, and then select **Properties**.
 
-3. Select the **Group Policy** tab, select the Group Policy object in which the **SMS Agent Host** service is defined, and then select **Edit**.
+3. Select the **Group Policy** tab, select the GPO in which the **SMS Agent Host** service is defined, and then select **Edit**.
 
 4. In the Group Policy Object Editor tool, expand **Computer Configuration** > **Windows Settings** > **Security Settings**, and then select **System Services**.
 
@@ -135,9 +135,9 @@ You can keep the SMS Agent Host service automatic startup Group Policy if you as
 
 6. In the **Security for SMS Agent Host** dialog box, select **Add**.
 
-7. Type network service in the **Enter the object names to select** box, click **Check Names**, and then click **OK**.
+7. Type NetworkService in the **Enter the object names to select** box, click **Check Names**, and then click **OK**.
 
-8. In the **Permissions for NETWORK SERVICE** box, select the **Full Control** check box in the **Allow** column, and then click **OK**.
+8. In the **Permissions for NetworkService** box, select the **Full Control** check box in the **Allow** column, and then click **OK**.
 
 9. In the **SMS Agent Host Properties** dialog box, click **OK**.
 

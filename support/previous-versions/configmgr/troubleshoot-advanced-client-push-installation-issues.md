@@ -1,13 +1,13 @@
 ---
-title: Troubleshoot Advanced Client Push Installation issues
-description: Describes how to troubleshoot Advanced Client Push Installation issues in Systems Management Server 2003 and System Center Configuration Manager 2007.
+title: Troubleshoot Advanced Client push installation issues
+description: Describes how to troubleshoot Advanced Client push installation issues in Systems Management Server 2003 and System Center Configuration Manager 2007.
 ms.date: 08/20/2020
 ms.prod-support-area-path:
 ms.reviewer: jarrettr
 ---
-# Troubleshoot Advanced Client Push Installation issues in SMS 2003 and Configuration Manager 2007
+# Troubleshoot Advanced Client push installation issues in SMS 2003 and Configuration Manager 2007
 
-This article describes how to troubleshoot Microsoft Systems Management Server (SMS) 2003 Advanced Client and Microsoft System Center Configuration Manager 2007 Client installation issues when you use the Client Push Installation method.
+This article describes how to troubleshoot Microsoft Systems Management Server (SMS) 2003 Advanced Client and Microsoft System Center Configuration Manager 2007 client installation issues when you use the client push installation method.
 
 _Original product version:_ &nbsp; Microsoft System Center Configuration Manager 2007, System Center Configuration Manager 2007 R2, Microsoft System Center Configuration Manager 2007 R3  
 _Original KB number:_ &nbsp; 925282
@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 925282
 
 There are some issues that can potentially occur when you deploy a client by using the Advanced Client Push install method. This article describes the installation process, some common issues and their solutions, and the tools and procedures for troubleshooting.
 
-The content below reference the SMS 2003 Advanced Client and the Advanced Client Push Installation method but the same information is applicable to the System Center Configuration Manager 2007 client (sometimes referred to as the SCCM client or the ConfigMgr 2007 client) as well.
+The content below reference the SMS 2003 Advanced Client and the Advanced Client Push Installation method but the same information is applicable to the System Center Configuration Manager 2007 client (sometimes referred to as the ConfigMgr 2007 client) as well.
 
 When you use the SMS 2003 Advanced Client Push Installation method to automatically install the SMS 2003 Advanced Client on computers in the SMS site, you may encounter one or more of the following issues:
 
@@ -55,7 +55,7 @@ In this article, the SMS Advanced Client Push Installation process is divided in
 
 6. If the Client Configuration Manager encounters any errors during this process, the CCR file is renamed to the name of the target client computer and is put in the SMS\Inboxes\Ccrretry.box folder. The Client Configuration Manager checks for files in this inbox folder every 60 minutes and tries to reprocess them 168 times (seven days) before they are discarded. This information is logged in the Ccm.log.
 
-## Troubleshooting pre-installation issues
+## Troubleshoot pre-installation issues
 
 ### Newly discovered client computers aren't assigned to the current site
 
@@ -119,7 +119,7 @@ When this issue occurs, an error code 5 message appears in the Ccm.log file on t
 > [!NOTE]
 > Error code 5 is an Access Denied error.
 
-**Solution**
+**Resolution**
 
 The Advanced Client Push Installation account must have administrative credentials on the computers where you want to install the SMS Advanced Client components.
 
@@ -153,7 +153,7 @@ In this configuration, the SMS Advanced Client network access account resembles 
 
 2. Ccmsetup.exe downloads the client.msi file from the SMSClient\i386 shared folder on the SMS management point or from the Client\i386 folder in the SMS_<*site code*> shared folder on the SMS site server. The Advanced Client Installer runs the Client.msi Setup program by using the parameters that the administrator specifies in the SMS Administrator console.
 
-## Troubleshooting installation issues
+## Troubleshoot installation issues
 
 ### The SMS Advanced Client cannot access the installation file on the SMS site server
 
@@ -164,7 +164,7 @@ To troubleshoot access to this file, check the following logs on the SMS Advance
 - *%windir%*\System32\Ccmsetup\Ccmsetup.log
 - *%windir%*\System32\Ccmsetup\Client.msi.log
 
-**Solution**
+**Resolution**
 
 When you try to troubleshoot a failure condition, you can use the SMS Trace utility (Trace32.exe) to review SMS log data and to locate the following error message:
 
@@ -185,15 +185,15 @@ When the SMS Advanced Client computer cannot access the management point, the Cc
 
 This problem typically occurs when the management point isn't installed or doesn't start correctly.
 
-**Solution**
+**Resolution**
 
-To help troubleshoot this issue, see the [Troubleshooting management point issues](#troubleshooting-management-point-issues) section.
+To help troubleshoot this issue, see the [Troubleshoot management point issues](#troubleshoot-management-point-issues) section.
 
 ### Clients that are deployed by using Capinst.exe aren't installed successfully
 
 When you deploy the Advanced Client by using Capinst.exe, you must make sure that a server locator point (SLP) is available. The SLP returns a list of management points.
 
-**Solution**
+**Resolution**
 
 Install a server locator point, and then make sure that the SLP is published in Active Directory or is registered in the WINS database.
 
@@ -215,7 +215,7 @@ Install a server locator point, and then make sure that the SLP is published in 
 
 Background Intelligent Transfer Service (BITS) installation issues can be difficult to detect if the BITS installation that runs as part of Client.msi is causing the Advanced Client Push Installation to fail. If the BITS installation is not successful, the Advanced Client Push Installation will not be successful.
 
-**Solution**
+**Resolution**
 
 Run the BITS install manually to determine any errors. You can do this by using the following methods:
 
@@ -231,7 +231,7 @@ An SMS 2003 Advanced Client computer may not obtain configuration settings from 
 
 In this case, the Msxml3.dll file may not be registered or is missing.
 
-**Solution**
+**Resolution**
 
 Download the Msxml3.msi file and install it on the computers that require Microsoft XML Parser (MSXML) 3.0 Service Pack 7 (SP7) or later versions to be installed. Installing the Msxml3.msi file also registers the additional DLL files.
 
@@ -245,7 +245,7 @@ Download the Msxml3.msi file and install it on the computers that require Micros
 
 4. When the client uses an SLP lookup or Active Directory lookup to locate the default management point, the client requests the initial policy from the management point.
 
-## Troubleshooting post-installation issues
+## Troubleshoot post-installation issues
 
 ### The SMS Advanced Client is installed successfully, but doesn't appear as installed or assigned
 
@@ -301,7 +301,7 @@ This occurs when one or more of the following conditions are true:
 
 - Heartbeat Discovery has not reported since the client was installed.
 
-  **Solution**
+  **Resolution**
 
   1. Verify that a heartbeat has occurred on the client by reviewing the inventoryagent.log. This log is located in the `%windir%\System32\ccm\logs` folder. You must locate the `Inventory: Action=Discovery ReportType=Full` string.
 
@@ -309,7 +309,7 @@ This occurs when one or more of the following conditions are true:
 
      In the discovery record properties, you can view the discovery method that reported the discovery, and the last time that the discovery process ran. You can review the record to determine whether the issue is a failure to run a discovery property. If the data that is provided by Heartbeat Discovery is current, this issue may occur because of a client assignment issue on the SMS Advanced Client computer. If the correct Heartbeat Discovery data is not present, a communication problem may exist between the client, the management point, the site, and the site database.
 
-  **Troubleshooting Heartbeat Discovery**
+  **Troubleshoot Heartbeat Discovery**
 
   You can use Systems Management to manually initiate a Heartbeat Discovery on the client. To do this, follow these steps:
 
@@ -327,7 +327,7 @@ This occurs when one or more of the following conditions are true:
 
 ### SMS Advanced Client doesn't receive a policy after installation
 
-This issue occurs when the SMS management point is not installed or is not functioning. More information about this issue is available in the [Troubleshooting management point issues](#troubleshooting-management-point-issues) section.
+This issue occurs when the SMS management point is not installed or is not functioning. More information about this issue is available in the [Troubleshoot management point issues](#troubleshoot-management-point-issues) section.
 
 ### SMS Advanced Clients are not installed on secondary sites
 
@@ -345,7 +345,7 @@ This issue occurs when the **Include only clients assigned to this site** option
     > [!NOTE]
     > When you perform the Advanced Client Push Installation method from a secondary site to install the SMS Advanced Client, you must not set the `SMSSITECODE={Secondary Sitecode}` site code, where *Secondary Sitecode* is the secondary site code. If you set the secondary site code in this manner, the SMS Advanced Client is installed to a state where it appears to be assigned and managed by the secondary site.
 
-## Troubleshooting management point issues
+## Troubleshoot management point issues
 
 To help determine whether you are experiencing management point issues, you can have the client computer request a Machine policy from the management point. To request a Machine policy from the management point, follow these steps:
 
@@ -371,8 +371,7 @@ When you enable the Advanced Client Push Installation method, SMS automatically 
 1. Click **Start**, click **Run**, type notepad, and then click **OK**.
 2. In Notepad, type the following two lines:
 
-   [NT Client Configuration Request]  
-   Machine Name= *NetBIOSName*
+   [NT Client Configuration Request] Machine Name=*NetBIOSName*
 
     > [!NOTE]
     > In this example, *NetBIOSName* is the name of the computer where you want to install the SMS Advanced Client.
