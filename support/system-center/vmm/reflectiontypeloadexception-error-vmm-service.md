@@ -33,7 +33,7 @@ In this situation, the VirtualMachineManager\Server\Operational log may contain 
 
 Event XML:
 
-> \<Event xmlns="[http://schemas.microsoft.com/win/2004/08/events/event](https://schemas.microsoft.com/win/2004/08/events/event)">  
+> \<Event xmlns="`https://schemas.microsoft.com/win/2004/08/events/event`">  
 > \<System>  
 > \<~snip~>  
 > \</System>  

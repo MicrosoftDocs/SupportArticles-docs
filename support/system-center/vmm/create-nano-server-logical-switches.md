@@ -50,7 +50,7 @@ If we select other **Teaming mode** as show below e.g. LACP, we will get an erro
 
 > Error (2912)  
 > An internal error has occurred trying to contact the 'nano.hoster.lab' server: : .  
-> WinRM: URL: [http://nano.hoster.lab:5985](http://nano.hoster.lab:5985/), Verb: [INVOKE], Method: [GetFinalResult], Resource: [https://schemas.microsoft.com/wbem/wsman/1/wmi/root/scvmm/AsyncTask?ID=1004](https://schemas.microsoft.com/wbem/wsman/1/wmi/root/scvmm/AsyncTask?ID=1004)  
+> WinRM: URL: `http://nano.hoster.lab:5985/`, Verb: [INVOKE], Method: [GetFinalResult], Resource: `https://schemas.microsoft.com/wbem/wsman/1/wmi/root/scvmm/AsyncTask?ID=1004`
 > Unknown error (0x80078005)
 >
 > Recommended Action  
