@@ -28,6 +28,9 @@ This article discusses how to troubleshoot issues that you may experience when y
 > [!NOTE]
 > The Open with Explorer command doesn't work in the Microsoft Edge browser.
 
+> [!NOTE]
+> The Open with Explorer command is slower and less reliable than [syncing SharePoint files with the new OneDrive sync client](https://support.office.com/article/6de9ede8-5b6e-4503-80b2-6190f3354a88). The OneDrive sync client provides [Files On-Demand](https://support.office.com/article/0e6860d3-d9f3-4971-b321-7092438fb38e), which allows you to access all your files in OneDrive without using local storage space. 
+
 For more information about how to copy or move library files by using "Open with Explorer," go to [Copy or move library files by using Open with Explorer](https://support.office.com/article/copy-or-move-library-files-by-using-open-with-explorer-aaee7bfb-e2a1-42ee-8fc0-bcc0754f04d2?ocmsassetID=HA101811182&CorrelationId=93c20e9a-ab98-496b-8c8a-32ed16406dec).
 
 ## Symptoms

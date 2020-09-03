@@ -149,6 +149,8 @@
       href: ../administration/ews-notification-return-wrong-value-for-unreadcount.md
     - name: Exchange dialog doesn't include Connection tab
       href: ../administration/outlook-exchange-dialog-not-include-connection-tab.md
+    - name: Exchange Server 2010 datacenter switchover
+      href: ../administration/exchange-server-2010-datacenter-switchover.md
     - name: Exchange transaction logs growing rapidly
       href: ../administration/exchange-transaction-logs-grow-rapidly.md
     - name: Extend AD schema to use Hierarchical Address Book
@@ -449,6 +451,8 @@
       href: ../client-connectivity/synchronization-issue-between-outlook-owa.md
     - name: Test-OwaConnectivity and Test-EcpConnectivity tests fail
       href: ../client-connectivity/test-owaconnectivity-and-test-ecpconnectivity-fail.md
+    - name: Troubleshoot ActiveSync issues
+      href: ../client-connectivity/troubleshoot-activesync-with-exchange-server.md
     - name: User culture can't be set
       href: ../client-connectivity/user-culture-cannot-be-set.md
     - name: You've tried to select too many rows error
@@ -601,6 +605,8 @@
       href: ../public-folders/migrationbatch-fails-no-public-folder-mailboxes.md
     - name: Public folder migration stops at 95%
       href: ../public-folders/public-folder-migration-fails.md
+    - name: Troubleshoot public folder replication issues
+      href: ../public-folders/troubleshoot-public-folder-replication.md
   - name: Setup
     items:
     - name: "\"Organization Preparation FAILED\" error"
