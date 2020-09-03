@@ -78,13 +78,13 @@ Select **yes** on the pop-up box to start it.
 
 Since you were able to create/start the migration batch, you may run into one of the below error messages. To see what errors you are running into, you can download the error report by logging into the account that you started the migration batch with. Look for an email with a subject of **E-mail migration batch "Batch name" has finished - with errors**. You can download the error report by selecting **Click here to download the error report**.
 
-- [A recipient wasn't found for user@contoso.com on the target...](#a-recipient-wasnt-found-for-usercontosocom-on-the-target)
+- [A recipient wasn't found for user@contoso.com on the target...](#a-recipient-wasnt-found)
 - [We had trouble signing in to this account...](#we-had-trouble-signing-in-to-this-account-error)
 - [I'm seeing duplicate emails](#im-seeing-duplicate-emails)
 - [This mailbox is full...](#this-mailbox-is-full)
 - [My problem is none of the above](#my-problem-is-none-of-the-above-errors)
 
-### A recipient wasn't found for user@contoso.com on the target
+### <a id="a-recipient-wasnt-found"></a> A recipient wasn't found for user@contoso.com on the target
 
 If you run into the below error, create a mailbox in Office 365 with the specified proxy address and retry creating/starting the batch. To create a new mailbox in Office 365, follow the steps in [Create user mailboxes in Exchange Online](/exchange/recipients-in-exchange-online/create-user-mailboxes).
 
@@ -93,9 +93,9 @@ A recipient wasn't found for `user@contoso.com` on the target. Create a recipien
 **Did this solve your problem?**
 
 - If yes, congratulations! Your scenario is complete.
-- If no, see [A recipient wasn't found for user@contoso.com on the target](#a-recipient-wasnt-found-for-usercontosocom-on-the-target-if-issue-isnt-resolved)
+- If no, see [A recipient wasn't found for user@contoso.com on the target](#a-recipient-wasnt-found-if-issue-isnt-resolved)
 
-### A recipient wasn't found for user@contoso.com on the target (if issue isn't resolved)
+### <a id="a-recipient-wasnt-found-if-issue-isnt-resolved"></a>A recipient wasn't found for user@contoso.com on the target (if issue isn't resolved)
 
 In the CSV file, you are using for the IMAP migration, verify that the value in the EmailAddress column is correctly entered. It should be one of the proxy addresses on the cloud mailbox that you are trying to migrate the data to.
 
