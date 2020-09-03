@@ -95,7 +95,7 @@ The first thing the client does is set the WSUS server that will be its update s
 
 6. After getting the results from the stored procedure, the management point sends a response to the client. The following is logged in MP_Location.log:
 
-    > MP LM: Reply message body: \<WSUSLocationReply SchemaVersion="1.00">\<Sites>\<Site>\<MPSite SiteCode="PS1"/>\<LocationRecords>\<LocationRecord WSUSURL=`http://PS1SITE.CONTOSO.COM:8530` ServerName="PS1SITE.CONTOSO.COM" Version="38"/>\<LocationRecord WSUSURL="https://PS1SYS.CONTOSO.COM:8531" ServerName="PS1SYS.CONTOSO.COM" Version="38"/>\</LocationRecords>\</Site>\</Sites>\</WSUSLocationReply>
+    > MP LM: Reply message body: \<WSUSLocationReply SchemaVersion="1.00">\<Sites>\<Site>\<MPSite SiteCode="PS1"/>\<LocationRecords>\<LocationRecord WSUSURL="`http://PS1SITE.CONTOSO.COM:8530`" ServerName="PS1SITE.CONTOSO.COM" Version="38"/>\<LocationRecord WSUSURL="`https://PS1SYS.CONTOSO.COM:8531`" ServerName="`PS1SYS.CONTOSO.COM`" Version="38"/>\</LocationRecords>\</Site>\</Sites>\</WSUSLocationReply>
 
 7. CCM Messaging receives the response and sends it back to Location Services. The following are logged in CcmMessaging.log:
 
@@ -107,10 +107,10 @@ The first thing the client does is set the WSUS server that will be its update s
 8. Location Services parses the response and sends the location back to Scan Agent. The following are logged in LocationServices.log:
 
     > Processing Location reply message LocationServices  
-    > WSUSLocationReply : \<WSUSLocationReply SchemaVersion="1.00">\<Sites>\<Site>\<MPSite SiteCode="PS1"/>\<LocationRecords>\<LocationRecord WSUSURL=`http://PS1SITE.CONTOSO.COM:8530` ServerName="PS1SITE.CONTOSO.COM" Version="38"/>\<LocationRecord WSUSURL="https://PS1SYS.CONTOSO.COM:8531" ServerName="PS1SYS.CONTOSO.COM" Version="38"/>\</LocationRecords>\</Site>\</Sites>\</WSUSLocationReply>  
+    > WSUSLocationReply : \<WSUSLocationReply SchemaVersion="1.00">\<Sites>\<Site>\<MPSite SiteCode="PS1"/>\<LocationRecords>\<LocationRecord WSUSURL="`http://PS1SITE.CONTOSO.COM:8530`" ServerName="PS1SITE.CONTOSO.COM" Version="38"/>\<LocationRecord WSUSURL="`https://PS1SYS.CONTOSO.COM:8531`" ServerName="PS1SYS.CONTOSO.COM" Version="38"/>\</LocationRecords>\</Site>\</Sites>\</WSUSLocationReply>  
     > Calling back with the following WSUS locations  
-    > WSUS Path=`http://PS1SITE.CONTOSO.COM:8530`, Server='PS1SITE.CONTOSO.COM', Version='38'  
-    > WSUS Path=`https://PS1SYS.CONTOSO.COM:8531`, Server='PS1SYS.CONTOSO.COM', Version='38'  
+    > WSUS Path='`http://PS1SITE.CONTOSO.COM:8530`', Server='PS1SITE.CONTOSO.COM', Version='38'  
+    > WSUS Path='`https://PS1SYS.CONTOSO.COM:8531`', Server='PS1SYS.CONTOSO.COM', Version='38'  
     > Calling back with locations for WSUS request {*WSUSLocationID*}
 
 9. Scan Agent now has the policy and the update source location with the appropriate content version. The following are logged in ScanAgent.log:

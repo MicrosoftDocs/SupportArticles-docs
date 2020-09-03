@@ -23,7 +23,7 @@ An error similar to the following example will be displayed in the VMM Admin con
 > Error (2915)  
 > The Windows Remote Management (WS-Management) service cannot process the request. The object was not found on the server (host.contoso.com).
 >
-> WinRM: URL: `https://host.contoso.com:5985`, Verb: [GET], Resource: `https://schemas.microsoft.com/wbem/wsman/1/wmi/root/virtualization/v2/Msvm_VirtualSystemSettingData?InstanceID=Microsoft:73F1C285-7765-48F9-9472-9984B3B60336`
+> WinRM: URL: `https://host.contoso.com:5985`, Verb: [GET], Resource: [`https://schemas.microsoft.com/wbem/wsman/1/wmi/root/virtualization/v2/Msvm_VirtualSystemSettingData?InstanceID=Microsoft:73F1C285-7765-48F9-9472-9984B3B60336`]
 >
 > Unknown error (0x80338000)
 >

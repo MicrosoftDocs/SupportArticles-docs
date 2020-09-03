@@ -50,7 +50,7 @@ Additionally, the following entry will be logged in the Installer (MSI) log (`%P
 
 The *Server-SCVMM-001.Contoso.com* server name also appears in a VMM debug log entry that resembles the following:
 
-> WinRM: URL: `http://Servername.Contoso.com:5985`, Verb: [GET], Resource: `http://schemas.microsoft.com/wbem/wsman/1/wmi/root/scvmm/FileInformation?Filename=\\\Server-SCVMM-001.Contoso.com\MSSCVMMLibrary\VHDs\Blank Disk - Small.vhd`
+> WinRM: URL: [`http://Servername.Contoso.com:5985`], Verb: [GET], Resource: [`http://schemas.microsoft.com/wbem/wsman/1/wmi/root/scvmm/FileInformation?Filename=\\\Server-SCVMM-001.Contoso.com\MSSCVMMLibrary\VHDs\Blank Disk - Small.vhd`]
 
 ## Cause
 

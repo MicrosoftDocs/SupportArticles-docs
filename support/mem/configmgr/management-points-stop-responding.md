@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 4468361
 
 ## Symptom
 
-Configuration Manager management points stop responding to client requests. When you use a web browser to connect to the management point list address (`http://<*ServerName*>/sms_mp/.sms_aut?mplist`), you receive this error message:
+Configuration Manager management points stop responding to client requests. When you use a web browser to connect to the management point list address (`http://<ServerName>/sms_mp/.sms_aut?mplist`), you receive this error message:
 
 > HTTP Error 500.19 - Internal Server Error
 
