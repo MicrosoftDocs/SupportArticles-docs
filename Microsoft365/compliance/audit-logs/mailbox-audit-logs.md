@@ -104,7 +104,7 @@ To run the script, follow these steps:
 1. On the **File** menu, click **Save As**.
 1. In the **Save as type** box, click **All File**.
 1. In the **File name** box, type **Run-MailboxAuditLogSearcher.ps1**, and then click **Save**.
-1. Start Windows PowerShell, and then connect to Windows Remote PowerShell.
+1. Start Windows PowerShell, and then connect to [Windows Remote PowerShell](https://docs.microsoft.com/powershell/scripting/learn/remoting/running-remote-commands?view=powershell-7).
 1. Locate the directory in which you saved the script, and then run the script.
 
     ```powershell
