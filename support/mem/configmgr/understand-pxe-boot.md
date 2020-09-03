@@ -391,11 +391,11 @@ Once TSPXE is loaded, it downloads the TS variables using TFTP:
 At this point, TSPXE locates the Management Point (MP) and downloads policy before presenting the user interface for the user to select the optional Task Sequence:
 
 > SMSTS.log  
-> site=RR2, MP=<http://ConfigMgrR2.CONTOSO.COM>, ports: http=80,https=443  
+> site=RR2, MP=<`http://ConfigMgrR2.CONTOSO.COM`>, ports: http=80,https=443  
 > certificates are received from MP.  
 > CLibSMSMessageWinHttpTransport::Send: URL: ConfigMgrR2.CONTOSO.COM:80 CCM_POST /ccm_system/request  
 > Request was successful.  
-> Downloading policy from <http://ConfigMgrR2.CONTOSO.COM>.  
+> Downloading policy from <`http://ConfigMgrR2.CONTOSO.COM`>.  
 > Retrieving Policy Assignments:  
 > Processing Policy Assignment {7898f153-a6de-43e9-98c3-ca5cc61483b0}.  
 > Processing Policy Assignment {fba19677-0e9b-490d-b601-07e247979bd4}.  

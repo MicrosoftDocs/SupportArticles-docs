@@ -95,7 +95,7 @@ The first thing the client does is set the WSUS server that will be its update s
 
 6. After getting the results from the stored procedure, the management point sends a response to the client. The following is logged in MP_Location.log:
 
-    > MP LM: Reply message body: \<WSUSLocationReply SchemaVersion="1.00">\<Sites>\<Site>\<MPSite SiteCode="PS1"/>\<LocationRecords>\<LocationRecord WSUSURL="http://PS1SITE.CONTOSO.COM:8530" ServerName="PS1SITE.CONTOSO.COM" Version="38"/>\<LocationRecord WSUSURL="https://PS1SYS.CONTOSO.COM:8531" ServerName="PS1SYS.CONTOSO.COM" Version="38"/>\</LocationRecords>\</Site>\</Sites>\</WSUSLocationReply>
+    > MP LM: Reply message body: \<WSUSLocationReply SchemaVersion="1.00">\<Sites>\<Site>\<MPSite SiteCode="PS1"/>\<LocationRecords>\<LocationRecord WSUSURL="`http://PS1SITE.CONTOSO.COM:8530`" ServerName="PS1SITE.CONTOSO.COM" Version="38"/>\<LocationRecord WSUSURL="`https://PS1SYS.CONTOSO.COM:8531`" ServerName="`PS1SYS.CONTOSO.COM`" Version="38"/>\</LocationRecords>\</Site>\</Sites>\</WSUSLocationReply>
 
 7. CCM Messaging receives the response and sends it back to Location Services. The following are logged in CcmMessaging.log:
 
@@ -107,24 +107,24 @@ The first thing the client does is set the WSUS server that will be its update s
 8. Location Services parses the response and sends the location back to Scan Agent. The following are logged in LocationServices.log:
 
     > Processing Location reply message LocationServices  
-    > WSUSLocationReply : \<WSUSLocationReply SchemaVersion="1.00">\<Sites>\<Site>\<MPSite SiteCode="PS1"/>\<LocationRecords>\<LocationRecord WSUSURL="http://PS1SITE.CONTOSO.COM:8530" ServerName="PS1SITE.CONTOSO.COM" Version="38"/>\<LocationRecord WSUSURL="https://PS1SYS.CONTOSO.COM:8531" ServerName="PS1SYS.CONTOSO.COM" Version="38"/>\</LocationRecords>\</Site>\</Sites>\</WSUSLocationReply>  
+    > WSUSLocationReply : \<WSUSLocationReply SchemaVersion="1.00">\<Sites>\<Site>\<MPSite SiteCode="PS1"/>\<LocationRecords>\<LocationRecord WSUSURL="`http://PS1SITE.CONTOSO.COM:8530`" ServerName="PS1SITE.CONTOSO.COM" Version="38"/>\<LocationRecord WSUSURL="`https://PS1SYS.CONTOSO.COM:8531`" ServerName="PS1SYS.CONTOSO.COM" Version="38"/>\</LocationRecords>\</Site>\</Sites>\</WSUSLocationReply>  
     > Calling back with the following WSUS locations  
-    > WSUS Path='http://PS1SITE.CONTOSO.COM:8530', Server='PS1SITE.CONTOSO.COM', Version='38'  
-    > WSUS Path='https://PS1SYS.CONTOSO.COM:8531', Server='PS1SYS.CONTOSO.COM', Version='38'  
+    > WSUS Path='`http://PS1SITE.CONTOSO.COM:8530`', Server='PS1SITE.CONTOSO.COM', Version='38'  
+    > WSUS Path='`https://PS1SYS.CONTOSO.COM:8531`', Server='PS1SYS.CONTOSO.COM', Version='38'  
     > Calling back with locations for WSUS request {*WSUSLocationID*}
 
 9. Scan Agent now has the policy and the update source location with the appropriate content version. The following are logged in ScanAgent.log:
 
     > *****WSUSLocationUpdate received for location request guid={*LocationGUID*}  
     > ScanJob({*JobID*}): CScanJob::OnLocationUpdate- Received  
-    > Location=<http://PS1SITE.CONTOSO.COM:8530>, Version=38  
-    > ScanJob({*JobID*}): CScanJob::Execute- Adding UpdateSource={SourceID}, ContentType=2, ContentLocation=<http://PS1SITE.CONTOSO.COM:8530>, ContentVersion=38
+    > Location=<`http://PS1SITE.CONTOSO.COM:8530`>, Version=38  
+    > ScanJob({*JobID*}): CScanJob::Execute- Adding UpdateSource={SourceID}, ContentType=2, ContentLocation=<`http://PS1SITE.CONTOSO.COM:8530`>, ContentVersion=38
 
 10. Scan Agent notifies WUAHandler to add the update source. WUAHandler adds the update source to the registry and initiates a Group Policy refresh (if the client is in domain) to see whether Group Policy overrides the update server that we just added. The following are logged in WUAHandler.log showing a new Update Source being added:
 
     > Its a WSUS Update Source type ({WSUSUpdateSource}), adding it  
     > Its a completely new WSUS Update Source  
-    > Enabling WUA Managed server policy to use server: <http://PS1SITE.CONTOSO.COM:8530>
+    > Enabling WUA Managed server policy to use server: <`http://PS1SITE.CONTOSO.COM:8530`>
     > Policy refresh forced  
     > Waiting for 2 mins for Group Policy to notify of WUA policy change  
     > Waiting for 30 secs for policy to take effect on WU Agent.  
@@ -132,16 +132,16 @@ The first thing the client does is set the WSUS server that will be its update s
 
     During this time, the Windows Update Agent sees a WSUS configuration change. The following are logged in WindowsUpdate.log:
 
-    > \* WSUS server: <http://PS1SITE.CONTOSO.COM:8530> (Changed)  
-    > \* WSUS status server: <http://PS1SITE.CONTOSO.COM:8530> (Changed)  
+    > \* WSUS server: <`http://PS1SITE.CONTOSO.COM:8530`> (Changed)  
+    > \* WSUS status server: <`http://PS1SITE.CONTOSO.COM:8530`> (Changed)  
     > Sus server changed through policy.
 
     The following registry keys are checked and set:
 
     |Registry subkey|Value name|Type|Data|
     |---|---|---|---|
-    |`HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\WindowsUpdate`|WUServer|REG_SZ|The full WSUS server URL including the port. For example, *<http://PS1Site.Contoso.com:8530>*|
-    |`HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\WindowsUpdate`|WUStatusServer|REG_SZ|The full WSUS server URL including the port. For example, *<http://PS1Site.Contoso.com:8530>*|
+    |`HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\WindowsUpdate`|WUServer|REG_SZ|The full WSUS server URL including the port. For example, *<`http://PS1Site.Contoso.com:8530`>*|
+    |`HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\WindowsUpdate`|WUStatusServer|REG_SZ|The full WSUS server URL including the port. For example, *<`http://PS1Site.Contoso.com:8530`>*|
     |`HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\WindowsUpdate\AU`|UseWUServer|REG_DWORD|0x1|
 
     For an existing client, we could expect to see the following in WUAHandler.log to denote when content version has incremented:
@@ -199,7 +199,7 @@ Your best source of information will come from the logs and the error codes they
 Windows Update Agent starts a scan after receiving a request from the Configuration Manager client (CcmExec). If these registry values are correctly set to a WSUS computer that is a valid SUP for the site through a local policy, you should see a COM API search request from the Configuration Manager client (ClientId = CcmExec) as the following in WindowsUpdate.log:
 
 > COMAPI -- START -- COMAPI: Search [ClientId = CcmExec]  
-> COMAPI <<-- SUBMITTED -- COMAPI: Search [ClientId = CcmExec] PT + ServiceId = {*ServiceID*}, Server URL = <http://PS1.CONTOSO.COM:8530/ClientWebService/client.asmx>  
+> COMAPI <<-- SUBMITTED -- COMAPI: Search [ClientId = CcmExec] PT + ServiceId = {*ServiceID*}, Server URL = <`http://PS1.CONTOSO.COM:8530/ClientWebService/client.asmx`>  
 > Agent \** START ** Agent: Finding updates [CallerId = CcmExec]  
 > Agent * Include potentially superseded updates  
 > Agent * Online = Yes; Ignore download priority = Yes  
@@ -207,7 +207,7 @@ Windows Update Agent starts a scan after receiving a request from the Configurat
 > Agent * ServiceID = {*ServiceID*} Managed  
 > Agent * Search Scope = {Machine}
 
-> PT + ServiceId = {ServiceID}, Server URL = <http://PS1.CONTOSO.COM:8530/ClientWebService/client.asmx>  
+> PT + ServiceId = {ServiceID}, Server URL = <`http://PS1.CONTOSO.COM:8530/ClientWebService/client.asmx`>  
 > Agent \* Added update {4AE85C00-0EAA-4BE0-B81B-DBD7053D5FAE}.104 to search result  
 > Agent \* Added update {57260DFE-227C-45E3-9FFC-2FC77A67F95A}.104 to search result  
 > Agent * Found 163 updates and 70 categories in search; evaluated appl. rules of 622 out of 1150 deployed entities  
@@ -246,13 +246,13 @@ During a scan, the Windows Update Agent needs to communicate with the `ClientWeb
 
      If an Active Directory Group Policy setting is applied to computers for software update point client installation, this overrides the local Group Policy setting. Because of this, if the value of the setting that's defined in the Active Directory Group Policy is different from the one that's being set by Configuration Manager, the scan will fail on the client because it cannot locate the correct WSUS computer. In this case, WUAHandler.log will show the following:
 
-     > Group policy settings were overwritten by a higher authority (Domain Controller) to: Server <http://server> and Policy ENABLED
+     > Group policy settings were overwritten by a higher authority (Domain Controller) to: Server <`http://server`> and Policy ENABLED
 
-     The software update point for client installation and software updates must be the same server and must be specified in the Active Directory Group Policy setting with the correct name format and port information. For example, this would be *<http://server1.contoso.com:80>* if the software update point was using the default website.
+     The software update point for client installation and software updates must be the same server and must be specified in the Active Directory Group Policy setting with the correct name format and port information. For example, this would be *<`http://server1.contoso.com:80`>* if the software update point was using the default website.
 
   2. Assuming the server URL is correct, access the server using a URL similar to the following to verify connectivity between the client and the WSUS computer:
 
-        <http://SUPSERVER.CONTOSO.COM:8530/Selfupdate/wuident.cab>
+        <`http://SUPSERVER.CONTOSO.COM:8530/Selfupdate/wuident.cab`>
 
         To check whether the client can access the `ClientWebService` virtual directory, try accessing a URL similar to this:
 
@@ -260,7 +260,7 @@ During a scan, the Windows Update Agent needs to communicate with the `ClientWeb
 
         To check whether the client can access the `SimpleAuthWebService`, try accessing a URL similar to this:
 
-        <http://SUPSERVER.CONTOSO.COM:8530/SimpleAuthWebService/SimpleAuth.asmx>
+        <`http://SUPSERVER.CONTOSO.COM:8530/SimpleAuthWebService/SimpleAuth.asmx`>
 
         If any of these URLs fail, some of the possible reasons include:
 

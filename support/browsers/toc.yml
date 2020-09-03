@@ -27,9 +27,6 @@
     - name: How to disable password caching
       href: disable-password-caching.md
 
-    - name: IEAK 9 supported languages
-      href: ieak-9-supported-languages.md
-
     - name: Non-secure content can't be displayed
       href: only-secure-content-is-displayed-message.md
 

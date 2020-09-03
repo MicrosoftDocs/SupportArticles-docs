@@ -131,25 +131,25 @@ After the deployment and the deployment policy have been created on the server, 
     This is also noted in LocationServices.log:
 
     > Created filter for LS request {C56C01F2-2388-4710-BF3B-A526DB40E35F}.   LocationServices  
-    > ContentLocationReply : \<ContentLocationReply SchemaVersion="1.00">\<ContentInfo PackageFlags="0">\<ContentHashValues/>\</ContentInfo>\<Sites>\<Site>\<MPSite SiteCode="PR1" MasterSiteCode="PR1" SiteLocality="LOCAL" IISPreferedPort="80" IISSSLPreferedPort="443"/>\<LocationRecords>\<LocationRecord>\<URL Name="<http://PR1SITE.CONTOSO.COM/SMS_DP_SMSPKG$/fbb5724a-aa0f-47f9-908a-47068fd8ad6f>" Signature="<http://PR1SITE.CONTOSO.COM/SMS_DP_SMSSIG$/fbb5724a-aa0f-47f9-908a-47068fd8ad6f.1.tar>"/>\<ADSite Name="Default-First-Site-Name"/>\<IPSubnets>\<IPSubnet Address="192.168.10.0"/>\<IPSubnet Address=""/>\</IPSubnets>\<Metric Value=""/>\<Version>7958\</Version>\<Capabilities SchemaVersion="1.0">\<Property Name="SSLState" Value="0"/>\</Capabilities>\<ServerRemoteName>PR1SITE.CONTOSO.COM\</ServerRemoteName>\<DPType>SERVER\</DPType>\<Windows Trust="1"/>\<Locality>LOCAL\</Locality>\</LocationRecord>\</LocationRecords>\</Site>\</Sites>\<RelatedContentIDs/>\</ContentLocationReply>   LocationServices  
-    > Distribution Point='<http://PR1SITE.CONTOSO.COM/SMS_DP_SMSPKG$/fbb5724a-aa0f-47f9-908a-47068fd8ad6f>', Locality='LOCAL', DPType='SERVER', Version='7958', Capabilities='\<Capabilities SchemaVersion="1.0">\<Property Name="SSLState" Value="0"/>\</Capabilities>', Signature='<http://PR1SITE.CONTOSO.COM/SMS_DP_SMSSIG$/fbb5724a-aa0f-47f9-908a-47068fd8ad6f.1.tar>', ForestTrust='TRUE',   LocationServices  
+    > ContentLocationReply : \<ContentLocationReply SchemaVersion="1.00">\<ContentInfo PackageFlags="0">\<ContentHashValues/>\</ContentInfo>\<Sites>\<Site>\<MPSite SiteCode="PR1" MasterSiteCode="PR1" SiteLocality="LOCAL" IISPreferedPort="80" IISSSLPreferedPort="443"/>\<LocationRecords>\<LocationRecord>\<URL Name="<`http://PR1SITE.CONTOSO.COM/SMS_DP_SMSPKG$/fbb5724a-aa0f-47f9-908a-47068fd8ad6f`>" Signature="<`http://PR1SITE.CONTOSO.COM/SMS_DP_SMSSIG$/fbb5724a-aa0f-47f9-908a-47068fd8ad6f.1.tar`>"/>\<ADSite Name="Default-First-Site-Name"/>\<IPSubnets>\<IPSubnet Address="192.168.10.0"/>\<IPSubnet Address=""/>\</IPSubnets>\<Metric Value=""/>\<Version>7958\</Version>\<Capabilities SchemaVersion="1.0">\<Property Name="SSLState" Value="0"/>\</Capabilities>\<ServerRemoteName>PR1SITE.CONTOSO.COM\</ServerRemoteName>\<DPType>SERVER\</DPType>\<Windows Trust="1"/>\<Locality>LOCAL\</Locality>\</LocationRecord>\</LocationRecords>\</Site>\</Sites>\<RelatedContentIDs/>\</ContentLocationReply>   LocationServices  
+    > Distribution Point='<`http://PR1SITE.CONTOSO.COM/SMS_DP_SMSPKG$/fbb5724a-aa0f-47f9-908a-47068fd8ad6f`>', Locality='LOCAL', DPType='SERVER', Version='7958', Capabilities='\<Capabilities SchemaVersion="1.0">\<Property Name="SSLState" Value="0"/>\</Capabilities>', Signature='<`http://PR1SITE.CONTOSO.COM/SMS_DP_SMSSIG$/fbb5724a-aa0f-47f9-908a-47068fd8ad6f.1.tar`>', ForestTrust='TRUE',   LocationServices  
     > Calling back with locations for location request {C56C01F2-2388-4710-BF3B-A526DB40E35F}   LocationServices
 
     Content Transfer Manager receives the distribution point location for the requested content and starts a Data Transfer Service job to initiate the download of the update. We see this in ContentTransferManager.log:
 
     > CCTMJob::UpdateLocations({E0452CF4-5B04-4A1A-B8EB-10B11B063249})   ContentTransferManager  
     > CTM_NotifyLocationUpdate   ContentTransferManager  
-    > Persisted location '<http://PR1SITE.CONTOSO.COM/SMS_DP_SMSPKG$/fbb5724a-aa0f-47f9-908a-47068fd8ad6f>', Order 0, for CTM job {E0452CF4-5B04-4A1A-B8EB-10B11B063249}   ContentTransferManager  
+    > Persisted location '<`http://PR1SITE.CONTOSO.COM/SMS_DP_SMSPKG$/fbb5724a-aa0f-47f9-908a-47068fd8ad6f`>', Order 0, for CTM job {E0452CF4-5B04-4A1A-B8EB-10B11B063249}   ContentTransferManager  
     > Persisted locations for CTM job {E0452CF4-5B04-4A1A-B8EB-10B11B063249}:  
-    > (LOCAL) <http://PR1SITE.CONTOSO.COM/SMS_DP_SMSPKG$/fbb5724a-aa0f-47f9-908a-47068fd8ad6f>   ContentTransferManager  
-    > CTM job {E0452CF4-5B04-4A1A-B8EB-10B11B063249} (corresponding DTS job {594E9A72-43D1-48D1-A639-D18DF7D286A2}) started download from 'http://PR1SITE.CONTOSO.COM/SMS_DP_SMSPKG$/fbb5724a-aa0f-47f9-908a-47068fd8ad6f' for full content download.   ContentTransferManager  
+    > (LOCAL) '<`http://PR1SITE.CONTOSO.COM/SMS_DP_SMSPKG$/fbb5724a-aa0f-47f9-908a-47068fd8ad6f`>'   ContentTransferManager  
+    > CTM job {E0452CF4-5B04-4A1A-B8EB-10B11B063249} (corresponding DTS job {594E9A72-43D1-48D1-A639-D18DF7D286A2}) started download from '`http://PR1SITE.CONTOSO.COM/SMS_DP_SMSPKG$/fbb5724a-aa0f-47f9-908a-47068fd8ad6f`' for full content download.   ContentTransferManager  
     > CCTMJob::EvaluateState(JobID={E0452CF4-5B04-4A1A-B8EB-10B11B063249}, State=DownloadingData)    ContentTransferManager  
     > CTM job {E0452CF4-5B04-4A1A-B8EB-10B11B063249} entered phase CCM_DOWNLOADSTATUS_DOWNLOADING_DATA    ContentTransferManager
 
     In CAS.log:
 
     > Location update from CTM for content fbb5724a-aa0f-47f9-908a-47068fd8ad6f.1 and request {856FA4CA-D02A-4E2C-841E-841ED3C7EC01} ContentAccess  
-    > Download location found 0 - <http://PR1SITE.CONTOSO.COM/SMS_DP_SMSPKG$/fbb5724a-aa0f-47f9-908a-47068fd8ad6f> ContentAccess  
+    > Download location found 0 - <`http://PR1SITE.CONTOSO.COM/SMS_DP_SMSPKG$/fbb5724a-aa0f-47f9-908a-47068fd8ad6f`> ContentAccess  
     > Download request only, ignoring location update ContentAccess  
     > Download started for content fbb5724a-aa0f-47f9-908a-47068fd8ad6f.1 ContentAccess
 

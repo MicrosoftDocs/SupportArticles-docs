@@ -422,7 +422,7 @@ _Original KB number:_ &nbsp; 3041345
 |830|DPM cannot read the service <*ServiceName*> configuration.|On <*ServerName*>, review the recent errors in the Windows event log.|
 |832|Setup cannot grant the <*UserName*> account access to the DPM database.|Verify that SQL Server is properly installed and that it is running.|
 |833|Setup could not delete the <*UserName*> user account.|To delete the <*UserName*> user account, on the **Administrative Tools** menu, select **Computer Management**, expand **Local Users and Groups**, and then select **Users**. Right-click <*UserName*>, and then select **Delete**.|
-|834|Setup cannot remove the deployed reports.|To delete the reports manually, go to http:// <*ComputerName*>/ReportServer$<*InstanceName*>.|
+|834|Setup cannot remove the deployed reports.|To delete the reports manually, go to `http://<ComputerName>/ReportServer$<InstanceName>`.|
 |836|The DPM repair failed.|Verify that the DPM server meets the software requirements. Uninstall DPM, and then run DPM Setup again.|
 |841|Setup cannot calculate the disk space for the specified location.|Specify a different installation location.|
 |842|Setup cannot access the <*RegistryKey*> registry key for the <*SqlInstance*> instance of SQL Server.|Verify that SQL Server 2008 is properly installed.|
