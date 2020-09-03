@@ -14,8 +14,6 @@ ms.reviewer: markstan
 _Original product version:_ &nbsp; Azure Backup  
 _Original KB number:_ &nbsp; 3037569
 
-## Summary
-
 The Microsoft Azure Recovery Services (ASR) troubleshooter collects and analyzes data from Microsoft ASR Branch to Azure scenarios. For ASR scenarios that use VMM, use the [VMM troubleshooter](https://support.microsoft.com/help/2642023) instead.
 
 ## More information
