@@ -100,7 +100,7 @@ Windows Server 2016 Standard is not available in the Azure Marketplace.
 
 Windows Server 2003 and later versions are supported for deployment in Microsoft Azure.  Click [here](https://support.microsoft.com/help/3206074) to see more information about running Windows Server 2003 on Azure.
 
-For versions that are earlier than Windows Server 2008 R2, there is no Azure Marketplace support, and customers must provide their own images. The ability to deploy an operating system on Microsoft Azure is independent of the support status of the operating system. Microsoft does not support operating systems that are past their [End of Support date](/lifecycle/search) without a Custom Support Agreement (CSA). For example, Windows Server 2003/2003 R2 is no longer supported without a CSA.
+For versions that are earlier than Windows Server 2008 R2, there is no Azure Marketplace support, and customers must provide their own images. The ability to deploy an operating system on Microsoft Azure is independent of the support status of the operating system. Microsoft does not support operating systems that are past their [End of Support date](https://support.microsoft.com/lifecycle/search) without a Custom Support Agreement (CSA). For example, Windows Server 2003/2003 R2 is no longer supported without a CSA.
 
 Windows Server 2008 R2 and later versions are supported for the following roles unless explicitly noted otherwise (this list will be updated as new roles are confirmed):
 

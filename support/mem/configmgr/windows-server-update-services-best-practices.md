@@ -109,7 +109,7 @@ Your certificate should have the short server name, FQDN, and SAN names (aliases
 
 After you have the certificate installed, you have to upgrade the Group Policy (or Client Configuration settings for software updates in Configuration Manager) to use the address and SSL port of the WSUS server. This is typically 8531 or 443.
 
-For example, configure GPO **Specify intranet Microsoft update service location** to <https://wsus.contoso.com:8531>.
+For example, configure GPO **Specify intranet Microsoft update service location** to <`https://wsus.contoso.com:8531`>.
 
 To get started, see [Secure WSUS with the Secure Sockets Layer Protocol](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol).
 

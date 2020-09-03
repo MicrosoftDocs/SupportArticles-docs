@@ -85,13 +85,13 @@ First, find the URL of the WSUS computer by checking the following registry key:
 `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate`
 
 Try to access the URL to verify connectivity between the client and the WSUS computer. For example, the URL you use should resemble the following:  
-<http://SUPSERVER.CONTOSO.COM:8530/Selfupdate/wuident.cab>
+<`http://SUPSERVER.CONTOSO.COM:8530/Selfupdate/wuident.cab`>
 
 Then check whether the client can access the ClientWebService virtual directory. The URL for this should resemble the following:  
-<http://SUPSERVER.CONTOSO.COM:8530/ClientWebService/wusserverversion.xml>
+<`http://SUPSERVER.CONTOSO.COM:8530/ClientWebService/wusserverversion.xml`>
 
 Finally, check whether the client can access the SimpleAuthWebService virtual directory. The URL for this should resemble the following:  
-<http://SUPSERVER.CONTOSO.COM:8530/SimpleAuthWebService/SimpleAuth.asmx>
+<`http://SUPSERVER.CONTOSO.COM:8530/SimpleAuthWebService/SimpleAuth.asmx`>
 
 If these tests are successful, review the IIS logs on the WSUS computer to confirm that the HTTP errors are being returned from WSUS. If the WSUS computer is not returning the error, the issue is probably with an intermediate firewall or proxy.
 
@@ -185,9 +185,9 @@ The Software Updates feature automatically configures a local Group Policy setti
 
 However, if an Active Directory Group Policy setting is applied to computers for software update point client installation, this overrides the local Group Policy setting. Unless the value of the setting that's defined in Group Policy is identical to the one that's being set by Configuration Manager (server name and port), the Configuration Manager software update scan will fail on the client. In this case, the WUAHandler.log file shows the following:
 
-> Group policy settings were overwritten by a higher authority (Domain Controller) to: Server <http://server> and Policy ENABLED
+> Group policy settings were overwritten by a higher authority (Domain Controller) to: Server <`http://server`> and Policy ENABLED
 
-To resolve this issue, the software update point for client installation and software updates must be specified in the Active Directory Group Policy setting by using the correct name format and port information. For example, this if the software update point was using the default website, the software update point would be *<http://server1.contoso.com:80>*.
+To resolve this issue, the software update point for client installation and software updates must be specified in the Active Directory Group Policy setting by using the correct name format and port information. For example, this if the software update point was using the default website, the software update point would be *<`http://server1.contoso.com:80`>*.
 
 ## Other things to check
 

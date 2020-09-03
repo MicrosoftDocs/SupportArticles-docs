@@ -82,7 +82,7 @@ To fix web service issues, do the following:
 - Verify that the **Update Services** service is running on the WSUS server.
 - Verify that the default website or WSUS administration website is running on the WSUS server.
 - Check the port settings configured for the software update point and verify that they are the same as the port settings configured for the web site used by WSUS running on the software update point
-- Check the status of the **WsusPool Application Pool** and the **Private Memory Limit (KB)** for the application pool. For more information, see [WSUS sync fails with HTTP 503 errors](https://blogs.technet.microsoft.com/configurationmgr/2015/03/23/configmgr-2012-support-tip-wsus-sync-fails-with-http-503-errors/).
+- Check the status of the **WsusPool Application Pool** and the **Private Memory Limit (KB)** for the application pool.
 
 ## Synchronization fails due to SSL issues
 

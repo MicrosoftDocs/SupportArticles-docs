@@ -40,7 +40,7 @@ On the Hyper-V host, review the vmmAgent.msi_date_time.log file that's located i
 
 ## Step 2: Check the current WinHTTP proxy configuration
 
-If WinHTTP is configured to use a proxy server (`netsh winhttp set proxy`), the attempts by VMM to communicate with managed servers through a fully qualified URL (for example, [http://server.contoso.com:5986](https://server.contoso.com:5986)) may fail unless **Bypass proxy server for local address** is defined to exclude FQDN host addresses. In this situation, error 2916 is returned. By using \<local> alone, you'll bypass all short-name hosts. VMM uses FDQN.
+If WinHTTP is configured to use a proxy server (`netsh winhttp set proxy`), the attempts by VMM to communicate with managed servers through a fully qualified URL (for example, `https://server.contoso.com:5986` may fail unless **Bypass proxy server for local address** is defined to exclude FQDN host addresses. In this situation, error 2916 is returned. By using \<local> alone, you'll bypass all short-name hosts. VMM uses FDQN.
 
 To check the current WinHTTP proxy configuration, run the `netsh winhttp show proxy` command. Additionally, the bypass list must be updated to include the domain name for hosts that are being added. For example, \**.contoso.com* will bypass the proxy for all hosts that end with *contoso.com*.
 

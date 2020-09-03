@@ -28,24 +28,24 @@ When the failure occurs, the **Monitoring** view in the DPM console contains ale
 Affected area: Sharepoint Farm\MOSS\SharePoint\SharePoint_Config_0952a7dc-acec-4f1d-94b5-98b1b7738136  
 Occurred since: \<*date/time*>  
 Description: The job to recover SharePoint Farm SharePoint Farm\MOSS\SharePoint\SharePoint_Config_0952a7dc-acec-4f1d-94b5-98b1b7738136 to MOSS.contoso.com, that started at Thursday, March 07, 2013 12:34:54 PM, failed using optimized ILR. Another job using unoptimized ILR has been triggered. (ID 33330)  
-DPM was unable to export the item *[http://moss/default.aspx](https://moss/default.aspx)* from the content database MOSS\SHAREPOINT\WSS_Content. Exception Message = Source Url is Absent. (ID 32017 Details: Internal error code: 0x80990E14)  
+DPM was unable to export the item *`https://moss/default.aspx`* from the content database MOSS\SHAREPOINT\WSS_Content. Exception Message = Source Url is Absent. (ID 32017 Details: Internal error code: 0x80990E14)  
 >
 > Critical:  
 Affected area: SharePoint Farm\MOSS\SharePoint\SharePoint_Config_0952a7dc-acec-4f1d-94b5-98b1b7738136  
 Occurred since: \<*date/time*>  
 Description: The recovery jobs for SharePoint Farm SharePoint Farm\MOSS\SharePoint\SharePoint_Config_0952a7dc-acec-4f1d-94b5-98b1b7738136 that started at Thursday, March 07, 2013 12:38:33 PM, with the destination of MOSS.contoso.com, have completed. Most or all jobs failed to recover the requested data. (ID 3111)  
-DPM was unable to export the item [http://moss/default.aspx](https://moss/default.aspx) from the content database MOSS\SHAREPOINT\WSS_Content. Exception Message = \<nativehr>0x80004003\</nativehr>\<nativestack>\</nativestack>. (ID 32017 Details: Invalid pointer (0x80004003))  
+DPM was unable to export the item `https://moss/default.aspx` from the content database MOSS\SHAREPOINT\WSS_Content. Exception Message = \<nativehr>0x80004003\</nativehr>\<nativestack>\</nativestack>. (ID 32017 Details: Invalid pointer (0x80004003))  
 
 The WssCmdletsWrapper.errlog file on the DPM agent contains messages that are similar to the following:
 
-> WSSCmdlets.cs(419) NORMAL Triggering Export of Source Url = [http://moss/default.aspx](https://moss/default.aspx) to File = C:\stagetools\DPM_ed2d3980_977e_4dbb_af3e_e1ec5738c0e9\cmp\  
-WssExportHelper.cs(128) NORMAL Export Parameters:- SourceUrl = [[http://moss/default.aspx](https://moss/default.aspx)], ExportFilePath = [C:\stagetools\DPM_ed2d3980_977e_4dbb_af3e_e1ec5738c0e9\cmp], ExportFileName = [], RoType = [ListItem], IsAlternateUrl = [False]  
+> WSSCmdlets.cs(419) NORMAL Triggering Export of Source Url = `https://moss/default.aspx` to File = C:\stagetools\DPM_ed2d3980_977e_4dbb_af3e_e1ec5738c0e9\cmp\  
+WssExportHelper.cs(128) NORMAL Export Parameters:- SourceUrl = `https://moss/default.aspx`, ExportFilePath = [C:\stagetools\DPM_ed2d3980_977e_4dbb_af3e_e1ec5738c0e9\cmp], ExportFileName = [], RoType = [ListItem], IsAlternateUrl = [False]  
 WssExportHelper.cs(134) NORMAL Export Parameters:- Unattached Database:: [MOSS\SharePoint\DPM_ed2d3980_977e_4dbb_af3e_e1ec5738c0e9]  
-WssExportHelper.cs(310) NORMAL Source url: [[http://moss/default.aspx](https://moss/default.aspx)], HostHeaderIsSiteName = False  
-WSSObjectModelHelper.cs(103) NORMAL Modified Source Url = [http://moss:3268/default.aspx](https://moss:3268/default.aspx)  
-WssExportHelper.cs(355) NORMAL Triggering Export of ListItem = [http://moss:3268/default.aspx](https://moss:3268/default.aspx)  
-WssExportHelper.cs(494) WARNING The specified Folder Url [[http://moss:3268/](https://moss:3268/)] is absent in the database  
-WSSCmdlets.cs(451) WARNING Caught Exception while trying to export Url [[http://moss/default.aspx](https://moss/default.aspx)] to File [C:\stagetools\DPM_ed2d3980_977e_4dbb_af3e_e1ec5738c0e9\cmp\\].  
+WssExportHelper.cs(310) NORMAL Source url: `https://moss/default.aspx`, HostHeaderIsSiteName = False  
+WSSObjectModelHelper.cs(103) NORMAL Modified Source Url = `https://moss:3268/default.aspx`  
+WssExportHelper.cs(355) NORMAL Triggering Export of ListItem = `https://moss:3268/default.aspx`  
+WssExportHelper.cs(494) WARNING The specified Folder Url `https://moss:3268/` is absent in the database  
+WSSCmdlets.cs(451) WARNING Caught Exception while trying to export Url `https://moss/default.aspx` to File [C:\stagetools\DPM_ed2d3980_977e_4dbb_af3e_e1ec5738c0e9\cmp\\].  
 WSSCmdlets.cs(1269) WARNING --------------------------------------------------  
 WSSCmdlets.cs(1270) WARNING Exception Message =  
 WSSCmdlets.cs(1270) WARNING Source Url is Absent  

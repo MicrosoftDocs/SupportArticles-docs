@@ -35,8 +35,7 @@ Description:
 Windows Process Activation Service (WAS) is stopping because it encountered an error.  
 The data field contains the error number.
 Event Xml:
-<Event xmlns="[https://schemas.microsoft.com/win/2004/08/events/event]
-(https://schemas.microsoft.com/win/2004/08/events/event)">
+<Event xmlns="`https://schemas.microsoft.com/win/2004/08/events/event`">
 <System>
 <Provider Name="Microsoft-Windows-WAS" Guid="{524B5D04-133C-4A62-8362-64E8EDB9CE40}"
 EventSourceName="WAS" />
@@ -77,8 +76,7 @@ To resolve this issue, please ensure that the applicationhost.config file is cor
 and recommit the last configuration changes made.
 The data field contains the error number.
 Event Xml:
-<Event xmlns="[https://schemas.microsoft.com/win/2004/08/events/event]
-(https://schemas.microsoft.com/win/2004/08/events/event)">
+<Event xmlns="`https://schemas.microsoft.com/win/2004/08/events/event`">
 <System>
 <Provider Name="Microsoft-Windows-WAS" Guid="
 {524B5D04-133C-4A62-8362-64E8EDB9CE40}" EventSourceName="WAS" />

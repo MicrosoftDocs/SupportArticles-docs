@@ -25,9 +25,9 @@ or
 
 Error messages that resemble the following are logged in the SMS_Cloud_ProxyConnector.log file:
 
-> Forwarding proxy message \<message ID> to URL: https://InternalMP.contoso.com/SMS_MP/.sms_aut?SITESIGNCERT  
+> Forwarding proxy message \<message ID> to URL: `https://InternalMP.contoso.com/SMS_MP/.sms_aut?SITESIGNCERT`  
 > Web exception for message \<message ID>: System.Net.WebException: **The remote server returned an error: (403) Forbidden**.~~  at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)~~  at Microsoft.ConfigurationManager.CloudConnection.ProxyConnector.ConnectionBase.InternalResponseCallBack(IAsyncResult asynchronousResult)  
-> Received response https://InternalMP.contoso.com/SMS_MP/.sms_aut?MPLIST2&CM1 for message \<message ID>: HTTP/1.1 **403 CMGConnector_Clientcertificaterequired**
+> Received response `https://InternalMP.contoso.com/SMS_MP/.sms_aut?MPLIST2&CM1` for message \<message ID>: HTTP/1.1 **403 CMGConnector_Clientcertificaterequired**
 
 ## Cause
 
