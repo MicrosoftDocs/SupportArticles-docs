@@ -77,7 +77,7 @@ For more information, see [Azure AD Connect sync: Configure filtering](https://d
 
 To recover an item that was deleted from the on-premises Active Directory schema, try the following methods:
 
-- Try to restore the deleted item from the Active Directory recycle bin. To do this, see [Active Directory Recycle Bin Step-by-Step Guide](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd392261(v=ws.10)?redirectedfrom=MSDN).
+- Try to restore the deleted item from the Active Directory recycle bin. To do this, see [Active Directory Recycle Bin Step-by-Step Guide](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd392261(v=ws.10)?redirectedfrom=MSDN).
 
     > [!NOTE]
     > - The Active Directory recycle bin is available only by having the functional level of Windows 2008 R2 or later versions.
@@ -153,7 +153,7 @@ To recover an item that was deleted from the on-premises Active Directory schema
 
 - Make sure that only the user objects that you want to restore are marked as authoritative. Active Directory objects that are marked as authoritative in the restore process may cause many Active Directory service issues.
 
-    For more information about how to run an authoritative restore of Active Directory objects, see [Performing an Authoritative Restore of Active Directory Objects](http://technet.microsoft.com/library/cc779573(ws.10).aspx).
+    For more information about how to run an authoritative restore of Active Directory objects, see [Performing an Authoritative Restore of Active Directory Objects](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc779573(v=ws.10)).
 
 - After you restore the object by using any Resolution 3 method, the object may not have all service attributes (such as Exchange Online and Skype for Business Online) automatically restored. 
 

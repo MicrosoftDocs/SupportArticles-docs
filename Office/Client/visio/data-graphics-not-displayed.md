@@ -59,7 +59,7 @@ To work around this behavior, follow these steps:
 1.	For Office 2010, you can download and install the latest service pack through Windows Update or at the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=39667).
 2.	For Office 2007, we recommended that you download and install the latest service pack (SP3) through Windows Update.
 
-# More information
+## More information
 
 You can apply data graphics to shapes in a drawing to show data about the shapes. For more information about how to work with data graphics in Visio 2007, select **Microsoft Office Visio Help** on the **Help** menu, type **data graphics** in the **Type words to search for** box, and then select **Search** to view a list of relevant topics.
 

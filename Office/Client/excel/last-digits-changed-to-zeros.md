@@ -40,7 +40,7 @@ To prevents digits from being changed to zero, type a single quotation mark befo
 
 To do this, select a blank cell, type a single quotation mark ('), and then enter the number. All digits are displayed in the cell. 
 
-:::image type="content" source="./media/last-digits-changed-to-zeros/example.png" alt-text="example":::
+:::image type="content" source="./media/last-digits-changed-to-zeros/example.png" alt-text="Type a single quotation mark and enter the number.":::
 
 ### Format the cells
 

@@ -89,6 +89,4 @@ The process was interrupted while it was deleting the original file or renaming 
 In this case, your original file is deleted (although the temporary file may be readable). If your computer or workstation failed, use the temporary file. If the interruption was caused by something else, the version of the file that contains your current changes is still open in memory. Save the file to an alternative drive.
 
 
-## More information
-
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
