@@ -315,7 +315,7 @@ To determine this, see the command example in the following screenshot.
 
 :::image type="content" source="media/outlook-or-owa-cannot-connect-to-public-folders/command-example-3.jpg" alt-text="command example 3":::
 
-- [Yes](#smtp-(soft)-matching)
+- [Yes](#smtp-soft-matching)
 - [No](#is-a-valid-x500-address-stamped-on-the-on-premises-user)
 
 ### SMTP (soft) matching

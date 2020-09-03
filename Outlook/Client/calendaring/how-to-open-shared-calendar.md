@@ -63,7 +63,7 @@ We'll begin by asking you questions about the Outlook version you are using and 
 - [Outlook on the web](#open-a-shared-calendar-in-outlook-on-the-web)
 - [Outlook Web App](#open-a-shared-calendar-in-outlook-web-app)
 - [Outlook App on mobile/tablet devices](#workaround-for-opening-shared-calendar-on-mobiletablet-devices)
-- [Outlook mobile apps for iOS & Android](#open-a-shared-calendar-in-outlook-mobile-apps-for-ios-android)
+- [Outlook mobile apps for iOS & Android](#open-a-shared-calendar-in-outlook-mobile-apps-for-ios--android)
 
 ### Don't know which version of Outlook you are running
 

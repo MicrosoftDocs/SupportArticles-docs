@@ -43,7 +43,7 @@ Not sure which Microsoft 365 plan your organization uses? Go to [http://portal.m
 |![Small Business plan](./media/create-and-manage-resource-mailboxes/small-business-plan.png)|![Enterprise, Midsize or Education plan](./media/create-and-manage-resource-mailboxes/enterprise-midsize-education-plan.png)|
 
 - [Small Business](#use-the-exchange-admin-center-eac-to-create-and-manage-resource-mailboxes)
-- [Enterprise | Midsize | Education](#use-the-exchange-admin-center-eac-to-create-and-manage-resource-mailboxes-(for-enterprise,-midsize,-or-education))
+- [Enterprise | Midsize | Education](#use-the-exchange-admin-center-eac-to-create-and-manage-resource-mailboxes-for-enterprise-midsize-or-education)
 
 ### Use the Exchange Admin Center (EAC) to create and manage resource mailboxes
 

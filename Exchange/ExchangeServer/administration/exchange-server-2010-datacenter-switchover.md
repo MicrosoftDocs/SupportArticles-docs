@@ -60,14 +60,14 @@ Is the primary datacenter online or physically accessible?
 Do the remote and primary datacenters have network connectivity?
 
 - If yes, see [Exchange Servers Online](#exchange-servers-online-if-remote-and-primary-datacenters-have-network-connectivity).
-- If no, see [Exchange Servers Online](#exchange-servers-online-if-remote-and-primary-datacenters-don't-have-network-connectivity).
+- If no, see [Exchange Servers Online](#exchange-servers-online-if-remote-and-primary-datacenters-dont-have-network-connectivity).
 
 ### Exchange Servers Online (if remote and primary datacenters have network connectivity)
 
 Are the Exchange servers in the primary datacenter online?
 
 - If yes, see [DAG Extended](#dag-extended-if-exchange-servers-are-in-primary-datacenter-online).
-- If no, see [DAG Extended](#dag-extended-if-exchange-servers-aren't-in-primary-datacenter-online).
+- If no, see [DAG Extended](#dag-extended-if-exchange-servers-arent-in-primary-datacenter-online).
 
 ### DAG Extended (if Exchange servers are in primary datacenter online)
 
@@ -351,7 +351,7 @@ Cluster node /forcecleanup.
 Is your DAG extended to multiple Active Directory sites?
 
 - If yes, see [Run the Stop-DatabaseAvailabilityGroup cmdlet in the shell](#run-stop-databaseavailabilitygroup-in-the-shell-dag-is-extended-to-multiple-ad-sites).
-- If no, see [Run the Stop-DatabaseAvailabilityGroup cmdlet in the shell](#run-stop-databaseavailabilitygroup-if-dag-isn't-extended-to-multiple-ad-sites).
+- If no, see [Run the Stop-DatabaseAvailabilityGroup cmdlet in the shell](#run-stop-databaseavailabilitygroup-if-dag-isnt-extended-to-multiple-ad-sites).
 
 ### Run Stop-DatabaseAvailabilityGroup if DAG is extended to AD sites
 
@@ -622,7 +622,7 @@ Verify the Startup Type again.
 Is your DAG extended to multiple Active Directory sites?
 
 - If yes, see [Start-DatabaseAvailabilityGroup](#start-databaseavailabilitygroup-if-dag-is-extended-to-multiple-ad-sites).
-- If no, see [Start-DatabaseAvailabilityGroup](#start-databaseavailabilitygroup-if-dag-isn't-extended-to-multiple-ad-sites).
+- If no, see [Start-DatabaseAvailabilityGroup](#start-databaseavailabilitygroup-if-dag-isnt-extended-to-multiple-ad-sites).
 
 ### Start-DatabaseAvailabilityGroup (if DAG is extended to multiple AD sites)
 

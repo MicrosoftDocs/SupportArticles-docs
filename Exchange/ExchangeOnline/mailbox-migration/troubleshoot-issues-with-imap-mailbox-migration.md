@@ -67,7 +67,7 @@ If you have an existing batch, and it's not started, you can highlight the batch
 
 Select **yes** on the pop-up box to start it.
 
-:::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/warning.png" alt-text="warning" border="false":::
+:::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/warning.png" alt-text="warning text" border="false":::
 
 **Were you able to successfully create and/or start the batch?**
 
@@ -78,9 +78,9 @@ Select **yes** on the pop-up box to start it.
 
 Since you were able to create/start the migration batch, you may run into one of the below error messages. To see what errors you are running into, you can download the error report by logging into the account that you started the migration batch with. Look for an email with a subject of **E-mail migration batch "Batch name" has finished - with errors**. You can download the error report by selecting **Click here to download the error report**.
 
-- [A recipient wasn't found for user@contoso.com on the target...](#a-recipient-wasn't-found-for-usercontoso.com-on-the-target)
+- [A recipient wasn't found for user@contoso.com on the target...](#a-recipient-wasnt-found-for-usercontoso.com-on-the-target)
 - [We had trouble signing in to this account...](#we-had-trouble-signing-in-to-this-account-error)
-- [I'm seeing duplicate emails](#i'm-seeing-duplicate-emails)
+- [I'm seeing duplicate emails](#im-seeing-duplicate-emails)
 - [This mailbox is full...](#this-mailbox-is-full)
 - [My problem is none of the above](#my-problem-is-none-of-the-above-errors)
 
@@ -93,7 +93,7 @@ A recipient wasn't found for `user@contoso.com` on the target. Create a recipien
 **Did this solve your problem?**
 
 - If yes, congratulations! Your scenario is complete.
-- If no, see [A recipient wasn't found for user@contoso.com on the target](#a-recipient-wasn't-found-for-usercontoso.com-on-the-target-if-issue-isn't-resolved)
+- If no, see [A recipient wasn't found for user@contoso.com on the target](#a-recipient-wasnt-found-for-usercontoso.com-on-the-target-if-issue-isnt-resolved)
 
 ### A recipient wasn't found for user@contoso.com on the target (if issue isn't resolved)
 
@@ -331,7 +331,7 @@ Be aware of the following restrictions that apply to IMAP migrations:
 **Did this solve your problem?**
 
 - If yes, congratulations! Your scenario is complete.
-- If no, see [My problem is none of the above](#my-problem-is-none-of-the-above-if-issue-isn't-resolved).
+- If no, see [My problem is none of the above](#my-problem-is-none-of-the-above-if-issue-isnt-resolved).
 
 ### My problem is none of the above (if issue isn't resolved)
 
@@ -459,7 +459,7 @@ If you are migrating from an Exchange server, launch the Services application (*
 **Did this solve your problem?**
 
 - If yes, congratulations! Your scenario is complete.
-- If no, see [The connection to the server Servername.contoso.com timed out](#the-connection-to-the-server-servername.contoso.com-timed-out-if-issue-not-resolved).
+- If no, see [The connection to the server Servername.contoso.com timed out](#the-connection-to-the-server-servernamecontoso.com-timed-out-if-issue-not-resolved).
 
 ### The connection to the server Servername.contoso.com timed out (if issue not resolved)
 
@@ -506,7 +506,7 @@ If you are creating the IMAP migration batch, and you have no existing IMAP endp
 5. Select **Choose file**, select the CSV file for the migration, and select **next**.
 6. Enter the publically resolvable FQDN of the IMAP server as shown below and continue with creating the migration batch.
 
-   :::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/enter-fqdn-of-imap-server.png" alt-text="Enter FQDN of the IMAP server":::
+   :::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/enter-fqdn-of-imap-server.png" alt-text="Enter FQDN of the IMAP server 1":::
 
 If you are creating an IMAP migration endpoint, follow the below steps to specify the appropriate public FQDN:
 
@@ -517,7 +517,7 @@ If you are creating an IMAP migration endpoint, follow the below steps to specif
 5. Select **IMAP** and select **next**.
 6. Enter the publically resolvable FQDN of the IMAP server as shown below and continue with creating the migration endpoint.
 
-   :::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/enter-fqdn-of-imap-server-2.png" alt-text="Enter FQDN of the IMAP server":::
+   :::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/enter-fqdn-of-imap-server-2.png" alt-text="Enter FQDN of the IMAP server 2":::
 
 If you are creating the IMAP migration batch, and have an existing IMAP endpoint, follow the below steps to determine what the public FQDN of the IMAP server is:
 
@@ -527,7 +527,7 @@ If you are creating the IMAP migration batch, and have an existing IMAP endpoint
 4. Select on the appropriate IMAP migration endpoint.
 5. You will see the FQDN of the IMAP server. If it is incorrect, or no longer publically resolvable, you will need to either remove and recreate the IMAP migration endpoint with an FQDN that is publicly resolvable or you will need to create a host (A) record that resolves the FQDN of your existing IMAP migration endpoint to the public IP of the IMAP server.
 
-    :::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/find-fqdn-of-imap-server.png" alt-text="Enter FQDN of the IMAP server":::
+    :::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/find-fqdn-of-imap-server.png" alt-text="Enter FQDN of the IMAP server 3":::
 
 **Did this solve your problem?**
 
@@ -543,7 +543,7 @@ During the creation of the IMAP migration batch, while browsing for the CSV file
 
 Select the appropriate option below for possible solutions.
 
-- [Upload file can't be empty](#upload-file-can't-be-empty)
+- [Upload file can't be empty](#upload-file-cant-be-empty)
 - [The CSV file contains more than 50,000 rows](#the-csv-file-contains-more-than-50000-rows)
 - [Column \<Column name> is missing from the CSV file](#column-is-missing-from-the-csv-file)
 - [Row X has the wrong number of columns](#row-x-has-the-wrong-number-of-columns)
@@ -671,7 +671,7 @@ If you're migrating email from an on-premises Microsoft Exchange server, we reco
 **Did this solve your problem?**
 
 - If yes, congratulations! Your scenario is complete.
-- If no, see [My migration is slow](#my-migration-is-slow-if-issue-isn't-resolved).
+- If no, see [My migration is slow](#my-migration-is-slow-if-issue-isnt-resolved).
 
 ### My migration is slow (if issue isn't resolved)
 

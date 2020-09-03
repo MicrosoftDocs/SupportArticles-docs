@@ -41,8 +41,8 @@ Select the option that best describes the issue that you are facing:
 > [!NOTE]
 > If you want to review how free/busy works in a hybrid deployment, select the **I want to better understand how Hybrid Free/Busy is supposed to work** option.
 
-- [My Cloud user cannot see Free/busy for an on-premises user](##does-freebusy-work-on-premises)
-- [My On-premises user cannot see Free/busy for a cloud user](#on-premises-user-can't-see-cloud-user's-freebusy)
+- [My Cloud user cannot see Free/busy for an on-premises user](#does-freebusy-work-on-premises)
+- [My On-premises user cannot see Free/busy for a cloud user](#on-premises-user-cant-see-cloud-users-freebusy)
 - [I want to see some common tools for troubleshooting Free/busy issues](#tools-and-resources)
 - [I want to better understand how Hybrid Free/Busy is supposed to work](#on-premises-exchange-server-version-in-your-environment)
 
@@ -50,7 +50,7 @@ Select the option that best describes the issue that you are facing:
 
 To better understand how Hybrid Free/Busy is supposed to work, review the following flowcharts. Select the version of the on-premises Exchange server that matches your environment:
 
-- [Exchange 2010/2013](#the-exchange-2010/2013-freebusy-workflow)
+- [Exchange 2010/2013](#the-exchange-20102013-freebusy-workflow)
 - [Exchange 2007](#the-exchange-2007-freebusy-workflow)
 - [Exchange 2003](#exchange-2003-freebusy-workflow)
 
@@ -93,7 +93,7 @@ Sign in to an on-premises user's mailbox and then try to view the Free/Busy for 
 
 Were you able to see the Free/busy information?
 
-- If yes, see [Cloud user cannot see On-premises user's Free/Busy](#cloud-user-can't-see-on-premises-user's-freebusy).
+- If yes, see [Cloud user cannot see On-premises user's Free/Busy](#cloud-user-cant-see-on-premises-users-freebusy).
 - If no, see [You have an on-premises free/busy issue](#you-have-an-on-premises-freebusy-issue).
 
 ### You have an on-premises free/busy issue
@@ -125,7 +125,7 @@ If the Exchange connectivity tests fail for autodiscover, check the on-premises 
 **Did this solve your issue?**
 
 - If yes, congratulations, your issue is resolved!
-- If no, see [Cloud user cannot see On-premises user's Free/Busy](#cloud-user-cannot-see-on-premises-user's-freebusy-(if-issue-not-resolved)).
+- If no, see [Cloud user cannot see On-premises user's Free/Busy](#cloud-user-cannot-see-on-premises-users-freebusy-if-issue-not-resolved).
 
 ### Cloud user cannot see On-premises user's Free/Busy (if issue isn't resolved)
 
@@ -145,7 +145,7 @@ If you do not see any entry for Autodiscover in your on-premises Exchange hybrid
 **Did this solve your issue?**
 
 - If yes, congratulations, your issue is resolved!
-- If no, see [Cloud user cannot see On-premises user's Free/Busy](#cloud-user-cannot-see-on-premises-user's-freebusy-(if-issue-still-not-resolved)).
+- If no, see [Cloud user cannot see On-premises user's Free/Busy](#cloud-user-cannot-see-on-premises-users-freebusy-if-issue-still-not-resolved).
 
 ### Cloud user cannot see On-premises user's Free/Busy (if issue not resolved)
 
@@ -170,7 +170,7 @@ To verify the domain name value in the Organization Relationship, follow these s
  **Did this solve your issue?**
 
 - If yes, congratulations, your issue is resolved!
-- If no, see [Cloud user cannot see On-premises user's Free/Busy](#cloud-user-cannot-see-on-premises-user's-freebusy-if-issue-isn't-resolved).
+- If no, see [Cloud user cannot see On-premises user's Free/Busy](#cloud-user-cannot-see-on-premises-users-freebusy-if-issue-isnt-resolved).
 
 ### Cloud user can't see On-premises user's Free/Busy (if issue can't be solved)
 
@@ -189,7 +189,7 @@ If the IIS is missing the svc-Integrated handler mapping, see ["Exception has be
 **Did this solve your issue?**
 
 - If yes, congratulations, your issue is resolved!
-- If no, see [Cloud user cannot see On-premises user's Free/Busy](#cloud-user-cannot-see-on-premises-user's-freebusy-should-verify-org-relationship-settings).
+- If no, see [Cloud user cannot see On-premises user's Free/Busy](#cloud-user-cannot-see-on-premises-users-freebusy-should-verify-org-relationship-settings).
 
 ### Cloud user cannot see On-premises user's Free/Busy (if issue is still not solved)
 
@@ -210,7 +210,7 @@ Follow these steps to verify if EWS has External URL set:
 **Did this solve your issue?**
 
 - If yes, congratulations, your issue is resolved!
-- If no, see [Cloud user cannot see On-premises user's Free/Busy](#cloud-user-can't-see-on-premises-user's-freebusy-if-issue-is-still-not-solved).
+- If no, see [Cloud user cannot see On-premises user's Free/Busy](#cloud-user-cant-see-on-premises-users-freebusy-if-issue-is-still-not-solved).
 
 ### Cloud user cannot see On-premises user's Free/Busy (if issue still not resolved)
 
@@ -229,7 +229,7 @@ Check IIS logs on the Exchange 2010/2013 CAS server(s) to confirm that Web Servi
 **Did this solve your issue?**
 
 - If yes, congratulations, your issue is resolved!
-- If no, see [Cloud user cannot see On-premises user's Free/Busy](#cloud-user-cannot-see-on-premises-user's-freebusy-if-issue-is-still-not-solved).
+- If no, see [Cloud user cannot see On-premises user's Free/Busy](#cloud-user-cannot-see-on-premises-users-freebusy-if-issue-is-still-not-solved).
 
 ### Cloud user can't see On-premises user's Free/Busy (if issue isn't solved)
 
@@ -248,7 +248,7 @@ Determine whether Internet Information Services (IIS) configuration is missing t
 **Did this solve your issue?**
 
 - IF yes, congratulations, your issue is resolved!
-- If no, see [Cloud user can't see On-premises user's Free/Busy](#cloud-user-can't-see-on-premises-user's-freebusy-if-issue-can't-be-solved).
+- If no, see [Cloud user can't see On-premises user's Free/Busy](#cloud-user-cant-see-on-premises-users-freebusy-if-issue-cant-be-solved).
 
 ### Cloud user can't see On-premises user's Free/Busy (if issue is still not solved)
 
@@ -269,7 +269,7 @@ Set-WebServicesVirtualDirectory -Identity "ServerName\EWS (Default Web Site)" -W
 **Did this solve your issue?**
 
 - If yes, congratulations, your issue is resolved!
-- If no, see [Cloud user can't see On-premises user's Free/Busy](#cloud-user-can't-see-on-premises-user's-freebusy-if-issue-isn't-solved).
+- If no, see [Cloud user can't see On-premises user's Free/Busy](#cloud-user-cant-see-on-premises-users-freebusy-if-issue-isnt-solved).
 
 ### Cloud user cannot see On-premises user's Free/Busy (should verify Org Relationship settings)
 
@@ -321,10 +321,10 @@ If a value must be changed, use the `set-OrganizationRelationship` cmdlet to fix
 
 On which version of Exchange is the on-premises users' mailbox located?
 
-- [Exchange 2003](#your-exchange-2003-user-cannot-see-cloud-user's-free/busy)
-- [Exchange 2007](#your-exchange-2007-user-cannot-access-cloud-user's-free/busy)
-- [Exchange 2010](#exchange-2010/2013-user-cannot-see-cloud-user's-free/busy)
-- [Exchange 2013](#exchange-2010/2013-user-cannot-see-cloud-user's-free/busy)
+- [Exchange 2003](#your-exchange-2003-user-cannot-see-cloud-users-freebusy)
+- [Exchange 2007](#your-exchange-2007-user-cannot-access-cloud-users-freebusy)
+- [Exchange 2010](#exchange-20102013-user-cannot-see-cloud-users-freebusy)
+- [Exchange 2013](#exchange-20102013-user-cannot-see-cloud-users-freebusy)
 
 ### Your Exchange 2003 user cannot see cloud user's free/busy
 
@@ -334,8 +334,8 @@ Can you reproduce the issue by using an on-premises Exchange 2010 mailbox?
 2. Create a new meeting request and add a cloud user to the meeting request.
 3. When you view the scheduling assistant do you see hash marks for the cloud user?
 
-- If yes, see [On-premises user cannot see cloud user's Free/busy](#on-premises-user-cannot-see-cloud-user's-freebusy).
-- If no, see [Your Exchange 2003 user cannot see cloud user's free/busy](#your-exchange-2003-user-cannot-see-cloud-user's-freebusy-(can't-reproduce)).
+- If yes, see [On-premises user cannot see cloud user's Free/busy](#on-premises-user-cannot-see-cloud-users-freebusy).
+- If no, see [Your Exchange 2003 user cannot see cloud user's free/busy](#your-exchange-2003-user-cannot-see-cloud-users-freebusy-cant-reproduce).
 
 ### Your Exchange 2003 user cannot see cloud user's free/busy (if issue not solved)
 
@@ -378,7 +378,7 @@ Add the OU=EXTERNAL (FYDIBOHF25SPDLT) public folder. To do this, follow these st
 **Did this solve your issue?**
 
 - If yes, congratulations, your issue is resolved!
-- If no, see [Your Exchange 2003 user cannot see cloud user's free/busy](#your-exchange-2003-user-cannot-see-cloud-user's-freebusy-(if-issue-not-resolved)).
+- If no, see [Your Exchange 2003 user cannot see cloud user's free/busy](#your-exchange-2003-user-cannot-see-cloud-users-freebusy-if-issue-not-resolved).
 
 ### Your Exchange 2003 user cannot see cloud user's free/busy (if issue not resolved)
 
@@ -401,7 +401,7 @@ Every cloud mailbox will have a corresponding on-premises Mail enabled object. F
 **Did this solve your issue?**
 
 - If yes, congratulations, your issue is resolved!
-- If no, see [Your Exchange 2003 user cannot see cloud user's free/busy](#your-exchange-2003-user-cannot-see-cloud-user's-freebusy-if-issue-isn't-resolved).
+- If no, see [Your Exchange 2003 user cannot see cloud user's free/busy](#your-exchange-2003-user-cannot-see-cloud-users-freebusy-if-issue-isnt-resolved).
 
 ### Your Exchange 2003 user cannot see cloud user's free/busy (if issue isn't resolved)
 
@@ -424,7 +424,7 @@ To use the Exchange 2010 Public Folder Management Console to change the client p
 **Did this solve your issue?**
 
 - If yes, congratulations, your issue is resolved!
-- If no, see [Your Exchange 2003 user cannot see cloud user's free/busy](#your-exchange-2003-user-cannot-see-cloud-user's-freebusy-if-issue-is-still-not-solved).
+- If no, see [Your Exchange 2003 user cannot see cloud user's free/busy](#your-exchange-2003-user-cannot-see-cloud-users-freebusy-if-issue-is-still-not-solved).
 
 ### Your Exchange 2003 user cannot see cloud user's free/busy (if issue is still not solved)
 
@@ -448,7 +448,7 @@ Use one of the following options:
 **Did this solve your issue?**
 
 - If yes, congratulations, your issue is resolved!
-- If no, see [Your Exchange 2003 user cannot access cloud user's free/busy](#your-exchange-2003-user-cannot-see-cloud-user's-freebusy-if-issue-not-solved).
+- If no, see [Your Exchange 2003 user cannot access cloud user's free/busy](#your-exchange-2003-user-cannot-see-cloud-users-freebusy-if-issue-not-solved).
 
 ### Your Exchange 2007 user cannot access cloud user's free/busy
 
@@ -458,8 +458,8 @@ Can you repro with an on-premises Exchange 2010 or 2013 mailbox?
 2. Create a new meeting request and add a cloud user to the meeting request.
 3. When you view the scheduling assistant do you see hash marks for the cloud user?
 
-- If yes, see [Exchange 2010/2013 user cannot see cloud user's free/busy](#exchange-2010/2013-user-cannot-see-cloud-user's-freebusy-error-code-5037).
-- If no, see [Your Exchange 2007 user can't access cloud user's free/busy](#your-exchange-2007-user-can't-access-cloud-user's-freebusy).
+- If yes, see [Exchange 2010/2013 user cannot see cloud user's free/busy](#exchange-20102013-user-cannot-see-cloud-users-freebusy-error-code-5037).
+- If no, see [Your Exchange 2007 user can't access cloud user's free/busy](#your-exchange-2007-user-cant-access-cloud-users-freebusy).
 
 ### Your Exchange 2007 user can't access cloud user's free/busy
 
@@ -499,8 +499,8 @@ Sign in to an on-premises user's mailbox and then try to view the Free/Busy for 
 
 Were you able to see the Free/busy information?
 
-- If yes, see [On-premises user cannot see cloud user's Free/busy](#on-premises-user-cannot-see-cloud-user's-freebusy).
-- If no, see [On-premises Free/busy is not working for 2010/2013](#on-premises-freebusy-is-not-working-for-2010/2013).
+- If yes, see [On-premises user cannot see cloud user's Free/busy](#on-premises-user-cannot-see-cloud-users-freebusy).
+- If no, see [On-premises Free/busy is not working for 2010/2013](#on-premises-freebusy-is-not-working-for-20102013).
 
 ### On-premises user cannot see cloud user's Free/busy
 
@@ -514,9 +514,9 @@ Determine what error message you are receiving from OWA.
 
 Select the appropriate error message in the following list to help narrow the troubleshooting steps that you must follow:
 
-- [The attendee's server couldn't be found. For more information, please contact your helpdesk. (Error Code: 5039)](#exchange-2010/2013-user-cannot-see-cloud-user's-freebusy-error-code-5039).
-- [The attendee's server couldn't be contacted. (Error Code: 5016)](#exchange-2010/2013-user-cannot-see-cloud-user's-freebusy-error-code-5016).
-- [You don't have permission to see free/busy information for this attendee. (Error code 5037)](#exchange-2010/2013-user-cannot-see-cloud-user's-freebusy-error-code-5037).
+- [The attendee's server couldn't be found. For more information, please contact your helpdesk. (Error Code: 5039)](#exchange-20102013-user-cannot-see-cloud-users-freebusy-error-code-5039).
+- [The attendee's server couldn't be contacted. (Error Code: 5016)](#exchange-20102013-user-cannot-see-cloud-users-freebusy-error-code-5016).
+- [You don't have permission to see free/busy information for this attendee. (Error code 5037)](#exchange-20102013-user-cannot-see-cloud-users-freebusy-error-code-5037).
 
 ### Exchange 2010/2013 user cannot see cloud user's free/busy (Error Code 5039)
 
@@ -539,7 +539,7 @@ Set-ExchangeServer -InternetWebProxy http://192.168.5.56:8080
 **Did this solve your issue?**
 
 - If yes, congratulations, your issue is resolved!
-- If no, see [Exchange 2010/2013 user cannot see cloud user's free/busy](#exchange-2010/2013-user-cannot-see-cloud-user's-freebusy-if-issue-not-resolved).
+- If no, see [Exchange 2010/2013 user cannot see cloud user's free/busy](#exchange-20102013-user-cannot-see-cloud-users-freebusy-if-issue-not-resolved).
 
 ### Exchange 2010/2013 user cannot see cloud user's free/busy (if issue not resolved)
 
@@ -576,7 +576,7 @@ To verify that the remote routing address is set, follow these steps:
 **Did this solve your issue?**
 
 - If yes, congratulations, your issue is resolved!
-- If no, see [Exchange 2010/2013 user cannot see cloud user's free/busy](#exchange-2010/2013-user-cannot-see-cloud-user's-freebusy-error-code-5039).
+- If no, see [Exchange 2010/2013 user cannot see cloud user's free/busy](#exchange-20102013-user-cannot-see-cloud-users-freebusy-error-code-5039).
 
 ### Exchange 2010/2013 user cannot see cloud user's free/busy (Error code 5037)
 
@@ -623,7 +623,7 @@ If a value must be changed, use the `set-OrganizationRelationship` cmdlet to fix
 **Did this solve your issue?**
 
 - If yes, congratulations, your issue is resolved!
-- If no, see [Exchange 2010/2013 user cannot see cloud user's free/busy](#exchange-2010/2013-user-cannot-see-cloud-user's-freebusy-if-issue-isn't-solved).
+- If no, see [Exchange 2010/2013 user cannot see cloud user's free/busy](#exchange-20102013-user-cannot-see-cloud-users-freebusy-if-issue-isnt-solved).
 
 ### Exchange 2010/2013 user cannot see cloud user's free/busy (if issue isn't solved)
 
@@ -640,7 +640,7 @@ From the on-premises environment, verify that you can retrieve a delegation toke
 **Did this solve your issue?**
 
 - If yes, congratulations, your issue is resolved!
-- If no, see [Exchange 2010/2013 user cannot see cloud user's free/busy](#exchange-2010/2013-user-cannot-see-cloud-user's-freebusy-error-code-5016).
+- If no, see [Exchange 2010/2013 user cannot see cloud user's free/busy](#exchange-20102013-user-cannot-see-cloud-users-freebusy-error-code-5016).
 
 ### On-premises Free/busy is not working for 2010/2013
 

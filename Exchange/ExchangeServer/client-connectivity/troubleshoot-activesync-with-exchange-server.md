@@ -43,7 +43,7 @@ We'll begin by asking you the issue you are facing. Then we'll take you through 
 - [Unable to connect to the server](#determine-impact)
 - [Mail issues](#mail-issues)
 - [Calendaring issues](#calendaring-issues)
-- [Delays on device/CAS performance](#check-for-file-level-anti-virus-delays-on-device/cas-performance)
+- [Delays on device/CAS performance](#check-for-file-level-anti-virus-delays-on-devicecas-performance)
 
 ### Exchange Remote Connectivity Analyzer (can't create a profile on the device)
 
@@ -435,7 +435,7 @@ You attempted to send a message from the device so you should see the request in
 
 **Were there any HTTP errors found in the Fiddler trace?**
 
-- If yes, see [Install Log Parser Studio; Log Parser Studio Query – SendMail; Query Results Analysis](#install-log-parser-studio-log-parser-studio-query-sendmail-query-results-analysis).
+- If yes, see [Install Log Parser Studio; Log Parser Studio Query – SendMail; Query Results Analysis](#install-log-parser-studio-log-parser-studio-query---sendmail-query-results-analysis).
 - If no, see [SendMail Status Code Check](#sendmail-status-code-check).
 
 ### SendMail status code check
@@ -696,7 +696,7 @@ When an HTTP redirect is configured in IIS 7, the redirect setting is inherited 
 **Is a redirect configured for the ActiveSync virtual directory?**
 
 - If yes, see [Modify ActiveSync Virtual Directory HTTP redirect](#modify-activesync-virtual-directory-http-redirect).
-- If no, see [Install Log Parser Studio; Log Parser Studio Query - Count Syncs with SyncKey of Zero Per User](#install-log-parser-studio-log-parser-studio-query-count-syncs-with-synckey-of-zero-per-user).
+- If no, see [Install Log Parser Studio; Log Parser Studio Query - Count Syncs with SyncKey of Zero Per User](#install-log-parser-studio-log-parser-studio-query---count-syncs-with-synckey-of-zero-per-user).
 
 ### Modify ActiveSync Virtual Directory HTTP redirect
 
@@ -712,7 +712,7 @@ To resolve this issue, remove the HTTP redirect from the ActiveSync virtual dire
 **Did removing the HTTP redirect from the ActiveSync virtual directory resolve the issue?**
 
 - If yes, congratulations, your ActiveSync issue is resolved.
-- If no, see [Install Log Parser Studio; Log Parser Studio Query - Count Syncs with SyncKey of Zero Per User](#install-log-parser-studio-log-parser-studio-query-count-syncs-with-synckey-of-zero-per-user).
+- If no, see [Install Log Parser Studio; Log Parser Studio Query - Count Syncs with SyncKey of Zero Per User](#install-log-parser-studio-log-parser-studio-query---count-syncs-with-synckey-of-zero-per-user).
 
 ### ActiveSync enabled mailbox
 
@@ -729,7 +729,7 @@ Verify the mailbox is enabled for ActiveSync. To do this, follow these steps:
 
 **Is the user enabled for ActiveSync?**
 
-- If yes, see [Install Log Parser Studio; Log Parser Studio Query – SendMail; Query Results Analysis](#install-log-parser-studio-log-parser-studio-query-sendmail-query-results-analysis).
+- If yes, see [Install Log Parser Studio; Log Parser Studio Query – SendMail; Query Results Analysis](#install-log-parser-studio-log-parser-studio-query---sendmail-query-results-analysis).
 - If no, [Enable User for ActiveSync](#enable-user-for-activesync).
 
 ### Enable user for ActiveSync
@@ -748,7 +748,7 @@ To resolve this issue, enable the user for ActiveSync. To do this, follow these 
 **Did enabling the mailbox for ActiveSync resolve the issue?**
 
 - If yes, congratulations, your ActiveSync issue is resolved.
-- If no, see [Install Log Parser Studio; Log Parser Studio Query – SendMail; Query Results Analysis](#install-log-parser-studio-log-parser-studio-query-sendmail-query-results-analysis).
+- If no, see [Install Log Parser Studio; Log Parser Studio Query – SendMail; Query Results Analysis](#install-log-parser-studio-log-parser-studio-query---sendmail-query-results-analysis).
 
 ### Exchange ActiveSync protocol document review
 
@@ -842,7 +842,7 @@ To determine if devices are resynchronizing with Exchange, run the Log Parser qu
 
 **Are there any devices with multiple requests using the SyncKey value of 0?**
 
-- If yes, see [Log Parser Studio Query - Device Query](#log-parser-studio-query-device-query-if-using-synckey-value-of-0)
+- If yes, see [Log Parser Studio Query - Device Query](#log-parser-studio-query---device-query-if-using-synckey-value-of-0)
 - If no, see [Log Parser Studio Query - Count all Syncs per SyncKey](#log-parser-studio-query-count-all-syncs-per-synckey).
 
 ### Check for file level anti-virus (delays on device/CAS performance)
@@ -863,14 +863,14 @@ In many cases file-level anti-virus impacts ActiveSync traffic by delaying the p
 **Did disabling the anti-virus kernel mode filter driver resolve the issue?**
 
 - If yes, congratulations, your ActiveSync issue is resolved.
-- If no, see [Prepare for Data Analysis; Log Parser Studio Query - Count Syncs with SyncKey of Zero Per User](#prepare-for-data-analysis-log-parser-studio-query-count-syncs-with-synckey-of-zero-per-user).
+- If no, see [Prepare for Data Analysis; Log Parser Studio Query - Count Syncs with SyncKey of Zero Per User](#prepare-for-data-analysis-log-parser-studio-query---count-syncs-with-synckey-of-zero-per-user).
 
 ### Mail issues
 
 Select the type of mail issue that the ActiveSync client is experiencing.
 
 - [Items are present on only Outlook or the ActiveSync client](#items-present-on-only-one-client).
-- [Unable to open attachments](#install-log-parser-studio-locate-deviceid-for-user-log-parser-studio-query-device-query-query-results-analysis).
+- [Unable to open attachments](#install-log-parser-studio-locate-deviceid-for-user-log-parser-studio-query---device-query-query-results-analysis).
 - [Unable to send a message](#unable-to-send-a-message).
 
 ### Items present on only one client
@@ -982,7 +982,7 @@ ActiveSync device requests do not always reach the destination as desired. To en
 
 We need to determine the ConversationID for the item before we search the mailbox log. To do this, follow these steps:
 
-1. Download and install [MfcMapi](http://mfcmapi.codeplex.com/).
+1. Download and install [MfcMapi](https://mfcmapi.codeplex.com/).
 2. Launch MfcMapi.
 3. Go to the **Session** menu and select **Logon**.
 4. Select the Outlook profile for the mailbox and select **OK**.
@@ -1040,7 +1040,7 @@ To do this, follow these steps:
 **Were you able to locate the item in the mailbox log using the ConversationId?**
 
 - If yes, see [Analyze Mailbox Log for Item; Check the Final Status of the Item](#analyze-mailbox-log-for-item-check-the-final-status-of-the-item).
-- If no, see [Fiddler Trace Analysis for Errors](#fiddler-trace-analysis-for-errors-if-the-result-doesn't-meet-the-expected-state).
+- If no, see [Fiddler Trace Analysis for Errors](#fiddler-trace-analysis-for-errors-if-the-result-doesnt-meet-the-expected-state).
 
 ### Analyze mailbox log for item; Check the final status of the item
 
@@ -1073,7 +1073,7 @@ We verified that one or more actions were taken against the item within the mail
 **Does the result of the final action meet the expected state of the item?**
 
 - If yes, see [Fiddler Trace Analysis for Item; Check the Final Status of the Item](#fiddler-trace-analysis-for-item-check-the-final-status-of-the-item).
-- If no, see [Mailbox Log Analysis for Errors](#mailbox-log-analysis-for-errors-if-final-action-doesn't-meet-the-expected-state).
+- If no, see [Mailbox Log Analysis for Errors](#mailbox-log-analysis-for-errors-if-final-action-doesnt-meet-the-expected-state).
 
 ### Fiddler trace analysis for item; Check the final status of the item
 
@@ -1125,7 +1125,7 @@ We expect the device to send one or more requests to obtain the latest updates f
 
 **Were there any errors found in the Fiddler trace?**
 
-- If yes, see [Install Log Parser Studio; Log Parser Studio Query - Device Query; Query Results Analysis; Re-Sync the Folder](#install-log-parser-studio-log-parser-studio-query-device-query-query-results-analysis-re-sync-the-folder).
+- If yes, see [Install Log Parser Studio; Log Parser Studio Query - Device Query; Query Results Analysis; Re-Sync the Folder](#install-log-parser-studio-log-parser-studio-query---device-query-query-results-analysis-resync-the-folder).
 - If no, sorry, we cannot resolve the issue by using this guide. For more help resolving this issue contact [Microsoft Support](https://support.microsoft.com/). Please have all of the data collected from this troubleshooting available when you contact support.
 
 ### Install Log Parser Studio; Log Parser Studio Query - Device Query; Query results analysis; Resync the folder
@@ -1208,7 +1208,7 @@ The ActiveSync traffic for this item does not result in the item being in the co
 
 **Were there any Status codes that did not equal 1 in the response or any exceptions found in the mailbox log?**
 
-- If yes, see [Install Log Parser Studio; Log Parser Studio Query - Device Query; Query Results Analysis; Re-Sync the Folder](#install-log-parser-studio-log-parser-studio-query-device-query-query-results-analysis-re-sync-the-folder).
+- If yes, see [Install Log Parser Studio; Log Parser Studio Query - Device Query; Query Results Analysis; Re-Sync the Folder](#install-log-parser-studio-log-parser-studio-query---device-query-query-results-analysis-resync-the-folder).
 - If no, see [Fiddler Trace Analysis for Errors](#fiddler-trace-analysis-for-errors-if-the-result-doesnt-meet-the-expected-state).
 
 ### Install Log Parser Studio; Locate DeviceId for User; Log Parser Studio Query - Device query; Query results analysis
@@ -1300,7 +1300,7 @@ To determine if there is an ActiveSync mailbox policy setting causing the Attach
 **Is the MaxAttachmentSize setting set to unlimited?**
 
 - If yes, see [Check Message Size Limits](#check-message-size-limits).
-- If no, see [Modify ActiveSync Mailbox Policy](#modify-activesync-mailbox-policy-if-maxattachmentsize-isn't-unlimited).
+- If no, see [Modify ActiveSync Mailbox Policy](#modify-activesync-mailbox-policy-if-maxattachmentsize-isnt-unlimited).
 
 ### Check message size limits
 
@@ -1508,7 +1508,7 @@ We are going to troubleshoot the issue where a user is unable to send a message 
 Can the user reproduce the issue?
 
 - If yes, see [Enable ActiveSync Mailbox Logging; Capture Fiddler Trace; Mailbox Log Analysis for Errors](#enable-activesync-mailbox-logging-capture-fiddler-trace-mailbox-log-analysis-for-errors).
-- If no, see [Install Log Parser Studio; Log Parser Studio Query - SendMail; Query Results Analysis](#install-log-parser-studio-log-parser-studio-query-sendmail-query-results-analysis-if-no-user-can-reproduce-the-issue).
+- If no, see [Install Log Parser Studio; Log Parser Studio Query - SendMail; Query Results Analysis](#install-log-parser-studio-log-parser-studio-query---sendmail-query-results-analysis-if-no-user-can-reproduce-the-issue).
 
 ### Enable ActiveSync mailbox logging; Capture Fiddler Trace; mailbox log analysis for errors
 
@@ -1567,7 +1567,7 @@ The request from the ActiveSync client to send this message is not successful. W
     > [!NOTE]
     > This sends the ActiveSync mailbox log to the specified email address. Additional information on mailbox logging can be found in [Exchange ActiveSync Mailbox Logging](/archive/blogs/jasonsla/exchange-activesync-mailbox-logging).
 
-3. Download [MailboxLogParser](http://mailboxlogparser.codeplex.com/) and extract the files.
+3. Download [MailboxLogParser](https://mailboxlogparser.codeplex.com/) and extract the files.
 4. Launch the utility by opening **MailboxLogParser.exe**.
 5. Select **Import Mailbox Logs to Grid** to open the mailbox log.
 6. Enter **SendMail** under **Search raw log data for strings** and select **Search**.
@@ -1578,7 +1578,7 @@ The request from the ActiveSync client to send this message is not successful. W
 
 **Were there any errors or exceptions found in the mailbox log?**
 
-- If yes, see [Install Log Parser Studio; Log Parser Studio Query - SendMail; Query Results Analysis](#install-log-parser-studio-log-parser-studio-query-sendmail-query-results-analysis).
+- If yes, see [Install Log Parser Studio; Log Parser Studio Query - SendMail; Query Results Analysis](#install-log-parser-studio-log-parser-studio-query---sendmail-query-results-analysis).
 - If no, see [Fiddler Trace Analysis for Errors](#fiddler-trace-analysis-for-errors-if-no-errors-in-mailbox-log).
 
 ### Fiddler trace analysis for errors (if no errors in mailbox log)
@@ -1599,7 +1599,7 @@ We expect the device to send one or more requests to obtain the latest updates f
 
 **Were there any errors found in the Fiddler trace?**
 
-- If yes, see [Install Log Parser Studio; Log Parser Studio Query - SendMail; Query Results Analysis](#install-log-parser-studio-log-parser-studio-query-sendmail-query-results-analysis).
+- If yes, see [Install Log Parser Studio; Log Parser Studio Query - SendMail; Query Results Analysis](#install-log-parser-studio-log-parser-studio-query---sendmail-query-results-analysis).
 - If no, sorry, we cannot resolve the issue by using this guide. For more help resolving this issue contact [Microsoft Support](https://support.microsoft.com/). Please have all of the data collected from this troubleshooting available when you contact support.
 
 ### Install Log Parser Studio; Log Parser Studio Query - SendMail; Query results analysis (if no user can reproduce the issue)
@@ -1690,7 +1690,7 @@ Before we begin troubleshooting, we need to know if the issue can be reproduced 
 **Can you reproduce the Calendar issue on the device?**
 
 - If yes, see [Enable ActiveSync Mailbox Logging; Capture Fiddler Trace; Locate Appointment within the Mailbox; Search for UID](#enable-activesync-mailbox-logging-capture-fiddler-trace-locate-appointment-within-the-mailbox-search-for-uid).
-- If no, see [Install Log Parser Studio; Log Parser Studio Query - Device Calendar requests; Query Results Analysis; Re-Sync the Calendar Folder](#install-log-parser-studio-log-parser-studio-query-device-calendar-requests-query-results-analysis-re-sync-the-calendar-folder).
+- If no, see [Install Log Parser Studio; Log Parser Studio Query - Device Calendar requests; Query Results Analysis; Re-Sync the Calendar Folder](#install-log-parser-studio-log-parser-studio-query---device-calendar-requests-query-results-analysis-resync-the-calendar-folder).
 
 ### Enable ActiveSync mailbox logging; Capture fiddler trace; Locate appointment within the mailbox; Search for UID
 
@@ -1739,7 +1739,7 @@ ActiveSync device requests do not always reach the destination as desired. To en
 
 We need to determine the UID for the appointment within the mailbox before we search the mailbox log. To do this, follow these steps:
 
-1. Download and install [MfcMapi](http://mfcmapi.codeplex.com/).
+1. Download and install [MfcMapi](https://mfcmapi.codeplex.com/).
 2. Launch MfcMapi.
 3. Go to the **Session** menu and select **Logon**.
 4. Select the Outlook profile for the mailbox and select **OK**.
@@ -1891,7 +1891,7 @@ We expect the device to send one or more requests to obtain the latest updates f
 
 **Were there any errors found in the Fiddler trace for the Calendar requests?**
 
-- If yes, see [Install Log Parser Studio; Log Parser Studio Query - Device Calendar requests; Query Results Analysis; Re-Sync the Calendar Folder](#install-log-parser-studio-log-parser-studio-query-device-calendar-requests-query-results-analysis-re-sync-the-calendar-folder).
+- If yes, see [Install Log Parser Studio; Log Parser Studio Query - Device Calendar requests; Query Results Analysis; Re-Sync the Calendar Folder](#install-log-parser-studio-log-parser-studio-query---device-calendar-requests-query-results-analysis-resync-the-calendar-folder).
 - If no, sorry, we cannot resolve the issue by using this guide. For more help resolving this issue contact [Microsoft Support](https://support.microsoft.com/). Please have all of the data collected from this troubleshooting available when you contact support.
 
 ### Install Log Parser Studio; Log Parser Studio Query - Device Calendar requests; Query results analysis; Resync the Calendar folder
@@ -2003,7 +2003,7 @@ To determine if devices are resynchronizing with Exchange, run the Log Parser qu
 
 **Are there any devices with multiple requests using the SyncKey value of 0?**
 
-- If yes, see [Log Parser Studio Query - Device Query](#log-parser-studio-query-device-query-if-using-synckey-value-of-0).
+- If yes, see [Log Parser Studio Query - Device Query](#log-parser-studio-query---device-query-if-using-synckey-value-of-0).
 - If no, see [Log Parser Studio Query - Count all Syncs per SyncKey](#log-parser-studio-query-count-all-syncs-per-synckey).
 
 ### Log Parser Studio Query - Device Query (if using SyncKey value of 0)
@@ -2202,8 +2202,8 @@ To determine if devices are sending the same SyncKey to Exchange for the same fo
 
 **Are there any devices sending the same SyncKey multiple times for the same folder?**
 
-- If yes, see [Log Parser Studio Query – Device Query](#log-parser-studio-query-device-query-devices-send-same-synckey-multiple-times).
-- If no, see [Log Parser Studio Query - High RPC counts or latency](#log-parser-studio-query-high-rpc-counts-or-latency).
+- If yes, see [Log Parser Studio Query – Device Query](#log-parser-studio-query---device-query-devices-send-same-synckey-multiple-times).
+- If no, see [Log Parser Studio Query - High RPC counts or latency](#log-parser-studio-query---high-rpc-counts-or-latency).
 
 ### Log Parser Studio Query - Device Query (devices send same SyncKey multiple times)
 
@@ -2241,7 +2241,7 @@ To resolve this issue, reprovision the ActiveSync client. To do this, follow the
 **Did reprovisioning the ActiveSync client resolve the issue?**
 
 - If yes, congratulations, your ActiveSync issue is resolved.
-- If no, see [Log Parser Studio Query - High RPC counts or latency](#log-parser-studio-query-high-rpc-counts-or-latency).
+- If no, see [Log Parser Studio Query - High RPC counts or latency](#log-parser-studio-query---high-rpc-counts-or-latency).
 
 ### Review protocol document (Status equals 1)
 
@@ -2266,7 +2266,7 @@ The results also show a Sync command that received a response with a status code
 **Was the issue resolved by addressing the ActiveSync errors?**
 
 - If yes, congratulations, your ActiveSync issue is resolved.
-- If no, see [Log Parser Studio Query - High RPC counts or latency](#log-parser-studio-query-high-rpc-counts-or-latency).
+- If no, see [Log Parser Studio Query - High RPC counts or latency](#log-parser-studio-query---high-rpc-counts-or-latency).
 
 ### Log Parser Studio Query - High RPC counts or latency
 
@@ -2291,7 +2291,7 @@ To determine if ActiveSync requests are causing resource consumption, run the as
 **Are there any requests with high RPC counts or latency?**
 
 - If yes, see [Disable Exchange ActiveSync for User](#disable-exchange-activesync-for-user).
-- If no, see [Log Parser Studio Query - Report [Top 20]; Log Parser Studio Query - Device Query](#log-parser-studio-query-report-top-20-log-parser-studio-query-device-query).
+- If no, see [Log Parser Studio Query - Report [Top 20]; Log Parser Studio Query - Device Query](#log-parser-studio-query---report-top-20-log-parser-studio-query---device-query).
 
 ### Disable Exchange ActiveSync for user
 
@@ -2360,7 +2360,7 @@ To resolve this issue, review the mailbox log after attempting another Sync requ
     ```
 
     > [!NOTE]
-    > This will send the ActiveSync mailbox log to the specified email address for analysis. Additional information on mailbox logging can be found [here](http://blogs.technet.com/b/jasonsla/archive/2013/03/19/exchange-activesync-mailbox-logging.aspx).
+    > This will send the ActiveSync mailbox log to the specified email address for analysis. Additional information on mailbox logging can be found [here](https://blogs.technet.com/b/jasonsla/archive/2013/03/19/exchange-activesync-mailbox-logging.aspx).
 
 3. Download [MailboxLogParser](https://archive.codeplex.com/?p=mailboxlogparser) and extract the files.
 4. Launch the utility by opening **MailboxLogParser.exe**.
@@ -2377,7 +2377,7 @@ To resolve this issue, review the mailbox log after attempting another Sync requ
 **Did reviewing the ActiveSync mailbox log resolve the issue?**
 
 - If yes, congratulations, your ActiveSync issue is resolved.
-- If no, see [Log Parser Studio Query - Report [Top 20]; Log Parser Studio Query - Device Query](#log-parser-studio-query-report-top-20-log-parser-studio-query-device-query).
+- If no, see [Log Parser Studio Query - Report [Top 20]; Log Parser Studio Query - Device Query](#log-parser-studio-query---report-top-20-log-parser-studio-query---device-query).
 
 ### Log Parser Studio Query - Count all errors
 
@@ -2465,7 +2465,7 @@ To determine device traffic, analyze the device activity using the associated Lo
 **Were you able to resolve the issue by identifying a pattern in user activity?**
 
 - If yes, congratulations, your ActiveSync issue is resolved.
-- If no, see [Log Parser Studio Query - Count all errors](#log-parser-studio-query-count-all-errors).
+- If no, see [Log Parser Studio Query - Count all errors](#log-parser-studio-query---count-all-errors).
 
 ### Capture performance data; Analyze performance data
 

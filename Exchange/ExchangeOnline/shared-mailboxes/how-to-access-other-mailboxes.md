@@ -115,7 +115,7 @@ If you decide that you no longer want to see the other person's mailbox every ti
 - If yes, congratulations! Your scenario is complete.
 - If no, see [The issue was not resolved](#the-issue-was-not-resolved).
 
-### How do I access the mailbox (Enterprise | Midsize | Education)
+### How do I access the mailbox (Enterprise, Midsize, Education)
 
 #### Use the EAC to assign permissions
 

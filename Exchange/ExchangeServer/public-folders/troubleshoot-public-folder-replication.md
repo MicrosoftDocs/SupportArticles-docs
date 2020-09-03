@@ -154,7 +154,7 @@ Select one folder that includes data on one server but not on another server, an
 
 **Does the folder you're looking for now appear in the hierarchy on both servers?**
 
-- If yes, see [Focus on content; Replicate Always Interval and Schedule; Create a new item on the source server](#focus-on-content-replicate-always-interval-and-schedule;-create-a-new-item-on-the-source-server).
+- If yes, see [Focus on content; Replicate Always Interval and Schedule; Create a new item on the source server](#focus-on-content-replicate-always-interval-and-schedule-create-a-new-item-on-the-source-server).
 - If no, see [Replicate Always Interval; Application log Event ID 3018](#replicate-always-interval-application-log-event-id-3018).
 
 ### Replicate Always Interval; Application log Event ID 3018
@@ -221,7 +221,7 @@ Watch the application log on the source server for Event ID 3018, which indicate
 
 **Do you see Event ID 3018?**
 
-- If yes, see [Track the message in message tracking; Was the message delivered to the destination server?](#track-the-message-in-message-tracking;-was-the-message-delivered-to-the-destination-server)
+- If yes, see [Track the message in message tracking; Was the message delivered to the destination server?](#track-the-message-in-message-tracking-was-the-message-delivered-to-the-destination-server)
 - If no, see [Troubleshoot the source server](#troubleshoot-the-source-server).
 
 ### Troubleshoot the source server
@@ -383,7 +383,7 @@ On the destination server, examine the Application log in Event Viewer for event
 **Do you see Event ID 7004 and Event ID 7010 on the destination server?**
 
 - If yes, see [Resolve issue with the XEXCH50 command](#resolve-issue-with-the-xexch50-command).
-- If no, see [Run isinteg –fix –test ReplState on the destination server; Tombstone because of a deletion](#run-isinteg-fix-test-replstate-on-the-destination-server-tombstone-because-of-a-deletion).
+- If no, see [Run isinteg –fix –test ReplState on the destination server; Tombstone because of a deletion](#run-isinteg--fix--test-replstate-on-the-destination-server-tombstone-because-of-a-deletion).
 
 ### Resolve issue with the XEXCH50 command
 
@@ -420,7 +420,7 @@ The problem that you are experiencing may be caused by an XEXCH50 command issue.
 **Did disabling the firewall resolve the issue?**
 
 - If yes, congratulations! Your Public Folder Replication for Exchange Server 2003 issue is resolved.
-- If no, see [Run isinteg –fix –test ReplState on the destination server; Tombstone because of a deletion](#run-isinteg-fix-test-replstate-on-the-destination-server-tombstone-because-of-a-deletion).
+- If no, see [Run isinteg –fix –test ReplState on the destination server; Tombstone because of a deletion](#run-isinteg--fix--test-replstate-on-the-destination-server-tombstone-because-of-a-deletion).
 
 ### Run isinteg -fix -test ReplState on the destination server; Tombstone because of a deletion
 
@@ -696,7 +696,7 @@ MSExchangeIS Public Store|
 **Do you see Event ID 3079, and does it contain EcReplStartup when the database is mounted?**
 
 - If yes, see [Application log Event ID 9528](#application-log-event-id-9528).
-- If no, see [Run isinteg –fix –test ReplState; Event ID 3020](#run-isinteg-fix-test-replstate-event-id-3020).
+- If no, see [Run isinteg –fix –test ReplState; Event ID 3020](#run-isinteg--fix--test-replstate-event-id-3020).
 
 ### Run isinteg -fix -test ReplState; Event ID 3020
 
@@ -770,7 +770,7 @@ After you run Synchronize Content on the destination server, examine the Applica
 #### Is Event ID 3017 in the Application log on the destination server
 
 - If yes, see [Event ID 3027](#event-id-3027).
-- If no, see [Run isinteg -fix -test ReplState (if Event ID 3017 isn't logged)](#run-isinteg-fix-test-replstate-if-event-id-3017-isn't-logged).
+- If no, see [Run isinteg -fix -test ReplState (if Event ID 3017 isn't logged)](#run-isinteg--fix--test-replstate-if-event-id-3017-isnt-logged).
 
 ### Run isinteg -fix -test ReplState (if Event ID 3017 isn't logged)
 
@@ -1031,7 +1031,7 @@ Next, examine the Application log in Event Viewer for events that resemble the f
 **Do you see Event ID 7004 and Event ID 7010 on the destination server?**
 
 - If yes, see [Resolve issue with the XEXCH50 command](#resolve-issue-with-the-xexch50-command).
-- If no, see [Run isinteg –fix –test ReplState](#run-isinteg-fix-test-replstate-if-dont-see-event-ie-7004-and-7010).
+- If no, see [Run isinteg –fix –test ReplState](#run-isinteg--fix--test-replstate-if-dont-see-event-ie-7004-and-7010).
 
 ### Run isinteg -fix -test ReplState (if don't see Event IE 7004 and 7010)
 
