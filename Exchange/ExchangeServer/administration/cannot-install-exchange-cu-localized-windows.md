@@ -33,6 +33,7 @@ You receive one of these errors when trying to install an Exchange Cumulative Up
 2. The installation fails or takes many hours to succeed, but the failure/hang occurs whenever this cmdlet is executed – when checking ExchangeSetupLog:
 
     ```powershell
+    [mm/dd/yyyy 14:47:00.0736] [1] Executing:
     get-ExchangeServer $RoleNetBIOSName | add-ADPermission `
     -DomainController $RoleDomainController `
     -User "S-1-5-18" `
