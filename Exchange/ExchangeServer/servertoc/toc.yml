@@ -147,6 +147,8 @@
       href: ../administration/event-9646-opening-mapi-sessions.md
     - name: EWS notifications return UnreadCount of -1
       href: ../administration/ews-notification-return-wrong-value-for-unreadcount.md
+    - name: Exchange CU installation fails
+      href: ../administration/cannot-install-exchange-cu-localized-windows.md
     - name: Exchange dialog doesn't include Connection tab
       href: ../administration/outlook-exchange-dialog-not-include-connection-tab.md
     - name: Exchange Server 2010 datacenter switchover
