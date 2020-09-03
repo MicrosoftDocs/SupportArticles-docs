@@ -108,7 +108,7 @@
       href: mdm-enrollment-error-0xcaa9001f.md
     - name: Intune Connector for AD doesn't appear
       href: intune-connector-for-ad-not-appear.md
-    - name: Understand and troubleshoot Enrollment Status Page
+    - name: Understand and troubleshoot the Enrollment Status Page
       href: understand-troubleshoot-esp.md
     - name: Unexpected error signing in to Intune Connector
       href: intune-connector-signin-unexpected-error.md
