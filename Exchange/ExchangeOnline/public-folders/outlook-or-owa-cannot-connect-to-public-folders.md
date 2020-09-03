@@ -96,7 +96,7 @@ Collect logs at the on-premises server that is running Exchange Server, and then
 **Does this resolve your issue?**
 
 - If yes, congratulations! Your problem is resolved. We're glad that this guide was helpful for you.
-- [No](#is-the-public-folder-(pf)-node-visible-in-outlook)
+- [No](#is-the-public-folder-pf-node-visible-in-outlook)
 
 ### Run an Autodiscover test for affected users
 
@@ -237,7 +237,7 @@ Either set the `DefaultPublicFolderMailbox` parameter manually or enable some 
 
 ### Does the issue affect Outlook or OWA
 
-- [Outlook](#is-the-public-folder-(pf)-node-visible-in-outlook)
+- [Outlook](#is-the-public-folder-pf-node-visible-in-outlook)
 - [OWA](#is-publicfoldersenabled-set-to-remote)
 
 ### Is PublicFoldersEnabled set to Remote
@@ -247,7 +247,7 @@ To check whether `PublicFoldersEnabled` is set to **Remote**, see the command ex
 :::image type="content" source="media/outlook-or-owa-cannot-connect-to-public-folders/get-the-publicfoldersenabled-value.jpg" alt-text="Command to check PublicFoldersEnabled setting" border="false":::
 
 - If Local, collect F12 logs or a Fiddler trace, and open a support issue for further help.
-- If [Remote](#owa-can't-access-public-folders-in-the-remote-configuration)
+- If [Remote](#owa-cant-access-public-folders-in-the-remote-configuration)
 
 ### OWA can't access public folders in the Remote configuration
 
@@ -279,7 +279,7 @@ Make sure that the proxy PF mailbox is synced correctly, and wait for the cach
 
 To determine this, see the command example in the following screenshot.
 
-:::image type="content" source="media/outlook-or-owa-cannot-connect-to-public-folders/command-example.jpg" alt-text="command example" border="false":::
+:::image type="content" source="media/outlook-or-owa-cannot-connect-to-public-folders/command-example.jpg" alt-text="command example 1" border="false":::
 
 **Does this resolve your issue?**  
 
@@ -290,7 +290,7 @@ To determine this, see the command example in the following screenshot.
 
 To determine this, see the command example in the following screenshot.
 
-:::image type="content" source="media/outlook-or-owa-cannot-connect-to-public-folders/command-example-2.jpg" alt-text="command example" border="false":::
+:::image type="content" source="media/outlook-or-owa-cannot-connect-to-public-folders/command-example-2.jpg" alt-text="command example 2" border="false":::
 
 **Does this resolve your issue?**
 
@@ -313,7 +313,7 @@ To configure the remote PF mailbox, refer to the following articles. Then, wait 
 
 To determine this, see the command example in the following screenshot.
 
-:::image type="content" source="media/outlook-or-owa-cannot-connect-to-public-folders/command-example-3.jpg" alt-text="command example":::
+:::image type="content" source="media/outlook-or-owa-cannot-connect-to-public-folders/command-example-3.jpg" alt-text="command example 3":::
 
 - [Yes](#smtp-(soft)-matching)
 - [No](#is-a-valid-x500-address-stamped-on-the-on-premises-user)
@@ -333,13 +333,13 @@ To determine this, see the command examples in the following screenshots.
 
 In on-premises
 
-:::image type="content" source="media/outlook-or-owa-cannot-connect-to-public-folders/command-example-4.jpg" alt-text="command example":::
+:::image type="content" source="media/outlook-or-owa-cannot-connect-to-public-folders/command-example-4.jpg" alt-text="command example 4":::
 
 In Exchange Online
 
-:::image type="content" source="media/outlook-or-owa-cannot-connect-to-public-folders/command-example-5.jpg" alt-text="command example" border="false":::
+:::image type="content" source="media/outlook-or-owa-cannot-connect-to-public-folders/command-example-5.jpg" alt-text="command example 5" border="false":::
 
-- [Yes](#what-is-the-version-of-exchange-server-that's-hosting-the-pfs)
+- [Yes](#what-is-the-version-of-exchange-server-thats-hosting-the-pfs)
 - [No](#add-a-valid-x500-address-on-the-user)
 
 ### What is the version of Exchange Server that's hosting the PFs
@@ -370,7 +370,7 @@ For more information about `Set-Mailbox`, see [Set-Mailbox](https://docs.microso
 
 To determine this, see the command example in the following screenshot.
 
-:::image type="content" source="media/outlook-or-owa-cannot-connect-to-public-folders/command-example-6.jpg" alt-text="command example" border="false":::
+:::image type="content" source="media/outlook-or-owa-cannot-connect-to-public-folders/command-example-6.jpg" alt-text="command example 6" border="false":::
 
 - [Yes](#identify-the-proxy-mailbox-and-check-the-rpc-running-state)
 - [No](#enable-outlook-anywhere)
@@ -379,7 +379,7 @@ To determine this, see the command example in the following screenshot.
 
 Find the effective or default PF mailbox that is stamped on the affected user to determine the proxy mailbox. To do this, see the command example in the following screenshot.
 
-:::image type="content" source="media/outlook-or-owa-cannot-connect-to-public-folders/command-example-7.jpg" alt-text="command example" border="false":::
+:::image type="content" source="media/outlook-or-owa-cannot-connect-to-public-folders/command-example-7.jpg" alt-text="command example 7" border="false":::
 
 Then, check whether the Microsoft Exchange RPC Client Access service is running on the Client Access server (CAS) on which the PF database hosts the proxy mailbox.
 

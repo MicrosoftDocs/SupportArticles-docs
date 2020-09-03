@@ -116,7 +116,7 @@ When you are moving a mailbox to or from the cloud, we make a connection to the 
 > These settings should be configured on all of the external facing Exchange servers.
 
 - If your issues are resolved, congratulations! Your scenario is complete.
-- [I have verified that MRSProxy and Authentication settings, what next?](#do-you-have-firewall-and-intrusion-detection-system-(ids)-properly-configured)
+- [I have verified that MRSProxy and Authentication settings, what next?](#do-you-have-firewall-and-intrusion-detection-system-ids-properly-configured)
 
 ### Do you have Firewall and Intrusion Detection System (IDS) properly configured
 
@@ -197,7 +197,7 @@ In order for IIS to properly respond to a migration request we need to ensure th
 8. Type the `ServiceModelReg.exe -r` command, and then press Enter.
 
 - If your issues are resolved, congratulations! Your scenario is complete.
-- [My IIS has the proper handler mappings in place, what next?](#ensure-that-the-required-attribute-synchronized-properly-(this-is-not-a-common-problem))
+- [My IIS has the proper handler mappings in place, what next?](#ensure-that-the-required-attribute-synchronized-properly-this-is-not-a-common-problem)
 
 ### Ensure that the required attribute synchronized properly (this is not a common problem)
 
@@ -296,7 +296,7 @@ This section describes best practices for improving network performance during m
 
 The first time you select [http://na1-fasttrack.cloudapp.net](http://na1-fasttrack.cloudapp.net/), you will be prompted to install an ActiveX control. Once you install it, you will get a Security Warning as shown below:
 
-:::image type="content" source="media/troubleshoot-migration-issues-in-exchange-hybrid/security-warning.jpg" alt-text="screenshot of the security warning" border="false":::
+:::image type="content" source="media/troubleshoot-migration-issues-in-exchange-hybrid/security-warning.jpg" alt-text="screenshot of the security warning 1" border="false":::
 
 Install [Java](https://java.com/download/).
 
@@ -304,7 +304,7 @@ Install [Java](https://java.com/download/).
 
 Go to [http://na1-fasttrack.cloudapp.net](http://na1-fasttrack.cloudapp.net/) and you will be prompted to run the application as shown below:
 
-:::image type="content" source="media/troubleshoot-migration-issues-in-exchange-hybrid/prompted-to-run-application.png" alt-text="screenshot of the security warning" border="false":::
+:::image type="content" source="media/troubleshoot-migration-issues-in-exchange-hybrid/prompted-to-run-application.png" alt-text="screenshot of the security warning 2" border="false":::
 
 :::image type="content" source="media/troubleshoot-migration-issues-in-exchange-hybrid/enter-office-365-tenant-name.png" alt-text="Please enter your Office 365 tenant name below" border="false":::
 
@@ -314,7 +314,7 @@ Go to [http://na1-fasttrack.cloudapp.net](http://na1-fasttrack.cloudapp.net/) an
 |Network stability|A fast network doesn't always result in fast migrations. If the network isn't stable, data transfer takes longer because of error correction. Depending on the migration type, error correction can significantly affect migration performance.|Network hardware and driver issues often cause network stability problems. Work with your hardware vendors to understand your network devices and apply the vendor's latest recommended drivers and software updates.|
 
 - If your issues are resolved, congratulations! Your scenario is complete.
-- [My move request is still not complete.](#have-an-intrusion-detection-issue-(ids))
+- [My move request is still not complete.](#have-an-intrusion-detection-issue-ids)
 
 ### Have an Intrusion detection issue (IDS)
 
@@ -340,7 +340,7 @@ Hybrid Migrations can sometimes be treated like a denial of service attack by ce
       > The custom limit applies to IP addresses that are listed on the **IP Exceptions** tab. Increase only the custom limit. In the following example screen shot, the custom limit is set to 6,000. Depending on the number of mailboxes that are being moved, this number may not be sufficient. If you still receive the error message, increase the custom limit.
 
 - If your issues are resolved, congratulations! Your scenario is complete.
-- [My move request is still not complete or this does not apply.](#bypass-mailbox-and-item-level-corruption-issues-(if-move-request-is-still-not-complete))
+- [My move request is still not complete or this does not apply.](#bypass-mailbox-and-item-level-corruption-issues-if-move-request-is-still-not-complete)
 
 ### Try to use the Exchange Administration Center (EAC) to perform the move
 
@@ -383,7 +383,7 @@ Mailbox moves are more likely to succeed when they are initiated from Exchange A
 1. Enter a name for the migration batch and initiate the move.
 
 - If your issues are resolved, congratulations! Your scenario is complete.
-- [My move still failed to initiate.](#do-you-have-your-firewall-and-intrusion-detection-system-(ids)-properly-configured)
+- [My move still failed to initiate.](#do-you-have-your-firewall-and-intrusion-detection-system-ids-properly-configured)
 
 ### Do you have your Firewall and Intrusion Detection System (IDS) properly configured
 
@@ -521,4 +521,4 @@ Often a Mailbox move will fail due to item or mailbox level corruption. Allowing
    ```
 
 - If the issue is resolved, congratulations! Your scenario is complete.
-- [My move request still failed.](#try-to-use-the-exchange-administration-center-(eac)-to-perform-the-move)
+- [My move request still failed.](#try-to-use-the-exchange-administration-center-eac-to-perform-the-move)

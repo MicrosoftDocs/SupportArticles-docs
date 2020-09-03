@@ -52,8 +52,8 @@ If you are having trouble starting the IMAP migration batch, or you are running 
 
 If your migration is taking longer than expected, choose the second option.
 
-- [I am having problems with the IMAP Migration batch](#were-you-able-to-create/start-the-imap-migration-batch)
-- [My migration is slow](#my-migration-is-slow-(if-migration-is-taking-longer-than-expected))
+- [I am having problems with the IMAP Migration batch](#were-you-able-to-createstart-the-imap-migration-batch)
+- [My migration is slow](#my-migration-is-slow-if-migration-is-taking-longer-than-expected))
 
 ### Were you able to create/start the IMAP migration batch
 
@@ -71,14 +71,14 @@ Select **yes** on the pop-up box to start it.
 
 **Were you able to successfully create and/or start the batch?**
 
-- If yes, see [What issue are you seeing after creating/starting the migration batch](#what-issue-are-you-seeing-after-creating/starting-the-migration-batch).
-- If no, see [No, I was not able to create/start my migration batch](#no,-i-was-not-able-to-create/start-my-migration-batch).
+- If yes, see [What issue are you seeing after creating/starting the migration batch](#what-issue-are-you-seeing-after-creatingstarting-the-migration-batch).
+- If no, see [No, I was not able to create/start my migration batch](#no-i-was-not-able-to-createstart-my-migration-batch).
 
 ### What issue are you seeing after creating/starting the migration batch
 
 Since you were able to create/start the migration batch, you may run into one of the below error messages. To see what errors you are running into, you can download the error report by logging into the account that you started the migration batch with. Look for an email with a subject of **E-mail migration batch "Batch name" has finished - with errors**. You can download the error report by selecting **Click here to download the error report**.
 
-- [A recipient wasn't found for user@contoso.com on the target...](#a-recipient-wasn't-found-for-user@contoso.com-on-the-target)
+- [A recipient wasn't found for user@contoso.com on the target...](#a-recipient-wasn't-found-for-usercontoso.com-on-the-target)
 - [We had trouble signing in to this account...](#we-had-trouble-signing-in-to-this-account-error)
 - [I'm seeing duplicate emails](#i'm-seeing-duplicate-emails)
 - [This mailbox is full...](#this-mailbox-is-full)
@@ -93,7 +93,7 @@ A recipient wasn't found for `user@contoso.com` on the target. Create a recipien
 **Did this solve your problem?**
 
 - If yes, congratulations! Your scenario is complete.
-- If no, see [A recipient wasn't found for user@contoso.com on the target](#a-recipient-wasn't-found-for-user@contoso.com-on-the-target-(if-issue-isn't-resolved))
+- If no, see [A recipient wasn't found for user@contoso.com on the target](#a-recipient-wasn't-found-for-usercontoso.com-on-the-target-if-issue-isn't-resolved)
 
 ### A recipient wasn't found for user@contoso.com on the target (if issue isn't resolved)
 
@@ -145,7 +145,7 @@ EmailAddress,UserName,Password
 **Did this solve your problem?**
 
 - If yes, congratulations! Your scenario is complete.
-- If no, see [We had trouble signing in to this account](#we-had-trouble-signing-in-to-this-account-(if-issue-not-resolved)).
+- If no, see [We had trouble signing in to this account](#we-had-trouble-signing-in-to-this-account-if-issue-not-resolved).
 
 ### We had trouble signing in to this account (if issue not resolved)
 
@@ -167,7 +167,7 @@ If the mailbox is hosted on a third-party system (For example: Gmail, Lotus Note
 **Did this solve your problem?**
 
 - If yes, congratulations! Your scenario is complete.
-- If no, see [We had trouble signing in to this account](#we-had-trouble-signing-in-to-this-account-(if-issue-still-not-resolved)).
+- If no, see [We had trouble signing in to this account](#we-had-trouble-signing-in-to-this-account-if-issue-still-not-resolved).
 
 ### We had trouble signing in to this account (if issue still not resolved)
 
@@ -183,7 +183,7 @@ If you are migrating users from a personal Gmail.com account, make sure that IMA
 **Did this solve your problem?**
 
 - If yes, congratulations! Your scenario is complete.
-- If no, see [We had trouble signing in to this account](#we-had-trouble-signing-in-to-this-account-(if-issue-is-still-not-resolved)).
+- If no, see [We had trouble signing in to this account](#we-had-trouble-signing-in-to-this-account-if-issue-is-still-not-resolved).
 
 ### We had trouble signing in to this account (if issue is still not resolved)
 
@@ -318,7 +318,7 @@ For information on how to create an IMAP migration batch, see [What you need to 
 **Did this solve your problem?**
 
 - If yes, congratulations! Your scenario is complete.
-- If no, see [My problem is none of the above](#my-problem-is-none-of-the-above-(if-issue-not-resolved)).
+- If no, see [My problem is none of the above](#my-problem-is-none-of-the-above-if-issue-not-resolved).
 
 ### My problem is none of the above (if issue not resolved)
 
@@ -331,7 +331,7 @@ Be aware of the following restrictions that apply to IMAP migrations:
 **Did this solve your problem?**
 
 - If yes, congratulations! Your scenario is complete.
-- If no, see [My problem is none of the above](#my-problem-is-none-of-the-above-(if-issue-isn't-resolved)).
+- If no, see [My problem is none of the above](#my-problem-is-none-of-the-above-if-issue-isn't-resolved).
 
 ### My problem is none of the above (if issue isn't resolved)
 
@@ -360,7 +360,7 @@ Sometimes the connection settings in an existing IMAP migration endpoint can cha
 **Did this solve your problem?**
 
 - If yes, congratulations! Your scenario is complete.
-- If no, see [My problem is none of the above](#my-problem-is-none-of-the-above-(if-issue-is-still-not-resolved)).
+- If no, see [My problem is none of the above](#my-problem-is-none-of-the-above-if-issue-is-still-not-resolved).
 
 ### My problem is none of the above (if issue is still not resolved)
 
@@ -415,10 +415,10 @@ If you have confirmed that the super user account has the correct permissions, t
 
 Below are some of the possible errors you can run into while attempting to create/start an IMAP migration batch. If an error pops up when you select the CSV file, during the batch creation, then go to the CSV errors section for troubleshooting assistance. Otherwise select the appropriate option.
 
-- [The connection to the server Servername.contoso.com timed out...](#the-connection-to-the-server-servername.contoso.com-timed-out)
+- [The connection to the server Servername.contoso.com timed out...](#the-connection-to-the-server-servernamecontosocom-timed-out)
 - [Connection to the server couldn’t be completed](#the-connection-to-the-server-could-not-be-completed)
 - [CSV errors](#csv-errors)
-- [Batch \<name> already exists](#the-migration-batch-\<batch-name>-already-exists)
+- [Batch \<name> already exists](#the-migration-batch-batch-name-already-exists)
 
 ### The connection to the server <Servername.contoso.com> timed out
 
@@ -448,7 +448,7 @@ However, if you get the below error, when trying to perform the telnet test, you
 **Did this solve your problem?**
 
 - If yes, congratulations! Your scenario is complete.
-- If no, see [Connection to the server Servername.contoso.com timed out...](#connection-to-the-server-<servername.contoso.com>-timed-out).
+- If no, see [Connection to the server Servername.contoso.com timed out...](#connection-to-the-server-servernamecontosocom-timed-out).
 
 ### Connection to the server <Servername.contoso.com> timed out
 
@@ -459,7 +459,7 @@ If you are migrating from an Exchange server, launch the Services application (*
 **Did this solve your problem?**
 
 - If yes, congratulations! Your scenario is complete.
-- If no, see [The connection to the server Servername.contoso.com timed out](#the-connection-to-the-server-servername.contoso.com-timed-out-(if-issue-not-resolved)).
+- If no, see [The connection to the server Servername.contoso.com timed out](#the-connection-to-the-server-servername.contoso.com-timed-out-if-issue-not-resolved).
 
 ### The connection to the server Servername.contoso.com timed out (if issue not resolved)
 
@@ -544,7 +544,7 @@ During the creation of the IMAP migration batch, while browsing for the CSV file
 Select the appropriate option below for possible solutions.
 
 - [Upload file can't be empty](#upload-file-can't-be-empty)
-- [The CSV file contains more than 50,000 rows](#the-csv-file-contains-more-than-50,000-rows)
+- [The CSV file contains more than 50,000 rows](#the-csv-file-contains-more-than-50000-rows)
 - [Column \<Column name> is missing from the CSV file](#column-is-missing-from-the-csv-file)
 - [Row X has the wrong number of columns](#row-x-has-the-wrong-number-of-columns)
 
@@ -651,7 +651,7 @@ If the migration batch is already started, you will need to stop it, make the ab
 **Did this solve your problem?**
 
 - If yes, congratulations! Your scenario is complete.
-- If no, see [My migration is slow](#my-migration-is-slow-(if-issue-not-resolved)).
+- If no, see [My migration is slow](#my-migration-is-slow-if-issue-not-resolved).
 
 ### My migration is slow (if issue not resolved)
 
@@ -671,7 +671,7 @@ If you're migrating email from an on-premises Microsoft Exchange server, we reco
 **Did this solve your problem?**
 
 - If yes, congratulations! Your scenario is complete.
-- If no, see [My migration is slow](#my-migration-is-slow-(if-issue-isn't-resolved)).
+- If no, see [My migration is slow](#my-migration-is-slow-if-issue-isn't-resolved).
 
 ### My migration is slow (if issue isn't resolved)
 
@@ -685,7 +685,7 @@ In order to determine if a particular user migration is not progressing, or is p
 **Did this solve your problem?**
 
 - If yes, congratulations! Your scenario is complete.
-- If no, see [My migration is slow](#my-migration-is-slow-(if-issue-is-still-not-resolved)).
+- If no, see [My migration is slow](#my-migration-is-slow-if-issue-is-still-not-resolved).
 
 ### My migration is slow (if issue is still not resolved)
 
@@ -725,7 +725,7 @@ IMAP Migrations can sometimes be treated like a denial of service attack by cert
 **Did this solve your problem?**
 
 - If yes, congratulations! Your scenario is complete.
-- If no, see [My migration is slow](#my-migration-is-slow-(if-issue-is-still-not-solved)).
+- If no, see [My migration is slow](#my-migration-is-slow-if-issue-is-still-not-solved).
 
 ### My migration is slow (if issue is still not solved)
 
@@ -760,7 +760,7 @@ If you are migrating from Google apps refer to these articles concerning [bandwi
 **Did this solve your problem?**
 
 - If yes, congratulations! Your scenario is complete.
-- If no, see [My migration is slow](#my-migration-is-slow-(if-issue-still-not-solved)).
+- If no, see [My migration is slow](#my-migration-is-slow-if-issue-still-not-solved).
 
 ### My migration is slow (if issue still not solved)
 

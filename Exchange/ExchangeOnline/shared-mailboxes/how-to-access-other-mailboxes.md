@@ -47,8 +47,8 @@ Select the plan that your organization subscribes to in Microsoft 365.
 
 Not sure which Microsoft 365 plan your organization uses? Go to [https://portal.microsoftonline.com](https://portal.microsoftonline.com) and login using your Microsoft 365 administrator credentials.
 
-- [Small Business](#how-do-i-access-the-mailbox-(small-business))
-- [If you see the below administrative interface, then you are using the Small Business plan](#how-do-i-access-the-mailbox?-(enterprise-|-midsize-|-education)).
+- [Small Business](#how-do-i-access-the-mailbox-small-business)
+- [If you see the below administrative interface, then you are using the Small Business plan](#how-do-i-access-the-mailbox-enterprise-midsize-education).
 
   :::image type="content" source="media/how-to-access-other-mailboxes/small-business-admin-interface.png" alt-text="Small Business plan administrative interface" border="false":::
 
@@ -180,8 +180,8 @@ You can assign access permissions to multiple mailboxes for the entire mailbox o
 
 Select if you would like permissions to be assigned on the mailbox level (access to all of the mailbox folders) or just specific folders within the mailbox (access only folders specifically shared).
 
-- [Entire mailbox](#how-do-i-access-the-mailbox-(entire-mailbox))
-- [Specific folders only](#assign-access-to-specific-folders-in-a-user’s-mailbox)
+- [Entire mailbox](#how-do-i-access-the-mailbox-entire-mailbox)
+- [Specific folders only](#assign-access-to-specific-folders-in-a-users-mailbox)
 
 ### How do I access the mailbox (Entire Mailbox)
 

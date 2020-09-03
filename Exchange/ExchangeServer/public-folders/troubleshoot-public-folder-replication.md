@@ -154,8 +154,8 @@ Select one folder that includes data on one server but not on another server, an
 
 **Does the folder you're looking for now appear in the hierarchy on both servers?**
 
-- If yes, see [Focus on content; Replicate Always Interval and Schedule; Create a new item on the source server](#focus-on-content;-replicate-always-interval-and-schedule;-create-a-new-item-on-the-source-server).
-- If no, see [Replicate Always Interval; Application log Event ID 3018](#replicate-always-interval;-application-log-event-id-3018).
+- If yes, see [Focus on content; Replicate Always Interval and Schedule; Create a new item on the source server](#focus-on-content-replicate-always-interval-and-schedule;-create-a-new-item-on-the-source-server).
+- If no, see [Replicate Always Interval; Application log Event ID 3018](#replicate-always-interval-application-log-event-id-3018).
 
 ### Replicate Always Interval; Application log Event ID 3018
 
@@ -221,7 +221,7 @@ Watch the application log on the source server for Event ID 3018, which indicate
 
 **Do you see Event ID 3018?**
 
-- If yes, see [Track the message in message tracking; Was the message delivered to the destination server?](#track-the-message-in-message-tracking;-was-the-message-delivered-to-the-destination-server?)
+- If yes, see [Track the message in message tracking; Was the message delivered to the destination server?](#track-the-message-in-message-tracking;-was-the-message-delivered-to-the-destination-server)
 - If no, see [Troubleshoot the source server](#troubleshoot-the-source-server).
 
 ### Troubleshoot the source server
@@ -304,7 +304,7 @@ SMTP: Started Outbound Transfer of Message Message transferred to through SMTP
 **Does message tracking indicate that the message was delivered to the destination server?**
 
 - If yes, see [Event ID 3028 on the destination server](#event-id-3028-on-the-destination-server).
-- If no, see [Transport issue; Does the message appear in message tracking?](#transport-issue;-does-the-message-appear-in-message-tracking?)
+- If no, see [Transport issue; Does the message appear in message tracking?](#transport-issue-does-the-message-appear-in-message-tracking)
 
 ### Transport issue; Does the message appear in message tracking?
 
@@ -336,7 +336,7 @@ To browse a list of available servers, select **Server**, select a server, and t
 **Did it receive the message?**
 
 - If yes, see [Determine whether the public folder store on the source server has an email address](#determine-whether-the-public-folder-store-on-the-source-server-has-an-email-address).
-- If no, see [Does performance monitor show a large number of messages queued for submission?](#does-performance-monitor-show-a-large-number-of-messages-queued-for-submission?)
+- If no, see [Does performance monitor show a large number of messages queued for submission?](#does-performance-monitor-show-a-large-number-of-messages-queued-for-submission)
 
 ### Event ID 3028 on the destination server
 
@@ -383,7 +383,7 @@ On the destination server, examine the Application log in Event Viewer for event
 **Do you see Event ID 7004 and Event ID 7010 on the destination server?**
 
 - If yes, see [Resolve issue with the XEXCH50 command](#resolve-issue-with-the-xexch50-command).
-- If no, see [Run isinteg –fix –test ReplState on the destination server; Tombstone because of a deletion](#run-isinteg--fix--test-replstate-on-the-destination-server;-tombstone-because-of-a-deletion).
+- If no, see [Run isinteg –fix –test ReplState on the destination server; Tombstone because of a deletion](#run-isinteg-fix-test-replstate-on-the-destination-server-tombstone-because-of-a-deletion).
 
 ### Resolve issue with the XEXCH50 command
 
@@ -420,7 +420,7 @@ The problem that you are experiencing may be caused by an XEXCH50 command issue.
 **Did disabling the firewall resolve the issue?**
 
 - If yes, congratulations! Your Public Folder Replication for Exchange Server 2003 issue is resolved.
-- If no, see [Run isinteg –fix –test ReplState on the destination server; Tombstone because of a deletion](#run-isinteg--fix--test-replstate-on-the-destination-server;-tombstone-because-of-a-deletion).
+- If no, see [Run isinteg –fix –test ReplState on the destination server; Tombstone because of a deletion](#run-isinteg-fix-test-replstate-on-the-destination-server-tombstone-because-of-a-deletion).
 
 ### Run isinteg -fix -test ReplState on the destination server; Tombstone because of a deletion
 
@@ -459,7 +459,7 @@ This indicates the folder is a tombstone because of a previous deletion that did
 Is the new folder visible in the hierarchy on the destination server?
 
 - If yes, see [Troubleshoot hierarchy backfill](#troubleshoot-hierarchy-backfill).
-- If no, see [Looking for the folder ID (FID) (Isolate?)](#looking-for-the-folder-id-(fid)-(isolate?))
+- If no, see [Looking for the folder ID (FID) (Isolate?)](#looking-for-the-folder-id-fid-isolate)
 
 ### Troubleshoot hierarchy backfill
 
@@ -531,7 +531,7 @@ In the Application log on the source server, immediately before Event ID 3027, l
 **Do you see Event ID 3017 and type 0x10 for the same folder?**
 
 - If yes, see [Event ID 3027 that has type 0x10 on the destination server](#event-id-3027-that-has-type-0x10-on-the-destination-server).
-- If no, see [Do the servers have different age limits?](#do-the-servers-have-different-age-limits?)
+- If no, see [Do the servers have different age limits?](#do-the-servers-have-different-age-limits)
 
 ### Event ID 3027 on the destination server
 
@@ -595,7 +595,7 @@ On the destination server, examine Event ID 3014 to obtain the message ID. Use m
 
 **Does message tracking indicate that the message was delivered to the source server?**
 
-- If yes, see [Focus on content; Replicate Always Interval and Schedule; Create a new item on the source server](#focus-on-content;-replicate-always-interval-and-schedule;-create-a-new-item-on-the-source-server).
+- If yes, see [Focus on content; Replicate Always Interval and Schedule; Create a new item on the source server](#focus-on-content-replicate-always-interval-and-schedule-create-a-new-item-on-the-source-server).
 - If no, sorry, we cannot resolve an unidentified issue using this guide.
 
 ### Track the message ID from Event ID 3019
@@ -664,7 +664,7 @@ Create a new item in the public folder on the source server, and then watch the 
 **Do you see Event ID 3020, and does it include the name of the folder you are testing and the name of the item we created?**
 
 - If yes, see [Event ID 3030](#event-id-3030).
-- If no, see [Source server is not generating outgoing content messages for that folder; Event ID 3079 when the public folder database is mounted](#source-server-is-not-generating-outgoing-content-messages-for-that-folder;-event-id-3079-when-the-public-folder-database-is-mounted).
+- If no, see [Source server is not generating outgoing content messages for that folder; Event ID 3079 when the public folder database is mounted](#source-server-is-not-generating-outgoing-content-messages-for-that-folder-event-id-3079-when-the-public-folder-database-is-mounted).
 
 ### Event ID 3030
 
@@ -696,7 +696,7 @@ MSExchangeIS Public Store|
 **Do you see Event ID 3079, and does it contain EcReplStartup when the database is mounted?**
 
 - If yes, see [Application log Event ID 9528](#application-log-event-id-9528).
-- If no, see [Run isinteg –fix –test ReplState; Event ID 3020](#run-isinteg--fix--test-replstate;-event-id-3020).
+- If no, see [Run isinteg –fix –test ReplState; Event ID 3020](#run-isinteg-fix-test-replstate-event-id-3020).
 
 ### Run isinteg -fix -test ReplState; Event ID 3020
 
@@ -740,7 +740,7 @@ On the destination server, look for the item you created on the source server, a
 **Do you see the item in the folder on the destination server?**
 
 - If yes, see [Troubleshoot content backfill](#troubleshoot-content-backfill).
-- If no, see [Does the 3030 event show the message ID (MID) of the item but not the subject?](#does-the-3030-event-show-the-message-id-(mid)-of-the-item-but-not-the-subject?)
+- If no, see [Does the 3030 event show the message ID (MID) of the item but not the subject?](#does-the-3030-event-show-the-message-id-mid-of-the-item-but-not-the-subject)
 
 ### Troubleshoot content backfill
 
@@ -770,7 +770,7 @@ After you run Synchronize Content on the destination server, examine the Applica
 #### Is Event ID 3017 in the Application log on the destination server
 
 - If yes, see [Event ID 3027](#event-id-3027).
-- If no, see [Run isinteg -fix -test ReplState (if Event ID 3017 isn't logged)](#run-isinteg--fix--test-replstate-(if-event-id-3017-isn't-logged)).
+- If no, see [Run isinteg -fix -test ReplState (if Event ID 3017 isn't logged)](#run-isinteg-fix-test-replstate-if-event-id-3017-isn't-logged).
 
 ### Run isinteg -fix -test ReplState (if Event ID 3017 isn't logged)
 
@@ -821,7 +821,7 @@ In the Application log on the source server, immediately before Event ID 3027, l
 **Do you see Event ID 3017, and does it have type 0x10 for the same folder?**
 
 - If yes, see [Event ID 3027 on the destination server](#event-id-3027-on-the-destination-server).
-- If no, see [Do the servers have different age limits?](#do-the-servers-have-different-age-limits?)
+- If no, see [Do the servers have different age limits?](#do-the-servers-have-different-age-limits)
 
 ### Do the servers have different age limits
 
@@ -986,7 +986,7 @@ On the source server, use message tracking to track the message is identified in
 **Does message tracking indicate that the message was delivered to the destination server?**
 
 - If yes, see [Troubleshoot the XEXCH50 command](#troubleshoot-the-xexch50-command).
-- If no, see [Transport issue; Does the message appear in message tracking?](#transport-issue;-does-the-message-appear-in-message-tracking?)
+- If no, see [Transport issue; Does the message appear in message tracking?](#transport-issue-does-the-message-appear-in-message-tracking)
 
 ### Troubleshoot the XEXCH50 command
 
@@ -1031,7 +1031,7 @@ Next, examine the Application log in Event Viewer for events that resemble the f
 **Do you see Event ID 7004 and Event ID 7010 on the destination server?**
 
 - If yes, see [Resolve issue with the XEXCH50 command](#resolve-issue-with-the-xexch50-command).
-- If no, see [Run isinteg –fix –test ReplState](#run-isinteg--fix--test-replstate-(if-don't-see-event-ie-7004-and-7010)).
+- If no, see [Run isinteg –fix –test ReplState](#run-isinteg-fix-test-replstate-if-dont-see-event-ie-7004-and-7010).
 
 ### Run isinteg -fix -test ReplState (if don't see Event IE 7004 and 7010)
 
@@ -1110,7 +1110,7 @@ Sorry, we cannot resolve an unidentified issue by using this guide. If you conta
 
 Does the Event ID 3028 event show the FID but not the folder's name?
 
-- If yes, see [Tombstone because of a deletion](#tombstone-because-of-a-deletion-(event-id-3028-event-shows-the-fid)).
+- If yes, see [Tombstone because of a deletion](#tombstone-because-of-a-deletion-event-id-3028-event-shows-the-fid).
 - If no, sorry, we cannot resolve an unidentified issue using this guide. For more help to resolve this issue, contact Microsoft Exchange Server support.
 
 ### Tombstone because of a deletion (Event ID 3028 event shows the FID)
@@ -1236,8 +1236,8 @@ Usually, the hub transport server will log an event 1020 that describes the prob
 
   - If yes, see [Remove duplicate accounts](#remove-duplicate-accounts).
   - If no, sorry, We can’t solve unidentified issues with this guide. For more help resolving this issue, contact Microsoft Exchange Server support and tell them that when the database mounts, a 3079 event is logged.
-- If yes, you see 1020 event and contain the error **The message content has become corrupted**, see [Exchange Server 2007 and Exchange Server 2010 in the path (The message content has become corrupted)](#exchange-server-2007-and-exchange-server-2010-in-the-path-(the-message-content-has-become-corrupted)).
-- If yes, you see 1020 event but neither of the above error message, see [Exchange Server 2007 and Exchange Server 2010 in the path (see 1020 event but neither of the above error message)](#exchange-server-2007-and-exchange-server-2010-in-the-path-(see-1020-event-but-neither-of-the-above-error-message)).
+- If yes, you see 1020 event and contain the error **The message content has become corrupted**, see [Exchange Server 2007 and Exchange Server 2010 in the path (The message content has become corrupted)](#exchange-server-2007-and-exchange-server-2010-in-the-path-the-message-content-has-become-corrupted).
+- If yes, you see 1020 event but neither of the above error message, see [Exchange Server 2007 and Exchange Server 2010 in the path (see 1020 event but neither of the above error message)](#exchange-server-2007-and-exchange-server-2010-in-the-path-see-1020-event-but-neither-of-the-above-error-message).
 - If no, you don't see 1020 event with source MSExchange Store Driver, sorry, we cannot resolve an unidentified issue using this guide. If you contact support about this issue, tell them that the server is generating outbound hierarchy messages, but those messages do not appear in message tracking, and nothing is being queued for submission.
 
 ### Exchange Server 2007 and Exchange Server 2010 in the path (The message content has become corrupted)
@@ -1256,7 +1256,7 @@ For more information, see [Fixing Public Folder Replication Errors From Exchange
 
 **Did that resolve the issue?**
 
-- If yes, see [Track the message in message tracking; Was the message delivered to the destination server?](#track-the-message-in-message-tracking;-was-the-message-delivered-to-the-destination-server?)
+- If yes, see [Track the message in message tracking; Was the message delivered to the destination server?](#track-the-message-in-message-tracking-was-the-message-delivered-to-the-destination-server)
 - If no, see [Troubleshoot the source server](#troubleshoot-the-source-server).
 
 ### Exchange Server 2007 and Exchange Server 2010 in the path (see 1020 event but neither of the above error message)
@@ -1273,7 +1273,7 @@ For more information, see [Fixing Public Folder Replication Errors From Exchange
 
 **Is your issue now resolved?**
 
-- If yes, see [Track the message in message tracking; Was the message delivered to the destination server?](#track-the-message-in-message-tracking;-was-the-message-delivered-to-the-destination-server?)
+- If yes, see [Track the message in message tracking; Was the message delivered to the destination server?](#track-the-message-in-message-tracking-was-the-message-delivered-to-the-destination-server)
 - If no, see [Troubleshoot the source server](#troubleshoot-the-source-server).
 
 ### Remove duplicate accounts

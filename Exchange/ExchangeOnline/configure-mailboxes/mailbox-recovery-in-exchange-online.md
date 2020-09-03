@@ -40,9 +40,9 @@ If there is no [Directory Synchronization](/microsoft-365/enterprise/microsoft-3
 
 If Directory Synchronization is in place, you can search within **Active Directory Users and Computers** to see if the on-premises account is **Present** or **Deleted**.
 
-- [Managed Account (No DirSync)](#azure-active-directory-user-account-status-(managed-account-(no-dirsync)))
-- [User Account is present on-premises](#azure-active-directory-user-account-status-(user-account-is-present-on-premises))
-- [User Account deleted on-premises](#azure-active-directory-user-account-status-(user-account-deleted-on-premises))
+- [Managed Account (No DirSync)](#azure-active-directory-user-account-status-managed-account-no-dirsync)
+- [User Account is present on-premises](#azure-active-directory-user-account-status-user-account-is-present-on-premises)
+- [User Account deleted on-premises](#azure-active-directory-user-account-status-user-account-deleted-on-premises)
 
 ### Azure Active Directory User Account Status (Managed Account (No DirSync))
 
@@ -68,9 +68,9 @@ Connect to Azure Active Directory PowerShell and verify the Online Account Statu
 
 Based on the outcome in the steps above, select one of the following:
 
-- [Present](#exchange-online-mailbox-status-(on-premises-is-managed-account-(no-dirsync)-and-online-account-status-is-present))
-- [Soft Deleted](#exchange-online-mailbox-status-(on-premises-is-managed-account-(no-dirsync)-and-online-account-status-is-soft-deleted))
-- [Hard Deleted](#exchange-online-mailbox-status-(on-premises-is-managed-account-(no-dirsync)-and-online-account-status-is-hard-deleted))
+- [Present](#exchange-online-mailbox-status-on-premises-is-managed-account-no-dirsync-and-online-account-status-is-present)
+- [Soft Deleted](#exchange-online-mailbox-status-on-premises-is-managed-account-no-dirsync-and-online-account-status-is-soft-deleted)
+- [Hard Deleted](#exchange-online-mailbox-status-on-premises-is-managed-account-no-dirsync-and-online-account-status-is-hard-deleted)
 
 ### Exchange Online Mailbox Status (on-premises is Managed Account (No DirSync) and online account status is Present)
 
@@ -95,8 +95,8 @@ Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange
 7. If nothing is returned from steps 5 & 6 above, select the **MAILBOX NOT PRESENT** option.
 
 - [Mailbox Present](#online-account-present,-online-mailbox-present)
-- [Mailbox Soft Deleted](#online-account-present,-online-mailbox-soft-deleted)
-- [Mailbox Not Present](#azure-ad-account-present,-online-mailbox-not-present)
+- [Mailbox Soft Deleted](#online-account-present-online-mailbox-soft-deleted)
+- [Mailbox Not Present](#azure-ad-account-present-online-mailbox-not-present)
 
 ### Exchange Online Mailbox Status (on-premises is Managed Account (No DirSync) and online account status is Soft Deleted)
 
@@ -120,9 +120,9 @@ Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange
 
 7. If nothing is returned from steps 5 & 6 above, select the **MAILBOX NOT PRESENT** option.
 
-- [Mailbox Present](#azure-ad-account-soft-deleted,-online-mailbox-present)
-- [Mailbox Soft Deleted](#azure-ad-account-soft-deleted,-exchange-online-mailbox-soft-deleted)
-- [Mailbox Not Present](#azure-ad-account-soft-deleted,-exchange-online-mailbox-not-present)
+- [Mailbox Present](#azure-ad-account-soft-deleted-online-mailbox-present)
+- [Mailbox Soft Deleted](#azure-ad-account-soft-deleted-exchange-online-mailbox-soft-deleted)
+- [Mailbox Not Present](#azure-ad-account-soft-deleted-exchange-online-mailbox-not-present)
 
 ### Exchange Online Mailbox Status (on-premises is Managed Account (No DirSync) and online account status is Hard Deleted)
 
@@ -146,9 +146,9 @@ Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange
 
 7. If nothing is returned from steps 5 & 6 above, select the **MAILBOX NOT PRESENT** option.
 
-- [Mailbox Present](#azure-ad-account-hard-deleted,-online-mailbox-present-(hard-deleted))
-- [Mailbox Soft Deleted](#online-account-hard-deleted,-online-mailbox-soft-deleted)
-- [Mailbox Not Present](#online-account-hard-deleted,-online-mailbox-not-present)
+- [Mailbox Present](#azure-ad-account-hard-deleted-online-mailbox-present-hard-deleted)
+- [Mailbox Soft Deleted](#online-account-hard-deleted-online-mailbox-soft-deleted)
+- [Mailbox Not Present](#online-account-hard-deleted-online-mailbox-not-present)
 
 ### AD User Account Deleted, Online Account Present, Online Mailbox Present
 
@@ -318,9 +318,9 @@ Connect to Azure Active Directory PowerShell and verify the Online Account Statu
 
 Based on the outcome in the steps above, select one of the following:
 
-- [Present](#exchange-online-mailbox-status-(on-premises-user-account-is-present-and-azure-active-directory-user-account-is-present))
-- [Soft Deleted](#exchange-online-mailbox-status-(on-premises-user-account-is-present-and-azure-active-directory-user-account-is-soft-deleted))
-- [Hard Deleted](#exchange-online-mailbox-status-(on-premises-user-account-is-present-and-azure-active-directory-user-account-is-hard-deleted))
+- [Present](#exchange-online-mailbox-status-on-premises-user-account-is-present-and-azure-active-directory-user-account-is-present)
+- [Soft Deleted](#exchange-online-mailbox-status-on-premises-user-account-is-present-and-azure-active-directory-user-account-is-soft-deleted)
+- [Hard Deleted](#exchange-online-mailbox-status-on-premises-user-account-is-present-and-azure-active-directory-user-account-is-hard-deleted)
 
 ### Exchange Online Mailbox Status (on-premises user account is Present and Azure Active Directory user account is Present)
 
@@ -344,9 +344,9 @@ Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange
 
 7. If nothing is returned from steps 5 & 6 above, select the **MAILBOX NOT PRESENT** option.
 
-- [Mailbox Present](#azure-ad-account-present,-exchange-online-mailbox-present)
-- [Mailbox Soft Deleted](#azure-ad-account-present,-exchange-online-mailbox-soft-deleted)
-- [Mailbox Not Present](#azure-ad-account-present,-exchange-online-mailbox-not-present-(purged))
+- [Mailbox Present](#azure-ad-account-present-exchange-online-mailbox-present)
+- [Mailbox Soft Deleted](#azure-ad-account-present-exchange-online-mailbox-soft-deleted)
+- [Mailbox Not Present](#azure-ad-account-present-exchange-online-mailbox-not-present-(purged))
 
 ### Exchange Online Mailbox Status (on-premises user account is Present and Azure Active Directory user account is Soft Deleted)
 
@@ -370,9 +370,9 @@ Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange
 
 7. If nothing is returned from steps 5 & 6 above, select the **MAILBOX NOT PRESENT** option.
 
-- [Mailbox Present](#azure-ad-account-soft-deleted,-exchange-online-mailbox-present)
-- [Mailbox Soft Deleted](#online-account-soft-deleted,-online-mailbox-soft-deleted)
-- [Mailbox Not Present](#online-account-soft-deleted,-online-mailbox-is-not-present-(purged))
+- [Mailbox Present](#azure-ad-account-soft-deleted-exchange-online-mailbox-present)
+- [Mailbox Soft Deleted](#online-account-soft-deleted-online-mailbox-soft-deleted)
+- [Mailbox Not Present](#online-account-soft-deleted-online-mailbox-is-not-present-purged)
 
 ### Exchange Online Mailbox Status (on-premises user account is Present and Azure Active Directory user account is Hard Deleted)
 
@@ -396,9 +396,9 @@ Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange
 
 7. If nothing is returned from steps 5 & 6 above, select the **MAILBOX NOT PRESENT** option.
 
-- [Mailbox Present](#azure-ad-account-hard-deleted,-online-mailbox-present)
-- [Mailbox Soft Deleted](#azure-ad-account-hard-deleted,-exchange-online-mailbox-soft-deleted)
-- [Mailbox Not Present](#azure-ad-account-hard-deleted,-exchange-online-mailbox-not-present-(purged))
+- [Mailbox Present](#azure-ad-account-hard-deleted-online-mailbox-present)
+- [Mailbox Soft Deleted](#azure-ad-account-hard-deleted-exchange-online-mailbox-soft-deleted)
+- [Mailbox Not Present](#azure-ad-account-hard-deleted-exchange-online-mailbox-not-present-purged)
 
 ### Azure AD Account Present, Exchange Online Mailbox Present
 
@@ -709,9 +709,9 @@ Connect to Azure Active Directory PowerShell and verify the Online Account Statu
 
 Based on the outcome in the steps above, select one of the following:
 
-- [Present](#exchange-online-mailbox-status-(on-premises-user-account-is-deleted-and-azure-active-directory-user-account-is-present))
-- [Soft Deleted](#exchange-online-mailbox-status-(on-premises-user-account-is-deleted-and-azure-active-directory-user-account-is-soft-deleted))
-- [Hard Deleted](#exchange-online-mailbox-status-(on-premises-user-account-is-deleted-and-azure-active-directory-user-account-is-hard-deleted))
+- [Present](#exchange-online-mailbox-status-on-premises-user-account-is-deleted-and-azure-active-directory-user-account-is-present)
+- [Soft Deleted](#exchange-online-mailbox-status-on-premises-user-account-is-deleted-and-azure-active-directory-user-account-is-soft-deleted)
+- [Hard Deleted](#exchange-online-mailbox-status-on-premises-user-account-is-deleted-and-azure-active-directory-user-account-is-hard-deleted)
 
 ### Exchange Online Mailbox Status (on-premises user account is Deleted and Azure Active Directory user account is Present)
 
@@ -735,9 +735,9 @@ Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange
 
 7. If nothing is returned from steps 5 & 6 above, select the **MAILBOX NOT PRESENT** option.
 
-- [Mailbox Present](#ad-user-account-deleted,-online-account-present,-online-mailbox-present)
-- [Mailbox Soft Deleted](#ad-account-deleted,-azure-ad-account-present-(soft-deleted),-online-mailbox-soft-deleted)
-- [Mailbox Not Present](#ad-user-account-deleted,-azure-ad-account-present,-online-mailbox-not-present)
+- [Mailbox Present](#ad-user-account-deleted-online-account-present-online-mailbox-present)
+- [Mailbox Soft Deleted](#ad-account-deleted-azure-ad-account-present-soft-deleted-online-mailbox-soft-deleted)
+- [Mailbox Not Present](#ad-user-account-deleted-azure-ad-account-present-online-mailbox-not-present)
 
 ### Exchange Online Mailbox Status (on-premises user account is Deleted and Azure Active Directory user account is Soft Deleted)
 
@@ -761,9 +761,9 @@ Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange
 
 7. If nothing is returned from steps 5 & 6 above, select the **MAILBOX NOT PRESENT** option.
 
-- [Mailbox Present](#ad-user-account-deleted,-azure-ad-account-soft-deleted,-online-mailbox-present)
-- [Mailbox Soft Deleted](#ad-account-deleted,-online-account-soft-deleted,-online-mailbox-soft-deleted)
-- [Mailbox Not Present](#ad-user-account-deleted,-azure-ad-account-soft-deleted,-online-mailbox-not-present)
+- [Mailbox Present](#ad-user-account-deleted-azure-ad-account-soft-deleted-online-mailbox-present)
+- [Mailbox Soft Deleted](#ad-account-deleted-online-account-soft-deleted-online-mailbox-soft-deleted)
+- [Mailbox Not Present](#ad-user-account-deleted-azure-ad-account-soft-deleted-online-mailbox-not-present)
 
 ### Exchange Online Mailbox Status (on-premises user account is Deleted and Azure Active Directory user account is Hard Deleted)
 
@@ -787,6 +787,6 @@ Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange
 
 7. If nothing is returned from steps 5 & 6 above, select the **MAILBOX NOT PRESENT** option.
 
-- [Mailbox Present](#ad-user-account-deleted,-azure-ad-account-hard-deleted,-online-mailbox-present)
-- [Mailbox Soft Deleted](#ad-user-account-deleted,-azure-ad-account-hard-deleted,-online-mailbox-soft-deleted)
-- [Mailbox Not Present](#ad-user-account-deleted,-azure-ad-account-hard-deleted,-online-mailbox-not-present)
+- [Mailbox Present](#ad-user-account-deleted-azure-ad-account-hard-deleted-online-mailbox-present)
+- [Mailbox Soft Deleted](#ad-user-account-deleted-azure-ad-account-hard-deleted-online-mailbox-soft-deleted)
+- [Mailbox Not Present](#ad-user-account-deleted-azure-ad-account-hard-deleted-online-mailbox-not-present)

@@ -41,7 +41,7 @@ We'll begin by asking you the task you want to do. Then we'll take you through a
 
 Select the scenario that you are trying to configure for your users. After you select the scenario, follow the step-by-step instructions.
 
-- [Set up a shared calendar or contacts list for my entire organization or large group of users](#which-office-365-plan-do-you-use)
+- [Set up a shared calendar or contacts list for my entire organization or large group of users](#which-microsoft-365-plan-do-you-use)
 - [Share calendar or contacts with specific users](#what-do-you-want-to-share)
 
 ### Which Microsoft 365 plan do you use
@@ -235,8 +235,8 @@ Specify if you would like to share either your calendar or contacts with specifi
 > [!NOTE]
 > Contacts can only be shared via the Microsoft Office Outlook email client.
 
-- [Calendar](#which-email-client-is-in-use-(if-you-want-to-share-calendar))
-- [Contact](#which-email-client-is-in-use-(if-you-want-to-share-contact))
+- [Calendar](#which-email-client-is-in-use-if-you-want-to-share-calendar)
+- [Contact](#which-email-client-is-in-use-if-you-want-to-share-contact)
 
 ### Which email client is in use (if you want to share calendar)
 
@@ -266,7 +266,7 @@ You can share your calendar with specific users who can be located both within y
 
 3. In the email that opens, type the name of the person in your organization that you want to share your calendar with in the **To** box. In **Details**, specify the level of details that you want to share with the person in your organization, and then select **Send**.
 
-    :::image type="content" source="media/how-to-share-calendar-and-contacts/send-shared-calendar.jpg" alt-text="Sending a shared calendar":::
+    :::image type="content" source="media/how-to-share-calendar-and-contacts/send-shared-calendar.jpg" alt-text="Sending a shared calendar 1":::
 
 4. The person in your organization receives the sharing invitation in email, and then select **Open this calendar**.
 
@@ -309,11 +309,11 @@ You can share your calendar with specific users who can be located both within y
 
 3. In the email that opens, type the name of the person outside of your organization that you want to share your calendar with in the **To** box. In **Details**, specify the level of details that you want to share with the person outside of your organization, and then click **Send**.
 
-    :::image type="content" source="media/how-to-share-calendar-and-contacts/send-shared-calendar.jpg" alt-text="Sending a shared calendar":::
+    :::image type="content" source="media/how-to-share-calendar-and-contacts/send-shared-calendar.jpg" alt-text="Sending a shared calendar 2":::
 
    If the following error displays when you try to send your sharing invitation, you have tried to share more details than is supported by the settings in your organization. If this occurs, under Details, choose to share a different level of details. Only an admin in your organization can change the sharing policy settings for your organization. For more information, see the end of this section.
 
-    :::image type="content" source="media/how-to-share-calendar-and-contacts/error-when-sending-sharing-invitation.png" alt-text="Sending a shared calendar":::
+    :::image type="content" source="media/how-to-share-calendar-and-contacts/error-when-sending-sharing-invitation.png" alt-text="Sending a shared calendar 3":::
 
 4. The person outside of your organization receives the sharing invitation in email, and then clicks Open this calendar.
 
@@ -346,8 +346,8 @@ You can share your calendar with specific users who can be located both within y
 
 You can share your calendar with specific users who can be located both within your organization or any external organization (such as an outside partner, vendor etc.)
 
-- [Same organization as me](#share-calendar-within-the-organization-using-outlook-web-app-(owa))
-- [External organization](#share-calendar-outside-the-organization-using-outlook-web-app-(owa))
+- [Same organization as me](#share-calendar-within-the-organization-using-outlook-web-app-owa)
+- [External organization](#share-calendar-outside-the-organization-using-outlook-web-app-owa)
 
 ### Share calendar within the organization using Outlook Web App (OWA)
 
@@ -375,20 +375,20 @@ Each person in your organization that you shared your calendar with will receive
 
 The calendar will display under PEOPLE'S CALENDARS.
 
-:::image type="content" source="media/how-to-share-calendar-and-contacts/calendar-shown-under-peoples-calendars.jpg" alt-text="The calendar displayed under PEOPLE’S CALENDARS" border="false":::
+:::image type="content" source="media/how-to-share-calendar-and-contacts/calendar-shown-under-peoples-calendars.jpg" alt-text="The calendar displayed under PEOPLE'S CALENDARS 1" border="false":::
 
 #### To change calendar sharing permissions
 
 1. Right-click the calendar you want to change permission for, and then select **Permissions**.
 
-    :::image type="content" source="media/how-to-share-calendar-and-contacts/change-permissions-on-calendar.png" alt-text="The calendar displayed under PEOPLE’S CALENDARS" border="false":::
+    :::image type="content" source="media/how-to-share-calendar-and-contacts/change-permissions-on-calendar.png" alt-text="The calendar displayed under PEOPLE'S CALENDARS 2" border="false":::
 
 2. Do one of the following, and then select **Save**:
 
    - Use the drop-down menu to change the level of details that you are sharing with a person.
    - Select the delete icon![delete icon](./media/how-to-share-calendar-and-contacts/delete-icon.png) to stop sharing your calendar with a person.
 
-        :::image type="content" source="media/how-to-share-calendar-and-contacts/stop-sharing-calendar.png" alt-text="The calendar displayed under PEOPLE’S CALENDARS" border="false":::
+        :::image type="content" source="media/how-to-share-calendar-and-contacts/stop-sharing-calendar.png" alt-text="The calendar displayed under PEOPLE'S CALENDARS 3" border="false":::
 
 **Did this solve your problem?**
 
@@ -421,20 +421,20 @@ If your organization and the organization of the person you are sharing your cal
 
 If the external user's organization and your organization are federated through Microsoft 365 or Exchange, the person will see your calendar under PEOPLE's CALENDARS. However, if the external user's organization and your organization are not federated through Microsoft 365 or Exchange, the user will need to access your mailbox by clicking the URL in the body of the message.
 
-:::image type="content" source="media/how-to-share-calendar-and-contacts/calendar-shown-under-peoples-calendars.jpg" alt-text="The calendar displayed under PEOPLE’S CALENDARS" border="false":::
+:::image type="content" source="media/how-to-share-calendar-and-contacts/calendar-shown-under-peoples-calendars.jpg" alt-text="The calendar displayed under PEOPLE'S CALENDARS 4" border="false":::
 
 #### To change calendar sharing permissions
 
 1. Right-click the calendar you want to change permission for, and then select **Permissions**.
 
-    :::image type="content" source="media/how-to-share-calendar-and-contacts/change-permissions-on-calendar.png" alt-text="The calendar displayed under PEOPLE’S CALENDARS" border="false":::
+    :::image type="content" source="media/how-to-share-calendar-and-contacts/change-permissions-on-calendar.png" alt-text="The calendar displayed under PEOPLE'S CALENDARS 5" border="false":::
 
 2. Do one of the following, and then select **Save**:
 
    - Use the drop-down menu to change the level of details that you are sharing with a person.
    - Select the delete icon![delete icon](./media/how-to-share-calendar-and-contacts/delete-icon.png) to stop sharing your calendar with a person.
 
-        :::image type="content" source="media/how-to-share-calendar-and-contacts/stop-sharing-calendar.png" alt-text="The calendar displayed under PEOPLE’S CALENDARS" border="false":::
+        :::image type="content" source="media/how-to-share-calendar-and-contacts/stop-sharing-calendar.png" alt-text="The calendar displayed under PEOPLE'S CALENDARS 6" border="false":::
 
 **Did this solve your problem?**
 
@@ -467,7 +467,7 @@ You can share a contacts folder with people that are located in your organizatio
 
 3. In the **To** box, enter the name of the recipient for the sharing invitation message. If you want to, you can change the **Subject**.
 
-   :::image type="content" source="media/how-to-share-calendar-and-contacts/send-shared-contact.jpg" alt-text="send a shared contact":::
+   :::image type="content" source="media/how-to-share-calendar-and-contacts/send-shared-contact.jpg" alt-text="send a shared contact 1":::
 
 4. If you want to, request permission to view the recipient's default **People** folder. To do so, select the **Request permission to view recipient's Contacts** folder check box.
 
@@ -510,7 +510,7 @@ You can share a contacts folder with people that are located in your organizatio
 
 3. In the **To** box, enter the name of the recipient for the sharing invitation message. If you want to, you can change the **Subject**.
 
-   :::image type="content" source="media/how-to-share-calendar-and-contacts/send-shared-contact.jpg" alt-text="send a shared contact":::
+   :::image type="content" source="media/how-to-share-calendar-and-contacts/send-shared-contact.jpg" alt-text="send a shared contact 2":::
 
 4. If you want to, request permission to view the recipient's default **People** folder. To do so, select the **Request permission to view recipient's Contacts** folder check box.
 
@@ -521,11 +521,11 @@ You can share a contacts folder with people that are located in your organizatio
 
    If the following error displays when you try to send the sharing invitation, sharing contacts with people outside of your organization is not supported by the sharing policy for your organization. Only an admin in your organization can change the sharing policy for your organization. For more information, see the end of this section.
 
-   :::image type="content" source="media/how-to-share-calendar-and-contacts/folder-sharing-is-not-available-error.png" alt-text="send a shared contact" border="false":::
+   :::image type="content" source="media/how-to-share-calendar-and-contacts/folder-sharing-is-not-available-error.png" alt-text="send a shared contact 3" border="false":::
 
 6. The person in your organization receives the sharing invitation in email, and clicks **Open this Contacts folder.
 
-   :::image type="content" source="media/how-to-share-calendar-and-contacts/open-this-calendar.jpg" alt-text="send a shared contact":::
+   :::image type="content" source="media/how-to-share-calendar-and-contacts/open-this-calendar.jpg" alt-text="send a shared contact 4":::
 
 #### To change contact folder sharing permissions
 
@@ -563,7 +563,7 @@ If you receive sharing policy errors when you try to send calendar or contact fo
 
 Select the role you are in your organization to continue.
 
-- [End User](#share-calendar-outside-the-organization-using-microsoft-outlook-(end-user))
+- [End User](#share-calendar-outside-the-organization-using-microsoft-outlook-end-user)
 - [Office 365 administrator](#change-the-default-sharing-policy-in-microsoft-365)
 
 ### Share calendar outside the organization using Microsoft Outlook (End user)

@@ -53,17 +53,17 @@ We'll begin by asking you questions about the Outlook version you are using and 
 ## Select your version of Outlook
 
 - [Outlook 2016](#open-a-shared-calendar-in-outlook-2016)
-- [Outlook 2016 (only for Office 365 users on Monthly Channel)](#open-a-shared-calendar-in-outlook-2016-(only-for-office-365-users-on-monthly-channel))
+- [Outlook 2016 (only for Office 365 users on Monthly Channel)](#open-a-shared-calendar-in-outlook-2016-only-for-office-365-users-on-monthly-channel)
 - [Outlook 2013](#open-a-shared-calendar-in-outlook-2013)
 - [Outlook 2010](#open-a-shared-calendar-in-outlook-2010)
 - [Outlook 2007](#open-a-shared-calendar-in-outlook-2007)
-- [Outlook.com](#open-a-shared-calendar-from-outlook.com)
+- [Outlook.com](#open-a-shared-calendar-from-outlookcom)
 - [Outlook 2016 for Mac](#open-a-shared-calendar-in-outlook-2016-for-mac)
 - [Outlook for Mac 2011](#open-a-shared-calendar-in-outlook-for-mac-2011)
 - [Outlook on the web](#open-a-shared-calendar-in-outlook-on-the-web)
 - [Outlook Web App](#open-a-shared-calendar-in-outlook-web-app)
-- [Outlook App on mobile/tablet devices](#workaround-for-opening-shared-calendar-on-mobile/tablet-devices)
-- [Outlook mobile apps for iOS & Android](#open-a-shared-calendar-in-outlook-mobile-apps-for-ios-&-android)
+- [Outlook App on mobile/tablet devices](#workaround-for-opening-shared-calendar-on-mobiletablet-devices)
+- [Outlook mobile apps for iOS & Android](#open-a-shared-calendar-in-outlook-mobile-apps-for-ios-android)
 
 ### Don't know which version of Outlook you are running
 
@@ -86,7 +86,7 @@ If you do not find either Office Account or Help on the File menu, then follow t
 
    2. The product version will be listed here.
 
-      :::image type="content" source="media/how-to-open-shared-calendar/product-version.jpg" alt-text="find the product version":::
+      :::image type="content" source="media/how-to-open-shared-calendar/product-version.jpg" alt-text="find the product version 1":::
 
    3. Select **OK**.
 
@@ -98,7 +98,7 @@ If you do not find either Office Account or Help on the File menu, then follow t
 
    2. The product version will be listed here.
 
-      :::image type="content" source="media/how-to-open-shared-calendar/product-version-outlook-2010.png" alt-text="find the product version":::
+      :::image type="content" source="media/how-to-open-shared-calendar/product-version-outlook-2010.png" alt-text="find the product version 2":::
 
    3. Select **OK**.
 
@@ -109,7 +109,7 @@ If you do not find either Office Account or Help on the File menu, then follow t
       :::image type="content" source="media/how-to-open-shared-calendar/about-microsoft-office-outlook.png" alt-text="About Microsoft Office Outlook":::
 
    2. The product version will be listed here.
-      :::image type="content" source="media/how-to-open-shared-calendar/product-version-outlook-2007.png" alt-text="find the product version of Outlook 2007":::
+      :::image type="content" source="media/how-to-open-shared-calendar/product-version-outlook-2007.png" alt-text="find the product version of Outlook 2007 1":::
 
    3. Select **OK**.
 
@@ -118,7 +118,7 @@ If you do not find either Office Account or Help on the File menu, then follow t
 1. Start Outlook for Mac.
 2. On the **Outlook** menu, select **About Outlook**.
 
-   :::image type="content" source="media/how-to-open-shared-calendar/about-outlook-in-outlook-for-mac.png" alt-text="find the product version of Outlook 2007" border="false":::
+   :::image type="content" source="media/how-to-open-shared-calendar/about-outlook-in-outlook-for-mac.png" alt-text="find the product version of Outlook 2007 2" border="false":::
 
 3. The About Outlook window will appear similar to one of the following, depending on your version of Outlook for Mac.
 
@@ -152,8 +152,8 @@ To open a shared calendar from the Outlook sharing invitation, select **Open thi
 **If you see something different, what problem do you encounter?**
 
 - [There is no Open this Calendar option](#there-is-no-open-this-calendar-option)
-- [You see nothing when you open the shared calendar](#you-see-nothing-or-you-don't-have-the-necessary-permission-to-open-the-shared-calendar)
-- [You don't have the necessary permission to view a shared calendar](#you-see-nothing-or-you-don't-have-the-necessary-permission-to-open-the-shared-calendar)
+- [You see nothing when you open the shared calendar](#you-see-nothing-or-you-dont-have-the-necessary-permission-to-open-the-shared-calendar)
+- [You don't have the necessary permission to view a shared calendar](#you-see-nothing-or-you-dont-have-the-necessary-permission-to-open-the-shared-calendar)
 
 ### Open a shared calendar in Outlook for Mac 2011
 
@@ -180,9 +180,9 @@ To open the shared calendar, follow these steps:
 
 - [The "Open Shared Calendar" is not available or greyed out](#the-open-shared-calendar-is-not-available)
 - [You see nothing when you open the shared calendar](#open-a-shared-calendar-in-outlook-web-app)
-- [You don't have the necessary permission to view a shared calendar](#you-don’t-have-permission-to-view-a-shared-calendar-in-outlook-2016-for-mac-or-outlook-for-mac-2011)
-- [You get blank calendar or permission error when open shared calendar on Mac even if you have free/busy permission](#you-get-blank-calendar-or-permission-error-on-mac-even-if-you-have-free/busy-permission-in-outlook-2016-for-mac-or-outlook-for-mac-2011)
-- [You cannot open one or more of the shared Calendar folders when you have access to multiple shared Calendar folders](#can't-open-one-or-more-of-the-shared-calendar-folders-in-outlook-2016-for-mac-or-outlook-for-mac-2011)
+- [You don't have the necessary permission to view a shared calendar](#you-dont-have-permission-to-view-a-shared-calendar-in-outlook-2016-for-mac-or-outlook-for-mac-2011)
+- [You get blank calendar or permission error when open shared calendar on Mac even if you have free/busy permission](#you-get-blank-calendar-or-permission-error-on-mac-even-if-you-have-freebusy-permission-in-outlook-2016-for-mac-or-outlook-for-mac-2011)
+- [You cannot open one or more of the shared Calendar folders when you have access to multiple shared Calendar folders](#cant-open-one-or-more-of-the-shared-calendar-folders-in-outlook-2016-for-mac-or-outlook-for-mac-2011)
 - [The problem isn't listed above](#workaround-for-opening-shared-calendar-on-mac-system)
 
 ### Open a shared calendar in Outlook Web App
@@ -197,8 +197,8 @@ To open a shared calendar from the sharing invitation, select **Accept** to open
 **If you see something different, what problem do you encounter?**
 
 - [There is no Accept option](#there-is-no-accept-option)
-- [You see nothing when you open the shared calendar](#you-see-nothing-or-you-don't-have-the-necessary-permission-to-open-the-shared-calendar)
-- [You don't have the necessary permission to view a shared calendar](#you-see-nothing-or-you-don't-have-the-necessary-permission-to-open-the-shared-calendar)
+- [You see nothing when you open the shared calendar](#you-see-nothing-or-you-dont-have-the-necessary-permission-to-open-the-shared-calendar)
+- [You don't have the necessary permission to view a shared calendar](#you-see-nothing-or-you-dont-have-the-necessary-permission-to-open-the-shared-calendar)
 
 ### There is no Accept option
 
@@ -340,12 +340,12 @@ In Outlook on the Web or Outlook Web App, select ![Outlook Calendar icon](./medi
 
 To open a shared calendar from the Outlook sharing invitation, select **Open this Calendar** in the sharing invitation.
 
-:::image type="content" source="media/how-to-open-shared-calendar/open-this-calendar.png" alt-text="select Open this Calendar in the sharing invitation" border="false":::
+:::image type="content" source="media/how-to-open-shared-calendar/open-this-calendar.png" alt-text="select Open this Calendar in the sharing invitation 1" border="false":::
 
 **If you see something different, what problem do you encounter?**
 
-- [You see nothing when you open the shared calendar](#you-see-nothing-or-you-don't-have-the-necessary-permission-to-open-the-shared-calendar)
-- [You don't have the necessary permission to view a shared calendar](#you-see-nothing-or-you-don't-have-the-necessary-permission-to-open-the-shared-calendar)
+- [You see nothing when you open the shared calendar](#you-see-nothing-or-you-dont-have-the-necessary-permission-to-open-the-shared-calendar)
+- [You don't have the necessary permission to view a shared calendar](#you-see-nothing-or-you-dont-have-the-necessary-permission-to-open-the-shared-calendar)
 - [The Outlook stops responding](#outlook-2016-stops-responding-when-you-try-to-open-shared-calendar)
 - [The problem isn't listed above](#get-other-errors-when-you-try-to-open-shared-calendar)
 
@@ -372,7 +372,7 @@ To open the shared calendar, follow these steps:
 
 3. Select their name, and select **Open**.
 
-    :::image type="content" source="media/how-to-open-shared-calendar/open-by-searching-user.png" alt-text="search user name to open a shared calendar" border="false":::
+    :::image type="content" source="media/how-to-open-shared-calendar/open-by-searching-user.png" alt-text="search user name to open a shared calendar 1" border="false":::
 
     > [!NOTE]
     > The shared calendar appears in the left navigation pane under the **Shared Calendar** heading, with the person's name who shared the calendar below it.
@@ -380,9 +380,9 @@ To open the shared calendar, follow these steps:
 **If you cannot open the shared calendar, what problem do you encounter?**
 
 - [The Open Shared Calendar is not available or greyed out](#the-open-shared-calendar-is-not-available)
-- [You don't have the necessary permission to view a shared calendar](#you-don't-have-permission-to-view-a-shared-calendar-in-outlook-2016-for-mac-or-outlook-for-mac-2011)
-- [You get blank calendar or permission error when open shared calendar on Mac even if you have free/busy permission](#you-get-blank-calendar-or-permission-error-on-mac-even-if-you-have-free/busy-permission-in-outlook-2016-for-mac-or-outlook-for-mac-2011)
-- [You cannot open one or more of the shared Calendar folders when you have access to multiple shared Calendar folders](#can't-open-one-or-more-of-the-shared-calendar-folders-in-outlook-2016-for-mac-or-outlook-for-mac-2011)
+- [You don't have the necessary permission to view a shared calendar](#you-dont-have-permission-to-view-a-shared-calendar-in-outlook-2016-for-mac-or-outlook-for-mac-2011)
+- [You get blank calendar or permission error when open shared calendar on Mac even if you have free/busy permission](#you-get-blank-calendar-or-permission-error-on-mac-even-if-you-have-freebusy-permission-in-outlook-2016-for-mac-or-outlook-for-mac-2011)
+- [You cannot open one or more of the shared Calendar folders when you have access to multiple shared Calendar folders](#cant-open-one-or-more-of-the-shared-calendar-folders-in-outlook-2016-for-mac-or-outlook-for-mac-2011)
 - [You see nothing when you open the shared calendar](#open-a-shared-calendar-in-outlook-web-app)
 - [The problem isn't listed above](#workaround-for-opening-shared-calendar-on-mac-system)
 
@@ -414,7 +414,7 @@ To work around this issue, use one of the following methods:
 2. Expand **My Calendars** to display the Exchange mailbox calendar, the On My Computer calendar, and calendars that are associated with any other accounts that are open in Outlook for Mac.
 3. Select the **Exchange** check box.
 
-    :::image type="content" source="media/how-to-open-shared-calendar/exchange-check-box.png" alt-text="search user name to open a shared calendar":::
+    :::image type="content" source="media/how-to-open-shared-calendar/exchange-check-box.png" alt-text="search user name to open a shared calendar 2":::
 
 After you do this, the **Open Shared Calendar** button on the ribbon is available.
 
@@ -450,13 +450,13 @@ After you do this, the **Open Shared Calendar** button on the ribbon is availabl
 
 To open a shared calendar from the Outlook sharing invitation, select **Open this Calendar** in the sharing invitation.
 
-:::image type="content" source="media/how-to-open-shared-calendar/open-this-calendar.png" alt-text="select Open this Calendar in the sharing invitation" border="false":::
+:::image type="content" source="media/how-to-open-shared-calendar/open-this-calendar.png" alt-text="select Open this Calendar in the sharing invitation 2" border="false":::
 
 **If you see something different, what problem do you encounter?**
 
 - [There is no Open this Calendar option](#there-is-no-open-this-calendar-option)
-- [You see nothing when you open the shared calendar](#you-see-nothing-or-you-don't-have-the-necessary-permission-to-open-the-shared-calendar)
-- [You don't have the necessary permission to view a shared calendar](#can't-open-one-or-more-of-the-shared-calendar-folders-in-outlook-2016-for-mac-or-outlook-for-mac-2011)
+- [You see nothing when you open the shared calendar](#you-see-nothing-or-you-dont-have-the-necessary-permission-to-open-the-shared-calendar)
+- [You don't have the necessary permission to view a shared calendar](#cant-open-one-or-more-of-the-shared-calendar-folders-in-outlook-2016-for-mac-or-outlook-for-mac-2011)
 - [You receive error message when open this shared calendar](#you-receive-error-message-when-you-open-shared-calendar-in-outlook-2013)
 
 ### Open a shared calendar in Outlook 2007
@@ -466,13 +466,13 @@ To open a shared calendar from the Outlook sharing invitation, select **Open thi
 
 To open a shared calendar from the Outlook sharing invitation, select **Open this Calendar** in the sharing invitation.
 
-:::image type="content" source="media/how-to-open-shared-calendar/open-this-calendar-in-sharing-invitaion.png" alt-text="select Open this Calendar in the sharing invitation" border="false":::
+:::image type="content" source="media/how-to-open-shared-calendar/open-this-calendar-in-sharing-invitaion.png" alt-text="select Open this Calendar in the sharing invitation 3" border="false":::
 
 **If you see something different, what problem do you encounter?**
 
 - [There is no Open this Calendar option](#there-is-no-open-this-calendar-option)
-- [You see nothing when you open the shared calendar](#you-see-nothing-or-you-don't-have-the-necessary-permission-to-open-the-shared-calendar)
-- [You don't have the necessary permission to view a shared calendar](#you-see-nothing-or-you-don't-have-the-necessary-permission-to-open-the-shared-calendar)
+- [You see nothing when you open the shared calendar](#you-see-nothing-or-you-dont-have-the-necessary-permission-to-open-the-shared-calendar)
+- [You don't have the necessary permission to view a shared calendar](#you-see-nothing-or-you-dont-have-the-necessary-permission-to-open-the-shared-calendar)
 
 ### Additional resources
 
@@ -674,8 +674,8 @@ Log in Outlook on the Web or Outlook Web App with your Exchange or Office 365 ac
 **If you see something different, what problem do you encounter?**
 
 - [There is no Accept option](#there-is-no-accept-option)
-- [You see nothing when you open the shared calendar](#you-see-nothing-or-you-don't-have-the-necessary-permission-to-open-the-shared-calendar)
-- [You don't have the necessary permission to view a shared calendar](#you-see-nothing-or-you-don't-have-the-necessary-permission-to-open-the-shared-calendar)
+- [You see nothing when you open the shared calendar](#you-see-nothing-or-you-dont-have-the-necessary-permission-to-open-the-shared-calendar)
+- [You don't have the necessary permission to view a shared calendar](#you-see-nothing-or-you-dont-have-the-necessary-permission-to-open-the-shared-calendar)
 
 ### Open a shared calendar in Outlook 2016 (only for Office 365 users on Monthly Channel)
 

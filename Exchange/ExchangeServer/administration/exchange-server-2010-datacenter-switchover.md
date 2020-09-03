@@ -59,21 +59,21 @@ Is the primary datacenter online or physically accessible?
 
 Do the remote and primary datacenters have network connectivity?
 
-- If yes, see [Exchange Servers Online](#exchange-servers-online-(if-remote-and-primary-datacenters-have-network-connectivity)).
-- If no, see [Exchange Servers Online](#exchange-servers-online-(if-remote-and-primary-datacenters-don't-have-network-connectivity)).
+- If yes, see [Exchange Servers Online](#exchange-servers-online-if-remote-and-primary-datacenters-have-network-connectivity).
+- If no, see [Exchange Servers Online](#exchange-servers-online-if-remote-and-primary-datacenters-don't-have-network-connectivity).
 
 ### Exchange Servers Online (if remote and primary datacenters have network connectivity)
 
 Are the Exchange servers in the primary datacenter online?
 
-- If yes, see [DAG Extended](#dag-extended-(if-exchange-servers-are-in-primary-datacenter-online)).
-- If no, see [DAG Extended](#dag-extended-(if-exchange-servers-aren't-in-primary-datacenter-online)).
+- If yes, see [DAG Extended](#dag-extended-if-exchange-servers-are-in-primary-datacenter-online).
+- If no, see [DAG Extended](#dag-extended-if-exchange-servers-aren't-in-primary-datacenter-online).
 
 ### DAG Extended (if Exchange servers are in primary datacenter online)
 
 Is your DAG extended to multiple Active Directory sites?
 
-- If yes, see [Run the Stop-DatabaseAvailabilityGroup cmdlet in the shell](#run-stop-databaseavailabilitygroup-in-the-shell-(if-dag-is-extended-to-multiple-ad-sites)).
+- If yes, see [Run the Stop-DatabaseAvailabilityGroup cmdlet in the shell](#run-stop-databaseavailabilitygroup-in-the-shell-if-dag-is-extended-to-multiple-ad-sites).
 - If no, see [Run the Stop-DatabaseAvailabilityGroup cmdlet in the shell](#run-stop-databaseavailabilitygroup-if-dag-not-extended-to-ad-sites).
 
 ### Run Stop-DatabaseAvailabilityGroup in the shell (if DAG is extended to multiple AD sites)
@@ -116,7 +116,7 @@ Cluster node /forcecleanup
 
 **Did the Stop-DatabaseAvailabilityGroup command complete correctly?**
 
-- If yes, see [Restore-DatabaseAvailabilityGroup](#restore-databaseavailabilitygroup-(if-stop-databaseavailabilitygroup-completes-correctly)).
+- If yes, see [Restore-DatabaseAvailabilityGroup](#restore-databaseavailabilitygroup-if-stop-databaseavailabilitygroup-completes-correctly).
 - If no, go to [Contact Microsoft Support](#contact-microsoft-support).
 
 ### Run Stop-DatabaseAvailabilityGroup if DAG not extended to AD sites
@@ -159,7 +159,7 @@ Cluster node /forcecleanup
 
 **Did the Stop-DatabaseAvailabilityGroup command complete correctly?**
 
-- If yes, see [Restore-DatabaseAvailabilityGroup](#restore-databaseavailabilitygroup-(if-stop-databaseavailabilitygroup-completes-correctly)).
+- If yes, see [Restore-DatabaseAvailabilityGroup](#restore-databaseavailabilitygroup-if-stop-databaseavailabilitygroup-completes-correctly).
 - If no, go to [Contact Microsoft Support](#contact-microsoft-support).
 
 ### DAG Extended (if Exchange servers aren't in primary datacenter online)
@@ -167,7 +167,7 @@ Cluster node /forcecleanup
 Is your DAG extended to multiple Active Directory sites?
 
 - If yes, see [Run the Stop-DatabaseAvailabilityGroup cmdlet in the shell](#run-stop-databaseavailabilitygroup-if-dag-is-extended-to-ad-sites).
-- If no, see [Run the Stop-DatabaseAvailabilityGroup cmdlet in the shell](#run-stop-databaseavailabilitygroup-if-dag-isn't-extended-to-multiple-ad-sites).
+- If no, see [Run the Stop-DatabaseAvailabilityGroup cmdlet in the shell](#run-stop-databaseavailabilitygroup-if-dag-isnt-extended-to-multiple-ad-sites).
 
 ### Run Stop-DatabaseAvailabilityGroup in the shell (DAG is extended to multiple AD sites)
 
@@ -196,7 +196,7 @@ To verify that the command completed correctly, follow these steps:
 
 **Did the Stop-DatabaseAvailabilityGroup command complete correctly?**
 
-- If yes, see [Restore-DatabaseAvailabilityGroup](#restore-databaseavailabilitygroup-(if-stop-databaseavailabilitygroup-completes-correctly)).
+- If yes, see [Restore-DatabaseAvailabilityGroup](#restore-databaseavailabilitygroup-if-stop-databaseavailabilitygroup-completes-correctly).
 - If no, go to [Contact Microsoft Support](#contact-microsoft-support).
 
 ### Run the Stop-DatabaseAvailabilityGroup cmdlet in the shell (DAG isn't extended to multiple AD sites)
@@ -226,22 +226,22 @@ To verify that the command completed correctly, follow these steps:
 
 **Did the Stop-DatabaseAvailabilityGroup command complete correctly?**
 
-- If yes, see [Restore-DatabaseAvailabilityGroup](#restore-databaseavailabilitygroup-(if-stop-databaseavailabilitygroup-completes-correctly)).
+- If yes, see [Restore-DatabaseAvailabilityGroup](#restore-databaseavailabilitygroup-if-stop-databaseavailabilitygroup-completes-correctly).
 - If no, go to [Contact Microsoft Support](#contact-microsoft-support).
 
 ### Exchange Servers Online (if remote and primary datacenters don't have network connectivity)
 
 Are the Exchange servers in the primary datacenter online?
 
-- If yes, see [DAG extended to multiple Active Directory sites](#dag-extended-to-multiple-active-directory-sites-(if-exchange-servers-are-in-the-primary-datacenter-online)).
-- If no, see [DAG extended to multiple Active Directory sites](#dag-extended-(if-exchange-servers-aren't-in-primary-datacenter-online)).
+- If yes, see [DAG extended to multiple Active Directory sites](#dag-extended-to-multiple-active-directory-sites-if-exchange-servers-are-in-the-primary-datacenter-online).
+- If no, see [DAG extended to multiple Active Directory sites](#dag-extended-if-exchange-servers-arent-in-primary-datacenter-online).
 
 ### DAG extended to multiple Active Directory sites (if Exchange servers are in the primary datacenter online)
 
 Is your DAG extended to multiple Active Directory sites?
 
-- If yes, see [Run the Stop-DatabaseAvailabilityGroup cmdlet in the shell](#run-the-stop-databaseavailabilitygroup-cmdlet-in-the-shell-(dag-extended-to-multiple-active-directory-sites)).
-- If no, see [Run the Stop-DatabaseAvailabilityGroup cmdlet in the shell](#run-the-stop-databaseavailabilitygroup-cmdlet-in-the-shell-(dag-not-extended-to-multiple-active-directory-sites)).
+- If yes, see [Run the Stop-DatabaseAvailabilityGroup cmdlet in the shell](#run-the-stop-databaseavailabilitygroup-cmdlet-in-the-shell-dag-extended-to-multiple-active-directory-sites).
+- If no, see [Run the Stop-DatabaseAvailabilityGroup cmdlet in the shell](#run-the-stop-databaseavailabilitygroup-cmdlet-in-the-shell-dag-not-extended-to-multiple-active-directory-sites).
 
 ### Run the Stop-DatabaseAvailabilityGroup cmdlet in the shell (DAG extended to multiple Active Directory sites)
 
@@ -343,14 +343,14 @@ Cluster node /forcecleanup.
 
 **Did the Stop-DatabaseAvailabilityGroup command complete correctly?**
 
-- If yes, see [Restore-DatabaseAvailabilityGroup](#restore-databaseavailabilitygroup-(if-stop-databaseavailabilitygroup-completes-correctly)).
+- If yes, see [Restore-DatabaseAvailabilityGroup](#restore-databaseavailabilitygroup-if-stop-databaseavailabilitygroup-completes-correctly).
 - If no, go to [Contact Microsoft Support](#contact-microsoft-support).
 
 ### DAG extended to multiple Active Directory sites
 
 Is your DAG extended to multiple Active Directory sites?
 
-- If yes, see [Run the Stop-DatabaseAvailabilityGroup cmdlet in the shell](#run-stop-databaseavailabilitygroup-in-the-shell-(dag-is-extended-to-multiple-ad-sites)).
+- If yes, see [Run the Stop-DatabaseAvailabilityGroup cmdlet in the shell](#run-stop-databaseavailabilitygroup-in-the-shell-dag-is-extended-to-multiple-ad-sites).
 - If no, see [Run the Stop-DatabaseAvailabilityGroup cmdlet in the shell](#run-stop-databaseavailabilitygroup-if-dag-isn't-extended-to-multiple-ad-sites).
 
 ### Run Stop-DatabaseAvailabilityGroup if DAG is extended to AD sites
@@ -380,7 +380,7 @@ To verify that the command completed correctly, follow these steps:
 
 **Did the Stop-DatabaseAvailabilityGroup command complete correctly?**
 
-- If yes, see [Restore-DatabaseAvailabilityGroup](#restore-databaseavailabilitygroup-(if-stop-databaseavailabilitygroup-completes-correctly)).
+- If yes, see [Restore-DatabaseAvailabilityGroup](#restore-databaseavailabilitygroup-if-stop-databaseavailabilitygroup-completes-correctly).
 - If no, go to [Contact Microsoft Support](#contact-microsoft-support).
 
 ### Run Stop-DatabaseAvailabilityGroup if DAG isn't extended to multiple AD sites
@@ -410,7 +410,7 @@ The `StoppedMailboxServer` list should show all mailbox servers in the primary d
 
 **Did the Stop-DatabaseAvailabilityGroup command complete correctly?**
 
-- If yes, see [Restore-DatabaseAvailabilityGroup](#restore-databaseavailabilitygroup-(if-stop-databaseavailabilitygroup-completes-correctly)).
+- If yes, see [Restore-DatabaseAvailabilityGroup](#restore-databaseavailabilitygroup-if-stop-databaseavailabilitygroup-completes-correctly).
 - If no, go to [Contact Microsoft Support](#contact-microsoft-support).
 
 ### You have physical access to a primary data center that is not connected by a network
@@ -440,7 +440,7 @@ To verify that the command completed correctly, follow these steps:
 
 **Did the Stop-DatabaseAvailabilityGroup command complete correctly?**
 
-- If yes, see [Restore-DatabaseAvailabilityGroup](#restore-databaseavailabilitygroup-(if-stop-databaseavailabilitygroup-completes-correctly)).
+- If yes, see [Restore-DatabaseAvailabilityGroup](#restore-databaseavailabilitygroup-if-stop-databaseavailabilitygroup-completes-correctly).
 - If no, go to [Contact Microsoft Support](#contact-microsoft-support).
 
 ### Run the Stop-DatabaseAvailabilityGroup cmdlet
@@ -470,7 +470,7 @@ To verify that the command completed correctly, follow these steps:
 
 **Did the Stop-DatabaseAvailabilityGroup command complete correctly?**
 
-- If yes, see [Restore-DatabaseAvailabilityGroup](#restore-databaseavailabilitygroup-(if-stop-databaseavailabilitygroup-completes-correctly)).
+- If yes, see [Restore-DatabaseAvailabilityGroup](#restore-databaseavailabilitygroup-if-stop-databaseavailabilitygroup-completes-correctly).
 - If no, go to [Contact Microsoft Support](#contact-microsoft-support).
 
 ### Restore-DatabaseAvailabilityGroup (if Stop-DatabaseAvailabilityGroup completes correctly)
@@ -498,7 +498,7 @@ Cluster services are stopped on remaining nodes.
 
 **Is the Cluster service stopped on all DAG members in your recovery datacenter?**
 
-- If yes, see [Run the Restore-DatabaseAvailabilityGroup cmdlet in the shell](#run-the-restore-databaseavailabilitygroup-cmdlet-in-the-shell-(if-cluster-service-stopped-on-all-dag-members)).
+- If yes, see [Run the Restore-DatabaseAvailabilityGroup cmdlet in the shell](#run-the-restore-databaseavailabilitygroup-cmdlet-in-the-shell-if-cluster-service-stopped-on-all-dag-members).
 - If no, go to [Contact Microsoft Support](#contact-microsoft-support).
 
 ### Run the Restore-DatabaseAvailabilityGroup cmdlet in the shell (if Cluster service stopped on all DAG members)
@@ -614,15 +614,15 @@ Verify the Startup Type again.
 
 **Does the Cluster service show startup type as Disabled?**
 
-- If yes, see [DAG extended to multiple Active Directory sites](#dag-extended-to-multiple-active-directory-sites-(if-cluster-service-shows-startup-type-as-disabled)).
+- If yes, see [DAG extended to multiple Active Directory sites](#dag-extended-to-multiple-active-directory-sites-if-cluster-service-shows-startup-type-as-disabled).
 - If no, go to [Contact Microsoft Support](#contact-microsoft-support).
 
 ### DAG extended to multiple Active Directory sites (if Cluster service shows startup type as Disabled)
 
 Is your DAG extended to multiple Active Directory sites?
 
-- If yes, see [Start-DatabaseAvailabilityGroup](#start-databaseavailabilitygroup-(if-dag-is-extended-to-multiple-ad-sites)).
-- If no, see [Start-DatabaseAvailabilityGroup](#start-databaseavailabilitygroup-(if-dag-isn't-extended-to-multiple-ad-sites)).
+- If yes, see [Start-DatabaseAvailabilityGroup](#start-databaseavailabilitygroup-if-dag-is-extended-to-multiple-ad-sites).
+- If no, see [Start-DatabaseAvailabilityGroup](#start-databaseavailabilitygroup-if-dag-isn't-extended-to-multiple-ad-sites).
 
 ### Start-DatabaseAvailabilityGroup (if DAG is extended to multiple AD sites)
 
@@ -662,7 +662,7 @@ In the results, the `StartedMailboxServers` list should show all DAG members and
 
 **Were the DAG members added to the cluster successfully?**
 
-- If yes, see [Reset the DAG's Witness Server and Alternate Witness Server properties](#reset-the-dag's-witness-server-and-alternate-witness-server-properties).
+- If yes, see [Reset the DAG's Witness Server and Alternate Witness Server properties](#reset-the-dags-witness-server-and-alternate-witness-server-properties).
 - If no, go to [Contact Microsoft Support](#contact-microsoft-support).
 
 ### Start-DatabaseAvailabilityGroup (if DAG isn't extended to multiple AD sites)
@@ -701,7 +701,7 @@ In the results, the StartedMailboxServers list should show all DAG members and t
 
 **Were the DAG members added to the cluster successfully?**
 
-- If yes, [Reset the DAG's Witness Server and Alternate Witness Server properties](#reset-the-dag's-witness-server-and-alternate-witness-server-properties).
+- If yes, [Reset the DAG's Witness Server and Alternate Witness Server properties](#reset-the-dags-witness-server-and-alternate-witness-server-properties).
 - If no, go to [Contact Microsoft Support](#contact-microsoft-support).
 
 ### Reset the DAG's Witness Server and Alternate Witness Server properties
