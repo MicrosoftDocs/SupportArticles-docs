@@ -1,6 +1,6 @@
 ---
-title: StorSimple: User receives WebUI 
-description: Describes an issue that triggers an .
+title: StorSimple: StorSimple: User receives WebUI "Oops" error message
+description: Describes an issue that User receives WebUI "Oops" error message in StorSimple
 ms.date: 08/14/2020
 author: genlin
 ms.author: genli

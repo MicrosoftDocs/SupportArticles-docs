@@ -67,47 +67,54 @@ To resolve this issue, you must install the VMM hotfix by using the following in
 2. Double-click the HostMode_Hotfix.exe file, review the EULA, and then click Yes to accept.
 3. Choose a folder to store the extracted files, such as C:\HostModeHotfix, and then click OK.
 4. Determine the passive VMM node. To do this, open a Windows PowerShell ISE session and run the following script, where <Prefix> is your stamp prefix:
-
-        $VmmServerName = "<Prefix>-HA-VMM"
-        $vmmServer = Get-SCVMMServer -ComputerName $VmmServerName
-        $activeNode = $vmmServer.ActiveVMMNode
-        $passiveNodes = @()
-        $vmmServer.FailoverVMMNodes | ForEach- Object {
-        if($_.ToLower() -ne $activeNode.ToLower()){
-        $passiveNodes += $_
-        }
-        }
-        $passiveNodes
-
+    ```
+    $VmmServerName = "<Prefix>-HA-VMM"
+    $vmmServer = Get-SCVMMServer -ComputerName $VmmServerName
+    $activeNode = $vmmServer.ActiveVMMNode
+    $passiveNodes = @()
+    $vmmServer.FailoverVMMNodes | ForEach- Object {
+    if($_.ToLower() -ne $activeNode.ToLower()){
+    $passiveNodes += $_
+    }
+    }
+    $passiveNodes
+    ```
     This script returns the server name of the passive VMM node. In our example, we will assume that initially, Node2 is the passive node.
 5. In File Explorer, browse to the following folder on the passive node:
+    ```
+    \\<Prefix>-VMM-0#>\c$\Program Files\Microsoft System Center 2012 R2\Virtual Machine Manager \bin
+    ```
 
-        \\<Prefix>-VMM-0#>\c$\Program Files\Microsoft System Center 2012 R2\Virtual Machine Manager \bin
 6. Make backup copies of the following files in the \bin folder:
     - Engine.Common.dll
     - Utils.dll
 7. In the VMM console, determine which host (in the management cluster) the passive VMM node is running on.
 8. Open Hyper-V Manager, connect to the management cluster host that you identified in the previous step, and connect to the passive VMM node.
 9. On the VMM node, type powershell  to open an elevated Windows PowerShell session, and then run the following commands:
-
-        Stop-Service SCVMMService 
-        Stop-Service SCVMMAgent 
+    ```azurepowershell
+    Stop-Service SCVMMService 
+    Stop-Service SCVMMAgent 
+    ```
+       
 10. Verify that the services have stopped. To do this, run the following commands:
-
-        Get- Service SCVMMService 
-        Get-Service SCVMMAgent 
+    ```azurepowershell
+    Get- Service SCVMMService 
+    Get-Service SCVMMAgent 
+    ```
 
     Verify that the status of each is Stopped. If you're prompted to close the System Center Management Service Host process, click **Ignore**.
 11. On the Console VM, browse to the following folder on the passive node:
-
-        \\<Prefix>-VMM-0#> \c$\Program Files\Microsoft System Center 2012 R2\Virtual Machine Manager\bin
+    ``azurepowershell
+    \\<Prefix>-VMM-0#> \c$\Program Files\Microsoft System Center 2012 R2\Virtual Machine Manager\bin
+    ```
 12. In the \bin folder, replace the following files with the new versions of the files that you extracted from the hotfix package:
     - Engine.Common.dl
     - Utils.dll
 1. On the passive VMM node, run the following command to start the services:
-    
-        Start-Service SCVMMAgent 
-
+  
+    ```azurepowershell
+    Start-Service SCVMMAgent 
+    ```
     The SCVMMService will not start when the passive VMM server node is not active. The SCVMMService starts only when the node becomes the Active node. This is by design.
 14. In Failover Cluster Manager, initiate a failover. This will make Node1 become the new passive node and Node2 (which has already been updated) become the active node:
 
@@ -140,14 +147,16 @@ Description: Runs all health checks. Outputs warning information if critical Ope
 
 The Administrators Guide shows the following command to start the P&U run:
 
-    \\<Name of SOFS in rack 1>\SU1_InfrastructureShare1\<CPSPU Folder Name>\Framework \PatchingUpgrade\Invoke-PURun.ps1 -PUCredential $cred 
+```
+\\<Name of SOFS in rack 1>\SU1_InfrastructureShare1\<CPSPU Folder Name>\Framework \PatchingUpgrade\Invoke-PURun.ps1 -PUCredential $cred
+```
 
 If you run this command exactly as shown, P&U will run a health check as part of the update process, applying the default behavior, where -ScomAlertAction is set to Stop .
 
 To change the -ScomAlertAction option to Prompt or Continue, set the -ScomAlertAction parameter to the value that you want. For example:
-
-    \\\SU1_InfrastructureShare1\Framework\PatchingUpgrade\Invoke-PURun.ps1 -ScomAlertAction "Continue" -PUCredential $cred 
-
+```
+\\\SU1_InfrastructureShare1\Framework\PatchingUpgrade\Invoke-PURun.ps1 -ScomAlertAction "Continue" -PUCredential $cred 
+```
 > [!NOTE]
 > Because you already have Update 2.0 installed, you can ignore the "Additional prerequisites for Update 2" section in the CPS Administrators Guide.
 

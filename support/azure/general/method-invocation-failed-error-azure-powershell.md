@@ -1,5 +1,5 @@
 ---
-title: "Method invocation failed" error when you run Azure PowerShell cmdlets
+title: Method invocation failed error when you run Azure PowerShell cmdlets
 description: Describes how to to resolve the "System.Object[] doesn't contain a method named RemoveAll" error in Azure PowerShell
 author: genlin
 ms.author: genli

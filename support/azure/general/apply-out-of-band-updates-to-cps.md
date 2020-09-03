@@ -35,7 +35,7 @@ Follow the procedures in this article to manually update the Microsoft Cloud Pla
    - Service Packs 
    - Update Rollups 
 
-    ![Update Classifications tab](./media/apply-out-of-band-updates-to-cps/3141740.jpg)
+    ![The screenshot about about Update Classifications tab](./media/apply-out-of-band-updates-to-cps/3141740.jpg)
 
 7. Click **OK**.
 8. Right-click the update server again, and then click **Synchronize**.
@@ -64,12 +64,12 @@ Follow the procedures in this article to manually update the Microsoft Cloud Pla
    - KB3134214
    - KB3134222
 
-![OOB Servicing Properties ](./media/apply-out-of-band-updates-to-cps/3141744.jpg)
+![The screenshot about OOB Servicing Properties](./media/apply-out-of-band-updates-to-cps/3141744.jpg)
 
 13. When you have finished, click **Next**.
 14. On the Assignment Scope tab, select the All Hosts  check box and all the check boxes under Infrastructure .
 
-![Assignment Scope ](./media/apply-out-of-band-updates-to-cps/3141761.jpg)
+![The screenshot about Assignment Scope](./media/apply-out-of-band-updates-to-cps/3141761.jpg)
 
 15. Click **Next** to continue.
 
@@ -101,11 +101,11 @@ Follow the procedures in this article to manually update the Microsoft Cloud Pla
     > [!NOTE]
     >  Each node may take approximately 10 minutes to be completed.
     
-    ![Cluster-Aware Updating ](./media/apply-out-of-band-updates-to-cps/3141747.jpg)
+    ![The screenshot about Cluster-Aware Updating is running](./media/apply-out-of-band-updates-to-cps/3141747.jpg)
 
 9. Each node is complete when the update status changes to Succeeded . Keep the Cluster-Aware Updating window open for the next procedure.
 
-![Cluster-Aware Updating ](./media/apply-out-of-band-updates-to-cps/3141748.jpg)
+    ![The screenshot about Cluster-Aware Updating is completed](./media/apply-out-of-band-updates-to-cps/3141748.jpg)
 
 ### Update the SQL Server guest clusters
 
@@ -113,7 +113,7 @@ Follow the procedures in this article to manually update the Microsoft Cloud Pla
 2. Click **Apply updates to this cluster**, accept all the default settings as you did earlier for the compute cluster nodes, click **Update**, and then click **Close** on the Completion page.
 3. Each node will update one at a time. The updates are complete when all nodes have an update status of Succeeded .
 
-    ![Cluster-Aware Updating ](./media/apply-out-of-band-updates-to-cps/3141751.jpg)
+    ![The screenshot about Cluster-Aware Updating is finished](./media/apply-out-of-band-updates-to-cps/3141751.jpg)
 
 4. Close the Cluster-Aware Updating window.
 
@@ -161,7 +161,7 @@ The updates will download from the WSUS server and install on the VM.
 4. Clear the SCVMM Managed Computers check box, and then click **OK**.
 5. Refresh the view to make sure the computers are moved back to the Unassigned Computers group.
     
-    ![Update Services ](./media/apply-out-of-band-updates-to-cps/3141757.jpg)
+    ![The screenshot about Update Services](./media/apply-out-of-band-updates-to-cps/3141757.jpg)
 
 ### Post-update clean up
 

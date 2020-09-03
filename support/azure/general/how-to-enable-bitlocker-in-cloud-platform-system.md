@@ -467,7 +467,7 @@ Enable BitLocker encryption on all the storage volumes.
     }
     Enable-ClusterDiskBitlocker -Verbose 
     ```
-2. Use Remote Desktop to connect to < *myStorageNode* > by using your admin credentials, and then open a PowerShell console with administrator rights. If you cannot connect, enable Remote Desktop on the storage nodes. For instructions on how to enable Remote Desktop, please refer to: [Windows 2012 Core Survival Guide - Remote Desktop.](http://blogs.technet.com/b/bruce_adamczak/archive/2013/02/12/windows-2012-core-survival-guide-remote-desktop.aspx) 
+2. Use Remote Desktop to connect to < *myStorageNode* > by using your admin credentials, and then open a PowerShell console with administrator rights. If you cannot connect, enable Remote Desktop on the storage nodes. For instructions on how to enable Remote Desktop, please refer to: [Windows 2012 Core Survival Guide - Remote Desktop.](https://blogs.technet.com/b/bruce_adamczak/archive/2013/02/12/windows-2012-core-survival-guide-remote-desktop.aspx) 
 
 3. Go to < *myFolder* >, and then enter the following command line:PS C:\Users\admin1\Desktop> .\Enable-ClusterDiskBitlocker.ps1 -Verbose
 The encryption key is the key that you want to use for BitLocker. The script prompts for your admin credentials and the names of the management cluster, the compute cluster, and the edge cluster. 
@@ -476,13 +476,13 @@ The encryption key is the key that you want to use for BitLocker. The script pro
 
 If you are interested in learning what is going on under the hood, the script closely follows the steps in the following blog post:
 
-[How to configure BitLocker-encrypted clustered disks in Windows Server 2012](http://blogs.msdn.com/b/clustering/archive/2012/07/20/10332169.aspx) 
+[How to configure BitLocker-encrypted clustered disks in Windows Server 2012](https://blogs.msdn.com/b/clustering/archive/2012/07/20/10332169.aspx) 
 
 This process takes about 30 minutes per storage cluster.
 
 5. After the script finishes running, open Failover Cluster Manager. All the cluster disks should have an **Online (Redirected)**  status. You can now turn on all the VMs that you turned off earlier and operate the CPS rack as usual. The encryption process might take several days to complete, depending on the amount of data that's written on the disks. After a cluster disk is fully encrypted, its status automatically returns to **Online**.
 
-6. Once the encryption process completed, please disable Remote Desktop on the storage nodes. For instructions on how to disable Remote Desktop, please refer to: [Windows 2012 Core Survival Guide - Remote Desktop.](http://blogs.technet.com/b/bruce_adamczak/archive/2013/02/12/windows-2012-core-survival-guide-remote-desktop.aspx) 
+6. Once the encryption process completed, please disable Remote Desktop on the storage nodes. For instructions on how to disable Remote Desktop, please refer to: [Windows 2012 Core Survival Guide - Remote Desktop.](https://blogs.technet.com/b/bruce_adamczak/archive/2013/02/12/windows-2012-core-survival-guide-remote-desktop.aspx) 
 
 ## Step 5 Verify the encryption status of the stamp 
 

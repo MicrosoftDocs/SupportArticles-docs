@@ -85,8 +85,9 @@ The highly available Rack_Prefix-HA-VMM clustered role has two nodes: Rack_Prefi
     Verify that the status of each is **Stopped**. If you're prompted to close the System Center Management Service Host process, click **Ignore**.
 11. On the Console VM, locate the following folder on the passive node:
 
-        \\Rack_Prefix-VMM-0#>\c$\Program Files\Microsoft System Center 2012 R2\Virtual Machine Manager\bin
-
+    ```
+    \\Rack_Prefix-VMM-0#>\c$\Program Files\Microsoft System Center 2012 R2\Virtual Machine Manager\bin
+    ```
 12. In the \bin folder, replace the following files by using the new versions of the files that you extracted from the hotfix package:
     
     - Engine.Common.dll
