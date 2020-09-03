@@ -23,13 +23,9 @@ ms.reviewer:
 ---
 # Error while saving a file in Excel
 
-This article documents a list or errors when you save a file in Excel.
-
-_Original KB number:_ &nbsp; 214073
-
 ## Symptoms
 
-When you save a document in Microsoft Excel, one of the following error messages may appear:
+When you save a workbook in Microsoft Excel, one of the following error messages is displayed:
 
 > Cannot access read-only document \<filename>  
 
@@ -46,53 +42,53 @@ When you save a document in Microsoft Excel, one of the following error messages
 
 ## Cause
 
-This problem occurs when the process to save Excel file gets interrupted, due to any of the following reasons:
+This problem occurs if the process to save an Excel workbook is interrupted for any of the following reasons:
 
-- On network drive the connection got dropped or you have restricted permissions to save the file.
-- Saving location/drive does not have sufficient space.
-- Conflict with an antivirus software program.
-- Removable disk got removed, such as a USB pen-drive or USB-HDD/SSD
-- The 218-character path limitation is exceeded
-- You save an Excel file that is shared.
+- On a network drive, the connection is dropped, or you have restricted permissions to save the file.
+- The location or drive does not have sufficient space to save in.
+- A conflict exists with an antivirus software program.
+- A removable disk, such as a USB pen-drive or USB-HDD/SSD, is removed.
+- The 218-character path limitation is exceeded.
+- An Excel file that you are saving is shared.
+
 
 ## Resolution
 
-To continue working with the file, save it to a different drive or location. The connection to the file must be restored before you can resume working with the file. In case of a hardware failure, you must correct the problem before you can save to that drive again.
+To continue working on the file, save it to a different drive or location. The connection to the file must be restored before you can resume working on it. In case of a hardware failure, you must correct the problem before you can save to that drive again.
 
 ## More information
 
-When you work in a file, Microsoft Excel saves the file with a temporary file name and places this file in the same folder as the original file. When you save your file, the original file is then deleted and the temporary file is renamed with the original file name.
+When you work in a workbook, Microsoft Excel saves the file by giving it a temporary file name, and then puts the file into the same folder as the original file. When you save the workbook, the original file is deleted and the temporary file is renamed by using the original file name.
 
-If this process is interrupted, your file may not be saved properly. You may also find one or more temporary files in the folder where you tried to save your file. In addition, you may receive one of several alerts or error messages.
+If this process is interrupted, the workbook may not be saved correctly. You may also find one or more temporary files in the folder where you tried to save your file. Additionally, you may receive one of several alerts or error messages.
 
-The following information lists some of the possible messages you may receive and explanations as to why you may receive them:
+The following information lists some of the possible messages that you may receive, and explains why you may receive them.
 
 ### Cannot access read-only document \<file name>
 
-If you are trying to make changes to the file that is ‘read-only’, this error will be displayed. This is because the administrator or the owner of the file has not given you the permission to edit the document and you can only read it. If the file does not have ‘read-only’ tag but this error keeps on appearing while you are trying to save the file in your folder, this could happen because:
+This this error message is displayed if you are trying to make changes to a file to which you have only read permissions. This is because the administrator or the owner of the file has not granted you permission to edit the file. If the file does not have the ”read-only” tag but this error message continues to appear while you are trying to save the file to your folder, either of the following reasons might be the cause:
 
-- You open an existing file and try to save it.
-- You save file to an external or network drive and the connection fails.
+- You open an existing file, and then try to save it.
+- You save the file to an external or network drive, and the connection fails.
 
 ### Disk is full
 
-The drive you are saving to does not have enough space or the disk was accidentally detached from the system. Delete some files from the current drive or save file to another drive.
+The drive that you are saving to does not have enough space, or the disk was accidentally detached from the system. Delete some files from the current drive or save the file to another drive. 
 
 ### Document not saved," or "Document not saved
 
-The process was interrupted while creating the temporary file because you accidentally pressed ESC, or there was some hardware/software failure, or some other media problem. The original file is still intact, unless your computer or workstation failed, the version of the file containing your current changes is still open in memory. Save the file to an alternate drive.
+The process was interrupted while it was creating a temporary file because you accidently pressed ESC, or there was some hardware or software failure or some other media problem. The original file is still intact., Unless your computer or workstation failed, the version of the file that contains your current changes is still open in memory. Save the file to an alternative drive. 
 
 > [!NOTE]
 > Any changes made in the last revision will be lost.
 
 ### Document not saved. Any previously saved copy has been deleted
 
-The process was interrupted while deleting the original or renaming the temporary file. This problem will occur for the same reasons as the scenario described in the "'Document not saved,' or 'Document not completely saved'" section.
+The process was interrupted while it was deleting the original file or renaming the temporary file. This problem occurs for the same reasons as in the scenario that is described in the "'Document not saved’ or ‘Document not completely saved'" section. 
 
-In this case, your original file is gone (though the temporary file may be readable). If your computer or workstation failed, use the temporary file. If the interruption was caused by something else, the version of the file containing your current changes is still open in memory. Save the file to an alternate drive.
+In this case, your original file is deleted (although the temporary file may be readable). If your computer or workstation failed, use the temporary file. If the interruption was caused by something else, the version of the file that contains your current changes is still open in memory. Save the file to an alternative drive.
 
-## References
 
-For more information, select the following article numbers to view the articles in the Microsoft Knowledge Base:
+## More information
 
-> [223812](https://support.microsoft.com/help/223812) Error message: Document not saved
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
