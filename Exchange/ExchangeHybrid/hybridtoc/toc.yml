@@ -5,14 +5,14 @@
     items:
     - name: RPC over HTTP reaches end of support
       href: ../accessing-email-data/rpc-over-http-end-of-support.md
-  - name: Calendar Reminders
+  - name: Calendaring
     items:
     - name: Can't dismiss calendar reminders
-      href: ../calendar-reminders/cannot-dismiss-outlook-calendar-reminders.md
-  - name: Calendar Sharing
-    items:
+      href: ../calendaring/cannot-dismiss-outlook-calendar-reminders.md
     - name: Policy not allow granting permissions
-      href: ../calendar-sharing/policy-permissions-issue.md
+      href: ../calendaring/policy-permissions-issue.md
+    - name: 'Troubleshoot free/busy issues'
+      href: ../calendaring/troubleshoot-freebusy-issues-in-exchange-hybrid.md
   - name: Delegates
     items:
     - name: Requirements to configure delegation
