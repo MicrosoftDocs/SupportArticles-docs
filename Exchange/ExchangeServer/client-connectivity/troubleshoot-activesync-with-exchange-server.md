@@ -843,7 +843,7 @@ To determine if devices are resynchronizing with Exchange, run the Log Parser qu
 **Are there any devices with multiple requests using the SyncKey value of 0?**
 
 - If yes, see [Log Parser Studio Query - Device Query](#log-parser-studio-query---device-query-if-using-synckey-value-of-0)
-- If no, see [Log Parser Studio Query - Count all Syncs per SyncKey](#log-parser-studio-query-count-all-syncs-per-synckey).
+- If no, see [Log Parser Studio Query - Count all Syncs per SyncKey](#log-parser-studio-query---count-all-syncs-per-synckey).
 
 ### Check for file level anti-virus (delays on device/CAS performance)
 
@@ -880,7 +880,7 @@ The reported issue is a message that appears in the mailbox within Outlook but n
 **Can you reproduce the Calendar issue on the device?**
 
 - If yes, see [Enable ActiveSync Mailbox Logging; Capture Fiddler Trace; Locate Item Using MfcMapi; Search for Item in Mailbox Log](#enable-activesync-mailbox-logging-capture-fiddler-trace-locate-item-using-mfcmapi-search-for-item-in-mailbox-log).
-- If no, see [Install Log Parser Studio; Log Parser Studio Query - DeviceId Query; Query Results Analysis; Re-Sync the Folder](#install-log-parser-studio-log-parser-studio-query-deviceid-query-query-results-analysis-re-sync-the-folder).
+- If no, see [Install Log Parser Studio; Log Parser Studio Query - DeviceId Query; Query Results Analysis; Re-Sync the Folder](#install-log-parser-studio-log-parser-studio-query---deviceid-query-query-results-analysis-resync-the-folder).
 
 ### Install Log Parser Studio; Log Parser Studio Query - DeviceId Query; Query results analysis; Resync the Folder
 
@@ -2004,7 +2004,7 @@ To determine if devices are resynchronizing with Exchange, run the Log Parser qu
 **Are there any devices with multiple requests using the SyncKey value of 0?**
 
 - If yes, see [Log Parser Studio Query - Device Query](#log-parser-studio-query---device-query-if-using-synckey-value-of-0).
-- If no, see [Log Parser Studio Query - Count all Syncs per SyncKey](#log-parser-studio-query-count-all-syncs-per-synckey).
+- If no, see [Log Parser Studio Query - Count all Syncs per SyncKey](#log-parser-studio-query---count-all-syncs-per-synckey).
 
 ### Log Parser Studio Query - Device Query (if using SyncKey value of 0)
 
@@ -2120,7 +2120,7 @@ The results also show a Sync command that received a response with a status code
 **Was the issue resolved using the ActiveSync status in the response?**
 
 - If yes, congratulations, your ActiveSync issue is resolved.
-- If no, see [Log Parser Studio Query - Count all Syncs per SyncKey](#log-parser-studio-query-count-all-syncs-per-synckey).
+- If no, see [Log Parser Studio Query - Count all Syncs per SyncKey](#log-parser-studio-query---count-all-syncs-per-synckey).
 
 ### Capture fiddler trace (if issue isn't resolved)
 
@@ -2156,7 +2156,7 @@ To resolve this issue, reprovision the ActiveSync client. To do this, follow the
 **Did reprovisioning the ActiveSync client resolve the issue?**
 
 - If yes, congratulations, your ActiveSync issue is resolved.
-- If no, see [Log Parser Studio Query - Count all Syncs per SyncKey](#log-parser-studio-query-count-all-syncs-per-synckey).
+- If no, see [Log Parser Studio Query - Count all Syncs per SyncKey](#log-parser-studio-query---count-all-syncs-per-synckey).
 
 ### Fiddler trace analysis (receive 500 HTTP response)
 
@@ -2177,7 +2177,7 @@ Analysis of the HTTP response show an internal server error and the details of t
 **Did the Fiddler trace analysis help resolve the issue?**
 
 - If yes, congratulations, your ActiveSync issue is resolved.
-- If no, see [Log Parser Studio Query - Count all Syncs per SyncKey](#log-parser-studio-query-count-all-syncs-per-synckey).
+- If no, see [Log Parser Studio Query - Count all Syncs per SyncKey](#log-parser-studio-query---count-all-syncs-per-synckey).
 
 ### Log Parser Studio Query - Count all Syncs per SyncKey
 
@@ -2307,7 +2307,7 @@ To resolve this issue, disable ActiveSync for the user causing the high RPC coun
 **Did disabling ActiveSync for this mailbox resolve the issue?**
 
 - If yes, see [Reprovision the ActiveSync Client](#reprovision-the-activesync-client-if-disabling-activesync-solves-the-issue).
-- If no, see [Log Parser Studio Query - Report [Top 20]; Log Parser Studio Query - Device Query](#log-parser-studio-quer--report-top-20-log-parser-studio-query-device-query).
+- If no, see [Log Parser Studio Query - Report [Top 20]; Log Parser Studio Query - Device Query](#log-parser-studio-query---report-top-20-log-parser-studio-query---device-query).
 
 ### Reprovision the ActiveSync client (if disabling ActiveSync solves the issue)
 

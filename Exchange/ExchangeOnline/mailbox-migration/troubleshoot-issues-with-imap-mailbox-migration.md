@@ -78,7 +78,7 @@ Select **yes** on the pop-up box to start it.
 
 Since you were able to create/start the migration batch, you may run into one of the below error messages. To see what errors you are running into, you can download the error report by logging into the account that you started the migration batch with. Look for an email with a subject of **E-mail migration batch "Batch name" has finished - with errors**. You can download the error report by selecting **Click here to download the error report**.
 
-- [A recipient wasn't found for user@contoso.com on the target...](#a-recipient-wasnt-found-for-usercontoso.com-on-the-target)
+- [A recipient wasn't found for user@contoso.com on the target...](#a-recipient-wasnt-found-for-usercontosocom-on-the-target)
 - [We had trouble signing in to this account...](#we-had-trouble-signing-in-to-this-account-error)
 - [I'm seeing duplicate emails](#im-seeing-duplicate-emails)
 - [This mailbox is full...](#this-mailbox-is-full)
@@ -93,7 +93,7 @@ A recipient wasn't found for `user@contoso.com` on the target. Create a recipien
 **Did this solve your problem?**
 
 - If yes, congratulations! Your scenario is complete.
-- If no, see [A recipient wasn't found for user@contoso.com on the target](#a-recipient-wasnt-found-for-usercontoso.com-on-the-target-if-issue-isnt-resolved)
+- If no, see [A recipient wasn't found for user@contoso.com on the target](#a-recipient-wasnt-found-for-usercontosocom-on-the-target-if-issue-isnt-resolved)
 
 ### A recipient wasn't found for user@contoso.com on the target (if issue isn't resolved)
 
@@ -459,7 +459,7 @@ If you are migrating from an Exchange server, launch the Services application (*
 **Did this solve your problem?**
 
 - If yes, congratulations! Your scenario is complete.
-- If no, see [The connection to the server Servername.contoso.com timed out](#the-connection-to-the-server-servernamecontoso.com-timed-out-if-issue-not-resolved).
+- If no, see [The connection to the server Servername.contoso.com timed out](#the-connection-to-the-server-servernamecontosocom-timed-out-if-issue-not-resolved).
 
 ### The connection to the server Servername.contoso.com timed out (if issue not resolved)
 
