@@ -38,7 +38,7 @@ For example, this problem occurs when you configure following settings:
 
 ## Cause
 
-This problem occurs because of an issue in the Connection Manager service (*CmService.dll*) of Windows Embedded Compact 7. When the data length of a Wi-Fi profile that is encrypted by *CmService.dll* becomes a specific size (multiples of 4,096 bytes), the data is not saved correctly to the device's registry. Therefore, the Wi-Fi profile is lost after the device restarts.
+This problem occurs because of an issue in the Connection Manager service (CmService.dll) of Windows Embedded Compact 7. When the data length of a Wi-Fi profile that is encrypted by CmService.dll becomes a specific size (multiples of 4,096 bytes), the data is not saved correctly to the device's registry. Therefore, the Wi-Fi profile is lost after the device restarts.
 
 For example, the following registry value of the profile will be lost:
 

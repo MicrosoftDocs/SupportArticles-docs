@@ -32,7 +32,7 @@ To resolve this issue, follow these steps:
 4. To verify that the previously offered updates are no longer being reoffered, click **Start Scan**. After scanning is complete, the items that were reoffered earlier should not be listed.
 
 > [!IMPORTANT]
-> The Search Registry feature of the **Find** dialog box in Image Configuration Editor will no longer return items from the previous *regindex* file. It will return items only from the newly created *regindex* file. All other functions of the **Find**  dialog box will continue to work as expected.
+> The `Search Registry` feature of the **Find** dialog box in Image Configuration Editor will no longer return items from the previous *regindex* file. It will return items only from the newly created *regindex* file. All other functions of the **Find**  dialog box will continue to work as expected.
 
 ## More information
 
