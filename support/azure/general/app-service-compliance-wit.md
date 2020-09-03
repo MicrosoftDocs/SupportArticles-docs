@@ -14,7 +14,7 @@ ms.reviewer:
 _Original product version:_ &nbsp; Web App (Windows)  
 _Original KB number:_ &nbsp; 3124528
 
-The Azure App Service is currently in compliance with PCI DSS version 3.0 Level 1. We have also noted customer requests that make reference to PCI DSS version 3.1, and specifically the change from version 3.0 to 3.1 which states that SSL and "early TLS versions " will no longer be considered valid security options from June 30th 2018. From June 30th, 2018, the multi-tenant hosting model for Azure App Service, will be accepting TLS 1.2 with an option for customers to select their required TLS encryption level. 
+The Azure App Service is currently in compliance with PCI DSS version 3.0 Level 1. We have also noted customer requests that make reference to PCI DSS version 3.1, and specifically the change from version 3.0 to 3.1, which states that SSL and "early TLS versions " will no longer be considered valid security options from June 30, 2018. From June 30th, 2018, the multi-tenant hosting model for Azure App Service, will be accepting TLS 1.2 with an option for customers to select their required TLS encryption level.
 
 ## What this means
 
