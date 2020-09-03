@@ -27,13 +27,16 @@ You receive one of these errors when trying to install an Exchange Cumulative Up
 
 1. The installation fails with the `register-ContentFilter`. The error appears after exactly 1 minute in ExchangeSetupLog:
 
-    > [Data 02:38:28.0817] [2] Beginning processing register-ContentFilter  
-[Data 02:39:28.0889] [2] [ERROR] Couldn't register the content filter.
+    > [mm/dd/yyyy 02:38:28.0817] [2] Beginning processing register-ContentFilter  
+[mm/dd/yyyy 02:39:28.0889] [2] [ERROR] Couldn't register the content filter.
 
-2. The installation fails or takes many hours to succeed, but the failure/hang occurs whenever this cmdlet is executed:
+2. The installation fails or takes many hours to succeed, but the failure/hang occurs whenever this cmdlet is executed – when checking ExchangeSetupLog:
 
     ```powershell
-    Get-ExchangeServer $RoleNetBIOSName | add-ADPermission `-DomainController $RoleDomainController `-User "S-1-5-18" `-AccessRights GenericRead
+    get-ExchangeServer $RoleNetBIOSName | add-ADPermission `
+    -DomainController $RoleDomainController `
+    -User "S-1-5-18" `
+    -AccessRights GenericRead
     ```
 
 ## Cause
