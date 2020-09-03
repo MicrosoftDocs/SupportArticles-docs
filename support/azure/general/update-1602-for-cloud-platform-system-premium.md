@@ -90,9 +90,9 @@ $passiveNodes
 > This script returns the server name of the passive VMM node. (In our example, we assume that Node2 is initially the passive node.)
 
 5. In File Explorer, locate the following folder on the passive node:
-
-        \\<Prefix>-VMM-0#>\c$\Program Files\Microsoft System Center 2012 R2\Virtual Machine Manager \bin
-
+    ```
+     \\<Prefix>-VMM-0#>\c$\Program Files\Microsoft System Center 2012 R2\Virtual Machine Manager \bin
+    ```
 6. Make backup copies of the following files in the \bin folder
 
     - Engine.Common.dll
@@ -113,8 +113,9 @@ $passiveNodes
 
     Verify that the status of each is **Stopped**. If you're prompted to close the System Center Management Service Host process, click **Ignore**.
 11. On the Console VM, locate the following folder on the passive node:
-
-        \\<Prefix>-VMM-0#> \c$\Program Files\Microsoft System Center 2012 R2\Virtual Machine Manager\bin
+    ```
+    \\<Prefix>-VMM-0#> \c$\Program Files\Microsoft System Center 2012 R2\Virtual Machine Manager\bin
+    ```
 
 12. In the \bin folder, replace the following files with the new versions of the files that you extracted from the hotfix package:
 
