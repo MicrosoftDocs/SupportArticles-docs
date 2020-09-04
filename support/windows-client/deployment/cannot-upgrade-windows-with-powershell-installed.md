@@ -110,6 +110,6 @@ For more information about Windows PowerShell, visit the following Microsoft Web
 
 [https://technet.microsoft.com/library/bb978526.aspx](https://technet.microsoft.com/library/bb978526.aspx) 
 - Windows PowerShell blog
- [http://blogs.msdn.com/powershell](http://blogs.msdn.com/powershell) 
+ [https://blogs.msdn.com/powershell](https://blogs.msdn.com/powershell) 
 - Windows PowerShell SDK
  [https://msdn2.microsoft.com/library/ms714469.aspx](https://msdn2.microsoft.com/library/ms714469.aspx) 
