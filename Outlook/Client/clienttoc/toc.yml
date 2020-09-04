@@ -17,6 +17,8 @@
       href: ../calendaring/how-to-share-calendar-and-contacts.md
     - name: Items for next year display at incorrect time
       href: ../calendaring/calendar-items-display-incorrect-time.md
+    - name: Unable to view free/busy information
+      href: ../calendaring/cannot-view-free-busy-information.md
   - name: Deployment
     items:
     - name: Cached Exchange Mode
