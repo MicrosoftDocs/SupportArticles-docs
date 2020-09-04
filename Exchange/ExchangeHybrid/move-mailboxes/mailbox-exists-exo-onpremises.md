@@ -33,7 +33,7 @@ To correct this mail flow issue, we recommend that you refer to the methods that
 
 ### Scenario 1: Keep Exchange Online mailbox
 
-This scenario would be most applicable if the user mailbox was previously migrated to Exchange Online, and somehow the old mailbox was reconnected or a new mailbox was provisioned on-premises. To use this method, follow these steps:
+This scenario would be most applicable if the user mailbox was previously migrated to Exchange Online, and somehow the old mailbox was reconnected or a new mailbox was provisioned on-premises. Another possible scenario is when an EXO license is assigned prematurely and a new cloud-only mailbox is created while the user already has an existing mailbox in Exchange on-premises.  Be sure to read the important note at the end of step 7.  To use this method, follow these steps:
 
 1. Save the on-premises mailbox information to a file, such as "SMTP addresses", "Exchange attributes", and so on.
 
