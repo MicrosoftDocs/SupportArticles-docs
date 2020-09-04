@@ -561,8 +561,6 @@
       href: ../migration/error-copy-appointment-to-outlook-com-folder.md
     - name: Can't move a mailbox to a database
       href: ../migration/error-move-mailbox-to-database-exchange-2010.md
-    - name: Can't move items from Outlook 2013 to an EAS store
-      href: ../migration/error-move-items-from-outlook-to-eas-store.md
     - name: Can't move mailboxes to Exchange Online
       href: ../migration/user-is-already-being-moved-error.md
     - name: Can't replicate public folder
