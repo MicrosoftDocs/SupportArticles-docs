@@ -28,7 +28,7 @@ Before you can manage devices in Intune, you need to enroll the devices in the I
 
 ## Overviews of the enrollment methods
 
- :::image type="content" source=".\media\enrollment-methods-1.png" alt-text="You can select one of eight methods to enroll devices in Intune":::
+ :::image type="content" source=".\media\enroll-devices-in-intune-tip\enrollment-methods-1.png" alt-text="You can select one of eight methods to enroll devices in Intune":::
 
 As shown in the figure, you can choose from eight methods to enroll a Windows device in Intune. 
 
@@ -57,7 +57,7 @@ To use this method, the user has to follow these steps:
 
 1. On the device, select **Start** > **Settings** > **Accounts** > **Access Work or School**.
 2. Select **Enroll only in device management**.
-   :::image type="content" source=".\media\enroll-device-mgmt-only-2.png" alt-text="Finding the Enroll command in Access work or school settings":::
+   :::image type="content" source=".\media\enroll-devices-in-intune-tip\enroll-device-mgmt-only-2.png" alt-text="Finding the Enroll command in Access work or school settings":::
 
 ### <a id="2" ></a>Automatic enrollment by using MDM
 
@@ -88,9 +88,9 @@ To use this method, the user has to follow these steps:
 1. On the device, select **Start** > **Settings** > **Accounts** > **Access Work or School** > **Connect**.
 2. Do one of the following:
    - To register the device as a Personal device, enter an email address, and then select **Next**.
-      :::image type="content" source=".\media\auto-enroll-3-personal.png" alt-text="Set up work or school account, enter an email address to register device":::
+      :::image type="content" source=".\media\enroll-devices-in-intune-tip\auto-enroll-3-personal.png" alt-text="Set up work or school account, enter an email address to register device":::
    - To register the device as a Corporate device, select **Join this device to Azure Active Directory**.
-   :::image type="content" source=".\media\auto-enroll-3-corporate.png" alt-text="Set up work or school account, join the device to Azure AD":::
+   :::image type="content" source=".\media\enroll-devices-in-intune-tip\auto-enroll-3-corporate.png" alt-text="Set up work or school account, join the device to Azure AD":::
 
 ### <a id="3" ></a>Automatic enrollment by using GPO
 
@@ -103,11 +103,11 @@ Group Policy provides a means of bulk-enrolling Corporate devices without involv
 
 In order to enroll the devices, configure a Group Policy object (GPO). For more information about how to configure and target the GPO, see [Enroll a Windows 10 device automatically using Group Policy](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy). 
 
-:::image type="content" source=".\media\gpo-for-mem-enrollment-4.png" alt-text="MDM GPO in the Group Policy Management Editor":::
+:::image type="content" source=".\media\enroll-devices-in-intune-tip\gpo-for-mem-enrollment-4.png" alt-text="MDM GPO in the Group Policy Management Editor":::
 
 The GPO, in turn, creates scheduled tasks to carry out the enrollment. You can view these tasks in Task Scheduler.
 
-:::image type="content" source=".\media\task-scheduler-5.png" alt-text="Enrollment tasks in Task Scheduler":::
+:::image type="content" source=".\media\enroll-devices-in-intune-tip\task-scheduler-5.png" alt-text="Enrollment tasks in Task Scheduler":::
 
 ### <a id="4"></a>Windows Autopilot enrollment
 
@@ -115,7 +115,7 @@ The Windows Autopilot enrollment process joins a Corporate device to the Azure A
 
 As part of Windows Autopilot, you can customize the greeting screen of the OOBE. You can include company branding and pre-set fields and options, as shown in the figure.
 
-:::image type="content" source=".\media\windows-autopilot-greeting-6.png" alt-text="Customized greeting screen for Windows Autopilot OOBE":::
+:::image type="content" source=".\media\enroll-devices-in-intune-tip\windows-autopilot-greeting-6.png" alt-text="Customized greeting screen for Windows Autopilot OOBE":::
 
 In order to configure Windows Autopilot, you have to have the hardware hashes or serial numbers of the device. In Intune, make sure that you configure the MDM scope for Autopilot.
 For more information, see [Enroll Windows devices in Intune by using Windows Autopilot](https://docs.microsoft.com/mem/intune/enrollment/enrollment-autopilot).
@@ -137,9 +137,9 @@ Each of the devices must meet the following requirements:
 
 In order to use this method, you have to add the devices to an appropriate collection in the Configuration Manager console. The following figures show the relevant properties to configure.
 
-:::image type="content" source=".\media\scmm-co-mgmt-props-7a.png" alt-text="Configuration Manager properties for enabling Intune co-management":::
+:::image type="content" source=".\media\enroll-devices-in-intune-tip\scmm-co-mgmt-props-7a.png" alt-text="Configuration Manager properties for enabling Intune co-management":::
 
-:::image type="content" source=".\media\scmm-co-mgmt-props-7b.png" alt-text="Configuration Manager properties for co-managing devices in Intune":::
+:::image type="content" source=".\media\enroll-devices-in-intune-tip\scmm-co-mgmt-props-7b.png" alt-text="Configuration Manager properties for co-managing devices in Intune":::
 
 For more information about this enrollment method, see [Support Tip: Understanding auto enrollment in a co-managed environment](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-understanding-auto-enrollment-in-a-co-managed/ba-p/834780)
 
@@ -147,11 +147,11 @@ For more information about this enrollment method, see [Support Tip: Understandi
 
 You can provide users a with a deep link to start the enrollment process for Personal devices.
 
-:::image type="content" source=".\media\deep-link-destination-8a.png" alt-text="Destination of an enrollment deep link":::
+:::image type="content" source=".\media\enroll-devices-in-intune-tip\deep-link-destination-8a.png" alt-text="Destination of an enrollment deep link":::
 
 This process is the equivalent of the **Enroll only in device management** option in the user interface.
 
-:::image type="content" source=".\media\deep-link-process-8b.png" alt-text="Deep link enrollment process, step 1":::
+:::image type="content" source=".\media\enroll-devices-in-intune-tip\deep-link-process-8b.png" alt-text="Deep link enrollment process, step 1":::
 
 The enrollment process starts after the user enters their credentials and selects **Next**.
 
@@ -171,20 +171,20 @@ If your organization has a company portal app in the Microsoft Store, you can pr
 
 1. Open Microsoft Store, and then in **Search**, enter the name of the company portal app.
 2. In the list of results, select the company portal app, and then select **Get**.
-   :::image type="content" source=".\media\store-app-9a.png" alt-text="Company portal app in the Microsoft store":::
+   :::image type="content" source=".\media\enroll-devices-in-intune-tip\store-app-9a.png" alt-text="Company portal app in the Microsoft store":::
 3. After the app installs, start it, and then sign in when prompted. The enrollment process starts automatically.
-   :::image type="content" source=".\media\store-app-9b.png" alt-text="Signing in to the company portal app":::
+   :::image type="content" source=".\media\enroll-devices-in-intune-tip\store-app-9b.png" alt-text="Signing in to the company portal app":::
 
 #### Company portal website
 
 To use your company's management portal for enrollment, you can provide the following instructions to your users:
 
 1. In a browser, go to portal.manage.microsoft.com.
-   :::image type="content" source=".\media\portal-10a.png" alt-text="Configuration Manager properties for enabling Intune co-managment":::
+   :::image type="content" source=".\media\enroll-devices-in-intune-tip\portal-10a.png" alt-text="Configuration Manager properties for enabling Intune co-management":::
 2. Select **Devices**, and then select the grey bar.
-   :::image type="content" source=".\media\portal-enroll-10b.png" alt-text="Configuration Manager properties for co-managing devices in Intune":::
+   :::image type="content" source=".\media\enroll-devices-in-intune-tip\portal-enroll-10b.png" alt-text="Configuration Manager properties for co-managing devices in Intune":::
 3. To start the enrollment process, select **Add**.
-   :::image type="content" source=".\media\portal-device-10c.png" alt-text="Configuration Manager properties for co-managing devices in Intune":::
+   :::image type="content" source=".\media\enroll-devices-in-intune-tip\portal-device-10c.png" alt-text="Configuration Manager properties for co-managing devices in Intune":::
 
 ### <a id="8" ></a>WCD provisioning package enrollment
 
@@ -192,7 +192,7 @@ Windows provisioning functionality provides a method for administrators to seaml
 
 You can use WCD to create a provisioning package (a .ppkg file) that contains configurations settings. In this case, you would create a provisioning package that joins each device to Azure AD and enrolls it in Intune. As shown in the following figure, you can configure packages for different types of devices.
 
-:::image type="content" source=".\media\wcd-screen-11.png" alt-text="WCD start page":::
+:::image type="content" source=".\media\enroll-devices-in-intune-tip\wcd-screen-11.png" alt-text="WCD start page":::
 
 Existing users can access and install the package from their Windows desktop screens, or you can load the package on removable USB media for distribution to new Windows devices.
 The USB media can copy the package to the device when the device starts for the first time. Then the enrollment process completes during the Windows OOBE experience.
@@ -223,23 +223,23 @@ The UserDevice Registration and DeviceManagement Enterprise Diagnostics provider
 |Auto MDM Enroll  Succeeded    \|\| (SCCM/GPO) |75 |
 
 The following figures show event information from this table in Event Viewer.
-:::image type="content" source=".\media\event-viewer-example-12.png" alt-text="WCD start page":::
+:::image type="content" source=".\media\enroll-devices-in-intune-tip\event-viewer-example-12.png" alt-text="WCD start page":::
 
-:::image type="content" source=".\media\event-viewer-example-13.png" alt-text="WCD start page":::
+:::image type="content" source=".\media\enroll-devices-in-intune-tip\event-viewer-example-13.png" alt-text="WCD start page":::
 
 ### MDM diagnostic logs
 
 To see the MDM diagnostic logs on a device, select **Start** > **Settings** > **Accounts** > **Access work or school** > **Info** > **Create report**.
 
-:::image type="content" source=".\media\diagnostics-14a.png" alt-text="Select Create report to see diagnostics":::
+:::image type="content" source=".\media\enroll-devices-in-intune-tip\diagnostics-14a.png" alt-text="Select Create report to see diagnostics":::
 
 To export the diagnostic logs, select **Export**.
 
-:::image type="content" source=".\media\diagnostics-14b.png" alt-text="Select Export to export diagnostics":::
+:::image type="content" source=".\media\enroll-devices-in-intune-tip\diagnostics-14b.png" alt-text="Select Export to export diagnostics":::
 
 The diagnostics report includes information such as the current values of settings that are configured by policy, and the GUID of the service that applied the policy.
 
-:::image type="content" source=".\media\diagnostics-report-15.png" alt-text="Select Export to export diagnostics":::
+:::image type="content" source=".\media\enroll-devices-in-intune-tip\diagnostics-report-15.png" alt-text="Select Export to export diagnostics":::
 
 ### Registry
 
@@ -249,7 +249,7 @@ To view the enrollment registry entries, open Registry Editor on the device and 
 
 The GUID represents the configuration source, as identified in the diagnostics report. The entries and values in this subkey include configuration information as well as the user principal name (UPN) of the user that is associated with the device.
 
-:::image type="content" source=".\media\registry-16.png" alt-text="Select Export to export diagnostics":::
+:::image type="content" source=".\media\enroll-devices-in-intune-tip\registry-16.png" alt-text="Select Export to export diagnostics":::
 
 ## Comparison
 
