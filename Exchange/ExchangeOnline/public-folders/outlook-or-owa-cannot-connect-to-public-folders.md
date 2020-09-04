@@ -353,13 +353,13 @@ For more information about Exchange Server build numbers and release dates, see
 
 If the X500 value is missing on the on-premises object, initiate delta sync on the computer on which Azure AD Connect is installed. For more information, see [PowerShell Basics: How to Force AzureAD Connect to Sync](https://techcommunity.microsoft.com/t5/itops-talk-blog/powershell-basics-how-to-force-azuread-connect-to-sync/ba-p/887043).
 
-Alternatively, add Azure AD Connect manually by running this command on-premises:
+Alternatively, add X500 address manually by running this command on-premises:
 
 ```powershell
-Set-Mailbox -Identity "mailbox name" -EmailAddresses @{add="X500:replace with legacyexchangeDN value from the cloud object"}
+Set-RemoteMailbox -Identity "mailbox name" -EmailAddresses @{add="X500:replace with legacyexchangeDN value from the cloud object"}
 ```
 
-For more information about `Set-Mailbox`, see [Set-Mailbox](https://docs.microsoft.com/powershell/module/exchange/set-mailbox?view=exchange-ps).
+For more information about `Set-RemoteMailbox`, see this [article](https://docs.microsoft.com/powershell/module/exchange/set-remotemailbox?view=exchange-ps).
 
 **Does this resolve your issue?**
 
