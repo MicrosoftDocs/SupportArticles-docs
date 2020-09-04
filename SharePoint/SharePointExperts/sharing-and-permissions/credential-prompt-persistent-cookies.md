@@ -17,7 +17,7 @@ appliesto:
 
 # Additional credential prompts when opening Office documents from a web server by persistent cookies
 
-This article was written by [Alan Umanos](https://social.technet.microsoft.com/profile/Al+-+MSFT), Support Engineer.
+This article was written by [Alan Umanos](https://social.technet.microsoft.com/profile/alan%20umanos), Support Engineer.
 
 ## Symptoms
 

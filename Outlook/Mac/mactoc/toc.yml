@@ -1,6 +1,22 @@
 - name: Outlook for Mac Troubleshooting
   href: ../outlook-mac-welcome.md
   items:
+  - name: Categories
+    items:
+    - name: Category colors are changed in Outlook 2016 for Mac
+      href: ../categories/outlook-mac-category-colors-changed.md
+  - name: Send/Receive Emails
+    items:
+    - name: Can't send emails from a distribution list
+      href: ../send-receive-emails/outlook-mac-security-groups-cannot-send-emails.md
+    - name: Emails are stuck in Outbox in Outlook 2016 for Mac
+      href: ../send-receive-emails/email-stuck-in-outbox-outlook-2016-mac.md
+    - name: Error 19738 when sending large emails using Outlook for Mac
+      href: /exchange/troubleshoot/mailflow/error-19738-send-large-email-outlook-mac?context=/outlook/troubleshoot/context/mac-context
+    - name: Emails sent from a shared mailbox aren't saved in the Sent Items folder
+      href: /exchange/troubleshoot/administration/email-from-shared-mailbox-not-saved-sent-items?context=/outlook/troubleshoot/context/mac-context
+    - name: Outlook for Mac repeatedly prompts for credentials
+      href: ../send-receive-emails/prompted-for-credentials-modern-authentication.md
   - name: Sign-in
     items:
     - name: Kerberos authentication for Mac

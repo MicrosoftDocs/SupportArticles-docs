@@ -7,12 +7,16 @@
       href: ../authentication/outlook-prompts-credentials.md
     - name: Prevent saving credentials policy doesn't work
       href: ../authentication/prevent-saving-credentials.md
-  - name: Calendars
+  - name: Calendaring
     items:
     - name: Delegate can't create Skype or Teams meeting
-      href: ../calendars/operation-cannot-be-performed-error.md
+      href: ../calendaring/operation-cannot-be-performed-error.md
+    - name: How to open a shared calendar
+      href: ../calendaring/how-to-open-shared-calendar.md
+    - name: How to share calendar and contacts
+      href: ../calendaring/how-to-share-calendar-and-contacts.md
     - name: Items for next year display at incorrect time
-      href: ../calendars/calendar-items-display-incorrect-time.md
+      href: ../calendaring/calendar-items-display-incorrect-time.md
   - name: Deployment
     items:
     - name: Cached Exchange Mode
