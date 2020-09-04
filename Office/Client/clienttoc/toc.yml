@@ -829,32 +829,12 @@
       href: ../performance/office-slow-or-stop-responding.md
   - name: PowerPoint
     items:
-    - name: "\"Play CD Audio Track\" command is not available"
-      href: ../powerpoint/play-cd-audio-track-not-available.md
-    - name: A .pps file is saved as a .pptx file
-      href: ../powerpoint/pps-file-saved-as-pptx-file.md
-    - name: Add custom values to animation effect options
-      href: ../powerpoint/custom-value-animation-effect-option.md
-    - name: Add section command is unavailable
-      href: ../powerpoint/add-section-not-available.md
-    - name: Audio stops playback after you leave original slide
-      href: ../powerpoint/audio-stops-playback.md
-    - name: Can't edit the footer information in the Header and Footer
-      href: ../powerpoint/fails-editing-footer-information.md
     - name: Can't edit video or audio in a presentation
       href: ../powerpoint/cannot-edit-video-or-audio.md
     - name: Can't load an add-in with a low macro security level
       href: ../powerpoint/powerpoint-fails-loading-add-in.md
     - name: Change the export resolution of PowerPoint slide
       href: ../powerpoint/change-export-slide-resolution.md
-    - name: Create a mailto hyperlink in a presentation in PowerPoint for Mac
-      href: ../powerpoint/create-powerpoint-mailto-hyperlink.md
-    - name: Embedded videos don't play
-      href: ../powerpoint/embedded-video-not-play.md
-    - name: Error when you open a presentation
-      href: ../powerpoint/error-when-you-open-presentation.md
-    - name: File size of an existing presentation increases
-      href: ../powerpoint/presentation-file-size-increases.md
     - name: Hlink.dll Can't Be Loaded
       href: ../powerpoint/viewing-presentation-fails.md
     - name: Fonts aren't embedded
@@ -863,14 +843,6 @@
       href: ../powerpoint/not-enought-printer-memory-available.md
     - name: Office opens blank from SharePoint
       href: ../powerpoint/office-opens-blank-from-sharepoint.md
-    - name: Only the audio plays with a video file
-      href: ../powerpoint/powerpoint-video-file-only-audio-plays.md
-    - name: Password to modify a presentation is required
-      href: ../powerpoint/require-password-to-modify-presentation.md
-    - name: PowerPoint 2010 not responding
-      href: ../powerpoint/powerpoint-not-responding.md
-    - name: Powerpoint doesn't print in pure black and white
-      href: ../powerpoint/powerpoint-not-print-in-pure-black-white.md
     - name: PowerPoint files not rendering in Office Online Server after Security Update
       href: ../powerpoint/files-not-rendering-office-online-server-after-security-update.md
     - name: PowerPoint for Mac startup error
@@ -879,16 +851,10 @@
       href: ../powerpoint/powerpoint-stops-responding.md
     - name: Save presentation as webpage is unavailable
       href: ../powerpoint/save-presentation-as-webpage-unavailable.md
-    - name: Shortcuts to control display of grid and guides
-      href: ../powerpoint/grid-guides-keyboard-shortcuts.md
     - name: Slide transition sounds are missing
       href: ../powerpoint/slide-transition-sounds-missing.md
     - name: Troubleshoot a damaged presentation
       href: ../powerpoint/damaged-presentation.md
-    - name: You can't embed an online video in a presentation
-      href: ../powerpoint/cant-embed-online-video.md
-    - name: Videos are listed as "Unsupported
-      href: ../powerpoint/videos-listed-as-unsupported.md
   - name: Project
     items:
     - name: "\"Can not save to global.mpt\" when existing Project"
