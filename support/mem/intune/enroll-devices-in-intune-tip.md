@@ -11,7 +11,7 @@ ms.custom:
 - CSSTroubleshooting
 ---
 
-# Support Tip: Comparison of methods for enrolling a Windows device in Intune
+# Support Tip - Comparison of methods for enrolling a Windows device in Intune
 
 This article provides a brief overview and comparison of the methods that you can use to enroll Windows 10 devices in Microsoft Intune. It also provides an overview of the relevant logs and registry entries.
 
