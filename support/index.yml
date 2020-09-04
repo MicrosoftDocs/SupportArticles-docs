@@ -20,6 +20,11 @@ metadata:
 
 productDirectory:
   items:
+  - title: Windows
+    imageSrc: "media/hub-landing/windows.svg"
+    links:
+    - url: windows/index.yml
+      text: Troubleshooting articles for Windows
   - title: Microsoft Edge and Internet Explorer
     imageSrc: "media/hub-landing/Edge.jpg"
     links:
@@ -50,11 +55,6 @@ productDirectory:
     links:
     - url: webapps/welcome-webapps.md
       text: Troubleshooting articles for Web Apps
-  - title: Windows Developer
-    imageSrc: "media/hub-landing/logo_windows.svg"
-    links:
-    - url: windows/win32/welcome-windowsdeveloper.md
-      text: Troubleshooting articles for Windows Developer
   - title: Microsoft Endpoint Manager
     imageSrc: "media/hub-landing/MEM.jpg"
     links:
