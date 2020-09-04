@@ -21,7 +21,7 @@ Consider this scenario:
 
 In this scenario, when you use System Center 2012 Configuration Manager to deploy software updates in the enterprise, you receive an error message that resembles the following:
 
-> Http: Response, HTTP/1.1, Status: Bad gateway, URL: [http://Exception_URL/ClientWebService/client.asmx](https://Exception_URL/ClientWebService/client.asmx)
+> Http: Response, HTTP/1.1, Status: Bad gateway, URL: `http://Exception_URL/ClientWebService/client.asmx`
 
 ## Cause
 

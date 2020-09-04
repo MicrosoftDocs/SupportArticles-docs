@@ -62,4 +62,4 @@ To fix the issue, follow these steps.
     - If the latest binary doesn't work, you can try the previous file version to obtain an earlier system update level on that component.
     - If the only binary that's returned in this step matches the file that you're trying to replace on the affected VM, and if both files have the same size and time stamp, you can replace the corrupted file by copying it from another working VM that has the same OS and, if possible, the same system update level.
 
-4. Detach the repaired disk from the troubleshooting VM. Then, ﻿ [create a VM from the OS disk](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-create-vm-specialized) ﻿.
+4. Detach the repaired disk from the troubleshooting VM. Then, ﻿ [create a VM from the OS disk](https://docs.microsoft.com/azure/virtual-machines/windows/create-vm-specialized-portal) ﻿.

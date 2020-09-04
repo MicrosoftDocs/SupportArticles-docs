@@ -27,9 +27,6 @@
     - name: How to disable password caching
       href: disable-password-caching.md
 
-    - name: IEAK 9 supported languages
-      href: ieak-9-supported-languages.md
-
     - name: Non-secure content can't be displayed
       href: only-secure-content-is-displayed-message.md
 
@@ -303,6 +300,9 @@
 
 - name: Security and Privacy
   items:
+    - name: Applications attempt to access the Admin web cache
+      href: apps-access-admin-web-cache.md
+
     - name: Can't view secure web sites
       href: cannot-view-secure-web-sites.md
 
