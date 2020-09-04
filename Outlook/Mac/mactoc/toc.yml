@@ -16,7 +16,7 @@
     - name: Emails sent from a shared mailbox aren't saved in the Sent Items folder
       href: /exchange/troubleshoot/administration/email-from-shared-mailbox-not-saved-sent-items?context=/outlook/troubleshoot/context/mac-context
     - name: Outlook for Mac repeatedly prompts for credentials
-      href: ../send-receive-emails/kerberos-authentication-outlook-2016-for-mac.md
+      href: ../send-receive-emails/prompted-for-credentials-modern-authentication.md
   - name: Sign-in
     items:
     - name: Kerberos authentication for Mac
