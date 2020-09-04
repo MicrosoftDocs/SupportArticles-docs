@@ -9,7 +9,7 @@ ms.prod-support-area-path: Device configuration
 ---
 # Restrict USB devices by using Intune Administrative Templates
 
-To prevent malware infections or data loss in your organization, you may want to block certain kinds of USB devices, such as a USB flash drive or camera, and allow other kinds of USB, such as a keyboard or mouse. Or, you may want to allow USB devices by device IDs.
+To prevent malware infections or data loss in your organization, you may want to block certain kinds of USB devices, such as a USB flash drive or camera, and allow other kinds of USB devices, such as a keyboard or mouse. Or, you may want to allow USB devices by device IDs.
 
 This article describes how to configure such controls using the Intune Administrative Templates.
 
