@@ -35,11 +35,11 @@ As shown in the figure, you can choose from eight methods to enroll a Windows de
 - **[Manual enrollment in device management](#1).** The user manually enrolls the device in Intune without joining an Azure Active Directory (Azure AD) domain.
 - **[Automatic enrollment by using MDM](#2).** The user joins the device to an Azure AD domain, and the device automatically enrolls in Intune.
 - **[Automatic enrollment by using GPO](#3).** The user joins the device to an Azure AD domain, and a GPO for the domain automatically enrolls the device in Intune.
-- **[Windows Autopilot enrollment](#4).**
-- **[Intune and Configuration Manager co-management enrollment](#5).**
-- **[Deep link enrollment](#6).**
-- **[Company portal app or website enrollment](#7).**
-- **[Windows Configuration Designer (WCD) provisioning package enrollment](#8).**
+- **[Windows Autopilot enrollment](#4).** The device automatically enrolls during the Windows Out-of-the-Box-Experience (OOBE).
+- **[Intune and Configuration Manager co-management enrollment](#5).** A device that is already managed by System Center Configuration Manager automatically enrolls in Intune.
+- **[Deep link enrollment](#6).** The user selects a link to a web site to start the enrollment.
+- **[Company portal app or website enrollment](#7).** The user installs a portal app or goes to a portal website, and selects links to start the enrollment process.
+- **[Windows Configuration Designer (WCD) provisioning package enrollment](#8).** A provisioning package (downloaded by the user or delivered by USB removable media) automatically enrolls the device.
 
 The rest of this section provides a brief overview of each of these eight methods.
 
