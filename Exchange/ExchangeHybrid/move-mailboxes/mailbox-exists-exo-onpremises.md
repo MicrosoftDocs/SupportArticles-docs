@@ -74,6 +74,88 @@ This scenario would be most applicable if the user mailbox was previously migrat
     $cred = Get-Credential
     New-MailboxRestoreRequest -RemoteHostName "mail.contoso.com" -RemoteCredential $cred -SourceStoreMailbox "exchange guid of disconnected mailbox" -TargetMailbox "exchange guid of cloud mailbox" -RemoteDatabaseGuid "guid of on-premises database" -RemoteRestoreType DisconnectedMailbox
     ```
+> [!IMPORTANT]
+> Because New-MailboxRestoreRequest was designed to work in a single Exchange organization, the cross-premises restore jobs will fail due to an unavoidable mismatch between the source and target mailbox ExchangeGuid's.  The mailbox restore request will end in status "FailedOther", and the report (from `Get-MailboxRestoreRequestStatistics -IncludeReport`) will show the following error message in the final report Entry:
+> 
+> ```powershell
+> Get-MailboxRestoreRequest "<mailbox's ID>" | `
+> Get-MailboxRestoreRequestStatistics -IncludeReport | `
+> select -ExpandProperty Report | `
+> select -ExpandProperty Entries | `
+> select -Last 2 | `
+> select -Last 1
+> 
+> CreationTime               : 7/21/2020 12:16:36 AM
+> ServerName                 : YTBPR01MB4016
+> Type                       : Error
+> TypeInt                    : 4
+> Flags                      : Failure, Fatal
+> FlagsInt                   : 18
+> Message                    : Fatal error RecipientNotFoundPermanentException has occurred.
+> MessageData                : {0, 1, 0, 0...}
+> MessageBytes               : {10, 29, 70, 97...}
+> Failure                    : RecipientNotFoundPermanentException: Cannot find a recipient that has mailbox
+>                              GUID '2ed5d0ca-54e2-4226-a4ce-a48848e18c0f'.
+> BadItem                    :
+> ConfigObject               :
+> MailboxSize                :
+> SessionStatistics          :
+> ArchiveSessionStatistics   :
+> MailboxVerificationResults : {}
+> DivergenceFixupResults     : {}
+> DebugData                  :
+> Connectivity               :
+> SourceThrottleDurations    :
+> TargetThrottleDurations    :
+> UnknownElements            :
+> UnknownAttributes          :
+> XmlSchemaType              :
+> LocalizedString            : 7/21/2020 12:16:36 AM [YTBPR01MB4016] Fatal error
+>                              RecipientNotFoundPermanentException has occurred.
+> Identity                   :
+> IsValid                    : True
+> ObjectState                : New
+> ```
+> This failure can be disregarded and the job instead treated as a success, as long as the second to last Entry in the report shows the correct number of items having been copied (e.g. Copy Progress: 5000/5000 messages, 2.34 GB/2.34 GB).  For example:
+> 
+> ```powershell
+> Get-MailboxRestoreRequest "<mailbox's ID>" | `
+> Get-MailboxRestoreRequestStatistics -IncludeReport | `
+> select -ExpandProperty Report | `
+> select -ExpandProperty Entries | `
+> select -Last 2 | `
+> select -First 1
+> 
+> CreationTime               : 7/21/2020 12:16:36 AM
+> ServerName                 : YTBPR01MB4016
+> Type                       : Informational
+> TypeInt                    : 0
+> Flags                      : None
+> FlagsInt                   : 0
+> Message                    : Copy progress: 799/799 messages, 25 MB (26,215,094 bytes)/25 MB (26,215,094
+>                              bytes), 0/0 folders completed.
+> MessageData                : {0, 1, 0, 0...}
+> MessageBytes               : {10, 68, 67, 111...}
+> Failure                    :
+> BadItem                    :
+> ConfigObject               :
+> MailboxSize                :
+> SessionStatistics          :
+> ArchiveSessionStatistics   :
+> MailboxVerificationResults : {}
+> DivergenceFixupResults     : {}
+> DebugData                  :
+> Connectivity               :
+> SourceThrottleDurations    :
+> TargetThrottleDurations    :
+> UnknownElements            :
+> UnknownAttributes          :
+> XmlSchemaType              :
+> LocalizedString            : 7/21/2020 12:16:36 AM [YTBPR01MB4016] Copy progress: 799/799 messages, 25 MB
+>                              (26,215,094 bytes)/25 MB (26,215,094 bytes), 0/0 folders completed.
+> ```
+> 
+> Any items reported in the BadItemsEncountered, LargeItemsEncountered, or MissingItemsEncountered properties (from `Get-MailboxRestoreRequestStatistics`) should be treated normally, as these would have been encountered regardless of whether the mailbox was migrated via migration batch / move request, or via New-MailboxRestoreRequest. 
 
 ### Scenario 2: Remove Exchange Online mailbox data
 
