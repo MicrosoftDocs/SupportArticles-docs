@@ -180,11 +180,11 @@ If your organization has a company portal app in the Microsoft Store, you can pr
 To use your company's management portal for enrollment, you can provide the following instructions to your users:
 
 1. In a browser, go to portal.manage.microsoft.com.
-   :::image type="content" source=".\media\enroll-devices-in-intune-tip\portal-10a.png" alt-text="Configuration Manager properties for enabling Intune co-management":::
+   :::image type="content" source=".\media\enroll-devices-in-intune-tip\portal-10a.png" alt-text="Example landing page of a company portal website":::
 2. Select **Devices**, and then select the grey bar.
-   :::image type="content" source=".\media\enroll-devices-in-intune-tip\portal-enroll-10b.png" alt-text="Configuration Manager properties for co-managing devices in Intune":::
+   :::image type="content" source=".\media\enroll-devices-in-intune-tip\portal-enroll-10b.png" alt-text="Devices page of an example company portal website":::
 3. To start the enrollment process, select **Add**.
-   :::image type="content" source=".\media\enroll-devices-in-intune-tip\portal-device-10c.png" alt-text="Configuration Manager properties for co-managing devices in Intune":::
+   :::image type="content" source=".\media\enroll-devices-in-intune-tip\portal-device-10c.png" alt-text="Adding a device by using an example company portal website":::
 
 ### <a id="8" ></a>WCD provisioning package enrollment
 
@@ -204,7 +204,7 @@ For more information about creating provisioning packages, see [Bulk enrollment 
 After a Windows device is enrolled in Intune, the following locations on the device contain records of the enrollment process.
 
 - Event Viewer
-- MDM diagonistic logs
+- MDM diagnostic logs
 - Registry
 
 ### Event Viewer
@@ -223,9 +223,9 @@ The UserDevice Registration and DeviceManagement Enterprise Diagnostics provider
 |Auto MDM Enroll  Succeeded    \|\| (SCCM/GPO) |75 |
 
 The following figures show event information from this table in Event Viewer.
-:::image type="content" source=".\media\enroll-devices-in-intune-tip\event-viewer-example-12.png" alt-text="WCD start page":::
+:::image type="content" source=".\media\enroll-devices-in-intune-tip\event-viewer-example-12.png" alt-text="Event Viewer, detail view":::
 
-:::image type="content" source=".\media\enroll-devices-in-intune-tip\event-viewer-example-13.png" alt-text="WCD start page":::
+:::image type="content" source=".\media\enroll-devices-in-intune-tip\event-viewer-example-13.png" alt-text="Event Viewer, overview of enrollment events":::
 
 ### MDM diagnostic logs
 
@@ -239,7 +239,7 @@ To export the diagnostic logs, select **Export**.
 
 The diagnostics report includes information such as the current values of settings that are configured by policy, and the GUID of the service that applied the policy.
 
-:::image type="content" source=".\media\enroll-devices-in-intune-tip\diagnostics-report-15.png" alt-text="Select Export to export diagnostics":::
+:::image type="content" source=".\media\enroll-devices-in-intune-tip\diagnostics-report-15.png" alt-text="Diagnostic report information":::
 
 ### Registry
 
@@ -249,7 +249,7 @@ To view the enrollment registry entries, open Registry Editor on the device and 
 
 The GUID represents the configuration source, as identified in the diagnostics report. The entries and values in this subkey include configuration information as well as the user principal name (UPN) of the user that is associated with the device.
 
-:::image type="content" source=".\media\enroll-devices-in-intune-tip\registry-16.png" alt-text="Select Export to export diagnostics":::
+:::image type="content" source=".\media\enroll-devices-in-intune-tip\registry-16.png" alt-text="Enrollment subkeys and entries in the registry":::
 
 ## Comparison
 
@@ -257,11 +257,11 @@ Now let’s quickly compare these eight enrollment methods in terms of the inten
 
 |Enrollment method |Device ownership |User interaction required for enrollment|
 | --- | --- | --- |
-|Manual (device mgmt only) |Personal |Yes |
+|Manual (device management only) |Personal |Yes |
 |Auto-enroll (MDM) |Personal |Yes |
 |Auto-enroll (GPO) |Corporate |No |
 |Windows Autopilot |Corporate |Yes |
-|Intune/SCCM co-management |Corporate |No |
+|Intune/Configuration Manager co-management |Corporate |No |
 |Deep link | Personal |Yes |
 |Company portal app or website | Personal |Yes |
 |WCD provisioning package |Corporate |No |
