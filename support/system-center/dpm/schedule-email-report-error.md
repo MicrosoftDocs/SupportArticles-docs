@@ -75,7 +75,7 @@ To work around this problem, follow these steps to make correct configuration ch
 
     ![Reporting Services Configuration Manager - Web Portal URL](./media/schedule-email-report-error/web-portal-url.png)
 
-13. Click the **URLs** link, as shown in step 12. This opens the [http://localhost/Reports/Pages/Folder.aspx](https://localhost/Reports/Pages/Folder.aspx) portal, as shown in the following screenshot.
+13. Click the **URLs** link, as shown in step 12. This opens the `https://localhost/Reports/Pages/Folder.aspx` portal, as shown in the following screenshot.
 
     ![URLs - localhost](./media/schedule-email-report-error/click-url-link.png)
 

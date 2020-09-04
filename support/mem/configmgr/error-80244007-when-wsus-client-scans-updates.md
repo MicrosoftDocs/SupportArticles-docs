@@ -15,13 +15,13 @@ _Original KB number:_ &nbsp; 4096317
 
 You use WSUS to deploy software updates to computers that are in your organization. When a WSUS client computer scans for updates on the WSUS server, the following error message is logged in the WindowsUpdate.log file on the client computer:
 
-> WS error: \<detail>\<ErrorCode>InvalidParameters\</ErrorCode>\<Message>parameters.InstalledNonLeafUpdateIDs\</Message>\<ID>GUID\</ID>\<Method>[http://www.microsoft.com/SoftwareDistribution/Server/ClientWebService/SyncUpdates](https://www.microsoft.com/SoftwareDistribution/Server/ClientWebService/SyncUpdates)"\</Method>\</detail>"
+> WS error: \<detail>\<ErrorCode>InvalidParameters\</ErrorCode>\<Message>parameters.InstalledNonLeafUpdateIDs\</Message>\<ID>GUID\</ID>\<Method>`http://www.microsoft.com/SoftwareDistribution/Server/ClientWebService/SyncUpdates`"\</Method>\</detail>"
 >
 > \*FAILED\* [80244007] SyncUpdates_WithRecovery failed
 
 Additionally, the following exception is logged in the SoftwareDistribution.log file on the WSUS server:
 
-> ThrowException: actor = [http://WSUSServerName:8530/ClientWebService/client.asmx](https://WSUSServerName:8530/ClientWebService/client.asmx), ID=GUID, ErrorCode=InvalidParameters, Message=parameters.InstalledNonLeafUpdateIDs, Client=Client_ID
+> ThrowException: actor = `http://WSUSServerName:8530/ClientWebService/client.asmx`, ID=GUID, ErrorCode=InvalidParameters, Message=parameters.InstalledNonLeafUpdateIDs, Client=Client_ID
 
 ## Cause
 

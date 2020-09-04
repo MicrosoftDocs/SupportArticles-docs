@@ -859,7 +859,7 @@ In the example above, the job *{C10457F9-DE3A-4B45-878C-345919AFF97E}* is associ
 
 **DataTransferService.log** shows the progress of the DTS job, which creates a BITS job to download the signature file and notifies upon completion:
 
-> DataTransferService    3812 (0xee4)    DTSJob {3C962758-7ABE-40F2-A585-E5B59E378BEA} created to download from '<https://P01MP.CONTOSO.COM:443/SMS_DP_SMSSIG$>' to 'E:\SMS_DP$\P010000F\Content_3c9813ba-d7ab-4963-929c-36f90f479613.1'.  
+> DataTransferService    3812 (0xee4)    DTSJob {3C962758-7ABE-40F2-A585-E5B59E378BEA} created to download from '<`https://P01MP.CONTOSO.COM:443/SMS_DP_SMSSIG$`>' to 'E:\SMS_DP$\P010000F\Content_3c9813ba-d7ab-4963-929c-36f90f479613.1'.  
 > DataTransferService    3856 (0xf10)    Starting BITS download for DTS job '{3C962758-7ABE-40F2-A585-E5B59E378BEA}'.  
 > DataTransferService    3856 (0xf10)    Starting BITS job '{43647077-986C-4727-A954-B327ECA50302}' for DTS job '{3C962758-7ABE-40F2-A585-E5B59E378BEA}' under user 'S-1-5-18'.  
 > DataTransferService    3856 (0xf10)    Adding to BITS job: Content_3c9813ba-d7ab-4963-929c-36f90f479613.1.tar  
@@ -889,7 +889,7 @@ Pull DP creates a download job for the content. In this example, the content did
 
 **DataTransferService.log** shows the progress of the job. With verbose logging enabled for the pull DP, **PullDP.log** would show more information about the download progress as well.
 
-> DataTransferService    3856 (0xf10)    DTSJob {78635652-3D12-4A26-A51B-D553934ECB54} created to download from '<https://P01MP.CONTOSO.COM:443/SMS_DP_SMSPKG$/Content_3c9813ba-d7ab-4963-929c-36f90f479613.1>' to 'E:\SMS_DP$\P010000F\Content_3c9813ba-d7ab-4963-929c-36f90f479613.1\3'.  
+> DataTransferService    3856 (0xf10)    DTSJob {78635652-3D12-4A26-A51B-D553934ECB54} created to download from '<`https://P01MP.CONTOSO.COM:443/SMS_DP_SMSPKG$/Content_3c9813ba-d7ab-4963-929c-36f90f479613.1`>' to 'E:\SMS_DP$\P010000F\Content_3c9813ba-d7ab-4963-929c-36f90f479613.1\3'.  
 > DataTransferService    3812 (0xee4)    Starting BITS job '{04498466-5A8E-4A22-97F2-A66306143A20}' for DTS job '{78635652-3D12-4A26-A51B-D553934ECB54}' under user 'S-1-5-18'.  
 > DataTransferService    3812 (0xee4)    DTSJob {78635652-3D12-4A26-A51B-D553934ECB54} in state 'DownloadingData'.  
 > DataTransferService    752 (0x2f0)    DTS job {78635652-3D12-4A26-A51B-D553934ECB54} has completed:  
