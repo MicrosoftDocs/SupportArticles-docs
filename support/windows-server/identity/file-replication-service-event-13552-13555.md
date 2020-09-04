@@ -59,7 +59,7 @@ To work around this issue, on domain controllers that the events are logged foll
 Don't delete the three folders. Delete subfolders and files in these three folders:
    - %systemroot%\ntfrs\jet
    - %systemroot%\sysvol\domain\DO_NOT_REMOVE_NtFrs_PreInstall_Directory
-   - %systemroot%\sysvol\staging\domainIf these folders and files aren't shown, perform the [additional steps to show the hidden files or folders](#show-hidden-files-and-folders-in-windows-explorer).
+   - %systemroot%\sysvol\staging\domainIf these folders and files aren't shown, perform the [additional steps to show the hidden files or folders](#more-information).
 4. Force synchronization of FRS on the reference domain controller. To do this, follow these steps:
       1. Open Registry Editor and locate to the following registry subkey: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\SERVICES\NTFRS\Parameters\Backup/Restore\Process at Startup` 
       2. Right-click the **BurFlags**  entry, and then click **Modify**.
@@ -75,7 +75,7 @@ Don't delete the three folders. Delete subfolders and files in these three folde
 Don't delete the three folders. Delete subfolders and files in the following three folders:
    - %systemroot%\ntfrs\jet
    - %systemroot%\sysvol\domain\DO_NOT_REMOVE_NtFrs_PreInstall_Directory
-   - %systemroot%\sysvol\staging\domainIf these folders and files aren't shown, perform the [additional steps to show the hidden files or folders](#show-hidden-files-and-folders-in-windows-explorer).
+   - %systemroot%\sysvol\staging\domainIf these folders and files aren't shown, perform the [additional steps to show the hidden files or folders](#more-information).
 8. Delete the following folders under the "%systemroot%\sysvol\domain" path:
    - %systemroot%\sysvol\domain\policies
    - %systemroot%\sysvol\domain\scripts

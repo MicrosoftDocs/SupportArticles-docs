@@ -89,4 +89,4 @@ For more information, visit the following Microsoft TechNet Web sites:
 
 [https://technet2.microsoft.com/WindowsServer/en/Library/df20bd3e-9914-4a8d-bd5b-3b987c73a34d1033.mspx](https://technet2.microsoft.com/windowsserver/en/library/df20bd3e-9914-4a8d-bd5b-3b987c73a34d1033.mspx) 
 
-[http://blogs.msdn.com/brettsh/archive/2006/02/09/528708.aspx](http://blogs.msdn.com/brettsh/archive/2006/02/09/528708.aspx)
+[https://blogs.msdn.com/brettsh/archive/2006/02/09/528708.aspx](https://blogs.msdn.com/brettsh/archive/2006/02/09/528708.aspx)

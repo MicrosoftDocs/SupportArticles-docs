@@ -55,7 +55,7 @@ To better analyze the LDAP queries that are captured in event ID 1644, follow th
 |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters\Search Time Threshold (msecs)|DWORD|30,000|
 |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters\Expensive Search Results Threshold|DWORD|10,000|
 |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters\Inefficient Search Results Threshold|DWORD|1,000|
-||||
+
  Notes 
    - When the Field Engineering logging level is enabled and the Search Time Threshold (msecs) registry entry is not used or is set to 0, the default value of the time threshold is 30,000 milliseconds. (This action does not require a restart.)
    - One strategy would be to set the registry value for both the Inefficient Search Results Threshold and Expensive Search Results Threshold registry settings, and then focus on events that are identified by Search Time hold (msecs). Start with a larger value like 100 milliseconds and then incrementally decrease the value as you optimize the queries that are occurring in your environment.
@@ -148,4 +148,4 @@ In this situation, numbers in the Excel spreadsheet are rendered as in the follo
 
 To resolve this issue, change the **Decimal symbol** to a period (.) in the **Region settings** item in Control Panel.  
 
-For more information about LDAP queries, see the following blog: [How to find expensive, inefficient and long running LDAP queries in Active Directory](http://blogs.technet.com/b/askpfeplat/archive/2015/05/11/how-to-find-expensive-inefficient-and-long-running-ldap-queries-in-active-directory.aspx)
+For more information about LDAP queries, see the following blog: [How to find expensive, inefficient and long running LDAP queries in Active Directory](https://blogs.technet.com/b/askpfeplat/archive/2015/05/11/how-to-find-expensive-inefficient-and-long-running-ldap-queries-in-active-directory.aspx)

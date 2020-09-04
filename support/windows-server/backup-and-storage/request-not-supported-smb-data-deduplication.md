@@ -1,5 +1,5 @@
 ---
-title:The request is not supported error for SMB Read Andx requests for files managed by Data Deduplication in Windows Server 2012
+title: The request is not supported error for SMB Read Andx requests for files managed by Data Deduplication in Windows Server 2012
 description: Fixes errors that occur in SMB Read Andx requests for files managed by Data Deduplication.
 ms.date: 08/19/2020
 author: delhan
@@ -97,7 +97,7 @@ Same action on a Windows 7 client with SMBv2 protocol works
 - tested on Windows 7 client with SMB2: OK
 - tested on Windows 7 client with SMB1: failed (SMB2 disabled using info from KB
 2696547 How to enable and disable SMBv1, SMBv2, and SMBv3 in Windows Vista, Windows Server 2008, Windows 7, Windows Server 2008 R2, Windows 8, and Windows Server 2012
-http://support.microsoft.com/kb/2696547) 
+https://support.microsoft.com/kb/2696547) 
 
 **Workaround:**
 
@@ -121,7 +121,7 @@ get the latest status of the unoptimization job by running the Get-DedupJob Powe
 
 Reported on:
 
-http://social.technet.microsoft.com/Forums/en-CA/winserverfiles/thread/c3f370ec-cca3-4af5-90a4-02c2a8901bc8
+https://social.technet.microsoft.com/Forums/en-CA/winserverfiles/thread/c3f370ec-cca3-4af5-90a4-02c2a8901bc8
 
 ## Cause
 
@@ -192,7 +192,7 @@ Here is the article about the PDF files [https://social.technet.microsoft.com/Fo
 
 Info re. Deduplication on Microsoft Server 2012
 
- [Introduction to Data Deduplication in Windows Server 2012](http://blogs.technet.com/b/filecab/archive/2012/05/21/introduction-to-data-deduplication-in-windows-server-2012.aspx) 
+ [Introduction to Data Deduplication in Windows Server 2012](https://blogs.technet.com/b/filecab/archive/2012/05/21/introduction-to-data-deduplication-in-windows-server-2012.aspx) 
 
  [Data Deduplication Overview](https://technet.microsoft.com/library/hh831602.aspx)  
 
@@ -210,4 +210,4 @@ Recycling of previously allocated ECPs is new in Windows 8. To avoid the overhea
 
 Server & Tools Blogs > Server & Management Blogs > The Storage Team at Microsoft - File Cabinet
 
- [http://blogs.technet.com/b/filecab/archive/2012/05/21/introduction-to-data-deduplication-in-windows-server-2012.aspx](http://blogs.technet.com/b/filecab/archive/2012/05/21/introduction-to-data-deduplication-in-windows-server-2012.aspx)
+ [https://blogs.technet.com/b/filecab/archive/2012/05/21/introduction-to-data-deduplication-in-windows-server-2012.aspx](https://blogs.technet.com/b/filecab/archive/2012/05/21/introduction-to-data-deduplication-in-windows-server-2012.aspx)

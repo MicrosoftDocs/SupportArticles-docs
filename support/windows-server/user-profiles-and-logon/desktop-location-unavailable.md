@@ -33,7 +33,7 @@ After you install the update in [Vulnerability in Windows User Profile service c
 - Services don't start because of profile load failures. Affected services include but aren't limited to the following:
   - Local Service
   - Network Service
-  - MSSQLWhen this issue occurs, related events are logged. See [the events that are logged in Event Viewer](#eventslog).
+  - MSSQLWhen this issue occurs, related events are logged. See [the events that are logged in Event Viewer](#more-information).
 
 Process Monitor may indicate that a **CreateFile** operation fails with an **ACCESS DENIED** result to the following path, depending on how file access is constrained:
 **\<drive>**:\documents & settings\\\<username>\local settings\Application Data\Microsoft\Windows\UsrClasss.dat
@@ -68,8 +68,8 @@ In the following screenshot, the test user, CONTOSO/testUser, has full control o
 
 |NTFS File System ACLS on DAT files|Advanced NTFS File System ACLS on DAT files|
 |---|---|
-|![UsrClass.dat Properties](./media/desktop-location-unavailable/ntfs-file-system-permissions-on-ntuser.png)<br/>|![](./media/desktop-location-unavailable/ntfs-file-system-permissions-on-usrclass.png)<br/>|
-|||
+|![UsrClass.dat Properties](./media/desktop-location-unavailable/ntfs-file-system-permissions-on-ntuser.png)<br/>|![NTFS file system](./media/desktop-location-unavailable/ntfs-file-system-permissions-on-usrclass.png)<br/>|
+
 
 
 ## Status

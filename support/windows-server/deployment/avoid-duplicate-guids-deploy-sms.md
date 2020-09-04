@@ -92,7 +92,7 @@ To prepare the SMS 2003 Advanced Client computer for imaging:
 4. On the master computer, run the
  **CCMDelCert.exe** utility to delete any certificates from the Advanced Client.
 
-Note. The CCMDelCert.exe utility is part of Systems Management Server 2003 Toolkit 2. To obtain this toolkit, visit the following Microsoft Web site: [https://technet.microsoft.com/sms/bb676787.aspx](https://technet.microsoft.com/sms/bb676787.aspx) 
+Note. The CCMDelCert.exe utility is part of Systems Management Server 2003 Toolkit 2. To obtain this toolkit, visit the following Microsoft Web site: [https://technet.microsoft.com/bb676787.aspx](https://technet.microsoft.com/bb676787.aspx) 
 
 5. Create the image of the master computer by using your imaging software.
 6. Restore the image on the destination computers.

@@ -32,7 +32,7 @@ The procedures in this article show the expected results that each command retur
 
 > [!NOTE]
 > For Windows Server 2012 documentation, see the following TechNet blog post:  
->[Tip of the Day: Configuring Disk Mirroring for Windows Server 2012](http://blogs.technet.com/b/tip_of_the_day/archive/2014/10/10/tip-of-the-day-configuring-disk-mirroring-for-windows-server-2012.aspx) 
+>[Tip of the Day: Configuring Disk Mirroring for Windows Server 2012](https://blogs.technet.com/b/tip_of_the_day/archive/2014/10/10/tip-of-the-day-configuring-disk-mirroring-for-windows-server-2012.aspx) 
 
 ## More information
 
@@ -351,14 +351,13 @@ Notice that the last GUID in the Firmware Boot Manager display order is the same
 ### Copy the EFI partition and the BCD store to the second drive
 
 To export the EFI partition and the BCD store to the second drive, follow these steps:
+
 1. Export the BCD store to the EFI partition on disk 0. This lets you copy the BCD store from disk 0 to disk 1. To do this, follow these steps:
       1. Open a command prompt.
       2. At the command prompt, type bcdedit /export P:\EFI\Microsoft\Boot\BCD2, and then press ENTER to export the BCD store to a file that is named "BCD2." An output that resembles the following is displayed:
-   
-        The operation completed successfully.
+
+         The operation completed successfully.
  
-
-
 2. Use the Robocopy command to copy the system files from "P" (the EFI partition on the primary drive) to "S" (the EFI partition on the secondary drive). You must do this to make sure that the secondary drive can start the system if disk 0 fails. Make sure that you use the correct drive letters if you used different letters for your EFI partitions. To do this, type robocopy p:\ s:\ /e /r:0 at the command prompt, and then press ENTER.
 3. Rename the BCD store on disk 1 so that it matches the name of the store on disk 0. To do this, type rename S:\EFI\Microsoft\Boot\BCD2 BCD at the command prompt, and then press ENTER.
 4. Delete the duplicate BCD store on disk 0. To do this, type del P:\EFI\Microsoft\Boot\BCD2 at the command prompt, and then press ENTER.
@@ -366,7 +365,7 @@ To export the EFI partition and the BCD store to the second drive, follow these 
       1. At the command prompt, type diskpart.exe, and then press ENTER.
       2. At the DISKPART> prompt, type Select volume P. 
   
-        Volume 1 is the selected volume. 
+         Volume 1 is the selected volume. 
     
   
     
@@ -455,8 +454,8 @@ If there's a failure of the primary drive (disk 0), you must start the computer 
         DISKPART> create partition efi size=200  
         DISKPART> create partition msr size=128  
       6. List the partitions that are on the system to verify that disk 0 contains both an EFI and an MSR partition:
-    
-        DISKPART> list partition  
+
+         DISKPART> list partition
 8. Convert both disks to dynamic disks if they aren't already dynamic disks:
     DISKPART> select disk 0  
     DISKPART> convert dynamic  
@@ -493,10 +492,10 @@ If there's a failure of the primary drive (disk 0), you must start the computer 
 15. Follow these steps:
       1. Remove the drive letters that you assigned in DiskPart:
     
-        DISKPART> select volume p  
-        DISKPART> remove  
-        DISKPART> select volume s  
-        DISKPART> remove  
+         DISKPART> select volume p  
+         DISKPART> remove  
+         DISKPART> select volume s  
+         DISKPART> remove  
       2. Restart the computer to verify that you can boot from either disk 0 or disk 1.
     
 > [!NOTE]

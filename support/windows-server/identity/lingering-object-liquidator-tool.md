@@ -27,7 +27,7 @@ The [Lingering Object Liquidator](https://blogs.technet.microsoft.com/askds/2014
 ### Benefits and availability
 
 - Combines discovery and removal of lingering objects in one interface.
-- The tool is available from the [Microsoft download center](http://aka.ms/MSFTLoL).
+- The tool is available from the [Microsoft download center](https://aka.ms/MSFTLoL).
 
 See this ASKDS [blog post](https://aka.ms/LingeringObjectLiquidator) for detailed instructions on tool usage.
 
@@ -180,7 +180,7 @@ Access the [Troubleshooting Active Directory Lingering Objects](https://aka.ms/Q
 
 ### Workflow
 
-![Workflow](./media/lingering-object-liquidator-tool/workflow.jpg)
+![Workflow image](./media/lingering-object-liquidator-tool/workflow.jpg)
 
 ## More information
 

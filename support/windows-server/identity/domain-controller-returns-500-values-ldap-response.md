@@ -62,7 +62,7 @@ Internal LDAP limitations have been introduced in Windows Server 2008 R2 and Win
 | MaxQueryDuration| 1200|
 | MaxTempTableSize| 100000|
 | MaxValRange| 5000|
-|||
+
 Therefore the effective setting for the above LDAP policy is MaxPageSize=50000 and MaxValRange=25000 on a Windows Server 2003 domain controller as configured in the LDAP policy but on a Windows Server 2008 R2 or Windows Server 2008 domain controller the hardcoded limits dictate MaxPageSize=20000 and MaxValRange=5000.
 MaxValRange affects the number of attributes returned for a query. If you perform a LDAP query for the multi-valued attribute Member for a group object with more than 5000 members the Windows Server 2008 R2 or Windows Server 2008 domain controller will only return 5000 of them.
 

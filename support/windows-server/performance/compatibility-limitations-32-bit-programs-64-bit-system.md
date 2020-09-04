@@ -131,7 +131,6 @@ The x64-based versions of Windows Server 2003 and of Windows XP Professional x64
 
 The following sections briefly describe the considerations and the limitations that are specific to 32-bit programs that run on the Itanium-based versions of Microsoft Windows Server 2003 and of Microsoft Windows XP.
 
-[back to the top](#back-to-the-top) 
 
 ### Intel Architecture 32-bit Execution Layer (IA-32 EL)
 
@@ -175,7 +174,7 @@ The following table shows the graphics solutions that are supported for 32-bit b
 |D3D8|No|No|
 |D3D9|No|No|
 |OpenGL|Yes|Yes|
-||||
+
 In instances where graphics hardware acceleration is not supported, binaries that require graphics hardware acceleration will not run as 32-bit binaries on the Itanium-based versions of Windows Server 2003 and of Windows XP. Additionally, 32-bit binaries that extensively use graphics will experience decreased performance when hardware acceleration is not supported.
 
 If a 32-bit program requires DirectX hardware acceleration, contact the manufacturer of the program for an update that is compatible with the Itanium-based versions of Windows Server 2003 and of Windows XP.
@@ -201,6 +200,6 @@ For more information about developing programs for the Itanium-based versions of
 
 For more information about other issues related to developing programs for the 64-bit versions of Windows Server 2003 and of Windows XP, visit the following Microsoft Web site: [https://msdn.microsoft.com/](https://msdn.microsoft.com/) 
 
- [back to the top](#bsummary) 
+ [back to the top](#summary) 
 
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, regarding the performance or reliability of these products.
