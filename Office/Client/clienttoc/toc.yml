@@ -307,8 +307,6 @@
       href: ../excel/center-across-columns-button-disappear.md
     - name: "\"Margins do not fit page size\" error with print"
       href: ../excel/fails-printing-a-workbook.md
-    - name: "\"Total\" row is not shown in waterfall charts"
-      href: ../excel/table-total-row-not-shown-in-waterfall.md
     - name: .SpecialCells(xlCellTypeBlanks) VBA function doesn't work
       href: ../excel/specialcells(xlcelltypeblanks)-vba-function.md
     - name: A file is updated without user interaction
