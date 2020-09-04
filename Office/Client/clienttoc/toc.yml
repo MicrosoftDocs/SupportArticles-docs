@@ -807,14 +807,8 @@
       href: ../office-suite-issues/win32api_ptrsafe-with-64-bit-support.md
   - name: OneNote
     items:
-    - name: "\"Open new side note\" missing from  Windows notification"
-      href: ../onenote/open-new-side-note-missing.md
     - name: Errors when you sync a notebook
       href: ../onenote/error-sync-notebook.md
-    - name: Locate Onenote notebooks
-      href: ../onenote/locate-onenote-notebooks.md
-    - name: 'OneNote error "Content Not Yet Available"'
-      href: ../onenote/onenote-error-content-not-yet-available.md
     - name: Temporary change to file size download limit in OneNote
       href: ../onenote/temp-change-onenote-file-size-download.md
     - name: Warning when a notebook is in an offline location
@@ -921,10 +915,6 @@
       href: ../project/tasks-not-scheduled.md
   - name: Publisher
     items:
-    - name: Publication is printed incorrectly
-      href: ../publisher/print-publication-incorrectly.md
-    - name: Publisher can't open file with OLE objects
-      href: ../publisher/publisher-cannot-open-the-file-error.md
     - name: Text boxes in Publisher-created email are converted to bitmap
       href: ../publisher/text-boxes-coverted-to-bitmap.md
   - name: Settings
