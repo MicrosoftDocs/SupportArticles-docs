@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 2387367
 
 ## Symptoms
 
-The Internet Small Computer System Interface (iSCSI) initiator may show the incorrect MPIO path state when you use storage arrays that support ALUA.
+The Internet Small Computer System Interface (iSCSI) initiator may show the incorrect Multipath I/O (MPIO) path state when you use storage arrays that support ALUA.
 
 ## Cause
 

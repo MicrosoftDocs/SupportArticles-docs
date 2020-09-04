@@ -19,7 +19,7 @@ If you have a hot-pluggable PCI Express or ExpressCard device installed in a com
 
 This problem may occur on Windows Vista if the hot-pluggable PCI Express or ExpressCard device is installed in a slot provided by certain PCI bridges that signal the device-removal event in an unexpected way.
 
-The Windows Vista PCI bus driver (PCI.SYS) expects certain PCI Express/ExpressCard hot-plug events to occur together, such as `SlotEventEnableRequest & SlotEventLinkStateActive`, or `SlotEventSurpriseDisableRequest & SlotEventLinkStateNotActive`. Some PCI Express bridges do not signal these events together at the same time, with the result that the Windows Vista PCI.SYS does not successfully process these PCI hot-unplug events.
+The Windows Vista PCI bus driver (*PCI.SYS*) expects certain PCI Express/ExpressCard hot-plug events to occur together, such as `SlotEventEnableRequest` & `SlotEventLinkStateActive`, or `SlotEventSurpriseDisableRequest` & `SlotEventLinkStateNotActive`. Some PCI Express bridges do not signal these events together at the same time, with the result that the Windows Vista PCI.SYS does not successfully process these PCI hot-unplug events.
 
 ## Resolution
 

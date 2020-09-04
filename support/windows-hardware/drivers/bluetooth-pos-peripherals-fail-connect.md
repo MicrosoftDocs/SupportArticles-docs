@@ -19,7 +19,7 @@ The Human Interface Device Access Service, or HID Input Service fails to start o
 
 ## Cause
 
-If there is no HID device attached during the Windows Embedded for Point of Service installation, the *HIDSERV.DLL* file may not install to the system, preventing the HID Service from starting. If HID devices are later added to the Windows Embedded for Point of Service system, or other functionality dependent on the HID Service is required, the failure of the HID Service prevents them from working.
+If there is no HID device attached during the Windows Embedded for Point of Service installation, the HIDSERV.DLL file may not install to the system, preventing the HID Service from starting. If HID devices are later added to the Windows Embedded for Point of Service system, or other functionality dependent on the HID Service is required, the failure of the HID Service prevents them from working.
 
 ## Resolution
 

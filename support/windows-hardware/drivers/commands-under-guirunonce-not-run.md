@@ -16,11 +16,11 @@ _Original KB number:_ &nbsp; 2390828
 
 On a device running Windows Embedded POSReady with File Based Write Filter (FBWF) and Registry Filter enabled, the commands listed under the **GuiRunOnce** field in a *sysprep.inf* file may not run on first boot after `sysprep` is performed.
 
-This may be due to the missing registry key `HKCU\Software\Microsoft\Windows\CurrentVersion\RunOnce`.
+This may be due to the missing registry key: `HKCU\Software\Microsoft\Windows\CurrentVersion\RunOnce`.
 
 ## Cause
 
-The Registry key may be missing because it's not getting written to the Registry database. When the Registry Filter Driver service is enabled, it can prevent a Registry key from being written to the Registry database. The Registry Filter Driver is used to protect the registry database of an Embedded device. It prevents a user from making changes to the registry of a device. Registry Filter Driver service supplements the File Based Write Filter (FBWF) service and both should be turned off to allow the Registry key to be written to the Registry database. Unfortunately, both Registry Filter Driver service and FBWF service are not visible in the "Services" MMC snap-in. To control their settings, related Registry settings may need to be modified.
+The Registry key may be missing because it's not getting written to the Registry database. When the Registry Filter Driver service is enabled, it can prevent a Registry key from being written to the Registry database. The Registry Filter Driver is used to protect the registry database of an Embedded device. It prevents a user from making changes to the registry of a device. Registry Filter Driver service supplements the FBWF service and both should be turned off to allow the Registry key to be written to the Registry database. Unfortunately, both Registry Filter Driver service and FBWF service are not visible in the "Services" MMC snap-in. To control their settings, related Registry settings may need to be modified.
 
 ## Resolution
 
