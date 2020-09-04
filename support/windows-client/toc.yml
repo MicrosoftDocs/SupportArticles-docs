@@ -8,6 +8,8 @@
 
 - name: Active Directory
   items:
+    - name: The LsaLookupSids function returns the old user name
+      href: ./identity/lsalookupsids-function-not-return-new-user-name.md
     - name: W32Time doesn't start automatically
       href: ./identity/w32time-not-start-on-workgroup.md
 
@@ -15,10 +17,16 @@
   items:
     - name: .NET Framework 3.5 installation errors
       href: ./application-management/dotnet-framework-35-installation-error.md
+    - name: 0x80070BC9 error when installing MSI package
+      href: ./application-management/0x80070bc9-error-while-installing-msi-package.md.md
+    - name: 64-bit versions of Windows don't support 16-bit applications
+      href: ./application-management/x64-windows-not-support-16-bit-programs.md
     - name: Availability and description of FCIV
       href: ./application-management/virtualization-apps-not-work-with-hyper-v.md
     - name: Can't uninstall an application
       href: ./application-management/error-opening-installation-log-file.md
+    - name: COM port settings revert to the default
+      href: ./application-management/com-port-settings-reset-to-default.md
     - name: Enable Windows Installer logging
       href: ./application-management/enable-windows-installer-logging.md
     - name: Event 10016 when accessing DCOM components
@@ -49,10 +57,14 @@
       href: ./deployment/cannot-activate-windows-from-oem.md
     - name: Can't turn off a computer from Audit mode
       href: ./deployment/fail-to-turn-off-computer-from-audit-mode.md
+    - name: Can't upgrade Windows when PowerShell is installed
+      href: ./deployment/cannot-upgrade-windows-with-powershell-installed.md.md
     - name: Create a user-defined service
       href: ./deployment/create-user-defined-service.md
     - name: Customize default local user profile
       href: ./deployment/customize-default-local-user-profile.md
+    - name: Desktop icon isn't visible in Extended mode
+      href: ./deployment/desktop-icon-not-visible-disconnect-hdmi-display.md
     - name: Error 87 when a Windows 10 image is applied
       href: ./deployment/dism-error-87-apply-windows-10-image.md
     - name: Error after you enter BitLocker PIN at startup 
@@ -65,6 +77,8 @@
       href: ./deployment/event-id-15-computer-resume-from-sleep.md
     - name: Event ID 7000 or 7026 after starting a computer
       href: ./deployment/system-log-event-id-7000-7026.md
+    - name: Fail to attach PCI Express expansion chassis 
+      href: ./deployment/error-attach-pci-express-expansion-chassis.md.md
     - name: Fail to open a list in VAMT 2.0
       href: ./deployment/item-with-same-key-has-been-added.md
     - name: Get the latest Skype version by Microsoft Update
@@ -83,6 +97,8 @@
       href: ./deployment/address-disk-space-issues-caused-by-winsxs.md
     - name: How to validate the OEM activation key
       href: ./deployment/validate-oem-activation-key.md
+    - name: KMS current count doesn't increase
+      href: ./deployment/kms-current-count-not-increase.md.md
     - name: MBAM client fails with error 0x8004100E
       href: ./deployment/mbam-client-fails-event-id-4-0x8004100e.md
     - name: 'Running Sysprep /generalize returns error'
@@ -118,12 +134,24 @@
       href: ./networking/access-denied-access-smb-file-share.md
     - name: Can't turn on Network Discovery
       href: ./networking/cannot-turn-on-network-discovery.md
+    - name: Change the location of CSC folder
+      href: ./networking/change-csc-folder-location-with-cachelocation-registry.md.md
     - name: Code 31 error for WAN Miniport device
       href: ./networking/code-31-error-device-manager-for-wan-miniport.md
     - name: Configure client proxy server settings
       href: ./networking/configure-client-proxy-server-settings-by-registry-file.md
+    - name: CSCCMD tool Version 1.1. functions and features
+      href: ./networking/client-side-caching-command-line-options-v1dot1.md
+    - name: DirectAccess clients can't connect with IP-HTTPS
+      href: ./networking/directaccess-clients-unable-connect-error-0x80092013.md.md
+    - name: Disconnect incoming VPN connection
+      href: ./networking/disconnect-incoming-vpn-connection.md.md
+    - name: Error 0x80071779 when removing network components
+      href: ./networking/cannot-uninstall-client-for-microsoft-networks.md
     - name: Error when accessing an administrative share
       href: ./networking/cannot-logon-access-administrative-share.md
+    - name: Event 10317 when you turn on mobile broadband device
+      href: ./networking/event-10317-mobile-broadband-device.md
     - name: How to disable network adapter power management
       href: ./networking/power-management-on-network-adapter.md
     - name: Mapped drive connection to network share is lost
@@ -136,16 +164,12 @@
       href: ./networking/offline-file-synchronization-issue.md
     - name: Security alert when connecting to wireless network
       href: ./networking/windows-security-alert-wireless-network.md
-    - name: System error 85 with NET USE command
-      href: ./networking/system-error-85-net-use-command.md
     - name: Set up your small business network
       href: ./networking/set-up-your-small-business-network.md
-    - name: Error 0x80071779 when removing network components
-      href: ./networking/cannot-uninstall-client-for-microsoft-networks.md
-    - name: Event 10317 when you turn on mobile broadband device
-      href: ./networking/event-10317-mobile-broadband-device.md
     - name: Slow network performance on remote network computer
       href: ./networking/slow-network-performance-remote-computer.md
+    - name: System error 85 with NET USE command
+      href: ./networking/system-error-85-net-use-command.md
 
 - name: Performance
   items:
@@ -155,10 +179,16 @@
       href: ./performance/changing-bios-ata-drive-causes-reboot-loop.md
     - name: Command prompt and PowerShell don't Start
       href: ./performance/command-prompt-powershell-not-start.md
+    - name: Computers crash with error code 0x113
+      href: ./performance/error-0x113-intel-amd-graphics-adapters.md.md
     - name: CPU usage exceeds 100%
       href: ./performance/cpu-usage-exceeds-100.md
+    - name: Fail to use PXE to boot clients from WDS
+      href: ./performance/invalid-boot-file-received-error.md.md
     - name: Flight Simulator X hangs on loading screen
       href: ./performance/flight-simulator-x-stops-responding.md
+    - name: GPU Process Memory counters report incorrect values
+      href: ./performance/gpu-process-memory-counters-report-wrong-value.md.md
     - name: High CPU usage in the LSAISO process
       href: ./performance/lsaiso-process-high-cpu-usage.md
     - name: How to speed up your computer 
@@ -167,6 +197,8 @@
       href: ./performance/nmi-hardware-failure-error.md
     - name: Running an.exe file starts different program 
       href: ./performance/running-exe-starts-another-program.md
+    - name: SuperFetch (SysMain) service consumes CPU
+      href: ./performance/superfetch-sysmain-service-spikes-cpu.md.md
     - name: Troubleshooting slow file copying in Windows 
       href: ./performance/troubleshooting-slow-file-copying-in-windows.md
 
@@ -174,6 +206,8 @@
   items:
     - name: Can't install a Secure WSD printer from Print Management Console
       href: ./printing/cannot-install-secure-web-services-on-devices.md
+    - name: Duplex printing options can't be set
+      href: ./printing/two-sided-printing-cannot-be-set.md.md
     - name: Error 0x00000709 when using CNAME record
       href: ./printing/error-0x00000709-use-cname-record.md
 
@@ -186,6 +220,8 @@
   items:
     - name: Some USB devices aren't available
       href: ./remote/usb-devices-unavailable-remotefx-usb-redirection.md
+    - name: Troubleshoot RDP Client connection problems
+      href: ./remote/terminal-server-client-connection-failures.md
 
 - name: Shell Experience
   items:
@@ -201,18 +237,30 @@
       href: ./shell-experience/windows-search-service-not-starting.md
     - name: Context menu items are missing
       href: ./shell-experience/context-menus-shortened-select-over-15-files.md
+    - name: Display issue when you use USB-attached monitor
+      href: ./shell-experience/display-configuration-retained-after-reboot.md.md
     - name: Display resolution changes to a lower resolution
       href: ./shell-experience/display-resolution-changes-win-p-key.md
+    - name: Fail to execute commands with RunOnce and RunOnceEx
+      href: ./shell-experience/standard-user-cannot-run-commnad-via-runonce.md.md
     - name: Fix problems in Windows Search
       href: ./shell-experience/fix-problems-in-windows-search.md
+    - name: HotStart buttons doesn't work
+      href: ./shell-experience/disabling-autoplay-cause-hotstart-buttons-not-working.md.md
     - name: How to modify the command line string limitation
       href: ./shell-experience/command-line-string-limitation.md
+    - name: Manage lock screen image
+      href: ./shell-experience/manage-lock-screen-image.md.md
     - name: Microsoft Store Apps fail to start
       href: ./shell-experience/microsoft-store-apps-fail-to-start.md
+    - name: Microsoft-Windows-AppReadiness event ID 215 error
+      href: ./shell-experience/microsoft-windows-appreadiness-event-id-215-error.md.md
     - name: Mouse input in games is incorrectly scaled
       href: ./shell-experience/mouse-input-incorrectly-scaled.md
     - name: Renaming a network folder fails
       href: ./shell-experience/renaming-a-network-folder-fails.md
+    - name: Support of whitespace characters in file and folder names
+      href: ./shell-experience/file-folder-name-whitespace-characters.md.md
     - name: Video resolution limit for H.264 and stabilization
       href: ./shell-experience/video-stabilization-resolution-limits-h-264.md
 
@@ -226,6 +274,8 @@
       href: ./system-management-components/0x80041323-running-scheduled-tasks.md
     - name: How to configure WINRM for HTTPS
       href: ./system-management-components/configure-winrm-for-https.md
+    - name: Task scheduler runs tasks as background processes
+      href: ./system-management-components/task-scheduler-task-only-runs-in-background.md.md
     - name: WMI-Activity Event ID 5858 logged with ResultCode = 0x80041032
       href: ./system-management-components/wmi-activity-event-5858-logged-with-resultcode-0x80041032.md
 
@@ -251,5 +301,9 @@
   items:
     - name: Enable NTLM 2 authentication
       href: ./windows-security/enable-ntlm-2-authentication.md
+    - name: Error 0x80290300 when clearing the TPM
+      href: ./windows-security/clear-tpm-fails-error-code-0x80290300.md
+    - name: Fail to paste password into credential dialog box
+      href: ./windows-security/file-system-error-when-pasting-password.md
     - name: TPM isn't recognized as a compatible device
       href: ./windows-security/tpm-is-not-recognized.md

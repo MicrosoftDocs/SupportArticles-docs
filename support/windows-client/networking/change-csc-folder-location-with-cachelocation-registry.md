@@ -1,0 +1,64 @@
+---
+title: Change the location of CSC folder
+description: Microsoft does not support using the Cachemov.exe tool to move the offline files folder in Windows Vista onwards. This article describes an alternative method for moving the offline files folder. This method involves the CacheLocation registry value.
+ms.date: 08/31/2020
+author: delhan
+ms.author: Delead-Han
+manager: dscontentpm
+audience: itpro
+ms.topic: troubleshooting
+ms.prod: windows-client
+localization_priority: medium
+ms.reviewer: kaushika
+ms.prod-support-area-path: Folder redirection and Offline Files and Folders (CSC)
+ms.technology: Networking
+---
+# How to change the location of the CSC folder by configuring the CacheLocation registry value in Windows
+
+This article describes how to change the location of the client-side caching (CSC) folder by configuring the CacheLocation registry value.
+
+_Original product version:_ &nbsp; Windows 10 - all editions  
+_Original KB number:_ &nbsp; 937475
+
+## INTRODUCTION
+
+You cannot use the Cachemov.exe tool to move the client-side caching (CSC) folder in Windows Vista. However, you can change the location of the CSC folder by configuring the CacheLocation registry value.
+
+> [!NOTE]
+> The CSC folder is the folder in which Windows stores offline files. 
+
+## More information
+
+> [!IMPORTANT]
+> This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, click the following article number to view the article in the Microsoft Knowledge Base: [322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows  
+To change the location of the CSC folder, follow these steps.
+
+> [!NOTE]
+> There is only one cache folder in Windows Vista. Therefore, you do not have to repeat these steps for additional users.
+
+1. Click **Start**, type regedit in the **Search** box, and then press ENTER.
+2. Locate the following registry subkey, and then and right-click it: *`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\CSC`*  
+
+3. Point to **New**, and then click **Key**.
+4. Type Parameters in the name box for the new key.
+5. Right-click the **Parameters** key, point to **New**, and then click **String Value**.
+6. To name the new value, type CacheLocation, and then press ENTER.
+
+7. Right-click **CacheLocation**, and then click **Modify**.
+
+8. In the **Value data** box, type the name of the new folder in which you want to create the cache.
+
+    > [!NOTE]
+    > Use the Microsoft Windows NT format for the folder name.
+
+    For example, if you want the cache location to be `d:\csc`, type the following: `\??\d:\csc` 
+
+9. Exit Registry Editor, and then restart the computer.
+
+> [!NOTE]
+> The network administrator can set this value before the computer is on the network or before this value is given to the end-user. In this situation, no content is put in the default location. Additionally, you can set the location of the CSC folder by using a script.
+
+The information and the solution in this document represents the current view of Microsoft Corporation on these issues as of the date of publication. This solution is available through Microsoft or through a third-party provider. Microsoft does not specifically recommend any third-party provider or third-party solution that this article might describe. There might also be other third-party providers or third-party solutions that this article does not describe. Because Microsoft must respond to changing market conditions, this information should not be interpreted to be a commitment by Microsoft. Microsoft cannot guarantee or endorse the accuracy of any information or of any solution that is presented by Microsoft or by any mentioned third-party provider.
+
+Microsoft makes no warranties and excludes all representations, warranties, and conditions whether express, implied, or statutory. These include but are not limited to representations, warranties, or conditions of title, non-infringement, satisfactory condition, merchantability, and fitness for a particular purpose, with regard to any service, solution, product, or any other materials or information. In no event will Microsoft be liable for any third-party solution that this article mentions. 
+For more information about how to move the offline files cache in Windows Vista, visit the following Web site: [https://blogs.technet.com/filecab/archive/2006/12/12/moving-the-offline-files-cache-in-windows-vista.aspx](https://blogs.technet.com/filecab/archive/2006/12/12/moving-the-offline-files-cache-in-windows-vista.aspx)
