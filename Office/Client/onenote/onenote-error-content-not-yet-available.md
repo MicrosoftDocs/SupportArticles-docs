@@ -20,7 +20,7 @@ appliesto:
 ms.custom: 
 - CI 117004
 - CSSTroubleshoot 
-ms.reviewer: Describes resolutions to the OneNote error message "Content Not Yet Available."
+description: Describes resolutions to the OneNote error message "Content Not Yet Available."
 ---
 
 # OneNote error: "Content Not Yet Available"
