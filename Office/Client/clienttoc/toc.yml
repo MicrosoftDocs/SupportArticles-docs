@@ -807,6 +807,8 @@
       href: ../office-suite-issues/win32api_ptrsafe-with-64-bit-support.md
   - name: OneNote
     items:
+    - name: "\"Content Not Yet Available\" error"
+      href: ../onenote/onenote-error-content-not-yet-available.md
     - name: Errors when you sync a notebook
       href: ../onenote/error-sync-notebook.md
     - name: Temporary change to file size download limit in OneNote
