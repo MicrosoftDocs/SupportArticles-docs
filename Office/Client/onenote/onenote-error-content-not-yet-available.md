@@ -1,7 +1,7 @@
 ---
 title: Content Not Yet Available error in OneNote
 ms.author: v-todmc
-author: todmccoy
+author: McCoyBot
 manager: dcscontentpm
 ms.date: 4/24/2020
 audience: Admin
@@ -92,8 +92,8 @@ A "successful sync" icon can appear in either of the following user interface lo
 
 - A page has been saved offline.
 
-  ![Notebook has been saved offline.](./media/onenote-error-content-not-yet-available/onenote-error-content-not-yet-available-5.jpg)
-  ![Notebook has been saved offline.](./media/onenote-error-content-not-yet-available/onenote-error-content-not-yet-available-6.jpg)
+  ![Notebook has been saved offline 1.](./media/onenote-error-content-not-yet-available/onenote-error-content-not-yet-available-5.jpg)
+  ![Notebook has been saved offline 2.](./media/onenote-error-content-not-yet-available/onenote-error-content-not-yet-available-6.jpg)
  
 - A page has not been saved because of network issues and OneNote is trying to reconnect.
 
