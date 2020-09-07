@@ -15,6 +15,11 @@ productDirectory:
     links:
     - url: dpm/welcome-dpm.md
       text: Troubleshooting articles for Data Protection Manager
+  - title: Operations Manager
+    imageSrc: "../media/hub-landing/system-center-operations-manager.png"
+    links:
+    - url: scom/welcome-scom.md
+      text: Troubleshooting articles for Operations Manager
   - title: Orchestrator
     imageSrc: "../media/hub-landing/system-center-orchestrator.png"
     links:
