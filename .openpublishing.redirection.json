@@ -36,6 +36,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/system-center/scom/index.md",
+      "redirect_url": "/support/system-center/scom/welcome-scom",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/system-center/orchestrator/index.md",
       "redirect_url": "/support/system-center/orchestrator/welcome-orchestrator",
       "redirect_document_id": false
@@ -103,6 +108,11 @@
     {
       "source_path": "support/sql/resource-monitor-nonyielding-condition.md",
       "redirect_url": "https://support.microsoft.com/help/2216485",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/configmgr/index.md",
+      "redirect_url": "/support/previous-versions/configmgr/backups-fail-with-vss-provider-issue",
       "redirect_document_id": false
     }
   ]
