@@ -12,16 +12,15 @@ productDirectory:
   items:
   - title: Windows Server
     imageSrc: "../media/hub-landing/windows.svg"
-    links:
-    - url: ../windows-server/welcome-windows-server.md
-      text: Troubleshooting articles for Windows client
+    summary: Troubleshooting articles for Windows client
+    url: ../windows-server/welcome-windows-server.md
+
   - title: Windows Client
     imageSrc: "../media/hub-landing/windows.svg"
-    links:
-    - url: ../windows-client/welcome-windows-client.md
-      text: Troubleshooting articles for Windows server
+    summary: Troubleshooting articles for Windows server
+    url: ../windows-client/welcome-windows-client.md
+    
   - title:  Windows Developer
     imageSrc: "../media/hub-landing/windows.svg"
-    links:
-    - url: win32/welcome-windowsdeveloper.md
-      text: Troubleshooting articles for Windows developers
+    summary: Troubleshooting articles for Windows developers
+    url: win32/welcome-windowsdeveloper.md
