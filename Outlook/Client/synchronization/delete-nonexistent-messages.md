@@ -26,13 +26,13 @@ You experience one or more of the following problems when you use Outlook:
 
 - Outlook continuously displays a message such as "Sending message 4 of 6" in the Progress bar even though there are no email messages queued. Additionally, Outlook stops responding when you try to close it. For example, you see the following message in the Progress bar:
 
-    ![outbox_error](../media/delete-nonexistent-messages/outbox-error.png)
+    ![outbox_error](./media/delete-nonexistent-messages/outbox-error.png)
 
     You may also receive an error message that resembles the following:
 
     *Task 'user@example.com - Sending' reported error (0x8004210b) : 'The operation timed out waiting for a response from the sending (SMTP) server.  If you continue to receive this message, contact your server administrator or Internet service provider (ISP).  The server responded:  550 5.1.0 <> sender rejected.  AUP#O-1580'*
 
-    ![outlook_sending_error](../media/delete-nonexistent-messages/outlook-sending-error.png)
+    ![outlook_sending_error](./media/delete-nonexistent-messages/outlook-sending-error.png)
 
 - You are continually prompted to log in to internet email.
 - Outlook displays a number next to the **Outbox** folder (for example: **Outbox [4]**) even though there are no messages in the **Outbox**.
