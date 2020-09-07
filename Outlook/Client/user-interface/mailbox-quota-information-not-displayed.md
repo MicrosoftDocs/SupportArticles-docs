@@ -88,7 +88,7 @@ To examine these settings, follow these steps:
 
     In the following example, the results indicate a mailbox that does not have specific limits set on it ("UseDatabaseQuotaDefaults" = True).
 
-    ![Screenshot of Command prompt example](./media/mailbox-quota-information-not-displayed/command-prompt-example.jpg)
+    ![Screenshot 1 of Command prompt example](./media/mailbox-quota-information-not-displayed/command-prompt-example.jpg)
 
 - On a mailbox store
 
@@ -114,7 +114,7 @@ To examine these settings, follow these steps:
 
     In the following example, the results indicate that the mailbox database does not have a Send and Receive quota set on it ("ProhibitSendReceiveQuota" = unlimited).
 
-    ![Screenshot of Command prompt example](./media/mailbox-quota-information-not-displayed/command-issuewarning-example.jpg)
+    ![Screenshot 2 of Command prompt example](./media/mailbox-quota-information-not-displayed/command-issuewarning-example.jpg)
 
 ## More information
 

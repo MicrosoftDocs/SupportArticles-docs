@@ -1,6 +1,6 @@
 ---
 title: Outlook doesn't connect using MAPI over HTTP as expected
-description: 
+description: Describes an issue in which Outlook for Office 365 doesn't connect Exchange using MAPI over HTTP as expected.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm

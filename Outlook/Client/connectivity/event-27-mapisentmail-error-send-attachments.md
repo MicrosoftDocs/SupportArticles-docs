@@ -55,11 +55,11 @@ Attempting to send the same attachment within Outlook, by selecting **Attach Fil
 
 - Outlook 2013
 
-   ![Screenshot of the error in Outlook 2013](./media/event-27-mapisentmail-error-send-attachments/outlook-2013-error.jpg)
+   ![Screenshot 1 of the error in Outlook 2013](./media/event-27-mapisentmail-error-send-attachments/outlook-2013-error.jpg)
 
 - Outlook 2010
 
-  ![Screenshot of the error in Outlook 2013](./media/event-27-mapisentmail-error-send-attachments/outlook-2010-error.jpg)
+  ![Screenshot 2 of the error in Outlook 2013](./media/event-27-mapisentmail-error-send-attachments/outlook-2010-error.jpg)
 
 You can use the following steps to review Event ID 27 in the Application event log:
 

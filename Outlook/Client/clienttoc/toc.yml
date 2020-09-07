@@ -235,27 +235,27 @@
       href: ../transport-logging/enable-transport-logging.md
   - name: User Interface
     items:
-    - name: 	Apps for Outlook 2013 can't activate in email	
-      href: ../user-interface/	apps-for-outlook-2013-do-not-activate-as-expected	.md
-    - name: 	Blank emails after installing ESET NOD32 4.x	
-      href: ../user-interface/	empty-email-body-esetnod32-4x-installed	.md
-    - name: 	Can't resend a delayed delivery message	
-      href: ../user-interface/	send-button-missing-delayed-delivery-email-outbox	.md
-    - name: 	Emails sent by an .oft file aren't received	
-      href: ../user-interface/	sending-email-by-template-fails	.md
-    - name: 	Extensibility support for Outlook 2010	
-      href: ../user-interface/	applications-incompatible-c2r-outlook	.md
-    - name: 	iCloud crashes when synchronizing data	
-      href: ../user-interface/	icloud-crashes-sync-data	.md
-    - name: 	Mailbox Quota Information isn't displayed	
-      href: ../user-interface/	mailbox-quota-information-not-displayed	.md
-    - name: 	MAPI applications can't access archive mailboxes	
-      href: ../user-interface/	mapi-apps-cannot-access-archive-mailboxes	.md
-    - name: 	MAPI is the only way to change profiles	
-      href: ../user-interface/	mapi-is-the-only-way-to-change-profiles	.md
-    - name: 	Search folders aren't populated in Online mode	
-      href: ../user-interface/	outlook-search-folders-issue-online-mode	.md
+    - name: Apps for Outlook 2013 can't activate in email
+      href: ../user-interface/apps-for-outlook-2013-do-not-activate-as-expected.md
+    - name: Blank emails after installing ESET NOD32 4.x
+      href: ../user-interface/empty-email-body-esetnod32-4x-installed.md
+    - name: Can't resend a delayed delivery message
+      href: ../user-interface/send-button-missing-delayed-delivery-email-outbox.md
+    - name: Emails sent by an .oft file aren't received
+      href: ../user-interface/sending-email-by-template-fails.md
+    - name: Extensibility support for Outlook 2010
+      href: ../user-interface/applications-incompatible-c2r-outlook.md
+    - name: iCloud crashes when synchronizing data
+      href: ../user-interface/icloud-crashes-sync-data.md
+    - name: Mailbox Quota Information isn't displayed
+      href: ../user-interface/mailbox-quota-information-not-displayed.md
+    - name: MAPI applications can't access archive mailboxes
+      href: ../user-interface/mapi-apps-cannot-access-archive-mailboxes.md
+    - name: MAPI is the only way to change profiles
+      href: ../user-interface/mapi-is-the-only-way-to-change-profiles.md
+    - name: Search folders aren't populated in Online mode
+      href: ../user-interface/outlook-search-folders-issue-online-mode.md
     - name: Support limitations for open standards
       href: /exchange/troubleshoot/development/public-protocols-support-limitations?context=/outlook/troubleshoot/context/client-context
-    - name: 	WebBrowser control content isn't displayed correctly	
-      href: ../user-interface/	wpf-webbrowser-control-content-not-display-correctly	.md
+    - name: WebBrowser control content isn't displayed correctly
+      href: ../user-interface/wpf-webbrowser-control-content-not-display-correctly.md
