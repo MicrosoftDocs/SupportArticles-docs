@@ -54,7 +54,7 @@
 
     "fileMetadata": {
 
-      "layout":{
+      "layout": {
         "**/index.yml": "LandingPage"
       },
 
@@ -68,13 +68,13 @@
         "**/*.md": "ramakoni1",
         "azure/active-directory/*.md": "genlin",
         "azure/cloud-services/*.md": "genlin",
-        "azure/virtual-machines/*.md": "genlin"        
-      }, 
+        "azure/virtual-machines/*.md": "genlin"
+      },
       "ms.author": {
         "**/*.md": "ramakoni",
         "azure/active-directory/*.md": "genli",
         "azure/cloud-services/*.md": "genli",
-        "azure/virtual-machines/*.md": "genli"   
+        "azure/virtual-machines/*.md": "genli"
       },
       "ms.localizationpriority": {
         "**/*.md": "Normal"
@@ -129,6 +129,13 @@
       },
 
       "ms.prod": {
+        "hardwaredeveloper/**/*.md": "windows-hardware-drivers"
+      },
+      "ms.technology": {
+        "hardwaredeveloper/**/*.md": ""
+      },
+
+      "ms.prod": {
         "mem/intune/**/*.md": "intune"
       },
       "ms.technology": {
@@ -178,13 +185,13 @@
       "ms.technology": {
         "system-center/vmm/**/*.md": "virtual-machine-manager"
       },
- 
+
       "ms.prod": {
         "microsoft-identity-manager/*.md": "microsoft-identity-manager"
       },
       "ms.technology": {
         "microsoft-identity-manager/*.md": ""
-      },      
+      },
 
       "ms.prod": {
         "azure/**/*.md": "azure"
@@ -201,21 +208,22 @@
         "dotnet/csharp/**/*.md": "C#",
         "dotnet/framework/**/*.md": ".NET Framework",
         "dotnet/framework/wcf/**/*.md": "Windows Communication Foundation",
-        "dotnet/visual-basic/**/*.md": "Visual Basic",        
+        "dotnet/visual-basic/**/*.md": "Visual Basic",
         "host-integration-server/**/*.md": "Host Integration Server",
-        "aspnet/**/*.md": "ASP.NET",        
+        "aspnet/**/*.md": "ASP.NET",
         "visualstudio/**/*.md": "Visual Studio",
         "visualstudio/silverlight/**/*.md": "Silverlight",
         "cpp/**/*.md": "Visual C++",
         "iis/**/*.md": "Internet Information Services",
         "webapps/**/*.md": "Web Apps",
         "windows/win32/**/*.md": "Windows Developer",
+        "windows-hardware/drivers/**/*.md": "Hardware Developer",
         "mem/intune/**/*.md": "Intune",
         "mem/configmgr/**/*.md": "Configuration Manager",
         "previous-versions/configmgr/*.md": "Configuration Manager",
         "system-center/dpm/**/*.md": "Data Protection Manager",
         "system-center/scom/**/*.md": "Operations Manager",
-        "system-center/orchestrator/**/*.md": "Orchestrator",    
+        "system-center/orchestrator/**/*.md": "Orchestrator",
         "system-center/scsm/**/*.md": "Service Manager",
         "system-center/vmm/**/*.md": "Virtual Machine Manager",
         "microsoft-identity-manager/*.md": "Microsoft Identity Manager",
@@ -226,20 +234,21 @@
         "azure/devops/*.md": "Active DevOps"
       },
       "searchScope": {
-        "biztalk/**/*.md": ["BizTalk Server"],
-        "dotnet/**/*.md": [".NET"],        
-        "host-integration-server/**/*.md": ["Host Integration Server"],
-        "visualstudio/**/*.md": ["Visual Studio"],
-        "cpp/**/*.md": ["Visual Studio"],
-        "iis/**/*.md": ["Web Apps"],
-        "aspnet/**/*.md": ["Web Apps"],        
-        "webapps/**/*.md": ["Web Apps"],
-        "windows/win32/**/*.md": ["Windows Developer"],
-        "azure/**/*.md": ["Azure"],
-        "mem/intune/**/*.md": ["Intune"],
-        "mem/configmgr/**/*.md": ["Configuration Manager"],
-        "previous-versions/configmgr/*.md": ["Configuration Manager"],
-        "system-center/**/*.md": ["System Center"]
+        "biztalk/**/*.md": [ "BizTalk Server" ],
+        "dotnet/**/*.md": [ ".NET" ],
+        "host-integration-server/**/*.md": [ "Host Integration Server" ],
+        "visualstudio/**/*.md": [ "Visual Studio" ],
+        "cpp/**/*.md": [ "Visual Studio" ],
+        "iis/**/*.md": [ "Web Apps" ],
+        "aspnet/**/*.md": [ "Web Apps" ],
+        "webapps/**/*.md": [ "Web Apps" ],
+        "windows/win32/**/*.md": [ "Windows Developer" ],
+        "windows-hardware/drivers/**/*.md": [ "Hardware Developer" ],
+        "azure/**/*.md": [ "Azure" ],
+        "mem/intune/**/*.md": [ "Intune" ],
+        "mem/configmgr/**/*.md": [ "Configuration Manager" ],
+        "previous-versions/configmgr/*.md": [ "Configuration Manager" ],
+        "system-center/**/*.md": [ "System Center" ]
       }
     },
 
