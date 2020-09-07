@@ -2,8 +2,6 @@
   items:
   - name: Device can't be removed in Device Manager
     href: device-not-removed-device-manager.md
-  - name: Interrupt and DPC time streaming Isoch data
-    href: increase-interrupt-dpc-time-streaming-isoch-data.md
 
 - name: General
   items:
@@ -13,26 +11,13 @@
     href: disabling-fbwf-causes-crash.md
   - name: Network adapter fails to acquire an IP address
     href: network-adapter-fails-acquire-ip-address.md
-  - name: Perpetual Boot failure with a prompt
-    href: perpetual-boot-failure.md
-  - name: SHA2 is not supported
-    href: sha2-not-supported.md
   - name: System Restore is unable to complete Restoration
     href: system-restore-not-complete-restoration.md
-  - name: Volume Copy Service Provider is absent
-    href: volume-copy-service-provider-absent.md
-  - name: WEDU reoffers downloaded updates
-    href: wedu-reoffers-downloaded-updates.md
 
 - name: Human Interface Device (HID) Driver
   items:
   - name: Bluetooth and POS peripherals fail to connect
     href: bluetooth-pos-peripherals-fail-connect.md
-
-- name: Network Driver
-  items:
-  - name: Wi-Fi connection settings are lost
-    href: wi-fi-connection-settings-lost.md
 
 - name: Storage Driver
   item: 
