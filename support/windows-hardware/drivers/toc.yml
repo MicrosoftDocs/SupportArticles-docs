@@ -20,7 +20,7 @@
     href: bluetooth-pos-peripherals-fail-connect.md
 
 - name: Storage Driver
-  items: 
+  items:
   - name: iSCSI initiator shows incorrect MPIO path state
     href: incorrect-mpio-path-state.md
   - name: Windows.Storage APIs can return stale file
