@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 2626670
 
 ## Symptoms
 
-Removing an old product connector from System Center Operations Manager may be necessary if the product connector is no longer used in the environment. There is no **Delete** option in the admin console UI for product connectors so the [script](#powerShell-script) can be used to achieve the desired results.
+Removing an old product connector from System Center Operations Manager may be necessary if the product connector is no longer used in the environment. There is no **Delete** option in the admin console UI for product connectors so the [script](#powershell-script) can be used to achieve the desired results.
 
 ## PowerShell script
 
