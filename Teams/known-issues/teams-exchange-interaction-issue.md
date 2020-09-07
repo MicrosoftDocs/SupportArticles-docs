@@ -168,7 +168,7 @@ Get-OrganizationConfig | Select-Object Ews*
 If the parameter was set to **EnforceAllowList**, this means that the administrator allows only the clients that are listed in **EwsAllowList** to access EWS. If the **EwsAllowList** is set to an empty set value **EwsAllowList={}**, it will also block all users.
 
 > [!NOTE]
-> Blocking EWS can also result in the Teams Calendar App. See [Verify that Teams Calendar App is enabled](https://docs.microsoft.com/en-us/microsoftteams/troubleshoot/known-issues/teams-exchange-interaction-issue#troubleshoot-the-teams-calendar-app-issue).
+> Blocking EWS can also result in the Teams Calendar App. See [Verify that Teams Calendar App is enabled](https://docs.microsoft.com/microsoftteams/troubleshoot/known-issues/teams-exchange-interaction-issue#troubleshoot-the-teams-calendar-app-issue).
 
 Make sure that **\*SchedulingService\*** is listed as an array member of the **EwsAllowList** parameter. If not, run the following command to add it:
 
