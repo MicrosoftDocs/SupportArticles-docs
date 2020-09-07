@@ -88,7 +88,7 @@ The following error entries are logged on the protected server:
 
 ## Cause
 
-Windows backup server writes directly to the DPM or Azure Backup Server share during backup. This issue occurs if the input/output (I/O) latency is greater than the standard SMB time-out (4560 seconds).
+Windows backup server writes directly to the DPM or Azure Backup Server share during backup. This issue occurs if the input/output (I/O) latency is greater than the standard SMB time-out (60 seconds).
 
 ## Resolution
 
