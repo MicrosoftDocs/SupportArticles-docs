@@ -26,13 +26,13 @@ description: Describes how to restore the Sharing setting for OneDrive in the Of
 
 When users select the user details in the [Office 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/users), the **OneDrive Sharing** option is no longer available to them.
 
-:::image type="content" source="../media/restore-onedrive-share-settings-office365/restore-onedrive-share-settings-office365-1.png" alt-text="The Sharing option in the admin center.":::
+:::image type="content" source="./media/restore-onedrive-share-settings-office365/restore-onedrive-share-settings-office365-1.png" alt-text="The Sharing option in the admin center.":::
  
 ## Cause
 
 This problem occurs if a user navigates to **User details** > **OneDrive** > **Sharing section** > **Manage external sharing** and clears the **Let people outside your organization access your site** check box.
 
-:::image type="content" source="../media/restore-onedrive-share-settings-office365/restore-onedrive-share-settings-office365-2.png" alt-text="Manage external sharing screen.":::
+:::image type="content" source="./media/restore-onedrive-share-settings-office365/restore-onedrive-share-settings-office365-2.png" alt-text="Manage external sharing screen.":::
 
 ## Resolution
 

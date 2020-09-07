@@ -31,7 +31,7 @@ By default, Microsoft Outlook displays the following information in retention po
 
 To remove the duration information, set the following registry key.
 
-| | |
+| Type|Value |
 |---------|---------|
 |Registry subkey|HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Outlook\Preferences|
 |Value name|HideRetentionPolicyDuration|

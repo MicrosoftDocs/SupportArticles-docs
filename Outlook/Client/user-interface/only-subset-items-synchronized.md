@@ -45,7 +45,7 @@ In this scenario, the email folders for these mailboxes may show item counts tha
  
 This message is shown in the following screenshot.
 
-![message](./media/only-subset-items-synchronized/message.png)
+![message 1](./media/only-subset-items-synchronized/message.png)
 
 Additionally, if you search for email items in your mailbox, the search results may display the following text at the bottom of the results:
 
@@ -118,7 +118,7 @@ If you don't have connectivity with the Exchange server, the following message i
 
 This message is shown in the following screenshot.
 
-![message](./media/only-subset-items-synchronized/message-2.png)
+![message 2](./media/only-subset-items-synchronized/message-2.png)
 
 Under similar conditions, if you search for items in your mailbox and you don't have connectivity with the Exchange server, the following message is displayed below the search results:
 
@@ -128,7 +128,7 @@ In this message, **\<x>** represents the value that's configured for the cached
 
 An example of this message is shown in the following screenshot.
 
-![message](./media/only-subset-items-synchronized/message-3.png)
+![message 3](./media/only-subset-items-synchronized/message-3.png)
 
 ### Feature Administration through Group Policy
  

@@ -48,7 +48,7 @@ Contact your web service provider or the web hosting provider of your domain web
 
 To work around this issue, exclude the Last Known Good URL by setting the **ExcludeLastKnownGoodURL** registry key as follows.
 
-| |  |
+|Type|Value|
 |---------|---------|
 |Registry subkey    |HKEY_CURRENT_USER\Software\Microsoft\Office\x.0\Outlook\AutoDiscover         |
 |Value Name      |ExcludeLastKnownGoodURL         |
