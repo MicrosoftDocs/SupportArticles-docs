@@ -807,14 +807,10 @@
       href: ../office-suite-issues/win32api_ptrsafe-with-64-bit-support.md
   - name: OneNote
     items:
-    - name: "\"Open new side note\" missing from  Windows notification"
-      href: ../onenote/open-new-side-note-missing.md
+    - name: "\"Content Not Yet Available\" error"
+      href: ../onenote/onenote-error-content-not-yet-available.md
     - name: Errors when you sync a notebook
       href: ../onenote/error-sync-notebook.md
-    - name: Locate Onenote notebooks
-      href: ../onenote/locate-onenote-notebooks.md
-    - name: 'OneNote error "Content Not Yet Available"'
-      href: ../onenote/onenote-error-content-not-yet-available.md
     - name: Temporary change to file size download limit in OneNote
       href: ../onenote/temp-change-onenote-file-size-download.md
     - name: Warning when a notebook is in an offline location
@@ -921,10 +917,6 @@
       href: ../project/tasks-not-scheduled.md
   - name: Publisher
     items:
-    - name: Publication is printed incorrectly
-      href: ../publisher/print-publication-incorrectly.md
-    - name: Publisher can't open file with OLE objects
-      href: ../publisher/publisher-cannot-open-the-file-error.md
     - name: Text boxes in Publisher-created email are converted to bitmap
       href: ../publisher/text-boxes-coverted-to-bitmap.md
   - name: Settings
@@ -985,50 +977,24 @@
       href: ../word/image-part-relationship-rld8-not-found-error-microsoft-word.md
     - name: A connector doesn't move when moving a shape
       href: ../word/connector-not-move-with-shapes.md
-    - name: Background is not printed in Word
-      href: ../word/background-is-not-printed-in-word.md
-    - name: Can't edit text in print preview
-      href: ../word/cannot-edit-text-print-preview.md
-    - name: Can't insert QuickTime media into presentations
-      href: ../word/cannot-insert-quicktime-media.md
     - name: Can't open documents with unsupported XML elements
       href: ../word/custom-xml-elements-not-supported.md
     - name: Can't open this file because it is larger than 512 Megabytes
       href: ../word/file-larger-than-512-megabytes.md
     - name: Can't use  mouse to draw selection rectangle
       href: ../word/cant-use-mouse-draw-selection-rectangle.md
-    - name: Change default view to Draft view
-      href: ../word/change-default-view-to-draft-view.md
-    - name: Changes in Word content layout
-      href: ../word/changes-in-content-layout.md
-    - name: Changes to default font not retained
-      href: ../word/default-font-changes-not-retained.md
-    - name: Changes to settings aren't updated in the Preview window
-      href: ../word/change-to-print-setting-not-update.md
     - name: Configure the default search engine
       href: ../word/configure-search-engine-in-word.md
     - name: Create TOC entries without page numbers
       href: ../word/create-toc-entries-no-page-number.md
     - name: Cross-reference links don't update to the correct heading number
       href: ../word/cross-reference-links-update.md
-    - name: Custom XML markup is removed
-      href: ../word/custom-xml-markup-is-removed.md
     - name: Customize the color of the spelling and grammar checker underlines
       href: ../word/spelling-grammar-checker-underline-color.md
     - name: Damaged documents in Word
       href: ../word/damaged-documents-in-word.md
-    - name: Faq about hyperlinks in Word
-      href: ../word/faq-about-hyperlinks-in-word.md
-    - name: Faq about the Comments feature in Word
-      href: ../word/faq-about-comments-feature-in-word.md
-    - name: Fonts in Word
-      href: ../word/troubleshoot-font-problems.md
-    - name: Graphics and images don't display correctly in 32-bit version of Word
-      href: ../word/graphics-images-display-incorrectly-32-bit.md
     - name: Image DPI is changed after you print to PDF
       href: ../word/image-dpi-change-after-print-to-pdf.md
-    - name: Issue when opening a .wps file
-      href: ../word/open-wps-file-word.md
     - name: Issues when start or use Word
       href: ../word/issues-when-start-or-use-word.md
     - name: Mail merge issue
@@ -1037,60 +1003,28 @@
       href: ../word/merge-word-documents.md
     - name: Object may not appear in Word 2010
       href: ../word/object-not-appear-in-word-2010.md
-    - name: On-screen keyboard opens repeatedly
-      href: ../word/on-screen-keyboard-open-repeatedly.md
     - name: Opening file is blocked by registry policy
       href: ../word/opening-file-blocked-by-registry-policy.md
     - name: Operating parameter limitations and specifications
       href: ../word/operating-parameter-limitation.md
-    - name: Overtype mode is disabled
-      href: ../word/overtype-mode-is-disabled.md
     - name: Performance issues with AutoRecover location
       href: ../word/performance-issue-on-autorecover-location.md
-    - name: Print a general field
-      href: ../word/print-general-field.md
-    - name: Print a range of pages in a multiple-section document
-      href: ../word/print-a-range-of-pages.md
     - name: Print failures in Word
       href: ../word/print-failures-in-word.md
-    - name: Printer settings are ignored
-      href: ../word/printer-settings-not-used.md
-    - name: Recover lost documents
-      href: ../word/recover-lost-document.md
     - name: Reset user options and registry settings in Word
       href: ../word/reset-options-and-settings-in-word.md
-    - name: Scan and insert images into a document
-      href: ../word/insert-image-into-document.md
-    - name: Scroll bars are missing in Word for Mac
-      href: ../word/word-scroll-bars-missing.md
     - name: Spell checker doesn't check text in the form fields
       href: ../word/spell-checker-not-check-form-field-text.md
     - name: Spell Checker not recognizes misspelled words in Word 2010
       href: ../word/not-recognize-mispespelled-words-in-word.md
-    - name: Tabbing form fields content controls not working
-      href: ../word/tabbing-form-fields-content-controls-not-work.md
-    - name: Text is not copied from the Clipboard
-      href: ../word/text-not-copied-from-clipboard.md
-    - name: Toolbars missing in Word for Mac
-      href: ../word/word-mac-toolbars-missing.md
     - name: Track Changes functionality disabled when RMS is disabled
       href: ../word/track-changes-disabled.md
     - name: Troubleshoot print failures in Word for Office 365 on Windows 10
       href: ../word/print-failures-word-for-office-365-on-win-10.md
-    - name: Troubleshooting guide for unwanted page breaks
-      href: ../word/troubleshoot-unwanted-page-breaks.md
     - name: Word could not create the work file
       href: ../word/word-could-not-create-the-work-file.md
-    - name: Word for Mac crashes with saving
-      href: ../word/word-for-mac-crashes-or-quits.md
-    - name: Word for Mac is closed unexpectedly
-      href: ../word/word-mac-closes-unexpectedly.md
     - name: Word slows or stops responding
       href: ../word/word-stops-responding.md
-    - name: Work with toolbars in Word
-      href: ../word/toolbars-and-toolbar-buttons-in-word.md
-    - name: Wrong paper size in the Printer Properties
-      href: ../word/paper-size-printer-property.md
     - name: You're prompted to save changes to global template
       href: ../word/save-changes-to-global-template.md
   - name: Office Developer

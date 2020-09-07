@@ -28,7 +28,7 @@ When initializing OneDrive for Business, the app might stop for more than 24 hou
 - "Setting up.."
 - "We're still setting up a few things, but feel free to get started."
 
-![When initializing OneDrive, you may be stopped at the "Setting up..." screen.](../media/one-drive-stopped-at-setting-up-screen/one-drive-stopped-at-setting-up-screen-1.png)
+![When initializing OneDrive, you may be stopped at the "Setting up..." screen.](./media/one-drive-stopped-at-setting-up-screen/one-drive-stopped-at-setting-up-screen-1.png)
 
 ## Resolutions
 
@@ -126,7 +126,7 @@ To do this, follow these steps:
 1.	Navigate to the Office 365 admin center and select **Need help?** 
 2.	In the search bar type "Diag:" to see all the available diagnostics.
 3.	The "Diag: OneDrive Provisioning" diagnostic will perform a large range of verifications.
-![Search the diagnostics library.](../media/one-drive-stopped-at-setting-up-screen/one-drive-stopped-at-setting-up-screen-2.png)
+![Search the diagnostics library.](./media/one-drive-stopped-at-setting-up-screen/one-drive-stopped-at-setting-up-screen-2.png)
 
  
 
