@@ -5,7 +5,7 @@
 
 - name: General
   items:
-  - name: commands under GuiRunOnce doesn't run
+  - name: Commands under GuiRunOnce doesn't run
     href: commands-under-guirunonce-not-run.md
   - name: Disabling File Based Write Filter causes a crash
     href: disabling-fbwf-causes-crash.md
