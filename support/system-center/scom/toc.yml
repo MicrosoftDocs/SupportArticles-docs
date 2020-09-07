@@ -6,12 +6,16 @@
     href: agent-push-installation-error-800706d3.md
   - name: Agents can't find the primary management server
     href: ad-integration-agent-assignment-events-20012-2000.md
+  - name: Agents using NIC teaming aren't discovered or monitored
+    href: agents-with-teamed-network-adapters-not-discovered-monitored.md
   - name: Can't deploy the Linux agent to a Red Hat server
     href: deploy-linux-agent-fails.md
   - name: Can't monitor workgroup computers without a gateway server
     href: cannot-monitor-workgroup-computer-without-gateway-server.md
   - name: Error 25211 installing agents
     href: error-25211-installing-opsmgr-agent.md
+  - name: Error 80070520 when deploying agents
+    href: deploy-operations-manager-agents-error-80070520.md
   - name: Heartbeat alerts in maintenance mode
     href: maintenance-mode-heartbeat-alerts.md
   - name: Microsoft Monitoring Agent service freezes during startup
@@ -144,10 +148,16 @@
     href: uninstalling-features-causes-opsmgr-stop-working.md
   - name: Remove corrupted APM components
     href: remove-corrupted-apm-components.md
+  - name: Remove old product connectors
+    href: remove-old-product-connectors.md
   - name: The Discovery Wizard stops responding
     href: discovery-wizard-stop-responding.md
+  - name: The OpsMgr console doesn't open with SDK service error
+    href: console-not-open-with-sdk-service-error.md
   - name: The System Center Management service stops responding
     href: system-center-management-service-stops-responding.md
+  - name: Use diagnostic tracing
+    href: use-diagnostic-tracing.md
   - name: Web console login errors
     href: web-console-login-errors.md
 - name: Performance
@@ -170,6 +180,8 @@
     href: request-count-data-missing-from-apm-reports.md
   - name: The Add Object Wizard displays only 500 objects
     href: add-object-wizard-displays-only-500-objects.md
+  - name: The Service Level Tracking Summary report is empty
+    href: empty-service-level-tracking-summary-report.md
   - name: Troubleshoot blank reports
     href: troubleshoot-blank-reports.md
 - name: Security
@@ -182,6 +194,8 @@
   items:
   - name: Error 0x80131604 installing a management server
     href: management-server-installation-error-0x80131604.md
+  - name: Install OpsMgr and Service Manager consoles on the same server
+    href: install-opsmgr-service-manager-consoles-on-same-server.md
   - name: Setup cannot be completed
     href: setup-not-completed-error.md
   - name: Troubleshoot OMS onboarding issues
