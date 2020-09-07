@@ -68,6 +68,8 @@
     href: best-practices-configure-overrides.md
   - name: Can't import a management pack with dependencies
     href: cannot-import-management-pack-with-dependencies.md
+  - name: Can't open the Management Server view
+    href: cannot-open-management-server.md
   - name: Can't upgrade the Configuration Manager management pack
     href: upgrade-configmgr-management-pack-error.md
   - name: Configure SharePoint 2010 management pack
@@ -98,6 +100,10 @@
   items:
   - name: Can't receive alert notifications
     href: cannot-receive-alert-notification.md
+  - name: Close old alerts using a PowerShell script
+    href: close-old-alert-using-powershell-script.md
+  - name: Don't manually resolve alerts raised by monitors
+    href: alerts-raised-by-monitors-not-resolved.md
 - name: Operations or infrastructure
   items:
   - name: A management server turns gray
@@ -110,10 +116,6 @@
     href: cannot-access-appadvisor-website.md
   - name: Can't access the UNIX/Linux computers view
     href: cannot-access-unix-linux-computers-view.md
-  - name: Can't open the Management Server view
-    href: cannot-open-management-server.md
-  - name: Close old alerts using a PowerShell script
-    href: close-old-alert-using-powershell-script.md
   - name: Configuration data isn't updated
     href: configuration-data-not-updated.md
   - name: Configuration isn't updated and event 29181 is repeatedly logged
@@ -124,8 +126,6 @@
     href: data-warehouse-logging-improvements.md
   - name: Detect and troubleshoot configuration changes
     href: detect-troubleshoot-configuration-changes.md
-  - name: Don't manually resolve alerts raised by monitors
-    href: alerts-raised-by-monitors-not-resolved.md
   - name: Event 31551 connecting to the data warehouse database
     href: event-31551-connect-data-warehouse-database.md
   - name: Event 4001 during SQL Server 2012 monitoring
@@ -158,14 +158,12 @@
     href: performance-views-still-show-deleted-counters.md
   - name: Troubleshoot event ID 2115 related performance issues
     href: troubleshoot-event-2115-related-performance-problems.md
-- name: Reporting
-  items:
-  - name: Reporting installation or upgrade fails
-    href: reporting-installation-error-0xffffffff.md
 - name: Reports
   items:
   - name: ACS reports return no more than 42 days of data
     href: acs-reports-return-no-more-than-42-days-data.md
+  - name: Reporting installation or upgrade fails
+    href: reporting-installation-error-0xffffffff.md
   - name: Reports fail to deploy
     href: cannot-deploy-operations-manager-reports.md
   - name: Request Count and Request Time are missing from APM reports
