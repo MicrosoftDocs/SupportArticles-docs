@@ -1,10 +1,18 @@
 - name: Bus Driver
   items:
-  - name: Device can't be removed in Device Manager
-    href: device-not-removed-device-manager.md
+  - name: Interrupt and DPC time streaming Isoch data
+    href: increase-interrupt-dpc-time-streaming-isoch-data.md
 
 - name: General
   items:
+  - name: Perpetual Boot failure with a prompt
+    href: perpetual-boot-failure.md
+  - name: SHA2 is not supported
+    href: sha2-not-supported.md
+  - name: Volume Copy Service Provider is absent
+    href: volume-copy-service-provider-absent.md
+  - name: WEDU reoffers downloaded updates
+    href: wedu-reoffers-downloaded-updates.md
   - name: Commands under GuiRunOnce doesn't run
     href: commands-under-guirunonce-not-run.md
   - name: Disabling File Based Write Filter causes a crash
@@ -13,6 +21,13 @@
     href: network-adapter-fails-acquire-ip-address.md
   - name: System Restore is unable to complete Restoration
     href: system-restore-not-complete-restoration.md
+    
+- name: Network Driver
+  items:
+  - name: Wi-Fi connection settings are lost
+    href: wi-fi-connection-settings-lost.md
+  - name: Device can't be removed in Device Manager
+    href: device-not-removed-device-manager.md
 
 - name: Human Interface Device (HID) Driver
   items:
