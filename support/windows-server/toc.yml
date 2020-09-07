@@ -1,5 +1,5 @@
 - name: Welcome
-  href:
+  href: welcome-windows-server.md
 
 - name: Active Directory
   items:

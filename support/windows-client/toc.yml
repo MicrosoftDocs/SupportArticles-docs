@@ -1,5 +1,5 @@
 - name: Welcome
-  href:
+  href: welcome-windows-client.md
 
 - name: Admin Development
   items:

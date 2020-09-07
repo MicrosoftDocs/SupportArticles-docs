@@ -6,6 +6,26 @@ ms.date: 09/03/2020
 ---
 # Windows server troubleshooting
 
-Welcome to Windows server troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Windows server products.
+This library provides the core content that IT pros need to troubleshoot and support the Windows Server operating systems. 
+The content in this library is authored by a writing team who works directly with Windows product group and support professionals in an effort to bring you the most technically accurate content.
 
-In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+To find the information you need, browse the content listed below, or use our search feature.
+
+## In this library
+- Active Directory
+- Admin Development
+- Application Management
+- Backup and Storage
+- Deployment
+- Group Policy
+- High Availability
+- Networking
+- Performance
+- Printing
+- Remote Desktop Services
+- Security and Malware
+- Shell Experience
+- System Management Components
+- User Profiles and Logon
+- Virtualization
+- Windows Security
