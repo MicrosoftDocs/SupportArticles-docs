@@ -51,7 +51,7 @@ To work around this issue, use any of the following methods:
 - Select **Let's look on your computer instead** to start a local Windows Desktop Search after every error.
 - Change Outlook settings to stop using the search function on the service. To do this, create a DisableServerAssistedSearch registry key. For more information, see this [Outlook Global Customer Service & Support Team Blog article](https://techcommunity.microsoft.com/t5/outlook-global-customer-service/how-outlook-2016-utilizes-exchange-server-2016-fast-search/ba-p/381195).
 
-| | |
+|Type | Value|
 |---------|---------|
 |Group Policy Registry Path|`HKEY_CURRENT_USER\software\policies\Microsoft\office\16.0\outlook\search`|
 |Value Name|DisableServerAssistedSearch|
