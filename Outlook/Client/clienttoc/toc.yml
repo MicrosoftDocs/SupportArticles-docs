@@ -113,8 +113,6 @@
       href: ../installation/installing-calendar-printing-assistant-fails.md
     - name: Install Outlook latest applicable updates
       href: ../installation/install-outlook-latest-updates.md
-    - name: Insufficient memory to display a folder
-      href: ../installation/outlook-folder-fails-displaying.md
     - name: Leave a copy of the message on the server is missing
       href: ../installation/enable-leave-a-copy-of-the-message-on-the-server-outlook.md
     - name: Planning considerations
@@ -142,12 +140,15 @@
     - name: Crashes after installing language packs
       href: ../performance/outlook-2016-crash-event-1000.md
     - name: Enable transport logging
-      href: ../performance/MSG email message files in Outlook containing multiple attachments or recipients
+      href: ../performance/enable-transport-logging.md
+    - name: Error when you copy MSG email message files in Outlook containing multiple attachments or recipients
       href: ../performance/error-when-copying-msg-with-many-attachments-or-recipients.md
     - name: Event ID 9646 when opening MAPI sessions
       href: ../performance/event-9646-opening-mapi-sessions.md
     - name: Install SaRA from network share
       href: /office365/troubleshoot/installation/install-sara-from-network-share?context=/outlook/troubleshoot/context/client-context
+    - name: Insufficient memory to display a folder
+      href: ../performance/outlook-folder-fails-displaying.md
     - name: Stops at the Loading Profile screen
       href: ../performance/outlook-stops-at-the-loading-profile-screen.md
   - name: Profiles and Accounts
@@ -205,9 +206,9 @@
     - name: Can't use Quick Steps
       href: ../user-interface/outlook-quick-steps-issues.md
     - name: Create recurring reminder email
-      href: ../email-messages/create-recurring-email.md
+      href: ../user-interface/create-recurring-email.md
     - name: Default Office Add-in icon is displayed
-      href: ../email-messages/default-office-addin-icon-displayed-outlook-ribbon.md
+      href: ../user-interface/default-office-addin-icon-displayed-outlook-ribbon.md
     - name: Emails sent by an .oft file aren't received
       href: ../user-interface/sending-email-by-template-fails.md
     - name: Extensibility support for Outlook 2010

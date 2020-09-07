@@ -107,4 +107,4 @@ To locate and view the registry setting for Anonymous Authentication in the Outl
 
     Any other value represents an authentication method other than Anonymous.
 
-    ![00036619](./media/continually-prompts-password-office-365/00036619.png)
+    ![image of 00036619](./media/continually-prompts-password-office-365/00036619.png)
