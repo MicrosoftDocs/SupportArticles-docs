@@ -1,6 +1,6 @@
 ### YamlMime:Hub
-title: Microsoft Endpoint Manager documentation
-summary: Troubleshooting articles for Microsoft Endpoint Manager
+title: Microsoft Endpoint Manager troubleshooting 
+summary: Technical content to troubleshoot issues in Microsoft Endpoint Manager.
 
 metadata:
    ms.topic: hub-page
@@ -9,14 +9,12 @@ metadata:
    ms.author: luche
 
 productDirectory:
-  items:
-  - title: Microsoft Intune
-    imageSrc: "../media/hub-landing/logo-intune.png"
-    links:
-    - url: intune/welcome-intune.md
-      text: Troubleshooting articles for Microsoft Intune
+  items:     
   - title: Microsoft Endpoint Configuration Manager
     imageSrc: "../media/hub-landing/logo-configmgr.png"
-    links:
-    - url: configmgr/welcome-configuration-manager.md
-      text: Troubleshooting articles for Microsoft Endpoint Configuration Manager
+    summary: Troubleshooting articles for Microsoft Endpoint Configuration Manager
+    url: configmgr/welcome-configuration-manager.md
+  - title: Microsoft Intune
+    imageSrc: "../media/hub-landing/logo-intune.png"
+    summary: Troubleshooting articles for Microsoft Intune
+    url: intune/welcome-intune.md
