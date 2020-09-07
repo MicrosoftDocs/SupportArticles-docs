@@ -43,7 +43,7 @@ To use this method, follow these steps:
 
     ```powershell
     $formatenumerationlimit = -1
-    Get-Mailbox "mailbox identity" | fl mailboxinfo.txt
+    Get-Mailbox "mailbox identity" | fl > mailboxinfo.txt
     ```
 
 3. Disconnect the on-premises mailbox:
