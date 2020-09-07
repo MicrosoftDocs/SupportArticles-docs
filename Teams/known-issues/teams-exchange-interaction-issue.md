@@ -90,7 +90,7 @@ If the test fails, you must first resolve the Autodiscover issue.
 In Windows PowerShell, run the following command:
 
 ```powershell
-Invoke-RestMethod -Uri "https://outlook.office365.com/autodiscover/autodiscover.json?Email=onpremisemailbox@contoso.com&Protocol=EWS&RedirectCount=5" -Agent Teams
+Invoke-RestMethod -Uri "https://outlook.office365.com/autodiscover/autodiscover.json?Email=onpremisemailbox@contoso.com&Protocol=EWS&RedirectCount=5" -UserAgent Teams
 ```
 
 > [!NOTE]
