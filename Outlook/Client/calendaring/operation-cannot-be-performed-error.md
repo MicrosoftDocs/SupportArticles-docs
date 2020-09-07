@@ -75,4 +75,4 @@ A fix for this problem is available in service build **15.20.2730.00** and late
 
 This problem is caused by Exchange Based Assistants (EBAs) in the service that write changes to the meeting item. This creates a conflict resolution issue. The current fix is to skip all notifications on meeting drafts so that no EBA or ItemAssistant can change the meeting draft. When the meeting is updated from draft to non-draft, the notification to EBAs and ItemAssistants makes changes to the meeting item. This solution will delay the EBAs and prevent the error from occurring for about 1.5 hours after you save the meeting. To avoid the conflict and the error, send the meeting invitation within 1.5 hours of saving the meeting item.
 
-The Outlook Teams is working on a long-term solution. We will post more information in this article when the information becomes available.
+The Outlook Teams is working on a long-term solution that will prevent unexpected EBA property edits targeted to end of year 2020.
