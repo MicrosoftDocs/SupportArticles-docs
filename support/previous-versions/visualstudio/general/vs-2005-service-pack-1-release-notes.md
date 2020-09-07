@@ -616,4 +616,4 @@ To resolve this issue, refer to [Error message when you try to install a large W
 
 - Dotfuscator Community Edition
 
-    Dotfuscator Community Edition has been updated since the Visual Studio 2005 original release version. Visit [PreEmptive Solutions](https://www.preemptive.com/support/dotfuscator/vs2005.html) to read about the changes and to obtain a free update.
+    Dotfuscator Community Edition has been updated since the Visual Studio 2005 original release version. Visit [PreEmptive Solutions](https://www.preemptive.com/support/dotfuscator-support) to read about the changes and to obtain a free update.

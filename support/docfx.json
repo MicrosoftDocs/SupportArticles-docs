@@ -136,10 +136,12 @@
       },
 
       "ms.prod": {
-        "mem/configmgr/**/*.md": "configuration-manager"
+        "mem/configmgr/**/*.md": "configuration-manager",
+        "previous-versions/configmgr/*.md": "configuration-manager"
       },
       "ms.technology": {
-        "mem/configmgr/**/*.md": ""
+        "mem/configmgr/**/*.md": "",
+        "previous-versions/configmgr/*.md": ""
       },
 
       "ms.prod": {
@@ -147,6 +149,13 @@
       },
       "ms.technology": {
         "system-center/dpm/**/*.md": "data-protection-manager"
+      },
+
+      "ms.prod": {
+        "system-center/scom/**/*.md": "system-center"
+      },
+      "ms.technology": {
+        "system-center/scom/**/*.md": "operations-manager"
       },
 
       "ms.prod": {
@@ -203,7 +212,9 @@
         "windows/win32/**/*.md": "Windows Developer",
         "mem/intune/**/*.md": "Intune",
         "mem/configmgr/**/*.md": "Configuration Manager",
+        "previous-versions/configmgr/*.md": "Configuration Manager",
         "system-center/dpm/**/*.md": "Data Protection Manager",
+        "system-center/scom/**/*.md": "Operations Manager",
         "system-center/orchestrator/**/*.md": "Orchestrator",    
         "system-center/scsm/**/*.md": "Service Manager",
         "system-center/vmm/**/*.md": "Virtual Machine Manager",
@@ -227,6 +238,7 @@
         "azure/**/*.md": ["Azure"],
         "mem/intune/**/*.md": ["Intune"],
         "mem/configmgr/**/*.md": ["Configuration Manager"],
+        "previous-versions/configmgr/*.md": ["Configuration Manager"],
         "system-center/**/*.md": ["System Center"]
       }
     },

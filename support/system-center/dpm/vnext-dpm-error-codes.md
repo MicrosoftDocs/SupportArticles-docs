@@ -422,7 +422,7 @@ _Original KB number:_ &nbsp; 3041345
 |830|DPM cannot read the service <*ServiceName*> configuration.|On <*ServerName*>, review the recent errors in the Windows event log.|
 |832|Setup cannot grant the <*UserName*> account access to the DPM database.|Verify that SQL Server is properly installed and that it is running.|
 |833|Setup could not delete the <*UserName*> user account.|To delete the <*UserName*> user account, on the **Administrative Tools** menu, select **Computer Management**, expand **Local Users and Groups**, and then select **Users**. Right-click <*UserName*>, and then select **Delete**.|
-|834|Setup cannot remove the deployed reports.|To delete the reports manually, go to http:// <*ComputerName*>/ReportServer$<*InstanceName*>.|
+|834|Setup cannot remove the deployed reports.|To delete the reports manually, go to `http://<ComputerName>/ReportServer$<InstanceName>`.|
 |836|The DPM repair failed.|Verify that the DPM server meets the software requirements. Uninstall DPM, and then run DPM Setup again.|
 |841|Setup cannot calculate the disk space for the specified location.|Specify a different installation location.|
 |842|Setup cannot access the <*RegistryKey*> registry key for the <*SqlInstance*> instance of SQL Server.|Verify that SQL Server 2008 is properly installed.|
@@ -1858,7 +1858,7 @@ _Original KB number:_ &nbsp; 3041345
 |32683|Failed to update password of local user account for server <*ServerName*>|<ul><li>If <*ServerName*> is configured to use NETBIOS, specify the NETBIOS name. Otherwise specify the DNS name of the workgroup computer. </li><li>Ensure that the user account exists on this server or specified protected computer name is correct. </li><li>Ensure that the specified server has been configured for non-domain protection. </li><li>The caller is an admin on the server.</li></ul>|
 |32684|Unable to contact the protection agent on server <*ServerName*>|1. Ensure that the above server name is accessible from the DPM server.<br/>2. Ensure that the protection agent has been installed on the remote server. Also ensure that you have run `SetDpmServer.Exe` with the `-isNonDomainServer` option on the protected computer.|
 |32685|This server does not match the DPM server setting on server <*ServerName*>|1. Ensure that you have specified the correct protected computer.<br/>2. In case you have specified the correct protected computer, run `SetDpmServer` on <*ServerName*> with the correct DPM server name, and then retry the operation.|
-|32686|The selected server <*ServerName*> <br/>cannot be a recovery target as it has been configured for non-domain protection.|Select a server theat has been configured for domain protection.|
+|32686|The selected server <*ServerName*> <br/>cannot be a recovery target as it has been configured for non-domain protection.|Select a server that has been configured for domain protection.|
 |32687|One or more of the specified paths contain invalid characters.|Check all the paths provided for invalid characters and correct them.|
 |32688|Failed to create a user account with the specified credentials.|Specify a password that meets the minimum security requirements for this server.|
 |32689|The user account <*UserName*> is already in use.|DPM requires a unique and exclusive user account to communicate with the workgroup server.<br/><br/>Go to the protected computer and rerun `setdpmserver.exe` with the unique username. Then retry this operation with the new user credentials.|
@@ -2037,7 +2037,7 @@ _Original KB number:_ &nbsp; 3041345
 |33410|Recovery of <*DatasourceName*> on <*ServerName*> failed since the staging area path <*StagingAreaPath*> could not be locked.| |
 |33411|DPM server could not connect to backup service.|Check the internet connectivity and your backup subscription status using the backup service portal.|
 |33412|Status: <*AlertStatus*><br/>Description: DPM server could not connect to backup service.|Check the internet connectivity and your backup subscription status using the backup service portal.|
-|33413|Backup policies configured on backup service are out of sync with this DPM server.|Click the recommended action link that appears below the alert window for DPM to attemp to refresh the policies.|
+|33413|Backup policies configured on backup service are out of sync with this DPM server.|Click the recommended action link that appears below the alert window for DPM to attempt to refresh the policies.|
 |33414|Status: <*AlertStatus*><br/>Description: Backup policies configured on backup service are out of sync with this DPM server.|Click the recommended action link that appears below the alert window for DPM to attempt to refresh the policies.|
 |33415|DPM could not create online recovery point for some of the required files for this data source. This could be because of intermittent failures or if the file type is unsupported.<br/>Number of files that failed during online recovery point creation: <*FailureCount*><br/>Next online recovery point creation job will try to back up these files again.|For a list of files that for which online recovery point creation did not succeed, review the log.|
 |33416|Status: <*AlertStatus*><br/>Data source type: <*DatasourceType*><br/>Data source: <*DatasourceName*><br/>Computer: <*ServerName*><br/>Description: DPM could not do backup of the required files to cloud for this data source. This could be because of intermittent failures or if the file type is unsupported.|For more information, open DPM Administrator Console and review the alert details in the **Monitoring** task area.|
@@ -2150,13 +2150,13 @@ _Original KB number:_ &nbsp; 3041345
 |33611|Specified server already exists. Please add a new server name.|Pass a new server name.|
 |33612|The Server name passed is Guid.Empty.|Provide a valid server name.|
 |33613|The proxy server does not exist.|Pass a valid proxy server that has DPMRA installed.|
-|33614|DPM encounterd error from VMware server <*ServerName*> with Fault - <*VMWareErrorCode*>|Verify that the VMware Server is in a good state.|
+|33614|DPM encountered error from VMware server <*ServerName*> with Fault - <*VMWareErrorCode*>|Verify that the VMware Server is in a good state.|
 |33615|DPM could not enumerate VMware Server on the protected computer <*ServerName*>.| Verify that the VMware Server is in a good state. |
 |33616|VMware server is not reachable.| |
 |33617| <*ServerName*> is not a VMware server. This operation can only be performed on a VMware server.|Provide a valid VMware Server.|
 |33618|Selected datastore is not available to selected host|Provide a valid datastore.|
 |33619|Invalid resource pool. Selected resource pool does not belong to the selected host's compute resource|Provide a valid resource pool.|
-|33620|DPM encounterd error from VMware Disk SubSystem. Server - <*ServerName*> ErrorCode - <*VMWareErrorCode*>|Verify  that the VMware Server is in a good state.|
+|33620|DPM encountered error from VMware Disk SubSystem. Server - <*ServerName*> ErrorCode - <*VMWareErrorCode*>|Verify  that the VMware Server is in a good state.|
 |33621|DPM encountered error from VMware while trying to get ChangeTracking information. Server - <*ServerName*> ErrorCode - <*VMWareErrorCode*>|Run a Consistency Check Job to synchronize the backup copy.|
 |33622|Selected folder is invalid for recovery.|Select the folder from the VM folder hierarchy of the selected host system's datacenter|
 |33623|Unable to communicate with VMware Server <*ServerName*>.| |
@@ -2232,8 +2232,8 @@ _Original KB number:_ &nbsp; 3041345
 |50010|A required hotfix KB2919355 is missing. Install this hotfix from https://support.microsoft.com/kb/2919355/, and then re-run setup| |
 |50011|Setup could not update registry metadata. This update failure could lead to over usage of storage consumption. To avoid this, please update the ReFS Trimming registry entry as mentioned in the article here: [https://aka.ms/mabstroubleshootingguide](https://aka.ms/mabstroubleshootingguide) | |
 |50012|Setup could not update registry metadata. This update failure could lead to over usage of storage consumption. To avoid this, please update the Volume SnapOptimization registry entry as mentioned in the article here: [https://aka.ms/mabstroubleshootingguide](https://aka.ms/mabstroubleshootingguide) | |
-|50013|Setup could not update registry metadata. This registry is intented to improve the performance. To get advantage of it, please update the Duplicate Extent BatchSize registry entry as mentioned in the article here: [https://aka.ms/mabstroubleshootingguide](https://aka.ms/mabstroubleshootingguide) | |
-|50014|Setup could not update registry metadata. This registry is intented to improve the performance. To get advantage of it, please update the Duplicate Extent BatchSize registry entry as mentioned in the article here: [https://aka.ms/mabstroubleshootingguide](https://aka.ms/mabstroubleshootingguide) | |
+|50013|Setup could not update registry metadata. This registry is intended to improve the performance. To get advantage of it, please update the Duplicate Extent BatchSize registry entry as mentioned in the article here: [https://aka.ms/mabstroubleshootingguide](https://aka.ms/mabstroubleshootingguide) | |
+|50014|Setup could not update registry metadata. This registry is intended to improve the performance. To get advantage of it, please update the Duplicate Extent BatchSize registry entry as mentioned in the article here: [https://aka.ms/mabstroubleshootingguide](https://aka.ms/mabstroubleshootingguide) | |
 |50500|Setup has detected that Microsoft Azure Backup is already installed on this machine. Will skip its installation.| |
 |50501|Microsoft Azure Backup cannot be installed on a machine where registered backup vault is on protected storage model. Kindly change backup vault to protected instance model.| |
 |50502|The version of the SQL Server Tools provided is lower than SQL Server 2014. The minimum supported version of the SQL Server Tools is SQL Server 2014.| |
@@ -2453,7 +2453,7 @@ _Original KB number:_ &nbsp; 3041345
 |100219|Backup failed due to an unexpected error while reading the volume. This could be due to Disk error. Windows Server Backup error message: <*WSBMessage*>|Refer to [Get-WBVolume](/powershell/module/windowsserverbackup/get-wbvolume?view=win10-ps) to find all critical volumes, run chkdsk for critical volumes and retry the backup.|
 |100220|Azure backup agent could not find any successful System State backup from WindowsServerBackup.|Retry the operation. If the issue persists contact Microsoft Support.|
 |100221|Azure backup agent could not validate the System State backup taken by Windows Server Backup.|Retry the operation. If the issue persists contact Microsoft Support.|
-|100222|Failed to connect with wbengine service.|Retry the operation. If the issue persists contact Microsoft Support.|
+|100222|Failed to connect with `wbengine` service.|Retry the operation. If the issue persists contact Microsoft Support.|
 |100223|Backup failed due to insufficient disk space on the staging location.|Ensure that the staging location has available disk space greater than or equal to the cumulative size of the source data that you wish to back up via offline backup.|
 |100224|Backup failed because size of data to be backed up from this volume exceeds the maximum allowed size of <*MaxSupportedSize*> TB for each volume on the current OS version.|Upgrade to Windows Server 2012 or above to protect up to 54 TB per volume, or ensure that no more than <*MaxSupportedSize*> TB of data is selected for backup per volume.|
 |100225|Data did not get successfully transferred to the staging location.|Wait for a few minutes and then try the operation again. If the issue persists, contact Microsoft support.|
@@ -2752,7 +2752,7 @@ _Original KB number:_ &nbsp; 3041345
 |260016|One or more backup blobs referenced from metadata state are not found in Blob Store.|Select another valid recovery point to recover data from (possibly latest), otherwise contact Microsoft Support.|
 |260017|Target DB schema is not supported for the current version of the service.|Verify that the service upgrade has completed successfully. If issue persists, report this error to Product Group.|
 |260018|Target DB schema version is not compatible for the current version of the service.|Validate that the service upgrade has completed successfully. If issue persists, report this error to the Product Group.|
-|260019|Previously triggerd pruning task is in progress, skipped current task trigger.|If issue persists, report this error to the Product Group.|
+|260019|Previously triggered pruning task is in progress, skipped current task trigger.|If issue persists, report this error to the Product Group.|
 |260020|Pruning task triggered is within the expected next task trigger frequency. This task will be skipped.|If issue persists, report this error to the Product Group.|
 |260021|BCDR pruning task aborted for a component type.|If issue persists, report this error to the Product Group.|
 |260022|Current operation failed because the service has recovered from a serious error.|Retrigger the recovery.|

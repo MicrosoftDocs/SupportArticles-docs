@@ -13,9 +13,30 @@
     href: volume-copy-service-provider-absent.md
   - name: WEDU reoffers downloaded updates
     href: wedu-reoffers-downloaded-updates.md
-
+  - name: Commands under GuiRunOnce doesn't run
+    href: commands-under-guirunonce-not-run.md
+  - name: Disabling File Based Write Filter causes a crash
+    href: disabling-fbwf-causes-crash.md
+  - name: Network adapter fails to acquire an IP address
+    href: network-adapter-fails-acquire-ip-address.md
+  - name: System Restore is unable to complete Restoration
+    href: system-restore-not-complete-restoration.md
+    
 - name: Network Driver
   items:
   - name: Wi-Fi connection settings are lost
     href: wi-fi-connection-settings-lost.md
-    
+  - name: Device can't be removed in Device Manager
+    href: device-not-removed-device-manager.md
+
+- name: Human Interface Device (HID) Driver
+  items:
+  - name: Bluetooth and POS peripherals fail to connect
+    href: bluetooth-pos-peripherals-fail-connect.md
+
+- name: Storage Driver
+  items:
+  - name: iSCSI initiator shows incorrect MPIO path state
+    href: incorrect-mpio-path-state.md
+  - name: Windows.Storage APIs can return stale file
+    href: windows-storage-api-return-stale-file.md

@@ -1,0 +1,190 @@
+- name: Welcome
+  href: welcome-scom.md
+- name: Agents
+  items:
+  - name: A push installation fails with error 800706D3
+    href: agent-push-installation-error-800706d3.md
+  - name: Agents can't find the primary management server
+    href: ad-integration-agent-assignment-events-20012-2000.md
+  - name: Can't deploy the Linux agent to a Red Hat server
+    href: deploy-linux-agent-fails.md
+  - name: Can't monitor workgroup computers without a gateway server
+    href: cannot-monitor-workgroup-computer-without-gateway-server.md
+  - name: Error 25211 installing agents
+    href: error-25211-installing-opsmgr-agent.md
+  - name: Heartbeat alerts in maintenance mode
+    href: maintenance-mode-heartbeat-alerts.md
+  - name: Microsoft Monitoring Agent service freezes during startup
+    href: monitoring-agent-service-freezes-during-startup.md
+  - name: Remove orphaned agents
+    href: agents-show-pending-management-state.md
+  - name: The APM feature causes a crash for the IIS application pool
+    href: apm-feature-causes-iis-application-pool-crash.md
+  - name: The state of a new agent is Not monitored
+    href: new-client-agent-not-monitored-state.md
+  - name: Troubleshoot gray agent states
+    href: troubleshoot-gray-agent-states.md
+  - name: Troubleshoot UNIX/Linux agent discovery
+    href: troubleshoot-unix-linux-agent-discovery.md
+- name: AVIcode
+  items:
+  - name: Can't edit AVIcode 5.7 templates after upgrade
+    href: import-avicode-templates-after-upgrade.md
+  - name: Configure Windows authentication
+    href: configure-windows-authentication.md
+  - name: The Path My Documents contains an invalid character
+    href: avicode-agent-installation-fails-with-invalid-character.md
+- name: BlueStripe
+  items:
+  - name: Activate a FactFinder management server license file
+    href: activate-factfinder-management-server-license-file.md
+  - name: BlueStripe Collector support by OS
+    href: minimum-bluestripe-collector-version-required.md
+  - name: BlueStripe management server firewall rules
+    href: bluestripe-management-server-firewall-rules.md
+  - name: Check the BlueStripe Collector status
+    href: check-bluestripe-collector-status.md
+  - name: Check the BlueStripe Collector version
+    href: check-bluestripe-collector-version.md
+  - name: Configure Windows authentication on a BlueStripe management server
+    href: configure-windows-authentication-on-bluestripe-management-server.md
+  - name: FactFinder heap space configuration
+    href: factfinder-heap-space-configuration.md
+  - name: Generate and export a Support Data package
+    href: generate-export-support-data-package.md
+  - name: Installation flags of BlueStripe Collector
+    href: bluestripe-collector-installation-flags.md
+  - name: Upgrade BlueStripe Collector
+    href: upgrade-bluestripe-collector.md
+  - name: Use a custom certificate
+    href: use-custom-certificate.md
+  - name: What's new in BlueStripe FactFinder 8.1
+    href: bluestripe-factfinder-new-functions.md
+- name: Management packs
+  items:
+  - name: A delay when you open dashboard views
+    href: delay-open-dashboard-views.md
+  - name: Best practices for configuring overrides
+    href: best-practices-configure-overrides.md
+  - name: Can't import a management pack with dependencies
+    href: cannot-import-management-pack-with-dependencies.md
+  - name: Can't open the Management Server view
+    href: cannot-open-management-server.md
+  - name: Can't upgrade the Configuration Manager management pack
+    href: upgrade-configmgr-management-pack-error.md
+  - name: Configure SharePoint 2010 management pack
+    href: configure-sharepoint-2010-management-pack.md
+  - name: Connection to EndPoint Service failed
+    href: connection-to-endpoint-service-failed-error.md
+  - name: DNS management pack discovery fails with event 1155
+    href: dns-management-pack-discovery-fails.md
+  - name: Domain controllers are unavailable or Not Monitored
+    href: domain-controllers-unavailable.md
+  - name: Event 26001 is logged regularly
+    href: event-26001-logged-regularly.md
+  - name: Event ID 4625 when using Exchange 2010 management pack
+    href: event-id-4625-audit-failure.md
+  - name: Exchange 2010 management pack guidance
+    href: exchange-2010-management-pack-guidance.md
+  - name: Regular expression support
+    href: regular-expression-support.md
+- name: Monitor log files
+  items:
+  - name: Monitor text and CSV log files
+    href: monitor-text-and-csv-log-files.md
+- name: Network monitoring
+  items:
+  - name: Port monitoring isn't disabled
+    href: port-monitoring-not-disabled.md
+- name: Notifications
+  items:
+  - name: Can't receive alert notifications
+    href: cannot-receive-alert-notification.md
+  - name: Close old alerts using a PowerShell script
+    href: close-old-alert-using-powershell-script.md
+  - name: Don't manually resolve alerts raised by monitors
+    href: alerts-raised-by-monitors-not-resolved.md
+- name: Operations or infrastructure
+  items:
+  - name: A management server turns gray
+    href: management-server-turns-gray.md
+  - name: A service doesn't start after applying update 2677070
+    href: system-center-service-not-start.md
+  - name: A wildcard matching rule fails with event 10303
+    href: wildcard-matching-rule-fails-with-event-10303.md
+  - name: Can't access the AppAdvisor website
+    href: cannot-access-appadvisor-website.md
+  - name: Can't access the UNIX/Linux computers view
+    href: cannot-access-unix-linux-computers-view.md
+  - name: Configuration data isn't updated
+    href: configuration-data-not-updated.md
+  - name: Configuration isn't updated and event 29181 is repeatedly logged
+    href: configuration-not-updated-with-event-29181.md
+  - name: Creating a maintenance schedule causes the console to disconnect
+    href: maintenance-schedule-causes-operations-console-disconnected.md
+  - name: Data warehouse logging improvements
+    href: data-warehouse-logging-improvements.md
+  - name: Detect and troubleshoot configuration changes
+    href: detect-troubleshoot-configuration-changes.md
+  - name: Event 31551 connecting to the data warehouse database
+    href: event-31551-connect-data-warehouse-database.md
+  - name: Event 4001 during SQL Server 2012 monitoring
+    href: event-4001-monitor-sql-server-2012.md
+  - name: Health Service doesn't process configuration files
+    href: health-service-not-process-configuration-files.md
+  - name: HTTP 500 error connecting to the web console
+    href: http-500-error-connecting-to-web-console.md
+  - name: Maintenance mode FAQ
+    href: maintenance-mode.md
+  - name: Management server can't connect to the data warehouse database
+    href: cannot-contact-data-warehouse-database.md
+  - name: Management servers and managed devices are dimmed
+    href: management-servers-devices-dimmed.md
+  - name: Operations Manager stops working after uninstalling features
+    href: uninstalling-features-causes-opsmgr-stop-working.md
+  - name: Remove corrupted APM components
+    href: remove-corrupted-apm-components.md
+  - name: The Discovery Wizard stops responding
+    href: discovery-wizard-stop-responding.md
+  - name: The System Center Management service stops responding
+    href: system-center-management-service-stops-responding.md
+  - name: Web console login errors
+    href: web-console-login-errors.md
+- name: Performance
+  items:
+  - name: Can't see performance or availability details
+    href: cannot-see-performance-availability-details.md
+  - name: Performance views still show deleted counters
+    href: performance-views-still-show-deleted-counters.md
+  - name: Troubleshoot event ID 2115 related performance issues
+    href: troubleshoot-event-2115-related-performance-problems.md
+- name: Reports
+  items:
+  - name: ACS reports return no more than 42 days of data
+    href: acs-reports-return-no-more-than-42-days-data.md
+  - name: Reporting installation or upgrade fails
+    href: reporting-installation-error-0xffffffff.md
+  - name: Reports fail to deploy
+    href: cannot-deploy-operations-manager-reports.md
+  - name: Request Count and Request Time are missing from APM reports
+    href: request-count-data-missing-from-apm-reports.md
+  - name: The Add Object Wizard displays only 500 objects
+    href: add-object-wizard-displays-only-500-objects.md
+  - name: Troubleshoot blank reports
+    href: troubleshoot-blank-reports.md
+- name: Security
+  items:
+  - name: Antivirus exclusions recommendations
+    href: antivirus-exclusions-recommendations.md
+  - name: Antivirus software blocks script execution
+    href: antivirus-software-blocks-script-execution.md
+- name: Setup or deployment
+  items:
+  - name: Error 0x80131604 installing a management server
+    href: management-server-installation-error-0x80131604.md
+  - name: Setup cannot be completed
+    href: setup-not-completed-error.md
+  - name: Troubleshoot OMS onboarding issues
+    href: troubleshoot-oms-onboarding-issues.md
+  - name: Unable to register to Advisor Service
+    href: error-3000-unable-to-register-to-advisor-service.md
