@@ -423,8 +423,6 @@
       href: ../client-connectivity/outlook-connection-issue-caused-by-rpc-encryption-requirement.md
     - name: Outlook fails to start
       href: ../client-connectivity/starting-outlook-displays-error.md
-    - name: Outlook for Mac repeatedly prompts for credentials
-      href: ../client-connectivity/prompted-for-credentials-modern-authentication.md
     - name: OWA doesn't redirect to ADFS login
       href: ../client-connectivity/owa-not-redirect-adfs-login.md
     - name: Password expiration isn't notified
@@ -513,8 +511,6 @@
       href: ../mailflow/send-button-missing-delayed-delivery-email-outbox.md
     - name: Can't send an email with full access
       href: ../mailflow/cannot-send-email-with-full-access.md
-    - name: Can't send emails from a distribution list
-      href: ../mailflow/outlook-mac-security-groups-cannot-send-emails.md
     - name: Can't send files from an application through email
       href: ../mailflow/error-send-file-from-application-through-email.md
     - name: Can't send or receive emails behind a Cisco PIX or ASA firewall
@@ -529,8 +525,6 @@
       href: ../mailflow/edge-transport-servers-reject-messages.md
     - name: Email body part is shown incorrectly as an attachment
       href: ../mailflow/message-body-shown-as-attachment.md
-    - name: Emails are stuck in Outbox in Outlook 2016 for Mac
-      href: ../mailflow/email-stuck-in-outbox-outlook-2016-mac.md
     - name: Emails aren't delivered to all recipients
       href: ../mailflow/emails-not-delivered-dynamic-distribution-group.md
     - name: Emails remain in Outbox for at least one minute
@@ -569,16 +563,12 @@
       href: ../migration/error-copy-appointment-to-outlook-com-folder.md
     - name: Can't move a mailbox to a database
       href: ../migration/error-move-mailbox-to-database-exchange-2010.md
-    - name: Can't move items from Outlook 2013 to an EAS store
-      href: ../migration/error-move-items-from-outlook-to-eas-store.md
     - name: Can't move mailboxes to Exchange Online
       href: ../migration/user-is-already-being-moved-error.md
     - name: Can't replicate public folder
       href: ../migration/cannot-replicate-public-folder-to-exchange-server.md
     - name: Can't see free/busy info after a mailbox move
       href: ../migration/no-free-busy-info-mailbox-move.md
-    - name: Category colors are changed in Outlook 2016 for Mac
-      href: ../migration/outlook-mac-category-colors-changed.md
     - name: Error when you move a mailbox
       href: ../migration/cannot-set-folder-security-descriptor-non-canonical-acl.md
     - name: Issues if msExchMasterAccountSID is on a user account
