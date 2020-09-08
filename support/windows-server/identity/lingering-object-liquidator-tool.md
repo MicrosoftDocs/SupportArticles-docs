@@ -1,7 +1,7 @@
 ---
 title: Description of the Lingering Object Liquidator tool
 description: Describes the Lingering Object Liquidator (LoL) tool for finding and removing lingering objects.
-ms.date: 08/19/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

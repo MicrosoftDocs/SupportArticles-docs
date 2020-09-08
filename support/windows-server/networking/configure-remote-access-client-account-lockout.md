@@ -1,7 +1,7 @@
 ---
 title: Configure remote access client account lockout
 description: This step-by-step article describes how to configure the remote access client account lockout feature.
-ms.date: 08/13/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

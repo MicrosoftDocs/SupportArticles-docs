@@ -1,7 +1,7 @@
 ---
 title: Set up RD licensing across domains forests or workgroups
 description: This article talks about the questions around the supportability (or recommended approach) of setting up Remote Desktop (RD) licensing across domain, forest, or work groups.
-ms.date: 07/20/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

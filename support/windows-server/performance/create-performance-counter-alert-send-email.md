@@ -1,7 +1,7 @@
 ---
 title: Create performance counter alert and send email
 description: Describes how to create performance counter alert and send email when the alert is triggered.
-ms.date: 08/25/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Delead-Han
 manager: dscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Configure proxy server settings
 description: Describes how to configure proxy server settings in Windows 8.
-ms.date: 08/24/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Delead-Han
 manager: dscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Post-Deployment Configuration task fails
 description: Helps fix an issue where the Post-Deployment Configuration task fails after you install the Windows Server Essentials Experience role.
-ms.date: 09/02/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Delead-Han
 manager: dscontentpm

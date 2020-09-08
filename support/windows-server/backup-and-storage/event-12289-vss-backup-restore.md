@@ -1,7 +1,7 @@
 ---
 title: Error 0x80042409 when you perform a Volume Shadow Copy Service restore operation 
 description: Describes an issue that occurs when you restore a Virtual Machine while another backup that uses the Hyper-V writer is in progress.
-ms.date: 08/19/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

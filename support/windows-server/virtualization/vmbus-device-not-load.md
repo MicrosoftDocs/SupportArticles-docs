@@ -1,7 +1,7 @@
 ---
 title: VMBus device doesn't load
 description: Describes an issue in which the VMBus device doesn't load on a virtual machine that was created by using Virtual Server 2005 or Virtual PC 2007.
-ms.date: 09/03/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Delead-Han
 manager: dscontentpm

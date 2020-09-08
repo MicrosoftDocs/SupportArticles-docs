@@ -1,7 +1,7 @@
 ---
 title: The printer spooler may crash randomly on a Windows Server computer that has an HP printer installed
 description: Describes a problem in which the printer spooler may crash randomly on a Windows Server computer that has an HP printer installed.
-ms.date: 08/24/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

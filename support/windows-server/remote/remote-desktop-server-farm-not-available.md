@@ -1,7 +1,7 @@
 ---
 title: Remote Desktop Server farm is unavailable over DirectAccess (single/multisite)
 description: Fixes an issue makes a Remote Desktop Server (RDS) farm unavailable in a Windows Server 2008 environment.
-ms.date: 08/19/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

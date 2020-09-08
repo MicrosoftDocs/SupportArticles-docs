@@ -1,7 +1,7 @@
 ---
 title: Enable NTLM 2 authentication
 description: Describes how to enable NTLM 2 authentication.
-ms.date: 08/28/2020
+ms.data: 09/08/2020
 author: delhan
 ms.author: Delead-Han
 manager: dscontentpm

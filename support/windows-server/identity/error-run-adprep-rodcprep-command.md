@@ -1,7 +1,7 @@
 ---
 title: Adprep could not contact a replica error when running Adprep /rodcprep command in Windows Server 2008
 description: Describes a problem in which the Adprep /rodcprep command isn't completed successfully because the infrastructure master for one or more active directory NDNCs isn't reachable. A resolution is provided.
-ms.date: 08/17/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

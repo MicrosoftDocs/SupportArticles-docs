@@ -1,7 +1,7 @@
 ---
 title: Add Print Directory feature for folders
 description: Explains how to print a directory listing of the contents of a folder more easily by using the Print Directory feature.
-ms.date: 09/04/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Delead-Han
 manager: dscontentpm

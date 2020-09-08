@@ -1,7 +1,7 @@
 ---
 title: Active Directory Replication Error 1127 While accessing the hard disk, a disk operation failed even after retries
 description: Describes an issue where AD operations fail with Win32 error 1127 (While accessing the hard disk, a disk operation failed even after retries).
-ms.date: 08/25/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

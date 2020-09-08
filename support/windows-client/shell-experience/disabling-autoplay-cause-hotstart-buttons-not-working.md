@@ -1,7 +1,7 @@
 ---
 title: HotStart buttons don't work
 description: Provides a solution to an issue where HotStart buttons doesn't work when Autoplay is disabled.
-ms.date: 08/31/2020
+ms.data: 09/08/2020
 author: delhan
 ms.author: Delead-Han
 manager: dscontentpm

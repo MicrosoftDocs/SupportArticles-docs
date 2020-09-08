@@ -1,7 +1,7 @@
 ---
 title: Incorrect TLS is displayed
 description: Describes an issue in which SSL (TLS 1.0) is displayed as the Security Layer protocol instead of the actual TLS 1.2 protocol. This issue affects Windows Server 2008 and Windows Server 2012 environments. A resolution is provided.
-ms.date: 08/24/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Delead-Han
 manager: dscontentpm

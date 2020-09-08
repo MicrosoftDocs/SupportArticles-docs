@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting slow file copying in Windows
 description: Troubleshoots the issue that file copy is slow.
-ms.date: 08/18/2020
+ms.data: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Can't use Vmconnect to connect to virtual machine
 description: Describes an error message that you receive when you try to use Vmconnect.exe to connect to a virtual machine in Windows Server 2008. To resolve this error, you must verify that the required registry keys are configured to enable remote authentication.
-ms.date: 08/27/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Delead-Han
 manager: dscontentpm

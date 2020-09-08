@@ -1,7 +1,7 @@
 ---
 title: Relocation of Users and ProgramData directories
 description: Describes information about the relocation of the Users directory and ProgramData directory to a drive other than the %systemdrive% in Windows.
-ms.date: 07/15/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

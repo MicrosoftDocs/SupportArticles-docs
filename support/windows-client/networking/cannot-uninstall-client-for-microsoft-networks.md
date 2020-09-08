@@ -1,7 +1,7 @@
 ---
 title: Error 0x80071779 when removing Client for Microsoft Networks
 description: Address an issue in which you receive error 0x80071779 when removing Client for Microsoft Networks.
-ms.date: 08/24/2020
+ms.data: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

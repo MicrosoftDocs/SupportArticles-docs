@@ -1,7 +1,7 @@
 ---
 title: Fail to seize RID Master role with Ntdsutil
 description: Fixes an error that occurs when you seize the relative ID (RID) Master role with the Ntdsutil tool to a different domain controller.
-ms.date: 09/03/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Delead-Han
 manager: dscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Windows Server Update Services 3.0 SP2 Dynamic Installer for Server Manager
 description: Describes the Windows Server Update Services 3.0 SP2 Dynamic Installer for Server Manager.
-ms.date: 08/19/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

@@ -1,7 +1,7 @@
 ---
 title: NET ADD doesn't support names exceeding 20 characters
 description: Provides a solution to an error that occurs when you use the NET.EXE /ADD command with user or group names longer than 20 characters.
-ms.date: 08/31/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Delead-Han
 manager: dscontentpm

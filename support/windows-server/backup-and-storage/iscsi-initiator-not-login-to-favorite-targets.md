@@ -1,7 +1,7 @@
 ---
 title: The iSCSI Initiator can't log in to Favorite Target
 description: Provides a solution to an issue where the Microsoft iSCSI Initiator fails to login to Favorite Targets.
-ms.date: 09/03/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Delead-Han
 manager: dscontentpm

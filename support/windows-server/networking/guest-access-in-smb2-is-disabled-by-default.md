@@ -1,7 +1,7 @@
 ---
 title: Guest access in SMB2 is disabled
 description: Guest access in SMB2 disabled by default in Windows 10, Windows Server 2019 and 2016.
-ms.date: 07/08/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

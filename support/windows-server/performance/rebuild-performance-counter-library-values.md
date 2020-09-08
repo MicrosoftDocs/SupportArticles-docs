@@ -1,7 +1,7 @@
 ---
 title: Rebuild Performance Counter Library values
 description: This article describes how to manually rebuild Performance Counter Library values.
-ms.date: 08/05/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

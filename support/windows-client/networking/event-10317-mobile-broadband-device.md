@@ -1,7 +1,7 @@
 ---
 title: Event 10317 when turning on mobile broadband device
 description: Describes error events that may be logged when you turn on a device that has a mobile broadband connection or resume the device from sleep.
-ms.date: 08/24/2020
+ms.data: 09/08/2020
 author: delhan
 ms.author: Delead-Han
 manager: dscontentpm

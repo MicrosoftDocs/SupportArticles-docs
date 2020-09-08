@@ -1,7 +1,7 @@
 ---
 title: Cannot remove uninstall or reinstall Microsoft Store app
 description: This article describes Microsoft Support policy on removing or uninstalling Microsoft Store App from Windows 10 devices.
-ms.date: 07/20/2020
+ms.data: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

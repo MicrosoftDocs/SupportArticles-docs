@@ -1,7 +1,7 @@
 ---
 title: Integrating Windows DNS into an existing DNS namespace
 description: Describes how to integrate Windows DNS into an organization that already has a DNS namespace implemented in which the DNS server that is authoritative for the zone with the name of the Active Directory domain doesn't support RFC 2136 (dynamic updates).
-ms.date: 08/19/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

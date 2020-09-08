@@ -1,7 +1,7 @@
 ---
 title: New SMB 3.0 features in the Windows Server 2012 file server
 description: Describes new features in the next version of the Server Message Block (SMB) protocol, SMB 3.0. Windows Server 2012 introduced SMB 3.0.
-ms.date: 08/21/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

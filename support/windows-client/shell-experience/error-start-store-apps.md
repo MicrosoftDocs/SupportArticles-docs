@@ -1,7 +1,7 @@
 ---
 title: Fail to start Microsoft Store apps
 description: Describes and provides a resolution for an issue in which you receive an error message when you try to start a Windows Store app in Windows 8 or Windows Server 2012.
-ms.date: 08/17/2020
+ms.data: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

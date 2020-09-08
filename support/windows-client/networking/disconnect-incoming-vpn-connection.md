@@ -1,7 +1,7 @@
 ---
 title: Disconnect incoming VPN connection
 description: Describes how to disconnect an incoming VPN connection when an option to disconnect the incoming VPN connection is not displayed in the View Available Networks dialog box. This issue occurs in Windows 8 and in Windows Server 2012.
-ms.date: 09/02/2020
+ms.data: 09/08/2020
 author: delhan
 ms.author: Delead-Han
 manager: dscontentpm

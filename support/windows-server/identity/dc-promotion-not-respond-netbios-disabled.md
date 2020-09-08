@@ -1,7 +1,7 @@
 ---
 title: DC promotion stops responding
 description: Describes an issue in which domain controller promotion fails. This issue occurs when short credentials are used in an environment that has NetBIOS over TCPIP disabled.
-ms.date: 08/24/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Delead-Han
 manager: dscontentpm

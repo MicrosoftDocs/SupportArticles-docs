@@ -1,7 +1,7 @@
 ---
 title: Event ID 10 is logged in Application log
 description: Event ID 10 is logged after you install Service Pack 1 for Windows 7 or Windows Server 2008 R2. Provides a resolution.
-ms.date: 07/20/2020
+ms.data: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

@@ -1,7 +1,7 @@
 ---
 title: 80072EE6 error code when you download an update from Windows Server Update Services in Windows 7-based or Windows Server 2008 R2-based computer
 description: Resolve the 80072EE6 error code that occurs when you download an update from Windows Server Update Services.
-ms.date: 08/25/2020
+ms.data: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

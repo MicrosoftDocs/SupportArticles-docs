@@ -1,7 +1,7 @@
 ---
 title: How domain controllers are located
 description: Describes how domain controllers are located.
-ms.date: 08/26/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Delead-Han
 manager: dscontentpm

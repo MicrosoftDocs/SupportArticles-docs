@@ -1,7 +1,7 @@
 ---
 title: Security alert when connecting to wireless network
 description: Fixes an issue where a Windows Security alert appears when you connect to a wireless network on a workgroup machine.
-ms.date: 08/27/2020
+ms.data: 09/08/2020
 author: delhan
 ms.author: Delead-Han
 manager: dscontentpm

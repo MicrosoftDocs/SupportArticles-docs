@@ -1,7 +1,7 @@
 ---
 title: Overview of the compatibility considerations for 32-bit programs on 64-bit versions of Windows Server 2003 and Windows XP
 description: Discusses the compatibility considerations and limitations for 32-bit programs that are running on 64-bit versions of Windows Server 2003 and Windows XP.
-ms.date: 08/19/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

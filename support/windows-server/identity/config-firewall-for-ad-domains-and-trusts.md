@@ -1,7 +1,7 @@
 ---
 title: Configure firewall for AD domain and trusts
 description: Describes the ports that are used when you configure a trust relationship between domains.
-ms.date: 07/15/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

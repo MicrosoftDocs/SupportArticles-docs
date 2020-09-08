@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot DNS Event ID 4013
 description: The DNS server was unable to load AD integrated DNS zones error occurs in the DNS event log. Provides a resolution.
-ms.date: 07/22/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Description of the Portqry.exe command-line utility
 description: This article introduces the Portqry.exe command-line utility.
-ms.date: 07/15/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

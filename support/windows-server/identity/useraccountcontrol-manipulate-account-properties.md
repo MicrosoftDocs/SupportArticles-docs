@@ -1,7 +1,7 @@
 ---
 title: UserAccountControl property flags
 description: Describes information about using the UserAccountControl attribute to manipulate user account properties.
-ms.date: 08/12/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

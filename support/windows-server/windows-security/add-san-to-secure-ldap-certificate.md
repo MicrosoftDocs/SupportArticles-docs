@@ -1,7 +1,7 @@
 ---
 title: Add SAN to secure LDAP certificate
 description: Describes how to add a subject alternative name to a secure LDAP certificate.
-ms.date: 08/12/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

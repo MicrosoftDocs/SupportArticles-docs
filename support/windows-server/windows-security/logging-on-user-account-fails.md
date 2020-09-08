@@ -1,7 +1,7 @@
 ---
 title: Logging on a user account fails
 description: Describes a problem in Windows Server that occurs when a user who is a member of more than 1,010 security groups tries to log on. Provides a resolution.
-ms.date: 08/13/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

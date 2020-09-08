@@ -1,7 +1,7 @@
 ---
 title: Windows Update hangs and updates are uninstalled
 description: Discusses that Windows Update hangs and newly installed updates are uninstalled after a system restart in Windows Server 2012 R2, Windows 8.1, Windows Server 2012, and Windows 8. Provides a workaround.
-ms.date: 08/28/2020
+ms.data: 09/08/2020
 author: delhan
 ms.author: Delead-Han
 manager: dscontentpm

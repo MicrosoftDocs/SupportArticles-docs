@@ -1,7 +1,7 @@
 ---
 title: QUERY USER command can't query from remote server
 description: Fixes an issue where the QUERY USER command doesn't query information from a remote server.
-ms.date: 08/27/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Delead-Han
 manager: dscontentpm

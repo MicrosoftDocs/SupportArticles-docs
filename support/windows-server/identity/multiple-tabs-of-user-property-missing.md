@@ -1,7 +1,7 @@
 ---
 title: Multiple tabs of user properties are missing
 description: Provides a solution to an issue where multiple tabs are missing when you view user properties in Active Directory Users and Computers.
-ms.date: 09/02/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Delead-Han
 manager: dscontentpm

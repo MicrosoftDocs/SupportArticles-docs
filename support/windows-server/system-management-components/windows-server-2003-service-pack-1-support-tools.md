@@ -1,7 +1,7 @@
 ---
 title: Windows Server 2003 Service Pack 1 Support Tools
 description: Describes updates to the Windows Server 2003 Support Tools that are included in Windows Server 2003 SP1.
-ms.date: 09/02/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Delead-Han
 manager: dscontentpm

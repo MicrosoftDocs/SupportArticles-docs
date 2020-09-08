@@ -1,7 +1,7 @@
 ---
 title: The validation fails when you run a cluster validation wizard for a Windows Server 2008 cluster
 description: Describes a problem in which a duplicate address error occurs when you validate a Windows Server 2008 failover cluster. A resolution is provided.
-ms.date: 08/19/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

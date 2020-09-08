@@ -1,7 +1,7 @@
 ---
 title: Domain members fail authentication when domain controller is shut down
 description: Fixes an issue where the application can't authenticate users when you shut down a Domain Controller.
-ms.date: 08/19/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

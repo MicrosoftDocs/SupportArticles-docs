@@ -1,7 +1,7 @@
 ---
 title: Can't open high-resolution file in Photo Gallery
 description: Provides a solution to an issue where users can't open high-resolution file in Windows Photo Gallery.
-ms.date: 08/24/2020
+ms.data: 09/08/2020
 author: delhan
 ms.author: Delead-Han
 manager: dscontentpm

@@ -1,7 +1,7 @@
 ---
 title: 0x0000007B Stop error after replacing or switching to an alternate iSCSI boot adapter on a Windows Server 2008 R2-based or Windows 7-based computer
 description: Describes an issue where you receive a STOP 0X0000007B error when you switch to an alternate iSCSI boot adapter on a Windows Server 2008 R2-based or Windows 7-based computer.
-ms.date: 08/19/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

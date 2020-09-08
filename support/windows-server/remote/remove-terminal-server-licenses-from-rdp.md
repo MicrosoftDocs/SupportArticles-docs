@@ -1,7 +1,7 @@
 ---
 title: Remove Terminal Server licenses from RDP client
 description: Describes how to remove Terminal Server licenses from an RDP client.
-ms.date: 08/18/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Best practices for DNS client settings
 description: Describes best practices for the configuration of Domain Name System (DNS) client settings.
-ms.date: 08/28/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Delead-Han
 manager: dscontentpm

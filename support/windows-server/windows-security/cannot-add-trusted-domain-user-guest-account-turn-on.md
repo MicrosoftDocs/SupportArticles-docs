@@ -1,7 +1,7 @@
 ---
 title: The server is not operational error when you add a trusted domain user to a trusting domain in Windows Server 2003 or in Windows 2000
 description: Explains that when you try to add a trusted domain user to a trusting domain, you may receive an error message if the guest account on the trusted domain is turned on.
-ms.date: 08/25/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

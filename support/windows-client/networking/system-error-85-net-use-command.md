@@ -1,7 +1,7 @@
 ---
 title: System error 85 with NET USE command
 description: This article helps fix the system error 85 that occurs when a non-administrative user attempts to reconnect to a shared network drive that the user has already used by using the net use command.
-ms.date: 08/10/2020
+ms.data: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

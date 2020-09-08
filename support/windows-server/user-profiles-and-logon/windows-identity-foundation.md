@@ -1,7 +1,7 @@
 ---
 title: Description of Windows Identity Foundation
 description: Describes Windows Identity Foundation and how to obtain it.
-ms.date: 08/25/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Delead-Han
 manager: dscontentpm

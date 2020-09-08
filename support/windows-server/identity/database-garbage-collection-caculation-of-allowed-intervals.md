@@ -1,7 +1,7 @@
 ---
 title: Database garbage collection process
 description: Describes the Active Directory database garbage collection process and calculation of allowed intervals.
-ms.date: 08/31/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Delead-Han
 manager: dscontentpm

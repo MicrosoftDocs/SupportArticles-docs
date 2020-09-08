@@ -1,7 +1,7 @@
 ---
 title: DirectAccess clients can't connect with IP-HTTPS
 description: DirectAccess clients may not be able to connect to DirectAccess Server by using Internet Protocol over Secure Hypertext Transfer Protocol (IP-HTTPS) connections because the revocation check fails.
-ms.date: 09/03/2020
+ms.data: 09/08/2020
 author: delhan
 ms.author: Delead-Han
 manager: dscontentpm

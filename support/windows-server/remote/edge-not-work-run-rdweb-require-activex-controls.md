@@ -1,7 +1,7 @@
 ---
 title: Remote Desktop tab in RDWEB is missing from Microsoft Edge browser
 description: Describes an issue that prevents the Microsoft Edge browser from working correctly with websites or apps that require ActiveX controls. A resolution is provided.
-ms.date: 08/19/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

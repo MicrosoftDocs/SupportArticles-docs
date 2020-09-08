@@ -1,7 +1,7 @@
 ---
 title: Hyper-V virtual machine doesn't start
 description: Discusses that a Hyper-V virtual machine may not start, and you receive a General access denied error (0x80070005). Provides a resolution.
-ms.date: 08/17/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

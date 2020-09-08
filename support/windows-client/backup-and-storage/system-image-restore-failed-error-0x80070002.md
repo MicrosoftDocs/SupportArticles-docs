@@ -1,7 +1,7 @@
 ---
 title: System Image Recovery fails with a 0x80070002 error in Windows 8.1
 description: Describes a system image restore problem that occurs in Windows 8.1 when you try to recover from a backup that's stored on a partition on the system disk. A resolution is provided.
-ms.date: 08/25/2020
+ms.data: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

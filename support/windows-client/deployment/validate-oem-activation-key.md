@@ -1,7 +1,7 @@
 ---
 title: Validate the OEM activation key
 description: Describes how to validate the OEM activation key in Windows 10, version 1703 and later versions.
-ms.date: 07/20/2020
+ms.data: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

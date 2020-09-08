@@ -1,7 +1,7 @@
 ---
 title: Access Denied when you access SMB file share
 description: Resolves an issue in which you cannot access a shared folder through SMB2 protocol. This issue occurs in Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 R2, Windows Vista, and Windows Server 2008.
-ms.date: 08/13/2020
+ms.data: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

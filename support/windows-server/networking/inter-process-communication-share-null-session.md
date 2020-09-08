@@ -1,7 +1,7 @@
 ---
 title: IPC$ share and null session behavior
 description: Describes the IPC$ share in Windows 7.
-ms.date: 08/11/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

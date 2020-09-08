@@ -1,7 +1,7 @@
 ---
 title: Fail to start selected virtual machine
 description: Provides a solution to an error that occurs while you try to  start the selected virtual machine.
-ms.date: 08/26/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Delead-Han
 manager: dscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Recommended antivirus exclusions for Hyper-V hosts
 description: This article describes the recommended antivirus exclusions for Hyper-V hosts for optimal operation of Hyper-V and the running virtual machines.
-ms.date: 08/03/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

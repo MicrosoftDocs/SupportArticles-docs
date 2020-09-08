@@ -1,7 +1,7 @@
 ---
 title: Automating Disk Cleanup tool
 description: Introduces how to run the Disk Cleanup tool (Cleanmgr.exe) by using command-line switches.
-ms.date: 07/24/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

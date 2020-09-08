@@ -1,7 +1,7 @@
 ---
 title: Cannot start Windows Search service
 description: The Windows Search service on local computer started and then stopped. Some services stop automatically if they aren't in use by other services or programs. This error occurs when you try to start the Windows Search service. Provides a resolution.
-ms.date: 07/22/2020
+ms.data: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

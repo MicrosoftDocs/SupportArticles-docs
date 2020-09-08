@@ -1,7 +1,7 @@
 ---
 title: Switch options for Boot.ini files
 description: Describes the switch options that you can use to modify Windows startup.
-ms.date: 08/20/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Delead-Han
 manager: dscontentpm

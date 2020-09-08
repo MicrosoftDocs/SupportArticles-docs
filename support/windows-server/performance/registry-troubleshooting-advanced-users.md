@@ -1,7 +1,7 @@
 ---
 title: Registry troubleshooting for advanced users
 description: Describes how to troubleshoot registry corruption issues.
-ms.date: 08/25/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Delead-Han
 manager: dscontentpm

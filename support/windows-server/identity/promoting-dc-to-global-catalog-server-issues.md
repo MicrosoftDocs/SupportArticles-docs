@@ -1,7 +1,7 @@
 ---
 title: Problem with promoting DC to global catalog server
 description: Discusses problems with promoting a Windows Server 2003 domain controller or Windows 2000 domain controller to a global catalog server. Discusses possible causes of global catalog promotion failure and ways to resolve global catalog promotion failure.
-ms.date: 08/27/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Delead-Han
 manager: dscontentpm

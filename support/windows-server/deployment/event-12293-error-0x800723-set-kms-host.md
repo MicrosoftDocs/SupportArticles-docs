@@ -1,7 +1,7 @@
 ---
 title: DNS Event Security Event 12293 with error 0x80072338 registering KMS host record
 description: Provides a resolution to fix the event ID 12293 that occurs when setting up a KMS host.
-ms.date: 08/19/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

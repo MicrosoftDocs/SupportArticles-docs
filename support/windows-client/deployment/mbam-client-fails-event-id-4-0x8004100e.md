@@ -1,7 +1,7 @@
 ---
 title: MBAM client fails with error 0x8004100E
 description: Fixes the error 0x8004100E that occurs when Microsoft BitLocker Administration and Monitoring (MBAM) client fails.
-ms.date: 08/24/2020
+ms.data: 09/08/2020
 author: delhan
 ms.author: Delead-Han
 manager: dscontentpm

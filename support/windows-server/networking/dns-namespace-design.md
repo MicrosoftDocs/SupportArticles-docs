@@ -1,7 +1,7 @@
 ---
 title: DNS namespace planning
 description: Describes the design of the DNS namespace in an Active Directory environment.
-ms.date: 08/19/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

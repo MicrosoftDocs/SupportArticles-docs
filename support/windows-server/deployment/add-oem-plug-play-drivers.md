@@ -1,7 +1,7 @@
 ---
 title: Add OEM PnP drivers to Windows installations
 description: Provides the steps to add OEM Plug and Play drivers to Windows installations.
-ms.date: 08/25/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Delead-Han
 manager: dscontentpm

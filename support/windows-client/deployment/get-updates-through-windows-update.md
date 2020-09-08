@@ -1,7 +1,7 @@
 ---
 title: How to get updates via Windows Update
 description: Describes how to obtain an update from Windows Update.
-ms.date: 07/08/2020
+ms.data: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

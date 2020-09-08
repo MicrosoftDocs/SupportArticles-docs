@@ -1,7 +1,7 @@
 ---
 title: Renaming a network folder fails
 description: Resolves an issue where Renaming a network folder in Windows 7 Explorer fails.
-ms.date: 08/20/2020
+ms.data: 09/08/2020
 author: delhan
 ms.author: Delead-Han
 manager: dscontentpm

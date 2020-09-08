@@ -1,7 +1,7 @@
 ---
 title: PortQry version 2.0 features and functions
 description: Discusses the new features and functionality available in PortQry Command Line Port Scanner version 2.0.
-ms.date: 08/17/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm

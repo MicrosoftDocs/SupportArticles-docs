@@ -1,7 +1,7 @@
 ---
 title: NTFRS_xxxxxxxx is added to a folder name
 description: Helps fix an issue where File Replication service (FRS) adds "NTFRS_xxxxxxxx" to a folder name.
-ms.date: 09/02/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Delead-Han
 manager: dscontentpm

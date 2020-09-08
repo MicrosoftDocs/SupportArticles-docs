@@ -1,7 +1,7 @@
 ---
 title: DNS Servers fail to resolve queries
 description: Provides a solution to an issue where DNS Servers fail to resolve queries for names in certain top-level domains.
-ms.date: 08/18/2020
+ms.date: 09/08/2020
 author: delhan
 ms.author: Deland-Han
 manager: dscontentpm
