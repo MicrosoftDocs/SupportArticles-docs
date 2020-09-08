@@ -246,6 +246,7 @@
         "aspnet/**/*.md": ["Web Apps"],        
         "webapps/**/*.md": ["Web Apps"],
         "windows/win32/**/*.md": ["Windows Developer"],
+        "windows-hardware/drivers/**/*.md": [ "Hardware Developer" ],
         "windows-server/**/*.md": ["Windows Server"],
         "windows-client/**/*.md": ["Windows Client"],
         "browsers/**/*.md": ["Browsers"],
@@ -253,8 +254,7 @@
         "mem/intune/**/*.md": ["Intune"],
         "mem/configmgr/**/*.md": ["Configuration Manager"],
         "previous-versions/configmgr/*.md": ["Configuration Manager"],
-        "system-center/**/*.md": ["System Center"]
-        "windows-hardware/drivers/**/*.md": [ "Hardware Developer" ],
+        "system-center/**/*.md": ["System Center"]        
       }
     },
 
