@@ -24,9 +24,9 @@ search.appverid: MET150
 ---
 # Exchange Server Client Connectivity Diagnostic
 
-The Microsoft Exchange Server Client Connectivity Diagnostic collects comprehensive information that can be used to troubleshoot client connectivity issues. Use this Support Diagnostics Platform (SDP) manifest on an affected server that is running Exchange Server and that has the Client Access server role.
-
 _Original KB number:_ &nbsp; 2973478
+
+The Microsoft Exchange Server Client Connectivity Diagnostic collects comprehensive information that can be used to troubleshoot client connectivity issues. Use this Support Diagnostics Platform (SDP) manifest on an affected server that is running Exchange Server and that has the Client Access server role.
 
 ## More information
 

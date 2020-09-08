@@ -17,8 +17,6 @@ appliesto:
 ---
 # Outlook can't connect through a firewall or a proxy server that is performing Network Address Translation (NAT) between public and private networks
 
-This article helps you resolve the problem that Microsoft Outlook clients can't connect through a firewall or proxy server that is performing Network Address Translation (NAT) between public and private networks.
-
 _Original KB number:_ &nbsp; 291615
 
 ## Symptoms

@@ -18,8 +18,6 @@ search.appverid: MET150
 ---
 # You cannot connect to an Exchange Server 2010 mailbox from Outlook Web App
 
-This article provides a resolution for the issue that you can't use IMAP4 or POP3 to connect to a Microsoft Exchange Server 2010 mailbox by using Outlook Web App (OWA).
-
 _Original KB number:_ &nbsp; 980049
 
 ## Symptoms

@@ -20,8 +20,6 @@ appliesto:
 ---
 # Outlook Web App published through WAP with ADFS pre-authentication doesn't redirect to ADFS login after the ADFS SSO token expires
 
-This article helps you resolve the problem that Microsoft Outlook Web App that's published through Web Application Proxy (WAP) with Active Directory Federation Service (ADFS) pre-authentication doesn't redirect to ADFS login after the ADFS SSO token expires.
-
 _Original KB number:_ &nbsp; 4012524
 
 ## Symptoms

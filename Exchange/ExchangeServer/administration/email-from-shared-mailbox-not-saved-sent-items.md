@@ -24,8 +24,6 @@ appliesto:
 ---
 # Email messages that you send from a shared mailbox aren't saved in the Sent Items folder in Outlook for Mac
 
-This article helps you resolve the problem that email messages that you send from the shared mailbox aren't saved in the Sent Items folder of the shared mailbox.
-
 _Original KB number:_ &nbsp; 2928846
 
 ## Symptoms

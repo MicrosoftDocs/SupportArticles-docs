@@ -19,8 +19,6 @@ search.appverid: MET150
 ---
 # Notes field in Contacts is blank after it is updated on a mobile device or in Outlook Web App
 
-This article provides a workaround to solve the issue that the Notes field of a contact is blank after it's updated in Microsoft Exchange Server 2013.
-
 _Original KB number:_ &nbsp; 2980834
 
 ## Symptoms

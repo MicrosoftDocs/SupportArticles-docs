@@ -18,8 +18,6 @@ search.appverid: MET150
 ---
 # Managing RBAC roles might display warnings or errors if Exchange Server 2010 is partially deployed
 
-This article provides two ways to solve the errors that occur when you manage RBAC roles if Microsoft Exchange Server 2010 Service Pack 1 (SP1) Rollup Update 6 (RU6) or Exchange Server 2010 Service Pack 2 (SP2) are partially deployed in the organization.
-
 _Original KB number:_ &nbsp; 2638351
 
 ## Symptoms

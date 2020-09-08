@@ -20,8 +20,6 @@ appliesto:
 ---
 # Exchange Server 2013 and 2016 Standard Edition can't mount databases that are larger than 1024 GB
 
-This article helps you resolve the problem that Microsoft Exchange Server 2013 and 2016 Standard Edition can't mount databases that are larger than 1024 GB.
-
 _Original KB number:_ &nbsp; 3059008
 
 ## Summary

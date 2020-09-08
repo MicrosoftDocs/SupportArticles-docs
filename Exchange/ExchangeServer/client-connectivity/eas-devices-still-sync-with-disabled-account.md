@@ -17,8 +17,6 @@ search.appverid: MET150
 ---
 # EAS devices still sync after an account is disabled or a password is changed
 
-This article provides resolutions for the issue that Microsoft Exchange ActiveSync (EAS) devices still sync after an account is disabled or a password is changed. In addition, any of the methods provided in this article will force the device to reconnect on a new connection.
-
 _Original KB number:_ &nbsp; 2612821
 
 ## Symptoms

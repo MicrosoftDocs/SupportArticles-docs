@@ -18,8 +18,6 @@ search.appverid: MET150
 ---
 # Error when you perform a multi-mailbox search in Exchange Server 2010: The user does not have an exchange mailbox
 
-This article describes an issue that occurs when there's no value for the `HomeMDB` attribute on an Exchange Server 2010 mailbox.
-
 _Original KB number:_ &nbsp;2702446
 
 ## Symptoms

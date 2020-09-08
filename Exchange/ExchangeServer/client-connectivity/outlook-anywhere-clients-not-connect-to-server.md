@@ -18,8 +18,6 @@ appliesto:
 ---
 # Outlook Anywhere clients can't connect to an Exchange server after you install Exchange Server 2010 SP3
 
-This article helps resolve the problem that Outlook Anywhere clients can't connect to an Exchange server after you install Microsoft Exchange 2010 Service Pack 3 (SP3).
-
 _Original KB number:_ &nbsp; 2832198
 
 ## Symptoms

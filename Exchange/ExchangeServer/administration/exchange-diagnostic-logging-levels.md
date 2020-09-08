@@ -17,9 +17,9 @@ search.appverid: MET150
 ---
 # Exchange server diagnostic logging levels
 
-One of the features that can be used to troubleshoot Microsoft Exchange server is diagnostic logging. Diagnostic logging saves information in the application log, the amount of information logged is controlled by the logging level defined.
-
 _Original KB number:_ &nbsp; 555232
+
+One of the features that can be used to troubleshoot Microsoft Exchange server is diagnostic logging. Diagnostic logging saves information in the application log, the amount of information logged is controlled by the logging level defined.
 
 ## More information
 

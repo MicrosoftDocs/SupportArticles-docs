@@ -19,8 +19,6 @@ appliesto:
 ---
 # Event ID 1325, 1026, and 1000 after you convert OAB for Exchange Server 2010
 
-This article helps you resolve the problem that you can't convert the Offline Address Book (OAB) by running the ConvertOABVdir.ps1 script on the Client Access Server.
-
 _Original KB number:_ &nbsp; 2961921
 
 ## Summary

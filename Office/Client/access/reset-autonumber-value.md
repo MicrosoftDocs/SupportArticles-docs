@@ -26,8 +26,6 @@ search.appverid: MET150
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
-This article provides step-by-step methods to reset an **AutoNumber** field value.
-
 _Original KB number:_ &nbsp; 812718
 
 ## Summary

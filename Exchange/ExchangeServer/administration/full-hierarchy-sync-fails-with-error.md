@@ -19,8 +19,6 @@ search.appverid: MET150
 ---
 # Full hierarchy sync fails with Microsoft.Mapi.MapiExceptionMaxSubmissionExceeded
 
-This article provides a resolution to solve the **Microsoft.Mapi.MapiExceptionMaxSubmissionExceeded** error that occurs when a full hierarchy sync fails in Microsoft Exchange Server 2013.
-
 _Original KB number:_ &nbsp; 3068989
 
 ## Symptoms

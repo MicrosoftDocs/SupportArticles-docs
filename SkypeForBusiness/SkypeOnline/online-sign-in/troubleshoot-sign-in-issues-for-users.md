@@ -16,8 +16,6 @@ search.appverid: MET150
 ---
 # Troubleshooting Skype for Business sign-in for users
 
-This guide helps Skype for Business users (not administrators) to diagnose and resolve the sign-in issues.
-
 _Original KB number:_ &nbsp; 10054
 
 ## Summary

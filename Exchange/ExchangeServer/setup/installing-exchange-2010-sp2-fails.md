@@ -19,8 +19,6 @@ appliesto:
 ---
 # Error message when you try to install Exchange Server 2010 SP2: AuthorizationManager check failed
 
-This article provides a solution to an error that occurs when you install Microsoft Exchange Server 2010 Service Pack 2 (SP2).
-
 _Original KB number:_ &nbsp; 2668686
 
 ## Symptoms

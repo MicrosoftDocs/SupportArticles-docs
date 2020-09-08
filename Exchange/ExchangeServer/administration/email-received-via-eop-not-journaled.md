@@ -20,8 +20,6 @@ search.appverid: MET150
 
 # Internet email received through EOP is not journaled in an Exchange Server hybrid environment
 
-This article provides a solution for the issue that the messages that are received from Office 365 or from the Internet are not journaled in Microsoft Exchange Server hybrid.
-
 _Original KB number:_ &nbsp; 4344001
 
 ## Symptoms

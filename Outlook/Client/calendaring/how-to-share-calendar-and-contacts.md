@@ -18,12 +18,12 @@ search.appverid: MET150
 ---
 # Sharing calendar and contacts in Microsoft 365
 
+_Original KB number:_ &nbsp; 10157
+
 This article discusses the following two topics:
 
 - How to set up a shared calendar or contacts list for your entire organization or large group of users.
 - How to Share calendar or contacts with specific users.
-
-_Original KB number:_ &nbsp; 10157
 
 **Who is it for?**
 

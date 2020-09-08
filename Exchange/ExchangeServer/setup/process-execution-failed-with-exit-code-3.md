@@ -20,8 +20,6 @@ appliesto:
 ---
 # Error when installation of Exchange Edge Transport role fails: Process execution failed with exit code 3
 
-This article provides a solution to an issue where installing Microsoft Exchange Server Edge Transport server roles by using the Setup wizard fails.
-
 _Original KB number:_ &nbsp; 4495264
 
 ## Symptoms

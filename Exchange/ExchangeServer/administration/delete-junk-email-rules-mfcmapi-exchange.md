@@ -24,8 +24,6 @@ appliesto:
 ---
 # How to delete junk email rules by using MFCMAPI in an Exchange Server environment
 
-This article describes how to manually delete junk email rules by using the Microsoft Exchange Server MAPI (MFCMAPI) tool in an Exchange Server environment.
-
 _Original KB number:_ &nbsp; 2860406
 
 ## How to delete a junk email rule

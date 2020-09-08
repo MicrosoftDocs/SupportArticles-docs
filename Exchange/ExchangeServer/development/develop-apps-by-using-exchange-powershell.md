@@ -18,9 +18,9 @@ search.appverid: MET150
 ---
 # Developing apps by using Exchange 2010 PowerShell and the .NET Framework
 
-Assume that you want to use any Microsoft .NET language to develop applications that automate Microsoft Exchange Server 2010 cmdlets. Remote PowerShell is the supported and recommended method for doing this.
-
 _Original KB number:_ &nbsp; 2827611
+
+Assume that you want to use any Microsoft .NET language to develop applications that automate Microsoft Exchange Server 2010 cmdlets. Remote PowerShell is the supported and recommended method for doing this.
 
 ## More information
 

@@ -22,8 +22,6 @@ search.appverid: MET150
 ---
 # Troubleshoot public folder replication for Exchange Server
 
-This article helps you diagnose and resolve issues with public folder replication for Exchange Server 2010, Exchange Server 2007, and Exchange Server 2003.
-
 _Original KB number:_ &nbsp; 10042
 
 ## Summary

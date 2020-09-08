@@ -74,7 +74,7 @@ To apply this workaround for Brazil, follow these steps:
 
 The final registry data should be displayed as follows:
 
-![registry key setting screenshot](../media/calendar-items-display-incorrect-time/e-south-america-standard-time-registry.png)
+![registry key setting screenshot](./media/calendar-items-display-incorrect-time/e-south-america-standard-time-registry.png)
 
 > [!NOTE]
 > - You should remove the **E. South American Standard Time** registry value after January 1, 2020.
