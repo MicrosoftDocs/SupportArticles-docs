@@ -58,6 +58,9 @@
       - name: Data Protection Manager
         tocHref: /troubleshoot/system-center/dpm/
         topicHref: /troubleshoot/system-center/dpm/welcome-dpm
+      - name: Operations Manager
+        tocHref: /troubleshoot/system-center/scom/
+        topicHref: /troubleshoot/system-center/scom/welcome-scom
       - name: Orchestrator
         tocHref: /troubleshoot/system-center/orchestrator/
         topicHref: /troubleshoot/system-center/orchestrator/welcome-orchestrator
@@ -75,3 +78,11 @@
       - name: Active Directory
         tocHref: /troubleshoot/azure/active-directory/
         topicHref: /troubleshoot/azure/active-directory/welcome-azure-ad
+
+    - name: Previous versions
+      tocHref: /troubleshoot/previous-versions/
+      topicHref: /troubleshoot/previous-versions/
+      items:
+      - name: Configuration Manager
+        tocHref: /troubleshoot/previous-versions/configmgr
+        topicHref: /troubleshoot/previous-versions/configmgr/backups-fail-with-vss-provider-issue
