@@ -1,5 +1,5 @@
 ---
-title: Intune: Reinstall the Intune Certificate Connector
+title: Reinstall the Intune Certificate Connector
 description: Describes how to reinstall the Microsoft Intune Connector.
 author: helenclu
 ms.author: luche
