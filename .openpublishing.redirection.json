@@ -101,6 +101,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/windows-client/index.md",
+      "redirect_url": "/support/windows-client/welcome-windows-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/index.md",
+      "redirect_url": "/support/windows-server/welcome-windows-server",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/sql/resource-monitor-nonyielding-condition.md",
       "redirect_url": "https://support.microsoft.com/help/2216485",
       "redirect_document_id": false
