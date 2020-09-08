@@ -1,5 +1,5 @@
 ---
-title: Error 135011 when trying to activate Microsoft 365 Apps
+title: (Your organization has disabled this device) error when trying to activate Microsoft 365 Apps'
 ms.author: v-todmc
 author: mccoybot
 manager: dcscontentpm
@@ -17,16 +17,16 @@ ms.custom:
 - CI 122959
 - CSSTroubleshoot 
 ms.reviewer: vikkarti
-description: Describes how to resolve error 135011 when trying to activate Microsoft 365 Apps.
+description: 'Describes how to resolve the error "Your organization has disabled this device" when trying to activate Microsoft 365 Apps.'
 ---
 
-# Error code 135011 when activating Microsoft 365 Apps
+# (Your organization has disabled this device) error when you try to activate Microsoft 365 Apps
 
 ## Symptoms
 
-You see the following error when trying to sign-in or activate Microsoft 365 Apps:
+When you try to sign in to or activate Microsoft 365 apps, you receive the following error message: 
 
-> Something went wrong
+> **Something went wrong**
 > 
 > Your organization has disabled this device.
 > 
@@ -37,27 +37,27 @@ You see the following error when trying to sign-in or activate Microsoft 365 App
  
 ## Cause
 
-This issue can occur if the device was either deleted or disabled in Azure Active Directory (AD) and the action to delete or disable was not initiated by the device. 
+This issue can occur if the device was either deleted or disabled in Azure Active Directory (AD), and the action the action was not initiated from the device itself. 
 
 ## Resolution
  
-To resolve the issue, follow the steps below, depending on your situation: 
+To resolve the issue, follow the steps: 
 
-- If the device was disabled in Azure AD, an administrator with sufficient privileges can enable it from the Azure AD portal:
+- If the device was disabled in Azure AD, an administrator who has sufficient privileges can re-enable it from the Azure AD portal, as follows:
 
-    1. Sign-in to the [Azure portal](https://portal.azure.com/).
+    1. Sign in to the [Azure portal](https://portal.azure.com/).
     2. Select **Azure Active Directory** > **Devices**.
-    3. In **Devices**, search for a username or device name in the list of disabled devices. 
+    3. Examine the disabled devices list in **Devices**, by searching on the username or device name. 
     4. Select the device, and then select **Enable**.
 
     For more information, see [Manage device identities using the Azure portal](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#device-management-tasks).
 
-- If the device was deleted in Azure AD, you will have to manually re-register the device. For detailed steps, see [Re-enable or re-register the device](https://docs.microsoft.com/azure/active-directory/devices/faq#q-i-disabled-or-deleted-my-device-in-the-azure-portal-or-by-using-windows-powershell-but-the-local-state-on-the-device-says-its-still-registered-what-should-i-do).
+- If the device was deleted in Azure AD, you  have to re-register it manually. For detailed steps to do this, see [Re-enable or re-register the device](https://docs.microsoft.com/azure/active-directory/devices/faq#q-i-disabled-or-deleted-my-device-in-the-azure-portal-or-by-using-windows-powershell-but-the-local-state-on-the-device-says-its-still-registered-what-should-i-do).
 
 
 ## More information
 
-For more information on troubleshooting Office client-side sign-in related issues, see the following articles:
+For more information about how to troubleshoot Microsoft Office client-side sign-in related issues, see the following articles:
 
 - [Disabling ADAL or WAM not recommended for fixing Office sign-in or activation issues](https://docs.microsoft.com/office365/troubleshoot/administration/disabling-adal-wam-not-recommended)
 - [Connection issues in sign-in after update to Office 2016 build 16.0.7967 on Windows 10](https://docs.microsoft.com/office365/troubleshoot/authentication/connection-issue-when-sign-in-office-2016)
