@@ -21,7 +21,7 @@ appliesto:
 
 ## Symptoms
 
-In Outlook for Microsoft 365, Microsoft Outlook 2016, or Outlook 2013, you experience the following symptoms:
+In Outlook for Microsoft 365, Microsoft Outlook 2016, or Microsoft Outlook 2013, you experience the following symptoms:
 
 - New email messages are not received.   
 - When you send an email message, it is not sent and remains in the Outbox.   
