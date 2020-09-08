@@ -17,6 +17,9 @@
   href: windows/win32/welcome-windowsdeveloper.md
 
 - name: Welcome
+  href: windows/index.yml
+
+- name: Welcome
   href: windows-hardware/drivers/welcome-windowshardware.md
 
 - name: Microsoft Endpoint Manager

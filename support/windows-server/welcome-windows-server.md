@@ -1,0 +1,31 @@
+---
+title: Welcome Support articles for Windows server
+description: This article lists troubleshooting articles for Windows server products.
+ms.topic: article
+ms.date: 09/08/2020
+---
+# Windows server troubleshooting
+
+This library provides solutions enabling IT pros to troubleshoot and support Windows Server operating systems. 
+To bring you the most accurate content, this library is managed by a team who works directly with the Windows product group and support professionals. 
+
+Browse the content listed below or use the search feature.
+
+## In this library
+- Active Directory
+- Admin Development
+- Application Management
+- Backup and Storage
+- Deployment
+- Group Policy
+- High Availability
+- Networking
+- Performance
+- Printing
+- Remote Desktop Services
+- Security and Malware
+- Shell Experience
+- System Management Components
+- User Profiles and Logon
+- Virtualization
+- Windows Security

@@ -1,0 +1,26 @@
+### YamlMime:Hub
+title: Windows trobuleshooting
+summary: Technical content for Developers and IT professionals to troubleshoot issues in Windows products.
+
+metadata:
+   ms.topic: hub-page
+   services: service
+   ms.service: windows
+   ms.author: delhan
+
+productDirectory:
+  items:
+  - title: Windows Server
+    imageSrc: "../media/hub-landing/windows.svg"
+    summary: Troubleshooting articles for Windows clients
+    url: ../windows-server/welcome-windows-server.md
+
+  - title: Windows Client
+    imageSrc: "../media/hub-landing/windows.svg"
+    summary: Troubleshooting articles for Windows servers
+    url: ../windows-client/welcome-windows-client.md
+    
+  - title:  Windows Developer
+    imageSrc: "../media/hub-landing/windows.svg"
+    summary: Troubleshooting articles for Windows developers
+    url: win32/welcome-windowsdeveloper.md
