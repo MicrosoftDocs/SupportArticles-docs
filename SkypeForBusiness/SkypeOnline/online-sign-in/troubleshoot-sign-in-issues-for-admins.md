@@ -79,7 +79,7 @@ Make sure the system clock shows the correct time, and then try signing in again
     1. Go to **Setting** > **PC Settings** > **Time and Language**.
     1. Note your UTC offset, and compare your device's time to that shown on the website.
 
-        ![Screenshot of Store icon](./media/troubleshoot-sign-in-issues-for-admins/store.png)
+        ![Screenshot 1 of Store icon](./media/troubleshoot-sign-in-issues-for-admins/store.png)
 
     If you need to update your device's time:
 
@@ -92,7 +92,7 @@ Make sure the system clock shows the correct time, and then try signing in again
     1. Go to a web site that shows Coordinated Universal Time (UTC).
     1. Go to **Control Panel** > **Date and Time**, and note the UTC offset for your location.
 
-        ![Screenshot of Store icon](./media/troubleshoot-sign-in-issues-for-admins/utc-offset.png)
+        ![Screenshot 2 of Store icon](./media/troubleshoot-sign-in-issues-for-admins/utc-offset.png)
     1. If you need to, choose **Change date and time** and update your computer's clock.
     1. Try signing in again.
 
@@ -177,7 +177,7 @@ Make sure that previously saved sign-in information isn't blocking the sign-in a
     1. Click the status menu below your name, and then click **Sign Out**.
     1. On the sign-in screen, click **Delete my sign-in info**.
 
-         ![Screenshot of Delete my sign-in info setting](./media/troubleshoot-sign-in-issues-for-admins/delete-my-sign-in-info.png)
+         ![Screenshot 1 of Delete my sign-in info setting](./media/troubleshoot-sign-in-issues-for-admins/delete-my-sign-in-info.png)
 
 1. Delete cached sign-in credentials.
 
@@ -205,7 +205,7 @@ Make sure that previously saved sign-in information isn't blocking your sign-in 
 
 1. On the Skype for Business Windows Store app sign-in screen, tap **Delete my sign-in info**.
 
-    ![Screenshot of Delete my sign-in info setting](./media/troubleshoot-sign-in-issues-for-admins/delete-sign-in-info-windows-store-app.png)
+    ![Screenshot 2 of Delete my sign-in info setting](./media/troubleshoot-sign-in-issues-for-admins/delete-sign-in-info-windows-store-app.png)
 1. Try signing in again.
 
 If the issue still exists, [contact support](#contact-support).
@@ -413,7 +413,7 @@ Run the domain troubleshooter:
 
 1. Select your custom domain name, and then click **Troubleshooting**.
 
-    ![Screenshot of clicking Troubleshooting](./media/troubleshoot-sign-in-issues-for-admins/click-troubleshoot.png)
+    ![Screenshot 1 of clicking Troubleshooting](./media/troubleshoot-sign-in-issues-for-admins/click-troubleshoot.png)
 1. If you discovered any network setup issues, resolve them, and then try signing in again.
 
 If this method doesn't solve the issue, go to the [Access to Office 365 on the web](#access-to-office-365-on-the-web) section.
@@ -460,7 +460,7 @@ Run the domain troubleshooter:
 1. Go to the Office 365 admin center and click **Domains**.
 1. Select your custom domain name, and then click **Troubleshooting**.
 
-    ![Screenshot of clicking Troubleshooting](./media/troubleshoot-sign-in-issues-for-admins/troubleshoot-option.png)
+    ![Screenshot 2 of clicking Troubleshooting](./media/troubleshoot-sign-in-issues-for-admins/troubleshoot-option.png)
 1. If you discovered any network setup issues, resolve them, and then try signing in again.
 
 If you discovered any network setup issues, resolve them, and then try signing in again.
@@ -482,7 +482,7 @@ Run the domain troubleshooter:
 1. Go to the Office 365 admin center and click **Domains**.
 1. Select your custom domain name, and then click **Troubleshooting**.
 
-    ![Screenshot of clicking Troubleshooting](./media/troubleshoot-sign-in-issues-for-admins/troubleshoot-option.png)
+    ![Screenshot 3 of clicking Troubleshooting](./media/troubleshoot-sign-in-issues-for-admins/troubleshoot-option.png)
 1. If you discovered any network setup issues, resolve them, and then try signing in again.
 
 If you discovered any network setup issues, resolve them, and then try signing in again.

@@ -34,7 +34,7 @@ Consider the following scenario:
 
 In this scenario, you can't remove the domain and you receive an error message that resembles the following message:
 
-    > Cannot remove the domain <Domain.com> because it is referenced by the proxy address template 'smtp:@alternativedomain.com'.
+> Cannot remove the domain <Domain.com> because it is referenced by the proxy address template `smtp:@alternativedomain.com`.
 
 > [!NOTE]
 > The Exchange System Manager is the management tool for Exchange 2000 Server and for Exchange Server 2003. The Exchange Management Console is the management tool for Exchange Server 2007 and for Exchange Server 2010.

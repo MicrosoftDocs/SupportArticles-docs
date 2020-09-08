@@ -62,7 +62,7 @@ To work around this issue, start Windows by using the **Selective Startup** opti
     1. Open **System Configuration**. To do this, press the Windows Key + R to open a **Run** dialog box. Type *msconfig*, and then click **OK**.
     2. Select **Selective startup**, and then clear the **Load system services** and **Load startup items** check boxes.
 
-       ![System Configuration Selective startup ](./media/office-not-start-safe-mode-windows/selective-startup-for-c2r-installation.png)
+       ![System Configuration Selective startup 1](./media/office-not-start-safe-mode-windows/selective-startup-for-c2r-installation.png)
 
     3. Click the **Services** tab.
     4. Select the **Microsoft Office ClickToRun Service** check box.
@@ -79,7 +79,7 @@ To work around this issue, start Windows by using the **Selective Startup** opti
     1. Open **System Configuration**. To do this, press the Windows Key + R to open a **Run** dialog box. Type *msconfig*, and then click **OK**.
     2. Select **Selective startup**, and then clear the **Load system services** and **Load startup items** check boxes.
 
-       ![System Configuration Selective startup ](./media/office-not-start-safe-mode-windows/selective-startup-for-msi-installation.png)
+       ![System Configuration Selective startup 2](./media/office-not-start-safe-mode-windows/selective-startup-for-msi-installation.png)
 
     3. Click **OK**.
     4. If you're prompted, click **Restart**.
