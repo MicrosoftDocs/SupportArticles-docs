@@ -34,7 +34,9 @@ When you try to sign in to or activate Microsoft 365 apps, you receive the follo
 > 
 > More information: <br />
 > https://wmv.microsoft.com/wamerrors
- 
+
+:::image type="content" source="media/error-135011-activate-m365-apps/error-135011-activate-m365-apps.png" alt-text="Something went wrong error. ":::
+
 ## Cause
 
 This issue can occur if the device was either deleted or disabled in Azure Active Directory (AD), and the action the action was not initiated from the device itself. 
