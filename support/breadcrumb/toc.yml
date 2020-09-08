@@ -7,6 +7,20 @@
     tocHref: /troubleshoot/
     topicHref: /troubleshoot/index
     items:
+    
+    - name: Windows
+      tocHref: /troubleshoot/windows/
+      topicHref: /troubleshoot/windows/
+      items:
+      - name: Windows Server
+        tocHref: /troubleshoot/windows-server/
+        topicHref: /troubleshoot/windows-server/welcome-windows-server
+      - name: Windows Client
+        tocHref: /troubleshoot/windows-client/
+        topicHref: /troubleshoot/windows-client/welcome-windows-client
+      - name: Windows Developer
+        tocHref: /troubleshoot/windows/win32
+        topicHref: /troubleshoot/windows/win32/welcome-windowsdeveloper    
 
     - name: Browsers
       tocHref: /troubleshoot/browsers/
