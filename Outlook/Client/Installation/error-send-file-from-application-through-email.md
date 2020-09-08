@@ -19,8 +19,6 @@ appliesto:
 ---
 # Error sending a file from an application when two versions of Outlook are installed
 
-This article helps fix errors that occur when you send a file from an application other than Microsoft Outlook through an email.
-
 _Original KB number:_ &nbsp; 2785945
 
 ## Symptoms

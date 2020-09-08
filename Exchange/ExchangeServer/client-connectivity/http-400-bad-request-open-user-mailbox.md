@@ -21,8 +21,6 @@ appliesto:
 ---
 # Error (HTTP 400 Bad Request) when you try to open another user's mailbox in Outlook Web App in an Exchange Server environment
 
-This article helps you resolve the problem that an error (HTTP 400 Bad Request) occurs when you open another user's mailbox in Outlook Web App in a Microsoft Exchange Server environment.
-
 _Original KB number:_ &nbsp; 2770796
 
 ## Symptoms

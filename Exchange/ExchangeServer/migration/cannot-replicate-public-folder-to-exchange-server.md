@@ -19,8 +19,6 @@ search.appverid: MET150
 ---
 # Cannot replicate public folder to Exchange Server 2013
 
-This article provides a resolution to solve the issue that you can't replicate public folder to Microsoft Exchange Server 2013.
-
 _Original KB number:_ &nbsp; 2866631
 
 ## Symptoms

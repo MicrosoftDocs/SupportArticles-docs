@@ -22,8 +22,6 @@ search.appverid: MET150
 ---
 # The Publish to WebDAV Server option is missing from the Calendar folder shortcut menu
 
-This article provides a solution to make sure the **Publish to WebDAV Server** option is available for sharing a Calendar folder in Microsoft Exchange Server.
-
 _Original KB number:_ &nbsp; 3034267
 
 ## Symptoms

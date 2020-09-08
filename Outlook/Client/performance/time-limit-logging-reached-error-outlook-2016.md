@@ -19,8 +19,6 @@ search.appverid: MET150
 ---
 # Error when starting Outlook 2016: The time limit for logging on was reached while waiting for system resources
 
-This article provides several workarounds for an issue in which Outlook 2016 displays a **The time limit for logging on was reached while waiting for system resources** error message.
-
 _Original KB number:_ &nbsp;3181206
 
 ## Symptoms

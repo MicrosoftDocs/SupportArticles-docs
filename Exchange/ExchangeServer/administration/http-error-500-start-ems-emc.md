@@ -18,8 +18,6 @@ appliesto:
 ---
 # HTTP server error status (500) when you try to start Exchange Management Shell or Exchange Management Console
 
-This article helps you resolve the problem that you receive HTTP error 500 when you start Exchange Management Shell (EMS) or Exchange Management Console (EMC) on a computer that is running Microsoft Exchange Server 2010.
-
 _Original KB number:_ &nbsp; 2027063
 
 ## Symptoms

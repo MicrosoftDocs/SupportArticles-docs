@@ -17,8 +17,6 @@ search.appverid: MET150
 ---
 # Outlook 2013 stops at the Loading Profile screen
 
-This article provides a temporary workaround and a long-term solution (recommended) for the issue that Outlook 2013 hangs or stops at the **Loading Profile** screen.
-
 _Original KB number:_ &nbsp; 2957336
 
 ## Symptoms

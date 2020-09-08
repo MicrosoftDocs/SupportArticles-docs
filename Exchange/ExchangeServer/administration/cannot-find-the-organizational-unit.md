@@ -18,8 +18,6 @@ appliesto:
 ---
 # Error when you manage a user in EAC: Can't find the organizational unit that you specified
 
-This article helps you resolve the problem that you can't manage users by using the Exchange Admin Center (EAC) if they belong to an organizational unit (OU) whose name includes a forward slash.
-
 _Original KB number:_ &nbsp; 3173169
 
 ## Symptoms

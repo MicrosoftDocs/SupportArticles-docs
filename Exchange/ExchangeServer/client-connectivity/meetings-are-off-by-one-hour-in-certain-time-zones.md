@@ -19,8 +19,6 @@ search.appverid: MET150
 ---
 # Meetings are off by one hour in certain time zones
 
-This article provides a workaround to solve the issue that the meeting sent from an iOS device has incorrect start time and time zone information in Microsoft Exchange Server 2010.
-
 _Original KB number:_ &nbsp; 3171495
 
 ## Symptoms

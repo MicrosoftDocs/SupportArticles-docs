@@ -19,8 +19,6 @@ search.appverid: MET150
 ---
 # Cumulative Update 20 shows in Programs and Features if installing Exchange Server 2013 Cumulative Update 22
 
-This article provides a workaround to solve the issue that an incorrect version is shown in **Programs and Features** in Control Panel after you install Microsoft Exchange Server 2013 Cumulative Update 22.
-
 _Original KB number:_ &nbsp; 4492759
 
 ## Symptoms

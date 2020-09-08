@@ -21,8 +21,6 @@ appliesto:
 ---
 # Newly created move request remains in queued status forever in Exchange Server 2013 or Exchange Server 2016
 
-This article provides a workaround for an issue where newly created move request remains in queued status forever in Microsoft Exchange Server 2013 or Exchange Server 2016.
-
 _Original KB number:_ &nbsp; 3016284
 
 ## Summary

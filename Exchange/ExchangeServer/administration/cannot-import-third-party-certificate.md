@@ -18,8 +18,6 @@ search.appverid: MET150
 ---
 # Certificate status could not be determined because revocation check failed when importing third-party certificate
 
-This article provides a solution for the **The certificate status could not be determined because the revocation check failed** error that occurs when you try to import a valid third-party certificate into Microsoft Exchange Server 2010.
-
 _Original KB number:_ &nbsp; 979694
 
 ## Symptoms

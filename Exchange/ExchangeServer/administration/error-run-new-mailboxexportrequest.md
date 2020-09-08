@@ -17,8 +17,6 @@ appliesto:
 ---
 # Error when you run the New-MailboxExportRequest cmdlet in Exchange Server 2010 SP1 or SP2: Couldn't find the Enterprise Organization container
 
-This article helps you resolve the problem that an error (Couldn't find the Enterprise Organization container) occurs when you run the `New-MailboxExportRequest` cmdlet in Microsoft Exchange Server.
-
 _Original KB number:_ &nbsp; 2737545
 
 ## Symptoms

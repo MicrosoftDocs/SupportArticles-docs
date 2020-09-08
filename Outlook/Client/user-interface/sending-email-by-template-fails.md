@@ -21,8 +21,6 @@ appliesto:
 ---
 # Email messages aren't sent when you use a template file in Outlook 2010
 
-This article provides workarounds for an issue where email messages that you send by using an Outlook Template file (.oft) aren't always be received by the recipient.
-
 _Original KB number:_ &nbsp; 3154038
 
 ## Symptoms

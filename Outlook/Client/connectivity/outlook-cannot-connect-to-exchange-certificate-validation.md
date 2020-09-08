@@ -20,8 +20,6 @@ appliesto:
 ---
 # Outlook can't connect to an Exchange server that uses certificate validation on a network device
 
-This article helps you resolve the Microsoft Outlook clients connection failures that happen after you configure a network device to require certificate validation between Outlook and Exchange Server.
-
 _Original KB number:_ &nbsp; 4488049
 
 ## Symptoms

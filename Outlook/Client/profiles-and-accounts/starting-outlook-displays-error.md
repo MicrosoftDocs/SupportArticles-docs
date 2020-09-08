@@ -20,8 +20,6 @@ appliesto:
 ---
 # Starting Outlook displays error: This information service is not installed on your computer
 
-This article helps you resolve the problem that Microsoft Outlook fails to start.
-
 _Original KB number:_ &nbsp; 2772566
 
 ## Symptoms

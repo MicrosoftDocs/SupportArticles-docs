@@ -18,8 +18,6 @@ search.appverid: MET150
 ---
 # Attachments intermittently dropped during IMAIL conversion
 
-This article provides a resolution to solve the issue that email messages that contain attachments are intermittently dropped during IMAIL conversion.
-
 _Original KB number:_ &nbsp; 2249287
 
 ## Symptoms

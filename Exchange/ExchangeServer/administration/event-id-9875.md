@@ -17,8 +17,6 @@ search.appverid: MET150
 ---
 # Event ID 9875 source MSExchangeIS Mailbox Store error
 
-This article provides a solution to solve the Event ID 9875 that is logged in Microsoft Exchange Server 2010 Service Pack 3 (SP3).
-
 _Original KB number:_ &nbsp; 3033272
 
 ## Symptoms
