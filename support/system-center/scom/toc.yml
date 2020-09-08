@@ -22,8 +22,14 @@
     href: apm-feature-causes-iis-application-pool-crash.md
   - name: The state of a new agent is Not monitored
     href: new-client-agent-not-monitored-state.md
+  - name: Troubleshoot agent connectivity issues
+    href: troubleshoot-agent-connectivity-issues.md
+  - name: Troubleshoot client agent installation issues
+    href: troubleshoot-client-agent-installation-issues.md
   - name: Troubleshoot gray agent states
     href: troubleshoot-gray-agent-states.md
+  - name: Troubleshoot SQL Server database discovery
+    href: troubleshoot-sql-database-discovery.md
   - name: Troubleshoot UNIX/Linux agent discovery
     href: troubleshoot-unix-linux-agent-discovery.md
 - name: AVIcode
