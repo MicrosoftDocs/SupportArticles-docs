@@ -18,8 +18,6 @@ search.appverid: MET150
 ---
 # Exchange 2010 Setup of Mailbox role fails with the name reference is invalid error
 
-This article provides a resolution for **The name reference is invalid** error that occurs when you try to install the Mailbox role on Microsoft Exchange Server 2010.
-
 _Original KB number:_ &nbsp; 2479802
 
 ## Symptoms

@@ -18,8 +18,6 @@ appliesto:
 ---
 # Error when you try to move a mailbox in Exchange Server 2016: The migration mailbox for the organization is either missing or invalid
 
-This article provides a solution to an issue where moving a mailbox by using the `New-MigrationBatch` cmdlet fails.
-
 _Original KB number:_ &nbsp; 2812509
 
 ## Symptoms

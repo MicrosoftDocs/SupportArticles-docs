@@ -20,8 +20,6 @@ appliesto:
 ---
 # Event 7009 when users try to send or receive email in Exchange Server 2013 or Exchange Server 2016
 
-This article helps to resolve an issue where sending or receiving email messages in a Microsoft Exchange Server environment fails.
-
 _Original KB number:_ &nbsp; 2866822
 
 ## Symptoms

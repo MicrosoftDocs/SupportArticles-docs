@@ -21,8 +21,6 @@ search.appverid: MET150
 ---
 # User can't sign in or sees the wrong interface after a mailbox move
 
-This article provides workarounds to solve the issue that a user can't sign in to Outlook Web App (OWA) or Outlook on the web or sees the wrong interface after you move a user mailbox from Microsoft Exchange Server 2010 to Exchange Server 2013 or Exchange Server 2016.
-
 _Original KB number:_ &nbsp; 3127342
 
 ## Symptoms

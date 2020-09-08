@@ -18,8 +18,6 @@ appliesto:
 ---
 # You may experience Outlook 2010 connection delays or failures when Outlook 2010 is configured to connect to two Office 365 accounts
 
-This article helps you resolve the problem that connection delays or failures occur when Microsoft Outlook 2010 is configured to connect to two or more Office 365 accounts.
-
 _Original KB number:_ &nbsp; 2675986
 
 ## Symptoms

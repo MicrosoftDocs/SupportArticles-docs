@@ -19,8 +19,6 @@ appliesto:
 ---
 # ActiveSync clients cannot connect or synchronizing is delayed in an Exchange Server environment
 
-This article helps you resolve the problem that Exchange ActiveSync clients can't connect or they experience delays when synchronizing in a Microsoft Exchange Server environment.
-
 _Original KB number:_ &nbsp; 4456227, 4337638
 
 ## Symptoms

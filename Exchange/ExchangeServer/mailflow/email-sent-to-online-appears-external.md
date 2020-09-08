@@ -20,8 +20,6 @@ appliesto:
 ---
 # Emails sent from on-premises to Exchange Online appears to be external after running HCW
 
-This article provides solutions to an issue where emails sent from on-premises to Microsoft Exchange Online appears to be external after You run the Hybrid Configuration Wizard in an Exchange Server environment.
-
 _Original KB number:_ &nbsp; 4052493
 
 ## Symptoms

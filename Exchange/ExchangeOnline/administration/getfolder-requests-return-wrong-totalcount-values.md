@@ -18,8 +18,6 @@ search.appverid: MET150
 ---
 # GetFolder requests for Public Folder mailbox hosted in Exchange Online return wrong TotalCount value
 
-This article provides a workaround to correct the `TotalCount` value that's returned from a [GetFolder](/exchange/client-developer/web-service-reference/getfolder) request in Microsoft 365 Exchange Online.
-
 _Original KB number:_ &nbsp; 4490420
 
 ## Symptoms

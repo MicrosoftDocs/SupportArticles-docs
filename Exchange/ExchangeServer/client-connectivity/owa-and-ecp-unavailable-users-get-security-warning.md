@@ -17,8 +17,6 @@ search.appverid: MET150
 ---
 # Users get a security warning when trying to connect OWA and ECP
 
-This article provides a resolution for the issue that users can't connect to Microsoft Outlook on the Web (OWA) or Exchange Control Panel (ECP).
-
 _Original KB number:_ &nbsp; 4469384
 
 ## Symptom

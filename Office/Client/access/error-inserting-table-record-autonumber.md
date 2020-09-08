@@ -27,8 +27,6 @@ search.appverid: MET150
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
-This article fixes an issue in which you receive an error message when you insert a new record in a table that contains an **Autonumber** field.
-
 _Original KB number:_ &nbsp; 884185
 
 ## Symptoms

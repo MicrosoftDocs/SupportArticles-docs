@@ -18,8 +18,6 @@ search.appverid: MET150
 ---
 # Error when you run StartDagServerMaintenance.ps1 script in Exchange Server 2010
 
-This article resolves a Microsoft Exchange Server 2010 issue that blocks you from running the `StartDagServerMaintenance.ps1` script to take a database availability group member out of service for maintenance.
-
 _Original KB number:_ &nbsp;3058960
 
 ## Symptoms

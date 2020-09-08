@@ -24,8 +24,6 @@ appliesto:
 ---
 # Outlook error indicates that you are over the Junk E-mail list limit
 
-This article helps you resolve the problems that you get an error (Cannot add to the server Junk E-mail Lists, you are over the size allowed on the server) when you configure your junk email settings.
-
 _Original KB number:_ &nbsp; 2669081
 
 ## Symptoms

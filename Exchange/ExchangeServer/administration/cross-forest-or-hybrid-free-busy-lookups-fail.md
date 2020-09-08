@@ -23,8 +23,6 @@ search.appverid: MET150
 ---
 # Cross-forest or Hybrid free/busy availability lookups fail in Exchange Server
 
-This article provides a solution for the issue that you can't do cross-forest or Hybrid free/busy availability lookups in Microsoft Exchange Server.
-
 _Original KB number:_ &nbsp; 2734791
 
 ## Symptoms

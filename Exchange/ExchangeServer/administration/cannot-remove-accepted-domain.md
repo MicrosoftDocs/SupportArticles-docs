@@ -18,8 +18,6 @@ appliesto:
 ---
 # Error (Cannot remove the domain) when you remove an accepted domain in Exchange Server 2007 or in Exchange Server 2010
 
-This article helps you resolve the problem that an error (Cannot remove the domain) occurs when you remove an accepted domain in Microsoft Exchange Server.
-
 _Original KB number:_ &nbsp; 2741195
 
 ## Symptoms

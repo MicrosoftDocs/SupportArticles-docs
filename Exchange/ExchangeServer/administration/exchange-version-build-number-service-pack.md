@@ -19,8 +19,6 @@ appliesto:
 ---
 # How to determine the version number, the build number, and the service pack level of Exchange Server
 
-To determine the version number, the build number, and the service pack level of Microsoft Exchange Server, check the properties of the server.
-
 _Original KB number:_ &nbsp; 152439
 
 ## View server properties for Exchange Server 2010 or 2007

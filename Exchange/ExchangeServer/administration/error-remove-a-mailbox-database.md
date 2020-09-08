@@ -18,8 +18,6 @@ appliesto:
 ---
 # Error when you try to remove a mailbox database in Exchange Server 2016
 
-This article helps you resolve the problem that you still can't remove a mailbox database even if you've already moved or disabled all users, public folders, and arbitration mailboxes.
-
 _Original KB number:_ &nbsp; 3093175
 
 ## Symptoms

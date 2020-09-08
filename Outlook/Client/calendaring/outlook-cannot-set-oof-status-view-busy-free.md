@@ -19,8 +19,6 @@ appliesto:
 ---
 # Outlook clients may be unable to set OOF status or view Free busy in an Exchange Server 2013 coexistence environment
 
-This article helps you resolve the problem that Microsoft Outlook clients are unable to set out of office (OOF) or view free or busy information in an Exchange coexistence environment.
-
 _Original KB number:_ &nbsp; 2956962
 
 ## Symptoms

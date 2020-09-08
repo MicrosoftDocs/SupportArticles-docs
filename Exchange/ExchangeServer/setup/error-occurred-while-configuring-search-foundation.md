@@ -19,8 +19,6 @@ appliesto:
 ---
 # Error when you install Exchange Server 2013 CU1 or CU2: Error occurred while configuring Search Foundation
 
-This article provides a solution to an issue where you can't install Microsoft Exchange Server 2013 Cumulative Update 1 (KB2816900) or Cumulative Update 2 (KB2859928) for a Mailbox-role server successfully.
-
 _Original KB number:_ &nbsp; 2889663
 
 ## Symptoms  

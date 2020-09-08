@@ -19,8 +19,6 @@ search.appverid: MET150
 ---
 # You'll need a new app to open this osf-roaming.16 message when starting Outlook 2016
 
-This article provides a resolution to solve the **You'll need a new app to open this osf-roaming.16** message that occurs when you try to start Microsoft Outlook 2016.
-
 _Original KB number:_ &nbsp; 4230296
 
 ## Symptoms

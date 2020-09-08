@@ -29,8 +29,6 @@ appliesto:
 ---
 # Office applications don't start when Windows is running in safe mode
 
-This article provides a workaround for an issue where Microsoft Office applications don't start when Windows is running in safe mode.
-
 _Original KB number:_ &nbsp; 3140179
 
 ## Symptoms

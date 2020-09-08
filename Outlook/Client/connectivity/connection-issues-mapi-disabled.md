@@ -20,8 +20,6 @@ appliesto:
 ---
 # Connection issues between Outlook and Exchange when MAPI is disabled for a user
 
-This article helps resolve the connection issues between Microsoft Outlook and Exchange Server that occur when Messaging Application Programming Interface (MAPI) is disabled for a user.
-
 _Original KB number:_ &nbsp; 2996728
 
 ## Symptoms

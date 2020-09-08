@@ -20,8 +20,6 @@ appliesto:
 ---
 # The Send button is missing from a delayed delivery message in Outlook
 
-This article provides a solution to issues that occur when you connect to a Microsoft Exchange Server 2013 mailbox by using an Online Mode Outlook profile.
-
 _Original KB number:_ &nbsp; 3009042
 
 ## Symptoms

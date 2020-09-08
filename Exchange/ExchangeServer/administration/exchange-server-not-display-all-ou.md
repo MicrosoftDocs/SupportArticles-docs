@@ -22,8 +22,6 @@ appliesto:
 ---
 # Exchange Server doesn't display all OUs when it creates a new mailbox
 
-This article helps you resolve the problem that the complete list of organizational units (OUs) isn't displayed when you create a new mailbox together with a new user account in Microsoft Exchange Server.
-
 _Original KB number:_ &nbsp; 3038717
 
 ## Symptoms

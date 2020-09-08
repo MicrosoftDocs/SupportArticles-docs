@@ -20,8 +20,6 @@ search.appverid: MET150
 ---
 # Users cannot connect to POP3 or IMAP4
 
-This article provides a solution for the issue that the connections to POP3 or IMAP4 stop working in Microsoft Exchange Server 2016 and Exchange Server 2013.
-
 _Original KB number:_ &nbsp; 3025138
 
 ## Symptom 1

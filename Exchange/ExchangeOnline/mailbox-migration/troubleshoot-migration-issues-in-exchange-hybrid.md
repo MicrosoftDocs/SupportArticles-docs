@@ -18,12 +18,12 @@ search.appverid: MET150
 ---
 # Troubleshoot migration issues in Exchange Server hybrid environment
 
+_Original KB number:_ &nbsp; 10094
+
 This article troubleshoots the following issues:
 
 - Problem moving a mailbox from an on-premises Exchange Server environment to Exchange Online (On-Boarding).
 - Problem moving a mailbox back on-premises from Exchange Online (Off-boarding).
-
-_Original KB number:_ &nbsp; 10094
 
 **Who is it for?**
 

@@ -17,8 +17,6 @@ appliesto:
 ---
 # Troubleshoot Skype for Business Online sign-in issues for admins
 
-This article diagnoses and resolves Skype for Business Online sign-in issues for Microsoft Office 365 administrators who help diagnose Skype for Business sign-in issues for their users. If you're an Office 365 user, see [Troubleshooting Skype for Business Online sign-in for users](https://support.microsoft.com/help/10054).
-
 _Original KB number:_ &nbsp; 10133
 
 This article will begin by asking you questions about your installation and the symptoms you're experiencing. Then we'll take you through a series of troubleshooting steps and configuration checks that are specific to your situation.

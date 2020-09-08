@@ -16,8 +16,6 @@ search.appverid: MET150
 ---
 # How to join a Microsoft Teams meeting
 
-This article provides all the details you need to join a Microsoft Teams meeting, plus in-context troubleshooting tips.
-
 _Original KB number:_ &nbsp; 10055
 
 ## Summary
