@@ -12,7 +12,7 @@ ms.topic: article
 ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
-- Outlook for Office 365
+- Outlook for Microsoft 365
 - Outlook 2016
 - Outlook 2013
 ---
@@ -21,7 +21,7 @@ appliesto:
 
 ## Symptoms
 
-In Microsoft Outlook for Office 365, Outlook 2016, or Outlook 2013, you experience the following symptoms:
+In Outlook for Microsoft 365, Microsoft Outlook 2016, or Outlook 2013, you experience the following symptoms:
 
 - New email messages are not received.   
 - When you send an email message, it is not sent and remains in the Outbox.   
@@ -54,9 +54,9 @@ For more information about update channels for Office 365 clients, see [Version
 
 ## Workaround
 
-### For Outlook for Office 365
+### For Outlook for Microsoft 365
 
-If you are running Outlook for Office 365, the issue may be caused by registry keys under:
+If you are running Outlook for Microsoft 365, the issue may be caused by registry keys under:
 
 `HKLM\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\SecurityManager\CapAuthz\ApplicationsEx`
 
