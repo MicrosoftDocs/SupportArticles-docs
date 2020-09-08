@@ -19,8 +19,6 @@ appliesto:
 ---
 # The modern attachment feature doesn't work when web proxy used in Exchange Server 2016
 
-This article helps you resolve the problem that the modern attachment feature doesn't work after you set the `InternetWebProxy` property.
-
 _Original KB number:_ &nbsp; 4056953
 
 ## Symptoms

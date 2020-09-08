@@ -24,8 +24,6 @@ appliesto:
 ---
 # Error (1007 AccessDenied) when you try to delete the federation trust in an Exchange organization
 
-This article helps you resolve the problem that you can't delete the federation trust in an Exchange organization.
-
 _Original KB number:_ &nbsp; 3215278
 
 ## Symptoms

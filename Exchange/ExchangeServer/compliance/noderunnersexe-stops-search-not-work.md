@@ -18,8 +18,6 @@ search.appverid: MET150
 ---
 # Search doesn't work in Exchange Server 2013 when the NodeRunner.exe process stops
 
-This article describes an issue that's caused by the [NodeRunner.exe process](#about-the-noderunnerexe-process). To fix this issue, follow the [steps](#resolution) in the "Resolution" section.
-
 _Original KB number:_ &nbsp;3094698
 
 ## Symptoms

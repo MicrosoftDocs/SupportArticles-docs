@@ -21,8 +21,6 @@ appliesto:
 ---
 # Error (The connection to the specified remote host was refused) when you try to start Exchange Management Shell or Exchange Management Console
 
-This article helps you resolve the problem that you can't start Exchange Management Shell (EMS) or Exchange Management Console (EMC) on a computer that is running Microsoft Exchange Server.
-
 _Original KB number:_ &nbsp; 2027064
 
 ## Symptoms

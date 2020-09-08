@@ -19,8 +19,6 @@ appliesto:
 ---
 # Mailboxes are quarantined and databases fail over unexpectedly in Exchange Server 2013
 
-This article helps you resolve the problem that mailboxes are quarantined unexpectedly and the database is dismounted in a Microsoft Exchange Server 2013 environment.
-
 _Original KB number:_ &nbsp; 3095369
 
 ## Symptoms

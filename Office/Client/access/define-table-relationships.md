@@ -24,8 +24,6 @@ search.appverid: MET150
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
-This article describes table relationships and how to define relationships in a Microsoft Access database.
-
 _Original KB number:_ &nbsp; 304466
 
 > [!NOTE]

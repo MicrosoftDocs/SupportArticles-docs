@@ -27,8 +27,6 @@ search.appverid: MET150
 ---
 # You can't create multiple System.Management.Automation runspaces in a web app for two or more different users
 
-This article provides a workaround to solve the issue that you can't create multiple System.Management.Automation runspaces in a web application for multiple users in Microsoft Exchange Server.
-
 _Original KB number:_ &nbsp; 3115600
 
 ## Symptoms

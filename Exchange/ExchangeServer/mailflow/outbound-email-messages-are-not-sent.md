@@ -22,8 +22,6 @@ search.appverid: MET150
 ---
 # Outbound email messages are not sent on the Exchange Hub Transport or Edge server
 
-This article provides a resolution for the issue that outbound email messages that are directed at recipients outside your organization are queued and not sent on the Hub Transport server or the Edge server in Microsoft Exchange Server 2016, Exchange Server 2013, or Exchange Server 2010.
-
 _Original KB number:_ &nbsp; 4051498
 
 ## Symptoms

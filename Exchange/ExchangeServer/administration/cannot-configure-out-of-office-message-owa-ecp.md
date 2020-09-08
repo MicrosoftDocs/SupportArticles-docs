@@ -19,8 +19,6 @@ appliesto:
 ---
 # Users receive an error (object couldn't be found) and can't configure Out of Office messages in Outlook Web App or Exchange Control Panel
 
-This article helps you resolve the problem that Active Directory users can't configure an Out of Office (OOF) message from Outlook Web App or the Exchange Control Panel (ECP) when the user accounts are located in a different AD domain than the AD domain in which Microsoft Exchange Server is installed.
-
 _Original KB number:_ &nbsp; 3124055
 
 ## Symptoms

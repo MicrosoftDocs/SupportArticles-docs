@@ -21,8 +21,6 @@ appliesto:
 ---
 # Can't access the calendar in Outlook Web App in an Exchange Server environment
 
-This article helps you resolve the problem that you receive an error when you access the calendar in Microsoft Outlook Web App in an Exchange Server environment.
-
 _Original KB number:_ &nbsp; 2780262
 
 ## Symptoms

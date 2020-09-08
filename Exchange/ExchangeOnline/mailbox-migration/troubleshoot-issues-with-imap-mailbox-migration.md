@@ -18,8 +18,6 @@ search.appverid: MET150
 ---
 # Troubleshooting issues with IMAP mailbox migration
 
-This article resolves issues that may occur when migrating a mailbox from an on-premises or third-party IMAP system to Exchange Online.
-
 _Original KB number:_ &nbsp; 10062
 
 **Who is it for?**

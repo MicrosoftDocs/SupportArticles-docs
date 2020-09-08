@@ -18,8 +18,6 @@ appliesto:
 ---
 # Event ID 4999 is logged and MSExchangeServicesAppPool crashes in Exchange Server 2013
 
-This article helps you resolve the problem that MSExchangeServicesAppPool crashes frequently in a Microsoft Exchange Server 2013 environment.
-
 _Original KB number:_ &nbsp; 3145482
 
 ## Symptoms

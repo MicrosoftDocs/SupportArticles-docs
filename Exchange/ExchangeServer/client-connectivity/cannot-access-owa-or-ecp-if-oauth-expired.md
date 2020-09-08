@@ -20,8 +20,6 @@ search.appverid: MET150
 ---
 # Can't sign in to Outlook on the web or EAC if Exchange Server OAuth certificate is expired
 
-This article provides a resolution for the issue that you can't sign in to [Outlook on the web](/exchange/clients/outlook-on-the-web/outlook-on-the-web?view=exchserver-2019) (formerly known as Outlook Web App) or the [Exchange admin center](/exchange/architecture/client-access/exchange-admin-center?view=exchserver-2019) (EAC) in Microsoft Exchange Server if the OAuth certificate is expired.
-
 _Original KB number:_ &nbsp; 2617816
 
 ## Symptoms

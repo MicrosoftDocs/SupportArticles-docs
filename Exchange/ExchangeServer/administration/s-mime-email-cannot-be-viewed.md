@@ -17,8 +17,6 @@ search.appverid: MET150
 ---
 # A recipient cannot view an email message that is encoded by using S/MIME
 
-This article provides a solution for the issue that an email message that is encoded by using S/MIME cannot be viewed by a recipient in Microsoft Exchange Server 2010 Service Pack 2 (SP2).
-
 _Original KB number:_ &nbsp; 2621062
 
 ## Symptoms

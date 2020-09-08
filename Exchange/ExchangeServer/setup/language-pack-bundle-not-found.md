@@ -18,8 +18,6 @@ appliesto:
 ---
 # Error when you try to install Exchange Server 2013 in RecoverServer mode
 
-This article provides a solution to an issue where installing Microsoft Exchange Server 2013 in RecoverServer mode fails.
-
 _Original KB number:_ &nbsp; 3069005
 
 ## Symptoms

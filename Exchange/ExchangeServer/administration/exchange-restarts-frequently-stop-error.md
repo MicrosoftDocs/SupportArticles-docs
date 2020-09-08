@@ -20,8 +20,6 @@ search.appverid: MET150
 ---
 # Responder ServiceHealthMSExchangeReplForceReboot causes Exchange Server to restart with Stop Error
 
-This article provides a solution for the issue that Microsoft Exchange Server 2016 or Exchange Server 2013 restarts frequently.
-
 _Original KB number:_ &nbsp; 2969070
 
 ## Symptoms

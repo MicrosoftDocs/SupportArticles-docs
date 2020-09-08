@@ -19,8 +19,6 @@ search.appverid: MET150
 ---
 # Test-OwaConnectivity and Test-EcpConnectivity cmdlet tests fail in external mode
 
-This article provides a workaround to solve the issue that the [Test-OwaConnectivity](/powershell/module/exchange/test-owaconnectivity) and [Test-EcpConnectivity](/powershell/module/exchange/test-ecpconnectivity) cmdlet tests fail in external mode when a Microsoft Exchange Server 2013 server acts as a front door for Exchange Server 2010 servers.
-
 _Original KB number:_ &nbsp; 2814954
 
 ## Symptoms
