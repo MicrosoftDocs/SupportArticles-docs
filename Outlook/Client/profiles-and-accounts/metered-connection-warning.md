@@ -21,13 +21,13 @@ appliesto:
 
 ## Symptoms
 
-In Microsoft Outlook for Office 365, Outlook 2016 or Outlook 2013, you experience the following symptoms:
+In Microsoft Outlook for Office 365, Outlook 2016, or Outlook 2013, you experience the following symptoms:
 
 - New email messages are not received.   
 - When you send an email message, it is not sent and remains in the Outbox.   
 - When you try to configure a new Outlook profile with an IMAP account, you receive the following error message:
 
-    **Internal MAPI error: The profile does not contain the requested service. Contact your administrator.**
+    > Internal MAPI error: The profile does not contain the requested service. Contact your administrator.
 
 - When you click **File** in Outlook, the following warning messages are displayed:
 
@@ -60,20 +60,20 @@ If you are running Outlook for Office 365, the issue may be caused by registry k
 
 `HKLM\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\SecurityManager\CapAuthz\ApplicationsEx`
 
-To work around this issue, delete the **SecurityManager** registry key and its subkeys.
+To work around this issue, delete the **SecurityManager** key and its subkeys in registry.
 
 > [!IMPORTANT]
-> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, back up the registry for restoration in case problems occur.
+> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry](https://support.microsoft.com/help/322756) for restoration in case problems occur.
 
 1. Exit Outlook.
 2. Start **Registry Editor**. To do this, use one of the following procedures, as appropriate for your version of Windows:   
    - **Windows 10, Windows 8.1 and Windows 8**: Press Windows Key + R to open a **Run** dialog box. Type **regedit.exe** and then select **OK**.   
    - **Windows 7**: Select **Start**, type **regedit.exe** in the search box, and then press **Enter**.
-3. In Registry Editor, locate and right-click the following subkey in the registry.
+3. In Registry Editor, locate the following subkey in the registry.
 
     `HKLM\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\SecurityManager\CapAuthz\ApplicationsEx`
 
-4. Right-click On **SecurityManager** key, and then select **Permissions**.
+4. Right-click on **SecurityManager** key, and then select **Permissions**.
 5. Select **Advanced**, then select the checkbox **Replace all child object permission entries with inheritable permission entries from this object**.
 6. Select **OK**.
 7. You will get a prompt that says "**This will replace explicitly defined permissions on all descendants of this object with inheritable permissions from \<parent key>.  Do you wish to continue?**", select **Yes**.
