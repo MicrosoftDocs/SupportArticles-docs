@@ -1,4 +1,4 @@
-- name: Welcome
+- name: Windows server
   href: welcome-windows-server.md
 
 - name: Active Directory

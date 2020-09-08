@@ -1,4 +1,4 @@
-- name: Welcome
+- name: Windows client
   href: welcome-windows-client.md
 
 - name: Admin Development
@@ -210,9 +210,6 @@
       href: ./printing/two-sided-printing-cannot-be-set.md
     - name: Error 0x00000709 when using CNAME record
       href: ./printing/error-0x00000709-use-cname-record.md
-
-- name: Printing
-  items:
     - name: Error 0x00000709 when using CNAME record
       href: ./printing/error-0x00000709-use-cname-record.md
 
