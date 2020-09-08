@@ -6,10 +6,10 @@ ms.data: 09/08/2020
 ---
 # Windows client troubleshooting
 
-This library provides the core content that IT pros need to troubleshoot and support the devices running the Windows client operating systems in a server environment. 
-The content in this library is authored by a writing team who works directly with Windows product group and support professionals in an effort to bring you the most technically accurate content.
+This library provides solutions enabling IT pros to troubleshoot and support devices running Windows client operating systems in a server environment. 
+To bring you the most accurate content, this library is managed by a team who works directly with the Windows product group and support professionals. 
 
-To find the information you need, browse the content listed below, or use our search feature.
+Browse the content listed below or use the search feature.
 
 ## In this library
 - Admin Development
