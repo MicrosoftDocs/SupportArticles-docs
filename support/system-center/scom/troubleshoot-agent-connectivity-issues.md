@@ -29,7 +29,7 @@ To determine whether the service is running, follow these steps:
 
 ## Check antivirus exclusions
 
-If the Health Service is up and running, the next thing is to confirm that antivirus exclusions are properly configured. For the latest information about recommended antivirus exclusions for Operations Manager, see [Recommendations for antivirus exclusions that relate to Operations Manager](../system-center/scom/antivirus-exclusions-recommendations.md)).
+If the Health Service is up and running, the next thing is to confirm that antivirus exclusions are properly configured. For the latest information about recommended antivirus exclusions for Operations Manager, see [Recommendations for antivirus exclusions that relate to Operations Manager](antivirus-exclusions-recommendations.md)).
 
 ## Check network issues
 
