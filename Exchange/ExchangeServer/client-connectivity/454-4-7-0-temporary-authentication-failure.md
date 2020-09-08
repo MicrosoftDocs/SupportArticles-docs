@@ -23,8 +23,6 @@ search.appverid: MET150
 ---
 # 454 4.7.0 Temporary authentication failure in Exchange Server
 
-This article provides a solution for the issue that you receive the **454 4.7.0 Temporary authentication failure** error when some e-mail messages are stuck in a remote delivery queue in Microsoft Exchange Server.
-
 _Original KB number:_ &nbsp; 979174
 
 ## Symptoms

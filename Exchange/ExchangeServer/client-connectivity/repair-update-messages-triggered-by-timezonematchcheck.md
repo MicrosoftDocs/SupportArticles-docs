@@ -24,8 +24,6 @@ search.appverid: MET150
 ---
 # Repair update messages are triggered by TimeZoneMatchCheck failures in Exchange Server
 
-This article provides more information about the repair update messages that occur on an iOS 8.*x* or iOS 7.*x* device in Microsoft Exchange Server 2016, 2013, or 2010.
-
 _Original KB number:_ &nbsp; 3019798
 
 ## Symptoms

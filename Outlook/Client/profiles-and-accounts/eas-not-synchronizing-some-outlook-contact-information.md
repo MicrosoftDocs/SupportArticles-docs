@@ -18,8 +18,6 @@ search.appverid: MET150
 ---
 # Exchange ActiveSync does not synchronize some Outlook contact information as expected
 
-This article describes a by design behavior that Microsoft Exchange ActiveSync (EAS) does not synchronize some Microsoft Outlook contact information as expected.
-
 _Original KB number:_ &nbsp; 2692134
 
 ## Symptoms

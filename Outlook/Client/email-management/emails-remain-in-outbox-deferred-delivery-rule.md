@@ -24,8 +24,6 @@ appliesto:
 ---
 # Email messages remain in the Outbox because of Deferred Delivery rule
 
-This article provides a solution to an issue where email messages remain in the Outbox folder for at least one minute before it's sent.
-
 _Original KB number:_ &nbsp; 2894412
 
 ## Symptoms

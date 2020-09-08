@@ -19,8 +19,6 @@ appliesto:
 ---
 # Event ID 27 when sending attachments outside of Outlook fails
 
-This article provides a solution to an issue where sending attachments outside of Microsoft Outlook fails.
-
 _Original KB number:_ &nbsp; 3007812
 
 ## Symptoms

@@ -18,8 +18,6 @@ search.appverid: MET150
 ---
 # Cannot reset the value of the Local replica age limit (days) setting to 0 or to NULL
 
-This article provides two workarounds for you to solve the issue that you can't reset the value of the Local replica age limit (days) setting to **0** or to **NULL** in Microsoft Exchange Server 2010.
-
 _Original KB number:_ &nbsp; 2734536
 
 ## Symptoms

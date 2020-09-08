@@ -18,8 +18,6 @@ appliesto:
 ---
 # Inbox rule to forward messages doesn't work in Office 365
 
-This article provides a workaround for an issue where the Inbox rule to forward messages doesn't work for a Microsoft Office 365 account.
-
 _Original KB number:_ &nbsp; 4021948
 
 ## Symptoms

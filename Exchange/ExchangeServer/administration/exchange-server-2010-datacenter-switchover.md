@@ -18,8 +18,6 @@ search.appverid: MET150
 ---
 # Exchange Server 2010 datacenter switchover
 
-This article explains how to switchover a database availability group (DAG) across datacenters in Exchange Server 2010.
-
 _Original KB number:_ &nbsp; 10086
 
 **Who is it for?**

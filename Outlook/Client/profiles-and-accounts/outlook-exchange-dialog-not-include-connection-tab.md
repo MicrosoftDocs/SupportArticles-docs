@@ -18,8 +18,6 @@ appliesto:
 ---
 # Microsoft Exchange dialog doesn't include a Connection tab in Outlook 2013
 
-This article helps you resolve the problem that Microsoft Exchange dialog box doesn't include a Connection tab in Outlook 2013.
-
 _Original KB number:_ &nbsp; 3000090
 
 ## Symptoms

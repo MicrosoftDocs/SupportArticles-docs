@@ -17,8 +17,6 @@ search.appverid: MET150
 ---
 # Free/busy lookups fail from Exchange Online to on-premises in a hybrid deployment
 
-This article provides a solution for the issue that free/busy lookups fail from a mailbox in Microsoft Exchange Online to an on-premises mailbox.
-
 _Original KB number:_ &nbsp; 4456110
 
 ## Symptoms

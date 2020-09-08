@@ -19,8 +19,6 @@ search.appverid: MET150
 ---
 # Exchange Servers and Exchange Trusted Subsystem groups unexpectedly have the debug programs user right
 
-This article provides a workaround for the issue that the debug programs user right is unexpectedly granted for the Exchange Servers and Exchange Trusted Subsystem groups in Microsoft Exchange Server 2016.
-
 _Original KB number:_ &nbsp; 4055597
 
 ## Symptoms

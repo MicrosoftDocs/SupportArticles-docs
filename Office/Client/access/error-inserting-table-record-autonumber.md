@@ -27,8 +27,6 @@ search.appverid: MET150
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
-This article fixes an issue in which you receive an error message when you insert a new record in a table that contains an **Autonumber** field.
-
 _Original KB number:_ &nbsp; 884185
 
 ## Symptoms
@@ -37,7 +35,7 @@ When you try to insert a new record in a table that has an **Autonumber** field,
 
 > The changes you requested to the table were not successful because they would create duplicate values in the index, primary key, or relationship. Change the data in the field or fields that contain duplicate data, remove the index, or redefine the index to permit duplicate entries and try again.
 
-:::image type="content" source="./media/error-inserting-table-record-autonumber/autonumber-error.png" alt-text="autonumber-error" border="false":::
+:::image type="content" source="./media/error-inserting-table-record-autonumber/autonumber-error.png" alt-text="image of autonumber error" border="false":::
 
 > [!NOTE]
 > The table may not have any relationships or any indexes.

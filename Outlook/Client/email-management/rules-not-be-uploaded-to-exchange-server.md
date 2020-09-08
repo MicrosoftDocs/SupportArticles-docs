@@ -23,8 +23,6 @@ appliesto:
 ---
 # Some rules are disabled, and you receive an error message when you try to create or enable rules in Outlook
 
-This article helps you resolve the problem that you notice that some of your rules are disabled and can't be enabled after you upgrade to Microsoft Office Outlook 2003 (or later).
-
 _Original KB number:_ &nbsp; 886616
 
 ## Symptoms

@@ -18,8 +18,6 @@ appliesto:
 ---
 # Junk email message settings aren't synchronized when you use Outlook 2013 to connect to an Outlook.com account
 
-This article helps you resolve the problem that the junk email message settings aren't synchronized when you use Microsoft Outlook 2013 to connect to an `Outlook.com` account.
-
 _Original KB number:_ &nbsp; 2861826
 
 ## Symptoms

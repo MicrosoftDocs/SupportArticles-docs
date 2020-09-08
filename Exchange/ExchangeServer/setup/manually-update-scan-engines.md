@@ -20,8 +20,6 @@ appliesto:
 ---
 # Manually update scan engines in Exchange Server
 
-This article shows how to manually update the scan engines in Microsoft Exchange Server.
-
 _Original KB number:_ &nbsp; 2292741
 
 ## Summary

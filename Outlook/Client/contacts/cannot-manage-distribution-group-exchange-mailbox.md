@@ -19,8 +19,6 @@ appliesto:
 ---
 # Can't manage distribution group from Outlook with Exchange Server mailbox
 
-This article helps you resolve the problem that you are unable to change the membership of groups for which they are listed as the managers.
-
 _Original KB number:_ &nbsp; 2586832
 
 ## Symptom

@@ -18,8 +18,6 @@ search.appverid: MET150
 ---
 # Active Directory wasn't prepared using hosting mode error when installing Exchange Server 2010 SP1
 
-This article provides a resolution for the issue that you can't install Microsoft Exchange Server 2010 Service Pack 1 (SP1) from an unattended installation.
-
 _Original KB number:_ &nbsp; 2384868
 
 ## Symptoms

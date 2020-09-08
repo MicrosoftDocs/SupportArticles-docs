@@ -18,8 +18,6 @@ appliesto:
 ---
 # Errors when you upgrade to Office 2016
 
-This article provides a solution to an issue where upgrading to Office 2016 fails.
-
 _Original KB number:_ &nbsp; 3098831
 
 ## Symptoms

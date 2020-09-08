@@ -19,8 +19,6 @@ search.appverid: MET150
 ---
 # Creating an item on behalf of a delegate fails in Exchange Server 2013 Cumulative Update 5
 
-This article provides a workaround to make sure you can create items on behalf of a delegate in a Microsoft Exchange Server 2013 Cumulative Update 5 environment.
-
 _Original KB number:_ &nbsp; 2986658
 
 ## Symptoms

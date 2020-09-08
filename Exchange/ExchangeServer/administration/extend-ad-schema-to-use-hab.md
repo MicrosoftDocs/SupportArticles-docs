@@ -18,8 +18,6 @@ appliesto:
 ---
 # Extend the Active Directory schema for the Hierarchical Address Book (HAB) on an Exchange Server 2010 server
 
-This article describes how to implement the Active Directory Domain Services (AD DS) schema changes that are required to support the Hierarchical Address Book (HAB) feature in Microsoft Exchange Server 2010.
-
 _Original KB number:_ &nbsp; 973788
 
 ## Use Hierarchical Address Book

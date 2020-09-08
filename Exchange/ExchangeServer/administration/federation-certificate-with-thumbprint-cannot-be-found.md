@@ -25,8 +25,6 @@ appliesto:
 ---
 # Error when you make changes to federation trust: Federation certificate with the thumbprint cannot be found
 
-This article helps you resolve the problem that you can't make changes to federation trust after you recover the only Exchange server in your environment.
-
 _Original KB number:_ &nbsp; 3215261
 
 ## Symptoms

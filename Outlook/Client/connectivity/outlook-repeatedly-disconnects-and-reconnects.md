@@ -19,8 +19,6 @@ search.appverid: MET150
 ---
 # Outlook clients repeatedly disconnect from and reconnect to Exchange Server 2013
 
-This article provides a resolution for the issue that Microsoft Outlook clients repeatedly disconnect from and reconnect to Exchange Server 2013.
-
 _Original KB number:_ &nbsp; 2962915
 
 ## Symptoms

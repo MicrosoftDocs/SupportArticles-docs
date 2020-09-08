@@ -20,8 +20,6 @@ search.appverid: MET150
 ---
 # Error when Outlook tries to connect to a server by using an RPC connection or an HTTPS connection: There is a problem with the proxy server's security certificate
 
-This article provides resolutions for the issue where you receive a "There is a problem with the proxy server's security certificate" error when Outlook tries to connect to a server by using an RPC connection or an HTTPS connection.
-
 _Original KB number:_ &nbsp;923575
 
 ## Symptoms

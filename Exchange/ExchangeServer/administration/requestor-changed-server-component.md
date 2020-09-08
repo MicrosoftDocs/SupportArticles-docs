@@ -17,8 +17,6 @@ appliesto:
 ---
 # Determine the requestor that changed Server component state
 
-This article helps you resolve the problem that a server component's state remains inactive even though you have changed it to active.
-
 _Original KB number:_ &nbsp; 2958835
 
 ## Symptoms

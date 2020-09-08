@@ -19,8 +19,6 @@ appliesto:
 ---
 # Error when you install Exchange Server: Organization Preparation FAILED
 
-This article provides a solution to an error that occurs when you install Microsoft Exchange Server.
-
 _Original KB number:_ &nbsp; 2872882
 
 ## Symptoms

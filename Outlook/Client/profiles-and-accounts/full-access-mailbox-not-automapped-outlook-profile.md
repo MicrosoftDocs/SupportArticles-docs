@@ -20,8 +20,6 @@ appliesto:
 ---
 # Mailboxes to which your account has full access aren't automapped to Outlook profile
 
-This article helps you resolve the problem that the members of the assigned group don't see the mailbox get automapped to their Microsoft Outlook profile when you assign full mailbox access to a specific set of mailboxes through a security group.
-
 _Original KB number:_ &nbsp; 3190323
 
 ## Symptoms

@@ -16,8 +16,6 @@ search.appverid: MET150
 ---
 # Troubleshooting OneDrive for Business sync issues
 
-This article isolates and resolves issues when you use the sync app to upload or download files or folders in OneDrive for Business. This guide contains information that applies when you use the OneDrive for Business sync client (groove.exe).
-
 _Original KB number:_ &nbsp; 10104
 
 ## Summary
