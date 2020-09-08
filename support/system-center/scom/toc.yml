@@ -152,7 +152,7 @@
     href: remove-old-product-connectors.md
   - name: The Discovery Wizard stops responding
     href: discovery-wizard-stop-responding.md
-  - name: The OpsMgr console doesn't open with SDK service error
+  - name: The Operations console doesn't open
     href: console-not-open-with-sdk-service-error.md
   - name: The System Center Management service stops responding
     href: system-center-management-service-stops-responding.md
@@ -194,7 +194,7 @@
   items:
   - name: Error 0x80131604 installing a management server
     href: management-server-installation-error-0x80131604.md
-  - name: Install OpsMgr and Service Manager consoles on the same server
+  - name: Install OpsMgr console and Service Manager console on the same server
     href: install-opsmgr-service-manager-consoles-on-same-server.md
   - name: Setup cannot be completed
     href: setup-not-completed-error.md

@@ -11,7 +11,7 @@ This article describes how to remove an old product connector from System Center
 _Original product version:_ &nbsp; System Center Operations Manager  
 _Original KB number:_ &nbsp; 2626670
 
-## Symptoms
+## Summary
 
 Removing an old product connector from System Center Operations Manager may be necessary if the product connector is no longer used in the environment. There is no **Delete** option in the admin console UI for product connectors so the [script](#powershell-script) can be used to achieve the desired results.
 
@@ -20,7 +20,7 @@ Removing an old product connector from System Center Operations Manager may be n
 Use the following PowerShell script to remove the product connector:
 
 > [!NOTE]
-> Internal connectors should not be removed, also be sure to backup both the Operational DB and the data warehouse before running this. Also save the following scripts as *DeleteConnector.ps1*.
+> Internal connectors should not be removed, also be sure to backup both the Operational database and the data warehouse database before running this. Also save the following scripts as *DeleteConnector.ps1*.
 
 ```powershell
 param(

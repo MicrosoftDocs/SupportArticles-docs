@@ -61,4 +61,4 @@ Key name = `DatabaseServerName`
 
 This key may contain the wrong servername\instancename. If it's incorrect, configure the correct servername\instancename in this key. If the Operations Manager database is installed in the default instance on the SQL Server, just the SQL Server name is enough in this key.
 
-Once the key value has been corrected, restart the **OpsMgr SDK Service** if on SP 1, or **System Center Data Access Service** if it's an R2 server.
+After the key value is corrected, restart **System Center Data Access Service**.

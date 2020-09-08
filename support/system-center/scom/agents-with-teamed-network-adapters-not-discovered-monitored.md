@@ -41,7 +41,7 @@ You may also see the following alert:
 
 This can occur if the drivers being used for NIC teaming on the agent don't properly register in WMI.
 
-The base OS management pack (version 6.0.6958.0) contains a script that's responsible for discovering teamed adapters named **Microsoft.Windows.Server.NetwokAdapter.BandwidthUsed.ModuleType.vbs**. If the NIC teaming driver being used fails to properly register in WMI, when the script runs and fails to find the registered classes, the script will fail and log the errors above.
+The Windows Server Operating System management pack (version 6.0.6958.0) contains a script that's responsible for discovering teamed adapters named **Microsoft.Windows.Server.NetwokAdapter.BandwidthUsed.ModuleType.vbs**. If the NIC teaming driver being used fails to properly register in WMI, when the script runs and fails to find the registered classes, the script will fail and log the errors above.
 
 Many teaming NIC drivers also fail to register performance counters that can also be a reason why the required WMI registration is not created.
 

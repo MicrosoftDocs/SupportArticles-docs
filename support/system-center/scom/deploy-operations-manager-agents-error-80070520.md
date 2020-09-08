@@ -34,7 +34,7 @@ The error is returned when an attempt is made to store the credentials used to 
 
 ## Resolution
 
-To check if this issue is policy-related, on the management server specified when calling the `Install-SCOMAgent` cmdlet, open **Local Security Policy** from **Administrative Tools**. Navigate to **Local Polices** > **Security Options**. For Windows Server 2003, locate the policy **Network access: Do not allow storage of credentials or .NET Passports for network authentication**. Or, for Windows Server 2008, locate the policy **Network access: Do not allow storage of passwords and credentials for network authentication**. Ensure this policy is **disabled**.
+To check if this issue is policy-related, on the management server specified when calling the `Install-SCOMAgent` cmdlet, open **Local Security Policy** from **Administrative Tools**. Navigate to **Local Polices** > **Security Options**. Make sure that the policy **Network access: Do not allow storage of passwords and credentials for network authentication** is **disabled**.
 
 This policy controls the following registry value:
 

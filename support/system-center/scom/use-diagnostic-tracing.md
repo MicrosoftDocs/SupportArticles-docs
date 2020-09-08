@@ -1,13 +1,13 @@
 ---
 title: Use diagnostic tracing
-description: Describes the tools that you can use to obtain trace logs in System Center Operations Manager 2007 and in System Center Essentials. A Microsoft CSS representative uses these trace logs to perform advanced troubleshooting.
+description: Describes the tools that you can use to obtain trace logs in System Center Operations Manager and in System Center Essentials. A Microsoft CSS representative uses these trace logs to perform advanced troubleshooting.
 ms.date: 09/02/2020
 ms.prod-support-area-path: 
 ms.reviewer: cliveea, v-jomcc
 ---
-# Use diagnostic tracing in System Center Operations Manager 2007 and in System Center Essentials
+# Use diagnostic tracing in System Center Operations Manager and in System Center Essentials
 
-This article describes how to use diagnostic tracing in Microsoft System Center Essentials 2010, in Microsoft System Center Operations Manager 2007, and in Microsoft System Center Essentials 2007.
+This article describes how to use diagnostic tracing in Microsoft System Center Essentials 2010 and System Center Operations Manager.
 
 _Original product version:_ &nbsp; Microsoft System Center Essentials 2010, Microsoft System Center Operations Manager 2007  
 _Original KB number:_ &nbsp; 942864
@@ -19,7 +19,7 @@ _Original KB number:_ &nbsp; 942864
 
 We recommend that you perform diagnostic tracing only in association with a Microsoft Customer Support Services (CSS) representative. We recommend this because the generated traces contain information about the context of a text-based trace message. However, in Microsoft System Center Operations Manager 2007 and in Microsoft System Center Essentials 2007, this trace information is not in a human-readable format. After the traces are converted by a CSS representative, human-readable text is available. However, this text contains only low-level information such as source-code file names, locations, source-code functions, and return codes. This information may be helpful if you have to troubleshoot a complex issue.
 
-In System Center Essentials 2010, System Center Essentials 2007 Service Pack 1 (SP1), in System Center Operations Manager 2007 SP1, and in later versions, trace message files (TMF) are supplied which allow for conversion of binary trace files to text. However, we strongly recommend that you do diagnostic tracing only when it's required and only with the consultation of a Microsoft representative.
+In System Center Essentials 2010, System Center Operations Manager 2007 SP1, and later versions, trace message files (TMF) are supplied which allow for conversion of binary trace files to text. However, we strongly recommend that you do diagnostic tracing only when it's required and only with the consultation of a Microsoft representative.
 
 System Center Operations Manager 2007 and System Center Essentials 2007 implement a diagnostic tracing method that differs from earlier versions of Microsoft Operations Manager. This new tracing method creates binary files in which to store tracing information. Because this new tracing method is implemented at the Windows kernel level, it's highly efficient, and it can log tens of thousands of trace messages per second.
 
@@ -49,31 +49,12 @@ System Center Essentials 2010, System Center Essentials 2007 SP1, and System Cen
 ## Start tracing
 
 > [!NOTE]
-> In System Center Essentials 2010, in System Center Essentials 2007 SP1, in System Center Operations Manager 2007 SP1, and in later versions, tracing is automatically started on both the Agent role and the Management Server role. Tracing will use error output only. Binary trace files are written to the *SystemDrive\Temp\OpsMgrTrace* folder. Before the tracing level for trace output can be changed, tracing must first be stopped.
+> In System Center Essentials 2010, System Center Operations Manager 2007 SP1, and later versions, tracing is automatically started on both the Agent role and the Management Server role. Tracing will use error output only. Binary trace files are written to the `windows\logs\OpsMgrTrace` folder. Before the tracing level for trace output can be changed, tracing must first be stopped.
 
 To start diagnostic tracing, follow these steps:
 
 1. On the computer on which you want to start tracing, select **Start**, select **Run**, type **cmd**, and then click **OK**.
-2. At the command prompt, use the `cd` command to change to the Tools directory. Type the appropriate command from the following list, and then press **ENTER**.
-
-    - System Center Essentials 2010:
-
-      ```console
-      cd \Program Files\System Center Essentials\Tools
-      ```
-
-    - System Center Essentials 2007:
-
-        ```console
-        cd \Program Files\System Center Essentials 2007\Tools
-        ```
-
-    - System Center Operations Manager 2007:
-
-        ```console
-        cd\Program Files\System Center Operations Manager 2007\Tools
-        ```
-
+2. At the command prompt, use the `cd` command to change to the Tools directory.
 3. Type `StartTracing LEVEL`, and then press **ENTER**. In this command, replace *LEVEL* with the tracing level that you want. Use uppercase characters to specify the tracing level. The following levels are available:
 
    - ERR
@@ -89,41 +70,15 @@ When you start tracing, the trace output is written to the following binary file
 - MOMTraceBID.etl
 - MOMTraceUI.etl
 
-On Windows Server 2003, these files are located in the *SystemDrive\Temp* folder.
-
-In System Center Essentials 2010, in System Center Essentials 2007 SP1, in System Center Operations Manager 2007 SP1, and in later versions, trace files (.etl) are located in the *SystemDrive\Temp\OpsMgrTrace* folder.
-
-For Windows 7, Windows Server 2008, Windows Server 2008 R2, and later OS versions, the files are located at `windows\logs\OpsMgrTrace`.
+For Windows 7, Windows Server 2008, Windows Server 2008 R2, and later versions, the files are located at `windows\logs\OpsMgrTrace`.
 
 ## Stop tracing
 
 To stop diagnostic tracing, follow these steps:
 
 1. Select **Start**, select **Run**, type **cmd**, and then click **OK**.
-2. At the command prompt, use the `cd` command to change to the Tools directory. Type the appropriate command from the following list, and then press **ENTER**.
-
-    - System Center Essentials 2010:
-
-      ```console
-      cd \Program Files\System Center Essentials\Tools
-      ```
-
-    - System Center Essentials 2007:
-
-        ```console
-        cd \Program Files\System Center Essentials 2007\Tools
-        ```
-
-    - System Center Operations Manager 2007:
-
-        ```console
-        cd\Program Files\System Center Operations Manager 2007\Tools
-        ```
-
-3. Type `StopTracing.cmd`, and then press **ENTER**. After you stop diagnostic tracing, you can send the .etl files from the *SystemDrive\Temp* folder to the Microsoft CSS representative with whom you are working.
-
-> [!NOTE]
-> In System Center Essentials 2010, in System Center Essentials 2007 SP1, in System Center Operations Manager 2007 SP1, and in later versions, trace files are located in the *SystemDrive\Temp\OpsMgrTrace* folder. Because TMFs are supplied with SP1 and in System Center Essentials 2010, traces can be converted without having to send .etl files to Microsoft. For Windows 7, Windows Server 2008, Windows Server 2008 R2, and later OS versions, the files are located at `windows\logs\OpsMgrTrace`.
+2. At the command prompt, use the `cd` command to change to the Tools directory.
+3. Type `StopTracing.cmd`, and then press **ENTER**.
 
 ## Convert existing traces to text format
 
@@ -133,46 +88,27 @@ To convert existing trace files to text tracing, you have to stop tracing first 
 > Information within the converted traces is of a very low level detail (debug level). Therefore, the converted traces require knowledge of the source code and of the component that is being traced. We recommend that trace conversion be performed only when it's required by a CSS representative.
 
 1. Select **Start**, select **Run**, type **cmd**, and then click **OK**.
-2. At the command prompt, use the `cd` command to change to the Tools directory. Type the appropriate command from the following list, and then press **ENTER**.
-
-    - System Center Essentials 2010:
-
-      ```console
-      cd \Program Files\System Center Essentials\Tools
-      ```
-
-    - System Center Essentials 2007:
-
-        ```console
-        cd \Program Files\System Center Essentials 2007\Tools
-        ```
-
-    - System Center Operations Manager 2007:
-
-        ```console
-        cd\Program Files\System Center Operations Manager 2007\Tools
-        ```
-
+2. At the command prompt, use the `cd` command to change to the Tools directory.
 3. Type `FormatTracing.cmd`, and then press **ENTER**.
 
-The first time that the `FormatTracing.cmd` command is executed, the trace files that are required to convert traces are extracted to the *SystemDrive\Program Files\System Center Operations Manager\Tools\TMF* folder. Then, the `FormatTracing.cmd` batch file enumerates each trace file (\*.etl) in the *SystemDrive\Temp\OpsMgrTrace* folder. For Windows 7, Windows Server 2008, Windows Server 2008 R2, and later OS versions, the files are located at `windows\logs\OpsMgrTrace`. Then, the TraceFMTSM.exe utility converts the files to text. The text output is written to a file of the same name with the extension .log in the *SystemDrive\Temp\OpsMgrTrace* folder. For Windows 7, Windows Server 2008, Windows Server 2008 R2, and later OS versions, the files are located at `windows\logs\OpsMgrTrace`. A summary (.sum) file is also written to the same location for each file that is converted. This file details each trace message event converted.
+The first time that the `FormatTracing.cmd` command is executed, the trace files that are required to convert traces are extracted to the *SystemDrive\Program Files\System Center Operations Manager\Tools\TMF* folder. Then, the `FormatTracing.cmd` batch file enumerates each trace file (*.etl) in the `windows\logs\OpsMgrTrace` folder. Then, the TraceFMTSM.exe utility converts the files to text. The text output is written to a file of the same name with the extension .log in the `windows\logs\OpsMgrTrace` folder. A summary (.sum) file is also written to the same location for each file that is converted. This file details each trace message event converted.
 
 ## View converted trace files
 
-Trace files that are converted to text by using the `FormatTracing.cmd` batch file can be viewed by using a text editor, such as Notepad. By default, in System Center Essentials 2010, in System Center Essentials 2007 SP1, in System Center Operations Manager 2007 SP1, and in later versions, trace files are located in the *SystemDrive\Temp\OpsMgrTrace* folder. For Windows 7, Windows Server 2008, Windows Server 2008 R2, and later OS versions, the files are located at `windows\logs\OpsMgrTrace`.
+Trace files that are converted to text by using the `FormatTracing.cmd` batch file can be viewed by using a text editor, such as Notepad.
 
 ## Boot time tracing is enabled by default
 
-On a typical root management server (RMS) installation, three trace sessions begin when the HealthService service is started. By default, only error tracing is done. Little information is written to the trace files. The default trace file location and names that are created are as follows:
+On a typical management server installation, three trace sessions begin when the HealthService service is started. By default, only error tracing is done. Little information is written to the trace files. The default trace file location and names that are created are as follows:
 
 |Folder|File name|Description|
 |---|---|---|
-|*system drive\Temp\OpsMgrTrace*|TracingGuidsBID.etl|Trace output for managed code components|
-|*system drive\Temp\OpsMgrTrace*|TracingGuidsNative.etl|Trace output for native code components|
-|*system drive\Temp\OpsMgrTrace*|TracingGuidsUI.etl|Trace output for managed code user interface (OpsMgr UI)|
+|`windows\logs\OpsMgrTrace`|TracingGuidsBID.etl|Trace output for managed code components|
+|`windows\logs\OpsMgrTrace`|TracingGuidsNative.etl|Trace output for native code components|
+|`windows\logs\OpsMgrTrace`|TracingGuidsUI.etl|Trace output for managed code user interface (OpsMgr UI)|
 ||||
 
-Each session is enabled with circular tracing and has a maximum file size of 100 megabytes (MB). The typical .etl file size for a newly created .etl file is 16 kilobytes (KB). For Windows 7, Windows Server 2008, Windows Server 2008 R2, and later OS versions, the files are located at `windows\logs\OpsMgrTrace`.
+Each session is enabled with circular tracing and has a maximum file size of 100 megabytes (MB). The typical .etl file size for a newly created .etl file is 16 kilobytes (KB).
 
 > [!NOTE]
 > Although an Operations Manager role, such as an Agent role, doesn't contain managed or user interface tracing messages, the three default trace .etl files will be created by default when the HealthService service is started. By default, no trace sessions are started on a user interface only role.
@@ -182,7 +118,7 @@ Each session is enabled with circular tracing and has a maximum file size of 100
 > [!WARNING]
 > Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system. Microsoft cannot guarantee that these problems can be solved. Modify the registry at your own risk.
 
-Three trace providers are started automatically on any role that contains the HealthService service. The trace files are written to the *SystemDrive\Temp\OpsmgrTrace* folder. For Windows 7, Windows Server 2008, Windows Server 2008 R2, and later OS versions, the files are located at `windows\logs\OpsMgrTrace`. Typically, the .etl files in this folder will be small, especially for the Agent role. However, for the RMS role, if the Operations Manager installation becomes unhealthy, one or more of these files could potentially grow to the maximum configured size of 100 MB each. These files include the following:
+Three trace providers are started automatically on any role that contains the HealthService service. The trace files are written to the `windows\logs\OpsMgrTrace` folder. Typically, the .etl files in this folder will be small, especially for the Agent role. However, for the management server role, if the Operations Manager installation becomes unhealthy, one or more of these files could potentially grow to the maximum configured size of 100 MB each. These files include the following:
 
 - TracingGuidsBid.etl
 - TracingGuidsNative.etl
@@ -204,7 +140,7 @@ If you have to disable debug level tracing because of a small boot partition siz
 5. In the **Value data** field, type **1**, and then click **OK**.
 6. Exit Registry Editor.
 
-If you execute the `StopTracing.cmd` batch file from the Tools folder, the Operations Manager trace sessions will be stopped. The .etl files in the *SystemDrive\Temp\OpsmgrTrace* folder can be deleted if they're no longer required to regain disk space. For Windows 7, Windows Server 2008, Windows Server 2008 R2, and later OS versions, the files are located at `windows\logs\OpsMgrTrace`.
+If you execute the `StopTracing.cmd` batch file from the Tools folder, the Operations Manager trace sessions will be stopped. The .etl files in the `windows\logs\OpsMgrTrace` folder can be deleted if they're no longer required to regain disk space.
 
 ## Move the default location of trace file output
 
@@ -214,9 +150,9 @@ If an Operations Manager Server role or Agent role is installed on a computer wh
 
 2. Set at least the following NT File System (NTFS) permissions on the folder, SYSTEM = **Full Control**, Administrators = **Full Control**.
 
-3. Locate and open the StartTracing.cmd batch file in the `Operations Manager/Essentials/Tools` installation folder. Use a text editor, such as Notepad.
+3. Locate and open the StartTracing.cmd batch file in the Tools installation folder. Use a text editor, such as Notepad.
 
-4. In the StartTracing.cmd batch file, locate the `SET OpsMgrTracePath` statement. Replace the default value *SystemDrive\Temp\OpsMgrTrace* with the path of the new location. Delimit the path with speech marks (") if the path contains a space character.
+4. In the StartTracing.cmd batch file, locate the `SET OpsMgrTracePath` statement. Replace the default value with the path of the new location. Delimit the path with speech marks (") if the path contains a space character.
 
 5. Save the changes to the StartTracing.cmd file.
 
@@ -228,7 +164,7 @@ If an Operations Manager Server role or Agent role is installed on a computer wh
 
 7. Before you use the `FormatTracing.cmd` command to convert traces to text, you must edit the `FormatTracing.cmd` command to change the `OpsMgrTracePath` variable to point to the new trace file folder.
 
-Future hotfixes, service packs, or product updates may change the files in the Tools folder. This changes the functionality back to the default functionality. We recommend that you check for more changes after you do updates. For Windows 7, Windows Server 2008, Windows Server 2008 R2, and later OS versions, the files are located at `windows\logs\OpsMgrTrace`.
+Future hotfixes, service packs, or product updates may change the files in the Tools folder. This changes the functionality back to the default functionality. We recommend that you check for more changes after you do updates.
 
 ## View real time tracing
 
