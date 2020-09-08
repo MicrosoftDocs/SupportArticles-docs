@@ -18,8 +18,6 @@ appliesto:
 ---
 # You can't open an additional mailbox in Outlook Web App after you install Update Rollup 4 for Exchange Server 2010 SP2
 
-This article helps you resolve the problem that you can't open an additional mailbox in Outlook Web App after you install Update Rollup 4 for Microsoft Exchange Server 2010 Service Pack 2 (SP2).
-
 _Original KB number:_ &nbsp; 2777852
 
 ## Symptoms

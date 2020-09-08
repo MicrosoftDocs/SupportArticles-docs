@@ -20,7 +20,7 @@ appliesto:
 ms.custom: 
 - CI 117004
 - CSSTroubleshoot 
-ms.reviewer: Describes resolutions to the OneNote error message "Content Not Yet Available."
+description: Describes resolutions to the OneNote error message "Content Not Yet Available."
 ---
 
 # OneNote error: "Content Not Yet Available"
@@ -92,8 +92,8 @@ A "successful sync" icon can appear in either of the following user interface lo
 
 - A page has been saved offline.
 
-  ![Notebook has been saved offline.](./media/onenote-error-content-not-yet-available/onenote-error-content-not-yet-available-5.jpg)
-  ![Notebook has been saved offline.](./media/onenote-error-content-not-yet-available/onenote-error-content-not-yet-available-6.jpg)
+  ![Notebook has been saved offline 1.](./media/onenote-error-content-not-yet-available/onenote-error-content-not-yet-available-5.jpg)
+  ![Notebook has been saved offline 2.](./media/onenote-error-content-not-yet-available/onenote-error-content-not-yet-available-6.jpg)
  
 - A page has not been saved because of network issues and OneNote is trying to reconnect.
 

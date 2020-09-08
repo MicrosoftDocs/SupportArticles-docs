@@ -20,12 +20,12 @@ search.appverid: MET150
 ---
 # Can't send or receive email messages behind a Cisco PIX or Cisco ASA firewall with the Mailguard feature turned on
 
+_Original KB number:_ &nbsp;320027
+
 This article discusses the cause of the behavior that you can't send or receive email messages if an Exchange server is placed behind a Cisco PIX or Cisco ASA firewall device and the PIX or ASA firewall has the Mailguard feature turned on. It provides steps to turn off the Mailguard feature of the PIX or ASA firewall.
 
 > [!IMPORTANT]
 > This article contains information that shows you how to help lower security settings or how to turn off security features on a computer. You can make these changes to work around a specific problem. Before you make these changes, we recommend that you evaluate the risks that are associated with implementing this workaround in your particular environment. If you implement this workaround, take any appropriate additional steps to help protect the computer.
-
-_Original KB number:_ &nbsp;320027
 
 ## Symptoms
 

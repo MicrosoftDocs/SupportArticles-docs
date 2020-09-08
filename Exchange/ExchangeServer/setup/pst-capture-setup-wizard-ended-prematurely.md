@@ -21,8 +21,6 @@ appliesto:
 ---
 # Error when you install the PST Capture tool in Windows Server 2008 R2: Setup wizard ended prematurely because of an error
 
-This article provides help to solve an issue where installing the PST Capture tool in Microsoft Windows Server 2008 R2 fails.
-
 _Original KB number:_ &nbsp; 2844231
 
 ## Symptoms

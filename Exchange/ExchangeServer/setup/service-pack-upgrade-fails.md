@@ -17,8 +17,6 @@ appliesto:
 ---
 # Exchange Service Pack upgrade fails with an unexpected error in ServiceControl.ps1
 
-This article provides a solution to an issue where upgrading Microsoft Exchange Server Service Pack fails.
-
 _Original KB number:_ &nbsp; 2034420
 
 ## Symptoms

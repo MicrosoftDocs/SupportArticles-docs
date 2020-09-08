@@ -20,8 +20,6 @@ appliesto:
 ---
 # Error when you move mailboxes from on-premises to Exchange Online in a hybrid deployment: User is already being moved‎
 
-This article provides solutions to an issue where an error (User is already being moved‎) occurs when you move mailboxes from on-premises to Microsoft Exchange Online in a hybrid deployment.
-
 _Original KB number:_ &nbsp; 4502865
 
 ## Symptoms

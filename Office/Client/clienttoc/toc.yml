@@ -307,14 +307,10 @@
       href: ../excel/center-across-columns-button-disappear.md
     - name: "\"Margins do not fit page size\" error with print"
       href: ../excel/fails-printing-a-workbook.md
-    - name: "\"Total\" row is not shown in waterfall charts"
-      href: ../excel/table-total-row-not-shown-in-waterfall.md
     - name: .SpecialCells(xlCellTypeBlanks) VBA function doesn't work
       href: ../excel/specialcells(xlcelltypeblanks)-vba-function.md
     - name: A file is updated without user interaction
       href: ../excel/file-updated-without-user-interaction.md
-    - name: A serious error the last time it was opened
-      href: ../excel/opening-file-cause-error.md
     - name: Access data connections are slow to refresh
       href: ../excel/access-data-connections-refresh-slowly.md
     - name: Algorithm is used by the XIRR() function
@@ -345,32 +341,12 @@
       href: ../excel/cannot-export-to-excel.md
     - name: Can't modify oData connection in PowerPivot
       href: ../excel/cannot-modify-odata-connection.md
-    - name: Can't open .xls files
-      href: ../excel/cannot-open-xls-file.md
-    - name: Can't open a workbook saved in Excel version 1805
-      href: ../excel/cant-open-workbook-saved-in-excel-1805.md
     - name: Can't open IRM protected workbook
       href: ../excel/cannot-open-irm-protected-workbook.md
     - name: Can't paste any attributes into a workbook in another instance
       href: ../excel/cannot-paste-attributes.md
     - name: Can't remove error tracing arrow
       href: ../excel/removing-error-tracing-arrow-fails.md
-    - name: Can't resize the Chart Area of a chart
-      href: ../excel/cannot-resize-chart-area.md
-    - name: Can't scroll to view other areas
-      href: ../excel/fails-scrolling-view-other-areas.md
-    - name: Can't use external references with data validation
-      href: ../excel/external-references-data-validation-fails.md
-    - name: Category labels are missing or too small to read
-      href: ../excel/chart-category-labels-missing.md
-    - name: Cell content is displayed as
-      href: ../excel/cell-content-shows-na-enable-editing.md
-    - name: Cell shading continually darkens
-      href: ../excel/cell-shading-continually-darkens.md
-    - name: Change formula from absolute to relative or mixed references
-      href: ../excel/change-formular-reference-type-.md
-    - name: Change the Software License Registration Information for Mac
-      href: ../excel/change-software-license-registration.md
     - name: Chart trendline formula is inaccurate
       href: ../excel/inaccurate-chart-trendline-formula.md
     - name: CHIINV statistical functions
@@ -393,18 +369,10 @@
       href: ../excel/convert-degrees-minutes-seconds-angles.md
     - name: Convert Excel column numbers
       href: ../excel/convert-excel-column-numbers.md
-    - name: Crashing issues with Excel
-      href: ../excel/crashing-issues-with-excel.md
-    - name: Create a conditional format to hide errors
-      href: ../excel/hide-errors.md
     - name: Create a dynamic defined range
       href: ../excel/create-dynamic-defined-range.md
-    - name: Create a formula to correctly evaluate blank cells
-      href: ../excel/use-formula-evaluate-blank-cell.md
     - name: Create a monthly calendar
       href: ../excel/create-monthly-calendar.md
-    - name: Create a sequential numbered list
-      href: ../excel/create-sequential-numbered-list.md
     - name: Create and user two-input data tables
       href: ../excel/create-two-input-data-tables.md
     - name: Create application-level event handlers
@@ -435,8 +403,6 @@
       href: ../excel/dsum-and-dcount-not-work-with-pivottables.md
     - name: Embedded macros are blocked from running
       href: ../excel/embedded-macros-not-run.md
-    - name: Endlessly loop calculating cells when inserting several subtotals
-      href: ../excel/endlessly-loop-calculating.md
     - name: Error when saving a file
       href: ../excel/error-saving-file.md
     - name: Error when sending commands in Excel
@@ -445,28 +411,14 @@
       href: ../excel/copy-formulas-over-large-area.md
     - name: Error when you import data to a workbook
       href: ../excel/index-outside-bounds-of-array-error.md
-    - name: Error when you save a workbook in OneDrive
-      href: ../excel/excel-file-path-too-long.md
-    - name: Excel 2013 crashes when you scroll down
-      href: ../excel/excel-crashes-mouse-wheel.md
-    - name: Excel 2013 or Word 2013 crashes on close
-      href: ../excel/excel-word-crash-on-close.md
     - name: Excel 2016 for Mac crashes
       href: ../excel/excel-2016-for-mac-crashes.md
     - name: Excel cannot complete this task
       href: ../excel/excel-cannot-complete-task-with-available.md
-    - name: Excel crashes when moving Excel sheet tab
-      href: ../excel/crash-when-move-excel-sheet-tab.md
-    - name: Excel crashes when working on multiple workbooks
-      href: ../excel/crash-when-work-on-multiple-workbooks.md
-    - name: Excel crashing issues are fixed in recent updates
-      href: ../excel/excel-crash-issues-fixed-in-recent-updates.md
     - name: Excel doesn't recognize data as Date type data
       href: ../excel/not-recognize-data-as-date-type-data.md
     - name: Excel doesn't shut down after calling Quit method
       href: ../excel/jscript-not-shut-down-excel.md
-    - name: Excel hangs, freezes or stops working
-      href: ../excel/excel-not-working.md
     - name: Excel incorrectly assumes 1900 is a leap year
       href: ../excel/wrongly-assumes-1900-is-leap-year.md
     - name: Excel opening blank
@@ -495,8 +447,6 @@
       href: ../excel/formula-errors.md
     - name: Formulas to count text occurrences in Excel
       href: ../excel/formulas-to-count-occurrences-in-excel.md
-    - name: Gridlines are not printed
-      href: ../excel/gridlines-not-print.md
     - name: GROWTH statistical functions
       href: ../excel/statistical-functions-growth.md
     - name: Hide sheets and use xlVeryHidden constant in a macro
@@ -509,8 +459,6 @@
       href: ../excel/get-latest-excel-viewer.md
     - name: Hyperlink to mht file fails to load
       href: ../excel/hyperlink-to-mht-file-fails-to-load.md
-    - name: Hyperlinks stop working when saving as a PDF
-      href: ../excel/hyperlinks-not-work-in-pdf.md
     - name: Incorrect icon shows when inserting an object
       href: ../excel/inserted-object-icon-incorrect.md
     - name: Inquire COM add-in options don't respond
@@ -521,8 +469,6 @@
       href: ../excel/document-contains-invalid-signatures-error.md
     - name: Issue when saving Excel workbooks
       href: ../excel/issue-when-save-excel-workbooks.md
-    - name: Issue when setting the Fit to option
-      href: ../excel/not-fit-worksheet-to-page.md
     - name: Issue when sorting a range that has merged cells
       href: ../excel/error-sort-a-range-merged-cell.md
     - name: Issue when starting Excel for Mac
@@ -545,8 +491,6 @@
       href: ../excel/link-visio-drawing-to-a-specific-region.md
     - name: LOGEST statistical functions
       href: ../excel/statistical-functions-logest.md
-    - name: Long numbers appear incorrectly in Excel
-      href: ../excel/long-numbers-incorrectly-in-excel.md
     - name: Loop through a list of data by using macros
       href: ../excel/loop-through-data-using-macro.md
     - name: Macro to extract data from a chart
@@ -555,12 +499,8 @@
       href: ../excel/macros-run-slowly.md
     - name: Make Paste Options button disappear
       href: ../excel/make-paste-options-button-disappear.md
-    - name: Manage multiple windows
-      href: ../excel/manage-multiple-windows.md
     - name: Memory usage in the 32-bit edition of Excel
       href: ../excel/memory-usage-32-bit-edition-of-excel.md
-    - name: Minimize the size of an XML Spreadsheet file
-      href: ../excel/minimize-xml-spreadsheet-file-size.md
     - name: Misleading labels in the output of Analysis ToolPak t-Test tools
       href: ../excel/output-misleading-labels.md
     - name: Network Mapped Drive hyperlinks resolve as UNC
@@ -573,14 +513,10 @@
       href: ../excel/parts-of-excel-turn-white-or-gray.md
     - name: Paster special option is missing or not working
       href: ../excel/paste-special-missing-or-not-working.md
-    - name: Power View sheet is not displayed in a workbook
-      href: ../excel/power-view-sheet-not-displayed.md
     - name: PowerPivot controls disabled with non-default Excel file format
       href: ../excel/powerpivot-controls-disabled-with-non-default.md
     - name: Prevent files from opening automatically
       href: ../excel/files-open-automatically.md
-    - name: Print preview misses lines
-      href: ../excel/print-preview-miss-lines.md
     - name: Programmatically copy all range names
       href: ../excel/copy-range-names.md
     - name: Programmatically print all embedded charts
@@ -593,8 +529,6 @@
       href: ../excel/worksheet-recalculation-sumif-formula.md
     - name: Registry keys that control the File Repair feature
       href: ../excel/file-repair-registry-key.md
-    - name: Remove smart tags from a workbook
-      href: ../excel/remove-workbook-smart-tags.md
     - name: Representing ties by using RANK
       href: ../excel/representing-ties-using-rank.md
     - name: RSQ statistical functions
@@ -611,30 +545,18 @@
       href: ../excel/hide-formula-error.md
     - name: SAP add-ins don't display controls after update to version 1806
       href: ../excel/sap-add-ins-not-display-control.md
-    - name: Save the addresses from a Word mail-merge label document
-      href: ../excel/save-mail-merge-label-document-addresses.md
     - name: Security settings for Dynamic Data Exchange
       href: ../excel/security-settings.md
     - name: Set page setup attributes for sheets
       href: ../excel/set-page-setup-attributes.md
-    - name: Set starting page in header or footer
-      href: ../excel/set-starting-page-number.md
     - name: Set up and use the RTD function
       href: ../excel/set-up-realtimedata-function.md
-    - name: Smart tag functionality
-      href: ../excel/smart-tag-functionality.md
     - name: Startup message about updating linked workbooks
       href: ../excel/control-startup-message.md
     - name: STEYX statistical functions
       href: ../excel/statistical-functions-steyx.md
-    - name: The password you supplied is not correct
-      href: ../excel/incorrectly-password-fails-verifying.md
     - name: Too many different cell formats in Excel
       href: ../excel/too-many-different-cell-formats-in-excel.md
-    - name: Toolbar missing or reset menus in Excel for Mac
-      href: ../excel/toolbar-missing-reset-menu.md
-    - name: Top columns in an Excel spreadsheet pasted into PowerPoint cut off
-      href: ../excel/excel-columns-in-powerpoint-cut-off-in-surface-pro.md
     - name: Transfer data to Excel from Visual Basic
       href: ../excel/transfer-data-to-excel-from-vb.md
     - name: Troubleshoot available resources issues
@@ -643,18 +565,12 @@
       href: ../excel/turn-off-function-argument-tooltips.md
     - name: Unable to cast COM object
       href: ../excel/team-explorer-export-fails.md
-    - name: Unexpected value with the DAYS360 function
-      href: ../excel/days360-function-returns-unexpected-value.md
     - name: Use a worksheet function in a VB macro
       href: ../excel/worksheet-function-in-vb-macro.md
     - name: Use cell references and defined names in criteria
       href: ../excel/use-cell-references-defined-names.md
     - name: Use defined names to update a chart range
       href: ../excel/defined-names-to-update-chart-range.md
-    - name: Use Draw Border tools with cell borders
-      href: ../excel/use-draw-border-tools.md
-    - name: Use INDIRECT function to create references
-      href: ../excel/indirect-function-to-create-reference.md
     - name: Use left, right, mid, and len functions in VB
       href: ../excel/use-left-right-mid-len-function.md
     - name: Use logical AND or OR in a SUM+IF statement
@@ -669,22 +585,12 @@
       href: ../excel/use-shared-workbook.md
     - name: Use startup folders
       href: ../excel/use-startup-folders.md
-    - name: Use the "Insert Options" button
-      href: ../excel/insert-options-button.md
-    - name: Use the AutoRepublish feature
-      href: ../excel/autorepublish-feature.md
-    - name: Use the IF worksheet function to suppress the
-      href: ../excel/if-worksheet-function-div0.md
     - name: VBA writes to cells slowly when ActiveX controls are invisible
       href: ../excel/vba-writes-to-cells-slowly.md
     - name: Workbook isn't activated when you run a macro
       href: ../excel/workbook-not-activated.md
-    - name: Workbook loads slowly the first time that it is opened
-      href: ../excel/workbook-loads-slowly.md
     - name: Workbooks not open
       href: ../excel/workbooks-not-open.md
-    - name: Worksheets may be printed at an unexpected different size
-      href: ../excel/worksheet-printed-different-size.md
     - name: Wrap text doesn't adjust row height
       href: ../excel/wrap-text-not-adjust-row-height.md
   - name: InfoPath
@@ -901,14 +807,10 @@
       href: ../office-suite-issues/win32api_ptrsafe-with-64-bit-support.md
   - name: OneNote
     items:
-    - name: "\"Open new side note\" missing from  Windows notification"
-      href: ../onenote/open-new-side-note-missing.md
+    - name: "\"Content Not Yet Available\" error"
+      href: ../onenote/onenote-error-content-not-yet-available.md
     - name: Errors when you sync a notebook
       href: ../onenote/error-sync-notebook.md
-    - name: Locate Onenote notebooks
-      href: ../onenote/locate-onenote-notebooks.md
-    - name: 'OneNote error "Content Not Yet Available"'
-      href: ../onenote/onenote-error-content-not-yet-available.md
     - name: Temporary change to file size download limit in OneNote
       href: ../onenote/temp-change-onenote-file-size-download.md
     - name: Warning when a notebook is in an offline location
@@ -923,32 +825,12 @@
       href: ../performance/office-slow-or-stop-responding.md
   - name: PowerPoint
     items:
-    - name: "\"Play CD Audio Track\" command is not available"
-      href: ../powerpoint/play-cd-audio-track-not-available.md
-    - name: A .pps file is saved as a .pptx file
-      href: ../powerpoint/pps-file-saved-as-pptx-file.md
-    - name: Add custom values to animation effect options
-      href: ../powerpoint/custom-value-animation-effect-option.md
-    - name: Add section command is unavailable
-      href: ../powerpoint/add-section-not-available.md
-    - name: Audio stops playback after you leave original slide
-      href: ../powerpoint/audio-stops-playback.md
-    - name: Can't edit the footer information in the Header and Footer
-      href: ../powerpoint/fails-editing-footer-information.md
     - name: Can't edit video or audio in a presentation
       href: ../powerpoint/cannot-edit-video-or-audio.md
     - name: Can't load an add-in with a low macro security level
       href: ../powerpoint/powerpoint-fails-loading-add-in.md
     - name: Change the export resolution of PowerPoint slide
       href: ../powerpoint/change-export-slide-resolution.md
-    - name: Create a mailto hyperlink in a presentation in PowerPoint for Mac
-      href: ../powerpoint/create-powerpoint-mailto-hyperlink.md
-    - name: Embedded videos don't play
-      href: ../powerpoint/embedded-video-not-play.md
-    - name: Error when you open a presentation
-      href: ../powerpoint/error-when-you-open-presentation.md
-    - name: File size of an existing presentation increases
-      href: ../powerpoint/presentation-file-size-increases.md
     - name: Hlink.dll Can't Be Loaded
       href: ../powerpoint/viewing-presentation-fails.md
     - name: Fonts aren't embedded
@@ -957,14 +839,6 @@
       href: ../powerpoint/not-enought-printer-memory-available.md
     - name: Office opens blank from SharePoint
       href: ../powerpoint/office-opens-blank-from-sharepoint.md
-    - name: Only the audio plays with a video file
-      href: ../powerpoint/powerpoint-video-file-only-audio-plays.md
-    - name: Password to modify a presentation is required
-      href: ../powerpoint/require-password-to-modify-presentation.md
-    - name: PowerPoint 2010 not responding
-      href: ../powerpoint/powerpoint-not-responding.md
-    - name: Powerpoint doesn't print in pure black and white
-      href: ../powerpoint/powerpoint-not-print-in-pure-black-white.md
     - name: PowerPoint files not rendering in Office Online Server after Security Update
       href: ../powerpoint/files-not-rendering-office-online-server-after-security-update.md
     - name: PowerPoint for Mac startup error
@@ -973,16 +847,10 @@
       href: ../powerpoint/powerpoint-stops-responding.md
     - name: Save presentation as webpage is unavailable
       href: ../powerpoint/save-presentation-as-webpage-unavailable.md
-    - name: Shortcuts to control display of grid and guides
-      href: ../powerpoint/grid-guides-keyboard-shortcuts.md
     - name: Slide transition sounds are missing
       href: ../powerpoint/slide-transition-sounds-missing.md
     - name: Troubleshoot a damaged presentation
       href: ../powerpoint/damaged-presentation.md
-    - name: You can't embed an online video in a presentation
-      href: ../powerpoint/cant-embed-online-video.md
-    - name: Videos are listed as "Unsupported
-      href: ../powerpoint/videos-listed-as-unsupported.md
   - name: Project
     items:
     - name: "\"Can not save to global.mpt\" when existing Project"
@@ -1049,10 +917,6 @@
       href: ../project/tasks-not-scheduled.md
   - name: Publisher
     items:
-    - name: Publication is printed incorrectly
-      href: ../publisher/print-publication-incorrectly.md
-    - name: Publisher can't open file with OLE objects
-      href: ../publisher/publisher-cannot-open-the-file-error.md
     - name: Text boxes in Publisher-created email are converted to bitmap
       href: ../publisher/text-boxes-coverted-to-bitmap.md
   - name: Settings
@@ -1113,50 +977,24 @@
       href: ../word/image-part-relationship-rld8-not-found-error-microsoft-word.md
     - name: A connector doesn't move when moving a shape
       href: ../word/connector-not-move-with-shapes.md
-    - name: Background is not printed in Word
-      href: ../word/background-is-not-printed-in-word.md
-    - name: Can't edit text in print preview
-      href: ../word/cannot-edit-text-print-preview.md
-    - name: Can't insert QuickTime media into presentations
-      href: ../word/cannot-insert-quicktime-media.md
     - name: Can't open documents with unsupported XML elements
       href: ../word/custom-xml-elements-not-supported.md
     - name: Can't open this file because it is larger than 512 Megabytes
       href: ../word/file-larger-than-512-megabytes.md
     - name: Can't use  mouse to draw selection rectangle
       href: ../word/cant-use-mouse-draw-selection-rectangle.md
-    - name: Change default view to Draft view
-      href: ../word/change-default-view-to-draft-view.md
-    - name: Changes in Word content layout
-      href: ../word/changes-in-content-layout.md
-    - name: Changes to default font not retained
-      href: ../word/default-font-changes-not-retained.md
-    - name: Changes to settings aren't updated in the Preview window
-      href: ../word/change-to-print-setting-not-update.md
     - name: Configure the default search engine
       href: ../word/configure-search-engine-in-word.md
     - name: Create TOC entries without page numbers
       href: ../word/create-toc-entries-no-page-number.md
     - name: Cross-reference links don't update to the correct heading number
       href: ../word/cross-reference-links-update.md
-    - name: Custom XML markup is removed
-      href: ../word/custom-xml-markup-is-removed.md
     - name: Customize the color of the spelling and grammar checker underlines
       href: ../word/spelling-grammar-checker-underline-color.md
     - name: Damaged documents in Word
       href: ../word/damaged-documents-in-word.md
-    - name: Faq about hyperlinks in Word
-      href: ../word/faq-about-hyperlinks-in-word.md
-    - name: Faq about the Comments feature in Word
-      href: ../word/faq-about-comments-feature-in-word.md
-    - name: Fonts in Word
-      href: ../word/troubleshoot-font-problems.md
-    - name: Graphics and images don't display correctly in 32-bit version of Word
-      href: ../word/graphics-images-display-incorrectly-32-bit.md
     - name: Image DPI is changed after you print to PDF
       href: ../word/image-dpi-change-after-print-to-pdf.md
-    - name: Issue when opening a .wps file
-      href: ../word/open-wps-file-word.md
     - name: Issues when start or use Word
       href: ../word/issues-when-start-or-use-word.md
     - name: Mail merge issue
@@ -1165,62 +1003,28 @@
       href: ../word/merge-word-documents.md
     - name: Object may not appear in Word 2010
       href: ../word/object-not-appear-in-word-2010.md
-    - name: On-screen keyboard opens repeatedly
-      href: ../word/on-screen-keyboard-open-repeatedly.md
     - name: Opening file is blocked by registry policy
       href: ../word/opening-file-blocked-by-registry-policy.md
     - name: Operating parameter limitations and specifications
       href: ../word/operating-parameter-limitation.md
-    - name: Overtype mode is disabled
-      href: ../word/overtype-mode-is-disabled.md
     - name: Performance issues with AutoRecover location
       href: ../word/performance-issue-on-autorecover-location.md
-    - name: Print a general field
-      href: ../word/print-general-field.md
-    - name: Print a range of pages in a multiple-section document
-      href: ../word/print-a-range-of-pages.md
     - name: Print failures in Word
       href: ../word/print-failures-in-word.md
-    - name: Printer settings are ignored
-      href: ../word/printer-settings-not-used.md
-    - name: Recover lost documents
-      href: ../word/recover-lost-document.md
     - name: Reset user options and registry settings in Word
       href: ../word/reset-options-and-settings-in-word.md
-    - name: Scan and insert images into a document
-      href: ../word/insert-image-into-document.md
-    - name: Scroll bars are missing in Word for Mac
-      href: ../word/word-scroll-bars-missing.md
     - name: Spell checker doesn't check text in the form fields
       href: ../word/spell-checker-not-check-form-field-text.md
     - name: Spell Checker not recognizes misspelled words in Word 2010
       href: ../word/not-recognize-mispespelled-words-in-word.md
-    - name: Tabbing form fields content controls not working
-      href: ../word/tabbing-form-fields-content-controls-not-work.md
-    - name: Text is not copied from the Clipboard
-      href: ../word/text-not-copied-from-clipboard.md
-    - name: Toolbars missing in Word for Mac
-      href: ../word/word-mac-toolbars-missing.md
     - name: Track Changes functionality disabled when RMS is disabled
       href: ../word/track-changes-disabled.md
     - name: Troubleshoot print failures in Word for Office 365 on Windows 10
       href: ../word/print-failures-word-for-office-365-on-win-10.md
-    - name: Troubleshooting guide for unwanted page breaks
-      href: ../word/troubleshoot-unwanted-page-breaks.md
-    - name: Using printer fonts in Word
-      href: ../word/printer-fonts-in-word.md
     - name: Word could not create the work file
       href: ../word/word-could-not-create-the-work-file.md
-    - name: Word for Mac crashes with saving
-      href: ../word/word-for-mac-crashes-or-quits.md
-    - name: Word for Mac is closed unexpectedly
-      href: ../word/word-mac-closes-unexpectedly.md
     - name: Word slows or stops responding
       href: ../word/word-stops-responding.md
-    - name: Work with toolbars in Word
-      href: ../word/toolbars-and-toolbar-buttons-in-word.md
-    - name: Wrong paper size in the Printer Properties
-      href: ../word/paper-size-printer-property.md
     - name: You're prompted to save changes to global template
       href: ../word/save-changes-to-global-template.md
   - name: Office Developer

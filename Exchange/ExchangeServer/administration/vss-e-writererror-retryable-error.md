@@ -20,8 +20,6 @@ search.appverid: MET150
 ---
 # VSS_E_WRITERERROR_RETRYABLE error when backing up a passive database copy in an Exchange DAG
 
-This article provides a solution for the **VSS_E_WRITERERROR_RETRYABLE** error that occurs when backing up a passive database copy in Microsoft Exchange Server 2016 or Exchange Server 2013 database availability group (DAG).
-
 _Original KB number:_ &nbsp; 4037535
 
 ## Symptoms

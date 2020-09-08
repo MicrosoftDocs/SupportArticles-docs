@@ -23,8 +23,6 @@ appliesto:
 ---
 # Error (too many recipients) when you update a meeting in a large Outlook distribution group
 
-This article helps you resolve the problem that you receive a non-delivery report (NDR) when you send an update to a meeting in a large Outlook distribution group.
-
 _Original KB number:_ &nbsp; 3024804
 
 ## Symptoms

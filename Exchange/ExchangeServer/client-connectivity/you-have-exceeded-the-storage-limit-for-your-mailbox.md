@@ -20,8 +20,6 @@ search.appverid: MET150
 ---
 # You've exceeded the storage limit for your mailbox error when signing in to Outlook on the Web
 
-This article provides methods to solve the **You've exceeded the storage limit for your mailbox** error that occurs when you try to sign in to Outlook on the Web (formally known as Outlook Web App) in Microsoft Exchange Server 2016 or Exchange Server 2013.
-
 _Original KB number:_ &nbsp; 2958940
 
 ## Summary

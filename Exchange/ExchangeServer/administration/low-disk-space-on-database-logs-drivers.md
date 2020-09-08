@@ -18,8 +18,6 @@ appliesto:
 ---
 # Low disk space on database logs or database drives
 
-This article helps you resolve the problems that a Mailbox database exhibits because low disk space on database or database log volume.
-
 _Original KB number:_ &nbsp; 2619978
 
 ## Symptoms

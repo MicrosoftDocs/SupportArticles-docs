@@ -19,8 +19,6 @@ appliesto:
 ---
 # Can't view Office 365 IRM-encrypted message for dynamic distribution group
 
-This article discusses a by-design behavior where recipients can't open messages that are sent to a dynamic distribution group with Azure Information Protection Information Rights Management (IRM)-encrypted.
-
 _Original KB number:_ &nbsp; 4459264
 
 ## Symptoms

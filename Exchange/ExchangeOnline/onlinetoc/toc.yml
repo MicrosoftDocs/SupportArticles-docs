@@ -31,8 +31,12 @@
       href: ../configure-mailboxes/cannot-remove-mailbox-permission-office-365.md
     - name: Enable or disable POP3, IMAP, MAPI, OWA or ActiveSync
       href: ../configure-mailboxes/pop3-imap-owa-activesync-office-365.md
+    - name: How to create and manage resource mailboxes
+      href: ../configure-mailboxes/create-and-manage-resource-mailboxes.md
     - name: Mailbox provision delays
       href: ../configure-mailboxes/delays-provision-mailbox-sync-changes.md
+    - name: Restore user mailboxes by using cmdlets
+      href: ../configure-mailboxes/mailbox-recovery-in-exchange-online.md
     - name: Set automatic replies
       href: ../configure-mailboxes/set-automatic-replies.md
   - name: Connecting to the Service
@@ -103,6 +107,10 @@
       href: ../mailbox-migration/migrate-data-with-admin-center.md
     - name: No smtp proxy matching
       href: ../mailbox-migration/no-smtp-proxy-matching.md
+    - name: Troubleshoot issues with IMAP mailbox migration
+      href: ../mailbox-migration/troubleshoot-issues-with-imap-mailbox-migration.md
+    - name: Troubleshoot mailbox migration issues
+      href: ../mailbox-migration/troubleshoot-migration-issues-in-exchange-hybrid.md
     - name: WhenCreated date is changed
       href: ../mailbox-migration/whencreated-date-changed.md
   - name: Mailflow
@@ -165,6 +173,8 @@
       href: ../public-folders/add-reviewer-permission-public-folder-calendar-powershell.md
     - name: Can't apply permissions to subfolders
       href: ../public-folders/can’t-apply-permissions-public-folder-subfolders.md
+    - name: Can't connect to public folders via Outlook or OWA
+      href: ../public-folders/outlook-or-owa-cannot-connect-to-public-folders.md
     - name: Can't delete items
       href: ../public-folders/cannot-delete-items-public-folder.md
     - name: MEPF synchronization issues
@@ -185,5 +195,7 @@
       href: ../send-emails/understand-troubleshoot-oof-replies.md
   - name: Shared Mailboxes
     items:
+    - name: How to access other user's mailboxes
+      href: ../shared-mailboxes/how-to-access-other-mailboxes.md
     - name: Sent items aren't saved
       href: ../shared-mailboxes/sent-mail-is-not-saved.md

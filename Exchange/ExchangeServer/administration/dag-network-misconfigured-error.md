@@ -19,8 +19,6 @@ search.appverid: MET150
 ---
 # DAG network Misconfigured error in Exchange Server 2016
 
-This article provides a solution for the issue that **Misconfigured** error occurs when using the Multi-NIC Cluster Network feature in Microsoft Exchange Server 2016.
-
 _Original KB number:_ &nbsp; 4075323
 
 ## Symptoms

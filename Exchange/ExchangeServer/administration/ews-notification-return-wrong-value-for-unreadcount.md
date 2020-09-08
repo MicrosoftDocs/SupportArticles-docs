@@ -19,8 +19,6 @@ search.appverid: MET150
 ---
 # Exchange Web Services notification events can sometimes return an UnreadCount of -1
 
-This article provides a workaround to solve the issue that Exchange Web Services (EWS) push notifications sometimes return incorrect value for the `UnreadCount` property.
-
 _Original KB number:_ &nbsp; 4490422
 
 ## Symptoms

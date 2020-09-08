@@ -18,8 +18,6 @@ appliesto:
 ---
 # 550 550 5.1.1 or 550 5.7.1 NDR message when an external user sends an email message to a Universal Distribution Group
 
-This article provides help to resolve the problem where external users fail to send an email message to a Universal Distribution Group.
-
 _Original KB number:_ &nbsp; 2773786
 
 ## Symptoms

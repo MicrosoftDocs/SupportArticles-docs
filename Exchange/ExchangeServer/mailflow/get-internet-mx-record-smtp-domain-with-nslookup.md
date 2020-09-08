@@ -17,8 +17,6 @@ appliesto:
 ---
 # Obtain internet mail exchanger records with the nslookup.exe utility
 
-This article explains how to obtain internet mail exchanger (MX) records for the Simple Mail Transfer Protocol (SMTP) domain by using the Nslookup.exe utility.
-
 _Original KB number:_ &nbsp; 203204
 
 ## Summary

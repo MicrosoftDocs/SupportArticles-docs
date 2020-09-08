@@ -18,8 +18,6 @@ appliesto:
 ---
 # Error in Outlook Web App when Exchange Server 2013 users try to grant Delegate permissions to a security group: Sharing invitation couldn't be sent
 
-This article helps you resolve the problem that you can't grant Delegate permissions through Calendar sharing to a security group by using Microsoft Outlook Web App.
-
 _Original KB number:_ &nbsp; 3188800
 
 ## Symptoms

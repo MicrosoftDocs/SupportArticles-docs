@@ -19,8 +19,6 @@ search.appverid: MET150
 ---
 # You cannot create a DLP policy in Exchange Server 2013
 
-This article provides resolution and workaround to solve the issue that you can't create a data loss prevent (DLP) policy in Microsoft Exchange Server 2013.
-
 _Original KB number:_ &nbsp; 2769370
 
 ## Symptoms

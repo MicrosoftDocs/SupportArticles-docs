@@ -19,8 +19,6 @@ appliesto:
 ---
 # Error (The WinRM client... cannot determine the content type of the HTTP response from the destination computer) when you try to start Exchange Management Shell/Console
 
-This article helps you resolve the problem that you can't start Exchange Management Shell (EMS) or Exchange Management Console (EMC) on a computer that is running Microsoft Exchange Server 2010.
-
 _Original KB number:_ &nbsp; 2028305
 
 ## Symptoms

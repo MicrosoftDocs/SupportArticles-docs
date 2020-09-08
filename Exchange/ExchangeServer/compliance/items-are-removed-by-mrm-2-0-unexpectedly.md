@@ -20,8 +20,6 @@ search.appverid: MET150
 ---
 # Items that you want to retain are removed by MRM 2.0 in Exchange Server
 
-This article provides resolutions to solve the issue that Messaging Records Management (MRM) 2.0 policy unexpectedly removes items that you do not want removed in Microsoft Exchange Server.
-
 _Original KB number:_ &nbsp; 3036736
 
 ## Symptoms
