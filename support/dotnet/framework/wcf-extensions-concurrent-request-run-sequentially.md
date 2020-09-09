@@ -66,18 +66,18 @@ This behavior may also depend on the capabilities of the binding that's used for
 
 ## References
 
-- [ServiceAuthenticationManager class](/dotnet/api/system.servicemodel.serviceauthenticationmanager?&view=netframework-4.8)
+- [ServiceAuthenticationManager class](/dotnet/api/system.servicemodel.serviceauthenticationmanager?&view=netframework-4.8&preserve-view=true)
 
-- [ServiceAuthorizationManager class](/dotnet/api/system.servicemodel.serviceauthorizationmanager?&view=netframework-4.8)
+- [ServiceAuthorizationManager class](/dotnet/api/system.servicemodel.serviceauthorizationmanager?&view=netframework-4.8&preserve-view=true)
 
-- [IDispatchMessageInspector interface](/dotnet/api/system.servicemodel.dispatcher.idispatchmessageinspector?&view=netframework-4.8)
+- [IDispatchMessageInspector interface](/dotnet/api/system.servicemodel.dispatcher.idispatchmessageinspector?&view=netframework-4.8&preserve-view=true)
 
-- [IDispatchOperationSelector interface](/dotnet/api/system.servicemodel.dispatcher.idispatchoperationselector?&view=netframework-4.8)
+- [IDispatchOperationSelector interface](/dotnet/api/system.servicemodel.dispatcher.idispatchoperationselector?&view=netframework-4.8&preserve-view=true)
 
-- [ConcurrencyMode property](/dotnet/api/system.servicemodel.servicebehaviorattribute.concurrencymode?&view=netframework-4.8)
+- [ConcurrencyMode property](/dotnet/api/system.servicemodel.servicebehaviorattribute.concurrencymode?&view=netframework-4.8&preserve-view=true)
 
-- [BasicHttpBinding class](/dotnet/api/system.servicemodel.basichttpbinding?&view=dotnet-plat-ext-3.1)
+- [BasicHttpBinding class](/dotnet/api/system.servicemodel.basichttpbinding?&view=dotnet-plat-ext-3.1&preserve-view=true)
 
-- [WSHttpBinding class](/dotnet/api/system.servicemodel.wshttpbinding?&view=dotnet-plat-ext-3.1)
+- [WSHttpBinding class](/dotnet/api/system.servicemodel.wshttpbinding?&view=dotnet-plat-ext-3.1&preserve-view=true)
 
 - [WCF performance counters](/dotnet/framework/wcf/diagnostics/performance-counters/)
