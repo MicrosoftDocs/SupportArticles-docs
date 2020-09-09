@@ -28,4 +28,4 @@ productDirectory:
   - title:  Hardware Developer
     imageSrc: "../media/hub-landing/windows.svg"
     summary: Troubleshooting articles for Windows hardware developers
-    url: ../windows-hardware/welcome-windowshardware.md
+    url: ../windows-hardware/drivers/welcome-windowshardware.md
