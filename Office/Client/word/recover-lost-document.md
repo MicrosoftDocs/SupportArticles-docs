@@ -225,7 +225,7 @@ AutoRecover file names end in the .asd file name extension. By default, Word sea
 1. Use Word to automatically find the auto-recovered files. To do this, follow these steps:
 
    1. Right-click the taskbar, and select **Task Manager**.
-
+    
    :::image type="content" source="media/recover-lost-document/Contextual_Menu_md.png" alt-text="Select Task Manager.":::
 
    2. On the **Processes** tab, select any instance of **Winword.exe** or **Microsoft Word**, and then select **End Task** or **End Process**. Repeat this step until you have exited all instances of Winword.exe and Word.
