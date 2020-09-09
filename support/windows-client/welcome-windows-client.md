@@ -22,7 +22,6 @@ Browse the content listed below or use the search feature.
 - Networking
 - Performance
 - Printing
-- Printing
 - Remote Desktop Services
 - Shell Experience
 - System Management Components
