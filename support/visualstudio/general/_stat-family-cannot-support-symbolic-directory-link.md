@@ -40,7 +40,7 @@ If you use a `_stat-family` function call that has a `C:\abc\link` path, the re
 
 ## More information
 
-For more information about the C Runtime Library stat-functions, see [C Runtime Library (stat-functions)](/cpp/c-runtime-library/reference/stat-functions?view=vs-2019).
+For more information about the C Runtime Library stat-functions, see [C Runtime Library (stat-functions)](/cpp/c-runtime-library/reference/stat-functions?view=vs-2019&preserve-view=true).
 
 ## Applies to
 
