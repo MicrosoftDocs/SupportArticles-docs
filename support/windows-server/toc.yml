@@ -13,15 +13,15 @@
       href: ./identity/access-denied-create-ntds-settings-object.md
     - name: Account-identifier allocator fails to initialize
       href: ./identity/event-16650-account-identifier-allocator-not-initialize.md
-    - name: AD operations fail with Win32 error 1127
+    - name: AD replication fails with Win32 error 1127
       href: ./identity/replication-error-1127.md
-    - name: AD replications fail with error 1818
+    - name: AD replication fails with error 1818
       href: ./identity/replication-error-1818.md
-    - name: AD replications fail with error 5
+    - name: AD replication fails with error 5
       href: ./identity/replications-fail-with-error-5.md
-    - name: AD replications fail with error 8333
+    - name: AD replication fails with error 8333
       href: ./identity/replication-error-8333.md
-    - name: AD replications fail with error 8477
+    - name: AD replication fails with error 8477
       href: ./identity/replication-error-8477.md
     - name: Add special groups to built-in groups
       href: ./identity/add-special-groups-to-built-in-groups.md
