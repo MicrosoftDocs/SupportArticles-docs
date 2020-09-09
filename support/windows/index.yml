@@ -20,7 +20,12 @@ productDirectory:
     summary: Troubleshooting articles for Windows clients
     url: ../windows-client/welcome-windows-client.md
     
-  - title:  Windows Developer
+  - title:  Application Developer
     imageSrc: "../media/hub-landing/windows.svg"
-    summary: Troubleshooting articles for Windows developers
+    summary: Troubleshooting articles for Windows application developers
     url: win32/welcome-windowsdeveloper.md
+
+  - title:  Hardware Developer
+    imageSrc: "../media/hub-landing/windows.svg"
+    summary: Troubleshooting articles for Windows hardware developers
+    url: ../windows-hardware/welcome-windowshardware.md
