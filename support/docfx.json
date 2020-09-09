@@ -102,8 +102,7 @@
         "system-center/orchestrator/**/*.md": "system-center",
         "system-center/scsm/**/*.md": "system-center",
         "system-center/vmm/**/*.md": "system-center",
-        "microsoft-identity-manager/*.md": "microsoft-identity-manager",
-        "azure/**/*.md": "azure"
+        "microsoft-identity-manager/*.md": "microsoft-identity-manager"
       },
       "ms.technology": {
         "biztalk/**/*.md": "",
