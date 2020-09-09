@@ -29,7 +29,7 @@ The configured TCP port for the desired Microsoft SQL Server instance must be ac
 - Opalis Integration Server Action Server
 - Opalis Integration Server Operator Console
 
-By default, Microsoft SQL Server's default instance listens on TCP port 1433. However, this can be changed by following the instructions in [Configure a Server to Listen on a Specific TCP Port](/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port?view=sql-server-ver15).
+By default, Microsoft SQL Server's default instance listens on TCP port 1433. However, this can be changed by following the instructions in [Configure a Server to Listen on a Specific TCP Port](/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port).
 
 ## Opalis Integration Server Management Server
 

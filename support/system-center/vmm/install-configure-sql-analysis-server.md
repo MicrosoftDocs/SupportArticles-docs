@@ -28,5 +28,5 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
 
 For more information on how to setup SQL Analysis Services using a command line, see the following articles:
 
-- [Install SQL Server from the Command Prompt](/sql/database-engine/install-windows/install-sql-server-from-the-command-prompt?redirectedfrom=MSDN&view=sql-server-ver15)
-- [Install SQL Server Analysis Services](/analysis-services/instances/install-windows/install-analysis-services?redirectedfrom=MSDN&view=asallproducts-allversions&viewFallbackFrom=sql-server-ver15)
+- [Install SQL Server from the Command Prompt](/sql/database-engine/install-windows/install-sql-server-from-the-command-prompt)
+- [Install SQL Server Analysis Services](/analysis-services/instances/install-windows/install-analysis-services)

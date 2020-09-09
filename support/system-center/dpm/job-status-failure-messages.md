@@ -103,7 +103,7 @@ This problem may occur if the real-time monitoring component of an antivirus pro
 
 ## Resolution
 
-To resolve this problem, see [Run antivirus software on the DPM server](/system-center/dpm/run-antivirus-server?view=sc-dpm-2019).
+To resolve this problem, see [Run antivirus software on the DPM server](/system-center/dpm/run-antivirus-server).
 
 ## More information
 
