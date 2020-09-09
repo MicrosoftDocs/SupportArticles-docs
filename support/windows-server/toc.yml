@@ -3,236 +3,206 @@
 
 - name: Active Directory
   items:
-    - name: AD LDS and ADAM
-      items:
-        - name: How to configure AD and LDS diagnostic event logging
-          href: ./identity/configure-ad-and-lds-event-logging.md
-        - name: Troubleshoot OBJ_CLASS_VIOLATION error in Adamsync
-          href: ./identity/adamsync-error-obj-class-violation.md
-    - name: ADFS
-      items:
-        - name: ADFS 2.0 error 401
-          href: ./identity/adfs-error-401-requested-resource-requires-authentication.md
-        - name: Troubleshoot AD FS 2.0 error
-          href: ./identity/adfs-2-error-access-is-denied.md
-    - name: ADMT
-      items:
-        - name: ADMT 3.1 PES installation fails with error
-          href: ./identity/supplied-password-not-match-encryption-keys-password.md
-        - name: Troubleshoot sIDHistory migration with ADMTv2
-          href: ./identity/inter-forest-sidhistory-migration-with-admt.md
-        - name: Event 2089 if you don't back up a domain controller
-          href: ./identity/ntds-replication-event-2089-backup-latency-interval.md
-        - name: How to remove orphaned domains
-          href: ./identity/remove-orphaned-domains.md
-        - name: How to restore deleted user accounts and their groups
-          href: ./identity/retore-deleted-accounts-and-groups-in-ad.md
-        - name: Relocate a SYSVOL tree
-          href: ./identity/relocate-sysvol-tree-frs-for-replication.md
-        - name: Syskey.exe utility is no longer supported
-          href: ./identity/syskey-exe-utility-is-no-longer-supported.md
-        - name: SYSVOL folder isn't replicated between domain controllers
-          href: ./identity/file-replication-service-event-13552-13555.md
-    - name: Backup, restore, or disaster recovery
-      items:
-        - name: Back up recovery agent EFS private key
-          href: ./identity/back-up-recovery-agent-efs-private-key.md
-        - name: Certificate Services doesn't start
-          href: ./identity/certificate-services-not-start.md
-        - name: DPAPI MasterKey backup failures
-          href: ./identity/dpapi-masterkey-backup-failures.md
-        - name: How to reinstall CA role
-          href: ./identity/uninstall-reinstall-ca-role.md
-        - name: Move Certificate Server database and log files
-          href: ./identity/move-certificate-server-database-log-files.md
-        - name: Required trusted root certificates
-          href: ./identity/trusted-root-certificates-are-required.md
-        - name: Version 3 templates don't appear in certificate web enrollment
-          href: ./identity/cng-templates-not-appear-certificate-web-enrollment.md
-    - name: Certificate Services
-      items:
-        - name: "Adprep could not contact a replica"  error when running "Adprep /rodcprep" command
-          href: ./identity/error-run-adprep-rodcprep-command.md
-        - name: Database garbage collection process
-          href: ./identity/database-garbage-collection-caculation-of-allowed-intervals.md
-        - name: ESENT event IDs 1000, 1202, 412, and 454
-          href: ./identity/esent-events-1000-1202-412-454.md
-        - name: Event IDs 5788 and 5789 occur
-          href: ./identity/event-ids-5788-5789.md
-        - name: How to configure firewall for domains and trusts
-          href: ./identity/config-firewall-for-ad-domains-and-trusts.md
-    - name: DCPromo and installation of domain controllers
-      items:
-        - name: Access is denied when you promote domain controller
-          href: ./identity/access-denied-create-ntds-settings-object.md
-        - name: DC promotion stops responding
-          href: ./identity/dc-promotion-not-respond-netbios-disabled.md
-        - name: DCPROMO demotion fails
-          href: ./identity/dcpromo-demotion-fails.md
-        - name: Domain controller rename doesn't rename all AD DFSR SYSVOL objects
-          href: ./identity/sysvol-msdfsr-member-container-not-updated.md
-        - name: Errors when you run DCDIAG commands
-          href: ./identity/dcdiag-commands-running-errors.md
-        - name: FSMO placement and optimization
-          href: ./identity/fsmo-placement-and-optimization-on-ad-dcs.md
-        - name: Move Windows Server to a domain fails
-          href: ./identity/wizard-not-gain-access-to-domain.md
-    - name: Domain controller scalability or performance
-      items:
-        - name: DC returns only 5000 values in LDAP response
-          href: ./identity/domain-controller-returns-500-values-ldap-response.md
-        - name: How to troubleshoot high Lsass.exe CPU utilization
-          href: ./identity/troubleshoot-high-lsass.exe-cpu-utilization.md
-        - name: LDAP and Kerberos servers reset TCP sessions
-          href: ./identity/ldap-kerberos-server-reset-tcp-sessions.md
-        - name: Performance issues after you upgrade DCs
-          href: ./identity/dc-delayed-response-to-ldap-kerberos-request.md
-        - name: Use Event1644Reader.ps1 to analyze LDAP query performance
-          href: ./identity/event1644reader-analyze-ldap-query-performance.md
-    - name: Domain join issues
-      items:
-        - name: "The account is not authorized to login from this station" error
-          href: ./identity/account-not-authorized-login-from-this-station.md
-        - name: Default limit to workstation numbers
-          href: ./identity/default-workstation-numbers-join-domain.md
-        - name: Mechanism to locate a domain controller
-          href: ./identity/how-domain-controllers-are-located.md
-        - name: Netlogon service doesn't keep settings after in-place upgrade
-          href: ./identity/netlogon-service-not-start-automatically.md
-        - name: Unable to join computers to a domain
-          href: ./identity/cannot-join-computer-to-domain.md
-    - name: FSMO
-      items:
-        - name: Fail to seize RID master role with Ntdsutil
-          href: ./identity/error-seize-rid-master-role-with-ntdsutil.md
-        - name: FSMO roles
-          href: ./identity/fsmo-roles.md
-        - name: How to transfer or seize FSMO roles
-          href: ./identity/transfer-or-seize-fsmo-roles-in-ad-ds.md
-    - name: LDAP configuration and interoperability
-      items:
-        - name: Enable LDAP over SSL
-          href: ./identity/enable-ldap-over-ssl-3rd-certification-authority.md
-        - name: How to enable LDAP signing in Windows Server
-          href: ./identity/enable-ldap-signing-in-windows-server.md
-        - name: LDAPS connection problems
-          href: ./identity/ldap-over-ssl-connection-issues.md
-        - name: View and set LDAP policy by using Ntdsutil
-          href: ./identity/view-set-ldap-policy-using-ntdsutil.md
-    - name: Replication
-      items:
-        - name: AD operations fail with Win32 error 1127
-          href: ./identity/replication-error-1127.md
-        - name: AD replications fail with error 1818
-          href: ./identity/replication-error-1818.md
-        - name: AD replications fail with error 5
-          href: ./identity/replications-fail-with-error-5.md
-        - name: AD replications fail with error 8333
-          href: ./identity/replication-error-8333.md
-        - name: AD replications fail with error 8477
-          href: ./identity/replication-error-8477.md
-        - name: Diagnose replication failures
-          href: ./identity/diagnose-replication-failures.md
-        - name: Hotfixes for DFS technologies
-          href: ./identity/distributed-file-system-hotfixes.md
-        - name: How to restrict RPC traffic to a specific port
-          href: ./identity/restrict-ad-rpc-traffic-to-specific-port.md
-        - name: Lingering objects still remain
-          href: ./identity/lingering-objects-remain.md
-        - name: Modify the default intra-site DC replication interval
-          href: ./identity/modify-default-intra-site-dc-replication-interval.md
-        - name: NTFRS deprecation blocks installation of replica DCs
-          href: ./identity/ntfrs-deprecation-blocks-replic-dc-installation.md
-        - name: Operations fail with Win32 error 8524
-          href: ./identity/replication-error-8524.md
-        - name: Operations fail with Win32 error 1753
-          href: ./identity/replication-error-1753.md
-        - name: Replication error 1722
-          href: ./identity/replication-error-1722-rpc-server-unavailable.md
-        - name: Replication error 2146893022
-          href: ./identity/replication-error-2146893022.md
-        - name: Replication error 5 - Access is denied
-          href: ./identity/replication-error-5.md
-        - name: Replication error 8453
-          href: ./identity/replication-error-8453.md
-        - name: Replication error 8614
-          href: ./identity/replication-error-8614.md
-        - name: Replication error 8452
-          href: ./identity/replication-error-8452.md
-        - name: Troubleshoot replication error 8418
-          href: ./identity/replication-error-8418.md
-        - name: Troubleshoot replication error 8461
-          href: ./identity/adrepl-troubleshoot-replication-error-8461.md
-        - name: Troubleshoot replication error 8606
-          href: ./identity/replication-error-8606.md
-        - name: Troubleshoot domain controller replication error 1727
-          href: ./identity/remote-procedure-call-failed-and-did-not-execute-error.md
-    - name: Topology
-      items:
-        - name: Can't promote a DC to global catalog server
-          href: ./identity/cannot-promote-dc-to-global-catalog-server.md
-        - name: Issues when renaming sites in the AD forest
-          href: ./identity/problems-rename-active-directory-forest-sites.md
-        - name: Optimize domain controller location
-          href: ./identity/optimize-dc-location-global-catalog.md
-        - name: Problems with promoting DC to global catalog server
-          href: ./identity/promoting-dc-to-global-catalog-server-issues.md
-    - name: User, computer, group, and object management
-      items:
-        - name: Access denied after logging on to a local administrator account
-          href: ./identity/access-denied-log-on-administrator-domain-account.md
-        - name: Account-identifier allocator fails to initialize
-          href: ./identity/event-16650-account-identifier-allocator-not-initialize.md
-        - name: Add special groups to built-in groups
-          href: ./identity/add-special-groups-to-built-in-groups.md
-        - name: Can't access AD data from Source Control Explorer
-          href: ./identity/fail-to-access-data-from-source-control-explorer.md
-        - name: Can't add user or object to directory service
-          href: ./identity/cannot-add-user-object-differ-by-diacritic-mark-character.md
-        - name: Compatibility with user accounts ending with the dollar sign
-          href: ./identity/compatibility-user-accounts-end-dollar-sign.md
-        - name: How to enable Kerberos event logging
-          href: ./identity/enable-kerberos-event-logging.md
-        - name: Let non-administrators view deleted objects container
-          href: ./identity/non-administrators-view-deleted-object-container.md
-        - name: Multiple tabs of user properties are missing
-          href: ./identity/multiple-tabs-of-user-property-missing.md
-        - name: Name computers, domains, sites, and OUs
-          href: ./identity/naming-conventions-for-computer-domain-site-ou.md
-        - name: NET.EXE /ADD command doesn't support names longer than 20 characters
-          href: ./identity/net-add-not-support-names-exceeding-20-characters.md
-        - name: Password change for expired password fails
-          href: ./identity/error-password-change-expired-password.md
-        - name: Password-change protocols in Windows
-          href: ./identity/password-change-mechanisms.md
-        - name: Redirect users and computers containers
-          href: ./identity/redirect-users-computers-containers.md
-        - name: Set a user's password with Ldifde
-          href: ./identity/set-user-password-with-ldifde.md
-        - name: The Lingering Object Liquidator (LoL) tool
-          href: ./identity/lingering-object-liquidator-tool.md
-        - name: Troubleshoot AD replication error 8589
-          href: ./identity/replication-error-8589.md
-        - name: Use Adminpak to remotely administer computers
-          href: ./identity/use-adminpak-remotely-administer-computers.md
-        - name: Use Directory Service to manage AD objects
-          href: ./identity/directory-service-manage-objects.md
-        - name: UserAccountControl property flags
-          href: ./identity/useraccountcontrol-manipulate-account-properties.md
-        - name: Well-known security identifiers in Windows
-          href: ./identity/security-identifiers-in-windows.md
-    - name: Virtualized domain controller
-      items:
-        - name: Host AD DCs in virtual hosting environments
-          href: ./identity/ad-dc-in-virtual-hosting-environment.md
-    - name: Windows Time Service
-      items:
-        - name: How to configure authoritative time server
-          href: ./identity/configure-authoritative-time-server.md
-        - name: W32time settings fail when starting Windows Time Service in a workgroup
-          href: ./identity/w32time-sync-specialpollInterval-ignored.md
-        - name: Windows Time Service settings aren't preserved in an upgrade
-          href: ./identity/windows-time-service-values-reverted.md
+    - name: "\"Adprep could not contact a replica\"  error when running \"Adprep /rodcprep\" command"
+      href: ./identity/error-run-adprep-rodcprep-command.md
+    - name: "\"The account is not authorized to login from this station\" error"
+      href: ./identity/account-not-authorized-login-from-this-station.md
+    - name: Access denied after logging on to a local administrator account
+      href: ./identity/access-denied-log-on-administrator-domain-account.md
+    - name: Access is denied when you promote domain controller
+      href: ./identity/access-denied-create-ntds-settings-object.md
+    - name: Account-identifier allocator fails to initialize
+      href: ./identity/event-16650-account-identifier-allocator-not-initialize.md
+    - name: AD replication fails with Win32 error 1127
+      href: ./identity/replication-error-1127.md
+    - name: AD replication fails with error 1818
+      href: ./identity/replication-error-1818.md
+    - name: AD replication fails with error 5
+      href: ./identity/replications-fail-with-error-5.md
+    - name: AD replication fails with error 8333
+      href: ./identity/replication-error-8333.md
+    - name: AD replication fails with error 8477
+      href: ./identity/replication-error-8477.md
+    - name: Add special groups to built-in groups
+      href: ./identity/add-special-groups-to-built-in-groups.md
+    - name: ADFS 2.0 error 401
+      href: ./identity/adfs-error-401-requested-resource-requires-authentication.md
+    - name: ADMT 3.1 PES installation fails with error
+      href: ./identity/supplied-password-not-match-encryption-keys-password.md
+    - name: Back up recovery agent EFS private key
+      href: ./identity/back-up-recovery-agent-efs-private-key.md
+    - name: Can't access AD data from Source Control Explorer
+      href: ./identity/fail-to-access-data-from-source-control-explorer.md
+    - name: Can't add user or object to directory service
+      href: ./identity/cannot-add-user-object-differ-by-diacritic-mark-character.md
+    - name: Can't promote a DC to global catalog server
+      href: ./identity/cannot-promote-dc-to-global-catalog-server.md
+    - name: Certificate Services doesn't start
+      href: ./identity/certificate-services-not-start.md
+    - name: Compatibility with user accounts ending with the dollar sign
+      href: ./identity/compatibility-user-accounts-end-dollar-sign.md
+    - name: Database garbage collection process
+      href: ./identity/database-garbage-collection-caculation-of-allowed-intervals.md
+    - name: DC promotion stops responding
+      href: ./identity/dc-promotion-not-respond-netbios-disabled.md
+    - name: DC returns only 5000 values in LDAP response
+      href: ./identity/domain-controller-returns-500-values-ldap-response.md
+    - name: DCPROMO demotion fails
+      href: ./identity/dcpromo-demotion-fails.md
+    - name: Default limit to workstation numbers
+      href: ./identity/default-workstation-numbers-join-domain.md
+    - name: Diagnose replication failures
+      href: ./identity/diagnose-replication-failures.md
+    - name: Domain controller rename doesn't rename all AD DFSR SYSVOL objects
+      href: ./identity/sysvol-msdfsr-member-container-not-updated.md
+    - name: DPAPI MasterKey backup failures
+      href: ./identity/dpapi-masterkey-backup-failures.md
+    - name: Enable LDAP over SSL
+      href: ./identity/enable-ldap-over-ssl-3rd-certification-authority.md
+    - name: Errors when you run DCDIAG commands
+      href: ./identity/dcdiag-commands-running-errors.md
+    - name: ESENT event IDs 1000, 1202, 412, and 454
+      href: ./identity/esent-events-1000-1202-412-454.md
+    - name: Event 2089 if you don't back up a domain controller
+      href: ./identity/ntds-replication-event-2089-backup-latency-interval.md
+    - name: Event IDs 5788 and 5789 occur
+      href: ./identity/event-ids-5788-5789.md
+    - name: Fail to seize RID master role with Ntdsutil
+      href: ./identity/error-seize-rid-master-role-with-ntdsutil.md
+    - name: FSMO placement and optimization
+      href: ./identity/fsmo-placement-and-optimization-on-ad-dcs.md
+    - name: FSMO roles
+      href: ./identity/fsmo-roles.md
+    - name: Host AD DCs in virtual hosting environments
+      href: ./identity/ad-dc-in-virtual-hosting-environment.md
+    - name: Hotfixes for DFS technologies
+      href: ./identity/distributed-file-system-hotfixes.md
+    - name: How to configure AD and LDS diagnostic event logging
+      href: ./identity/configure-ad-and-lds-event-logging.md
+    - name: How to configure authoritative time server
+      href: ./identity/configure-authoritative-time-server.md
+    - name: How to configure firewall for domains and trusts
+      href: ./identity/config-firewall-for-ad-domains-and-trusts.md
+    - name: How to enable Kerberos event logging
+      href: ./identity/enable-kerberos-event-logging.md
+    - name: How to enable LDAP signing in Windows Server
+      href: ./identity/enable-ldap-signing-in-windows-server.md
+    - name: How to reinstall CA role
+      href: ./identity/uninstall-reinstall-ca-role.md
+    - name: How to remove orphaned domains
+      href: ./identity/remove-orphaned-domains.md
+    - name: How to restore deleted user accounts and their groups
+      href: ./identity/retore-deleted-accounts-and-groups-in-ad.md
+    - name: How to transfer or seize FSMO roles
+      href: ./identity/transfer-or-seize-fsmo-roles-in-ad-ds.md
+    - name: How to restrict RPC traffic to a specific port
+      href: ./identity/restrict-ad-rpc-traffic-to-specific-port.md
+    - name: How to troubleshoot high Lsass.exe CPU utilization
+      href: ./identity/troubleshoot-high-lsass.exe-cpu-utilization.md
+    - name: Issues when renaming sites in the AD forest
+      href: ./identity/problems-rename-active-directory-forest-sites.md
+    - name: LDAP and Kerberos servers reset TCP sessions
+      href: ./identity/ldap-kerberos-server-reset-tcp-sessions.md
+    - name: LDAPS connection problems
+      href: ./identity/ldap-over-ssl-connection-issues.md
+    - name: Let non-administrators view deleted objects container
+      href: ./identity/non-administrators-view-deleted-object-container.md
+    - name: Lingering objects still remain
+      href: ./identity/lingering-objects-remain.md
+    - name: Mechanism to locate a domain controller
+      href: ./identity/how-domain-controllers-are-located.md
+    - name: Modify the default intra-site DC replication interval
+      href: ./identity/modify-default-intra-site-dc-replication-interval.md
+    - name: Move Certificate Server database and log files
+      href: ./identity/move-certificate-server-database-log-files.md
+    - name: Move Windows Server to a domain fails
+      href: ./identity/wizard-not-gain-access-to-domain.md
+    - name: Multiple tabs of user properties are missing
+      href: ./identity/multiple-tabs-of-user-property-missing.md
+    - name: Name computers, domains, sites, and OUs
+      href: ./identity/naming-conventions-for-computer-domain-site-ou.md
+    - name: NET.EXE /ADD command doesn't support names longer than 20 characters
+      href: ./identity/net-add-not-support-names-exceeding-20-characters.md
+    - name: Netlogon service doesn't keep settings after in-place upgrade
+      href: ./identity/netlogon-service-not-start-automatically.md
+    - name: NTFRS deprecation blocks installation of replica DCs
+      href: ./identity/ntfrs-deprecation-blocks-replic-dc-installation.md
+    - name: Operations fail with Win32 error 8524
+      href: ./identity/replication-error-8524.md
+    - name: Operations fail with Win32 error 1753
+      href: ./identity/replication-error-1753.md
+    - name: Optimize domain controller location
+      href: ./identity/optimize-dc-location-global-catalog.md
+    - name: Password change for expired password fails
+      href: ./identity/error-password-change-expired-password.md
+    - name: Password-change protocols in Windows
+      href: ./identity/password-change-mechanisms.md
+    - name: Performance issues after you upgrade DCs
+      href: ./identity/dc-delayed-response-to-ldap-kerberos-request.md
+    - name: Problems with promoting DC to global catalog server
+      href: ./identity/promoting-dc-to-global-catalog-server-issues.md
+    - name: Redirect users and computers containers
+      href: ./identity/redirect-users-computers-containers.md
+    - name: Relocate a SYSVOL tree
+      href: ./identity/relocate-sysvol-tree-frs-for-replication.md
+    - name: Replication error 1722
+      href: ./identity/replication-error-1722-rpc-server-unavailable.md
+    - name: Replication error 2146893022
+      href: ./identity/replication-error-2146893022.md
+    - name: Replication error 5 - Access is denied
+      href: ./identity/replication-error-5.md
+    - name: Replication error 8453
+      href: ./identity/replication-error-8453.md
+    - name: Replication error 8452
+      href: ./identity/replication-error-8452.md
+    - name: Required trusted root certificates
+      href: ./identity/trusted-root-certificates-are-required.md
+    - name: Rreplication error 8614
+      href: ./identity/replication-error-8614.md
+    - name: Set a user's password with Ldifde
+      href: ./identity/set-user-password-with-ldifde.md
+    - name: Syskey.exe utility is no longer supported
+      href: ./identity/syskey-exe-utility-is-no-longer-supported.md
+    - name: SYSVOL folder isn't replicated between domain controllers
+      href: ./identity/file-replication-service-event-13552-13555.md
+    - name: The Lingering Object Liquidator (LoL) tool
+      href: ./identity/lingering-object-liquidator-tool.md
+    - name: Troubleshoot AD FS 2.0 error
+      href: ./identity/adfs-2-error-access-is-denied.md
+    - name: Troubleshoot AD replication error 8589
+      href: ./identity/replication-error-8589.md
+    - name: Troubleshoot OBJ_CLASS_VIOLATION error in Adamsync
+      href: ./identity/adamsync-error-obj-class-violation.md
+    - name: Troubleshoot replication error 8418
+      href: ./identity/replication-error-8418.md
+    - name: Troubleshoot replication error 8461
+      href: ./identity/adrepl-troubleshoot-replication-error-8461.md
+    - name: Troubleshoot replication error 8606
+      href: ./identity/replication-error-8606.md
+    - name: Troubleshoot sIDHistory migration with ADMTv2
+      href: ./identity/inter-forest-sidhistory-migration-with-admt.md
+    - name: Troubleshoot domain controller replication error 1727
+      href: ./identity/remote-procedure-call-failed-and-did-not-execute-error.md
+    - name: Unable to join computers to a domain
+      href: ./identity/cannot-join-computer-to-domain.md
+    - name: Use Adminpak to remotely administer computers
+      href: ./identity/use-adminpak-remotely-administer-computers.md
+    - name: Use Directory Service to manage AD objects
+      href: ./identity/directory-service-manage-objects.md
+    - name: Use Event1644Reader.ps1 to analyze LDAP query performance
+      href: ./identity/event1644reader-analyze-ldap-query-performance.md
+    - name: UserAccountControl property flags
+      href: ./identity/useraccountcontrol-manipulate-account-properties.md
+    - name: Version 3 templates don't appear in certificate web enrollment
+      href: ./identity/cng-templates-not-appear-certificate-web-enrollment.md
+    - name: View and set LDAP policy by using Ntdsutil
+      href: ./identity/view-set-ldap-policy-using-ntdsutil.md
+    - name: W32time settings fail when starting Windows Time Service in a workgroup
+      href: ./identity/w32time-sync-specialpollInterval-ignored.md
+    - name: Well-known security identifiers
+      href: ./identity/security-identifiers-in-windows.md
+    - name: Windows Time Service settings aren't preserved in an upgrade
+      href: ./identity/windows-time-service-values-reverted.md
 
 - name: Admin Development
   items:
