@@ -2,8 +2,8 @@
 title: Use Userdump.exe to create a dump file
 description: Describes how to use the Userdump.exe tool to generate a user dump of a process that shuts down with an exception or that stops responding.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

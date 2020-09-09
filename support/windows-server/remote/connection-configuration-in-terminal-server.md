@@ -2,8 +2,8 @@
 title: Connection Configuration in Terminal Server
 description: Discusses the Terminal Server Administration tool, Connection Configuration.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

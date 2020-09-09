@@ -2,8 +2,8 @@
 title: Mark an attribute as confidential
 description: Describes how to use the confidential attributes feature in Windows Server 2003 Service Pack 1 (SP1). The confidential attribute feature is introduced by Windows Server 2003 SP1.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

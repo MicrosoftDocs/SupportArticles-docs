@@ -35,4 +35,4 @@ To fix this issue, assign an Intune license to the user account.
 For more information, see the following articles:
 
 - [Assign licenses to users so they can enroll devices in Intune](/mem/intune/fundamentals/licenses-assign)
-- [Add users individually or in bulk](/microsoft-365/admin/add-users/add-users?view=o365-worldwide)
+- [Add users individually or in bulk](/microsoft-365/admin/add-users/add-users)

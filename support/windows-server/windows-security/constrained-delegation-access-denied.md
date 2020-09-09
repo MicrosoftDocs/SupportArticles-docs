@@ -2,8 +2,8 @@
 title: Constrained delegation for CIFS fails with ACCESS_DENIED error
 description: Fixes an access denied error that occurs when you access a service that uses network shares on a middle-tier server.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Deland-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

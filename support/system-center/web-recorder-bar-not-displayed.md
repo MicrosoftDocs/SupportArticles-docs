@@ -2,6 +2,7 @@
 title: Web recorder bar is missing in Internet Explorer
 description: Fixes an issue in which the Web recorder bar is missing in Internet Explorer when attempting to record a browser session as part of creating a Web Application monitor.
 ms.date: 08/18/2020
+ms.prod: system-center
 ms.prod-support-area-path: 
 ms.reviewer: jchornbe
 ---

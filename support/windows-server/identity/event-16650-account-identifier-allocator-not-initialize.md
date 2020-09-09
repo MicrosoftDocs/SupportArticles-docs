@@ -2,8 +2,8 @@
 title: Account-identifier allocator fails to initialize
 description: Describes Event 16650 and how to resolve Event 16650 RID Master errors on Windows Server-based computers.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

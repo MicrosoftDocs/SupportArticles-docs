@@ -2,6 +2,7 @@
 title: Unhandled exception running a task against an agent
 description: Describes an unhandled exception error that occurs when you run a task against an agent in the System Center Essentials 2010 console.
 ms.date: 08/18/2020
+ms.prod: system-center
 ms.prod-support-area-path: 
 ---
 # Unhandled exception in the System Center Essentials 2010 console when running a task against an agent

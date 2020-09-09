@@ -11,7 +11,7 @@ This article helps you troubleshoot common errors that may be encountered durin
 _Original product version:_ &nbsp; System Center Operations Manager  
 _Original KB number:_ &nbsp; 4490426
 
-To monitor UNIX or Linux computers in System Center Operations Manager (OpsMgr), the computers must first be discovered, and the OpsMgr agent must be installed. The [Computer and Device Management Wizard](/system-center/scom/manage-deploy-crossplat-agent-console?view=sc-om-2019) is used to discover and install agents on UNIX and Linux computers. However, the discovery process may fail due to configuration issues, credential or privilege problems, or network and name resolution problems.
+To monitor UNIX or Linux computers in System Center Operations Manager (OpsMgr), the computers must first be discovered, and the OpsMgr agent must be installed. The [Computer and Device Management Wizard](/system-center/scom/manage-deploy-crossplat-agent-console) is used to discover and install agents on UNIX and Linux computers. However, the discovery process may fail due to configuration issues, credential or privilege problems, or network and name resolution problems.
 
 ## Certificate errors or certificate signing errors  
 

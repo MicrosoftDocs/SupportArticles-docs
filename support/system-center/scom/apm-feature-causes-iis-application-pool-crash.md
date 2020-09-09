@@ -25,7 +25,7 @@ There are several workarounds for this issue:
 
 - Application pool can be migrated to .NET Framework 4.0 runtime.
 - System Center 2016 Operations Manager agent can be replaced with System Center 2012 R2 Operations Manager agent. It's forward-compatible with System Center 2016 Operations Manager server and APM feature will continue to work with the older bits.
-- System Center 2016 Operations Manager agent can be reinstalled with the `NOAPM=1` switch in msiexec.exe setup command line, APM feature will be excluded from setup. For more information, see [To deploy the Operations Manager agent from the command line](/system-center/scom/manage-deploy-windows-agent-manually?view=sc-om-1807#to-deploy-the-operations-manager-agent-from-the-command-line).
+- System Center 2016 Operations Manager agent can be reinstalled with the `NOAPM=1` switch in msiexec.exe setup command line, APM feature will be excluded from setup. For more information, see [To deploy the Operations Manager agent from the command line](/system-center/scom/manage-deploy-windows-agent-manually#to-deploy-the-operations-manager-agent-from-the-command-line).
 
 ## More information
 

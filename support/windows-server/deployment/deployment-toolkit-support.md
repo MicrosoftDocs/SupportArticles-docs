@@ -2,8 +2,8 @@
 title: Microsoft Deployment Toolkit support life cycle
 description: Discusses the support life cycle for Microsoft Deployment Toolkits.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

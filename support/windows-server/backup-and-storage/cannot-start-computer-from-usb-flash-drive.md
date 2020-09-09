@@ -2,8 +2,8 @@
 title: Cannot start computer from a USB flash drive
 description: Describes an issue in which you cannot start a computer from an external removable USB hard disk that is formatted to use the FAT32 file system. This occurs because the USB drive is treated as a floppy disk. Provides a resolution.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Deland-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -174,6 +174,6 @@ DefaultCredentials represents the ASPNET user account (or NetworkService user ac
 
 - [Securing XML Web Services Created Using ASP.NET](/previous-versions/dotnet/netframework-1.1/w67h0dw7(v=vs.71))
 
-- [CredentialCache Class](/dotnet/api/system.net.credentialcache?view=netcore-3.1)
+- [CredentialCache Class](/dotnet/api/system.net.credentialcache?view=netcore-3.1&preserve-view=true)
 
-- [CredentialCache.DefaultCredentials Property](/dotnet/api/system.net.credentialcache.defaultcredentials?view=netcore-3.1)
+- [CredentialCache.DefaultCredentials Property](/dotnet/api/system.net.credentialcache.defaultcredentials?view=netcore-3.1&preserve-view=true)

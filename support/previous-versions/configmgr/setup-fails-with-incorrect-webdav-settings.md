@@ -2,6 +2,7 @@
 title: ConfigMgr 2007 setup fails with incorrect WebDAV settings
 description: Fixes an issue in which System Center Configuration Manager 2007 setup on Windows Server 2008 fails because of incorrect WebDAV settings.
 ms.date: 08/18/2020
+ms.prod: configuration-manager
 ms.prod-support-area-path: 
 ---
 # System Center Configuration Manager 2007 prerequisites checker reports WebDAV settings are incorrect

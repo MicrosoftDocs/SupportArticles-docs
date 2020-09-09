@@ -176,4 +176,4 @@ Bind the `DataGrid` Web server control to a data source through the `DataSource`
 
 ## References
 
-For more information about the `DataGrid` control and for samples that use this control, see [DataGrid Class](/dotnet/api/system.web.ui.webcontrols.datagrid?&view=netframework-4.8).
+For more information about the `DataGrid` control and for samples that use this control, see [DataGrid Class](/dotnet/api/system.web.ui.webcontrols.datagrid?view=netframework-4.8&preserve-view=true).

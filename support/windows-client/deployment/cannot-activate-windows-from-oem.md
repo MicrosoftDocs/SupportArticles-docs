@@ -2,8 +2,8 @@
 title: Can't activate Windows 7 with KMS
 description: Describes why you may receive an error message when you try to activate Windows Vista or Windows 7 on a computer by using the Key Management Service (KMS).
 ms.data: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

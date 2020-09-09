@@ -2,8 +2,8 @@
 title: Manage lock screen image
 description: Describes how an administrator can manage the lock screen image.
 ms.data: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

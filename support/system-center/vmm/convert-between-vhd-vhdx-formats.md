@@ -26,7 +26,7 @@ Use one of the following methods to convert between formats:
 - Use the Hyper-V UI in Windows Server 2012, select to edit the VHDX or VHD file and choose to convert to either VHD or VHDX.
 - Use the new `Convert-VHD` PowerShell cmdlet referenced here:
 
-   [Convert-VHD](/powershell/module/hyper-v/convert-vhd?view=win10-ps)
+   [Convert-VHD](/powershell/module/hyper-v/convert-vhd)
 
 > [!NOTE]
 > VHD conversion must be done when the VM is shut down.

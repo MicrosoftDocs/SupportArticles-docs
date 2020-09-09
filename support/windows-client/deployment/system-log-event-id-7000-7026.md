@@ -2,8 +2,8 @@
 title: Event ID 7000 or 7026 is logged in the System log on a computer running Windows 7, Windows Vista, Windows Server 2008 R2, or Windows Server 2008
 description: Describes a problem in which event ID 7000 or event ID 7026 may be logged after you start a computer that's running Windows 7, Windows Vista, Windows Server 2008, or Windows Server 2008 R2.
 ms.data: 09/08/2020
-author: delhan
-ms.author: Deland-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

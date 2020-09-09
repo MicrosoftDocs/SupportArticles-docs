@@ -2,8 +2,8 @@
 title: Dial-in is unavailable in MMC snap-in 
 description: Works around an issue where the Dial-in tab is not available in the Active Directory Users and Computers MMC snap-in
 ms.date: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

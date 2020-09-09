@@ -40,20 +40,20 @@ CreateMedia.exe is a 32-bit executable that's used to create media in Configurat
 
 To fix this issue, follow these steps:
 
-1. If Microsoft Visual Studio isn't already available in your environment, [download and install Visual Studio](/visualstudio/install/install-visual-studio?view=vs-2019). Select the **Desktop development with C++** workload when you install Visual Studio.
+1. If Microsoft Visual Studio isn't already available in your environment, [download and install Visual Studio](/visualstudio/install/install-visual-studio). Select the **Desktop development with C++** workload when you install Visual Studio.
 
    > [!NOTE]
    > We recommend that you install Visual Studio on a client computer instead of on a site server.
 
 2. Copy the CreateMedia.exe file to the computer that has Visual Studio installed. You can locate the CreateMedia.exe file on the site server under the <*ConfigMgr_Install_Directory*>\AdminConsole\bin\i386 folder.
-3. On the computer that has Visual Studio installed, [open the Developer Command Prompt](/cpp/build/building-on-the-command-line?view=vs-2019#developer_command_prompt) as an elevated Command Prompt window.
+3. On the computer that has Visual Studio installed, [open the Developer Command Prompt](/cpp/build/building-on-the-command-line#developer_command_prompt) as an elevated Command Prompt window.
 4. In the Developer Command Prompt, go to the directory where the CreateMedia.exe file is located, and then run the following command to check whether CreateMedia.exe can handle addresses that are larger than 2 GB:
 
    ```console
    dumpbin.exe /headers CreateMedia.exe
    ```
 
-   For more information about the `/HEADERS` DUMPBIN option, see [/HEADERS](/cpp/build/reference/headers?view=vs-2019).
+   For more information about the `/HEADERS` DUMPBIN option, see [/HEADERS](/cpp/build/reference/headers).
 
    If you see the following result under **FILE HEADER VALUES**, go to step 6:
 
@@ -67,7 +67,7 @@ To fix this issue, follow these steps:
    editbin.exe /largeaddressaware createmedia.exe
    ```
 
-   For more information about the `/LARGEADDRESSAWARE` EDITBIN option, see [/LARGEADDRESSAWARE](/cpp/build/reference/largeaddressaware?view=vs-2019).
+   For more information about the `/LARGEADDRESSAWARE` EDITBIN option, see [/LARGEADDRESSAWARE](/cpp/build/reference/largeaddressaware).
 
 6. On the site server, create a backup of the <*ConfigMgr_Install_Directory*>\AdminConsole\bin\i386\CreateMedia.exe file.
 7. Copy the modified version of CreateMedia.exe from the computer that has Visual Studio installed to the <*ConfigMgr_Install_Directory*>\AdminConsole\bin\i386 folder on the site server.
