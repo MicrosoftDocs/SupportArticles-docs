@@ -1,4 +1,3 @@
-@@ -1,343 +0,0 @@
 ---
 title: How to recover a lost Word document
 description: Describes a range of options to locate and recover lost Microsoft Word documents. Discusses Word 2019, Word 2016, Word 2013, and Word 2010 under various versions of Windows.
