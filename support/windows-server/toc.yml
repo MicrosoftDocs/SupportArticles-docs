@@ -434,8 +434,6 @@
       href: ./networking/dns-records-not-present.md
     - name: DNS server logs event 7062
       href: ./networking/dns-server-logs-event-7062.md
-    - name: DNS Servers can't resolve queries for top-level domains
-      href: ./networking/dns-not-resolve-query-for-top-level-domain.md
     - name: Event 4015 when running DNS on RODC
       href: ./networking/rodc-logs-event-4015-error-00002095.md
     - name: Event ID 1056 after installing DHCP
