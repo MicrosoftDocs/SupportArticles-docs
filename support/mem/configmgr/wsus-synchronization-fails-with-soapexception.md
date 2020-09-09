@@ -106,4 +106,4 @@ To do this, follow these steps on the topmost WSUS server that connects direct
 
 ## More information
 
-For more information about how to run PowerShell scripts, see [What is PowerShell?](/powershell/scripting/overview?view=powershell-7).
+For more information about how to run PowerShell scripts, see [What is PowerShell?](/powershell/scripting/overview).
