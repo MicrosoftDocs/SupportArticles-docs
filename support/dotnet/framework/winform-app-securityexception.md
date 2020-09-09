@@ -96,6 +96,6 @@ If your environment has a fixed proxy configured, you can turn off the automatic
 
 ## More information
 
-- [HttpWebRequest.BeginGetResponse(AsyncCallback, Object) Method](/dotnet/api/system.net.httpwebrequest.begingetresponse?&view=netcore-3.1)
-- [WebProxy.GetProxy(Uri) Method](/dotnet/api/system.net.webproxy.getproxy?&view=netcore-3.1)
+- [HttpWebRequest.BeginGetResponse(AsyncCallback, Object) Method](/dotnet/api/system.net.httpwebrequest.begingetresponse?&view=netcore-3.1&preserve-view=true)
+- [WebProxy.GetProxy(Uri) Method](/dotnet/api/system.net.webproxy.getproxy?&view=netcore-3.1&preserve-view=true)
 - [\<proxy> Element (Network Settings)](/dotnet/framework/configure-apps/file-schema/network/proxy-element-network-settings)

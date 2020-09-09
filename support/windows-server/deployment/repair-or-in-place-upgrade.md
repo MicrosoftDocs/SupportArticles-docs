@@ -2,8 +2,8 @@
 title: How to do an in-place upgrade
 description: This article introduces how to do a repair/in-place upgrade of the existing installation for Windows 7 Service Pack 1.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Deland-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: ITPro
 ms.topic: troubleshooting

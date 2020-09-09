@@ -32,7 +32,7 @@ You've developed a Microsoft .NET Framework 4.x application that uses the Window
 
 ## Cause
 
-The DataGrid's **ItemsSource** is bound to a collection of custom objects, whose type definition has overridden the [Object.GetHashCode](/dotnet/api/system.object.gethashcode?&view=netcore-3.1) method. The overridden `GetHashCode` method has an incorrect implementation that computes a hash based on mutable properties in the class. This is an application bug, which is exposed in Microsoft .NET Framework 4.5 and later. In Microsoft .NET Framework 4.5, the implementation for the WPF `Selector` class was changed to make more extensive use of HashTables; in order to gain performance benefits.
+The DataGrid's **ItemsSource** is bound to a collection of custom objects, whose type definition has overridden the [Object.GetHashCode](/dotnet/api/system.object.gethashcode?&view=netcore-3.1&preserve-view=true) method. The overridden `GetHashCode` method has an incorrect implementation that computes a hash based on mutable properties in the class. This is an application bug, which is exposed in Microsoft .NET Framework 4.5 and later. In Microsoft .NET Framework 4.5, the implementation for the WPF `Selector` class was changed to make more extensive use of HashTables; in order to gain performance benefits.
 
 ## Resolution
 

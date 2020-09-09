@@ -2,8 +2,8 @@
 title: The record cannot be deleted error when you try delete a record from a DNS zone
 description: Explains that zone information on a DNS server can't be deleted. You must set full control permissions for DnsAdmins security group.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Deland-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

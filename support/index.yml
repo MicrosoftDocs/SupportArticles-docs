@@ -55,11 +55,6 @@ productDirectory:
     summary: Troubleshooting articles for Web Apps
     url: webapps/welcome-webapps.md
       
-  - title: Windows Developer
-    imageSrc: "media/hub-landing/logo_windows.svg"
-    summary: Troubleshooting articles for Windows Developer
-    url: windows/win32/welcome-windowsdeveloper.md
-      
   - title: Microsoft Endpoint Manager
     imageSrc: "media/hub-landing/MEM.jpg"
     summary: Troubleshooting articles for Microsoft Endpoint Manager

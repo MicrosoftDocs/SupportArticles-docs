@@ -2,8 +2,8 @@
 title: How to enable or disable DNS updates in Windows 2000 and in Windows Server 2003
 description: Describes how to disable and enable dynamic registration with DNS servers.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Deland-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

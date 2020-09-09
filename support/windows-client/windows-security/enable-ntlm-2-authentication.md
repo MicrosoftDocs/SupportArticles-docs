@@ -2,8 +2,8 @@
 title: Enable NTLM 2 authentication
 description: Describes how to enable NTLM 2 authentication.
 ms.data: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

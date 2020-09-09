@@ -2,8 +2,8 @@
 title: File shares on iSCSI devices aren't re-created
 description: Provides a resolution for an issue that may prevent file shares from being re-created. This issue occurs when you restart the computer.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -42,5 +42,5 @@ For more information about the Razor syntax and about some related MVC methods, 
 
 - [Introduction to ASP.NET Web Programming Using the Razor Syntax (C#)](/aspnet/web-pages/overview/getting-started/introducing-razor-syntax-c)
 - [Introduction to the LinkExtensions.ActionLink method](/previous-versions/aspnet/dd505040(v=vs.108))
-- [UrlHelper.Content(String) Method](/dotnet/api/system.web.mvc.urlhelper.content?&view=aspnet-mvc-5.2)
+- [UrlHelper.Content(String) Method](/dotnet/api/system.web.mvc.urlhelper.content?view=aspnet-mvc-5.2&preserve-view=true)
 - [URL Rewrite](https://www.iis.net/downloads/microsoft/url-rewrite)

@@ -2,8 +2,8 @@
 title: Installed programs are incorrectly displayed
 description: Provides a solution to an issue where the Add/Remove Programs tool in Control Panel displays installed programs incorrectly.
 ms.data: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -2,8 +2,8 @@
 title: Can't allow active content to run files
 description: Helps solve an issue where the Allow active content to run files on My Computer Group Policy setting doesn't work.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -2,8 +2,8 @@
 title: Can't create Virtual switch in Hyper-V
 description: Address an issue in which you receive an error when you create Hyper-V virtual switch in Windows Server 2019 (Build 17763).
 ms.date: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

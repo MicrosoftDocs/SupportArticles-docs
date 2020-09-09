@@ -2,8 +2,8 @@
 title: Flight Simulator X hangs on loading screen
 description: Fixes an issue in which Flight Simulator X hangs on the loading screen.
 ms.data: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

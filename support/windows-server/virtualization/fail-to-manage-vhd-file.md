@@ -2,8 +2,8 @@
 title: Error when you manage a VHD file
 description: Provides a solution to an error that occurs when you create a virtual machine in Hyper-V Manager.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting
