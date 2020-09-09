@@ -37,7 +37,7 @@ Additionally, an error message that resembles the following is logged in the WSU
    at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)  
    at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)  
    at System.Threading.ThreadHelper.ThreadStart()
-\<Date> \<Time> Error WsusService.25 SoapUtilities.LogException USS ThrowException: Actor = **https://fe2.update.microsoft.com/v6**/ServerSyncWebService/ServerSyncWebService.asmx, Method = "[http://www.microsoft.com/SoftwareDistribution/GetUpdateData](https://www.microsoft.com/SoftwareDistribution/GetUpdateData)", ID=\<ID>, ErrorCode=InternalServerError, Message=  
+\<Date> \<Time> Error WsusService.25 SoapUtilities.LogException USS ThrowException: Actor = **https://fe2.update.microsoft.com/v6**/ServerSyncWebService/ServerSyncWebService.asmx, Method = "`http://www.microsoft.com/SoftwareDistribution/GetUpdateData`", ID=\<ID>, ErrorCode=InternalServerError, Message=  
    at Microsoft.UpdateServices.Internal.SoapUtilities.LogException(SoapException e)  
    at Microsoft.UpdateServices.ServerSync.CatalogSyncAgentCore.ExecuteSyncProtocol(Boolean allowRedirect)  
    at Microsoft.UpdateServices.ServerSync.CatalogSyncAgentCore.CatalogSyncThreadProcess()  
@@ -106,4 +106,4 @@ To do this, follow these steps on the topmost WSUS server that connects direct
 
 ## More information
 
-For more information about how to run PowerShell scripts, see [What is PowerShell?](/powershell/scripting/overview?view=powershell-7).
+For more information about how to run PowerShell scripts, see [What is PowerShell?](/powershell/scripting/overview).

@@ -89,7 +89,7 @@ PKCS certificates aren't deployed, and the following error is logged in the NDE
 
 This issue occurs if the computer that hosts the Intune NDES Connector can't locate a certificate enrollment policy server.
 
-To fix the issue, manually configure the name of the certificate enrollment policy server on the computer that hosts the NDES connector by using the [Add-CertificateEnrollmentPolicyServer](/powershell/module/pkiclient/add-certificateenrollmentpolicyserver?view=win10-ps) cmdlet.
+To fix the issue, manually configure the name of the certificate enrollment policy server on the computer that hosts the NDES connector by using the [Add-CertificateEnrollmentPolicyServer](/powershell/module/pkiclient/add-certificateenrollmentpolicyserver) cmdlet.
 
 ## Error: The submission is pending
 

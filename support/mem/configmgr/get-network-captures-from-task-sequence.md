@@ -20,7 +20,7 @@ It's difficult to capture a network trace in Windows PE, as the `Netsh` command 
 
 ## Capture a network trace in Windows PE
 
-1. Extract the [Microsoft Network Monitor 3.4 (archive)](https://www.microsoft.com/download/details.aspx?id=4865) setup file to a local folder, and then extract the Netmon.msi by using Msiexec.exe.
+1. Extract the Microsoft Network Monitor setup file to a local folder, and then extract the Netmon.msi by using Msiexec.exe.
 
     :::image type="content" source="media/get-network-captures-from-task-sequence/figure-1.png" alt-text="extract" border="false":::
 

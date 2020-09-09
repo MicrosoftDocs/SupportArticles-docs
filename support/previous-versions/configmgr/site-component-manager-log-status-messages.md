@@ -2,6 +2,7 @@
 title: Site Component Manager logs error status messages
 description: Describes how to grant permissions to Systems Management Server 2003 or Configuration Manager 2007 to create or change the System Management container in Active Directory.
 ms.date: 08/20/2020
+ms.prod: configuration-manager
 ms.prod-support-area-path:
 ms.reviewer: clintk, v-jomcc
 ---
