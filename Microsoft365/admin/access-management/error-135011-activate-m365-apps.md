@@ -39,7 +39,7 @@ When you try to sign in to or activate Microsoft 365 apps, you receive the follo
 
 ## Cause
 
-This issue can occur if the device was either deleted or disabled in Azure Active Directory (AD), and the action the action was not initiated from the device itself. 
+This issue can occur if the device was either deleted or disabled in Azure Active Directory (AD), and the action was not initiated for the device itself. 
 
 ## Resolution
  
