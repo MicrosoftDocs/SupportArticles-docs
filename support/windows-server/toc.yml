@@ -51,7 +51,7 @@
           href: ./identity/cng-templates-not-appear-certificate-web-enrollment.md
     - name: Certificate Services
       items:
-        - name: "\"Adprep could not contact a replica\"  error when running \"Adprep /rodcprep\" command"
+        - name: "Adprep could not contact a replica"  error when running "Adprep /rodcprep" command
           href: ./identity/error-run-adprep-rodcprep-command.md
         - name: Database garbage collection process
           href: ./identity/database-garbage-collection-caculation-of-allowed-intervals.md
@@ -91,7 +91,7 @@
           href: ./identity/event1644reader-analyze-ldap-query-performance.md
     - name: Domain join issues
       items:
-        - name: "\"The account is not authorized to login from this station\" error"
+        - name: "The account is not authorized to login from this station" error
           href: ./identity/account-not-authorized-login-from-this-station.md
         - name: Default limit to workstation numbers
           href: ./identity/default-workstation-numbers-join-domain.md
