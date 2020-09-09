@@ -2,8 +2,8 @@
 title: Backup fails because of VSS writer
 description: Provides a solution to an issue where Windows Server backup fails because of the SQL Server VSS writer.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Deland-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -17,7 +17,7 @@ ms.technology: BackupStorage
 
 This article provides a solution to an issue where Microsoft Windows Server backup fails with an error: A Volume Shadow Copy Service Operation failed.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original product version:_ &nbsp; Windows Server 2012 R2, Windows Server 2016  
 _Original KB number:_ &nbsp; 2615182
 
 ## Symptoms

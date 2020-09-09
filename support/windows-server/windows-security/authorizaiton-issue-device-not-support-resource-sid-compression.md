@@ -2,8 +2,8 @@
 title: Resource SID Compression in Windows Server 2012 may cause Authorization problems on devices that don't support Resource SID compression
 description: Fixes an access denied error when accessing file shares hosted on devices that don't support Resource SID compression.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Deland-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

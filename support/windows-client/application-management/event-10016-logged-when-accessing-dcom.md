@@ -2,8 +2,8 @@
 title: Event ID 10016 is logged in Windows
 description: Describes an issue in which DCOM event ID 10016 is logged in Windows. Provides a resolution.
 ms.data: 09/08/2020
-author: delhan
-ms.author: Deland-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: ITPro
 ms.topic: troubleshooting

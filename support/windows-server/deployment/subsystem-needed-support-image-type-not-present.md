@@ -2,8 +2,8 @@
 title: Fail to run applications on Windows Server Core
 description: Provides a solution to an issue where you fail to run or install applications on a Windows Server computer running as a Server Core
 ms.date: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

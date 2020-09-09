@@ -2,8 +2,8 @@
 title: Folder Redirection group policy is not applied
 description: Addresses an issue that prevents folder redirection policy from working in SCCM on a computer that's running Windows 8, Windows 8.1, or Windows 10.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

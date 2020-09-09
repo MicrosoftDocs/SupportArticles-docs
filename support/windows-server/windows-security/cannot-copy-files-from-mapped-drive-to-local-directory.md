@@ -2,8 +2,8 @@
 title: Cannot copy files from mapped drive to local directory
 description: You receive the Location is not available error when you try to copy files from a mapped drive to a local directory.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Deland-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: ITPro
 ms.topic: troubleshooting

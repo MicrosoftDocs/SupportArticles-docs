@@ -2,8 +2,8 @@
 title: IP and default gateway settings are assigned incorrectly
 description: Works around an issue where IP address and default gateway settings are assigned incorrectly.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -2,8 +2,8 @@
 title: Back up and restore printers when upgrading
 description: Describes how to back up the printers before you upgrade to Windows Server 2008 and then restore the printers when the upgrade process is complete.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

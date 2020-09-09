@@ -2,8 +2,8 @@
 title: Cluster service reserves and brings online disks
 description: Describes how the Microsoft Cluster service reserves and brings online disks that are managed by cluster service and related drivers.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

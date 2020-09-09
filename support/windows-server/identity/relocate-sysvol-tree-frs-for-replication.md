@@ -2,8 +2,8 @@
 title: Relocate a SYSVOL tree
 description: Describes two options for moving the SYSVOL tree on your domain controller. You can use the Active Directory Installation Wizard, or you can edit the registry and manually move the SYSVOL tree.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

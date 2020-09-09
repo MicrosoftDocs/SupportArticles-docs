@@ -2,8 +2,8 @@
 title: How to remove orphaned domains from Active Directory
 description: Describes how to remove domain meta-data from Active Directory if this procedure isn't used or if or all domain controllers are taken offline but not demoted first.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Deland-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

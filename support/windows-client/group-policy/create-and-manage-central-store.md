@@ -2,8 +2,8 @@
 title: Create and manage Central Store
 description: This article describes how to create a Central Store on a domain controller to store and replicate registry-based policies for Windows operating systems in a domain.
 ms.data: 09/08/2020
-author: delhan
-ms.author: Deland-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: ITPro
 ms.topic: troubleshooting

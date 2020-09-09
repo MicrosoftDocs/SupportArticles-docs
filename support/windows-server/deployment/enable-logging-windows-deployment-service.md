@@ -2,8 +2,8 @@
 title: How to enable logging in Windows Deployment Services (WDS) in Windows Server 2003, Windows Server 2008, Windows Server 2008 R2, and in Windows Server 2012
 description: Explains how to modify the registry to enable tracing and logging in Windows Deployment Services. You can use the information to help troubleshoot issues that you may experience in Windows Deployment Services.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Deland-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

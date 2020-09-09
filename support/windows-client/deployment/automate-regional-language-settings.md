@@ -2,8 +2,8 @@
 title: Automate regional and language settings
 description: Describes how to automate regional and language settings.
 ms.data: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting
