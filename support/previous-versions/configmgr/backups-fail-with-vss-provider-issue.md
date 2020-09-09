@@ -2,6 +2,7 @@
 title: ConfigMgr 2007 backups fail with Win32 Error = 145
 description: Fixes an issue in which System Center Configuration Manager 2007 backups fail if the VSS provider is in use by another process.
 ms.date: 08/18/2020
+ms.prod: configuration-manager
 ms.prod-support-area-path: markstan
 ---
 # System Center Configuration Manager 2007 backups fail with Win32 Error = 145

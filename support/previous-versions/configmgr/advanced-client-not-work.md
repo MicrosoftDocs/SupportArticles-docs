@@ -3,6 +3,7 @@ title: The Advanced Client no longer works
 description: Describes a problem that occurs if a Group Policy Object is configured to set the startup mode of the SMS Agent Host service to Automatic.
 ms.date: 08/20/2020
 ms.prod-support-area-path:
+ms.prod: configuration-manager
 ms.reviewer: v-jomcc
 ---
 # The Advanced Client in SMS 2003 and Configuration Manager 2007 no longer works after deploying Windows XP SP2
