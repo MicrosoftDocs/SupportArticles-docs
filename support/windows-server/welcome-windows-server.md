@@ -1,5 +1,5 @@
 ---
-title: Welcome Support articles for Windows server
+title: Windows server troubleshooting document
 description: This article lists troubleshooting articles for Windows server products.
 ms.topic: article
 ms.date: 09/08/2020

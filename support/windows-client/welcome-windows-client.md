@@ -1,5 +1,5 @@
 ---
-title: Welcome Support articles for Windows client
+title: Windows client troubleshooting document
 description: This article lists troubleshooting articles for Windows client products.
 ms.topic: article
 ms.data: 09/08/2020
