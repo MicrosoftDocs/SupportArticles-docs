@@ -2,7 +2,7 @@
 title: Remove entries from Remote Desktop Connection Computer
 description: This articles introduces how to remove entries from the Remote Desktop Connection Computer box.
 ms.date: 09/08/2020
-author: delhan
+author: Deland-Han
 ms.author: Deland-Han
 manager: dscontentpm
 audience: ITPro

@@ -2,7 +2,7 @@
 title: How NTFS reserves space for MFT
 description: Describes how NTFS reserves space for its Master File Table (MFT).
 ms.date: 09/08/2020
-author: delhan
+author: Deland-Han
 ms.author: Deland-Han
 manager: dscontentpm
 audience: itpro

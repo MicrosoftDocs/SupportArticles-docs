@@ -2,7 +2,7 @@
 title: Error message The account is not authorized to login from this station
 description: Discusses an issue where an error occurs when you try to join a Windows 2000-based computer to a Microsoft Windows NT 4.0-based domain.
 ms.date: 09/08/2020
-author: delhan
+author: Deland-Han
 ms.author: Deland-Han
 manager: dscontentpm
 audience: itpro

@@ -2,7 +2,7 @@
 title: Poor network performance on virtual machines on a Windows Server 2012 Hyper-V host if VMQ is enabled
 description: Describes an issue that may occur if you have a Windows Server 2012 Hyper-V host that uses a Broadcom network adapter. Provides a workaround.
 ms.date: 09/08/2020
-author: delhan
+author: Deland-Han
 ms.author: Deland-Han
 manager: dscontentpm
 audience: itpro

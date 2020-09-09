@@ -2,7 +2,7 @@
 title: Configure DTC to work through a firewall
 description: Describes how to configure Microsoft Distributed Transaction Coordinator (DTC) to work through firewalls.
 ms.date: 09/08/2020
-author: delhan
+author: Deland-Han
 ms.author: Deland-Han
 manager: dscontentpm
 audience: ITPro

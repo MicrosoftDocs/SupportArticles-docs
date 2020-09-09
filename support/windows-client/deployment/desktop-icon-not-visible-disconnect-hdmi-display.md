@@ -2,7 +2,7 @@
 title: Desktop icons may not be visible after disconnecting HDMI display when Desktop is in Extended mode
 description: Works around an issue where the Desktop icons aren't visible if the HDMI display is disconnected and the computer is rebooted.
 ms.data: 09/08/2020
-author: delhan
+author: Deland-Han
 ms.author: Deland-Han
 manager: dscontentpm
 audience: itpro

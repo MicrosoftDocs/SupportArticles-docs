@@ -2,7 +2,7 @@
 title: Available updates for Remote Desktop Services (Terminal Services) on Windows Server 2008 R2 SP1
 description: Summarizes the available hotfixes and updates for issues that occur in Remote Desktop Services (Terminal Services) for Windows Server 2008 R2 environments.
 ms.date: 09/08/2020
-author: delhan
+author: Deland-Han
 ms.author: Deland-Han
 manager: dscontentpm
 audience: itpro

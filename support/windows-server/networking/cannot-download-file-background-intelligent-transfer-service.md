@@ -2,7 +2,7 @@
 title: Content file download failed error when you try to download a file by using the Background Intelligent Transfer Service
 description: Describes a problem that occurs if you're behind a proxy server or behind a firewall that doesn't support HTTP 1.1 range requests.
 ms.date: 09/08/2020
-author: delhan
+author: Deland-Han
 ms.author: Deland-Han
 manager: dscontentpm
 audience: itpro

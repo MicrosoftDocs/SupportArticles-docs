@@ -2,7 +2,7 @@
 title: Security identifiers in Windows
 description: Lists well-known security identifiers in Windows operating systems. Also lists additional built-in groups that are created when a domain controller is added to the domain.
 ms.date: 09/08/2020
-author: delhan
+author: Deland-Han
 ms.author: Deland-Han
 manager: dscontentpm
 audience: ITPro

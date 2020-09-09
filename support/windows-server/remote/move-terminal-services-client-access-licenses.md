@@ -2,7 +2,7 @@
 title: How to move Terminal Services CALs from one license server to another in Windows 2000, Windows Server 2003 and Windows Server 2008
 description: Describes how to move Terminal Services CALs from one license server to another in Windows 2000, Windows 2003, and Windows 2008. You must have the original license documents to perform this operation.
 ms.date: 09/08/2020
-author: delhan
+author: Deland-Han
 ms.author: Deland-Han
 manager: dscontentpm
 audience: itpro

@@ -2,8 +2,8 @@
 title: Use Windows Server cluster nodes as DCs
 description: Describes how to use Windows Server cluster nodes as domain controllers.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

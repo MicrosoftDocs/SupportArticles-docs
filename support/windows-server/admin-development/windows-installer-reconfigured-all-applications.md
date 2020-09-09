@@ -2,7 +2,7 @@
 title: Windows Installer reconfigured all applications
 description: Fixes an error that indicates the Windows Installer reconfigured all installed applications.
 ms.date: 09/08/2020
-author: delhan
+author: Deland-Han
 ms.author: Deland-Han
 manager: dscontentpm
 audience: itpro

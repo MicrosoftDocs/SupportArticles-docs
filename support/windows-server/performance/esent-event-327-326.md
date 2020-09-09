@@ -2,7 +2,7 @@
 title: ESENT Event ID 327 and 326
 description: Provides a solution to an issue where ESENT Event ID 327 and 326 are filled up the Application log file.
 ms.date: 09/08/2020
-author: delhan
+author: Deland-Han
 ms.author: Deland-Han
 manager: dscontentpm
 audience: itpro

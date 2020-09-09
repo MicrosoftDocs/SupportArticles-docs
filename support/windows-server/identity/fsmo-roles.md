@@ -2,7 +2,7 @@
 title: AD FSMO roles in Windows
 description: This article talks about the Active Directory FSMO roles in Windows.
 ms.date: 09/08/2020
-author: delhan
+author: Deland-Han
 ms.author: Deland-Han
 manager: dscontentpm
 audience: ITPro

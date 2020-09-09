@@ -2,7 +2,7 @@
 title: Delete a user profile in Windows Server 2008 and later
 description: Describes steps to delete a user profile in Windows Server 2008 and later.
 ms.date: 09/08/2020
-author: delhan
+author: Deland-Han
 ms.author: Deland-Han
 manager: dscontentpm
 audience: itpro

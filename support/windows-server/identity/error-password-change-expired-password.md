@@ -2,7 +2,7 @@
 title: Password change for expired password failing for workgroup scenario
 description: Fixes an error that occurs when processing the password change for a user where the password is expired or set to change at next logon.
 ms.date: 09/08/2020
-author: delhan
+author: Deland-Han
 ms.author: Deland-Han
 manager: dscontentpm
 audience: itpro

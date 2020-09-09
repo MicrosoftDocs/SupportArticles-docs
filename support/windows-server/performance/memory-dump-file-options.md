@@ -2,7 +2,7 @@
 title: Memory dump file options
 description: This article describes an overview of memory dump file options for Windows 7 with Service Pack 1.
 ms.date: 09/08/2020
-author: delhan
+author: Deland-Han
 ms.author: Deland-Han
 manager: dscontentpm
 audience: itpro

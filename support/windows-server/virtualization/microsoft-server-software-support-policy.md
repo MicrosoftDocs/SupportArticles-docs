@@ -2,7 +2,7 @@
 title: Microsoft server software and supported virtualization environments
 description: Discusses the support policy for running Microsoft server software in the supported virtualization environments.
 ms.date: 09/08/2020
-author: delhan
+author: Deland-Han
 ms.author: Deland-Han
 manager: dscontentpm
 audience: itpro

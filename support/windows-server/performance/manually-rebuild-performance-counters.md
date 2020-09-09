@@ -2,7 +2,7 @@
 title: Manually rebuild performance counters
 description: Describes how to manually rebuild performance counters.
 ms.date: 09/08/2020
-author: delhan
+author: Deland-Han
 ms.author: Deland-Han
 manager: dscontentpm
 audience: itpro

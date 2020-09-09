@@ -2,7 +2,7 @@
 title: Error 0x8007000D when you activate a machine
 description: This article helps fix the error 0x8007000D that occurs when you activate a Windows 7 machine by using any type of product key.
 ms.date: 09/08/2020
-author: delhan
+author: Deland-Han
 ms.author: Deland-Han
 manager: dscontentpm
 audience: itpro

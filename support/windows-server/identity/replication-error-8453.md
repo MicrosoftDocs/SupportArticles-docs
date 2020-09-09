@@ -2,7 +2,7 @@
 title: AD replication error 8453
 description: This article describes how to troubleshoot Active Directory replication error 8453.
 ms.date: 09/08/2020
-author: delhan
+author: Deland-Han
 ms.author: Deland-Han
 manager: dscontentpm
 audience: itpro

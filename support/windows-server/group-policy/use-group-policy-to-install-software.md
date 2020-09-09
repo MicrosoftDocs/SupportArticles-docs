@@ -2,7 +2,7 @@
 title: Use Group Policy to remotely install softwares
 description: Describes how to use Group Policy to remotely install software.
 ms.date: 09/08/2020
-author: delhan
+author: Deland-Han
 ms.author: Deland-Han
 manager: dscontentpm
 audience: itpro

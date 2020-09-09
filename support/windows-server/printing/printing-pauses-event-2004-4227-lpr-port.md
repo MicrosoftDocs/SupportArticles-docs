@@ -2,7 +2,7 @@
 title: Printing pauses after every 11 print jobs when you use an LPR port
 description: Fixes an issue where printing pauses after every 11 print jobs when printing through a line printer remote (LPR) port and event IDs 2004 and 4227 are logged.
 ms.date: 09/08/2020
-author: delhan
+author: Deland-Han
 ms.author: Deland-Han
 manager: dscontentpm
 audience: itpro

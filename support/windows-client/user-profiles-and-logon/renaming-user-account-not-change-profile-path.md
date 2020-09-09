@@ -2,7 +2,7 @@
 title: Renaming user account doesn't change profile path
 description: This article provides a workaround for an issue where renaming a user account doesn't automatically change the profile path.
 ms.data: 09/08/2020
-author: delhan
+author: Deland-Han
 ms.author: Deland-Han
 manager: dscontentpm
 audience: itpro

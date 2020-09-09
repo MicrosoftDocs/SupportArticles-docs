@@ -2,8 +2,8 @@
 title: Running TPM Management console fails
 description: Provides solutions to fix an error that occurs when you try to run the TPM Management console in Windows 10.
 ms.data: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

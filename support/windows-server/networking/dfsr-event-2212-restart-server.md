@@ -2,7 +2,7 @@
 title: You receive DFSR event ID 2212 after you restart the DFSR service in Windows Server 2008
 description: Describes an issue in which you receive the DFS Replication event 2212, and DFSR stops after you restart Windows Server 2008. A short time later, event 2214 is logged in the DFS Replication log.
 ms.date: 09/08/2020
-author: delhan
+author: Deland-Han
 ms.author: Deland-Han
 manager: dscontentpm
 audience: itpro

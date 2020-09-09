@@ -2,7 +2,7 @@
 title: Microsoft.Policies.Sensors.WindowsLocationProvider is already defined error when you edit a policy in Windows
 description: Fixes an issue that triggers an error when the central store contains the .admx files from Windows 10.
 ms.date: 09/08/2020
-author: delhan
+author: Deland-Han
 ms.author: Deland-Han
 manager: dscontentpm
 audience: itpro

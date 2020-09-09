@@ -2,7 +2,7 @@
 title: Warning Event ID 5605 is Logged in Application log when querying MSCluster namespace through WMI
 description: Describes an issue that Warning Event ID 5605 is Logged in Application log when querying MSCluster namespace through WMI.
 ms.date: 09/08/2020
-author: delhan
+author: Deland-Han
 ms.author: Deland-Han
 manager: dscontentpm
 audience: itpro

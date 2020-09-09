@@ -2,7 +2,7 @@
 title: Default workstation number a user can join to the domain
 description: Describes the default number of workstations a user can join to the domain and how to the change the AD to allow more or fewer machine accounts in the domain.
 ms.date: 09/08/2020
-author: delhan
+author: Deland-Han
 ms.author: Deland-Han
 manager: dscontentpm
 audience: itpro

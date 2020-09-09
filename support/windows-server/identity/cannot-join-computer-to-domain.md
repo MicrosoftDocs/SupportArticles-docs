@@ -2,8 +2,8 @@
 title: Unable to join computers to a domain
 description: Provides a solution to an issue where users can't join a computer to an Active Directory domain.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

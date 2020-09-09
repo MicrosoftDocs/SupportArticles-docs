@@ -2,7 +2,7 @@
 title: Support policy for 4K sector hard drives
 description: Provides support information for the large-sector (4K) drives when they are used with Windows and other Microsoft products. Compatibility information is included.
 ms.date: 09/08/2020
-author: delhan
+author: Deland-Han
 ms.author: Deland-Han
 manager: dscontentpm
 audience: itpro

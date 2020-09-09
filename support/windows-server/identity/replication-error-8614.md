@@ -2,7 +2,7 @@
 title: Troubleshoot replication error 8614
 description: Fixes Active Directory replication error 8614.
 ms.date: 09/08/2020
-author: delhan
+author: Deland-Han
 ms.author: Deland-Han
 manager: dscontentpm
 audience: itpro

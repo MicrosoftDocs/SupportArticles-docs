@@ -2,7 +2,7 @@
 title: Netlogon event ID 5719 or Group Policy event 1129
 description: Discusses event ID 5719 or Group Policy event 1129, which are logged if you have a Gigabit network adapter installed on a Windows-based compute. Provides a resolution.
 ms.date: 09/08/2020
-author: delhan
+author: Deland-Han
 ms.author: Deland-Han
 manager: dscontentpm
 audience: itpro

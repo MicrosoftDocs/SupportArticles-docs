@@ -2,7 +2,7 @@
 title: View and set LDAP policy by using Ntdsutil
 description: The article describes the most important LDAP query policy limits.
 ms.date: 09/08/2020
-author: delhan
+author: Deland-Han
 ms.author: Deland-Han
 manager: dscontentpm
 audience: itpro

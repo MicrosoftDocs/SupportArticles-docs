@@ -2,8 +2,8 @@
 title: FRS event log error codes
 description: Describes a list of events that are caused by File Replication Service (FRS). These events are displayed in the FRS log.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

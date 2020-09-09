@@ -2,7 +2,7 @@
 title: The LsaLookupSids function may return the old user name instead of the new user name if the user name has changed
 description: Describes a cache update delay in OS - Windows XP - Windows Server 2003 - Windows Vista - Windows Server 2008 - Windows 7 - Windows Server 2008 R2.
 ms.data: 09/08/2020
-author: delhan
+author: Deland-Han
 ms.author: Deland-Han
 manager: dscontentpm
 audience: itpro

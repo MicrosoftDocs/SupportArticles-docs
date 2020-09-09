@@ -2,7 +2,7 @@
 title: Change in the behavior of the format command in Windows Vista and later versions
 description: Discusses a change in the behavior of the format command in Windows Vista and later Windows versions.
 ms.date: 09/08/2020
-author: delhan
+author: Deland-Han
 ms.author: Deland-Han
 manager: dscontentpm
 audience: itpro

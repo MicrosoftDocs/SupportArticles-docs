@@ -2,7 +2,7 @@
 title: Use Cipher.exe to overwrite deleted data
 description: Describes how to use Cipher.exe to overwrite deleted data in Windows Server 2003.
 ms.date: 09/08/2020
-author: delhan
+author: Deland-Han
 ms.author: Deland-Han
 manager: dscontentpm
 audience: itpro

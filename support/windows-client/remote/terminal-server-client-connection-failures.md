@@ -2,7 +2,7 @@
 title: Troubleshooting RDP Client connection problems
 description: Describes various causes for Terminal Server Client connection failures.
 ms.data: 09/08/2020
-author: delhan
+author: Deland-Han
 ms.author: Deland-Han
 manager: dscontentpm
 audience: itpro
