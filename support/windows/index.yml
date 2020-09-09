@@ -12,12 +12,12 @@ productDirectory:
   items:
   - title: Windows Server
     imageSrc: "../media/hub-landing/windows.svg"
-    summary: Troubleshooting articles for Windows clients
+    summary: Troubleshooting articles for Windows servers
     url: ../windows-server/welcome-windows-server.md
 
   - title: Windows Client
     imageSrc: "../media/hub-landing/windows.svg"
-    summary: Troubleshooting articles for Windows servers
+    summary: Troubleshooting articles for Windows clients
     url: ../windows-client/welcome-windows-client.md
     
   - title:  Windows Developer
