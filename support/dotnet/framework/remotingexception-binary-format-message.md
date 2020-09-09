@@ -57,7 +57,7 @@ To configure .NET Remoting in order to accept custom `MarshalByRefObject` messag
 
 - [The appSettings element (General Settings schema)](/previous-versions/dotnet/netframework-4.0/ms228154(v=vs.100))
 
-- [Summary for the RegisterChannel method](/dotnet/api/system.runtime.remoting.channels.channelservices.registerchannel?&view=netframework-4.8)
+- [Summary for the RegisterChannel method](/dotnet/api/system.runtime.remoting.channels.channelservices.registerchannel?&view=netframework-4.8&preserve-view=true)
 
 - [Authentication with the HTTP Channel](/previous-versions/dotnet/netframework-4.0/36tfwzb0(v=vs.100))
 

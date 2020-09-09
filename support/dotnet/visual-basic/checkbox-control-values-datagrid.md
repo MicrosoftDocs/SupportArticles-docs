@@ -129,7 +129,7 @@ This article refers to the following .NET Framework Class Library namespaces:
 
 ## References
 
-- [DataGrid Class](/dotnet/api/system.web.ui.webcontrols.datagrid?&view=netframework-4.8)
+- [DataGrid Class](/dotnet/api/system.web.ui.webcontrols.datagrid?&view=netframework-4.8&preserve-view=true)
 
 - [Server-Side ASP.NET Data Binding](/archive/msdn-magazine/2001/april/cutting-edge-server-side-asp-net-data-binding-part-2-customizing-the-datagrid-control)
 
