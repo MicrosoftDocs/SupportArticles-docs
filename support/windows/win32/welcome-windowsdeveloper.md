@@ -6,6 +6,6 @@ ms.date: 07/08/2020
 ---
 # Windows application developer troubleshooting
 
-Welcome to Windows application developer troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Windows applications.
+Welcome to Windows application troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Windows applications.
 
 In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
