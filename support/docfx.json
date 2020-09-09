@@ -107,7 +107,8 @@
         "system-center/vmm/**/*.md": "system-center",
         "microsoft-identity-manager/*.md": "microsoft-identity-manager",
         "azure/**/*.md": "azure",
-        "previous-versions/**/*.md": ""
+        "previous-versions/dotnet/**/*.md": ".net",
+        "previous-versions/visualstudio/**/*.md": "visual-studio-family"
       },
       "ms.technology": {
         "biztalk/**/*.md": "",

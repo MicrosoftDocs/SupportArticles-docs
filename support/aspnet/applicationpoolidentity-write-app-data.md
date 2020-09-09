@@ -3,7 +3,6 @@ title: ApplicationPoolIdentity not working with App_Data
 description: This article provides resolutions for access denied error that occurs when a web application writes data to the ASP.NET App_Data folder in IIS 7.5 and later versions.
 ms.date: 04/15/2020
 ms.prod-support-area-path: WWW authentication and authorization
-ms.technology: iis
 ms.reviewer: danma
 ---
 # ApplicationPoolIdentity doesn't have write permission to ASP.NET App_Data folder
