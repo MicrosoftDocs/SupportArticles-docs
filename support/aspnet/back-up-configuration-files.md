@@ -3,7 +3,6 @@ title: Back up configuration files
 description: This article introduces about how to back up ASP.NET configuration files under IIS 7.0 and later versions.
 ms.date: 04/15/2020
 ms.prod-support-area-path: WWW administration and management
-ms.technology: asp.net
 ms.reviewer: saurabsi
 ms.topic: how-to
 ---

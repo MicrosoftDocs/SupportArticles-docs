@@ -18,9 +18,12 @@
       - name: Windows Client
         tocHref: /troubleshoot/windows-client/
         topicHref: /troubleshoot/windows-client/welcome-windows-client
-      - name: Windows Developer
+      - name: Application Developer
         tocHref: /troubleshoot/windows/win32
         topicHref: /troubleshoot/windows/win32/welcome-windowsdeveloper    
+      - name: Hardware Developer
+        tocHref: /troubleshoot/windows-hardware/drivers
+        topicHref: /troubleshoot/windows-hardware/drivers/welcome-windowshardware
 
     - name: Browsers
       tocHref: /troubleshoot/browsers/
@@ -45,10 +48,6 @@
     - name: Web Apps
       tocHref: /troubleshoot/webapps/
       topicHref: /troubleshoot/webapps/welcome-webapps
-
-    - name: Windows Developer
-      tocHref: /troubleshoot/windows/win32
-      topicHref: /troubleshoot/windows/win32/welcome-windowsdeveloper
 
     - name: Microsoft Identity Manager
       tocHref: /troubleshoot/microsoft-identity-manager/
