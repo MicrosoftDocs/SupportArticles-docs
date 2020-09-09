@@ -2,6 +2,7 @@
 title: Unexpected reboot after removing computers from a collection
 description: Describes a by-design behavior in which removing computers from a collection in System Center Configuration Manager 2007 may cause an unexpected reboot.
 ms.date: 08/20/2020
+ms.prod: configuration-manager
 ms.prod-support-area-path:
 ms.reviewer: elliotsh
 ---

@@ -28,7 +28,7 @@ To prepare your system and run the script, follow these steps:
 4. Install Microsoft SQL Server Management Studio on the same computer on which the VMM database is stored.
 
    > [!TIP]
-   > SQL Server Management Studio is a free download from Microsoft that you can get from [Download SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms?redirectedfrom=MSDN&view=sql-server-ver15).
+   > SQL Server Management Studio is a free download from Microsoft that you can get from [Download SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms).
 
 5. Open SQL Server Management Studio, select the VMM database, and then run the [SQL Server script](#sql-server-script). This should delete all missing virtual machines from the VMM database. If the script is successful, you see the following output:
 

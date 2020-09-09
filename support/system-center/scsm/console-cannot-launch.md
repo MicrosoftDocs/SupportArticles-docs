@@ -31,6 +31,6 @@ The system also has one of the following Intel GPU chipsets:
 
 ## Workaround
 
-As an alternative workaround you can disable graphics rendering hardware acceleration. For more information, see [Graphics Rendering Registry Settings](/dotnet/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings?redirectedfrom=MSDN).
+As an alternative workaround you can disable graphics rendering hardware acceleration. For more information, see [Graphics Rendering Registry Settings](/dotnet/desktop/wpf/graphics-multimedia/graphics-rendering-registry-settings).
 
 [!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]

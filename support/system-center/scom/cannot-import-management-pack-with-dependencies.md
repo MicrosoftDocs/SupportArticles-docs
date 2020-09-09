@@ -26,4 +26,4 @@ When importing a management pack in System Center Operations Manager that has a
 This issue occurs because a management pack that the management pack being imported depends on isn't imported in the management group. In order to work around this problem, import the dependent management packs first then import the management packs that depend on them.
 
 > [!NOTE]
-> If you're unsure of the dependencies for a management pack, see [Management pack libraries and dependencies](/system-center/scom/manage-overview-management-pack?view=sc-om-2019#management-pack-libraries-and-dependencies).
+> If you're unsure of the dependencies for a management pack, see [Management pack libraries and dependencies](/system-center/scom/manage-overview-management-pack#management-pack-libraries-and-dependencies).

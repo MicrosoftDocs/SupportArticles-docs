@@ -256,7 +256,7 @@ During a scan, the Windows Update Agent needs to communicate with the `ClientWeb
 
         To check whether the client can access the `ClientWebService` virtual directory, try accessing a URL similar to this:
 
-        <http://SUPSERVER.CONTOSO.COM:8530/ClientWebService/wusserverversion.xml>
+        <`http://SUPSERVER.CONTOSO.COM:8530/ClientWebService/wusserverversion.xml`>
 
         To check whether the client can access the `SimpleAuthWebService`, try accessing a URL similar to this:
 

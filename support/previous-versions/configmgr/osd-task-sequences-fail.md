@@ -2,6 +2,7 @@
 title: OSD and task sequences fail after a restoration
 description: Provides a solution to an issue in which OSD and task sequences no longer function after restoring System Center Configuration Manager 2007 from a backup.
 ms.date: 08/18/2020
+ms.prod: configuration-manager
 ms.prod-support-area-path: 
 ms.reviewer: frankroj, timhe
 ---

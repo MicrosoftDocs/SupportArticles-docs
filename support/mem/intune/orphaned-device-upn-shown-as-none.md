@@ -39,7 +39,7 @@ A script is available that removes an orphaned device that is managed by Intune
     > [!NOTE]
     > For PowerShell 4.0, you must have the **PowershellGet** module to enable using the **Install-Module** functionality. A first-time use of these scripts requires a Global Administrator of the tenant to accept the permissions of the application.
 
-- If you receive an error message that states that scripts are disabled on your computer, you have to enable the script to run by running the `Set-ExecutionPolicy` cmdlet. For more information, see [Set-ExecutionPolicy](/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-6).
+- If you receive an error message that states that scripts are disabled on your computer, you have to enable the script to run by running the `Set-ExecutionPolicy` cmdlet. For more information, see [Set-ExecutionPolicy](/powershell/module/microsoft.powershell.security/set-executionpolicy).
 
 ### Getting started
 
