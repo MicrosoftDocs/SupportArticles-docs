@@ -305,8 +305,8 @@ The code in this section retrieves the file from the local file system, checks t
 
 - [\<input type = "file">](https://developer.mozilla.org/docs/Web/HTML/Element/input/file)
 
-- [HtmlInputFile Class](/dotnet/api/system.web.ui.htmlcontrols.htmlinputfile&view=netframework-4.8&preserve-view=true)
+- [HtmlInputFile Class](/dotnet/api/system.web.ui.htmlcontrols.htmlinputfile?view=netframework-4.8&preserve-view=true)
 
-- [HtmlInputFile.PostedFile Property](/dotnet/api/system.web.ui.htmlcontrols.htmlinputfile.postedfile&view=netframework-4.8&preserve-view=true#System_Web_UI_HtmlControls_HtmlInputFile_PostedFile)
+- [HtmlInputFile.PostedFile Property](/dotnet/api/system.web.ui.htmlcontrols.htmlinputfile.postedfile?view=netframework-4.8&preserve-view=true#System_Web_UI_HtmlControls_HtmlInputFile_PostedFile)
 
 - [PRB: Cannot Upload Large Files When You Use the HtmlInputFile Server Control](https://support.microsoft.com/help/295626/prb-cannot-upload-large-files-when-you-use-the-htmlinputfile-server-co)
