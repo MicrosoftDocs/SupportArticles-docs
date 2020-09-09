@@ -1011,6 +1011,8 @@
       href: ../word/performance-issue-on-autorecover-location.md
     - name: Print failures in Word
       href: ../word/print-failures-in-word.md
+    - name: Recover a lost Word document
+      href: ../word/recover-lost-document.md
     - name: Reset user options and registry settings in Word
       href: ../word/reset-options-and-settings-in-word.md
     - name: Spell checker doesn't check text in the form fields
