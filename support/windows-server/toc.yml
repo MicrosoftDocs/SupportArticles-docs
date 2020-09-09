@@ -101,8 +101,6 @@
       href: ./identity/troubleshoot-high-lsass.exe-cpu-utilization.md
     - name: Issues when renaming sites in the AD forest
       href: ./identity/problems-rename-active-directory-forest-sites.md
-    - name: Known issues for managing Group Policy clients
-      href: ./identity/known-issues-for-group-policy-clients.md
     - name: LDAP and Kerberos servers reset TCP sessions
       href: ./identity/ldap-kerberos-server-reset-tcp-sessions.md
     - name: LDAPS connection problems
@@ -436,8 +434,6 @@
       href: ./networking/dns-records-not-present.md
     - name: DNS server logs event 7062
       href: ./networking/dns-server-logs-event-7062.md
-    - name: DNS Servers can't resolve queries for top-level domains
-      href: ./networking/dns-not-resolve-query-for-top-level-domain.md
     - name: Event 4015 when running DNS on RODC
       href: ./networking/rodc-logs-event-4015-error-00002095.md
     - name: Event ID 1056 after installing DHCP
