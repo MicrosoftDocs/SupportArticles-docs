@@ -48,7 +48,7 @@ Try the following options to help recover your Word document. Select the image a
 ![Option 1](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-1.png)
 
 </a>
-</td><td><b><a href="#option1">Search for the original document</a></b>
+</td><td>**<a href="#option1">Search for the original document</a>**
 
 **Windows 10** and **Windows 7**
 
@@ -69,7 +69,7 @@ Try the following options to help recover your Word document. Select the image a
 
 </a>
 </td>
-<td><b><a href="#option2">Search for Word backup files</a></b>
+<td>**<a href="#option2">Search for Word backup files</a>**
 
 1. Locate the folder in which you last saved the missing file.
 2. Search for files that have the .wbk file name extension.
@@ -84,7 +84,7 @@ Try the following options to help recover your Word document. Select the image a
 
 </a>
 </td>
-<td><b><a href="#option3">Search for auto-recover files</a></b>
+<td>**<a href="#option3">Search for auto-recover files</a>**
 
 1. Right-click the taskbar, and select **Task Manager**.
 2. On the **Processes** tab, select any instance of **Winword.exe** or **Microsoft Word**, and then select **End Task** or **End Process**. Repeat this step until you have exited all instances of Winword.exe and Microsoft Word.
@@ -102,7 +102,7 @@ Try the following options to help recover your Word document. Select the image a
 
 </a>
 </td>
-<td><b><a href="#option4">Search for temporary files</a></b>
+<td>**<a href="#option4">Search for temporary files</a>**
 
 1.	On the taskbar, select the **Start** or **Search** icon, type **.tmp** in the search field, and then press **Enter**.
 2.	In the toolbar, select **Documents**.
@@ -119,7 +119,7 @@ Try the following options to help recover your Word document. Select the image a
 
 </a>
 </td>
-<td><b><a href="#option5">Search for "~" files</a></b>
+<td>**<a href="#option5">Search for "~" files</a>**
 
 **Windows 10** and **Windows 7**
 
@@ -139,7 +139,7 @@ Try the following options to help recover your Word document. Select the image a
 
 </a>
 </td>
-<td><b><a href="#option6">How to troubleshoot damaged documents</a></b>
+<td>**<a href="#option6">How to troubleshoot damaged documents</a>**
 
 For information about how to troubleshoot damaged Word documents, see [How to troubleshoot damaged documents in Word](https://support.microsoft.com/help/826864).
 
@@ -147,11 +147,6 @@ For information about how to troubleshoot damaged Word documents, see [How to tr
 </tr>
 
 </table>
-
-
-## Microsoft Support options
-
-If you can't resolve this problem, you can use Microsoft Support to search the Microsoft Knowledge Base and other technical resources for answers. You can also customize the site to control your search. To start your search, go to the [Microsoft Support](https://www.microsoft.com/support/) website. 
 
 ## Additional resources
  
@@ -165,7 +160,7 @@ The following section provides more detailed descriptions of these options.
 
 <a id="option1">
 
-### Option 1: Search for the original document
+## Option 1: Search for the original document
 
 </a>
 
@@ -177,7 +172,7 @@ Type the document name, in the **Search** box (in Windows 10, Windows 8.1, or Wi
 
 <a id="option2">
 
-### Option 2: Search for Word Backup files
+## Option 2: Search for Word Backup files
 
 </a>
 
@@ -221,7 +216,7 @@ If you find any files that have the name "Backup of" followed by the name of the
 
 <a id="option3">
 
-### Option 3: Search for AutoRecover files
+## Option 3: Search for AutoRecover files
 
 </a>
 
@@ -230,8 +225,16 @@ AutoRecover file names end in the .asd file name extension. By default, Word sea
 1. Use Word to automatically find the auto-recovered files. To do this, follow these steps:
 
    1. Right-click the taskbar, and select **Task Manager**.
+    
+   :::image type="content" source="media/recover-lost-document/Contextual_Menu_md.png" alt-text="Select Task Manager.":::
+
    2. On the **Processes** tab, select any instance of **Winword.exe** or **Microsoft Word**, and then select **End Task** or **End Process**. Repeat this step until you have exited all instances of Winword.exe and Word.
+
+   :::image type="content" source="media/recover-lost-document/Task_Mgr_md.png" alt-text="Select an instance of Word and then select End Task or End Process.":::
+
    3. Close the **Windows Task Manager** dialog box, and then start Word.
+
+   :::image type="content" source="media/recover-lost-document/Word_md.png" alt-text="Start Word.":::
 
 If Word finds the auto-recovered file, the **Document Recovery** task pane opens on the left side of the screen, and the missing document is listed as "**document name** [Original]" or as "**document name** [Recovered]." If this occurs, double-click the file in the Document Recovery pane, select **File** > **Save As**, and then save the document as a .docx file. To manually change the extension to .docx, right-click the file, and select **Rename**.
 
@@ -276,7 +279,7 @@ Type **.asd** in the **Search** box (in Windows 10, Windows 8.1, or Windows 8) o
 
 <a id="option4">
 
-### Option 4: Search for temporary files
+## Option 4: Search for temporary files
 
 </a>
 
@@ -288,7 +291,7 @@ Temporary file names end in a .tmp extension. To find these files, follow these 
 
 <a id="option5">
 
-### Option 5: Search for "~" files
+## Option 5: Search for "~" files
 
 </a>
 
@@ -305,7 +308,7 @@ For more information about how Word creates and uses temporary files, see [Descr
 
 <a id="option6">
 
-### Option 6: How to troubleshoot damaged documents
+## Option 6: How to troubleshoot damaged documents
 
 </a>
 
