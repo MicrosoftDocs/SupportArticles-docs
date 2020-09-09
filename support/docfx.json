@@ -96,7 +96,7 @@
         "cpp/**/*.md": "visual-cpp",
         "iis/**/*.md": "iis",
         "windows/win32/**/*.md": "windows-dev-apps",
-        "windows-hardware/drivers/**/*.md": "windows-hardware-drivers",
+        "windows-hardware/drivers/**/*.md": "windows-hardware",
         "mem/intune/**/*.md": "intune",
         "mem/configmgr/**/*.md": "configuration-manager",
         "previous-versions/configmgr/*.md": "configuration-manager",
@@ -106,11 +106,13 @@
         "system-center/scsm/**/*.md": "system-center",
         "system-center/vmm/**/*.md": "system-center",
         "microsoft-identity-manager/*.md": "microsoft-identity-manager",
-        "azure/**/*.md": "azure"
+        "azure/**/*.md": "azure",
+        "previous-versions/**/*.md": ""
       },
       "ms.technology": {
         "biztalk/**/*.md": "",
         "dotnet/**/*.md": "",
+        "aspnet/**/*.md": "",
         "host-integration-server/**/*.md": "",
         "visualstudio/**/*.md": "",
         "webapps/**/*.md": "",
