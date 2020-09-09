@@ -2,8 +2,8 @@
 title: Access is denied when you promote domain controller
 description: Provides a solution to fix an error (Access is denied) that occurs when you create NTDS Settings object.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

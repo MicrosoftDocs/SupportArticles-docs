@@ -2,8 +2,8 @@
 title: Windows Search is disabled by default
 description: Provides steps to re-enable the Windows Search service for Windows Server 2016.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Deland-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: ITPro
 ms.topic: troubleshooting

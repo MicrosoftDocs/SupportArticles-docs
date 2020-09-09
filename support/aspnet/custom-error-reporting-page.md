@@ -191,6 +191,6 @@ For more information on this change and how it can effect running the code in th
 
 - [Handling and Throwing Exceptions](/previous-versions/dotnet/netframework-1.1/5b2yeyab(v=vs.71))
 
-- [HttpServerUtility.ClearError Method](/dotnet/api/system.web.httpserverutility.clearerror&view=netframework-4.8#System_Web_HttpServerUtility_ClearError)
+- [HttpServerUtility.ClearError Method](/dotnet/api/system.web.httpserverutility.clearerror?view=netframework-4.8&preserve-view=true#System_Web_HttpServerUtility_ClearError)
 
 - [.NET Home Page](https://dotnet.microsoft.com/)
