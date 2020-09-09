@@ -3,24 +3,26 @@
 
 - name: Active Directory
   items:
+    - name: AD FS
+      items:
+        - name: ADFS 2.0 error 401
+          href: ./identity/adfs-error-401-requested-resource-requires-authentication.md
+        - name: Troubleshoot AD FS 2.0 error
+          href: ./identity/adfs-2-error-access-is-denied.md
     - name: AD LDS and ADAM
       items:
         - name: How to configure AD and LDS diagnostic event logging
           href: ./identity/configure-ad-and-lds-event-logging.md
         - name: Troubleshoot OBJ_CLASS_VIOLATION error in Adamsync
           href: ./identity/adamsync-error-obj-class-violation.md
-    - name: ADFS
-      items:
-        - name: ADFS 2.0 error 401
-          href: ./identity/adfs-error-401-requested-resource-requires-authentication.md
-        - name: Troubleshoot AD FS 2.0 error
-          href: ./identity/adfs-2-error-access-is-denied.md
     - name: ADMT
       items:
         - name: ADMT 3.1 PES installation fails with error
           href: ./identity/supplied-password-not-match-encryption-keys-password.md
         - name: Troubleshoot sIDHistory migration with ADMTv2
           href: ./identity/inter-forest-sidhistory-migration-with-admt.md
+    - name: Backup, restore, or disaster
+      items:
         - name: Event 2089 if you don't back up a domain controller
           href: ./identity/ntds-replication-event-2089-backup-latency-interval.md
         - name: How to remove orphaned domains
@@ -33,7 +35,7 @@
           href: ./identity/syskey-exe-utility-is-no-longer-supported.md
         - name: SYSVOL folder isn't replicated between domain controllers
           href: ./identity/file-replication-service-event-13552-13555.md
-    - name: Backup, restore, or disaster recovery
+    - name: Certificate services
       items:
         - name: Back up recovery agent EFS private key
           href: ./identity/back-up-recovery-agent-efs-private-key.md
@@ -49,18 +51,14 @@
           href: ./identity/trusted-root-certificates-are-required.md
         - name: Version 3 templates don't appear in certificate web enrollment
           href: ./identity/cng-templates-not-appear-certificate-web-enrollment.md
-    - name: Certificate Services
+    - name: Database issues and domain controller boot failures
       items:
-        - name: "\"Adprep could not contact a replica\"  error when running \"Adprep /rodcprep\" command"
-          href: ./identity/error-run-adprep-rodcprep-command.md
         - name: Database garbage collection process
           href: ./identity/database-garbage-collection-caculation-of-allowed-intervals.md
         - name: ESENT event IDs 1000, 1202, 412, and 454
           href: ./identity/esent-events-1000-1202-412-454.md
         - name: Event IDs 5788 and 5789 occur
           href: ./identity/event-ids-5788-5789.md
-        - name: How to configure firewall for domains and trusts
-          href: ./identity/config-firewall-for-ad-domains-and-trusts.md
     - name: DCPromo and installation of domain controllers
       items:
         - name: Access is denied when you promote domain controller
@@ -101,6 +99,12 @@
           href: ./identity/netlogon-service-not-start-automatically.md
         - name: Unable to join computers to a domain
           href: ./identity/cannot-join-computer-to-domain.md
+    - name: Domain or forest functional level updates
+      items:
+        - name: "\"Adprep could not contact a replica\" error when running \"Adprep /rodcprep\" command"
+          href: ./identity/error-run-adprep-rodcprep-command.md
+        - name: How to configure firewall for domains and trusts
+          href: ./identity/config-firewall-for-ad-domains-and-trusts.md
     - name: FSMO
       items:
         - name: Fail to seize RID master role with Ntdsutil
@@ -221,11 +225,11 @@
           href: ./identity/useraccountcontrol-manipulate-account-properties.md
         - name: Well-known security identifiers in Windows
           href: ./identity/security-identifiers-in-windows.md
-    - name: Virtualized domain controller
+    - name: Virtualized domain controller 
       items:
         - name: Host AD DCs in virtual hosting environments
           href: ./identity/ad-dc-in-virtual-hosting-environment.md
-    - name: Windows Time Service
+    - name: Windows time service
       items:
         - name: How to configure authoritative time server
           href: ./identity/configure-authoritative-time-server.md
