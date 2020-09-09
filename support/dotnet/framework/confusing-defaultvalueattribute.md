@@ -7,14 +7,14 @@ ms.reviewer: sedwards
 ---
 # Documentation for the DefaultValueAttribute class is confusing
 
-This article explains the confusing documentation for the [DefaultValueAttribute](/dotnet/api/system.componentmodel.defaultvalueattribute?view=netcore-3.1) class.
+This article explains the confusing documentation for the [DefaultValueAttribute](/dotnet/api/system.componentmodel.defaultvalueattribute?view=netcore-3.1&preserve-view=true) class.
 
 _Original product version:_ &nbsp; .NET Framework  
 _Original KB number:_ &nbsp; 311339
 
 ## Summary
 
-The [documentation](/dotnet/api/system.componentmodel.defaultvalueattribute?view=netcore-3.1) for the `DefaultValueAttribute` class may be confusing. In particular, this documentation states:  
+The [documentation](/dotnet/api/system.componentmodel.defaultvalueattribute?view=netcore-3.1&preserve-view=true) for the `DefaultValueAttribute` class may be confusing. In particular, this documentation states:  
 A member's default value is typically its initial value.
 
 From this, you may conclude that if you set the `DefaultValue` attribute for a property, the property is initialized to that value. However, you should set the property's `DefaultValue` attribute equal to its initialized value.

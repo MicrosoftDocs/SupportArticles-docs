@@ -1,10 +1,10 @@
 ---
 title: Troubleshooting documentation
-description: This article lists Knowledge Base (KB) and other Support articles for Windows hardware.
+description: This article lists Knowledge Base (KB) and other Support articles for Windows hardware developer.
 ms.topic: article
 ms.date: 09/07/2020
 ---
-# Windows hardware troubleshooting
+# Windows hardware developer troubleshooting
 
 Welcome to Windows hardware troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Windows hardware.
 

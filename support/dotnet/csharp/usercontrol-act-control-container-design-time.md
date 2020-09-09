@@ -75,4 +75,4 @@ By default, a UserControl object can act as a control container only when you cr
 ## References
 
 For more information, see the Microsoft Web site:
-[ParentControlDesigner Class](/dotnet/api/system.windows.forms.design.parentcontroldesigner?&view=netframework-4.8).
+[ParentControlDesigner Class](/dotnet/api/system.windows.forms.design.parentcontroldesigner?&view=netframework-4.8&preserve-view=true).

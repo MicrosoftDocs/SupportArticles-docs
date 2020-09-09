@@ -90,14 +90,14 @@ void CloseIdleConnectionGroups(String[] strGroups, String strURL)
 
 ## References
 
-- [HttpWebRequest.ConnectionGroupName Property](/dotnet/api/system.net.httpwebrequest.connectiongroupname?&view=netcore-3.1)
+- [HttpWebRequest.ConnectionGroupName Property](/dotnet/api/system.net.httpwebrequest.connectiongroupname?&view=netcore-3.1&preserve-view=true)
 
-- [ServicePointManager.MaxServicePointIdleTime Property](/dotnet/api/system.net.servicepointmanager.maxservicepointidletime?&view=netcore-3.1)
+- [ServicePointManager.MaxServicePointIdleTime Property](/dotnet/api/system.net.servicepointmanager.maxservicepointidletime?&view=netcore-3.1&preserve-view=true)
 
-- [HttpWebRequest Class](/dotnet/api/system.net.httpwebrequest?&view=netcore-3.1)
+- [HttpWebRequest Class](/dotnet/api/system.net.httpwebrequest?&view=netcore-3.1&preserve-view=true)
 
-- [HttpWebRequest.KeepAlive Property](/dotnet/api/system.net.httpwebrequest.keepalive?&view=netcore-3.1)
+- [HttpWebRequest.KeepAlive Property](/dotnet/api/system.net.httpwebrequest.keepalive?&view=netcore-3.1&preserve-view=true)
 
-- [ServicePoint.CloseConnectionGroup(String) Method](/dotnet/api/system.net.servicepoint.closeconnectiongroup?&view=netcore-3.1)
+- [ServicePoint.CloseConnectionGroup(String) Method](/dotnet/api/system.net.servicepoint.closeconnectiongroup?&view=netcore-3.1&preserve-view=true)
 
 - [When you try to connect from TCP ports greater than 5000, you receive the error 'WSAENOBUFS (10055)'](https://support.microsoft.com/help/196271)

@@ -51,7 +51,7 @@ To manually enable the fix, add the `Switch.System.Threading.UseNetCoreTimer` ke
 - Value Name: `Switch.System.Threading.UseNetCoreTimer`
 - Value data: **true**
 
-For more information about timers, see the **AppContext for library consumers** section in [AppContext Class](/dotnet/api/system.appcontext?view=netframework-4.7.2#appcontext-for-library-consumers).
+For more information about timers, see the **AppContext for library consumers** section in [AppContext Class](/dotnet/api/system.appcontext?view=netframework-4.7.2&preserve-view=true#appcontext-for-library-consumers).
 
 ## Frequently asked questions
 
