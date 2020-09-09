@@ -9,6 +9,8 @@
       href: ../access-management/error-run-office-365-desktop-setup-tool.md
     - name: Can't open an IRM-protected document with sign-in prompts
       href: ../access-management/cannot-open-irm-protected-document.md
+    - name: '"Your organization has disabled this device" error when activating Microsoft 365 Apps'
+      href: ../access-management/error-135011-activate-m365-apps.md
     - name: Error when you run Remote Connectivity Analyzer
       href: ../access-management/error-run-remote-connectivity-analyze.md
     - name: Full Access permissions aren't working after a migration
