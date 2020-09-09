@@ -3,6 +3,8 @@
 
 - name: Active Directory
   items:
+    - name: Known issues for managing Group Policy clients
+      href: ./identity/known-issues-for-group-policy-clients.md
     - name: The LsaLookupSids function returns the old user name
       href: ./identity/lsalookupsids-function-not-return-new-user-name.md
     - name: W32Time doesn't start automatically
