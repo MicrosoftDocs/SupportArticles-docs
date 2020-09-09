@@ -97,8 +97,6 @@
       href: createprocess-cannot-eliminate-duplicate-variables.md
     - name: Custom virtual channel isn't supported
       href: custom-virtual-channel-not-supported.md
-    - name: File copy operation deletes content
-      href: file-copy-operation-deletes-content.md
     - name: Heap manager may not decommit memory
       href: heap-manager-may-not-decommit-memory.md
     - name: Get formatted strings for an event
