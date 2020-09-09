@@ -3,7 +3,7 @@ title: Windows support for hard disks exceeding 2 TB
 description: Discusses the manner in which Windows supports hard disks that have a storage capacity of more than 2 TB. Explains how to initialize and partition disks to maximize space usage.
 ms.date: 09/08/2020
 author: Deland-Han
-ms.author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

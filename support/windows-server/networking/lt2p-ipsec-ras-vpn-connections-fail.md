@@ -3,7 +3,7 @@ title: LT2P/IPsec RAS VPN connections fail
 description: L2TP/IPsec VPN connections to a Windows RAS Server fail when using the MS-CHAPv2 authentication. Provides a resolution.
 ms.date: 09/08/2020
 author: Deland-Han
-ms.author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: ITPro
 ms.topic: troubleshooting

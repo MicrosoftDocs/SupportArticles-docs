@@ -3,7 +3,7 @@ title: The Internet Protocol (TCP/IP) Properties dialog box displays the default
 description: Describes a problem in which the TCP/IP properties revert to the default settings after you manually configure a static IP address. This problem occurs in Windows 2000 Server with SP4 and in Windows Server 2003 with SP1.
 ms.date: 09/08/2020
 author: Deland-Han
-ms.author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

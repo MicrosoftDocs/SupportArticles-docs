@@ -3,7 +3,7 @@ title: Remote Server Administration Tools
 description: This article describes the tools that are available in Remote Server Administration Tools for Windows.
 ms.date: 09/08/2020
 author: Deland-Han
-ms.author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

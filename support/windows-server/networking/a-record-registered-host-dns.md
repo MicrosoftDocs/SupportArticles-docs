@@ -3,7 +3,7 @@ title: The host's A record is registered in DNS after you choose not to register
 description: Fixes an issue where the IP address registers an A record for the host name in its primary DNS suffix zone after you clear the Register this connection's address in DNS check box under Advanced TCP/IP Settings for a network interface.
 ms.date: 09/08/2020
 author: Deland-Han
-ms.author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

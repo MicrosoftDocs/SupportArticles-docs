@@ -3,7 +3,7 @@ title: Errors connecting to Windows Server 2008 R2 or Windows Server 2012 Device
 description: Fixes an issue where you can't connect remotely to Device Manager from a Windows-based computer.
 ms.date: 09/08/2020
 author: Deland-Han
-ms.author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

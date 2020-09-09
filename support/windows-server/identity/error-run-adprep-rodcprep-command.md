@@ -3,7 +3,7 @@ title: Adprep could not contact a replica error when running Adprep /rodcprep co
 description: Describes a problem in which the Adprep /rodcprep command isn't completed successfully because the infrastructure master for one or more active directory NDNCs isn't reachable. A resolution is provided.
 ms.date: 09/08/2020
 author: Deland-Han
-ms.author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

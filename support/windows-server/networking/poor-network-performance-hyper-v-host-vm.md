@@ -3,7 +3,7 @@ title: Poor network performance on virtual machines on a Windows Server 2012 Hyp
 description: Describes an issue that may occur if you have a Windows Server 2012 Hyper-V host that uses a Broadcom network adapter. Provides a workaround.
 ms.date: 09/08/2020
 author: Deland-Han
-ms.author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

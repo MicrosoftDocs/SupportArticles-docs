@@ -3,7 +3,7 @@ title: Windows Update Standalone Installer (WUSA) returns 0x5 ERROR_ACCESS_DENIE
 description: Works around an issue that occurs when you deploy Windows Update .msu files through Windows Remote Management 2.0 and Windows Remote Shell.
 ms.date: 09/08/2020
 author: Deland-Han
-ms.author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

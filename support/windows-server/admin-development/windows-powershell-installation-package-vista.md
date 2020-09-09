@@ -3,7 +3,7 @@ title: Windows PowerShell 1.0 installation package for Windows Vista
 description: This article contains links and information for the installation packages for Windows PowerShell 1.0 for Windows Vista.
 ms.date: 09/08/2020
 author: Deland-Han
-ms.author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

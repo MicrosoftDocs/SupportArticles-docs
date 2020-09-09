@@ -3,7 +3,7 @@ title: Incorrect time displayed on 64-bit versions of Windows 7 or Windows Serve
 description: Fixes an issue where the displayed time on affected computers doesn't match the current local time after you do an in-place upgrade to a 64-bit version of Windows 7 or Windows Server 2008 R2.
 ms.date: 09/08/2020
 author: Deland-Han
-ms.author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

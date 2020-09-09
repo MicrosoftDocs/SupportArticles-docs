@@ -3,7 +3,7 @@ title: Error opening installation log file error when uninstalling an applicatio
 description: Provides a workaround for the issue where an error occurs when you uninstall an application.
 ms.data: 09/08/2020
 author: Deland-Han
-ms.author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

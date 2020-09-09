@@ -3,7 +3,7 @@ title: Import third-party CAs into Enterprise NTAuth store
 description: Describes two methods you can use to import the certificates of third-party certification authorities (CAs) into the Enterprise NTAuth store. You can use the PKI Health Tool, or you can use Certutil.exe.
 ms.date: 09/08/2020
 author: Deland-Han
-ms.author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

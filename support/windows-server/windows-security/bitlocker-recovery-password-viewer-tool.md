@@ -3,7 +3,7 @@ title: How to use the BitLocker Recovery Password Viewer to view recovery passwo
 description: Describes a tool that you can use to locate and to view BitLocker recovery passwords.
 ms.date: 09/08/2020
 author: Deland-Han
-ms.author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

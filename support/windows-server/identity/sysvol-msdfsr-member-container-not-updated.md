@@ -3,7 +3,7 @@ title: Domain Controller rename doesn't rename all AD DFSR SYSVOL objects
 description: Fixes an issue where the SYSVOL msDFSR-Member container used by DFS Replication isn't updated.
 ms.date: 09/08/2020
 author: Deland-Han
-ms.author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

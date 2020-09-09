@@ -3,7 +3,7 @@ title: Blank Desktop on Windows Vista or Windows Server 2008
 description: Discusses an issue where you're presented with a blank screen with no Start Menu, shortcuts, or icons after logging on to a Windows Vista or Windows Server 2008 computer.
 ms.data: 09/08/2020
 author: Deland-Han
-ms.author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

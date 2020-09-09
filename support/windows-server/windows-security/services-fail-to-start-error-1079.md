@@ -3,7 +3,7 @@ title: Error 1079 when services fail to start
 description: This article provides help to fix the error 1079 that occurs when some services fail to start on a computer that is running Windows 7.
 ms.date: 09/08/2020
 author: Deland-Han
-ms.author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

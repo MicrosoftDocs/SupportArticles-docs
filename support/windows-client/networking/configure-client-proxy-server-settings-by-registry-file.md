@@ -3,7 +3,7 @@ title: Configure client proxy server settings
 description: This article describes how to create a Windows registry file to configure the proxy server settings on a client computer that is running Microsoft Internet Explorer or Windows Internet Explorer.
 ms.data: 09/08/2020
 author: Deland-Han
-ms.author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

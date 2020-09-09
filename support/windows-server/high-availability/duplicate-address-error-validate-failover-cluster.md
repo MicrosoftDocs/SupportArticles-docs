@@ -3,7 +3,7 @@ title: The validation fails when you run a cluster validation wizard for a Windo
 description: Describes a problem in which a duplicate address error occurs when you validate a Windows Server 2008 failover cluster. A resolution is provided.
 ms.date: 09/08/2020
 author: Deland-Han
-ms.author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

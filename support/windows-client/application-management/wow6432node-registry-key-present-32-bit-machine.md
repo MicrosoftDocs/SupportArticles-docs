@@ -3,7 +3,7 @@ title: Registry key WOW6432Node may be listed in system registry on 32 bit (x86)
 description: Fixes an issue in which a registry subkey labeled Wow6432Node is listed in system registry on x86 machines.
 ms.data: 09/08/2020
 author: Deland-Han
-ms.author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

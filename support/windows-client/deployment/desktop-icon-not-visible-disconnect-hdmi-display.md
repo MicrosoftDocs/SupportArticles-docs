@@ -3,7 +3,7 @@ title: Desktop icons may not be visible after disconnecting HDMI display when De
 description: Works around an issue where the Desktop icons aren't visible if the HDMI display is disconnected and the computer is rebooted.
 ms.data: 09/08/2020
 author: Deland-Han
-ms.author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

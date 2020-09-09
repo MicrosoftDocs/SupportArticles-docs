@@ -3,7 +3,7 @@ title: Availability and description of FCIV
 description: Describes the File Checksum Integrity Verifier (FCIV) utility for use in Windows 2000, Windows XP, and Windows Server 2003.
 ms.date: 09/08/2020
 author: Deland-Han
-ms.author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: ITPro
 ms.topic: troubleshooting

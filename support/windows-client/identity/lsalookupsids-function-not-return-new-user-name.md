@@ -3,7 +3,7 @@ title: The LsaLookupSids function may return the old user name instead of the ne
 description: Describes a cache update delay in OS - Windows XP - Windows Server 2003 - Windows Vista - Windows Server 2008 - Windows 7 - Windows Server 2008 R2.
 ms.data: 09/08/2020
 author: Deland-Han
-ms.author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

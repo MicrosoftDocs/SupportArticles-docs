@@ -3,7 +3,7 @@ title: Kerberos authentication problems
 description: Describes an issue in which a user who has too many group memberships cannot authenticate successfully. Describes the factors that cause the behavior, and workarounds.
 ms.date: 09/08/2020
 author: Deland-Han
-ms.author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: ITPro
 ms.topic: troubleshooting

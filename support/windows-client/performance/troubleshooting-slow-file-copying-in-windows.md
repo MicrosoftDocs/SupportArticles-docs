@@ -3,7 +3,7 @@ title: Troubleshooting slow file copying in Windows
 description: Troubleshoots the issue that file copy is slow.
 ms.data: 09/08/2020
 author: Deland-Han
-ms.author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -3,7 +3,7 @@ title: The request is not supported error for SMB Read Andx requests for files m
 description: Fixes errors that occur in SMB Read Andx requests for files managed by Data Deduplication.
 ms.date: 09/08/2020
 author: Deland-Han
-ms.author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

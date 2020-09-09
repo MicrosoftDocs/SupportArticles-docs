@@ -3,7 +3,7 @@ title: Copying files exceeding 2 GB fails
 description: When you try to copy a file larger than 2 GB over a Remote Desktop Services or Terminal Services session through Clipboard Redirection (copy and paste) by using RDP client 6.0 or later, the file fails to copy, and you don't see an error message.
 ms.date: 09/08/2020
 author: Deland-Han
-ms.author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

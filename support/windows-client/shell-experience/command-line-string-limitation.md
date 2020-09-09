@@ -3,7 +3,7 @@ title: Command prompt line string limitation
 description: This article describes about limiting the maximum string length at the command prompt, and provides solutions to fix the limitation.
 ms.data: 09/08/2020
 author: Deland-Han
-ms.author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: ITPro
 ms.topic: troubleshooting

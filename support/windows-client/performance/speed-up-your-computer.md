@@ -3,7 +3,7 @@ title: How to speed up your computer
 description: Describes ways to help speed up your computers when it tend to slow down after time, without upgrading your hardware.
 ms.data: 09/08/2020
 author: Deland-Han
-ms.author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: ITPro
 ms.topic: troubleshooting

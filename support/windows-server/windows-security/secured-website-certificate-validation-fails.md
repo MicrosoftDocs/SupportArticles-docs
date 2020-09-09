@@ -3,7 +3,7 @@ title: Security certificate validation fails
 description: Works around an issue where security certificate presented by a website isn't issued when it has multiple trusted certification paths to root CAs.
 ms.date: 09/08/2020
 author: Deland-Han
-ms.author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

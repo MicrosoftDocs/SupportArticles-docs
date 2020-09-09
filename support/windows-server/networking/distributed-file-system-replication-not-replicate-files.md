@@ -3,7 +3,7 @@ title: Distributed File System Replication (DFSR) no longer replicates files aft
 description: Discusses an issue where the DFS Replication service doesn't replicate files after restoring a virtualized server's snapshot.
 ms.date: 09/08/2020
 author: Deland-Han
-ms.author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

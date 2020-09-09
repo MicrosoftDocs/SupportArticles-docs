@@ -3,7 +3,7 @@ title: How to enable logging in Windows Deployment Services (WDS) in Windows Ser
 description: Explains how to modify the registry to enable tracing and logging in Windows Deployment Services. You can use the information to help troubleshoot issues that you may experience in Windows Deployment Services.
 ms.date: 09/08/2020
 author: Deland-Han
-ms.author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

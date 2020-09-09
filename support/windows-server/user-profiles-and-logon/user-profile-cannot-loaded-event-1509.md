@@ -3,7 +3,7 @@ title: User profile cannot be loaded with Event ID 1509, DETAIL - The filename o
 description: Provides resolutions to fix the error User Profile Service failed the logon. User profile cannot be loaded.
 ms.date: 09/08/2020
 author: Deland-Han
-ms.author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting
