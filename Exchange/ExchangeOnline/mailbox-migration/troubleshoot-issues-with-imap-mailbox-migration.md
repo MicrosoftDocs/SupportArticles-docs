@@ -621,7 +621,7 @@ You will run into the below error if a migration batch with the same name alread
 
 > The migration batch already exists.
 
-In order to determine if a batch already exists with the same name, log into the [EAC](https://onpremises-servername/ecp) and go to **recipients** > **migration**. If you want to use the same batch name, you must first remove the existing batch by highlighting it and selecting the icon. If the batch is running, select the stop button and then delete it.
+In order to determine if a batch already exists with the same name, log into the EAC (`https://onpremises-servername/ecp`) and go to **recipients** > **migration**. If you want to use the same batch name, you must first remove the existing batch by highlighting it and selecting the icon. If the batch is running, select the stop button and then delete it.
 
 > [!NOTE]
 > If you have removed the migration batch, it may take a few minutes for the batch to completely remove. You will either need to wait for the existing migration batch with that name to completely remove or use a new name for the batch you are trying to create.
@@ -734,9 +734,9 @@ The Office 365 Network Analysis Tool is designed to help analyze networking rela
 
 1. Select one of the below appropriate regional URLs.
 
-   North America: [http://na1-fasttrack.cloudapp.net](http://na1-fasttrack.cloudapp.net/)  
-   EMEA: [http://em1-fasttrack.cloudapp.net](http://em1-fasttrack.cloudapp.net/)  
-   APAC: [http://ap1-fasttrack.cloudapp.net](http://ap1-fasttrack.cloudapp.net/)
+   North America: `http://na1-fasttrack.cloudapp.net`
+   EMEA: `http://em1-fasttrack.cloudapp.net`
+   APAC: `http://ap1-fasttrack.cloudapp.net`
 
 2. You may then be prompted to install an ActiveX control. If so, install it.
 3. Once you install it, you will get a security warning as shown below. Select **OK**.

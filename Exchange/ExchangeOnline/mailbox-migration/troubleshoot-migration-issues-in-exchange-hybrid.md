@@ -290,11 +290,11 @@ If your issues aren't resolved, see [My move request is still not complete or th
 
 This section describes best practices for improving network performance during migrations. The discussion is generally because the biggest impact on network performance during migration is related to third-party hardware and Internet service providers (ISPs).The Microsoft 365 Network Analysis Tool is deployed to help analyze network-related issues prior to deploying Microsoft 365 services:
 
-- North America: [http://na1-fasttrack.cloudapp.net](http://na1-fasttrack.cloudapp.net/)
-- EMEA: [http://em1-fasttrack.cloudapp.net](http://em1-fasttrack.cloudapp.net/)
-- APAC: [http://ap1-fasttrack.cloudapp.net](http://ap1-fasttrack.cloudapp.net/)
+- North America: `http://na1-fasttrack.cloudapp.net`
+- EMEA: `http://em1-fasttrack.cloudapp.net`
+- APAC: `http://ap1-fasttrack.cloudapp.net`
 
-The first time you select [http://na1-fasttrack.cloudapp.net](http://na1-fasttrack.cloudapp.net/), you will be prompted to install an ActiveX control. Once you install it, you will get a Security Warning as shown below:
+The first time you select `http://na1-fasttrack.cloudapp.net`, you will be prompted to install an ActiveX control. Once you install it, you will get a Security Warning as shown below:
 
 :::image type="content" source="media/troubleshoot-migration-issues-in-exchange-hybrid/security-warning.jpg" alt-text="screenshot of the security warning 1" border="false":::
 
@@ -302,7 +302,7 @@ Install [Java](https://java.com/download/).
 
 #### Reboot
 
-Go to [http://na1-fasttrack.cloudapp.net](http://na1-fasttrack.cloudapp.net/) and you will be prompted to run the application as shown below:
+Go to `http://na1-fasttrack.cloudapp.net` and you will be prompted to run the application as shown below:
 
 :::image type="content" source="media/troubleshoot-migration-issues-in-exchange-hybrid/prompted-to-run-application.png" alt-text="screenshot of the security warning 2" border="false":::
 
