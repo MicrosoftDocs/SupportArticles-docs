@@ -127,6 +127,8 @@
       href: ../access/disable-database-startup-options.md
     - name: Error 2950 when running a macro
       href: ../access/error-running-macro.md
+    - name: Error when compiling modules or running procedures
+      href: ../access/error-compiling-module-running-procedure.md
     - name: Error when inserting table record
       href: ../access/error-inserting-table-record-autonumber.md
     - name: Error when using built-in wizards
@@ -165,6 +167,8 @@
       href: ../access/hide-combo-box-drop-down-arrow.md
     - name: How Table Analyzer Wizard works
       href: ../access/table-analyzer-wizard.md
+    - name: How to change query properties
+      href: ../access/how-to-change-query-properties.md
     - name: How to create a running totals query
       href: ../access/create-a-running-totals-query.md
     - name: How to loop through references to view properties
@@ -193,6 +197,8 @@
       href: ../access/access-linked-table-deleted.md
     - name: List Access reserved words
       href: ../access/reserved-words.md
+    - name: Long integer numbers are converted as double data type
+      href: ../access/long-integer-numbers-converted-double-data-type.md
     - name: Memory leak when Access connects to database files
       href: ../access/access-engine-memory-leak.md
     - name: Missing or broken reference
@@ -257,6 +263,8 @@
       href: ../access/switchboard-manager-option-disappears.md
     - name: Synchronize two combo boxes
       href: ../access/sync-combo-boxes.md
+    - name: Text of text box control displays incorrectly
+      href: ../access/text-box-control-information-incorrectly.md
     - name: Troubleshooting corruption in database
       href: ../access/troubleshoot-database-corruption.md
     - name: Troubleshoot errors updating queries or forms
