@@ -49,7 +49,7 @@ To resolve this issue, follow these steps.
 
     If the MSOnline module isn't present, use Windows PowerShell to import the MSOnline module. To do this, follow these steps:
 
-    1. Connect to Exchange Online by using remote PowerShell. For more info about how to do this, see [Connect to Exchange Online Using Remote PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell?redirectedfrom=MSDN&view=exchange-ps).
+    1. Connect to Exchange Online by using remote PowerShell. For more info about how to do this, see [Connect to Exchange Online Using Remote PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell?redirectedfrom=MSDN&view=exchange-ps&preserve-view=true).
     2. Type the following cmdlet, and then press Enter:
 
         ```powershell

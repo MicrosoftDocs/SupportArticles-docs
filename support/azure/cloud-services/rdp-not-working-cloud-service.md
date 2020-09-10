@@ -42,7 +42,7 @@ Sometimes while troubleshooting the RDP issues, you might find that resetting th
 3. Delete all the existing RDP extensions if present.
 4. Re-enable Remote Desktop for the roles by using the self-signed certificate that you created in the step 1.
 
-You can also perform the above four steps using a PowerShell script. Run the below PowerShell script in admin or elevated mode. Make sure you have [Azure PowerShell Service Management module](https://docs.microsoft.com/powershell/azure/servicemanagement/install-azure-ps?view=azuresmps-4.0.0)  installed in your system before running it.
+You can also perform the above four steps using a PowerShell script. Run the below PowerShell script in admin or elevated mode. Make sure you have [Azure PowerShell Service Management module](https://docs.microsoft.com/powershell/azure/servicemanagement/install-azure-ps?view=azuresmps-4.0.0&preserve-view=true)  installed in your system before running it.
 
 ```powershell
 $SubscriptionId = "your-subscription-id" # Subscription Id$CloudServiceName = "mycloudservice" # Cloud Service name$CertPassword = "CertPassword" # Password for the self-signed certificate$CertExportFilePath = "C:\my-cert-file.pfx" # Local file path where self-signed certificate will be exported$RdpUserName = "RemoteUserName" # RDP user name$RdpUserPassw0rd = "RdpPassword" # RDP user password$Slot = "Production" # Cloud Service slot$RdpAccountExpiry = $(Get-Date).AddDays(365) # RDP user account expiration DateTime
