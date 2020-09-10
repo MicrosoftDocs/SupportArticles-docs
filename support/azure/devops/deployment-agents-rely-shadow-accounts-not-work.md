@@ -1,6 +1,7 @@
 ---
 title: Deployment agents that rely on shadow don't work
 description: This article provides resolutions for the problem that occurs when you try to use deployment agents that rely on shadow accounts in Release Management.
+ms.prod: devops
 ms.date: 08/14/2020
 ms.prod-support-area-path: Server Administration
 ms.reviewer: achand, daleche, muthuk, sriramb, ronai, ans, leov

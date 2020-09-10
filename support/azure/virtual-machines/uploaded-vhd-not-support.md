@@ -33,7 +33,7 @@ This problem occurs for one of the following reasons:
 
 To resolve this problem, resize the disk to comply with 1 MB alignment:
 
-- In Windows, use the [Resize-VHD](https://docs.microsoft.com/powershell/module/hyper-v/resize-vhd?view=win10-ps) PowerShell cmdlet. 
+- In Windows, use the [Resize-VHD](https://docs.microsoft.com/powershell/module/hyper-v/resize-vhd?view=win10-ps&preserve-view=true) PowerShell cmdlet. 
     > [!NOTE]
     > **Resize-VHD** is not an Azure PowerShell cmdlet. 
 - In Linux, use the [qemu-img](https://docs.microsoft.com/azure/virtual-machines/linux/create-upload-generic) command.
