@@ -18,8 +18,6 @@ search.appverid: MET150
 ---
 # Exchange Online users can't connect to public folders by using Outlook or OWA
 
-This article helps you troubleshoot an issue in which Exchange Online users can't connect to public folders (PFs) by using Outlook or OWA.
-
 _Original KB number:_ &nbsp; 4549862
 
 **Who is it for?**

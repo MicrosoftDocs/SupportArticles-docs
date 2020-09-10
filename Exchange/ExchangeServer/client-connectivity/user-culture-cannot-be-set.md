@@ -18,8 +18,6 @@ search.appverid: MET150
 ---
 # User Culture cannot be set when Exchange Server 2010 SP1 CAS proxies to an older server version
 
-This article provides methods to solve the issue that you can't configure user culture if Microsoft Exchange Server 2010 Service Pack 1 (SP1) Client Access Server (CAS) proxies to an older server version.
-
 _Original KB number:_ &nbsp; 2475771
 
 ## Symptoms

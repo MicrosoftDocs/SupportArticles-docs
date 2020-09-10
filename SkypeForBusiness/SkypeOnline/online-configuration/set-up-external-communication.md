@@ -16,8 +16,6 @@ search.appverid: MET150
 ---
 # Set up Skype for Business Online external communications
 
-This guide is for Skype for Business users who want to communicate with Skype for Business or Skype users in other organizations.
-
 _Original KB number:_ &nbsp; 10041
 
 ## Summary

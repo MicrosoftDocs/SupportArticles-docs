@@ -18,8 +18,6 @@ search.appverid: MET150
 ---
 # Create and manage resource mailboxes in Microsoft 365
 
-This article explains how to use the Exchange Admin Center (EAC) to create and manage resource mailboxes (conference rooms/equipment) in Microsoft 365.
-
 _Original KB number:_ &nbsp; 10063
 
 **Who is it for?**

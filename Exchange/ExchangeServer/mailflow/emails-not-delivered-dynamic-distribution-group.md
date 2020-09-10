@@ -19,8 +19,6 @@ appliesto:
 ---
 # Email messages sent to a Dynamic Distribution Group aren't delivered to all recipients
 
-This article provides a solution to an issue where email messages that are sent to a Dynamic Distribution Group aren't delivered to all recipients.
-
 _Original KB number:_ &nbsp; 4090655
 
 ## Symptoms

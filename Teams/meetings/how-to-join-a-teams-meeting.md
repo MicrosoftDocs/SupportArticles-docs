@@ -16,8 +16,6 @@ search.appverid: MET150
 ---
 # How to join a Microsoft Teams meeting
 
-This article provides all the details you need to join a Microsoft Teams meeting, plus in-context troubleshooting tips.
-
 _Original KB number:_ &nbsp; 10055
 
 ## Summary
@@ -316,7 +314,7 @@ If you can't hear audio, check the following:
     1. In the Teams main window, go to **Options** ![the Options icon](./media/how-to-join-a-teams-meeting/options.png) > **Audio device**, and then choose the microphone you want.
     2. Use the slider to adjust the microphone volume. The blue indicator helps you choose the appropriate level for your mic as you speak.
 
-       :::image type="content" source="media/how-to-join-a-teams-meeting/audio-device-settings.png" alt-text="Check the speakers and volume on your computer" border="false":::
+       :::image type="content" source="media/how-to-join-a-teams-meeting/audio-device-settings.png" alt-text="Check the audio device settings" border="false":::
 
 #### Low call quality or choppy audio
 

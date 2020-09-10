@@ -20,8 +20,6 @@ appliesto:
 ---
 # Attendees receive a meeting update after the event reminder is triggered
 
-This article helps you resolve the problem that attendees receive a meeting update without any changes after the reminder for an event is triggered.
-
 _Original KB number:_ &nbsp; 3108249
 
 ## Symptoms  

@@ -21,8 +21,6 @@ search.appverid: MET150
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
-This article describes a problem that occurs when you try to print or preview the report, and then you move between the report pages.
-
 _Original KB number:_ &nbsp; 888635
 
 > [!NOTE]

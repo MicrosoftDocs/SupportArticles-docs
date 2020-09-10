@@ -22,8 +22,6 @@ search.appverid: MET150
 ---
 # How to open a shared calendar from an Outlook sharing invitation
 
-This article resolves issues that you get while opening a calendar that someone shared with you.
-
 _Original KB number:_ &nbsp; 10106
 
 > [!NOTE]

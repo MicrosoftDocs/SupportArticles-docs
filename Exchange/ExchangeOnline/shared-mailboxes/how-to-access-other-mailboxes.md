@@ -18,9 +18,9 @@ search.appverid: MET150
 ---
 # Accessing other people's mailboxes in Microsoft 365
 
-This article explains how to assign access permissions to a user mailbox, to multiple mailboxes, and to individual users in Microsoft 365.
-
 _Original KB number:_ &nbsp; 10048
+
+This article explains how to assign access permissions to a user mailbox, to multiple mailboxes, and to individual users in Microsoft 365.
 
 **Who is it for?**
 

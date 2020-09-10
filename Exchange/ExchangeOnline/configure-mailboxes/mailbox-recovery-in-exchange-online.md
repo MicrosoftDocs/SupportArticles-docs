@@ -18,8 +18,6 @@ search.appverid: MET150
 ---
 # Restore user mailboxes (mailbox recovery) in Exchange Online
 
-This article is intended to provide the best possible way to recover a user and mailbox in Exchange Online.
-
 _Original KB number:_ &nbsp; 20804
 
 **Who is it for?**

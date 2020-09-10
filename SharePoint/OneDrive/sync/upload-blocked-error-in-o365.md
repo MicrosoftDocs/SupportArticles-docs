@@ -28,7 +28,7 @@ When you open or edit files in Office 365 Desktop applications, you receive the 
 
 > UPLOAD BLOCKED: We couldn't verify you have the necessary permissions to upload the file. 
 
-:::image type="content" source="../media/upload-blocked-error-in-o365/upload-blocked-error-in-o365.png" alt-text="Upload blocked error in Office365. ":::
+:::image type="content" source="./media/upload-blocked-error-in-o365/upload-blocked-error-in-o365.png" alt-text="Upload blocked error in Office365. ":::
 
 ## Cause
 

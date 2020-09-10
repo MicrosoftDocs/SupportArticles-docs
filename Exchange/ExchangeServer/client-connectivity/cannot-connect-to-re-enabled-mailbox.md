@@ -22,8 +22,6 @@ appliesto:
 ---
 # Can't connect to a mailbox after it's re-enabled in Exchange Server
 
-This article helps you resolve the problem that you can't access your mailbox after the mailbox is re-enabled in a Microsoft Exchange Server environment.
-
 _Original KB number:_ &nbsp; 3132711
 
 After a user's mailbox is re-enabled in an Exchange Server 2016 or Exchange Server 2013 environment, the user can't access their mailbox by using one or more client protocols.

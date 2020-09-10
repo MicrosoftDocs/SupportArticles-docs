@@ -22,8 +22,6 @@ appliesto:
 ---
 # Outlook users can't access public folders in Exchange Server 2013 or Exchange Server 2016
 
-This article helps resolve the problem that Microsoft Outlook users can't access public folders in Exchange Server.
-
 _Original KB number:_ &nbsp; 2788136
 
 ## Symptoms

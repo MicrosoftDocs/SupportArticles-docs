@@ -26,8 +26,6 @@ search.appverid: MET150
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
-This article describes how to use the OS utilities to determine who is using the shared resources on your computer when an Access database is opened in exclusive mode.
-
 _Original KB number:_ &nbsp; 824274
 
 > [!NOTE]

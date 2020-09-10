@@ -18,8 +18,6 @@ appliesto:
 ---
 # Federation trust and sharing errors for federated Exchange 2010 organizations
 
-This article helps you resolve the problem that federated sharing features for an Exchange 2010 organization don't work correctly.
-
 _Original KB number:_ &nbsp; 2937358
 
 ## Problem

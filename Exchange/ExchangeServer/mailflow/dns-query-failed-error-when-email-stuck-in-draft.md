@@ -21,8 +21,6 @@ search.appverid: MET150
 ---
 # DNS query failed error when an email message is stuck in the Draft folder in Exchange Server 2013
 
-This article provides resolutions to solve the **DNS query failed** error that occurs when email messages are stuck in the Drafts folder in Microsoft Exchange Server 2016 or Exchange Server 2013.
-
 _Original KB number:_ &nbsp; 3007623
 
 ## Symptoms

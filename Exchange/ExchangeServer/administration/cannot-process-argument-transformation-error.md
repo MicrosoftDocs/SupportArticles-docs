@@ -18,8 +18,6 @@ search.appverid: MET150
 ---
 # Cannot process argument transformation error for cmdlets in Exchange Server 2013 with CU11
 
-This article provides a workaround to solve the **Cannot process argument transformation** error that occurs when you use some cmdlets in Microsoft Exchange Server 2013 that has Cumulative Update 11 installed.
-
 _Original KB number:_ &nbsp; 3140833
 
 ## Symptoms
