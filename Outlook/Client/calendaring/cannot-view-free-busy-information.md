@@ -52,11 +52,11 @@ Reinstall Office applications.
 Add the missing registry subkeys:
 
 > [!NOTE]
-> Add the MSI subkey only if the MSI version is installed. If using install Click-to-Run, add the Click-to-Run registry keys only.
+> Add the MSI subkey only if the MSI version is installed. If using Click-to-Run, add the Click-to-Run registry keys only.
 
-1. Locate the key with populated values and copy the string values for **EX** and **SMTP**.
-2. Close Outlook.
-3. Start Registry Editor. To do this, right-click **Start**, type **regedit** in the **Run**  box, and then select **OK**.
+1. Close Outlook.
+2. Start Registry Editor. To do this, right-click **Start**, type **regedit** in the **Run**  box, and then select **OK**.
+3. Locate the key with populated values and copy the string values for **EX** and **SMTP**.
 4. Find the location of the missing **FreeBusySupport** registry key and add the key manually. You must add the **SchedulingInformation** key first, and then add the **FreeBusySupport** subkey.
 
     > [!NOTE]
