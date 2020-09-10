@@ -2,6 +2,7 @@
 title: Some clients are assigned to the wrong site code
 description: Fixes an issue where some clients may be assigned to the incorrect site code in System Center Configuration Manager 2007.
 ms.date: 08/20/2020
+ms.prod: configuration-manager
 ms.prod-support-area-path:
 ms.reviewer: clintk
 ---

@@ -160,9 +160,9 @@ If the query returns no results, the following resolution doesn't apply to your 
 
 8. Find the **\<ManagementPackPublicKeyToken>** text in the XML file and remove the whole line.
 
-9. Open the management pack in the Service Manager Authoring Tool, and then [seal a Service Manager management pack](/system-center/scsm/seal-mp?view=sc-sm-2016) by using the same .snk key file that was previously used to seal the pack.
+9. Open the management pack in the Service Manager Authoring Tool, and then [seal a Service Manager management pack](/system-center/scsm/seal-mp) by using the same .snk key file that was previously used to seal the pack.
 
-10. In the Service Manager console, [import a management pack](/system-center/scsm/management-packs?view=sc-sm-2016#import-a-management-pack).
+10. In the Service Manager console, [import a management pack](/system-center/scsm/management-packs#import-a-management-pack).
 11. In the Service Manager console, select **Data Warehouse**, expand **Data Warehouse**, and then select **Data Warehouse Jobs**.
 12. In the **Data Warehouse Jobs** pane, right-click **MPSyncJob**, and then select **Resume** from the **Tasks** list.
 13. Periodically refresh the **Data Warehouse Job** pane until the **MPSyncJob** is completed.

@@ -107,7 +107,8 @@
         "system-center/vmm/**/*.md": "system-center",
         "microsoft-identity-manager/*.md": "microsoft-identity-manager",
         "previous-versions/dotnet/**/*.md": ".net",
-        "previous-versions/visualstudio/**/*.md": "visual-studio-family"
+        "previous-versions/visualstudio/**/*.md": "visual-studio-family",
+        "browsers/**/*.md": "internet-explorer"
       },
       "ms.technology": {
         "biztalk/**/*.md": "",
