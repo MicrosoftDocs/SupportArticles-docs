@@ -38,7 +38,7 @@ Typical errors include the following:
 - > Error Code: 800706433  
   The Agent Management Operation Agent Install failed for remote computer \<name>
 
-### Possible resolutions
+**Possible resolutions**
 
 During discovery, specify an account that has both domain administrator permissions and is a member of the Operations Manager Admins group.
 
