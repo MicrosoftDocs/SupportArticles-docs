@@ -34,9 +34,9 @@ Add ADFS by using Add Roles and Features Wizard.
 
 If you are using Windows Server 2008, you must download and install ADFS 2.0 to be able to work with Office 365. You can obtain ADFS 2.0 from the following Microsoft Download Center website:
 
-[Active Directory Federation Services 2.0 RTW](https://www.microsoft.com/download/details.aspx?id=10909)
+[Active Directory Federation Services 2.0 RTW](https://support.microsoft.com/help/974408)
 
-After the installation, use Windows Update to download and install all applicable updates. 
+After the installation, use Windows Update to download and install all applicable updates.
 
 ### Step 2: Request a certificate from a third-party CA for the Federation server name
 
