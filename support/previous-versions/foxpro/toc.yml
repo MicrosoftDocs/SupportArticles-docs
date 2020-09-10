@@ -1,0 +1,32 @@
+- name: General
+  items:
+  - name: A cursor-based grid is blank
+    href: cursor-based-grid-blank.md
+  - name: Add a Visual FoxPro database to SQL Server
+    href: add-database-sql-server.md
+  - name: Convert function gets date from SQL Server
+    href: convert-function-gets-date-sql-server.md
+  - name: Create Stored Procedures in programs
+    href: create-stored-procedures.md
+  - name: Format a date or time value to query a table
+    href: format-date-or-time-value-query-table.md
+  - name: Pass parameters to a SQL Server stored procedure
+    href: pass-parameters-sql-server-stored-procedure.md
+  - name: Prevent printing from a report preview
+    href: prevent-printing-report-preview.md
+  - name: Programmatically modify report fields
+    href: programmatically-modify-report-fields.md
+  - name: Register an ActiveX control manually
+    href: register-activex-control-manually.md
+  - name: Send to the serial port
+    href: send-serial-port-using-mscomm32.md
+  - name: SQL Server distributed queries
+    href: sql-server-distributed-queries.md
+  - name: Troubleshoot to resolve suspected corruption
+    href: troubleshoot-resolve-suspected-corruption.md
+  - name: Use the APPEND GENERAL command
+    href: use-append-general-command.md
+  - name: Use the SET PRINTER TO NAME command to print
+    href: use-set-printer-to-name-command-print.md
+  - name: Use wildcard characters in the SQL statement
+    href: use-wildcard-characters-sql-statement.md
