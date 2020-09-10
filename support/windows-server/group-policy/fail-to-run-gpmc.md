@@ -2,8 +2,8 @@
 title: Errors when you run GPMC
 description: Provides help to fix errors that occur when you run Group Policy Management Console (GPMC).
 ms.date: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

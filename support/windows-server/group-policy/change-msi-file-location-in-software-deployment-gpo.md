@@ -2,8 +2,8 @@
 title: Change or set multiple locations for MSI package
 description: Describes how to change the MSI file location in the Software Deployment GPO and set the multiple UNC paths for the same MSI package.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

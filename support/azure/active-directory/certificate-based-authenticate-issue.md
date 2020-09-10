@@ -42,7 +42,7 @@ _Original KB number:_ &nbsp; 4032987
     Install-ModuleAzureAD
     ```
 
-2. To create a trusted certificate authority, use the [New-AzureADTrustedCertificateAuthority](/powershell/module/azuread/new-azureadtrustedcertificateauthority?view=azureadps-2.0) cmdlet, and set the **crlDistributionPoint** attribute to a correct value.
+2. To create a trusted certificate authority, use the [New-AzureADTrustedCertificateAuthority](https://docs.microsoft.com/powershell/module/azuread/new-azureadtrustedcertificateauthority?view=azureadps-2.0&preserve-view=true) cmdlet, and set the **crlDistributionPoint** attribute to a correct value.
 
     > [!NOTE]
     > When you create the **TrustedRootCertificateAuthority** objects in Azure AD, the CRL URLs that are defined within the .CER file are not used. The **CrlDistributionPoin** and **DeltaCrlDistributionPoint** values must be manually populated by a web location where Azure AD can access the CRLs. The CRL paths within the issued certificates do not have to contain the URLs that are accessible to Azure AD. Also, large CRLs that take more than 15 seconds to download should be put on a faster link, such as Azure Storage, to avoid caching delays that can cause intermediate authentication failures.
@@ -63,7 +63,7 @@ _Original KB number:_ &nbsp; 4032987
         AuthorityType = 0 = RootAuthority  
         AuthorityType = 1 = IntermediateAuthority
     > [!NOTE]
-    > To make changes to these objects, see [Configure the certificate authorities](/active-directory/authentication/active-directory-certificate-based-authentication-get-started#step-2-configure-the-certificate-authorities).  
+    > To make changes to these objects, see [Configure the certificate authorities](https://docs.microsoft.com/active-directory/authentication/active-directory-certificate-based-authentication-get-started#step-2-configure-the-certificate-authorities).  
 
 4. Run the following commands to make sure that the ADFS settings are not set to **PromptLoginBehavior: true**. Otherwise, users will be prompted to enter their user name and password for some modern apps.
 
@@ -89,7 +89,7 @@ _Original KB number:_ &nbsp; 4032987
 1. Certificate-Based Authentication requires ADFS 2012R2 or a later version, and it must use Web Application Proxy.
 
     > [!NOTE]
-    > Using a third-party Web Application Proxy is not supported unless it supports all the MUSTs in the [MS-ADFSPIP protocol document](/openspecs/windows_protocols/ms-adfspip/76deccb1-1429-4c80-8349-d38e61da5cbb).
+    > Using a third-party Web Application Proxy is not supported unless it supports all the MUSTs in the [MS-ADFSPIP protocol document](https://docs.microsoft.com/openspecs/windows_protocols/ms-adfspip/76deccb1-1429-4c80-8349-d38e61da5cbb).
 
 2. The Root `*.CER` file must be in the computer's **Trusted Root Certificate Authority\Certificates** container. Also, all Intermediate `*.CER` files must be in the computer's **Intermediate Root Certificate Authority\Certificates** container. You can verify this by running `certlm.msc` or by running the following `certutil.exe` commands at an elevated command prompt:
 
@@ -218,5 +218,5 @@ _Original KB number:_ &nbsp; 4032987
 ## More information
 
 - [Azure AD: Certificate based authentication for iOS and Android now in preview.](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/azuread-certificate-based-authentication-for-ios-and-android-now/ba-p/244999)
-- [Get started with certificate based authentication on iOS - Public Preview](/azure/active-directory/authentication/active-directory-certificate-based-authentication-ios)
-- [ADFS: Certificate Authentication with Azure AD & Office 365](/archive/blogs/samueld/adfs-certauth-aad-o365)
+- [Get started with certificate based authentication on iOS - Public Preview](https://docs.microsoft.com/azure/active-directory/authentication/active-directory-certificate-based-authentication-ios)
+- [ADFS: Certificate Authentication with Azure AD & Office 365](https://docs.microsoft.com/archive/blogs/samueld/adfs-certauth-aad-o365)

@@ -2,8 +2,8 @@
 title: How domain controllers are located
 description: Describes how domain controllers are located.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

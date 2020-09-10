@@ -2,8 +2,8 @@
 title: LDAP and Kerberos Server may reset TCP sessions immediately after creation
 description: Fixes an issue where TCP sessions created to the server ports 88, 389 and 3268 are reset. Sessions using Secure Sockets Layer or Transport Layer Security on ports 636 and 3269 are also affected.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Deland-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

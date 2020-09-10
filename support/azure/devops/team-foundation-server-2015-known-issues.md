@@ -1,6 +1,7 @@
 ---
 title: Team Foundation Server 2015 known issues
 description: This article describes the known issues in Team Foundation Server 2015.
+ms.prod: devops
 ms.date: 08/14/2020
 ms.prod-support-area-path: Server Administration
 ms.topic: article

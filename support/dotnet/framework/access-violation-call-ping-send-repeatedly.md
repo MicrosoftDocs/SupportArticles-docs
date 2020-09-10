@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 2533627
 
 When you create and destroy a `Ping` class object repeatedly, this may result in an unexpected runtime error such as **Access Violation** exception depending on the application configuration or when the `System.Net.NetworkInformation.Ping.Send` method is called.
 
-For more information about the `Ping` class, see [Ping Class](/dotnet/api/system.net.networkinformation.ping?&view=netframework-4.8).
+For more information about the `Ping` class, see [Ping Class](/dotnet/api/system.net.networkinformation.ping?&view=netframework-4.8&preserve-view=true).
 
 ## Cause
 
@@ -57,7 +57,7 @@ static void Pinger()
 }
 ```
 
-For more information about the `GC.KeepAlive` method, see [GC.KeepAlive(Object) Method](/dotnet/api/system.gc.keepalive?&view=netframework-4.8).
+For more information about the `GC.KeepAlive` method, see [GC.KeepAlive(Object) Method](/dotnet/api/system.gc.keepalive?&view=netframework-4.8&preserve-view=true).
 
 ## Workaround 2: Change the implementation
 

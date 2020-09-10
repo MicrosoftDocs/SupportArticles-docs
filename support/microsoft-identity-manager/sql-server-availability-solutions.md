@@ -34,7 +34,7 @@ Disaster recovery is supported in the following scenarios for a configuration of
 > [!NOTE]
 > Unless otherwise specified, the following items apply to all databases for the MIM server components.
 
-- The SQLNCLI OLE DB Provider doesn't support the `MultiSubnetFailover` keyword. To use the `MultiSubnetFailover` keyword, use the ODBC driver. For more information, see [SQL Server Native Client Support for High Availability, Disaster Recovery](/sql/relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery?view=sql-server-ver15).
+- The SQLNCLI OLE DB Provider doesn't support the `MultiSubnetFailover` keyword. To use the `MultiSubnetFailover` keyword, use the ODBC driver. For more information, see [SQL Server Native Client Support for High Availability, Disaster Recovery](/sql/relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery).
 
 - By default, the `RegisterAllProvidersIP` is now disabled.
 

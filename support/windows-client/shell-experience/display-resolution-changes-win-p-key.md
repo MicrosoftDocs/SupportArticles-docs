@@ -2,8 +2,8 @@
 title: Display resolution changes to a lower resolution
 description: Fixes an issue where the display resolution may change to a lower resolution when you use the Presentation Display Mode keyboard shortcut (Windows logo key + P) to change the mode to Duplicate.
 ms.data: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

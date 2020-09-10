@@ -2,6 +2,7 @@
 title: Error 80040217 when ConfigMgr clients load policies
 description: Fixes an issue where System Center Configuration Manager 2007 clients fail to load policies if the site has no network access account defined.
 ms.date: 08/20/2020
+ms.prod: configuration-manager
 ms.prod-support-area-path:
 ---
 # Configuration Manager 2007 client may fail to load policies with error 80040217 in PolicyEvaluator.log

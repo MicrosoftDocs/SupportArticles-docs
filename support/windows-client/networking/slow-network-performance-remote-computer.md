@@ -2,8 +2,8 @@
 title: Slow network performance on remote network computer
 description: Fixes a slow network performance issue that can occur when you open a file that is located in a shared folder on a remote network computer.
 ms.data: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -2,8 +2,8 @@
 title: Windows is not genuine error in Windows 7 or Windows Server 2008 R2
 description: Describes a problem in which you receive a "Windows is not genuine. Your computer might not be running a counterfeit copy of Windows. 0x80070005" error message in Windows 7 or in Windows Server 2008 R2. Provides resolutions.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Deland-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

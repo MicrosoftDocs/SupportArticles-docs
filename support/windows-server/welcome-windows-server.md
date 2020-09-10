@@ -1,15 +1,15 @@
 ---
-title: Welcome Support articles for Windows server
+title: Windows server troubleshooting document
 description: This article lists troubleshooting articles for Windows server products.
 ms.topic: article
 ms.date: 09/08/2020
 ---
 # Windows server troubleshooting
 
-This library provides solutions enabling IT pros to troubleshoot and support Windows Server operating systems. 
-To bring you the most accurate content, this library is managed by a team who works directly with the Windows product group and support professionals. 
+This library provides solutions enabling IT Pros to troubleshoot and support Windows Server operating systems. 
+To bring you the most accurate content, this library is managed by a team that works directly with the Windows product group and support professionals. 
 
-Browse the content listed below or use the search feature.
+Browse the following content or use the search feature.
 
 ## In this library
 - Active Directory

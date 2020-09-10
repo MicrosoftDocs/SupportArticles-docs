@@ -2,8 +2,8 @@
 title: You may experience problems when you rename sites in the Active Directory forest
 description: Describes the problems that you may experience when you rename sites in the Active Directory forest.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Deland-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

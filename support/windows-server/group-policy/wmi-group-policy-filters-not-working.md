@@ -2,8 +2,8 @@
 title: WMI Group Policy filters don't work
 description: Describes an issue in which Windows 10 builds are excluded from WMI filter results.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

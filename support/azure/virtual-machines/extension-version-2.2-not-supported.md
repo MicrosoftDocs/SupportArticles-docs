@@ -24,7 +24,7 @@ To work around this problem, use one of the following methods.
 
 ### Method 1
 
-Revert to using the Azure AD parameters in the syntax for [Set-AzureRmVmDiskEncryptionExtension](https://docs.microsoft.com/powershell/module/azurerm.compute/set-azurermvmdiskencryptionextension?view=azurermps-6.2.0).
+Revert to using the Azure AD parameters in the syntax for [Set-AzureRmVmDiskEncryptionExtension](https://docs.microsoft.com/powershell/module/azurerm.compute/set-azurermvmdiskencryptionextension?view=azurermps-6.2.0&preserve-view=true).
 
 The parameters are the following:
 

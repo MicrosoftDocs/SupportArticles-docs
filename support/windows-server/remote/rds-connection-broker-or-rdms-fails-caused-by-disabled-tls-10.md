@@ -2,8 +2,8 @@
 title: RDS Connection Broker or RDMS fails
 description: Addresses an issue in which RDS Connection Broker or RDMS fails after you disable TLS 1.0 in Windows Server.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Deland-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: ITPro
 ms.topic: troubleshooting
