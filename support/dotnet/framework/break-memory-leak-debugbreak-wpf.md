@@ -25,4 +25,4 @@ The native rendering engine in WPF doesn't shut down cleanly and so such runtime
 Use one of the following workarounds:
 
 - Unselect **Break on Memory Leaks** check box on the DirectX Control Panel.
-- Force WPF applications to use software rendering mode. For more information, see [Graphics Rendering Registry Settings](/dotnet/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings).
+- Force WPF applications to use software rendering mode. For more information, see [Graphics Rendering Registry Settings](https://docs.microsoft.com/dotnet/desktop/wpf/graphics-multimedia/graphics-rendering-registry-settings?view=netframeworkdesktop-4.8).

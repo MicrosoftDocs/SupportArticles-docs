@@ -299,7 +299,7 @@ To troubleshoot an out-of-memory condition, use the Debug Diagnostics tool to mo
 1. Install the Debug Diagnostics Tool.
 
     The following file is available for download from the Microsoft Download Center:  
-    [Download the Debug Diagnostic Tool package now](https://www.microsoft.com/download/details.aspx?id=26798)
+    [Download the Debug Diagnostic Tool package now](https://www.microsoft.com/download/details.aspx?id=58210)
 
     For more information about how to download Microsoft support files, see [How to obtain Microsoft support files from online services](https://support.microsoft.com/help/119591).
 

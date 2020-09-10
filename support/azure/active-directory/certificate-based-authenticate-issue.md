@@ -63,7 +63,7 @@ _Original KB number:_ &nbsp; 4032987
         AuthorityType = 0 = RootAuthority  
         AuthorityType = 1 = IntermediateAuthority
     > [!NOTE]
-    > To make changes to these objects, see [Configure the certificate authorities](/active-directory/authentication/active-directory-certificate-based-authentication-get-started#step-2-configure-the-certificate-authorities).  
+    > To make changes to these objects, see [Configure the certificate authorities](https://docs.microsoft.com/azure/active-directory/authentication/active-directory-certificate-based-authentication-get-started#step-2-configure-the-certificate-authorities).  
 
 4. Run the following commands to make sure that the ADFS settings are not set to **PromptLoginBehavior: true**. Otherwise, users will be prompted to enter their user name and password for some modern apps.
 

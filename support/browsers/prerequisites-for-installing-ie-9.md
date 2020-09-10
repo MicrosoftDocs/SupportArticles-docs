@@ -51,9 +51,7 @@ If you've ruled out the automatic installation issues we asked you to consider i
 
 - A performance and functionality update is available for Windows 7 and Windows Server 2008 R2 ([KB2454826](https://support.microsoft.com/help/2454826))
 
-    [Download the x86 package now.](https://go.microsoft.com/fwlink/?linkid=207219)
-
-    [Download the x64 package now.](https://go.microsoft.com/fwlink/?linkid=207220)
+    [Download the packages now.](https://www.catalog.update.microsoft.com/Search.aspx?q=2454826)
 
 ### For Windows Vista or Windows Server 2008
 
