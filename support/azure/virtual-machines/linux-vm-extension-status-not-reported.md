@@ -27,7 +27,7 @@ Microsoft is taking steps to automatically resolve this problem. For VMs that ha
 - **Extension publisher:** Microsoft.CPlat.Core
 - **Extension type:** RunCommandLinux
 
-You can use [Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest)  to query the extensions that are assigned to a VM. To do this, run the following command:
+You can use [Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest&preserve-view=true)  to query the extensions that are assigned to a VM. To do this, run the following command:
 
 ```Azure CLI
 az vm extension list --vm-name <vmName> -g <resGroupName>

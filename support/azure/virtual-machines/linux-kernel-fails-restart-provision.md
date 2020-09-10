@@ -50,7 +50,7 @@ This problem occurs because the Linux virtual machine  does not communicate wit
 
 ## Resolution
 
-To resolve this problem, try [manually restarting](https://docs.microsoft.com/cli/azure/vm?view=azure-cli-latest#az_vm_restart) the virtual machine  after some time.  If the problem persists, [redeploy the virtual machine to a new Azure node](https://docs.microsoft.com/azure/virtual-machines/linux/redeploy-to-new-node), start the virtual machine, and then update the Linux kernel by using the following instructions. You must also perform these steps on the custom image you are using to deploy the VM.  
+To resolve this problem, try [manually restarting](https://docs.microsoft.com/cli/azure/vm?view=azure-cli-latest&preserve-view=true#az_vm_restart) the virtual machine  after some time.  If the problem persists, [redeploy the virtual machine to a new Azure node](https://docs.microsoft.com/azure/virtual-machines/linux/redeploy-to-new-node), start the virtual machine, and then update the Linux kernel by using the following instructions. You must also perform these steps on the custom image you are using to deploy the VM.  
 
 | **Linux distro**| **Distro version**| **Kernel version that has the fix**| **Update instructions** |
 |---|---|---|---|

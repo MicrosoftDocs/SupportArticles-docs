@@ -1,6 +1,7 @@
 ---
 title: Error when you add link to work item
 description: This article provides resolutions for the error that occurs when you try to add a new link to a work item in Team Foundation Server 2017 with Update 2 installed.
+ms.prod: devops
 ms.date: 08/18/2020
 ms.prod-support-area-path: Boards
 ms.reviewer: chcoope

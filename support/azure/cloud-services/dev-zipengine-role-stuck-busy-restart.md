@@ -86,7 +86,7 @@ ERR: Run-from-source setup phase failed with hr = 0x8007000b.
 ERR: Failed to complete setup of assembly (hr = 0x8007000b). Probing terminated.
 ```
 
-The above highlighted error message in fusion logs states that something is wrong in the bitness of the assembly. If you look into this [BadImageFormatException](https://docs.microsoft.com/dotnet/api/system.badimageformatexception?redirectedfrom=MSDN&view=netcore-3.1) article, then the most probable cause of this error correlates to this:
+The above highlighted error message in fusion logs states that something is wrong in the bitness of the assembly. If you look into this [BadImageFormatException](https://docs.microsoft.com/dotnet/api/system.badimageformatexception?redirectedfrom=MSDN&view=netcore-3.1&preserve-view=true) article, then the most probable cause of this error correlates to this:
 
 "A DLL or executable is loaded as a 64-bit assembly, but it contains 32-bit features or resources. For example, it relies on COM interop or calls methods in a 32-bit dynamic link library. To address this exception, set the project's **Platform target**  property to x86 (instead of x64 or AnyCPU) and recompile."
 
