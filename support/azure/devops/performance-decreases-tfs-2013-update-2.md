@@ -1,6 +1,7 @@
 ---
 title: Performance decreases in Team Foundation Server
 description: This article provides a workaround for the decrease performance in Team Foundation Server 2013 Update 2 problem after you upgrade to SQL Server 2014. This issue affects Work Item Tracking and also affects throughput and other processes if you have a large number of project collections. 
+ms.prod: devops
 ms.date: 08/14/2020
 ms.prod-support-area-path: Installation, Migration, and Move
 ms.reviewer: andreas, georgea
