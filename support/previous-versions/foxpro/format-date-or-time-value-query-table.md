@@ -4,6 +4,7 @@ description: This article discusses how to query a date or time value from a SQL
 ms.date: 09/08/2020
 ms.prod-support-area-path: 
 ms.topic: how-to
+ms.prod: Visual FoxPro
 ---
 # Format a date or time value to query an SQL table in Visual FoxPro
 

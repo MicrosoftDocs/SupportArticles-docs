@@ -4,6 +4,7 @@ description: This article describes how to use the SET PRINTER TO NAME command t
 ms.date: 09/08/2020
 ms.prod-support-area-path: 
 ms.topic: how-to
+ms.prod: Visual FoxPro
 ---
 # Use the SET PRINTER TO NAME command to print to a specified printer in Visual FoxPro
 

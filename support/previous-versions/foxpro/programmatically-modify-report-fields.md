@@ -4,6 +4,7 @@ description: This article describes how to programmatically modify a report file
 ms.date: 09/08/2020
 ms.prod-support-area-path: 
 ms.topic: how-to
+ms.prod: Visual FoxPro
 ---
 # Programmatically modify report fields in Visual FoxPro
 

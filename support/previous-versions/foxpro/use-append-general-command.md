@@ -4,6 +4,7 @@ description: This article describes how to Use the APPEND GENERAL command with a
 ms.date: 09/08/2020
 ms.prod-support-area-path: 
 ms.topic: how-to
+ms.prod: Visual FoxPro
 ---
 # Use the APPEND GENERAL command with an Imager file
 

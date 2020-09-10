@@ -4,6 +4,7 @@ description: This article describes how to create Stored Procedures in Visual Fo
 ms.date: 09/08/2020
 ms.prod-support-area-path: 
 ms.topic: how-to
+ms.prod: Visual FoxPro
 ---
 # Create Stored Procedures in Visual FoxPro Programs
 

@@ -4,6 +4,7 @@ description: This article provides basic steps to begin troubleshooting data cor
 ms.date: 09/08/2020
 ms.prod-support-area-path: 
 ms.topic: how-to
+ms.prod: Visual FoxPro
 ---
 # How to troubleshoot to resolve suspected corruption in Visual FoxPro
 

@@ -4,6 +4,7 @@ description: This article describes an example of passing parameters to a SQL Se
 ms.date: 09/08/2020
 ms.prod-support-area-path: 
 ms.topic: how-to
+ms.prod: Visual FoxPro
 ---
 # Pass parameters to a SQL Server stored procedure
 

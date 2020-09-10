@@ -5,6 +5,7 @@ ms.date: 09/08/2020
 ms.prod-support-area-path: 
 ms.reviewer: TREVORH
 ms.topic: how-to
+ms.prod: Visual FoxPro
 ---
 # Prevent printing from a report preview in Visual FoxPro 9.0
 

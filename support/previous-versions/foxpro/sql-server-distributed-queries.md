@@ -4,6 +4,7 @@ description: This article demonstrates how to perform a SQL Server distributed q
 ms.date: 09/08/2020
 ms.prod-support-area-path: 
 ms.topic: how-to
+ms.prod: Visual FoxPro
 ---
 # Do SQL Server distributed queries with FoxPro .dbf files
 

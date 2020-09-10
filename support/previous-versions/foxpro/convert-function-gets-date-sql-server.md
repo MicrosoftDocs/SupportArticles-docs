@@ -5,6 +5,7 @@ ms.date: 09/08/2020
 ms.prod-support-area-path: 
 ms.reviewer: grants
 ms.topic: how-to
+ms.prod: Visual FoxPro
 ---
 # Convert function gets date from SQL Server DateTime field with a Visual FoxPro query
 

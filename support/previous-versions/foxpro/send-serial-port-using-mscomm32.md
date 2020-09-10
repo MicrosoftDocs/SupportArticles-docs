@@ -4,6 +4,7 @@ description: This article describes how to send information to the serial port b
 ms.date: 09/08/2020
 ms.prod-support-area-path: 
 ms.topic: how-to
+ms.prod: Visual FoxPro
 ---
 # Send to the serial port by using Mscomm32.ocx
 

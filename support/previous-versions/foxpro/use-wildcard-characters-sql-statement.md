@@ -4,6 +4,7 @@ description: This article describes how to use wildcard characters in the SQL-SE
 ms.date: 09/08/2020
 ms.prod-support-area-path: 
 ms.topic: how-to
+ms.prod: Visual FoxPro
 ---
 # Use wildcard characters in the SQL-SELECT statement in Visual FoxPro
 
