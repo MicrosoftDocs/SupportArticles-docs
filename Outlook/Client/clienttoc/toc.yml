@@ -3,112 +3,241 @@
   items:
   - name: Authentication
     items:
+    - name: Continually password prompts
+      href: ../authentication/continually-prompts-password-office-365.md
+    - name: Doesn't use Modern Authentication to connect Office 365
+      href: ../authentication/outlook-prompt-password-modern-authentication-enabled.md
+    - name: Looking for credential tiles message occurs
+      href: ../authentication/looking-for-credential-tiles-message.md
+    - name: O365 credential prompts with AuthenticationService value
+      href: ../authentication/o365-credential-prompts-with-authenticationservice.md
+    - name: Outlook asks for password repeatedly when using MAPI over HTTP
+      href: ../authentication/outlook-prompt-password-when-use-mapi-over-http.md
     - name: Outlook prompts for credentials
       href: ../authentication/outlook-prompts-credentials.md
+    - name: Permission isn't exposed to OAuth tokens
+      href: ../extended-mapi-solutions/expose-permissions-issue-with-mapi-oauth-tokens.md
     - name: Prevent saving credentials policy doesn't work
       href: ../authentication/prevent-saving-credentials.md
+    - name: Prompts for credentials when using WAN
+      href: ../authentication/outlook-prompts-for-credentials-if-using-wan.md
+    - name: Smart card PIN is blocked when using Outlook
+      href: ../authentication/blocked-smart-card-pin-using-outlook.md
+    - name: Use policy to control credential prompts
+      href: ../authentication/policy-control-credential-prompts.md
   - name: Calendaring
     items:
     - name: Delegate can't create Skype or Teams meeting
       href: ../calendaring/operation-cannot-be-performed-error.md
+    - name: Fail to set OOF status or view Free busy
+      href: ../calendaring/outlook-cannot-set-oof-status-view-busy-free.md
     - name: How to open a shared calendar
       href: ../calendaring/how-to-open-shared-calendar.md
     - name: How to share calendar and contacts
       href: ../calendaring/how-to-share-calendar-and-contacts.md
     - name: Items for next year display at incorrect time
       href: ../calendaring/calendar-items-display-incorrect-time.md
+    - name: Manage Room Finder
+      href: ../calendaring/room-finder.md
+    - name: Meeting tracking tab isn't updated
+      href: ../calendaring/meeting-tracking-tab-not-updated.md
+    - name: Room Finder doesn't show conference rooms
+      href: ../calendaring/outlook-room-finder-not-show-conference-room.md
+    - name: Room Finder isn't available on shared calendars
+      href: ../calendaring/room-finder-is-not-available-shared-calendars-outlook.md
+    - name: Send Update is missing when copying meetings
+      href: ../calendaring/send-update-missing-copy-meeting.md
     - name: Unable to view free/busy information
       href: ../calendaring/cannot-view-free-busy-information.md
+  - name: Connectivity
+    items:
+    - name: "\"There is a problem with the proxy server's security certificate\" error"
+      href: ../connectivity/error-when-outlook-uses-rpc-https-connect-server.md
+    - name: Can't access archive mailbox in Outlook
+      href: ../connectivity/cannot-access-archive-mailbox-in-outlook.md
+    - name: Connection fails when certificate is required
+      href: ../connectivity/outlook-cannot-connect-to-exchange-certificate-validation.md
+    - name: Connection issues when MAPI is disabled
+      href: ../connectivity/connection-issues-mapi-disabled.md
+    - name: Dialog box not including the Connection tab
+      href: ../connectivity/dialog-box-does-not-include-connection-tab.md
+    - name: Disconnected if IPv6 is enabled
+      href: ../connectivity/outlook-shows-disconnected-if-ipv6-is-enabled.md
+    - name: Disconnected in status bar
+      href: ../connectivity/outlook-displays-disconnected-in-status.md
+    - name: Doesn't connect Exchange using MAPI over HTTP
+      href: ../connectivity/outlook-not-connect-exchange-use-mapi-over-http.md
+    - name: Outlook 2010 connection delays or failures
+      href: ../connectivity/outlook-2010-connection-delay-failure.md
+    - name: Repeatedly disconnects and reconnects
+      href: ../connectivity/outlook-repeatedly-disconnects-and-reconnects.md
+    - name: Sending attachment outside of Outlook fails
+      href: ../connectivity/event-27-mapisentmail-error-send-attachments.md
+    - name: Suppress AutoDiscover mismatch warning
+      href: ../connectivity/suppress-autodiscover-mismatch-warning.md
+  - name: Contacts
+    items:
+    - name: Can't create Outlook Contact Groups
+      href: ../contacts/cannot-create-contact-groups-eas-account.md
+    - name: Can't manage distribution group
+      href: ../contacts/cannot-manage-distribution-group-exchange-mailbox.md
+    - name: Displays incorrect search results of GAL
+      href: ../contacts/outlook-displays-incorrect-search-results-gal.md
+    - name: No Offline Address Book is downloaded
+      href: ../contacts/error-0x80070057-no-offline-address-book-download.md
+  - name: Data Files
+    items:
+    - name: Can't find .pst file
+      href: ../data-files/outlook-2013-not-find-pst-file.md
+    - name: Limits to using .pst files over LAN and WAN links
+      href: ../data-files/limits-using-pst-files-over-lan-wan.md
+    - name: Special characters in mailbox folder names
+      href: ../data-files/weird-folder-names-after-pst-migration.md
   - name: Deployment
     items:
+    - name: "\"The macros in this project are disabled\" error"
+      href: ../deployment/macros-in-this-project-disabled-outlook.md
+    - name: How to manage multiple VBA projects
+      href: ../deployment/manage-distribute-outlook-vba-project.md
+  - name: Email Management
+    items:
+    - name: Create or modify Outlook client-only rule
+      href: ../email-management/create-modify-client-only-rule-with-error.md
+    - name: Emails remain in Outbox for at least one minute
+      href: ../email-management/emails-remain-in-outbox-deferred-delivery-rule.md
+    - name: Some rules are disabled and can't be re-enabled
+      href: ../email-management/rules-not-be-uploaded-to-exchange-server.md
+  - name: Installation
+    items:
     - name: Cached Exchange Mode
-      href: ../deployment/cached-exchange-mode.md
-    - name: Install Outlook latest applicable updates
-      href: ../deployment/install-outlook-latest-updates.md
+      href: ../installation/cached-exchange-mode.md
+    - name: Can't send files from an application through email
+      href: ../installation/error-send-file-from-application-through-email.md
+    - name: Instal Calendar Printing Assistant fails
+      href: ../installation/installing-calendar-printing-assistant-fails.md
+    - name: Install Outlook latest applicable updates
+      href: ../installation/install-outlook-latest-updates.md
+    - name: Leave a copy of the message on the server is missing
+      href: ../installation/enable-leave-a-copy-of-the-message-on-the-server-outlook.md
     - name: Planning considerations
-      href: ../deployment/plan-outlook-2016-deployment.md
-  - name: Diagnostics
+      href: ../installation/plan-outlook-2016-deployment.md
+    - name: Upgrade to Office 2016 fails
+      href: ../installation/upgrade-errors-office-2016.md
+  - name: Junk Email
     items:
-    - name: Install SaRA from network share
-      href: /office365/troubleshoot/installation/install-sara-from-network-share?context=/outlook/troubleshoot/context/client-context
-  - name: Domain Management
-    items:
-    - name: Remove automapping for shared mailbox
-      href: ../domain-management/remove-automapping-for-shared-mailbox.md
-    - name: Unexpected autodiscover behavior
-      href: ../domain-management/unexpected-autodiscover-behavior.md
-  - name: Email Messages
-    items:
-    - name: Create recurring reminder email
-      href: ../email-messages/create-recurring-email.md
-    - name: Error when you copy MSG email message files in Outlook containing multiple attachments or recipients
-      href: ../email-messages/error-when-copying-msg-with-many-attachments-or-recipients.md
-    - name: Multiple slashes are changed to one slash
-      href: ../email-messages/url-multiple-slashes-become-single-slash.md
-  - name: Extended MAPI Solutions
-    items:
-    - name: Permission isn't exposed to OAuth tokens
-      href: ../extended-mapi-solutions/expose-permissions-issue-with-mapi-oauth-tokens.md
-  - name: Folders
-    items:
-    - name: Focused Inbox disappears
-      href: ../folders/focused-inbox-disappears-switch-folder.md
-    - name: Incorrect folder names
-      href: ../folders/incorrect-folder-names.md
-    - name: Insufficient memory to display a folder
-      href: ../folders/outlook-folder-fails-displaying.md
-    - name: Remove duration from retention tags
-      href: ../folders/remove-duration-retention-policy-tag.md
-  - name: IMAP/POP
-    items:
-    - name: Can't use Quick Steps
-      href: ../imap-pop/outlook-quick-steps-issues.md
-  - name: Mailboxes
-    items:
-    - name: Calling OpenMsgStore opens the archive mailbox
-      href: ../mailboxes/calling-openmsgstore-opens-archive-mailbox.md
-    - name: Only subset of items are synchronized
-      href: ../mailboxes/only-subset-items-synchronized.md
-  - name: Meetings
-    items:
-    - name: Meeting tracking tab isn't updated
-      href: ../meetings/meeting-tracking-tab-not-updated.md
-    - name: Room Finder isn't available on shared calendars
-      href: ../meetings/room-finder-is-not-available-shared-calendars-outlook.md
-  - name: Ribbon
-    items:
-    - name: Default Office Add-in icon is displayed
-      href: ../ribbon/default-office-addin-icon-displayed-outlook-ribbon.md
     - name: Junk E-mail Reporting Add-in
       href: /office365/troubleshoot/antispam/junk-email-reporting-add-in?context=/outlook/troubleshoot/context/client-context
-    - name: Lync Meeting control isn't displayed
-      href: ../ribbon/lync-meeting-control-not-displayed.md
-  - name: Search
+    - name: Junk E-mail settings aren't synchronized
+      href: ../junk-email/junk-email-setting-not-synchronized.md
+    - name: Over Junk E-mail list limit
+      href: ../junk-email/outlook-error-over-junk-emial-list-limit.md
+  - name: Message Body
     items:
-    - name: Can't search from additional mailbox 
-      href: ../search/can't-search-additional-mailbox.md
-    - name: Unexpected mail items
-      href: ../search/personmetadata-items.md
-
-  - name: Send/Receive Emails
+    - name: Multiple slashes are changed to one slash
+      href: ../message-body/url-multiple-slashes-become-single-slash.md
+  - name: Performance
     items:
-    - name: Can't send email with Metered Connection Warning
-      href: ../send-receive-emails/metered-connection-warning.md
-    - name: Create or modify Outlook client-only rule
-      href: ../send-receive-emails/create-modify-client-only-rule-with-error.md
-    - name: Delete nonexistent messages by using MFCMAPI
-      href: ../send-receive-emails/delete-nonexistent-messages.md
-    - name: DLP Policy Tip notifications are not displayed
-      href: ../send-receive-emails/can't-display-dlp-policytip.md
-  - name: Sign-in
-    items:
-    - name: Additional RSS feeds appear
-      href: ../sign-in/additional-rss-feeds-appear.md
-    - name: Continually password prompts
-      href: ../sign-in/continually-prompts-password-office-365.md
-    - name: Use policy to control credential prompts
-      href: ../sign-in/policy-control-credential-prompts.md
-  - name: Transport Logging
-    items:
+    - name: "\"Please wait while Windows configures Office\" at start"
+      href: ../performance/wait-while-windows-configures-office-outlook.md
+    - name: "\"The time limit for logging on was reached\" error"
+      href: ../performance/time-limit-logging-reached-error-outlook-2016.md
+    - name: Crashes after installing language packs
+      href: ../performance/outlook-2016-crash-event-1000.md
     - name: Enable transport logging
-      href: ../transport-logging/enable-transport-logging.md
+      href: ../performance/enable-transport-logging.md
+    - name: Error when you copy MSG email message files in Outlook containing multiple attachments or recipients
+      href: ../performance/error-when-copying-msg-with-many-attachments-or-recipients.md
+    - name: Event ID 9646 when opening MAPI sessions
+      href: ../performance/event-9646-opening-mapi-sessions.md
+    - name: Install SaRA from network share
+      href: /office365/troubleshoot/installation/install-sara-from-network-share?context=/outlook/troubleshoot/context/client-context
+    - name: Insufficient memory to display a folder
+      href: ../performance/outlook-folder-fails-displaying.md
+    - name: Stops at the Loading Profile screen
+      href: ../performance/outlook-stops-at-the-loading-profile-screen.md
+  - name: Profiles and Accounts
+    items:
+    - name: "\"The operation failed\" when sending emails"
+      href: ../profiles-and-accounts/operation-failed-send-email-outlook.md
+    - name: Additional RSS feeds appear
+      href: ../profiles-and-accounts/additional-rss-feeds-appear.md
+    - name: Can't copy an appointment to an Outlook.com folder
+      href: ../profiles-and-accounts/error-copy-appointment-to-outlook-com-folder.md
+    - name: Can't send email with Metered Connection Warning
+      href: ../profiles-and-accounts/metered-connection-warning.md
+    - name: Can't set up Office 365 account
+      href: ../profiles-and-accounts/cannot-set-up-office-365-account-outlook.md
+    - name: Can't use EAS to connect Outlook to Exchange
+      href: ../profiles-and-accounts/outlook-cannot-use-activesync-connect-exchange.md
+    - name: EAS not synchronizing some Outlook contact information
+      href: ../profiles-and-accounts/eas-not-synchronizing-some-outlook-contact-information.md
+    - name: Exchange dialog doesn't include Connection tab
+      href: ../profiles-and-accounts/outlook-exchange-dialog-not-include-connection-tab.md
+    - name: Focused Inbox disappears
+      href: ../profiles-and-accounts/focused-inbox-disappears-switch-folder.md
+    - name: Mailboxes with full access aren't automapped to Outlook profile
+      href: ../profiles-and-accounts/full-access-mailbox-not-automapped-outlook-profile.md
+    - name: Need a new app to open this osf-roaming.16 message
+      href: ../profiles-and-accounts/you-ll-need-a-new-app-to-open-this-osf-roaming-16.md
+    - name: Outlook fails to start
+      href: ../profiles-and-accounts/starting-outlook-displays-error.md
+    - name: Remove automapping for shared mailbox
+      href: ../profiles-and-accounts/remove-automapping-for-shared-mailbox.md
+    - name: Unexpected autodiscover behavior
+      href: ../profiles-and-accounts/unexpected-autodiscover-behavior.md
+  - name: Security
+    items:
+    - name: DLP Policy Tip notifications are not displayed
+      href: ../security/can't-display-dlp-policytip.md
+  - name: Synchronization
+    items:
+    - name: Delete nonexistent messages by using MFCMAPI
+      href: ../synchronization/delete-nonexistent-messages.md
+    - name: Synchronization issues
+      href: ../synchronization/synchronization-issue-between-outlook-owa.md
+  - name: User Interface
+    items:
+    - name: Apps for Outlook 2013 can't activate in email
+      href: ../user-interface/apps-for-outlook-2013-do-not-activate-as-expected.md
+    - name: Blank emails after installing ESET NOD32 4.x
+      href: ../user-interface/empty-email-body-esetnod32-4x-installed.md
+    - name: Calling OpenMsgStore opens the archive mailbox
+      href: ../user-interface/calling-openmsgstore-opens-archive-mailbox.md
+    - name: Can't resend a delayed delivery message
+      href: ../user-interface/send-button-missing-delayed-delivery-email-outbox.md
+    - name: Can't search from additional mailbox 
+      href: ../user-interface/can't-search-additional-mailbox.md
+    - name: Can't use Quick Steps
+      href: ../user-interface/outlook-quick-steps-issues.md
+    - name: Create recurring reminder email
+      href: ../user-interface/create-recurring-email.md
+    - name: Default Office Add-in icon is displayed
+      href: ../user-interface/default-office-addin-icon-displayed-outlook-ribbon.md
+    - name: Emails sent by an .oft file aren't received
+      href: ../user-interface/sending-email-by-template-fails.md
+    - name: Extensibility support for Outlook 2010
+      href: ../user-interface/applications-incompatible-c2r-outlook.md
+    - name: iCloud crashes when synchronizing data
+      href: ../user-interface/icloud-crashes-sync-data.md
+    - name: Incorrect folder names
+      href: ../user-interface/incorrect-folder-names.md
+    - name: Lync Meeting control isn't displayed
+      href: ../user-interface/lync-meeting-control-not-displayed.md
+    - name: Mailbox Quota Information isn't displayed
+      href: ../user-interface/mailbox-quota-information-not-displayed.md
+    - name: MAPI applications can't access archive mailboxes
+      href: ../user-interface/mapi-apps-cannot-access-archive-mailboxes.md
+    - name: MAPI is the only way to change profiles
+      href: ../user-interface/mapi-is-the-only-way-to-change-profiles.md
+    - name: Only subset of items are synchronized
+      href: ../user-interface/only-subset-items-synchronized.md
+    - name: Remove duration from retention tags
+      href: ../user-interface/remove-duration-retention-policy-tag.md
+    - name: Search folders aren't populated in Online mode
+      href: ../user-interface/outlook-search-folders-issue-online-mode.md
+    - name: Support limitations for open standards
+      href: /exchange/troubleshoot/development/public-protocols-support-limitations?context=/outlook/troubleshoot/context/client-context
+    - name: Unexpected mail items
+      href: ../user-interface/personmetadata-items.md
+    - name: WebBrowser control content isn't displayed correctly
+      href: ../user-interface/wpf-webbrowser-control-content-not-display-correctly.md
