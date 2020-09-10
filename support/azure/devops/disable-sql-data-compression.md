@@ -1,6 +1,7 @@
 ---
 title: Disabling SQL Server Data Compression
 description: This article provides the steps to disable SQL Server Data Compression in Azure DevOps Server databases.
+ms.prod: devops
 ms.date: 08/18/2020
 ms.prod-support-area-path: Installation, Migration, and Move
 ms.reviewer: chandrur
