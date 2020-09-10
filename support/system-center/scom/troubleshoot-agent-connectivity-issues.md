@@ -179,16 +179,16 @@ Examples of these events:
 > Computer: \<ComputerName>  
 > Description: The OpsMgr Connector could not connect to \<ManagementServer>:5723. The error code is 10060L (A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.). Please verify there is network connectivity, the server is running and has registered its listening port, and there are no firewalls blocking traffic to the destination.
 
-> Log Name: Operations Manager
-> Source: OpsMgr Connector
-> Date: Time
-> Event ID: 21016
-> Task Category: None
-> Level: Error
-> Keywords: Classic
-> User: N/A
-> Computer: \<ComputerName>
-> Description: OpsMgr was unable to set up a communications channel to \<ManagementServer> and there are no failover hosts. Communication will resume when \<yourManagementServer> is available and communication from this computer is allowed.
+> Log Name: Operations Manager  
+> Source: OpsMgr Connector  
+> Date: Time  
+> Event ID: 21016  
+> Task Category: None  
+> Level: Error  
+> Keywords: Classic  
+> User: N/A  
+> Computer: \<ComputerName>  
+> Description: OpsMgr was unable to set up a communications channel to \<ManagementServer> and there are no failover hosts. Communication will resume when \<ManagementServer> is available and communication from this computer is allowed.
 
 Usually these event IDs are generated because the agent hasn't received configuration. After a new agent is added and before it is configured, this event is common. Event 1210 in the agent's Operations Manager event log indicates that the agent received and applied configuration. You receive this event after communication is established.
 
@@ -229,7 +229,7 @@ An example of this event:
 > Computer: \<ComputerName>  
 > Description:Failed to initialize security context for target MSOMHSvc/******The error returned is 0x80090311(No authority could be contacted for authentication.). This error can apply to either the Kerberos or the SChannel package.
 
-Event IDs 21006, 21016 and 20057 are caused by firewalls or network problems that are preventing communication over the required ports. To troubleshoot this issue, check the firewalls between the client agent and the management server. The following ports must be open to enable correct authentication and communication:
+Event IDs 21006, 21016 and 20057 are usually caused by firewalls or network problems that are preventing communication over the required ports. To troubleshoot this issue, check the firewalls between the client agent and the management server. The following ports must be open to enable correct authentication and communication:
 
 - TCP and UDP port 389 for LDAP.
 - TCP and UDP port 88 for Kerberos authentication.
@@ -244,10 +244,10 @@ Examples of these events:
 > Event ID: 2010  
 > Task Category: Health Service  
 > Level: Error
-Keywords: Classic
-User: N/A
-Computer: \<ComputerName>
-Description: The Health Service cannot connect to Active Directory to retrieve management group policy. The error is Unspecified error (0x80004005)  
+> Keywords: Classic
+> User: N/A
+> Computer: \<ComputerName>
+> Description: The Health Service cannot connect to Active Directory to retrieve management group policy. The error is Unspecified error (0x80004005)  
 > Event Xml:  
 > \<Event xmlns="`http://schemas.microsoft.com/win/2004/08/events/event`">  
 > \<System>  

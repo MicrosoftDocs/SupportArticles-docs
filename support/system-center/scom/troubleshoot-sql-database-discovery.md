@@ -23,11 +23,11 @@ Before you start troubleshooting, it's important to check the following:
 
 2. Is the appropriate Monitoring Agent installed?
 
-    If the agent isn't installed, follow [Install Agent on Windows Using the Discovery Wizard](/system-center/scom/manage-deploy-windows-agent-console?view=sc-om-1711) to install the agent.
+    If the agent isn't installed, follow [Install Agent on Windows Using the Discovery Wizard](/system-center/scom/manage-deploy-windows-agent-console) to install the agent.
 
 3. Is proxy enabled on the agent?
 
-    You must [enable agent proxy](/powershell/module/OperationsManager/Enable-SCOMAgentProxy?view=systemcenter-ps-2016) for SQL Server database discovery.
+    You must [enable agent proxy](/powershell/module/OperationsManager/Enable-SCOMAgentProxy) for SQL Server database discovery.
 
 4. Is the latest version of SQL Server management pack installed?
 
@@ -62,7 +62,7 @@ The target of SQL Server DB discovery rule must be discovered before the disco
 
 ## Check the health state of Windows agent
 
-If the Windows agent shows a gray state, follow [Troubleshooting gray agent states in Operations Manager 2012](https://support.microsoft.com/help/10129/troubleshooting-gray-agent-states-in-operations-manager-2012) to fix the issue.
+If the Windows agent shows a gray state, follow [Troubleshoot gray agent states in System Center Operations Manager](troubleshoot-gray-agent-states.md) to fix the issue.
 
 ## Check if the discovery is overridden
 
@@ -112,7 +112,7 @@ Look for the following events and errors:
     > Date:          \<Date Time>  
     > Event ID:      21405  
     > Task Category: None  
-    > Level:         Warning
+    > Level:         Warning  
     > Keywords:      Classic  
     > User:          N/A  
     > Computer:      ContosoSQL  
@@ -613,31 +613,27 @@ In this case, following these steps:
   
     **Resolution**
 
-    Open [SQL Server Configuration Manager](/sql/relational-databases/sql-server-configuration-manager?view=sql-server-ver15), go to **SQL Server Network Configuration** > **Protocols for 'SQL_Instance'**, and then enable TCP/IP.
+    Open [SQL Server Configuration Manager](/sql/relational-databases/sql-server-configuration-manager), go to **SQL Server Network Configuration** > **Protocols for 'SQL_Instance'**, and then enable TCP/IP.
 
 - An exception occurs when you run the script.
 
-**Resolution**
+    **Resolution**
 
-Check whether there is a permission or WMI issue.
+    Check whether there is a permission or WMI issue.
 
-To check WMI issue, follow these steps:
+    To check WMI issue, follow these steps:
 
-1. On the SQL server, open WBEMTEST.
-2. Connect to root\Microsoft\SqlServer\ComputerManagement11.
-3. Run the following query:
+    1. On the SQL server, open WBEMTEST.
+    2. Connect to `root\Microsoft\SqlServer\ComputerManagement11`.
+    3. Run the `select * from SQLService where SQLServiceType=1` query.
 
-    ```sql
-    select * from SQLService where SQLServiceType=1
-    ```
+        ![WQL query](./media/troubleshoot-sql-database-discovery/sql-query.png)
 
-    ![SQL query](./media/troubleshoot-sql-database-discovery/sql-query.png)
+    4. If you receive a WMI error or no output, make sure that you have a backup of the server, open an elevated command prompt, and then run the following command to repair the WMI namespace:
 
-4. If you receive a WMI error or no output, make sure that you have a backup of the server, open an elevated command prompt, and then run the following command to repair the WMI namespace:
-
-    ```console
-    mofcomp.exe "C:\Program Files (x86)\Microsoft SQL Server\110\Shared\sqlmgmproviderxpsp2up.mof"
-    ```
+        ```console
+        mofcomp.exe "C:\Program Files (x86)\Microsoft SQL Server\110\Shared\sqlmgmproviderxpsp2up.mof"
+        ```
 
 ## Examine the discovery data for missing objects
 
@@ -656,13 +652,9 @@ To check WMI issue, follow these steps:
 
     1. On the SQL server, open WBEMTEST.
     2. Connect to `root\Microsoft\SqlServer\ComputerManagement11`.
-    3. Run the following query:
+    3. Run the `select * from SQLService where SQLServiceType=1` query:
 
-        ```sql
-        select * from SQLService where SQLServiceType=1
-        ```
-
-        ![SQL query](./media/troubleshoot-sql-database-discovery/sql-query.png)
+        ![WMI query](./media/troubleshoot-sql-database-discovery/sql-query.png)
 
     4. If you receive a WMI error or no output, make sure that you have a backup of the server, open an elevated command prompt, and then run the following command to repair the WMI namespace:
 

@@ -19,11 +19,11 @@ If the target client is a Unix/Linux computer, verify that both the distribution
 
 [Supported UNIX and Linux Operating System Versions](/previous-versions/system-center/system-center-2012-R2/hh212713(v=sc.12))
 
-## Troubleshoot agent deployment via the Discovery Wizard in the Operations console
+## Troubleshoot agent deployment via the Discovery Wizard
 
 If the agent will be deployed via discovery from the Operations Manager console, the agent will be installed from the management server or gateway server specified in the Discovery Wizard to manage the agent. It's not the server the Operations console was connected to when it opened. Therefore, any testing should be conducted from the management server or gateway specified when the wizard runs. Or, a different management server or gateway should be specified during the wizard to see if the same error occurs.
 
-## The wizard doesn't display a list of potential agents to install
+### The wizard doesn't display a list of potential agents to install
 
 In this case, the most likely cause is that the account is having trouble accessing Active Directory. The credentials specified in the wizard during the initial discovery must have permission to search Active Directory for potential agents.
 
@@ -44,13 +44,13 @@ During discovery, specify an account that has both domain administrator permissi
 
 Additionally, if the LDAP query times out or is unable to resolve the potential agents in Active Directory, discovery can be performed via the [Operations Manager Command Shell](#troubleshoot-agent-deployment-via-the-operations-manager-shell).
 
-## The target computer isn't in the list of potential agents after the initial discovery runs
+### The target computer isn't in the list of potential agents after the initial discovery runs
 
 In this case, the computer may already be identified in the database as part of the management group. Or, the computer is listed under **Pending Actions** in the Operations console.
 
 If the target computer is listed under **Administration** > **Pending Actions** in the Operations console, the existing action must either be approved or rejected before a new action can be performed. If the existing installation settings are sufficient, approve the pending installation from the console. Otherwise, reject the pending action, then rerun the discovery wizard.
 
-## The Discovery Wizard encounters an error when trying to install the agent
+### The Discovery Wizard encounters an error when trying to install the agent
 
 The most common errors are listed below:
 
@@ -69,7 +69,7 @@ These errors can be caused by one of the following reasons:
 - The Windows Firewall is blocking ports between the management server and the target computer.
 - Required services on the target computer aren't running.
 
-### Possible resolutions
+**Possible resolutions**
 
 - If the credentials specified in the wizard don't have local administrator permissions, add the account to the local Administrators security group on the target computer. Or use an account that's already a member of that group.
 - Block Group Policy inheritance on the target computer, or the user account performing the installation.
@@ -93,8 +93,6 @@ If any of these tasks fail, use a different account that has Domain Administrato
 The following ports must be open between the management server and the target computer:
 
 - RPC endpoint mapper Port number: 135 Protocol: TCP/UDP
-- *RPC/DCOM High ports (2000/2003 OS) Ports 1024-5000 Protocol: TCP/UDP
-- *RPC/DCOM High ports (2008 OS) Ports 49152-65535 Protocol: TCP/UDP
 - NetBIOS name service Port number: 137 Protocol: TCP/UDP
 - NetBIOS session service Port number: 139 Protocol: TCP/UDP
 - SMB over IP Port number: 445 Protocol: TCP
@@ -112,7 +110,7 @@ The following articles provide more background about deploying the Operations Ma
 - [How to Deploy the Operations Manager 2007 Agent Using the Agent Setup Wizard](/previous-versions/bb309515(v=technet.10))
 - [Troubleshooting Issues When You Use the Discovery Wizard to Install an Agent](/previous-versions/system-center/operations-manager-2007-r2/ff358634(v=technet.10))
 
-## Error Code 800706BA - The RPC server is unavailable
+### Error Code 800706BA - The RPC server is unavailable
 
 To fix this error, see [Check network issues](troubleshoot-agent-connectivity-issues.md#check-network-issues).
 
@@ -151,7 +149,7 @@ $discoResult = Start-Discovery –ManagementServer: $managementServer –Windows
 $discoResult.CustomMonitoringObjects
 
 # Last but not least, install agents on the discovered computers
-Install-Agent –ManagementServer: $managementServer –AgentManagedComputer: $discoResult.CustomMonitoringObjects
+Install-SCOMAgent –ManagementServer: $managementServer –AgentManagedComputer: $discoResult.CustomMonitoringObjects
 ```
 
 ## Troubleshoot agent deployment via verbose Windows Installer logging
@@ -178,7 +176,7 @@ Examples:
 
     Possible cause: The installation account does not have permission to the system TEMP folder.
 
-## Troubleshoot manual installation of the Operations Manager agent
+## Troubleshoot manual installation of the agent
 
 When the Operations Manager client agent can't be deployed to a remote computer via the Discovery Wizard, the agent needs to be installed manually. This can be performed via command line using the **MomAgent.msi** file.
 
@@ -193,4 +191,4 @@ If the agent is deployed by manual installation, future Service Pack updates or 
 Other key considerations during the manual installation of agents:
 
 - If the installation is performed by a domain or local user, the account must be a member of the local Administrators security group in Windows Vista or later versions.
-- If the agent is deployed via Configuration Manager, the Configuration Manager Agent service account needs to run as LocalSystem (by default) or under the context of a local administrator.
+- If the agent is deployed via Configuration Manager, the Configuration Manager Agent service account needs to run as **LocalSystem** (by default) or under the context of a local administrator.
