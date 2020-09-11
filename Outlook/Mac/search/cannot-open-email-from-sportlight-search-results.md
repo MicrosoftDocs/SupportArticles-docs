@@ -83,7 +83,7 @@ Outlook for Mac 2011:
 
 7. Repeat steps 4-6 for any additional profiles or identities that you want to exclude.
 
-[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-information-disclaimer.md)]
 
 ## More information
 

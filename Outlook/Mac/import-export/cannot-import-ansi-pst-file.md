@@ -28,13 +28,13 @@ Outlook 2016 for Mac:
 
 > There's something wrong with this file. Please try another file.
 
-:::image type="content" source="media/cannot-import-ansi-.pst-file/there-is-something-wrong-with-this-file.jpg" alt-text="the details of the error There's something wrong with this file":::
+:::image type="content" source="media/cannot-import-ansi-pst-file/there-is-something-wrong-with-this-file.jpg" alt-text="the details of the error There's something wrong with this file":::
 
 Outlook for Mac 2011:
 
 > The Data File could not be imported. This Outlook Data File is saved in ANSI format, which cannot be imported by Outlook for Mac.
 
-:::image type="content" source="media/cannot-import-ansi-.pst-file/import-incomplete.jpg" alt-text="Import Incomplete warning details.":::
+:::image type="content" source="media/cannot-import-ansi-pst-file/import-incomplete.jpg" alt-text="Import Incomplete warning details.":::
 
 ## Cause
 
@@ -48,7 +48,7 @@ Open the .pst file in Microsoft Outlook 2010, and move the contents to a new .ps
 2. Browse to and select the ANSI .pst file.
 3. Select the ANSI .pst file root in the Navigation Pane.
 
-   :::image type="content" source="media/cannot-import-ansi-.pst-file/select-ansi-pst-file-in-navigation.jpg" alt-text="Select the ANSI .pst file root in the Navigation Pane" border="false":::
+   :::image type="content" source="media/cannot-import-ansi-pst-file/select-ansi-pst-file-in-navigation.jpg" alt-text="Select the ANSI .pst file root in the Navigation Pane" border="false":::
 
 4. Select **File**, select **Options**, and then select **Advanced**.
 5. Select **Export**, and then select **Export to a file** and select **Next**.

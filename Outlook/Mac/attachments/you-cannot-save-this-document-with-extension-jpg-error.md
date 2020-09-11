@@ -23,7 +23,7 @@ _Original KB number:_ &nbsp; 2788325
 
 When you try to save a file attachment that has a .jpg file name extension, you receive the following message:
 
-:::image type="content" source="media/you-cannot-save-this-document-with-extension-.jpg-error/error-details.jpg" alt-text="screenshot of the error that you receive when saving a .jpg file attachment" border="false":::
+:::image type="content" source="media/you-cannot-save-this-document-with-extension-jpg-error/error-details.jpg" alt-text="screenshot of the error that you receive when saving a .jpg file attachment" border="false":::
 
 If you select either **Use both** or **Use .jpeg**, the file that is saved uses a .jpeg extension. This process does not affect the image quality of the JPEG image. This process only changes the file name extension from .jpg to .jpeg.
 
