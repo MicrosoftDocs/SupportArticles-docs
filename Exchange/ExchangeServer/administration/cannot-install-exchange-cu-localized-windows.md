@@ -1,6 +1,6 @@
 ---
 title: Can't install Exchange Cumulative Update on a localized version of Windows Server
-description: Fixes an issue in which you are not able to install an Exchange CU on a localized version of Windows Server.
+description: Fixes a problem in which you can't install an Exchange CU on a localized version of Windows Server.
 author: TobyTu
 ms.author: yusenko
 manager: dcscontentpm
@@ -23,14 +23,14 @@ search.appverid: MET150
 
 ## Symptoms
 
-You receive one of these errors when trying to install an Exchange Cumulative Update (CU) on a localized version of Windows Server:
+One of the following errors occurs when you try to install an Exchange Cumulative Update (CU) on a localized version of Windows Server:
 
-1. The installation fails with the `register-ContentFilter`. The error appears after exactly 1 minute in ExchangeSetupLog:
+1. The installation fails and returns `register-ContentFilter`. Exactly one minute later, the following error entry appears in ExchangeSetupLog:
 
     > [mm/dd/yyyy 02:38:28.0817] [2] Beginning processing register-ContentFilter  
 [mm/dd/yyyy 02:39:28.0889] [2] [ERROR] Couldn't register the content filter.
 
-2. The installation fails or takes many hours to succeed, but the failure/hang occurs whenever this cmdlet is executed – when checking ExchangeSetupLog:
+2. The installation fails or takes many hours to finish. However, the failure occurs whenever the following cmdlet is run when you check ExchangeSetupLog:
 
     ```powershell
     [mm/dd/yyyy 14:47:00.0736] [1] Executing:
@@ -42,28 +42,28 @@ You receive one of these errors when trying to install an Exchange Cumulative Up
 
 ## Cause
 
-The calling server (Exchange server) uses an isolated username or security identifier (SID) to resolve names. When the server fails to resolve the name locally, it sends requests to domain controllers (DCs) in all trusted domains to perform the name resolution. For more information, read [this article](https://support.microsoft.com/help/818024).
+The calling server (Exchange Server) uses an isolated username or security identifier (SID) to resolve names. If the server does not resolve the name locally, it sends requests to domain controllers (DCs) in all trusted domains to resolve the name. For more information, see [How to restrict the lookup of isolated names to external trusted domains in Windows Server](https://support.microsoft.com/help/818024).
 
 ## Resolution
 
-Set **LsaLookupRestrictIsolatedNameLevel** to **1** on all the DCs the Exchange server communicates with:
+Set **LsaLookupRestrictIsolatedNameLevel** to **1** on all DCs that communicate with the server that's running Exchange Server.
 
 > [!NOTE]
-> Create this registry entry only on domain controllers.
+> Create this registry entry only on DCs.
 
 > [!WARNING]
-> Serious problems could occur if you modify the registry incorrectly. These problems could cause you to have to reinstall the operating system or even prevent your machine from booting. Microsoft can't guarantee that these problems can be solved. Modify the registry at your own risk.
+> Serious problems might occur if you modify the registry incorrectly. These problems could cause you to have to reinstall the operating system or even prevent your machine from booting. Microsoft can't guarantee that these problems can be solved. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/en-us/help/322756) in case problems occur. Modify the registry at your own risk.
 
-1. Go to the **Start** menu and select **Run**.
-2. In the **Open** box, type `regedit` and select **OK**.
-3. Locate and select the following registry subkey:
+1. Select **Start** > **Run**.
+2. In the **Open** box, type `regedit`, and then select **OK**.
+3. In Registry Editor, locate and select the following registry subkey:
 
     `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa`
 
-4. On the **Edit** menu, point to **New** and select **DWORD Value**.
-5. Type **LsaLookupRestrictIsolatedNameLevel** and press **Enter**.
+4. On the **Edit** menu, point to **New**, and then select **DWORD Value**.
+5. Type **LsaLookupRestrictIsolatedNameLevel**, and press Enter.
 6. On the **Edit** menu, select **Modify**.
-7. To disable the lookup of isolated names in external trusted domains, type **1** in the Value data box.
-8. Select **OK** and exit the Registry Editor.
+7. To disable the lookup of isolated names in external trusted domains, type **1** in the **Value data** box.
+8. Select **OK**, and exit Registry Editor.
 
-A restart of services or reboot isn't required when the **LsaLookupRestrictIsolatedNameLevel** registry value is set on a DC.
+If the **LsaLookupRestrictIsolatedNameLevel** registry value is set on a DC, you don't have to restart the services or the DC.
