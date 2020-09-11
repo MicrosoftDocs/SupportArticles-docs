@@ -14,7 +14,7 @@ ms.custom:
 ms.reviewer: meshel
 appliesto:
 - Exchange Online
-- Outlook for Office 365
+- Outlook for Microsoft 365
 search.appverid: MET150
 ---
 
@@ -56,16 +56,17 @@ Add the missing registry subkeys:
 
 1. Close Outlook.
 2. Start Registry Editor. To do this, right-click **Start**, type **regedit** in the **Run**  box, and then select **OK**.
-3. Locate the key with populated values and copy the string values for **EX** and **SMTP**.
-4. Find the location of the missing **FreeBusySupport** registry key and add the key manually. You must add the **SchedulingInformation** key first, and then add the **FreeBusySupport** subkey.
+3. Find the location of the missing **FreeBusySupport** registry key and add the key manually. You must add the **SchedulingInformation** key first, and then add the **FreeBusySupport** subkey.
 
     > [!NOTE]
-    > 16.0 is for Outlook 2016, Outlook for Office 365 and Outlook 2019.
+    > 16.0 is for Outlook 2016, Outlook for Microsoft 365 and Outlook 2019.
 
-5. Select **FreeBusySupport**, select **Edit**, point to **New**, and select **String Value**.
-6. Set **Value name** to **EX**, and then double-click to edit the string.
-7. Paste the value into **Value data** from step 1 for the EX string.
-8. Select **FreeBusySupport**, select the **Edit** menu, point to **New**, and select **String Value**.
-9. Set **Value name** to **SMTP**, and then double-click to edit the string.
-10. Paste the value into **Value data** from step 1 for the SMTP string.
-11. Exit Registry Editor.
+4. Select **FreeBusySupport**, select **Edit**, point to **New**, and select **String Value**.
+5. Set **Value name** to **EX**, and then double-click to edit the string.
+6. Type `{0006F014-0000-0000-C000-000000000046}` into **Value data**.
+    :::image type="content" source=".\media\cannot-view-free-busy-information\free-busy-registry-key.png" alt-text="Value data.":::
+
+7. Select **FreeBusySupport**, select the **Edit** menu, point to **New**, and select **String Value**.
+8. Set **Value name** to **SMTP**, and then double-click to edit the string.
+9. Type `{0006F049-0000-0000-C000-000000000046}` into **Value data**.
+10. Exit Registry Editor.
