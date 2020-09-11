@@ -106,7 +106,7 @@ For an example of `myIpAddressEx` implementation, see ["myIpAddress" function re
 
 ### Testing a PAC file
 
-If the script contains any syntax error (for example, a missing ")" character in an IF statement), the script is not run. To minimize errors, consider using a script editor that runs syntax checking. By using Visual Studio, you can rename the extension of the PAC file to ".js" during editing, but rename it back to ".pac" before uploading it to the webserver.
+If the script contains any syntax error (for example, a missing ")" character in an `if` statement), the script is not run. To minimize errors, consider using a script editor that runs syntax checking. By using Visual Studio, you can rename the extension of the PAC file to ".js" during editing, but rename it back to ".pac" before uploading it to the webserver.
 
 > [!NOTE]
 > Starting in Windows 10, you can no longer use file-based PAC files. For more information, see the following articles:
