@@ -3,6 +3,7 @@ title: Troubleshooting documentation
 description: This article lists Knowledge Base (KB) and other Support articles for previous versions product.
 ms.topic: article
 ms.date: 09/11/2020
+ms.prod: visual-studio-family
 ---
 # Previous versions product troubleshooting
 
