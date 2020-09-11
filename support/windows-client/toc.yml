@@ -39,6 +39,8 @@
       href: ./application-management/windows-81-microsoft-store-app-package-updates.md
     - name: Registry key WOW6432Node is listed on x86 machines
       href: ./application-management/wow6432node-registry-key-present-32-bit-machine.md
+    - name: USMT 4.0 migration from x86 to x64 results in corrupted COM+ components
+      href: ./application-management/usmt-4-migrate-from-x86-to-x64-com-plus-component-corrupt.md
 
 - name: Backup and Storage
   items:
@@ -55,6 +57,8 @@
       href: ./deployment/error-80072ee6-downlaod-wsus-update.md
     - name: Automate regional and language settings
       href: ./deployment/automate-regional-language-settings.md
+    - name: Automatic Updates can't download updates
+      href: ./deployment/automatic-updates-cannot-download-updates-event-16.md
     - name: Can't activate Windows 7 with KMS
       href: ./deployment/cannot-activate-windows-from-oem.md
     - name: Can't turn off a computer from Audit mode
@@ -73,6 +77,8 @@
       href: ./deployment/bitlocker-too-many-pin-entry-attempts.md
     - name: Error when BIOS is in legacy mode with TPM 2.0
       href: ./deployment/tpm-is-ready-for-use-with-reduced-functionality.md
+    - name: Error message when installing RSAT
+      href: ./deployment/error-message-when-installing-rsat.md
     - name: Event ID 10 is logged in Application log
       href: ./deployment/event-10-is-logged-in-application-log.md
     - name: Event ID 15 when a computer resumes from sleep
@@ -85,10 +91,16 @@
       href: ./deployment/item-with-same-key-has-been-added.md
     - name: Get the latest Skype version by Microsoft Update
       href: ./deployment/skype-for-microsoft-update.md
+    - name: HAL_INITIALIZATION_FAILED error on VMWare VM
+      href: ./deployment/installation-error-hal-initialization-failed.md
     - name: Hide Devices in Devices and Printers
       href: ./deployment/disable-devices-in-devices-and-printers.md
     - name: How to disable and re-enable hibernation
       href: ./deployment/disable-and-re-enable-hibernation.md
+    - name: How to edit the Boot.ini file in Windows 2000
+      href: ./deployment/edit-boot-ini-file-windows-2000.md
+    - name: How to enable BitLocker device encryption
+      href: ./deployment/enable-bitlocker-device-encryption-local-hard-disk.md
     - name: How to enable Wake on LAN
       href: ./deployment/wake-on-lan-feature.md
     - name: How to get updates via Windows Update
@@ -103,6 +115,10 @@
       href: ./deployment/kms-current-count-not-increase.md
     - name: MBAM client fails with error 0x8004100E
       href: ./deployment/mbam-client-fails-event-id-4-0x8004100e.md
+    - name: Operations fail if Windows 8 is improperly identified as a WTG installation
+      href: ./deployment/windows-8-incorrectly-reported-as-wtg-installation.md
+    - name: Package Manager can install only the first package 
+      href: ./deployment/package-manager-cannot-manage-two-more-packages.md
     - name: 'Running Sysprep /generalize returns error'
       href: ./deployment/error-occurs-when-running-sysprep-generalize.md
     - name: Running TPM Management console fails
@@ -113,6 +129,14 @@
       href: ./deployment/sysprep-capture-task-sequence-fails.md
     - name: Sysprep fails after you remove or update Microsoft Store apps
       href: ./deployment/sysprep-fails-remove-or-update-store-apps.md
+    - name: System restore points are disabled after upgrade
+      href: ./deployment/system-restore-points-disabled.md
+    - name: Unattended setup parameters for unattend.txt
+      href: ./deployment/unattended-setup-parameters-for-unattend-dot-txt.md
+    - name: Windows optional component setup tool
+      href: ./deployment/use-ocsetup-to-install-remove-components.md
+    - name: Windows SIM can't generate a catalog
+      href: ./deployment/windows-sim-unable-generate-catalog-error.md
     - name: Windows Update hangs
       href: ./deployment/windows-update-hangs-updates-uninstalled.md
 
@@ -134,16 +158,28 @@
   items:
     - name: Access Denied when you access SMB file share
       href: ./networking/access-denied-access-smb-file-share.md
+    - name: Additional gateways appear in persistent routes
+      href: ./networking/incorrect-default-gateways-in-persistent-routes.md
+    - name: Can't automatically reconnect a DAV share when Basic Authentication is used
+      href: ./networking/cannot-automatically-reconnect-dav-share.md
+    - name: Can't redirect Documents folder to the home directory 
+      href: ./networking/redirect-users-documents-folder-to-their-home-directory-fail.md
     - name: Can't turn on Network Discovery
       href: ./networking/cannot-turn-on-network-discovery.md
     - name: Change the location of CSC folder
       href: ./networking/change-csc-folder-location-with-cachelocation-registry.md
+    - name: CMAK-based VPN client doesn't work
+      href: ./networking/cmak-based-vpn-doesnt-work.md
     - name: Code 31 error for WAN Miniport device
       href: ./networking/code-31-error-device-manager-for-wan-miniport.md
     - name: Configure client proxy server settings
       href: ./networking/configure-client-proxy-server-settings-by-registry-file.md
+    - name: Configure Wi-Fi Sense and Paid Wi-Fi Services
+      href: ./networking/configure-wifi-sense-and-paid-wifi-service.md
     - name: CSCCMD tool Version 1.1. functions and features
       href: ./networking/client-side-caching-command-line-options-v1dot1.md
+    - name: DirectAccess clients can't connect by IP-HTTPS
+      href: ./networking/error-directaccess-clients-connect-over-ip-https.md
     - name: DirectAccess clients can't connect with IP-HTTPS
       href: ./networking/directaccess-clients-unable-connect-error-0x80092013.md
     - name: Disconnect incoming VPN connection
@@ -154,8 +190,12 @@
       href: ./networking/cannot-logon-access-administrative-share.md
     - name: Event 10317 when you turn on mobile broadband device
       href: ./networking/event-10317-mobile-broadband-device.md
+    - name: Fail to use apps that connect to Internet
+      href: ./networking/use-authenticated-proxy-servers.md
     - name: How to disable network adapter power management
       href: ./networking/power-management-on-network-adapter.md
+    - name: Intel's My WiFi Technology stops working
+      href: ./networking/intels-my-wifi-stops-working.md
     - name: Mapped drive connection to network share is lost
       href: ./networking/mapped-drive-connection-to-network-share-lost.md
     - name: Mapped drives not available in elevated command prompt
@@ -206,6 +246,8 @@
 
 - name: Printing
   items:
+    - name: Alter printers that roam with roaming profiles
+      href: ./printing /alter-printers-behavior-roaming-profiles.md
     - name: Can't install a Secure WSD printer from Print Management Console
       href: ./printing/cannot-install-secure-web-services-on-devices.md
     - name: Duplex printing options can't be set
@@ -214,9 +256,15 @@
       href: ./printing/error-0x00000709-use-cname-record.md
     - name: Error 0x00000709 when using CNAME record
       href: ./printing/error-0x00000709-use-cname-record.md
+    - name: Error occurs when adding an IPP printer
+      href: ./printing /error-occurs-when-adding-ipp-printer.md
+    - name: PNG images don't print correctly in Word 2010 after changing display scaling
+      href: ./printing /png-images-not-print-correctly-change-display-scaling.md
 
 - name: Remote Desktop Services
   items:
+    - name: 802.1x user authentication fails when using RDS connection
+      href: ./remote/cannot-use-802dot1x-user-authentication-connect-rds.md
     - name: Some USB devices aren't available
       href: ./remote/usb-devices-unavailable-remotefx-usb-redirection.md
     - name: Troubleshoot RDP Client connection problems
@@ -224,8 +272,12 @@
 
 - name: Shell Experience
   items:
+    - name: .CHM file not render properly
+      href: ./shell-experience/dot-chm-file-not-render-properly.md
     - name: Blank screen with no Start Menu
       href: ./shell-experience/windows-logon-process-failed-spawn-user-app.md
+    - name: Can't associate a program with an extension
+      href: ./shell-experience/cannot-associate-program-with-extension.md
     - name: Can't open high resolution file in Photo Gallery
       href: ./shell-experience/cannot-open-high-resolution-file-photo-gallery.md
     - name: Can't remove, uninstall, or reinstall Microsoft Store app
@@ -240,6 +292,8 @@
       href: ./shell-experience/display-configuration-retained-after-reboot.md
     - name: Display resolution changes to a lower resolution
       href: ./shell-experience/display-resolution-changes-win-p-key.md
+    - name: Error when opening a Library in Windows Explorer
+      href: ./shell-experience/no-longer-working-error-library-windows-explorer.md
     - name: Fail to execute commands with RunOnce and RunOnceEx
       href: ./shell-experience/standard-user-cannot-run-commnad-via-runonce.md
     - name: Fix problems in Windows Search
@@ -248,12 +302,16 @@
       href: ./shell-experience/disabling-autoplay-cause-hotstart-buttons-not-working.md
     - name: How to modify the command line string limitation
       href: ./shell-experience/command-line-string-limitation.md
+    - name: Issues for Windows Desktop Search and Cortana
+      href: ./shell-experience/windows-desktop-search-and-cortana-issues.md
     - name: Manage lock screen image
       href: ./shell-experience/manage-lock-screen-image.md
     - name: Microsoft Store Apps fail to start
       href: ./shell-experience/microsoft-store-apps-fail-to-start.md
     - name: Microsoft-Windows-AppReadiness event ID 215 error
       href: ./shell-experience/microsoft-windows-appreadiness-event-id-215-error.md
+    - name: Monitor powers off when computer is locked
+      href: ./shell-experience/monitor-powers-off-when-pc-locked.md
     - name: Mouse input in games is incorrectly scaled
       href: ./shell-experience/mouse-input-incorrectly-scaled.md
     - name: Renaming a network folder fails
@@ -271,6 +329,8 @@
       href: ./system-management-components/rsat-client-missing-dns-server-tool.md
     - name: Error 0x80041323 when you run Scheduled tasks
       href: ./system-management-components/0x80041323-running-scheduled-tasks.md
+    - name: "Error when using the \"/z\" switch with the \"Schtasks.exe\" command"
+      href: ./system-management-components/error-task-xml-missing-required-element-attribute.md
     - name: How to configure WINRM for HTTPS
       href: ./system-management-components/configure-winrm-for-https.md
     - name: Task scheduler runs tasks as background processes
@@ -284,10 +344,14 @@
       href: ./user-profiles-and-logon/cannot-configure-a-convenience-pin.md
     - name: First sign-in fails after deploying an image
       href: ./user-profiles-and-logon/first-logon-fails-deploy-image.md
+    - name: Holding Shift key while logging off the system can't disable automatic logon
+      href: ./user-profiles-and-logon/hold-shift-key-shutting-down-not-disable-automatic-logon.md
     - name: Logon fails when using cached credentials
       href: ./user-profiles-and-logon/cached-user-logon-fails-lsasrv-event-45058.md
     - name: Renaming user account doesn't change profile path
       href: ./user-profiles-and-logon/renaming-user-account-not-change-profile-path.md
+    - name: Slow logon with a blank screen
+      href: ./user-profiles-and-logon/slow-logon-with-blank-screen.md
 
 - name: Virtualization
   items:
@@ -298,6 +362,8 @@
 
 - name: Windows Security
   items:
+    - name: Can't boot if more than one EFI system partition is present
+      href: ./windows-security/cannot-boot-windows-on-primary-hard-disk-uefi.md
     - name: Enable NTLM 2 authentication
       href: ./windows-security/enable-ntlm-2-authentication.md
     - name: Error 0x80290300 when clearing the TPM
