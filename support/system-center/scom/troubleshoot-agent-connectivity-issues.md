@@ -243,10 +243,10 @@ Examples of these events:
 > Date: data  
 > Event ID: 2010  
 > Task Category: Health Service  
-> Level: Error
-> Keywords: Classic
-> User: N/A
-> Computer: \<ComputerName>
+> Level: Error  
+> Keywords: Classic  
+> User: N/A  
+> Computer: \<ComputerName>  
 > Description: The Health Service cannot connect to Active Directory to retrieve management group policy. The error is Unspecified error (0x80004005)  
 > Event Xml:  
 > \<Event xmlns="`http://schemas.microsoft.com/win/2004/08/events/event`">  
