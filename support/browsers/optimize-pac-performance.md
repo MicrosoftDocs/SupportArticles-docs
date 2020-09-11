@@ -80,15 +80,15 @@ Whenever possible, use the `shExpMatch` function instead of `isInNet`. The follo
 ```js
 if (isInNet(hostIP, "95.53.0.0", "255.255.0.0"))
     return "DIRECT";
-if (shExpMatch(hostIP, "95.53.*))
-        return "DIRECT";
+if (shExpMatch(hostIP, "95.53.*"))
+    return "DIRECT";
 ```
 
 ### JavaScript is case-sensitive
 
-The proxy script uses the JavaScript language. JavaScript is case-sensitive. Therefore, an IF clause that is uppercase will never become true, while other parameters use lowercase. Internet Explorer itself converts the variables host and URL into lowercase before the `FindProxyForURL` function is called.
+The proxy script uses the JavaScript language. JavaScript is case-sensitive. Therefore, an `if` clause that is uppercase will never become true, while other parameters use lowercase. Internet Explorer itself converts the variables `host` and `url` into lowercase before the `FindProxyForURL` function is called.
 
-This condition is not true for `WinHTTP`. This is because `WinHTTP` passes the host and the URL directly to the function.
+This condition is not true for `WinHTTP`. This is because `WinHTTP` passes the `host` and the `url` directly to the function.
 
 Therefore, the parameters that are checked within the PAC file should be converted within the PAC before they are evaluated:
 
@@ -106,7 +106,7 @@ For an example of `myIpAddressEx` implementation, see ["myIpAddress" function re
 
 ### Testing a PAC file
 
-If the script contains any syntax error (for example, a missing ")" character in an IF statement), the script is not run. To minimize errors, consider using a script editor that runs syntax checking. By using Visual Studio, you can rename the extension of the PAC file to JavaScript during editing.
+If the script contains any syntax error (for example, a missing ")" character in an IF statement), the script is not run. To minimize errors, consider using a script editor that runs syntax checking. By using Visual Studio, you can rename the extension of the PAC file to ".js" during editing, but rename it back to ".pac" before uploading it to the webserver.
 
 > [!NOTE]
 > Starting in Windows 10, you can no longer use file-based PAC files. For more information, see the following articles:
@@ -118,56 +118,42 @@ If the script contains any syntax error (for example, a missing ")" character in
 
 Sometimes, you have to test the PAC file even if you have no access to the website. To do this, you can use the [Autoprox.exe command line tool](https://ieee.azurewebsites.net/pierrelc/autoprox.exe).
 
-If you open the tool within a command without using additional parameters, the following output is returned:
+If you open the tool within a command without using additional parameters, the following output with the help is returned:
 
 ```console
 C:\temp>autoprox
-Version : 2.1.0.0
-Usage : AUTOPROX -s  (calling DetectAutoProxyUrl and saving wpad.dat file in temporary file)
-Usage : AUTOPROX  [-h] url [Path to autoproxy file]
-       -h: calls InternetInitializeAutoProxyDll with helper functions implemented in AUTOPROX
-AUTOPROX url: calling DetectAutoProxyUrl and using WPAD.DAT logic to find the proxy for the url
-AUTOPROX url path: using the autoproxy file from the path to find proxy for the url
-Example: autoprox -s
-Example: autoprox http://www.microsoft.com
-Example: autoprox -h http://www.microsoft.com c:\inetpub\wwwroot\wpad.dat
-Example: autoprox http://www.microsoft.com http://proxy/wpad.dat
+Help for AUTOPROX.EXE
+Version : 2.44 (12/16/2019)
+Written by pierrelc@microsoft.com
+Usage : AUTOPROX -a  (calling DetectAutoProxyUrl and saving wpad.dat file in temporary file if success)
+Usage : AUTOPROX -n  (calling DetectAutoProxyUrl with PROXY_AUTO_DETECT_TYPE_DNS_A only and saving wpad.dat file in temporary file if success)
+Usage : AUTOPROX  [-o] [-d] [-v] [-u:url] [-p:Path to autoproxy file] [-i:IP address]
+      -o: calls InternetInitializeAutoProxyDll with helper functions implemented in AUTOPROX
+       -i:IP Address: calls InternetInitializeAutoProxyDll with helper functions implemented in AUTOPROX and using provided IP Address
+       -v: verbose output for helper functions
+For debugging: -d plus HKEY_CURRENT_USER\Software\Microsoft\Windows Script\Settings\JITDebug=1
+AUTOPROX -u:url: calling DetectAutoProxyUrl and using autoproxy file to find the proxy for the url
+AUTOPROX -u:url -p:path: using the autoproxy file/url from the path to find proxy for the url
+Example: autoprox http://www.microsoft.com -> calling DetectAutoProxyUrl and using WPAD if found
+Example: autoprox -o -u:http://www.microsoft.com -p:c:\inetpub\wwwroot\wpad.dat
+Example: autoprox -u:http://www.microsoft.com -p:http://proxy/wpad.dat
+Example: autoprox -d -u:http://www.microsoft.com -p:http://proxy/wpad.dat
 ```
 
 Here is the output if it uses our sample:
 
 ```console
-C:\temp>autoprox http://us.msn.com c:\temp\sample.pac
+C:\temp>autoprox -u:https://us.msn.com -p:c:\temp\sample.pac
+Searching proxy for url : https://us.msn.com
+Searching proxy using file : c:\temp\sample.pac
 The Winsock 2.2 dll was found okay
-url: http://us.msn.com
-autoproxy file path is : c:\temp\sample.pac
 Calling InternetInitializeAutoProxyDll with c:\temp\sample.pac
-        Calling InternetGetProxyInfo with url http://us.msn.com and host us.msn.com
-        Proxy returned for url http://us.msn.com is:
-PROXY myproxy:80;
-```
-
-When you want to see which DNS-related functions have been called, you can also use the `-h` parameter. In this case, the output resembles the following:
-
-```console
-C:\temp>autoprox -h http://us.msn.com c:\temp\sample.pac
-The Winsock 2.2 dll was found okay
-Will call InternetInitializeAutoProxyDll with helper functions
-url: http://us.msn.com
-autoproxy file path is : c:\temp\sample.pac
-Calling InternetInitializeAutoProxyDll with c:\temp\sample.pac
-        Calling InternetGetProxyInfo with url http://us.msn.com and host us.msn.com
-ResolveHostByName called with lpszHostName: us.msn.com
-ResolveHostByName returning lpszIPAddress: 65.55.206.229
-        Proxy returned for url http://us.msn.com is:
+        Calling InternetGetProxyInfo for url https://us.msn.com and host us.msn.com
+        Proxy returned for url https://us.msn.com is:
 PROXY myproxy:80;
 ```
 
 ### Error handling in Autoprox.exe
-
-If you specify a non-existing PAC file (for example, a typo in the command line), the result from Autoprox.exe is as follows:
-
-> ERROR: InternetInitializeAutoProxyDll failed with error number 0x6 6.
 
 If the PAC file contains syntax errors, you receive the following message:
 
@@ -182,7 +168,7 @@ function FindProxyForURL(url, host) {
     // NetBIOS-names
     if (isPlainHostName(host))
         return "DIRECT";
-    // change to lower case – if not already been done
+    // change to lower case, if not already been done
     host = host.toLowerCase();
     // internal DNS-suffixes
     if (shExpMatch(host, "*.corp.company.com") ||
