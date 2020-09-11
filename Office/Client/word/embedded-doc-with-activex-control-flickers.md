@@ -30,7 +30,7 @@ In an Office document, when you try to perform an in-place edit of an embedded W
 
 This is a known issue. To work around this issue, edit the embedded Word object in open mode. To do this, follow these steps:
 
-1. Right-click the embedded Word document icon.
+1. Right-click the embedded Word document object.
 2. Select **Document object**.
 3. Select **Open**.
 
