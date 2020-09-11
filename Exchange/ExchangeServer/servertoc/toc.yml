@@ -19,6 +19,8 @@
       href: ../administration/auto-installation-net-4-6-1-windows-server-2012-r2.md
     - name: Avoid unsupported integration methods for Exchange
       href: ../administration/avoid-unsupported-integration-methods.md
+    - name: Can't access OWA or EAC with expired OAuth certificate
+      href: ../administration/cannot-access-owa-or-ecp-if-oauth-expired.md
     - name: Can't access public folders
       href: ../administration/outlook-users-cannot-access-public-folders.md
     - name: Can't back up a passive database copy in DAG
@@ -295,8 +297,6 @@
       href: ../client-connectivity/can't-connect-error-searching-people-owa.md
     - name: Can't synchronize an Exchange ActiveSync device
       href: ../client-connectivity/event-1053-activesync-not-have-sufficient-permissions-to-create-container.md
-    - name: Can't access OWA or EAC with expired OAuth certificate
-      href: ../administration/cannot-access-owa-or-ecp-if-oauth-expired.md
     - name: Can't connect to a mailbox from OWA
       href: ../client-connectivity/cannot-connect-to-mailbox-via-owa.md
     - name: Can't connect to OWA via HTTP protocol
