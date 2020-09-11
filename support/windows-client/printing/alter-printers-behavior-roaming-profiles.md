@@ -2,7 +2,7 @@
 title: Alter printers that roam with roaming profiles
 description: Describes how to alter a behavior of printers that roams with roaming profiles.
 ms.date: 09/10/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro

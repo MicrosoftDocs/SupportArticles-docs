@@ -2,7 +2,7 @@
 title: Issues for Windows Desktop Search and Cortana
 description: Discusses the known issues that affect Windows Desktop Search and Cortana in Windows 10.
 ms.date: 09/09/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro

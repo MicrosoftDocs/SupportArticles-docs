@@ -109,7 +109,7 @@ objComCatalog.RestoreREGDB "C:\R000000000001.clb"
 >
 > MsgBox "Backup Restored!"  
 Set objComCatalog = Nothing  
-=============================================================================
+> =============================================================================
 
 Save the script to the root of C:\\. 
 

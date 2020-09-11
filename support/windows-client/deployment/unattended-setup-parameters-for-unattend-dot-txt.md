@@ -159,8 +159,7 @@ Value: RETAIL | OEM
 This is a string that identifies the driver to be installed. It must match one of the strings defined in the right-hand side of the[SCSI] section of the Txtsetup.sif file (for a retail driver), or the Txtsetup.oem file (for an OEM driver). Multiple <mass storage driver description>s can be specified. RETAIL indicates that the driver is part of the retail Windows NT product. OEM indicates that the driver is OEM- supplied. If the value is OEM, the driver must also be listed in the [OemBootFiles] section of the Unattend.txt file. Listed below are some examples of some values:
 
 
->Descriptions are from the SCSI Section of TXTSETUP.SIF
- ======================================================  
+>Descriptions are from the SCSI Section of TXTSETUP.SIF  
  "Adaptec AHA-151X/AHA-152X or AIC-6260/AIC-6360 SCSI Host Adapter" = "RETAIL"  
  "Adaptec AHA-154X/AHA-164X SCSI Host Adapter" = "RETAIL"  
  "Adaptec AHA-174X EISA SCSI Host Adapter" = "RETAIL"  
@@ -206,8 +205,7 @@ Value: RETAIL | OEM
 
 This is a string that identifies the driver to be installed. It must match one of the strings defined in the right-hand side of the[Mouse] section of the Txtsetup.sif file (for a retail driver), or the Txtsetup.oem file (for an OEM driver). Multiple \<pointing device driver description>s can be specified. RETAIL indicates that the driver is part of the retail Windows NT product. OEM indicates that the driver is OEM- supplied. Below are some examples of these values:
 
->Descriptions are from the MOUSE Section of TXTSETUP.SIF
- ======================================================  
+>Descriptions are from the MOUSE Section of TXTSETUP.SIF  
  "Microsoft Mouse Port Mouse (includes BallPoint)" = "RETAIL"  
  "Logitech Mouse Port Mouse" = "RETAIL"  
  "Microsoft InPort Bus Mouse" = "RETAIL"  

@@ -254,8 +254,6 @@
       href: ./printing/two-sided-printing-cannot-be-set.md
     - name: Error 0x00000709 when using CNAME record
       href: ./printing/error-0x00000709-use-cname-record.md
-    - name: Error 0x00000709 when using CNAME record
-      href: ./printing/error-0x00000709-use-cname-record.md
     - name: Error occurs when adding an IPP printer
       href: ./printing /error-occurs-when-adding-ipp-printer.md
     - name: PNG images don't print correctly in Word 2010 after changing display scaling

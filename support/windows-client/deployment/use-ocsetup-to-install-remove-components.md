@@ -2,7 +2,7 @@
 title: Use Ocsetup.exe to install/remove optional components
 description: Describes the Windows optional component setup (Ocsetup.exe) tool.
 ms.date: 09/10/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro
