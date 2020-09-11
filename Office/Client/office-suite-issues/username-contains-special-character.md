@@ -59,7 +59,6 @@ This behavior occurs because certain special characters aren't permitted in user
 
 However, the following exceptions apply:
 
-- A period (.) or a hyphen (-) is permitted anywhere in the user name, except at the beginning or end of the name.   
 - An underscore (_) is permitted anywhere in the user name. This includes at the beginning or end of the name.
 - When creating a group, the number sign (#) **can** be used as part of the group's name. However, the email address you create for a distribution group or shared mailbox **cannot** use the # sign.  
 
