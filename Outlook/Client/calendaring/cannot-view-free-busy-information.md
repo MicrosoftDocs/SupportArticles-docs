@@ -64,9 +64,8 @@ Add the missing registry subkeys:
 4. Select **FreeBusySupport**, select **Edit**, point to **New**, and select **String Value**.
 5. Set **Value name** to **EX**, and then double-click to edit the string.
 6. Type `{0006F014-0000-0000-C000-000000000046}` into **Value data**, and then select **OK**.
-    :::image type="content" source=".\media\cannot-view-free-busy-information\free-busy-registry-key.png" alt-text="Value data.":::
-
 7. Select **FreeBusySupport**, select the **Edit** menu, point to **New**, and select **String Value**.
 8. Set **Value name** to **SMTP**, and then double-click to edit the string.
 9. Type `{0006F049-0000-0000-C000-000000000046}` into **Value data**, and then select **OK**.
+    :::image type="content" source=".\media\cannot-view-free-busy-information\free-busy-registry-key.png" alt-text="Value data.":::
 10. Exit Registry Editor.
