@@ -1,3 +1,6 @@
+- name: FoxPro
+  href: ./foxpro/toc.yml
+
 - name: General
   href: ./general/toc.yml
 
