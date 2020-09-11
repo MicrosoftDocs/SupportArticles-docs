@@ -1,23 +1,22 @@
 ---
-title: "Title goes here"
+title: Search box removed for customers with search control in Suite Nav turned off
 ms.author: v-todmc
 author: mccoybot
 manager: dcscontentpm
-ms.date: xx/xx/xxxx
-audience: Admin|ITPro|Developer
+ms.date: 9/11/2020
+audience: Admin
 ms.topic: article
-ms.service OR ms.prod: see https://docsmetadatatool.azurewebsites.net/allowlists
-localization_priority: Normal
+ms.prod: sharepoint
 search.appverid:
 - SPO160
 - MET150
 appliesto:
-- ADD PRODUCT
+- SharePoint
 ms.custom: 
-- CI ID
+- CI 122435
 - CSSTroubleshoot 
 ms.reviewer: MS aliases for tech reviewers and CI requestor, without "@microsoft.com".  
-description: "How to resolve the error "Virus Found" in SharePoint Server 2013 when the antivirus scanner is unavailable ."
+description: Customers who switch off the search control in SharePoint Suite Navigation will no longer see the search box. 
 ---
 
 # Search box removed for customers with Suite Navigation search control turned off
