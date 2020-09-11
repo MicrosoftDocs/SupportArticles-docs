@@ -1,5 +1,3 @@
-- name: General
-  items:
   - name: A cursor-based grid is blank
     href: cursor-based-grid-blank.md
   - name: Add a Visual FoxPro database to SQL Server
