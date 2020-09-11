@@ -4,7 +4,7 @@ description: This article describes how to programmatically add and query a Visu
 ms.date: 09/08/2020
 ms.prod-support-area-path: 
 ms.topic: how-to
-ms.prod: visual-studio
+ms.prod: visual studio
 ---
 # How to add a Visual FoxPro database to SQL Server as a linked server
 
