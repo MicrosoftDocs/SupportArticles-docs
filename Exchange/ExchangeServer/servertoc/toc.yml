@@ -64,7 +64,7 @@
     - name: Can't create items on behalf of a delegate
       href: ../administration/creating-items-on-behalf-of-a-delegate-fails.md
     - name: Can't create System.Management.Automation runspaces
-      href: ../administration/cannot-create-system.management.automation-runspaces.md
+      href: ../administration/cannot-create-system-management-automation-runspaces.md
     - name: Can't process argument transformation error for cmdlets
       href: ../administration/cannot-process-argument-transformation-error.md
     - name: Can't restore a LUN drive
