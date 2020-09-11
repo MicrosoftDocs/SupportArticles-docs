@@ -247,7 +247,7 @@
 - name: Printing
   items:
     - name: Alter printers that roam with roaming profiles
-      href: ./printing /alter-printers-behavior-roaming-profiles.md
+      href: ./printing/alter-printers-behavior-roaming-profiles.md
     - name: Can't install a Secure WSD printer from Print Management Console
       href: ./printing/cannot-install-secure-web-services-on-devices.md
     - name: Duplex printing options can't be set
@@ -255,9 +255,9 @@
     - name: Error 0x00000709 when using CNAME record
       href: ./printing/error-0x00000709-use-cname-record.md
     - name: Error occurs when adding an IPP printer
-      href: ./printing /error-occurs-when-adding-ipp-printer.md
+      href: ./printing/error-occurs-when-adding-ipp-printer.md
     - name: PNG images don't print correctly in Word 2010 after changing display scaling
-      href: ./printing /png-images-not-print-correctly-change-display-scaling.md
+      href: ./printing/png-images-not-print-correctly-change-display-scaling.md
 
 - name: Remote Desktop Services
   items:

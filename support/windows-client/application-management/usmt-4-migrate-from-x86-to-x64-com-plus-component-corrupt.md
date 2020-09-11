@@ -100,7 +100,6 @@ copy R000000000001.clb C:\R000000000001.clb
 
 Next, copy, and paste the following VB script (between the dashed lines) to a.txt file and rename it COM_Restore.vbs (make sure to change the .txt file extension to .vbs). 
 
-
 > =============================================================================
 Dim objComCatalog  
 >
@@ -108,7 +107,8 @@ Dim objComCatalog
 objComCatalog.RestoreREGDB "C:\R000000000001.clb"  
 >
 > MsgBox "Backup Restored!"  
-Set objComCatalog = Nothing  
+> Set objComCatalog = Nothing  
+>
 > =============================================================================
 
 Save the script to the root of C:\\. 
