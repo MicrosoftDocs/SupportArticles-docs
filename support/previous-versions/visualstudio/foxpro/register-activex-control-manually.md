@@ -4,7 +4,7 @@ description: This article describes how to manually register an ActiveX control 
 ms.date: 09/08/2020
 ms.prod-support-area-path: 
 ms.topic: how-to
-ms.prod: Visual FoxPro
+ms.prod: visual-studio-family
 ---
 # Register an ActiveX control (.ocx) manually
 

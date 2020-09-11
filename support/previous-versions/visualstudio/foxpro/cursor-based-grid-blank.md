@@ -3,7 +3,7 @@ title: A cursor-based grid is blank
 description: This article provides resolutions for the problem where cursor-based grid is blank if the SELECT-SQL command resets the cursor in Visual FoxPro.
 ms.date: 09/08/2020
 ms.prod-support-area-path: 
-ms.prod: Visual FoxPro
+ms.prod: visual-studio-family
 ---
 # A cursor-based grid is blank if the SELECT-SQL command resets the cursor in Visual FoxPro
 
