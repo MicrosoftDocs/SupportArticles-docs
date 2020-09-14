@@ -38,7 +38,7 @@ Step 1: Encrypt Channel between MBAM Client and Administration & Monitoring Serv
       5. In Feature View, Double-Click Server Certificates.
       6. Under Actions Pane, Select Self-Signed Certificate.
       7. On the Create Self-Signed Certificate page, type a friendly name for the certificate in the Specify a friendly name for the certificate box, and then click OK.
-      
+
       Notes:
        - This procedure generates a self-signed certificate that doesn't originate from a generally trusted source; therefore, you shouldn't use this certificate to help secure data transfers between Internet clients and your server.
        - Self-signed certificates may cause your Web browser to issue phishing warnings.
@@ -52,20 +52,21 @@ There are two ways to import a certificate
   2. Request or Import a certificate into the Personal Certificate Store using Certificate Manager:
      [https://windows.microsoft.com/windows-vista/Request-or-renew-a-certificate](https://windows.microsoft.com/windows-vista/request-or-renew-a-certificate) 
 
-    Certificate Templates to be used: 
-    MBAM Client to MBAM Administration & Monitoring Server: Use Standard Web Server Template .
-    
-    After you have certificate ready, when you execute MBAM Setup, we will show you the thumbprint of the certificate in "Configure Network Communication Security" wizard for MBAM Setup.
-    
-    ![Have certificate ready](./media/mbam-secure-network-communication/certificate-ready.png)
+     Certificate Templates to be used:
 
-Step 2: Encrypt Channel between MBAM Administration & Monitoring Server and MBAM Recovery & Hardware SQL DB. 
+     MBAM Client to MBAM Administration & Monitoring Server: Use Standard Web Server Template .
+
+     After you have certificate ready, when you execute MBAM Setup, we will show you the thumbprint of the certificate in "Configure Network Communication Security" wizard for MBAM Setup.
+
+     ![Have certificate ready](./media/mbam-secure-network-communication/certificate-ready.png)
+
+Step 2: Encrypt Channel between MBAM Administration & Monitoring Server and MBAM Recovery & Hardware SQL DB.
 
 MBAM can encrypt the communication between the Recovery and Hardware Database and the Administration and Monitoring servers. If you choose the option to encrypt communication, you're asked to select the Certificate Authority-provisioned certificate that is used for encryption.
 
-Certificate Templates to be used: 
+Certificate Templates to be used:
 
-MBAM SQL DB Server to Admin & Monitoring Server: Standard Server Authentication Template 
+MBAM SQL DB Server to Admin & Monitoring Server: Standard Server Authentication Template
 
 When you execute MBAM Setup Program on a server where you'll install MBAM Recovery & Hardware DB Role, you can see the certificate thumbprint in "Configure Network Communication Security" wizard for MBAM Setup Program.
 
