@@ -1,5 +1,5 @@
- - name: Cloud Platform System
-    items:
+- name: Cloud Platform System
+  items:
   - name: Update 1610 for Cloud Platform System Premium
     href: update-1610-cps-premium.md
   - name: Update 1603 for Cloud Platform System Premium
@@ -22,6 +22,7 @@
     href: how-to-renew-windows-azure-pack-authentication-sit.md
   - name: Firmware version matrix for Cloud Platform System Premium
     href: firmware-version-matrix.md
+
 - name: Unsupported Features and Platforms in Recovery Services Scout 8.0.1
   href: unsupported-features-and-platforms-post-upgrade.md
 - name: Embedded application error when install Azure backup agent
@@ -44,6 +45,7 @@
   href: modifications-not-reflect-portal.md
 - name: Automation modifications aren't reflected in the portal
   href: modifications-not-reflect-portal.md
+
 - name:  Support Diagnostic Packages
   items:
   - name: Recovery Services troubleshooter
