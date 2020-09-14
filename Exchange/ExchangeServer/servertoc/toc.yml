@@ -143,6 +143,8 @@
       href: ../administration/ews-app-pool-crashes.md
     - name: EWS notifications return UnreadCount of -1
       href: ../administration/ews-notification-return-wrong-value-for-unreadcount.md
+    - name: Exchange CU installation fails
+      href: ../administration/cannot-install-exchange-cu-localized-windows.md
     - name: Exchange Server 2010 datacenter switchover
       href: ../administration/exchange-server-2010-datacenter-switchover.md
     - name: Exchange transaction logs growing rapidly
