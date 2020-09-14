@@ -36,7 +36,7 @@ If the database is large, we need to identify which tables are responsible. Lar
 Based on the report, take a look at the largest tables. The following are some of the tables that are usually found to be large:
 
 - `Tbl_RM_SharePointRecoverableObject`
-- `Tbl_ARM_DirAndFile and/or Tbl_ARM_Path`
+- `Tbl_ARM_DirAndFile` and/or `Tbl_ARM_Path`
 - `Tbl_TE_TaskTrail`
 
 If the database and table sizes appear normal, [check the database index size and fragmentation](#check-database-index-size-and-fragmentation).

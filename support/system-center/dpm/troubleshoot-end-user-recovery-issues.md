@@ -58,7 +58,7 @@ Another common issue with the previous versions list is invalid redirections wit
 
 To check the redirections in Active Directory, sign in to a domain controller in the domain and run the following command:
 
-```sql
+```console
 dsquery * CN=MS-ShareMapConfiguration,cn=system,dc=domain,dc=local -attr ms-backupSrvShare ms-productionSrvShare cn
 ```
 

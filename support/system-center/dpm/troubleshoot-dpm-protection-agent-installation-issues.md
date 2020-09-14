@@ -32,7 +32,7 @@ When Microsoft Visual C++ 2012 Redistributable (x64) version 11.0.51106 or a lat
 To fix this issue, verify that the required version of Microsoft Visual C++ 2012 Redistributable (x64) is installed. To do this, at the command prompt, type the following command to query the related registry entries:
 
 ```console
-C:\>reg query \\<ComputerName>\HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall /s /f "Microsoft Visual C++ 2012 x64"
+reg query \\<ComputerName>\HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall /s /f "Microsoft Visual C++ 2012 x64"
 ```
 
 If no results are returned, install Microsoft Visual C++ 2012 Redistributable (x64) version 11.0.51106 or a later version.
