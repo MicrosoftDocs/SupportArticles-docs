@@ -4,7 +4,7 @@ description: Fixes a problem in which a Configuration Manager PXE boot process d
 ms.date: 09/02/2020
 ms.prod-support-area-path: PXE boot
 ---
-# PXE doesn't work because a self-signed certificate isn't created
+# PXE boot doesn't work because a self-signed certificate isn't created
 
 This article helps you fix an issue in which the Preboot Execution Environment (PXE) boot doesn't work in Configuration Manager if a self-signed certificate isn't created.
 
