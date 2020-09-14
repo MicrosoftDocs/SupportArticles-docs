@@ -1,12 +1,13 @@
 ---
 title:  Office is slow or stops responding when you open file from network location
+description: Fixes an issue in which Office is slow when you open files from network location.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.service: office 365
+ms.prod: office 365
 ms.custom: CSSTroubleshoot
 ms.topic: article
 ms.author: v-six
