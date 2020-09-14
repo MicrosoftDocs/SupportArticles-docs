@@ -1,5 +1,6 @@
 ---
 title: Mail merge error when a data source is accessed by multiple users in Word
+description: Fixes an issue in which you receive an error when a data source is accessed by multiple users.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal

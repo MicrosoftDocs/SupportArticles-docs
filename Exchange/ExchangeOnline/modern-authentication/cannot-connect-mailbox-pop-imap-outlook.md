@@ -3,8 +3,8 @@ title: Can't connect to Outlook with POP/IMAP and Modern authentication
 description: Describes why you cannot connect to Outlook by using POP/IMAP and SMTP protocols, and Modern authentication.
 author: TobyTu
 ms.author: 
-- Agustin.Gallegos
-- Nelson Riera
+- agallego
+- nriera
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
@@ -13,7 +13,7 @@ localization_priority: Normal
 ms.custom: 
 - CI 120173
 - CSSTroubleshoot
-ms.reviewer: Agustin.Gallegos
+ms.reviewer: agallego
 appliesto:
 - Exchange Online
 search.appverid: 
@@ -63,7 +63,7 @@ To enable Basic authentication, run the following command to revert the value to
 Set-TransportConfig -SmtpClientAuthenticationDisabled $False
 ```
 
-For more information about the **Set-TransportConfig** command, see [Set-TransportConfig](https://docs.microsoft.com/powershell/module/exchange/set-transportconfig?view=exchange-ps).
+For more information about the **Set-TransportConfig** command, see [Set-TransportConfig](https://docs.microsoft.com/powershell/module/exchange/set-transportconfig?view=exchange-ps&preserve-view=true).
 
 ### Mailbox level
 
@@ -83,4 +83,4 @@ To enable Basic authentication, run the following command to revert the value to
 Set-CasMailbox <mailbox account> -SmtpClientAuthenticationDisabled $False
 ```
 
-For more information about the **Set-CasMailbox** command, see [Set-CasMailbox](https://docs.microsoft.com/powershell/module/exchange/set-casmailbox?view=exchange-ps).
+For more information about the **Set-CasMailbox** command, see [Set-CasMailbox](https://docs.microsoft.com/powershell/module/exchange/set-casmailbox?view=exchange-ps&preserve-view=true).

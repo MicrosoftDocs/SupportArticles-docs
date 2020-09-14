@@ -28,4 +28,4 @@ Access to Teams data is only supported by Microsoft Graph API (preview). Teams G
 
 ## More information
 
-To access Teams messages, subscribe to changes for messaging. You can subscribe a listener application to receive notifications for certain types of changes in Microsoft Graph's specified resource. This API is currently in the Beta testing phase. For more information, see [Create subscription](https://docs.microsoft.com/graph/api/subscription-post-subscriptions?view=graph-rest-beta&tabs=http).
+To access Teams messages, subscribe to changes for messaging. You can subscribe a listener application to receive notifications for certain types of changes in Microsoft Graph's specified resource. This API is currently in the Beta testing phase. For more information, see [Create subscription](https://docs.microsoft.com/graph/api/subscription-post-subscriptions?view=graph-rest-beta&tabs=http&preserve-view=true).
