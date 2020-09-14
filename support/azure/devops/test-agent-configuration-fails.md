@@ -1,6 +1,7 @@
 ---
 title: Test agent configuration fails
 description: This article provides resolutions for the error that occurs when you try to configure the test agent to talk to the controller service.
+ms.prod: devops
 ms.date: 08/17/2020
 ms.prod-support-area-path: Test Plans
 ms.reviewer: georgea

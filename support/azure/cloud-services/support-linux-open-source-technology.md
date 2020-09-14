@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 2941892
 This article describes the support policies for [Endorsed Linux distributions](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros) and [open source technologies](https://azure.microsoft.com/overview/open-source/) in Azure.
 
 > [!NOTE]
-> The supported Linux distributions for Azure Stack Hub can be found in [this article](https://docs.microsoft.com/azure-stack/operator/azure-stack-supported-os?view=azs-2002#linux).
+> The supported Linux distributions for Azure Stack Hub can be found in [this article](https://docs.microsoft.com/azure-stack/operator/azure-stack-supported-os?view=azs-2002&preserve-view=true#linux).
 
 ## Linux in Azure
 
