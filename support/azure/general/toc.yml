@@ -1,5 +1,5 @@
  - name: Cloud Platform System
-  items:
+    items:
   - name: Update 1610 for Cloud Platform System Premium
     href: update-1610-cps-premium.md
   - name: Update 1603 for Cloud Platform System Premium
