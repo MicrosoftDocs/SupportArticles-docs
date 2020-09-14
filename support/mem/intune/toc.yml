@@ -6,12 +6,16 @@
     href: configure-app-protection-access-denied.md
   - name: Access denied for app protection options
     href: app-protection-options-access-denied.md
+  - name: App installation failed error
+    href: app-installation-failed-error.md
   - name: Apps don't appear as Available
     href: apps-appear-unavailable.md
   - name: Can't attach photos due to IO error
     href: android-enterprise-enrolled-devices-fails-attaching-photo.md
   - name: Can't create messages in Outlook for Android
     href: creating-message-action-not-allowed.md
+  - name: Can't save corporate data in WIP-allowed apps
+    href: corporate-data-unsaved-in-wip-allowed-apps.md
   - name: Can't sync apps to Intune
     href: apps-fail-sync-to-intune.md
   - name: Can't uninstall apps installed from the App Store
@@ -46,6 +50,8 @@
     href: saving-images-locally-not-restricted.md
   - name: Set up and validate app protection policies
     href: set-up-app-protection-policies-ios-device.md
+  - name: SIP address and password can't be saved
+    href: sip-address-password-not-saved.md
 - name: Co-management with Configuration Manager
   items:
   - name: Troubleshoot co-management auto-enroll
@@ -70,6 +76,8 @@
     href: factory-reset-protection-emails-not-enforced.md
   - name: Error 403 inspecting Intune objects in Graph Explorer
     href: 403-error-graph-explorer-query.md
+  - name: Multi-app kiosk users can't log on to Windows
+    href: multi-app-kiosk-users-cannot-logon-windows.md
   - name: No password prompt after email password change
     href: no-password-prompt-after-password-change.md
   - name: Password expiration setting doesn't work
@@ -88,6 +96,8 @@
       href: device-ownership-changed-to-corporate.md
   - name: Can't update enrollment
     href: cannot-update-enrollment.md
+  - name: Canceled Intune continues to enroll devices
+    href: canceled-intune-continue-enroll-devices.md
   - name: iOS/iPadOS enrollment
     items:
     - name: Auto-enrollment doesn't start on Apple DEP devices
