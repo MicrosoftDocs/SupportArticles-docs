@@ -20,8 +20,6 @@ search.appverid: MET150
 ---
 # On-premises users can't access cloud archive mailboxes with Full Access permission in Outlook
 
-This article provides methods to solve the issue that on-premises users can't access cloud archive mailboxes that they have Full Access permission to in Microsoft Outlook.
-
 _Original KB number:_ &nbsp; 4486479
 
 ## Symptoms

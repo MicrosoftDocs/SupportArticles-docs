@@ -22,8 +22,6 @@ appliesto:
 ---
 # Error when you install the Edge Transport server role on a domain-joined Exchange server: Cannot get child of ADObjectId
 
-This article provides a workaround for an issue where installing the Edge Transport server role on a domain-joined Exchange server fails.
-
 _Original KB number:_ &nbsp; 3205799
 
 ## Symptoms

@@ -19,8 +19,6 @@ search.appverid: MET150
 ---
 # Event ID 2080 from MSExchangeDSAccess
 
-This article describes how you can use the information that is contained in Event 2080 to help troubleshoot Active Directory-related access issues in Microsoft Exchange Server.
-
 _Original KB number:_ &nbsp; 316300
 
 ## Summary

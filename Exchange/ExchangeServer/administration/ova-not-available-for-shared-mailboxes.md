@@ -19,8 +19,6 @@ search.appverid: MET150
 ---
 # Outlook Voice Access (OVA) is not available when you call from a shared mailbox
 
-This article provides a workaround to solve the **Invalid Mailbox Extension** error message that occurs when you call from a shared mailbox in Microsoft Exchange Server 2013.
-
 _Original KB number:_ &nbsp; 3078440
 
 ## Symptoms

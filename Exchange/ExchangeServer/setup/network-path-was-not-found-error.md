@@ -18,8 +18,6 @@ appliesto:
 ---
 # Error when you run an Update cmdlet in an Exchange Server 2010 environment: The network path was not found
 
-This article helps fix an issue where an error message that states the network path was not found occurs when you run an `Update` cmdlet in a Microsoft Exchange Server 2010 environment.
-
 _Original KB number:_ &nbsp; 2770541
 
 ## Symptoms

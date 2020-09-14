@@ -19,8 +19,6 @@ search.appverid: MET150
 ---
 # High memory usage by W3wp process of default application pool in an Exchange Server 2010 environment
 
-This article provides a workaround to solve the high memory usage issue that is caused by the W3wp.exe process that belongs to the default application pool on all Client Access servers in Microsoft Exchange Server 2010.
-
 _Original KB number:_ &nbsp; 3007848
 
 ## Symptoms

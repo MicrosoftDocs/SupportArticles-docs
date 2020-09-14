@@ -17,8 +17,6 @@ appliesto:
 ---
 # Event ID 2142 when Exchange services don't start
 
-This article helps you resolve the problem that Microsoft Exchange services don't start.
-
 _Original KB number:_ &nbsp; 3090811
 
 ## Symptom

@@ -19,8 +19,6 @@ appliesto:
 ---
 # Removed Default or Anonymous permission for Outlook folders can't be restored in an Exchange Server 2013 environment
 
-This article helps you resolve the problem that you can't add the permissions back after you remove the Default or Anonymous permission from a Microsoft Outlook folder in an Exchange Server 2013 environment.
-
 _Original KB number:_ &nbsp; 2983066
 
 ## Symptoms

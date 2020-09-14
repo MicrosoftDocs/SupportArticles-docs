@@ -24,8 +24,6 @@ appliesto:
 ---
 # The Exchange Edge Transport server version is incorrect in EAC or ECP after an upgrade
 
-This article helps you resolve the problem that the version information isn't updated as expected after you upgrade a Microsoft Edge Transport server to a new version.
-
 _Original KB number:_ &nbsp; 4019802
 
 ## Symptoms

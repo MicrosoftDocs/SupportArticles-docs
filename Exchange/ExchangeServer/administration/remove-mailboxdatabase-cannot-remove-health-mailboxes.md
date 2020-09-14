@@ -20,8 +20,6 @@ search.appverid: MET150
 ---
 # Remove MailboxDatabase operation fails to clean up health mailboxes
 
-This article provides a workaround for the issue that the `Remove-MailboxDatabase` cmdlet cannot remove the AD User accounts of health mailboxes in the database in Microsoft Exchange Server 2016 and Exchange Server 2013.
-
 _Original KB number:_ &nbsp; 3046530
 
 ## Symptoms

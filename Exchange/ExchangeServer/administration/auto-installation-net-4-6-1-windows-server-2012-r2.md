@@ -22,8 +22,6 @@ appliesto:
 ---
 # Auto-installation of .NET Framework 4.6.1 for Windows Server 2012 R2 in Exchange Server 2013 or 2016
 
-This article describes the auto-installation of Microsoft .NET Framework 4.6.1 for Windows Server 2012 R2 in Exchange Server 2013 or 2016.
-
 _Original KB number:_ &nbsp; 3142512
 
 ## Summary

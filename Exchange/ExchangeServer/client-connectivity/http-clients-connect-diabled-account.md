@@ -21,8 +21,6 @@ appliesto:
 ---
 # HTTP clients can still connect to Exchange after account is disabled or password is changed
 
-This article helps you resolve the problem that HTTP clients can still connect to Exchange after its account is disabled or password is changed.
-
 _Original KB number:_ &nbsp; 3035228
 
 ## Symptoms

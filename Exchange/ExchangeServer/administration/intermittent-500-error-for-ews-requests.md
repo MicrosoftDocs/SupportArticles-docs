@@ -19,8 +19,6 @@ search.appverid: MET150
 ---
 # Intermittent 500 error occurs for EWS requests in an Exchange Server 2013 and 2007 coexistence scenario
 
-This article provides a solution for the **500** error that occurs intermittently for EWS requests in a Microsoft Exchange Server 2013 and 2007 coexistence environment.
-
 _Original KB number:_ &nbsp; 3152392
 
 ## Symptoms

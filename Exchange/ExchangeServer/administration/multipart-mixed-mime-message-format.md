@@ -17,8 +17,6 @@ search.appverid: MET150
 ---
 # A description of the multipart/mixed Internet message format
 
-An e-mail message sent from Exchange Server may appear as a multipart/mixed Multipurpose Internet Message Extensions (MIME) message with separate body parts that are delineated by a border.
-
 _Original KB number:_ &nbsp; 323226
 
 ## More information

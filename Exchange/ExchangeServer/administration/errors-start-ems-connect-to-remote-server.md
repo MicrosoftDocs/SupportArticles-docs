@@ -20,8 +20,6 @@ appliesto:
 ---
 # Error (Method not found or Can't generate Export-Module) in Exchange Management Shell and remote PowerShell
 
-This article helps you resolve the problems that you meet when you use Microsoft Exchange Server 2016 and Exchange Online after KB 4025333 is installed.
-
 _Original KB number:_ &nbsp; 4037313
 
 ## Symptoms

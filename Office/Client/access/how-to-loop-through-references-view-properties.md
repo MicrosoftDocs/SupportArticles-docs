@@ -28,8 +28,6 @@ search.appverid: MET150
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
-This article provides the steps to loop through the References collection and get the properties of each reference.
-
 _Original KB number:_ &nbsp; 209849
 
 ## Summary

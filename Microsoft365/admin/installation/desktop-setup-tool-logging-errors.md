@@ -17,9 +17,9 @@ search.appverid: MET150
 ---
 # Description of Microsoft 365 Desktop Setup Tool logging errors
 
-When you try to install updates to client computers by using the Microsoft 365 Desktop Setup Tool, you may encounter errors. When an error occurs, an error message is recorded in the Microsoft 365 Desktop Setup Tool log file. This article describes the error messages that you might receive and the conditions that trigger these errors.
-
 _Original KB number:_ &nbsp; 2404500
+
+When you try to install updates to client computers by using the Microsoft 365 Desktop Setup Tool, you may encounter errors. When an error occurs, an error message is recorded in the Microsoft 365 Desktop Setup Tool log file. This article describes the error messages that you might receive and the conditions that trigger these errors.
 
 ## More information
 

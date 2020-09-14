@@ -24,8 +24,6 @@ search.appverid: MET150
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
-This article fixes errors when you update data in an Access form.
-
 _Original KB number:_ &nbsp; 328828
 
 > [!NOTE]

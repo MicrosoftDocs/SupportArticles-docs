@@ -28,8 +28,6 @@ search.appverid: MET150
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
-This article fixes an issue in which you receive an error message while linking a SQL Database instance table.
-
 _Original KB number:_ &nbsp; 2730109
 
 ## Symptoms

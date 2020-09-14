@@ -17,8 +17,6 @@ appliesto:
 ---
 # Edge Transport servers reject messages sent to valid recipients
 
-This article provides workarounds for an issue where Microsoft Exchange Server 2016 Edge Transport servers reject messages that are sent to valid internal recipients.
-
 _Original KB number:_ &nbsp; 3152396
 
 ## Symptoms

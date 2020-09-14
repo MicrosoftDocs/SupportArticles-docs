@@ -19,7 +19,6 @@ search.appverid: MET150
 ---
 # You cannot restore an individual database by using Windows Server Backup in Exchange Server
 
-This article provides a workaround to make sure you can restore an individual database by using Windows Server Backup in Microsoft Exchange Server 2010 or Exchange Server 2007.
 _Original KB number:_ &nbsp; 2735099
 
 ## Symptoms

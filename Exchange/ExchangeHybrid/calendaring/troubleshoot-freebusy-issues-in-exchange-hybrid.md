@@ -18,8 +18,6 @@ search.appverid: MET150
 ---
 # Troubleshoot free/busy issues in Exchange hybrid environment
 
-This article describes how to troubleshoot free/busy issues that may occur in a hybrid deployment of an on-premises Microsoft Exchange Server and Microsoft Exchange Online in Microsoft 365.
-
 _Original KB number:_ &nbsp; 10092
 
 **Who is it for?**

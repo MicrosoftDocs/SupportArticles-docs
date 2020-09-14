@@ -18,8 +18,6 @@ search.appverid: MET150
 ---
 # SendAs permissions granted to users in forests are not visible in Send As Permission Wizard in EMC
 
-This article provides a workaround to solve the issue that the Send As permissions that are granted to users in forests trusted by Microsoft Exchange Server 2010 aren't visible.
-
 _Original KB number:_ &nbsp; 2401524
 
 ## Symptoms

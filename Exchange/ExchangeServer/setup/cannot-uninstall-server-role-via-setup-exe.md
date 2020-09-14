@@ -19,8 +19,6 @@ search.appverid: MET150
 ---
 # The parameter roles is not valid error message when trying to uninstall Exchange Server 2013 server role
 
-This article provides a resolution for the issue that you can't use Setup.exe to uninstall Microsoft Exchange Server 2013 server role.
-
 _Original KB number:_ &nbsp; 2801813
 
 ## Symptoms

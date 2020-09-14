@@ -23,8 +23,6 @@ search.appverid: MET150
 ---
 # Get-VirtualDirectory cmdlets take a long time to run in Exchange Server
 
-This article provides a workaround to solve the issue that the `Get-VirtualDirectory` cmdlets take longer than expected to run in a Microsoft Exchange Server environment.
-
 _Original KB number:_ &nbsp; 2896472
 
 ## Symptoms
