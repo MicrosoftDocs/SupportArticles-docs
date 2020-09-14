@@ -39,6 +39,9 @@ The **FreeBusySupport** registry key could be missing after installing or reinst
 
 `HKEY_LOCAL_MACHINE\Software\Microsoft\Office\16.0\Outlook\SchedulingInformation\FreeBusySupport`
 
+> [!NOTE]
+> 16.0 is for Outlook 2016, Outlook for Microsoft 365 and Outlook 2019.
+
 ## Resolution
 
 Use one of these methods:
@@ -57,10 +60,6 @@ Add the missing registry subkeys:
 1. Close Outlook.
 2. Start Registry Editor. To do this, right-click **Start**, type **regedit** in the **Run**  box, and then select **OK**.
 3. Find the location of the missing **FreeBusySupport** registry key and add the key manually. You must add the **SchedulingInformation** key first, and then add the **FreeBusySupport** subkey.
-
-    > [!NOTE]
-    > 16.0 is for Outlook 2016, Outlook for Microsoft 365 and Outlook 2019.
-
 4. Select **FreeBusySupport**, select **Edit**, point to **New**, and select **String Value**.
 5. Set **Value name** to **EX**, and then double-click to edit the string.
 6. Type `{0006F014-0000-0000-C000-000000000046}` into **Value data**, and then select **OK**.
