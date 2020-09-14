@@ -146,6 +146,8 @@
       href: connector-setup-wizard-ends-prematurely.md
     - name: NDES certificate not installed
       href: error-0x80090014-installing-ndes-certificate.md
+    - name: Reinstall the Intune Certificate Connector
+      href: reinstall-the-intune-connector.md
     - name: SCEP certificate deployment fails after CA renewal
       href: scep-deployment-to-win10-devices-fails.md
     - name: SCEP certificate request fails on CRP
