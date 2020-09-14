@@ -3,7 +3,7 @@ title: Cloud Platform System 1.0 Update 2
 description: Describes Update 2 for Cloud Platform System 1.0. Covers the full range of fixes and functionality that this update provides.
 author: genlin
 ms.author: genli
-ms.service: cps
+ms.service: azure-stack
 ms.date: 08/14/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
