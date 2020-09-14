@@ -36,6 +36,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/system-center/scom/index.md",
+      "redirect_url": "/support/system-center/scom/welcome-scom",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/system-center/orchestrator/index.md",
       "redirect_url": "/support/system-center/orchestrator/welcome-orchestrator",
       "redirect_document_id": false
@@ -76,18 +81,13 @@
       "redirect_document_id": false
     },
     {
-        "source_path": "support/azure/cloud-services/index.md",
-        "redirect_url": "/support/azure/cloud-services/welcome-cloud-services",
-        "redirect_document_id": false
-      },
-      {
-        "source_path": "support/azure/virtual-machines/index.md",
-        "redirect_url": "/support/azure/virtual-machines/welcome-virtual-machines.md",
-        "redirect_document_id": false
-      },
+      "source_path": "support/azure/cloud-services/index.md",
+      "redirect_url": "/support/azure/cloud-services/welcome-cloud-services",
+      "redirect_document_id": false
+    },
     {
-      "source_path": "support/windows/index.md",
-      "redirect_url": "/support/windows/win32/welcome-windowsdeveloper",
+      "source_path": "support/azure/virtual-machines/index.md",
+      "redirect_url": "/support/azure/virtual-machines/welcome-virtual-machines.md",
       "redirect_document_id": false
     },
     {
@@ -101,8 +101,28 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/windows-client/index.md",
+      "redirect_url": "/support/windows-client/welcome-windows-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/index.md",
+      "redirect_url": "/support/windows-server/welcome-windows-server",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/sql/resource-monitor-nonyielding-condition.md",
       "redirect_url": "https://support.microsoft.com/help/2216485",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/configmgr/index.md",
+      "redirect_url": "/support/previous-versions/configmgr/backups-fail-with-vss-provider-issue",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/index.md",
+      "redirect_url": "/support/previous-versions/welcome-previous-versions",
       "redirect_document_id": false
     }
   ]

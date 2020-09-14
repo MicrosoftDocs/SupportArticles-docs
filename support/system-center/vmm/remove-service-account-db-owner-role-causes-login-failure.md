@@ -25,4 +25,4 @@ As a connected user performs actions, the VMM service runs **EXECUTE AS** statem
 
 You can't work around this limitation by explicitly granting the IMPERSONATE permission to a non-dbo service account because you can grant IMPERSONATE only on an existing principal. Because the VMM service dynamically adds and removes database users, you can't grant IMPERSONATE permissions on them ahead of time. The user must exist at the time you grant permissions.
 
-The SQL Server language reference specifically documents the requirement that a principal must exist when the IMPERSONATE permission is granted to the principal. For more information, see [Specifying a User or Login Name](/sql/t-sql/statements/execute-as-transact-sql?view=sql-server-ver15#_user).
+The SQL Server language reference specifically documents the requirement that a principal must exist when the IMPERSONATE permission is granted to the principal. For more information, see [Specifying a User or Login Name](/sql/t-sql/statements/execute-as-transact-sql#_user).

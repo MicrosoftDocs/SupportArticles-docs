@@ -45,4 +45,4 @@ This hotfix doesn't replace other hotfixes.
 
 ## References
 
-For more information about the **/WHOLEARCHIVE** switch, see [/WHOLEARCHIVE (Include All Library Object Files)](/cpp/build/reference/wholearchive-include-all-library-object-files?&view=vs-2019).
+For more information about the **/WHOLEARCHIVE** switch, see [/WHOLEARCHIVE (Include All Library Object Files)](/cpp/build/reference/wholearchive-include-all-library-object-files?&view=vs-2019&preserve-view=true).

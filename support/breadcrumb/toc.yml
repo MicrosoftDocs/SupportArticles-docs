@@ -7,6 +7,23 @@
     tocHref: /troubleshoot/
     topicHref: /troubleshoot/index
     items:
+    
+    - name: Windows
+      tocHref: /troubleshoot/windows/
+      topicHref: /troubleshoot/windows/
+      items:
+      - name: Windows Server
+        tocHref: /troubleshoot/windows-server/
+        topicHref: /troubleshoot/windows-server/welcome-windows-server
+      - name: Windows Client
+        tocHref: /troubleshoot/windows-client/
+        topicHref: /troubleshoot/windows-client/welcome-windows-client
+      - name: Application Developer
+        tocHref: /troubleshoot/windows/win32
+        topicHref: /troubleshoot/windows/win32/welcome-windowsdeveloper    
+      - name: Hardware Developer
+        tocHref: /troubleshoot/windows-hardware/drivers
+        topicHref: /troubleshoot/windows-hardware/drivers/welcome-windowshardware
 
     - name: Browsers
       tocHref: /troubleshoot/browsers/
@@ -32,10 +49,6 @@
       tocHref: /troubleshoot/webapps/
       topicHref: /troubleshoot/webapps/welcome-webapps
 
-    - name: Windows Developer
-      tocHref: /troubleshoot/windows/win32
-      topicHref: /troubleshoot/windows/win32/welcome-windowsdeveloper
-
     - name: Microsoft Identity Manager
       tocHref: /troubleshoot/microsoft-identity-manager/
       topicHref: /troubleshoot/microsoft-identity-manager/welcome-identity-manager
@@ -58,6 +71,9 @@
       - name: Data Protection Manager
         tocHref: /troubleshoot/system-center/dpm/
         topicHref: /troubleshoot/system-center/dpm/welcome-dpm
+      - name: Operations Manager
+        tocHref: /troubleshoot/system-center/scom/
+        topicHref: /troubleshoot/system-center/scom/welcome-scom
       - name: Orchestrator
         tocHref: /troubleshoot/system-center/orchestrator/
         topicHref: /troubleshoot/system-center/orchestrator/welcome-orchestrator
@@ -75,3 +91,11 @@
       - name: Active Directory
         tocHref: /troubleshoot/azure/active-directory/
         topicHref: /troubleshoot/azure/active-directory/welcome-azure-ad
+
+    - name: Previous versions
+      tocHref: /troubleshoot/previous-versions/
+      topicHref: /troubleshoot/previous-versions/
+      items:
+      - name: Configuration Manager
+        tocHref: /troubleshoot/previous-versions/configmgr
+        topicHref: /troubleshoot/previous-versions/configmgr/backups-fail-with-vss-provider-issue

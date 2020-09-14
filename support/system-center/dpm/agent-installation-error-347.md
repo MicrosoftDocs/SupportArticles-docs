@@ -35,11 +35,11 @@ This issue typically occurs because a prerequisite isn't installed. Most frequen
 
 To work around this issue, follow these steps:
 
-1. Upgrade [Windows Management Framework](https://www.microsoft.com/download/details.aspx?id=40855) on the production server to version 4.0.
-2. Make sure all other [prerequisites](/system-center/dpm/prepare-environment-for-dpm?view=sc-dpm-2019#protected-workloads) are installed.
+1. Upgrade [Windows Management Framework](https://docs.microsoft.com/powershell/scripting/windows-powershell/wmf/overview) on the production server to version 4.0.
+2. Make sure all other [prerequisites](/system-center/dpm/prepare-environment-for-dpm#protected-workloads) are installed.
 3. Again try to install the DPM agent.
 
 ## References
 
-- [DPM server](/system-center/dpm/prepare-environment-for-dpm?view=sc-dpm-2019#dpm-server)
+- [DPM server](/system-center/dpm/prepare-environment-for-dpm#dpm-server)
 - [System Center DPM Release Notes](/system-center/dpm/dpm-release-notes)

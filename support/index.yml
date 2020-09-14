@@ -1,5 +1,5 @@
 ### YamlMime:Hub
-title: Microsoft commercial troubleshooting
+title: Microsoft troubleshooting documentation
 
 summary: Find the documentation you need to troubleshoot issues and apply workarounds for the following commercial products from Microsoft.
 
@@ -8,7 +8,7 @@ brand: sql-server
 
 
 metadata:
-   title: Microsoft commercial troubleshooting | Microsoft Docs
+   title: Microsoft troubleshooting documentation | Microsoft Docs
    description: Find the documentation you need to troubleshoot issues and apply workarounds for the following commercial products from Microsoft.
    ms.topic: hub-page
 
@@ -20,56 +20,56 @@ metadata:
 
 productDirectory:
   items:
+  - title: Windows
+    imageSrc: "media/hub-landing/windows.svg"
+    summary: Troubleshooting articles for Windows
+    url: windows/index.yml
+
   - title: Microsoft Edge and Internet Explorer
     imageSrc: "media/hub-landing/Edge.jpg"
-    links:
-    - url: browsers/welcome-browsers.md
-      text: Troubleshooting articles for Microsoft Edge and Internet Explorer
+    summary: Troubleshooting articles for Microsoft Edge and Internet Explorer
+    url: browsers/welcome-browsers.md
+      
   - title: BizTalk Server
     imageSrc: "media/hub-landing/biztalk.svg"
-    links:
-    - url: biztalk/welcome-biztalk-server.md
-      text: Troubleshooting articles for BizTalk Server
+    summary: Troubleshooting articles for BizTalk Server
+    url: biztalk/welcome-biztalk-server.md
+      
   - title: .NET
     imageSrc: "media/hub-landing/logo_NET.svg"
-    links:
-    - url: dotnet/welcome-dotnet.md
-      text: Troubleshooting articles for .NET
+    summary: Troubleshooting articles for .NET
+    url: dotnet/welcome-dotnet.md
+      
   - title: Visual Studio
     imageSrc: "media/hub-landing/logo_vs-ide.svg"
-    links:
-    - url: visualstudio/welcome-visual-studio.md
-      text: Troubleshooting articles for Visual Studio
+    summary: Troubleshooting articles for Visual Studio
+    url: visualstudio/welcome-visual-studio.md
+      
   - title: Host Integration Server
     imageSrc: "media/hub-landing/his.jpeg"
-    links:
-    - url: host-integration-server/welcome-host-integration-server.md
-      text: Troubleshooting articles for Host Integration Server
+    summary: Troubleshooting articles for Host Integration Server
+    url: host-integration-server/welcome-host-integration-server.md
+      
   - title: Web Apps
     imageSrc: "media/hub-landing/app-service-web.svg"
-    links:
-    - url: webapps/welcome-webapps.md
-      text: Troubleshooting articles for Web Apps
-  - title: Windows Developer
-    imageSrc: "media/hub-landing/logo_windows.svg"
-    links:
-    - url: windows/win32/welcome-windowsdeveloper.md
-      text: Troubleshooting articles for Windows Developer
+    summary: Troubleshooting articles for Web Apps
+    url: webapps/welcome-webapps.md
+      
   - title: Microsoft Endpoint Manager
     imageSrc: "media/hub-landing/MEM.jpg"
-    links:
-    - url: mem/index.yml
-      text: Troubleshooting articles for Microsoft Endpoint Manager
+    summary: Troubleshooting articles for Microsoft Endpoint Manager
+    url: mem/index.yml
+
   - title: System Center
     imageSrc: "media/hub-landing/logo-systemcenter.png"
-    links:
-    - url: system-center/index.yml
-      text: Troubleshooting articles for System Center
+    summary: Troubleshooting articles for System Center
+    url: system-center/index.yml
+
   - title: Azure
     imageSrc: "https://static.docs.com/ui/media/product/azure/azure.svg"
-    links:
-    - url: azure/index.yml
-      text: Troubleshooting articles for Azure 
+    summary: Troubleshooting articles for Azure 
+    url: azure/index.yml
+      
 # conceptualContent:
 
 

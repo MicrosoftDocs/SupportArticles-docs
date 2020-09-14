@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4043302
 
 ## System Center 2016 Service Manager
 
-[System Center 2016 Service Manager build versions](/system-center/scsm/release-build-versions?view=sc-sm-2016)
+[System Center 2016 Service Manager build versions](/system-center/scsm/release-build-versions)
 
 For in-place upgrade to self-service portal in System Center 2016 Service Manager, download the [Service Manager 2016 Self-Service Portal upgrade fix](https://www.microsoft.com/download/details.aspx?id=54060).
 

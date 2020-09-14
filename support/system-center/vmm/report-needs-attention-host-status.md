@@ -16,14 +16,14 @@ _Original KB number:_ &nbsp; 2938227
 
 After you rebuild WMI repository for a host that is running Windows Server 2012 or Windows Server 2012 R2, Microsoft System Center 2012 Virtual Machine Manager may report a **Needs Attention** status for the host. Also, host update jobs finish with error 2915 and with the hexadecimal code 0x80338000 while they're trying to connect to the following WMI resource:
 
-[http://schemas.microsoft.com/webm/wsman/1/wmi/root/standartcimv2/MSFT_NetAdapter](https://schemas.microsoft.com/webm/wsman/1/wmi/root/standartcimv2/MSFT_NetAdapter)
+`https://schemas.microsoft.com/webm/wsman/1/wmi/root/standartcimv2/MSFT_NetAdapter`
 
 An error similar to the following example will be displayed in the VMM Admin console:
 
 > Error (2915)  
 > The Windows Remote Management (WS-Management) service cannot process the request. The object was not found on the server (host.contoso.com).
 >
-> WinRM: URL: [[http://host.contoso.com:5985](https://host.contoso.com:5985)], Verb: [GET], Resource: [[http://schemas.microsoft.com/wbem/wsman/1/wmi/root/virtualization/v2/Msvm_VirtualSystemSettingData?InstanceID=Microsoft:73F1C285-7765-48F9-9472-9984B3B60336](https://schemas.microsoft.com/wbem/wsman/1/wmi/root/virtualization/v2/Msvm_VirtualSystemSettingData?InstanceID=Microsoft:73F1C285-7765-48F9-9472-9984B3B60336)]
+> WinRM: URL: `https://host.contoso.com:5985`, Verb: [GET], Resource: [`https://schemas.microsoft.com/wbem/wsman/1/wmi/root/virtualization/v2/Msvm_VirtualSystemSettingData?InstanceID=Microsoft:73F1C285-7765-48F9-9472-9984B3B60336`]
 >
 > Unknown error (0x80338000)
 >

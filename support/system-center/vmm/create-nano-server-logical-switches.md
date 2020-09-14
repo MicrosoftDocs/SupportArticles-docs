@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 4464073
 Nano Server is optimized as a lightweight operating system for running cloud-native applications based on containers and micro-services or as an agile and cost-effective datacenter host with a dramatically smaller footprint, there are important differences in Nano Server versus Server Core or Server with Desktop Experience installations.
 
 > [!NOTE]
-> This blog is to address the **Uplink mode** and **Teaming mode** for Nano Server. Rest of the logical switch concept remains same. For more information on logical switch creation, go through [Create logical switches](/system-center/vmm/network-switch?redirectedfrom=MSDN&view=sc-vmm-2019).
+> This blog is to address the **Uplink mode** and **Teaming mode** for Nano Server. Rest of the logical switch concept remains same. For more information on logical switch creation, go through [Create logical switches](/system-center/vmm/network-switch).
 
 On Nano Server, NIC teaming (specifically, load balancing and failover, or LBFO) is not supported. Switch-embedded teaming (SET) is supported instead.
 
@@ -50,7 +50,7 @@ If we select other **Teaming mode** as show below e.g. LACP, we will get an erro
 
 > Error (2912)  
 > An internal error has occurred trying to contact the 'nano.hoster.lab' server: : .  
-> WinRM: URL: [http://nano.hoster.lab:5985](http://nano.hoster.lab:5985/), Verb: [INVOKE], Method: [GetFinalResult], Resource: [https://schemas.microsoft.com/wbem/wsman/1/wmi/root/scvmm/AsyncTask?ID=1004](https://schemas.microsoft.com/wbem/wsman/1/wmi/root/scvmm/AsyncTask?ID=1004)  
+> WinRM: URL: `http://nano.hoster.lab:5985/`, Verb: [INVOKE], Method: [GetFinalResult], Resource: `https://schemas.microsoft.com/wbem/wsman/1/wmi/root/scvmm/AsyncTask?ID=1004`
 > Unknown error (0x80078005)
 >
 > Recommended Action  

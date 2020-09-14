@@ -190,6 +190,6 @@ Key: Key2 Value:2
 
 ## References
 
-- [ConfigurationSettings.AppSettings Property](/dotnet/api/system.configuration.configurationsettings.appsettings?&view=dotnet-plat-ext-3.1)
+- [ConfigurationSettings.AppSettings Property](/dotnet/api/system.configuration.configurationsettings.appsettings?&view=dotnet-plat-ext-3.1&preserve-view=true)
 
-- [System.Configuration Namespace](/dotnet/api/system.configuration?&view=dotnet-plat-ext-3.1)
+- [System.Configuration Namespace](/dotnet/api/system.configuration?&view=dotnet-plat-ext-3.1&preserve-view=true)

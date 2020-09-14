@@ -1,6 +1,7 @@
 ---
 title: Azure DevOps troubleshooting documentation
 description: This article lists Knowledge Base (KB) and other Support articles for Azure DevOps.
+ms.prod: devops
 ms.topic: article
 ms.date: 07/15/2020
 ---
