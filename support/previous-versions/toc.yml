@@ -1,0 +1,18 @@
+- name: Welcome
+  href: welcome-previous-versions.md
+
+- name: Configuration Manager
+  href: ./configmgr/toc.yml
+
+- name: .NET Framework
+  href: ./dotnet/framework/toc.yml
+
+- name: Microsoft Message Queuing
+  href: ./msmq/toc.yml
+
+- name: Visual FoxPro
+  href: ./visualstudio/foxpro/toc.yml
+
+- name: Visual Studio
+  href: ./visualstudio/toc.yml
+
