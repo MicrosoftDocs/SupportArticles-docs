@@ -214,7 +214,7 @@ The output and progress indicators are displayed while the script is running. No
 ![Windows PowerShell output and progress indicator.](./media/wsus-maintenance-guide/output.jpg)
 
 > [!NOTE]
-> If issues occur when attempting to use the above PowerShell script to decline superseded updates, see the section [Running the Decline-SupersededUpdatesWithExclusionPeriod.ps1 script times out when connecting to the WSUS server, or a 401 error occurs while running](###running-the-decline-supersededupdateswithexclusionperiodps1-script-times-out-when-connecting-to-the-wsus-server-or-a-401-error-occurs-while-running) for troubleshooting steps.
+> If issues occur when attempting to use the above PowerShell script to decline superseded updates, see the section [Running the Decline-SupersededUpdatesWithExclusionPeriod.ps1 script times out when connecting to the WSUS server, or a 401 error occurs while running](#running-the-decline-supersededupdateswithexclusionperiodps1-script-times-out-when-connecting-to-the-wsus-server-or-a-401-error-occurs-while-running) for troubleshooting steps.
 
 After superseded updates have been declined, for best performance, SUSDB should be reindexed again. For related information, see [Reindex the WSUS database](#reindex-the-wsus-database).
 
@@ -240,7 +240,7 @@ If you've never cleaned up obsolete updates from WSUS database before, this task
 
 For standalone WSUS servers, or if you are using an older version of Configuration Manager, it is recommended that you run the WSUS Cleanup wizard periodically. If the WSUS Server Cleanup Wizard has never been run and the WSUS has been in production for a while, the cleanup may time out. In that case, reindex with [step 2](#create-custom-indexes) and [step 3](#reindex-the-wsus-database) first, then run the cleanup with only the **Unused updates and update revisions** option checked.
 
-If you have never run WSUS Cleanup wizard, running the cleanup with **Unused updates and update revisions** may require a few passes. If it times out, run it again until it completes, and then run each of the other options one at a time. Lastly make a full pass with all options checked. If timeouts continue to occur, see the SQL Server alternative in [HELP! My WSUS has been running for years without ever having maintenance done and the cleanup wizard keeps timing out](##help-my-wsus-has-been-running-for-years-without-ever-having-maintenance-done-and-the-cleanup-wizard-keeps-timing-out). It may take multiple hours or days for the Server Cleanup Wizard or SQL alternative to run through completion.
+If you have never run WSUS Cleanup wizard, running the cleanup with **Unused updates and update revisions** may require a few passes. If it times out, run it again until it completes, and then run each of the other options one at a time. Lastly make a full pass with all options checked. If timeouts continue to occur, see the SQL Server alternative in [HELP! My WSUS has been running for years without ever having maintenance done and the cleanup wizard keeps timing out](#help-my-wsus-has-been-running-for-years-without-ever-having-maintenance-done-and-the-cleanup-wizard-keeps-timing-out). It may take multiple hours or days for the Server Cleanup Wizard or SQL alternative to run through completion.
 
 The WSUS Server Cleanup Wizard runs from the WSUS console. It is located under **Options**, as shown here:
 
