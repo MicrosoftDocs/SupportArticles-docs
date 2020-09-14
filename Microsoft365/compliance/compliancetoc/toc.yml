@@ -71,6 +71,8 @@
       href: ../holds/change-to-search-logic-for-title-property.md
   - name: MRM & Retention Policies
     items:
+    - name: Managed folders disappear
+      href: ../mrm-rentention-policies/managed-folders-disappear.md
     - name: MRM and retention policies
       href: ../mrm-rentention-policies/mrm-and-retention-policy.md
   - name: Office Message Encryption (OME)
