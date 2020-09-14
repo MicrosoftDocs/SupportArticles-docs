@@ -31,6 +31,8 @@
       href: ../administration/outlook-unable-download-offline-address-book.md
     - name: Can't export to PST with EAC
       href: ../administration/cannot-use-eac-export-pst-file.md
+    - name: Can't install add-ins in Microsoft Store
+      href: ../administration/unable-install-add-ins-microsoft-store.md
     - name: Can't look up free/busy information
       href: ../administration/cross-forest-or-hybrid-free-busy-lookups-fail.md
     - name: Can't manage Exchange 2019 databases in EAC
@@ -143,6 +145,8 @@
       href: ../administration/ews-app-pool-crashes.md
     - name: EWS notifications return UnreadCount of -1
       href: ../administration/ews-notification-return-wrong-value-for-unreadcount.md
+    - name: Exchange CU installation fails
+      href: ../administration/cannot-install-exchange-cu-localized-windows.md
     - name: Exchange Server 2010 datacenter switchover
       href: ../administration/exchange-server-2010-datacenter-switchover.md
     - name: Exchange transaction logs growing rapidly
