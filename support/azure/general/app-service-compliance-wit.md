@@ -8,7 +8,7 @@ ms.date: 08/14/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
 ---
-# Microsoft Web App Azure App Service Compliance with PCI Standards 3.0 and 3.1
+# Azure App Service Compliance with PCI Standards 3.0 and 3.1
 
 _Original product version:_ &nbsp; Web App (Windows)  
 _Original KB number:_ &nbsp; 3124528

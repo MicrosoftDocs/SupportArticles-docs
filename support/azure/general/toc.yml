@@ -1,27 +1,58 @@
  - name: Cloud Platform System
   items:
-  - name: Update 1610 for Cloud Platform System
+  - name: Update 1610 for Cloud Platform System Premium
     href: update-1610-cps-premium.md
-  - name: Update 1603 for Cloud Platform System
+  - name: Update 1603 for Cloud Platform System Premium
     href: update-1603-for-cloud-platform-system-premium.md
-  - name: Update 1602 for Cloud Platform System
+  - name: Update 1603 for Cloud Platform System Standard
+    href: update-1603-cps-standard.md
+  - name: Update 1602 for Cloud Platform System Premium
     href: update-1602-for-cloud-platform-system-premium.md
-  - name: Update 2.3 for Cloud Platform System
+  - name: Update 2.3 for Cloud Platform System Premium
     href: update-2.3-for-cloud-platform-system-premium.md
   - name: Update 2 for Cloud Platform System
     href: cloud-platform-system-1.0-update-2.md
-  - name: Update 2.1 for Cloud Platform System
+  - name: Update 2.1 for Cloud Platform System Premium
     href: update-2.1-for-cloud-platform-system-premium.md
+  - name: Apply out-of-band updates
+    href: apply-out-of-band-updates-to-cps.md
   - name: Enable BitLocker in Cloud Platform System
     href: how-to-enable-bitlocker-in-cloud-platform-system.md
   - name: Renew Windows Azure Pack authentication sites certificates
     href: how-to-renew-windows-azure-pack-authentication-sit.md
-- name: Can't RDP to classic Cloud Services resource
-  href: rdp-not-working-cloud-service.md
-
-- name: Reference
+  - name: Firmware version matrix for Cloud Platform System Premium
+    href: firmware-version-matrix.md
+- name: Unsupported Features and Platforms in Recovery Services Scout 8.0.1
+  href: unsupported-features-and-platforms-post-upgrade.md
+- name: Embedded application error when install Azure backup agent
+  href: unable-to-execute-the-embedded-application-error-backup-agent.md
+- name: WebUI "Oops" error message in StorSimple
+  href: storsimple-user-receives-web-ui-error.md
+- name: App Service Compliance with PCI Standards 3.0 and 3.1
+  href: app-service-compliance-wit.md
+- name: Data restore scenarios for Azure Storage service
+  href: data-restore-storage.md
+- name: Method invocation failed in Azure PowerShell
+  href: method-invocation-failed-error-azure-powershell.md
+- name: Automation modifications aren't reflected in the portal
+  href: modifications-not-reflect-portal.md
+- name: Automation modifications aren't reflected in the portal
+  href: modifications-not-reflect-portal.md
+- name: Automation modifications aren't reflected in the portal
+  href: modifications-not-reflect-portal.md
+- name: Automation modifications aren't reflected in the portal
+  href: modifications-not-reflect-portal.md
+- name: Automation modifications aren't reflected in the portal
+  href: modifications-not-reflect-portal.md
+- name:  Support Diagnostic Packages
   items:
-  - name: Install .NET Core with Azure Batch start task
-    href: install-dotnet-core-linux.md
-  - name: Support for Linux and open-source technology in Azure
-    href: support-linux-open-source-technology.md
+  - name: Recovery Services troubleshooter
+    href: sdp-321382d70-df1d-4c0c-bdc6-9ba62752e851-asr.md
+  - name: Azure VM troubleshooter
+    href: sdp329e28228-4a40-4205-bc9b-9886e51ba77d-windows-vm.md
+  - name: Logs collected by Azure VM troubleshooter
+    href: sdp329e28228-4a40-4205-bc9b-9886e51ba77d-windows-vm.md
+  - name: Virtual Network troubleshooter
+    href: sdp3fdcb6045-5616-45b4-bb68-0bd11081c184-vnet.md
+  - name: Azure Service Fabric troubleshooter
+    href: fabric-logs.md
