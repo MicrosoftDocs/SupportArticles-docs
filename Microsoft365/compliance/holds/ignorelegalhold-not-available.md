@@ -6,7 +6,7 @@ ms.author: lindabr
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
-ms.service: Office 365
+ms.prod: office 365
 localization_priority: Normal
 ms.custom: 
 - CI 121741

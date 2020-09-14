@@ -6,7 +6,7 @@ ms.author: Richard.Roddy
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
-ms.service: office 365
+ms.prod: office 365
 localization_priority: Normal
 ms.custom: 
 - CI 120630
