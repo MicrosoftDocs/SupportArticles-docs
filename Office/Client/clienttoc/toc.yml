@@ -1007,6 +1007,8 @@
       href: ../word/damaged-documents-in-word.md
     - name: Image DPI is changed after you print to PDF
       href: ../word/image-dpi-change-after-print-to-pdf.md
+    - name: In-place edit of an embedded Word document with ActiveX control causes flickering
+      href: ../word/embedded-doc-with-activex-control-flickers.md
     - name: Issues when start or use Word
       href: ../word/issues-when-start-or-use-word.md
     - name: Mail merge issue
