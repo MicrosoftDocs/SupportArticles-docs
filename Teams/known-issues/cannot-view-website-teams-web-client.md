@@ -7,6 +7,7 @@ manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
 ms.prod: microsoft-teams
+ms.technology: microsoft-graph
 localization_priority: Normal
 ms.custom: 
 - CI 122983
