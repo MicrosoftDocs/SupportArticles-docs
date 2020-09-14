@@ -6,7 +6,6 @@ ms.author: genli
 ms.service: csp
 ms.date: 08/14/2020
 ms.prod-support-area-path: 
-ms.technology: 
 ms.reviewer: justini, paulcha, chengwei, jarrettr, twooley
 ---
 # Apply out-of-band updates to the Microsoft Cloud Platform System Standard platform

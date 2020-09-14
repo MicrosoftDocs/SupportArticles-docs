@@ -6,7 +6,6 @@ ms.author: genli
 ms.service: storage
 ms.date: 08/14/2020
 ms.prod-support-area-path: 
-ms.technology: 
 ms.reviewer: shamv
 ---
 # "Unable to execute the embedded application" error when you try to install the Microsoft Azure backup agent

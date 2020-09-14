@@ -6,7 +6,6 @@ author: genlin
 ms.author: genli
 ms.service: azure-pack
 ms.prod-support-area-path: 
-ms.technology: [Replace with your value]
 ms.reviewer: 
 ---
 # How to renew Windows Azure Pack authentication sites certificates

@@ -6,7 +6,6 @@ ms.author: genli
 ms.service: azure-powershell
 ms.date: 08/14/2020
 ms.prod-support-area-path: 
-ms.technology:
 ms.reviewer: 
 ---
 # "Method invocation failed" error when you run Azure PowerShell cmdlets

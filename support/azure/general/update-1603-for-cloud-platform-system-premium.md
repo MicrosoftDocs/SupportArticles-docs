@@ -6,7 +6,6 @@ ms.author: genli
 ms.service: csp
 ms.date: 08/14/2020
 ms.prod-support-area-path: 
-ms.technology: [Replace with your value]
 ms.reviewer: 
 ---
 # Update 1603 for Cloud Platform System Premium

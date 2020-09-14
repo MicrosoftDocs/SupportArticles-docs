@@ -6,7 +6,6 @@ ms.author: genli
 ms.service: csp
 ms.date: 08/14/2020
 ms.prod-support-area-path: 
-ms.technology: 
 ms.reviewer: 
 ---
 # Update 2.3 for Cloud Platform System Premium

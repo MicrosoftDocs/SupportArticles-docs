@@ -6,7 +6,6 @@ ms.author: genli
 ms.service: cps
 ms.date: 08/14/2020
 ms.prod-support-area-path: 
-ms.technology: [Replace with your value]
 ms.reviewer: 
 ---
 # Cloud Platform System 1.0 Update 2

@@ -6,7 +6,6 @@ author: genlin
 ms.author: genli
 ms.service: storsimple
 ms.prod-support-area-path: 
-ms.technology: 
 ms.reviewer: 
 ---
 # StorSimple: User receives WebUI "Oops" error message

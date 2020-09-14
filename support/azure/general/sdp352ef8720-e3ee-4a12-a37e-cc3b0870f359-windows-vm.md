@@ -6,7 +6,6 @@ ms.author: genli
 ms.service: virtual-machines-windows
 ms.date: 08/14/2020
 ms.prod-support-area-path: 
-ms.technology:
 ms.reviewer: 
 ---
 # &#91;SDP3&#93; &#91;52ef8720-e3ee-4a12-a37e-cc3b0870f359] Microsoft Azure VM Logs

@@ -6,7 +6,6 @@ ms.author: genli
 ms.service: site-recovery
 ms.date: 08/14/2020
 ms.prod-support-area-path: 
-ms.technology:
 ms.reviewer: mabisth
 ---
 # Unsupported Features and Platforms post upgrade to Azure Recovery Services Scout 8.0.1

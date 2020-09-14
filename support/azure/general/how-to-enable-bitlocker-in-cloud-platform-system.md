@@ -6,7 +6,6 @@ ms.author: genli
 ms.service: cps
 ms.date: 08/14/2020
 ms.prod-support-area-path: 
-ms.technology: [Replace with your value]
 ms.reviewer: fiseraci
 ---
 # How to enable BitLocker in Cloud Platform System (CPS)

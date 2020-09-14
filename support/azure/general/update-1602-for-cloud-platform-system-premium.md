@@ -6,7 +6,6 @@ ms.author: genli
 ms.service: csp
 ms.date: 08/14/2020
 ms.prod-support-area-path: 
-ms.technology:
 ms.reviewer: justini, delhan
 ---
 # Update 1602 for Cloud Platform System Premium
