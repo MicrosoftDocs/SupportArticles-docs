@@ -11,9 +11,9 @@ ms.prod-support-area-path:
 
 In some circumstances, you may have to reinstall the Intune Certificate Connector. For example:
 
-- The connector displays an **Error** status in Intune
-- The connector certificate is expired
-- The connector version has to be updated
+- The connector displays an **Error** status in Intune.
+- The connector certificate is expired.
+- The connector version has to be updated.
 
 This article describes how to uninstall and reinstall the connector when the **SCEP and PFX Profile Distribution** option is selected during connector setup. If the **PFX Distribution** option is selected during setup, uninstall the connector, then follow the steps in [Download, install, and configure the PFX Certificate Connector for Microsoft Intune](/mem/intune/protect/certficates-pfx-configure#download-install-and-configure-the-pfx-certificate-connector) to reinstall it.
 
