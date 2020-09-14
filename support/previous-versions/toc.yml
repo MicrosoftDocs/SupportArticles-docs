@@ -10,6 +10,9 @@
 - name: Microsoft Message Queuing
   href: ./msmq/toc.yml
 
+- name: Visual FoxPro
+  href: ./visualstudio/foxpro/toc.yml
+
 - name: Visual Studio
   href: ./visualstudio/toc.yml
 
