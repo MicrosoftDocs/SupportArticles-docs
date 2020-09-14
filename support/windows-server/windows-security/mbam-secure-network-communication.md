@@ -77,7 +77,7 @@ Note: You'll have to configure SSL for SQL before you run MBAM Setup on your ser
 
 1. Open SQL Reporting Services Configuration Manager on Server where you installed MBAM Audit Reports Role.
 2. Connect to your Server and Click Web Service URL.
-     ![Select Web Service URL](./media/web-service-url.png)
+     ![Select Web Service URL](./media/mbam-secure-network-communication/web-service-url.png)
 
 3. Click Advanced and then select your certificate. See image below:
 

@@ -31,7 +31,7 @@ This article discusses how to upgrade Microsoft Windows 2000 domain controllers 
 Before you upgrade Windows 2000 domain controllers to Windows Server 2003 or before you add new Windows Server 2003 domain controllers to a Windows 2000 domain, follow these steps:
 1. Inventory the clients that access resources in the domain that host Windows Server 2003 domain controllers for compatibility with SMB signing:
 
-    Each Windows Server 2003 domain controller enables SMB signing in its local security policy. Make sure that all network clients that use the SMB/CIFS protocol to access shared files and printers in domains that host Windows Server 2003 domain controllers can be configured or upgraded to support SMB signing. If they can't, temporarily disable SMB signing until updates can be installed or until the clients can be upgraded to newer operating systems that support SMB signing. For information about how to disable SMB signing, see the "[To disable SMB signing](#To-disable-SMB-signing)" section at the end of this step.
+    Each Windows Server 2003 domain controller enables SMB signing in its local security policy. Make sure that all network clients that use the SMB/CIFS protocol to access shared files and printers in domains that host Windows Server 2003 domain controllers can be configured or upgraded to support SMB signing. If they can't, temporarily disable SMB signing until updates can be installed or until the clients can be upgraded to newer operating systems that support SMB signing. For information about how to disable SMB signing, see the "[To disable SMB signing](#to-disable-smb-signing)" section at the end of this step.
     
     Action plans 
     
@@ -41,31 +41,31 @@ Before you upgrade Windows 2000 domain controllers to Windows Server 2003 or bef
     No action is required.
        - Microsoft Windows NT 4.0 
     
-    Install Service Pack 3 or later (Service Pack 6A is recommended) on all Windows NT 4.0-based computers that access domains that contain Windows Server 2003-based computers. Instead, temporarily disable SMB signing on Windows Server 2003 domain controllers. For information about how to disable SMB signing, see the "[To disable SMB signing](#To-disable-SMB-signing)" section at the end of this step.
+    Install Service Pack 3 or later (Service Pack 6A is recommended) on all Windows NT 4.0-based computers that access domains that contain Windows Server 2003-based computers. Instead, temporarily disable SMB signing on Windows Server 2003 domain controllers. For information about how to disable SMB signing, see the "[To disable SMB signing](#to-disable-smb-signing)" section at the end of this step.
     
     - Microsoft Windows 95 
     
-    Install the Windows 9 *x* directory service client on the Windows 95-based computers or temporarily disable SMB signing on Windows Server 2003 domain controllers. The original Win9 *x* directory service client is available on the Windows 2000 Server CD-ROM. However, that client add-on has been replaced by an improved Win9 *x* directory service client. For information about how to disable SMB signing, see the "[To disable SMB signing](#To-disable-SMB-signing)" section at the end of this step.
+    Install the Windows 9 *x* directory service client on the Windows 95-based computers or temporarily disable SMB signing on Windows Server 2003 domain controllers. The original Win9 *x* directory service client is available on the Windows 2000 Server CD-ROM. However, that client add-on has been replaced by an improved Win9 *x* directory service client. For information about how to disable SMB signing, see the "[To disable SMB signing](#to-disable-smb-signing)" section at the end of this step.
        - Microsoft Network Client for MS-DOS and Microsoft LAN Manager clients 
     
-    The Microsoft Network Client for MS-DOS and the Microsoft LAN Manager 2.x network client may be used to provide access to network resources, or they may be combined with a bootable floppy disk to copy operating system files and other files from a shared directory on a file server as part of a software installation routine. These clients don't support SMB signing. Use an alternative installation method, or disable SMB signing. For information about how to disable SMB signing, see the "[To disable SMB signing](#To-disable-SMB-signing)" section at the end of this step.
+    The Microsoft Network Client for MS-DOS and the Microsoft LAN Manager 2.x network client may be used to provide access to network resources, or they may be combined with a bootable floppy disk to copy operating system files and other files from a shared directory on a file server as part of a software installation routine. These clients don't support SMB signing. Use an alternative installation method, or disable SMB signing. For information about how to disable SMB signing, see the "[To disable SMB signing](#to-disable-smb-signing)" section at the end of this step.
        - Macintosh clients 
     
     Some Macintosh clients aren't SMB signing compatible and will receive the following error message when they try to connect to a network resource:- Error -36 I/O
-    Install updated software if it's available. Otherwise, disable SMB signing on Windows Server 2003 domain controllers. For information about how to disable SMB signing, see the "[To disable SMB signing](#To-disable-SMB-signing)" section at the end of this step.
+    Install updated software if it's available. Otherwise, disable SMB signing on Windows Server 2003 domain controllers. For information about how to disable SMB signing, see the "[To disable SMB signing](#to-disable-smb-signing)" section at the end of this step.
        - Other third-party SMB clients 
     
     Some third-party SMB clients don't support SMB signing. Consult your SMB provider to see if an updated version exists. Otherwise, disable SMB signing on Windows Server 2003 domain controllers. 
 
-### To disable SMB signing 
-    
-    If software updates can't be installed on affected domain controllers that are running Windows 95, Windows NT 4.0, or other clients that were installed before the introduction of Windows Server 2003, temporarily disable the SMB service signing requirements in Group Policy until you can deploy updated client software.
-    
-    You can disable SMB service signing in the following node of Default Domain Controllers policy on the domain controllers organizational unit: Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options\Microsoft Network Server: 
+### To disable SMB signing
 
-    Digitally sign communications (always)
+If software updates can't be installed on affected domain controllers that are running Windows 95, Windows NT 4.0, or other clients that were installed before the introduction of Windows Server 2003, temporarily disable the SMB service signing requirements in Group Policy until you can deploy updated client software.
 
-    If domain controllers aren't located in the domain controller's organizational unit, you must link the default domain controller's Group Policy object (GPO) to all organizational units that host Windows 2000 or Windows Server 2003 domain controllers. Or, you can configure SMB service signing in a GPO that is linked to those organizational units.
+You can disable SMB service signing in the following node of Default Domain Controllers policy on the domain controllers organizational unit: Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options\Microsoft Network Server:
+
+Digitally sign communications (always)
+
+If domain controllers aren't located in the domain controller's organizational unit, you must link the default domain controller's Group Policy object (GPO) to all organizational units that host Windows 2000 or Windows Server 2003 domain controllers. Or, you can configure SMB service signing in a GPO that is linked to those organizational units.
 
 2. Inventory the domain controllers that are in the domain and in the forest:
       1. Make sure that all the Windows 2000 domain controllers in the forest have installed all the appropriate hotfixes and service packs.
@@ -166,7 +166,7 @@ Before you upgrade Windows 2000 domain controllers to Windows Server 2003 or bef
 Notes 
 
 - If Exchange 2000 Server is installed, or will be installed, in a Windows 2000 forest, read this section before you run the Windows Server 2003 adprep /forestprep command.
-- If Microsoft Exchange Server 2003 schema changes will be installed, go to the "[Overview: Upgrading Windows 2000 domain controllers to Windows Server 2003](#Overview-Upgrading-Windows-2000-domain-controllers-to-Windows-Server-2003)" section before you run the Windows Server 2003 adprep commands.
+- If Microsoft Exchange Server 2003 schema changes will be installed, go to the "[Overview: Upgrading Windows 2000 domain controllers to Windows Server 2003](#overview-upgrading-windows-2000-domain-controllers-to-windows-server-2003)" section before you run the Windows Server 2003 adprep commands.
 
 The Exchange 2000 schema defines three inetOrgPerson attributes with non-Request for Comment (RFC)-compliant LDAPDisplayNames: houseIdentifier, secretary, and labeledURI.
 
@@ -188,7 +188,7 @@ Mangled attributes will occur in Windows 2000 in the following cases:
 
 ### Scenario 1: Exchange 2000 schema changes are added after you run the Windows Server 2003 adprep /forestprep command
 
-If Exchange 2000 schema changes will be introduced to your Windows 2000 forest after the Windows Server 2003 adprep /forestprep command is run, no cleanup is required. Go to the "[Overview: Upgrading Windows 2000 domain controllers to Windows Server 2003](#Overview-Upgrading-Windows-2000-domain-controllers-to-Windows-Server-2003)" section.
+If Exchange 2000 schema changes will be introduced to your Windows 2000 forest after the Windows Server 2003 adprep /forestprep command is run, no cleanup is required. Go to the "[Overview: Upgrading Windows 2000 domain controllers to Windows Server 2003](#overview-upgrading-windows-2000-domain-controllers-to-windows-server-2003)" section.
 
 ### Scenario 2: Exchange 2000 schema changes will be installed before the Windows Server 2003 adprep /forestprep command
 
@@ -251,7 +251,7 @@ If Exchange 2000 schema changes have already been installed but you have NOT run
     [285172](https://support.microsoft.com/help/285172) Schema update require Write access to schema in Active Directory  
     
 7. Verify that the LDAPDisplayNames for the CN=ms-Exch-Assistant-Name, CN=ms-Exch-LabeledURI, and CN=ms-Exch-House-Identifier attributes in the schema naming context now appear as msExchAssistantName, msExchLabeledURI, and msExchHouseIdentifier before you run the Windows Server 2003 adprep /forestprep commands.
-8. Go to the "[Overview: Upgrading Windows 2000 domain controllers to Windows Server 2003](#Overview-Upgrading-Windows-2000-domain-controllers-to-Windows-Server-2003)" section to run the adprep /forestprep and /domainprep commands.
+8. Go to the "[Overview: Upgrading Windows 2000 domain controllers to Windows Server 2003](#overview-upgrading-windows-2000-domain-controllers-to-windows-server-2003)" section to run the adprep /forestprep and /domainprep commands.
 
 ### Scenario 3: The Windows Server 2003 forestprep command was run without first running inetOrgPersonFix
 
@@ -273,7 +273,7 @@ If you run the Windows Server 2003 adprep /forestprep command in a Windows 2000 
     LDAPDisplayName: DUP-secretary-c5a1240d-70c0-455c-9906-a4070602f85f  
     LDAPDisplayName: DUP-houseIdentifier-354b0ca8-9b6c-4722-aae7-e66906cc9eef  
     
-7. If the LDAPDisplayNames for labeledURI, secretary, and houseIdentifier were mangled in step 6, run the Windows Server 2003 InetOrgPersonFix.ldf script to recover, and then go to the "[Upgrading Windows 2000 domain controllers with Winnt32.exe](#Upgrading-Windows-2000-domain-controllers-with-Winnt32.exe)" section.
+7. If the LDAPDisplayNames for labeledURI, secretary, and houseIdentifier were mangled in step 6, run the Windows Server 2003 InetOrgPersonFix.ldf script to recover, and then go to the "Upgrading Windows 2000 domain controllers with Winnt32.exe" section.
       1. Create a folder named %Systemdrive%\IOP, and then extract the InetOrgPersonFix.ldf file to this folder.
       2. At a command prompt, type cd %systemdrive%\iop.
       3. Extract the InetOrgPersonFix.ldf file from the Support.cab file that is located in the Support\Tools folder of the Windows Server 2003 installation media.

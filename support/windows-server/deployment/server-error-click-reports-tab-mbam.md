@@ -1,6 +1,6 @@
 ---
 title: Server Error in Reports Application error when you click Reports tab in MBAM
-description: 
+description: This article fixes an error when you click the Reports tab in MBAM.
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
@@ -15,7 +15,7 @@ ms.technology: Deployment
 ---
 # Error message when you click Reports tab in MBAM: Server Error in /Reports Application
 
-This article
+This article fixes an error when you click the Reports tab in MBAM.
 
 _Original product version:_ &nbsp;Windows Server 2012 R2, Windows 10 – all editions  
 _Original KB number:_ &nbsp;2620287

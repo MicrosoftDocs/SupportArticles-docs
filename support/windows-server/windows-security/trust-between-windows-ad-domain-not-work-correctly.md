@@ -183,12 +183,12 @@ RestrictAnonymous:
 
 |Additional restrictions for anonymous connections<br/>|"None. Rely on default permissions"|
 |---|---|
-|||
+
 LM Compatibility:
 
 |LAN Manager authentication level|"Send NTLM response only"|
 |---|---|
-|||
+
 SMB Signing, SMB Encrypting, or both:
 
 |Digitally sign client communications (always)|DISABLED|
@@ -200,7 +200,7 @@ SMB Signing, SMB Encrypting, or both:
 |Secure channel: Digitally encrypt secure channel data (when it is possible)|DISABLED|
 |Secure channel: Digitally sign secure channel data (when it is possible)|DISABLED|
 |Secure channel: Require strong (Windows 2000 or later) session key|DISABLED|
-|||
+
 
 ##### Windows Server 2003
 
@@ -215,8 +215,8 @@ RestrictAnonymous and RestrictAnonymousSam:
 |Network access: Let Everyone permissions apply to anonymous users|ENABLED|
 |Network access: Named pipes can be accessed anonymously|ENABLED|
 |Network access: Restrict anonymous access to Named Pipes and shares|DISABLED|
-|||
-|||
+
+
 > [!NOTE]
 > By default, the value of the Network access: Allow anonymous SID/Name translation setting is DISABLED in Windows Server 2008. For more information, click the following article number to view the article in the Microsoft Knowledge Base: [942428](https://support.microsoft.com/help/942428) Windows Server 2003 domain controllers let anonymous users resolve a security identifier (SID) to a user name  
 
@@ -224,7 +224,7 @@ LM Compatibility:
 
 |Network security: LAN Manager authentication level|"Send NTLM response only"|
 |---|---|
-|||
+
 SMB Signing, SMB Encrypting, or both:
 
 |Microsoft network client: Digitally sign communications (always)|DISABLED|
@@ -236,7 +236,7 @@ SMB Signing, SMB Encrypting, or both:
 |Domain member: Digitally encrypt secure channel data (when it is possible)|ENABLED|
 |Domain member: Digitally sign secure channel data (when it is possible)|ENABLED|
 |Domain member: Require strong (Windows 2000 or later) session key|DISABLED|
-|||
+
 After the settings are configured correctly, you must restart your computer. The security settings are not enforced until the computer is restarted.
 
 After the computer restarts, wait 10 minutes to make sure that all security policies are applied and the effective settings are configured. We recommend that you wait 10 minutes because Active Directory policy updates occur every 5 minutes on a domain controller, and the update may change the security setting values. After 10 minutes, use Security Configuration and Analysis or another tool to examine the security settings in Windows 2000 and Windows Server 2003.

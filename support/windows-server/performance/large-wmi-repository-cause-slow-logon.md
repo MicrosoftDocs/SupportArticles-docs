@@ -83,7 +83,7 @@ To disable RSoP logging, enable the following Group Policy setting:
 
 | Turn off RSoP logging (Computer Configuration/Administrative Templates/System/Group Policy)| This setting allows you to enable or disable Resultant Set of Policy (RSoP) logging on a client computer. |
 |---|---|
-|||
+
  After you enable this policy, run **gpupdate /force** on the computer, and then restart the computer. Measure the impact on user logon duration. 
  **Note** By disabling RSoP logging, you prevent the RSoP snap-in (rsop.msc) from running on that computer. You can get RSoP modeling information by using the Group Policy Management Console (GPMC), if it is necessary.  
 

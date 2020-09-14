@@ -56,5 +56,5 @@ Another approach avoiding this error is to exclude the suffix of forest2.forest1
 ## More information
 
 References:
-Forest trusts and exclusions: [http://blogs.technet.com/b/askds/archive/2009/04/10/name-suffix-routing.aspx](http://blogs.technet.com/b/askds/archive/2009/04/10/name-suffix-routing.aspx) 
+Forest trusts and exclusions: [https://blogs.technet.com/b/askds/archive/2009/04/10/name-suffix-routing.aspx](https://blogs.technet.com/b/askds/archive/2009/04/10/name-suffix-routing.aspx) 
 UPN Routing with exclusions: [https://technet.microsoft.com/library/dd560680(v=WS.10).aspx](https://technet.microsoft.com/library/dd560680%28v=WS.10%29.aspx)
