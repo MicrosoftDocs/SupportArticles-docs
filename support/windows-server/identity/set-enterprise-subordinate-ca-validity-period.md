@@ -2,7 +2,7 @@
 title: Set different validity period for subordinate CA
 description: Describes how to set an enterprise subordinate certification authority (CA) to have a different certificate validity period than that of the parent CA.
 ms.date: 09/11/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro

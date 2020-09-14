@@ -2,7 +2,7 @@
 title: The default date format is changed
 description: Discusses that the default date format is changed in Windows 8 and Windows Server 2012.
 ms.date: 09/09/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro

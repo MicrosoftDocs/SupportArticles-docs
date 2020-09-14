@@ -149,4 +149,4 @@ To work around this issue, set the value of **Links process batch size** lower t
 For more information, see the following articles:
 
 - [Introduction to credential roaming](https://social.technet.microsoft.com/wiki/contents/articles/11483.credential-roaming.aspx) 
-- [Introduction to Read-Only DCs](https://technet.microsoft.com/de-de/library/dd734758%28v=ws.10%29.aspx) 
+- [Introduction to Read-Only DCs](https://technet.microsoft.com/library/dd734758%28v=ws.10%29.aspx) 

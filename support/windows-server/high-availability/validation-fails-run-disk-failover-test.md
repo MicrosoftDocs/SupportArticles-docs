@@ -2,7 +2,7 @@
 title: Validate Disk Failover test fails
 description: Provides a solution to an issue where validation fails when you run the Disk Failover test on a Windows Server 2012 failover cluster.
 ms.date: 09/09/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro

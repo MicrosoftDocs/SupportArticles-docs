@@ -2,7 +2,7 @@
 title: Apply predefined security templates
 description: Describes how to apply predefined security templates.
 ms.date: 09/09/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro

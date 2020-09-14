@@ -2,7 +2,7 @@
 title: Active Directory replication error 8464
 description: Describes the symptoms, cause, and resolution for resolving issues in which Active Directory replication fails and returns error 8464.
 ms.date: 09/10/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro
@@ -240,14 +240,14 @@ In this scenario, the follow processes occur:
    2. TRDC1 was not selected for PAS_SYNC and it also has the old PAS, Active Directory replication status 0 (Successful) is logged. 
    3. ChildDC1 holds a writable copy of the CHILD partition so that it has all attributes for this partition. However, there is a pre-existing issue that causes Active Directory replication to fail with error 8606.
   
-      :::image type="content" source="./media/replication-error-8464/status-8464-logged-for-dc2.png" alt-text="Screenshot.":::
+      :::image type="content" source="./media/replication-error-8464/status-8464-logged-for-dc2.png" alt-text="Screenshot 1":::
 
 2. The destination domain controller selects a new source (TRDC1) for the PAS_SYNC task. 
    1. TRDC1 also has the old PAS so replication is delayed, and status 8464 is logged. 
    2. DC2 also has the old PAS. However, it is not selected for PAS_Sync on this interval, and replication is completed correctly. Therefore, status 0 is logged. 
    3. Active Directory replication still fails with ChildDC1 because of an unrelated lingering objects issue exists (abandoned objects).
   
-        :::image type="content" source="./media/replication-error-8464/status-8464-logged-for-trdc1.png" alt-text="Screenshot.":::
+        :::image type="content" source="./media/replication-error-8464/status-8464-logged-for-trdc1.png" alt-text="Screenshot 2":::
 
 3. PAS_SYNC toggles back to the other outdated replica (DC2). 
    1. Meanwhile we correct the replication issue on ChildDC1. 
@@ -255,28 +255,29 @@ In this scenario, the follow processes occur:
    3. Replication proceeds successfully from TRDC1. 
    4. Replication proceeds successfully from ChildDC1 (but it is not selected for PAS_Sync on this cycle).
 
-        :::image type="content" source="./media/replication-error-8464/correct-issues-on-childdc1.png" alt-text="Screenshot.":::
+        :::image type="content" source="./media/replication-error-8464/correct-issues-on-childdc1.png" alt-text="Screenshot 3":::
 
 4. A suitable domain controller is finally selected for PAS_SYNC (ChildDC1). 
    1. Replication proceeds as usual from DC2 and TRDC1 (these attempts are completed before PAS_Sync). 
    2. Replication proceeds as usual from ChildDC1and PAS_SYNC is complete.
 
-        :::image type="content" source="./media/replication-error-8464/childdc1-selected-for-pas-sync.png" alt-text="Screenshot.":::
+        :::image type="content" source="./media/replication-error-8464/childdc1-selected-for-pas-sync.png" alt-text="Screenshot 4":::
 
 5. The destination domain controller finally has the updated PAS (from the last interval). 
     1. Replication from DC2 and TRDC1 is now both delayed because the source domain controllers are outdated. The same Active Directory replication status is logged for this issue. 
     2. Replication is complete successfully from ChildDC1.
 
-        :::image type="content" source="./media/replication-error-8464/status-8464-on-dc2-trdc1.png" alt-text="Screenshot.":::
+        :::image type="content" source="./media/replication-error-8464/status-8464-on-dc2-trdc1.png" alt-text="Screenshot 5":::
 
 6. In between the previous replication interval and the next one, DC2's copy of the partial attribute set for the CHILD domain is also updated (not pictured though). 
-   1. Because both the destination domain controller (DC1) and source domain controllers (DC2 and ChildDC1 [*](#*)) have the updated PAS, replication is completed correctly.  
-*ChildDC1 has a full set of attributes for the partition (not just the PAS). 
-   2. Replication is delayed from TRDC1 because it still has the old PAS.
+   1. Because both the destination domain controller (DC1) and source domain controllers (DC2 and ChildDC1 *) have the updated PAS, replication is completed correctly.
 
-        :::image type="content" source="./media/replication-error-8464/replication-delayed-from-trdc1.png" alt-text="Screenshot.":::
+    *ChildDC1 has a full set of attributes for the partition (not just the PAS). 
+   1. Replication is delayed from TRDC1 because it still has the old PAS.
+
+        :::image type="content" source="./media/replication-error-8464/replication-delayed-from-trdc1.png" alt-text="Screenshot 6":::
 
 7. In between the previous replication interval and the next one, TRDC1's copy of the partial attribute set for the CHILD domain is also updated (not pictured though). 
    1. Replication is completed correctly from all partners, because the destination domain controller and sources all have the same attributes for the PAS.
 
-        :::image type="content" source="./media/replication-error-8464/replication-completed-from-all-partners.png" alt-text="Screenshot.":::
+        :::image type="content" source="./media/replication-error-8464/replication-completed-from-all-partners.png" alt-text="Screenshot 7":::

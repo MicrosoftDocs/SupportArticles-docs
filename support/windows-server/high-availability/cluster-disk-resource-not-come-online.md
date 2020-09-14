@@ -2,7 +2,7 @@
 title: Cluster disk resource fails to come online
 description: Fixes an issue where the disk resource fails to come online when the name of the cluster disk resource has an invalid character.
 ms.date: 09/11/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro

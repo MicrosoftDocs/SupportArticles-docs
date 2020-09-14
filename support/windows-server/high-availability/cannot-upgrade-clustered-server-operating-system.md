@@ -2,7 +2,7 @@
 title: Can't upgrade operating system of clustered server
 description: Describes an issue in which you cannot upgrade the operating system of a server from Windows Server 2003 or later versions.
 ms.date: 09/11/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro

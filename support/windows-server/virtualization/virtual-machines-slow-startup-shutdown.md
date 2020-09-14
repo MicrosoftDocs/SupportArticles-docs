@@ -2,7 +2,7 @@
 title: Virtual Machines exhibits slow startup and shutdown
 description: Fixes slow virtual machines (VMs) startup or shutdown performance issues.
 ms.date: 09/10/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro

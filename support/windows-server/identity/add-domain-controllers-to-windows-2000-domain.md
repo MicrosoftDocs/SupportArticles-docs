@@ -55,7 +55,9 @@ Before you upgrade Windows 2000 domain controllers to Windows Server 2003 or bef
     Install updated software if it's available. Otherwise, disable SMB signing on Windows Server 2003 domain controllers. For information about how to disable SMB signing, see the "[To disable SMB signing](#To-disable-SMB-signing)" section at the end of this step.
        - Other third-party SMB clients 
     
-    Some third-party SMB clients don't support SMB signing. Consult your SMB provider to see if an updated version exists. Otherwise, disable SMB signing on Windows Server 2003 domain controllers. To disable SMB signing 
+    Some third-party SMB clients don't support SMB signing. Consult your SMB provider to see if an updated version exists. Otherwise, disable SMB signing on Windows Server 2003 domain controllers. 
+
+### To disable SMB signing 
     
     If software updates can't be installed on affected domain controllers that are running Windows 95, Windows NT 4.0, or other clients that were installed before the introduction of Windows Server 2003, temporarily disable the SMB service signing requirements in Group Policy until you can deploy updated client software.
     
@@ -164,7 +166,7 @@ Before you upgrade Windows 2000 domain controllers to Windows Server 2003 or bef
 Notes 
 
 - If Exchange 2000 Server is installed, or will be installed, in a Windows 2000 forest, read this section before you run the Windows Server 2003 adprep /forestprep command.
-- If Microsoft Exchange Server 2003 schema changes will be installed, go to the "[Overview: Upgrading Windows 2000 domain controllers to Windows Server 2003](#Overview:-Upgrading-Windows-2000-domain-controllers-to-Windows-Server-2003)" section before you run the Windows Server 2003 adprep commands.
+- If Microsoft Exchange Server 2003 schema changes will be installed, go to the "[Overview: Upgrading Windows 2000 domain controllers to Windows Server 2003](#Overview-Upgrading-Windows-2000-domain-controllers-to-Windows-Server-2003)" section before you run the Windows Server 2003 adprep commands.
 
 The Exchange 2000 schema defines three inetOrgPerson attributes with non-Request for Comment (RFC)-compliant LDAPDisplayNames: houseIdentifier, secretary, and labeledURI.
 
@@ -186,7 +188,7 @@ Mangled attributes will occur in Windows 2000 in the following cases:
 
 ### Scenario 1: Exchange 2000 schema changes are added after you run the Windows Server 2003 adprep /forestprep command
 
-If Exchange 2000 schema changes will be introduced to your Windows 2000 forest after the Windows Server 2003 adprep /forestprep command is run, no cleanup is required. Go to the "[Overview: Upgrading Windows 2000 domain controllers to Windows Server 2003](#Overview:-Upgrading-Windows-2000-domain-controllers-to-Windows-Server-2003)" section.
+If Exchange 2000 schema changes will be introduced to your Windows 2000 forest after the Windows Server 2003 adprep /forestprep command is run, no cleanup is required. Go to the "[Overview: Upgrading Windows 2000 domain controllers to Windows Server 2003](#Overview-Upgrading-Windows-2000-domain-controllers-to-Windows-Server-2003)" section.
 
 ### Scenario 2: Exchange 2000 schema changes will be installed before the Windows Server 2003 adprep /forestprep command
 
@@ -249,7 +251,7 @@ If Exchange 2000 schema changes have already been installed but you have NOT run
     [285172](https://support.microsoft.com/help/285172) Schema update require Write access to schema in Active Directory  
     
 7. Verify that the LDAPDisplayNames for the CN=ms-Exch-Assistant-Name, CN=ms-Exch-LabeledURI, and CN=ms-Exch-House-Identifier attributes in the schema naming context now appear as msExchAssistantName, msExchLabeledURI, and msExchHouseIdentifier before you run the Windows Server 2003 adprep /forestprep commands.
-8. Go to the "[Overview: Upgrading Windows 2000 domain controllers to Windows Server 2003](#Overview:-Upgrading-Windows-2000-domain-controllers-to-Windows-Server-2003)" section to run the adprep /forestprep and /domainprep commands.
+8. Go to the "[Overview: Upgrading Windows 2000 domain controllers to Windows Server 2003](#Overview-Upgrading-Windows-2000-domain-controllers-to-Windows-Server-2003)" section to run the adprep /forestprep and /domainprep commands.
 
 ### Scenario 3: The Windows Server 2003 forestprep command was run without first running inetOrgPersonFix
 
