@@ -2,6 +2,7 @@
 title: Troubleshoot Advanced Client push installation issues
 description: Describes how to troubleshoot Advanced Client push installation issues in Systems Management Server 2003 and System Center Configuration Manager 2007.
 ms.date: 08/20/2020
+ms.prod: configuration-manager
 ms.prod-support-area-path:
 ms.reviewer: jarrettr
 ---

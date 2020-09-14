@@ -2,8 +2,8 @@
 title: Enable Kerberos event logging
 description: This article provides a solution on how to enable Kerberos event logging on a particular machine.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Deland-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: ITPro
 ms.topic: troubleshooting

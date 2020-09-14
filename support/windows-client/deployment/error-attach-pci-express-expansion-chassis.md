@@ -2,8 +2,8 @@
 title: Fail to attach PCI Express expansion chassis 
 description: Provides workarounds for errors that occur when you attach a PCI Express expansion chassis to a computer.
 ms.data: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

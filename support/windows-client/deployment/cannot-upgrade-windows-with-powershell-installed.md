@@ -2,8 +2,8 @@
 title: Can't upgrade Windows with PowerShell installed
 description: Discusses an error message that directs you to uninstall Windows PowerShell 1.0 before you upgrade a Windows-based operating system. A workaround is provided.
 ms.data: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

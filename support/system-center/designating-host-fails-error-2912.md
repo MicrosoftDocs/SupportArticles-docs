@@ -2,6 +2,7 @@
 title: Designating a host fails with error 2912
 description: Fixes an issue in which you get error 2912 when trying to designate a host that's in a workgroup in System Center Essentials 2010.
 ms.date: 08/18/2020
+ms.prod: system-center
 ms.prod-support-area-path: 
 ---
 # Designating a host that's in a workgroup fails with error 2912 in System Center Essentials 2010

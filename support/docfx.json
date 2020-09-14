@@ -87,114 +87,47 @@
       },
 
       "ms.prod": {
-        "biztalk/**/*.md": "biztalk-server"
-      },
-      "ms.technology": {
-        "biztalk/**/*.md": ""
-      },
-
-      "ms.prod": {
-        "dotnet/**/*.md": ".net"
-      },
-      "ms.technology": {
-        "dotnet/**/*.md": ""
-      },
-
-      "ms.prod": {
-        "host-integration-server/**/*.md": "host-integration-server"
-      },
-      "ms.technology": {
-        "host-integration-server/**/*.md": ""
-      },
-
-      "ms.prod": {
-        "visualstudio/**/*.md": "visual-studio-family"
-      },
-      "ms.technology": {
-        "visualstudio/**/*.md": ""
-      },
-
-      "ms.prod": {
-        "webapps/**/*.md": "web-apps-server"
-      },
-      "ms.technology": {
-        "webapps/**/*.md": ""
-      },
-
-      "ms.prod": {
-        "windowsdeveloper/**/*.md": "windows-dev-apps"
-      },
-      "ms.technology": {
-        "windowsdeveloper/**/*.md": ""
-      },
-
-      "ms.prod": {
-        "hardwaredeveloper/**/*.md": "windows-hardware-drivers"
-      },
-      "ms.technology": {
-        "hardwaredeveloper/**/*.md": ""
-      },
-
-      "ms.prod": {
-        "mem/intune/**/*.md": "intune"
-      },
-      "ms.technology": {
-        "mem/intune/**/*.md": "microsoft-graph"
-      },
-
-      "ms.prod": {
+        "biztalk/**/*.md": "biztalk-server",
+        "dotnet/**/*.md": ".net",
+        "aspnet/**/*.md": "asp.net",
+        "host-integration-server/**/*.md": "host-integration-server",
+        "visualstudio/**/*.md": "visual-studio-family",
+        "webapps/**/*.md": "web-apps-server",
+        "cpp/**/*.md": "visual-cpp",
+        "iis/**/*.md": "iis",
+        "windows/win32/**/*.md": "windows-dev-apps",
+        "windows-hardware/drivers/**/*.md": "windows-hardware",
+        "mem/intune/**/*.md": "intune",
         "mem/configmgr/**/*.md": "configuration-manager",
-        "previous-versions/configmgr/*.md": "configuration-manager"
+        "previous-versions/configmgr/*.md": "configuration-manager",
+        "system-center/dpm/**/*.md": "system-center",
+        "system-center/scom/**/*.md": "system-center",
+        "system-center/orchestrator/**/*.md": "system-center",
+        "system-center/scsm/**/*.md": "system-center",
+        "system-center/vmm/**/*.md": "system-center",
+        "microsoft-identity-manager/*.md": "microsoft-identity-manager",
+        "previous-versions/dotnet/**/*.md": ".net",
+        "previous-versions/visualstudio/**/*.md": "visual-studio-family",
+        "browsers/**/*.md": "internet-explorer"
       },
       "ms.technology": {
+        "biztalk/**/*.md": "",
+        "dotnet/**/*.md": "",
+        "aspnet/**/*.md": "",
+        "host-integration-server/**/*.md": "",
+        "visualstudio/**/*.md": "",
+        "webapps/**/*.md": "",
+        "windows/win32/**/*.md": "",
+        "windows-hardware/drivers/**/*.md": "",
+        "mem/intune/**/*.md": "microsoft-graph",
         "mem/configmgr/**/*.md": "",
-        "previous-versions/configmgr/*.md": ""
-      },
-
-      "ms.prod": {
-        "system-center/dpm/**/*.md": "system-center"
-      },
-      "ms.technology": {
-        "system-center/dpm/**/*.md": "data-protection-manager"
-      },
-
-      "ms.prod": {
-        "system-center/scom/**/*.md": "system-center"
-      },
-      "ms.technology": {
-        "system-center/scom/**/*.md": "operations-manager"
-      },
-
-      "ms.prod": {
-        "system-center/orchestrator/**/*.md": "system-center"
-      },
-      "ms.technology": {
-        "system-center/orchestrator/**/*.md": "orchestrator"
-      },
-
-      "ms.prod": {
-        "system-center/scsm/**/*.md": "system-center"
-      },
-      "ms.technology": {
-        "system-center/scsm/**/*.md": "service-manager"
-      },
-
-      "ms.prod": {
-        "system-center/vmm/**/*.md": "system-center"
-      },
-      "ms.technology": {
-        "system-center/vmm/**/*.md": "virtual-machine-manager"
-      },
-
-      "ms.prod": {
-        "microsoft-identity-manager/*.md": "microsoft-identity-manager"
-      },
-      "ms.technology": {
+        "previous-versions/configmgr/*.md": "",
+        "system-center/dpm/**/*.md": "data-protection-manager",
+        "system-center/scom/**/*.md": "operations-manager",
+        "system-center/orchestrator/**/*.md": "orchestrator",
+        "system-center/scsm/**/*.md": "service-manager",
+        "system-center/vmm/**/*.md": "virtual-machine-manager",
         "microsoft-identity-manager/*.md": ""
-      },
-
-      "ms.prod": {
-        "azure/**/*.md": "azure"
       },
       "ms.service": {
         "azure/active-directory/*.md": "active-directory",
@@ -216,7 +149,7 @@
         "cpp/**/*.md": "Visual C++",
         "iis/**/*.md": "Internet Information Services",
         "webapps/**/*.md": "Web Apps",
-        "windows/win32/**/*.md": "Windows Developer",
+        "windows/win32/**/*.md": "Application Developer",
         "windows-hardware/drivers/**/*.md": "Hardware Developer",
         "windows-server/**/*.md": "Windows Server",
         "windows-client/**/*.md": "Windows Client",
@@ -245,7 +178,7 @@
         "iis/**/*.md": ["Web Apps"],
         "aspnet/**/*.md": ["Web Apps"],        
         "webapps/**/*.md": ["Web Apps"],
-        "windows/win32/**/*.md": ["Windows Developer"],
+        "windows/win32/**/*.md": ["Application Developer"],
         "windows-hardware/drivers/**/*.md": [ "Hardware Developer" ],
         "windows-server/**/*.md": ["Windows Server"],
         "windows-client/**/*.md": ["Windows Client"],

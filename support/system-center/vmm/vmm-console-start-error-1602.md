@@ -106,4 +106,4 @@ To run the SQL query against the Virtual Machine Manager database, follow these 
 
 1. Restart the Virtual Machine Manager service.
 
-For more information about how to use SQL Server Management Studio, see [What is SQL Server Management Studio (SSMS)?](/sql/ssms/sql-server-management-studio-ssms?redirectedfrom=MSDN&view=sql-server-ver15)
+For more information about how to use SQL Server Management Studio, see [What is SQL Server Management Studio (SSMS)?](/sql/ssms/sql-server-management-studio-ssms)

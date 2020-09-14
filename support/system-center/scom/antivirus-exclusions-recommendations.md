@@ -7,7 +7,7 @@ ms.reviewer: adoyle, adoyle
 ---
 # Recommendations for antivirus exclusions that relate to Operations Manager
 
-This article introduces some recommendations for antivirus exclusions that relate to System Center 2012 Operations Manager, System Center 2012 R2 Operations Manager, and System Center 2016 Operations Manager. For later versions of Operations Manager, see [Configuring antivirus exclusions for agent and components](/system-center/scom/plan-security-antivirus?view=sc-om-2019).
+This article introduces some recommendations for antivirus exclusions that relate to System Center 2012 Operations Manager, System Center 2012 R2 Operations Manager, and System Center 2016 Operations Manager. For later versions of Operations Manager, see [Configuring antivirus exclusions for agent and components](/system-center/scom/plan-security-antivirus).
 
 _Original product version:_ &nbsp; Microsoft System Center 2012 Operations Manager, System Center 2012 R2 Operations Manager, System Center 2016 Operations Manager  
 _Original KB number:_ &nbsp; 975931
@@ -56,7 +56,7 @@ These exclusions include the Health Service cache, together with its queue and l
 
 #### For Operations Manager 2016
 
-For the latest list of exclusions, see [Configuring antivirus exclusions for agent and components](/system-center/scom/plan-security-antivirus?view=sc-om-2019).
+For the latest list of exclusions, see [Configuring antivirus exclusions for agent and components](/system-center/scom/plan-security-antivirus).
 
 ## Exclusion of file type by extensions
 

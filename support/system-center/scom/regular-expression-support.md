@@ -27,59 +27,59 @@ GroupCalc also supports two special subelements that make abstract expressions 
 ### GroupCalc special functions
 
 <table class="table">
-	<tbody>
-		<tr>
-			<td valign="top">
-			<p align="center">GroupCalc sub element</p>
-			</td>
-			<td colspan="2" valign="top">
-			<p align="center">Regex equivalent</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>ContainsSubstring</p>
-			</td>
-			<td colspan="2" valign="top">
-			<p>^*{O}.*$<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span>({O} is replaced by the substring)</span></p>
-			</td>
-		</tr>
-		<tr>
-			<td rowspan="4" valign="top">
-			<p>MatchesWildcard</p>
-			</td>
-			<td>
-			<p>MP expression</p>
-			</td>
-			<td>
-			<p>Regex equivalent</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>?</p>
-			</td>
-			<td>
-			<p>.</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>*</p>
-			</td>
-			<td>
-			<p>.*</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<p>#</p>
-			</td>
-			<td>
-			<p>[0-9]</p>
-			</td>
-		</tr>
-	</tbody>
+    <tbody>
+        <tr>
+            <td valign="top">
+            <p align="center">GroupCalc sub element</p>
+            </td>
+            <td colspan="2" valign="top">
+            <p align="center">Regex equivalent</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <p>ContainsSubstring</p>
+            </td>
+            <td colspan="2" valign="top">
+            <p>^*{O}.*$<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span>({O} is replaced by the substring)</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="4" valign="top">
+            <p>MatchesWildcard</p>
+            </td>
+            <td>
+            <p>MP expression</p>
+            </td>
+            <td>
+            <p>Regex equivalent</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <p>?</p>
+            </td>
+            <td>
+            <p>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <p>*</p>
+            </td>
+            <td>
+            <p>.*</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <p>#</p>
+            </td>
+            <td>
+            <p>[0-9]</p>
+            </td>
+        </tr>
+    </tbody>
 </table>
 
 > [!NOTE]
@@ -140,7 +140,7 @@ You can use comparison operators when you construct a criteria expression. The v
 |MATCHES|Evaluates to **true** if the left operand matches the regular expression defined by the right operand.| `Name MATCHES 'SQL*05'`<br/> Evaluates to **true** if the `Name` value is **SQL2005**. |
 |IS NULL|Evaluates to **true** if the value of the left operand is null.| `ConnectorId IS NULL`<br/> Evaluates to **true** if the `ConnectorId` property does not contain a value. |
 |IS NOT NULL|Evaluates to **true** if the value of the left operand is not null.| `ConnectorId IS NOT NULL`<br/> Evaluates to **true** if the `ConnectorId` property contains a value. |
-|IN|Evaluates to **true** if the value of the left operand is in the list of values defined by the right operand.<br/><br/>**Note** The **IN** operator is valid for use only with properties of type [Guid](/dotnet/api/system.guid?redirectedfrom=MSDN&view=netcore-3.1).|`Id IN ('080F192C-52D2-423D-8953-B3EC8C3CD001', '080F192C-53B2-403D-8753-B3EC8C3CD002')`<br/>Evaluates to **true** if the value of the `Id` property is one of the two globally unique identifiers provided in the expression. |
+|IN|Evaluates to **true** if the value of the left operand is in the list of values defined by the right operand.<br/><br/>**Note** The **IN** operator is valid for use only with properties of type [Guid](/dotnet/api/system.guid).|`Id IN ('080F192C-52D2-423D-8953-B3EC8C3CD001', '080F192C-53B2-403D-8753-B3EC8C3CD002')`<br/>Evaluates to **true** if the value of the `Id` property is one of the two globally unique identifiers provided in the expression. |
 |AND|Evaluates to **true** if the left and right operands are both true.|`Name = 'SQL%' AND Description LIKE 'MyData%'` |
 |OR|Evaluates to **true** if either the left or right operand is true.|`Name = 'SQL%' OR Description LIKE 'MyData%'` |
 |NOT|Evaluates to **true** if the right operand is not true.|`NOT (Name = 'IIS' OR Name = 'SQL')` |
@@ -162,7 +162,7 @@ The following table defines the wildcard characters that you can use to construc
 
 ### DateTime comparisons
 
-When you use a [DateTime](/dotnet/api/system.datetime?redirectedfrom=MSDN&view=netcore-3.1) value in a query expression, use the general DateTime format (**G**) to convert the `DateTime` value to a string value. For example:
+When you use a [DateTime](/dotnet/api/system.datetime) value in a query expression, use the general DateTime format (**G**) to convert the `DateTime` value to a string value. For example:
 
 ```csharp
 string qStr = "TimeCreated <= '" + myInstant.ToString("G") + "'";

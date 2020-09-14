@@ -2,8 +2,8 @@
 title: Troubleshooting replication error 8418
 description: Helps troubleshoot Active Directory replication error 8418.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

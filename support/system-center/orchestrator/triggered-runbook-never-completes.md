@@ -54,4 +54,4 @@ RECONFIGURE
 
 This issue has been corrected in System Center 2012 Orchestrator Service Pack 1 (SP1).
 
-This feature will be removed in the later version of SQL Server and the recommended setting for this value is **1**. For more information, see [disallow results from triggers Server Configuration Option](/sql/database-engine/configure-windows/disallow-results-from-triggers-server-configuration-option?redirectedfrom=MSDN&view=sql-server-ver15).
+This feature will be removed in the later version of SQL Server and the recommended setting for this value is **1**. For more information, see [disallow results from triggers Server Configuration Option](/sql/database-engine/configure-windows/disallow-results-from-triggers-server-configuration-option).

@@ -2,8 +2,8 @@
 title: SeImpersonatePrivilege and SeCreateGlobalPrivilege
 description: Describes the Impersonate a Client After Authentication and the Create Global Objects security settings.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

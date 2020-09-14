@@ -96,7 +96,7 @@ This issue occurs when multi-factor authentication (MFA) is **Enforced**. This 
 
 To fix the issue, use one of the following methods:
 
-- Set MFA to **Enabled** but not **Enforced**. For more information, see [Set up multi-factor authentication](/microsoft-365/admin/security-and-compliance/set-up-multi-factor-authentication?view=o365-worldwide).
+- Set MFA to **Enabled** but not **Enforced**. For more information, see [Set up multi-factor authentication](/microsoft-365/admin/security-and-compliance/set-up-multi-factor-authentication).
 - Temporarily disable MFA during enrollment in [Trusted IPs](/azure/active-directory/conditional-access/location-condition#trusted-ips).  
 
 ### A hybrid Azure AD joined Windows 10 device fails to enroll in Intune with error 0x800706D9 or 0x80180023

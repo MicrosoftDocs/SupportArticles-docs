@@ -2,8 +2,8 @@
 title: Disable Media Sensing feature for TCP/IP
 description: Describes how to control the Media Sensing feature.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

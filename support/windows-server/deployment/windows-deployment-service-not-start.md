@@ -2,8 +2,8 @@
 title: Error 0x5 when starting Windows Deployment Service
 description: Provides a solution to the error 0x5 that occurs when you start the Windows Deployment Service.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

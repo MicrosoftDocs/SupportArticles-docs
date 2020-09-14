@@ -2,8 +2,8 @@
 title: Configure IPv6 for advanced users
 description: Provides step-by-step guidance for how to use the Windows registry to disable IPv6 or certain IPv6 components in Windows.
 ms.date: 09/08/2020
-author: delhan
-ms.author: Deland-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -156,7 +156,7 @@ see [Arguments against disabling IPv6](/archive/blogs/netro/arguments-against-di
 For more information about tools to help with network trace, see:
 
 - [Microsoft Message Analyzer Operating Guide](/message-analyzer/microsoft-message-analyzer-operating-guide)
-- [Microsoft Network Monitor 3.4 (archive)](https://www.microsoft.com/download/details.aspx?id=4865)
+- [Microsoft Network Monitor 3.4 (archive)](https://docs.microsoft.com/windows/client-management/troubleshoot-tcpip-netmon)
 
 > [!WARNING]
 > Netmon 3.4 is not compatible with Windows Server 2012 or newer OS when LBFO NIC teaming is enabled. Instead, use **Message Analyzer**.

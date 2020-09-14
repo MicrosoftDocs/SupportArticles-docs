@@ -13,15 +13,15 @@
       href: ./identity/access-denied-create-ntds-settings-object.md
     - name: Account-identifier allocator fails to initialize
       href: ./identity/event-16650-account-identifier-allocator-not-initialize.md
-    - name: AD operations fail with Win32 error 1127
+    - name: AD replication fails with Win32 error 1127
       href: ./identity/replication-error-1127.md
-    - name: AD replications fail with error 1818
+    - name: AD replication fails with error 1818
       href: ./identity/replication-error-1818.md
-    - name: AD replications fail with error 5
+    - name: AD replication fails with error 5
       href: ./identity/replications-fail-with-error-5.md
-    - name: AD replications fail with error 8333
+    - name: AD replication fails with error 8333
       href: ./identity/replication-error-8333.md
-    - name: AD replications fail with error 8477
+    - name: AD replication fails with error 8477
       href: ./identity/replication-error-8477.md
     - name: Add special groups to built-in groups
       href: ./identity/add-special-groups-to-built-in-groups.md
@@ -101,8 +101,6 @@
       href: ./identity/troubleshoot-high-lsass.exe-cpu-utilization.md
     - name: Issues when renaming sites in the AD forest
       href: ./identity/problems-rename-active-directory-forest-sites.md
-    - name: Known issues for managing Group Policy clients
-      href: ./identity/known-issues-for-group-policy-clients.md
     - name: LDAP and Kerberos servers reset TCP sessions
       href: ./identity/ldap-kerberos-server-reset-tcp-sessions.md
     - name: LDAPS connection problems
@@ -436,8 +434,6 @@
       href: ./networking/dns-records-not-present.md
     - name: DNS server logs event 7062
       href: ./networking/dns-server-logs-event-7062.md
-    - name: DNS Servers can't resolve queries for top-level domains
-      href: ./networking/dns-not-resolve-query-for-top-level-domain.md
     - name: Event 4015 when running DNS on RODC
       href: ./networking/rodc-logs-event-4015-error-00002095.md
     - name: Event ID 1056 after installing DHCP

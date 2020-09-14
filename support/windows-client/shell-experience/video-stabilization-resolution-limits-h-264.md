@@ -2,8 +2,8 @@
 title: Video resolution limit for H.264 and stabilization
 description: H.264 support in Windows 8 and Windows RT is limited to 2048x2048 pixels, and 16k for the DirectX2D based Video Stabilization.
 ms.data: 09/08/2020
-author: delhan
-ms.author: Delead-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

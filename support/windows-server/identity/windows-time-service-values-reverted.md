@@ -1,8 +1,8 @@
 ---
 title: Windows Time Service settings aren't preserved during an in-place upgrade to Windows Server 2016 or Windows 10 Version 1607
 description: Describes an issue in which Windows Time service settings are disabled in the registry after you upgrade to Windows Server 2016 or Windows 10 Version 1607.
-author: delhan
-ms.author: Deland-Han
+author: Deland-Han
+ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting

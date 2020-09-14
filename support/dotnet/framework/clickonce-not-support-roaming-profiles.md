@@ -22,4 +22,4 @@ For more information, see the following websites:
 
 - [ClickOnce cannot be used in Windows Terminal Server](https://support.microsoft.com/help/2020945)
 
-- [ClickOnce and Application Settings](/visualstudio/deployment/clickonce-and-application-settings?view=vs-2015)
+- [ClickOnce and Application Settings](/visualstudio/deployment/clickonce-and-application-settings?view=vs-2015&preserve-view=true)

@@ -31,7 +31,7 @@ To manage the domains in this scenario, follow these steps in the order in whic
 
 For more information, see the following resources:
 
-- [Verify your custom domain in Azure AD](/previous-versions/azure/jj151788(v=azure.100))
-- [Verify your domain in Office 365](/microsoft-365/admin/setup/add-domain?view=o365-worldwide)
+- [Verify your custom domain in Azure AD](https://docs.microsoft.com/previous-versions/azure/jj151788(v=azure.100))
+- [Verify your domain in Office 365](https://docs.microsoft.com/microsoft-365/admin/setup/add-domain?view=o365-worldwide&preserve-view=true)
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums website.
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums) website.
