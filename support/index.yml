@@ -70,6 +70,10 @@ productDirectory:
     summary: Troubleshooting articles for Azure 
     url: azure/index.yml
       
+  - title: Previous Versions
+    imageSrc: "media/hub-landing/MEM.jpg"
+    summary: Troubleshooting articles for Previous Versions products
+    url: previous-versions/welcome-previous-versions.md
 # conceptualContent:
 
 
