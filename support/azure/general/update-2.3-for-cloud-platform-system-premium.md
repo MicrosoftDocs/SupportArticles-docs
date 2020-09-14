@@ -3,7 +3,7 @@ title: Update 2.3 for Cloud Platform System Premium
 description: Describes Update 2.3 for Cloud Platform System (CPS) Premium 1.0. Includes summary of what the update covers and how to install it.
 author: genlin
 ms.author: genli
-ms.service: csp
+ms.service: azure-stack
 ms.date: 08/14/2020
 ms.prod-support-area-path: 
 ms.reviewer: 

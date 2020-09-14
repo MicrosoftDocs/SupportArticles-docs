@@ -3,7 +3,7 @@ title: Update 1603 for Cloud Platform System Premium
 description: Describes Update 1603 for Cloud Platform System Premium and provides installation steps.
 author: genlin
 ms.author: genli
-ms.service: csp
+ms.service: azure-stack
 ms.date: 08/14/2020
 ms.prod-support-area-path: 
 ms.reviewer: 

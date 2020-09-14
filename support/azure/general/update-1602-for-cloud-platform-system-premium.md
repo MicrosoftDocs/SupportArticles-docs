@@ -3,7 +3,7 @@ title: Update 1602 for Cloud Platform System Premium
 description: Describes Update 1602 for Cloud Platform System Premium. Also provides installation instructions and a list of Windows Server 2012 R2 updates.
 author: genlin
 ms.author: genli
-ms.service: csp
+ms.service: azure-stack
 ms.date: 08/14/2020
 ms.prod-support-area-path: 
 ms.reviewer: justini, delhan
