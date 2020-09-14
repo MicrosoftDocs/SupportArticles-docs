@@ -51,34 +51,14 @@ A Windows Live error occurred while provisioning for "user+invalid_characters@co
 
 This behavior occurs because certain special characters aren't permitted in user names that you create in the Office 365. These special characters include but aren't limited to the following:
 
-- Tilde (~)   
-- Exclamation point (!)   
-- At sign (@)   
-- Number sign (#)   
-- Dollar sign ($)   
-- Percent (%)   
-- Circumflex (^)   
-- Ampersand (&)    
-- Asterisk (*)   
-- Parentheses (( ))   
-- Hyphen (-)   
-- Plus sign (+)   
-- Equal sign (=)   
-- Brackets ([ ])   
-- Braces ({ })   
-- Backslash (\\)   
-- Slash mark (/)   
-- Pipe (|)   
-- Semicolon (;)   
-- Colon (:)   
-- Quotation marks (")    
-- Angle brackets (< >)   
-- Question mark (?)   
-- Comma (,)   
+| Property | UserPrincipalName requirements |
+| --- | --- |
+| Characters allowed |<ul> <li>A – Z</li> <li>a - z</li><li>0 – 9</li> <li> ' \. - \_ ! \# ^ \~</li></ul> |
+| Characters not allowed |<ul> <li>Any "\@\" character that's not separating the username from the domain.</li> <li>Can't contain a period character "." immediately preceding the "\@\" symbol</li></ul> |
+| Length constraints |<ul> <li>The total length must not exceed 113 characters</li><li>There can be up to 64 characters before the "\@\" symbol</li><li>There can be up to 48 characters after the "\@\" symbol</li></ul> |
 
 However, the following exceptions apply:
 
-- A period (.) or a hyphen (-) is permitted anywhere in the user name, except at the beginning or end of the name.   
 - An underscore (_) is permitted anywhere in the user name. This includes at the beginning or end of the name.
 - When creating a group, the number sign (#) **can** be used as part of the group's name. However, the email address you create for a distribution group or shared mailbox **cannot** use the # sign.  
 
