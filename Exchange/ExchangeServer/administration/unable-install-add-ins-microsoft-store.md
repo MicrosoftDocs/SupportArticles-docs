@@ -104,7 +104,7 @@ This step is required only for Microsoft Exchange Server 2013 or later installat
 - Restart your computer for the change to take effect.
 
 > [!NOTE]
-> To restart the server only one time when you configure a system for TLS 1.2, create the Schannel and .NET registry entries at the same time.
+> To avoid multiple restarts when you configure a system for TLS 1.2, create the Schannel and .NET registry entries at the same time.
 
 ## More information
 
