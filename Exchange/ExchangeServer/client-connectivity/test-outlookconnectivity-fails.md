@@ -21,8 +21,6 @@ search.appverid: MET150
 ---
 # Test-OutlookConnectivity cmdlet fails with Sequence contains no elements error in Exchange Server
 
-This article provides a resolution for the issue that you can't run the `Test-OutlookConnectivity` test in Microsoft Exchange Server 2016 or Exchange Server 2013.
-
 _Original KB number:_ &nbsp; 3186849
 
 ## Symptoms

@@ -23,8 +23,6 @@ appliesto:
 ---
 # Cross forest free/busy lookup fails when target forest is Exchange Server 2013 or Exchange Server 2016
 
-This article helps you resolve the problem that the organizer can't view the free/busy information for the attendee who is in another Exchange organization.
-
 _Original KB number:_ &nbsp; 3010570
 
 ## Symptoms

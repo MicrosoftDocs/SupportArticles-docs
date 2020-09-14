@@ -21,8 +21,6 @@ appliesto:
 ---
 # You can't set up an Office 365 account in Outlook
 
-This article helps you resolve the problem that you can't set up an Office 365 account in Microsoft Outlook.
-
 _Original KB number:_ &nbsp; 4493666
 
 ## Symptoms

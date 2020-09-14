@@ -18,8 +18,6 @@ appliesto:
 ---
 # Test-IRMConfiguration fails: Failed to acquire a use license
 
-This article helps you resolve the problem that you fail to run `Test-IRMConfiguration` in the Exchange Management Shell (EMS).
-
 _Original KB number:_ &nbsp; 2805976
 
 ## Symptoms

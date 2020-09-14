@@ -19,8 +19,6 @@ appliesto:
 ---
 # You're repeatedly prompted for credentials when using modern authentication in Outlook 2016 for Mac
 
-This article helps you resolve the problem that you're repeatedly prompted for your credentials in Microsoft Outlook for Mac when you connect it to Exchange Online by using a federated account and modern authentication is enabled.
-
 _Original KB number:_ &nbsp; 3156719
 
 ## Symptoms

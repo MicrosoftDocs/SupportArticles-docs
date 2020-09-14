@@ -18,8 +18,6 @@ search.appverid: MET150
 ---
 # Unexpected behavior with smart card credentials in Outlook 2013 and 2010
 
-This article provides a resolution for the issue that smart card PIN is blocked when using Microsoft Outlook 2013 or Outlook 2010 to access a mailbox.
-
 _Original KB number:_ &nbsp; 2829595
 
 ## Symptoms

@@ -31,8 +31,6 @@ appliesto:
 ---
 # Limits to using personal folders files over LAN and WAN links
 
-This article contains guidance on the limitations of using of personal folders (.pst) files over a local area network (LAN) or wide area network (WAN) link.
-
 _Original KB number:_ &nbsp; 297019
 
 ## Summary

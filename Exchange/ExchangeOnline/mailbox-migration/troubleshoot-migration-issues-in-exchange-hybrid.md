@@ -18,12 +18,12 @@ search.appverid: MET150
 ---
 # Troubleshoot migration issues in Exchange Server hybrid environment
 
+_Original KB number:_ &nbsp; 10094
+
 This article troubleshoots the following issues:
 
 - Problem moving a mailbox from an on-premises Exchange Server environment to Exchange Online (On-Boarding).
 - Problem moving a mailbox back on-premises from Exchange Online (Off-boarding).
-
-_Original KB number:_ &nbsp; 10094
 
 **Who is it for?**
 
@@ -39,7 +39,7 @@ We'll begin by asking you the issue you are facing. Then we'll take you through 
 
 ## Welcome to the Hybrid migration Troubleshooter
 
-If you are having issues determining what the best Migration Approach is for your environment, see [Exchange Deployment Assistant](/exchange/exchange-deployment-assistant?view=exchserver-2019).
+If you are having issues determining what the best Migration Approach is for your environment, see [Exchange Deployment Assistant](/exchange/exchange-deployment-assistant?view=exchserver-2019&preserve-view=true).
 
 > [!NOTE]
 > This troubleshooter will not help you with troubleshooting Staged, Cutover, or IMAP migrations.
@@ -155,7 +155,7 @@ Hybrid Migrations can sometimes be treated like a denial of service attack by ce
 
 Having a move request (even a successful one) could prevent a mailbox move from taking place. Connect PowerShell to Exchange Online and verify that there is no move request pending for the user in question. If there is a stale move request, you will need to remove it. The following steps outline how to determine if there is an existing move request and remove that request if it exists.
 
-1. Connect to [Exchange Online through PowerShell](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps) (Not via Exchange Management Shell (EMS)).
+1. Connect to [Exchange Online through PowerShell](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true) (Not via Exchange Management Shell (EMS)).
 2. Run the command `Get-MoveRequest -Identity 'tony@contoso.com'`.
 3. If there is a move request that is completed or failed, run `Remove-MoveRequest -Identity 'tony@contoso.com'`.
 
@@ -169,9 +169,9 @@ Often when moving a mailbox to Exchange Online, it will fail because some of the
 1. Open Exchange Management Shell.
 2. Run `(Get-Mailbox Tony).EmailAddresses`.
 3. Take note of all of the email addresses that follow smtp: and write down the domain names. For instance, if the results include SMTP:`tony@contoso.com`, smtp:`Tony@foo.com`, you would need to write down `Contoso.com` and `Foo.com`.
-4. Connect to [Exchange Online through PowerShell](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps) (Not EMS).
+4. Connect to [Exchange Online through PowerShell](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true) (Not EMS).
 5. Run `Get-AcceptedDomain` and ensure that the results include the domain(s) noted in step 3 above.
-6. If any of the domains are missing, you should add and [verify the domain in the portal](/microsoft-365/admin/get-help-with-domains/change-nameservers-at-any-domain-registrar?view=o365-worldwide). Alternatively, you can license the user before you move the mailbox. Usually we use the option of licensing a user when one of the domains stamped on the mailbox is a .local or non-routable domain. Non-routable addresses cannot be added to the service therefore they will not be stamped on the user in Exchange Online.
+6. If any of the domains are missing, you should add and [verify the domain in the portal](/microsoft-365/admin/get-help-with-domains/change-nameservers-at-any-domain-registrar?view=o365-worldwide&preserve-view=true). Alternatively, you can license the user before you move the mailbox. Usually we use the option of licensing a user when one of the domains stamped on the mailbox is a .local or non-routable domain. Non-routable addresses cannot be added to the service therefore they will not be stamped on the user in Exchange Online.
 
 - If your issues are resolved, congratulations! Your scenario is complete.
 - [I have verified that the accepted domains are in place, what next?](#ensure-that-iis-is-properly-configured-to-accept-migration-traffic)
@@ -290,11 +290,11 @@ If your issues aren't resolved, see [My move request is still not complete or th
 
 This section describes best practices for improving network performance during migrations. The discussion is generally because the biggest impact on network performance during migration is related to third-party hardware and Internet service providers (ISPs).The Microsoft 365 Network Analysis Tool is deployed to help analyze network-related issues prior to deploying Microsoft 365 services:
 
-- North America: [http://na1-fasttrack.cloudapp.net](http://na1-fasttrack.cloudapp.net/)
-- EMEA: [http://em1-fasttrack.cloudapp.net](http://em1-fasttrack.cloudapp.net/)
-- APAC: [http://ap1-fasttrack.cloudapp.net](http://ap1-fasttrack.cloudapp.net/)
+- North America: `http://na1-fasttrack.cloudapp.net`
+- EMEA: `http://em1-fasttrack.cloudapp.net`
+- APAC: `http://ap1-fasttrack.cloudapp.net`
 
-The first time you select [http://na1-fasttrack.cloudapp.net](http://na1-fasttrack.cloudapp.net/), you will be prompted to install an ActiveX control. Once you install it, you will get a Security Warning as shown below:
+The first time you select `http://na1-fasttrack.cloudapp.net`, you will be prompted to install an ActiveX control. Once you install it, you will get a Security Warning as shown below:
 
 :::image type="content" source="media/troubleshoot-migration-issues-in-exchange-hybrid/security-warning.jpg" alt-text="screenshot of the security warning 1" border="false":::
 
@@ -302,7 +302,7 @@ Install [Java](https://java.com/download/).
 
 #### Reboot
 
-Go to [http://na1-fasttrack.cloudapp.net](http://na1-fasttrack.cloudapp.net/) and you will be prompted to run the application as shown below:
+Go to `http://na1-fasttrack.cloudapp.net` and you will be prompted to run the application as shown below:
 
 :::image type="content" source="media/troubleshoot-migration-issues-in-exchange-hybrid/prompted-to-run-application.png" alt-text="screenshot of the security warning 2" border="false":::
 
@@ -320,7 +320,7 @@ Go to [http://na1-fasttrack.cloudapp.net](http://na1-fasttrack.cloudapp.net/) an
 
 Intrusion detection functionality configured on a network firewall often causes significant network delays and affects migration performance.
 
-Add IP addresses for Microsoft data center servers to your allow list. For more information about the Microsoft 365 IP ranges, see [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide).
+Add IP addresses for Microsoft data center servers to your allow list. For more information about the Microsoft 365 IP ranges, see [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide&preserve-view=true).
 
 #### IDS settings
 
@@ -332,7 +332,7 @@ Hybrid Migrations can sometimes be treated like a denial of service attack by ce
 
 3. Expand this imageIn the Flood Mitigation dialog box, follow these steps:
 
-   - Select the **IP Exceptions** tab, and then type the IP addresses that the Microsoft 365 environment uses to connect during the mailbox move operation. To view a list of the IP address ranges and URLs that are used by Exchange Online in Microsoft 365, see [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide).
+   - Select the **IP Exceptions** tab, and then type the IP addresses that the Microsoft 365 environment uses to connect during the mailbox move operation. To view a list of the IP address ranges and URLs that are used by Exchange Online in Microsoft 365, see [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide&preserve-view=true).
 
    - Select the **Flood Mitigation** tab, and then, next to **Maximum HTTP Requests per minute per IP address**, select **Edit**. In the **Custom limit** box, type a number to increase the limit.
 

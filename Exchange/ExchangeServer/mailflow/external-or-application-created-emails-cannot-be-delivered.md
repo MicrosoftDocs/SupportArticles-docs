@@ -18,8 +18,6 @@ search.appverid: MET150
 ---
 # Emails sent from Internet or application created emails are not delivered to users
 
-This article provides a resolution to solve the issue that email messages that are from external organizations or application-generated email messages are not delivered to users in Microsoft Exchange Server.
-
 _Original KB number:_ &nbsp; 2519912
 
 ## Symptoms

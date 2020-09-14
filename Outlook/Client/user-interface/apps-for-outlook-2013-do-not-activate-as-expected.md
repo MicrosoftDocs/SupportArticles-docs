@@ -19,8 +19,6 @@ search.appverid: MET150
 ---
 # Apps for Outlook 2013 do not activate as expected in email messages
 
-This article provides a resolution to solve the issue that Apps for Microsoft Outlook 2013 can't be shown when viewing an email message.
-
 _Original KB number:_ &nbsp; 2790827
 
 ## Symptoms

@@ -20,8 +20,6 @@ appliesto:
 ---
 # You can't open your mailbox on an Exchange Server 2010 server by using Outlook
 
-This article helps you resolve the problem that you get errors when you open a mailbox on a Microsoft Exchange Server 2010 server by using Outlook.
-
 _Original KB number:_ &nbsp; 982678
 
 ## Symptoms

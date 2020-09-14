@@ -19,8 +19,6 @@ appliesto:
 ---
 # Unexpected PublicFolderMailBoxes dynamic distribution groups in Exchange Server 2016
 
-This article helps you resolve the problem that multiple unexpected dynamic distribution groups are created in Microsoft Exchange Server 2016.
-
 _Original KB number:_ &nbsp; 4035952
 
 ## Symptoms

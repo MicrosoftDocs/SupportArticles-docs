@@ -23,12 +23,10 @@ appliesto:
 ---
 # Event ID 9519 and error 0x80004005 when you try to mount a database in Exchange Server
 
-This article helps you resolve the problem that you receive the error 0x80004005 when you try to mount a database in Microsoft Exchange Server.
+_Original KB number:_ &nbsp; 925825
 
 > [!NOTE]
 > This article is not intended for end-users. Instead, it targets an IT Professional audience.
-
-_Original KB number:_ &nbsp; 925825
 
 ## Symptoms
 

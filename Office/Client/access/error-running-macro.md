@@ -25,8 +25,6 @@ search.appverid: MET150
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
-This article fixes an issue in which you can't run a macro that calls a VBA function.
-
 _Original KB number:_ &nbsp; 931407
 
 > [!NOTE]

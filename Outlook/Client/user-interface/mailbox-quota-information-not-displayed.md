@@ -23,8 +23,6 @@ appliesto:
 ---
 # Mailbox Quota Information is not displayed on the Status bar in Outlook
 
-This article helps you resolve the problem that Mailbox Quota Information isn't displayed on the Status bar in Microsoft Outlook.
-
 _Original KB number:_ &nbsp; 982997
 
 ## Symptoms

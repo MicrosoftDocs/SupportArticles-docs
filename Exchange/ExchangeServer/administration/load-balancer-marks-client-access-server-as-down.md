@@ -19,8 +19,6 @@ search.appverid: MET150
 ---
 # Load balancer marks Client Access server as down in an Exchange Server 2013 Cumulative Update 6 environment
 
-This article provides a resolution to solve the issue that Load balancer marks the Client Access server as down in an Exchange Server 2013 Cumulative Update 6 environment.
-
 _Original KB number:_ &nbsp; 3002351
 
 ## Symptoms

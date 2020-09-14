@@ -17,8 +17,6 @@ search.appverid: MET150
 ---
 # Users can't connect to Outlook Web App by using the HTTP protocol in Exchange Server 2010
 
-This article provides a workaround for the issue that uses can't connect to Outlook Web App (Outlook Web App) through the HTTP protocol in Microsoft Exchange Server 2010.
-
 _Original KB number:_ &nbsp; 2748253
 
 ## Symptoms

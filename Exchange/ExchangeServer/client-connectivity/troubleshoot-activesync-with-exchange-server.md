@@ -18,8 +18,6 @@ search.appverid: MET150
 ---
 # Troubleshoot ActiveSync with Exchange Server
 
-This article resolves sync issues for your inbox, calendar, and other items between Exchange Server mailboxes and devices.
-
 _Original KB number:_ &nbsp; 10047
 
 **Who is it for?**

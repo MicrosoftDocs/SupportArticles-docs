@@ -20,8 +20,6 @@ appliesto:
 ---
 # Error when you try to install the Calendar Printing Assistant for Outlook: Setup cannot complete
 
-This article provides workarounds for an issue where installing the Calendar Printing Assistant for Microsoft Outlook fails.
-
 _Original KB number:_ &nbsp; 2898576
 
 ## Symptoms  

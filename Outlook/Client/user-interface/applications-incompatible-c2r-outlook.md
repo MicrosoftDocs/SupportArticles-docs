@@ -18,8 +18,6 @@ appliesto:
 ---
 # Some applications are incompatible with a Click-to-Run installation of Outlook 2010
 
-This article shows extensibility support for Microsoft Outlook platform on Click-to-Run.
-
 _Original KB number:_ &nbsp; 981242
 
 ## Symptoms

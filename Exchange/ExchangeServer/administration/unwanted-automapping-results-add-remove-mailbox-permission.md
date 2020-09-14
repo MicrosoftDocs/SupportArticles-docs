@@ -19,8 +19,6 @@ appliesto:
 ---
 # Unwanted Automapping results occur when you add or remove mailbox permissions in Exchange Admin Center
 
-This article helps you resolve the problem that automapping experiences unwanted results when you add or remove mailbox permissions.
-
 _Original KB number:_ &nbsp; 4487381
 
 ## Symptoms

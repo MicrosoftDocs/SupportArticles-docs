@@ -18,8 +18,6 @@ appliesto:
 ---
 # iCloud crashes when synchronizing data with Outlook 2016
 
-This article helps you resolve the problem that Apple iCloud crashes when it's configured to synchronize data with Microsoft Outlook 2016.
-
 _Original KB number:_ &nbsp; 3178906
 
 ## Symptoms

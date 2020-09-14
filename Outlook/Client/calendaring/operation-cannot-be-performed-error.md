@@ -17,8 +17,6 @@ search.appverid: MET150
 ---
 # The operation cannot be performed because the message has been changed error when a delegate creates a Skype or Teams meeting in Outlook
 
-This article provides a workaround to solve the error that occurs when a delegate creates a Skype or Teams meeting in Microsoft Outlook.
-
 _Original KB number:_ &nbsp; 4502145
 
 ## Symptoms

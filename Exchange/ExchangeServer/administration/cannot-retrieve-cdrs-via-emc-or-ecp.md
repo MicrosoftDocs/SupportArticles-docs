@@ -19,8 +19,6 @@ search.appverid: MET150
 ---
 # Cannot retrieve CDRs by using EMC or ECP in an Exchange Server 2010 and 2013 coexistence environment
 
-This article provides a workaround to solve the issue that you can't retrieve call detail records (CDRs) by using Microsoft Exchange Server 2010 Exchange Management Console (EMC), Exchange Management Shell (EMS) or Exchange Control Panel (ECP).
-
 _Original KB number:_ &nbsp; 2769371
 
 ## Symptoms

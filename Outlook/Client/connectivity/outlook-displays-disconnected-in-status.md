@@ -18,8 +18,6 @@ search.appverid: MET150
 ---
 # Outlook shows Disconnected in status bar if the last character in legacyExchangeDN is a space
 
-This article provides the steps to remove the trailing space in the `legacyExchangeDN` attribute to avoid the error messages that occurs in Microsoft Outlook 2016 or Outlook 2013.
-
 _Original KB number:_ &nbsp; 3068991
 
 ## Symptoms

@@ -19,8 +19,6 @@ appliesto:
 ---
 # Outlook 2010 Room Finder doesn't show any conference rooms
 
-This article helps you resolve the problem that conference rooms aren't displayed under **Choose an available Room** in Microsoft Outlook 2010 Room Finder.
-
 _Original KB number:_ &nbsp; 2811855
 
 ## Symptoms

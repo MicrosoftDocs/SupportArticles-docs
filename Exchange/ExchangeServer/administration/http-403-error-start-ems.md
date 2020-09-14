@@ -18,8 +18,6 @@ appliesto:
 ---
 # HTTP error 403 when you start Exchange Management Shell on an Exchange Server 2010 Client Access server
 
-This article helps you resolve the problem that you receive HTTP error 403 when you open Exchange Management Shell (EMS) on a Microsoft Exchange Server 2010 Client Access server.
-
 _Original KB number:_ &nbsp; 2276957
 
 ## Symptoms

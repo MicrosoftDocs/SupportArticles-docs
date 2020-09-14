@@ -18,9 +18,9 @@ search.appverid: MET150
 ---
 # MAPI applications cannot access archive mailboxes in Recovery Databases
 
-If you develop an Extended MAPI application for use with Microsoft Exchange Server 2010, the application can't access an archive mailbox in a Recovery Database (RDB).
-
 _Original KB number:_ &nbsp; 2590306
+
+If you develop an Extended MAPI application for use with Microsoft Exchange Server 2010, the application can't access an archive mailbox in a Recovery Database (RDB).
 
 ## More information
 

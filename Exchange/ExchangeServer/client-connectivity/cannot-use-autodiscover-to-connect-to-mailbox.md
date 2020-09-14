@@ -18,8 +18,6 @@ search.appverid: MET150
 ---
 # Unable to open your default e-mail folders error when using Autodiscover if user is moved cross forest
 
-This article provides a resolution to solve the error messages that may occur when you use Autodiscover to connect to a Microsoft Exchange Server 2010 Service Pack 1 (SP1) mailbox.
-
 _Original KB number:_ &nbsp; 2387770
 
 ## Symptoms

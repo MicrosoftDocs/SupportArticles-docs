@@ -25,8 +25,6 @@ appliesto:
 ---
 # Project and Project Server Support Boundaries - What to Expect
 
-This article explains what you can expect when you call into paid support for Project and Project Server.
-
 _Original KB number:_ &nbsp; 2844167
 
 ## Summary
