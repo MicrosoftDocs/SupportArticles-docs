@@ -99,7 +99,7 @@ If the BITS service fails to start, look in the event log for any BITS-related e
 
 |Error name|Error code|Description|
 |---|---|---|
-|ERROR_SERVICE_DOES_NOT_EXIST|0x80070424|See the section on repairing the BITS configuration below.|
+|ERROR_SERVICE_DOES_NOT_EXIST|0x80070424|See the section on [repairing the BITS configuration](#repair-a-corrupted-bits-configuration) below.|
 |ERROR_SERVICE_NOT_IN_EXE|0x8007043B|BITS is not listed as one of the services in the netsvcs svchost group|
 |ERROR_SERVICE_DISABLED|0x80070422|BITS has been disabled. Enable the BITS service.|
 |ERROR_SERVICE_DEPENDENCY_DELETED ERROR_SERVICE_DEPENDENCY_FAIL|0x80070433, 0x8007042c|A service appearing in the BITS service dependency list cannot be started. Make sure the dependency list for the BITS service is correct:<br/> **Windows Vista:** RpcSs, EventSystem (also http.sys and LanManWorkstation when peercaching is enabled)<br/> **Windows Server 2003:** Rpcss, EventSystem<br/> **Windows XP:** Rpcss<br/> **Windows 2000:** Rpcss, SENS, Wmi|

@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 4095539
 
 Consider the following scenario:
 
-- You're running Microsoft System Center Configuration Manager (current branch, version 1810, or a later version) in your hierarchy.
+- You're running Configuration Manager (current branch, version 1810, or a later version) in your hierarchy.
 - The instance of Microsoft SQL Server that's hosting the database for the primary site is lost.
 - You recover a primary site from a CAS on a newly installed SQL Server instance (for the primary site).
 

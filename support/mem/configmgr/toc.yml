@@ -12,7 +12,7 @@
       href: reports-not-run-as-expected.md
     - name: Reporting stops working
       href: reporting-stops-working.md
-    - name: SQL query timeouts or slow console performance
+    - name: SQL query times out or slow console performance
       href: sql-query-times-out-or-console-slow-performance.md
 - name: Application management and software distribution
   items:

@@ -2,9 +2,9 @@
 title: ConfigMgr PXE boot doesn't work
 description: Fixes a problem in which a Configuration Manager PXE boot process doesn't work because a self-signed certificate is not created.
 ms.date: 09/02/2020
-ms.prod-support-area-path: System Center Configuration Manager (current branch - version 1806)
+ms.prod-support-area-path: PXE boot
 ---
-# ConfigMgr PXE doesn't work because a self-signed certificate isn't created
+# PXE doesn't work because a self-signed certificate isn't created
 
 This article helps you fix an issue in which the Preboot Execution Environment (PXE) boot doesn't work in Configuration Manager if a self-signed certificate isn't created.
 
@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 4469580
 
 ## Symptoms
 
-When you try to start a computer through the PXE boot by using System Center Configuration Manager, the PXE boot process doesn't work.
+When you try to start a computer through the PXE boot by using Configuration Manager, the PXE boot process doesn't work.
 
 When this problem occurs, the following error entry is logged in the SMSPXE log on the PXE-enabled distribution point (DP) when you start Windows Deployment Services (WDS):
 
@@ -99,7 +99,7 @@ This issue occurs if the `IssuingCertificateList` registry key is missing from 
 
 ## Resolution
 
-To fix the issue, copy the `IssuingCertificateList` registry key value from the following command from the registry subkey on the management point:
+To fix the issue, copy the `IssuingCertificateList` registry key value from the following registry subkey on the management point:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Security`
 

@@ -15,7 +15,9 @@ When you experience a DRS problem in Configuration Manager, the beginning inves
 
 ## Get started
 
-Start by gathering information related to the history of the problem. Many times DRS problems can ultimately be traced back to a recent change made in the environment. Keep in mind that you should not focus solely on Configuration Manager, as changes to Windows or SQL Server can cause DRS problems as well. Having a clear understanding of any recent changes in the environment can provide important clues as to the source of the problem. Once you've investigated environmental changes and made sure that your updates are in order, the next step is to run the Replication Link Analyzer (RLA). To launch RLA, open the **Monitoring** workspace and select the **Database Replication** node, then right-click the link that is having a problem and select **Replication Link Analyzer**, as shown in the following example:
+Start by gathering information related to the history of the problem. Many times DRS problems can ultimately be traced back to a recent change made in the environment. Keep in mind that you should not focus solely on Configuration Manager, as changes to Windows or SQL Server can cause DRS problems as well. Having a clear understanding of any recent changes in the environment can provide important clues as to the source of the problem.
+
+Once you've investigated environmental changes and made sure that your updates are in order, the next step is to run the Replication Link Analyzer (RLA). To launch RLA, open the **Monitoring** workspace and select the **Database Replication** node, then right-click the link that is having a problem and select **Replication Link Analyzer**, as shown in the following example:
 
 :::image type="content" source="media/troubleshoot-database-replication-service-issues/replication-link-analyzer.png" alt-text="Screenshot of Replication Link Analyzer.":::
 
@@ -115,6 +117,7 @@ Next you will want to check RCMCtrl.log on each site for errors, as this will of
 > at System.ComponentModel.BackgroundWorker.WorkerThreadStart(Object argument)
 
 If you see entries similar to these, make sure that the **SMS Executive** and the **Site Component Manager** services are running on the site in question. If not, this may be why replication is in a **Failed** state. If not running, start the **SMS Executive** and/or **Site Component Manager** services manually and troubleshoot the services if they fail to start.
+
 Another example of an error you might find in RCMCtrl.log is the following:
 
 > 07/04/2016 12:33:34 PM 6352 (0x18D0)CSqlBCP::ReadRowCount: Can't open file [F:\Program Files\Microsoft Configuration Manager\inboxes\rcm.box\GUID\INSTALLED_EXECUTABLE_DATA.bcp.rowcount]. SMS_REPLICATION_CONFIGURATION_MONITOR  
@@ -140,7 +143,7 @@ To verify, open the console and go to **Administration** > **Overview** > **Hier
 
 If things are working but the data set from the BCP process is large and taking a long time to send, you can increase the number of sender threads to speed things up. The defaults are listed below. If your sender log is consistently advising **no more threads available** or **Using 5 or 5** or **Using 3 of 3**, this is a good indication that you may want to increase the sender threads.
 
-> [!NOE]
+> [!NOTE]
 > If increased, the setting takes effect in real time with no restart of anything required.
 
 ![Increase the number of sender threads](./media/troubleshoot-database-replication-service-issues/number.png)

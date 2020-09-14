@@ -7,7 +7,7 @@ ms.reviewer: jarrettr
 ---
 # SQL query times out or console slow on certain Configuration Manager database queries
 
-This article helps you fix an issue in which the Configuration Manager console is slow or the SQL query is time-out for certain Configuration Manager database queries.
+This article helps you fix an issue in which the Configuration Manager console is slow or the SQL query times out for certain Configuration Manager database queries.
 
 _Original product version:_ &nbsp; SQL Server 2017 on Windows (all editions), SQL Server 2016 Enterprise, SQL Server 2016 Standard, SQL Server 2014 Enterprise, SQL Server 2014 Standard, System Center Configuration Manager  
 _Original KB number:_ &nbsp; 3196320
@@ -31,7 +31,7 @@ In affected environments, Configuration Manager may run better when the site dat
 |SQL Server 2014|120, 110|110|110|
 |||||
 
-Starting in Configuration Manager current branch version 1810, when the Configuration Manager database is running on SQL Server 2016 SP1 or later versions, all queries issued by the Admin console and SMS provider will automatically add the `USE HINT 'FORCE_LEGACY_CARDINALITY_ESTIMATION'` query hint. Therefore, Admin console performance won't be affected when you change the CE Compatibility level to 110 at the database level to resolve performance issues. If you want to override this behavior, to have the Admin console and SMS provider queries use the current SQL Server CE level instead, set the `UseLegacyCardinality` value to **0** under the following registry subkey on the computer that hosts the SMS Provider:
+Starting in Configuration Manager current branch version 1810, when the Configuration Manager database is running on SQL Server 2016 SP1 or later versions, all queries issued by the Admin console and SMS Provider will automatically add the `USE HINT 'FORCE_LEGACY_CARDINALITY_ESTIMATION'` query hint. Therefore, Admin console performance won't be affected when you change the CE Compatibility level to 110 at the database level to resolve performance issues. If you want to override this behavior, to have the Admin console and SMS Provider queries use the current SQL Server CE level instead, set the `UseLegacyCardinality` value to **0** under the following registry subkey on the computer that hosts the SMS Provider:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Providers`
 
@@ -41,16 +41,16 @@ To identify what SQL Server CE compatibility level is in use for the Configurati
 SELECT name, compatibility_level FROM sys.databases
 ```
 
-On SQL Server 2014 and SQL Server 2016, to identify whether using SQL Server 2012 CE (110) may improve Configuration Manager query performance, identify a query that is running slowly and manually test its performance at the SQL Server 2012 CE compatibility level. To do this, run the query in SQL Server Management Studio with <`option (querytraceon 9481)`> and compare the execution time to its performance without the flag.
+On SQL Server 2014 and SQL Server 2016 RTM, to identify whether using SQL Server 2012 CE (110) may improve Configuration Manager query performance, identify a query that is running slowly and manually test its performance at the SQL Server 2012 CE compatibility level. To do this, run the query in SQL Server Management Studio with `option (querytraceon 9481)` and compare the execution time to its performance without the flag.
 
-Starting with SQL Server 2016 SP1, to accomplish this at the query level, add the `USE HINT 'FORCE_LEGACY_CARDINALITY_ESTIMATION'`[query hint](/sql/t-sql/queries/hints-transact-sql-query?view=sql-server-2017) instead of using trace flag 9481.
+Starting with SQL Server 2016 SP1, to accomplish this at the query level, add the `USE HINT 'FORCE_LEGACY_CARDINALITY_ESTIMATION'`[query hint](/sql/t-sql/queries/hints-transact-sql-query) instead of using trace flag 9481.
 
-For more information about using `querytraceon` with trace flag 9481 at the specific-query level, see [Hints (Transact-SQL) - Query](/sql/t-sql/queries/hints-transact-sql-query?view=sql-server-2017). For information about using SQL Profiler to identify slow queries, see [SQL Server Profiler](/sql/tools/sql-server-profiler/sql-server-profiler?view=sql-server-ver15&viewFallbackFrom=sql-server-2014).
+For more information about using `querytraceon` with trace flag 9481 at the specific-query level, see [Hints (Transact-SQL) - Query](/sql/t-sql/queries/hints-transact-sql-query). For information about using SQL Server Profiler to identify slow queries, see [SQL Server Profiler](/sql/tools/sql-server-profiler/sql-server-profiler).
 
 See the following example of a specific-query test run at the SQL Server 2012 CE level against SQL Server 2014:
 
 ```sql
-SMS_DeploymentSummary.ApplicationName,SMS_DeploymentSummary.AssignmentID,SMS_DeploymentSummary.CI_ID,SMS_DeploymentSummary.CollectionID,SMS_DeploymentSummary.CollectionName,SMS_DeploymentSummary.CreationTime,SMS_DeploymentSummary.DeploymentID,SMS_DeploymentSummary.DeploymentIntent,SMS_DeploymentSummary.DeploymentTime,SMS_DeploymentSummary.DesiredConfigType,SMS_DeploymentSummary.EnforcementDeadline,SMS_DeploymentSummary.FeatureType,SMS_DeploymentSummary.ModelName,SMS_DeploymentSummary.ModificationTime,SMS_DeploymentSummary.NumberErrors,SMS_DeploymentSummary.NumberInProgress,SMS_DeploymentSummary.NumberOther,SMS_DeploymentSummary.NumberSuccess,SMS_DeploymentSummary.NumberTargeted,SMS_DeploymentSummary.NumberUnknown,SMS_DeploymentSummary.ObjectTypeID,SMS_DeploymentSummary.PackageID,SMS_DeploymentSummary.PolicyModelID,SMS_DeploymentSummary.ProgramName,SMS_DeploymentSummary.SecuredObjectId,SMS_DeploymentSummary.SoftwareName,SMS_DeploymentSummary.SummarizationTime,SMS_DeploymentSummary.SummaryType from fn_DeploymentSummary(1033) AS SMS_DeploymentSummary where SMS_DeploymentSummary.DeploymentID = N'CS100012' option (querytraceon 9481)
+select SMS_DeploymentSummary.ApplicationName,SMS_DeploymentSummary.AssignmentID,SMS_DeploymentSummary.CI_ID,SMS_DeploymentSummary.CollectionID,SMS_DeploymentSummary.CollectionName,SMS_DeploymentSummary.CreationTime,SMS_DeploymentSummary.DeploymentID,SMS_DeploymentSummary.DeploymentIntent,SMS_DeploymentSummary.DeploymentTime,SMS_DeploymentSummary.DesiredConfigType,SMS_DeploymentSummary.EnforcementDeadline,SMS_DeploymentSummary.FeatureType,SMS_DeploymentSummary.ModelName,SMS_DeploymentSummary.ModificationTime,SMS_DeploymentSummary.NumberErrors,SMS_DeploymentSummary.NumberInProgress,SMS_DeploymentSummary.NumberOther,SMS_DeploymentSummary.NumberSuccess,SMS_DeploymentSummary.NumberTargeted,SMS_DeploymentSummary.NumberUnknown,SMS_DeploymentSummary.ObjectTypeID,SMS_DeploymentSummary.PackageID,SMS_DeploymentSummary.PolicyModelID,SMS_DeploymentSummary.ProgramName,SMS_DeploymentSummary.SecuredObjectId,SMS_DeploymentSummary.SoftwareName,SMS_DeploymentSummary.SummarizationTime,SMS_DeploymentSummary.SummaryType from fn_DeploymentSummary(1033) AS SMS_DeploymentSummary where SMS_DeploymentSummary.DeploymentID = N'CS100012' option (querytraceon 9481)
 ```
 
 > [!NOTE]
@@ -73,4 +73,4 @@ When a SQL Server instance is upgraded in-place from any earlier version of SQL 
 
 During upgrades or new installations of Configuration Manager, databases may be automatically configured to use the recommended SQL Server CE compatibility version for that version of SQL Server (as shown in the table that's mentioned in the [Resolution](#resolution) section). If you experience performance degradation after a servicing update, as a result of being reverted back to the default recommended CE level for your version of SQL Server, reassess whether you may have to manually change the CE level back to **110**.
 
-For more information about SQL Server CE compatibility levels, see [ALTER DATABASE (Transact-SQL) Compatibility Level](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-ver15).
+For more information about SQL Server CE compatibility levels, see [ALTER DATABASE (Transact-SQL) Compatibility Level](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).
