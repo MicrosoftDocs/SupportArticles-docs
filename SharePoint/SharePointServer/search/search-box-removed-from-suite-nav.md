@@ -47,8 +47,9 @@ Starting on September 14, the Suite Navigation search box experience will no lon
 
 :::image type="content" source="media/search-box-removed-from-suite-nav/search-box-removed-from-suite-nav-4.png" alt-text="Commmuniation site without search box.":::
 
+Note that future static layouts released in SharePoint will also have the search box disabled if the Suite Navigation search box experience is disabled. 
 
-We recommend that you consider updating your training and documentation to direct users to go to the SharePoint home page in order to search.
+We recommend that you consider updating your training and documentation to direct users to go to the SharePoint Site's home page in order to search.
 
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
