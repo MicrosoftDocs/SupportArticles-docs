@@ -22,21 +22,9 @@ The Windows Automation API library enables accessibility tools, test automations
 
 For more information about the Windows Automation API, see [Overview of Windows Automation API 3.0](/windows/win32/winauto/windows-automation-api-overview).
 
-## Download information
-
-The following file is available for download from the Microsoft Download Center:  
-
-- Update for all supported x86-based versions of Windows Server 2008
-
-    [Download the Update for Windows Server 2008 for x86-based systems package now.](https://www.microsoft.com/download/details.aspx?FamilyId=468e4f78-d411-4932-8719-76a0b2eb1443)
-
-- Update for all supported x64-based versions of Windows Server 2008
-
-    [Download the Update for Windows Server 2008 for x64-based systems package now.](https://www.microsoft.com/download/details.aspx?FamilyId=5cc9aaae-9f7a-442a-8af6-113fa0068c48)
-
 ## More information
 
-Customers who can't install the update can set the following registry key to prevent the notification from being displayed:  
+Set the following registry key to prevent the notification from being displayed:  
 
 - Location: `HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\10.0\General`
 - Type: DWORD
