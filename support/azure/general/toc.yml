@@ -23,26 +23,30 @@
   - name: Firmware version matrix for Cloud Platform System Premium
     href: firmware-version-matrix.md
 
-- name: Unsupported Features and Platforms in Recovery Services Scout 8.0.1
-  href: unsupported-features-and-platforms-post-upgrade.md
-- name: Embedded application error when install Azure backup agent
-  href: unable-to-execute-the-embedded-application-error-backup-agent.md
+- name: Storage
+  items:
+  - name: Embedded application error when install Azure backup agent
+    href: unable-to-execute-the-embedded-application-error-backup-agent.md
+  - name: Data restore scenarios for Azure Storage service
+    href: data-restore-storage.md
+  - name: Request body is too large error when write to file
+    href: request-body-large.md
+  - name: Optimize CreateFile function
+    href: optimize-createfile-function.md
+
+- name: Site Recovery
+  items:
+  - name: Unsupported Features and Platforms in Recovery Services Scout 8.0.1
+    href: unsupported-features-and-platforms-post-upgrade.md
+  - name: Azure Recovery Services Agent update failed
+    href: upgrade-mars-agent.md
+
 - name: WebUI "Oops" error message in StorSimple
   href: storsimple-user-receives-web-ui-error.md
 - name: App Service Compliance with PCI Standards 3.0 and 3.1
   href: app-service-compliance-wit.md
-- name: Data restore scenarios for Azure Storage service
-  href: data-restore-storage.md
 - name: Method invocation failed in Azure PowerShell
   href: method-invocation-failed-error-azure-powershell.md
-- name: Automation modifications aren't reflected in the portal
-  href: modifications-not-reflect-portal.md
-- name: Automation modifications aren't reflected in the portal
-  href: modifications-not-reflect-portal.md
-- name: Automation modifications aren't reflected in the portal
-  href: modifications-not-reflect-portal.md
-- name: Automation modifications aren't reflected in the portal
-  href: modifications-not-reflect-portal.md
 - name: Automation modifications aren't reflected in the portal
   href: modifications-not-reflect-portal.md
 
@@ -58,3 +62,5 @@
     href: sdp3fdcb6045-5616-45b4-bb68-0bd11081c184-vnet.md
   - name: Azure Service Fabric troubleshooter
     href: fabric-logs.md
+  - name: Use Secure File Exchange to exchange files
+    href: secure-file-exchange-transfer-files.md
