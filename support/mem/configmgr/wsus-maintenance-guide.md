@@ -214,7 +214,7 @@ The output and progress indicators are displayed while the script is running. No
 ![Windows PowerShell output and progress indicator.](./media/wsus-maintenance-guide/output.jpg)
 
 > [!NOTE]
-> If issues occur when attempting to use the above PowerShell script to decline superseded updates, see the section [Running the Decline-SupersededUpdatesWithExclusionPeriod.ps1 script times out when connecting to the WSUS server, or a 401 error occurs while running](##running-the-decline-supersededupdateswithexclusionperiod.ps1-script-times-out-when-connecting-to-the-wsus-server,-or-a-401-error-occurs-while-running) for troubleshooting steps.
+> If issues occur when attempting to use the above PowerShell script to decline superseded updates, see the section [Running the Decline-SupersededUpdatesWithExclusionPeriod.ps1 script times out when connecting to the WSUS server, or a 401 error occurs while running](###running-the-decline-supersededupdateswithexclusionperiodps1-script-times-out-when-connecting-to-the-wsus-server-or-a-401-error-occurs-while-running) for troubleshooting steps.
 
 After superseded updates have been declined, for best performance, SUSDB should be reindexed again. For related information, see [Reindex the WSUS database](#reindex-the-wsus-database).
 
@@ -236,11 +236,11 @@ If you are using Configuration Manager current branch version 1906 or a later ve
 
 ![Remove obsolete updates option](./media/wsus-maintenance-guide/remove-obsolete.png)
 
-If you've never cleaned up obsolete updates from WSUS database before, this task may time out. You can review WsyncMgr.log for more information, and manually run the SQL script that is specified in [HELP! My WSUS has been running for years without ever having maintenance done and the cleanup wizard keeps timing out](#help!-my-wsus-has-been-running-for-years-without-ever-having-maintenance-done-and-the-cleanup-wizard-keeps-timing-out) once, which would allow subsequent attempts from Configuration Manager to run successfully. For more information about WSUS cleanup and maintenance in Configuration Manager, see the docs.
+If you've never cleaned up obsolete updates from WSUS database before, this task may time out. You can review WsyncMgr.log for more information, and manually run the SQL script that is specified in [HELP! My WSUS has been running for years without ever having maintenance done and the cleanup wizard keeps timing out](#help-my-wsus-has-been-running-for-years-without-ever-having-maintenance-done-and-the-cleanup-wizard-keeps-timing-out) once, which would allow subsequent attempts from Configuration Manager to run successfully. For more information about WSUS cleanup and maintenance in Configuration Manager, see the docs.
 
 For standalone WSUS servers, or if you are using an older version of Configuration Manager, it is recommended that you run the WSUS Cleanup wizard periodically. If the WSUS Server Cleanup Wizard has never been run and the WSUS has been in production for a while, the cleanup may time out. In that case, reindex with [step 2](#create-custom-indexes) and [step 3](#reindex-the-wsus-database) first, then run the cleanup with only the **Unused updates and update revisions** option checked.
 
-If you have never run WSUS Cleanup wizard, running the cleanup with **Unused updates and update revisions** may require a few passes. If it times out, run it again until it completes, and then run each of the other options one at a time. Lastly make a full pass with all options checked. If timeouts continue to occur, see the SQL Server alternative in [HELP! My WSUS has been running for years without ever having maintenance done and the cleanup wizard keeps timing out](##help!-my-wsus-has-been-running-for-years-without-ever-having-maintenance-done-and-the-cleanup-wizard-keeps-timing-out). It may take multiple hours or days for the Server Cleanup Wizard or SQL alternative to run through completion.
+If you have never run WSUS Cleanup wizard, running the cleanup with **Unused updates and update revisions** may require a few passes. If it times out, run it again until it completes, and then run each of the other options one at a time. Lastly make a full pass with all options checked. If timeouts continue to occur, see the SQL Server alternative in [HELP! My WSUS has been running for years without ever having maintenance done and the cleanup wizard keeps timing out](##help-my-wsus-has-been-running-for-years-without-ever-having-maintenance-done-and-the-cleanup-wizard-keeps-timing-out). It may take multiple hours or days for the Server Cleanup Wizard or SQL alternative to run through completion.
 
 The WSUS Server Cleanup Wizard runs from the WSUS console. It is located under **Options**, as shown here:
 
@@ -299,7 +299,7 @@ If errors occur when you attempt to use the PS script to decline superseded upda
 
 1. If Configuration Manager is being used along with WSUS, check **Software Update Point Component Properties** > **Supersedence Rules** to see how quickly superseded updates expire (such as immediately or after *X* months). Make a note of this setting.
 
-    ![WSUS Approve Updates screen.](./media/wsus-maintenance-guide/supersedence-rule.png)
+    ![Screenshot of Supersedence Rules.](./media/wsus-maintenance-guide/supersedence-rule.png)
 
 2. If you have not yet [backed up the SUSDB database](#back-up-the-wsus-database), do so before proceeding further.
 3. Use SQL Server Management Studio to connect to SUSDB.
@@ -383,7 +383,7 @@ Needed/helpful links:
 > [!NOTE]
 > As mentioned previously, if you are using Configuration Manager current branch version 1906 or a later version, automate the cleanup procedures by enabling the **WSUS Maintenance** options in the software update point configuration of the top-level site. For standalone WSUS servers or older versions of Configuration Manager, you can continue to use the following steps.
 
-The [Weekend Scripter](http://blogs.technet.com/b/heyscriptingguy/archive/2012/08/11/weekend-scripter-use-the-windows-task-scheduler-to-run-a-windows-powershell-script.aspx) blog post mentioned in the previous section contains basic directions and troubleshooting for this step. However, I'll walk you through the process in the following steps.
+The [Weekend Scripter](https://blogs.technet.com/b/heyscriptingguy/archive/2012/08/11/weekend-scripter-use-the-windows-task-scheduler-to-run-a-windows-powershell-script.aspx) blog post mentioned in the previous section contains basic directions and troubleshooting for this step. However, I'll walk you through the process in the following steps.
 
 1. Open **Task Scheduler** and select **Create a Task**. On the **General** tab, set the name of the task, the user that you want to run the PowerShell script as (most people use a service account), select **Run whether a user is logged on or not**, and then add a description if you wish.
 
