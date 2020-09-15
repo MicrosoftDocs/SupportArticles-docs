@@ -21,7 +21,7 @@ When you access the metrics for a virtual machine in Microsoft Azure, you receiv
 
 :::image type="content" source="./media/problem-occurred-loading-metrics-error/4041982_en_1.png" source="" alt-text="Screenshot fo selecting metrics.":::
 
-:::image type="content" source="./media/problem-occurred-loading-metrics-error/4041983_en_1.png" alt-text="Screenshot of error message on portal.":::
+![Screenshot of error message on portal](./media/problem-occurred-loading-metrics-error/4041983_en_1.png)
 
 ## Cause
 

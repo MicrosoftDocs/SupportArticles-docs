@@ -20,7 +20,7 @@ By default Azure Automation does not capture any debug stream data.  Only outpu
 In order to capture debug stream data we have to perform two actions in our runbooks:
 
 1. Set the variable **$GLOBAL:DebugPreference="Continue"** which tells PowerShell to continue whenever a debug message is encountered.  The $GLOBAL: portion tells PowerShell to do this in the global scope rather than whatever local scope the script is in at the time the statement is executed.
-2. Redirect the debug stream that we don't capture to a stream that we do capture such as output. This is done by setting PowerShell redirection against the statement to be executed.  For more information on PowerShell redirection, see [About Redirection](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_redirection?view=powershell-7).
+2. Redirect the debug stream that we don't capture to a stream that we do capture such as output. This is done by setting PowerShell redirection against the statement to be executed.  For more information on PowerShell redirection, see [About Redirection](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_redirection?view=powershell-7&preserve-view=true).
 
 ## Examples
 

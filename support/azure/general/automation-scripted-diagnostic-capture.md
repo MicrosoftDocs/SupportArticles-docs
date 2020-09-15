@@ -21,7 +21,7 @@ The Azure Automation support team has created a script to capture troubleshootin
 
 ## Requirement: Package Management 
 
-If you're using a computer that's running Windows 10 or Windows Server 2016, you already have PowerShell 5.0 or a later version installed. In that case, go to [Installing the diagnostic script](#installing-the-diagnostic-script).
+If you're using a computer that's running Windows 10 or Windows Server 2016, you already have PowerShell 5.0 or a later version installed. In that case, go to [Installing the diagnostic script](#install-the-diagnostic-script).
 
 If you're running an earlier version of Windows PowerShell, you must either upgrade to the latest version of Windows Management Framework (WMF), which includes PowerShell, or install the package management components for PowerShell 3.0 or 4.0.
 

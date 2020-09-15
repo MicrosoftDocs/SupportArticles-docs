@@ -44,7 +44,7 @@ To resolve this issue, use one of the following methods:
     Import-Module AzureAd
     ```
 
-     Make sure that the Azure AD for Graph is installed. For more information, see [Azure Active Directory PowerShell for Graph](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2?view=azureadps-2.0).
+     Make sure that the Azure AD for Graph is installed. For more information, see [Azure Active Directory PowerShell for Graph](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2?view=azureadps-2.0&preserve-view=true).
 
 3. As a global administrator of the directory where the guest user was added, connect to Azure AD PowerShell and the directory:
 

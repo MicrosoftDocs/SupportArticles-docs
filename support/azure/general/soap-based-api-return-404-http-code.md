@@ -69,7 +69,7 @@ You need to understand who is throwing these HTTP 404 and 500 responses, APIM, o
 
 - Hence you should first examine the request url and headers sent from APIM to the backend API from the **Test** tab and compare it with the sample of SOAP request for Multiply operation - [http://www.dneonline.com/calculator.asmx](http://www.dneonline.com/calculator.asmx).
 
-Request headers from APIM inspector trace look something like below:
+    Request headers from APIM inspector trace look something like below:
 
     ```
     {

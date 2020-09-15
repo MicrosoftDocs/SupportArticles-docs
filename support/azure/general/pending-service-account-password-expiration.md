@@ -41,4 +41,4 @@ The Azure Stack servicing policy requires that you run versions that are curre
 ## References
 
 For more information about updates for Azure Stack, see the "Update package release cadence" section of the following article:
-[Azure Stack servicing policy](https://docs.microsoft.com/azure-stack/operator/azure-stack-servicing-policy?view=azs-2005#update-package-release-cadence)
+[Azure Stack servicing policy](https://docs.microsoft.com/azure-stack/operator/azure-stack-servicing-policy?view=azs-2005&preserve-view=true#update-package-release-cadence)

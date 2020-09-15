@@ -48,7 +48,7 @@ Azure Stack customers should take the following actions to help protect the Azur
 **A1:** All Azure Stack integrated systems are affected by the class of vulnerabilities that are described in the [MSRC Security Advisory ADV180002](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002).
 
 **Q2. Where can I find the Azure Stack update to fix this class of vulnerabilities?**   
-**A2:** See [Azure Stack 1712 update release notes](https://docs.microsoft.com/azure/azure-stack/azure-stack-update-1712) for instructions about how to download and apply this update to your Azure Stack integrated system. For more information about updates for Microsoft Azure Stack, see [Update package release cadence](https://docs.microsoft.com/azure-stack/operator/azure-stack-servicing-policy?view=azs-2005#update-package-release-cadence).
+**A2:** See [Azure Stack 1712 update release notes](https://docs.microsoft.com/azure/azure-stack/azure-stack-update-1712) for instructions about how to download and apply this update to your Azure Stack integrated system. For more information about updates for Microsoft Azure Stack, see [Update package release cadence](https://docs.microsoft.com/azure-stack/operator/azure-stack-servicing-policy?view=azs-2005&preserve-view=true#update-package-release-cadence).
 
 **Q3. Where can I find the firmware updates for my Azure Stack integrated system?**   
 **A3:** Firmware updates are OEM-specific. Refer to your OEM vendor website to download and apply the updates.
