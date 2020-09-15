@@ -14,7 +14,7 @@
 
 - name: Azure API Management
   items:
-  - name: APIM troubleshooting series
+  - name: Troubleshooting overview
     href: apim-troubleshooting-series.md
   - name: Blank response is returned
     href: api-return-blank-response.md
@@ -26,18 +26,6 @@
     href: performance-hit-api-calls.md
   - name: Unauthorized errors (401)
     href: unauthorized-errors-invoke-apis.md
-
-- name: Azure Portal
-  items:
-- name: Delete button doesn't work
-  href: delete-button-not-work-portal.md
-- name: Enterprise Agreement user can't create a VM
-  href: cannot-create-vm-ea.md
-- name: Fail to sign up for an Azure subscription
-  href: cannot-sign-up-subscription.md
-- name: Users and groups lists disappear
-  href: cannot-see-users-groups-list-iam.md
-
 
 - name: Azure Stack
   items:
@@ -72,7 +60,7 @@
     href: update-2.1-for-cloud-platform-system-premium.md
 
 
-- name: Site Recovery
+- name: Azure Site Recovery
   items:
   - name: Azure Recovery Services Agent is outdated
     href: backup-service-mars-agent-versions-not-match.md
@@ -85,7 +73,7 @@
   - name: Unsupported Features and Platforms in Recovery Services Scout 8.0.1
     href: unsupported-features-and-platforms-post-upgrade.md
 
-- name: Storage
+- name: Azure Storage
   items:
   - name: Embedded application error when install Azure backup agent
     href: unable-to-execute-the-embedded-application-error-backup-agent.md
@@ -96,18 +84,27 @@
   - name: Optimize CreateFile function
     href: optimize-createfile-function.md
 
-- name: App Service Compliance with PCI Standards 3.0 and 3.1
-  href: app-service-compliance-wit.md
-- name: Can't load VM metrics
-  href: problem-occur-loading-metrics.md
-- name: Deploy TLS 1.2 in Azure Pack
-  href: tls-support-deployment-guide.md
-- name: Loading error occurs in Azure Data Factory
-  href: loading-error-data-factory.md
-- name: Method invocation failed in Azure PowerShell
-  href: method-invocation-failed-error-azure-powershell.md
-- name: WebUI "Oops" error message in StorSimple
-  href: storsimple-user-receives-web-ui-error.md
+
+- name: Other common issues
+  items:
+  - name: App Service Compliance with PCI Standards 3.0 and 3.1
+    href: app-service-compliance-wit.md
+  - name: Can't load VM metrics
+    href: problem-occur-loading-metrics.md
+  - name: Delete button doesn't work
+    href: delete-button-not-work-portal.md
+  - name: Enterprise Agreement user can't create a VM
+    href: cannot-create-vm-ea.md
+  - name: Fail to sign up for an Azure subscription
+    href: cannot-sign-up-subscription.md
+  - name: Loading error occurs in Azure Data Factory
+    href: loading-error-data-factory.md
+  - name: Method invocation failed in Azure PowerShell
+    href: method-invocation-failed-error-azure-powershell.md
+  - name: Users and groups lists disappear
+    href: cannot-see-users-groups-list-iam.md
+  - name: WebUI "Oops" error message in StorSimple
+    href: storsimple-user-receives-web-ui-error.md
 
 
 - name:  Support Diagnostic Packages
@@ -118,6 +115,8 @@
     href: sdp329e28228-4a40-4205-bc9b-9886e51ba77d-windows-vm.md
   - name: Container support policy
     href: support-policy-containers.md
+- name: Deploy TLS 1.2 in Azure Pack
+  href: tls-support-deployment-guide.md
   - name: Diagnostic logs for SQL Server 
     href: sql-vm-logs.md
   - name: Logs collected by Azure VM troubleshooter
