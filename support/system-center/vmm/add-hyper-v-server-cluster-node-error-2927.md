@@ -52,7 +52,7 @@ To configure exclusions of the antivirus software, follow these steps:
    - `%systemroot%\cluster\clussvc.exe`
    - `%systemroot%\system32\vds.exe`
    - Directories and files that are listed in [Hyper-V: Anti-Virus Exclusions for Hyper-V Hosts](https://social.technet.microsoft.com/wiki/contents/articles/2179.hyper-v-anti-virus-exclusions-for-hyper-v-hosts.aspx)
-   - Directories and files that are listed in [Virtual machines are missing, or error 0x800704C8, 0x80070037, or 0x800703E3 occurs when you try to start or create a virtual machine](../windows-server/virtualization/vm-missing-0x800704c8-0x80070033-0x800703e3.md)
+   - Directories and files that are listed in [Virtual machines are missing, or error 0x800704C8, 0x80070037, or 0x800703E3 occurs when you try to start or create a virtual machine](../../windows-server/virtualization/vm-missing-0x800704c8-0x80070033-0x800703e3.md)
    - Directories and files that are listed in [Virus scanning recommendations for Enterprise computers that are running currently supported versions of Windows](https://support.microsoft.com/help/822158)
    - Directories and files that are listed in [Microsoft Anti-Virus Exclusion List](https://social.technet.microsoft.com/wiki/contents/articles/953.microsoft-anti-virus-exclusion-list.aspx)
 
