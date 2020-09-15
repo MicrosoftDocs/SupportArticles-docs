@@ -17,7 +17,7 @@ additionalContent:
 
       - title: Configuration Manager
         summary: Troubleshooting articles for Configuration Manager
-        url: configmgr/backups-fail-with-vss-provider-issue.md
+        url: configmgr/toc.yml
 
       - title: Microsoft Message Queuing
         summary: Troubleshooting articles for Microsoft Message Queuing
