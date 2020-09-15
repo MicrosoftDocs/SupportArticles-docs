@@ -6,12 +6,16 @@
     href: configure-app-protection-access-denied.md
   - name: Access denied for app protection options
     href: app-protection-options-access-denied.md
+  - name: App installation failed error
+    href: app-installation-failed-error.md
   - name: Apps don't appear as Available
     href: apps-appear-unavailable.md
   - name: Can't attach photos due to IO error
     href: android-enterprise-enrolled-devices-fails-attaching-photo.md
   - name: Can't create messages in Outlook for Android
     href: creating-message-action-not-allowed.md
+  - name: Can't save corporate data in WIP-allowed apps
+    href: corporate-data-unsaved-in-wip-allowed-apps.md
   - name: Can't sync apps to Intune
     href: apps-fail-sync-to-intune.md
   - name: Can't uninstall apps installed from the App Store
@@ -76,8 +80,12 @@
     href: password-expiration-setting-not-working.md
   - name: Restrict USB devices with administrative templates
     href: restrict-usb-with-administrative-template.md
+  - name: SIP address and password can't be saved
+    href: sip-address-password-not-saved.md
   - name: Troubleshoot CSP custom settings
     href: troubleshoot-csp-custom-settings.md
+  - name: Users can't log on to Windows 10 computers with multi-app kiosk profile assigned
+    href: users-cannot-logon-windows-multi-app-kiosk.md
   - name: Windows feature updates are not offered
     href: windows-feature-updates-never-offered.md
 - name: Device enrollment
@@ -88,6 +96,8 @@
       href: device-ownership-changed-to-corporate.md
   - name: Can't update enrollment
     href: cannot-update-enrollment.md
+  - name: Devices try to enroll in a canceled Intune subscription
+    href: devices-enroll-canceled-intune-subscription.md
   - name: iOS/iPadOS enrollment
     items:
     - name: Auto-enrollment doesn't start on Apple DEP devices
