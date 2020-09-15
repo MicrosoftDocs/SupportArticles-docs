@@ -115,8 +115,8 @@
     href: sdp329e28228-4a40-4205-bc9b-9886e51ba77d-windows-vm.md
   - name: Container support policy
     href: support-policy-containers.md
-- name: Deploy TLS 1.2 in Azure Pack
-  href: tls-support-deployment-guide.md
+  - name: Deploy TLS 1.2 in Azure Pack
+    href: tls-support-deployment-guide.md
   - name: Diagnostic logs for SQL Server 
     href: sql-vm-logs.md
   - name: Logs collected by Azure VM troubleshooter
