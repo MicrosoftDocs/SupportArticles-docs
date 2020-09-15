@@ -1,6 +1,6 @@
 - name: Welcome
-href: welcome-foxpro.md
-- name: Configuration Manager
+  href: welcome-foxpro.md
+- name: Visual FoxPro
   items:
   - name: A cursor-based grid is blank
     href: cursor-based-grid-blank.md
