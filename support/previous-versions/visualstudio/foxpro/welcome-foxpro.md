@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting documentation
+title: Troubleshooting Visusl FoxPro documentation
 description: This article lists Knowledge Base (KB) and other Support articles for Visusl FoxPro.
 ms.topic: article
 ms.date: 09/11/2020
