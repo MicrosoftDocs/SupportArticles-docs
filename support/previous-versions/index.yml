@@ -10,8 +10,6 @@ metadata:
 
 additionalContent:
   sections:
-    - title: sectiontitle # < 60 chars (optional)
-      summary: sectionsummary # < 160 chars (optional)
       items:
         # Card
         - title: cardtitle1
