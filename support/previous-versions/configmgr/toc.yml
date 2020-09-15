@@ -1,8 +1,3 @@
-- name: Welcome
-  href: ../welcome-previous-versions.md
-
-- name: Configuration Manager
-  items:
   - name: Backups fail with Win32 Error = 145
     href: backups-fail-with-vss-provider-issue.md
   - name: Clients are assigned to the wrong site code
