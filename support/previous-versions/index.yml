@@ -11,13 +11,13 @@ metadata:
 additionalContent:
   sections:
     - items:
-      - title: Configuration Manager
-        summary: Troubleshooting articles for Configuration Manager
-        url: configmgr/backups-fail-with-vss-provider-issue.md
-
       - title: .NET Framework
         summary: Troubleshooting articles for .NET Framework
         url: dotnet/framework/64-bit-app-fails-access-violation-clr-marshaling.md
+
+      - title: Configuration Manager
+        summary: Troubleshooting articles for Configuration Manager
+        url: configmgr/backups-fail-with-vss-provider-issue.md
 
       - title: Microsoft Message Queuing
         summary: Troubleshooting articles for Microsoft Message Queuing
