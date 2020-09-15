@@ -913,6 +913,10 @@
       href: ../project/project-publish-jobs-not-complete.md
     - name: Removed users are not inactivated
       href: ../project/removed-erp-group-user-activated.md
+    - name: Resource plan using FTE calculates unexpectedly
+      href: ../project/resource-plan-fte-calculate-unexpected.md
+    - name: Running macro automatically
+      href: ../project/running-macro-automatically-when-starting.md
     - name: SharePoint task list sync job fails when Project is published
       href: ../project/sharepoint-task-list-sync-job-fails-when-project-published.md
     - name: Show fiscal dates on a timescaled view
@@ -1003,6 +1007,8 @@
       href: ../word/damaged-documents-in-word.md
     - name: Image DPI is changed after you print to PDF
       href: ../word/image-dpi-change-after-print-to-pdf.md
+    - name: In-place edit of an embedded Word document with ActiveX control causes flickering
+      href: ../word/embedded-doc-with-activex-control-flickers.md
     - name: Issues when start or use Word
       href: ../word/issues-when-start-or-use-word.md
     - name: Mail merge issue
