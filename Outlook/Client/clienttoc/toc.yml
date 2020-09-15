@@ -47,6 +47,8 @@
       href: ../calendaring/room-finder-is-not-available-shared-calendars-outlook.md
     - name: Send Update is missing when copying meetings
       href: ../calendaring/send-update-missing-copy-meeting.md
+    - name: Unable to view free/busy information
+      href: ../calendaring/cannot-view-free-busy-information.md
   - name: Connectivity
     items:
     - name: "\"There is a problem with the proxy server's security certificate\" error"
