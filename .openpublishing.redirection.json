@@ -121,8 +121,8 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "index.md",
-      "redirect_url": "/support/previous-versions/welcome-previous-versions",
+      "source_path": "support/previous-versions/index.md",
+      "redirect_url": "/support/welcome-previous-versions",
       "redirect_document_id": false
     }
   ]
