@@ -69,6 +69,11 @@ productDirectory:
     imageSrc: "https://static.docs.com/ui/media/product/azure/azure.svg"
     summary: Troubleshooting articles for Azure 
     url: azure/index.yml
+
+  - title: Previous Versions
+    imageSrc: "media/hub-landing/MEM.jpg"
+    summary: Troubleshooting articles for previous versions of products
+    url: previous-versions/welcome-previous-versions.md
       
 # conceptualContent:
 

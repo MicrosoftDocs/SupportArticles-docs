@@ -1,5 +1,5 @@
 - name: Welcome
-  href: ../welcome-previous-versions.md
+  href: welcome-previous-versions.md
 
 - name: Configuration Manager
   href: ./configmgr/toc.yml
