@@ -1,5 +1,61 @@
+- name: Azure Automation
+  items:
+  - name: Automation modifications aren't reflected in the portal
+    href: modifications-not-reflect-portal.md
+  - name: Capture debug stream
+    href: capture-debug-stream.md
+  - name: Capture diagnostics information
+    href: automation-scripted-diagnostic-capture.md
+  - name: Find-AzureRmResource returns error
+    href: find-azurermresource-fails.md
+  - name: Reinstall Operations Management Suite Agent
+    href: reinstall-oms-agent-linux.md
+
+
+- name: Azure API Management
+  items:
+  - name: APIM troubleshooting series
+    href: apim-troubleshooting-series.md
+  - name: Blank response is returned
+    href: api-return-blank-response.md
+  - name: HTTP 403 - Forbidden issues
+    href: request-throttling-http-403.md
+  - name: HTTP 404 and 500 status codes
+    href: soap-based-api-return-404-http-code.md
+  - name: Performance issues in API calls
+    href: performance-hit-api-calls.md
+  - name: Unauthorized errors (401)
+    href: unauthorized-errors-invoke-apis.md
+
+- name: Azure Portal
+  items:
+- name: Delete button doesn't work
+  href: delete-button-not-work-portal.md
+- name: Enterprise Agreement user can't create a VM
+  href: cannot-create-vm-ea.md
+- name: Fail to sign up for an Azure subscription
+  href: cannot-sign-up-subscription.md
+- name: Users and groups lists disappear
+  href: cannot-see-users-groups-list-iam.md
+
+
+- name: Azure Stack
+  items:
+  - name: Side-channel vulnerabilities protection
+    href: side-channel-vulnerabilities.md
+  - name: Warning message occurs in Azure Stack version 1807
+    href: pending-service-account-password-expiration.md
+
 - name: Cloud Platform System
   items:
+  - name: Apply out-of-band updates
+    href: apply-out-of-band-updates-to-cps.md
+  - name: Enable BitLocker in Cloud Platform System
+    href: how-to-enable-bitlocker-in-cloud-platform-system.md
+  - name: Firmware version matrix for Cloud Platform System Premium
+    href: firmware-version-matrix.md
+  - name: Renew Windows Azure Pack authentication sites certificates
+    href: how-to-renew-windows-azure-pack-authentication-sit.md
   - name: Update 1610 for Cloud Platform System Premium
     href: update-1610-cps-premium.md
   - name: Update 1603 for Cloud Platform System Premium
@@ -14,14 +70,20 @@
     href: cloud-platform-system-1.0-update-2.md
   - name: Update 2.1 for Cloud Platform System Premium
     href: update-2.1-for-cloud-platform-system-premium.md
-  - name: Apply out-of-band updates
-    href: apply-out-of-band-updates-to-cps.md
-  - name: Enable BitLocker in Cloud Platform System
-    href: how-to-enable-bitlocker-in-cloud-platform-system.md
-  - name: Renew Windows Azure Pack authentication sites certificates
-    href: how-to-renew-windows-azure-pack-authentication-sit.md
-  - name: Firmware version matrix for Cloud Platform System Premium
-    href: firmware-version-matrix.md
+
+
+- name: Site Recovery
+  items:
+  - name: Azure Recovery Services Agent is outdated
+    href: backup-service-mars-agent-versions-not-match.md
+  - name: Azure Recovery Services Agent update failed
+    href: upgrade-mars-agent.md
+  - name: Disable TLS 1.0 for PCI compliance
+    href: asr-agent-disable-tls-pci-compliance.md
+  - name: Fail to back up using Azure Recovery Services Agent
+    href: mars-agent-system-state-backup-failure.md
+  - name: Unsupported Features and Platforms in Recovery Services Scout 8.0.1
+    href: unsupported-features-and-platforms-post-upgrade.md
 
 - name: Storage
   items:
@@ -34,33 +96,41 @@
   - name: Optimize CreateFile function
     href: optimize-createfile-function.md
 
-- name: Site Recovery
-  items:
-  - name: Unsupported Features and Platforms in Recovery Services Scout 8.0.1
-    href: unsupported-features-and-platforms-post-upgrade.md
-  - name: Azure Recovery Services Agent update failed
-    href: upgrade-mars-agent.md
-
-- name: WebUI "Oops" error message in StorSimple
-  href: storsimple-user-receives-web-ui-error.md
 - name: App Service Compliance with PCI Standards 3.0 and 3.1
   href: app-service-compliance-wit.md
+- name: Can't load VM metrics
+  href: problem-occur-loading-metrics.md
+- name: Deploy TLS 1.2 in Azure Pack
+  href: tls-support-deployment-guide.md
+- name: Loading error occurs in Azure Data Factory
+  href: loading-error-data-factory.md
 - name: Method invocation failed in Azure PowerShell
   href: method-invocation-failed-error-azure-powershell.md
-- name: Automation modifications aren't reflected in the portal
-  href: modifications-not-reflect-portal.md
+- name: WebUI "Oops" error message in StorSimple
+  href: storsimple-user-receives-web-ui-error.md
+
 
 - name:  Support Diagnostic Packages
   items:
-  - name: Recovery Services troubleshooter
-    href: sdp-321382d70-df1d-4c0c-bdc6-9ba62752e851-asr.md
-  - name: Azure VM troubleshooter
-    href: sdp329e28228-4a40-4205-bc9b-9886e51ba77d-windows-vm.md
-  - name: Logs collected by Azure VM troubleshooter
-    href: sdp329e28228-4a40-4205-bc9b-9886e51ba77d-windows-vm.md
-  - name: Virtual Network troubleshooter
-    href: sdp3fdcb6045-5616-45b4-bb68-0bd11081c184-vnet.md
   - name: Azure Service Fabric troubleshooter
     href: fabric-logs.md
+  - name: Azure VM troubleshooter
+    href: sdp329e28228-4a40-4205-bc9b-9886e51ba77d-windows-vm.md
+  - name: Container support policy
+    href: support-policy-containers.md
+  - name: Diagnostic logs for SQL Server 
+    href: sql-vm-logs.md
+  - name: Logs collected by Azure VM troubleshooter
+    href: sdp329e28228-4a40-4205-bc9b-9886e51ba77d-windows-vm.md
+  - name: Recovery Services troubleshooter
+    href: sdp-321382d70-df1d-4c0c-bdc6-9ba62752e851-asr.md
+  - name: Support request creation process
+    href: region-access-request-process.md
+  - name: Troubleshoot Azure Information Protection policy issues
+    href: troubleshoot-aip-issues.md
+  - name: Virtual Network troubleshooter
+    href: sdp3fdcb6045-5616-45b4-bb68-0bd11081c184-vnet.md
+  - name: Troubleshoot high CPU or disk usage issues
+    href: diagnose-high-cpu-disk-perfinsights.md
   - name: Use Secure File Exchange to exchange files
     href: secure-file-exchange-transfer-files.md
