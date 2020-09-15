@@ -1,7 +1,7 @@
 ---
 title: How to download and run Office 2019 installation files not in VLSC
 ms.author: v-todmc
-author: todmccoy
+author: McCoyBot
 manager: dcscontentpm
 ms.date: 03/03/2020
 audience: Admin
@@ -66,7 +66,7 @@ Follow the steps below to download and install your Office 2019 software or appl
 ![Select Create.](./media/how-to-download-office-install-not-in-vlsc/how-to-download-install-6.png)
 8. Under **Products and releases**, select 64-bit.
     > [!NOTE]
-    > For more information, see [Choose between the 64-bit or 32-bit version of Office](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsupport.office.com%2Farticle%2F2dee7807-8f95-4d0c-b5fe-6c6f49b8d261&data=02%7C01%7Cv-todmc%40microsoft.com%7C030ab528e68a485acb1108d7ba1a1d08%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637182493694076213&sdata=lH9TkVNnkRbeQhvN3Non0K0rafsMWwbxESmunbbsYOc%3D&reserved=0).
+    > For more information, see [Choose between the 64-bit or 32-bit version of Office](https://support.microsoft.com/office/2dee7807-8f95-4d0c-b5fe-6c6f49b8d261).
 
    ![Select the 32-bit or 64-bit option.](./media/how-to-download-office-install-not-in-vlsc/how-to-download-install-7.jpg)
 9. Then, select the product or app that you want to deploy and select **Next**.

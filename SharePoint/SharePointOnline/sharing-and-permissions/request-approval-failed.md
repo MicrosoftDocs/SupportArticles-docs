@@ -83,10 +83,10 @@ If the Owners group is changed or was removed from the **Access requests** list,
 
 1. In the browser address bar, enter **https://contoso.sharepoint.com>/_layouts/15/ListEdit.aspx?List=<{GUID}>**.
 
-    Example: https://contoso.sharepoint.com/_layouts/15/listedit.aspx?List=d078a4df-3c52-4b23-8c28-e9561a243f0c
+    Example: `https://contoso.sharepoint.com/_layouts/15/listedit.aspx?List=d078a4df-3c52-4b23-8c28-e9561a243f0c`
 
     > [!NOTE]
-    > In this address, represents the URL for the site collection in which you want to change the access requests (for example, https://contoso.sharepoint.com). And <{GUID}> represents the GUID that you copied in step 6.
+    > In this address, represents the URL for the site collection in which you want to change the access requests (for example, `https://contoso.sharepoint.com`). And <{GUID}> represents the GUID that you copied in step 6.
 
 1. On the **Settings** page, click **Permissions for this list**.
 

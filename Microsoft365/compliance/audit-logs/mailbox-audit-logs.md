@@ -71,9 +71,9 @@ To run the script, follow these steps:
         elseif ($SearchResults.count -gt 0)
         {
         $Date = get-date -Format yyMMdd_HHmmss
-        $OutFileName = 'AuditLogResults$Date.csv'
+        $OutFileName = "AuditLogResults$Date.csv"
         write-host
-        write-host -fore green 'Posting results to file: $OutfileName'
+        write-host -fore green "Posting results to file: $OutfileName"
         $SearchResults | export-csv $OutFileName -notypeinformation -encoding UTF8
         }
         }
@@ -104,7 +104,7 @@ To run the script, follow these steps:
 1. On the **File** menu, click **Save As**.
 1. In the **Save as type** box, click **All File**.
 1. In the **File name** box, type **Run-MailboxAuditLogSearcher.ps1**, and then click **Save**.
-1. Start Windows PowerShell, and then connect to Windows Remote PowerShell.
+1. Start Windows PowerShell, and then connect to [Windows Remote PowerShell](https://docs.microsoft.com/powershell/scripting/learn/remoting/running-remote-commands?view=powershell-7).
 1. Locate the directory in which you saved the script, and then run the script.
 
     ```powershell
@@ -166,7 +166,7 @@ To enable owner audit logging, follow these steps:
 1. Enable the owner audit logging. To do this, run the following cmdlet:
 
     ```powershell
-    Set-Mailbox <useridentity> -AuditOwner "Create,HardDelete,Move,MoveToDeletedItems,SoftDelete,Update&quot
+    Set-Mailbox <useridentity> -AuditOwner "Create,HardDelete,Move,MoveToDeletedItems,SoftDelete,Update"
     ```
 
 1. Rerun the **Run-MailboxAuditLogSearcher.ps1**, and review the data.
@@ -187,7 +187,7 @@ The following list describes optional parameters that generate different results
   For example, the following cmdlet searches the "Test User 1" mailbox and includes all operations:
 
     ```powershell
-    .\Run-MailboxAuditLogSearcher.ps1 -IncludeFolderBind -Mailbox "&ltTest User 1gt;" -StartDate "&lt04/10/17gt;" -EndDate "&lt04/27/17gt;&quot
+    .\Run-MailboxAuditLogSearcher.ps1 -IncludeFolderBind -Mailbox "<Test User 1gt;" -StartDate "<04/10/17gt;" -EndDate "<04/27/17gt;&quot
     ```
 
 - **Subject**: When you use this switch, you can specify the subject of an item in order to limit the search for operations that are performed on that item.
@@ -195,7 +195,7 @@ The following list describes optional parameters that generate different results
   For example, the following cmdlet filters out all output except items that have the subject set as 'Good News':
 
     ```powershell
-    .\Run-MailboxAuditLogSearcher.ps1 -Subject "<Good News>" -Mailbox "&lttest1@contoso.comgt;" -StartDate "&lt04/10/17gt;" -EndDate "&lt04/27/17gt;&quot
+    .\Run-MailboxAuditLogSearcher.ps1 -Subject "<Good News>" -Mailbox "<test1@contoso.comgt;" -StartDate "<04/10/17gt;" -EndDate "<04/27/17gt;&quot
     ```
 
 - **ReturnObject**: When you use this switch, the result is displayed on the screen, but it is not exported to a .csv file.
@@ -203,7 +203,7 @@ The following list describes optional parameters that generate different results
   For example, the following cmdlet displays the output on the screen:
 
     ```powershell
-    .\Run-MailboxAuditLogSearcher.ps1 -ReturnObject -Mailbox "&ltTest User 1gt;" -StartDate "&lt04/10/17gt;" -EndDate "&lt04/27/17gt;&quot
+    .\Run-MailboxAuditLogSearcher.ps1 -ReturnObject -Mailbox "<Test User 1gt;" -StartDate "<04/10/17gt;" -EndDate "<04/27/17gt;&quot
     ```
 
 ### Exported columns from the .csv file

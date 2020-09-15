@@ -1,7 +1,7 @@
 ---
 title: SharePoint Online service process schedule temporary change 
 ms.author: v-todmc
-author: todmccoy
+author: McCoyBot
 manager: dcscontentpm
 ms.date: 2/5/2019
 audience: Admin
@@ -54,10 +54,6 @@ The following documents provide best practice guidance for getting maximize thro
 
 Some background processes that manage new media (such as images and videos) may now be processed during evening and weekend hours. 
 Modified processes include: 
-
-- **360-file views.** New file uploads will not be available until the process has run after hours. 
-- **Automatic metadata tagging of images and files that include metadata.** For example, if you upload an image or file and tag it with the word "tree," the item will not be tagged with metadata until the process has run after hours.  
-- **New documents in Office Online.** Recently edited Office documents may require additional loading time when you view the document in Office Online.
 - **Video resolution.** Users may experience reduced video resolution for playback videos. 
 - **Displaying large thumbnails.** Choosing to "display items by using large thumbnails" for OneDrive Files On-Demand will display generic icons instead.
   > [!NOTE]
@@ -78,4 +74,4 @@ There is no workaround at this time. We will continue to listen to your feedback
 We will provide further updates to this post as the situation develops.
 
 
-Still need help? Go to [Microsoft Community](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fanswers.microsoft.com%2F&data=02%7C01%7Cv-todmc%40microsoft.com%7C98910814456c474880f108d7cf62d97d%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637205895885805857&sdata=9%2FYStDGvrU5ZIYXB7guowmaPlKazab0U%2BTpiBIItDaQ%3D&reserved=0).
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

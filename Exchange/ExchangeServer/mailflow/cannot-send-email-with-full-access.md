@@ -58,7 +58,7 @@ And if you are running Outlook in Online mode, you receive the following error m
 
 **You do not have the permission to send the message on behalf of the specified users.**    
 
-![You do not have the permission to send the message on behalf of the specified users.](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4055369_en_1)  
+![You do not have the permission to send the message on behalf of the specified users.](./media/cannot-send-email-with-full-access/error-message.png)  
 
 ## Cause
 

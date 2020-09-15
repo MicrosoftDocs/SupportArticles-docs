@@ -1,14 +1,13 @@
 ---
 title: Unable to configure and register a workflow manager
 ms.author: v-todmc
-author: todmccoy
+author: McCoyBot
 manager: dcscontentpm
 localization_priority: Normal
 ms.date: 8/1/2019
 ms.audience: Admin
 ms.topic: article
 ms.service: sharepoint-server
-localization_priority: Normal
 ms.custom: CSSTroubleshoot
 search.appverid:
 - SPO160

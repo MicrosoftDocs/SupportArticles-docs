@@ -9,7 +9,6 @@ search.appverid:
 audience: ITPro
 ms.topic: article
 ms.prod: office-perpetual-itpro
-localization_priority: Normal
 ms.custom: CSSTroubleshoot
 appliesto:
 - Microsoft Excel
@@ -41,4 +40,4 @@ If you must use SQL authentication, follow these steps if you have SharePoint an
 1. Configure a schedule to refresh the data. You can put the SQL Server username and password in the schedule. These values are never readable by users.
 1. Have users use the workbook.
 
-The previous method is vastly superior to saving the password in the workbook.  The password won’t be visible to anyone, only the workbook author can know the password. The data is only refreshed one time per day or whatever interval is set in the schedule. This is a large performance gain. Without scheduled data refresh, the data refresh processes might be done by every user who opens the workbook multiple times. With scheduled data refresh, it only happens one time per time period.
+The previous method is vastly superior to saving the password in the workbook.  The password won't be visible to anyone, only the workbook author can know the password. The data is only refreshed one time per day or whatever interval is set in the schedule. This is a large performance gain. Without scheduled data refresh, the data refresh processes might be done by every user who opens the workbook multiple times. With scheduled data refresh, it only happens one time per time period.

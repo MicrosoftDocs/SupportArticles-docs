@@ -1,11 +1,11 @@
 - name: OneDrive for Business Troubleshooting
-  href: ../onedrive.md
+  href: ../onedrive-welcome.md
   items:
   - name: List and Libraries
     items:
     - name: 401 error when Graph API access OneDrive data
       href: ../lists-and-libraries/401-error-when-using-graph-api-to-access-data.md
-    - name: Can’t open online-only file error when opening a file in OneDrive
+    - name: Can't open online-only file error when opening a file in OneDrive
       href: ../sync/cant-open-online-only-file.md
   - name: Security
     items:
@@ -15,13 +15,11 @@
       href: ../../SharePointOnline/Security/problem-with-your-account.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
   - name: Search
     items:
-    - name: Near-duplicate items aren't listed in SharePoint Online or SharePoint Server 2013 on-premises search results
-      href: ../../SharePointOnline/search/near-duplicate-items-are-not-listed-in-search-results.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Search doesn't provide results from another language
       href: ../../SharePointOnline/Search/no-search-results-from-another-language.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
   - name: Set up
     items:
-    - name: OneDrive for Business stopped at "Setting up..." screen
+    - name: Stop at "Setting up..." screen
       href: ../setup/onedrive-stopped-at-setting-up-screen.md
   - name: Sharing and Permissions
     items:
@@ -33,7 +31,7 @@
     items:
     - name: Top navigation bar displays either Sites or Newsfeed instead of OneDrive
       href: ../../SharePointOnline/sites/office-365-top-navigation-bar-displays-either-sites-or-newsfeed.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
-    - name: Troubleshooting guide to OneDrive for Business sites stopped at provisioning stage
+    - name: Troubleshooting guide stops at provisioning stage
       href: ../../SharePointOnline/sites/troubleshooting-guide-for-sites-stopped-at-provisioning.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
   - name: Sync
     items:
@@ -41,5 +39,7 @@
       href: ../sync/onedrive-for-business-sync-returns-error.md
     - name: Enable co-authoring for OneDrive-synced files
       href: ../sync/enable-co-authoring-for-onedrive-synced-file.md
-
-      
+    - name: Troubleshoot sync issues
+      href: ../sync/troubleshoot-sync-issues.md
+    - name: Upload blocked error in OneDrive
+      href: ../sync/upload-blocked-error-in-o365.md

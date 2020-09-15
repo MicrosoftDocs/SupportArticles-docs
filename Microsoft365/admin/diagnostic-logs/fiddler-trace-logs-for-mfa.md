@@ -44,7 +44,7 @@ MFA starts after the user's password has been verified by Azure AD or STS. The S
 
     Set-Cookie: SANeeded=1; domain=login.microsoftonline.com;secure= ;path=/;HTTPOnly= ;version=1 
 ### Scenario 1: Working MFA scenarios 
-The SANeeded=1 cookie is set after password authentication. Network traffic is then redirected to the endpoint: [https://login.microsoftonline.com/StrongAuthCheck.srf?](https://login.microsoftonline.com/strongauthcheck.srf), and available authentication methods are requested.
+The SANeeded=1 cookie is set after password authentication. Network traffic is then redirected to the endpoint: `https://login.microsoftonline.com/StrongAuthCheck.srf`, and available authentication methods are requested.
 
 ![authentication method](./media/fiddler-trace-logs-for-mfa/authentication-method.png)
 
@@ -80,4 +80,4 @@ Solution: In an Azure MFA scenario with an Azure subscription, you can unblock b
 If MFA is enabled through Office 365, open a support case with Microsoft to unblock it. 
 
 ### Scenario 5: MFA for managed accounts
-In this situation, authentication remains the same, but the endpoints will be [https://login.microsoftonline.com/common/SAS/BeginAuth](https://login.microsoftonline.com/common/sas/beginauth) and [https://login.microsoftonline.com/common/SAS/EndAuth](https://login.microsoftonline.com/common/sas/endauth) instead of [https://login.microsoftonline.com/StrongAuthCheck.srf](https://login.microsoftonline.com/strongauthcheck.srf)? as for the federated accounts.
+In this situation, authentication remains the same, but the endpoints will be [https://login.microsoftonline.com/common/SAS/BeginAuth](https://login.microsoftonline.com/common/sas/beginauth) and [https://login.microsoftonline.com/common/SAS/EndAuth](https://login.microsoftonline.com/common/sas/endauth) instead of `https://login.microsoftonline.com/StrongAuthCheck.srf` as for the federated accounts.

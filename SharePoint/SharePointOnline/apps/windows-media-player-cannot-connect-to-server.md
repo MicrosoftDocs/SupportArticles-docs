@@ -49,7 +49,7 @@ To add the affected SharePoint Online URL or URLs to your **Trusted sites** zone
 
     ![The Security tab in Internet Options](./media/windows-media-player-cannot-connect-to-server/internet-options.jpg)
 
-1. In the **Add this website to the zone** box, type the URL for the SharePoint Online site that you want to add to the **Trusted sites** zone, and then click **Add**. For example, type https://contoso.sharepoint.com. (Here, the **contoso** placeholder represents the domain that you use for your organization.) Repeat this step for any additional sites that you want to add to this zone.
+1. In the **Add this website to the zone** box, type the URL for the SharePoint Online site that you want to add to the **Trusted sites** zone, and then click **Add**. For example, type `https://contoso.sharepoint.com`. (Here, the **contoso** placeholder represents the domain that you use for your organization.) Repeat this step for any additional sites that you want to add to this zone.
 
    ![Trusted sites dialog box](./media/windows-media-player-cannot-connect-to-server/trusted-sites.jpg)
 

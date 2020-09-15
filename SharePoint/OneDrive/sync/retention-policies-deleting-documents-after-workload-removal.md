@@ -1,14 +1,13 @@
 ---
 title: Documents deleted by retention policy after workload is removed
 ms.author: v-todmc
-author: todmccoy
+author: McCoyBot
 manager: dcscontentpm
 localization_priority: Normal
 ms.date: 06/10/2020
 ms.audience: Admin
 ms.topic: article
 ms.prod: onedrive
-localization_priority: Normal
 ms.custom: 
 - CSSTroubleshoot
 - CI 119743
@@ -23,11 +22,13 @@ appliesto:
 
 # A retention policy deletes documents after workload is removed from the policy
 
+> [!NOTE]
+> This issue was resolved on June 19, 2020 and should no longer affect retention policies.
+
 If a retention policy is set up for specific workloads such as SharePoint Online, OneDrive for Business, or Exchange Online, but the OneDrive for Business workload is removed from it at a later time, the actions that are generated to comply with the policy continue to run until they are finished. 
 
 For example, a retention policy is enabled to move all OneDrive for Business documents that are created before a specific date to the Recycle Bin. If this policy is later disabled for OneDrive for Business, it will not stop the documents from continuing to be moved to the Recycle Bin. 
 
-Microsoft is researching ways to improve this experience and will post more information in this article when the information becomes available. 
 
 ## More information
 

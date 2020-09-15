@@ -1,7 +1,7 @@
 ---
-title: Can't open Office files from SharePoint Online
+title: Can't open Office files from SharePoint Online or OneDrive for Business
 ms.author: v-todmc
-author: todmccoy
+author: McCoyBot
 manager: dcscontentpm
 ms.date: 2/7/2019
 audience: Admin
@@ -24,7 +24,7 @@ description: "What to do if you can't open Office files from a SharePoint Online
 
 ## Summary
 
-At times you may have difficulty opening Office files and documents from SharePoint in your local Office clients.
+At times you may have difficulty opening Office files and documents from SharePoint or OneDrive for Business in your local Office clients.
 
 
 ## More information

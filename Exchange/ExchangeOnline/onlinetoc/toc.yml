@@ -1,5 +1,5 @@
 - name: Exchange Online Troubleshooting
-  href: ../exchange-online.md
+  href: ../exchange-online-welcome.md
   items:
   - name: Active Sync
     items:
@@ -13,6 +13,8 @@
     items:
     - name: Can't manage Send on Behalf permissions
       href: ../administration/send-on-behalf-for-shared-mailbox.md
+    - name: GetFolder requests return wrong TotalCount values
+      href: ../administration/getfolder-requests-return-wrong-totalcount-values.md
   - name: Antispam
     items:
     - name: Cautions against bypassing spam filters
@@ -29,6 +31,12 @@
       href: ../configure-mailboxes/cannot-remove-mailbox-permission-office-365.md
     - name: Enable or disable POP3, IMAP, MAPI, OWA or ActiveSync
       href: ../configure-mailboxes/pop3-imap-owa-activesync-office-365.md
+    - name: How to create and manage resource mailboxes
+      href: ../configure-mailboxes/create-and-manage-resource-mailboxes.md
+    - name: Mailbox provision delays
+      href: ../configure-mailboxes/delays-provision-mailbox-sync-changes.md
+    - name: Restore user mailboxes by using cmdlets
+      href: ../configure-mailboxes/mailbox-recovery-in-exchange-online.md
     - name: Set automatic replies
       href: ../configure-mailboxes/set-automatic-replies.md
   - name: Connecting to the Service
@@ -81,7 +89,7 @@
       href: ../email-alias/remove-an-email-alias.md
   - name: Groups
     items:
-    - name: Cannot determine group type
+    - name: Can't determine group type
       href: ../groups/cannot-determine-group-type-error.md
     - name: Common tasks to manage O365 groups
       href: ../groups/o365-group-tasks.md
@@ -91,12 +99,18 @@
       href: ../groups/no-sufficient-permissions-moving-dg.md
   - name: Mailbox Migration
     items:
+    - name: "\"MAPI provider is not supported\" error in Exchange Online"
+      href: ../mailbox-migration/new-migrationendpoint-returns-error.md
     - name: Issue with Add-RecipientPermission
       href: ../mailbox-migration/issue-with-add-recipientpermission-cmdlet.md
     - name: Migrate data with Admin Center
       href: ../mailbox-migration/migrate-data-with-admin-center.md
     - name: No smtp proxy matching
       href: ../mailbox-migration/no-smtp-proxy-matching.md
+    - name: Troubleshoot issues with IMAP mailbox migration
+      href: ../mailbox-migration/troubleshoot-issues-with-imap-mailbox-migration.md
+    - name: Troubleshoot mailbox migration issues
+      href: ../mailbox-migration/troubleshoot-migration-issues-in-exchange-hybrid.md
     - name: WhenCreated date is changed
       href: ../mailbox-migration/whencreated-date-changed.md
   - name: Mailflow
@@ -105,6 +119,8 @@
       href: ../mailflow/tenantattribution-ndr.md
     - name: Automatically forward email in transport rule
       href: ../mailflow/autoforward-mail-exclusions-not-honored-transport-rule.md
+    - name: Inbox rule to forward emails doesn't work
+      href: ../mailflow/inbox-rule-to-forward-messages-not-work.md
   - name: Mail Delivery
     items:
     - name: 554 5.2.0 STOREDRV.Deliver.Exception
@@ -118,48 +134,48 @@
   - name: Meetings
     items:
     - name: No conference rooms with Room Finders
-      href: ../meetings/conference-rooms-not-dispalyed.md
+      href: ../meetings/conference-rooms-not-displayed.md
   - name: Modern Authentication
     items:
+    - name: Can't connect to Outlook using POP/IMAP
+      href: ../modern-authentication/cannot-connect-mailbox-pop-imap-outlook.md
     - name: Transition from D/ITAR to vNext
       href: ../modern-authentication/modern-authentication-configuration.md
   - name: Move Mailboxes
     items:
     - name: Can't see free/busy information
       href: ../move-mailboxes/cannot-see-free-busy-information.md
-  - name: Outlook Connectivity
-    items:
-    - name: Resources to fix connection issues
-      href: ../outlook-connectivity/office-365-troubleshooting-resources.md
-    - name: Sending and receiving email
-      href: ../outlook-connectivity/outlook-connection-issues.md
-  - name: Outlook Profiles
+  - name: Outlook Issues
     items:
     - name: Can't set up profile with Autodiscover
-      href: ../outlook-profiles/cannot-set-up-profile-autodiscover.md
+      href: ../outlook-issues/cannot-set-up-profile-autodiscover.md
     - name: Encrypted connection unavailable
-      href: ../outlook-profiles/encrypted-connection-unavailable.md
-  - name: Outlook Crashes
-    items:
+      href: ../outlook-issues/encrypted-connection-unavailable.md
     - name: Issues with crash or stop responding
-      href: ../outlook-crashes/crash-issues.md
-  - name: OWA Attachments
+      href: ../outlook-issues/crash-issues.md
+    - name: Resources to fix connection issues
+      href: ../outlook-issues/office-365-troubleshooting-resources.md
+    - name: Sending and receiving email
+      href: ../outlook-issues/outlook-connection-issues.md
+  - name: OWA Issues
     items:
     - name: Can't open or view attachments
-      href: ../owa-attachments/cannot-open-attachments.md
-  - name: OWA Time Zones
-    items:
+      href: ../owa-issues/cannot-open-attachments.md
     - name: Incorrect time zone in OWA
-      href: ../owa-time-zones/incorrect-setting.md
+      href: ../owa-issues/incorrect-setting.md
     - name: Incorrect time zone in read receipt
-      href: ../owa-time-zones/read-receipt-incorrect-timezone.md
+      href: ../owa-issues/read-receipt-incorrect-timezone.md
+    - name: Missing search results items
+      href: ../owa-issues/items-missing-search-results.md
   - name: Public Folders
     items:
-    - name: Can’t add reviewer permission to calendars
+    - name: Can't add reviewer permission to calendars
       href: ../public-folders/add-reviewer-permission-public-folder-calendar-powershell.md
-    - name: Can’t apply permissions to subfolders
+    - name: Can't apply permissions to subfolders
       href: ../public-folders/can’t-apply-permissions-public-folder-subfolders.md
-    - name: Can’t delete items
+    - name: Can't connect to public folders via Outlook or OWA
+      href: ../public-folders/outlook-or-owa-cannot-connect-to-public-folders.md
+    - name: Can't delete items
       href: ../public-folders/cannot-delete-items-public-folder.md
     - name: MEPF synchronization issues
       href: ../public-folders/mepf-sync-failures-script.md
@@ -173,7 +189,13 @@
     items:
     - name: Changes in message store
       href: ../send-emails/smtp-submission-improvements.md
+    - name: EWS API cannot access Teams data 
+      href: ../send-emails/ews-not-support-access-teams-data.md
+    - name: Issues with OOF replies
+      href: ../send-emails/understand-troubleshoot-oof-replies.md
   - name: Shared Mailboxes
     items:
+    - name: How to access other user's mailboxes
+      href: ../shared-mailboxes/how-to-access-other-mailboxes.md
     - name: Sent items aren't saved
       href: ../shared-mailboxes/sent-mail-is-not-saved.md

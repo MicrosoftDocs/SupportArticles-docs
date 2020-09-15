@@ -2,6 +2,7 @@
 title: Cannot locate the Internet or proxy server when selecting hyperlink in Office
 description: Describes issues when you select hyperlinks in Office. Provides solutions.
 author: simonxjx
+ms.date: 7/17/2020
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -53,7 +54,7 @@ When you create a hyperlink in an Office document and then select the link, you 
 **\<URL> = the hyperlink you inserted.**
 
 > [!NOTE]
-> The hyperlink does work if you type it directly in the browser or in the Open box of the Run dialog box (select Start, and then select Run).
+> The hyperlink does work if you type it directly in the browser or in the Open box of the Run dialog box (select **Start**, and then select **Run**).
 
 ## Cause
 
@@ -61,20 +62,20 @@ This problem occurs when the following conditions are true:
 
 - You are using Microsoft Internet Explorer:
 
-  - A proxy server -or-
-  - A firewall that does not allow HTTP requests to be placed on your local network
+  - As a proxy server -or-
+  - With a firewall that does not allow HTTP requests to be placed on your local network
 
 - Internet Explorer is not your default browser.
 
-- The ForceShellExecuteregistry key is not present in the following location or is not set to 1:
+- The ForceShellExecute registry key is not present in the following location or is not set to 1:
 
-    For 32-bit Office Versions installed on 64-bit OperatingSystems
+    - For 32-bit versions of office installed on 64-bit operating systems:
     
-    HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\9.0\Common\Internet
+      **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\9.0\Common\Internet**
     
-    For 32 Bit Office Versions installed on 32 bit Operating Systems or 64 Bit Office Versions installed on 64-bit Operating Systems
+    - For 32-bit versions of Office installed on 32-bit operating systems or 64-bit versions of Office installed on 64-bit operating systems:
     
-    HKEY_LOCAL_MACHINE \Software\Microsoft\Office\9.0\Common\Internet   
+      **HKEY_LOCAL_MACHINE \Software\Microsoft\Office\9.0\Common\Internet** 
 
 ## Workaround
 
@@ -83,47 +84,36 @@ This problem occurs when the following conditions are true:
 
 [322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows
 
-To have us work around this problem for you, go to the "Here's an easy fix" section. If you prefer to fix this problem manually, go to the "Let me fix it myself" section.
-
-### Here's an easy fix 
-
-To fix this problem automatically, select the **[Download](https://download.microsoft.com/download/2/7/4/2746551A-B7FF-4DF9-9EF0-1D81FC7DF272/MicrosoftEasyFix50655.msi)** button. In the **File Download** dialog box, select **Run** or **Open**, and then follow the steps in the easy fix wizard.
-
-- This wizard may be in English only. However, the automatic fix also works for other language versions of Windows.   
-- If you're not on the computer that has the problem, save the easy fix solution to a flash drive or a CD, and then run it on the computer that has the problem.   
-
-### Let me fix it myself
+### Add the Internet Subkey to the registry and set the Value data
 
 To work around this issue, either add the ForceShellExecute subkey, if it is not present, and set the Value data, or if it is present, set the Value data of the ForceShellExecute subkey.
 
-### Adding the Internet Subkey to the Registry and Setting the Value Data
-
 1. Quit any programs that are running.   
-2. select Start, and then select Run. Type regedit in the Open box, and then select OK.   
-3. In Registry Editor, browse to one of the following subkeys (create the keys when they do not exist):
+2. Select **Start**, and then select **Run**. Type **regedit** in the **Open** box, and then select **OK**.   
+3. In Registry Editor, browse to one of the following subkeys (create the keys if they do not exist):
 
-    For a 32-Bit version of Office on 64-bit version of Windows
+    - For a 32-bit version of Office on a 64-bit version of Windows:
     
-    HKLM\SOFTWARE\Wow6432Node\Microsoft\Office\9.0\Common\Internet\
+      **HKLM\SOFTWARE\Wow6432Node\Microsoft\Office\9.0\Common\Internet\**
     
-    For a 32-Bit version of Office on 32-bit version of Windows
+    - For a 32-bit version of Office on a 32-bit version of Windows:
     
-    HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\9.0\Common\Internet
+      **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\9.0\Common\Internet**
     
-    For a 64-Bit version of Office on 64-bit version of Windows
+    - For a 64-bit version of Office on a 64-bit version of Windows:
     
-    HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\9.0\Common\Internet
+      **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\9.0\Common\Internet**
 
-4. Make sure the Internet subkey is selected. On the Edit menu, point to New, and then select DWORD Value. Add the following registry value:
+4. Make sure the Internet subkey is selected. On the **Edit** menu, point to **New**, and then select DWORD Value. Add the following registry value:
 
-    Value Name: ForceShellExecute
+    **Value Name: ForceShellExecute**
 
-5. Double-click ForceShellExecute, and then set the Value data to 1. Select OK.   
+5. Double-click **ForceShellExecute**, and then set the Value data to **1**. Select **OK**.   
 6. On the Registry menu, select Exit.   
 
 ### Did this fix the problem?
 
-Check whether the problem is fixed. If the problem is fixed, you are finished with this section. If the problem is not fixed, you can [contact support](https://support.microsoft.com/contactus/).
+Check whether the problem is fixed. If the problem is fixed, you are finished with this section. If the problem is not fixed, you can [contact support](https://support.microsoft.com/contactus/).
 
 ## More Information
 

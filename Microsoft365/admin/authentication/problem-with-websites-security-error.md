@@ -34,7 +34,7 @@ When a federated user signs out of a Microsoft cloud service such as Office 365,
 
 This issue occurs when an HTTP URL is used for the logout URL, but the logout process uses HTTPS to access the URL. If the URL can't accept HTTPS connections, the user receives the error message. 
 
-For example, this issue occurs if the logout URL is https://idp.contoso.edu/idp/logout.htm and the logout process tries to access it by using https://idp.contoso.edu/idp/logout.htm.
+For example, this issue occurs if the logout URL is `https://idp.contoso.edu/idp/logout.htm` and the logout process tries to access it by using `https://idp.contoso.edu/idp/logout.htm`.
 
 ## Solution
 

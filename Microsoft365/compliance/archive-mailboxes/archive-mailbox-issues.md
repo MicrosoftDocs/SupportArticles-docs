@@ -54,7 +54,7 @@ Get-Mailbox alias |fl Name, Archive*
 ```
 
 > [!NOTE]
-> You can use either the on-premises Exchange Management Shell or Exchange Online PowerShell to run the cmdlet. For more info about how to use Exchange Online PowerShell, go to [Connect Windows PowerShell to the Service](https://support.microsoft.com/office/06a743bb-ceb6-49a9-a61d-db4ffdf54fa6?ui=en-us&rs=en-us&ad=us).
+> You can use either the on-premises Exchange Management Shell or Exchange Online PowerShell to run the cmdlet. For more info about how to use Exchange Online PowerShell, go to [Connect Windows PowerShell to the Service](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
 When you run the cmdlet, the result resembles the following:
 
@@ -137,9 +137,9 @@ return ($dn -split ",")[0].Replace("CN=", "")
 }
 Import-Module ActiveDirectory
 If ($TenantCloudDomain.Length -eq 0) {
-$ldapQuery = "(&(objectClass=user)(msExchArchiveAddress=*))&quot
+$ldapQuery = "(&(objectClass=user)(msExchArchiveAddress=*))"
 } else {
-$ldapQuery = "(&(objectClass=user)(msExchArchiveAddress=*)(!(&(msExchArchiveGuid=*)(!(msExchArchiveDatabaseLink=*))(msExchArchiveAddress=$TenantCloudDomain))))&quot
+$ldapQuery = "(&(objectClass=user)(msExchArchiveAddress=*)(!(&(msExchArchiveGuid=*)(!(msExchArchiveDatabaseLink=*))(msExchArchiveAddress=$TenantCloudDomain))))"
 }
 if ($Domain.Length -eq 0) {
 # default domain to computer's domai
@@ -147,9 +147,9 @@ $computer = Get-WmiObject -Class Win32_ComputerSystem
 $Domain = $computer.Domai
 }
 if ($FindAllUsersInForest -and $Fix) {
-throw "You cannot specify -FindAllUsersInForest when running in -Fix mode, only one domain can be cleaned up at a time.&quot
+throw "You cannot specify -FindAllUsersInForest when running in -Fix mode, only one domain can be cleaned up at a time."
 }
-Write-Host "Looking for objects to clean up in ${Domain}: ${ldapQuery}&quot
+Write-Host "Looking for objects to clean up in ${Domain}: ${ldapQuery}"
 $propertiesToLoad = @("msExchMailboxGuid","homeMDB","msExchArchiveGuid","msExchArchiveDatabaseLink","msExchArchiveAddress")
 $tsStart = [DateTime](Get-Date)
 if ($FindAllUsersInForest) {
@@ -159,20 +159,20 @@ $m = Get-ADObject -Server $Domain -LDAPFilter $ldapQuery -ResultSetSize $null -P
 }
 $elapsed = [DateTime](Get-Date) - $tsStart
 if ($m -eq $null) {
-Write-Host "No objects need to be cleaned up.&quot
+Write-Host "No objects need to be cleaned up."
 retur
 }
 $cleanedCount = 0
 $failedCount = 0
 $filename = $("~\ArchiveDomainCleanup_{0:yyyymmdd_HHmmss}.csv" -f (Get-Date))
 # Run cleanup and output data to CSV file
-Write-Host "Writing output to $filename...&quot
+Write-Host "Writing output to $filename..."
 try {
 $m | %{
 $success = $true
 if ($Fix) {
 $prevError = $error[0]
-Set-ADObject -Identity $_ -Server $Domain -Clear "msExchArchiveAddress&quot
+Set-ADObject -Identity $_ -Server $Domain -Clear "msExchArchiveAddress"
 if ($error[0] -ne $prevError) {
 $success = $false
 Write-Host "x" -NoNewLine
@@ -204,13 +204,13 @@ $failedCount++
 }
 finally {
 if ($Fix) {
-Write-Host "&quot
-Write-Host "Cleaned up $cleanedCount recipients.&quot
+Write-Host ""
+Write-Host "Cleaned up $cleanedCount recipients."
 if ($failedCount -gt 0) {
-Write-Warning "Failed to update $failedCount recipients.&quot
+Write-Warning "Failed to update $failedCount recipients."
 }
 } else {
-Write-Host "Discovered $cleanedCount recipients.&quot
+Write-Host "Discovered $cleanedCount recipients."
 }
 }
 ```

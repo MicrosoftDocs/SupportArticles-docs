@@ -1,7 +1,7 @@
 ---
 title: Disabling ADAL or WAM to fix Office sign-in or activation issues not recommended
 ms.author: v-todmc
-author: todmccoy
+author: McCoyBot
 manager: dcscontentpm
 ms.date: 4/24/2020
 audience: Admin
@@ -36,8 +36,8 @@ ADAL enables sign-in features such as Multi-Factor Authentication (MFA), smart c
 
 Authentication issues during sign-in or activation typically manifest as one of the following symptoms:
 
-- Unable to sign in: Repeated password prompts, “Credentials Needed”, or ”Needs Password” statuses.
-- Sign-in window doesn’t show up, is blank, prematurely disappears, or gets stops working.
+- Unable to sign in: Repeated password prompts, "Credentials Needed", or "Needs Password" statuses.
+- Sign-in window doesn't show up, is blank, prematurely disappears, or gets stops working.
 - Specific errors are displayed in Office apps or the sign-in user interface.
 
 If you experience sign-in issues, consider the following recommendations: 
@@ -56,4 +56,4 @@ For more information about sign-in related symptoms and solutions, see the follo
 - [How to troubleshoot non-browser apps that can't sign in-to Office 365, Azure, or Intune](https://support.office.com/article/how-to-troubleshoot-non-browser-apps-that-can-t-sign-in-to-office-365-azure-or-intune-3ba1b268-66f6-462c-b0e5-070f5c2603c1)
 - ["Access Denied", or user is repeatedly prompted for credentials when connecting to Office 365](https://docs.microsoft.com/office365/troubleshoot/security/access-denied-when-connect-to-office-365)
 
-Still need help? Go to [Microsoft Community](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fanswers.microsoft.com%2F&data=02%7C01%7Cv-todmc%40microsoft.com%7C98910814456c474880f108d7cf62d97d%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637205895885805857&sdata=9%2FYStDGvrU5ZIYXB7guowmaPlKazab0U%2BTpiBIItDaQ%3D&reserved=0).
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

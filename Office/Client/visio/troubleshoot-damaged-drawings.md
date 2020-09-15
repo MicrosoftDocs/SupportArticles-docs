@@ -194,7 +194,7 @@ To open the temporary copy of the drawing file, do the following:
 
 Install Microsoft Office Visio Viewer 2010, and then use Visio Viewer to open and view your drawing. When you install Visio Viewer 2010, you can use Microsoft Internet Explorer 5.0 or a later version of Internet Explorer to view Visio drawings and diagrams that are created with Visio 2010, Visio 2007, Visio 2003, Visio 2002, Microsoft Visio 2000, or Microsoft Visio 5. For more information about Visio Viewer 2010, visit the following Microsoft website:
 
-[https://www.microsoft.com/download/details.aspx?displaylang=en&id=21701](https://www.microsoft.com/download/details.aspx?displaylang=en&id=21701)
+[https://www.microsoft.com/download/details.aspx?id=21701](https://www.microsoft.com/download/details.aspx?id=21701)
 
 If you can open your drawing in the Visio Viewer, the installation of Visio on your computer may be damaged, or your drawing may contain one or more objects that may be damaged. 
 

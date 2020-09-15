@@ -55,17 +55,6 @@ Range: 1 or 0
 Registry Location: HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Communicator
 ```
 
-To have us enable MSI deployments for Lync.msi, go to the "Here's an easy fix" section. If you prefer to enable MSI deployments for Lync.msi yourself, go to the "Let me fix it myself" section.
-
-### Here's an easy fix 
-
-To enable MSI deployments for Lync.msi automatically, click the **[Download](https://download.microsoft.com/download/A/4/E/A4E6DA1F-9832-4501-9F5C-983464A3E92E/MicrosoftEasyFix50872.msi)** button. In the **File Download** dialog box, click **Run** or **Open**, and then follow the steps in the easy fix wizard.
-
-- This wizard may be in English only. However, the automatic fix also works for other language versions of Windows.   
-- If you're not on the computer that has the problem, save the easy fix solution to a flash drive or a CD, and then run it on the computer that has the problem.   
-
-### Let me fix it myself
-
 To enable MSI deployments for Lync.msi, follow these steps:
 
 1. Click **Start**, click **Run**, type regedit, and then click **OK**.   

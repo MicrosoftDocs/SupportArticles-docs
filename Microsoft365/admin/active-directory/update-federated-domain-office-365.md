@@ -7,7 +7,7 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.service: office 365
+ms.prod: office 365
 ms.topic: article
 ms.author: v-six
 ms.custom: CSSTroubleshoot
@@ -121,6 +121,6 @@ The following scenarios cause problems when you update or repair a federated dom
   [2461873 ](https://support.microsoft.com/help/2461873)  You can't open the Azure Active Directory Module for Windows PowerShell    
 - You get an "Access Denied" error message when you try to run the set-MSOLADFSContext cmdlet. For more info, see the following Microsoft Knowledge Base article: 
 
-  [2587730 ](https://support.microsoft.com/help/2587730) "The connection to <ServerName> Active Directory Federation Services 2.0 server failed" error when you use the Set-MsolADFSContext cmdlet    
+  [2587730 ](https://support.microsoft.com/help/2587730) "The connection to \<ServerName> Active Directory Federation Services 2.0 server failed" error when you use the Set-MsolADFSContext cmdlet    
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.

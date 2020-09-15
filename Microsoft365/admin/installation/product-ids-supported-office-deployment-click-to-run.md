@@ -14,7 +14,6 @@ ms.custom:
 - CI 114638
 ms.service: o365-solutions
 ms.topic: article
-localization_priority: Normal
 ms.reviewer: vikkarti
 appliesto:
 - Microsoft Office Deployment Tool
@@ -116,7 +115,8 @@ For managing the Lync or Skype for Business clients, the following table lists t
 |----------------------------------|-----------------------------------------------|-------------------|
 |Skype for Business Basic 2015     |[Office 2013 Deployment Tool for Click-to-Run](https://www.microsoft.com/en-us/download/details.aspx?id=36778)             |LyncEntryRetail     |
 |Skype for Business 2015           |[Office 2013 Deployment Tool for Click-to-Run](https://www.microsoft.com/en-us/download/details.aspx?id=36778)             |LyncRetail          |
+|Skype for Business 2016     |[Office Deployment Tool](https://www.microsoft.com/en-us/download/details.aspx?id=49117)      |SkypeforBusinessRetail       |
 |Skype for Business Basic 2016     |[Office Deployment Tool](https://www.microsoft.com/en-us/download/details.aspx?id=49117)      |SkypeforBusinessEntryRetail       |
-|Skype for Business 2019           |[Office Deployment Tool](https://www.microsoft.com/en-us/download/details.aspx?id=49117)      |SkypeforBusinessRetail            |
+|Skype for Business 2019           |[Office Deployment Tool](https://www.microsoft.com/en-us/download/details.aspx?id=49117)      |SkypeforBusiness2019Retail            |
 |Skype for Business 2019 (volume licensed)         |[Office Deployment Tool](https://www.microsoft.com/en-us/download/details.aspx?id=49117)      |SkypeforBusiness2019Volume            |
-|Skype for Business Basic 2019     |[Office Deployment Tool](https://www.microsoft.com/en-us/download/details.aspx?id=49117)      |SkypeforBusiness2019Retail            |
+|Skype for Business Basic 2019     |[Office Deployment Tool](https://www.microsoft.com/en-us/download/details.aspx?id=49117)      |SkypeforBusinessEntry2019Retail            |

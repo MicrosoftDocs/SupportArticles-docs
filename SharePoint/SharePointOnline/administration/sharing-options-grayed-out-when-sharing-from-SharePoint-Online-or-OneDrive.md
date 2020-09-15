@@ -1,14 +1,13 @@
 ---
 title: Sharing options are grayed out when sharing from SharePoint Online or OneDrive
 ms.author: v-todmc
-author: todmccoy
+author: McCoyBot
 manager: dcscontentpm
 localization_priority: Normal
 ms.date: 4/15/2020
 ms.audience: Admin
 ms.topic: article
 ms.service: sharepoint-online
-localization_priority: Normal
 ms.custom: CSSTroubleshoot
 search.appverid:
 - SPO160
@@ -31,8 +30,11 @@ This issue can occur if you do not have sharing settings enabled properly for th
 For example:
 1.    Select the file or folder you want to share, and then select **Share**.
 2.    Select the dropdown list to change the type of link. In the **Link settings** screen, you can change who is able to access the link and edit the item you're sharing.
-3.    If one of the sharing options is grayed out, your organization's administrators may have restricted it.<br/>
-![Link settings screen with options grayed out.](media/sharing-options-grayed-out.jpg)
+3.    If one of the sharing options is grayed out, your organization's administrators may have restricted it.
+       > [!NOTE]
+       > The **Anyone with the link** option might be greyed out if you attempt to share .aspx pages. Sharing .aspx pages is not supported. 
+
+       ![Link settings screen with options grayed out.](media/sharing-options-grayed-out.jpg)
  
 ## Resolution
 To resolve this issue, follow the steps below to ensure the proper sharing settings are enabled for your organization and site collection. 

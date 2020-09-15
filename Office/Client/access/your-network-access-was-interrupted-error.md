@@ -1,7 +1,7 @@
 ---
 title: Access error "Your network access was interrupted" when using a mapped drive
 ms.author: v-todmc
-author: todmccoy
+author: McCoyBot
 manager: dcscontentpm
 ms.date: 9/26/2019
 audience: Admin

@@ -10,8 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: CSSTroubleshoot
-ms.author: ericspli
-localization_priority: Normal 
+ms.author: ericspli 
 appliesto:
 - Microsoft Office
 ---

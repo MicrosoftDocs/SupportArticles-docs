@@ -13,7 +13,6 @@ ms.custom:
 - CSSTroubleshoot
 ms.reviewer: rachelce
 appliesto:
-- Access 2010
 - Microsoft Office Access 2007
 - Microsoft Office Access 2003
 search.appverid: MET150

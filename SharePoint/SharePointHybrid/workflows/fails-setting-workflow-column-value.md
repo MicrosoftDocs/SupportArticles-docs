@@ -28,7 +28,7 @@ When you set a value for the **Hyperlink with formatting and constraints for pub
 
 The REST endpoint that the workflow uses is the following:
 
-https://tenant.sharepoint.com/sites/SiteCol/_api/web/lists(guid'GUID')/Items(N)
+`https://tenant.sharepoint.com/sites/SiteCol/_api/web/lists(guid'GUID')/Items(N)`
 
 But it doesn't return the field value—for the **Hyperlink with formatting and constraints for publishing** field type.
 

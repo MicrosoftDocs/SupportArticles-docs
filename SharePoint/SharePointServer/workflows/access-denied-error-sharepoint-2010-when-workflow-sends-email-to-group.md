@@ -7,7 +7,6 @@ localization_priority: Normal
 ms.audience: Admin
 ms.topic: article
 ms.service: sharepoint-2010
-localization_priority: Normal
 ms.custom: CSSTroubleshoot
 search.appverid:
 - SPO160
@@ -39,7 +38,7 @@ To resolve this issue, update the SharePoint group owner to a user who has full 
 The Universal Logging System (ULS) will display output similar to what follows:
 
 ```
-Exception occured in scope Microsoft.SharePoint.Utilities.SPUtility.SendEmail. Exception=System.UnauthorizedAccessException: Access is denied. (Exception from HRESULT: 0x80070005 (E_ACCESSDENIED))    
+Exception occurred in scope Microsoft.SharePoint.Utilities.SPUtility.SendEmail. Exception=System.UnauthorizedAccessException: Access is denied. (Exception from HRESULT: 0x80070005 (E_ACCESSDENIED))    
  at Microsoft.SharePoint.SPGlobal.HandleUnauthorizedAccessException(UnauthorizedAccessException ex)    
  at Microsoft.SharePoint.Library.SPRequest.GetUsersDataAsSafeArray(String bstrUrl, UInt32 dwUsersScope, UInt32 dwUserCollectionFlags, String bstrValue, UInt32 dwValue, UInt32& pdwColCount, UInt32& pdwRowCount, Object& pvarDataSet)    
  at Microsoft.SharePoint.SPUserCollection.InitUsersCore(Boolean fCustomUsers, String[] strIdentifiers, SPUserCollectionFlags ucf)    

@@ -68,7 +68,7 @@ If there is only one installation of Microsoft Office 2010 on the computer, foll
 1. Type appwiz.cpl in the Search box, and then press Enter.    
 2. Select the Microsoft Office 2010 suite you want to repair and then click **Change**.
  
-    ![Select the Microsoft Office 2010 suite you want to repair and then click Change.](https://msegceporticoprodassets.blob.core.windows.net/asset-blobs/4021799_en_1)    
+    ![Select the Microsoft Office 2010 suite you want to repair and then click Change.](./media/cannot-open-excel-word-or-powerpoint-file/change.png)    
 3. Select **Repair**, and then click **Continue**. You may have to restart your computer after the repair is completed. 
 
 ### Method 2  

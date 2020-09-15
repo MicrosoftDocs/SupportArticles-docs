@@ -34,7 +34,7 @@ Lync cannot verify that the server is trusted for your sign-in address. Connect 
 
 For example, the following trust model dialog box is displayed:
 
-![Screenshot for Trust Model dialog box  ](https://support.microsoft.com/Library/Images/2834846.jpg)
+![Screenshot for Trust Model dialog box](./media/cannot-verify-the-server-is-trusted/trust-model.png)
 
 ### Scenario 2
 
@@ -57,7 +57,7 @@ This issue occurs because the SIP domain name of the user does not match the dom
 
 ## Resolution
 
-To prevent display of the Trust Model dialog box, use the** Trusted Domain List (TrustModelData) Group Policy**. After you set this policy, Lync will exclusively trust the domains that are specified in the policy. Supported values: 
+To prevent display of the Trust Model dialog box, use the **Trusted Domain List (TrustModelData) Group Policy**. After you set this policy, Lync will exclusively trust the domains that are specified in the policy. Supported values: 
  
 - Not Configured (Default)/Disabled
 
@@ -87,7 +87,7 @@ The following process occurs when the Lync 2013 desktop client tries to locate t
 
     For example, the Lync 2013 desktop client sends the following requests:
 
-    http://LyncdiscoverInternal.contoso.com and https://LyncdiscoverInternal.contoso.com 
+    `http://LyncdiscoverInternal.contoso.com` and `https://LyncdiscoverInternal.contoso.com` 
 
     > [!NOTE]
     > "LyncdiscoverInternal.contoso.com" is resolved to the FQDN or IP address of the Internal Lync Web Service.

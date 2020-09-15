@@ -1,7 +1,7 @@
 ---
 title: How to restore Office 365 admin center Sharing settings for OneDrive
 ms.author: v-todmc
-author: todmccoy
+author: McCoyBot
 manager: dcscontentpm
 ms.date: 6/12/2020
 audience: Admin
@@ -26,20 +26,20 @@ description: Describes how to restore the Sharing setting for OneDrive in the Of
 
 When users select the user details in the [Office 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/users), the **OneDrive Sharing** option is no longer available to them.
 
-:::image type="content" source="../media/restore-onedrive-share-settings-office365/restore-onedrive-share-settings-office365-1.png" alt-text="The Sharing option in the admin center.":::
+:::image type="content" source="./media/restore-onedrive-share-settings-office365/restore-onedrive-share-settings-office365-1.png" alt-text="The Sharing option in the admin center.":::
  
 ## Cause
 
 This problem occurs if a user navigates to **User details** > **OneDrive** > **Sharing section** > **Manage external sharing** and clears the **Let people outside your organization access your site** check box.
 
-:::image type="content" source="../media/restore-onedrive-share-settings-office365/restore-onedrive-share-settings-office365-2.png" alt-text="Manage external sharing screen.":::
+:::image type="content" source="./media/restore-onedrive-share-settings-office365/restore-onedrive-share-settings-office365-2.png" alt-text="Manage external sharing screen.":::
 
 ## Resolution
 
 To restore the **OneDrive Sharing** option, follow these steps:
 
 1.	Find the user MySite URL. For example:
-    > https://m365x328152-my.sharepoint.com/personal/meganb_m365x328152_contoso_com
+    > `https://m365x328152-my.sharepoint.com/personal/meganb_m365x328152_contoso_com`
  
 2.	Run the following commands in the [SharePoint Online Management Shell](https://www.microsoft.com/download/details.aspx?id=35588):
 
@@ -68,7 +68,7 @@ For more information, see the article about the [Set-SPOSite cmdlet](https://doc
 1.	Sign in to the **SharePoint Online admin center**, and then select **More features**.
 2.	Under **User profiles**, select **Open**.
 3.	Search for and select the user profile. 
-4.	Select the arrow at the end of the **Account name**, and then select **Manage Personal Site** to go to the user’s OneDrive site. 
+4.	Select the arrow at the end of the **Account name**, and then select **Manage Personal Site** to go to the user's OneDrive site. 
 
 #### Option 3
 

@@ -1,10 +1,8 @@
 - name: Hybrid Deployment Troubleshooting
-  href: ../hybrid.md
+  href: ../sharepoint-hybrid-welcome.md
   items:
   - name: InfoPath
     items:
-    - name: Issue with editing an online workflow
-      href: ../InfoPath/fails-editing-workflow.md
     - name: SoapServerException when use InfoPath designer
       href: ../infopath/soapserverexception-when-customizing-list-form-using-InfoPath-designer.md
   - name: Search

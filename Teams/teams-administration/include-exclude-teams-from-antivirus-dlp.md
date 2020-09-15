@@ -1,7 +1,7 @@
 ---
-title: "How to include or exclude Teams from antivirus or DLP applications"
+title: How to include or exclude Teams from antivirus or DLP applications
 ms.author: v-todmc
-author: todmccoy
+author: McCoyBot
 manager: dcscontentpm
 ms.date: 9/9/2019
 ms.audience: Admin
@@ -33,6 +33,7 @@ To prevent any interference of Teams, add the following items to the "exclusion 
 
 - %userprofile%\AppData\Local\Microsoft\Teams\current\teams.exe
 - %userprofile%\AppData\Local\Microsoft\Teams\update.exe
+- %userprofile%\AppData\Local\Microsoft\Teams\stage\squirrel.exe
 
 Or, you can add the items to the "safe" ("whitelisted") programs list in the DLP application. (The method to accomplish this varies. For specific instructions, contact the application manufacturer.)
 

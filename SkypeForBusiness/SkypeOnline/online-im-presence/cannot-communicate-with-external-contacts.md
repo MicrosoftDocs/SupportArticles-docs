@@ -59,7 +59,7 @@ For help configuring external communications for your organization, go to the fo
 
 ### Resolving permissions issues between individual contacts  
  
-Both external contacts have to be added to one another’s contact lists, and they must have the appropriate permissions. For more information, go to the following Microsoft websites: 
+Both external contacts have to be added to one another's contact lists, and they must have the appropriate permissions. For more information, go to the following Microsoft websites: 
  
 - [Control access to your presence information in Lync 2010](https://office.microsoft.com/redir/ha101850361.aspx)    
 - [Control access to your presence information in Lync 2013](https://office.microsoft.com/redir/ha102925421.aspx)    
@@ -75,14 +75,14 @@ If you're trying to communicate with Skype users, make sure that the Skype users
  
 If your Skype for Business Online users can't communicate with all external contacts from a specific domain, this problem might occur for either of the following reasons: 
  
-- The external contact’s domain isn't set up for federation.    
+- The external contact's domain isn't set up for federation.    
 - The domain isn't included on the allowed domains list in the Lync Control Panel or Lync Admin Center.    
  
-If the external contact’s organization hasn't been configured for federation with Skype for Business Online, go to the following TechNet website: 
+If the external contact's organization hasn't been configured for federation with Skype for Business Online, go to the following TechNet website: 
 
 [Configuring Federation Support for a Skype for Business Online Customer](https://technet.microsoft.com/library/hh202193.aspx) 
  
-After you verify that federation is configured correctly for the external contact’s domain, Office 365 for enterprises customers should examine the Lync Control Panel or Lync Admin Center to make sure that the external contact’s domain is either on the allowed list of domains or not on the blocked list of domains. For guidance about how to configure external communications with other organizations, view the following Microsoft website: 
+After you verify that federation is configured correctly for the external contact's domain, Office 365 for enterprises customers should examine the Lync Control Panel or Lync Admin Center to make sure that the external contact's domain is either on the allowed list of domains or not on the blocked list of domains. For guidance about how to configure external communications with other organizations, view the following Microsoft website: 
 
 [Configure external communications](https://office.microsoft.com/redir/ha102817865.aspx)
 

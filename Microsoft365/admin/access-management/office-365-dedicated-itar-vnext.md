@@ -30,7 +30,7 @@ Full Access permissions should be successfully migrated. However, if a provision
 
 ## Resolution
 
-To make sure that the migration does not have any negative effects, section **3.3.8.1 Translate On-Premises SIDs** of the [Exchange vNext Topology and General Guidelines](https://sharepoint.partners.extranet.microsoft.com/sites/MMS%20Knowledge%20Base/Release%20Docs/Convergence/Content/EXO/EXO-D%20vNext%20Topology%20Upgrade%20Customer%20Environment%20Configuration%20Sample.docx) document should be completed. This section states as follows: 
+To make sure that the migration does not have any negative effects, see the following information: 
 
 *The Dedicated service, via Active Directory Trusts, has allowed customers to set permissions on cloud objects using on-premises security identifiers (SIDs). This is a practice that does not work for vNext as there will no longer be AD trusts to the on-premises directory. To ensure that permissions to shared mailboxes are not lost during migration, you must ensure that all permissions are set using cloud objects.*
 

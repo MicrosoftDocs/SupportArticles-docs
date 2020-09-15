@@ -7,7 +7,7 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.service: office 365
+ms.prod: office 365
 ms.topic: article
 ms.custom: CSSTroubleshoot
 ms.author: v-six
@@ -56,16 +56,8 @@ To resolve this problem, use one or more of the following methods, as necessary.
   
 ### Method 2: Reactivate Office by using your Office 365 Organization ID
 
- To have us fix this problem for you, go to the "Here's an easy fix" section. If you prefer to fix this problem manually, go to the "Let me fix it myself" section.
+To have us fix this problem for you, use the following steps:
 
-#### Here's an easy fix
- 
-To fix this problem automatically, open https://go.microsoft.com/?linkid=9843239. In the **File Download** dialog box, click **Run** or **Open**, and then follow the steps in the easy fix wizard. 
-- This wizard may be in English only. However, the automatic fix also works for other language versions of Windows.    
-- If you're not on the computer that has the problem, save the easy fix solution to a flash drive or a CD, and then run it on the computer that has the problem.    
-
-#### Let me fix it myself   
- 
 1. Determine whether the computer has the 32-bit or 64-bit version of Office 2010 installed. To do this, open any Office 2010 program, click **File,** and then click **Help**. The Office version is displayed next to the **Version** number.   
 2. Close all Office 2010 programs.    
 3. Click **Start**, type cmd in the **Start Search** box, and then press Enter.    

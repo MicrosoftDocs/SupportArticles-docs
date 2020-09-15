@@ -23,11 +23,11 @@ In a Lync hybrid deployment, when you try to move a user to Skype for Business O
 
 **Move-CsUser: HostedMigration fault: Error=(507), Description=(User must has an assigned license to use Skype for Business Online.)**
 
-![Screenshot of the error message after you run Move-CsUser cmdlet in Skype for Business Online PowerShell ](https://support.microsoft.com/Library/Images/2832980.jpg)
+![Screenshot of the error message after you run Move-CsUser cmdlet in Skype for Business Online PowerShell](./media/move-csuser-hostedmigration-fault-507/powershell.png)
 
 ## Solution 
 
-Before you try to move the user to Skype for Business Online, the user must be enabled for both Lync Server on-premises and Skype for Business Online. The solution is to sign in to the Microsoft 365 admin center and then assign the user a license for Skype for Business Online. For more information about how to assign a license to a user, go to the following Microsoft website: [Assign or remove a license](https://office.microsoft.com/redir/ha102816053)  
+Before you try to move the user to Skype for Business Online, the user must be enabled for both Lync Server on-premises and Skype for Business Online. The solution is to sign in to the Microsoft 365 admin center and then assign the user a license for Skype for Business Online. For more information about how to assign a license to a user, go to the following Microsoft website: [Assign or remove a license](https://docs.microsoft.com/skypeforbusiness/skype-for-business-and-microsoft-teams-add-on-licensing/assign-skype-for-business-and-microsoft-teams-licenses)  
 
 ## More information
 

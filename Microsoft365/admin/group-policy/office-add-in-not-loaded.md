@@ -58,9 +58,10 @@ The following registry data is used to disable all add-ins:
 **Key:**   HKEY_CURRENT_USER\Software\Microsoft\Office\x.0\\\<application>\Resiliency\AddinList
 
 > [!NOTE]
+>
 > - When this problem occurs, there is nothing listed under this key except for the Default REG_SZ value with no data.
 > - In the above registry data, \<application> is the name of the Office 2013 program in which you are experiencing this problem.
-> - In the above registry key path, x.0 corresponds to version of Office (16.0 = Office 2016, 15.0 = Office 2010).
+> - In the above registry key path, x.0 corresponds to version of Office (16.0 = Office 2016, 15.0 = Office 2013).
 
 ## More Information
 
@@ -95,7 +96,7 @@ Through group policy, an administrator can manage the add-ins that are loaded in
   **2**= The add-in can be manually enabled or disabled by the user
 
   > [!NOTE]
-  > In the above registry key path, x.0 corresponds to version of Office (16.0 = Office 2016, 15.0 = Office 2010)   
+  > In the above registry key path, x.0 corresponds to version of Office (16.0 = Office 2016, 15.0 = Office 2013)
 - Block all unmanaged add-ins
 
   This policy setting blocks all add-ins that are not managed by the "List of managed add-ins" policy setting.
@@ -111,5 +112,6 @@ Through group policy, an administrator can manage the add-ins that are loaded in
   **Value:** 1
 
  > [!NOTE]
+>
  > - If RestrictToList is set to 1, but you do not enable any add-ins using the List of managed add-ins policy, all COM add-ins are disabled.
- > - In the above registry key path, x.0 corresponds to version of Office (16.0 = Office 2016, 15.0 = Office 2010).   
+ > - In the above registry key path, x.0 corresponds to version of Office (16.0 = Office 2016, 15.0 = Office 2013).

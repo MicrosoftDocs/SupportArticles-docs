@@ -1,4 +1,4 @@
-﻿---
+---
 title: Error message when an external user accepts a SharePoint Online invitation by using another account
 description: Describes an issue in which you receive an error message when an external user accepts a SharePoint Online invitation by using another account.
 author: simonxjx
@@ -18,25 +18,20 @@ appliesto:
 # Error when an external user accepts a SharePoint Online invitation by using another account
 
 ## Problem
-Consider the following scenario:
 
-- You give an external user access to a Microsoft SharePoint Online or Microsoft OneDrive for Business resource.
-- The user accepts the invitation but is signed in by using another Microsoft account at the time.
-- The user browses to the shared resource.
+You receive one of the following error messages when trying to access an externally shared resource:
 
-In this scenario, the user receives one of the following error messages:
-
-- **Access Denied**
-- **Let us know why you need access to this site.**
-- **User is not found in the directory**
-- **You need permission to access this site.**
+- Access Denied
+- Let us know why you need access to this site.
+- User is not found in the directory
+- You need permission to access this site.
 
 ## Solution
 
 To resolve this issue, determine which account accepted the invitation, remove the incorrect account and the correct account, and then re-invite the user to the resource.
 
 > [!NOTE]
-> Many examples in this article use *<contoso>* as a placeholder. In your scenario, replace <contoso> with the domain that you use for your organization.
+> Many examples in this article use \<contoso> as a placeholder. In your scenario, replace \<contoso> with the domain that you use for your organization.
 
 ### Determine which account has access as an external user
 
@@ -61,7 +56,7 @@ If you can't access the site as the incorrect external user, follow these steps:
 
 3. In the **Users and Permissions** section, click **People and groups**.
 
-4. At the end of the URL in your browser window, after the **people.aspx?** part of the URL, replace **MembershipGroupId=<number>** with **MembershipGroupId=0**, and then press Enter.
+4. At the end of the URL in your browser window, after the **people.aspx?** part of the URL, replace **MembershipGroupId=\<number>** with **MembershipGroupId=0**, and then press Enter.
 
 5. In the list of users, locate the name of the external user. Right-click the user name, and copy the shortcut.
 

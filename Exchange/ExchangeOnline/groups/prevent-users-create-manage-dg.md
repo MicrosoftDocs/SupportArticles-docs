@@ -47,7 +47,7 @@ Do one of the following things, as appropriate for your situation:
   To create a new role assignment policy, follow these steps: 
   1. Sign in to the Office 365 portal as an admin, click Admin, and then click **Exchange** to open the Exchange admin center.    
   2. In the left navigation pane click **permissions**, and then click user roles.   
-  3. Click **New** (![A screen shot of the New icon](https://support.microsoft.com/Library/Images/2797867.jpg)).    
+  3. Click **New** (![A screen shot of the New icon](./media/prevent-users-create-manage-dg/new.png)).    
   4. Type a name for the new role assignment policy, and then click to select the options that you want. Make sure that the MyDistributionGroups check box and the MyDistributionGroupMembershipcheck box are cleared.   
   5. Click Save.   
 
@@ -76,7 +76,7 @@ To apply the role assignment policy, use one of the following methods, as approp
   2. At the PowerShell prompt, type the following command, and then press Enter:
 
         ```powershell
-        Get-Mailbox | Set-Mailbox –RoleAssignmentPolicy “ <Name of Policy> ”
+        Get-Mailbox | Set-Mailbox –RoleAssignmentPolicy " <Name of Policy> "
         ```
 
 ## More information

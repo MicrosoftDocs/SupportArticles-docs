@@ -7,7 +7,7 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.service: office 365
+ms.prod: office 365
 ms.topic: article
 ms.author: v-six
 ms.custom: CSSTroubleshoot
@@ -92,5 +92,5 @@ Set-SPOTenant -ShowEveryoneClaim $true
  
 ### Process
 
-- Configureyour tenant to grant the **Everyone** claim to external users by
+- Configure your tenant to grant the **Everyone** claim to external users by
 [How to determine resources to which all external users have access](https://support.office.com/article/how-to-determine-resources-to-which-all-external-users-have-access-c3c8642b-cfb3-46b7-9f5a-ce27a6cb8ea1).    

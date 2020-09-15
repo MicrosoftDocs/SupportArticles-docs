@@ -1,5 +1,5 @@
 - name: Skype for Business Server Troubleshooting
-  href: ../server.md
+  href: ../skype-server-welcome.md
   items:
   - name: Conferencing
     items:
@@ -53,6 +53,8 @@
       href: ../server-configuration/event-32263-0xc3e93c2f-front-end.md
     - name: Event IDs 32402, 61045 logged in Front End
       href: ../server-configuration/event-32402-61045-front-end.md
+    - name: How to use Configuration Information
+      href: ../server-configuration/how-to-use-configuration-information.md
     - name: Insufficient access rights when move user command
       href: ../server-configuration/issue-attempt-move-or-enable-user-command.md
     - name: Issue when File Store share in unsupported configuration

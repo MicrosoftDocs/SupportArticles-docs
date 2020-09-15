@@ -45,20 +45,20 @@ This article describes the necessary configuration, administration details, and
 - Full Access permissions provide access to all mailbox contents.    
 - Full Access permissions are granted by administrators only by using Exchange Admin Center or Remote PowerShell ([Add-MailboxPermission](https://technet.microsoft.com/library/bb124097%28v=exchg.160%29.aspx)).    
 - Full Access permissions will work cross forest together with the Outlook client for Windows.    
-- Autodiscover is used to find the mailbox even when it’s in another forest (by using the target address redirect).    
+- Autodiscover is used to find the mailbox even when it's in another forest (by using the target address redirect).    
 - The following differences apply, depending on how a user tries to access an additional mailbox:
 
-  - Adding as an additional mailbox requires a mailbox in another forest to be ACLable in the user’s forest. For more information, see [Configure Exchange to support delegated mailbox permissions in a hybrid deployment](https://docs.microsoft.com/exchange/hybrid-deployment/set-up-delegated-mailbox-permissions).    
-  - Auto-mapping will not work until all mailboxes are moved to Exchange Online. For more information, see [Auto-mapping doesn’t work as expected in an Office 365 hybrid environment](https://support.microsoft.com/help/3080561).    
+  - Adding as an additional mailbox requires a mailbox in another forest to be ACLable in the user's forest. For more information, see [Configure Exchange to support delegated mailbox permissions in a hybrid deployment](https://docs.microsoft.com/exchange/hybrid-deployment/set-up-delegated-mailbox-permissions).    
+  - Auto-mapping will not work until all mailboxes are moved to Exchange Online. For more information, see [Auto-mapping doesn't work as expected in an Office 365 hybrid environment](https://support.microsoft.com/help/3080561).    
   - In some scenarios, a user will see only free/busy information for a calendar to which they have additional permissions. For more information, see [Can't view cross-forest calendar data in Office 365 hybrid environment](https://support.microsoft.com/help/3187044).    
   - The user cannot send on behalf of another user after they add a mailbox as an additional account. For more information, see [Can't send an email message when Full Access permission is granted to a shared mailbox in Exchange Server](https://support.microsoft.com/help/3045224).    
      
  
  
-- Resource mailboxes have special capabilities and work differently in some scenarios if they’re in another forest, as follows:
+- Resource mailboxes have special capabilities and work differently in some scenarios if they're in another forest, as follows:
 
-  - Resource mailboxes cannot be added as additional mailboxes. For more information, see [Can’t add a Room or Resource mailbox in an Office 365 hybrid environment](https://support.microsoft.com/help/3161713).    
-  - Customers cannot grant permissions to a resource mailbox. For more information, see [Can’t add permissions to a room mailbox in another forest in an Office 365 hybrid environment](https://support.microsoft.com/help/3195201).    
+  - Resource mailboxes cannot be added as additional mailboxes. For more information, see [Can't add a Room or Resource mailbox in an Office 365 hybrid environment](https://support.microsoft.com/help/3161713).    
+  - Customers cannot grant permissions to a resource mailbox. For more information, see [Can't add permissions to a room mailbox in another forest in an Office 365 hybrid environment](https://support.microsoft.com/help/3195201).    
      
 - Newly provisioned cloud mailboxes cannot access on-premises mailboxes. For more information, see [Can't add an on-premises mailbox as an additional mailbox in Exchange Online](https://support.microsoft.com/help/4051496).    
 - A new remote mailbox that's created directly in Exchange Online is not ACLable in on-premises Active Directory. For more information, see [A remote mailbox created in on-premises AD DS is not ACLable in Exchange Online](https://support.microsoft.com/help/4051497).    
@@ -68,9 +68,9 @@ This article describes the necessary configuration, administration details, and
 
  
 - Send as works in many scenarios, but is not fully supported by Microsoft as outlined in [Permissions in Exchange hybrid deployments](https://docs.microsoft.com/Exchange/permissions).     
-- Send As permissions enable mail to be sent from another mailbox that enabled the mail user object’s primary email address.    
+- Send As permissions enable mail to be sent from another mailbox that enabled the mail user object's primary email address.    
 - Permissions are granted by administrators by using the Exchange Admin Center or Remote PowerShell ([Add-ADPermission](https://technet.microsoft.com/library/bb124403%28v=exchg.160%29.aspx) in on-premises Active Directory and[Add-RecipientPermission](https://technet.microsoft.com/library/ff935839%28v=exchg.160%29.aspx) in Exchange Online).    
-- Permissions must exist in the sending user’s forest. For example, if a user’s mailbox is moved to Exchange Online, the Send As permissions must be listed on the mail user object that represents the on-premises mailbox.    
+- Permissions must exist in the sending user's forest. For example, if a user's mailbox is moved to Exchange Online, the Send As permissions must be listed on the mail user object that represents the on-premises mailbox.    
 - Permissions are not synchronized by Azure AD Connect.    
 - Permissions set in on-premises AD DS must be manually added in the Exchange Online for full functionality. For more information, see [Exchange hybrid deployment considerations](https://docs.microsoft.com/exchange/exchange-hybrid#exchange-hybrid-deployment-considerations).    
  
@@ -78,7 +78,7 @@ This article describes the necessary configuration, administration details, and
 
  
 - Folders can be accessed cross forest in many scenarios, but they are not fully supported by Microsoft as outlined in [Permissions in Exchange hybrid deployments](https://docs.microsoft.com/Exchange/permissions).    
-- Autodiscover is used to find the mailbox even if it’s in another forest (by using the target address redirect).    
+- Autodiscover is used to find the mailbox even if it's in another forest (by using the target address redirect).    
 - Folder access can be granted by users byusing Outlook or by administrators byusing the Remote PowerShell cmdlet [Add-MailboxFolderPermission](https://technet.microsoft.com/library/dd298062%28v=exchg.160%29.aspx). The following conditions apply:
 
   - The Calendar folder works differently in Outlook than other folders do. For more information, see [Can't view cross-forest calendar data in Office 365 hybrid environment](https://support.microsoft.com/help/3187044).    
@@ -91,7 +91,7 @@ This article describes the necessary configuration, administration details, and
  
 - "Send on Behalf of" permissions enable mail to be sent on behalf of another email address    
 - Permissions can be grantedby users by using Outlook or by administrators by using Exchange Admin Center or Remote PowerShell ([Set-Mailbox](https://technet.microsoft.com/library/bb123981%28v=exchg.160%29.aspx) cmdlet).    
-- Permissions must exist in the sending user’s forest.    
+- Permissions must exist in the sending user's forest.    
 - By default, the **PublicDelegates** attribute (also known as the **GrantSendOnBehalfTo** attribute in Exchange on-premises) is synchronized to Exchange Online by Azure AD Connect.    
 - Additional configuration is required to synchronize the **PublicDelegates** attributewith on-premises AD DS. This configuration requires enabling Exchange hybrid deployment settings in Azure AD Connect.For more information, see [Exchange hybrid writeback](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-attributes-synchronized#exchange-hybrid-writeback). 
 
@@ -128,7 +128,7 @@ This article describes the necessary configuration, administration details, and
 - Workflows between the manager and delegate users differ, and problems may be experienced.    
 - We recommend that you move your manager and delegate users together as much as possible. The following conditions apply:
 
-  - When they’re moved separately, delegates may not able to see private calendar items. For more information, see [Delegates are not listed correctly in Outlook after a migration to Office 365 hybrid environment](https://support.microsoft.com/help/4023846).    
+  - When they're moved separately, delegates may not able to see private calendar items. For more information, see [Delegates are not listed correctly in Outlook after a migration to Office 365 hybrid environment](https://support.microsoft.com/help/4023846).    
   - Misconfigured delegates may result in a non-delivery report. For more information, see [Users receive NDR 5.2.0 when they send meeting invites in Office 365 hybrid environment](https://support.microsoft.com/help/4038474/).    
   - The **LegacyExchangeDN** attribute of objects from Exchange Online and on-premises should be synching as x500 addresses between forests to avoid resolution issues that requires enabling Exchange hybrid deployment settings in AD Connect. For more information, see [Exchange hybrid writeback](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-attributes-synchronized#exchange-hybrid-writeback).
 

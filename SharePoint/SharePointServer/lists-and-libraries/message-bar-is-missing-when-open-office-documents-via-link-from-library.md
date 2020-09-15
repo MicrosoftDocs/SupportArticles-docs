@@ -140,13 +140,6 @@ Update the registry of the Office client computer to install the needed content 
 
 2. To install the content types into the registry's MIME database on Office computers automatically, go to the "Here's an easy fix" section.   
 
-### Here's an easy fix
-
-To fix this problem automatically, click [Download](https://download.microsoft.com/download/6/B/4/6B42815C-DA94-4B64-8E83-4B90DADC676E/MicrosoftEasyFix50832.msi). In the **File Download ** dialog box, click **Run** or **Open**, and then follow the steps in the easy fix wizard.  
-
-- This wizard may be in English only. However, the automatic fix also works for other language versions of Windows.   
-- If you're not on the computer that has the problem, save the easy fix solution to a flash drive or a CD, and then run it on the computer that has the problem.     
-
 ## More Information  
 
 SharePoint workflow task buttons may be missing in Office documents for other reasons than those described in this article. Some other reasons may be:  
@@ -157,7 +150,7 @@ SharePoint workflow task buttons may be missing in Office documents for other re
 - User does not have Edit Items  permissions. They may also need Manage Lists  permissions depending on the workflow settings.    
 - The Server read-only bar with the [Edit Document ] or [Edit Workbook ] or [Edit Presentation ] button bar may be missing for other reasons when clicking on a hyperlink to an Office 2010 document stored on a SharePoint site for the first time. Subsequent clicks on the link will render the Server read-only bar.     
 
-   ![The screenshot for the Server read-only bar ](https://support.microsoft.com/Library/Images/2832165.png)  
+   ![The screenshot for the Server read-only bar](./media/message-bar-is-missing-when-open-office-documents-via-link-from-library/read-only.png)  
 
 To force the Server read-only bar to show on first click of the hyperlink, add the below registry key to the client machine.   
 
