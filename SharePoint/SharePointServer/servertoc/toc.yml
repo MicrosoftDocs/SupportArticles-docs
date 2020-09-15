@@ -135,6 +135,8 @@
       href: ../../SharePointOnline/search/near-duplicate-items-are-not-listed-in-search-results.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Privileges don't exist in service account configuration
       href: ../search/privilege-not-exist-service-account-configuration.md
+    - name: Search box removed if Suite Navigation search control turned off
+      href: ../search/search-box-removed-from-suite-nav.md
   - name: Security
     items:
     - name: '"401 unauthorized" when using OAuth and SAML claims'
