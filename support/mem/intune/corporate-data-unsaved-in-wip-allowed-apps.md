@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 4496680
 Consider the following scenario:
 
 - You are using a Windows-based device.
-- The device is enrolled in Intune through a hybrid Azure AD join or Microsoft System Center Configuration Manager co-management.
+- The device is enrolled in Intune through a hybrid Azure AD join or Configuration Manager co-management.
 - A Windows Information Protection (WIP) policy is applied to the device.
 
 In this scenario, when you use WIP-allowed apps, such as Microsoft Word and Microsoft Excel, you experience the following issues:

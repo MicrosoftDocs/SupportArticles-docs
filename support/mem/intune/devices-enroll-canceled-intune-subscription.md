@@ -1,5 +1,5 @@
 ---
-title: Devices still enroll in a canceled Intune subscription
+title: Devices try to enroll in a canceled Intune subscription
 description: Fixes an issue in which devices keep trying to enroll in an Intune subscription that has been canceled.
 ms.date: 04/16/2020
 ms.prod-support-area-path:
@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 3182596
 Consider the following scenario:
 
 - A user's Intune subscription was canceled, and the Intune admin console can no longer be accessed.
-- A different MDM provider was selected. The MDM authority for the tenant is still set to Intune, Office 365, or Configuration Manager (CM).
+- A different MDM provider was selected. The MDM authority for the tenant is still set to Intune, Office 365, or Configuration Manager.
 
 In this scenario, the user's devices still try to enroll in Intune.
 
@@ -24,7 +24,7 @@ In this scenario, the user's devices still try to enroll in Intune.
 
 This issue occurs if the CNAMEs that were set as prerequisites for device enrollment are still present. As long as these CNAMEs are still present, automatic enrollment of devices without specification of an enrollment server is redirected to the Microsoft Intune servers. This behavior is by design. If the customer sets up CNAME forwarding with their domain name provider to point towards the Intune service, their devices will try to enroll in Intune. To fix this behavior, the customer should modify their CNAME records with their domain name provider.
 
-The MDM authority has no effect on another provider's MDM solution as long as devices are not redirected to Intune enrollment servers with old CNAMEs that may still be present. After the MDM authority is configured, it will remain that way unless a customer opts to change to another structure within the possible MDM configurations-for example, from Intune or Office 365 to ConfigMgr, or vice versa.
+The MDM authority has no effect on another provider's MDM solution as long as devices are not redirected to Intune enrollment servers with old CNAMEs that may still be present. After the MDM authority is configured, it will remain that way unless a customer opts to change to another structure within the possible MDM configurations-for example, from Intune or Office 365 to Configuration Manager, or vice versa.
 
 ## Resolution
 
@@ -45,10 +45,8 @@ nslookup -type=cname enterpriseenrollment.<domain>.<com>
 
 If a CNAME is set, the reply will resemble the following:
 
-```console
-Non-authoritative answer:
-enterpriseenrollment.<domain>.<com> canonical name = manage.microsoft.com
-```
+> Non-authoritative answer:  
+> enterpriseenrollment.\<domain>.\<com> canonical name = manage.microsoft.com
 
 Now, enter the following command at a command prompt:
 
@@ -58,10 +56,8 @@ nslookup -type=cname enterpriseregistration.<domain>.<com>
 
 If a CNAME is set, the reply will resemble the following:
 
-```console
-Non-authoritative answer:
-enterpriseenrollment.<domain>.<com> canonical name = EnterpriseRegistration.windows.net
-```
+> Non-authoritative answer:  
+> enterpriseenrollment.\<domain>.\<com> canonical name = EnterpriseRegistration.windows.net
 
 Additionally, you can check any available online tool from several entities for a simplified webpage guided lookup procedure. This procedure also lets you check different DNS hierarchy branches by using tool providers in different regions to make sure that all changes that were submitted at your domain registrar have percolated through the hierarchy. Remember that DNS changes may take as long as several days in some cases.
 

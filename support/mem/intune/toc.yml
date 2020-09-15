@@ -50,8 +50,6 @@
     href: saving-images-locally-not-restricted.md
   - name: Set up and validate app protection policies
     href: set-up-app-protection-policies-ios-device.md
-  - name: SIP address and password can't be saved
-    href: sip-address-password-not-saved.md
 - name: Co-management with Configuration Manager
   items:
   - name: Troubleshoot co-management auto-enroll
@@ -76,16 +74,18 @@
     href: factory-reset-protection-emails-not-enforced.md
   - name: Error 403 inspecting Intune objects in Graph Explorer
     href: 403-error-graph-explorer-query.md
-  - name: Multi-app kiosk users can't log on to Windows
-    href: multi-app-kiosk-users-cannot-logon-windows.md
   - name: No password prompt after email password change
     href: no-password-prompt-after-password-change.md
   - name: Password expiration setting doesn't work
     href: password-expiration-setting-not-working.md
   - name: Restrict USB devices with administrative templates
     href: restrict-usb-with-administrative-template.md
+  - name: SIP address and password can't be saved
+    href: sip-address-password-not-saved.md
   - name: Troubleshoot CSP custom settings
     href: troubleshoot-csp-custom-settings.md
+  - name: Users can't log on to Windows 10 computers with multi-app kiosk profile assigned
+    href: users-cannot-logon-windows-multi-app-kiosk.md
   - name: Windows feature updates are not offered
     href: windows-feature-updates-never-offered.md
 - name: Device enrollment
@@ -96,8 +96,8 @@
       href: device-ownership-changed-to-corporate.md
   - name: Can't update enrollment
     href: cannot-update-enrollment.md
-  - name: Canceled Intune continues to enroll devices
-    href: canceled-intune-continue-enroll-devices.md
+  - name: Devices try to enroll in a canceled Intune subscription
+    href: devices-enroll-canceled-intune-subscription.md
   - name: iOS/iPadOS enrollment
     items:
     - name: Auto-enrollment doesn't start on Apple DEP devices

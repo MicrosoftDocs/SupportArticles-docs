@@ -1,13 +1,13 @@
 ---
-title: Multi-app kiosk users can't log on to Windows
-description: Fixes an issue in which a user cannot log on to an Azure AD-joined Windows 10 computer if a multi-app KIOSK profile is assigned.
+title: Users can't log on to Windows 10 computers with multi-app kiosk profile assigned
+description: Fixes an issue in which a user cannot log on to an Azure AD-joined Windows 10 computer if a multi-app kiosk profile is assigned.
 ms.date: 09/11/2020
 ms.prod-support-area-path: Configure device restrictions
 ms.reviewer: joelste, intunecic, mobazzar
 ---
 # Users can't log on to Windows if a multi-app kiosk profile is assigned
 
-This article helps you fix an issue in which a user can't log on to an Azure Active Directory (Azure AD)-joined Windows 10 computer if a multi-app KIOSK profile is assigned.
+This article helps you fix an issue in which a user can't log on to an Azure Active Directory (Azure AD)-joined Windows 10 computer if a multi-app kiosk profile is assigned.
 
 _Original product version:_ &nbsp; Microsoft Intune  
 _Original KB number:_ &nbsp; 4493932
