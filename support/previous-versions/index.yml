@@ -25,7 +25,7 @@ additionalContent:
 
       - title: Visual FoxPro
         summary: Troubleshooting articles for Visual FoxPro
-        url: visualstudio/foxpro/toc.yml
+        url: visualstudio/foxpro/welcome-foxpro.md
 
       - title: Visual Studio
         summary: Troubleshooting articles for Visual Studio
