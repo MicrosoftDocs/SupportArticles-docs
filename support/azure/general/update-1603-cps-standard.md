@@ -4,7 +4,7 @@ description: Describes Update 1603 for Cloud Platform System Standard. Includes 
 ms.date: 08/14/2020
 author: genlin
 ms.author: genli
-ms.service: cps
+ms.service: azure-stack
 ms.prod-support-area-path: 
 ms.reviewer: 
 ---

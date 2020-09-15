@@ -12,6 +12,8 @@
       href: protection-agent-crashes.md
     - name: The protection agent service can't start
       href: protection-agent-service-not-start.md
+    - name: Troubleshoot protection agent installation issues
+      href: troubleshoot-dpm-protection-agent-installation-issues.md
 - name: Application protection
   items:
     - name: Troubleshoot application protection
@@ -30,6 +32,18 @@
       href: dpm-service-crashes-event-917.md
     - name: Sub menu items appear more than once
       href: sub-menu-items-show-more-than-once.md
+    - name: Troubleshoot console crashes
+      href: troubleshoot-data-protection-manager-console-crash.md
+    - name: Troubleshoot slow console performance
+      href: troubleshoot-console-slow-performance.md
+- name: End user recovery
+  items:
+    - name: Troubleshoot end-user recovery issues
+      href: troubleshoot-end-user-recovery-issues.md
+- name: Exchange protection
+  items:
+    - name: Troubleshoot Exchange protection and recovery issues
+      href: troubleshoot-exchange-protection-recovery-issues.md
 - name: File protection
   items:
     - name: EFS encrypted files
