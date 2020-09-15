@@ -12,6 +12,8 @@
       href: reports-not-run-as-expected.md
     - name: Reporting stops working
       href: reporting-stops-working.md
+    - name: SQL query times out or slow console performance
+      href: sql-query-times-out-or-console-slow-performance.md
 - name: Application management and software distribution
   items:
     - name: Applications not deployed to users logged on to domain controllers
@@ -58,6 +60,8 @@
       href: configmgr-client-left-in-provisioning-mode.md
     - name: Clients become inactive
       href: inactive-clients-not-send-inventory.md
+    - name: Clients don't receive policy data
+      href: clients-not-receive-policy-data.md
     - name: Cloud management gateway
       items:
         - name: WINHTTP_CALLBACK_STATUS_FLAG_CERT_CN_INVALID
@@ -140,6 +144,8 @@
   items:
     - name: DRS performance issues after installing hotfix 3125525
       href: drs-performance-issue-after-installing-hotfix-3125525.md
+    - name: Troubleshoot database replication service issues
+      href: troubleshoot-database-replication-service-issues.md
 - name: Diagnostic
   items:
     - name: Configuration Manager diagnostics
@@ -196,18 +202,20 @@
           href: signed-drivers-shown-as-unsigned.md
     - name: PXE boot
       items:
+        - name: A PXE enabled DP generates many files
+          href: pxe-enabled-dp-generates-many-files.md
+        - name: Advanced troubleshooting for PXE boot
+          href: advanced-troubleshooting-pxe-boot.md
         - name: Boot from a PXE server
           href: boot-from-pxe-server.md
         - name: Failed to get the encrypted PXE password
           href: certificate-not-updated-on-pxe-dp.md
-        - name: A PXE enabled DP generates many files
-          href: pxe-enabled-dp-generates-many-files.md
-        - name: Understand PXE boot
-          href: understand-pxe-boot.md
+        - name: PXE boot doesn't work
+          href: pxe-boot-not-work.md
         - name: Troubleshoot PXE boot
           href: troubleshoot-pxe-boot-issues.md
-        - name: Advanced troubleshooting for PXE boot
-          href: advanced-troubleshooting-pxe-boot.md
+        - name: Understand PXE boot
+          href: understand-pxe-boot.md
         - name: WDS crashes due to PXE boot
           href: pxe-boot-causes-wds-crash.md
         - name: WDS doesn't start on a PXE enabled remote DP
@@ -352,6 +360,8 @@
           href: optimize-wsus-client-performance.md
         - name: The WSUS console crashes
           href: wsus-console-crashes.md
+        - name: Troubleshoot issues with WSUS client agents
+          href: troubleshoot-issues-with-wsus-client-agents.md
         - name: Troubleshoot WSUS connection failures
           href: troubleshoot-wsus-connection-failures.md
         - name: Troubleshoot WSUS high CPU usage

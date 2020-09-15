@@ -1,5 +1,3 @@
-- name: General
-  items:
   - name: Clustering support for MSMQ
     href: clustering-support-msmq.md
   - name: Error when RAM exceeds allocated memory

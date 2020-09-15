@@ -66,4 +66,4 @@ Add a swap file to increase the virtual memory in Linux Azure virtual machines. 
     init 6
     ```
 
-For more information, see [Ubuntu Cloud Images](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-agent-user-guide?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json#ubuntu-cloud-images) and [SWAP space in Windows Azure Virtual Machines running pre-built Linux Images](https://azure.microsoft.com/blog/swap-space-in-windows-azure-virtual-machines-running-pre-built-linux-images-part-1/).
+For more information, see [Ubuntu Cloud Images](https://cloud-images.ubuntu.com/) and [SWAP space in Windows Azure Virtual Machines running pre-built Linux Images](https://azure.microsoft.com/blog/swap-space-in-windows-azure-virtual-machines-running-pre-built-linux-images-part-1/).
