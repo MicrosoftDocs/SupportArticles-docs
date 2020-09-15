@@ -29,7 +29,7 @@ The following are prerequisites for supporting the TLS 1.2 protocol in Microsof
     > [!NOTE]
     > TLS 2 protocol supports only SHA1 and SHA2 certificates. Hence all certificates must be updated to be SHA1 or SHA2.
 
-3. Configure the settings required for supporting the TLS 1.2 protocol. To do this, see the [Setting Microsoft Azure Pack to support the TLS 1.2 protocol](#setting-microsoft-azure-pack-to-support-the-TLS-1.2-protocol) section.
+3. Configure the settings required for supporting the TLS 1.2 protocol. To do this, see the [Setting Microsoft Azure Pack to support the TLS 1.2 protocol](#setting-microsoft-azure-pack-to-support-the-tls-12-protocol) section.
 
     > [!NOTE]
     > These settings should be configured on the systems that run Windows Azure Pack. 
