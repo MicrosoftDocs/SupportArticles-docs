@@ -1,6 +1,6 @@
 ---
 title: Error (We're checking everyone's calendars) when viewing free/busy information in Outlook
-description: Provides a solution to an issue in which you can't view free/busy information with error (We're checking everyone's calendars) in Outlook.
+description: Resolves an issue in which you can't view free/busy information and you receive an error message (We're checking everyone's calendars) in Outlook.
 author: TobyTu
 ms.author: meshel
 manager: dcscontentpm
@@ -18,53 +18,56 @@ appliesto:
 search.appverid: MET150
 ---
 
-# Error when viewing free/busy information in Outlook: We're checking everyone's calendars
+# Error when you view free/busy information in Outlook: We're checking everyone's calendars
 
 ## Symptoms
 
-When viewing free/busy information in the **Scheduling Assistant** in Outlook, you receive this error message:
+When you view free/busy information in the **Scheduling Assistant** in Outlook, you receive the following error message:
 
 > "We're checking everyone's calendars"
 
 ## Cause
 
-The **FreeBusySupport** registry key could be missing after installing or reinstalling Office applications. To verify that's the case, go to these registry paths:
+The **FreeBusySupport** registry value could be missing after you install or reinstall Office applications. To verify that this is your situation, start Registry Editor (right-click **Start**, type **regedit** in the **Run** box, select **OK**), and then locate the following registry subkeys, depending on the type of your Office installation.
 
-**For Click-to-Run installation Office**:
+**For Click-to-Run installations**:
 
 - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Office\16.0\Outlook\SchedulingInformation\FreeBusySupport`
 - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Wow6432Node\Microsoft\Office\16.0\Outlook\SchedulingInformation\FreeBusySupport`
 
-**For Windows Installer (MSI) installation Office**:
+**For Windows Installer (MSI) installations**:
 
-`HKEY_LOCAL_MACHINE\Software\Microsoft\Office\16.0\Outlook\SchedulingInformation\FreeBusySupport`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\16.0\Outlook\SchedulingInformation\FreeBusySupport`
 
 > [!NOTE]
-> 16.0 is for Outlook 2016, Outlook for Microsoft 365 and Outlook 2019.
+> The "16.0" path segment represents Outlook 2019, Outlook 2016, and Outlook for Microsoft 365.
 
 ## Resolution
 
-Use one of these methods:
+> [!IMPORTANT]
+> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry](https://support.microsoft.com/help/322756) for restoration in case problems occur.
+
+Use one of the following methods.
 
 ### Method 1
 
-Reinstall Office applications.
+Reinstall the Office applications.
 
 ### Method 2
 
-Add the missing registry subkeys:
+Add the missing registry entries.
 
 > [!NOTE]
-> Add the MSI subkey only if the MSI version is installed. If using Click-to-Run, add the Click-to-Run registry keys only.
+> Add only the appropriate entry for your type of Office installation, either Click-to-Run or MSI.
 
 1. Close Outlook.
-2. Start Registry Editor. To do this, right-click **Start**, type **regedit** in the **Run**  box, and then select **OK**.
-3. Find the location of the missing **FreeBusySupport** registry key and add the key manually. You must add the **SchedulingInformation** key first, and then add the **FreeBusySupport** subkey.
-4. Select **FreeBusySupport**, select **Edit**, point to **New**, and select **String Value**.
+2. Start Registry Editor.
+3. Find the location of the missing **FreeBusySupport** registry entry, and add the entry manually. You must add the **SchedulingInformation** entry first, and then add the **FreeBusySupport** entry.
+4. Select **FreeBusySupport**, select **Edit**, point to **New**, and then select **String Value**.
 5. Set **Value name** to **EX**, and then double-click to edit the string.
-6. Type `{0006F014-0000-0000-C000-000000000046}` into **Value data**, and then select **OK**.
-7. Select **FreeBusySupport**, select the **Edit** menu, point to **New**, and select **String Value**.
+6. Type `{0006F014-0000-0000-C000-000000000046}` in the **Value data** box, and then select **OK**.
+7. Select **FreeBusySupport**, select the **Edit** menu, point to **New**, and then select **String Value**.
 8. Set **Value name** to **SMTP**, and then double-click to edit the string.
-9. Type `{0006F049-0000-0000-C000-000000000046}` into **Value data**, and then select **OK**.
+9. Type `{0006F049-0000-0000-C000-000000000046}` in the **Value data** box, and then select **OK**.
     :::image type="content" source=".\media\cannot-view-free-busy-information\free-busy-registry-key.png" alt-text="Value data.":::
 10. Exit Registry Editor.
