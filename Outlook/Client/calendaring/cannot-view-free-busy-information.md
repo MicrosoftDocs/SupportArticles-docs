@@ -58,7 +58,7 @@ Reinstall the Office applications.
 Add the missing registry entries.
 
 > [!NOTE]
-> Add only the appropriate entry for your type of Office installation, either Click-to-Run or MSI.
+> Add the registry entries under the appropriate path for your type of Office installation, either Click-to-Run or MSI.
 
 1. Close Outlook.
 2. Start Registry Editor.
