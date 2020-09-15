@@ -17,7 +17,7 @@ additionalContent:
 
       - title: Configuration Manager
         summary: Troubleshooting articles for Configuration Manager
-        url: configmgr/toc.yml
+        url: configmgr/backups-fail-with-vss-provider-issue.md
 
       - title: Microsoft Message Queuing
         summary: Troubleshooting articles for Microsoft Message Queuing
@@ -25,7 +25,7 @@ additionalContent:
 
       - title: Visual FoxPro
         summary: Troubleshooting articles for Visual FoxPro
-        url: visualstudio/foxpro/welcome-foxpro.md
+        url: visualstudio/foxpro/cursor-based-grid-blank.md
 
       - title: Visual Studio
         summary: Troubleshooting articles for Visual Studio
