@@ -23,7 +23,7 @@ search.appverid:
 
 ## Symptoms
 
-Some websites can't be viewed in Microsoft [Teams on the web](https://teams.microsoft.com/).
+Some websites can't be viewed in [Microsoft Teams on the web](https://teams.microsoft.com/).
 
 ## Cause
 
