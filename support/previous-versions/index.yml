@@ -1,5 +1,5 @@
 ### YamlMime:Hub
-title: Previous versions of products troubleshooting document
+title: Troubleshooting document for previous versions of Microsoft products, services and technologies
 summary: Technical content to troubleshoot issues in previous versions of products
 
 metadata:
@@ -8,29 +8,18 @@ metadata:
    ms.service: previous-versions
    ms.author: dale
 
-productDirectory:
-  items:
-  - title: Configuration Manager
-    imageSrc: "../media/hub-landing/system-center-dpm.png"
-    summary: Troubleshooting articles for Configuration Manager
-    url: configmgr/backups-fail-with-vss-provider-issue.md
-
-  - title: .NET Framework
-    imageSrc: "../media/hub-landing/logo_NET.svg"
-    summary: Troubleshooting articles for .NET Framework
-    url: dotnet/framework/64-bit-app-fails-access-violation-clr-marshaling.md
-    
-  - title: Microsoft Message Queuing
-    imageSrc: "../media/hub-landing/system-center-orchestrator.png"
-    summary: Troubleshooting articles for Microsoft Message Queuing
-    url: msmq/clustering-support-msmq.md
-
-  - title: Visual FoxPro
-    imageSrc: "../media/hub-landing/system-center-service-manager.png"
-    summary: Troubleshooting articles for Visual FoxPro
-    url: visualstudio/foxpro/cursor-based-grid-blank.md
-
-  - title: Visual Studio
-    imageSrc: "../media/hub-landing/logo_vs-ide.svg"
-    summary: Troubleshooting articles for Visual Studio
-    url: visualstudio/general/redistribution-shared-c-runtime-component.md   
+# additionalContent section (optional)
+# Card with summary style
+additionalContent:
+  # Supports up to 3 sections
+   items:
+   - title: Configuration Manager
+       summary: Troubleshooting articles for Configuration Manager
+       url: configmgr/backups-fail-with-vss-provider-issue.md
+   - title: .NET Framework
+       summary: Troubleshooting articles for .NET Framework
+       url: dotnet/framework/64-bit-app-fails-access-violation-clr-marshaling.md
+   - title: Microsoft Message Queuing
+       summary: Troubleshooting articles for Microsoft Message Queuing
+       url: msmq/clustering-support-msmq.md
+ 
