@@ -11,11 +11,23 @@ metadata:
 additionalContent:
   sections:
     - items:
-      - title: cardtitle1
-        summary: cardsummary1
-        url: https://docs.microsoft.com/
+      - title: Configuration Manager
+        summary: Troubleshooting articles for Configuration Manager
+        url: configmgr/backups-fail-with-vss-provider-issue.md
 
-      - title: cardtitle2
-        summary: cardsummary2
-        url: https://docs.microsoft.com/
+      - title: .NET Framework
+        summary: Troubleshooting articles for .NET Framework
+        url: dotnet/framework/64-bit-app-fails-access-violation-clr-marshaling.md
+
+      - title: Microsoft Message Queuing
+        summary: Troubleshooting articles for Microsoft Message Queuing
+        url: msmq/clustering-support-msmq.md
+
+      - title: Visual FoxPro
+        summary: Troubleshooting articles for Visual FoxPro
+        url: visualstudio/foxpro/cursor-based-grid-blank.md
+
+      - title: Visual Studio
+        summary: Troubleshooting articles for Visual Studio
+        url: visualstudio/general/redistribution-shared-c-runtime-component.md
 
