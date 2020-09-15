@@ -34,7 +34,7 @@ The following is a free self-service guide to complete Active Directory Federati
 
 If you have questions about this guide, refer to the following additional resources from the Office 365 community:
 
-- Directory Integration Services discussion forum in the [Office 365 community](https://techcommunity.microsoft.com/t5/office-365/ct-p/Office36) 
+- Directory Integration Services discussion forum in the [Office 365 community](https://techcommunity.microsoft.com/t5/office-365/ct-p/Office365) 
 - Directory Integration Services wiki article in the [Office 365 community](https://docs.microsoft.com/office365/enterprise/office-365-integration) 
 
 ### Paid technical advisory services
