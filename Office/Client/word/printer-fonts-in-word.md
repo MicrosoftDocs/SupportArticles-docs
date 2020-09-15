@@ -27,7 +27,7 @@ description: Explains how to use printer fonts in Microsoft Word after the featu
 Printer fonts are fonts native to a printer, as opposed to the fonts installed in the Windows operating system. Printer fonts can only be used on that printer and are not visible on screen. 
 
 > [!NOTE]
-> The "Use fonts that are stored on the printer" feature was removed from Word in version 1908.
+> The "Use fonts that are stored on the printer" option was removed from Word in version 11929.xxxxx.
 
 Printer fonts currently have limited platform support. They can be used only in Windows and Win32 apps by using Windows APIs. However, they can't be used on MacOs, iOs, Android, or Windows UAP apps, and can't be exported to other formats. 
 
