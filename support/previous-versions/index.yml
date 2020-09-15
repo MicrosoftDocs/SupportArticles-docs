@@ -8,18 +8,21 @@ metadata:
    ms.service: previous-versions
    ms.author: dale
 
-# additionalContent section (optional)
-# Card with summary style
 additionalContent:
-  # Supports up to 3 sections
-  items:
-  - title: Configuration Manager
-      summary: Troubleshooting articles for Configuration Manager
-      url: configmgr/backups-fail-with-vss-provider-issue.md
-  - title: .NET Framework
-      summary: Troubleshooting articles for .NET Framework
-      url: dotnet/framework/64-bit-app-fails-access-violation-clr-marshaling.md
-  - title: Microsoft Message Queuing
-      summary: Troubleshooting articles for Microsoft Message Queuing
-      url: msmq/clustering-support-msmq.md
+  sections:
+    - title: sectiontitle # < 60 chars (optional)
+      summary: sectionsummary # < 160 chars (optional)
+      items:
+        # Card
+        - title: cardtitle1
+          summary: cardsummary1
+          url: https://docs.microsoft.com/
+        # Card
+        - title: cardtitle2
+          summary: cardsummary2
+          url: https://docs.microsoft.com/
+        # Card
+        - title: cardtitle3
+          summary: cardsummary3
+          url: https://docs.microsoft.com/
  
