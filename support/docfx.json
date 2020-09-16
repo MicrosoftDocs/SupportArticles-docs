@@ -145,6 +145,7 @@
         "dotnet/visual-basic/**/*.md": "Visual Basic",
         "host-integration-server/**/*.md": "Host Integration Server",
         "aspnet/**/*.md": "ASP.NET",
+        "previous-versions/visualstudio/foxpro/*.md": "Visual FoxPro",
         "visualstudio/**/*.md": "Visual Studio",
         "visualstudio/silverlight/**/*.md": "Silverlight",
         "cpp/**/*.md": "Visual C++",
