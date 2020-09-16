@@ -1,3 +1,5 @@
+- name: Previous Versions
+  href: ../../index.yml
 - name: Visual FoxPro
   items:
   - name: A cursor-based grid is blank
@@ -30,7 +32,3 @@
     href: use-set-printer-to-name-command-print.md
   - name: Use wildcard characters in the SQL statement
     href: use-wildcard-characters-sql-statement.md
-- name: General
-  items:
-  - name: SQL Server distributed queries
-    href: sql-server-distributed-queries.md
