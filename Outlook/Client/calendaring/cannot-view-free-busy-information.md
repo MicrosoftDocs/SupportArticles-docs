@@ -58,11 +58,11 @@ Reinstall the Office applications.
 Add the missing registry entries.
 
 > [!NOTE]
-> Add the registry entries under the appropriate path for your type of Office installation, either Click-to-Run or MSI.
+> Add the registry entries under the appropriate subkey for your type of Office installation, either Click-to-Run or MSI.
 
 1. Close Outlook.
 2. Start Registry Editor.
-3. Find the location of the missing **FreeBusySupport** registry entry, and add the entry manually. You must add the **SchedulingInformation** entry first, and then add the **FreeBusySupport** entry.
+3. Find the location of the missing **FreeBusySupport** registry entry, and add the entry manually. You must add the **SchedulingInformation** entry first,  and then add a **FreeBusySupport** entry beneath **SchedulingInformation** entry.
 4. Select **FreeBusySupport**, select **Edit**, point to **New**, and then select **String Value**.
 5. Set **Value name** to **EX**, and then double-click to edit the string.
 6. Type `{0006F014-0000-0000-C000-000000000046}` in the **Value data** box, and then select **OK**.
