@@ -119,11 +119,6 @@
       "source_path": "support/previous-versions/configmgr/index.md",
       "redirect_url": "/support/previous-versions/configmgr/backups-fail-with-vss-provider-issue",
       "redirect_document_id": false
-    },
-    {
-      "source_path": "support/previous-versions/index.md",
-      "redirect_url": "/support/previous-versions/welcome-previous-versions",
-      "redirect_document_id": false
     }
   ]
 }
