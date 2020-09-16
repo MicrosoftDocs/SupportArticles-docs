@@ -1,11 +1,11 @@
 ---
-title: C0000005 errors and troubleshoot
+title: C0000005 error and troubleshoot
 description: This article defines a C0000005 error and offers troubleshooting suggestions.
 ms.date: 09/08/2020
 ms.prod-support-area-path: 
 ms.prod: visual-studio-family
 ---
-# C0000005 errors and how to troubleshoot them
+# C0000005 error and how to troubleshoot them
 
 This article introduces a C0000005 error and offers troubleshooting suggestions.
 
