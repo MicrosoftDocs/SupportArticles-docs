@@ -9,7 +9,7 @@ ms.reviewer: finbarr
 
 This article describes the registry keys that are used by Microsoft Internet Information Services (IIS) on Windows.
 
-_Original product version:_ &nbsp; Internet Information Services (IIS)  
+_Original product version:_ &nbsp; Internet Information Services  
 _Original KB number:_ &nbsp; 954864
 
 ## Introduction

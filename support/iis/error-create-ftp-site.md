@@ -40,7 +40,7 @@ Don't include any of the restricted characters listed above when specifying the 
 
 ## More information
 
-It is still possible to create a new FTP site or virtual directory whose name contains one of the restricted characters by using appcmd.exe or editing the applicationHost.config file directly. However, if an FTP container is created in this manner and the name contains the colon restricted character (:) in the virtual directory, the following error status will be sent to an FTP client that tries to access that directory:
+It is still possible to create a new FTP site or virtual directory whose name contains one of the restricted characters by using appcmd.exe or editing the *applicationHost.config* file directly. However, if an FTP container is created in this manner and the name contains the colon restricted character (:) in the virtual directory, the following error status will be sent to an FTP client that tries to access that directory:
 
 > 550 The parameter is incorrect.
 
