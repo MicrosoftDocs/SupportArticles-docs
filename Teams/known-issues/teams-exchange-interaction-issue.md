@@ -130,7 +130,7 @@ Additionally, run the **Free/Busy** connectivity test that is available in the M
 Open the Exchange Management Shell on one of the Exchange-based servers, and then run the following Exchange PowerShell command to verify that the **Editor** access right has been granted to the delegate:
 
 ```powershell
- Get-MailboxFolderPermission -Identity <delegator's UserPrincipalName> | Format-List
+Get-MailboxFolderPermission -Identity <delegator's UserPrincipalName>:\calendar  | Format-List
 ```
 
 Check whether the **AccessRights** parameter contains a value of **Editor**. If not, run the following command to grant the permission:
@@ -194,7 +194,7 @@ Make sure that **\*SchedulingService\*** is listed as an array member of the **E
 Set-CASMailbox <delegator's UserPrincipalName> -EwsAllowList @{Add="*SchedulingService*"}
 ```
 
-If the **EwsEnabled** parameter is set to **False**, you have to set it to either **True** or **Null** (blank). Otherwise, the Teams service will also be blocked from accessing the EWS.
+If the **EwsEnabled** parameter is set to **False**, you have to set it to **True**. Otherwise, the Teams service will also be blocked from accessing the EWS.
 
 ### Step 5: Escalate the issue
 
