@@ -6,7 +6,7 @@ ms.prod-support-area-path:
 ms.topic: how-to
 ms.prod: visual-studio-family
 ---
-# How to add a Visual FoxPro database to SQL Server as a linked server
+# Add a Visual FoxPro database to SQL Server as a linked server
 
 This article introduces how to programmatically add and query a Visual FoxPro data source as a linked server from Visual FoxPro.
 
