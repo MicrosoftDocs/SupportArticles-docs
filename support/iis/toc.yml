@@ -24,6 +24,12 @@
     href: cookie-unavailable-ihttpmodules-ihttphandler.md
   - name: Error 0x80004005 when you register WebClass
     href: error-0x80004005-register-webclass-dll.md
+  - name: Fail to upload files to WebDav directory
+    href: upload-to-webdav-directory-fails.md
+  - name: HTTP error 403.6 when you open ISS webpage
+    href: 403-6-forbidden-error.md
+  - name: Make a GET request
+    href: make-get-request.md
 
 - name: Deployment and migration
   items:
@@ -47,16 +53,21 @@
   items:
   - name: Changes in FTP 7.5
     href: changes-in-ftp-7-5.md
+  - name: Error when you create an FTP site
+    href: error-create-ftp-site.md
 
 - name: General
   items:
   - name: ASP support in Windows
     href: asp-support-windows.md
+  - name: Description of registry keys
+    href: use-registry-keys.md
   - name: Expression Web 4.0 FAQs
     href: expression-web-faq.md
+  - name: IIS Express isn't supported in production environment
+    href: express-not-supported-production-environment.md
   - name: Instances where HTTP.sys doesn't cache
     href: instances-httpsys-not-cache.md
-
 
 - name: Health, diagnostic, and performance features
   items:
@@ -84,6 +95,8 @@
     href: http-error-405-website.md
   - name: HTTP error 500.19
     href: http-error-500-19-webpage.md
+  - name: HTTP Error 501 - Not Implemented
+    href: http-error-501-not-implemented.md
   - name: Pages can't be displayed
     href: cannot-access-site-using-https.md
   - name: SSL Diagnostic tool for SDP
@@ -147,10 +160,14 @@
 
 - name: WWW administration and management
   items:
-  - name: HTTP error 400 when you send requests
-    href: http-bad-request-response-kerberos.md
+  - name: Content types for HTTP compression
+    href: content-types-http-compression.md
   - name: Enable SSL for all customers
     href: enable-ssl-all-customers.md
+  - name: HTTP error 400 when you send requests
+    href: http-bad-request-response-kerberos.md
+  - name: HTTP status code
+    href: http-status-code.md
 
 - name: WWW authentication and authorization
   items:
