@@ -1,4 +1,4 @@
-- name Visual Studio
+- name: Visual Studio
   items:
   - name: General
     href: ./general/toc.yml
