@@ -1,35 +1,80 @@
 
 - name: Visual FoxPro
   items:
+  - name: Access ImageList from TreeView and ListView
+    href: access-imagelist-treeview-listview.md
   - name: A cursor-based grid is blank
     href: cursor-based-grid-blank.md
   - name: Add a Visual FoxPro database to SQL Server
     href: add-database-sql-server.md
+  - name: Apply rich text effects in Visual FoxPro reports
+    href: apply-rich-text-effects.md
+  - name: Bug list in Service Pack 1
+    href: list-bugs-fixed-service-pack-1.md
+  - name: C0000005 errors and troubleshoot
+    href: c0000005-errors-troubleshoot.md
+  - name: C0000006 error and troubleshooting suggestions
+    href: c0000006-error-troubleshooting-suggestion.md
+  - name: Capture input in a combo box
+    href: capture-input-in-a-combo-box.md
   - name: Convert function gets date from SQL Server
     href: convert-function-gets-date-sql-server.md
+  - name: Create a Primary Index
+    href: create-primary-index.md
+  - name: Create a Startup Screen in Visual FoxPro
+    href: create-startup-screen.md
   - name: Create Stored Procedures in programs
     href: create-stored-procedures.md
+  - name: Determining the version of Visual FoxPro
+    href: determining-version-you-use.md
+  - name: Export records that contains memo fields
+    href: export-record-memo-fields.md
+  - name: Fail to print report or contents of Editing window
+    href: error-print-report-contents-of-editing-window.md
   - name: Format a date or time value to query a table
     href: format-date-or-time-value-query-table.md
+  - name: Improving Performance in Applications
+    href: improving-performance-application.md
+  - name: Locate a value or closest match
+    href: locate-value-closest-match.md
   - name: Pass parameters to a SQL Server stored procedure
     href: pass-parameters-sql-server-stored-procedure.md
   - name: Prevent printing from a report preview
     href: prevent-printing-report-preview.md
   - name: Programmatically modify report fields
     href: programmatically-modify-report-fields.md
+  - name: Query fails if date is not AMERICAN date format
+    href: query-fails-if-not-american-date.md
+  - name: Receive from the serial port by using MScomm32.ocx
+    href: receive-data-from-the-serial-port.md
+  - name: Refreshed grid doesn't display any data
+    href: refreshed-grid-does-not-display-data.md
   - name: Register an ActiveX control manually
     href: register-activex-control-manually.md
   - name: Send to the serial port
     href: send-serial-port-using-mscomm32.md
+  - name: Service Pack 1 for Visual FoxPro 9.0
+    href: service-pack-1-visual-foxpro-9.md
   - name: SQL Server distributed queries
     href: sql-server-distributed-queries.md
+  - name: Transmit and receive binary data
+    href: transmit-receive-binary-data.md
   - name: Troubleshoot to resolve suspected corruption
     href: troubleshoot-resolve-suspected-corruption.md
+  - name: Use a KeyPress Event for form controls
+    href: use-keypress-event-form-control.md
+  - name: Use FoxPro to Check for Existence of a Directory
+    href: check-for-existence-of-directory.md
+  - name: Use null values in Visual FoxPro
+    href: use-null-values.md
   - name: Use the APPEND GENERAL command
     href: use-append-general-command.md
+  - name: Use the DateTimePicker control
+    href: use-datetimepicker-control.md
   - name: Use the SET PRINTER TO NAME command to print
     href: use-set-printer-to-name-command-print.md
   - name: Use wildcard characters in the SQL statement
     href: use-wildcard-characters-sql-statement.md
+  
 - name: More products
   href: ../../index.yml
