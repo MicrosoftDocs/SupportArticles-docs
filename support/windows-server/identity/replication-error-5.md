@@ -131,7 +131,7 @@ The generic DCDIAG runs multiple tests
 DCDIAG /TEST:CheckSecurityErrors was written to perform specific tests (including an SPN registration check) to troubleshoot Active Directory operations replication failing with error 5: **access is denied** and error 8453: **replication access was denied** but is NOT run as part of the default execution of DCDIAG.
 
 1. Run DCDIAG on the destination DC
-2. Run DCDAIG /TEST:CheckSecurityError
+2. Run DCDIAG /TEST:CheckSecurityError
 3. Run NETDIAG
 4. Resolve any faults identified by DCDIAG and NETDIAG. Retry the previously failing replication operation. If still failing, proceed to **the long way around**.
 
