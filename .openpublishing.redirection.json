@@ -109,7 +109,22 @@
       "source_path": "support/windows-server/index.md",
       "redirect_url": "/support/windows-server/welcome-windows-server",
       "redirect_document_id": false
-    },
+    },    
+    {
+        "source_path": "support/azure/active-directory/install-ad-sync-tool-fails.md",
+        "redirect_url": "/support/azure/active-directory/welcome-azure-ad",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "support/azure/active-directory/specified-module-dirsync-not-load.md",
+        "redirect_url": "/support/azure/active-directory/welcome-azure-ad",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "support/azure/active-directory/unable-connect-sync-service-miisclient.md",
+        "redirect_url": "/support/azure/active-directory/welcome-azure-ad",
+        "redirect_document_id": false
+      },
     {
       "source_path": "support/sql/resource-monitor-nonyielding-condition.md",
       "redirect_url": "https://support.microsoft.com/help/2216485",
