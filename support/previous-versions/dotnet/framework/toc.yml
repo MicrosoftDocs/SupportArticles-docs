@@ -1,5 +1,4 @@
-- name: More products
-  href: ../../index.yml
+
 
 - name: .NET Framework
   items:
@@ -19,3 +18,5 @@
     items:
     - name: Installing a .NET Framework patch fails
       href: dotnet-framework-patch-install-fails.md
+- name: More products
+  href: ../../index.yml

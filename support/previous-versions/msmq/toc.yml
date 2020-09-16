@@ -1,5 +1,4 @@
-- name: More products
-  href: ../../index.yml
+
 - name: Microsoft Message Queuing
   items:
   - name: Clustering support for MSMQ
@@ -22,3 +21,5 @@
     href: uninstall-message-queue-server.md
   - name: Write and read  Message Queuing in Visual C#
     href: write-read-msmq-visual-csharp.md
+- name: More products
+  href: ../../index.yml
