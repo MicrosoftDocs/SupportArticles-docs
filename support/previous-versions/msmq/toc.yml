@@ -22,4 +22,4 @@
   - name: Write and read  Message Queuing in Visual C#
     href: write-read-msmq-visual-csharp.md
 - name: More products
-  href: ../../index.yml
+  href: ../index.yml
