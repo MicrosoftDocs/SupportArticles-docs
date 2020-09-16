@@ -33,31 +33,6 @@ It is common for IT administrators to want to disable IPv6. This is often beca
 
 We recommend that you use **Prefer IPv4 over IPv6** in prefix policies instead of disabling IPV6.
 
-## Automatically disable or re-enable IPv6 or its components
-
-To automatically disable or re-enable IPv6 or its components, follow these steps:
-
-1. Select the **Download** button for the procedure that you want to run.
-2. Select **Run** or **Open** in the **File Download** dialog box.
-3. Follow the steps in the easy fix wizard.
-
-|Prefer IPv4 over IPv6 in prefix policies|Disable IPv6 on all nontunnel interfaces|Disable IPv6 on all tunnel interfaces|Disable IPv6 on nontunnel interfaces (except the loopback) and on IPv6 tunnel interface|
-|---|---|---|---|
-|[Download](https://go.microsoft.com/?linkid=9728870) <br/>|[Download](https://go.microsoft.com/?linkid=9728871) <br/>|[Download](https://go.microsoft.com/?linkid=9728872) <br/>|[Download](https://go.microsoft.com/?linkid=9728873) <br/>|
-|||||
-
-|Prefer IPv6 over IPv4 in prefix policies|Re-enable IPv6 on all nontunnel interfaces|Re-enable IPv6 on all tunnel interfaces|Re-enable IPv6 on nontunnel interfaces and on IPv6 tunnel interfaces|
-|---|---|---|---|
-|[Download](https://go.microsoft.com/?linkid=9732130) <br/>|[Download](https://go.microsoft.com/?linkid=9732131) <br/>|[Download](https://go.microsoft.com/?linkid=9732984) <br/>|[Download](https://go.microsoft.com/?linkid=9732985) <br/>|
-|||||
-
-### Notes for wizard
-
-- This wizard may be in English only. However, the automatic fix also works for other language versions of Windows.
-- If you're not on the computer that has the problem, save the easy fix solution to a flash drive or a CD, and then run it on the computer that has the problem.
-- You must restart your computer after you run the automatic fix.
-- If you want to re-enable the IPv6 functionality, set the registry value `Disabled Components` to **0**, located at `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters\`, by using the steps in the **Use registry key to configure IPv6** section.
-
 ## Use registry key to configure IPv6
 
 > [!IMPORTANT]
