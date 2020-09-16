@@ -1,3 +1,7 @@
+- name: Previous Versions
+  href: ../../index.yml
+- name: Microsoft Message Queuing
+  items:
   - name: Clustering support for MSMQ
     href: clustering-support-msmq.md
   - name: Error when RAM exceeds allocated memory
