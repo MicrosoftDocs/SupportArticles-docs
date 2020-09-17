@@ -8,9 +8,6 @@ ms.prod-support-area-path: Software Update Management and Compliance
 
 This article helps you troubleshoot the software update management process in Configuration Manager, including client software update scanning, synchronization issues and detection problems with specific updates.
 
-> [!NOTE]
-> **Home users**: This article is only intended for technical support agents and IT professionals. If you're looking for help with a problem, [ask the Microsoft Community](https://answers.microsoft.com/).
-
 _Original product version:_ &nbsp; Configuration Manager (current branch), System Center 2012 R2 Configuration Manager, System Center 2012 Configuration Manager  
 _Original KB number:_ &nbsp; 4505440
 
@@ -160,8 +157,10 @@ The first thing the client does is set the WSUS server that will be its update s
 |---|---|
 |ScanAgent.log shows no policy available for an update source and no WUAHandler.log exists or no current activity within WUAHandler.log|Check the [Enable software updates on clients](/mem/configmgr/core/clients/deploy/about-client-settings#enable-software-updates-on-clients) setting.|
 |Scan Agent or Location Services doesn't receive the WSUS server location|<ul><li>Is a software update point (SUP) role installed for the site?<br/><br/>If not, install and configure a software update point and monitor SUPSetup.log for progress. See [Install and configure a software update point](/mem/configmgr/sum/get-started/install-a-software-update-point) for more information.</li><li>If a SUP role is installed, is it configured and synchronizing?<br/><br/>Check WCM.log, WSUSCtrl.log, and WSyncMgr.log for errors.<br/><br/>`select * from WSUSServerLocations`<br/><br/>`select * from Update_SyncStatus`</li></ul>|
-|Client receives the WSUS location but fails to configure the WSUS registry keys|Did Group Policy refresh respond within the 2-minute timeout per WUAHandler.log?<br/><br/>If so, does WUAHandler denote **Group policy settings were overwritten by a higher authority (Domain Controller)**?<br/><br/>Check for a GPO being set within the domain.|
+|Client receives the WSUS location but fails to configure the WSUS registry keys|Did Group Policy refresh respond within the 2-minute timeout per WUAHandler.log?<br/><br/>If so, does WUAHandler denote **Group policy settings were overwritten by a higher authority (Domain Controller)**?<br/><br/>For more information, see [Group Policy overrides the correct WSUS configuration information](troubleshoot-software-update-scan-failures.md#group-policy-overrides-the-correct-wsus-configuration-information).|
 |||  
+
+For more information about software update scan failures troubleshooting, see [Troubleshoot software update scan failures in Configuration Manager](troubleshoot-software-update-scan-failures.md).
 
 ### Step 2: Scan Agent requests the scan and WUAHandler initiates the scan
 
@@ -517,14 +516,14 @@ Attempt to isolate the issue that relates to supersedence by using the following
 2. Run the **Software Updates Scan Cycle** action on the Configuration Manager client.
 3. Review UpdatesStore.log and WindowsUpdate.log.
 
-#### Troubleshooting update applicability
+#### Troubleshoot update applicability
 
-1. Check if any prerequisites are missing using the KB article for the update. For instance, does the update require the application or OS being patched to be at a specific service pack level?
-2. Confirm that the Unique Update ID of the update in question matches what is deployed. For instance, is the update in question an x86 update but being targeted to an x64 host?
+1. Check if any prerequisites are missing using the KB article for the update. For example, does the update require the application or OS being patched to a specific service pack level?
+2. Confirm that the Unique Update ID of the update in question matches what is deployed. For example, is the update in question a 32-bit update but is targeted to a 64-bit host?
 
 ## More information
 
-For additional information regarding how to configure software updates in Configuration Manager, see the following articles:
+For more information about how to configure software updates in Configuration Manager, see the following articles:
 
 - [Plan for software updates in Configuration Manager](/mem/configmgr/sum/plan-design/plan-for-software-updates)
 - [How to Configure a Software Update Point to Use Network Load Balancing (NLB) Cluster](/previous-versions/system-center/system-center-2012-R2/hh237369(v=technet.10))

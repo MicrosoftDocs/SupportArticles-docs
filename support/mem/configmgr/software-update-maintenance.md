@@ -151,3 +151,9 @@ If you have to or want to decline updates manually, you can do this directly fro
 3. Display the **Supersedence** column. To do this, right-click the column headers, and then select **Supersedence**.
 4. Sort by supersedence. To do this, left-click the **Supersedence** column.
 5. Select and decline the superseded updates.
+
+## References
+
+For more information about WSUS maintenance, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://support.microsoft.com/help/4490644).
+
+For more information about WSUS cleanup behavior and log entries in Configuration Manager (current branch), see [Software updates maintenance](/mem/configmgr/sum/deploy-use/software-updates-maintenance).
