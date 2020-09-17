@@ -214,4 +214,4 @@ For more information, see:
 - [AD Forest Recovery - Seizing an operations master role](/windows-server/identity/ad-ds/manage/ad-forest-recovery-seizing-operations-master-role)
 - [To clean up server metadata by using Ntdsutil](/windows-server/identity/ad-ds/deploy/ad-ds-metadata-cleanup#to-clean-up-server-metadata-by-using-ntdsutil)
 - [Planning Operations Master Role Placement](/windows-server/identity/ad-ds/plan/planning-operations-master-role-placement)
-- [Move-ADDirectoryServerOperationMasterRole](/powershell/module/addsadministration/move-addirectoryserveroperationmasterrole?view=win10-ps)
+- [Move-ADDirectoryServerOperationMasterRole](/powershell/module/addsadministration/move-addirectoryserveroperationmasterrole?view=win10-ps&preserve-view=true)

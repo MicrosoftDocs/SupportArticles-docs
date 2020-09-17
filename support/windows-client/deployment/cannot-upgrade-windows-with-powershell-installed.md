@@ -108,4 +108,4 @@ For more information about Windows PowerShell, visit the following Microsoft Web
 
 - [Windows PowerShell blog](https://devblogs.microsoft.com/powershell/)
 
-- [Windows PowerShell SDK](https://docs.microsoft.com/powershell/scripting/developer/windows-powershell?view=powershell-7)
+- [Windows PowerShell SDK](https://docs.microsoft.com/powershell/scripting/developer/windows-powershell?view=powershell-7&preserve-view=true)

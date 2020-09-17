@@ -47,7 +47,7 @@ Set-NetAdapterVmq -Name "NIC 1" -Enabled $False
 Set-NetAdapterVmq -Name "NIC 2" -Enabled $False
 ```
 
-You can confirm that VMQ is disabled on the correct network adapters by using the [Get-NetAdapterVmq](https://docs.microsoft.com/powershell/module/netadapter/get-netadaptervmq?view=win10-ps)  Windows PowerShell command.
+You can confirm that VMQ is disabled on the correct network adapters by using the [Get-NetAdapterVmq](https://docs.microsoft.com/powershell/module/netadapter/get-netadaptervmq?view=win10-ps&preserve-view=true)  Windows PowerShell command.
 
 > [!NOTE]
 > By default, VMQ is disabled on the Hyper-V virtual switch for virtual machines that are using 1-gigabit network adapters. VMQ is enabled on a Hyper-V virtual switch only when the system is using 10-gigabit or faster network adapters. This means that by disabling VMQ on the Broadcom network adapter, you aren't losing network performance or any other benefits because this is the default. However, you need to do this to work around the driver issue.
