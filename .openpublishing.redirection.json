@@ -149,11 +149,6 @@
       "source_path": "support/previous-versions/visualstudio/index.md",
       "redirect_url": "/support/previous-versions/visualstudio/general/redistribution-shared-c-runtime-component",
       "redirect_document_id": false
-    },
-    {
-      "source_path": "support/previous-versions/visualstudio/**/index.md",
-      "redirect_url": "/support/previous-versions/visualstudio/general/redistribution-shared-c-runtime-component",
-      "redirect_document_id": false
     }
   ]
 }
