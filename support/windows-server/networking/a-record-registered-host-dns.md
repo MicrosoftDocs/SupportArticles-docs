@@ -44,7 +44,7 @@ By default, when the DNS service is installed on a computer that is running Wind
 > [!NOTE]
 > The resolution that is described in this article only works on member servers that run DNS in a domain. It does not resolve this issue on domain controller computers. For additional information about how to resolve this issue on a domain controller, click the article number below to view the article in the Microsoft Knowledge Base:
 
-[292822](/EN-US/help/292822) Name Resolution and Connectivity Issues on Windows 2000 Domain Controller with Routing and Remote Access and DNS Installed  
+[292822](https://support.microsoft.com/help/292822) Name Resolution and Connectivity Issues on Windows 2000 Domain Controller with Routing and Remote Access and DNS Installed  
 To prevent a DNS server from registering an A record for a specific interface in its primary DNS suffix zone, use one of the following methods.
 
 ### Method 1

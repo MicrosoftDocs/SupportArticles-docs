@@ -58,6 +58,5 @@ Microsoft has confirmed that this is a problem in the Microsoft products that ar
 
 ## More information
 
-To download Remote Server Administration Tools for Windows 7, visit the following Microsoft Web site: [https://www.microsoft.com/download/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d](https://www.microsoft.com/download/details.aspx?familyid=7d2f6ad7-656b-4313-a005-4e344e43997d)
 For more information about Windows Server 2008 Terminal Services, visit the following Microsoft Web site: [https://technet.microsoft.com/library/cc268349.aspx](https://technet.microsoft.com/library/cc268349.aspx)
 For more information about Windows Server 2008 R2 Remote Desktop Services, visit the following Microsoft Web site: [https://technet.microsoft.com/library/dd647502(WS.10).aspx](https://technet.microsoft.com/library/dd647502%28ws.10%29.aspx)

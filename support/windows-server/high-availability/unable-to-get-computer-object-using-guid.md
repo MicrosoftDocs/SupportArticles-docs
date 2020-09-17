@@ -50,5 +50,3 @@ To resolve this problem, provide the failover cluster access to a writeable dom
 
  To learn more about the Active Directory requirements for failover clustering, visit the following Microsoft Web site: 
  [https://technet.microsoft.com/library/cc731002(WS.10).aspx](https://technet.microsoft.com/library/cc731002%28WS.10%29.aspx) 
-For more information about RODCs, visit the following Microsoft Web site:
- [https://technet2.microsoft.com/windowsserver2008/en/library/ce82863f-9303-444f-9bb3-ecaf649bd3dd1033.mspx?mfr=true](https://technet2.microsoft.com/windowsserver2008/en/library/ce82863f-9303-444f-9bb3-ecaf649bd3dd1033.mspx?mfr=true)

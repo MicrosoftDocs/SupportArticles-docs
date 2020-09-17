@@ -401,7 +401,8 @@ Hardware failures are beyond the scope of this article. See a computer hardware 
 ### How to use the Microsoft Support website to find a solution
 
 If you cannot resolve the problem by following the steps in this article, you can use the Microsoft Support website to find a solution to your problem. The following list describes some of the services that the Microsoft Support website provides:
-- [Searchable Knowledge Base](/default.aspx?pr=kbinfo&) - Search technical support information and self-help tools for Microsoft products.
-- [Frequently Asked Questions](/default.aspx?scid=fh;rid;faqs) - View product-specific frequently asked questions and support highlights.
+
+- [Searchable Knowledge Base](https://support.microsoft.com/) - Search technical support information and self-help tools for Microsoft products.
+- [Frequently Asked Questions](https://www.microsoft.com/software-download/faq) - View product-specific frequently asked questions and support highlights.
 - [Software and Updates](https://www.microsoft.com/download/search.aspx) - Find software and updates on the Download Center.
-- [Other Support Options](/) - Ask a support question by using the web or telephone Microsoft Support.
+- [Other Support Options](https://support.microsoft.com/contactus/) - Ask a support question by using the web or telephone Microsoft Support.

@@ -17,7 +17,7 @@ ms.technology: Networking
 
 This article helps fix a slow network performance issue that can occur when you open a file that is located in a shared folder on a remote network computer.
 
-This article applies to Windows 2000. Support for Windows 2000 ends on July 13, 2010. The [Windows 2000 End-of-Support Solution Center](/win2000) is a starting point for planning your migration strategy from Windows 2000. For more information, see the [Microsoft Support Lifecycle Policy](/lifecycle/).
+This article applies to Windows 2000. Support for Windows 2000 ends on July 13, 2010. For more information, see the [Microsoft Support Lifecycle Policy](https://docs.microsoft.com/lifecycle).
 
 _Original product version:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 829700

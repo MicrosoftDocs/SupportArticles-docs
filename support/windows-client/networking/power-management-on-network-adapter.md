@@ -47,23 +47,6 @@ However, with some Windows 7 or Windows Server 2008 R2 installations, you may wa
 > [!IMPORTANT]
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
 
-To have us disable or enable the network adapter power management setting for you, go to the **Here's an easy fix** section. If you prefer to disable or enable the network adapter power management setting yourself, go to the [Let me fix it myself](#let-me-fix-it-myself) section.
-
-### Here's an easy fix
-
-To disable or enable the network adapter power management setting automatically, click the **Download** button. In the **File Download** dialog box, click **Run** or **Open**, and then follow the steps in the easy fix wizard.
-
-- You have to select the device that you want to disable or enable in the **DeviceNumber** list during the installation of this easy fix solution.
-- This wizard may be in English only. However, the automatic fix also works for other language versions of Windows.
-- If you're not on the computer that has the problem, save the easy fix solution to a flash drive or a CD, and then run it on the computer that has the problem.
-
-|Disable network adapter power management setting|Enable network adapter power management setting|
-|---|---|
-|[Download](https://go.microsoft.com/?linkid=9820158)|[Download](https://go.microsoft.com/?linkid=9820157)|
-|||
-
-### Let me fix it myself
-
 To use Registry Editor to disable the **Allow the computer to turn off this device to save power** network adapter setting for a single computer, follow these steps:
 
 1. Select **Start**, select **Run**, type *regedit* in the **Open** box, and then select **OK**.

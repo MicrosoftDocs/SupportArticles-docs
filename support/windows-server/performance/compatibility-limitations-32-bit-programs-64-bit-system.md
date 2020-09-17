@@ -138,10 +138,6 @@ The Itanium-based versions of Microsoft Windows Server 2003 with Service Pack 1 
 
 Running a 32-bit program on the Itanium-based CPU hardware can increase the performance of the 32-bit program. You may experience increased performance even though some overhead occurs when the IA-32 EL translates instructions between the 32-bit and 64-bit instruction sets. The IA-32 EL also offers many features to enhance the performance of the 32-bit program. For example, the IA-32 EL can cache the instructions that have already been translated. This will increase the performance of a 32-bit program that is currently running.
 
-For more information about the IA-32 EL, visit the following Intel Web site:
-
-[http://www.intel.com/cd/software/products/asmo-na/eng/219773.htm](http://www.intel.com/cd/software/products/asmo-na/eng/219773.htm) 
-
 Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.  
 
 [back to the top](#summary) 

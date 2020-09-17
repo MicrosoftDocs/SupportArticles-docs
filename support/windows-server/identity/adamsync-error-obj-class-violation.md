@@ -193,7 +193,7 @@ different DisplayName entry. When a problem attribute is not imported, you can o
 
 ### Contact Microsoft Support
 
-If the problem is not resolved after you complete the steps in this article, contact Microsoft Support. Click the following link to access Microsoft Support: [https://support.microsoft.com/default.aspx?scid=fh;EN-US;CNTACTMS](/default.aspx?scid=fh;en-us;cntactms) 
+If the problem is not resolved after you complete the steps in this article, contact [Microsoft Support](https://support.microsoft.com/).
 
 ## Status
 
@@ -204,9 +204,6 @@ This behavior is by design.
 To synchronize data from Active Directory to ADAM by using the Adamsync tool, follow these steps:
 1. Click **Start**, point to **All Programs**, point to **ADAM**, and then click **ADAM Tools Command Prompt**.
 2. At the command prompt, type the following command, and then press ENTER: adamsync /fs **Server_Name**: **port_number** **configurationName** /log **log_file_name**.log 
-For more information about how to use the Adamsync tool, visit the following Microsoft Web sites: [https://technet2.microsoft.com/windowsserver2008/en/library/ca49911b-d004-4497-b369-6506495fb30f1033.mspx?mfr=true](https://technet2.microsoft.com/windowsserver2008/en/library/ca49911b-d004-4497-b369-6506495fb30f1033.mspx?mfr=true) 
-
-[https://technet2.microsoft.com/windowsserver/en/library/809c8d09-cc99-4e7e-a80d-e77c5aefb3211033.mspx?mfr=true](https://technet2.microsoft.com/windowsserver/en/library/809c8d09-cc99-4e7e-a80d-e77c5aefb3211033.mspx?mfr=true) 
 
 ### Why you cannot import the LDF file directly into ADAM
 
