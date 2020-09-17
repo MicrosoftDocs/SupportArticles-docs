@@ -172,10 +172,10 @@
   items:
   - name: A live migration fails with error 0x8007274D
     href: shared-nothing-live-migration-error-0x8007274d.md
+  - name: A P2V conversion fails with error 0x809933BB or 0x80070539
+    href: p2v-conversion-stops-at-40-percent.md
   - name: A P2V conversion fails with GPT partitions
     href: p2v-conversion-fails-with-gpt-partitions.md
-  - name: A P2V conversion stops at 40 percent
-    href: p2v-conversion-stops-at-40-percent.md
   - name: Collect VMM storage traces
     href: collect-vmm-traces.md
   - name: Convert between VHD and VHDX formats

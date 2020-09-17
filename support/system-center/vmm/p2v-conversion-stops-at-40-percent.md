@@ -58,7 +58,7 @@ This can occur if the Volume Shadow Service (VSS) **Shadow Copy Optimization Wri
 To resolve this issue, follow the steps below:
 
 1. First check for unresolvable SIDs in the Administrators group on the VMM source machine. If any exist, delete them.
-2. Open regedit and locate `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList`.
+2. Open Registry Editor and locate `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList`.
 3. Under the `ProfileList` subkey, delete any subkey that's named *SID.bak*.
 
     > [!NOTE]

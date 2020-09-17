@@ -26,10 +26,10 @@ You may also see entries that resemble the following in the Setup.log file:
 > [10/23/2013 11:07:42 AM] Information : Starting Service:ReportServer$MSDPM2012 on machine:DPMServerName flag restart:False  
 > [10/23/2013 11:07:42 AM] Information : Create a registry containing sql agent account information  
 > [10/23/2013 11:07:42 AM] Information : Querying WMI Namespace: \\\\DPMServerName\root\cimv2 for query: `SELECT * FROM Win32_Service WHERE Name='SQLAgent$MSDPM2012'`  
-> [10/23/2013 11:07:42 AM] Information : Sql Agent account name = domain-old\DPMServerName$  
+> [10/23/2013 11:07:42 AM] Information : Sql Agent account name = contoso-old\DPMServerName$  
 > [10/23/2013 11:07:42 AM] Information : Create a registry containing the trigger job path information  
 > [10/23/2013 11:07:42 AM] Data : TriggerJobPath = D:\Microsoft System Center 2012\DPM\DPM\bin\  
-> [10/23/2013 11:07:42 AM] Information : Add user: domain-old\DPMServerName$ to local group: Distributed COM Users on server: DPMServerName  
+> [10/23/2013 11:07:42 AM] Information : Add user: contoso-old\DPMServerName$ to local group: Distributed COM Users on server: DPMServerName  
 > [10/23/2013 11:07:42 AM] \* Exception : => DPM Setup failed to add a user to the local group.Review the error details, take the appropriate action, and then run DPM Setup again.Microsoft.Internal.EnterpriseStorage.Dls.Setup.Exceptions.BackEndErrorException: Exception of type 'Microsoft.Internal.EnterpriseStorage.Dls.Setup.Exceptions.BackEndErrorException' was thrown.  
 > at Microsoft.Internal.EnterpriseStorage.Dls.Setup.NativeConfigHelper.AddAccountToLocalGroup(String accountName, String localGroupName, String machineName)  
 > at Microsoft.Internal.EnterpriseStorage.Dls.Setup.Wizard.RemoteDatabaseConfiguration.AddSqlAgentAccountToLocalGroups(String sqlAgentAccountName)  
@@ -47,7 +47,7 @@ at Microsoft.Internal.EnterpriseStorage.Dls.Setup.Wizard.ProgressPage.UpgradeDpm
 
 ## Cause
 
-This issue can occur if the environment has a disjointed namespace (that is, the domain has different NetBIOS and DNS names). For example, assume that the domain has a NetBIOS name of *domain.com* and a DNS name of *domain-old.com*. When users are added in the Windows UI, they are displayed in the format of *domain\ComputerName*. However, you notice in the error log that there was an attempt to add a computer account in the format of *domain-old\ComputerName*.
+This issue can occur if the environment has a disjointed namespace (that is, the domain has different NetBIOS and DNS names). For example, assume that the domain has a NetBIOS name of *contoso.com* and a DNS name of *contoso-old.com*. When users are added in the Windows UI, they are displayed in the format of *contoso\ComputerName*. However, you notice in the error log that there was an attempt to add a computer account in the format of *contoso-old\ComputerName*.
 
 ## Workaround: Upgrade
 
@@ -124,7 +124,7 @@ If the upgrade installation fails, and the program doesn't roll back, you must r
 4. To restore the backup database copy, run the following command at an elevated command prompt:
 
     ```console
-    run dpmsync -restoredb (with appropriate switches)
+    dpmsync -restoredb (with appropriate switches)
     ```
 
 5. To synchronize the databases, run the following command in DPM Management Shell:
