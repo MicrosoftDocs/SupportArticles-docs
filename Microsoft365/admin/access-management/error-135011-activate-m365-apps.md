@@ -27,13 +27,14 @@ description: 'Describes how to resolve the error "Your organization has disabled
 When you try to sign in to or activate Microsoft 365 apps, you receive the following error message: 
 
 > **Something went wrong**
-> 
+>
 > Your organization has disabled this device.
-> 
-> To fix this, contact your system administrator and provide the error code 135011. 
-> 
-> More information: <br />
-> https://wmv.microsoft.com/wamerrors
+>
+> To fix this, contact your system administrator and provide the error code 135011.
+>
+> More information:
+>
+> `https://wmv.microsoft.com/wamerrors`
 
 :::image type="content" source="media/error-135011-activate-m365-apps/error-135011-activate-m365-apps.png" alt-text="Something went wrong error. ":::
 
