@@ -655,6 +655,8 @@
       href: ../office-suite-issues/fails-accessing-page-connected-access-database.md
     - name: "\"Compile Error: Procedure too large\""
       href: ../office-suite-issues/compile-error-procedure-too-large.md
+    - name: "\"Do you want to download the converter\" error"
+      href: ../office-suite-issues/error-do-you-want-download-converter.md
     - name: "\"Missing file\" error with a web page file"
       href: ../office-suite-issues/web-page-missing-file-error.md
     - name: "\"No default mail client\" error"
