@@ -6,7 +6,7 @@ author: McCoyBot
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: Office 365
+ms.prod: office 365
 localization_priority: Normal
 search.appverid:
 - SPO160

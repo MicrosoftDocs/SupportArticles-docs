@@ -34,7 +34,7 @@ We are going to ask you some specific questions to scope your situation. Then we
 
 ## Select the current state of the on-premises user account
 
-If there is no [Directory Synchronization](/microsoft-365/enterprise/microsoft-365-integration?view=o365-worldwide) in the environment, then the **Managed Account** option should be selected.
+If there is no [Directory Synchronization](/microsoft-365/enterprise/microsoft-365-integration?view=o365-worldwide&preserve-view=true) in the environment, then the **Managed Account** option should be selected.
 
 If Directory Synchronization is in place, you can search within **Active Directory Users and Computers** to see if the on-premises account is **Present** or **Deleted**.
 

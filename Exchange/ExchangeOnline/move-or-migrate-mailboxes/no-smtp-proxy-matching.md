@@ -33,12 +33,12 @@ This issue may occur if one of the following conditions is true:
 
 To find the cause of the issue and determine from which mailbox the \<domain>.mail.onmicrosoft.com email address is missing, run the following commands in the Exchange Management Shell and Exchange Online PowerShell: 
 
-- In [Exchange Management Shell on-premises](https://docs.microsoft.com/powershell/exchange/exchange-server/open-the-exchange-management-shell?view=exchange-ps):   
+- In [Exchange Management Shell on-premises](https://docs.microsoft.com/powershell/exchange/exchange-server/open-the-exchange-management-shell?view=exchange-ps&preserve-view=true):   
 
 ```powershell
 Get-Mailbox <AffectedUser> | FL EmailAddresses, EmailAddressPolicyEnabled
 ```      
-- In [Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps):   
+- In [Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true):   
 
 ```powershell
 Get-MailUser <AffectedUser> | Select -ExpandProperty emailaddresses      

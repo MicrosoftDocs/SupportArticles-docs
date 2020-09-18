@@ -13,7 +13,7 @@
       href: ../administration/cannot-connect-mailbox-pop-imap-outlook.md
     - name: Can't manage Send on Behalf permissions
       href: ../administration/send-on-behalf-for-shared-mailbox.md
-    - name: GetFolder requests return wrong TotalCount values
+    - name: GetFolder requests return wrong TotalCount values
       href: ../administration/getfolder-requests-return-wrong-totalcount-values.md
     - name: Proxy address is already being used
       href: ../administration/proxy-address-being-used.md
@@ -53,34 +53,34 @@
       href: ../email-alias/remove-an-email-alias.md
   - name: Email Delivery
     items:
-    - name: 550 5.1.1 ExRecipNotFound NDR
-      href: ../email-delivery/exrecipnotfound-ndr.md
-    - name: 550 5.1.10 RecipientNotFound NDR
-      href: ../email-delivery/recipientnotfound-ndr.md
-    - name: 550 5.2.0 BadPrimary NDR
-      href: ../email-delivery/badprimary-ndr.md
-    - name: 550 5.7.64 TenantAttribution
-      href: ../email-delivery/relay-access-denied-smtp.md
-    - name: 550 5.7.64 TenantAttribution NDR
-      href: ../email-delivery/tenantattribution-ndr.md
-    - name: 554 5.2.0 STOREDRV.Deliver.Exception
-      href: ../mail-delivery/mapiexceptionnotfound-ndr.md
-    - name: 554 5.6.0 Invalid message NDR
-      href: ../email-delivery/invalid-message-ndr.md
-    - name: Automatically forward email in transport rule
-      href: ../email-delivery/autoforward-mail-exclusions-not-honored-transport-rule.md
-    - name: Email sent to EXO deferred with ATTR35
-      href: ../email-delivery/wrong-office-365-region-exo.md
-    - name: Find and fix email delivery issues
-      href: ../email-delivery/email-delivery-issues.md
-    - name: IMCEAEX non-delivery report
-      href: ../email-delivery/imceaex-ndr.md
-    - name: Important notice for Office 365
-      href: ../email-delivery/office-365-notice.md
-    - name: Inbox rule to forward emails doesn't work
-      href: ../email-delivery/inbox-rule-to-forward-messages-not-work.md
-    - name: Non-delivery report error codes
-      href: ../email-delivery/mail-issues.md
+    - name: 550 5.1.1 ExRecipNotFound NDR
+      href: ../email-delivery/exrecipnotfound-ndr.md
+    - name: 550 5.1.10 RecipientNotFound NDR
+      href: ../email-delivery/recipientnotfound-ndr.md
+    - name: 550 5.2.0 BadPrimary NDR
+      href: ../email-delivery/badprimary-ndr.md
+    - name: 550 5.7.64 TenantAttribution
+      href: ../email-delivery/relay-access-denied-smtp.md
+    - name: 550 5.7.64 TenantAttribution NDR
+      href: ../email-delivery/tenantattribution-ndr.md
+    - name: 554 5.2.0 STOREDRV.Deliver.Exception
+      href: ../mail-delivery/mapiexceptionnotfound-ndr.md
+    - name: 554 5.6.0 Invalid message NDR
+      href: ../email-delivery/invalid-message-ndr.md
+    - name: Automatically forward email in transport rule
+      href: ../email-delivery/autoforward-mail-exclusions-not-honored-transport-rule.md
+    - name: Email sent to EXO deferred with ATTR35
+      href: ../email-delivery/wrong-office-365-region-exo.md
+    - name: Find and fix email delivery issues
+      href: ../email-delivery/email-delivery-issues.md
+    - name: IMCEAEX non-delivery report
+      href: ../email-delivery/imceaex-ndr.md
+    - name: Important notice for Office 365
+      href: ../email-delivery/office-365-notice.md
+    - name: Inbox rule to forward emails doesn't work
+      href: ../email-delivery/inbox-rule-to-forward-messages-not-work.md
+    - name: Non-delivery report error codes
+      href: ../email-delivery/mail-issues.md
   - name: Groups and Distribution Lists
     items:
     - name: Can't determine group type
@@ -107,9 +107,9 @@
       href: ../move-or-migrate-mailboxes/migrate-data-with-admin-center.md
     - name: No smtp proxy matching
       href: ../move-or-migrate-mailboxes/no-smtp-proxy-matching.md
-    - name: Troubleshoot issues with IMAP mailbox migration
+    - name: Troubleshoot issues with IMAP mailbox migration
       href: ../move-or-migrate-mailboxes/troubleshoot-issues-with-imap-mailbox-migration.md
-    - name: Troubleshoot mailbox migration issues
+    - name: Troubleshoot mailbox migration issues
       href: ../move-or-migrate-mailboxes/troubleshoot-migration-issues-in-exchange-hybrid.md
     - name: WhenCreated date is changed
       href: ../move-or-migrate-mailboxes/whencreated-date-changed.md
@@ -175,7 +175,7 @@
       href: ../configure-mailboxes/create-and-manage-resource-mailboxes.md
     - name: Mailbox provision delays
       href: ../configure-mailboxes/delays-provision-mailbox-sync-changes.md
-    - name: Restore user mailboxes by using cmdlets
+    - name: Restore user mailboxes by using cmdlets
       href: ../configure-mailboxes/mailbox-recovery-in-exchange-online.md
     - name: Sent items aren't saved
       href: ../shared-mailboxes/sent-mail-is-not-saved.md

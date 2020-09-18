@@ -6,7 +6,7 @@ ms.author: v-zolu
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
-ms.prod: Office 365
+ms.prod: office 365
 localization_priority: Normal
 ms.reviewer: v-chblod
 ms.custom: CSSTroubleshoot

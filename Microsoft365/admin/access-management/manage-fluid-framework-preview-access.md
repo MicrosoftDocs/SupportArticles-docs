@@ -6,7 +6,7 @@ ms.author: v-maqiu
 manager: dcscontentpm 
 audience: ITPro 
 ms.topic: article 
-ms.prod: Office 365
+ms.prod: office 365
 localization_priority: Normal
 ms.custom: 
 - CI 110077
