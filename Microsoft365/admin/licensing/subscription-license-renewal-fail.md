@@ -7,7 +7,7 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.prod: Office 365
+ms.prod: office 365
 ms.topic: article
 ms.custom: CSSTroubleshoot
 ms.author: v-six
@@ -31,7 +31,7 @@ Message 1:Couldn't Verify Subscription
 We couldn't verify your Office 365 subscription, so most features of <application> have been disabled. Please make sure your're connected to the internet and restart your application.
 ```
 
-![error-message](./media/subscription-license-renewal-fail/error-message.jpg)
+![error message screenshot](./media/subscription-license-renewal-fail/error-message.jpg)
 
 ```adoc
 Message 2: Application (Unlicensed Product)
