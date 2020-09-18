@@ -1,8 +1,6 @@
 - name: Exchange Online Troubleshooting
   href: ../exchange-online-welcome.md
   items:
-  - name: Add Users
-    items:
   - name: Administration
     items:
     - name: Access is denied with Windows PowerShell
