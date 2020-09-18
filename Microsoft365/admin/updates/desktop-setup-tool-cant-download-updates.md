@@ -23,7 +23,7 @@ appliesto:
 
 The Microsoft Office 365 Desktop Setup Tool can't download and install software updates from Windows Update or from Microsoft Update in a Microsoft Office 365 environment. You may also get the following error message:
 
-    Your computer is not allowed to connect to the Microsoft Update service.
+> Your computer is not allowed to connect to the Microsoft Update service.
 
 You may experience these symptoms even though the computer is set up to automatically receive Windows updates.
 

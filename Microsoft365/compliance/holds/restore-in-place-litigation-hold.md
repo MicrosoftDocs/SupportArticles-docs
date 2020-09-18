@@ -47,7 +47,7 @@ To restore In-Place Hold settings, follow these steps:
 
    ![Screenshot of the in-place eDiscovery & hold page in the Exchange Admin Center](./media/restore-in-place-litigation-hold/ediscovery.jpg)
 
-1. Select the In-Place Hold entry for which you want to restore In-Place Hold settings, and then double-click it, or click **Edit** (![Edit](./media/restore-in-place-litigation-hold/edit.jpg)), to open the properties page.
+1. Select the In-Place Hold entry for which you want to restore In-Place Hold settings, and then double-click it, or click **Edit** (![Edit icon](./media/restore-in-place-litigation-hold/edit.jpg)), to open the properties page.
 
    ![Screenshot of the properties page for an In-Place Hold entry](./media/restore-in-place-litigation-hold/properties.jpg)
 

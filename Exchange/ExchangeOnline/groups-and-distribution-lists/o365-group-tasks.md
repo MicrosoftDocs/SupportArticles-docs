@@ -53,7 +53,7 @@ search.appverid: MET150
 
 ### Control Office 365 group creation
 
-By default, all users of the tenant are allowed to create Office 365 groups. However, this can result in unaccounted, orphaned, and inactive groups. To avoid this problem, you can [control how users create Office 365 Groups](/microsoft-365/admin/create-groups/manage-creation-of-groups?view=o365-worldwide).
+By default, all users of the tenant are allowed to create Office 365 groups. However, this can result in unaccounted, orphaned, and inactive groups. To avoid this problem, you can [control how users create Office 365 Groups](/microsoft-365/admin/create-groups/manage-creation-of-groups?view=o365-worldwide&preserve-view=true).
 
 You can also use the following tools to control Office 365 group creation:
 
@@ -65,13 +65,13 @@ You can also use the following tools to control Office 365 group creation:
 
   [User Activity based Expiration Policy for Office 365 groups](https://techcommunity.microsoft.com/t5/office-365-blog/user-activity-based-expiration-policy-for-office-365-groups-is/ba-p/942877)
 
-  [Office 365 group expiration policy](/microsoft-365/admin/create-groups/office-365-groups-expiration-policy?view=o365-worldwide)
+  [Office 365 group expiration policy](/microsoft-365/admin/create-groups/office-365-groups-expiration-policy?view=o365-worldwide&preserve-view=true)
 
   [Configure the expiration policy for Office 365 Groups](/azure/active-directory/users-groups-roles/groups-lifecycle)
 
 - Office 365 group naming policy
 
-  Worried that users might give offensive names to the Office 365 groups that they create? Use the Office 365 Groups naming policy to block specific words and limit group names to certain criteria, such as department names. See [Office 365 Groups naming policy](/microsoft-365/admin/create-groups/groups-naming-policy?view=o365-worldwide).
+  Worried that users might give offensive names to the Office 365 groups that they create? Use the Office 365 Groups naming policy to block specific words and limit group names to certain criteria, such as department names. See [Office 365 Groups naming policy](/microsoft-365/admin/create-groups/groups-naming-policy?view=o365-worldwide&preserve-view=true).
 
 [Back to top](#top)
 
@@ -81,7 +81,7 @@ All new teams have an associated Office 365 group. By default, this Office 365 g
 
 #### Unhide the Office 365 group from the Outlook or OWA address list
 
-1. [Connect to Exchange Online PowerShell](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps).
+1. [Connect to Exchange Online PowerShell](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true).
 2. Run the following command and specify the required value:
 
    ```powershell
@@ -93,7 +93,7 @@ All new teams have an associated Office 365 group. By default, this Office 365 g
 
 #### Unhide the Office 365 group from an Exchange client
 
-1. [Connect to Exchange Online PowerShell](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps).
+1. [Connect to Exchange Online PowerShell](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true).
 2. Run the following command and specify the required value:
 
    ```powershell
@@ -111,14 +111,14 @@ All new teams have an associated Office 365 group. By default, this Office 365 g
 
 You can assign "Send As" permissions to allow specific users to send messages on behalf of an Office 365 group:
 
-1. [Connect to Exchange Online PowerShell](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps).
+1. [Connect to Exchange Online PowerShell](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true).
 2. Run the following command:
 
    ```powershell
    Add-RecipientPermission <GroupName> -Trustee <MailboxName> -AccessRights SendAs
    ```
 
-For more information, see [Allow members to send as or send on behalf of a Group](/microsoft-365/admin/create-groups/allow-members-to-send-as-or-send-on-behalf-of-group?view=o365-worldwide).
+For more information, see [Allow members to send as or send on behalf of a Group](/microsoft-365/admin/create-groups/allow-members-to-send-as-or-send-on-behalf-of-group?view=o365-worldwide&preserve-view=true).
 
 [Back to top](#top)
 
@@ -160,7 +160,7 @@ This table shows the size and membership limits that apply to Office 365 Groups.
 |Number of groups a user can be a member of|1,000|
 |File storage|1 Terabyte + 10 GB per subscribed user + any additional storage purchased. You can purchase an unlimited amount of additional storage.|
 |Group mailbox size|50 GB|
-|Maximum email message send/receive size|35/36 MB is the default maximum send/receive limit, respectively. This can be increased by using the [Set-UnifiedGroup](/powershell/module/exchange/users-and-groups/set-unifiedgroup?view=exchange-ps) command, as necessary.|
+|Maximum email message send/receive size|35/36 MB is the default maximum send/receive limit, respectively. This can be increased by using the [Set-UnifiedGroup](/powershell/module/exchange/users-and-groups/set-unifiedgroup?view=exchange-ps&preserve-view=true) command, as necessary.|
 |Distribution Group as a member of an Office 365 group|A distribution group that has more than 1,000 members cannot be added to an Office 365 group. This also includes the nested distribution group members.|
 |||
 
@@ -186,7 +186,7 @@ To learn more about MOERA addresses, see [How the proxyAddresses attribute is po
 
 ### Customize email addresses stamped onto new Office 365 groups
 
-You can create an email address policy to automatically stamp customized email addresses onto Office 365 groups. See [Choose the domain to use when creating Office 365 Groups](/microsoft-365/admin/create-groups/choose-domain-to-create-groups?view=o365-worldwide).
+You can create an email address policy to automatically stamp customized email addresses onto Office 365 groups. See [Choose the domain to use when creating Office 365 Groups](/microsoft-365/admin/create-groups/choose-domain-to-create-groups?view=o365-worldwide&preserve-view=true).
 
 > [!NOTE]
 > The email address policy does not change the email addresses of Office 365 groups that were in use before the policy was created.
@@ -307,7 +307,7 @@ If your sender receives a non-delivery report (NDR) that has the status code 550
 
 ##### For tenant admins
 
-1. [Connect to Exchange Online PowerShell](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps).
+1. [Connect to Exchange Online PowerShell](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true).
 2. Run the following command:
 
    ```powershell
@@ -324,7 +324,7 @@ To check the message status of members who have subscribed to group emails, run 
 Get-UnifiedGroup <GroupName> | Get-UnifiedGroupLinks -LinkType Subscribers
 ```
 
-See [Message trace in the Security & Compliance Center](/microsoft-365/security/office-365-security/message-trace-scc?view=o365-worldwide).
+See [Message trace in the Security & Compliance Center](/microsoft-365/security/office-365-security/message-trace-scc?view=o365-worldwide&preserve-view=true).
 
 [Back to top](#top)
 
@@ -353,7 +353,7 @@ Restoring an Office 365 group restores any services that are related to the grou
 
 #### For tenant admins
 
-Use the Exchange admin center (EAC) or Azure Active Directory (Azure AD) PowerShell to restore a deleted group. See [Restore a deleted Office 365 Group](/microsoft-365/admin/create-groups/restore-deleted-group?view=o365-worldwide).
+Use the Exchange admin center (EAC) or Azure Active Directory (Azure AD) PowerShell to restore a deleted group. See [Restore a deleted Office 365 Group](/microsoft-365/admin/create-groups/restore-deleted-group?view=o365-worldwide&preserve-view=true).
 
 [Back to top](#top)
 
@@ -363,9 +363,9 @@ Microsoft provides no tools to convert a shared mailbox to an Office365 group, o
 
 However, you can upgrade distribution lists to Office 365 groups. This is a great way to give your organization's distribution lists all the features and functionality of Office 365 groups. See [Why you should upgrade your distribution lists to groups in Outlook](https://support.microsoft.com/office/7fb3d880-593b-4909-aafa-950dd50ce188).
 
-You can upgrade distribution lists one at a time, or several at the same time. If the distribution list can't be upgraded, a dialog box opens to indicate this. See [Which distribution lists cannot be upgraded?](/microsoft-365/admin/manage/upgrade-distribution-lists?view=o365-worldwide#which-distribution-lists-cannot-be-upgraded).
+You can upgrade distribution lists one at a time, or several at the same time. If the distribution list can't be upgraded, a dialog box opens to indicate this. See [Which distribution lists cannot be upgraded?](/microsoft-365/admin/manage/upgrade-distribution-lists?view=o365-worldwide#which-distribution-lists-cannot-be-upgraded&preserve-view=true).
 
-Also, see [Upgrade distribution lists to Office 365 Groups in Outlook](/microsoft-365/admin/manage/upgrade-distribution-lists?view=o365-worldwide).
+Also, see [Upgrade distribution lists to Office 365 Groups in Outlook](/microsoft-365/admin/manage/upgrade-distribution-lists?view=o365-worldwide&preserve-view=true).
 
 [Back to top](#top)
 
@@ -433,7 +433,7 @@ List all groups (including deleted groups) that don't have assigned owners:
 Get-UnifiedGroup -IncludeSoftDeletedGroups |?{$_.ManagedBy -eq $null}
 ```
 
-To list all Office 365 groups together with tracking information about the group creator, you have to use the [auditing](https://protection.office.com/unifiedauditlog) information. [Search](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance?view=o365-worldwide) the unified audit log for the "added group" activity.
+To list all Office 365 groups together with tracking information about the group creator, you have to use the [auditing](https://protection.office.com/unifiedauditlog) information. [Search](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance?view=o365-worldwide&preserve-view=true) the unified audit log for the "added group" activity.
 
 ![Search for added group](./media/o365-group-tasks/search.png)
 

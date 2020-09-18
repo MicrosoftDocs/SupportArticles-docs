@@ -35,7 +35,7 @@ For this relay to work correctly, your organization must follow these steps:
 
         The sender domain belongs to your organization (that is, you have registered your domain in Office365).
 
-        **Note** For more information, see [Add User and Domain in Office 365](https://docs.microsoft.com/office365/admin/setup/add-domain?redirectSourcePath=%252fen-us%252farticle%252fAdd-your-users-and-domain-to-Office-365-6383f56d-3d09-4dcb-9b41-b5f5a5efd611&view=o365-worldwide).    
+        **Note** For more information, see [Add User and Domain in Office 365](https://docs.microsoft.com/office365/admin/setup/add-domain?redirectSourcePath=%252fen-us%252farticle%252fAdd-your-users-and-domain-to-Office-365-6383f56d-3d09-4dcb-9b41-b5f5a5efd611&view=o365-worldwide&preserve-view=true).    
     - **Certificate-based connector configuration**
 
        Your on-premises email server is configured to use a certificate to send email to Office 365, and the Common-Name (CN) or Subject Alternate Name (SAN ) in the certificate contains a domain name that you have registered in Office 365, and you have created a certificate-based connector in Office 365 that has that domain.    
@@ -97,7 +97,7 @@ To create or change a certificate-based connector, follow these steps:
 5. On the **New connector** or **Edit connector** page, select the first option to use a Transport Layer Security (TLS) certificate to identify the sender source of your organization's messages. The domain name in the option should match the CN name or SAN in the certificate that you're using.
 
     > [!NOTE]
-    > This domain must be a domain that belongs to your organization, and you have to have added it to Office 365. For more information, see [Add Domains in Office 365](https://docs.microsoft.com/office365/admin/setup/add-domain?redirectSourcePath=%252fen-us%252farticle%252fAdd-your-users-and-domain-to-Office-365-6383f56d-3d09-4dcb-9b41-b5f5a5efd611&view=o365-worldwide).
+    > This domain must be a domain that belongs to your organization, and you have to have added it to Office 365. For more information, see [Add Domains in Office 365](https://docs.microsoft.com/office365/admin/setup/add-domain?redirectSourcePath=%252fen-us%252farticle%252fAdd-your-users-and-domain-to-Office-365-6383f56d-3d09-4dcb-9b41-b5f5a5efd611&view=o365-worldwide&preserve-view=true).
 
     For example, Contoso.com belongs to your organization, and it's part of the CN name or SAN name in the certificate that your organization uses to communicate with Office 365. If the domain in the certificate contains multiple domains (such as mail1.contoso.com, mail2.contoso.com), we recommend that the domain in the connector UI be *.contoso.com.
 
@@ -112,7 +112,7 @@ To create or change a certificate-based connector, follow these steps:
 
 To register your domain, follow the steps in the following Office article: 
 
-[Add users and domain to Office 365](https://docs.microsoft.com/office365/admin/setup/add-domain?redirectSourcePath=%252fen-us%252farticle%252fAdd-your-users-and-domain-to-Office-365-6383f56d-3d09-4dcb-9b41-b5f5a5efd611&view=o365-worldwide)
+[Add users and domain to Office 365](https://docs.microsoft.com/office365/admin/setup/add-domain?redirectSourcePath=%252fen-us%252farticle%252fAdd-your-users-and-domain-to-Office-365-6383f56d-3d09-4dcb-9b41-b5f5a5efd611&view=o365-worldwide&preserve-view=true)
 
 In the Microsoft 365 Admin Center, click **Setup**, and then click **Domains** to see the list of domains that are registered.
 
@@ -126,7 +126,7 @@ To configure your on-premises environment, follow these steps:
 
     > [!NOTE]
     > If you've already used Hybrid Configuration Wizard, you can continue to use it. However, make sure that you use a certificate that matches the criteria that's outlined in Step 1, sub-step 5 of this section.    
-2. Install a certificate in your on-premises environment. To do this, see "Step 6: Configure an SSL certificate" in [Configure mail flow and client access](https://docs.microsoft.com/Exchange/plan-and-deploy/post-installation-tasks/configure-mail-flow-and-client-access?view=exchserver-2019).    
+2. Install a certificate in your on-premises environment. To do this, see "Step 6: Configure an SSL certificate" in [Configure mail flow and client access](https://docs.microsoft.com/Exchange/plan-and-deploy/post-installation-tasks/configure-mail-flow-and-client-access?view=exchserver-2019&preserve-view=true).    
  
 ## References
 

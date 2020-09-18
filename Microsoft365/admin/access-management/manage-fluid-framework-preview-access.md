@@ -41,7 +41,7 @@ ID: **660d4be7-2665-497f-9611-a42c2668dbce**
 
 If you do not find "Microsoft Fluid Framework preview" in the list of enterprise applications, follow these steps to create the service principal in your tenant:
 
-1. [Install the AAD PowerShell Module v2](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module).
+1. [Install the AAD PowerShell Module v2](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true).
 2. Run the following cmdlet, and sign in by using your tenant admin credentials:
 
    ```powershell

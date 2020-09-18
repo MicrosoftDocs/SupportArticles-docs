@@ -24,8 +24,8 @@ appliesto:
 
 After you discover that some users can't sign in to a Microsoft cloud service such as Office 365, Microsoft Intune, or Microsoft Azure, you notice that user passwords aren't being synced from your local Active Directory Domain Services (AD DS) environment to Azure Active Directory. When you view the Application login Event Viewer, you see that the following event ID 6900 error is logged:
 
-    The server encountered an unexpected error while processing a password change notification: 
-    "An error occurred. Error Code: 90. Error Description: Password Synchronization has not been activated for this company
+> The server encountered an unexpected error while processing a password change notification:  
+"An error occurred. Error Code: 90. Error Description: Password Synchronization has not been activated for this company
 
 This issue may occur if password synchronization was disabled after it was set up in the Azure Active Directory sync appliance.
 

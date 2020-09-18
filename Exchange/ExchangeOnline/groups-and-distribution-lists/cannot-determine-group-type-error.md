@@ -40,7 +40,7 @@ Create room lists by using the following cmdlet instead:
 New-DistributionGroup <group name> -RoomList
 ```
 
-For more information, see [New-DistributionGroup](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/new-distributiongroup?view=exchange-ps).
+For more information, see [New-DistributionGroup](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/new-distributiongroup?view=exchange-ps&preserve-view=true).
 
 > [!NOTE]
 > Room list distribution groups are not visible in the Office 365 admin center or the Exchange admin center. The groups can be managed only through PowerShell.
