@@ -48,7 +48,7 @@ You must run the tool locally, from the Windows-based computer whose password yo
     > - After you restart and verify that the password has been successfully reset, you can restart the Kerberos Key Distribution Center (KDC) service and set its startup type back to Automatic. This forces the domain controller that has the incorrect computer account password to contact another domain controller for a Kerberos ticket.
     > - You may have to disable the Kerberos Key Distribution Center service on all domain controllers except one. If you can, don't disable the domain controller that has the global catalog, unless it is experiencing problems.
 
-3. Remove the Kerberos ticket cache on the domain controller where you receive the errors. You can do this by restarting the computer or by using the KLIST, Kerbtest, or KerbTray tools. KLIST is included in Windows Server 2008 and in Windows Server 2008 R2. For Windows Server 2003, KLIST is available as a free download in the Windows Server 2003 Resource Kit Tools. To obtain the tools, see [Windows Server 2003 Resource Kit Tools](https://www.microsoft.com/download/details.aspx?id=17657).
+3. Remove the Kerberos ticket cache on the domain controller where you receive the errors. You can do this by restarting the computer or by using the KLIST, Kerbtest, or KerbTray tools. KLIST is included in Windows Server 2008 and in Windows Server 2008 R2. For Windows Server 2003, KLIST is available as a free download in the Windows Server 2003 Resource Kit Tools.
 
 4. At a command prompt, type the following command:
 

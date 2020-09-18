@@ -33,11 +33,10 @@ You can use the CSCCMD tool to manage offline files in Microsoft Windows 2000, i
 
 To obtain the CSCCMD tool, contact Microsoft Product Support Services. For a complete list of Microsoft Product Support Services phone numbers and information about support costs, visit the following Microsoft Web site:
 
-[https://support.microsoft.com/default.aspx?scid=fh;[LN];CNTACTMS](/default.aspx?scid=fh;[ln];cntactms) 
+[Global Customer Service phone numbers](https://support.microsoft.com/help/4051701)
 
 > [!NOTE]
-> You can also download CSCCMD 1.0 and other tools as part of Windows Server 2003 Resource Kit Tools. To do this, visit the following Microsoft Web site:  
-[https://www.microsoft.com/download/details.aspx?FamilyID=9d467a69-57ff-4ae7-96ee-b18c4790cffd&displaylang=en](https://www.microsoft.com/download/details.aspx?familyid=9d467a69-57ff-4ae7-96ee-b18c4790cffd&displaylang=en)
+> You can also download CSCCMD 1.0 and other tools as part of Windows Server 2003 Resource Kit Tools.
 
 The CSCCMD tool uses the following syntax: CSCCMD [/RESID] [/ENABLE] [/DISABLE] [/DISCONNECT:\\\ **Server** \ **Share** ] [/MOVESHARE:\\\ **Server** \ **Share1** \\\ **Server** \ **Share2** ] [/?] 
 

@@ -78,9 +78,4 @@ To work around this issue, you can modify the behavior of HTTP.SYS to depend o
 
 ## More information
 
-Beginning with Windows Server 2008, Windows does not wait on all of the Automatic Services startup to load Explorer.exe.  Services may be set to Delayed Automatic Start to increase boot performance.  See the following blog posts for more information on Delayed Automatic Start:
-Startup Processes and Delayed Automatic Start.
- [https://blogs.technet.com/b/askperf/archive/2008/02/02/ws2008-startup-processes-and-delayed-automatic-start.aspx?wa=wsignin1.0](https://blogs.technet.com/b/askperf/archive/2008/02/02/ws2008-startup-processes-and-delayed-automatic-start.aspx?wa=wsignin1.0) 
-More information:
-HTTP.SYS / Cryptographic Services / LSASS.EXE deadlock
- [https://blogs.technet.com/b/mrsnrub/archive/2009/11/19/http-sys-cryptographic-services-lsass-exe-deadlock.aspx](https://blogs.technet.com/b/mrsnrub/archive/2009/11/19/http-sys-cryptographic-services-lsass-exe-deadlock.aspx)
+Beginning with Windows Server 2008, Windows does not wait on all of the Automatic Services startup to load Explorer.exe.  Services may be set to Delayed Automatic Start to increase boot performance.

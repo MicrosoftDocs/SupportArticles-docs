@@ -94,4 +94,4 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Serv
 
 For step-by-step instructions on configuring an evaluation deployment of RemoteFX USB redirection for Windows 7 SP1, go to the following Microsoft Technet website: [Configuring USB Device Redirection with Microsoft RemoteFX Step-by-Step Guide](https://technet.microsoft.com/library/ff817581%28ws.10%29.aspx) 
 
-For more information about RemoteFX USB redirection, review the following article on the Remote Desktop Services Blog: [Introducing Microsoft RemoteFX USB Redirection: Part 3](https://blogs.msdn.com/b/rds/archive/2010/11/08/introducing-microsoft-remotefx-usb-redirection-part-3.aspx)
+For more information about RemoteFX USB redirection, review the following article on the Remote Desktop Services Blog: [Introducing Microsoft RemoteFX USB Redirection: Part 3](https://techcommunity.microsoft.com/t5/microsoft-security-and/introducing-microsoft-remotefx-usb-redirection-part-3/ba-p/247085)

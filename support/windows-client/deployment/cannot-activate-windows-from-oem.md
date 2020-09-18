@@ -62,7 +62,7 @@ You purchased a computer that does not have a qualifying Windows operating syste
 
 ## Resolution
 
-Windows Volume License is for upgrades only. Before you try to upgrade, you must first purchase an underlying, qualifying, and genuine Windows license. For more information, visit the following Microsoft website: [https://www.microsoft.com/piracy/knowthefacts/legalizationsolutions.aspx](https://www.microsoft.com/piracy/knowthefacts/legalizationsolutions.aspx) 
+Windows Volume License is for upgrades only. Before you try to upgrade, you must first purchase an underlying, qualifying, and genuine Windows license. For more information, visit the following Microsoft website: [Legalization licensing solutions](https://devicepartner.microsoft.com/communications/comm-legalization-licensing-solutions) 
 The information on this website includes an easy way to correct improper licensing by using a Get Genuine Agreement. Next, you must change the product key to a Multiple Activation Key (MAK). To do this, contact the Microsoft Volume Licensing Service Center at the following Microsoft website: [https://www.microsoft.com/licensing/servicecenter/](https://www.microsoft.com/licensing/servicecenter/) 
 
 ## More information
@@ -104,7 +104,5 @@ Windows marker version: N/A
 OEMID and OEMTableID Consistent: N/A
 
 ```
-
-To obtain the MGADiag tool, visit the following Microsoft Web site: [https://go.microsoft.com/fwlink/?LinkID=52012](https://go.microsoft.com/fwlink/?linkid=52012) 
 
 Note: The KMS compliance check only applies to Windows 7 and Windows Vista machines running as KMS clients, it does not apply to Windows Server 2008 or Windows Server 2008 R2 machines running as KMS client machines.

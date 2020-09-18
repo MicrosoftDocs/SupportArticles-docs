@@ -31,8 +31,7 @@ When using PXE to boot a client computer from a WDS server, you may encounter on
 
 This can occur with the following scenario:
 
-
-- You are using DHCP scope option 67 to direct PXE clients to download specific Boot Program using BootFileName. [https://support.microsoft.com/default.aspx?scid=kb;EN-US;926172](/default.aspx?scid=kb;en-us;926172) 
+- You are using DHCP scope option 67 to direct PXE clients to download specific Boot Program using BootFileName.
 
 - You have a mix of BIOS-based machines and UEFI machines and you attempt to boot the incorrect type of Boot Program
 

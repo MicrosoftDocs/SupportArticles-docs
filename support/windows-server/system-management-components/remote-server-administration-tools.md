@@ -47,8 +47,6 @@ If you have to install management tools in Windows Server 2012 R2 for specific r
 
 - [Remote Server Administration Tools for Windows 10](https://www.microsoft.com/download/details.aspx?id=45520)
 
-- [Remote Server Administration Tools (RSAT) for Windows 7 with SP1 (both x86 and x64)](https://www.microsoft.com/download/details.aspx?id=7887)
-
 ## RSAT for Windows 10 platform and tools support matrix
 
 |Remote Server Administration Tools Technology|Description|Manages technology in Windows Server 2012 R2|Manages technology in Windows Server 2016 Technical Preview and Windows Server 2012 R2|

@@ -60,7 +60,5 @@ Ref. "Chapter 11 - NetBIOS over TCP/IP - Microsoft TechNet: Resources", https://
 
 ## More information
 
-Similar issue: https://blogs.msdn.com/b/spatdsg/archive/2011/06/24/dc-fails-logons-or-experiences-ldap-timeouts.aspx
-
 ATQ (Active Thread Queue) Performance Counter monitoring:
 "Monitoring Your Branch Office Environment", [https://technet.microsoft.com/library/dd736504(WS.10).aspx](https://technet.microsoft.com/library/dd736504%28WS.10%29.aspx)

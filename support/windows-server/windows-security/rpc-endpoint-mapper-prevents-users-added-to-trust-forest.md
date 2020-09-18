@@ -17,7 +17,7 @@ ms.technology: WindowsSecurity
 
 This article helps fix an error that occurs when you try to add a user or a group from a trusted forest into a local domain group of a domain in a trusting forest.
 
-Enabling RPC Endpoint Mapper client authentication prevents security principals (that is, users and groups from trusted forests) from being added to a local domain group in the trusting forest. For information about other components and operations that are affected by enabling RPC Endpoint Mapper client authentication, see the following ASKDS blog post: [Restrictions for Unauthenticated RPC Clients: The group policy that punches your domain in the face](https://blogs.technet.com/b/askds/archive/2011/04/08/restrictions-for-unauthenticated-rpc-clients-the-group-policy-that-punches-your-domain-in-the-face.aspx) 
+Enabling RPC Endpoint Mapper client authentication prevents security principals (that is, users and groups from trusted forests) from being added to a local domain group in the trusting forest. For information about other components and operations that are affected by enabling RPC Endpoint Mapper client authentication, see the following ASKDS blog post: [Restrictions for Unauthenticated RPC Clients: The group policy that punches your domain in the face](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/restrictions-for-unauthenticated-rpc-clients-the-group-policy/ba-p/399128)
 
 _Original product version:_ &nbsp;  Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3073942
@@ -83,4 +83,4 @@ Verify that Group Policy settings do not override these changes. All domain cont
 ## More information
 
 Read the following blog about the problems that may result from enabling RPC Endpoint Mapper client authentication, especially on domain controllers:
- [Restrictions for Unauthenticated RPC Clients: The group policy that punches your domain in the face](https://blogs.technet.com/b/askds/archive/2011/04/08/restrictions-for-unauthenticated-rpc-clients-the-group-policy-that-punches-your-domain-in-the-face.aspx)
+ [Restrictions for Unauthenticated RPC Clients: The group policy that punches your domain in the face](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/restrictions-for-unauthenticated-rpc-clients-the-group-policy/ba-p/399128)

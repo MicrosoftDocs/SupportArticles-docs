@@ -71,10 +71,7 @@ To resolve this issue, identify the user account that is used to run the program
      > [!NOTE]
      > To troubleshoot situations where you cannot determine the user account that is used to run the program, and where you want to verify that the symptoms that you are experiencing are caused by the user right, assign the "Impersonate a client after authentication" user right to the Everyone group, and then start the program. If the program works correctly, the issue that you are experiencing may be caused by the new security setting.
 
-- You Receive an "Error While Trying to Run Project" Error Message When You Debug a Web Application in Visual Studio .NET 
-
-For additional information about how to resolve this issue, click the following article number to view the article in the Microsoft Knowledge Base:
- [821255](/EN-US/help/821255)"Error While Trying to Run Project" Error Message When You Debug a Web Application in Visual Studio .NET  
+- You Receive an "Error While Trying to Run Project" Error Message When You Debug a Web Application in Visual Studio .NET
 
 ### The "Create Global Objects" User Right (SeCreateGlobalPrivilege)
 

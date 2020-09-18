@@ -115,7 +115,7 @@ When you troubleshoot 8606 errors, think about the following points:
 1. Identify the current value for the forest-wide **TombStoneLifeTime** setting
  c:\>repadmin /showattr. "CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=forest root domain,DC=TLD> /atts:tombstonelifetime
 
-See the "Tombstone lifetime and replication of deletions" section in the following article in the Microsoft Knowledge Base: [910205](/default.aspx?scid=kb;en-us;910205) Information about lingering objects in a Windows Server Active Directory forest.
+See the "Tombstone lifetime and replication of deletions" section in the following article in the Microsoft Knowledge Base: [910205](https://support.microsoft.com/help/910205) Information about lingering objects in a Windows Server Active Directory forest.
 
 2. For each destination domain controller that is logging the 8606 error, filter the Directory Service event log on NTDS Replication event 1988.
 
@@ -179,7 +179,7 @@ DSA is the name of a domain controller that is running Windows 2000 SP4 or a lat
 
 \<Good Source DSA Address> is the name of a domain controller that is running Windows 2000 SP4 or a later version and that hosts a writable copy of \<Naming Context>. The domain controller must be network-available to the DSA computer.
 
-If the lingering object that is reported in the 1988 event is not removed by repadmin, evaluate whether the object on the source domain controller was created in USN gap, or whether the objects originating domain controller does not exist in the source domain controller's up-to-dateness vector as documented in Microsoft Knowledge Base article [948071.](/default.aspx?scid=kb;en-us;948071) 
+If the lingering object that is reported in the 1988 event is not removed by repadmin, evaluate whether the object on the source domain controller was created in USN gap, or whether the objects originating domain controller does not exist in the source domain controller's up-to-dateness vector.
 
 #### Repldiag
 
@@ -188,9 +188,9 @@ If the lingering object that is reported in the 1988 event is not removed by rep
 
 Launch the following TechNet on-demand lab for guided troubleshooting practice of this and other AD replication errors:
 
-In the lab, you use both repadmin and repldiag.exe to remove lingering objects
- Troubleshooting Active Directory Replication Errors 
- [https://go.microsoft.com/?linkid=9844718](https://go.microsoft.com/?linkid=9844718)"In this lab, you'll walk through the troubleshooting, analysis and implementation phases of commonly encountered Active Directory replication errors. You'll use a combination of ADREPLSTATUS, repadmin.exe, and other tools to troubleshoot a five DC, three-domain environment.  AD replication errors encountered in the lab include -2146893022, 1256, 1908, 8453 and 8606."
+> In the lab, you use both repadmin and repldiag.exe to remove lingering objects  
+ Troubleshooting Active Directory Replication Errors  
+ In this lab, you'll walk through the troubleshooting, analysis and implementation phases of commonly encountered Active Directory replication errors. You'll use a combination of ADREPLSTATUS, repadmin.exe, and other tools to troubleshoot a five DC, three-domain environment.  AD replication errors encountered in the lab include -2146893022, 1256, 1908, 8453 and 8606."
 
 ### Monitoring Active Directory replication health daily
 
@@ -213,10 +213,10 @@ Microsoft Support teams have seen system time on production domain controllers i
 - Are reference online time sources available on the network and resolvable in DNS? 
 - Was the Microsoft or third-party time service running and in an error-free state? 
 - Are domain controller role computers configured to use NT5DS hierarchy to source time? 
-- Was time rollback protection that is described in Microsoft Knowledge Base article [884776](/default.aspx?scid=kb;en-us;884776) in place?
+- Was time rollback protection that is described in Microsoft Knowledge Base article [884776](https://support.microsoft.com/help/884776) in place?
 - Do system clocks have good batteries and accurate time in the BIOS on domain controllers on virtual host computers? 
 - Are virtual host and guest computers configured to source time according to the hosting manufacturer's recommendations? 
-Microsoft Knowledge Base article [884776](/default.aspx?scid=kb;en-us;884776) documents steps to help protect domain controllers from "listening" to invalid time samples. More information about MaxPosPhaseCorrection and MaxNegPhaseCorrection is available in the [W32Time Blog](https://blogs.msdn.com/w32time/default.aspx) post [Configuring the Time Service: Max[Pos/Neg]PhaseCorrection](https://blogs.msdn.com/w32time/archive/2008/02/28/configuring-the-time-service-max-pos-neg-phasecorrection.aspx). Microsoft Knowledge Base article [961027](/default.aspx?scid=kb;en-us;961027) describes some helpful precision updates when you're configuring time-based settings in policy.
+Microsoft Knowledge Base article [884776](https://support.microsoft.com/help/884776) documents steps to help protect domain controllers from "listening" to invalid time samples. More information about MaxPosPhaseCorrection and MaxNegPhaseCorrection is available in the W32Time Blog post [Configuring the Time Service: Max[Pos/Neg]PhaseCorrection](https://blogs.msdn.com/w32time/archive/2008/02/28/configuring-the-time-service-max-pos-neg-phasecorrection.aspx). Microsoft Knowledge Base article [961027](https://support.microsoft.com/help/961027) describes some helpful precision updates when you're configuring time-based settings in policy.
 
 Check for lingering objects by using "repadmin /removelingeringobjects /advisorymode," and then remove them as required.
 
@@ -257,8 +257,9 @@ If the object should exist on all replicas, the options are as follows:
 ## More information
 
 Launch the following TechNet on-demand lab for guided troubleshooting practice of this and other AD replication errors:
- Troubleshooting Active Directory Replication Errors 
- [https://go.microsoft.com/?linkid=9844718](https://go.microsoft.com/?linkid=9844718)"In this lab, you will walk through the troubleshooting, analysis, and implementation phases of commonly encountered Active Directory replication errors. You will use a combination of ADREPLSTATUS, repadmin.exe, and other tools to troubleshoot a five DC, three-domain environment. AD replication errors encountered in the lab include -2146893022, 1256, 1908, 8453 and 8606."
+
+> Troubleshooting Active Directory Replication Errors  
+ In this lab, you will walk through the troubleshooting, analysis, and implementation phases of commonly encountered Active Directory replication errors. You will use a combination of ADREPLSTATUS, repadmin.exe, and other tools to troubleshoot a five DC, three-domain environment. AD replication errors encountered in the lab include -2146893022, 1256, 1908, 8453 and 8606."
 
 ### Causes of lingering objects
 
@@ -286,6 +287,6 @@ Say that you create an object in a USN bubble in such a way that it does not out
 
 ### Requirements for end-to-end replicate knowledge of originating deletes
 
-Active Directory domain controllers support multi-master replication where any domain controller (that holds a writable partition) can originate a create, change, or delete of an object or attribute (value). Knowledge of object / attribute deletes are persisted by the originating domain controller and any domain controller that has incoming replicated knowledge of an originating delete for TSL number of days. (See Microsoft Knowledge Base articles [216996](/default.aspx?scid=kb;en-us;216993) and [910205](/default.aspx?scid=kb;en-us;910205))
+Active Directory domain controllers support multi-master replication where any domain controller (that holds a writable partition) can originate a create, change, or delete of an object or attribute (value). Knowledge of object / attribute deletes are persisted by the originating domain controller and any domain controller that has incoming replicated knowledge of an originating delete for TSL number of days. (See Microsoft Knowledge Base articles [216996](https://support.microsoft.com/help/216993) and [910205](https://support.microsoft.com/help/910205))
 
 Active Directory requires end-to-end replication from all partition holders to transitively replicate all originating deletes for all directory partitions to all partition holders. Failure to inbound-replicate a directory partition in a rolling TSL number of days results in lingering objects. A lingering object is an object that was intentionally deleted by at least one domain controller but that incorrectly exists on destination domain controllers that did not inbound-replicate the transient knowledge of all unique deletions.

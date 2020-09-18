@@ -202,7 +202,7 @@ The Schema master, the Domain Naming master, and the RID master can create objec
 
 For more information, see:
 
-- [Active Directory FSMO roles in Windows](https://support.microsoft.com/help/197132)
+- [Active Directory FSMO roles in Windows](https://docs.microsoft.com/troubleshoot/windows-server/identity/fsmo-roles)
 - [FSMO placement and optimization on Active Directory domain controllers](https://support.microsoft.com/help/223346)
 - [Flexible Single Master Operation Transfer and Seizure Process](https://support.microsoft.com/help/223787)
 - [Initial synchronization requirements for Windows Server operations master role holders](https://support.microsoft.com/help/305476)
@@ -214,4 +214,4 @@ For more information, see:
 - [AD Forest Recovery - Seizing an operations master role](/windows-server/identity/ad-ds/manage/ad-forest-recovery-seizing-operations-master-role)
 - [To clean up server metadata by using Ntdsutil](/windows-server/identity/ad-ds/deploy/ad-ds-metadata-cleanup#to-clean-up-server-metadata-by-using-ntdsutil)
 - [Planning Operations Master Role Placement](/windows-server/identity/ad-ds/plan/planning-operations-master-role-placement)
-- [Move-ADDirectoryServerOperationMasterRole](/powershell/module/addsadministration/move-addirectoryserveroperationmasterrole?view=win10-ps)
+- [Move-ADDirectoryServerOperationMasterRole](/powershell/module/addsadministration/move-addirectoryserveroperationmasterrole?view=win10-ps&preserve-view=true)
