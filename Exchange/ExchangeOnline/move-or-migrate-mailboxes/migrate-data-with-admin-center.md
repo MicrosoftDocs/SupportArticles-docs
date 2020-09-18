@@ -103,7 +103,7 @@ To create a staged migration batch, follow these steps:
  
     If the Autodiscover service can detect the connection settings for the on-premises Exchange server, you're prompted to confirm the entries. The following screen shot shows an example:
 
-    ![A screen shot of the Confirm the Remote MRS Proxy Server page](./media/migrate-data-with-admin-center/mrs-proxy.png)
+    ![A screen shot of the Confirm the Remote MRS Proxy Server page 1](./media/migrate-data-with-admin-center/mrs-proxy.png)
  
     Click **Next**.    
 5. Enter a name for the migration batch, and then click **Next**.
@@ -128,7 +128,7 @@ To create a cutover migration batch, follow these steps:
  
     If the Autodiscover service can detect the connection settings for the on-premises Exchange server, you're prompted to confirm the entries. The following screen shot shows an example:
 
-    ![A screen shot of the Confirm the Remote MRS Proxy Server page](./media/migrate-data-with-admin-center/server-page.png)
+    ![A screen shot of the Confirm the Remote MRS Proxy Server page 2](./media/migrate-data-with-admin-center/server-page.png)
 
     Click **Next**.    
 3. Enter a name for the migration batch, and then click **Next**.
