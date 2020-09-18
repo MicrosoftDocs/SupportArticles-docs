@@ -103,13 +103,9 @@ For more information about the Windows PowerShell 1.0 installation package for W
 [928439](https://support.microsoft.com/help/928439) Windows PowerShell 1.0 Installation Package for Windows Vista  
 
 For more information about Windows PowerShell, visit the following Microsoft Web sites:
-- Windows PowerShell
 
-[https://www.microsoft.com/windowsserver2003/technologies/management/powershell/default.mspx](https://www.microsoft.com/windowsserver2003/technologies/management/powershell/default.mspx) 
-- Windows PowerShell Online Help
+- [Windows PowerShell](https://www.microsoft.com/windowsserver2003/technologies/management/powershell/default.mspx)
 
-[https://technet.microsoft.com/library/bb978526.aspx](https://technet.microsoft.com/library/bb978526.aspx) 
-- Windows PowerShell blog
- [https://blogs.msdn.com/powershell](https://blogs.msdn.com/powershell) 
-- Windows PowerShell SDK
- [https://msdn2.microsoft.com/library/ms714469.aspx](https://msdn2.microsoft.com/library/ms714469.aspx) 
+- [Windows PowerShell blog](https://devblogs.microsoft.com/powershell/)
+
+- [Windows PowerShell SDK](https://docs.microsoft.com/powershell/scripting/developer/windows-powershell?view=powershell-7&preserve-view=true)

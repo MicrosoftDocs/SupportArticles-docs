@@ -277,5 +277,6 @@ When you add an attribute or a class object to the schema, one of the required a
 
 The attributeSyntax attribute is also required to add new objects to the schema. This attribute defines the storage representation, byte ordering, and matching rules for comparisons of property types. The syntax defines whether the attribute value must be a string, a number, or a unit of time. Each attribute of every object is associated with exactly one syntax. Make sure that you select the correct attribute syntax for the new attribute. This is especially important if you synchronize a Lightweight Directory Access Protocol (LDAP) directory with another LDAP directory. After the attribute is added to the schema, its attribute syntax cannot be changed.
 
-For more information about the attributeSyntax attribute, visit the following Microsoft Web site: [hhttps://msdn.microsoft.com/library/ms675236(VS.85).aspx](https://msdn.microsoft.com/library/ms675236%28vs.85%29.aspx) 
-For more information about values in the searchFlags attribute, visit the following Microsoft Web site, and then search for "Effects of Indexing on Search Behavior": [https://technet2.microsoft.com/WindowsServer/en/library/8196d68e-776a-4bbc-99a6-d8c19f36ded41033.mspx?mfr=true](https://technet2.microsoft.com/windowsserver/en/library/8196d68e-776a-4bbc-99a6-d8c19f36ded41033.mspx?mfr=true)
+For more information about the attributeSyntax attribute, visit the following Microsoft Web site: [https://msdn.microsoft.com/library/ms675236(VS.85).aspx](https://msdn.microsoft.com/library/ms675236%28vs.85%29.aspx)
+
+See the [Search-Flags attribute](https://docs.microsoft.com/windows/win32/adschema/a-searchflags) for more information.

@@ -26,7 +26,7 @@ This article discusses the support policy for running Microsoft server software 
 - Microsoft Hyper-V Server 2008 and later versions
 - Server Virtualization Validation Program (SVVP)
 
-For more information, see the following Microsoft website: [https://www.windowsservercatalog.com/svvp/](https://www.windowsservercatalog.com/svvp/) 
+For more information, see the following Microsoft website: [https://www.windowsservercatalog.com/](https://www.windowsservercatalog.com/) 
 Microsoft supports Microsoft server software that is running in the supported virtualization environments that are listed in the "More Information" section. This support is subject to the Microsoft Support Lifecycle policy. For more information, see the following Microsoft website: [https://support.microsoft.com/?pr=lifecycle](/?pr=lifecycle) 
 
 In some cases, specific versions of Microsoft server software are required for support. These versions are noted in this article, and the supported versions may be updated as appropriate.
@@ -211,8 +211,9 @@ Office Online is supported. For more information, visit the following Microsoft 
 
 ### Opalis Integration Server 
 
-Opalis Integration Server 6.2.2 and later versions are supported. For more information about support for Opalis in a virtualization environment, visit the following Microsoft website: [https://support.microsoft.com/default.aspx?scid=kb;en-US;2023123](/default.aspx?scid=kb;en-us;2023123) 
- **Note** Opalis Integration Server 6.3 or a later version is required for installation on Windows Server 2008 and later versions. However, only Integration Packs that were released with version 6.3 are supported on Windows Server 2008 and later versions. The use of existing Integration Packs requires installation on Windows Server 2003.
+Opalis Integration Server 6.2.2 and later versions are supported.
+
+**Note** Opalis Integration Server 6.3 or a later version is required for installation on Windows Server 2008 and later versions. However, only Integration Packs that were released with version 6.3 are supported on Windows Server 2008 and later versions. The use of existing Integration Packs requires installation on Windows Server 2003.
 
 ### Microsoft Lync Server 
 

@@ -56,15 +56,7 @@ Before you can use the BitLocker Recovery Password Viewer tool to view BitLocker
 
 ### How to obtain the BitLocker Recovery Password Viewer tool for Windows Vista Enterprise, for Windows Vista Enterprise Service Pack 1, and for Windows Server 2008
 
-Windows Vista and Windows Server 2008 for x86-based systems (KB928202)  
-If you're using Windows Vista Enterprise or Windows Server 2008 for x86-based systems, visit the following Microsoft Web site to obtain this tool:
-
-[https://www.microsoft.com/download/details.aspx?displaylang=en&FamilyID=16088271-f95d-4c5c-9ea9-03746c96ffff](https://www.microsoft.com/download/details.aspx?displaylang=en&familyid=16088271-f95d-4c5c-9ea9-03746c96ffff)  
-
-Windows Vista and Windows Server 2008 for x64-based systems (KB928202)  
-If you're using Windows Vista or Windows Server 2008 for x64-based systems, visit the following Microsoft Web site to obtain this tool:
-
-[https://www.microsoft.com/download/details.aspx?familyid=80749FCA-E3C4-4FEE-BB09-90E714FA6B4C&displaylang=en](https://www.microsoft.com/download/details.aspx?familyid=80749fca-e3c4-4fee-bb09-90e714fa6b4c&displaylang=en)
+[Windows Vista and Windows Server 2008 for x86-based systems](https://www.microsoft.com/download/details.aspx?id=24626)  
 
 ### How to obtain the BitLocker Recovery Password Viewer tool for Windows XP
 

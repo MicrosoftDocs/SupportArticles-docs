@@ -45,5 +45,4 @@ Value data: 0
 
 ## More information
 
-Terminal Services RemoteApp Session Termination Logic
- [https://blogs.msdn.com/b/rds/archive/2007/09/28/terminal-services-remoteapp-session-termination-logic.aspx](https://blogs.msdn.com/b/rds/archive/2007/09/28/terminal-services-remoteapp-session-termination-logic.aspx)
+[Terminal Services RemoteApp Session Termination Logic](https://techcommunity.microsoft.com/t5/microsoft-security-and/terminal-services-remoteapp-8482-session-termination-logic/ba-p/246566)

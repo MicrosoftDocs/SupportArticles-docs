@@ -30,7 +30,7 @@ Certificates that are published to the NTAuth store are written to the cACertifi
 
 ## Method 1 - Import a certificate by using the PKI Health Tool
 
-PKI Health Tool (PKIView) is an MMC snap-in component that displays the status of one or more Microsoft Windows certification authorities that comprise a public key infrastructure (PKI). It is available as part of the Windows Server 2003 Resource Kit Tools. To download these tools, visit [Windows Server 2003 Resource Kit Tools](https://www.microsoft.com/download/details.aspx?id=17657).
+PKI Health Tool (PKIView) is an MMC snap-in component that displays the status of one or more Microsoft Windows certification authorities that comprise a public key infrastructure (PKI). It is available as part of the Windows Server 2003 Resource Kit Tools.
 
 PKIView gathers information about the CA certificates and certificate revocation lists (CRLs) from each CA in the enterprise. Then, PKIView validates the certificates and CRLs to ensure that they are working correctly. If they are not working correctly or if they are about to fail, PKIView provides a detailed warning or some error information.
 
@@ -61,7 +61,7 @@ To import a CA certificate into the Enterprise NTAuth store, follow these steps:
 
 ## Method 2 - Import a certificate by using Certutil.exe
 
-Certutil.exe is a command-line utility for managing a Windows CA. In Windows Server 2003, you can use Certutil.exe to publish certificates to Active Directory. Certutil.exe is installed with Windows Server 2003. It is also available as part of the Microsoft Windows Server 2003 Administration Tools Pack. To download this tools pack, visit [Windows Server 2003 Administration Tools Pack](https://www.microsoft.com/download/details.aspx?id=16770).
+Certutil.exe is a command-line utility for managing a Windows CA. In Windows Server 2003, you can use Certutil.exe to publish certificates to Active Directory. Certutil.exe is installed with Windows Server 2003. It is also available as part of the Microsoft Windows Server 2003 Administration Tools Pack.
 
 To import a CA certificate into the Enterprise NTAuth store, follow these steps:
 

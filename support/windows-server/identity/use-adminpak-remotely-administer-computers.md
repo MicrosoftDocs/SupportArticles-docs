@@ -157,11 +157,6 @@ You can also download the Windows Server 2003 Service Pack 2 Adminpak directly. 
 
 For x86 editions: [https://www.microsoft.com/download/details.aspx?FamilyId=86B71A4F-4122-44AF-BE79-3F101E533D95](https://www.microsoft.com/download/details.aspx?familyid=86b71a4f-4122-44af-be79-3f101e533d95) 
 
-The SP1 version of the Windows Server 2003 Adminpak is still available.
-
-The original release (RTM) version of the Windows Server 2003 Adminpak is still available. To Download the RTM Windows Server 2003 Adminpak, visit the following Microsoft Web site:
- [https://www.microsoft.com/download/details.aspx?FamilyID=c16ae515-c8f4-47ef-a1e4-a8dcbacff8e3](https://www.microsoft.com/download/details.aspx?familyid=c16ae515-c8f4-47ef-a1e4-a8dcbacff8e3) 
-
 2. Log on to the local computer by using administrator credentials.
 
 3. Remove earlier versions of the Administration Tools Pack.

@@ -40,7 +40,3 @@ There's no flag/property/setting that you can set to work around the timesync lo
 See the below article to know more about Time Sync settings and how to configure them appropriately:
 
 [Windows Time Service Tools and Settings](https://technet.microsoft.com/library/cc773263%28ws.10%29.aspx)
-
-## More information
-
-[Time Synchronization in Hyper-V](https://blogs.msdn.com/b/virtual_pc_guy/archive/2010/11/19/time-synchronization-in-hyper-v.aspx)

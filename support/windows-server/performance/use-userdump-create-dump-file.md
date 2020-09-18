@@ -67,8 +67,6 @@ If you run Setup to install the Userdump.exe tool, some additional features are 
 
 ## References
 
-To download version 8.1 of the Userdump.exe tool and its documentation, visit the following Microsoft Web site: [https://www.microsoft.com/download/details.aspx?id=4060](https://www.microsoft.com/download/details.aspx?id=4060) 
-
 For more information, click the following article number to view the article in the Microsoft Knowledge Base:  
 
 [258833](https://support.microsoft.com/help/258833) How to troubleshoot high CPU utilization of an MTS or COM+ process

@@ -100,9 +100,6 @@ If you are not an administrator, contact the system administrator if you have pr
   - [Remote Desktop Services in Windows Server 2008 R2](https://technet.microsoft.com/library/dd647502.aspx) in the Windows Server 2008 Technical Library.
   - [Terminal Services in Windows Server 2008](https://technet.microsoft.com/library/cc754746.aspx) in the Windows Server 2008 Technical Library.
 
-
-- [Click here to see the Remote Desktop Services (Terminal Services) Team Blog](https://blogs.msdn.com/ts/) 
-
 ## Additional Resources
 
 Click the following links to find more options if this article cannot resolve your problem:
