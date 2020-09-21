@@ -198,7 +198,7 @@
     - name: NMI_HARDWARE_FAILURE error
       href: ./performance/nmi-hardware-failure-error.md
     - name: Push-button reset fails because language resources are missing
-      href: ./pbr-reset-fails-language-resources-missing.md
+      href: ./performance/pbr-reset-fails-language-resources-missing.md
     - name: Running an.exe file starts different program 
       href: ./performance/running-exe-starts-another-program.md
     - name: SuperFetch (SysMain) service consumes CPU
