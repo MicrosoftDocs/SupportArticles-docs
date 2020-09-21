@@ -2,7 +2,7 @@
 title: Configure ISA Server computer for authentication requests
 description: Describes how to improve authentication throughput on a computer that is running Microsoft Internet Security and Acceleration (ISA) Server.
 ms.date: 09/15/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro

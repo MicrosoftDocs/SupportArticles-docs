@@ -58,4 +58,4 @@ To resolve this particular issue, follow the below steps:
 By default Windows 7 is installed from a media or WDS, you will have first partition as 'System Reserved' partition of 100-MB size, on the disk selected (generally disk 0) and it will NOT have a drive letter assigned. If the image is deployed from MDT (2010), then the 'System Reserved' partition will be 300 MB and will be allocated after the OS partition.
 
 How to capture the image using MDT:
-[http://blogs.technet.com/b/askcore/archive/2009/10/06/how-to-run-a-sysprep-and-capture-task-sequence-from-mdt-2010.aspx](http://blogs.technet.com/b/askcore/archive/2009/10/06/how-to-run-a-sysprep-and-capture-task-sequence-from-mdt-2010.aspx)
+[https://blogs.technet.com/b/askcore/archive/2009/10/06/how-to-run-a-sysprep-and-capture-task-sequence-from-mdt-2010.aspx](https://blogs.technet.com/b/askcore/archive/2009/10/06/how-to-run-a-sysprep-and-capture-task-sequence-from-mdt-2010.aspx)

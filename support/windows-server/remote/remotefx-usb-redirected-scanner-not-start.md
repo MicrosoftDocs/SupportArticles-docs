@@ -48,6 +48,6 @@ The default behavior of the I/O Manager is to deny access when a service that's 
 
 ## References
 
-[RemoteFX USB Redirection in Windows Server 2012 and Windows 8](http://blogs.msdn.com/b/rds/archive/2012/09/11/remotefx-usb-redirection-in-windows-server-2012-and-windows-8.aspx)  
+[RemoteFX USB Redirection in Windows Server 2012 and Windows 8](https://blogs.msdn.com/b/rds/archive/2012/09/11/remotefx-usb-redirection-in-windows-server-2012-and-windows-8.aspx)  
 
 [CreateFile function (Windows)](https://msdn.microsoft.com/library/windows/desktop/aa363858%28v=vs.85%29.aspx )

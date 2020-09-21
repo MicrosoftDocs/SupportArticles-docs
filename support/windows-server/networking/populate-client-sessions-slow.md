@@ -2,7 +2,7 @@
 title: Computer Management shows clients sessions slow
 description: Provides a solution to an issue where information on shared folder sessions is populated slow in Computer Management console.
 ms.date: 09/17/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro

@@ -2,7 +2,7 @@
 title: Make DCs to reply to LDAP Ping on UDP 138 port
 description: Provides the methods to make domain controllers to reply to LDAP Ping.
 ms.date: 09/16/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro
@@ -64,5 +64,5 @@ For more information on DCLOCATOR, see:
 
 - [Domain Controller Locator](https://technet.microsoft.com/library/cc961830.aspx) 
 - [Domain Controller Location Process](https://technet.microsoft.com/library/cc978011.aspx) 
-- [Domain Locator Across a Forest Trust](http://blogs.technet.com/b/askds/archive/2008/09/24/domain-locator-across-a-forest-trust.aspx) 
+- [Domain Locator Across a Forest Trust](https://blogs.technet.com/b/askds/archive/2008/09/24/domain-locator-across-a-forest-trust.aspx) 
 - [How DNS support for Active Directory works](https://technet.microsoft.com/library/cc759550%28v=ws.10%29.aspx)

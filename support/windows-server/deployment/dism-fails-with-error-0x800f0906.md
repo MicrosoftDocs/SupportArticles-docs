@@ -2,7 +2,7 @@
 title: Fail to convert Server Core to GUI
 description: Describes an issue where converting Windows Server 2012 R2 Core to Server with a GUI by using a DISM or PowerShell command fails with error 0x800f0906.
 ms.date: 09/17/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro
@@ -47,7 +47,7 @@ You receive one of the following information clusters on the command prompt:
     Error: 0x800f0906
     
     The source files could not be downloaded.
-    Use the "source" option to specify the location of the files that are required to restore the feature. For more information on specifying a source location, see http://go.microsoft.com/fwlink/?LinkId=243077.
+    Use the "source" option to specify the location of the files that are required to restore the feature. For more information on specifying a source location, see `http://go.microsoft.com/fwlink/?LinkId=243077`.
     
     The DISM log file can be found at C:\Windows\Logs\DISM\dism.log.
 

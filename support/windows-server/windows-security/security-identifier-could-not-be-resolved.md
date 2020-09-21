@@ -2,7 +2,7 @@
 title: Error with a one-way trust
 description: Fixes an error (Security identifier could not be resolved) that occurs with a one-way trust.
 ms.date: 09/15/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro

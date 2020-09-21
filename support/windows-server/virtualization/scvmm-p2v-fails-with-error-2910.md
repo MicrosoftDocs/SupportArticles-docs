@@ -2,7 +2,7 @@
 title: SCVMM P2V fails with error 0x80070005
 description: Discusses that a P2V conversion in System Center Virtual Machine Manager 2008 fails and returns an error 2910 (0x80070005).
 ms.date: 09/17/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro

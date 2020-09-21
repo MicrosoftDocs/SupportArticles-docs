@@ -2,7 +2,7 @@
 title: Error 0xc000005e when creating failover cluster 
 description: Fixes the error 0xc000005e that occurs when you create a failover cluster with Windows Server 2012.
 ms.date: 09/15/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro

@@ -54,6 +54,7 @@ Look for **Update for Windows (KB940518)** in the **View installed updates** ite
 #### Installation instructions
 
 To avoid restarting the computer, verify that the Initial Configuration Tasks, Server Manager, and the Servermanagercmd.exe process are not running during the installation process. You must also log on to the computer as an administrator to install this update.
+
 1. On a computer that is running Windows Server 2008, download the update package from the Microsoft Web site that is listed in the "Update information" section.
 2. Double-click the download package to start the Setup wizard. Follow the instructions in the wizard to complete the installation.
 
@@ -61,8 +62,8 @@ To avoid restarting the computer, verify that the Initial Configuration Tasks, S
 
     - Click **Start**, right-click **Computer**, and then click **Manage**.
     - Click **Start**, point to **Administrative Tools**, and then click **Server Manager**.
-    - Click the Quick Launch bar, and then click **Server Manager**.> [!NOTE]
-    >[!NOTE] If WSUS 3.0 SP1 is already installed on your computer, you do not have to complete the remaining steps.
+    - Click the Quick Launch bar, and then click **Server Manager**.
+    > [!NOTE] If WSUS 3.0 SP1 is already installed on your computer, you do not have to complete the remaining steps.
 
 4. On the Server Manager home page, click **Add Roles** in the **Roles Summary** section.
 

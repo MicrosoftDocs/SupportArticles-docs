@@ -2,7 +2,7 @@
 title: Scheduled tasks use incorrect user profile paths
 description: Discusses a problem in which scheduled tasks reference incorrect user profile paths in Windows Server 2012 and Windows 8. Provides a workaround.
 ms.date: 09/16/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro

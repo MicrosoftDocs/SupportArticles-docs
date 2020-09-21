@@ -2,7 +2,7 @@
 title: RDS fails to install with error 0x800706D9
 description: Provides a solution to an issue where Remote Desktop Services fails to install and you get the error code 0x800706D9.
 ms.date: 09/16/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro

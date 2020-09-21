@@ -2,7 +2,7 @@
 title: Events 18210 and 3041 when using Hyper-V Replica
 description: Describes an issue that triggers events in the Application log when you have a Hyper-V host that's running Windows Server 2012. This issue involves the Hyper-V Replica feature. The events can be safely ignored.
 ms.date: 09/14/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro
@@ -59,4 +59,4 @@ This issue occurs because the Hyper-V Replica feature always uses the non-autore
 
 For more information, see the following TechNet blog post:
 
-[Application consistent recovery points with Windows Server 2008/2003 guest OS](http://blogs.technet.com/b/virtualization/archive/2014/05/20/application-consistent-recovery-points-with-an-older-guest-os.aspx)
+[Application consistent recovery points with Windows Server 2008/2003 guest OS](https://blogs.technet.com/b/virtualization/archive/2014/05/20/application-consistent-recovery-points-with-an-older-guest-os.aspx)

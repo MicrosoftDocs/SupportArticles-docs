@@ -42,7 +42,7 @@ We recommend that you deploy Software Defined Data Center (SDDC) features such a
  
  The first wave of hardware that is validated for Windows Server 2019 is expected to be available starting in mid-January 2019. Until then, you can use features such as the Network Controller or Storage Spaces Direct displays an advisory message and requires an additional step. This is typical and expected.  
 
- As WSSD-validated hardware is now available,  you can remove the advisory message by installing the latest cumulative update for Windows. Obtain the update from [http://aka.ms/update2019](http://aka.ms/update2019).  
+ As WSSD-validated hardware is now available,  you can remove the advisory message by installing the latest cumulative update for Windows. Obtain the update from [https://aka.ms/update2019](https://aka.ms/update2019).  
 
 **Required:** Windows Server Logo + SDDC AQs  
 

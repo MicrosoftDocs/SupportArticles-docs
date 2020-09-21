@@ -24,17 +24,19 @@ _Original KB number:_ &nbsp; 2567018
 
 Users may be unable to login to a Windows Server 2008 or Windows Server 2003 Terminal Server. When logging on to the server, you receive the following error:
 
->ERROR  
-======  
+> ERROR  
+>
+> ======  
 Windows cannot log you on because your profile cannot be loaded.
 Check that you are connected to the network, or that your network is functioning correctly.
 If this problem persists, contact your network administrator.  
 DETAIL - Insufficient system resources exist to complete the requested service.  
-======
+>
+> ======
 
 Additionally, a Windows Server 2008-based computer may log the following event in the Application Event Log:  
 
-Log Name: Application  
+> Log Name: Application  
 Source: Microsoft-Windows-User Profiles Service  
 Date: DATE  
 Event ID: 1508  
@@ -48,7 +50,7 @@ DETAIL - The process cannot access the file because it is being used by another 
 
 Windows Server 2003-based servers may log the following events in the System and Application Event Logs:  
 
-Event Type: Error  
+> Event Type: Error  
 Event Source: Application Popup  
 Event Category: None  
 Event ID: 333  
@@ -57,8 +59,8 @@ Time: time
 User: N/A  
 Computer: computer name  
 Description: An I/O operation initiated by the Registry failed unrecoverably. The Registry could not read in, or write out, or flush, one of the files that contain the system's image of the Registry.
-
-Event Type: Error  
+>
+> Event Type: Error  
 Event Source: Userenv  
 Event Category: None  
 Event ID: 1508  
@@ -67,8 +69,8 @@ Time: Time
 User: NT AUTHORITY\SYSTEM  
 Computer: Computer Name  
 Description: Windows was unable to load the registry. This is often caused by insufficient memory or insufficient security rights. DETAIL - Insufficient system resources exist to complete the requested service. for C:\Documents and Settings\user\ntuser.dat  
-
-Event Type: Error  
+>
+> Event Type: Error  
 Event Source: Userenv  
 Event Category: None  
 Event ID: 1500  
@@ -77,8 +79,8 @@ Time: Time
 User: NT AUTHORITY\SYSTEM  
 Computer: Computer Name  
 Description: Windows cannot log you on because your profile cannot be loaded. Check that you are connected to the network, or that your network is functioning correctly. If this problem persists, contact your network administrator. DETAIL - Insufficient system resources exist to complete the requested service.  
-
-Event Type: Information  
+>
+> Event Type: Information  
 Event Source: Application Popup  
 Event Category: None  
 Event ID: 26  
@@ -87,8 +89,8 @@ Time: Time
 User: NT AUTHORITY\SYSTEM  
 Computer: Computer Name  
 Description: Application popup: Windows - Low On Registry Space: The system has reached the maximum size allowed for the system part of the registry. Additional storage requests will be ignored.  
-
-Rebooting the server might resolve the issue temporarily.
+>
+> Rebooting the server might resolve the issue temporarily.
 
 ## Cause
 

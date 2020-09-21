@@ -2,7 +2,7 @@
 title: MBAM Enterprise Reports aren't updated
 description: pProvides a solution to an issue where Microsoft BitLocker Administration and Monitoring (MBAM) Enterprise Reports aren't updated as expected.
 ms.date: 09/18/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro

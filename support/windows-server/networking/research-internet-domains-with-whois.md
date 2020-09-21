@@ -2,7 +2,7 @@
 title: Use WHOIS to research Internet domains
 description: Describes how to use WHOIS to research Internet domains.
 ms.date: 09/14/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro
@@ -45,8 +45,8 @@ If you have shell account access to the Internet that includes the WHOIS client,
 
 Example:
 
-Wrong: www.microsoft.com
-Correct: microsoft.com
+Wrong: `www.microsoft.com`
+Correct: `microsoft.com`
 
 Direct Telnet Session:
 

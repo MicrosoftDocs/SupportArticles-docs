@@ -2,7 +2,7 @@
 title: Enabling MPIO with SAS disks decreases performance
 description: After enabling MPIO when using Storage Spaces and SAS storage, storage performance degrades significantly. This article provides workarounds for this issue.
 ms.date: 09/16/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro
@@ -57,6 +57,6 @@ Use the Set-MSDSMGlobalDefaultLoadBalancePolicy  cmdlet from the MPIO module in 
 
 For a complete listing of the cmdlets contained in the iSCSI module for Windows PowerShell, refer to the following documents:
 
-[iSCSI](/powershell/module/iscsi/?view=win10-ps)
+[iSCSI](/powershell/module/iscsi/?view=win10-ps&preserve-view=true)
 
 [iSCSI Initiator WMI Classes](/previous-versions/windows/desktop/iscsidisc/iscsi-initiator-wmi-classes)

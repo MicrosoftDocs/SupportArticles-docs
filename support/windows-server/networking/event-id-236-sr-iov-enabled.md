@@ -34,4 +34,4 @@ Event 236 is logged when the user-mode process tries to allocate a virtual funct
 
 ## More information
 
-The user mode process will retry to enable I/O Virtualization at a later stage in few moments. You can verify the IOV VF function by using the PowerShell cmdlet [Get-NetAdapterSriovVf](https://docs.microsoft.com/powershell/module/netadapter/get-netadaptersriovvf?view=win10-ps).
+The user mode process will retry to enable I/O Virtualization at a later stage in few moments. You can verify the IOV VF function by using the PowerShell cmdlet [Get-NetAdapterSriovVf](https://docs.microsoft.com/powershell/module/netadapter/get-netadaptersriovvf?view=win10-ps&preserve-view=true).

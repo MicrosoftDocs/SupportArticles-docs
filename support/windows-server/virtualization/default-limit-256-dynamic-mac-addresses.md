@@ -65,6 +65,6 @@ If the host is Windows Server 2008, you can modify the dynamic MAC address range
 
 Refer to the following blog posts for additional reading on this subject.
 
-[Hyper-V R2: MAC Address Management](http://blogs.msdn.com/b/virtual_pc_guy/archive/2009/01/20/hyper-v-r2-mac-address-management.aspx)
+[Hyper-V R2: MAC Address Management](https://blogs.msdn.com/b/virtual_pc_guy/archive/2009/01/20/hyper-v-r2-mac-address-management.aspx)
 
-[Managing MAC Address Pools in Hyper-V R2](http://blogs.technet.com/b/roblarson/archive/2009/02/17/managing-mac-address-pools-in-hyper-v-r2.aspx)
+[Managing MAC Address Pools in Hyper-V R2](https://blogs.technet.com/b/roblarson/archive/2009/02/17/managing-mac-address-pools-in-hyper-v-r2.aspx)

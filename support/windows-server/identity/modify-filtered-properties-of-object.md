@@ -2,7 +2,7 @@
 title: Modify filtered properties of an object
 description: Discusses how to change the list of attributes shown in ACL Editor for a specific object type.
 ms.date: 09/16/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro

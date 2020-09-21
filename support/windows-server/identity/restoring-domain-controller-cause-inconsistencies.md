@@ -2,7 +2,7 @@
 title: Event ID 1587 after you restore domain controller
 description: Restoring a domain controller may cause inconsistencies between domain controllers. If this occurs, some lingering objects may be present on the restored domain controller. Also, new objects on the restored domain controller are not replicated. This article suggests a workaround correct the problem.
 ms.date: 09/14/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro

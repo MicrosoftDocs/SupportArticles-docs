@@ -1,5 +1,5 @@
 ---
-title: "The directory datatype cannot be converted to/ from a native DS datatype" error
+title: The directory datatype cannot be converted to or from a native DS datatype error
 description: Describes a problem that occurs when Active Directory applications use information for linked attributes. Provides a resolution.
 ms.date: 09/14/2020
 author: Deland-Han
@@ -13,9 +13,9 @@ ms.reviewer: kaushika, herbertm
 ms.prod-support-area-path: User, computer, group, and object management
 ms.technology: ActiveDirectory
 ---
-# "The directory datatype cannot be converted to/ from a native DS datatype" error
+# "The directory datatype cannot be converted to or from a native DS datatype" error
 
-This article helps to fix the error "The directory datatype cannot be converted to/ from a native DS datatype".
+This article helps to fix the error "The directory datatype cannot be converted to or from a native DS datatype".
 
 _Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 907462

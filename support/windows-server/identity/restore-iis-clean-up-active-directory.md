@@ -31,7 +31,7 @@ If you run the AD FS 2.0 Federation Server Configuration Wizard after reinstalli
 
 - The Configuration Results page may show the component Deploy browser sign-in Web site listed with status Configuration finished with warnings. When you click the status you may see the following warning:
 
-    > Existing Web site detected. Therefore, the Web site was not reinstalled. If you are trying to redeploy the default AD FS 2.0 Web sites, see http://go.microsoft.com/fwlink/?LinkId=181110 for details.
+    > Existing Web site detected. Therefore, the Web site was not reinstalled. If you are trying to redeploy the default AD FS 2.0 Web sites, see `http://go.microsoft.com/fwlink/?LinkId=181110` for details.
 
 - The Configuration Results page may show the component Deploy browser sign-in Web site listed with status Configuring components...  when the following error message is displayed:
 

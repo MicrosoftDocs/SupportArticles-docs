@@ -44,15 +44,15 @@ To install and to configure the external connector for a Windows Server 2003 or 
 
 To install and to configure the external connector for a Windows Server 2008 R2 Remote Desktop Services (RDS) server, follow these steps:
 
-
 1. On the RD Session Host server, open Remote Desktop Session Host Configuration. To open Remote Desktop Session Host Configuration, click **Start**, point to **Administrative Tools**, point to **Remote Desktop Services**, and then click **Remote Desktop Session Host Configuration**.
 2. If the User Account Control dialog box appears, confirm that the action it displays is what you want, and then click **Yes**.
 3. In the Edit settings section, under Licensing, double-click **Remote Desktop licensing mode**.
 4. On the Licensing tab of the Properties dialog box, select **Per User mode**.
 
-> [!NOTE]
-> If the Remote Desktop licensing mode choices are dimmed and you cannot make a selection, the Set the Remote Desktop licensing mode Group Policy setting has been enabled and has been applied to the RS Session Host server.
+    > [!NOTE]
+    > If the Remote Desktop licensing mode choices are dimmed and you cannot make a selection, the Set the Remote Desktop licensing mode Group Policy setting has been enabled and has been applied to the RS Session Host server.
 5. Next, click on the **Add** button under "Remote Desktop license server" section to point to a RDSLS Server.
 
-    For detailed steps, see Specify a License Server for an RD Session Host Server to Use TechNet article ([https://technet.microsoft.com/library/cc770585.aspx)](https://technet.microsoft.com/library/cc770585.aspx).  
+    For detailed steps, see Specify a License Server for an RD Session Host Server to Use TechNet article ([https://technet.microsoft.com/library/cc770585.aspx)](https://technet.microsoft.com/library/cc770585.aspx).
+
 6. Click **OK** to save your changes to the licensing settings.

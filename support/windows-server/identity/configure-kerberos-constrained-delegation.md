@@ -29,7 +29,7 @@ _Original KB number:_ &nbsp; 4494313
 
 1. See the following image for guidance to configure the HTTP SPNs on the service account for the front-end web server.
 
-    :::image type="content" source="./media/configure-kerberos-constrained-delegation/active-directory-users-computers.png" alt-text="Guidance to configure the HTTP SPNs.":::
+    :::image type="content" source="./media/configure-kerberos-constrained-delegation/active-directory-users-computers.png" alt-text="Guidance to configure the HTTP SPNs.":::
 
     **Note** You can also run the **setspn -s SPN Accountname**  command. For example, run the following command:
 
@@ -39,11 +39,11 @@ _Original KB number:_ &nbsp; 4494313
 
 2. Configure S4U2Proxy (Kerberos Only) Constrained Delegation on the service account.
 
-    :::image type="content" source="./media/configure-kerberos-constrained-delegation/web-svc-settings.png" alt-text="Configure web_svc properties":::
+    :::image type="content" source="./media/configure-kerberos-constrained-delegation/web-svc-settings.png" alt-text="Configure web_svc properties":::
 
 3. On the Machine Account, set S4U2Self (Protocol Transition) Constrained Delegation.‎
 
-    :::image type="content" source="./media/configure-kerberos-constrained-delegation/set-s4u2self-contained-delegation.png" alt-text="Set up delegation":::
+    :::image type="content" source="./media/configure-kerberos-constrained-delegation/set-s4u2self-contained-delegation.png" alt-text="Set up delegation":::
 
 ## Configuring web enrollment for HTTPS
 
@@ -51,32 +51,32 @@ To enable web enrollment pages to work, create a domain certificate for the webs
 
 1. Click \<HOSTNAME>, and select **Server Certificates**.
 
-    :::image type="content" source="./media/configure-kerberos-constrained-delegation/select-server-certificate.png" alt-text="Add certificate":::
+    :::image type="content" source="./media/configure-kerberos-constrained-delegation/select-server-certificate.png" alt-text="Add certificate":::
 
 2. In the actions pane on the right, select **Create a Domain Certificate**.
 3. After the certificate is created, select **Default Web Site** on the left side, and then select **Bindings** on the right side.
 4. Add the certificate that you enrolled earlier, and bind it to port 443.
 
-    :::image type="content" source="./media/configure-kerberos-constrained-delegation/add-site-binding.png" alt-text="Add certificate and bind it to port 443":::
+    :::image type="content" source="./media/configure-kerberos-constrained-delegation/add-site-binding.png" alt-text="Add certificate and bind it to port 443":::
 
 ## Configuring the service account on the front end (web server)
 
 Make sure that the service account is part of either the **local administrators** or **IIS_Users** group on the web server.
-:::image type="content" source="./media/configure-kerberos-constrained-delegation/local-users-groups.png" alt-text="Service account":::
+:::image type="content" source="./media/configure-kerberos-constrained-delegation/local-users-groups.png" alt-text="Service account":::
 
 ‎After you install the web enrollment role on the server, start IIS Manager, and then configure the service account for the default App Pool.
 
 1. Right-click **DefaultAppPool**, and then click **Advanced Settings**.
 
-    :::image type="content" source="./media/configure-kerberos-constrained-delegation/advanced-settings.png" alt-text="Configure Application pools":::
+    :::image type="content" source="./media/configure-kerberos-constrained-delegation/advanced-settings.png" alt-text="Configure Application pools":::
 
 2. In the **Process Model** > **Identity** section of the setting, add the service account.
 
-    :::image type="content" source="./media/configure-kerberos-constrained-delegation/add-custom-account.png" alt-text="Application Pool Identity":::
+    :::image type="content" source="./media/configure-kerberos-constrained-delegation/add-custom-account.png" alt-text="Application Pool Identity":::
 
 3. Set the **Load User Profile** setting to **True**.
 
-    :::image type="content" source="./media/configure-kerberos-constrained-delegation/load-user-profile.png" alt-text="Set Load User Profile setting to True":::
+    :::image type="content" source="./media/configure-kerberos-constrained-delegation/load-user-profile.png" alt-text="Set Load User Profile setting to True":::
 
 4. Restart the computer.
 

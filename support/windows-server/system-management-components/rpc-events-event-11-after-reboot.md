@@ -2,7 +2,7 @@
 title: Microsoft-Windows-RPC-Events event 11
 description: Resolves the Microsoft-Windows-RPC-Events event 11 that occurs when you run the Server Manager Snap-in (servermanager.msc) for extended periods of time or start the Resource Host Monitor (rhs.exe) hosting FileServer Resource.
 ms.date: 09/14/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro

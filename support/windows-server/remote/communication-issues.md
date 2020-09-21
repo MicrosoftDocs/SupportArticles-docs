@@ -57,7 +57,7 @@ The Remote Desktop Connection Broker (RD Connection Broker) has to enable the UD
 
 ## Resolution
 
-To resolve this issue, [add a WFP rule](#addwfprule) to enable the RD Connection Broker service to use UDP port 1434.
+To resolve this issue, add a WFP rule to enable the RD Connection Broker service to use UDP port 1434.
 
 ## More information
 

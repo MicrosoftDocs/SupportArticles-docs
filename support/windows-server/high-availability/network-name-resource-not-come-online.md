@@ -2,7 +2,7 @@
 title: Network Name resource fails to come online
 description: Provides a solution to an issue where Network Name resource fails to come online in a Windows Server 2008 R2-based failover cluster.
 ms.date: 09/17/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro

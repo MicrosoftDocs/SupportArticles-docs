@@ -205,7 +205,7 @@
       href: ./identity/multiple-tabs-of-user-property-missing.md
     - name: Name computers, domains, sites, and OUs
       href: ./identity/naming-conventions-for-computer-domain-site-ou.md
-    - name: NET.EXE /ADD command doesn't support names longer than 20 characters
+    - name: 'NET.EXE /ADD command doesn't support names longer than 20 characters'
       href: ./identity/net-add-not-support-names-exceeding-20-characters.md
     - name: Netlogon service doesn't keep settings after in-place upgrade
       href: ./identity/netlogon-service-not-start-automatically.md
@@ -973,7 +973,7 @@
     - name: Back up and restore printers when upgrading
       href: ./printing/back-up-restore-printers.md
     - name: Can't print after installing a service pack or printer hotfix 
-      href: ./printing /cannot-print-install-service-pack-update-rollup.md
+      href: ./printing/cannot-print-install-service-pack-update-rollup.md
     - name: How to find a compatible printer driver
       href: ./printing/find-compatible-printer-driver-64-bit.md
     - name: Printer and drive redirection don't work in a Terminal Server session
@@ -981,15 +981,15 @@
     - name: Printing pauses after every 11 print jobs
       href: ./printing/printing-pauses-event-2004-4227-lpr-port.md
     - name: Slow performance with HP printer drivers
-      href: ./printing /slow-performance-hp-printer-driver.md
+      href: ./printing/slow-performance-hp-printer-driver.md
     - name: Spooler.xml file growth and high CPU in spoolsv.exe process 
-      href: ./printing /spooler-xml-file-grow-spoolsv-exe-high-cpu.md
+      href: ./printing/spooler-xml-file-grow-spoolsv-exe-high-cpu.md
     - name: 'Standard port monitor for TCP/IP'
       href: ./printing/standard-port-monitor-for-tcpip.md
     - name: The printer spooler crashes randomly
       href: ./printing/printer-spooler-crashes-hp-printer-installed.md
     - name: Unable to print with Type 4 or 3 printer drivers
-      href: ./printing /print-fails-on-printer-server-promoted-to-dc.md
+      href: ./printing/print-fails-on-printer-server-promoted-to-dc.md
     - name: Use CNAME records to consolidate print servers
       href: ./printing/consolidate-print-servers-with-cname-records.md
     - name: Use Group Policy to control printers

@@ -2,7 +2,7 @@
 title: Error 0x19 when NTFS creates name in 8.3 format
 description: Fixes a problem in which you may receive a Stop error 00000019 (Error 0x19) when NTFS generates a 8.3-formatted name for a file that has a long file name.
 ms.date: 09/18/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro

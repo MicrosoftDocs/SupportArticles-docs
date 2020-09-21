@@ -2,7 +2,7 @@
 title: Sync Center syncs offline files very slow
 description: Describes an issue that slows down the progress of offline folder file sync operations by Microsoft Sync Center. This issue involves unsorted files and the extra time that's needed to sort them.
 ms.date: 09/14/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro

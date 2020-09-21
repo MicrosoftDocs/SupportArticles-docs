@@ -2,7 +2,7 @@
 title: FSRM quota usage is incorrect
 description: Resolves an issue in which the FSRM quota usage is incorrect.
 ms.date: 09/17/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro

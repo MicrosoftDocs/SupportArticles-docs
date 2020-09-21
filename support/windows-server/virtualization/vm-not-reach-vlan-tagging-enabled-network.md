@@ -2,7 +2,7 @@
 title: VM can't reach network configured by vLan tagging
 description: Resolves an issue where virtual machines can't reach the network that's configured by using vLan tagging.
 ms.date: 09/17/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro

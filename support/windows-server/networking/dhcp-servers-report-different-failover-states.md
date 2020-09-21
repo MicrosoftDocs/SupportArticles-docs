@@ -2,7 +2,7 @@
 title: DHCP servers don't replicate lease information
 description: Resolves two issues that occur when you use DHCP failover in Windows Server 2012.
 ms.date: 09/15/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro

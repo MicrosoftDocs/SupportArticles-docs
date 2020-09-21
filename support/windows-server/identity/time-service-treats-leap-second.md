@@ -2,7 +2,7 @@
 title: How Windows Time service treats leap second
 description: Describes how the Windows Time service does not include the value of the Leap Indicator when the service receives a packet that includes a leap second.
 ms.date: 09/18/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro

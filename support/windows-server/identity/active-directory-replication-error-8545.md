@@ -2,7 +2,7 @@
 title: Troubleshoot AD replication error 8545
 description: Describes an issue that causes Active Directory replication to fail for one or more partitions and trigger error 8545. This issue occurs in Windows Server 2012 and earlier. A resolution is provided.
 ms.date: 09/18/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro
@@ -88,7 +88,7 @@ The scenario that's described in the preceding sections can be confusing. Use th
 
 First, determine whether it's the source or destination domain controller that has a copy of the object in the old location (the location from where the object was migrated).
 
-|||
+|Name|Details|
 |---|---|
 |Object DN|CN=JUSTINTU,OU=Users,OU=BOULDER,DC=na,DC=contoso,DC=com|
 |ObjectGUID|33555323-8e42-42dd-ab95-51693b54281f|
@@ -107,7 +107,7 @@ First, determine whether it's the source or destination domain controller that h
 To identify the current location of the object in the database:
 1. [Dump](https://support.microsoft.com/help/315098) the database of one of the destination DCs.
 2. Open the database dump file, and then search for the objectGUID that's reported in event 1084.
-3. Grab the DNT and PDNT, and [build the object hierarchy](http://blogs.technet.com/b/askpfeplat/archive/2012/07/23/mcm-core-active-directory-internals.aspx) by copying the pertinent values into a table, as follows:
+3. Grab the DNT and PDNT, and [build the object hierarchy](https://blogs.technet.com/b/askpfeplat/archive/2012/07/23/mcm-core-active-directory-internals.aspx) by copying the pertinent values into a table, as follows:
 
 | DNT| PDNT| RDN| ObjectGUID |
 |---|---|---|---|
@@ -116,7 +116,6 @@ To identify the current location of the object in the database:
 |6931|1752|Corp||
 |1751|20003|Contoso||
 |1750|2|com||
-|||||
 
 By using the database dump file, you can see this object's current location in the database on this domain controller:
 

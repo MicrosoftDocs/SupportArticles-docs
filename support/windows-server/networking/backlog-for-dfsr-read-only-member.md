@@ -2,7 +2,7 @@
 title: Backlog is reported for DFSR Read-Only member
 description: Describes an issue in which a backlog is reported for a Read-Only member after you remove a replication file filter.
 ms.date: 09/18/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro

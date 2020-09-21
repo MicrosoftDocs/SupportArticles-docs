@@ -2,7 +2,7 @@
 title: Error 0x000000D1 when you enabled storage controller
 description: Discusses that Windows Server 2012 runs a bugcheck and you receive Step error 0x000000D1 when you enable a storage controller.
 ms.date: 09/14/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro

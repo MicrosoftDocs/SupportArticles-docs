@@ -2,7 +2,7 @@
 title: SystemInfo.exe doesn't display all updates
 description: Works around an issue where SystemInfo.exe can't display all installed updates.
 ms.date: 09/18/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro
