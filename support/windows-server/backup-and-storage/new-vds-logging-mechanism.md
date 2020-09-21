@@ -1,0 +1,43 @@
+---
+title: New logging mechanism for VDS
+description: The old VDS logging mechanism is removed in Windows 8 and a new one is introduced.
+ms.date: 09/14/2020
+author: Delead-Han
+ms.author: delhan
+manager: dscontentpm
+audience: itpro
+ms.topic: troubleshooting
+ms.prod: windows-server
+localization_priority: medium
+ms.reviewer: kaushika, lichunli
+ms.prod-support-area-path: Partition and volume management
+ms.technology: BackupStorage
+---
+# Introduce the new logging mechanism for the VDS
+
+This article introduces the new logging mechanism for Virtual Disk Service (VDS) in Windows Server 2012.
+
+_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 2759114
+
+## Introduction
+
+The VDS in Microsoft Windows Server is a set of APIs that provides a single interface to manage disks. The VDS provides an end-to-end solution to manage storage hardware and disks and to create volumes on the disks. This article introduces the new logging mechanism for VDS in Windows Server 2012. The VDS logging for previous version of Windows is removed.
+
+## More information
+
+To help you troubleshoot any problems with the VDS, capture VDS trace. To capture VDS trace, follow these steps:
+
+
+1. Open an elevated command prompt, and then run the following commands:
+    1. `md %systemroot%\system32\LogFiles\VDS`
+    2. `Logman start vds -o %systemroot%\system32\LogFiles\VDS\VdsTrace.etl -ets -p {012F855E-CC34-4da0-895F-07AF2826C03E} 0xffff 0xff`
+2. Reproduce the problem.
+3. After repro, go back to the command prompt from step 1 and run the following command to stop the VDS trace:
+    1. `Logman stop vds -etsTrace file Vds`
+
+Trace.etl can be found under `%systemroot%\system32\LogFiles\VDS\`. Use TraceView.exe to browse the file or send the VdsTrace.etl file to Microsoft customer support. Customers must obtain the corresponding operating system symbol files from Microsoft public symbol servers in order to read the VdsTrace.etl file. More information about TraceView.exe, click on the following article:
+
+[TraceView](/windows-hardware/drivers/devtest/traceview) 
+
+For more information on VDS logging for previous version of Windows, click the following article number: [842011](https://support.microsoft.com/help/842011) How to turn on logging for the VDS in Windows Server 2003 and in Windows Server 2008 and 2008 R2
