@@ -215,7 +215,8 @@ When you create, configure, or manage OOF replies, you might also experience the
 
 ### An old or duplicate OOF message is sent
 
-If an old or duplicate OOF reply is sent, check for a duplicate Inbox rule. This issue may also occur if the OOF history limit is reached. The OOF history has a limit of 10,000 entries. If this threshold is reached, new users can't be added to the history list and OOF replies will continue to be sent to recipients who are not already in that list. All users who are already in the list will not receive duplicate OOF replies. For more information, see [this article](https://support.microsoft.com/help/3106609) or follow these steps: 
+If an old or duplicate OOF reply is sent, check for a duplicate Inbox rule. This issue may also occur if the OOF history limit is reached. The OOF history has a limit of 10,000 entries. If this threshold is reached, new users can't be added to the history list and OOF replies will continue to be sent to recipients who are not already in that list. All users who are already in the list will not receive duplicate OOF replies. For more information, see [this article](https://support.microsoft.com/help/3106609) or follow these steps:
+
 1. Remove the OOF rules and the OOF rules templates from the mailbox. To locate the rules, see the [OOF rule details](#oof-rule-details) section.
 2. Disable and then re-enable the OOF feature for the mailbox.
 3. Check again whether the OOF feature works as expected and the symptoms do not occur.
@@ -252,3 +253,39 @@ To locate the rules, see the [OOF rule details](#oof-rule-details) section. Afte
 ### An automatic reply is sent even if OOF is disabled
 
 In some scenarios, OOF messages are still sent even though the feature is disabled. This might occur if the rule is created manually by using the [out-of-office template](https://support.office.com/article/use-rules-to-create-an-out-of-office-message-9f124e4a-749e-4288-a266-2d009686b403).
+
+### Only one automatic reply is sent to each sender
+
+The Out of Office Assistant sends an automatic reply to notify users who send you messages that you are away from the office. Your reply is only sent once to a message sender. The count is reset when you toggle the Out of Office Assistant. Microsoft Exchange clears its internal "sent to" list when you disable the Out of Office Assistant.
+
+If you would like to have a reply sent for every message, use Rules instead of the Out of Office Assistant.
+
+### Two different automatic replies are sent to recipients
+
+This issue doesn't stem from the recipient's inbox rules. There's an additional automatic reply rule configured in Outlook. To fix this issue, follow these steps:
+
+1. Launch Outlook.
+2. Go to **File** > **Automatic Replies** > **Rules…**.
+3. Remove the rule.
+    :::image type="content" source="media/understand-troubleshoot-oof-replies/auto-reply-rule.png" alt-text="Remove auto-reply rule":::
+
+### OOF messages are sent multiple times to recipients
+
+The OOF rule history has a limit of 10,000 entries. When this limit is reached, new entries can't be added and existing entries can't be tracked for previous OOF responses. To fix this problem, remove the OOF rule history. To do this, follow these steps:
+
+> [!CAUTION]
+> Using the MFCMAPI tool incorrectly can cause permanent damage to a mailbox. Make sure that you follow these steps carefully.
+
+1. Turn off the Automatic Replies feature in Outlook if it's currently on, and then exit Outlook.
+2. Download and install [MFCMAPI](http://mfcmapi.codeplex.commfcmapi.codeplex.com).
+3. Start MFCMapi.
+4. On the **Tools** menu, select **Options**.
+5. Select the **Use the MDB_ONLINE flag when calling OpenMsgStore** check box and the **Use the MAPI_NO_CACH flag when calling OpenEntry** check box.
+6. On the **Session** menu, select **Logon**.
+7. Select the Outlook profile for the mailbox.
+8. Double-click the mailbox to open it.
+9. Expand Root Container, and then select **Freebusy Data**.
+10. Right-click the **PR_DELEGATED_BY_RULE** property that has the **0x3FE30102** tag, point to **Edit as stream**, and then select **Binary**.
+
+    The **PR_DELEGATED_BY_RULE** property is located in the **Other Names** column.
+11. Select all the text in the **Stream (Binary)** box, and then delete it.
