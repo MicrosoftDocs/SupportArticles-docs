@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Setup
-ms.technology: Depolyment
+ms.technology: Deployment
 ---
 # File shares on iSCSI devices may not be re-created when you restart the computer
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Setup
-ms.technology: Depolyment
+ms.technology: Deployment
 ---
 # Create an ISO image for UEFI platforms for a Windows PE CD-ROM for Windows Server 2008
 
