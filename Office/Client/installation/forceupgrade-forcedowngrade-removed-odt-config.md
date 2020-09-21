@@ -25,7 +25,9 @@ description: Describes why the ForceUpgrade and ForceDowngrade attributes were d
 
 ## Summary
 
-The **ForceUpgrade** and **ForceDowngrade** attributes were removed from the Office Deployment Tool (ODT) configuration file. These attributes were used to force an upgrade or downgrade between Microsoft Office 365 ProPlus versions 2016 and 2013. 
+The **ForceUpgrade** and **ForceDowngrade** attributes were removed from the Office Deployment Tool (ODT) configuration file. These attributes were used to force an upgrade or downgrade between Microsoft Office 365 ProPlus versions 2016 and 2013.
+
+This article discusses how to restore the attributes to force or revert an upgrade.
 
 ## More information
 
