@@ -211,7 +211,7 @@
     - name: Error 721 when establishing a VPN connection
       href: ./networking/error-when-establishing-vpn-connection.md
     - name: "Errors when having a large \"Folder Redirection\" policy settings file"
-      href: ./networking/errors-work-large-folder-redirection-policy-settings-file .md
+      href: ./networking/errors-work-large-folder-redirection-policy-settings-file.md
     - name: Event 10317 when you turn on mobile broadband device
       href: ./networking/event-10317-mobile-broadband-device.md
     - name: Folder redirection doesn't work correctly

@@ -1,6 +1,6 @@
 ---
 title: Folder Redirection fails to apply when redirected to mapped drive letter, instead of UNC path
-description: 
+description: Fixes an issue in which folder redirection cannot be applied.
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan
@@ -15,7 +15,7 @@ ms.technology: Networking
 ---
 # Folder Redirection fails to apply when redirected to mapped drive letter, instead of UNC path
 
-This article
+This article fixes an issue in which folder redirection cannot be applied.
 
 _Original product version:_ &nbsp;Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp;2859465
