@@ -2,7 +2,7 @@
 title: Folder redirection doesn't work correctly
 description: Discusses a problem in which folder redirection does not work correctly after you restart a Windows Server 2008-based computer or a Windows Vista-based computer. A workaround is provided.
 ms.date: 09/15/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro
@@ -37,7 +37,7 @@ To work around this problem, use one of the following methods.
 Windows Explorer uses the Well-Known folder cache. The Well-Known folder cache is initialized during logon. When you log off and then log on again, Windows rebuilds the cache. At this point, you can apply Group Policy settings correctly. Additionally, the cache is populated correctly.
 
 > [!NOTE]
-> For more information about Group Policy settings and about the Well-known folder cache, see the "[More information](#moreinfo)" section.
+> For more information about Group Policy settings and about the Well-known folder cache, see the "[More information](#more-information)" section.
 
 ### Method 2: Wait for 12 minutes
 

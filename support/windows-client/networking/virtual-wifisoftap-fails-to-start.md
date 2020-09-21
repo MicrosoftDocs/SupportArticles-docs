@@ -2,7 +2,7 @@
 title: Virtual WiFi/SoftAP fails to start
 description: When you attempt to start Virtual WiFi/SoftAP, you may receive an error. This article provides a solution to this issue.
 ms.date: 09/16/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro

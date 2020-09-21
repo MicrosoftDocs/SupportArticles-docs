@@ -1,9 +1,9 @@
 ---
 title: List All Modes displays incomplete list of modes 
 description: Provides a solution to an issue where the list of available modes is different than the list displayed in Windows 7
-when you use multiple displays in "duplicate" mode in Windows 8.
+when you use multiple displays in duplicate mode in Windows 8.
 ms.date: 09/14/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro

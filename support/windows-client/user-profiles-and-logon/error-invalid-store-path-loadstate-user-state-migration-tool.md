@@ -39,4 +39,4 @@ For example, if the MIG file is located at "C:\store\usmt\usmt.mig," the LoadSta
 
 ## More information
 
-For more information, go to [USMT 4.0: Cryptic messages with easy fixes](http://blogs.technet.com/b/askds/archive/2010/03/01/usmt-4-0-cryptic-messages-with-easy-fixes.aspx).
+For more information, go to [USMT 4.0: Cryptic messages with easy fixes](https://blogs.technet.com/b/askds/archive/2010/03/01/usmt-4-0-cryptic-messages-with-easy-fixes.aspx).

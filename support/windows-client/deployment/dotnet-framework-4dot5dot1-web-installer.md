@@ -2,7 +2,7 @@
 title: .NET Framework 4.5.1 (web installer)
 description: Describes the Microsoft .NET Framework 4.5.1 (web installer) for Windows 7 SP1 and Windows Server 2008 R2 SP1.
 ms.date: 09/15/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro

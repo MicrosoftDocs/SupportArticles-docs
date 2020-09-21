@@ -210,7 +210,7 @@
       href: ./networking/cannot-logon-access-administrative-share.md
     - name: Error 721 when establishing a VPN connection
       href: ./networking/error-when-establishing-vpn-connection.md
-    - name: Errors when having a large "Folder Redirection" policy settings file
+    - name: "Errors when having a large \"Folder Redirection\" policy settings file"
       href: ./networking/errors-work-large-folder-redirection-policy-settings-file .md
     - name: Event 10317 when you turn on mobile broadband device
       href: ./networking/event-10317-mobile-broadband-device.md
@@ -290,9 +290,9 @@
 - name: Printing
   items:
     - name: "\"Server Busy\" error message when you try to scan a document"
-      href: ./printing /server-busy-error-scan-document.md
+      href: ./printing/server-busy-error-scan-document.md
     - name: Add print directory feature
-      href: ./printing /add-print-directory-feature.md
+      href: ./printing/add-print-directory-feature.md
     - name: Can't install a Secure WSD printer from Print Management Console
       href: ./printing/cannot-install-secure-web-services-on-devices.md
     - name: Duplex printing options can't be set
@@ -302,9 +302,9 @@
     - name: Error 0x00000709 when using CNAME record
       href: ./printing/error-0x00000709-use-cname-record.md
     - name: Errors when you connect to a shared printer by using a CNAME record
-      href: ./printing /errors-connect-to-shared-printer-cname-record.md
+      href: ./printing/errors-connect-to-shared-printer-cname-record.md
     - name: Printers don't work with XPS-based print drivers
-      href: ./printing /print-directly-to-the-printer-setting-not-work.md
+      href: ./printing/print-directly-to-the-printer-setting-not-work.md
 
 - name: Remote Desktop Services
   items:

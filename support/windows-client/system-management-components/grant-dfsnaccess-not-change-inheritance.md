@@ -2,7 +2,7 @@
 title: Grant-DfsnAccess doesn't change inheritance mode
 description: Describes a problem in which the Windows PowerShell cmdlet Grant-DfsnAccess doesn't change inheritance on DFS links. Provides a workaround.
 ms.date: 09/15/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro

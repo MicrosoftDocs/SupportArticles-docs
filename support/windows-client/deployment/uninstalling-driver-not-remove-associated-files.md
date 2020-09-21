@@ -2,7 +2,7 @@
 title: Uninstalling driver doesn't remove associated files
 description: Resolves an issue where uninstalling a driver through device manager doesn't remove associated files or applications with that driver.
 ms.date: 09/15/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro

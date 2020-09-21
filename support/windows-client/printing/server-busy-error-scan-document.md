@@ -1,6 +1,6 @@
 ---
-title: "Server Busy" error message when you try to scan a document
-description: Provides a resolution for fixing "Server Busy" error when you try to scan a document
+title: (Server Busy) error message when you try to scan a document
+description: Provides a resolution for fixing (Server Busy) error when you try to scan a document
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan 

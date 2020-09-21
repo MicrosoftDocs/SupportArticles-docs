@@ -69,7 +69,7 @@ To use this CopyProfile setting in Windows XP SP2 together with hotfix 887816, i
 
 For more information about how to configure default local user profile settings, visit the following Microsoft website:
 
-[http://blogs.technet.com/deploymentguys/archive/2009/10/29/configuring-default-user-settings-full-update-for-windows-7-and-windows-server-2008-r2.aspx](http://blogs.technet.com/deploymentguys/archive/2009/10/29/configuring-default-user-settings-full-update-for-windows-7-and-windows-server-2008-r2.aspx) 
+[https://blogs.technet.com/deploymentguys/archive/2009/10/29/configuring-default-user-settings-full-update-for-windows-7-and-windows-server-2008-r2.aspx](https://blogs.technet.com/deploymentguys/archive/2009/10/29/configuring-default-user-settings-full-update-for-windows-7-and-windows-server-2008-r2.aspx) 
 
 ## More information
 
@@ -91,4 +91,4 @@ Implement the required new or changed settings as a logon script and configure i
 
 You can automate the procedure in Knowledge Base article 284193 by using the Reg.exe command. For an alternative solution, see the "Targeted changes to the Default User Registry hive and profile folders" section on the following Microsoft website:
 
-[http://blogs.technet.com/deploymentguys/archive/2009/10/29/configuring-default-user-settings-full-update-for-windows-7-and-windows-server-2008-r2.aspx](http://blogs.technet.com/deploymentguys/archive/2009/10/29/configuring-default-user-settings-full-update-for-windows-7-and-windows-server-2008-r2.aspx)
+[https://blogs.technet.com/deploymentguys/archive/2009/10/29/configuring-default-user-settings-full-update-for-windows-7-and-windows-server-2008-r2.aspx](https://blogs.technet.com/deploymentguys/archive/2009/10/29/configuring-default-user-settings-full-update-for-windows-7-and-windows-server-2008-r2.aspx)

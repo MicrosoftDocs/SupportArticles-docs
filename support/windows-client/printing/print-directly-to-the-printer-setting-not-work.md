@@ -2,7 +2,7 @@
 title: Printers don't work with XPS-based print drivers
 description: Describes a problem that prevents the printer on a Windows 7-based system from printing. This issue occurs when the printer uses an XPS-based print driver.
 ms.date: 09/17/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro

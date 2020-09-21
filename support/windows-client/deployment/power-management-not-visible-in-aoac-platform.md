@@ -2,7 +2,7 @@
 title: Power Management tab isn't visible
 description: Discusses a by-design behavior where the Power Management tab is no longer available in the Wireless Network advanced properties in an Always On/Always Connected (AOAC) platform.
 ms.date: 09/14/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro

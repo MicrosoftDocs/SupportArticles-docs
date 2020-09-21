@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Management and Configuration: General issues
+ms.prod-support-area-path: Management and Configuration General issues
 ms.technology: PrintFaxScan
 ---
 # How to add the print directory feature to Windows Explorer
@@ -105,4 +105,4 @@ To do this, follow these steps:
 ### Did this fix the problem?
 
 - Check whether the problem is fixed. If the problem is fixed, you are finished with this section. If the problem is not fixed, you can [contact support](https://support.microsoft.com/contactus/).
-- We would appreciate your feedback. To provide feedback or to report any issues with this solution, leave a comment on the [Fix it for me](http://blogs.technet.com/fixit4me/) blog or send us an [email](mailto:fixit4me@microsoft.com?subject=kb).
+- We would appreciate your feedback. To provide feedback or to report any issues with this solution, leave a comment on the [Fix it for me](https://support.microsoft.com/help/2970908) blog or send us an [email](mailto:fixit4me@microsoft.com?subject=kb).
