@@ -56,7 +56,7 @@ To make a `GET` request, follow these steps:
 
     ```csharp
     string sURL;
-    sURL = "http://www.microsoft.com";
+    sURL = "http://www.contoso.com";
     ```
 
 6. Create a new `WebRequest` object. You can do this only through the static `Create` method of the `WebRequest` class (*new* a `WebRequest` object is not valid). Supply the target URL as part of the call to `Create` to initialize the object that has this value.
@@ -128,7 +128,7 @@ namespace MakeAGETRequest_charp
         static void Main(string[] args)
         {
             string sURL;
-            sURL = "http://www.microsoft.com";
+            sURL = "http://www.contoso.com";
 
             WebRequest wrGETURL;
             wrGETURL = WebRequest.Create(sURL);
