@@ -24,11 +24,11 @@ The issue occurs after leaving a personal computer (PC) idle, and a PBR Reset co
 
 ## Cause
 
-This is a known issue. If PBR fails in an early stage and rollback, the rollback process will set the Windows Recovery Environment (WinRE) Boot Configuration Data (BCD) as the default BCD entry, but will fail to restore the default BCD entry to the Operating System (OS). Changing the default BCD entry to the WinRE entry will cause a successful PBR to delete the WinRE entry, and disable the WinRE BCD.
+This error is a known issue. If PBR fails in an early stage and rollback, the rollback process will set the Windows Recovery Environment (WinRE) Boot Configuration Data (BCD) as the default BCD entry, but will fail to restore the default BCD entry to the Operating System (OS). Changing the default BCD entry to the WinRE entry will cause a successful PBR to delete the WinRE entry, and disable the WinRE BCD.
 
 The following steps reproduce this error:
 
-1. Setup a PC without including language resource 2020.8B.
+1. Set up a PC without including language resource 2020.8B.
 
 2. Execute SilentCleanupTask manually.
 
@@ -57,13 +57,13 @@ When the second `Reagentc /enable` runs, the WinRE file is purged. It can then b
 
 ### Workaround for users without internet access
 
-For users who cannot access internet:
+For users who can't access internet:
 
 1. Apply language resource 2020.8B.
 2. Run `Dism /online /cleanup-image /restorehealth`.
 3. Run **PBR Reset/Refresh**.
 4. Attempt a PBR.
-5. Re-run **PBR Reset/Refresh**.
+5. Rerun **PBR Reset/Refresh**.
 6. Run `reagentc /enable` twice.
 7. Run the **PBR Reset/Refresh**.
 
