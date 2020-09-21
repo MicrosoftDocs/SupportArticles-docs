@@ -224,6 +224,7 @@ This issue doesn't stem from the recipient's inbox rules. There's an additional 
 1. Launch Outlook.
 2. Go to **File** > **Automatic Replies** > **Rules…**.
 3. Remove the rule.
+
     :::image type="content" source="media/understand-troubleshoot-oof-replies/auto-reply-rule.png" alt-text="Remove auto-reply rule":::
 
 ### OOF messages are sent multiple times to recipients
