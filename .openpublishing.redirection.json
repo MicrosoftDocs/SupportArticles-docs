@@ -109,22 +109,22 @@
       "source_path": "support/windows-server/index.md",
       "redirect_url": "/support/windows-server/welcome-windows-server",
       "redirect_document_id": false
-    },    
+    },
     {
-        "source_path": "support/azure/active-directory/install-ad-sync-tool-fails.md",
-        "redirect_url": "/support/azure/active-directory/welcome-azure-ad",
-        "redirect_document_id": false
-      },
-      {
-        "source_path": "support/azure/active-directory/specified-module-dirsync-not-load.md",
-        "redirect_url": "/support/azure/active-directory/welcome-azure-ad",
-        "redirect_document_id": false
-      },
-      {
-        "source_path": "support/azure/active-directory/unable-connect-sync-service-miisclient.md",
-        "redirect_url": "/support/azure/active-directory/welcome-azure-ad",
-        "redirect_document_id": false
-      },
+      "source_path": "support/azure/active-directory/install-ad-sync-tool-fails.md",
+      "redirect_url": "/support/azure/active-directory/welcome-azure-ad",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/active-directory/specified-module-dirsync-not-load.md",
+      "redirect_url": "/support/azure/active-directory/welcome-azure-ad",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/active-directory/unable-connect-sync-service-miisclient.md",
+      "redirect_url": "/support/azure/active-directory/welcome-azure-ad",
+      "redirect_document_id": false
+    },
     {
       "source_path": "support/sql/resource-monitor-nonyielding-condition.md",
       "redirect_url": "https://support.microsoft.com/help/2216485",
@@ -133,6 +133,31 @@
     {
       "source_path": "support/previous-versions/configmgr/index.md",
       "redirect_url": "/support/previous-versions/configmgr/backups-fail-with-vss-provider-issue",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/dotnet/index.md",
+      "redirect_url": "/support/previous-versions/dotnet/framework/64-bit-app-fails-access-violation-clr-marshaling",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/dotnet/framework/index.md",
+      "redirect_url": "/support/previous-versions/dotnet/framework/64-bit-app-fails-access-violation-clr-marshaling",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/index.md",
+      "redirect_url": "/support/previous-versions/visualstudio/general/redistribution-shared-c-runtime-component",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/msmq/index.md",
+      "redirect_url": "/support/previous-versions/msmq/clustering-support-msmq",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/foxpro/index.md",
+      "redirect_url": "/support/previous-versions/visualstudio/foxpro/access-imagelist-treeview-listview",
       "redirect_document_id": false
     }
   ]
