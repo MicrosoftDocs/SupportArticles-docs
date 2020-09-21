@@ -2,7 +2,7 @@
 title: Backup fails when you create system image
 description: Resolves an issue where backup fails when you create a system image.
 ms.date: 09/14/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro
