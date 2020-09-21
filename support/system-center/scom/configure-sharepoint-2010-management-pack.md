@@ -454,7 +454,7 @@ This error message is generated:
 
 ### Resolution
 
-Download the updated version of the management pack compatible with the System Center Operations Manager 2012 SDK from [System Center 2012 Monitoring Pack for SharePoint 2010](https://www.microsoft.com/download/details.aspx?id=34697).
+Download the updated version of the management pack compatible with the System Center Operations Manager 2012 SDK from [System Center 2012 Monitoring Pack for SharePoint 2010](https://download.microsoft.com/download/6/2/E/62EA8E44-4C18-4488-8C1F-063DFC63ED1B/Microsoft.SharePoint.2010.SCOM2012.msi).
 
 ## Unable to monitor SharePoint 2010 databases
 

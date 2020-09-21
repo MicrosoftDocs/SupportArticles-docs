@@ -123,5 +123,5 @@ expand cache.dn_ %systemroot%\System32\Dns\Cache.dns
 
 ## References
 
-For additional information about how to configure DNS for Internet access in Windows Server 2003, click the following article number to view the article in the Microsoft Knowledge Base: [323380](/EN-US/help/323380) How To Configure DNS for Internet Access in Windows Server 2003  
- For additional information about how to install and configure DNS in Windows Server 2003, click the following article number to view the article in the Microsoft Knowledge Base: [814591](/EN-US/help/814591) How To Install and Configure DNS Server in Windows Server 2003  
+For additional information about how to configure DNS for Internet access in Windows Server 2003, click the following article number to view the article in the Microsoft Knowledge Base: [323380](https://support.microsoft.com/help/323380) How To Configure DNS for Internet Access in Windows Server 2003  
+ For additional information about how to install and configure DNS in Windows Server 2003, click the following article number to view the article in the Microsoft Knowledge Base: [814591](https://support.microsoft.com/help/814591) How To Install and Configure DNS Server in Windows Server 2003  

@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 283193
 
 > [!IMPORTANT]
 > This article contains information about modifying the registry. Before you modify the registry, make sure to back it up and make sure that you understand how to restore the registry if a problem occurs. For information about how to back up, restore, and edit the registry, click the following article number to view the article in the Microsoft Knowledge Base:
- [256986](/EN-US/help/256986) Description of the Microsoft Windows Registry  
+ [256986](https://support.microsoft.com/help/256986) Description of the Microsoft Windows Registry  
 
 ## Move the Certificate Server Database and Log Files
 

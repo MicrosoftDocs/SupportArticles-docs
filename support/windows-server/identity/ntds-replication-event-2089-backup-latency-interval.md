@@ -84,9 +84,4 @@ System\CurrentControlSet\Services\NTDS\Parameters\Backup Latency Threshold (days
 
 ## References
 
-For more information, visit the following Microsoft TechNet Web sites:
-[https://technet2.microsoft.com/WindowsServer/en/Library/1465d773-b763-45ec-b971-c23cdc27400e1033.mspx](https://technet2.microsoft.com/windowsserver/en/library/1465d773-b763-45ec-b971-c23cdc27400e1033.mspx) 
-
-[https://technet2.microsoft.com/WindowsServer/en/Library/df20bd3e-9914-4a8d-bd5b-3b987c73a34d1033.mspx](https://technet2.microsoft.com/windowsserver/en/library/df20bd3e-9914-4a8d-bd5b-3b987c73a34d1033.mspx) 
-
 [https://blogs.msdn.com/brettsh/archive/2006/02/09/528708.aspx](https://blogs.msdn.com/brettsh/archive/2006/02/09/528708.aspx)

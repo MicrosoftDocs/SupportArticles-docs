@@ -226,8 +226,8 @@ There are a few tools to use to help identify DNS errors:
 
     Sample output:
 
-    > DC: [\\`DC.fabrikam.com`](file://dc.fabrikam.com/)  
-    > Address: \\<IP Address>  
+    > DC: [\\`DC.fabrikam.com`]  
+    > Address: \\\\\<IP Address>  
     > Dom Guid: 5499c0e6-2d33-429d-aab3-f45f6a06922b  
     > Dom Name: `fabrikam.com`  
     > Forest Name: `fabrikam.com`  

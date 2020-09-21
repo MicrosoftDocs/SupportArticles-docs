@@ -16,6 +16,8 @@
     href: network-properties-show-not-connected.md
 - name: Host, cluster, library management
   items:
+  - name: All hosts receive a zero rating
+    href: all-hosts-receive-zero-rating.md
   - name: Cluster overcommit algorithm approaches
     href: cluster-overcommit-algorithm-details.md
   - name: Cluster refresh fails in maintenance mode
@@ -30,12 +32,16 @@
     href: add-highly-available-cluster-error-444.md
   - name: Error 2409 selecting a storage location
     href: select-storage-location-error-2409.md
+  - name: Error 2901 adding a Citrix XenServer as a host
+    href: add-citrix-xenserver-as-host-error-2901.md
   - name: Error 2910 readding a library server
     href: readding-library-server-error-2910.md
   - name: Error 2911 managing a host
     href: manage-host-fails-error-2911.md
   - name: Error 2912 adding a cluster
     href: adding-cluster-error-2912.md
+  - name: Error 2927 adding a Hyper-V server or cluster node
+    href: add-hyper-v-server-cluster-node-error-2927.md
   - name: Error 2927 when adding a managed host
     href: add-managed-host-error-2927.md
   - name: Error 10434 putting a host into maintenance mode
@@ -166,6 +172,8 @@
   items:
   - name: A live migration fails with error 0x8007274D
     href: shared-nothing-live-migration-error-0x8007274d.md
+  - name: A P2V conversion fails with error 0x809933BB or 0x80070539
+    href: p2v-conversion-stops-at-40-percent.md
   - name: A P2V conversion fails with GPT partitions
     href: p2v-conversion-fails-with-gpt-partitions.md
   - name: Collect VMM storage traces

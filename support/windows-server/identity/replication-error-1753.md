@@ -345,6 +345,6 @@ MSDN: [Listening for client calls](https://msdn.microsoft.com/library/aa373966%2
 
 MSDN: [How the client establishes a connection](https://msdn.microsoft.com/library/aa373937%28v=VS.85%29.aspx)
 
-MSKB [224196](hhttps://support.microsoft.com/help/224196)  Restricting Active Directory replication traffic and client RPC traffic to a specific port
+MSKB [224196](https://support.microsoft.com/help/224196)  Restricting Active Directory replication traffic and client RPC traffic to a specific port
 
 Technet: [SPN for a target DC in AD DS](https://msdn.microsoft.com/library/dd207688%28PROT.13%29.aspx)
