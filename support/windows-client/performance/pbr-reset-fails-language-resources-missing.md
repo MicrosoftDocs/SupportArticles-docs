@@ -11,7 +11,7 @@ ms.prod: w10
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Applications
-ms.technology: Windows
+ms.technology: windows
 ---
 
 # Push-button reset fails because language resources are missing
