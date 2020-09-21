@@ -522,7 +522,7 @@
     - name: Setup fails on a VM with error 0xE0000100
       href: ./deployment/setup-fail-on-vm-error-0xe0000100.md
     - name: SYSPREP and CAPTURE task sequence fails
-      href: ./deployment/sysprep-capture-task-sequence-fails.md
+      href: ./deployment/sysprep-capture-task-sequence-fails-0x80070070.md
     - name: System Partition goes offline after installing some 3rd Party Disk
       href: ./deployment/system-partition-offline-install-3rd-party-disk.md
     - name: SystemInfo.exe doesn't display all installed updates
