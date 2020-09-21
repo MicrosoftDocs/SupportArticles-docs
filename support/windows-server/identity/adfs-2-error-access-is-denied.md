@@ -82,7 +82,7 @@ To find the SAML token that is issued by the AD FS service:
 - Select the token, and then start TextWizard in Fiddler. Use URLDecode for a RSTR (WS-Fed) or FromDeflatedSAML for a SAML 2.0 protocol response.
 - Try the following URL for to decode the SAML 2.0 response:
 
-https://rnd.feide.no/simplesaml/module.php/saml2debug/debug.php
+`https://rnd.feide.no/simplesaml/module.php/saml2debug/debug.php`
  
 
 ### Step 4: Enable ADFS Auditing and to check if the Token was issued or denied, along with the list of claims being processed.

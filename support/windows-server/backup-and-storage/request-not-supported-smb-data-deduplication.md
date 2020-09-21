@@ -107,8 +107,6 @@ Start-DedupJob E: -Type UnOptimization
 
 **Deduplication Cmdlets in Windows PowerShell**  
 
- [https://technet.microsoft.com/library/hh848450.aspx](https://technet.microsoft.com/library/hh848450.aspx) 
-
 Windows PowerShell
 
 Copyright (C) 2012 Microsoft Corporation. All rights reserved.  
@@ -197,8 +195,6 @@ Info re. Deduplication on Microsoft Server 2012
  [Data Deduplication Overview](https://technet.microsoft.com/library/hh831602.aspx)  
 
  [Data Deduplication Interoperability](https://technet.microsoft.com/library/hh831454.aspx) 
-
- [Deduplication Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/hh848450.aspx) 
 
 Info on ECP:
 

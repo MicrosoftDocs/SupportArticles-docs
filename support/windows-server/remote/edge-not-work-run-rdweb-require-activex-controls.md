@@ -48,6 +48,6 @@ To add sites to your Enterprise Mode site list, see [https://technet.microsoft.c
 
 To learn how to use Enterprise mode and the Enterprise Mode Site List Manager tool in your company, see [Enterprise Mode for Internet Explorer 11](https://technet.microsoft.com/library/mt269903.aspx).
 
-For information about how to configure RD Session Host and RD Connection Broker servers to take advantage of the Web SSO feature when you start RemoteApp programs from RD Web Access, see [Introducing Web single sign-on for RemoteApp and Desktop connections](https://blogs.msdn.com/b/rds/archive/2009/08/11/introducing-web-single-sign-on-for-remoteapp-and-desktop-connections.aspx).
+For information about how to configure RD Session Host and RD Connection Broker servers to take advantage of the Web SSO feature when you start RemoteApp programs from RD Web Access, see [Introducing Web single sign-on for RemoteApp and Desktop connections](https://techcommunity.microsoft.com/t5/microsoft-security-and/introducing-web-single-sign-on-for-remoteapp-and-desktop/ba-p/246885).
 
-For information about Remote Desktop Web Access single sign-on in Windows Server 2012, see [Remote Desktop Web Access single sign-on now easier to enable in Windows Server 2012](https://blogs.msdn.com/b/rds/archive/2012/06/25/remote-desktop-web-access-single-sign-on-now-easier-to-enable-in-windows-server-2012.aspx).
+For information about Remote Desktop Web Access single sign-on in Windows Server 2012, see [Remote Desktop Web Access single sign-on now easier to enable in Windows Server 2012](https://techcommunity.microsoft.com/t5/microsoft-security-and/remote-desktop-web-access-single-sign-on-now-easier-to-enable-in/ba-p/247389).

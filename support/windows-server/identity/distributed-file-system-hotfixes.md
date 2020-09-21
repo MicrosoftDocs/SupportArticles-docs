@@ -97,14 +97,14 @@ Note. Some of the following tables contain blank cells to accommodate informatio
 
 |<br/><br/>**Date added**<br/><br/>|<br/><br/>**Knowledge Base article**<br/><br/>|<br/><br/>**Title**<br/><br/>|<br/><br/>**Why we recommend this hotfix**<br/><br/>|<br/><br/>**Hotfix type and availability**<br/><br/>|
 |---|---|---|---|---|
-|18-Nov-2014| [3000850](https://support.microsoft.com/help/3000850)|November 2014 update rollup for Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2|This hotfix contains the most current version of Robocopy.exe.<br/><br/>Robocopy can be used to [pre-seed data](https://blogs.technet.com/b/askds/archive/2008/02/12/get-out-and-push-getting-the-most-out-of-dfsr-pre-staging.aspx) for new replicated folders and is also used during the migration of Sysvol from FRS to DFSR.|To install this update rollup, you must have Windows Server 2012 R2 installed and April 2014 Update [2919355](https://support.microsoft.com/help/2919355).|
+|18-Nov-2014| [3000850](https://support.microsoft.com/help/3000850)|November 2014 update rollup for Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2|This hotfix contains the most current version of Robocopy.exe.<br/><br/>Robocopy can be used to pre-seed data for new replicated folders and is also used during the migration of Sysvol from FRS to DFSR.|To install this update rollup, you must have Windows Server 2012 R2 installed and April 2014 Update [2919355](https://support.microsoft.com/help/2919355).|
 ||||||
 
 #### Windows Server 2012
 
 |<br/><br/>**Date added**<br/><br/>|<br/><br/>**Knowledge Base article**<br/><br/>|<br/><br/>**Title**<br/><br/>|<br/><br/>**Why we recommend this hotfix**<br/><br/>|<br/><br/>**Hotfix type and availability**<br/><br/>|
 |---|---|---|---|---|
-|May 16, 2014| [2962407](https://support.microsoft.com/help/2962407)|Windows RT, Windows 8, and Windows Server 2012 update rollup: June 2014|This hotfix contains the most current version of Robocopy.exe.<br/><br/>Robocopy can be used to [pre-seed data](https://blogs.technet.com/b/askds/archive/2008/02/12/get-out-and-push-getting-the-most-out-of-dfsr-pre-staging.aspx) for new replicated folders and is also used during the migration of Sysvol from FRS to DFSR.|To install this hotfix, you must have Windows 8 or Windows Server 2012 installed.|
+|May 16, 2014| [2962407](https://support.microsoft.com/help/2962407)|Windows RT, Windows 8, and Windows Server 2012 update rollup: June 2014|This hotfix contains the most current version of Robocopy.exe.<br/><br/>Robocopy can be used to pre-seed data for new replicated folders and is also used during the migration of Sysvol from FRS to DFSR.|To install this hotfix, you must have Windows 8 or Windows Server 2012 installed.|
 ||||||
 
 #### DFS-related registry subkeys that were introduced in hotfixes or security updates

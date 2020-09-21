@@ -17,11 +17,7 @@ ms.technology: Networking
 
 This article discusses how to troubleshoot journal_wrap errors on Sysvol and DFS replica sets.
 
-This article applies to Microsoft Windows 2000. Be aware that support for Windows 2000 ended on July 13, 2010. The following Microsoft website is a starting point for planning your migration strategy from Windows 2000: 
-
-[Windows 2000 End-of-Support Solution Center](https://support.microsoft.com/win2000).
-
-For more information about the Microsoft Support Lifecycle policy, see the following Microsoft website: [Microsoft Support Lifecycle Policy](/lifecycle/) 
+This article applies to Microsoft Windows 2000. Be aware that support for Windows 2000 ended on July 13, 2010. For more information about the Microsoft Support Lifecycle policy, see the following Microsoft website: [Microsoft Support Lifecycle Policy](https://docs.microsoft.com/lifecycle)
 
 _Original product version:_ &nbsp;Windows 2000  
 _Original KB number:_ &nbsp;292438

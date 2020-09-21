@@ -190,8 +190,6 @@ Note: A speed and duplex mismatch between the NIC and switch on a domain control
     > [!NOTE]
     > You must restart the computer to activate any changes that are made to EnableTCPChimney.  
 
-    [https://support.microsoft.com/default.aspx?scid=kb;EN-US;948496](/default.aspx?scid=kb;en-us;948496)
-
 3. Enable PMTU Black Hole Detection on the Windows-based hosts that will be communicating over a WAN connection. Follow these steps:
 
     o Start Registry Editor (Regedit.exe).

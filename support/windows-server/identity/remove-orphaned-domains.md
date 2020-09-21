@@ -36,7 +36,7 @@ Typically, when the last domain controller for a domain is demoted, the administ
 
     For more information about FSMO roles, click the following article number to view the article in the Microsoft Knowledge Base:
 
-    [197132](https://support.microsoft.com/help/197132) Windows 2000 Active Directory FSMO Roles  
+    [197132](https://docs.microsoft.com/troubleshoot/windows-server/identity/fsmo-roles) Windows 2000 Active Directory FSMO Roles  
 2. Verify that all servers for the domain have been demoted.
 3. Click **Start**, point to **Programs** > **Accessories**, and then click **Command Prompt**.
 4. At the command prompt, type: *ntdsutil*.

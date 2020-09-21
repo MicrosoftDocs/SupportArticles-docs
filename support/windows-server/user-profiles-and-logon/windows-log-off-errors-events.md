@@ -154,10 +154,6 @@ In Windows 2000, you can benefit from the User Profile Hive Cleanup service if t
 
 The User Profile Hive Cleanup service monitors for users who have logged off and for whom registry hives are still loaded. When this occurs, the service determines which applications have handles that are opened to the hives and releases them. It logs the application name and what registry keys were left open. After this occurs, the system finishes unloading the profile.
 
-For more information about UPHClean, visit the following Microsoft Web sites:
-
- [The UPHClean blog](https://blogs.technet.com/uphclean)
-
 ### Event messages in the Application log
 
 When you try to log off from a computer that is running Windows Server 2003, Windows XP, Windows 2000, or Windows NT 4.0, one of the following event messages in the Application log are a symptom of a user profile error.

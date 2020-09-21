@@ -47,8 +47,6 @@ With Microsoft Windows 2000 Terminal Services licensing, if a client device is r
 
 Because this change in client access licensing requirements affects you as you move to Windows Server 2003-based terminal servers, Microsoft offered a Windows Server 2003 TS CAL for each Windows XP Professional license that you owned before April 24, 2003. This offer and the related campaign were ended on June 30, 2007.
 
-For more information about these transitional licenses, visit the following Microsoft Web site: Terminal Server Microsoft Client Access License Agreement and Cover Letter
- [https://www.microsoft.com/windowsserver2003/docs/TSLicenseLetter.pdf](https://www.microsoft.com/windowsserver2003/docs/tslicenseletter.pdf) 
 You can use one of the following methods to obtain transitional CAL licenses, depending on how you obtained the Windows XP Professional operating system licenses.
 
 #### Method 1: For Windows XP Professional licenses that were obtained through the volume licensing program

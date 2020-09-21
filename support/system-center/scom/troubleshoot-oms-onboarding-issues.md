@@ -83,7 +83,7 @@ Your browser requires access to the following addresses to run Log Analytics que
    ![Screenshot of Configure Proxy Server.](./media/troubleshoot-oms-onboarding-issues/configure-proxy-server.jpg)
 
 5. Select the check box to use a proxy server to access the Advisor Web Service.
-6. Specify the proxy address in the *<http://proxyserver:port>* format:
+6. Specify the proxy address in the `<http://proxyserver:port>` format:
 
    ![Screenshot of proxy address.](./media/troubleshoot-oms-onboarding-issues/proxy-address.jpg)
 
