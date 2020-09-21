@@ -1,5 +1,5 @@
 ---
-title: WSUS doesn't sync with a certificate error 800B0109
+title: WSUS doesn't sync and returns a certificate error 800B0109
 description: Fixes an issue in which WSUS doesn't sync with Microsoft on Windows Server 2008 R2 servers because of a certificate error.
 ms.date: 09/11/2020
 ms.prod-support-area-path:

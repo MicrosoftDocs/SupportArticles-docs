@@ -190,8 +190,6 @@
           href: not-enough-memory-resources-create-media.md
         - name: Scheduled Updates fails to unmount image
           href: scheduled-updates-fails-error-0x800700a1.md
-        - name: Sending with winhttp failed 80072f8f error
-          href: sending-with-winhttp-failed-80072f8f-error.md
         - name: Unable to manage boot images
           href: error-managing-boot-images.md
     - name: Configure OS deployment in System Center 2012 Configuration Manager
@@ -250,6 +248,8 @@
           href: no-mouse-cursor-during-osd-task-sequence.md
         - name: OSDResults doesn't display installed applications
           href: osdresults-not-display-installed-applications.md
+        - name: Sending with winhttp failed 80072f8f
+          href: sending-with-winhttp-failed-80072f8f-error.md
         - name: Slow task sequences with earlier client versions
           href: slow-task-sequence-with-earlier-client-version.md
         - name: Task sequence fails if software updates require multiple restarts
@@ -384,9 +384,9 @@
           href: windows-server-update-services-best-practices.md
         - name: WSUS client takes too long to finish an update scan
           href: wsus-client-long-time-finish-update-scan.md
-        - name: WSUS doesn't sync with a certificate error
-          href: wsus-not-sync-with-certificate-error-800B0109.md
         - name: WSUS maintenance guide
           href: wsus-maintenance-guide.md
+        - name: WSUS sync fails in Windows Server 2008 R2
+          href: wsus-not-sync-with-certificate-error-800B0109.md
         - name: WSUS synchronization fails with SoapException
           href: wsus-synchronization-fails-with-soapexception.md

@@ -73,7 +73,7 @@ If you are using an older version of Configuration Manager or standalone WSUS se
 
 1. Make sure that you have a [backup](#back-up-the-wsus-database) of the SUSDB database.
 
-2. Use SQL Management Studio to connect to the SUSDB database, in the same manner as described in the [Reindex the WSUS database section](#reindex-the-wsus-database) section.
+2. Use SQL Management Studio to connect to the SUSDB database, in the same manner as described in the [Reindex the WSUS database](#reindex-the-wsus-database) section.
 
 3. Run the following script against SUSDB, to create two custom indexes:
 
@@ -98,13 +98,11 @@ If you are using an older version of Configuration Manager or standalone WSUS se
     > Msg 1913, Level 16, State 1, Line 4  
     > The operation failed because an index or statistics with name 'nclLocalizedPropertyID' already exists on table 'dbo.tbLocalizedPropertyForRevision'.
 
-[Back to top](#perform-wsus-maintenance)
-
 ### Reindex the WSUS database
 
-Reindex the WSUS database (SUSDB) by using the [SQL script](https://gallery.technet.microsoft.com/scriptcenter/6f8cde49-5c52-4abd-9820-f1d270ddea61).
+To reindex the WSUS database (SUSDB), use the [Re-index the WSUS Database](https://gallery.technet.microsoft.com/scriptcenter/6f8cde49-5c52-4abd-9820-f1d270ddea61) T-SQL script.
 
-The steps to connect to SUSDB and perform the reindex differ, depending on whether SUSDB is running in SQL Server or Windows Internal Database (WID). To determine where SUSDB is running, check value of the `SQLServerName` registry entry on the WSUS server located at the `HKEY_LOCAL_MACHINE\SOFTWARE\Software\Microsoft\Update Services\Server\Setup` subkey.
+The steps to connect to SUSDB and perform the reindex differ, depending on whether SUSDB is running in SQL Server or Windows Internal Database (WID). To determine where SUSDB is running, check value of the `SQLServerName` registry entry on the WSUS server located at the `HKEY_LOCAL_MACHINE\Software\Microsoft\Update Services\Server\Setup` subkey.
 
 If the value contains just the server name or server\instance, SUSDB is running on a SQL Server. If the value includes the string `##SSEE` or `##WID` in it, SUSDB is running in WID, as shown:
 
@@ -150,8 +148,6 @@ To run the script in either SQL Server Management Studio or SQL Server Managemen
 
 ![Screenshot of the successful log](./media/wsus-maintenance-guide/log.jpg)
 
-[Back to top](#perform-wsus-maintenance)
-
 ### Decline superseded updates
 
 Decline superseded updates in the WSUS server to help clients scan more efficiently. Before declining updates, ensure that the superseding updates are deployed, and that superseded ones are no longer needed. Configuration Manager includes a separate cleanup, which allows it to expire superseded updates based on specified criteria. See the following articles for additional information:
@@ -172,10 +168,10 @@ If you are using Configuration Manager current branch version 1906 or a later ve
 
 When you use this option, you can see how many updates were declined by reviewing the WsyncMgr.log file after the synchronization process finishes. If you use this option, you do not need to use the script described later in this section (either by manually running it or by setting up as task to run it on a schedule).
 
-If you are using standalone WSUS servers or an older version of configuration Manager, you can [manually decline superseded updates](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn800975(v=ws.11)#declining-updates) by using the WSUS console, or you can run this [PowerShell script](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/69/06/Decline-SupersededUpdatesWithExclusionPeriod.ps1.txt) (To download the script, right-click the link and select **Save target as...**). Download the script, remove the .txt file extension, and save the file with a .PS1 extension. This script is provided as is and it should be fully tested in a lab before being used in production. Microsoft makes no guarantees regarding the use of this script in any way.
+If you are using standalone WSUS servers or an older version of configuration Manager, you can [manually decline superseded updates](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn800975(v=ws.11)#declining-updates) by using the WSUS console, or you can run this [PowerShell script](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/69/06/Decline-SupersededUpdatesWithExclusionPeriod.ps1.txt) (To download the script, right-click the link and select **Save target as...**). Download the script, remove the .txt file extension, and save the file with a .PS1 extension.
 
 > [!NOTE]
-> Always run the script with the `-SkipDecline` parameter first, to get a summary of how many superseded updates will be declined.
+> This script is provided as is and it should be fully tested in a lab before being used in production. Microsoft makes no guarantees regarding the use of this script in any way. Always run the script with the `-SkipDecline` parameter first, to get a summary of how many superseded updates will be declined.
 
 If Configuration Manager is set to **Immediately expire superseded updates** (see below), the PowerShell script can be used to decline all superseded updates. This should be done on all **autonomous** WSUS servers in the Configuration Manager/WSUS hierarchy.
 
@@ -218,8 +214,6 @@ The output and progress indicators are displayed while the script is running. No
 
 After superseded updates have been declined, for best performance, SUSDB should be reindexed again. For related information, see [Reindex the WSUS database](#reindex-the-wsus-database).
 
-[Back to top](#perform-wsus-maintenance)
-
 ### Run the WSUS Server Cleanup Wizard
 
 WSUS Server Cleanup Wizard provides options to clean up the following items:
@@ -255,8 +249,6 @@ After it reports the number of items it has removed, the cleanup finishes. If yo
 ![The WSUS Server Cleanup Wizard when finished.](./media/wsus-maintenance-guide/finish.jpg)
 
 After superseded updates have been declined, for best performance, SUSDB should be reindexed again. See the [Reindex the WSUS database](#reindex-the-wsus-database) section for related information.
-
-[Back to top](#perform-wsus-maintenance)
 
 ### Troubleshooting
 
@@ -356,8 +348,6 @@ If the update is no longer in WSUS, it can be imported from the Microsoft Update
 
 :::image type="content" source="./media/wsus-maintenance-guide/import-updates.jpg" alt-text="How to import updates in WSUS.":::
 
-[Back to top](#perform-wsus-maintenance)
-
 ### Automating WSUS maintenance
 
 > [!NOTE]
@@ -409,7 +399,7 @@ The [Weekend Scripter](https://blogs.technet.com/b/heyscriptingguy/archive/2012/
 
     ![WSUS add a line of script to start the task.](./media/wsus-maintenance-guide/add-line.jpg)
 
-3. On the **Triggers** tab, set your schedule for once a month or on any schedule you want. Again, you must ensure that you don't sync your WSUS during the entire cleanup and reindex time. This statement really is important enough for me to bold it three times in a single article.
+3. On the **Triggers** tab, set your schedule for once a month or on any schedule you want. Again, you must ensure that you don't sync your WSUS during the entire cleanup and reindex time.
 
     ![Set the WSUS Edit Trigger for the task.](./media/wsus-maintenance-guide/edit-trigger.jpg)
 
@@ -417,7 +407,7 @@ The [Weekend Scripter](https://blogs.technet.com/b/heyscriptingguy/archive/2012/
 
 5. You can also use these steps to configure the [Decline-SupersededUpdatesWithExclusionPeriod.ps1](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/69/06/Decline-SupersededUpdates.txt) script to run every 3 months. I usually set this to run before the other cleanup steps, but only after I have run it manually and ensured it completed successfully. I run at 12:00 AM on the first Sunday every 3 months.
 
-#### Setting up the SUSDB reindex for WID using SQLCMD & Task Scheduler
+#### Setting up the SUSDB reindex for WID using SQLCMD and Task Scheduler
 
 1. Save the script [here](https://gallery.technet.microsoft.com/scriptcenter/6f8cde49-5c52-4abd-9820-f1d270ddea61) as a .sql file (for example, *SUSDBMaint.sql*).
 2. Create a basic task and give it a name:
@@ -497,5 +487,3 @@ For more information about SUP maintenance in Configuration Manager, see the fol
 
 - [Software updates maintenance](/mem/configmgr/sum/deploy-use/software-updates-maintenance)
 - [Software updates maintenance in Configuration Manager](/troubleshoot/mem/configmgr/software-update-maintenance)
-
-[Back to top](#perform-wsus-maintenance)
