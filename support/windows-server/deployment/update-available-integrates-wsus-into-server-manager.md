@@ -63,7 +63,9 @@ To avoid restarting the computer, verify that the Initial Configuration Tasks, S
     - Click **Start**, right-click **Computer**, and then click **Manage**.
     - Click **Start**, point to **Administrative Tools**, and then click **Server Manager**.
     - Click the Quick Launch bar, and then click **Server Manager**.
-    > [!NOTE] If WSUS 3.0 SP1 is already installed on your computer, you do not have to complete the remaining steps.
+
+    > [!NOTE]
+    > If WSUS 3.0 SP1 is already installed on your computer, you do not have to complete the remaining steps.
 
 4. On the Server Manager home page, click **Add Roles** in the **Roles Summary** section.
 
