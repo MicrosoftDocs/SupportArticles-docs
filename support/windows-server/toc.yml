@@ -305,6 +305,8 @@
       href: ./identity/use-online-dbdump-feature-ldp-dot-exe.md
     - name: UserAccountControl property flags
       href: ./identity/useraccountcontrol-manipulate-account-properties.md
+    - name: Valid root CA certificates are untrusted
+      href: ./identity/valid-root-ca-certificates-untrusted.md
     - name: Version 3 templates don't appear in certificate web enrollment
       href: ./identity/cng-templates-not-appear-certificate-web-enrollment.md
     - name: View and set LDAP policy by using Ntdsutil
@@ -477,6 +479,8 @@
       href: ./deployment/computer-record-rejected-in-mbam.md
     - name: Create an ISO image for UEFI platforms
       href: ./deployment/create-iso-image-for-uefi-platforms.md
+    - name: Description of System File Checker (Sfc.exe)
+      href: ./deployment/system-file-checker.md
     - name: Enable logging and tracing for WDS components
       href: ./deployment/enable-logging-windows-deployment-service.md
     - name: Error 0x8007000D when you activate a machine

@@ -83,6 +83,10 @@
       href: ./deployment/desktop-wakes-up-unexpectedly-from-sleep-hibernation.md
     - name: Disk partition requirement for using Windows RE tools on a UEFI-based computer
       href: ./deployment/disk-partition-requirement-use-windows-re-tool.md
+    - name: Download and burn an ISO file from VLSC
+      href: ./deployment/iso-file-on-vlsc.md
+    - name: Dynamic link library (DLL)
+      href: ./deployment/dynamic-link-library.md
     - name: Error 87 when a Windows 10 image is applied
       href: ./deployment/dism-error-87-apply-windows-10-image.md
     - name: Error after you enter BitLocker PIN at startup 
@@ -220,6 +224,8 @@
       href: ./networking/cannot-redirect-folder-use-drive-map-letter.md
     - name: How to disable network adapter power management
       href: ./networking/power-management-on-network-adapter.md
+    - name: Internet firewalls prevent browsing and file sharing
+      href: ./networking/internet-firewalls-prevent-browsing-file-sharing.md
     - name: Mapped drive connection to network share is lost
       href: ./networking/mapped-drive-connection-to-network-share-lost.md
     - name: Mapped drives not available in elevated command prompt
@@ -244,6 +250,10 @@
       href: ./networking/slow-network-performance-remote-computer.md
     - name: System error 85 with NET USE command
       href: ./networking/system-error-85-net-use-command.md
+    - name: "TCP/IP addressing and subnetting"
+      href: ./networking/tcpip-addressing-and-subnetting.md
+    - name: Troubleshoot L2TP/IPSec VPN client connection
+      href: ./networking/l2tp-ipsec-vpn-client-connection-issue.md
     - name: Virtual WiFi/SoftAP fails to start
       href: ./networking/virtual-wifisoftap-fails-to-start.md
 
@@ -273,6 +283,8 @@
       href: ./performance/memory-leak-remote-registry-service.md
     - name: NMI_HARDWARE_FAILURE error
       href: ./performance/nmi-hardware-failure-error.md
+    - name: Read small memory dump files
+      href: ./performance/read-small-memory-dump-file.md
     - name: Running an.exe file starts different program 
       href: ./performance/running-exe-starts-another-program.md
     - name: Shuts down slowly when set to clear the virtual memory pagefile
@@ -285,7 +297,6 @@
       href: ./performance/troubleshooting-slow-file-copying-in-windows.md
     - name: Windows Experience Index shows 1.0
       href: ./performance/windows-experience-index-shows-1-dot-0.md
-
 
 - name: Printing
   items:
