@@ -124,6 +124,8 @@
           href: hash-mismatch-error-download-contentinfo-tar.md
         - name: Package distribution to a remote DP fails
           href: package-distribution-to-remote-dp-fails.md
+        - name: Windows Installer source list update fails
+          href: windows-installer-source-list-update-fails.md
     - name: Troubleshoot content distribution
       items:
         - name: Content distribution overview
@@ -224,8 +226,12 @@
       items:
         - name: A client computer steals the GUID of an Unknown Computer object
           href: unknown-computer-object-guid-stolen.md
+        - name: Active users and groups are unexpectedly deleted
+          href: active-users-groups-unexpectedly-deleted.md
         - name: An error occurred when loading the task sequence
           href: cannot-create-mdt-task-sequence.md
+        - name: An in-place upgrade task sequence doesn't continue 
+          href: in-place-upgrade-task-sequence-not-continue.md
         - name: Apply Driver Package task fails with error 80070057
           href: apply-driver-package-task-error-80070057.md
         - name: Computer hangs during an OSD task sequence in debug mode
@@ -242,6 +248,8 @@
           href: no-mouse-cursor-during-osd-task-sequence.md
         - name: OSDResults doesn't display installed applications
           href: osdresults-not-display-installed-applications.md
+        - name: Sending with winhttp failed 80072f8f
+          href: sending-with-winhttp-failed-80072f8f-error.md
         - name: Slow task sequences with earlier client versions
           href: slow-task-sequence-with-earlier-client-version.md
         - name: Task sequence fails if software updates require multiple restarts
@@ -264,6 +272,8 @@
       items:
         - name: MBAM 2.0 setup prerequisite checker fails
           href: mbam-setup-fails-with-prerequisite-check.md
+    - name: Not found error editing Update Application Catalog Tables
+      href: not-found-error-editing-maintenance-task.md
     - name: Site installation
       items:
         - name: A central administration site setup fails
@@ -304,6 +314,8 @@
           href: changes-to-built-in-collections-overwritten.md
         - name: Clients are automatically upgraded
           href: clients-automatically-upgrade.md
+        - name: Error downloading the ConfigMgr.AdminUIContent.cab file
+          href: service-connection-tool-not-download-updates.md
         - name: Site upgrade gets stuck at database update
           href: site-upgrade-blocked-in-database-update.md
         - name: Upgrade to System Center 2012 Configuration Manager SP1
@@ -372,5 +384,9 @@
           href: windows-server-update-services-best-practices.md
         - name: WSUS client takes too long to finish an update scan
           href: wsus-client-long-time-finish-update-scan.md
+        - name: WSUS maintenance guide
+          href: wsus-maintenance-guide.md
+        - name: WSUS sync fails in Windows Server 2008 R2
+          href: wsus-not-sync-with-certificate-error-800B0109.md
         - name: WSUS synchronization fails with SoapException
           href: wsus-synchronization-fails-with-soapexception.md
