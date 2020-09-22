@@ -466,7 +466,7 @@ After the deployment and the deployment policy have been created on the server, 
     > Evaluating status of the updates for the job ({99ADA372-0738-44E4-9C4D-EBA30F23E9FD}).   UpdatesHandler  
     > CompleteJob - Job ({99ADA372-0738-44E4-9C4D-EBA30F23E9FD}) removed from job manager list.    UpdatesHandler  
 
-3. At this point, the scan request is handled by Scan Agent component. Scan Agent calls WUAHandler to perform a scan and then hands the results back to Updates Handler and Updates Deployment Agent. For more information about the scan process, see (Software updates scan on clients TBD).
+3. At this point, the scan request is handled by Scan Agent component. Scan Agent calls WUAHandler to perform a scan and then hands the results back to Updates Handler and Updates Deployment Agent. For more information about the scan process, see [Software update scan on clients](track-software-update-compliance-assessment.md#software-update-scan-on-clients).
 
     After the scan is completed, Updates Deployment Agent is notified. This is noted in UpdatesDeployment.log as follows:
 
@@ -551,7 +551,7 @@ After the deployment and the deployment policy have been created on the server, 
 
     At this point, Data Transfer Service creates a BITS job to download the file and then monitors the download progress as noted in DataTransferService.log:
 
-    > DTSJob {594E9A72-43D1-48D1-A639-D18DF7D286A2} created to download from 'http://PR1SITE.CONTOSO.COM:80/SMS_DP_SMSPKG$/fbb5724a-aa0f-47f9-908a-47068fd8ad6f' to 'C:\Windows\ccmcache\1'.   DataTransferService  
+    > DTSJob {594E9A72-43D1-48D1-A639-D18DF7D286A2} created to download from '`http://PR1SITE.CONTOSO.COM:80/SMS_DP_SMSPKG$/fbb5724a-aa0f-47f9-908a-47068fd8ad6f`' to 'C:\Windows\ccmcache\1'.   DataTransferService  
     > DTSJob {594E9A72-43D1-48D1-A639-D18DF7D286A2} in state 'DownloadingManifest'.   DataTransferService  
     > CDTSJob::ProcessManifestCallback - processing manifest for job '{594E9A72-43D1-48D1-A639-D18DF7D286A2}'.  DataTransferService  
     > DTSJob {594E9A72-43D1-48D1-A639-D18DF7D286A2} in state 'RetrievedManifest'.   DataTransferService  
@@ -630,7 +630,7 @@ After the deployment and the deployment policy have been created on the server, 
 
     We also see the following in WindowsUpdate.log:
 
-    > 2014-02-09 19:15:26:130 800 ed0 Agent ** START ** Agent: Installing updates [CallerId = CcmExec]  
+    > 2014-02-09 19:15:26:130 800 ed0 Agent \** START ** Agent: Installing updates [CallerId = CcmExec]  
     > 2014-02-09 19:15:26:130 800 ed0 Agent * Updates to install = 3  
     > 2014-02-09 19:15:26:254 1048 84c Handler Starting install of CBS update FBB5724A-AA0F-47F9-908A-47068FD8AD6F  
     > 2014-02-09 19:15:29:218 1048 84c Handler Completed install of CBS update with type=3, requiresReboot=1, installerError=0, hr=0x0  
