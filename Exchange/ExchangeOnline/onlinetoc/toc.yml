@@ -27,14 +27,14 @@
       href: ../antispam/cautions-against-bypassing-spam-filters.md
     - name: User Impersonation messages are classified as phishing
       href: ../antispam/user-impersonation-messages-are-classified-as-phishing.md
-  - name: Calendaring
+  - name: Calendars
     items:
     - name: Can't remove calendar items or emails
-      href: ../calendaring/cannot-remove-items.md
+      href: ../calendars/cannot-remove-items.md
     - name: Message store has reached its maximum size
-      href: ../calendaring/store-reached-maximum-size.md
+      href: ../calendars/store-reached-maximum-size.md
     - name: No conference rooms with Room Finders
-      href: ../calendaring/conference-rooms-not-displayed.md
+      href: ../calendars/conference-rooms-not-displayed.md
   - name: Email Alias
     items:
     - name: Remove an alias from a contact
@@ -62,7 +62,7 @@
     - name: 550 5.7.64 TenantAttribution NDR
       href: ../email-delivery/tenantattribution-ndr.md
     - name: 554 5.2.0 STOREDRV.Deliver.Exception
-      href: ../mail-delivery/mapiexceptionnotfound-ndr.md
+      href: ../email-delivery/mapiexceptionnotfound-ndr.md
     - name: 554 5.6.0 Invalid message NDR
       href: ../email-delivery/invalid-message-ndr.md
     - name: Automatically forward email in transport rule
@@ -93,7 +93,7 @@
     items:
     - name: Issues for mobile devices
       href: ../mobile-devices/issues-for-mobile-devices.md
-  - name: Move or Migrate Mailboxes
+  - name: Move/Migrate Mailboxes
     items:
     - name: "\"MAPI provider is not supported\" error in Exchange Online"
       href: ../move-or-migrate-mailboxes/new-migrationendpoint-returns-error.md
@@ -164,18 +164,18 @@
   - name: User and Shared Mailboxes
     items:
     - name: Can't remove mailbox permissions
-      href: ../configure-mailboxes/cannot-remove-mailbox-permission-office-365.md
+      href: ../user-and-shared-mailboxes/cannot-remove-mailbox-permission-office-365.md
     - name: Enable or disable POP3, IMAP, MAPI, OWA or ActiveSync
-      href: ../configure-mailboxes/pop3-imap-owa-activesync-office-365.md
+      href: ../user-and-shared-mailboxes/pop3-imap-owa-activesync-office-365.md
     - name: How to access other user's mailboxes
-      href: ../shared-mailboxes/how-to-access-other-mailboxes.md
+      href: ../user-and-shared-mailboxes/how-to-access-other-mailboxes.md
     - name: How to create and manage resource mailboxes
-      href: ../configure-mailboxes/create-and-manage-resource-mailboxes.md
+      href: ../user-and-shared-mailboxes/create-and-manage-resource-mailboxes.md
     - name: Mailbox provision delays
-      href: ../configure-mailboxes/delays-provision-mailbox-sync-changes.md
+      href: ../user-and-shared-mailboxes/delays-provision-mailbox-sync-changes.md
     - name: Restore user mailboxes by using cmdlets
-      href: ../configure-mailboxes/mailbox-recovery-in-exchange-online.md
+      href: ../user-and-shared-mailboxes/mailbox-recovery-in-exchange-online.md
     - name: Sent items aren't saved
-      href: ../shared-mailboxes/sent-mail-is-not-saved.md
+      href: ../user-and-shared-mailboxes/sent-mail-is-not-saved.md
     - name: Set automatic replies
-      href: ../configure-mailboxes/set-automatic-replies.md
+      href: ../user-and-shared-mailboxes/set-automatic-replies.md
