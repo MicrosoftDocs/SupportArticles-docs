@@ -27,14 +27,14 @@
       href: ../antispam/cautions-against-bypassing-spam-filters.md
     - name: User Impersonation messages are classified as phishing
       href: ../antispam/user-impersonation-messages-are-classified-as-phishing.md
-  - name: Calendaring
+  - name: Calendars
     items:
     - name: Can't remove calendar items or emails
-      href: ../calendaring/cannot-remove-items.md
+      href: ../calendars/cannot-remove-items.md
     - name: Message store has reached its maximum size
-      href: ../calendaring/store-reached-maximum-size.md
+      href: ../calendars/store-reached-maximum-size.md
     - name: No conference rooms with Room Finders
-      href: ../calendaring/conference-rooms-not-displayed.md
+      href: ../calendars/conference-rooms-not-displayed.md
   - name: Email Alias
     items:
     - name: Remove an alias from a contact
@@ -93,7 +93,7 @@
     items:
     - name: Issues for mobile devices
       href: ../mobile-devices/issues-for-mobile-devices.md
-  - name: Move or Migrate Mailboxes
+  - name: Move/Migrate Mailboxes
     items:
     - name: "\"MAPI provider is not supported\" error in Exchange Online"
       href: ../move-or-migrate-mailboxes/new-migrationendpoint-returns-error.md
