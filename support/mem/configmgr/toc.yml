@@ -332,16 +332,12 @@
           href: bad-gateway-error-deploy-software-updates.md
     - name: Different results are shown for software updates
       href: different-software-updates-results-displayed.md
+    - name: Enable verbose logging
+      href: enable-verbose-logging.md
     - name: Errors when servicing a server group
       href: errors-servicing-server-group.md
-    - name: Software updates introduction
-      href: software-updates-introduction.md
-    - name: Software updates maintenance
-      href: software-update-maintenance.md
-    - name: State messaging
-      href: state-messaging-description.md
-    - name: Track software update deployment process
-      href: track-software-update-deployment-process.md
+    - name: How Configuration Manager configures the WSUS server
+      href: how-configure-wsus-server.md
     - name: Installation, supersedence or detection issues
       items:
         - name: Clients don't get software updates
@@ -350,6 +346,20 @@
           href: dotnet-framework-updates-fail-to-sync.md
         - name: Error 0x800f0831 installing updates
           href: error-0x800f0831-installing-update.md
+    - name: Software update point installation and configuration
+      href: software-update-point-installation-configuration.md
+    - name: Software updates introduction
+      href: software-updates-introduction.md
+    - name: Software updates maintenance
+      href: software-update-maintenance.md
+    - name: State messaging
+      href: state-messaging-description.md
+    - name: Track software update compliance assessment
+      href: track-software-update-compliance-assessment.md
+    - name: Track software update deployment process
+      href: track-software-update-deployment-process.md
+    - name: Track software update synchronization
+      href: track-software-update-synchronization.md
     - name: Troubleshoot
       items:
         - name: Troubleshoot software update deployment
