@@ -233,7 +233,7 @@ To resolve this issue, remove the OOF rules and the OOF rules templates from the
 8. Select all the text in the **Stream (Binary)** box and delete it.
 9. Re-enable automatic replies for the mailbox and check again whether the OOF feature works as expected and the symptoms do not occur.
 
-## Two different OOF messages are sent
+### Two different OOF messages are sent
 
 If two different OOF messages are sent, and a check for an additional Inbox rule doesn't reveal one, then the culprit is likely an OOF rule in the Outlook client.
 To check for and delete such a rule:
