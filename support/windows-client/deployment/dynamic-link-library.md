@@ -2,7 +2,7 @@
 title: Dynamic link library (DLL)
 description: Describes what a DLL is and the various issues that occur when you use a DLL.
 ms.date: 09/22/2020
-author: Delead-Han
+author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
 audience: itpro
