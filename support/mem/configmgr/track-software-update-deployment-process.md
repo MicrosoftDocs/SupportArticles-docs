@@ -116,7 +116,7 @@ After the updates are downloaded, SMS Provider adds each update to the specified
 > CObjectLock::UserHasLock: ********** User CONTOSO\Admin has lock for object SMS_SoftwareUpdatesPackage.PackageID="PS100001" with LockID: DCE6F1B5-1EE8-47CB-85A7-3027E51119A7 \**********     SMS Provider  
 > CObjectLock::ReleaseLock: \********** User CONTOSO\Admin has released lock for object SMS_SoftwareUpdatesPackage.PackageID="PS100001" with LockID: DCE6F1B5-1EE8-47CB-85A7-3027E51119A7 **********     SMS Provider  
 > SspPackageInst::AddContent() called for these ContentIDs - {471}    SMS Provider  
-> SspPackageInst::AddContent() called with these CIContentSourcePath - {"\\PS1SITE\SOURCE\Updates\Win7"}    SMS Provider  
+> SspPackageInst::AddContent() called with these CIContentSourcePath - {"\\\PS1SITE\SOURCE\Updates\Win7"}    SMS Provider  
 > RefreshDPs value is FALSE. DP(s) will not be updated at the end of the operation    SMS Provider  
 > These Contents will be added to Software Updates Package - PS100001 with PackageSource - \\\PS1SITE\SOURCE\Updates\Win7    SMS Provider  
 > Adding Content with ID 471, UniqueID d09e9a92-20e7-455a-a51b-aaeca7b7d7e1 and ContentSource \\\PS1SITE\SOURCE\Updates\Win7 to the Package    SMS Provider  
@@ -663,4 +663,4 @@ After the deployment and the deployment policy have been created on the server, 
 
 ## State message reporting
 
-Throughout the deployment phase, multiple state messages are raised to indicate the current state of the updates and the deployment itself. After these state messages are raised, they are processed the way that was described in the [State messaging data flow](state-messaging-description.md#state-messaging-data-flow) section.
+Throughout the deployment phase, multiple state messages are raised to indicate the current state of the updates and the deployment itself. After these state messages are raised, they are processed the way that was described in the [State messaging data flow](state-messaging-description.md#state-messagingdata-flow) section.
