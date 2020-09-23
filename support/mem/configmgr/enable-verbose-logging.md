@@ -6,11 +6,11 @@ ms.prod-support-area-path:
 ---
 # Enable verbose logging and configure SQL Server Profiler for troubleshooting
 
-In Configuration Manager, client and site server components record process information in individual log files. You can use the information in these log files to help you troubleshoot issues that might occur.
-
 _Applies to:_ &nbsp; Configuration Manager
 
-## Enable verbose and debug logging on the Configuration Manager client and management point
+In Configuration Manager, client and site server components record process information in individual log files. You can use the information in these log files to help you troubleshoot issues that might occur.
+
+## Enable verbose and debug logging on the client and management point
 
 - Verbose logging can be enabled by creating the following registry value as **REG_DWORD** with value **0x0**:
 

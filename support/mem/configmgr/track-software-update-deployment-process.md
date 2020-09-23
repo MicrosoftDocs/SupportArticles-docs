@@ -100,9 +100,9 @@ Updates are then downloaded to the specified package source directory by the Sof
 > Trying to connect to the \\\PS1SITE.CONTOSO.COM\root\sms\site_PS1 namespace on the PS1SITE.CONTOSO.COM machine.     Software Updates Patch Downloader  
 > Connected to \\\PS1SITE.CONTOSO.COM\root\sms\site_PS1     Software Updates Patch Downloader  
 > Download destination = \\\PS1SITE\SOURCE\Updates\Win7\d09e9a92-20e7-455a-a51b-aaeca7b7d7e1.1\windows6.1-kb2807986-x86.cab .       Software Updates Patch Downloader  
-> Contentsource = `http://wsus.ds.download.windowsupdate.com/msdownload/update/software/secu/2013/02/windows6.1- kb2807986-x86_83d5bb38d8c50d924f3dcd024b20fe33afbd9d14.cab`.      Software Updates Patch Downloader  
+> Contentsource = `http://wsus.ds.download.windowsupdate.com/msdownload/update/software/secu/2013/02/windows6.1-kb2807986-x86_83d5bb38d8c50d924f3dcd024b20fe33afbd9d14.cab`.      Software Updates Patch Downloader  
 > Downloading content for ContentID = 471, FileName = windows6.1-kb2807986-x86.cab.     Software Updates Patch Downloader  
-> `http://wsus.ds.download.windowsupdate.com/msdownload/update/software/secu/2013/02/windows6.1-kb2807986-x86_83d5bb38d8c50d924f3dcd024b20fe33afbd9d14.cab` to C:\Users\Admin\AppData\Local\Temp\2\CABBA79.tmp returns 0       Software Updates Patch Downloader  
+> Download `http://wsus.ds.download.windowsupdate.com/msdownload/update/software/secu/2013/02/windows6.1-kb2807986-x86_83d5bb38d8c50d924f3dcd024b20fe33afbd9d14.cab` to C:\Users\Admin\AppData\Local\Temp\2\CABBA79.tmp returns 0       Software Updates Patch Downloader  
 > Successfully moved C:\Users\Admin\AppData\Local\Temp\2\CABBA79.tmp to \\\PS1SITE\SOURCE\Updates\Win7\d09e9a92-20e7- 455a-a51b-aaeca7b7d7e1.1\windows6.1-kb2807986-x86.cab       Software Updates Patch Downloader  
 > Renaming \\\PS1SITE\SOURCE\Updates\Win7\d09e9a92-20e7-455a-a51b-aaeca7b7d7e1.1 to \\\PS1SITE\SOURCE\Updates\Win7\d09e9a92-20e7-455a-a51b-aaeca7b7d7e1      Software Updates Patch Downloader  
 > Successfully moved \\\PS1SITE\SOURCE\Updates\Win7\d09e9a92-20e7-455a-a51b-aaeca7b7d7e1.1 to \\\PS1SITE\SOURCE\Updates\Win7\d09e9a92-20e7-455a-a51b-aaeca7b7d7e1      Software Updates Patch Downloader
@@ -294,7 +294,7 @@ RuleEngine.log shows rule processing and query to run to find updates that matc
 Download is initiated for actionable updates:
 
 > Enforcing Content Download Action SMS_RULE_ENGINE  
-> Download Rule Action XML is: \<ContentActionXML xmlns:xsi="`http://www.w3.org/2001/XMLSchema-instance`" xmlns:xsd="`http://www.w3.org/2001/XMLSchema`"> \<PackageID>CS100006\</PackageID>\<ContentLocales>\<Locale>Locale:9\</Locale >\<Locale>Locale:0\</Locale>\</ContentLocales>\<ContentSources>\<Source Name="Internet" Order="1"/>\<Source Name="WSUS" Order="2"/>\<Source Name="UNC" Order="3" Location=""/>\</ContentSources>\</ContentActionXML>        SMS_RULE_ENGINE  
+> Download Rule Action XML is: \<ContentActionXML xmlns:xsi="`http://www.w3.org/2001/XMLSchema-instance`" xmlns:xsd="`http://www.w3.org/2001/XMLSchema`">\<PackageID>CS100006\</PackageID>\<ContentLocales>\<Locale>Locale:9\</Locale >\<Locale>Locale:0\</Locale>\</ContentLocales>\<ContentSources>\<Source Name="Internet" Order="1"/>\<Source Name="WSUS" Order="2"/>\<Source Name="UNC" Order="3" Location=""/>\</ContentSources>\</ContentActionXML>        SMS_RULE_ENGINE  
 > Criteria Filter Result XML is: \<EvaluationResultXML xmlns:xsi="`http://www.w3.org/2001/XMLSchema-instance`" xmlns:xsd="`http://www.w3.org/2001/XMLSchema`">  
 \<DefinitionUpdates/>\<CI_IDs>\<CI_ID>4514\</CI_ID>\</CI_IDs> \</EvaluationResultXML>    SMS_RULE_ENGINE  
 > 1 update(s) need to be downloaded in package "CS100006" (\\\CS1SITE\SOURCE\Updates\EPDefinitions)    SMS_RULE_ENGINE  
@@ -324,7 +324,7 @@ In SMSDBMON.log:
 In ObjReplMgr.log:
 
 > File notification triggered.   SMS_OBJECT_REPLICATION_MANAGER  
-> \***** Processing AuthorizationList ScopeId_FC8FCC38-4BB1-4245-92F5-9CE841775019/AuthList_4d3480d5-de12-4864-b872-187479e2b381 *****        SMS_OBJECT_REPLICATION_MANAGER
+> \***** Processing AuthorizationList ScopeId_FC8FCC38-4BB1-4245-92F5-9CE841775019/AuthList_4d3480d5-de12-4864-b872-187479e2b381 *****        SMS_OBJECT_REPLICATION_MANAGER  
 Deleting notification file E:\ConfigMgr\inboxes\objmgr.box\16777275.CIN       SMS_OBJECT_REPLICATION_MANAGER  
 > Added CI with CI_ID=4514 to the deployment       SMS_OBJECT_REPLICATION_MANAGER  
 > Created file trigger for E:\ConfigMgr\inboxes\objmgr.box\16777228.CIA             SMS_OBJECT_REPLICATION_MANAGER  
@@ -663,4 +663,4 @@ After the deployment and the deployment policy have been created on the server, 
 
 ## State message reporting
 
-Throughout the deployment phase, multiple state messages are raised to indicate the current state of the updates and the deployment itself. After these state messages are raised, they are processed the way that was described in the [State messaging data flow](state-messaging-description.md#state-messagingdata-flow) section.
+Throughout the deployment phase, multiple state messages are raised to indicate the current state of the updates and the deployment itself. After these state messages are raised, they are processed in the way that's described in [State messaging data flow](state-messaging-description.md#state-messagingdata-flow).

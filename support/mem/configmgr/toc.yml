@@ -336,8 +336,6 @@
       href: enable-verbose-logging.md
     - name: Errors when servicing a server group
       href: errors-servicing-server-group.md
-    - name: How Configuration Manager configures the WSUS server
-      href: how-configure-wsus-server.md
     - name: Installation, supersedence or detection issues
       items:
         - name: Clients don't get software updates
@@ -356,7 +354,7 @@
       href: state-messaging-description.md
     - name: Track software update compliance assessment
       href: track-software-update-compliance-assessment.md
-    - name: Track software update deployment process
+    - name: Track software update deployment
       href: track-software-update-deployment-process.md
     - name: Track software update synchronization
       href: track-software-update-synchronization.md
@@ -400,3 +398,5 @@
           href: wsus-not-sync-with-certificate-error-800B0109.md
         - name: WSUS synchronization fails with SoapException
           href: wsus-synchronization-fails-with-soapexception.md
+    - name: WSUS Configuration Manager
+      href: wsus-configuration-manager.md

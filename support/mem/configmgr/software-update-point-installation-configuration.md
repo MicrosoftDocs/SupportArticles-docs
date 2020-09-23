@@ -6,9 +6,9 @@ ms.prod-support-area-path:
 ---
 # Software update point installation and configuration
 
-The software update point is required on the central administration site and on the primary sites to enable software updates compliance assessment and to deploy software updates to clients.
-
 _Applies to:_ &nbsp; Configuration Manager
+
+The software update point is required on the central administration site and on the primary sites to enable software updates compliance assessment and to deploy software updates to clients.
 
 ## Track software update point installation
 
@@ -110,7 +110,7 @@ For more information about Netsh commands, see [Netsh Commands for Windows Hype
 1. In the Configuration Manager console, go to **Administration** > **Site Configuration**  > **Servers and Site System Roles**, select *\<SiteSystemName>* on the right pane.
 2. In the bottom pane, right-click **Software Update Point**, and then click **Properties**.
 3. Select the **Proxy and Account Settings** tab, and select **Use a proxy server when synchronizing software updates**.
-4. (Optional) To configure automatic deployment rule (ADR) to use a proxy server, select the **Proxy And Account Settings** tab, and then select **Use a proxy server when downloading content by using automatic deployment rules**.
+4. (Optional) To configure automatic deployment rules (ADRs) to use a proxy server, select the **Proxy And Account Settings** tab, and then select **Use a proxy server when downloading content by using automatic deployment rules**.
 
 ### Verify proxy settings in the WSUS console
 

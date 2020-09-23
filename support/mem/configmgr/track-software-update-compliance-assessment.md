@@ -6,9 +6,9 @@ ms.prod-support-area-path:
 ---
 # Track software update compliance assessment
 
-Before you can deploy software updates to clients, the clients must run a software updates compliance scan. We recommend that you allow enough time for clients to complete the scan and report compliance results so that you can review the compliance results and deploy only the updates that are required on the clients.
-
 _Applies to:_ &nbsp; Configuration Manager
+
+Before you can deploy software updates to clients, the clients must run a software updates compliance scan. We recommend that you allow enough time for clients to complete the scan and report compliance results so that you can review the compliance results and deploy only the updates that are required on the clients.
 
 When the software update point (SUP) is installed and synchronized, a site-wide machine policy is created that informs client computers that Configuration Manager Software Updates was enabled for the site. When a client receives the machine policy, a compliance assessment scan is scheduled to start randomly within the next two hours. When the scan is started, a Software Updates Client Agent process clears the scan history, submits a request to find the Windows Server Update Services (WSUS) server that should be used for the scan, and updates the local Group Policy with the WSUS location.
 
@@ -189,7 +189,7 @@ Scan Agent now has the policy and the update source location with the appropriat
 > ScanJob({4CD06388-D509-46E4-8C00-75909EDD9EE8}): CScanJob::OnLocationUpdate- Received Location=`http://PS1SITE.CONTOSO.COM:8530`, Version=38     ScanAgent  
 > ScanJob({4CD06388-D509-46E4-8C00-75909EDD9EE8}): CScanJob::Execute- Adding UpdateSource={C2D17964-BBDD-4339-B9F3-12D7205B39CC}, ContentType=2, ContentLocation=`http://PS1SITE.CONTOSO.COM:8530`, ContentVersion=38      ScanAgent
 
-Scan Agent notifies WUAHandler to add the update source. WUAHandler adds the update source to the registry and initiates a Group Policy refresh (if the client is in domain) to see whether Group Policy overrides the update server that we just added. The following are logged in WUAHandler.log showing a new update source being added:
+Scan Agent notifies WUAHandler to add the update source. WUAHandler adds the update source to the registry and initiates a Group Policy refresh (if the client is in domain) to see whether Group Policy overrides the update server that we just added. The following are logged in WUAHandler.log on a new client showing a new update source being added:
 
 > Its a WSUS Update Source type ({C2D17964-BBDD-4339-B9F3-12D7205B39CC}), adding it.     WUAHandler  
 > Its a completely new WSUS Update Source.    WUAHandler  
@@ -339,9 +339,10 @@ In StateMessage.log:
 \<Report>\<ReportHeader>\<Identification>\<Machine>\<ClientInstalled>1\</ClientInstalled>\<ClientType>1\</ClientType>\<ClientID>GUID: A1006D0E-CF56-41D1-A006-6330EFC39381\</ClientID>\<ClientVersion>5.00.7958.1000\</ClientVersion>\<NetBIOSName>PS1WIN7X64\</NetBIOSName>\<CodePage>437\</CodePage>\<SystemDefaultLCID>1033\</SystemDefaultLCID>\<Priority>5\</Priority>\</Machine>\</Identification>\<ReportDetails>\<ReportContent>State Message Data\</ReportContent>\<ReportType>Full\</ReportType>\<Date>20140120194656.903000+000\</Date>\<Version>1.0\</Version>\<Format>1.0\</Format>\</ReportDetails>\</ReportHeader>\<ReportBody>\<StateMessage MessageTime="20140120171855.573000+000" SerialNumber="232">\<Topic ID="505fda07-b4f3-45fb-83d9-8642554e2773" Type="500" IDType="3" User="" UserSID=""/>\<State ID="2" Criticality="0"/>\<UserParameters Flags="0" Count="1">\<Param>200\</Param>\</UserParameters>\</StateMessage>\</ReportBody>\</Report>    StateMessage  
 Successfully forwarded State Messages to the MP       StateMessage
 
-### Step 2: CCM Messaging sends a message containing the state message XML Body to the management point
+### Step 2: CCM Messaging sends a message containing the state message XML body to the management point
 
-CCM Messaging sends a message to the `MP_RelayEndpoint` queue successfully. This message doesn't have a reply, unlike the one we noticed earlier in the WSUS Location Request (**#WSUS Server Location**) section where the message with the Location Request received a reply.
+CCM Messaging sends a message to the `MP_RelayEndpoint` queue successfully. This message doesn't have a reply, unlike the one we noticed earlier in the [WSUS Location Request](#wsus-server-location) section where the message with the Location Request received a reply.
+
 In CcmMessaging.log:
 
 > Sending async message '{95F79010-D0EB-49A6-8A1E-3897883105F2}' to outgoing queue 'mp:mp_relayendpoint'     CcmMessaging  
@@ -391,6 +392,7 @@ The XML body looks identical to what's logged in StateMessage.log on the client.
 ### Step 4: MP File Dispatch Manager sends the SMX file to the site server (only when the management point isn't colocated on-site server)
 
 When the management point is remote to the site server, after the file arrives in outboxes\StateMsg.box, MP File Dispatch Manager (MPFDM) is responsible for moving these files to the StateMsg.box inbox on the site server. When the management point is colocated on the site server, these files are moved directly to the appropriate Inbox folder, so MPFDM isn't involved.
+
 In MPFDM.log on a remote management point:
 
 > Moved file C:\SMS\MP\OUTBOXES\statemsg.box\TAZGYTSJ.SMX to \\\PS1SITE.CONTOSO.COM\SMS_PS1\inboxes\auth\statesys.box\incoming\TAZGYTSJ.SMX SMS_MP_FILE_DISPATCH_MANAGER
@@ -399,7 +401,7 @@ For MPFDM to move the files to the appropriate inbox, the remote management poin
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Inbox Source`
 
-### Step 5: StateSys component on-site server processes the state message to the database
+### Step 5: StateSys component on the site server processes the state message to the database
 
 After the file arrives in \inboxes\auth\StateSys.box on the site server, the State System Manager (StateSys) component wakes up and processes the SMX file(s).
 
@@ -457,7 +459,9 @@ Summarization tasks specified to software updates are:
 
 - **SUM Update Group Status Summarizer**  
 
-    Summarizes status of Update Groups. This task runs every hour by default. It can be initiated manually for a specific Update Group in Configuration Manager console > **Software Library** > **Software Updates** > **Software Update Groups**, right-click the update group, and then click **Run Summarization**. You can also change the schedule of this task by right-clicking **Software Update Groups** or by selecting **Schedule Summarization** in the ribbon.
+    Summarizes status of Update Groups. This task runs every hour by default. It can be initiated manually for a specific Update Group in Configuration Manager console > **Software Library** > **Software Updates** > **Software Update Groups**, right-click the update group, and then click **Run Summarization**.
+
+    You can also change the schedule of this task by right-clicking **Software Update Groups** or by selecting **Schedule Summarization** in the ribbon.
 
 - **SUM Update Status Summarizer**  
 
@@ -476,5 +480,4 @@ Summarization tasks specified to software updates are:
 In System Center 2012 Configuration Manager SP1 and later versions, a site can have multiple SUPs. This provides fault tolerance for situations when a SUP becomes unavailable. For more information about SUPs' failover and switching, see the following articles:
 
 - [Software Update Points in Configuration Manager Service Pack 1](https://techcommunity.microsoft.com/t5/Configuration-Manager-Archive/Software-Update-Points-in-Configuration-Manager-Service-Pack-1/ba-p/273218)
-- [Software Update Point Switching](/previous-versions/system-center/system-center-2012-R2/gg712696(v=technet.10)#software-update-point-switching)
 - [Software update point switching](/mem/configmgr/sum/plan-design/plan-for-software-updates#BKMK_SUPSwitching)

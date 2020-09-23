@@ -6,9 +6,9 @@ ms.prod-support-area-path:
 ---
 # WSUS Configuration Manager configures the WSUS server
 
-Windows Server Update Services (WSUS) Configuration Manager connects to the WSUS server once every hour and configures the WSUS server with the settings that are defined for the software update point in the Configuration Manager console.
-
 _Original product version:_ &nbsp; Configuration Manager
+
+Windows Server Update Services (WSUS) Configuration Manager connects to the WSUS server once every hour and configures the WSUS server with the settings that are defined for the software update point in the Configuration Manager console.
 
 ## How it works
 
