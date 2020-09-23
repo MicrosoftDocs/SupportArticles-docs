@@ -334,30 +334,44 @@
           href: clients-not-get-software-updates.md
         - name: Different results are shown for software updates
           href: different-software-updates-results-displayed.md
-        - name: Error 0x800f0831 installing updates
-          href: error-0x800f0831-installing-update.md
         - name: Errors when servicing a server group
           href: errors-servicing-server-group.md
+        - name: Error 0x800f0831 installing updates
+          href: error-0x800f0831-installing-update.md
         - name: .NET Framework 4.7.2 updates fail to sync
           href: dotnet-framework-updates-fail-to-sync.md
     - name: State messaging
       href: state-messaging-description.md
-    - name: Understand and troubleshoot software update management
+    - name: Understand software update management
       items:
         - name: Software updates introduction
           href: software-updates-introduction.md
-        - name: Track software update deployment process
+        - name: Software updates maintenance
+          href: software-update-maintenance.md
+        - name: Software update point installation and configuration
+          href: software-update-point-installation-configuration.md
+        - name: WSUS Configuration Manager
+          href: wsus-configuration-manager.md
+        - name: Track software update synchronization
+          href: track-software-update-synchronization.md
+        - name: Track software update compliance assessment
+          href: track-software-update-compliance-assessment.md
+        - name: Track software update deployment
           href: track-software-update-deployment-process.md
         - name: Software updates maintenance
           href: software-update-maintenance.md
-        - name: Troubleshoot software update deployment
-          href: troubleshoot-software-update-deployments.md
+    - name: Troubleshoot software update management
+      items:
+        - name: Enable verbose logging
+          href: enable-verbose-logging.md
         - name: Troubleshoot software update management
           href: troubleshoot-software-update-management.md
-        - name: Troubleshoot software update scan failures
-          href: troubleshoot-software-update-scan-failures.md
         - name: Troubleshoot software update synchronization
           href: troubleshoot-software-update-synchronization.md
+        - name: Troubleshoot software update scan failures
+          href: troubleshoot-software-update-scan-failures.md
+        - name: Troubleshoot software update deployment
+          href: troubleshoot-software-update-deployments.md
     - name: Windows Server Update Services (WSUS)
       items:
         - name: Deploy Windows Defender definition updates
