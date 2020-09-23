@@ -485,6 +485,8 @@
       href: ../migration/public-folders-not-replicate.md
   - name: Public Folders
     items:
+    - name: How to disable conflict message
+      href: ../public-folders/disable-conflict-message.md
     - name: No active public folder mailboxes were found
       href: ../public-folders/migrationbatch-fails-no-public-folder-mailboxes.md
     - name: Public folder migration stops at 95%
