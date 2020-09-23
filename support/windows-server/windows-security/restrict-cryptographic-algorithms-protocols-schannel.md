@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.prod: w10
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Certificates and public key infrastructure (PKI)
-ms.technology: WindowsSecurity
+ms.technology: windows
 ---
 # Restrict the use of certain cryptographic algorithms and protocols in Schannel.dll
 
@@ -32,7 +32,7 @@ The following cryptographic service providers (CSPs) that are included with Wind
 
 Microsoft TLS/SSL Security Provider, the Schannel.dll file, uses the CSPs that are listed here to conduct secure communications over SSL or TLS in its support for Internet Explorer and Internet Information Services (IIS).
 
-You can change the Schannel.dll file to support Cipher Suite 1 and 2. However, the program must also support Cipher Suite 1 and 2. Cipher Suite 1 and 2 are not supported in IIS 4.0 and 5.0.
+You can change the Schannel.dll file to support Cipher Suite 1 and 2. However, the program must also support Cipher Suite 1 and 2. Cipher Suites 1 and 2 are not supported in IIS 4.0 and 5.0.
 
 This article contains the necessary information to configure the TLS/SSL Security Provider for Windows NT 4.0 Service Pack 6 and later versions. You can use the Windows registry to control the use of specific SSL 3.0 or TLS 1.0 cipher suites with respect to the cryptographic algorithms that are supported by the Base Cryptographic Provider or the Enhanced Cryptographic Provider.
 
@@ -116,7 +116,7 @@ Create the SCHANNEL Ciphers subkey in the format: `SCHANNEL\(VALUE)\(VALUE/VALUE
 
   To allow this cipher algorithm, change the DWORD value data of the **Enabled** value to **0xffffffff**. Or, change the DWORD value data to **0x0**. If you do not configure the **Enabled** value, the default is enabled. This registry key does not apply to an exportable server that does not have an SGC certificate.
 
-  Disabling this algorithm effectively disallows the following:
+  Disabling this algorithm effectively disallows the following values:
 
 - SSL_RSA_WITH_RC4_128_MD5
 - SSL_RSA_WITH_RC4_128_SHA
@@ -131,7 +131,7 @@ Create the SCHANNEL Ciphers subkey in the format: `SCHANNEL\(VALUE)\(VALUE/VALUE
 
   To allow this cipher algorithm, change the DWORD value data of the **Enabled** value to **0xffffffff**. Or, change the DWORD data to **0x0**. If you do not configure the **Enabled** value, the default is enabled.
 
-  Disabling this algorithm effectively disallows the following:
+  Disabling this algorithm effectively disallows the following values:
 
 - SSL_RSA_WITH_3DES_EDE_CBC_SHA
 - SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA
@@ -165,7 +165,7 @@ Create the SCHANNEL Ciphers subkey in the format: `SCHANNEL\(VALUE)\(VALUE/VALUE
 
   To allow this cipher algorithm, change the DWORD value data of the Enabled value to **0xffffffff**. Otherwise, change the DWORD value data to **0x0**. If you do not configure the **Enabled** value, the default is enabled.
 
-  Disabling this algorithm effectively disallows the following:
+  Disabling this algorithm effectively disallows the following value:
 
 - TLS_RSA_EXPORT1024_WITH_RC4_56_SHA
 
@@ -185,7 +185,7 @@ Create the SCHANNEL Ciphers subkey in the format: `SCHANNEL\(VALUE)\(VALUE/VALUE
 
   To allow this cipher algorithm, change the DWORD value data of the **Enabled** value to **0xffffffff**. Otherwise, change the DWORD value data to **0x0**. If you do not configure the **Enabled** value, the default is enabled.
 
-  Disabling this algorithm effectively disallows the following:
+  Disabling this algorithm effectively disallows the following values:
 
 - SSL_RSA_WITH_DES_CBC_SHA
 - TLS_RSA_WITH_DES_CBC_SHA
@@ -198,7 +198,7 @@ Create the SCHANNEL Ciphers subkey in the format: `SCHANNEL\(VALUE)\(VALUE/VALUE
 
   To allow this cipher algorithm, change the DWORD value data of the **Enabled** value to **0xffffffff**. Otherwise, change the DWORD value data to **0x0**. If you do not configure the **Enabled** value, the default is enabled.
 
-  Disabling this algorithm effectively disallows the following:
+  Disabling this algorithm effectively disallows the following values:
 
 - SSL_RSA_EXPORT_WITH_RC4_40_MD5
 - TLS_RSA_EXPORT_WITH_RC4_40_MD5
@@ -211,7 +211,7 @@ Create the SCHANNEL Ciphers subkey in the format: `SCHANNEL\(VALUE)\(VALUE/VALUE
 
   To allow this cipher algorithm, change the DWORD value data of the **Enabled** value to **0xffffffff**. Otherwise, change the DWORD value data to **0x0**. If you do not configure the **Enabled** value, the default is enabled.
 
-  Disabling this algorithm effectively disallows the following:
+  Disabling this algorithm effectively disallows the following values:
 
 - SSL_RSA_EXPORT_WITH_RC2_CBC_40_MD5
 - TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5
@@ -236,7 +236,7 @@ Ciphers subkey: `SCHANNEL/Hashes`
 
   To allow this hashing algorithm, change the DWORD value data of the **Enabled** value to the default value **0xffffffff**. Otherwise, change the DWORD value data to **0x0**.
 
-  Disabling this algorithm effectively disallows the following:
+  Disabling this algorithm effectively disallows the following values:
 
 - SSL_RSA_EXPORT_WITH_RC4_40_MD5
 - SSL_RSA_WITH_RC4_128_MD5
@@ -253,7 +253,7 @@ Ciphers subkey: `SCHANNEL/Hashes`
 
   To allow this hashing algorithm, change the DWORD value data of the **Enabled** value to the default value **0xffffffff**. Otherwise, change the DWORD value data to **0x0**.
 
-  Disabling this algorithm effectively disallows the following:
+  Disabling this algorithm effectively disallows the following values:
 
 - SSL_RSA_WITH_RC4_128_SHA
 - SSL_RSA_WITH_DES_CBC_SHA
