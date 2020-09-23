@@ -192,7 +192,7 @@ To work around this problem and try to save your work before you troubleshoot, u
 2. Save the Excel workbook by using a unique file name.
 
 <a id="option2">
- 
+
 ## Option 2: Move the original worksheets to a new workbook
 
 </a>
@@ -287,7 +287,7 @@ If the workbook does not save (or save again) after you restart Windows in safe 
  
 ### Causes
 
-#### Third-party add-in
+#### Third-party add-ins
  
 If the Excel file is not saved when you run Excel in Windows safe mode, the issue may be caused by a third-party add-in or by a file that is in one of the Excel startup locations. By default, these files are loaded when you start Excel.
 
