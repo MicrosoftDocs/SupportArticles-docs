@@ -3,6 +3,7 @@ title: Error 403 when you use ASP to upload large file
 description: This article provides resolutions for the error 403 that occurs when you use an Active Server Pages request to upload a large file to a computer where Internet Information Services (IIS) 8.0 or later version is installed.
 ms.date: 08/06/2020
 ms.prod-support-area-path: Health, Diagnostic, and Performance Features
+ms.prod: iis
 ---
 # Error 403 when you upload a large file by using ASP request in Internet Information Services  
 
@@ -18,17 +19,17 @@ _Original KB number:_ &nbsp; 327659
 
 When you use an Active Server Pages (ASP) request to upload a large file to a computer where Internet Information Services (IIS) 8.0 or later version is installed, the upload may fail. You may also receive an error 403 response or an error message that is similar to one of the following:
 
-Error message 1
+- Error message 1
 
-> Request object error 'ASP 0104 : 80004005' Operation not Allowed
+    > Request object error 'ASP 0104 : 80004005' Operation not Allowed
 
-Error message 2
+- Error message 2
 
-> 007~ASP 0104~Operation not Allowed
+    > 007~ASP 0104~Operation not Allowed
 
-When you post lots of form data to an ASP page, you may receive an error message that is similar to the following:
+- When you post lots of form data to an ASP page, you may receive an error message that is similar to the following:
 
-> Error '80020009' Exception occurred
+    > Error '80020009' Exception occurred
 
 Additionally, the file upload may fail when you use the `Response.binaryWrite` method.
 

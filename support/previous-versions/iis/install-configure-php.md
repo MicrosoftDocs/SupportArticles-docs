@@ -4,12 +4,13 @@ description: This article provides the steps to install and configure IIS 8 and 
 ms.date: 08/06/2020
 ms.prod-support-area-path: WWW Administration and Management
 ms.topic: how-to
+ms.prod: iis
 ---
 # Install and configure PHP on IIS 8 in Windows 8
 
 This article describes how to install and configure IIS 8.0 and PHP on Windows 8.
 
-_Original product version:_ &nbsp; Microsoft Internet Information Services 8.0, Windows 8, Windows 8 Pro  
+_Original product version:_ &nbsp; Internet Information Services 8.0, Windows 8, Windows 8 Pro  
 _Original KB number:_ &nbsp; 2819022
 
 ## Problem description

@@ -4,12 +4,13 @@ description: This article provides resolutions for the error that occurs when yo
 ms.date: 08/07/2020
 ms.prod-support-area-path: Site Behavior and Performance
 ms.reviewer: kerryre
+ms.prod: iis
 ---
 # Server Object Error ASP 0177:80040154
 
 This article helps resolve the error that occurs when you attempt to run an Active Server Pages that use `Server.CreateObject` to instantiate an ActiveX component.
 
-_Original product version:_ &nbsp; Microsoft Active Server Pages
+_Original product version:_ &nbsp; Microsoft Active Server Pages  
 _Original KB number:_ &nbsp; 175804
 
 ## Symptoms
@@ -102,10 +103,6 @@ HKEY_CLASSES_ROOT
 
 Make sure the database files and the folders containing the database files provide **Read**, **Write**, and **Execute** permissions for the authenticated user or group.
 
-## Status
-
-This behavior is by design.
-
 ## General trouble shooting steps
 
 1. Check to see if ASP is installed correctly by running the ADO using `Server.CreateObject` sample in the **Active Server Pages Roadmap\More Samples folder**.
@@ -116,7 +113,7 @@ This behavior is by design.
 
 ## Quick permissions check steps
 
-1. Force Anonymous by clearing Basic and NT Challenge and Response (NTCR) in IIS Service Manager
+1. Force Anonymous by clearing Basic and NT Challenge and Response (NTCR) in IIS Service Manager.
 2. Temporarily add the `IUSR_<machine>` to the Administrators group to see if it makes a difference. If it does, the problem is a permissions problem.
 3. Turn on **NT Auditing** (as noted below) and try again.
 
@@ -133,26 +130,26 @@ To enable auditing, open **User Manager** and select **Audit** from the **Polici
 
 NOTE 1: Jet uses the `SYSTEM TEMP` and `TMP` environment variables to specify the location of temporary files that are created during JET operations. By default these environment variables are defined for users and are not system-wide settings. To set these up, you can do one of the following two operations.
 
-Option 1. In the *autoexec.bat*, add something similar to the following two lines:
-
-```dos
-Set TEMP=C:\Temp
-Set TMP =C:\Temp
-```
-
-Option 2. Right-click **My Computer**:
-
-1. Click **Properties** and select the **Environment TAB**.
-2. Click an entry in the **System Variables List** box (the one on top).
-3. In the **Variable and Value Edit** control, type the following:
+- Option 1. In the *autoexec.bat*, add something similar to the following two lines:
 
     ```dos
-    Variable = Temp
-    Value = C:\Temp
+    Set TEMP=C:\Temp
+    Set TMP =C:\Temp
     ```
 
-4. Click **Set**. You will now see `TEMP` has been added to the list of system variable.
-5. Repeat the process for the `TMP` variable.
-6. Reboot the machine for changes to take effect. In addition, it has been found that `IUSR_<machine>` needs **CHANGE** permission to the WinNT directory to create temporary files when using the Access database driver.
+- Option 2. Right-click **My Computer**:
+
+    1. Click **Properties** and select the **Environment TAB**.
+    2. Click an entry in the **System Variables List** box (the one on top).
+    3. In the **Variable and Value Edit** control, type the following:
+
+        ```dos
+        Variable = Temp
+        Value = C:\Temp
+        ```
+
+    4. Click **Set**. You will now see `TEMP` has been added to the list of system variable.
+    5. Repeat the process for the `TMP` variable.
+    6. Reboot the machine for changes to take effect. In addition, it has been found that `IUSR_<machine>` needs **CHANGE** permission to the WinNT directory to create temporary files when using the Access database driver.
 
 NOTE 2: By default ASP creates single-threaded apartment clients, which means that only single-threaded apartment inproc servers are given the desired security context passed on by IIS. All other threading models are run in the SYSTEM context. This means, a DLL using the Single Threading Model will start up in the Security Context of SYSTEM, and not as intended as the Authenticated User.

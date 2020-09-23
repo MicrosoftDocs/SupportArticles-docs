@@ -5,12 +5,13 @@ ms.date: 08/10/2020
 ms.prod-support-area-path: Active Server Pages
 ms.reviewer: robmcm
 ms.topic: how-to
+ms.prod: iis
 ---
 # Use ASP to force SSL for specific pages  
 
 This article describes how to use Active Server Pages (ASP) to force Secure Sockets Layer (SSL) for specific pages without making changes in the MMC.
 
-_Original product version:_ &nbsp; Microsoft Active Server Pages
+_Original product version:_ &nbsp; Microsoft Active Server Pages  
 _Original KB number:_ &nbsp; 239875
 
 ## Summary
