@@ -228,6 +228,7 @@
     - name: Can't Verify Subscription in Office Mobile
       href: ../licensing/subscription-issue-in-office-mobile.md
     - name: Determine the license type of your Microsoft Office product
+      href: ../licensing/determine-office-license-type.md
     - name: Disabled Office 365 Sway tile continues to appear in App Launcher
       href: ../licensing/disabled-sway-tile-appear.md
     - name: Download office web apps server
