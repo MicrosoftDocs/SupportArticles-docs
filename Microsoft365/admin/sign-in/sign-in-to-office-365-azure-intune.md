@@ -101,4 +101,4 @@ Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or 
 
 - **If you are an admin for a Microsoft Business Subscription** who requires assisted technical support, see [Ways to contact support for business products - Admin Help](https://docs.microsoft.com/microsoft-365/admin/contact-support-for-business-products?view=o365-worldwide&tabs=phone).
 
-- **For all others**, [contact Microsoft Support](https://support.microsoft.com/help/contactus).
+- **For all others**, [contact Microsoft Support](https://support.microsoft.com/help/4027136/office-contact-microsoft-office-support).
