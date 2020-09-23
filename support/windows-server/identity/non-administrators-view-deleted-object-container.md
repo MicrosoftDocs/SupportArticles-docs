@@ -37,9 +37,7 @@ For Windows Server 2008 and newer the tool is included in the operating system.
 
 For Windows 2000 and Server 2003 you can get this done by obtaining and installing the ADAM Administration Tools, follow these steps:
 
-1. Download the ADAM retail package. The following file is available for download from the Microsoft Download Center:  
-
-    [Download the ADAMretailX86.exe package now.](https://www.microsoft.com/download/details.aspx?familyid=9688f8b9-1034-4ef6-a3e5-2a2a57b5c8e4&displaylang=en)
+1. Download the ADAM retail package.
 
     For more information about how to download Microsoft Support files, click the following article number to view the article in the Microsoft Knowledge Base: [119591](https://support.microsoft.com/help/119591) How to obtain Microsoft support files from online services
     Microsoft scanned this file for viruses. Microsoft used the most current virus-detection software that was available on the date that the file was posted. The file is stored on security-enhanced servers that help prevent any unauthorized changes to the file.  
@@ -49,13 +47,10 @@ For Windows 2000 and Server 2003 you can get this done by obtaining and installi
 
 2. To extract the contents of the file that you downloaded in step 1, double-click the file, and then specify a directory when you are prompted.
 3. In the directory that you extracted the file to in step 2, double-click the Adamsetup.exe program to start the Active Directory Application Mode Setup Wizard, and then click **Next**.
-4. Review and accept the license terms, and then click
- **Next**.
+4. Review and accept the license terms, and then click **Next**.
 5. Select **ADAM administration tools only**, and then click **Next**.
-6. Review your selections, and then click
- **Next**.
-7. When Setup has concluded, click
- **Finish**.
+6. Review your selections, and then click **Next**.
+7. When Setup has concluded, click **Finish**.
 
 After you have installed the ADAM Administration Tools, you can modify the permissions on the deleted objects container. To do this, follow these steps:
 

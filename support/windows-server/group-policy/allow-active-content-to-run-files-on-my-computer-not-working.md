@@ -51,5 +51,3 @@ The default location of the Group Policy Preferences XML setting file is:
 Modify the setting using Windows Server 2008 R2 or Windows 7 RSAT. The issue only exists when modifying the setting from Windows Server 2008 or Windows Vista RSAT.
 
 As a workaround you can disable the **Allow active content to run files on My Computer** policy setting and the setting will be enabled when the policy is applied to the client computers.
-For more information about Remote Server Administration Tools for Windows 7, visit the following Microsoft Web site:
- [https://www.microsoft.com/download/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d](https://www.microsoft.com/download/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d)

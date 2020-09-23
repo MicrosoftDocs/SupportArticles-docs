@@ -57,9 +57,7 @@ For more information about Windows PowerShell, visit the following Microsoft web
 
 - [Windows PowerShell website](https://www.microsoft.com/powershell) 
 
-- [Windows PowerShell Online Help](https://technet.microsoft.com/library/bb978526.aspx) 
-
-- [Windows PowerShell Blog](https://blogs.msdn.com/powershell) 
+- [Windows PowerShell Blog](https://devblogs.microsoft.com/powershell/) 
 
 - [Windows PowerShell Software Development Kit (SDK)](https://msdn2.microsoft.com/library/aa830112.aspx) 
 

@@ -167,8 +167,6 @@ The domain controller has too many replication partners or under too great a rep
 
 Attributes that are frequently updated.  Identify attribute updates using verbose replication event log events (or using `repadmin /showchanges`) and then correlate with `repadmin /showobjmeta` for several objects on the destination DC.  Look at the attribute identified in the event and look for a high version number, or get multiple logs for the same object throughout the day and see if the version number increases frequently.
 
-[913676](/[anySimpleType]/help/913676) Event ID 2008 is logged in the Application log on a domain controller after you install Exchange 2003 Service Pack 2.
-
 #### Temporary
 
 

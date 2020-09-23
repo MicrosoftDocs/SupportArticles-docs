@@ -53,7 +53,7 @@ Grant the user exclusive rights to the redirected folder. To do this, follow the
 8. In the **Documents Properties** dialog box, click the **Settings** tab, and then configure the following:
    - Click to select the **Grant the user exclusive rights to Documents** check box.
    - Click to select the **Move the contents of Documents to the new location** check box.
-9. Click **OK**.For more information, visit the following Microsoft Web site. [https://technet2.microsoft.com/windowsvista/en/library/fb3681b2-da39-4944-93ad-dd3b6e8ca4dc1033.mspx](https://technet2.microsoft.com/windowsvista/en/library/fb3681b2-da39-4944-93ad-dd3b6e8ca4dc1033.mspx) 
+9. Click **OK**.
 
 ### Method 3
 

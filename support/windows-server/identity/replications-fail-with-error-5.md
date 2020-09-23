@@ -133,7 +133,7 @@ Solution
 
 2. Delete the RestrictRemoteClients  registry setting, and then restart.
 
-See [Restrictions for Unauthenticated RPC Clients: The group policy that punches your domain in the face](https://blogs.technet.com/b/askds/archive/2011/04/08/restrictions-for-unauthenticated-rpc-clients-the-group-policy-that-punches-your-domain-in-the-face.aspx).  
+See [Restrictions for Unauthenticated RPC Clients: The group policy that punches your domain in the face](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/restrictions-for-unauthenticated-rpc-clients-the-group-policy/ba-p/399128).  
 
 Cause 2: The CrashOnAuditFail setting in the registry of the destination domain controller has a value of 2
 
@@ -270,8 +270,6 @@ Notes
 - At one time, it was common for administrators to remove the "Enterprise domain controllers" and "Everyone" groups from the "Access this computer from network" policy setting in the default domain controller's policy. However, removing both groups is fatal. There's no reason to remove "Enterprise domain controllers" from this policy setting, because only domain controllers are a member of this group.
 
 Cause 7: There's an SMB signing mismatch between the source and destination domain controllers
-
- The best compatibility matrix for SMB signing is documented in the graphic and text "interoperability matrix" sections of Knowledge Base article [916846](/default.aspx?scid=kb;en-us;916846). The matrix is defined by four policy settings and their registry-based equivalents as follows.
 
 |Policy setting|Registry path|
 |---|---|

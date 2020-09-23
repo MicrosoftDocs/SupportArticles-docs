@@ -77,4 +77,4 @@ Note: the registry setting ReservedPorts are not implemented in Windows Vista, W
 
 For more information about adjusting the dynamic port range by using the netsh  command, click the following article number to view the article in the Microsoft Knowledge Base:
 929851 The default dynamic port range for TCP/IP has changed in Windows Vista and in Windows Server 2008
- [https://support.microsoft.com/default.aspx?scid=kb;EN-US;929851](/default.aspx?scid=kb;en-us;929851)
+ [https://support.microsoft.com/help/929851](https://support.microsoft.com/help/929851)

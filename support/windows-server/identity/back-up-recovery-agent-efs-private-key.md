@@ -124,5 +124,3 @@ For more information about how to determine who the recovery agent is for an enc
 For more information about EFS, click the following article number to view the article in the Microsoft Knowledge Base: [223316](https://support.microsoft.com/help/223316) Best practices for Encrypting File System  
 
 For more information about EFS in Windows Server, visit the following Microsoft Web site: [https://www.microsoft.com/technet/security/guidance/cryptographyetc/efs.mspx](https://www.microsoft.com/technet/security/guidance/cryptographyetc/efs.mspx) 
-For more information about how to work with EFS in Windows Server 2003, visit the following Microsoft Web site: [https://technet2.microsoft.com/windowsserver/en/library/a3aa1b1f-98c9-41b3-ba05-9424e316a0781033.mspx](https://technet2.microsoft.com/windowsserver/en/library/a3aa1b1f-98c9-41b3-ba05-9424e316a0781033.mspx)
-For more information about related topics, visit the following Microsoft Web site: [https://technet2.microsoft.com/windowsserver/en/library/A3AA1B1F-98C9-41B3-BA05-9424E316A0781033.mspx](https://technet2.microsoft.com/windowsserver/en/library/a3aa1b1f-98c9-41b3-ba05-9424e316a0781033.mspx)

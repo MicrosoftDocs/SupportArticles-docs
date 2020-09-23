@@ -1,3 +1,6 @@
+
+- name: Microsoft Message Queuing
+  items:
   - name: Clustering support for MSMQ
     href: clustering-support-msmq.md
   - name: Error when RAM exceeds allocated memory
@@ -18,3 +21,5 @@
     href: uninstall-message-queue-server.md
   - name: Write and read  Message Queuing in Visual C#
     href: write-read-msmq-visual-csharp.md
+- name: More products
+  href: ../index.yml

@@ -34,7 +34,7 @@ If article 938923 is referenced during the setup compatibility report, the serve
 ### How to install and to start the Print Management snap-in in Windows Vista
 
 
-1. Click **Start**![Start button ](/media/vistastartbutton.jpg), type MMC in the **Start Search** box, and then click **MMC** in the **Programs** list.
+1. Click **Start**, type MMC in the **Start Search** box, and then click **MMC** in the **Programs** list.
 2. On the **File** menu, click **Add/Remove Snap-in**.
 
 3. In the **Available snap-ins** list, click **Print Management**, and then click **Add**. You may have to wait several seconds for the snap-in to be added.
@@ -129,5 +129,3 @@ Then, click **Next**.
 We do not recommend that you create the backup by using the Printer Migration Wizard (PrintMig.exe). Additionally, the Printer Migration Wizard and the Printbrm.exe tool do not support .cab file backups that were created by using the Printer Migration Wizard.
 
 For more information about how to install, to view, and to manage all the printers in your organization by using the Print Management snap-in, visit the following Microsoft TechNet Web site: [https://technet.microsoft.com/windowsvista/aa905094.aspx](https://technet.microsoft.com/windowsvista/aa905094.aspx) 
-
-For more information about how to migrate print servers, visit the following Microsoft TechNet Web site: [https://technet2.microsoft.com/WindowsVista/en/library/b030067b-effa-4e6b-a47d-d61debaf90621033.mspx?mfr=true](https://technet2.microsoft.com/windowsvista/en/library/b030067b-effa-4e6b-a47d-d61debaf90621033.mspx?mfr=true)

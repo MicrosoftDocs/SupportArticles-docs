@@ -64,7 +64,7 @@ How can I install the latest version of Skype for Windows?
 
 To install Skype for Windows, follow these steps:
 
-1. Download the latest version from the [Skype website](http://www.skype.com/intl/get-skype/on-your-computer/windows/).
+1. Download the latest version from the [Skype website](https://www.skype.com/).
 2. Click **Run** to run Skype directly from your browser.
 3. Follow the steps in the setup wizard to complete the installation.
 4. Start Skype, and then sign in by entering a [Microsoft Account](https://support.skype.com/en/faq/fa12059/what-is-a-microsoft-account?frompage=search&q=microsoft+account&fromsearchfirstpage=false) user name and password.

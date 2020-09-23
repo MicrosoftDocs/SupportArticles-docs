@@ -61,5 +61,4 @@ For more information about DFS site selection, follow these steps:
 
 For more information about DFS, visit the following Microsoft Web site:
 
-[https://technet2.microsoft.com/windowsserver/en/library/20ffb860-f802-455c-9ca2-5194f79a9eb41033.mspx](https://technet2.microsoft.com/windowsserver/en/library/20ffb860-f802-455c-9ca2-5194f79a9eb41033.mspx) 
-
+[Distributed File System](https://docs.microsoft.com/windows/win32/dfs/distributed-file-system) 

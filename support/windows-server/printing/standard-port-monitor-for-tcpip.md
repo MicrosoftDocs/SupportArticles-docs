@@ -62,11 +62,3 @@ By default, the standard port monitor deviates from the LPR port monitor in two 
 |Unidirectional, single-error status reporting.|Uses SNMP for detailed status and error reporting.|
 |Control file requires double spooling for accurate byte count.|Enables single-file spooling by default. (This is configurable through port properties.)|
 |Prints to destination port 515.|Prints to destination port 515 in LPR mode.|
-|||
-
-
-## References
-
-For a detailed discussion of printer ports and Internet Printing Protocol (IPP) in Windows Server 2003, see the following document:
-
-[https://download.microsoft.com/download/1/0/2/10221cee-9720-4b94-a66d-54ba11d1490c/Connectivity.doc](https://download.microsoft.com/download/1/0/2/10221cee-9720-4b94-a66d-54ba11d1490c/connectivity.doc) 

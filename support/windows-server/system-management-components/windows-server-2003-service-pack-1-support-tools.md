@@ -57,7 +57,5 @@ For more information about how to obtain Windows Server 2003 SP1, click the foll
 
 [889100](https://support.microsoft.com/help/889100) How to obtain the latest service pack for Windows Server 2003  
 
-To download the updated Windows Support Tools, visit the following Microsoft Web site: [https://www.microsoft.com/download/details.aspx?FamilyId=6EC50B78-8BE1-4E81-B3BE-4E7AC4F0912D](https://www.microsoft.com/download/details.aspx?familyid=6ec50b78-8be1-4e81-b3be-4e7ac4f0912d) 
-
 > [!NOTE]
 > If you have an earlier version of the Windows Support Tools installed on your computer, you must remove this version before you install the Windows Server 2003 SP1 Support Tools.

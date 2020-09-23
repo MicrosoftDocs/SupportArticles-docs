@@ -1,14 +1,17 @@
-- name: General
-  href: ./general/toc.yml
 
-- name: Installation
+- name: Visual Studio
   items:
-  - name: VCRedist installs temporary files in root directory
-    href: ./install/vcredist-installs-temporary-files-root-directory.md
-
-- name: Silverlight
-  items:
-  - name: Consume WCF service over TCP transport
-    href: ./silverlight/consume-wcf-service-tcp-transport.md
+  - name: General
+    href: ./general/toc.yml
+  - name: Installation
+    items:
+    - name: VCRedist installs temporary files in root directory
+      href: ./install/vcredist-installs-temporary-files-root-directory.md
+  - name: Silverlight
+    items:
+    - name: Consume WCF service over TCP transport
+      href: ./silverlight/consume-wcf-service-tcp-transport.md
+- name: More products
+  href: ../index.yml
 
 

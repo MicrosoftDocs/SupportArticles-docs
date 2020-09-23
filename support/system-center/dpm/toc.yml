@@ -76,6 +76,8 @@
       href: list-dpm-2012-sp1-error-codes.md
     - name: Error 2013 configuring SMTP server information
       href: configure-smtp-server-information-error-2013.md
+    - name: Error 4323 installing DPM 2012 R2
+      href: error-4323-install-dpm-2012-r2.md
     - name: Error 832 installing DPM 2016
       href: installation-error-832.md
 - name: SharePoint farm protection

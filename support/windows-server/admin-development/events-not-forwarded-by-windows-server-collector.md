@@ -29,7 +29,7 @@ You configure a Windows Server 2019 or Windows Server 2016 computer as an event 
 > Task Category: None  
 > User: NETWORK SERVICE  
 > Description:  
-> The forwarder is having a problem communicating with subscription manager at address http://W19SRV.contoso.com:5985/wsman/SubscriptionManager/WEC. Error code is 2150859027 and Error Message is The WinRM client sent a request to an HTTP server and got a response saying the requested HTTP URL was not available. This is usually returned by a HTTP server that does not support the WS-Management protocol. </f:Message></f:WSManFault>.
+> The forwarder is having a problem communicating with subscription manager at address `http://W19SRV.contoso.com:5985/wsman/SubscriptionManager/WEC`. Error code is 2150859027 and Error Message is The WinRM client sent a request to an HTTP server and got a response saying the requested HTTP URL was not available. This is usually returned by a HTTP server that does not support the WS-Management protocol. </f:Message></f:WSManFault>.
 
 ## Cause
 
