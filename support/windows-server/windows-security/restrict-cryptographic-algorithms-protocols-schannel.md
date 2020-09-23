@@ -106,175 +106,181 @@ To enable the system to use the protocols that will not be negotiated by default
 
 The **Ciphers** registry key under the **SCHANNEL** key is used to control the use of symmetric algorithms such as DES and RC4. The following are valid registry keys under the **Ciphers** key.
 
-- `SCHANNEL\Ciphers\RC4 128/128` subkey
+Create the SCHANNEL Ciphers subkey in the format: `SCHANNEL\(VALUE)\(VALUE/VALUE)`
 
-    **RC4 128/128**
+**RC4 128/128**
 
-    This subkey refers to 128-bit RC4.
+  Ciphers subkey: `SCHANNEL\Ciphers\RC4 128/128`
 
-    To allow this cipher algorithm, change the DWORD value data of the **Enabled** value to **0xffffffff**. Or, change the DWORD value data to **0x0**. If you do not configure the **Enabled** value, the default is enabled. This registry key does not apply to an exportable server that does not have an SGC certificate.
+  This subkey refers to 128-bit RC4.
 
-    Disabling this algorithm effectively disallows the following:
+  To allow this cipher algorithm, change the DWORD value data of the **Enabled** value to **0xffffffff**. Or, change the DWORD value data to **0x0**. If you do not configure the **Enabled** value, the default is enabled. This registry key does not apply to an exportable server that does not have an SGC certificate.
 
-  - SSL_RSA_WITH_RC4_128_MD5
-  - SSL_RSA_WITH_RC4_128_SHA
-  - TLS_RSA_WITH_RC4_128_MD5
-  - TLS_RSA_WITH_RC4_128_SHA
+  Disabling this algorithm effectively disallows the following:
 
-- `SCHANNEL\Ciphers\Triple DES 168`
+- SSL_RSA_WITH_RC4_128_MD5
+- SSL_RSA_WITH_RC4_128_SHA
+- TLS_RSA_WITH_RC4_128_MD5
+- TLS_RSA_WITH_RC4_128_SHA
 
-    **Triple DES 168**
+**Triple DES 168**
 
-    This registry key refers to 168-bit Triple DES as specified in ANSI X9.52 and Draft FIPS 46-3. This registry key does not apply to the export version.
+  Ciphers subkey: `SCHANNEL\Ciphers\Triple DES 168`
 
-    To allow this cipher algorithm, change the DWORD value data of the **Enabled** value to **0xffffffff**. Or, change the DWORD data to **0x0**. If you do not configure the **Enabled** value, the default is enabled.
+  This registry key refers to 168-bit Triple DES as specified in ANSI X9.52 and Draft FIPS 46-3. This registry key does not apply to the export version.
 
-    Disabling this algorithm effectively disallows the following:
+  To allow this cipher algorithm, change the DWORD value data of the **Enabled** value to **0xffffffff**. Or, change the DWORD data to **0x0**. If you do not configure the **Enabled** value, the default is enabled.
 
-  - SSL_RSA_WITH_3DES_EDE_CBC_SHA
-  - SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA
-  - TLS_RSA_WITH_3DES_EDE_CBC_SHA
-  - TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA
+  Disabling this algorithm effectively disallows the following:
 
-    > [!NOTE]
-    > For the versions of Windows that releases before Windows Vista, the key should be **Triple DES 168/168**.
+- SSL_RSA_WITH_3DES_EDE_CBC_SHA
+- SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA
+- TLS_RSA_WITH_3DES_EDE_CBC_SHA
+- TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA
 
-- `SCHANNEL\Ciphers\RC2 128/128` subkey
+  > [!NOTE]
+  > For the versions of Windows that releases before Windows Vista, the key should be **Triple DES 168/168**.
 
-    **RC2 128/128**
+**RC2 128/128**
 
-    This registry key refers to 128-bit RC2. It does not apply to the export version.
+  Ciphers subkey: `SCHANNEL\Ciphers\RC2 128/128`
 
-    To allow this cipher algorithm, change the DWORD value data of the **Enabled** value to **0xffffffff**. Otherwise, change the DWORD value data to **0x0**. If you do not configure the **Enabled** value, the default is enabled.
+  This registry key refers to 128-bit RC2. It does not apply to the export version.
 
-- `SCHANNEL\Ciphers\RC4 64/128` subkey
+  To allow this cipher algorithm, change the DWORD value data of the **Enabled** value to **0xffffffff**. Otherwise, change the DWORD value data to **0x0**. If you do not configure the **Enabled** value, the default is enabled.
 
-    **RC4 64/128**
+**RC4 64/128**
 
-    This registry key refers to 64-bit RC4. It does not apply to the export version (but is used in Microsoft Money).
+  Ciphers subkey: `SCHANNEL\Ciphers\RC4 64/128`
 
-    To allow this cipher algorithm, change the DWORD value data of the **Enabled** value to **0xffffffff**. Otherwise, change the DWORD value data to **0x0**. If you do not configure the **Enabled** value, the default is enabled.
+  This registry key refers to 64-bit RC4. It does not apply to the export version (but is used in Microsoft Money).
 
-- `SCHANNEL\Ciphers\RC4 56/128` subkey
+  To allow this cipher algorithm, change the DWORD value data of the **Enabled** value to **0xffffffff**. Otherwise, change the DWORD value data to **0x0**. If you do not configure the **Enabled** value, the default is enabled.
 
-    **RC4 56/128**
+**RC4 56/128**
 
-    This registry key refers to 56-bit RC4.
+  Ciphers subkey: `SCHANNEL\Ciphers\RC4 56/128`
 
-    To allow this cipher algorithm, change the DWORD value data of the Enabled value to **0xffffffff**. Otherwise, change the DWORD value data to **0x0**. If you do not configure the **Enabled** value, the default is enabled.
+  This registry key refers to 56-bit RC4.
 
-    Disabling this algorithm effectively disallows the following:
+  To allow this cipher algorithm, change the DWORD value data of the Enabled value to **0xffffffff**. Otherwise, change the DWORD value data to **0x0**. If you do not configure the **Enabled** value, the default is enabled.
 
-  - TLS_RSA_EXPORT1024_WITH_RC4_56_SHA
+  Disabling this algorithm effectively disallows the following:
 
-- `SCHANNEL\Ciphers\RC2 56/128` subkey
+- TLS_RSA_EXPORT1024_WITH_RC4_56_SHA
 
-    **RC2 56/128**
+**RC2 56/128**
 
-    This registry key refers to 56-bit RC2.
+  Ciphers subkey: `SCHANNEL\Ciphers\RC2 56/128`
 
-    To allow this cipher algorithm, change the DWORD value data of the **Enabled** value to **0xffffffff**. Otherwise, change the DWORD value data to **0x0**. If you do not configure the **Enabled** value, the default is enabled.
+  This registry key refers to 56-bit RC2.
 
-- `SCHANNEL\Ciphers\RC2 56/56` subkey
+  To allow this cipher algorithm, change the DWORD value data of the **Enabled** value to **0xffffffff**. Otherwise, change the DWORD value data to **0x0**. If you do not configure the **Enabled** value, the default is enabled.
 
-    **DES 56**
+**DES 56**
 
-    This registry key refers to 56-bit DES as specified in FIPS 46-2. Its implementation in the Rsabase.dll and Rsaenh.dll files is validated under the FIPS 140-1 Cryptographic Module Validation Program.
+  Ciphers subkey: `SCHANNEL\Ciphers\RC2 56/56`
 
-    To allow this cipher algorithm, change the DWORD value data of the **Enabled** value to **0xffffffff**. Otherwise, change the DWORD value data to **0x0**. If you do not configure the **Enabled** value, the default is enabled.
+  This registry key refers to 56-bit DES as specified in FIPS 46-2. Its implementation in the Rsabase.dll and Rsaenh.dll files is validated under the FIPS 140-1 Cryptographic Module Validation Program.
 
-    Disabling this algorithm effectively disallows the following:
+  To allow this cipher algorithm, change the DWORD value data of the **Enabled** value to **0xffffffff**. Otherwise, change the DWORD value data to **0x0**. If you do not configure the **Enabled** value, the default is enabled.
 
-  - SSL_RSA_WITH_DES_CBC_SHA
-  - TLS_RSA_WITH_DES_CBC_SHA
+  Disabling this algorithm effectively disallows the following:
 
-- `SCHANNEL\Ciphers\RC4 40/128` subkey
+- SSL_RSA_WITH_DES_CBC_SHA
+- TLS_RSA_WITH_DES_CBC_SHA
 
-    **RC4 40/128**
+**RC4 40/128**
 
-    This refers to 40-bit RC4.
+  Ciphers subkey: `SCHANNEL\Ciphers\RC4 40/128`
 
-    To allow this cipher algorithm, change the DWORD value data of the **Enabled** value to **0xffffffff**. Otherwise, change the DWORD value data to **0x0**. If you do not configure the **Enabled** value, the default is enabled.
+  This refers to 40-bit RC4.
 
-    Disabling this algorithm effectively disallows the following:
+  To allow this cipher algorithm, change the DWORD value data of the **Enabled** value to **0xffffffff**. Otherwise, change the DWORD value data to **0x0**. If you do not configure the **Enabled** value, the default is enabled.
 
-  - SSL_RSA_EXPORT_WITH_RC4_40_MD5
-  - TLS_RSA_EXPORT_WITH_RC4_40_MD5
+  Disabling this algorithm effectively disallows the following:
 
-- `SCHANNEL\Ciphers\RC2 40/128` subkey
+- SSL_RSA_EXPORT_WITH_RC4_40_MD5
+- TLS_RSA_EXPORT_WITH_RC4_40_MD5
 
-    **RC2 40/128**
+**RC2 40/128**
 
-    This registry key refers to 40-bit RC2.
+  Ciphers subkey: `SCHANNEL\Ciphers\RC2 40/128`
 
-    To allow this cipher algorithm, change the DWORD value data of the **Enabled** value to **0xffffffff**. Otherwise, change the DWORD value data to **0x0**. If you do not configure the **Enabled** value, the default is enabled.
+  This registry key refers to 40-bit RC2.
 
-    Disabling this algorithm effectively disallows the following:
+  To allow this cipher algorithm, change the DWORD value data of the **Enabled** value to **0xffffffff**. Otherwise, change the DWORD value data to **0x0**. If you do not configure the **Enabled** value, the default is enabled.
 
-  - SSL_RSA_EXPORT_WITH_RC2_CBC_40_MD5
-  - TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5
+  Disabling this algorithm effectively disallows the following:
 
-- `SCHANNEL\Ciphers\NULL` subkey
+- SSL_RSA_EXPORT_WITH_RC2_CBC_40_MD5
+- TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5
 
-    **NULL**
+**NULL**
 
-    This registry key means no encryption. By default, it is turned off.
+  Ciphers subkey: `SCHANNEL\Ciphers\NULL`
 
-    To turn off encryption (disallow all cipher algorithms), change the DWORD value data of the **Enabled** value to **0xffffffff**. Otherwise, change the DWORD value data to **0x0**.
+  This registry key means no encryption. By default, it is turned off.
 
-- `SCHANNEL/Hashes` subkey
+  To turn off encryption (disallow all cipher algorithms), change the DWORD value data of the **Enabled** value to **0xffffffff**. Otherwise, change the DWORD value data to **0x0**.
 
-    The **Hashes** registry key under the **SCHANNEL** key is used to control the use of hashing algorithms such as SHA-1 and MD5. The following are valid registry keys under the **Hashes** key.
+**Hashes**
 
-- `SCHANNEL\Hashes\MD5` subkey
+Ciphers subkey: `SCHANNEL/Hashes`
 
-    **MD5**
+  The **Hashes** registry key under the **SCHANNEL** key is used to control the use of hashing algorithms such as SHA-1 and MD5. The following are valid registry keys under the **Hashes** key.
 
-    To allow this hashing algorithm, change the DWORD value data of the **Enabled** value to the default value **0xffffffff**. Otherwise, change the DWORD value data to **0x0**.
+**MD5**
 
-    Disabling this algorithm effectively disallows the following:
+  Ciphers subkey: `SCHANNEL\Hashes\MD5`
 
-  - SSL_RSA_EXPORT_WITH_RC4_40_MD5
-  - SSL_RSA_WITH_RC4_128_MD5
-  - SSL_RSA_EXPORT_WITH_RC2_CBC_40_MD5
-  - TLS_RSA_EXPORT_WITH_RC4_40_MD5
-  - TLS_RSA_WITH_RC4_128_MD5
-  - TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5
+  To allow this hashing algorithm, change the DWORD value data of the **Enabled** value to the default value **0xffffffff**. Otherwise, change the DWORD value data to **0x0**.
 
-- `SCHANNEL\Hashes\SHA` subkey
+  Disabling this algorithm effectively disallows the following:
 
-    **SHA**
+- SSL_RSA_EXPORT_WITH_RC4_40_MD5
+- SSL_RSA_WITH_RC4_128_MD5
+- SSL_RSA_EXPORT_WITH_RC2_CBC_40_MD5
+- TLS_RSA_EXPORT_WITH_RC4_40_MD5
+- TLS_RSA_WITH_RC4_128_MD5
+- TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5
 
-    This registry key refers to Secure Hash Algorithm (SHA-1), as specified in FIPS 180-1. Its implementation in the Rsabase.dll and Rsaenh.dll files is validated under the FIPS 140-1 Cryptographic Module Validation Program.
+**SHA**
 
-    To allow this hashing algorithm, change the DWORD value data of the **Enabled** value to the default value **0xffffffff**. Otherwise, change the DWORD value data to **0x0**.
+  Ciphers subkey: `SCHANNEL\Hashes\SHA`
 
-    Disabling this algorithm effectively disallows the following:
+  This registry key refers to Secure Hash Algorithm (SHA-1), as specified in FIPS 180-1. Its implementation in the Rsabase.dll and Rsaenh.dll files is validated under the FIPS 140-1 Cryptographic Module Validation Program.
 
-  - SSL_RSA_WITH_RC4_128_SHA
-  - SSL_RSA_WITH_DES_CBC_SHA
-  - SSL_RSA_WITH_3DES_EDE_CBC_SHA
-  - SSL_RSA_EXPORT1024_WITH_DES_CBC_SHA
-  - SSL_RSA_EXPORT1024_WITH_RC4_56_SHA
-  - TLS_RSA_WITH_RC4_128_SHA
-  - TLS_RSA_WITH_DES_CBC_SHA
-  - TLS_RSA_WITH_3DES_EDE_CBC_SHA
-  - TLS_RSA_EXPORT1024_WITH_DES_CBC_SHA
-  - TLS_RSA_EXPORT1024_WITH_RC4_56_SHA
+  To allow this hashing algorithm, change the DWORD value data of the **Enabled** value to the default value **0xffffffff**. Otherwise, change the DWORD value data to **0x0**.
 
-- `SCHANNEL/KeyExchangeAlgorithms` subkey
+  Disabling this algorithm effectively disallows the following:
 
-    The **KeyExchangeAlgorithms** registry key under the **SCHANNEL** key is used to control the use of key exchange algorithms such as RSA. The following are valid registry keys under the **KeyExchangeAlgorithms** key.
+- SSL_RSA_WITH_RC4_128_SHA
+- SSL_RSA_WITH_DES_CBC_SHA
+- SSL_RSA_WITH_3DES_EDE_CBC_SHA
+- SSL_RSA_EXPORT1024_WITH_DES_CBC_SHA
+- SSL_RSA_EXPORT1024_WITH_RC4_56_SHA
+- TLS_RSA_WITH_RC4_128_SHA
+- TLS_RSA_WITH_DES_CBC_SHA
+- TLS_RSA_WITH_3DES_EDE_CBC_SHA
+- TLS_RSA_EXPORT1024_WITH_DES_CBC_SHA
+- TLS_RSA_EXPORT1024_WITH_RC4_56_SHA
 
-- `SCHANNEL\KeyExchangeAlgorithms\PKCS` Subkey
+**KeyExchangeAlgorithms**
 
-    **PKCS**
+  Ciphers subkey: `SCHANNEL/KeyExchangeAlgorithms`
 
-    This registry key refers to the RSA as the key exchange and authentication algorithms.
+  The **KeyExchangeAlgorithms** registry key under the **SCHANNEL** key is used to control the use of key exchange algorithms such as RSA. The following are valid registry keys under the **KeyExchangeAlgorithms** key.
 
-    To allow RSA, change the DWORD value data of the **Enabled** value to the default value **0xffffffff**. Otherwise, change the DWORD data to **0x0**.
+**PKCS**
 
-    Disabling RSA effectively disallows all RSA-based SSL and TLS cipher suites supported by the Windows NT4 SP6 Microsoft TLS/SSL Security Provider.
+  Ciphers subkey: `SCHANNEL\KeyExchangeAlgorithms\PKCS`
+
+  This registry key refers to the RSA as the key exchange and authentication algorithms.
+
+  To allow RSA, change the DWORD value data of the **Enabled** value to the default value **0xffffffff**. Otherwise, change the DWORD data to **0x0**.
+
+  Disabling RSA effectively disallows all RSA-based SSL and TLS cipher suites supported by the Windows NT4 SP6 Microsoft TLS/SSL Security Provider.
 
 ## FIPS 140-1 cipher suites
 
