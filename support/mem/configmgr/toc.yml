@@ -358,8 +358,6 @@
           href: track-software-update-compliance-assessment.md
         - name: Track software update deployment
           href: track-software-update-deployment-process.md
-        - name: Software updates maintenance
-          href: software-update-maintenance.md
     - name: Troubleshoot software update management
       items:
         - name: Enable verbose logging

@@ -154,6 +154,6 @@ If you have to or want to decline updates manually, you can do this directly fro
 
 ## References
 
-For more information about WSUS maintenance, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://support.microsoft.com/help/4490644).
+For more information about WSUS maintenance, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](wsus-maintenance-guide.md).
 
 For more information about WSUS cleanup behavior and log entries in Configuration Manager (current branch), see [Software updates maintenance](/mem/configmgr/sum/deploy-use/software-updates-maintenance).

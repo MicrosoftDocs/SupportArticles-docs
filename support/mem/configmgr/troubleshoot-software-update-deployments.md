@@ -47,7 +47,7 @@ For more information, see [Installation, supersedence, or detection issues with 
 
 ## You experience unexpected reboots, or updates are installed outside a maintenance window
 
-If possible, enable verbose and debug logging (bookmark) if the issue can be reproduced.
+If possible, [enable verbose and debug logging](enable-verbose-logging.md) if the issue can be reproduced.
 
 1. Review the ServiceWindowManager.log file on the client, and identify the service windows that are available.
 

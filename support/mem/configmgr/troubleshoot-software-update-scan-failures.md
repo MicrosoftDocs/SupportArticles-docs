@@ -193,8 +193,8 @@ To fix this issue, the software update point for client installation and softwar
 
 ## Clients can't find the WSUS server location
 
-1. To understand how clients obtain the WSUS server location, see the WSUS Server Location (bookmark) section, and review the client and management point logs.
-2. Enable verbose and debug logging on the client and management point (bookmark).
+1. To understand how clients obtain the WSUS server location, see [WSUS server location](track-software-update-compliance-assessment.md#wsus-server-location), and review the client and management point logs.
+2. [Enable verbose and debug logging on the client and management point](enable-verbose-logging.md#enable-verbose-and-debug-logging-on-the-client-and-management-point).
 3. Verify that there are no communication errors in CcmMessaging.log on the client.
 4. If the management point returns an empty WSUS location response, it could be caused by a mismatch in the Content Version of WSUS, which could be a result of failed synchronization. To find the Content Version of the software update point, in Configuration Manager console, select **Monitoring** > **Software Update Point Synchronization Status**.
 5. Review the data in `CI_UpdateSources`, `WSUSServerLocations` and `Update_SyncStatus` tables, verify that the Update Source Unique ID and Content Version match across these tables.
@@ -204,7 +204,7 @@ To fix this issue, the software update point for client installation and softwar
 1. Review the PolicyAgent.log file on the client to verify that the client is receiving policies.
 2. Verify that software update synchronization is successful on the software update point. If synchronization fails, [troubleshoot synchronization issues](troubleshoot-software-update-synchronization.md).
 3. If the WUAHandler.log file doesn't exist and isn't created after you start a scan cycle, the issue most likely occurs because of one of the following reasons:
-   - The software update scan policy (bookmark here) isn't available
-   - Clients can't find the WSUS server location (bookmark)
+   - The [software update scan policy](track-software-update-compliance-assessment.md#software-update-scan-policy) isn't available
+   - Clients can't find the [WSUS server location](track-software-update-compliance-assessment.md#wsus-server-location)
 4. Verify that there are no communication errors in the CcmMessaging.log file on the client.
-5. If the scan is successful, the client should send state messages to the management point to indicate the update status. To understand how state messages processing works, see state message processing flow (bookmark).
+5. If the scan is successful, the client should send state messages to the management point to indicate the update status. To understand how state messages processing works, see [state message processing flow](track-software-update-compliance-assessment.md#state-message-processing-flow).
