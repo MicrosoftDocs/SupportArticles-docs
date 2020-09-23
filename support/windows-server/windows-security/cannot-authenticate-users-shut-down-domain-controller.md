@@ -25,7 +25,7 @@ _Original KB number:_ 2683606
 
 The applications on the domain use **NT Local Area Network Manager (NTLM)** or **Kerberos** to authenticate users. Some applications have a pattern where the clients often reconnect to the application server.
 
-Applications are mostly affected when they use NTLM. Applications which use Kerberos may also be affected if Kerberos privilege attribute certificate (PAC) verification is used for authentications accepted by the application. It's not possible to turn these off in all cases.
+Applications are mostly affected when they use NTLM. Applications that use Kerberos may also be affected if Kerberos privilege attribute certificate (PAC) verification is used for authentications accepted by the application. It's not possible to turn these verifications off in all cases.
 
 In this situation, when you shut down a DC, the application might not authenticate users until both the DC isn't responding on the network, and the Domain Member has selected a different DC for authentication.
 
@@ -35,17 +35,17 @@ In the diagnostic logs and network traces, you may see user logon errors **logon
 
 There are two problems that may happen:
 
-1. When the DC is in shutdown phase, it will normally tell current clients to use another DC for authentication using the error code 0xc00000dc **(STATUS_INVALID_SERVER_STATE)**. There is a code path where this doesn't happen.
+1. When the DC is in shutdown phase, it will normally tell current clients to use another DC for authentication using the error code 0xc00000dc **(STATUS_INVALID_SERVER_STATE)**. There is a code path where this issue doesn't happen.
 
 2. The server won't avoid responding to new clients on Netlogon **User Datagram Protocol (UDP)** queries. Also, the clients that received the error that the DC is in shutdown, won't avoid selecting the same DC on the later DC search.
 
 When a client selects the DC while in shutdown, NTLM or Kerberos requests will fail again. At this point, the client will go into a negative cache mode, and will fail later authentication requests.
 
-Note that in the case of NTLM, the client is the application server, so it can't accept new clients until a working DC is selected.
+In the case of NTLM, the client is the application server, so it can't accept new clients until a working DC is selected.
 
 ## Resolution
 
-To avoid the problem, stop the Netlogon service on the DC before you initiate the shutdown or restart. To automate this, enter the stop task in a local shutdown script for the DC. To get to the local group Policy, follow these steps:
+To avoid the problem, stop the Netlogon service on the DC before you initiate the shutdown or restart. To automate this action, enter the stop task in a local shutdown script for the DC. To get to the local group Policy, follow these steps:
 
 1. Start **Gpedit.msc**
 
@@ -53,7 +53,7 @@ To avoid the problem, stop the Netlogon service on the DC before you initiate th
 
 3. At the new script command line, enter `net stop netlogon && net stop kdc`.
 
-Though you can set the registry parameter **NegativeCachePeriod** to a low value, this won't completely avoid the problem, as the client will look for an alternate DC more often.
+Though you can set the registry parameter **NegativeCachePeriod** to a low value, this change won't completely avoid the problem, as the client will look for an alternate DC more often.
 
 ## More information
 
