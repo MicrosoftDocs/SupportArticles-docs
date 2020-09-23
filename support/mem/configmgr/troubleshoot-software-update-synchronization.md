@@ -18,17 +18,17 @@ _Original KB number:_ &nbsp; 4505439
 The first step in troubleshooting synchronization issues is to verify that the following prerequisites are met:
 
 - Verify that [Prerequisites for software updates in Configuration Manager](/mem/configmgr/sum/plan-design/prerequisites-for-software-updates) are met.
-- When the software update point is installed on a remote site system server, the WSUS Administration Console must be installed on the site server.
+- When the software update point is installed on a remote site system server, the WSUS Administration console must be installed on the site server.
 - Verify that WSUS running on a software update point is **not** configured to be a replica.
 
-    To check this, open the WSUS console on the software update point, select **Options** in the console tree pane, then select **Update Source and Proxy Server** in the display pane.
+    Open the WSUS console on the software update point, select **Options** in the console tree pane, then select **Update Source and Proxy Server** in the display pane.
 
 - Verify that the **Update Services** service is running on the WSUS server.
 - Verify that the default website or WSUS administration website is running on the WSUS server.
 
 ## Check the Update Source settings in WSUS
 
-When you troubleshoot software update synchronization issues in Configuration Manager, you may have to check the Update Source settings in the WSUS console on the software update point site system server. These settings are set automatically by WCM. If these settings don't match, review WCM.log.
+When you troubleshoot software update synchronization issues in Configuration Manager, you may have to check the Update Source settings in the WSUS console on the software update point site system server. These settings are set automatically by WSUS Configuration Manager (WCM). If these settings don't match, review WCM.log.
 
 To check the update source settings in WSUS, open the WSUS console on the software update point site system server. Select **Options** in the console tree pane, then select **Update Source and Proxy Server** in the display pane.
 
@@ -47,13 +47,13 @@ Verify that the following settings are configured correctly:
   - Internet-based software update points.
   - Software update points for a secondary site.
 
-  **Server name**: This should be the fully qualified domain name (FQDN) of the upstream update source.
+  **Server name**: It should be the fully qualified domain name (FQDN) of the upstream update source.
 
-  - For the first software update point in the primary site, this should be the software update point for the parent site.
-  - For additional software update points in the site, this should be the first software update point on the same site.
-  - For an Internet-based software update point, this should be the first oftware update point on the same site.
+  - For the first software update point in the primary site, it should be the software update point for the parent site.
+  - For additional software update points in the site, it should be the first software update point on the same site.
+  - For an Internet-based software update point, it should be the first software update point on the same site.
 
-  **Port number**: This should be the port number for the upstream WSUS server. To determine the port number on the upstream WSUS server, see [Determine the port settings used by WSUS and the software update point](troubleshoot-software-update-scan-failures.md#determine-the-port-settings-used-by-wsus-and-the-software-update-point).
+  **Port number**: It should be the port number for the upstream WSUS server. To determine the port number on the upstream WSUS server, see [Determine the port settings used by WSUS and the software update point](troubleshoot-software-update-scan-failures.md#determine-the-port-settings-used-by-wsus-and-the-software-update-point).
 
   **Use SSL when synchronizing update information**: When the software update point is in HTTPS mode, this setting must be selected. When using SSL for software updates, several requirements apply. For more information, see [Verify that the software update point is configured for SSL](troubleshoot-software-update-scan-failures.md#verify-that-the-software-update-point-is-configured-for-ssl).
 
@@ -65,7 +65,7 @@ Verify that the following settings are configured correctly:
 
 ## Synchronization fails due to authentication and proxy issues
 
-WSUS Configuration Manager (WCM) configures the WSUS server once every hour in order to ensure that the settings configured in WSUS match the setting specified in the Configuration Manager console.
+WSUS Configuration Manager configures the WSUS server once every hour in order to ensure that the settings configured in WSUS match the setting specified in the Configuration Manager console.
 
 If WCM fails to configure the WSUS server properly, synchronization attempts can fail with an error similar to the following screenshot:
 
@@ -77,7 +77,7 @@ You will also find the following error in the WsyncMgr.log file on the site serv
 >
 > Sync failed. Will retry in 60 minutes
 
-Synchronization may fail due to authentication or proxy issues. When this occurs, you will see an error similar to the following error in the WCM.log file:
+Synchronization may fail due to authentication or proxy issues. When this issue occurs, you will see an error similar to the following error in the WCM.log file:
 
 > System.Net.WebException: The request failed with **HTTP status 502**  
 
@@ -95,7 +95,7 @@ To troubleshoot authentication or proxy issues, follow these steps:
 1. Verify that the **Update Services** service is running on the WSUS server.
 2. Verify that the default website or WSUS administration website is running on the WSUS server.
 3. Verify that the fully qualified domain name (FQDN) for the software update point site system server is correct and accessible from the site server.
-4. If the software update point is remote from the site server, verify that you can connect to the WSUS server from the site server. To do this, connect to the remote WSUS server using the WSUS Administration console. For more information, see [Check connectivity from the site server to the WSUS server](#check-connectivity-from-the-site-server-to-the-wsus-server).
+4. If the software update point is remote from the site server, verify that you can connect to the WSUS server from the site server by connecting to the remote WSUS server using the WSUS Administration console. For more information, see [Check connectivity from the site server to the WSUS server](#check-connectivity-from-the-site-server-to-the-wsus-server).
 5. Check the port settings configured for the software update point, and verify that they are the same as the port settings configured for the web site used by WSUS running on the software update point. For more information, see [Determine the port settings used by WSUS and the software update point](troubleshoot-software-update-scan-failures.md#determine-the-port-settings-used-by-wsus-and-the-software-update-point).
 6. Verify that the proxy and account settings are correctly configured for the software update point. For more information, see [Configure proxy setting for the software update point](software-update-point-installation-configuration.md#configure-proxy-setting-for-the-software-update-point).
 7. Verify that the software update point connection account is configured (if necessary) and that it has permissions to connect to the WSUS server. For more information, see [Configure the WSUS Server Connection Account for the software update point](software-update-point-installation-configuration.md#configure-the-wsus-server-connection-account-for-the-software-update-point).
@@ -107,7 +107,7 @@ To troubleshoot authentication or proxy issues, follow these steps:
 
 ## Synchronization fails due to web service issues
 
-Synchronization may be failing due to issues with the web service. When this occurs, you will see an error similar to the following errors in the WCM.log file:
+Synchronization may be failing due to issues with the web service. When this issue occurs, you will see an error similar to the following errors in the WCM.log file:
 
 > System.Net.WebException: The request failed with **HTTP status 500**  
 
@@ -134,8 +134,8 @@ Synchronization issues can often be traced back to issues relating to the End U
 
 1. Review the SoftwareDistribution.log file on the WSUS server to find out if the EULAs are not getting downloaded, and if so, why. Look for *.txt* in the log to find relevant entries.
 2. Verify that the firewall is configured to allow communication with Microsoft Update. For more information, see [Connection from the WSUS server to the Internet](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#211-connection-from-the-wsus-server-to-the-internet).
-3. Verify the [Proxy server settings](software-update-point-installation-configuration.md#configure-proxy-setting-for-the-software-update-point)).
-4. Run the following command from a Command Prompt to have WSUS re-download the missing content, including EULAs:
+3. Verify the [Proxy server settings](software-update-point-installation-configuration.md#configure-proxy-setting-for-the-software-update-point).
+4. Run the following command from a Command Prompt to have WSUS download the missing content again, including EULAs:
 
     `%ProgramFiles%\Update Services\Tools\wsusutil.exe reset`
 
@@ -151,7 +151,7 @@ To troubleshoot this issue, follow these steps:
 
 1. Verify that the WSUS server can connect to the Internet.
 2. Verify that the firewall is configured to allow communication with Microsoft Update. For more information, see [Connection from the WSUS server to the Internet](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#211-connection-from-the-wsus-server-to-the-internet).
-3. Verify the [Proxy server settings](software-update-point-installation-configuration.md#configure-proxy-setting-for-the-software-update-point)).
+3. Verify the [Proxy server settings](software-update-point-installation-configuration.md#configure-proxy-setting-for-the-software-update-point).
 
 ## WSUS Control Manager reports an error
 
