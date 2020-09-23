@@ -7,7 +7,7 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.prod: Office 365
+ms.prod: office 365
 ms.custom: CSSTroubleshoot
 ms.topic: article
 ms.author: v-six

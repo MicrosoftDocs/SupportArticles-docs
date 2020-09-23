@@ -347,8 +347,6 @@
       href: ../client-connectivity/cannot-connect-to-re-enabled-mailbox.md
     - name: New appointments and contacts not synchronized to OWA
       href: ../client-connectivity/added-appointments-contacts-not-synchronized-to-owa.md
-    - name: Only one reply is sent to each sender
-      href: ../client-connectivity/one-reply-sent-sender.md
     - name: Outlook Anywhere clients can't connect to server
       href: ../client-connectivity/outlook-anywhere-clients-not-connect-to-server.md
     - name: Outlook Can't access public folders hosted on legacy Exchange servers
@@ -487,6 +485,8 @@
       href: ../migration/public-folders-not-replicate.md
   - name: Public Folders
     items:
+    - name: How to disable conflict message
+      href: ../public-folders/disable-conflict-message.md
     - name: No active public folder mailboxes were found
       href: ../public-folders/migrationbatch-fails-no-public-folder-mailboxes.md
     - name: Public folder migration stops at 95%
