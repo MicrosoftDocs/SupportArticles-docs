@@ -37,7 +37,7 @@ Older C++ Runtime framework packages for desktop applications, v11.0 and v12.0, 
 - [C++ Runtime v11.0 framework package for Desktop Bridge (Project Centennial)](https://www.microsoft.com/download/details.aspx?id=53340)
 - [C++ Runtime v12 framework package for Desktop Bridge (Project Centennial)](https://www.microsoft.com/download/details.aspx?id=53176)
 
-    The C++ Runtime framework packages will be copied to a subfolder under `%ProgramFiles(x86)%\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop`. You can install the packages manually using the `Add-AppxPackage` PowerShell cmdlet.
+The C++ Runtime framework packages will be copied to a subfolder under `%ProgramFiles(x86)%\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop`. You can install the packages manually using the `Add-AppxPackage` PowerShell cmdlet.
 
 ## How to reference the Desktop framework packages
 
