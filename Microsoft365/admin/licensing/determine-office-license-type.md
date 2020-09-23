@@ -82,7 +82,7 @@ This method requires that you have access to the DVD or ISO file that was used t
 
     > [!NOTE]
     > Retail media includes a lowercase "r" before the ".WW" in the folder name and before the "WW.msi" in the MSI file name.
-        :::image type="content" source="media/determine-office-license-type/determine-office-license-type-3.png" alt-text="The screen will display the license type. ":::
+        :::image type="content" source="media/determine-office-license-type/determine-office-license-type-3.png" alt-text="ProPlus will have the letter R before WW. ":::
     For example, the installation file for Proplus retail is Proplus**r**WW.msi in the Proplus**r**WW folder. Proplus non-retail is ProplusWW.msi in the PlusplusWW. 
 
 ##### Method 2: Use the command line interface
@@ -94,7 +94,7 @@ This method requires that you have access to the DVD or ISO file that was used t
     1.	Press Windows logo key+X on your keyboard to open the quick action menu.
     2.	Select **Command Prompt (Admin)**.
 
-        :::image type="content" source="media/determine-office-license-type/determine-office-license-type-1.png" alt-text="Select Command Prompt (Admin).":::
+        :::image type="content" source="media/determine-office-license-type/determine-office-license-type-1.png" alt-text="Select the Command Prompt (Admin).":::
     3.	If a security prompt window is displayed, select **Allow**.
 
 - **Windows 7**
@@ -119,7 +119,7 @@ This method requires that you have access to the DVD or ISO file that was used t
 `cscript OSPP.VBS” /dstatus`.
 3.	Press **Enter**.
 
-    :::image type="content" source="media/determine-office-license-type/determine-office-license-type-2.png" alt-text="The screen will display the license type. ":::
+    :::image type="content" source="media/determine-office-license-type/determine-office-license-type-2.png" alt-text="The screen displays the license type. ":::
 
 4.	In this example, the license channel is reflected as **RETAIL** or **VOLUME**.
 
@@ -129,21 +129,21 @@ This method requires that you have access to the DVD or ISO file that was used t
 
 To determine the Office volume license type on a Mac, open an Office app (such as PowerPoint), select the name of the app in the menu, and then **About (app)**.
     
-:::image type="content" source="media/determine-office-license-type/determine-office-license-type-4.png" alt-text="The screen will display the license type. ":::
+:::image type="content" source="media/determine-office-license-type/determine-office-license-type-4.png" alt-text="Select the Office product name from the menu.":::
 
 The license type will be listed below the Product ID. 
 
-:::image type="content" source="media/determine-office-license-type/determine-office-license-type-6.png" alt-text="The screen will display the license type. ":::
+:::image type="content" source="media/determine-office-license-type/determine-office-license-type-6.png" alt-text="Select the About menu item for that product.":::
 
 #### Subscription licenses
 
 To determine the Office subscription license type, open an open an Office app (such as PowerPoint), select the name of the app in the menu, and then **About (app)**.
     
-:::image type="content" source="media/determine-office-license-type/determine-office-license-type-4.png" alt-text="The screen will display the license type. ":::
+:::image type="content" source="media/determine-office-license-type/determine-office-license-type-4.png" alt-text="The Volume License type will be displayed. ":::
 
 The license type will be listed below the Product ID. 
 
-:::image type="content" source="media/determine-office-license-type/determine-office-license-type-5.png" alt-text="The screen will display the license type. ":::
+:::image type="content" source="media/determine-office-license-type/determine-office-license-type-5.png" alt-text="The Subscription license type will be displayed.":::
 
 ## More information
 
