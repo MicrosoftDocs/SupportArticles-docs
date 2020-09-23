@@ -29,15 +29,15 @@ Out of Office (OOF) replies can be a bit of a mystery. How do they work? Why do 
 
 OOF — or automatic — replies are Inbox rules that are set in the user's mailbox by the client. OOF rules are server-side rules. Therefore, they are triggered regardless of whether the client is running.
 
-Automatic replies can be configured:
+Automatic replies can be configured as follows:
 
-- as an automatic reply feature from within Outlook, [like this](https://support.office.com/article/Send-automatic-out-of-office-replies-from-Outlook-9742f476-5348-4f9f-997f-5e208513bd67).
-- by using other clients, such as Outlook on the web (OWA).
-- by running a PowerShell command ([Set-MailboxAutoReplyConfiguration](https://docs.microsoft.com/powershell/module/exchange/set-mailboxautoreplyconfiguration?view=exchange-ps&preserve-view=true)).
+- By using the automatic reply feature from within Outlook [as explained here](https://support.office.com/article/Send-automatic-out-of-office-replies-from-Outlook-9742f476-5348-4f9f-997f-5e208513bd67)
+- By using other clients, such as Outlook on the web (OWA)
+- By running a PowerShell command ([Set-MailboxAutoReplyConfiguration](https://docs.microsoft.com/powershell/module/exchange/set-mailboxautoreplyconfiguration?view=exchange-ps&preserve-view=true))
 
-Admins can set up OOF replies from the M365 Admin Portal on behalf of (forgetful) users.
+Admins can set up OOF replies from the M365 Admin Portal on behalf of users.
 
-When automatic replies are enabled, only one reply is sent to each sender, even if you receive multiple messages from a sender. 
+If automatic replies are enabled, only one reply is sent to each sender even if a recipient receives multiple messages from a sender.
 
 In addition to using the built-in OOF functionality in their client, people sometimes [use rules to create an Out of Office message](https://support.office.com/article/use-rules-to-create-an-out-of-office-message-9f124e4a-749e-4288-a266-2d009686b403) while they are away.
 
@@ -217,26 +217,38 @@ When you create, configure, or manage OOF replies, you might also experience the
 
 ### An old or duplicate OOF message is sent
 
-If either an old or a duplicate OOF reply is sent, check for an additional Inbox rule and delete it.
+If either an old or duplicate OOF reply is sent, check for a duplicate Inbox rule, and delete it if you find one.
 
-If there isn't an additional Inbox rule, this issue may also occur if the OOF history reaches its limit. The OOF history has a limit of 10,000 entries. If this threshold is reached, new users can't be added to the history list and OOF replies will continue to be sent to recipients who are not already in that list for every message they send. All users who are already in the list will not receive duplicate OOF replies.
+If there isn't an additional Inbox rule, this issue may also occur if the OOF history reaches its limit. The OOF history has a limit of 10,000 entries. If this threshold is reached, new users can't be added to the history list. In this situation, OOF replies will continue to be sent to recipients who are not already in the list – one reply for every message sent by the recipients. All users who are already in the list will not receive duplicate OOF replies.
 
-To resolve this issue, remove the OOF rules and the OOF rules templates from the mailbox.
+To resolve this issue, use one of the following methods.
+
+**Method 1**
+
+1. Remove the OOF rules and the OOF rules templates from the mailbox. To locate the rules, see the [OOF rule details](#oof-rule-details) section.
+2. Disable and then re-enable the OOF feature for the mailbox.
+3. Check again whether the OOF feature works as expected and the symptoms do not occur.
+
+**Method 2**
+
+If Method 1 doesn't resolve the issue, remove the OOF response history. 
 
 1. Disable automatic replies in Outlook if currently enabled and exit Outlook.
 2. Log on to the [MFCMAPI](https://github.com/stephenegriffin/mfcmapi/releases)  tool and select **Tools** > **Options**.
-3. Select the **Use the MDB_ONLINE flag when calling OpenMsgStore** check box and the **Use the MAPI_NO_CACH flag when calling OpenEntry** check box.
+3. Select the following check boxes:
+
+     - **Use the MDB_ONLINE flag when calling OpenMsgStore**
+     - **Use the MAPI_NO_CACH flag when calling OpenEntry**
+
 4. Select **Session** > **Logon**.
 5. Select the Outlook profile for the mailbox and double-click to open it.
 6. Expand **Root Container** and then select **Freebusy Data**.
 7. In the **Other Names** column, right-click the **PR_DELEGATED_BY_RULE** property that has the **0x3FE30102** tag, point to **Edit as stream**, and then select **Binary**.
 8. Select all the text in the **Stream (Binary)** box and delete it.
-9. Re-enable automatic replies for the mailbox and check again whether the OOF feature works as expected and the symptoms do not occur.
 
 ### Two different OOF messages are sent
 
-If two different OOF messages are sent, and a check for an additional Inbox rule doesn't reveal one, then the culprit is likely an OOF rule in the Outlook client.
-To check for and delete such a rule:
+If two different OOF messages are sent, and you don't find an additional Inbox rule, the culprit is likely an OOF rule in the Outlook client. To check for and delete such a rule, follow these steps:
 
 1. In the Outlook client, select **File** > **Automatic Replies** > **Rules**.
 2. Select the OOF rule and then select **Delete Rule**.
