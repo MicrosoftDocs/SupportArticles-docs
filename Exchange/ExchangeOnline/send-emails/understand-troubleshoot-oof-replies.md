@@ -234,7 +234,7 @@ To resolve this issue, use one of the following methods.
 If Method 1 doesn't resolve the issue, remove the OOF response history. 
 
 1. Disable automatic replies in Outlook if currently enabled and exit Outlook.
-2. Log on to the [MFCMAPI](https://github.com/stephenegriffin/mfcmapi/releases)  tool and select **Tools** > **Options**.
+2. Log on to the [MFCMapi](https://github.com/stephenegriffin/mfcmapi/releases)  tool and select **Tools** > **Options**.
 3. Select the following check boxes:
 
      - **Use the MDB_ONLINE flag when calling OpenMsgStore**
