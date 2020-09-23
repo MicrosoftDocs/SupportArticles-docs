@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 3090184
 
 ## Summary
 
-There are several reasons that a software update scan could fail. Most problems involve communication or firewall issues between the client and the software update point computer. We describe some of the most common error conditions and their associated resolutions and troubleshooting tips here.
+There are several reasons that a software update scan could fail. Most problems involve communication or firewall issues between the client and the software update point computer. We describe some of the most common error conditions and their associated resolutions and troubleshooting tips here. For more information about Windows Update common errors, see [Windows Update common errors and mitigation](/windows/deployment/update/windows-update-errors).
 
 For more information about software updates in Configuration Manager, see [Software updates introduction](software-updates-introduction.md).
 
@@ -108,22 +108,24 @@ Finally, verify that the WSUS ports can be accessed. WSUS can be configured to u
 
 For clients to communicate with the WSUS computer, the appropriate ports must be enabled on any firewall between the client and the WSUS computer.
 
+### Determine the port settings used by WSUS and the software update point
+
 Port settings are configured when the software update point site system role is created. These port settings must be the same as the port settings that are used by the WSUS website. Otherwise, WSUS Synchronization Manager will not connect to the WSUS computer that is running on the software update point to request synchronization. The following procedures provide information about how to verify the port settings that are used by WSUS and the software update point.
 
-### Determine the WSUS port settings in IIS 6.0
+#### Determine the WSUS port settings in IIS 6.0
 
 1. On the WSUS server, open Internet Information Services (IIS) Manager.
 2. Expand **Web Sites**, right-click the website for the WSUS server, and then click **Properties**.
 3. Click the **Web Site** tab.
 4. The HTTP port setting is displayed in **TCP port**, and the HTTPS port setting is displayed in **SSL port**.
 
-### Determine the WSUS port settings in IIS 7.0 and later versions
+#### Determine the WSUS port settings in IIS 7.0 and later versions
 
 1. On the WSUS server, open Internet Information Services (IIS) Manager.
 2. Expand **Sites**, right-click the website for the WSUS server, and then click **Edit Bindings**.
 3. In the **Site Bindings** dialog box, the HTTP and HTTPS port values are displayed in the **Port** column.
 
-### Verify and configure ports for the software update point
+#### Verify and configure ports for the software update point
 
 1. On the Configuration Manager console, browse to **Administration** > **Site Configuration** > **Servers and Site System Roles**, and then click **\<SiteSystemName>** in the right pane.
 2. In the bottom pane, right-click **Software Update Point** and then click **Properties**.
@@ -145,7 +147,7 @@ This error suggests that firewall rules must be configured to enable communicati
 
 Error 0x80072f0c translates to **A certificate is required to complete client authentication**. This error should occur only if the WSUS computer is configured to use SSL. As part of the SSL configuration, WSUS virtual directories must be configured to use SSL, and they must be set to ignore client certificates. If the WSUS website or any of the virtual directories that were mentioned previously are configured incorrectly to **Accept** or **Require** client certificates, you receive this error.
 
-When the site is configured in **HTTPS only** mode, the software update point is automatically configured to use SSL. When the site is in **HTTPS or HTTP** mode, you can chose whether to configure the software update point to use SSL. When the software update point is configured to use SSL, the WSUS computer must also be explicitly configured to use SSL. Before you configure SSL, you should review the certificate requirements and make sure that a server authentication certificate is installed on the software update point server.
+When the site is configured in **HTTPS only** mode, the software update point is automatically configured to use SSL. When the site is in **HTTPS or HTTP** mode, you can choose whether to configure the software update point to use SSL. When the software update point is configured to use SSL, the WSUS computer must also be explicitly configured to use SSL. Before you configure SSL, you should review the [certificate requirements](/previous-versions/system-center/system-center-2012-R2/gg699362(v=technet.10)) and make sure that a server authentication certificate is installed on the software update point server.
 
 ### Verify that the software update point is configured for SSL
 
@@ -187,19 +189,22 @@ However, if an Active Directory Group Policy setting is applied to computers for
 
 > Group policy settings were overwritten by a higher authority (Domain Controller) to: Server <`http://server`> and Policy ENABLED
 
-To resolve this issue, the software update point for client installation and software updates must be specified in the Active Directory Group Policy setting by using the correct name format and port information. For example, this if the software update point was using the default website, the software update point would be *<`http://server1.contoso.com:80`>*.
+To fix this issue, the software update point for client installation and software updates must be the same server, and it must be specified in the Active Directory Group Policy setting by using the correct name format and port information. For example, if the software update point was using the default website, the software update point would be *<`http://server1.contoso.com:80`>*.
 
-## Other things to check
+## Clients can't find the WSUS server location
 
-If all else fails, check the following things:
+1. To understand how clients obtain the WSUS server location, see [WSUS server location](track-software-update-compliance-assessment.md#wsus-server-location), and review the client and management point logs.
+2. [Enable verbose and debug logging on the client and management point](enable-verbose-logging.md#enable-verbose-and-debug-logging-on-the-client-and-management-point).
+3. Verify that there are no communication errors in CcmMessaging.log on the client.
+4. If the management point returns an empty WSUS location response, it could be caused by a mismatch in the Content Version of WSUS, which could be a result of failed synchronization. To find the Content Version of the software update point, in Configuration Manager console, select **Monitoring** > **Software Update Point Synchronization Status**.
+5. Review the data in `CI_UpdateSources`, `WSUSServerLocations` and `Update_SyncStatus` tables, verify that the Update Source Unique ID and Content Version match across these tables.
+
+## Compliance results unknown
 
 1. Review the PolicyAgent.log file on the client to verify that the client is receiving policies.
-2. Verify that software update synchronization is successful on the software update point.
-3. If the WUAHandler.log file doesn't exist and isn't created after you start a scan cycle, the issue most likely occurs because one of the following isn't available:
-   - Software update scan policy
-   - WSUS server location
+2. Verify that software update synchronization is successful on the software update point. If synchronization fails, [troubleshoot synchronization issues](troubleshoot-software-update-synchronization.md).
+3. If the WUAHandler.log file doesn't exist and isn't created after you start a scan cycle, the issue most likely occurs because of one of the following reasons:
+   - The [software update scan policy](track-software-update-compliance-assessment.md#software-update-scan-policy) isn't available
+   - Clients can't find the [WSUS server location](track-software-update-compliance-assessment.md#wsus-server-location)
 4. Verify that there are no communication errors in the CcmMessaging.log file on the client.
-5. If the management point returns an empty WSUS location response, there might be a mismatch in the content version of WSUS. In turn, this might be caused by failed synchronization. To find the content version of the software update point, open Configuration Manager console, go to **Monitoring** > **Software Update Point Synchronization Status**.
-
-> [!NOTE]
-> The complete list of Windows Update error codes can be found in [Windows Update common errors and mitigation](/windows/deployment/update/windows-update-errors).
+5. If the scan is successful, the client should send state messages to the management point to indicate the update status. To understand how state messages processing works, see [state message processing flow](track-software-update-compliance-assessment.md#state-message-processing-flow).

@@ -124,6 +124,8 @@
           href: hash-mismatch-error-download-contentinfo-tar.md
         - name: Package distribution to a remote DP fails
           href: package-distribution-to-remote-dp-fails.md
+        - name: Windows Installer source list update fails
+          href: windows-installer-source-list-update-fails.md
     - name: Troubleshoot content distribution
       items:
         - name: Content distribution overview
@@ -224,8 +226,12 @@
       items:
         - name: A client computer steals the GUID of an Unknown Computer object
           href: unknown-computer-object-guid-stolen.md
+        - name: Active users and groups are unexpectedly deleted
+          href: active-users-groups-unexpectedly-deleted.md
         - name: An error occurred when loading the task sequence
           href: cannot-create-mdt-task-sequence.md
+        - name: An in-place upgrade task sequence doesn't continue 
+          href: in-place-upgrade-task-sequence-not-continue.md
         - name: Apply Driver Package task fails with error 80070057
           href: apply-driver-package-task-error-80070057.md
         - name: Computer hangs during an OSD task sequence in debug mode
@@ -242,6 +248,8 @@
           href: no-mouse-cursor-during-osd-task-sequence.md
         - name: OSDResults doesn't display installed applications
           href: osdresults-not-display-installed-applications.md
+        - name: Sending with winhttp failed 80072f8f
+          href: sending-with-winhttp-failed-80072f8f-error.md
         - name: Slow task sequences with earlier client versions
           href: slow-task-sequence-with-earlier-client-version.md
         - name: Task sequence fails if software updates require multiple restarts
@@ -264,6 +272,8 @@
       items:
         - name: MBAM 2.0 setup prerequisite checker fails
           href: mbam-setup-fails-with-prerequisite-check.md
+    - name: Not found error editing Update Application Catalog Tables
+      href: not-found-error-editing-maintenance-task.md
     - name: Site installation
       items:
         - name: A central administration site setup fails
@@ -304,6 +314,8 @@
           href: changes-to-built-in-collections-overwritten.md
         - name: Clients are automatically upgraded
           href: clients-automatically-upgrade.md
+        - name: Error downloading the ConfigMgr.AdminUIContent.cab file
+          href: service-connection-tool-not-download-updates.md
         - name: Site upgrade gets stuck at database update
           href: site-upgrade-blocked-in-database-update.md
         - name: Upgrade to System Center 2012 Configuration Manager SP1
@@ -314,40 +326,50 @@
       href: maintenance-tasks-default-settings.md
 - name: Software update management
   items:
-    - name: Deployment issues
+    - name: Issues
       items:
         - name: Bad gateway error when deploying software updates
           href: bad-gateway-error-deploy-software-updates.md
-    - name: Different results are shown for software updates
-      href: different-software-updates-results-displayed.md
-    - name: Errors when servicing a server group
-      href: errors-servicing-server-group.md
-    - name: Software updates introduction
-      href: software-updates-introduction.md
-    - name: Software updates maintenance
-      href: software-update-maintenance.md
-    - name: State messaging
-      href: state-messaging-description.md
-    - name: Track software update deployment process
-      href: track-software-update-deployment-process.md
-    - name: Installation, supersedence or detection issues
-      items:
         - name: Clients don't get software updates
           href: clients-not-get-software-updates.md
-        - name: .NET Framework 4.7.2 updates fail to sync
-          href: dotnet-framework-updates-fail-to-sync.md
+        - name: Different results are shown for software updates
+          href: different-software-updates-results-displayed.md
+        - name: Errors when servicing a server group
+          href: errors-servicing-server-group.md
         - name: Error 0x800f0831 installing updates
           href: error-0x800f0831-installing-update.md
-    - name: Troubleshoot
+        - name: .NET Framework 4.7.2 updates fail to sync
+          href: dotnet-framework-updates-fail-to-sync.md
+    - name: State messaging
+      href: state-messaging-description.md
+    - name: Understand software update management
       items:
-        - name: Troubleshoot software update deployment
-          href: troubleshoot-software-update-deployments.md
+        - name: Software updates introduction
+          href: software-updates-introduction.md
+        - name: Software updates maintenance
+          href: software-update-maintenance.md
+        - name: Software update point installation and configuration
+          href: software-update-point-installation-configuration.md
+        - name: WSUS Configuration Manager
+          href: wsus-configuration-manager.md
+        - name: Track software update synchronization
+          href: track-software-update-synchronization.md
+        - name: Track software update compliance assessment
+          href: track-software-update-compliance-assessment.md
+        - name: Track software update deployment
+          href: track-software-update-deployment-process.md
+    - name: Troubleshoot software update management
+      items:
+        - name: Enable verbose logging
+          href: enable-verbose-logging.md
         - name: Troubleshoot software update management
           href: troubleshoot-software-update-management.md
-        - name: Troubleshoot software update scan failures
-          href: troubleshoot-software-update-scan-failures.md
         - name: Troubleshoot software update synchronization
           href: troubleshoot-software-update-synchronization.md
+        - name: Troubleshoot software update scan failures
+          href: troubleshoot-software-update-scan-failures.md
+        - name: Troubleshoot software update deployment
+          href: troubleshoot-software-update-deployments.md
     - name: Windows Server Update Services (WSUS)
       items:
         - name: Deploy Windows Defender definition updates
@@ -358,7 +380,7 @@
           href: high-network-bandwidth-usage.md
         - name: Optimize WSUS client performance
           href: optimize-wsus-client-performance.md
-        - name: The WSUS console crashes
+        - name: WSUS console crashes
           href: wsus-console-crashes.md
         - name: Troubleshoot issues with WSUS client agents
           href: troubleshoot-issues-with-wsus-client-agents.md
@@ -372,5 +394,9 @@
           href: windows-server-update-services-best-practices.md
         - name: WSUS client takes too long to finish an update scan
           href: wsus-client-long-time-finish-update-scan.md
+        - name: WSUS maintenance guide
+          href: wsus-maintenance-guide.md
+        - name: WSUS sync fails in Windows Server 2008 R2
+          href: wsus-not-sync-with-certificate-error-800B0109.md
         - name: WSUS synchronization fails with SoapException
           href: wsus-synchronization-fails-with-soapexception.md
