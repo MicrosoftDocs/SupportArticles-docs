@@ -107,7 +107,7 @@ To resolve this issue, follow these steps:
 
 ### Did this fix the problem?
 
-- Check whether the problem is fixed. If the problem is fixed, you're finished with this section. If the problem isn't fixed, you can [contact support](/contactus).
+- Check whether the problem is fixed. If the problem is fixed, you're finished with this section. If the problem isn't fixed, you can [contact support](https://support.microsoft.com/contactus/?ws=support).
 - We would appreciate your feedback. To provide feedback or to report any issues with this solution, please leave a comment on the "[Fix it for me](https://support.microsoft.com/help/2970908)" blog or send us an [email](mailto:fixit4me@microsoft.com?subject=kb) message.
 
 ## More information
