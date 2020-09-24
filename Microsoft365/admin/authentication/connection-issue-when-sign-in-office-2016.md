@@ -20,6 +20,9 @@ appliesto:
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
+> [!TIP]
+> To diagnose and automatically fix several common Office sign-in issues, you can download and run the [Microsoft Support and Recovery Assistant](https://aka.ms/SaRA_TshootOfficeSCA_Docs).
+
 ## Overview
 
 This article contains information about a new authentication framework for Microsoft Office 2016. 
