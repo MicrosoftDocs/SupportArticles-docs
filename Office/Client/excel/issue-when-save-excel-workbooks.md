@@ -280,7 +280,7 @@ If the workbook saves after you restart Windows in safe mode, try to save the fi
 
 If the workbook does not save (or save again) after you restart Windows in safe mode, the following are possible causes:
 
-- [Third-party add-in](#third-party-add-in)    
+- [Third-party add-ins](#third-party-add-ins)    
 - [Antivirus software conflict](#antivirus-software-conflict)    
 - [Restricted permissions](#restricted-permissions)    
 - [File name length](#file-name-length)    
