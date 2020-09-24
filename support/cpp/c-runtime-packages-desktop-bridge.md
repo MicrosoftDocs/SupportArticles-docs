@@ -19,11 +19,11 @@ Windows desktop applications that have a dependency on the C++ Runtime libraries
 
 ## How to install and update Desktop framework packages
 
-Microsoft provides C++ Runtime framework packages to allow applications to reference the C++ runtime from desktop applications distributed through the Windows Store. These packages are distributed and updated through the Windows Store, similar to the way that C++ UWP framework packages are handled.
+Microsoft provides C++ Runtime framework packages to allow applications to reference the C++ runtime from desktop applications distributed through the Windows Store. These packages are distributed and updated through the Windows Store and are handled similarly to C++ UWP framework packages.
 
-For development purposes, the current version, v14.0, of both debug and retail appx packages are included with Visual Studio 2019 when you choose the **Universal Windows Platform Development** workload plus the optional **C++ (v142) Universal Windows Tools** component. The packages can be found under `%ProgramFiles(x86)%\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop\14.0`.
+For development purposes, the current version (v14.0) of both debug and retail appx packages are included with Visual Studio 2019 when you choose the **Universal Windows Platform Development** workload with the optional **C++ (v142) Universal Windows Tools** component. The packages can be found under `%ProgramFiles(x86)%\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop\14.0`.
 
-In a few scenarios, such as [Windows Sandbox](/windows/security/threat-protection/windows-sandbox/windows-sandbox-overview) or where applications will be running on offline machines, developers may find it easier to download the packages corresponding to their deployment architectures from one of the links below and manually install them using the `Add-AppxPackage` PowerShell cmdlet:
+In some scenarios such as [Windows Sandbox](/windows/security/threat-protection/windows-sandbox/windows-sandbox-overview) or where applications run on offline machines, developers may find it easier to download the packages corresponding to their deployment architectures from one of the links below and manually install them using the `Add-AppxPackage` PowerShell cmdlet:
 
 - [Microsoft.VCLibs.arm.14.00.Desktop.appx](https://aka.ms/Microsoft.VCLibs.arm.14.00.Desktop.appx)
 - [Microsoft.VCLibs.arm64.14.00.Desktop.appx](https://aka.ms/Microsoft.VCLibs.arm64.14.00.Desktop.appx)
