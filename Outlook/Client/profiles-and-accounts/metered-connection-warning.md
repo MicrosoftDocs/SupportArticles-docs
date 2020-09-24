@@ -55,9 +55,11 @@ For more information about update channels for Office 365 clients, see [Update 
 
 ## Workaround
 
-### For Outlook for Microsoft 365
+### For Outlook for Microsoft 365 and Outlook 2016
 
-If you are running Outlook for Microsoft 365, the issue may be caused by registry values that are located under the following subkey:
+#### Method 1: Delete the SecurityManager key in the registry
+
+The issue may be caused by registry values under this subkey:
 
 `HKLM\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\SecurityManager\CapAuthz\ApplicationsEx`
 
@@ -74,14 +76,20 @@ To work around this issue, delete the **SecurityManager** key and its subkeys in
 
     `HKLM\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\SecurityManager\CapAuthz\ApplicationsEx`
 
-4. Right-click the **SecurityManager** key, and then select **Permissions**.
-5. Select **Advanced**, and then select the **Replace all child object permission entries with inheritable permission entries from this object** check box.
+4. Right-click the **SecurityManager** key, and select **Permissions**.
+5. Select **Advanced**, and select the **Replace all child object permission entries with inheritable permission entries from this object** check box.
 6. Select **OK**.
 7. Select **yes** when you receive the following prompt: "**This will replace explicitly defined permissions on all descendants of this object with inheritable permissions from \<parent key>. Do you wish to continue?**
 8. Select **OK**.
 9. Right-click on **SecurityManager**, select **Delete** to delete the **SecurityManager** key and the subkeys.
 10. Exit **Registry Editor**.
 11. [Repair the Office application](https://support.microsoft.com/office/repair-an-office-application-7821d4b6-7c1d-4205-aa0e-a6b40c5bb88b), and check whether the issue is resolved.
+
+#### Method 2: Stop third-party applications that access MAPISVC.inf file
+
+The issue may also be caused by third-party applications that can access MAPISVC.inf and prevent Outlook from setting up the Account Manager. Stopping these applications and their processes should mitigate the issue.
+
+You can use [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) to see what processes are accessing MAPISVC.inf. The process **SHARING_VIOLATION on MAPISVC.inf** shown in Process Monitor indicates this is at least part of the problem. For instance, RepMgr.exe (C:\Program Files\Confer\RepMgr.exe) is an application known to cause this issue.
 
 ### For Outlook 2013
 
