@@ -64,7 +64,7 @@ For additional information about the minimum file permissions that common ASP.NE
 
 By default, SQL Server doesn't grant users the ability to query or update databases. This rule also applies to ASP.NET applications and the ASPNET user account. To enable ASP.NET applications to gain access to data that is stored in a SQL Server database, the database administrator must grant rights to the ASPNET account.
 
-For additional information about how to configure SQL Server to allow queries and updates from ASP.NET applications, visit [Configure permissions on database objects](https://docs.microsoft.com/sql/t-sql/lesson-2-configuring-permissions-on-database-objects?view=sql-server-ver15).
+For additional information about how to configure SQL Server to allow queries and updates from ASP.NET applications, visit [Configure permissions on database objects](https://docs.microsoft.com/sql/t-sql/lesson-2-configuring-permissions-on-database-objects?view=sql-server-ver15&preserve-view=true).
 
 ## Configure URLScan to increase protection of ASP.NET web applications
 
