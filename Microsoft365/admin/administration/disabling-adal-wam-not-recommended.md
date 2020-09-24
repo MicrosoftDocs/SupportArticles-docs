@@ -25,7 +25,7 @@ description: Explains why disabling ADAL or WAM authentication to fix Office sig
 ## Summary
 
 > [!TIP]
-> To diagnose and automatically fix several common Office sign-in issues, you can download and run the [Microsoft Support and Recovery Assistant](https://aka.ms/SaRA_TshootOfficeSCA_Docs).
+> To diagnose and automatically fix several common Office sign-in issues, you can download and run the [Microsoft Support and Recovery Assistant](https://aka.ms/SaRA-OfficeSignInScenario).
 
 Disabling ADAL or WAM authentication as a solution to fix sign-in or activation issues can have adverse effects in your environment and **is not recommended**.
 
