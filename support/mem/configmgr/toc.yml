@@ -326,40 +326,50 @@
       href: maintenance-tasks-default-settings.md
 - name: Software update management
   items:
-    - name: Deployment issues
+    - name: Issues
       items:
         - name: Bad gateway error when deploying software updates
           href: bad-gateway-error-deploy-software-updates.md
-    - name: Different results are shown for software updates
-      href: different-software-updates-results-displayed.md
-    - name: Errors when servicing a server group
-      href: errors-servicing-server-group.md
-    - name: Software updates introduction
-      href: software-updates-introduction.md
-    - name: Software updates maintenance
-      href: software-update-maintenance.md
-    - name: State messaging
-      href: state-messaging-description.md
-    - name: Track software update deployment process
-      href: track-software-update-deployment-process.md
-    - name: Installation, supersedence or detection issues
-      items:
         - name: Clients don't get software updates
           href: clients-not-get-software-updates.md
-        - name: .NET Framework 4.7.2 updates fail to sync
-          href: dotnet-framework-updates-fail-to-sync.md
+        - name: Different results are shown for software updates
+          href: different-software-updates-results-displayed.md
+        - name: Errors when servicing a server group
+          href: errors-servicing-server-group.md
         - name: Error 0x800f0831 installing updates
           href: error-0x800f0831-installing-update.md
-    - name: Troubleshoot
+        - name: .NET Framework 4.7.2 updates fail to sync
+          href: dotnet-framework-updates-fail-to-sync.md
+    - name: State messaging
+      href: state-messaging-description.md
+    - name: Understand software update management
       items:
-        - name: Troubleshoot software update deployment
-          href: troubleshoot-software-update-deployments.md
+        - name: Software updates introduction
+          href: software-updates-introduction.md
+        - name: Software updates maintenance
+          href: software-update-maintenance.md
+        - name: Software update point installation and configuration
+          href: software-update-point-installation-configuration.md
+        - name: WSUS Configuration Manager
+          href: wsus-configuration-manager.md
+        - name: Track software update synchronization
+          href: track-software-update-synchronization.md
+        - name: Track software update compliance assessment
+          href: track-software-update-compliance-assessment.md
+        - name: Track software update deployment
+          href: track-software-update-deployment-process.md
+    - name: Troubleshoot software update management
+      items:
+        - name: Enable verbose logging
+          href: enable-verbose-logging.md
         - name: Troubleshoot software update management
           href: troubleshoot-software-update-management.md
-        - name: Troubleshoot software update scan failures
-          href: troubleshoot-software-update-scan-failures.md
         - name: Troubleshoot software update synchronization
           href: troubleshoot-software-update-synchronization.md
+        - name: Troubleshoot software update scan failures
+          href: troubleshoot-software-update-scan-failures.md
+        - name: Troubleshoot software update deployment
+          href: troubleshoot-software-update-deployments.md
     - name: Windows Server Update Services (WSUS)
       items:
         - name: Deploy Windows Defender definition updates
@@ -370,7 +380,7 @@
           href: high-network-bandwidth-usage.md
         - name: Optimize WSUS client performance
           href: optimize-wsus-client-performance.md
-        - name: The WSUS console crashes
+        - name: WSUS console crashes
           href: wsus-console-crashes.md
         - name: Troubleshoot issues with WSUS client agents
           href: troubleshoot-issues-with-wsus-client-agents.md
