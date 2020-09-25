@@ -163,7 +163,7 @@ The devices have to run Windows 10, version 1607 or a later version.
 
 ### <a id="7" ></a>Company portal app or website enrollment
 
-Your users don't have to install a company portal app to enroll a Windows 10 device in Intune. However, using a company portal app (or a company portal website) provides the ability to not only enroll devices, but to also view and install applications that the company has provisioned.
+Your users don't have to install a company portal app to enroll a Windows 10 device in Intune. However, if you do have your users install a company portal app (or use a company portal website) you can add device enrollment functions to the portal or website. You can also add the ability to view and install applications that the company has provisioned.
 
 #### Company portal app
 
@@ -208,7 +208,7 @@ After a Windows device is enrolled in Intune, the following locations on the dev
 
 ### Event Viewer
 
-The UserDevice Registration and DeviceManagement Enterprise Diagnostics providers generate enrollment-related events. Events include those listed in the following table.
+The UserDevice Registration and DeviceManagement Enterprise Diagnostics providers generate enrollment-related events. The following table lists some of these events.
 
 |Event Message |Event ID |
 | --- | --- |
@@ -246,13 +246,13 @@ To view the enrollment registry entries, open Registry Editor on the device and 
 
 > HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Enrollments\C1937429-6DB2-4E10-B99A-A4A1D45C9F3F
 
-The GUID represents the configuration source, as identified in the diagnostics report. The entries and values in this subkey include configuration information as well as the user principal name (UPN) of the user that is associated with the device.
+The GUID represents the configuration source, as identified in the diagnostics report. The entries and values in this subkey include configuration information and the user principal name (UPN) of the user that is associated with the device.
 
 :::image type="content" source=".\media\enroll-devices-in-intune-tip\intune-registry-16.png" alt-text="Enrollment subkeys and entries in the registry":::
 
 ## Comparison
 
-Now let’s quickly compare these eight enrollment methods in terms of the intended devices and the user experiences.
+Now let’s quickly compare the intended devices and user experiences of these eight enrollment methods.
 
 |Enrollment method |Device ownership |User interaction required for enrollment|
 | --- | --- | --- |
