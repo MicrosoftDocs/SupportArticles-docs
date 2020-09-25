@@ -23,8 +23,8 @@ Before you can manage devices in Intune, you need to enroll the devices in the I
 
 | Manual&nbsp;enrollment | Automatic enrollment |
 | --- | --- |
-|The user starts the enrollment process. |An automated process fetches the user or device credentials and starts the enrollment process. The user does not have to sign in. |
-|Usually used to enroll personal devices. |Usually used to bulk-enroll corporate devices for an enterprise. |
+|The user starts the enrollment process. |An automated process fetches the user or device credentials and starts the enrollment process. The user doesn't have to sign in. |
+|Typically used to enroll personal devices. |Typically used to bulk-enroll corporate devices for an enterprise. |
 
 ## Overviews of the enrollment methods
 
@@ -51,7 +51,7 @@ You would typically use this method when the user doesn't have an Azure AD licen
 
 After you use this method, the device appears as a Personal device in the **All Devices** list. You can use Intune to apply mobile device management (MDM) policies to the device. However, the device doesn't appear in the **Azure AD Devices** list.
 
-Because the device is not part of the Azure AD domain, you can't use Azure features such as Conditional Access to manage it. For this reason, we do not recommend the use of this method.
+Because the device isn't part of the Azure AD domain, you can't use Azure features such as Conditional Access to manage it. For this reason, we don't recommend that you use this method.
 
 To use this method, the user has to follow these steps:
 
@@ -61,7 +61,7 @@ To use this method, the user has to follow these steps:
 
 ### <a id="2" ></a>Automatic enrollment by using MDM
 
-This is one of several methods that you can use to add a device to an Azure Active Directory domain and then enroll it in Intune.
+This method is one of several that you can use to add a device to an Azure Active Directory domain and then enroll it in Intune.
 
 When using this method, the user can do either of the following:
 
@@ -73,14 +73,14 @@ After this process finishes, the device appears in both the **All Devices** and 
 
 Before you try to use this method, make sure of the following:
 
-- The user has an AAD Premium license.
-- You have configured the MDM scope for your Azure AD environment. For information about how to set up the MDM scope in Azure AD, see [Windows 10, Azure AD and Microsoft Intune: Automatic MDM enrollment powered by the cloud!](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/windows-10-azure-ad-and-microsoft-intune-automatic-mdm/ba-p/244067).
+- The user has an Azure Active Directory Premium license.
+- You've configured the MDM scope for your Azure AD environment. For information about how to set up the MDM scope in Azure AD, see [Windows 10, Azure AD and Microsoft Intune: Automatic MDM enrollment powered by the cloud!](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/windows-10-azure-ad-and-microsoft-intune-automatic-mdm/ba-p/244067).
 
-Additionally, in the case of a Corporate device, make sure of the following:
+Additionally, for a Corporate device, make sure of the following:
 
-- The device does not run Windows 10 Home edition.
-- The device is not joined to an on-premises domain.
-- The device is not already managed by MDM.
+- The device doesn't run Windows 10 Home edition.
+- The device isn't joined to an on-premises domain.
+- The device isn't already managed by MDM.
 - The user who will be signed in to the device has Admin-level permissions on the device.
 
 To use this method, the user has to follow these steps:
@@ -94,14 +94,14 @@ To use this method, the user has to follow these steps:
 
 ### <a id="3" ></a>Automatic enrollment by using GPO
 
-The previous two methods required user action to start the enrollment process. Requiring such user activity is not practical if you have thousands of devices to enroll for your enterprise.
+The previous two methods required user action to start the enrollment process. Requiring such user activity isn't practical if you have thousands of devices to enroll for your enterprise.
 
 Group Policy provides a means of bulk-enrolling Corporate devices without involving the users (this method doesn't enroll Personal devices). Each of the devices must meet the following requirements:
 
 - The device runs Windows 10, version 1709 or a later version.
 - The device is joined to a hybrid Azure AD domain, and has an Azure AD Primary Refresh Token (PRT).
 
-In order to enroll the devices, configure a Group Policy object (GPO). For more information about how to configure and target the GPO, see [Enroll a Windows 10 device automatically using Group Policy](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy).
+To enroll the devices, configure a Group Policy object (GPO). For more information about how to configure and target the GPO, see [Enroll a Windows 10 device automatically using Group Policy](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy).
 
 :::image type="content" source=".\media\enroll-devices-in-intune-tip\intune-gpo-for-mem-enrollment-4.png" alt-text="MDM GPO in the Group Policy Management Editor":::
 
@@ -117,7 +117,7 @@ As part of Windows Autopilot, you can customize the greeting screen of the OOBE.
 
 :::image type="content" source=".\media\enroll-devices-in-intune-tip\intune-windows-autopilot-greeting-6.png" alt-text="Customized greeting screen for Windows Autopilot OOBE":::
 
-In order to configure Windows Autopilot, you have to have the hardware hashes or serial numbers of the device. In Intune, make sure that you configure the MDM scope for Autopilot.
+To configure Windows Autopilot, you have to have the hardware hashes or serial numbers of the device. In Intune, make sure that you configure the MDM scope for Autopilot.
 For more information, see [Enroll Windows devices in Intune by using Windows Autopilot](https://docs.microsoft.com/mem/intune/enrollment/enrollment-autopilot).
 
 > [!NOTE]  
@@ -125,7 +125,7 @@ For more information, see [Enroll Windows devices in Intune by using Windows Aut
 
 ### <a id="5"></a>Intune and Configuration Manager co-management enrollment
 
-You can use this method if you are already using System Center Configuration Manager (SCCM) to manage domain-joined Corporate devices. You can use Configuration Manager to enroll them in Intune as Corporate devices. You can then define workloads in Configuration Manager to identify when Configuration Manager policy applies and when Intune policy applies. You do not have to use Group Policy to enroll the devices.
+You can use this method if you're already using System Center Configuration Manager (SCCM) to manage domain-joined Corporate devices. You can use Configuration Manager to enroll them in Intune as Corporate devices. You can then define workloads in Configuration Manager to identify when Configuration Manager policy applies and when Intune policy applies. You don't have to use Group Policy to enroll the devices.
 
 This method requires Configuration Manager version 1710 or a later version.
 
@@ -135,7 +135,7 @@ Each of the devices must meet the following requirements:
 - The device is joined to a hybrid Azure AD domain, and has an Azure AD Primary Refresh Token (PRT).
 - The device has a Configuration Client installed.
 
-In order to use this method, you have to add the devices to an appropriate collection in the Configuration Manager console. The following figures show the relevant properties to configure.
+To use this method, you have to add the devices to an appropriate collection in the Configuration Manager console. The following figures show the relevant properties to configure.
 
 :::image type="content" source=".\media\enroll-devices-in-intune-tip\intune-scmm-co-mgmt-props-7a.png" alt-text="Configuration Manager properties for enabling Intune co-management":::
 
@@ -145,11 +145,11 @@ For more information about this enrollment method, see [Support Tip: Understandi
 
 ### <a id="6"></a>Deep link enrollment
 
-You can provide users a with a deep link to start the enrollment process for Personal devices.
+You can provide users with a deep link to start the enrollment process for Personal devices.
 
 :::image type="content" source=".\media\enroll-devices-in-intune-tip\intune-deep-link-destination-8a.png" alt-text="Destination of an enrollment deep link":::
 
-This process is the equivalent of the **Enroll only in device management** option in the user interface.
+This process is the equivalent of the **Enroll only in device management** user interface option.
 
 :::image type="content" source=".\media\enroll-devices-in-intune-tip\intune-deep-link-process-8b.png" alt-text="Deep link enrollment process, step 1":::
 
@@ -163,7 +163,7 @@ The devices have to run Windows 10, version 1607 or a later version.
 
 ### <a id="7" ></a>Company portal app or website enrollment
 
-Your users do not have to install a company portal app in order to enroll a Windows 10 device in Intune. However, using a company portal app (or a company portal website) provides the ability to not only enroll devices, but to also view and install applications that the company has provisioned.
+Your users don't have to install a company portal app to enroll a Windows 10 device in Intune. However, using a company portal app (or a company portal website) provides the ability to not only enroll devices, but to also view and install applications that the company has provisioned.
 
 #### Company portal app
 
@@ -194,8 +194,7 @@ You can use WCD to create a provisioning package (a .ppkg file) that contains co
 
 :::image type="content" source=".\media\enroll-devices-in-intune-tip\intune-wcd-screen-11.png" alt-text="WCD start page":::
 
-Existing users can access and install the package from their Windows desktop screens, or you can load the package on removable USB media for distribution to new Windows devices.
-The USB media can copy the package to the device when the device starts for the first time. Then the enrollment process completes during the Windows OOBE experience.
+Existing users can access and install the package from their Windows desktop screens. As an alternative, you can load the package on removable USB media and distribute that media to new Windows devices. When a new device starts for the first time, the USB media copies the package to the device. Then the enrollment process completes during the Windows OOBE experience.
 
 For more information about creating provisioning packages, see [Bulk enrollment for Windows devices](https://docs.microsoft.com/mem/intune/enrollment/windows-bulk-enroll).
 
@@ -237,7 +236,7 @@ To export the diagnostic logs, select **Export**.
 
 :::image type="content" source=".\media\enroll-devices-in-intune-tip\intune-diagnostics-14b.png" alt-text="Select Export to export diagnostics":::
 
-The diagnostics report includes information such as the current values of settings that are configured by policy, and the GUID of the service that applied the policy.
+The diagnostics report includes information such as the GUIDs of services that apply policies, and the current values of settings that those policies control.
 
 :::image type="content" source=".\media\enroll-devices-in-intune-tip\intune-diagnostics-report-15.png" alt-text="Diagnostic report information":::
 
@@ -273,7 +272,7 @@ Your choice of a method of enrolling Windows devices in Intune depends on a numb
 - Use case
 - Type of device (Personal or Corporate)
 - Available infrastructure (such as System Center Configuration Manager, hardware hash, or an on-premises domain that enforces Group Policy)
-- Scale (one personal device, or or a large number of enterprise devices)
+- Scale (one personal device, or a large number of enterprise devices)
 
 ## References
 
