@@ -1,4 +1,4 @@
-- name: Windows Client
+- name: Windows client
   href: welcome-windows-client.md
 - name: Active Directory
   items:
