@@ -49,14 +49,10 @@
     href: admin-credentials-supplied-not-valid.md
   - name: Azure AD Connect won't work after upgrading
     href: cannot-work-automatic-upgrade.md
-  - name: Azure AD Sync tool installation fails
-    href: install-ad-sync-tool-fails.md
   - name: Can't connect to Azure RMS
     href: fail-connect-azure-information-protection-PowerShell.md
   - name: Can't enable Device writeback
     href: Cannot-enable-device-writeback.md
-  - name: Can't import module for Azure AD Sync tool
-    href: specified-module-dirsync-not-load.md
   - name: Can't manage or remove objects
     href: cannot-manage-objects.md
   - name: Can't run DirSyncConfigShell.psc1
@@ -181,8 +177,6 @@
     href: term-cmdlet-name-not-recognized-aad-cmdlet.md
   - name: Troubleshoot MFA issues
     href: troubleshoot-azure-mfa-issue.md
-  - name: Unable to connect to the Synchronization Service in Miisclient
-    href: unable-connect-sync-service-miisclient.md
   - name: Unable to register a device
     href: cant-connect-service-error-register-device.md 
   - name: Unexpected error when resetting password

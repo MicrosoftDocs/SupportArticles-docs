@@ -20,7 +20,7 @@ _Original KB number:_ &nbsp; 4490130
 
    :::image type="content" source="./media/verify-ndes-configuration/open-script.png" alt-text="Screenshot of opening the Validate-NDESConfiguration.ps1 script.":::
 
-2. On the NDES server, run PowerShell as administrator. You may have to change PowerShell [ExecutionPolicy](/powershell/module/microsoft.powershell.security/get-executionpolicy?view=powershell-6) to **Unrestricted** to run the script.
+2. On the NDES server, run PowerShell as administrator. You may have to change PowerShell [ExecutionPolicy](/powershell/module/microsoft.powershell.security/get-executionpolicy) to **Unrestricted** to run the script.
 
    > [!NOTE]
    > Do not forget to change it back to the original setting once done .

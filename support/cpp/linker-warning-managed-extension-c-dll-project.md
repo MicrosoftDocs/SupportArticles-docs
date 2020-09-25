@@ -127,7 +127,7 @@ To modify DLLs that you enter by using dll exports (`__declspec(dllexport)`) and
     3. In the right pane, click to select **Common Language Runtime Support, Old Syntax (/clr:oldSyntax)** in the **Common Language Runtime support** project settings.
     4. Click **Apply**, and then click **OK**.
 
-    For more information about common language runtime support compiler options, see [/clr (Common Language Runtime Compilation)](/cpp/build/reference/clr-common-language-runtime-compilation?view=vs-2019).
+    For more information about common language runtime support compiler options, see [/clr (Common Language Runtime Compilation)](/cpp/build/reference/clr-common-language-runtime-compilation?view=vs-2019&preserve-view=true).
 
     These steps apply to the whole article.
 

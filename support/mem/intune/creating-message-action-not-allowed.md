@@ -24,4 +24,4 @@ This is expected behavior when you sign in to Outlook by using a Microsoft Ex
 
 ## Resolution
 
-To resolve this issue, sign in by using an AAD-based account after you configure Exchange hybrid Modern Authentication. For more information about this configuration, see [Using hybrid Modern Authentication with Outlook for iOS and Android](/exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth?view=exchserver-2019).
+To resolve this issue, sign in by using an AAD-based account after you configure Exchange hybrid Modern Authentication. For more information about this configuration, see [Using hybrid Modern Authentication with Outlook for iOS and Android](/exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth).

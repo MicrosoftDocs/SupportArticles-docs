@@ -50,7 +50,7 @@ As per the above statistics, definitely RDP port is open and server is respondin
 - Are there any [Access Control Lists](https://docs.microsoft.com/archive/blogs/walterm/windows-azure-paas-acls-are-here)  defined for the cloud service?
 - Is there any [windows firewall rule configured using startup task](https://docs.microsoft.com/azure/cloud-services/cloud-services-startup-tasks-common#add-firewall-rules)?
 
-If you checked the **ServiceDefinition.csdef** file but couldn't find any ACL configured and there were no startup tasks related to firewall configuration for this cloud service solution as well, the only thing that was left was to capture a [Network Monitor](https://www.microsoft.com/download/4865) trace and analyze the RDP traffic.
+If you checked the **ServiceDefinition.csdef** file but couldn't find any ACL configured and there were no startup tasks related to firewall configuration for this cloud service solution as well, the only thing that was left was to capture a [Network Monitor](https://docs.microsoft.com/windows/client-management/troubleshoot-tcpip-netmon) trace and analyze the RDP traffic.
 
 :::image type="content" source="media/scenario-6-connect-healthmonitor-worker-role-rdp/4464841_en_1.png" alt-text="Screenshot of network trace.":::
 

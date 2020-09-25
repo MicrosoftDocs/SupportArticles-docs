@@ -132,5 +132,5 @@ End Sub
 
 ## References
 
-- [DataGrid Class](/dotnet/api/system.web.ui.webcontrols.datagrid?&view=netframework-4.8)
+- [DataGrid Class](/dotnet/api/system.web.ui.webcontrols.datagrid?&view=netframework-4.8&preserve-view=true)
 - [Formatting Overview](/previous-versions/dotnet/netframework-1.1/26etazsy(v=vs.71))

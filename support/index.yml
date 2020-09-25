@@ -20,6 +20,11 @@ metadata:
 
 productDirectory:
   items:
+  - title: Windows
+    imageSrc: "media/hub-landing/windows.svg"
+    summary: Troubleshooting articles for Windows
+    url: windows/index.yml
+
   - title: Microsoft Edge and Internet Explorer
     imageSrc: "media/hub-landing/Edge.jpg"
     summary: Troubleshooting articles for Microsoft Edge and Internet Explorer
@@ -50,11 +55,6 @@ productDirectory:
     summary: Troubleshooting articles for Web Apps
     url: webapps/welcome-webapps.md
       
-  - title: Windows Developer
-    imageSrc: "media/hub-landing/logo_windows.svg"
-    summary: Troubleshooting articles for Windows Developer
-    url: windows/win32/welcome-windowsdeveloper.md
-      
   - title: Microsoft Endpoint Manager
     imageSrc: "media/hub-landing/MEM.jpg"
     summary: Troubleshooting articles for Microsoft Endpoint Manager
@@ -69,6 +69,11 @@ productDirectory:
     imageSrc: "https://static.docs.com/ui/media/product/azure/azure.svg"
     summary: Troubleshooting articles for Azure 
     url: azure/index.yml
+
+  - title: Previous Versions
+    imageSrc: "media/hub-landing/MEM.jpg"
+    summary: Troubleshooting articles for previous versions of products
+    url: previous-versions/index.yml
       
 # conceptualContent:
 

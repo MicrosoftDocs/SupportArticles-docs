@@ -34,4 +34,4 @@ Set the value of the `DiagnosticAndUsageDataEnabled` registry subkey under `HKEY
 
 ## Disable sharing diagnostics and usage data in Service Manager Self-Serve Portal
 
-Set the `EnableTelemetry` key in web.config to **False**. For more information, see [Customize the Self-Service portal](/system-center/scsm/deploy-self-service-portal?view=sc-sm-2019#customize-the-self-service-portal).
+Set the `EnableTelemetry` key in web.config to **False**. For more information, see [Customize the Self-Service portal](/system-center/scsm/deploy-self-service-portal#customize-the-self-service-portal).

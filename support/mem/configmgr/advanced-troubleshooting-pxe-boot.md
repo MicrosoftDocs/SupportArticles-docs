@@ -97,7 +97,7 @@ At this stage, there are no logs to refer to. However, a PXE error code is usua
 - PXE-E77 bad or missing discovery server list.
 - PXE-E78: Could not locate boot server.
 
-Although this helps narrow the focus of your troubleshooting, you might still have to capture a network trace of the issue by using a network monitoring tool such as [Netmon](https://www.microsoft.com/download/details.aspx?id=4865) or [WireShark](https://www.wireshark.org/download.html). The network monitoring tool must be installed on both the PXE-enabled DP and a computer that is connected to a mirrored port on the switch. For more information about how to configure mirrored ports, refer to the manual that's provided by the manufacturer of the specific switch or routing device.
+Although this helps narrow the focus of your troubleshooting, you might still have to capture a network trace of the issue by using a network monitoring tool such as Netmon or [WireShark](https://www.wireshark.org/download.html). The network monitoring tool must be installed on both the PXE-enabled DP and a computer that is connected to a mirrored port on the switch. For more information about how to configure mirrored ports, refer to the manual that's provided by the manufacturer of the specific switch or routing device.
 
 The typical procedure is to start the network traces on both the DP and the computer that is connected to the mirrored port, and try to start the device through PXE. Then, stop the trace, and save it for further analysis.
 

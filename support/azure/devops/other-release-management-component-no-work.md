@@ -1,6 +1,7 @@
 ---
 title: Release Management component doesn't work
 description: This article provides a workaround for the problem that the other component does not work after you uninstall Release Management Client or Release Management Server.
+ms.prod: devops
 ms.date: 08/14/2020
 ms.prod-support-area-path: Pipelines
 ms.reviewer: achand, daleche
