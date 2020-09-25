@@ -70,7 +70,7 @@ Here's how to identify which quota has been reached or exceeded and take correct
 
     For more information, read this [blog article](https://techcommunity.microsoft.com/t5/exchange-team-blog/public-folders-and-exchange-online/ba-p/594318).
 
-    If the auto-splitting process failed to create a new mailbox, please submit a support request to Microsoft Support for further assistance..
+    If the auto-splitting process failed to create a new mailbox, please submit a support request to Microsoft Support for further assistance.
 
     If this quota hasn't been exceeded, proceed to the next step.
 
