@@ -93,20 +93,22 @@ Here's how to identify which quota has been reached or exceeded and take correct
 
 Here are two ways to resolve this issue:
 
-1. Increase the *ProhibitPostQuota* of the public folder at the user level.
+1. Increase the *ProhibitPostQuota* of the public folder at the user level if there are only a few affected public folders.
 
     ```powershell
     Set-PublicFolder \pfname -ProhibitPostQuota 5GB -IssueWarningQuota 4GB
     ```
 
-2. Increase the DefaultPublicFolderProhibitPostQuota at the organization level.
+2. Increase the *DefaultPublicFolderProhibitPostQuota* for all public folders at the organization level.
 
     ```powershell
     Set-OrganizationConfig -DefaultPublicFolderProhibitPostQuota 5GB -DefaultPublicFolderIssueWarningQuota 4GB
     ```
 
-    > [!NOTE]
-    > Avoid a large increase of the individual public folder *Prohibitpostquota*. Setting this value too high will impact the auto-split process negatively.
+> [!NOTE]
+> Avoid a large increase of the individual public folder *Prohibitpostquota*. Setting this value too high will impact the auto-split process negatively.
+
+If this quota hasn't been exceeded, proceed to the next step.
 
 ### Step 3: Check the individual public folder post quota
 
