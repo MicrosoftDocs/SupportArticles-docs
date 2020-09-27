@@ -65,6 +65,8 @@
       href: ../email-delivery/mapiexceptionnotfound-ndr.md
     - name: 554 5.6.0 Invalid message NDR
       href: ../email-delivery/invalid-message-ndr.md
+    - name: 554 5.2.2 mailbox full NDR
+      href: ../email-delivery/cannot-send-mail-mepf.md
     - name: Automatically forward email in transport rule
       href: ../email-delivery/autoforward-mail-exclusions-not-honored-transport-rule.md
     - name: Email sent to EXO deferred with ATTR35
@@ -137,8 +139,6 @@
       href: ../outlook-on-the-web-issues/items-missing-search-results.md
   - name: Public Folders
     items:
-    - name: 554 5.2.2 mailbox full NDR
-      href: ../public-folders/cannot-send-mail-mepf.md
     - name: Can't add reviewer permission to calendars
       href: ../public-folders/add-reviewer-permission-public-folder-calendar-powershell.md
     - name: Can't apply permissions to subfolders
