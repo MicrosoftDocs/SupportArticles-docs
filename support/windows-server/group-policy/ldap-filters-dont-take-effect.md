@@ -65,7 +65,7 @@ The English (United States) version of this hotfix installs files that have the 
 > [!IMPORTANT]
 > Windows 7 and Windows Server 2008 R2 hotfixes are included in the same packages. However, only one of these products may be listed on the "Hotfix Request" page. To request the hotfix package that applies to both Windows 7 and Windows Server 2008 R2, just select the product that is listed on the page.
 >
-> - The MANIFEST files (.manifest) and the MUM files (.mum) that are installed for each environment are [listed separately](#manifests) in the "Additional file information for Windows Server 2008 R2 and for Windows 7" section. MUM and MANIFEST files, and the associated security catalog (.cat) files, are critical to maintaining the state of the updated component. The security catalog files, for which the attributes are not listed, are signed with a Microsoft digital signature.
+> - The MANIFEST files (.manifest) and the MUM files (.mum) that are installed for each environment are listed separately in the "Additional file information for Windows Server 2008 R2 and for Windows 7" section. MUM and MANIFEST files, and the associated security catalog (.cat) files, are critical to maintaining the state of the updated component. The security catalog files, for which the attributes are not listed, are signed with a Microsoft digital signature.
 
 ##### For all supported x86-based versions of Windows 7
 
