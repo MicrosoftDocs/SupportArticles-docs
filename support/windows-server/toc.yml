@@ -11,6 +11,10 @@
       href: ./identity/account-not-authorized-login-from-this-station.md
     - name: "\"This property is limited to 64 values\" error"
       href: ./identity/this-property-limited-64-values.md
+    - name: "\"access is denied\" error when replicating AD directory service"
+      href: ./identity/access-is-denied-error-domain-controller-replicate-ad.md
+    - name: "NET.EXE /ADD command doesn't support names longer than 20 characters"
+      href: ./identity/net-add-not-support-names-exceeding-20-characters.md
     - name: Access denied after logging on to a local administrator account
       href: ./identity/access-denied-log-on-administrator-domain-account.md
     - name: ACCESS DENIED with NetUser and NetGroup APIs
@@ -37,8 +41,12 @@
       href: ./identity/replication-error-8477.md
     - name: AD replication fails with Win32 error 1127
       href: ./identity/replication-error-1127.md
+    - name: AD communication fails on multihomed domain controllers
+      href: ./identity/active-directory-communication-fails.md
     - name: AD LDS instance logs Event ID 2092
       href: ./identity/ad-lds-instance-logs-event-id-2092.md
+    - name: AD replication fails with error 8409
+      href: ./identity/ad-replication-fails-error-8409.md
     - name: AD replication isn't working and event 1865
       href: ./identity/active-directory-replication-not-work-event-1865.md
     - name: ADAM General Event ID 1161 is logged on an AD LDS server
@@ -49,12 +57,18 @@
       href: ./identity/adfs-error-401-requested-resource-requires-authentication.md
     - name: ADMT 3.1 PES installation fails with error
       href: ./identity/supplied-password-not-match-encryption-keys-password.md
+    - name: ADWS service crashes after upgrade
+      href: ./identity/adws-service-crashes-after-you-upgrade.md
+    - name: All members of a group may not be returned
+      href: ./identity/all-members-group-may-not-be-returned.md
     - name: AuditPol and Local Security Policy results are different
       href: ./identity/auditpol-local-security-policy-results-differ.md
     - name: Availability and description of Active Directory Federation Services 2.0
       href: ./identity/availability-description-afds.md
     - name: Back up recovery agent EFS private key
       href: ./identity/back-up-recovery-agent-efs-private-key.md
+    - name: Cannot add a domain controller as a node
+      href: ./identity/cannot-add-domain-controller-node-failover-cluster.md
     - name: Cannot contect to the Internet or the domain
       href: ./identity/cannot-connect-internet-domain.md
     - name: Can't access AD data from Source Control Explorer
@@ -69,8 +83,12 @@
       href: ./identity/cannot-promote-dc-to-global-catalog-server.md
     - name: Can't select DNS Server role when adding a domain controller into an existing AD domain
       href: ./identity/auto-install-dns-server-role-disabled-promte-domain-controller.md
+    - name: Can't share files with multiple EFS certificates
+      href: ./identity/cant-share-files-multiple-efs-certificates.md
     - name: Certificate Services doesn't start
       href: ./identity/certificate-services-not-start.md
+    - name: Changes aren't replicated to destination domain controllers
+      href: ./identity/changes-arent-replicated-controllers.md
     - name: Compatibility with user accounts ending with the dollar sign
       href: ./identity/compatibility-user-accounts-end-dollar-sign.md
     - name: Configure Kerberos Constrained Delegation
@@ -85,10 +103,16 @@
       href: ./identity/dcpromo-demotion-fails.md
     - name: Default limit to workstation numbers
       href: ./identity/default-workstation-numbers-join-domain.md
+    - name: Define Security Templates by Security Templates Snap-In
+      href: ./identity/define-security-templates-using-security-templates-snap-in.md
+    - name: Delays when domain members communicate to DCs
+      href: ./identity/delays-domain-members-dc-remote-domains.md
     - name: Diagnose replication failures
       href: ./identity/diagnose-replication-failures.md
     - name: Disable KCC from automatically creating replication topology
       href: ./identity/disable-knowledge-consistency-checker-automatic-generation.md
+    - name: Disable TLS 1.0 and 1.1 and force the use of TLS 1.2
+      href: ./identity/disable-tls-1-1dot1-mbam-servers.md
     - name: Domain controller promotion process shows "Windows Server Technical Preview" 
       href: ./identity/domain-controller-promotion-windows-server-technical-preview.md
     - name: Domain controller rename doesn't rename all AD DFSR SYSVOL objects
@@ -103,8 +127,12 @@
       href: ./identity/directory-datatype-cannot-converted-to-from-native-ds-datatype-error.md
     - name: Error 0x80072EE7 when you perform Workplace Join
       href: ./identity/workplace-join-fail-error-0x80072ee7.md
+    - name: Error when you run AD Installation Wizard
+      href: ./identity/error-when-you-run-ad-installation-wizard.md
     - name: Errors when you run DCDIAG commands
       href: ./identity/dcdiag-commands-running-errors.md
+    - name: Errors when applications try to connect to SQL Server
+      href: ./identity/apps-forcibly-closed-tls-connection-errors.md
     - name: ESENT event IDs 1000, 1202, 412, and 454
       href: ./identity/esent-events-1000-1202-412-454.md
     - name: Event 2089 if you don't back up a domain controller
@@ -129,6 +157,8 @@
       href: ./identity/fsmo-placement-and-optimization-on-ad-dcs.md
     - name: FSMO roles
       href: ./identity/fsmo-roles.md
+    - name: Group Policy preparation isn't performed
+      href: ./identity/group-policy-preparation-isnt-performed.md
     - name: Hide or display InetOrgPerson object class
       href: ./identity/hide-display-inetorgperson-object-class.md
     - name: Host AD DCs in virtual hosting environments
@@ -167,6 +197,8 @@
       href: ./identity/syntax-build-answer-files-unattended-installation-ad-ds.md
     - name: How Windows Time service treats leap second
       href: ./identity/time-service-treats-leap-second.md
+    - name: How to remove manually Enterprise Windows Certificate Authority 
+      href: ./identity/delete-enterprise-windows-certificate-authority.md
     - name: Information about devices configured as RODCs
       href: ./identity/info-devices-configured-rodcs.md
     - name: Installing AD DS fails
@@ -183,8 +215,16 @@
       href: ./identity/ldap-kerberos-server-reset-tcp-sessions.md
     - name: LDAP paged queries with subordinate referrals are not chased properly
       href: ./identity/ldap-paged-queries-subordinate-referrals-not-chased.md
+    - name: LDAP queries return partial attribute list
+      href: ./identity/ldap-query-against-domain-controller-partial-attribute.md
+    - name: LDAP queries targeting host names take longer
+      href: ./identity/ldap-session-takes-longer-target-host-names.md
+    - name: LDAP session security settings and requirements after ADV190023
+      href: ./identity/ldap-session-security-settings-requirements-adv190023.md
     - name: LDAPS connection problems
       href: ./identity/ldap-over-ssl-connection-issues.md
+    - name: LDS service startup fails with Event ID 1168
+      href: ./identity/lds-service-startup-fails.md
     - name: Let non-administrators view deleted objects container
       href: ./identity/non-administrators-view-deleted-object-container.md
     - name: Lingering objects still remain
@@ -205,14 +245,14 @@
       href: ./identity/multiple-tabs-of-user-property-missing.md
     - name: Name computers, domains, sites, and OUs
       href: ./identity/naming-conventions-for-computer-domain-site-ou.md
-    - name: "NET.EXE /ADD command doesn't support names longer than 20 characters"
-      href: ./identity/net-add-not-support-names-exceeding-20-characters.md
     - name: Netlogon service doesn't keep settings after in-place upgrade
       href: ./identity/netlogon-service-not-start-automatically.md
     - name: Newly promoted domain controller fails to advertise after DCpromo
       href: ./identity/newly-promoted-domain-controller-fail-advertise.md
     - name: NTDS replication warning IDs 1083 and 1061
       href: ./identity/ntds-replication-warning-1083-1061-sam-error-12294.md
+    - name: NTDS Replication Warning Event ID 1093
+      href: ./identity/ntds-replication-warning-event-id-1093.md
     - name: NTFRS deprecation blocks installation of replica DCs
       href: ./identity/ntfrs-deprecation-blocks-replic-dc-installation.md
     - name: Operations fail with Win32 error 1753
@@ -221,6 +261,8 @@
       href: ./identity/replication-error-8524.md
     - name: Optimize domain controller location
       href: ./identity/optimize-dc-location-global-catalog.md
+    - name: Orphaned child domain controller is not replicated
+      href: ./identity/orphaned-child-domain-isnt-replicated.md
     - name: Password change for expired password fails
       href: ./identity/error-password-change-expired-password.md
     - name: Password change and conflict resolution function
@@ -239,6 +281,8 @@
       href: ./identity/redirect-users-computers-containers.md
     - name: Relocate a SYSVOL tree
       href: ./identity/relocate-sysvol-tree-frs-for-replication.md
+    - name: Rename an item after replication collision
+      href: ./identity/rename-item-replication-collision.md
     - name: Replication error 1722
       href: ./identity/replication-error-1722-rpc-server-unavailable.md
     - name: Replication error 2146893022
@@ -279,6 +323,8 @@
       href: ./identity/active-directory-replication-error-8545.md
     - name: Troubleshoot AD replication error 8589
       href: ./identity/replication-error-8589.md
+    - name: Troubleshoot Directory Services issues
+      href: ./identity/troubleshoot-directory-services-issues.md
     - name: Troubleshoot domain controller replication error 1727
       href: ./identity/remote-procedure-call-failed-and-did-not-execute-error.md
     - name: Troubleshoot intra-forest password migrations
@@ -293,6 +339,8 @@
       href: ./identity/replication-error-8606.md
     - name: Troubleshoot sIDHistory migration with ADMTv2
       href: ./identity/inter-forest-sidhistory-migration-with-admt.md
+    - name: Troubleshoot Event ID 1311 messages
+      href: ./identity/troubleshoot-event-id-1311-messages.md
     - name: Unable to join computers to a domain
       href: ./identity/cannot-join-computer-to-domain.md
     - name: Use Adminpak to remotely administer computers
@@ -341,10 +389,18 @@
       href: ./application-management/dial-in-tab-unavailable-mmc-snap-in.md
     - name: DXDIAG reports low display adapters memory
       href: ./application-management/low-amount-display-adapter-memory.md
+    - name: "Error \"The Best Practices Analyzer scan has failed\""
+      href: ./application-management/error-best-practices-analyzer-scan-has-failed.md
     - name: How to configure DTC to work through firewalls
       href: ./application-management/configure-dtc-to-work-through-firewalls.md
+    - name: How to enable network DTC access
+      href: ./application-management/enable-network-dtc-access.md
+    - name: HTTP Listener fails to initialize when lacking SeChangeNotifyPrivilege
+      href: ./application-management/http-listener-fails-initialize.md
     - name: MSI installation fails with error 1603
       href: ./application-management/msi-installation-error-1603.md
+    - name: Performance degrades when accessing large files
+      href: ./application-management/operating-system-performance-degrades.md
     - name: Services depending on ASP.NET State Service don't start
       href: ./application-management/services-not-start-upgrade-to-dotnet-framework-4.md
 
@@ -368,12 +424,16 @@
       href: ./backup-and-storage/cannot-delete-file-folder-on-ntfs-file-system.md
     - name: Can't start a computer from a FAT32 file system USB flash drive
       href: ./backup-and-storage/cannot-start-computer-from-usb-flash-drive.md
+    - name: Can't use the DiskPart break command to break a mirrored set
+      href: ./backup-and-storage/error-use-diskpart-break-command-break-mirrored-set.md
     - name: Can't install Windows to the boot LUN with multiple paths
       href: ./backup-and-storage/error-setup-unable-create-new-system-partition.md
     - name: Change in the behavior of the format command
       href: ./backup-and-storage/format-command-not-write-zeros-to-disk.md
     - name: DirectAccess clients connection error 0x274d 
       href: ./backup-and-storage/directaccess-clients-connection-error-0x274d.md
+    - name: Disk Defragmenter Limitations
+      href: ./backup-and-storage/disk-defragmenter-limitations.md
     - name: Diskshadow error when you try to create a VSS snapshot
       href: ./backup-and-storage/diskshadow-error-try-to-create-a-vss-snap.md
     - name: Distributed Link Tracking on domain controllers
@@ -394,6 +454,10 @@
       href: ./backup-and-storage/event-id-8193-when-you-perform-backup.md
     - name: Extend a data volume
       href: ./backup-and-storage/extend-data-volume.md
+    - name: Extend stand-alone tiered storage spaces
+      href: ./backup-and-storage/extend-stand-alone-tiered-storage-spaces.md
+    - name: Extending a CSV isn't blocked
+      href: ./backup-and-storage/extending-csv-isnt-blocked.md
     - name: File shares on iSCSI devices aren't re-created
       href: ./backup-and-storage/file-shares-on-iscsi-devices-not-recreated.md
     - name: File Server Resource Manager could not load WMI objects
@@ -404,6 +468,8 @@
       href: ./backup-and-storage/fsrm-quota-usage-incorrect.md
     - name: Full garbage collection causes performance issues
       href: ./backup-and-storage/full-garbage-collection-performance-issue.md
+    - name: Hot-swap disks are not recognized
+      href: ./backup-and-storage/hot-swap-disks-not-recognized.md
     - name: How NTFS reserves space for MFT
       href: ./backup-and-storage/ntfs-reserves-space-for-mft.md
     - name: How to restore a Windows 7 installation
@@ -412,18 +478,26 @@
       href: ./backup-and-storage/automating-disk-cleanup-tool.md
     - name: How to set up dynamic boot partition mirroring on GPT disks
       href: ./backup-and-storage/set-up-dynamic-boot-partition-mirroring.md
+    - name: How to use the backup feature to back up and restore data
+      href: ./backup-and-storage/use-backup-feature-back-up-restore-data.md
     - name: Information about Event ID 51
       href: ./backup-and-storage/event-id-51-information.md
     - name: iSCSI virtual disk size limits are incorrect
       href: ./backup-and-storage/iscsi-virtual-disk-size-limits-incorrect.md
+    - name: Known issues after you enable data deduplication on CSV
+      href: ./backup-and-storage/issues-after-enabling-data-deduplication.md
     - name: Microsoft iSCSI Software Target 3.3 limits
       href: ./backup-and-storage/iscsi-software-target-3dot3-limits.md
     - name: New logging mechanism for VDS
       href: ./backup-and-storage/new-vds-logging-mechanism.md
     - name: No VSS writers when running the "vssadmin list writers" command
       href: ./backup-and-storage/no-vss-writers-listed-run-vssadmin-list-writers.md
+    - name: Not enough storage to process this command
+      href: ./backup-and-storage/not-enough-storage-process-this-command.md
     - name: Pass-through disk in highly available VM is read-only
       href: ./backup-and-storage/add-pass-through-disk-to-high-available-vm.md
+    - name: Redundant subnets are incorrectly created
+      href: ./backup-and-storage/redundant-subnets-are-incorrectly-created.md
     - name: 'Restore system/boot drive letter'
       href: ./backup-and-storage/restore-system-boot-drive-letter.md
     - name: Server backup process fails and error 0x80070005
@@ -438,23 +512,34 @@
       href: ./backup-and-storage/support-policy-4k-sector-hard-drives.md
     - name: System event log srv event ID 2012
       href: ./backup-and-storage/srv-event-id-2012.md
+    - name: System logs multiple events that specify Event ID 640
+      href: ./backup-and-storage/logs-multiple-events-specify-event-id-640.md
+    - name: System State Backup fails
+      href: ./backup-and-storage/system-state-backup-fails-invalid-imagepath.md
     - name: The iSCSI Initiator can't log in to Favorite Target
       href: ./backup-and-storage/iscsi-initiator-not-login-to-favorite-targets.md
     - name: The system state backup fails
       href: ./backup-and-storage/system-state-backup-fails.md
     - name: USB Device not recognized error
       href: ./backup-and-storage/usb-device-not-recognized-error.md
+    - name: Volume Shadow Copy Service take longer to go online
+      href: ./backup-and-storage/volume-shadow-copy-service-take-longer-online.md
     - name: VSS event ID 8019, 20, 8193, or 12302
       href: ./backup-and-storage/volume-shadow-copy-service-events.md
+    - name: VSS writers report failed on virtual machine
+      href: ./backup-and-storage/vss-writers-report-failed-virtual-machine.md
     - name: Windows Server Backup MMC fails to open
       href: ./backup-and-storage/server-backup-mmc-fails-open.md
     - name: Windows support for hard disks exceeding 2 TB
       href: ./backup-and-storage/support-for-hard-disks-exceeding-2-tb.md
 
+
 - name: Deployment
   items:
     - name: "\"Windows is not genuine\" error"
       href: ./deployment/windows-not-genuine-error.md
+    - name: "\"Stop 0x0000007B\" error"
+      href: ./deployment/stop-0x0000007b-error-group-policy-setting.md
     - name: 0xc004f063 when activating an OEM version
       href: ./deployment/0xc004f063-when-activating-oem-version.md
     - name: Add OEM PnP drivers to Windows installations
@@ -481,12 +566,16 @@
       href: ./deployment/create-iso-image-for-uefi-platforms.md
     - name: Description of System File Checker (Sfc.exe)
       href: ./deployment/system-file-checker.md
+    - name: Description of Windows Server Update Services 3.0
+      href: ./deployment/description-of-windows-server-update-services-3.md
     - name: Enable logging and tracing for WDS components
       href: ./deployment/enable-logging-windows-deployment-service.md
     - name: Error 0x8007000D when you activate a machine
       href: ./deployment/0x8007000d-activate-machine.md
     - name: Error 0x800f0906 when you convert Server Core to GUI
       href: ./deployment/dism-fails-with-error-0x800f0906.md
+    - name: Error 0x800f0922 when MPIO feature installation fails
+      href: ./deployment/error-0x800f0922-mpio-feature-installation-fails.md
     - name: Error when opening reports in MBAM
       href: ./deployment/error-when-opening-reports-mbam.md
     - name: Error when viewing reports in MBAM
@@ -497,6 +586,8 @@
       href: ./deployment/error-when-you-validate-copy-windows.md
     - name: Event 12293 when registering a KMS host record
       href: ./deployment/event-12293-error-0x800723-set-kms-host.md
+    - name: Event ID 12321 Warning Token Based Activation failed
+      href: ./deployment/event-id-12321-warning-token-based-activation-failed.md
     - name: Event ID 307 and 304 logged for deploying Windows
       href: ./deployment/event-307-and-304-logged-for-deploying.md
     - name: Event ID 56 is logged
@@ -509,14 +600,24 @@
       href: ./deployment/fix-windows-update-errors.md
     - name: How to perform an in-place/repair upgrade
       href: ./deployment/repair-or-in-place-upgrade.md
+    - name: How to replace a driver by using Recovery Console
+      href: ./deployment/use-recovery-console-replace-driver.md
+    - name: In-place upgrade hangs at black screen
+      href: ./deployment/in-place-upgrade-hangs-black-screen.md
+    - name: Install Microsoft Product Support Reporting Tool
+      href: ./deployment/microsoft-product-support-reporting-tool-v5220030.md
     - name: Integrate Windows Server Update Services (WSUS) 3.0 into Server Manager
       href: ./deployment/update-available-integrates-wsus-into-server-manager.md
+    - name: Known issues that affect AppX cleanup maintenance task
+      href: ./deployment/issues-appx-cleanup-maintenance-task.md
     - name: MBAM Enterprise Reports aren't updated
       href: ./deployment/mbam-enterprise-report-not-updated.md
     - name: MBAM setup fails if SSRS is not configured properly
       href: ./deployment/mbam-setup-fails.md
     - name: MBAM fails to take ownership of the TPM
       href: ./deployment/error-mbam-take-ownership-tpm.md
+    - name: MDT Media Deployment USB isn't bootable
+      href: ./deployment/mdt-media-deployment-isnt-bootable.md
     - name: Microsoft Deployment Toolkit support life cycle
       href: ./deployment/deployment-toolkit-support.md
     - name: Multicast deployment fails from WDS
@@ -558,6 +659,8 @@
       href: ./group-policy/allow-active-content-to-run-files-on-my-computer-not-working.md
     - name: "\"Namespace is already defined\" error when editing a policy"
       href: ./group-policy/microsoft-policies-sensors-windowslocationprovider-defined.md
+    - name: "\"Set roaming profile path for all users logging onto this computer\" setting applies to local accounts"
+      href: ./group-policy/set-roaming-profile-path-all-users-applies-all-acccounts.md
     - name: A Group Policy setting isn't available in the security policy settings list
       href: ./group-policy/default-owner-objects-created-members-administrators-group-not-available.md
     - name: AGPM and GPRESULT are not working
@@ -576,12 +679,20 @@
       href: ./group-policy/creating-dsn-with-gpp-fails.md
     - name: Errors when you run GPMC
       href: ./group-policy/fail-to-run-gpmc.md
+    - name: "Event ID 1053 by using \"Gpupdate /force\" command"
+      href: ./group-policy/event-id-1053-gpupdate-force-command.md
+    - name: Events 1101 and 1030 are logged in Application log
+      href: ./group-policy/events-1101-1030-application-log-group-policy.md
     - name: Fail to run Group Policy Modeling Wizard
       href: ./group-policy/cannot-run-group-policy-modeling-wizard.md
     - name: Folder Redirection group policy is not applied
       href: ./group-policy/folder-redirection-group-policy-not-applied.md
     - name: Group Policy errors when unknown environment variable is used
       href: ./group-policy/group-policy-error-7016-1091-1202.md
+    - name: Group Policy Preferences Events
+      href: ./group-policy/information-group-policy-preferences-events.md
+    - name: Group Policy Preferences removes manual drive mappings
+      href: ./group-policy/manual-drive-mappings-removed.md
     - name: Group policy with WMI filters can be denied or cause slow logon/boot
       href: ./group-policy/group-policy-wmi-filters-denied-slow-logon-boot.md
     - name: How to enable the Group Policy loopback feature
@@ -590,6 +701,10 @@
       href: ./group-policy/force-authoritative-non-authoritative-synchronization.md
     - name: How to set event log security locally or via Group Policy
       href: ./group-policy/set-event-log-security-locally-or-via-group-policy.md
+    - name: How to use Group Policy to disable drivers
+      href: ./group-policy/adm-template-disable-drivers.md
+    - name: LDAP filters don't take effect
+      href: ./group-policy/ldap-filters-dont-take-effect.md
     - name: Minimize SYSVOL size by removing administrative templates
       href: ./group-policy/minimize-sysvol-size-removing-templates.md
     - name: Netlogon event ID 5719 or Group Policy event 1129
@@ -604,14 +719,20 @@
       href: ./group-policy/reset-user-rights-in-default-domain-group-policy.md
     - name: RODCs don't replicate SYSVOL shared directory
       href: ./group-policy/events-6804-2843-rodcs-not-replicate-sysvol.md
+    - name: Settings are applied from Group Policy
+      href: ./group-policy/settings-applied-group-policy.md
     - name: The Directory is not empty
       href: ./group-policy/directory-is-not-empty.md
+    - name: The system can't find the file specified
+      href: ./group-policy/system-cant-find-file-specified.md
     - name: Troubleshoot SCECLI 1202 events
       href: ./group-policy/scecli-1202-events.md
     - name: Troubleshoot software installations by debug logging
       href: ./group-policy/troubleshoot-software-installations-debug-logging.md
     - name: Use Group Policy to remotely install softwares
       href: ./group-policy/use-group-policy-to-install-software.md
+    - name: Use Group Policy to configure automatic logon in Terminal Services
+      href: ./group-policy/use-group-policy-configure-automatic-logon.md
     - name: WinStoreUI.admx conflict with Windows 10 ADMX file
       href: ./group-policy/winstoreui-conflict-with-windows-10-1151-admx-file.md
     - name: WMI Group Policy filters don't work
@@ -621,6 +742,8 @@
   items:
     - name: "\"The cluster node already exists\" error may appear during cluster setup"
       href: ./high-availability/cluster-node-already-exists-error.md
+    - name: "\"The parameter is incorrect\" error"
+      href: ./high-availability/parameter-incorrect-error-cluster-validation-fails.md
     - name: Active Route removed
       href: ./high-availability/active-route-removed.md
     - name: Add support for more than eight LUNs 
@@ -629,12 +752,16 @@
       href: ./high-availability/cannot-upgrade-clustered-server-operating-system.md
     - name: CAP in failover cluster doesn't come online
       href: ./high-availability/unable-to-get-computer-object-using-guid.md
+    - name: Change the IP address of network adapters in a cluster
+      href: ./high-availability/change-network-adapters-ip-address-cluster-node.md
     - name: Cluster disk resource fails to come online
       href: ./high-availability/cluster-disk-resource-not-come-online.md
     - name: Cluster fileshare resource fails
       href: ./high-availability/cluster-fileshare-resource-fails.md
     - name: Cluster validation fails with error 80070005
       href: ./high-availability/cluster-validation-failure-error-80070005.md
+    - name: Cluster service startup options
+      href: ./high-availability/switches-start-cluster-service.md
     - name: Clustering information on IP address failover
       href: ./high-availability/cluster-information-ip-address-failover.md
     - name: Configure volume mount points on a server cluster
@@ -643,6 +770,8 @@
       href: ./high-availability/creating-failover-cluster-fails-error-0xc0000055.md
     - name: Enable support using clustered RAID controllers
       href: ./high-availability/enable-support-using-raid-controllers.md
+    - name: "Error \"An item with the same key has already been added\""
+      href: ./high-availability/error-an-item-with-the-same-key-has-already-been-added.md
     - name: Error 0x8000ffff when you change Shadow Copy settings
       href: ./high-availability/error-0x8000ffff-catastrophic-failure.md
     - name: Error message event ID 1289 is logged when you try to create a cluster
@@ -655,12 +784,18 @@
       href: ./high-availability/cannot-share-folder-in-failover-cluster.md
     - name: Failover cluster validation fails
       href: ./high-availability/duplicate-address-error-validate-failover-cluster.md
+    - name: Failover behavior on clusters of three or more nodes
+      href: ./high-availability/groups-fail-logic-three-more-cluster-node-members.md
     - name: How Cluster service reserves and brings online disks
       href: ./high-availability/cluster-service-reserves-brings-disk.md
     - name: How to configure FTP for IIS in a failover cluster
       href: ./high-availability/configure-internet-information-services-ftp.md
     - name: How to update failover clusters
       href: ./high-availability/windows-server-failover-clusters-service-packs-hotfixes.md
+    - name: How to set up a clustered print server
+      href: ./high-availability/set-up-clustered-print-server.md
+    - name: Implications of using /forcequorum switch
+      href: ./high-availability/implications-using-slash-forcequorum-switch.md
     - name: Local SAS Disks getting added in Windows Server Failover Cluster
       href: ./high-availability/local-sas-disks-getting-added-failover-cluster.md
     - name: Memory dump file is corrupted
@@ -669,6 +804,8 @@
       href: ./high-availability/microsoft-support-policy-failover-clusters.md
     - name: Move Windows Server cluster to another domain
       href: ./high-availability/move-server-cluster-to-another-domain.md
+    - name: NetBIOS and WINS not bind to cluster IP address resources
+      href: ./high-availability/netbios-wins-dont-bind-cluster-ip-address-resources.md
     - name: Network Name resource fails to come online
       href: ./high-availability/network-name-resource-not-come-online.md
     - name: Physical disk resource doesn't come online
@@ -702,6 +839,8 @@
       href: ./networking/cannot-download-file-background-intelligent-transfer-service.md
     - name: "\"Faulted Not Found\" status for NIC team"
       href: ./networking/faulted-not-found-status-nic-team-restart-iscsi-boot-disk.md
+    - name: a SMB server is unresponsive
+      href: ./networking/smb-server-unresponsive.md
     - name: Active Directory-integrated DNS zone serial number behavior
       href: ./networking/ad-integrated-dns-zone-serial-no-dot-behavior.md
     - name: Avoid registering unwanted NIC in DNS
@@ -730,6 +869,10 @@
       href: ./networking/configure-proxy-server-settings.md
     - name: Configure remote access client account lockout
       href: ./networking/configure-remote-access-client-account-lockout.md
+    - name: Delegating DFS replication
+      href: ./networking/delegating-dfs-replication.md
+    - name: Description of the DNSLint utility
+      href: ./networking/description-dnslint-utility.md
     - name: DFSR can't replicate files after restoring a virtualized server
       href: ./networking/distributed-file-system-replication-not-replicate-files.md
     - name: DFSR databases crash on primary member
@@ -798,6 +941,8 @@
       href: ./networking/move-frs-staging-folder-to-different-drive.md
     - name: How to troubleshoot advanced network performance features
       href: ./networking/troubleshoot-network-performance-features-rss-netdma.md
+    - name: How to create a custom application directory partition
+      href: ./networking/create-apply-custom-application-directory-partition.md
     - name: How to troubleshoot Workplace Join issues
       href: ./networking/diagnostic-logging-troubleshoot-workplace-join-issues.md
     - name: Integrate Windows DNS into an existing DNS namespace
@@ -816,6 +961,8 @@
       href: ./networking/lt2p-ipsec-ras-vpn-connections-fail.md
     - name: Name of redirected folder isn't user name
       href: ./networking/redirected-documents-folder-name-not-user-name.md
+    - name: Network Load Balancing concept and notes
+      href: ./networking/network-load-balancing-concept-notes.md
     - name: No dynamic updates on classless reverse lookup zone
       href: ./networking/no-dynamic-updates-on-reverse-lookup-zone.md
     - name: NTFRS_xxxxxxxx is added to a folder name
@@ -830,36 +977,56 @@
       href: ./networking/portqry-exe-command-line-utility.md
     - name: Prevent Domain Controllers from DNS Names
       href: ./networking/prevent-domain-controllers-dns-names.md
+    - name: Process of the TCP three-way handshake
+      href: ./networking/three-way-handshake-via-tcpip.md
     - name: PXE clients don't start
       href: ./networking/pxe-clients-not-start-dhcp-60-66-67-option.md
     - name: Recovery process of a DFS namespace
       href: ./networking/recovery-process-of-dfs-namespace.md
     - name: Reserve a range of ephemeral ports
       href: ./networking/reserve-a-range-of-ephemeral-ports.md
+    - name: Robocopy may report error 1338 or 87
+      href: ./networking/robocopy-may-report-error-1338-87.md
     - name: Root hints reappear after removed
       href: ./networking/root-hints-reappear-after-removed.md
+    - name: Security setting changes delays on DFSR replication partners
+      href: ./networking/security-setting-changes-not-appear-dfsr-replication.md
     - name: Service overview and network port requirements
       href: ./networking/service-overview-and-network-port-requirements.md
+    - name: Services not automatically restart with NIC teaming
+      href: ./networking/services-not-automatically-restart-nic-teaming.md
     - name: Support policy about Single Label Domains
       href: ./networking/single-label-domains-support-policy.md
     - name: System error 1331 when you connect to a share
       href: ./networking/account-currently-disabled-system-error-1331.md
+    - name: TCP features in Windows
+      href: ./networking/description-tcp-features.md
+    - name: TCP traffic stops
+      href: ./networking/tcp-traffic-stops.md
     - name: TCP/IP properties revert to the default settings
       href: ./networking/internet-protocol-properties-show-default-ip-address.md
+    - name: TcpAckFrequency to controll the TCP ACK behavior
+      href: ./networking/registry-entry-control-tcp-acknowledgment-behavior.md
     - name: The Automatic Metric feature for IPv4 routes
       href: ./networking/automatic-metric-for-ipv4-routes.md
     - name: The host's A record is registered in DNS
       href: ./networking/a-record-registered-host-dns.md
     - name: The Routing and Remote Access service doesn't start
       href: ./networking/rras-doesnt-start.md
+    - name: The netmask ordering feature and round robin feature
+      href: ./networking/how-to-use-netmask-ordering-round-robin-feature.md
     - name: Troubleshoot DNS Event ID 4013
       href: ./networking/troubleshoot-dns-event-id-4013.md
     - name: Troubleshoot DNS name resolution on the Internet
       href: ./networking/troubleshoot-dns-name-resolution.md
+    - name: Troubleshoot event ID 1020 on a file server
+      href: ./networking/troubleshoot-event-id-1020-warnings-file-server.md
     - name: Troubleshoot journal_wrap errors on Sysvol and DFS replica sets
       href: ./networking/how-frs-uses-usn-change-journal-ntfs-file-system.md
     - name: Troubleshoot missing SYSVOL and Netlogon shares
       href: ./networking/troubleshoot-missing-sysvol-and-netlogon-shares.md
+    - name: Troubleshoot the File Replication Service
+      href: ./networking/troubleshoot-file-replication-service-ditributed-file-system.md
     - name: Troubleshoot WINS events 4102, 4243,  4242, and 4286 
       href: ./networking/windows-internet-name-service-replication-related-errors.md
     - name: UDP communication is blocked
@@ -881,6 +1048,8 @@
 
 - name: Performance
   items:
+    - name: "\"Stop 0x0000000A\" error for processor resumes from C1 idle state"
+      href: ./performance/stop-0x0000000a-error-processor-c1-idle-state.md
     - name: "Troubleshoot the \"STOP 0xC000021A\" error"
       href: ./performance/troubleshoot-stop-0xc000021a-error.md
     - name: Add processors to a computer
@@ -905,6 +1074,8 @@
       href: ./performance/windows-registry-advanced-users.md
     - name: Desktop heap limitation causes out of memory error
       href: ./performance/desktop-heap-limitation-out-of-memory.md
+    - name: Disk performance slower with multiple disks
+      href: ./performance/disk-performance-slower-multiple-disks.md
     - name: Error 0x00000007B after you reconfigure hardware devices
       href: ./performance/inaccessible-boot-device-stop-error.md
     - name: Error 0x00000019 when NTFS creates 8.3 formatted name
@@ -943,16 +1114,24 @@
       href: ./performance/registry-troubleshooting-advanced-users.md
     - name: Registry values for Process Control parameters
       href: ./performance/values-process-control-parameters.md
+    - name: Reliability Monitor shows no information
+      href: ./performance/reliability-monitor-shows-no-information.md
     - name: Report generation process stops responding
       href: ./performance/report-generation-process-stops-responding.md
+    - name: Server service configuration and tuning
+      href: ./performance/server-service-configuration-tuning.md
     - name: Service using gMSA account doesn't start
       href: ./performance/service-using-gmsa-account-not-start.md
     - name: Slow boot and services start failure
       href: ./performance/crypto-deadlock-causes-slow-boot-services-start-failure.md
     - name: STOP 0X0000007B error when booting from an alternate iSCSI adapter
       href: ./performance/0x0000007b-stop-error-switch-alternate-iscsi-adapter.md
+    - name: "Stop Error \"DRIVER_IRQL_NOT_LESS_OR_EQUAL\""
+      href: ./performance/stop-error-driver-irql-not-less-or-equal.md
     - name: Stop error 0x109 on a VMWare virtual machine
       href: ./performance/stop-error-0x109-on-VMWare-virtual-machine.md
+    - name: Stop error 7E on a server running NFS
+      href: ./performance/stop-error-7e-nfs.md
     - name: Support for booting from SAN
       href: ./performance/support-for-booting-from-storage-area-network.md
     - name: Switch options for Boot.ini files
@@ -980,10 +1159,18 @@
       href: ./printing/cannot-print-install-service-pack-update-rollup.md
     - name: How to find a compatible printer driver
       href: ./printing/find-compatible-printer-driver-64-bit.md
+    - name: How to configure Internet printing
+      href: ./printing/manage-connect-printers-use-web-browser.md
+    - name: How to install and configure a file and print server
+      href: ./printing/install-configure-file-print-server.md
     - name: Printer and drive redirection don't work in a Terminal Server session
       href: ./printing/printer-hard-drive-not-redirect-to-remote-desktop-session.md
+    - name: Printers list blank in Print Management Console
+      href: ./printing/printers-list-blank-pmc.md
     - name: Printing pauses after every 11 print jobs
       href: ./printing/printing-pauses-event-2004-4227-lpr-port.md
+    - name: Servers can't be used as print servers
+      href: ./printing/servers-cant-be-used-print-servers.md
     - name: Slow performance with HP printer drivers
       href: ./printing/slow-performance-hp-printer-driver.md
     - name: Spooler.xml file growth and high CPU in spoolsv.exe process 
@@ -1003,6 +1190,8 @@
   items:
     - name: "\"Licenses are not available for this Remote Desktop\" error in Licensing Diagnosis"
       href: ./remote/rdsh-administrator-on-get-error-licensing-diagnosis.md
+    - name: "\"Terminal Server Commands\" CHANGE"
+      href: ./remote/terminal-server-commands-change.md
     - name: "\"This computer name is invalid\" error when shadowing a remote session"
       href: ./remote/error-control-remote-desktop-session-vdi-collection.md
     - name: Adding Remote Desktop Services role fails
@@ -1013,6 +1202,8 @@
       href: ./remote/applications-crash-if-another-user-logs-off-session.md
     - name: Cannot remove an RD Host from an RDS deployment
       href: ./remote/cannot-remove-rd-host-from-rds-deployment.md
+    - name: "Cannot view \"RemoteApp\" programs"
+      href: ./remote/cannot-view-remoteapp-rd-session-host.md
     - name: Can't connect to remote computer
       href: ./remote/cannot-connect-to-remote-computer.md
     - name: Changes to Remote Connection Manager
@@ -1025,6 +1216,8 @@
       href: ./remote/remote-desktop-listener-certificate-configurations.md
     - name: Connection Configuration in Terminal Server
       href: ./remote/connection-configuration-in-terminal-server.md
+    - name: Connection Broker can't be mixed
+      href: ./remote/connection-broker-cant-be-mixed.md
     - name: Copying files exceeding 2 GB fails
       href: ./remote/copying-2-gb-file-by-clipboard-redirection-fails.md
     - name: Deny user permissions to logon to RD Session Host server
@@ -1045,14 +1238,20 @@
       href: ./remote/move-terminal-services-client-access-licenses.md
     - name: How to remove entries from the Remote Desktop Connection Computer box
       href: ./remote/remove-entries-from-remote-desktop-connection-computer.md
+    - name: How to connect clients to Terminal Services 
+      href: ./remote/connect-client-to-terminal-services-remote-desktop-connection.md
     - name: Incorrect TLS is displayed
       href: ./remote/incorrect-tls-use-rdp-with-ssl-encryption.md
     - name: Install RDS role service without Connection Broker
       href: ./remote/install-rds-host-role-service-without-connection-broker.md
     - name: Limit connections on a terminal server
       href: ./remote/limit-connections-terminal-server.md
+    - name: Local Policy not permit to Log On Interactively
+      href: ./remote/local-policy-not-permit-log-on-interactively.md
     - name: New user fails to log on through RDP
       href: ./remote/not-enough-storage-available-to-process-command.md
+    - name: New and existing RemoteFX-enabled VMs do not start
+      href: ./remote/remotefx-enabled-vms-dont-start.md
     - name: No Connected icon in notification area
       href: ./remote/no-connected-icon-in-notification-area.md
     - name: Physical GPU settings is unavailable post domain join
@@ -1105,8 +1304,6 @@
       href: ./remote/set-up-remote-desktop-licensing-across-domains-forests-workgroups.md
     - name: Single-application sharing with Terminal Server
       href: ./remote/single-application-sharing-with-terminal-server.md
-    - name: "\"Terminal Server Commands\" CHANGE"
-      href: ./remote/terminal-server-commands-change.md
     - name: Terminal Server license for deployment
       href: ./remote/terminal-server-license-for-deployment.md
     - name: Terminal Server registry settings for applications
@@ -1135,14 +1332,24 @@
 
 - name: Shell Experience
   items:
+    - name: Can't create an AppLocker hash rule for a file
+      href: ./shell-experience/0x800700c1-not-valid-win32-application-applocker-hash-rule.md
+    - name: "Can't use the \"runas\" command"
+      href: ./shell-experience/access-denied-runas-command-run-as-administrator.md
     - name: DPI adjustment is unavailable in Remote Session
       href: ./shell-experience/dpi-adjustment-unavailable-in-rdp.md
     - name: How to enable the user experience features
       href: ./shell-experience/enable-windows-vista-user-experience-features.md
     - name: Incorrect time on 64-bit versions of Windows
       href: ./shell-experience/incorrect-time-64-bit-windows.md
+    - name: Increased CPU usage when accessing a FileTable share
+      href: ./shell-experience/increased-cpu-usage.md
+    - name: Multipoint Manager error during startup
+      href: ./shell-experience/multipoint-manager-error-during-startup.md
     - name: Remote Assistance connection doesn't work with FIPS encryption
       href: ./shell-experience/fips-encryption-not-allow-remote-assistance-connection.md
+    - name: Task manager displays incorrect value for L2/L3 cache
+      href: ./shell-experience/task-manager-displays-incorrect-value.md
     - name: TEMP folder with logon session ID is deleted
       href: ./shell-experience/temp-folder-with-logon-session-id-deleted.md
     - name: The default date format is changed
@@ -1159,6 +1366,8 @@
   items:
     - name: Can't connect to Device Manager remotely
       href: ./system-management-components/error-connect-device-manager-remotely.md
+    - name: Enter-PSSession cmdlet fails
+      href: ./system-management-components/enter-pssession-cmdlet-fails-psmodulepath-variable.md
     - name: Error 0x8004106C while you run WMI queries
       href: ./system-management-components/wmi-error-0x8004106c.md
     - name: Error 0x8007000d when you run an old scheduled task
@@ -1206,6 +1415,8 @@
       href: ./user-profiles-and-logon/folder-redirection-settings-not-applied.md
     - name: How to delete a user profile
       href: ./user-profiles-and-logon/delete-user-profile.md
+    - name: Interactive logon isn't allowed
+      href: ./user-profiles-and-logon/interactive-logon-isnt-allowed.md
     - name: Profile loading fails
       href: ./user-profiles-and-logon/desktop-location-unavailable.md
     - name: Relocation of Users and ProgramData directories
@@ -1223,6 +1434,8 @@
       href: ./virtualization/catastrophic-failure-0x8000ffff-error.md
     - name: Antivirus exclusions for Hyper-V hosts
       href: ./virtualization/antivirus-exclusions-for-hyper-v-hosts.md
+    - name: Back up and restore a Hyper-V VM
+      href: ./virtualization/back-up-restore-hyper-v-vm-bmr-data-backup.md
     - name: Back up virtual machines from parent partition
       href: ./virtualization/back-up-hyper-v-vm-from-parent-partition.md
     - name: Caching in the virtual storage stack 
@@ -1237,6 +1450,8 @@
       href: ./virtualization/cant-import-virtual-machine.md
     - name: Default limit of 256 dynamic MAC addresses
       href: ./virtualization/default-limit-256-dynamic-mac-addresses.md
+    - name: Degraded integration services message for non-Windows guests
+      href: ./virtualization/degraded-integration-services-message.md
     - name: Dynamic Memory allocation in a Virtual Machine does not change
       href: ./virtualization/dynamic-memory-allocation-virtual-machine-not-change.md
     - name: Error message after you put the page file on another drive other than the drive C
@@ -1251,6 +1466,10 @@
       href: ./virtualization/event-19050-32022-32032-32056-32315-32546-33680.md
     - name: Fail to start selected virtual machine
       href: ./virtualization/fail-to-start-selected-virtual-machine.md
+    - name: FCoE IO failures on Hyper-V guests
+      href: ./virtualization/fcoe-io-failures-hyper-v-guests.md
+    - name: Feature and performance optimization of HVR
+      href: ./virtualization/feature-performance-optimization-hyper-v-replica.md
     - name: Hyper-V Time Synchronization doesn't adjust the VM system clock
       href: ./virtualization/virtual-machine-time-not-synced.md
     - name: Hyper-V virtual machine fails to start
@@ -1265,10 +1484,14 @@
       href: ./virtualization/hyper-v-vm-supported-file-locations.md
     - name: Importing a virtual machine
       href: ./virtualization/importing-a-virtual-machine.md
+    - name: Incompatible version errors are logged
+      href: ./virtualization/incompatible-version-errors-are-logged.md
     - name: Issues when starting VM or installing Hyper-V
       href: ./virtualization/bios-update-for-hyper-v.md
     - name: Microsoft server software and supported virtualization environments
       href: ./virtualization/microsoft-server-software-support-policy.md
+    - name: Mouse and screen resolution issues
+      href: ./virtualization/mouse-screen-resolution-issues.md
     - name: Network connectivity is lost if VMQ is enabled
       href: ./virtualization/network-connectivity-lost-on-hyper-v-vms.md
     - name: SCVMM P2V fails with error 0x80070005
@@ -1281,6 +1504,14 @@
       href: ./virtualization/starting-or-live-migrating-hyper-v-vms-fails.md
     - name: Support partners for non-Microsoft hardware virtualization software
       href: ./virtualization/non-microsoft-hardware-virtualization-software.md
+    - name: Support Policy for NIC Teaming with Hyper-V
+      href: ./virtualization/support-policy-nic-teaming.md
+    - name: The security ID structure is invalid (0x80070539)
+      href: ./virtualization/security-id-structure-invalid.md
+    - name: Troubleshoot live migration issues
+      href: ./virtualization/troubleshoot-live-migration-issues.md
+    - name: Upgrade computers with Hyper-V role installed
+      href: ./virtualization/upgrade-computers-hyper-v-role.md
     - name: Uptime value of Hyper-V Management console changes to the resume time
       href: ./virtualization/uptime-value-hyper-v-management-console-change-to-resume-time.md
     - name: Users can't connect to virtual server after failover
@@ -1336,8 +1567,12 @@
       href: ./windows-security/fciv-availability-and-description.md
     - name: Domain members fail authentication
       href: ./windows-security/cannot-authenticate-users-shut-down-domain-controller.md
+    - name: Enumerate locked out user accounts using Saved Queries
+      href: ./windows-security/enumerate-locked-out-user-accounts-saved-queries.md
     - name: Error 1079 when services fail to start
       href: ./windows-security/services-fail-to-start-error-1079.md
+    - name: Error when you connect to a Web site
+      href: ./windows-security/error-when-you-connect-web-site.md
     - name: Event ID 27 KDC error on domain controllers
       href: ./windows-security/event-id-27-kdc-errors.md
     - name: Event ID 4107 or Event ID 11 is logged
@@ -1386,6 +1621,8 @@
       href: ./windows-security/authorizaiton-issue-device-not-support-resource-sid-compression.md
     - name: Restrict cryptographic algorithms and protocols
       href: ./windows-security/restrict-cryptographic-algorithms-protocols-schannel.md
+    - name: Root CA certificate doesn't appear
+      href: ./windows-security/root-ca-certificate-doesnt-appear.md
     - name: Secure Channel Problems Detected
       href: ./windows-security/secure-channel-problems-detected.md
     - name: Security certificate validation fails
@@ -1396,8 +1633,16 @@
       href: ./windows-security/seImpersonateprivilege-secreateglobalprivilege.md
     - name: SSO with pre-logon fails during user logon
       href: ./windows-security/sso-pre-logon-fails-during-user-logon.md
+    - name: Superseded Certificate Templates and impact on user’s AD store
+      href: ./windows-security/superseded-certificate-templates-impact-user-ad-store.md
+    - name: Support for Suite B cryptographic algorithms
+      href: ./windows-security/description-support-suite-b-cryptographic-ipsec.md
     - name: TGS requests for krbtgt account fail
       href: ./windows-security/tgs-request-for-krbtgt-account-fails.md
+    - name: The Fingerprint Registration Wizard doesn't run
+      href: ./windows-security/fingerprint-registration-wizard-not-run-install-fingerprint-reader.md
+    - name: Trusted Domains don't appear
+      href: ./windows-security/trusted-domains-dont-appear.md
     - name: Use and troubleshoot CryptAcquireContext function
       href: ./windows-security/cryptacquirecontext-troubleshooting.md
     - name: Use Cipher.exe to overwrite deleted data
