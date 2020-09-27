@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp;3141939
 
 ## Introduction
 
-The [Lingering Object Liquidator](https://blogs.technet.microsoft.com/askds/2014/09/15/remove-lingering-objects-that-cause-ad-replication-error-8606-and-friends/) (LOL) is a tool to automate the discovery and removal of lingering objects. The tool uses the DRSReplicaVerifyObjects method, which is leveraged by the repadmin /removelingeringobjects command and the repldiag tool in combination with the removeLingeringObject  rootDSE primitive that's used by LDP.EXE.
+The [Lingering Object Liquidator](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/introducing-lingering-object-liquidator-v2/ba-p/400475) (LOL) is a tool to automate the discovery and removal of lingering objects. The tool uses the DRSReplicaVerifyObjects method, which is leveraged by the repadmin /removelingeringobjects command and the repldiag tool in combination with the removeLingeringObject  rootDSE primitive that's used by LDP.EXE.
 
 ### Benefits and availability
 
@@ -176,7 +176,7 @@ Run the tool as a domain administrator (or as an Enterprise administrator if you
 
 Add a comment to this [blog post](https://aka.ms/LingeringObjectLiquidator), or submit an idea to our [UserVoice](https://windowsserver.uservoice.com/forums/304621-active-directory) Feedback page--ensure you code the idea using the "Lingering Object Liquidator" category.
 
-Access the [Troubleshooting Active Directory Lingering Objects](https://aka.ms/Qqpe4y) TechNet Virtual Lab if you would like practice using this tool in a lab environment containing lingering objects.
+Access the [Troubleshooting Active Directory Lingering Objects](https://support.microsoft.com/help/910205) TechNet Virtual Lab if you would like practice using this tool in a lab environment containing lingering objects.
 
 ### Workflow
 

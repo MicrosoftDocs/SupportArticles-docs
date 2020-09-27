@@ -20,20 +20,7 @@ This article describes how to configure the Windows Time service and troubleshoo
 _Original product version:_ &nbsp; Windows Server 2012 Standard, Windows Server 2012 Essentials  
 _Original KB number:_ &nbsp; 816042
 
-To configure an internal time server to synchronize with an external time source, use one of the following methods:
-
-## Automatically configure the Windows Time service
-
-To fix this problem automatically, select the **Download** button. In the **File Download** dialog box, select **Run** or **Open**, and then follow the steps in the easy fix wizard.
-
-- When you run the easy fix solution to configure an external time source, you will need to specify the name of your NTP server. The easy fix solution will have the placeholder names of Server1 and Server2. Replace these placeholder names with the name of your NTP server followed by **,0x1**, for example, `SRV1.Contoso.com,0x1`. You do not have to specify more than one server but it is recommended to do so for redundancy. If you have multiple entries, they must be separated by a space.
-- The unit of time for [SpecialPollInterval](/previous-versions/windows/it-pro/windows-server-2003/cc756830(v=ws.10)), [Config\MaxPosPhaseCorrection](/previous-versions/windows/it-pro/windows-server-2003/cc775503(v=ws.10)), and [Config\MaxNegPhaseCorrection](/previous-versions/windows/it-pro/windows-server-2003/cc776191(v=ws.10)) settings is in seconds.
-- This wizard may be in English only. However, the automatic fix also works for other language versions of Windows.
-- If you're not on the computer that has the problem, save the easy fix solution to a flash drive or a CD, and then run it on the computer that has the problem.
-
-  [Download](https://go.microsoft.com/?linkid=9729248)
-
-## Manually configure an authoritative time source on the forest root PDC of an AD forest
+To configure an internal time server to synchronize with an external time source, use the following method:
 
 To configure the PDC in the root of an Active Directory forest to synchronize with an external time source, follow these steps:
 

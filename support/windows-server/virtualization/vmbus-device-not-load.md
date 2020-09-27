@@ -41,6 +41,7 @@ When a virtual machine is created by using Virtual Server or Virtual PC, the Adv
 ## Resolution
 
 To resolve this issue, follow these steps:
+
 1. Start the virtual machine.
 2. Click **Start**, click **Run**, type Msconfig.exe, and then click **OK**.
 3. In the **System Configuration** dialog box, click the **Boot** tab, and then click **Advanced Options**.
@@ -54,4 +55,5 @@ To resolve this issue, follow these steps:
 
 ## More information
 
-For more information about Hyper-V technology, visit the following Microsoft Web site: [https://technet2.microsoft.com/windowsserver2008/en/library/c513e254-adf1-400e-8fcb-c1aec8a029311033.mspx?mfr=true](https://technet2.microsoft.com/windowsserver2008/en/library/c513e254-adf1-400e-8fcb-c1aec8a029311033.mspx?mfr=true)
+See [Hyper-V technology](https://docs.microsoft.com/windows-server/virtualization/hyper-v/hyper-v-technology-overview) for more information.
+

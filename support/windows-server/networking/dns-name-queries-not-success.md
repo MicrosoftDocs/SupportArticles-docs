@@ -34,8 +34,6 @@ EDNS0 allows larger User Datagram Protocol (UDP) packet sizes. However, some fir
 
 To resolve this issue, update the firewall program to recognize and allow UDP packets that are larger than 512 bytes. For more information about how to do this, contact the manufacturer of your firewall program.
 
-For information about your hardware manufacturer, go the following Microsoft website: [https://support.microsoft.com/gp/vendors](https://support.microsoft.com/gp/vendors)
-
  Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.  
 
 ## Workaround
@@ -57,7 +55,7 @@ To work around this issue, turn off the EDNS0 feature on Windows-based DNS serve
     Command completed successfully.
 
 > [!NOTE]
-> Dnscmd.exe is installed on all Windows-based DNS servers except servers that are running Windows Server 2003 or Windows Server 2003 R2. You can install Dnscmd.exe from the Windows Server 2003 Support Tools. To download the Windows Server 2003 Support Tools, click the following Microsoft Download Center link: [https://www.microsoft.com/download/details.aspx?id=15326](https://www.microsoft.com/download/details.aspx?id=15326)
+> Dnscmd.exe is installed on all Windows-based DNS servers except servers that are running Windows Server 2003 or Windows Server 2003 R2. You can install Dnscmd.exe from the Windows Server 2003 Support Tools. To download the Windows Server 2003 Support Tools, click the following Microsoft Download Center link: [Setspn](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731241(v=ws.11))
 
 ## More information
 

@@ -86,10 +86,8 @@ Microsoft has confirmed this to be a problem in the Microsoft products listed at
 
 ## References
 
-For additional information, click the article number below to view the article in the Microsoft Knowledge Base:
-
-[248257](/EN-US/help/248257) Program Installation Problems on Sysprep or Riprep Installed Systems  
 For additional information, refer to the following Web address:
 
-[Preinstallation Support page on the SB website](https://oem.microsoft.com) 
+[Preinstallation Support page on the SB website](https://oem.microsoft.com)
+
 You must be registered in the System Builder Program to access the preceding link.

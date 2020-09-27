@@ -38,12 +38,22 @@ When software update deployment fails, the problem generally falls into one of t
 
 6. To rule out an installation issue with the update itself, try to manually install the update or install it from Microsoft Update (if possible) to see whether the update installation is successful.
 
-> [!NOTE]
-> Most .NET update failures are caused by corrupted .NET installations. In these cases, try to manually install the update. If the installation process fails, see [Fix Windows Update errors](https://support.microsoft.com/help/10164/fix-windows-update-errors).
+   > [!NOTE]
+   > Most .NET Framework update failures are caused by corrupted .NET Framework installations. In these cases, try to manually install the update. If the installation process fails, see [Fix Windows Update errors](https://support.microsoft.com/help/10164/fix-windows-update-errors).
+
+## Installation, supersedence, or detection issues with specific updates
+
+For more information, see [Installation, supersedence, or detection issues with specific updates](troubleshoot-software-update-management.md#installation-supersedence-or-detection-issues-with-specific-updates).
 
 ## You experience unexpected reboots, or updates are installed outside a maintenance window
 
-1. Review the ServiceWindowManager.log file on the client, and identify the service windows that are available. To do this, open ServiceWindowManager.log, and search for the **Refreshing Service Windows** string. Immediately following this line, you will see a list of the applicable service windows on the computer, as in the following example:
+If possible, [enable verbose and debug logging](enable-verbose-logging.md) if the issue can be reproduced.
+
+1. Review the ServiceWindowManager.log file on the client, and identify the service windows that are available.
+
+   ServiceWindowManager.log contains information about maintenance windows and their start and end time. This information can be very useful when you troubleshoot issues related to software update installation on clients.
+
+    To find a list of available maintenance windows (service windows) on a client, open ServiceWindowManager.log, and search for the **Refreshing Service Windows** string. Immediately following this line, you will see a list of the applicable service windows on the computer, as in the following example:
 
     > Refreshing Service Windows..... ServiceWindowManager  
     > Populating instance of ServiceWindow with ID=7cb56688-692f-4fae-b398-0e3ff4413adb, ScheduleString=02C159C0381A200002C159C0381B200002C159C0381C200002C159C0381D200002C159C0381E2000, Type=6 ServiceWindowManager  
@@ -74,13 +84,15 @@ When software update deployment fails, the problem generally falls into one of t
     > StartTime is 02/10/14 22:00:00 ServiceWindowManager  
     > Duration for the Service Window is Total days: 0, hours: 07, mins: 00, secs: 00 ServiceWindowManager
 
+    Generally, service windows with IDs containing all lowercase alpha-numeric characters are non-business hour (NBH) maintenance windows. These are based on business hours configured in Software Center. However, service windows with IDs containing all uppercase alpha-numeric characters are maintenance windows defined for the collection in the Configuration Manager console. In the example, all service windows are non-business hour windows except the one with ID 1E957DDD-0A26-434C-952A-586F3E31E319 (which is a maintenance window defined for the collection that holds the client).
+
 2. Review the UpdatesDeployment.log file, and locate the following line to check whether the deployment was set to ignore the maintenance window:
 
-    > Notify reboot with deadline = Sunday, Feb 09, 2014. - 21:30:17, Ignore reboot Window = True, NotifyUI = True
+    > Notify reboot with deadline = Sunday, Feb 09, 2014. - 21:30:17, **Ignore reboot Window = True**, NotifyUI = True
 
 3. Review the MaintenanceCoordinator.log file, and locate the following line to check whether the deployment was set to ignore the maintenance window. A value of **1** for `swoverride` means that the ignore maintenance window setting is enabled.
 
-    > RequestPersistence(id=Update download job, persist=1, swoverride=1, swType=4, pendingWFDisable=0, deadline=1)
+    > RequestPersistence(id=Update download job, persist=1, **swoverride=1**, swType=4, pendingWFDisable=0, deadline=1)
 
 4. Review the SCNotify.log file, and look for the following lines to check whether the user clicked the restart notification to initiate a restart:
 
@@ -88,11 +100,11 @@ When software update deployment fails, the problem generally falls into one of t
     > ConfirmRestartDialog: user is allowed to restart (Microsoft.SoftwareCenter.Client.Pages.ConfirmRestartDialog at ButtonRestart_Click)  
     > The user is allowed to restart the computer. Initiating restart. (Microsoft.SoftwareCenter.Client.Data.WmiDataConnector at RestartComputer)
 
-5. View the deployment properties in the Configuration Manager console to check whether the deployment is set to override maintenance windows. If the deployment is *not* set to override maintenance windows, but the client logs suggest that the deployment did override maintenance windows, review the audit status messages to check whether the deployment was modified by someone.
+5. View the deployment properties in the Configuration Manager console to check whether the deployment is set to override maintenance windows. If the deployment isn't set to override maintenance windows, but the client logs suggest that the deployment did override maintenance windows, review the audit status messages to check whether the deployment was modified by someone.
 
    To review audit status messages, navigate to Configuration Manager console > **Monitoring**  > **System Status** > **Status Message Queries**. Right-click **All Status Messages**, click **Show Messages**, select the timeframe, and then click **OK**.
 
    In the Configuration Manager **Status Message Viewer** window, navigate to **View** > **Filter**, and then filter for **Message ID = 30197**. If the deployment was modified, you'll see a status message that resembles the following:
 
    > Severity Type Site code Date / Time System Component Message ID Description  
-   > Information Audit PR1 2/9/2014 11:57:49 PM PR1SITE.CONTOSO.COM Microsoft.ConfigurationManagement.exe 30197 User "DOMAIN\User" modified updates assignment 4 ({BAFB1BDB-7A6C-4DCF-9866-6C22DF92346A}). DOMAIN\User" modified updates assignment 4 ({BAFB1BDB-7A6C-4DCF-9866-6C22DF92346A})
+   > Information Audit PR1 2/9/2014 11:57:49 PM PR1SITE.CONTOSO.COM Microsoft.ConfigurationManagement.exe 30197 User "DOMAIN\User" modified updates assignment 4 ({BAFB1BDB-7A6C-4DCF-9866-6C22DF92346A}).

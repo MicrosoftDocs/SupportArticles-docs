@@ -6,10 +6,7 @@ ms.prod-support-area-path: Software Update Management and Compliance
 ---
 # Troubleshoot software update management in Configuration Manager
 
-This article helps you troubleshoot the software update management process in Configuration Manager, including client software update scanning, synchronization issues and detection problems with specific updates.
-
-> [!NOTE]
-> **Home users**: This article is only intended for technical support agents and IT professionals. If you're looking for help with a problem, [ask the Microsoft Community](https://answers.microsoft.com/).
+This article helps you troubleshoot the software update management process in Configuration Manager. It includes client software update scanning, synchronization issues and detection problems with specific updates.
 
 _Original product version:_ &nbsp; Configuration Manager (current branch), System Center 2012 R2 Configuration Manager, System Center 2012 Configuration Manager  
 _Original KB number:_ &nbsp; 4505440
@@ -18,16 +15,16 @@ _Original KB number:_ &nbsp; 4505440
 
 This guide assumes that a software update point has already been installed and configured. For more information about configuring software updates in Configuration Manager, see [Prepare for software updates management](/mem/configmgr/sum/get-started/prepare-for-software-updates-management).
 
-Before getting into actual troubleshooting steps, it's important to emphasize that while it may seem obvious, the better you understand the problem you're experiencing, the quicker and easier it will be for you to fix it. Whether you're tasked with fixing a problem that you are experiencing yourself, or a problem reported to you by someone in your organization, it is recommended that you take a moment and answer the following questions:
+Before you start troubleshooting, it's important to emphasize that while it may seem obvious, the better you understand the problem you're experiencing, the quicker and easier it will be for you to fix it. Whether you're tasked with fixing a problem that you are experiencing yourself, or a problem reported to you by someone in your organization, it is recommended that you take a moment and answer the following questions:
 
 1. What specifically isn't working and/or what is your goal?
 2. What is the frequency or pattern for the issue? Is the problem still happening?
 3. How did you become aware that the problem exists?
-4. Has this ever worked? If so, when did it stop? Was anything changed in the environment right before it stopped working?
+4. Has it ever worked? If so, when did it stop? Was anything changed in the environment right before it stopped working?
 5. What percentage of clients are affected?
 6. What has been done already (if anything) to try to fix it?
 7. Know the exact version of the client and the version of the server. Are these systems up to date?
-8. What do affected clients have in common (for example, same subnet, AD site, domain, physical location, site, site system, etc.)?
+8. What do affected clients have in common? For example, same subnet, AD site, domain, physical location, site, site system.
 
 Knowing and understanding the answers to these questions will put you on the best path for a quick and easy resolution to whatever problem you're experiencing.
 
@@ -68,7 +65,7 @@ The first thing the client does is set the WSUS server that will be its update s
     >
     > Namespace: `root\CCM\ScanAgent` Class: `CCM_ScanJobInstance`
 
-3. Location Services creates a location request and sends it to the management point. The package ID for a WSUS location request is the update source unique ID. The following are logged in LocationServices.log:
+3. Location Services creates a location request and sends it to the management point. The package ID for a WSUS location request is the update source unique ID. In LocationServices.log:
 
     > CCCMWSUSLocation::GetLocationsAsyncEx  
     > Attempting to persist WSUS location request for ContentID='{*ContentID*}' and ContentVersion='38'  
@@ -77,12 +74,12 @@ The first thing the client does is set the WSUS server that will be its update s
     > WSUSLocationRequest : \<WSUSLocationRequest SchemaVersion="1.00">\<Content ID="{*ContentID*}" Version="38"/>\<AssignedSite SiteCode="PS1"/>\<ClientLocationInfo OnInternet="0">\<ADSite Name="CM12-R2PS1"/>\<Forest Name="CONTOSO.COM"/>\<Domain Name="CONTOSO.COM"/>\<IPAddresses>\<IPAddress SubnetAddress="192.168.2.0" Address="192.168.2.62"/>\</IPAddresses>\</ClientLocationInfo>\</WSUSLocationRequest>  
     > Created and Sent Location Request '{*LocationRequestID*}' for package {*ContentID*}
 
-4. CCM Messaging sends the location request message to the management point. The following are logged in CcmMessaging.log:
+4. CCM Messaging sends the location request message to the management point. In CcmMessaging.log:
 
     > Sending async message '{*Message*}' to outgoing queue 'mp:[http]mp_locationmanager'  
     > Sending outgoing message '{*Message*}'. Flags 0x200, sender account empty
 
-5. The management point parses this request and calls the `MP_GetWSUSServerLocations` stored procedure to get the WSUS locations from the database. The following are logged in MP_Location.log:
+5. The management point parses this request and calls the `MP_GetWSUSServerLocations` stored procedure to get the WSUS locations from the database. In MP_Location.log:
 
     > MP LM: Message Body : \<WSUSLocationRequest SchemaVersion="1.00">\<Content ID="{*ContentID*}" Version="38"/>\<AssignedSite SiteCode="PS1"/>\<ClientLocationInfo OnInternet="0">\<ADSite Name="CM12-R2PS1"/>\<Forest Name="CONTOSO.COM"/>\<Domain Name="CONTOSO.COM"/>\<IPAddresses>\<IPAddress SubnetAddress="192.168.2.0" Address="192.168.2.62"/>\</IPAddresses>\</ClientLocationInfo>\</WSUSLocationRequest> MP_LocationManager  
     > MP LM: calling MP_GetWSUSServerLocations
@@ -93,18 +90,18 @@ The first thing the client does is set the WSUS server that will be its update s
     > exec MP_GetSiteInfoUnified N'\<ClientLocationInfo OnInternet="0">\<ADSite Name="CM12-R2-PS1"/>\<Forest Name="CONTOSO.COM"/>\<Domain Name="CONTOSO.COM"/>\<IPAddresses>\<IPAddress SubnetAddress="192.168.2.0" Address="192.168.2.62"/>\</IPAddresses>\</ClientLocationInfo>'  
     > exec MP_GetWSUSServerLocations N'{WSUSServerLocationsID}',N'38',N'PS1',N'PS1',N'0',N'CONTOSO.COM'
 
-6. After getting the results from the stored procedure, the management point sends a response to the client. The following is logged in MP_Location.log:
+6. After getting the results from the stored procedure, the management point sends a response to the client. In MP_Location.log:
 
     > MP LM: Reply message body: \<WSUSLocationReply SchemaVersion="1.00">\<Sites>\<Site>\<MPSite SiteCode="PS1"/>\<LocationRecords>\<LocationRecord WSUSURL="`http://PS1SITE.CONTOSO.COM:8530`" ServerName="PS1SITE.CONTOSO.COM" Version="38"/>\<LocationRecord WSUSURL="`https://PS1SYS.CONTOSO.COM:8531`" ServerName="`PS1SYS.CONTOSO.COM`" Version="38"/>\</LocationRecords>\</Site>\</Sites>\</WSUSLocationReply>
 
-7. CCM Messaging receives the response and sends it back to Location Services. The following are logged in CcmMessaging.log:
+7. CCM Messaging receives the response and sends it back to Location Services. In CcmMessaging.log:
 
     > Message '{Message1}' got reply '{Message2}' to local endpoint queue 'LS_ReplyLocations'  
     > OutgoingMessage(Queue='mp_[http]mp_locationmanager', ID={*Message1*}):  
     > Delivered successfully to host 'PS1SYS.CONTOSO.COM'.  
     > Message '{*Message2*}' delivered to endpoint 'LS_ReplyLocations'
 
-8. Location Services parses the response and sends the location back to Scan Agent. The following are logged in LocationServices.log:
+8. Location Services parses the response and sends the location back to Scan Agent. In LocationServices.log:
 
     > Processing Location reply message LocationServices  
     > WSUSLocationReply : \<WSUSLocationReply SchemaVersion="1.00">\<Sites>\<Site>\<MPSite SiteCode="PS1"/>\<LocationRecords>\<LocationRecord WSUSURL="`http://PS1SITE.CONTOSO.COM:8530`" ServerName="PS1SITE.CONTOSO.COM" Version="38"/>\<LocationRecord WSUSURL="`https://PS1SYS.CONTOSO.COM:8531`" ServerName="PS1SYS.CONTOSO.COM" Version="38"/>\</LocationRecords>\</Site>\</Sites>\</WSUSLocationReply>  
@@ -113,14 +110,14 @@ The first thing the client does is set the WSUS server that will be its update s
     > WSUS Path='`https://PS1SYS.CONTOSO.COM:8531`', Server='PS1SYS.CONTOSO.COM', Version='38'  
     > Calling back with locations for WSUS request {*WSUSLocationID*}
 
-9. Scan Agent now has the policy and the update source location with the appropriate content version. The following are logged in ScanAgent.log:
+9. Scan Agent now has the policy and the update source location with the appropriate content version. In ScanAgent.log:
 
     > *****WSUSLocationUpdate received for location request guid={*LocationGUID*}  
     > ScanJob({*JobID*}): CScanJob::OnLocationUpdate- Received  
     > Location=<`http://PS1SITE.CONTOSO.COM:8530`>, Version=38  
     > ScanJob({*JobID*}): CScanJob::Execute- Adding UpdateSource={SourceID}, ContentType=2, ContentLocation=<`http://PS1SITE.CONTOSO.COM:8530`>, ContentVersion=38
 
-10. Scan Agent notifies WUAHandler to add the update source. WUAHandler adds the update source to the registry and initiates a Group Policy refresh (if the client is in domain) to see whether Group Policy overrides the update server that we just added. The following are logged in WUAHandler.log showing a new Update Source being added:
+10. Scan Agent notifies WUAHandler to add the update source. WUAHandler adds the update source to the registry, and initiates a Group Policy refresh if the client is in domain to see whether Group Policy overrides the update server that's added. The following entries are logged in WUAHandler.log showing a new Update Source being added:
 
     > Its a WSUS Update Source type ({WSUSUpdateSource}), adding it  
     > Its a completely new WSUS Update Source  
@@ -130,7 +127,7 @@ The first thing the client does is set the WSUS server that will be its update s
     > Waiting for 30 secs for policy to take effect on WU Agent.  
     > Added Update Source ({UpdateSource}) of content type: 2
 
-    During this time, the Windows Update Agent sees a WSUS configuration change. The following are logged in WindowsUpdate.log:
+    During this time, the Windows Update Agent sees a WSUS configuration change. In WindowsUpdate.log:
 
     > \* WSUS server: <`http://PS1SITE.CONTOSO.COM:8530`> (Changed)  
     > \* WSUS status server: <`http://PS1SITE.CONTOSO.COM:8530`> (Changed)  
@@ -149,7 +146,7 @@ The first thing the client does is set the WSUS server that will be its update s
     > Its a WSUS Update Source type ({*WSUSUpdateSource*}), adding it.  
     > WSUS update source already exists, it has increased version to 38.
 
-11. After the update source is successfully added, Scan Agent raises a state message and initiates the scan. The following are logged in ScanAgent.log:
+11. After the update source is successfully added, Scan Agent raises a state message and initiates the scan. In ScanAgent.log:
 
     > ScanJob({*JobID*}): Raised UpdateSource ({*UpdateSource*}) state message successfully. StateId = 2  
     > ScanJob({*JobID*}): CScanJob::Execute - successfully requested Scan, ScanType=1
@@ -159,44 +156,46 @@ The first thing the client does is set the WSUS server that will be its update s
 |Issues|What to check|
 |---|---|
 |ScanAgent.log shows no policy available for an update source and no WUAHandler.log exists or no current activity within WUAHandler.log|Check the [Enable software updates on clients](/mem/configmgr/core/clients/deploy/about-client-settings#enable-software-updates-on-clients) setting.|
-|Scan Agent or Location Services doesn't receive the WSUS server location|<ul><li>Is a software update point (SUP) role installed for the site?<br/><br/>If not, install and configure a software update point and monitor SUPSetup.log for progress. See [Install and configure a software update point](/mem/configmgr/sum/get-started/install-a-software-update-point) for more information.</li><li>If a SUP role is installed, is it configured and synchronizing?<br/><br/>Check WCM.log, WSUSCtrl.log, and WSyncMgr.log for errors.<br/><br/>`select * from WSUSServerLocations`<br/><br/>`select * from Update_SyncStatus`</li></ul>|
-|Client receives the WSUS location but fails to configure the WSUS registry keys|Did Group Policy refresh respond within the 2-minute timeout per WUAHandler.log?<br/><br/>If so, does WUAHandler denote **Group policy settings were overwritten by a higher authority (Domain Controller)**?<br/><br/>Check for a GPO being set within the domain.|
+|Scan Agent or Location Services doesn't receive the WSUS server location|<ul><li>Is a software update point (SUP) role installed for the site?<br/><br/>If not, install and configure a software update point and monitor SUPSetup.log for progress. For more information, see [Install and configure a software update point](/mem/configmgr/sum/get-started/install-a-software-update-point).</li><li>If a SUP role is installed, is it configured and synchronizing?<br/><br/>Check WCM.log, WSUSCtrl.log, and WSyncMgr.log for errors.<br/><br/>`select * from WSUSServerLocations`<br/><br/>`select * from Update_SyncStatus`</li></ul>|
+|Client receives the WSUS location but fails to configure the WSUS registry keys|Did Group Policy refresh respond within the 2-minute timeout per WUAHandler.log?<br/><br/>If so, does WUAHandler denote **Group policy settings were overwritten by a higher authority (Domain Controller)**?<br/><br/>For more information, see [Group Policy overrides the correct WSUS configuration information](troubleshoot-software-update-scan-failures.md#group-policy-overrides-the-correct-wsus-configuration-information).|
 |||  
+
+For more information about software update scan failures troubleshooting, see [Troubleshoot software update scan failures](troubleshoot-software-update-scan-failures.md).
 
 ### Step 2: Scan Agent requests the scan and WUAHandler initiates the scan
 
-Once the client has identified and set the WSUS server that will be its update source for software update scans, Scan Agent then requests the scan from WUAHandler that uses the Windows Update Agent API to request a software update scan from the Windows Update Agent. A scan may result from a scheduled or manual software update scan, from a scheduled or manual software updated deployment re-evaluation, or from a deployment that becomes active, which triggers an evaluation. The following is logged in ScanAgent.log:
+After the client has identified and set the WSUS server that will be its update source for software update scans, Scan Agent requests the scan from WUAHandler that uses the Windows Update Agent API to request a software update scan from the Windows Update Agent. A scan may result from a scheduled or manual software update scan, from a scheduled or manual software updated deployment re-evaluation, or from a deployment that becomes active, which triggers an evaluation. In ScanAgent.log:
 
 > ScanJob({JobID}): CScanJob::Execute - successfully requested Scan, ScanType=1  
 
-Scan results will include superseded updates only when they are superseded by service packs and definition updates. The following are logged in WUAHandler.log:
+Scan results will include superseded updates only when they are superseded by service packs and definition updates. In WUAHandler.log:
 
 > Search Criteria is (DeploymentAction=\* AND Type='Software') OR (DeploymentAction=* AND Type='Driver')  
 > Running single-call scan of updates.  
 > Async searching of updates using WUAgent started.
 
 > [!TIP]
-> Review WUAHandler.log after a software update scan to see if any new entries occur. If no new entries occur, this can indicate that we have no SUP being returned by the management point.
+> Review WUAHandler.log after a software update scan to see if any new entries occur. If no new entries occur, it indicates that no SUP is returned by the management point.
 
 #### Troubleshooting
 
 A number of issues with software update scan can be caused by missing or corrupted files or registry keys, or by component registration issues. To fix such issues, see [Scan failures due to missing or corrupted components](troubleshoot-software-update-scan-failures.md#scan-failures-due-to-missing-or-corrupted-components).
 
-There is a known issue where a 32-bit Windows 7 ConfigMgr 2012 R2 client requesting an update scan fails to return scan results to Configuration Manager. This causes the client to report incorrect compliance status and the updates fail to install when Configuration Manager requests the update cycle. However, if you use the Windows Update control panel applet, the updates usually install fine. When you are experiencing this problem, you receive a message similar to the following in WindowsUpdate.log:
+There is a known issue where a 32-bit Windows 7 ConfigMgr 2012 R2 client requesting an update scan fails to return scan results to Configuration Manager. It causes the client to report incorrect compliance status and the updates fail to install when Configuration Manager requests the update cycle. However, if you use the Windows Update control panel applet, the updates usually install fine. When you are experiencing this problem, you receive a message similar to the following in WindowsUpdate.log:
 
 > WARNING: ISusInternal::GetUpdateMetadata2 failed, hr=8007000E
 
-At its core this is a memory allocation issue, 64-bit Windows 7 computers will not see this error since their address space is effectively unlimited. However, they will exhibit high memory and high CPU utilization, possibly affecting performance. X86 clients will also exhibit high memory usage (usually around 1.2 to 1.4GB).
+It's a memory allocation issue, 64-bit Windows 7 computers will not see this error since their address space is effectively unlimited. However, they will exhibit high memory and high CPU utilization, possibly affecting performance. X86 clients will also exhibit high memory usage (usually around 1.2 GB to 1.4 GB).
 
-To fix this issue, apply hotfix [Windows Update Client for Windows 7: June 2015](https://support.microsoft.com/help/3050265).
+To fix this issue, apply [Windows Update Client for Windows 7: June 2015](https://support.microsoft.com/help/3050265).
 
-To summarize, when troubleshooting scan failures, the logs you should look at are WUAHandler.log and WindowsUpdate.log. Because WUAHandler simply reports what Windows Update Agent reported, the error in WUAHandler would be the same error that was reported by the Windows Update Agent itself, therefore more information about the error could be found in WindowsUpdate.log. To understand how to read WindowsUpdate.log, see [Windows Update log files](/windows/deployment/update/windows-update-logs).
+To summarize, when troubleshooting scan failures, check the WUAHandler.log and WindowsUpdate.log files. Because WUAHandler simply reports what Windows Update Agent reported, the error in WUAHandler would be the same error that was reported by the Windows Update Agent itself. More information about the error can be found in WindowsUpdate.log. To understand how to read WindowsUpdate.log, see [Windows Update log files](/windows/deployment/update/windows-update-logs).
 
-Your best source of information will come from the logs and the error codes they contain. As a reference, see [Windows Update common errors and mitigation](/windows/deployment/update/windows-update-errors).
+Your best source of information will come from the logs and the error codes they contain. For more information about the error codes, see [Windows Update common errors and mitigation](/windows/deployment/update/windows-update-errors).
 
 ### Step 3: Windows Update Agent (WUA) starts the scan against the WSUS computer
 
-Windows Update Agent starts a scan after receiving a request from the Configuration Manager client (CcmExec). If these registry values are correctly set to a WSUS computer that is a valid SUP for the site through a local policy, you should see a COM API search request from the Configuration Manager client (ClientId = CcmExec) as the following in WindowsUpdate.log:
+Windows Update Agent starts a scan after receiving a request from the Configuration Manager client (CcmExec). If these registry values are correctly set to a WSUS computer that is a valid SUP for the site through a local policy, you should see a COM API search request from the Configuration Manager client (ClientId = CcmExec). In WindowsUpdate.log:
 
 > COMAPI -- START -- COMAPI: Search [ClientId = CcmExec]  
 > COMAPI <<-- SUBMITTED -- COMAPI: Search [ClientId = CcmExec] PT + ServiceId = {*ServiceID*}, Server URL = <`http://PS1.CONTOSO.COM:8530/ClientWebService/client.asmx`>  
@@ -218,7 +217,7 @@ Windows Update Agent starts a scan after receiving a request from the Configurat
 
 #### Troubleshooting
 
-During a scan, the Windows Update Agent needs to communicate with the `ClientWebService` and `SimpleAuthWebService` virtual directories on the WSUS computer in order to perform a scan. If the client cannot communicate with the WSUS computer, the scan will fail. This can happen for a number of reasons, including:
+During a scan, the Windows Update Agent needs to communicate with the `ClientWebService` and `SimpleAuthWebService` virtual directories on the WSUS computer in order to perform a scan. If the client cannot communicate with the WSUS computer, the scan will fail. This issue can happen for a number of reasons, including:
 
 - **Proxy related issues**
 
@@ -235,30 +234,30 @@ During a scan, the Windows Update Agent needs to communicate with the `ClientWeb
 
   If the WSUS computer is returning the error, verify connectivity with the WSUS computer. Here are the steps:
 
-  1. To confirm that the client is connecting to the correct WSUS server, find the URL of the WSUS computer used by the Windows Update Agent client. This can be found by checking the `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate` registry key or by viewing the WindowsUpdate.log file.
+  1. To confirm that the client is connecting to the correct WSUS server, find the URL of the WSUS computer used by the Windows Update Agent client. This URL can be found by checking the `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate` registry subkey or by viewing the WindowsUpdate.log file.
 
-     Common reasons that the WSUS assignment may be incorrect include Group Policy conflicts or the addition of a SUP to a secondary site after initial client installation.
+     Common reasons that the WSUS assignment may be incorrect include Group Policy conflicts, or the addition of a SUP to a secondary site after initial client installation.
 
      > [!NOTE]
      > Active Directory Group Policy may override the local WSUS policy.
 
      The software updates feature automatically configures a local Group Policy setting for the Configuration Manager client so that it is configured with the software update point source location and port number. Both the server name and port number are required for the client to find the software update point.
 
-     If an Active Directory Group Policy setting is applied to computers for software update point client installation, this overrides the local Group Policy setting. Because of this, if the value of the setting that's defined in the Active Directory Group Policy is different from the one that's being set by Configuration Manager, the scan will fail on the client because it cannot locate the correct WSUS computer. In this case, WUAHandler.log will show the following:
+     If an Active Directory Group Policy setting is applied to computers for software update point client installation, it overrides the local Group Policy setting. If the value of the setting that's defined in the Active Directory Group Policy is different from the one that's being set by Configuration Manager, the scan will fail on the client because it cannot locate the correct WSUS computer. In this situation, WUAHandler.log will show the following message:
 
      > Group policy settings were overwritten by a higher authority (Domain Controller) to: Server <`http://server`> and Policy ENABLED
 
-     The software update point for client installation and software updates must be the same server and must be specified in the Active Directory Group Policy setting with the correct name format and port information. For example, this would be *<`http://server1.contoso.com:80`>* if the software update point was using the default website.
+     The software update point for client installation and software updates must be the same server and must be specified in the Active Directory Group Policy setting with the correct name format and port information. For example, it would be *<`http://server1.contoso.com:80`>* if the software update point was using the default website.
 
-  2. Assuming the server URL is correct, access the server using a URL similar to the following to verify connectivity between the client and the WSUS computer:
+  2. If the server URL is correct, access the server using a URL similar to the following one to verify connectivity between the client and the WSUS computer:
 
         <`http://SUPSERVER.CONTOSO.COM:8530/Selfupdate/wuident.cab`>
 
-        To check whether the client can access the `ClientWebService` virtual directory, try accessing a URL similar to this:
+        To check whether the client can access the `ClientWebService` virtual directory, try accessing a URL similar to this one:
 
         <`http://SUPSERVER.CONTOSO.COM:8530/ClientWebService/wusserverversion.xml`>
 
-        To check whether the client can access the `SimpleAuthWebService`, try accessing a URL similar to this:
+        To check whether the client can access the `SimpleAuthWebService`, try accessing a URL similar to this one:
 
         <`http://SUPSERVER.CONTOSO.COM:8530/SimpleAuthWebService/SimpleAuth.asmx`>
 
@@ -292,7 +291,7 @@ During a scan, the Windows Update Agent needs to communicate with the `ClientWeb
 
                 > Could not open connection to the host, on port \<*PortNumber*>
 
-                This error suggests that the firewall rules are not configured to allow communication for the WSUS computer. This error can also suggest that an intermediate network device is blocking that port. To verify, try the same test from a client on the same local subnet. If this works then that would suggest that the computers are configured correctly, however a router or firewall between segments is blocking the port and causing the failure.
+                This error suggests that the firewall rules are not configured to allow communication for the WSUS computer. This error can also suggest that an intermediate network device is blocking that port. To verify, try the same test from a client on the same local subnet. If it works, the computers are configured correctly, but a router or firewall between segments is blocking the port and causing the failure.
 
         - IIS availability problems.
 
@@ -308,14 +307,14 @@ During a scan, the Windows Update Agent needs to communicate with the `ClientWeb
 
 - **Authentication errors**
 
-  This is typically indicated when the scan fails with authentication errors 0x80244017 (HTTP Status 401) or 0x80244018 (HTTP Status 403).
+  It's typically indicated when the scan fails with authentication errors 0x80244017 (HTTP Status 401) or 0x80244018 (HTTP Status 403).
 
   First, confirm the correct WinHTTP proxy settings using the following commands:
 
   - On Windows Vista or later versions: `netsh winhttp show proxy`
   - On Windows XP: `proxycfg.exe`
 
-  Assuming the proxy settings are correct, verify connectivity with the WSUS computer by completing the steps in **HTTP timeout errors**. Also review the IIS logs on the WSUS computer to confirm that the HTTP errors are being returned from WSUS. If the WSUS computer is not returning the error, the issue is likely with an intermediate firewall or proxy.
+  If the proxy settings are correct, verify connectivity with the WSUS computer by completing the steps in **HTTP timeout errors**. Also review the IIS logs on the WSUS computer to confirm that the HTTP errors are being returned from WSUS. If the WSUS computer is not returning the error, the issue is likely with an intermediate firewall or proxy.
 
 - **Certificate problems**
 
@@ -332,15 +331,15 @@ The following are logged in WUAHandler.log:
 
 Problems here should be addressed the same way as scan failures in [step 3](#step-3-windows-update-agent-wua-starts-the-scan-against-the-wsus-computer).
 
-As mentioned previously in this guide, when troubleshooting scan failures, the logs you should look at are WUAHandler.log and WindowsUpdate.log. Because WUAHandler simply reports what Windows Update Agent reported, the error in WUAHandler would be the same error that was reported by the Windows Update Agent itself, therefore more information about the error could be found in WindowsUpdate.log. To understand how to read WindowsUpdate.log, see [Windows Update log files](/windows/deployment/update/windows-update-logs).
+As mentioned earlier in this guide, when troubleshooting scan failures, check the WUAHandler.log and WindowsUpdate.log files. Because WUAHandler simply reports what Windows Update Agent reported, the error in WUAHandler would be the same error that was reported by the Windows Update Agent itself. More information about the error could be found in WindowsUpdate.log. To understand how to read WindowsUpdate.log, see [Windows Update log files](/windows/deployment/update/windows-update-logs).
 
-Generally speaking, there are many reasons why a software update scan might fail. It could be due to one of the issues mentioned above, or it could come down to a communication or firewall issue between the client and the software update point computer. Your best source of information will come from the logs and the error codes they contain. As a reference, see [Windows Update common errors and mitigation](/windows/deployment/update/windows-update-errors).  
+There are many reasons why a software update scan might fail. It could be due to one of the issues mentioned earlier, or a communication or firewall issue between the client and the software update point computer. Your best source of information will come from the logs and the error codes they contain. For more information about the error codes, see [Windows Update common errors and mitigation](/windows/deployment/update/windows-update-errors).  
 
 ### Step 5: WUAHandler parses the scan results
 
 WUAHandler then parses the results, which include the applicability state for each update. As part of this process, superseded updates are pruned out. Additionally, the applicability state is checked for all updates that align to the criteria submitted by CCMExec to the Windows Update Agent. The important thing to understand here is that you should see applicability results for updates whether those updates are in a deployment or not.
 
-The following are logged in WUAHandler.log:
+The following entries are logged in WUAHandler.log:
 
 > Pruning: update id (70f4f236-0248-4e84-b472-292913576fa1) is superseded by (726b7201-862a-4fde-9b12-f36b38323a6f).  
 > \...  
@@ -351,9 +350,9 @@ The following are logged in WUAHandler.log:
 
 #### Troubleshooting
 
-Problems here should be addressed the same way as scan failures in [step 3](#step-3-windows-update-agent-wua-starts-the-scan-against-the-wsus-computer).
+Problems can be addressed the same way as scan failures in [step 3](#step-3-windows-update-agent-wua-starts-the-scan-against-the-wsus-computer).
 
-As mentioned previously in this guide, when troubleshooting scan failures, the logs you should look at are WUAHandler.log and WindowsUpdate.log. Because WUAHandler simply reports what Windows Update Agent reported, the error in WUAHandler would be the same error that was reported by the Windows Update Agent itself, therefore more information about the error could be found in WindowsUpdate.log. To understand how to read WindowsUpdate.log, see [Windows Update log files](/windows/deployment/update/windows-update-logs).
+As mentioned earlier in this guide, when troubleshooting scan failures, check the WUAHandler.log and WindowsUpdate.log files. Because WUAHandler simply reports what Windows Update Agent reported, the error in WUAHandler would be the same error that was reported by the Windows Update Agent itself. More information about the error could be found in WindowsUpdate.log. To understand how to read WindowsUpdate.log, see [Windows Update log files](/windows/deployment/update/windows-update-logs).
 
 Generally speaking, there are many reasons why a software update scan might fail. It could be due to one of the issues mentioned above, or it could come down to a communication or firewall issue between the client and the software update point computer. Your best source of information will come from the logs and the error codes they contain. As a reference, see [Windows Update common errors and mitigation](/windows/deployment/update/windows-update-errors).
 
@@ -377,13 +376,13 @@ StateMessage.log showing state messaged being recorded with **State ID 2** (miss
 > State message(State ID : 2) with TopicType 500 and TopicId 505fda07-b4f3-45fb-83d9-8642554e2773 has been recorded for SYSTEM
 
 > [!TIP]
-> For each update, an instance of the `CCM_UpdateStatus` class is created or updated, and this stores the current status of the update. The `CCM_UpdateStatus` class is located in the `ROOT\CCM\SoftwareUpdates\UpdatesStore` namespace.
+> For each update, an instance of the `CCM_UpdateStatus` class is created or updated, and it stores the current status of the update. The `CCM_UpdateStatus` class is located in the `ROOT\CCM\SoftwareUpdates\UpdatesStore` namespace.
 
 #### Troubleshooting
 
 Problems here should be addressed the same way as scan failures in [step 3](#step-3-windows-update-agent-wua-starts-the-scan-against-the-wsus-computer).
 
-As mentioned previously in this guide, when troubleshooting scan failures, the logs you should look at are WUAHandler.log and WindowsUpdate.log. Because WUAHandler simply reports what Windows Update Agent reported, the error in WUAHandler would be the same error that was reported by the Windows Update Agent itself, therefore more information about the error could be found in WindowsUpdate.log. To understand how to read WindowsUpdate.log, see [Windows Update log files](/windows/deployment/update/windows-update-logs).
+As mentioned earlier in this guide, when troubleshooting scan failures, check the WUAHandler.log and WindowsUpdate.log files. Because WUAHandler simply reports what Windows Update Agent reported, the error in WUAHandler would be the same error that was reported by the Windows Update Agent itself. More information about the error could be found in WindowsUpdate.log. To understand how to read WindowsUpdate.log, see [Windows Update log files](/windows/deployment/update/windows-update-logs).
 
 Generally speaking, there are many reasons why a software update scan might fail. It could be due to one of the issues mentioned above, or it could come down to a communication or firewall issue between the client and the software update point computer. Your best source of information will come from the logs and the error codes they contain. As a reference, see [Windows Update common errors and mitigation](/windows/deployment/update/windows-update-errors).  
 
@@ -421,9 +420,9 @@ When a synchronization is triggered, we expect to see the following within the W
 
 #### Troubleshooting a manual sync
 
-1. Confirm that the WSUS service is running. If you see that a manual synchronization has started but it stays at 0%, this is due to the WSUS service (**Update Services** on WSUS 3.x; **WSUSService** on Windows Server 2012 and later versions) being in a stopped state.
+1. Confirm that the WSUS service is running. If a manual synchronization has started but stays at 0%, it's because that the WSUS service (**Update Services** on WSUS 3.x; **WSUSService** on Windows Server 2012 and later versions) is in a stopped state.
 
-2. Reset the WSUS console MMC cache by completing the following:
+2. Reset the WSUS console MMC cache by following these steps:
 
    1. Close the WSUS console.
    2. Stop the WSUS service (**Update Services** on WSUS 3.x; **WSUS Service** on Windows Server 2012 and later versions).
@@ -448,7 +447,7 @@ WSUS <=winhttp=> Network entities <=> Internet
 
 #### Troubleshooting a manual sync
 
-1. Confirm that the WSUS service is running. If you see that a manual synchronization has started but it stays at 0%, this is due to the WSUS service (**Update Services** on WSUS 3.x; **WSUS Service** on Windows Server 2012 and later versions) being in a stopped state.
+1. Confirm that the WSUS service is running. If you see that a manual synchronization has started but it stays at 0%, it's due to the WSUS service (**Update Services** on WSUS 3.x; **WSUS Service** on Windows Server 2012 and later versions) being in a stopped state.
 
 2. Reset the WSUS console MMC cache by completing the following:
 
@@ -466,7 +465,7 @@ WSUS <=winhttp=> Network entities <=> Internet
 
 ### Step 3: The WSUS computer receives product and classification information from Microsoft Update and any subscribed metadata
 
-Once WSUS receives product and classification information and any subscribed metadata from Microsoft Update, the WSUS synchronization is complete.
+After WSUS receives product and classification information and any subscribed metadata from Microsoft Update, the WSUS synchronization is complete.
 
 ## Installation, supersedence, or detection issues with specific updates
 
@@ -485,7 +484,7 @@ What is the installer (CBS, MSI, other)?
 
 For updates that apply to Windows Vista and later versions, CBS is used to handle the installation.
 
-1. Gather the CBS log (`%Windir%\Logs\Cbs\Cbs.log`) and perform an initial review to gain insight into the cause of the failure. Troubleshooting installation-based issues through CBS logs is beyond the scope of this guide, see [Fix Windows corruption errors by using the DISM or System Update Readiness tool](https://support.microsoft.com/help/947821) for more information.
+1. Gather the CBS log (`%Windir%\Logs\Cbs\Cbs.log`) and perform an initial review to gain insight into the cause of the failure. Troubleshooting installation-based issues through CBS logs is beyond the scope of this guide. For more information, see [Fix Windows corruption errors by using the DISM or System Update Readiness tool](https://support.microsoft.com/help/947821).
 1. Does the update install successfully as a logged on user? If it does install successfully as a logged on user, does it only fail when installed under the System context? If so, focus on troubleshooting the manual installation failure under the System context.
 
 #### MSI (Windows Installer)
@@ -497,9 +496,9 @@ For non-Windows software updates, MSI is used to handle the installation.
 
     When reviewing the resulting logs, check for return value 3 within the log and the lines preceding that entry for insight into the failure.
 
-3. Check whether the same update fails to install manually under the local system context using the same installation switches that failed during the software update deployment.
+3. Check whether the same update fails to install manually under the local system context by using the same installation switches that failed during the software update deployment.
 
-    If this fails, test the installation as the logged on user with the same installation switches to understand if this is an issue with installing under local system. If this works, you can then focus the issue on how to properly install the update using the local system context. This may require checking for administrative deployment guidance within the KB for the update or online.
+    If it fails, test the installation as the logged on user with the same installation switches to understand if this is an issue with installing under local system. If it works, you can then focus the issue on how to properly install the update using the local system context. It may require checking for administrative deployment guidance within the KB for the update or online.
 
 ### Supersedence issues
 
@@ -517,14 +516,14 @@ Attempt to isolate the issue that relates to supersedence by using the following
 2. Run the **Software Updates Scan Cycle** action on the Configuration Manager client.
 3. Review UpdatesStore.log and WindowsUpdate.log.
 
-#### Troubleshooting update applicability
+#### Troubleshoot update applicability
 
-1. Check if any prerequisites are missing using the KB article for the update. For instance, does the update require the application or OS being patched to be at a specific service pack level?
-2. Confirm that the Unique Update ID of the update in question matches what is deployed. For instance, is the update in question an x86 update but being targeted to an x64 host?
+1. Check if any prerequisites are missing using the KB article for the update. For example, does the update require the application or OS being patched to a specific service pack level?
+2. Confirm that the Unique Update ID of the update in question matches what is deployed. For example, is the update in question a 32-bit update but is targeted to a 64-bit host?
 
 ## More information
 
-For additional information regarding how to configure software updates in Configuration Manager, see the following articles:
+For more information about how to configure software updates in Configuration Manager, see the following articles:
 
 - [Plan for software updates in Configuration Manager](/mem/configmgr/sum/plan-design/plan-for-software-updates)
 - [How to Configure a Software Update Point to Use Network Load Balancing (NLB) Cluster](/previous-versions/system-center/system-center-2012-R2/hh237369(v=technet.10))

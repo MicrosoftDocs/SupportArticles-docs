@@ -36,8 +36,9 @@ TPM 2.0 is designed to be fully functional in UEFI mode. Systems must be in UEFI
 
 For more information about secure boot and TPM, see the following resources:
 
-[Windows hardware certification requirements for Client and Server systems](https://msdn.microsoft.com/library/windows/hardware/jj128256) 
- [UEFI implications for Windows Server (pdf)](http://www.uefi.org/sites/default/files/resources/uefi_plugfest_uefi_implications_for_windows_server_microsoft_march_2013.pdf) 
+[Windows hardware certification requirements for Client and Server systems](https://msdn.microsoft.com/library/windows/hardware/jj128256)
+
+[UEFI implications for Windows Server (pdf)](https://members.uefi.org/learning_center/UEFI_PlugFest_UEFI_implications_for_Windows_Server_Microsoft_March_2013.pdf) 
 
 [https://www.trustedcomputinggroup.org](https://www.trustedcomputinggroup.org/)  
 

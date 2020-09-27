@@ -87,22 +87,35 @@ This table shows possible Internet Explorer version numbers.
 |10.0.8250.00000|Internet Explorer 10 Consumer Preview|
 |10.0.8400.00000|Internet Explorer 10 Release Preview|
 |10.0.9200.16384|Internet Explorer 10 for Windows 8|
+|11.0.9600.xxxxx|Internet Explorer 11 for Windows 7 and Windows 8.1|
+|11.0.9600.xxxxx|Internet Explorer 11 for Windows Server 2008 R2, Windows Server 2012 and Windows Server 2012 R2|
+|11.xxxxx.10240.0|Internet Explorer 11 on Windows 10 (initial version released July 2015)|
+|11.xxxxx.10586.0|Internet Explorer 11 on Windows 10 version 1511|
+|11.xxxxx.14393.0|Internet Explorer 11 on Windows 10 version 1607 and Windows Server 2016|
+|11.xxxxx.15063.0|Internet Explorer 11 on Windows 10 version 1703|
+|11.xxxxx.16299.0|Internet Explorer 11 on Windows 10 version 1709|
+|11.xxxxx.17134.0|Internet Explorer 11 on Windows 10 version 1803|
+|11.xxxxx.17763.0|Internet Explorer 11 on Windows 10 version 1809 and Windows Server 2019|
+|11.xxxxx.18362.0|Internet Explorer 11 on Windows 10 version 1903 and Windows 10 version 1909|
 |||
 
-Internet Explorer 11 will have a version number that starts with 11 (for example, 11.0.9600). The version number will change based on the updates that have been installed for Internet Explorer. To see the version number and the most recent update installed, go to the **Help** menu and select **About Internet Explorer**.
+Internet Explorer 11 on Windows7, Windows 8.1, Windows Server 2008R2, Windows Server 2012 and Windows Server 2012 R2 will have a version number that starts with 11.0.9600.xxxxx. The version number for the last xxxxx will change based on the updates that have been installed for Internet Explorer. To see the version number and the most recent update installed, go to the **Help** menu, and select **About Internet Explorer**.
 
-Notes
+Internet Explorer 11 on Windows 10 has a slight different versioning because it changes its version with each update in the second part with the according OS-Build -info. For example, you have Windows 10 version 1809 with the KB4549949 from April 1,2020 the Operating System shows an OS Build-number of 17763.1158 (as per winver.exe). In this case, Internet Explorer 11 shows as version 11.1158.17763.0.
 
-- The minor version number, build number, and subbuild number may be displayed without trailing zeros. For example, version 7.00.5730.1100 may be displayed as 7.0.5730.11.
-- All versions of Internet Explorer 5.0 (and later versions) that are customized with Microsoft Internet Explorer Administration Kit (IEAK) include one of the following strings after the version number. To view this information, click About on the Help menu:  
-
-  - **IC** = Internet content provider
-  - **IS** = Internet service provider
-  - **CO** = Corporate administrator
-
-- Internet Explorer version 4.0 and later versions include an Update Versions line that lists all installed updates or hotfixes to the current version of Internet Explorer. Updates to Internet Explorer 4.01 Service Pack 2 or Internet Explorer 5.0 and later versions are listed by their corresponding Microsoft Knowledge Base article number.
-- The version numbers of Internet Explorer in the list are based on the versions of Windows. The list numbers might be changed by the latest hotfix.
-- The build number of Internet Explorers in the release version of Windows Vista is the same as in other versions.
+> [!Note]
+> The minor version number, build number, and sub-build number may be displayed without trailing zeros. For example, version 7.00.5730.1100 may be displayed as 7.0.5730.11.
+>
+> All versions of Internet Explorer 5.0 and later versions that are customized with Microsoft Internet Explorer Administration Kit (IEAK) include one of the following strings after the version number. To view this information, click About on the Help menu:
+>
+> - **IC** = Internet content provider
+> - **IS** = Internet service provider
+> - **CO** = Corporate administrator
+>
+> Internet Explorer version 4.0 and later versions include an Update Versions line that lists all installed updates or hotfixes to the current version of Internet Explorer. Updates to Internet Explorer 4.01 Service Pack 2 or Internet Explorer 5.0 and later versions are listed by their corresponding Microsoft Knowledge Base article number.
+>
+> The version numbers of Internet Explorer in the list are based on the versions of Windows. The list numbers might be changed by the latest update.
+The build number of Internet Explorer in the release version of Windows Vista is the same as in other versions.
 
 ### Changes to the About Internet Explorer dialog box in Internet Explorer 9 and Internet Explorer 10
 
@@ -111,6 +124,8 @@ You can open the **About Internet Explorer** dialog box by clicking **Help** and
 :::image type="content" source="media/information-about-ie-version/About-Internet-Explorer-1.png" alt-text="screenshot of the About Internet Explorer page for Internet Explorer 9" border="false":::
 
 :::image type="content" source="media/information-about-ie-version/About-Internet-Explorer-2.png" alt-text="screenshot of the About Internet Explorer page for Internet Explorer 10" border="false":::
+
+:::image type="content" source="media/information-about-ie-version/About-Internet-Explorer-4.png" alt-text="screenshot of the About Internet Explorer page for Internet Explorer 11" border="false":::
 
 One change from previous versions of Internet Explorer is how we use the Update Versions field. The field is updated every time Internet Explorer 9 or Internet Explorer 10 is updated. The version number has the following components:
 
@@ -132,9 +147,8 @@ To determine the version of Internet Explorer, use any of the following methods:
 
 - The Microsoft OneScript team has released a script to run in PowerShell that can determine Internet Explorer versions are installed on your Windows. For more information about this script, see [How to determine Internet Explorer versions by PowerShell](https://gallery.technet.microsoft.com/how-to-determine-internet-2abf26ca) in TechNet Gallery.
 - In all versions of Internet Explorer, click **About Internet Explorer** on the **Help** menu. The product and version information are displayed in the dialog box that appears.
-- Use the registry. You can determine the version of Internet Explorer by viewing the following registry key:
-
-    `HKEY_LOCAL_MACHINE\Software\Microsoft\Internet Explorer`
+- Use the registry. You can determine the version of Internet Explorer by viewing the following registry key:  
+  `HKEY_LOCAL_MACHINE\Software\Microsoft\Internet Explorer`
 
   If a version value appears in this key, Internet Explorer 4.0 or a later version is installed. The version string value contains the version number of Internet Explorer 4.0 (or a later version) that is installed on your computer. (For example, the version string value for Internet Explorer 5 is 5.0.2014.0216). Only one zero is stored in the registry for the minor version number if the minor version number is 00. If the minor version number is not 00, the full version value is stored. (For example, 5.50.4807.2300 is stored in the registry as 5.50.4807.2300.)
 

@@ -79,9 +79,7 @@ It's very common for certain types of remote control software to replace the def
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\WinlogonValue = GinaDLL REG_SZ`
 
 - If the Gina DLL value is present and if it's anything other than Msgina.dll, it probably means that a third-party product has changed this value.
-- If this value isn't present, the system uses Msgina.dll as the default GINA DLL. If this error first occurred after the installation of a new or updated device driver, system service, or third-party program, the new software should be removed or disabled. Contact the manufacturer of the software to see if an update is available. For more information about hardware and software vendor contact information, visit the following Microsoft Web site:
-
-    [https://support.microsoft.com/gp/vendors](/gp/vendors)  
+- If this value isn't present, the system uses Msgina.dll as the default GINA DLL. If this error first occurred after the installation of a new or updated device driver, system service, or third-party program, the new software should be removed or disabled. Contact the manufacturer of the software to see if an update is available. 
 
 ### Last known good configuration
 

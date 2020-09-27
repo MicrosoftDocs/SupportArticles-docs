@@ -22,6 +22,9 @@
 - name: Welcome
   href: windows-hardware/drivers/welcome-windowshardware.md
 
+- name: Previous Versions
+  href: previous-versions/index.yml
+
 - name: Microsoft Endpoint Manager
   href: mem/index.yml
 
