@@ -77,7 +77,7 @@ Event IDs
 
 ##### 510 Completing a failed Power request
 
-![Event 510](./media/e2e-event-ids-volsnap/event-510.png)![Event 510](./media/e2e-event-ids-volsnap/event-id-510.png)
+![Event 510](./media/e2e-event-ids-volsnap/event-510.png)![Event ID 510](./media/e2e-event-ids-volsnap/event-id-510.png)
 
 ##### 511 Completing a failed WMI request  
 

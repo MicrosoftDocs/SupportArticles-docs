@@ -30,7 +30,7 @@ If you observe specific error messages, go to [Troubleshoot Search errors](#tro
 
 ## More information
 
-### Tune the Indexer performance
+### Tune the Indexer performance
 
 The primary factors that affect indexing performance are the number of items indexed and the overall size of the index. These factors are related but separate.
 
@@ -97,7 +97,7 @@ To help reduce the content of an Outlook mailbox, you can change the synchroniza
 
  [3115009](https://support.microsoft.com/help/3115009)  Update allows administrators to set additional default mail and calendar synchronization windows for new Exchange accounts in Outlook 2016
 
-### Troubleshoot Search errors
+### Troubleshoot Search errors
 
 If the Indexer successfully builds the index database, you see the message "Indexing complete" on the Windows Search settings page and in **Indexing Options**.
 
