@@ -29,7 +29,7 @@
       href: ./application-management/x64-windows-not-support-16-bit-programs.md
     - name: Availability and description of FCIV
       href: ./application-management/virtualization-apps-not-work-with-hyper-v.md
-    - name: Can not link TextService in Eudcedit.exe
+    - name: Can't link TextService in Eudcedit.exe
       href: ./application-management/cannot-link-textservice-eudcedit.md
     - name: Can't uninstall an application
       href: ./application-management/error-opening-installation-log-file.md
@@ -79,7 +79,7 @@
       href: ./deployment/automate-regional-language-settings.md
     - name: BitLocker could not be enabled
       href: ./deployment/bitlocker-not-enabled-usb-drive-not-found.md
-    - name: Cannot use the ImageX.exe tool for backup 
+    - name: Can't use the ImageX.exe tool for backup 
       href: ./deployment/cannot-use-imagex-tool-backup.md
     - name: Can't activate Windows 7 with KMS
       href: ./deployment/cannot-activate-windows-from-oem.md
