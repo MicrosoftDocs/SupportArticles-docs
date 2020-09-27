@@ -1,6 +1,6 @@
 ---
 title: FAQ about Windows 7 ESU offers for E5 customers
-description: After January 14, 2020, Microsoft no longer provides security updates or support for computers that run Windows 7.
+description: After January 14, 2020, Microsoft no longer provides security updates or support for computers that run Windows 7 for E5 customers.
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan

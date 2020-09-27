@@ -1,6 +1,6 @@
 ---
 title: FAQ about the end of support for Windows 7
-description: After January 14, 2020, Microsoft no longer provides security updates or support for computers that run Windows 7.
+description: After January 14, 2020, Microsoft no longer provides security updates or support for computers that run Windows 7 for home users.
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan

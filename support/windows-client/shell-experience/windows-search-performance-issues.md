@@ -26,7 +26,7 @@ This article discusses common performance issues that affect Windows Search and 
 
 If you observe general poor performance when you search or when Windows builds a search index, go to [Tune the Indexer performance](#tune-the-indexer-performance).
 
-If you observe specific error messages, go to [Troubleshoot Search errors](#troubshoot-search-errors).
+If you observe specific error messages, go to [Troubleshoot Search errors](#troubleshoot-search-errors).
 
 ## More information
 
@@ -42,7 +42,7 @@ The Indexer can index up to 1 million items. If the Indexer tries to index bey
 
 Note
 
-By default, the Indexer indexes any Outlook mailboxes on the computer. If a mailbox contains more than 6 million items, the performance of the Indexer may degrade. For more information, go to [Change Outlook settings](#change-outlook-settings).
+By default, the Indexer indexes any Outlook mailboxes on the computer. If a mailbox contains more than 6 million items, the performance of the Indexer may degrade. For more information, go to the "Change Outlook settings" section.
 
 To check the number of items that are indexed, select **Settings** > **Search** > **Searching Windows**, and then check the value of **Indexed items**.
 
@@ -91,7 +91,7 @@ For more information about how to defragment the index database, see the follow
 
  [2952967](https://support.microsoft.com/help/2952967/windows-edb-bets-big-when-a-pst-file-is-indexed-in-windows-10-8-1-8)  Windows.edb larger than expected when a PST file is indexed in Windows
 
-**Change Outlook settings**  
+**Change Outlook settings**
 
 To help reduce the content of an Outlook mailbox, you can change the synchronization window to a shorter time interval than the default interval of one year. For more information about how to do this, see the following Knowledge Base article:
 

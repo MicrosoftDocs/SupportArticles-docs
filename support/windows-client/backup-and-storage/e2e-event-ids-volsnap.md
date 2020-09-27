@@ -41,43 +41,43 @@ Event IDs
 
 ##### 500 Completing a failed upper-level read request.
 
-![Event 500 ](./media/e2e-event-ids-volsnap/event-500.png)![Event ID 500 ](./media/e2e-event-ids-volsnap/event-id-500.png)
+![Event 500](./media/e2e-event-ids-volsnap/event-500.png)![Event ID 500](./media/e2e-event-ids-volsnap/event-id-500.png)
 
 ##### 501 Completing a failed upper-level write request.
 
-![Event ID 501 ](./media/e2e-event-ids-volsnap/event-501.png)![Event ID 501 ](./media/e2e-event-ids-volsnap/event-id-501.png)
+![Event 501](./media/e2e-event-ids-volsnap/event-501.png)![Event ID 501](./media/e2e-event-ids-volsnap/event-id-501.png)
 
 ##### 503 Completing a failed upper-level paging write request.
 
-![Event ID 503 ](./media/e2e-event-ids-volsnap/event-503.png)![Event ID 503 ](./media/e2e-event-ids-volsnap/event-id-503.png)
+![Event 503](./media/e2e-event-ids-volsnap/event-503.png)![Event ID 503](./media/e2e-event-ids-volsnap/event-id-503.png)
 
 ##### 504 Completing a failed IOCTL request.
 
-![Event ID 504 ](./media/e2e-event-ids-volsnap/event-504.png)![Event ID 504 ](./media/e2e-event-ids-volsnap/event-id-504.png)
+![Event 504](./media/e2e-event-ids-volsnap/event-504.png)![Event ID 504](./media/e2e-event-ids-volsnap/event-id-504.png)
 
 ##### 505 Completing a failed Read SCSI SRB request
 
-![Event ID 505 ](./media/e2e-event-ids-volsnap/event-505.png)![Event ID 505 ](./media/e2e-event-ids-volsnap/event-id-505.png)
+![Event 505](./media/e2e-event-ids-volsnap/event-505.png)![Event ID 505](./media/e2e-event-ids-volsnap/event-id-505.png)
 
 ##### 506 Completing a failed Write SCSI SRB request
 
-![Event ID 506 ](./media/e2e-event-ids-volsnap/event-506.png)![Event ID 506 ](./media/e2e-event-ids-volsnap/event-id-506.png)
+![Event 506](./media/e2e-event-ids-volsnap/event-506.png)![Event ID 506](./media/e2e-event-ids-volsnap/event-id-506.png)
 
 ##### 507 Completing a failed non-ReadWrite SCSI SRB request
 
-![Event ID 507 ](./media/e2e-event-ids-volsnap/event-507.png)![Event ID 507 ](./media/e2e-event-ids-volsnap/event-id-507.png)
+![Event 507](./media/e2e-event-ids-volsnap/event-507.png)![Event ID 507](./media/e2e-event-ids-volsnap/event-id-507.png)
 
 ##### 508 Completing a failed non-SCSI SRB request
 
-![Event ID 508 ](./media/e2e-event-ids-volsnap/event-508.png)![Event ID 508 ](./media/e2e-event-ids-volsnap/event-id-508.png)
+![Event 508 ](./media/e2e-event-ids-volsnap/event-508.png)![Event ID 508](./media/e2e-event-ids-volsnap/event-id-508.png)
 
 ##### 509 Completing a failed PNP request
 
-![Event ID 509 ](./media/e2e-event-ids-volsnap/event-509.png)![Event ID 509 ](./media/e2e-event-ids-volsnap/event-id-509.png)
+![Event 509](./media/e2e-event-ids-volsnap/event-509.png)![Event ID 509](./media/e2e-event-ids-volsnap/event-id-509.png)
 
 ##### 510 Completing a failed Power request
 
-![Event ID 510 ](./media/e2e-event-ids-volsnap/event-510.png)![Event ID 510 ](./media/e2e-event-ids-volsnap/event-id-510.png)
+![Event 510](./media/e2e-event-ids-volsnap/event-510.png)![Event 510](./media/e2e-event-ids-volsnap/event-id-510.png)
 
 ##### 511 Completing a failed WMI request  
 
@@ -85,7 +85,7 @@ Event IDs
 
 In earlier versions of Windows, Volsnap had limited diagnostic features. Although it can log 42 different event messages, the routines that produce them are limited to providing up to two strings that represent volume names. The messages were logged by using the older API IoWriteErrorLogEntry. There was also a custom logging facility that was shared between Volsnap and various other components of VSS. In this custom logging, diagnostic data was written to the registry under HKLM\SYSTEM\CCS\Services\vss\Diag.
 
-![Registry key ](./media/e2e-event-ids-volsnap/registry-key.png)
+![Registry key image](./media/e2e-event-ids-volsnap/registry-key.png)
 
 This mechanism was specific to the Volume Shadow Copy Service (VSS). Therefore, it required custom tools, such as VSS Reports, to extract the information. Also, it retained only the most recent instance of any given diagnostic message.
 

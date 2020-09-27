@@ -30,10 +30,12 @@ To determine whether your device is certified for Windows 8, open the **Devices*
 
 To enable the Devices charm for devices not certified for Windows 8 in Windows 8.1, add the following registry key value:
 
-    Registry subkey: HKEY_LOCAL_MACHINE\Software\Microsoft\PlayTo
-    Value: ShowNonCertifiedDevices
-    Type: REG_DWORD
-    Value data: 1
+```console
+Registry subkey: HKEY_LOCAL_MACHINE\Software\Microsoft\PlayTo
+Value: ShowNonCertifiedDevices
+Type: REG_DWORD
+Value data: 1
+```
 
 > [!IMPORTANT]
 >

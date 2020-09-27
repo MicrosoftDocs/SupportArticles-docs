@@ -44,8 +44,5 @@ This article describes the tools that are available for installation as part of 
 |Storage Explorer Tools|Storage Explorer Tools include the Storage Explorer snap-in.|Not available| √ |
 |Storage Manager for Storage Area Networks (SANs) Tools|Storage Manager for SANs Tools includes the Storage Manager for SANs snap-in and the Provisionstorage.exe command-line tool.| √ <br/><br/>Storage Manager for SANs is available in Windows Server 2003 R2 and later versions.| √ |
 |Windows System Resource Manager Tools|Windows System Resource Manager Tools include the Windows System Resource Manager snap-in and the Wsrmc.exe command-line tool.|Not available| √ |
-|||||
-
-## More information
 
 For more information about Remote Server Administration Tools for Windows 7, visit the following Microsoft Web site: [https://www.microsoft.com/download/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d](https://www.microsoft.com/download/details.aspx?familyid=7d2f6ad7-656b-4313-a005-4e344e43997d)

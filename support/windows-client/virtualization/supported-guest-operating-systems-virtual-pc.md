@@ -50,7 +50,7 @@ You can use the following operating systems as a guest operating system in a gue
 |Windows XP Home Edition|Yes|No|
 |Windows XP Starter|Yes|No|
 |Windows Server 2003 Standard Edition|Yes|No|
-||||
+
 Additionally, you can install most x86-based operating systems in the Windows Virtual PC environment. For technical issues with third-party operating systems, contact the operating system vendor for support. Support for Microsoft operating systems whose lifecycles have ended may be limited or not available. Microsoft provides support for technical issues with the Windows Virtual PC program, regardless of the installed guest operating system.
 
 For information about how to install any of these guest operating systems on a virtual machine, see the Windows Virtual PC documentation.  

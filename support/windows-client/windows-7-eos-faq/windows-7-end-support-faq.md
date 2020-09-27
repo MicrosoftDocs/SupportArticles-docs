@@ -22,8 +22,6 @@ This article is intended for use by IT professionals. If you're looking for inf
 _Original product version:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 4527873
 
-## In this article
-
 Get answers to common questions about the following end-of-support topics for Windows 7:
 
 - [General information](https://support.microsoft.com/help/4527875) 

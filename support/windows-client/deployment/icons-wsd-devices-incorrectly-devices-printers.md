@@ -30,30 +30,11 @@ This issue is caused by an incorrect Device Stage  package released by Microsoft
 
 ## Resolution
 
-To resolve this problem, clear out the Device Stage Metadata Store and download new packages. To have us fix this problem for you, go to the "[Fix it for me](#fixitforme)" section. If you'd rather fix this problem yourself, go to the "[Let me fix it myself](#letmefixitmyself)" section.
-
-### Fix it for me
-
-To fix this problem automatically, click the  
- **Fix this problem** link. Then, click  
- **Run** in the  
- **File Download** dialog box and follow the steps in this wizard.
-
-[Download](https://support.microsoft.com/en-us/help/2970908/how-to-use-microsoft-easy-fix-solutions)
-
-> [!NOTE]
-> This wizard may be in English only; however, the automatic fix also works for other language versions of Windows.
-
-> [!NOTE]
-> If you are not on the computer that has the problem, you can save the automatic fix to a flash drive or to a CD so that you can run it on the computer that has the problem.
-
-### Let me fix it myself
-
-To fix this problem yourself, follow these steps:
+To resolve this problem, clear out the Device Stage Metadata Store and download new packages. To do this, follow these steps:
 
 1. Open an elevated (Administrator) Command Prompt.
 
-2. Type del /s "%systemdrive%\users\%username%\AppData\Local\Microsoft\Device Metadata\*.*"  and press Enter.
+2. Type del /s "%systemdrive%\users\%username%\AppData\Local\Microsoft\Device Metadata\\\*.*"  and press Enter.
 
 3. Type Y  to the Are you sure (Y/N)  prompt and press Enter.
 

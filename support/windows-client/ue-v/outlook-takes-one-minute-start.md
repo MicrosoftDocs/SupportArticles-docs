@@ -7,7 +7,7 @@ ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: narafa, winciccore, kaushika
 ms.prod-support-area-path: Certificates and public key infrastructure (PKI)
@@ -64,5 +64,5 @@ If you can't change to other **Sync** methods, you can change the behavior of UE
 For more information, see the following articles: 
 
 - [Understanding the limitations of roaming Outlook signatures in Microsoft UE-V](https://support.microsoft.com/help/2930271) 
-- [Unregister and register UE-V template](/powershell/module/uev/?view=win10-ps) 
+- [Unregister and register UE-V template](/powershell/module/uev/?view=win10-ps&preserve-view=true ) 
 - [Sync Methods for UE-V 2.x](/microsoft-desktop-optimization-pack/uev-v2/sync-methods-for-ue-v-2x-both-uevv2) 

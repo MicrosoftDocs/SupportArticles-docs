@@ -42,19 +42,19 @@ After you update to Windows 10, version 2004, Microsoft Bopomofo is updated. Th
 Turn on the Compatibility option to revert to the previous version Microsoft Bopomofo. To do this, follow these steps:
 1. On the **Settings** page, select **Language**.
 
-![Language](./media/cannot-link-textservice-eudcedit/language.png)
+![Language image](./media/cannot-link-textservice-eudcedit/language.png)
 
 2. Select **Options** for Microsoft Bopomofo (**Chinese (Traditional, Taiwan)**).
 
-![Language options](./media/cannot-link-textservice-eudcedit/language-options.png)
+![Language options image](./media/cannot-link-textservice-eudcedit/language-options.png)
 
 3. Select **General**.
 
-![Bopomofo](./media/cannot-link-textservice-eudcedit/bopomofo.png)
+![Bopomofo image](./media/cannot-link-textservice-eudcedit/bopomofo.png)
 
 4. Turn on the "Use previous version of Microsoft Bopomofo" option.
 
-![Previous bopomofo ](./media/cannot-link-textservice-eudcedit/previous-bopomofo.png)
+![Previous bopomofo image](./media/cannot-link-textservice-eudcedit/previous-bopomofo.png)
 
 
 
@@ -63,7 +63,8 @@ Turn on the Compatibility option to revert to the previous version Microsoft Bo
 Revert to the previous version of Microsoft Bopomofo by using the following Group Policy setting:  
  **User Configuration** > **Administrative Templates** > **Windows Components** > **IME** > **Configure Traditional Chinese IME version**![Group policy](./media/cannot-link-textservice-eudcedit/ime-version.png)
 
->[!Note] This policy was introduced in Windows 10, version 2004.
+> [!Note]
+> This policy was introduced in Windows 10, version 2004.
 
 ### Method 3
 

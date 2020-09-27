@@ -338,9 +338,10 @@ Collapsible element body
 This section describes problems that you might encounter when you use VAMT online or proxy activation. When you do this, use the following VAMT proxy activation URLs:
 
 - https://activation.sls.microsoft.com/BatchActivation/BatchActivation.asmx​
-- http://go.microsoft.com/fwlink/?LinkId=82160 (This FWLink redirects to the preceding URL.)​
+- https://go.microsoft.com/fwlink/?LinkId=82160 (This FWLink redirects to the preceding URL.)​
 ​
-Alternatively, include the following domains in the computer's whitelist: 
+Alternatively, include the following domains in the computer's white list:
+
 - activation.sls.microsoft.com​
 - go.microsoft.com 
 
@@ -610,5 +611,5 @@ Windows Server Update Service (WSUS) continues to scan cab files for Windows 7 S
 - [Frequently asked questions about ESU for Windows Server and SQL Server 2008 and 2008 R2​](https://support.microsoft.com/help/4539036/faq-about-esu-for-windows-server-and-sql-server-2008-2008-r2) 
 - [How to use Windows Server 2008 and 2008 R2 extended security updates (ESU)​](/windows-server/get-started/extended-security-updates) 
 - [Extended Security Updates and Configuration Manager ​](https://techcommunity.microsoft.com/t5/configuration-manager-blog/extended-security-updates-and-configuration-manager/ba-p/825618) 
-- [What are Extended Security Updates for SQL Server?](/sql/sql-server/end-of-support/sql-server-extended-security-updates?view=sql-server-ver15) 
+- [What are Extended Security Updates for SQL Server?](/sql/sql-server/end-of-support/sql-server-extended-security-updates?view=sql-server-ver15&preserve-view=true) 
 - ​[Lifecycle FAQ-Extended Security Updates](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) 

@@ -62,35 +62,44 @@ Different Linux distributions have slightly different mechanisms to specify the 
 In RHEL 5.9, you have to pass the *prefer_ms_hyper_v* parameter through a kernel command-line argument to the ide_core module that's built into the RHEL 5.9 kernel. By default, this parameter is initialized to 1, and it causes the Linux virtual machine to avoid using the ide_core module if it's running in a Hyper-V environment. Administrators have to set the *prefer_ms_hyper_v* parameter value to 0 so that the ide_core driver becomes operational during the kexec kernel boot process. You can do this by changing the contents of /etc/kdump.conf.
 
 To change the contents of /etc/kdump.conf, follow these steps:
+
 1. Run the following command to configure kdump to write to a local directory:
 
-   >path /var/crash 
+   ```console
+   path /var/crash
+   ```
 
-2. Blacklist the Linux Integration Services drivers in /etc/kdump.conf, which prevents the drivers from loading in to the kexec kernel. To do so, run the following command:
+2. Black list the Linux Integration Services drivers in /etc/kdump.conf, which prevents the drivers from loading in to the kexec kernel. To do so, run the following command:
 
-   >blacklist hv_vmbus hv_storvsc hv_utils hv_netvsc hid-hyperv 
+   ```console
+   blacklist hv_vmbus hv_storvsc hv_utils hv_netvsc hid-hyperv
+   ```
 
 3. Configure the disk time-out value by running the following command:
 
-   >disk_timeout 100 
+   ```console
+   disk_timeout 100
+   ```
 
-4. After the required edits, the /etc/kdump.conf file looks like this:  
-   >*path /var/crash*  
-   *core_collector makedumpfile -c--message-level 1 -d 31*  
-   *blacklist hv_vmbus hv_storvsc hv_utils hv_netvsc hid-hyperv*  
+4. After the required edits, the /etc/kdump.conf file looks like this:
+
+   ```console
+   path /var/crash
+   core_collector makedumpfile -c--message-level 1 -d 31
+   blacklist hv_vmbus hv_storvsc hv_utils hv_netvsc hid-hyperv
     disk_timeout 100  
+   ```
 
 5. Modify the contents of the /etc/sysconfig/kdump file as follows:
    - Add or modify the following line to include the prefer_ms_hyperv=0 argument:
 
-      >KDUMP_COMMANDLINE_APPEND="irqpoll maxcpus=1 reset_devices ide_core.prefer_ms_hyperv=0 "
+      > KDUMP_COMMANDLINE_APPEND="irqpoll maxcpus=1 reset_devices ide_core.prefer_ms_hyperv=0 "
 
    - After the required edits, the /etc/sysconfig/kdump file looks like this:  
-     >KDUMP_COMMANDLINE=""  
+     > KDUMP_COMMANDLINE=""  
     *# This variable lets us append arguments to the current kdump commandline*  
     *# As taken from either KDUMP_COMMANDLINE above, or from /proc/cmdline*  
      KDUMP_COMMANDLINE_APPEND="irqpoll maxcpus=1 reset_devices ide_core.prefer_ms_hyperv=0" 
-
 
 #### Red Hat Enterprise Linux (RHEL) 6.4
 
@@ -100,32 +109,40 @@ To change the contents of /etc/kdump.conf, follow these steps:
 
 1. Configure kdump to write to a local directory:
 
-   >path /var/crash  
+   ```console
+   path /var/crash
+   ```
 
 2. Add extra modules ata_piix,sr_mod,sd_mod:
 
-   >extra_modules ata_piix sr_mod sd_mod 
+   ```console
+   extra_modules ata_piix sr_mod sd_mod
+   ```
 
-3. Blacklist Linux Integration Services drivers in etc/kdump.conf. This prevents the drivers from loading into the kexec kernel:
+3. Black list Linux Integration Services drivers in etc/kdump.conf. This prevents the drivers from loading into the kexec kernel:
 
-   >blacklist hv_vmbus hv_storvsc hv_utils hv_netvsc hid-hyperv 
+   ```console
+   blacklist hv_vmbus hv_storvsc hv_utils hv_netvsc hid-hyperv
+   ```
 
 4. Add options parameter to pass the parameter to the ata_piix module:
 
-   >options ata_piix prefer_ms_hyperv=0 
+   > options ata_piix prefer_ms_hyperv=0
 
 5. Configure the disk time-out value so that, it does not stop responding (hang):
 
-   >disk_timeout 100 
+   > disk_timeout 100
 
 6. After the required edits, the /etc/kdump.conf file looks like:  
-   >path /var/crash  
+
+   ```console
+   path /var/crash  
    core_collector makedumpfile -c--message-level 1 -d 31  
    extra_modules ata_piix sr_mod sd_mod  
    blacklist hv_vmbus hv_storvsc hv_utils hv_netvsc hid-hyperv  
    options ata_piix prefer_ms_hyperv=0  
    disk_timeout 100  
-
+   ```
 
 #### Ubuntu 12.04(.x)
 

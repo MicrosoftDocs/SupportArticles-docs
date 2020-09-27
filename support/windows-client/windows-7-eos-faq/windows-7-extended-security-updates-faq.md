@@ -1,6 +1,6 @@
 ---
 title: FAQ about Extended Security Updates for Windows 7
-description: After January 14, 2020, Microsoft no longer provides security updates or support for computers that run Windows 7.
+description: After January 14, 2020, Microsoft no longer provides extended security updates or support for computers that run Windows 7.
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
