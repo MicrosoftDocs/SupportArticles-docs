@@ -1,6 +1,6 @@
 ---
-title: "The parameter is incorrect" error and cluster validation fails against "Validate Resource" status 
-description: Helps to resolve the error "The parameter is incorrect", when cluster validation fails against the Validate Resource status
+title: (The parameter is incorrect) error and cluster validation fails against Validate Resource status 
+description: Helps to resolve the error (The parameter is incorrect), when cluster validation fails against the Validate Resource status
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan 

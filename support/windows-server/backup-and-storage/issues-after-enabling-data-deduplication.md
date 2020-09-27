@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 2906888
 
 ## Summary
 
-Data deduplication in Windows Server 2012 R2 supports optimization of storage for Virtual Desktop Infrastructure (VDI) deployments and optimization of Cluster Shared Volumes (CSV). Data deduplication is supported on NTFS-formatted CSV and is not supported on Resilient File System (ReFS)-formatted CSV. For more information, see [Extending Data Deduplication to new workloads in Windows Server 2012 R2](http://blogs.technet.com/b/filecab/archive/2013/07/31/extending-data-deduplication-to-new-workloads-in-windows-server-2012-r2.aspx).
+Data deduplication in Windows Server 2012 R2 supports optimization of storage for Virtual Desktop Infrastructure (VDI) deployments and optimization of Cluster Shared Volumes (CSV). Data deduplication is supported on NTFS-formatted CSV and is not supported on Resilient File System (ReFS)-formatted CSV. For more information, see [Extending Data Deduplication to new workloads in Windows Server 2012 R2](https://blogs.technet.com/b/filecab/archive/2013/07/31/extending-data-deduplication-to-new-workloads-in-windows-server-2012-r2.aspx).
 
 ## Known Issues
 

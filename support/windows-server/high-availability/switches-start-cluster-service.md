@@ -87,7 +87,7 @@ The following is a description of some of the switches:
     | 1|Only errors are logged.|
     | 2|Errors and warnings are logged.|
     | 3|All events, including those not written to the event log, are logged.|
-    |||
+    
     Alternatively, you can also use the set command to control the cluster log level when you use the debug switch. From the command prompt, type the following set clusterloglevel= **x**  
     where **x** is one of the values that is shown in the previous table.
     

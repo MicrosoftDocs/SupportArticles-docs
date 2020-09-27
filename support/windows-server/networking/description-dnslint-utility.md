@@ -44,11 +44,11 @@ DNSLint has three functions that verify Domain Name System (DNS) records and gen
 
 DNSLint is a command-line utility. The syntax is:
 
-    ```console
-    dnslint /d domain_name | /ad [LDAP_IP_address] | /ql input_file  
-    [/c [smtp,pop,imap]] [/no_open] [/r report_name]  
-    [/t] [/test_tcp] [/s DNS_IP_address] [/v] [/y]  
-    ```
+```console
+dnslint /d domain_name | /ad [LDAP_IP_address] | /ql input_file  
+[/c [smtp,pop,imap]] [/no_open] [/r report_name]  
+[/t] [/test_tcp] [/s DNS_IP_address] [/v] [/y]  
+```
 
 You must specify either /d, /ad, or /ql when you run DNSLint. Other switches are optional.
 

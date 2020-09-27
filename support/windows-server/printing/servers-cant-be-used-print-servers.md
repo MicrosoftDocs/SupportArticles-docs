@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Management and Configuration: General issues
+ms.prod-support-area-path: Management and Configuration General issues
 ms.technology: PrintFaxScan
 ---
 # Servers in a Network Load Balancing (NLB) failover cluster can't be used as print servers in Windows Server 2008

@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, raackley
-ms.prod-support-area-path: Errors and troubleshooting: Print spooler
+ms.prod-support-area-path: Errors and troubleshooting Print spooler
 ms.technology: PrintFaxScan
 ---
 # Printers list blank in Print Management Console

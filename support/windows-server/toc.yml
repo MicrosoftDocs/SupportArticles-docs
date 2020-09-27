@@ -1160,17 +1160,17 @@
     - name: How to find a compatible printer driver
       href: ./printing/find-compatible-printer-driver-64-bit.md
     - name: How to configure Internet printing
-      href: ./printing /manage-connect-printers-use-web-browser.md
+      href: ./printing/manage-connect-printers-use-web-browser.md
     - name: How to install and configure a file and print server
-      href: ./printing /install-configure-file-print-server.md
+      href: ./printing/install-configure-file-print-server.md
     - name: Printer and drive redirection don't work in a Terminal Server session
       href: ./printing/printer-hard-drive-not-redirect-to-remote-desktop-session.md
     - name: Printers list blank in Print Management Console
-      href: ./printing /printers-list-blank-pmc.md
+      href: ./printing/printers-list-blank-pmc.md
     - name: Printing pauses after every 11 print jobs
       href: ./printing/printing-pauses-event-2004-4227-lpr-port.md
     - name: Servers can't be used as print servers
-      href: ./printing /servers-cant-be-used-print-servers.md
+      href: ./printing/servers-cant-be-used-print-servers.md
     - name: Slow performance with HP printer drivers
       href: ./printing/slow-performance-hp-printer-driver.md
     - name: Spooler.xml file growth and high CPU in spoolsv.exe process 

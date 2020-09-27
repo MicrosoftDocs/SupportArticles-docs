@@ -1,5 +1,5 @@
 ---
-title: "Stop 0x0000007B" error after you use a Group Policy setting to prevent the installation of devices
+title: Stop 0x0000007B error after you use a Group Policy setting to prevent the installation of devices
 description: Describes an issue that occurs when you uninstall a third-party SATA controller driver and then restart the computer
 ms.date: 09/21/2020
 author: Deland-Han
@@ -30,7 +30,7 @@ For example, you enable one of the following Group Policy settings:
   - Prevent installation of devices that match any of these device IDs 
   - Prevent installation of devices using drivers that match these device setup classes 
   - Prevent installation of removable devices 
-  - Prevent installation of devices not described by other policy settings. For more information about this Group Policy setting, see [Step-By-Step Guide to Controlling Device Installation Using Group Policy](https://msdn.microsoft.com/library/bb530324.aspx <!--ERROR-->).
+  - Prevent installation of devices not described by other policy settings. For more information about this Group Policy setting, see [Step-By-Step Guide to Controlling Device Installation Using Group Policy](https://msdn.microsoft.com/library/bb530324.aspx).
 - You uninstall a third-party Serial ATA (SATA) controller driver and then restart the computer. Or, you run sysprep and deploy the OS image to another computer that has a different storage controller or that's running a different storage controller firmware revision.  
 
 In this scenario, you encounter a "Stop 0x0000007B" error during restart.

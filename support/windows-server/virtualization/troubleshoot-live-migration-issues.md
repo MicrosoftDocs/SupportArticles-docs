@@ -317,7 +317,7 @@ Virtual machine migration operation failed at migration Source. Failed to establ
 
 Here's how to fix this issue:
 
-![Steps to fix this issue](./media/hyper-v-settings-s2d2.png)
+![Step to fix this issue](./media/troubleshoot-live-migration-issues/hyper-v-settings-s2d2.png)
 
 See [Live Migration via Constrained Delegation with Kerberos in Windows Server 2016](https://techcommunity.microsoft.com/t5/virtualization/live-migration-via-constrained-delegation-with-kerberos-in/ba-p/382334) for details.  
  

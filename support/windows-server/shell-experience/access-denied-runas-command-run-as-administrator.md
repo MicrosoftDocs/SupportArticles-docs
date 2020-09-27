@@ -95,15 +95,15 @@ To do this, follow these steps:
     |Interactive|Query Template, Query Status, Enumerate Dependents, Start, Pause and continue, Interrogate, Read Permissions, User Defined Control|
     |Service|Query Template, Query Status, Enumerate Dependents, Pause and continue, Interrogate, User Defined Control|
     |System|Query Template, Query Status, Enumerate Dependents, Start, Pause and continue, Interrogate, Stop|
-    |||
-    
+
 7. Click **OK** to apply the security changes.
 8. Click **OK** to apply the Group Policy changes.
 9. Apply the GPO to the affected computers by waiting for Group Policy to update or by starting the update manually.
 10. Try to use one of following features:
-   - `runas` command
-   - **Run as Administrator** option
-   - **Run as a different user** option
+
+    - `runas` command
+    - **Run as Administrator** option
+    - **Run as a different user** option
 
     Also, make sure that you can switch users and that the Secondary Logon service starts correctly.
 

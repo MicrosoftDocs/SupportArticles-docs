@@ -108,7 +108,7 @@ DirectoryEntry ent = new DirectoryEntry("LDAP://server01",null,null,Authenticati
 
 ### System.DirectoryServices.Protocols
 
-When you prepare a new LDAP connection, include an [LdapDirectoryIdentifier](/dotnet/api/system.directoryservices.protocols.ldapdirectoryidentifier.-ctor?view=netframework-4.8#System_DirectoryServices_Protocols_LdapDirectoryIdentifier__ctor_System_String___System_Boolean_System_Boolean_) object that is constructed by using a host name and optional port that you want to contact, and also includes a < fullyQualifiedDnsHostName > parameter that is set to **True**.
+When you prepare a new LDAP connection, include an [LdapDirectoryIdentifier](/dotnet/api/system.directoryservices.protocols.ldapdirectoryidentifier.-ctor?view=netframework-4.8#System_DirectoryServices_Protocols_LdapDirectoryIdentifier__ctor_System_String___System_Boolean_System_Boolean_&preserve-view=true) object that is constructed by using a host name and optional port that you want to contact, and also includes a \<fullyQualifiedDnsHostName> parameter that is set to **True**.
 
 The new default behavior in Windows 7, Windows Server 2008 R2, and later versions can be reverted to pre-Windows 7 behavior. This may reintroduce problems that affect NetBIOS names as described in the "Cause" section. However, there are also scenarios in which the Pre-Windows 7 behavior provides better results. Therefore, which setting produces the better results depends on the main LDAP client use scenario.
 

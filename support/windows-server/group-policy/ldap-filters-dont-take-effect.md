@@ -65,14 +65,14 @@ The English (United States) version of this hotfix installs files that have the 
 > [!IMPORTANT]
 > Windows 7 and Windows Server 2008 R2 hotfixes are included in the same packages. However, only one of these products may be listed on the "Hotfix Request" page. To request the hotfix package that applies to both Windows 7 and Windows Server 2008 R2, just select the product that is listed on the page.
 >
-    > - The MANIFEST files (.manifest) and the MUM files (.mum) that are installed for each environment are [listed separately](#manifests) in the "Additional file information for Windows Server 2008 R2 and for Windows 7" section. MUM and MANIFEST files, and the associated security catalog (.cat) files, are critical to maintaining the state of the updated component. The security catalog files, for which the attributes are not listed, are signed with a Microsoft digital signature.
+> - The MANIFEST files (.manifest) and the MUM files (.mum) that are installed for each environment are [listed separately](#manifests) in the "Additional file information for Windows Server 2008 R2 and for Windows 7" section. MUM and MANIFEST files, and the associated security catalog (.cat) files, are critical to maintaining the state of the updated component. The security catalog files, for which the attributes are not listed, are signed with a Microsoft digital signature.
 
 ##### For all supported x86-based versions of Windows 7
 
 |File name|File version|File size|Date|Time|Platform|
 |---|---|---|---|---|---|
 |Gpprefcl.dll|6.1.7600.20555|582,656|22-Oct-2009|06:19|x86|
-|||||||
+
 
 ##### For all supported x64-based versions of Windows 7 and of Windows Server 2008 R2
 
@@ -80,14 +80,14 @@ The English (United States) version of this hotfix installs files that have the 
 |---|---|---|---|---|---|---|
 |Gpprefcl.dll|6.1.7600.20555|781,824|22-Oct-2009|06:48|x64|Not Applicable|
 |Gpprefcl.dll|6.1.7600.20555|582,656|22-Oct-2009|06:19|x86|WOW|
-||||||||
+
 
 ##### For all supported IA-64-based versions of Windows Server 2008 R2
 
 |File name|File version|File size|Date|Time|Platform|
 |---|---|---|---|---|---|
 |Gpprefcl.dll|6.1.7600.20555|1,498,112|22-Oct-2009|05:06|IA-64|
-|||||||  
+  
 
 ## Status
 

@@ -58,7 +58,7 @@ To add the Security Templates snap-in to an MMC console, follow these steps:
 6. In the console tree, expand **Security Templates**, and then expand
  **%SystemRoot%\Security\Templates**.
 
-   A list of predefined security templates and their descriptions appears in the right pane. [back to the top](#back-to-the-top) 
+   A list of predefined security templates and their descriptions appears in the right pane. 
 
 ### Create and Define a New Security Template
 

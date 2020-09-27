@@ -101,8 +101,10 @@ For more information, visit the following Web site:
 
 In Windows Vista SP1 and in Windows Server 2008, the following integrity algorithms are supported in addition to those algorithms that are already supported in the release version of Windows Vista:
 - SHA-256
-- SHA-384> [!NOTE]
->[!NOTE] The key exchange algorithm and the encryption algorithm are not changed.
+- SHA-384
+
+> [!NOTE]
+> The key exchange algorithm and the encryption algorithm are not changed.
 
 ### Quick-mode algorithms
 
@@ -511,7 +513,7 @@ The following table shows supported Quick-mode cryptographic algorithm combinati
 |AH+ESP|AES-GMAC 128|AES-GCM 128|AES-GCM 128|
 |AH+ESP|AES-GMAC 192|AES-GCM 192|AES-GCM 192|
 |AH+ESP|AES-GMAC 256|AES-GCM 256|AES-GCM 256|
-|||||
+
 > [!NOTE]
 > AES-GMAC is the same as AES-GCM with null encryption. For example, you can specify AH integrity to use AES-GMAC 128, and you can specify ESP Integrity to use AES-GCM 128. This is the only exception to the rule that AH and ESP integrity algorithms must be identical.
 
@@ -528,7 +530,7 @@ The combinations that are described in the following table are not supported.
 |AH+ESP|AES-GMAC 128|AES-GMAC 128|Any supported encryption algorithm|
 |AH+ESP|AES-GMAC 192|AES-GMAC 192|Any supported encryption algorithm|
 |AH+ESP|AES-GMAC 256|AES-GMAC 256|Any supported encryption algorithm|
-|||||
+
 For more information about Suite B, visit the following Web site: [http://www.nsa.gov/ia/programs/suiteb_cryptography/index.shtml](http://www.nsa.gov/ia/programs/suiteb_cryptography/index.shtml)  
 For more information about IPsec and connection security rules, visit the following Microsoft Web site: [https://go.microsoft.com/fwlink/?linkid=96525](https://go.microsoft.com/fwlink/?linkid=96525)  
 For more information about Cryptography Next Generation in Windows Server 2008, visit the following Microsoft Web site: [https://technet2.microsoft.com/windowsserver2008/en/library/532ac164-da33-4369-bef0-8f019d5a18b81033.mspx?mfr=true](https://technet2.microsoft.com/windowsserver2008/en/library/532ac164-da33-4369-bef0-8f019d5a18b81033.mspx?mfr=true)  

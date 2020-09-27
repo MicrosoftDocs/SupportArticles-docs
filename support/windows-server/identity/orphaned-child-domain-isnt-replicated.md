@@ -60,7 +60,7 @@ To resolve this issue, you must create a replication link and then enable one-w
     A successful incoming connection should be displayed for the configuration naming context from the child domain controller.
 
     > [!NOTE]
-    >     For information about the Repadmin.exe tool, see [Monitoring and Troubleshooting Active Directory Replication Using Repadmin](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc811551%28v=ws.10%29).
+    > For information about the Repadmin.exe tool, see [Monitoring and Troubleshooting Active Directory Replication Using Repadmin](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc811551%28v=ws.10%29).
 
 3. At the command prompt, run the following command: **repadmin /options FQDN_of_the_root_domain_controller -DISABLE_NTDSCONN_XLATE**  
 

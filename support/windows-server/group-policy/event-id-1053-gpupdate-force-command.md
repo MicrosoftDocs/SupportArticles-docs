@@ -32,7 +32,7 @@ When you use the Gpupdate /force command on a Microsoft Windows Server 2003-base
  User: NT AUTHORITY\SYSTEM  
  Computer: **Computername**  
  Description:  
-Windows cannot determine the user or computer name. (Not enough storage is available to complete this operation. ). Group Policy processing aborted. For more information, see Help and Support Center at http://go.microsoft.com/fwlink/events.asp.  
+Windows cannot determine the user or computer name. (Not enough storage is available to complete this operation. ). Group Policy processing aborted. For more information, see Help and Support Center at https://go.microsoft.com/fwlink/events.asp.  
 
 Additionally, if you enable USERENV logging, the following entries may be logged in the Userenv.log file:  
 USERENV(1b4.eb4) 13:30:54:531 MyGetUserName: GetUserNameEx failed with 14.  

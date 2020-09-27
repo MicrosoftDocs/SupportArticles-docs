@@ -54,7 +54,7 @@ The following table lists other netmask ordering settings:
 |255.255.255.0|0x000000ff|
 |255.255.0.0|0x0000ffff|
 |255.0.0.0|0x00ffffff|
-|||
+
 If only 6 bits are used for the host, the mask is 255.255.255.192. In CIDR notation, classless interdomain routing, this would be a /26 mask. You can use the Dnscmd /Config /LocalNetPriorityNetMask 0x0000003F Dnscmd.exe command to configure a subnetted class C address.
 
 The significant bits set what part of the address is the host space. Because the binary equivalent of 0x3 is 11 and the binary equivalent of 0xF is 1111, 6 bits are set as part of the host address. If 7 bits (255.255.255.128 or /25) are required, the value would be 0x0000007F because the binary equivalent of 0x7F is 0111 1111. If only 5 bits (255.255.255.224 or /27) are required, the value would be 0x0000001F because the binary equivalent of0x1F is 0001 1111.
