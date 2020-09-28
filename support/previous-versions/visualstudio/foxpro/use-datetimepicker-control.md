@@ -21,7 +21,7 @@ DTPicker.exe is a sample that shows how to use the ActiveX DateTimePicker contro
 
 The following file is available for download from the Microsoft Download Center:  
 
-[Download the DTPicker.exe package now.](https://download.microsoft.com/download/vfox60/vfpdtpic/60/w9x2k/dtpicker.exe) Release Date: Apr-26-2000
+[Download the DTPicker.exe package now.](https://download.microsoft.com/download/vfox60/vfpdtpic/60/w9x2k/en-us/dtpicker.exe) Release Date: Apr-26-2000
 
 For more information about how to download Microsoft Support files, see [How to obtain Microsoft support files from online services](https://support.microsoft.com/help/119591).
 
