@@ -60,7 +60,7 @@ The following registry data is used to disable all add-ins:
 > [!NOTE]
 >
 > - When this problem occurs, there is nothing listed under this key except for the Default REG_SZ value with no data.
-> - In the above registry data, \<application> is the name of the Office 2013 program in which you are experiencing this problem.
+> - In the above registry data, \<application> is the name of the Office program in which you are experiencing this problem.
 > - In the above registry key path, x.0 corresponds to version of Office (16.0 = Office 2016, 15.0 = Office 2013).
 
 ## More Information
