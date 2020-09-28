@@ -99,8 +99,6 @@ As part of the evolution of the Office 365 service, we periodically evaluate the
 
 ### Overview of third-party offerings
 
-More information about the third-party offerings is available at [Website hosting partners for Office 365](https://support.office.com/article/365-47b10b76-315a-45a6-ad89-93ae2834d19d).
-
 You can migrate your SharePoint Online Public Website to a partner website. For more information, see [Switch from using a SharePoint Online public website to a partner-hosted website](https://support.office.com/article/cd0b5af5-d23f-4195-801e-145ec62604b3).
 
 Please note that the process of migrating to an alternative solution is not supported by Microsoft support staff.
@@ -118,7 +116,7 @@ No. Content and documentation about these new offerings will be owned and manage
 
 ### Which countries and languages are available?
 
-Most of the Office 365 customer base and underlying markets are supported. For more information, see [Website hosting partners for Office 365](https://support.office.com/article/47b10b76-315a-45a6-ad89-93ae2834d19d).
+Most of the Office 365 customer base and underlying markets are supported.
 
 ### Whom do I contact for support for the third-party solutions?
 
