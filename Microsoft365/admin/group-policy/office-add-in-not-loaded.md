@@ -71,7 +71,7 @@ Through group policy, an administrator can manage the add-ins that are loaded in
 
   This policy setting allows you to specify which add-ins are always enabled, always disabled (blocked), or configurable by the user. To block add-ins that are not managed by this policy setting, you must also configure the Block all unmanaged add-ins policy setting.
 
-  To enable the List of managed add-ins policy setting, you must provide the programmatic identifier (ProgID) for each COM add-in that you want to manage. To obtain the ProgID for an add-in, use the Windows Registry Editor on the client computer where the add-in is installed. Locate the registry key names under HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\<application>\Addins or HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\<application.\Addins.
+  To enable the List of managed add-ins policy setting, you must provide the programmatic identifier (ProgID) for each COM add-in that you want to manage. To obtain the ProgID for an add-in, use the Windows Registry Editor on the client computer where the add-in is installed. Locate the registry key names under HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\\\<application>\Addins or HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\\\<application>\Addins.
 
   To use this policy, you must also specify how each add-in should be managed. To specify how each add-in is managed, configure one of the following three options:
 
