@@ -27,7 +27,7 @@ appliesto:
 
 ## Causes
 
-#### Third-party add-ins
+## Third-party add-ins
  
 If the Excel file is not saved when you run Excel in Windows safe mode, the issue may be caused by a third-party add-in or by a file that is in one of the Excel startup locations. By default, these files are loaded when you start Excel.
 
@@ -53,7 +53,7 @@ For more information about how to determine the folders that Excel uses during s
  
 [826922](https://support.microsoft.com/help/826922) How to prevent files from opening automatically in Excel
 
-#### Restricted permissions
+## Restricted permissions
  
 When you save an Excel file, you must have the following permissions to the folder in which you are saving the file:
 
@@ -65,7 +65,7 @@ When you save an Excel file, you must have the following permissions to the fold
 > [!NOTE]
 > If you do not have these permissions, the Excel save process cannot be completed.
 
-#### Insufficient drive space
+## Insufficient drive space
  
 When you save to any medium, such as a floppy disk drive, a local hard disk, or a network drive, you must make sure that the drive has sufficient free space to enable the file to save. If the destination drive does not have sufficient space, Excel cannot complete the save operation, and you receive the following error message:
    
@@ -77,18 +77,18 @@ For more information about this error message, select the following article numb
 
 [214073](https://support.microsoft.com/help/214073) You receive an error message when you try to save a file in Excel
   
-#### Antivirus software conflict
+## Antivirus software conflict
  
 When antivirus software is installed or is running, you may receive an error message when you try to save an existing workbook. You do not receive an error message if you try to save a new file. You may receive an error message because some antivirus programs quickly scan any new files that appear on a computer. This scan can sometimes disrupt the Excel save process. This interruption may stop Excel from saving the file correctly.
 
-#### File sharing conflict
+## File sharing conflict
  
 If you and a second user work concurrently on a shared workbook, you may receive an error message if you and the second user try to save the file at the same time. You receive an error message because Excel cannot save the file if another instance of Excel is saving the same file.
 
 For more information about this error message, see the following Microsoft Knowledge Base article:
 
 [130494](https://support.office.com/article/Unlock-a-file-that-has-been-locked-for-editing-bdda0d41-1b8e-44ed-a6ae-6d095d37c22d) Unlock a file that has been locked for editing 
-#### File name length
+## File name length
  
 If you try to save or open an Excel file, and the path of that file (including the file name) is more than 218 characters, you may receive the following error message:
    
