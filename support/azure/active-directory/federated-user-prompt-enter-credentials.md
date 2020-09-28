@@ -94,7 +94,7 @@ Log off from the client computer and then log on as an Active Directory user. If
 
 1. At a command prompt, type the following command, and then press Enter: `Nltest /dsgetdc:<FQDN Of Domain>`. If the settings are correct, you receive output that resembles the following:
 
-    > DC: \\DC.contoso.com Address: \\192.168.1.10 Dom Guid: a3bd534c-19e9-4880-81ad-a8ee34cd4526
+    > DC: \\DC.contoso.com Address:\ \<IP Address> Dom Guid: \<GUID>
     Dom Name: contoso.com Forest Name: contoso.com Dc Site Name: Default-First-Site-Name
     Our Site Name: Default-First-Site-Name Flags: PDC GC DS LDAP KDC TIMESERV GTIMESERV WRITABLE
     DNS_DC DNS_DOMAIN DNS_FOREST CLOSE_SITE The command completed successfully
