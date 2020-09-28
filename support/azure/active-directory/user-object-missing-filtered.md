@@ -32,8 +32,8 @@ For more information about user objects that are filtered, see
 This issue occurs because there is a rule for the sourceAnchor attribute. The rule is used to determine whether the value of `msexchRecipientTypeDetails` is **2**.
 
 > [!NOTE]
-> You can view this rule in the following location: `Sync Rules Configuration Editor\Inbound\In From AD\Common\Transformation`. You can also see the target sourceAnchor attribute and the expression rule as follows:
-> `IIF(IsPresent([msExchRecipientTypeDetails]),IIF([msExchRecipientTypeDetails]=2,NULL,IIF(IsString([objectGUID]),CStr([objectGUID]),ConvertToBase64([objectGUID]))),IIF(IsString([objectGUID]),CStr([objectGUID]),ConvertToBase64([objectGUID])))`
+> You can view this rule in the following location: *Sync Rules Configuration Editor\Inbound\In From AD\Common\Transformation*. You can also see the target sourceAnchor attribute and the expression rule as follows:
+> *IIF(IsPresent([msExchRecipientTypeDetails]),IIF([msExchRecipientTypeDetails]=2,NULL,IIF(IsString([objectGUID]),CStr([objectGUID]),ConvertToBase64([objectGUID]))),IIF(IsString([objectGUID]),CStr([objectGUID]),ConvertToBase64([objectGUID])))*
 
 If `msExchRecipientTypeDetails` has a value of **2**, the value of sourceAnchor is set to NULL. However, if the value of sourceAnchor is NULL, the user will be filtered.
 

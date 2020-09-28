@@ -391,9 +391,9 @@ Hardware failures are beyond the scope of this article. See a computer hardware 
 Select the appropriate Windows Server 2003 operating system installation, and then press R to try to repair it.
    - Follow the instructions to repair the installation.
 
- Notes 
-     - You might have to change the boot drive sequence in the BIOS settings to successfully start your computer from the Windows Server 2003 CD. Contact the manufacturer of your computer, or see your manufacturer's documentation, for more information.
-     - If you cannot start your computer from the Windows Server 2003 CD, you might have a CD drive or DVD drive failure or other hardware failure.
+Notes
+- You might have to change the boot drive sequence in the BIOS settings to successfully start your computer from the Windows Server 2003 CD. Contact the manufacturer of your computer, or see your manufacturer's documentation, for more information.
+- If you cannot start your computer from the Windows Server 2003 CD, you might have a CD drive or DVD drive failure or other hardware failure.
 
 Hardware failures are beyond the scope of this article. See a computer hardware specialist for more help or try the Hardware troubleshooter. For more information about the Hardware Troubleshooter, see the Windows Server 2003 Help topic "Using Troubleshooters."
      - After you repair your Windows Server 2003, you may be prompted to reactivate your copy of Windows Server 2003.  
@@ -403,6 +403,6 @@ Hardware failures are beyond the scope of this article. See a computer hardware 
 If you cannot resolve the problem by following the steps in this article, you can use the Microsoft Support website to find a solution to your problem. The following list describes some of the services that the Microsoft Support website provides:
 
 - [Searchable Knowledge Base](https://support.microsoft.com/) - Search technical support information and self-help tools for Microsoft products.
-- [Frequently Asked Questions](https://www.microsoft.com/software-download/faq) - View product-specific frequently asked questions and support highlights.
+- [Frequently Asked Questions](https://www.microsoft.com/en-US/software-download/faq) - View product-specific frequently asked questions and support highlights.
 - [Software and Updates](https://www.microsoft.com/download/search.aspx) - Find software and updates on the Download Center.
 - [Other Support Options](https://support.microsoft.com/contactus/) - Ask a support question by using the web or telephone Microsoft Support.

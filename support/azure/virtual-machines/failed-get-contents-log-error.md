@@ -16,21 +16,20 @@ _Original KB number:_ &nbsp; 4094480
 
 When you try to view a virtual machine screen shot in the Boot Diagnostics blade in the Azure portal, an error occurs, and you see the following entry logged in the notification area: 
 
-> Failed to get contents of the log '<log url>' of virtual machine '/subscriptions/<SUBID>/resourceGroups/<RGNAME>/providers/Microsoft.Compute/virtualMachines/<VMNAME>'. Error message: 'description: Failed to complete the RPC call for 'getExtendedInfoBlob' message: Failed to complete the RPC call for 'getExtendedInfoBlob' stack: ###_RPC_Exception_### From RPC: Microsoft_Azure_Compute -> Microsoft_Azure_Storage (getExtendedInfoBlob) (Callstack capturing is not enabled. Use ?trace=diagnostics to enable it.) '
+> Failed to get contents of the log '\<log url>' of virtual machine '/subscriptions/\<SUBID>/resourceGroups/\<RGNAME>/providers/Microsoft.Compute/virtualMachines/\<VMNAME>'. Error message: 'description: Failed to complete the RPC call for 'getExtendedInfoBlob' message: Failed to complete the RPC call for 'getExtendedInfoBlob' stack: ###_RPC_Exception_### From RPC: Microsoft_Azure_Compute -> Microsoft_Azure_Storage (getExtendedInfoBlob) (Callstack capturing is not enabled. Use ?trace=diagnostics to enable it.) '
 
 ## Cause
 
 This problem might occur for any of the following reasons:
 
-- Virtual Machines that run on Windows Server 2008 R2 or earlier versions **** don't produce a VM Health Report. Therefore, it's expected that no SerialConsole.log file is produced in the Boot Diagnostics storage account, and you see the error message that is mentioned in the "Symptoms" section. To verify the operating system version, open a Command Prompt window, type **winver**, and then press Enter. 
-(See Workaround 1)
+- Virtual Machines that run on Windows Server 2008 R2 or earlier versions don't produce a VM Health Report. Therefore, it's expected that no SerialConsole.log file is produced in the Boot Diagnostics storage account, and you see the error message that is mentioned in the "Symptoms" section. To verify the operating system version, open a Command Prompt window, type **winver**, and then press Enter. (See Workaround 1)
 
 - Virtual machines that have an old VM Guest Agent version (earlier than 2.7.1198.806) installed are not expected to produce a VM Health Report. Therefore, it's expected that no SerialConsole.log file is produced in the Boot Diagnostics storage account, and you see the error message that is mentioned in the "Symptoms" section. To verify the version of VM Guest Agent, open the `C:\WindowsAzure\logs\WaAppAgent.log` folder, and then search on the following:
 
     WindowsAzureGuestAgent starting. Version 2.7.1198.802 
     (See Workaround 2)
 
-- The automatic generation of the VM Health Report by the VM Guest Agent may fail. If this occurs, no SerialConsole.log file is created. This triggers th e error message that is mentioned in the "Symptoms" section. For example, this report isn't produced if there are unresolved SIDs reported as members in the virtual machine Local Administrators group. To search for such issues, examine the C:\WindowsAzure\logs\TransparentInstaller.log file. 
+- The automatic generation of the VM Health Report by the VM Guest Agent may fail. If this occurs, no SerialConsole.log file is created. This triggers th e error message that is mentioned in the "Symptoms" section. For example, this report isn't produced if there are unresolved SIDs reported as members in the virtual machine Local Administrators group. To search for such issues, examine the `C:\WindowsAzure\logs\TransparentInstaller.log` file. 
 (See Workaround 3)
 
 ## Workaround
@@ -43,14 +42,13 @@ Upgrade your operating system to a more recent version.
 
 ### Workaround 2
 
-Update the VM Guest Agent by installing version 2.7.1198.822 from the following .msi download:
- [https://go.microsoft.com/fwlink/?LinkID=394789&clcid=0x409](https://go.microsoft.com/fwlink/?LinkID=394789&clcid=0x409).
+Update the VM Guest Agent by installing version [2.7.1198.822](https://go.microsoft.com/fwlink/?LinkID=394789&clcid=0x409).
 
 ### Workaround 3  
 
 Check whether the associated user was deleted from the domain.
 
-Also, you can remove the unresolved SIDs (for example, S-1-5-21-XYZ-XYZ) from the Local Administrators group.
+You also can remove the unresolved SIDs (for example, S-1-5-21-XYZ-XYZ) from the Local Administrators group.
 
 Also, check whether you have a domain policy that's locking down the Local Administrators group, or whether the built-in Administrator account was removed (indicated by "0x80005004" in the Transparent Installer log). 
 

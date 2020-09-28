@@ -5,7 +5,7 @@ ms.date: 05/28/2020
 ms.prod-support-area-path: 
 ms.reviewer: willfid, chricas
 ---
-# Error (Cannot delete) when you try to delete a B2C directory in Azure AD
+# Error when you try to delete a B2C directory in Azure AD: Cannot delete '\<contoso>' 
 
 This article describes an issue in which an error occurs when you try to delete a B2C directory in Azure Active Directory.
 
