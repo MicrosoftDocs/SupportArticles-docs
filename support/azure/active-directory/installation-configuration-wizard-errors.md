@@ -57,9 +57,9 @@ If the computer is a domain member and you still receive the error message, you 
 
    > DNS request timed out.  
    > timeout was 2 seconds.  
-   > *** Can't find server name for address 157.56.149.72: Timed out  
+   > *** Can't find server name for address \<IP Address>: Timed out  
    > Default Server: UnKnown  
-   > Address: 157.56.149.72
+   > Address: \<IP Address>
 
 Sometimes, joining the computer to a workgroup and then joining the computer back to the domain may resolve this error message. If the computer can't join the domain, this indicates that the computer is experiencing an issue in contacting the domain controllers or that the Active Directory domain is rejecting the request.
 
@@ -76,9 +76,7 @@ Sometimes, joining the computer to a workgroup and then joining the computer bac
 
     If the settings are correct, you receive output that resembles the following:
 
-    ```
-    DC: \\DC.contoso.com Address: \\157.56.149.72 Dom Guid: a3bd534c-19e9-4330-81ad-a8ee34cd7298 Dom Name: contoso.com Forest Name: contoso.com Dc Site Name: Default-First-Site-Name Our Site Name: Default-First-Site-Name Flags: PDC GC DS LDAP KDC TIMESERV GTIMESERV WRITABLE DNS_DC DNS_DOMAIN DNS_FOREST CLOSE_SITE The command completed successfully
-    ```
+    > DC: \\DC.contoso.com Address:\ \<IP Address> Dom Guid: \<GUID> Dom Name: contoso.com Forest Name: contoso.com Dc Site Name: Default-First-Site-Name Our Site Name: Default-First-Site-Name Flags: PDC GC DS LDAP KDC TIMESERV GTIMESERV WRITABLE DNS_DC DNS_DOMAIN DNS_FOREST CLOSE_SITE The command completed successfully
 
 - Run the following command to check the computer's site membership:
 
