@@ -23,7 +23,7 @@ You must have the Group Policy set to Preference mode to customize Internet Expl
 If a policy is already defined, you must click **Reset Browser Settings** before you can place this policy in Preference mode. When you reset the browser settings, any policy settings that are specified to that Group Policy are reset.
 
 > [!NOTE]
-> Preference mode settings are set by an administrator; however, you can change the settings after the policy is applied (for example, your home page or settings on the **Advanced** tab). After the policy is applied to a client computer, you can change your home page and advanced settings.
+> Preference mode settings are set by an administrator; however, you can change the settings after the policy is applied (for example, your home page or settings on the **Advanced** tab). After the policy is applied to a client computer, you can change your home page and advanced settings because Preference mode is only applied once per user.
 
 If the administrator does not want users to change the settings, the administrator can apply a restriction by using the Administrative templates in the GPO.
 
