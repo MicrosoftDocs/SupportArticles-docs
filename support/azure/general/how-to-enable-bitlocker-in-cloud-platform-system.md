@@ -475,7 +475,7 @@ The encryption key is the key that you want to use for BitLocker. The script pro
 
 If you are interested in learning what is going on under the hood, the script closely follows the steps in the following blog post:
 
-[How to configure BitLocker-encrypted clustered disks in Windows Server 2012](https://blogs.msdn.com/b/clustering/archive/2012/07/20/10332169.aspx) 
+[How to configure BitLocker-encrypted clustered disks in Windows Server 2012](https://techcommunity.microsoft.com/t5/failover-clustering/how-to-configure-bitlocker-encrypted-clustered-disks-in-windows/ba-p/371825) 
 
 This process takes about 30 minutes per storage cluster.
 

@@ -5,7 +5,7 @@ ms.date: 08/14/2020
 ms.prod-support-area-path: 
 ms.service: api-management
 ms.author: genli
-author: genli
+author: genlin
 ms.reviewer: 
 ---
 # Troubleshoot performance issues in API calls
@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 4464929
 
 ## Symptoms
 
-The API **ProductStore** in APIM communicates with the backend endpoint ([https://productstoreapp.azurewebsites.net](https://productstoreapp.azurewebsites.net/)) to easily create, read, update, and delete records as and when required. However, you may face some performance issues and exceptions while invoking the API operations listed below. For ease in testing, keep only three products having IDs ranging from 1 to 3.
+The API **ProductStore** in APIM communicates with the backend endpoint (`https://productstoreapp.azurewebsites.net`) to easily create, read, update, and delete records as and when required. However, you may face some performance issues and exceptions while invoking the API operations listed below. For ease in testing, keep only three products having IDs ranging from 1 to 3.
 
 - One of the API functions **Products_GetAllProducts** is taking 5 seconds to return the results, whereas the expected response time is less than a second.
 - While deleting a product having any of the above mentioned IDs (1 to 3), you are getting **HTTP 500 - Internal Server Error**  with the below message by calling **Products_DeleteProduct** operation.

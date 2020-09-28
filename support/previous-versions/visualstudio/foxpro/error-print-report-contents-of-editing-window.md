@@ -37,7 +37,7 @@ When you try to print the contents of the Editing window in the Visual FoxPro ap
 
     A supported hotfix is now available from Microsoft, but it is only intended to correct the problem that is described in this article. Only apply it to systems that are experiencing this specific problem. This hotfix may receive additional testing. Therefore, if you are not severely affected by this problem, we recommend that you wait for the next Visual FoxPro service pack that contains this hotfix.
 
-    To resolve this problem immediately, contact Microsoft Product Support Services to obtain the hotfix. For a complete list of Microsoft Product Support Services telephone numbers and information about support costs, visit the following Microsoft Web site: [https://support.microsoft.com/contactus/?ws=support](/contactus/?ws=support)
+    To resolve this problem immediately, contact Microsoft Product Support Services to obtain the hotfix. For a complete list of Microsoft Product Support Services telephone numbers and information about support costs, visit the following Microsoft Web site: [https://support.microsoft.com/contactus/?ws=support](https://support.microsoft.com/contactus/?ws=support)
 
     > [!NOTE]
     > In special cases, charges that are ordinarily incurred for support calls may be canceled if a Microsoft Support Professional determines that a specific update will resolve your problem. The usual support costs will apply to additional support questions and issues that do not qualify for the specific update in question.
