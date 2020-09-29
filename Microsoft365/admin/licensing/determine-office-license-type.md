@@ -16,6 +16,20 @@ appliesto:
 - Office 2019 suites
 - Office 2016 suites
 - Office 2013 suites
+- Excel for Microsoft 365 for Mac 
+- Word for Microsoft 365 for Mac 
+- Outlook for Microsoft 365 for Mac
+- PowerPoint for Microsoft 365 for Mac 
+- Office 2019 for Mac 
+- Excel 2019 for Mac 
+- PowerPoint 2019 for Mac 
+- Word 2019 for Mac
+- Office for Business 
+- Microsoft 365 for Home 
+- Office 365 Small Business 
+- Office 2016 for Mac 
+- Microsoft 365 for Mac 
+- Outlook 2019 for Mac
 ms.custom: 
 - CI 122291
 - CSSTroubleshoot 
