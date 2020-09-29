@@ -44,7 +44,7 @@ Here's how to identify which quota has been reached and take corrective steps:
 
 ### Step 1: Check individual public folder quota
 
-1. [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps).
+1. [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true).
 2. Check the value of *TotalItemSize* for the affected mail-enabled public folder:
 
     ```powershell
@@ -95,7 +95,7 @@ If this quota hasn't been exceeded, proceed to the next step.
 
 If the public folder hasn't exceeded the individual or organizational quota as shown in Step 1, check if the public folder mailbox hosting the public folder content has exceeded its quota.
 
-1. [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps).
+1. [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true).
 2. Find the content public folder mailbox's name for the mail-enabled public folder:
 
     ```powershell
