@@ -20,13 +20,18 @@ productDirectory:
     links:
     - url: cloud-services/welcome-cloud-services.md
       text: Troubleshooting articles for Cloud Services
-  - title: Virtual Machines
-    imageSrc: "https://static.docs.com/ui/media/product/azure/virtual-machine.svg"
-    links:
-    - url: virtual-machines/welcome-virtual-machines.md
-      text: Troubleshooting articles for Virtual Machines
   - title: Azure DevOps
     imageSrc: "https://docs.microsoft.com/en-us/azure/devops/media/index/devopsiconboards96.svg"
     links:
     - url: devops/welcome-azure-devops.md
       text: Troubleshooting articles for Azure DevOps
+  - title: Virtual Machines
+    imageSrc: "https://static.docs.com/ui/media/product/azure/virtual-machine.svg"
+    links:
+    - url: virtual-machines/welcome-virtual-machines.md
+      text: Troubleshooting articles for Virtual Machines
+  - title: Site Recovery
+    imageSrc: "https://static.docs.com/ui/media/product/azure/site-recovery.svg"
+    links:
+    - url: virtual-machines/welcome-site-recovery.md
+      text: Troubleshooting articles for Site Recovery
