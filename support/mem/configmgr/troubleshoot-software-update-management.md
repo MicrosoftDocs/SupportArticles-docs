@@ -473,7 +473,7 @@ Deployment issues that occur with specific updates can be broken into the areas 
 
 |Areas|Installation|Supersedence|Detection|
 |---|---|---|---|
-|Components| <ul><li>WUA</li><li>Update Installer (CBS, MSI)</li><li>CCMExec</li></ul>|Update metadata|<ul><li>WUA</li><li>Update metadata</li><li>Update Installer (CBS, MSI)</li>|
+|Components|<ul><li>WUA</li><li>Update Installer (CBS, MSI)</li><li>CCMExec</li></ul>|Update metadata|<ul><li>WUA</li><li>Update metadata</li><li>Update Installer (CBS, MSI)</li></ul>|
 |||||
 
 ### Installation issues
