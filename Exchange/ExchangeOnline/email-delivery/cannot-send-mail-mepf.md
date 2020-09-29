@@ -40,7 +40,7 @@ This issue occurs when any of these conditions is met:
 
 ## Resolution
 
-Here's how to identify which quota has been reached or exceeded and take corrective steps:
+Here's how to identify which quota has been reached and take corrective steps:
 
 ### Step 1: Check individual public folder quota
 
@@ -57,10 +57,10 @@ Here's how to identify which quota has been reached or exceeded and take correct
     Get-PublicFolder \pfname | FL *quota*
     ```
 
-    If that's the case,  increase the *ProhibitPostQuota* value of that mail-enabled public folder or set that value to **Unlimited**.
+    If that's the case,  increase the *ProhibitPostQuota* value of that mail-enabled public folder or set it to **Unlimited**.
 
     > [!NOTE]
-    > The default value of *prohibitpostquota* is set to **Unlimited**. In such case, the value that was configured for *DefaultPublicFolderProhibitPostQuota* at the organization level applies. If the *PublicFolderProhibitPostQuota* value has been configured on the public folder, this value will take precedence over the value set at the organization level.
+    > If the default value of *prohibitpostquota* is set to **Unlimited**, the value that was configured for *DefaultPublicFolderProhibitPostQuota* at the organization level applies. If the *PublicFolderProhibitPostQuota* value has been configured on the public folder, this value will take precedence over the value set at the organization level.
 
     For more information, read [Understanding modern public folder quotas](https://techcommunity.microsoft.com/t5/Exchange-Team-Blog/Understanding-modern-public-folder-quotas/ba-p/607463).
 
@@ -93,7 +93,7 @@ If this quota hasn't been exceeded, proceed to the next step.
 
 ### Step 2: Check the content public folder mailbox quota
 
-In case the public folder has not exceeded individual or organizational quota as checked in Step 1, use the following steps to check if the public folder mailbox, that hosts content of the public folder, has exceeded the quota.
+If the public folder hasn't exceeded the individual or organizational quota as shown in Step 1, check if the public folder mailbox hosting the public folder content has exceeded its quota.
 
 1. [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps).
 2. Find the content public folder mailbox's name for the mail-enabled public folder:
@@ -122,4 +122,4 @@ Get-PublicFolder \pfname |Ft name, *content*
 
 For more information, read this [blog article](https://techcommunity.microsoft.com/t5/exchange-team-blog/public-folders-and-exchange-online/ba-p/594318).
 
-If the auto-splitting process failed to create a new mailbox, please submit a support request to Microsoft Support for further assistance.
+If the auto-split process failed to create a new mailbox, please submit a support request to Microsoft Support for further assistance.
