@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Activation
-ms.technology: Depolyment
+ms.technology: Deployment
 ---
 # Windows is not genuine error in Windows 7 or Windows Server 2008 R2
 
