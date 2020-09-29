@@ -31,7 +31,7 @@ productDirectory:
     - url: virtual-machines/welcome-virtual-machines.md
       text: Troubleshooting articles for Virtual Machines
   - title: Site Recovery
-    imageSrc: "https://static.docs.com/ui/media/product/azure/site-recovery.svg"
+    imageSrc: "https://static.docs.com/ui/media/product/azure/recovery-services-vaults.svg"
     links:
     - url: site-recovery/welcome-site-recovery.md
       text: Troubleshooting articles for Site Recovery
