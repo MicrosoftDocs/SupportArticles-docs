@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 3144435
 Consider the following scenario:
 
 - You deploy the **Configure URLs that will be allowed or blocked in the Managed Browser** policy.
-- The whitelist contains [https://www.microsoft.com](https://www.microsoft.com/), or the policy was implemented during app installation.
+- The allow list contains [https://www.microsoft.com](https://www.microsoft.com/), or the policy was implemented during app installation.
 
 In this scenario, devices that receive the policy display the following status in the Microsoft Intune admin console:
 
