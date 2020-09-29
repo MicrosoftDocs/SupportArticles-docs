@@ -20,7 +20,7 @@ _Original KB number:_ &nbsp; 2797755
 When you try to connect to Microsoft Azure Information Protection by using Windows PowerShell in Microsoft Office 365, you get an error message that resembles the following:
 
 > The attempt to connect to the Windows Azure AD Rights Management (Azure RMS) service for \<Organizational Account> failed. Verify that the user name and password you are using are correct and try again. If you have continued problems see `https://go.microsoft.com/fwlink/?linkid=251909`.  
-The correlation ID is a3740c18-7bb2-4bb6-9025-8b5fc9468b09. Please note and provide this value if asked by support for it.  
+The correlation ID is \<correlation ID>. Please note and provide this value if asked by support for it.  
 Connect-AadrmService : The remote server returned an error: (401) Unauthorized.  
 At line:1 char:1  
 \+ Connect-AadrmService  

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Setup
-ms.technology: Depolyment
+ms.technology: Deployment
 ---
 # Message "Subsystem needed to support the image type is not present" error when installing or running applications on Windows Server 2008 R2 Core
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Setup
-ms.technology: Depolyment
+ms.technology: Deployment
 ---
 # Add OEM Plug and Play drivers to Windows installations
 

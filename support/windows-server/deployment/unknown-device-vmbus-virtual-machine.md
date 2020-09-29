@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Activation
-ms.technology: Depolyment
+ms.technology: Deployment
 ---
 # Unknown Device (VMBUS) in Device manager in Virtual Machine for AVMA
 

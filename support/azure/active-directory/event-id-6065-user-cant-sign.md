@@ -18,14 +18,14 @@ You have enabled **Enterprise State Roaming** in the Azure Active Directory port
 
 Additionally, Event ID 6065 is logged in the Microsoft-Windows-SettingSync/Debug event log:
 
-> Log Name: Microsoft-Windows-SettingSync/Debug
-Source: Microsoft-Windows-SettingSync
-Date: \<date and time>
-Event ID: 6065
-Task Category: None
-Level: Error
-Keywords: User: \<User SID>
-Computer: WIN10DESKTOP
+> Log Name: Microsoft-Windows-SettingSync/Debug  
+Source: Microsoft-Windows-SettingSync  
+Date: \<date and time>  
+Event ID: 6065  
+Task Category: None  
+Level: Error  
+Keywords: User: \<User SID>  
+Computer: WIN10DESKTOP  
 Description: shell\roaming\cloudsync\cloudsyncengine\cloudsyncengine.cpp(990)\SettingSyncHost.exe!00007FF701A2A8C2: (caller: 00007FF701A2A3D9) ReturnHr\[PreRelease](17) tid(1060) 80070533 This user can't sign in because this account is currently disabled. CallContext:[\AttemptSyncActivity]
 
 ## Cause
