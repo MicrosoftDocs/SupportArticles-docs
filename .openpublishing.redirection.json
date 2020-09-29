@@ -101,6 +101,11 @@
       "redirect_document_id": false
     },
     {
+        "source_path": "support/azure/general/index.md",
+        "redirect_url": "/support/azure/virtual-machines/welcome-general.md",
+        "redirect_document_id": false
+      },
+    {
       "source_path": "support/sql/end-support-sql-server-2008.md",
       "redirect_url": "https://support.microsoft.com/help/4456242",
       "redirect_document_id": false
