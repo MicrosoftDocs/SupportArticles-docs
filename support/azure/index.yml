@@ -33,5 +33,5 @@ productDirectory:
   - title: Site Recovery
     imageSrc: "https://static.docs.com/ui/media/product/azure/site-recovery.svg"
     links:
-    - url: virtual-machines/welcome-site-recovery.md
+    - url: site-recovery/welcome-site-recovery.md
       text: Troubleshooting articles for Site Recovery

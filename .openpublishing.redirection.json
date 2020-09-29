@@ -81,8 +81,8 @@
       "redirect_document_id": false
     },
     {
-        "source_path": "support/azure/site-recovery/index.md",
-        "redirect_url": "/support/azure/site-recovery/welcome-site-recovery",
+        "source_path": "support/azure/devops/index.md",
+        "redirect_url": "/support/azure/devops/welcome-azure-devops",
         "redirect_document_id": false
       },
       {
