@@ -7,8 +7,8 @@ author: genlin
 ms.author: genli
 ms.service: site-recovery
 ---
-# Azure Azure Site Recovery troubleshooting
+# Azure Site Recovery troubleshooting
 
-Welcome to Azure Azure Site Recovery troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Azure Azure Site Recovery.
+Welcome to Azure Site Recovery troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Azure Site Recovery.
 
 In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
