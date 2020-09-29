@@ -10,7 +10,7 @@
   href: mars-agent-system-state-backup-failure.md
 - name: Unsupported Features and Platforms in Recovery Services Scout 8.0.1
   href: unsupported-features-and-platforms-post-upgrade.md
-- name: Site Recovery agent updates
+- name: Site Recovery Services Agent updates
   items:
     - name: Novermber 2017 update v2.0.9099.0
       href: ars-agent-update-november-2017.md
