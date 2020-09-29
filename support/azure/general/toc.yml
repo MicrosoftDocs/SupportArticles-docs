@@ -57,20 +57,6 @@
   - name: Update 2.1 for Cloud Platform System Premium
     href: update-2.1-for-cloud-platform-system-premium.md
 
-
-- name: Azure Site Recovery
-  items:
-  - name: Azure Recovery Services Agent is outdated
-    href: backup-service-mars-agent-versions-not-match.md
-  - name: Azure Recovery Services Agent update failed
-    href: upgrade-mars-agent.md
-  - name: Disable TLS 1.0 for PCI compliance
-    href: asr-agent-disable-tls-pci-compliance.md
-  - name: Fail to back up using Azure Recovery Services Agent
-    href: mars-agent-system-state-backup-failure.md
-  - name: Unsupported Features and Platforms in Recovery Services Scout 8.0.1
-    href: unsupported-features-and-platforms-post-upgrade.md
-
 - name: Azure Storage
   items:
   - name: Embedded application error when install Azure backup agent

@@ -1,5 +1,5 @@
 ---
-title: Mandatory update for Microsoft Azure Recovery Services Agent: November 2017
+title: Mandatory update for Microsoft Azure Recovery Services Agent November 2017
 description: Describes update and new features in Azure Recovery Services Agent update.
 ms.date: 08/14/2020
 author: genlin
@@ -47,7 +47,7 @@ To apply this update, install the latest version of the Microsoft Azure Recovery
 
 The following file is available for download from the Microsoft Download Center:
 
-[Download the Azure Recovery Services agent update package now](http://download.microsoft.com/download/3/4/4/344E6A78-5894-423B-A52B-04018A043C6E/MARSAgentInstaller.exe).
+[Download the Azure Recovery Services agent update package now](https://download.microsoft.com/download/3/4/4/344E6A78-5894-423B-A52B-04018A043C6E/MARSAgentInstaller.exe).
 
 The version number for this update of Microsoft Azure Recovery Services Agent is 2.0.9099.0.
 
@@ -67,10 +67,10 @@ If your servers are registered to one or more Recovery Services Vaults, you can 
 
 1. Click **Protected Servers** under **Management Servers**, and then select **Azure Backup Agent** as the **Backup Management Type**.
 
-    ![The image about Management Servers page](./media/ars-agent-update-april/protected-servers.png)
+    ![The image about Management Servers page](./media/ars-agent-update-november-2017/protected-servers.png)
 
 1. On the blade that appears, select a server for which the Agent version number is earlier than **2.0.9118.0**. On the server’s detail blade, click **Connect**. A Remote Desktop Connection file is downloaded that you can use to connect to the server, copy the update installer, and then run the installer to update the MARS Agent on the server.
-  ![The image about how to connect a protected server](./media/ars-agent-update-april/server-detail-blade.png)
+  ![The image about how to connect a protected server](./media/ars-agent-update-november-2017/server-detail-blade.png)
 
 1. When you're done updating, you can select other servers that have Agent versions that are earlier than **2.0.9118.0**, and then update the Agents on those servers in the same manner.
 
