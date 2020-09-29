@@ -47,6 +47,8 @@
       href: ../calendaring/room-finder-is-not-available-shared-calendars-outlook.md
     - name: Send Update is missing when copying meetings
       href: ../calendaring/send-update-missing-copy-meeting.md
+    - name: Unable to view free/busy information
+      href: ../calendaring/cannot-view-free-busy-information.md
   - name: Connectivity
     items:
     - name: "\"There is a problem with the proxy server's security certificate\" error"
@@ -103,6 +105,8 @@
       href: ../email-management/create-modify-client-only-rule-with-error.md
     - name: Emails remain in Outbox for at least one minute
       href: ../email-management/emails-remain-in-outbox-deferred-delivery-rule.md
+    - name: Issues with OOF replies
+      href: /exchange/troubleshoot/send-emails/understand-troubleshoot-oof-replies
     - name: Some rules are disabled and can't be re-enabled
       href: ../email-management/rules-not-be-uploaded-to-exchange-server.md
   - name: Installation

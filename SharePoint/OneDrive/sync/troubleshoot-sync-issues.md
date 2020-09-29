@@ -24,7 +24,7 @@ This article is for anyone who can't sync OneDrive for Business. You'll find det
 
 > [!NOTE]
 > To determine which OneDrive sync client you're using, see [Which OneDrive sync client am I using?](https://support.office.com/article/Which-OneDrive-sync-client-am-I-using-19246eae-8a51-490a-8d97-a645c151f2ba)  
-> If you are using OneDrive not OneDrive for Business, and you encountered sync issue, you can look for the solutions in [Fix OneDrive sync problems](https://support.microsoft.co/office/fix-onedrive-sync-problems-0899b115-05f7-45ec-95b2-e4cc8c4670b2?redirectSourcePath=%252fen-gb%252farticle%252fFix-OneDrive-sync-problems-with-Windows-10-Windows-8-Windows-7-or-Windows-Vista-83ab0d8a-8400-45b0-8dcf-dc8aa8a6bcf8&ui=en-US&rs=en-US&ad=US).
+> If you are using OneDrive not OneDrive for Business, and you encountered sync issue, you can look for the solutions in [Fix OneDrive sync problems](https://support.microsoft.com/office/0899b115-05f7-45ec-95b2-e4cc8c4670b2).
 
 ## Update OneDrive for Business to the current release
 

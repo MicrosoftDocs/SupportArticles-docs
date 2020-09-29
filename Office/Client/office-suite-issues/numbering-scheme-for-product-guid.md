@@ -30,17 +30,17 @@ This article describes how to read the product GUIDs in the Windows registry to 
 
 ## More Information
 
-When you install the Office 2016 suite or one of the stand-alone Office 2016 programs, one or more product code GUIDs are created in the following registry subkey: 
+When you install the Office 2016 suite or one of the stand-alone Office 2016 programs, one or more product code GUIDs are created in the following registry subkey:
 
-**HKEY_LOCAL_MACHINE \Software\Microsoft\Windows\CurrentVersion\Uninstall** 
+`HKEY_LOCAL_MACHINE \Software\Microsoft\Windows\CurrentVersion\Uninstall`
 
-If you install a 32-bit version of Office 2016 on a 64-bit version of Windows, the GUIDs are created in the following registry subkey: 
+If you install a 32-bit version of Office 2016 on a 64-bit version of Windows, the GUIDs are created in the following registry subkey:
 
-**HKEY_LOCAL_MACHINE \Software\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall** 
+`HKEY_LOCAL_MACHINE \Software\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall`
 
-Each GUID uses the following format: 
+Each GUID uses the following format:
 
-{BRMMmmmm-PPPP-LLLL-p000-D000000FF1CE} 
+{BRMMmmmm-PPPP-LLLL-p000-D000000FF1CE}
 
 The following table describes the characters of the GUID.
 
@@ -57,13 +57,13 @@ The following table describes the characters of the GUID.
 |D|1 for debug, 0 for ship|0-1 |
 |000000FF1CE|Office Family ID|0-9 |
 
-To view the GUIDs for the Office 2016 suites and programs that are installed on a computer, follow these steps: 
- 
-1. Click **Start**, click **Run**, type regedit, and then click **OK**.    
-2. Locate the following registry subkey: 
+To view the GUIDs for the Office 2016 suites and programs that are installed on a computer, follow these steps:
 
-   **HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall**
- 
+1. Click **Start**, click **Run**, type regedit, and then click **OK**.
+2. Locate the following registry subkey:
+
+   `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall`
+
 The names of the GUIDs start with a brace ({ ). Therefore, GUIDs are the first items that are listed under Uninstall.
 
 |Value name| Description |
@@ -94,7 +94,7 @@ The release build values specify the level of the release, such as a beta build 
 |D-F|Reserved values |
 
 ### Release type
- 
+
 The release type specifies the audience for a 2016 Office suite, such as enterprise or retail. The following table contains more information about the 2016 Office suite release types.  
 
 |Value| Release type |
@@ -132,8 +132,8 @@ The product ID is the version of the Office 2016 suite or program, such as Offic
 
 The language identifier (LCID) varies from language to language. Because the LCID is stored in the GUID in a hexadecimal format, you may have to convert the LCID value to a decimal value to determine the language. For example, a hexadecimal value of 0409 converts to a decimal value of 1033. This value represents English.
 
-For more information about language identifiers in Office 2016 suites and programs, see [Language identifiers and Option State Id values in Office 2013](https://technet.microsoft.com/library/cc179219.aspx).
+For more information about language identifiers in Office 2016 suites and programs, see [Language identifiers and Option State Id values in Office 2016](https://technet.microsoft.com/library/cc179219.aspx).
 
 ### Sample GUID
 
-Assume that the first 16 digits of a GUID are "90160000-0011-0407." This example GUID was created by the initial release build (9) of a Retail or OEM edition (1), build 15.0000, of Microsoft Office Professional Plus 2016 (0011). The language of the product is German. In this case, the hexadecimal value 0407 converts to the decimal value 1031. This value represents German.
+Assume that the first 16 digits of a GUID are "90160000-0011-0407." This example GUID was created by the initial release build (9) of a Retail or OEM edition (1), build 16.0000, of Microsoft Office Professional Plus 2016 (0011). The language of the product is German. In this case, the hexadecimal value 0407 converts to the decimal value 1031. This value represents German.

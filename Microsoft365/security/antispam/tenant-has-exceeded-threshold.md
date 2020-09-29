@@ -6,7 +6,7 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: Office 365
+ms.prod: office 365
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
@@ -53,7 +53,7 @@ To fix this issue, follow these steps:
 
 1. Check the audit logs to determine whether a connector was created recently. Spammers are known to create connectors, send out lots of mails on that connector, and then delete the connector to cover their tracks.
 1. Because an admin account was compromised, change the passwords for all your admins.
-1. To prevent future compromise, enable multi-factor authentication (MFA) for, at least, the admin accounts. For more information, see [Set up multi-factor authentication](https://docs.microsoft.com/office365/admin/security-and-compliance/set-up-multi-factor-authentication?view=o365-worldwide).
+1. To prevent future compromise, enable multi-factor authentication (MFA) for, at least, the admin accounts. For more information, see [Set up multi-factor authentication](https://docs.microsoft.com/office365/admin/security-and-compliance/set-up-multi-factor-authentication?view=o365-worldwide&preserve-view=true).
 1. Contact Microsoft Support to unblock the tenant.
 
 ## References

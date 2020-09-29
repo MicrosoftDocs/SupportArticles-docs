@@ -19,6 +19,8 @@
       href: ../administration/auto-installation-net-4-6-1-windows-server-2012-r2.md
     - name: Avoid unsupported integration methods for Exchange
       href: ../administration/avoid-unsupported-integration-methods.md
+    - name: Can't access OWA or EAC with expired OAuth certificate
+      href: ../administration/cannot-access-owa-or-ecp-if-oauth-expired.md
     - name: Can't access public folders
       href: ../administration/outlook-users-cannot-access-public-folders.md
     - name: Can't back up a passive database copy in DAG
@@ -29,6 +31,8 @@
       href: ../administration/outlook-unable-download-offline-address-book.md
     - name: Can't export to PST with EAC
       href: ../administration/cannot-use-eac-export-pst-file.md
+    - name: Can't install add-ins in Microsoft Store
+      href: ../administration/unable-install-add-ins-microsoft-store.md
     - name: Can't look up free/busy information
       href: ../administration/cross-forest-or-hybrid-free-busy-lookups-fail.md
     - name: Can't manage Exchange 2019 databases in EAC
@@ -64,7 +68,7 @@
     - name: Can't create items on behalf of a delegate
       href: ../administration/creating-items-on-behalf-of-a-delegate-fails.md
     - name: Can't create System.Management.Automation runspaces
-      href: ../administration/cannot-create-system.management.automation-runspaces.md
+      href: ../administration/cannot-create-system-management-automation-runspaces.md
     - name: Can't process argument transformation error for cmdlets
       href: ../administration/cannot-process-argument-transformation-error.md
     - name: Can't restore a LUN drive
@@ -137,8 +141,12 @@
       href: ../administration/event-2160-map-user-certificate.md
     - name: Event ID 9875 with error code 0x8004364a
       href: ../administration/event-id-9875.md
+    - name: EWS App pool crashes
+      href: ../administration/ews-app-pool-crashes.md
     - name: EWS notifications return UnreadCount of -1
       href: ../administration/ews-notification-return-wrong-value-for-unreadcount.md
+    - name: Exchange CU installation fails
+      href: ../administration/cannot-install-exchange-cu-localized-windows.md
     - name: Exchange Server 2010 datacenter switchover
       href: ../administration/exchange-server-2010-datacenter-switchover.md
     - name: Exchange transaction logs growing rapidly
@@ -293,8 +301,6 @@
       href: ../client-connectivity/can't-connect-error-searching-people-owa.md
     - name: Can't synchronize an Exchange ActiveSync device
       href: ../client-connectivity/event-1053-activesync-not-have-sufficient-permissions-to-create-container.md
-    - name: Can't access Outlook on the web or EAC with expired OAuth certificate
-      href: ../client-connectivity/cannot-access-owa-or-ecp-if-oauth-expired.md
     - name: Can't connect to a mailbox from OWA
       href: ../client-connectivity/cannot-connect-to-mailbox-via-owa.md
     - name: Can't connect to OWA via HTTP protocol
@@ -305,7 +311,7 @@
       href: ../client-connectivity/cannot-use-autodiscover-to-connect-to-mailbox.md
     - name: Can't run Test-OutlookConnectivity
       href: ../client-connectivity/test-outlookconnectivity-fails.md
-    - name: Color categories aren't print in Outlook on the web
+    - name: Color categories aren't print in OWA
       href: ../client-connectivity/color-categories-not-print-outlook-on-the-web.md
     - name: EAS still sync with a disabled account or an old password
       href: ../client-connectivity/eas-devices-still-sync-with-disabled-account.md
@@ -341,8 +347,6 @@
       href: ../client-connectivity/cannot-connect-to-re-enabled-mailbox.md
     - name: New appointments and contacts not synchronized to OWA
       href: ../client-connectivity/added-appointments-contacts-not-synchronized-to-owa.md
-    - name: Only one reply is sent to each sender
-      href: ../client-connectivity/one-reply-sent-sender.md
     - name: Outlook Anywhere clients can't connect to server
       href: ../client-connectivity/outlook-anywhere-clients-not-connect-to-server.md
     - name: Outlook Can't access public folders hosted on legacy Exchange servers
@@ -363,7 +367,7 @@
       href: ../client-connectivity/repair-update-messages-triggered-by-timezonematchcheck.md
     - name: Security warning when accessing OWA or ECP
       href: ../client-connectivity/owa-and-ecp-unavailable-users-get-security-warning.md
-    - name: Set up Outlook on the web
+    - name: Set up OWA
       href: ../client-connectivity/set-up-web-access.md
     - name: Show organizer name instead of subject
       href: ../client-connectivity/calendar-shows-organizer-name.md
@@ -399,6 +403,10 @@
       href: ../development/develop-apps-by-using-exchange-powershell.md
     - name: Support limitations for open standards
       href: ../development/public-protocols-support-limitations.md
+  - name: Distribution Lists
+    items:
+    - name: Get-DistributionGroupMember not return all members
+      href: ../distribution-list/get-distributiongroupmember-not-return-memebers.md
   - name: Mailflow
     items:
     - name: 451 4.4.0 DNS query failed
@@ -481,6 +489,8 @@
       href: ../migration/public-folders-not-replicate.md
   - name: Public Folders
     items:
+    - name: How to disable conflict message
+      href: ../public-folders/disable-conflict-message.md
     - name: No active public folder mailboxes were found
       href: ../public-folders/migrationbatch-fails-no-public-folder-mailboxes.md
     - name: Public folder migration stops at 95%

@@ -127,6 +127,8 @@
       href: ../access/disable-database-startup-options.md
     - name: Error 2950 when running a macro
       href: ../access/error-running-macro.md
+    - name: Error when compiling modules or running procedures
+      href: ../access/error-compiling-module-running-procedure.md
     - name: Error when inserting table record
       href: ../access/error-inserting-table-record-autonumber.md
     - name: Error when using built-in wizards
@@ -165,6 +167,8 @@
       href: ../access/hide-combo-box-drop-down-arrow.md
     - name: How Table Analyzer Wizard works
       href: ../access/table-analyzer-wizard.md
+    - name: How to change query properties
+      href: ../access/how-to-change-query-properties.md
     - name: How to create a running totals query
       href: ../access/create-a-running-totals-query.md
     - name: How to loop through references to view properties
@@ -193,6 +197,8 @@
       href: ../access/access-linked-table-deleted.md
     - name: List Access reserved words
       href: ../access/reserved-words.md
+    - name: Long integer numbers are converted as double data type
+      href: ../access/long-integer-numbers-converted-double-data-type.md
     - name: Memory leak when Access connects to database files
       href: ../access/access-engine-memory-leak.md
     - name: Missing or broken reference
@@ -257,6 +263,8 @@
       href: ../access/switchboard-manager-option-disappears.md
     - name: Synchronize two combo boxes
       href: ../access/sync-combo-boxes.md
+    - name: Text of text box control displays incorrectly
+      href: ../access/text-box-control-information-incorrectly.md
     - name: Troubleshooting corruption in database
       href: ../access/troubleshoot-database-corruption.md
     - name: Troubleshoot errors updating queries or forms
@@ -611,6 +619,8 @@
       href: ../installation/error-run-office-setup-program.md
     - name: How to download and run Office 2019 installation files not in VLSC
       href: ../installation/how-to-download-office-install-not-in-vlsc.md
+    - name: Information about the deprecated ODT attributes ForceUpgrade and ForceDowngrade
+      href: ../installation/forceupgrade-forcedowngrade-removed-odt-config.md
     - name: Install Office Pro 2013 on a Terminal Server
       href: ../installation/install-and-activate-office-2013.md
     - name: Office 2010 Installation failure
@@ -647,6 +657,8 @@
       href: ../office-suite-issues/fails-accessing-page-connected-access-database.md
     - name: "\"Compile Error: Procedure too large\""
       href: ../office-suite-issues/compile-error-procedure-too-large.md
+    - name: "\"Do you want to download the converter\" error"
+      href: ../office-suite-issues/error-do-you-want-download-converter.md
     - name: "\"Missing file\" error with a web page file"
       href: ../office-suite-issues/web-page-missing-file-error.md
     - name: "\"No default mail client\" error"
@@ -905,6 +917,10 @@
       href: ../project/project-publish-jobs-not-complete.md
     - name: Removed users are not inactivated
       href: ../project/removed-erp-group-user-activated.md
+    - name: Resource plan using FTE calculates unexpectedly
+      href: ../project/resource-plan-fte-calculate-unexpected.md
+    - name: Running macro automatically
+      href: ../project/running-macro-automatically-when-starting.md
     - name: SharePoint task list sync job fails when Project is published
       href: ../project/sharepoint-task-list-sync-job-fails-when-project-published.md
     - name: Show fiscal dates on a timescaled view
@@ -995,6 +1011,8 @@
       href: ../word/damaged-documents-in-word.md
     - name: Image DPI is changed after you print to PDF
       href: ../word/image-dpi-change-after-print-to-pdf.md
+    - name: In-place edit of an embedded Word document with ActiveX control causes flickering
+      href: ../word/embedded-doc-with-activex-control-flickers.md
     - name: Issues when start or use Word
       href: ../word/issues-when-start-or-use-word.md
     - name: Mail merge issue
@@ -1023,6 +1041,8 @@
       href: ../word/track-changes-disabled.md
     - name: Troubleshoot print failures in Word for Office 365 on Windows 10
       href: ../word/print-failures-word-for-office-365-on-win-10.md
+    - name: Using printer fonts in Word
+      href: ../word/printer-fonts-in-word.md
     - name: Word could not create the work file
       href: ../word/word-could-not-create-the-work-file.md
     - name: Word slows or stops responding

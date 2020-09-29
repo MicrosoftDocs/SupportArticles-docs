@@ -7,7 +7,8 @@ manager: dcscontentpm
 editor: v-jesits
 audience: ITPro 
 ms.topic: article 
-ms.service: microsoft-teams
+ms.prod: microsoft-teams
+ms.technology: microsoft-graph
 localization_priority: Normal
 ms.custom: 
 - CI 121615
@@ -130,13 +131,13 @@ Additionally, run the **Free/Busy** connectivity test that is available in the M
 Open the Exchange Management Shell on one of the Exchange-based servers, and then run the following Exchange PowerShell command to verify that the **Editor** access right has been granted to the delegate:
 
 ```powershell
- Get-MailboxFolderPermission -Identity <delegator's UserPrincipalName> | Format-List
+Get-MailboxFolderPermission -Identity <delegator's UserPrincipalName>:\calendar  | Format-List
 ```
 
 Check whether the **AccessRights** parameter contains a value of **Editor**. If not, run the following command to grant the permission:
 
 ```powershell
-Set-MailboxFolderPermission -Identity <delegator's UserPrincipalName>\Calendar -User <delegate's UserPrincipalName> -AccessRights Editor | Format-List
+Set-MailboxFolderPermission -Identity <delegator's UserPrincipalName>\Calendar -User <delegate's UserPrincipalName> -AccessRights Editor
 ```
 
 Alternatively, ask the delegator to follow the steps in [this article](https://support.microsoft.com/office/allow-someone-else-to-manage-your-mail-and-calendar-41c40c04-3bd1-4d22-963a-28eafec25926) to reconfigure the delegation in the Outlook client.
@@ -194,7 +195,7 @@ Make sure that **\*SchedulingService\*** is listed as an array member of the **E
 Set-CASMailbox <delegator's UserPrincipalName> -EwsAllowList @{Add="*SchedulingService*"}
 ```
 
-If the **EwsEnabled** parameter is set to **False**, you have to set it to either **True** or **Null** (blank). Otherwise, the Teams service will also be blocked from accessing the EWS.
+If the **EwsEnabled** parameter is set to **False**, you have to set it to **True**. Otherwise, the Teams service will also be blocked from accessing the EWS.
 
 ### Step 5: Escalate the issue
 
@@ -270,7 +271,7 @@ Make sure that **MicrosoftNinja/\***, **\*Teams/\***, and **SkypeSpaces/\*** are
 Set-CASMailbox <UserPincipalName> -EwsAllowList @{Add="MicrosoftNinja/*","*Teams/*","SkypeSpaces/*"}
 ```
 
-If the **EwsEnabled** parameter is set to **False**, you have to set it to either **True** or **Null** (blank). Otherwise, the Teams service will also be blocked from accessing EWS.
+If the **EwsEnabled** parameter is set to **False**, you have to set it to **True**. Otherwise, the Teams service will also be blocked from accessing EWS.
 
 #### Step 5: Escalate the issue
 
