@@ -53,10 +53,16 @@
       href: ../apps/cannot-start-an-application-service.md
     - name: Installing Windows Server AppFabric updates
       href: ../apps/installing-appfabric-updates.md
+    - name: Projects with field elements cannot be redeployed
+      href: ../apps/projects-with-field-elements-cannot-redeploy.md
     - name: System.ArgumentException when signing out web application
       href: ../apps/system.argumentexception-exception-when-sign-out-of-web-application.md
   - name: InfoPath
     items:
+    - name: "\"Invalid form template\" error when running design checker"
+      href: ../infopath/invalid-from-template.md
+    - name: "\"Schema validation found non-datatype errors\" error"
+      href: ../infopath/schema-validation-found-non-datatype-errors.md
     - name: Differences of InfoPath Forms Services
       href: ../../SharePointOnline/InfoPath/infopath-forms-services.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
   - name: Installation and Setup
@@ -219,6 +225,8 @@
       href: ../../SharePointOnline/workflows/access-denied-when-approve-workflow-task.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: '"Access Denied" when a workflow sends an email'
       href: ../workflows/access-denied-error-sharepoint-2010-when-workflow-sends-email-to-group.md
+    - name: "\"Specified RunAs account is invalid\" error"
+      href: ../workflows/specified-runas-account-is-invalid.md
     - name: A response was returned that didn't come
       href: ../workflows/response-returned-did-not-come-from-workflow-manager-error.md
     - name: A workflow doesn't complete

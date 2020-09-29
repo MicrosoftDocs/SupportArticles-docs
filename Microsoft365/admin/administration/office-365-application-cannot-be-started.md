@@ -8,7 +8,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.custom: CSSTroubleshoot
-ms.service: office-perpetual-itpro
+ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
 appliesto:
