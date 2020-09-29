@@ -151,13 +151,13 @@ The first thing the client does is set the WSUS server that will be its update s
     > ScanJob({*JobID*}): Raised UpdateSource ({*UpdateSource*}) state message successfully. StateId = 2  
     > ScanJob({*JobID*}): CScanJob::Execute - successfully requested Scan, ScanType=1
 
-#### Troubleshooting
+#### Troubleshoot issues in step 1
 
 |Issues|What to check|
 |---|---|
 |ScanAgent.log shows no policy available for an update source and no WUAHandler.log exists or no current activity within WUAHandler.log|Check the [Enable software updates on clients](/mem/configmgr/core/clients/deploy/about-client-settings#enable-software-updates-on-clients) setting.|
-|Scan Agent or Location Services doesn't receive the WSUS server location|<ul><li>Is a software update point (SUP) role installed for the site?<br/><br/>If not, install and configure a software update point and monitor SUPSetup.log for progress. For more information, see [Install and configure a software update point](/mem/configmgr/sum/get-started/install-a-software-update-point).</li><li>If a SUP role is installed, is it configured and synchronizing?<br/><br/>Check WCM.log, WSUSCtrl.log, and WSyncMgr.log for errors.<br/><br/>`select * from WSUSServerLocations`<br/><br/>`select * from Update_SyncStatus`</li></ul>|
-|Client receives the WSUS location but fails to configure the WSUS registry keys|Did Group Policy refresh respond within the 2-minute timeout per WUAHandler.log?<br/><br/>If so, does WUAHandler denote **Group policy settings were overwritten by a higher authority (Domain Controller)**?<br/><br/>For more information, see [Group Policy overrides the correct WSUS configuration information](troubleshoot-software-update-scan-failures.md#group-policy-overrides-the-correct-wsus-configuration-information).|
+|Scan Agent or Location Services doesn't receive the WSUS server location|<ul><li><p>Is a software update point (SUP) role installed for the site?</p></p>If not, install and configure a software update point and monitor SUPSetup.log for progress. For more information, see [Install and configure a software update point](/mem/configmgr/sum/get-started/install-a-software-update-point).</p></li><li><p>If a SUP role is installed, is it configured and synchronizing?</p><p>Check WCM.log, WSUSCtrl.log, and WSyncMgr.log for errors.</p><ul><li>`select * from WSUSServerLocations`</li><li>`select * from Update_SyncStatus`</li></ul></li></ul>|
+|Client receives the WSUS location but fails to configure the WSUS registry keys|<p>Did Group Policy refresh respond within the 2-minute timeout per WUAHandler.log?</p><p>If so, does WUAHandler denote **Group policy settings were overwritten by a higher authority (Domain Controller)**?</p><p>For more information, see [Group Policy overrides the correct WSUS configuration information](troubleshoot-software-update-scan-failures.md#group-policy-overrides-the-correct-wsus-configuration-information).</p>|
 |||  
 
 For more information about software update scan failures troubleshooting, see [Troubleshoot software update scan failures](troubleshoot-software-update-scan-failures.md).
@@ -177,7 +177,7 @@ Scan results will include superseded updates only when they are superseded by se
 > [!TIP]
 > Review WUAHandler.log after a software update scan to see if any new entries occur. If no new entries occur, it indicates that no SUP is returned by the management point.
 
-#### Troubleshooting
+#### Troubleshoot issues in step 2
 
 A number of issues with software update scan can be caused by missing or corrupted files or registry keys, or by component registration issues. To fix such issues, see [Scan failures due to missing or corrupted components](troubleshoot-software-update-scan-failures.md#scan-failures-due-to-missing-or-corrupted-components).
 
@@ -215,7 +215,7 @@ Windows Update Agent starts a scan after receiving a request from the Configurat
 > COMAPI - Updates found = 163  
 > COMAPI -- END -- COMAPI: Search [ClientId = CcmExec]  
 
-#### Troubleshooting
+#### Troubleshoot issues in step 3
 
 During a scan, the Windows Update Agent needs to communicate with the `ClientWebService` and `SimpleAuthWebService` virtual directories on the WSUS computer in order to perform a scan. If the client cannot communicate with the WSUS computer, the scan will fail. This issue can happen for a number of reasons, including:
 
@@ -327,7 +327,7 @@ The following are logged in WUAHandler.log:
 > Async searching completed.  
 > Finished searching for everything in single call.
 
-#### Troubleshooting
+#### Troubleshoot issues in step 4
 
 Problems here should be addressed the same way as scan failures in [step 3](#step-3-windows-update-agent-wua-starts-the-scan-against-the-wsus-computer).
 
@@ -348,7 +348,7 @@ The following entries are logged in WUAHandler.log:
 > \...  
 > Successfully completed scan.
 
-#### Troubleshooting
+#### Troubleshoot issues in step 5
 
 Problems can be addressed the same way as scan failures in [step 3](#step-3-windows-update-agent-wua-starts-the-scan-against-the-wsus-computer).
 
@@ -378,7 +378,7 @@ StateMessage.log showing state messaged being recorded with **State ID 2** (miss
 > [!TIP]
 > For each update, an instance of the `CCM_UpdateStatus` class is created or updated, and it stores the current status of the update. The `CCM_UpdateStatus` class is located in the `ROOT\CCM\SoftwareUpdates\UpdatesStore` namespace.
 
-#### Troubleshooting
+#### Troubleshoot issues in step 6
 
 Problems here should be addressed the same way as scan failures in [step 3](#step-3-windows-update-agent-wua-starts-the-scan-against-the-wsus-computer).
 
@@ -393,7 +393,7 @@ When WUAHandler successfully receives the results from the Windows Update Agent,
 > Async searching completed. WUAHandler  
 > Finished searching for everything in single call
 
-#### Troubleshooting
+#### Troubleshoot issues in step 7
 
 Problems here should be addressed the same way as scan failures in [step 3](#step-3-windows-update-agent-wua-starts-the-scan-against-the-wsus-computer), although failures at this stage will likely be surfaced in the WindowsUpdate.log file specifically. To understand how to read WindowsUpdate.log, see [Windows Update log files](/windows/deployment/update/windows-update-logs).
 
@@ -418,7 +418,7 @@ When a synchronization is triggered, we expect to see the following within the W
 > InfoWsusService.10EventLogEventReporter.ReportEvent  
 > EventId=381,Type=Information,Category=Synchronization,Message=A scheduled synchronization was started.
 
-#### Troubleshooting a manual sync
+#### Troubleshoot a manual sync in step 1
 
 1. Confirm that the WSUS service is running. If a manual synchronization has started but stays at 0%, it's because that the WSUS service (**Update Services** on WSUS 3.x; **WSUSService** on Windows Server 2012 and later versions) is in a stopped state.
 
@@ -431,7 +431,7 @@ When a synchronization is triggered, we expect to see the following within the W
    5. Start the WSUS service.
    6. Open the WSUS console and try another manual synchronization.
 
-#### Troubleshooting a scheduled sync
+#### Troubleshoot a scheduled sync in step 1
 
 1. Try a manual synchronization from the WSUS console.
 2. If a manual synchronization works fine, check the scheduled synchronization settings.  
@@ -445,7 +445,7 @@ WSUS <=winhttp=> Network entities <=> Internet
 - Does a network entity (proxy, firewall, security filter, etc.) exist between the WSUS host machine and the Internet?
 - If a proxy exists and the WSUS server is required to use the proxy, is the proxy configured within the proper WSUS settings?
 
-#### Troubleshooting a manual sync
+#### Troubleshoot a manual sync in step 2
 
 1. Confirm that the WSUS service is running. If you see that a manual synchronization has started but it stays at 0%, it's due to the WSUS service (**Update Services** on WSUS 3.x; **WSUS Service** on Windows Server 2012 and later versions) being in a stopped state.
 
@@ -458,7 +458,7 @@ WSUS <=winhttp=> Network entities <=> Internet
    5. Start the WSUS service.
    6. Open the WSUS console and try another manual synchronization.
 
-#### Troubleshooting a scheduled sync
+#### Troubleshoot a scheduled sync in step 2
 
 1. Try a manual synchronization from the WSUS console.
 2. If a manual synchronization works fine, check the scheduled synchronization settings.
@@ -473,7 +473,7 @@ Deployment issues that occur with specific updates can be broken into the areas 
 
 |Areas|Installation|Supersedence|Detection|
 |---|---|---|---|
-|Components| WUA<br/>Update Installer (CBS, MSI)<br/>CCMExec|Update metadata|WUA<br/>Update metadata<br/>Update Installer (CBS, MSI)|
+|Components| <ul><li>WUA</li><li>Update Installer (CBS, MSI)</li><li>CCMExec</li></ul>|Update metadata|<ul><li>WUA</li><li>Update metadata</li><li>Update Installer (CBS, MSI)</li>|
 |||||
 
 ### Installation issues

@@ -32,15 +32,15 @@ _Original KB number:_ &nbsp; 4025764
   - Windows Server 2016 - [KB4039396](https://support.microsoft.com/help/4039396/)
 
 > [!NOTE]
-> If you're using Configuration Manager and the software update point is installed on a remote site system server, the WSUS Administration Console must be installed on the site server. For WSUS 3.0 SP2, [KB 4039929](https://support.microsoft.com/help/4039929) or a later update must also be installed on the WSUS Administration Console. After you install [4039929](https://support.microsoft.com/help/4039929) (remotely or locally), a server restart is required. After the restart, check whether the issue persists.
+> If you're using Configuration Manager and the software update point is installed on a remote site system server, the WSUS Administration Console must be installed on the site server. For WSUS 3.0 SP2, [KB 4039929](https://support.microsoft.com/help/4039929) or a later update must also be installed on the WSUS Administration console. After you install [4039929](https://support.microsoft.com/help/4039929) (remotely or locally), a server restart is required. After the restart, check whether the issue persists.
 
 ## Troubleshoot connection failures
 
 To troubleshoot connection failures, follow these steps:
 
 1. Verify that the **Update Services** service and the **World Wide Web Publishing Service** are running on the WSUS server.
-2. Verify that the default website or WSUS administration website is running on the WSUS server.
-3. Review the IIS logs for the WSUS administration website (`c:\inetpub\logfiles`), and check for errors.
+2. Verify that the Default website or WSUS Administration website is running on the WSUS server.
+3. Review the IIS logs for the WSUS Administration website (`c:\inetpub\logfiles`), and check for errors.
 
 ## Code definitions
 
@@ -62,7 +62,7 @@ The following table defines common error codes. For more information about HTTP
 
 **503** errors in IIS may be accompanied by *xxxx2ee2* errors in the `c:\windows\windowsupdate.log` file on clients.
 
-To resolve **503** IIS errors, a client time-out, or a large number of roundtrip errors, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://support.microsoft.com/help/4490644/complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maint).
+To resolve **503** IIS errors, a client time-out, or a large number of roundtrip errors, see [The complete guide to WSUS and Configuration Manager SUP maintenance](./wsus-maintenance-guide.md).
 
 If a client's IP address doesn't appear in the IIS logs, verify that the client is set to connect to the correct WSUS server. This situation may also occur because of network blocking or because the server logs a special error.
 
