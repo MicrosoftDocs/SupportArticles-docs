@@ -84,11 +84,11 @@ To initiate the **ForceDowngrade** attribute and revert to an older version of O
 2.	Open an elevated Command Prompt window.
 3.	At the command prompt, change to the directory in which you saved Config.xml, type **setup.exe /configure config.xml**, and then press Enter.
 
-## Reference
+## Related articles
 
-[Support for 2013 versions of Office 365 ProPlus ended on February 28, 2017](https://docs.microsoft.com/office/troubleshoot/support/2013-versions-of-office-365)
-[Configuration options for the Office Deployment Tool](https://docs.microsoft.com/deployoffice/configuration-options-for-the-office-2016-deployment-tool)
-[How to revert to an earlier version of Office](https://support.microsoft.com/help/2770432/how-to-revert-to-an-earlier-version-of-office-2013-or-office-2016-clic)
+- [Support for 2013 versions of Office 365 ProPlus ended on February 28, 2017](https://docs.microsoft.com/office/troubleshoot/support/2013-versions-of-office-365)
+- [Configuration options for the Office Deployment Tool](https://docs.microsoft.com/deployoffice/configuration-options-for-the-office-2016-deployment-tool)
+- [How to revert to an earlier version of Office](https://support.microsoft.com/help/2770432/how-to-revert-to-an-earlier-version-of-office-2013-or-office-2016-clic)
 
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
