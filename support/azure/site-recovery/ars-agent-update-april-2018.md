@@ -1,7 +1,7 @@
 ---
 title: Mandatory update for Microsoft Azure Recovery Services Agent April 2018
 description: Describes update and new features in Azure Recovery Services Agent update 2.0.9118.0.
-ms.date: 08/14/2020
+ms.date: 09/30/2020
 author: genlin
 ms.author: genli
 ms.service: site-recovery
