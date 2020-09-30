@@ -33,10 +33,10 @@ In Outlook for Microsoft 365, Microsoft Outlook 2016, or Microsoft Outlook 2013,
 - When you select **File** in Outlook 2016, the following warning messages are displayed:
 
     > Metered Connection Warning  
-    We noticed the metered connection you're on may charge extra and this Office program might access online content. You may want to:  
-    Tap or click the network icon and turn on Airplane mode to go offline  
-    Connect to a WiFi or LAN network that isn't metered  
-    Check the status of your data plan with your mobile operator   
+    > We noticed the metered connection you're on may charge extra and this Office program might access online content. You may want to:  
+    > - Tap or click the network icon and turn on Airplane mode to go offline  
+    > - Connect to a WiFi or LAN network that isn't metered  
+    > - Check the status of your data plan with your mobile operator   
 
     > Upgrade in Progress  
     Your mailbox is currently being optimized as part of an upgrade to Outlook 2016. This one-time process may take more than 15 minutes to finish, and performance may be affected while the optimization is in progress. 
