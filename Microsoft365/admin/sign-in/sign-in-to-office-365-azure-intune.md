@@ -57,7 +57,7 @@ The following conditions might cause this issue:
 ## Resolution
 
 > [!TIP]
-> To diagnose and automatically fix several common Office sign-in issues, you can download and run the [Microsoft Support and Recovery Assistant](https://aka.ms/SaRA_TshootOfficeSCA_Docs).
+> To diagnose and automatically fix several common Office sign-in issues, you can download and run the [Microsoft Support and Recovery Assistant](https://aka.ms/SaRA-OfficeSignInScenario).
 
 To resolve this issue, follow these steps.
 

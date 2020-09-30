@@ -33,7 +33,7 @@ This behavior is expected. It occurs if another account is already signed in to 
 ## Resolution
 
 > [!TIP]
-> To diagnose and automatically fix several common Office sign-in issues, you can download and run the [Microsoft Support and Recovery Assistant](https://aka.ms/SaRA_TshootOfficeSCA_Docs).
+> To diagnose and automatically fix several common Office sign-in issues, you can download and run the [Microsoft Support and Recovery Assistant](https://aka.ms/SaRA-OfficeSignInScenario).
 
 Sign out of the first account that signed in, then restart that computer. If this solution does not resolve the issue, try the workaround below.
 

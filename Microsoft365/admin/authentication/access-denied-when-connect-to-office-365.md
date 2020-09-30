@@ -29,7 +29,7 @@ When users try to access a Microsoft Office 365 resource from a rich client appl
 ## Solution
 
 > [!TIP]
-> To diagnose and automatically fix several common Office sign-in issues, you can download and run the [Microsoft Support and Recovery Assistant](https://aka.ms/SaRA_TshootOfficeSCA_Docs).
+> To diagnose and automatically fix several common Office sign-in issues, you can download and run the [Microsoft Support and Recovery Assistant](https://aka.ms/SaRA-OfficeSignInScenario).
 
 To fix this problem, reset the user's password. To do this, follow these steps:
 

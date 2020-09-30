@@ -40,7 +40,7 @@ The authentication issue occurs because of missing package information about eit
 ## Resolution
 
 > [!TIP]
-> To diagnose and automatically fix several common Office sign-in issues, you can download and run the [Microsoft Support and Recovery Assistant](https://aka.ms/SaRA_TshootOfficeSCA_Docs).
+> To diagnose and automatically fix several common Office sign-in issues, you can download and run the [Microsoft Support and Recovery Assistant](https://aka.ms/SaRA-OfficeSignInScenario).
 
 To fix this issue, use PowerShell to reinstall the packages for ADAL (for organizational or work accounts) and Live ID (for personal accounts such as @outlook.com, @hotmail.com, and so on). To do this, follow these steps:
 
