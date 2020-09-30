@@ -2,7 +2,7 @@
 title: Private items in the shared mailbox aren't displayed in Outlook
 description: Provides workarounds to an issue in which Private items in the shared mailbox aren't displayed in Outlook.
 author: TobyTu
-ms.author: Shannon.McDaniel
+ms.author: shmcdani
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
   - CI 123194
-ms.reviewer: Shannon.McDaniel
+ms.reviewer: shmcdani
 appliesto:
 - Exchange Online
 - Outlook for Microsoft 365
@@ -22,7 +22,7 @@ search.appverid: MET150
 
 ## Symptoms
 
-Some Inbox items such as emails or meeting requests in a shared mailbox aren't displayed in Microsoft Outlook 2013, 2016 and 2019.  
+Some items such as emails or meeting requests in a shared mailbox aren't displayed in **Inbox** in Microsoft Outlook 2013, 2016 and 2019.  
 
 ## Cause
 
