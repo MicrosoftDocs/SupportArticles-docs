@@ -30,7 +30,7 @@ This issue occurs in Microsoft Exchange Server 2013 and Exchange Server 2016.
 
 ## Workaround
 
-To work around this issue, set language and regional settings for the system and network service accounts to English (United States).
+To work around this issue, set language and regional settings for the system and network service accounts to English (United States) on the server where the searched mailbox is located (active copy of database containing the mailbox you are running search for).
 
 1. Set English (United States) as the primary language.
     1. In Control Panel, open **Language**.
