@@ -22,7 +22,7 @@ appliesto:
 
 ## Symptoms
 
-In Outlook for Microsoft 365, Microsoft Outlook 2016, or Microsoft Outlook 2013, you experience the following symptoms:
+In Outlook for Microsoft 365, Microsoft Outlook 2016, or Microsoft Outlook 2013, you experience any of the following symptoms:
 
 - New email messages are not received.
 - When you try to send an email message, it is not sent. Instead, it remains in the Outbox.
@@ -30,36 +30,43 @@ In Outlook for Microsoft 365, Microsoft Outlook 2016, or Microsoft Outlook 2013,
 
     > Internal MAPI error: The profile does not contain the requested service. Contact your administrator.
 
-- When you select **File** in Outlook, the following warning messages are displayed:
+- When you select **File** in Outlook 2016, the following warning messages are displayed:
 
     > Metered Connection Warning  
     We noticed the metered connection you're on may charge extra and this Office program might access online content. You may want to:  
     Tap or click the network icon and turn on Airplane mode to go offline  
     Connect to a WiFi or LAN network that isn't metered  
-    Check the status of your data plan with your mobile operator   Upgrade in Progress
+    Check the status of your data plan with your mobile operator   
 
-    > Your mailbox is currently being optimized as part of an upgrade to Outlook 2016. This one-time process may take more than 15 minutes to finish, and performance may be affected while the optimization is in progress.
-
+    > Upgrade in Progress  
+    Your mailbox is currently being optimized as part of an upgrade to Outlook 2016. This one-time process may take more than 15 minutes to finish, and performance may be affected while the optimization is in progress. 
+    
     ![account information](./media/metered-connection-warning/account-information.png)
 
 ## Resolution
 
-To fix this issue for Office for Microsoft 365, make sure that your installation is at Version 2008 (Build 13127.20508) or a later version. If it is not, update your Office installation. To do this, follow these steps.
+To fix these issues for Outlook for Microsoft 365, update your Office installation to version 2008 (Build 13127.20508) or a later version. 
 
-1. Open any Office application, such as Outlook or Word.
+1. Open any Office application such as Outlook or Word.
 2. Select **File**, and then select **Office Account** or **Account**.
-3. Examine the version number that is listed under **Office Updates**.
-4. Select **Update Options**, and then select **Update Now**.
+3. Check the version number that is listed under **Office Updates**. 
+4. If it is older than 2008, select **Update Options**, and then select **Update Now**.
 
 For more information about update channels for Office 365 clients, see [Update history for Microsoft 365 Apps (listed by date)](https://docs.microsoft.com/officeupdates/update-history-microsoft365-apps-by-date).
 
-## Workaround
+If updating the Office installation does not fix the issues, use one of the workarounds listed below.
+
+There is no resolution for Outlook 2016 and Outlook 2013 at this time. Use the appropriate workarounds listed below for these products. 
+
+## Workarounds 
 
 ### For Outlook for Microsoft 365 and Outlook 2016
 
+Two methods are provided below. Use Method 1 first and if that doesn't fix the issues, use Method 2. 
+
 #### Method 1: Delete the SecurityManager key in the registry
 
-The issue may be caused by registry values under this subkey:
+The issues might be caused by the registry values under this subkey:
 
 `HKLM\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\SecurityManager\CapAuthz\ApplicationsEx`
 
@@ -69,9 +76,9 @@ To work around this issue, delete the **SecurityManager** key and its subkeys in
 > Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry](https://support.microsoft.com/help/322756) for restoration in case problems occur.
 
 1. Exit Outlook.
-2. Start **Registry Editor**. To do this, use one of the following procedures, as appropriate for your version of Windows:
-   - **Windows 10, Windows 8.1, and Windows 8**: Press Windows logo key+R to open a **Run** dialog box. Type **regedit.exe** and then select **OK**.
-   - **Windows 7**: Select **Start**, type **regedit.exe** in the search box, and then press Enter.
+2. Start **Registry Editor**.
+   - For **Windows 10, Windows 8.1, and Windows 8**: Press Windows logo key+R to open a **Run** dialog box. Type **regedit.exe** and then select **OK**.
+   - For **Windows 7**: Select **Start**, type **regedit.exe** in the search box, and then press Enter.
 3. In Registry Editor, locate the following subkey in the registry:
 
     `HKLM\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\SecurityManager\CapAuthz\ApplicationsEx`
@@ -81,15 +88,15 @@ To work around this issue, delete the **SecurityManager** key and its subkeys in
 6. Select **OK**.
 7. Select **yes** when you receive the following prompt: "**This will replace explicitly defined permissions on all descendants of this object with inheritable permissions from \<parent key>. Do you wish to continue?**
 8. Select **OK**.
-9. Right-click on **SecurityManager**, select **Delete** to delete the **SecurityManager** key and the subkeys.
+9. Right-click the **SecurityManager** key, and select **Delete** to delete the **SecurityManager** key and the subkeys.
 10. Exit **Registry Editor**.
-11. [Repair the Office application](https://support.microsoft.com/office/repair-an-office-application-7821d4b6-7c1d-4205-aa0e-a6b40c5bb88b), and check whether the issue is resolved.
+11. [Repair the Office application](https://support.microsoft.com/office/repair-an-office-application-7821d4b6-7c1d-4205-aa0e-a6b40c5bb88b), and check whether the issues have been resolved.
 
 #### Method 2: Stop third-party applications that access MAPISVC.inf file
 
-The issue may also be caused by third-party applications that can access MAPISVC.inf and prevent Outlook from setting up the Account Manager. Stopping these applications and their processes should mitigate the issue.
+These issues may also be caused by third-party applications that access MAPISVC.inf and prevent Outlook from setting up the Account Manager. To mitigate this situation, stop the applications and processes that may be affecting MAPISVC.inf.
 
-You can use [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) to see what processes are accessing MAPISVC.inf. The process **SHARING_VIOLATION on MAPISVC.inf** shown in Process Monitor indicates this is at least part of the problem. For instance, RepMgr.exe (C:\Program Files\Confer\RepMgr.exe) is an application known to cause this issue.
+Use [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) to see the processes that are accessing MAPISVC.inf. If a process displays a **SHARING_VIOLATION** on MAPISVC.inf, it indicates that the associated application is likely to be responsible for the issues. For instance, RepMgr.exe (C:\Program Files\Confer\RepMgr.exe) is an application known to cause these issues. Stop this process if you see it in Process Monitor.
 
 **Third-party information disclaimer**
 
@@ -97,16 +104,16 @@ The third-party products that this article discusses are manufactured by compani
 
 ### For Outlook 2013
 
-If you cannot install the update that is mentioned in the 'Resolution' section, or if you are running Outlook 2013, you can work around this issue by using one of the following methods.
-
+Two methods are provided below. Use Method 1 first and if that doesn't fix the issues, use Method 2. 
+ 
 #### Method 1: Verify permissions in the registry
 
-In some cases, this issue is related to a permissions issue in the registry. To determine the cause of the issue and fix it, follow these steps:
+In some cases, the issues are related to a permissions issue in the registry. To determine whether this is the cause of the issues and fix them:
 
 1. Exit Outlook.
-2. Start **Registry Editor**. To do this, use one of the following procedures, as appropriate for your version of Windows:
-   - **Windows 10, Windows 8.1 and Windows 8**: Press Windows logo key+R to open a **Run** dialog box. Type **regedit.exe**, and then select **OK**.
-   - **Windows 7**: Select **Start**, type **regedit.exe** in the search box, and then press Enter.
+2. Start **Registry Editor**. 
+   - For **Windows 10, Windows 8.1 and Windows 8**: Press Windows logo key+R to open a **Run** dialog box. Type **regedit.exe**, and then select **OK**.
+   - For **Windows 7**: Select **Start**, type **regedit.exe** in the search box, and then press Enter.
 
 3. In Registry Editor, locate and right-click the following subkey in the registry, and then select **Permissions**:
 
@@ -124,7 +131,7 @@ In some cases, this issue is related to a permissions issue in the registry. To 
         > You may have to expand the **Group** column to view all the groups.
    - When you are finished, select **Cancel**.
 
-5. If you do not see a group that you're a member of or your own user name listed in the permissions, select **Add**, and then add your own user account.
+5. If you do not see a group that you're a member of or your own user name listed in the permissions list, select **Add**, and then add your own user account.
 6. Select **OK**.
 7. Select your user name or the group that you're a member of.
 8. View the permissions for your user name or group, and make sure that the **Read** permission has **Allow** selected.
@@ -133,7 +140,7 @@ In some cases, this issue is related to a permissions issue in the registry. To 
 
 #### Method 2: Run a repair of Office
 
-Follow the steps in the following article to run a repair of Office. This method is most appropriate for MSI-based installations of Office. To determine whether your Office installation is Click-to-Run or MSI-based, see the "More information" section.
+Follow the steps in the following article to repair your Office installation. This method is most appropriate for MSI-based installations of Office. To determine whether your Office installation is Click-to-Run or MSI-based, see the "More information" section.
 
 [Repair an Office application](https://support.office.com/article/repair-an-office-application-7821d4b6-7c1d-4205-aa0e-a6b40c5bb88b)
 
@@ -143,6 +150,6 @@ To determine whether your Office installation is Click-to-Run or MSI-based, foll
 
 1. Start Outlook.
 2. On the **File** menu, select **Office Account**.
-3. For Office Click-to-Run installations, an **Update Options** item is displayed. For MSI-based installations, the **Update Options** item is not displayed.
+3. An **Update Options** item is displayed for Office Click-to-Run installations, but not for MSI-based installations.
 
 ![Determine office version](./media/metered-connection-warning/office-version.png)
