@@ -44,14 +44,14 @@ In Outlook for Microsoft 365, Microsoft Outlook 2016, or Microsoft Outlook 2013,
 
 ## Resolution
 
-To fix this issue, make sure that your Office 2016 Click-to-Run installation is at version 1611 (Build 7571.2072) or a later version. If it is not, update your Office 2016 installation. To do this, follow these steps.
+To fix this issue for Office for Microsoft 365, make sure that your installation is at Version 2008 (Build 13127.20508) or a later version. If it is not, update your Office installation. To do this, follow these steps.
 
 1. Open any Office application, such as Outlook or Word.
 2. Select **File**, and then select **Office Account** or **Account**.
 3. Examine the version number that is listed under **Office Updates**.
-4. If the version is not at 1611 (Build 7571.2072) or a later version, select **Update Options**, and then select **Update Now**.
+4. If the version is not at 2008 (Build 13127.20508) or a later version, select **Update Options**, and then select **Update Now**.
 
-For more information about update channels for Office 365 clients, see [Update history for Microsoft 365 Apps (listed by date)](https://technet.microsoft.com/library/mt592918.aspx).
+For more information about update channels for Office 365 clients, see [Update history for Microsoft 365 Apps (listed by date)](https://docs.microsoft.com/officeupdates/update-history-microsoft365-apps-by-date).
 
 ## Workaround
 
