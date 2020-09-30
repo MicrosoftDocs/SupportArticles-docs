@@ -26,7 +26,7 @@ Some items such as emails or meeting requests in a shared mailbox aren't display
 
 ## Cause
 
-These items were [marked as **Private**](https://support.microsoft.com/office/mark-your-email-as-normal-personal-private-or-confidential-4a76d05b-6c29-4a0d-9096-71784a6b12c1), Outlook client can't display private items in a shared folder.
+These items were [marked as **Private**](https://support.microsoft.com/office/mark-your-email-as-normal-personal-private-or-confidential-4a76d05b-6c29-4a0d-9096-71784a6b12c1), Outlook client can't display private items in a shared mailbox.
 
 > [!NOTE]
 > Only the sender can set the sensitivity level for the items and the option will be greyed out when the items arrive at the recipient's Inbox.
