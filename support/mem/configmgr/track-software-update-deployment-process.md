@@ -4,7 +4,7 @@ description: Describes how to track the deployment of software updates in System
 ms.date: 05/25/2020
 ms.prod-support-area-path:
 ---
-# Using log files to track the software update deployment process in Configuration Manager
+# Track the software update deployment process in Configuration Manager
 
 This article describes how to track the deployment of software updates in Configuration Manager by using log files.
 
