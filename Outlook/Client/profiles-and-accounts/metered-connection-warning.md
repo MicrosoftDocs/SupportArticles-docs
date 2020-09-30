@@ -96,7 +96,7 @@ To work around this issue, delete the **SecurityManager** key and its subkeys in
 
 These issues may also be caused by third-party applications that access MAPISVC.inf and prevent Outlook from setting up the Account Manager. To mitigate this situation, stop the applications and processes that may be affecting MAPISVC.inf.
 
-Use [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) to see the processes that are accessing MAPISVC.inf. If a process displays a **SHARING_VIOLATION** on MAPISVC.inf, it indicates that the associated application is likely to be responsible for the issues. For instance, RepMgr.exe (C:\Program Files\Confer\RepMgr.exe) is an application known to cause these issues. Stop this process if you see it in Process Monitor.
+Use [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) to see the processes that are accessing MAPISVC.inf. If a process displays a **SHARING_VIOLATION on MAPISVC.inf**, it indicates that the associated application is likely to be responsible for the issues. For instance, RepMgr.exe (C:\Program Files\Confer\RepMgr.exe) is an application known to cause these issues. Stop this process if you see it in Process Monitor.
 
 **Third-party information disclaimer**
 
