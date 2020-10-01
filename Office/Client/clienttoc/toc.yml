@@ -175,8 +175,6 @@
       href: ../access/how-to-loop-through-references-view-properties.md
     - name: How to parse City, State, Zip to separate values
       href: ../access/how-to-parse-city-state-zip-to-separate-values.md
-    - name: How to use common DDL SQL statements
-      href: ../access/how-to-use-common-ddl-sql-statements.md
     - name: ID is increment when adding a new field
       href: ../access/id-field-increment-by-one.md
     - name: Incorrect FirstDay property value
