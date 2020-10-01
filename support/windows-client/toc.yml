@@ -412,6 +412,15 @@
       href: ./performance/lsaiso-process-high-cpu-usage.md
     - name: How to speed up your computer
       href: ./performance/speed-up-your-computer.md
+    - name: NMI_HARDWARE_FAILURE error
+      href: ./performance/nmi-hardware-failure-error.md
+    - name: Push-button reset fails because language resources are missing
+      href: ./performance/pbr-reset-fails-language-resources-missing.md
+    - name: Running an.exe file starts different program 
+      href: ./performance/running-exe-starts-another-program.md
+    - name: SuperFetch (SysMain) service consumes CPU
+      href: ./performance/superfetch-sysmain-service-spikes-cpu.md
+    - name: Troubleshooting slow file copying in Windows 
     - name: Memory leak in remote registry service
       href: ./performance/memory-leak-remote-registry-service.md
     - name: Troubleshooting slow file copying in Windows
