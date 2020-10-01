@@ -7,11 +7,11 @@ ms.author: alexmuk
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: w10
-localization_priority: medium
+ms.prod: windows-client
+ms.localizationpriority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Applications
-ms.technology: windows
+ms.prod-support-area-path: Servicing
+ms.technology: Deployment
 ---
 
 # Push-button reset fails because language resources are missing
@@ -60,12 +60,15 @@ When the second `Reagentc /enable` runs, the WinRE file is purged. It can then b
 For users who can't access internet:
 
 1. Apply language resource 2020.8B.
-2. Run `Dism /online /cleanup-image /restorehealth`.
-3. Run **PBR Reset/Refresh**.
-4. Attempt a PBR.
-5. Rerun **PBR Reset/Refresh**.
-6. Run `reagentc /enable` twice.
-7. Run the **PBR Reset/Refresh**.
+1. Run `Dism /online /cleanup-image /restorehealth`.
+1. Run **PBR Reset/Refresh**.
+1. Attempt a PBR.
+1. Rerun **PBR Reset/Refresh**.
+1. Run `reagentc /enable` twice.
+1. Run the **PBR Reset/Refresh**.
+
+> [!NOTE]
+> There is a scenario that is currently under investigation where the `Reagentc /enable` will not fix the issue previously discussed. If the staging location is same as the location of the WinRE, the current logic of `Reagentc /enable` will not work. Microsoft is updating the logic in `Reagentc /enable`, and will release the updated command as part of a Latest Cumulative Update (LCU).
 
 ## More information
 
