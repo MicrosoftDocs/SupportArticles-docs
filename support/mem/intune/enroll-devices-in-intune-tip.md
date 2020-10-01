@@ -3,7 +3,7 @@ title: Support tip for enrolling devices in Intune
 description: Brief overview and comparison of the methods that you can use to enroll Windows 10 devices in Microsoft Intune.
 ms.date: 09/08/2020
 ms.prod-support-area-path: intune
-ms.reviewer: 
+ms.reviewer: sausarka
 author: Teresa-Motiv
 ms.author: v-tea
 ms.custom: 
