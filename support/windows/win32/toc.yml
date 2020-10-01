@@ -81,10 +81,6 @@
       href: close-non-blocked-socket-memory-leak.md
     - name: Send small data packets over TCP by using Winsock
       href: data-segment-tcp-winsock.md
-  - name: Print Driver
-    items:
-    - name: Recurring icon is black when printing a calendar
-      href: recurring-icon-background-is-black.md
   - name: Security development
     items:
     - name: Changing krbtgt password fails

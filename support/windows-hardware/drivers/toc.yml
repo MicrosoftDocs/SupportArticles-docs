@@ -56,6 +56,11 @@
   - name: Unowned driver updates are installed unexpectedly
     href: unowned-driver-updates-installed-unexpectedly.md
 
+- name: Print Driver
+  items:
+  - name: Recurring icon is black when printing a calendar
+    href: recurring-icon-background-is-black.md
+
 - name: Storage Driver
   items:
   - name: Avoiding DPC Watchdog timeout problems
