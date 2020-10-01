@@ -95,7 +95,7 @@ Follow these steps, and then quit Registry Editor:
 
 #### Did this fix the problem?
 
-Check whether the problem is fixed. If the problem is fixed, you are finished with this article. If the problem is not fixed, you can [contact support](/contactus).
+Check whether the problem is fixed. If the problem is fixed, you are finished with this article. If the problem is not fixed, you can [contact support](https://support.microsoft.com/contactus/?ws=support).
 
 ### Method 2: Use Group Policy settings
 

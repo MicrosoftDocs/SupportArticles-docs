@@ -1,0 +1,38 @@
+---
+title: Error message when installing RSAT
+description: Provides a solution to an error that occurs when you install the Remote Server Administration Tools.
+author: Deland-Han 
+ms.author: delhan
+manager: dscontentpm
+audience: itpro
+ms.topic: troubleshooting
+ms.prod: windows-client
+localization_priority: medium
+ms.reviewer: kaushika
+ms.prod-support-area-path: Servicing
+ms.technology: Deployment
+---
+# Error message when installing RSAT: This update is not applicable to your computer
+
+This article provides a solution to an error that occurs when you install the Remote Server Administration Tools (RSAT).
+
+_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Original KB number:_ &nbsp; 2517239
+
+## Symptoms
+
+When installing the Remote Server Administration Tools for Windows 7 (RSAT), you may receive the following error message:
+
+> "This update is not applicable to your computer"  
+
+## Cause
+
+This error will occur if you attempt to install RSAT after installing Service Pack 1 for Windows 7. The RSAT tools are designed for the RTM version of Windows 7 and are not compatible with Service Pack 1. However, Service Pack 1 includes updated components for RSAT, so if RSAT is installed before Service Pack 1, the issue will not occur and the components will be updated automatically.
+
+## Resolution
+
+Install RSAT tools before installing Service Pack 1 for Windows 7. If Service Pack 1 for Windows 7 is already installed, it can be uninstalled and then reinstalled after the RSAT tools are installed.
+
+## More information
+
+Microsoft has confirmed this to be by design, as RSAT was designed for Windows 7 RTM version. A newer version of RSAT is slated to be released in the future.

@@ -24,7 +24,7 @@ The following command will refresh the grid properly if a SELECT-SQL is run to r
 ```
 
 Such customization could be headers with different names, longer column lengths, and code placed in the events of columns or headers. For more information, please see the following article in the Microsoft Knowledge Base:
- [131836](/EN-US/help/131836) PRB: Grid Not Refreshing Displaying a Cursor from Query
+ [131836](https://support.microsoft.com/help/131836) PRB: Grid Not Refreshing Displaying a Cursor from Query
 
 ## Cause
 

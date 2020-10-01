@@ -105,7 +105,7 @@
     href: pwd-not-sync.md
   - name: Password sync fails with event ID 611 
     href: pwd-hash-sync-stops-work.md
-  - name: ProxyAddresses attribute populating
+  - name: ProxyAddresses attribute in Azure AD
     href: proxyaddresses-attribute-populate.md
   - name: Scripts cannot be loaded
     href: cannot-run-scripts-powershell.md
@@ -171,7 +171,7 @@
     href: remove-msoluser-user-not-found-recyclebin.md
   - name: Request isn't processed when resetting password
     href: request-not-processed-reset-pwd.md
-  - name: Set up your enterprise for working remotely FAQ
+  - name: Set up your enterprise for working remotely faq
     href: faq-set-up-enterprise-work-remotely.md
   - name: The term is not recognized error in Azure PowerShell
     href: term-cmdlet-name-not-recognized-aad-cmdlet.md

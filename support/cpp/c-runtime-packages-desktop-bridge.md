@@ -3,7 +3,7 @@ title: C++ Runtime packages for Desktop Bridge
 description: Describes how Windows desktop applications that have a dependency on the C++ Runtime libraries can"t redistribute the version of the libraries that's included with Visual Studio or via the Visual C++ redistributable (VCRedist) packages. Explains how to create a Desktop Bridge container that includes the correct C++ Runtime libraries.
 ms.date: 04/13/2020
 ms.prod-support-area-path: C and C++ Libraries
-ms.reviewer: ericmitt
+ms.reviewer: ericmitt, sherifm
 ms.topic: how-to
 ---
 # C++ Runtime framework packages for Desktop Bridge
@@ -17,23 +17,33 @@ _Original KB number:_ &nbsp; 3176696
 
 Windows desktop applications that have a dependency on the C++ Runtime libraries must specify the corresponding version of the C++ Runtime framework package for Desktop Bridge during creation of the application package. This must be done instead of just redistributing the C++ Runtime libraries that are included with Visual Studio or the Visual C++ Runtime redistributable (VCRedist). Windows desktop applications that run in a Desktop Bridge container cannot use the C++ Runtime libraries that are included with Visual Studio or VCRedist. An application that's running in a Desktop Bridge container and that uses an incorrect version of the C++ runtime libraries might fail when it tries to access resources such as the file system or the registry. This article discusses how to create a Desktop Bridge container that includes the correct C++ Runtime libraries.
 
-## How to update a desktop application container
+## How to install and update Desktop framework packages
 
-Microsoft provides C++ Runtime framework packages to allow developers to reference the C++ runtime from desktop applications that will be distributed through the Windows Store and to assist developers with converting existing desktop applications to Universal Windows Platform (UWP) applications. Additionally, these packages will eventually be distributed and updated through the Windows Store, similar to the way that C++ UWP framework packages are handled.
+Microsoft provides C++ Runtime framework packages to allow applications to reference the C++ runtime from desktop applications distributed through the Windows Store. These packages are distributed and updated through the Windows Store and are handled similarly to C++ UWP framework packages.
 
-1. Download and install the C++ Runtime framework package for the C++ Runtime version used by your application. C++ Runtime framework package can be downloaded for the following C++ Runtime versions:
+For development purposes, the current version (v14.0) of both debug and retail appx packages are included with Visual Studio 2019 when you choose the **Universal Windows Platform Development** workload with the optional **C++ (v142) Universal Windows Tools** component. The packages can be found under `%ProgramFiles(x86)%\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop\14.0`.
 
-    - Download [C++ Runtime v11.0 framework package for Desktop Bridge (Project Centennial)](https://www.microsoft.com/download/details.aspx?id=53340).
+In some scenarios such as [Windows Sandbox](/windows/security/threat-protection/windows-sandbox/windows-sandbox-overview) or where applications run on offline machines, developers may find it easier to download the packages corresponding to their deployment architectures from one of the links below and manually install them using the `Add-AppxPackage` PowerShell cmdlet:
 
-    - Download [C++ Runtime v12 framework package for Desktop Bridge (Project Centennial)](https://www.microsoft.com/download/details.aspx?id=53176).
+- [Microsoft.VCLibs.arm.14.00.Desktop.appx](https://aka.ms/Microsoft.VCLibs.arm.14.00.Desktop.appx)
+- [Microsoft.VCLibs.arm64.14.00.Desktop.appx](https://aka.ms/Microsoft.VCLibs.arm64.14.00.Desktop.appx)
+- [Microsoft.VCLibs.x64.14.00.Desktop.appx](https://aka.ms/Microsoft.VCLibs.x64.14.00.Desktop.appx)
+- [Microsoft.VCLibs.x86.14.00.Desktop.appx](https://aka.ms/Microsoft.VCLibs.x86.14.00.Desktop.appx)
 
-    - Download [C++ Runtime v14 framework package for Desktop Bridge (Project Centennial)](https://www.microsoft.com/download/details.aspx?id=53175).
+## Legacy Desktop framework packages
 
-    The C++ Runtime framework packages will be copied to a folder under `%ProgramFiles(x86)%\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop`. You can install the packages manually using the `Add-AppxPackage` PowerShell cmdlet.
+Older C++ Runtime framework packages for desktop applications, v11.0 and v12.0, can be downloaded and installed from these locations:
 
-2. In your application's *AppxManifest.xml* file, specify a `PackageDependency` value that corresponds to the appropriate framework package:
+- [C++ Runtime v11.0 framework package for Desktop Bridge (Project Centennial)](https://www.microsoft.com/download/details.aspx?id=53340)
+- [C++ Runtime v12 framework package for Desktop Bridge (Project Centennial)](https://www.microsoft.com/download/details.aspx?id=53176)
 
-    Version 11.0:
+The C++ Runtime framework packages will be copied to a subfolder under `%ProgramFiles(x86)%\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop`. You can install the packages manually using the `Add-AppxPackage` PowerShell cmdlet.
+
+## How to reference the Desktop framework packages
+
+In your application's *AppxManifest.xml* file, specify a `PackageDependency` value that corresponds to the appropriate framework package:
+
+- Version 11.0:
 
     ```xml
     <Dependencies>
@@ -41,7 +51,7 @@ Microsoft provides C++ Runtime framework packages to allow developers to referen
     </Dependencies>
     ```
 
-    Version 12.0:
+- Version 12.0:
 
     ```xml
     <Dependencies>
@@ -50,7 +60,7 @@ Microsoft provides C++ Runtime framework packages to allow developers to referen
     </Dependencies>
     ```
 
-    Version 14.0:
+- Version 14.0:
 
     ```xml
     <Dependencies>
@@ -58,7 +68,7 @@ Microsoft provides C++ Runtime framework packages to allow developers to referen
     </Dependencies>
     ```
 
-    The application will now install the C++ Runtime DLLs from the dependency package when it's deployed.
+The application will now install the C++ Runtime DLLs from the dependency package when it's deployed.
 
 ## References
 

@@ -24,9 +24,7 @@ When software update deployment fails, the problem generally falls into one of t
 
 ## Updates fail to download
 
-1. When updates don't get downloaded to the client, first check the CAS.log, ContentTransferManager.log, and DataTransferService.log files for errors. To learn about how updates are downloaded, see the following article:
-
-    [Using log files to track the software update deployment process in Configuration Manager](track-software-update-deployment-process.md)
+1. When updates don't get downloaded to the client, first check the CAS.log, ContentTransferManager.log, and DataTransferService.log files for errors. To learn about how updates are downloaded, see [Track the software update deployment process in Configuration Manager](track-software-update-deployment-process.md)
 
 2. Verify that the client is in the appropriate boundary associated with the boundary group for the distribution point. For more information about boundary groups, see [Configuring boundaries and boundary groups in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh427326(v=technet.10)?redirectedfrom=MSDN).
 
@@ -34,14 +32,12 @@ When software update deployment fails, the problem generally falls into one of t
 
 4. If the client receives the download location but fails to download content, try to download the content manually by accessing the URL for the content. You can find the URL by reviewing DataTransferServices.log.
 
-5. Check to see whether the scan failed during the deployment evaluation. Also review WUAHandler.log and WindowsUpdate.log to find the errors received during update installation. For more information about the scan, evaluation, and installation processes, see [Troubleshoot software update scan failures in Configuration Manager](troubleshoot-software-update-scan-failures.md).
-
-6. To rule out an installation issue with the update itself, try to manually install the update or install it from Microsoft Update (if possible) to see whether the update installation is successful.
-
-   > [!NOTE]
-   > Most .NET Framework update failures are caused by corrupted .NET Framework installations. In these cases, try to manually install the update. If the installation process fails, see [Fix Windows Update errors](https://support.microsoft.com/help/10164/fix-windows-update-errors).
-
 ## Installation, supersedence, or detection issues with specific updates
+
+1. Check to see whether the scan failed during the deployment evaluation. For more information about scan failures, see [Troubleshoot software update scan failures in Configuration Manager](troubleshoot-software-update-scan-failures.md).
+2. Review WUAHandler.log and WindowsUpdate.log to find the errors received during update installation.
+3. To rule out an installation issue with the update itself, try to manually install the update or install it from Microsoft Update (if possible) to see whether the update installation is successful.
+4. Most .NET Framework update failures are caused by corrupted .NET Framework installations. In these cases, try to manually install the update. If the installation process fails, see [Fix Windows Update errors](https://support.microsoft.com/help/10164/fix-windows-update-errors).
 
 For more information, see [Installation, supersedence, or detection issues with specific updates](troubleshoot-software-update-management.md#installation-supersedence-or-detection-issues-with-specific-updates).
 
