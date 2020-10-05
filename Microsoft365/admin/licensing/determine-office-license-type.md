@@ -161,6 +161,8 @@ The license type will be listed below the Product ID.
 
 ## More information
 
+For more information, see [Find details for other versions of Office](https://support.microsoft.com/office/find-details-for-other-versions-of-office-8e83dd74-3b83-4528-bda6-6ff6118f8293). 
+
 To get support for your Microsoft product, you can go to the [Office product page](https://www.office.com/?auth=1), and log in to your My [Account panel](https://account.microsoft.com/services/). Within the panel, you can find your product details, support options, and information about any subscriptions that you have.
 
 ---
