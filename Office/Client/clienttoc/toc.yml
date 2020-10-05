@@ -173,6 +173,8 @@
       href: ../access/create-a-running-totals-query.md
     - name: How to loop through references to view properties
       href: ../access/how-to-loop-through-references-view-properties.md
+    - name: How to parse City, State, Zip to separate values
+      href: ../access/how-to-parse-city-state-zip-to-separate-values.md
     - name: ID is increment when adding a new field
       href: ../access/id-field-increment-by-one.md
     - name: Incorrect FirstDay property value

@@ -32,7 +32,8 @@ The configuration requirements vary, depending on the Outlook version. The follo
 | Outlook 2013| Yes| Yes| Yes| Yes  |
 | Outlook 2010| No| Not available| Not available| Not available  |
 
-**Important** Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756)in case problems occur.
+> [!IMPORTANT]
+> Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756)in case problems occur.
 
 ### Outlook 2010
 

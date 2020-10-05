@@ -44,7 +44,8 @@ Set-CsClientPolicy –Identity Global –PolicyEntry @{Add=$a}
 ```powershell
 $a = New-CsClientPolicyEntry –Name "EnableContextualMessages" –Value $Falsenew-CsCLientPolicy -Identity NoContextualMessages
 
-Set-CsClientPolicy –Identity NoContextualMessages–PolicyEntry @{Add=$a}Grant-CsClientPolicy -Identity userX
+Set-CsClientPolicy –Identity NoContextualMessages–PolicyEntry @{Add=$a}
+Grant-CsClientPolicy -Identity userX
 ```
 
 Users must sign out and back in to the Skype for Business client for the change to take effect.
