@@ -7,11 +7,11 @@ ms.author: alexmuk
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.prod: windows-client-threshold
 ms.localizationpriority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Servicing
-ms.technology: Deployment
+ms.technology: Performance
 ---
 
 # Push-button reset fails because language resources are missing
