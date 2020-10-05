@@ -1,5 +1,5 @@
 ---
-title: Push-button reset fails because language resources are missing.
+title: Push-button reset fails because language resources are missing
 description: Fixes an issue in which Push-button reset fails because language resources are missing.
 ms.data: 09/21/2020
 author: v-miegge
@@ -7,13 +7,18 @@ ms.author: alexmuk
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client-threshold
+ms.prod: windows-client
 ms.localizationpriority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Servicing
+ms.technology: Performance
 ---
 
 # Push-button reset fails because language resources are missing
+
+This article describes an issue in which push-button reset fails because language resources are missing, and provides a workaround for the issue.
+
+_Original product version:_ &nbsp; Windows 10 Education, version 2004
 
 ## Symptoms
 
