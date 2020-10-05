@@ -45,7 +45,7 @@ This article helps you to determine the licensing type of your Microsoft Office 
 
 ## License types
 
-### Windows-based devices
+## [License types](#tab/windows)
 
 To determine whether you have a retail edition or a volume license edition, use one of the following methods, depending on which version of Microsoft Office product you have installed.
 
@@ -137,7 +137,7 @@ This method requires that you have access to the DVD or ISO file that was used t
 
 4.	In this example, the license channel is reflected as **RETAIL** or **VOLUME**.
 
-### Mac-based devices
+## [Mac-based devices](#tab/mac)
 
 #### Volume licenses
 
@@ -162,5 +162,7 @@ The license type will be listed below the Product ID.
 ## More information
 
 To get support for your Microsoft product, you can go to the [Office product page](https://www.office.com/?auth=1), and log in to your My [Account panel](https://account.microsoft.com/services/). Within the panel, you can find your product details, support options, and information about any subscriptions that you have.
+
+---
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
