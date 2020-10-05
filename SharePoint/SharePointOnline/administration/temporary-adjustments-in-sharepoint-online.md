@@ -6,7 +6,7 @@ manager: dcscontentpm
 ms.date: 2/5/2019
 audience: Admin
 ms.topic: article
-ms.prod: microsoft-SharePoint 
+ms.prod: sharepoint-server-itpro
 localization_priority: Normal
 search.appverid:
 - SPO160
