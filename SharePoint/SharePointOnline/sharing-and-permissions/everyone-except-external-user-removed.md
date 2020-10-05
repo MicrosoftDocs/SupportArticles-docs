@@ -20,13 +20,13 @@ appliesto:
 
 ## Symptoms
 
-You notice that the "Everyone except external users" group is removed on a Microsoft Office 365 private group website.
+You notice that the "Everyone except external users" group is removed on a Microsoft Office 365 private group website after it is converted from a public group. 
 
 ## Cause
 
 This behavior is by design.
 
-By default, the "Everyone except external users" claim is added to the Members and Visitors groups on public group sites. If this claim is added to either the Members or Visitors group on a private group site, it may be removed at any time by a managed service account.
+By default, the "Everyone except external users" claim is added to the Members and Visitors groups on public group sites. It will be removed if the group is changed to Private at the time of conversion. 
 
 ## Workaround
 
