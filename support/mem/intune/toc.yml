@@ -24,6 +24,8 @@
     href: application-could-not-be-wrapped.md
   - name: Data associated with an app is removed
     href: removed-data-associated-with-app-error.md
+  - name: Deploy OMA-URIs to target a CSP through Intune
+    href: deploy-oma-uris-to-target-csp-via-intune.md
   - name: Deploy Windows update packages as Win32 apps
     href: deploy-windows-update-packages-as-win32-apps.md
   - name: Error when you open a web app on iOS 
