@@ -11,7 +11,6 @@ ms.date: 3/4/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
-ms.technology:
 
 # optional metadata
 
