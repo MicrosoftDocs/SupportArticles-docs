@@ -27,7 +27,7 @@
 - name: Application Management
   items:
   - name: Support tip - Devices enrolled in Intune App Management are prompted to enroll into Intune
-    href: device-enroll-intune-app-management-error.md
+    href: ./device-enroll-intune-app-management-error.md
   - name: .NET Framework installation
     items:
     - name: .NET Framework 3.5 installation errors
