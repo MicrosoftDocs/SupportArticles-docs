@@ -76,7 +76,13 @@ To disconnect the clients, use one of the following methods.
 
 After the clients are disconnected from the WSUS server, you can run the [PowerShell script](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/69/06/Decline-SupersededUpdatesWithExclusionPeriod.ps1.txt) by using the `-skipdecline` (and `-exclusion` period, if necessary) parameters to determine the total number of superseded updates that can be declined. Then, run the script again by using `-skipdecline` to actually decline the updates.
 
-In extreme cases in which the PowerShell script can't run because of timeouts, you can add the supersedence column to the WSUS console when all updates are displayed, and then decline the updates manually. See [Cleaning up WSUS from the WSUS console](software-update-maintenance.md#cleaning-up-wsus-from-the-wsus-console).
+In extreme cases in which the PowerShell script can't run because of timeouts, you can add the supersedence column to the WSUS console when all updates are displayed, and then decline the updates manually by following these steps:
+
+1. Open the Windows Update Services Microsoft Management Console (MMC).
+2. Select the All Updates view. To do it, set the display to show the **Approval** status of **Any except Declined** with a status of **Any**, and then click **Refresh**.
+3. Right-click the column headers, and then select **Supersedence**.
+4. Left-click the **Supersedence** column to sort by supersedence.
+5. Select and decline the superseded updates.
 
 The performance issue can normally be resolved after the valid update is reduced to fewer than 7,000 connections (but fewer than 5,000 is preferred). You might have to restrict connections to the WSUS administration website for a few days to let the clients complete all scans. We also recommend that you reindex the database after you decline superseded updates. If you're using Configuration Manager, also perform a sync between WSUS and Configuration Manager while the clients are not connecting.  
 

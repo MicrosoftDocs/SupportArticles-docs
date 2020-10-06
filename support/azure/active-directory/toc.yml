@@ -105,7 +105,7 @@
     href: pwd-not-sync.md
   - name: Password sync fails with event ID 611 
     href: pwd-hash-sync-stops-work.md
-  - name: ProxyAddresses attribute populating
+  - name: ProxyAddresses attribute in Azure AD
     href: proxyaddresses-attribute-populate.md
   - name: Scripts cannot be loaded
     href: cannot-run-scripts-powershell.md

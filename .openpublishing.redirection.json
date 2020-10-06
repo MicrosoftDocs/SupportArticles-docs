@@ -81,6 +81,16 @@
       "redirect_document_id": false
     },
     {
+        "source_path": "support/azure/devops/index.md",
+        "redirect_url": "/support/azure/devops/welcome-azure-devops",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "support/azure/site-recovery/index.md",
+        "redirect_url": "/support/azure/site-recovery/welcome-site-recovery",
+        "redirect_document_id": false
+      },
+    {
       "source_path": "support/azure/cloud-services/index.md",
       "redirect_url": "/support/azure/cloud-services/welcome-cloud-services",
       "redirect_document_id": false
@@ -90,6 +100,11 @@
       "redirect_url": "/support/azure/virtual-machines/welcome-virtual-machines.md",
       "redirect_document_id": false
     },
+    {
+        "source_path": "support/azure/general/index.md",
+        "redirect_url": "/support/azure/virtual-machines/welcome-general.md",
+        "redirect_document_id": false
+      },
     {
       "source_path": "support/sql/end-support-sql-server-2008.md",
       "redirect_url": "https://support.microsoft.com/help/4456242",
@@ -120,6 +135,31 @@
       "redirect_url": "/support/azure/active-directory/welcome-azure-ad",
       "redirect_document_id": false
     },
+    {
+        "source_path": "support/azure/general/backup-service-mars-agent-versions-not-match.md",
+        "redirect_url": "/support/azure/site-recovery/backup-service-mars-agent-versions-not-match",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "support/azure/general/upgrade-mars-agent.md",
+        "redirect_url": "/support/azure/site-recovery/upgrade-mars-agent",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "support/azure/general/asr-agent-disable-tls-pci-compliance.md",
+        "redirect_url": "/support/azure/site-recovery/asr-agent-disable-tls-pci-compliance",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "support/azure/general/mars-agent-system-state-backup-failure.md",
+        "redirect_url": "/support/azure/site-recovery/mars-agent-system-state-backup-failure",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "support/azure/general/unsupported-features-and-platforms-post-upgrade.md",
+        "redirect_url": "/support/azure/site-recovery/unsupported-features-and-platforms-post-upgrade",
+        "redirect_document_id": false
+      },
     {
       "source_path": "support/azure/active-directory/unable-connect-sync-service-miisclient.md",
       "redirect_url": "/support/azure/active-directory/welcome-azure-ad",

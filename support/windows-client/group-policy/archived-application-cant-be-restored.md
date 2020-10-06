@@ -1,0 +1,46 @@
+---
+title: Archived application can't be restored
+description: Group Policy settings may block automatic application updates. Blocked on-demand applications must be updated by other means before they can be used.
+ms.date: 09/25/2020
+author: Deland-Han 
+ms.author: delhan
+manager: dscontentpm
+audience: itpro
+ms.topic: troubleshooting
+ms.prod: windows-client
+localization_priority: medium
+ms.reviewer: kaushika, erwong
+ms.prod-support-area-path: AppLocker or software restriction policies
+ms.technology: GroupPolicy
+---
+# Archived application can't be restored because of app update policies
+
+This article provides a solution to an issue that archived application can't be restored because of app update policies.
+
+_Original product version:_ &nbsp; Windows 10 - all editions  
+_Original KB number:_ &nbsp; 4571552
+
+## Summary
+
+To reduce disk space usage, Windows automatically archives applications that you don't use frequently. On a new Windows device, some applications are archived out-of-the-box. The first time you start an archived application, the application has to be restored. To do it, it connects to the internet to download and install the full version.
+
+In some environments, Group Policy Objects (GPOs) may block applications from automatically downloading in this manner. When you start such a blocked application, you receive a message that resembles the following.
+
+:::image type="content" source="./media/archived-application-cant-be-restored/gpo-preventing-app-updating.png" alt-text="Message that indicates that a GPO is preventing an app from updating.":::
+
+![Message that indicates that a GPO is preventing an app from updating](/media/4574722_en_3.png)
+
+In these cases, you have to contact your system administrator to obtain an updated version of the application. The information in this article helps you to do this.
+
+## More information
+
+The following GPOs prevent archived applications from restoring full versions:
+
+- [UpdateServiceUrl](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-updateserviceurl)
+- [AllowUpdateService](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowupdateservice)
+
+If either or both of these GPOs are enabled in your environment, your system administrator can use one of the following methods to push the full version of the application to the device:
+
+- If your organization uses [Microsoft Store for Business](https://businessstore.microsoft.com/store)  to manage applications, the system administrator can push the application to the business store.
+- If your organization uses [Microsoft Intune](https://docs.microsoft.com/mem/intune/apps/apps-add) to manage devices, the system administrator can package the application and push the package to managed devices.
+- If your organization uses custom Windows images to provision devices, the system administrator can use the [DISM App Package](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-app-package--appx-or-appxbundle--servicing-command-line-options) tool to add the full resource packages for the application to the image. By using **dism /StubPackageOption:installfull**, the system administrator can make sure that the device is provisioned by using the full version of the application instead of the archived version.

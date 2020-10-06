@@ -60,17 +60,17 @@ For proxy issues, WindowsUpdate.log may report errors that resemble the followin
 
 > 0x8024402C - The proxy server or target server name cannot be resolved
 
-In most cases, you can bypass the proxy for local addresses because as the WSUS computer is located within the intranet anyway. However, if the client is connected to the Internet, you must make sure that the proxy server is configured to enable that communication.
+In most cases, you can bypass the proxy for local addresses because the WSUS computer is located within the intranet. However, if the client is connected to the Internet, you must make sure that the proxy server is configured to enable that communication.
 
-To view WinHTTP proxy settings, run one of the following commands, depending on your operating system:
+To view WinHTTP proxy settings, run one of the following commands:
 
-- Windows XP: `proxycfg.exe`
-- Windows Vista and later versions: `netsh winhttp show proxy`
+- On Windows XP: `proxycfg.exe`
+- On Windows Vista and later versions: `netsh winhttp show proxy`
 
-Because proxy settings that are configured in Internet Explorer are part of the WinINET proxy settings, WinHTTP proxy settings aren't necessarily the same as the proxy settings that are configured in Internet Explorer. However, if the proxy settings are set correctly in Internet Explorer, you can import the proxy configuration from Internet Explorer. To import proxy configuration from Internet Explorer, run the following commands, depending on your operating system:
+Because proxy settings that are configured in Internet Explorer are part of the WinINET proxy settings, WinHTTP proxy settings aren't necessarily the same as the proxy settings that are configured in Internet Explorer. However, if the proxy settings are set correctly in Internet Explorer, you can import the proxy configuration from Internet Explorer. To import proxy configuration from Internet Explorer, run one of the following commands:
 
-- Windows XP: `proxycfg.exe -u`
-- Windows Vista and later versions: `netsh winhttp import proxy source =ie`
+- On Windows XP: `proxycfg.exe -u`
+- On Windows Vista and later versions: `netsh winhttp import proxy source =ie`
 
 For more information, see [How the Windows Update client determines which proxy server to use to connect to the Windows Update website](https://support.microsoft.com/help/900935).
 
@@ -84,14 +84,14 @@ First, find the URL of the WSUS computer by checking the following registry key:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate`
 
-Try to access the URL to verify connectivity between the client and the WSUS computer. For example, the URL you use should resemble the following:  
-<`http://SUPSERVER.CONTOSO.COM:8530/Selfupdate/wuident.cab`>
+Try to access the URL to verify connectivity between the client and the WSUS computer. For example, the URL you use should resemble the following URL:  
+`http://SUPSERVER.CONTOSO.COM:8530/Selfupdate/wuident.cab`
 
-Then check whether the client can access the ClientWebService virtual directory. The URL for this should resemble the following:  
-<`http://SUPSERVER.CONTOSO.COM:8530/ClientWebService/wusserverversion.xml`>
+Then check whether the client can access the `ClientWebService` virtual directory. The URL should resemble the following URL:  
+`http://SUPSERVER.CONTOSO.COM:8530/ClientWebService/wusserverversion.xml`
 
-Finally, check whether the client can access the SimpleAuthWebService virtual directory. The URL for this should resemble the following:  
-<`http://SUPSERVER.CONTOSO.COM:8530/SimpleAuthWebService/SimpleAuth.asmx`>
+Finally, check whether the client can access the `SimpleAuthWebService` virtual directory. The URL should resemble the following URL:
+`http://SUPSERVER.CONTOSO.COM:8530/SimpleAuthWebService/SimpleAuth.asmx`
 
 If these tests are successful, review the IIS logs on the WSUS computer to confirm that the HTTP errors are being returned from WSUS. If the WSUS computer is not returning the error, the issue is probably with an intermediate firewall or proxy.
 
@@ -127,7 +127,7 @@ Port settings are configured when the software update point site system role is 
 
 #### Verify and configure ports for the software update point
 
-1. On the Configuration Manager console, browse to **Administration** > **Site Configuration** > **Servers and Site System Roles**, and then click **\<SiteSystemName>** in the right pane.
+1. In the Configuration Manager console, go to **Administration** > **Site Configuration** > **Servers and Site System Roles**, and then click **\<SiteSystemName>** in the right pane.
 2. In the bottom pane, right-click **Software Update Point** and then click **Properties**.
 3. On the **General** tab, specify or verify the WSUS configuration port numbers.
 
@@ -147,26 +147,28 @@ This error suggests that firewall rules must be configured to enable communicati
 
 Error 0x80072f0c translates to **A certificate is required to complete client authentication**. This error should occur only if the WSUS computer is configured to use SSL. As part of the SSL configuration, WSUS virtual directories must be configured to use SSL, and they must be set to ignore client certificates. If the WSUS website or any of the virtual directories that were mentioned previously are configured incorrectly to **Accept** or **Require** client certificates, you receive this error.
 
+### Check SSL configuration
+
 When the site is configured in **HTTPS only** mode, the software update point is automatically configured to use SSL. When the site is in **HTTPS or HTTP** mode, you can choose whether to configure the software update point to use SSL. When the software update point is configured to use SSL, the WSUS computer must also be explicitly configured to use SSL. Before you configure SSL, you should review the [certificate requirements](/previous-versions/system-center/system-center-2012-R2/gg699362(v=technet.10)) and make sure that a server authentication certificate is installed on the software update point server.
 
-### Verify that the software update point is configured for SSL
+#### Verify that the software update point is configured for SSL
 
-1. On the Configuration Manager console, browse to **Administration** > **Site Configuration** > **Servers and Site System Roles**, and then click **\<SiteSystemName>** in the right pane.
+1. On the Configuration Manager console, go to **Administration** > **Site Configuration** > **Servers and Site System Roles**, and then click **\<SiteSystemName>** in the right pane.
 2. In the bottom pane, right-click **Software Update Point**, and then click **Properties**.
-3. On the **General** tab, click **Require SSL communication to the WSUS Server**.
+3. On the **General** tab, verify that the **Require SSL communication to the WSUS Server** option is enabled.
 
-### Verify that the WSUS computer is configured for SSL
+#### Verify that the WSUS computer is configured for SSL
 
 1. Open the WSUS console on the software update point for the site.
 2. In the console tree pane, click **Options**.
 3. In the display pane, click **Update Source and Proxy Server**.
 4. Verify that the **Use SSL when synchronizing update information** option is selected.
 
-### Add the server authentication certificate to the WSUS administration website
+#### Add the server authentication certificate to the WSUS Administration website
 
 1. On the WSUS computer, start Internet Information Services (IIS) Manager.
-2. Expand **Sites**, right-click **Default Web Site** or the WSUS administration website if WSUS is configured to use a custom website, and then select **Edit Bindings**.
-3. Click the HTTPS entry, and then click **Edit**.
+2. Expand **Sites**, right-click **Default Web Site** or the WSUS Administration website if WSUS is configured to use a custom website, and then select **Edit Bindings**.
+3. Click the **HTTPS** entry, and then click **Edit**.
 4. In the **Edit Site Binding** dialog box, select the server authentication certificate, and then click **OK**.
 5. In the **Edit Site Binding** dialog box, click **OK**, and then click **Close**.
 6. Exit IIS Manager.
@@ -174,7 +176,7 @@ When the site is configured in **HTTPS only** mode, the software update point is
 > [!IMPORTANT]
 > Make sure that the FQDN that is specified in the Site System properties matches the FQDN that is specified in the certificate. If the software update point accepts connections from the intranet only, the **Subject Name** or **Subject Alternative Name** must contain the intranet FQDN. When the software update point accepts client connections from the Internet only, the certificate must still contain both the Internet FQDN and the intranet FQDN, because WCM and WSyncMgr still use the intranet FQDN to connect to the software update point. If the software update point accepts connections from both the Internet and the intranet, both the Internet FQDN and the intranet FQDN must be specified by using the ampersand (&) symbol delimiter between the two names.
 
-### Verify that SSL is configured on the WSUS computer
+#### Verify that SSL is configured on the WSUS computer
 
 For more information, see [Configure SSL on the WSUS server](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#configure-ssl-on-the-wsus-server).
 
@@ -185,11 +187,11 @@ For more information, see [Configure SSL on the WSUS server](/windows-server/adm
 
 The Software Updates feature automatically configures a local Group Policy setting for the Configuration Manager client so that it is configured to use the software update point source location and port number. Both the server name and the port number are required for the client to find the software update point.
 
-However, if an Active Directory Group Policy setting is applied to computers for software update point client installation, this overrides the local Group Policy setting. Unless the value of the setting that's defined in Group Policy is identical to the one that's being set by Configuration Manager (server name and port), the Configuration Manager software update scan will fail on the client. In this case, the WUAHandler.log file shows the following:
+However, if an Active Directory Group Policy setting is applied to computers for software update point client installation, it overrides the local Group Policy setting. Unless the value of the setting that's defined in Group Policy is identical to the one that's being set by Configuration Manager (server name and port), the Configuration Manager software update scan will fail on the client. In this case, the WUAHandler.log file shows the following entry:
 
-> Group policy settings were overwritten by a higher authority (Domain Controller) to: Server <`http://server`> and Policy ENABLED
+> Group policy settings were overwritten by a higher authority (Domain Controller) to: Server `http://server` and Policy ENABLED
 
-To fix this issue, the software update point for client installation and software updates must be the same server, and it must be specified in the Active Directory Group Policy setting by using the correct name format and port information. For example, if the software update point was using the default website, the software update point would be *<`http://server1.contoso.com:80`>*.
+To fix this issue, the software update point for client installation and software updates must be the same server, and it must be specified in the Active Directory Group Policy setting by using the correct name format and port information. For example, if the software update point was using the default website, the software update point would be *`http://server1.contoso.com:80`*.
 
 ## Clients can't find the WSUS server location
 
@@ -208,3 +210,7 @@ To fix this issue, the software update point for client installation and softwar
    - Clients can't find the [WSUS server location](track-software-update-compliance-assessment.md#wsus-server-location)
 4. Verify that there are no communication errors in the CcmMessaging.log file on the client.
 5. If the scan is successful, the client should send state messages to the management point to indicate the update status. To understand how state messages processing works, see [state message processing flow](track-software-update-compliance-assessment.md#state-message-processing-flow).
+
+## Other issues
+
+For more information, see [Troubleshoot client software update scanning](troubleshoot-software-update-management.md#troubleshoot-issues-in-step-1).
