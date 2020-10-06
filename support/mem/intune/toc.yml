@@ -63,7 +63,7 @@
   - name: 2016341112 -iOS device is currently busy
     href: 2016341112-ios-device-is-currently-busy.md
   - name: Configure Android enterprise devices for Intune
-    href: ../configure-android-enterprise-devices-intune.md
+    href: configure-android-enterprise-devices-intune.md
   - name: Connectivity issues due to root certificates
     href: fix-connectivity-issues.md
   - name: Device configuration profile error 2016281112
