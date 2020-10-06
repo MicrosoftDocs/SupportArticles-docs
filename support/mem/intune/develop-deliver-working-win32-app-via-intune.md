@@ -31,11 +31,11 @@ Deploying the Win32 app from Intune has the following advantages:
 - You can use detection logic to make sure that an app will be downloaded to the device and installed only if it's not detected as per a set rule.
 - You can create rules to require that the app is applicable to, downloaded to, or installed in the device only if it meets a specific criterion.
 - From the Intune user interface, you don't natively have the ability to deploy a single update to a Windows 10 device. If you have a critical update that has to be deployed to devices, you can use the Win32 app deployment approach.
-- You can set dependencies for a Win32 app. This enables you to determine either the sequence in which the app would be installed or the priority of the apps.
+- You can set dependencies for a Win32 app. This setting enables you to determine either the sequence in which the app would be installed or the priority of the apps.
 
 ## The flow behind deployment of a Win32 application from Intune
 
-The following is the architectural flow that occurs behind the deployment of a Win32 app through Intune.
+The following diagram is the architectural flow that occurs behind the deployment of a Win32 app through Intune.
 
 ![The deployment of a Win32 app via Intune](media/develop-deliver-working-win32-app-via-intune/intune-develop-deliver-win32-architecture-flow.png)
 
@@ -43,7 +43,7 @@ The following is the architectural flow that occurs behind the deployment of a W
 
 - The Win32 Content Prep tool can be found at [Microsoft Win32 Content Prep Tool](https://github.com/Microsoft/Microsoft-Win32-Content-Prep-Tool).
 
-- First, install the Win32 file manually on a device without using Intune. This is to make sure that the application supports silent installation, that the installation commands are correct, and that you're sure of the installation folder (which can be used in detection logic).
+- First, install the Win32 file manually on a device without using Intune. This installation method is to make sure that the application supports silent installation, that the installation commands are correct, and that you're sure of the installation folder (which can be used in detection logic).
 
 ## The flow behind delivery of a Win32 app to the client
 
@@ -69,12 +69,12 @@ Here is the lifecycle of a Win32 app at the client’s end.
 
 > [!NOTE]
 >
-> - The processing of a Win32 app from Intune to the device can be broken down into a sequence of steps.
+> - The processing of a Win32 app from Intune to the device can be listed into a sequence of steps.
 > - As discussed in the next section, the logging by the IME for each of these steps is very verbose.
 
 ## Logs
 
-The following is the location for the log file of Intune Management Extension:
+Here is the location of the log file of Intune Management Extension:
 
 ![The location for the log file of Intune Management Extension](media/develop-deliver-working-win32-app-via-intune/intune-develop-deliver-intune-log-file.png)
 
@@ -82,7 +82,7 @@ This location mainly contains the following log files that track the described i
 
 - **AgentExecutor.log**: This logfile tracks PowerShell script executions (deployed by Intune).
 - **ClientHealth.log**: This logfile tracks the sidecar agent-client health activities.
-- **IntuneManagementExtension.log**: This is the IME log that tracks all the flow that is illustrated in the following steps.
+- **IntuneManagementExtension.log**: The IME log that tracks all the flow that is illustrated in the following steps.
 
 ## Detailed flow in IME Logs
 
@@ -94,7 +94,7 @@ Here is the detailed flow behind the processing of a Win32 app at the device end
 |2|S Mode is checked.| |
 |3|Content manager starts.| |
 |4|Deviceid and OS version is noted.| |
-|5|IME discovers the endpoint of Intune (CDNs)|These need to be whitelisted in the firewall (if blocked) as stated in the network pre-requisites listed earlier.|
+|5|IME discovers the endpoint of Intune (CDNs)|Whitelist these items in the firewall (if blocked) as stated in the network pre-requisites listed earlier.|
 |6|Impersonation for the user occurs, and token is requested or granted.| |
 |7|PUT request is sent.| |
 |8|You see a **Get Policies** response that contains the entire policy body (as configured by the admin in the portal).|You can check to make sure that the policy that is received by IME is in accordance with the configured policy.|
@@ -108,17 +108,17 @@ Here is the detailed flow behind the processing of a Win32 app at the device end
 |16|Download job finishes, time taken is noted, bytes download is noted, job is closed.| |
 |17|Verification of encrypted hash, decryption starts.| |
 |18|Unzipping starts from **Content\Staging** to `C:\Windows\IMECache\59f9a567-b92d-4dc2-9c7a-fdb94e29275c_1`.| |
-|19|Clean up staging content.| |
+|19|Organize staging content.| |
 |20|Installer execution starts.| |
 |21|Prepare .msi cmdline for system context.| |
 |22|`msiexec /i "7zip.msi" /q /qn ALLUSERS=1 REBOOT=ReallySuppress /norestart`|Command is specified by the admin for the app in the portal.|
 |23|Installation finishes, results collected.|
 |24|lpExitCode 0, determines whether it's a success.|
-|25|DeviceRestartBehavior: 2, (checks , device restart behavior), handle is closed.|Device restart action as stated in the policy that is defined by the admin in the portal.|
+|25|DeviceRestartBehavior: 2 (checks , device restart behavior) handle is closed.|Device restart action as stated in the policy that is defined by the admin in the portal.|
 |26|The detection rule starts by SideCarFileDetectionManager|The detection rule evaluated in **Step 11** is evaluated again after the app installation.|
 |27|Checked under path: `C:\Temp`, file Path: `C:\Temp\7zip`, agent was checking under expanded: `C:\Temp\7zip`, applicationDetected: True.| |
 |28|Set `ComplianceStateMessage` and application detected after execution.| |
-|29|EnforcementStateMessage -- determines the output after the detection process, toast message of the installation status is sent again.|User can see an intuitive notice in the device that indicates that the app installed successfully or failed (as applicable).|
-|30|Clean up staged content.`C:\Windows\IMECache\59f9a567-b92d-4dc2-9c7a-fdb94e29275c_1`.| |
+|29|EnforcementStateMessage: determines the output after the detection process, toast message of the installation status is sent again.|User can see an intuitive notice in the device that indicates that the app installed successfully or failed (as applicable).|
+|30|Organize staged content.`C:\Windows\IMECache\59f9a567-b92d-4dc2-9c7a-fdb94e29275c_1`.| |
 |31|Start reporting app results.| |
 |32|Send results to service.|The Intune admin can view the status of App deployment for the device in the Intune portal.|
