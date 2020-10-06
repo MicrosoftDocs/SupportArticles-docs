@@ -67,7 +67,7 @@ There are two options for corporate-owned devices, and each of them serves a uni
 - **Fully managed devices** (formerly known as COBO, or Corporate Owned Business Only). 
 
    > [!NOTE]
-   > For more information about Fully Managed devices, see [Set up Intune enrollment of Android Enterprise fully managed devices](../enrollment/android-fully-managed-enroll.md).
+   > For more information about Fully Managed devices, see [Set up Intune enrollment of Android Enterprise fully managed devices](https://docs.microsoft.com/mem/intune/enrollment/android-fully-managed-enroll).
 
    Fully Managed devices fit into a more user-centric scenario where in which is a single user who is associated with the device while the admin still retains full control over the device (as opposed to a work-profile scenario, in which multiple users have control).
 
@@ -129,7 +129,7 @@ The first step to configure Android enterprise in your environment is to connect
 
     :::image type="content" source="media/configure-android/configure-android-enterprise-devices-in-intune-4.png" alt-text="Select Complete Registration.":::
 
-For more information, see [Connect your Intune account to your Managed Google Play account](../enrollment/connect-intune-android-enterprise.md).
+For more information, see [Connect your Intune account to your Managed Google Play account](https://docs.microsoft.com/mem/intune/enrollment/connect-intune-android-enterprise).
 
 ## Deploy applications
 
