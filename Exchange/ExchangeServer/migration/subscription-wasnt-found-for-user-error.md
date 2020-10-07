@@ -30,7 +30,7 @@ When you try to migrate a public folder batch, the batch enters into a failed or
 
 :::image type="content" source="media/subscription-wasnt-found-for-user-error/subscription-wasnt-found-for-user-error-1.png" alt-text="A subscription wasn't found for this user error message.":::
 
-Additionally, you may see the following error message on the migration user:
+Additionally, you may see the following error message when you select the migration user object in the EAC:
 
 > Couldn't find a request that matches the information provided. Reason: No such request exists in the specified index.
 
