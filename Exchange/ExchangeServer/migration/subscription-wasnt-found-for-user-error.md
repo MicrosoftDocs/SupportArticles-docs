@@ -12,6 +12,8 @@ search.appverid:
 - SPO160
 - MET150
 appliesto:
+- Exchange Server Online
+- Exchange Server 2019
 - Exchange Server 2016
 ms.custom: 
 - CI 123889
@@ -24,13 +26,13 @@ description: Describes the resolution to the Exchange error "A subscription wasn
 
 ## Symptoms
 
-When you migrate a public folder from Exchange Server to Exchange Online, the migration batch, one or more users enter into a failed or “SyncedWithError” state. When you select the migration user in the Exchange admin center (EAC), you see the following warning message:
+When you migrate public folders from Exchange Server to Exchange Online, the migration status displays "Failed" or “SyncedWithError”. Also, one or more migration users display "Failed" as their status. When you select the migration user in the Exchange admin center (EAC), you see the following warning message:
 
 > The subscription for the migration user MLPF3 couldn’t be loaded. The following error was encountered: A subscription wasn’t found for this user.
 
 :::image type="content" source="media/subscription-wasnt-found-for-user-error/subscription-wasnt-found-for-user-error-1.png" alt-text="A subscription wasn't found for this user error message.":::
 
-Additionally, you may see the following error message when you select the migration user object in the EAC:
+You may also see another error message:
 
 > Couldn't find a request that matches the information provided. Reason: No such request exists in the specified index.
 
@@ -46,9 +48,7 @@ The issue can occur if the public folder mailbox migration request that is assoc
     > [!note]
     > Terminating the migration batch may take some time to finish.
 2.	Make sure that the migration batch has reached the “Stopped” state.
-3.	Restart the migration batch.
-
-The process will re-create the missing public folder migration request.
+3.	Restart the migration batch. This will re-create the missing public folder migration request.
 
 :::image type="content" source="media/subscription-wasnt-found-for-user-error/subscription-wasnt-found-for-user-error-3.jpg" alt-text="Get-MigrationUser screen.":::
 
