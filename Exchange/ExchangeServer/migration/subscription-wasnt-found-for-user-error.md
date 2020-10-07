@@ -1,5 +1,5 @@
 ---
-title: Error (A subscription wasn’t found for this user) when migrating a public folder batch in Exchange
+title: Error (A subscription wasn’t found for this user) when migrating a public folder batch in Exchange Server 2016
 ms.author: v-todmc
 author: mccoybot
 manager: dcscontentpm
@@ -12,7 +12,7 @@ search.appverid:
 - SPO160
 - MET150
 appliesto:
-- Exchange
+- Exchange Server 2016
 ms.custom: 
 - CI 123889
 - CSSTroubleshoot 
@@ -20,11 +20,11 @@ ms.reviewer: batre
 description: Describes the resolution to the Exchange error "A subscription wasn't found for this user" when trying to migrate a public batch folder.
 ---
 
-# Exchange error (A subscription wasn’t found for this user) when migrating a public folder batch
+# Error (A subscription wasn’t found for this user) when migrating a public folder batch
 
 ## Symptoms
 
-When you try to migrate a public folder batch, the batch enters into a failed or “SyncedWithError” state. When you select the migration user in the Exchange admin center (EAC), you see the following warning message:
+When you migrate a public folder from Exchange Server to Exchange Online, the migration batch, one or more users enter into a failed or “SyncedWithError” state. When you select the migration user in the Exchange admin center (EAC), you see the following warning message:
 
 > The subscription for the migration user MLPF3 couldn’t be loaded. The following error was encountered: A subscription wasn’t found for this user.
 
@@ -53,7 +53,3 @@ The process will re-create the missing public folder migration request.
 :::image type="content" source="media/subscription-wasnt-found-for-user-error/subscription-wasnt-found-for-user-error-3.jpg" alt-text="Get-MigrationUser screen.":::
 
 :::image type="content" source="media/subscription-wasnt-found-for-user-error/subscription-wasnt-found-for-user-error-4.jpg" alt-text="Get-PublicFolderMailboxMigrationRequest screen.":::
-
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
