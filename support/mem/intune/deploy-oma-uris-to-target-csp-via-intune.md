@@ -13,6 +13,10 @@ ms.custom:
 
 # Support tip - Deploy OMA-URIs to target a CSP through Intune, and a comparison to on-premises
 
+This article describes the significance of CSPs, Open Mobile Alliance – Uniform Resources (OMA-URIs), and how custom MDM policies are delivered to a Windows 10-based device.
+
+_Original product version:_ &nbsp; Microsoft Intune  
+
 ## Introduction
 
 By using Microsoft Intune, you can provide a modern device experience to users, and you can better support their digital migration by focusing on an internet-first device connection. Policy-based configuration is the primary method for ensuring that devices have the appropriate settings, and that the policies that are deployed through Intune can be broadly categorized as either a mobile device management (MDM) policy (device management) or mobile app management MAM policy (app protection).
