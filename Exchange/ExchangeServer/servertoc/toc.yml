@@ -487,6 +487,8 @@
       href: ../migration/new-move-request-remains-queued-status.md
     - name: Public folder replication fails
       href: ../migration/public-folders-not-replicate.md
+    - name: "Subscription wasn’t found for this user error when migrating public folder batch
+      href: ../migration/subscription-wasnt-found-for-user-error.md
   - name: Public Folders
     items:
     - name: How to disable conflict message
