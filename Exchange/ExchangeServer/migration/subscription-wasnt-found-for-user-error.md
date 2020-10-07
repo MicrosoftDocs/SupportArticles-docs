@@ -50,6 +50,6 @@ The issue can occur if the public folder mailbox migration request that is assoc
 2.	Make sure that the migration batch has reached the “Stopped” state.
 3.	Restart the migration batch. This will re-create the missing public folder migration request.
 
-:::image type="content" source="media/subscription-wasnt-found-for-user-error/subscription-wasnt-found-for-user-error-3.jpg" alt-text="Get-MigrationUser screen.":::
+    :::image type="content" source="media/subscription-wasnt-found-for-user-error/subscription-wasnt-found-for-user-error-3.jpg" alt-text="Get-MigrationUser screen.":::
 
-:::image type="content" source="media/subscription-wasnt-found-for-user-error/subscription-wasnt-found-for-user-error-4.jpg" alt-text="Get-PublicFolderMailboxMigrationRequest screen.":::
+    :::image type="content" source="media/subscription-wasnt-found-for-user-error/subscription-wasnt-found-for-user-error-4.jpg" alt-text="Get-PublicFolderMailboxMigrationRequest screen.":::
