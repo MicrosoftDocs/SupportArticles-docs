@@ -12,7 +12,8 @@ search.appverid:
 - SPO160
 - MET150
 appliesto:
-- ADD PRODUCT
+- SharePoint Server
+- SharePoint Online
 ms.custom: 
 - CI 123888
 - CSSTroubleshoot 
