@@ -1,12 +1,12 @@
 ---
-title: "Title goes here"
+title: Invitation sent to a distribution list in SharePoint works for only one user
 ms.author: v-todmc
 author: mccoybot
 manager: dcscontentpm
-ms.date: xx/xx/xxxx
-audience: Admin|ITPro|Developer
+ms.date: 10/8/2020
+audience: Admin
 ms.topic: article
-ms.service OR ms.prod: see https://docsmetadatatool.azurewebsites.net/allowlists
+ms.service: sharepoint-online
 localization_priority: Normal
 search.appverid:
 - SPO160
@@ -14,10 +14,10 @@ search.appverid:
 appliesto:
 - ADD PRODUCT
 ms.custom: 
-- CI ID
+- CI 123888
 - CSSTroubleshoot 
-ms.reviewer: MS aliases for tech reviewers and CI requestor, without "@microsoft.com".  
-description: "How to resolve the error "Virus Found" in SharePoint Server 2013 when the antivirus scanner is unavailable ."
+ms.reviewer: pamgreen
+description: Describes a resolution to an issue where an invitation sent to a distribution list that is accessed by an external user prevents other users from accessing the SharePoint resource. 
 ---
 
 # SharePoint invitation sent to a distribution list works for only one user
