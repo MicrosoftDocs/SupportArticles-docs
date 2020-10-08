@@ -173,6 +173,8 @@
       href: ../../SharePointOnline/sharing-and-permissions/managing-secure-store-service-app-permissions.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: SharePoint identity and permission issues in two-way domain trust
       href: ../sharing-and-permissions/identity-and-permission-issues-in-two-way-domain-trust.md
+    - name: SharePoint invitation sent to a distribution list works for only one user
+      href: ../sharing-and-permissions/invitation-to-list-works-for-one-user.md
   - name: Sites
     items:
     - name: '"HTTP request is unauthorized" error'
