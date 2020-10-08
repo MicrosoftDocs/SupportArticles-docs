@@ -38,7 +38,6 @@ To resolve this issue on any affected document, perform the following steps:
 4.	Use the **Sensitivity** drop-down to deselect the previously applied label.
 5.	Close the document.
 
-
 ## More information
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
