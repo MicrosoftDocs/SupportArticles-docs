@@ -48,3 +48,9 @@ These items were [marked as **Private**](https://support.microsoft.com/office/ma
     2. Double-click the username of the delegate or select **Add** to add a new delegate.
     3. In the **Delegate Permissions** dialog, check **Delegate can see my private items**.
     4. Select **OK**.
+- In Outlook, add the shared mailbox as an [additional account](https://support.microsoft.com/office/add-an-email-account-to-outlook-6e27792a-9267-4aa4-8bb6-c84ef146101b).
+
+    > [!NOTE]
+    >
+    > - When prompted, enter the email address, and password of the user that has rights on the mailbox. 
+    > - Make sure automapping is removed and the mailbox was not added as an additional mailbox. For more information about removing automapping for a shared mailbox, see [this article](https://docs.microsoft.com/outlook/troubleshoot/profiles-and-accounts/remove-automapping-for-shared-mailbox).
