@@ -44,11 +44,16 @@ Either of the following issues occurs:
 
 Teams Calendar App requires access to the Exchange mailbox through Exchange Web Services (EWS). The Exchange mailbox can be online or on-premises in the scope of Exchange hybrid deployment.
 
+#### Issue 3: Teams Presence information is incorrect
+
+The Teams client can update the "Presence Status" based on the mailbox' calendar data. The required access to the calendar folder in the mailbox is done by the Teams backend in Microsoft 365 using the REST API of Exchange Online, Exchange Server 2016 or Exchange 2019. 
+
+
 ## Prerequisites
 
 To integrate the Microsoft Teams service with your installation of Exchange Server, make sure that your local Exchange Server environment meets the following requirements:
 
-- Microsoft Teams must check whether the mailbox is hosted in Exchange Online or on-premises. The service then decides where to access the mailbox accordingly. To enable the Teams service to check the mailbox location through the REST API call to the Exchange Online service, you have to deploy an Exchange Hybrid environment by running the Exchange Hybrid Wizard, as described in [Create a hybrid deployment with the Hybrid Configuration wizard](https://docs.microsoft.com/exchange/hybrid-deployment/deploy-hybrid).
+- Microsoft Teams must check whether the mailbox is hosted in Exchange Online or on-premises. The service then decides where to access the mailbox accordingly. To enable the Teams service to check the mailbox location through the Autodiscover call to the Exchange Online service, you have to deploy an Exchange Hybrid environment by running the Exchange Hybrid Wizard, as described in [Create a hybrid deployment with the Hybrid Configuration wizard](https://docs.microsoft.com/exchange/hybrid-deployment/deploy-hybrid).
 
 - To enable Microsoft Teams to authenticate to your on-premises Exchange environment to query the mailbox settings, you have to configure the new Exchange OAuth authentication protocol. It's preferable that you do this by running the Exchange Hybrid Wizard, as described in [Configure OAuth authentication between Exchange and Exchange Online organizations](https://docs.microsoft.com/exchange/configure-oauth-authentication-between-exchange-and-exchange-online-organizations-exchange-2013-help).
 
@@ -88,16 +93,21 @@ If the test fails, you must first resolve the Autodiscover issue.
 
 #### Step 2: Verify that the Autodiscover service can route the Autodiscover requests to on-premises
 
-In Windows PowerShell, run the following command:
+In Windows PowerShell, run the following command for EWS:
 
 ```powershell
-Invoke-RestMethod -Uri "https://outlook.office365.com/autodiscover/autodiscover.json?Email=onpremisemailbox@contoso.com&Protocol=EWS&RedirectCount=5" -UserAgent Teams
+Invoke-RestMethod -Uri "https://outlook.office365.com/autodiscover/autodiscover.json?Email=onpremisemailbox@contoso.com&Protocol=EWS" -UserAgent Teams
+```
+and for REST API:
+
+```powershell
+Invoke-RestMethod -Uri "https://outlook.office365.com/autodiscover/autodiscover.json?Email=onpremisemailbox@contoso.com&Protocol=REST" -UserAgent Teams
 ```
 
 > [!NOTE]
 > For the Teams delegation issue, the delegator's mailbox is the target mailbox to test. For the Teams calendar App issue, the affected user's mailbox is the target mailbox to test.
 
-For a mailbox hosted on-premises, the EWS URL should point to the on-premises external EWS. The output should resemble the following:
+For a mailbox hosted on-premises, the EWS URL and REST API URL should point to the on-premises external URLs. The output should resemble the following:
 
 > Protocol Url
 >
@@ -105,7 +115,15 @@ For a mailbox hosted on-premises, the EWS URL should point to the on-premises ex
 >
 > EWS <https://mail.contoso.com/EWS/Exchange.asmx>
 
-If this test fails, or if the EWS URL is incorrect, review the [Prerequisites](#prerequisites) section. This is because the problem is likely caused by an Exchange hybrid configuration issue, or a firewall or reverse proxy that is blocking external requests.
+or
+
+> Protocol Url
+>
+> \-------- ---
+>
+> REST <https://mail.contoso.com/api>
+
+If this test fails, or if the URL is incorrect, review the [Prerequisites](#prerequisites) section. This is because the problem is likely caused by an Exchange hybrid configuration issue, a firewall or reverse proxy that is blocking external requests.
 
 #### Step 3: Verify that the Exchange OAuth authentication protocol is enabled and functional
 
@@ -278,6 +296,41 @@ If the **EwsEnabled** parameter is set to **False**, you have to set it to **Tru
 If you can verify that no problems affect the prerequisites and configurations that are mentioned in this article, file a service request with Microsoft Support, and attach the following information:
 
 - The UserPrincipalName of the affected user.
+- The time in UTC when the issue was reproduced.
+- Microsoft Teams client debug logs. For more information about how to collect these logs, see [Use log files in troubleshooting Microsoft Teams](https://docs.microsoft.com/microsoftteams/log-files).
+
+## Troubleshoot the Teams "Presence Status" issue
+
+> [!NOTE]
+> The troubleshooting steps below only apply to the [Issue 3](#symptoms).
+
+#### Step 1: Verify that Teams Calendar App is enabled
+
+1. Check the Apllication in the Windows Eventviewer for EventID 1309. Look into the details and check if the request URL starts with:
+
+https://mail.contoso.com:443/api/v2.0/me/calendarView?$top=0&$...
+
+In that case, you need to modify the web.config to allow the Teams Presence calls on your Exchange servers. To do that follow these steps:
+
+a) locate the web.config file in the folder "C:\Program Files\Microsoft\Exchange Server\V15\FrontEnd\HttpProxy\Rest\"
+
+b) Open it using a text editor such as Notepad
+
+c) Locate the line:
+<httpRuntime maxRequestLength="2097151" maxUrlLength="2048" requestPathInvalidCharacters="&lt;,>,*,%,\,?" requestValidationMode="2.0" />
+
+and change it to:
+<httpRuntime maxRequestLength="2097151" maxUrlLength="2048" maxQueryStringLength="4096" requestPathInvalidCharacters="&lt;,>,*,%,\,?" requestValidationMode="2.0" />
+
+d) Restart the IIS apply the change.
+
+e) Repeat this steps on all your Exchange servers. Keep im mind that this change needs to be made again after deploying any Exchange Security- or Cummulative update to the server.
+
+#### Step 5: Escalate the issue
+
+If you can verify that no problems affect the prerequisites and configurations that are mentioned in this article, file a service request with Microsoft Support, and attach the following information:
+
+- The UserPrincipalName or E-Mail-Address of the affected user.
 - The time in UTC when the issue was reproduced.
 - Microsoft Teams client debug logs. For more information about how to collect these logs, see [Use log files in troubleshooting Microsoft Teams](https://docs.microsoft.com/microsoftteams/log-files).
 
