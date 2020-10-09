@@ -62,6 +62,8 @@
     href: asp-support-windows.md
   - name: Description of registry keys
     href: use-registry-keys.md
+  - name: Design customization IIS log file field names
+    href: customize-iis-log-file-field-names.md
   - name: Expression Web 4.0 FAQs
     href: expression-web-faq.md
   - name: IIS Express isn't supported in production environment
@@ -211,6 +213,8 @@
     href: shutdowntimelimit-not-apply-to-wcf.md
   - name: Troubleshoot Kerberos failures
     href: troubleshoot-kerberos-failures-ie.md
+  - name: Understanding identities
+    href: understanding-identities.md
 
 - name: WWW modules and features
   items:
