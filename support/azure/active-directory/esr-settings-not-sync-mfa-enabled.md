@@ -22,7 +22,7 @@ Task Category: AadTokenBrokerPlugin Operation
 Level:         Error
 Keywords:      Error,
 Error Computer:      Win10client.contoso.com
-Description: Error: 0xCAA2000C The request requires user interaction. Code: interaction_required Description: AADSTS50076: The user is required to use multi-factor authentication to access this resource. Please retry with a new authorize request for the resource 'https://syncservice.windows.net/*'. Trace ID: <Trace ID GUID> Correlation ID: <Correlation ID GUID> Timestamp: 2016-03-09 01:30:38Z
+Description: Error: 0xCAA2000C The request requires user interaction. Code: interaction_required Description: AADSTS50076: The user is required to use multi-factor authentication to access this resource. Please retry with a new authorize request for the resource 'https://syncservice.windows.net/*'. Trace ID: <Trace ID GUID> Correlation ID: <Correlation ID GUID> Timestamp: yyyy-mmmm-dddd 01:30:38Z
 TokenEndpoint: https://login.microsoftonline.com/common/oauth2/token Authority: https://login.microsoftonline.com/common
 Client ID: <Client ID GUID>
 Redirect URI: ms-appx-web://Microsoft.AAD.BrokerPlugin/<Client ID GUID>

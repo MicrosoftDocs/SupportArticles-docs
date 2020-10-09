@@ -79,7 +79,7 @@ You may see an error message that resembles the following:
 
 > [13:15:30.864] [ 18] [ERROR] ADPowerShellQueyProvider:SearchAdSyncDirectoryObjects Failed to run the ldap search query. Parameter values passed to PowerShell:  
 ForestFqdn : \<Forest_Name>  
-AdConnectorId : b3eeda3e-9a35-4cee-9fbe-a6fe1b0f8382  
+AdConnectorId : \<ID>  
 PropertiesToRetrieve : msDS-DeviceLocation,name,displayName,distinguishedName,objectClass  
 NamingContextType : Configuration  
 BaseDnType : Relative  

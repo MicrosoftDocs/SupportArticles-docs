@@ -212,7 +212,6 @@ Hyper-V host crashes and has errors when you perform a VM live migration in Wind
 - [Read the CPS overview white paper](https://download.microsoft.com/download/0/e/7/0e74a4a3-6d35-4a14-ad94-fedf8d265d36/microsoft_cloud_platform_system_white_paper.pdf) 
 - [Download the CPS datasheet](https://download.microsoft.com/download/1/4/c/14ce6fe8-e5ea-4979-8278-8156a5cdae2b/cloud_platform_system_datasheet.pdf) 
 - [Download the IDC Solution brief on the value of integrated systems](http://idcdocserv.com/idc_solution_brief_254796) 
-- [Technical and how-to references for Cloud Platform System](https://www.microsoft.com/server-cloud/products/cloud-platform-system/resources.aspx) 
 
 > [!NOTE]
 > The version of the VMM Service template in this article is 3.2.8039.0.
