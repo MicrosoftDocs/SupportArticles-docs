@@ -23,7 +23,7 @@ search.appverid: MET150
 
 # Private items in the shared mailbox aren't displayed in Outlook
 
-## Symptoms
+## Summary
 
 Some items such as emails or meeting requests that were [marked as **Private**](https://support.microsoft.com/office/mark-your-email-as-normal-personal-private-or-confidential-4a76d05b-6c29-4a0d-9096-71784a6b12c1) in a shared mailbox aren't displayed in **Inbox** in Outlook.  
 
