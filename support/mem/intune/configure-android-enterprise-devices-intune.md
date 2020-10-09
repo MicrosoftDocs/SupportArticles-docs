@@ -10,6 +10,7 @@ manager: dougeby
 ms.date: 3/4/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: high
 
 # optional metadata
