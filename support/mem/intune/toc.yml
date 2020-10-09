@@ -166,6 +166,8 @@
       href: scep-certificate-request-fails.md
     - name: Sign in to Intune NDES Connector error 0x80004003
       href: ndes-connector-signin-error-80004003.md
+    - name: Support Tip: Choose between SCEP and PKCS
+      href: scep-pkcs-certificate-comparison.md
     - name: Troubleshoot PKCS certificate deployment
       href: troubleshooting-pkcs-certificate-deployment.md
     - name: Verify NDES configuration on-premises
