@@ -18,13 +18,13 @@ _Original KB number:_ &nbsp; 4466879
 
 Typically, the existing Logging module in IIS is used to log items such as the original client IP address in the `X-FORWARDED-FOR` field in the IIS logs. However, if you use a third-party reporting tool to parse the IIS logs, the tool may not understand the `X-FORWARDED-FOR` field. Instead, it may use a different field, such as the **Client IP Address (c-ip)** field.
 
-For example, assume that you have a load-balanced environment that consists of at least two web servers together with an F5 load balancer in front of the web servers. Typically, the original client's IP address is logged in the X-FORWARDED-FOR field in the IIS logs by the existing Logging module. To use the third-party reporting tool, you try to create a custom **Client IP Address (c-ip)** field. However, you receive the following conflict message:
+For example, assume that you have a load-balanced environment that consists of at least two web servers together with an F5 load balancer in front of the web servers. Typically, the original client's IP address is logged in the `X-FORWARDED-FOR` field in the IIS logs by the existing Logging module. To use the third-party reporting tool, you try to create a custom **Client IP Address (c-ip)** field. However, you receive the following conflict message:
 
 ![Add custom field](./media/customize-iis-log-file-field-names/4466894_en_1.png)
 
 This article describes how to add a custom field such as the **Client IP Address (c-ip)** field so that it does not conflict with any predefined fields in the IIS logs.
 
-## More information
+## Solution
 
 There are two solutions to this problem.
 
