@@ -338,7 +338,7 @@ If the **EwsEnabled** parameter is set to **False**, you have to set it to **Tru
 
 #### Step 4: Escalate the issue
 
-If you made sure there's no problem with the prerequisites and configurations mentioned in this article, submit a service request to Microsoft Support with this information:
+If you verified there's no problem with the prerequisites and configurations mentioned in this article, submit a service request to Microsoft Support with this information:
 
 - The UserPrincipalName of the affected user.
 - The time in UTC when the issue was reproduced.
