@@ -30,7 +30,7 @@ Some items such as emails or meeting requests that were [marked as **Private**](
 This behavior is by design, Outlook client can't display private items in a shared mailbox.
 
 > [!NOTE]
-> Only the sender can set the sensitivity level for the items and the option will be greyed out when the items arrive at the recipient's Inbox.
+> Only the sender can set the sensitivity level for the items and the option will be grayed out when the items arrive at the recipient's Inbox.
 
 ## Workarounds
 
