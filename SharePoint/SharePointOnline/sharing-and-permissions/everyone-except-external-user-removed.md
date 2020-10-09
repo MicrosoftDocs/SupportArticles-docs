@@ -26,7 +26,7 @@ You notice that the "Everyone except external users" group is removed on a Micro
 
 This behavior is by design.
 
-By default, the "Everyone except external users" claim is added to the Members and Visitors groups on public group sites. It will be removed if the group is changed to Private at the time of conversion. 
+By default, the "Everyone except external users" claim is added to the Members and Visitors groups on public group sites. It will be removed if the group is changed to Private at the time of the conversion. 
 
 ## Workaround
 
