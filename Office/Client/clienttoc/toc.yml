@@ -1011,6 +1011,8 @@
       href: ../word/spelling-grammar-checker-underline-color.md
     - name: Damaged documents in Word
       href: ../word/damaged-documents-in-word.md
+    - name: Headers and footers remain after removing sensitivity label
+      href: ../word/headers-footers-remain-after-remove-sensitivity-label.md
     - name: Image DPI is changed after you print to PDF
       href: ../word/image-dpi-change-after-print-to-pdf.md
     - name: In-place edit of an embedded Word document with ActiveX control causes flickering
