@@ -52,5 +52,5 @@ These items were [marked as **Private**](https://support.microsoft.com/office/ma
 
     > [!NOTE]
     >
-    > - When prompted, enter the email address, and password of the user that has rights on the mailbox. 
-    > - Make sure automapping is removed and the mailbox was not added as an additional mailbox. For more information about removing automapping for a shared mailbox, see [this article](https://docs.microsoft.com/outlook/troubleshoot/profiles-and-accounts/remove-automapping-for-shared-mailbox).
+    > - When prompted, enter the email address, and password of the user that has rights on the mailbox.
+    > - Make sure automapping is removed and the mailbox was not added as an additional mailbox. To learn how to remove automapping for a shared mailbox, see [this article](https://docs.microsoft.com/outlook/troubleshoot/profiles-and-accounts/remove-automapping-for-shared-mailbox).
