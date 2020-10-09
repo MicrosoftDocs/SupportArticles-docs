@@ -94,7 +94,7 @@ Here is the detailed flow behind the processing of a Win32 app at the device end
 |2|S Mode is checked.| |
 |3|Content manager starts.| |
 |4|Deviceid and OS version is noted.| |
-|5|IME discovers the endpoint of Intune (CDNs)|Whitelist these items in the firewall (if blocked) as stated in the network pre-requisites listed earlier.|
+|5|IME discovers the endpoint of Intune (CDNs)|Approve these items in the firewall (if blocked) as stated in the network pre-requisites listed earlier.|
 |6|Impersonation for the user occurs, and token is requested or granted.| |
 |7|PUT request is sent.| |
 |8|You see a **Get Policies** response that contains the entire policy body (as configured by the admin in the portal).|You can check to make sure that the policy that is received by IME is in accordance with the configured policy.|
