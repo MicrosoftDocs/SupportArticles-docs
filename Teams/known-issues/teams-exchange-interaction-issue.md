@@ -289,50 +289,50 @@ If you can verify that no problems affect the prerequisites and configurations t
 
 These troubleshooting steps apply to only the [Issue 3](#symptoms).
 
-#### Step 1: Verify that the URL for the on-premises Exchange Rest API has been published to the public network.
+#### Step 1: Verify that the URL for the on-premises Exchange REST API has been published to the public network
 
-Run Step 2 in the Common Troubleshooting Steps above against the user's mailbox to locate the on-premises Exchange EWS URL, then change the URL format (replace "/EWS/Exchange.asmx" with "/api") from something like `https://mail.contoso.com/EWS/Exchange.asmx` to `https://mail.contoso.com/api`.
+Run Step 2 in the [Common Troubleshooting Steps](#common-troubleshooting-steps) above against the user's mailbox to locate the on-premises Exchange EWS URL, then change the URL format (replace "/EWS/Exchange.asmx" with "/api") from something like `https://mail.contoso.com/EWS/Exchange.asmx` to `https://mail.contoso.com/api`.
 
 Try to access the REST API URL from a browser in the external network. If you can get a 401 response from the on-premises Exchange environment, that means the REST API URL has been published. Otherwise, you need to engage the local network team to get the URL published.
 
 > [!NOTE]
-> Teams presence service doesn't support the fallback to the EWS URL if the access to the Exchange REST API is failed.
+> Teams presence service doesn't support the fallback to the EWS URL if the access to the Exchange REST API fails.
 
 #### Step 2: Verify that Teams isn't blocked from accessing EWS for the entire organization
 
-Run the following Exchange PowerShell command to check whether the **EwsApplicationAccessPolicy** parameter was set to **EnforceAllowList** for the entire organization:
+Run the following Exchange PowerShell command to check whether the **EwsApplicationAccessPolicy** parameter was set to **EnforceAllowList** for the entire organization:
 
 ```powershell
 Get-OrganizationConfig | Select-Object Ews*
 ```
 
-If the parameter was set to **EnforceAllowList,** this means that the administrator allows only the users that are listed in **EwsAllowList** to access EWS. If the **EwsAllowList** is set to an empty value **EwsAllowList={}**, it will prevent all users from accessing EWS. 
+If the parameter was set to **EnforceAllowList**, this means that the administrator allows only the users that are listed in **EwsAllowList** to access EWS. If the **EwsAllowList** is set to an empty value **EwsAllowList={}**, it will prevent all users from accessing EWS.
 
-Make sure that **\*Microsoft.Skype.Presence.App/\*** is listed as an array member of the **EwsAllowList** parameter. If not, run the following command to add it:
+Make sure that **\*Microsoft.Skype.Presence.App/\*** is listed as an array member of the **EwsAllowList** parameter. If not, run the following command to add it:
 
 ```powershell
 Set-OrganizationConfig -EwsAllowList @{Add="*Microsoft.Skype.Presence.App/*"}
 ```
 
-If the **EwsEnabled** parameter is set to **False**, you have to set it to **True** or **Null** (blank). Otherwise, the Teams service will also be blocked from accessing the EWS.
+If the **EwsEnabled** parameter is set to **False**, you have to set it to **True** or **Null** (blank). Otherwise, the Teams service will be blocked from accessing the EWS.
 
 #### Step 3: Verify that Teams isn't blocked from accessing EWS for the user's mailbox
 
-Run the following Exchange PowerShell command to check whether the **EwsApplicationAccessPolicy** parameter was set to **EnforceAllowList** for the user's mailbox:
+Run the following Exchange PowerShell command to check whether the **EwsApplicationAccessPolicy** parameter was set to **EnforceAllowList** for the user's mailbox:
 
 ```powershell
 Get-CasMailbox <user's UserPrincipalName> | Select-Object Ews*
 ```
 
-If the parameter was set to **EnforceAllowList**, this means that the administrator allows only the clients that are listed in EwsAllowList to access EWS.
+If the parameter was set to **EnforceAllowList**, this means that the administrator allows only the clients that are listed in EwsAllowList to access EWS.
 
-Make sure that **\*Microsoft.Skype.Presence.App/\*** is listed as an array member of the EwsAllowList parameter. If not, run the following Exchange PowerShell command to add it:
+Make sure that **\*Microsoft.Skype.Presence.App/\*** is listed as an array member of the EwsAllowList parameter. If not, run the following Exchange PowerShell command to add it:
 
 ```powershell
 Set-CASMailbox <user's UserPrincipalName> -EwsAllowList @{Add="* Microsoft.Skype.Presence.App/*"}
 ```
 
-If the **EwsEnabled** parameter is set to **False**, you have to set it to **True**. Otherwise, the Teams service will also be blocked from accessing the EWS.
+If the **EwsEnabled** parameter is set to **False**, you have to set it to **True**. Otherwise, the Teams service will be blocked from accessing the EWS.
 
 #### Step 4: Escalate the issue
 
