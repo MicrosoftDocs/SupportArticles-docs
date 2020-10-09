@@ -44,6 +44,10 @@ Either of the following issues occurs:
 
 Teams Calendar App requires access to the Exchange mailbox through Exchange Web Services (EWS). The Exchange mailbox can be online or on-premises in the scope of Exchange hybrid deployment.
 
+#### Issue 3: Teams presence status is stuck on Out of Office or doesn't display 'In a meeting' when the user is attending a meeting organized in the Outlook calendar
+
+A user whose mailbox is hosted in an on-premises Exchange server has returned from a vacation and turned off the Automatic Replies in the Outlook client, but the Teams presence status for the user is still showing 'Out of Office' to all the Teams clients in the same organization for a few days. Another symptom is that the user is attending a meeting organized by someone in the Outlook calendar, but the user's Teams presence has never been updated to 'In a meeting'.
+
 ## Prerequisites
 
 To integrate the Microsoft Teams service with your installation of Exchange Server, make sure that your local Exchange Server environment meets the following requirements:
@@ -69,7 +73,7 @@ To integrate the Microsoft Teams service with your installation of Exchange Serv
 ## Common troubleshooting steps
 
 > [!NOTE]
-> The following troubleshooting steps apply to both [Issue 1](#symptoms) and [Issue 2](#symptoms).
+> The following troubleshooting steps apply to all the three issues listed above.
 
 #### Step 1: Verify that the Autodiscover service works well
 
@@ -84,7 +88,7 @@ If the test fails, you must first resolve the Autodiscover issue.
 :::image type="content" source="media/teams-exchange-interaction-issue/image1.png" alt-text="Screenshot of RCA.":::
 
 > [!NOTE]
-> For the Teams delegation issue, the delegator's mailbox is the target mailbox to test. For the Teams calendar App issue, the affected user's mailbox is the target mailbox to test.
+> For the Teams delegation issue, the delegator's mailbox is the target mailbox to test. For the Teams calendar App issue and Teams presence issue, the affected user's mailbox is the target mailbox to test.
 
 #### Step 2: Verify that the Autodiscover service can route the Autodiscover requests to on-premises
 
@@ -95,7 +99,7 @@ Invoke-RestMethod -Uri "https://outlook.office365.com/autodiscover/autodiscover.
 ```
 
 > [!NOTE]
-> For the Teams delegation issue, the delegator's mailbox is the target mailbox to test. For the Teams calendar App issue, the affected user's mailbox is the target mailbox to test.
+> For the Teams delegation issue, the delegator's mailbox is the target mailbox to test. For the Teams calendar App issue and Teams presence issue, the affected user's mailbox is the target mailbox to test.
 
 For a mailbox hosted on-premises, the EWS URL should point to the on-premises external EWS. The output should resemble the following:
 
@@ -279,7 +283,64 @@ If you can verify that no problems affect the prerequisites and configurations t
 
 - The UserPrincipalName of the affected user.
 - The time in UTC when the issue was reproduced.
-- Microsoft Teams client debug logs. For more information about how to collect these logs, see [Use log files in troubleshooting Microsoft Teams](https://docs.microsoft.com/microsoftteams/log-files).
+- Teams client debug logs. For more information about how to collect these logs, see [Use log files in troubleshooting Microsoft Teams](https://docs.microsoft.com/microsoftteams/log-files).
+
+## Troubleshoot the Teams presence issue
+
+These troubleshooting steps apply to only the [Issue 3](#symptoms).
+
+#### Step 1: Verify that the URL for the on-premises Exchange Rest API has been published to the public network.
+
+Run Step 2 in the Common Troubleshooting Steps above against the user's mailbox to locate the on-premises Exchange EWS URL, then change the URL format (replace "/EWS/Exchange.asmx" with "/api") from something like `https://mail.contoso.com/EWS/Exchange.asmx` to `https://mail.contoso.com/api`.
+
+Try to access the REST API URL from a browser in the external network. If you can get a 401 response from the on-premises Exchange environment, that means the REST API URL has been published. Otherwise, you need to engage the local network team to get the URL published.
+
+> [!NOTE]
+> Teams presence service doesn't support the fallback to the EWS URL if the access to the Exchange REST API is failed.
+
+#### Step 2: Verify that Teams isn't blocked from accessing EWS for the entire organization
+
+Run the following Exchange PowerShell command to check whether the **EwsApplicationAccessPolicy** parameter was set to **EnforceAllowList** for the entire organization:
+
+```powershell
+Get-OrganizationConfig | Select-Object Ews*
+```
+
+If the parameter was set to **EnforceAllowList,** this means that the administrator allows only the users that are listed in **EwsAllowList** to access EWS. If the **EwsAllowList** is set to an empty value **EwsAllowList={}**, it will prevent all users from accessing EWS. 
+
+Make sure that **\*Microsoft.Skype.Presence.App/\*** is listed as an array member of the **EwsAllowList** parameter. If not, run the following command to add it:
+
+```powershell
+Set-OrganizationConfig -EwsAllowList @{Add="*Microsoft.Skype.Presence.App/*"}
+```
+
+If the **EwsEnabled** parameter is set to **False**, you have to set it to **True** or **Null** (blank). Otherwise, the Teams service will also be blocked from accessing the EWS.
+
+#### Step 3: Verify that Teams isn't blocked from accessing EWS for the user's mailbox
+
+Run the following Exchange PowerShell command to check whether the **EwsApplicationAccessPolicy** parameter was set to **EnforceAllowList** for the user's mailbox:
+
+```powershell
+Get-CasMailbox <user's UserPrincipalName> | Select-Object Ews*
+```
+
+If the parameter was set to **EnforceAllowList**, this means that the administrator allows only the clients that are listed in EwsAllowList to access EWS.
+
+Make sure that **\*Microsoft.Skype.Presence.App/\*** is listed as an array member of the EwsAllowList parameter. If not, run the following Exchange PowerShell command to add it:
+
+```powershell
+Set-CASMailbox <user's UserPrincipalName> -EwsAllowList @{Add="* Microsoft.Skype.Presence.App/*"}
+```
+
+If the **EwsEnabled** parameter is set to **False**, you have to set it to **True**. Otherwise, the Teams service will also be blocked from accessing the EWS.
+
+#### Step 4: Escalate the issue
+
+If you can verify that no problems affect the prerequisites and configurations that are mentioned in this article, file a service request with Microsoft Support, and attach the following information:
+
+- The UserPrincipalName of the affected user.
+- The time in UTC when the issue was reproduced.
+- Teams client debug logs. For more information about how to collect these logs, see [Use log files in troubleshooting Microsoft Teams](https://docs.microsoft.com/microsoftteams/log-files).
 
 ## References
 
