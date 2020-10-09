@@ -73,7 +73,7 @@ To integrate the Microsoft Teams service with your installation of Exchange Serv
 ## Common troubleshooting steps
 
 > [!NOTE]
-> The following troubleshooting steps apply to all the three issues listed above.
+> The following troubleshooting steps apply to all the issues listed above.
 
 #### Step 1: Verify that the Autodiscover service works well
 
@@ -324,9 +324,9 @@ Run the following Exchange PowerShell command to check whether the **EwsApplicat
 Get-CasMailbox <user's UserPrincipalName> | Select-Object Ews*
 ```
 
-If the parameter was set to **EnforceAllowList**, this means that the administrator allows only the clients that are listed in EwsAllowList to access EWS.
+If the parameter was set to **EnforceAllowList**, this means that the administrator allows only the clients that are listed in **EwsAllowList** to access EWS.
 
-Make sure that **\*Microsoft.Skype.Presence.App/\*** is listed as an array member of the EwsAllowList parameter. If not, run the following Exchange PowerShell command to add it:
+Make sure that **\*Microsoft.Skype.Presence.App/\*** is listed as an array member of the **EwsAllowList** parameter. If not, run the following Exchange PowerShell command to add it:
 
 ```powershell
 Set-CASMailbox <user's UserPrincipalName> -EwsAllowList @{Add="* Microsoft.Skype.Presence.App/*"}
