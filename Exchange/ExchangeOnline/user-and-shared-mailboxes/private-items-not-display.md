@@ -34,7 +34,7 @@ This behavior is by design, Outlook client can't display private items in a shar
 
 ## Workarounds
 
-To workaround this issue, use any of the following methods:
+To work around this issue, use any of the following methods:
 
 - Use Outlook on the Web (OWA).
 - Add the user as a delegate to the shared mailbox with access to private items.
