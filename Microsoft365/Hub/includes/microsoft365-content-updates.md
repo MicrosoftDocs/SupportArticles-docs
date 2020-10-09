@@ -72,3 +72,14 @@
 | 9/24/2020 | [Connection issues in sign-in after update to Office 2016 build 16.0.7967](/office365/troubleshoot/authentication/connection-issue-when-sign-in-office-2016) | modified |
 | 9/24/2020 | [Unable to sign in to Office 365, Azure, or Intune](/office365/troubleshoot/sign-in/sign-in-to-office-365-azure-intune) | modified |
 | 9/25/2020 | [Install and maintain SaRA tool from a network share](/office365/troubleshoot/installation/install-sara-from-network-share) | modified |
+
+
+## Week of September 28, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 9/28/2020 | [Application cannot be started, contact the application vendor in Office 365](/office365/troubleshoot/administration/office-365-application-cannot-be-started) | modified |
+| 9/28/2020 | [Troubleshoot account issues for federated users in Office 365, Azure, or Intune](/office365/troubleshoot/authentication/account-issues-for-federated-users) | modified |
+| 9/28/2020 | [Unable to remove this domain when remove a domain from Office 365](/office365/troubleshoot/sign-in/unable-remove-domain-office-365) | modified |
+| 9/28/2020 | [Office Applications crash or cannot start](/office365/troubleshoot/administration/office-crash-or-cannot-start) | modified |

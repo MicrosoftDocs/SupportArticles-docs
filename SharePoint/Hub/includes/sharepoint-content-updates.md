@@ -76,3 +76,12 @@
 
 | Published On |Topic title | Change |
 |------|------------|--------|
+
+
+## Week of September 28, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 9/28/2020 | [SharePoint Online service process schedule temporary change](/sharepoint/troubleshoot/administration/temporary-adjustments-in-sharepoint-online) | modified |
+| 9/28/2020 | [SharePoint Online Public Websites to be discontinued](/sharepoint/troubleshoot/sites/public-websites-be-discontinued) | modified |

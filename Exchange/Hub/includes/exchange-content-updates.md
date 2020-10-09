@@ -54,3 +54,11 @@
 | Published On |Topic title | Change |
 |------|------------|--------|
 | 9/22/2020 | [Understanding and troubleshooting Out of Office (OOF) replies](/exchange/troubleshoot/send-emails/understand-troubleshoot-oof-replies) | modified |
+
+
+## Week of September 28, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 9/30/2020 | [Search-AdminAuditLog or Search-MailboxAuditLog with parameter returns empty results in Exchange Server](/exchange/troubleshoot/compliance/search-adminauditlog-mailboxauditlog-return-no-result) | modified |
