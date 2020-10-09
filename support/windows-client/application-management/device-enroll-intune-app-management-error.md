@@ -54,4 +54,7 @@ Now, when you review the **Block all but EXO and SPO** CA policy, you see the fo
 
 The term *All cloud apps* applies to [apps that are listed, and services that aren't listed](https://docs.microsoft.com/azure/active-directory/conditional-access/concept-conditional-access-cloud-apps).
 
-For more information about best practices and what you should avoid, see [Best practices for Conditional Access in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/conditional-access/best-practices#what-you-should-avoid-doing).
+For more information, see these articles:
+
+- [Best practices for Conditional Access in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/conditional-access/best-practices#what-you-should-avoid-doing)
+- [What are service dependencies in Azure Active Directory Conditional Access?](https://docs.microsoft.com/azure/active-directory/conditional-access/service-dependencies)
