@@ -50,6 +50,8 @@
     href: saving-images-locally-not-restricted.md
   - name: Set up and validate app protection policies
     href: set-up-app-protection-policies-ios-device.md
+  - name: Support Tip - Deployment, delivery, and processing of a Win32 application
+    href: develop-deliver-working-win32-app-via-intune.md
 - name: Co-management with Configuration Manager
   items:
   - name: Troubleshoot co-management auto-enroll
@@ -82,8 +84,6 @@
     href: restrict-usb-with-administrative-template.md
   - name: SIP address and password can't be saved
     href: sip-address-password-not-saved.md
-  - name: Support Tip - Deployment, delivery, and processing of a Win32 application through Intune
-    href: develop-deliver-working-win32-app-via-intune.md
   - name: Troubleshoot CSP custom settings
     href: troubleshoot-csp-custom-settings.md
   - name: Users can't log on to Windows 10 computers with multi-app kiosk profile assigned
