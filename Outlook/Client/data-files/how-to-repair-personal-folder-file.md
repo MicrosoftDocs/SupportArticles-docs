@@ -31,7 +31,7 @@ Follow these steps to repair your Outlook personal folder file (.pst) by using I
 
 Start the Inbox Repair tool (Scanpst.exe). Then select **Open** or **Run** in the **File Download** dialog box, and follow the steps in the easy fix wizard.
 
-Once the Inbox Repair tool is started, continue with [Step 2](#step-2-repair-the-pst-file). (Can't start the Inbox Repair tool?)
+Once the Inbox Repair tool is started, continue with [Step 2](#step-2---repair-the-pst-file). (Can't start the Inbox Repair tool?)
 
 ### Manually start the Inbox Repair tool
 

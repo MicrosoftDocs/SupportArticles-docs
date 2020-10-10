@@ -60,7 +60,7 @@ To disable Outlook Today, follow these steps for your version of Outlook:
 2. Select the **Home Page** tab.
 3. Clear **Show home page by default for this folder**, and then select **OK**.
 
-   :::image type="content" source="media/items-placed-in-root-folder-seem-to-be-lost/clear-show-home-page-by-default-for-this-folder-option.jpg" alt-text="The screenshot of the Show home page by default for this folder option" border="false":::
+   :::image type="content" source="media/items-placed-in-root-folder-seem-to-be-lost/clear-show-home-page-by-default-for-this-folder-option.jpg" alt-text="The screenshot of the Show home page by default for this folder" border="false":::
 
 4. Select the root folder to view the contents.
 
