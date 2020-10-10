@@ -1,46 +1,28 @@
 ---
-# required metadata
-
 title: How to configure Android enterprise devices in Microsoft Intune 
 description: This guide describes how to configure Android enterprise devices in Microsoft Intune.
 keywords:
 author: mccoybot
-ms.author: mandia
-manager: dougeby
+ms.author: v-todmc
 ms.date: 3/4/2020
-ms.topic: conceptual
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mandia
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.custom: 
 - intune-azure
 - CI 114553
-ms.collection: M365-identity-device-management
 ---
 
 # End-to-end guide for configuring Android enterprise devices in Microsoft Intune 
 
-### What does this guide do?
+This guide helps administrators understand how to configure and troubleshoot Android enterprise devices in a Microsoft Intune environment. It covers the following common scenarios:
 
-This guide helps administrators understand how to configure and troubleshoot Android enterprise devices in a Microsoft Intune environment. 
+- Onboarding to Google
+- Application deployment
+- Enabling work profile enrollment
+- Configuring conditional access
+- The work profile enrollment end-user experience
+- Issuing a work profile passcode reset 
 
-### Who is it for?
-
-Administrators who implement and oversee a Microsoft Intune environment that manages Android enterprise devices.
-
-### How does it work?
-
-This guide covers common scenarios including onboarding to Google, application deployment, enabling work profile enrollment, configuring conditional access, the work profile enrollment end-user experience, and issuing a work profile passcode reset. It helps you decide which management capability is the best for your organization and provides a FAQ about Android enterprise.
+It helps you decide which management capability is the best for your organization and provides a FAQ about Android enterprise.
 
 ## Evaluate your needs – BYOD or corporate devices
 
@@ -67,7 +49,7 @@ There are two options for corporate-owned devices, and each of them serves a uni
 - **Fully managed devices** (formerly known as COBO, or Corporate Owned Business Only). 
 
    > [!NOTE]
-   > For more information about Fully Managed devices, see [Set up Intune enrollment of Android Enterprise fully managed devices](https://docs.microsoft.com/mem/intune/enrollment/android-fully-managed-enroll).
+   > For more information about Fully Managed devices, see [Set up Intune enrollment of Android Enterprise fully managed devices](/mem/intune/enrollment/android-fully-managed-enroll).
 
    Fully Managed devices fit into a more user-centric scenario where in which is a single user who is associated with the device while the admin still retains full control over the device (as opposed to a work-profile scenario, in which multiple users have control).
 
@@ -99,7 +81,7 @@ When you decide how to enroll your devices, also be aware that not all features 
 |Zero Touch |    × |    ✓ | ✓ |
 |Compliance/Conditional Access |    ✓ |    × | ✓ |
 
-For more information, see [Implement your Microsoft Intune plan](https://docs.microsoft.com/intune/fundamentals/planning-guide-onboarding).
+For more information, see [Implement your Microsoft Intune plan](/mem/intune/fundamentals/planning-guide-onboarding).
 
 ## Connect an Intune account to an Android enterprise account
 
@@ -113,23 +95,23 @@ The first step to configure Android enterprise in your environment is to connect
 
 3. Go to **Devices** > **Android** > **Android Enrollment** > **Managed Google Play**, select **I agree**, and then select **Launch Google to connect now** to open the Managed Google Play website.
 
-    :::image type="content" source="media/configure-android/configure-android-enterprise-devices-in-intune-1.jpg" alt-text="Select Android enrollment.":::
+    :::image type="content" source="media/configure-android-enterprise-devices-intune/configure-android-enterprise-devices-in-intune-1.jpg" alt-text="Select Android enrollment.":::
 
 4. Sign in to your Google account, and then select **Get started**.
 
-    :::image type="content" source="media/configure-android/configure-android-enterprise-devices-in-intune-2.png" alt-text="Select Get started.":::
+    :::image type="content" source="media/configure-android-enterprise-devices-intune/configure-android-enterprise-devices-in-intune-2.png" alt-text="Select Get started.":::
 
 5. Enter your business name, and then select **Next**.
 
-    :::image type="content" source="media/configure-android/configure-android-enterprise-devices-in-intune-3.png" alt-text="Enter your business name.":::
+    :::image type="content" source="media/configure-android-enterprise-devices-intune/configure-android-enterprise-devices-in-intune-3.png" alt-text="Enter your business name.":::
 
 6. Accept the terms, and then select **Confirm**.
 
 7. Select **Complete Registration**.
 
-    :::image type="content" source="media/configure-android/configure-android-enterprise-devices-in-intune-4.png" alt-text="Select Complete Registration.":::
+    :::image type="content" source="media/configure-android-enterprise-devices-intune/configure-android-enterprise-devices-in-intune-4.png" alt-text="Select Complete Registration.":::
 
-For more information, see [Connect your Intune account to your Managed Google Play account](https://docs.microsoft.com/mem/intune/enrollment/connect-intune-android-enterprise).
+For more information, see [Connect your Intune account to your Managed Google Play account](/mem/intune/enrollment/connect-intune-android-enterprise).
 
 ## Deploy applications
 
@@ -144,21 +126,21 @@ After your Intune account is connected to your Android enterprise account, you c
 
 4. Select **Select**. The **Managed Google Play** app store is displayed.
 
-    :::image type="content" source="media/configure-android/configure-android-enterprise-devices-in-intune-5.png" alt-text="The Managed Google Play app store.":::
+    :::image type="content" source="media/configure-android-enterprise-devices-intune/configure-android-enterprise-devices-in-intune-5.png" alt-text="The Managed Google Play app store.":::
 
 5.	Search for an app to view the app details. Example: Intune Company Portal app.
 
 6. On the page that displays the app, select **Approve**. A window for the app opens and prompts you to give permissions for the app to perform various operations.
 
-    :::image type="content" source="media/configure-android/configure-android-enterprise-devices-in-intune-6.png" alt-text="Select Approve.":::
+    :::image type="content" source="media/configure-android-enterprise-devices-intune/configure-android-enterprise-devices-in-intune-6.png" alt-text="Select Approve.":::
 
 7.	Select **Approve** again to accept the app permissions.
 
-    :::image type="content" source="media/configure-android/configure-android-enterprise-devices-in-intune-7.png" alt-text="Select Approve again.":::
+    :::image type="content" source="media/configure-android-enterprise-devices-intune/configure-android-enterprise-devices-in-intune-7.png" alt-text="Select Approve again.":::
 
 8.	On the **Approval Settings** tab, select **Keep approved when app requests new permissions**, and then select **Save**.
 
-    :::image type="content" source="media/configure-android/configure-android-enterprise-devices-in-intune-8.png" alt-text="Select Keep approved when app requests new permissions.":::
+    :::image type="content" source="media/configure-android-enterprise-devices-intune/configure-android-enterprise-devices-in-intune-8.png" alt-text="Select Keep approved when app requests new permissions.":::
 
 9.	Select **Select** to select the app.
 
@@ -171,15 +153,15 @@ After your Intune account is connected to your Android enterprise account, you c
 
 12. After the app is added to Microsoft Intune, you can assign the app to users and devices. From the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/), go to **Apps** > **All Apps**. Look under **Manage** to see the app displayed in the list.
 
-    :::image type="content" source="media/configure-android/configure-android-enterprise-devices-in-intune-9.png" alt-text="Go to Apps and then select All Apps.":::
+    :::image type="content" source="media/configure-android-enterprise-devices-intune/configure-android-enterprise-devices-in-intune-9.png" alt-text="Go to Apps and then select All Apps.":::
 
 13. To assign the app to a group, select the app that you want to assign. In the **Manage** section of the menu, select **Properties**, and then select to **Edit** next to **Assignments** to open the **Add group** pane.
 
-    :::image type="content" source="media/configure-android/configure-android-enterprise-devices-in-intune-10.png" alt-text="Select Properties and then Assignments.":::
+    :::image type="content" source="media/configure-android-enterprise-devices-intune/configure-android-enterprise-devices-in-intune-10.png" alt-text="Select Properties and then Assignments.":::
 
 14. In the **Assignments** tab, under **Required**, select **Add group**, select the groups to include, and then select **Select**.
 
-    :::image type="content" source="media/configure-android/configure-android-enterprise-devices-in-intune-11.png" alt-text="Select Add group.":::
+    :::image type="content" source="media/configure-android-enterprise-devices-intune/configure-android-enterprise-devices-in-intune-11.png" alt-text="Select Add group.":::
 
 15. On the **Assign** pane, select **Review + save** to complete the included groups selection.
 
@@ -187,25 +169,25 @@ After your Intune account is connected to your Android enterprise account, you c
 
 17. Return to the **App Properties** view, and verify the app under **Assignments**.
 
-    :::image type="content" source="media/configure-android/configure-android-enterprise-devices-in-intune-12.png" alt-text="Confirm the app assignment.":::
+    :::image type="content" source="media/configure-android-enterprise-devices-intune/configure-android-enterprise-devices-in-intune-12.png" alt-text="Confirm the app assignment.":::
 
-For more information about app deployment, see [Add Android Enterprise system apps to Microsoft Intune](https://docs.microsoft.com/intune/apps/apps-ae-system). 
+For more information about app deployment, see [Add Android Enterprise system apps to Microsoft Intune](/mem/intune/apps/apps-ae-system). 
 
 ## Enable Android enterprise work profile enrollment
 To do this, follow these steps:
 
 1. From the Intune portal, go to **Device Enrollment** > **Enrollment Restrictions**, and then select **Default** under **Device Type Restrictions**.
 
-    :::image type="content" source="media/configure-android/configure-android-enterprise-devices-in-intune-16.jpg" alt-text="The Device Type Restrictions screen.":::
+    :::image type="content" source="media/configure-android-enterprise-devices-intune/configure-android-enterprise-devices-in-intune-16.jpg" alt-text="The Device Type Restrictions screen.":::
 
 2. Select **Properties** > **Select platforms**, select **Block** for **Android**, select **Allow** for **Android work profile**, select **OK**, and then select **Save** to save your changes.
 
-    :::image type="content" source="media/configure-android/configure-android-enterprise-devices-in-intune-17.jpg" alt-text="The enrollment properties screen.":::
+    :::image type="content" source="media/configure-android-enterprise-devices-intune/configure-android-enterprise-devices-in-intune-17.jpg" alt-text="The enrollment properties screen.":::
 
     > [!NOTE] 
     > Default restrictions have the lowest priority and apply to all users, this can't be edited. When you create additional custom restrictions, be aware of the groups to which they are assigned so that you don't create a conflict with this configuration. 
 
-For more information, see [Set up enrollment of Android Enterprise work profile devices](https://docs.microsoft.com/intune/enrollment/android-work-profile-enroll). 
+For more information, see [Set up enrollment of Android Enterprise work profile devices](/mem/intune/enrollment/android-work-profile-enroll). 
 
 ## Set up conditional access
 
@@ -213,24 +195,24 @@ To set up conditional access on your devices, follow these steps:
 
 1. Deploy the Gmail app or the Nine Work app as **Required**.
 
-2. Create an email profile to the app by following these steps:<br/>
-   a. In the Intune Azure portal, select **Device configuration** > **Profiles** > **Create profile**, and then enter **Name** and **Description** for the email profile.<br/>
-   b.    Select **Android enterprise** from the **Platform** drop-down list.<br/>
-   c.    In **Profile Type** > **Work Profile Only**, select **Email**.<br/>
-   d.    Configure the email profile settings.
+2. Create an email profile to the app by following these steps:
 
-    :::image type="content" source="media/configure-android/configure-android-enterprise-devices-in-intune-18.jpg" alt-text="Enter the properties.":::
+   1. In the Intune Azure portal, select **Device configuration** > **Profiles** > **Create profile**, and then enter **Name** and **Description** for the email profile.
+   2. Select **Android enterprise** from the **Platform** drop-down list.
+   3. In **Profile Type** > **Work Profile Only**, select **Email**.
+   4. Configure the email profile settings.
 
-    For more information about these settings, see 
-[Android device settings to configure email, authentication, and synchronization in Intune](https://docs.microsoft.com/intune/configuration/email-settings-android#android-enterprise).
+      :::image type="content" source="media/configure-android-enterprise-devices-intune/configure-android-enterprise-devices-in-intune-18.jpg" alt-text="Enter the properties.":::
+
+      For more information about these settings, see [Android device settings to configure email, authentication, and synchronization in Intune](/mem/intune/configuration/email-settings-android#android-enterprise).
 
 3. After you create the email profile, assign it to groups.
 
-    :::image type="content" source="media/configure-android/configure-android-enterprise-devices-in-intune-19.jpg" alt-text="Assignments screen.":::
+    :::image type="content" source="media/configure-android-enterprise-devices-intune/configure-android-enterprise-devices-in-intune-19.jpg" alt-text="Assignments screen.":::
 
 4. Set up [device-based conditional access](https://docs.microsoft.com/intune/protect/conditional-access-intune-common-ways-use#device-based-conditional-access).
 
-For more information, see [Configure Exchange on-premises access for Intune](https://docs.microsoft.com/intune/protect/conditional-access-exchange-create#to-set-up-conditional-access-for-android-work-profile-devices).
+For more information, see [Set up Conditional Access for Android work profile devices](/mem/intune/protect/conditional-access-exchange-create#to-set-up-conditional-access-for-android-work-profile-devices).
 
 ## Enroll your Android enterprise device
 
@@ -239,143 +221,127 @@ To do this, follow these steps:
 1. Sign in with your work account, and then tap **Enroll now**.
 
 
-    :::image type="content" source="media/configure-android/configure-android-enterprise-devices-in-intune-20.jpg" alt-text="Enroll now screen.":::
+    :::image type="content" source="media/configure-android-enterprise-devices-intune/configure-android-enterprise-devices-in-intune-20.jpg" alt-text="Enroll now screen.":::
 
 2. On the **Access Setup** screen, tap **Continue**.
 
-    :::image type="content" source="media/configure-android/configure-android-enterprise-devices-in-intune-21.jpg" alt-text="Access Setup screen.":::
+    :::image type="content" source="media/configure-android-enterprise-devices-intune/configure-android-enterprise-devices-in-intune-21.jpg" alt-text="Access Setup screen.":::
 
 3. On the privacy statement screen, tap **Continue**.
 
-    :::image type="content" source="media/configure-android/configure-android-enterprise-devices-in-intune-22.jpg" alt-text="Privacy screen.":::
+    :::image type="content" source="media/configure-android-enterprise-devices-intune/configure-android-enterprise-devices-in-intune-22.jpg" alt-text="Privacy screen.":::
 
 4. On the **What's next** screen, tap **Next**.
 
-    :::image type="content" source="media/configure-android/configure-android-enterprise-devices-in-intune-23.jpg" alt-text="What's next screen.":::
+    :::image type="content" source="media/configure-android-enterprise-devices-intune/configure-android-enterprise-devices-in-intune-23.jpg" alt-text="What's next screen.":::
 
 5. On the **Set up a work profile** screen, tap **Accept**.
 
-    :::image type="content" source="media/configure-android/configure-android-enterprise-devices-in-intune-24.jpg" alt-text="Set up a work profile screen.":::
+    :::image type="content" source="media/configure-android-enterprise-devices-intune/configure-android-enterprise-devices-in-intune-24.jpg" alt-text="Set up a work profile screen.":::
 
 6. On the **Activate work profile** screen, tap **Continue**.
 
-    :::image type="content" source="media/configure-android/configure-android-enterprise-devices-in-intune-25.jpg" alt-text="Activate work profile screen.":::
+    :::image type="content" source="media/configure-android-enterprise-devices-intune/configure-android-enterprise-devices-in-intune-25.jpg" alt-text="Activate work profile screen.":::
 
     > [!NOTE] 
     > You can see a badge icon at the top, which means that you're now inside the work profile.
 
 7. On the **You're all set** screen, tap **Done**.
 
-    :::image type="content" source="media/configure-android/configure-android-enterprise-devices-in-intune-26.jpg" alt-text="You're all set screen.":::
+    :::image type="content" source="media/configure-android-enterprise-devices-intune/configure-android-enterprise-devices-in-intune-26.jpg" alt-text="You're all set screen.":::
 
 8. You can now sign in to Gmail. When you are prompted to update security settings, tap **UPDATE NOW**.
 
-    :::image type="content" source="media/configure-android/configure-android-enterprise-devices-in-intune-27.jpg" alt-text="Security update screen.":::
+    :::image type="content" source="media/configure-android-enterprise-devices-intune/configure-android-enterprise-devices-in-intune-27.jpg" alt-text="Security update screen.":::
 
 9. Tap **Activate** to activate Gmail as Device Administrator.
 
-    :::image type="content" source="media/configure-android/configure-android-enterprise-devices-in-intune-28.jpg" alt-text="Device administrator screen.":::
+    :::image type="content" source="media/configure-android-enterprise-devices-intune/configure-android-enterprise-devices-in-intune-28.jpg" alt-text="Device administrator screen.":::
 
  
-For more information, see [Enroll Android devices](https://docs.microsoft.com/intune/enrollment/android-enroll). 
+For more information, see [Enroll Android devices](/mem/intune/enrollment/android-enroll). 
 
 ## Reset Android work profile passcodes
 
 To do this, follow these steps:
 
-1.    Create a device profile that requires a work profile passcode by following these steps: 
+1. Create a device profile that requires a work profile passcode by following these steps: 
 
-      1. In the Intune Azure portal, select **Device configuration** > **Profiles** > **Create profile**, enter **Name** and **Description** for the profile.
-      2. Select **Android enterprise** from the **Platform** drop-down list.
-      3. In **Profile Type** > **Work Profile Only**, select **Device Restrictions**.
-      4. In **Work profile settings**, select **Require** in **Require Work Profile Password**.
+    1. In the Intune Azure portal, select **Device configuration** > **Profiles** > **Create profile**, enter **Name** and **Description** for the profile.
+    2. Select **Android enterprise** from the **Platform** drop-down list.
+    3. In **Profile Type** > **Work Profile Only**, select **Device Restrictions**.
+    4. In **Work profile settings**, select **Require** in **Require Work Profile Password**.
 
-          :::image type="content" source="media/configure-android/configure-android-enterprise-devices-in-intune-29.jpg" alt-text="Work Profile properties.":::
+       :::image type="content" source="media/configure-android-enterprise-devices-intune/configure-android-enterprise-devices-in-intune-29.jpg" alt-text="Work Profile properties.":::
 
 2. On the Android enterprise device, you will be prompted to set a work profile passcode if you haven't set one.
 
 3. Wait until you receive a second prompt that says "Secure your Work Profile - Authorize your company support to remotely reset your work profile password". Enter your passcode to authorize reset. This activates the reset password token that Intune needs to perform this action successfully.
 
-    :::image type="content" source="media/configure-android/configure-android-enterprise-devices-in-intune-30.jpg" alt-text="Secure your work profile screen.":::
+    :::image type="content" source="media/configure-android-enterprise-devices-intune/configure-android-enterprise-devices-in-intune-30.jpg" alt-text="Secure your work profile screen.":::
 
     > [!NOTE] 
-    > If you skip any of these steps, you will receive the following error message: <br/>
-` Initiating Reset passcode failed`
+    > If you skip any of these steps, you will receive the following error message:  
+    > **Initiating Reset passcode failed**
 
 4. Select **Reset passcode**.
 
-    :::image type="content" source="media/configure-android/configure-android-enterprise-devices-in-intune-31.jpg" alt-text="Reset passcode screen.":::
+    :::image type="content" source="media/configure-android-enterprise-devices-intune/configure-android-enterprise-devices-in-intune-31.jpg" alt-text="Reset passcode screen.":::
 
 5. After reset is completed, the temporary passcode is displayed.
 
-    :::image type="content" source="media/configure-android/configure-android-enterprise-devices-in-intune-32.jpg" alt-text="Reset passcode completed screen.":::
+    :::image type="content" source="media/configure-android-enterprise-devices-intune/configure-android-enterprise-devices-in-intune-32.jpg" alt-text="Reset passcode completed screen.":::
 
 6. Enter this temporary passcode on your device.
 
 7. When you're required to set your new PIN, you must re-enter this temporary passcode, and then enter your new PIN.
 
-For more information about passcode reset, see [Reset Android work profile passcodes](https://docs.microsoft.com/intune/device-passcode-reset#reset-android-work-profile-passcodes).
+For more information about passcode reset, see [Reset Android work profile passcodes](/mem/intune/remote-actions/device-passcode-reset#reset-android-work-profile-passcodes).
 
 ## Frequently asked questions
 
-- **Question**: Why are apps that I unapproved from the Google Play for Work store not being removed from the Mobile Apps page in the Intune Admin Portal?<br/>
+- **Question**: Why are apps that I unapproved from the Google Play for Work store not being removed from the Mobile Apps page in the Intune Admin Portal?  
 **Answer**: This is expected behavior.
 
-- **Question**: Why are managed Google Play apps not reporting under the Discovered Apps blade in the Intune portal?<br/>
+- **Question**: Why are managed Google Play apps not reporting under the Discovered Apps blade in the Intune portal?  
 **Answer**: This is expected behavior.
 
-- **Question**: Why are managed Google Play apps that aren't deployed through Intune displayed in the work profile?<br/>
+- **Question**: Why are managed Google Play apps that aren't deployed through Intune displayed in the work profile?  
 **Answer**: System apps can be enabled in the work profile by the device OEM at the time that the work profile is created. This isn't controlled by the MDM provider.
 
    To troubleshoot, follow these steps: 
 
-   1.    Collect Company Portal logs.
-
+   1. Collect Company Portal logs.
    2. Note any apps that appear unexpectedly in the work profile.
+   3. Unenroll the device from Intune and uninstall the Company Portal.
+   4. Install the [Test DPC](https://play.google.com/store/apps/details?id=com.afwsamples.testdpc) app which allows creation of a work profile without an EMM for testing.
+   5. Follow the instructions in [Test DPC](https://play.google.com/store/apps/details?id=com.afwsamples.testdpc) to create a work profile on the device.
+   6. Review apps that appear in the work profile.   
+   7. If the same applications show in the Test DPC app, the apps are expected by the OEM for that device.
 
-   3.    Unenroll the device from Intune and uninstall the Company Portal.
-
-   4.    Install the [Test DPC](https://play.google.com/store/apps/details?id=com.afwsamples.testdpc) app which allows creation of a work profile without an EMM for testing.
-
-   5.    Follow the instructions in [Test DPC](https://play.google.com/store/apps/details?id=com.afwsamples.testdpc) to create a work profile on the device.
-
-   6.    Review apps that appear in the work profile. 
-   
-   7.    If the same applications show in the Test DPC app, the apps are expected by the OEM for that device.
-
-- **Question**: Why is the Wipe (Factory Reset) option not available for my work profile enrolled device?<br/>
+- **Question**: Why is the Wipe (Factory Reset) option not available for my work profile enrolled device?  
 **Answer**: This is expected behavior. In the work profile scenario, the MDM provider doesn't have full control over the device. The only option available is Retire (Remove Company Data) which removes the whole work profile and all its contents.
 
-- **Question**: Why can't I find file path Internal storage/Android/Data.com.microsoft.windowsintune.companyportal/files on my work profile enrolled device to manually collect Company Portal Logs?<br/>
+- **Question**: Why can't I find file path Internal storage/Android/Data.com.microsoft.windowsintune.companyportal/files on my work profile enrolled device to manually collect Company Portal Logs?  
 **Answer**: This is expected behavior. This path is only created for the Device Admin (Legacy Android Enrollment) scenario.
 
    To collect logs, follow these steps: 
    
-   1.    In the Company Portal app with the badge, tap **Menu** > **Help** > **Email Support**, and then tap **Send Email & Upload logs**. 
- 
-   2.    When you are prompted **Send help request with**, select one of the Email apps.
-   
-   3.    An email is generated to your IT admin with an incident ID that can be provided to Microsoft product support.
+   1. In the Company Portal app with the badge, tap **Menu** > **Help** > **Email Support**, and then tap **Send Email & Upload logs**. 
+   2. When you are prompted **Send help request with**, select one of the Email apps.   
+   3. An email is generated to your IT admin with an incident ID that can be provided to Microsoft product support.
 
-- **Question**: I checked the Managed Google Play Last Sync time and it hasn't been updated in days. Why?<br/>
+- **Question**: I checked the Managed Google Play Last Sync time and it hasn't been updated in days. Why?  
 **Answer**: This is expected behavior. The sync is only triggered when you manually do so.
 
-- **Question**: Are Web Applications supported for work profile-enrolled devices?<br/>
+- **Question**: Are Web Applications supported for work profile-enrolled devices?  
 **Answer**: Yes. Web apps (or web links) are supported for all Android Enterprise scenarios.
 
-- **Question**: Is the device passcode reset-supported?<br/>
+- **Question**: Is the device passcode reset-supported?  
 **Answer**: For work profile-enrolled devices, you can reset the work profile passcode only on devices that are running Android 8.0+ if the work profile passcode is managed and the user has allowed you to reset it. For dedicated and Fully Managed devices, device passcode reset is supported.
 
-- **Question**: My device is required to be encrypted upon enrollment. Is there an option to turn off encryption?<br/>
+- **Question**: My device is required to be encrypted upon enrollment. Is there an option to turn off encryption?  
 **Answer**: No. Encryption is required by Google for the work profile. 
 
-- **Question**:  Why are Samsung devices blocking the use of third-party keyboards like SwiftKey?<br/>
+- **Question**:  Why are Samsung devices blocking the use of third-party keyboards like SwiftKey?  
 **Answer**: Samsung began enforcing this on Android 8.0+ devices. Microsoft is currently working with Samsung on this issue and will post new information when it's available.
-
-## Next steps
-
-
-
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

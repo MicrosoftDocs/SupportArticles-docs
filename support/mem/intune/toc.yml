@@ -66,8 +66,6 @@
   items:
   - name: 2016341112 -iOS device is currently busy
     href: 2016341112-ios-device-is-currently-busy.md
-  - name: Configure Android enterprise devices for Intune
-    href: /mem/intune/configure-android-enterprise-devices-intune.md
   - name: Connectivity issues due to root certificates
     href: fix-connectivity-issues.md
   - name: Device configuration profile error 2016281112
@@ -98,6 +96,8 @@
   items:
   - name: Android enrollment
     items:
+    - name: End-to-end guide for configuring Android enterprise devices
+      href: configure-android-enterprise-devices-intune.md
     - name: Device ownership is changed to Corporate
       href: device-ownership-changed-to-corporate.md
   - name: Can't update enrollment
