@@ -96,6 +96,8 @@
   items:
   - name: Android enrollment
     items:
+    - name: End-to-end guide for configuring Android enterprise devices
+      href: configure-android-enterprise-devices-intune.md
     - name: Device ownership is changed to Corporate
       href: device-ownership-changed-to-corporate.md
   - name: Can't update enrollment
