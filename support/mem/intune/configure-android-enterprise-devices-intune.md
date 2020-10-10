@@ -49,9 +49,9 @@ There are two options for corporate-owned devices, and each of them serves a uni
 - **Fully managed devices** (formerly known as COBO, or Corporate Owned Business Only). 
 
    > [!NOTE]
-   > For more information about Fully Managed devices, see [Set up Intune enrollment of Android Enterprise fully managed devices](/mem/intune/enrollment/android-fully-managed-enroll).
+   > For more information about fully managed devices, see [Set up Intune enrollment of Android Enterprise fully managed devices](/mem/intune/enrollment/android-fully-managed-enroll).
 
-   Fully Managed devices fit into a more user-centric scenario. A single user is associated with the device while the admin still retains full control over the device (as opposed to a work-profile scenario, in which multiple users have control).
+   Fully managed devices fit into a more user-centric scenario. A single user is associated with the device while the admin still retains full control over the device (as opposed to a work-profile scenario, in which multiple users have control).
 
 When you decide how to enroll your devices, be aware that not all features are available for both methods. The following table shows some key differences.
 
@@ -155,7 +155,7 @@ After your Intune account is connected to your Android enterprise account, you c
 
     :::image type="content" source="media/configure-android-enterprise-devices-intune/configure-android-enterprise-devices-in-intune-9.png" alt-text="Go to Apps and then select All Apps.":::
 
-13. To assign the app to a group, select the app that you want to assign. In the **Manage** section of the menu, select **Properties**, and then select to **Edit** next to **Assignments** to open the **Add group** pane.
+13. To assign the app to a group, select the app that you want to assign. In the **Manage** section of the menu, select **Properties**, and then select **Edit** next to **Assignments** to open the **Add group** pane.
 
     :::image type="content" source="media/configure-android-enterprise-devices-intune/configure-android-enterprise-devices-in-intune-10.png" alt-text="Select Properties and then Assignments.":::
 
@@ -213,10 +213,7 @@ For more information, see [Set up Conditional Access for Android work profile de
 
 ## Enroll your Android enterprise device
 
-To do this, follow these steps:
-
 1. Sign in with your work account, and then tap **Enroll now**.
-
 
     :::image type="content" source="media/configure-android-enterprise-devices-intune/configure-android-enterprise-devices-in-intune-20.jpg" alt-text="Enroll now screen.":::
 
@@ -260,8 +257,6 @@ For more information, see [Enroll Android devices](/mem/intune/enrollment/androi
 
 ## Reset Android work profile passcodes
 
-To do this, follow these steps:
-
 1. Create a device profile that requires a work profile passcode by following these steps: 
 
     1. In the Intune Azure portal, select **Device configuration** > **Profiles** > **Create profile**, enter **Name** and **Description** for the profile.
@@ -297,48 +292,58 @@ For more information about passcode reset, see [Reset Android work profile passc
 
 ## Frequently asked questions
 
-- **Question**: Why are apps that I unapproved from the Google Play for Work store not being removed from the Mobile Apps page in the Intune Admin Portal?  
-**Answer**: This behavior is expected.
+- **Question**: Why are apps that I unapproved from the Google Play for Work store not being removed from the Mobile Apps page in the Intune Admin Portal?
 
-- **Question**: Why are managed Google Play apps not reporting under **Discovered Apps** in the Intune portal?  
-**Answer**: This behavior is expected.
+  **Answer**: This behavior is expected.
 
-- **Question**: Why are managed Google Play apps that aren't deployed through Intune displayed in the work profile?  
-**Answer**: System apps can be enabled in the work profile by the device OEM at the time that the work profile is created. It isn't controlled by the MDM provider.
+- **Question**: Why are managed Google Play apps not reporting under **Discovered Apps** in the Intune portal?
 
-   To troubleshoot, follow these steps: 
+  **Answer**: This behavior is expected.
 
-   1. Collect Company Portal logs.
-   2. Note any apps that appear unexpectedly in the work profile.
-   3. Unenroll the device from Intune and uninstall the Company Portal.
-   4. Install the [Test DPC](https://play.google.com/store/apps/details?id=com.afwsamples.testdpc) app that allows creation of a work profile without an EMM for testing.
-   5. Follow the instructions in [Test DPC](https://play.google.com/store/apps/details?id=com.afwsamples.testdpc) to create a work profile on the device.
-   6. Review apps that appear in the work profile.   
-   7. If the same applications show in the Test DPC app, the apps are expected by the OEM for that device.
+- **Question**: Why are managed Google Play apps that aren't deployed through Intune displayed in the work profile?
 
-- **Question**: Why is the Wipe (Factory Reset) option not available for my work profile enrolled device?  
-**Answer**: This behavior is expected. In the work profile scenario, the MDM provider doesn't have full control over the device. The only option available is Retire (Remove Company Data) which removes the whole work profile and all its contents.
+  **Answer**: System apps can be enabled in the work profile by the device OEM at the time that the work profile is created. It isn't controlled by the MDM provider.
 
-- **Question**: Why can't I find file path Internal storage/Android/Data.com.microsoft.windowsintune.companyportal/files on my work profile enrolled device to manually collect Company Portal Logs?  
-**Answer**: This behavior is expected. This path is only created for the Device Admin (Legacy Android Enrollment) scenario.
+  To troubleshoot, follow these steps: 
 
-   To collect logs, follow these steps: 
+  1. Collect Company Portal logs.
+  2. Note any apps that appear unexpectedly in the work profile.
+  3. Unenroll the device from Intune and uninstall the Company Portal.
+  4. Install the [Test DPC](https://play.google.com/store/apps/details?id=com.afwsamples.testdpc) app that allows creation of a work profile without an EMM for testing.
+  5. Follow the instructions in [Test DPC](https://play.google.com/store/apps/details?id=com.afwsamples.testdpc) to create a work profile on the device.
+  6. Review apps that appear in the work profile.   
+  7. If the same applications show in the Test DPC app, the apps are expected by the OEM for that device.
+
+- **Question**: Why is the Wipe (Factory Reset) option not available for my work profile enrolled device?
+
+  **Answer**: This behavior is expected. In the work profile scenario, the MDM provider doesn't have full control over the device. The only option available is Retire (Remove Company Data) which removes the whole work profile and all its contents.
+
+- **Question**: Why can't I find file path Internal storage/Android/Data.com.microsoft.windowsintune.companyportal/files on my work profile enrolled device to manually collect Company Portal Logs?
+
+  **Answer**: This behavior is expected. This path is only created for the Device Admin (Legacy Android Enrollment) scenario.
+
+  To collect logs, follow these steps: 
    
-   1. In the Company Portal app with the badge, tap **Menu** > **Help** > **Email Support**, and then tap **Send Email & Upload logs**. 
-   2. When you are prompted with **Send help request with**, select one of the Email apps.   
-   3. An email is generated to your IT admin with an incident ID that can be provided to Microsoft product support.
+  1. In the Company Portal app with the badge, tap **Menu** > **Help** > **Email Support**, and then tap **Send Email & Upload logs**. 
+  2. When you are prompted with **Send help request with**, select one of the Email apps.   
+  3. An email is generated to your IT admin with an incident ID that can be provided to Microsoft product support.
 
-- **Question**: I checked the Managed Google Play Last Sync time and it hasn't been updated in days. Why?  
-**Answer**: This behavior is expected. The sync is only triggered when you manually do so.
+- **Question**: I checked the Managed Google Play Last Sync time and it hasn't been updated in days. Why?
 
-- **Question**: Are Web Applications supported for work profile-enrolled devices?  
-**Answer**: Yes. Web apps (or web links) are supported for all Android Enterprise scenarios.
+  **Answer**: This behavior is expected. The sync is only triggered when you manually do so.
 
-- **Question**: Is the device passcode reset-supported?  
-**Answer**: For work profile-enrolled devices, you can reset the work profile passcode only on devices that are running Android 8.0+ if the work profile passcode is managed and the user has allowed you to reset it. For dedicated and Fully Managed devices, device passcode reset is supported.
+- **Question**: Are Web Applications supported for work profile-enrolled devices?
 
-- **Question**: My device is required to be encrypted upon enrollment. Is there an option to turn off encryption?  
-**Answer**: No. Encryption is required by Google for the work profile. 
+  **Answer**: Yes. Web apps (or web links) are supported for all Android Enterprise scenarios.
 
-- **Question**:  Why are Samsung devices blocking the use of third-party keyboards like SwiftKey?  
-**Answer**: Samsung began enforcing this on Android 8.0+ devices. Microsoft is currently working with Samsung on this issue and will post new information when it's available.
+- **Question**: Is the device passcode reset supported?
+
+  **Answer**: For work profile-enrolled devices, you can reset the work profile passcode only on devices that are running Android 8.0+ if the work profile passcode is managed and the user has allowed you to reset it. For dedicated and fully managed devices, device passcode reset is supported.
+
+- **Question**: My device is required to be encrypted upon enrollment. Is there an option to turn off encryption?
+
+  **Answer**: No. Encryption is required by Google for the work profile. 
+
+- **Question**:  Why are Samsung devices blocking the use of third-party keyboards like SwiftKey?
+
+  **Answer**: Samsung began enforcing this on Android 8.0+ devices. Microsoft is currently working with Samsung on this issue and will post new information when it's available.
