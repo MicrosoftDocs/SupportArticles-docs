@@ -64,7 +64,7 @@ The following resources can help you get started with some of the more advanced 
 
 - How to recover deleted email messages in Exchange Online
 
-  [Recover deleted items in a user mailbox](/microsoft-365/enterprise/recover-deleted-items-in-a-mailbox?view=o365-worldwide)
+  [Recover deleted items in a user mailbox](/microsoft-365/enterprise/recover-deleted-items-in-a-mailbox?view=o365-worldwide&preserve-view=true)
 
 - How to recover deleted items from any folder
 
@@ -72,7 +72,7 @@ The following resources can help you get started with some of the more advanced 
 
 - How to set up a shared mailbox
 
-  [Configure shared mailbox settings](/microsoft-365/admin/email/configure-a-shared-mailbox?view=o365-worldwide)
+  [Configure shared mailbox settings](/microsoft-365/admin/email/configure-a-shared-mailbox?view=o365-worldwide&preserve-view=true)
 
 - How to configure a delegate to manage your mail and calendar
 

@@ -64,7 +64,7 @@ Use the steps below to create a new Outlook profile.
     > [!NOTE]
     > If you have more than one version of Outlook installed you may see two icons labeled **Mail** in Control Panel, as shown in the following figure.
 
-    :::image type="content" source="media/outlook-2013-crashes-in-kernelbase-dll/two-icons-labeled-mail-in-control-panel.jpg" alt-text="two icons labeled Mail in Control Panel":::
+    :::image type="content" source="media/outlook-2013-crashes-in-kernelbase-dll/two-icons-labeled-mail-in-control-panel.jpg" alt-text="two icons labeled Mail in Control Panel 1":::
 
 5. Select **Show Profiles**, and select **Add**.
 6. Enter a name for the new profile and select **OK**.
@@ -104,7 +104,7 @@ If you have one or more pst files in your profile, you can use the following ste
     > [!NOTE]
     > If you have more than one version of Outlook installed you may see two icons labeled **Mail** in Control Panel, as shown in the following figure.
 
-    :::image type="content" source="media/outlook-2013-crashes-in-kernelbase-dll/two-icons-labeled-mail-in-control-panel.jpg" alt-text="two icons labeled Mail in Control Panel":::
+    :::image type="content" source="media/outlook-2013-crashes-in-kernelbase-dll/two-icons-labeled-mail-in-control-panel.jpg" alt-text="two icons labeled Mail in Control Panel 2":::
 
     In this situation, double-click the icon for the version of Outlook that is crashing.
 
@@ -142,7 +142,7 @@ If you have one or more pst files in your profile, you can use the following ste
     > [!NOTE]
     > If you have more than one version of Outlook installed you may see two icons labeled **Mail** in Control Panel, as shown in the following figure.
 
-    :::image type="content" source="media/outlook-2013-crashes-in-kernelbase-dll/two-icons-labeled-mail-in-control-panel.jpg" alt-text="two icons labeled Mail in Control Panel":::
+    :::image type="content" source="media/outlook-2013-crashes-in-kernelbase-dll/two-icons-labeled-mail-in-control-panel.jpg" alt-text="two icons labeled Mail in Control Panel 3":::
 
     In this situation, double-click the icon for the version of Outlook that is crashing
 
@@ -178,4 +178,4 @@ You can use the following steps to review the Application event log:
 4. In the **Actions** pane, select **Filter Current Log**.
 5. In the **Filter Current Log** dialog box, enter *1000* (as shown in the following figure) and then select **OK**.
 
-   :::image type="content" source="media/outlook-2013-crashes-in-kernelbase-dll/enter-1000-into-task-category.jpg" alt-text="two icons labeled Mail in Control Panel":::
+   :::image type="content" source="media/outlook-2013-crashes-in-kernelbase-dll/enter-1000-into-task-category.jpg" alt-text="two icons labeled Mail in Control Panel 4":::

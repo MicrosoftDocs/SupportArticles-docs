@@ -31,7 +31,7 @@ Follow these steps to repair your Outlook personal folder file (.pst) by using I
 
 Start the Inbox Repair tool (Scanpst.exe). Then select **Open** or **Run** in the **File Download** dialog box, and follow the steps in the easy fix wizard.
 
-Once the Inbox Repair tool is started, continue with [Step 2](#step-2---repair-the-.pst-file). (Can't start the Inbox Repair tool?)
+Once the Inbox Repair tool is started, continue with [Step 2](#step-2-repair-the-pst-file). (Can't start the Inbox Repair tool?)
 
 ### Manually start the Inbox Repair tool
 
@@ -78,7 +78,7 @@ In the Inbox Repair tool, type the path and the file name of your personal folde
 
 ## Step 3 - Recover repaired items to a new .pst file
 
-After you run the Inbox Repair tool, you can start Outlook and recover repaired items. Optionally, you can try to [recover additional repaired items from the backup personal folder](#recover-repaired-items-from-the-backup-file-(optional)).
+After you run the Inbox Repair tool, you can start Outlook and recover repaired items. Optionally, you can try to [recover additional repaired items from the backup personal folder](#recover-repaired-items-from-the-backup-file-optional).
 
 To start, create a new Personal Folders (.pst) file entry in your profile. Then, you can move the recovered items to your new Personal Folders (.pst) file.
 
@@ -140,7 +140,7 @@ To start, create a new Personal Folders (.pst) file entry in your profile. Then,
 
 5. Drag the recovered items from the Lost and Found folder to your new Personal Folders (.pst) file.
 6. When you have finished moving all items, you can remove the Recovered Personal Folders (.pst) file from your profile. This includes the Lost and Found folder.
-7. If you are satisfied with the information that you recovered, you are finished. However, if you want to try to recover additional information, go to the [Recover repaired items from the backup file (Optional)](#recover-repaired-items-from-the-backup-file-(optional)) section.
+7. If you are satisfied with the information that you recovered, you are finished. However, if you want to try to recover additional information, go to the [Recover repaired items from the backup file (Optional)](#recover-repaired-items-from-the-backup-file-optional) section.
 
 ## What is the Inbox Repair tool
 

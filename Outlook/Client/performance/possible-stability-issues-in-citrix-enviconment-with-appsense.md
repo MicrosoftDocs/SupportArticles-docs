@@ -56,4 +56,4 @@ If you are experiencing one or more of the above symptoms in a Citrix environmen
 
 If your version is lower than the version listed under Fixed EM version in the above table, see [AppSense Web site](http://www.myappsense.com/) (registration required) to install the latest available version of the AppSense Environment Manager.
 
-[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-contact-disclaimer.md)]

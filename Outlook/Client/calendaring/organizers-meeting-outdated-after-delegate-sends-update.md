@@ -2,6 +2,7 @@
 title: Organizer's meeting outdated after delegate sends update
 description: Issue causes an organizer's meeting to remain outdated after a delegate sends an update on their behalf. 
 ms.author: v-six
+author: simonxjx
 manager: dcscontentpm
 audience: ITPro
 ms.topic: article

@@ -212,7 +212,7 @@
     - name: How to repair personal folder file (.pst)
       href: ../data-files/how-to-repair-personal-folder-file.md
     - name: Inbox Repair tool (Scanpst.exe) can run multiple passes
-      href: ../data-files/attachment-saving-scenarios-do-not-work-as-expecte.md
+      href: ../data-files/inbox-repair-tool-scanpst-exe-run-multiple-passes.md
     - name: Limits to using .pst files over LAN and WAN links
       href: ../data-files/limits-using-pst-files-over-lan-wan.md
     - name: Only some emails are synchronized

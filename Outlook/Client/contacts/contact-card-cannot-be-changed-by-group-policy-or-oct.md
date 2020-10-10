@@ -302,8 +302,8 @@ To display a Contact Card on a SharePoint site, follow these steps:
 
 2. Rest the pointer over the **Presence** icon (Screenshots for this step is listed below).
 
-   :::image type="content" source="media/contact-card-cannot-be-changed-by-group-policy-or-oct/show-contact-card-using-on-sharepoint-site.png" alt-text="Screenshot for showing a contact card on a SharePoint site" border="false":::
+   :::image type="content" source="media/contact-card-cannot-be-changed-by-group-policy-or-oct/show-contact-card-using-on-sharepoint-site.png" alt-text="Screenshot 1 for showing a contact card on a SharePoint site" border="false":::
 
     The Contact Card is displayed after a brief pause.
 
-    :::image type="content" source="media/contact-card-cannot-be-changed-by-group-policy-or-oct/show-contact-card.png" alt-text="Screenshot for showing a contact card on a SharePoint site" border="false":::
+    :::image type="content" source="media/contact-card-cannot-be-changed-by-group-policy-or-oct/show-contact-card.png" alt-text="Screenshot 2 for showing a contact card on a SharePoint site" border="false":::

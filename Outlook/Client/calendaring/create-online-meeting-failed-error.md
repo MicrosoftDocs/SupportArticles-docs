@@ -27,13 +27,13 @@ Outlook 2010
 
 Create online meeting failed. Please make sure that Lync is running and signed-in and try again.
 
-:::image type="content" source="media/create-online-meeting-failed-error/error-1.png" alt-text="error details." border="false":::
+:::image type="content" source="media/create-online-meeting-failed-error/error-1.png" alt-text="error details" border="false":::
 
 Outlook 2013
 
 Create Lync Meeting failed. Please make sure that Microsoft Lync is running and signed-in and try again.
 
-:::image type="content" source="media/create-online-meeting-failed-error/error-2.png" alt-text="error details." border="false":::
+:::image type="content" source="media/create-online-meeting-failed-error/error-2.png" alt-text="error details 2" border="false":::
 
 ## Cause
 

@@ -29,13 +29,13 @@ In Microsoft Outlook 2010 or Outlook 2013, images are not displayed in some emai
 
 > Right-click here to download pictures. To help protect your privacy, Outlook prevented automatic download of this picture from the Internet.
 
-:::image type="content" source="media/the-linked-image-cannot-be-displayed-error/error-1.png" alt-text="error details":::
+:::image type="content" source="media/the-linked-image-cannot-be-displayed-error/error-1.png" alt-text="error details 1":::
 
 Additionally, when you right-click the image and select **Download Pictures**, the following error is displayed instead of the original text:
 
 > The linked image cannot be displayed. The file may have been moved, renamed, or deleted. Verify that the link points to the correct file and location.
 
-:::image type="content" source="media/the-linked-image-cannot-be-displayed-error/error-2.png" alt-text="error details":::
+:::image type="content" source="media/the-linked-image-cannot-be-displayed-error/error-2.png" alt-text="error details 2":::
 
 ## Cause
 

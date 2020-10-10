@@ -76,4 +76,4 @@ To do this, follow these steps:
 8. Start your IM client.
 9. Start Outlook.
 
-[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-contact-disclaimer.md)]

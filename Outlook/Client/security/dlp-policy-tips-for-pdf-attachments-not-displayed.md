@@ -63,6 +63,6 @@ If you use a third-party iFilter, add the `TecDisableHardMemoryLimit` subkey to 
 
 For more information about Foxit iFilter and Tracker iFilter, see [Foxit iFilter](https://www.foxitsoftware.com/) and [PDF-XChange Shell Extensions and iFilter](https://www.tracker-software.com/shell_ext.html).
 
-[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
 Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.

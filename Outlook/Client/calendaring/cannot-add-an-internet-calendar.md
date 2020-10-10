@@ -58,4 +58,4 @@ When you add the Internet calendar by using OWA, the server that's running Excha
 
 The calendar that's added from OWA does not appear in the Outlook desktop application as an Internet calendar. Instead, it is displayed as a calendar entry in the **Other Calendars** group. Because no subscription information is handled or controlled by the Outlook desktop application, you don't have to configure any client-side Internet calendar options for the calendar that's added through OWA.
 
-[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-contact-disclaimer.md)]

@@ -63,4 +63,4 @@ IMAP: 11:40:24 [rx] wk2e OK [READ-WRITE] SELECT completed.
 IMAP: 11:40:24 [tx] tbqs UID SEARCH SINCE 13-Dec-2016  
 IMAP: 11:41:17 [db] Connection to 'IP address' closed.  
 
-[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-contact-disclaimer.md)]

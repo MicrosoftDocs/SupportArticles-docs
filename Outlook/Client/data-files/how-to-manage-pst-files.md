@@ -85,7 +85,7 @@ Follow these steps to back up the whole .pst file:
     >
     > - If you have more than one Personal Folders Service in your profile, you must back up each set of .pst files separately.
     > - If there are no entries called **Personal Folders** and you have not yet stored any information such as messages, contacts, or appointments in Outlook, you probably have not yet enabled the Personal Folders Service. Move to the "References" section for information about how to create a .pst file.
-    > - If you have no **Personal Folders Services** in your profile and you can store information such as messages, contacts, or appointments in Outlook, your information is probably being stored in a mailbox on an Exchange Server. Try using the instructions in the [How to back up .pst file data that is located on a Microsoft Exchange Server](#how-to-back-up-.pst-file-data-that-is-located-on-a-microsoft-exchange-server) section.
+    > - If you have no **Personal Folders Services** in your profile and you can store information such as messages, contacts, or appointments in Outlook, your information is probably being stored in a mailbox on an Exchange Server. Try using the instructions in the [How to back up .pst file data that is located on a Microsoft Exchange Server](#how-to-back-up-pst-file-data-that-is-located-on-a-microsoft-exchange-server) section.
 
 8. Select **Settings**, and then note the path and file name that appears.
 
@@ -111,7 +111,7 @@ Follow these steps to find where Outlook is currently storing your data:
 > [!NOTE]
 >
 > - If the **Location** field contains the word **Online** or a path to a file that has the file name extension .ost, Outlook stores data in folders on the Exchange Server. Contact the Exchange Server administrator for more information about how backups are handled.
-> - If the **Location** field contains a path to a file that has the file name extension .pst, Outlook stores new messages, contacts, appointments, and other data in a .pst file on your hard disk. To back up the data, see the [How to make a backup copy of a .pst file](#how-to-make-a-backup-copy-of-a-.pst-file) section.
+> - If the **Location** field contains a path to a file that has the file name extension .pst, Outlook stores new messages, contacts, appointments, and other data in a .pst file on your hard disk. To back up the data, see the [How to make a backup copy of a .pst file](#how-to-make-a-backup-copy-of-a-pst-file) section.
 
 **In Outlook 2007:**  
 
@@ -135,7 +135,7 @@ Follow these steps to find where Outlook is currently storing your data:
 3. Look at the Deliver new email to the following location option. If the option contains the word **Mailbox** followed by an email name, Outlook stores data in folders on the Exchange Server. Contact the Exchange Server administrator for more information about how backups are handled.
 
 > [!NOTE]
-> If the field contains the words **Personal Folder** or the name of a set of personal folders or .pst files, Outlook stores new messages, contacts, appointments, and other data in a .pst file on your hard disk. To back up the data, go to the [How to make a backup copy of a .pst file](#how-to-make-a-backup-copy-of-a-.pst-file) section.  
+> If the field contains the words **Personal Folder** or the name of a set of personal folders or .pst files, Outlook stores new messages, contacts, appointments, and other data in a .pst file on your hard disk. To back up the data, go to the [How to make a backup copy of a .pst file](#how-to-make-a-backup-copy-of-a-pst-file) section.  
 
 ### How to export .pst file data
 
@@ -244,9 +244,9 @@ You might also want to create a new, secondary .pst file that is intended for tr
 
 **Follow these steps to copy an existing .pst file:**
 
-1. Use the instructions in the [How to make a backup copy of a .pst file](#how-to-make-a-backup-copy-of-a-.pst-file) section to make a backup copy of the .pst file that you want to transfer. Make sure that you copy the backup .pst file to a CD-ROM or to another kind of removable media.
+1. Use the instructions in the [How to make a backup copy of a .pst file](#how-to-make-a-backup-copy-of-a-pst-file) section to make a backup copy of the .pst file that you want to transfer. Make sure that you copy the backup .pst file to a CD-ROM or to another kind of removable media.
 2. Copy the backup .pst file from the removable media to the second computer.
-3. Follow the steps in the [How to import .pst file data into Outlook](#how-to-import-.pst-file-data-into-outlook) section to import the .pst file data into Outlook on the second computer.
+3. Follow the steps in the [How to import .pst file data into Outlook](#how-to-import-pst-file-data-into-outlook) section to import the .pst file data into Outlook on the second computer.
 
 ### How to back up Personal Address Books
 

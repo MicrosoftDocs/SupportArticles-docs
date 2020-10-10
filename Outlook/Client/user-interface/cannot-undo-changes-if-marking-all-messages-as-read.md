@@ -1,6 +1,6 @@
 ---
 title: Cannot undo changes if all messages marked as read
-description: 
+description: Fixes an issue in which you cannot undo the changes if you inadvertently select all messages in a folder to be marked as read.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm

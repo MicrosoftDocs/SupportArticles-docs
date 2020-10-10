@@ -33,11 +33,11 @@ An Internet Engineering Task Force (IETF) standard called iCal, is the basis for
 
 This article discusses the following information:
 
-- [How to publish free/busy information to the Internet](#how-to-publish-free/busy-information-to-the-internet)
-- [How to view other people's free/busy information on the Internet](#how-to-view-other-people's-free/busy-information-on-the-internet)
-- [How to set the global free/busy search path for all contacts](#how-to-set-the-global-free/busy-search-path-for-all-contacts)
-- [How to set the free/busy search path for a specific contact](#how-to-set-the-free/busy-search-path-for-a-specific-contact)
-- [How to plan a meeting using Internet free/busy information](#how-to-plan-a-meeting-using-internet-free/busy-information)
+- [How to publish free/busy information to the Internet](#how-to-publish-freebusy-information-to-the-internet)
+- [How to view other people's free/busy information on the Internet](#how-to-view-other-peoples-freebusy-information-on-the-internet)
+- [How to set the global free/busy search path for all contacts](#how-to-set-the-global-freebusy-search-path-for-all-contacts)
+- [How to set the free/busy search path for a specific contact](#how-to-set-the-freebusy-search-path-for-a-specific-contact)
+- [How to plan a meeting using Internet free/busy information](#how-to-plan-a-meeting-using-internet-freebusy-information)
 
 ## How to Publish free/busy information to the Internet
 

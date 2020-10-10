@@ -41,14 +41,14 @@ This problem can occur if the Send immediately when connected option is not enab
 
 This setting is tied to the following registry data, so this setting can also be configured by an administrator through a modification of the registry.
 
-    Key: HKEY_CURRENT_USER\Software\Microsoft\Office\<x.0>\Outlook\Options\Mail
-    
-    or
-    
-    Policy key: HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\<x.0>\Outlook\Options\Mail
-    
-    DWORD: Send Mail Immediately  
-    Value: 0
+Key: HKEY_CURRENT_USER\Software\Microsoft\Office\<x.0>\Outlook\Options\Mail
+
+or
+
+Policy key: HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\<x.0>\Outlook\Options\Mail
+
+DWORD: Send Mail Immediately  
+Value: 0
 
 > [!NOTE]
 > In the above registry key paths, <x.0> represents the Outlook version (16.0 = Outlook 2016, Outlook 2019, or Outlook for Office 365, 15.0 = Outlook 2013, 14.0 = Outlook 2010, 12.0 = Outlook 2007, 11.0 = Outlook 2003).

@@ -28,13 +28,13 @@ You have an `.msg` file saved in a folder on your computer. In Windows File Expl
 
 > Either there is no default mail client or the current mail client cannot fulfill the messaging request. Please run Microsoft Outlook and set it as the default mail client.
 
-:::image type="content" source="media/cannot-preview-msg-files-in-windows-file-explorer/error-1.png" alt-text="error details" border="false":::
+:::image type="content" source="media/cannot-preview-msg-files-in-windows-file-explorer/error-1.png" alt-text="error details 1" border="false":::
 
 After you select **OK**, the following error message is displayed in the Preview Pane:
 
 > This file can't be previewed because of an error in the Windows e-mail previewer.
 
-:::image type="content" source="media/cannot-preview-msg-files-in-windows-file-explorer/error-2.png" alt-text="error details" border="false":::
+:::image type="content" source="media/cannot-preview-msg-files-in-windows-file-explorer/error-2.png" alt-text="error details 2" border="false":::
 
 ## Cause
 

@@ -64,4 +64,4 @@ Configure Microsoft Outlook 2010 to use an Online Mode profile instead of Cached
 
 More information on this issue can be found in [Outlook 2010 Runs Slow in Citrix Virtual Desktop Infrastructure](https://support.citrix.com/article/CTX135084).
 
-[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-contact-disclaimer.md)]

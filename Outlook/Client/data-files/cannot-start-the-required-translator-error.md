@@ -128,4 +128,4 @@ You can import your e-mail mail messages and your addresses from the following p
 > [!NOTE]
 > Outlook e-mail messages and addresses are imported automatically when you first start the program.
 
-[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-contact-disclaimer.md)]

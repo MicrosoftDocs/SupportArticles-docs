@@ -85,4 +85,4 @@ Use the Test E-mail AutoConfiguration tool to help determine why AutoDiscover fa
 > [!NOTE]
 > In some cases, customers report that AppSense software re-creates the `\Boot` registry subkey under specific conditions. However, this does not necessarily occur. If AppSense software is used in a virtual environment, and if the administrator believes that the software may cause the `\Boot` registry subkey to be re-created, the administrator should contact AppSense for support.
 
-[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-contact-disclaimer.md)]

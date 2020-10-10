@@ -33,7 +33,8 @@ This problem occurs because a change was made to Outlook version 1809 to enforce
 
 ## Workaround
 
-> [!IMPORTANT] Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
+> [!IMPORTANT]
+> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
 To work around this issue, disable this change in Outlook to revert to the previous browser emulation experience. To do this, set the following registry key:
 

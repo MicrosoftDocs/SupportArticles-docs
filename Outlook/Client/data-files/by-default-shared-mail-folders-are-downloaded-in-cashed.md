@@ -39,19 +39,19 @@ This problem is caused by a change in the default shared folder caching behavior
 
 To change the shared folder caching behavior in Outlook 2010 or later versions to match the default behavior in Office Outlook 2007, you must add the following registry data to your Outlook client. In this situation, only non-mail folders such as the Calendar, Contacts, and Tasks folders are cached.
 
-    Key:
-    
-    HKEY_CURRENT_USER\Software\Microsoft\Office\<xx.0>\Outlook\Cached Mode
-    
-    or
-    
-    HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\<xx.0>\Outlook\Cached Mode
-    
-    Note The <xx.0> placeholder represents your version of Office (16.0 = Office 2016, Office 2019, or Outlook for Office 365, 15.0 = Office 2013, 14.0 = Office 2010).
-    
-    Name: CacheOthersMail  
-    Type: DWORD:  
-    Value: 0
+Key:
+
+HKEY_CURRENT_USER\Software\Microsoft\Office\<xx.0>\Outlook\Cached Mode
+
+or
+
+HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\<xx.0>\Outlook\Cached Mode
+
+Note The <xx.0> placeholder represents your version of Office (16.0 = Office 2016, Office 2019, or Outlook for Office 365, 15.0 = Office 2013, 14.0 = Office 2010).
+
+Name: CacheOthersMail  
+Type: DWORD:  
+Value: 0
 
 > [!NOTE]
 > If you configure the registry value in the `\Policies` registry key, the change is applied to all existing Outlook profiles. If you configure the registry value in the non-Policies key, the change only applies to new Outlook profiles that you create.
@@ -155,13 +155,13 @@ To deploy this setting by using the Outlook Group Policy template, follow these 
 
 After you run this command, start Registry Editor on the client workstation to make sure that the `CacheOthersMail` registry value exists on the client, and that it has a value of **0**:
 
-    Key: HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\<xx.0>\Outlook\Cached Mode
-    
-    Note The <xx.0> placeholder represents your version of Office (16.0 = Office 2016, Office 2019, or Outlook for Office 365, 15.0 = Office 2013).
-    
-    Name: CacheOthersMail  
-    Type: DWORD:  
-    Value: 0
+Key: HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\<xx.0>\Outlook\Cached Mode
+
+Note The <xx.0> placeholder represents your version of Office (16.0 = Office 2016, Office 2019, or Outlook for Office 365, 15.0 = Office 2013).
+
+Name: CacheOthersMail  
+Type: DWORD:  
+Value: 0
 
 If you see this registry data in the registry, the Group Policy setting was already applied to this client. Start Outlook 2013 to verify that this change is implemented.
 
@@ -210,11 +210,11 @@ To deploy this setting by using a custom Group Policy template, follow these ste
 
 After you run this command, start Registry Editor on the client workstation to make sure that the CacheOthersMail registry value exists on the client, and that it has a value of **0**:
 
-    Key: HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\14.0\Outlook\Cached Mode
+Key: HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\14.0\Outlook\Cached Mode
 
-    Name: CacheOthersMail  
-    Type: DWORD:  
-    Value: 0
+Name: CacheOthersMail  
+Type: DWORD:  
+Value: 0
 
 If you see this registry data in the registry, the Group Policy setting was already applied to this client. Start Outlook 2010 to verify that this change is implemented.
 
@@ -303,13 +303,13 @@ The following figure shows this setting in the Outlook 2010 OCT.
 
 When you use the OCT to disable this setting, the following registry key value is configured on your Outlook client.
 
-    Key: HKEY_CURRENT_USER\Software\Microsoft\Office\\<xx.0>\Outlook\Cached Mode
-    
-    Note The <xx.0> placeholder represents your version of Office (*16.0* = Office 2016, Office 2019, or Outlook for Office 365, *15.0* = Office 2013, *14.0* = Office 2010).
-    
-    Name: DownloadSharedFolders  
-    Type: DWORD  
-    Value: 0
+Key: HKEY_CURRENT_USER\Software\Microsoft\Office\\<xx.0>\Outlook\Cached Mode
+
+Note The <xx.0> placeholder represents your version of Office (*16.0* = Office 2016, Office 2019, or Outlook for Office 365, *15.0* = Office 2013, *14.0* = Office 2010).
+
+Name: DownloadSharedFolders  
+Type: DWORD  
+Value: 0
 
 #### Group Policy Template
 
@@ -321,13 +321,13 @@ The following figure shows the Group Policy Management Editor that controls this
 
 When you use a Group Policy setting to disable this setting, the following registry key value is configured on your Outlook 2010 client.
 
-    Key: HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\\<xx.0>\Outlook\Cached Mode
-    
-    Note The <xx.0> placeholder represents your version of Office (16.0 = Office 2016, Office 2019, or Outlook for Office 365, 15.0 = Office 2013, 14.0 = Office 2010).
-    
-    Name: DownloadSharedFolders  
-    Type: DWORD  
-    Value: 0
+Key: HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\\<xx.0>\Outlook\Cached Mode
+
+Note The <xx.0> placeholder represents your version of Office (16.0 = Office 2016, Office 2019, or Outlook for Office 365, 15.0 = Office 2013, 14.0 = Office 2010).
+
+Name: DownloadSharedFolders  
+Type: DWORD  
+Value: 0
 
 ### Effect on the size of the Offline Outlook Data (.ost) file
 

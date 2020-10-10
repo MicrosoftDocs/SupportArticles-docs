@@ -83,7 +83,7 @@ Microsoft Office Outlook 2007 and earlier versions store the AutoComplete list i
 
 For more information about how to import .nk2 files in Outlook 2010, see [Import Auto-Complete List from another computer](https://support.microsoft.com/office/import-or-copy-the-auto-complete-list-to-another-computer-83558574-20dc-4c94-a531-25a42ec8e8f0).
 
-#### How to copy the AutoComplete list
+#### How to copy the AutoComplete list
 
 The steps to export and import the AutoComplete list are different, depending on the version of Outlook that you're using.
 

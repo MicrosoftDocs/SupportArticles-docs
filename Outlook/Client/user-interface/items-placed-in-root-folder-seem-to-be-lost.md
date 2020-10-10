@@ -55,12 +55,12 @@ To disable Outlook Today, follow these steps for your version of Outlook:
 
 1. Right-click the root folder and select **Properties for "Mailbox - username"**.
 
-   :::image type="content" source="media/items-placed-in-root-folder-seem-to-be-lost/properties-for-mailbox.jpg" alt-text="The screenshot of the Properties for "Mailbox - username" option" border="false":::
+   :::image type="content" source="media/items-placed-in-root-folder-seem-to-be-lost/properties-for-mailbox.jpg" alt-text="The screenshot of the Properties for Mailbox - username option" border="false":::
 
 2. Select the **Home Page** tab.
 3. Clear **Show home page by default for this folder**, and then select **OK**.
 
-   :::image type="content" source="media/items-placed-in-root-folder-seem-to-be-lost/clear-show-home-page-by-default-for-this-folder-option.jpg" alt-text="The screenshot of the Show home page by default for this folder option" option" border="false":::
+   :::image type="content" source="media/items-placed-in-root-folder-seem-to-be-lost/clear-show-home-page-by-default-for-this-folder-option.jpg" alt-text="The screenshot of the Show home page by default for this folder option" border="false":::
 
 4. Select the root folder to view the contents.
 
@@ -100,3 +100,4 @@ To use Advanced Find to locate the items in the root folder and move them to a d
 6. Select **Find Now**.
 7. Messages and items found will be displayed in the results window.
 8. Move the items to a different folder by right-clicking them and selecting **Move to Folder**, selecting the intended folder, and then select **OK**.
+

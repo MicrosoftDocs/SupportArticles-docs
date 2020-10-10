@@ -39,7 +39,7 @@ To verify that your installation is up to date:
 
 ## Resolution Method 2 - Verify that the correct license type is assigned to Office
 
-A Microsoft 365 Apps for enterprise license is required for archive mailboxes. To verify the license type that is assigned to the affected user, open the Microsoft 365 admin center, and examine the user's license type. For more information about how to use the Microsoft 365 Admin center, see [Resolve license conflicts](/microsoft-365/admin/manage/resolve-license-conflicts?view=o365-worldwide).
+A Microsoft 365 Apps for enterprise license is required for archive mailboxes. To verify the license type that is assigned to the affected user, open the Microsoft 365 admin center, and examine the user's license type. For more information about how to use the Microsoft 365 Admin center, see [Resolve license conflicts](/microsoft-365/admin/manage/resolve-license-conflicts?view=o365-worldwide&preserve-view=true).
 
 For more information about license requirements, see [Outlook license requirements for Exchange features](https://support.microsoft.com/office/outlook-license-requirements-for-exchange-features-46b6b7c5-c3ca-43e5-8424-1e2807917c99).
 

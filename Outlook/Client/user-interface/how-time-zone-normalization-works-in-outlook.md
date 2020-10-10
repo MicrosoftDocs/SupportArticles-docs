@@ -153,6 +153,6 @@ This equates to 10 A.M. Eastern Time, attendee's local computer time, and this i
 > [!NOTE]
 > One core issue is that if you do not select **Automatically adjust clock for Daylight Saving Time** on the attendee's computer, there can be a mismatch in the UTC offset (off by one hour) between the time zone rules in the Windows global time zone database and the Windows current time zone settings. To select **Automatically adjust clock for Daylight Saving Time**, select **Change time zone** in the **Date and Time** dialog box to display the **Time Zone Settings** dialog box (Screen shot for this step is listed below).
 
-:::image type="content" source="media/how-time-zone-normalization-works-in-outlook/select-the-automatically-adjust-clock-for-daylight-saving-time.jpg" alt-text="select Change date and time settings" border="false":::
+:::image type="content" source="media/how-time-zone-normalization-works-in-outlook/select-the-automatically-adjust-clock-for-daylight-saving-time.jpg" alt-text="select Change date and time" border="false":::
 
 For more information about how to manage daylight saving time and time zone configurations and updates, see [Daylight Saving Time Help and Support Center](https://support.microsoft.com/help/22803/daylight-saving-time).

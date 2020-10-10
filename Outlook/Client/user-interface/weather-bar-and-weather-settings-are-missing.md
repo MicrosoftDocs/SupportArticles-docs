@@ -69,7 +69,7 @@ Value:
 
 This option can also be configured by using a Group Policy setting. This Group Policy setting is located here:
 
-Group Policy Setting path: **Administrative Templates\Microsoft Office 20xx\Tools | Options | General | Service Options...**  
+Group Policy Setting path: **Administrative Templates\Microsoft Office 20xx\Tools \| Options \| General \| Service Options...**  
 Group Policy Setting name: **Online Content Options**
 
 > [!NOTE]

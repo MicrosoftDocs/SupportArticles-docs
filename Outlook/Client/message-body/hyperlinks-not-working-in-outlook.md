@@ -101,7 +101,7 @@ To resolve this problem, follow these methods in order. Check whether the proble
 
 9. Select **Set your default programs**.
 
-    :::image type="content" source="media/hyperlinks-not-working-in-outlook/set-your-default-programs-option.png" alt-text="Set your default programs" border="false":::
+    :::image type="content" source="media/hyperlinks-not-working-in-outlook/set-your-default-programs-option.png" alt-text="Set the default programs" border="false":::
 
 10. In the **Programs** list, select **Microsoft Outlook** > **Set this program as default**.
 11. Select **OK**, and then close the **Default Programs** dialog box.
