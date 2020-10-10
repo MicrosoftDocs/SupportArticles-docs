@@ -2,8 +2,7 @@
 title: Support tip - Devices enrolled in Intune Application Management policy are prompted to enroll into Intune
 description: This article describes why using All Apps as part of a Conditional Access (CA) policy may not be the best approach.
 ms.date: 09/28/2020
-ms.prod-support-area-path: intune
-ms.service: microsoft-intune
+ms.prod-support-area-path: app management
 ms.reviewer: saurkosh
 author: v-miegge
 editor: v-jesits
@@ -15,15 +14,13 @@ ms.custom:
 
 # Support tip - Devices enrolled in Intune Application Management policy are prompted to enroll in Intune
 
-## Situation
-
 Using **All Apps** as part of a Conditional Access (CA) policy may not be the best approach.
 
-### Setup
+## Scenario
 
 For example, Contoso requires some users to use managed apps when they access **SharePoint Online** and **Exchange Online** resources, so that users can apply Application Management policy (MAM-WE) to these apps and not enroll their device in Intune. Contoso also has a CA policy that requires enrollment for all apps except SharePoint Online and Exchange Online.  
 
-### Result
+## Result
 
 When these users try to access one of the managed applications, such as **OneDrive**, they're prompted to enroll the device.
 
@@ -52,9 +49,9 @@ Now, when you review the **Block all but EXO and SPO** CA policy, you see the fo
 ![Cloud apps or actions page - Excludes](./media/device-enroll-intune-app-management-error/intune-enroll-block-all-but-exo-spo-exclude.png)
 ![Cloud apps or actions page - Grant access](./media/device-enroll-intune-app-management-error/intune-enroll-block-all-but-exo-spo-grant-access.png)
 
-The term *All cloud apps* applies to [apps that are listed, and services that aren't listed](https://docs.microsoft.com/azure/active-directory/conditional-access/concept-conditional-access-cloud-apps).
+The term *All cloud apps* applies to [apps that are listed, and services that aren't listed](/azure/active-directory/conditional-access/concept-conditional-access-cloud-apps).
 
 For more information, see these articles:
 
-- [Best practices for Conditional Access in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/conditional-access/best-practices#what-you-should-avoid-doing)
-- [What are service dependencies in Azure Active Directory Conditional Access?](https://docs.microsoft.com/azure/active-directory/conditional-access/service-dependencies)
+- [Best practices for Conditional Access in Azure Active Directory](/azure/active-directory/conditional-access/best-practices#what-you-should-avoid-doing)
+- [What are service dependencies in Azure Active Directory Conditional Access?](/azure/active-directory/conditional-access/service-dependencies)
