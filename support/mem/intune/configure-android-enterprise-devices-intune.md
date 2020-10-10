@@ -24,13 +24,13 @@ This guide helps administrators understand how to configure and troubleshoot And
 
 It helps you decide which management capability is the best for your organization and provides a FAQ about Android enterprise.
 
-## Evaluate your needs – BYOD or corporate devices
+## Evaluate your needs
 
-Before you enable Android enterprise devices in Microsoft Intune, you must determine whether you want to enroll those devices as personal devices (BYOD, or Bring Your Own Device) or as corporate devices. 
+Before you enable Android enterprise devices in Intune, you must determine whether you want to enroll those devices as personal devices (Bring Your Own Device, or BYOD) or as corporate devices. 
 
 ### BYOD devices
 
-BYOD devices are set up to have an Android Enterprise work profile. This feature is built into Android 5.1 and later versions. This feature allows work apps and data to be stored in a separate, self-contained, company managed space on the device. Because personal apps and data remain on the device inside the user's personal profile, employees can continue to use their device as they usually would.
+BYOD devices are set up to have an Android Enterprise work profile. This feature is built into Android 5.1 and later versions. This feature allows work apps and data to be stored in a separate, self-contained, company-managed space on the device. Because personal apps and data remain on the device inside the user's personal profile, employees can continue to use their device as they usually would.
 
 ### Corporate devices
 
@@ -41,19 +41,19 @@ There are two options for corporate-owned devices, and each of them serves a uni
    > [!NOTE]
    > The example used in this guide focuses on BYOD scenarios. For more information about dedicated devices (COSU) scenarios, see [COSU Configuration and Enrollment using the QR code enrollment method](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/COSU-Configuration-and-Enrollment-using-the-QR-code-enrollment/bc-p/286905).
 
-   Dedicated devices are typically locked to a single app or set of apps (also known as kiosk mode) that allows the administrator to control things such as the status bar, keyboard layouts, the lock screen and other settings on the device. It prevents users from enabling other apps or changing certain settings on dedicated devices. 
+   Dedicated devices are typically locked to a single app or set of apps (also known as kiosk mode). It allows the administrator to control things such as the status bar, keyboard layouts, the lock screen, and other settings on the device. It prevents users from enabling other apps or changing certain settings on dedicated devices. 
 
    > [!NOTE]
-   > Be aware that devices that you manage in this manner are enrolled in Intune without a user account and aren't associated with any end-user. They aren't intended for personal use applications or apps that have a strong requirement for user-specific account data such as Outlook or Gmail.
+   > Devices that you manage in this manner are enrolled in Intune without a user account and aren't associated with any end-user. They aren't intended for personal use applications or apps that have a strong requirement for user-specific account data such as Outlook or Gmail.
 
 - **Fully managed devices** (formerly known as COBO, or Corporate Owned Business Only). 
 
    > [!NOTE]
    > For more information about Fully Managed devices, see [Set up Intune enrollment of Android Enterprise fully managed devices](/mem/intune/enrollment/android-fully-managed-enroll).
 
-   Fully Managed devices fit into a more user-centric scenario where in which is a single user who is associated with the device while the admin still retains full control over the device (as opposed to a work-profile scenario, in which multiple users have control).
+   Fully Managed devices fit into a more user-centric scenario. A single user is associated with the device while the admin still retains full control over the device (as opposed to a work-profile scenario, in which multiple users have control).
 
-When you decide how to enroll your devices, also be aware that not all features are available for both methods. The following table shows some key differences.
+When you decide how to enroll your devices, be aware that not all features are available for both methods. The following table shows some key differences.
 
 
 | Feature set | Work profile (BYOD) | Dedicated (kiosk) | Fully managed |
@@ -85,7 +85,7 @@ For more information, see [Implement your Microsoft Intune plan](/mem/intune/fun
 
 ## Connect an Intune account to an Android enterprise account
 
-The first step to configure Android enterprise in your environment is to connect your Intune tenant account to your Android enterprise account. To do this, follow the steps below.
+The first step to configure Android enterprise in your environment is to connect your Intune tenant account to your Android enterprise account:
 
 1. Create a Google service account (@gmail.com). 
    > [!NOTE] 
@@ -142,9 +142,9 @@ After your Intune account is connected to your Android enterprise account, you c
 
     :::image type="content" source="media/configure-android-enterprise-devices-intune/configure-android-enterprise-devices-in-intune-8.png" alt-text="Select Keep approved when app requests new permissions.":::
 
-9.	Select **Select** to select the app.
+9.	Click **Select** to select the app.
 
-10. Select **Sync** at the top of the blade to sync the app with the Managed Google Play service.
+10. Select **Sync** at the top to sync the app with the Managed Google Play service.
 
 11. Select **Refresh** to update the app list and display the newly added app.
 
@@ -174,7 +174,6 @@ After your Intune account is connected to your Android enterprise account, you c
 For more information about app deployment, see [Add Android Enterprise system apps to Microsoft Intune](/mem/intune/apps/apps-ae-system). 
 
 ## Enable Android enterprise work profile enrollment
-To do this, follow these steps:
 
 1. From the Intune portal, go to **Device Enrollment** > **Enrollment Restrictions**, and then select **Default** under **Device Type Restrictions**.
 
@@ -189,9 +188,7 @@ To do this, follow these steps:
 
 For more information, see [Set up enrollment of Android Enterprise work profile devices](/mem/intune/enrollment/android-work-profile-enroll). 
 
-## Set up conditional access
-
-To set up conditional access on your devices, follow these steps:
+## Configure conditional access
 
 1. Deploy the Gmail app or the Nine Work app as **Required**.
 
@@ -210,7 +207,7 @@ To set up conditional access on your devices, follow these steps:
 
     :::image type="content" source="media/configure-android-enterprise-devices-intune/configure-android-enterprise-devices-in-intune-19.jpg" alt-text="Assignments screen.":::
 
-4. Set up [device-based conditional access](https://docs.microsoft.com/intune/protect/conditional-access-intune-common-ways-use#device-based-conditional-access).
+4. Configure [device-based conditional access](https://docs.microsoft.com/intune/protect/conditional-access-intune-common-ways-use#device-based-conditional-access).
 
 For more information, see [Set up Conditional Access for Android work profile devices](/mem/intune/protect/conditional-access-exchange-create#to-set-up-conditional-access-for-android-work-profile-devices).
 
@@ -276,7 +273,7 @@ To do this, follow these steps:
 
 2. On the Android enterprise device, you will be prompted to set a work profile passcode if you haven't set one.
 
-3. Wait until you receive a second prompt that says "Secure your Work Profile - Authorize your company support to remotely reset your work profile password". Enter your passcode to authorize reset. This activates the reset password token that Intune needs to perform this action successfully.
+3. Wait until you receive a second prompt that says **Secure your Work Profile - Authorize your company support to remotely reset your work profile password**. Enter your passcode to authorize reset. It activates the reset password token that Intune needs to perform this action successfully.
 
     :::image type="content" source="media/configure-android-enterprise-devices-intune/configure-android-enterprise-devices-in-intune-30.jpg" alt-text="Secure your work profile screen.":::
 
@@ -294,45 +291,45 @@ To do this, follow these steps:
 
 6. Enter this temporary passcode on your device.
 
-7. When you're required to set your new PIN, you must re-enter this temporary passcode, and then enter your new PIN.
+7. When you're required to set your new PIN, you must reenter this temporary passcode, and then enter your new PIN.
 
 For more information about passcode reset, see [Reset Android work profile passcodes](/mem/intune/remote-actions/device-passcode-reset#reset-android-work-profile-passcodes).
 
 ## Frequently asked questions
 
 - **Question**: Why are apps that I unapproved from the Google Play for Work store not being removed from the Mobile Apps page in the Intune Admin Portal?  
-**Answer**: This is expected behavior.
+**Answer**: This behavior is expected.
 
-- **Question**: Why are managed Google Play apps not reporting under the Discovered Apps blade in the Intune portal?  
-**Answer**: This is expected behavior.
+- **Question**: Why are managed Google Play apps not reporting under **Discovered Apps** in the Intune portal?  
+**Answer**: This behavior is expected.
 
 - **Question**: Why are managed Google Play apps that aren't deployed through Intune displayed in the work profile?  
-**Answer**: System apps can be enabled in the work profile by the device OEM at the time that the work profile is created. This isn't controlled by the MDM provider.
+**Answer**: System apps can be enabled in the work profile by the device OEM at the time that the work profile is created. It isn't controlled by the MDM provider.
 
    To troubleshoot, follow these steps: 
 
    1. Collect Company Portal logs.
    2. Note any apps that appear unexpectedly in the work profile.
    3. Unenroll the device from Intune and uninstall the Company Portal.
-   4. Install the [Test DPC](https://play.google.com/store/apps/details?id=com.afwsamples.testdpc) app which allows creation of a work profile without an EMM for testing.
+   4. Install the [Test DPC](https://play.google.com/store/apps/details?id=com.afwsamples.testdpc) app that allows creation of a work profile without an EMM for testing.
    5. Follow the instructions in [Test DPC](https://play.google.com/store/apps/details?id=com.afwsamples.testdpc) to create a work profile on the device.
    6. Review apps that appear in the work profile.   
    7. If the same applications show in the Test DPC app, the apps are expected by the OEM for that device.
 
 - **Question**: Why is the Wipe (Factory Reset) option not available for my work profile enrolled device?  
-**Answer**: This is expected behavior. In the work profile scenario, the MDM provider doesn't have full control over the device. The only option available is Retire (Remove Company Data) which removes the whole work profile and all its contents.
+**Answer**: This behavior is expected. In the work profile scenario, the MDM provider doesn't have full control over the device. The only option available is Retire (Remove Company Data) which removes the whole work profile and all its contents.
 
 - **Question**: Why can't I find file path Internal storage/Android/Data.com.microsoft.windowsintune.companyportal/files on my work profile enrolled device to manually collect Company Portal Logs?  
-**Answer**: This is expected behavior. This path is only created for the Device Admin (Legacy Android Enrollment) scenario.
+**Answer**: This behavior is expected. This path is only created for the Device Admin (Legacy Android Enrollment) scenario.
 
    To collect logs, follow these steps: 
    
    1. In the Company Portal app with the badge, tap **Menu** > **Help** > **Email Support**, and then tap **Send Email & Upload logs**. 
-   2. When you are prompted **Send help request with**, select one of the Email apps.   
+   2. When you are prompted with **Send help request with**, select one of the Email apps.   
    3. An email is generated to your IT admin with an incident ID that can be provided to Microsoft product support.
 
 - **Question**: I checked the Managed Google Play Last Sync time and it hasn't been updated in days. Why?  
-**Answer**: This is expected behavior. The sync is only triggered when you manually do so.
+**Answer**: This behavior is expected. The sync is only triggered when you manually do so.
 
 - **Question**: Are Web Applications supported for work profile-enrolled devices?  
 **Answer**: Yes. Web apps (or web links) are supported for all Android Enterprise scenarios.
