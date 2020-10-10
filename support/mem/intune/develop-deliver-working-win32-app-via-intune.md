@@ -2,7 +2,7 @@
 title: Support Tip - Understanding the flow behind deployment, delivery, and processing of a Win32 application through Intune
 description: This article highlights and explains the flow that is associated with a Win32 app during its deployment, delivery, and processing through Intune.
 ms.date: 09/28/2020
-ms.prod-support-area-path: intune
+ms.prod-support-area-path: app management
 ms.reviewer: sausarka
 author: v-miegge
 ms.author: sausarka
@@ -21,7 +21,7 @@ This article highlights and explains the flow that is associated with a Win32 ap
 
 Refer to the following documentation to understand the basic administrative tasks behind Win32 app deployment through Intune:
 
-- [Intune Standalone - Win32 app management](https://docs.microsoft.com/mem/intune/apps/apps-win32-app-management)
+- [Win32 app management in Microsoft Intune](/mem/intune/apps/apps-win32-app-management)
 
 ## Advantages of deploying a Win32 application
 
@@ -39,7 +39,7 @@ The following diagram is the architectural flow that occurs behind the deploymen
 
 ![The deployment of a Win32 app via Intune](media/develop-deliver-working-win32-app-via-intune/intune-develop-deliver-win32-architecture-flow.png)
 
-- The prerequisite for a Win32 app deployment through Intune can be found at [Intune Standalone - Win32 app management - prerequisites](https://docs.microsoft.com/mem/intune/apps/apps-win32-app-management#prerequisites).
+- The prerequisite for a Win32 app deployment through Intune can be found at [Win32 app management in Microsoft Intune - prerequisites](/mem/intune/apps/apps-win32-app-management#prerequisites).
 
 - The Win32 Content Prep tool can be found at [Microsoft Win32 Content Prep Tool](https://github.com/Microsoft/Microsoft-Win32-Content-Prep-Tool).
 
@@ -53,7 +53,7 @@ The following diagram explains the flow that occurs behind the delivery of a Win
 
 - Because you are using Intune to deploy Win32 apps, grant access to the endpoints in which your tenant currently resides.
 
-- The complete documentation (using our tenant ASU and the relevant CDN) can be found at [Network requirements for PowerShell scripts and Win32 apps](https://docs.microsoft.com/mem/intune/fundamentals/intune-endpoints#network-requirements-for-powershell-scripts-and-win32-apps).
+- The complete documentation (using our tenant ASU and the relevant CDN) can be found at [Network requirements for PowerShell scripts and Win32 apps](/mem/intune/fundamentals/intune-endpoints#network-requirements-for-powershell-scripts-and-win32-apps).
 - if you want to see the contents of the `.intunewin` file after the file is created, rename its extension to `.zip`.
 - The `.intunewin` file contains two folders: **Contents** and **Metadata**. These folders contain the application package (the installer), and the `Detetection.xml` file (containing the file encryption information).
 
