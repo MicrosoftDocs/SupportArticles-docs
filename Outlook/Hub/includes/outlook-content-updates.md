@@ -32,3 +32,11 @@
 |------|------------|--------|
 | 9/28/2020 | [Folder names are incorrect or displayed in an incorrect language in Outlook](/outlook/troubleshoot/user-interface/incorrect-folder-names) | modified |
 | 9/30/2020 | [Can't send or receive email and Metered Connection Warning is triggered](/outlook/troubleshoot/profiles-and-accounts/metered-connection-warning) | modified |
+
+
+## Week of October 05, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 10/8/2020 | [Office troubleshooting for admins and IT professionals # < 60 chars](/outlook/troubleshoot/index) | modified |
