@@ -83,3 +83,13 @@
 | 9/28/2020 | [Troubleshoot account issues for federated users in Office 365, Azure, or Intune](/office365/troubleshoot/authentication/account-issues-for-federated-users) | modified |
 | 9/28/2020 | [Unable to remove this domain when remove a domain from Office 365](/office365/troubleshoot/sign-in/unable-remove-domain-office-365) | modified |
 | 9/28/2020 | [Office Applications crash or cannot start](/office365/troubleshoot/administration/office-crash-or-cannot-start) | modified |
+
+
+## Week of October 05, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 10/6/2020 | [No Add-ins loaded due to group policy settings](/office365/troubleshoot/group-policy/office-add-in-not-loaded) | modified |
+| 10/6/2020 | [O365 reports show anonymous instead of actual user names](/office365/troubleshoot/miscellaneous/reports-show-anonymous-user-name) | modified |
+| 10/8/2020 | [Office troubleshooting for admins and IT professionals # < 60 chars](/office365/troubleshoot/index) | modified |
