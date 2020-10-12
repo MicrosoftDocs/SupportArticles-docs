@@ -845,13 +845,11 @@
     - name: RODCs don't replicate SYSVOL shared directory
       href: ./group-policy/events-6804-2843-rodcs-not-replicate-sysvol.md
 - name: High Availability
-  items:
-  - name: ''
+  items:    
+  - name: Cannot bring a resource online
     items:
     - name: Active Route removed
       href: ./high-availability/active-route-removed.md
-  - name: Cannot bring a resource online
-    items:
     - name: '"The parameter is incorrect" error'
       href: ./high-availability/parameter-incorrect-error-cluster-validation-fails.md
     - name: Cluster disk resource fails to come online
