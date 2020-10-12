@@ -1,0 +1,98 @@
+---
+title: Restrict use of a computer to one domain user only
+description: Describes how to restrict use of a computer to one domain user only.
+ms.date: 09/27/2020
+author: Deland-Han
+ms.author: delhan 
+manager: dscontentpm
+audience: itpro
+ms.topic: troubleshooting
+ms.prod: windows-server
+localization_priority: medium
+ms.reviewer: kaushika
+ms.prod-support-area-path: User, computer, group, and object management
+ms.technology: ActiveDirectory
+---
+# How to restrict use of a computer to one domain user only
+
+This article describes how to restrict use of a computer to one domain user only.
+
+_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Original KB number:_ &nbsp; 555317
+
+This article was written by [Yuval Sinay](https://mvp.microsoft.com/en-US/PublicProfile/7674?fullName=Yuval%20Sinay), Microsoft MVP.
+
+## Community solutions content disclaimer
+
+Microsoft Corporation and/or its respective suppliers make no representations about the suitability, reliability, or accuracy of the information and related graphics contained. All such information and related graphics are provided "as is" without warranty of any kind. Microsoft and/or its respective suppliers hereby disclaim all warranties and conditions with regard to this information and related graphics, including all implied warranties and conditions of merchantability, fitness for a particular purpose, workmanlike effort, title, and non-infringement. You specifically agree that, in no event should Microsoft and/or its suppliers be liable for any direct, indirect, punitive, incidental, special, consequential damages or any damages whatsoever including, without limitation, damages for loss of use, data or profits, arising out of or in any way connected with the use of or inability to use the information and related graphics contained herein, whether based on contract, tort, negligence, strict liability or otherwise, even if microsoft or any of its suppliers has been advised of the possibility of damages.
+
+## Symptoms
+
+When you create trust connection/s from one domain(forest) to another, users have the option to sign in different domain/s than their home domain (The domain that host their account/s).
+
+## Cause
+
+Trust connection/s from one domain to another or/and one forest to another enable user to log in different domain/s than their home domain (The domain that host their account/s).
+The "Authenticated Users" group on each computer allow users from trusted domain to be authenticated and logon to computer.
+
+## Resolution
+
+### Option A: Domain-Wide Policy  
+
+By using group policy capabilities in Windows 2000/2003 Domain, you can prevent from user/s to sign in to different domain/s than their home domain.
+
+   1. Create a new domain-wide GPO and enable "Deny logon locally" user right to the source domain user account/sIn the target domain.  
+
+      >[!NOTE]
+       Some services (Like Backup software services) may effect by this policy, and wouldn't function.
+       To eliminate future problems, apply this policy and use GPO security filter feather.
+
+       Deny logon locally
+
+       Filter using security groups
+
+   2. Run on `Gpupdate /force` on the domain controller.
+
+### Option B: Remove "NT AUTHORITY\Authenticated Users" uses from the list of users group  
+
+To eliminate the option of logging in one or few computers, follow the instructions bellow:
+
+   1. Right-click "**My Computer**" icon on the desktop.
+
+   2. Choose on "**Manage**".
+
+   3. Extract "**Local Users and Groups**".
+
+   4. Select on "**Groups**".
+
+   5. On the right side of the screen, double-click "**Users**" group.
+
+   6. Remove: "**NT** **AUTHORITY\Authenticated Users**" from the list.
+
+   7. Add the require user/s or and group/s to the "**Users**" local group.
+
+### Option C: Configure "Deny logon locally" user right on the local computer/s  
+
+To eliminate the option of logging on one or few computers, follow the instructions bellow:
+
+   1. Go to "**Start**" -> "**Run**".
+
+   2. Write "**Gpedit.msc**"
+
+   3. Enable "**Deny logon locally**" user right to the source domain user account/s.
+
+      >[!NOTE] Some services (Like Backup software services) may effect by this policy, and wouldn't function.
+
+      Deny logon locally
+
+   4. Run `Gpupdate /force` on the local computer.
+
+### Option D: Use Selective Authentication when use Forest Trust  
+  
+   Creating Forest Trusts
+  
+## More information  
+
+Log on locally
+
+Group Type and Scope Usage in Windows
