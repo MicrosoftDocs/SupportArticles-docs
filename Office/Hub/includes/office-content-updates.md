@@ -296,3 +296,14 @@
 | 9/28/2020 | [Third-party installed font does not appear in the font list in Word for Mac](/office/troubleshoot/third-party-add-ins/third-party-installed-font-fails-appearing) | modified |
 | 9/29/2020 | [How to recover a lost Word document](/office/troubleshoot/word/recover-lost-document) | modified |
 | 9/30/2020 | How to use common Data Definition Language (DDL) SQL statements for the Jet database engine | removed |
+
+
+## Week of October 05, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 10/8/2020 | [Office troubleshooting for admins and IT professionals # < 60 chars](/office/troubleshoot/index) | modified |
+| 10/8/2020 | [Export a text file with both comma and quote delimiters in Excel](/office/troubleshoot/excel/export-text-file-with-comma-quote) | modified |
+| 10/9/2020 | [How to troubleshoot errors when you save Excel workbooks](/office/troubleshoot/excel/issue-when-save-excel-workbooks) | modified |
+| 10/9/2020 | [Convert degrees/minutes/seconds angles to or from decimal angles](/office/troubleshoot/excel/convert-degrees-minutes-seconds-angles) | modified |
