@@ -278,15 +278,15 @@ To use the connection, follow these steps:
 
     **Solution**: If VPN clients are dialing in to a VPN server running Windows NT 4.0 that is a member of a Windows Server 2003 mixed-mode domain, verify that the Everyone group is added to the Pre-Windows 2000 Compatible Access group with the following command:
 
-        ```console
-         "net localgroup "Pre-Windows 2000 Compatible Access""
-        ```
+    ```console
+    "net localgroup "Pre-Windows 2000 Compatible Access""
+    ```
 
     If not, type the following command at a command prompt on a domain controller computer, and then restart the domain controller computer:
 
-        ```console
-        net localgroup "Pre-Windows 2000 Compatible Access" everyone /add
-        ```
+    ```console
+    net localgroup "Pre-Windows 2000 Compatible Access" everyone /add
+    ```
 
     For more information about Windows NT 4.0 remote access server in a Windows Server 2003 domain, see the Windows Server 2003 Help and Support Center. Click **Start** to access the Windows Server 2003 Help and Support Center.
 - **Cause**: The VPN server can't communicate with the configured RADIUS server.

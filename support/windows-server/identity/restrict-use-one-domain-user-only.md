@@ -79,9 +79,10 @@ To eliminate the option of logging on one or few computers, follow the instructi
 
    2. Write "**Gpedit.msc**"
 
-   3. Enable "**Deny logon locally**" user right to the source domain user account/s.
+   3. Enable "**Deny logon locally**" user right to the source domain user accounts.
 
-      >[!NOTE] Some services (Like Backup software services) may effect by this policy, and wouldn't function.
+      > [!NOTE]
+      > Some services (Like Backup software services) may effect by this policy, and wouldn't function.
 
       Deny logon locally
 
