@@ -124,7 +124,6 @@ If you open the tool within a command without using additional parameters, the f
 C:\temp>autoprox
 Help for AUTOPROX.EXE
 Version : 2.44 (12/16/2019)
-Written by pierrelc@microsoft.com
 Usage : AUTOPROX -a  (calling DetectAutoProxyUrl and saving wpad.dat file in temporary file if success)
 Usage : AUTOPROX -n  (calling DetectAutoProxyUrl with PROXY_AUTO_DETECT_TYPE_DNS_A only and saving wpad.dat file in temporary file if success)
 Usage : AUTOPROX  [-o] [-d] [-v] [-u:url] [-p:Path to autoproxy file] [-i:IP address]
