@@ -9,11 +9,13 @@ ms.prod-support-area-path: Windows enrollment
 ---
 # Support Tip: Azure AD device registration and Windows Autopilot
 
-By connecting devices to Azure Active Directory (Azure AD), the end users can easily access the organization's assets, and IT administrators can easily control and manage the connected devices to protect the organization's assets. For more information about the benefits, see [Do I really need to connect my device to Azure AD](https://azureera.com/do-i-really-need-to-connect-my-device-to-azure-ad). For more information about device identity, see [What is a device identity](/azure/active-directory/devices/overview).
+This article provides some tips for troubleshooting Azure AD device registration and Windows Autopilot issues.
 
 ## Azure AD device registration
 
-To successfully manage devices by using Mobile Device Management (MDM) tools like Microsoft Intune, the devices must be:
+By connecting devices to Azure Active Directory (Azure AD), the end users can easily access the organization's assets, and IT administrators can easily control and manage the connected devices to protect the organization's assets. For more information about the benefits, see [Do I really need to connect my device to Azure AD](https://azureera.com/do-i-really-need-to-connect-my-device-to-azure-ad). For more information about device identity, see [What is a device identity](/azure/active-directory/devices/overview).
+
+To get a device in Azure AD, you have the following options:
 
 - Azure AD registered
 - Azure AD joined
