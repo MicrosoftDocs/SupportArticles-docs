@@ -1,5 +1,5 @@
 ---
-title: Unable to open an Access database
+title: Unable to open an Access database on a server
 description: Fixes an issue in which you may receive a "file already in use" error message when you open an Access database.
 author: MaryQiu1987
 ms.author: v-maqiu
@@ -39,10 +39,11 @@ If doesn't have the Create permissions for the folder in which the database is l
 
 > [!NOTE]
 > The locking information file is:
+>
 > - *.ldb in Access 2003 and in earlier versions of Access
 > - *.laccdb in Access 2007/2010
 
-## Resolution
+## Workaround
 
 To prevent this behavior, make sure that all users who open the database have the Read, Write, and Create permissions for the folder in which the database is located.
 

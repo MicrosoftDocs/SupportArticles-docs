@@ -25,114 +25,9 @@ appliesto:
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
-## Summary
+## Causes
 
-You may have problems when you try to save a Microsoft Excel workbook if one or more of the following conditions are true: 
- 
-- You save an Excel workbook to a network drive on which you have restricted permissions.    
-- You save an Excel workbook to a location that does not have sufficient drive space.    
-- The connection to the Excel workbook is lost.    
-- There is a conflict with an antivirus software program.    
-- You save an Excel workbook that is shared.    
-- The 218-character path limitation is exceeded when you save an Excel workbook.    
-  
-## Workarounds and resolutions 
-
-The following sections include workarounds to save your workbooks and troubleshooting steps to help you find the cause of the problem. We recommend that you first try to save changes in any open Excel workbooks before you start troubleshooting. 
- 
-### Workarounds to save Excel workbooks
-
-To work around this problem and try to save your work before you troubleshoot, use the following methods. Depending on the cause of the problem, you may be unable to recover the current file as-is. However, the following methods are typically successful. These methods are listed in order of format retention when you are trying to keep the original file formatting.
-
-> [!NOTE]
-> The following methods may not save all the latest changes, formatting, and feature sets of the workbook that are specific to the version of Excel that you are using. The following methods are intended to let you obtain a usable, saved version of the file. These methods require you to save the file to your local hard disk by using a unique file name.  
-   
-#### Method 1: Save the workbook by using a new file name
-
-1. On the **File** menu, select **Save As**.    
-2. Save the Excel workbook by using a unique file name.    
- 
-#### Method 2: Move the original worksheets to a new workbook
-
-1. Add a filler worksheet to your workbook. To do this, press Shift + F11.
-
-    > [!NOTE]
-    > This sheet is required because there has to be at least one remaining sheet in a workbook after you move all relevant data sheets.         
-2. Group all the worksheets (except the filler). To do this, select the first sheet, hold the **Shift** key, and then select the last sheet.     
-3. Right-select the grouped sheets, and then select **Move or copy**.    
-4. In the **To Book** list, select **(New Book)**.    
-5. Select **OK**.    
-   
-    > [!NOTE]
-    > These steps should move the active (grouped) worksheets to a new workbook.     
-
-If your workbook contains VBA macros, copy the modules from the old workbook to the new workbook. 
-
-#### Method 3: Save the file as a different Excel file type
-
-1. On the **File** menu, select **Save As**.    
-2. In the **Save as Type** list, select a file format other than the current file format. If you are using Microsoft Excel 2007 or a later version, save the file as .xlsx or .xlsm instead of as .xls.     
-  
-### Troubleshooting
- 
-To troubleshoot this problem, follow these steps in the given order.
-
-#### Step 1: Try to save the workbook to another location
- 
-Try saving your notebook to another location, such as a local hard drive, a network drive, or removable drive. If you are successful, the following are possible causes of the problem:   
- 
-- [Antivirus software conflict](#antivirus-software-conflict)    
-- [Restricted permissions](#restricted-permissions)    
-- [File name length](#file-name-length)    
-- [File sharing conflict](#file-sharing-conflict)    
- 
-#### Step 2: Try to save a new workbook to the original location
- 
-To save a new Excel file to the original location, follow these steps:
-
-1. Create an Excel workbook.    
-2. On the **File** menu, select **Save As**.    
-3. In the **Save As** dialog box, follow these steps:
-
-   1. In the **Save in** box, select the location in which the original workbook is saved.    
-   2. In the **File name** box, type a name for the new file.    
-   3. Select **Save**.    
-     
- If you can save a new workbook to the original location, the following are possible causes of the problem:
-
- 
-- [File name length](#file-name-length)    
-- [File sharing conflict](#file-sharing-conflict)    
- 
-If you cannot save a new workbook to the original location, the following is a possible cause of the problem:
-
-- [Insufficient drive space](#insufficient-drive-space)    
- 
-If you have sufficient drive space, try Step 3.
- 
-#### Step 3: Try to save the workbook in safe mode
-
-Restart Windows in safe mode, and then try to save the workbook to your local hard disk.   
-
-**Notes**
- 
-- If you use a network location to save your workbook, try to restart Windows in safe mode with network support, and then try to save.    
-- Windows safe mode cannot be used to troubleshoot issues in Microsoft Excel 2010 or later versions.    
-     
-For more information about how to start Windows in safe mode, see [Advanced startup options (including safe mode)](https://windows.microsoft.com/windows/start-computer-safe-mode#start-computer-safe-mode=windows-7). 
-
-If the workbook saves after you restart Windows in safe mode, try to save the file again. To do this, select **Save** on the **File** menu.
-
-If the workbook does not save (or save again) after you restart Windows in safe mode, the following are possible causes:
-
-- [Third-party add-in](#third-party-add-in)    
-- [Antivirus software conflict](#antivirus-software-conflict)    
-- [Restricted permissions](#restricted-permissions)    
-- [File name length](#file-name-length)    
- 
-### Causes
-
-#### Third-party add-in
+## Third-party add-ins
  
 If the Excel file is not saved when you run Excel in Windows safe mode, the issue may be caused by a third-party add-in or by a file that is in one of the Excel startup locations. By default, these files are loaded when you start Excel.
 
@@ -158,7 +53,7 @@ For more information about how to determine the folders that Excel uses during s
  
 [826922](https://support.microsoft.com/help/826922) How to prevent files from opening automatically in Excel
 
-#### Restricted permissions
+## Restricted permissions
  
 When you save an Excel file, you must have the following permissions to the folder in which you are saving the file:
 
@@ -170,7 +65,7 @@ When you save an Excel file, you must have the following permissions to the fold
 > [!NOTE]
 > If you do not have these permissions, the Excel save process cannot be completed.
 
-#### Insufficient drive space
+## Insufficient drive space
  
 When you save to any medium, such as a floppy disk drive, a local hard disk, or a network drive, you must make sure that the drive has sufficient free space to enable the file to save. If the destination drive does not have sufficient space, Excel cannot complete the save operation, and you receive the following error message:
    
@@ -182,26 +77,24 @@ For more information about this error message, select the following article numb
 
 [214073](https://support.microsoft.com/help/214073) You receive an error message when you try to save a file in Excel
   
-#### Antivirus software conflict
+## Antivirus software conflict
  
 When antivirus software is installed or is running, you may receive an error message when you try to save an existing workbook. You do not receive an error message if you try to save a new file. You may receive an error message because some antivirus programs quickly scan any new files that appear on a computer. This scan can sometimes disrupt the Excel save process. This interruption may stop Excel from saving the file correctly.
 
-#### File sharing conflict
+## File sharing conflict
  
 If you and a second user work concurrently on a shared workbook, you may receive an error message if you and the second user try to save the file at the same time. You receive an error message because Excel cannot save the file if another instance of Excel is saving the same file.
 
 For more information about this error message, see the following Microsoft Knowledge Base article:
 
 [130494](https://support.office.com/article/Unlock-a-file-that-has-been-locked-for-editing-bdda0d41-1b8e-44ed-a6ae-6d095d37c22d) Unlock a file that has been locked for editing 
-#### File name length
+## File name length
  
 If you try to save or open an Excel file, and the path of that file (including the file name) is more than 218 characters, you may receive the following error message:
    
 **Filename is not valid.**
  
-For more information, select the following article number to view the article in the Microsoft Knowledge Base:
-   
-[213983](https://support.microsoft.com/help/213983) Error message when you open or save a file in Microsoft Excel: "Filename is not valid"  
+For more information, see [Error message when you open or save a file in Microsoft Excel: "Filename is not valid"](https://support.microsoft.com/help/213983).
 
 ### Process to save a file
 
@@ -211,9 +104,273 @@ Excel follows these steps when it saves a file:
 2. If changes are being saved to an existing file, Excel deletes the original file.   
 3. Excel renames the temporary file. Excel gives the temporary file the file name that you specified (such as Book1.xls) in the **Save As** dialog box.   
  
-For more information, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[814068](https://support.microsoft.com/help/814068) Description of the way that Excel saves files
+For more information, see [Description of the way that Excel saves files](https://support.microsoft.com/help/814068).
 
 > [!NOTE]
-> Other processes that occur on your computer may disrupt the Excel save process. These issues may occur if the Excel temporary file is accessed before the Excel save process is completed. For example, the local antivirus software locks the temporary file for scanning before the file can be renamed. Therefore, you must keep track of any new software installations or updates that are performed before you have problems when you try to save workbooks. This information will be helpful if this article does not fix your issue and you have to contact Microsoft Support. For more information, go to the following Microsoft website: [http:/support.microsoft.com]()
+> Other processes that occur on your computer may disrupt the Excel save process. These issues may occur if the Excel temporary file is accessed before the Excel save process is completed. For example, the local antivirus software locks the temporary file for scanning before the file can be renamed. Therefore, you must keep track of any new software installations or updates that are performed before you have problems when you try to save workbooks. This information will be helpful if this article does not fix your issue and you have to contact [Microsoft Support](http:/support.microsoft.com).
+
+
+## Quick resolution
+
+Try the following options to help recover your Word document. Select the image at the left or the option heading to see more detailed instructions about that option.
+
+
+
+<table align="left">
+<tr>
+<td valign="top"> 
+<a href="#option1">
+
+![Option 1](../word/media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-1.png)
+
+</a>
+</td><td><a href="#option1">
+
+**Save the workbook by using a new file name**
+
+</a>
+
+1. On the **File** menu, select **Save As**.
+2. Save the Excel workbook by using a unique file name.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+<a href="#option2">
+
+![Option 2](../word/media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-2.png)
+
+</a>
+</td>
+<td><a href="#option2">
+
+**Move the original worksheets to a new workbook**
+
+</a>
+
+1. Add a filler worksheet to your workbook. To do this, press Shift + F11.
+2. Group all the worksheets (except the filler). To do this, select the first sheet, hold the **Shift** key, and then select the last sheet.
+3. Right-select the grouped sheets, and then select **Move or copy**.
+4. In the **To Book** list, select **(New Book)**.    
+5. Select **OK**.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+<a href="#option3">
+
+![Option 3](../word/media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-3.png)
+
+</a>
+</td>
+<td><a href="#option3">
+
+**Save the file as a different Excel file type**
+
+</a>
+
+1. On the **File** menu, select **Save As**.    
+2. In the **Save as Type** list, select a file format other than the current file format. If you are using Microsoft Excel 2007 or a later version, save the file as .xlsx or .xlsm instead of as .xls.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+<a href="#option4">
+
+![Option 4](../word/media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-4.png)
+
+</a>
+</td>
+<td><a href="#option4">
+
+**Try to save the workbook to another location**
+
+</a>
+
+Try saving your notebook to another location, such as a local hard drive, a network drive, or removable drive.
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+<a href="#option5">
+
+![Option 5](../word/media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-5.png)
+
+</a>
+</td>
+<td><a href="#option5">
+
+**Try to save a new workbook to the original location**
+
+</a>
+
+1. Create an Excel workbook.    
+2. On the **File** menu, select **Save As**.    
+3. In the **Save As** dialog box, follow these steps:
+
+   1. In the **Save in** box, select the location in which the original workbook is saved.    
+   2. In the **File name** box, type a name for the new file.    
+   3. Select **Save**.    
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+<a href="#option6">
+
+![Option 6](../word/media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-6.png)
+
+</a>
+</td>
+<td><a href="#option6">
+
+**Try to save the workbook in safe mode**
+
+</a>
+
+Restart Windows in safe mode, and then try to save the workbook to your local hard disk.
+
+</td>
+</tr>
+
+</table>
+
+## Additional resources
+ 
+If you experience specific issues when you use Word, go to the following website to search for more information about your program version:
+
+[Microsoft Word Product Solution Center: Word](https://support.office.com/search/results?query=word)
+
+### Detailed view of the options 
+
+The following section provides more detailed descriptions of these options.
+
+You may have problems when you try to save a Microsoft Excel workbook if one or more of the following conditions are true: 
+ 
+- You save an Excel workbook to a network drive on which you have restricted permissions.    
+- You save an Excel workbook to a location that does not have sufficient drive space.    
+- The connection to the Excel workbook is lost.    
+- There is a conflict with an antivirus software program.    
+- You save an Excel workbook that is shared.    
+- The 218-character path limitation is exceeded when you save an Excel workbook.    
+  
+ 
+### Workarounds to save Excel workbooks
+
+To work around this problem and try to save your work before you troubleshoot, use the following methods. Depending on the cause of the problem, you may be unable to recover the current file as-is. However, the following methods are typically successful. These methods are listed in order of format retention when you are trying to keep the original file formatting.
+
+> [!NOTE]
+> The following methods may not save all the latest changes, formatting, and feature sets of the workbook that are specific to the version of Excel that you are using. The following methods are intended to let you obtain a usable, saved version of the file. These methods require you to save the file to your local hard disk by using a unique file name.  
+
+<a id="option1">
+
+## Option 1: Save the workbook by using a new file name
+
+</a>
+
+1. On the **File** menu, select **Save As**.    
+2. Save the Excel workbook by using a unique file name.
+
+<a id="option2">
+
+## Option 2: Move the original worksheets to a new workbook
+
+</a>
+
+1. Add a filler worksheet to your workbook. To do this, press Shift + F11.
+
+    > [!NOTE]
+    > This sheet is required because there has to be at least one remaining sheet in a workbook after you move all relevant data sheets.         
+2. Group all the worksheets (except the filler). To do this, select the first sheet, hold the **Shift** key, and then select the last sheet.     
+3. Right-select the grouped sheets, and then select **Move or copy**.    
+4. In the **To Book** list, select **(New Book)**.    
+5. Select **OK**.    
+   
+    > [!NOTE]
+    > These steps should move the active (grouped) worksheets to a new workbook.     
+
+If your workbook contains VBA macros, copy the modules from the old workbook to the new workbook.
+
+<a id="option3">
+
+## Option 3: Save the file as a different Excel file type
+
+</a>
+
+1. On the **File** menu, select **Save As**.    
+2. In the **Save as Type** list, select a file format other than the current file format. If you are using Microsoft Excel 2007 or a later version, save the file as .xlsx or .xlsm instead of as .xls.
+
+<a id="option4">
+
+## Option 4: Try to save the workbook to another location
+
+</a>
+ 
+Try saving your notebook to another location, such as a local hard drive, a network drive, or removable drive. If you are successful, the following are possible causes of the problem:   
+ 
+- [Antivirus software conflict](#antivirus-software-conflict)    
+- [Restricted permissions](#restricted-permissions)    
+- [File name length](#file-name-length)    
+- [File sharing conflict](#file-sharing-conflict)    
+
+<a id="option5">
+
+## Option 5: Try to save a new workbook to the original location
+
+</a>
+ 
+To save a new Excel file to the original location, follow these steps:
+
+1. Create an Excel workbook.    
+2. On the **File** menu, select **Save As**.    
+3. In the **Save As** dialog box, follow these steps:
+
+   1. In the **Save in** box, select the location in which the original workbook is saved.    
+   2. In the **File name** box, type a name for the new file.    
+   3. Select **Save**.    
+     
+ If you can save a new workbook to the original location, the following are possible causes of the problem:
+
+ 
+- [File name length](#file-name-length)    
+- [File sharing conflict](#file-sharing-conflict)    
+ 
+If you cannot save a new workbook to the original location, the following is a possible cause of the problem:
+
+- [Insufficient drive space](#insufficient-drive-space)    
+ 
+If you have sufficient drive space, try Step 3.
+
+<a id="option6">
+
+## Option 6: Try to save the workbook in safe mode
+
+</a>
+
+Restart Windows in safe mode, and then try to save the workbook to your local hard disk.   
+
+**Notes**
+ 
+- If you use a network location to save your workbook, try to restart Windows in safe mode with network support, and then try to save.    
+- Windows safe mode cannot be used to troubleshoot issues in Microsoft Excel 2010 or later versions.    
+     
+For more information about how to start Windows in safe mode, see [Advanced startup options (including safe mode)](https://windows.microsoft.com/windows/start-computer-safe-mode#start-computer-safe-mode=windows-7). 
+
+If the workbook saves after you restart Windows in safe mode, try to save the file again. To do this, select **Save** on the **File** menu.
+
+If the workbook does not save (or save again) after you restart Windows in safe mode, the following are possible causes:
+
+- [Third-party add-ins](#third-party-add-ins)    
+- [Antivirus software conflict](#antivirus-software-conflict)    
+- [Restricted permissions](#restricted-permissions)    
+- [File name length](#file-name-length)    
+ 
+
+## More information
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
