@@ -96,7 +96,7 @@ set RDPObj = GetObject("winmgmts:{impersonationLevel=impersonate}!Win32_TSPermis
 
 3. The following information is an example of the text that you'll see after you run wmic and input the command:
 
-    ```csharp
+    ```console
     C:\WINDOWS\system32\wbem>wmic
     wmic:root\cli>
     wmic:root\cli> PATH WIN32_TSPermissionsSetting.TerminalName="RDP-TCP" call AddAccount "Domain\User", 2
