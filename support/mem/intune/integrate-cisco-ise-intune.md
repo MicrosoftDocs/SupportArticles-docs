@@ -44,13 +44,13 @@ Cisco Identity Services Engine (ISE) integration with Microsoft Intune MDM Servi
     $keyid = [System.Guid]::NewGuid().ToString()
     ```
 
-   After the script runs, the values are stored in the variables. Type the variable name at the PowerShell prompt to review the values, as shown in the following example:
+    After the script runs, the values are stored in the variables. Type the variable name at the PowerShell prompt to review the values, as shown in the following example:
 
-   :::image type="content" source="media/integrate-cisco-ise-intune/script-demo.png" alt-text="Review variable values":::
+    :::image type="content" source="media/integrate-cisco-ise-intune/script-demo.png" alt-text="Review variable values":::
 
-4. Keep the values for `$base64Thumbprint`, `$base64Value`, and `$keyid`. They will be used in Configure the application manifest and upload to Azure.
+4. Keep the values for `$base64Thumbprint`, `$base64Value`, and `$keyid`. They will be used in the [Configure the application manifest and upload to Azure](#configure-the-application-manifest-and-upload-to-azure) step.
 
-## Create a Cisco ISE application in Azure
+## Create an ISE application in Azure
 
 1. In the [Azure portal](https://portal.azure.com/), select **Azure Active Directory** > **Enterprise applications - All Applications** > **Categories** > **Add an application**.
 2. Select **Add an application my organization is developing**.
@@ -71,14 +71,18 @@ Cisco Identity Services Engine (ISE) integration with Microsoft Intune MDM Servi
 
 1.	In the [Azure portal](https://portal.azure.com/), select **Azure Active Directory** > **App registrations**, select the ISE application you created.
 2. From the application's **Overview** page, select **Manifest**.
-3. A web-based manifest editor opens. Select **Download** to download the manifest file and save it as a JSON file. Do not change the name of the manifest file.  
-4. Update the **keyCredentials** field in the json file as shown in the following example. Replace **Base64 Encoded String of ISE PAN cert** with the exported, edited certificate file from ISE, which is the `$base64Value` from the PowerShell script in Export the Cisco ISE self-signed certificate. Replace `keyId` with the `$keyid` value from the PowerShell script. Replace `customKeyIdentifier` with the `$base64Thumbprint` value from the PowerShell script.
+3. Select **Download** to download the manifest file and save it as a JSON file. Do not change the name of the manifest file.  
+4. Update the **keyCredentials** field in the JSON file as shown in the following example. 
+
+   - Replace **Base64 Encoded String of ISE PAN cert** with the exported, edited certificate file from ISE, which is the `$base64Value` from the PowerShell script in [Export the Cisco ISE self-signed certificate](#export-the-cisco-ise-self-signed-certificate).
+   - Replace `keyId` with the `$keyid` value from the PowerShell script.
+   - Replace `customKeyIdentifier` with the `$base64Thumbprint` value from the PowerShell script.
 
     ```json
     "keyCredentials": [
                               {
-                                “customKeyIdentifier“: “$base64Thumbprint_from_above”,
-                                “keyId“: “$keyid_from_above“,
+                                "customKeyIdentifier": "$base64Thumbprint_from_above",
+                                "keyId": "$keyid_from_above",
                                 "type": "AsymmetricX509Cert",
                                 "usage": "Verify",
                                 "value": "Base64 Encoded String of ISE PAN cert"
@@ -87,7 +91,7 @@ Cisco Identity Services Engine (ISE) integration with Microsoft Intune MDM Servi
     ```                   
 
    For more information about the KeyCredentials complex type, see [KeyCredential Type](/previous-versions/azure/ad/graph/api/entity-and-complex-type-reference#keycredential-type).
-5. Save the json file, and then select **Upload** to upload it to Azure.
+5. Save the JSON file, and then select **Upload** to upload it to Azure.
 
 ## Get the endpoints to configure Cisco ISE
 
@@ -98,7 +102,7 @@ Cisco Identity Services Engine (ISE) integration with Microsoft Intune MDM Servi
     - OAUTH 2.0 TOKEN ENDPOINT
 3. Also take note of the **Application (client) ID** of the ISE application.
 
-These values are used when you configure the Microsoft Intune server in ISE.
+These values are used when you [configure the Microsoft Intune server in ISE](#configure-the-microsoft-intune-server-in-ise).
 
 ## Configure application permissions and delegated permissions
 
@@ -117,13 +121,13 @@ To configure the permissions, follow these steps:
    |----------|-----------|
    |`Directory.Read.All`|Read directory data|
    |`User.Read`|Sign in and read user profile|
-   |`DeviceManagementConfiguration.Read.All`|Read Microsoft Intune device Configuration and policies|
+   |`DeviceManagementConfiguration.Read.All`|Read Microsoft Intune device configuration and policies|
    |`DeviceManagementServiceConfig.Read.All`|Read Microsoft Intune configuration|
    |`openid`|Sign users in|
    |`offline_access`|Access user's data anytime|
 5. Select **Application permissions**, expand **Directory**, select the `Directory.Read.All` permission, and then select **Add permissions**.
 6. Select **Intune** from the APIs, select **Application permissions**, select the `get_device_compliance` permission, and then select **Add permissions**.
-7. To grant admin consent to the permissions configured for the application, select **Grant admin consent for \<tenant_ID>**, select **Yes** when you are prompted to confirm the consent action.
+7. To grant admin consent to the permissions configured for the application, select **Grant admin consent for \<tenant>**, select **Yes** when you are prompted to confirm the consent action.
 
    :::image type="content" source="media/integrate-cisco-ise-intune/configured-permissions.png" alt-text="Configured permissions":::
 
@@ -135,5 +139,5 @@ The following fields are important for Microsoft Intune:
 
 - **Auto Discovery URL**: Enter the value of Microsoft Azure AD Graph API Endpoint from the Azure portal. This URL is the endpoint at which an application can access directory data in your Microsoft Azure AD directory by using the Graph API. The URL is in the form of `https://<hostname>/<tenant_ID>`, for example, `https://graph.windows.net/47f09275-5bc0-4807-8aae-f35cb0341329`. An expanded version of this URL is also in the property file, which is in the form of `https://<Graph_API_Endpoint>/<TenantId_Or_Domain>/servicePrincipalsByAppId/<Microsoft Intune AppId>/serviceEndpoints?api-version=1.6&client-request-id=<Guid.NewGuid()>`.
 - **Client ID**: The unique identifier for your application. Use this attribute if your application accesses data in another application, such as the Microsoft Azure AD Graph API, Microsoft Intune API, and so on.
-- **Token Issuing URL**: Enter the value of the Oauth2.0 Authorization Endpoint from the Azure portal. It is the endpoint at which your application can obtain an access token using OAuth2.0. After your application is authenticated, Azure AD issues your application (ISE) an access token. This token allows your application to call the Graph API or Intune API.
+- **Token Issuing URL**: Enter the value of the Oauth 2.0 Token Endpoint from the Azure portal. It is the endpoint at which your application can obtain an access token using OAuth 2.0. After your application is authenticated, Azure AD issues your application (ISE) an access token. This token allows your application to call the Graph API or Intune API.
 - **Token Audience**: The recipient resource that the token is intended for, which is a public, well-known APP ID URL to the Microsoft Intune API.
